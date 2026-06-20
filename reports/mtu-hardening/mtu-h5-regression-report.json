@@ -2,7 +2,7 @@
   "schema_version": 1,
   "sprint_id": "MTU-H5",
   "fixture_id": "MTU-H5-vwo-2025-ex1-ex2-approved",
-  "status": "failed",
+  "status": "review_required",
   "required_defect_classes": [
     "missing_mtu_for_correction_model_operation",
     "over_triggered_prerequisite_not_required_by_answer_model",
@@ -55,19 +55,19 @@
       "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
       "operation_id": "q15-step-1",
       "unit_id": "A97",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
       "operation_id": "q15-step-2",
       "unit_id": "A97",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
@@ -203,15 +203,6 @@
       "mastery_target": "apply",
       "procedure_steps": 5,
       "reason": "canonical procedure is present"
-    },
-    {
-      "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-      "operation_id": "q27-step-2",
-      "unit_id": "D07",
-      "status": "procedure_review_required",
-      "mastery_target": "apply",
-      "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
     }
   ],
   "buckets": {
@@ -228,46 +219,8 @@
         "reason": "negative fixture triggered failed assertions as expected"
       }
     ],
-    "failed": [
-      {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-2",
-        "defect_class": "incidence_pass_through_task_without_incidence_mtu",
-        "reason": "incidence/pass-through operation has no incidence MTU or reviewed equivalent"
-      }
-    ],
+    "failed": [],
     "review_required": [
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-1:ASSERT-PROCEDURE-REVIEW-A97",
-        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
-        "operation_id": "q15-step-1",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A97",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-1:ASSERT-REVIEW-review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need",
-        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
-        "operation_id": "q15-step-1",
-        "hook": "review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need",
-        "reason": "fixture marks this validator hook as review_required"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-2:ASSERT-PROCEDURE-REVIEW-A97",
-        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
-        "operation_id": "q15-step-2",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A97",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-2:ASSERT-REVIEW-review q15 two-step correction-model explanation as answer-skill need",
-        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
-        "operation_id": "q15-step-2",
-        "hook": "review q15 two-step correction-model explanation as answer-skill need",
-        "reason": "fixture marks this validator hook as review_required"
-      },
       {
         "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
         "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
@@ -309,35 +262,20 @@
         "operation_id": "q19-step-3",
         "hook": "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction",
         "reason": "fixture marks this validator hook as review_required"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-PROCEDURE-REVIEW-D07",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-2",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "D07",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-REVIEW-review whether this is an incidence/pass-through family case or a distinct levy-capacity operation",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-2",
-        "hook": "review whether this is an incidence/pass-through family case or a distinct levy-capacity operation",
-        "reason": "fixture marks this validator hook as review_required"
       }
     ],
     "blocked": []
   },
-  "report_generated": "2026-06-18",
+  "report_generated": "2026-06-19",
   "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
-  "source_validator_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+  "source_validator_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --json",
   "source_review_packet": "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md",
   "source_merge_commit": "48d0fa6d4ce03dff6feeb66955909125264c06f9",
   "report_status_note": "Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.",
   "bucket_totals": {
     "passed": 1,
-    "failed": 1,
-    "review_required": 12,
+    "failed": 0,
+    "review_required": 6,
     "blocked": 0
   },
   "question_bucket_counts": {
@@ -347,30 +285,26 @@
     },
     "q15": {
       "failed": 0,
-      "review_required": 4
+      "review_required": 0
     },
     "q19": {
       "failed": 0,
       "review_required": 6
     },
     "q27": {
-      "failed": 1,
-      "review_required": 2
+      "failed": 0,
+      "review_required": 0
     },
     "global_negative_guard": {
       "passed": 1
     }
   },
-  "failed_by_defect_class": {
-    "incidence_pass_through_task_without_incidence_mtu": 1
-  },
+  "failed_by_defect_class": {},
   "review_required_by_defect_class": {
-    "apply_analyze_unit_without_usable_canonical_procedure": 3,
-    "fixture_review_hooks": 9
+    "fixture_review_hooks": 6
   },
   "procedure_statuses": {
-    "procedure_present": 19,
-    "procedure_review_required": 3
+    "procedure_present": 21
   },
   "remaining_lane_status": {
     "q3": {
@@ -388,18 +322,18 @@
       "blocks_mtu_h5_closure": true
     },
     "q27": {
-      "status": "step1_levy_equilibrium_repaired_step2_capacity_governance_blocker",
-      "failed": 1,
-      "review_required": 2,
-      "diagnostic_focus": "q27-step-1 D41/D05/A88 reviewed equivalent accepted for levy price/equilibrium/scale; q27-step-2 capacity/overconsumption governance and D07 semantic-fit review remain",
-      "blocks_mtu_h5_closure": true
+      "status": "clean_after_q27_step2_capacity_taxonomy_reviewed_equivalent",
+      "failed": 0,
+      "review_required": 0,
+      "diagnostic_focus": "q27-step-1 D41/D05/A88 reviewed equivalent and q27-step-2 capacity/source-readout reviewed equivalent accepted; no D07/D08 closure claim",
+      "blocks_mtu_h5_closure": false
     },
     "q15": {
-      "status": "answer_skill_procedure_semantic_fit_review_blocker",
+      "status": "clean_after_q15_two_step_answer_skill_reviewed_equivalent",
       "failed": 0,
-      "review_required": 4,
-      "diagnostic_focus": "A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review",
-      "blocks_mtu_h5_closure": true
+      "review_required": 0,
+      "diagnostic_focus": "EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION accepted as reviewed-equivalent answer-skill; D27/F03/F09 remain content support and A97 remains answer-form/procedure support",
+      "blocks_mtu_h5_closure": false
     }
   },
   "authority_boundary": {

@@ -154,11 +154,16 @@ const ALLOWED_CHANGED_PATHS = new Set([
   'build-scripts/references/build-mtu-h5-regression-report.js',
   'build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js',
   'build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js',
+  'build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js',
   'build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js',
+  'build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js',
+  'build-scripts/reports/github-agent-index.js',
   'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json',
   'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md',
   'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json',
   'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.md',
+  'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json',
+  'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.md',
   'reports/mtu-hardening/mtu-h5-regression-fixture.json',
   'reports/mtu-hardening/mtu-h5-regression-report.json',
   'reports/mtu-hardening/mtu-h5-regression-report.md',
@@ -168,6 +173,13 @@ const ALLOWED_CHANGED_PATHS = new Set([
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/review-packet.json',
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/review-packet.md',
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/bundle-urls.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/bundle-urls.md',
+  'reports/github-agent-index-platform.json',
+  'reports/github-agent-index-platform.md',
+  'reports/github-agent-index-lessen.json',
+  'reports/github-agent-index-lessen.md',
 ]);
 
 const FORBIDDEN_CHANGED_EXACT = new Set([
@@ -267,15 +279,16 @@ function requireGitSuccess(args, message) {
   if (run.status !== 0) fail(`${message}: ${(run.stderr || run.stdout || '').trim()}`);
 }
 
-function runH5Validator(fixturePath = FIXTURE) {
+function runH5Validator(fixturePath = FIXTURE, expectFail = false) {
   const fixtureArg = path.isAbsolute(fixturePath) ? fixturePath : rel(fixturePath);
-  const run = spawnSync(process.execPath, [
+  const args = [
     rel(H5_VALIDATOR),
     '--fixture',
     fixtureArg,
-    '--expect-fail',
-    '--json',
-  ], {
+  ];
+  if (expectFail) args.push('--expect-fail');
+  args.push('--json');
+  const run = spawnSync(process.execPath, args, {
     cwd: ROOT,
     encoding: 'utf8',
   });
@@ -334,7 +347,9 @@ function requireCurrentDiagnosticState(packet) {
   const counts = report.question_bucket_counts || {};
   if (counts.q3?.failed !== 0 || counts.q3?.review_required !== 0) fail('report q3 counts must be 0/0');
   if (counts.q19?.failed !== 0 || counts.q19?.review_required !== 6) fail('report q19 counts must be 0/6');
-  if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 4) fail('report q15 counts must be 0/4');
+  const q15Carried = counts.q15?.failed === 0 && counts.q15?.review_required === 4;
+  const q15Clean = counts.q15?.failed === 0 && counts.q15?.review_required === 0;
+  if (!q15Carried && !q15Clean) fail('report q15 counts must be carried 0/4 or clean 0/0');
   const q27BeforeScalingExecution = counts.q27?.failed === 3 &&
     counts.q27?.review_required === 5 &&
     report.bucket_totals?.failed === 3 &&
@@ -347,17 +362,25 @@ function requireCurrentDiagnosticState(packet) {
     counts.q27?.review_required === 2 &&
     report.bucket_totals?.failed === 1 &&
     report.bucket_totals?.review_required === 12;
-  if (!q27BeforeScalingExecution && !q27AfterScalingExecution && !q27AfterPackage2Execution) {
-    fail('report q27/overall counts must be pre-q27-scaling 3/5 + 3/15, post-q27-scaling 2/4 + 2/14, or post-q27-package2 1/2 + 1/12');
+  const q27Q15FinalExecution = q15Clean &&
+    counts.q27?.failed === 0 &&
+    counts.q27?.review_required === 0 &&
+    report.bucket_totals?.failed === 0 &&
+    report.bucket_totals?.review_required === 6;
+  if (!q27BeforeScalingExecution && !q27AfterScalingExecution && !q27AfterPackage2Execution && !q27Q15FinalExecution) {
+    fail('report q27/overall counts must be pre-q27-scaling 3/5 + 3/15, post-q27-scaling 2/4 + 2/14, post-q27-package2 1/2 + 1/12, or final q27/q15 clean 0/6');
   }
 
   if (packet.current_diagnostic_state?.q19?.failed !== 0 ||
       packet.current_diagnostic_state?.q19?.review_required !== 6) {
     fail('packet q19 diagnostic state must be 0/6');
   }
-  if (packet.current_diagnostic_state?.overall?.failed !== 3 ||
-      packet.current_diagnostic_state?.overall?.review_required !== 15) {
-    fail('packet overall diagnostic state must be 3/15');
+  const packetOverallHistorical = packet.current_diagnostic_state?.overall?.failed === 3 &&
+    packet.current_diagnostic_state?.overall?.review_required === 15;
+  const packetOverallCurrent = packet.current_diagnostic_state?.overall?.failed === 0 &&
+    packet.current_diagnostic_state?.overall?.review_required === 6;
+  if (!packetOverallHistorical && !packetOverallCurrent) {
+    fail('packet overall diagnostic state must be historical 3/15 or current 0/6');
   }
 
   const result = runH5Validator();
@@ -622,7 +645,7 @@ function requireNegativeGuards() {
   const tempFixture = path.join(tempDir, 'fixture-with-a45.json');
   try {
     fs.writeFileSync(tempFixture, JSON.stringify(a45Clone, null, 2));
-    const result = runH5Validator(tempFixture);
+    const result = runH5Validator(tempFixture, true);
     const failedIds = assertionIds(result, 'failed');
     for (const operationId of ['q19-step-1', 'q19-step-2', 'q19-step-3']) {
       requireIncludes(failedIds, `${Q19_RECORD_ID}:${operationId}:ASSERT-OVER-TRIGGER`, 'temporary A45 negative failed assertions');

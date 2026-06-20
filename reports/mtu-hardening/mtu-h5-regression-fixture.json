@@ -259,15 +259,14 @@
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A97"
           ],
-          "procedure_review_required_unit_ids": [
-            "A97"
+          "procedure_review_required_unit_ids": [],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT"
           ]
         },
         {
@@ -303,15 +302,14 @@
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review q15 two-step correction-model explanation as answer-skill need"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A97"
           ],
-          "procedure_review_required_unit_ids": [
-            "A97"
+          "procedure_review_required_unit_ids": [],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT"
           ]
         }
       ]
@@ -547,14 +545,13 @@
       },
       "question_word": "leg_uit_of",
       "mapped_mtu_ids": [
-        "D07",
         "A98"
       ],
       "mapped_route_tags": [
         "tax_or_levy",
-        "incidence",
         "scaling",
-        "answer_form"
+        "answer_form",
+        "capacity_constraint"
       ],
       "official_correction_model_operations": [
         {
@@ -621,12 +618,12 @@
           "description": "Conclude that demand equals capacity, so overconsumption is countered.",
           "answer_model_summary": "The correction model awards one point for linking Q = 14,000 to capacity and the conclusion about overconsumption.",
           "mapped_mtu_ids": [
-            "D07",
-            "A98"
+            "A98",
+            "A88"
           ],
           "mapped_route_tags": [
-            "incidence",
             "capacity_constraint",
+            "source_reading",
             "answer_form"
           ],
           "expected_required_mtu_ids": [
@@ -634,7 +631,7 @@
           ],
           "expected_forbidden_mtu_ids": [],
           "expected_route_tags": [
-            "incidence",
+            "capacity_constraint",
             "source_reading",
             "answer_form",
             "procedure"
@@ -647,20 +644,18 @@
             "price_increase_without_quantity_capacity_check"
           ],
           "scale_factor_expected": false,
-          "incidence_or_pass_through_expected": true,
+          "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review whether this is an incidence/pass-through family case or a distinct levy-capacity operation"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
-            "A98",
-            "D07"
+            "A98"
           ],
-          "procedure_review_required_unit_ids": [
-            "D07"
-          ],
-          "missing_incidence_expected": true
+          "procedure_review_required_unit_ids": [],
+          "missing_incidence_expected": false,
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q27_STEP2_CAPACITY_OVERCONSUMPTION_TAXONOMY_REVIEWED_EQUIVALENT"
+          ]
         }
       ]
     }
