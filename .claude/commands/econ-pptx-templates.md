@@ -5,6 +5,46 @@ description: "Build rich economics PPTX presentations via PptxGenJS. Defines ped
 
 # Economics PPTX presentations
 
+## Production direction - web first, PPTX second
+
+For 4veco presentations, the preferred production route is now:
+
+1. Build a semantic web-first presentation model.
+2. Render and review the web presentation.
+3. Use the web version as the source of design truth.
+4. Generate PPTX only after the web version passes student, teacher, visual, and accessibility review.
+
+Do not treat PPTX as the design source when a web presentation route exists.
+
+Read these before building new presentation work:
+
+- `references/exemplars/1.1.1-golden-presentation/`
+- `references/presentation/presentation-policy.md`
+- `references/presentation/speaker-notes-policy.md`
+- `references/presentation/powerpoint-derivative-policy.md`
+
+Every production presentation starts with a route-contract slide:
+
+- what students will learn;
+- why it matters;
+- what route the lesson follows;
+- what students should be able to do at the end.
+
+Default economics presentation route:
+
+1. Route contract.
+2. Concrete narrative or source anchor.
+3. Core concept.
+4. Transfer to another context.
+5. Misconception control.
+6. Canonical procedure or model.
+7. Worked example, calculation/setup.
+8. Worked example, interpretation/conclusion.
+9. Active formative check.
+10. Summary and bridge.
+
+Agents may deviate, but they must explain why.
+
 Short skill. The previous version prescribed a rigid harness tuned for an older model. This rewrite keeps only what experience proved non-negotiable, drops the rest, and lets designers choose typography, palette, and layout freely.
 
 **Read `pptx` first** for PptxGenJS toolchain, slide dimensions, QA loop, and SVG→PNG conversion. This skill layers economics-specific pedagogy + hard-won technical fixes on top.
@@ -16,8 +56,11 @@ Short skill. The previous version prescribed a rigid harness tuned for an older 
 These are not style choices; they come from `references/authored/didactiek-principes.md`, `references/authored/economic_mathematical_precision_reference.md`, and `references/authored/economie-terminologie.md`. Read those when in doubt.
 
 - **≥ 3 economic graphs per presentation.** Dual coding reinforcement (text + visual). Every key concept in a slide deck should appear at least once as a labeled diagram or chart.
-- **Theory + worked examples only.** NEVER include exercise instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files.
-- **Speaker notes on every slide.** Teacher-facing. Explain reasoning, anticipate misconceptions, list cues.
+- **Theory + worked examples, plus at most a short active check.** NEVER include exercise-set instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files. A presentation may include a short active-check slide if it checks immediate understanding and does not replace the paragraph's exercise/check surfaces.
+- **Speaker notes on every slide.** Notes have two modes:
+  - Web-first presentations: student-facing explanations. These notes must be readable by students and explain the slide without relying on live teacher narration.
+  - PPTX live-teaching exports: teacher-supporting notes. These may include prompts, teacher cues, misconception warnings, and transitions.
+  - When one semantic model feeds both outputs, keep notes structured: `studentExplanation`, `misconceptionWatch`, `teacherCue`, `transition`.
 - **Body text ≥ 18pt.** Titles typically 28–44pt. Slide stats/hero numbers can go larger; respect the width rule below.
 - **Canonical Dutch terminology.** Use terms from `references/authored/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
 - **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/authored/economic_mathematical_precision_reference.md`.
@@ -63,6 +106,21 @@ pdftoppm -r 90 /tmp/qa/<file>.pdf /tmp/qa/slide -png
 ```
 
 Read each slide PNG. Look for: title/subtitle collisions, clipped text, stacked digits, overlapping shapes, missing graphs. Fix before shipping.
+
+---
+
+## MANDATORY — PPTX derivative requirements
+
+When generating PPTX from a semantic web-first model:
+
+- Preserve the route-contract slide.
+- Preserve all core assertions.
+- Preserve student-facing notes where possible.
+- Convert notes to teacher-supporting format if the export is intended for live teaching.
+- Keep body text ≥18 pt and labels ≥14 pt.
+- Run LibreOffice roundtrip.
+- Run visual QA on exported slide PNGs.
+- Document any content lost from web to PPTX.
 
 ---
 

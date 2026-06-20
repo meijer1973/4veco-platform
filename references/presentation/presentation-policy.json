@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "policy_id": "presentation-policy",
+  "status": "production_policy",
+  "derived_from": "references/exemplars/1.1.1-golden-presentation/",
+  "surfaces": {
+    "web_first_presentation": {
+      "role": "design_source",
+      "description": "Semantic web presentation reviewed before derivative exports."
+    },
+    "generated_web_artifact": {
+      "role": "student_facing_output",
+      "description": "Generated lesson output in 4veco-lessen, produced from 4veco-platform source."
+    },
+    "powerpoint_derivative": {
+      "role": "live_teaching_export",
+      "description": "Generated after web review from the same semantic model."
+    },
+    "conceptual_exemplar": {
+      "role": "product_standard",
+      "description": "Explains the standard but does not prove generator implementation."
+    },
+    "implemented_exemplar": {
+      "role": "repository_proof",
+      "description": "Shows source, generation, rendered output, tests, screenshots, and review evidence."
+    }
+  },
+  "required_review": [
+    "teacher_learning_quality",
+    "student_experience",
+    "visual_qa",
+    "accessibility",
+    "lead_verdict"
+  ],
+  "required_slide_fields": [
+    "id",
+    "navTitle",
+    "slideRole",
+    "studentTitle",
+    "assertion",
+    "visibleElements",
+    "notes"
+  ],
+  "required_note_fields": [
+    "studentExplanation",
+    "misconceptionWatch",
+    "teacherCue",
+    "transition"
+  ],
+  "does_not_authorize": [
+    "product_use",
+    "scale_gate_1",
+    "diagnostics",
+    "mastery_claims",
+    "automatic_sequencing",
+    "summative_use",
+    "broad_migration",
+    "target_equivalent_completion_language",
+    "hand_editing_generated_lesson_output"
+  ]
+}

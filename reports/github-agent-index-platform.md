@@ -1,13 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-20T07:50:32.254Z
+Generated: 2026-06-20T07:44:42.371Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `HEAD`
-Source commit: `e8dfc9e8303187ffc9babd220ba3d74ae5cd19eb`
-Files indexed: 5158
+Files indexed: 5106
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -132,7 +130,7 @@ Count: 84
 
 ## build scripts
 
-Count: 510
+Count: 507
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -348,7 +346,6 @@ Count: 510
 - build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
 - build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js
 - build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js
-- build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -395,8 +392,6 @@ Count: 510
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
 - build-scripts/references/check-unit-design-status.js
-- build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
-- build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
 - build-scripts/references/close-and-apply-rx2b-graphical-foundation.js
 - build-scripts/references/close-and-apply-rx3a-first-lane.js
@@ -694,7 +689,7 @@ Count: 42
 
 ## validators
 
-Count: 501
+Count: 497
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -708,7 +703,6 @@ Count: 501
 - archive/sprints/INSPECT-11B/INSPECT-11B-validation-log.md
 - archive/sprints/INSPECT-11C/INSPECT-11C-validation-log.md
 - archive/sprints/INSPECT-11D/INSPECT-11D-validation-log.md
-- archive/sprints/INSPECT-11EF/INSPECT-11EF-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -798,7 +792,6 @@ Count: 501
 - build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
 - build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js
 - build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js
-- build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -845,8 +838,6 @@ Count: 501
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
 - build-scripts/references/check-unit-design-status.js
-- build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
-- build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/validate-alignment-graph.js
 - build-scripts/references/validate-core-schemas.js
@@ -1200,7 +1191,7 @@ Count: 501
 
 ## references
 
-Count: 628
+Count: 627
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1227,7 +1218,6 @@ Count: 628
 - references/data/exam-ingestion/source-annex-extraction-overlays.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
-- references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json
 - references/data/exercises/exam-question-overlays.json
 - references/data/exercises/graph-spec-representation-plan.json
 - references/data/exercises/graph-spec-representation-plan.md
@@ -1833,7 +1823,7 @@ Count: 628
 
 ## reports
 
-Count: 3262
+Count: 3222
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1872,16 +1862,8 @@ Count: 3262
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1892,12 +1874,8 @@ Count: 3262
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.md
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md
-- reports/inspection-standards/chapter-1-3-diagnostic-onboarding-plan.json
-- reports/inspection-standards/chapter-1-3-diagnostic-onboarding-plan.md
 - reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.json
 - reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.md
-- reports/inspection-standards/chapter-1-3-diagnostic-report.json
-- reports/inspection-standards/chapter-1-3-diagnostic-report.md
 - reports/inspection-standards/chapter-1-3-readiness-closure.json
 - reports/inspection-standards/chapter-1-3-readiness-closure.md
 - reports/inspection-standards/chapter-1-3-readiness-remediation-results.json
@@ -1917,10 +1895,6 @@ Count: 3262
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2105,8 +2079,6 @@ Count: 3262
 - reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.md
 - reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json
 - reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md
-- reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json
-- reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
@@ -2269,19 +2241,6 @@ Count: 3262
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md
-- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-evidence-packet.md
-- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-integrated-update.md
-- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-quality-log.md
-- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-review-packet.md
-- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-assessment-retrieval-spine.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-book8-compression-review.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-exam-anchor-backlog.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-paragraph-candidate-matrix.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-quality-log.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md
-- reports/reference-planning/Y2-ROOT-MAPPING-1-subagent-review.md
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden-contact-sheet.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-1.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-2.png
@@ -2702,9 +2661,6 @@ Count: 3262
 - reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.md
-- reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/bundle-urls.md
-- reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.json
-- reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md
@@ -3026,8 +2982,6 @@ Count: 3262
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
-- reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
-- reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.md
@@ -5088,10 +5042,6 @@ Count: 3262
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-result.md
-- reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-plan.md
-- reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md
-- reports/sprints/Y2-ROOT-MAPPING-1-plan.md
-- reports/sprints/Y2-ROOT-MAPPING-1-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
@@ -5118,7 +5068,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 577
+Count: 570
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5229,13 +5179,6 @@ Count: 577
 - archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-before-2.png
 - archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-before-3.png
 - archive/sprints/INSPECT-11D/rendered-proof/viewport-metrics.json
-- archive/sprints/INSPECT-11EF/BOOK1-ASSEMBLY-HEALTH-1-triage-note.md
-- archive/sprints/INSPECT-11EF/INSPECT-11EF-closure-log.md
-- archive/sprints/INSPECT-11EF/INSPECT-11EF-correction-log.md
-- archive/sprints/INSPECT-11EF/INSPECT-11EF-final-lead-review.md
-- archive/sprints/INSPECT-11EF/INSPECT-11EF-lead-review-plan.md
-- archive/sprints/INSPECT-11EF/INSPECT-11EF-specialist-gate-results.md
-- archive/sprints/INSPECT-11EF/INSPECT-11EF-sprint-plan.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md

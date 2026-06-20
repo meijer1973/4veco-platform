@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1.1.1 Schaarste en economisch denken - Golden Presentation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ed;
+      --panel: #fffdf7;
+      --panel-2: #eef7f4;
+      --ink: #18201e;
+      --muted: #5f6763;
+      --border: #d7d1c2;
+      --green: #23745b;
+      --blue: #235d86;
+      --gold: #b77a18;
+      --red: #a43f2f;
+      --violet: #665190;
+      --shadow: 0 22px 70px rgba(31, 40, 36, 0.14);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #111614;
+      --panel: #1b221f;
+      --panel-2: #172821;
+      --ink: #f3f0e7;
+      --muted: #b7bcb6;
+      --border: #37443f;
+      --green: #5dd39e;
+      --blue: #7bb7e0;
+      --gold: #f2bb55;
+      --red: #ef8d79;
+      --violet: #b2a1e2;
+      --shadow: 0 24px 76px rgba(0, 0, 0, 0.42);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(35, 116, 91, 0.09), transparent 36%),
+        linear-gradient(315deg, rgba(183, 122, 24, 0.08), transparent 38%),
+        var(--bg);
+    }
+
+    a, button { font: inherit; }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 282px minmax(0, 1fr);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 26px 20px;
+      border-right: 1px solid var(--border);
+      background: color-mix(in oklab, var(--panel) 88%, transparent);
+      backdrop-filter: blur(16px);
+    }
+
+    .sidebar h1 {
+      margin: 0.3rem 0 0.4rem;
+      font-size: 1.18rem;
+      line-height: 1.15;
+    }
+
+    .kicker {
+      margin: 0;
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .sidebar small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .nav {
+      display: grid;
+      gap: 0.36rem;
+      margin-top: 1.6rem;
+    }
+
+    .nav a {
+      display: grid;
+      grid-template-columns: 2.1rem 1fr;
+      gap: 0.65rem;
+      align-items: center;
+      min-height: 2.45rem;
+      padding: 0.5rem 0.6rem;
+      border-left: 3px solid transparent;
+      border-radius: 0 10px 10px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 750;
+    }
+
+    .nav a span {
+      font-variant-numeric: tabular-nums;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .nav a.is-active {
+      color: var(--ink);
+      background: var(--panel);
+      border-left-color: var(--green);
+    }
+
+    .main {
+      min-width: 0;
+      padding: 22px clamp(14px, 4vw, 54px) 30px;
+    }
+
+    .topbar,
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .topbar { margin-bottom: 1rem; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+
+    .back,
+    .action,
+    .controls button {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 0.62rem 0.9rem;
+      text-decoration: none;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .action[aria-pressed="true"] {
+      background: var(--ink);
+      color: var(--panel);
+    }
+
+    .stage {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .slide[hidden] { display: none; }
+
+    .slide-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .canvas {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      min-height: 540px;
+      padding: clamp(28px, 4.2vw, 48px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .canvas::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, var(--green), var(--blue), var(--gold), var(--red));
+    }
+
+    .slide-count {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      color: var(--gold);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slide h2 {
+      margin: 0;
+      max-width: 15ch;
+      font-size: clamp(2.1rem, 5.2vw, 4.2rem);
+      line-height: 0.97;
+      letter-spacing: 0;
+    }
+
+    .assertion {
+      max-width: 54ch;
+      margin: 0.8rem 0 1.1rem;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+      line-height: 1.38;
+      font-weight: 650;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.82fr);
+      gap: clamp(1rem, 3vw, 2.4rem);
+      align-items: stretch;
+    }
+
+    .cards,
+    .route-list,
+    .summary-list {
+      display: grid;
+      gap: 0.72rem;
+    }
+
+    .cards.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cards.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card,
+    .route-item,
+    .check-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: color-mix(in oklab, var(--panel-2) 72%, var(--panel));
+      padding: 0.86rem;
+    }
+
+    .card strong,
+    .route-item strong,
+    .check-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+
+    .card p,
+    .route-item p,
+    .check-card p {
+      margin: 0.28rem 0 0;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .metric {
+      display: grid;
+      place-items: center;
+      min-height: 6rem;
+      border-radius: 14px;
+      background: var(--ink);
+      color: var(--panel);
+      text-align: center;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 0.3rem;
+      color: color-mix(in oklab, var(--panel) 82%, transparent);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .relation {
+      display: grid;
+      gap: 0.8rem;
+      align-content: center;
+    }
+
+    .relation-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .pill {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.62rem 0.78rem;
+      text-align: center;
+      font-weight: 850;
+      background: var(--panel);
+    }
+
+    .arrow {
+      color: var(--green);
+      font-size: 1.6rem;
+      font-weight: 900;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .step {
+      position: relative;
+      min-height: 9.4rem;
+      padding: 1rem 0.86rem;
+      border-radius: 14px;
+      background: color-mix(in oklab, var(--panel-2) 76%, var(--panel));
+      border: 1px solid var(--border);
+    }
+
+    .step span {
+      display: inline-grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .step h3 {
+      margin: 0.72rem 0 0.35rem;
+      font-size: 1.05rem;
+      line-height: 1.15;
+    }
+
+    .step p { margin: 0; color: var(--muted); line-height: 1.28; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 12px;
+      font-size: 1rem;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 0.74rem;
+      text-align: left;
+    }
+
+    th {
+      background: color-mix(in oklab, var(--green) 18%, var(--panel));
+    }
+
+    .formula {
+      margin-top: 0.9rem;
+      border-left: 6px solid var(--gold);
+      padding: 0.8rem 1rem;
+      background: color-mix(in oklab, var(--gold) 13%, var(--panel));
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .warning .card { border-color: color-mix(in oklab, var(--red) 55%, var(--border)); }
+    .warning strong { color: var(--red); }
+
+    .summary-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .summary-list li {
+      border-left: 5px solid var(--green);
+      padding: 0.58rem 0.8rem;
+      background: color-mix(in oklab, var(--panel-2) 75%, var(--panel));
+      border-radius: 8px;
+      font-weight: 760;
+    }
+
+    .notes {
+      display: none;
+      max-height: min(540px, 70vh);
+      overflow: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      padding: 1rem;
+      box-shadow: 0 14px 42px rgba(20, 32, 27, 0.09);
+    }
+
+    .notes-open .slide.is-active .notes { display: block; }
+
+    .notes h3 {
+      margin: 0 0 0.7rem;
+      font-size: 1rem;
+    }
+
+    .notes h4 {
+      margin: 0.9rem 0 0.25rem;
+      color: var(--green);
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .notes p,
+    .notes li {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .controls {
+      margin-top: 1rem;
+      padding: 0.65rem;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: color-mix(in oklab, var(--panel) 72%, transparent);
+    }
+
+    .progress {
+      color: var(--muted);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .fullscreen .sidebar,
+    .fullscreen .topbar { display: none; }
+    .fullscreen.shell { display: block; }
+    .fullscreen .main {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      align-items: center;
+      padding: 2vh 2.6vw;
+    }
+
+    .fullscreen .stage,
+    .fullscreen .controls { max-width: min(96vw, 150vh); }
+    .fullscreen .slide-grid { grid-template-columns: minmax(0, 1fr); }
+    .fullscreen.notes-open .slide-grid { grid-template-columns: minmax(0, 1fr) 320px; }
+
+    @media (max-width: 980px) {
+      .shell { display: block; }
+      .sidebar {
+        position: static;
+        height: auto;
+        padding: 14px;
+      }
+      .sidebar h1,
+      .sidebar small { display: none; }
+      .nav {
+        display: flex;
+        overflow-x: auto;
+        margin-top: 0;
+      }
+      .nav a {
+        min-width: max-content;
+        border-left: 0;
+        border-bottom: 3px solid transparent;
+        border-radius: 10px 10px 0 0;
+      }
+      .nav a.is-active {
+        border-bottom-color: var(--green);
+      }
+      .slide-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .canvas {
+        min-height: 0;
+        aspect-ratio: auto;
+      }
+      .notes { max-height: none; }
+    }
+
+    @media (max-width: 720px) {
+      .main { padding: 14px 10px 24px; }
+      .topbar { align-items: flex-start; }
+      .cards.two,
+      .cards.three,
+      .flow {
+        grid-template-columns: 1fr;
+      }
+      .slide h2 { font-size: clamp(2rem, 10vw, 3.2rem); }
+      .canvas { padding: 28px 14px 18px; border-radius: 12px; }
+      .slide-count { top: 14px; right: 14px; }
+      th, td { padding: 0.55rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell" data-golden-presentation>
+    <aside class="sidebar" aria-label="Dia's">
+      <p class="kicker">1.1.1</p>
+      <h1>Schaarste en economisch denken</h1>
+      <small>Golden conceptual presentation</small>
+      <nav class="nav" aria-label="Dia lijst">
+        <a href="#lesson-goal" data-slide-link="1"><span>01</span>Lesdoel</a>
+        <a href="#lisa-must-choose" data-slide-link="2"><span>02</span>Lisa kiest</a>
+        <a href="#scarcity-definition" data-slide-link="3"><span>03</span>Schaarste</a>
+        <a href="#scarcity-transfer" data-slide-link="4"><span>04</span>Transfer</a>
+        <a href="#alternative-cost-definition" data-slide-link="5"><span>05</span>Alt. kosten</a>
+        <a href="#misconception-control" data-slide-link="6"><span>06</span>Niet verwarren</a>
+        <a href="#procedure-route" data-slide-link="7"><span>07</span>Vier stappen</a>
+        <a href="#worked-example-calculation" data-slide-link="8"><span>08</span>Rekenen</a>
+        <a href="#worked-example-interpretation" data-slide-link="9"><span>09</span>Interpreteren</a>
+        <a href="#active-check" data-slide-link="10"><span>10</span>Check</a>
+        <a href="#summary-bridge" data-slide-link="11"><span>11</span>Samenvatting</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <a class="back" href="../README.md">Terug naar exemplar index</a>
+        <div class="actions">
+          <button class="action" type="button" data-notes-toggle aria-pressed="false" aria-expanded="false">Toon leerlingnotities</button>
+          <button class="action" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+          <button class="action" type="button" data-fullscreen-toggle aria-pressed="false">Presentatiemodus</button>
+        </div>
+      </header>
+
+      <section class="stage" aria-label="Golden presentation">
+        <article class="slide is-active" id="lesson-goal" data-slide="1" data-slide-role="route_contract">
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">01 / 11</div>
+              <p class="kicker">Route contract</p>
+              <h2>Waarom kiezen kost</h2>
+              <p class="assertion">Vandaag leer je waarom kiezen altijd iets kost.</p>
+              <div class="two-col">
+                <div class="cards">
+                  <div class="card"><strong>Wat leer je?</strong><p>Schaarste herkennen, alternatieve kosten aanwijzen en keuzes beoordelen met nettowaarde.</p></div>
+                  <div class="card"><strong>Waarom?</strong><p>Bij economie kijk je niet alleen naar wat iemand kiest, maar ook naar wat iemand opgeeft.</p></div>
+                </div>
+                <div class="route-list" aria-label="Lesroute">
+                  <div class="route-item"><strong>1. Lisa moet kiezen</strong><p>Een gewone keuze met getallen.</p></div>
+                  <div class="route-item"><strong>2. Begrippen bouwen</strong><p>Schaarste en alternatieve kosten.</p></div>
+                  <div class="route-item"><strong>3. Procedure gebruiken</strong><p>Vier stappen en een worked example.</p></div>
+                  <div class="route-item"><strong>4. Check en brug</strong><p>Korte toepassing en vooruitblik.</p></div>
+                </div>
+              </div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Deze presentatie laat zien hoe economen naar keuzes kijken. Je begint bij een gewone keuze van Lisa en eindigt met een stappenplan dat ook bij bedrijven en overheid werkt.</p>
+              <p>Let steeds op drie vragen: wat wordt gekozen, wat wordt niet gekozen, en wat is het beste niet-gekozen alternatief?</p>
+              <h4>Let op</h4>
+              <p>Je hoeft vandaag nog geen vraag-en-aanbodgrafieken te gebruiken. Het gaat om kiezen met beperkte middelen.</p>
+              <h4>Overgang</h4>
+              <p>We beginnen concreet: Lisa heeft te weinig geld voor alles wat ze wil.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="lisa-must-choose" data-slide="2" data-slide-role="narrative_anchor" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">02 / 11</div>
+              <p class="kicker">Concrete case</p>
+              <h2>Lisa heeft 20 euro</h2>
+              <p class="assertion">Twee aantrekkelijke opties samen kosten 27 euro, dus Lisa moet kiezen.</p>
+              <div class="two-col">
+                <div class="cards two">
+                  <div class="card"><strong>Bioscoop</strong><p>12 euro<br>Een middag kijkplezier.</p></div>
+                  <div class="card"><strong>Nieuw boek</strong><p>15 euro<br>Avonden leesplezier.</p></div>
+                </div>
+                <div class="cards">
+                  <div class="metric"><div><strong>27 euro</strong><span>samen nodig</span></div></div>
+                  <div class="metric"><div><strong>20 euro</strong><span>beschikbaar</span></div></div>
+                  <div class="card"><strong>Tekort: 7 euro</strong><p>Niet alles kan tegelijk. Er moet gekozen worden.</p></div>
+                </div>
+              </div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Lisa wil twee dingen, maar haar geld is beperkt. Daardoor is kiezen geen mening maar een noodzaak.</p>
+              <p>De zichtbare keuze is wat Lisa uiteindelijk doet. De onzichtbare keuze is wat zij daardoor laat liggen.</p>
+              <h4>Let op</h4>
+              <p>Schaarste betekent hier niet dat bioscoopkaartjes of boeken zeldzaam zijn.</p>
+              <h4>Overgang</h4>
+              <p>Nu geven we dit probleem de economische naam: schaarste.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="scarcity-definition" data-slide="3" data-slide-role="concept_definition" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">03 / 11</div>
+              <p class="kicker">Kernbegrip 1</p>
+              <h2>Schaarste</h2>
+              <p class="assertion">Schaarste ontstaat wanneer je behoeften groter zijn dan je beschikbare middelen.</p>
+              <div class="two-col">
+                <div class="relation">
+                  <div class="relation-row"><div class="pill">behoeften</div><div class="arrow">&gt;</div><div class="pill">middelen</div></div>
+                  <div class="card"><strong>Dus: kiezen is onvermijdelijk</strong><p>Bij Lisa zijn de behoeften bioscoop en boek; het middel is 20 euro.</p></div>
+                </div>
+                <svg viewBox="0 0 360 240" role="img" aria-label="Trechterdiagram: veel behoeften gaan door een beperkte middelenfilter naar een keuze.">
+                  <rect x="16" y="16" width="328" height="208" rx="18" fill="none" stroke="currentColor" opacity=".22"/>
+                  <path d="M64 54h232l-72 74v54h-88v-54z" fill="none" stroke="var(--green)" stroke-width="10" stroke-linejoin="round"/>
+                  <text x="180" y="44" text-anchor="middle" fill="currentColor" font-size="18" font-weight="800">behoeften</text>
+                  <text x="180" y="146" text-anchor="middle" fill="var(--gold)" font-size="18" font-weight="900">middelen</text>
+                  <text x="180" y="208" text-anchor="middle" fill="currentColor" font-size="18" font-weight="800">keuze</text>
+                </svg>
+              </div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Schaarste is een verhouding. Je vergelijkt wat iemand wil met wat iemand heeft aan middelen.</p>
+              <p>Bij Lisa zijn haar behoeften de bioscoop en het boek. Haar middel is 20 euro.</p>
+              <h4>Let op</h4>
+              <p>Schaarste is niet hetzelfde als zeldzaamheid.</p>
+              <h4>Overgang</h4>
+              <p>Hetzelfde patroon zie je niet alleen bij Lisa, maar ook bij producenten en overheid.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="scarcity-transfer" data-slide="4" data-slide-role="concept_transfer" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">04 / 11</div>
+              <p class="kicker">Transfer</p>
+              <h2>Schaarste op drie niveaus</h2>
+              <p class="assertion">Hetzelfde schaarstepatroon geldt voor scholieren, boeren en overheid.</p>
+              <div class="cards three">
+                <div class="card"><strong>Scholier</strong><p>Beperkt middel: geld.<br>Keuze: bioscoop of boek.</p></div>
+                <div class="card"><strong>Boer</strong><p>Beperkt middel: land.<br>Keuze: tarwe of mais.</p></div>
+                <div class="card"><strong>Overheid</strong><p>Beperkt middel: budget.<br>Keuze: wegen of onderwijs.</p></div>
+              </div>
+              <div class="formula">Beperkt middel + meerdere doelen = keuze</div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Economie wordt bruikbaar als je hetzelfde patroon in nieuwe situaties herkent. Het middel verandert, maar de gedachte blijft gelijk.</p>
+              <h4>Let op</h4>
+              <p>Ook een overheid met veel geld heeft schaarste, omdat niet alle doelen tegelijk volledig betaald kunnen worden.</p>
+              <h4>Overgang</h4>
+              <p>Zodra je kiest, ontstaat de volgende vraag: wat kost de keuze doordat je iets anders niet doet?</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="alternative-cost-definition" data-slide="5" data-slide-role="concept_definition" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">05 / 11</div>
+              <p class="kicker">Kernbegrip 2</p>
+              <h2>Alternatieve kosten</h2>
+              <p class="assertion">Alternatieve kosten zijn de opbrengst van het beste alternatief dat je niet kiest.</p>
+              <div class="two-col">
+                <div class="cards">
+                  <div class="card"><strong>Gekozen</strong><p>Lisa kiest de bioscoop: het plezier van de film.</p></div>
+                  <div class="card"><strong>Niet gekozen</strong><p>Het boek blijft liggen: avonden leesplezier.</p></div>
+                </div>
+                <svg viewBox="0 0 360 240" role="img" aria-label="Keuzediagram: gekozen route en beste niet-gekozen route wijzen naar alternatieve kosten.">
+                  <rect x="24" y="40" width="132" height="66" rx="14" fill="var(--panel-2)" stroke="var(--green)" stroke-width="4"/>
+                  <text x="90" y="78" text-anchor="middle" fill="currentColor" font-size="16" font-weight="900">gekozen</text>
+                  <rect x="204" y="40" width="132" height="66" rx="14" fill="var(--panel-2)" stroke="var(--gold)" stroke-width="4"/>
+                  <text x="270" y="78" text-anchor="middle" fill="currentColor" font-size="16" font-weight="900">beste alternatief</text>
+                  <path d="M90 112v62h180v-62" fill="none" stroke="var(--blue)" stroke-width="6" stroke-linecap="round"/>
+                  <text x="180" y="204" text-anchor="middle" fill="currentColor" font-size="18" font-weight="900">wat je opgeeft</text>
+                </svg>
+              </div>
+              <div class="formula">Alternatieve kosten = opbrengst beste niet-gekozen alternatief</div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Als Lisa de bioscoop kiest, betaalt ze 12 euro. Dat is de gewone uitgave.</p>
+              <p>De alternatieve kosten zijn iets anders: het beste alternatief dat zij laat liggen.</p>
+              <h4>Let op</h4>
+              <p>Alternatieve kosten zijn niet automatisch het geldbedrag dat je betaalt.</p>
+              <h4>Overgang</h4>
+              <p>Nu maken we de twee meest voorkomende fouten zichtbaar.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="misconception-control" data-slide="6" data-slide-role="misconception_control" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">06 / 11</div>
+              <p class="kicker">Misconcepties</p>
+              <h2>Niet verwarren met ...</h2>
+              <p class="assertion">Alternatieve kosten zijn niet de prijs en niet de som van alle niet-gekozen opties.</p>
+              <div class="cards three warning">
+                <div class="card"><strong>Niet: prijs</strong><p>Prijs is wat je betaalt. Alternatieve kosten zijn wat je laat liggen.</p></div>
+                <div class="card"><strong>Niet: zeldzaam</strong><p>Schaarste gaat over behoeften tegenover middelen.</p></div>
+                <div class="card"><strong>Niet: alles optellen</strong><p>Neem alleen het beste niet-gekozen alternatief.</p></div>
+              </div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Deze dia beschermt je tegen drie fouten die vaak in antwoorden terugkomen.</p>
+              <h4>Let op</h4>
+              <p>Let vooral op de fout om alle niet-gekozen opties bij elkaar op te tellen.</p>
+              <h4>Overgang</h4>
+              <p>Daarna gebruiken we een vaste procedure zodat je geen stap overslaat.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="procedure-route" data-slide="7" data-slide-role="procedure_route" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">07 / 11</div>
+              <p class="kicker">B02 procedure</p>
+              <h2>Economisch denken in vier stappen</h2>
+              <p class="assertion">Met vier vaste stappen vergelijk je alternatieven zonder de nettowaarde over te slaan.</p>
+              <div class="flow" aria-label="Vier stappen">
+                <div class="step"><span>01</span><h3>Benoem alternatieven</h3><p>Welke opties heb je?</p></div>
+                <div class="step"><span>02</span><h3>Bereken opbrengsten</h3><p>Wat levert elk alternatief op?</p></div>
+                <div class="step"><span>03</span><h3>Rangschik</h3><p>Beste niet-gekozen = alternatieve kosten.</p></div>
+                <div class="step"><span>04</span><h3>Bereken nettowaarde</h3><p>Opbrengst - alternatieve kosten.</p></div>
+              </div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Dit is de B02-procedure. Je hoeft niet te raden welke stap eerst komt: alternatieven, opbrengsten, rangschikken, nettowaarde.</p>
+              <h4>Let op</h4>
+              <p>Stop niet bij de hoogste opbrengst. De vergelijking is pas af als je de alternatieve kosten hebt meegenomen.</p>
+              <h4>Overgang</h4>
+              <p>We passen de stappen toe op een boer met 10 hectare land.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="worked-example-calculation" data-slide="8" data-slide-role="worked_example_calculation" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">08 / 11</div>
+              <p class="kicker">Worked example - stap 1 en 2</p>
+              <h2>Opbrengsten berekenen</h2>
+              <p class="assertion">Eerst bereken je de totale opbrengst per alternatief; je trekt nog niets af.</p>
+              <table aria-label="Tarwe en mais opbrengsten">
+                <thead><tr><th>Gewas</th><th>Opbrengst per hectare</th><th>Totaal bij 10 hectare</th></tr></thead>
+                <tbody>
+                  <tr><td>Tarwe</td><td>500 euro</td><td><strong>5.000 euro</strong></td></tr>
+                  <tr><td>Mais</td><td>350 euro</td><td><strong>3.500 euro</strong></td></tr>
+                </tbody>
+              </table>
+              <div class="formula">10 hectare x opbrengst per hectare = totale opbrengst</div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>De boer kan zijn 10 hectare maar een keer gebruiken. Eerst zet je de alternatieven naast elkaar.</p>
+              <p>Daarna bereken je de opbrengst per alternatief: 10 keer 500 is 5.000 euro; 10 keer 350 is 3.500 euro.</p>
+              <h4>Let op</h4>
+              <p>Trek in deze stap nog niets af. Je verzamelt eerst de opbrengsten.</p>
+              <h4>Overgang</h4>
+              <p>Nu weten we wat elk alternatief oplevert. Daarna bepalen we wat de boer opgeeft.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="worked-example-interpretation" data-slide="9" data-slide-role="worked_example_interpretation" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">09 / 11</div>
+              <p class="kicker">Worked example - stap 3 en 4</p>
+              <h2>Wat geeft hij op?</h2>
+              <p class="assertion">Als de boer tarwe kiest, zijn de alternatieve kosten de 3.500 euro van mais.</p>
+              <div class="cards three">
+                <div class="card"><strong>Gekozen</strong><p>Tarwe: 5.000 euro.</p></div>
+                <div class="card"><strong>Niet gekozen</strong><p>Mais: 3.500 euro.</p></div>
+                <div class="card"><strong>Alternatieve kosten</strong><p>De opbrengst van mais die hij laat liggen.</p></div>
+              </div>
+              <div class="formula">Nettowaarde = 5.000 - 3.500 = 1.500 euro</div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>De boer kiest tarwe. Het beste alternatief dat hij dan niet kiest is mais.</p>
+              <p>Daarom zijn de alternatieve kosten 3.500 euro. De nettowaarde is 1.500 euro.</p>
+              <h4>Let op</h4>
+              <p>Mais is hier niet slecht; het is alleen het beste alternatief dat niet gekozen wordt.</p>
+              <h4>Overgang</h4>
+              <p>Nu controleer je of je hetzelfde kunt doen in een nieuwe kleine keuze.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="active-check" data-slide="10" data-slide-role="active_check" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">10 / 11</div>
+              <p class="kicker">Actieve check</p>
+              <h2>Eva heeft 4 uur</h2>
+              <p class="assertion">Een korte check laat zien of je het beste niet-gekozen alternatief kunt aanwijzen.</p>
+              <div class="two-col">
+                <div class="cards">
+                  <div class="check-card"><strong>Eva kiest: bijbaan</strong><p>Opbrengst: 32 euro.</p></div>
+                  <div class="check-card"><strong>Niet gekozen</strong><p>Sporttoernooi: veel plezier.<br>Leren: betere voorbereiding.</p></div>
+                </div>
+                <div class="card">
+                  <strong>Jouw korte antwoord</strong>
+                  <p>Benoem het beste alternatief dat Eva niet kiest en formuleer haar alternatieve kosten in woorden.</p>
+                  <p><strong>Zinstart:</strong> De alternatieve kosten zijn ...</p>
+                </div>
+              </div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>Dit is geen volledige opgave, maar een korte controle van het begrip.</p>
+              <p>Je moet laten zien dat je de gekozen optie, de niet-gekozen opties en het beste niet-gekozen alternatief uit elkaar houdt.</p>
+              <h4>Let op</h4>
+              <p>Noem niet alle gemiste opties tegelijk. Kies het beste alternatief dat Eva niet kiest.</p>
+              <h4>Overgang</h4>
+              <p>Tot slot vatten we de mentale route samen en kijken we vooruit.</p>
+            </aside>
+          </div>
+        </article>
+
+        <article class="slide" id="summary-bridge" data-slide="11" data-slide-role="summary_bridge" hidden>
+          <div class="slide-grid">
+            <div class="canvas">
+              <div class="slide-count">11 / 11</div>
+              <p class="kicker">Samenvatting en brug</p>
+              <h2>Kiezen kost altijd iets</h2>
+              <p class="assertion">Economisch denken betekent zichtbaar maken wat je kiest en wat je opgeeft.</p>
+              <div class="two-col">
+                <ul class="summary-list">
+                  <li>Schaarste: behoeften zijn groter dan middelen.</li>
+                  <li>Kiezen betekent ook iets laten liggen.</li>
+                  <li>Alternatieve kosten: beste niet-gekozen alternatief.</li>
+                  <li>De B02-route helpt je systematisch vergelijken.</li>
+                  <li>Nettowaarde laat zien wat overblijft.</li>
+                </ul>
+                <div class="card"><strong>Volgende stap</strong><p>In 1.1.2 leer je hoe je verschillen in geld en percentages precies meet.</p></div>
+              </div>
+            </div>
+            <aside class="notes" aria-label="Leerlingnotities">
+              <h3>Leerlingnotities</h3>
+              <h4>Uitleg</h4>
+              <p>De kernzin is: kiezen kost altijd iets. Soms betaal je geld, maar economisch gezien kijk je ook naar wat je laat liggen.</p>
+              <p>Gebruik bij nieuwe keuzes de vaste route: alternatieven, opbrengsten, beste niet-gekozen alternatief, nettowaarde.</p>
+              <h4>Let op</h4>
+              <p>Een keuze met de hoogste zichtbare opbrengst is pas goed onderbouwd als je ook het beste alternatief hebt bekeken.</p>
+              <h4>Overgang</h4>
+              <p>Volgende paragraaf: verschillen meten in geld, percentages en indexcijfers.</p>
+            </aside>
+          </div>
+        </article>
+      </section>
+
+      <footer class="controls" aria-label="Dia navigatie">
+        <button type="button" data-prev>Vorige</button>
+        <span class="progress"><span data-current>1</span> / 11</span>
+        <button type="button" data-next>Volgende</button>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.querySelector('[data-golden-presentation]');
+      var slides = [].slice.call(root.querySelectorAll('[data-slide]'));
+      var links = [].slice.call(root.querySelectorAll('[data-slide-link]'));
+      var current = root.querySelector('[data-current]');
+      var prev = root.querySelector('[data-prev]');
+      var next = root.querySelector('[data-next]');
+      var notes = root.querySelector('[data-notes-toggle]');
+      var theme = root.querySelector('[data-theme-toggle]');
+      var fullscreen = root.querySelector('[data-fullscreen-toggle]');
+      var index = Math.max(0, slides.findIndex(function (slide) { return '#' + slide.id === location.hash; }));
+
+      function show(nextIndex, pushHash) {
+        index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+        slides.forEach(function (slide, i) {
+          var active = i === index;
+          slide.hidden = !active;
+          slide.classList.toggle('is-active', active);
+        });
+        links.forEach(function (link, i) {
+          var active = i === index;
+          link.classList.toggle('is-active', active);
+          if (active) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        });
+        current.textContent = String(index + 1);
+        prev.disabled = index === 0;
+        next.disabled = index === slides.length - 1;
+        if (pushHash && slides[index]) history.replaceState(null, '', '#' + slides[index].id);
+      }
+
+      links.forEach(function (link, i) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          show(i, true);
+        });
+      });
+      prev.addEventListener('click', function () { show(index - 1, true); });
+      next.addEventListener('click', function () { show(index + 1, true); });
+      document.addEventListener('keydown', function (event) {
+        if (/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(event.target.tagName)) return;
+        if (event.key === 'ArrowRight' || event.key === 'PageDown') show(index + 1, true);
+        if (event.key === 'ArrowLeft' || event.key === 'PageUp') show(index - 1, true);
+        if (event.key === 'Home') show(0, true);
+        if (event.key === 'End') show(slides.length - 1, true);
+      });
+      notes.addEventListener('click', function () {
+        var open = notes.getAttribute('aria-pressed') !== 'true';
+        notes.setAttribute('aria-pressed', String(open));
+        notes.setAttribute('aria-expanded', String(open));
+        notes.textContent = open ? 'Verberg leerlingnotities' : 'Toon leerlingnotities';
+        root.classList.toggle('notes-open', open);
+      });
+      theme.addEventListener('click', function () {
+        var dark = document.documentElement.getAttribute('data-theme') !== 'dark';
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        theme.setAttribute('aria-pressed', String(dark));
+        theme.textContent = dark ? 'Light mode' : 'Dark mode';
+      });
+      fullscreen.addEventListener('click', function () {
+        var active = !root.classList.contains('fullscreen');
+        root.classList.toggle('fullscreen', active);
+        fullscreen.setAttribute('aria-pressed', String(active));
+        fullscreen.textContent = active ? 'Sluit presentatiemodus' : 'Presentatiemodus';
+      });
+      window.addEventListener('hashchange', function () {
+        var target = slides.findIndex(function (slide) { return '#' + slide.id === location.hash; });
+        if (target >= 0) show(target, false);
+      });
+      show(index, Boolean(location.hash));
+    })();
+  </script>
+</body>
+</html>

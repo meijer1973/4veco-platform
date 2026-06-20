@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "policy_id": "didactic-route-policy",
+  "derived_from": "references/exemplars/1.1.1-golden-presentation/",
+  "default_route": [
+    "route_contract",
+    "narrative_anchor",
+    "concept_definition",
+    "concept_transfer",
+    "misconception_control",
+    "procedure_route",
+    "worked_example_calculation",
+    "worked_example_interpretation",
+    "active_check",
+    "summary_bridge"
+  ],
+  "role_requirements": {
+    "route_contract": ["goal", "route", "success_criteria"],
+    "narrative_anchor": ["concrete_context", "visible_numbers_before_abstraction"],
+    "concept_definition": ["canonical_term", "definition", "anchor_connection"],
+    "concept_transfer": ["additional_contexts", "same_pattern_language"],
+    "misconception_control": ["visible_pitfalls", "correct_repairs"],
+    "procedure_route": ["named_steps", "student_action_per_step"],
+    "worked_example_calculation": ["calculation_before_conclusion", "visible_setup"],
+    "worked_example_interpretation": ["chosen", "not_chosen", "best_non_chosen", "meaning"],
+    "active_check": ["short_formative_application", "no_exercise_set_replacement"],
+    "summary_bridge": ["mental_model", "next_surface_or_paragraph"]
+  },
+  "active_check_does_not_authorize": [
+    "diagnostics",
+    "mastery_claims",
+    "automatic_sequencing",
+    "summative_use",
+    "target_equivalent_completion_language"
+  ]
+}
