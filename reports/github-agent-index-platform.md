@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-20T10:53:52.506Z
+Generated: 2026-06-20T11:35:15.294Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/golden-presentation-exemplar`
-Source commit: `2ec122bbe4e8c93079e7dc10c76b1e000f2fa71a`
-Files indexed: 5208
+Source branch: `codex/goal-dqs-closure-1-20260620`
+Source commit: `8cbd15485257479b6a5eafcfc5efb8d0bc6eb76e`
+Files indexed: 5230
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -133,7 +133,7 @@ Count: 85
 
 ## build scripts
 
-Count: 516
+Count: 518
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -206,7 +206,9 @@ Count: 516
 - build-scripts/content/legacy-target/vaardigheden-352-naar-het-examen.js
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
+- build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
+- build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
@@ -701,8 +703,10 @@ Count: 42
 
 ## validators
 
-Count: 507
+Count: 510
 
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
@@ -745,6 +749,7 @@ Count: 507
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/platform/check-book-landing-v2.js
@@ -1876,7 +1881,7 @@ Count: 658
 
 ## reports
 
-Count: 3275
+Count: 3281
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1945,8 +1950,14 @@ Count: 3275
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.md
 - reports/inspection-standards/dutch-evidence-scale-readiness.json
 - reports/inspection-standards/dutch-evidence-scale-readiness.md
+- reports/inspection-standards/dutch-quality-standards-closure-candidate.json
+- reports/inspection-standards/dutch-quality-standards-closure-candidate.md
+- reports/inspection-standards/dutch-quality-standards-rollup.json
+- reports/inspection-standards/dutch-quality-standards-rollup.md
 - reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json
 - reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md
+- reports/inspection-standards/dutch-school-evidence-pack-candidate.json
+- reports/inspection-standards/dutch-school-evidence-pack-candidate.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
@@ -5174,12 +5185,24 @@ _No files indexed in this group._
 
 ## other
 
-Count: 577
+Count: 589
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/platform-ci.yml
 - .gitignore
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-closure-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-correction-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-final-lead-review.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-human-review-packet.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-planning-review.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-specialist-gate-results.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-sprint-plan.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-correction-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-human-review-packet.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-planning-review.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-specialist-gate-results.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-sprint-plan.md
 - archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 - archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md

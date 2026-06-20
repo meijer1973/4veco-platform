@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "report_id": "dutch-quality-standards-closure-candidate",
+  "report_id": "dutch-school-evidence-pack-candidate",
   "sprint_id": "GOAL-DQS-CLOSURE-1A",
   "generated_date": "2026-06-20",
-  "status": "original_contract_completion_human_review_pending",
+  "status": "internal_candidate_only_not_for_distribution",
   "dutch_only": true,
   "internal_only": true,
   "manual_invocation_only": true,
@@ -192,9 +192,35 @@
     "reports/inspection-standards/dutch-quality-standards-closure-candidate.md",
     "reports/inspection-standards/dutch-quality-standards-closure-candidate.json"
   ],
-  "internal_closure_candidate_only": true,
+  "internal_candidate_only": true,
+  "readable_by_teachers_or_school_leaders_only_inside_internal_review": true,
+  "safe_use_first_screen": [
+    "INTERNAL CANDIDATE ONLY",
+    "NOT FOR SCHOOL OR PUBLIC DISTRIBUTION",
+    "NOT INSPECTION APPROVAL",
+    "NOT LEGAL COMPLIANCE",
+    "NOT COMPLETE OP0 EVIDENCE",
+    "NOT SCHOOL IMPLEMENTATION EVIDENCE",
+    "NOT PTA OR SUMMATIVE VALIDITY"
+  ],
+  "section_order": [
+    "scope and safe-use boundary",
+    "curriculum coherence",
+    "subject-relevant basic skills",
+    "didactic design",
+    "assessment alignment",
+    "support and differentiation",
+    "accessibility",
+    "quality assurance",
+    "improvement cycle",
+    "school-owned evidence still needed",
+    "known blockers",
+    "safe claims",
+    "forbidden claims"
+  ],
+  "supports_closure_decision": "CLOSE_INTERNAL_SYSTEM",
+  "bounded_trial_recommendation": "do_not_authorise_trial_from_this_packet",
   "rollup_report_id": "dutch-quality-standards-rollup",
-  "internal_pack_candidate_report_id": "dutch-school-evidence-pack-candidate",
   "non_negotiable_requirements": [
     "Use REV-STD-1 for review packet, validation, closure, final lead review, and PR body.",
     "Cite product end-state and the original sprint/gate spec.",
@@ -241,167 +267,149 @@
       "evidence": "output_boundary and top-level flags"
     },
     {
-      "requirement": "Dutch multi-scope roll-up pair exists",
+      "requirement": "Exact safe-use first screen present",
       "status": "met",
-      "evidence": "reports/inspection-standards/dutch-quality-standards-rollup.md/json"
+      "evidence": "safe_use_first_screen"
     },
     {
-      "requirement": "Internal school-evidence-pack candidate pair exists",
+      "requirement": "All required pack-candidate sections present",
       "status": "met",
-      "evidence": "reports/inspection-standards/dutch-school-evidence-pack-candidate.md/json"
+      "evidence": "section_order and sections"
     },
     {
-      "requirement": "Final closure-policy decision chooses exactly one allowed option",
+      "requirement": "Candidate is not authorised for distribution",
       "status": "met",
-      "evidence": "final_closure_policy_decision.selected"
-    },
-    {
-      "requirement": "Decision based on roll-up and internal pack candidate",
-      "status": "met",
-      "evidence": "final_closure_policy_decision.basis_from_rollup_report and basis_from_pack_candidate_report"
-    },
-    {
-      "requirement": "No missing core requirement carried as PASS WITH FLAGS",
-      "status": "met",
-      "evidence": "finding_classification marks future authority as blockers for those surfaces"
+      "evidence": "bounded_trial_recommendation and output_boundary"
     }
   ],
-  "final_closure_policy_decision": {
-    "selected": "CLOSE_INTERNAL_SYSTEM",
-    "decision_selection_count": 1,
-    "allowed_options": [
-      "CLOSE_INTERNAL_SYSTEM",
-      "AUTHORISE_BOUNDED_SCHOOL_PACK_TRIAL",
-      "REMEDIATE_BEFORE_CLOSURE"
-    ],
-    "rejected_options": [
-      "AUTHORISE_BOUNDED_SCHOOL_PACK_TRIAL",
-      "REMEDIATE_BEFORE_CLOSURE"
-    ],
-    "meaning": "The internal/report-only Dutch system is closed and stable. No school-pack trial is authorised.",
-    "basis_from_rollup_report": "dutch-quality-standards-rollup",
-    "basis_from_pack_candidate_report": "dutch-school-evidence-pack-candidate",
-    "rationale": [
-      "The roll-up shows the current system layer, Chapter 1.2, and Chapter 1.3 internal diagnostic reports are stable enough for internal/report-only closure.",
-      "The pack candidate is coherent for internal owner review but remains explicitly unauthorised for school/public distribution.",
-      "The pack candidate preserves school-owned evidence gaps and does not justify authorising a school-pack trial from this packet.",
-      "No current-layer defect requires remediation before internal/report-only closure, so REMEDIATE_BEFORE_CLOSURE is not selected."
-    ],
-    "owner_next_action": "Owner next action: review PR #124 as the completed GOAL-DQS-CLOSURE-1A packet. If accepted and merged, treat the Dutch quality-standards project as closed for internal/report-only use only. Do not start international work, school-pack trial work, or downstream product work until separately authorised."
-  },
-  "closure_recommendation": {
-    "decision": "CLOSE_INTERNAL_SYSTEM",
-    "scope": "Close only the current Dutch internal/report-only evidence-support and diagnostic system through Chapter 1.3. No school-pack trial, teacher/school-facing distribution, public/external output, product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product-use, international work, personal-data processing, or compliance/approval claim is authorised.",
-    "owner_next_action": "Human owner reviews the complete 1A packet. Accepting it closes the internal system only; any stronger authority requires a fresh sprint."
-  },
-  "maturity_assessment": [
-    {
-      "level": "L0-L2",
-      "name": "Setup, source/profile, schema, validator",
-      "status": "met_for_internal_report_only_use",
-      "evidence": "Roadmap, draft Dutch source/profile, report-only evidence model, manual validator, guardrails, and operating procedure exist."
+  "sections": {
+    "scope and safe-use boundary": {
+      "summary": "Internal review candidate only. It tests whether current Dutch product evidence can be presented coherently, but it is not a teacher/school-facing pack and is not for school or public distribution.",
+      "strong_product_evidence": [
+        "The current internal Dutch system has reviewed source/profile, report-only validator, historical bounded Chapter 1.1 sample, and Chapter 1.2/1.3 internal diagnostic reports."
+      ],
+      "weak_or_missing_evidence": [
+        "School-owned implementation evidence and public/external sharing authority are absent."
+      ],
+      "safe_use": "May be read by teachers or school leaders only inside an owner-controlled internal review; it may not be distributed or relied on as a school-facing artifact."
     },
-    {
-      "level": "L3",
-      "name": "Bounded historical sample",
-      "status": "met_historically_for_inspect_7_scope",
-      "evidence": "INSPECT-7 bounded Chapter 1.1 first-three sample remains historical control evidence."
+    "curriculum coherence": {
+      "summary": "Product-side evidence links the current Chapter 1.2 and Chapter 1.3 diagnostic scopes to target exercises and route-local proof records.",
+      "strong_product_evidence": [
+        "Chapter 1.3 route-local proof records name concrete exercise and answer ranges.",
+        "Chapter 1.2 diagnostic records preserve target-equivalent and generated-output blockers."
+      ],
+      "weak_or_missing_evidence": [
+        "Full multi-chapter published curriculum proof and school curriculum-plan adoption evidence are not present."
+      ]
     },
-    {
-      "level": "internal-diagnostic-layer",
-      "name": "Chapter 1.2 and Chapter 1.3 manual diagnostic reports",
-      "status": "met_for_internal_report_only_use",
-      "evidence": "Chapter 1.2 and Chapter 1.3 diagnostic report pairs exist and keep blockers visible."
+    "subject-relevant basic skills": {
+      "summary": "The product exposes economics-relevant reasoning, calculation, graph/table/source use, and answer-construction evidence.",
+      "strong_product_evidence": [
+        "Internal diagnostic reports focus on economics route evidence rather than generic school OP0 claims."
+      ],
+      "weak_or_missing_evidence": [
+        "This is not complete OP0 evidence for a school and does not cover school-wide language, rekenen-wiskunde, or citizenship implementation."
+      ]
     },
-    {
-      "level": "original-closure-contract",
-      "name": "Roll-up, internal pack candidate, and decision",
-      "status": "met_for_human_review",
-      "evidence": "GOAL-DQS-CLOSURE-1A generated all three artifact pairs and selected CLOSE_INTERNAL_SYSTEM."
+    "didactic design": {
+      "summary": "The internal evidence indicates a route from readiness to target-exercise work, consistent with the product end-state.",
+      "strong_product_evidence": [
+        "Chapter 1.3 evidence includes repaired own-price movement versus demand-shift separation and route-local task proof."
+      ],
+      "weak_or_missing_evidence": [
+        "Teacher classroom-use evidence, observed lesson evidence, and school implementation records are absent."
+      ]
     },
-    {
-      "level": "L4/L5",
-      "name": "Teacher/school-facing and full Dutch quality-control maturity",
-      "status": "not_claimed",
-      "evidence": "Internal pack candidate is not authorised for distribution and no school-pack trial is authorised."
+    "assessment alignment": {
+      "summary": "Product evidence can identify target-exercise and answer-form alignment, but it does not prove PTA or summative validity.",
+      "strong_product_evidence": [
+        "Chapter diagnostic reports preserve answer-form and route-local proof language."
+      ],
+      "weak_or_missing_evidence": [
+        "PTA policy, grading policy, summative-validity review, and school assessment cycle evidence remain school-owned."
+      ]
+    },
+    "support and differentiation": {
+      "summary": "Support/differentiation evidence is visible as product-side diagnostic context and as a limitation.",
+      "strong_product_evidence": [
+        "Chapter 1.3 carries rendered/static support evidence as route-local proof."
+      ],
+      "weak_or_missing_evidence": [
+        "Chapter 1.2 support evidence remains below pack-strength.",
+        "School intervention, accommodation, monitoring, and individual support evidence are absent."
+      ]
+    },
+    "accessibility": {
+      "summary": "Accessibility evidence is treated as a limitation rather than a certification claim.",
+      "strong_product_evidence": [
+        "Chapter 1.3 has rendered mobile/desktop proof and static support evidence."
+      ],
+      "weak_or_missing_evidence": [
+        "No full WCAG certification, PDF-tagging certification, or teacher/school-facing accessibility claim is made."
+      ]
+    },
+    "quality assurance": {
+      "summary": "The repository has repeatable manual checks for the internal diagnostic and closure surfaces.",
+      "strong_product_evidence": [
+        "DQS generator/checker, diagnostic currentness checks, stability checks, report JSON validation, roadmap index checks, and platform tests are part of closure proof."
+      ],
+      "weak_or_missing_evidence": [
+        "No hard CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration is authorised."
+      ]
+    },
+    "improvement cycle": {
+      "summary": "Known gaps are carried with blocks, does_not_block, and proof_required_to_close instead of being hidden as flags.",
+      "strong_product_evidence": [
+        "Chapter 1.2, Chapter 1.3, check-surface, school-owned evidence, and Book 1 assembly issues remain separately classified."
+      ],
+      "weak_or_missing_evidence": [
+        "No downstream remediation starts from this packet without later human authority."
+      ]
+    },
+    "school-owned evidence still needed": {
+      "summary": "The current product-side packet cannot replace school-owned records.",
+      "items": [
+        "Classroom use and implementation evidence.",
+        "Differentiation, intervention, accommodation, and support evidence.",
+        "PTA, grading, summative-validity, and assessment-policy evidence.",
+        "School governance, SKA, inspection conversation, and competent-authority judgement evidence."
+      ]
+    },
+    "known blockers": {
+      "summary": "Current blockers remain visible and block stronger authority.",
+      "items": [
+        "Chapter 1.2 generated-output and pack-strength blockers.",
+        "Chapter 1.3 downstream check-surface authority blocker.",
+        "Draft/bounded source-profile status.",
+        "School-owned evidence gap.",
+        "Book 1 clean-health carry item for Chapter 1.1 and Chapter 1.4 assembly issues."
+      ]
+    },
+    "safe claims": {
+      "summary": "Allowed internal wording.",
+      "items": [
+        "The current Dutch internal/report-only system has reviewed product-side evidence support through Chapter 1.3.",
+        "The packet can help internal reviewers see product evidence and known gaps.",
+        "The internal pack candidate is coherent enough for owner review, but not authorised for distribution."
+      ]
+    },
+    "forbidden claims": {
+      "summary": "Claims this candidate must not make.",
+      "items": [
+        "4veco is legally compliant, approved, inspection-ready, OP0-complete, PTA-valid, summative-valid, or school-SKA complete.",
+        "This is school implementation evidence or a teacher/school-facing pack.",
+        "This authorises public/external sharing, a school-pack trial, product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product-use, international work, or personal-data processing."
+      ]
     }
-  ],
+  },
   "finding_classification": [
     {
-      "finding": "GOAL-DQS-CLOSURE-1A restores the original closure contract by adding the roll-up, internal pack candidate, and final closure-policy decision.",
-      "classification": "core_requirement_closed",
-      "blocks": "Nothing inside the internal/report-only closure decision after human acceptance, fresh green PR CI, and merge.",
-      "does_not_block": "Human review of the completed PR #124 packet.",
-      "proof_required_to_close": "All six outputs current, DQS checker PASS, specialist corrections closed, final lead PASS, PR #124 green/fresh/mergeable, and human acceptance."
-    },
-    {
-      "finding": "Final decision is CLOSE_INTERNAL_SYSTEM.",
-      "classification": "closure_policy_decision",
-      "blocks": "School-pack trial authority, teacher/school-facing output, public/external output, product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product-use, international work, personal-data processing, and compliance/approval claims.",
-      "does_not_block": "Treating the Dutch quality-standards project as closed for internal/report-only use after human acceptance and merge.",
-      "proof_required_to_close": "Human acceptance of the explicit decision after final lead PASS and fresh PR CI."
-    },
-    {
-      "finding": "The internal school-evidence-pack candidate is not a distributed pack.",
-      "classification": "school_evidence_boundary",
-      "blocks": "School/public distribution, teacher/school-facing reliance, school-pack trial start, and school-owned evidence claims.",
-      "does_not_block": "Using the candidate as internal evidence in the closure-policy decision.",
-      "proof_required_to_close": "Separate human-authorised school-pack trial sprint if the owner later wants a bounded, non-public, no-personal-data trial."
-    },
-    {
-      "finding": "Source register and Dutch evidence profile remain draft/bounded.",
-      "classification": "draft_source_profile_boundary",
-      "blocks": "Final source/profile authority, public/external claims, compliance/approval claims, and full L5 maturity.",
-      "does_not_block": "Internal/report-only closure with draft status visible.",
-      "proof_required_to_close": "Fresh source/profile maintenance sprint with renewed review and explicit human acceptance."
-    },
-    {
-      "finding": "Check-surface authority remains separate.",
-      "classification": "downstream_gate_blocker",
-      "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use.",
-      "does_not_block": "DQS internal/report-only closure and ordinary scoped PR work.",
-      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and naming any authority unlocked."
-    },
-    {
-      "finding": "School-owned evidence is still needed before school-facing or external claims.",
-      "classification": "school_evidence_gap",
-      "blocks": "Teacher/school-facing reliance, public/external sharing, compliance, approval, OP0, PTA, summative, inspection-readiness, school-obligation, and school-SKA claims.",
-      "does_not_block": "Internal/report-only closure with explicit boundaries.",
-      "proof_required_to_close": "Separate school-owned evidence route and renewed human review before any school/public use."
-    },
-    {
-      "finding": "Book 1 Chapter 1.1 and Chapter 1.4 assembly-health failures remain separate.",
-      "classification": "scope_boundary_flag",
-      "blocks": "Book 1 clean-health claims.",
-      "does_not_block": "DQS internal/report-only closure.",
-      "proof_required_to_close": "Separate BOOK1-ASSEMBLY-HEALTH-1 route."
-    },
-    {
-      "finding": "International standards work is not part of this closure decision.",
-      "classification": "scope_boundary_flag",
-      "blocks": "Non-Dutch or international standards roadmap work.",
-      "does_not_block": "Dutch internal/report-only closure.",
-      "proof_required_to_close": "Owner acceptance/merge of this packet, then a separate later worktree and roadmap if international work is authorised."
+      "finding": "The pack candidate is coherent for internal owner review but not authorised for distribution.",
+      "classification": "internal_candidate_only",
+      "blocks": "Teacher/school-facing distribution, public/external sharing, school-pack trial start, and any school reliance claim.",
+      "does_not_block": "Using the candidate as one input to the final CLOSE_INTERNAL_SYSTEM closure-policy decision.",
+      "proof_required_to_close": "DQS checker verifies exact first-screen warnings, all required sections, false authority flags, and consistency with the roll-up and closure decision."
     }
-  ],
-  "forbidden_inference": [
-    "This closure candidate proves 4veco is compliant, approved, inspection-ready, OP0-complete, PTA-valid, summative-valid, or school-SKA complete.",
-    "This closure candidate authorises evidence-pack generation, teacher/school-facing output, public/external output or sharing.",
-    "This closure candidate authorises a school-pack trial.",
-    "This closure candidate authorises package scripts, CI/build invocation, dashboard gates, quality-ref integration, Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student-use, or product-use.",
-    "This closure candidate authorises generated lesson-output mutation, protected-reference mutation, source-registry mutation, personal-data processing, or international standards work."
-  ],
-  "school_owned_evidence_still_needed": [
-    "School implementation, classroom-use, monitoring, intervention, accommodation, and support evidence.",
-    "PTA, grading, summative-validity, and assessment-policy evidence.",
-    "School governance, SKA, inspection conversation, and competent-authority judgement evidence."
-  ],
-  "proof_required_to_close": [
-    "All six generated outputs current and checked.",
-    "Lead planning review corrections closed.",
-    "Teacher/economics, legal/privacy, Dutch quality-inspection, and accessibility specialist corrections closed.",
-    "Final lead PASS.",
-    "Fresh PR #124 CI green, 0 behind current main, non-draft, and mergeable.",
-    "Human acceptance of the explicit CLOSE_INTERNAL_SYSTEM decision."
   ]
 }
