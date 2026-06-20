@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-19T13:30:08.312Z
+Generated: 2026-06-19T14:39:58.011Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 5079
+Files indexed: 5106
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 82
+Count: 84
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -102,6 +102,8 @@ Count: 82
 - engines/tests/micro-teaching-units.test.js
 - engines/tests/newsdetective-data.test.js
 - engines/tests/newsdetective-engine.test.js
+- engines/tests/newsdetective-v2-interaction.test.js
+- engines/tests/newsdetective-v2-ui.test.js
 - engines/tests/presentatie-html-shape.test.js
 - engines/tests/presentation-v2-prototype.test.js
 - engines/tests/procedure-data-formal-step.test.js
@@ -128,7 +130,7 @@ Count: 82
 
 ## build scripts
 
-Count: 506
+Count: 507
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -237,6 +239,7 @@ Count: 506
 - build-scripts/platform/build-skilltree-shells.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
+- build-scripts/platform/check-news-detective-v2.js
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/platform/generate-quiz-shells.js
 - build-scripts/platform/reskin-vaardigheden.js
@@ -686,7 +689,7 @@ Count: 42
 
 ## validators
 
-Count: 496
+Count: 497
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -733,6 +736,7 @@ Count: 496
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
+- build-scripts/platform/check-news-detective-v2.js
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -1187,7 +1191,7 @@ Count: 496
 
 ## references
 
-Count: 625
+Count: 627
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1808,6 +1812,8 @@ Count: 625
 - references/ui/layout-registry.md
 - references/ui/layouts/golden-exercise-workbench-short-check.json
 - references/ui/layouts/golden-exercise-workbench-short-check.md
+- references/ui/news-detective-v2/approved.html
+- references/ui/news-detective-v2/README.md
 - references/ui/paragraph-landing-v2/approved-dark.html
 - references/ui/paragraph-landing-v2/approved-light.html
 - references/ui/paragraph-landing-v2/README.md
@@ -1817,7 +1823,7 @@ Count: 625
 
 ## reports
 
-Count: 3200
+Count: 3222
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1920,6 +1926,7 @@ Count: 3200
 - reports/json/exit-ticket-workbench-112-1-proof.json
 - reports/json/exit-ticket-workbench-112-rendered-1-proof.json
 - reports/json/gate-product-3p-authority-copy-repair-and-rereview-1-proof.json
+- reports/json/gate-product-3p-closure-and-scale-gate-1-readiness-bundle-1-proof.json
 - reports/json/gate-product-3p-prep-2-proof.json
 - reports/json/golden-exercise-checkers-1-proof.json
 - reports/json/golden-surface-visual-review-1-proof.json
@@ -2669,6 +2676,8 @@ Count: 3200
 - reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
+- reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
+- reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -3763,6 +3772,14 @@ Count: 3200
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-short-check-desktop-light.png
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/114-landing-mobile-dark-exit-row-same-copy-hygiene.png
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/manifest.json
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-a96-calculation-disposition.md
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-blocker-log.md
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-current-main-closure.md
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-golden-route-disposition.md
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-plan.md
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-rendered-product-route-quality-log.md
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-result.md
+- reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-scale-gate-1-readiness-evidence-map.md
 - reports/sprints/GATE-PRODUCT-3P-PREP-2-blocker-log.md
 - reports/sprints/GATE-PRODUCT-3P-PREP-2-evidence-map.md
 - reports/sprints/GATE-PRODUCT-3P-PREP-2-plan.md
@@ -4180,6 +4197,17 @@ Count: 3200
 - reports/sprints/MTU-H4C-plan.md
 - reports/sprints/MTU-H4C-result.md
 - reports/sprints/MTU-H5-blocked-stop-result.md
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-plan.md
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-result.md
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-review-packet.md
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshot-manifest.md
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/active-desktop-dark.png
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/active-mobile-light.png
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/dom-proof.json
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/result-desktop-light.png
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
+- reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
