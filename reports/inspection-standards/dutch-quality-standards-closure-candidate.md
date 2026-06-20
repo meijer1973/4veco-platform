@@ -167,4 +167,3 @@ Owner next action: review this closure candidate. If accepted, merge the PR and 
 
 - `reports/inspection-standards/dutch-quality-standards-closure-candidate.md`
 - `reports/inspection-standards/dutch-quality-standards-closure-candidate.json`
-

@@ -554,7 +554,6 @@ function renderMarkdown(report) {
   lines.push("## Output Files Written");
   lines.push("");
   report.output_files_written.forEach((item) => lines.push(`- \`${item}\``));
-  lines.push("");
   return `${lines.join("\n")}\n`;
 }
 
