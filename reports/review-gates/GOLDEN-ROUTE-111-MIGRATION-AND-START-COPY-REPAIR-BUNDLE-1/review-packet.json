@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "packet_id": "GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1",
+  "sprint_id": "GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1",
+  "bundle_id": "GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1",
+  "date": "2026-06-19",
+  "pr_number": 120,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/120",
+  "status": "ready_for_human_golden_route_111_review",
+  "lead_review_result": "READY_FOR_HUMAN_GOLDEN_ROUTE_111_REVIEW",
+  "human_decision_required": true,
+  "auto_merge_allowed_after_ci": false,
+  "pr_throughput_class": "cross_repo_bundle",
+  "authority_class": "high_authority",
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "READY_FOR_HUMAN_GOLDEN_ROUTE_111_REVIEW",
+    "rationale": "This cross-repo Golden route repair changes governed platform source/runtime/proof and generated lesson output. Human review is required before merge."
+  },
+  "escalation_triggers": [
+    "golden_route_111_human_review",
+    "cross_repo_generated_lesson_output",
+    "product_authority_boundary",
+    "completion_language_boundary"
+  ],
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-result.md",
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-golden-route-disposition.md",
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-blocker-log.md",
+    "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-plan.md"
+  ],
+  "non_negotiable_requirements": [
+    "Do not carry a missing core requirement under PASS WITH FLAGS.",
+    "Migrate 1.1.1 Exit ticket to the governed Golden Exercise Workbench.",
+    "Migrate 1.1.1 Korte check to the governed advisory Golden short-check variant.",
+    "Preserve 1.1.1 exit-ticket target flags including completionLanguageEligible:false.",
+    "Preserve short-check advisory authority with no target-equivalent proof, no target-readiness evidence, and no completion language.",
+    "Repair first-three Start copy away from mastery, closure, diagnostics, or sequencing language.",
+    "Keep first-three exit completion language held and use neutral local-check wording.",
+    "Regenerate lesson output through the platform deploy path only.",
+    "Provide rendered desktop/mobile proof and a deterministic checker.",
+    "Do not authorize product-route adoption, diagnostics, mastery/sequencing, PV, summative use, Scale Gate 1, broad product use, or student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state_refs"
+    },
+    {
+      "requirement": "Original sprint/gate specs cited",
+      "status": "met",
+      "evidence": "original_sprint_or_gate_spec_refs"
+    },
+    {
+      "requirement": "Non-negotiables named",
+      "status": "met",
+      "evidence": "non_negotiable_requirements"
+    },
+    {
+      "requirement": "Core-requirement checklist included",
+      "status": "met",
+      "evidence": "core_requirement_checklist"
+    },
+    {
+      "requirement": "Findings classified",
+      "status": "met",
+      "evidence": "findings"
+    },
+    {
+      "requirement": "blocks / does_not_block / proof_required_to_close included",
+      "status": "met",
+      "evidence": "carried_flags"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "Lead verdict is READY_FOR_HUMAN_GOLDEN_ROUTE_111_REVIEW; carried issue is downstream authority only, not a missing core requirement for this bundle."
+    },
+    {
+      "requirement": "1.1.1 Exit ticket Golden migration",
+      "status": "met",
+      "evidence": "reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json"
+    },
+    {
+      "requirement": "1.1.1 Korte check advisory Golden migration",
+      "status": "met",
+      "evidence": "reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json"
+    },
+    {
+      "requirement": "First-three Start copy neutral",
+      "status": "met",
+      "evidence": "reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json"
+    },
+    {
+      "requirement": "Completion language remains held",
+      "status": "met",
+      "evidence": "reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json"
+    },
+    {
+      "requirement": "Rendered/mobile proof refreshed",
+      "status": "met",
+      "evidence": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/manifest.json"
+    }
+  ],
+  "authority_claims": {
+    "golden_route_111_human_review_ready": true,
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "broad_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-plan.md",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-result.md",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-quality-log.md",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-evidence-map.md",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-architecture-disposition.md",
+    "reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshot-manifest.md",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/manifest.json",
+    "build-scripts/sprints/capture-golden-route-111-migration-and-start-copy-repair-bundle-1.js",
+    "build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js"
+  ],
+  "proof": {
+    "source_generated_parity": "passed",
+    "rendered_mobile_proof": "passed",
+    "completion_language_held": "passed",
+    "authority_boundary": "passed",
+    "specialist_reviews": {
+      "authority_boundary": "pass",
+      "rendered_mobile": "pass",
+      "route_link": "pass",
+      "teacher_didactic": "pass_with_non_blocking_advisories",
+      "repository_ci": "pass"
+    },
+    "lead_review": "READY_FOR_HUMAN_GOLDEN_ROUTE_111_REVIEW",
+    "checkers": [
+      {
+        "command": "node build-scripts/sprints/capture-golden-route-111-migration-and-start-copy-repair-bundle-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-mtu-evidence-layer.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/ci/check-evidence-line-endings.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:landing-v2",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\GOLDEN-ROUTE-111-START-COPY-20260619\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "GR111-001",
+      "classification": "core_requirement_met",
+      "severity": "high",
+      "finding": "1.1.1 Exit ticket and Korte check render through governed Golden Workbench variants with source/generated parity.",
+      "status": "closed_for_human_review"
+    },
+    {
+      "id": "GR111-002",
+      "classification": "core_requirement_met",
+      "severity": "high",
+      "finding": "First-three Start copy uses neutral local practice-progress wording and avoids mastery/closure markers.",
+      "status": "closed_for_human_review"
+    },
+    {
+      "id": "GR111-003",
+      "classification": "core_requirement_met",
+      "severity": "high",
+      "finding": "First-three exit completion headings use neutral Werk nagekeken while completion language remains held.",
+      "status": "closed_for_human_review"
+    },
+    {
+      "id": "GR111-004",
+      "classification": "core_requirement_met",
+      "severity": "high",
+      "finding": "Rendered desktop/mobile proof includes CDP viewport inspection and no horizontal overflow, including 390px mobile.",
+      "status": "closed_for_human_review"
+    },
+    {
+      "id": "GR111-005",
+      "classification": "carried_issue",
+      "severity": "critical",
+      "finding": "Product-route adoption, Scale Gate 1, diagnostics, mastery/sequencing, PV, summative use, broad product use, and student/product use remain unauthorized.",
+      "status": "open_downstream"
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "GR111-005",
+      "classification": "carried_issue",
+      "flag": "Downstream product authority remains held.",
+      "blocks": [
+        "product-route adoption",
+        "diagnostics",
+        "mastery/sequencing",
+        "PV",
+        "summative use",
+        "Scale Gate 1",
+        "broad product use",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "human review of this Golden Route 111 repair bundle",
+        "opening paired platform and generated lesson-output PRs",
+        "ordinary scoped work that does not reinterpret gate authority"
+      ],
+      "proof_required_to_close": "Later explicit human product/Scale gate review with rendered product evidence and REV-STD-1 review packet."
+    }
+  ],
+  "paired_prs": [
+    {
+      "repo": "4veco-platform",
+      "pr_number": 120,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/120",
+      "expected_scope": "generator/source/proof/checker/report/runtime/test changes",
+      "merge_order": 1
+    },
+    {
+      "repo": "4veco-lessen",
+      "pr_number": 30,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/30",
+      "expected_scope": "generated lesson output only",
+      "merge_order": 2
+    }
+  ],
+  "recommended_next_action": "Run remote CI and human Golden Route 111 review for platform PR #120 and lesson PR #30. After approval, merge platform first and lesson second. Do not close downstream product/Scale/student-use gates from this bundle alone."
+}

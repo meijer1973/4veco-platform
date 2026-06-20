@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1",
+  "generated_on": "2026-06-19T14:30:27.648Z",
+  "status": "ready_for_human_review",
+  "platform_head": "210df0a999909c4ed95be9b58535559cec1332bd",
+  "lesson_head": "485590978cc3bc8db19e753d898174883eea6542",
+  "lesson_book_root": "C:\\wt\\GOLDEN-ROUTE-111-START-COPY-20260619\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false
+  },
+  "source_generated_parity": {
+    "1.1.1-exit-ticket": {
+      "source_context_blocks": 2,
+      "generated_context_blocks": 2
+    },
+    "1.1.1-korte-check": {
+      "source_context_blocks": 4,
+      "generated_context_blocks": 4
+    }
+  },
+  "start_copy_audit": [
+    {
+      "paragraph": "1.1.1",
+      "neutral_oefenstatus_present": true,
+      "progress_dashboard_present": true,
+      "neutral_series_copy_present": true,
+      "forbidden_terms_absent": true
+    },
+    {
+      "paragraph": "1.1.2",
+      "neutral_oefenstatus_present": true,
+      "progress_dashboard_present": true,
+      "neutral_series_copy_present": true,
+      "forbidden_terms_absent": true
+    },
+    {
+      "paragraph": "1.1.3",
+      "neutral_oefenstatus_present": true,
+      "progress_dashboard_present": true,
+      "neutral_series_copy_present": true,
+      "forbidden_terms_absent": true
+    }
+  ],
+  "completion_audit": {
+    "1.1.1": {
+      "exit_ticket": {
+        "source_completionLanguageEligible": false,
+        "generated_completionLanguageEligible": false,
+        "source_targetReadinessEvidence": true,
+        "generated_targetReadinessEvidence": true,
+        "source_completion_title": "Werk nagekeken",
+        "generated_completion_title": "Werk nagekeken"
+      },
+      "short_check": {
+        "source_surface": "advisory_short_check",
+        "generated_surface": "advisory_short_check",
+        "source_targetReadinessEvidence": false,
+        "generated_targetReadinessEvidence": false,
+        "source_completionLanguageEligible": false,
+        "generated_completionLanguageEligible": false
+      }
+    },
+    "1.1.2": {
+      "exit_ticket": {
+        "source_completionLanguageEligible": false,
+        "generated_completionLanguageEligible": false,
+        "source_targetReadinessEvidence": true,
+        "generated_targetReadinessEvidence": true,
+        "source_completion_title": "Werk nagekeken",
+        "generated_completion_title": "Werk nagekeken"
+      },
+      "short_check": {
+        "source_surface": "advisory_short_check",
+        "generated_surface": "advisory_short_check",
+        "source_targetReadinessEvidence": false,
+        "generated_targetReadinessEvidence": false,
+        "source_completionLanguageEligible": false,
+        "generated_completionLanguageEligible": false
+      }
+    },
+    "1.1.3": {
+      "exit_ticket": {
+        "source_completionLanguageEligible": false,
+        "generated_completionLanguageEligible": false,
+        "source_targetReadinessEvidence": true,
+        "generated_targetReadinessEvidence": true,
+        "source_completion_title": "Werk nagekeken",
+        "generated_completion_title": "Werk nagekeken"
+      },
+      "short_check": {
+        "source_surface": "advisory_short_check",
+        "generated_surface": "advisory_short_check",
+        "source_targetReadinessEvidence": false,
+        "generated_targetReadinessEvidence": false,
+        "source_completionLanguageEligible": null,
+        "generated_completionLanguageEligible": null
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "id": "1-1-1-start-desktop",
+      "paragraph": "1.1.1",
+      "surface": "start",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-start-desktop.png",
+      "inspection": {
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "document_scroll_width": 1280,
+        "body_scroll_width": 1280,
+        "max_scroll_width": 1280,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-1-start-mobile",
+      "paragraph": "1.1.1",
+      "surface": "start",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-start-mobile.png",
+      "inspection": {
+        "viewport_width": 390,
+        "viewport_height": 900,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "max_scroll_width": 390,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-2-start-desktop",
+      "paragraph": "1.1.2",
+      "surface": "start",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – instapquiz.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-2-start-desktop.png",
+      "inspection": {
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "document_scroll_width": 1280,
+        "body_scroll_width": 1280,
+        "max_scroll_width": 1280,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-2-start-mobile",
+      "paragraph": "1.1.2",
+      "surface": "start",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – instapquiz.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-2-start-mobile.png",
+      "inspection": {
+        "viewport_width": 390,
+        "viewport_height": 900,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "max_scroll_width": 390,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-3-start-desktop",
+      "paragraph": "1.1.3",
+      "surface": "start",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – instapquiz.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-3-start-desktop.png",
+      "inspection": {
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "document_scroll_width": 1280,
+        "body_scroll_width": 1280,
+        "max_scroll_width": 1280,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-3-start-mobile",
+      "paragraph": "1.1.3",
+      "surface": "start",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – instapquiz.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-3-start-mobile.png",
+      "inspection": {
+        "viewport_width": 390,
+        "viewport_height": 900,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "max_scroll_width": 390,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-1-exit-ticket-desktop",
+      "paragraph": "1.1.1",
+      "surface": "exit-ticket",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-exit-ticket-desktop.png",
+      "inspection": {
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "document_scroll_width": 1280,
+        "body_scroll_width": 1280,
+        "max_scroll_width": 1280,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-1-exit-ticket-mobile",
+      "paragraph": "1.1.1",
+      "surface": "exit-ticket",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-exit-ticket-mobile.png",
+      "inspection": {
+        "viewport_width": 390,
+        "viewport_height": 900,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "max_scroll_width": 390,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-1-korte-check-desktop",
+      "paragraph": "1.1.1",
+      "surface": "korte-check",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – korte-check.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-desktop.png",
+      "inspection": {
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "document_scroll_width": 1280,
+        "body_scroll_width": 1280,
+        "max_scroll_width": 1280,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "id": "1-1-1-korte-check-mobile",
+      "paragraph": "1.1.1",
+      "surface": "korte-check",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – korte-check.html",
+      "file": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-mobile.png",
+      "inspection": {
+        "viewport_width": 390,
+        "viewport_height": 900,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "max_scroll_width": 390,
+        "horizontal_scroll_overflow": false,
+        "offenders": [],
+        "horizontal_overflow": false
+      }
+    }
+  ],
+  "screenshot_manifest": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshot-manifest.md",
+  "screenshot_manifest_json": "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/manifest.json",
+  "proof": {
+    "start_copy_forbidden_terms_absent": true,
+    "start_copy_neutral_oefenstatus_present": true,
+    "golden_111_exit_rendered": true,
+    "golden_111_short_rendered": true,
+    "rendered_no_horizontal_overflow": true,
+    "rendered_mobile_no_horizontal_overflow": true,
+    "completion_language_held": true,
+    "visible_exit_completion_heading_neutral": true,
+    "gate_claim_limited_to_first_three_start_copy_and_111_route_migration": true
+  }
+}

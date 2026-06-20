@@ -692,19 +692,20 @@ describe('ExitTicketUI', () => {
         expect(html.toLowerCase()).not.toContain('beheerst');
     });
 
-    test('generator shell loads shared skill-map and exit-ticket runtime files', () => {
+    test('generator shell uses the Golden advisory workbench for the 1.1.1 short check', () => {
         const shell = exitTicketShells.generateShell('1.1.1', 'Schaarste en economisch denken', data, '1.1.1-korte-check');
-        expect(shell).toContain('shared/skill-map-engine.js');
-        expect(shell).toContain('shared/skilltree/base-elements.js');
-        expect(shell).toContain('shared/skilltree/1.1.1.js');
-        expect(shell).toContain('shared/skill-map-route-ui.js');
-        expect(shell).toContain('shared/task-shell.css');
-        expect(shell).toContain('shared/task-shell-engine.js');
-        expect(shell).toContain('shared/task-shell-ui.js');
+        expect(shell).toContain('<title>Schaarste en economisch denken - Korte check</title>');
         expect(shell).toContain('shared/exit-ticket/1.1.1-korte-check.js');
-        expect(shell).toContain('shared/exit-ticket-engine.js');
-        expect(shell).toContain('shared/exit-ticket-ui.js');
-        expect(shell).toContain('shared/exit-ticket.css');
+        expect(shell).toContain('class="ge-topbar"');
+        expect(shell).toContain('class="ge-page" data-golden-ticket-root');
+        expect(shell).toContain('shared/golden-ticket-layout.css');
+        expect(shell).toContain('shared/golden-ticket-layout.js');
+        expect(shell).toContain('data-ge-choice-option');
+        expect(shell).not.toContain('shared/skill-map-engine.js');
+        expect(shell).not.toContain('shared/task-shell.css');
+        expect(shell).not.toContain('shared/task-shell-ui.js');
+        expect(shell).not.toContain('shared/exit-ticket-ui.js');
+        expect(shell).not.toContain('id="exit-ticket-app"');
     });
 
     test('generator shell uses the Golden calculation workbench for the 1.1.2 exit ticket', () => {

@@ -81,7 +81,7 @@ function generateShell(parNr, parName) {
                 <div class="stat-tile">
                     <i class="fa-solid fa-circle-check stat-icon closed"></i>
                     <span class="stat-value" id="closed-display">0/0</span>
-                    <span class="stat-label">Gesloten</span>
+                    <span class="stat-label">Oefenstatus</span>
                 </div>
             </div>
             <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Licht/donker wisselen"></button>
@@ -130,15 +130,15 @@ ${topicsHtml}
                 <p class="end-summary">In deze sessie heb je <span id="final-score"></span> vragen goed beantwoord.</p>
                 <div class="end-callout">
                     <h3>Hoe nu verder?</h3>
-                    <p>Bekijk je voortgang in de zijbalk. Bouw per onderwerp een <strong>reeks van 3</strong> op om deze definitief af te sluiten. Maak je een fout? Dan reset de reeks naar nul.</p>
+                    <p>Bekijk je oefenstatus in de zijbalk. Een <strong>reeks van 3</strong> laat zien waar je vlot antwoordt en waar je nog wilt oefenen. Maak je een fout? Dan begint die reeks opnieuw.</p>
                 </div>
                 <button class="btn btn-large" onclick="restartSession()">Start volgende sessie <i class="fa-solid fa-rotate-right"></i></button>
             </div>
         </div>
 
         <aside class="sidebar-area" id="sidebar">
-            <h3 class="sidebar-title"><i class="fa-solid fa-chart-simple"></i> Jouw beheersing</h3>
-            <div id="mastery-dashboard" class="mastery-container"></div>
+            <h3 class="sidebar-title"><i class="fa-solid fa-chart-simple"></i> Oefenstatus</h3>
+            <div id="progress-dashboard" class="progress-container"></div>
         </aside>
     </div>
 </div>
