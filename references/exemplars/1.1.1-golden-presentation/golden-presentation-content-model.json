@@ -1,10 +1,18 @@
 {
-  "schema_version": 1,
-  "id": "1.1.1-golden-presentation",
+  "schema_version": "1.1.0",
+  "exemplar_id": "1.1.1-golden-presentation",
   "surface": "web_first_presentation",
   "paragraph": "1.1.1",
-  "title": "Schaarste en economisch denken",
+  "title": "Schaarste, kiezen en alternatieve kosten",
   "quality_claim": "golden_conceptual_exemplar",
+  "source_snapshot": {
+    "path": "references/exemplars/1.1.1-golden-presentation/golden-presentation.html",
+    "sha256": "0070525A9F0C57C2BC9211C6D19CAEA6F84A3EEFE0810999C5AB0AA167477FF0",
+    "source_package": "4veco_111_content_review_package.zip",
+    "package_file": "1.1.1-schaarste-webpresentatie-content-v2.html",
+    "accepted_on": "2026-06-20",
+    "provenance": "Human-approved §1.1.1 web presentation snapshot supplied in the revision package. The semantic model is derived from this frozen HTML, not from a reconstructed draft."
+  },
   "source_boundary": {
     "authoring_repo": "4veco-platform",
     "lesson_output_repo": "4veco-lessen",
@@ -21,332 +29,216 @@
     "target_equivalent_completion_language",
     "hand_editing_generated_lesson_output"
   ],
-  "required_slide_roles": [
-    "route_contract",
-    "narrative_anchor",
-    "concept_definition",
-    "concept_transfer",
-    "misconception_control",
-    "procedure_route",
-    "worked_example_calculation",
-    "worked_example_interpretation",
-    "active_check",
-    "summary_bridge"
-  ],
+  "route_contract": {
+    "context": "§1.1.1 Schaarste, kiezen en alternatieve kosten",
+    "required_slide_count_for_this_exemplar": 11,
+    "policy_note": "This eleven-slide sequence is mandatory for this §1.1.1 exemplar only. General presentation policy uses universal route roles plus conditional roles when instructionally needed.",
+    "universal_roles_present": [
+      "route_contract",
+      "concept_model_development",
+      "worked_example_or_application",
+      "retrieval_check",
+      "summary_bridge",
+      "student_facing_notes"
+    ],
+    "conditional_roles_used": [
+      "narrative_anchor",
+      "transfer_slide",
+      "misconception_slide",
+      "procedure_route",
+      "calculation_interpretation_split"
+    ]
+  },
+  "design_contract": {
+    "language": "nl",
+    "student_notes_required": true,
+    "notes_label": "Studentgerichte uitleg",
+    "snapshot_theme_support": [
+      "light",
+      "dark"
+    ],
+    "static_qa_scope": "Static checks verify structural floor conditions only; browser interaction, focus order, dark mode, and mobile behavior require rendered QA."
+  },
   "slides": [
     {
-      "id": "lesson-goal",
-      "navTitle": "Lesdoel",
-      "slideRole": "route_contract",
-      "studentQuestion": "Wat leer ik vandaag?",
-      "studentTitle": "Waarom kiezen kost",
-      "assertion": "Vandaag leer je waarom kiezen altijd iets kost.",
-      "visibleElements": ["goal", "route", "success_criteria"],
-      "route": [
-        "Lisa moet kiezen",
-        "schaarste herkennen",
-        "alternatieve kosten aanwijzen",
-        "vier stappen gebruiken",
-        "je begrip controleren"
+      "id": "slide-01",
+      "title": "Lesdoel",
+      "subtitle": "Route voor vandaag",
+      "role": "route_contract",
+      "h2": "Vandaag leer je waarom kiezen kost",
+      "assertion": "Aan het einde kun je een keuzeprobleem herkennen, de alternatieve kosten aanwijzen en een keuze in vier stappen beoordelen.",
+      "action": "Route: eerst Lisa, daarna het begrip, daarna de boer.",
+      "student_explanation": [
+        "Deze les gaat over één centrale vraag: wat kost een keuze echt? Niet alleen in euro's, maar vooral in wat je niet meer kunt doen nadat je gekozen hebt.",
+        "Je leert drie dingen. Eerst herken je schaarste: mensen willen meer dan de middelen toelaten. Daarna leer je alternatieve kosten: de opbrengst van het beste alternatief dat je niet kiest. Ten slotte gebruik je een vaste procedure om een keuze netjes te beoordelen.",
+        "Wat je straks moet kunnen: bij een voorbeeld aanwijzen: het schaarse middel, de alternatieven, het gekozen alternatief, het beste niet-gekozen alternatief en de nettowaarde."
+      ]
+    },
+    {
+      "id": "slide-02",
+      "title": "Lisa moet kiezen",
+      "subtitle": "Startvoorbeeld",
+      "role": "narrative_anchor",
+      "h2": "Lisa heeft €20, maar wil voor €27",
+      "assertion": "Het probleem is niet dat ze niets kan kopen. Het probleem is dat ze niet alles tegelijk kan kiezen.",
+      "action": "Luistervraag: welke twee alternatieven strijden om hetzelfde geld?",
+      "student_explanation": [
+        "Lisa heeft een beperkt budget van €20. Ze wil naar de bioscoop voor €12 en ook een boek kopen van €15. Samen kost dat €27.",
+        "Omdat haar geld beperkt is, moet ze kiezen. De bioscoop en het boek strijden om hetzelfde middel: haar budget.",
+        "Dit voorbeeld gebruiken we steeds opnieuw, zodat het begrip niet los blijft hangen."
+      ]
+    },
+    {
+      "id": "slide-03",
+      "title": "Schaarste",
+      "subtitle": "Kernbegrip 1",
+      "role": "concept_model_development",
+      "h2": "Schaarste betekent: behoeften > middelen",
+      "assertion": "Schaarste is een verhouding, geen ander woord voor “zeldzaam”.",
+      "action": "Check: waar in Lisa’s voorbeeld ontstaat de schaarste?",
+      "student_explanation": [
+        "Schaarste ontstaat wanneer behoeften groter zijn dan de beschikbare middelen. Het gaat dus om de verhouding tussen wat iemand wil en wat iemand heeft.",
+        "Bij Lisa is het middel haar €20. Haar behoeften kosten samen €27. Daardoor kan ze niet alles kiezen.",
+        "Een belangrijke valkuil: schaarste betekent niet automatisch dat iets zeldzaam is. Water kan in Nederland goedkoop zijn, maar toch schaars worden als er meer vraag is dan beschikbaar water."
       ],
-      "successCriteria": [
-        "Ik kan uitleggen waarom er schaarste is.",
-        "Ik kan de alternatieve kosten aanwijzen.",
-        "Ik kan een keuze beoordelen met nettowaarde."
+      "misconception_watch": [
+        "Schaarste is niet hetzelfde als zeldzaamheid; het is een verhouding tussen behoeften en middelen."
+      ]
+    },
+    {
+      "id": "slide-04",
+      "title": "Drie niveaus",
+      "subtitle": "Schaarste herkennen",
+      "role": "transfer_slide",
+      "h2": "Zo herken je hetzelfde patroon in andere situaties",
+      "assertion": "Vraag steeds: wie kiest, welk middel is beperkt, en welke alternatieven strijden om dat middel?",
+      "action": "Vergelijk Lisa met een producent en een overheid.",
+      "student_explanation": [
+        "De context verandert, maar de structuur blijft hetzelfde. Je zoekt steeds naar drie dingen: de kiezer, het beperkte middel en de alternatieven.",
+        "Bij een scholier kan het beperkte middel geld of tijd zijn. Bij een producent kan het land, machines of personeel zijn. Bij de overheid kan het belastinggeld of ruimte zijn.",
+        "Als je die drie onderdelen vindt, kun je schaarste ook in nieuwe voorbeelden herkennen."
+      ]
+    },
+    {
+      "id": "slide-05",
+      "title": "Alternatieve kosten",
+      "subtitle": "Kernbegrip 2",
+      "role": "concept_model_development",
+      "h2": "Alternatieve kosten zijn het beste dat je laat liggen",
+      "assertion": "Bij Lisa is dat niet simpelweg de betaalde prijs, maar de waarde van het alternatief dat ze niet kiest.",
+      "action": "Lisa kiest bioscoop. Wat is dan haar beste niet-gekozen alternatief?",
+      "student_explanation": [
+        "Als Lisa naar de bioscoop gaat, betaalt ze €12. Maar alternatieve kosten gaan niet over de prijs die ze betaalt.",
+        "Alternatieve kosten zijn de waarde van het beste alternatief dat ze niet kiest. In dit voorbeeld is dat het boek lezen, met de waarde die dat voor haar had.",
+        "De definitie is dus: de opbrengst of waarde van het beste niet-gekozen alternatief."
+      ]
+    },
+    {
+      "id": "slide-06",
+      "title": "Niet verwarren",
+      "subtitle": "Misconcepties",
+      "role": "misconception_slide",
+      "h2": "Wat alternatieve kosten niet zijn",
+      "assertion": "Deze twee fouten zorgen later voor verkeerde berekeningen.",
+      "action": "Noem bij elk voorbeeld eerst: gekozen alternatief en beste niet-gekozen alternatief.",
+      "student_explanation": [
+        "Fout één: alternatieve kosten gelijkstellen aan de prijs. De prijs is wat je betaalt; alternatieve kosten zijn wat je opgeeft.",
+        "Fout twee: alle gemiste opties bij elkaar optellen. Je telt niet alles op wat je niet doet. Je kiest alleen het beste alternatief dat je laat liggen.",
+        "De controlevraag blijft: wat is gekozen, wat is het beste niet-gekozen alternatief, en welke waarde had dat alternatief?"
       ],
-      "notesRole": "student_facing_explanation",
-      "notes": {
-        "studentExplanation": [
-          "Deze presentatie laat zien hoe economen naar keuzes kijken. Je begint bij een gewone keuze van Lisa en eindigt met een stappenplan dat ook bij bedrijven en overheid werkt.",
-          "Let steeds op drie vragen: wat wordt gekozen, wat wordt niet gekozen, en wat is het beste niet-gekozen alternatief?"
-        ],
-        "misconceptionWatch": [
-          "Je hoeft vandaag nog geen vraag-en-aanbodgrafieken te gebruiken. Het gaat om kiezen met beperkte middelen."
-        ],
-        "teacherCue": [
-          "Laat leerlingen de route hardop voorspellen voordat je naar de casus gaat."
-        ],
-        "transition": "We beginnen concreet: Lisa heeft te weinig geld voor alles wat ze wil."
-      }
+      "misconception_watch": [
+        "Alternatieve kosten zijn niet de prijs.",
+        "Alternatieve kosten zijn niet de som van alle gemiste opties."
+      ]
     },
     {
-      "id": "lisa-must-choose",
-      "navTitle": "Lisa kiest",
-      "slideRole": "narrative_anchor",
-      "studentQuestion": "Waarom kan Lisa niet alles doen?",
-      "studentTitle": "Lisa heeft 20 euro",
-      "assertion": "Twee aantrekkelijke opties samen kosten 27 euro, dus Lisa moet kiezen.",
-      "visibleElements": ["budget", "choice_options", "gap"],
-      "data": {
-        "middelen": "20 euro",
-        "options": [
-          { "name": "Bioscoop", "cost": "12 euro", "benefit": "een middag kijkplezier" },
-          { "name": "Nieuw boek", "cost": "15 euro", "benefit": "avonden leesplezier" }
-        ],
-        "combinedCost": "27 euro",
-        "gap": "7 euro"
-      },
-      "notes": {
-        "studentExplanation": [
-          "Lisa wil twee dingen, maar haar geld is beperkt. Daardoor is kiezen geen mening maar een noodzaak.",
-          "De zichtbare keuze is wat Lisa uiteindelijk doet. De onzichtbare keuze is wat zij daardoor laat liggen."
-        ],
-        "misconceptionWatch": [
-          "Schaarste betekent hier niet dat bioscoopkaartjes of boeken zeldzaam zijn. Het betekent dat Lisa niet genoeg middelen heeft voor al haar behoeften."
-        ],
-        "teacherCue": [
-          "Vraag welke optie leerlingen zouden kiezen, maar houd de focus op het economische probleem."
-        ],
-        "transition": "Nu geven we dit probleem de economische naam: schaarste."
-      }
+      "id": "slide-07",
+      "title": "Vier stappen",
+      "subtitle": "Procedure B02",
+      "role": "procedure_route",
+      "h2": "Bij ingewikkeldere keuzes gebruik je vier stappen",
+      "assertion": "De procedure voorkomt dat je te snel “hoogste bedrag = beste keuze” roept.",
+      "action": "Gebruik straks dezelfde volgorde bij de boer.",
+      "student_explanation": [
+        "Bij Lisa is het voorbeeld klein. In economische vragen worden keuzes vaak groter, met opbrengsten, kosten en meerdere alternatieven.",
+        "Daarom werk je in vier stappen: bepaal het schaarse middel, bereken de opbrengst per alternatief, bepaal de alternatieve kosten en trek daarna pas de conclusie.",
+        "De volgorde is belangrijk. Eerst rekenen en vergelijken, daarna pas beoordelen."
+      ]
     },
     {
-      "id": "scarcity-definition",
-      "navTitle": "Schaarste",
-      "slideRole": "concept_definition",
-      "studentQuestion": "Wat is schaarste?",
-      "studentTitle": "Schaarste = behoeften groter dan middelen",
-      "assertion": "Schaarste ontstaat wanneer je behoeften groter zijn dan je beschikbare middelen.",
-      "visibleElements": ["definition", "relation_diagram", "lisa_anchor"],
-      "canonicalTerm": "schaarste",
-      "definition": "Behoeften zijn groter dan de beschikbare middelen, waardoor keuzes onvermijdelijk zijn.",
-      "notes": {
-        "studentExplanation": [
-          "Schaarste is een verhouding. Je vergelijkt wat iemand wil met wat iemand heeft aan middelen.",
-          "Bij Lisa zijn haar behoeften de bioscoop en het boek. Haar middel is 20 euro. Omdat beide samen 27 euro kosten, ontstaat schaarste."
-        ],
-        "misconceptionWatch": [
-          "Schaarste is niet hetzelfde als zeldzaamheid. Iets kan overal bestaan en toch schaars zijn als er op dat moment niet genoeg van is."
-        ],
-        "teacherCue": [
-          "Laat leerlingen een voorbeeld noemen met tijd of aandacht, niet alleen geld."
-        ],
-        "transition": "Hetzelfde patroon zie je niet alleen bij Lisa, maar ook bij producenten en overheid."
-      }
+      "id": "slide-08",
+      "title": "Eerst rekenen",
+      "subtitle": "Uitgewerkt voorbeeld · stap 1–2",
+      "role": "worked_example_calculation",
+      "h2": "De boer: eerst beide alternatieven berekenen",
+      "assertion": "Het schaarse middel is 10 hectare land; tarwe en maïs gebruiken hetzelfde land.",
+      "action": "Vraag: wat levert elk gewas op als alle 10 hectare daarvoor worden gebruikt?",
+      "student_explanation": [
+        "Een boer heeft 10 hectare land. Hij kan tarwe verbouwen of maïs verbouwen, maar hetzelfde stuk land kan niet tegelijk voor beide worden gebruikt.",
+        "Eerst bereken je de opbrengst per alternatief. Tarwe levert €500 per hectare op, dus 10 hectare tarwe levert €5.000 op. Maïs levert €350 per hectare op, dus 10 hectare maïs levert €3.500 op.",
+        "Let op: je trekt nog geen conclusie. Je maakt eerst beide alternatieven vergelijkbaar."
+      ]
     },
     {
-      "id": "scarcity-transfer",
-      "navTitle": "Transfer",
-      "slideRole": "concept_transfer",
-      "studentQuestion": "Waar zie je hetzelfde probleem terug?",
-      "studentTitle": "Schaarste op drie niveaus",
-      "assertion": "Hetzelfde schaarstepatroon geldt voor scholieren, boeren en overheid.",
-      "visibleElements": ["three_context_cards", "same_relation_labels"],
-      "contexts": [
-        { "actor": "Scholier", "scarceMedium": "geld", "choice": "bioscoop of boek" },
-        { "actor": "Boer", "scarceMedium": "land", "choice": "tarwe of mais" },
-        { "actor": "Overheid", "scarceMedium": "budget", "choice": "wegen of onderwijs" }
+      "id": "slide-09",
+      "title": "Kosten en nettowaarde",
+      "subtitle": "Uitgewerkt voorbeeld · stap 3–4",
+      "role": "worked_example_interpretation",
+      "h2": "Als hij tarwe kiest, geeft hij maïs op",
+      "assertion": "Maïs is dan het beste niet-gekozen alternatief; daarom zijn de alternatieve kosten €3.500.",
+      "action": "Nettowaarde: €5.000 − €3.500 = €1.500.",
+      "student_explanation": [
+        "Stel dat de boer tarwe kiest. Dan krijgt hij €5.000 opbrengst, maar hij geeft de maïsopbrengst op.",
+        "Omdat maïs het beste niet-gekozen alternatief is, zijn de alternatieve kosten €3.500.",
+        "De nettowaarde van tarwe boven maïs is dan €5.000 min €3.500 is €1.500. Dat bedrag laat zien hoeveel beter tarwe is dan het alternatief dat hij opgeeft."
+      ]
+    },
+    {
+      "id": "slide-10",
+      "title": "Kan je het gebruiken?",
+      "subtitle": "Actieve check",
+      "role": "retrieval_check",
+      "h2": "Vul de drie vaste vragen in",
+      "assertion": "Je begrijpt het pas echt als je het patroon zelf kunt invullen.",
+      "action": "Beantwoord eerst zelf, controleer daarna.",
+      "checks": [
+        {
+          "prompt": "Lisa kiest bioscoop. Wat is het schaarse middel?",
+          "hint": "denk aan haar budget",
+          "answer": "Lisa’s €20."
+        },
+        {
+          "prompt": "Lisa kiest bioscoop. Wat is het beste niet-gekozen alternatief?",
+          "hint": "niet de prijs noemen",
+          "answer": "Het boek lezen, met de waarde die dat voor haar heeft."
+        },
+        {
+          "prompt": "De boer kiest tarwe. Wat zijn de alternatieve kosten?",
+          "hint": "gebruik de tabel",
+          "answer": "De opbrengst van maïs: €3.500."
+        }
       ],
-      "notes": {
-        "studentExplanation": [
-          "Economie wordt bruikbaar als je hetzelfde patroon in nieuwe situaties herkent. Het middel verandert, maar de gedachte blijft gelijk.",
-          "Vraag steeds: welk middel is beperkt, welke behoeften of doelen zijn er, en welke keuze volgt daaruit?"
-        ],
-        "misconceptionWatch": [
-          "Een overheid met veel geld heeft nog steeds schaarste, omdat niet alle doelen tegelijk volledig betaald kunnen worden."
-        ],
-        "teacherCue": [
-          "Gebruik de drie cards om leerlingen het vaste zinnetje te laten invullen: beperkt middel plus meerdere doelen betekent keuze."
-        ],
-        "transition": "Zodra je kiest, ontstaat de volgende vraag: wat kost de keuze doordat je iets anders niet doet?"
-      }
+      "student_explanation": [
+        "Deze check gebruikt precies dezelfde volgorde als de uitleg: eerst het schaarse middel, daarna het beste niet-gekozen alternatief, daarna de alternatieve kosten.",
+        "Probeer de antwoorden eerst zonder terugkijken. Daarna controleer je of je het begrip of alleen het voorbeeld hebt onthouden.",
+        "Als je bij vraag 2 de prijs noemt, ga terug naar de definitie: alternatieve kosten zijn de waarde van wat je opgeeft."
+      ]
     },
     {
-      "id": "alternative-cost-definition",
-      "navTitle": "Alt. kosten",
-      "slideRole": "concept_definition",
-      "studentQuestion": "Wat laat je liggen?",
-      "studentTitle": "Alternatieve kosten",
-      "assertion": "Alternatieve kosten zijn de opbrengst van het beste alternatief dat je niet kiest.",
-      "visibleElements": ["chosen_path", "best_non_chosen_path", "definition"],
-      "canonicalTerm": "alternatieve kosten",
-      "definition": "De opbrengst van het beste niet-gekozen alternatief bij een keuze.",
-      "notes": {
-        "studentExplanation": [
-          "Als Lisa de bioscoop kiest, betaalt ze 12 euro. Dat is de gewone uitgave.",
-          "De alternatieve kosten zijn iets anders: het beste alternatief dat zij laat liggen. In dit geval is dat het leesplezier van het boek."
-        ],
-        "misconceptionWatch": [
-          "Alternatieve kosten zijn niet automatisch het geldbedrag dat je betaalt. Het gaat om wat je opgeeft."
-        ],
-        "teacherCue": [
-          "Laat leerlingen het verschil tussen uitgave en opgegeven alternatief in eigen woorden zeggen."
-        ],
-        "transition": "Nu maken we de twee meest voorkomende fouten zichtbaar."
-      }
-    },
-    {
-      "id": "misconception-control",
-      "navTitle": "Niet verwarren",
-      "slideRole": "misconception_control",
-      "studentQuestion": "Waar gaat het vaak mis?",
-      "studentTitle": "Niet verwarren met ...",
-      "assertion": "Alternatieve kosten zijn niet de prijs en niet de som van alle niet-gekozen opties.",
-      "visibleElements": ["contrast_cards", "pitfall_labels"],
-      "misconceptions": [
-        { "wrong": "Alternatieve kosten = prijs", "repair": "Prijs is wat je betaalt; alternatieve kosten zijn wat je laat liggen." },
-        { "wrong": "Schaarste = zeldzaam", "repair": "Schaarste gaat over behoeften tegenover middelen." },
-        { "wrong": "Tel alle gemiste opties op", "repair": "Neem alleen het beste niet-gekozen alternatief." }
-      ],
-      "notes": {
-        "studentExplanation": [
-          "Deze dia beschermt je tegen drie fouten die vaak in antwoorden terugkomen.",
-          "Als je de begrippen zuiver houdt, wordt de berekening later veel makkelijker."
-        ],
-        "misconceptionWatch": [
-          "Let vooral op de fout om alle niet-gekozen opties bij elkaar op te tellen. In economie gaat het om het beste alternatief dat je niet kiest."
-        ],
-        "teacherCue": [
-          "Vraag leerlingen bij elke kaart om het juiste antwoord in een halve zin te formuleren."
-        ],
-        "transition": "Daarna gebruiken we een vaste procedure zodat je geen stap overslaat."
-      }
-    },
-    {
-      "id": "procedure-route",
-      "navTitle": "Vier stappen",
-      "slideRole": "procedure_route",
-      "studentQuestion": "Hoe pak je zo'n keuze aan?",
-      "studentTitle": "Economisch denken in vier stappen",
-      "assertion": "Met vier vaste stappen vergelijk je alternatieven zonder de nettowaarde over te slaan.",
-      "visibleElements": ["numbered_steps", "student_actions"],
-      "procedure": [
-        { "number": "01", "name": "Benoem alternatieven", "studentAction": "Welke opties heb je?" },
-        { "number": "02", "name": "Bereken opbrengsten", "studentAction": "Wat levert elk alternatief op?" },
-        { "number": "03", "name": "Rangschik", "studentAction": "Welk niet-gekozen alternatief is het beste?" },
-        { "number": "04", "name": "Bereken nettowaarde", "studentAction": "Opbrengst gekozen alternatief min alternatieve kosten." }
-      ],
-      "notes": {
-        "studentExplanation": [
-          "Dit is de B02-procedure. Je hoeft niet te raden welke stap eerst komt: alternatieven, opbrengsten, rangschikken, nettowaarde.",
-          "Stap 4 is belangrijk omdat je dan pas weet wat de keuze oplevert nadat je rekening houdt met wat je opgeeft."
-        ],
-        "misconceptionWatch": [
-          "Stop niet bij de hoogste opbrengst. De economische vergelijking is pas af als je de alternatieve kosten hebt meegenomen."
-        ],
-        "teacherCue": [
-          "Laat de klas het stappenritme hardop lezen: benoem, bereken, rangschik, nettowaarde."
-        ],
-        "transition": "We passen de stappen toe op een boer met 10 hectare land."
-      }
-    },
-    {
-      "id": "worked-example-calculation",
-      "navTitle": "Rekenen",
-      "slideRole": "worked_example_calculation",
-      "studentQuestion": "Wat levert elk alternatief op?",
-      "studentTitle": "Stap 1 en 2: opbrengsten berekenen",
-      "assertion": "Eerst bereken je de totale opbrengst per alternatief; je trekt nog niets af.",
-      "visibleElements": ["worked_table", "calculation_steps"],
-      "example": {
-        "scarceMedium": "10 hectare land",
-        "options": [
-          { "name": "Tarwe", "perUnit": "500 euro per hectare", "total": "5.000 euro" },
-          { "name": "Mais", "perUnit": "350 euro per hectare", "total": "3.500 euro" }
-        ]
-      },
-      "notes": {
-        "studentExplanation": [
-          "De boer kan zijn 10 hectare maar een keer gebruiken. Eerst zet je de alternatieven naast elkaar.",
-          "Daarna bereken je de opbrengst per alternatief: 10 keer 500 is 5.000 euro voor tarwe; 10 keer 350 is 3.500 euro voor mais."
-        ],
-        "misconceptionWatch": [
-          "Trek in deze stap nog niets af. Je verzamelt eerst de opbrengsten zodat je eerlijk kunt vergelijken."
-        ],
-        "teacherCue": [
-          "Laat leerlingen de twee vermenigvuldigingen voorspellen voordat de conclusie verschijnt."
-        ],
-        "transition": "Nu weten we wat elk alternatief oplevert. Daarna bepalen we wat de boer opgeeft."
-      }
-    },
-    {
-      "id": "worked-example-interpretation",
-      "navTitle": "Interpreteren",
-      "slideRole": "worked_example_interpretation",
-      "studentQuestion": "Wat is het beste niet-gekozen alternatief?",
-      "studentTitle": "Stap 3 en 4: alternatieve kosten en nettowaarde",
-      "assertion": "Als de boer tarwe kiest, zijn de alternatieve kosten de 3.500 euro van mais.",
-      "visibleElements": ["chosen_not_chosen", "net_value_equation", "conclusion"],
-      "interpretation": {
-        "chosen": "Tarwe: 5.000 euro",
-        "notChosen": "Mais: 3.500 euro",
-        "alternativeCost": "3.500 euro",
-        "netValue": "5.000 euro - 3.500 euro = 1.500 euro"
-      },
-      "notes": {
-        "studentExplanation": [
-          "De boer kiest tarwe. Het beste alternatief dat hij dan niet kiest is mais.",
-          "Daarom zijn de alternatieve kosten 3.500 euro. De nettowaarde van tarwe kiezen is 5.000 min 3.500 is 1.500 euro."
-        ],
-        "misconceptionWatch": [
-          "Mais is hier niet slecht; het is alleen het beste alternatief dat niet gekozen wordt."
-        ],
-        "teacherCue": [
-          "Benadruk de antwoordzin: de alternatieve kosten zijn de opbrengst van mais die hij laat liggen."
-        ],
-        "transition": "Nu controleer je of je hetzelfde kunt doen in een nieuwe kleine keuze."
-      }
-    },
-    {
-      "id": "active-check",
-      "navTitle": "Check",
-      "slideRole": "active_check",
-      "studentQuestion": "Kun je het zelf toepassen?",
-      "studentTitle": "Mini-check: Eva heeft 4 uur",
-      "assertion": "Een korte check laat zien of je het beste niet-gekozen alternatief kunt aanwijzen.",
-      "visibleElements": ["short_formative_prompt", "answer_structure"],
-      "check": {
-        "context": "Eva heeft 4 uur vrije tijd.",
-        "options": [
-          { "name": "Bijbaan", "yield": "32 euro" },
-          { "name": "Sporttoernooi", "yield": "veel plezier" },
-          { "name": "Leren", "yield": "betere voorbereiding" }
-        ],
-        "prompt": "Eva kiest de bijbaan. Benoem het beste alternatief dat zij niet kiest en formuleer haar alternatieve kosten in woorden."
-      },
-      "notes": {
-        "studentExplanation": [
-          "Dit is geen volledige opgave, maar een korte controle van het begrip.",
-          "Je hoeft niet alles uit te rekenen. Je moet laten zien dat je de gekozen optie, de niet-gekozen opties en het beste niet-gekozen alternatief uit elkaar houdt."
-        ],
-        "misconceptionWatch": [
-          "Noem niet alle gemiste opties tegelijk. Kies het beste alternatief dat Eva niet kiest."
-        ],
-        "teacherCue": [
-          "Laat leerlingen eerst individueel antwoorden en daarna in tweetallen vergelijken."
-        ],
-        "transition": "Tot slot vatten we de mentale route samen en kijken we vooruit."
-      }
-    },
-    {
-      "id": "summary-bridge",
-      "navTitle": "Samenvatting",
-      "slideRole": "summary_bridge",
-      "studentQuestion": "Wat neem je mee?",
-      "studentTitle": "Kiezen kost altijd iets",
-      "assertion": "Economisch denken betekent zichtbaar maken wat je kiest en wat je opgeeft.",
-      "visibleElements": ["mental_model", "key_takeaways", "next_paragraph_bridge"],
-      "summary": [
-        "Schaarste: behoeften zijn groter dan middelen.",
-        "Kiezen betekent ook iets laten liggen.",
-        "Alternatieve kosten: de opbrengst van het beste niet-gekozen alternatief.",
-        "De B02-route helpt je systematisch vergelijken.",
-        "Nettowaarde maakt zichtbaar wat overblijft na wat je opgeeft."
-      ],
-      "bridge": "In 1.1.2 leer je hoe je verschillen in geld en percentages precies meet.",
-      "notes": {
-        "studentExplanation": [
-          "De kernzin is: kiezen kost altijd iets. Soms betaal je geld, maar economisch gezien kijk je ook naar wat je laat liggen.",
-          "Gebruik bij nieuwe keuzes de vaste route: alternatieven, opbrengsten, beste niet-gekozen alternatief, nettowaarde."
-        ],
-        "misconceptionWatch": [
-          "Een keuze met de hoogste zichtbare opbrengst is pas goed onderbouwd als je ook het beste alternatief hebt bekeken."
-        ],
-        "teacherCue": [
-          "Laat leerlingen een eigen voorbeeld noemen waarin tijd het schaarse middel is."
-        ],
-        "transition": "Volgende paragraaf: verschillen meten in geld, percentages en indexcijfers."
-      }
+      "id": "slide-11",
+      "title": "De kern",
+      "subtitle": "Samenvatting",
+      "role": "summary_bridge",
+      "h2": "De kern in vijf zinnen",
+      "assertion": "Als je deze vijf zinnen kunt uitleggen, beheers je de basis van §1.1.1.",
+      "action": "Gebruik deze samenvatting als brug naar de volgende opgave.",
+      "student_explanation": [
+        "Schaarste ontstaat wanneer behoeften groter zijn dan middelen.",
+        "Kiezen betekent dat je minstens één alternatief niet kiest.",
+        "Alternatieve kosten zijn de waarde van het beste niet-gekozen alternatief.",
+        "Bij berekeningen vergelijk je eerst de alternatieven en trek je daarna pas een conclusie.",
+        "De kernvraag blijft: wat geef je op doordat je dit kiest?"
+      ]
     }
   ],
   "review_required_before_implemented_reference": [
@@ -354,6 +246,7 @@
     "student_experience",
     "visual_qa",
     "accessibility",
+    "testing_verification",
     "lead_verdict"
   ]
 }

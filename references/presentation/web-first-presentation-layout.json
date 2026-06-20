@@ -22,7 +22,7 @@
     "procedure_steps",
     "worked_example_table",
     "worked_example_interpretation",
-    "active_check_card",
+    "retrieval_check_card",
     "summary_bridge"
   ],
   "forbidden_assumptions": [

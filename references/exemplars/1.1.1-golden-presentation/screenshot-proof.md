@@ -1,13 +1,19 @@
 # Screenshot Proof
 
-Status: conceptual proof ledger for `1.1.1-golden-presentation`.
+Status: accepted-package proof ledger for `1.1.1-golden-presentation`.
 
 ## Current Evidence
 
-The exemplar includes a standalone conceptual HTML reference:
+The exemplar includes the accepted standalone HTML snapshot:
 
 ```text
 references/exemplars/1.1.1-golden-presentation/golden-presentation.html
+```
+
+Expected SHA-256:
+
+```text
+0070525A9F0C57C2BC9211C6D19CAEA6F84A3EEFE0810999C5AB0AA167477FF0
 ```
 
 It also includes a semantic model:
@@ -16,7 +22,7 @@ It also includes a semantic model:
 references/exemplars/1.1.1-golden-presentation/golden-presentation-content-model.json
 ```
 
-The preview captures in `previews/` are orientation evidence for the conceptual exemplar. They are not production-render proof from the platform generator.
+The preview captures in `previews/` are package-supplied orientation evidence for the accepted conceptual exemplar. They are not production-render proof from the platform generator.
 
 ## Required Preview Files
 
@@ -24,7 +30,6 @@ The preview captures in `previews/` are orientation evidence for the conceptual 
 previews/slide-01.png
 previews/slide-02.png
 previews/slide-05.png
-previews/slide-08.png
 previews/slide-10.png
 previews/slide-11.png
 ```

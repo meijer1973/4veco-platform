@@ -4,6 +4,10 @@ Status: production policy namespace for web-first and PowerPoint-derivative pres
 
 This folder defines reusable presentation standards extracted from `references/exemplars/1.1.1-golden-presentation/`.
 
+The §1.1.1 exemplar is a frozen accepted snapshot and an instructional reference.
+Its exact eleven-slide sequence is exemplar-specific. Reusable policy requires
+universal route duties plus conditional route tools when the topic needs them.
+
 Use this folder for:
 
 - web-first presentation route policy;
@@ -20,7 +24,7 @@ Do not use this folder to authorize product use, Scale Gate 1, diagnostics, mast
 - `presentation-policy.md` / `presentation-policy.json` - top-level policy and machine-readable contract.
 - `web-first-presentation-layout.md` / `web-first-presentation-layout.json` - web surface layout requirements.
 - `speaker-notes-policy.md` / `speaker-notes-policy.json` - structured student-facing notes requirements.
-- `didactic-route-policy.md` / `didactic-route-policy.json` - default economics presentation route and slide-role contract.
+- `didactic-route-policy.md` / `didactic-route-policy.json` - universal economics presentation roles, conditional route tools, and exemplar-specific route sequences.
 - `powerpoint-derivative-policy.md` - PPTX export guidance after web review.
 
 ## Key Distinctions

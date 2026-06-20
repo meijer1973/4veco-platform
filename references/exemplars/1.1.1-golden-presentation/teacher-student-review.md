@@ -8,7 +8,8 @@ Status: conceptual review standard for promotion from golden concept to implemen
 2. Student experience.
 3. Visual QA.
 4. Accessibility and inclusive usability.
-5. Lead synthesis.
+5. Testing/static verification.
+6. Lead synthesis.
 
 ## Teacher Learning Quality Review
 
@@ -35,7 +36,7 @@ Review questions:
 - Does each slide make one clear point?
 - Are the visuals understandable without teacher repair?
 - Are the notes useful if the student opens them?
-- Does the student understand what to check on the active-check slide?
+- Does the student understand what to check on the retrieval/check slide?
 
 ## Visual QA Review
 
@@ -54,7 +55,7 @@ Required screenshot states:
 - mobile/narrow viewport;
 - fullscreen or presentation mode if supported.
 
-Missing screenshots block a PASS verdict for visual QA.
+Missing screenshots block a PASS verdict for implemented visual QA. The accepted conceptual package may carry only the package-supplied preview subset listed in `screenshot-proof.md`.
 
 ## Accessibility Review
 
@@ -71,6 +72,16 @@ Review:
 - alt text or aria labels for instructional visuals;
 - cognitive accessibility and density.
 
+## Testing Verification
+
+Review:
+
+- accepted snapshot hash;
+- static structural web QA;
+- policy and route checker output;
+- mirror parity where a command mirror exists;
+- generated index freshness after branch refresh.
+
 ## Lead Verdict Options
 
 - `PASS` - promote conceptual exemplar and policy.
@@ -79,3 +90,8 @@ Review:
 - `FAIL` - discard as golden candidate.
 
 For this conceptual package, the expected verdict is `PASS` for conceptual golden exemplar. Implementation rollout still requires generator integration, regenerated lesson output, screenshots, and specialist review.
+
+The current revision packet records its read-only lead review in
+`lead-review-2026-06-20.md`. That report is independent subagent review evidence
+for this conceptual exemplar only; it does not replace future implemented
+generator review.

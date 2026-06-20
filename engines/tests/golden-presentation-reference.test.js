@@ -1,10 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 const { validatePolicyRoot } = require('../../build-scripts/references/check-presentation-policy');
-const { validateGoldenPresentation, validateContentModel, REQUIRED_ROLES } = require('../../build-scripts/sprints/check-golden-presentation-111');
+const { validateGoldenPresentation, validateContentModel, REQUIRED_EXEMPLAR_ROLES, REQUIRED_UNIVERSAL_ROLES, EXPECTED_HTML_SHA256 } = require('../../build-scripts/sprints/check-golden-presentation-111');
+const { validatePptxSkillMirror } = require('../../build-scripts/sprints/check-pptx-skill-mirror');
 const { validateHtml } = require('../../scripts/qa-presentation-web');
 
 const ROOT = path.resolve(__dirname, '..', '..');
+const EXEMPLAR_SEQUENCE = [
+  'route_contract',
+  'narrative_anchor',
+  'concept_model_development',
+  'transfer_slide',
+  'concept_model_development',
+  'misconception_slide',
+  'procedure_route',
+  'worked_example_calculation',
+  'worked_example_interpretation',
+  'retrieval_check',
+  'summary_bridge',
+];
 
 describe('golden presentation exemplar and policy', () => {
   test('presentation policy files and index entry validate', () => {
@@ -15,39 +29,51 @@ describe('golden presentation exemplar and policy', () => {
     expect(validateGoldenPresentation(ROOT)).toEqual([]);
   });
 
-  function makeSlide(role, index, notes = {
-    studentExplanation: ['Student explanation.'],
-    misconceptionWatch: [],
-    teacherCue: [],
-    transition: 'Next slide.',
-  }) {
+  test('PPTX command mirror matches the source skill', () => {
+    expect(validatePptxSkillMirror(ROOT)).toEqual([]);
+  });
+
+  function makeSlide(role, index, studentExplanation = ['Student explanation.']) {
     return {
-      id: `slide-${index}`,
-      navTitle: `Slide ${index}`,
-      slideRole: role,
-      studentTitle: `Slide ${index}`,
+      id: `slide-${String(index).padStart(2, '0')}`,
+      title: `Slide ${index}`,
+      h2: `Slide ${index}`,
+      role,
       assertion: 'A visible assertion.',
-      visibleElements: ['assertion'],
-      notes,
+      student_explanation: studentExplanation,
     };
   }
 
-  test('content model rejects missing route roles and notes', () => {
-    const missingRoleModel = {
-      schema_version: 1,
-      id: '1.1.1-golden-presentation',
+  function makeModel(slides) {
+    return {
+      schema_version: '1.1.0',
+      exemplar_id: '1.1.1-golden-presentation',
       surface: 'web_first_presentation',
       quality_claim: 'golden_conceptual_exemplar',
-      slides: REQUIRED_ROLES.map((role, index) => makeSlide(role === 'summary_bridge' ? 'concept_definition' : role, index + 1)),
+      source_snapshot: {
+        sha256: EXPECTED_HTML_SHA256,
+        provenance: 'Derived from the frozen HTML snapshot.',
+      },
+      route_contract: {
+        universal_roles_present: [...REQUIRED_UNIVERSAL_ROLES],
+      },
+      slides,
     };
-    expect(() => validateContentModel(missingRoleModel)).toThrow(/missing required slideRole summary_bridge/);
+  }
 
-    const missingNotesModel = {
-      ...missingRoleModel,
-      slides: REQUIRED_ROLES.map((role, index) => makeSlide(role, index + 1, index === 3 ? undefined : undefined)),
+  test('content model rejects missing route roles and slide explanations', () => {
+    const missingRoleModel = {
+      ...makeModel(EXEMPLAR_SEQUENCE.map((role, index) => makeSlide(role === 'summary_bridge' ? 'concept_model_development' : role, index + 1))),
     };
-    delete missingNotesModel.slides[3].notes;
-    expect(() => validateContentModel(missingNotesModel)).toThrow(/missing notes/);
+    expect(REQUIRED_EXEMPLAR_ROLES).toContain('summary_bridge');
+    expect(() => validateContentModel(missingRoleModel)).toThrow(/missing exemplar slide role summary_bridge/);
+
+    const missingExplanationSlides = EXEMPLAR_SEQUENCE.map((role, index) => makeSlide(role, index + 1));
+    delete missingExplanationSlides[3].student_explanation;
+    const missingNotesModel = {
+      ...makeModel(missingExplanationSlides),
+    };
+    expect(() => validateContentModel(missingNotesModel)).toThrow(/missing student_explanation/);
   });
 
   test('web QA rejects missing notes and unfinished-status wording', () => {

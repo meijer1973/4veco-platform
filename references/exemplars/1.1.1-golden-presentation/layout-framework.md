@@ -29,7 +29,7 @@ The slide canvas should support:
 - misconception comparison cards;
 - procedure steps;
 - worked-example tables;
-- active-check cards;
+- retrieval/check cards;
 - summary and bridge panels;
 - stable notes panel;
 - mobile layout without clipped text or controls;
@@ -41,7 +41,7 @@ The notes panel is part of the student learning surface. It must be readable, st
 
 ## Renderer Implications
 
-A production renderer must not infer slide meaning from a PPTX file. It should consume the semantic model, including `slideRole`, assertion, visible elements, structured notes, and visual metadata.
+A production renderer must not infer slide meaning from a PPTX file. It should consume the semantic model, including semantic `role`, assertion, visible elements, student-facing explanation text, and visual metadata.
 
 ## PowerPoint Boundary
 

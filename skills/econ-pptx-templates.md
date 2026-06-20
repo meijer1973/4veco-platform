@@ -1,6 +1,6 @@
 ---
 name: econ-pptx-templates
-description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (graphs, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
+description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (instructional visuals, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
 pipeline: "Part B producer"
 ---
 
@@ -31,20 +31,24 @@ Every production presentation starts with a route-contract slide:
 - what route the lesson follows;
 - what students should be able to do at the end.
 
-Default economics presentation route:
+Universal economics presentation roles:
 
 1. Route contract.
-2. Concrete narrative or source anchor.
-3. Core concept.
-4. Transfer to another context.
-5. Misconception control.
-6. Canonical procedure or model.
-7. Worked example, calculation/setup.
-8. Worked example, interpretation/conclusion.
-9. Active formative check.
-10. Summary and bridge.
+2. Concept/model development.
+3. Worked example or application.
+4. Retrieval/check.
+5. Summary and bridge.
+6. Student-facing notes.
 
-Agents may deviate, but they must explain why.
+Conditional route tools:
+
+- concrete narrative or source anchor;
+- transfer to another context;
+- misconception slide;
+- canonical procedure route;
+- separated calculation/setup and interpretation/conclusion.
+
+Use conditional route tools when the topic needs them. Do not turn the accepted §1.1.1 eleven-slide sequence into a quota for every presentation.
 
 Short skill. The previous version prescribed a rigid harness tuned for an older model. This rewrite keeps only what experience proved non-negotiable, drops the rest, and lets designers choose typography, palette, and layout freely.
 
@@ -56,8 +60,8 @@ Short skill. The previous version prescribed a rigid harness tuned for an older 
 
 These are not style choices; they come from `references/authored/didactiek-principes.md`, `references/authored/economic_mathematical_precision_reference.md`, and `references/authored/economie-terminologie.md`. Read those when in doubt.
 
-- **≥ 3 economic graphs per presentation.** Dual coding reinforcement (text + visual). Every key concept in a slide deck should appear at least once as a labeled diagram or chart.
-- **Theory + worked examples, plus at most a short active check.** NEVER include exercise-set instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files. A presentation may include a short active-check slide if it checks immediate understanding and does not replace the paragraph's exercise/check surfaces.
+- **Meaningful instructional visual coverage.** Every central concept needs an appropriate representation: diagram, comparison card, procedure flow, worked table, graph, chart, image, or other instructional visual. Use actual economic graphs only when the concept or operation is graphical; do not add graph-quota visuals that do not teach the slide move.
+- **Theory + worked examples, plus at most a short retrieval/check moment.** NEVER include exercise-set instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files. A presentation may include a short retrieval/check slide if it checks immediate understanding and does not replace the paragraph's exercise/check surfaces.
 - **Speaker notes on every slide.** Notes have two modes:
   - Web-first presentations: student-facing explanations. These notes must be readable by students and explain the slide without relying on live teacher narration.
   - PPTX live-teaching exports: teacher-supporting notes. These may include prompts, teacher cues, misconception warnings, and transitions.
@@ -65,7 +69,7 @@ These are not style choices; they come from `references/authored/didactiek-princ
 - **Body text ≥ 18pt.** Titles typically 28–44pt. Slide stats/hero numbers can go larger; respect the width rule below.
 - **Canonical Dutch terminology.** Use terms from `references/authored/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
 - **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/authored/economic_mathematical_precision_reference.md`.
-- **Economic graph geometry.** Read the `economic-graph` skill. Run `build-scripts/lib/verify_svg_geometry.py` after every SVG edit.
+- **Economic graph geometry when graphs are used.** Read the `economic-graph` skill. Run `build-scripts/lib/verify_svg_geometry.py` after every SVG edit.
 
 ---
 

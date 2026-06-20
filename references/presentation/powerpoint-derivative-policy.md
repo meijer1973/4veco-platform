@@ -11,7 +11,7 @@ For 4veco presentations, the preferred production route is:
 1. Build a semantic web-first presentation model.
 2. Render and review the web presentation.
 3. Use the web version as the source of design truth.
-4. Generate PPTX only after the web version passes student, teacher, visual, and accessibility review.
+4. Generate PPTX only after the web version passes student, teacher, visual, accessibility, and testing review.
 
 Do not treat PPTX as the design source when a web presentation route exists.
 
@@ -43,9 +43,9 @@ transition
 
 Web-first output renders student-facing explanation. PPTX live-teaching output may emphasize teacher cues and transitions.
 
-## Active Check Exception
+## Retrieval/Check Exception
 
-The older "no exercise instructions" rule remains for exercise sets. A presentation may include a short active-check slide if it checks immediate understanding and does not replace the paragraph's exercise/check surfaces.
+The older "no exercise instructions" rule remains for exercise sets. A presentation may include a short retrieval/check slide if it checks immediate understanding and does not replace the paragraph's exercise/check surfaces.
 
 ## Non-Authority
 

@@ -4,7 +4,7 @@ Status: handoff for a later implemented presentation reference.
 
 ## Goal
 
-Turn `1.1.1 Schaarste en economisch denken` into the first implemented Golden Presentation reference after the conceptual exemplar and policy are accepted.
+Turn `1.1.1 Schaarste en economisch denken` into the first implemented Golden Presentation reference after the accepted conceptual snapshot and policy are merged.
 
 ## Source Boundary
 
@@ -34,26 +34,23 @@ Filename churn is optional. Production labels and generated artifact text must n
 
 ## Required Implementation Changes
 
-1. Replace the three-slide current semantic path with an eleven-slide semantic model matching `golden-presentation-content-model.json`.
-2. Add required slide roles:
+1. Replace the current semantic path with an eleven-slide semantic model matching `golden-presentation-content-model.json`.
+2. Preserve the §1.1.1 exemplar route roles:
    - `route_contract`
    - `narrative_anchor`
-   - `concept_definition`
-   - `concept_transfer`
-   - `misconception_control`
+   - `concept_model_development`
+   - `transfer_slide`
+   - `misconception_slide`
    - `procedure_route`
    - `worked_example_calculation`
    - `worked_example_interpretation`
-   - `active_check`
+   - `retrieval_check`
    - `summary_bridge`
-3. Add structured notes fields:
-   - `studentExplanation`
-   - `misconceptionWatch`
-   - `teacherCue`
-   - `transition`
-4. Extend the HTML renderer to support route cards, relation diagrams, transfer cards, misconception cards, procedure steps, worked-example tables, active-check cards, and summary bridge layout.
+3. Add student-facing explanation text for every slide, plus misconception, teacher-cue, transition, data, and visual metadata where instructionally relevant.
+4. Extend the HTML renderer to support route cards, relation diagrams, transfer cards, misconception cards, procedure steps, worked-example tables, retrieval/check cards, and summary bridge layout.
 5. Keep PowerPoint export optional until the web version passes review.
-6. Upgrade QA so it checks route contract, notes presence, slide roles, no unfinished-status wording, no mobile overflow, dark mode, notes panel, and keyboard navigation.
+6. Upgrade static QA so it checks route contract, notes presence, accepted §1.1.1 route roles, no unfinished-status wording, and source provenance.
+7. Add rendered QA for mobile overflow, dark mode, notes panel, focus order, and keyboard navigation.
 
 ## Required Lesson Output
 
@@ -74,6 +71,6 @@ Keep PPTX optional until a derivative export consumes the same semantic model an
 - Page opens locally.
 - Notes toggle works.
 - Required screenshot states are captured.
-- Teacher, student, visual, accessibility, and lead review reports exist.
+- Teacher, student, visual, accessibility, testing, and lead review reports exist.
 - Platform source and generated lesson output are paired.
 - No generated-output hand patching.

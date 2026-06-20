@@ -37,7 +37,7 @@ Production renderers should support:
 - procedure steps;
 - worked-example tables;
 - worked-example interpretation panels;
-- active-check cards;
+- retrieval/check cards;
 - summary and bridge layouts.
 
 ## No PowerPoint-First Assumption

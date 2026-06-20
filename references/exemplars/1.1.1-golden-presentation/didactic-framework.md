@@ -1,6 +1,6 @@
 # Didactic Framework
 
-Status: conceptual route and review framework.
+Status: conceptual route and review framework for the accepted §1.1.1 exemplar.
 
 ## Learning Claim
 
@@ -16,7 +16,7 @@ The presentation teaches students to understand schaarste, identify alternatieve
 6. Prevent common misconceptions before procedure use.
 7. Make the B02 procedure visible as a student action route.
 8. Split the worked example into calculation/setup and interpretation/conclusion.
-9. Add a small active check to reveal immediate understanding.
+9. Add a small Lisa/farmer retrieval check to reveal immediate understanding.
 10. End with a summary and bridge to the next paragraph.
 
 ## Misconception Control
@@ -40,6 +40,6 @@ A worked example should show:
 - how nettowaarde is calculated;
 - what the result means in words.
 
-## Active Check Boundary
+## Retrieval Check Boundary
 
-The active check is formative and short. It may test immediate understanding inside the presentation route, but it may not replace the paragraph's exercise set, short check, exit ticket, diagnostics, mastery evidence, or summative use.
+The retrieval check is formative and short. It may test immediate understanding inside the presentation route, but it may not replace the paragraph's exercise set, short check, exit ticket, diagnostics, mastery evidence, or summative use.

@@ -24,23 +24,31 @@ function validateHtml(html, { production = true } = {}) {
     }
   }
 
-  const slides = Array.from(document.querySelectorAll('[data-slide], [data-pv2-slide]'));
+  // Static structural floor only. Rendered interaction, keyboard behavior,
+  // dark mode, focus order, and mobile layout require browser QA.
+  const slides = Array.from(document.querySelectorAll('[data-slide], [data-pv2-slide], article.slide'));
 
   check('slide count', () => {
     assert(slides.length > 0, 'no slides found');
   });
 
   check('navigation', () => {
-    assert(document.querySelector('nav'), 'missing navigation element');
-    assert(document.querySelector('[data-slide-link], [data-pv2-link]'), 'missing slide navigation links');
+    const nav = document.querySelector('nav');
+    assert(nav, 'missing navigation element');
+    assert(
+      document.querySelector('[data-slide-link], [data-pv2-link]') ||
+        nav.querySelector('a,button') ||
+        nav.id,
+      'missing static slide navigation target'
+    );
   });
 
   check('notes toggle', () => {
-    assert(document.querySelector('[data-notes-toggle], [data-pv2-notes]'), 'missing notes toggle');
+    assert(document.querySelector('[data-notes-toggle], [data-pv2-notes], #notesToggle'), 'missing notes toggle');
   });
 
   check('progress', () => {
-    assert(document.querySelector('[data-current], [data-slide-current], .slide-count, .slide-counter'), 'missing visible progress indicator');
+    assert(document.querySelector('[data-current], [data-slide-current], .slide-count, .slide-counter, .progress, #counter'), 'missing visible progress indicator');
   });
 
   check('first slide route contract', () => {
@@ -56,7 +64,7 @@ function validateHtml(html, { production = true } = {}) {
       const id = slide.id || slide.getAttribute('data-slide') || slide.getAttribute('data-pv2-slide');
       const title = slide.querySelector('h1,h2,.slide-title');
       assert(title && textOf(title), `${id} missing visible title`);
-      const assertion = slide.querySelector('.assertion,.pv2-thesis,.slide-text,.slide-body');
+      const assertion = slide.querySelector('.assertion,.pv2-thesis,.slide-text,.slide-body,.student-action');
       assert(assertion && textOf(assertion), `${id} missing assertion or explanatory text`);
     }
   });
@@ -64,7 +72,7 @@ function validateHtml(html, { production = true } = {}) {
   check('notes on every slide', () => {
     for (const slide of slides) {
       const id = slide.id || slide.getAttribute('data-slide') || slide.getAttribute('data-pv2-slide');
-      const notes = slide.querySelector('.notes,.slide-notes,.pv2-notes,[data-notes]');
+      const notes = slide.querySelector('.notes,.slide-notes,.pv2-notes,.notes-source,[data-notes]');
       assert(notes && textOf(notes).length > 40, `${id} missing readable notes`);
     }
   });

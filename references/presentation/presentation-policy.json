@@ -25,27 +25,54 @@
       "description": "Shows source, generation, rendered output, tests, screenshots, and review evidence."
     }
   },
+  "universal_presentation_duties": [
+    "route_contract",
+    "concept_model_development",
+    "worked_example_or_application",
+    "retrieval_check",
+    "summary_bridge",
+    "student_facing_notes",
+    "navigation_affordance"
+  ],
+  "conditional_route_tools": [
+    "narrative_anchor",
+    "transfer_slide",
+    "misconception_slide",
+    "procedure_route",
+    "calculation_interpretation_split"
+  ],
+  "exemplar_specific_sequences": {
+    "1.1.1-golden-presentation": {
+      "path": "references/exemplars/1.1.1-golden-presentation/",
+      "source_snapshot_sha256": "0070525A9F0C57C2BC9211C6D19CAEA6F84A3EEFE0810999C5AB0AA167477FF0",
+      "required_slide_count": 11
+    }
+  },
   "required_review": [
     "teacher_learning_quality",
     "student_experience",
     "visual_qa",
     "accessibility",
+    "testing_verification",
     "lead_verdict"
   ],
-  "required_slide_fields": [
-    "id",
-    "navTitle",
-    "slideRole",
-    "studentTitle",
-    "assertion",
-    "visibleElements",
-    "notes"
+  "semantic_model_fields": [
+    "id_or_exemplar_id",
+    "surface",
+    "paragraph",
+    "title",
+    "quality_claim",
+    "source_provenance_when_applicable",
+    "does_not_authorize",
+    "slides"
   ],
-  "required_note_fields": [
-    "studentExplanation",
-    "misconceptionWatch",
-    "teacherCue",
-    "transition"
+  "semantic_slide_fields": [
+    "id",
+    "title",
+    "role",
+    "assertion_or_learning_move",
+    "visible_content",
+    "student_facing_explanation"
   ],
   "does_not_authorize": [
     "product_use",
@@ -57,5 +84,6 @@
     "broad_migration",
     "target_equivalent_completion_language",
     "hand_editing_generated_lesson_output"
-  ]
+  ],
+  "static_web_check_scope": "Static QA verifies structural floor conditions only; rendered browser QA is required for interaction, keyboard behavior, focus order, dark mode, and mobile layout."
 }

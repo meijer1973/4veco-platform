@@ -4,7 +4,7 @@ Status: reusable policy extracted from the `1.1.1` Golden Presentation exemplar.
 
 ## Core Policy
 
-Economics presentations should be web-first learning surfaces. A presentation is not just a slide stack; it is a route from a concrete case to a concept, a misconception check, a reusable procedure, a worked example, a short active check, and a summary bridge.
+Economics presentations should be web-first learning surfaces. A presentation is not just a slide stack; it is a visible learning route with a route contract, concept/model development, application, retrieval/check, summary bridge, and student-facing notes.
 
 ## Web-First Source Of Truth
 
@@ -17,30 +17,36 @@ Economics presentations should be web-first learning surfaces. A presentation is
 
 Each production presentation model should include:
 
-- `slideRole`;
-- `studentTitle`;
+- semantic `role`;
+- visible title;
 - `assertion`;
 - visible route or student action fields;
-- structured notes with `studentExplanation`, `misconceptionWatch`, `teacherCue`, and `transition`;
+- student-facing explanation text on every slide;
+- structured misconception, teacher cue, transition, data, and visual metadata where relevant;
 - visual metadata or alt descriptions for instructional visuals;
 - explicit `does_not_authorize` authority boundaries.
 
-## Required Presentation Route
+## Route Policy
 
-Default economics route:
+Universal roles:
 
-1. Route contract.
-2. Concrete narrative or source anchor.
-3. Core concept.
-4. Transfer to another context.
-5. Misconception control.
-6. Canonical procedure or model.
-7. Worked example, calculation/setup.
-8. Worked example, interpretation/conclusion.
-9. Active formative check.
-10. Summary and bridge.
+- route contract;
+- concept/model development;
+- worked example or application;
+- retrieval/check;
+- summary bridge;
+- student-facing notes.
 
-Agents may deviate only when they name the didactic reason.
+Conditional roles:
+
+- narrative anchor;
+- transfer slide;
+- misconception slide;
+- procedure route;
+- calculation/interpretation split.
+
+The exact eleven-slide sequence from this folder is mandatory for the accepted
+§1.1.1 exemplar only, not a quota for every presentation.
 
 ## Review Gate
 
@@ -50,9 +56,12 @@ Production readiness requires:
 - student experience review;
 - visual QA with screenshots;
 - accessibility review;
+- testing/static verification;
 - lead synthesis.
 
-Technical tests alone cannot approve a presentation as production-ready.
+Technical tests alone cannot approve a presentation as production-ready. Static
+web checks are structural floors and do not prove keyboard, dark-mode, mobile,
+or rendered visual behavior.
 
 ## Non-Authority
 

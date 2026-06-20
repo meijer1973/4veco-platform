@@ -3,12 +3,19 @@
 Type: conceptual presentation exemplar.
 Surface: web-first economics presentation with student-facing speaker notes.
 Paragraph: 1.1.1 Schaarste en economisch denken.
-Status: accepted by human feedback as a golden example candidate; not yet an implemented production generator reference.
+Status: accepted human-reviewed source snapshot; not yet an implemented production generator reference.
+
+Source snapshot SHA-256:
+
+```text
+0070525A9F0C57C2BC9211C6D19CAEA6F84A3EEFE0810999C5AB0AA167477FF0
+```
 
 ## Use For
 
-- presentation layout standard;
-- didactic route standard;
+- accepted §1.1.1 web-first presentation snapshot;
+- presentation layout reference;
+- didactic route reference for §1.1.1;
 - student-facing notes standard;
 - web-first presentation policy;
 - later PPTX derivation policy.
@@ -21,16 +28,21 @@ Status: accepted by human feedback as a golden example candidate; not yet an imp
 - replacing paragraph markdown as source of truth;
 - hand-editing generated lesson output;
 - diagnostics, mastery, automatic sequencing, summative use, broad migration, or target-equivalent completion claims.
+- a mandatory eleven-slide route for every presentation.
 
 ## Package Contents
 
-- `golden-presentation.html` - standalone web-first reference surface for the conceptual exemplar.
-- `golden-presentation-content-model.json` - semantic presentation model, not an HTML dump.
-- `slide-route.md` - required route pattern and slide-role sequence.
+- `accepted-snapshot-provenance.md` - provenance, package source, and hash for the frozen accepted snapshot.
+- `source-snapshot.sha256` - expected SHA-256 for `golden-presentation.html`.
+- `content-review-and-revision-notes.md` - human package notes supplied with the accepted artifact.
+- `lead-review-2026-06-20.md` - independent read-only lead-review subagent verdict and carried flags.
+- `golden-presentation.html` - exact standalone web-first reference surface from the accepted package.
+- `golden-presentation-content-model.json` - semantic model derived from the accepted HTML snapshot.
+- `slide-route.md` - exact §1.1.1 route and role sequence.
 - `speaker-notes-standard.md` - student-facing notes requirements.
 - `didactic-framework.md` - learning-route and misconception-control guidance.
 - `layout-framework.md` - web-first layout and renderer implications.
-- `teacher-student-review.md` - review packet requirements for teacher, student, visual, and accessibility review.
+- `teacher-student-review.md` - review packet requirements for teacher, student, visual, accessibility, testing, and lead review.
 - `policy-extract.md` - reusable policy extracted from this exemplar.
 - `implementation-handoff.md` - platform-side implementation path for a later implemented reference.
 - `screenshot-proof.md` - current proof ledger and required preview states.
@@ -38,6 +50,6 @@ Status: accepted by human feedback as a golden example candidate; not yet an imp
 
 ## Authority Boundary
 
-This folder preserves a conceptual golden standard. It does not prove that the current generator can reproduce the surface, and it does not authorize direct edits in `4veco-lessen`.
+This folder preserves an accepted conceptual golden standard. It does not prove that the current generator can reproduce the surface, and it does not authorize direct edits in `4veco-lessen`.
 
 Production integration must happen through `4veco-platform`, followed by regeneration of `4veco-lessen` output and fresh review evidence.

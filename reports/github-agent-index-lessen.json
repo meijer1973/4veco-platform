@@ -2,7 +2,10 @@
   "repo": "4veco-lessen",
   "root": "4veco-lessen",
   "available": true,
-  "generated_at": "2026-06-20T07:44:42.400Z",
+  "generated_at": "2026-06-20T10:53:52.697Z",
+  "source_branch": "HEAD",
+  "source_commit": "a020f7dece0d9acec7f7376e9bd51e632843902b",
+  "source_remote_url": "https://github.com/meijer1973/4veco-lessen.git",
   "file_count": 1723,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
   "skipped_directories": [
