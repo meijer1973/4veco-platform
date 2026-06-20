@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "fixtureSet": "reasoning-flow-golden-exemplar-v3-negative-fixtures",
+  "mustFail": [
+    {
+      "id": "chain_with_demand_down",
+      "surface": "chain-build",
+      "response": {
+        "s1": "parking_less",
+        "s2": "bike_demand_more",
+        "s3": "demand_down",
+        "s4": "supply_same",
+        "s5": "shortage",
+        "s6": "price_up"
+      },
+      "reason": "The chain uses a plausible but wrong demand direction."
+    },
+    {
+      "id": "chain_conclusion_only",
+      "surface": "chain-build",
+      "response": {
+        "s6": "price_up"
+      },
+      "reason": "A conclusion without causal mechanism is not reasoning proof."
+    },
+    {
+      "id": "connector_correct_only_bank",
+      "surface": "link-labels",
+      "dataMutation": "remove all connector distractors",
+      "reason": "A connector bank with only correct labels makes wrong answers impossible."
+    },
+    {
+      "id": "wrong_connector_terwijl_missing",
+      "surface": "link-labels",
+      "response": {
+        "a1": "daardoor",
+        "a2": "daardoor",
+        "a3": "dus",
+        "a4": "dus"
+      },
+      "reason": "The answer fails to mark the unchanged supply condition with terwijl."
+    },
+    {
+      "id": "sentence_no_mechanism",
+      "surface": "exam-sentence",
+      "response": {
+        "cause": "cause_ok",
+        "conclusion": "conclusion_ok"
+      },
+      "reason": "Cause and conclusion without mechanism is too shallow."
+    },
+    {
+      "id": "sentence_wrong_direction",
+      "surface": "exam-sentence",
+      "response": {
+        "cause": "cause_ok",
+        "mechanism": "mechanism_ok",
+        "conclusion": "conclusion_wrong"
+      },
+      "reason": "The conclusion direction contradicts the chain."
+    },
+    {
+      "id": "generic_mc_only_degradation",
+      "surface": "whole-game",
+      "dataMutation": "replace chain/connector/sentence interactions with one multiple-choice question",
+      "reason": "Generic choice-only form does not preserve the reasoning operation."
+    },
+    {
+      "id": "mode_overload_degradation",
+      "surface": "whole-game",
+      "dataMutation": "add unrelated timers, arcade rounds, and four alternate modes before the core chain is complete",
+      "reason": "Reasoning game must stay one coherent core loop, not overloaded game modes."
+    },
+    {
+      "id": "hidden_correct_line_or_arrow",
+      "surface": "link-labels",
+      "dataMutation": "single button that always inserts the correct connector",
+      "reason": "Hidden always-correct controls are not student reasoning actions."
+    },
+    {
+      "id": "visible_internal_role_tags_on_cards",
+      "surface": "chain-build/exam-sentence",
+      "dataMutation": "render card.role, card.type, hidden id, or labels such as cause/mechanism/conclusion directly on selectable cards",
+      "reason": "Selectable cards must not carry visible metadata tags that give away their function."
+    },
+    {
+      "id": "vague_market_pressure_concept",
+      "surface": "chain-build/link-labels",
+      "dataMutation": "use “marktdruk” or “market pressure” as the economic mechanism instead of a concrete concept",
+      "reason": "The reasoning must use concrete exam-usable mechanisms such as vraagoverschot, schaarste, aanbod blijft gelijk, or vraag neemt toe."
+    },
+    {
+      "id": "connector_fragments_not_sentences",
+      "surface": "link-labels",
+      "dataMutation": "render connector task as loose from/to fragments rather than full sentences with a connector slot",
+      "reason": "The connector round must train proper sentence logic; inserting the word should produce a readable Dutch sentence."
+    },
+    {
+      "id": "hidden_or_low_contrast_goal",
+      "surface": "source-pane",
+      "dataMutation": "place the game goal only at the bottom in small muted text",
+      "reason": "The goal of explaining the price mechanism must be prominent before the source/task work begins."
+    },
+    {
+      "id": "goal_gives_answer_chain",
+      "surface": "source-pane",
+      "dataMutation": "goal text states rising demand + fixed supply + scarcity/vraagoverschot + higher price before play",
+      "reason": "The goal may orient the price-mechanism skill but may not reveal the full answer chain."
+    },
+    {
+      "id": "daardoor_not_reusable",
+      "surface": "link-labels",
+      "dataMutation": "disable daardoor after one use",
+      "reason": "A repeated cause-effect connector must be reusable; otherwise the interface blocks the intended answer."
+    },
+    {
+      "id": "waardoor_forced_without_language_target",
+      "surface": "link-labels",
+      "dataMutation": "require waardoor as a separate exact answer where daardoor would preserve the economic logic",
+      "reason": "The game should test economics reasoning, not subtle Dutch connector distinctions, unless that language distinction is explicitly targeted."
+    }
+  ],
+  "mustPass": [
+    {
+      "id": "complete_reasoning_chain",
+      "response": {
+        "chain": {
+          "s1": "parking_less",
+          "s2": "bike_demand_more",
+          "s3": "demand_up",
+          "s4": "supply_same",
+          "s5": "shortage",
+          "s6": "price_up"
+        },
+        "connectors": {
+          "a1": "daardoor",
+          "a2": "daardoor",
+          "a3": "terwijl",
+          "a4": "dus"
+        },
+        "sentence": {
+          "cause": "cause_ok",
+          "mechanism": "mechanism_ok",
+          "conclusion": "conclusion_ok"
+        }
+      }
+    }
+  ]
+}

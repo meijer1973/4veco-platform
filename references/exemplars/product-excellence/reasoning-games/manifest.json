@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "family_id": "reasoning-game-golden-family-v1",
+  "generated": "2026-06-20",
+  "purpose": "Preserve four human-calibrated reasoning-game exemplars and make them consumable by policy, skills, shared task families, validators, and review gates.",
+  "exemplars": [
+    {
+      "id": "reasoning-market-price-mechanism-v3",
+      "title": "Market price mechanism reasoning flow",
+      "paragraph": null,
+      "reasoning_family": "causal_mechanism",
+      "reasoning_grammar": "source -> causal chain -> connector sentences -> exam sentence",
+      "core_patterns": [
+        "reasoning_flow_chain_builder",
+        "reasoning_connector_sentence_labeler",
+        "reasoning_functional_answer_builder"
+      ],
+      "status": "human_calibrated_reference_candidate",
+      "authority": {
+        "golden_reference": true,
+        "student_product_adoption": false,
+        "target_equivalent_proof": false,
+        "diagnostics": false,
+        "mastery_or_sequencing": false,
+        "summative_use": false,
+        "scale_gate": false
+      },
+      "files": [
+        {
+          "path": "market-price-mechanism/prototype.html",
+          "sha256": "dbb77fcf971bcdf92c5aebfe3a1941bb9303f0bf57214487c14bec5be4af5058",
+          "bytes": 34216
+        },
+        {
+          "path": "market-price-mechanism/candidate-data.json",
+          "sha256": "5b894eab44240c65d53f376bc231d6387bd810ac800e4fb5ed110a03df3f6d34",
+          "bytes": 11714
+        },
+        {
+          "path": "market-price-mechanism/implementation-handoff.md",
+          "sha256": "9a82fc90c889cb93b5046a2ea6aeb69cb043c562c7b06ef8bbb235a21fa7ff31",
+          "bytes": 5556
+        },
+        {
+          "path": "market-price-mechanism/ui-framework.md",
+          "sha256": "4c771e0ad063e97a1ba5c64c0041f0cac1e77fe1ca4d94f47515ca1cf8cf7441",
+          "bytes": 5383
+        },
+        {
+          "path": "market-price-mechanism/negative-fixtures.json",
+          "sha256": "d1e7d586b26463b4db2a443b2be6773e66eb167600beb15011eb39b323a9c10f",
+          "bytes": 5518
+        },
+        {
+          "path": "market-price-mechanism/quality-brief.md",
+          "sha256": "10174a7497b151a194273918d8c86e27e15921966e63c116044dc99689211492",
+          "bytes": 2220
+        },
+        {
+          "path": "market-price-mechanism/README.md",
+          "sha256": "24e49b0a3e20697d25d588530f946eb4044ffacbeb03f550331dfc925f0dd32b",
+          "bytes": 666
+        }
+      ],
+      "review_state": {
+        "product_grammar_locked": true,
+        "reasoning_grammar_must_be_rederived": true,
+        "rendered_fidelity_required": true,
+        "blind_transfer_required_before_student_rollout": true
+      }
+    },
+    {
+      "id": "reasoning-1.1.1-choice-compass-v1",
+      "title": "Scarcity and opportunity-cost choice compass",
+      "paragraph": "1.1.1",
+      "reasoning_family": "choice_and_evidence",
+      "reasoning_grammar": "source facts -> scarcity evidence -> best forgone alternative -> short explanation",
+      "core_patterns": [
+        "reasoning_evidence_selector",
+        "genuine_choice_with_misconceptions",
+        "reasoning_functional_answer_builder"
+      ],
+      "status": "human_calibrated_reference_candidate",
+      "authority": {
+        "golden_reference": true,
+        "student_product_adoption": false,
+        "target_equivalent_proof": false,
+        "diagnostics": false,
+        "mastery_or_sequencing": false,
+        "summative_use": false,
+        "scale_gate": false
+      },
+      "files": [
+        {
+          "path": "1.1.1-choice-compass/prototype.html",
+          "sha256": "2e30f0f54e2353560dc6a8aea4f77f46cd01b459bd22cad2f4555b5e4c98b148",
+          "bytes": 25618
+        },
+        {
+          "path": "1.1.1-choice-compass/candidate-data.json",
+          "sha256": "e8ff30ec15ba80f05d73827ef59ac5a6069c30189d677cc943e5b4ca1bfcd951",
+          "bytes": 2689
+        },
+        {
+          "path": "1.1.1-choice-compass/implementation-handoff.md",
+          "sha256": "1b263e41484d6cb9c942003067681ff8b8cf28067a5b3b26f1fa91833f6316d0",
+          "bytes": 3680
+        },
+        {
+          "path": "1.1.1-choice-compass/ui-framework.md",
+          "sha256": "871e47f830cbdaed2d85013efd14e7cd5b773119483cfdea011548da50c6bb5e",
+          "bytes": 3426
+        },
+        {
+          "path": "1.1.1-choice-compass/adaptation-notes.md",
+          "sha256": "ce0c41e62083a8dff89f1febee894b9dd5d6363c96b6d0c9176798b5a7f92978",
+          "bytes": 1044
+        },
+        {
+          "path": "1.1.1-choice-compass/negative-fixtures.json",
+          "sha256": "f44ef541d9ae789b987300c780898649b2bb30d60a1d350e4bd38243d9031ba0",
+          "bytes": 2472
+        },
+        {
+          "path": "1.1.1-choice-compass/quality-brief.md",
+          "sha256": "a747d42edaf924b63dca519cd0d6eaec68a489f678468b1d8eb3abcca515c4a1",
+          "bytes": 1286
+        },
+        {
+          "path": "1.1.1-choice-compass/README.md",
+          "sha256": "a160ff0c4cd915c5bff2523a048f86fc7a843dc2a29723377afa3d1d70b9ea8f",
+          "bytes": 676
+        }
+      ],
+      "review_state": {
+        "product_grammar_locked": true,
+        "reasoning_grammar_must_be_rederived": true,
+        "rendered_fidelity_required": true,
+        "blind_transfer_required_before_student_rollout": true
+      }
+    },
+    {
+      "id": "reasoning-1.1.2-index-check-v1",
+      "title": "Index-point and percentage claim check",
+      "paragraph": "1.1.2",
+      "reasoning_family": "reference_value_and_claim_repair",
+      "reasoning_grammar": "difference -> unit -> reference value -> equivalent checks -> repaired claim",
+      "core_patterns": [
+        "reasoning_classification_choice",
+        "reasoning_equivalence_selector",
+        "reasoning_functional_answer_builder"
+      ],
+      "status": "human_calibrated_reference_candidate",
+      "authority": {
+        "golden_reference": true,
+        "student_product_adoption": false,
+        "target_equivalent_proof": false,
+        "diagnostics": false,
+        "mastery_or_sequencing": false,
+        "summative_use": false,
+        "scale_gate": false
+      },
+      "files": [
+        {
+          "path": "1.1.2-index-check/prototype.html",
+          "sha256": "aa245dbe7e09c9694e69b3a1837242537a486780bc48838fd023f29e95264a06",
+          "bytes": 25475
+        },
+        {
+          "path": "1.1.2-index-check/candidate-data.json",
+          "sha256": "d3d7ff2a0909b2da77c62b57d4416625191bf685de541a4891d042d7b69abc2b",
+          "bytes": 3767
+        },
+        {
+          "path": "1.1.2-index-check/implementation-handoff.md",
+          "sha256": "ff5caba16dbc34ec6b6977dd5859374bc0bc7376072c233c97f0e2f44f1d6fc8",
+          "bytes": 4681
+        },
+        {
+          "path": "1.1.2-index-check/ui-framework.md",
+          "sha256": "2c865a275d3e76abffeabc158ec2f12d91636c85c0e24e812ff0c724d4ff01f9",
+          "bytes": 3610
+        },
+        {
+          "path": "1.1.2-index-check/adaptation-notes.md",
+          "sha256": "5b96b1fa9ea98011db78779e173cb1da1dbe1d6ac2e2fa003a9fd25c4265a8a2",
+          "bytes": 1382
+        },
+        {
+          "path": "1.1.2-index-check/negative-fixtures.json",
+          "sha256": "894a8a48b0b692426a2558d315b523f794ed64c08a15bf128116794f5d7c2092",
+          "bytes": 2570
+        },
+        {
+          "path": "1.1.2-index-check/quality-brief.md",
+          "sha256": "6124107413c774ff6fd707ac54c8d0df4271dd44285dad59e648cffb1dcc30ba",
+          "bytes": 1222
+        },
+        {
+          "path": "1.1.2-index-check/README.md",
+          "sha256": "4dec5187df011b48e2d59be4ad7e931ac2f4718076c61c29ce24a5bc091c032d",
+          "bytes": 675
+        }
+      ],
+      "review_state": {
+        "product_grammar_locked": true,
+        "reasoning_grammar_must_be_rederived": true,
+        "rendered_fidelity_required": true,
+        "blind_transfer_required_before_student_rollout": true
+      }
+    },
+    {
+      "id": "reasoning-1.1.3-graph-editorial-v2",
+      "title": "Graph evidence and claim-strength editorial check",
+      "paragraph": "1.1.3",
+      "reasoning_family": "graph_evidence_and_epistemic_scope",
+      "reasoning_grammar": "relevant graph evidence -> observation versus estimate -> bounded conclusion",
+      "core_patterns": [
+        "graph_evidence_selector",
+        "reasoning_claim_strength_choice",
+        "reasoning_functional_answer_builder",
+        "dual_pane_source_task_workspace"
+      ],
+      "status": "human_calibrated_reference_candidate",
+      "authority": {
+        "golden_reference": true,
+        "student_product_adoption": false,
+        "target_equivalent_proof": false,
+        "diagnostics": false,
+        "mastery_or_sequencing": false,
+        "summative_use": false,
+        "scale_gate": false
+      },
+      "files": [
+        {
+          "path": "1.1.3-graph-editorial/prototype.html",
+          "sha256": "c8b22df0eecb9252b221b3bf5f247c80fb31a85d9c84ed303d496d9290a6c3ab",
+          "bytes": 27905
+        },
+        {
+          "path": "1.1.3-graph-editorial/candidate-data.json",
+          "sha256": "9ce71eb603a73832f05101faad95657421b3aab6bd2584a3367aa1fbaacaf01e",
+          "bytes": 6734
+        },
+        {
+          "path": "1.1.3-graph-editorial/implementation-handoff.md",
+          "sha256": "12aa884d4e0169cd85531eeb9179f3d94b22d9cb0b78e8d54cdf3f54663236ae",
+          "bytes": 7542
+        },
+        {
+          "path": "1.1.3-graph-editorial/ui-framework.md",
+          "sha256": "0636816fd69e72ab110ab05a5689e6473af0e389afdaf0aab2be80fdf7bca7b8",
+          "bytes": 5682
+        },
+        {
+          "path": "1.1.3-graph-editorial/adaptation-notes.md",
+          "sha256": "17979006b938aacd105e7df70689bd9d5fae90f8937f3eeadf3c269906ff80bb",
+          "bytes": 1805
+        },
+        {
+          "path": "1.1.3-graph-editorial/negative-fixtures.json",
+          "sha256": "6c9408488b5fce65a842637fd9cc2f29f0c2b417487cfb3b662cd2093bd5f16b",
+          "bytes": 4887
+        },
+        {
+          "path": "1.1.3-graph-editorial/quality-brief.md",
+          "sha256": "bfccae1842b1965ee18df41511fc7e05a2dc3089a6a9ba79d6d47c4e465a7156",
+          "bytes": 1902
+        },
+        {
+          "path": "1.1.3-graph-editorial/behavior-proof.json",
+          "sha256": "8b1391d07e028fde1007b74fa687b68811b18b3049779673c9c139395a0a7c96",
+          "bytes": 1271
+        },
+        {
+          "path": "1.1.3-graph-editorial/README.md",
+          "sha256": "afa7ebc6e62d375c0f688b8ea3c8faa0a7afac9fed28ccd608e5f2d372641408",
+          "bytes": 690
+        }
+      ],
+      "review_state": {
+        "product_grammar_locked": true,
+        "reasoning_grammar_must_be_rederived": true,
+        "rendered_fidelity_required": true,
+        "blind_transfer_required_before_student_rollout": true
+      }
+    }
+  ],
+  "library_version": "1.0.0",
+  "repository_path": "references/exemplars/product-excellence/reasoning-games",
+  "change_policy": {
+    "stable": true,
+    "prototype_files_are_evidence": true,
+    "update_rule": "Prototype, candidate-data, fixture, and quality files may change only by manifest version bump plus policy traceability note.",
+    "adoption_boundary": "Golden-reference status does not authorize student rollout, diagnostics, mastery, summative use, or scale gates."
+  },
+  "required_standard_files": [
+    "README.md",
+    "manifest.schema.json",
+    "family-standard.md",
+    "transfer-matrix.md",
+    "reasoning-archetype-decision-tree.md",
+    "change-notes.md",
+    "policy-adoption-map.md",
+    "policy-traceability.json",
+    "package-origin.json"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "fixture_set": "reasoning-golden-family-negative-fixtures-v1",
+  "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
+  "fixtures": [
+    {
+      "id": "answer_giving_goal",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "mutation": "replace goal with explicit point selection and conclusion",
+      "expect_error": "goal"
+    },
+    {
+      "id": "mode_overloaded_engine",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "mutation": "add modePicker flag",
+      "expect_error": "modePicker"
+    },
+    {
+      "id": "graph_construction_replaces_reasoning",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "mutation": "replace graph_evidence_selector with graph_construction_substitute",
+      "expect_error": "graph construction"
+    },
+    {
+      "id": "tiny_graph_targets",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "mutation": "set graph hitTargetPx to 32",
+      "expect_error": "hitTargetPx"
+    },
+    {
+      "id": "generic_textarea_only",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "mutation": "replace functional_answer_builder with structured_reasoning",
+      "expect_error": "visible final answer builder"
+    },
+    {
+      "id": "missing_answer_preview",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "mutation": "delete answerPreview from final answer task",
+      "expect_error": "answerPreview"
+    },
+    {
+      "id": "correct_only_answer_rows",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "mutation": "remove all distractor answer-row options",
+      "expect_error": "distractor"
+    },
+    {
+      "id": "visible_internal_metadata",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "mutation": "add A96/correct metadata to a prompt",
+      "expect_error": "blocked terms or internal codes"
+    },
+    {
+      "id": "decorative_graph_only",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "mutation": "replace graph task with ordinary choice",
+      "expect_error": "graph_evidence_selector"
+    },
+    {
+      "id": "reshuffle_after_click_guard",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "mutation": "verify stableSessionShuffle is deterministic",
+      "expect_error": null
+    }
+  ]
+}

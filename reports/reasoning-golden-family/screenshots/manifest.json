@@ -1,0 +1,2815 @@
+{
+  "schema_version": 1,
+  "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
+  "captured_on": "2026-06-20",
+  "cases": [
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-initial",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "initial",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-initial.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-partial",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "partial",
+      "theme": "light",
+      "scenario": "partial",
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-partial.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 3,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-wrong_retry",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "wrong_retry",
+      "theme": "light",
+      "scenario": "wrong",
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-wrong_retry.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "retry"
+        ],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar verbindingswoorden",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 3,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-correct",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "correct",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-correct.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Door minder parkeerplekken wordt fietsen aantrekkelijker. De vraag stijgt terwijl het aanbod eerst gelijk blijft, waardoor een vraagoverschot ontstaat. Daarom komt de evenwichtsprijs hoger uit.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar verbindingswoorden",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar het antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 12,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-answer_preview",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "answer_preview",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-answer_preview.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Door minder parkeerplekken wordt fietsen aantrekkelijker. De vraag stijgt terwijl het aanbod eerst gelijk blijft, waardoor een vraagoverschot ontstaat. Daarom komt de evenwichtsprijs hoger uit.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar verbindingswoorden",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar het antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 12,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-next_action",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "next_action",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-next_action.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Door minder parkeerplekken wordt fietsen aantrekkelijker. De vraag stijgt terwijl het aanbod eerst gelijk blijft, waardoor een vraagoverschot ontstaat. Daarom komt de evenwichtsprijs hoger uit.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar verbindingswoorden",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar het antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 12,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "mobile_dark_correct",
+      "theme": "dark",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-mobile_dark_correct.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Door minder parkeerplekken wordt fietsen aantrekkelijker. De vraag stijgt terwijl het aanbod eerst gelijk blijft, waardoor een vraagoverschot ontstaat. Daarom komt de evenwichtsprijs hoger uit.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar verbindingswoorden",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar het antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 12,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": true,
+          "sourceOverflowY": "visible",
+          "taskOverflowY": "visible",
+          "sourceOverscroll": "auto",
+          "taskOverscroll": "auto",
+          "sourceMaxHeight": "none",
+          "taskMaxHeight": "none"
+        },
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 4223
+        }
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "keyboard_focus",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-keyboard_focus.png",
+      "proof": {
+        "title": "Prijsmechanisme uitleggen",
+        "compositionId": "reasoning-market-price-mechanism-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"market-chain\"][data-step-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-initial",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "initial",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-initial.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-partial",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "partial",
+      "theme": "light",
+      "scenario": "partial",
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-partial.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 1,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-wrong_retry",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "wrong_retry",
+      "theme": "light",
+      "scenario": "wrong",
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-wrong_retry.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "retry"
+        ],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar uitleg",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 1,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-correct",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "correct",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-correct.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Er is schaarste omdat Eva beperkte tijd heeft en moet kiezen. De alternatieve kosten zijn leren voor economie. Je telt niet alle niet-gekozen opties bij elkaar op.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar alternatieve kosten",
+            "href": "#next",
+            "visible": true
+          },
+          {
+            "text": "Door naar uitleg",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-answer_preview",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "answer_preview",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-answer_preview.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Er is schaarste omdat Eva beperkte tijd heeft en moet kiezen. De alternatieve kosten zijn leren voor economie. Je telt niet alle niet-gekozen opties bij elkaar op.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar alternatieve kosten",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar uitleg",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-next_action",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "next_action",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-next_action.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Er is schaarste omdat Eva beperkte tijd heeft en moet kiezen. De alternatieve kosten zijn leren voor economie. Je telt niet alle niet-gekozen opties bij elkaar op.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar alternatieve kosten",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar uitleg",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "mobile_dark_correct",
+      "theme": "dark",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-mobile_dark_correct.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Er is schaarste omdat Eva beperkte tijd heeft en moet kiezen. De alternatieve kosten zijn leren voor economie. Je telt niet alle niet-gekozen opties bij elkaar op.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar alternatieve kosten",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar uitleg",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": true,
+          "sourceOverflowY": "visible",
+          "taskOverflowY": "visible",
+          "sourceOverscroll": "auto",
+          "taskOverscroll": "auto",
+          "sourceMaxHeight": "none",
+          "taskMaxHeight": "none"
+        },
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 3393
+        }
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "keyboard_focus",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-keyboard_focus.png",
+      "proof": {
+        "title": "Keuze en alternatieve kosten",
+        "compositionId": "reasoning-choice-compass-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"choice-scarcity\"][data-multi-option-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-initial",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "initial",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-initial.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-partial",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "partial",
+      "theme": "light",
+      "scenario": "partial",
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-partial.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 1,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-wrong_retry",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "wrong_retry",
+      "theme": "light",
+      "scenario": "wrong",
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-wrong_retry.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "retry"
+        ],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar de controle",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 1,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-correct",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "correct",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-correct.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Het verschil is 6 indexpunten. Je deelt door de oude index 120. De stijging is 5 procent, dus de claim 6 procent klopt niet.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar de controle",
+            "href": "#next",
+            "visible": true
+          },
+          {
+            "text": "Door naar de verbeterde claim",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-answer_preview",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "answer_preview",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-answer_preview.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Het verschil is 6 indexpunten. Je deelt door de oude index 120. De stijging is 5 procent, dus de claim 6 procent klopt niet.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar de controle",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar de verbeterde claim",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-next_action",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "next_action",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-next_action.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Het verschil is 6 indexpunten. Je deelt door de oude index 120. De stijging is 5 procent, dus de claim 6 procent klopt niet.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar de controle",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar de verbeterde claim",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "mobile_dark_correct",
+      "theme": "dark",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-mobile_dark_correct.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Het verschil is 6 indexpunten. Je deelt door de oude index 120. De stijging is 5 procent, dus de claim 6 procent klopt niet.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar de controle",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar de verbeterde claim",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 6,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": true,
+          "sourceOverflowY": "visible",
+          "taskOverflowY": "visible",
+          "sourceOverscroll": "auto",
+          "taskOverscroll": "auto",
+          "sourceMaxHeight": "none",
+          "taskMaxHeight": "none"
+        },
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 3308
+        }
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "keyboard_focus",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-keyboard_focus.png",
+      "proof": {
+        "title": "Indexclaim verbeteren",
+        "compositionId": "reasoning-index-check-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"index-unit\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-initial",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "initial",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-initial.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-partial",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "partial",
+      "theme": "light",
+      "scenario": "partial",
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-partial.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 2,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-wrong_retry",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "wrong_retry",
+      "theme": "light",
+      "scenario": "wrong",
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-wrong_retry.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "retry"
+        ],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar claimtaal",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 2,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-correct",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "correct",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-correct.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Bij P=2 is Q=600 en bij P=8 is Q=300. In dit interval is de hoeveelheid lager bij de hogere prijs. Het woord altijd is te sterk voor deze bron.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar claimtaal",
+            "href": "#next",
+            "visible": true
+          },
+          {
+            "text": "Door naar conclusie",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-answer_preview",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "answer_preview",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-answer_preview.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Bij P=2 is Q=600 en bij P=8 is Q=300. In dit interval is de hoeveelheid lager bij de hogere prijs. Het woord altijd is te sterk voor deze bron.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar claimtaal",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar conclusie",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-next_action",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "next_action",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-next_action.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Bij P=2 is Q=600 en bij P=8 is Q=300. In dit interval is de hoeveelheid lager bij de hogere prijs. Het woord altijd is te sterk voor deze bron.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar claimtaal",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar conclusie",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "mobile_dark_correct",
+      "theme": "dark",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-mobile_dark_correct.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "Bij P=2 is Q=600 en bij P=8 is Q=300. In dit interval is de hoeveelheid lager bij de hogere prijs. Het woord altijd is te sterk voor deze bron.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar claimtaal",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar conclusie",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": true,
+          "sourceOverflowY": "visible",
+          "taskOverflowY": "visible",
+          "sourceOverscroll": "auto",
+          "taskOverscroll": "auto",
+          "sourceMaxHeight": "none",
+          "taskMaxHeight": "none"
+        },
+        "viewport": {
+          "width": 413,
+          "height": 892
+        },
+        "page": {
+          "width": 413,
+          "height": 3950
+        }
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "keyboard_focus",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-keyboard_focus.png",
+      "proof": {
+        "title": "Grafiekclaim redigeren",
+        "compositionId": "reasoning-graph-editorial-composed-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "graph_evidence_selector",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p2-q600"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p8-q300"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "id": "p5-q450"
+          }
+        ],
+        "minGraphTarget": 44,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-initial",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "initial",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-initial.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-partial",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "partial",
+      "theme": "light",
+      "scenario": "partial",
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-partial.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 2,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-wrong_retry",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "wrong_retry",
+      "theme": "light",
+      "scenario": "wrong",
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-wrong_retry.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "retry"
+        ],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar richting",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 1,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-correct",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "correct",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-correct.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "De oorzaak is een andere vraagfactor dan de eigen prijs van boter. Omdat de prijs gelijk blijft, beweeg je niet langs de bestaande lijn. De vraaglijn verschuift naar rechts: bij elke prijs willen consumenten meer boter.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar richting",
+            "href": "#next",
+            "visible": true
+          },
+          {
+            "text": "Door naar antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-answer_preview",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "answer_preview",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-answer_preview.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "De oorzaak is een andere vraagfactor dan de eigen prijs van boter. Omdat de prijs gelijk blijft, beweeg je niet langs de bestaande lijn. De vraaglijn verschuift naar rechts: bij elke prijs willen consumenten meer boter.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar richting",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-next_action",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "next_action",
+      "theme": "light",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-next_action.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "De oorzaak is een andere vraagfactor dan de eigen prijs van boter. Omdat de prijs gelijk blijft, beweeg je niet langs de bestaande lijn. De vraaglijn verschuift naar rechts: bij elke prijs willen consumenten meer boter.",
+            "complete": true,
+            "visible": true
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar richting",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": true
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-mobile_dark_correct",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "mobile_dark_correct",
+      "theme": "dark",
+      "scenario": "correct",
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-mobile_dark_correct.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [
+          "matched",
+          "matched",
+          "matched"
+        ],
+        "answerPreview": [
+          {
+            "text": "De oorzaak is een andere vraagfactor dan de eigen prijs van boter. Omdat de prijs gelijk blijft, beweeg je niet langs de bestaande lijn. De vraaglijn verschuift naar rechts: bij elke prijs willen consumenten meer boter.",
+            "complete": true,
+            "visible": false
+          }
+        ],
+        "nextActions": [
+          {
+            "text": "Door naar richting",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Door naar antwoord",
+            "href": "#next",
+            "visible": false
+          },
+          {
+            "text": "Verder oefenen met deze redenering",
+            "href": "#next",
+            "visible": false
+          }
+        ],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 8,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": true,
+          "sourceOverflowY": "visible",
+          "taskOverflowY": "visible",
+          "sourceOverscroll": "auto",
+          "taskOverscroll": "auto",
+          "sourceMaxHeight": "none",
+          "taskMaxHeight": "none"
+        },
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 3973
+        }
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-keyboard_focus",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "keyboard_focus",
+      "theme": "light",
+      "scenario": null,
+      "url": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-keyboard_focus.png",
+      "proof": {
+        "title": "Blind transfer: vraagfactoren",
+        "compositionId": "blind-transfer-1.2.2-demand-factors-v1",
+        "layout": "dual_pane_source_task_workspace",
+        "taskFamilies": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "taskCount": 3,
+        "checkButtonCount": 3,
+        "feedbackStates": [],
+        "answerPreview": [
+          {
+            "text": "Kies per regel een onderdeel.",
+            "complete": false,
+            "visible": false
+          }
+        ],
+        "nextActions": [],
+        "graphTargets": [],
+        "minGraphTarget": null,
+        "selectedCount": 0,
+        "modePickerVisible": false,
+        "focusProof": {
+          "selector": "[data-task-id=\"demand-factor\"][data-choice-id]",
+          "activeTag": "BUTTON",
+          "activeMatches": true
+        },
+        "paneProof": {
+          "mobile": false,
+          "sourceOverflowY": "auto",
+          "taskOverflowY": "auto",
+          "sourceOverscroll": "contain",
+          "taskOverscroll": "contain",
+          "sourceMaxHeight": "820px",
+          "taskMaxHeight": "820px"
+        },
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    }
+  ]
+}

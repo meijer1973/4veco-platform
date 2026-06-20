@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "authority": {
+    "golden_reference": true,
+    "student_product_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "scale_gate": false
+  },
+  "layout": {
+    "type": "dual_pane_source_task_workspace",
+    "desktopIndependentScroll": true,
+    "mobileFlow": "source_before_tasks",
+    "defaultRoute": "reasoning_composer"
+  },
+  "composition_id": "reasoning-index-check-composed-v1",
+  "title": "Indexclaim verbeteren",
+  "goal": "Controleer of een uitspraak over indexpunten en procenten precies genoeg is.",
+  "archetype_id": "reference_value_and_claim_repair",
+  "selected_exemplar_ids": [
+    "reasoning-1.1.2-index-check-v1"
+  ],
+  "targetBrief": {
+    "reasoningTarget": "Repair an index claim by separating difference, unit, reference value and conclusion.",
+    "centralMisconception": "Subtracting index numbers is treated as a percent change.",
+    "sourceEvidenceType": "index values and claim",
+    "requiredAnswerForm": "unit, reference value, corrected claim",
+    "mustNotTest": "calculation drill only",
+    "candidateArchetype": "reference_value_and_claim_repair",
+    "selectedGoldenExemplars": [
+      "reasoning-1.1.2-index-check-v1"
+    ],
+    "mechanicFit": "Choice and equivalence selection reveal the reference-value reasoning before answer repair."
+  },
+  "taskSet": {
+    "schema_version": 1,
+    "title": "Indexclaim controleren",
+    "contextBlocks": [
+      {
+        "id": "ctx-index-source",
+        "type": "markdown",
+        "title": "Claim",
+        "bodyMarkdown": "Een prijsindex stijgt van 120 naar 126. Een leerling schrijft: de prijs is met 6 procent gestegen.",
+        "accessibilitySummary": "Korte indexclaim met oude en nieuwe indexwaarde."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "index-unit",
+        "family": "choice",
+        "skillLabel": "Eenheid herkennen",
+        "purpose": "Bepaal wat 126 min 120 betekent.",
+        "prompt": "Wat betekent het verschil 126 - 120 = 6?",
+        "interaction": {
+          "inputLabel": "Betekenis van het verschil",
+          "options": [
+            {
+              "id": "index-points",
+              "label": "6 indexpunten",
+              "description": "Het verschil tussen twee indexcijfers."
+            },
+            {
+              "id": "percent",
+              "label": "6 procent",
+              "description": "Dit verwart indexpunten met procentuele verandering."
+            },
+            {
+              "id": "euro",
+              "label": "6 euro",
+              "description": "Een indexcijfer is geen eurobedrag."
+            }
+          ]
+        },
+        "expected": {
+          "kind": "choice",
+          "value": "index-points"
+        },
+        "feedback": {
+          "matchTitle": "Eenheid klopt",
+          "matchText": "Het verschil tussen indexcijfers noem je indexpunten.",
+          "retryTitle": "Let op de eenheid",
+          "retryText": "Een verschil in indexcijfers is nog geen procentuele verandering."
+        },
+        "practiceRoute": {
+          "label": "Door naar de controle",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-index-source"
+        ]
+      },
+      {
+        "id": "index-checks",
+        "family": "multi_select",
+        "skillLabel": "Controle kiezen",
+        "purpose": "Kies twee manieren die dezelfde procentuele verandering controleren.",
+        "prompt": "Kies twee geldige controles voor de procentuele stijging.",
+        "interaction": {
+          "inputLabel": "Controles",
+          "options": [
+            {
+              "id": "index-base",
+              "label": "(126 - 120) / 120 x 100%"
+            },
+            {
+              "id": "price-base",
+              "label": "Nieuwe prijs min oude prijs, gedeeld door oude prijs x 100%"
+            },
+            {
+              "id": "divide-new",
+              "label": "(126 - 120) / 126 x 100%"
+            },
+            {
+              "id": "minus-is-percent",
+              "label": "126 - 120 is meteen 6%"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "multi_select",
+          "mode": "exact_set",
+          "values": [
+            "index-base",
+            "price-base"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Controles passen",
+          "matchText": "Beide controles gebruiken de oude waarde als basis.",
+          "retryTitle": "Controleer de basis",
+          "retryText": "De oude waarde is de basis voor procentuele verandering."
+        },
+        "practiceRoute": {
+          "label": "Door naar de verbeterde claim",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-index-source"
+        ]
+      },
+      {
+        "id": "index-answer",
+        "family": "functional_answer_builder",
+        "skillLabel": "Antwoorddelen kiezen",
+        "purpose": "Bouw een antwoord waarin elke regel een eigen functie heeft.",
+        "prompt": "Verbeter de claim met eenheid, basis en conclusie.",
+        "interaction": {
+          "rowGroupLabel": "Antwoordregels",
+          "answerPreview": {
+            "label": "Opgebouwd antwoord",
+            "placeholder": "Kies per regel een onderdeel.",
+            "template": "{{unit}} {{base}} {{claim}}"
+          },
+          "answerRows": [
+            {
+              "id": "unit",
+              "label": "Eenheid",
+              "options": [
+                {
+                  "id": "six-points",
+                  "label": "Het verschil is 6 indexpunten.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "six-percent",
+                  "label": "Het verschil is 6 procent.",
+                  "kind": "distractor",
+                  "distractorFor": "six-points"
+                }
+              ]
+            },
+            {
+              "id": "base",
+              "label": "Basis",
+              "options": [
+                {
+                  "id": "old-120",
+                  "label": "Je deelt door de oude index 120.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "new-126",
+                  "label": "Je deelt door de nieuwe index 126.",
+                  "kind": "distractor",
+                  "distractorFor": "old-120"
+                }
+              ]
+            },
+            {
+              "id": "claim",
+              "label": "Claim",
+              "options": [
+                {
+                  "id": "five-percent",
+                  "label": "De stijging is 5 procent, dus de claim 6 procent klopt niet.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "six-ok",
+                  "label": "De claim 6 procent klopt omdat 126 - 120 = 6.",
+                  "kind": "distractor",
+                  "distractorFor": "five-percent"
+                }
+              ]
+            }
+          ]
+        },
+        "expected": {
+          "kind": "functional_answer_builder",
+          "rows": {
+            "unit": "six-points",
+            "base": "old-120",
+            "claim": "five-percent"
+          },
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Claim is verbeterd",
+          "matchText": "Je onderscheidt indexpunten, basis en procentuele verandering.",
+          "retryTitle": "Controleer de basis",
+          "retryText": "Gebruik de oude index als referentie."
+        },
+        "practiceRoute": {
+          "label": "Verder oefenen met deze redenering",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-index-source"
+        ]
+      }
+    ]
+  },
+  "proofScenarios": {
+    "partial": {
+      "responses": [
+        {
+          "taskId": "index-checks",
+          "response": {
+            "values": [
+              "index-base"
+            ]
+          },
+          "check": false
+        }
+      ]
+    },
+    "wrong": {
+      "responses": [
+        {
+          "taskId": "index-unit",
+          "response": {
+            "value": "percent"
+          }
+        }
+      ]
+    },
+    "correct": {
+      "responses": [
+        {
+          "taskId": "index-unit",
+          "response": {
+            "value": "index-points"
+          }
+        },
+        {
+          "taskId": "index-checks",
+          "response": {
+            "values": [
+              "index-base",
+              "price-base"
+            ]
+          }
+        },
+        {
+          "taskId": "index-answer",
+          "response": {
+            "rows": {
+              "unit": "six-points",
+              "base": "old-120",
+              "claim": "five-percent"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

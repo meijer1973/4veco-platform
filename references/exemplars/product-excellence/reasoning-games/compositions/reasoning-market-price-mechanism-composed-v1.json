@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "authority": {
+    "golden_reference": true,
+    "student_product_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "scale_gate": false
+  },
+  "layout": {
+    "type": "dual_pane_source_task_workspace",
+    "desktopIndependentScroll": true,
+    "mobileFlow": "source_before_tasks",
+    "defaultRoute": "reasoning_composer"
+  },
+  "composition_id": "reasoning-market-price-mechanism-composed-v1",
+  "title": "Prijsmechanisme uitleggen",
+  "goal": "Leg uit hoe een verandering rond parkeren doorwerkt in de fietsenmarkt.",
+  "archetype_id": "causal_mechanism",
+  "selected_exemplar_ids": [
+    "reasoning-market-price-mechanism-v3"
+  ],
+  "targetBrief": {
+    "reasoningTarget": "Explain a market outcome through a causal demand and supply mechanism.",
+    "centralMisconception": "The student jumps from situation to conclusion without market mechanism.",
+    "sourceEvidenceType": "short market source",
+    "requiredAnswerForm": "cause, mechanism, conclusion",
+    "mustNotTest": "subtle language distinction between equivalent connectors",
+    "candidateArchetype": "causal_mechanism",
+    "selectedGoldenExemplars": [
+      "reasoning-market-price-mechanism-v3"
+    ],
+    "mechanicFit": "The chain and sentence tasks expose the causal links before the answer builder."
+  },
+  "taskSet": {
+    "schema_version": 1,
+    "title": "Prijsmechanisme fietsenmarkt",
+    "contextBlocks": [
+      {
+        "id": "ctx-market-source",
+        "type": "markdown",
+        "title": "Situatie",
+        "bodyMarkdown": "Een gemeente haalt parkeerplekken weg in het centrum en maakt fietsenstallingen aantrekkelijker. Meer bezoekers overwegen een fiets te kopen. Het aantal fietsen in winkels verandert op korte termijn niet.",
+        "accessibilitySummary": "Korte marktsituatie met veranderende voorkeur en vast aanbod."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "market-chain",
+        "family": "step_ordering",
+        "skillLabel": "Causale keten ordenen",
+        "purpose": "Zet de economische stappen in een controleerbare volgorde.",
+        "prompt": "Zet de schakels van de marktreactie in de juiste volgorde.",
+        "interaction": {
+          "stepBankLabel": "Schakelbank",
+          "sequenceLabel": "Opgebouwde keten",
+          "placeholder": "Kies de schakels van oorzaak naar gevolg.",
+          "separator": " -> ",
+          "steps": [
+            {
+              "id": "parking-change",
+              "label": "Parkeren wordt minder aantrekkelijk.",
+              "kind": "answer",
+              "description": "Start uit de bron."
+            },
+            {
+              "id": "bike-attractive",
+              "label": "Fietsen wordt relatief aantrekkelijker.",
+              "kind": "answer"
+            },
+            {
+              "id": "demand-up",
+              "label": "De vraag naar fietsen neemt toe.",
+              "kind": "answer"
+            },
+            {
+              "id": "supply-same",
+              "label": "Het aanbod blijft eerst gelijk.",
+              "kind": "answer"
+            },
+            {
+              "id": "shortage",
+              "label": "Er ontstaat een vraagoverschot.",
+              "kind": "answer"
+            },
+            {
+              "id": "price-pressure",
+              "label": "De evenwichtsprijs komt hoger uit.",
+              "kind": "answer"
+            },
+            {
+              "id": "demand-down",
+              "label": "De vraag naar fietsen neemt af.",
+              "kind": "distractor",
+              "distractorFor": "demand-up"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "step_ordering",
+          "order": [
+            "parking-change",
+            "bike-attractive",
+            "demand-up",
+            "supply-same",
+            "shortage",
+            "price-pressure"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Keten klopt",
+          "matchText": "De stappen lopen van bronoorzaak naar marktgevolg.",
+          "retryTitle": "Controleer de richting",
+          "retryText": "Let op: aantrekkelijker fietsen geeft meer vraag, niet minder."
+        },
+        "practiceRoute": {
+          "label": "Door naar verbindingswoorden",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-market-source"
+        ]
+      },
+      {
+        "id": "market-connectors",
+        "family": "cloze_tile_select",
+        "skillLabel": "Verbanden in zinnen plaatsen",
+        "purpose": "Maak van losse schakels leesbare redeneerzinnen.",
+        "prompt": "Vul de verbindingswoorden in de zinnen aan.",
+        "interaction": {
+          "allowReuse": true,
+          "segments": [
+            {
+              "type": "text",
+              "text": "Fietsen wordt aantrekkelijker, "
+            },
+            {
+              "type": "blank",
+              "blankId": "c1"
+            },
+            {
+              "type": "text",
+              "text": " neemt de vraag naar fietsen toe. De vraag stijgt, "
+            },
+            {
+              "type": "blank",
+              "blankId": "c2"
+            },
+            {
+              "type": "text",
+              "text": " het aanbod eerst gelijk blijft. Er ontstaat een vraagoverschot, "
+            },
+            {
+              "type": "blank",
+              "blankId": "c3"
+            },
+            {
+              "type": "text",
+              "text": " komt de evenwichtsprijs hoger uit."
+            }
+          ],
+          "blanks": [
+            {
+              "id": "c1",
+              "label": "oorzaak-gevolg 1"
+            },
+            {
+              "id": "c2",
+              "label": "tegenstelling met aanbod"
+            },
+            {
+              "id": "c3",
+              "label": "conclusie"
+            }
+          ],
+          "tiles": [
+            {
+              "id": "daardoor",
+              "label": "daardoor",
+              "kind": "answer"
+            },
+            {
+              "id": "terwijl",
+              "label": "terwijl",
+              "kind": "answer"
+            },
+            {
+              "id": "dus",
+              "label": "dus",
+              "kind": "answer"
+            },
+            {
+              "id": "maar",
+              "label": "maar",
+              "kind": "distractor",
+              "distractorFor": "c1"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "cloze_tile_select",
+          "blanks": {
+            "c1": "daardoor",
+            "c2": "terwijl",
+            "c3": "dus"
+          }
+        },
+        "feedback": {
+          "matchTitle": "Zinnen lopen logisch",
+          "matchText": "De verbindingswoorden passen bij oorzaak, contrast en conclusie.",
+          "retryTitle": "Lees de hele zin",
+          "retryText": "Kies het woord dat de functie van de zin duidelijk maakt."
+        },
+        "practiceRoute": {
+          "label": "Door naar het antwoord",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-market-source"
+        ]
+      },
+      {
+        "id": "market-answer",
+        "family": "functional_answer_builder",
+        "skillLabel": "Antwoorddelen kiezen",
+        "purpose": "Bouw een antwoord waarin elke regel een eigen functie heeft.",
+        "prompt": "Bouw de uitleg met oorzaak, mechanisme en conclusie.",
+        "interaction": {
+          "rowGroupLabel": "Antwoordregels",
+          "answerPreview": {
+            "label": "Opgebouwd antwoord",
+            "placeholder": "Kies per regel een onderdeel.",
+            "template": "{{oorzaak}} {{mechanisme}} {{conclusie}}"
+          },
+          "answerRows": [
+            {
+              "id": "oorzaak",
+              "label": "Oorzaak",
+              "options": [
+                {
+                  "id": "parking",
+                  "label": "Door minder parkeerplekken wordt fietsen aantrekkelijker.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "stock",
+                  "label": "Door meer voorraad fietsen verandert de markt.",
+                  "kind": "distractor",
+                  "distractorFor": "parking"
+                }
+              ]
+            },
+            {
+              "id": "mechanisme",
+              "label": "Mechanisme",
+              "options": [
+                {
+                  "id": "excess-demand",
+                  "label": "De vraag stijgt terwijl het aanbod eerst gelijk blijft, waardoor een vraagoverschot ontstaat.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "market-pressure",
+                  "label": "Er is alleen algemene druk op de markt.",
+                  "kind": "distractor",
+                  "distractorFor": "excess-demand"
+                }
+              ]
+            },
+            {
+              "id": "conclusie",
+              "label": "Conclusie",
+              "options": [
+                {
+                  "id": "price-up",
+                  "label": "Daarom komt de evenwichtsprijs hoger uit.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "price-down",
+                  "label": "Daarom komt de evenwichtsprijs lager uit.",
+                  "kind": "distractor",
+                  "distractorFor": "price-up"
+                }
+              ]
+            }
+          ]
+        },
+        "expected": {
+          "kind": "functional_answer_builder",
+          "rows": {
+            "oorzaak": "parking",
+            "mechanisme": "excess-demand",
+            "conclusie": "price-up"
+          },
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Uitleg is compleet",
+          "matchText": "Je antwoord bevat bronoorzaak, marktmechanisme en conclusie.",
+          "retryTitle": "Maak de uitleg economischer",
+          "retryText": "Zorg dat het mechanisme tussen oorzaak en prijs zichtbaar is."
+        },
+        "practiceRoute": {
+          "label": "Verder oefenen met deze redenering",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-market-source"
+        ]
+      }
+    ]
+  },
+  "proofScenarios": {
+    "partial": {
+      "responses": [
+        {
+          "taskId": "market-chain",
+          "response": {
+            "order": [
+              "parking-change",
+              "bike-attractive",
+              "demand-up"
+            ]
+          },
+          "check": false
+        }
+      ]
+    },
+    "wrong": {
+      "responses": [
+        {
+          "taskId": "market-chain",
+          "response": {
+            "order": [
+              "parking-change",
+              "demand-down",
+              "supply-same"
+            ]
+          }
+        }
+      ]
+    },
+    "correct": {
+      "responses": [
+        {
+          "taskId": "market-chain",
+          "response": {
+            "order": [
+              "parking-change",
+              "bike-attractive",
+              "demand-up",
+              "supply-same",
+              "shortage",
+              "price-pressure"
+            ]
+          }
+        },
+        {
+          "taskId": "market-connectors",
+          "response": {
+            "blanks": {
+              "c1": "daardoor",
+              "c2": "terwijl",
+              "c3": "dus"
+            }
+          }
+        },
+        {
+          "taskId": "market-answer",
+          "response": {
+            "rows": {
+              "oorzaak": "parking",
+              "mechanisme": "excess-demand",
+              "conclusie": "price-up"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

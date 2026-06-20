@@ -37,6 +37,7 @@ Always read first:
 - `BUILD-PARAGRAPH.md` (paragraph build pipeline)
 - `agents/econ-companion-visual-review.md` (the review gate)
 - The matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, etc.)
+- For `redeneer-spel.html`, also read `skills/econ-reasoning-game.md` before selecting mechanics or task families.
 - The paragraph's `_paragraph-plan.md` and the canonical unit/procedure/terminology registries
 
 ---

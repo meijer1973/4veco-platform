@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
+  "package_name": "reasoning-golden-family-adoption-v1-package.zip",
+  "ingested_on": "2026-06-20",
+  "source_worktree": "C:/wt/SKILLTREE-20260618",
+  "source_package_dir": "reasoning-golden-family-adoption-v1",
+  "copied_verbatim_subtree": "reference-exemplars",
+  "repo_library": "references/exemplars/product-excellence/reasoning-games",
+  "authority": {
+    "golden_reference": true,
+    "student_product_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "scale_gate": false
+  }
+}

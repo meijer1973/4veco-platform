@@ -1,6 +1,6 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T11:33:46.184Z
+Generated: 2026-06-20T14:34:33.949Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 

@@ -1693,7 +1693,13 @@
 .ts-label-target:focus-visible,
 .ts-label-token:focus-visible,
 .ts-label-remove:focus-visible,
-.ts-label-clear:focus-visible {
+.ts-label-clear:focus-visible,
+.ts-answer-row-option:focus-visible,
+.ts-answer-row-clear:focus-visible,
+.ts-answer-preview:focus-visible,
+.ts-graph-evidence-point:focus-visible,
+.ts-graph-evidence-tray:focus-visible,
+.ts-graph-evidence-remove:focus-visible {
   outline: 2px solid var(--ts-focus);
   outline-offset: 3px;
 }
@@ -1784,6 +1790,306 @@
 }
 
 .ts-label-feedback {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-panel) 90%, var(--ts-bg));
+}
+
+.ts-functional-answer {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-answer-row-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-answer-row {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-panel) 92%, var(--ts-bg));
+}
+
+.ts-answer-row-head {
+  display: grid;
+  gap: 3px;
+}
+
+.ts-answer-row-head strong,
+.ts-answer-preview-wrap strong,
+.ts-graph-evidence-head strong {
+  color: var(--ts-primary);
+}
+
+.ts-answer-row-head span,
+.ts-graph-evidence-head span {
+  color: var(--ts-muted);
+  line-height: 1.4;
+}
+
+.ts-answer-row-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ts-answer-row-option {
+  display: grid;
+  gap: 4px;
+  min-height: 56px;
+  padding: 10px 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ts-answer-row-option.selected {
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 11%, var(--ts-panel));
+}
+
+.ts-answer-row-option-label,
+.ts-answer-preview.is-complete,
+.ts-graph-evidence-item-label {
+  font-weight: 800;
+}
+
+.ts-answer-row-option-description {
+  color: var(--ts-muted);
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.ts-answer-row-clear {
+  justify-self: start;
+  min-height: 36px;
+  padding: 7px 10px;
+  border: 1px solid var(--ts-line);
+  border-radius: 6px;
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ts-answer-row-clear[hidden] {
+  display: none;
+}
+
+.ts-answer-preview-wrap {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px dashed var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-primary) 5%, var(--ts-panel));
+}
+
+.ts-answer-preview {
+  margin: 0;
+  min-height: 46px;
+  color: var(--ts-muted);
+  line-height: 1.55;
+}
+
+.ts-graph-evidence {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-graph-evidence-head {
+  display: grid;
+  gap: 4px;
+}
+
+.ts-graph-evidence-workspace {
+  display: grid;
+  grid-template-areas:
+    "ylabel plot"
+    ". xlabel";
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 8px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-panel) 88%, var(--ts-bg));
+}
+
+.ts-graph-evidence-plot {
+  position: relative;
+  grid-area: plot;
+  min-height: 300px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--ts-line);
+  border-radius: 6px;
+  background: var(--ts-panel);
+}
+
+.ts-graph-evidence-svg,
+.ts-graph-evidence-ticks,
+.ts-graph-evidence-targets {
+  position: absolute;
+  inset: 0;
+}
+
+.ts-graph-evidence-line {
+  fill: none;
+  stroke: var(--ts-primary);
+  stroke-width: 1.6;
+  vector-effect: non-scaling-stroke;
+}
+
+.ts-graph-evidence-axis {
+  stroke: color-mix(in srgb, var(--ts-text) 62%, transparent);
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+}
+
+.ts-graph-evidence-point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ts-graph-evidence-point span {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--ts-panel);
+  border-radius: 999px;
+  background: var(--ts-accent);
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.18);
+}
+
+.ts-graph-evidence-point.selected span {
+  background: var(--ts-primary);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--ts-primary) 18%, transparent), 0 3px 10px rgba(15, 23, 42, 0.18);
+}
+
+.ts-graph-evidence-point:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.ts-graph-evidence-tick {
+  position: absolute;
+  color: var(--ts-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.ts-graph-evidence-tick-x {
+  bottom: 4px;
+  transform: translateX(-50%);
+}
+
+.ts-graph-evidence-tick-x.is-min {
+  transform: translateX(0);
+}
+
+.ts-graph-evidence-tick-x.is-max {
+  transform: translateX(-100%);
+}
+
+.ts-graph-evidence-tick-y {
+  left: 6px;
+  transform: translateY(-50%);
+}
+
+.ts-graph-evidence-tick-y.is-min {
+  transform: translateY(0);
+}
+
+.ts-graph-evidence-tick-y.is-max {
+  transform: translateY(-100%);
+}
+
+.ts-graph-evidence-x-label {
+  grid-area: xlabel;
+  color: var(--ts-muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ts-graph-evidence-y-label {
+  grid-area: ylabel;
+  align-self: center;
+  color: var(--ts-muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-align: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.ts-graph-evidence-tray {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-height: 58px;
+  padding: 10px;
+  border: 1px dashed var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-primary) 5%, var(--ts-panel));
+}
+
+.ts-graph-evidence-placeholder {
+  color: var(--ts-muted);
+  font-weight: 700;
+}
+
+.ts-graph-evidence-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 5px 6px 5px 10px;
+  border: 1px solid var(--ts-primary);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-primary) 12%, var(--ts-panel));
+}
+
+.ts-graph-evidence-remove {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--ts-line);
+  border-radius: 6px;
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.ts-functional-answer-feedback,
+.ts-graph-evidence-feedback {
   display: grid;
   gap: 8px;
   margin-top: 10px;
@@ -2057,8 +2363,18 @@
 
   .ts-graph-axis-controls,
   .ts-graph-point-row,
-  .ts-graph-reading-options {
+  .ts-graph-reading-options,
+  .ts-answer-row-options {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ts-graph-evidence-workspace {
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .ts-graph-evidence-plot {
+    min-height: 260px;
+    aspect-ratio: 4 / 5;
   }
 
   .ts-graph-workspace {

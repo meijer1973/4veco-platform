@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "authority": {
+    "golden_reference": true,
+    "student_product_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "scale_gate": false
+  },
+  "layout": {
+    "type": "dual_pane_source_task_workspace",
+    "desktopIndependentScroll": true,
+    "mobileFlow": "source_before_tasks",
+    "defaultRoute": "reasoning_composer"
+  },
+  "composition_id": "reasoning-choice-compass-composed-v1",
+  "title": "Keuze en alternatieve kosten",
+  "goal": "Gebruik de situatie om schaarste en alternatieve kosten uit elkaar te houden.",
+  "archetype_id": "choice_and_evidence",
+  "selected_exemplar_ids": [
+    "reasoning-1.1.1-choice-compass-v1"
+  ],
+  "targetBrief": {
+    "reasoningTarget": "Select scarcity facts and identify the best forgone alternative.",
+    "centralMisconception": "The chosen option or the sum of all alternatives is called opportunity cost.",
+    "sourceEvidenceType": "short choice scenario",
+    "requiredAnswerForm": "scarcity, cost, not-sum explanation",
+    "mustNotTest": "six-step ordered flowchart",
+    "candidateArchetype": "choice_and_evidence",
+    "selectedGoldenExemplars": [
+      "reasoning-1.1.1-choice-compass-v1"
+    ],
+    "mechanicFit": "Evidence selection and final answer rows preserve the choice reasoning without imposing artificial order."
+  },
+  "taskSet": {
+    "schema_version": 1,
+    "title": "Schaarste en alternatieve kosten",
+    "contextBlocks": [
+      {
+        "id": "ctx-choice-source",
+        "type": "markdown",
+        "title": "Situatie",
+        "bodyMarkdown": "Eva heeft zaterdagmiddag vier uur. Ze kan werken voor 40 euro, leren voor economie, of naar de film. Ze kiest werken.",
+        "accessibilitySummary": "Korte keuzecontext met tijd, geldopbrengst en niet-gekozen alternatieven."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "choice-scarcity",
+        "family": "multi_select",
+        "skillLabel": "Schaarste herkennen",
+        "purpose": "Kies de bronfeiten die laten zien dat Eva moet kiezen.",
+        "prompt": "Kies precies twee feiten die schaarste laten zien.",
+        "interaction": {
+          "inputLabel": "Bronfeiten",
+          "options": [
+            {
+              "id": "time-limited",
+              "label": "Eva heeft maar vier uur."
+            },
+            {
+              "id": "activities-conflict",
+              "label": "Ze kan de activiteiten niet allemaal tegelijk doen."
+            },
+            {
+              "id": "work-money",
+              "label": "Werken levert 40 euro op."
+            },
+            {
+              "id": "movie-fun",
+              "label": "De film is leuk."
+            }
+          ]
+        },
+        "expected": {
+          "kind": "multi_select",
+          "mode": "exact_set",
+          "values": [
+            "time-limited",
+            "activities-conflict"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Schaarste is zichtbaar",
+          "matchText": "Je kiest beperkte tijd en de noodzaak om te kiezen.",
+          "retryTitle": "Kijk naar beperkt middel en keuze",
+          "retryText": "Niet elke waardevolle optie is automatisch schaarstebewijs."
+        },
+        "practiceRoute": {
+          "label": "Door naar alternatieve kosten",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-choice-source"
+        ]
+      },
+      {
+        "id": "choice-cost",
+        "family": "choice",
+        "skillLabel": "Alternatieve kosten kiezen",
+        "purpose": "Kies het beste niet-gekozen alternatief.",
+        "prompt": "Wat zijn Eva haar alternatieve kosten van werken?",
+        "interaction": {
+          "inputLabel": "Alternatieve kosten",
+          "options": [
+            {
+              "id": "study",
+              "label": "Leren voor economie",
+              "description": "Het beste alternatief dat ze niet kiest."
+            },
+            {
+              "id": "work",
+              "label": "Werken voor 40 euro",
+              "description": "Dit is de gekozen optie."
+            },
+            {
+              "id": "study-plus-movie",
+              "label": "Leren en film samen",
+              "description": "Dit telt alle niet-gekozen opties op."
+            }
+          ]
+        },
+        "expected": {
+          "kind": "choice",
+          "value": "study"
+        },
+        "feedback": {
+          "matchTitle": "Beste alternatief gekozen",
+          "matchText": "Alternatieve kosten zijn het beste alternatief dat Eva opgeeft.",
+          "retryTitle": "Kies niet de gekozen optie",
+          "retryText": "Alternatieve kosten zijn niet de som van alle alternatieven."
+        },
+        "practiceRoute": {
+          "label": "Door naar uitleg",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-choice-source"
+        ]
+      },
+      {
+        "id": "choice-answer",
+        "family": "functional_answer_builder",
+        "skillLabel": "Antwoorddelen kiezen",
+        "purpose": "Bouw een antwoord waarin elke regel een eigen functie heeft.",
+        "prompt": "Bouw een korte uitleg over schaarste en alternatieve kosten.",
+        "interaction": {
+          "rowGroupLabel": "Antwoordregels",
+          "answerPreview": {
+            "label": "Opgebouwd antwoord",
+            "placeholder": "Kies per regel een onderdeel.",
+            "template": "{{scarcity}} {{cost}} {{notSum}}"
+          },
+          "answerRows": [
+            {
+              "id": "scarcity",
+              "label": "Schaarste",
+              "options": [
+                {
+                  "id": "limited-choice",
+                  "label": "Er is schaarste omdat Eva beperkte tijd heeft en moet kiezen.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "no-scarcity-profit",
+                  "label": "Er is geen schaarste omdat werken geld oplevert.",
+                  "kind": "distractor",
+                  "distractorFor": "limited-choice"
+                }
+              ]
+            },
+            {
+              "id": "cost",
+              "label": "Kosten",
+              "options": [
+                {
+                  "id": "best-forgone",
+                  "label": "De alternatieve kosten zijn leren voor economie.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "chosen-work",
+                  "label": "De alternatieve kosten zijn werken voor 40 euro.",
+                  "kind": "distractor",
+                  "distractorFor": "best-forgone"
+                }
+              ]
+            },
+            {
+              "id": "notSum",
+              "label": "Niet optellen",
+              "options": [
+                {
+                  "id": "not-all",
+                  "label": "Je telt niet alle niet-gekozen opties bij elkaar op.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "all-options",
+                  "label": "Je telt leren en film samen op.",
+                  "kind": "distractor",
+                  "distractorFor": "not-all"
+                }
+              ]
+            }
+          ]
+        },
+        "expected": {
+          "kind": "functional_answer_builder",
+          "rows": {
+            "scarcity": "limited-choice",
+            "cost": "best-forgone",
+            "notSum": "not-all"
+          },
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Uitleg klopt",
+          "matchText": "Je onderscheidt schaarste, gekozen optie en beste niet-gekozen alternatief.",
+          "retryTitle": "Controleer de keuze",
+          "retryText": "Gebruik beperkte tijd en het beste alternatief dat Eva opgeeft."
+        },
+        "practiceRoute": {
+          "label": "Verder oefenen met deze redenering",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-choice-source"
+        ]
+      }
+    ]
+  },
+  "proofScenarios": {
+    "partial": {
+      "responses": [
+        {
+          "taskId": "choice-scarcity",
+          "response": {
+            "values": [
+              "time-limited"
+            ]
+          },
+          "check": false
+        }
+      ]
+    },
+    "wrong": {
+      "responses": [
+        {
+          "taskId": "choice-cost",
+          "response": {
+            "value": "work"
+          }
+        }
+      ]
+    },
+    "correct": {
+      "responses": [
+        {
+          "taskId": "choice-scarcity",
+          "response": {
+            "values": [
+              "time-limited",
+              "activities-conflict"
+            ]
+          }
+        },
+        {
+          "taskId": "choice-cost",
+          "response": {
+            "value": "study"
+          }
+        },
+        {
+          "taskId": "choice-answer",
+          "response": {
+            "rows": {
+              "scarcity": "limited-choice",
+              "cost": "best-forgone",
+              "notSum": "not-all"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
