@@ -1,7 +1,7 @@
 # INSPECT-11E/F Validation Log
 
-Status: implementation validation in progress
-Date: 2026-06-19
+Status: passed
+Date: 2026-06-20
 
 ## Scope
 
@@ -92,10 +92,14 @@ The report visibly retains:
 - owner next action;
 - proof required to close.
 
-## Remaining Validation Before Human Review
+## Final PR CI Evidence
 
-- Complete final lead review after PR publication and green remote CI.
-- Confirm branch remains fresh against `origin/main` at PR handoff.
+PR #119 remote `platform-ci / validate-platform` passed on reviewed head
+`83d315bfd8066d713d0a02252a6c95da9173571a` in run `27831402581`.
+
+The final closure-only reconciliation commit must still receive fresh green PR
+CI before merge. That CI run is the governed publication guard; it is not a
+remaining implementation validation or human-review blocker.
 
 ## Post-Rebase Validation
 
@@ -121,7 +125,18 @@ Post-rebase rerun:
 | `node scripts/validate-chapter.js "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht"` | PASS | Chapter 1.3: 0 errors, 0 warnings. |
 | `node scripts/validate-paragraph.js --mode part-a --profile publisher-print <1.3.1 through 1.3.4>` | PASS | Paragraph validators for `1.3.1`, `1.3.2`, `1.3.3`, and `1.3.4` passed. |
 
-Remaining:
+## Final Closure-Record Rerun
 
-- Complete final lead subagent review after PR publication and green remote CI.
-- Open PR and wait for green remote CI.
+The required closure-record reconciliation reruns passed:
+
+- `node build-scripts/sprints/check-sprint-plan.js archive/sprints/INSPECT-11EF/INSPECT-11EF-sprint-plan.md`
+- `node build-scripts/inspection/build-dutch-diagnostic-report.js --check --scope all`
+- `node build-scripts/inspection/check-dutch-diagnostic-report-stability.js`
+- `npm.cmd run check:scope-language`
+- `node build-scripts/references/check-roadmap-version-index.js`
+- `node build-scripts/sprints/emit-url-index.js --check`
+- `node build-scripts/reports/validate-report-json.js`
+- `git diff --check`
+- `npm.cmd run check:platform`
+
+No final-lead or PR-publication validation item remains open in this record.

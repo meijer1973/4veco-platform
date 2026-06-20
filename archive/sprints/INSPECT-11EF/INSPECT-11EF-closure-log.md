@@ -1,7 +1,7 @@
 # INSPECT-11E/F Closure Log
 
-Status: ready for final PR CI and final lead re-review
-Date: 2026-06-19
+Status: closed / ready for human-approved merge
+Date: 2026-06-20
 
 ## Product End-State And Original Spec
 
@@ -38,8 +38,8 @@ Date: 2026-06-19
 | Exact source/output allowlists used | met | Scope descriptors and stability checker |
 | Refusal/currentness checks deterministic | met | Stability checker, 20 refusal cases |
 | Specialist corrections resolved | met | Specialist-gate results; legal/privacy REVISE then PASS |
-| Final lead review complete | pending final re-review | Initial final lead returned REVISE for closure records, draft PR, and bundle-check wording; corrections are recorded. |
-| PR open, fresh, mergeable, green, non-draft | pending final pushed head | PR #119 must be checked after the final rebased commit and remote CI. |
+| Final lead review complete | met | Final lead re-review: PASS; earlier closure-record, draft-PR, and bundle-check findings are closed. |
+| PR open, fresh, mergeable, green, non-draft | met with final CI guard | PR #119 is non-draft; reviewed head `83d315bfd8066d713d0a02252a6c95da9173571a` had green `platform-ci / validate-platform` run `27831402581`; final closure-only head must remain fresh and green before merge. |
 
 ## Findings And Carried Issues
 
@@ -49,7 +49,7 @@ Date: 2026-06-19
 | Chapter 1.2 semantic output is preserved while volatile checkout metadata is deterministic. | core_requirement_met | Silent Chapter 1.2 semantic drift | Internal Chapter 1.3 onboarding | Stability checker semantic hash and diff review. |
 | Book 1 Chapter 1.1 and Chapter 1.4 assembly-health issues remain separate. | scope_boundary_flag | Book 1 clean-health claim | Chapter 1.3 internal diagnostic onboarding | Separate `BOOK1-ASSEMBLY-HEALTH-1` repair route. |
 | Check-surface authority remains separate. | downstream_gate_blocker | Scale Gate 1, product-route adoption, diagnostics/mastery/PV, student/product-use | Manual internal diagnostic report generation | Renewed human review explicitly naming any unlocked authority. |
-| Final lead review found missing closure records, draft PR status, and unclear `check-sprint-bundle` wording. | closure_readiness_blocker | Human-review handoff | Local correction and re-validation | Add records, reclassify bundle checker, push final commit, wait green CI, mark PR ready, and get final lead PASS. |
+| Final lead review found missing closure records, draft PR status, and unclear `check-sprint-bundle` wording. | closure_readiness_closed | Nothing after closure reconciliation and final CI | Governed merge after green PR CI | Final lead review, validation log, correction log, and closure log are reconciled; PR #119 is non-draft; final closure-only head must pass PR CI before merge. |
 
 ## Validation Summary
 
@@ -66,20 +66,21 @@ Post-rebase local validation passed:
 - platform tests;
 - scoped Chapter 1.3 chapter and paragraph validators.
 
-Remote PR #119 `platform-ci / validate-platform` must pass on the final pushed
-head before human-review handoff.
+Remote PR #119 `platform-ci / validate-platform` passed on reviewed head
+`83d315bfd8066d713d0a02252a6c95da9173571a` in run `27831402581`. The
+closure-only reconciliation commit must also receive green PR CI before merge;
+that is a mechanical freshness guard, not a remaining content or human-review
+blocker.
 
 ## Closure Decision
 
-Not yet closed. The implementation is content-ready, but final handoff is
-pending:
-
-1. push the final rebased closure/index state to PR #119;
-2. wait for green remote CI at the final head;
-3. confirm PR #119 is non-draft, fresh, and mergeable;
-4. final lead re-review PASS.
+Closed for INSPECT-11E/F internal diagnostic onboarding and ready for the
+human-approved governed merge sequence after the final closure-only PR CI guard
+is green.
 
 ## Owner Next Action
 
-Complete the four pending handoff steps above. Do not unlock any downstream
-product, evidence-pack, teacher/school-facing, public, or Scale Gate authority.
+Push the closure-only reconciliation commit, update PR #119 body to record
+final lead PASS, wait for fresh green PR CI at the final head, and merge PR
+#119. Do not unlock any downstream product, evidence-pack,
+teacher/school-facing, public, or Scale Gate authority.
