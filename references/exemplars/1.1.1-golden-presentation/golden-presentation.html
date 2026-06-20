@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>§1.1.1 Schaarste en economisch denken — webpresentatie content v2</title>
+  <style>
+    :root {
+      --paper: #f6efe2;
+      --paper-2: #fffaf2;
+      --paper-3: #eadfce;
+      --ink: #172033;
+      --muted: #596275;
+      --muted-2: #7a8291;
+      --line: rgba(23, 32, 51, .14);
+      --indigo: #102a43;
+      --indigo-2: #1f3a5a;
+      --indigo-3: #0b1b2c;
+      --teal: #0f766e;
+      --teal-soft: #cbeee8;
+      --amber: #b45309;
+      --amber-soft: #fde7be;
+      --coral: #b91c1c;
+      --coral-soft: #fee2df;
+      --green: #3f6212;
+      --green-soft: #e3efd0;
+      --blue-soft: #dbeafe;
+      --shadow: 0 24px 70px rgba(16, 42, 67, .16);
+      --shadow-soft: 0 12px 36px rgba(16, 42, 67, .10);
+      --radius: 24px;
+      --radius-sm: 15px;
+      --focus: #2f80ed;
+      --slide-font: clamp(16px, 1.05vw, 21px);
+      --ui-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --display-font: ui-serif, Georgia, "Times New Roman", serif;
+    }
+    html[data-theme="dark"] {
+      --paper: #0b1324;
+      --paper-2: #111e33;
+      --paper-3: #1b2a43;
+      --ink: #f8fafc;
+      --muted: #cbd5e1;
+      --muted-2: #94a3b8;
+      --line: rgba(248, 250, 252, .16);
+      --indigo: #dbeafe;
+      --indigo-2: #93c5fd;
+      --indigo-3: #eff6ff;
+      --teal-soft: rgba(20, 184, 166, .18);
+      --amber-soft: rgba(245, 158, 11, .20);
+      --coral-soft: rgba(248, 113, 113, .18);
+      --green-soft: rgba(132, 204, 22, .18);
+      --blue-soft: rgba(59, 130, 246, .18);
+      --shadow: 0 24px 70px rgba(0, 0, 0, .45);
+      --shadow-soft: 0 12px 36px rgba(0, 0, 0, .28);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(15,118,110,.22), transparent 30rem),
+        radial-gradient(circle at 82% 10%, rgba(180,83,9,.18), transparent 34rem),
+        linear-gradient(135deg, var(--paper), var(--paper-2));
+      font-family: var(--ui-font);
+      overflow: hidden;
+    }
+    a { color: inherit; }
+    .skip-link {
+      position: fixed; left: .8rem; top: .8rem; transform: translateY(-180%);
+      background: var(--ink); color: var(--paper-2); z-index: 999;
+      padding: .6rem .8rem; border-radius: .6rem;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .app {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 294px minmax(0, 1fr) minmax(340px, 420px);
+      gap: 16px;
+      padding: 16px;
+    }
+    .side, .notes, .main {
+      min-height: 0;
+    }
+    .side, .notes {
+      background: color-mix(in srgb, var(--paper-2) 85%, transparent);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+    .side { display: flex; flex-direction: column; }
+    .brand {
+      padding: 22px 22px 16px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(16,42,67,.08), rgba(15,118,110,.08));
+    }
+    .brand .eyebrow, .notes-label, .slide .eyebrow {
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .72rem;
+      font-weight: 800;
+      color: var(--teal);
+    }
+    .brand h1 {
+      margin: 0;
+      line-height: 1.05;
+      font-size: 1.28rem;
+      letter-spacing: -.03em;
+    }
+    .brand p:last-child {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: .92rem;
+    }
+    .nav {
+      padding: 14px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .nav button {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 10px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 10px;
+      background: color-mix(in srgb, var(--paper-2) 74%, transparent);
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+    }
+    .nav button:hover { transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+    .nav button[aria-current="true"] {
+      background: linear-gradient(135deg, var(--indigo), var(--indigo-2));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: var(--shadow-soft);
+    }
+    .nav .num {
+      display: grid; place-items: center;
+      width: 42px; height: 42px; border-radius: 13px;
+      background: rgba(15,118,110,.12); color: var(--teal);
+      font-weight: 900; letter-spacing: -.04em;
+    }
+    .nav button[aria-current="true"] .num { background: rgba(255,255,255,.14); color: #fff; }
+    .nav strong { display: block; line-height: 1.14; font-size: .92rem; }
+    .nav span:last-child { color: var(--muted); font-size: .74rem; line-height: 1.25; }
+    .nav button[aria-current="true"] span:last-child { color: rgba(255,255,255,.72); }
+
+    .main {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      gap: 12px;
+      min-width: 0;
+    }
+    .topbar {
+      background: color-mix(in srgb, var(--paper-2) 80%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: var(--shadow-soft);
+    }
+    .topbar .route { font-size: .9rem; color: var(--muted); }
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--paper-2) 90%, transparent);
+      color: var(--ink);
+      padding: .58rem .85rem;
+      cursor: pointer;
+      font: 700 .88rem/1 var(--ui-font);
+    }
+    .btn:hover { box-shadow: var(--shadow-soft); transform: translateY(-1px); }
+    .btn.primary { background: var(--indigo); color: #fff; border-color: transparent; }
+    .btn[aria-pressed="true"] { background: var(--teal); color: #fff; border-color: transparent; }
+    .stage {
+      min-height: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .slide {
+      width: min(100%, 1180px);
+      aspect-ratio: 16 / 9;
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--paper-2), color-mix(in srgb, var(--paper) 70%, #ffffff 30%));
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      padding: clamp(22px, 2.4vw, 36px);
+      display: none;
+      position: relative;
+      isolation: isolate;
+      font-size: var(--slide-font);
+    }
+    html[data-theme="dark"] .slide { background: linear-gradient(135deg, #111e33, #0b1324); }
+    .slide.active { display: grid; }
+    .slide::before {
+      content: "";
+      position: absolute; inset: 0 0 auto 0; height: 9px;
+      background: linear-gradient(90deg, var(--teal), var(--amber), var(--coral));
+      z-index: 2;
+    }
+    .slide::after {
+      content: "";
+      position: absolute;
+      right: -10%; bottom: -32%;
+      width: 50%; aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(15,118,110,.18), transparent 70%);
+      z-index: -1;
+    }
+    .slide.dark {
+      background: radial-gradient(circle at 80% 20%, rgba(15,118,110,.35), transparent 34%), linear-gradient(135deg, #06172a, #102a43);
+      color: #fff;
+    }
+    .slide.dark .eyebrow { color: #fbbf24; }
+    .slide.dark .muted, .slide.dark .student-action { color: rgba(255,255,255,.76); }
+    .slide.dark .mini-card, .slide.dark .card { background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18); color: #fff; }
+    .slide.dark .chip { background: rgba(255,255,255,.10); color: #fff; border-color: rgba(255,255,255,.22); }
+    .slide-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(18px, 2vw, 32px); height: 100%; }
+    .slide-grid.wide-left { grid-template-columns: 1.14fr .86fr; }
+    .slide-grid.wide-right { grid-template-columns: .86fr 1.14fr; }
+    .slide-stack { display: grid; grid-template-rows: auto 1fr; gap: 16px; height: 100%; }
+    .slide h2 {
+      margin: 0;
+      font-size: clamp(2.2rem, 3.6vw, 4.7rem);
+      line-height: .96;
+      letter-spacing: -.075em;
+      color: var(--indigo);
+    }
+    .slide.dark h2 { color: #fff; }
+    .slide .assertion {
+      margin: 16px 0 0;
+      max-width: 18ch;
+      font: 700 clamp(1.05rem, 1.55vw, 1.8rem)/1.18 var(--display-font);
+      color: var(--ink);
+    }
+    .slide.dark .assertion { color: #fef3c7; }
+    .muted { color: var(--muted); }
+    .student-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 22px;
+      padding: 12px 15px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--paper-2) 70%, transparent);
+      color: var(--muted);
+      line-height: 1.35;
+      font-weight: 650;
+    }
+    .student-action b { color: var(--teal); }
+    .visual-panel {
+      align-self: stretch;
+      display: grid;
+      place-items: stretch;
+      min-height: 0;
+      position: relative;
+    }
+    .card, .mini-card, .definition-card {
+      background: color-mix(in srgb, var(--paper-2) 86%, transparent);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-soft);
+    }
+    .hero-metrics { display: grid; gap: 16px; align-content: center; }
+    .budget-box {
+      border-radius: 22px;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.12);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 12px;
+    }
+    .budget-box small { display: block; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.68); font-weight: 800; }
+    .budget-box strong { display: block; font-size: clamp(2.1rem, 4vw, 4.4rem); line-height: .9; letter-spacing: -.07em; }
+    .budget-box .mark { color: #fbbf24; }
+    .vs-line { height: 2px; background: rgba(255,255,255,.22); position: relative; margin: 4px 28px; }
+    .vs-line::after { content: "maar"; position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); background: #102a43; padding: 2px 12px; color: rgba(255,255,255,.72); border-radius: 999px; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
+    .choice-pill-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .choice-pill { border-radius: 18px; padding: 18px; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.16); }
+    .choice-pill span { display: block; color: rgba(255,255,255,.65); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 900; }
+    .choice-pill strong { font-size: 1.6rem; display: block; margin-top: 6px; }
+    .relation-diagram { display: grid; grid-template-rows: 1fr auto 1fr; gap: 14px; height: 100%; padding: 10px; }
+    .relation-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .need, .means, .choice { padding: 16px; border-radius: 18px; display: grid; align-content: center; min-height: 110px; }
+    .need { background: var(--amber-soft); border: 1px solid rgba(180,83,9,.22); }
+    .means { background: var(--blue-soft); border: 1px solid rgba(37,99,235,.20); }
+    .choice { background: var(--teal-soft); border: 1px solid rgba(15,118,110,.20); }
+    .need strong, .means strong, .choice strong { font-size: 1.3rem; display:block; margin-bottom: 4px; color: var(--indigo); }
+    html[data-theme="dark"] .need strong, html[data-theme="dark"] .means strong, html[data-theme="dark"] .choice strong { color: var(--ink); }
+    .relation-equation { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; }
+    .equation-part { text-align: center; padding: 14px 10px; border-radius: 17px; background: var(--paper-2); border: 1px solid var(--line); font-weight: 900; color: var(--indigo); }
+    .equation-symbol { font-size: 2rem; color: var(--coral); font-weight: 900; }
+    .level-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; height: 100%; align-content: stretch; }
+    .level-card { padding: 18px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; }
+    .level-card .icon { width: 54px; height: 54px; display:grid; place-items:center; border-radius: 17px; font-size: 1.45rem; background: var(--teal-soft); color: var(--teal); }
+    .level-card h3, .option-card h3, .mini-card h3 { margin: 0; font-size: clamp(1.2rem, 1.5vw, 1.6rem); color: var(--indigo); }
+    .level-card p { margin: 0; color: var(--muted); line-height: 1.35; }
+    .tagline { align-self: end; padding-top: 12px; border-top: 1px solid var(--line); font-weight: 800; color: var(--teal); }
+    .option-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-content: center; height: 100%; }
+    .option-card { padding: 22px; position: relative; overflow: hidden; min-height: 330px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 8px; }
+    .option-card::before { content:""; height: 8px; background: var(--accent, var(--teal)); position: absolute; inset: 0 0 auto 0; }
+    .option-label { text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; color: var(--accent, var(--teal)); font-weight: 900; }
+    .price { font-size: clamp(2.4rem, 4vw, 4.8rem); font-weight: 950; letter-spacing: -.08em; color: var(--accent, var(--teal)); }
+    .arrow-giveup { display: grid; place-items: center; color: var(--coral); font-size: 2.2rem; font-weight: 900; }
+    .selected-badge, .lost-badge { align-self: end; padding: 11px 13px; border-radius: 14px; font-weight: 850; }
+    .selected-badge { background: var(--teal-soft); color: var(--teal); }
+    .lost-badge { background: var(--coral-soft); color: var(--coral); }
+    .misconception-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; height: 100%; align-content: center; }
+    .mis-card { padding: 18px; min-height: 300px; display: grid; grid-template-rows: auto auto 1fr; gap: 12px; position:relative; overflow:hidden; }
+    .mis-card::before { content:""; position:absolute; inset:0 0 auto 0; height: 8px; background: var(--color); }
+    .mis-card .status { display:inline-flex; width:max-content; border-radius:999px; padding: 6px 10px; font-size:.75rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; background: var(--bg); color: var(--color); }
+    .mis-card strong { font-size: 1.35rem; line-height: 1.15; color: var(--indigo); }
+    .mis-card p { color: var(--muted); line-height:1.35; margin:0; }
+    .procedure { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; align-content: center; }
+    .step { position: relative; padding: 18px 14px 16px; min-height: 250px; }
+    .step::before { content:""; position:absolute; left: 0; top: 0; bottom:0; width:8px; background: var(--accent); border-radius: 15px 0 0 15px; }
+    .step .number { font-size: 2.4rem; font-weight: 950; letter-spacing: -.08em; color: var(--accent); }
+    .step h3 { margin: 6px 0 8px; font-size: 1.25rem; color: var(--indigo); line-height:1.1; }
+    .step p { margin:0; color: var(--muted); line-height:1.35; }
+    .table-card { padding: 18px; align-self: center; }
+    table { width: 100%; border-collapse: collapse; font-size: clamp(.95rem, 1vw, 1.1rem); }
+    th { background: var(--indigo); color: white; text-align: left; padding: 11px; font-size: .82em; text-transform: uppercase; letter-spacing: .08em; }
+    td { padding: 13px 11px; border-bottom: 1px solid var(--line); }
+    tr:last-child td { border-bottom: 0; }
+    td:last-child { font-weight: 900; color: var(--teal); }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content:center; height:100%; }
+    .calc-box { padding: 18px; }
+    .calc-box .big { font-size: clamp(2rem, 3.8vw, 4.2rem); font-weight: 950; letter-spacing: -.08em; color: var(--teal); display:block; }
+    .calc-box .formula { font-family: var(--ui-font); font-weight: 900; color: var(--indigo); font-size: 1.25rem; }
+    .result-box { grid-column: 1 / -1; padding: 20px; border-radius: 20px; background: linear-gradient(135deg, var(--indigo), var(--indigo-2)); color:white; display:grid; grid-template-columns: auto 1fr; gap: 18px; align-items:center; }
+    .result-box strong { font-size: clamp(2.5rem, 4.8vw, 5.2rem); line-height:.9; color:#fbbf24; letter-spacing:-.08em; }
+    .result-box p { margin:0; font-size:1.1rem; line-height:1.3; }
+    .quiz-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; align-content:center; height:100%; }
+    .quiz-card { padding: 18px; min-height: 250px; display:grid; grid-template-rows:auto 1fr auto; gap:12px; }
+    .quiz-card .letter { width: 46px; height: 46px; border-radius: 15px; display:grid; place-items:center; background: var(--paper-3); font-weight:950; color: var(--indigo); }
+    .quiz-card p { margin:0; font-size:1.15rem; line-height:1.28; font-weight:700; }
+    details.answer { grid-column:1 / -1; padding: 14px 18px; background: var(--teal-soft); border: 1px solid rgba(15,118,110,.22); border-radius:18px; color: var(--ink); }
+    details.answer summary { cursor:pointer; font-weight:900; color: var(--teal); }
+    details.answer p { margin: 10px 0 0; line-height: 1.42; }
+    .summary-list { display:grid; gap: 11px; align-content:center; }
+    .summary-item { display:grid; grid-template-columns: 48px 1fr; gap: 12px; align-items:start; padding: 13px 15px; border-radius: 16px; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18); }
+    .summary-item span { display:grid; place-items:center; width: 42px; height:42px; border-radius:14px; background: rgba(251,191,36,.18); color:#fbbf24; font-weight:950; }
+    .summary-item strong { color:#fff; }
+    .summary-item p { margin: 2px 0 0; color: rgba(255,255,255,.72); line-height:1.3; }
+    .bridge { align-self:end; padding: 18px; border-radius: 20px; background: rgba(251,191,36,.12); border: 1px solid rgba(251,191,36,.24); }
+
+    .compact-summary { gap: 7px; align-content: center; }
+    .compact-summary .summary-item { padding: 8px 10px; grid-template-columns: 40px 1fr; }
+    .compact-summary .summary-item span { width: 34px; height: 34px; border-radius: 12px; }
+    .compact-summary .summary-item p { line-height: 1.18; font-size: .92rem; }
+    .chip-row { display:flex; gap: 8px; flex-wrap:wrap; margin-top: 16px; }
+    .chip { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:999px; padding: 8px 10px; background: var(--paper-2); font-size:.88rem; font-weight:750; color:var(--muted); }
+
+    .bottom-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: color-mix(in srgb, var(--paper-2) 80%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 10px 12px;
+      box-shadow: var(--shadow-soft);
+    }
+    .progress { display:flex; align-items:center; gap: 8px; color: var(--muted); font-weight:800; }
+    .progress-bar { width: min(280px, 28vw); height: 9px; background: var(--paper-3); border-radius:999px; overflow:hidden; }
+    .progress-bar span { display:block; height:100%; width: 10%; background: linear-gradient(90deg, var(--teal), var(--amber)); border-radius:999px; transition: width .25s ease; }
+    .notes {
+      display: grid;
+      grid-template-rows: auto minmax(0,1fr);
+    }
+    .notes-head {
+      padding: 20px 22px 14px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(180,83,9,.10), rgba(15,118,110,.08));
+    }
+    .notes-head h2 { margin:0; font-size:1.2rem; letter-spacing:-.03em; }
+    .notes-body { padding: 20px 22px 28px; overflow:auto; }
+    .notes-body h3 { margin:0 0 12px; color: var(--indigo); font-size:1.35rem; letter-spacing:-.03em; }
+    .notes-body p, .notes-body li { color: var(--muted); line-height:1.62; font-size:1rem; }
+    .notes-body p { margin: 0 0 14px; }
+    .notes-body strong { color: var(--ink); }
+    .notes-body .note-rule { padding: 13px 14px; border-radius: 16px; background: var(--teal-soft); color: var(--ink); border: 1px solid rgba(15,118,110,.20); }
+    .notes-body .note-rule strong { color: var(--teal); }
+    .notes-source { display:none; }
+    .hidden-notes .notes { display:none; }
+    .hidden-notes.app { grid-template-columns: 294px minmax(0, 1fr); }
+    .present-mode.app { grid-template-columns: 1fr; padding: 0; }
+    .present-mode .side, .present-mode .notes, .present-mode .topbar, .present-mode .bottom-controls { display:none; }
+    .present-mode .stage { height:100vh; padding: 1.5vw; }
+    .present-mode .slide { width:min(96vw, 150vh * 16 / 9); }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+
+    /* Production fit refinements: the slide must remain fully readable while the student-facing notes panel is visible. */
+
+
+    #slide-10 .slide-grid { grid-template-columns: .92fr 1.08fr; gap: 18px; }
+    #slide-10 .summary-list { gap: 6px; }
+    #slide-10 .summary-item { grid-template-columns: 38px 1fr; gap: 9px; padding: 8px 10px; border-radius: 13px; }
+    #slide-10 .summary-item span { width: 32px; height: 32px; border-radius: 11px; }
+    #slide-10 .summary-item p { margin-top: 0; line-height: 1.2; font-size: .88em; }
+    #slide-10 .summary-item strong { font-size: .98em; }
+    #slide-10 .bridge { padding: 12px 14px; font-size: .92em; }
+    .slide.dark .student-action { color: #ffffff; background: rgba(255,255,255,.17); border-color: rgba(255,255,255,.26); }
+    .slide.dark .student-action b { color: #5eead4; }
+    .slide { padding: clamp(18px, 1.65vw, 28px); }
+    .slide-grid { gap: clamp(14px, 1.45vw, 24px); }
+    .slide-stack { gap: 12px; }
+    .slide h2 { font-size: clamp(1.9rem, 2.85vw, 3.75rem); line-height: .98; }
+    .slide .assertion { margin-top: 10px; font-size: clamp(1rem, 1.25vw, 1.45rem); line-height: 1.16; max-width: 22ch; }
+    .student-action { margin-top: 14px; padding: 10px 13px; font-size: .92em; }
+    .budget-box { padding: 16px 18px; border-radius: 18px; }
+    .amount { font-size: clamp(2.5rem, 4vw, 4.4rem); }
+    .path-pair { gap: 12px; }
+    .path-card { padding: 15px 16px; }
+    .choice { padding: 14px 13px; min-height: 104px; }
+    .relation-equation { gap: 8px; }
+    .equation-part { padding: 11px 8px; }
+    .level-grid, .misconception-grid, .quiz-grid, .procedure { gap: 12px; }
+    .level-card { padding: 14px; gap: 7px; }
+    .level-card .icon { width: 44px; height: 44px; border-radius: 14px; font-size: 1.2rem; }
+    .level-card h3, .option-card h3, .mini-card h3 { font-size: clamp(1.05rem, 1.18vw, 1.35rem); }
+    .level-card p, .tagline { font-size: .92em; }
+    .option-card { min-height: 0; padding: 18px; }
+    .price { font-size: clamp(2.2rem, 3.4vw, 3.8rem); }
+    .mis-card { min-height: 0; padding: 15px; gap: 9px; }
+    .mis-card strong { font-size: clamp(1.02rem, 1.2vw, 1.25rem); }
+    .mis-card p { font-size: .9em; }
+    .step { min-height: 0; padding: 15px 12px 14px; }
+    .step .number { font-size: clamp(1.9rem, 2.55vw, 2.8rem); }
+    .step h3 { font-size: clamp(1rem, 1.15vw, 1.25rem); }
+    .step p { font-size: .88em; }
+    .table-card, .calc-box { padding: 14px; }
+    table { font-size: clamp(.82rem, .82vw, .98rem); }
+    th { padding: 9px; }
+    td { padding: 10px 9px; }
+    .calc-grid { gap: 12px; }
+    .calc-box .big { font-size: clamp(1.9rem, 3.1vw, 3.6rem); }
+    .calc-box .formula { font-size: clamp(1rem, 1.15vw, 1.2rem); }
+    .result-box { padding: 16px; gap: 12px; }
+    .result-box strong { font-size: clamp(2.2rem, 4vw, 4.6rem); }
+    .result-box p { font-size: 1rem; }
+    .quiz-card { min-height: 0; padding: 15px; }
+    .quiz-card p { font-size: clamp(.98rem, 1.05vw, 1.15rem); }
+    details.answer { padding: 12px 15px; }
+    .summary-list { gap: 8px; }
+    .summary-item { padding: 10px 12px; }
+    .bridge { padding: 14px; }
+
+    @media (max-width: 1180px) {
+      body { overflow:auto; }
+      .app { height: auto; min-height:100vh; grid-template-columns: 1fr; }
+      .side { max-height: 310px; }
+      .nav { flex-direction: row; overflow-x:auto; }
+      .nav button { min-width: 220px; }
+      .slide { min-height: min(760px, 84vh); aspect-ratio:auto; }
+      .slide-grid, .slide-grid.wide-left, .slide-grid.wide-right { grid-template-columns:1fr; }
+      .level-grid, .misconception-grid, .quiz-grid, .procedure { grid-template-columns:1fr; }
+      .option-compare, .calc-grid { grid-template-columns:1fr; }
+      .result-box { grid-template-columns:1fr; }
+      .notes { min-height: 420px; }
+      .hidden-notes.app { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { overflow: visible; background:white; }
+      .app { display:block; height:auto; }
+      .side, .topbar, .bottom-controls, .notes { display:none !important; }
+      .slide { display:grid !important; width:100%; page-break-after:always; box-shadow:none; border:1px solid #ddd; margin-bottom:20px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#stage">Naar presentatie</a>
+  <div class="app" id="app">
+    <aside class="side" aria-label="Dia-overzicht">
+      <div class="brand">
+        <p class="eyebrow">§ 1.1.1 · webpresentatie</p>
+        <h1>Schaarste en economisch denken</h1>
+        <p>Web-first lespresentatie met duidelijke lesroute en studentgerichte uitleg per dia.</p>
+      </div>
+      <nav class="nav" id="nav" aria-label="Dia's"></nav>
+    </aside>
+
+    <main class="main" id="stage" tabindex="-1">
+      <header class="topbar">
+        <div class="route"><strong>Boek 1</strong> · Hoofdstuk 1.1 · Economisch denken en rekenen</div>
+        <div class="controls" aria-label="Presentatie-instellingen">
+          <button class="btn" id="notesToggle" aria-pressed="false">Verberg uitleg</button>
+          <button class="btn" id="themeToggle" aria-pressed="false">Dark mode</button>
+          <button class="btn primary" id="presentToggle" aria-pressed="false">Presentatiemodus</button>
+        </div>
+      </header>
+
+      <section class="stage" aria-label="Diaweergave">
+
+        <article class="slide dark active" id="slide-01" data-title="Lesdoel" data-subtitle="Route voor vandaag">
+          <div class="slide-grid">
+            <div>
+              <p class="eyebrow">Lesdoel</p>
+              <h2>Vandaag leer je waarom kiezen kost</h2>
+              <p class="assertion">Aan het einde kun je een keuzeprobleem herkennen, de alternatieve kosten aanwijzen en een keuze in vier stappen beoordelen.</p>
+              <div class="student-action"><b>Route:</b> eerst Lisa, daarna het begrip, daarna de boer.</div>
+            </div>
+            <div class="summary-list" aria-label="Lesroute">
+              <div class="summary-item"><span>1</span><div><strong>Schaarste herkennen</strong><p>Waarom kan Lisa niet alles kiezen?</p></div></div>
+              <div class="summary-item"><span>2</span><div><strong>Alternatieve kosten bepalen</strong><p>Wat geeft ze op als ze kiest?</p></div></div>
+              <div class="summary-item"><span>3</span><div><strong>Economisch denken gebruiken</strong><p>Hoe reken je een keuze stap voor stap door?</p></div></div>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 1</h3>
+            <p>Deze les gaat over één centrale vraag: <strong>wat kost een keuze echt?</strong> Niet alleen in euro's, maar vooral in wat je niet meer kunt doen nadat je gekozen hebt.</p>
+            <p>Je leert drie dingen. Eerst herken je <strong>schaarste</strong>: mensen willen meer dan de middelen toelaten. Daarna leer je <strong>alternatieve kosten</strong>: de opbrengst van het beste alternatief dat je niet kiest. Ten slotte gebruik je een vaste procedure om een keuze netjes te beoordelen.</p>
+            <p class="note-rule"><strong>Wat je straks moet kunnen:</strong> bij een voorbeeld aanwijzen: het schaarse middel, de alternatieven, het gekozen alternatief, het beste niet-gekozen alternatief en de nettowaarde.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-02" data-title="Lisa moet kiezen" data-subtitle="Startvoorbeeld">
+          <div class="slide-grid wide-left">
+            <div>
+              <p class="eyebrow">Startvoorbeeld</p>
+              <h2>Lisa heeft €20, maar wil voor €27</h2>
+              <p class="assertion">Het probleem is niet dat ze niets kan kopen. Het probleem is dat ze niet alles tegelijk kan kiezen.</p>
+              <div class="student-action"><b>Luistervraag:</b> welke twee alternatieven strijden om hetzelfde geld?</div>
+            </div>
+            <div class="visual-panel">
+              <div class="option-compare">
+                <section class="card option-card" style="--accent: var(--teal)">
+                  <div class="option-label">alternatief A</div>
+                  <h3>Bioscoop</h3>
+                  <div class="price">€12</div>
+                  <p class="muted">Een middag kijkplezier.</p>
+                  <div class="selected-badge">kan alleen als ze kiest</div>
+                </section>
+                <section class="card option-card" style="--accent: var(--amber)">
+                  <div class="option-label">alternatief B</div>
+                  <h3>Nieuw boek</h3>
+                  <div class="price">€15</div>
+                  <p class="muted">Avonden leesplezier.</p>
+                  <div class="selected-badge">kan ook alleen als ze kiest</div>
+                </section>
+              </div>
+              <div class="student-action" style="margin-top:12px"><b>Samen:</b> €12 + €15 = €27 &gt; €20.</div>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 2</h3>
+            <p>Lisa heeft €20. Ze wil naar de bioscoop voor €12 en ze wil een nieuw boek kopen voor €15. Samen kosten die twee wensen €27. Dat past niet binnen haar budget.</p>
+            <p>Daarom ontstaat er een keuzeprobleem. Het gaat dus niet om armoede of om helemaal niets kunnen doen. Lisa kan wel iets kiezen, maar niet alles tegelijk. De twee alternatieven gebruiken hetzelfde beperkte middel: haar €20.</p>
+            <p class="note-rule"><strong>Belangrijke zin:</strong> een economisch probleem ontstaat vaak wanneer meerdere wensen hetzelfde beperkte middel willen gebruiken.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-03" data-title="Schaarste" data-subtitle="Kernbegrip 1">
+          <div class="slide-grid wide-left">
+            <div>
+              <p class="eyebrow">Kernbegrip 1</p>
+              <h2>Schaarste betekent: behoeften &gt; middelen</h2>
+              <p class="assertion">Schaarste is een verhouding, geen ander woord voor “zeldzaam”.</p>
+              <div class="chip-row">
+                <span class="chip">behoeften: bioscoop + boek</span>
+                <span class="chip">middel: €20</span>
+                <span class="chip">gevolg: kiezen</span>
+              </div>
+              <div class="student-action"><b>Check:</b> waar in Lisa’s voorbeeld ontstaat de schaarste?</div>
+            </div>
+            <div class="visual-panel">
+              <div class="relation-diagram">
+                <div class="relation-row">
+                  <div class="need"><strong>Bioscoop</strong><span>wens €12</span></div>
+                  <div class="need"><strong>Boek</strong><span>wens €15</span></div>
+                  <div class="need"><strong>Samen</strong><span>€27 nodig</span></div>
+                </div>
+                <div class="relation-equation" aria-label="Behoeften groter dan middelen leidt tot keuze">
+                  <div class="equation-part">behoeften</div>
+                  <div class="equation-symbol">&gt;</div>
+                  <div class="equation-part">middelen</div>
+                  <div class="equation-symbol">→</div>
+                  <div class="equation-part">keuze</div>
+                </div>
+                <div class="relation-row">
+                  <div class="means"><strong>€27</strong><span>wat Lisa wil</span></div>
+                  <div class="means"><strong>€20</strong><span>wat ze heeft</span></div>
+                  <div class="choice"><strong>kiezen</strong><span>niet alles kan</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 3</h3>
+            <p><strong>Schaarste</strong> ontstaat wanneer behoeften groter zijn dan de beschikbare middelen. Behoeften zijn wat mensen willen. Middelen zijn wat ze kunnen gebruiken, bijvoorbeeld geld, tijd, grond, aandacht of budget.</p>
+            <p>In Lisa’s voorbeeld zijn de behoeften groter dan haar geld: ze wil voor €27 aan activiteiten en spullen, maar ze heeft €20. Daardoor moet ze kiezen. Dat is de kern van schaarste.</p>
+            <p class="note-rule"><strong>Valkuil:</strong> schaarste betekent niet automatisch “zeldzaam”. Water kan overvloedig zijn, maar één flesje water bij drie dorstige mensen is toch schaars.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-04" data-title="Drie niveaus" data-subtitle="Schaarste herkennen">
+          <div class="slide-stack">
+            <div>
+              <p class="eyebrow">Schaarste herkennen</p>
+              <h2>Zo herken je hetzelfde patroon in andere situaties</h2>
+              <p class="assertion">Vraag steeds: wie kiest, welk middel is beperkt, en welke alternatieven strijden om dat middel?</p>
+            </div>
+            <div class="level-grid" aria-label="Voorbeelden van schaarste">
+              <section class="card level-card">
+                <div class="icon">€</div>
+                <h3>Scholier</h3>
+                <p><strong>Wie kiest?</strong> Lisa.</p>
+                <p><strong>Beperkt middel:</strong> €20.</p>
+                <div class="tagline">bioscoop of boek?</div>
+              </section>
+              <section class="card level-card">
+                <div class="icon">🌾</div>
+                <h3>Producent</h3>
+                <p><strong>Wie kiest?</strong> De boer.</p>
+                <p><strong>Beperkt middel:</strong> 10 hectare land.</p>
+                <div class="tagline">tarwe of maïs?</div>
+              </section>
+              <section class="card level-card">
+                <div class="icon">🏛</div>
+                <h3>Overheid</h3>
+                <p><strong>Wie kiest?</strong> De overheid.</p>
+                <p><strong>Beperkt middel:</strong> budget.</p>
+                <div class="tagline">wegen of onderwijs?</div>
+              </section>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 4</h3>
+            <p>Deze dia laat zien dat schaarste niet alleen bij Lisa voorkomt. De context verandert, maar de structuur blijft hetzelfde. Er is steeds iemand die kiest, er is steeds een beperkt middel, en er zijn steeds meerdere alternatieven.</p>
+            <p>Bij de scholier is het beperkte middel geld. Bij de producent is het land. Bij de overheid is het budget. In alle drie de gevallen kan het beperkte middel niet volledig voor alle doelen tegelijk worden gebruikt.</p>
+            <p class="note-rule"><strong>Werkwijze:</strong> schrijf bij een opgave eerst drie woorden op: <em>kiezer</em>, <em>middel</em>, <em>alternatieven</em>. Dan wordt het keuzeprobleem helder.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-05" data-title="Alternatieve kosten" data-subtitle="Kernbegrip 2">
+          <div class="slide-grid wide-right">
+            <div>
+              <p class="eyebrow">Kernbegrip 2</p>
+              <h2>Alternatieve kosten zijn het beste dat je laat liggen</h2>
+              <p class="assertion">Bij Lisa is dat niet simpelweg de betaalde prijs, maar de waarde van het alternatief dat ze niet kiest.</p>
+              <div class="student-action"><b>Lisa kiest bioscoop.</b> Wat is dan haar beste niet-gekozen alternatief?</div>
+            </div>
+            <div class="visual-panel">
+              <div class="option-compare">
+                <section class="card option-card" style="--accent: var(--teal)">
+                  <div class="option-label">gekozen</div>
+                  <h3>Bioscoop</h3>
+                  <div class="price">€12</div>
+                  <p class="muted">Dit is de betaalde prijs.</p>
+                  <div class="selected-badge">zichtbare keuze</div>
+                </section>
+                <section class="card option-card" style="--accent: var(--coral)">
+                  <div class="option-label">beste niet-gekozen</div>
+                  <h3>Nieuw boek</h3>
+                  <div class="price" style="font-size: clamp(1.65rem, 2.3vw, 2.8rem)">leesplezier</div>
+                  <p class="muted">Dit is wat Lisa opgeeft.</p>
+                  <div class="lost-badge">alternatieve kosten</div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 5</h3>
+            <p>Als Lisa naar de bioscoop gaat, betaalt ze €12. Dat is de prijs van de bioscoop. Maar haar <strong>alternatieve kosten</strong> zijn iets anders: het beste alternatief dat ze niet kiest.</p>
+            <p>In dit voorbeeld is het beste niet-gekozen alternatief het boek. De alternatieve kosten zijn dus het leesplezier of de waarde van dat boek voor Lisa. Soms kun je die waarde in euro’s uitdrukken, maar het begrip zelf gaat over wat je opgeeft.</p>
+            <p class="note-rule"><strong>Definitie:</strong> alternatieve kosten = de opbrengst of waarde van het beste niet-gekozen alternatief.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-06" data-title="Niet verwarren" data-subtitle="Misconcepties">
+          <div class="slide-stack">
+            <div>
+              <p class="eyebrow">Misconcepties</p>
+              <h2>Wat alternatieve kosten niet zijn</h2>
+              <p class="assertion">Deze twee fouten zorgen later voor verkeerde berekeningen.</p>
+            </div>
+            <div class="misconception-grid" aria-label="Misvattingen rond alternatieve kosten">
+              <section class="card mis-card" style="--color: var(--coral); --bg: var(--coral-soft)">
+                <span class="status">fout 1</span>
+                <strong>“Het is de prijs die je betaalt.”</strong>
+                <p>De prijs is de uitgave voor wat je kiest. Alternatieve kosten gaan over wat je opgeeft.</p>
+              </section>
+              <section class="card mis-card" style="--color: var(--coral); --bg: var(--coral-soft)">
+                <span class="status">fout 2</span>
+                <strong>“Je telt alle gemiste opties op.”</strong>
+                <p>Je neemt niet alle niet-gekozen alternatieven samen, maar alleen het beste alternatief.</p>
+              </section>
+              <section class="card mis-card" style="--color: var(--teal); --bg: var(--teal-soft)">
+                <span class="status">regel</span>
+                <strong>“Kijk naar het beste niet-gekozen alternatief.”</strong>
+                <p>Die regel gebruik je telkens als je alternatieve kosten bepaalt.</p>
+              </section>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 6</h3>
+            <p>De eerste fout is alternatieve kosten verwarren met de prijs. Bij Lisa is €12 de prijs van de bioscoop, maar niet de alternatieve kosten. De alternatieve kosten zijn wat ze door die keuze laat liggen.</p>
+            <p>De tweede fout is alle gemiste opties optellen. Stel dat iemand kan bijles geven, studeren of film kijken. Als diegene bijles geeft, zijn de alternatieve kosten niet studeren plus film kijken samen. Je kijkt naar het beste alternatief dat niet gekozen wordt.</p>
+            <p class="note-rule"><strong>Toetsregel:</strong> noteer altijd: gekozen alternatief → beste niet-gekozen alternatief → alternatieve kosten.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-07" data-title="Vier stappen" data-subtitle="Procedure B02">
+          <div class="slide-stack">
+            <div>
+              <p class="eyebrow">Procedure B02</p>
+              <h2>Bij ingewikkeldere keuzes gebruik je vier stappen</h2>
+              <p class="assertion">De procedure voorkomt dat je te snel “hoogste bedrag = beste keuze” roept.</p>
+            </div>
+            <div class="procedure" aria-label="Vier stappen economisch denken">
+              <section class="card step" style="--accent: var(--teal)"><div class="number">01</div><h3>Benoem alternatieven</h3><p>Welke keuzes gebruiken hetzelfde schaarse middel?</p></section>
+              <section class="card step" style="--accent: var(--green)"><div class="number">02</div><h3>Bereken opbrengsten</h3><p>Wat levert elk alternatief op? Reken eerst, concludeer later.</p></section>
+              <section class="card step" style="--accent: var(--amber)"><div class="number">03</div><h3>Rangschik</h3><p>Welk niet-gekozen alternatief is het beste?</p></section>
+              <section class="card step" style="--accent: var(--coral)"><div class="number">04</div><h3>Bereken nettowaarde</h3><p>Opbrengst gekozen alternatief − alternatieve kosten.</p></section>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 7</h3>
+            <p>Bij Lisa kun je het keuzeprobleem nog bijna uit je hoofd volgen. In economische opgaven worden situaties vaak complexer: er staan tabellen, meerdere alternatieven of berekeningen in. Dan helpt een vaste procedure.</p>
+            <p>Stap 1 maakt duidelijk welke alternatieven om hetzelfde schaarse middel strijden. Stap 2 berekent elk alternatief apart. Stap 3 zoekt het beste niet-gekozen alternatief: dat zijn de alternatieve kosten. Stap 4 berekent de nettowaarde.</p>
+            <p class="note-rule"><strong>Volgorde:</strong> eerst alle alternatieven berekenen, dan pas rangschikken en concluderen.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-08" data-title="Eerst rekenen" data-subtitle="Uitgewerkt voorbeeld · stap 1–2">
+          <div class="slide-grid wide-left">
+            <div>
+              <p class="eyebrow">Uitgewerkt voorbeeld · stap 1–2</p>
+              <h2>De boer: eerst beide alternatieven berekenen</h2>
+              <p class="assertion">Het schaarse middel is 10 hectare land; tarwe en maïs gebruiken hetzelfde land.</p>
+              <div class="student-action"><b>Vraag:</b> wat levert elk gewas op als alle 10 hectare daarvoor worden gebruikt?</div>
+            </div>
+            <div class="visual-panel table-card card">
+              <table aria-label="Tarwe en maïs opbrengst per hectare en totaal">
+                <thead><tr><th>Alternatief</th><th>Opbrengst / ha</th><th>Totale opbrengst</th></tr></thead>
+                <tbody>
+                  <tr><td>Tarwe</td><td>€500</td><td>10 × €500 = €5.000</td></tr>
+                  <tr><td>Maïs</td><td>€350</td><td>10 × €350 = €3.500</td></tr>
+                </tbody>
+              </table>
+              <div class="chip-row" aria-label="Tussenconclusie">
+                <span class="chip">kiezer: boer</span>
+                <span class="chip">middel: 10 ha land</span>
+                <span class="chip">alternatieven: tarwe / maïs</span>
+              </div>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 8</h3>
+            <p>De boer heeft 10 hectare land. Hij kan dat land gebruiken voor tarwe of voor maïs. Het land is schaars, omdat hij dezelfde 10 hectare niet volledig voor beide gewassen tegelijk kan gebruiken.</p>
+            <p>In stap 2 bereken je eerst de totale opbrengst van elk alternatief. Tarwe: 10 × €500 = €5.000. Maïs: 10 × €350 = €3.500. Dit is nog geen volledige conclusie; je hebt alleen de alternatieven doorgerekend.</p>
+            <p class="note-rule"><strong>Valkuil:</strong> spring niet meteen naar “tarwe is hoger”. Eerst moet je benoemen wat de boer opgeeft als hij tarwe kiest.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-09" data-title="Kosten en nettowaarde" data-subtitle="Uitgewerkt voorbeeld · stap 3–4">
+          <div class="slide-grid wide-right">
+            <div>
+              <p class="eyebrow">Uitgewerkt voorbeeld · stap 3–4</p>
+              <h2>Als hij tarwe kiest, geeft hij maïs op</h2>
+              <p class="assertion">Maïs is dan het beste niet-gekozen alternatief; daarom zijn de alternatieve kosten €3.500.</p>
+              <div class="student-action"><b>Nettowaarde:</b> €5.000 − €3.500 = €1.500.</div>
+            </div>
+            <div class="visual-panel calc-grid">
+              <section class="card calc-box">
+                <span class="muted">gekozen alternatief</span>
+                <span class="big">€5.000</span>
+                <span class="formula">tarwe</span>
+              </section>
+              <section class="card calc-box">
+                <span class="muted">beste niet-gekozen</span>
+                <span class="big" style="color: var(--amber)">€3.500</span>
+                <span class="formula">maïs = alt. kosten</span>
+              </section>
+              <section class="result-box">
+                <strong>€1.500</strong>
+                <p><b>Nettowaarde</b><br>opbrengst gekozen alternatief − alternatieve kosten.</p>
+              </section>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 9</h3>
+            <p>Nu pas gebruiken we de regel voor alternatieve kosten. De boer kiest tarwe. Daardoor kan hij op hetzelfde land geen maïs verbouwen. Maïs is het beste niet-gekozen alternatief.</p>
+            <p>De totale opbrengst van maïs is €3.500. Dat zijn de alternatieve kosten van de keuze voor tarwe. De nettowaarde is de opbrengst van de gekozen optie min de alternatieve kosten: €5.000 − €3.500 = €1.500.</p>
+            <p class="note-rule"><strong>Betekenis:</strong> volgens deze opbrengstmaat levert tarwe €1.500 meer op dan het beste alternatief dat de boer opgeeft.</p>
+          </div>
+        </article>
+
+        <article class="slide" id="slide-10" data-title="Kan je het gebruiken?" data-subtitle="Actieve check">
+          <div class="slide-stack">
+            <div>
+              <p class="eyebrow">Actieve check</p>
+              <h2>Vul de drie vaste vragen in</h2>
+              <p class="assertion">Je begrijpt het pas echt als je het patroon zelf kunt invullen.</p>
+            </div>
+            <div class="quiz-grid" aria-label="Begripscheck alternatieve kosten">
+              <section class="card quiz-card"><div class="letter">1</div><p><strong>Lisa kiest bioscoop.</strong><br>Wat is het schaarse middel?</p><span class="muted">denk aan haar budget</span></section>
+              <section class="card quiz-card"><div class="letter">2</div><p><strong>Lisa kiest bioscoop.</strong><br>Wat is het beste niet-gekozen alternatief?</p><span class="muted">niet de prijs noemen</span></section>
+              <section class="card quiz-card"><div class="letter">3</div><p><strong>De boer kiest tarwe.</strong><br>Wat zijn de alternatieve kosten?</p><span class="muted">gebruik de tabel</span></section>
+              <details class="answer"><summary>Toon antwoorden</summary><p><strong>1:</strong> het schaarse middel is Lisa’s €20. <strong>2:</strong> het beste niet-gekozen alternatief is het boek, dus het leesplezier/de waarde daarvan. <strong>3:</strong> de alternatieve kosten van tarwe zijn de opbrengst van maïs: €3.500.</p></details>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 10</h3>
+            <p>Deze dia is geen nieuwe uitleg, maar een controle of je het patroon zelfstandig kunt toepassen. Probeer eerst te antwoorden zonder de uitleg open te klappen.</p>
+            <p>Let op de vaste volgorde. Eerst zoek je het schaarse middel. Daarna kijk je welke keuze gemaakt wordt. Daarna zoek je het beste alternatief dat niet gekozen wordt. Pas dan kun je de alternatieve kosten noemen.</p>
+            <p class="note-rule"><strong>Zelfcontrole:</strong> als je bij een opgave “gekozen” en “beste niet-gekozen” niet kunt aanwijzen, kun je de alternatieve kosten nog niet betrouwbaar berekenen.</p>
+          </div>
+        </article>
+
+        <article class="slide dark" id="slide-11" data-title="De kern" data-subtitle="Samenvatting">
+          <div class="slide-grid">
+            <div>
+              <p class="eyebrow">Samenvatting</p>
+              <h2>De kern in vijf zinnen</h2>
+              <p class="assertion">Als je deze vijf zinnen kunt uitleggen, beheers je de basis van §1.1.1.</p>
+              <div class="bridge"><strong>Brug naar §1.1.2:</strong><br>Daar ga je preciezer rekenen met procentuele veranderingen en indexcijfers.</div>
+            </div>
+            <div class="summary-list compact-summary" aria-label="Vijf kernzinnen">
+              <div class="summary-item"><span>1</span><div><strong>Schaarste</strong><p>Behoeften zijn groter dan beschikbare middelen.</p></div></div>
+              <div class="summary-item"><span>2</span><div><strong>Kiezen</strong><p>Door schaarste moet iemand een keuze maken.</p></div></div>
+              <div class="summary-item"><span>3</span><div><strong>Alternatieve kosten</strong><p>De waarde/opbrengst van het beste niet-gekozen alternatief.</p></div></div>
+              <div class="summary-item"><span>4</span><div><strong>Niet verwarren</strong><p>Niet de prijs, niet alle gemiste opties samen.</p></div></div>
+              <div class="summary-item"><span>5</span><div><strong>Economisch denken</strong><p>Alternatieven → opbrengsten → rangschikken → nettowaarde.</p></div></div>
+            </div>
+          </div>
+          <div class="notes-source">
+            <h3>Uitleg bij dia 11</h3>
+            <p>Deze paragraaf geeft de basis voor economisch redeneren. Schaarste betekent dat niet alles tegelijk kan. Daarom moet iemand kiezen. Zodra je kiest, geef je iets op.</p>
+            <p>Dat opgegeven alternatief is economisch belangrijk, omdat het laat zien wat de keuze werkelijk kost. Bij simpele voorbeelden zie je dat snel. Bij latere opgaven heb je de vier stappen nodig om systematisch te blijven werken.</p>
+            <p class="note-rule"><strong>Meenemen naar opgaven:</strong> benoem het schaarse middel, bereken alternatieven, bepaal het beste niet-gekozen alternatief en bereken pas daarna de nettowaarde.</p>
+          </div>
+        </article>
+
+      </section>
+
+      <footer class="bottom-controls" aria-label="Dia-navigatie">
+        <button class="btn" id="prevBtn">Vorige</button>
+        <div class="progress" aria-live="polite"><span id="counter">1 / 10</span><div class="progress-bar" aria-hidden="true"><span id="bar"></span></div></div>
+        <button class="btn primary" id="nextBtn">Volgende</button>
+      </footer>
+    </main>
+
+    <aside class="notes" aria-label="Studentgerichte uitleg">
+      <div class="notes-head">
+        <p class="notes-label">Uitleg / speaker notes</p>
+        <h2>Studentgerichte uitleg bij de dia</h2>
+      </div>
+      <div class="notes-body" id="notesBody"></div>
+    </aside>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const app = document.getElementById('app');
+    const nav = document.getElementById('nav');
+    const notesBody = document.getElementById('notesBody');
+    const counter = document.getElementById('counter');
+    const bar = document.getElementById('bar');
+    let current = 0;
+
+    function buildNav() {
+      nav.innerHTML = '';
+      slides.forEach((slide, index) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.dataset.index = String(index);
+        btn.innerHTML = `<span class="num">${String(index + 1).padStart(2, '0')}</span><span><strong>${slide.dataset.title}</strong><span>${slide.dataset.subtitle}</span></span>`;
+        btn.addEventListener('click', () => go(index));
+        nav.appendChild(btn);
+      });
+    }
+
+    function go(index, updateHash = true) {
+      current = Math.max(0, Math.min(slides.length - 1, index));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      Array.from(nav.children).forEach((btn, i) => btn.setAttribute('aria-current', i === current ? 'true' : 'false'));
+      const active = slides[current];
+      const source = active.querySelector('.notes-source');
+      notesBody.innerHTML = source ? source.innerHTML : '';
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      bar.style.width = `${((current + 1) / slides.length) * 100}%`;
+      document.title = `§1.1.1 — ${active.dataset.title}`;
+      if (updateHash) history.replaceState(null, '', `#${active.id}`);
+    }
+
+    function fromHash() {
+      const id = location.hash.slice(1);
+      const index = slides.findIndex(s => s.id === id);
+      if (index >= 0) go(index, false);
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => go(current - 1));
+    document.getElementById('nextBtn').addEventListener('click', () => go(current + 1));
+    document.getElementById('notesToggle').addEventListener('click', (e) => {
+      const hidden = app.classList.toggle('hidden-notes');
+      e.currentTarget.setAttribute('aria-pressed', hidden ? 'true' : 'false');
+      e.currentTarget.textContent = hidden ? 'Toon uitleg' : 'Verberg uitleg';
+    });
+    document.getElementById('themeToggle').addEventListener('click', (e) => {
+      const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      e.currentTarget.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      e.currentTarget.textContent = dark ? 'Light mode' : 'Dark mode';
+    });
+    document.getElementById('presentToggle').addEventListener('click', (e) => {
+      const present = app.classList.toggle('present-mode');
+      e.currentTarget.setAttribute('aria-pressed', present ? 'true' : 'false');
+      e.currentTarget.textContent = present ? 'Normale modus' : 'Presentatiemodus';
+    });
+    window.addEventListener('hashchange', fromHash);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(current + 1); }
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(current - 1); }
+      if (e.key === 'Home') { e.preventDefault(); go(0); }
+      if (e.key === 'End') { e.preventDefault(); go(slides.length - 1); }
+      if (e.key.toLowerCase() === 'n') { document.getElementById('notesToggle').click(); }
+      if (e.key.toLowerCase() === 'p') { document.getElementById('presentToggle').click(); }
+    });
+
+    buildNav();
+    fromHash();
+    if (!location.hash) go(0, false);
+  </script>
+</body>
+</html>

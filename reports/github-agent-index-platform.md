@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-20T07:50:32.254Z
+Generated: 2026-06-20T10:53:52.506Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `HEAD`
-Source commit: `e8dfc9e8303187ffc9babd220ba3d74ae5cd19eb`
-Files indexed: 5158
+Source branch: `codex/golden-presentation-exemplar`
+Source commit: `2ec122bbe4e8c93079e7dc10c76b1e000f2fa71a`
+Files indexed: 5208
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -43,7 +43,7 @@ Count: 8
 
 ## engines
 
-Count: 84
+Count: 85
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -94,6 +94,7 @@ Count: 84
 - engines/tests/exit-ticket-metadata-alignment.test.js
 - engines/tests/exit-ticket-ui.test.js
 - engines/tests/fig-3-step-count.test.js
+- engines/tests/golden-presentation-reference.test.js
 - engines/tests/golden-ticket-layout.test.js
 - engines/tests/graphical-data.test.js
 - engines/tests/graphical-engine.test.js
@@ -132,7 +133,7 @@ Count: 84
 
 ## build scripts
 
-Count: 510
+Count: 516
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -360,6 +361,7 @@ Count: 510
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
+- build-scripts/references/check-presentation-policy.js
 - build-scripts/references/check-procedure-visual-coverage.js
 - build-scripts/references/check-procedure-visual-inventory.js
 - build-scripts/references/check-procedure-visual-lesson-regression-proof-intake.js
@@ -498,6 +500,7 @@ Count: 510
 - build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
 - build-scripts/sprints/capture-exit-ticket-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/capture-gate-product-3p-authority-copy-repair-and-rereview-1.js
+- build-scripts/sprints/capture-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/capture-golden-surface-visual-review1.js
 - build-scripts/sprints/capture-golden-ticket-layout-reset-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
@@ -540,6 +543,8 @@ Count: 510
 - build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
+- build-scripts/sprints/check-golden-presentation-111.js
+- build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
 - build-scripts/sprints/check-golden-ticket-no-legacy.js
@@ -558,6 +563,7 @@ Count: 510
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
+- build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -631,6 +637,7 @@ Count: 510
 - scripts/post-push-hook.js
 - scripts/pre-push-hook.js
 - scripts/qa-presentation-v2-html.js
+- scripts/qa-presentation-web.js
 - scripts/qa-student-web-pages.js
 - scripts/tests/build-landing-page.test.js
 - scripts/tests/check-book-print-scope.test.js
@@ -694,7 +701,7 @@ Count: 42
 
 ## validators
 
-Count: 501
+Count: 507
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -810,6 +817,7 @@ Count: 501
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
+- build-scripts/references/check-presentation-policy.js
 - build-scripts/references/check-procedure-visual-coverage.js
 - build-scripts/references/check-procedure-visual-inventory.js
 - build-scripts/references/check-procedure-visual-lesson-regression-proof-intake.js
@@ -902,6 +910,8 @@ Count: 501
 - build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
+- build-scripts/sprints/check-golden-presentation-111.js
+- build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
 - build-scripts/sprints/check-golden-ticket-no-legacy.js
@@ -920,6 +930,7 @@ Count: 501
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
+- build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -1146,6 +1157,8 @@ Count: 501
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-short-check-desktop-light.png
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-short-check-desktop-light.png
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-mobile.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png
@@ -1200,7 +1213,7 @@ Count: 501
 
 ## references
 
-Count: 628
+Count: 658
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1688,6 +1701,26 @@ Count: 628
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
+- references/exemplars/1.1.1-golden-presentation/accepted-snapshot-provenance.md
+- references/exemplars/1.1.1-golden-presentation/content-review-and-revision-notes.md
+- references/exemplars/1.1.1-golden-presentation/didactic-framework.md
+- references/exemplars/1.1.1-golden-presentation/golden-presentation-content-model.json
+- references/exemplars/1.1.1-golden-presentation/golden-presentation.html
+- references/exemplars/1.1.1-golden-presentation/implementation-handoff.md
+- references/exemplars/1.1.1-golden-presentation/layout-framework.md
+- references/exemplars/1.1.1-golden-presentation/lead-review-2026-06-20.md
+- references/exemplars/1.1.1-golden-presentation/policy-extract.md
+- references/exemplars/1.1.1-golden-presentation/previews/slide-01.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-02.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-05.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-10.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-11.png
+- references/exemplars/1.1.1-golden-presentation/README.md
+- references/exemplars/1.1.1-golden-presentation/screenshot-proof.md
+- references/exemplars/1.1.1-golden-presentation/slide-route.md
+- references/exemplars/1.1.1-golden-presentation/source-snapshot.sha256
+- references/exemplars/1.1.1-golden-presentation/speaker-notes-standard.md
+- references/exemplars/1.1.1-golden-presentation/teacher-student-review.md
 - references/exemplars/1.1.3-exit-ticket/candidate-data.json
 - references/exemplars/1.1.3-exit-ticket/implementation-handoff.md
 - references/exemplars/1.1.3-exit-ticket/package-readme.md
@@ -1774,6 +1807,16 @@ Count: 628
 - references/owned/course-blueprint-v6-three-year.md
 - references/owned/course-blueprint-v6-three-year.meta.json
 - references/owned/README.md
+- references/presentation/didactic-route-policy.json
+- references/presentation/didactic-route-policy.md
+- references/presentation/powerpoint-derivative-policy.md
+- references/presentation/presentation-policy.json
+- references/presentation/presentation-policy.md
+- references/presentation/README.md
+- references/presentation/speaker-notes-policy.json
+- references/presentation/speaker-notes-policy.md
+- references/presentation/web-first-presentation-layout.json
+- references/presentation/web-first-presentation-layout.md
 - references/qc-prompts/exam-derived-skills.md
 - references/qc-prompts/foundation-audit.md
 - references/qc-prompts/probe-questions.md
@@ -1833,7 +1876,7 @@ Count: 628
 
 ## reports
 
-Count: 3262
+Count: 3275
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1872,16 +1915,8 @@ Count: 3262
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1917,10 +1952,6 @@ Count: 3262
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1955,6 +1986,7 @@ Count: 3262
 - reports/json/gate-product-3p-closure-and-scale-gate-1-readiness-bundle-1-proof.json
 - reports/json/gate-product-3p-prep-2-proof.json
 - reports/json/golden-exercise-checkers-1-proof.json
+- reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json
 - reports/json/golden-surface-visual-review-1-proof.json
 - reports/json/graph-check-ux1-proof.json
 - reports/json/graph-exit-ux1-proof.json
@@ -3025,6 +3057,7 @@ Count: 3262
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
@@ -3872,6 +3905,29 @@ Count: 3262
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-review-protocol.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-roadmap.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-sprint-ledger.md
+- reports/sprints/GOLDEN-PRESENTATION-111-accessibility-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-lead-verdict.md
+- reports/sprints/GOLDEN-PRESENTATION-111-review-packet.md
+- reports/sprints/GOLDEN-PRESENTATION-111-student-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-teacher-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-visual-qa.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-architecture-disposition.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-evidence-map.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-plan.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-quality-log.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-result.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshot-manifest.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-exit-ticket-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-exit-ticket-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-start-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-start-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-2-start-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-2-start-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-3-start-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-3-start-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/manifest.json
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-plan.md
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-quality-log.md
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-review.md
