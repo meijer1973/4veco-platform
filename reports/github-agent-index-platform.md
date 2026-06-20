@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-20T16:00:04.486Z
+Generated: 2026-06-21T08:03:52.251Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/goal-dqs-closure-1-20260620`
-Source commit: `9e6aefd6786d9e22535036869267114bca86ce81`
-Files indexed: 5230
+Source branch: `codex/y3-macro-spine-mapping-1-20260620`
+Source commit: `37c38ca269ad52769e33e3694537bb060f769606`
+Files indexed: 5243
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -133,7 +133,7 @@ Count: 85
 
 ## build scripts
 
-Count: 518
+Count: 519
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -401,6 +401,7 @@ Count: 518
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
 - build-scripts/references/close-and-apply-rx2b-graphical-foundation.js
 - build-scripts/references/close-and-apply-rx3a-first-lane.js
@@ -703,7 +704,7 @@ Count: 42
 
 ## validators
 
-Count: 510
+Count: 511
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -860,6 +861,7 @@ Count: 510
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/validate-alignment-graph.js
 - build-scripts/references/validate-core-schemas.js
@@ -1881,7 +1883,7 @@ Count: 658
 
 ## reports
 
-Count: 3281
+Count: 3291
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2325,6 +2327,13 @@ Count: 3281
 - reports/reference-planning/Y2-ROOT-MAPPING-1-quality-log.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-subagent-review.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-architecture.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-candidate-matrix.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-evidence-routing.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-quality-log.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-retrieval-spine.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-review-packet.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-subagent-review.md
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden-contact-sheet.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-1.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-2.png
@@ -3072,6 +3081,7 @@ Count: 3281
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
+- reports/review-gates/Y3-MACRO-SPINE-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.md
@@ -5159,6 +5169,8 @@ Count: 3281
 - reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md
 - reports/sprints/Y2-ROOT-MAPPING-1-plan.md
 - reports/sprints/Y2-ROOT-MAPPING-1-result.md
+- reports/sprints/Y3-MACRO-SPINE-MAPPING-1-plan.md
+- reports/sprints/Y3-MACRO-SPINE-MAPPING-1-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
@@ -5185,7 +5197,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 589
+Count: 591
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5198,7 +5210,9 @@ Count: 589
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-planning-review.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-specialist-gate-results.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-sprint-plan.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-closure-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-correction-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-final-lead-review.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-human-review-packet.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-planning-review.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-specialist-gate-results.md
