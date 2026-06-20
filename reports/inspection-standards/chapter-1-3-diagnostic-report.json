@@ -1,0 +1,882 @@
+{
+  "schema_version": 1,
+  "report_id": "chapter-1-3-diagnostic-report",
+  "sprint_id": "INSPECT-11E/F",
+  "generated_date": "2026-06-19",
+  "status": "internal_diagnostic_report_generated",
+  "diagnostic_only": true,
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "evidence_pack_generated": false,
+  "teacher_school_pack_generated": false,
+  "public_external_facing_output_generated": false,
+  "public_external_sharing_authorized": false,
+  "package_script_or_ci_integration_created": false,
+  "dashboard_gate_created": false,
+  "quality_ref_or_scale_gate_integration_created": false,
+  "generated_lesson_output_mutated": false,
+  "source_registry_mutated": false,
+  "personal_data_present": false,
+  "product_route_adoption_authorized": false,
+  "diagnostics_mastery_pv_authorized": false,
+  "student_or_product_use_authorized": false,
+  "compliance_claim": false,
+  "inspection_readiness_claim": false,
+  "scope": {
+    "chapter": "Book 1 Chapter 1.3 Aanbod en marktevenwicht",
+    "paragraphs": [
+      "1.3.1",
+      "1.3.2",
+      "1.3.3",
+      "1.3.4"
+    ],
+    "language": "Dutch",
+    "report_surface": "internal diagnostic report only",
+    "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+  },
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "strategic_product_vision": "../4veco-lessen/specifications/product-vision.md",
+  "quality_standards_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md",
+  "controlling_implementation_gate": "reports/inspection-standards/chapter-1-3-diagnostic-onboarding-plan.md",
+  "accepted_readiness_packet": [
+    "reports/inspection-standards/chapter-1-3-readiness-closure.md",
+    "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+  ],
+  "source_files_used": [
+    {
+      "path": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "sha256": "b2f2e81849208ee464e4220c06292bf51fcf59065050d4a3d459ec4e45211e81",
+      "bytes": 14458
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-3-readiness-closure.md",
+      "sha256": "ce28b282ba52a38be5943966d200fcf5e5f455d04cd9cef0392cef4a8bd16781",
+      "bytes": 13529
+    },
+    {
+      "path": "docs/inspection-standards/chapter-1-3-source-traceability.md",
+      "sha256": "0101b738cb3b25fe499c0502d1deab8e60706cfa0fd7b448841d3c3ebb89670d",
+      "bytes": 1532
+    },
+    {
+      "path": "archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md",
+      "sha256": "faa0abb36908e24d1de9383366a150a72de388d3970b3158899b663bf4ccc8f3",
+      "bytes": 2704
+    },
+    {
+      "path": "archive/sprints/INSPECT-11D/INSPECT-11D-validation-log.md",
+      "sha256": "2297d1300a8f5794fa1402e905e0277b492df26ce7a0d2fcce1743936ca7574f",
+      "bytes": 3899
+    },
+    {
+      "path": "archive/sprints/INSPECT-11D/INSPECT-11D-specialist-gate-results.md",
+      "sha256": "5be35ecd56ce9f362358116149a5bfc8a1970e0cf27ef579e74d1110175f9a53",
+      "bytes": 2607
+    },
+    {
+      "path": "archive/sprints/INSPECT-11D/INSPECT-11D-lead-review-final.md",
+      "sha256": "cf502b08148f2f09727f375e6a12475d35ff9328a2c1221271c110fb4fff88c4",
+      "bytes": 2349
+    },
+    {
+      "path": "archive/sprints/INSPECT-11D/INSPECT-11D-closure-log.md",
+      "sha256": "0f281585821ee9ed4632901348f34f3f9983e5a402f804e11f4589c00b99f1d9",
+      "bytes": 4227
+    },
+    {
+      "path": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+      "sha256": "10f9874eb12e5748991a0c92334ec74871dee9d64662591fc51aa2d0d65270ec",
+      "bytes": 9039
+    },
+    {
+      "path": "../4veco-lessen/specifications/product-end-state.md",
+      "sha256": "4a5555faecda72b8ca0506a1962273ea4d97cd95026785cb9050e8a4331744d1",
+      "bytes": 25959
+    },
+    {
+      "path": "../4veco-lessen/specifications/product-vision.md",
+      "sha256": "21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56",
+      "bytes": 8047
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.md",
+      "sha256": "0b45cbe957934e50eb7bea4ae49112857f2e7b441b48e4e19021cfbf73d5bfc7",
+      "bytes": 10542
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.md",
+      "sha256": "32e07a135e22c9f1b24225ba981f994830651b67f2d1126300a7d500ea8062eb",
+      "bytes": 22885
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.md",
+      "sha256": "398cfe4731c2d7e2a564e6f75e516baaaaf3e9b7725dd2c1e1bcdea5516ae21f",
+      "bytes": 6327
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.md",
+      "sha256": "4c6c85be54aac4b8400a725a5d9d6a0968ed9dbbd4572370aeb36cf56b6678e4",
+      "bytes": 10470
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.md",
+      "sha256": "ce8cfee988557261ca6297a4986b6b0887aedd9a549a59247f39752c890f5a13",
+      "bytes": 6099
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.md",
+      "sha256": "f5e7d1e66ce10846d36781e59a4104f259025ee9cc98f9fc57dd599f5d4913bb",
+      "bytes": 7542
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md",
+      "sha256": "eeeebe0ba9073d2519e884c4d758e8601296b445f43732905337173f96c267ce",
+      "bytes": 3716
+    },
+    {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md",
+      "sha256": "b5ff7c742e136e921598abfabfb37765288621e7e44ba26c9d26113c7a9b3784",
+      "bytes": 3405
+    }
+  ],
+  "source_checkout_notes": {
+    "platform_head_policy": "not_embedded_in_generated_output; use validation logs and PR CI for platform commit evidence",
+    "lesson_head_policy": "not_embedded_in_generated_output; exact lesson proof files are validated by source hashes and line-range records",
+    "lesson_source_mode": "read-only exact Chapter 1.3 Markdown proof paths only; no directory globbing, implicit discovery, generated lesson-output scanning, or mutation"
+  },
+  "evidence_status": "route_local_only_with_downstream_blockers",
+  "diagnostic_status_vocabulary": [
+    "route_local_diagnostic_evidence",
+    "route_local_only_with_downstream_blockers",
+    "scope_boundary_flag",
+    "missing_required_evidence",
+    "not_authorized_for_this_surface",
+    "school_owned_evidence_needed"
+  ],
+  "input_eligibility_decisions": [
+    {
+      "input": "INSPECT-11D readiness closure packet",
+      "status": "accepted_for_internal_diagnostic_source",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "input": "Exact Chapter 1.3 lesson Markdown proof files",
+      "status": "accepted_exact_paths_only",
+      "source": "archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md"
+    },
+    {
+      "input": "School-owned evidence",
+      "status": "missing_required_evidence_for_school_or_external_claims",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    }
+  ],
+  "4veco_product_evidence": [
+    {
+      "target": "1.3.1",
+      "exercise_id": "Opgave 10",
+      "status": "route_local_diagnostic_evidence",
+      "proof_status": "route_local_only_with_downstream_blockers",
+      "evidence_summary": [
+        "Exercise Opgave 10: supply-factor shifts and movement-versus-shift distinction.",
+        "Answer form: graph plus short explanation.",
+        "Line ranges: opgaven 165-178; answers 331-384.",
+        "Route must isolate independent exercise from worked example before attempt."
+      ],
+      "line_ranges": {
+        "opgaven_lines": "165-178",
+        "answer_lines": "331-384"
+      },
+      "flags": [
+        "route-local-only",
+        "school-owned evidence still needed"
+      ],
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "blocks": [
+        "teacher/school-facing claims",
+        "public/external claims",
+        "Scale Gate or product-route authority"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Future diagnostic routes must isolate independent exercises from worked examples and answer content, then add school-owned evidence before any teacher/school-facing or product-route claim."
+    },
+    {
+      "target": "1.3.2",
+      "exercise_id": "Opgave 9",
+      "status": "route_local_diagnostic_evidence",
+      "proof_status": "route_local_only_with_downstream_blockers",
+      "evidence_summary": [
+        "Exercise Opgave 9: equilibrium solve, substitution check, surplus/shortage reasoning.",
+        "Answer form: algebraic calculation and short explanation.",
+        "Line ranges: opgaven 194-211; answers 251-284.",
+        "Route must isolate independent exercise from worked example before attempt."
+      ],
+      "line_ranges": {
+        "opgaven_lines": "194-211",
+        "answer_lines": "251-284"
+      },
+      "flags": [
+        "route-local-only",
+        "school-owned evidence still needed"
+      ],
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "blocks": [
+        "teacher/school-facing claims",
+        "public/external claims",
+        "Scale Gate or product-route authority"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Future diagnostic routes must isolate independent exercises from worked examples and answer content, then add school-owned evidence before any teacher/school-facing or product-route claim."
+    },
+    {
+      "target": "1.3.3",
+      "exercise_id": "Opgave 5",
+      "status": "route_local_diagnostic_evidence",
+      "proof_status": "route_local_only_with_downstream_blockers",
+      "evidence_summary": [
+        "Exercise Opgave 5: one-shift and bounded two-shift market reasoning.",
+        "Answer form: calculation, graph, explanation.",
+        "Line ranges: opgaven 122-141; answers 105-146.",
+        "Simultaneous-shift reasoning stays bounded to 1.3.3."
+      ],
+      "line_ranges": {
+        "opgaven_lines": "122-141",
+        "answer_lines": "105-146"
+      },
+      "flags": [
+        "route-local-only",
+        "school-owned evidence still needed"
+      ],
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "blocks": [
+        "teacher/school-facing claims",
+        "public/external claims",
+        "Scale Gate or product-route authority"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Future diagnostic routes must isolate independent exercises from worked examples and answer content, then add school-owned evidence before any teacher/school-facing or product-route claim."
+    },
+    {
+      "target": "1.3.3",
+      "exercise_id": "Opgave 7",
+      "status": "route_local_diagnostic_evidence",
+      "proof_status": "route_local_only_with_downstream_blockers",
+      "evidence_summary": [
+        "Exercise Opgave 7: combined demand/supply shift calculation.",
+        "Answer form: new equilibrium calculation and comparison.",
+        "Line ranges: opgaven 161-178; answers 169-208.",
+        "Route must isolate independent exercise before attempt."
+      ],
+      "line_ranges": {
+        "opgaven_lines": "161-178",
+        "answer_lines": "169-208"
+      },
+      "flags": [
+        "route-local-only",
+        "school-owned evidence still needed"
+      ],
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "blocks": [
+        "teacher/school-facing claims",
+        "public/external claims",
+        "Scale Gate or product-route authority"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Future diagnostic routes must isolate independent exercises from worked examples and answer content, then add school-owned evidence before any teacher/school-facing or product-route claim."
+    },
+    {
+      "target": "1.3.4",
+      "exercise_id": "Opgave 1",
+      "status": "route_local_diagnostic_evidence",
+      "proof_status": "route_local_only_with_downstream_blockers",
+      "evidence_summary": [
+        "Exercise Opgave 1: equilibrium and surplus/shortage consolidation.",
+        "Answer form: calculation and short explanation.",
+        "Line ranges: opgaven 11-25; answers 3-14.",
+        "No worked example precedes Opgave 1."
+      ],
+      "line_ranges": {
+        "opgaven_lines": "11-25",
+        "answer_lines": "3-14"
+      },
+      "flags": [
+        "route-local-only",
+        "school-owned evidence still needed"
+      ],
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "blocks": [
+        "teacher/school-facing claims",
+        "public/external claims",
+        "Scale Gate or product-route authority"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Future diagnostic routes must isolate independent exercises from worked examples and answer content, then add school-owned evidence before any teacher/school-facing or product-route claim."
+    },
+    {
+      "target": "1.3.4",
+      "exercise_id": "Opgave 4",
+      "status": "route_local_diagnostic_evidence",
+      "proof_status": "route_local_only_with_downstream_blockers",
+      "evidence_summary": [
+        "Exercise Opgave 4: own-price movement versus demand-factor shift.",
+        "Answer form: explanation plus graph direction.",
+        "Line ranges: opgaven 54-70; answers 43-53.",
+        "Repaired; no simultaneous supply shift."
+      ],
+      "line_ranges": {
+        "opgaven_lines": "54-70",
+        "answer_lines": "43-53"
+      },
+      "flags": [
+        "route-local-only",
+        "school-owned evidence still needed"
+      ],
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "blocks": [
+        "teacher/school-facing claims",
+        "public/external claims",
+        "Scale Gate or product-route authority"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Future diagnostic routes must isolate independent exercises from worked examples and answer content, then add school-owned evidence before any teacher/school-facing or product-route claim."
+    },
+    {
+      "target": "1.3.4",
+      "exercise_id": "Opgave 5",
+      "status": "route_local_diagnostic_evidence",
+      "proof_status": "route_local_only_with_downstream_blockers",
+      "evidence_summary": [
+        "Exercise Opgave 5: supply-shift calculation and comparison.",
+        "Answer form: calculation and short explanation.",
+        "Line ranges: opgaven 72-91; answers 57-67.",
+        "No answer-before-attempt issue inside opgaven file."
+      ],
+      "line_ranges": {
+        "opgaven_lines": "72-91",
+        "answer_lines": "57-67"
+      },
+      "flags": [
+        "route-local-only",
+        "school-owned evidence still needed"
+      ],
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "blocks": [
+        "teacher/school-facing claims",
+        "public/external claims",
+        "Scale Gate or product-route authority"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Future diagnostic routes must isolate independent exercises from worked examples and answer content, then add school-owned evidence before any teacher/school-facing or product-route claim."
+    }
+  ],
+  "target_reconciliation": [
+    {
+      "target": "1.3.1",
+      "registry_status": "reviewed_final",
+      "resolved_state": "quality-ref graph/text blocker reconciled as resolved; unresolved_blockers 0",
+      "classification": "core_requirement_closed",
+      "blocks": [],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 sprint may remove residual non-INSPECT flags.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "target": "1.3.2",
+      "registry_status": "reviewed_final",
+      "resolved_state": "reviewed_final_source_registry_with_lesson_flags; CP-6/Year 1 not claimed",
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "target": "1.3.3",
+      "registry_status": "reviewed_final",
+      "resolved_state": "reviewed_final_source_registry_with_lesson_flags; CP-6/Year 1 not claimed",
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure",
+        "bounded simultaneous-shift work inside 1.3.3"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "target": "1.3.4",
+      "registry_status": "reviewed_final_no_new_theory",
+      "resolved_state": "reviewed_final_source_registry_no_new_theory; simultaneous_shift_divergence repaired_in_generated_output; INSPECT-11D state A accepted, so this no longer blocks INSPECT-11E/F internal diagnostic report generation",
+      "classification": "core_requirement_closed_for_internal_diagnostic",
+      "blocks": [
+        "evidence-pack generation",
+        "teacher/school-facing output",
+        "public/external output",
+        "product-route adoption",
+        "Scale Gate",
+        "diagnostics/mastery/PV",
+        "student/product-use"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure packet",
+        "INSPECT-11E/F manually invoked internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Separate authorised route and renewed human review for any evidence-pack, teacher/school-facing, public/external, product-route, Scale Gate, diagnostics/mastery/PV, student/product-use, personal-data, compliance, approval, OP0, PTA, summative, or inspection-readiness claim.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    }
+  ],
+  "weak_or_missing_evidence": [
+    {
+      "area": "route-local-only evidence",
+      "status": "school_owned_evidence_needed",
+      "evidence": "INSPECT-11D proves route-local exercise/answer ranges for Chapter 1.3 but does not prove classroom implementation, school monitoring, interventions, accommodations, or competent-authority judgement.",
+      "boundary": "Internal diagnostic display only; school-owned evidence still needed before external or school-facing claims.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "area": "accessibility:rendered/static",
+      "status": "future_audit_flag",
+      "evidence": "Rendered desktop/mobile proof exists in archive/sprints/INSPECT-11D/rendered-proof, but this is not a WCAG, PDF-tagging, or teacher/school-facing accessibility certification.",
+      "boundary": "Accessibility/support limitations block accessibility certification and teacher/school-facing accessibility claims.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "area": "support:school-owned route",
+      "status": "school_owned_evidence_needed",
+      "evidence": "Support evidence remains product-route local. Care plans, accommodations, interventions, and school-wide support decisions are outside this report.",
+      "boundary": "No OP0, PTA, summative, inspection-readiness, compliance, or approval claim.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "area": "companion/advisory",
+      "status": "reviewed_not_applicable_for_this_packet",
+      "evidence": "INSPECT-11D repairs generated textbook/consolidation output and readiness proof only. Creating companion/advisory artifacts would expand scope without closing the named blocker.",
+      "boundary": "A later product-route sprint must review actual companion/check artifacts if used.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "INSPECT11D-TARGET-132",
+      "owner_surface": "1.3.2",
+      "finding": "reviewed_final_source_registry_with_lesson_flags; CP-6/Year 1 not claimed",
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "id": "INSPECT11D-TARGET-133",
+      "owner_surface": "1.3.3",
+      "finding": "reviewed_final_source_registry_with_lesson_flags; CP-6/Year 1 not claimed",
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure",
+        "bounded simultaneous-shift work inside 1.3.3"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "id": "INSPECT11D-FULL-BOOK",
+      "finding": "Full Book 1 validation may still report pre-existing Chapter 1.1/1.4 issues outside the Chapter 1.3 repair.",
+      "classification": "scope_boundary_flag",
+      "blocks": [
+        "Book 1 clean-health claim"
+      ],
+      "does_not_block": [
+        "scoped Chapter 1.3 readiness closure if Chapter 1.3 validators pass"
+      ],
+      "proof_required_to_close": "Separate Chapter 1.1/1.4 repair route.",
+      "owner_surface": "INSPECT11D-FULL-BOOK",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "id": "INSPECT11D-CHECK-SURFACE-AUTHORITY",
+      "finding": "Check-surface gate authority remains separate from this repair packet.",
+      "classification": "downstream_gate_blocker",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product-use"
+      ],
+      "does_not_block": [
+        "ordinary scoped PR work",
+        "INSPECT-11D review"
+      ],
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and naming authority unlocked.",
+      "owner_surface": "INSPECT11D-CHECK-SURFACE-AUTHORITY",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "id": "INSPECT11D-ACCESSIBILITY-DEPTH",
+      "finding": "Rendered proof and static support evidence are present, but this is not a full WCAG/PDF-tagging certification.",
+      "classification": "future_audit_flag",
+      "blocks": [
+        "accessibility certification",
+        "teacher/school-facing accessibility claim"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later accessibility audit for product-facing route.",
+      "owner_surface": "INSPECT11D-ACCESSIBILITY-DEPTH",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "id": "INSPECT11EF-SCHOOL-EVIDENCE",
+      "owner_surface": "school-owned evidence",
+      "finding": "The Chapter 1.3 report is route-local-only evidence; school-owned classroom, support, PTA, and inspection conversation evidence is still needed.",
+      "classification": "school_owned_evidence_needed",
+      "blocks": [
+        "teacher/school-facing output",
+        "public/external output",
+        "evidence-pack generation",
+        "inspection-readiness, compliance, approval, OP0, PTA, or summative claims"
+      ],
+      "does_not_block": [
+        "manual internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Separate school-owned evidence and renewed human review before any school-facing, public, product-route, or Scale Gate use.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    }
+  ],
+  "school_owned_evidence_still_needed": [
+    {
+      "item": "School implementation and classroom use evidence",
+      "reason": "Chapter 1.3 route-local proof does not show classroom implementation, teacher intervention choices, student support execution, or school monitoring.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "item": "PTA, grading, summative-validity, and assessment-policy evidence",
+      "reason": "The internal diagnostic report cannot establish PTA-validity, summative-validity, grading policy, or school assessment-policy compliance.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "item": "Inspection conversation and competent-authority judgement evidence",
+      "reason": "Product evidence remains separated from school obligations, inspection dialogue, SKA evidence, and competent-authority judgement.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    }
+  ],
+  "forbidden_inference": [
+    {
+      "inference": "Chapter 1.3 is teacher/school-facing ready or evidence-pack ready.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "inference": "Chapter 1.3 authorises public/external generated output or sharing.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "inference": "Chapter 1.3 authorises Scale Gate 1, product-route adoption, diagnostics/mastery/PV, student-use, or product-use.",
+      "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+    },
+    {
+      "inference": "4veco is compliant, approved, inspection-ready, OP0-complete, PTA-valid, or summative-valid.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "inference": "The internal diagnostic report processes personal data or proves school-owned support evidence.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "inference": "The report authorises package scripts, CI/build invocation, dashboard gates, quality-ref integration, or generated lesson-output scanning.",
+      "source": "archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md"
+    }
+  ],
+  "source_traceability": {
+    "decision": "authored_json_registry_controls_reviewed_final_target_status_when_blueprint_prose_is_stale",
+    "record": "docs/inspection-standards/chapter-1-3-source-traceability.md",
+    "source_registry_mutated": false,
+    "stale_blueprint_prose_policy": "Authored JSON registry controls reviewed-final target status when older blueprint prose conflicts; stale blueprint prose is context rather than authority.",
+    "source": "docs/inspection-standards/chapter-1-3-source-traceability.md"
+  },
+  "public_external_sharing_status": {
+    "status": "not_authorized",
+    "explanation": "INSPECT-11E/F generates an internal diagnostic report only. Public/external generated output or sharing is forbidden here and requires a later authorised route.",
+    "source": "archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md"
+  },
+  "owner_next_action": {
+    "action": "Owner next action: use this Chapter 1.3 report only as a manually invoked internal diagnostic surface. Owner must keep route-local-only evidence separate from school-owned evidence, preserve check-surface authority separation, and collect renewed human authority before any evidence-pack, teacher/school-facing, public/external, Scale Gate, product-route, diagnostics/mastery/PV, student-use, or product-use work.",
+    "source": "reports/inspection-standards/chapter-1-3-readiness-closure.json"
+  },
+  "proof_required_to_close": [
+    "Later CP-6/Year 1 route must close duplicated exercise-pattern flags.",
+    "Separate Chapter 1.1/1.4 repair route.",
+    "Renewed human review confirming check-surface gate closure and naming authority unlocked.",
+    "Later accessibility audit for product-facing route.",
+    "Separate school-owned evidence and renewed human review before any school-facing, public, product-route, or Scale Gate use.",
+    "Chapter 1.3 route-local proof does not show classroom implementation, teacher intervention choices, student support execution, or school monitoring.",
+    "The internal diagnostic report cannot establish PTA-validity, summative-validity, grading policy, or school assessment-policy compliance.",
+    "Product evidence remains separated from school obligations, inspection dialogue, SKA evidence, and competent-authority judgement."
+  ],
+  "refusal_status": {
+    "status": "none",
+    "explanation": "Default run generated only the allowlisted Chapter 1.3 internal diagnostic report pair."
+  },
+  "refusal_policy": [
+    {
+      "code": "STOP_SOURCE_ALLOWLIST_MISMATCH",
+      "condition": "A requested source path is outside the Chapter 1.3 source allowlist."
+    },
+    {
+      "code": "STOP_OUTPUT_ALLOWLIST_MISMATCH",
+      "condition": "A requested output path or argument is outside the Chapter 1.3 output allowlist."
+    },
+    {
+      "code": "STOP_MISSING_SOURCE",
+      "condition": "A required source file is missing or invalid."
+    },
+    {
+      "code": "STOP_HIDDEN_BLOCKER",
+      "condition": "A generated report would omit a carried blocker or authority boundary."
+    },
+    {
+      "code": "STOP_PACK_STRENGTH_REQUEST",
+      "condition": "A request asks for pack-strength, evidence-pack, teacher-facing, or school-facing language."
+    },
+    {
+      "code": "STOP_PUBLIC_EXTERNAL_REQUEST",
+      "condition": "A request asks for public/external generated output or public/external sharing."
+    },
+    {
+      "code": "STOP_PERSONAL_DATA",
+      "condition": "A request introduces student-level, school-identifiable, or personal data."
+    },
+    {
+      "code": "STOP_DOWNSTREAM_GATE_AUTHORITY",
+      "condition": "A request tries to unlock package/CI, dashboard, quality-ref, Scale Gate, product-route, diagnostics/mastery/PV, student-use, or product-use authority."
+    },
+    {
+      "code": "STOP_LESSON_OUTPUT_OR_PROTECTED_REFERENCE",
+      "condition": "A request reads or mutates lesson output or protected references outside the exact allowlist."
+    },
+    {
+      "code": "STOP_UNCITED_CLAIM",
+      "condition": "A generated claim lacks a source path."
+    }
+  ],
+  "finding_classification": [
+    {
+      "classification": "core_requirement_closed",
+      "blocks": [],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 sprint may remove residual non-INSPECT flags."
+    },
+    {
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags."
+    },
+    {
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure",
+        "bounded simultaneous-shift work inside 1.3.3"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags."
+    },
+    {
+      "classification": "core_requirement_closed_for_internal_diagnostic",
+      "blocks": [
+        "evidence-pack generation",
+        "teacher/school-facing output",
+        "public/external output",
+        "product-route adoption",
+        "Scale Gate",
+        "diagnostics/mastery/PV",
+        "student/product-use"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure packet",
+        "INSPECT-11E/F manually invoked internal diagnostic report generation"
+      ],
+      "proof_required_to_close": "Separate authorised route and renewed human review for any evidence-pack, teacher/school-facing, public/external, product-route, Scale Gate, diagnostics/mastery/PV, student/product-use, personal-data, compliance, approval, OP0, PTA, summative, or inspection-readiness claim."
+    },
+    {
+      "finding": "INSPECT-11D human review accepted state A and paired PRs merged; prior gate no longer blocks INSPECT-11E/F internal diagnostic report generation.",
+      "classification": "closed_prerequisite",
+      "blocks": [
+        "none for INSPECT-11E/F internal diagnostic report generation",
+        "downstream evidence-pack, teacher/school-facing, public/external, product-route, Scale Gate, diagnostics/mastery/PV, student/product-use, personal-data, compliance, approval, OP0, PTA, summative, and inspection-readiness claims remain blocked"
+      ],
+      "does_not_block": [
+        "manual internal Chapter 1.3 diagnostic report generation"
+      ],
+      "proof_required_to_close": "Completed by human acceptance of INSPECT-11D state A and governed platform PR #114 / lesson PR #28 merge sequence."
+    },
+    {
+      "finding": "Specialist gates and final lead review are recorded; this no longer blocks human-review request.",
+      "classification": "closed_gate_sequence",
+      "blocks": [
+        "none"
+      ],
+      "does_not_block": [
+        "human-review request",
+        "scoped PR review"
+      ],
+      "proof_required_to_close": "Completed: specialist gates recorded and final lead review returned PASS."
+    },
+    {
+      "finding": "Full Book 1 validation may still report pre-existing Chapter 1.1/1.4 issues outside the Chapter 1.3 repair.",
+      "classification": "scope_boundary_flag",
+      "blocks": [
+        "Book 1 clean-health claim"
+      ],
+      "does_not_block": [
+        "scoped Chapter 1.3 readiness closure if Chapter 1.3 validators pass"
+      ],
+      "proof_required_to_close": "Separate Chapter 1.1/1.4 repair route."
+    },
+    {
+      "finding": "Check-surface gate authority remains separate from this repair packet.",
+      "classification": "downstream_gate_blocker",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product-use"
+      ],
+      "does_not_block": [
+        "ordinary scoped PR work",
+        "INSPECT-11D review"
+      ],
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and naming authority unlocked."
+    },
+    {
+      "finding": "Rendered proof and static support evidence are present, but this is not a full WCAG/PDF-tagging certification.",
+      "classification": "future_audit_flag",
+      "blocks": [
+        "accessibility certification",
+        "teacher/school-facing accessibility claim"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later accessibility audit for product-facing route."
+    }
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state, operational_product_end_state, strategic_product_vision"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "original_sprint_gate_spec"
+    },
+    {
+      "requirement": "1.3.4 registry/output divergence repaired",
+      "status": "met",
+      "evidence": "target_134_repair"
+    },
+    {
+      "requirement": "Quality-ref/review reconciliation recorded for 1.3.1 through 1.3.4",
+      "status": "met",
+      "evidence": "target_reconciliation"
+    },
+    {
+      "requirement": "Route-local proof records include exercise IDs and line ranges",
+      "status": "met",
+      "evidence": "route_local_proof_records"
+    },
+    {
+      "requirement": "Rendered mobile/desktop proof included",
+      "status": "met",
+      "evidence": "rendered_proof"
+    },
+    {
+      "requirement": "Companion/advisory status resolved",
+      "status": "met_reviewed_not_applicable_for_this_packet",
+      "evidence": "companion_advisory"
+    },
+    {
+      "requirement": "Source traceability formalised",
+      "status": "met",
+      "evidence": "docs/inspection-standards/chapter-1-3-source-traceability.md"
+    },
+    {
+      "requirement": "Carried issues include blocks, does_not_block, proof_required_to_close",
+      "status": "met",
+      "evidence": "carried_issues"
+    },
+    {
+      "requirement": "PASS WITH FLAGS does not carry missing core requirement",
+      "status": "met",
+      "evidence": "All core requirements are closed for readiness recommendation; downstream authority remains blocked."
+    },
+    {
+      "requirement": "Chapter 1.3 diagnostic report generated",
+      "status": "met_internal_only",
+      "evidence": "reports/inspection-standards/chapter-1-3-diagnostic-report.md and .json"
+    },
+    {
+      "requirement": "Exact source allowlist enforced",
+      "status": "met",
+      "evidence": "source_files_used and scope descriptor sourcePaths"
+    },
+    {
+      "requirement": "Exact output allowlist enforced",
+      "status": "met",
+      "evidence": "output_files_written and scope descriptor outputPaths"
+    },
+    {
+      "requirement": "No missing core requirement carried as PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "blockers remain visible; no downstream authority unlocked"
+    }
+  ],
+  "output_files_written": [
+    "reports/inspection-standards/chapter-1-3-diagnostic-report.md",
+    "reports/inspection-standards/chapter-1-3-diagnostic-report.json"
+  ]
+}

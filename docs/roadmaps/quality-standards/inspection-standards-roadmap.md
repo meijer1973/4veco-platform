@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.10-inspect-11d-paired-repair-readiness-closure`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` closed / Chapter 1.3 diagnostic readiness remediation plan merged; `INSPECT-11B` closed / Chapter 1.3 readiness remediation and diagnostic tool health repair merged; `INSPECT-11C` closed / Chapter 1.3 lesson-side reconciliation and proof remediation merged; `INSPECT-11D` in progress / Chapter 1.3 paired lesson repair and readiness closure
+Roadmap version: `v2.11-inspect-11ef-chapter-13-diagnostic-onboarding`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` closed / Chapter 1.3 diagnostic readiness remediation plan merged; `INSPECT-11B` closed / Chapter 1.3 readiness remediation and diagnostic tool health repair merged; `INSPECT-11C` closed / Chapter 1.3 lesson-side reconciliation and proof remediation merged; `INSPECT-11D` closed / state A accepted and paired PRs merged; `INSPECT-11E/F` in progress / Chapter 1.3 internal diagnostic onboarding and stability closure
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -778,6 +778,50 @@ Acceptance criteria:
 - no product-route adoption, Scale Gate, diagnostics/mastery/PV, student-use,
   or product-use authority is unlocked.
 
+### INSPECT-11E/F - Chapter 1.3 Internal Diagnostic Onboarding And Stability Closure
+
+Goal: deliver a functioning, manually invoked, internal-only Chapter 1.3
+diagnostic report system while preserving Chapter 1.2 report semantics.
+
+This sprint is authorised only because INSPECT-11D reached accepted state A
+after human review and the governed platform-first, lesson-second merge
+sequence. It is not evidence-pack, teacher/school-facing, public/external,
+product-route, Scale Gate, diagnostics/mastery/PV, student-use, or product-use
+authority.
+
+Scope:
+
+- define and lead-review the INSPECT-11E implementation plan;
+- refactor the manual generator into explicit Chapter 1.2 and Chapter 1.3
+  scope descriptors;
+- generate `reports/inspection-standards/chapter-1-3-diagnostic-report.md`
+  and `.json`;
+- preserve Chapter 1.2 report semantics with deterministic currentness checks;
+- require exact per-scope source and output allowlists;
+- refuse forbidden audiences, claims, integrations, unknown scopes, and lesson
+  output scanning;
+- record Chapter 1.1 and Chapter 1.4 Book 1 assembly health as separate
+  `BOOK1-ASSEMBLY-HEALTH-1` backlog context, not as an INSPECT-11E/F blocker.
+
+Acceptance criteria:
+
+- REV-STD-1 is used for plan, review, validation, closure, and PR packet;
+- Chapter 1.2 semantic hash remains unchanged while volatile checkout metadata
+  is deterministic;
+- Chapter 1.3 report visibly carries route-local-only evidence status,
+  school-owned evidence still needed, forbidden inferences,
+  accessibility/support limitations, check-surface authority separation, owner
+  next action, and proof required to close;
+- stability checker verifies both scopes and the exact Chapter 1.3 read-only
+  lesson Markdown proof paths;
+- teacher/economics, legal/privacy, Dutch quality-inspection, and final lead
+  reviews pass after corrections;
+- no package script, CI hook, dashboard gate, quality-ref integration, Scale
+  Gate integration, evidence pack, teacher/school-facing output,
+  public/external output, product-route adoption, diagnostics/mastery/PV,
+  student/product-use, personal-data processing, or compliance/approval claim
+  is created.
+
 ### INSPECT-12 - Dutch Teacher/School Evidence Pack
 
 Goal: make the Dutch evidence pack useful as a school/teacher review artifact.
@@ -891,31 +935,31 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Complete INSPECT-11D Chapter 1.3 paired lesson repair and readiness closure
+Complete INSPECT-11E/F Chapter 1.3 internal diagnostic onboarding and stability closure
 ```
 
-Recommended posture after INSPECT-11C merge:
+Recommended posture after INSPECT-11D acceptance and governed merge:
 
 ```text
-accept or revise only INSPECT-11D paired repair/readiness closure output and its state A/B/C recommendation
-do not generate a Chapter 1.3 diagnostic report during INSPECT-11D
-do not generate a Chapter 1.3 evidence pack during INSPECT-11D
+accept or revise only INSPECT-11E/F internal diagnostic onboarding output
+allow a manually invoked internal Chapter 1.3 diagnostic report only inside INSPECT-11E/F
+do not generate a Chapter 1.3 evidence pack during INSPECT-11E/F
 keep the older multi-scope evidence-pack INSPECT-11 row blocked
-keep Chapter 1.3 implementation-plan and diagnostic report generation blocked unless INSPECT-11D core proof closes and renewed human review accepts that closure
+keep teacher/school-facing, public/external, product-route, and Scale Gate uses blocked
 keep Chapter 1.2 pack-strength, teacher/school-facing, and public/external work blocked
 keep package/CI/dashboard/quality-ref/Scale Gate integration blocked
-allow only the named paired Chapter 1.3 generated-output repair through platform source and regenerated lesson output
+do not mutate generated lesson output or protected references
 keep product-route adoption, diagnostics/mastery/PV, and student/product-use authority blocked
 keep non-Dutch standards work out of this roadmap
 keep personal-data processing and compliance/approval claims blocked
 ```
 
-The practical product question carried forward from INSPECT-11C into
-INSPECT-11D is:
+The practical product question carried forward from accepted INSPECT-11D into
+INSPECT-11E/F is:
 
-> After the paired repair, is Chapter 1.3 ready for a later internal diagnostic
-> implementation-plan sprint, still blocked only by narrow residual repairs, or
-> excluded as the next diagnostic scope?
+> Can Chapter 1.3 be onboarded as a manually invoked internal diagnostic report
+> while preserving Chapter 1.2 semantics and keeping all downstream product,
+> school-facing, public, and Scale Gate authority blocked?
 
 ## 9. Explicit Out-Of-Scope Work
 
