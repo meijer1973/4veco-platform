@@ -221,11 +221,19 @@ The sprint may write:
 
 ## Acceptance tests
 
-Visibility-only archive-layout command:
+Repository sprint-protocol visibility command required by the sprint-plan
+checker:
 
 ```bash
 node build-scripts/sprints/check-sprint-bundle.js GOAL-DQS-CLOSURE-1A --complete
 ```
+
+For this archive-governance packet, that command is named to preserve the
+repository sprint-plan protocol. It is not used as the operative closure
+evidence unless a matching `reports/sprints`/`references/data/sprints` bundle
+is instantiated. Archive visibility is covered by the sprint-plan checker, URL
+index check, and the committed `archive/sprints/GOAL-DQS-CLOSURE-1A/` review
+packet.
 
 Required executable checks:
 

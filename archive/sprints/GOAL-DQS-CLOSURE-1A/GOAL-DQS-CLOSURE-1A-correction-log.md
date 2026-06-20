@@ -1,6 +1,6 @@
 # GOAL-DQS-CLOSURE-1A Correction Log
 
-Status: active
+Status: closed locally; final PR publication guard required
 Date: 2026-06-20
 Sprint: `GOAL-DQS-CLOSURE-1A`
 
@@ -35,6 +35,7 @@ Sprint: `GOAL-DQS-CLOSURE-1A`
 | Lead planning review found the refusal matrix missed PR #124 cases. | validation_blocker | Final lead review readiness | Existing old refusals | Added `--publish`, `--school-pack`, `--external-share`, `--compliant`, and `--op0-complete`; preserved `--inspection-ready`. | Checker reports `refusal_cases=26`. | closed |
 | Lead planning review found the closure candidate lacked required decision vocabulary. | missing_core_requirement | Formal closure-policy packet | Accepted internal-layer component | Added `final_closure_policy_decision.selected: CLOSE_INTERNAL_SYSTEM` with all three allowed options and basis from both roll-up and internal pack candidate. | Checker verifies selected decision, decision count, options, and cross-report basis. | closed |
 | Roadmap and ledger still described GOAL-DQS-CLOSURE-1 as the current narrow closure stop. | stale_governance_map | Human review clarity | Local report generation | Updated roadmap, ledger, and roadmap version index to version `v2.13-goal-dqs-closure-original-contract`, marking GOAL-DQS-CLOSURE-1 partial and GOAL-DQS-CLOSURE-1A current. | Roadmap version index checker PASS. | closed |
+| Sprint plan listed the `reports/sprints` bundle checker ambiguously as visibility evidence for an archive-governance packet. | validation_scope_correction | Accurate validation record and sprint-plan checker PASS | GOAL-DQS-CLOSURE-1A archive packet closure | Kept the required command for repository sprint-plan protocol, but scoped it as protocol-only and not operative closure evidence because `check-sprint-bundle --complete` validates a separate `reports/sprints`/`references/data/sprints` schema. | Sprint-plan checker PASS after correction. | closed |
 
 ## Validation Evidence So Far
 

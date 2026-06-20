@@ -1,6 +1,6 @@
 # GOAL-DQS-CLOSURE-1A Human Review Packet
 
-Status: draft pending final PR CI evidence
+Status: ready for human review after final PR publication guard
 Date: 2026-06-20
 Sprint: `GOAL-DQS-CLOSURE-1A`
 PR: `https://github.com/meijer1973/4veco-platform/pull/124`
@@ -68,8 +68,8 @@ stable after human acceptance and merge. No school-pack trial is authorised.
 | No public/school-facing authorisation | met | DQS checker and specialist reviews |
 | No international scope | met | DQS checker and roadmap update |
 | Specialist reviews complete | met | Teacher/economics, legal/privacy, Dutch quality-inspection, accessibility |
-| Final lead review complete | pending | To record after final lead subagent review |
-| PR fresh, green, mergeable | pending | To record after final push and CI |
+| Final lead review complete | met | `archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-final-lead-review.md` |
+| PR fresh, green, mergeable | publication guard | Latest PR head must be 0 behind, non-draft, mergeable, and green after final metadata push |
 
 ## Generated Artifacts
 
@@ -133,10 +133,21 @@ Roadmap version index: PASS
 URL index: PASS
 Report JSON: PASS
 Diff hygiene: PASS
-Platform tests: PASS, 56 suites / 814 tests
+Platform tests: PASS, 57 suites / 820 tests passed
 ```
 
-Remote PR evidence is pending final push and CI refresh.
+Remote implementation evidence before final metadata:
+
+```text
+PR #124: non-draft, mergeable, CLEAN
+Implementation head: 9e6aefd6786d9e22535036869267114bca86ce81
+GitHub Actions: platform-ci / validate-platform PASS
+Run: 27869992910
+```
+
+The final metadata commit must receive its own fresh PR publication guard
+before this packet is handed to the human owner: branch 0 behind current
+`main`, PR non-draft, mergeable, and green on the latest head.
 
 ## Finding Classification
 
@@ -147,7 +158,7 @@ Remote PR evidence is pending final push and CI refresh.
 | Internal pack candidate is not authorised for distribution. | school_evidence_boundary | School/public distribution, school reliance, school-pack trial start | Internal owner review and closure decision basis | Separate human-authorised school-pack or school-owned evidence route |
 | School-owned evidence remains needed. | school_evidence_gap | School implementation, competent-authority judgement, PTA/summative validity, school-SKA/inspection reliance | Internal product-side diagnostic/support closure with gaps visible | School-owned classroom, support, governance, assessment, and inspection-conversation evidence |
 | Accessibility proof remains limited. | accessibility_boundary_pass | Product-facing, teacher/school-facing, school-pack, public/external, compliance, or stronger accessibility claims | Internal/report-only closure review | Full accessibility proof before stronger claims |
-| Remote PR proof is pending in this draft. | remote_proof_pending | Human review readiness | Local validation and final packet preparation | Final push, fresh green CI, 0 behind current main, non-draft, mergeable PR |
+| Final metadata commit requires fresh PR proof. | publication_guard | Human review readiness if the latest PR head is stale, red, draft, behind, or unmergeable | Content readiness after final lead PASS | Final push, fresh green CI, 0 behind current main, non-draft, mergeable PR |
 
 ## Human Review Prompts
 
