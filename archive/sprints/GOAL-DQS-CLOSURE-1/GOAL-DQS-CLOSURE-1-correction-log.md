@@ -42,6 +42,7 @@ Date: 2026-06-20
 |---|---|---|---|---|---|---|
 | Planning reviewer found the required `check:agent-worktree-safety` route was not executable because the worktree lock still belonged to stale `INSPECT-11EF`. | planning_validation_blocker | Planning PASS and sprint execution under the recorded validation route | DQS content/authority assessment | Released `INSPECT-11EF` lock, claimed `GOAL-DQS-CLOSURE-1` lock, and reran exact safety check. | `check:agent-worktree-safety --check --task GOAL-DQS-CLOSURE-1` returns `ok: true`, same owner/task, not stale. | closed |
 | Planning reviewer noted non-Dutch and compliance/approval-style forbidden terms fell through to generic unsupported-argument refusal. | refusal_matrix_hardening | Nothing after explicit stop codes were added | Planning PASS because generic refusal was already safe | Added explicit stop codes for non-Dutch and compliance/approval/inspection-readiness/OP0/PTA/summative claims; expanded checker from 14 to 21 refusal cases. | `check-dqs-closure-candidate.js` reports `refusal_cases=21`. | closed |
+| Final lead reviewer found `git diff --check origin/main...HEAD` failed because the generated DQS Markdown ended with an extra blank line at EOF. | validation_blocker | Final lead PASS, human-review-ready recommendation, and claimed PR-diff hygiene proof | DQS content, source/output allowlists, refusal matrix, specialist gate substance, and authority boundaries | Removed the generator's extra terminal blank line and regenerated the DQS closure-candidate Markdown. | `build-dqs-closure-candidate.js --check`, `check-dqs-closure-candidate.js`, and `git diff --check origin/main...HEAD` all pass after commit `a88e0d3a`. | closed |
 
 ## Closed Correction Proof
 
@@ -51,6 +52,7 @@ Date: 2026-06-20
 | `npm.cmd run check:agent-worktree-safety -- --claim --task GOAL-DQS-CLOSURE-1 --agent codex-main --require-prefix codex/,agent/` | PASS | New GOAL-DQS-CLOSURE-1 lock claimed. |
 | `npm.cmd run check:agent-worktree-safety -- --check --task GOAL-DQS-CLOSURE-1 --agent codex-main --require-prefix codex/,agent/` | PASS | `ok: true`; same owner/task; not stale. |
 | `node build-scripts/inspection/check-dqs-closure-candidate.js` | PASS | `OK DQS closure candidate check sources=21 outputs=2 refusal_cases=21`. |
+| `git diff --check origin/main...HEAD` | PASS | No whitespace errors after generated EOF correction commit `a88e0d3a`. |
 
 ## Carried Issues
 

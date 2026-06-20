@@ -64,6 +64,7 @@ Date: 2026-06-20
 | `node build-scripts/sprints/emit-url-index.js --check` | PASS | `OK url-index: reports/url-index.md is current`. |
 | `node build-scripts/reports/validate-report-json.js` | PASS | `OK report JSON contract: 14 report(s)`. |
 | `git diff --check` | PASS | No whitespace errors. |
+| `git diff --check origin/main...HEAD` | PASS after correction | Final lead initially found an extra blank line at EOF in the generated DQS Markdown. Commit `a88e0d3a` fixed the generator, regenerated the Markdown, and the PR-diff hygiene check now passes. |
 | `npm.cmd run check:platform` | PASS | 56 suites passed, 6 skipped; 814 tests passed, 8 skipped. Known fixture diagnostic output printed during tests. |
 
 ## DQS Refusal Matrix

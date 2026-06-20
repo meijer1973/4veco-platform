@@ -1,6 +1,6 @@
 # GOAL-DQS-CLOSURE-1 Closure Log
 
-Status: local closure candidate assembled; final lead and PR CI pending
+Status: local closure candidate assembled; final lead re-review and PR CI pending
 Date: 2026-06-20
 
 ## Product End-State And Original Spec
@@ -40,8 +40,8 @@ Date: 2026-06-20
 | Roadmap and ledger updated | met | `v2.12-goal-dqs-closure-candidate`; GOAL-DQS current stop |
 | Validation log complete locally | met | Local validation passed |
 | Specialist gate complete | met | Three MORE_THAN_SATISFIED verdicts |
-| Final lead review | pending | Not run yet |
-| PR publication and remote CI | pending | PR not opened yet |
+| Final lead review | correction pending re-review | Initial final lead REVISE for PR-diff EOF hygiene; correction committed in `a88e0d3a` |
+| PR publication and remote CI | pending refresh | Draft PR #124 opened and first CI passed before final-lead EOF correction; fresh CI required after correction push |
 
 ## Outputs
 
@@ -75,6 +75,7 @@ Local validation passed:
 - URL index;
 - report JSON contract;
 - diff hygiene;
+- PR-diff hygiene after final lead correction;
 - platform tests.
 
 Platform test result:
@@ -89,6 +90,7 @@ Platform test result:
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|
 | Current authorised Dutch quality-standards layer is ready for final lead review as an internal/report-only closure candidate. | closure_candidate | Human-review-ready merge recommendation until final lead and PR CI pass | Local closure packet assembly | Final lead PASS, PR publication, fresh mergeability, green CI, and human acceptance. |
+| Initial final lead review found a generated Markdown EOF hygiene issue. | validation_blocker_closed | Nothing after correction and final lead re-review | DQS content, source/output allowlists, refusal matrix, specialist gates, and authority boundaries | Commit `a88e0d3a`; `build-dqs-closure-candidate.js --check`; `check-dqs-closure-candidate.js`; `git diff --check origin/main...HEAD`; final lead re-review. |
 | L4/L5 maturity is not claimed. | future_authority_required | Evidence packs, teacher/school-facing output, public/external output, Scale Gate, product-route, diagnostics/mastery/PV, student/product-use, non-Dutch work, compliance, approval, OP0, PTA, summative, inspection-readiness, and school-SKA claims | Current internal/report-only closure candidate | Fresh human-authorised future sprints and MORE_THAN_SATISFIED specialist gates. |
 | Draft source/profile status remains visible. | draft_source_profile_boundary | Final source/profile authority and stronger external claims | Current internal/report-only closure candidate | Future source/profile maintenance sprint and explicit human acceptance. |
 | School-owned evidence remains required. | school_evidence_gap | Teacher/school-facing reliance and external inspection-readiness claims | Internal diagnostic/evidence-support closure | Separate school-owned evidence route and renewed human review. |
