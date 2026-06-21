@@ -16,6 +16,8 @@ const FIXTURE = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-f
 const REPORT_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.json');
 const REPORT_MD = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.md');
 const H5_VALIDATOR = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h5-mapping-regression.js');
+const FINAL_Q19_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-final-resolution-and-closure-bundle-1.json');
+const FINAL_Q19_CHECKER = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js');
 const MTUS = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
 const URL_INDEX = path.join(ROOT, 'reports', 'url-index.md');
 const AGENT_INDEX = path.join(ROOT, 'reports', 'github-agent-index-platform.md');
@@ -61,13 +63,27 @@ const ALLOWED_CHANGED_PATHS = new Set([
   'build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js',
   'build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js',
   'build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js',
+  'build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js',
+  'build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js',
   'build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js',
+  'build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js',
   'build-scripts/references/build-mtu-h5-regression-report.js',
   'build-scripts/reports/github-agent-index.js',
   'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json',
   'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.md',
   'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json',
   'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json',
+  'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png',
   'reports/mtu-hardening/mtu-h5-regression-fixture.json',
   'reports/mtu-hardening/mtu-h5-regression-report.json',
   'reports/mtu-hardening/mtu-h5-regression-report.md',
@@ -77,6 +93,11 @@ const ALLOWED_CHANGED_PATHS = new Set([
   'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.json',
   'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.md',
   'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/bundle-urls.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/bundle-urls.md',
   'reports/url-index.md',
   'reports/github-agent-index-platform.json',
   'reports/github-agent-index-platform.md',
@@ -149,6 +170,17 @@ function runValidator(fixturePath = FIXTURE, expectFail = false) {
   const run = spawnSync(process.execPath, args, { cwd: ROOT, encoding: 'utf8' });
   if (run.status !== 0) fail(`validator failed: ${(run.stderr || run.stdout).trim()}`);
   return JSON.parse(run.stdout);
+}
+
+function q19FinalClosureActive() {
+  if (!fs.existsSync(FINAL_Q19_PACKAGE_JSON) || !fs.existsSync(FINAL_Q19_CHECKER)) return false;
+  if (!fs.existsSync(REPORT_JSON)) return false;
+  const report = readJson(REPORT_JSON);
+  return report.status === 'passed' &&
+    report.question_bucket_counts?.q19?.failed === 0 &&
+    report.question_bucket_counts?.q19?.review_required === 0 &&
+    report.bucket_totals?.failed === 0 &&
+    report.bucket_totals?.review_required === 0;
 }
 
 function records(fixture) {
@@ -248,7 +280,7 @@ function requireValidatorState() {
   const step2Resolved = (step2.reviewed_equivalent_refs || []).includes(STEP2_REF);
   requireExact(bucketIds(result, 'failed', Q27_RECORD_ID), step2Resolved ? [] : EXPECTED_Q27_FAILED, 'q27 failed assertions');
   requireExact(bucketIds(result, 'review_required', Q27_RECORD_ID), step2Resolved ? [] : EXPECTED_Q27_REVIEW, 'q27 review assertions');
-  requireExact(bucketIds(result, 'review_required', Q19_RECORD_ID), EXPECTED_Q19_REVIEW, 'q19 held review assertions');
+  requireExact(bucketIds(result, 'review_required', Q19_RECORD_ID), q19FinalClosureActive() ? [] : EXPECTED_Q19_REVIEW, 'q19 held or closed review assertions');
 
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'q27-package2-negative-'));
   const tempFixture = path.join(tempDir, 'fixture.json');
@@ -269,7 +301,10 @@ function requireReportState() {
   const report = readJson(REPORT_JSON);
   const reportText = `${JSON.stringify(report)}\n${readText(REPORT_MD)}`;
   const counts = report.question_bucket_counts || {};
-  if (counts.q19?.failed !== 0 || counts.q19?.review_required !== 6) fail('report q19 must remain 0/6');
+  const q19Closed = q19FinalClosureActive();
+  if (counts.q19?.failed !== 0 || counts.q19?.review_required !== (q19Closed ? 0 : 6)) {
+    fail(q19Closed ? 'report q19 must be 0/0 after final closure' : 'report q19 must remain 0/6');
+  }
   const package2State = counts.q15?.failed === 0 &&
     counts.q15?.review_required === 4 &&
     counts.q27?.failed === 1 &&
@@ -281,7 +316,7 @@ function requireReportState() {
     counts.q27?.failed === 0 &&
     counts.q27?.review_required === 0 &&
     report.bucket_totals?.failed === 0 &&
-    report.bucket_totals?.review_required === 6;
+    report.bucket_totals?.review_required === (q19Closed ? 0 : 6);
   if (!package2State && !finalState) fail('report must be package-2 post-state 1/12 or final q27/q15 clean state 0/6');
   if (package2State) {
     requireText(reportText, 'step1_levy_equilibrium_repaired_step2_capacity_governance_blocker', 'report');
@@ -289,6 +324,7 @@ function requireReportState() {
   } else {
     requireText(reportText, 'clean_after_q27_step2_capacity_taxonomy_reviewed_equivalent', 'report');
     requireText(reportText, 'clean_after_q15_two_step_answer_skill_reviewed_equivalent', 'report');
+    if (q19Closed) requireText(reportText, 'clean_after_q19_final_resolution_reviewed_equivalent', 'report');
   }
   const staleFragments = finalState
     ? [

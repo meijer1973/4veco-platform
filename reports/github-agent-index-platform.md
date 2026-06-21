@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-21T08:03:52.251Z
+Generated: 2026-06-21T08:14:44.024Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/y3-macro-spine-mapping-1-20260620`
-Source commit: `37c38ca269ad52769e33e3694537bb060f769606`
-Files indexed: 5243
+Source branch: `codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620`
+Source commit: `dc9b78b21f129979ea72e84d132966efed142ed3`
+Files indexed: 5253
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -133,7 +133,7 @@ Count: 85
 
 ## build scripts
 
-Count: 519
+Count: 520
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -343,6 +343,7 @@ Count: 519
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js
 - build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
@@ -704,7 +705,7 @@ Count: 42
 
 ## validators
 
-Count: 511
+Count: 512
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -803,6 +804,7 @@ Count: 511
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js
 - build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
@@ -1883,7 +1885,7 @@ Count: 658
 
 ## reports
 
-Count: 3291
+Count: 3300
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2134,6 +2136,12 @@ Count: 3291
 - reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.md
 - reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json
 - reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.md
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md
 - reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json
 - reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.md
 - reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json
@@ -2730,6 +2738,9 @@ Count: 3291
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.md
+- reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.json
+- reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.md

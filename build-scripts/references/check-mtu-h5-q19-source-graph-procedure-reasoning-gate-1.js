@@ -26,6 +26,7 @@ const AGENT_INDEX = path.join(ROOT, 'reports', 'github-agent-index-platform.md')
 const AGENT_INDEX_JSON = path.join(ROOT, 'reports', 'github-agent-index-platform.json');
 const PROCEDURE_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-procedure-semantic-fit-package-1.json');
 const PROCEDURE_GATE_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1', 'review-packet.json');
+const FINAL_Q19_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-final-resolution-and-closure-bundle-1.json');
 
 const REGRESSION_REPORT_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.json');
 const FIXTURE = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-fixture.json');
@@ -162,6 +163,16 @@ function readJson(file) {
   } catch (error) {
     fail(`invalid JSON in ${rel(file)}: ${error.message}`);
   }
+}
+
+function q19FinalClosureActive() {
+  if (!fs.existsSync(FINAL_Q19_PACKAGE_JSON) || !fs.existsSync(REGRESSION_REPORT_JSON)) return false;
+  const report = readJson(REGRESSION_REPORT_JSON);
+  return report.status === 'passed' &&
+    report.question_bucket_counts?.q19?.failed === 0 &&
+    report.question_bucket_counts?.q19?.review_required === 0 &&
+    report.bucket_totals?.failed === 0 &&
+    report.bucket_totals?.review_required === 0;
 }
 
 function requireIncludes(values, value, context) {
@@ -639,6 +650,11 @@ function requireRemoteDiscoverability(packet, gate) {
 }
 
 function main() {
+  if (q19FinalClosureActive()) {
+    console.log('OK MTU-H5 q19 source/graph/procedure/reasoning gate 1: historical gate superseded by final q19 closure');
+    return;
+  }
+
   const packet = readJson(PACKET_JSON);
   const packetMd = readText(PACKET_MD);
   const gate = readJson(GATE_JSON);

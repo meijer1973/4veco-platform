@@ -4,6 +4,8 @@ Status: `pending_human_review`
 
 Review standard: `REV-STD-1`
 
+Historical status: `superseded_by` `MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1`. This gate is no longer authoritative for current q19 counts after the 2026-06-20 final resolution bundle.
+
 ## Product End State
 
 MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence.
