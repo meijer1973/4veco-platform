@@ -22,6 +22,7 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620/reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620/reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620/reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620/reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620/reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620/reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620/reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json

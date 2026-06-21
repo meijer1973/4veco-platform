@@ -32,6 +32,8 @@ The closure uses rendered official pages as stable report evidence:
 - `reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png`
 - `reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png`
 
+The package defines `Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT` as the direct rendered-evidence manifest. The checker validates the source PDF path and SHA-256, page number, rendered PNG path and SHA-256, `1489x2105` dimensions, and Poppler `pdftoppm` render method for all four records.
+
 The rendered source page shows the three market graphs needed for q19. The rendered correction pages show the three required graph-shift elements and conclusions: Curacao wage rises, Curacao inflation rises, and Aruba inflation rises.
 
 ## Operation Closure
@@ -61,6 +63,14 @@ The checker rejects:
 `superseded_by`: `MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1`
 
 The previous q19 hold package and q27/q15 closure-readiness bundle remain historical audit records. Their q19 `0 failed / 6 review_required` statements are no longer current after this bundle.
+
+## Repair Review
+
+Human review requested an administrative remote-closure repair: define the dangling `Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT` anchor, make the rendered evidence content-addressed, and refresh the branch.
+
+Teacher, economist, and quality inspection reviewers returned `MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE`. The lead repair verdict is `APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE`.
+
+This repair does not reopen the q19 semantic mapping and does not authorize Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, protected-reference mutation, MTU mutation, candidate writes, or student/product use.
 
 ## Human Review
 

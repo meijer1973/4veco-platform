@@ -19,7 +19,7 @@ MTU-H5 required a fresh approved non-Solo sample with operation decomposition, r
 - q19 uses only `A42`, `D10`, `D13`, and `A81`.
 - `A45` remains forbidden.
 - `full_graph_construction`, `calculus_route`, and `function_construction` remain forbidden route tags.
-- Rendered official prompt/source/correction pages are present and cited.
+- Rendered official prompt/source/correction pages are present, cited, and content-addressed by the package manifest.
 - Answer-form, misconception, scale-factor, and procedure evidence stays visible.
 - Negative guards cover A45, forbidden route, answer-form loss, hook reintroduction, procedure-hook reintroduction, closure-evidence loss, and the inherited Solo q1-q3 regression.
 - Historical q19 `0 failed / 6 review_required` packets are marked `superseded_by` this packet.
@@ -30,7 +30,7 @@ MTU-H5 required a fresh approved non-Solo sample with operation decomposition, r
 | Requirement | Status | Evidence |
 | --- | --- | --- |
 | Live counts | met | Validator and generated report must show q19/q3/q27/q15 all 0/0. |
-| Rendered official evidence | met | Four PNG renders are committed under the final bundle evidence directory. |
+| Rendered official evidence | met | `Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT` records source PDF SHA-256, page number, PNG SHA-256, dimensions, and Poppler `pdftoppm` render method for all four official renders. |
 | q19 MTU boundary | met | Fixture checker requires `A42`, `D10`, `D13`, `A81`; rejects `A45`. |
 | Answer/procedure hooks | met | Checker requires answer-form refs, misconception refs, no scale-factor expectation, and empty procedure-review hooks. |
 | Source overlay boundary | met | Overlay remains historical and unmutated. |
@@ -57,10 +57,19 @@ Valid decisions:
 
 Approval may authorize merge of this tooling/report/fixture closure only. It does not authorize Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, protected-reference mutation, MTU mutation, candidate writes, or student/product use.
 
+## Repair Review
+
+After the `REVISE_Q19_FINAL_RESOLUTION_PACKET` remote review, teacher, economist, and quality inspection reviewers returned `MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE`.
+
+Lead repair verdict: `APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE`.
+
+The repair is limited to the package anchor/provenance contract, generated discoverability surfaces, branch freshness, and validation. It does not reopen the q19 semantic mapping and does not authorize downstream product or student use.
+
 ## Must Review
 
 - `reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md`
 - `reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json`
+- `reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT`
 - `build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js`
 - `reports/mtu-hardening/mtu-h5-regression-fixture.json`
 - `reports/mtu-hardening/mtu-h5-regression-report.json`

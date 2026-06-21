@@ -14,7 +14,7 @@
     "A42, D10, D13, and A81 must be the only q19 mapped MTUs.",
     "A45 must remain forbidden for q19.",
     "full_graph_construction, calculus_route, and function_construction must remain forbidden q19 route tags.",
-    "Rendered official prompt/source/correction pages must be present and cited.",
+    "Rendered official prompt/source/correction pages must be present, cited, and content-addressed by the package manifest.",
     "Answer-form, misconception, scale-factor, and procedure evidence must remain visible.",
     "Negative guards must reject A45, forbidden route, answer-form loss, hook reintroduction, procedure-hook reintroduction, and closure-evidence loss.",
     "Historical q19 0/6 hold packets must be explicitly marked superseded_by this packet.",
@@ -22,7 +22,7 @@
   ],
   "core_requirement_checklist": [
     {"requirement_id": "core-1-live-counts", "status": "met", "evidence": "Final checker requires validator and generated report status passed with q19/q3/q27/q15 all 0/0."},
-    {"requirement_id": "core-2-rendered-official-evidence", "status": "met", "evidence": "Four PNG renders from official prompt/source/correction PDFs are committed under the final bundle evidence directory and checked as PNGs."},
+    {"requirement_id": "core-2-rendered-official-evidence", "status": "met", "evidence": "The package defines Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT with source PDF SHA-256, page number, PNG SHA-256, dimensions, and pdftoppm render method for all four official renders."},
     {"requirement_id": "core-3-q19-mtu-boundary", "status": "met", "evidence": "Fixture checker requires q19 A42/D10/D13/A81, forbids A45, and forbids full graph/calculus/function routes."},
     {"requirement_id": "core-4-answer-form-misconception-procedure", "status": "met", "evidence": "Fixture checker requires answer-form reviewed-equivalent refs, misconception refs, no scale-factor expectation, and empty procedure review hooks."},
     {"requirement_id": "core-5-source-overlay-boundary", "status": "met", "evidence": "Source overlay remains historical and unmutated; final closure is bounded to the MTU-H5 regression fixture and rendered evidence."},
@@ -48,6 +48,7 @@
   "must_review": [
     "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md",
     "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json",
+    "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT",
     "build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js",
     "reports/mtu-hardening/mtu-h5-regression-fixture.json",
     "reports/mtu-hardening/mtu-h5-regression-report.json",
@@ -106,7 +107,11 @@
     "teacher": "MORE_THAN_SATISFIED_TO_CLEAR_Q19",
     "economist": "MORE_THAN_SATISFIED_TO_CLEAR_Q19",
     "quality_inspection": "MORE_THAN_SATISFIED_TO_CLEAR_Q19",
-    "lead": "APPROVE_Q19_FINAL_RESOLUTION_EXECUTION"
+    "lead": "APPROVE_Q19_FINAL_RESOLUTION_EXECUTION",
+    "repair_teacher": "MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE",
+    "repair_economist": "MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE",
+    "repair_quality_inspection": "MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE",
+    "repair_lead": "APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE"
   },
   "authority_boundary": {
     "protected_reference_mutation_authorized": false,

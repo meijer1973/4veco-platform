@@ -33,6 +33,7 @@
     "reports/mtu-hardening/mtu-h5-regression-fixture.json",
     "reports/mtu-hardening/mtu-h5-regression-report.json",
     "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT",
     "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
     "references/external/exams/vw-1022-a-25-1-o.pdf#page=9&source=opgave-4",
     "references/external/exams/vw-1022-a-25-1-c.pdf#page=13&question=19",
@@ -52,6 +53,70 @@
     "references/machine/micro-teaching-units.json#A45",
     "references/data/exam-ingestion/source-annex-extraction-overlays.json#q19-historical-text-layer-limitation"
   ],
+  "Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT": {
+    "anchor_id": "Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT",
+    "decision": "content_addressed_rendered_official_evidence_manifest",
+    "reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT",
+    "covered_record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+    "covered_operation_ids": ["q19-step-1", "q19-step-2", "q19-step-3"],
+    "render_tool": {
+      "tool": "Poppler pdftoppm",
+      "format": "png",
+      "dpi": 180,
+      "command_pattern": "pdftoppm -png -r 180 -f <first-page> -l <last-page> <source-pdf> <output-prefix>"
+    },
+    "records": [
+      {
+        "render_id": "q19-opgave-08",
+        "role": "official_prompt_page",
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+        "source_pdf_sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+        "page_number": 8,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+        "rendered_png_sha256": "c72f5f53de8c608fa3399b60f2043533ba956d4a6993842d2cb62d3a403d9bc2",
+        "width_px": 1489,
+        "height_px": 2105,
+        "render_method": "Poppler pdftoppm -png -r 180 -f 8 -l 9 references/external/exams/vw-1022-a-25-1-o.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave"
+      },
+      {
+        "render_id": "q19-opgave-09",
+        "role": "official_source_page",
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+        "source_pdf_sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+        "page_number": 9,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+        "rendered_png_sha256": "23fdf99038e6fd03ff9e4b89b5d458417711407f6e66d9f9ee55bea517fa3c37",
+        "width_px": 1489,
+        "height_px": 2105,
+        "render_method": "Poppler pdftoppm -png -r 180 -f 8 -l 9 references/external/exams/vw-1022-a-25-1-o.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave"
+      },
+      {
+        "render_id": "q19-correction-13",
+        "role": "official_correction_model_page",
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+        "source_pdf_sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+        "page_number": 13,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+        "rendered_png_sha256": "66fb080fd6b5bfd66b14f7ce82f8017ec3ec1b136b744fc9154a79a9a4bda016",
+        "width_px": 1489,
+        "height_px": 2105,
+        "render_method": "Poppler pdftoppm -png -r 180 -f 13 -l 14 references/external/exams/vw-1022-a-25-1-c.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction"
+      },
+      {
+        "render_id": "q19-correction-14",
+        "role": "official_correction_model_page",
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+        "source_pdf_sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+        "page_number": 14,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png",
+        "rendered_png_sha256": "67acbc146c3aec98210dc80c315ef2fdfc5a2b276536c476097e172a6c25486a",
+        "width_px": 1489,
+        "height_px": 2105,
+        "render_method": "Poppler pdftoppm -png -r 180 -f 13 -l 14 references/external/exams/vw-1022-a-25-1-c.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction"
+      }
+    ],
+    "authority_boundary": "This manifest verifies official-source provenance for MTU-H5 regression evidence only. It does not mutate or promote protected external PDFs, source overlays, machine references, target exercises, lessons, diagnostics, PV, product routes, or student-facing output."
+  },
   "source_overlay_disposition": {
     "storage_path": "references/data/exam-ingestion/source-annex-extraction-overlays.json",
     "mutation_authorized": false,
@@ -73,6 +138,7 @@
       "answer_model_summary": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
       "decision": "close_by_reviewed_equivalent",
       "reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP1_LABOR_MARKET_SHIFT_REVIEWED_EQUIVALENT",
+      "direct_rendered_evidence_manifest_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT",
       "required_mtu_ids": ["A42", "D10", "A81"],
       "forbidden_mtu_ids": ["A45"],
       "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
@@ -90,6 +156,7 @@
       "answer_model_summary": "Draw a rightward demand shift on the Curacao goods/services market and conclude that Curacao inflation rises; the correction model also accepts a correct aggregate-supply alternative.",
       "decision": "close_by_reviewed_equivalent",
       "reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP2_CURACAO_INFLATION_SHIFT_REVIEWED_EQUIVALENT",
+      "direct_rendered_evidence_manifest_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT",
       "required_mtu_ids": ["A42", "D10", "D13", "A81"],
       "forbidden_mtu_ids": ["A45"],
       "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
@@ -107,6 +174,7 @@
       "answer_model_summary": "Draw a rightward demand shift on the Aruban goods/services market and conclude that Aruba inflation rises; the correction model also accepts a correct aggregate-supply alternative.",
       "decision": "close_by_reviewed_equivalent",
       "reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP3_ARUBA_INFLATION_SHIFT_REVIEWED_EQUIVALENT",
+      "direct_rendered_evidence_manifest_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT",
       "required_mtu_ids": ["A42", "D10", "D13", "A81"],
       "forbidden_mtu_ids": ["A45"],
       "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
@@ -182,6 +250,28 @@
     "status": "approved",
     "lead_verdict": "APPROVE_Q19_FINAL_RESOLUTION_EXECUTION",
     "lead_summary": "All three role reviews exceeded the threshold. Execute the fixture/report/checker closure only, preserve all no-product boundaries, and send the final packet for human remote review."
+  },
+  "repair_subagent_review_results": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE",
+      "summary": "The three q19 operation anchors remain semantically unchanged; answer-form, procedure, and misconception hooks remain visible; A45 and forbidden-route guards remain over-trigger protections."
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE",
+      "summary": "The q19 mappings remain economically defensible for the correction-model summaries; A45, full_graph_construction, calculus_route, and function_construction remain correctly forbidden."
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE",
+      "summary": "The direct rendered-evidence anchor resolves exactly once; the manifest content-addresses source PDFs, pages, PNG hashes, dimensions, and render method; negative guards and authority boundaries remain enforced."
+    }
+  ],
+  "repair_subagent_lead_review": {
+    "status": "approved",
+    "lead_verdict": "APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE",
+    "lead_summary": "Teacher, economist, and quality inspection reviewers are more than satisfied with the mechanical anchor/provenance repair. The semantic q19 fixture mapping remains unchanged, the live MTU-H5 fixture is 0 failed / 0 review_required / 0 blocked, and no downstream product or student authority is introduced."
   },
   "authority_boundary": {
     "protected_reference_mutation_authorized": false,

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const crypto = require('crypto');
 const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -55,6 +56,60 @@ const RENDERED_EVIDENCE = [
   'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png',
   'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png',
   'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png',
+];
+const DIRECT_RENDERED_ANCHOR = 'Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT';
+const DIRECT_RENDERED_REF = `reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#${DIRECT_RENDERED_ANCHOR}`;
+const REPAIR_REVIEW_VERDICT = 'MORE_THAN_SATISFIED_TO_APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE';
+const REPAIR_LEAD_VERDICT = 'APPROVE_REPAIRED_Q19_FINAL_CLOSURE_SURFACE';
+const EXPECTED_RENDERED_MANIFEST = [
+  {
+    render_id: 'q19-opgave-08',
+    role: 'official_prompt_page',
+    source_pdf_path: 'references/external/exams/vw-1022-a-25-1-o.pdf',
+    source_pdf_sha256: '1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc',
+    page_number: 8,
+    rendered_png_path: 'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png',
+    rendered_png_sha256: 'c72f5f53de8c608fa3399b60f2043533ba956d4a6993842d2cb62d3a403d9bc2',
+    width_px: 1489,
+    height_px: 2105,
+    render_method: 'Poppler pdftoppm -png -r 180 -f 8 -l 9 references/external/exams/vw-1022-a-25-1-o.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave',
+  },
+  {
+    render_id: 'q19-opgave-09',
+    role: 'official_source_page',
+    source_pdf_path: 'references/external/exams/vw-1022-a-25-1-o.pdf',
+    source_pdf_sha256: '1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc',
+    page_number: 9,
+    rendered_png_path: 'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png',
+    rendered_png_sha256: '23fdf99038e6fd03ff9e4b89b5d458417711407f6e66d9f9ee55bea517fa3c37',
+    width_px: 1489,
+    height_px: 2105,
+    render_method: 'Poppler pdftoppm -png -r 180 -f 8 -l 9 references/external/exams/vw-1022-a-25-1-o.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave',
+  },
+  {
+    render_id: 'q19-correction-13',
+    role: 'official_correction_model_page',
+    source_pdf_path: 'references/external/exams/vw-1022-a-25-1-c.pdf',
+    source_pdf_sha256: 'd10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617',
+    page_number: 13,
+    rendered_png_path: 'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png',
+    rendered_png_sha256: '66fb080fd6b5bfd66b14f7ce82f8017ec3ec1b136b744fc9154a79a9a4bda016',
+    width_px: 1489,
+    height_px: 2105,
+    render_method: 'Poppler pdftoppm -png -r 180 -f 13 -l 14 references/external/exams/vw-1022-a-25-1-c.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction',
+  },
+  {
+    render_id: 'q19-correction-14',
+    role: 'official_correction_model_page',
+    source_pdf_path: 'references/external/exams/vw-1022-a-25-1-c.pdf',
+    source_pdf_sha256: 'd10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617',
+    page_number: 14,
+    rendered_png_path: 'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png',
+    rendered_png_sha256: '67acbc146c3aec98210dc80c315ef2fdfc5a2b276536c476097e172a6c25486a',
+    width_px: 1489,
+    height_px: 2105,
+    render_method: 'Poppler pdftoppm -png -r 180 -f 13 -l 14 references/external/exams/vw-1022-a-25-1-c.pdf reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction',
+  },
 ];
 const HISTORICAL_SUPERSEDED = [
   'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json',
@@ -188,10 +243,58 @@ function requireExact(values, expected, context) {
   }
 }
 
+function requireEqual(actual, expected, context) {
+  if (actual !== expected) fail(`${context} mismatch; expected ${expected}, got ${actual}`);
+}
+
 function requireFalseBoundary(boundary, context) {
   for (const key of AUTHORITY_FALSE_KEYS) {
     if (!boundary || boundary[key] !== false) fail(`${context}.${key} must be false`);
   }
+}
+
+function sha256File(file) {
+  if (!fs.existsSync(file)) fail(`missing file: ${rel(file)}`);
+  return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+}
+
+function pngDimensions(file) {
+  if (!fs.existsSync(file)) fail(`missing PNG: ${rel(file)}`);
+  const buffer = fs.readFileSync(file);
+  if (buffer.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a') fail(`${rel(file)} must be a PNG render`);
+  if (buffer.toString('ascii', 12, 16) !== 'IHDR') fail(`${rel(file)} missing PNG IHDR chunk`);
+  return {
+    width_px: buffer.readUInt32BE(16),
+    height_px: buffer.readUInt32BE(20),
+  };
+}
+
+function collectAnchorIds(value, ids = new Map(), pointer = '$') {
+  if (!value || typeof value !== 'object') return ids;
+  if (!Array.isArray(value) && typeof value.anchor_id === 'string') {
+    const locations = ids.get(value.anchor_id) || [];
+    locations.push(pointer);
+    ids.set(value.anchor_id, locations);
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => collectAnchorIds(item, ids, `${pointer}[${index}]`));
+  } else {
+    Object.entries(value).forEach(([key, item]) => collectAnchorIds(item, ids, `${pointer}.${key}`));
+  }
+  return ids;
+}
+
+function requireUniquePackageAnchor(packet, anchorId) {
+  const ids = collectAnchorIds(packet);
+  const locations = ids.get(anchorId) || [];
+  if (locations.length !== 1) fail(`package anchor ${anchorId} must resolve exactly once, got ${locations.length}`);
+  if (!packet[anchorId] || packet[anchorId].anchor_id !== anchorId) {
+    fail(`package must define top-level manifest object ${anchorId}`);
+  }
+  for (const [id, anchorLocations] of ids.entries()) {
+    if (anchorLocations.length > 1) fail(`duplicate package anchor ${id}: ${anchorLocations.join(', ')}`);
+  }
+  return packet[anchorId];
 }
 
 function git(args) {
@@ -261,12 +364,39 @@ function expectFailure(fn, context) {
   if (!rejected) fail(`${context} must be rejected`);
 }
 
-function requireRenderedEvidence() {
-  for (const evidence of RENDERED_EVIDENCE) {
-    const abs = path.join(ROOT, evidence);
-    if (!fs.existsSync(abs)) fail(`missing rendered q19 evidence: ${evidence}`);
-    const signature = fs.readFileSync(abs, { encoding: null, flag: 'r' }).subarray(0, 8);
-    if (signature.toString('hex') !== '89504e470d0a1a0a') fail(`${evidence} must be a PNG render`);
+function requireRenderedEvidenceManifest(packet) {
+  const manifest = requireUniquePackageAnchor(packet, DIRECT_RENDERED_ANCHOR);
+  requireEqual(manifest.reviewed_equivalent_ref, DIRECT_RENDERED_REF, 'direct rendered manifest ref');
+  requireEqual(manifest.covered_record_id, Q19_RECORD_ID, 'direct rendered manifest covered record');
+  requireExact(manifest.covered_operation_ids || [], Object.keys(OPERATION_UNITS), 'direct rendered manifest covered operations');
+  requireEqual(manifest.render_tool?.tool, 'Poppler pdftoppm', 'direct rendered manifest render tool');
+  requireEqual(manifest.render_tool?.format, 'png', 'direct rendered manifest render format');
+  requireEqual(manifest.render_tool?.dpi, 180, 'direct rendered manifest render dpi');
+
+  const records = manifest.records || [];
+  if (records.length !== EXPECTED_RENDERED_MANIFEST.length) {
+    fail(`direct rendered manifest must contain ${EXPECTED_RENDERED_MANIFEST.length} records`);
+  }
+  const byId = new Map(records.map((record) => [record.render_id, record]));
+  if (byId.size !== records.length) fail('direct rendered manifest render_id values must be unique');
+  const seenPages = new Set();
+  const seenPngs = new Set();
+  for (const expected of EXPECTED_RENDERED_MANIFEST) {
+    const record = byId.get(expected.render_id);
+    if (!record) fail(`direct rendered manifest missing ${expected.render_id}`);
+    for (const [key, value] of Object.entries(expected)) {
+      requireEqual(record[key], value, `${expected.render_id}.${key}`);
+    }
+    const pageKey = `${record.source_pdf_path}#page=${record.page_number}`;
+    if (seenPages.has(pageKey)) fail(`direct rendered manifest duplicates page ${pageKey}`);
+    seenPages.add(pageKey);
+    if (seenPngs.has(record.rendered_png_path)) fail(`direct rendered manifest duplicates PNG ${record.rendered_png_path}`);
+    seenPngs.add(record.rendered_png_path);
+    requireEqual(sha256File(path.join(ROOT, record.source_pdf_path)), record.source_pdf_sha256, `${expected.render_id}.source_pdf_sha256`);
+    requireEqual(sha256File(path.join(ROOT, record.rendered_png_path)), record.rendered_png_sha256, `${expected.render_id}.rendered_png_sha256`);
+    const dimensions = pngDimensions(path.join(ROOT, record.rendered_png_path));
+    requireEqual(dimensions.width_px, record.width_px, `${expected.render_id}.width_px`);
+    requireEqual(dimensions.height_px, record.height_px, `${expected.render_id}.height_px`);
   }
 }
 
@@ -291,7 +421,7 @@ function requirePackage(packet, gate) {
   }
   requireFalseBoundary(packet.authority_boundary, 'package.authority_boundary');
   requireFalseBoundary(gate.authority_boundary, 'gate.authority_boundary');
-  requireIncludesAll(packet.source_evidence || [], RENDERED_EVIDENCE, 'package source evidence');
+  requireIncludesAll(packet.source_evidence || [], [DIRECT_RENDERED_REF, ...RENDERED_EVIDENCE], 'package source evidence');
   requireIncludesAll(gate.must_review || [], [
     rel(PACKAGE_JSON),
     rel(PACKAGE_MD),
@@ -315,12 +445,34 @@ function requirePackage(packet, gate) {
   if (packet.subagent_lead_review?.lead_verdict !== 'APPROVE_Q19_FINAL_RESOLUTION_EXECUTION') {
     fail('lead review verdict mismatch');
   }
+  for (const row of packet.repair_subagent_review_results || []) {
+    if (row.verdict !== REPAIR_REVIEW_VERDICT) {
+      fail(`${row.agent} repair verdict must be ${REPAIR_REVIEW_VERDICT}`);
+    }
+  }
+  requireIncludesAll((packet.repair_subagent_review_results || []).map((row) => row.agent), [
+    'teacher',
+    'economist',
+    'quality_inspection',
+  ], 'package repair subagent results');
+  if (packet.repair_subagent_lead_review?.lead_verdict !== REPAIR_LEAD_VERDICT) {
+    fail(`repair lead review verdict must be ${REPAIR_LEAD_VERDICT}`);
+  }
+  if (gate.review_results?.repair_lead !== REPAIR_LEAD_VERDICT) {
+    fail(`gate repair lead verdict must be ${REPAIR_LEAD_VERDICT}`);
+  }
+  for (const key of ['repair_teacher', 'repair_economist', 'repair_quality_inspection']) {
+    if (gate.review_results?.[key] !== REPAIR_REVIEW_VERDICT) {
+      fail(`gate review_results.${key} must be ${REPAIR_REVIEW_VERDICT}`);
+    }
+  }
 
   for (const operation of packet.operation_evidence_surface || []) {
     const expectedRef = FINAL_REFS[operation.operation_id];
     if (!expectedRef) fail(`unexpected package operation ${operation.operation_id}`);
     if (operation.decision !== 'close_by_reviewed_equivalent') fail(`${operation.operation_id}.decision mismatch`);
     requireIncludes(operation.reviewed_equivalent_ref ? [operation.reviewed_equivalent_ref] : [], expectedRef, `${operation.operation_id}.reviewed_equivalent_ref`);
+    requireEqual(operation.direct_rendered_evidence_manifest_ref, DIRECT_RENDERED_REF, `${operation.operation_id}.direct_rendered_evidence_manifest_ref`);
     requireExact(operation.required_mtu_ids || [], OPERATION_UNITS[operation.operation_id], `${operation.operation_id}.required_mtu_ids`);
     requireIncludes(operation.forbidden_mtu_ids || [], 'A45', `${operation.operation_id}.forbidden_mtu_ids`);
     requireIncludesAll(operation.forbidden_route_tags || [], FORBIDDEN_ROUTE_TAGS, `${operation.operation_id}.forbidden_route_tags`);
@@ -335,7 +487,7 @@ function requireFixtureShape(fixture) {
   requireNotIncludes(q19.mapped_mtu_ids || [], 'A45', 'q19 mapped MTUs');
   requireIncludesAll(q19.source_evidence_paths || [], [
     ...RENDERED_EVIDENCE,
-    'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT',
+    DIRECT_RENDERED_REF,
   ], 'q19 source evidence paths');
 
   for (const operationId of Object.keys(OPERATION_UNITS)) {
@@ -584,6 +736,11 @@ function requireMarkdown() {
       'student/product use',
       'Scale Gate 1',
       'superseded_by',
+      DIRECT_RENDERED_ANCHOR,
+      'SHA-256',
+      'pdftoppm',
+      REPAIR_REVIEW_VERDICT,
+      REPAIR_LEAD_VERDICT,
     ]) {
       requireText(text, needle, context);
     }
@@ -595,7 +752,7 @@ function main() {
   const gate = readJson(GATE_JSON);
   requireGitSuccess(['cat-file', '-e', `${START_COMMIT}:reports/mtu-hardening/mtu-h5-regression-fixture.json`], 'start commit must contain MTU-H5 fixture');
   requirePackage(packet, gate);
-  requireRenderedEvidence();
+  requireRenderedEvidenceManifest(packet);
   requireFixtureShape(readJson(FIXTURE));
   requireValidatorState();
   requireReportState();
