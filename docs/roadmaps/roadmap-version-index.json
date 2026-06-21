@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-19",
+  "updated_on": "2026-06-20",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -86,14 +86,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v2.11-inspect-11ef-chapter-13-diagnostic-onboarding",
+      "version": "v2.13-goal-dqs-closure-original-contract",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-06-19",
+      "updated_on": "2026-06-20",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10B merged only a manually invoked internal diagnostic generator and Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source/output allowlists, with carried blockers visible. INSPECT-10C closed diagnostic generator review/stability hardening. INSPECT-10D closed the internal diagnostic tool operating procedure. INSPECT-11 through INSPECT-11D accepted Chapter 1.3 readiness state A and merged the paired platform/lesson repair. INSPECT-11E/F is active as a manual internal Chapter 1.3 diagnostic onboarding track with exact source/output allowlists, Chapter 1.2 semantic regression protection, and refusal checks. Evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard gates, quality-ref, Scale Gate, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10B merged only a manually invoked internal diagnostic generator and Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source/output allowlists, with carried blockers visible. INSPECT-10C closed diagnostic generator review/stability hardening. INSPECT-10D closed the internal diagnostic tool operating procedure. INSPECT-11 through INSPECT-11D accepted Chapter 1.3 readiness state A and merged the paired platform/lesson repair. INSPECT-11E/F is now closed and merged as the manual internal Chapter 1.3 diagnostic onboarding track with exact source/output allowlists, Chapter 1.2 semantic regression protection, and refusal checks. GOAL-DQS-CLOSURE-1 is accepted only as a strong internal-layer closure component. GOAL-DQS-CLOSURE-1A is the current original-contract completion stop for PR #124, adding the Dutch roll-up, internal school-evidence-pack candidate, and explicit CLOSE_INTERNAL_SYSTEM decision. This closes only the internal/report-only Dutch system after human acceptance and merge; no school-pack trial is authorised. Evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard gates, quality-ref, Scale Gate, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, non-Dutch or international standards work, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",
