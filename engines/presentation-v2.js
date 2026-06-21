@@ -13,7 +13,7 @@
   let index = Math.max(0, slides.findIndex((slide) => `#${slide.id}` === window.location.hash));
   if (index < 0) index = 0;
 
-  function show(nextIndex, pushHash) {
+  function show(nextIndex, pushHash, focusActive) {
     index = Math.max(0, Math.min(slides.length - 1, nextIndex));
     slides.forEach((slide, i) => {
       const active = i === index;
@@ -30,20 +30,44 @@
     if (prev) prev.disabled = index === 0;
     if (next) next.disabled = index === slides.length - 1;
     if (pushHash && slides[index]) history.replaceState(null, '', `#${slides[index].id}`);
+    if (focusActive && slides[index]) {
+      const focusTarget = slides[index].querySelector('h2') || slides[index];
+      if (!focusTarget.hasAttribute('tabindex')) focusTarget.setAttribute('tabindex', '-1');
+      try {
+        focusTarget.focus({ preventScroll: true });
+      } catch (_err) {
+        focusTarget.focus();
+      }
+    }
   }
 
   links.forEach((link, i) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
-      show(i, true);
+      show(i, true, true);
     });
   });
-  if (prev) prev.addEventListener('click', () => show(index - 1, true));
-  if (next) next.addEventListener('click', () => show(index + 1, true));
+  if (prev) prev.addEventListener('click', () => show(index - 1, true, true));
+  if (next) next.addEventListener('click', () => show(index + 1, true, true));
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight' || event.key === 'PageDown') show(index + 1, true);
-    if (event.key === 'ArrowLeft' || event.key === 'PageUp') show(index - 1, true);
+    if (isEditableTarget(event.target)) return;
+    if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') {
+      event.preventDefault();
+      show(index + 1, true, true);
+    }
+    if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
+      event.preventDefault();
+      show(index - 1, true, true);
+    }
+    if (event.key === 'Home') {
+      event.preventDefault();
+      show(0, true, true);
+    }
+    if (event.key === 'End') {
+      event.preventDefault();
+      show(slides.length - 1, true, true);
+    }
   });
 
   if (notesToggle) {
@@ -51,7 +75,9 @@
       const pressed = notesToggle.getAttribute('aria-pressed') === 'true';
       notesToggle.setAttribute('aria-pressed', String(!pressed));
       notesToggle.setAttribute('aria-expanded', String(!pressed));
-      notesToggle.textContent = pressed ? 'Speaker notes' : 'Hide speaker notes';
+      const openLabel = notesToggle.getAttribute('data-open-label') || 'Studentgerichte uitleg';
+      const closeLabel = notesToggle.getAttribute('data-close-label') || 'Verberg uitleg';
+      notesToggle.textContent = pressed ? openLabel : closeLabel;
       root.classList.toggle('pv2-speaker-notes-open', !pressed);
       root.querySelectorAll('.pv2-notes').forEach((details) => {
         details.open = !pressed;
@@ -121,13 +147,19 @@
     return Boolean(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
   }
 
+  function isEditableTarget(target) {
+    if (!target) return false;
+    const tag = target.tagName;
+    return target.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+  }
+
   document.addEventListener('fullscreenchange', () => {
     updateFullscreenButton(document.fullscreenElement === root);
   });
 
   window.addEventListener('hashchange', () => {
     const target = slides.findIndex((slide) => `#${slide.id}` === window.location.hash);
-    if (target >= 0) show(target, false);
+    if (target >= 0) show(target, false, true);
   });
 
   show(index, Boolean(window.location.hash));

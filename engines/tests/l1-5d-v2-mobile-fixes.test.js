@@ -83,26 +83,17 @@ const htmlExists = fs.existsSync(PRESENTATIE_HTML);
     let html;
     beforeAll(() => { html = fs.readFileSync(PRESENTATIE_HTML, 'utf8'); });
 
-    test('slide 5 card 04 subtitle is "Opbrengst − alternatieve kosten." only', () => {
-        // Pre-B7 the card 4 subtitle absorbed the side-by-side
-        // "Figuur 3 · het keuzeproces in vier stappen" caption,
-        // producing a polluted subtitle. Post-B7 the subtitle is just
-        // the canonical step description.
-        const slide5 = html.match(
-            /<section class="slide [^"]+" id="slide-5"[\s\S]*?<\/section>/
-        );
-        expect(slide5).not.toBeNull();
-        const card4 = slide5[0].match(
-            /<span class="card-num">04<\/span>[\s\S]*?<\/div>\s*<\/div>/
-        );
-        expect(card4).not.toBeNull();
-        expect(card4[0]).toMatch(/<p class="card-subtitle">Opbrengst[^<]*alternatieve kosten\.<\/p>/);
-        expect(card4[0]).not.toMatch(/Figuur 3/);
+    test('active §1.1.1 presentation route is no longer the legacy converter surface', () => {
+        expect(html).toMatch(/data-layout="presentation-v2"/);
+        expect(html).not.toMatch(/data-layout="presentatie-v1"/);
+        expect(html).not.toMatch(/slide-pseudotable|slide-option-grid|slide-notes-list/);
     });
 
-    test('"Figuur 3" caption renders as its own slide-body paragraph', () => {
-        // The caption is now a separate body paragraph between the
-        // card stack and the figure.
-        expect(html).toMatch(/<p class="slide-text">Figuur 3 · het keuzeproces in vier stappen<\/p>/);
+    test('procedure and worked-example content remains explicit in the new route', () => {
+        expect(html).toContain('Schaars middel');
+        expect(html).toContain('Opbrengsten');
+        expect(html).toContain('Tarwe');
+        expect(html).toContain('Maïs');
+        expect(html).toContain('€3.500');
     });
 });
