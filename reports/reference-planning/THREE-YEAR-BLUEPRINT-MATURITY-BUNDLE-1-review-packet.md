@@ -10,10 +10,13 @@ Verdict: THREE-YEAR BLUEPRINT PLANNING END STATE READY / PASS WITH FLAGS. No
 missing core requirement is carried.
 
 This packet freezes the 11-book, 4+4+3 planning route and defines the
-production critical path. It does not create target records, mint MTUs, mutate
-protected references, generate lessons, close operation rows, authorize product
-routes, close CP-6 or Scale Gate, or authorize diagnostics, mastery, PV,
-summative use, or student/product use.
+production critical path. It includes a reviewed owned-source update to
+`references/owned/course-blueprint-v6-three-year.md` and
+`references/owned/course-blueprint-v6-three-year.meta.json` so the canonical v6
+source matches the maturity packet. It does not create target records, mint
+MTUs, mutate machine/external/authored-target references, generate lessons,
+close operation rows, authorize product routes, close CP-6 or Scale Gate, or
+authorize diagnostics, mastery, PV, summative use, or student/product use.
 
 ## Product End-State And Original Specs
 
@@ -34,6 +37,8 @@ Original sprint/gate/source specs:
 
 Evidence packet:
 
+- `references/owned/course-blueprint-v6-three-year.md`
+- `references/owned/course-blueprint-v6-three-year.meta.json`
 - `reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-architecture-matrix.md`
 - `reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-count-model.md`
 - `reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-evidence-wave-overlay.md`
@@ -55,15 +60,16 @@ Evidence packet:
 2. Fix the 4+4+3 course route.
 3. Give all eleven books stable roles.
 4. Resolve the working load model.
-5. Record every candidate status through row-level matrices and maturity index.
-6. Make the exam-training progression explicit.
-7. Give every book and operation a known evidence state.
-8. Define the production critical path.
-9. Define change control.
-10. Preserve Q19 exact HOLD without making it a universal Book 10 blocker.
-11. Keep all downstream target/MTU/lesson/product/Scale/student-use authority false.
-12. Use read-only lead reviews before human return.
-13. Do not carry a missing core requirement under `PASS WITH FLAGS`.
+5. Update canonical v6 and v6 metadata to match the accepted final model.
+6. Record every candidate status through row-level matrices and maturity index.
+7. Make the exam-training progression explicit.
+8. Give every book and operation a known evidence state.
+9. Define the production critical path.
+10. Define change control.
+11. Preserve Q19 exact HOLD without making it a universal Book 10 blocker.
+12. Keep all downstream target/MTU/lesson/product/Scale/student-use authority false.
+13. Use read-only lead reviews before human return.
+14. Do not carry a missing core requirement under `PASS WITH FLAGS`.
 
 ## Core-Requirement Checklist
 
@@ -74,6 +80,7 @@ Evidence packet:
 | 4+4+3 route fixed | met | architecture matrix | Book/test-week route can govern later target work |
 | Eleven book roles stable | met | architecture matrix | Structural redesign can stop after approval |
 | Working load model resolved | met | count model | Book 5/6/11 count issues closed at planning level |
+| Canonical v6 source parity | met | v6 source, v6 metadata, and hardened checker | The authoritative owned blueprint matches the maturity packet |
 | Candidate status known | met | candidate status index and row-level matrices | No candidate has unknown maturity status |
 | Exam-training progression explicit | met | assessment/retrieval spine and Book 11 protocol | Book 11 route is operationally defined |
 | Evidence state complete | met | official evidence and operation coverage matrices | Missing evidence is named backlog, not unknown |
@@ -92,6 +99,7 @@ Evidence packet:
 | TYBM-006 | scale_blocker | critical | Target-exercise anchors and MTU/task-family proof remain missing for most Year 2/3 candidates. | target records, MTU closure, production paragraphs | planning maturity | target and task-family review. |
 | TYBM-007 | scale_blocker | critical | Q19 remains exact HOLD only for its own source/graph/PV route. | Q19 source/graph/PV, Q19-dependent MTU-H5, Q19-dependent lesson handoff | Book 10 architecture, q23/q24, other IS-MB-GA/open-economy evidence | reconstructable source/graph proof and gate authority. |
 | TYBM-008 | scale_blocker | critical | Product/Scale/student-use authority remains false. | product/Scale/diagnostics/mastery/PV/summative/student use | planning maturity | separate product-proof gates. |
+| TYBM-010 | core_requirement_met | critical | Canonical v6 and v6 metadata now carry the final counts, Book 11 9+4 model, production critical path, and `BLUEPRINT-CHANGE-REVIEW` boundary. | Nothing for planning maturity | machine/external/authored-target mutation, lesson/product use | Hardened checker plus read-only source/report parity review. |
 
 ## Decision
 
@@ -108,7 +116,8 @@ Not allowed:
 
 - Target-registry records.
 - MTU minting or protected machine mutation.
-- Protected external/authored reference mutation.
+- Machine, external, authored-target, lesson, or product mutation beyond the
+  reviewed owned v6 source/metadata parity update.
 - Operation or answer-skill storage writes.
 - Generated lessons.
 - Official operation closure.

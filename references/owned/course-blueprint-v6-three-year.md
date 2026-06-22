@@ -1,9 +1,10 @@
 # Course Blueprint v6 Three-Year Umbrella
 
-Status: owned three-year umbrella planning authority
+Status: owned three-year umbrella planning end-state authority
 Version: v6-three-year umbrella
 Detailed Year 1 baseline: `references/owned/course-blueprint-v5.md`
 Promoted by: `BLUEPRINT-V6-AUTHORITY-PROMOTION-1`
+Maturity packet: `THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1`
 Do not use for protected reference mutation, product-route adoption, or
 student-facing authority.
 
@@ -53,6 +54,11 @@ Authority depends on the claim type:
 - The final course uses 11 books, not the older 13-book concept.
 - The formal assessment calendar is 4 + 4 + 3 books across three years.
 - Each formal test week corresponds to one book.
+- The final planning count model is 148 count-bearing lessons and 152 scheduled
+  modules/cycles overall.
+- Books 5-11 have exact planning counts: Book 5 = 13, Book 6 = 13,
+  Book 7 = 14, Book 8 = 16, Book 9 = 14, Book 10 = 15, and Book 11 =
+  9 count-bearing modules plus 4 scheduled timed-paper/repair cycles.
 - v6 is the three-year umbrella planning authority for book-level route,
   assessment-calendar structure, and sequencing.
 - v5 remains the detailed Year 1 / Books 1-4 baseline until a later explicit
@@ -98,25 +104,38 @@ Authority depends on the claim type:
 | 10 | Year 3, test week 2 | Monetary policy, IS-MB-GA, open economy | Policy transmission, exchange-rate channel, shock analysis. |
 | 11 | Year 3, test week 3 | Integrated policy and final exam training | Mixed CvTE-style cases, full-paper practice, answer-model and time discipline. |
 
-## Draft Load Envelopes
+## Final Planning Count Model
 
-These are planning envelopes, not final paragraph counts. They exist to stop the
-three-year umbrella from becoming unconstrained while leaving exact counts to
-later review.
+These are the accepted planning counts for the frozen three-year baseline. They
+set the book-level production model; they do not create target-registry records,
+mint MTUs, authorize lessons, or close product/Scale gates.
 
-| Book | Draft load envelope | Count-bearing model note |
-|---|---:|---|
-| 1 | 12 | Fixed by active v5. |
-| 2 | 12 | Fixed by active v5. |
-| 3 | 14 | Fixed by active v5. |
-| 4 | 16 | Fixed by active v5. |
-| 5 | 12-16 | Standard book; first Year 2 target exercises still needed. |
-| 6 | 12-16 | Standard book; finance and interest anchors still need review. |
-| 7 | 12-16 | Standard book; expected-value and information-problem anchors still need review. |
-| 8 | 14-18 | Compression-risk book; use the internal spine below before setting exact count. |
-| 9 | 12-16 | Standard macro book; official exam anchors needed before model-specific production. |
-| 10 | 12-16 | Standard macro/open-economy book; technical constructs require explicit anchors. |
-| 11 | To decide | Exam-training modules plus full-paper practice; count model must be reviewed separately. |
+| Book | Count-bearing lessons/modules | Scheduled modules/cycles | Count-bearing model note |
+|---|---:|---:|---|
+| 1 | 12 | 12 | Fixed by active v5. |
+| 2 | 12 | 12 | Fixed by active v5. |
+| 3 | 14 | 14 | Fixed by active v5. |
+| 4 | 16 | 16 | Fixed by active v5. |
+| 5 | 13 | 13 | Pension/time/stock-flow book; `Y2-B5-P06` is absorbed/non-standalone through the Book 5/6 bridge. |
+| 6 | 13 | 13 | Housing finance, rent-market, interest, bonds, and financial-market book; `Y2-B6-P13` is deferred/non-count-bearing. |
+| 7 | 14 | 14 | Risk, insurance, asymmetric information, and expected-premium book. |
+| 8 | 16 | 16 | Strategic interaction, public goods, redistribution, and growth/public-finance bridge. |
+| 9 | 14 | 14 | Keynesian macro and fiscal-policy book. |
+| 10 | 15 | 15 | Monetary policy, IS-MB-GA, and open-economy book. |
+| 11 | 9 | 13 | `M01-M08` and `M13` are count-bearing; `M09-M12` are scheduled timed-paper/repair cycles. |
+
+Totals:
+
+- Year 1: 54 count-bearing lessons / 54 scheduled lessons.
+- Year 2: 56 count-bearing lessons / 56 scheduled lessons.
+- Year 3: 38 count-bearing modules / 42 scheduled modules/cycles.
+- Full course: 148 count-bearing lessons/modules / 152 scheduled
+  lessons/modules/cycles.
+
+Book 11 is final exam training: 9 count-bearing modules plus 4 scheduled
+timed-paper/repair cycles. The four scheduled cycles are part of the assessment
+calendar and student workload model, but they are not new count-bearing theory
+modules.
 
 ## Year 1 Embedded Baseline
 
@@ -147,7 +166,7 @@ Future Year 1 work should therefore use v5 and the target registry as the
 detailed baseline, and use v6 only as umbrella course-route context unless a
 later explicit migration changes the boundary.
 
-## Year 2 Draft Scope
+## Year 2 Final Planning Scope
 
 ### Book 5 - Time, Stock-Flow, Pensions, Intertemporal Exchange
 
@@ -204,7 +223,7 @@ Expected operation families:
 - evaluate public intervention and redistribution trade-offs;
 - connect growth, sustainability, debt, and public finance to policy choices.
 
-## Year 3 Draft Scope
+## Year 3 Final Planning Scope
 
 ### Book 9 - Keynesian Macro And Fiscal Policy
 
@@ -296,36 +315,60 @@ Consequences:
 - The older Book 12 advanced integration and Book 13 final exam training are folded into Book 11.
 - Final exam training becomes the dominant function of Book 11 and a cumulative layer running through Year 3, not a separate twelfth or thirteenth book.
 
-## Unresolved Design Decisions
+## Open Production Proof And Authority Boundaries
 
-- Exact Year 2 and Year 3 paragraph counts are not set.
-- Draft load envelopes are planning constraints only; exact Books 5-11 counts still require human review.
 - Official exam anchors per operation cluster still require reviewed
   exam-ingestion records, source-annex traces, and correction-model traces.
-- Operation rows with `decomposition_needed` are not production-ready and must be split before paragraph target-exercise work.
+- Operation rows with `decomposition_needed` are not production-ready and must
+  be split before paragraph target-exercise work.
+- Target-exercise anchors and MTU/task-family compatibility remain production
+  blockers until governed target packets and protected CLI workflows close them.
 - v5 remains the detailed Year 1 baseline; any migration away from v5 requires a
   separate reviewed migration path.
 - Product proof, Scale Gate 1, CP-6, diagnostics, mastery, PV, summative use,
   and student/product use remain blocked until separate gates close or are
   explicitly waived.
-- A09/A24/A31 collective-supply overlap needs bounded design review before later-year dependency claims.
-- Book 8 compression must be reviewed carefully so public finance, growth, redistribution, and strategic interaction do not become a loose content dump.
-- Book 11 must be designed as exam operation training, not only a practice-paper folder.
+- A09/A24/A31 collective-supply overlap needs bounded design review before
+  later-year dependency claims.
+- Q19 remains an exact HOLD only for its own source/graph reconstruction,
+  multi-market graph/PV chain, Q19-dependent MTU-H5 work, and Q19-dependent
+  lesson handoff. It does not block Book 10 architecture, q23/q24,
+  other IS-MB-GA work, or unrelated open-economy evidence ingestion.
 
-## Implementation Sequence
+## Production Critical Path
 
-1. `BLUEPRINT-V6-AUTHORITY-PROMOTION-1`: promote v6 as the owned three-year
-   umbrella planning authority while preserving v5 as the detailed Year 1
-   baseline.
-2. `EXAM-OPERATION-SPINE-ANCHOR-1`: attach official exam prompt, source-annex,
-   correction-model, and target-exercise anchors to the operation spine.
-3. `Y2-ROOT-MAPPING-1`: turn Books 5-8 from book-level scope into reviewed
-   chapter/paragraph candidate maps.
-4. `Y3-MACRO-SPINE-MAPPING-1`: turn Books 9-11 into a reviewed macro and final
-   exam-training spine.
-5. Only then create or promote Year 2/3 paragraph-level target exercises.
-6. Use protected CLI workflows for any machine-reference mutation.
-7. Run separate product-proof gates for any rendered/product authority.
+The completed authority-promotion, operation-spine, Year 2 root mapping, and
+Year 3 macro-spine mapping work are now source context. The next production
+sequence is:
+
+1. Book 5 pension/time/stock-flow source-family target packet.
+2. Book 6 housing finance and rent-market mixed-case target packet.
+3. Book 7 credit insurance, moral hazard, adverse selection, principal-agent,
+   and expected-premium target packet.
+4. Book 8 Q15/Q16 dominant-strategy, prisoner's-dilemma, and self-binding
+   target packet.
+5. Book 9 fiscal/output-gap target packet.
+6. Book 10 q23/q24 monetary-effectiveness target packet, while preserving the
+   narrow Q19 HOLD boundary.
+7. Book 11 `M01-M04` answer-operation training packet, followed by the
+   full-paper, error-log, repair, retest, and `M13` synthesis protocol.
+8. Governed registry/MTU implementation follow-ups only after approved target
+   records or protected CLI mutation plans exist.
+9. Separate product-proof gates for generated paragraph routes, checks, exit
+   tickets, Scale/CP gates, diagnostics, mastery, PV, summative use, and
+   student/product use.
+
+## Frozen Baseline And Change Control
+
+After `THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1`, the route, book roles,
+Books 5-11 counts, Book 11 9+4 model, Q19 HOLD boundary, and production
+critical path are frozen at planning level.
+
+Any structural change to those decisions requires a `BLUEPRINT-CHANGE-REVIEW`
+packet before it can be treated as source authority. Routine downstream target,
+MTU, evidence, answer-form, and product-proof packets may refine production
+details only inside this frozen baseline and only within their own authorized
+scope.
 
 ## Explicit Non-Authorization
 

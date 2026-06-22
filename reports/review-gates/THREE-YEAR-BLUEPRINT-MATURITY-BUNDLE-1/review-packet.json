@@ -9,6 +9,8 @@
   "authority_class": "high_authority",
   "changed_paths": [
     "build-scripts/references/check-three-year-blueprint-maturity-bundle-1.js",
+    "references/owned/course-blueprint-v6-three-year.md",
+    "references/owned/course-blueprint-v6-three-year.meta.json",
     "references/data/document_inventory.json",
     "references/data/source-document-registry.json",
     "references/data/source_manifest.json",
@@ -55,7 +57,7 @@
     "product_authority_boundary",
     "scale_gate_boundary"
   ],
-  "date": "2026-06-21",
+  "date": "2026-06-22",
   "product_end_state_refs": [
     "../4veco-lessen/specifications/product-end-state.md"
   ],
@@ -72,6 +74,7 @@
     "Fix the 4+4+3 course route.",
     "Give all eleven books stable roles.",
     "Resolve the working load model.",
+    "Update canonical v6 and v6 metadata to the accepted final model.",
     "Record every candidate status through row-level matrices and maturity index.",
     "Make the exam-training progression explicit.",
     "Give every book and operation a known evidence state.",
@@ -90,6 +93,7 @@
     {"requirement": "4+4+3 route fixed", "status": "met", "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-architecture-matrix.md"},
     {"requirement": "Eleven book roles stable", "status": "met", "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-architecture-matrix.md"},
     {"requirement": "Working load model resolved", "status": "met", "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-count-model.md"},
+    {"requirement": "Canonical v6 source parity", "status": "met", "evidence": "references/owned/course-blueprint-v6-three-year.md"},
     {"requirement": "Every candidate has known status", "status": "met", "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-candidate-status-index.md"},
     {"requirement": "Exam-training progression explicit", "status": "met", "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-assessment-retrieval-spine.md"},
     {"requirement": "Evidence state complete", "status": "met", "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-official-evidence-coverage-matrix.md"},
@@ -101,6 +105,9 @@
   "authority_claims": {
     "three_year_blueprint_planning_end_state_ready": true,
     "curriculum_mapping_only": true,
+    "owned_blueprint_source_mutation_reviewed": true,
+    "owned_blueprint_metadata_mutation_reviewed": true,
+    "owned_blueprint_mutation_scope": "course-blueprint-v6-three-year canonical route/count/book11/production-path/change-control parity only",
     "external_source_mutation_authorized": false,
     "machine_reference_mutation_authorized": false,
     "authored_reference_mutation_authorized": false,
@@ -152,7 +159,8 @@
       "operation_mtu_task_family": {"lead": "Curie", "status": "PASS_WITH_FLAGS_RECHECK", "blockers": [], "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md"},
       "answer_form_correction_model": {"lead": "Arendt", "status": "PASS_WITH_FLAGS", "blockers": [], "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md"},
       "book11_exam_training_design": {"lead": "Zeno", "status": "PASS_WITH_FLAGS", "blockers": [], "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md"},
-      "authority_change_control": {"lead": "Carver", "status": "PASS_WITH_FLAGS_RECHECK", "blockers": [], "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md"}
+      "authority_change_control": {"lead": "Carver", "status": "PASS_WITH_FLAGS_RECHECK", "blockers": [], "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md"},
+      "canonical_source_report_parity": {"lead": "Boyle", "status": "PASS_WITH_FLAGS_RECHECK", "blockers": [], "evidence": "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md"}
     },
     "checkers": [
       {"command": "node --check build-scripts/references/check-three-year-blueprint-maturity-bundle-1.js", "status": "passed"},

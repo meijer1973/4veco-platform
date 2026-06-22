@@ -11,12 +11,16 @@ Product end-state:
 Original sprint/gate/source specs:
 
 - `references/owned/course-blueprint-v6-three-year.md`
+- `references/owned/course-blueprint-v6-three-year.meta.json`
 - `reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-review-packet.md`
 
 ## Lead Review Result
 
 Overall result: PASS WITH FLAGS / THREE-YEAR BLUEPRINT PLANNING END STATE
 READY. No missing core requirement is carried.
+
+PR #130 repair recheck: canonical-source/report parity is now included as a
+read-only lead lane after the v6 source and metadata repair.
 
 | Lead | Lane | Verdict | Finding | Required packet action |
 |---|---|---|---|---|
@@ -28,6 +32,7 @@ READY. No missing core requirement is carried.
 | Arendt | answer-form and correction-model coverage | PASS WITH FLAGS | Missing answer-form proof is named as backlog, not a missing maturity requirement. | carry Book 11/answer production blockers |
 | Zeno | Book 11 exam-training design | PASS WITH FLAGS | Book 11 9+4 model, full-paper pool, error-log, repair/retest, and `M13` capstone are coherent. | carry Book 11 product-use blockers |
 | Carver | blueprint authority and change control recheck | PASS WITH FLAGS | REV-STD-1 classification blocker is fixed; canonical classes and false authority flags are clean. | preserve canonical classification checker |
+| Boyle | canonical-source/report parity recheck | PASS WITH FLAGS | v6 source and metadata now match the maturity reports for route, counts, Book 11 9+4 model, production critical path, change control, and false downstream authority. | preserve v6 parity checker |
 
 ## Repaired Lead-Review Findings
 
@@ -39,6 +44,7 @@ READY. No missing core requirement is carried.
 | TYBM-SR-004 | scale_blocker | critical | Target anchors and MTU/task-family proof remain missing for most Year 2/3 candidates. | target-registry rows, MTU closure, production paragraphs, target-equivalent proof | planning maturity | reviewed target packets and governed MTU/task-family review. |
 | TYBM-SR-005 | scale_blocker | critical | Q19 remains exact HOLD for its own source/graph/PV route. | Q19 source/graph/PV, Q19-dependent MTU-H5, Q19-dependent lesson handoff | Book 10 architecture, q23/q24, other IS-MB-GA/open-economy evidence | reconstructable Q19 source/graph proof and human-reviewed gate authority. |
 | TYBM-SR-006 | scale_blocker | critical | Product/Scale/student-use authority remains false. | product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, student/product use | planning maturity | separate REV-STD-1 product-proof and Scale/CP gates. |
+| TYBM-SR-007 | core_requirement_met | critical | Canonical v6 and v6 metadata are aligned with the maturity report counts, Book 11 schedule model, production path, and change-control boundary. | Nothing for planning maturity | machine/external/authored-target mutation, lesson output, product/Scale/student use | Hardened checker and source/report parity review. |
 
 ## Decision
 
