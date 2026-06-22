@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H6",
+  "fixture_id": "MTU-H6-cross-exam-generalization-vwo-havo-2023-2024-review-candidate",
+  "sample_id": "MTU-H6-fresh-cross-exam-vwo-havo-2023-2024-sample-001",
+  "status": "review_candidate_for_mtu_h6_generalization",
+  "review_packet": "reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.json",
+  "source_basis": {
+    "fresh_relative_to_mtu_h5": true,
+    "h5_seed_cases_excluded": [
+      "vw-1022-a-25-1-o:opgave-1:question-3",
+      "vw-1022-a-25-1-o:opgave-3:question-15",
+      "vw-1022-a-25-1-o:opgave-4:question-19",
+      "vw-1022-a-25-2-o:opgave-6:question-27"
+    ],
+    "sample_selection": "Fresh cross-exam sample across VWO/HAVO 2023-2024 official local CvTE PDFs, chosen to test H5 mapping generalization without protected-reference mutation or product use.",
+    "primary_evidence": [
+      "references/external/exams/README.md",
+      "references/external/exam-questions.json",
+      "references/machine/micro-teaching-units.json",
+      "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_FRESH_CROSS_EXAM_RENDERED_OFFICIAL_EVIDENCE_MANIFEST"
+    ],
+    "official_source_locators": [
+      "references/external/exams/vw-1022-a-24-1-o.pdf",
+      "references/external/exams/vw-1022-a-24-1-c.pdf",
+      "references/external/exams/vw-1022-a-24-2-o.pdf",
+      "references/external/exams/vw-1022-a-24-2-c.pdf",
+      "references/external/exams/ha-1022-a-23-1-o.pdf",
+      "references/external/exams/ha-1022-a-23-1-c.pdf",
+      "references/external/exams/ha-1022-a-23-2-o.pdf",
+      "references/external/exams/ha-1022-a-23-2-c.pdf",
+      "references/external/exams/vw-1022-a-23-2-o.pdf",
+      "references/external/exams/vw-1022-a-23-2-c.pdf"
+    ],
+    "approval_needed": "Human review must approve this H6 review-candidate package before any downstream closure claim. This fixture is not product-route, diagnostic, mastery, sequencing, PV, summative, or student-use authority."
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "expected_summary_counts": {
+    "passed": 5,
+    "review_required_records": 2,
+    "failed_records": 0
+  },
+  "records": [
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-3",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exam-questions.json#vw-1022-a-24-1-o:opgave-1:question-3",
+        "references/external/exams/vw-1022-a-24-1-o.pdf#page=3&question=3",
+        "references/external/exams/vw-1022-a-24-1-c.pdf#page=6&question=3",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-03.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-06.png"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "opgave_name": "Duurzaamheid stimuleren",
+        "question_num": 3,
+        "points": 4,
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_page_start": 6,
+        "correction_page_end": 6
+      },
+      "question_word": "bereken",
+      "mapped_mtu_ids": ["H06", "A06", "A27", "A41", "A88", "A81", "A96"],
+      "mapped_route_tags": ["calculation", "market_equilibrium", "subsidy_supply_shift", "co2_reduction", "scaling", "source_reading", "answer_form"],
+      "expected_h6_status": "passed",
+      "expected_h6_classification": "generalized_pass",
+      "expected_h6_rationale": "H5 operation decomposition generalizes cleanly to a CO2 market-equilibrium reduction calculation when H06/A06/A27/A41/A88/A81/A96 are all present.",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h6-vw24-1-q3-co2-reduction",
+          "question_word": "bereken",
+          "description": "Compute the CO2 reduction on market A, recompute market B equilibrium after subsidy, calculate the extra B emissions, and take the net reduction.",
+          "answer_model_summary": "The official correction model decomposes the answer into market A quantity reduction times emissions per unit, market B old/new equilibrium calculation, market B extra emissions, and net total CO2 reduction.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_1_Q3_CO2_REDUCTION"
+          ],
+          "mapped_mtu_ids": ["H06", "A06", "A27", "A41", "A88", "A81", "A96"],
+          "mapped_route_tags": ["calculation", "market_equilibrium", "subsidy_supply_shift", "co2_reduction", "scaling", "source_reading", "answer_form", "procedure"],
+          "expected_required_mtu_ids": ["H06", "A06", "A27", "A41", "A88", "A81", "A96"],
+          "expected_forbidden_mtu_ids": ["A15"],
+          "expected_route_tags": ["calculation", "market_equilibrium", "subsidy_supply_shift", "co2_reduction", "scaling", "source_reading", "answer_form", "procedure"],
+          "expected_forbidden_route_tags": ["calculus_route", "function_construction", "elasticity_only"],
+          "expected_answer_form_mtu_ids": ["A96"],
+          "expected_scaling_mtu_ids": ["A88"],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_MISCONCEPTION_Q3_MARKET_B_SIGN_OR_SCALE"
+          ],
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_1_Q3_CO2_REDUCTION"
+          ],
+          "reviewed_equivalent_answer_skill_refs": ["references/machine/micro-teaching-units.json#A96"],
+          "missing_mtu_expected": false,
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": ["H06", "A06", "A27", "A41", "A88", "A81", "A96"],
+          "procedure_review_required_unit_ids": []
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-4",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exam-questions.json#vw-1022-a-24-1-o:opgave-1:question-4",
+        "references/external/exams/vw-1022-a-24-1-o.pdf#page=3&question=4",
+        "references/external/exams/vw-1022-a-24-1-c.pdf#page=7&question=4",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-03.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-07.png"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "opgave_name": "Duurzaamheid stimuleren",
+        "question_num": 4,
+        "points": 2,
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_page_start": 7,
+        "correction_page_end": 7
+      },
+      "question_word": "arceer",
+      "mapped_mtu_ids": ["A19", "A40", "D29", "A81"],
+      "mapped_route_tags": ["graph_shading", "surplus", "deadweight_loss", "source_reading"],
+      "expected_h6_status": "review_required",
+      "expected_h6_classification": "fixture_evidence_gap",
+      "expected_h6_rationale": "The required surplus/deadweight-loss MTUs generalize, but H6 exposes an unresolved answer-form/equivalent need for graph-shading/arceer tasks.",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h6-vw24-1-q4-graph-shading",
+          "question_word": "arceer",
+          "description": "Shade government tax revenue in one figure and subsidy-related efficiency loss in a second figure.",
+          "answer_model_summary": "The official correction model awards separate credit for correctly shading market A and market B; it accepts alternative correct shading patterns.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_1_Q4_GRAPH_SHADING"
+          ],
+          "mapped_mtu_ids": ["A19", "A40", "D29", "A81"],
+          "mapped_route_tags": ["graph_shading", "surplus", "deadweight_loss", "source_reading", "procedure"],
+          "expected_required_mtu_ids": ["A19", "A40", "D29", "A81"],
+          "expected_forbidden_mtu_ids": ["A45"],
+          "expected_route_tags": ["graph_shading", "surplus", "deadweight_loss", "source_reading", "procedure"],
+          "expected_forbidden_route_tags": ["calculus_route", "function_construction", "full_graph_construction"],
+          "expected_answer_form_mtu_ids": [],
+          "missing_answer_form_expected": true,
+          "missing_answer_form_rationale": "No reviewed answer-form MTU/equivalent for arceer graph-shading tasks is approved in this H6 bundle.",
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_MISCONCEPTION_Q4_SURPLUS_AREA_SWAPPED"
+          ],
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_1_Q4_GRAPH_SHADING"
+          ],
+          "missing_mtu_expected": false,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": ["A19", "A40", "D29", "A81"],
+          "procedure_review_required_unit_ids": []
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-6",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exam-questions.json#vw-1022-a-24-1-o:opgave-1:question-6",
+        "references/external/exams/vw-1022-a-24-1-o.pdf#page=3&question=6",
+        "references/external/exams/vw-1022-a-24-1-o.pdf#page=4&question=6",
+        "references/external/exams/vw-1022-a-24-1-c.pdf#page=8&question=6",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-03.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-04.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-08.png"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "opgave_name": "Duurzaamheid stimuleren",
+        "question_num": 6,
+        "points": 2,
+        "prompt_page_start": 3,
+        "prompt_page_end": 4,
+        "correction_page_start": 8,
+        "correction_page_end": 8
+      },
+      "question_word": "leg_uit_of",
+      "mapped_mtu_ids": ["A16", "D12", "A81", "A98"],
+      "mapped_route_tags": ["cross_elasticity", "substitutes", "source_reading", "answer_form"],
+      "expected_h6_status": "passed",
+      "expected_h6_classification": "generalized_pass",
+      "expected_h6_rationale": "H5 answer-form and misconception hooks generalize to a non-calculation elasticity reasoning item when cross-elasticity and leg-uit-of answer form are explicit.",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h6-vw24-1-q6-cross-elasticity-emissions",
+          "question_word": "leg_uit_of",
+          "description": "Use positive cross-price elasticity to identify substitutes, then infer that a price fall for B lowers demand/production/emissions for A.",
+          "answer_model_summary": "The official correction model requires the positive cross-elasticity/substitutes relation and the demand/production/emission direction for product A.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_1_Q6_CROSS_ELASTICITY"
+          ],
+          "mapped_mtu_ids": ["A16", "D12", "A81", "A98"],
+          "mapped_route_tags": ["cross_elasticity", "substitutes", "source_reading", "answer_form", "procedure"],
+          "expected_required_mtu_ids": ["A16", "D12", "A81", "A98"],
+          "expected_forbidden_mtu_ids": ["A15"],
+          "expected_route_tags": ["cross_elasticity", "substitutes", "source_reading", "answer_form", "procedure"],
+          "expected_forbidden_route_tags": ["calculus_route", "function_construction", "point_elasticity_only"],
+          "expected_answer_form_mtu_ids": ["A98"],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_MISCONCEPTION_Q6_CROSS_ELASTICITY_DIRECTION"
+          ],
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_1_Q6_CROSS_ELASTICITY"
+          ],
+          "reviewed_equivalent_answer_skill_refs": ["references/machine/micro-teaching-units.json#A98"],
+          "missing_mtu_expected": false,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": ["A16", "D12", "A81", "A98"],
+          "procedure_review_required_unit_ids": []
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-2:question-10",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exam-questions.json#ha-1022-a-23-2-o:opgave-2:question-10",
+        "references/external/exams/ha-1022-a-23-2-o.pdf#page=5&question=10",
+        "references/external/exams/ha-1022-a-23-2-c.pdf#page=8&question=10",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-2-opgave-05.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-2-correction-08.png"
+      ],
+      "source_locator": {
+        "exam": "ha-1022-a-23-2-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "opgave_name": "Vliegtaks",
+        "question_num": 10,
+        "points": 3,
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_page_start": 8,
+        "correction_page_end": 8
+      },
+      "question_word": "bereken",
+      "mapped_mtu_ids": ["A06", "D05", "D07", "A81", "A96"],
+      "mapped_route_tags": ["calculation", "tax_incidence", "pass_through", "market_equilibrium", "source_reading", "answer_form"],
+      "expected_h6_status": "passed",
+      "expected_h6_classification": "generalized_pass",
+      "expected_h6_rationale": "The incidence/pass-through H3/H5 lesson generalizes to a fresh HAVO tax-shift calculation when D05 and D07 are explicit.",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h6-ha23-2-q10-air-tax-pass-through",
+          "question_word": "bereken",
+          "description": "Solve old and new equilibrium prices after a flight tax, then calculate the share of the tax borne by airlines.",
+          "answer_model_summary": "The official correction model first solves equilibrium price before and after the tax and then derives the airline share of the tax from the difference.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_HA23_2_Q10_AIR_TAX_PASS_THROUGH"
+          ],
+          "mapped_mtu_ids": ["A06", "D05", "D07", "A81", "A96"],
+          "mapped_route_tags": ["calculation", "tax_incidence", "pass_through", "market_equilibrium", "source_reading", "answer_form", "procedure"],
+          "expected_required_mtu_ids": ["A06", "D05", "D07", "A81", "A96"],
+          "expected_forbidden_mtu_ids": ["A15"],
+          "expected_route_tags": ["calculation", "tax_incidence", "pass_through", "market_equilibrium", "source_reading", "answer_form", "procedure"],
+          "expected_forbidden_route_tags": ["calculus_route", "function_construction", "elasticity_only"],
+          "expected_answer_form_mtu_ids": ["A96"],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": ["D05", "D07"],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_MISCONCEPTION_Q10_TAX_BURDEN_SHARE"
+          ],
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_HA23_2_Q10_AIR_TAX_PASS_THROUGH"
+          ],
+          "reviewed_equivalent_answer_skill_refs": ["references/machine/micro-teaching-units.json#A96"],
+          "missing_mtu_expected": false,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": true,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": ["A06", "D05", "D07", "A81", "A96"],
+          "procedure_review_required_unit_ids": []
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-5:question-22",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exam-questions.json#ha-1022-a-23-1-o:opgave-5:question-22",
+        "references/external/exams/ha-1022-a-23-1-o.pdf#page=8&question=22",
+        "references/external/exams/ha-1022-a-23-1-c.pdf#page=11&question=22",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-1-opgave-08.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-1-correction-11.png"
+      ],
+      "source_locator": {
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "opgave_name": "Olieprijzenoorlog in het vat",
+        "question_num": 22,
+        "points": 2,
+        "prompt_page_start": 8,
+        "prompt_page_end": 8,
+        "correction_page_start": 11,
+        "correction_page_end": 11
+      },
+      "question_word": "leg_uit_dat",
+      "mapped_mtu_ids": ["F03", "F09", "F12", "A81", "A97"],
+      "mapped_route_tags": ["game_theory", "dominant_strategy", "prisoners_dilemma", "source_reading", "answer_form"],
+      "expected_h6_status": "passed",
+      "expected_h6_classification": "generalized_pass",
+      "expected_h6_rationale": "The operation spine handles a verbal game-theory item when dominant strategy, prisoner-dilemma, source, and answer-form hooks are explicit.",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h6-ha23-1-q22-prisoners-dilemma",
+          "question_word": "leg_uit_dat",
+          "description": "Establish each country's dominant strategy and then show why the resulting joint outcome is worse than mutual output reduction.",
+          "answer_model_summary": "The official correction model requires a dominant-strategy explanation for both countries and a suboptimal joint outcome explanation for the prisoner-dilemma conclusion.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_HA23_1_Q22_PRISONERS_DILEMMA"
+          ],
+          "mapped_mtu_ids": ["F03", "F09", "F12", "A81", "A97"],
+          "mapped_route_tags": ["game_theory", "dominant_strategy", "prisoners_dilemma", "source_reading", "answer_form", "procedure"],
+          "expected_required_mtu_ids": ["F03", "F09", "F12", "A81", "A97"],
+          "expected_forbidden_mtu_ids": ["A15"],
+          "expected_route_tags": ["game_theory", "dominant_strategy", "prisoners_dilemma", "source_reading", "answer_form", "procedure"],
+          "expected_forbidden_route_tags": ["calculus_route", "function_construction", "elasticity_only"],
+          "expected_answer_form_mtu_ids": ["A97"],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_MISCONCEPTION_Q22_DOMINANT_WITHOUT_PD_OUTCOME"
+          ],
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_HA23_1_Q22_PRISONERS_DILEMMA"
+          ],
+          "reviewed_equivalent_answer_skill_refs": ["references/machine/micro-teaching-units.json#A97"],
+          "missing_mtu_expected": false,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": ["F12", "A81", "A97"],
+          "procedure_review_required_unit_ids": []
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-5:question-23",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exam-questions.json#vw-1022-a-23-2-o:opgave-5:question-23",
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=11&question=23",
+        "references/external/exams/vw-1022-a-23-2-c.pdf#page=12&question=23",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw23-2-opgave-11.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw23-2-correction-12.png"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-23-2-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 5,
+        "opgave_name": "Vertrouwen",
+        "question_num": 23,
+        "points": 2,
+        "prompt_page_start": 11,
+        "prompt_page_end": 11,
+        "correction_page_start": 12,
+        "correction_page_end": 12
+      },
+      "question_word": "teken",
+      "mapped_mtu_ids": ["I07", "I08", "A42", "A81"],
+      "mapped_route_tags": ["macro_graph_mutation", "is_mb_ga", "source_reading"],
+      "expected_h6_status": "review_required",
+      "expected_h6_classification": "operation_registry_governance_need",
+      "expected_h6_rationale": "The macro operation can be decomposed, but H6 exposes that graph-drawing answer-form/equivalent authority is not independently approved for this macro representation.",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h6-vw23-2-q23-is-mb-ga-graph-drawing",
+          "question_word": "teken",
+          "description": "Draw shifted GA, IS, and MB curves for the new equilibrium and mark the relevant Y, r, and inflation values.",
+          "answer_model_summary": "The official correction model requires a downward GA shift, leftward IS shift, downward MB shift, and the new intersection/labels.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW23_2_Q23_MACRO_GRAPH"
+          ],
+          "mapped_mtu_ids": ["I07", "I08", "A42", "A81"],
+          "mapped_route_tags": ["macro_graph_mutation", "is_mb_ga", "source_reading", "procedure"],
+          "expected_required_mtu_ids": ["I07", "I08", "A42", "A81"],
+          "expected_forbidden_mtu_ids": ["A45"],
+          "expected_route_tags": ["macro_graph_mutation", "is_mb_ga", "source_reading", "procedure"],
+          "expected_forbidden_route_tags": ["calculus_route", "function_construction"],
+          "expected_answer_form_mtu_ids": [],
+          "missing_answer_form_expected": true,
+          "missing_answer_form_rationale": "A42 supports graph shifts, but no reviewed answer-form/equivalent for this macro teken task is approved in this H6 bundle.",
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_MISCONCEPTION_Q23_CURVE_DIRECTION_OR_LABEL"
+          ],
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW23_2_Q23_MACRO_GRAPH"
+          ],
+          "missing_mtu_expected": false,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": ["I07", "I08", "A42", "A81"],
+          "procedure_review_required_unit_ids": []
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-4:question-18",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exam-questions.json#vw-1022-a-24-2-o:opgave-4:question-18",
+        "references/external/exams/vw-1022-a-24-2-o.pdf#page=9&question=18",
+        "references/external/exams/vw-1022-a-24-2-c.pdf#page=10&question=18",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-2-opgave-09.png",
+        "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-2-correction-10.png"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-24-2-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "opgave_name": "Stikstofheffing",
+        "question_num": 18,
+        "points": 2,
+        "prompt_page_start": 9,
+        "prompt_page_end": 9,
+        "correction_page_start": 10,
+        "correction_page_end": 10
+      },
+      "question_word": "toon_met_een_berekening_aan",
+      "mapped_mtu_ids": ["A07", "A12", "A91", "A81", "A96"],
+      "mapped_route_tags": ["calculation", "armington_context", "marginal_revenue", "given_marginal_cost", "source_reading", "answer_form"],
+      "expected_h6_status": "passed",
+      "expected_h6_classification": "generalized_pass",
+      "expected_h6_rationale": "The old stale A15/elasticity over-trigger class is guarded: the correction model's route uses revenue construction, marginal revenue, and MO = given MK; A15 and H03 are not required MTUs.",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h6-vw24-2-q18-armington-profit-maximum-price",
+          "question_word": "toon_met_een_berekening_aan",
+          "description": "Use the levy-adjusted marginal cost, construct total/marginal revenue, solve MO = given MK, and compute the domestic price.",
+          "answer_model_summary": "The official correction model raises MK by the levy, derives TO and MO from the GO function, solves MO = MK, and computes the resulting price per ton.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_2_Q18_ARMINGTON_PROFIT_MAX"
+          ],
+          "mapped_mtu_ids": ["A07", "A12", "A91", "A81", "A96"],
+          "mapped_route_tags": ["calculation", "armington_context", "marginal_revenue", "given_marginal_cost", "source_reading", "answer_form", "procedure"],
+          "expected_required_mtu_ids": ["A07", "A12", "A91", "A81", "A96"],
+          "expected_forbidden_mtu_ids": ["A15", "H03", "A20"],
+          "expected_route_tags": ["calculation", "armington_context", "marginal_revenue", "given_marginal_cost", "source_reading", "answer_form", "procedure"],
+          "expected_forbidden_route_tags": ["point_elasticity_only", "elasticity_only", "function_construction", "derived_mk_route"],
+          "expected_answer_form_mtu_ids": ["A96"],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_MISCONCEPTION_Q18_A15_STALE_OVERTRIGGER"
+          ],
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_OP_VW24_2_Q18_ARMINGTON_PROFIT_MAX"
+          ],
+          "reviewed_equivalent_answer_skill_refs": ["references/machine/micro-teaching-units.json#A96"],
+          "missing_mtu_expected": false,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": ["A07", "A12", "A91", "A81", "A96"],
+          "procedure_review_required_unit_ids": []
+        }
+      ]
+    }
+  ],
+  "negative_regression_fixtures": [
+    {
+      "fixture_id": "h6-negative-q18-stale-a15-elasticity-overtrigger",
+      "based_on_record_id": "vw-1022-a-24-2-o:opgave-4:question-18",
+      "defect_source": "original Solo/H5 q1-q3 stale-elasticity-overtrigger class",
+      "expected_to_fail": true,
+      "expected_failure_defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+      "mutation": {
+        "add_mapped_mtu_ids": ["A15"],
+        "add_mapped_route_tags": ["elasticity_only"]
+      },
+      "rationale": "Reintroducing A15/elasticity-only on a correction model that needs Armington/profit-maximization must fail without mutating protected references or target exercises."
+    },
+    {
+      "fixture_id": "h6-negative-q10-incidence-unmapped",
+      "based_on_record_id": "ha-1022-a-23-2-o:opgave-2:question-10",
+      "defect_source": "incidence-pass-through mapping omission class",
+      "expected_to_fail": true,
+      "expected_failure_defect_class": "missing_mtu_for_correction_model_operation",
+      "mutation": {
+        "remove_mapped_mtu_ids": ["D05", "D07"],
+        "remove_mapped_route_tags": ["tax_incidence", "pass_through"]
+      },
+      "rationale": "Removing incidence/pass-through MTUs from the air-tax calculation must fail while all sources remain unchanged."
+    }
+  ]
+}

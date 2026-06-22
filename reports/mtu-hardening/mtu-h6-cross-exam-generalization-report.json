@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H6",
+  "report_id": "mtu-h6-cross-exam-generalization-report",
+  "fixture_id": "MTU-H6-cross-exam-generalization-vwo-havo-2023-2024-review-candidate",
+  "sample_id": "MTU-H6-fresh-cross-exam-vwo-havo-2023-2024-sample-001",
+  "status": "review_required",
+  "generated_by": "build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+  "generated_on": "2026-06-22T00:00:00.000Z",
+  "source_files": [
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-fixture.json",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json",
+    "references/machine/micro-teaching-units.json",
+    "references/external/exam-questions.json"
+  ],
+  "summary_counts": {
+    "total_records": 7,
+    "passed_records": 5,
+    "review_required_records": 2,
+    "failed_records": 0,
+    "negative_regression_fixtures": 2,
+    "negative_regression_fixtures_failed_as_expected": 2,
+    "rendered_official_evidence_records": 13
+  },
+  "record_outcomes": [
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-3",
+      "actual_status": "passed",
+      "classification": "generalized_pass",
+      "summary": "CO2 market-equilibrium reduction calculation maps to H06/A06/A27/A41/A88/A81/A96 with A15 forbidden."
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-4",
+      "actual_status": "review_required",
+      "classification": "fixture_evidence_gap",
+      "summary": "q4 graph shading maps surplus/deadweight-loss and welfare-area shading content, but the arceer answer form has no reviewed MTU/equivalent in this H6 bundle."
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-6",
+      "actual_status": "passed",
+      "classification": "generalized_pass",
+      "summary": "Cross-elasticity reasoning maps to A16/D12/A81/A98 with the direction misconception guarded."
+    },
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-2:question-10",
+      "actual_status": "passed",
+      "classification": "generalized_pass",
+      "summary": "Air-tax pass-through maps to A06/D05/D07/A81/A96 with incidence explicitly required."
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-5:question-22",
+      "actual_status": "passed",
+      "classification": "generalized_pass",
+      "summary": "Prisoner-dilemma reasoning maps to F03/F09/F12/A81/A97 with the dominant-strategy-plus-suboptimal-outcome misconception guarded."
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-5:question-23",
+      "actual_status": "review_required",
+      "classification": "operation_registry_governance_need",
+      "summary": "Macro IS/MB/GA graph drawing maps I07/I08 content and graph-procedure units, but no independent graph-drawing answer-form equivalent is approved for this macro representation."
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-4:question-18",
+      "actual_status": "passed",
+      "classification": "generalized_pass",
+      "summary": "Armington-context price calculation maps to A07/A12/A91/A81/A96 while stale A15, H03, and broad A20 routes remain forbidden."
+    }
+  ],
+  "review_required_items": [
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-4",
+      "issue": "q4 graph shading answer-form/equivalent missing",
+      "proof_required_to_close": "Approve a graph-shading/arceer answer-form MTU or reviewed equivalent for official correction models that award shaded-area responses."
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-5:question-23",
+      "issue": "q23 macro graph drawing answer-form/equivalent missing",
+      "proof_required_to_close": "Approve whether A42 is sufficient as answer-form evidence for macro multi-curve drawing or require a separate teken answer-form MTU/equivalent."
+    }
+  ],
+  "negative_regression_results": [
+    {
+      "fixture_id": "h6-negative-q18-stale-a15-elasticity-overtrigger",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "over_triggered_prerequisite_not_required_by_answer_model"
+    },
+    {
+      "fixture_id": "h6-negative-q10-incidence-unmapped",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "missing_mtu_for_correction_model_operation"
+    }
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  }
+}
