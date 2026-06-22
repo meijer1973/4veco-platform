@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T12:58:08.092Z
+Generated: 2026-06-22T13:05:58.485Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/pr-readiness-router-20260622`
-Source commit: `343ee7d793d73a464e8b84fd2f58a5f8825ff31e`
-Files indexed: 5762
+Source commit: `f47f3d0e873f5978a2981535e6a2d316f6b0b1d6`
+Files indexed: 5764
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -721,7 +721,7 @@ Count: 42
 
 ## validators
 
-Count: 523
+Count: 524
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1041,6 +1041,7 @@ Count: 523
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md
+- reports/fixtures/review-throughput-1/negative-ci-missing-validate-platform.json
 - reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
@@ -1929,7 +1930,7 @@ Count: 675
 
 ## reports
 
-Count: 3750
+Count: 3752
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1971,6 +1972,7 @@ Count: 3750
 - reports/fixtures/pr-readiness-router/pause-escalate-blocker.json
 - reports/fixtures/pr-readiness-router/unresolved-review-revise.json
 - reports/fixtures/pr-readiness-router/workflow-permission-human.json
+- reports/fixtures/review-throughput-1/negative-ci-missing-validate-platform.json
 - reports/fixtures/review-throughput-1/negative-ci-success-no-reviewed-sha.json
 - reports/fixtures/review-throughput-1/negative-diagnostics-authority.json
 - reports/fixtures/review-throughput-1/negative-empty-changed-paths.json
@@ -5133,6 +5135,7 @@ Count: 3750
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-corrections.md
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round1.md
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round2.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round3.md
 - reports/sprints/REVIEW-THROUGHPUT-3-live-dry-run.md
 - reports/sprints/REVIEW-THROUGHPUT-3-plan.md
 - reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md

@@ -23,6 +23,7 @@ PR `#137` was returned to draft after human review requested changes on head
 - Added `build-scripts/review-gates/pr-readiness-governance-surfaces.js` to its own governance-surface manifest and regression path list.
 - Made `validate-platform` non-removable in router proof by unioning it into required contexts, requiring it in ready-route validation, requiring it in the decision schema, and requiring it in the throughput packet checker.
 - Replaced first-page-only review-thread collection with paginated review-thread and change-request review collection; incomplete pagination metadata fails closed.
+- Closed the round-4 carry flag by requiring nested `validate-platform` check details to be successful when packet CI proof supplies per-check status.
 
 ## New negative tests
 
@@ -38,10 +39,11 @@ PR `#137` was returned to draft after human review requested changes on head
 - Manifest-only autonomy-governance changes force consequential human review.
 - Supplemental or packet CI proof cannot narrow out `validate-platform`.
 - Review-thread pagination is consumed across pages, and incomplete pagination metadata fails closed.
+- Contradictory packet CI where `validate-platform` is present but failed is rejected.
 
 ## Validation evidence
 
 The post-correction command log records passing focused, wrapper, branch
 protection, scope-language, report JSON, and platform checks. The platform suite
 passes with existing lesson fixture warnings and reports `50` passed suites,
-`15` skipped suites, `802` passed tests, and `883` total tests.
+`15` skipped suites, `803` passed tests, and `884` total tests.

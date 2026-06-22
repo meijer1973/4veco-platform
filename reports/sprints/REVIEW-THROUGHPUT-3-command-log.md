@@ -4053,3 +4053,383 @@ OK sprint bundle: REVIEW-THROUGHPUT-3 complete
 ```text
 
 ```
+## node node_modules/jest/bin/jest.js build-scripts/review-gates/pr-readiness-router.test.js build-scripts/review-gates/review-throughput-fields.test.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:05:13.533Z`
+- finished_at: `2026-06-22T13:05:15.303Z`
+- duration_ms: `1770`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `3a41342d2415a619b28c7295b53d9f36fa562c8b31d73548e3c0f12b7d30b814`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 3 passed, 3 total
+Tests:       75 passed, 75 total
+Snapshots:   0 total
+Time:        1.251 s, estimated 2 s
+Ran all test suites matching build-scripts/review-gates/pr-readiness-router.test.js|build-scripts/review-gates/review-throughput-fields.test.js|build-scripts/sprints/check-review-throughput-packet.test.js.
+
+```
+## npm.cmd run check:pr-readiness
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:05:19.014Z`
+- finished_at: `2026-06-22T13:05:20.294Z`
+- duration_ms: `1280`
+- exit_code: `0`
+- stdout_sha256: `7e481cf83a00965efebcac5878938e88306b7e69b0ff89e2c2422f3cecc32131`
+- stderr_sha256: `085b41bd9a39750c691d6f129f9c5622ac6d7140b31605a7ce685c593a697fb5`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:pr-readiness
+> jest build-scripts/review-gates/pr-readiness-router.test.js --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       49 passed, 49 total
+Snapshots:   0 total
+Time:        0.297 s, estimated 1 s
+Ran all test suites matching build-scripts/review-gates/pr-readiness-router.test.js.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:05:26.412Z`
+- finished_at: `2026-06-22T13:05:43.709Z`
+- duration_ms: `17297`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `40fb053198b109097521cc6feba0bfd9540f3c89e8093aacaf1825ab82acae0b`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 15 skipped, 50 passed, 50 of 65 total
+Tests:       81 skipped, 803 passed, 884 total
+Snapshots:   0 total
+Time:        16.335 s, estimated 19 s
+Ran all test suites.
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:05:58.018Z`
+- finished_at: `2026-06-22T13:05:58.700Z`
+- duration_ms: `682`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:04.198Z`
+- finished_at: `2026-06-22T13:06:04.275Z`
+- duration_ms: `77`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:09.098Z`
+- finished_at: `2026-06-22T13:06:09.165Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:14.593Z`
+- finished_at: `2026-06-22T13:06:15.054Z`
+- duration_ms: `461`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:21.388Z`
+- finished_at: `2026-06-22T13:06:21.452Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:29.279Z`
+- finished_at: `2026-06-22T13:06:29.375Z`
+- duration_ms: `96`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-3 --review-file reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round4.md
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:34.687Z`
+- finished_at: `2026-06-22T13:06:34.752Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `b74b97ac0b1b1ac2a43a532f66a271102156a721026e64ccdbc132d52d04ec32`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: REVIEW-THROUGHPUT-3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-3
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:39.604Z`
+- finished_at: `2026-06-22T13:06:39.683Z`
+- duration_ms: `79`
+- exit_code: `0`
+- stdout_sha256: `e552b76d4f48d21ff6d59c2a04614559f9132f759b2de532ce12562728db6d10`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: REVIEW-THROUGHPUT-3 (137 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-3-result.md
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:44.794Z`
+- finished_at: `2026-06-22T13:06:44.867Z`
+- duration_ms: `73`
+- exit_code: `0`
+- stdout_sha256: `e1180796079c35fff7dd0c2bc6dec03645036c4058e4f3d26073d3273fce4d82`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\REVIEW-THROUGHPUT-3-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-3 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:49.123Z`
+- finished_at: `2026-06-22T13:06:49.637Z`
+- duration_ms: `514`
+- exit_code: `0`
+- stdout_sha256: `272781273515a993691b51538e4490b6f39ef4c7a05b4150164c91611a2ede38`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: REVIEW-THROUGHPUT-3 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco-worktrees\REVIEW-THROUGHPUT-3\4veco-platform`
+- started_at: `2026-06-22T13:06:54.229Z`
+- finished_at: `2026-06-22T13:06:54.332Z`
+- duration_ms: `103`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```

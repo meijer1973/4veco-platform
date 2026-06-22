@@ -253,17 +253,18 @@ function hasRequiredCiContext(packet) {
       if (!item || typeof item !== 'object') return false;
       const requiredContexts = asArray(item.required_contexts || item.required_status_contexts);
       const checks = asArray(item.checks || item.status_checks);
-      return (
-        requiredContexts.includes(REQUIRED_CI_CONTEXT) ||
-        checks.some((check) =>
-          [
-            check && check.name,
-            check && check.context,
-            check && check.workflowName,
-            check && check.workflow_name,
-          ].includes(REQUIRED_CI_CONTEXT)
-        )
+      const matchingChecks = checks.filter((check) =>
+        [
+          check && check.name,
+          check && check.context,
+          check && check.workflowName,
+          check && check.workflow_name,
+        ].includes(REQUIRED_CI_CONTEXT)
       );
+      if (checks.length > 0) {
+        return matchingChecks.some(hasSuccessStatus);
+      }
+      return requiredContexts.includes(REQUIRED_CI_CONTEXT);
     })
   );
 }

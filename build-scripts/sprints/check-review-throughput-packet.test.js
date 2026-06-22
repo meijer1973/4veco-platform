@@ -45,6 +45,7 @@ describe('check-review-throughput-packet', () => {
     ['negative-missing-ci-proof.json', 'CI proof is missing'],
     ['negative-ci-success-no-reviewed-sha.json', 'CI proof is missing'],
     ['negative-ci-missing-validate-platform.json', 'required validate-platform CI context is missing'],
+    ['negative-ci-validate-platform-failed.json', 'required validate-platform CI context is missing'],
     ['negative-missing-checker-proof.json', 'checker proof is missing'],
     ['negative-missing-lead-review.json', 'lead-review proof is missing'],
     ['negative-lead-review-result-only.json', 'lead-review proof is missing'],
