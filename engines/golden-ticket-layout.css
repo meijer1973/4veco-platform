@@ -559,6 +559,22 @@ a {
   white-space: normal;
 }
 
+.ge-route-choice-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.ge-route-choice-options .ge-choice-option {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+
+.ge-route-choice-options .ge-choice-option span {
+  color: var(--ge-muted);
+  font-weight: 500;
+}
+
 .ge-context-refs {
   display: flex;
   flex-wrap: wrap;

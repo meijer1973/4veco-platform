@@ -49,10 +49,11 @@
   }
 
   var GRAPH_VARIANT = 'golden_graph_reading_claim_v1';
+  var GRAPH_ADVISORY_VARIANT = 'golden_graph_advisory_v1';
   var CALCULATION_VARIANT = 'golden_calculation_structured_v1';
   var ADVISORY_SHORT_CHECK_VARIANT = 'golden_advisory_short_check_v1';
   var SUPPORTED_VARIANT = GRAPH_VARIANT;
-  var SUPPORTED_VARIANTS = [GRAPH_VARIANT, CALCULATION_VARIANT, ADVISORY_SHORT_CHECK_VARIANT];
+  var SUPPORTED_VARIANTS = [GRAPH_VARIANT, GRAPH_ADVISORY_VARIANT, CALCULATION_VARIANT, ADVISORY_SHORT_CHECK_VARIANT];
 
   function isGoldenExerciseWorkbench(data) {
     return Boolean(
@@ -73,6 +74,105 @@
       gaps.push('graph spec from graph_construction_substitute');
     }
     return gaps;
+  }
+
+  function graphAdvisorySupportGaps(data) {
+    var gaps = [];
+    var layout = data && data.layout ? data.layout : {};
+    var targetEquivalent = data && data.targetEquivalent ? data.targetEquivalent : {};
+    var metadataAlignment = data && data.metadataAlignment ? data.metadataAlignment : {};
+    var advisory = data && data.advisory ? data.advisory : {};
+    var shells = taskShells(data || {});
+    var families = shells.map(function (entry) { return entry.taskShell.family; });
+    var allowedFamilies = ['graph_construction_substitute', 'graph_reading', 'table_value_selection'];
+    var unsupported = families.filter(function (family) { return allowedFamilies.indexOf(family) === -1; });
+    var graphEntry = findTask(data || {}, 'graph_construction_substitute');
+    var readEntry = findTask(data || {}, 'graph_reading');
+    var routeEntry = findTask(data || {}, 'table_value_selection');
+    var blocks = Array.isArray(data && data.contextBlocks) ? data.contextBlocks : [];
+    var blockIds = {};
+
+    blocks.forEach(function (block) {
+      if (block && block.id) blockIds[block.id] = true;
+    });
+
+    if (!data || data.surface !== 'advisory_short_check') gaps.push('surface advisory_short_check');
+    if (layout.variant !== GRAPH_ADVISORY_VARIANT) gaps.push('layout.variant ' + GRAPH_ADVISORY_VARIANT);
+    if (targetEquivalent.candidate !== false) gaps.push('targetEquivalent.candidate false');
+    if (targetEquivalent.gateApproved !== false) gaps.push('targetEquivalent.gateApproved false');
+    if (targetEquivalent.completionLanguageEligible !== false) gaps.push('targetEquivalent.completionLanguageEligible false');
+    if (metadataAlignment.targetReadinessEvidence !== false) gaps.push('metadataAlignment.targetReadinessEvidence false');
+    if (!advisory.intent) gaps.push('advisory.intent');
+    if (advisory.hintsAbsent !== true) gaps.push('advisory.hintsAbsent true or governed hint implementation');
+    if (advisory.targetEquivalentProof !== false) gaps.push('advisory.targetEquivalentProof false');
+    if (unsupported.length) {
+      gaps.push('unsupported task families for graph advisory variant: ' + Array.from(new Set(unsupported)).join(', '));
+    }
+    if (!graphEntry) gaps.push('task family graph_construction_substitute');
+    if (!readEntry) gaps.push('task family graph_reading');
+    if (!routeEntry) gaps.push('task family table_value_selection');
+    if (!blocks.length) gaps.push('contextBlocks');
+    if (!Graph || typeof Graph.buildGraphSpec !== 'function') {
+      gaps.push('Golden graph runtime');
+    } else if (!Graph.buildGraphSpec(data)) {
+      gaps.push('graph spec from graph_construction_substitute');
+    }
+
+    shells.forEach(function (entry) {
+      var task = entry.taskShell || {};
+      if (!Array.isArray(task.contextRefs) || !task.contextRefs.length) {
+        gaps.push(task.id + '.contextRefs');
+      } else {
+        task.contextRefs.forEach(function (ref) {
+          if (!blockIds[ref]) gaps.push(task.id + '.contextRefs unknown ' + ref);
+        });
+      }
+    });
+
+    if (graphEntry) {
+      var graphTask = graphEntry.taskShell || {};
+      var interaction = graphTask.interaction || {};
+      ['lineConfirmationLabel', 'lineConfirmationOptions', 'lineShapeLabel', 'lineShapeOptions', 'slopeLabel', 'slopeOptions'].forEach(function (field) {
+        if (interaction[field] != null) gaps.push('forbidden graph interaction field ' + field);
+      });
+      var axisOptions = Array.isArray(interaction.axisOptions) ? interaction.axisOptions : [];
+      var axisValues = axisOptions.map(function (option) { return option.value; });
+      if (axisOptions.length < 3 || axisValues.indexOf('Q') === -1 || axisValues.indexOf('P') === -1) {
+        gaps.push(graphTask.id + '.interaction.axisOptions with P/Q and plausible distractors');
+      }
+    }
+
+    if (readEntry) {
+      var readTask = readEntry.taskShell || {};
+      var readInteraction = readTask.interaction || {};
+      var intervalOptions = Array.isArray(readInteraction.intervalOptions) ? readInteraction.intervalOptions : [];
+      var expectedInterval = (((readTask.expected || {}).interval || {}).value || '');
+      if (intervalOptions.length < 2) gaps.push(readTask.id + '.interaction.intervalOptions');
+      if (!expectedInterval) gaps.push(readTask.id + '.expected.interval.value');
+      if (intervalOptions.length && expectedInterval && !intervalOptions.some(function (option) { return option.id === expectedInterval; })) {
+        gaps.push(readTask.id + '.expected.interval option');
+      }
+    }
+
+    if (routeEntry) {
+      var routeTask = routeEntry.taskShell || {};
+      var routeOptions = Array.isArray((routeTask.interaction || {}).options) ? routeTask.interaction.options : [];
+      if (routeOptions.length < 2) gaps.push(routeTask.id + '.interaction.options');
+      if (!routeTask.expected || routeTask.expected.kind !== 'advisory_choice' || !Array.isArray(routeTask.expected.values) || !routeTask.expected.values.length) {
+        gaps.push(routeTask.id + '.expected advisory_choice values');
+      } else {
+        routeTask.expected.values.forEach(function (value) {
+          if (!routeOptions.some(function (option) { return option.id === value; })) {
+            gaps.push(routeTask.id + '.expected.values unknown ' + value);
+          }
+        });
+      }
+      if (!routeTask.practiceRoute || !routeTask.practiceRoute.href || !routeTask.practiceRoute.label) {
+        gaps.push(routeTask.id + '.practiceRoute');
+      }
+    }
+
+    return Array.from(new Set(gaps));
   }
 
   function calculationSupportGaps(data) {
@@ -142,6 +242,7 @@
   function supportGapsByVariant(data) {
     return {
       graph: graphSupportGaps(data),
+      graph_advisory: graphAdvisorySupportGaps(data),
       calculation: calculationSupportGaps(data),
       advisory_short_check: advisoryShortCheckSupportGaps(data)
     };
@@ -150,6 +251,7 @@
   function supportedVariantFor(data) {
     if (!isGoldenExerciseWorkbench(data)) return null;
     if (!graphSupportGaps(data).length) return GRAPH_VARIANT;
+    if (!graphAdvisorySupportGaps(data).length) return GRAPH_ADVISORY_VARIANT;
     if (!calculationSupportGaps(data).length) return CALCULATION_VARIANT;
     if (!advisoryShortCheckSupportGaps(data).length) return ADVISORY_SHORT_CHECK_VARIANT;
     return null;
@@ -164,11 +266,15 @@
         'Unsupported Golden Exercise Workbench variant: current renderer supports ' +
         GRAPH_VARIANT +
         ' (graph construction + graph reading + calculation/claim control with graph spec) and ' +
+        GRAPH_ADVISORY_VARIANT +
+        ' (advisory graph construction + graph reading + route choice with false authority flags) and ' +
         CALCULATION_VARIANT +
         ' (calculation_work_capture + structured_short_response with context blocks) and ' +
         ADVISORY_SHORT_CHECK_VARIANT +
         ' (advisory choice short check with context blocks and false authority flags); graph variant missing ' +
         gaps.graph.join(', ') +
+        '; graph advisory variant missing ' +
+        gaps.graph_advisory.join(', ') +
         '; calculation/structured variant missing ' +
         gaps.calculation.join(', ') +
         '; advisory short-check variant missing ' +
@@ -180,7 +286,7 @@
   }
 
   function needsGraphRuntimeForVariant(variant) {
-    return variant === GRAPH_VARIANT;
+    return variant === GRAPH_VARIANT || variant === GRAPH_ADVISORY_VARIANT;
   }
 
   function rendererAssetsForVariant(variant) {
@@ -505,6 +611,25 @@
     '</li>';
   }
 
+  function renderRouteChoiceOption(option) {
+    return '<button type="button" class="ge-pill ge-choice-option" aria-pressed="false" data-ge-route-choice-option data-option-id="' + attr(option.id) + '">' +
+      '<strong>' + escapeHtml(option.label) + '</strong>' +
+      (option.description ? '<span>' + escapeHtml(option.description) + '</span>' : '') +
+    '</button>';
+  }
+
+  function renderAdvisoryRouteStep(data, routeEntry, number) {
+    var task = routeEntry.taskShell;
+    var options = Array.isArray((task.interaction || {}).options) ? task.interaction.options : [];
+    return '<li class="ge-step ge-step-choice" data-ge-step="route-choice" data-task-id="' + attr(routeEntry.id) + '" data-task-family="' + attr(task.family) + '">' +
+      renderStepHead(String(number), task.skillLabel || 'Volgende oefenstap', task.prompt || '', task.purpose) +
+      renderContextRefs(data, task) +
+      '<div class="ge-choice-options ge-route-choice-options" data-ge-route-choice-options>' + options.map(renderRouteChoiceOption).join('') + '</div>' +
+      '<div class="ge-action-row"><button type="button" class="ge-small-button" data-ge-check-route-choice>Toon oefentip</button></div>' +
+      renderFeedback('route-choice') +
+    '</li>';
+  }
+
   function renderCompletion(data) {
     var completion = data.completion || {};
     return '<section class="ge-completion" data-ge-completion>' +
@@ -541,6 +666,39 @@
           '</ol>' +
           renderCompletion(data) +
           '<button type="button" class="ge-primary-action" data-ge-check-all>Controleer werk</button>' +
+        '</section>' +
+      '</section>';
+  }
+
+  function renderGraphAdvisoryMain(data) {
+    var graphEntry = findTask(data, 'graph_construction_substitute');
+    var readEntry = findTask(data, 'graph_reading');
+    var routeEntry = findTask(data, 'table_value_selection');
+    var spec = Graph.buildGraphSpec(data);
+    if (!graphEntry || !readEntry || !routeEntry || !spec) {
+      throw new Error('Golden graph advisory route needs graph, reading, route-choice tasks and graph spec.');
+    }
+    var layout = data.layout || {};
+    var kicker = layout.kicker || ('Korte check - paragraaf ' + (data.parNr || ''));
+    var sourceNote = layout.sourceNote || 'Gebruik de bron en tabel bij je grafiekwerk. De feedback wijst alleen naar een oefenstap.';
+    return '<section class="ge-hero ge-hero-advisory">' +
+      '<div class="ge-hero-card">' +
+        '<p class="ge-kicker">' + escapeHtml(kicker) + '</p>' +
+        '<h1>' + escapeHtml(data.title || 'Korte check') + '</h1>' +
+        '<p class="ge-intro">' + escapeHtml(data.intro || '') + '</p>' +
+      '</div>' +
+      renderRouteStrip(data) +
+      '</section>' +
+      '<section class="ge-workbench ge-workbench-advisory">' +
+        renderSourceCard(data, { sourceNote: sourceNote, showTableTitles: true }) +
+        '<section class="ge-task-card" data-ge-task-card aria-label="' + attr(layout.taskPaneTitle || 'Werkvragen') + '">' +
+          '<ol class="ge-step-list">' +
+            renderGraphStep(graphEntry, spec) +
+            renderReadingStep(readEntry) +
+            renderAdvisoryRouteStep(data, routeEntry, 3) +
+          '</ol>' +
+          renderCompletion(data) +
+          '<button type="button" class="ge-primary-action" data-ge-check-all>Controleer grafiek en aflezing</button>' +
         '</section>' +
       '</section>';
   }
@@ -603,6 +761,7 @@
   function renderMain(data) {
     var variant = assertSupportedGoldenExerciseVariant(data);
     if (variant === GRAPH_VARIANT) return renderGraphMain(data);
+    if (variant === GRAPH_ADVISORY_VARIANT) return renderGraphAdvisoryMain(data);
     if (variant === CALCULATION_VARIANT) return renderCalculationMain(data);
     if (variant === ADVISORY_SHORT_CHECK_VARIANT) return renderAdvisoryShortCheckMain(data);
     throw new Error('Unsupported Golden Exercise Workbench variant: ' + variant);
@@ -721,6 +880,16 @@
     }
     if (task.family === 'structured_short_response' && (task.expected || {}).kind === 'structured_text_criteria') {
       return evaluateStructuredResponse(task, response);
+    }
+    if (task.family === 'table_value_selection' && (task.expected || {}).kind === 'choice') {
+      var routeAnswer = response && typeof response === 'object' ? response.answerId : response;
+      return normalizeAnswer(routeAnswer) === normalizeAnswer(task.expected.value);
+    }
+    if (task.family === 'table_value_selection' && (task.expected || {}).kind === 'advisory_choice') {
+      var advisoryAnswer = response && typeof response === 'object' ? response.answerId : response;
+      return (task.expected.values || []).some(function (value) {
+        return normalizeAnswer(value) === normalizeAnswer(advisoryAnswer);
+      });
     }
     return false;
   }
@@ -956,6 +1125,287 @@
     };
   }
 
+  function initGraphAdvisoryWorkbench(root, data) {
+    var graphEntry = findTask(data, 'graph_construction_substitute');
+    var readEntry = findTask(data, 'graph_reading');
+    var routeEntry = findTask(data, 'table_value_selection');
+    var graphTask = graphEntry.taskShell;
+    var readTask = readEntry.taskShell;
+    var routeTask = routeEntry.taskShell;
+    var graphSpec = Graph.buildGraphSpec(data);
+    var state = {
+      selectedAxisOption: null,
+      axis: { x: null, y: null },
+      points: [],
+      connectLine: false,
+      graphOk: false,
+      readInterval: null,
+      readOk: false,
+      routeChoice: null,
+      routeOk: false
+    };
+
+    function axisIsCorrect() {
+      return state.axis.x === 'Q' && state.axis.y === 'P';
+    }
+
+    function redrawGraph() {
+      var xOption = axisOptionByValue(graphTask, state.axis.x);
+      var yOption = axisOptionByValue(graphTask, state.axis.y);
+      var wrap = query(root, '[data-ge-graph-wrap]');
+      if (!wrap) return;
+      wrap.innerHTML = Graph.renderSvgString(graphSpec, {
+        axesVisible: Boolean(state.axis.x && state.axis.y),
+        xLabel: xOption ? xOption.label : graphSpec.x_axis.label,
+        yLabel: yOption ? yOption.label : graphSpec.y_axis.label,
+        points: state.points,
+        lineVisible: state.connectLine
+      });
+      var help = query(root, '[data-ge-graph-help]');
+      if (help) {
+        help.textContent = state.axis.x && state.axis.y
+          ? 'Geplaatste punten: ' + state.points.length + '/2. Klik ongeveer bij een tabelpunt; het punt springt naar de dichtstbijzijnde bronwaarde. Na punt 2 verschijnt de lijn vanzelf.'
+          : 'Kies eerst de assen. Daarna klik je twee verschillende tabelpunten in het raster.';
+      }
+    }
+
+    root.__goldenTicketRedrawGraph = redrawGraph;
+
+    function hideCompletion() {
+      var completion = query(root, '[data-ge-completion]');
+      if (completion) completion.classList.remove('is-visible');
+    }
+
+    function resetAfterGraphChange() {
+      state.graphOk = false;
+      state.readOk = false;
+      setLocked(root, 'reading', true);
+      hideCompletion();
+    }
+
+    function renderSlots() {
+      queryAll(root, '[data-ge-axis-slot]').forEach(function (slot) {
+        var axis = slot.getAttribute('data-ge-axis-slot');
+        var option = axisOptionByValue(graphTask, state.axis[axis]);
+        var label = slot.querySelector('span');
+        if (label) label.textContent = option ? option.label : 'Nog leeg';
+      });
+    }
+
+    function selectedTablePointCount() {
+      var accepted = new Set((graphTask.expected.acceptedTablePoints || []).map(pointKey));
+      var selected = new Set();
+      state.points.forEach(function (point) {
+        if (accepted.has(pointKey(point))) selected.add(pointKey(point));
+      });
+      return selected.size;
+    }
+
+    function plottedLineIsDecreasing() {
+      if (state.points.length < 2) return false;
+      var a = state.points[0];
+      var b = state.points[1];
+      if (Number(a.x) === Number(b.x)) return false;
+      return ((Number(b.y) - Number(a.y)) / (Number(b.x) - Number(a.x))) < 0;
+    }
+
+    function checkGraph() {
+      var errors = [];
+      if (!axisIsCorrect()) errors.push('Kies Q op de horizontale as en P op de verticale as.');
+      if (state.points.length < 2) errors.push('Plaats twee verschillende tabelpunten in het werkvlak.');
+      if (axisIsCorrect() && selectedTablePointCount() < 2) errors.push('Gebruik twee verschillende bronwaarden uit de tabel.');
+      if (state.points.length >= 2 && (!state.connectLine || !plottedLineIsDecreasing())) {
+        errors.push('Controleer of beide punten uit de bron komen; de lijn wordt na het tweede punt automatisch getekend.');
+      }
+      if (errors.length) {
+        state.graphOk = false;
+        state.readOk = false;
+        setLocked(root, 'reading', true);
+        hideCompletion();
+        setFeedback(root, 'graph', 'warn', 'Controleer het P-Q-diagram', errors.join(' '));
+        return false;
+      }
+      state.graphOk = true;
+      setLocked(root, 'reading', false);
+      setFeedback(root, 'graph', 'good', graphTask.feedback.matchTitle, graphTask.feedback.matchText);
+      updateCompletion();
+      return true;
+    }
+
+    function selectPill(group, optionId) {
+      var attrName = '[data-ge-pill-group="' + group + '"]';
+      var buttons = queryAll(root, attrName);
+      var target = buttons.find(function (button) { return button.getAttribute('data-option-id') === optionId; });
+      setPressed(buttons, target);
+      if (group === 'read-interval') {
+        state.readInterval = optionId;
+        state.readOk = false;
+        hideCompletion();
+      }
+    }
+
+    function checkReading() {
+      if (!state.graphOk) return false;
+      var expected = readTask.expected || {};
+      var q = parseNumber(query(root, '[data-ge-read-q]').value);
+      var intervalOk = state.readInterval === ((expected.interval || {}).value || '');
+      var qOk = Math.abs(q - Number(expected.value)) <= Number(expected.tolerance || 0);
+      if (intervalOk && qOk) {
+        state.readOk = true;
+        setFeedback(root, 'reading', 'good', readTask.feedback.matchTitle, readTask.feedback.matchText);
+        updateCompletion();
+        return true;
+      }
+      state.readOk = false;
+      hideCompletion();
+      setFeedback(root, 'reading', 'warn', readTask.feedback.retryTitle, readTask.feedback.retryText);
+      return false;
+    }
+
+    function setRouteFeedback(tone, title, text, route) {
+      var el = query(root, '[data-ge-feedback="route-choice"]');
+      if (!el) return;
+      el.className = 'ge-feedback';
+      if (!tone) {
+        el.innerHTML = '';
+        return;
+      }
+      el.classList.add('is-visible', tone === 'good' ? 'is-good' : tone === 'bad' ? 'is-bad' : 'is-warn');
+      el.innerHTML = '<strong>' + escapeHtml(title) + '</strong><p>' + escapeHtml(text) + '</p>' +
+        (route && route.href && route.label
+          ? '<p class="ge-choice-route"><span>Oefentip</span><a href="' + attr(route.href) + '">' + escapeHtml(route.label) + '</a></p>'
+          : '');
+      if (el.focus) el.focus({ preventScroll: true });
+    }
+
+    function checkRouteChoice() {
+      var ok = evaluateTaskResponse(routeTask, state.routeChoice);
+      state.routeOk = ok;
+      var feedback = routeTask.feedback || {};
+      var optionFeedback = ok && routeTask.feedbackByOption ? routeTask.feedbackByOption[state.routeChoice] : null;
+      setRouteFeedback(
+        ok ? 'good' : 'warn',
+        ok ? (optionFeedback && optionFeedback.title ? optionFeedback.title : feedback.matchTitle) : feedback.retryTitle,
+        ok ? (optionFeedback && optionFeedback.text ? optionFeedback.text : feedback.matchText) : feedback.retryText,
+        optionFeedback && optionFeedback.route
+      );
+      updateCompletion();
+      return ok;
+    }
+
+    function updateCompletion() {
+      var completion = query(root, '[data-ge-completion]');
+      if (completion) {
+        completion.classList.toggle('is-visible', state.graphOk && state.readOk);
+      }
+    }
+
+    root.addEventListener('click', function (event) {
+      var axisOption = event.target.closest('[data-ge-axis-option]');
+      if (axisOption && root.contains(axisOption)) {
+        state.selectedAxisOption = axisOption.getAttribute('data-axis-value');
+        setPressed(queryAll(root, '[data-ge-axis-option]'), axisOption);
+        return;
+      }
+      var axisSlot = event.target.closest('[data-ge-axis-slot]');
+      if (axisSlot && root.contains(axisSlot)) {
+        if (!state.selectedAxisOption) return;
+        var axis = axisSlot.getAttribute('data-ge-axis-slot');
+        state.axis[axis] = state.selectedAxisOption;
+        if (axis === 'x' && state.axis.y === state.selectedAxisOption) state.axis.y = null;
+        if (axis === 'y' && state.axis.x === state.selectedAxisOption) state.axis.x = null;
+        state.points = [];
+        state.connectLine = false;
+        resetAfterGraphChange();
+        renderSlots();
+        redrawGraph();
+        return;
+      }
+      var pill = event.target.closest('[data-ge-pill-group]');
+      if (pill && root.contains(pill)) {
+        selectPill(pill.getAttribute('data-ge-pill-group'), pill.getAttribute('data-option-id'));
+        return;
+      }
+      var routeChoice = event.target.closest('[data-ge-route-choice-option]');
+      if (routeChoice && root.contains(routeChoice)) {
+        var choiceStep = routeChoice.closest('[data-task-id]');
+        setPressed(queryAll(choiceStep, '[data-ge-route-choice-option]'), routeChoice);
+        state.routeChoice = routeChoice.getAttribute('data-option-id');
+        state.routeOk = false;
+        updateCompletion();
+        return;
+      }
+      if (event.target.closest('[data-ge-clear-graph]')) {
+        state.points = [];
+        state.connectLine = false;
+        resetAfterGraphChange();
+        setFeedback(root, 'graph', null);
+        redrawGraph();
+        return;
+      }
+      if (event.target.closest('[data-ge-check-graph]')) {
+        checkGraph();
+        return;
+      }
+      if (event.target.closest('[data-ge-check-reading]')) {
+        checkReading();
+        return;
+      }
+      if (event.target.closest('[data-ge-check-route-choice]')) {
+        checkRouteChoice();
+        return;
+      }
+      if (event.target.closest('[data-ge-check-all]')) {
+        var graphPass = state.graphOk || checkGraph();
+        if (graphPass) checkReading();
+      }
+    });
+
+    root.addEventListener('click', function (event) {
+      var svg = event.target.closest('svg.ge-graph');
+      if (!svg || !root.contains(svg)) return;
+      if (!state.axis.x || !state.axis.y) return;
+      var rect = svg.getBoundingClientRect();
+      var scaleX = Graph.VIEW_BOX.width / rect.width;
+      var scaleY = Graph.VIEW_BOX.height / rect.height;
+      var rawX = (event.clientX - rect.left) * scaleX;
+      var rawY = (event.clientY - rect.top) * scaleY;
+      if (rawX < Graph.PLOT.x || rawX > Graph.PLOT.x + Graph.PLOT.width || rawY < Graph.PLOT.y || rawY > Graph.PLOT.y + Graph.PLOT.height) {
+        return;
+      }
+      var clamped = Graph.clampPlotPoint(rawX, rawY);
+      var snapped = Graph.nearestSourcePoint(graphSpec, clamped.x, clamped.y, graphSpec.snap_tolerance_px);
+      if (state.points.length < 2) {
+        state.points.push(snapped);
+      } else {
+        var replaceIndex = Graph.nearestRenderedPointIndex(graphSpec, state.points, clamped.x, clamped.y);
+        state.points[replaceIndex >= 0 ? replaceIndex : 1] = snapped;
+      }
+      state.connectLine = state.points.length >= 2;
+      resetAfterGraphChange();
+      redrawGraph();
+    });
+
+    root.addEventListener('input', function (event) {
+      if (!event.target.closest || !event.target.closest('[data-ge-read-q]')) return;
+      state.readOk = false;
+      hideCompletion();
+    });
+
+    setLocked(root, 'reading', true);
+    redrawGraph();
+    initTheme(root);
+
+    return {
+      variant: GRAPH_ADVISORY_VARIANT,
+      state: state,
+      checkGraph: checkGraph,
+      checkReading: checkReading,
+      checkRouteChoice: checkRouteChoice,
+      redrawGraph: redrawGraph
+    };
+  }
+
   function init(root, explicitData) {
     if (!root) return null;
     var data = explicitData || (typeof window !== 'undefined' ? window.EXIT_TICKET_DATA : null);
@@ -963,6 +1413,7 @@
     var variant = assertSupportedGoldenExerciseVariant(data);
     if (variant === CALCULATION_VARIANT) return initCalculationWorkbench(root, data);
     if (variant === ADVISORY_SHORT_CHECK_VARIANT) return initAdvisoryShortCheckWorkbench(root, data);
+    if (variant === GRAPH_ADVISORY_VARIANT) return initGraphAdvisoryWorkbench(root, data);
     var graphEntry = findTask(data, 'graph_construction_substitute');
     var readEntry = findTask(data, 'graph_reading');
     var claimEntry = findTask(data, 'calculation_work_capture');
@@ -1271,6 +1722,7 @@
   return {
     ADVISORY_SHORT_CHECK_VARIANT: ADVISORY_SHORT_CHECK_VARIANT,
     CALCULATION_VARIANT: CALCULATION_VARIANT,
+    GRAPH_ADVISORY_VARIANT: GRAPH_ADVISORY_VARIANT,
     GRAPH_VARIANT: GRAPH_VARIANT,
     SUPPORTED_VARIANT: SUPPORTED_VARIANT,
     SUPPORTED_VARIANTS: SUPPORTED_VARIANTS.slice(),

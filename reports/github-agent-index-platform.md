@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T07:20:05.106Z
+Generated: 2026-06-22T10:12:47.003Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/reasoning-golden-family-platform-20260620`
-Source commit: `ea04c3b7289743f97f88bf19209df62d57f677ce`
-Files indexed: 5404
+Source commit: `7a51a13acf8893eaa7e7cf56752fb9438d754e7f`
+Files indexed: 5450
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -135,7 +135,7 @@ Count: 87
 
 ## build scripts
 
-Count: 528
+Count: 532
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -214,8 +214,10 @@ Count: 528
 - build-scripts/exemplars/reasoning-golden-family-data.js
 - build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
+- build-scripts/inspection/build-international-quality-standards.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
@@ -511,6 +513,7 @@ Count: 528
 - build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
 - build-scripts/sprints/capture-exit-ticket-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/capture-gate-product-3p-authority-copy-repair-and-rereview-1.js
+- build-scripts/sprints/capture-golden-graph-advisory-113-bundle-1.js
 - build-scripts/sprints/capture-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/capture-golden-surface-visual-review1.js
 - build-scripts/sprints/capture-golden-ticket-layout-reset-screenshots.js
@@ -555,6 +558,7 @@ Count: 528
 - build-scripts/sprints/check-gate-reasoning-golden-family-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
+- build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js
 - build-scripts/sprints/check-golden-presentation-111.js
 - build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
@@ -719,10 +723,12 @@ Count: 46
 
 ## validators
 
-Count: 527
+Count: 532
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-validation-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
@@ -768,6 +774,7 @@ Count: 527
 - build-scripts/exemplars/check-reasoning-golden-exemplars.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
@@ -936,6 +943,7 @@ Count: 527
 - build-scripts/sprints/check-gate-reasoning-golden-family-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
+- build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js
 - build-scripts/sprints/check-golden-presentation-111.js
 - build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
@@ -1195,6 +1203,7 @@ Count: 527
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-short-check-desktop-light.png
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-short-check-desktop-light.png
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/landing-to-short-check-route.png
 - reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-desktop.png
 - reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-mobile.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png
@@ -1251,7 +1260,7 @@ Count: 527
 
 ## references
 
-Count: 704
+Count: 706
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1299,6 +1308,8 @@ Count: 704
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
 - references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
+- references/data/inspection-standards/international-authority-profiles.v0.json
+- references/data/inspection-standards/international-common-core.v0.json
 - references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
 - references/data/inspection-standards/README.md
@@ -1960,7 +1971,7 @@ Count: 704
 
 ## reports
 
-Count: 3391
+Count: 3415
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2049,6 +2060,12 @@ Count: 3391
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
+- reports/inspection-standards/international-book-portability-pilot.json
+- reports/inspection-standards/international-book-portability-pilot.md
+- reports/inspection-standards/international-commonalities-and-differences.json
+- reports/inspection-standards/international-commonalities-and-differences.md
+- reports/inspection-standards/international-foundation-decision.json
+- reports/inspection-standards/international-foundation-decision.md
 - reports/internal-dashboard/dashboard-data.json
 - reports/internal-dashboard/dashboard-data.json
 - reports/internal-dashboard/dashboard-data.json
@@ -2088,6 +2105,7 @@ Count: 3391
 - reports/json/gate-product-3p-closure-and-scale-gate-1-readiness-bundle-1-proof.json
 - reports/json/gate-product-3p-prep-2-proof.json
 - reports/json/golden-exercise-checkers-1-proof.json
+- reports/json/golden-graph-advisory-113-bundle-1-proof.json
 - reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json
 - reports/json/golden-surface-visual-review-1-proof.json
 - reports/json/graph-check-ux1-proof.json
@@ -3243,6 +3261,7 @@ Count: 3391
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/review-gates/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1/review-packet.json
 - reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
 - reports/review-gates/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
@@ -4093,6 +4112,22 @@ Count: 3391
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-review-protocol.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-roadmap.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-sprint-ledger.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-architecture-disposition.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-evidence-map.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-plan.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-quality-log.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-result.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshot-manifest.md
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-graph-after-action.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-initial.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-local-success-advisory-complete.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-wrong-retry.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/landing-to-short-check-route.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/manifest.json
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-dark-initial.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-dark-local-success.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-light-initial.png
+- reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/route-reload-desktop-light.png
 - reports/sprints/GOLDEN-PRESENTATION-111-accessibility-review.md
 - reports/sprints/GOLDEN-PRESENTATION-111-lead-verdict.md
 - reports/sprints/GOLDEN-PRESENTATION-111-review-packet.md
@@ -5374,7 +5409,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 591
+Count: 605
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5394,6 +5429,17 @@ Count: 591
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-planning-review.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-specialist-gate-results.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-sprint-plan.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-closure-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-correction-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-human-review-packet.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-planning-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-specialist-gate-results.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-correction-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-final-lead-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-specialist-gate-results.md
 - archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 - archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md
@@ -5661,6 +5707,8 @@ Count: 591
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
+- docs/inspection-standards/international-common-core-model.md
+- docs/inspection-standards/international-overlay-architecture.md
 - docs/inspection-standards/nl-vo-evidence-model.md
 - docs/inspection-standards/report-only-generator-plan.md
 - docs/inspection-standards/report-only-schema-design.md
@@ -5810,6 +5858,7 @@ Count: 591
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
 - docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - docs/roadmaps/quality-standards/quality-standards-end-state.md
 - docs/roadmaps/quality-standards/README.md
 - docs/roadmaps/quality-standards/sprint-ledger.md

@@ -5,6 +5,7 @@ const shells = require('./build-exit-ticket-shells');
 const exit112Data = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
 const short112Data = require('../../source-data/book-1/exit-ticket/1.1.2-korte-check.json');
 const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
+const short113Data = require('../../source-data/book-1/exit-ticket/1.1.3-korte-check.json');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 
@@ -112,6 +113,35 @@ describe('exit-ticket shell Golden Exercise renderer selection', () => {
     expect(html).not.toContain('shared/golden-ticket-graph.js');
     expect(html).not.toContain('data-ge-work');
     expect(html).not.toContain('data-ge-structured-choice');
+    expect(html).not.toContain('id="exit-ticket-app"');
+    expect(html).not.toContain('et-page');
+    expect(html).not.toContain('shared/task-shell.css');
+    expect(html).not.toContain('shared/exit-ticket.css');
+    expect(html).not.toContain('shared/task-shell-ui.js');
+    expect(html).not.toContain('shared/exit-ticket-ui.js');
+  });
+
+  test('selects the graph advisory Golden renderer for the 1.1.3 short check', () => {
+    const renderer = shells.goldenExerciseRendererFor(short113Data);
+    const html = shells.generateShell(
+      '1.1.3',
+      'Grafieken en tabellen',
+      short113Data,
+      '1.1.3-korte-check'
+    );
+
+    expect(renderer.id).toBe('golden_graph_advisory_v1');
+    expect(shells.usesGoldenExerciseWorkbench(short113Data)).toBe(true);
+    expect(shells.usesGoldenTicketLayout(short113Data)).toBe(true);
+    expect(html).toContain('class="ge-topbar"');
+    expect(html).toContain('class="ge-page" data-golden-ticket-root');
+    expect(html).toContain('shared/exit-ticket/1.1.3-korte-check.js');
+    expect(html).toContain('shared/golden-ticket-layout.css');
+    expect(html).toContain('shared/golden-ticket-graph.js');
+    expect(html).toContain('shared/golden-ticket-layout.js');
+    expect(html).toContain('data-ge-axis-option');
+    expect(html).toContain('data-ge-route-choice-option');
+    expect(html).toContain('data-source-key="1.1.3-korte-check"');
     expect(html).not.toContain('id="exit-ticket-app"');
     expect(html).not.toContain('et-page');
     expect(html).not.toContain('shared/task-shell.css');
