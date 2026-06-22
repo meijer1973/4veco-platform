@@ -5,6 +5,7 @@ This folder stores golden examples that can be used as source artifacts for futu
 ## Available Exemplars
 
 - `1.1.3-exit-ticket/` - Golden exit-ticket example for `1.1.3 Grafieken en tabellen`.
+- `1.1.1-golden-presentation/` - Golden conceptual web-first presentation example for `1.1.1 Schaarste en economisch denken`.
 - `implemented/1.1.3-golden-exercise-workbench/` - Repository-compatible implemented Golden Exercise Workbench snapshot for `1.1.3`.
 - `a96-answer-form/` - Golden answer-form example for A96-style calculation/formula work.
 

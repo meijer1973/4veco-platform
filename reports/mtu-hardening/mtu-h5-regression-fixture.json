@@ -321,7 +321,12 @@
         "references/external/exams/vw-1022-a-25-1-o.pdf#question-19",
         "references/external/exams/vw-1022-a-25-1-c.pdf#question-19",
         "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
-        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19"
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT"
       ],
       "source_locator": {
         "exam": "vw-1022-a-25-1-o",
@@ -382,13 +387,13 @@
           "expected_misconception_refs": [
             "source_market_shift_without_price_or_wage_direction"
           ],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP1_LABOR_MARKET_SHIFT_REVIEWED_EQUIVALENT"
+          ],
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "q19-source-annex-gap remains blocking",
-            "q19-graph-object-gap remains blocking"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [
             "full_graph_construction",
             "calculus_route",
@@ -442,12 +447,13 @@
           "expected_misconception_refs": [
             "linked_market_shift_without_inflation_direction"
           ],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP2_CURACAO_INFLATION_SHIFT_REVIEWED_EQUIVALENT"
+          ],
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [
             "full_graph_construction",
             "calculus_route",
@@ -508,6 +514,9 @@
           "expected_misconception_refs": [
             "foreign_spillover_without_aruba_inflation_direction"
           ],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP3_ARUBA_INFLATION_SHIFT_REVIEWED_EQUIVALENT"
+          ],
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
@@ -518,11 +527,7 @@
             "A81"
           ],
           "procedure_review_required_unit_ids": [],
-          "review_required_hooks": [
-            "q19-source-annex-gap remains blocking",
-            "q19-graph-object-gap remains blocking",
-            "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
-          ]
+          "review_required_hooks": []
         }
       ]
     },

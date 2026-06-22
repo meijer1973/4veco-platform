@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-20T07:50:32.254Z
+Generated: 2026-06-22T07:49:49.216Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `HEAD`
-Source commit: `e8dfc9e8303187ffc9babd220ba3d74ae5cd19eb`
-Files indexed: 5158
+Source branch: `codex/goal-iqs-foundation-1-20260621`
+Source commit: `9d99b96695fbc37f2b37aafad60a6a2b138e2d91`
+Files indexed: 5297
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -43,7 +43,7 @@ Count: 8
 
 ## engines
 
-Count: 84
+Count: 85
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -94,6 +94,7 @@ Count: 84
 - engines/tests/exit-ticket-metadata-alignment.test.js
 - engines/tests/exit-ticket-ui.test.js
 - engines/tests/fig-3-step-count.test.js
+- engines/tests/golden-presentation-reference.test.js
 - engines/tests/golden-ticket-layout.test.js
 - engines/tests/graphical-data.test.js
 - engines/tests/graphical-engine.test.js
@@ -132,7 +133,7 @@ Count: 84
 
 ## build scripts
 
-Count: 510
+Count: 523
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -205,8 +206,12 @@ Count: 510
 - build-scripts/content/legacy-target/vaardigheden-352-naar-het-examen.js
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
+- build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
+- build-scripts/inspection/build-international-quality-standards.js
+- build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
@@ -340,6 +345,7 @@ Count: 510
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js
 - build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
@@ -360,6 +366,7 @@ Count: 510
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
+- build-scripts/references/check-presentation-policy.js
 - build-scripts/references/check-procedure-visual-coverage.js
 - build-scripts/references/check-procedure-visual-inventory.js
 - build-scripts/references/check-procedure-visual-lesson-regression-proof-intake.js
@@ -394,9 +401,11 @@ Count: 510
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
+- build-scripts/references/check-three-year-blueprint-maturity-bundle-1.js
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
 - build-scripts/references/close-and-apply-rx2b-graphical-foundation.js
 - build-scripts/references/close-and-apply-rx3a-first-lane.js
@@ -498,6 +507,7 @@ Count: 510
 - build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
 - build-scripts/sprints/capture-exit-ticket-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/capture-gate-product-3p-authority-copy-repair-and-rereview-1.js
+- build-scripts/sprints/capture-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/capture-golden-surface-visual-review1.js
 - build-scripts/sprints/capture-golden-ticket-layout-reset-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
@@ -540,6 +550,8 @@ Count: 510
 - build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
+- build-scripts/sprints/check-golden-presentation-111.js
+- build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
 - build-scripts/sprints/check-golden-ticket-no-legacy.js
@@ -558,6 +570,7 @@ Count: 510
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
+- build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -631,6 +644,7 @@ Count: 510
 - scripts/post-push-hook.js
 - scripts/pre-push-hook.js
 - scripts/qa-presentation-v2-html.js
+- scripts/qa-presentation-web.js
 - scripts/qa-student-web-pages.js
 - scripts/tests/build-landing-page.test.js
 - scripts/tests/check-book-print-scope.test.js
@@ -694,8 +708,12 @@ Count: 42
 
 ## validators
 
-Count: 501
+Count: 516
 
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-validation-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
@@ -738,7 +756,9 @@ Count: 501
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
@@ -790,6 +810,7 @@ Count: 501
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js
 - build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
@@ -810,6 +831,7 @@ Count: 501
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
 - build-scripts/references/check-owned-source-registry.js
+- build-scripts/references/check-presentation-policy.js
 - build-scripts/references/check-procedure-visual-coverage.js
 - build-scripts/references/check-procedure-visual-inventory.js
 - build-scripts/references/check-procedure-visual-lesson-regression-proof-intake.js
@@ -844,9 +866,11 @@ Count: 501
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
+- build-scripts/references/check-three-year-blueprint-maturity-bundle-1.js
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/validate-alignment-graph.js
 - build-scripts/references/validate-core-schemas.js
@@ -902,6 +926,8 @@ Count: 501
 - build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
+- build-scripts/sprints/check-golden-presentation-111.js
+- build-scripts/sprints/check-golden-route-111-migration-and-start-copy-repair-bundle-1.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
 - build-scripts/sprints/check-golden-ticket-no-legacy.js
@@ -920,6 +946,7 @@ Count: 501
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
+- build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -1146,6 +1173,8 @@ Count: 501
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-short-check-desktop-light.png
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-short-check-desktop-light.png
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-mobile.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png
@@ -1200,7 +1229,7 @@ Count: 501
 
 ## references
 
-Count: 628
+Count: 660
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1248,6 +1277,8 @@ Count: 628
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
 - references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
+- references/data/inspection-standards/international-authority-profiles.v0.json
+- references/data/inspection-standards/international-common-core.v0.json
 - references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
 - references/data/inspection-standards/README.md
@@ -1688,6 +1719,26 @@ Count: 628
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
+- references/exemplars/1.1.1-golden-presentation/accepted-snapshot-provenance.md
+- references/exemplars/1.1.1-golden-presentation/content-review-and-revision-notes.md
+- references/exemplars/1.1.1-golden-presentation/didactic-framework.md
+- references/exemplars/1.1.1-golden-presentation/golden-presentation-content-model.json
+- references/exemplars/1.1.1-golden-presentation/golden-presentation.html
+- references/exemplars/1.1.1-golden-presentation/implementation-handoff.md
+- references/exemplars/1.1.1-golden-presentation/layout-framework.md
+- references/exemplars/1.1.1-golden-presentation/lead-review-2026-06-20.md
+- references/exemplars/1.1.1-golden-presentation/policy-extract.md
+- references/exemplars/1.1.1-golden-presentation/previews/slide-01.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-02.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-05.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-10.png
+- references/exemplars/1.1.1-golden-presentation/previews/slide-11.png
+- references/exemplars/1.1.1-golden-presentation/README.md
+- references/exemplars/1.1.1-golden-presentation/screenshot-proof.md
+- references/exemplars/1.1.1-golden-presentation/slide-route.md
+- references/exemplars/1.1.1-golden-presentation/source-snapshot.sha256
+- references/exemplars/1.1.1-golden-presentation/speaker-notes-standard.md
+- references/exemplars/1.1.1-golden-presentation/teacher-student-review.md
 - references/exemplars/1.1.3-exit-ticket/candidate-data.json
 - references/exemplars/1.1.3-exit-ticket/implementation-handoff.md
 - references/exemplars/1.1.3-exit-ticket/package-readme.md
@@ -1774,6 +1825,16 @@ Count: 628
 - references/owned/course-blueprint-v6-three-year.md
 - references/owned/course-blueprint-v6-three-year.meta.json
 - references/owned/README.md
+- references/presentation/didactic-route-policy.json
+- references/presentation/didactic-route-policy.md
+- references/presentation/powerpoint-derivative-policy.md
+- references/presentation/presentation-policy.json
+- references/presentation/presentation-policy.md
+- references/presentation/README.md
+- references/presentation/speaker-notes-policy.json
+- references/presentation/speaker-notes-policy.md
+- references/presentation/web-first-presentation-layout.json
+- references/presentation/web-first-presentation-layout.md
 - references/qc-prompts/exam-derived-skills.md
 - references/qc-prompts/foundation-audit.md
 - references/qc-prompts/probe-questions.md
@@ -1833,7 +1894,7 @@ Count: 628
 
 ## reports
 
-Count: 3262
+Count: 3323
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1872,16 +1933,8 @@ Count: 3262
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1910,17 +1963,25 @@ Count: 3262
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.md
 - reports/inspection-standards/dutch-evidence-scale-readiness.json
 - reports/inspection-standards/dutch-evidence-scale-readiness.md
+- reports/inspection-standards/dutch-quality-standards-closure-candidate.json
+- reports/inspection-standards/dutch-quality-standards-closure-candidate.md
+- reports/inspection-standards/dutch-quality-standards-rollup.json
+- reports/inspection-standards/dutch-quality-standards-rollup.md
 - reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json
 - reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md
+- reports/inspection-standards/dutch-school-evidence-pack-candidate.json
+- reports/inspection-standards/dutch-school-evidence-pack-candidate.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
+- reports/inspection-standards/international-book-portability-pilot.json
+- reports/inspection-standards/international-book-portability-pilot.md
+- reports/inspection-standards/international-commonalities-and-differences.json
+- reports/inspection-standards/international-commonalities-and-differences.md
+- reports/inspection-standards/international-foundation-decision.json
+- reports/inspection-standards/international-foundation-decision.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1955,6 +2016,7 @@ Count: 3262
 - reports/json/gate-product-3p-closure-and-scale-gate-1-readiness-bundle-1-proof.json
 - reports/json/gate-product-3p-prep-2-proof.json
 - reports/json/golden-exercise-checkers-1-proof.json
+- reports/json/golden-route-111-migration-and-start-copy-repair-bundle-1-proof.json
 - reports/json/golden-surface-visual-review-1-proof.json
 - reports/json/graph-check-ux1-proof.json
 - reports/json/graph-exit-ux1-proof.json
@@ -2089,6 +2151,12 @@ Count: 3262
 - reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.md
 - reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json
 - reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.md
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json
+- reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md
 - reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json
 - reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.md
 - reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json
@@ -2261,6 +2329,20 @@ Count: 3262
 - reports/reference-planning/REF-CT2-cp6-status-update.md
 - reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
 - reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-architecture-matrix.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-assessment-retrieval-spine.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-book11-full-paper-repair-protocol.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-candidate-status-index.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-count-model.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-evidence-wave-overlay.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-maturity-change-control.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-official-evidence-coverage-matrix.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-operation-coverage-matrix.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-production-order-roadmap.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-quality-log.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-review-packet.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-target-mtu-backlog.md
 - reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-subagent-review.md
@@ -2282,6 +2364,13 @@ Count: 3262
 - reports/reference-planning/Y2-ROOT-MAPPING-1-quality-log.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-subagent-review.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-architecture.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-candidate-matrix.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-evidence-routing.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-quality-log.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-retrieval-spine.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-review-packet.md
+- reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-subagent-review.md
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden-contact-sheet.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-1.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-2.png
@@ -2678,6 +2767,9 @@ Count: 3262
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.md
+- reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.json
+- reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.md
@@ -3025,9 +3117,12 @@ Count: 3262
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
+- reports/review-gates/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
+- reports/review-gates/Y3-MACRO-SPINE-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.md
@@ -3872,6 +3967,29 @@ Count: 3262
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-review-protocol.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-roadmap.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-sprint-ledger.md
+- reports/sprints/GOLDEN-PRESENTATION-111-accessibility-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-lead-verdict.md
+- reports/sprints/GOLDEN-PRESENTATION-111-review-packet.md
+- reports/sprints/GOLDEN-PRESENTATION-111-student-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-teacher-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-visual-qa.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-architecture-disposition.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-evidence-map.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-plan.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-quality-log.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-result.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshot-manifest.md
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-exit-ticket-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-exit-ticket-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-start-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-start-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-2-start-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-2-start-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-3-start-desktop.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-3-start-mobile.png
+- reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/manifest.json
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-plan.md
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-quality-log.md
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-review.md
@@ -5057,6 +5175,8 @@ Count: 3262
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md
+- reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-plan.md
+- reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-result.md
 - reports/sprints/VISION-1-baseline.md
 - reports/sprints/VISION-1-command-log.jsonl
 - reports/sprints/VISION-1-command-log.md
@@ -5092,6 +5212,8 @@ Count: 3262
 - reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md
 - reports/sprints/Y2-ROOT-MAPPING-1-plan.md
 - reports/sprints/Y2-ROOT-MAPPING-1-result.md
+- reports/sprints/Y3-MACRO-SPINE-MAPPING-1-plan.md
+- reports/sprints/Y3-MACRO-SPINE-MAPPING-1-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
@@ -5118,12 +5240,37 @@ _No files indexed in this group._
 
 ## other
 
-Count: 577
+Count: 605
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/platform-ci.yml
 - .gitignore
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-closure-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-correction-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-final-lead-review.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-human-review-packet.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-planning-review.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-specialist-gate-results.md
+- archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-sprint-plan.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-closure-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-correction-log.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-final-lead-review.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-human-review-packet.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-planning-review.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-specialist-gate-results.md
+- archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-sprint-plan.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-closure-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-correction-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-human-review-packet.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-planning-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-specialist-gate-results.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-correction-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-final-lead-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-specialist-gate-results.md
 - archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 - archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md
@@ -5391,6 +5538,8 @@ Count: 577
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
+- docs/inspection-standards/international-common-core-model.md
+- docs/inspection-standards/international-overlay-architecture.md
 - docs/inspection-standards/nl-vo-evidence-model.md
 - docs/inspection-standards/report-only-generator-plan.md
 - docs/inspection-standards/report-only-schema-design.md
@@ -5540,6 +5689,7 @@ Count: 577
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
 - docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - docs/roadmaps/quality-standards/quality-standards-end-state.md
 - docs/roadmaps/quality-standards/README.md
 - docs/roadmaps/quality-standards/sprint-ledger.md

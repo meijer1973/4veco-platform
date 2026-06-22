@@ -2,6 +2,8 @@
 
 Status: `pending_human_review_after_more_than_satisfied_execution`
 
+Historical q19 status: `superseded_by` `MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1`. This bundle remains authoritative for the q27-step-2 and q15 repairs, but its q19 `0 failed / 6 review_required` carried-hold statements are no longer current after the 2026-06-20 final q19 resolution bundle.
+
 Review standard: REV-STD-1
 
 Product end-state: MTU-H5 is still blocked from final closure, Scale Gate 1,

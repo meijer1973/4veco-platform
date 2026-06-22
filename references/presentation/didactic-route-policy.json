@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "policy_id": "didactic-route-policy",
+  "status": "reusable_route_policy",
+  "derived_from": "references/exemplars/1.1.1-golden-presentation/",
+  "universal_roles": [
+    "route_contract",
+    "concept_model_development",
+    "worked_example_or_application",
+    "retrieval_check",
+    "summary_bridge",
+    "student_facing_notes"
+  ],
+  "conditional_roles": [
+    "narrative_anchor",
+    "transfer_slide",
+    "misconception_slide",
+    "procedure_route",
+    "calculation_interpretation_split"
+  ],
+  "role_requirements": {
+    "route_contract": ["goal", "route", "success_criteria"],
+    "concept_model_development": ["canonical_term_or_model", "definition_or_relation", "anchor_connection"],
+    "worked_example_or_application": ["student_visible_use", "concept_connection", "answerable_move"],
+    "retrieval_check": ["short_formative_application", "no_exercise_set_replacement"],
+    "summary_bridge": ["mental_model", "next_surface_or_paragraph"],
+    "student_facing_notes": ["student_explanation", "misconception_or_boundary_when_needed"],
+    "narrative_anchor": ["concrete_context", "visible_numbers_or_decisions_before_abstraction"],
+    "transfer_slide": ["additional_contexts", "same_pattern_language"],
+    "misconception_slide": ["visible_pitfalls", "correct_repairs"],
+    "procedure_route": ["named_steps", "student_action_per_step"],
+    "calculation_interpretation_split": ["calculation_before_conclusion", "economic_meaning_after_setup"]
+  },
+  "exemplar_specific_routes": {
+    "1.1.1-golden-presentation": {
+      "path": "references/exemplars/1.1.1-golden-presentation/",
+      "source_snapshot_sha256": "0070525A9F0C57C2BC9211C6D19CAEA6F84A3EEFE0810999C5AB0AA167477FF0",
+      "required_slide_count": 11,
+      "required_sequence": [
+        "route_contract",
+        "narrative_anchor",
+        "concept_model_development",
+        "transfer_slide",
+        "concept_model_development",
+        "misconception_slide",
+        "procedure_route",
+        "worked_example_calculation",
+        "worked_example_interpretation",
+        "retrieval_check",
+        "summary_bridge"
+      ]
+    }
+  },
+  "retrieval_check_does_not_authorize": [
+    "diagnostics",
+    "mastery_claims",
+    "automatic_sequencing",
+    "summative_use",
+    "target_equivalent_completion_language"
+  ]
+}

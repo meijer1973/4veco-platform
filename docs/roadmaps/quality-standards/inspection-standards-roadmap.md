@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.11-inspect-11ef-chapter-13-diagnostic-onboarding`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` closed / Chapter 1.3 diagnostic readiness remediation plan merged; `INSPECT-11B` closed / Chapter 1.3 readiness remediation and diagnostic tool health repair merged; `INSPECT-11C` closed / Chapter 1.3 lesson-side reconciliation and proof remediation merged; `INSPECT-11D` closed / state A accepted and paired PRs merged; `INSPECT-11E/F` in progress / Chapter 1.3 internal diagnostic onboarding and stability closure
+Roadmap version: `v2.14-dutch-internal-system-closed`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` closed / Chapter 1.3 diagnostic readiness remediation plan merged; `INSPECT-11B` closed / Chapter 1.3 readiness remediation and diagnostic tool health repair merged; `INSPECT-11C` closed / Chapter 1.3 lesson-side reconciliation and proof remediation merged; `INSPECT-11D` closed / state A accepted and paired PRs merged; `INSPECT-11E/F` closed / Chapter 1.3 internal diagnostic onboarding merged; `GOAL-DQS-CLOSURE-1` accepted partial component; `GOAL-DQS-CLOSURE-1A` accepted and merged / Dutch internal-report-only system closed as `CLOSE_INTERNAL_SYSTEM`
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -39,9 +39,11 @@ The endpoint is:
 > evidence and known gaps without confusing product evidence with school-owned
 > implementation or competent-authority judgement.
 
-Non-Dutch standards work is not part of this roadmap. If the owner later wants
-non-Dutch work, it must start in a separate worktree with a separate roadmap,
-source policy, and review gate.
+Non-Dutch standards work is not part of this Dutch roadmap. The separate
+international roadmap at
+`docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
+may govern internal-only common-core and jurisdiction-overlay foundation work,
+but it does not expand Dutch closure into country editions or external claims.
 
 ## 1. Ownership And Repository Boundary
 
@@ -783,6 +785,10 @@ Acceptance criteria:
 Goal: deliver a functioning, manually invoked, internal-only Chapter 1.3
 diagnostic report system while preserving Chapter 1.2 report semantics.
 
+Status: closed and merged in platform PR #119. The Chapter 1.3 internal
+diagnostic report pair and Chapter 1.2 semantic-regression protection are now
+part of the current internal/report-only Dutch quality-standards layer.
+
 This sprint is authorised only because INSPECT-11D reached accepted state A
 after human review and the governed platform-first, lesson-second merge
 sequence. It is not evidence-pack, teacher/school-facing, public/external,
@@ -821,6 +827,108 @@ Acceptance criteria:
   public/external output, product-route adoption, diagnostics/mastery/PV,
   student/product-use, personal-data processing, or compliance/approval claim
   is created.
+
+### GOAL-DQS-CLOSURE-1 - Dutch Quality Standards Closure Candidate Component
+
+Goal: produce a reviewed closure candidate for the current authorised Dutch
+quality-standards repository layer after INSPECT-11E/F, without claiming full
+L4/L5 teacher/school-facing maturity.
+
+Status: accepted as a strong internal-layer closure component, but incomplete
+for the original authorised closure contract after PR #124 review.
+
+Scope:
+
+- generate a manual internal DQS closure-candidate report pair;
+- inventory authorised Dutch source/profile, report-only schema/validator,
+  bounded INSPECT-7 sample, and Chapter 1.2/1.3 internal diagnostic reports;
+- keep Dutch source register and evidence profile draft/bounded status visible;
+- classify current closure findings and carried blockers with `blocks`,
+  `does_not_block`, and `proof_required_to_close`;
+- update roadmap, ledger, and version index so INSPECT-11E/F is no longer the
+  current next step;
+- run teacher/usefulness, legal/privacy, Dutch quality-inspection, and final
+  lead reviews before human review.
+
+Acceptance criteria:
+
+- REV-STD-1 is used for plan, validation, closure, specialist reviews, final
+  lead review, PR packet, and human-review packet;
+- product end-state and original sprint/gate spec are cited;
+- all current-layer core requirements are met and future-authority gaps are
+  not carried as PASS WITH FLAGS;
+- the DQS closure candidate uses exact source/output allowlists and refusal
+  tests;
+- closure explicitly does not authorise evidence packs, teacher/school-facing
+  output, public/external output, package/CI/dashboard gates, quality-ref,
+  Scale Gate, product-route adoption, diagnostics/mastery/PV,
+  student/product-use, personal-data processing, non-Dutch standards work, or
+  compliance/approval claims.
+
+### GOAL-DQS-CLOSURE-1A - Original Closure Contract Completion
+
+Goal: complete the original Dutch closure contract on the same branch and PR by
+adding the missing Dutch multi-scope roll-up, internal school-evidence-pack
+candidate, and formal closure-policy decision.
+
+Required outputs:
+
+```text
+reports/inspection-standards/dutch-quality-standards-rollup.md
+reports/inspection-standards/dutch-quality-standards-rollup.json
+reports/inspection-standards/dutch-school-evidence-pack-candidate.md
+reports/inspection-standards/dutch-school-evidence-pack-candidate.json
+reports/inspection-standards/dutch-quality-standards-closure-candidate.md
+reports/inspection-standards/dutch-quality-standards-closure-candidate.json
+```
+
+Required final decision vocabulary:
+
+```text
+CLOSE_INTERNAL_SYSTEM
+AUTHORISE_BOUNDED_SCHOOL_PACK_TRIAL
+REMEDIATE_BEFORE_CLOSURE
+```
+
+Current closure-policy decision in PR #124 after 1A completion:
+
+```text
+CLOSE_INTERNAL_SYSTEM
+```
+
+Meaning: the internal/report-only Dutch system is closed and stable after human
+acceptance and merge. No school-pack trial is authorised.
+
+Acceptance criteria:
+
+- REV-STD-1 is used for plan, validation, closure, specialist reviews, final
+  lead review, PR packet, and human-review packet;
+- all three artifact pairs exist and use exact source/output allowlists;
+- the roll-up consolidates Chapter 1.1 historical bounded control, Chapter 1.2
+  internal diagnostic scope with active blockers, Chapter 1.3 internal
+  diagnostic scope with route-local evidence and downstream blockers, and the
+  system layer;
+- each roll-up category includes strong product evidence, route-local
+  diagnostic evidence, weak or missing evidence, school-owned evidence still
+  needed, forbidden inference, `blocks`, `does_not_block`, and
+  `proof_required_to_close`;
+- the internal school-evidence-pack candidate opens with the required
+  internal-only warning text and includes all required sections;
+- the closure candidate chooses exactly one allowed decision based on both the
+  roll-up and internal pack candidate;
+- the DQS checker verifies exact allowlists, safe-use language, false
+  authority flags, draft source/profile visibility, roll-up/pack/closure
+  consistency, no public/school-facing authorisation, no international scope,
+  and refusal cases;
+- teacher/economics, legal/privacy, Dutch quality-inspection, accessibility,
+  and final lead reviews pass after corrections;
+- PR #124 is 0 behind current `main`, non-draft, mergeable, and green before
+  human review.
+
+This sprint does not authorise school-pack trial work, teacher/school-facing
+output, public/external output, product-route adoption, Scale Gate,
+diagnostics/mastery/PV, student/product-use, personal-data processing,
+international work, or compliance/approval claims.
 
 ### INSPECT-12 - Dutch Teacher/School Evidence Pack
 
@@ -935,31 +1043,39 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Complete INSPECT-11E/F Chapter 1.3 internal diagnostic onboarding and stability closure
+Use the separate international roadmap only for GOAL-IQS-FOUNDATION-1
+internal common-core and jurisdiction-overlay foundation review.
 ```
 
-Recommended posture after INSPECT-11D acceptance and governed merge:
+Recommended posture after GOAL-DQS-CLOSURE-1A merge:
 
 ```text
-accept or revise only INSPECT-11E/F internal diagnostic onboarding output
-allow a manually invoked internal Chapter 1.3 diagnostic report only inside INSPECT-11E/F
-do not generate a Chapter 1.3 evidence pack during INSPECT-11E/F
+recognise GOAL-DQS-CLOSURE-1A as accepted and merged on PR #124
+recognise the Dutch internal/report-only system as closed under CLOSE_INTERNAL_SYSTEM
+recognise GOAL-DQS-CLOSURE-1 as accepted partial internal-layer work only
+recognise Chapter 1.2 and Chapter 1.3 only as manual internal diagnostic reports
+do not generate a Chapter 1.3 distributed evidence pack or any school/public evidence pack
 keep the older multi-scope evidence-pack INSPECT-11 row blocked
 keep teacher/school-facing, public/external, product-route, and Scale Gate uses blocked
 keep Chapter 1.2 pack-strength, teacher/school-facing, and public/external work blocked
 keep package/CI/dashboard/quality-ref/Scale Gate integration blocked
 do not mutate generated lesson output or protected references
 keep product-route adoption, diagnostics/mastery/PV, and student/product-use authority blocked
-keep non-Dutch standards work out of this roadmap
+keep non-Dutch standards work out of this Dutch roadmap
+route international foundation work through docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 keep personal-data processing and compliance/approval claims blocked
 ```
 
-The practical product question carried forward from accepted INSPECT-11D into
-INSPECT-11E/F is:
+The practical product question carried forward after GOAL-DQS-CLOSURE-1A is:
 
-> Can Chapter 1.3 be onboarded as a manually invoked internal diagnostic report
-> while preserving Chapter 1.2 semantics and keeping all downstream product,
-> school-facing, public, and Scale Gate authority blocked?
+> Can the original Dutch closure contract now be accepted with the explicit
+> decision CLOSE_INTERNAL_SYSTEM while keeping school-facing, public, product,
+> Scale Gate, student-use, personal-data, and compliance authority blocked?
+
+That question is answered `yes` by the accepted GOAL-DQS-CLOSURE-1A human
+review and PR #124 merge. Later Dutch product, school-facing, public,
+evidence-pack, Scale Gate, student/product-use, personal-data, compliance, and
+approval work still requires a separate human-authorised sprint.
 
 ## 9. Explicit Out-Of-Scope Work
 
@@ -979,5 +1095,7 @@ Scale Gate integration
 quality-ref integration
 ```
 
-If non-Dutch work is later desired, start a separate worktree and a separate
-roadmap after the Dutch quality-control package has reached clean closure.
+Non-Dutch work is now routed to the separate international roadmap only. That
+roadmap starts with internal foundation analysis and does not authorise country
+implementation, school/public distribution, product routes, or compliance
+claims.
