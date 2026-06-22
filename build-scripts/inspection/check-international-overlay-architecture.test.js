@@ -16,6 +16,9 @@ function runNode(args) {
 describe("international overlay architecture checker", () => {
   test("accepts the generated overlay descriptor architecture packet", () => {
     const result = runNode(["build-scripts/inspection/check-international-overlay-architecture.js"]);
+    if (result.status !== 0) {
+      throw new Error(`checker exited ${result.status}\nstdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    }
     expect(result.status).toBe(0);
     expect(result.stdout).toContain("OK international overlay architecture check");
   });
