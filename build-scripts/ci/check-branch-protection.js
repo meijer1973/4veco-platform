@@ -96,6 +96,7 @@ function summarizeProtection(protection, options = {}) {
   const enforceAdmins = booleanValue(protection.enforce_admins);
   const allowForcePushes = booleanValue(protection.allow_force_pushes);
   const allowDeletions = booleanValue(protection.allow_deletions);
+  const requiredConversationResolution = booleanValue(protection.required_conversation_resolution);
   const pullRequestReviews =
     options.pullRequestReviews ||
     protection.required_pull_request_reviews ||
@@ -107,6 +108,9 @@ function summarizeProtection(protection, options = {}) {
   if (enforceAdmins !== true) failures.push('enforce_admins.enabled must be true');
   if (allowForcePushes !== false) failures.push('allow_force_pushes.enabled must be false');
   if (allowDeletions !== false) failures.push('allow_deletions.enabled must be false');
+  if (requiredConversationResolution !== true) {
+    failures.push('required_conversation_resolution.enabled must be true');
+  }
   const pullRequestReviewSummary = summarizePullRequestReviews(
     pullRequestReviews,
     options.pullRequestReviewFetch
@@ -145,6 +149,7 @@ function summarizeProtection(protection, options = {}) {
       enforce_admins: true,
       allow_force_pushes: false,
       allow_deletions: false,
+      required_conversation_resolution: true,
     },
     observed: {
       required_status_checks: {
@@ -154,6 +159,7 @@ function summarizeProtection(protection, options = {}) {
       enforce_admins: enforceAdmins,
       allow_force_pushes: allowForcePushes,
       allow_deletions: allowDeletions,
+      required_conversation_resolution: requiredConversationResolution,
       required_pull_request_reviews: pullRequestReviewSummary,
     },
     failures,

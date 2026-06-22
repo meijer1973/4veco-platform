@@ -20,6 +20,9 @@ function validProtection(overrides = {}) {
     allow_deletions: {
       enabled: false,
     },
+    required_conversation_resolution: {
+      enabled: true,
+    },
     required_pull_request_reviews: {
       dismiss_stale_reviews: false,
       require_code_owner_reviews: false,
@@ -104,6 +107,11 @@ describe('check-branch-protection', () => {
       'deletions allowed',
       validProtection({ allow_deletions: { enabled: true } }),
       'allow_deletions.enabled must be false',
+    ],
+    [
+      'conversation resolution disabled',
+      validProtection({ required_conversation_resolution: { enabled: false } }),
+      'required_conversation_resolution.enabled must be true',
     ],
     [
       'pull-request review settings missing',
