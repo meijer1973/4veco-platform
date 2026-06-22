@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "report_id": "book1-1.2-1.3-overlay-crosswalk",
+  "sprint_id": "GOAL-IQS-OVERLAY-ARCHITECTURE-1",
+  "generated_date": "2026-06-22",
+  "access_date": "2026-06-22",
+  "status": "book1_crosswalk_complete",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "foundation_sprint_id": "GOAL-IQS-FOUNDATION-1",
+  "foundation_decision_source": "reports/inspection-standards/international-foundation-decision.md",
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md",
+  "non_negotiable_requirements": [
+    "Cite the product end-state and original sprint/gate specification.",
+    "Cite the accepted GOAL-IQS-FOUNDATION-1 decision and preserve its authority boundaries.",
+    "Name non-negotiable requirements before conclusions.",
+    "Include a core-requirement checklist.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "Do not carry any missing core requirement as PASS WITH FLAGS.",
+    "Generate exactly the allowlisted overlay schema, four descriptors, governance docs, crosswalk, pilot report, and decision report.",
+    "Use explicit per-scope source and output allowlists; do not glob directories or discover sources implicitly.",
+    "Keep all country-edition, compliance, approval, public, school-facing, product-route, Scale Gate, diagnostics/mastery/PV, student-use, personal-data, OP0, PTA, summative, and inspection-readiness authority blocked."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "overlay_schema",
+      "requirement": "The descriptor schema names every required overlay field and blocks implicit source/output discovery.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "four_archetype_descriptors",
+      "requirement": "England, Flanders, Bavaria/Germany, and California/United States descriptors are generated as contrasting governance archetypes.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "official_source_allowlists",
+      "requirement": "Each descriptor carries explicit official-source allowlists with authority type, allowed use, and forbidden inference.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "curriculum_assessment_mapping",
+      "requirement": "Each descriptor separates curriculum mapping from assessment/exam mapping and names v0 gaps.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "book1_crosswalk",
+      "requirement": "Book 1 Chapters 1.2 and 1.3 are crosswalked to the four descriptors without country-edition output.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "school_owned_boundary",
+      "requirement": "Every descriptor preserves school-owned evidence, implementation, inspection, accreditation, and accountability boundaries.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "accessibility_inclusion_terms",
+      "requirement": "Each descriptor records local accessibility/inclusion terminology without compliance claims.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "refusal_and_stop_conditions",
+      "requirement": "Generator and checker refuse forbidden audiences, claims, integrations, and governance overgeneralisations.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "single_decision",
+      "requirement": "The architecture chooses exactly one allowed decision.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "human_review_stop",
+      "requirement": "The packet returns only after all descriptors, crosswalk, validators, specialist reviews, and final PR proof are complete.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    }
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false
+  },
+  "output_files_written": [
+    "references/schemas/international-jurisdiction-overlay.schema.json",
+    "references/data/inspection-standards/overlays/england.v0.json",
+    "references/data/inspection-standards/overlays/flanders.v0.json",
+    "references/data/inspection-standards/overlays/bavaria.v0.json",
+    "references/data/inspection-standards/overlays/california.v0.json",
+    "docs/inspection-standards/international-overlay-descriptor-contract.md",
+    "docs/inspection-standards/international-overlay-governance-rules.md",
+    "reports/inspection-standards/international-overlay-archetype-pilot.md",
+    "reports/inspection-standards/international-overlay-archetype-pilot.json",
+    "reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.md",
+    "reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json",
+    "reports/inspection-standards/international-overlay-architecture-decision.md",
+    "reports/inspection-standards/international-overlay-architecture-decision.json"
+  ],
+  "book_scope": "Book 1 Chapters 1.2 and 1.3",
+  "source_policy": "Repo-relative lesson pointers identify the current product surfaces. They are not generated lesson-output scans and do not authorise country-edition output.",
+  "descriptor_files": [
+    "references/data/inspection-standards/overlays/england.v0.json",
+    "references/data/inspection-standards/overlays/flanders.v0.json",
+    "references/data/inspection-standards/overlays/bavaria.v0.json",
+    "references/data/inspection-standards/overlays/california.v0.json"
+  ],
+  "evidence_status": "route-local-only evidence status",
+  "school_owned_evidence_needed": true,
+  "forbidden_inferences": [
+    "The crosswalk proves local curriculum compliance.",
+    "The crosswalk proves school inspection, accountability, accreditation, or exam readiness.",
+    "The crosswalk authorizes public, teacher/school-facing, student/product-use, or country-edition output.",
+    "The crosswalk can substitute local expert or competent-authority review."
+  ],
+  "crosswalk_rows": [
+    {
+      "concept_id": "1.2.1_willingness_to_pay_individual_demand",
+      "book_scope": "Book 1 Chapter 1.2",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "local_heading": "1.2.1 Individuele vraag",
+      "portable_core": "Willingness to pay, individual demand, buy/no-buy decisions, and demand curve reasoning are portable product-pedagogy concepts.",
+      "overlay_requirements": {
+        "england": "Translate to A level economics vocabulary and later map to DfE topic/assessment-objective language.",
+        "flanders": "Retain Dutch-language concepts only after Flemish curriculum-goal mapping and terminology review.",
+        "bavaria": "Map to Nachfrage/Zahlungsbereitschaft only where Bavaria WR12 or another Land route supports placement.",
+        "california": "Map to California HSS-PoE economic reasoning and market-economy standards before adaptation."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.2.1_consumer_surplus",
+      "book_scope": "Book 1 Chapter 1.2",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+      "local_heading": "1.2.1 Individuele vraag",
+      "portable_core": "Consumer surplus diagrams and stepwise price-quantity reasoning can be reused internally as a concept family.",
+      "overlay_requirements": {
+        "england": "Check subject-content depth and exam-board treatment before claiming fit.",
+        "flanders": "Keep as a candidate economics concept pending exact goal mapping.",
+        "bavaria": "Treat Konsumentenrente as placement-sensitive and review before local use.",
+        "california": "Use only if California standards/framework mapping supports depth; otherwise mark as extension."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.2.2_demand_factors_movement_vs_shift",
+      "book_scope": "Book 1 Chapter 1.2",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md",
+      "local_heading": "1.2.2 Vraagfactoren",
+      "portable_core": "Own-price movement along a demand curve is distinct from a demand-curve shift caused by income, preferences, substitutes, complements, population, or expectations.",
+      "overlay_requirements": {
+        "england": "Use English demand-factor terminology and guard against exam-board-specific command words.",
+        "flanders": "Review local examples and Flemish wording for substitutes/complements and income effects.",
+        "bavaria": "Translate into Nachfragefaktoren and local example contexts; confirm Land placement.",
+        "california": "Map to incentives, substitutes, and law-of-demand standards where exact standards support it."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.2.3_collective_demand",
+      "book_scope": "Book 1 Chapter 1.2",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+      "local_heading": "1.2.3 Van individuele naar collectieve vraag",
+      "portable_core": "Aggregating individual demand into market demand is portable if local curriculum depth supports it.",
+      "overlay_requirements": {
+        "england": "Check whether market demand aggregation is required or assumed under A level content.",
+        "flanders": "Map to exact Flemish economic/financial-economic goals before output use.",
+        "bavaria": "Confirm whether aggregation sits in WR12, a lower grade, or a different Land content path.",
+        "california": "Use as market-economy reasoning where standards/framework support aggregation."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.2.4_mixed_demand_tasks",
+      "book_scope": "Book 1 Chapter 1.2",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md",
+      "local_heading": "1.2.4 Gemengde opgaven",
+      "portable_core": "Mixed demand tasks are useful internal task-family evidence but not local assessment proof.",
+      "overlay_requirements": {
+        "england": "Replace task forms only after exam-board source review.",
+        "flanders": "Do not infer Flemish assessment fit from Dutch mixed exercises.",
+        "bavaria": "Review task verbs, contexts, and difficulty against Land expectations.",
+        "california": "Keep as formative practice only; no California assessment mapping is included."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.3.1_supply_curve_supply_factors",
+      "book_scope": "Book 1 Chapter 1.3",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md",
+      "local_heading": "1.3.1 Aanbod",
+      "portable_core": "Supply curve, movement along supply, supply shifts, input costs, technology, expectations, and policy factors are portable concept families.",
+      "overlay_requirements": {
+        "england": "Use A level economics terminology and assessment-objective review later.",
+        "flanders": "Confirm Flemish goal mapping and example contexts.",
+        "bavaria": "Map to Angebot/Angebotskurve and Bavaria WR12 market/production context.",
+        "california": "Map to law of supply and incentive standards before local use."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.3.2_market_equilibrium_shortage_surplus",
+      "book_scope": "Book 1 Chapter 1.3",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+      "local_heading": "1.3.2 Marktevenwicht",
+      "portable_core": "Demand/supply intersection, equilibrium price/quantity, shortage, surplus, and price adjustment are core market-model reasoning.",
+      "overlay_requirements": {
+        "england": "Separate concept transfer from exam-board graph conventions.",
+        "flanders": "Retain as internal concept family pending Flemish curriculum-goal mapping.",
+        "bavaria": "Review with Bavaria market/production context and German terminology.",
+        "california": "Map to market economy and supply/demand standards."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.3.3_shifts_new_equilibrium",
+      "book_scope": "Book 1 Chapter 1.3",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md",
+      "local_heading": "1.3.3 Verschuivingen en nieuw evenwicht",
+      "portable_core": "Demand/supply shifts, new equilibrium reasoning, and two-shift ambiguity are portable if local examples are substituted.",
+      "overlay_requirements": {
+        "england": "Check command-word and graph-label conventions later.",
+        "flanders": "Review Flemish examples and preserve separation from school-quality evidence.",
+        "bavaria": "Use German graph labels and confirm local scenario fit.",
+        "california": "Use state/local examples only after source review; no district adoption claim."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "1.3.4_mixed_supply_demand_tasks",
+      "book_scope": "Book 1 Chapter 1.3",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md",
+      "local_heading": "1.3.4 Gemengde opgaven",
+      "portable_core": "Mixed supply-demand exercises are internal product-quality evidence and candidate formative practice only.",
+      "overlay_requirements": {
+        "england": "No exam-board mapping without awarding-body sources.",
+        "flanders": "No Flemish assessment claim without assessment source refresh.",
+        "bavaria": "No Abitur-readiness claim from generic tasks.",
+        "california": "No California assessment or district-use claim."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    },
+    {
+      "concept_id": "book1_output_boundary",
+      "book_scope": "Book 1 Chapters 1.2 and 1.3",
+      "source_pointer": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.md",
+      "local_heading": "Book 1 current generated chapter assembly",
+      "portable_core": "The crosswalk can discuss current product concepts, generated chapter structure, and route-local proof status only.",
+      "overlay_requirements": {
+        "england": "No England country edition, school-facing output, or public route.",
+        "flanders": "No Flemish edition or all-Belgium claim.",
+        "bavaria": "No Bavaria/Germany edition or whole-Germany claim.",
+        "california": "No California/U.S. edition, district adoption, or national-US claim."
+      },
+      "evidence_status": "route-local-only",
+      "school_owned_boundary": "School implementation, teacher judgement, support records, local assessment, inspection/accreditation evidence, and accountability proof remain school-owned or competent-authority-owned.",
+      "proof_required_to_close": "Exact local source mapping, source reviewer PASS, teacher/economics PASS, legal/claims PASS, accessibility/inclusion PASS, final lead PASS, and human approval before implementation."
+    }
+  ],
+  "finding_classification": [
+    {
+      "finding": "Book 1 Chapters 1.2 and 1.3 have a portable economics concept core suitable for internal overlay mapping.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for internal architecture review.",
+      "does_not_block": "Human review of the architecture packet.",
+      "proof_required_to_close": "Teacher/economics reviewer PASS and checker PASS."
+    },
+    {
+      "finding": "The crosswalk is not a local curriculum, assessment, or inspection proof.",
+      "classification": "scale_blocker",
+      "blocks": "Country editions, exam-readiness, inspection-readiness, public/school-facing output, product routes, and Scale Gate use.",
+      "does_not_block": "Internal common-core and overlay architecture.",
+      "proof_required_to_close": "Separate local source-refresh and implementation gate."
+    },
+    {
+      "finding": "Some concept placement and terminology depth remains jurisdiction-specific.",
+      "classification": "minor_carry_flag",
+      "blocks": "Direct adaptation without local expert review.",
+      "does_not_block": "Internal selected-jurisdiction deepening if approved.",
+      "proof_required_to_close": "Local teacher/economics review before any selected-jurisdiction implementation."
+    }
+  ]
+}

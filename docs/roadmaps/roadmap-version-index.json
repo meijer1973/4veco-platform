@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-21",
+  "updated_on": "2026-06-22",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -98,14 +98,14 @@
     },
     {
       "roadmap_id": "international-quality-standards-foundation",
-      "version": "v0.1-foundation-human-review",
+      "version": "v0.2-overlay-architecture-human-review",
       "title": "International Quality Standards Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-06-21",
+      "updated_on": "2026-06-22",
       "supersedes": [],
-      "notes": "Separate internal-only roadmap after Dutch internal/report-only closure. GOAL-IQS-FOUNDATION-1 prepares official-source authority profiles, a shared economics common-core matrix, jurisdiction-overlay architecture, a bounded Book 1 portability check, refusal checks, and the foundation decision PROCEED_WITH_COMMON_CORE_AND_OVERLAYS. It does not authorize country editions, compliance or approval claims, teacher/school-facing output, public output, evidence-pack deployment, package/CI/dashboard gates, quality-ref or Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student/product-use, personal-data processing, OP0, PTA, summative, or inspection-readiness claims."
+      "notes": "Separate internal-only roadmap after Dutch internal/report-only closure. GOAL-IQS-FOUNDATION-1 was accepted and merged on PR #131 with the foundation decision PROCEED_WITH_COMMON_CORE_AND_OVERLAYS. GOAL-IQS-OVERLAY-ARCHITECTURE-1 is the current architecture packet: descriptor schema, four v0 governance-archetype overlays for England, Flanders, Bavaria/Germany, and California/United States, Book 1 Chapters 1.2/1.3 crosswalk, refusal checks, and the decision PROCEED_TO_SELECTED_JURISDICTION_DEEPENING for human review. It does not authorize country editions, local implementation, compliance or approval claims, teacher/school-facing output, public output, evidence-pack deployment, package/CI product integration, dashboard gates, quality-ref or Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student/product-use, personal-data processing, OP0, PTA, summative, accreditation, or inspection-readiness claims."
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",
