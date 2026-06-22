@@ -1,11 +1,11 @@
 # International Quality Standards Roadmap
 
-Status: active overlay-architecture roadmap
+Status: active selected-deepening roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.2-overlay-architecture-human-review`
-Sprint status: `GOAL-IQS-OVERLAY-ARCHITECTURE-1` current / architecture packet for human review
+Roadmap version: `v0.3-selected-deepening-human-review`
+Sprint status: `GOAL-IQS-SELECTED-DEEPENING-1` current / England and Flanders deep overlay readiness packet for human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -44,8 +44,10 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md`
 - International foundation sprint:
   `archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-sprint-plan.md`
-- Current overlay-architecture sprint:
+- Accepted overlay-architecture sprint:
   `archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md`
+- Current selected-deepening sprint:
+  `archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-sprint-plan.md`
 
 ## 2. Non-Negotiable Requirements
 
@@ -89,9 +91,9 @@ deployment, package/CI/dashboard/quality-ref/Scale Gate integration, product
 routes, diagnostics/mastery/PV, student/product use, personal-data processing,
 or school-owned evidence flows.
 
-## 4. Current Overlay-Architecture Scope
+## 4. Completed Overlay-Architecture Scope
 
-`GOAL-IQS-OVERLAY-ARCHITECTURE-1` may create:
+`GOAL-IQS-OVERLAY-ARCHITECTURE-1` was accepted after PR #134 and created:
 
 - an internal jurisdiction overlay descriptor schema;
 - explicit v0 overlay descriptors for England, Flanders, Bavaria/Germany, and
@@ -99,15 +101,13 @@ or school-owned evidence flows.
 - internal descriptor-contract and governance-rule documentation;
 - a Book 1 Chapters 1.2/1.3 overlay crosswalk;
 - an archetype report;
-- an architecture decision choosing exactly one of:
-  `PROCEED_TO_SELECTED_JURISDICTION_DEEPENING`,
-  `REVISE_OVERLAY_SCHEMA`, or
-  `RESEARCH_GAPS_BEFORE_PILOT_EXPANSION`;
+- an architecture decision selecting
+  `PROCEED_TO_SELECTED_JURISDICTION_DEEPENING`;
 - manual generator/checker scripts and refusal tests;
 - validation, specialist-review, final lead-review, PR proof, and human-review
   records.
 
-It must not create country editions, local implementation, local exam-code
+It did not create country editions, local implementation, local exam-code
 implementation, teacher/school-facing output, public output, evidence-pack
 deployment, package/CI product integration, dashboard gates, quality-ref or
 Scale Gate integration, product routes, diagnostics/mastery/PV,
@@ -115,7 +115,34 @@ student/product use, personal-data processing, compliance, approval,
 accreditation, OP0, PTA, summative, inspection-readiness, or school-owned
 evidence flows.
 
-## 5. Architecture Direction
+## 5. Current Selected-Deepening Scope
+
+`GOAL-IQS-SELECTED-DEEPENING-1` may create:
+
+- a nested `international-jurisdiction-overlay.schema.v1.json` with positive
+  and negative fixtures;
+- England and Flanders deepening descriptors only;
+- exact Book 1 Chapters 1.2 and 1.3 deep crosswalks for England and Flanders;
+- internal transformation specifications for unchanged content,
+  substitutions, extensions, exclusions, citations, and assessment-task
+  replacement boundaries;
+- a comparative readiness report and decision choosing exactly one of:
+  `PROCEED_TO_INTERNAL_OVERLAY_PROTOTYPE_PLANNING`,
+  `LIMIT_DEEPENING_TO_ONE_JURISDICTION`, or
+  `RESEARCH_GAPS_BEFORE_PROTOTYPE_PLANNING`;
+- manual generator/checker scripts, positive and negative schema fixtures,
+  refusal tests, validation records, specialist reviews, final lead review,
+  PR proof, and human-review records.
+
+It must not create localized textbook chapters, country editions, local
+implementation, local exam-code implementation, teacher/school-facing output,
+public output, evidence-pack deployment, package/CI product integration,
+dashboard gates, quality-ref or Scale Gate integration, product routes,
+diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative,
+inspection-readiness, or school-owned evidence flows.
+
+## 6. Architecture Direction
 
 The current architecture preserves four layers:
 
@@ -128,33 +155,38 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 6. Core-Requirement Checklist
+## 7. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
 | Official-source profiles for all nine foundation jurisdictions | closed | PR #131 accepted and merged |
 | Common-core matrix distinguishes portable product evidence from local overlay needs | closed | `international-common-core.v0.json` and PR #131 final lead PASS |
-| Descriptor schema names required overlay fields and blocks implicit discovery | current sprint | `international-jurisdiction-overlay.schema.json` and checker PASS |
-| England, Flanders, Bavaria/Germany, and California/United States descriptors cover four governance archetypes | current sprint | Descriptor JSON, country/source reviews, and final lead PASS |
-| Book 1 Chapters 1.2/1.3 crosswalk remains internal and route-local | current sprint | `book1-1.2-1.3-overlay-crosswalk.md/json` and teacher/economics review |
-| Final overlay decision selects exactly one allowed option | current sprint | `international-overlay-architecture-decision.md/json` and checker PASS |
+| Descriptor schema names required overlay fields and blocks implicit discovery | closed | `international-jurisdiction-overlay.schema.json`, PR #134 accepted and merged |
+| England, Flanders, Bavaria/Germany, and California/United States descriptors cover four governance archetypes | closed | Descriptor JSON, country/source reviews, and PR #134 final lead PASS |
+| Book 1 Chapters 1.2/1.3 crosswalk remains internal and route-local | closed | `book1-1.2-1.3-overlay-crosswalk.md/json` and PR #134 teacher/economics review |
+| Final overlay decision selects exactly one allowed option | closed | `international-overlay-architecture-decision.md/json` selected `PROCEED_TO_SELECTED_JURISDICTION_DEEPENING` |
+| Nested descriptor schema v1 closes shallow-schema carry item before expanded machine consumption | current sprint | `international-jurisdiction-overlay.schema.v1.json`, fixtures, and checker PASS |
+| England and Flanders deep descriptors use official-source allowlists and precise jurisdiction boundaries | current sprint | `england.deepening.v1.json`, `flanders.deepening.v1.json`, and source reviews |
+| Book 1 Chapters 1.2/1.3 deep crosswalks classify exact local fit, gaps, and transformation needs | current sprint | England/Flanders deep crosswalk Markdown/JSON and teacher/economics review |
+| Transformation contract remains internal and excludes localized lesson output | current sprint | `selected-jurisdiction-transformation-contract.md` and refusal tests |
+| Comparative readiness decision selects exactly one allowed option | current sprint | Selected-jurisdiction readiness comparison and decision reports |
 | Forbidden authority remains blocked | current sprint | Refusal tests and false authority flags |
 | Specialist reviews are completed and corrections closed | current sprint | Specialist gate record and final lead PASS |
 | Human review happens before next implementation authority | current sprint | Human-review packet, PR freshness, mergeability, and CI proof |
 
-## 7. Candidate Future Sprints
+## 8. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-SELECTED-JURISDICTION-DEEPENING-1` | If the human owner accepts `PROCEED_TO_SELECTED_JURISDICTION_DEEPENING`, deepen one selected jurisdiction internally through source refresh and local-review planning only. | not authorised until human acceptance |
+| `GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` | If the human owner accepts `PROCEED_TO_INTERNAL_OVERLAY_PROTOTYPE_PLANNING`, plan an internal-only overlay trial architecture with exact no-output, no-product-route, and no-school-facing boundaries. | not authorised until human acceptance |
 | `GOAL-IQS-SOURCE-REFRESH-1` | Refresh sources and resolve source gaps for a selected subset of jurisdictions. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 8. Explicitly Blocked Work
+## 9. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -178,19 +210,19 @@ inspection-readiness claim
 school-owned implementation evidence flow
 ```
 
-## 9. Current Recommended Next Step
+## 10. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-OVERLAY-ARCHITECTURE-1 architecture packet after
+Review the GOAL-IQS-SELECTED-DEEPENING-1 deepening packet after
 specialist reviews, final lead review, PR publication, branch freshness, and
 green CI are complete.
 ```
 
-Human acceptance of `GOAL-IQS-OVERLAY-ARCHITECTURE-1` may authorise only a
-later internal selected-jurisdiction deepening step. It must not unlock country
-implementation, school or public distribution, product routes, Scale Gate,
-diagnostics/mastery/PV, student/product use, personal-data processing,
-compliance, approval, accreditation, OP0, PTA, summative, or
-inspection-readiness claims.
+Human acceptance of `GOAL-IQS-SELECTED-DEEPENING-1` may authorise only a
+later internal overlay trial-planning step. It must not unlock country
+implementation, localized textbook output, school or public distribution,
+product routes, Scale Gate, diagnostics/mastery/PV, student/product use,
+personal-data processing, compliance, approval, accreditation, OP0, PTA,
+summative, or inspection-readiness claims.
