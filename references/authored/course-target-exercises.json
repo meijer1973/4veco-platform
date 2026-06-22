@@ -1663,25 +1663,22 @@
         "A15",
         "D06"
       ],
-      "missing_units_flagged": [
-        "Classify demand as elastic vs inelastic from |Ev| against the 1-threshold (concept-level, tight pairing with A15)",
-        "Explain intuitively why substitute-rich or luxury goods are more elastic (concept-level; necessity-vs-luxury, substitute availability)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.4",
         "A2.5",
         "D1.3"
       ],
-      "difficulty_notes": "The formula itself is simple, but students make errors in the percentage calculation (using new instead of old as base, forgetting the sign). Exercise (e) provides immediate contrast — elastic vs inelastic — which cements understanding. One lesson is doable if the percentage skill from §1.1.2 is solid. If not, this spills.",
+      "difficulty_notes": "Reviewed-final for Chapter 2.2 completion. Student-facing 2.2.1 output represents the cinema and petrol target cases, keeps old-value denominators visible, preserves the signed Ev calculation, and uses |Ev| only for elastic/inelastic classification.",
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "2.1.1",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
       }
     },
     {
@@ -1692,34 +1689,34 @@
       "paragraph_title": "Elasticiteit en omzet",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "Uses the cinema and petrol cases from §2.1.1 to discover the Ev↔omzet rule.",
+        "context": "Uses the cinema and petrol cases from 2.2.1 to discover the Ev-to-omzet rule.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Cinema: price up from €10 to €12, visitors down from 500 to 420. Calculate omzet (total revenue = P × Q) before and after."
+            "prompt": "Cinema: price rises from EUR 10 to EUR 12 and visitors fall from 500 to 420. Calculate omzet before and after with TO = P x Q, where TO means totale opbrengst."
           },
           {
             "label": "b",
-            "prompt": "Did omzet go up or down? Explain this using the elasticity you calculated in §2.1.1."
+            "prompt": "Did omzet go up or down? Explain this using the elasticity calculated in 2.2.1."
           },
           {
             "label": "c",
-            "prompt": "The cinema owner wants to maximise omzet. Based on the Ev, should he raise the price further or lower it? Explain the rule."
+            "prompt": "The cinema owner wants higher omzet. Based on the Ev, should he automatically raise the price further? Give a bounded omzet-based explanation, not a profit claim."
           },
           {
             "label": "d",
-            "prompt": "Now consider the petrol station (price up from €1.80 to €1.90, litres from 10,000 to 9,800). Calculate omzet before and after. Did the price increase help the petrol station's revenue? Why?"
+            "prompt": "Petrol station: price rises from EUR 1.80 to EUR 1.90 and litres fall from 10,000 to 9,800. Calculate omzet before and after. Did the price increase help omzet? Why?"
           },
           {
             "label": "e",
-            "prompt": "Complete the rule: 'If demand is elastic, a price increase leads to … omzet. If demand is inelastic, a price increase leads to … omzet.'"
+            "prompt": "Complete the rule: if demand is elastic, a price increase leads to lower omzet; if demand is inelastic, a price increase leads to higher omzet. Explain the rule in words."
           }
         ]
       },
       "lesson_goals": [
-        "Calculate omzet = P × Q before and after a price change",
-        "Explain that elastic demand means quantity drops proportionally more than price rises → omzet falls",
-        "Explain that inelastic demand means quantity drops proportionally less → omzet rises",
+        "Calculate omzet = P x Q before and after a price change",
+        "Explain that elastic demand means quantity drops proportionally more than price rises -> omzet falls",
+        "Explain that inelastic demand means quantity drops proportionally less -> omzet rises",
         "Apply the rule to advise a business on pricing strategy"
       ],
       "required_skills": [
@@ -1734,23 +1731,21 @@
       "new_skills_introduced": [
         "D25"
       ],
-      "missing_units_flagged": [
-        "State and apply the Ev↔omzet-direction rule to advise a pricing move (concept-level, the business-relevance payoff of §2.1.1)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.5",
         "D1.15"
       ],
-      "difficulty_notes": "This is where elasticity becomes meaningful — students see why businesses care. Note that the formula omzet = P × Q (total revenue) is used here for the first time this year in a formal way. Students have an intuitive notion of revenue, but this is the first time they apply the formula systematically and connect it to a concept (elasticity). The rule 'elastic → price up means omzet down' is counterintuitive for some. One lesson works — the calculations are simple repetitions of §2.1.1, the new element is the interpretation.",
+      "difficulty_notes": "Reviewed-final for Chapter 2.2 completion. The target remains bounded to omzet/totale opbrengst, uses TO = P x Q before and after, connects the direction of omzet to Ev and |Ev|, and does not claim profit evidence.",
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "2.1.2",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
       }
     },
     {
@@ -1761,33 +1756,34 @@
       "paragraph_title": "Inkomenselasticiteit en kruiselingse elasticiteit",
       "difficulty": "MEDIUM",
       "target_exercise": {
-        "context": "Income elasticity (Ei), cross elasticity (Ek), and multi-variable demand functions. Part C introduces Qx = 100 − 2Px + 0.5Py + 0.01Y as a realistic exam-style demand function.",
+        "context": "Income elasticity (Ei), cross elasticity (Ek), and multi-variable demand functions. Part C uses Qx = 100 - 2Px + 0.5Py + 0.01Y as an exam-style demand function with ceteris-paribus reasoning.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Average household income rises by 5%. Demand for organic food rises by 8%. Demand for budget instant noodles drops by 3%. Calculate the income elasticity (Ei) for organic food and for instant noodles. Classify each: normal good or inferior good? Luxury or necessity?"
+            "prompt": "Average household income rises by 5%. Demand for organic food rises by 8%. Demand for budget instant noodles drops by 3%. Calculate Ei for both products. Classify organic food as normal luxury or normal necessity. Classify instant noodles by the sign first; if Ei is negative, the correct conclusion is inferieur goed and the luxury/necessity split is not applied."
           },
           {
             "label": "b",
-            "prompt": "The price of coffee rises by 10%. The demand for tea rises by 4%. The demand for coffee filters drops by 6%. Calculate the cross elasticity (Ek) for tea with respect to coffee price, and for coffee filters with respect to coffee price. Classify: are tea and coffee substitutes or complements? What about coffee and coffee filters?"
+            "prompt": "The price of coffee rises by 10%. Demand for tea rises by 4%. Demand for coffee filters drops by 6%. Calculate Ek for tea with respect to the coffee price, and for coffee filters with respect to the coffee price. Name the affected demand good and the other good whose price changes, then classify substitutes or complements."
           },
           {
             "label": "c",
-            "prompt": "The demand for good X is Qx = 100 − 2Px + 0.5Py + 0.01Y, with Px = 10, Py = 20, Y = 30000. Calculate the current Qx. Then: income rises to Y = 33000 (other factors unchanged) — calculate the new Qx and Ei. Then: Py rises from 20 to 24 (other factors at original values) — calculate the new Qx and Ek. Are X and Y substitutes or complements?"
+            "prompt": "The demand for good X is Qx = 100 - 2Px + 0.5Py + 0.01Y, with Px = 10, Py = 20, Y = 30000. Calculate current Qx. Then let income rise to Y = 33000 while other factors stay unchanged; calculate new Qx and Ei. Then let Py rise from 20 to 24 while other factors return to their original values; calculate new Qx and Ek. Are X and Y substitutes or complements?"
           },
           {
             "label": "d",
-            "prompt": "Using the demand function from (c): predict what happens to the demand for X if a recession lowers income by 10%. Calculate the new Qx."
+            "prompt": "Using the demand function from (c), predict what happens to demand for X if a recession lowers income by 10%. Hold Px and Py constant and calculate the new Qx."
           }
         ]
       },
       "lesson_goals": [
-        "Calculate Ei = %ΔQd / %ΔIncome",
-        "Classify goods: normal (Ei > 0) vs inferior (Ei < 0), necessity (0 < Ei < 1) vs luxury (Ei > 1)",
-        "Calculate Ek = %ΔQd(good A) / %ΔP(good B)",
-        "Classify pairs: substitutes (Ek > 0) vs complements (Ek < 0)",
-        "Read and use a demand function with multiple variables (price of other goods, income)",
-        "Use elasticity for predictions"
+        "Calculate Ei = %dQd / %dIncome",
+        "Classify goods by the sign of Ei first: normal (Ei > 0) versus inferior (Ei < 0)",
+        "For normal goods only, distinguish necessity (0 < Ei < 1) from luxury (Ei > 1)",
+        "Calculate Ek = %dQd(good A) / %dP(good B)",
+        "Classify pairs as substitutes (Ek > 0) or complements (Ek < 0)",
+        "Read and use a demand function with multiple variables while holding other variables constant",
+        "Use elasticity and demand functions for bounded predictions"
       ],
       "required_skills": [
         "A04",
@@ -1807,11 +1803,7 @@
         "D11",
         "D12"
       ],
-      "missing_units_flagged": [
-        "Classify normal vs inferior from Ei sign; luxury vs necessity from |Ei| vs 1 (concept-level, pairs with A17)",
-        "Read a multi-variable demand function Qx(Px, Py, Y) and evaluate at a point (A-domain candidate, ceteris paribus in action — the Part-C novel skill)",
-        "Predict Qd change from elasticity × percentage change in driver (A-domain candidate; inverts the measurement formula)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.4",
         "A2.5",
@@ -1819,41 +1811,93 @@
         "D1.8",
         "D1.9"
       ],
-      "difficulty_notes": "Parts A and B use the same formula structure as Ev — same skill, different variables. Students who mastered §2.1.1 handle this quickly. Part C introduces multi-variable demand functions, which appear in exam questions. Students must be comfortable substituting multiple values and holding other variables constant (ceteris paribus in action). This is the most novel element. One lesson works because parts A and B are fast; part C takes more time but is essential for exam preparation.",
+      "difficulty_notes": "Reviewed-final for Chapter 2.2 completion. The inferior-good ambiguity from the migrated target is repaired: negative Ei is inferieur and is not forced into the luxury/necessity split. Demand-function work is explicitly ceteris paribus.",
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "2.1.3",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
       }
     },
     {
       "difficulty": "MIXED",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 2.2.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "context": "StreamPlus considers whether to continue price increases. Students use a multi-source case with a price/subscriber table, income and subscription-type table, competitor-price structured source, irrelevant service-quality data, and a demand function. They select relevant information, combine Ev, TO before and after, Ei, Ek, demand-function reasoning, table interpretation, and a bounded economic advice. The target introduces no new economic theory.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+            "prompt": "Select the source data needed to calculate Ev for the standard subscription, and name at least one provided data point that is not needed for that calculation."
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate %dP, %dQv, Ev, and classify the standard subscription demand as elastic or inelastic."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate TO before and after the price change and explain the omzet change using Ev."
+          },
+          {
+            "label": "d",
+            "prompt": "Use the income source to calculate Ei for Premium and Budget subscriptions; classify Premium as normal necessity/luxury where applicable and Budget by the negative Ei sign first."
+          },
+          {
+            "label": "e",
+            "prompt": "Use the competitor structured source to calculate Ek for StreamPlus with respect to the competitor price, then interpret the table direction as substitute or complement evidence."
+          },
+          {
+            "label": "f",
+            "prompt": "Use Q = 12000 - 400P + 0.1Y + 300Pc to calculate the base regional Q, then calculate the separate ceteris-paribus effects of higher income and a higher competitor price."
+          },
+          {
+            "label": "g",
+            "prompt": "Write a cautious economic advice about further price increases using at least two sources, and state what the sources do not prove about profit or long-term customer retention."
           }
         ]
       },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: elasticiteit."
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: elasticiteit.",
+        "Select relevant source information from text, table, and structured competitor sources.",
+        "Choose between Ev, TO, Ei, Ek, and demand-function operation families.",
+        "Write structured economic answers with calculation, unit, classification, and conclusion.",
+        "Give bounded advice that uses source evidence without claiming profit evidence."
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "A04",
+        "A07",
+        "A15",
+        "A16",
+        "A17",
+        "D11",
+        "D12",
+        "D25",
+        "D27"
+      ],
+      "prior_knowledge_assumed": [
+        "A04",
+        "A07",
+        "A15",
+        "A16",
+        "A17",
+        "D11",
+        "D12",
+        "D25",
+        "D27"
+      ],
       "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
+      "missing_units_flagged": [],
+      "exam_codes": [
+        "A2.4",
+        "A2.5",
+        "D1.7",
+        "D1.8",
+        "D1.9",
+        "D1.15"
       ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
+      "difficulty_notes": "Reviewed-final mixed-opgaven target for Chapter 2.2. It introduces no new theory. The difficulty is transfer: students read a richer context, ignore irrelevant data when needed, choose between Ev, TO, Ei, Ek, and a demand function, interpret table evidence, and write bounded advice.",
       "id": "2.2.4",
       "module": 2,
       "chapter": 2,
@@ -1861,14 +1905,24 @@
       "paragraph_title": "Gemengde opgaven: elasticiteit",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+      "record_status": "reviewed_final",
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.4",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
+        "source_status": "reviewed_final",
         "from_v4_id": null,
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
+      },
+      "mixed_target_profile": {
+        "integrates_paragraphs": [
+          "2.2.1",
+          "2.2.2",
+          "2.2.3"
+        ],
+        "source_selection_required": true,
+        "answer_construction_required": true,
+        "table_or_graph_interpretation_required": true,
+        "no_new_theory": true
       }
     },
     {
