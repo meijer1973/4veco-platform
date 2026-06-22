@@ -5,18 +5,18 @@ Status: draft PR review packet
 
 ## Verdict
 
-Ready for human review as paired platform and lesson-output PRs.
+Ready for human review as paired platform and lesson-output PRs after the current-branch maintenance repair.
 
 ## Teacher Learning Quality
 
 - The implemented route follows the accepted eleven-slide sequence: route contract, Lisa narrative anchor, concept development, transfer, misconception repair, four-step procedure, worked calculation, worked interpretation, retrieval check, and summary bridge.
 - Each slide includes a clear assertion and classroom action.
-- Teacher cues and transitions are present in the semantic model and rendered notes metadata.
+- Teacher cues and transitions are present in the semantic model. Student notes render only student explanation, misconception guidance, and transitions.
 
 ## Student Experience
 
 - The active route opens as a web presentation, not a prototype and not the legacy PPTX-converter surface.
-- Notes are labelled `Studentgerichte uitleg` and contain student-facing explanation for every slide.
+- Notes are labelled `Studentgerichte uitleg` and contain student-facing explanation for every slide without teacher-only cues.
 - The retrieval check uses closed answer cards so students can answer before checking.
 - The §1.1.1 landing page now labels the primary tile `Lespresentatie`.
 
@@ -24,11 +24,12 @@ Ready for human review as paired platform and lesson-output PRs.
 
 - Rendered QA passed for desktop, notes rail, fullscreen, dark mode, dark notes, and mobile.
 - Spot-checked screenshots:
-  - `desktop-slide-1.png`
-  - `desktop-slide-10.png`
-  - `mobile-slide-10.png`
-  - `dark-notes-slide-8.png`
-- Full local screenshot set: `C:\wt\PARA-LANDING-20260610\reports\golden-presentation-111-implemented-web-1\presentation-v2-qa`
+  - `reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/desktop-slide-01.png`
+  - `reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/desktop-slide-10.png`
+  - `reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/mobile-slide-10.png`
+  - `reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/notes-open-slide-08.png`
+- Remote review index: `reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-human-review-index.md`
+- Full local screenshot set remains available as CI evidence: `C:\wt\PARA-LANDING-20260610\reports\golden-presentation-111-implemented-web-1\presentation-v2-qa`
 
 ## Accessibility
 

@@ -189,7 +189,7 @@ const deck = {
   schemaVersion: accepted.schema_version,
   exemplarId: accepted.exemplar_id,
   titleLabel: 'Webpresentatie',
-  sideLabel: 'golden webpresentatie',
+  sideLabel: 'Lespresentatie',
   notesLabel: accepted.design_contract.notes_label,
   paragraph: {
     number: accepted.paragraph,

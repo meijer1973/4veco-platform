@@ -130,7 +130,7 @@
   function updateFullscreenButton(active) {
     if (!fullscreenToggle) return;
     fullscreenToggle.setAttribute('aria-pressed', String(active));
-    fullscreenToggle.textContent = active ? 'Exit full screen' : 'Full screen';
+    fullscreenToggle.textContent = active ? 'Sluit presentatiemodus' : 'Presentatiemodus';
     root.classList.toggle('is-fullscreen', active);
   }
 

@@ -63,11 +63,15 @@ describeOrSkip('§1.1.1 implemented Golden web presentation', () => {
 
   test('student notes, provenance, and controls are explicit', () => {
     expect(html).toContain(`presentation-source-sha256" content="${EXPECTED_HTML_SHA256}"`);
+    expect(html).toMatch(/<span>Lespresentatie<\/span>/);
+    expect(html).not.toMatch(/golden webpresentatie/i);
     expect(html).toMatch(/data-pv2-notes aria-pressed="false" aria-expanded="false"[^>]*>Studentgerichte uitleg<\/button>/);
     expect(html).toMatch(/<summary>Studentgerichte uitleg<\/summary>/);
     expect(html).toMatch(/<h3>Studentuitleg<\/h3>/);
-    expect(html).toMatch(/<h3>Docentcue<\/h3>/);
+    expect(html).toMatch(/<h3>Let op<\/h3>/);
     expect(html).toMatch(/<h3>Overgang<\/h3>/);
+    expect(html).not.toMatch(/<h3>Docentcue<\/h3>|<h3>Visual<\/h3>|<h3>Data<\/h3>/);
+    expect(html).not.toMatch(/Laat leerlingen|Laat eerst|Corrigeer direct|Gebruik de twee foutkaarten/);
     expect(html).not.toMatch(/Speaker notes|Docentmodus|Studentmodus|NavTitle:/);
   });
 
@@ -110,7 +114,9 @@ describeOrSkip('§1.1.1 implemented Golden web presentation', () => {
     expect(js).toMatch(/focusTarget\.focus/);
     expect(js).toMatch(/data-open-label/);
     expect(html).toMatch(/data-pv2-theme aria-pressed="false">Dark mode<\/button>/);
-    expect(html).toMatch(/data-pv2-fullscreen aria-pressed="false">Full screen<\/button>/);
+    expect(html).toMatch(/data-pv2-fullscreen aria-pressed="false">Presentatiemodus<\/button>/);
+    expect(js).toMatch(/Sluit presentatiemodus/);
+    expect(js).not.toMatch(/Exit full screen|Full screen/);
     expect(css).toMatch(/html\[data-theme="dark"\]/);
   });
 

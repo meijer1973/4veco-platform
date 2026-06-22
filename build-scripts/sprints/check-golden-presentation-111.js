@@ -191,6 +191,7 @@ function validateImplementedWebSource(root = path.resolve(__dirname, '..', '..')
     assert(deck.exemplarId === '1.1.1-golden-presentation', 'implemented deck must cite the exemplar id');
     assert(deck.sourceSnapshot?.sha256 === EXPECTED_HTML_SHA256, 'implemented deck must cite the accepted HTML SHA-256');
     assert(deck.outputBase === '1.1.1 Schaarste en economisch denken – presentatie', 'implemented deck must write the active presentatie output base');
+    assert(deck.sideLabel === 'Lespresentatie', 'implemented deck must not expose internal Golden labels to students');
     assert(Array.isArray(deck.slides) && deck.slides.length === 11, 'implemented deck must contain exactly 11 slides');
     const roles = new Set(deck.slides.map((slide) => slide.role));
     for (const role of REQUIRED_EXEMPLAR_ROLES) {

@@ -60,7 +60,7 @@ ${sourceMeta}  <script>(function(){try{var m=localStorage.getItem('quizMode')||(
         <div class="pv2-actions">
 ${pptxLink}          <button type="button" class="pv2-action" data-pv2-notes aria-pressed="false" aria-expanded="false" data-open-label="${esc(notesLabel)}" data-close-label="Verberg uitleg">${esc(notesLabel)}</button>
           <button type="button" class="pv2-action" data-pv2-theme aria-pressed="false">Dark mode</button>
-          <button type="button" class="pv2-action" data-pv2-fullscreen aria-pressed="false">Full screen</button>
+          <button type="button" class="pv2-action" data-pv2-fullscreen aria-pressed="false">Presentatiemodus</button>
         </div>
       </header>
       <section id="pv2-stage" class="pv2-stage" aria-label="Presentatie">
@@ -366,10 +366,7 @@ function renderNotes(notes, deck = {}) {
   const student = arr(notes?.student).length ? arr(notes.student) : arr(notes?.script);
   if (student.length) sections.push(renderNoteSection('Studentuitleg', student));
   if (arr(notes?.misconception).length) sections.push(renderNoteList('Let op', notes.misconception));
-  if (notes?.teacherCue) sections.push(renderNoteSection('Docentcue', [notes.teacherCue]));
   if (notes?.transition) sections.push(renderNoteSection('Overgang', [notes.transition]));
-  if (arr(notes?.data).length) sections.push(renderNoteList('Data', notes.data));
-  if (notes?.visual) sections.push(renderNoteSection('Visual', [notes.visual]));
   const body = sections.join('') || '<section><p>Geen aanvullende uitleg.</p></section>';
   return `<details class="pv2-notes"><summary>${esc(label)}</summary><div class="pv2-speaker-script">${body}</div></details>`;
 }
@@ -388,10 +385,7 @@ function getSpeakerText(notes) {
     ...arr(notes.student),
     ...arr(notes.script),
     ...arr(notes.misconception),
-    notes.teacherCue,
     notes.transition,
-    ...arr(notes.data),
-    notes.visual,
   ].filter(Boolean);
   return parts.join('\n\n');
 }

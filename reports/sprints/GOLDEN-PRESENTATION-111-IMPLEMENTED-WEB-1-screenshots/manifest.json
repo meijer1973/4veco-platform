@@ -1,0 +1,71 @@
+{
+  "sprint": "GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1",
+  "purpose": "Representative remote screenshot packet for human product review.",
+  "sourceQaDirectory": "C:\\wt\\PARA-LANDING-20260610\\reports\\golden-presentation-111-implemented-web-1\\presentation-v2-qa",
+  "fullLocalSuiteCount": 66,
+  "files": [
+    {
+      "file": "desktop-slide-01.png",
+      "source": "desktop-slide-1.png",
+      "focus": "Slide 1 learning contract: goal, route, and success criteria.",
+      "bytes": 230082,
+      "sha256": "69027C1055411CDA0E0B69F12F5EDC9338F2BE6863A2A0D621755D496C8ADCDF"
+    },
+    {
+      "file": "desktop-slide-03.png",
+      "source": "desktop-slide-3.png",
+      "focus": "Conceptual model development from needs greater than means to scarcity.",
+      "bytes": 233734,
+      "sha256": "90068AD1A7D770022FC769102C6F94B5D1531C92CE453E18BEB9402E9686DDC9"
+    },
+    {
+      "file": "desktop-slide-07.png",
+      "source": "desktop-slide-7.png",
+      "focus": "Four-step procedure route before the worked farmer calculation.",
+      "bytes": 257727,
+      "sha256": "F0FCC8BA9A0DC3D92B337C8F684EEE76EB3A1369F253B721C2045FB067114DAE"
+    },
+    {
+      "file": "desktop-slide-09.png",
+      "source": "desktop-slide-9.png",
+      "focus": "Worked interpretation of net value over the best alternative.",
+      "bytes": 243011,
+      "sha256": "7BFE61023E798456539A930802301114EEE96D4B584CAE9ABF1AA853E44EF553"
+    },
+    {
+      "file": "desktop-slide-10.png",
+      "source": "desktop-slide-10.png",
+      "focus": "Retrieval check answer cards on desktop.",
+      "bytes": 223535,
+      "sha256": "551E32DA50921A3605C2D44B8FBB302C70F02917295EAEA3FE828490BFB141A4"
+    },
+    {
+      "file": "notes-open-slide-08.png",
+      "source": "wide-notes-slide-8.png",
+      "focus": "Notes-open state for the worked calculation.",
+      "bytes": 325384,
+      "sha256": "8DFA2016D72049740EA82311066DE59335383BE18CFD7B317AD8CA7B96415987"
+    },
+    {
+      "file": "dark-slide-05.png",
+      "source": "dark-slide-5.png",
+      "focus": "Dark-mode concept slide for alternative costs.",
+      "bytes": 129152,
+      "sha256": "BB8A95103610C66DA5ADD20B0C1A3FA469B79E795068F57B3A872B7354567717"
+    },
+    {
+      "file": "mobile-slide-10.png",
+      "source": "mobile-slide-10.png",
+      "focus": "Mobile layout for the retrieval check.",
+      "bytes": 70166,
+      "sha256": "25393A90D5E7E16C682836C2B9BE1003217CB5E34F4074111B50655C8BC98F2C"
+    },
+    {
+      "file": "presentation-mode-slide-01.png",
+      "source": "fullscreen-slide-1.png",
+      "focus": "Presentation-mode framing for the opening slide.",
+      "bytes": 118350,
+      "sha256": "EAE8A3B9DB122E64BA35B302DCA29252FD63011D3DF4910AE1711DC51231BCA7"
+    }
+  ]
+}
