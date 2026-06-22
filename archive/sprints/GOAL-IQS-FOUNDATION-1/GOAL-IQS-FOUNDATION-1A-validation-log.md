@@ -50,6 +50,29 @@ Parent PR: `#131`
 | Platform Jest suite | PASS | `npm.cmd run check:platform` completed with 48 suites / 741 tests passed, 15 suites / 87 tests skipped. |
 | Final lead review | PASS | `GOAL-IQS-FOUNDATION-1A-final-lead-review.md`; content PASS, mechanical PR refresh pending. |
 
+## Post-Rebase Validation Evidence
+
+After rebasing onto `origin/main` at `ed0c7d69`, generated
+`reports/github-agent-index-*` and `reports/internal-dashboard/*` outputs were
+refreshed and the post-rebase branch passed:
+
+| Check | Result | Evidence |
+|---|---|---|
+| IQS checker | PASS | `OK international quality standards check jurisdictions=9 sources=26 common_core=9 refusal_cases=24 decision=PROCEED_WITH_COMMON_CORE_AND_OVERLAYS` |
+| DQS closure bundle currentness | PASS | `DQS closure bundle output is current.` |
+| DQS closure bundle checker | PASS | `OK DQS closure bundle check sources=21 outputs=6 refusal_cases=26 decision=CLOSE_INTERNAL_SYSTEM` |
+| Report JSON contract | PASS | `OK report JSON contract: 14 report(s)` |
+| Active scope-language | PASS | `OK scope-language check: active surfaces` |
+| Roadmap version index | PASS | `OK roadmap version index: 152 entries` |
+| URL index | PASS | `OK url-index: reports/url-index.md is current` |
+| MTU evidence layer freshness | PASS | `OK MTU evidence layer: 257 total, 254 live, 3 deprecated` |
+| Evidence line endings | PASS | `OK evidence line endings: scanned 87 text file(s), skipped 0, CRLF 0` |
+| Paragraph landing V2 guardrails | PASS | `OK paragraph landing V2 guardrails` against CI-style `../4veco-lessen` checkout |
+| News Detective V2 guardrails | PASS | `OK news detective V2 guardrails` against CI-style `../4veco-lessen` checkout |
+| Platform diff hygiene | PASS | `git diff --check` returned no findings |
+| Lesson diff hygiene | PASS | `git -C ..\4veco-lessen diff --check` returned no findings |
+| Platform Jest suite | PASS | `npm.cmd run check:platform` completed with 57 suites / 820 tests passed, 6 suites / 8 tests skipped |
+
 ## Environment Notes
 
 Initial local landing/news guardrail attempts failed because this worktree did
@@ -60,6 +83,5 @@ layout, and the guardrails passed there.
 
 ## Pending Validation
 
-- Fresh full platform validation.
 - Push PR refresh, confirm branch is `0 behind`, CI is green, and PR remains
   mergeable before governed merge.
