@@ -321,11 +321,13 @@ describe('pr-readiness-router', () => {
 describe('review thread collection', () => {
   function response(connectionName, nodes, pageInfo) {
     return JSON.stringify({
-      repository: {
-        pullRequest: {
-          [connectionName]: {
-            nodes,
-            pageInfo,
+      data: {
+        repository: {
+          pullRequest: {
+            [connectionName]: {
+              nodes,
+              pageInfo,
+            },
           },
         },
       },

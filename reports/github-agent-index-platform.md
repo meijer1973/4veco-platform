@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T13:05:58.485Z
+Generated: 2026-06-22T13:14:55.596Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/pr-readiness-router-20260622`
-Source commit: `f47f3d0e873f5978a2981535e6a2d316f6b0b1d6`
-Files indexed: 5764
+Source commit: `42d3d4189e23d6df71910a37ea054e4d9711e6ef`
+Files indexed: 5767
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -721,7 +721,7 @@ Count: 42
 
 ## validators
 
-Count: 524
+Count: 525
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1042,6 +1042,7 @@ Count: 524
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md
 - reports/fixtures/review-throughput-1/negative-ci-missing-validate-platform.json
+- reports/fixtures/review-throughput-1/negative-ci-validate-platform-failed.json
 - reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
@@ -1930,7 +1931,7 @@ Count: 675
 
 ## reports
 
-Count: 3752
+Count: 3755
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1974,6 +1975,7 @@ Count: 3752
 - reports/fixtures/pr-readiness-router/workflow-permission-human.json
 - reports/fixtures/review-throughput-1/negative-ci-missing-validate-platform.json
 - reports/fixtures/review-throughput-1/negative-ci-success-no-reviewed-sha.json
+- reports/fixtures/review-throughput-1/negative-ci-validate-platform-failed.json
 - reports/fixtures/review-throughput-1/negative-diagnostics-authority.json
 - reports/fixtures/review-throughput-1/negative-empty-changed-paths.json
 - reports/fixtures/review-throughput-1/negative-escalation-trigger.json
@@ -5136,6 +5138,8 @@ Count: 3752
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round1.md
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round2.md
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round3.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round4.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round5.md
 - reports/sprints/REVIEW-THROUGHPUT-3-live-dry-run.md
 - reports/sprints/REVIEW-THROUGHPUT-3-plan.md
 - reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md

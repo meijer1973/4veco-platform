@@ -131,7 +131,8 @@ function collectReviewThreadPages(repo, prNumber, runner = runGh) {
     if (cursor) args.push('-F', `cursor=${cursor}`);
     const raw = runner(args, { optional: true });
     if (!raw) return null;
-    const data = JSON.parse(raw);
+    const payload = JSON.parse(raw);
+    const data = payload.data || payload;
     const connection =
       data.repository &&
       data.repository.pullRequest &&
@@ -182,7 +183,8 @@ function collectChangeRequestReviewPages(repo, prNumber, runner = runGh) {
     if (cursor) args.push('-F', `cursor=${cursor}`);
     const raw = runner(args, { optional: true });
     if (!raw) return null;
-    const data = JSON.parse(raw);
+    const payload = JSON.parse(raw);
+    const data = payload.data || payload;
     const connection =
       data.repository &&
       data.repository.pullRequest &&

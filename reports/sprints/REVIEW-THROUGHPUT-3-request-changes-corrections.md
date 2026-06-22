@@ -23,6 +23,7 @@ PR `#137` was returned to draft after human review requested changes on head
 - Added `build-scripts/review-gates/pr-readiness-governance-surfaces.js` to its own governance-surface manifest and regression path list.
 - Made `validate-platform` non-removable in router proof by unioning it into required contexts, requiring it in ready-route validation, requiring it in the decision schema, and requiring it in the throughput packet checker.
 - Replaced first-page-only review-thread collection with paginated review-thread and change-request review collection; incomplete pagination metadata fails closed.
+- Fixed live GraphQL envelope parsing for paginated review-thread and review collection.
 - Closed the round-4 carry flag by requiring nested `validate-platform` check details to be successful when packet CI proof supplies per-check status.
 
 ## New negative tests
