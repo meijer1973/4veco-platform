@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-21T08:14:44.024Z
+Generated: 2026-06-22T06:57:10.115Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620`
-Source commit: `dc9b78b21f129979ea72e84d132966efed142ed3`
-Files indexed: 5253
+Source branch: `codex/three-year-blueprint-maturity-bundle-1-20260621`
+Source commit: `57402f201bfea7ce06c65cbaa0a02b84c078534e`
+Files indexed: 5271
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -133,7 +133,7 @@ Count: 85
 
 ## build scripts
 
-Count: 520
+Count: 521
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -399,6 +399,7 @@ Count: 520
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
+- build-scripts/references/check-three-year-blueprint-maturity-bundle-1.js
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
@@ -705,7 +706,7 @@ Count: 42
 
 ## validators
 
-Count: 512
+Count: 513
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -860,6 +861,7 @@ Count: 512
 - build-scripts/references/check-source-manifest.js
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
+- build-scripts/references/check-three-year-blueprint-maturity-bundle-1.js
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
@@ -1885,7 +1887,7 @@ Count: 658
 
 ## reports
 
-Count: 3300
+Count: 3317
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2314,6 +2316,20 @@ Count: 3300
 - reports/reference-planning/REF-CT2-cp6-status-update.md
 - reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
 - reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-architecture-matrix.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-assessment-retrieval-spine.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-book11-full-paper-repair-protocol.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-candidate-status-index.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-count-model.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-evidence-wave-overlay.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-maturity-change-control.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-official-evidence-coverage-matrix.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-operation-coverage-matrix.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-production-order-roadmap.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-quality-log.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-review-packet.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-subagent-review.md
+- reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-target-mtu-backlog.md
 - reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-subagent-review.md
@@ -3089,6 +3105,7 @@ Count: 3300
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
 - reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
+- reports/review-gates/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
@@ -5145,6 +5162,8 @@ Count: 3300
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md
+- reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-plan.md
+- reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-result.md
 - reports/sprints/VISION-1-baseline.md
 - reports/sprints/VISION-1-command-log.jsonl
 - reports/sprints/VISION-1-command-log.md

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-21T08:03:41.809Z",
+  "generated_on": "2026-06-22T06:56:58.418Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -356,8 +356,8 @@
       "generated_status": "manual_source",
       "edit_policy": "versioned_human_reviewed_edit",
       "refresh_policy": "owned_source_review",
-      "source_hash": "ce48ebc47577885d0a38e9361a93c42c63dc6fb449bc28d08c916dca1f28007d",
-      "size_bytes": 23502,
+      "source_hash": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
+      "size_bytes": 25536,
       "primary_evidence": false,
       "curriculum_authority": true,
       "allowed_downstream_uses": [
@@ -396,8 +396,8 @@
       "generated_status": "manual_source",
       "edit_policy": "versioned_human_reviewed_edit",
       "refresh_policy": "owned_source_review",
-      "source_hash": "a0b2dadd37c9c19a539b0fb9e29f7816afc96b3c980eb141636c3a7f626b0e6f",
-      "size_bytes": 3161,
+      "source_hash": "fca36866915afd21669a1113941daa0ab092ef79e4d356c92b637219cc5dd0d2",
+      "size_bytes": 5153,
       "primary_evidence": false,
       "curriculum_authority": true,
       "allowed_downstream_uses": [
