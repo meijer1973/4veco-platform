@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "GOLDEN-EXERCISE-CHECKERS-1",
-  "generated": "2026-06-17T07:59:33.209Z",
+  "generated": "2026-06-20T11:10:57.880Z",
   "status": "passed",
   "layout_registry": {
     "layout_id": "golden_exercise_workbench",
@@ -9,6 +9,7 @@
     "supported_variants": [
       "golden_graph_reading_claim_v1",
       "golden_calculation_structured_v1",
+      "golden_graph_advisory_v1",
       "golden_advisory_short_check_v1"
     ],
     "required_sections": 6
@@ -38,6 +39,16 @@
   },
   "current_golden_sources": [
     {
+      "file": "source-data/book-1/exit-ticket/1.1.1-exit-ticket.json",
+      "parNr": "1.1.1",
+      "quarantined_formula_token_traps": []
+    },
+    {
+      "file": "source-data/book-1/exit-ticket/1.1.1-korte-check.json",
+      "parNr": "1.1.1",
+      "quarantined_formula_token_traps": []
+    },
+    {
       "file": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
       "parNr": "1.1.2",
       "quarantined_formula_token_traps": []
@@ -49,6 +60,11 @@
     },
     {
       "file": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json",
+      "parNr": "1.1.3",
+      "quarantined_formula_token_traps": []
+    },
+    {
+      "file": "source-data/book-1/exit-ticket/1.1.3-korte-check.json",
       "parNr": "1.1.3",
       "quarantined_formula_token_traps": []
     }

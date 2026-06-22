@@ -161,12 +161,18 @@ Exit tickets and advisory short checks must remain separate.
 | Completion wording | completion language held unless approved | no completion-language claim |
 | Proof states | proof states required | proof states required before rendered adoption, but never as target-equivalent proof |
 
-The governed short-check variant is `golden_advisory_short_check_v1`:
+The governed choice-only short-check variant is `golden_advisory_short_check_v1`:
 
 ```text
 references/ui/layouts/golden-exercise-workbench-short-check.md
 references/ui/layouts/golden-exercise-workbench-short-check.json
 ```
+
+The governed graph-advisory short-check variant is `golden_graph_advisory_v1`.
+It is narrow to graph/table advisory work: axis choice, two source-table points,
+automatic line drawing after the second point, interval-first read-off, and
+neutral local route advice. It must not add fake slope, line-shape, or
+line-confirmation controls.
 
 Short checks may include route advice and local repair feedback. Hints must be hidden/collapsible before attempt or shown only after an attempt. They should normally avoid hard locking unless a later step genuinely depends on an earlier step.
 

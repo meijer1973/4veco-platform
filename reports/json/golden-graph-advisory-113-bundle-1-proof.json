@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1",
+  "generated": "2026-06-20T15:52:04.846Z",
+  "status": "ready_for_human_golden_graph_advisory_113_review",
+  "lead_recommendation": "READY_FOR_HUMAN_GOLDEN_GRAPH_ADVISORY_113_REVIEW",
+  "book_root": "C:\\wt\\GOLDEN-GRAPH-ADVISORY-113-20260620\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "pages": {
+    "landing": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+    "short_check": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – korte-check.html",
+    "short_check_url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html"
+  },
+  "screenshot_manifest": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshot-manifest.md",
+  "screenshot_manifest_json": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/manifest.json",
+  "source_generated": {
+    "source": {
+      "surface": "advisory_short_check",
+      "variant": "golden_graph_advisory_v1",
+      "candidate": false,
+      "gateApproved": false,
+      "completionLanguageEligible": false,
+      "targetReadinessEvidence": false
+    },
+    "generated": {
+      "surface": "advisory_short_check",
+      "variant": "golden_graph_advisory_v1",
+      "candidate": false,
+      "gateApproved": false,
+      "completionLanguageEligible": false,
+      "targetReadinessEvidence": false
+    },
+    "deep_equal": true,
+    "route_links_resolve": true
+  },
+  "proof": {
+    "golden_graph_advisory_variant_source": true,
+    "golden_graph_advisory_variant_generated": true,
+    "source_generated_deep_equal": true,
+    "source_generated_authority_flags_match": true,
+    "false_authority_flags_preserved": true,
+    "no_fake_graph_controls": true,
+    "rendered_desktop_mobile_dark_coverage": true,
+    "rendered_wrong_retry_captured": true,
+    "rendered_graph_after_action_captured": true,
+    "rendered_local_success_captured": true,
+    "rendered_mobile_dark_success_captured": true,
+    "landing_to_short_check_route_captured": true,
+    "route_reload_captured": true,
+    "rendered_no_horizontal_overflow": true,
+    "rendered_no_legacy_shell": true,
+    "rendered_forbidden_terms_absent": true
+  },
+  "authority": {
+    "target_equivalent_completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "broad_product_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "screenshots": [
+    {
+      "id": "desktop-light-initial",
+      "route": "short-check",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-initial.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": false,
+        "selected_points": 0,
+        "feedback_good_count": 0,
+        "feedback_warn_count": 0,
+        "completion_visible": false,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "desktop-light-wrong-retry",
+      "route": "short-check",
+      "action": "wrong-retry",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-wrong-retry.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": false,
+        "selected_points": 0,
+        "feedback_good_count": 0,
+        "feedback_warn_count": 1,
+        "completion_visible": false,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "desktop-light-graph-after-action",
+      "route": "short-check",
+      "action": "graph-after-action",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-graph-after-action.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": true,
+        "selected_points": 2,
+        "feedback_good_count": 1,
+        "feedback_warn_count": 0,
+        "completion_visible": false,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "desktop-light-local-success-advisory-complete",
+      "route": "short-check",
+      "action": "local-success-advisory-complete",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-local-success-advisory-complete.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": true,
+        "selected_points": 2,
+        "feedback_good_count": 3,
+        "feedback_warn_count": 0,
+        "completion_visible": true,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "mobile-light-initial",
+      "route": "short-check",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 860
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-light-initial.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport_width": 390,
+        "viewport_height": 860,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": false,
+        "selected_points": 0,
+        "feedback_good_count": 0,
+        "feedback_warn_count": 0,
+        "completion_visible": false,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "mobile-dark-initial",
+      "route": "short-check",
+      "action": "initial",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 860
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-dark-initial.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "dark",
+        "viewport_width": 390,
+        "viewport_height": 860,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": false,
+        "selected_points": 0,
+        "feedback_good_count": 0,
+        "feedback_warn_count": 0,
+        "completion_visible": false,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "mobile-dark-local-success",
+      "route": "short-check",
+      "action": "local-success-advisory-complete",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 860
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-dark-local-success.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "dark",
+        "viewport_width": 390,
+        "viewport_height": 860,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": true,
+        "selected_points": 2,
+        "feedback_good_count": 3,
+        "feedback_warn_count": 0,
+        "completion_visible": true,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "route-reload-desktop-light",
+      "route": "short-check",
+      "action": "route-reload",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/route-reload-desktop-light.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": false,
+        "selected_points": 0,
+        "feedback_good_count": 0,
+        "feedback_warn_count": 0,
+        "completion_visible": false,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    },
+    {
+      "id": "landing-to-short-check-route",
+      "route": "landing",
+      "action": "landing-to-short-check-route",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/landing-to-short-check-route.png",
+      "inspection": {
+        "url": "http://127.0.0.1:60523/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport_width": 1280,
+        "viewport_height": 900,
+        "horizontal_overflow": false,
+        "offenders": [],
+        "forbidden_terms": [],
+        "legacy_markers": [],
+        "golden_root": true,
+        "ge_topbar": true,
+        "graph_svg": true,
+        "graph_line_visible": false,
+        "selected_points": 0,
+        "feedback_good_count": 0,
+        "feedback_warn_count": 0,
+        "completion_visible": false,
+        "route_choice_options": 3,
+        "short_check_link_count": 0,
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "variant": "golden_graph_advisory_v1",
+          "candidate": false,
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false
+        }
+      }
+    }
+  ]
+}

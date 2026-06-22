@@ -18,6 +18,7 @@
     "check:pptx-skill-mirror": "node build-scripts/sprints/check-pptx-skill-mirror.js",
     "check:book": "node scripts/check-book.js",
     "check:scope-language": "node build-scripts/sprints/check-scope-language.js --active",
+    "check:golden-graph-advisory-113": "node build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
     "check:gate-ci-proof": "node build-scripts/sprints/check-gate-ci-proof.js",
     "check:review-throughput": "node build-scripts/sprints/check-review-throughput-packet.js",
     "check:branch-protection": "node build-scripts/ci/check-branch-protection.js",

@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "packet_id": "GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1",
+  "sprint_id": "GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1",
+  "pr_number": 127,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/127",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "golden_exercise_workbench_governance",
+  "changed_paths": [
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/lib/golden-exercise-policy-checks.js",
+    "build-scripts/platform/build-exit-ticket-shells.test.js",
+    "build-scripts/sprints/capture-golden-graph-advisory-113-bundle-1.js",
+    "build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
+    "engines/golden-ticket-layout.css",
+    "engines/golden-ticket-layout.js",
+    "engines/task-shell-engine.js",
+    "engines/tests/golden-ticket-layout.test.js",
+    "package.json",
+    "references/ui/exercise-workbench-policy.md",
+    "references/ui/layout-registry.json",
+    "references/ui/layout-registry.md",
+    "reports/json/golden-exercise-checkers-1-proof.json",
+    "reports/json/golden-graph-advisory-113-bundle-1-proof.json",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-architecture-disposition.md",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-evidence-map.md",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-plan.md",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-quality-log.md",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-result.md",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshot-manifest.md",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/manifest.json",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/*.png",
+    "reports/review-gates/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1/review-packet.json",
+    "source-data/book-1/exit-ticket/1.1.3-korte-check.json"
+  ],
+  "lesson_changed_paths": [
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - korte-check.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-korte-check.js",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.css",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.js",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-engine.js"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "READY_FOR_HUMAN_GOLDEN_GRAPH_ADVISORY_113_REVIEW",
+    "rationale": "This packet migrates a governed Golden short-check route with false authority flags and generated lesson output. Specialist and lead review found no remaining blocker; human review remains required before merge."
+  },
+  "human_decision_required": true,
+  "paired_prs": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/golden-graph-advisory-113-bundle-20260620",
+      "pr_number": 127,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/127",
+      "role": "platform source, renderer, checker, proof, reports, and CI wiring"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/golden-graph-advisory-113-bundle-20260620",
+      "pr_number": 31,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/31",
+      "role": "generated lesson output only"
+    }
+  ],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "golden_exercise_workbench_variant",
+    "graph_advisory_route",
+    "target_equivalence_boundary",
+    "scale_gate_boundary",
+    "student_product_use_boundary"
+  ],
+  "date": "2026-06-20",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "references/ui/exercise-workbench-policy.md",
+    "references/ui/interaction-policy.md",
+    "references/ui/layout-registry.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-result.md",
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-golden-route-disposition.md",
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-blocker-log.md",
+    "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+    "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json"
+  ],
+  "non_negotiable_requirements": [
+    "Migrate only 1.1.3-korte-check to a direct Golden Exercise Workbench shell.",
+    "Preserve surface advisory_short_check.",
+    "Preserve targetEquivalent.candidate:false, targetEquivalent.gateApproved:false, completionLanguageEligible:false, and metadataAlignment.targetReadinessEvidence:false.",
+    "Use real graph/table actions: axis choice, point placement, automatic line after two table points, interval-first graph reading, and neutral route advice.",
+    "Reject fake slope, line-shape, line-confirmation, completed-graph-recognition, answer-giving placeholder, and correct-only selector patterns.",
+    "Keep source/context-first layout and local after-attempt feedback.",
+    "Do not make route advice a target-equivalent or completion gate.",
+    "Regenerate lesson output through platform deploy only.",
+    "Provide rendered desktop/mobile/dark/after-interaction proof, source/generated parity proof, route/link proof, regression proof for existing Golden routes, and REV-STD-1 review packet.",
+    "Do not authorize completion language, product-route adoption, diagnostics, mastery/sequencing, PV, summative use, Scale Gate 1, broad product use, or student/product use.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "GATE-PRODUCT-3P closure/readiness refs"
+    },
+    {
+      "requirement": "Only 1.1.3-korte-check migrated",
+      "status": "met",
+      "evidence": "Platform and lesson changed paths"
+    },
+    {
+      "requirement": "Advisory short-check surface preserved",
+      "status": "met",
+      "evidence": "proof.source_generated.surface"
+    },
+    {
+      "requirement": "False authority flags preserved",
+      "status": "met",
+      "evidence": "proof.false_authority_flags_preserved:true"
+    },
+    {
+      "requirement": "Real graph/table actions rendered",
+      "status": "met",
+      "evidence": "screenshot manifest and proof JSON"
+    },
+    {
+      "requirement": "Fake graph controls absent",
+      "status": "met",
+      "evidence": "proof.no_fake_graph_controls:true"
+    },
+    {
+      "requirement": "Route choice advisory and not single-correct",
+      "status": "met",
+      "evidence": "student-action rereview PASS_STUDENT_ACTION"
+    },
+    {
+      "requirement": "Rendered proof visible across desktop/mobile/dark",
+      "status": "met",
+      "evidence": "rendered/mobile rereview PASS_RENDERED_MOBILE_ACCESSIBILITY"
+    },
+    {
+      "requirement": "Source/generated parity enforced",
+      "status": "met",
+      "evidence": "repository/CI rereview PASS_REPOSITORY_CI"
+    },
+    {
+      "requirement": "No downstream authority claimed",
+      "status": "met",
+      "evidence": "authority flags all false"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "carried_issues open list empty"
+    }
+  ],
+  "authority_claims": {
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "generated_lesson_output_changed": true,
+    "source_flags_mutated": false,
+    "route_migration_performed": true
+  },
+  "proof": {
+    "lead_review": {
+      "verdict": "READY_FOR_HUMAN_GOLDEN_GRAPH_ADVISORY_113_REVIEW",
+      "status": "completed",
+      "summary": "Specialist rereviews passed after graph-task, rendered-proof, and repository/CI repairs. Lead review found no remaining graph-task, renderer, authority-boundary, or migration blocker."
+    },
+    "machine_proof": "reports/json/golden-graph-advisory-113-bundle-1-proof.json",
+    "screenshot_manifest": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshot-manifest.md",
+    "checker": {
+      "command": "node build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
+      "status": "passed"
+    },
+    "package_checker": {
+      "command": "npm.cmd run check:golden-graph-advisory-113",
+      "status": "passed"
+    },
+    "capture": {
+      "command": "node build-scripts/sprints/capture-golden-graph-advisory-113-bundle-1.js",
+      "status": "passed"
+    },
+    "validation": [
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\GOLDEN-GRAPH-ADVISORY-113-20260620\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ]
+  },
+  "carried_issues": [
+    {
+      "id": "GGA113-001",
+      "classification": "closed_by_repair",
+      "severity": "core_requirement_missing",
+      "finding": "Route advice initially behaved like a single-correct route selector with pre-rendered advice and completion dependency.",
+      "blocks": [],
+      "does_not_block": [
+        "lead review of the repaired bundle",
+        "human review after lead approval"
+      ],
+      "proof_required_to_close": "Route choice accepts all advisory options, renders advice only after selection/click, and completion is based on graph plus reading.",
+      "closure_evidence": [
+        "student-action rereview PASS_STUDENT_ACTION",
+        "source-data/book-1/exit-ticket/1.1.3-korte-check.json",
+        "engines/golden-ticket-layout.js"
+      ]
+    },
+    {
+      "id": "GGA113-002",
+      "classification": "closed_by_repair",
+      "severity": "proof_gap",
+      "finding": "Rendered wrong/retry and graph-after-action screenshots did not visibly show feedback in frame.",
+      "blocks": [],
+      "does_not_block": [
+        "lead review of the repaired bundle",
+        "human review after lead approval"
+      ],
+      "proof_required_to_close": "Recaptured screenshots show feedback in frame and mobile dark initial has the correct theme-toggle label.",
+      "closure_evidence": [
+        "rendered/mobile rereview PASS_RENDERED_MOBILE_ACCESSIBILITY",
+        "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-wrong-retry.png",
+        "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-graph-after-action.png",
+        "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-dark-initial.png"
+      ]
+    },
+    {
+      "id": "GGA113-003",
+      "classification": "closed_by_repair",
+      "severity": "proof_gap",
+      "finding": "Sprint checker did not initially enforce source/generated deep equality and was not wired into CI.",
+      "blocks": [],
+      "does_not_block": [
+        "lead review of the repaired bundle",
+        "human review after lead approval"
+      ],
+      "proof_required_to_close": "Dedicated checker enforces canonical source/generated equality and CI runs the checker.",
+      "closure_evidence": [
+        "repository/CI rereview PASS_REPOSITORY_CI",
+        "build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
+        "package.json",
+        ".github/workflows/platform-ci.yml"
+      ]
+    }
+  ],
+  "findings": [],
+  "lead_verdict": "READY_FOR_HUMAN_GOLDEN_GRAPH_ADVISORY_113_REVIEW",
+  "recommended_next_step": "Open paired platform and generated-lesson PRs for human GOLDEN-GRAPH-ADVISORY-113 review. Merge platform first, lesson second, if human review and CI approve."
+}
