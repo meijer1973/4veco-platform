@@ -105,6 +105,15 @@ function runNode(args) {
   });
 }
 
+function readCommittedUtf8(relativePath) {
+  const result = childProcess.spawnSync("git", ["show", `HEAD:${relativePath}`], {
+    cwd: REPO_ROOT,
+    encoding: "utf8",
+    windowsHide: true,
+  });
+  return result.status === 0 ? result.stdout : null;
+}
+
 function fail(failures) {
   console.error("International overlay architecture check failed:");
   for (const failure of failures) console.error(`- ${failure}`);
@@ -142,11 +151,19 @@ function checkFindingClassification(reportId, findings, failures) {
 }
 
 function checkCurrentness(failures) {
-  const result = runNode([GENERATOR, "--check"]);
-  if (result.status !== 0) {
-    failures.push(`generator --check failed: ${(result.stdout || "").trim()} ${(result.stderr || "").trim()}`);
-  }
   const expected = outputContents(buildBundle());
+  if (process.env.OVERLAY_CHECK_COMMITTED_OUTPUTS === "1") {
+    const mismatches = [];
+    for (const [relativePath, content] of expected.entries()) {
+      if (readCommittedUtf8(relativePath) !== content) mismatches.push(relativePath);
+    }
+    if (mismatches.length > 0) failures.push(`committed overlay output is stale: ${mismatches.join(", ")}`);
+  } else {
+    const result = runNode([GENERATOR, "--check"]);
+    if (result.status !== 0) {
+      failures.push(`generator --check failed: ${(result.stdout || "").trim()} ${(result.stderr || "").trim()}`);
+    }
+  }
   if (!sameList([...expected.keys()], OUTPUT_PATHS)) failures.push("OUTPUT_PATHS order mismatch");
 }
 

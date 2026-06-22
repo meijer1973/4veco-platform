@@ -149,3 +149,41 @@ successfully.
 |---|---|---|---|---|
 | Rebase onto current `main` completed cleanly and validation passed. | `core_requirement_met` | Nothing for PR publication. | Proceeding to commit, PR publication, CI, and final lead review. | Confirm remote PR is fresh, mergeable, and green after push. |
 | Dependency audit warnings remained present after `npm.cmd ci`. | `minor_carry_flag` | Dependency/security closure claims. | Overlay architecture PR because it does not change dependencies and validation passed. | Separate dependency-audit maintenance item if owner authorizes it. |
+
+## CI Currentness Repair Validation
+
+The first remote `platform-ci / validate-platform` run and one rerun failed in
+the focused overlay Jest test because the full CI Jest run reported all overlay
+outputs stale after earlier tests had touched generated files. Standalone local
+strict currentness and local full Node 20 Jest were current. The repair kept the
+normal CLI checker strict against the working tree and made the Jest test verify
+committed generated blobs through `OVERLAY_CHECK_COMMITTED_OUTPUTS=1`.
+
+```text
+node build-scripts/inspection/check-international-overlay-architecture.js
+OK international overlay architecture check descriptors=4 archetypes=4 crosswalk_rows=10 refusal_cases=31 decision=PROCEED_TO_SELECTED_JURISDICTION_DEEPENING
+
+$env:OVERLAY_CHECK_COMMITTED_OUTPUTS='1'; node build-scripts/inspection/check-international-overlay-architecture.js
+OK international overlay architecture check descriptors=4 archetypes=4 crosswalk_rows=10 refusal_cases=31 decision=PROCEED_TO_SELECTED_JURISDICTION_DEEPENING
+
+npx.cmd -p node@20 node node_modules/jest/bin/jest.js build-scripts/inspection/check-international-overlay-architecture.test.js --runInBand
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+
+npx.cmd -p node@20 node node_modules/jest/bin/jest.js --runInBand
+Test Suites: 58 passed, 6 skipped, 58 of 64 total
+Tests:       826 passed, 8 skipped, 834 total
+
+npm.cmd run check:platform
+Test Suites: 58 passed, 6 skipped, 58 of 64 total
+Tests:       826 passed, 8 skipped, 834 total
+
+git diff --check
+PASS
+```
+
+## CI Repair Finding Classification
+
+| Finding | Classification | blocks | does_not_block | proof_required_to_close |
+|---|---|---|---|---|
+| CI currentness failure was test-isolation related; committed overlay outputs and strict local currentness remained valid. | `quality_improvement_available` | Remote merge-readiness until repaired and CI rerun. | Architecture content and manual checker strictness. | Push repair, confirm remote CI green, final lead review, and human approval. |

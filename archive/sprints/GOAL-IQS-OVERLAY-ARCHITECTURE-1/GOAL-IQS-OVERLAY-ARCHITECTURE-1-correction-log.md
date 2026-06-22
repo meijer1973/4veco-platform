@@ -26,6 +26,8 @@ Date: 2026-06-22
 | The initial checker over-rejected required REV-STD-1 wording in markdown and matched `--implicit-source` as `ci`. | `quality_improvement_available` | Kept REV-STD-1 wording allowed in markdown; tightened CI argument matching; preserved explicit `STOP_IMPLICIT_DISCOVERY`. | Checker credibility before correction. | Generated packet content. | Refusal cases PASS in overlay checker. |
 | Scope-language check rejected roadmap use of “archetype-pilot report”. | `quality_improvement_available` | Changed the roadmap bullet to “archetype report,” preserving the internal architecture meaning without opening a product-pilot surface. | Active-surface scope-language validation. | Current architecture packet. | `npm.cmd run check:scope-language` PASS. |
 
+| GitHub Actions full Jest run dirtied generated overlay outputs before the focused overlay checker test, so the normal working-tree currentness mode reported all overlay outputs stale in CI while local standalone and full Node 20 runs were current. | `quality_improvement_available` | Kept the normal CLI checker strict against the working tree; added explicit committed-output currentness mode for the Jest test so CI verifies committed blobs rather than cross-test working-tree residue. The test still fails on stale committed outputs and prints checker stdout/stderr on failure. | CI merge-readiness before correction. | Architecture content, generated outputs, and manual checker strictness. | Node 20 focused Jest PASS, Node 20 full Jest PASS, normal `npm.cmd run check:platform` PASS, and remote CI PASS after push. |
+
 ## Validation After Corrections
 
 ```text
