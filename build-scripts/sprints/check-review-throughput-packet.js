@@ -33,6 +33,7 @@ const AUTHORITY_CLASSES = new Set([
 
 const AUTONOMOUS_LEVELS = new Set(['L0', 'L1', 'L2']);
 const HUMAN_LEVELS = new Set(['L3', 'L4']);
+const REQUIRED_CI_CONTEXT = 'validate-platform';
 const REVIEW_LEVELS = new Set([...AUTONOMOUS_LEVELS, ...HUMAN_LEVELS]);
 const NON_AUTONOMOUS_AUTHORITY_CLASSES = new Set([
   'high_authority',
@@ -229,8 +230,14 @@ function hasReviewedCommitSha(value) {
 }
 
 function hasCiProof(packet) {
+  return ciProofCandidates(packet).some((candidate) =>
+    asArray(candidate).some((item) => hasSuccessStatus(item) && hasReviewedCommitSha(item))
+  );
+}
+
+function ciProofCandidates(packet) {
   const proof = packet.proof || {};
-  const candidates = [
+  return [
     proof.ci,
     proof.ci_proof,
     packet.ci,
@@ -238,8 +245,27 @@ function hasCiProof(packet) {
     packet.ciProof,
     packet.validation && packet.validation.ci,
   ];
-  return candidates.some((candidate) =>
-    asArray(candidate).some((item) => hasSuccessStatus(item) && hasReviewedCommitSha(item))
+}
+
+function hasRequiredCiContext(packet) {
+  return ciProofCandidates(packet).some((candidate) =>
+    asArray(candidate).some((item) => {
+      if (!item || typeof item !== 'object') return false;
+      const requiredContexts = asArray(item.required_contexts || item.required_status_contexts);
+      const checks = asArray(item.checks || item.status_checks);
+      const matchingChecks = checks.filter((check) =>
+        [
+          check && check.name,
+          check && check.context,
+          check && check.workflowName,
+          check && check.workflow_name,
+        ].includes(REQUIRED_CI_CONTEXT)
+      );
+      if (checks.length > 0) {
+        return matchingChecks.some(hasSuccessStatus);
+      }
+      return requiredContexts.includes(REQUIRED_CI_CONTEXT);
+    })
   );
 }
 
@@ -418,6 +444,9 @@ function validateAutonomousSafety(packet, options = {}) {
 
   if (!hasCiProof(packet)) {
     fail('autonomous classification rejected: CI proof is missing');
+  }
+  if (!hasRequiredCiContext(packet)) {
+    fail(`autonomous classification rejected: required ${REQUIRED_CI_CONTEXT} CI context is missing`);
   }
 
   if (!hasCheckerProof(packet)) {

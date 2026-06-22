@@ -195,6 +195,12 @@ The Lead Reviewer Agent must block completion when:
 - Artifact/task:
 - Requested outcome:
 - Evidence inspected:
+- Reviewed repository and PR, when applicable:
+- Reviewed commit SHA:
+- PR-readiness routing suitability:
+- Human-authority trigger:
+- Batching recommendation:
+- Subsequent changes require re-review:
 
 ## Review Plan
 | Review/Test | Agent or tool | Required evidence | Status |
@@ -251,6 +257,9 @@ The Lead Reviewer Agent must:
 - allow PASS WITH FLAGS only when all carried flags sit outside the sprint core objective
 - make every carried flag name exactly what it blocks and what it does not block
 - end with a concrete operational next action
+- clearly state the reviewed repository/PR and commit SHA when the work is tied to a PR
+- state whether its result is suitable for PR-readiness routing
+- identify any human-authority trigger, batching recommendation, and whether later changes require re-review
 
 The Lead Reviewer Agent must not:
 

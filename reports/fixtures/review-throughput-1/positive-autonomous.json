@@ -22,7 +22,16 @@
       "workflow": "platform-ci / validate-platform",
       "github_actions_run_id": "27200000000",
       "reviewed_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "conclusion": "success"
+      "conclusion": "success",
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS"
+        }
+      ]
     },
     "checkers": [
       {

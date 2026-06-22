@@ -110,8 +110,96 @@ function ownerDecisionGateThroughputFields(options = {}) {
   });
 }
 
+function autonomousProof(options = {}) {
+  const proof = options.proof;
+  if (!proof || typeof proof !== 'object' || Array.isArray(proof)) {
+    throw new Error('proof is required for autonomous throughput fields');
+  }
+  if (!proof.ci || typeof proof.ci !== 'object' || Array.isArray(proof.ci)) {
+    throw new Error('proof.ci is required for autonomous throughput fields');
+  }
+  if (!Array.isArray(proof.checkers) || proof.checkers.length === 0) {
+    throw new Error('proof.checkers is required for autonomous throughput fields');
+  }
+  if (!proof.lead_review || typeof proof.lead_review !== 'object' || Array.isArray(proof.lead_review)) {
+    throw new Error('proof.lead_review is required for autonomous throughput fields');
+  }
+  return {
+    ci: proof.ci,
+    checkers: proof.checkers,
+    lead_review: proof.lead_review,
+  };
+}
+
+function mechanicalAutonomousThroughputFields(options = {}) {
+  const packet = reviewThroughputFields({
+    packetId: options.packetId,
+    prThroughputClass: options.prThroughputClass || 'micro_maintenance',
+    authorityClass: options.authorityClass || 'mechanical',
+    changedPaths: options.changedPaths,
+    reviewAutonomy: {
+      level: 'L0',
+      rationale: options.rationale || 'Mechanical maintenance with no authority or generated-output change.',
+    },
+    humanDecisionRequired: false,
+    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === true,
+    bundleId: options.bundleId === undefined ? null : options.bundleId,
+    pairedPrs: options.pairedPrs || [],
+    escalationTriggers: options.escalationTriggers || [],
+  });
+  packet.proof = autonomousProof(options);
+  return packet;
+}
+
+function leadReviewAutonomousThroughputFields(options = {}) {
+  const packet = reviewThroughputFields({
+    packetId: options.packetId,
+    prThroughputClass: options.prThroughputClass || 'normal_sprint',
+    authorityClass: options.authorityClass || 'standard',
+    changedPaths: options.changedPaths,
+    reviewAutonomy: {
+      level: 'L1',
+      rationale: options.rationale || 'Normal sprint eligible for lead-review autonomous closure.',
+    },
+    humanDecisionRequired: false,
+    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === true,
+    bundleId: options.bundleId === undefined ? null : options.bundleId,
+    pairedPrs: options.pairedPrs || [],
+    escalationTriggers: options.escalationTriggers || [],
+  });
+  packet.proof = autonomousProof(options);
+  return packet;
+}
+
+function ownerPreapprovedAutonomousThroughputFields(options = {}) {
+  if (!options.ownerPreapproval) {
+    throw new Error('ownerPreapproval is required for L2 throughput fields');
+  }
+  const packet = reviewThroughputFields({
+    packetId: options.packetId,
+    prThroughputClass: options.prThroughputClass || 'generated_output',
+    authorityClass: options.authorityClass || 'generated_output',
+    changedPaths: options.changedPaths,
+    reviewAutonomy: {
+      level: 'L2',
+      rationale: options.rationale || 'Owner-preapproved repeat lane eligible for lead-only closure.',
+      owner_preapproval: options.ownerPreapproval,
+    },
+    humanDecisionRequired: false,
+    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === true,
+    bundleId: options.bundleId === undefined ? null : options.bundleId,
+    pairedPrs: options.pairedPrs || [],
+    escalationTriggers: options.escalationTriggers || [],
+  });
+  packet.proof = autonomousProof(options);
+  return packet;
+}
+
 module.exports = {
   fullHumanGateThroughputFields,
+  leadReviewAutonomousThroughputFields,
+  mechanicalAutonomousThroughputFields,
   ownerDecisionGateThroughputFields,
+  ownerPreapprovedAutonomousThroughputFields,
   reviewThroughputFields,
 };
