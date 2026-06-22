@@ -103,11 +103,15 @@ Do not accept stale proof:
 - The executor re-fetches immediately before transition and aborts if the repo,
   PR number, base, state, or head changed.
 - Lead review may predate the remote head only for a narrowly defined
-  evidence-only tail such as lead-review records, packet metadata, or
-  regenerated indexes.
+  evidence-only tail: lead-review round records, lead-review
+  correction/disposition records, generated command logs, generated URL and
+  agent indexes, or generated internal dashboard projections.
 - Evidence-only tails must be computed from the actual GitHub comparison
   between the lead-reviewed SHA and current head. Self-declared
   `evidence_only` labels are not proof.
+- Sprint plans, sprint results, gate decisions, review packets, and result
+  metadata are substantive by default and require re-review unless a later
+  policy explicitly names a narrower mechanical exception.
 - Review-thread and requested-changes evidence must be complete. Paginate
   GitHub review-thread and change-request review connections, or fail closed
   when pagination metadata is unavailable or incomplete.

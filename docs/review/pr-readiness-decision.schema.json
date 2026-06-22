@@ -157,11 +157,13 @@
         "ci_head_sha",
         "ci_status",
         "ci_required_contexts",
+        "ci_checks",
         "lead_review_path",
         "lead_review_result",
         "lead_reviewed_sha",
         "lead_review_evidence_tail_allowed",
-        "changed_paths_verified"
+        "changed_paths_verified",
+        "checkers"
       ],
       "properties": {
         "ci_head_sha": {
@@ -221,7 +223,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "lead_review_result": {
           "type": [
@@ -233,7 +236,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "pattern": "^[A-Fa-f0-9]{40}$"
         },
         "changed_paths_verified": {
           "type": "boolean"
@@ -315,6 +319,89 @@
         "properties": {
           "allowed_transition": {
             "const": "NONE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "properties": {
+              "ci_status": {
+                "type": "string",
+                "enum": [
+                  "success",
+                  "SUCCESS",
+                  "succeeded",
+                  "SUCCEEDED",
+                  "passed",
+                  "PASSED",
+                  "pass",
+                  "PASS",
+                  "ok",
+                  "OK"
+                ]
+              },
+              "ci_checks": {
+                "minItems": 1,
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "conclusion"
+                  ],
+                  "properties": {
+                    "name": {
+                      "const": "validate-platform"
+                    },
+                    "conclusion": {
+                      "type": "string",
+                      "enum": [
+                        "success",
+                        "SUCCESS",
+                        "succeeded",
+                        "SUCCEEDED",
+                        "passed",
+                        "PASSED",
+                        "pass",
+                        "PASS",
+                        "ok",
+                        "OK"
+                      ]
+                    }
+                  }
+                }
+              },
+              "checkers": {
+                "minItems": 1
+              },
+              "lead_review_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "lead_review_result": {
+                "type": "string",
+                "enum": [
+                  "PASS",
+                  "PASS WITH FLAGS"
+                ]
+              },
+              "lead_reviewed_sha": {
+                "type": "string",
+                "pattern": "^[A-Fa-f0-9]{40}$"
+              }
+            }
           }
         }
       }

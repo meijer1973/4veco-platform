@@ -252,6 +252,19 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).toContain('lead_review_stale_after_substantive_change');
   });
 
+  test('post-review sprint result changes are substantive by default', () => {
+    const fixture = readFixture('evidence-tail-ready.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        post_lead_review_changed_paths: ['reports/sprints/EXAMPLE-result.md'],
+      },
+    });
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('lead_review_stale_after_substantive_change');
+  });
+
   test('missing validate-platform is rejected even when another check is green', () => {
     const fixture = readFixture('live-l1-ready.json');
     const decision = classifyPrReadiness({
@@ -279,6 +292,27 @@ describe('pr-readiness-router', () => {
         },
       })
     ).toThrow('READY_FOR_LEAD_ONLY requires validate-platform CI context');
+  });
+
+  test('ready decision validation rejects fabricated proof-incomplete decisions', () => {
+    const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
+    const malformed = {
+      ...decision,
+      proof: {
+        ...decision.proof,
+        ci_status: 'failure',
+        ci_required_contexts: ['validate-platform'],
+        ci_missing_contexts: [],
+        ci_checks: [{ name: 'validate-platform', conclusion: 'FAILURE' }],
+        checkers: [],
+        lead_review_path: null,
+        lead_review_result: null,
+        lead_reviewed_sha: null,
+        lead_review_evidence_tail_allowed: false,
+      },
+    };
+
+    expect(() => validateDecision(malformed)).toThrow('READY_FOR_LEAD_ONLY requires successful CI status');
   });
 
   test('decision validator rejects inconsistent route and transition combinations', () => {
@@ -434,5 +468,31 @@ describe('apply-pr-readiness-decision', () => {
     };
 
     expect(() => applyDecisionToState(decision, currentPr, { dryRun: true, finalPr })).toThrow('head_sha_changed');
+  });
+
+  test('malformed ready decisions are rejected before apply mutations', () => {
+    const decision = readFixture('apply-ready-decision.json');
+    const currentPr = readFixture('apply-ready-pr.json');
+    const malformed = {
+      ...decision,
+      proof: {
+        ...decision.proof,
+        ci_status: 'failure',
+        ci_required_contexts: ['validate-platform'],
+        ci_missing_contexts: [],
+        ci_checks: [],
+        checkers: [],
+        lead_review_path: null,
+        lead_review_result: null,
+        lead_reviewed_sha: null,
+        lead_review_evidence_tail_allowed: false,
+      },
+    };
+
+    expect(() => applyDecisionToState(malformed, currentPr, { dryRun: true })).toThrow(
+      'READY_FOR_LEAD_ONLY requires successful CI status'
+    );
+    expect(currentPr.comments || []).toHaveLength(0);
+    expect(currentPr.is_draft).toBe(true);
   });
 });

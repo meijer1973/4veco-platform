@@ -46,7 +46,7 @@ function normalizeVerdict(value) {
 }
 
 function successStatus(value) {
-  return /^(success|succeeded|passed|pass|ok|neutral)$/i.test(String(value || '').trim());
+  return /^(success|succeeded|passed|pass|ok)$/i.test(String(value || '').trim());
 }
 
 function requiredCiContexts(proof) {
@@ -61,11 +61,12 @@ function requiredCiContexts(proof) {
 }
 
 function checkNames(check) {
+  const item = check || {};
   return uniqueStrings([
-    check.name,
-    check.context,
-    check.workflowName,
-    check.workflow_name,
+    item.name,
+    item.context,
+    item.workflowName,
+    item.workflow_name,
   ]);
 }
 
@@ -509,6 +510,8 @@ function validateDecision(decision) {
   const transitionValues = new Set(Object.values(ALLOWED_TRANSITIONS));
   if (decision.schema_version !== 1) throw new Error('decision.schema_version must be 1');
   if (!decision.reviewed_pr || typeof decision.reviewed_pr !== 'object') throw new Error('decision.reviewed_pr is required');
+  if (!decision.throughput || typeof decision.throughput !== 'object') throw new Error('decision.throughput is required');
+  if (!decision.proof || typeof decision.proof !== 'object') throw new Error('decision.proof is required');
   if (!decision.reviewed_pr.repo) throw new Error('decision.reviewed_pr.repo is required');
   if (!Number.isInteger(decision.reviewed_pr.number) || decision.reviewed_pr.number < 1) {
     throw new Error('decision.reviewed_pr.number must be a positive integer');
@@ -557,18 +560,49 @@ function validateDecision(decision) {
     if (decision.proof.ci_head_sha !== decision.reviewed_pr.head_sha) {
       throw new Error(`${decision.route} requires CI proof for reviewed head`);
     }
+    if (!successStatus(decision.proof.ci_status)) {
+      throw new Error(`${decision.route} requires successful CI status`);
+    }
     if (!asArray(decision.proof.ci_required_contexts).includes('validate-platform')) {
       throw new Error(`${decision.route} requires validate-platform CI context`);
     }
     if (asArray(decision.proof.ci_missing_contexts).includes('validate-platform')) {
       throw new Error(`${decision.route} requires passing validate-platform CI context`);
     }
+    const validatePlatformCheck = asArray(decision.proof.ci_checks).find((check) => {
+      const status = check && (check.conclusion || check.status || check.state || check.result);
+      return checkNames(check).includes('validate-platform') && successStatus(status);
+    });
+    if (!validatePlatformCheck) {
+      throw new Error(`${decision.route} requires successful validate-platform check proof`);
+    }
+    const checkers = asArray(decision.proof.checkers);
     if (
-      decision.proof.lead_reviewed_sha &&
+      checkers.length === 0 ||
+      !checkers.every((checker) => successStatus(checker && (checker.status || checker.conclusion || checker.result)))
+    ) {
+      throw new Error(`${decision.route} requires passing checker proof`);
+    }
+    if (typeof decision.proof.lead_review_path !== 'string' || !decision.proof.lead_review_path.trim()) {
+      throw new Error(`${decision.route} requires lead review path`);
+    }
+    if (!PASSING_LEAD_RESULTS.has(normalizeVerdict(decision.proof.lead_review_result))) {
+      throw new Error(`${decision.route} requires passing lead review result`);
+    }
+    if (!SHA_PATTERN.test(String(decision.proof.lead_reviewed_sha || ''))) {
+      throw new Error(`${decision.route} requires valid lead-reviewed SHA`);
+    }
+    if (
       decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
       decision.proof.lead_review_evidence_tail_allowed !== true
     ) {
       throw new Error(`${decision.route} requires lead review for reviewed head or verified evidence-only tail`);
+    }
+    if (decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha) {
+      const tailPaths = uniqueStrings(asArray(decision.proof.post_lead_review_changed_paths).map(normalizePath));
+      if (tailPaths.length === 0 || !tailPaths.every(isEvidenceTailPath)) {
+        throw new Error(`${decision.route} requires verified evidence-only tail paths`);
+      }
     }
   }
   return true;

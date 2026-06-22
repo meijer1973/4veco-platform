@@ -65,7 +65,7 @@ function parseStatusChecks(statusCheckRollup) {
 }
 
 function successStatus(value) {
-  return /^(success|succeeded|passed|pass|ok|neutral)$/i.test(String(value || '').trim());
+  return /^(success|succeeded|passed|pass|ok)$/i.test(String(value || '').trim());
 }
 
 function uniqueStrings(values) {

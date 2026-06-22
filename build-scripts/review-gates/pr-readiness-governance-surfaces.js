@@ -3,6 +3,8 @@ const GOVERNANCE_SURFACE_PATTERNS = Object.freeze([
   /^agents\/README\.md$/i,
   /^agents\/lead-reviewer-agent\.md$/i,
   /^agents\/pr-readiness-reviewer-agent\.md$/i,
+  /^package\.json$/i,
+  /^build-scripts\/ci\/check-branch-protection\.js$/i,
   /^build-scripts\/review-gates\/pr-readiness-router(?:\.test)?\.js$/i,
   /^build-scripts\/review-gates\/pr-readiness-governance-surfaces\.js$/i,
   /^build-scripts\/review-gates\/review-pr-readiness\.js$/i,
@@ -19,6 +21,8 @@ const GOVERNANCE_SURFACE_TEST_PATHS = Object.freeze([
   'AGENTS.md',
   'agents/lead-reviewer-agent.md',
   'agents/pr-readiness-reviewer-agent.md',
+  'package.json',
+  'build-scripts/ci/check-branch-protection.js',
   'build-scripts/review-gates/pr-readiness-router.js',
   'build-scripts/review-gates/pr-readiness-governance-surfaces.js',
   'build-scripts/review-gates/review-pr-readiness.js',
@@ -32,8 +36,9 @@ const GOVERNANCE_SURFACE_TEST_PATHS = Object.freeze([
 ]);
 
 const EVIDENCE_TAIL_PATTERNS = Object.freeze([
-  /^reports\/sprints\/[^/]+(?:\.md|\.json|\.jsonl)$/i,
-  /^references\/data\/sprints\/[^/]+\.(?:plan|result)\.json$/i,
+  /^reports\/sprints\/[^/]+-lead-review-round-?\d+(?:-recheck\d+)?\.md$/i,
+  /^reports\/sprints\/[^/]+-lead-review-(?:assignment|corrections|disposition|terminology-delta)\.md$/i,
+  /^reports\/sprints\/[^/]+-command-log\.(?:md|jsonl)$/i,
   /^reports\/github-agent-index-[^/]+\.(?:json|md)$/i,
   /^reports\/internal-dashboard\/(?:dashboard-data\.json|index\.html)$/i,
   /^reports\/url-index\.md$/i,
