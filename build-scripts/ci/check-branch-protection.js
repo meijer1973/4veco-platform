@@ -130,6 +130,12 @@ function summarizeProtection(protection, options = {}) {
   if (pullRequestReviewSummary.require_last_push_approval !== false) {
     failures.push('require_last_push_approval must be false');
   }
+  if (
+    pullRequestReviewSummary.bypass_allowances_observable === true &&
+    pullRequestReviewSummary.bypass_disabled !== true
+  ) {
+    failures.push('bypass_pull_request_allowances must be empty');
+  }
 
   return {
     repository: options.repo || DEFAULT_REPO,

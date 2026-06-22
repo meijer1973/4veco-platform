@@ -124,11 +124,15 @@ function autonomousProof(options = {}) {
   if (!proof.lead_review || typeof proof.lead_review !== 'object' || Array.isArray(proof.lead_review)) {
     throw new Error('proof.lead_review is required for autonomous throughput fields');
   }
-  return {
+  const packetProof = {
     ci: proof.ci,
     checkers: proof.checkers,
     lead_review: proof.lead_review,
   };
+  if (proof.branch_protection && typeof proof.branch_protection === 'object' && !Array.isArray(proof.branch_protection)) {
+    packetProof.branch_protection = proof.branch_protection;
+  }
+  return packetProof;
 }
 
 function mechanicalAutonomousThroughputFields(options = {}) {

@@ -225,7 +225,10 @@ Branch protection for `main` must keep strict `validate-platform`, admin
 enforcement, force-push protection, deletion protection, and pull-request
 workflow while setting `required_approving_review_count` to `0`. Validate this
 with `npm.cmd run check:branch-protection`; the checker must fail if the count
-returns to `1`.
+returns to `1` or if observable pull-request bypass allowances are non-empty.
+PR readiness must derive mechanical approval constraints from the observed
+approval count, not from self-declared identity-satisfaction flags, and it must
+keep the PR draft when that count is not observable.
 
 Merge authority follows the PR-readiness route:
 

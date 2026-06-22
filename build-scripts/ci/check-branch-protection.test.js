@@ -82,6 +82,51 @@ describe('check-branch-protection', () => {
     expect(summary.limitation).toBe('endpoint unavailable');
   });
 
+  test('passes when observable bypass allowances are empty', () => {
+    const summary = summarizeProtection(
+      validProtection({
+        required_pull_request_reviews: {
+          dismiss_stale_reviews: false,
+          require_code_owner_reviews: false,
+          require_last_push_approval: false,
+          required_approving_review_count: 0,
+          bypass_pull_request_allowances: {
+            users: [],
+            teams: [],
+            apps: [],
+          },
+        },
+      })
+    );
+
+    expect(summary.ok).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.bypass_allowances_observable).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.bypass_disabled).toBe(true);
+  });
+
+  test('fails when observable bypass allowances are non-empty', () => {
+    const summary = summarizeProtection(
+      validProtection({
+        required_pull_request_reviews: {
+          dismiss_stale_reviews: false,
+          require_code_owner_reviews: false,
+          require_last_push_approval: false,
+          required_approving_review_count: 0,
+          bypass_pull_request_allowances: {
+            users: [{ login: 'review-bypass-user' }],
+            teams: [],
+            apps: [],
+          },
+        },
+      })
+    );
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('bypass_pull_request_allowances must be empty');
+    expect(summary.observed.required_pull_request_reviews.bypass_allowances_observable).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.bypass_disabled).toBe(false);
+  });
+
   test.each([
     [
       'admin enforcement false',

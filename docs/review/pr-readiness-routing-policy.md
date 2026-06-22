@@ -133,6 +133,17 @@ have. Do not use admin bypass as the normal solution, and do not weaken strict
 status checks, admin enforcement, force-push protection, or deletion
 protection.
 
+PR readiness must derive any mechanical approval constraint from the observed
+`required_approving_review_count`, either from flattened readiness proof or the
+nested branch-protection checker output. Count `0` means no mechanical approval
+constraint; any higher count is a merge constraint; absent or unobservable count
+keeps the PR in revise. Self-declared identity-satisfaction flags are not
+authoritative.
+
+When bypass allowances are visible, they must be empty. If GitHub does not expose
+them in the inspected response, record that limitation instead of claiming the
+allowances were verified.
+
 Merge authority is separate from GitHub approval count:
 
 - L0-L2 may merge through the normal merge path only after exact-head CI,
