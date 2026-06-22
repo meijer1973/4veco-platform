@@ -12,6 +12,10 @@ This does not change product grammar, reasoning grammar, authority, fixtures,
 candidate data, or rendered student behavior. The governing rule remains:
 copy product grammar and re-derive reasoning grammar.
 
+CI readiness also pins LF checkout rules for exemplar evidence and reasoning
+gallery proof text files so manifest hashes and generated HTML comparisons stay
+stable on Windows and Linux runners.
+
 ## 2026-06-20 - Initial Adoption
 
 `GOAL-REASONING-GOLDEN-FAMILY-1` adopts the four package exemplars as a
