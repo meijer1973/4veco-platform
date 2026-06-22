@@ -1,0 +1,74 @@
+{
+  "captured_at": "2026-06-18",
+  "via": "Browser localhost viewport capability",
+  "metrics": [
+    {
+      "name": "chapter-1.3-after-desktop",
+      "requested": {
+        "width": 1366,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8875/1.3%20Aanbod%20en%20marktevenwicht%20%E2%80%93%20hoofdstuk.html",
+      "metrics": {
+        "bodyScrollWidth": 1351,
+        "documentClientWidth": 1351,
+        "horizontalOverflow": false,
+        "innerHeight": 900,
+        "innerWidth": 1366,
+        "scrollWidth": 1351,
+        "title": "1.3 Aanbod en marktevenwicht – hoofdstuk"
+      }
+    },
+    {
+      "name": "chapter-1.3-after-mobile",
+      "requested": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8875/1.3%20Aanbod%20en%20marktevenwicht%20%E2%80%93%20hoofdstuk.html",
+      "metrics": {
+        "bodyScrollWidth": 375,
+        "documentClientWidth": 375,
+        "horizontalOverflow": false,
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "title": "1.3 Aanbod en marktevenwicht – hoofdstuk"
+      }
+    },
+    {
+      "name": "1.3.4-opgaven-after-desktop",
+      "requested": {
+        "width": 1366,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8875/1.3.4%20Gemengde%20opgaven/1.3.4%20Gemengde%20opgaven%20%E2%80%93%20opgaven.html",
+      "metrics": {
+        "bodyScrollWidth": 1335,
+        "documentClientWidth": 1351,
+        "horizontalOverflow": false,
+        "innerHeight": 900,
+        "innerWidth": 1366,
+        "scrollWidth": 1351,
+        "title": "1.3.4 Gemengde opgaven – opgaven"
+      }
+    },
+    {
+      "name": "1.3.4-opgaven-after-mobile",
+      "requested": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8875/1.3.4%20Gemengde%20opgaven/1.3.4%20Gemengde%20opgaven%20%E2%80%93%20opgaven.html",
+      "metrics": {
+        "bodyScrollWidth": 375,
+        "documentClientWidth": 375,
+        "horizontalOverflow": false,
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "title": "1.3.4 Gemengde opgaven – opgaven"
+      }
+    }
+  ]
+}

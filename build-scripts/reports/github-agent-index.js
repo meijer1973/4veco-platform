@@ -42,10 +42,38 @@ function toPosix(value) {
 }
 
 function findRepoRoot(repoName, preferredRoot) {
+  if (repoName === "4veco-lessen" && process.env.FOURVECO_LESSEN_ROOT) {
+    return path.resolve(process.env.FOURVECO_LESSEN_ROOT);
+  }
   if (fs.existsSync(preferredRoot)) return preferredRoot;
   const anchorRoot = path.resolve(anchorProjectRoot, repoName);
   if (fs.existsSync(anchorRoot)) return anchorRoot;
   return preferredRoot;
+}
+
+function gitValue(root, args) {
+  try {
+    return execFileSync("git", args, {
+      cwd: root,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+  } catch (error) {
+    return null;
+  }
+}
+
+function gitSourceInfo(repoName, root) {
+  const commit = gitValue(root, ["rev-parse", "HEAD"]);
+  const branch = repoName === "4veco-lessen" && process.env.FOURVECO_LESSEN_SOURCE_REF
+    ? process.env.FOURVECO_LESSEN_SOURCE_REF
+    : gitValue(root, ["rev-parse", "--abbrev-ref", "HEAD"]);
+  const remoteUrl = gitValue(root, ["remote", "get-url", "origin"]);
+  return {
+    source_branch: branch || "unknown",
+    source_commit: commit || "unknown",
+    source_remote_url: remoteUrl || null,
+  };
 }
 
 function isParagraphPath(relativePath) {
@@ -170,6 +198,7 @@ function buildIndex(repoName, root) {
     root: publishedRoot(repoName),
     available: true,
     generated_at: new Date().toISOString(),
+    ...gitSourceInfo(repoName, root),
     file_count: files.length,
     inventory_scope: "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
     skipped_directories: Array.from(skipDirs).sort(),
@@ -205,6 +234,8 @@ function writeMarkdown(fileName, data) {
   }
 
   lines.push(`Root: \`${data.root}\``);
+  lines.push(`Source branch: \`${data.source_branch || "unknown"}\``);
+  lines.push(`Source commit: \`${data.source_commit || "unknown"}\``);
   lines.push(`Files indexed: ${data.file_count}`);
   lines.push(`Scope: ${data.inventory_scope}`);
   lines.push("");

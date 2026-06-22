@@ -1,7 +1,7 @@
 # Index-point and percentage claim check
 
-Golden exemplar ID: `reasoning-1.1.2-index-check-v1`  
-Paragraph: `1.1.2`  
+Golden exemplar ID: `reasoning-1.1.2-index-check-v1`
+Paragraph: `1.1.2`
 Reasoning family: `reference_value_and_claim_repair`
 
 ## Reasoning grammar

@@ -1,0 +1,715 @@
+{
+  "schema_version": 1,
+  "overlay_id": "Y2-EXAM-ANCHOR-INGESTION-WAVE-1",
+  "overlay_status": "review_wave",
+  "generated_by": "Y2-EXAM-ANCHOR-INGESTION-WAVE-1",
+  "generated_on": "2026-06-20T00:00:00.000Z",
+  "source_files": [
+    "references/external/exam-questions.json",
+    "references/external/exams/vw-1022-a-25-2-o.pdf",
+    "references/external/exams/vw-1022-a-25-2-c.pdf",
+    "references/external/exams/vw-1022-a-23-2-o.pdf",
+    "references/external/exams/vw-1022-a-23-2-c.pdf",
+    "references/external/exams/vw-1022-a-23-1-o.pdf",
+    "references/external/exams/vw-1022-a-23-1-c.pdf",
+    "references/external/exams/vw-1022-a-25-1-o.pdf",
+    "references/external/exams/vw-1022-a-25-1-c.pdf",
+    "reports/reference-planning/Y2-ROOT-MAPPING-1-paragraph-candidate-matrix.md",
+    "reports/reference-planning/Y2-ROOT-MAPPING-1-exam-anchor-backlog.md"
+  ],
+  "authority_boundary": {
+    "external_source_mutated": false,
+    "machine_reference_mutated": false,
+    "authored_reference_mutated": false,
+    "target_registry_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "official_operation_closure_authorized": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "wave_scope": {
+    "book_5_case_count": 1,
+    "book_6_case_count": 1,
+    "book_7_case_count": 1,
+    "book_8_case_count": 2,
+    "selected_case_count": 5,
+    "selected_question_count": 17,
+    "complementary_prior_evidence": [
+      {
+        "id": "Q3",
+        "source_exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+        "status": "retained_as_complementary_insurance_threshold_evidence",
+        "broad_rows_closed": []
+      }
+    ],
+    "q19_status": "hold"
+  },
+  "cases": [
+    {
+      "case_id": "Y2-W1-B5-PENSIONMODEL-Q7-Q11",
+      "book": 5,
+      "case_title": "Pensioenmodel",
+      "source_exam": "vw-1022-a-25-2-o",
+      "source_correction_model": "vw-1022-a-25-2-c",
+      "question_ids": [
+        "vw-1022-a-25-2-o:q7",
+        "vw-1022-a-25-2-o:q8",
+        "vw-1022-a-25-2-o:q9",
+        "vw-1022-a-25-2-o:q10",
+        "vw-1022-a-25-2-o:q11"
+      ],
+      "official_prompt_trace": [
+        {
+          "question": 7,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-2-o.pdf#page=4",
+          "prompt_focus": "pensions as exchange over time"
+        },
+        {
+          "question": 8,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-2-o.pdf#page=4",
+          "prompt_focus": "welfare-indexed pension outlays under model assumptions"
+        },
+        {
+          "question": 9,
+          "points": 1,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-2-o.pdf#page=5",
+          "prompt_focus": "stock-flow classification for net accumulated pension saving"
+        },
+        {
+          "question": 10,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-2-o.pdf#page=5",
+          "prompt_focus": "premiums as percentage of total pension wealth"
+        },
+        {
+          "question": 11,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-2-o.pdf#page=5",
+          "prompt_focus": "higher retirement age and purchasing power of current premium payers"
+        }
+      ],
+      "source_trace": [
+        {
+          "source_id": "figuur-1-pensioenmodel-2024-2044",
+          "locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4",
+          "type": "figure",
+          "status": "source_figure_locator_recorded",
+          "needed_for_questions": [8, 9, 10],
+          "blocking_gap_ids": []
+        },
+        {
+          "source_id": "assumptions-a-f-pensionmodel",
+          "locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4",
+          "type": "source_text_assumptions",
+          "status": "source_text_locator_recorded",
+          "needed_for_questions": [8, 10],
+          "blocking_gap_ids": []
+        }
+      ],
+      "correction_model_trace": [
+        {
+          "question": 7,
+          "locator": "references/external/exams/vw-1022-a-25-2-c.pdf#page=8",
+          "point_allocation": ["premium now delays consumption", "pension payouts later can increase consumption"],
+          "answer_form": "two-step explanation"
+        },
+        {
+          "question": 8,
+          "locator": "references/external/exams/vw-1022-a-25-2-c.pdf#page=8",
+          "point_allocation": ["nominal income rises through real growth plus inflation", "welfare-indexed pensions rise with incomes"],
+          "answer_form": "source-supported causal explanation"
+        },
+        {
+          "question": 9,
+          "locator": "references/external/exams/vw-1022-a-25-2-c.pdf#page=8",
+          "point_allocation": ["classify as stock because it is measured at a moment"],
+          "answer_form": "classification with motivation"
+        },
+        {
+          "question": 10,
+          "locator": "references/external/exams/vw-1022-a-25-2-c.pdf#page=8",
+          "point_allocation": ["pension wealth rises faster than GDP", "premiums stay constant as GDP share and fall as pension-wealth share"],
+          "answer_form": "two-link source explanation"
+        },
+        {
+          "question": 11,
+          "locator": "references/external/exams/vw-1022-a-25-2-c.pdf#page=9",
+          "point_allocation": ["more premium payers or fewer beneficiaries improves fund balance", "premium can fall so net income and purchasing power can rise"],
+          "answer_form": "policy mechanism explanation"
+        }
+      ],
+      "operation_decomposition": [
+        "OP-T1: time, stock-flow, and intertemporal reasoning",
+        "OP-H1: institutional and distributional pension reasoning",
+        "OP-F1: pension-wealth and premium-ratio mechanism, not Book 6 finance closure",
+        "OP-ANS3: constructed multi-link explanation"
+      ],
+      "answer_form_decomposition": [
+        "classification_with_motivation",
+        "two_link_causal_explanation",
+        "source_supported_policy_mechanism"
+      ],
+      "op_row_mapping": ["OP-T1", "OP-H1", "OP-F1", "OP-ANS3"],
+      "year2_candidate_mapping": [
+        "Y2-B5-P01",
+        "Y2-B5-P02",
+        "Y2-B5-P08",
+        "Y2-B5-P09",
+        "Y2-B5-P10",
+        "Y2-B5-P11",
+        "Y2-B5-P13",
+        "Y2-B5-P14"
+      ],
+      "mtu_task_family_status": [
+        {
+          "source_required_skill_ids": ["E02", "E06"],
+          "status": "mirrored_skill_ids_only_not_mtu_closure",
+          "gap": "Year 2 pension/source task-family support remains unvalidated."
+        }
+      ],
+      "candidate_disposition_effect": [
+        {
+          "candidate_id": "Y2-B5-P09",
+          "effect": "improves_from_missing_to_reviewed_official_anchor_family_for_pension_coverage_source_reasoning"
+        },
+        {
+          "candidate_id": "Y2-B5-P13",
+          "effect": "improves_from_missing_to_reviewed_official_anchor_family_for_pension_source_case_retrieval"
+        }
+      ],
+      "blockers": [
+        {
+          "id": "Y2W1-B5-TARGET-GAP",
+          "blocks": ["target_registry_rows", "production_paragraphs", "target_equivalent_proof"],
+          "does_not_block": ["Year 2 evidence-wave review", "Book 5 mapping refinement"],
+          "proof_required_to_close": "Reviewed target-exercise anchor and governed MTU/task-family review for pension source reasoning."
+        }
+      ],
+      "review_decision": "reviewed_official_anchor_family_for_mapping_only"
+    },
+    {
+      "case_id": "Y2-W1-B6-HOUSING-Q26-Q29",
+      "book": 6,
+      "case_title": "De woningmarkt in de knel",
+      "source_exam": "vw-1022-a-23-2-o",
+      "source_correction_model": "vw-1022-a-23-2-c",
+      "question_ids": [
+        "vw-1022-a-23-2-o:q26",
+        "vw-1022-a-23-2-o:q27",
+        "vw-1022-a-23-2-o:q28",
+        "vw-1022-a-23-2-o:q29"
+      ],
+      "official_prompt_trace": [
+        {
+          "question": 26,
+          "points": 1,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "prompt_focus": "calculate social-housing waiting-list households"
+        },
+        {
+          "question": 27,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "prompt_focus": "use revenue maximization to test maximum-rent claim"
+        },
+        {
+          "question": 28,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "prompt_focus": "explain low mortgage-rate and housing-shortage risk argument"
+        },
+        {
+          "question": 29,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-2-o.pdf#page=13",
+          "prompt_focus": "explain rent increase using supply data and income elasticity"
+        }
+      ],
+      "source_trace": [
+        {
+          "source_id": "tabel-1-vastwonen-financial-data",
+          "locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "type": "table",
+          "status": "source_table_locator_recorded",
+          "needed_for_questions": [26, 27],
+          "blocking_gap_ids": []
+        },
+        {
+          "source_id": "tabel-2-particuliere-huurwoningen-reder",
+          "locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=13",
+          "type": "table",
+          "status": "source_table_locator_recorded",
+          "needed_for_questions": [29],
+          "blocking_gap_ids": []
+        }
+      ],
+      "correction_model_trace": [
+        {
+          "question": 26,
+          "locator": "references/external/exams/vw-1022-a-23-2-c.pdf#page=13",
+          "point_allocation": ["solve current demand at maximum rent and subtract housing stock"],
+          "answer_form": "calculation"
+        },
+        {
+          "question": 27,
+          "locator": "references/external/exams/vw-1022-a-23-2-c.pdf#page=13",
+          "point_allocation": ["derive marginal revenue from average revenue", "compare revenue-maximizing quantity with capacity and reject claim"],
+          "answer_form": "calculation_with_conclusion"
+        },
+        {
+          "question": 28,
+          "locator": "references/external/exams/vw-1022-a-23-2-c.pdf#page=13",
+          "point_allocation": ["low mortgage rate lowers interest costs", "housing shortage supports stable rent income and low default/loss risk"],
+          "answer_form": "finance mechanism explanation"
+        },
+        {
+          "question": 29,
+          "locator": "references/external/exams/vw-1022-a-23-2-c.pdf#page=14",
+          "point_allocation": ["positive income elasticity plus income rise increases demand", "fewer available rentals reduces supply and raises rents"],
+          "answer_form": "source-supported two-sided market explanation"
+        }
+      ],
+      "operation_decomposition": [
+        "OP-F1: mortgage-rate and debt-risk mechanism",
+        "OP-P1: price/rent and policy-regulated market reasoning",
+        "OP-D1/OP-D2: demand/supply and elasticity source interpretation",
+        "OP-ANS2: calculation with conclusion",
+        "OP-ANS3: source-supported mechanism explanation"
+      ],
+      "answer_form_decomposition": [
+        "calculation",
+        "calculation_with_conclusion",
+        "two_link_mechanism_explanation",
+        "source_table_and_elasticity_explanation"
+      ],
+      "op_row_mapping": ["OP-F1", "OP-P1", "OP-D1", "OP-D2", "OP-ANS2", "OP-ANS3"],
+      "year2_candidate_mapping": [
+        "Y2-B6-P08",
+        "Y2-B6-P09",
+        "Y2-B6-P11",
+        "Y2-B6-P12",
+        "Y2-B6-P14"
+      ],
+      "mtu_task_family_status": [
+        {
+          "source_required_skill_ids": ["A14", "A06", "A25", "D11"],
+          "status": "mirrored_skill_ids_only_not_mtu_closure",
+          "gap": "Housing finance and table/elasticity task-family route remains unreviewed for Year 2."
+        }
+      ],
+      "candidate_disposition_effect": [
+        {
+          "candidate_id": "Y2-B6-P08",
+          "effect": "improves_from_missing_to_reviewed_official_anchor_family_for_mortgage_and_household_finance"
+        },
+        {
+          "candidate_id": "Y2-B6-P09",
+          "effect": "improves_from_missing_to_reviewed_official_anchor_family_for_housing_market_constraints"
+        }
+      ],
+      "blockers": [
+        {
+          "id": "Y2W1-B6-MTU-GAP",
+          "blocks": ["Book_6_production_route", "target_registry_rows", "broad_OP_F1_closure"],
+          "does_not_block": ["Book 6 mapping refinement", "official-anchor-family coverage"],
+          "proof_required_to_close": "Governed target-exercise comparison plus task-family/MTU review for housing finance and market-table explanation."
+        }
+      ],
+      "review_decision": "reviewed_official_anchor_family_for_mapping_only"
+    },
+    {
+      "case_id": "Y2-W1-B7-NONPAYMENT-Q12-Q15",
+      "book": 7,
+      "case_title": "Bij wanbetaling afrekenen",
+      "source_exam": "vw-1022-a-23-1-o",
+      "source_correction_model": "vw-1022-a-23-1-c",
+      "question_ids": [
+        "vw-1022-a-23-1-o:q12",
+        "vw-1022-a-23-1-o:q13",
+        "vw-1022-a-23-1-o:q14",
+        "vw-1022-a-23-1-o:q15"
+      ],
+      "official_prompt_trace": [
+        {
+          "question": 12,
+          "points": 3,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "prompt_focus": "principal-agent problem and insurance condition"
+        },
+        {
+          "question": 13,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "prompt_focus": "insurance conditions that reduce moral hazard by suppliers"
+        },
+        {
+          "question": 14,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "prompt_focus": "condition that reduces adverse selection"
+        },
+        {
+          "question": 15,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "prompt_focus": "calculate total credit-insurance premium"
+        }
+      ],
+      "source_trace": [
+        {
+          "source_id": "tabel-1-financiele-gegevens-digibate",
+          "locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "type": "table",
+          "status": "source_table_locator_recorded",
+          "needed_for_questions": [15],
+          "blocking_gap_ids": []
+        },
+        {
+          "source_id": "figuur-1-kredietverzekering-en-voorwaarden",
+          "locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=6",
+          "type": "figure_and_conditions_context",
+          "status": "source_figure_and_conditions_locator_recorded",
+          "needed_for_questions": [12, 13, 14],
+          "blocking_gap_ids": []
+        }
+      ],
+      "correction_model_trace": [
+        {
+          "question": 12,
+          "locator": "references/external/exams/vw-1022-a-23-1-c.pdf#page=9",
+          "point_allocation": ["conflicting interests", "asymmetric information", "incasso-cost pass-through condition"],
+          "answer_form": "three-part explanation"
+        },
+        {
+          "question": 13,
+          "locator": "references/external/exams/vw-1022-a-23-1-c.pdf#page=9",
+          "point_allocation": ["name deductible and bonus-malus conditions", "explain financial incentive to claim less"],
+          "answer_form": "condition_identification_plus_explanation"
+        },
+        {
+          "question": 14,
+          "locator": "references/external/exams/vw-1022-a-23-1-c.pdf#page=9",
+          "point_allocation": ["bonus-malus or voluntary deductible attracts good risks, or compulsory insurance removes selection", "explain selection effect"],
+          "answer_form": "adverse_selection_explanation"
+        },
+        {
+          "question": 15,
+          "locator": "references/external/exams/vw-1022-a-23-1-c.pdf#page=10",
+          "point_allocation": ["compute expected damage from contract counts, turnover, and default probabilities", "add 20 percent premium markup"],
+          "answer_form": "expected_value_calculation"
+        }
+      ],
+      "operation_decomposition": [
+        "OP-R1: insurance, moral hazard, adverse selection, expected-loss reasoning",
+        "OP-M1: principal-agent and incentive mechanism",
+        "OP-F1: premium calculation from expected damage",
+        "OP-ANS2: expected-value calculation",
+        "OP-ANS3: condition-based explanation"
+      ],
+      "answer_form_decomposition": [
+        "principal_agent_explanation",
+        "condition_identification_plus_incentive_chain",
+        "adverse_selection_explanation",
+        "expected_value_calculation_with_markup"
+      ],
+      "op_row_mapping": ["OP-R1", "OP-M1", "OP-F1", "OP-ANS2", "OP-ANS3"],
+      "year2_candidate_mapping": [
+        "Y2-B7-P02",
+        "Y2-B7-P09",
+        "Y2-B7-P10",
+        "Y2-B7-P11",
+        "Y2-B7-P12",
+        "Y2-B7-P13",
+        "Y2-B7-P14"
+      ],
+      "mtu_task_family_status": [
+        {
+          "source_required_skill_ids": ["G02", "F09", "G04", "A04"],
+          "status": "mirrored_skill_ids_only_not_mtu_closure",
+          "gap": "Risk/information and expected-premium task-family route remains unreviewed; Q3 remains complementary insurance-threshold evidence only."
+        }
+      ],
+      "candidate_disposition_effect": [
+        {
+          "candidate_id": "Y2-B7-P09",
+          "effect": "confirms official anchor family for moral hazard"
+        },
+        {
+          "candidate_id": "Y2-B7-P10",
+          "effect": "confirms official anchor family for adverse selection"
+        },
+        {
+          "candidate_id": "Y2-B7-P11",
+          "effect": "confirms official anchor family for principal-agent incentives"
+        }
+      ],
+      "blockers": [
+        {
+          "id": "Y2W1-B7-BROAD-OP-GAP",
+          "blocks": ["broad_OP_R1_closure", "target_registry_rows", "production_paragraphs"],
+          "does_not_block": ["Book 7 mapping refinement", "using Q3 as complementary planning evidence"],
+          "proof_required_to_close": "Target-exercise anchor plus governed operation/answer-skill review for moral hazard, adverse selection, and expected-premium calculations."
+        }
+      ],
+      "review_decision": "reviewed_official_anchor_family_for_mapping_only"
+    },
+    {
+      "case_id": "Y2-W1-B8-STRATEGIC-IJSSALON-Q15-Q16",
+      "book": 8,
+      "case_title": "IJssalon",
+      "source_exam": "vw-1022-a-25-1-o",
+      "source_correction_model": "vw-1022-a-25-1-c",
+      "question_ids": [
+        "vw-1022-a-25-1-o:q15",
+        "vw-1022-a-25-1-o:q16"
+      ],
+      "official_prompt_trace": [
+        {
+          "question": 15,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "prompt_focus": "prisoner's dilemma when products are perfect substitutes"
+        },
+        {
+          "question": 16,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "prompt_focus": "self-binding and lowest-price guarantee limiting price war"
+        }
+      ],
+      "source_trace": [
+        {
+          "source_id": "ijssalon-context-perfect-substitutes-price-guarantee",
+          "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "type": "source_text_context",
+          "status": "source_text_locator_recorded",
+          "needed_for_questions": [15, 16],
+          "blocking_gap_ids": []
+        }
+      ],
+      "correction_model_trace": [
+        {
+          "question": 15,
+          "locator": "references/external/exams/vw-1022-a-25-1-c.pdf#page=11",
+          "point_allocation": ["both firms have dominant strategy to lower price", "lower joint outcome creates prisoner's dilemma"],
+          "answer_form": "two-link strategic explanation"
+        },
+        {
+          "question": 16,
+          "locator": "references/external/exams/vw-1022-a-25-1-c.pdf#page=12",
+          "point_allocation": ["Guarda is committed to follow Orso Bianco's price", "Orso Bianco expects lower revenue/win from price cut and has less incentive to start price war"],
+          "answer_form": "self_binding_mechanism_explanation"
+        }
+      ],
+      "operation_decomposition": [
+        "OP-S1: dominant strategy, prisoner's dilemma, self-binding",
+        "OP-ANS3: two-link correction-model explanation",
+        "OP-ANS1: command compliance for explain-that prompts"
+      ],
+      "answer_form_decomposition": [
+        "dominant_strategy_to_suboptimal_outcome",
+        "commitment_device_incentive_chain"
+      ],
+      "op_row_mapping": ["OP-S1", "OP-ANS1", "OP-ANS3"],
+      "year2_candidate_mapping": [
+        "Y2-B8-P02",
+        "Y2-B8-P03",
+        "Y2-B8-P04",
+        "Y2-B8-P16"
+      ],
+      "mtu_task_family_status": [
+        {
+          "source_required_skill_ids": ["D27", "F03", "F09"],
+          "status": "Q15_partial_support_plus_Q16_followup_not_broad_closure",
+          "gap": "Two-link answer-skill route still needs governed answer-skill approval."
+        }
+      ],
+      "candidate_disposition_effect": [
+        {
+          "candidate_id": "Y2-B8-P04",
+          "effect": "improves_from_missing_to_reviewed_official_anchor_family_for_self_binding_and_repeated_interaction"
+        }
+      ],
+      "blockers": [
+        {
+          "id": "Y2W1-B8-STRATEGIC-ANSWER-SKILL",
+          "blocks": ["broad_OP_S1_closure", "broad_OP_ANS3_closure", "target_registry_rows"],
+          "does_not_block": ["Book 8 strategic placement", "planning use of Q15 and Q16"],
+          "proof_required_to_close": "Governed two-link answer-skill approval and target-exercise comparison."
+        }
+      ],
+      "review_decision": "reviewed_official_anchor_family_for_mapping_only"
+    },
+    {
+      "case_id": "Y2-W1-B8-GREEN-GROWTH-Q22-Q23",
+      "book": 8,
+      "case_title": "Groen ontgroeien",
+      "source_exam": "vw-1022-a-25-1-o",
+      "source_correction_model": "vw-1022-a-25-1-c",
+      "question_ids": [
+        "vw-1022-a-25-1-o:q22",
+        "vw-1022-a-25-1-o:q23"
+      ],
+      "official_prompt_trace": [
+        {
+          "question": 22,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-1-o.pdf#page=10",
+          "prompt_focus": "higher government spending can raise or lower green GDP"
+        },
+        {
+          "question": 23,
+          "points": 2,
+          "locator": "references/external/exam-questions.json; references/external/exams/vw-1022-a-25-1-o.pdf#page=11",
+          "prompt_focus": "changed IS-curve slope and monetary-policy effectiveness"
+        }
+      ],
+      "source_trace": [
+        {
+          "source_id": "figuur-1-keynesiaans-kruis",
+          "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=10",
+          "type": "figure",
+          "status": "source_figure_locator_recorded",
+          "needed_for_questions": [21, 22],
+          "blocking_gap_ids": []
+        },
+        {
+          "source_id": "figuur-2-is-mb-model",
+          "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=11",
+          "type": "figure",
+          "status": "source_figure_locator_recorded",
+          "needed_for_questions": [23],
+          "blocking_gap_ids": []
+        }
+      ],
+      "correction_model_trace": [
+        {
+          "question": 22,
+          "locator": "references/external/exams/vw-1022-a-25-1-c.pdf#page=15",
+          "point_allocation": ["higher government spending raises GDP and can raise green GDP if environmental value balance is non-negative or small negative", "green GDP can fall if environmental value damage exceeds GDP increase"],
+          "answer_form": "two-sided policy explanation"
+        },
+        {
+          "question": 23,
+          "locator": "references/external/exams/vw-1022-a-25-1-c.pdf#page=16",
+          "point_allocation": ["lower interest has weaker consumption/saving response with steeper IS curve", "output gap and inflation adjustment improve less, so monetary policy is less effective"],
+          "answer_form": "macro_policy_effectiveness_explanation"
+        }
+      ],
+      "operation_decomposition": [
+        "OP-H1: public spending and green GDP policy evaluation",
+        "OP-M1: sustainability measurement and environmental value reasoning",
+        "OP-MP1: monetary-policy effectiveness appears and must be deferred to later macro scope",
+        "OP-ANS3: two-sided policy explanation"
+      ],
+      "answer_form_decomposition": [
+        "two_sided_green_gdp_evaluation",
+        "macro_boundary_mechanism_explanation"
+      ],
+      "op_row_mapping": ["OP-H1", "OP-M1", "OP-MP1", "OP-ANS3"],
+      "year2_candidate_mapping": [
+        "Y2-B8-P13",
+        "Y2-B8-P14",
+        "Y2-B8-P15",
+        "Y2-B8-P16"
+      ],
+      "mtu_task_family_status": [
+        {
+          "source_required_skill_ids": [],
+          "status": "official_anchor_family_has_no_mirrored_required_skill_ids",
+          "gap": "Green GDP/public finance and monetary-policy boundary task-family route requires governed review."
+        }
+      ],
+      "candidate_disposition_effect": [
+        {
+          "candidate_id": "Y2-B8-P14",
+          "effect": "supports_green_gdp_and_sustainability_measurement_anchor"
+        },
+        {
+          "candidate_id": "Y2-B8-P13",
+          "effect": "should_not_absorb_full_macro_policy_model"
+        }
+      ],
+      "blockers": [
+        {
+          "id": "Y2W1-B8-GREEN-MACRO-BOUNDARY",
+          "blocks": ["Book_8_macro_policy_production", "OP_MP1_closure", "monetary_policy_route"],
+          "does_not_block": ["Book 8 green-GDP planning anchor", "Book 9/10 backlog routing"],
+          "proof_required_to_close": "Split q22 as Book 8 green-GDP support and route q23 monetary-policy effectiveness to Book 9/10 macro evidence review."
+        }
+      ],
+      "review_decision": "reviewed_official_anchor_family_with_boundary_split_required"
+    }
+  ],
+  "integrated_update": {
+    "candidate_dispositions_improved": [
+      "Y2-B5-P09",
+      "Y2-B5-P13",
+      "Y2-B6-P08",
+      "Y2-B6-P09",
+      "Y2-B7-P09",
+      "Y2-B7-P10",
+      "Y2-B7-P11",
+      "Y2-B8-P04",
+      "Y2-B8-P14"
+    ],
+    "candidate_dispositions_not_closed": [
+      "all selected candidates still need target-exercise anchors and governed MTU/task-family review before production"
+    ],
+    "architecture_assumptions_confirmed": [
+      "Book 5 pension/time/stock-flow family is supported by an official source case.",
+      "Book 6 housing finance and market-table family is supported by an official source case.",
+      "Book 7 risk/information family is supported beyond Q3 by a moral-hazard/adverse-selection case.",
+      "Book 8 strategic self-binding belongs with the Q15 strategic family.",
+      "Book 8 green GDP belongs in the growth/sustainability bridge."
+    ],
+    "merge_move_split_or_defer_recommendations": [
+      {
+        "candidate_id": "Y2-B5-P06",
+        "recommendation": "absorb_or_bridge_review_before_final_count",
+        "reason": "PR #121 cautioned that interest-as-price-of-time is deferred inside the proposed count."
+      },
+      {
+        "candidate_id": "Y2-B6-P13",
+        "recommendation": "keep_deferred_to_later_macro_monetary_scope",
+        "reason": "q23 confirms monetary-policy effectiveness belongs outside Book 6/8 production authority."
+      },
+      {
+        "candidate_id": "Y2-B8-P13",
+        "recommendation": "split_growth_bridge_from_macro_policy_execution",
+        "reason": "q22 supports green GDP; q23 carries macro monetary-policy effectiveness."
+      },
+      {
+        "candidate_id": "Y2-B8-P14",
+        "recommendation": "keep_as_green_gdp_sustainability_measurement_anchor",
+        "reason": "q22 directly supports green GDP reasoning."
+      }
+    ],
+    "revised_year2_anchor_coverage": {
+      "book_5": "at_least_one_reviewed_official_anchor_family",
+      "book_6": "at_least_one_reviewed_official_anchor_family",
+      "book_7": "at_least_one_reviewed_official_anchor_family_plus_Q3_complement",
+      "book_8": "two_reviewed_official_anchor_families_with_green_macro_boundary_split"
+    },
+    "remaining_high_priority_backlog": [
+      "target-exercise anchors for every selected family",
+      "MTU/task-family support review without mutation",
+      "Q3 parent/child or compound storage decision",
+      "Q15/Q16 answer-skill approval",
+      "Book 8 q23 monetary-policy boundary routing to Book 9/10",
+      "Q19 remains HOLD"
+    ]
+  }
+}

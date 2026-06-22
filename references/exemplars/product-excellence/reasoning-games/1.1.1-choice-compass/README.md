@@ -1,7 +1,7 @@
 # Scarcity and opportunity-cost choice compass
 
-Golden exemplar ID: `reasoning-1.1.1-choice-compass-v1`  
-Paragraph: `1.1.1`  
+Golden exemplar ID: `reasoning-1.1.1-choice-compass-v1`
+Paragraph: `1.1.1`
 Reasoning family: `choice_and_evidence`
 
 ## Reasoning grammar

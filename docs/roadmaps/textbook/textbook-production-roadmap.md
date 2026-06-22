@@ -1,18 +1,18 @@
 # Textbook Production Roadmap
 
-Generated: 2026-06-17
+Generated: 2026-06-18
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.6-b2-2.2-readiness-closed`
+Roadmap version: `v1.10-b2-2.2.2-closed`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. Book 2 Chapter 2.1 is closed for now after platform PR #48 and lesson PR #13. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` and `TEXTBOOK-FIGURE-STANDARD-1` have closed platform-only policy standards for rendered-page proof and figure/graph source preflight. `B2-2.2-READY-1` closed the readiness contract for Book 2 Chapter 2.2 Elasticiteit; the next planned production direction is `B2-2.2.1-HARDEN`.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. Book 2 Chapter 2.1 is closed for now after platform PR #48 and lesson PR #13. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` and `TEXTBOOK-FIGURE-STANDARD-1` have closed platform-only policy standards for rendered-page proof and figure/graph source preflight. `B2-2.2-READY-1` closed the readiness contract for Book 2 Chapter 2.2 Elasticiteit. `B2-2.2.1-HARDEN` and `B2-2.2.2-HARDEN` are closed PASS WITH FLAGS; `B2-2.2.3-HARDEN` is the next planned paragraph sprint but is not started.
 
 ## Operating Goal
 
-Improve and write the textbook one paragraph at a time. Chapter 2.1 now has current target evidence, rendered proof, validation evidence, and lead-review evidence, so it should not be polished further unless a concrete rendered-output defect appears. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` records the rendered-page acceptance standard and `TEXTBOOK-FIGURE-STANDARD-1` records the figure/graph source-asset standard that future textbook sprints must cite. `B2-2.2-READY-1` closed the readiness step for Chapter 2.2; the next paragraph-production step is `B2-2.2.1-HARDEN` only after explicit human opening.
+Improve and write the textbook one paragraph at a time. Chapter 2.1 now has current target evidence, rendered proof, validation evidence, and lead-review evidence, so it should not be polished further unless a concrete rendered-output defect appears. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` records the rendered-page acceptance standard and `TEXTBOOK-FIGURE-STANDARD-1` records the figure/graph source-asset standard that future textbook sprints must cite. `B2-2.2-READY-1` closed the readiness step for Chapter 2.2; `B2-2.2.1-HARDEN` and `B2-2.2.2-HARDEN` are closed. `B2-2.2.3-HARDEN` remains planned pending explicit human opening.
 
 ## Book 2 Print Series
 
@@ -35,7 +35,7 @@ The current print-production series proceeds through Book 2 one controlled chapt
 15. `B2-2.2-TARGET-V5-PROMOTE` - promote Chapter 2.2 target records only after governed evidence supports them.
 16. `B2-2.2-CHAPTER-QA-1` - inspect assembled Chapter 2.2 output after the paragraph sequence.
 
-`B2-2.2-READY-1` is closed as readiness only. It did not write paragraphs or regenerate lesson output. Do not start `B2-2.2.1-HARDEN` until a human explicitly opens that paragraph-production sprint.
+`B2-2.2-READY-1` is closed as readiness only. It did not write paragraphs or regenerate lesson output. Human instruction opened `B2-2.2.1-HARDEN` on 2026-06-17; that sprint is now closed PASS WITH FLAGS. Human instruction opened `B2-2.2.2-HARDEN` on 2026-06-18; that sprint is now closed PASS WITH FLAGS. Do not start 2.2.3, 2.2.4, Chapter 2.3, or Book 3 without a new human opening.
 
 ## Work Lanes
 
@@ -53,11 +53,11 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| B2-2.2.1-HARDEN | Book 2 Paragraph 2.2.1 Prijselasticiteit Quality Hardening | no | Planned next, not started. Start only after explicit human opening. Must cite `B2-2.2-READY-1` and preserve the signed `Ev`, absolute-value classification, graph/table, answer-model, rendered-page, and figure-proof contracts. |
+| B2-2.2.2-HARDEN | Book 2 Paragraph 2.2.2 Elasticiteit En Omzet Quality Hardening | yes | Closed PASS WITH FLAGS after 2.2.2-only output, Chapter 2.2 aggregate rebuild with 2.2.1 + 2.2.2 only, rendered-page proof, no-new-figure rationale, validators, result evidence, and lead review. |
+| B2-2.2.1-HARDEN | Book 2 Paragraph 2.2.1 Prijselasticiteit Quality Hardening | yes | Closed PASS WITH FLAGS after stale-output disposition, rendered-page proof, figure proof, validators, result evidence, and lead review. |
 | B2-2.2-READY-1 | Book 2 Chapter 2.2 Readiness | yes | Closed PASS WITH FLAGS after lead review. Prepared target readiness, elasticity notation/sign conventions, graph/table conventions, misconception list, answer-model route, rendered-page and figure-proof expectations, and the 2.2.4 mixed-opgaven reuse decision. No paragraphs, generated lesson output, target records, Book 2 Chapter 2.3, or Book 3 files changed. |
 | TEXTBOOK-FIGURE-STANDARD-1 | Textbook Figure Standard | yes | Closed as platform-only policy sprint. Added durable figure and graph source-asset standard so future textbook sprints treat SVG/PNG pairing, labels, graph conventions, density, color-not-sole-meaning, and graph/text concordance as preflight proof while final rendered pages remain acceptance proof. No lesson content or generated output edits. |
 | TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1 | Rendered-Page Acceptance Policy | yes | Closed as platform-only policy sprint. Added durable rendered-page acceptance standard so future textbook sprints treat final rendered PDF/HTML as student-facing readability/layout proof while markdown remains the content source of truth. No lesson content or generated output edits. |
-| B2-2.2.2-HARDEN | Book 2 Paragraph 2.2.2 Elasticiteit En Omzet Quality Hardening | no | Planned after 2.2.1. Connect elasticity to total revenue effects with tables and carefully bounded visuals. |
 | B2-2.2.3-HARDEN | Book 2 Paragraph 2.2.3 Inkomenselasticiteit En Kruiselingse Elasticiteit Quality Hardening | no | Planned after 2.2.2. Cover income elasticity, cross-price elasticity, and classification language. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | no | Planned after 2.2.1-2.2.3. Reuse the `gemengde_opgaven` target standard for source-heavy mixed elasticity practice. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | no | Candidate after Chapter 2.2 has current quality evidence. |
@@ -93,4 +93,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Do not start a paragraph-production sprint until a human explicitly opens the next production step. The next planned step is `B2-2.2.1-HARDEN`. It must cite `reports/sprints/B2-2.2-READY-1-readiness-brief.md`, `references/authored/textbook-rendered-page-acceptance-standard.md`, and `references/authored/textbook-figure-standard.md`; preserve the signed `Ev` and `|Ev|` classification route; and produce rendered-page and figure proof if it changes student-facing output.
+Prepare, but do not start, `B2-2.2.3-HARDEN` unless a human explicitly opens it. It should cite `reports/sprints/B2-2.2-READY-1-readiness-brief.md`, `references/authored/textbook-rendered-page-acceptance-standard.md`, `references/authored/textbook-figure-standard.md`, and the closed 2.2.1/2.2.2 hardening results. It must leave 2.2.4, Chapter 2.3, Book 3, target promotion, and product gates untouched.

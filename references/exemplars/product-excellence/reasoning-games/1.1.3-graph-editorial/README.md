@@ -1,7 +1,7 @@
 # Graph evidence and claim-strength editorial check
 
-Golden exemplar ID: `reasoning-1.1.3-graph-editorial-v2`  
-Paragraph: `1.1.3`  
+Golden exemplar ID: `reasoning-1.1.3-graph-editorial-v2`
+Paragraph: `1.1.3`
 Reasoning family: `graph_evidence_and_epistemic_scope`
 
 ## Reasoning grammar

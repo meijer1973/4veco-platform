@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const crypto = require('crypto');
 
 const {
-  assertFutureStorageAbsent,
+  validateSourceExtractionDocument,
   validateAnswerSkillCandidate,
 } = require('./lib/exam-ingestion-candidate-validation');
 
@@ -24,6 +25,9 @@ const OPERATION_ANSWER_CONTRACT = path.join(ROOT, 'references', 'data', 'exam-in
 const EX2_GATE = path.join(ROOT, 'reports', 'review-gates', 'GATE-EX2-exam-to-mtu-mapping', 'gate-closure.json');
 const EX5_GATE = path.join(ROOT, 'reports', 'review-gates', 'GATE-EX5-operation-answer-skill-contract', 'gate-closure.json');
 const MTUS = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
+const SOURCE_EXTRACTION_OVERLAY = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'source-annex-extraction-overlays.json');
+const OPERATION_CANDIDATES = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'operation-candidates.json');
+const ANSWER_SKILL_CANDIDATES = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'answer-skill-candidates.json');
 
 const AUTHORITY_FALSE_KEYS = [
   'protected_reference_mutation_authorized',
@@ -62,6 +66,8 @@ const REQUIRED_Q15_REVIEW_ASSERTIONS = [
 ];
 
 const GLOBAL_SOLO_NEGATIVE_ASSERTION = 'MTUH5-NEGATIVE-negative-solo-q2-function-construction-overtrigger-FAILS-AS-EXPECTED';
+const Q15_REVIEWED_EQUIVALENT_REF =
+  'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT';
 
 function fail(message) {
   console.error(`MTU-H5 RP-006 q15 planning packet check failed: ${message}`);
@@ -133,7 +139,6 @@ function runH5Validator() {
     rel(H5_VALIDATOR),
     '--fixture',
     rel(FIXTURE),
-    '--expect-fail',
     '--json',
   ], {
     cwd: ROOT,
@@ -159,6 +164,67 @@ function unitById(units, id) {
 function findQ15Overlay(doc) {
   const records = doc.items || doc.records || [];
   return records.find((record) => record.exam_item_id === 'vw-1022-a-25-1-o:opgave-3:question-15');
+}
+
+function assertCandidateStorageBoundary() {
+  for (const file of [OPERATION_CANDIDATES, ANSWER_SKILL_CANDIDATES]) {
+    if (fs.existsSync(file)) fail(`candidate storage must not exist: ${rel(file)}`);
+  }
+  if (fs.existsSync(SOURCE_EXTRACTION_OVERLAY)) {
+    validateSourceExtractionDocument(readJson(SOURCE_EXTRACTION_OVERLAY), 'source-annex extraction overlay');
+  }
+}
+
+function q15ResolvedInFixture(q15) {
+  return (q15.official_correction_model_operations || []).every((operation) => (
+    (operation.reviewed_equivalent_refs || []).includes(Q15_REVIEWED_EQUIVALENT_REF) &&
+    (operation.review_required_hooks || []).length === 0 &&
+    (operation.procedure_review_required_unit_ids || []).length === 0
+  ));
+}
+
+function cloneWithOriginalQ15ReviewHooks(fixture) {
+  const clone = JSON.parse(JSON.stringify(fixture));
+  const records = clone.question_records || clone.records || [];
+  const q15 = records.find((record) => record.record_id === 'vw-1022-a-25-1-o:opgave-3:question-15');
+  const step1 = q15.official_correction_model_operations.find((operation) => operation.operation_id === 'q15-step-1');
+  const step2 = q15.official_correction_model_operations.find((operation) => operation.operation_id === 'q15-step-2');
+  step1.reviewed_equivalent_refs = [];
+  step1.review_required_hooks = [
+    'review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need',
+  ];
+  step1.procedure_review_required_unit_ids = ['A97'];
+  step2.reviewed_equivalent_refs = [];
+  step2.review_required_hooks = [
+    'review q15 two-step correction-model explanation as answer-skill need',
+  ];
+  step2.procedure_review_required_unit_ids = ['A97'];
+  return clone;
+}
+
+function runValidatorForTempFixture(fixture) {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mtu-h5-rp006-q15-negative-'));
+  const tempFixture = path.join(tempDir, 'fixture.json');
+  try {
+    fs.writeFileSync(tempFixture, `${JSON.stringify(fixture, null, 2)}\n`, 'utf8');
+    const run = spawnSync(process.execPath, [
+      rel(H5_VALIDATOR),
+      '--fixture',
+      tempFixture,
+      '--json',
+    ], {
+      cwd: ROOT,
+      encoding: 'utf8',
+    });
+    if (run.status !== 0) {
+      process.stderr.write(run.stdout || '');
+      process.stderr.write(run.stderr || '');
+      fail('temporary MTU-H5 validator failed');
+    }
+    return JSON.parse(run.stdout);
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
 }
 
 function main() {
@@ -319,6 +385,7 @@ function main() {
   const records = fixture.question_records || fixture.records || [];
   const q15 = records.find((record) => record.record_id === 'vw-1022-a-25-1-o:opgave-3:question-15');
   if (!q15) fail('fixture must contain q15 record');
+  const q15Resolved = q15ResolvedInFixture(q15);
   if (q15.question_word !== 'leg_uit_dat') fail('q15 fixture question_word must be leg_uit_dat');
   requireIncludesAll(q15.mapped_mtu_ids || [], ['D27', 'F03', 'F09', 'A97'], 'q15 mapped MTUs');
   for (const forbidden of ['A15', 'A42', 'A45', 'D07', 'A88']) {
@@ -333,7 +400,19 @@ function main() {
     if (operation.incidence_or_pass_through_expected !== false) fail(`${operation.operation_id} must not expect incidence/pass-through`);
     if (operation.predictable_misconception_expected !== true) fail(`${operation.operation_id} must expect misconception evidence`);
     requireArray(operation, 'expected_misconception_refs', operation.operation_id, 1);
-    requireIncludesAll(operation.procedure_review_required_unit_ids || [], ['A97'], `${operation.operation_id}.procedure_review_required_unit_ids`);
+    if (q15Resolved) {
+      if (!(operation.reviewed_equivalent_refs || []).includes(Q15_REVIEWED_EQUIVALENT_REF)) {
+        fail(`${operation.operation_id} must cite the q15 reviewed-equivalent ref after execution`);
+      }
+      if ((operation.procedure_review_required_unit_ids || []).length !== 0) {
+        fail(`${operation.operation_id}.procedure_review_required_unit_ids must be empty after execution`);
+      }
+      if ((operation.review_required_hooks || []).length !== 0) {
+        fail(`${operation.operation_id}.review_required_hooks must be empty after execution`);
+      }
+    } else {
+      requireIncludesAll(operation.procedure_review_required_unit_ids || [], ['A97'], `${operation.operation_id}.procedure_review_required_unit_ids`);
+    }
     for (const forbiddenTag of ['calculus_route', 'function_construction', 'graph_shift', 'incidence', 'scaling']) {
       if ((operation.expected_route_tags || []).includes(forbiddenTag)) {
         fail(`${operation.operation_id} expected_route_tags must not include ${forbiddenTag}`);
@@ -345,15 +424,21 @@ function main() {
   const failedQ15 = (result.buckets.failed || []).filter((item) => String(item.record_id || '').includes('question-15'));
   if (failedQ15.length !== 0) fail('q15 must not be in failed bucket; this lane is review_required only');
   const reviewIds = (result.buckets.review_required || []).map((item) => item.assertion_id);
-  for (const assertionId of REQUIRED_Q15_REVIEW_ASSERTIONS) {
-    if (!reviewIds.includes(assertionId)) fail(`current validator result must still expose q15 review assertion: ${assertionId}`);
+  if (q15Resolved) {
+    for (const assertionId of REQUIRED_Q15_REVIEW_ASSERTIONS) {
+      if (reviewIds.includes(assertionId)) fail(`current validator result must not expose repaired q15 assertion: ${assertionId}`);
+    }
+  } else {
+    for (const assertionId of REQUIRED_Q15_REVIEW_ASSERTIONS) {
+      if (!reviewIds.includes(assertionId)) fail(`current validator result must still expose q15 review assertion: ${assertionId}`);
+    }
   }
   const passedIds = (result.buckets.passed || []).map((item) => item.assertion_id);
   if (!passedIds.includes(GLOBAL_SOLO_NEGATIVE_ASSERTION)) {
     fail('global original Solo negative fixture must remain pass-as-fail guard');
   }
 
-  assertFutureStorageAbsent();
+  assertCandidateStorageBoundary();
   validateAnswerSkillCandidate(packet.dry_run_answer_skill_candidate, 'packet.dry_run_answer_skill_candidate');
   if (packet.dry_run_answer_skill_candidate.answer_skill_id !== 'EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION') {
     fail('unexpected q15 dry-run answer-skill candidate');
@@ -399,8 +484,11 @@ function main() {
   if (packet.negative_regression_requirement.global_negative_fixture_guard !== GLOBAL_SOLO_NEGATIVE_ASSERTION) {
     fail('negative regression requirement must preserve global original Solo negative fixture guard');
   }
+  const negativeReviewIds = q15Resolved
+    ? (runValidatorForTempFixture(cloneWithOriginalQ15ReviewHooks(fixture)).buckets.review_required || []).map((item) => item.assertion_id)
+    : reviewIds;
   for (const assertionId of REQUIRED_Q15_REVIEW_ASSERTIONS) {
-    if (!reviewIds.includes(assertionId)) fail(`live negative q15 assertion is absent from validator output: ${assertionId}`);
+    if (!negativeReviewIds.includes(assertionId)) fail(`negative q15 assertion is absent from validator output: ${assertionId}`);
   }
 
   for (const option of requireArray(packet, 'repair_options_matrix', 'packet', 3)) {

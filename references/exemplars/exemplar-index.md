@@ -17,6 +17,7 @@ reasoning-game family exemplar library: multi-exemplar product grammar, transfer
 
 | ID | Type | Path | Use |
 | --- | --- | --- | --- |
+| `1.1.1-golden-presentation` | conceptual exemplar | `references/exemplars/1.1.1-golden-presentation/` | Presentation route, layout, notes, didactic sequence, web-first design, and PPTX derivative guidance. |
 | `1.1.3-exit-ticket-conceptual` | conceptual exemplar | `references/exemplars/1.1.3-exit-ticket/` | Product-quality guidance for graph/table exit-ticket design. |
 | `1.1.3-golden-exercise-workbench` | implemented exemplar | `references/exemplars/implemented/1.1.3-golden-exercise-workbench/` | Repository-compatible Golden shell/layout, source-left/task-right, graph/table interaction, and route/no-legacy reference. Not a formula-token reference. |
 | `a96-answer-form` | answer-form exemplar | `references/exemplars/a96-answer-form/` | Calculation/formula answer-form policy, especially visible formula, substitution, notation, conclusion, and hidden-token-trap prevention. |
@@ -36,6 +37,17 @@ For a new Golden Exercise route:
 ```
 
 Do not treat an exemplar as product-use approval. Exemplars preserve implementation and review evidence; they do not authorize Scale Gate 1, diagnostics, mastery, automatic sequencing, summative use, or target-equivalent completion language.
+
+For a new Golden Presentation route:
+
+```text
+1. Read references/presentation/README.md.
+2. Read references/exemplars/1.1.1-golden-presentation/.
+3. Use the semantic slide-role route before choosing layouts.
+4. Treat web-first output as the design source.
+5. Generate PPTX only as a derivative after web review.
+6. Record blockers instead of accepting weak presentation work as production quality.
+```
 
 Formula-token boundary: the implemented `1.1.3` source snapshot has local formula-token clarity for its percentage-change task, but it remains a route/workbench exemplar rather than the formula-builder policy exemplar. Future calculation/formula policy work must use `references/exemplars/a96-answer-form/` for reusable-token rules, hidden-token-trap policy, and A96-level formula proof.
 

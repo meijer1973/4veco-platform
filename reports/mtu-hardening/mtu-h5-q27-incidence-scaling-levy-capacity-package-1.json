@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "package_id": "MTU-H5-Q27-INCIDENCE-SCALING-LEVY-CAPACITY-PACKAGE-1",
+  "gate_id": "GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1",
+  "created": "2026-06-18",
+  "status": "executed_after_subagent_lead_approval_scaling_only",
+  "start_commit": "58015c9651e36cae9bf326be7a1ea0de8d7b1db4",
+  "review_branch": "codex/mtu-h5-q27-incidence-scaling-levy-capacity-package-1-20260618",
+  "purpose": "Prepare and, after lead approval, execute only the q27-step-1 A88 per-1,000-liter scaling repair. Incidence/capacity, D07, and D08 remain governed review blockers.",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use. This package does not close q27 or MTU-H5.",
+  "original_sprint_gate_spec": {
+    "source_lane": "MTU-H5-RP-005 q27 incidence/pass-through and per-1,000-liter scaling gaps",
+    "source_triage_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json#MTU-H5-RP-005",
+    "source_planning_packet": "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json",
+    "q19_hold_pr": "https://github.com/meijer1973/4veco-platform/pull/101",
+    "q19_hold_merge_commit": "3b6d2409580f4defbc5af7c9690df37d47ba393a",
+    "boundary": "Fixture-only q27-step-1 scaling execution after subagent lead approval. No protected reference, MTU, candidate, source, lesson, PV, diagnostic, product, or student-facing mutation is authorized."
+  },
+  "current_state": {
+    "q3": {"failed": 0, "review_required": 0},
+    "q19": {"failed": 0, "review_required": 6, "status": "held_by_PR_101"},
+    "q27": {"failed": 3, "review_required": 5, "status": "incidence_scaling_levy_capacity_procedure_blocker"},
+    "q15": {"failed": 0, "review_required": 4},
+    "overall": {"passed": 1, "failed": 3, "review_required": 15, "blocked": 0}
+  },
+  "expected_post_execution_state": {
+    "q3": {"failed": 0, "review_required": 0},
+    "q19": {"failed": 0, "review_required": 6, "status": "held_by_PR_101"},
+    "q27": {"failed": 2, "review_required": 4, "status": "incidence_levy_capacity_procedure_blocker_scaling_repaired"},
+    "q15": {"failed": 0, "review_required": 4},
+    "overall": {"passed": 1, "failed": 2, "review_required": 14, "blocked": 0}
+  },
+  "post_execution_actual_state": {
+    "q3": {"failed": 0, "review_required": 0},
+    "q19": {"failed": 0, "review_required": 6, "status": "held_by_PR_101"},
+    "q27": {"failed": 2, "review_required": 4, "status": "incidence_levy_capacity_procedure_blocker_scaling_repaired"},
+    "q15": {"failed": 0, "review_required": 4},
+    "overall": {"passed": 1, "failed": 2, "review_required": 14, "blocked": 0}
+  },
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/external/exams/vw-1022-a-25-2-o.pdf#page=12&question=27",
+    "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27",
+    "references/machine/micro-teaching-units.json#A88",
+    "references/machine/micro-teaching-units.json#A98",
+    "references/machine/micro-teaching-units.json#D07",
+    "references/machine/micro-teaching-units.json#D08",
+    "references/machine/micro-teaching-units.json#D41",
+    "references/machine/micro-teaching-units.json#D05"
+  ],
+  "reviewed_equivalent_evidence": [
+    {
+      "anchor_id": "Q27_STEP1_A88_PER_1000_LITER_SCALE",
+      "operation_id": "q27-step-1",
+      "unit_id": "A88",
+      "decision": "approved_scaling_support_only",
+      "evidence_summary": "A88 covers using scale labels such as x 1,000 in graph labels, formulas, and final answers. That is semantically sufficient for the q27-step-1 EUR 2 per 1,000 liter scale/unit handling.",
+      "does_not_cover": [
+        "incidence/pass-through",
+        "levy price/quantity/capacity reasoning",
+        "D07 semantic fit",
+        "D08 semantic fit",
+        "q27 closure"
+      ]
+    }
+  ],
+  "operation_decision_matrix": [
+    {
+      "operation_id": "q27-step-1",
+      "answer_model_summary": "Read from the graph that the levy leads to price EUR 2 per 1,000 liter and a new equilibrium at Qv2 = Qa2 with Q = 14,000.",
+      "decision": "execute_scaling_only",
+      "authorized_fixture_changes": [
+        "add A88 to mapped_mtu_ids for q27-step-1",
+        "set expected_scaling_mtu_ids to [A88]",
+        "add scaling reviewed-equivalent ref to this package anchor",
+        "set missing_scaling_expected to false",
+        "remove only the per-1,000-liter scaling review hook"
+      ],
+      "must_preserve": [
+        "q27-step-1 incidence missing failure",
+        "q27-step-1 D07 procedure review",
+        "q27-step-1 D07 insufficiency review hook"
+      ]
+    },
+    {
+      "operation_id": "q27-step-2",
+      "answer_model_summary": "Conclude that demand equals capacity, so overconsumption is countered.",
+      "decision": "hold_incidence_capacity_governance",
+      "authorized_fixture_changes": [],
+      "must_preserve": [
+        "q27-step-2 incidence missing failure",
+        "q27-step-2 D07 procedure review",
+        "q27-step-2 incidence/pass-through family versus distinct levy-capacity review hook"
+      ]
+    }
+  ],
+  "remaining_q27_assertions_after_execution": {
+    "failed": [
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING",
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING"
+    ],
+    "review_required": [
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-PROCEDURE-REVIEW-D07",
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-REVIEW-review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-PROCEDURE-REVIEW-D07",
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-REVIEW-review whether this is an incidence/pass-through family case or a distinct levy-capacity operation"
+    ]
+  },
+  "exact_write_surface": {
+    "authorized_after_subagent_lead_approval": true,
+    "fixture_path": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+    "operation_id": "q27-step-1",
+    "fields": [
+      "q27-step-1.mapped_mtu_ids",
+      "q27-step-1.expected_scaling_mtu_ids",
+      "q27-step-1.scaling_reviewed_equivalent_refs",
+      "q27-step-1.missing_scaling_expected",
+      "q27-step-1.review_required_hooks"
+    ],
+    "forbidden_fixture_changes": [
+      "q27-step-1 incidence fields",
+      "q27-step-1 D07 procedure review fields",
+      "q27-step-2 any field",
+      "q19 any field",
+      "q15 any field",
+      "negative fixtures"
+    ]
+  },
+  "administrative_and_generated_write_surface": {
+    "authorized_after_subagent_lead_approval": true,
+    "paths": [
+      "build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+      "build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+      "build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+      "build-scripts/references/build-mtu-h5-regression-report.js",
+      "reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json",
+      "reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md",
+      "reports/mtu-hardening/mtu-h5-regression-report.json",
+      "reports/mtu-hardening/mtu-h5-regression-report.md",
+      "reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.json",
+      "reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.md",
+      "reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/bundle-urls.md",
+      "reports/url-index.md",
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md"
+    ]
+  },
+  "negative_regression_guards": [
+    "reject q27 incidence closure or reviewed-equivalent refs in this package",
+    "reject D07-alone q27 closure",
+    "reject D08 substitution as q27 closure",
+    "reject removal of remaining q27 review hooks",
+    "reject missing A88 scaling support after execution",
+    "reject q19 hook clearing",
+    "reject protected-reference, MTU, candidate, product, or student-facing writes"
+  ],
+  "pre_execution_review_team_results": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED_EXECUTE_SCALING_ONLY",
+      "summary": "A88 is semantically fit for the per-1,000-liter scaling/readout issue, and the change clears only the scaling assertion while preserving unresolved incidence/capacity and D07 semantic-fit blockers."
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED_EXECUTE_SCALING_ONLY",
+      "summary": "A88 directly covers scale markings such as x 1.000 in graph labels, formulas, and final units. The execution does not overclaim incidence, levy pass-through, equilibrium mechanism, or capacity/overconsumption reasoning."
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED_EXECUTE_SCALING_ONLY",
+      "summary": "The temp clone matches q27 2 failed / 4 review_required, q19 0/6, q15 0/4, and overall 2 failed / 14 review_required. Checker conditions require exact fixture and changed-path guards."
+    }
+  ],
+  "subagent_lead_review": {
+    "required": true,
+    "status": "approved",
+    "lead_verdict": "APPROVE_SCALING_ONLY_EXECUTION",
+    "lead_summary": "Lead approved only the q27-step-1 A88 scaling execution after the stable package anchor existed and pre-checkers passed. Non-negotiables: preserve both q27 incidence failures, D07 procedure/review hooks, q27-step-2, q19 0/6, q15 0/4, and all protected/product/student-use prohibitions."
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+    "node build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run agent:index",
+    "npm.cmd run check:platform",
+    "git diff --check HEAD~1..HEAD"
+  ],
+  "authority_boundary": {
+    "fixture_mutation_authorized_after_subagent_lead_approval": true,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "q27_closure_claimed": false,
+    "mtu_h5_closure_claimed": false
+  }
+}

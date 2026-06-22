@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const crypto = require('crypto');
 
 const {
-  assertFutureStorageAbsent,
   validateOperationCandidate,
 } = require('./lib/exam-ingestion-candidate-validation');
 
@@ -20,6 +20,8 @@ const H5_VALIDATOR = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h
 const MTUS = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
 const H3_GATE = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3-incidence-pass-through', 'gate-closure.json');
 const H3A_GATE = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3A-incidence-cli-mutation-plan', 'gate-closure.json');
+const OPERATION_CANDIDATES = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'operation-candidates.json');
+const ANSWER_SKILL_CANDIDATES = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'answer-skill-candidates.json');
 
 const AUTHORITY_FALSE_KEYS = [
   'protected_reference_mutation_authorized',
@@ -48,17 +50,46 @@ const AUTHORITY_FALSE_KEYS = [
   'product_route_readiness_claimed',
 ];
 
-const REQUIRED_Q27_FAILED_ASSERTIONS = [
-  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING',
-  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-SCALING-MISSING',
-  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING',
+const Q27_STEP1_INCIDENCE_FAILED_ASSERTION =
+  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING';
+
+const Q27_STEP2_INCIDENCE_FAILED_ASSERTION =
+  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING';
+
+const REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS = [
+  Q27_STEP1_INCIDENCE_FAILED_ASSERTION,
+  Q27_STEP2_INCIDENCE_FAILED_ASSERTION,
 ];
 
-const REQUIRED_Q27_REVIEW_MARKERS = [
+const PRE_SCALING_Q27_FAILED_ASSERTION =
+  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-SCALING-MISSING';
+
+const REQUIRED_Q27_FAILED_ASSERTIONS = [
+  ...REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS,
+  PRE_SCALING_Q27_FAILED_ASSERTION,
+];
+
+const REQUIRED_Q27_REVIEW_MARKERS_ALWAYS = [
   'review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation',
-  'review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent',
   'review whether this is an incidence/pass-through family case or a distinct levy-capacity operation',
 ];
+
+const PRE_SCALING_Q27_REVIEW_MARKER =
+  'review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent';
+
+const REQUIRED_Q27_REVIEW_MARKERS = [
+  ...REQUIRED_Q27_REVIEW_MARKERS_ALWAYS,
+  PRE_SCALING_Q27_REVIEW_MARKER,
+];
+
+const Q27_SCALING_REF =
+  'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json#Q27_STEP1_A88_PER_1000_LITER_SCALE';
+
+const Q27_INCIDENT_LEVY_CAPACITY_REF =
+  'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json#Q27_STEP1_D41_D05_A88_LEVY_EQUILIBRIUM_REVIEWED_EQUIVALENT';
+
+const Q27_STEP2_CAPACITY_REF =
+  'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q27_STEP2_CAPACITY_OVERCONSUMPTION_TAXONOMY_REVIEWED_EQUIVALENT';
 
 function fail(message) {
   console.error(`MTU-H5 RP-005 q27 planning packet check failed: ${message}`);
@@ -130,7 +161,6 @@ function runH5Validator() {
     rel(H5_VALIDATOR),
     '--fixture',
     rel(FIXTURE),
-    '--expect-fail',
     '--json',
   ], {
     cwd: ROOT,
@@ -148,9 +178,57 @@ function runH5Validator() {
   }
 }
 
+function assertQ27CandidateStoresAbsent() {
+  for (const file of [OPERATION_CANDIDATES, ANSWER_SKILL_CANDIDATES]) {
+    if (fs.existsSync(file)) fail(`q27 planning packet must not create candidate storage: ${rel(file)}`);
+  }
+}
+
 function unitById(units, id) {
   const list = units.units || units;
   return list.find((unit) => unit.id === id);
+}
+
+function cloneWithQ27Step2Held(fixture) {
+  const clone = JSON.parse(JSON.stringify(fixture));
+  const records = clone.question_records || clone.records || [];
+  const q27 = records.find((record) => record.record_id === 'vw-1022-a-25-2-o:opgave-6:question-27');
+  const step2 = q27.official_correction_model_operations.find((operation) => operation.operation_id === 'q27-step-2');
+  step2.reviewed_equivalent_refs = [];
+  step2.incidence_or_pass_through_expected = true;
+  step2.missing_incidence_expected = true;
+  step2.mapped_mtu_ids = ['D07', 'A98'];
+  step2.expected_procedure_unit_ids = ['A98', 'D07'];
+  step2.procedure_review_required_unit_ids = ['D07'];
+  step2.review_required_hooks = ['review whether this is an incidence/pass-through family case or a distinct levy-capacity operation'];
+  return clone;
+}
+
+function runValidatorForTempFixture(fixture, expectFail = false) {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mtu-h5-rp005-q27-negative-'));
+  const tempFixture = path.join(tempDir, 'fixture.json');
+  try {
+    fs.writeFileSync(tempFixture, `${JSON.stringify(fixture, null, 2)}\n`, 'utf8');
+    const args = [
+      rel(H5_VALIDATOR),
+      '--fixture',
+      tempFixture,
+    ];
+    if (expectFail) args.push('--expect-fail');
+    args.push('--json');
+    const run = spawnSync(process.execPath, args, {
+      cwd: ROOT,
+      encoding: 'utf8',
+    });
+    if (run.status !== 0) {
+      process.stderr.write(run.stdout || '');
+      process.stderr.write(run.stderr || '');
+      fail('temporary MTU-H5 validator failed');
+    }
+    return JSON.parse(run.stdout);
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
 }
 
 function main() {
@@ -239,30 +317,109 @@ function main() {
   const q27 = records.find((record) => record.record_id === 'vw-1022-a-25-2-o:opgave-6:question-27');
   if (!q27) fail('fixture must contain q27 record');
   if (q27.question_word !== 'leg_uit_of') fail('q27 fixture question_word must be leg_uit_of');
-  requireIncludesAll(q27.mapped_mtu_ids || [], ['D07', 'A98'], 'q27 mapped MTUs');
+  requireIncludesAll(q27.mapped_mtu_ids || [], ['A98'], 'q27 mapped MTUs');
+  if ((q27.mapped_mtu_ids || []).includes('D07')) {
+    const step2 = (q27.official_correction_model_operations || []).find((operation) => operation.operation_id === 'q27-step-2');
+    if ((step2?.reviewed_equivalent_refs || []).includes(Q27_STEP2_CAPACITY_REF)) {
+      fail('q27 record must not retain D07 after q27-step-2 execution');
+    }
+  }
+  let step1IncidenceRepaired = false;
+  let step2CapacityResolved = false;
   for (const operation of requireArray(q27, 'official_correction_model_operations', 'q27', 2)) {
     if (!operation.expected_answer_form_mtu_ids?.includes('A98')) fail(`${operation.operation_id} must keep A98 answer form`);
-    if (operation.missing_incidence_expected !== true) fail(`${operation.operation_id} must keep missing_incidence_expected true`);
     if (!operation.expected_misconception_refs?.length) fail(`${operation.operation_id} must keep misconception refs`);
-    if (!operation.procedure_review_required_unit_ids?.includes('D07')) fail(`${operation.operation_id} must keep D07 procedure review`);
     if (operation.operation_id === 'q27-step-1') {
-      if (operation.scale_factor_expected !== true || operation.missing_scaling_expected !== true) {
-        fail('q27-step-1 must keep scale factor and missing scaling expectations');
+      step1IncidenceRepaired = operation.missing_incidence_expected === false &&
+        (operation.reviewed_equivalent_refs || []).includes(Q27_INCIDENT_LEVY_CAPACITY_REF);
+      if (step1IncidenceRepaired) {
+        requireIncludesAll(operation.mapped_mtu_ids || [], ['D41', 'D05', 'A88'], 'q27-step-1 mapped MTUs after package-2 execution');
+        requireIncludesAll(operation.expected_required_mtu_ids || [], ['D41', 'D05'], 'q27-step-1 required MTUs after package-2 execution');
+        if ((operation.mapped_mtu_ids || []).includes('D07')) fail('q27-step-1 must not map D07 after package-2 execution');
+        if ((operation.expected_procedure_unit_ids || []).includes('D07')) fail('q27-step-1 procedure units must not include D07 after package-2 execution');
+        if ((operation.procedure_review_required_unit_ids || []).includes('D07')) fail('q27-step-1 D07 procedure review must be cleared after package-2 execution');
+        if ((operation.review_required_hooks || []).some((hook) => hook.includes('D07 tax-burden percentage'))) {
+          fail('q27-step-1 D07 review hook must be cleared after package-2 execution');
+        }
+      } else if (operation.missing_incidence_expected !== true) {
+        fail('q27-step-1 must keep missing_incidence_expected true until package-2 execution');
+      } else if (!operation.procedure_review_required_unit_ids?.includes('D07')) {
+        fail('q27-step-1 must keep D07 procedure review until package-2 execution');
       }
+      if (operation.scale_factor_expected !== true) fail('q27-step-1 must keep scale_factor_expected true');
+      if (operation.missing_scaling_expected === false) {
+        requireIncludesAll(operation.mapped_mtu_ids || [], ['A88'], 'q27-step-1 mapped MTUs after scaling execution');
+        requireIncludesAll(operation.expected_scaling_mtu_ids || [], ['A88'], 'q27-step-1 expected scaling MTUs after scaling execution');
+        requireIncludesAll(operation.scaling_reviewed_equivalent_refs || [], [Q27_SCALING_REF], 'q27-step-1 scaling refs after scaling execution');
+      } else if (operation.missing_scaling_expected !== true) {
+        fail('q27-step-1 missing_scaling_expected must be true before execution or false after approved A88 execution');
+      }
+    } else if (operation.operation_id === 'q27-step-2') {
+      step2CapacityResolved = operation.incidence_or_pass_through_expected === false &&
+        operation.missing_incidence_expected === false &&
+        (operation.reviewed_equivalent_refs || []).includes(Q27_STEP2_CAPACITY_REF);
+      if (step2CapacityResolved) {
+        requireIncludesAll(operation.mapped_mtu_ids || [], ['A98', 'A88'], 'q27-step-2 mapped MTUs after execution');
+        if ((operation.mapped_mtu_ids || []).includes('D07')) fail('q27-step-2 must not map D07 after execution');
+        if ((operation.mapped_mtu_ids || []).includes('D08')) fail('q27-step-2 must not map D08 after execution');
+        if ((operation.expected_procedure_unit_ids || []).includes('D07')) fail('q27-step-2 procedure units must not include D07 after execution');
+        if ((operation.procedure_review_required_unit_ids || []).length !== 0) fail('q27-step-2 procedure review must be empty after execution');
+        if ((operation.review_required_hooks || []).length !== 0) fail('q27-step-2 review hooks must be empty after execution');
+      } else {
+        if (operation.missing_incidence_expected !== true) fail('q27-step-2 must keep missing_incidence_expected true until execution');
+        if (!operation.procedure_review_required_unit_ids?.includes('D07')) fail('q27-step-2 must keep D07 procedure review until execution');
+      }
+    } else {
+      if (operation.missing_incidence_expected !== true) fail(`${operation.operation_id} must keep missing_incidence_expected true`);
+      if (!operation.procedure_review_required_unit_ids?.includes('D07')) fail(`${operation.operation_id} must keep D07 procedure review`);
     }
   }
 
   const result = runH5Validator();
   const failedIds = new Set(result.buckets.failed.map((item) => item.assertion_id));
   const reviewIds = (result.buckets.review_required || []).map((item) => item.assertion_id);
-  for (const assertionId of REQUIRED_Q27_FAILED_ASSERTIONS) {
+  const q27Step1 = q27.official_correction_model_operations.find((operation) => operation.operation_id === 'q27-step-1');
+  const scalingExecuted = q27Step1?.missing_scaling_expected === false;
+
+  const requiredCurrentFailedAssertions = step2CapacityResolved
+    ? []
+    : step1IncidenceRepaired
+      ? [Q27_STEP2_INCIDENCE_FAILED_ASSERTION]
+      : REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS;
+  for (const assertionId of requiredCurrentFailedAssertions) {
     if (!failedIds.has(assertionId)) fail(`current validator result must still expose q27 assertion: ${assertionId}`);
   }
-  for (const marker of REQUIRED_Q27_REVIEW_MARKERS) {
+  if (step2CapacityResolved && failedIds.has(Q27_STEP2_INCIDENCE_FAILED_ASSERTION)) {
+    fail(`current validator result must not expose repaired q27-step-2 assertion: ${Q27_STEP2_INCIDENCE_FAILED_ASSERTION}`);
+  }
+  if (step1IncidenceRepaired && failedIds.has(Q27_STEP1_INCIDENCE_FAILED_ASSERTION)) {
+    fail(`current validator result must not expose repaired q27 assertion: ${Q27_STEP1_INCIDENCE_FAILED_ASSERTION}`);
+  }
+  if (!scalingExecuted && !failedIds.has(PRE_SCALING_Q27_FAILED_ASSERTION)) {
+    fail(`current validator result must still expose q27 assertion: ${PRE_SCALING_Q27_FAILED_ASSERTION}`);
+  }
+  if (scalingExecuted && failedIds.has(PRE_SCALING_Q27_FAILED_ASSERTION)) {
+    fail(`current validator result must not expose repaired q27 scaling assertion: ${PRE_SCALING_Q27_FAILED_ASSERTION}`);
+  }
+  const requiredCurrentReviewMarkers = step2CapacityResolved
+    ? []
+    : step1IncidenceRepaired
+    ? ['review whether this is an incidence/pass-through family case or a distinct levy-capacity operation']
+    : REQUIRED_Q27_REVIEW_MARKERS_ALWAYS;
+  for (const marker of requiredCurrentReviewMarkers) {
     if (!reviewIds.some((id) => id.includes(marker))) fail(`current validator result must still expose q27 review marker: ${marker}`);
   }
+  if (step1IncidenceRepaired && reviewIds.some((id) => id.includes('review whether D07 tax-burden percentage'))) {
+    fail('current validator result must not expose repaired q27-step-1 D07 review marker');
+  }
+  if (!scalingExecuted && !reviewIds.some((id) => id.includes(PRE_SCALING_Q27_REVIEW_MARKER))) {
+    fail(`current validator result must still expose q27 review marker: ${PRE_SCALING_Q27_REVIEW_MARKER}`);
+  }
+  if (scalingExecuted && reviewIds.some((id) => id.includes(PRE_SCALING_Q27_REVIEW_MARKER))) {
+    fail(`current validator result must not expose repaired q27 scaling review marker: ${PRE_SCALING_Q27_REVIEW_MARKER}`);
+  }
 
-  assertFutureStorageAbsent();
+  assertQ27CandidateStoresAbsent();
   validateOperationCandidate(packet.dry_run_operation_candidate, 'packet.dry_run_operation_candidate');
   if (packet.dry_run_operation_candidate.operation_id !== 'EX_OP_Q27_LEVY_CAPACITY_OVERCONSUMPTION_CHECK') {
     fail('unexpected dry-run operation candidate');
@@ -293,8 +450,18 @@ function main() {
     REQUIRED_Q27_FAILED_ASSERTIONS,
     'negative regression live failed assertions'
   );
-  for (const assertionId of REQUIRED_Q27_FAILED_ASSERTIONS) {
-    if (!failedIds.has(assertionId)) fail(`live negative q27 assertion is absent from validator output: ${assertionId}`);
+  const negativeFailedIds = step2CapacityResolved
+    ? new Set(runValidatorForTempFixture(cloneWithQ27Step2Held(fixture), true).buckets.failed.map((item) => item.assertion_id))
+    : failedIds;
+  const liveNegativeAssertions = step2CapacityResolved
+    ? [Q27_STEP2_INCIDENCE_FAILED_ASSERTION]
+    : step1IncidenceRepaired
+      ? [Q27_STEP2_INCIDENCE_FAILED_ASSERTION]
+      : scalingExecuted
+        ? REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS
+        : REQUIRED_Q27_FAILED_ASSERTIONS;
+  for (const assertionId of liveNegativeAssertions) {
+    if (!negativeFailedIds.has(assertionId)) fail(`live negative q27 assertion is absent from validator output: ${assertionId}`);
   }
   if (packet.review_team_threshold?.minimum_verdict !== 'MORE_THAN_SATISFIED') {
     fail('review team threshold must require MORE_THAN_SATISFIED');

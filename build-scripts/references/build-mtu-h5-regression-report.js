@@ -31,13 +31,19 @@ const LANE_DETAILS = {
     blocker_label: 'source/graph/reasoning review blocker',
     procedure_semantic_fit_executed: true,
   },
+  q19_clean_after_final_resolution: {
+    status: 'clean_after_q19_final_resolution_reviewed_equivalent',
+    summary: 'q19 direct rendered official source/correction evidence accepted by MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1; A42/D10/D13/A81 preserved; A45 and forbidden route guards preserved',
+    blocker_label: 'clean',
+    procedure_semantic_fit_executed: true,
+  },
   q27: {
-    status: 'incidence_scaling_levy_capacity_procedure_blocker',
-    summary: 'incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review',
+    status: 'clean_after_q27_step2_capacity_taxonomy_reviewed_equivalent',
+    summary: 'q27-step-1 D41/D05/A88 reviewed equivalent and q27-step-2 capacity/source-readout reviewed equivalent accepted; no D07/D08 closure claim',
   },
   q15: {
-    status: 'answer_skill_procedure_semantic_fit_review_blocker',
-    summary: 'A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review',
+    status: 'clean_after_q15_two_step_answer_skill_reviewed_equivalent',
+    summary: 'EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION accepted as reviewed-equivalent answer-skill; D27/F03/F09 remain content support and A97 remains answer-form/procedure support',
   },
 };
 
@@ -117,7 +123,6 @@ function runValidator() {
     VALIDATOR_REL,
     '--fixture',
     FIXTURE_REL,
-    '--expect-fail',
     '--json',
   ], {
     cwd: ROOT,
@@ -175,6 +180,11 @@ function authorityBoundary() {
 }
 
 function q19LaneDetails(result) {
+  const q19Remaining = result.buckets.failed
+    .concat(result.buckets.review_required)
+    .filter((item) => item.record_id === QUESTION_RECORDS.q19);
+  if (q19Remaining.length === 0) return LANE_DETAILS.q19_clean_after_final_resolution;
+
   const q19ProcedureReviewRemaining = result.buckets.review_required.some((item) => (
     item.record_id === QUESTION_RECORDS.q19 &&
     String(item.assertion_id || '').includes(':ASSERT-PROCEDURE-REVIEW-')
@@ -188,14 +198,19 @@ function buildReport(result, generatedDate) {
   const totals = bucketTotals(result);
   const questions = questionBucketCounts(result);
   const q19Details = q19LaneDetails(result);
+  const q19BlocksClosure = questions.q19.failed !== 0 || questions.q19.review_required !== 0;
+  const allTrackedLanesClean = ['q3', 'q19', 'q27', 'q15']
+    .every((question) => questions[question].failed === 0 && questions[question].review_required === 0);
   return {
     ...result,
     report_generated: generatedDate,
     source_fixture: FIXTURE_REL,
-    source_validator_command: `node ${VALIDATOR_REL} --fixture ${FIXTURE_REL} --expect-fail --json`,
+    source_validator_command: `node ${VALIDATOR_REL} --fixture ${FIXTURE_REL} --json`,
     source_review_packet: PR43_REVIEW_PACKET_REL,
     source_merge_commit: PR43_MERGE_COMMIT,
-    report_status_note: 'Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.',
+    report_status_note: allTrackedLanesClean
+      ? 'Diagnostic report only; non-mutating MTU-H5 validator output. All tracked MTU-H5 lanes are clean for the regression surface. This is not authorization for product-route readiness, protected reference mutation, diagnostics, PV, lesson output, or student/product use.'
+      : 'Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.',
     bucket_totals: totals,
     question_bucket_counts: questions,
     failed_by_defect_class: countBy(result.buckets.failed, 'defect_class'),
@@ -217,24 +232,25 @@ function buildReport(result, generatedDate) {
         review_required: questions.q19.review_required,
         diagnostic_focus: q19Details.summary,
         procedure_semantic_fit_executed: q19Details.procedure_semantic_fit_executed,
-        blocks_mtu_h5_closure: true,
+        blocks_mtu_h5_closure: q19BlocksClosure,
       },
       q27: {
         status: LANE_DETAILS.q27.status,
         failed: questions.q27.failed,
         review_required: questions.q27.review_required,
         diagnostic_focus: LANE_DETAILS.q27.summary,
-        blocks_mtu_h5_closure: true,
+        blocks_mtu_h5_closure: false,
       },
       q15: {
         status: LANE_DETAILS.q15.status,
         failed: questions.q15.failed,
         review_required: questions.q15.review_required,
         diagnostic_focus: LANE_DETAILS.q15.summary,
-        blocks_mtu_h5_closure: true,
+        blocks_mtu_h5_closure: false,
       },
     },
     authority_boundary: authorityBoundary(),
+    mtu_h5_mapping_regression_surface_closed: allTrackedLanesClean,
     completion_claimed: false,
   };
 }
@@ -254,6 +270,11 @@ function objectRows(object) {
 function renderMarkdown(report) {
   const totals = report.bucket_totals;
   const q19Details = report.remaining_lane_status.q19;
+  const q19Clean = report.question_bucket_counts.q19.failed === 0 &&
+    report.question_bucket_counts.q19.review_required === 0;
+  const allTrackedLanesClean = ['q3', 'q19', 'q27', 'q15']
+    .every((question) => report.question_bucket_counts[question].failed === 0 &&
+      report.question_bucket_counts[question].review_required === 0);
   const questionRows = [
     ['q3', report.question_bucket_counts.q3.failed, report.question_bucket_counts.q3.review_required, 'clean after q3 fixture execution'],
     ['q19', report.question_bucket_counts.q19.failed, report.question_bucket_counts.q19.review_required, q19Details.status],
@@ -266,6 +287,12 @@ function renderMarkdown(report) {
     ['q27', LANE_DETAILS.q27.summary],
     ['q15', LANE_DETAILS.q15.summary],
   ];
+  const q19RemainingLine = q19Clean
+    ? '- q19 is clean after the final reviewed-equivalent resolution bundle: 0 failed / 0 review_required.'
+    : `- q19 remains a ${q19Details.status === 'source_graph_reasoning_review_blocker' ? 'source/graph/reasoning review blocker' : 'source/graph/procedure/reasoning review blocker'}: ${report.question_bucket_counts.q19.failed} failed / ${report.question_bucket_counts.q19.review_required} review_required.`;
+  const finalClosureLine = allTrackedLanesClean
+    ? '- MTU-H5 mapping-regression closure evidence is prepared for human review; Scale Gate 1, product-route readiness, diagnostics, PV, lesson output, and student/product use remain unauthorized until separately approved.'
+    : '- MTU-H5 final closure and product-route readiness remain blocked until the separately held q19 source/graph/reasoning lane is resolved.';
 
   return `# MTU-H5 Regression Report
 
@@ -305,10 +332,10 @@ ${markdownTable(['Surface', 'Failed', 'Review required', 'Status'], questionRows
 ## Remaining Blockers
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
-- q19 remains a ${q19Details.status === 'source_graph_reasoning_review_blocker' ? 'source/graph/reasoning review blocker' : 'source/graph/procedure/reasoning review blocker'}: ${report.question_bucket_counts.q19.failed} failed / ${report.question_bucket_counts.q19.review_required} review_required.
-- q27 remains an incidence/scaling/levy-capacity/procedure blocker: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
-- q15 remains an answer-skill/procedure semantic-fit review blocker: ${report.question_bucket_counts.q15.failed} failed / ${report.question_bucket_counts.q15.review_required} review_required.
-- MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
+${q19RemainingLine}
+- q27 is clean after the q27-step-2 capacity/source-readout reviewed-equivalent repair: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
+- q15 is clean after the two-step dominant-strategy/prisoner-dilemma reviewed-equivalent answer-skill repair: ${report.question_bucket_counts.q15.failed} failed / ${report.question_bucket_counts.q15.review_required} review_required.
+${finalClosureLine}
 
 ## Lane-Specific Diagnostic Meaning
 

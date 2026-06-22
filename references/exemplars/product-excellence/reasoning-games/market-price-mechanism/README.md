@@ -1,7 +1,7 @@
 # Market price mechanism reasoning flow
 
-Golden exemplar ID: `reasoning-market-price-mechanism-v3`  
-Paragraph: `market transfer example`  
+Golden exemplar ID: `reasoning-market-price-mechanism-v3`
+Paragraph: `market transfer example`
 Reasoning family: `causal_mechanism`
 
 ## Reasoning grammar

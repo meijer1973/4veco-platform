@@ -16,6 +16,9 @@
 
 const fs = require('fs');
 const path = require('path');
+const {
+  assertBlockedSourceAnnexStorage,
+} = require('./lib/exam-ingestion-candidate-validation');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 
@@ -35,6 +38,7 @@ const FUTURE_STORAGE = [
   'references/data/exam-ingestion/answer-skill-candidates.json',
   'references/data/exam-ingestion/source-annex-extraction-overlays.json',
 ];
+const SOURCE_ANNEX_STORAGE = 'references/data/exam-ingestion/source-annex-extraction-overlays.json';
 
 const FALSE_BOUNDARY_FIELDS = [
   'protected_reference_mutation_authorized',
@@ -186,17 +190,13 @@ function checkUpstreamEvidence() {
 
 function checkFutureStorageNotCreated() {
   const existing = FUTURE_STORAGE.filter((relPath) => fs.existsSync(file(relPath)));
-  if (existing.length === 0) return;
+  const disallowed = existing.filter((relPath) => relPath !== SOURCE_ANNEX_STORAGE);
+  assert(disallowed.length === 0, `operation/answer candidate storage must not exist: ${disallowed.join(', ')}`);
 
-  if (!fs.existsSync(file(GATE_CLOSURE))) {
-    fail(`future storage exists before GATE-EX5 closure: ${existing.join(', ')}`);
+  if (existing.includes(SOURCE_ANNEX_STORAGE)) {
+    const doc = readJson(SOURCE_ANNEX_STORAGE);
+    assertBlockedSourceAnnexStorage(doc, SOURCE_ANNEX_STORAGE);
   }
-  const closure = readJson(GATE_CLOSURE);
-  assert(closure.status === 'pass_with_conditions' || closure.status === 'pass', 'future storage requires GATE-EX5 pass');
-  assert(
-    closure.candidate_storage_authorized === true,
-    'future storage requires explicit candidate_storage_authorized: true'
-  );
 }
 
 function checkContract() {

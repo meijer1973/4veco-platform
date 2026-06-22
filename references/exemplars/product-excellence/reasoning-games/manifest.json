@@ -58,8 +58,8 @@
         },
         {
           "path": "market-price-mechanism/README.md",
-          "sha256": "24e49b0a3e20697d25d588530f946eb4044ffacbeb03f550331dfc925f0dd32b",
-          "bytes": 666
+          "sha256": "38705a7313ae8eb1f4079a3c3602c30721760990b6e261ee36c89d619fa2264e",
+          "bytes": 662
         }
       ],
       "review_state": {
@@ -128,8 +128,8 @@
         },
         {
           "path": "1.1.1-choice-compass/README.md",
-          "sha256": "a160ff0c4cd915c5bff2523a048f86fc7a843dc2a29723377afa3d1d70b9ea8f",
-          "bytes": 676
+          "sha256": "8ab3c6167941e3a83fc6ab325308c2e8f4acaf780e05ef2a36030647b1721ec4",
+          "bytes": 672
         }
       ],
       "review_state": {
@@ -198,8 +198,8 @@
         },
         {
           "path": "1.1.2-index-check/README.md",
-          "sha256": "4dec5187df011b48e2d59be4ad7e931ac2f4718076c61c29ce24a5bc091c032d",
-          "bytes": 675
+          "sha256": "0b08dd56c5f92bf83c6646c363ed75ddb909ce8f3e103b9a2a6b618c88ed2010",
+          "bytes": 671
         }
       ],
       "review_state": {
@@ -234,8 +234,8 @@
       "files": [
         {
           "path": "1.1.3-graph-editorial/prototype.html",
-          "sha256": "c8b22df0eecb9252b221b3bf5f247c80fb31a85d9c84ed303d496d9290a6c3ab",
-          "bytes": 27905
+          "sha256": "f788db9f2a63a5eaac362c19c8ae6aa0d7122cd5c262192835869cb7343717c5",
+          "bytes": 27897
         },
         {
           "path": "1.1.3-graph-editorial/candidate-data.json",
@@ -274,8 +274,8 @@
         },
         {
           "path": "1.1.3-graph-editorial/README.md",
-          "sha256": "afa7ebc6e62d375c0f688b8ea3c8faa0a7afac9fed28ccd608e5f2d372641408",
-          "bytes": 690
+          "sha256": "f84ba4150f55c86f86dba9871a86c1fa2b4bb26ca472a71b58a82d5e2c78af9f",
+          "bytes": 686
         }
       ],
       "review_state": {
@@ -286,7 +286,7 @@
       }
     }
   ],
-  "library_version": "1.0.0",
+  "library_version": "1.0.1",
   "repository_path": "references/exemplars/product-excellence/reasoning-games",
   "change_policy": {
     "stable": true,

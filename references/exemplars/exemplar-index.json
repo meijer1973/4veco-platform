@@ -5,6 +5,40 @@
   "generated_from_goal": "GOLDEN-EXEMPLAR-PROMOTION-1",
   "entries": [
     {
+      "id": "1.1.1-golden-presentation",
+      "type": "conceptual_exemplar",
+      "path": "references/exemplars/1.1.1-golden-presentation/",
+      "surface": "web_first_presentation",
+      "paragraph": "1.1.1",
+      "title": "Golden web-first presentation exemplar for Schaarste en economisch denken",
+      "use_for": [
+        "presentation route",
+        "layout standard",
+        "student-facing speaker notes",
+        "didactic sequence",
+        "web-first design",
+        "PowerPoint derivative guidance"
+      ],
+      "policy_files": [
+        "references/presentation/presentation-policy.md",
+        "references/presentation/web-first-presentation-layout.md",
+        "references/presentation/speaker-notes-policy.md",
+        "references/presentation/didactic-route-policy.md",
+        "references/presentation/powerpoint-derivative-policy.md"
+      ],
+      "does_not_authorize": [
+        "product_use",
+        "scale_gate_1",
+        "diagnostics",
+        "mastery_claims",
+        "automatic_sequencing",
+        "summative_use",
+        "broad_migration",
+        "target_equivalent_completion_language",
+        "hand_editing_generated_lesson_output"
+      ]
+    },
+    {
       "id": "1.1.3-exit-ticket-conceptual",
       "type": "conceptual_exemplar",
       "path": "references/exemplars/1.1.3-exit-ticket/",

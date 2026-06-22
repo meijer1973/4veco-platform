@@ -6,6 +6,7 @@
   "source_worktree": "C:/wt/SKILLTREE-20260618",
   "source_package_dir": "reasoning-golden-family-adoption-v1",
   "copied_verbatim_subtree": "reference-exemplars",
+  "normalization": "2026-06-22: trailing spaces and tabs were removed from five copied exemplar evidence files for PR diff hygiene; manifest library_version 1.0.1 records the normalized file hashes.",
   "repo_library": "references/exemplars/product-excellence/reasoning-games",
   "authority": {
     "golden_reference": true,

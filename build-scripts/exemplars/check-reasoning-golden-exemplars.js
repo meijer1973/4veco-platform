@@ -75,7 +75,7 @@ function main() {
   const manifest = readLibraryJson('manifest.json');
   assert(manifest.schema_version === 1, 'manifest schema_version must be 1');
   assert(manifest.family_id === 'reasoning-game-golden-family-v1', 'unexpected manifest family_id');
-  assert(manifest.library_version === '1.0.0', 'manifest must carry stable library_version 1.0.0');
+  assert(manifest.library_version === '1.0.1', 'manifest must carry stable library_version 1.0.1');
   assert(manifest.repository_path === 'references/exemplars/product-excellence/reasoning-games', 'manifest repository_path mismatch');
   assert(manifest.change_policy && manifest.change_policy.stable === true, 'manifest must include stable change_policy');
   assert(Array.isArray(manifest.required_standard_files), 'manifest.required_standard_files must be listed');

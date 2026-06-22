@@ -2,6 +2,8 @@
 
 Status: `ready_for_remote_human_review_after_subagent_lead_hold_no_fixture_mutation`
 
+Historical status: `superseded_by` `MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1`. This packet is no longer authoritative for current q19 counts after the 2026-06-20 final resolution bundle.
+
 This package records the current q19 state after PR #94. q19 is now `0 failed / 6 review_required`; q27 remains `3 failed / 5 review_required`; q15 remains `0 failed / 4 review_required`; overall MTU-H5 remains `3 failed / 15 review_required`.
 
 The decision surface is intentionally conservative: all six remaining q19 hooks are held. This is not q19 closure, MTU-H5 closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, or student/product use.

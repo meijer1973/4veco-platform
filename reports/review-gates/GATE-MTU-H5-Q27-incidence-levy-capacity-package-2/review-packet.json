@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-Q27-incidence-levy-capacity-package-2",
+  "package_id": "MTU-H5-Q27-INCIDENCE-LEVY-CAPACITY-PACKAGE-2",
+  "created": "2026-06-18",
+  "status": "pending_human_review",
+  "review_standard": "REV-STD-1",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use. This packet does not close q27 or MTU-H5.",
+  "original_sprint_gate_spec": "MTU-H5-RP-005 routed q27 incidence/pass-through and levy-capacity gaps to governed review. PR #107 repaired only q27-step-1 scaling. This packet executes lead-approved option 2: q27-step-1 D41/D05/A88 reviewed equivalent, q27-step-2 held.",
+  "non_negotiable_requirements": [
+    "Only q27-step-1 incidence/equivalent and D07 cleanup fields may change.",
+    "D41/D05/A88/A98 may support only q27-step-1.",
+    "D07 must not be used as q27-step-1 support.",
+    "q27-step-2 incidence/capacity failure must remain.",
+    "q27-step-2 D07 procedure review and capacity-governance hook must remain.",
+    "q19 must remain held at 0 failed / 6 review_required.",
+    "q15 must remain carried at 0 failed / 4 review_required.",
+    "No protected/reference/MTU/candidate/lesson/PV/diagnostic/product/student mutation is authorized."
+  ],
+  "core_requirement_checklist": [
+    {"requirement_id": "core-1-current-state", "status": "met", "evidence": "q27 starts at 2 failed / 4 review_required after PR #107."},
+    {"requirement_id": "core-2-substantial-reduction", "status": "met", "evidence": "q27 moves to 1 failed / 2 review_required."},
+    {"requirement_id": "core-3-step1-only", "status": "met", "evidence": "Only q27-step-1 fixture fields are changed."},
+    {"requirement_id": "core-4-step2-held", "status": "met", "evidence": "q27-step-2 failed/review assertions remain live."},
+    {"requirement_id": "core-5-d07-cleaned-step1", "status": "met", "evidence": "D07 is removed from q27-step-1 support/procedure review surface."},
+    {"requirement_id": "core-6-boundary", "status": "met", "evidence": "All protected/product/student authorities remain false."}
+  ],
+  "requested_decision": {
+    "decision_needed": "Human review of the executed q27-step-1 option-2 fixture mutation.",
+    "valid_decisions": [
+      "APPROVE_FOR_MERGE_AS_Q27_STEP1_LEVY_EQUILIBRIUM_REPAIR",
+      "REVISE_OR_HOLD"
+    ]
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.md",
+    "reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json",
+    "build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.md",
+    "build-scripts/references/build-mtu-h5-regression-report.js",
+    "build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+    "build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json",
+    "references/external/exams/vw-1022-a-25-2-o.pdf#page=12&question=27",
+    "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27",
+    "references/machine/micro-teaching-units.json#D41",
+    "references/machine/micro-teaching-units.json#D05",
+    "references/machine/micro-teaching-units.json#A88",
+    "references/machine/micro-teaching-units.json#A98",
+    "references/machine/micro-teaching-units.json#D08",
+    "references/machine/micro-teaching-units.json#D07"
+  ],
+  "findings": [
+    {
+      "finding_id": "q27-step1-ready",
+      "classification": "supports_execution_review",
+      "blocks": [],
+      "does_not_block": ["human review of q27-step-1 repair"],
+      "proof_required_to_close": "Post-execution checker proves q27 is 1 failed / 2 review_required and q27-step-2 remains held."
+    },
+    {
+      "finding_id": "q27-step2-held",
+      "classification": "blocks",
+      "blocks": ["q27 closure", "MTU-H5 closure", "product-route readiness"],
+      "does_not_block": ["q27-step-1 repair"],
+      "proof_required_to_close": "Separate protected MTU/operation governance or reviewed target evidence for the capacity/overconsumption conclusion without D08 overclaim."
+    }
+  ],
+  "review_results": {
+    "teacher": "MORE_THAN_SATISFIED_EXECUTE_OPTION_2",
+    "economist": "MORE_THAN_SATISFIED_EXECUTE_OPTION_2",
+    "quality_inspection": "MORE_THAN_SATISFIED_EXECUTE_OPTION_3",
+    "lead": "APPROVE_OPTION_2_EXECUTION"
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "q27_closure_claimed": false,
+    "mtu_h5_closure_claimed": false
+  }
+}

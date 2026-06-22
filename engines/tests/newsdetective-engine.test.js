@@ -185,6 +185,13 @@ describe('accessors', () => {
         expect(engine.getDomainColors().primary).toBe("#17A2B8");
     });
 
+    test('getDomainColors returns empty object when optional colors are absent', () => {
+        const data = makeData();
+        delete data.domainColors;
+        const engine = new NewsDetectiveEngine(data);
+        expect(engine.getDomainColors()).toEqual({});
+    });
+
     test('getLesLink returns link text', () => {
         const engine = new NewsDetectiveEngine(makeData());
         expect(engine.getLesLink()).toBe("Dit komt terug bij: marktvormen");

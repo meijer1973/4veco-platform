@@ -106,6 +106,9 @@ jobs:
       - name: Validate paragraph landing V2 guardrails
         run: npm run check:landing-v2
 
+      - name: Validate News Detective V2 guardrails
+        run: npm run check:news-detective-v2
+
       - name: Validate active scope language
         run: npm run check:scope-language
 

@@ -2,6 +2,16 @@
 
 Status: stable policy ledger for `reasoning-game-golden-family-v1`.
 
+## 2026-06-22 - Diff Hygiene Normalization
+
+`GOAL-REASONING-GOLDEN-FAMILY-1-REBASE-CI-READINESS` normalizes trailing
+whitespace in copied exemplar evidence files for PR-diff hygiene and refreshes
+the `manifest.json` bytes and hashes as library version `1.0.1`.
+
+This does not change product grammar, reasoning grammar, authority, fixtures,
+candidate data, or rendered student behavior. The governing rule remains:
+copy product grammar and re-derive reasoning grammar.
+
 ## 2026-06-20 - Initial Adoption
 
 `GOAL-REASONING-GOLDEN-FAMILY-1` adopts the four package exemplars as a
