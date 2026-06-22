@@ -13,6 +13,7 @@ HOW TO ADAPT:
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
 const DEFAULT_BRANCH = 'main';
 const DEFAULT_REQUIRED_CONTEXT = 'validate-platform';
+const EXPECTED_APPROVING_REVIEW_COUNT = 0;
 
 function fail(message) {
   console.error(`Branch protection check failed: ${message}`);
@@ -106,6 +107,25 @@ function summarizeProtection(protection, options = {}) {
   if (enforceAdmins !== true) failures.push('enforce_admins.enabled must be true');
   if (allowForcePushes !== false) failures.push('allow_force_pushes.enabled must be false');
   if (allowDeletions !== false) failures.push('allow_deletions.enabled must be false');
+  const pullRequestReviewSummary = summarizePullRequestReviews(
+    pullRequestReviews,
+    options.pullRequestReviewFetch
+  );
+  if (pullRequestReviewSummary.available !== true || pullRequestReviewSummary.required !== true) {
+    failures.push('pull-request review settings must be available');
+  }
+  if (pullRequestReviewSummary.required_approving_review_count !== EXPECTED_APPROVING_REVIEW_COUNT) {
+    failures.push(`required_approving_review_count must be ${EXPECTED_APPROVING_REVIEW_COUNT}`);
+  }
+  if (pullRequestReviewSummary.dismiss_stale_reviews !== false) {
+    failures.push('dismiss_stale_reviews must be false');
+  }
+  if (pullRequestReviewSummary.require_code_owner_reviews !== false) {
+    failures.push('require_code_owner_reviews must be false');
+  }
+  if (pullRequestReviewSummary.require_last_push_approval !== false) {
+    failures.push('require_last_push_approval must be false');
+  }
 
   return {
     repository: options.repo || DEFAULT_REPO,
@@ -115,6 +135,12 @@ function summarizeProtection(protection, options = {}) {
       required_status_checks: {
         strict: true,
         contexts: [requiredContext],
+      },
+      required_pull_request_reviews: {
+        required_approving_review_count: EXPECTED_APPROVING_REVIEW_COUNT,
+        dismiss_stale_reviews: false,
+        require_code_owner_reviews: false,
+        require_last_push_approval: false,
       },
       enforce_admins: true,
       allow_force_pushes: false,
@@ -128,10 +154,7 @@ function summarizeProtection(protection, options = {}) {
       enforce_admins: enforceAdmins,
       allow_force_pushes: allowForcePushes,
       allow_deletions: allowDeletions,
-      required_pull_request_reviews: summarizePullRequestReviews(
-        pullRequestReviews,
-        options.pullRequestReviewFetch
-      ),
+      required_pull_request_reviews: pullRequestReviewSummary,
     },
     failures,
   };
@@ -215,6 +238,7 @@ module.exports = {
   DEFAULT_REPO,
   DEFAULT_BRANCH,
   DEFAULT_REQUIRED_CONTEXT,
+  EXPECTED_APPROVING_REVIEW_COUNT,
   contextsFromProtection,
   summarizePullRequestReviews,
   summarizeProtection,

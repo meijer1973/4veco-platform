@@ -281,6 +281,14 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).toContain('required_ci_context_missing_or_not_successful');
   });
 
+  test('single-account branch protection does not create a mechanical approval constraint', () => {
+    const decision = classifyPrReadiness(readFixture('l1-checker-ready-branch-protection.json'));
+    expect(decision.route).toBe('READY_FOR_LEAD_ONLY');
+    expect(decision.reason_codes).not.toContain('branch_protection_merge_constraint');
+    expect(decision.follow_up || []).toEqual([]);
+    expect(decision.proof.branch_protection.required_approving_review_count).toBe(0);
+  });
+
   test('validate-platform cannot be removed from ready decision proof', () => {
     const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
     expect(() =>

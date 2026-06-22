@@ -33,8 +33,8 @@ immediately before mutation.
 |---|---|---|
 | `KEEP_DRAFT_REVISE` | Implementation, CI, checker proof, packet structure, lead review, rendered proof, review threads, bundle completeness, or merge readiness is deficient. | Keep draft, return concrete corrections to implementation, do not contact the owner. |
 | `KEEP_DRAFT_BATCH` | Human review will eventually be required, but the current PR is a thin fragment that can safely be combined with a coherent related milestone. | Keep draft, name the next bundle target, continue within authorized scope, do not contact the owner. |
-| `READY_FOR_LEAD_ONLY` | L0/L1 or valid owner-preapproved L2 work is complete, current-head evidence is green, lead review is passing, and no human-value decision is hidden. | Mark ready, do not request product review, merge only when packet and branch protection permit. |
-| `READY_FOR_HUMAN_REVIEW` | Human review is required and the PR/bundle is substantial or a consequential exception. | Mark ready and present one consolidated human handoff. Never auto-merge. |
+| `READY_FOR_LEAD_ONLY` | L0/L1 or valid owner-preapproved L2 work is complete, current-head evidence is green, lead review is passing, and no human-value decision is hidden. | Mark ready. In single-account mode, the agent may merge after exact-head CI, lead review, readiness proof, and clean review-thread state pass. |
+| `READY_FOR_HUMAN_REVIEW` | Human review is required and the PR/bundle is substantial or a consequential exception. | Mark ready and present one consolidated human handoff. Merge only after an explicit owner merge decision tied to the exact PR head. |
 | `PAUSE_ESCALATE` | A genuine blocker cannot safely be resolved by implementation, testing, specialist review, batching, or conservative classification. | Pause and escalate the blocker. |
 
 ## Authority and consequence axis
@@ -120,10 +120,31 @@ Do not accept stale proof:
 
 ## Branch protection
 
-Use `build-scripts/ci/check-branch-protection.js` in read-only mode. If a PR is
-substantively lead-only but branch protection still requires an independent
-GitHub-account approval, record that as an infrastructure constraint. Do not
-weaken branch protection in this workflow.
+The platform repository operates in single-account mode: the owner, coding
+agent, lead-review subagent, PR author, and merger may share one GitHub account.
+GitHub approval count is therefore not a substantive review signal for this
+repository. Branch protection must require pull-request workflow and strict
+`validate-platform`, but `required_approving_review_count` must be `0`.
+
+Use `build-scripts/ci/check-branch-protection.js` in read-only mode. It must
+fail if branch protection drifts back to requiring a distinct approving GitHub
+review, because that would require an identity the operating model does not
+have. Do not use admin bypass as the normal solution, and do not weaken strict
+status checks, admin enforcement, force-push protection, or deletion
+protection.
+
+Merge authority is separate from GitHub approval count:
+
+- L0-L2 may merge through the normal merge path only after exact-head CI,
+  checker proof, lead review, PR-readiness proof, and complete review-thread
+  evidence all pass.
+- L3-L4 and consequential governance/self-modification work must stop after
+  `READY_FOR_HUMAN_REVIEW` until the owner gives an explicit merge decision.
+- The human decision must identify the PR number, exact head SHA, decision, and
+  decision scope. A PR comment is the preferred audit record.
+- Immediately before any merge, the implementation agent must re-fetch the PR
+  and verify the exact head, open/not-draft state, mergeability, required CI,
+  and review-thread/requested-changes state.
 
 ## Live decision recording
 

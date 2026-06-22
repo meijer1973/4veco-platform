@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T13:14:55.596Z
+Generated: 2026-06-22T18:31:22.031Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/pr-readiness-router-20260622`
-Source commit: `42d3d4189e23d6df71910a37ea054e4d9711e6ef`
-Files indexed: 5767
+Source branch: `codex/single-account-review-governance-20260622`
+Source commit: `d4dccf43ee35ff855d929a2bf2a90fc492a1f0c7`
+Files indexed: 5769
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1931,7 +1931,7 @@ Count: 675
 
 ## reports
 
-Count: 3755
+Count: 3757
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5140,6 +5140,8 @@ Count: 3755
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round3.md
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round4.md
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round5.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round6.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round7.md
 - reports/sprints/REVIEW-THROUGHPUT-3-live-dry-run.md
 - reports/sprints/REVIEW-THROUGHPUT-3-plan.md
 - reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md

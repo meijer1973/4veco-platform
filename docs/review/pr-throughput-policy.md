@@ -131,6 +131,13 @@ Draft-to-review routing is governed by
 `npm.cmd run review:pr-readiness`; the mutating command is the explicit second
 step `npm.cmd run apply:pr-readiness`.
 
+In this repository's single-account GitHub model, approval count is not the
+human-review signal. Branch protection keeps pull-request workflow and strict
+`validate-platform`, but the expected approving-review count is `0`. L0-L2
+merge authority comes from exact-head CI/checker/lead-review/readiness proof;
+L3-L4 and governance/self-modification work still require an explicit owner
+merge decision tied to the PR number and head SHA.
+
 Do not add a repository-wide CI gate over all historical review packets until
 the archived packet surface is either migrated or an allowlist exists. Focused
 packet checkers may validate packets that have adopted the envelope.
