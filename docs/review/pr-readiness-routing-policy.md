@@ -24,7 +24,8 @@ protection, bundle completeness, and the correct recipient of the completed
 work.
 
 The implementation agent acts on the routing decision. The deterministic
-executor applies only the allowed GitHub transition after re-fetching the PR.
+executor applies only the allowed GitHub transition after re-fetching the PR
+immediately before mutation.
 
 ## Routes
 
@@ -86,14 +87,27 @@ paths, diagnostic diff stats, merge state, status checks, review decision,
 unresolved review threads, throughput packet, checker result, lead review,
 paired PRs, and observable branch protection.
 
+Remote GitHub evidence is immutable. Supplemental evidence may add only
+throughput classification, batching rationale, bundle metadata, checker
+records, branch-protection observations, and lead-review references. It must
+not replace PR identity, head SHA, state, base, changed paths, mergeability,
+status checks, review decision, requested-changes state, or unresolved thread
+state.
+
 Do not accept stale proof:
 
-- CI proof must apply to the current remote head.
+- CI proof must apply to the current remote head and must include the protected
+  `validate-platform` context unless a future policy names a stricter required
+  context set.
 - The decision records the reviewed remote head SHA.
-- The executor re-fetches before transition and aborts if the head changed.
+- The executor re-fetches immediately before transition and aborts if the repo,
+  PR number, base, state, or head changed.
 - Lead review may predate the remote head only for a narrowly defined
   evidence-only tail such as lead-review records, packet metadata, or
   regenerated indexes.
+- Evidence-only tails must be computed from the actual GitHub comparison
+  between the lead-reviewed SHA and current head. Self-declared
+  `evidence_only` labels are not proof.
 - Any substantive source, product, governance, checker, generator, or lesson
   change after lead review requires re-review.
 
@@ -115,3 +129,7 @@ Record live decisions as idempotent GitHub comments keyed by:
 
 The repository contains the reusable policy, schema, fixtures, and tooling, not
 self-invalidating committed decisions for every PR.
+
+The comment is the durable per-head audit record. It must include a concise
+proof summary: CI context/head, checker commands, lead-review path/result and
+reviewed SHA, evidence-only tail status, and branch-protection constraint.

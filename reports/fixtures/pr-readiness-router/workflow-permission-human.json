@@ -26,7 +26,17 @@
   "proof": {
     "ci": {
       "head_sha": "8888888888888888888888888888888888888888",
-      "conclusion": "success"
+      "conclusion": "success",
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED"
+        }
+      ]
     },
     "checkers": [
       {

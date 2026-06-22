@@ -11,6 +11,7 @@
   "baseline": "reports/sprints/REVIEW-THROUGHPUT-3-baseline.md",
   "result": "reports/sprints/REVIEW-THROUGHPUT-3-result.md",
   "diff_summary": "reports/sprints/REVIEW-THROUGHPUT-3-diff-summary.md",
+  "request_changes_corrections": "reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md",
   "final_verdict": "PASS WITH FLAGS",
   "protected_reference_data_changed": false,
   "generated_output_changed": false,
@@ -101,6 +102,19 @@
         "blocks": "Autonomous merge of this governance change.",
         "does_not_block": "Does not block routing the draft PR to READY_FOR_HUMAN_REVIEW and marking it ready.",
         "proof_required_to_close": "Final PR-readiness run routes the implementation PR to human review after remote CI/checker evidence."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-F7",
+        "description": "Post-review trust-boundary hardening keeps remote-derived GitHub evidence immutable, removes synthetic autonomous proof, requires validate-platform, verifies evidence tails by comparison, and adds final transition re-fetch.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md",
+          "build-scripts/review-gates/pr-readiness-router.test.js",
+          "build-scripts/review-gates/pr-readiness-governance-surfaces.js"
+        ],
+        "blocks": "None after final exact-head lead review and PR-readiness rerun.",
+        "does_not_block": "Does not authorize auto-merge or branch-protection weakening.",
+        "proof_required_to_close": "Focused hardening tests, platform validation, exact-head lead review, remote CI, and final readiness comment pass."
       }
     ],
     "flags": [

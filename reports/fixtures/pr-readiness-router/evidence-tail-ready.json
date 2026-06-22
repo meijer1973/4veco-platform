@@ -23,7 +23,17 @@
   "proof": {
     "ci": {
       "head_sha": "bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc",
-      "conclusion": "success"
+      "conclusion": "success",
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED"
+        }
+      ]
     },
     "checkers": [
       {
@@ -48,6 +58,10 @@
         "evidence_only": true
       }
     ],
-    "changed_paths_verified": true
+    "changed_paths_verified": true,
+    "post_lead_review_changed_paths": [
+      "reports/sprints/TAIL-lead-review-round2.md",
+      "reports/url-index.md"
+    ]
   }
 }

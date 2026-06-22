@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T11:20:26.497Z
+Generated: 2026-06-22T12:45:17.410Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/pr-readiness-router-20260622`
-Source commit: `3d66a5eee977d9c77366764a89593b6300d18c30`
-Files indexed: 5719
+Source commit: `c7ebb8176f34570a9cb2d6ef2ed24b9c936bb773`
+Files indexed: 5760
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -30,11 +30,12 @@ Count: 11
 
 ## agents
 
-Count: 8
+Count: 9
 
 - agents/accessibility-agent.md
 - agents/econ-companion-visual-review.md
 - agents/lead-reviewer-agent.md
+- agents/pr-readiness-reviewer-agent.md
 - agents/README.md
 - agents/student-experience-review-agent.md
 - agents/teacher-learning-quality-review-agent.md
@@ -133,7 +134,7 @@ Count: 85
 
 ## build scripts
 
-Count: 530
+Count: 534
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -475,6 +476,7 @@ Count: 530
 - build-scripts/reports/terms-coverage.js
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/apply-pr-readiness-decision.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
 - build-scripts/review-gates/capture-gate-reason-revision1-playable-proof.js
 - build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js
@@ -502,6 +504,9 @@ Count: 530
 - build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
+- build-scripts/review-gates/pr-readiness-router.js
+- build-scripts/review-gates/pr-readiness-router.test.js
+- build-scripts/review-gates/review-pr-readiness.js
 - build-scripts/review-gates/review-throughput-fields.js
 - build-scripts/review-gates/review-throughput-fields.test.js
 - build-scripts/review-gates/validate-gate.js
@@ -1243,7 +1248,7 @@ Count: 523
 
 ## references
 
-Count: 673
+Count: 675
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1641,6 +1646,8 @@ Count: 673
 - references/data/sprints/REVIEW-THROUGHPUT-1.result.json
 - references/data/sprints/REVIEW-THROUGHPUT-2.plan.json
 - references/data/sprints/REVIEW-THROUGHPUT-2.result.json
+- references/data/sprints/REVIEW-THROUGHPUT-3.plan.json
+- references/data/sprints/REVIEW-THROUGHPUT-3.result.json
 - references/data/sprints/RX.1-representation-operation-inventory.json
 - references/data/sprints/RX.1.plan.json
 - references/data/sprints/RX.1.result.json
@@ -1921,7 +1928,7 @@ Count: 673
 
 ## reports
 
-Count: 3717
+Count: 3749
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1943,6 +1950,26 @@ Count: 3717
 - reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
 - reports/fixtures/golden-ticket-layout/hybrid-frankenstein-exit-ticket.html
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
+- reports/fixtures/pr-readiness-router/apply-ready-decision.json
+- reports/fixtures/pr-readiness-router/apply-ready-pr.json
+- reports/fixtures/pr-readiness-router/apply-stale-pr.json
+- reports/fixtures/pr-readiness-router/cross-repo-incomplete-revise.json
+- reports/fixtures/pr-readiness-router/evidence-tail-ready.json
+- reports/fixtures/pr-readiness-router/l0-mechanical-ready.json
+- reports/fixtures/pr-readiness-router/l1-checker-ready-branch-protection.json
+- reports/fixtures/pr-readiness-router/l2-owner-preapproved-ready.json
+- reports/fixtures/pr-readiness-router/l3-substantial-human.json
+- reports/fixtures/pr-readiness-router/l3-thin-batch.json
+- reports/fixtures/pr-readiness-router/l4-router-self-human.json
+- reports/fixtures/pr-readiness-router/l4-small-spec-human.json
+- reports/fixtures/pr-readiness-router/lead-stale-substantive-revise.json
+- reports/fixtures/pr-readiness-router/live-governance-human.json
+- reports/fixtures/pr-readiness-router/live-l1-ready.json
+- reports/fixtures/pr-readiness-router/merge-conflict-revise.json
+- reports/fixtures/pr-readiness-router/missing-stale-ci-revise.json
+- reports/fixtures/pr-readiness-router/pause-escalate-blocker.json
+- reports/fixtures/pr-readiness-router/unresolved-review-revise.json
+- reports/fixtures/pr-readiness-router/workflow-permission-human.json
 - reports/fixtures/review-throughput-1/negative-ci-success-no-reviewed-sha.json
 - reports/fixtures/review-throughput-1/negative-diagnostics-authority.json
 - reports/fixtures/review-throughput-1/negative-empty-changed-paths.json
@@ -5096,6 +5123,18 @@ Count: 3717
 - reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md
 - reports/sprints/REVIEW-THROUGHPUT-2-plan.md
 - reports/sprints/REVIEW-THROUGHPUT-2-result.md
+- reports/sprints/REVIEW-THROUGHPUT-3-baseline.md
+- reports/sprints/REVIEW-THROUGHPUT-3-branch-protection.md
+- reports/sprints/REVIEW-THROUGHPUT-3-command-log.jsonl
+- reports/sprints/REVIEW-THROUGHPUT-3-command-log.md
+- reports/sprints/REVIEW-THROUGHPUT-3-diff-summary.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-assignment.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-corrections.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round1.md
+- reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round2.md
+- reports/sprints/REVIEW-THROUGHPUT-3-live-dry-run.md
+- reports/sprints/REVIEW-THROUGHPUT-3-plan.md
+- reports/sprints/REVIEW-THROUGHPUT-3-result.md
 - reports/sprints/REVIEW-THROUGHPUT-PR58-PACKET-1-result.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
@@ -5661,7 +5700,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 612
+Count: 614
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5974,6 +6013,8 @@ Count: 612
 - docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
+- docs/review/pr-readiness-decision.schema.json
+- docs/review/pr-readiness-routing-policy.md
 - docs/review/pr-throughput-policy.md
 - docs/review/review-packet-throughput.schema.json
 - docs/roadmaps/final-codex-handoff-roadmap-original.md

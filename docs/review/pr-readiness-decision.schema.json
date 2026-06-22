@@ -3,7 +3,7 @@
   "$id": "https://github.com/meijer1973/4veco-platform/docs/review/pr-readiness-decision.schema.json",
   "title": "4veco PR readiness decision",
   "type": "object",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "required": [
     "schema_version",
     "reviewed_pr",
@@ -23,7 +23,7 @@
     },
     "reviewed_pr": {
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [
         "repo",
         "number",
@@ -62,7 +62,7 @@
     },
     "throughput": {
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [
         "class",
         "authority_class",
@@ -108,7 +108,7 @@
     },
     "batching": {
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [
         "viable",
         "target",
@@ -152,12 +152,14 @@
     },
     "proof": {
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [
         "ci_head_sha",
+        "ci_status",
         "lead_review_path",
         "lead_review_result",
         "lead_reviewed_sha",
+        "lead_review_evidence_tail_allowed",
         "changed_paths_verified"
       ],
       "properties": {
@@ -166,6 +168,49 @@
             "string",
             "null"
           ]
+        },
+        "ci_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ci_required_contexts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ci_missing_contexts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ci_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "conclusion"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "conclusion": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
         },
         "lead_review_path": {
           "type": [
@@ -187,6 +232,26 @@
         },
         "changed_paths_verified": {
           "type": "boolean"
+        },
+        "lead_review_evidence_tail_allowed": {
+          "type": "boolean"
+        },
+        "post_lead_review_changed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "checkers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "branch_protection": {
+          "type": "object",
+          "additionalProperties": true
         }
       }
     },
@@ -199,6 +264,143 @@
     },
     "human_notification_required": {
       "type": "boolean"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "follow_up": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "escalation_signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "auto_merge": {
+      "const": false
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "enum": [
+              "KEEP_DRAFT_REVISE",
+              "KEEP_DRAFT_BATCH",
+              "PAUSE_ESCALATE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "allowed_transition": {
+            "const": "NONE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "allowed_transition": {
+            "const": "MARK_READY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "const": "READY_FOR_LEAD_ONLY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "throughput": {
+            "properties": {
+              "level": {
+                "enum": [
+                  "L0",
+                  "L1",
+                  "L2"
+                ]
+              }
+            }
+          },
+          "human_review_payload": {
+            "const": "none"
+          },
+          "human_notification_required": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "const": "READY_FOR_HUMAN_REVIEW"
+          }
+        }
+      },
+      "then": {
+        "anyOf": [
+          {
+            "properties": {
+              "throughput": {
+                "properties": {
+                  "level": {
+                    "enum": [
+                      "L3",
+                      "L4"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "properties": {
+              "human_review_payload": {
+                "const": "consequential_exception"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "human_notification_required": {
+            "const": true
+          }
+        }
+      }
+    }
+  ]
 }

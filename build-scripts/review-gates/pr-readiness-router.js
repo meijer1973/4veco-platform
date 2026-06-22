@@ -1,3 +1,9 @@
+const {
+  isEvidenceTailPath,
+  isGovernanceSurface,
+  normalizePath,
+} = require('./pr-readiness-governance-surfaces');
+
 const ROUTES = Object.freeze({
   KEEP_DRAFT_REVISE: 'KEEP_DRAFT_REVISE',
   KEEP_DRAFT_BATCH: 'KEEP_DRAFT_BATCH',
@@ -17,16 +23,7 @@ const AUTONOMOUS_LEVELS = new Set(['L0', 'L1', 'L2']);
 const PASSING_LEAD_RESULTS = new Set(['PASS', 'PASS WITH FLAGS']);
 const HUMAN_PAYLOADS = new Set(['none', 'thin', 'substantial', 'consequential_exception']);
 const SHA_PATTERN = /^[a-f0-9]{40}$/i;
-
-const GOVERNANCE_PATH_PATTERNS = [
-  /^agents\/pr-readiness-reviewer-agent\.md$/i,
-  /^build-scripts\/review-gates\/pr-readiness-router(?:\.test)?\.js$/i,
-  /^build-scripts\/review-gates\/review-pr-readiness\.js$/i,
-  /^build-scripts\/review-gates\/apply-pr-readiness-decision\.js$/i,
-  /^docs\/review\/pr-readiness-/i,
-  /^docs\/review\/pr-throughput-policy\.md$/i,
-  /^\.github\/workflows\//i,
-];
+const DEFAULT_REQUIRED_CI_CONTEXTS = Object.freeze(['validate-platform']);
 
 const PROTECTED_REFERENCE_PATTERNS = [
   /^references\/authored\//i,
@@ -40,13 +37,6 @@ const MACHINE_EXTERNAL_REFERENCE_PATTERNS = [
   /^references\/external\//i,
 ];
 
-function normalizePath(value) {
-  return String(value || '')
-    .replace(/\\/g, '/')
-    .replace(/^\.\//, '')
-    .replace(/^\.\.\/4veco-platform\//, '');
-}
-
 function uniqueStrings(values) {
   return [...new Set((values || []).map((item) => String(item || '').trim()).filter(Boolean))];
 }
@@ -57,6 +47,42 @@ function normalizeVerdict(value) {
 
 function successStatus(value) {
   return /^(success|succeeded|passed|pass|ok|neutral)$/i.test(String(value || '').trim());
+}
+
+function requiredCiContexts(proof) {
+  const ci = proof.ci || {};
+  const configured =
+    proof.required_ci_contexts ||
+    proof.required_status_contexts ||
+    ci.required_contexts ||
+    ci.required_status_contexts ||
+    DEFAULT_REQUIRED_CI_CONTEXTS;
+  return uniqueStrings(asArray(configured));
+}
+
+function checkNames(check) {
+  return uniqueStrings([
+    check.name,
+    check.context,
+    check.workflowName,
+    check.workflow_name,
+  ]);
+}
+
+function requiredContextsProof(proof) {
+  const ci = proof.ci || {};
+  const checks = asArray(proof.status_checks || proof.checks || ci.checks || ci.status_checks);
+  const required = requiredCiContexts(proof);
+  const missing = required.filter((context) => {
+    const matching = checks.find((check) => checkNames(check).includes(context));
+    return !matching || !successStatus(matching.conclusion || matching.status || matching.state || matching.result);
+  });
+  return {
+    ok: missing.length === 0,
+    required,
+    missing,
+    checks,
+  };
 }
 
 function asArray(value) {
@@ -164,7 +190,7 @@ function pathMatches(paths, patterns) {
 function collectEscalationSignals(evidence) {
   const paths = evidence.changed_paths || [];
   const signals = { ...evidence.risk_signals };
-  if (pathMatches(paths, GOVERNANCE_PATH_PATTERNS)) signals.review_autonomy_governance_change = true;
+  if (paths.some(isGovernanceSurface)) signals.review_autonomy_governance_change = true;
   if (pathMatches(paths, PROTECTED_REFERENCE_PATTERNS)) signals.protected_reference_touched = true;
   if (pathMatches(paths, MACHINE_EXTERNAL_REFERENCE_PATTERNS)) signals.machine_external_reference_touched = true;
   if (paths.some((file) => /^\.github\/workflows\//i.test(file)) && signals.workflow_permission_increase !== false) {
@@ -204,15 +230,18 @@ function ciProof(proof, headSha) {
   const ci = proof.ci || {};
   const sha = proof.ci_head_sha || ci.head_sha || ci.reviewed_commit_sha || ci.reviewed_remote_commit_sha;
   const status = proof.ci_status || ci.conclusion || ci.status || ci.result;
+  const contexts = requiredContextsProof(proof);
   if (proof.ci_waiver === true) {
-    return { ok: true, waived: true, sha: sha || null, status: 'waived' };
+    return { ok: true, waived: true, sha: sha || null, status: 'waived', contexts };
   }
   return {
-    ok: Boolean(sha && sha === headSha && successStatus(status)),
+    ok: Boolean(sha && sha === headSha && successStatus(status) && contexts.ok),
     stale: Boolean(sha && headSha && sha !== headSha),
     missing: !sha || !status,
+    missingRequiredContext: !contexts.ok,
     sha: sha || null,
     status: status || null,
+    contexts,
   };
 }
 
@@ -229,12 +258,14 @@ function leadProof(proof, headSha) {
   const lead = proof.lead_review || {};
   const result = normalizeVerdict(lead.result);
   const reviewedSha = lead.reviewed_commit_sha || lead.reviewed_sha || lead.reviewed_remote_commit_sha;
-  const afterLead = asArray(proof.post_lead_review_changes || lead.post_review_changes);
+  const afterLeadPaths = uniqueStrings(
+    asArray(proof.post_lead_review_changed_paths || lead.post_review_changed_paths).map(normalizePath)
+  );
   const evidenceOnlyTail =
     reviewedSha &&
     reviewedSha !== headSha &&
-    afterLead.length > 0 &&
-    afterLead.every((item) => item.evidence_only === true || /^(evidence|packet|lead_review|metadata|index)$/i.test(item.kind || ''));
+    afterLeadPaths.length > 0 &&
+    afterLeadPaths.every(isEvidenceTailPath);
 
   return {
     ok: Boolean(
@@ -245,6 +276,13 @@ function leadProof(proof, headSha) {
     ),
     stale: Boolean(reviewedSha && headSha && reviewedSha !== headSha && !evidenceOnlyTail),
     evidenceOnlyTail,
+    postLeadReviewChangedPaths: afterLeadPaths,
+    disallowedEvidenceTail: Boolean(
+      reviewedSha &&
+        reviewedSha !== headSha &&
+        afterLeadPaths.length > 0 &&
+        !afterLeadPaths.every(isEvidenceTailPath)
+    ),
     lead,
     result,
     reviewedSha: reviewedSha || null,
@@ -274,6 +312,7 @@ function collectRevisionReasons(evidence) {
   const ci = ciProof(proof, headSha);
   const checkers = checkerProof(proof);
   const lead = leadProof(proof, headSha);
+  const autonomousLevel = AUTONOMOUS_LEVELS.has(evidence.throughput.level);
 
   if (!evidence.reviewed_pr.repo || !evidence.reviewed_pr.number || !evidence.reviewed_pr.url) {
     reasons.push('missing_remote_pr_identity');
@@ -288,8 +327,21 @@ function collectRevisionReasons(evidence) {
   }
   if (!SHA_PATTERN.test(String(headSha || ''))) reasons.push('missing_or_invalid_remote_head_sha');
   if (proof.changed_paths_verified !== true) reasons.push('changed_paths_not_verified');
-  if (!ci.ok) reasons.push(ci.stale ? 'ci_not_current_head' : 'ci_proof_missing_or_not_successful');
+  if (autonomousLevel && proof.ci_waiver === true) reasons.push('ci_waiver_not_allowed_for_autonomous_lane');
+  if (autonomousLevel && proof.checkers_required === false) {
+    reasons.push('checker_waiver_not_allowed_for_autonomous_lane');
+  }
+  if (!ci.ok) {
+    reasons.push(
+      ci.stale
+        ? 'ci_not_current_head'
+        : ci.missingRequiredContext
+          ? 'required_ci_context_missing_or_not_successful'
+          : 'ci_proof_missing_or_not_successful'
+    );
+  }
   if (!checkers.ok) reasons.push('checker_proof_missing_or_not_successful');
+  if (proof.lead_review_compare_unavailable === true) reasons.push('lead_review_compare_unavailable');
   if (!lead.ok) reasons.push(lead.stale ? 'lead_review_stale_after_substantive_change' : 'lead_review_missing_or_not_passing');
   if (proof.review_threads_unavailable === true) reasons.push('review_threads_unavailable');
   if (proof.unresolved_review_threads === true) reasons.push('unresolved_review_threads');
@@ -334,10 +386,17 @@ function proofSummary(evidence, collected) {
   return {
     ci_head_sha: collected.ci.sha,
     ci_status: collected.ci.status,
+    ci_required_contexts: collected.ci.contexts.required,
+    ci_missing_contexts: collected.ci.contexts.missing,
+    ci_checks: collected.ci.contexts.checks.map((check) => ({
+      name: check.name || check.context || check.workflowName || check.workflow_name || 'unknown',
+      conclusion: check.conclusion || check.status || check.state || check.result || null,
+    })),
     lead_review_path: collected.lead.lead.path || null,
     lead_review_result: collected.lead.result || null,
     lead_reviewed_sha: collected.lead.reviewedSha,
     lead_review_evidence_tail_allowed: collected.lead.evidenceOnlyTail,
+    post_lead_review_changed_paths: collected.lead.postLeadReviewChangedPaths,
     changed_paths_verified: evidence.proof.changed_paths_verified === true,
     checkers: collected.checkers.checkers,
     branch_protection: branchProtection,
@@ -467,6 +526,45 @@ function validateDecision(decision) {
   if (!HUMAN_PAYLOADS.has(decision.human_review_payload)) {
     throw new Error(`unsupported human_review_payload: ${decision.human_review_payload}`);
   }
+  const readyRoutes = new Set([ROUTES.READY_FOR_LEAD_ONLY, ROUTES.READY_FOR_HUMAN_REVIEW]);
+  const nonTransitionRoutes = new Set([ROUTES.KEEP_DRAFT_REVISE, ROUTES.KEEP_DRAFT_BATCH, ROUTES.PAUSE_ESCALATE]);
+  if (nonTransitionRoutes.has(decision.route) && decision.allowed_transition !== ALLOWED_TRANSITIONS.NONE) {
+    throw new Error(`${decision.route} must have allowed_transition NONE`);
+  }
+  if (!readyRoutes.has(decision.route) && decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY) {
+    throw new Error('MARK_READY transition is only valid for ready routes');
+  }
+  if (
+    decision.route === ROUTES.READY_FOR_LEAD_ONLY &&
+    (!AUTONOMOUS_LEVELS.has(decision.throughput.level) || decision.human_review_payload !== 'none')
+  ) {
+    throw new Error('READY_FOR_LEAD_ONLY requires L0-L2 with no human payload');
+  }
+  if (
+    decision.route === ROUTES.READY_FOR_HUMAN_REVIEW &&
+    LEVEL_WEIGHT[decision.throughput.level] < 3 &&
+    decision.human_review_payload !== 'consequential_exception'
+  ) {
+    throw new Error('READY_FOR_HUMAN_REVIEW requires L3/L4 or consequential_exception');
+  }
+  if (decision.route === ROUTES.READY_FOR_HUMAN_REVIEW && decision.auto_merge === true) {
+    throw new Error('READY_FOR_HUMAN_REVIEW must not permit auto_merge');
+  }
+  if (readyRoutes.has(decision.route)) {
+    if (decision.proof.changed_paths_verified !== true) {
+      throw new Error(`${decision.route} requires changed_paths_verified proof`);
+    }
+    if (decision.proof.ci_head_sha !== decision.reviewed_pr.head_sha) {
+      throw new Error(`${decision.route} requires CI proof for reviewed head`);
+    }
+    if (
+      decision.proof.lead_reviewed_sha &&
+      decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
+      decision.proof.lead_review_evidence_tail_allowed !== true
+    ) {
+      throw new Error(`${decision.route} requires lead review for reviewed head or verified evidence-only tail`);
+    }
+  }
   return true;
 }
 
@@ -504,6 +602,18 @@ function renderDecisionMarkdown(decision) {
   if (Array.isArray(decision.follow_up) && decision.follow_up.length > 0) {
     lines.push('', '## Follow Up', '', ...decision.follow_up.map((item) => `- ${item}`));
   }
+  lines.push(
+    '',
+    '## Proof Summary',
+    '',
+    `- CI head: \`${decision.proof.ci_head_sha || 'missing'}\``,
+    `- CI status: \`${decision.proof.ci_status || 'missing'}\``,
+    `- Required CI contexts: ${(decision.proof.ci_required_contexts || []).map((item) => `\`${item}\``).join(', ') || 'none recorded'}`,
+    `- Checker proof: ${(decision.proof.checkers || []).map((checker) => `\`${checker.command || 'unknown'}:${checker.status || checker.conclusion || checker.result || 'unknown'}\``).join(', ') || 'none recorded'}`,
+    `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``,
+    `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
+    `- Branch protection: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
+  );
   lines.push('');
   return `${lines.join('\n')}\n`;
 }

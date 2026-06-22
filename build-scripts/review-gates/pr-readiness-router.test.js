@@ -15,12 +15,36 @@ const {
   applyDecisionToState,
   verifyTransitionPreconditions,
 } = require('./apply-pr-readiness-decision');
-const { runReview } = require('./review-pr-readiness');
+const { mergeSupplementalEvidence, runReview } = require('./review-pr-readiness');
+const { GOVERNANCE_SURFACE_TEST_PATHS } = require('./pr-readiness-governance-surfaces');
 
 const FIXTURE_DIR = path.join(process.cwd(), 'reports', 'fixtures', 'pr-readiness-router');
 
 function readFixture(name) {
   return JSON.parse(fs.readFileSync(path.join(FIXTURE_DIR, name), 'utf8'));
+}
+
+function explicitProof(sha) {
+  return {
+    ci: {
+      head_sha: sha,
+      conclusion: 'success',
+      required_contexts: ['validate-platform'],
+      checks: [{ name: 'validate-platform', conclusion: 'SUCCESS' }],
+    },
+    checkers: [
+      {
+        command: 'npm.cmd run check:platform',
+        status: 'passed',
+      },
+    ],
+    lead_review: {
+      path: 'reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md',
+      result: 'PASS',
+      reviewed_commit_sha: sha,
+    },
+    changed_paths_verified: true,
+  };
 }
 
 const ROUTER_CASES = [
@@ -89,8 +113,7 @@ describe('pr-readiness-router', () => {
       head_sha: 'abababababababababababababababababababab',
     };
     const common = {
-      reviewedCommitSha: reviewedPr.head_sha,
-      leadReviewPath: 'reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md',
+      proof: explicitProof(reviewedPr.head_sha),
     };
     const packets = [
       mechanicalAutonomousThroughputFields({
@@ -138,6 +161,148 @@ describe('pr-readiness-router', () => {
     expect(decision.route).toBe('KEEP_DRAFT_REVISE');
     expect(decision.reason_codes).toContain('review_threads_unavailable');
   });
+
+  test('supplemental evidence cannot replace remote-derived PR facts', () => {
+    const remote = {
+      ...readFixture('live-l1-ready.json'),
+      proof: {
+        ...readFixture('live-l1-ready.json').proof,
+        requested_changes: true,
+        unresolved_review_threads: true,
+      },
+    };
+    const merged = mergeSupplementalEvidence(remote, {
+      reviewed_pr: {
+        head_sha: 'ffffffffffffffffffffffffffffffffffffffff',
+        state: 'MERGED',
+      },
+      changed_paths: ['docs/review/pr-throughput-policy.md'],
+      proof: {
+        ci: {
+          head_sha: 'ffffffffffffffffffffffffffffffffffffffff',
+          conclusion: 'success',
+        },
+        requested_changes: false,
+        unresolved_review_threads: false,
+        checkers: [{ command: 'npm.cmd run check:platform', status: 'passed' }],
+      },
+    });
+
+    expect(merged.reviewed_pr.head_sha).toBe(remote.reviewed_pr.head_sha);
+    expect(merged.reviewed_pr.state).toBe('OPEN');
+    expect(merged.changed_paths).toEqual(remote.changed_paths);
+    expect(merged.proof.ci.head_sha).toBe(remote.proof.ci.head_sha);
+    expect(merged.proof.requested_changes).toBe(true);
+    expect(merged.proof.unresolved_review_threads).toBe(true);
+  });
+
+  test('L0-L2 lanes reject CI and checker waivers', () => {
+    const fixture = readFixture('l0-mechanical-ready.json');
+    const ciWaived = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        ci_waiver: true,
+      },
+    });
+    expect(ciWaived.route).toBe('KEEP_DRAFT_REVISE');
+    expect(ciWaived.reason_codes).toContain('ci_waiver_not_allowed_for_autonomous_lane');
+
+    const checkerWaived = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        checkers_required: false,
+      },
+    });
+    expect(checkerWaived.route).toBe('KEEP_DRAFT_REVISE');
+    expect(checkerWaived.reason_codes).toContain('checker_waiver_not_allowed_for_autonomous_lane');
+  });
+
+  test('L0-L2 lanes reject missing explicit checker proof', () => {
+    const fixture = readFixture('l1-checker-ready-branch-protection.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        checkers: [],
+      },
+    });
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('checker_proof_missing_or_not_successful');
+  });
+
+  test('evidence-only tails use actual changed paths, not self-declared labels', () => {
+    const fixture = readFixture('evidence-tail-ready.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        post_lead_review_changes: [
+          {
+            path: 'build-scripts/review-gates/pr-readiness-router.js',
+            kind: 'evidence',
+            evidence_only: true,
+          },
+        ],
+        post_lead_review_changed_paths: ['build-scripts/review-gates/pr-readiness-router.js'],
+      },
+    });
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('lead_review_stale_after_substantive_change');
+  });
+
+  test('missing validate-platform is rejected even when another check is green', () => {
+    const fixture = readFixture('live-l1-ready.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        ci: {
+          ...fixture.proof.ci,
+          checks: [{ name: 'lint', conclusion: 'SUCCESS' }],
+        },
+      },
+    });
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('required_ci_context_missing_or_not_successful');
+  });
+
+  test('decision validator rejects inconsistent route and transition combinations', () => {
+    const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
+    expect(() =>
+      validateDecision({
+        ...decision,
+        route: 'KEEP_DRAFT_REVISE',
+        allowed_transition: 'MARK_READY',
+      })
+    ).toThrow('KEEP_DRAFT_REVISE must have allowed_transition NONE');
+    expect(() =>
+      validateDecision({
+        ...decision,
+        route: 'READY_FOR_LEAD_ONLY',
+        throughput: { ...decision.throughput, level: 'L4' },
+      })
+    ).toThrow('READY_FOR_LEAD_ONLY requires L0-L2 with no human payload');
+  });
+
+  test('rendered decision comment includes concise proof summary', () => {
+    const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
+    const markdown = renderDecisionMarkdown(decision);
+    expect(markdown).toContain('## Proof Summary');
+    expect(markdown).toContain('validate-platform');
+    expect(markdown).toContain('reports/sprints/LIVE-L1-lead-review-round2.md');
+  });
+
+  test.each(GOVERNANCE_SURFACE_TEST_PATHS)('governance surface %s forces human review', (changedPath) => {
+    const fixture = readFixture('live-l1-ready.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      changed_paths: [changedPath],
+    });
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.reason_codes).toContain('review_autonomy_governance_change');
+  });
 });
 
 describe('apply-pr-readiness-decision', () => {
@@ -176,5 +341,16 @@ describe('apply-pr-readiness-decision', () => {
     expect(result.comment_action).toBe('would_update_comment');
     expect(currentPr.comments).toHaveLength(1);
     expect(currentPr.comments[0].body).toContain('PR Readiness Decision');
+  });
+
+  test('head change immediately before mutation prevents marking ready', () => {
+    const decision = readFixture('apply-ready-decision.json');
+    const currentPr = readFixture('apply-ready-pr.json');
+    const finalPr = {
+      ...currentPr,
+      head_sha: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    };
+
+    expect(() => applyDecisionToState(decision, currentPr, { dryRun: true, finalPr })).toThrow('head_sha_changed');
   });
 });

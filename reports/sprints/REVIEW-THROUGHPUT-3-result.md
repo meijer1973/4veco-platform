@@ -18,6 +18,8 @@ Status: completed as PASS WITH FLAGS after router validation, live wrapper dry-r
 
 The sprint also extends the review-throughput helper constructors for L0, L1, and L2 packets, refreshes review policy docs and agent maps, and keeps live decisions out of branch artifacts by using idempotent PR comments keyed by reviewed head. Because this sprint changes review-governance and autonomy machinery, its implementation PR must route to human review and must not auto-merge.
 
+After PR `#137` received REQUEST_CHANGES on head `c7ebb8176f34570a9cb2d6ef2ed24b9c936bb773`, the PR was returned to draft and the trust-boundary hardening in `reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md` was applied. The hardened package locks remote-derived GitHub evidence, requires protected `validate-platform` proof, removes synthetic autonomous proof, adds a final pre-transition fetch, verifies evidence-only tails from actual compare paths, centralizes governance surfaces, and strengthens decision validation/audit comments.
+
 ## Acceptance test results
 
 | Command | Status |
@@ -53,6 +55,7 @@ The sprint also extends the review-throughput helper constructors for L0, L1, an
 - Updated `package.json` with `review:pr-readiness`, `apply:pr-readiness`, and `check:pr-readiness`.
 - Updated `docs/review/pr-throughput-policy.md`, `AGENTS.md`, `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, generated GitHub agent indexes, URL index, and internal dashboard output.
 - Added sprint plan, baseline, branch-protection report, live dry-run report, command log, lead-review records, corrections, result metadata, and diff summary.
+- Added `reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md` for the post-human-review trust-boundary hardening pass.
 
 ## Data integrity notes
 

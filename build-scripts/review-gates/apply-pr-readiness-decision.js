@@ -81,6 +81,7 @@ function verifyTransitionPreconditions(decision, currentPr) {
   const failures = [];
   if (currentPr.repo !== decision.reviewed_pr.repo) failures.push('repository_mismatch');
   if (currentPr.number !== decision.reviewed_pr.number) failures.push('pr_number_mismatch');
+  if (currentPr.base !== decision.reviewed_pr.base) failures.push('base_branch_changed');
   if (currentPr.head_sha !== decision.reviewed_pr.head_sha) failures.push('head_sha_changed');
   if (currentPr.state !== 'OPEN') failures.push('pr_not_open');
   if (
@@ -139,6 +140,8 @@ function applyDecisionToState(decision, currentPr, options = {}) {
 
   if (decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY) {
     if (currentPr.is_draft) {
+      const finalPr = options.finalPr || currentPr;
+      verifyTransitionPreconditions(decision, finalPr);
       result.transition_action = options.dryRun ? 'would_mark_ready' : 'marked_ready';
       currentPr.is_draft = false;
     } else {
@@ -171,6 +174,8 @@ function applyLiveDecision(decision, options) {
   let transitionAction = 'none';
   if (decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY) {
     if (currentPr.is_draft) {
+      const finalPr = options.dryRun ? currentPr : fetchCurrentPr(repo, number);
+      verifyTransitionPreconditions(decision, finalPr);
       if (!options.dryRun) runGh(['pr', 'ready', String(number), '--repo', repo]);
       transitionAction = options.dryRun ? 'would_mark_ready' : 'marked_ready';
     } else {

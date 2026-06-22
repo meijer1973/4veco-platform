@@ -53,6 +53,7 @@ Inspect the remote PR and supporting evidence:
 - additions, deletions, and changed-file count as diagnostics only
 - mergeability and merge-state information
 - status checks and the commit to which they apply
+- required protected status context, currently `validate-platform`
 - review decision, requested changes, and unresolved review threads
 - throughput packet and packet-checker result
 - lead-review path, result, and reviewed SHA
@@ -60,7 +61,10 @@ Inspect the remote PR and supporting evidence:
 - branch-protection requirements where observable
 
 Use `gh pr view`, `gh pr diff`, `gh api`, and existing repository checkers for
-live evidence. Do not infer current PR state from a local worktree.
+live evidence. Do not infer current PR state from a local worktree. Do not let
+supplemental implementation evidence replace remote PR identity, head, state,
+base, changed paths, mergeability, status checks, requested changes, or
+unresolved review-thread facts.
 
 ## Routing states
 
@@ -100,11 +104,14 @@ policy change can require human review; a large generated index refresh may not.
 Do not accept stale proof.
 
 - CI proof must apply to the current remote PR head.
+- L0, L1, and L2 routes must not use CI waivers or checker-proof waivers.
 - The decision must record the current remote head SHA.
 - Re-fetch the PR immediately before any state transition.
-- Abort the transition if the head changed after review.
+- Abort the transition if repo, PR number, base, state, or head changed after
+  review.
 - Lead review may predate the head only when every later path is an explicitly
-  allowed evidence-only tail.
+  allowed evidence-only tail computed from the GitHub comparison between the
+  lead-reviewed SHA and current head.
 - Do not commit per-PR routing decisions to the same branch after reviewing the
   head; record live routing decisions as idempotent GitHub comments keyed by
   the reviewed head SHA.
@@ -120,6 +127,9 @@ GitHub comment. The Markdown must include:
 ```
 
 Do not post duplicate decisions for the same head SHA.
+The Markdown must include CI context/head, checker summary, lead-review
+path/result/reviewed SHA, evidence-only tail status, and branch-protection
+constraint.
 
 ## Behavior rules
 

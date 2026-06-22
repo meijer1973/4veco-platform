@@ -9,6 +9,7 @@ const {
 } = require('./pr-readiness-router');
 
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
+const DEFAULT_REQUIRED_CI_CONTEXTS = Object.freeze(['validate-platform']);
 
 function fail(message) {
   console.error(`PR readiness review failed: ${message}`);
@@ -63,8 +64,28 @@ function parseStatusChecks(statusCheckRollup) {
   }));
 }
 
-function hasGreenChecks(checks) {
-  return checks.length > 0 && checks.every((check) => /^(success|completed|passed|neutral)$/i.test(String(check.conclusion || check.status || '')));
+function successStatus(value) {
+  return /^(success|succeeded|passed|pass|ok|neutral)$/i.test(String(value || '').trim());
+}
+
+function uniqueStrings(values) {
+  return [...new Set((values || []).map((item) => String(item || '').trim()).filter(Boolean))];
+}
+
+function checkNames(check) {
+  return uniqueStrings([
+    check.name,
+    check.context,
+    check.workflowName,
+    check.workflow_name,
+  ]);
+}
+
+function hasRequiredGreenChecks(checks, requiredContexts = DEFAULT_REQUIRED_CI_CONTEXTS) {
+  return requiredContexts.every((context) => {
+    const matching = checks.find((check) => checkNames(check).includes(context));
+    return matching && successStatus(matching.conclusion || matching.status || matching.state || matching.result);
+  });
 }
 
 function repoParts(repo) {
@@ -124,6 +145,14 @@ function collectReviewThreadState(repo, prNumber) {
     unresolved_count: threads.filter((thread) => thread && thread.isResolved === false).length,
     requested_changes_count: reviews.filter((review) => review && review.state === 'CHANGES_REQUESTED').length,
   };
+}
+
+function collectComparePaths(repo, baseSha, headSha) {
+  if (!baseSha || !headSha || baseSha === headSha) return [];
+  const raw = runGh(['api', `repos/${repo}/compare/${baseSha}...${headSha}`], { optional: true });
+  if (!raw) return null;
+  const data = JSON.parse(raw);
+  return ((data && data.files) || []).map((file) => file.filename).filter(Boolean);
 }
 
 function collectLiveEvidence(repo, prNumber) {
@@ -187,7 +216,8 @@ function collectLiveEvidence(repo, prNumber) {
     proof: {
       ci: {
         head_sha: view.headRefOid,
-        conclusion: hasGreenChecks(checks) ? 'success' : 'missing_or_pending',
+        conclusion: hasRequiredGreenChecks(checks) ? 'success' : 'missing_or_pending',
+        required_contexts: [...DEFAULT_REQUIRED_CI_CONTEXTS],
         checks,
       },
       checkers: [],
@@ -221,12 +251,67 @@ function mergeDeep(base, overlay) {
   return output;
 }
 
+function pickObject(value) {
+  return value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+}
+
+function mergeSupplementalEvidence(remoteEvidence, supplemental = {}) {
+  const output = mergeDeep({}, remoteEvidence);
+  const safe = pickObject(supplemental);
+
+  for (const key of ['throughput', 'review_autonomy', 'batching', 'bundle']) {
+    if (safe[key] && typeof safe[key] === 'object' && !Array.isArray(safe[key])) {
+      output[key] = mergeDeep(output[key] || {}, safe[key]);
+    }
+  }
+
+  for (const key of ['human_review_payload', 'consequence', 'human_decision_required', 'owner_preapproval', 'ownerPreapproval']) {
+    if (Object.prototype.hasOwnProperty.call(safe, key)) output[key] = safe[key];
+  }
+
+  const supplementalProof = pickObject(safe.proof);
+  output.proof = output.proof || {};
+  for (const key of ['checkers', 'lead_review', 'branch_protection', 'required_ci_contexts', 'checkers_required', 'ci_waiver']) {
+    if (Object.prototype.hasOwnProperty.call(supplementalProof, key)) {
+      output.proof[key] = supplementalProof[key];
+    }
+  }
+
+  if (safe.risk_signals && typeof safe.risk_signals === 'object' && !Array.isArray(safe.risk_signals)) {
+    output.risk_signals = output.risk_signals || {};
+    for (const [key, value] of Object.entries(safe.risk_signals)) {
+      if (value === true) output.risk_signals[key] = true;
+    }
+  }
+
+  return output;
+}
+
+function completeLeadReviewTailEvidence(evidence, options = {}) {
+  if (options.fixture) return evidence;
+  const lead = evidence.proof && evidence.proof.lead_review;
+  const reviewedSha = lead && (lead.reviewed_commit_sha || lead.reviewed_sha || lead.reviewed_remote_commit_sha);
+  const headSha = evidence.reviewed_pr && evidence.reviewed_pr.head_sha;
+  if (!reviewedSha || !headSha || reviewedSha === headSha) return evidence;
+  const paths = collectComparePaths(evidence.reviewed_pr.repo, reviewedSha, headSha);
+  evidence.proof = evidence.proof || {};
+  if (paths === null) {
+    evidence.proof.lead_review_compare_unavailable = true;
+    return evidence;
+  }
+  evidence.proof.post_lead_review_changed_paths = paths;
+  return evidence;
+}
+
 function runReview(options) {
   const evidence = options.fixture
     ? readJson(options.fixture)
     : collectLiveEvidence(options.repo || DEFAULT_REPO, options.prNumber);
   const supplemental = options.evidence ? readJson(options.evidence) : {};
-  const decision = classifyPrReadiness(mergeDeep(evidence, supplemental));
+  const mergedEvidence = completeLeadReviewTailEvidence(mergeSupplementalEvidence(evidence, supplemental), {
+    fixture: Boolean(options.fixture),
+  });
+  const decision = classifyPrReadiness(mergedEvidence);
   validateDecision(decision);
   return {
     decision,
@@ -270,8 +355,10 @@ if (require.main === module) {
 }
 
 module.exports = {
+  collectComparePaths,
   collectReviewThreadState,
   collectLiveEvidence,
   mergeDeep,
+  mergeSupplementalEvidence,
   runReview,
 };

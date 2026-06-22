@@ -11,6 +11,7 @@ This diff adds the PR Readiness Reviewer lane and the tooling needed to classify
 - New reviewer role and policy docs: `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, and `docs/review/pr-readiness-decision.schema.json`.
 - New review-gate tooling: `build-scripts/review-gates/pr-readiness-router.js`, `review-pr-readiness.js`, and `apply-pr-readiness-decision.js`.
 - New fixture and Jest coverage for L0/L1/L2 ready routes, L3/L4 human-review routes, batching, pause/escalate, stale CI/lead proof, evidence-only tails, merge blockers, unresolved review threads, branch-protection constraints, workflow-permission escalation, and stale-head executor refusal.
+- Additional request-changes hardening coverage for immutable remote evidence, explicit autonomous proof, waiver rejection, final pre-transition refetch, GitHub-comparison evidence tails, protected `validate-platform` context, governance-surface manifest coverage, and decision invariant validation.
 - New L0/L1/L2 throughput helper constructors in `build-scripts/review-gates/review-throughput-fields.js`.
 - Package scripts for `review:pr-readiness`, `apply:pr-readiness`, and `check:pr-readiness`.
 - Agent maps, GitHub indexes, URL index, internal dashboard, roadmap ledger, and sprint evidence refreshed.

@@ -111,23 +111,23 @@ function ownerDecisionGateThroughputFields(options = {}) {
 }
 
 function autonomousProof(options = {}) {
-  const proof = options.proof || {};
+  const proof = options.proof;
+  if (!proof || typeof proof !== 'object' || Array.isArray(proof)) {
+    throw new Error('proof is required for autonomous throughput fields');
+  }
+  if (!proof.ci || typeof proof.ci !== 'object' || Array.isArray(proof.ci)) {
+    throw new Error('proof.ci is required for autonomous throughput fields');
+  }
+  if (!Array.isArray(proof.checkers) || proof.checkers.length === 0) {
+    throw new Error('proof.checkers is required for autonomous throughput fields');
+  }
+  if (!proof.lead_review || typeof proof.lead_review !== 'object' || Array.isArray(proof.lead_review)) {
+    throw new Error('proof.lead_review is required for autonomous throughput fields');
+  }
   return {
-    ci: proof.ci || {
-      reviewed_commit_sha: options.reviewedCommitSha,
-      conclusion: 'success',
-    },
-    checkers: proof.checkers || [
-      {
-        command: options.checkerCommand || 'npm.cmd run check:platform',
-        status: 'passed',
-      },
-    ],
-    lead_review: proof.lead_review || {
-      path: options.leadReviewPath,
-      result: options.leadReviewResult || 'PASS',
-      reviewed_commit_sha: options.reviewedCommitSha,
-    },
+    ci: proof.ci,
+    checkers: proof.checkers,
+    lead_review: proof.lead_review,
   };
 }
 
@@ -142,7 +142,7 @@ function mechanicalAutonomousThroughputFields(options = {}) {
       rationale: options.rationale || 'Mechanical maintenance with no authority or generated-output change.',
     },
     humanDecisionRequired: false,
-    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === undefined ? true : options.autoMergeAllowedAfterCi,
+    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === true,
     bundleId: options.bundleId === undefined ? null : options.bundleId,
     pairedPrs: options.pairedPrs || [],
     escalationTriggers: options.escalationTriggers || [],
@@ -162,7 +162,7 @@ function leadReviewAutonomousThroughputFields(options = {}) {
       rationale: options.rationale || 'Normal sprint eligible for lead-review autonomous closure.',
     },
     humanDecisionRequired: false,
-    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === undefined ? true : options.autoMergeAllowedAfterCi,
+    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === true,
     bundleId: options.bundleId === undefined ? null : options.bundleId,
     pairedPrs: options.pairedPrs || [],
     escalationTriggers: options.escalationTriggers || [],
@@ -186,7 +186,7 @@ function ownerPreapprovedAutonomousThroughputFields(options = {}) {
       owner_preapproval: options.ownerPreapproval,
     },
     humanDecisionRequired: false,
-    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === undefined ? true : options.autoMergeAllowedAfterCi,
+    autoMergeAllowedAfterCi: options.autoMergeAllowedAfterCi === true,
     bundleId: options.bundleId === undefined ? null : options.bundleId,
     pairedPrs: options.pairedPrs || [],
     escalationTriggers: options.escalationTriggers || [],
