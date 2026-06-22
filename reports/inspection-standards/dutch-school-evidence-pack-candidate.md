@@ -199,9 +199,9 @@ Claims this candidate must not make.
 | Source | SHA-256 | Bytes |
 |---|---|---:|
 | `docs/roadmaps/quality-standards/quality-standards-end-state.md` | `10f9874eb12e5748991a0c92334ec74871dee9d64662591fc51aa2d0d65270ec` | 9039 |
-| `docs/roadmaps/quality-standards/inspection-standards-roadmap.md` | `7dc5a62476169bd606dfab15a48ee643f1c54acb4672af9e0bea808156322d69` | 45414 |
-| `docs/roadmaps/quality-standards/sprint-ledger.md` | `43e16f580d136bacfba8ba34a45a18f54f52547128ed837c2d39de363f7d70f7` | 53837 |
-| `references/data/inspection-standards/source-register.json` | `f65b2f6d786e67b7f22c99acf55a867d4f0192886d8fecaa26f40b8da3450e40` | 31051 |
+| `docs/roadmaps/quality-standards/inspection-standards-roadmap.md` | `ac937ba1f0b56d993da75e9cc4c4a4352d331cfa0c733ad60ec4374cf7de696d` | 46190 |
+| `docs/roadmaps/quality-standards/sprint-ledger.md` | `667d1b6404e17e572f4c12a59d5c04d7e3be3a5a6b7629c208e4eabe0718fcee` | 55676 |
+| `references/data/inspection-standards/source-register.json` | `97c1626411cd008aea4f107278fccafc3317405349a03796b05d0b83b0390805` | 31416 |
 | `references/data/inspection-standards/nl-vo-evidence-profile.v0.json` | `f2ff9d783b2f5d31b0fcf448b7b457f55bd198bb969872d45e514bbe4b45d326` | 31838 |
 | `docs/inspection-standards/nl-vo-evidence-model.md` | `7db63a506e0563af71060517bce5e62dc1323a2fa9fa7f778e8de20a4d51ba94` | 17478 |
 | `docs/inspection-standards/external-review-privacy-and-claim-guardrails.md` | `7e0c54ee324cc03046a404d67c67514b1cfbf56a144b2f4f53c2f1f7539d4d40` | 8946 |

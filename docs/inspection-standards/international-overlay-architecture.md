@@ -21,15 +21,16 @@ Sprint: `GOAL-IQS-FOUNDATION-1`
 
 | Requirement | Status | proof_required_to_close |
 |---|---|---|
-| `official_source_profiles`: Nine jurisdiction profiles use official-source anchors and record allowed use plus forbidden inference. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `governance_boundaries`: Flanders, England, Germany, Spain, and the United States retain explicit subnational or federal/state boundaries. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `common_core_matrix`: The shared common-core matrix distinguishes portable product-pedagogy from local overlay needs. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `differences_matrix`: The differences matrix names material divergences and the architecture response. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `overlay_architecture`: The overlay architecture separates shared core, local curriculum/exam overlays, source-evidence overlay, and school-owned evidence. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `book_portability_check`: Book 1 Chapters 1.2 and 1.3 are tested only as a bounded internal portability check. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `blocked_authority`: All forbidden authority flags remain false and visible. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `single_decision`: The foundation chooses exactly one allowed decision. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
-| `human_review_stop`: The packet returns for human review before any country edition, public/school-facing, product, or compliance step. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and human acceptance. |
+| `official_source_profiles`: Nine jurisdiction profiles use official-source anchors and record allowed use plus forbidden inference. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `quality_governance_coverage`: Each jurisdiction records inspection/evaluation, curriculum, examination, accountability, accreditation, and regional/state-overlay coverage status, with v0 gaps explicit. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `governance_boundaries`: Flanders, England, Germany, Spain, and the United States retain explicit subnational or federal/state boundaries. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `common_core_matrix`: The shared common-core matrix distinguishes portable product-pedagogy from local overlay needs. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `differences_matrix`: The differences matrix names material divergences and the architecture response. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `overlay_architecture`: The overlay architecture separates shared core, local curriculum/exam overlays, source-evidence overlay, and school-owned evidence. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `book_portability_check`: Book 1 Chapters 1.2 and 1.3 are tested only as a bounded internal portability check. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `blocked_authority`: All forbidden authority flags remain false and visible. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `single_decision`: The foundation chooses exactly one allowed decision. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
+| `human_review_stop`: The packet returns for human review before any country edition, public/school-facing, product, or compliance step. | `met_for_foundation` | Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied. |
 
 ## Four Layers
 
@@ -111,4 +112,4 @@ Blocked claims:
 - United Kingdom: England-only unless Scotland, Wales, or Northern Ireland are separately sourced.
 - Germany: KMK/federal context plus Land overlays.
 - Spain: national minimum curriculum plus autonomous-community overlays.
-- United States: federal context plus state/accreditation examples, not a national inspection regime.
+- United States: federal context plus state standards/accountability examples; accreditation and national inspection remain `not_covered_in_v0`.

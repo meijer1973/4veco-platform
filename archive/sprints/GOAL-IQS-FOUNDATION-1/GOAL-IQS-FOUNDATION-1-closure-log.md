@@ -7,7 +7,7 @@ Sprint: `GOAL-IQS-FOUNDATION-1`
 ## Product End-State And Original Spec
 
 - Product end-state:
-  `C:\Projects\4veco\4veco-lessen\specifications\product-end-state.md`
+  `../4veco-lessen/specifications/product-end-state.md`
 - Original sprint/gate spec:
   `archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md`
 - Human-review packet:

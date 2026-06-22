@@ -42,6 +42,17 @@ const REQUIRED_COMMON_CORE_IDS = [
   "safeguarding_product_school_boundaries",
 ];
 
+const REQUIRED_COVERAGE_FIELDS = [
+  "inspection_or_school_evaluation",
+  "curriculum",
+  "examination",
+  "accountability",
+  "accreditation",
+  "regional_or_state_overlay",
+  "coverage_status",
+  "coverage_gap",
+];
+
 const REFUSAL_CASES = [
   [["--compliance"], "STOP_COMPLIANCE_APPROVAL_CLAIM"],
   [["--country-compliant"], "STOP_COMPLIANCE_APPROVAL_CLAIM"],
@@ -136,8 +147,13 @@ function checkOutputsExist(failures) {
 function checkAuthorityProfiles(data, failures) {
   const names = data.jurisdictions.map((profile) => profile.jurisdiction);
   if (!sameList(names, REQUIRED_JURISDICTIONS)) failures.push("jurisdiction list/order mismatch");
+  if (!Array.isArray(data.quality_governance_coverage_matrix)) failures.push("authority profiles missing quality governance coverage matrix");
   for (const profile of data.jurisdictions) {
     if (!nonEmptyString(profile.governance_boundary)) failures.push(`${profile.jurisdiction}: missing governance boundary`);
+    if (!profile.quality_governance_coverage) failures.push(`${profile.jurisdiction}: missing quality_governance_coverage`);
+    for (const key of REQUIRED_COVERAGE_FIELDS) {
+      if (!nonEmptyString(profile.quality_governance_coverage?.[key])) failures.push(`${profile.jurisdiction}: coverage missing ${key}`);
+    }
     if (!Array.isArray(profile.sources) || profile.sources.length < 2) failures.push(`${profile.jurisdiction}: expected at least two sources`);
     for (const [index, source] of profile.sources.entries()) {
       for (const key of [
@@ -162,6 +178,16 @@ function checkAuthorityProfiles(data, failures) {
   for (const fragment of ["flanders", "england is not", "kmk", "federal context", "forbidden_inference"]) {
     if (!serialized.includes(fragment)) failures.push(`authority profiles missing boundary fragment: ${fragment}`);
   }
+  for (const fragment of [
+    "quality_governance_coverage_matrix",
+    "germany",
+    "france",
+    "spain",
+    "accreditation",
+    "not_covered_in_v0",
+  ]) {
+    if (!serialized.includes(fragment)) failures.push(`authority profiles missing quality-governance fragment: ${fragment}`);
+  }
   checkFindingClassification(data.report_id, data.finding_classification, failures);
 }
 
@@ -174,9 +200,36 @@ function checkCommonCore(data, failures) {
     }
   }
   if (!Array.isArray(data.differences_matrix) || data.differences_matrix.length < 8) failures.push("differences matrix incomplete");
+  if (!Array.isArray(data.quality_governance_coverage_matrix) || data.quality_governance_coverage_matrix.length !== REQUIRED_JURISDICTIONS.length) {
+    failures.push("quality governance coverage matrix must cover all required jurisdictions");
+  }
+  const serialized = JSON.stringify(data);
+  if (serialized.includes("Scarcity, choice, opportunity cost, incentives")) {
+    failures.push("Chapter 1.2 portability must not use Chapter 1.1 scarcity/opportunity-cost content");
+  }
+  for (const required of ["Willingness to pay", "individual demand", "consumer surplus", "movement along versus shift", "collective demand"]) {
+    if (!serialized.includes(required)) failures.push(`Chapter 1.2 portability missing demand concept: ${required}`);
+  }
+  for (const forbidden of ["parts of Spain use official inspection", "state/accreditation examples", "optional accreditation"]) {
+    if (serialized.includes(forbidden)) failures.push(`unsupported source-coverage claim remains: ${forbidden}`);
+  }
   if (!Array.isArray(data.overlay_architecture) || data.overlay_architecture.length !== 4) failures.push("overlay architecture must have four layers");
   if (!Array.isArray(data.portability_pilot) || data.portability_pilot.length !== 2) failures.push("portability pilot must cover two scopes");
   if (data.selected_decision !== SELECTED_DECISION) failures.push("selected decision mismatch");
+}
+
+function checkSourceRegisterBoundary(failures) {
+  const register = readJson("references/data/inspection-standards/source-register.json");
+  const spainEntries = (register.sources || []).filter((source) => source.jurisdiction === "Spain");
+  if (spainEntries.length === 0) failures.push("source register missing Spain future-overlay inventory entries");
+  for (const source of spainEntries) {
+    if (source.use_in_v0_profile !== "future_overlay_inventory_only") {
+      failures.push(`${source.source_id}: Spain source-register entry must remain future_overlay_inventory_only for GOAL-IQS-FOUNDATION-1A`);
+    }
+    if (!String(source.notes || "").includes("Future-overlay inventory only")) {
+      failures.push(`${source.source_id}: Spain source-register entry must document future-overlay-only status`);
+    }
+  }
 }
 
 function checkReports(commonalities, portability, decision, failures) {
@@ -202,6 +255,9 @@ function checkReports(commonalities, portability, decision, failures) {
     if (!sameList(report.output_files_written, OUTPUT_PATHS)) failures.push(`${report.report_id}: output allowlist mismatch`);
     checkFindingClassification(report.report_id, report.finding_classification, failures);
   }
+  if (!Array.isArray(commonalities.quality_governance_coverage_matrix) || commonalities.quality_governance_coverage_matrix.length !== REQUIRED_JURISDICTIONS.length) {
+    failures.push("commonalities report missing quality governance coverage matrix");
+  }
   const finalDecision = decision.final_foundation_decision;
   if (finalDecision.selected !== SELECTED_DECISION) failures.push("decision report selected decision mismatch");
   if (finalDecision.decision_selection_count !== 1) failures.push("decision report must choose exactly one decision");
@@ -226,6 +282,9 @@ function checkMarkdown(failures) {
     }
   }
   const decision = readUtf8("reports/inspection-standards/international-foundation-decision.md");
+  const commonalities = readUtf8("reports/inspection-standards/international-commonalities-and-differences.md");
+  if (!commonalities.includes("Quality-Governance Coverage Matrix")) failures.push("commonalities markdown missing quality-governance coverage matrix");
+  if (!commonalities.includes("not_covered_in_v0")) failures.push("commonalities markdown missing explicit not_covered_in_v0 gaps");
   for (const fragment of [
     "PROCEED_WITH_COMMON_CORE_AND_OVERLAYS",
     "Still Blocked",
@@ -285,6 +344,7 @@ function main() {
   const decision = readJson("reports/inspection-standards/international-foundation-decision.json");
   checkAuthorityProfiles(authorityProfiles, failures);
   checkCommonCore(commonCore, failures);
+  checkSourceRegisterBoundary(failures);
   checkReports(commonalities, portability, decision, failures);
   checkMarkdown(failures);
   checkRefusals(failures);

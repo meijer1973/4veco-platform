@@ -76,6 +76,7 @@ const REVIEW_PACKET_REQUIREMENTS = [
 
 const CORE_REQUIREMENTS = [
   ["official_source_profiles", "Nine jurisdiction profiles use official-source anchors and record allowed use plus forbidden inference."],
+  ["quality_governance_coverage", "Each jurisdiction records inspection/evaluation, curriculum, examination, accountability, accreditation, and regional/state-overlay coverage status, with v0 gaps explicit."],
   ["governance_boundaries", "Flanders, England, Germany, Spain, and the United States retain explicit subnational or federal/state boundaries."],
   ["common_core_matrix", "The shared common-core matrix distinguishes portable product-pedagogy from local overlay needs."],
   ["differences_matrix", "The differences matrix names material divergences and the architecture response."],
@@ -105,6 +106,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "netherlands",
     governance_boundary:
       "Dutch VO/vwo sources remain the baseline. Dutch closure is internal/report-only under CLOSE_INTERNAL_SYSTEM and does not authorize school-pack or compliance use.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "covered_for_foundation: Inspectie van het Onderwijs Onderzoekskader 2021 VO, version 2025.",
+      curriculum: "covered_for_foundation: CvTE vwo economics syllabus used as the Dutch economics baseline.",
+      examination: "covered_for_foundation: CvTE vwo 2026 economics syllabus.",
+      accountability: "covered_for_school_owned_boundary: Dutch inspection framework records accountability context without product authority.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "not_applicable_in_v0: national Dutch VO/vwo baseline only.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Accreditation and school-level implementation evidence remain outside this source set.",
+    },
     sources: [
       {
         authority: "Inspectie van het Onderwijs",
@@ -139,6 +150,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "belgium_flanders",
     governance_boundary:
       "Use Flanders only. Do not generalize Flemish inspection or curriculum structures to the French or German-speaking Communities of Belgium.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "covered_for_foundation: Flemish OK quality framework is the v0 quality/inspection anchor.",
+      curriculum: "covered_for_foundation: Onderwijsdoelen.be curriculum goals portal.",
+      examination: "not_covered_in_v0: no Flemish assessment or examination source was researched.",
+      accountability: "covered_for_school_owned_boundary: OK quality framework informs school-owned quality categories only.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "covered_for_foundation: Flanders-only boundary recorded; other Belgian communities are out of scope.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Assessment/examination sources and non-Flemish Belgian communities remain outside v0.",
+    },
     sources: [
       {
         authority: "Onderwijsinspectie / Onderwijs Vlaanderen",
@@ -173,6 +194,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "england",
     governance_boundary:
       "England is not the whole United Kingdom. Ofsted and DfE sources must be labelled England-only unless the source explicitly says otherwise.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "covered_for_foundation: Ofsted education inspection framework and operating guide.",
+      curriculum: "covered_for_foundation: DfE A level economics subject content.",
+      examination: "covered_as_qualification_content_only: no exam-board specification or mark-scheme source was researched.",
+      accountability: "covered_for_school_owned_boundary: Ofsted sources record inspection/accountability context without product authority.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "covered_for_foundation: England-only boundary recorded; Scotland, Wales, and Northern Ireland are out of scope.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Exam-board-specific materials and non-England UK systems remain outside v0.",
+    },
     sources: [
       {
         authority: "Ofsted",
@@ -220,6 +251,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "germany",
     governance_boundary:
       "Use a KMK/federal-context layer plus representative Land examples. Do not claim a single national economics curriculum or inspection regime.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "not_covered_in_v0: no German inspection or school-evaluation source was researched.",
+      curriculum: "covered_for_foundation: Bavaria LehrplanPLUS is a representative Land curriculum source.",
+      examination: "covered_for_foundation: KMK EPA Wirtschaft source family provides examination-framework context.",
+      accountability: "not_covered_in_v0: no accountability source was researched.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "covered_for_foundation: Bavaria appears only as a representative Land example.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Land-specific inspection/evaluation/accountability sources and other Laender remain future overlay work.",
+    },
     sources: [
       {
         authority: "Kultusministerkonferenz",
@@ -267,6 +308,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "france",
     governance_boundary:
       "Use national lycee/baccalaureat SES sources. Distinguish programme content from baccalaureat examination restrictions.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "not_covered_in_v0: no French inspection or school-evaluation source was researched.",
+      curriculum: "covered_for_foundation: Eduscol SES programme and resources.",
+      examination: "covered_for_foundation: BO 2024 SES terminale examination-scope note.",
+      accountability: "not_covered_in_v0: no accountability source was researched.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "not_applicable_in_v0: national lycee/baccalaureat SES source set only.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "School evaluation, accountability, and local implementation sources remain outside v0.",
+    },
     sources: [
       {
         authority: "Ministere de l'Education nationale / Eduscol",
@@ -314,6 +365,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "italy",
     governance_boundary:
       "Treat Italy as a national ministry curriculum/SNV context with track-specific economics availability, not as a single generic economics course for every upper-secondary route.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "covered_for_foundation: Sistema nazionale di valutazione is the v0 evaluation/quality anchor.",
+      curriculum: "covered_for_foundation: MIM national indications and 2026 curriculum-update notice.",
+      examination: "not_covered_in_v0: no upper-secondary economics examination source was researched.",
+      accountability: "covered_for_school_owned_boundary: SNV source records school self-evaluation/accountability context only.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "not_applicable_in_v0: national ministry source set only.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Track-specific examination and school implementation sources remain outside v0.",
+    },
     sources: [
       {
         authority: "Ministero dell'Istruzione e del Merito",
@@ -361,6 +422,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "spain",
     governance_boundary:
       "Use national minimum-teaching rules plus autonomous-community overlays. Do not treat national minimum curriculum as a full regional implementation.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "not_covered_in_v0: no Spanish inspection or school-evaluation source was researched.",
+      curriculum: "covered_for_foundation: BOE national minimums, Educagob Economia curriculum, and autonomous-community routing.",
+      examination: "not_covered_in_v0: no Bachillerato assessment or examination source was researched.",
+      accountability: "not_covered_in_v0: no accountability source was researched.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "covered_for_foundation: autonomous-community curriculum routing records the overlay requirement only.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Autonomous-community curriculum details, inspection/supervision, accountability, and assessment sources remain future overlay work.",
+    },
     sources: [
       {
         authority: "Boletin Oficial del Estado",
@@ -408,6 +479,16 @@ const jurisdictionProfiles = [
     jurisdiction_id: "poland",
     governance_boundary:
       "Use MEN curriculum/supervision context plus CKE examination source. Business and management is the nearest upper-secondary economics-facing subject.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "covered_for_foundation: MEN Nadzor pedagogiczny source.",
+      curriculum: "covered_for_foundation: MEN business-and-management policy source.",
+      examination: "covered_for_foundation: CKE matura information source.",
+      accountability: "covered_for_school_owned_boundary: MEN pedagogical supervision source records accountability context only.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "covered_for_foundation: national source with regional kurator implementation noted.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Regional implementation details and accreditation remain outside v0.",
+    },
     sources: [
       {
         authority: "Ministerstwo Edukacji Narodowej",
@@ -454,7 +535,17 @@ const jurisdictionProfiles = [
     jurisdiction: "United States",
     jurisdiction_id: "united_states",
     governance_boundary:
-      "Use federal context plus representative state/accreditation examples. Do not invent a national inspection regime or national economics curriculum.",
+      "Use federal context plus representative state standards examples. Accreditation remains not covered in v0. Do not invent a national inspection regime or national economics curriculum.",
+    quality_governance_coverage: {
+      inspection_or_school_evaluation: "not_covered_in_v0: no national inspection regime is claimed and no state school-evaluation source was researched.",
+      curriculum: "covered_for_foundation: California and New York state standards/framework examples.",
+      examination: "not_covered_in_v0: no state exam or assessment source was researched.",
+      accountability: "covered_for_federal_context_only: U.S. Department of Education standards/accountability policy gives ESEA/ESSA context.",
+      accreditation: "not_covered_in_v0: no accreditation source was researched or used.",
+      regional_or_state_overlay: "covered_for_foundation: California and New York are representative state examples only.",
+      coverage_status: "quality_governance_coverage_recorded_with_v0_gaps",
+      coverage_gap: "Accreditation, state accountability details, district implementation, and any national inspection claim remain outside v0.",
+    },
     sources: [
       {
         authority: "U.S. Department of Education",
@@ -529,7 +620,7 @@ const commonCoreCategories = [
     label: "Subject knowledge and progression",
     classification: "near_universal_common_core",
     common_core_claim:
-      "Scarcity, choice, opportunity cost, markets, demand/supply reasoning, data interpretation, and economic argumentation recur across the reviewed sources.",
+      "At the global source-set level, scarcity, choice, opportunity cost, markets, demand/supply reasoning, data interpretation, and economic argumentation recur across the reviewed sources.",
     overlay_need:
       "Local overlays must add jurisdiction-specific vocabulary, examination taxonomies, and prescribed examples.",
     school_owned_boundary:
@@ -619,7 +710,7 @@ const differencesMatrix = [
     id: "inspection_vs_accreditation",
     divergence: "Inspection versus accreditation",
     finding:
-      "The Netherlands, Flanders, England, Italy, Poland, and parts of Spain use official inspection/supervision or national quality frameworks; the United States relies on federal/state accountability plus state/local standards and optional accreditation, not a national inspection regime.",
+      "V0 source coverage records inspection, school-evaluation, supervision, or quality-framework anchors for the Netherlands, Flanders, England, Italy, and Poland. Germany, France, Spain, United States accreditation, and any national-US inspection claim are explicitly not covered in v0.",
     architecture_response: "Keep school accountability evidence outside the shared textbook and route it to Layer 4.",
   },
   {
@@ -737,8 +828,8 @@ const portabilityPilot = [
   {
     scope: "Book 1 Chapter 1.2",
     direct_transfer: [
-      "Scarcity, choice, opportunity cost, incentives, and basic market reasoning can transfer as core economic concepts.",
-      "Graph/table/source interpretation and stepwise reasoning are portable learning designs.",
+      "Willingness to pay, individual demand, buy/no-buy decisions, the law of demand, consumer surplus, demand factors, movement along versus shift of the demand curve, collective demand, and demand-graph reasoning can transfer as core demand concepts.",
+      "Demand tables, demand curves, consumer-surplus diagrams, and stepwise price-quantity reasoning are portable learning designs.",
     ],
     terminology_changes: [
       "Local subject names and examination vocabulary must be overlaid.",
@@ -810,11 +901,19 @@ function commonFields(reportId, status) {
       id,
       requirement,
       status: "met_for_foundation",
-      proof_required_to_close: "Validator PASS, specialist review, final lead PASS, and human acceptance.",
+      proof_required_to_close: "Validator PASS, specialist review, final lead PASS, and PR #131 bounded-correction criteria satisfied.",
     })),
     output_boundary: boundaryFlags(),
     output_files_written: OUTPUT_PATHS,
   };
+}
+
+function qualityGovernanceCoverageMatrix() {
+  return jurisdictionProfiles.map((profile) => ({
+    jurisdiction: profile.jurisdiction,
+    jurisdiction_id: profile.jurisdiction_id,
+    ...profile.quality_governance_coverage,
+  }));
 }
 
 function buildAuthorityProfiles() {
@@ -823,7 +922,7 @@ function buildAuthorityProfiles() {
     report_id: "international-authority-profiles",
     sprint_id: SPRINT_ID,
     generated_date: ACCESS_DATE,
-    status: "official_source_refresh_complete",
+    status: "official_source_refresh_with_quality_governance_gaps_recorded",
     access_date: ACCESS_DATE,
     product_end_state: "../4veco-lessen/specifications/product-end-state.md",
     original_sprint_gate_spec: ORIGINAL_SPRINT_GATE_SPEC,
@@ -831,6 +930,7 @@ function buildAuthorityProfiles() {
       ...REVIEW_PACKET_REQUIREMENTS,
       "Use official inspectorate, ministry, curriculum, examination, accountability, or state education sources wherever possible.",
       "Represent Belgium as Flanders-only, England as England-only, Germany as KMK plus Land examples, and the United States as federal context plus state examples.",
+      "Record quality-governance source coverage per jurisdiction and mark unresearched categories as not_covered_in_v0.",
       "Record authority strength, allowed use, and forbidden inference for every source.",
       "Do not infer compliance, approval, country edition readiness, or school implementation evidence.",
     ],
@@ -840,14 +940,22 @@ function buildAuthorityProfiles() {
       status: "met_for_foundation",
       proof_required_to_close: "Country/source reviewer verification and currentness checker PASS.",
     })),
+    quality_governance_coverage_matrix: qualityGovernanceCoverageMatrix(),
     jurisdictions: jurisdictionProfiles,
     finding_classification: [
       {
-        finding: "All requested jurisdictions have official-source anchors.",
+        finding: "All requested jurisdictions have official-source anchors and explicit quality-governance coverage boundaries.",
         classification: "core_requirement_met",
         blocks: "Nothing for foundation analysis.",
         does_not_block: "Later local overlay source refresh before implementation.",
         proof_required_to_close: "Country/source reviewer verification and currentness checker PASS.",
+      },
+      {
+        finding: "Quality-governance coverage is explicit and partial in v0.",
+        classification: "minor_carry_flag",
+        blocks: "Claims that inspection, school-evaluation, accountability, or accreditation source refresh is complete for categories marked not_covered_in_v0.",
+        does_not_block: "Internal common-core and overlay foundation decision with gaps visible.",
+        proof_required_to_close: "Jurisdiction-specific source refresh before local edition, school-facing, accountability, accreditation, or inspection-readiness work.",
       },
       {
         finding: "Several governance systems are subnational or regionally implemented.",
@@ -866,6 +974,7 @@ function buildCommonCore() {
     jurisdictions: jurisdictionProfiles.map((profile) => profile.jurisdiction),
     common_core_categories: commonCoreCategories,
     differences_matrix: differencesMatrix,
+    quality_governance_coverage_matrix: qualityGovernanceCoverageMatrix(),
     overlay_architecture: overlayArchitecture,
     portability_pilot: portabilityPilot,
     selected_decision: SELECTED_DECISION,
@@ -893,6 +1002,7 @@ function buildCommonalitiesReport(authorityProfiles, commonCore) {
     source_count: authorityProfiles.jurisdictions.reduce((sum, profile) => sum + profile.sources.length, 0),
     common_core_categories: commonCore.common_core_categories,
     differences_matrix: commonCore.differences_matrix,
+    quality_governance_coverage_matrix: commonCore.quality_governance_coverage_matrix,
     finding_classification: [
       {
         finding: "International common core is product-pedagogical, not jurisdiction-compliance.",
@@ -907,6 +1017,13 @@ function buildCommonalitiesReport(authorityProfiles, commonCore) {
         blocks: "All-Belgium, whole-UK, single-Germany, or national-US claims.",
         does_not_block: "Representative overlay foundation.",
         proof_required_to_close: "Separate jurisdiction-specific source refresh before any local edition work.",
+      },
+      {
+        finding: "Quality-governance coverage matrix carries v0 gaps explicitly.",
+        classification: "minor_carry_flag",
+        blocks: "Source-refresh completeness claims for uncovered inspection, evaluation, accountability, or accreditation categories.",
+        does_not_block: "Internal architecture foundation with local overlay refresh required later.",
+        proof_required_to_close: "Authority/source reviewer verification and jurisdiction-specific source refresh before any local edition work.",
       },
     ],
   };
@@ -1023,6 +1140,19 @@ function pushCoreChecklist(lines, data) {
   lines.push("");
 }
 
+function pushCoverageMatrix(lines, matrix) {
+  if (!Array.isArray(matrix) || matrix.length === 0) return;
+  lines.push("", "## Quality-Governance Coverage Matrix", "");
+  lines.push("| Jurisdiction | Inspection/school evaluation | Curriculum | Examination | Accountability | Accreditation | Regional/state overlay | Coverage status | Coverage gap |");
+  lines.push("|---|---|---|---|---|---|---|---|---|");
+  for (const row of matrix) {
+    lines.push(
+      `| ${escapeCell(row.jurisdiction)} | ${escapeCell(row.inspection_or_school_evaluation)} | ${escapeCell(row.curriculum)} | ${escapeCell(row.examination)} | ${escapeCell(row.accountability)} | ${escapeCell(row.accreditation)} | ${escapeCell(row.regional_or_state_overlay)} | ${escapeCell(row.coverage_status)} | ${escapeCell(row.coverage_gap)} |`
+    );
+  }
+  lines.push("");
+}
+
 function renderAuthorityProfilesMarkdown(data) {
   const lines = [
     "# International Authority Profiles",
@@ -1072,6 +1202,7 @@ function renderCommonCoreModel(data) {
       `| ${escapeCell(category.label)} | \`${category.classification}\` | ${escapeCell(category.common_core_claim)} | ${escapeCell(category.overlay_need)} | ${escapeCell(category.school_owned_boundary)} |`
     );
   }
+  pushCoverageMatrix(lines, data.quality_governance_coverage_matrix);
   lines.push("", "## Decision Posture", "", `Selected foundation decision: \`${SELECTED_DECISION}\``);
   lines.push("", list(data.decision_rationale), "");
   return `${lines.join("\n").trimEnd()}\n`;
@@ -1104,7 +1235,7 @@ function renderOverlayArchitecture(data) {
   lines.push("- United Kingdom: England-only unless Scotland, Wales, or Northern Ireland are separately sourced.");
   lines.push("- Germany: KMK/federal context plus Land overlays.");
   lines.push("- Spain: national minimum curriculum plus autonomous-community overlays.");
-  lines.push("- United States: federal context plus state/accreditation examples, not a national inspection regime.");
+  lines.push("- United States: federal context plus state standards/accountability examples; accreditation and national inspection remain `not_covered_in_v0`.");
   lines.push("");
   return `${lines.join("\n").trimEnd()}\n`;
 }
@@ -1135,6 +1266,7 @@ function renderCommonalitiesMarkdown(report) {
   for (const item of report.differences_matrix) {
     lines.push(`| ${escapeCell(item.divergence)} | ${escapeCell(item.finding)} | ${escapeCell(item.architecture_response)} |`);
   }
+  pushCoverageMatrix(lines, report.quality_governance_coverage_matrix);
   pushFindings(lines, report.finding_classification);
   return `${lines.join("\n").trimEnd()}\n`;
 }

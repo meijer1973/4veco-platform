@@ -7,11 +7,9 @@ Sprint: `GOAL-IQS-FOUNDATION-1`
 ## Product End-State And Original Spec
 
 - Product end-state baseline:
-  `C:\Projects\4veco\4veco-lessen\specifications\product-end-state.md`
-- Product end-state repository-relative canonical path:
   `../4veco-lessen/specifications/product-end-state.md`
 - Product vision baseline:
-  `C:\Projects\4veco\4veco-lessen\specifications\product-vision.md`
+  `../4veco-lessen/specifications/product-vision.md`
 - Original human instruction: after accepting and merging
   GOAL-DQS-CLOSURE-1A under `CLOSE_INTERNAL_SYSTEM`, begin
   `GOAL-IQS-FOUNDATION-1 International Quality Standards Common Core and
@@ -19,11 +17,10 @@ Sprint: `GOAL-IQS-FOUNDATION-1`
 - Governing roadmap created for this sprint:
   `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 
-The current worktree is platform-only, so `../4veco-lessen/` is not present
-beside this worktree. The product end-state baseline remains the canonical
-sibling lesson repository path in the main 4veco checkout above. This note is
-therefore the stable review pointer for the sprint's product-end-state and
-original-spec proof.
+The product end-state baseline remains the canonical sibling lesson repository
+path. This note is therefore the stable review pointer for the sprint's
+product-end-state and original-spec proof without relying on agent-local
+machine paths.
 
 ## Non-Negotiable Requirements
 

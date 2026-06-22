@@ -1,7 +1,7 @@
 # GOAL-IQS-FOUNDATION-1 Human Review Packet
 
-Status: ready after final PR publication guard
-Date: 2026-06-21
+Status: revised by bounded GOAL-IQS-FOUNDATION-1A correction pass
+Date: 2026-06-22
 Sprint: `GOAL-IQS-FOUNDATION-1`
 Decision requested: accept, revise, or reject the internal foundation.
 
@@ -27,10 +27,34 @@ country editions, school/public distribution, product routes, student/product
 use, personal-data processing, compliance, approval, OP0, PTA, summative, or
 inspection-readiness claims.
 
+## PR #131 Correction Addendum
+
+PR `#131` human review returned `REVISE` while accepting the strategic
+common-core-plus-overlays direction. `GOAL-IQS-FOUNDATION-1A` is a
+correction-only pass on the same branch and PR. It does not request a new
+foundation decision and does not broaden authority.
+
+The bounded corrections are:
+
+- Chapter 1.2 portability now describes the Chapter 1.2 `Vraag` scope:
+  willingness to pay, individual and collective demand, consumer surplus,
+  demand factors, movement along versus shift of the demand curve, and
+  demand-graph reasoning.
+- Quality-governance coverage is explicit per jurisdiction. Categories not
+  researched in v0 are marked `not_covered_in_v0`; the generated differences
+  report no longer implies Spain inspection/supervision coverage or US
+  accreditation coverage.
+- Agent-local Windows paths were replaced with sibling-repository pointers.
+
+No second human-review stop is required if the final decision remains
+`PROCEED_WITH_COMMON_CORE_AND_OVERLAYS`, no jurisdiction is removed, authority
+boundaries are not weakened, required specialist reviews pass, the branch is
+fresh, and CI is green.
+
 ## Product End-State And Original Spec
 
 - Product end-state:
-  `C:\Projects\4veco\4veco-lessen\specifications\product-end-state.md`
+  `../4veco-lessen/specifications/product-end-state.md`
 - Original sprint/gate spec:
   `archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md`
 - Governing international roadmap:
