@@ -2,6 +2,47 @@
 
 Generated: 2026-06-20
 
+Final synchronization stamp: 2026-06-22
+
+## Final Remote Synchronization Proof
+
+This packet was refreshed after `GOAL-REASONING-GOLDEN-FAMILY-1-FINAL-SYNC`
+so the human decision is based on the current paired PR heads, not the earlier
+June 20 local package.
+
+Validated remote heads before this metadata-only packet stamp:
+
+- platform implementation head:
+  `2730f2a3bc43b99ad198720a69c13913f21136dd`
+- platform `main`: `df8da27324ff5e8b02a8aa1f69ad3e63a626ffdc`
+- lesson PR #32 head: `65caa81874b00d1776c9660e8233e52fd68cbeee`
+- lesson `main`: `cdb26e415cbddc5013b8f863c9878d754b927859`
+- tested paired lesson branch:
+  `codex/reasoning-golden-family-platform-20260620` at
+  `65caa81874b00d1776c9660e8233e52fd68cbeee`
+
+Fresh paired CI:
+
+- platform `validate-platform`: PASS
+- run: `27945697101`
+- job: `82689713012`
+- URL:
+  `https://github.com/meijer1973/4veco-platform/actions/runs/27945697101/job/82689713012`
+
+Mergeability at final-sync inspection:
+
+- platform PR #128: `CLEAN`
+- lesson PR #32: `CLEAN`
+
+Final lead-review verdict:
+
+- PASS WITH NON-BLOCKING FLAGS
+- subagent: `019eeed9-9f6a-7d62-9ed9-69ae5d8d126e`
+
+The packet-stamp commit records metadata and the final lead-review verdict; it
+does not change the validated reasoning-family implementation or paired lesson
+content.
+
 ## Human Decision Required
 
 This packet is the single final human gate for
@@ -105,10 +146,28 @@ mechanism.
 
 ## Validation To Inspect
 
-Run:
+Remote CI to inspect:
+
+- `validate-platform` run `27945697101`, job `82689713012`.
+
+Local validation rerun during final synchronization:
 
 ```powershell
+npm.cmd run check:platform
 npm.cmd run check:reasoning-golden
+npm.cmd run check:landing-v2
+npm.cmd run check:news-detective-v2
+npm.cmd run check:scope-language
+node build-scripts/reports/validate-report-json.js
+node build-scripts/references/check-mtu-evidence-layer.js
+node build-scripts/references/check-roadmap-version-index.js
+node build-scripts/sprints/emit-url-index.js --check
+node build-scripts/ci/check-evidence-line-endings.js
+git diff --check origin/main...HEAD
+git -C ../4veco-lessen diff --check origin/main...HEAD
 ```
 
-The gate is ready for human decision only if that command passes.
+The gate is ready for human decision only if the current paired PR heads remain
+clean, the remote CI is green, and the authority boundary above remains false
+for rollout, diagnostics, mastery, summative use, broad replacement, and Scale
+Gate claims.
