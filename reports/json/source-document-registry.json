@@ -1,21 +1,21 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-22T06:56:58.418Z",
+  "generated_on": "2026-06-22T10:39:14.076Z",
   "status": "pass",
   "summary": {
-    "record_count": 645,
-    "source_manifest_file_count": 658,
+    "record_count": 652,
+    "source_manifest_file_count": 665,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 7,
       "authored_judgement": 12,
       "generated_report": 2,
-      "governance_data": 470,
+      "governance_data": 476,
       "unknown": 84,
       "quality_protocol": 5,
       "planning": 1,
-      "machine_contract": 29
+      "machine_contract": 30
     },
     "by_source_type": {
       "external_reference": 7,
@@ -26,7 +26,7 @@
       "report_md": 1,
       "external_pdf": 25,
       "authored_markdown": 9,
-      "inventory": 51,
+      "inventory": 57,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
       "sprint_metadata": 410,
@@ -39,7 +39,7 @@
       "owned_source_readme": 1,
       "qc_prompt": 5,
       "roadmap": 1,
-      "json_schema": 29,
+      "json_schema": 30,
       "report_json": 1,
       "source_of_truth_policy": 1
     },
@@ -50,16 +50,16 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 468,
+      "governance_data": 474,
       "review_required": 84,
       "planning": 1,
-      "schema_contract": 29
+      "schema_contract": 30
     },
     "by_public_citation_policy": {
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 108,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 505
+      "not_public_citation_source": 512
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -2559,6 +2559,82 @@
       ]
     },
     {
+      "document_id": "path-references-data-inspection-standards-international-authority-profiles-v0",
+      "path": "references/data/inspection-standards/international-authority-profiles.v0.json",
+      "title": "International Authority Profiles.V0",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:56817611b26be573c8e9ee6d544f8e35e6f970003e73e1992ed6e7d16c6d5eb5",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "56817611b26be573c8e9ee6d544f8e35e6f970003e73e1992ed6e7d16c6d5eb5",
+      "size_bytes": 47529,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-inspection-standards-international-common-core-v0",
+      "path": "references/data/inspection-standards/international-common-core.v0.json",
+      "title": "International Common Core.V0",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:20b30bb7e810e825d5341395123e3de5c851fcb4807de4ec011044c03908227c",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "20b30bb7e810e825d5341395123e3de5c851fcb4807de4ec011044c03908227c",
+      "size_bytes": 30235,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
       "document_id": "path-references-data-inspection-standards-nl-vo-evidence-profile-v0",
       "path": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
       "title": "Nl Vo Evidence Profile.V0",
@@ -2575,6 +2651,158 @@
       "refresh_policy": "regenerate",
       "source_hash": "f2ff9d783b2f5d31b0fcf448b7b457f55bd198bb969872d45e514bbe4b45d326",
       "size_bytes": 31838,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-inspection-standards-overlays-bavaria-v0",
+      "path": "references/data/inspection-standards/overlays/bavaria.v0.json",
+      "title": "Bavaria.V0",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:5f19f440c878a6a7dd54d42038d594c9e00a415c4ed97e9fd2e13cf96d229411",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "5f19f440c878a6a7dd54d42038d594c9e00a415c4ed97e9fd2e13cf96d229411",
+      "size_bytes": 11005,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-inspection-standards-overlays-california-v0",
+      "path": "references/data/inspection-standards/overlays/california.v0.json",
+      "title": "California.V0",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:bd75b24b538c6045339c0a6025891743d983c6297999c94a7cee00b27d126b45",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "bd75b24b538c6045339c0a6025891743d983c6297999c94a7cee00b27d126b45",
+      "size_bytes": 11446,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-inspection-standards-overlays-england-v0",
+      "path": "references/data/inspection-standards/overlays/england.v0.json",
+      "title": "England.V0",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:d7f133dede7f5bb62d2f0efc1c391eac9f675a4f2ac0f2d69077171c7a150bb7",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "d7f133dede7f5bb62d2f0efc1c391eac9f675a4f2ac0f2d69077171c7a150bb7",
+      "size_bytes": 11255,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-inspection-standards-overlays-flanders-v0",
+      "path": "references/data/inspection-standards/overlays/flanders.v0.json",
+      "title": "Flanders.V0",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:616c5f2ff16cfbbf93e4b468bb9f3337b8f7cc072a5ad5ea2819527c934a07a3",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "616c5f2ff16cfbbf93e4b468bb9f3337b8f7cc072a5ad5ea2819527c934a07a3",
+      "size_bytes": 11075,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -2716,7 +2944,7 @@
       "title": "Source Register",
       "source_type": "inventory",
       "authority_level": "governance_data",
-      "source_version": "sha256:f65b2f6d786e67b7f22c99acf55a867d4f0192886d8fecaa26f40b8da3450e40",
+      "source_version": "sha256:97c1626411cd008aea4f107278fccafc3317405349a03796b05d0b83b0390805",
       "status": "governance_data",
       "owner": "references_team",
       "citation_policy": "cite_as_governance_record_only",
@@ -2725,8 +2953,8 @@
       "generated_status": "generated_or_sprint_metadata",
       "edit_policy": "generated_by_inventory_script",
       "refresh_policy": "regenerate",
-      "source_hash": "f65b2f6d786e67b7f22c99acf55a867d4f0192886d8fecaa26f40b8da3450e40",
-      "size_bytes": 31051,
+      "source_hash": "97c1626411cd008aea4f107278fccafc3317405349a03796b05d0b83b0390805",
+      "size_bytes": 31416,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -22465,6 +22693,42 @@
       "notes": []
     },
     {
+      "document_id": "path-references-schemas-international-jurisdiction-overlay-schema",
+      "path": "references/schemas/international-jurisdiction-overlay.schema.json",
+      "title": "International Jurisdiction Overlay.Schema",
+      "source_type": "json_schema",
+      "authority_level": "machine_contract",
+      "source_version": "sha256:580b97402f03980891f251f11d79adc06006b23f9a10062eda7afbef3a2c75a6",
+      "status": "schema_contract",
+      "owner": "references_team",
+      "citation_policy": "cite_as_implementation_contract_not_curriculum_evidence",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "schema_contract",
+      "generated_status": "manual_source",
+      "edit_policy": "code_review",
+      "refresh_policy": "schema_review",
+      "source_hash": "580b97402f03980891f251f11d79adc06006b23f9a10062eda7afbef3a2c75a6",
+      "size_bytes": 2531,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
       "document_id": "path-references-schemas-misconception-schema",
       "path": "references/schemas/misconception.schema.json",
       "title": "Misconception.Schema",
@@ -23298,7 +23562,7 @@
       "title": "Exercise Workbench Policy",
       "source_type": "file_md",
       "authority_level": "unknown",
-      "source_version": "sha256:412460f3c3f97182e54d014964cc2cdf187e261ae78d0eceff92a2bf6a9cb83d",
+      "source_version": "sha256:84b47a05e7999b39394840e160ffc367f27c46455e55a79cd865d8a0734113e3",
       "status": "review_required",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -23307,8 +23571,8 @@
       "generated_status": "manual_source",
       "edit_policy": "review_required",
       "refresh_policy": "review_required",
-      "source_hash": "412460f3c3f97182e54d014964cc2cdf187e261ae78d0eceff92a2bf6a9cb83d",
-      "size_bytes": 6836,
+      "source_hash": "84b47a05e7999b39394840e160ffc367f27c46455e55a79cd865d8a0734113e3",
+      "size_bytes": 7184,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -23406,7 +23670,7 @@
       "title": "Layout Registry",
       "source_type": "file_json",
       "authority_level": "unknown",
-      "source_version": "sha256:86848fcaf9a5609c8c3de7f2c7107cce1d16a832bf41d7cb5acfdbc71137607c",
+      "source_version": "sha256:acd9767d0b64aa5fec1363b9bdac8f28137fb40ca07fd05f92a2761f65fffff7",
       "status": "review_required",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -23415,8 +23679,8 @@
       "generated_status": "manual_source",
       "edit_policy": "review_required",
       "refresh_policy": "review_required",
-      "source_hash": "86848fcaf9a5609c8c3de7f2c7107cce1d16a832bf41d7cb5acfdbc71137607c",
-      "size_bytes": 5951,
+      "source_hash": "acd9767d0b64aa5fec1363b9bdac8f28137fb40ca07fd05f92a2761f65fffff7",
+      "size_bytes": 7956,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
