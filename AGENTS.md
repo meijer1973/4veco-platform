@@ -194,6 +194,26 @@ student-use authority, missing changed-path evidence, missing commit-specific
 CI/checker proof, or missing `proof.lead_review` path/result/reviewed-commit
 proof is present.
 
+### Post-draft PR lifecycle
+
+After a normal implementation draft PR is published:
+
+1. Publish and validate the remote draft PR.
+2. Complete structural lead review and repairs.
+3. Run the independent PR Readiness Reviewer with `npm.cmd run review:pr-readiness`.
+4. Apply only its allowed transition with `npm.cmd run apply:pr-readiness`.
+5. Return to the owner only when the route is `READY_FOR_HUMAN_REVIEW`, a
+   genuine `PAUSE_ESCALATE` blocker exists, or autonomous closure has completed
+   and a final status report is appropriate.
+
+Do not end a normal run by asking: "The draft PR is ready; please approve
+before I mark it ready for human review." Owner permission is not required
+merely to run `gh pr ready`.
+
+For `KEEP_DRAFT_BATCH`, continue to the next coherent authorized milestone
+rather than stopping merely because a PR exists. Do not add unrelated work just
+to enlarge a PR, and do not batch across a real decision boundary.
+
 
 ### Sprint agent structure
 

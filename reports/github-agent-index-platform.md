@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T10:39:34.006Z
+Generated: 2026-06-22T11:20:26.497Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/y2-evidence-backed-target-foundation-wave-1-20260622`
-Source commit: `a23466274eebc00f75fb5b6cb9b23438693cb35d`
-Files indexed: 5704
+Source branch: `codex/pr-readiness-router-20260622`
+Source commit: `3d66a5eee977d9c77366764a89593b6300d18c30`
+Files indexed: 5719
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -108,7 +108,7 @@ Count: 85
 - engines/tests/newsdetective-v2-interaction.test.js
 - engines/tests/newsdetective-v2-ui.test.js
 - engines/tests/presentatie-html-shape.test.js
-- engines/tests/presentation-v2-prototype.test.js
+- engines/tests/presentation-v2-111-production.test.js
 - engines/tests/procedure-data-formal-step.test.js
 - engines/tests/procedure-data.test.js
 - engines/tests/procedure-engine.test.js
@@ -133,7 +133,7 @@ Count: 85
 
 ## build scripts
 
-Count: 529
+Count: 530
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -164,6 +164,7 @@ Count: 529
 - build-scripts/content/book-1/b1-111-presentatie.js
 - build-scripts/content/book-1/b1-111-presentation-v2-model.js
 - build-scripts/content/book-1/b1-111-presentation-v2-prototype.js
+- build-scripts/content/book-1/b1-111-presentation-v2.js
 - build-scripts/content/book-1/b1-111-procedure-data.js
 - build-scripts/content/book-1/b1-111-samenvatting.js
 - build-scripts/content/book-1/b1-111-vaardigheden.js
@@ -714,7 +715,7 @@ Count: 42
 
 ## validators
 
-Count: 522
+Count: 523
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1185,6 +1186,7 @@ Count: 522
 - reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-short-check-desktop-light.png
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
 - reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/landing-to-short-check-route.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-validation-log.md
 - reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-desktop.png
 - reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-screenshots/1-1-1-korte-check-mobile.png
 - reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png
@@ -1919,7 +1921,7 @@ Count: 673
 
 ## reports
 
-Count: 3703
+Count: 3717
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4371,6 +4373,20 @@ Count: 3703
 - reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-light-initial.png
 - reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/route-reload-desktop-light.png
 - reports/sprints/GOLDEN-PRESENTATION-111-accessibility-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-final-lead-review.md
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-human-review-index.md
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-review-packet.md
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/dark-slide-05.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/desktop-slide-01.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/desktop-slide-03.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/desktop-slide-07.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/desktop-slide-09.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/desktop-slide-10.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/manifest.json
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/mobile-slide-10.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/notes-open-slide-08.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-screenshots/presentation-mode-slide-01.png
+- reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-validation-log.md
 - reports/sprints/GOLDEN-PRESENTATION-111-lead-verdict.md
 - reports/sprints/GOLDEN-PRESENTATION-111-review-packet.md
 - reports/sprints/GOLDEN-PRESENTATION-111-student-review.md

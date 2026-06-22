@@ -1,0 +1,54 @@
+{
+  "expected_route": "KEEP_DRAFT_REVISE",
+  "expected_reason": "bundle_incomplete",
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-platform",
+    "number": 109,
+    "url": "https://github.com/meijer1973/4veco-platform/pull/109",
+    "state": "OPEN",
+    "was_draft": true,
+    "base": "main",
+    "head_sha": "dededededededededededededededededededede"
+  },
+  "throughput": {
+    "class": "cross_repo_bundle",
+    "authority_class": "generated_output",
+    "level": "L3"
+  },
+  "human_review_payload": "substantial",
+  "consequence": "medium",
+  "changed_paths": [
+    "reports/review-gates/BUNDLE/review-packet.json"
+  ],
+  "bundle": {
+    "bundle_id": "BUNDLE-1",
+    "complete": false,
+    "paired_prs": [
+      {
+        "repo": "meijer1973/4veco-lessen",
+        "number": 30,
+        "level": "L3",
+        "ready": false,
+        "current": true
+      }
+    ]
+  },
+  "proof": {
+    "ci": {
+      "head_sha": "dededededededededededededededededededede",
+      "conclusion": "success"
+    },
+    "checkers": [
+      {
+        "command": "node build-scripts/sprints/check-bundle-urls.js BUNDLE",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/BUNDLE-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "dededededededededededededededededededede"
+    },
+    "changed_paths_verified": true
+  }
+}

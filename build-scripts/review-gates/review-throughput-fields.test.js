@@ -1,6 +1,9 @@
 const {
   fullHumanGateThroughputFields,
+  leadReviewAutonomousThroughputFields,
+  mechanicalAutonomousThroughputFields,
   ownerDecisionGateThroughputFields,
+  ownerPreapprovedAutonomousThroughputFields,
   reviewThroughputFields,
 } = require('./review-throughput-fields');
 const { validatePacket } = require('../sprints/check-review-throughput-packet');
@@ -67,5 +70,59 @@ describe('review-throughput-fields', () => {
         autoMergeAllowedAfterCi: false,
       })
     ).toThrow('reviewAutonomy.level must be L0, L1, L2, L3, or L4');
+  });
+
+  test('creates a valid L0 mechanical autonomous packet envelope', () => {
+    const packet = mechanicalAutonomousThroughputFields({
+      packetId: 'MECH-1',
+      changedPaths: ['reports/sprints/MECH-result.md'],
+      reviewedCommitSha: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      leadReviewPath: 'reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md',
+    });
+
+    expect(packet.review_autonomy.level).toBe('L0');
+    expect(packet.human_decision_required).toBe(false);
+    expect(validatePacket(packet)).toBe(true);
+  });
+
+  test('creates a valid L1 lead-review autonomous packet envelope', () => {
+    const packet = leadReviewAutonomousThroughputFields({
+      packetId: 'NORMAL-1',
+      changedPaths: ['build-scripts/review-gates/example.js'],
+      reviewedCommitSha: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
+      leadReviewPath: 'reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md',
+    });
+
+    expect(packet.pr_throughput_class).toBe('normal_sprint');
+    expect(packet.review_autonomy.level).toBe('L1');
+    expect(validatePacket(packet)).toBe(true);
+  });
+
+  test('creates a valid L2 owner-preapproved autonomous packet envelope', () => {
+    const packet = ownerPreapprovedAutonomousThroughputFields({
+      packetId: 'PREAPPROVED-1',
+      changedPaths: ['reports/fixtures/generated-output-refresh.json'],
+      reviewedCommitSha: 'cccccccccccccccccccccccccccccccccccccccc',
+      leadReviewPath: 'reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md',
+      ownerPreapproval: {
+        lane: 'tiny-generated-output-refresh',
+        evidence: 'owner approval recorded 2026-06-14',
+      },
+    });
+
+    expect(packet.review_autonomy.level).toBe('L2');
+    expect(packet.review_autonomy.owner_preapproval.lane).toBe('tiny-generated-output-refresh');
+    expect(validatePacket(packet)).toBe(true);
+  });
+
+  test('requires explicit owner preapproval for L2 helper', () => {
+    expect(() =>
+      ownerPreapprovedAutonomousThroughputFields({
+        packetId: 'PREAPPROVED-NEGATIVE',
+        changedPaths: ['reports/fixtures/generated-output-refresh.json'],
+        reviewedCommitSha: 'dddddddddddddddddddddddddddddddddddddddd',
+        leadReviewPath: 'reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md',
+      })
+    ).toThrow('ownerPreapproval is required for L2 throughput fields');
   });
 });

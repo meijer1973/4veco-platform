@@ -1,0 +1,45 @@
+{
+  "expected_route": "KEEP_DRAFT_BATCH",
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-lessen",
+    "number": 21,
+    "url": "https://github.com/meijer1973/4veco-lessen/pull/21",
+    "state": "OPEN",
+    "was_draft": true,
+    "base": "main",
+    "head_sha": "3333333333333333333333333333333333333333"
+  },
+  "throughput": {
+    "class": "generated_output",
+    "authority_class": "generated_output",
+    "level": "L3"
+  },
+  "human_review_payload": "thin",
+  "consequence": "medium",
+  "changed_paths": [
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.2.js"
+  ],
+  "batching": {
+    "viable": true,
+    "target": "next 1.1.2 generated-output refresh bundle",
+    "reason": "isolated repeat correction can be reviewed with the imminent coherent output bundle"
+  },
+  "proof": {
+    "ci": {
+      "head_sha": "3333333333333333333333333333333333333333",
+      "conclusion": "success"
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run check:book",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/L3-BATCH-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "3333333333333333333333333333333333333333"
+    },
+    "changed_paths_verified": true
+  }
+}

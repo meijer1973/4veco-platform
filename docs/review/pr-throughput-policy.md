@@ -108,6 +108,17 @@ packets should emit `L3` or `L4`, set `human_decision_required: true`, keep
 `auto_merge_allowed_after_ci: false`, and list the generated packet surface in
 `changed_paths`.
 
+The helper also provides L0, L1, and L2 convenience constructors for
+mechanical, lead-review autonomous, and exact owner-preapproved autonomous
+lanes. These constructors do not relax the checker: autonomous packets still
+need changed-path evidence, commit-specific CI proof, checker proof,
+`proof.lead_review`, and empty escalation triggers.
+
+Draft-to-review routing is governed by
+`docs/review/pr-readiness-routing-policy.md`. The read-only command is
+`npm.cmd run review:pr-readiness`; the mutating command is the explicit second
+step `npm.cmd run apply:pr-readiness`.
+
 Do not add a repository-wide CI gate over all historical review packets until
 the archived packet surface is either migrated or an allowlist exists. Focused
 packet checkers may validate packets that have adopted the envelope.

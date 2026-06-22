@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-platform",
+    "number": 120,
+    "url": "https://github.com/meijer1973/4veco-platform/pull/120",
+    "base": "main",
+    "head_sha": "5656565656565656565656565656565656565656",
+    "was_draft": true
+  },
+  "throughput": {
+    "class": "normal_sprint",
+    "authority_class": "standard",
+    "level": "L1"
+  },
+  "human_review_payload": "none",
+  "consequence": "low",
+  "batching": {
+    "viable": false,
+    "target": null,
+    "reason": null
+  },
+  "route": "READY_FOR_LEAD_ONLY",
+  "reason_codes": [
+    "current_head_ci_green",
+    "lead_review_pass",
+    "no_human_authority"
+  ],
+  "proof": {
+    "ci_head_sha": "5656565656565656565656565656565656565656",
+    "ci_status": "success",
+    "lead_review_path": "reports/sprints/APPLY-lead-review-round2.md",
+    "lead_review_result": "PASS",
+    "lead_reviewed_sha": "5656565656565656565656565656565656565656",
+    "lead_review_evidence_tail_allowed": false,
+    "changed_paths_verified": true,
+    "checkers": [
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      }
+    ],
+    "branch_protection": {}
+  },
+  "allowed_transition": "MARK_READY",
+  "human_notification_required": false
+}

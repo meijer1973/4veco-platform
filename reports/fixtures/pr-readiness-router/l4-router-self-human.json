@@ -1,0 +1,41 @@
+{
+  "expected_route": "READY_FOR_HUMAN_REVIEW",
+  "expected_reason": "review_autonomy_governance_change",
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-platform",
+    "number": 103,
+    "url": "https://github.com/meijer1973/4veco-platform/pull/103",
+    "state": "OPEN",
+    "was_draft": true,
+    "base": "main",
+    "head_sha": "7777777777777777777777777777777777777777"
+  },
+  "throughput": {
+    "class": "normal_sprint",
+    "authority_class": "standard",
+    "level": "L1"
+  },
+  "human_review_payload": "none",
+  "consequence": "low",
+  "changed_paths": [
+    "build-scripts/review-gates/pr-readiness-router.js"
+  ],
+  "proof": {
+    "ci": {
+      "head_sha": "7777777777777777777777777777777777777777",
+      "conclusion": "success"
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run check:pr-readiness",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/ROUTER-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "7777777777777777777777777777777777777777"
+    },
+    "changed_paths_verified": true
+  }
+}
