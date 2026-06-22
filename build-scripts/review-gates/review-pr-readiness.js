@@ -94,28 +94,29 @@ function repoParts(repo) {
   return { owner, name };
 }
 
-function collectReviewThreadState(repo, prNumber) {
+function collectReviewThreadPages(repo, prNumber, runner = runGh) {
   const { owner, name } = repoParts(repo);
   const query = `
-    query($owner: String!, $name: String!, $number: Int!) {
+    query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
       repository(owner: $owner, name: $name) {
         pullRequest(number: $number) {
-          reviewThreads(first: 100) {
+          reviewThreads(first: 100, after: $cursor) {
             nodes {
               isResolved
             }
-          }
-          reviews(first: 100, states: [CHANGES_REQUESTED]) {
-            nodes {
-              state
+            pageInfo {
+              hasNextPage
+              endCursor
             }
           }
         }
       }
     }
   `;
-  const raw = runGh(
-    [
+  const pages = [];
+  let cursor = null;
+  for (let page = 0; page < 50; page += 1) {
+    const args = [
       'api',
       'graphql',
       '-f',
@@ -126,20 +127,87 @@ function collectReviewThreadState(repo, prNumber) {
       `name=${name}`,
       '-F',
       `number=${prNumber}`,
-    ],
-    { optional: true }
-  );
-  if (!raw) {
+    ];
+    if (cursor) args.push('-F', `cursor=${cursor}`);
+    const raw = runner(args, { optional: true });
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    const connection =
+      data.repository &&
+      data.repository.pullRequest &&
+      data.repository.pullRequest.reviewThreads;
+    if (!connection || !connection.pageInfo) return null;
+    pages.push(connection);
+    if (!connection.pageInfo.hasNextPage) return pages;
+    if (!connection.pageInfo.endCursor) return null;
+    cursor = connection.pageInfo.endCursor;
+  }
+  return null;
+}
+
+function collectChangeRequestReviewPages(repo, prNumber, runner = runGh) {
+  const { owner, name } = repoParts(repo);
+  const query = `
+    query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
+      repository(owner: $owner, name: $name) {
+        pullRequest(number: $number) {
+          reviews(first: 100, states: [CHANGES_REQUESTED], after: $cursor) {
+            nodes {
+              state
+            }
+            pageInfo {
+              hasNextPage
+              endCursor
+            }
+          }
+        }
+      }
+    }
+  `;
+  const pages = [];
+  let cursor = null;
+  for (let page = 0; page < 50; page += 1) {
+    const args = [
+      'api',
+      'graphql',
+      '-f',
+      `query=${query}`,
+      '-F',
+      `owner=${owner}`,
+      '-F',
+      `name=${name}`,
+      '-F',
+      `number=${prNumber}`,
+    ];
+    if (cursor) args.push('-F', `cursor=${cursor}`);
+    const raw = runner(args, { optional: true });
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    const connection =
+      data.repository &&
+      data.repository.pullRequest &&
+      data.repository.pullRequest.reviews;
+    if (!connection || !connection.pageInfo) return null;
+    pages.push(connection);
+    if (!connection.pageInfo.hasNextPage) return pages;
+    if (!connection.pageInfo.endCursor) return null;
+    cursor = connection.pageInfo.endCursor;
+  }
+  return null;
+}
+
+function collectReviewThreadState(repo, prNumber, runner = runGh) {
+  const threadPages = collectReviewThreadPages(repo, prNumber, runner);
+  const reviewPages = collectChangeRequestReviewPages(repo, prNumber, runner);
+  if (!threadPages || !reviewPages) {
     return {
       available: false,
       unresolved_count: null,
       requested_changes_count: null,
     };
   }
-  const data = JSON.parse(raw);
-  const pullRequest = data.repository && data.repository.pullRequest;
-  const threads = (pullRequest && pullRequest.reviewThreads && pullRequest.reviewThreads.nodes) || [];
-  const reviews = (pullRequest && pullRequest.reviews && pullRequest.reviews.nodes) || [];
+  const threads = threadPages.flatMap((page) => page.nodes || []);
+  const reviews = reviewPages.flatMap((page) => page.nodes || []);
   return {
     available: true,
     unresolved_count: threads.filter((thread) => thread && thread.isResolved === false).length,

@@ -97,8 +97,8 @@ state.
 Do not accept stale proof:
 
 - CI proof must apply to the current remote head and must include the protected
-  `validate-platform` context unless a future policy names a stricter required
-  context set.
+  `validate-platform` context. Supplemental evidence may add stricter
+  contexts, but it must not remove `validate-platform`.
 - The decision records the reviewed remote head SHA.
 - The executor re-fetches immediately before transition and aborts if the repo,
   PR number, base, state, or head changed.
@@ -108,6 +108,9 @@ Do not accept stale proof:
 - Evidence-only tails must be computed from the actual GitHub comparison
   between the lead-reviewed SHA and current head. Self-declared
   `evidence_only` labels are not proof.
+- Review-thread and requested-changes evidence must be complete. Paginate
+  GitHub review-thread and change-request review connections, or fail closed
+  when pagination metadata is unavailable or incomplete.
 - Any substantive source, product, governance, checker, generator, or lesson
   change after lead review requires re-review.
 

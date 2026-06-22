@@ -40,7 +40,17 @@
         "status": "passed"
       }
     ],
-    "branch_protection": {}
+    "branch_protection": {},
+    "ci_required_contexts": [
+      "validate-platform"
+    ],
+    "ci_missing_contexts": [],
+    "ci_checks": [
+      {
+        "name": "validate-platform",
+        "conclusion": "SUCCESS"
+      }
+    ]
   },
   "allowed_transition": "MARK_READY",
   "human_notification_required": false

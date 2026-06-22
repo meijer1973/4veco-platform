@@ -53,7 +53,8 @@ Inspect the remote PR and supporting evidence:
 - additions, deletions, and changed-file count as diagnostics only
 - mergeability and merge-state information
 - status checks and the commit to which they apply
-- required protected status context, currently `validate-platform`
+- required protected status context, currently non-removable
+  `validate-platform`
 - review decision, requested changes, and unresolved review threads
 - throughput packet and packet-checker result
 - lead-review path, result, and reviewed SHA
@@ -65,6 +66,8 @@ live evidence. Do not infer current PR state from a local worktree. Do not let
 supplemental implementation evidence replace remote PR identity, head, state,
 base, changed paths, mergeability, status checks, requested changes, or
 unresolved review-thread facts.
+Paginate review-thread and requested-changes connections, or fail closed when
+the connection cannot prove completeness.
 
 ## Routing states
 

@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T12:45:17.410Z
+Generated: 2026-06-22T12:58:08.092Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/pr-readiness-router-20260622`
-Source commit: `c7ebb8176f34570a9cb2d6ef2ed24b9c936bb773`
-Files indexed: 5760
+Source commit: `343ee7d793d73a464e8b84fd2f58a5f8825ff31e`
+Files indexed: 5762
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -134,7 +134,7 @@ Count: 85
 
 ## build scripts
 
-Count: 534
+Count: 535
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -504,6 +504,7 @@ Count: 534
 - build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
+- build-scripts/review-gates/pr-readiness-governance-surfaces.js
 - build-scripts/review-gates/pr-readiness-router.js
 - build-scripts/review-gates/pr-readiness-router.test.js
 - build-scripts/review-gates/review-pr-readiness.js
@@ -1928,7 +1929,7 @@ Count: 675
 
 ## reports
 
-Count: 3749
+Count: 3750
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5134,6 +5135,7 @@ Count: 3749
 - reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round2.md
 - reports/sprints/REVIEW-THROUGHPUT-3-live-dry-run.md
 - reports/sprints/REVIEW-THROUGHPUT-3-plan.md
+- reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md
 - reports/sprints/REVIEW-THROUGHPUT-3-result.md
 - reports/sprints/REVIEW-THROUGHPUT-PR58-PACKET-1-result.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md

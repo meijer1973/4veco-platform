@@ -15,7 +15,7 @@ const {
   applyDecisionToState,
   verifyTransitionPreconditions,
 } = require('./apply-pr-readiness-decision');
-const { mergeSupplementalEvidence, runReview } = require('./review-pr-readiness');
+const { collectReviewThreadState, mergeSupplementalEvidence, runReview } = require('./review-pr-readiness');
 const { GOVERNANCE_SURFACE_TEST_PATHS } = require('./pr-readiness-governance-surfaces');
 
 const FIXTURE_DIR = path.join(process.cwd(), 'reports', 'fixtures', 'pr-readiness-router');
@@ -268,6 +268,19 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).toContain('required_ci_context_missing_or_not_successful');
   });
 
+  test('validate-platform cannot be removed from ready decision proof', () => {
+    const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
+    expect(() =>
+      validateDecision({
+        ...decision,
+        proof: {
+          ...decision.proof,
+          ci_required_contexts: [],
+        },
+      })
+    ).toThrow('READY_FOR_LEAD_ONLY requires validate-platform CI context');
+  });
+
   test('decision validator rejects inconsistent route and transition combinations', () => {
     const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
     expect(() =>
@@ -302,6 +315,73 @@ describe('pr-readiness-router', () => {
     });
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.reason_codes).toContain('review_autonomy_governance_change');
+  });
+});
+
+describe('review thread collection', () => {
+  function response(connectionName, nodes, pageInfo) {
+    return JSON.stringify({
+      repository: {
+        pullRequest: {
+          [connectionName]: {
+            nodes,
+            pageInfo,
+          },
+        },
+      },
+    });
+  }
+
+  test('paginates review threads and change-request reviews', () => {
+    const runner = jest.fn((args) => {
+      const text = args.join(' ');
+      if (text.includes('reviewThreads') && !text.includes('cursor=thread-2')) {
+        return response('reviewThreads', [{ isResolved: true }], {
+          hasNextPage: true,
+          endCursor: 'thread-2',
+        });
+      }
+      if (text.includes('reviewThreads') && text.includes('cursor=thread-2')) {
+        return response('reviewThreads', [{ isResolved: false }], {
+          hasNextPage: false,
+          endCursor: null,
+        });
+      }
+      if (text.includes('reviews')) {
+        return response('reviews', [{ state: 'CHANGES_REQUESTED' }], {
+          hasNextPage: false,
+          endCursor: null,
+        });
+      }
+      throw new Error(`unexpected query: ${text}`);
+    });
+
+    const state = collectReviewThreadState('meijer1973/4veco-platform', 137, runner);
+    expect(state.available).toBe(true);
+    expect(state.unresolved_count).toBe(1);
+    expect(state.requested_changes_count).toBe(1);
+    expect(runner).toHaveBeenCalledTimes(3);
+  });
+
+  test('fails closed when pagination metadata is incomplete', () => {
+    const runner = jest.fn((args) => {
+      const text = args.join(' ');
+      if (text.includes('reviewThreads')) {
+        return response('reviewThreads', [{ isResolved: true }], {
+          hasNextPage: true,
+          endCursor: null,
+        });
+      }
+      return response('reviews', [], {
+        hasNextPage: false,
+        endCursor: null,
+      });
+    });
+
+    const state = collectReviewThreadState('meijer1973/4veco-platform', 137, runner);
+    expect(state.available).toBe(false);
+    expect(state.unresolved_count).toBeNull();
+    expect(state.requested_changes_count).toBeNull();
   });
 });
 

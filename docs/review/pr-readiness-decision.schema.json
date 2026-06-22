@@ -156,6 +156,7 @@
       "required": [
         "ci_head_sha",
         "ci_status",
+        "ci_required_contexts",
         "lead_review_path",
         "lead_review_result",
         "lead_reviewed_sha",
@@ -177,6 +178,10 @@
         },
         "ci_required_contexts": {
           "type": "array",
+          "minItems": 1,
+          "contains": {
+            "const": "validate-platform"
+          },
           "items": {
             "type": "string",
             "minLength": 1

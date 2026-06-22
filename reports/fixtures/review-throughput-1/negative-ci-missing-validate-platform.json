@@ -1,34 +1,30 @@
 {
   "schema_version": 1,
-  "packet_id": "REVIEW-THROUGHPUT-POSITIVE-AUTONOMOUS",
+  "packet_id": "REVIEW-THROUGHPUT-NEGATIVE-MISSING-VALIDATE",
   "pr_throughput_class": "normal_sprint",
   "bundle_id": null,
   "authority_class": "standard",
   "changed_paths": [
-    "build-scripts/sprints/check-example.js",
-    "reports/sprints/EXAMPLE-result.md"
+    "build-scripts/sprints/check-example.js"
   ],
   "review_autonomy": {
     "level": "L1",
-    "lead_review_result": "PASS",
-    "rationale": "Normal sprint with complete proof and no escalation triggers."
+    "rationale": "Normal sprint with a green non-protected check only."
   },
   "human_decision_required": false,
   "paired_prs": [],
-  "auto_merge_allowed_after_ci": true,
+  "auto_merge_allowed_after_ci": false,
   "escalation_triggers": [],
   "proof": {
     "ci": {
-      "workflow": "platform-ci / validate-platform",
-      "github_actions_run_id": "27200000000",
       "reviewed_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "conclusion": "success",
       "required_contexts": [
-        "validate-platform"
+        "lint"
       ],
       "checks": [
         {
-          "name": "validate-platform",
+          "name": "lint",
           "conclusion": "SUCCESS"
         }
       ]
@@ -44,13 +40,5 @@
       "result": "PASS",
       "reviewed_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     }
-  },
-  "authority_claims": {
-    "product_authority": false,
-    "diagnostics_authorized": false,
-    "mastery_authorized": false,
-    "pv_authorized": false,
-    "student_use_authorized": false,
-    "student_product_use_authorized": false
   }
 }

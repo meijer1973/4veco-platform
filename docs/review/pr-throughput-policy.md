@@ -96,9 +96,10 @@ Recommended additional fields:
   `git diff --name-only origin/main...HEAD` so the packet is checked against
   the actual PR diff.
 - `proof.ci`: reviewed commit SHA, success conclusion, and required protected
-  context evidence. Workflow, run ID, or job name are useful metadata but do
-  not prove CI for an autonomous packet without a reviewed commit SHA and the
-  required context.
+  `validate-platform` context evidence. Workflow, run ID, or job name are
+  useful metadata but do not prove CI for an autonomous packet without a
+  reviewed commit SHA and the required context. L0/L1/L2 packets may add
+  stricter contexts, but they must not remove `validate-platform`.
 - `proof.checkers`: passed checker commands.
 - `proof.lead_review`: path, PASS or PASS WITH FLAGS result, and reviewed
   commit SHA. `review_autonomy.lead_review_result` alone is not proof.

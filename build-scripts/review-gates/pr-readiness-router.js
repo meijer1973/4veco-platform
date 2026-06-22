@@ -56,8 +56,8 @@ function requiredCiContexts(proof) {
     proof.required_status_contexts ||
     ci.required_contexts ||
     ci.required_status_contexts ||
-    DEFAULT_REQUIRED_CI_CONTEXTS;
-  return uniqueStrings(asArray(configured));
+    [];
+  return uniqueStrings([...DEFAULT_REQUIRED_CI_CONTEXTS, ...asArray(configured)]);
 }
 
 function checkNames(check) {
@@ -556,6 +556,12 @@ function validateDecision(decision) {
     }
     if (decision.proof.ci_head_sha !== decision.reviewed_pr.head_sha) {
       throw new Error(`${decision.route} requires CI proof for reviewed head`);
+    }
+    if (!asArray(decision.proof.ci_required_contexts).includes('validate-platform')) {
+      throw new Error(`${decision.route} requires validate-platform CI context`);
+    }
+    if (asArray(decision.proof.ci_missing_contexts).includes('validate-platform')) {
+      throw new Error(`${decision.route} requires passing validate-platform CI context`);
     }
     if (
       decision.proof.lead_reviewed_sha &&
