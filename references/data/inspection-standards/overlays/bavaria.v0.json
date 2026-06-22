@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOAL-IQS-OVERLAY-ARCHITECTURE-1",
+  "generated_date": "2026-06-22",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md",
+  "foundation_decision_source": "reports/inspection-standards/international-foundation-decision.md",
+  "descriptor_id": "bavaria.v0",
+  "jurisdiction_id": "bavaria_germany",
+  "jurisdiction_label": "Bavaria / Germany",
+  "governance_archetype": "federal_land_curriculum",
+  "status": "internal_overlay_descriptor_complete",
+  "jurisdiction_boundary": {
+    "boundary_label": "KMK context plus Bavaria Land overlay",
+    "governance_level": "German federal coordination with Land curriculum implementation",
+    "includes": [
+      "KMK EPA Wirtschaft federal-context source family",
+      "Bavaria Gymnasium Wirtschaft und Recht 12 representative Land curriculum"
+    ],
+    "excludes": [
+      "single national German curriculum claim",
+      "other German Laender",
+      "German school-inspection coverage",
+      "German accreditation coverage"
+    ],
+    "boundary_warning": "Bavaria is a representative Land descriptor, not a Germany-wide edition."
+  },
+  "authority_type": {
+    "inspection_or_school_evaluation": "not_covered_in_descriptor: no Land inspection or school-evaluation source is included.",
+    "curriculum": "covered_for_descriptor: Bavaria LehrplanPLUS for Gymnasium Wirtschaft und Recht 12.",
+    "examination": "covered_for_federal_context_only: KMK EPA Wirtschaft source family.",
+    "accountability": "not_covered_in_descriptor: no accountability source is included.",
+    "accreditation": "not_covered_in_descriptor: no accreditation source is used.",
+    "regional_or_state_overlay": "covered_for_descriptor: Bavaria as Land overlay; other Laender require separate descriptors."
+  },
+  "official_source_allowlist": [
+    {
+      "source_id": "de-kmk-epa-wirtschaft",
+      "authority": "Kultusministerkonferenz",
+      "title": "Einheitliche Pruefungsanforderungen in der Abiturpruefung Wirtschaft",
+      "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/1989/1989_12_01-EPA-Wirtschaft.pdf",
+      "source_type": "Abitur examination requirements",
+      "role": "federal-context examination requirements",
+      "scope": "federal coordination",
+      "publication_or_version_date": "Beschluss 1989-12-01, version 2006-11-16",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Use as federal-context examination family and competence vocabulary only.",
+      "forbidden_inference": "Does not replace Land curricula, local examination rules, or school implementation evidence."
+    },
+    {
+      "source_id": "de-kmk-quality-assurance-schools",
+      "authority": "Kultusministerkonferenz",
+      "title": "Qualitaetssicherung in Schulen",
+      "url": "https://www.kmk.org/themen/qualitaetssicherung-in-schulen.html",
+      "source_type": "quality assurance context",
+      "role": "common quality-assurance context",
+      "scope": "federal coordination",
+      "publication_or_version_date": "Live official page verified in source register 2026-06-08",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Record common German quality-assurance context without asserting a single inspection regime.",
+      "forbidden_inference": "Does not prove product compliance or a national German inspection framework."
+    },
+    {
+      "source_id": "de-bavaria-lehrplanplus-wr12",
+      "authority": "Bayerisches Staatsministerium fuer Unterricht und Kultus / LehrplanPLUS",
+      "title": "Gymnasium Wirtschaft und Recht 12, erhoehtes Anforderungsniveau",
+      "url": "https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/12/wirtschaft-und-recht/erhoeht",
+      "source_type": "curriculum",
+      "role": "Land curriculum",
+      "scope": "Bavaria",
+      "publication_or_version_date": "Live official page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Map representative Bavarian WR12 market, production, business, and legal-economics content.",
+      "forbidden_inference": "Does not represent all German Laender or prove Abitur readiness."
+    }
+  ],
+  "source_freshness": {
+    "access_date": "2026-06-22",
+    "freshness_status": "fresh_for_internal_overlay_architecture",
+    "refresh_required_before": "Any Bavaria-specific local edition, other-Land comparison, exam mapping, school-facing output, or Germany-wide claim.",
+    "currentness_checker": "build-scripts/inspection/check-international-overlay-architecture.js"
+  },
+  "curriculum_mappings": [
+    {
+      "book_scope": "Book 1 Chapter 1.2 Vraag",
+      "mapping_status": "candidate_internal_crosswalk",
+      "local_authority_anchor": "Bavaria LehrplanPLUS WR12 and KMK economic competence context.",
+      "portable_core": [
+        "Nachfrage",
+        "Zahlungsbereitschaft",
+        "Nachfragekurve",
+        "Nachfragefaktoren",
+        "Konsumentenrente where locally appropriate"
+      ],
+      "overlay_action": "Review whether demand-side consumer concepts belong in Bavaria WR12, lower grades, or another Land route before any lesson adaptation."
+    },
+    {
+      "book_scope": "Book 1 Chapter 1.3 Aanbod en marktevenwicht",
+      "mapping_status": "candidate_internal_crosswalk",
+      "local_authority_anchor": "Bavaria LehrplanPLUS WR12 market/production source plus KMK EPA competence framing.",
+      "portable_core": [
+        "Angebot",
+        "Angebotskurve",
+        "Marktgleichgewicht",
+        "Angebots- und Nachfrageverschiebungen",
+        "Diagrammauswertung"
+      ],
+      "overlay_action": "Separate Bavarian WR12 business/economics/legal emphasis from generic Dutch market examples."
+    }
+  ],
+  "assessment_mappings": [
+    {
+      "assessment_source_status": "covered_for_federal_context_only",
+      "allowed_internal_use": "Use KMK EPA Wirtschaft as general competence/exam-context language only.",
+      "forbidden_inference": "No Land-specific Abitur readiness, grading validity, or school assessment claim is allowed."
+    }
+  ],
+  "terminology_substitutions": [
+    [
+      "vraaglijn",
+      "Nachfragekurve"
+    ],
+    [
+      "aanbodlijn",
+      "Angebotskurve"
+    ],
+    [
+      "betalingsbereidheid",
+      "Zahlungsbereitschaft"
+    ],
+    [
+      "consumentensurplus",
+      "Konsumentenrente after local review"
+    ],
+    [
+      "marktevenwicht",
+      "Marktgleichgewicht"
+    ],
+    [
+      "ceteris paribus",
+      "ceteris paribus"
+    ]
+  ],
+  "institution_example_substitutions": [
+    "Replace Dutch institutions with German/Bavarian contexts only after Land-specific review.",
+    "Business and legal examples may require stronger Bavaria WR12 Wirtschaft und Recht framing.",
+    "Do not use Bavaria examples for Germany-wide claims."
+  ],
+  "accessibility_inclusion_terminology": [
+    "individuelle Foerderung after Land-specific source review",
+    "barrierefreie Materialien as product-accessibility practice only",
+    "school-owned support documentation"
+  ],
+  "school_owned_evidence_boundary": [
+    "Land school-quality, support, and assessment records are not supplied by this descriptor.",
+    "The descriptor is an internal source map; it is not a German or Bavarian compliance artefact."
+  ],
+  "forbidden_claims": [
+    "4veco is suitable for Germany as a whole.",
+    "Bavaria proves all German Laender.",
+    "KMK EPA equals a product approval route.",
+    "The descriptor proves Abitur or school-inspection readiness."
+  ],
+  "proof_required_to_close": [
+    "German country/source review for KMK and Bavaria boundaries.",
+    "Bavaria teacher/economics review of terminology and concept placement.",
+    "Land-specific inspection/evaluation source refresh if school-quality claims are ever considered.",
+    "Human approval before any local edition or Germany-facing output."
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false
+  },
+  "finding_classification": [
+    {
+      "finding": "Bavaria / Germany descriptor has an explicit jurisdiction boundary and official source allowlist.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for internal overlay architecture.",
+      "does_not_block": "Proceeding to human review for the architecture packet.",
+      "proof_required_to_close": "Country/source reviewer PASS and checker PASS."
+    },
+    {
+      "finding": "Bavaria / Germany retains local assessment and school-owned evidence gaps.",
+      "classification": "minor_carry_flag",
+      "blocks": "Country edition, public/school-facing output, assessment-readiness, inspection/accreditation, and compliance claims.",
+      "does_not_block": "Internal descriptor and crosswalk architecture.",
+      "proof_required_to_close": "Separate authorised source refresh and human gate before any local implementation."
+    },
+    {
+      "finding": "Bavaria / Germany forbids downstream product and authority jumps.",
+      "classification": "scale_blocker",
+      "blocks": "Product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product use, personal-data processing, OP0, PTA, summative, and inspection-readiness claims.",
+      "does_not_block": "Manual internal analytical review of the descriptor.",
+      "proof_required_to_close": "Future explicit human authorisation with local expert/legal review."
+    }
+  ]
+}

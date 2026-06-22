@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "report_id": "international-overlay-archetype-pilot",
+  "sprint_id": "GOAL-IQS-OVERLAY-ARCHITECTURE-1",
+  "generated_date": "2026-06-22",
+  "access_date": "2026-06-22",
+  "status": "four_archetype_pilot_complete",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "foundation_sprint_id": "GOAL-IQS-FOUNDATION-1",
+  "foundation_decision_source": "reports/inspection-standards/international-foundation-decision.md",
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md",
+  "non_negotiable_requirements": [
+    "Cite the product end-state and original sprint/gate specification.",
+    "Cite the accepted GOAL-IQS-FOUNDATION-1 decision and preserve its authority boundaries.",
+    "Name non-negotiable requirements before conclusions.",
+    "Include a core-requirement checklist.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "Do not carry any missing core requirement as PASS WITH FLAGS.",
+    "Generate exactly the allowlisted overlay schema, four descriptors, governance docs, crosswalk, pilot report, and decision report.",
+    "Use explicit per-scope source and output allowlists; do not glob directories or discover sources implicitly.",
+    "Keep all country-edition, compliance, approval, public, school-facing, product-route, Scale Gate, diagnostics/mastery/PV, student-use, personal-data, OP0, PTA, summative, and inspection-readiness authority blocked."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "overlay_schema",
+      "requirement": "The descriptor schema names every required overlay field and blocks implicit source/output discovery.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "four_archetype_descriptors",
+      "requirement": "England, Flanders, Bavaria/Germany, and California/United States descriptors are generated as contrasting governance archetypes.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "official_source_allowlists",
+      "requirement": "Each descriptor carries explicit official-source allowlists with authority type, allowed use, and forbidden inference.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "curriculum_assessment_mapping",
+      "requirement": "Each descriptor separates curriculum mapping from assessment/exam mapping and names v0 gaps.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "book1_crosswalk",
+      "requirement": "Book 1 Chapters 1.2 and 1.3 are crosswalked to the four descriptors without country-edition output.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "school_owned_boundary",
+      "requirement": "Every descriptor preserves school-owned evidence, implementation, inspection, accreditation, and accountability boundaries.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "accessibility_inclusion_terms",
+      "requirement": "Each descriptor records local accessibility/inclusion terminology without compliance claims.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "refusal_and_stop_conditions",
+      "requirement": "Generator and checker refuse forbidden audiences, claims, integrations, and governance overgeneralisations.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "single_decision",
+      "requirement": "The architecture chooses exactly one allowed decision.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "human_review_stop",
+      "requirement": "The packet returns only after all descriptors, crosswalk, validators, specialist reviews, and final PR proof are complete.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    }
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false
+  },
+  "output_files_written": [
+    "references/schemas/international-jurisdiction-overlay.schema.json",
+    "references/data/inspection-standards/overlays/england.v0.json",
+    "references/data/inspection-standards/overlays/flanders.v0.json",
+    "references/data/inspection-standards/overlays/bavaria.v0.json",
+    "references/data/inspection-standards/overlays/california.v0.json",
+    "docs/inspection-standards/international-overlay-descriptor-contract.md",
+    "docs/inspection-standards/international-overlay-governance-rules.md",
+    "reports/inspection-standards/international-overlay-archetype-pilot.md",
+    "reports/inspection-standards/international-overlay-archetype-pilot.json",
+    "reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.md",
+    "reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json",
+    "reports/inspection-standards/international-overlay-architecture-decision.md",
+    "reports/inspection-standards/international-overlay-architecture-decision.json"
+  ],
+  "descriptor_schema": "references/schemas/international-jurisdiction-overlay.schema.json",
+  "descriptor_files": [
+    "references/data/inspection-standards/overlays/england.v0.json",
+    "references/data/inspection-standards/overlays/flanders.v0.json",
+    "references/data/inspection-standards/overlays/bavaria.v0.json",
+    "references/data/inspection-standards/overlays/california.v0.json"
+  ],
+  "governance_archetypes": [
+    {
+      "id": "national_inspectorate_plus_qualification",
+      "label": "National inspectorate plus qualification-content model",
+      "descriptor": "england",
+      "risk": "Whole-UK overgeneralisation and exam-board substitution.",
+      "control": "England-only boundary and DfE subject-content source separate from exam-board specifications."
+    },
+    {
+      "id": "subnational_quality_framework",
+      "label": "Subnational quality-framework and curriculum-goals model",
+      "descriptor": "flanders",
+      "risk": "All-Belgium claims from Flemish sources.",
+      "control": "Flanders-only boundary and separate curriculum/quality source roles."
+    },
+    {
+      "id": "federal_land_curriculum",
+      "label": "Federal coordination plus Land curriculum model",
+      "descriptor": "bavaria",
+      "risk": "Single-Germany curriculum or inspection claim.",
+      "control": "KMK source family is federal context only; Bavaria is representative Land overlay only."
+    },
+    {
+      "id": "state_standards_with_federal_accountability_context",
+      "label": "State standards with federal accountability context",
+      "descriptor": "california",
+      "risk": "National-US inspection, accreditation, or standards claim.",
+      "control": "California state standards are local; U.S. Department of Education material is federal accountability context only."
+    }
+  ],
+  "descriptors": [
+    {
+      "descriptor_id": "england.v0",
+      "jurisdiction_label": "England",
+      "governance_archetype": "national_inspectorate_plus_qualification",
+      "boundary_label": "England-only",
+      "source_count": 3,
+      "curriculum_mapping_count": 2,
+      "assessment_status": [
+        "not_covered_in_descriptor"
+      ],
+      "school_owned_boundary": [
+        "Ofsted evidence gathering, leadership, safeguarding, attendance, support, and implementation evidence belongs to the school and inspectorate process.",
+        "Product evidence can support curriculum reasoning only; it cannot supply inspection evidence by itself."
+      ],
+      "proof_required_to_close": [
+        "England source refresh by a country/source reviewer.",
+        "Exam-board-specific source allowlist if assessment mapping is ever authorised.",
+        "Teacher/economics review of all terminology substitutions.",
+        "Human approval before any local edition or public/school-facing output."
+      ]
+    },
+    {
+      "descriptor_id": "flanders.v0",
+      "jurisdiction_label": "Belgium / Flanders",
+      "governance_archetype": "subnational_quality_framework",
+      "boundary_label": "Flanders-only",
+      "source_count": 3,
+      "curriculum_mapping_count": 2,
+      "assessment_status": [
+        "not_covered_in_descriptor"
+      ],
+      "school_owned_boundary": [
+        "OK quality-development evidence is owned by the school and inspection process.",
+        "Product crosswalks can support curriculum reasoning but cannot supply school-quality proof."
+      ],
+      "proof_required_to_close": [
+        "Flemish source refresh with exact curriculum goal IDs.",
+        "Flemish assessment/source decision if assessment mapping is ever authorised.",
+        "Teacher/economics and Dutch-language quality-inspection review.",
+        "Human approval before any local edition or school-facing output."
+      ]
+    },
+    {
+      "descriptor_id": "bavaria.v0",
+      "jurisdiction_label": "Bavaria / Germany",
+      "governance_archetype": "federal_land_curriculum",
+      "boundary_label": "KMK context plus Bavaria Land overlay",
+      "source_count": 3,
+      "curriculum_mapping_count": 2,
+      "assessment_status": [
+        "covered_for_federal_context_only"
+      ],
+      "school_owned_boundary": [
+        "Land school-quality, support, and assessment records are not supplied by this descriptor.",
+        "The descriptor is an internal source map; it is not a German or Bavarian compliance artefact."
+      ],
+      "proof_required_to_close": [
+        "German country/source review for KMK and Bavaria boundaries.",
+        "Bavaria teacher/economics review of terminology and concept placement.",
+        "Land-specific inspection/evaluation source refresh if school-quality claims are ever considered.",
+        "Human approval before any local edition or Germany-facing output."
+      ]
+    },
+    {
+      "descriptor_id": "california.v0",
+      "jurisdiction_label": "California / United States",
+      "governance_archetype": "state_standards_with_federal_accountability_context",
+      "boundary_label": "California state standards plus U.S. federal accountability context",
+      "source_count": 3,
+      "curriculum_mapping_count": 2,
+      "assessment_status": [
+        "not_covered_in_descriptor"
+      ],
+      "school_owned_boundary": [
+        "District curriculum decisions, student supports, accountability reports, and any accreditation evidence are outside this descriptor.",
+        "Federal ESSA context does not turn product evidence into school accountability evidence."
+      ],
+      "proof_required_to_close": [
+        "California source refresh with exact HSS-PoE standards selected.",
+        "Teacher/economics review of U.S. terminology and examples.",
+        "Legal/claims review before any accountability, district, accreditation, or public wording.",
+        "Human approval before any local edition or U.S.-facing output."
+      ]
+    }
+  ],
+  "output_allowlist_policy": "Only OUTPUT_PATHS from build-scripts/inspection/build-international-overlay-architecture.js may be written; descriptors are explicit and no directory globbing or implicit source discovery is permitted.",
+  "finding_classification": [
+    {
+      "finding": "The four selected descriptors cover the required governance archetypes without creating country editions.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for human review of this architecture packet.",
+      "does_not_block": "Selected-jurisdiction deepening if the human owner approves the bounded decision.",
+      "proof_required_to_close": "Country/source reviews, governance/legal/accessibility reviews, final lead PASS, currentness checker PASS, and green CI."
+    },
+    {
+      "finding": "Every descriptor carries local assessment, school-owned evidence, and authority gaps.",
+      "classification": "minor_carry_flag",
+      "blocks": "Any local edition, teacher/school-facing output, compliance, approval, inspection-readiness, assessment-readiness, or public claim.",
+      "does_not_block": "Internal architecture decision.",
+      "proof_required_to_close": "Separate authorised local source-refresh gate per jurisdiction."
+    },
+    {
+      "finding": "The architecture remains internal-only and manually invoked.",
+      "classification": "scale_blocker",
+      "blocks": "Evidence-pack generation, dashboard/package/CI product integration, quality-ref, Scale Gate, product-route adoption, diagnostics/mastery/PV, student/product-use, personal data, OP0, PTA, and summative claims.",
+      "does_not_block": "Repository PR validation and human review.",
+      "proof_required_to_close": "Explicit future human approval for any downstream authority."
+    }
+  ]
+}

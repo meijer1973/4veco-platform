@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOAL-IQS-OVERLAY-ARCHITECTURE-1",
+  "generated_date": "2026-06-22",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md",
+  "foundation_decision_source": "reports/inspection-standards/international-foundation-decision.md",
+  "descriptor_id": "flanders.v0",
+  "jurisdiction_id": "flanders",
+  "jurisdiction_label": "Belgium / Flanders",
+  "governance_archetype": "subnational_quality_framework",
+  "status": "internal_overlay_descriptor_complete",
+  "jurisdiction_boundary": {
+    "boundary_label": "Flanders-only",
+    "governance_level": "Flemish Community subnational education system",
+    "includes": [
+      "Flemish quality framework and Flemish curriculum-goals routing."
+    ],
+    "excludes": [
+      "French Community of Belgium",
+      "German-speaking Community of Belgium",
+      "Belgium-wide compliance claims",
+      "Flemish assessment sources not researched in v0"
+    ],
+    "boundary_warning": "Flanders is not all Belgium; Dutch-language vocabulary similarity does not prove curriculum or quality equivalence."
+  },
+  "authority_type": {
+    "inspection_or_school_evaluation": "covered_for_descriptor: Flemish OK quality framework and inspection-method inventory.",
+    "curriculum": "covered_for_descriptor: Onderwijsdoelen.be curriculum-goals portal as source route.",
+    "examination": "not_covered_in_descriptor: no Flemish assessment or examination source is included.",
+    "accountability": "covered_for_school_owned_boundary: OK and inspection-method sources inform school quality vocabulary only.",
+    "accreditation": "not_covered_in_descriptor: no accreditation source is used.",
+    "regional_or_state_overlay": "covered_for_descriptor: Flanders-only boundary; other Belgian communities require separate descriptors."
+  },
+  "official_source_allowlist": [
+    {
+      "source_id": "be-flanders-ok-framework",
+      "authority": "Vlaamse overheid / Onderwijsinspectie Vlaanderen",
+      "title": "Referentiekader voor onderwijskwaliteit (het OK)",
+      "url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit/referentiekader-voor-onderwijskwaliteit-het-ok",
+      "source_type": "quality framework",
+      "role": "quality framework and inspection-development vocabulary",
+      "scope": "Flemish Community",
+      "publication_or_version_date": "Live official page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Name Flemish quality expectations and development-scale boundary for internal overlay architecture.",
+      "forbidden_inference": "Does not represent all Belgian communities or prove school-quality compliance."
+    },
+    {
+      "source_id": "be-flanders-onderwijsdoelen-3de-graad",
+      "authority": "Vlaamse overheid / Onderwijsdoelen.be",
+      "title": "Secundair onderwijs - 3de graad - Onderwijsdoelen",
+      "url": "https://onderwijsdoelen.be/modernisatie-so?onderwijsstructuur=SO_3DE_GRAAD",
+      "source_type": "curriculum goals portal",
+      "role": "curriculum-goals routing",
+      "scope": "Flemish Community",
+      "publication_or_version_date": "Live official portal verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Route future economics/financial-economic curriculum goal mapping.",
+      "forbidden_inference": "Does not prove that a 4veco chapter satisfies Flemish curriculum goals or school quality evidence."
+    },
+    {
+      "source_id": "be-flanders-what-do-we-inspect",
+      "authority": "Onderwijsinspectie Vlaanderen",
+      "title": "What do we inspect?",
+      "url": "https://www.onderwijsinspectie.be/en/what-do-we-inspect",
+      "source_type": "inspection method",
+      "role": "inspection-method comparator",
+      "scope": "Flemish Community",
+      "publication_or_version_date": "Live official page verified in source register 2026-06-08",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Keep quality development, teaching practice, feedback, evaluation, and learning-effects language school-owned.",
+      "forbidden_inference": "Does not authorize generated evidence packs or Belgium-wide claims."
+    }
+  ],
+  "source_freshness": {
+    "access_date": "2026-06-22",
+    "freshness_status": "fresh_for_internal_overlay_architecture_with_curriculum_portal_refresh_required",
+    "refresh_required_before": "Any Flanders-specific local edition, assessment mapping, school-facing output, or Belgian-community comparison.",
+    "currentness_checker": "build-scripts/inspection/check-international-overlay-architecture.js"
+  },
+  "curriculum_mappings": [
+    {
+      "book_scope": "Book 1 Chapter 1.2 Vraag",
+      "mapping_status": "candidate_internal_crosswalk",
+      "local_authority_anchor": "Onderwijsdoelen.be source route; exact goal IDs must be selected later.",
+      "portable_core": [
+        "vraag",
+        "betalingsbereidheid",
+        "consumentensurplus",
+        "vraagfactoren",
+        "collectieve vraag"
+      ],
+      "overlay_action": "Keep Dutch terms under Flemish terminology review; map exact Flemish goal codes before any lesson adaptation."
+    },
+    {
+      "book_scope": "Book 1 Chapter 1.3 Aanbod en marktevenwicht",
+      "mapping_status": "candidate_internal_crosswalk",
+      "local_authority_anchor": "Onderwijsdoelen.be source route plus OK school-quality boundary.",
+      "portable_core": [
+        "aanbod",
+        "aanbodfactoren",
+        "marktevenwicht",
+        "tekort/overschot",
+        "verschuivingen"
+      ],
+      "overlay_action": "Review whether examples, context, and assessment language match Flemish secondary pathways."
+    }
+  ],
+  "assessment_mappings": [
+    {
+      "assessment_source_status": "not_covered_in_descriptor",
+      "allowed_internal_use": "Record that no Flemish exam/assessment mapping is available in this descriptor.",
+      "forbidden_inference": "No assessment-readiness, summative, or school-quality claim is allowed."
+    }
+  ],
+  "terminology_substitutions": [
+    [
+      "vraaglijn",
+      "vraagcurve/vraaglijn after Flemish terminology review"
+    ],
+    [
+      "aanbodlijn",
+      "aanbodcurve/aanbodlijn after Flemish terminology review"
+    ],
+    [
+      "betalingsbereidheid",
+      "betalingsbereidheid"
+    ],
+    [
+      "consumentensurplus",
+      "consumentensurplus"
+    ],
+    [
+      "marktevenwicht",
+      "marktevenwicht"
+    ],
+    [
+      "doeloefening",
+      "local exercise-type label to be reviewed"
+    ]
+  ],
+  "institution_example_substitutions": [
+    "Dutch institutional examples require Flemish Community review before use.",
+    "School-quality examples must stay framed as school-owned implementation evidence.",
+    "Do not infer Belgium-wide institutions from Flemish sources."
+  ],
+  "accessibility_inclusion_terminology": [
+    "kwaliteitsontwikkeling",
+    "kwaliteitsverwachtingen",
+    "ontwikkeling van lerenden",
+    "school-owned support and inclusion evidence"
+  ],
+  "school_owned_evidence_boundary": [
+    "OK quality-development evidence is owned by the school and inspection process.",
+    "Product crosswalks can support curriculum reasoning but cannot supply school-quality proof."
+  ],
+  "forbidden_claims": [
+    "4veco meets Flemish OK expectations.",
+    "The descriptor proves Belgian compliance.",
+    "Dutch-language equivalence proves Flemish curriculum fit.",
+    "Generated product evidence can replace school development-scale evidence."
+  ],
+  "proof_required_to_close": [
+    "Flemish source refresh with exact curriculum goal IDs.",
+    "Flemish assessment/source decision if assessment mapping is ever authorised.",
+    "Teacher/economics and Dutch-language quality-inspection review.",
+    "Human approval before any local edition or school-facing output."
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false
+  },
+  "finding_classification": [
+    {
+      "finding": "Belgium / Flanders descriptor has an explicit jurisdiction boundary and official source allowlist.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for internal overlay architecture.",
+      "does_not_block": "Proceeding to human review for the architecture packet.",
+      "proof_required_to_close": "Country/source reviewer PASS and checker PASS."
+    },
+    {
+      "finding": "Belgium / Flanders retains local assessment and school-owned evidence gaps.",
+      "classification": "minor_carry_flag",
+      "blocks": "Country edition, public/school-facing output, assessment-readiness, inspection/accreditation, and compliance claims.",
+      "does_not_block": "Internal descriptor and crosswalk architecture.",
+      "proof_required_to_close": "Separate authorised source refresh and human gate before any local implementation."
+    },
+    {
+      "finding": "Belgium / Flanders forbids downstream product and authority jumps.",
+      "classification": "scale_blocker",
+      "blocks": "Product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product use, personal-data processing, OP0, PTA, summative, and inspection-readiness claims.",
+      "does_not_block": "Manual internal analytical review of the descriptor.",
+      "proof_required_to_close": "Future explicit human authorisation with local expert/legal review."
+    }
+  ]
+}
