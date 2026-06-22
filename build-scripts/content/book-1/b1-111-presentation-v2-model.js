@@ -37,6 +37,13 @@ const teacherCues = {
   'slide-11': 'Laat één leerling elke zin koppelen aan een dia of voorbeeld uit de les.',
 };
 
+const PRODUCTION_COPY_OVERRIDES = {
+  'slide-11': {
+    assertion: 'Met deze vijf zinnen vat je de basis van \u00a71.1.1 samen.',
+    reason: 'No-mastery product boundary supersedes the historical exemplar wording.',
+  },
+};
+
 const transitions = {
   'slide-01': 'We starten met Lisa, omdat haar keuze klein genoeg is om het patroon scherp te zien.',
   'slide-02': 'Van Lisa gaan we naar het begrip dat onder dit keuzeprobleem ligt: schaarste.',
@@ -163,6 +170,7 @@ function slideNotes(slide) {
 
 function toDeckSlide(slide, index) {
   const extra = extras[slide.id] || {};
+  const copyOverride = PRODUCTION_COPY_OVERRIDES[slide.id] || {};
   return {
     ...extra,
     id: slide.id,
@@ -174,8 +182,9 @@ function toDeckSlide(slide, index) {
     title: slide.title,
     subtitle: slide.subtitle,
     eyebrow: `${accepted.paragraph} · ${slide.subtitle}`,
-    assertion: slide.assertion,
+    assertion: copyOverride.assertion || slide.assertion,
     action: slide.action,
+    productionCopyOverride: copyOverride.reason ? copyOverride : undefined,
     studentExplanation: slide.student_explanation,
     misconceptionWatch: slide.misconception_watch || [],
     checks: slide.checks || [],

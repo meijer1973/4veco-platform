@@ -91,6 +91,14 @@ describeOrSkip('§1.1.1 implemented Golden web presentation', () => {
     }
   });
 
+  test('production copy avoids unsupported mastery claims', () => {
+    const summaryBridge = deck.slides.find((slide) => slide.id === 'slide-11');
+    expect(summaryBridge.assertion).toBe('Met deze vijf zinnen vat je de basis van §1.1.1 samen.');
+    expect(summaryBridge.productionCopyOverride.reason).toMatch(/No-mastery product boundary/);
+    expect(html).toContain('Met deze vijf zinnen vat je de basis van §1.1.1 samen.');
+    expect(html).not.toMatch(/\bbeheers\w*/iu);
+  });
+
   test('renderer emits the new visual structures needed by the Golden route', () => {
     for (const marker of [
       'pv2-route-contract',

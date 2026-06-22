@@ -206,10 +206,26 @@ function validateImplementedWebSource(root = path.resolve(__dirname, '..', '..')
       assert(slide.speakerNotes.teacherCue, `${slide.id} missing teacher cue`);
       assert(slide.speakerNotes.transition, `${slide.id} missing transition`);
     }
+    validateNoUnauthorizedMasteryClaims(deck);
+    const summaryBridge = deck.slides.find((slide) => slide.id === 'slide-11');
+    assert(
+      summaryBridge?.productionCopyOverride?.reason?.includes('No-mastery product boundary'),
+      'slide-11 must document the governed production-copy override',
+    );
     assert(!/prototype/i.test(JSON.stringify(deck)), 'implemented deck must not use unfinished-status labels');
   });
 
   return failures;
+}
+
+function validateNoUnauthorizedMasteryClaims(deck) {
+  if (deck.masteryAuthority?.studentPresentationAssertions === true) return;
+  for (const slide of deck.slides || []) {
+    assert(
+      !/\bbeheers\w*/iu.test(slide.assertion || ''),
+      `${slide.id} contains an unauthorized student-facing mastery assertion`,
+    );
+  }
 }
 
 function main() {
@@ -232,6 +248,7 @@ module.exports = {
   validateGoldenPresentation,
   validateImplementedWebSource,
   validateContentModel,
+  validateNoUnauthorizedMasteryClaims,
   REQUIRED_EXEMPLAR_ROLES,
   REQUIRED_UNIVERSAL_ROLES,
   EXPECTED_HTML_SHA256,

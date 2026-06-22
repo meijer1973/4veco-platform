@@ -39,9 +39,9 @@ Generated lesson output:
 - `npm.cmd run check:golden-graph-advisory-113`
   - Passes after rebasing platform and lesson branches onto the latest merged 1.1.3 advisory baselines.
 - `npx.cmd jest --runInBand engines/tests/presentation-v2-111-production.test.js engines/tests/presentatie-html-shape.test.js engines/tests/l1-5d-v2-mobile-fixes.test.js scripts/tests/build-landing-page.test.js --no-coverage`
-  - Passes: 4 suites, 28 tests.
+  - Passes: 4 suites, 29 tests.
 - `npm.cmd test -- --runInBand --no-coverage`
-  - Passes after rebase: 57 suites passed, 6 skipped, 817 tests passed.
+  - Passes after final copy repair: 57 suites passed, 6 skipped, 818 tests passed.
   - Console output includes existing validation-fixture warnings; Jest exit code is 0.
 - `git diff --check`
   - Passes in `4veco-platform`.

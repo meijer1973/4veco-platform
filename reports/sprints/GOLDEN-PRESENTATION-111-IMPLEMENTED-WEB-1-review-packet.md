@@ -46,8 +46,8 @@ See `reports/sprints/GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1-validation-log.md
 Key passing checks:
 
 - `npm.cmd run check:golden-presentation-111`
-- Targeted Jest: 4 suites, 28 tests
-- Full Jest after `npm.cmd ci`: 57 suites passed, 6 skipped, 813 tests passed
+- Targeted Jest: 4 suites, 29 tests
+- Full Jest after final copy repair: 57 suites passed, 6 skipped, 818 tests passed
 - Rendered browser QA: passed, 66 screenshots captured
 - `validate-paragraph.js --mode complete --profile student-web`: passed
 
