@@ -48,18 +48,18 @@
     },
     {
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
-      "sha256": "7dc5a62476169bd606dfab15a48ee643f1c54acb4672af9e0bea808156322d69",
-      "bytes": 45414
+      "sha256": "ac937ba1f0b56d993da75e9cc4c4a4352d331cfa0c733ad60ec4374cf7de696d",
+      "bytes": 46190
     },
     {
       "path": "docs/roadmaps/quality-standards/sprint-ledger.md",
-      "sha256": "43e16f580d136bacfba8ba34a45a18f54f52547128ed837c2d39de363f7d70f7",
-      "bytes": 53837
+      "sha256": "667d1b6404e17e572f4c12a59d5c04d7e3be3a5a6b7629c208e4eabe0718fcee",
+      "bytes": 55676
     },
     {
       "path": "references/data/inspection-standards/source-register.json",
-      "sha256": "f65b2f6d786e67b7f22c99acf55a867d4f0192886d8fecaa26f40b8da3450e40",
-      "bytes": 31051
+      "sha256": "97c1626411cd008aea4f107278fccafc3317405349a03796b05d0b83b0390805",
+      "bytes": 31416
     },
     {
       "path": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",

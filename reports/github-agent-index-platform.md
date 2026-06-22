@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T06:57:10.115Z
+Generated: 2026-06-22T07:49:49.216Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/three-year-blueprint-maturity-bundle-1-20260621`
-Source commit: `57402f201bfea7ce06c65cbaa0a02b84c078534e`
-Files indexed: 5271
+Source branch: `codex/goal-iqs-foundation-1-20260621`
+Source commit: `9d99b96695fbc37f2b37aafad60a6a2b138e2d91`
+Files indexed: 5297
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -133,7 +133,7 @@ Count: 85
 
 ## build scripts
 
-Count: 521
+Count: 523
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -208,8 +208,10 @@ Count: 521
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
 - build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
+- build-scripts/inspection/build-international-quality-standards.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
@@ -706,10 +708,12 @@ Count: 42
 
 ## validators
 
-Count: 513
+Count: 516
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-validation-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
@@ -754,6 +758,7 @@ Count: 513
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
@@ -1224,7 +1229,7 @@ Count: 513
 
 ## references
 
-Count: 658
+Count: 660
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1272,6 +1277,8 @@ Count: 658
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
 - references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
+- references/data/inspection-standards/international-authority-profiles.v0.json
+- references/data/inspection-standards/international-common-core.v0.json
 - references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
 - references/data/inspection-standards/README.md
@@ -1887,7 +1894,7 @@ Count: 658
 
 ## reports
 
-Count: 3317
+Count: 3323
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1968,6 +1975,12 @@ Count: 3317
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
+- reports/inspection-standards/international-book-portability-pilot.json
+- reports/inspection-standards/international-book-portability-pilot.md
+- reports/inspection-standards/international-commonalities-and-differences.json
+- reports/inspection-standards/international-commonalities-and-differences.md
+- reports/inspection-standards/international-foundation-decision.json
+- reports/inspection-standards/international-foundation-decision.md
 - reports/internal-dashboard/dashboard-data.json
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
@@ -5227,7 +5240,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 591
+Count: 605
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5247,6 +5260,17 @@ Count: 591
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-planning-review.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-specialist-gate-results.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-sprint-plan.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-closure-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-correction-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-human-review-packet.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-planning-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-specialist-gate-results.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-correction-log.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-final-lead-review.md
+- archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-specialist-gate-results.md
 - archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 - archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md
@@ -5514,6 +5538,8 @@ Count: 591
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
+- docs/inspection-standards/international-common-core-model.md
+- docs/inspection-standards/international-overlay-architecture.md
 - docs/inspection-standards/nl-vo-evidence-model.md
 - docs/inspection-standards/report-only-generator-plan.md
 - docs/inspection-standards/report-only-schema-design.md
@@ -5663,6 +5689,7 @@ Count: 591
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
 - docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - docs/roadmaps/quality-standards/quality-standards-end-state.md
 - docs/roadmaps/quality-standards/README.md
 - docs/roadmaps/quality-standards/sprint-ledger.md

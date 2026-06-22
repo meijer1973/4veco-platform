@@ -1,0 +1,711 @@
+{
+  "schema_version": 1,
+  "report_id": "international-authority-profiles",
+  "sprint_id": "GOAL-IQS-FOUNDATION-1",
+  "generated_date": "2026-06-21",
+  "status": "official_source_refresh_with_quality_governance_gaps_recorded",
+  "access_date": "2026-06-21",
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md",
+  "non_negotiable_requirements": [
+    "Cite the product end-state and original sprint/gate specification.",
+    "Name non-negotiable requirements before conclusions.",
+    "Include a core-requirement checklist.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "Do not carry any missing core requirement as PASS WITH FLAGS.",
+    "Keep all country-compliance, approval, public, school-facing, package/CI/dashboard/quality-ref, product-route, Scale Gate, diagnostics/mastery/PV, student-use, personal-data, OP0, PTA, summative, and inspection-readiness authority blocked.",
+    "Use official inspectorate, ministry, curriculum, examination, accountability, or state education sources wherever possible.",
+    "Represent Belgium as Flanders-only, England as England-only, Germany as KMK plus Land examples, and the United States as federal context plus state examples.",
+    "Record quality-governance source coverage per jurisdiction and mark unresearched categories as not_covered_in_v0.",
+    "Record authority strength, allowed use, and forbidden inference for every source.",
+    "Do not infer compliance, approval, country edition readiness, or school implementation evidence."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "official_source_profiles",
+      "requirement": "Nine jurisdiction profiles use official-source anchors and record allowed use plus forbidden inference.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "quality_governance_coverage",
+      "requirement": "Each jurisdiction records inspection/evaluation, curriculum, examination, accountability, accreditation, and regional/state-overlay coverage status, with v0 gaps explicit.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "governance_boundaries",
+      "requirement": "Flanders, England, Germany, Spain, and the United States retain explicit subnational or federal/state boundaries.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "common_core_matrix",
+      "requirement": "The shared common-core matrix distinguishes portable product-pedagogy from local overlay needs.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "differences_matrix",
+      "requirement": "The differences matrix names material divergences and the architecture response.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "overlay_architecture",
+      "requirement": "The overlay architecture separates shared core, local curriculum/exam overlays, source-evidence overlay, and school-owned evidence.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "book_portability_check",
+      "requirement": "Book 1 Chapters 1.2 and 1.3 are tested only as a bounded internal portability check.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "blocked_authority",
+      "requirement": "All forbidden authority flags remain false and visible.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "single_decision",
+      "requirement": "The foundation chooses exactly one allowed decision.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "id": "human_review_stop",
+      "requirement": "The packet returns for human review before any country edition, public/school-facing, product, or compliance step.",
+      "status": "met_for_foundation",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    }
+  ],
+  "quality_governance_coverage_matrix": [
+    {
+      "jurisdiction": "Netherlands",
+      "jurisdiction_id": "netherlands",
+      "inspection_or_school_evaluation": "covered_for_foundation: Inspectie van het Onderwijs Onderzoekskader 2021 VO, version 2025.",
+      "curriculum": "covered_for_foundation: CvTE vwo economics syllabus used as the Dutch economics baseline.",
+      "examination": "covered_for_foundation: CvTE vwo 2026 economics syllabus.",
+      "accountability": "covered_for_school_owned_boundary: Dutch inspection framework records accountability context without product authority.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "not_applicable_in_v0: national Dutch VO/vwo baseline only.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Accreditation and school-level implementation evidence remain outside this source set."
+    },
+    {
+      "jurisdiction": "Belgium / Flanders",
+      "jurisdiction_id": "belgium_flanders",
+      "inspection_or_school_evaluation": "covered_for_foundation: Flemish OK quality framework is the v0 quality/inspection anchor.",
+      "curriculum": "covered_for_foundation: Onderwijsdoelen.be curriculum goals portal.",
+      "examination": "not_covered_in_v0: no Flemish assessment or examination source was researched.",
+      "accountability": "covered_for_school_owned_boundary: OK quality framework informs school-owned quality categories only.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "covered_for_foundation: Flanders-only boundary recorded; other Belgian communities are out of scope.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Assessment/examination sources and non-Flemish Belgian communities remain outside v0."
+    },
+    {
+      "jurisdiction": "England",
+      "jurisdiction_id": "england",
+      "inspection_or_school_evaluation": "covered_for_foundation: Ofsted education inspection framework and operating guide.",
+      "curriculum": "covered_for_foundation: DfE A level economics subject content.",
+      "examination": "covered_as_qualification_content_only: no exam-board specification or mark-scheme source was researched.",
+      "accountability": "covered_for_school_owned_boundary: Ofsted sources record inspection/accountability context without product authority.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "covered_for_foundation: England-only boundary recorded; Scotland, Wales, and Northern Ireland are out of scope.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Exam-board-specific materials and non-England UK systems remain outside v0."
+    },
+    {
+      "jurisdiction": "Germany",
+      "jurisdiction_id": "germany",
+      "inspection_or_school_evaluation": "not_covered_in_v0: no German inspection or school-evaluation source was researched.",
+      "curriculum": "covered_for_foundation: Bavaria LehrplanPLUS is a representative Land curriculum source.",
+      "examination": "covered_for_foundation: KMK EPA Wirtschaft source family provides examination-framework context.",
+      "accountability": "not_covered_in_v0: no accountability source was researched.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "covered_for_foundation: Bavaria appears only as a representative Land example.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Land-specific inspection/evaluation/accountability sources and other Laender remain future overlay work."
+    },
+    {
+      "jurisdiction": "France",
+      "jurisdiction_id": "france",
+      "inspection_or_school_evaluation": "not_covered_in_v0: no French inspection or school-evaluation source was researched.",
+      "curriculum": "covered_for_foundation: Eduscol SES programme and resources.",
+      "examination": "covered_for_foundation: BO 2024 SES terminale examination-scope note.",
+      "accountability": "not_covered_in_v0: no accountability source was researched.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "not_applicable_in_v0: national lycee/baccalaureat SES source set only.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "School evaluation, accountability, and local implementation sources remain outside v0."
+    },
+    {
+      "jurisdiction": "Italy",
+      "jurisdiction_id": "italy",
+      "inspection_or_school_evaluation": "covered_for_foundation: Sistema nazionale di valutazione is the v0 evaluation/quality anchor.",
+      "curriculum": "covered_for_foundation: MIM national indications and 2026 curriculum-update notice.",
+      "examination": "not_covered_in_v0: no upper-secondary economics examination source was researched.",
+      "accountability": "covered_for_school_owned_boundary: SNV source records school self-evaluation/accountability context only.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "not_applicable_in_v0: national ministry source set only.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Track-specific examination and school implementation sources remain outside v0."
+    },
+    {
+      "jurisdiction": "Spain",
+      "jurisdiction_id": "spain",
+      "inspection_or_school_evaluation": "not_covered_in_v0: no Spanish inspection or school-evaluation source was researched.",
+      "curriculum": "covered_for_foundation: BOE national minimums, Educagob Economia curriculum, and autonomous-community routing.",
+      "examination": "not_covered_in_v0: no Bachillerato assessment or examination source was researched.",
+      "accountability": "not_covered_in_v0: no accountability source was researched.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "covered_for_foundation: autonomous-community curriculum routing records the overlay requirement only.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Autonomous-community curriculum details, inspection/supervision, accountability, and assessment sources remain future overlay work."
+    },
+    {
+      "jurisdiction": "Poland",
+      "jurisdiction_id": "poland",
+      "inspection_or_school_evaluation": "covered_for_foundation: MEN Nadzor pedagogiczny source.",
+      "curriculum": "covered_for_foundation: MEN business-and-management policy source.",
+      "examination": "covered_for_foundation: CKE matura information source.",
+      "accountability": "covered_for_school_owned_boundary: MEN pedagogical supervision source records accountability context only.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "covered_for_foundation: national source with regional kurator implementation noted.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Regional implementation details and accreditation remain outside v0."
+    },
+    {
+      "jurisdiction": "United States",
+      "jurisdiction_id": "united_states",
+      "inspection_or_school_evaluation": "not_covered_in_v0: no national inspection regime is claimed and no state school-evaluation source was researched.",
+      "curriculum": "covered_for_foundation: California and New York state standards/framework examples.",
+      "examination": "not_covered_in_v0: no state exam or assessment source was researched.",
+      "accountability": "covered_for_federal_context_only: U.S. Department of Education standards/accountability policy gives ESEA/ESSA context.",
+      "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+      "regional_or_state_overlay": "covered_for_foundation: California and New York are representative state examples only.",
+      "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+      "coverage_gap": "Accreditation, state accountability details, district implementation, and any national inspection claim remain outside v0."
+    }
+  ],
+  "jurisdictions": [
+    {
+      "jurisdiction": "Netherlands",
+      "jurisdiction_id": "netherlands",
+      "governance_boundary": "Dutch VO/vwo sources remain the baseline. Dutch closure is internal/report-only under CLOSE_INTERNAL_SYSTEM and does not authorize school-pack or compliance use.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "covered_for_foundation: Inspectie van het Onderwijs Onderzoekskader 2021 VO, version 2025.",
+        "curriculum": "covered_for_foundation: CvTE vwo economics syllabus used as the Dutch economics baseline.",
+        "examination": "covered_for_foundation: CvTE vwo 2026 economics syllabus.",
+        "accountability": "covered_for_school_owned_boundary: Dutch inspection framework records accountability context without product authority.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "not_applicable_in_v0: national Dutch VO/vwo baseline only.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Accreditation and school-level implementation evidence remain outside this source set."
+      },
+      "sources": [
+        {
+          "authority": "Inspectie van het Onderwijs",
+          "title": "Onderzoekskader 2021 voor het toezicht op het voortgezet onderwijs, versie 2025",
+          "url": "https://www.onderwijsinspectie.nl/documenten/2021/07/01/onderzoekskader-2021-voortgezet-onderwijs",
+          "source_type": "inspection framework",
+          "role": "inspection/accountability",
+          "scope": "national",
+          "publication_or_version_date": "2025-07-14, version applicable from 2025-08-01",
+          "access_date": "2026-06-21",
+          "authority_strength": "official inspectorate framework",
+          "allowed_use": "Baseline Dutch inspection-relevant evidence categories and school-owned evidence boundary.",
+          "forbidden_inference": "Does not prove 4veco is inspection-ready, approved, compliant, or sufficient for a school inspection."
+        },
+        {
+          "authority": "College voor Toetsen en Examens",
+          "title": "Syllabus economie vwo 2026",
+          "url": "https://www.examenblad.nl/2026/vwo/documenten/syllabus-economie-vwo-2026",
+          "source_type": "central examination syllabus",
+          "role": "curriculum/examination",
+          "scope": "national",
+          "publication_or_version_date": "2024, version 2 for examination year 2026",
+          "access_date": "2026-06-21",
+          "authority_strength": "official national examination authority",
+          "allowed_use": "Dutch baseline for upper-secondary economics concepts and examination alignment.",
+          "forbidden_inference": "Does not define non-Dutch economics curricula or any country overlay outside the Netherlands."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Belgium / Flanders",
+      "jurisdiction_id": "belgium_flanders",
+      "governance_boundary": "Use Flanders only. Do not generalize Flemish inspection or curriculum structures to the French or German-speaking Communities of Belgium.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "covered_for_foundation: Flemish OK quality framework is the v0 quality/inspection anchor.",
+        "curriculum": "covered_for_foundation: Onderwijsdoelen.be curriculum goals portal.",
+        "examination": "not_covered_in_v0: no Flemish assessment or examination source was researched.",
+        "accountability": "covered_for_school_owned_boundary: OK quality framework informs school-owned quality categories only.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "covered_for_foundation: Flanders-only boundary recorded; other Belgian communities are out of scope.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Assessment/examination sources and non-Flemish Belgian communities remain outside v0."
+      },
+      "sources": [
+        {
+          "authority": "Onderwijsinspectie / Onderwijs Vlaanderen",
+          "title": "Referentiekader voor onderwijskwaliteit (het OK)",
+          "url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit/referentiekader-voor-onderwijskwaliteit-het-ok",
+          "source_type": "education quality reference framework",
+          "role": "inspection/quality development",
+          "scope": "subnational: Flemish Community",
+          "publication_or_version_date": "live official page; no distinct version date exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official Flemish education quality framework",
+          "allowed_use": "Flemish quality categories for results, learner development, quality development, and policy.",
+          "forbidden_inference": "Does not represent all Belgian communities and does not authorize school/public distribution."
+        },
+        {
+          "authority": "Onderwijsdoelen.be / Vlaamse overheid",
+          "title": "Secundair onderwijs - 3de graad - Onderwijsdoelen",
+          "url": "https://onderwijsdoelen.be/modernisatie-so?onderwijsstructuur=SO_3DE_GRAAD",
+          "source_type": "curriculum goals portal",
+          "role": "curriculum",
+          "scope": "subnational: Flemish Community",
+          "publication_or_version_date": "live official curriculum portal; version date not exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official Flemish curriculum-goals portal",
+          "allowed_use": "Identify whether economics/financial-economic goals require Flemish local overlay mapping.",
+          "forbidden_inference": "Does not prove a textbook satisfies school-level Flemish quality evidence or all Belgian requirements."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "England",
+      "jurisdiction_id": "england",
+      "governance_boundary": "England is not the whole United Kingdom. Ofsted and DfE sources must be labelled England-only unless the source explicitly says otherwise.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "covered_for_foundation: Ofsted education inspection framework and operating guide.",
+        "curriculum": "covered_for_foundation: DfE A level economics subject content.",
+        "examination": "covered_as_qualification_content_only: no exam-board specification or mark-scheme source was researched.",
+        "accountability": "covered_for_school_owned_boundary: Ofsted sources record inspection/accountability context without product authority.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "covered_for_foundation: England-only boundary recorded; Scotland, Wales, and Northern Ireland are out of scope.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Exam-board-specific materials and non-England UK systems remain outside v0."
+      },
+      "sources": [
+        {
+          "authority": "Ofsted",
+          "title": "Education inspection framework: for use from November 2025",
+          "url": "https://www.gov.uk/government/publications/education-inspection-framework-eif/education-inspection-framework-for-use-from-november-2025",
+          "source_type": "inspection framework",
+          "role": "inspection/accountability",
+          "scope": "England",
+          "publication_or_version_date": "2025-09-09 update; use from 2025-11",
+          "access_date": "2026-06-21",
+          "authority_strength": "official inspectorate framework for England",
+          "allowed_use": "Compare curriculum, teaching, support, inclusion, leadership, and safeguarding/accountability boundaries.",
+          "forbidden_inference": "Does not represent Scotland, Wales, or Northern Ireland and does not approve 4veco materials."
+        },
+        {
+          "authority": "Department for Education",
+          "title": "GCE AS and A level subject content for economics",
+          "url": "https://www.gov.uk/government/publications/gce-as-and-a-level-for-economics",
+          "source_type": "qualification subject content",
+          "role": "curriculum/qualification",
+          "scope": "England",
+          "publication_or_version_date": "2014-04-09",
+          "access_date": "2026-06-21",
+          "authority_strength": "official national department subject-content requirement",
+          "allowed_use": "Compare A level economics content and assessment-objective expectations against the common core.",
+          "forbidden_inference": "Does not make a 4veco book an approved A level specification or exam resource."
+        },
+        {
+          "authority": "Ofsted",
+          "title": "School inspection operating guide for inspectors: for use from November 2025",
+          "url": "https://www.gov.uk/government/publications/school-inspection-toolkit-operating-guide-and-information/school-inspection-operating-guide-for-inspectors-for-use-from-november-2025",
+          "source_type": "inspection operating guide",
+          "role": "inspection evidence gathering",
+          "scope": "England",
+          "publication_or_version_date": "2025, for use from 2025-11-10",
+          "access_date": "2026-06-21",
+          "authority_strength": "official inspectorate operating guide",
+          "allowed_use": "Identify school-owned inspection evidence and case-sampling boundaries.",
+          "forbidden_inference": "Does not authorize a textbook to supply school inspection evidence by itself."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Germany",
+      "jurisdiction_id": "germany",
+      "governance_boundary": "Use a KMK/federal-context layer plus representative Land examples. Do not claim a single national economics curriculum or inspection regime.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "not_covered_in_v0: no German inspection or school-evaluation source was researched.",
+        "curriculum": "covered_for_foundation: Bavaria LehrplanPLUS is a representative Land curriculum source.",
+        "examination": "covered_for_foundation: KMK EPA Wirtschaft source family provides examination-framework context.",
+        "accountability": "not_covered_in_v0: no accountability source was researched.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "covered_for_foundation: Bavaria appears only as a representative Land example.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Land-specific inspection/evaluation/accountability sources and other Laender remain future overlay work."
+      },
+      "sources": [
+        {
+          "authority": "Kultusministerkonferenz",
+          "title": "Einheitliche Pruefungsanforderungen in der Abiturpruefung Wirtschaft",
+          "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/1989/1989_12_01-EPA-Wirtschaft.pdf",
+          "source_type": "Abitur examination requirements",
+          "role": "examination framework",
+          "scope": "federal coordination",
+          "publication_or_version_date": "1989-12-01, amended 2006-11-16",
+          "access_date": "2026-06-21",
+          "authority_strength": "official KMK coordination document",
+          "allowed_use": "Federal-context examination expectations for economics/business economics.",
+          "forbidden_inference": "Does not replace Land curricula or local school implementation evidence."
+        },
+        {
+          "authority": "Kultusministerkonferenz",
+          "title": "Allgemeine Bildung - KMK document list",
+          "url": "https://www.kmk.org/downloads-dokumente/beschluesse-und-veroeffentlichungen/bildung-/-schule/allgemeine-bildung.html",
+          "source_type": "official source index",
+          "role": "federal context/source provenance",
+          "scope": "federal coordination",
+          "publication_or_version_date": "live official KMK index; includes 2021 EPA Wirtschaft examples",
+          "access_date": "2026-06-21",
+          "authority_strength": "official KMK source index",
+          "allowed_use": "Trace current official EPA Wirtschaft source family and later updates/examples.",
+          "forbidden_inference": "Does not create a single national German textbook compliance claim."
+        },
+        {
+          "authority": "Bayerisches Staatsministerium fuer Unterricht und Kultus / LehrplanPLUS",
+          "title": "Gymnasium Wirtschaft und Recht 12, erhoehtes Anforderungsniveau",
+          "url": "https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/12/wirtschaft-und-recht/erhoeht",
+          "source_type": "Land curriculum",
+          "role": "curriculum",
+          "scope": "subnational: Bavaria",
+          "publication_or_version_date": "live LehrplanPLUS page; version date not exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official Land curriculum portal",
+          "allowed_use": "Representative Land overlay example for upper-secondary economics/business/legal content.",
+          "forbidden_inference": "Does not represent all German Laender."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "France",
+      "jurisdiction_id": "france",
+      "governance_boundary": "Use national lycee/baccalaureat SES sources. Distinguish programme content from baccalaureat examination restrictions.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "not_covered_in_v0: no French inspection or school-evaluation source was researched.",
+        "curriculum": "covered_for_foundation: Eduscol SES programme and resources.",
+        "examination": "covered_for_foundation: BO 2024 SES terminale examination-scope note.",
+        "accountability": "not_covered_in_v0: no accountability source was researched.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "not_applicable_in_v0: national lycee/baccalaureat SES source set only.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "School evaluation, accountability, and local implementation sources remain outside v0."
+      },
+      "sources": [
+        {
+          "authority": "Ministere de l'Education nationale / Eduscol",
+          "title": "Programmes et ressources en sciences economiques et sociales - voie GT",
+          "url": "https://eduscol.education.fr/5838/programmes-et-ressources-en-sciences-economiques-et-sociales-voie-gt",
+          "source_type": "curriculum resource portal",
+          "role": "curriculum/support",
+          "scope": "national",
+          "publication_or_version_date": "live official page, updated 2026-02 in retrieved result",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry curriculum portal",
+          "allowed_use": "Identify national SES programme and resource structure.",
+          "forbidden_inference": "Does not prove 4veco alignment to French assessment or school implementation."
+        },
+        {
+          "authority": "Ministere de l'Education nationale / Eduscol",
+          "title": "Programme de sciences economiques et sociales de terminale generale",
+          "url": "https://eduscol.education.fr/sites/default/files/document/spe253annexe1158821pdf-82755.pdf",
+          "source_type": "programme PDF",
+          "role": "curriculum",
+          "scope": "national",
+          "publication_or_version_date": "2019 programme source as retrieved from official Eduscol",
+          "access_date": "2026-06-21",
+          "authority_strength": "official national programme",
+          "allowed_use": "Map terminale SES economics content and reasoning requirements.",
+          "forbidden_inference": "Does not authorize exam-readiness or French-compliant edition claims."
+        },
+        {
+          "authority": "Ministere de l'Education nationale",
+          "title": "BO 2024 note defining SES terminale questions evaluable from session 2025",
+          "url": "https://www.education.gouv.fr/bo/2024/Hebdo35/MENE2416667N",
+          "source_type": "official bulletin/exam note",
+          "role": "examination",
+          "scope": "national",
+          "publication_or_version_date": "2024-09-17 note, BO 2024-09-19",
+          "access_date": "2026-06-21",
+          "authority_strength": "official examination rule note",
+          "allowed_use": "Record that examination scope can be narrower than the full programme.",
+          "forbidden_inference": "Does not prove local baccalaureat preparation or compliance."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Italy",
+      "jurisdiction_id": "italy",
+      "governance_boundary": "Treat Italy as a national ministry curriculum/SNV context with track-specific economics availability, not as a single generic economics course for every upper-secondary route.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "covered_for_foundation: Sistema nazionale di valutazione is the v0 evaluation/quality anchor.",
+        "curriculum": "covered_for_foundation: MIM national indications and 2026 curriculum-update notice.",
+        "examination": "not_covered_in_v0: no upper-secondary economics examination source was researched.",
+        "accountability": "covered_for_school_owned_boundary: SNV source records school self-evaluation/accountability context only.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "not_applicable_in_v0: national ministry source set only.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Track-specific examination and school implementation sources remain outside v0."
+      },
+      "sources": [
+        {
+          "authority": "Ministero dell'Istruzione e del Merito",
+          "title": "Nuove Indicazioni nazionali per i Licei",
+          "url": "https://www.mim.gov.it/-/pubblicato-il-testo-delle-nuove-indicazioni-nazionali-per-i-licei-",
+          "source_type": "curriculum update notice",
+          "role": "curriculum",
+          "scope": "national",
+          "publication_or_version_date": "2026-04 live official notice in retrieved result",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry notice",
+          "allowed_use": "Flag current curriculum-review context for lyceum overlays.",
+          "forbidden_inference": "Does not prove current final textbook compliance or route-specific readiness."
+        },
+        {
+          "authority": "Ministero dell'Istruzione e del Merito",
+          "title": "Indicazioni nazionali per i licei",
+          "url": "https://www.istruzione.it/alternanza/allegati/NORMATIVA%20ASL/INDICAZIONI%20NAZIONALI%20PER%20I%20LICEI.pdf",
+          "source_type": "national curriculum indications",
+          "role": "curriculum",
+          "scope": "national",
+          "publication_or_version_date": "2010 national indications source",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry curriculum source",
+          "allowed_use": "Baseline for economics/legal-social lyceum overlay analysis where applicable.",
+          "forbidden_inference": "Does not cover every upper-secondary technical/professional route or school-level implementation."
+        },
+        {
+          "authority": "Ministero dell'Istruzione e del Merito",
+          "title": "Sistema nazionale di valutazione",
+          "url": "https://www.mim.gov.it/sistema-nazionale-di-valutazione",
+          "source_type": "national evaluation system",
+          "role": "accountability/quality assurance",
+          "scope": "national",
+          "publication_or_version_date": "live official page; version date not exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry SNV page",
+          "allowed_use": "Quality-assurance and school self-evaluation/accountability context.",
+          "forbidden_inference": "Does not convert product evidence into school evaluation evidence."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Spain",
+      "jurisdiction_id": "spain",
+      "governance_boundary": "Use national minimum-teaching rules plus autonomous-community overlays. Do not treat national minimum curriculum as a full regional implementation.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "not_covered_in_v0: no Spanish inspection or school-evaluation source was researched.",
+        "curriculum": "covered_for_foundation: BOE national minimums, Educagob Economia curriculum, and autonomous-community routing.",
+        "examination": "not_covered_in_v0: no Bachillerato assessment or examination source was researched.",
+        "accountability": "not_covered_in_v0: no accountability source was researched.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "covered_for_foundation: autonomous-community curriculum routing records the overlay requirement only.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Autonomous-community curriculum details, inspection/supervision, accountability, and assessment sources remain future overlay work."
+      },
+      "sources": [
+        {
+          "authority": "Boletin Oficial del Estado",
+          "title": "Real Decreto 243/2022, ordenacion y ensenanzas minimas del Bachillerato",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5521",
+          "source_type": "royal decree",
+          "role": "curriculum/minimum teaching",
+          "scope": "national minimums",
+          "publication_or_version_date": "2022-04-05, consolidated official text as accessed",
+          "access_date": "2026-06-21",
+          "authority_strength": "official national legal source",
+          "allowed_use": "National bachillerato minimum-curriculum and competence framework.",
+          "forbidden_inference": "Does not replace autonomous-community curriculum or school implementation evidence."
+        },
+        {
+          "authority": "Educagob / Ministerio de Educacion",
+          "title": "Bachillerato Economia curriculum",
+          "url": "https://educagob.educacionfpydeportes.gob.es/curriculo/curriculo-lomloe/menu-curriculos-basicos/bachillerato/materias/economia/desarrollo.html",
+          "source_type": "official curriculum portal",
+          "role": "curriculum",
+          "scope": "national minimums",
+          "publication_or_version_date": "live official LOMLOE curriculum portal; version date not exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry curriculum portal",
+          "allowed_use": "Economia bachillerato concepts, competences, evaluation criteria, and basic knowledge.",
+          "forbidden_inference": "Does not prove compatibility with a specific autonomous-community overlay."
+        },
+        {
+          "authority": "Educagob / Ministerio de Educacion",
+          "title": "Curriculo de Bachillerato en las Comunidades Autonomas",
+          "url": "https://educagob.educacionfpydeportes.gob.es/curriculo/curriculo-lomloe/menu-curriculos-basicos/bachillerato/curriculo-comunidades-autonomas.html",
+          "source_type": "regional curriculum index",
+          "role": "regional overlay routing",
+          "scope": "subnational routing",
+          "publication_or_version_date": "live official index; version date not exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry routing source",
+          "allowed_use": "Record that autonomous-community overlays are required.",
+          "forbidden_inference": "Does not itself satisfy any regional curriculum."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "Poland",
+      "jurisdiction_id": "poland",
+      "governance_boundary": "Use MEN curriculum/supervision context plus CKE examination source. Business and management is the nearest upper-secondary economics-facing subject.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "covered_for_foundation: MEN Nadzor pedagogiczny source.",
+        "curriculum": "covered_for_foundation: MEN business-and-management policy source.",
+        "examination": "covered_for_foundation: CKE matura information source.",
+        "accountability": "covered_for_school_owned_boundary: MEN pedagogical supervision source records accountability context only.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "covered_for_foundation: national source with regional kurator implementation noted.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Regional implementation details and accreditation remain outside v0."
+      },
+      "sources": [
+        {
+          "authority": "Ministerstwo Edukacji Narodowej",
+          "title": "Biznes i zarzadzanie - nowy przedmiot w szkolach ponadpodstawowych",
+          "url": "https://www.gov.pl/web/edukacja/biznes-i-zarzadzanie--nowy-przedmiot-w-szkolach-ponadpodstawowych-od-1-wrzesnia-2023-r",
+          "source_type": "curriculum-policy notice",
+          "role": "curriculum",
+          "scope": "national",
+          "publication_or_version_date": "2022-09-14, implemented from 2023-09-01",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry policy source",
+          "allowed_use": "Identify BiZ as the Polish upper-secondary economics/business-adjacent overlay route.",
+          "forbidden_inference": "Does not prove matura alignment or school implementation evidence."
+        },
+        {
+          "authority": "Centralna Komisja Egzaminacyjna",
+          "title": "Informator o egzaminie maturalnym z biznesu i zarzadzania od roku szkolnego 2026/2027",
+          "url": "https://bip.cke.gov.pl/artykul/211/1659/egzamin-maturalny-w-formule-2023",
+          "source_type": "matura examination information",
+          "role": "examination",
+          "scope": "national",
+          "publication_or_version_date": "2025-08-29 attachment metadata in retrieved result",
+          "access_date": "2026-06-21",
+          "authority_strength": "official national examination commission source",
+          "allowed_use": "Map examination form, sample task style, and matura-specific requirements.",
+          "forbidden_inference": "Does not make 4veco a matura-preparation product or Polish-compliant edition."
+        },
+        {
+          "authority": "Ministerstwo Edukacji Narodowej",
+          "title": "Nadzor pedagogiczny",
+          "url": "https://www.gov.pl/web/edukacja/nadzor-pedagogiczny3",
+          "source_type": "pedagogical supervision portal",
+          "role": "accountability/inspection",
+          "scope": "national with regional kurator implementation",
+          "publication_or_version_date": "live page; includes 2025 supervision documents in retrieved result",
+          "access_date": "2026-06-21",
+          "authority_strength": "official ministry supervision source",
+          "allowed_use": "Represent school-owned supervision/accountability context.",
+          "forbidden_inference": "Does not convert textbook evidence into school supervision proof."
+        }
+      ]
+    },
+    {
+      "jurisdiction": "United States",
+      "jurisdiction_id": "united_states",
+      "governance_boundary": "Use federal context plus representative state standards examples. Accreditation remains not covered in v0. Do not invent a national inspection regime or national economics curriculum.",
+      "quality_governance_coverage": {
+        "inspection_or_school_evaluation": "not_covered_in_v0: no national inspection regime is claimed and no state school-evaluation source was researched.",
+        "curriculum": "covered_for_foundation: California and New York state standards/framework examples.",
+        "examination": "not_covered_in_v0: no state exam or assessment source was researched.",
+        "accountability": "covered_for_federal_context_only: U.S. Department of Education standards/accountability policy gives ESEA/ESSA context.",
+        "accreditation": "not_covered_in_v0: no accreditation source was researched or used.",
+        "regional_or_state_overlay": "covered_for_foundation: California and New York are representative state examples only.",
+        "coverage_status": "quality_governance_coverage_recorded_with_v0_gaps",
+        "coverage_gap": "Accreditation, state accountability details, district implementation, and any national inspection claim remain outside v0."
+      },
+      "sources": [
+        {
+          "authority": "U.S. Department of Education",
+          "title": "Federal Role in Education",
+          "url": "https://www.ed.gov/about/ed-overview/federal-role-in-education",
+          "source_type": "federal role explainer",
+          "role": "federal context",
+          "scope": "federal",
+          "publication_or_version_date": "live official page; version date not exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official federal department source",
+          "allowed_use": "Set boundary that education governance is distributed and state/local authority matters.",
+          "forbidden_inference": "Does not create federal textbook approval or national inspection authority."
+        },
+        {
+          "authority": "U.S. Department of Education",
+          "title": "Standards and Assessments",
+          "url": "https://www.ed.gov/laws-and-policy/laws-preschool-grade-12-education/esea/standards-and-assessments",
+          "source_type": "federal standards/accountability policy",
+          "role": "accountability/support for state standards",
+          "scope": "federal",
+          "publication_or_version_date": "live official page; version date not exposed in retrieved text",
+          "access_date": "2026-06-21",
+          "authority_strength": "official federal department source",
+          "allowed_use": "Federal ESEA/ESSA context for state standards and assessments.",
+          "forbidden_inference": "Does not supply a single national curriculum or state-compliance claim."
+        },
+        {
+          "authority": "California Department of Education",
+          "title": "History-Social Science Standards: Principles of Economics, Grade 12",
+          "url": "https://www2.cde.ca.gov/cacs/history?c0=13",
+          "source_type": "state academic standards",
+          "role": "curriculum",
+          "scope": "subnational: California",
+          "publication_or_version_date": "standards page live as accessed; framework adopted 2016-07-14",
+          "access_date": "2026-06-21",
+          "authority_strength": "official state education department source",
+          "allowed_use": "Representative state economics standards overlay.",
+          "forbidden_inference": "Does not represent all states or any accreditation/inspection approval."
+        },
+        {
+          "authority": "New York State Education Department",
+          "title": "New York State Grades 9-12 Social Studies Framework",
+          "url": "https://www.nysed.gov/sites/default/files/programs/standards-instruction/framework-9-12-with-2017-updates.pdf",
+          "source_type": "state social-studies framework",
+          "role": "curriculum",
+          "scope": "subnational: New York",
+          "publication_or_version_date": "2017 updates; official current PDF as accessed",
+          "access_date": "2026-06-21",
+          "authority_strength": "official state education department source",
+          "allowed_use": "Representative state Grade 12 economics/finance overlay.",
+          "forbidden_inference": "Does not represent all states or a national inspection regime."
+        }
+      ]
+    }
+  ],
+  "finding_classification": [
+    {
+      "finding": "All requested jurisdictions have official-source anchors and explicit quality-governance coverage boundaries.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for foundation analysis.",
+      "does_not_block": "Later local overlay source refresh before implementation.",
+      "proof_required_to_close": "Country/source reviewer verification and currentness checker PASS."
+    },
+    {
+      "finding": "Quality-governance coverage is explicit and partial in v0.",
+      "classification": "minor_carry_flag",
+      "blocks": "Claims that inspection, school-evaluation, accountability, or accreditation source refresh is complete for categories marked not_covered_in_v0.",
+      "does_not_block": "Internal common-core and overlay foundation decision with gaps visible.",
+      "proof_required_to_close": "Jurisdiction-specific source refresh before local edition, school-facing, accountability, accreditation, or inspection-readiness work."
+    },
+    {
+      "finding": "Several governance systems are subnational or regionally implemented.",
+      "classification": "minor_carry_flag",
+      "blocks": "Generalized national compliance claims.",
+      "does_not_block": "Common-core and overlay foundation decision.",
+      "proof_required_to_close": "Explicit overlay descriptors for Flanders, England, Germany, Spain, and United States."
+    }
+  ]
+}
