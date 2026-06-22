@@ -1,7 +1,7 @@
 # GOLDEN-PRESENTATION-111-IMPLEMENTED-WEB-1 Validation Log
 
 Date: 2026-06-22
-Status: ready for human product review after current-branch maintenance repair
+Status: PASS after no-mastery production-copy repair
 
 ## Scope
 
@@ -40,8 +40,8 @@ Generated lesson output:
   - Passes after rebasing platform and lesson branches onto the latest merged 1.1.3 advisory baselines.
 - `npx.cmd jest --runInBand engines/tests/presentation-v2-111-production.test.js engines/tests/presentatie-html-shape.test.js engines/tests/l1-5d-v2-mobile-fixes.test.js scripts/tests/build-landing-page.test.js --no-coverage`
   - Passes: 4 suites, 29 tests.
-- `npm.cmd test -- --runInBand --no-coverage`
-  - Passes after final copy repair: 57 suites passed, 6 skipped, 818 tests passed.
+- `npm.cmd run check:platform`
+  - Passes after final rebase: 58 suites passed, 6 skipped, 820 tests passed.
   - Console output includes existing validation-fixture warnings; Jest exit code is 0.
 - `git diff --check`
   - Passes in `4veco-platform`.
