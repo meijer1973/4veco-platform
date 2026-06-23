@@ -115,6 +115,9 @@ jobs:
       - name: Validate Golden Graph Advisory 113 proof
         run: npm run check:golden-graph-advisory-113
 
+      - name: Validate Scale Proof 3P product path proof
+        run: npm run check:scale-proof-3p-product-path
+
       - name: Validate report JSON
         run: node build-scripts/reports/validate-report-json.js
 
