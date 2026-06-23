@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-23T12:38:30.009Z
+Generated: 2026-06-23T13:04:07.065Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/pr-integration-lane-1-20260623`
-Source commit: `0f6cac0d9d790bb785e4876b526052c7de461576`
-Files indexed: 5975
+Source commit: `9efdcb3819bd11b1ec2ae451205aa6750d42a029`
+Files indexed: 5976
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2049,7 +2049,7 @@ Count: 736
 
 ## reports
 
-Count: 3859
+Count: 3860
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5030,6 +5030,7 @@ Count: 3859
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
+- reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
