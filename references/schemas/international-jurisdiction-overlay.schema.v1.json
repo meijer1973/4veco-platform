@@ -1,0 +1,1196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.internal/schemas/international-jurisdiction-overlay.schema.v1.json",
+  "title": "International Jurisdiction Overlay Descriptor v1",
+  "description": "Strict nested descriptor contract for internal selected-jurisdiction deepening. This schema does not authorize country editions or school-facing output.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "descriptor_id",
+    "jurisdiction_id",
+    "jurisdiction_label",
+    "deepening_status",
+    "internal_only",
+    "manual_invocation_only",
+    "product_end_state",
+    "original_sprint_gate_spec",
+    "accepted_architecture_decision",
+    "jurisdiction_boundary",
+    "authority_type",
+    "official_source_allowlist",
+    "source_freshness",
+    "selected_pathway",
+    "curriculum_mappings",
+    "assessment_mappings",
+    "terminology_substitutions",
+    "institution_example_substitutions",
+    "accessibility_inclusion_terminology",
+    "school_owned_evidence_boundary",
+    "transformation_specification",
+    "readiness_estimate",
+    "forbidden_claims",
+    "proof_required_to_close",
+    "output_boundary",
+    "finding_classification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "descriptor_id": {
+      "type": "string",
+      "pattern": "^[a-z]+\\.deepening\\.v1$"
+    },
+    "jurisdiction_id": {
+      "type": "string",
+      "enum": [
+        "england",
+        "flanders"
+      ]
+    },
+    "jurisdiction_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "deepening_status": {
+      "type": "string",
+      "enum": [
+        "internal_deep_overlay_readiness_complete"
+      ]
+    },
+    "internal_only": {
+      "const": true
+    },
+    "manual_invocation_only": {
+      "const": true
+    },
+    "product_end_state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "original_sprint_gate_spec": {
+      "type": "string",
+      "minLength": 1
+    },
+    "accepted_architecture_decision": {
+      "const": "PROCEED_TO_SELECTED_JURISDICTION_DEEPENING"
+    },
+    "jurisdiction_boundary": {
+      "$ref": "#/$defs/jurisdiction_boundary"
+    },
+    "authority_type": {
+      "$ref": "#/$defs/authority_coverage"
+    },
+    "official_source_allowlist": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "$ref": "#/$defs/official_source_record"
+      },
+      "uniqueItems": true,
+      "x-uniqueBy": "source_id"
+    },
+    "source_freshness": {
+      "$ref": "#/$defs/source_freshness"
+    },
+    "selected_pathway": {
+      "$ref": "#/$defs/selected_pathway"
+    },
+    "curriculum_mappings": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "$ref": "#/$defs/curriculum_mapping"
+      }
+    },
+    "assessment_mappings": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "$ref": "#/$defs/assessment_mapping"
+      }
+    },
+    "terminology_substitutions": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "$ref": "#/$defs/terminology_substitution"
+      }
+    },
+    "institution_example_substitutions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/institution_example_substitution"
+      }
+    },
+    "accessibility_inclusion_terminology": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/accessibility_inclusion_record"
+      }
+    },
+    "school_owned_evidence_boundary": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/school_owned_evidence_boundary"
+      }
+    },
+    "transformation_specification": {
+      "$ref": "#/$defs/transformation_specification"
+    },
+    "readiness_estimate": {
+      "$ref": "#/$defs/readiness_estimate"
+    },
+    "forbidden_claims": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "proof_required_to_close": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "output_boundary": {
+      "$ref": "#/$defs/output_boundary"
+    },
+    "finding_classification": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/finding_classification"
+      }
+    }
+  },
+  "$defs": {
+    "jurisdiction_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boundary_label",
+        "governance_level",
+        "includes",
+        "excludes",
+        "boundary_warning"
+      ],
+      "properties": {
+        "boundary_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "governance_level": {
+          "type": "string",
+          "minLength": 1
+        },
+        "includes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "excludes": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "boundary_warning": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "authority_coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inspection_or_school_evaluation",
+        "curriculum",
+        "examination",
+        "accountability",
+        "accreditation",
+        "regional_or_state_overlay"
+      ],
+      "properties": {
+        "inspection_or_school_evaluation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coverage_status",
+            "authority_anchor",
+            "allowed_use",
+            "forbidden_inference"
+          ],
+          "properties": {
+            "coverage_status": {
+              "type": "string",
+              "enum": [
+                "covered",
+                "covered_with_boundary",
+                "covered_as_context_only",
+                "not_covered",
+                "not_applicable"
+              ]
+            },
+            "authority_anchor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "allowed_use": {
+              "type": "string",
+              "minLength": 1
+            },
+            "forbidden_inference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "curriculum": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coverage_status",
+            "authority_anchor",
+            "allowed_use",
+            "forbidden_inference"
+          ],
+          "properties": {
+            "coverage_status": {
+              "type": "string",
+              "enum": [
+                "covered",
+                "covered_with_boundary",
+                "covered_as_context_only",
+                "not_covered",
+                "not_applicable"
+              ]
+            },
+            "authority_anchor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "allowed_use": {
+              "type": "string",
+              "minLength": 1
+            },
+            "forbidden_inference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "examination": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coverage_status",
+            "authority_anchor",
+            "allowed_use",
+            "forbidden_inference"
+          ],
+          "properties": {
+            "coverage_status": {
+              "type": "string",
+              "enum": [
+                "covered",
+                "covered_with_boundary",
+                "covered_as_context_only",
+                "not_covered",
+                "not_applicable"
+              ]
+            },
+            "authority_anchor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "allowed_use": {
+              "type": "string",
+              "minLength": 1
+            },
+            "forbidden_inference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "accountability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coverage_status",
+            "authority_anchor",
+            "allowed_use",
+            "forbidden_inference"
+          ],
+          "properties": {
+            "coverage_status": {
+              "type": "string",
+              "enum": [
+                "covered",
+                "covered_with_boundary",
+                "covered_as_context_only",
+                "not_covered",
+                "not_applicable"
+              ]
+            },
+            "authority_anchor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "allowed_use": {
+              "type": "string",
+              "minLength": 1
+            },
+            "forbidden_inference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "accreditation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coverage_status",
+            "authority_anchor",
+            "allowed_use",
+            "forbidden_inference"
+          ],
+          "properties": {
+            "coverage_status": {
+              "type": "string",
+              "enum": [
+                "covered",
+                "covered_with_boundary",
+                "covered_as_context_only",
+                "not_covered",
+                "not_applicable"
+              ]
+            },
+            "authority_anchor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "allowed_use": {
+              "type": "string",
+              "minLength": 1
+            },
+            "forbidden_inference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "regional_or_state_overlay": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coverage_status",
+            "authority_anchor",
+            "allowed_use",
+            "forbidden_inference"
+          ],
+          "properties": {
+            "coverage_status": {
+              "type": "string",
+              "enum": [
+                "covered",
+                "covered_with_boundary",
+                "covered_as_context_only",
+                "not_covered",
+                "not_applicable"
+              ]
+            },
+            "authority_anchor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "allowed_use": {
+              "type": "string",
+              "minLength": 1
+            },
+            "forbidden_inference": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "official_source_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "authority",
+        "title",
+        "url",
+        "source_type",
+        "role",
+        "scope",
+        "publication_or_version_date",
+        "access_date",
+        "authority_strength",
+        "allowed_use",
+        "forbidden_inference"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]+$"
+        },
+        "authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "minLength": 1
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "inspection framework",
+            "inspection operating guide",
+            "subject content",
+            "awarding-body specification",
+            "assessment objectives",
+            "command words",
+            "specimen and mark-scheme index",
+            "accessibility/SEND guidance",
+            "quality framework",
+            "curriculum goals portal",
+            "inspection method"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication_or_version_date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "access_date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "authority_strength": {
+          "type": "string",
+          "enum": [
+            "official",
+            "official_awarding_body",
+            "official_bounded_index"
+          ]
+        },
+        "allowed_use": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_inference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source_freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "access_date",
+        "freshness_status",
+        "refresh_required_before",
+        "currentness_checker"
+      ],
+      "properties": {
+        "access_date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "freshness_status": {
+          "type": "string",
+          "enum": [
+            "fresh_for_internal_deepening",
+            "fresh_with_dynamic_portal_limit"
+          ]
+        },
+        "refresh_required_before": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "currentness_checker": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "selected_pathway": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stage",
+        "pathway",
+        "subject_or_goal_family",
+        "selection_reason",
+        "boundary"
+      ],
+      "properties": {
+        "stage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pathway": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject_or_goal_family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selection_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "curriculum_mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "concept_id",
+        "book_scope",
+        "local_heading",
+        "mapping_status",
+        "subject_content_topic",
+        "official_anchor",
+        "source_citation_required",
+        "known_gap"
+      ],
+      "properties": {
+        "concept_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "book_scope": {
+          "type": "string",
+          "enum": [
+            "Book 1 Chapter 1.2",
+            "Book 1 Chapter 1.3",
+            "Book 1 Chapters 1.2 and 1.3"
+          ]
+        },
+        "local_heading": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mapping_status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "mapped",
+            "mapped_with_boundary",
+            "extension_only",
+            "gap",
+            "not_mapped",
+            "blocked"
+          ]
+        },
+        "subject_content_topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "official_anchor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_citation_required": {
+          "const": true
+        },
+        "known_gap": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "assessment_mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "concept_id",
+        "assessment_status",
+        "assessment_objective",
+        "command_word",
+        "task_form",
+        "diagram_convention",
+        "mark_scheme_expectation",
+        "known_gap"
+      ],
+      "properties": {
+        "concept_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assessment_status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "mapped",
+            "mapped_with_boundary",
+            "extension_only",
+            "gap",
+            "not_mapped",
+            "blocked"
+          ]
+        },
+        "assessment_objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command_word": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_form": {
+          "type": "string",
+          "minLength": 1
+        },
+        "diagram_convention": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mark_scheme_expectation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "known_gap": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "terminology_substitution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_term",
+        "target_term",
+        "status",
+        "note"
+      ],
+      "properties": {
+        "source_term": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_term": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "mapped",
+            "mapped_with_boundary",
+            "extension_only",
+            "gap",
+            "not_mapped",
+            "blocked"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "institution_example_substitution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_context",
+        "target_context",
+        "status",
+        "note"
+      ],
+      "properties": {
+        "source_context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "mapped",
+            "mapped_with_boundary",
+            "extension_only",
+            "gap",
+            "not_mapped",
+            "blocked"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "accessibility_inclusion_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_term",
+        "local_term",
+        "limitation",
+        "evidence_boundary"
+      ],
+      "properties": {
+        "source_term": {
+          "type": "string",
+          "minLength": 1
+        },
+        "local_term": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "school_owned_evidence_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boundary_area",
+        "why_school_owned",
+        "forbidden_inference"
+      ],
+      "properties": {
+        "boundary_area": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_school_owned": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_inference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "transformation_specification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "what_remains_unchanged",
+        "terminology_replacements",
+        "examples_requiring_localization",
+        "institutions_requiring_replacement",
+        "currency_unit_changes",
+        "graphs_and_conventions_requiring_change",
+        "assessment_tasks_requiring_replacement",
+        "source_citations_required",
+        "extension_only_content",
+        "excluded_content"
+      ],
+      "properties": {
+        "what_remains_unchanged": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "terminology_replacements": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "examples_requiring_localization": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "institutions_requiring_replacement": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "currency_unit_changes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "graphs_and_conventions_requiring_change": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "assessment_tasks_requiring_replacement": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "source_citations_required": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "extension_only_content": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "excluded_content": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "readiness_estimate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "estimated_reuse_percent",
+        "methodology",
+        "not_a_compliance_measure",
+        "remaining_blocking_gaps"
+      ],
+      "properties": {
+        "estimated_reuse_percent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "methodology": {
+          "type": "string",
+          "minLength": 1
+        },
+        "not_a_compliance_measure": {
+          "const": true
+        },
+        "remaining_blocking_gaps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "finding_classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "finding",
+        "classification",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "finding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "core_requirement_met",
+            "quality_improvement_available",
+            "minor_carry_flag",
+            "scale_blocker",
+            "core_spec_failure"
+          ]
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "output_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "country_compliance_claim",
+        "inspectorate_approval_claim",
+        "legal_compliance_claim",
+        "inspection_readiness_claim",
+        "school_pack_trial",
+        "teacher_school_distribution",
+        "public_external_distribution",
+        "evidence_pack_deployment",
+        "package_script_invocation",
+        "ci_invocation",
+        "dashboard_gate",
+        "quality_ref_integration",
+        "product_route_adoption",
+        "scale_gate_integration",
+        "diagnostics_mastery_pv",
+        "student_or_product_use",
+        "personal_data_processing",
+        "complete_op0_pta_summative_claim",
+        "op0_claim",
+        "pta_validity_claim",
+        "summative_validity_claim",
+        "single_national_us_inspection_claim",
+        "whole_uk_claim_from_england_only",
+        "all_belgium_claim_from_flanders_only",
+        "germany_single_land_claim",
+        "country_edition_generation",
+        "local_exam_code_implementation",
+        "teacher_school_facing_overlay",
+        "public_overlay_output",
+        "school_owned_evidence_collection",
+        "package_or_ci_product_integration",
+        "country_specific_legal_claim",
+        "localized_student_facing_chapters",
+        "teacher_school_facing_distribution",
+        "selected_jurisdiction_public_output",
+        "selected_jurisdiction_evidence_pack",
+        "selected_jurisdiction_product_route",
+        "selected_jurisdiction_scale_gate",
+        "selected_jurisdiction_personal_data",
+        "selected_jurisdiction_legal_sufficiency_claim",
+        "selected_jurisdiction_compliance_claim",
+        "selected_jurisdiction_approval_claim",
+        "selected_jurisdiction_accreditation_claim",
+        "selected_jurisdiction_inspection_readiness_claim"
+      ],
+      "properties": {
+        "country_compliance_claim": {
+          "const": false
+        },
+        "inspectorate_approval_claim": {
+          "const": false
+        },
+        "legal_compliance_claim": {
+          "const": false
+        },
+        "inspection_readiness_claim": {
+          "const": false
+        },
+        "school_pack_trial": {
+          "const": false
+        },
+        "teacher_school_distribution": {
+          "const": false
+        },
+        "public_external_distribution": {
+          "const": false
+        },
+        "evidence_pack_deployment": {
+          "const": false
+        },
+        "package_script_invocation": {
+          "const": false
+        },
+        "ci_invocation": {
+          "const": false
+        },
+        "dashboard_gate": {
+          "const": false
+        },
+        "quality_ref_integration": {
+          "const": false
+        },
+        "product_route_adoption": {
+          "const": false
+        },
+        "scale_gate_integration": {
+          "const": false
+        },
+        "diagnostics_mastery_pv": {
+          "const": false
+        },
+        "student_or_product_use": {
+          "const": false
+        },
+        "personal_data_processing": {
+          "const": false
+        },
+        "complete_op0_pta_summative_claim": {
+          "const": false
+        },
+        "op0_claim": {
+          "const": false
+        },
+        "pta_validity_claim": {
+          "const": false
+        },
+        "summative_validity_claim": {
+          "const": false
+        },
+        "single_national_us_inspection_claim": {
+          "const": false
+        },
+        "whole_uk_claim_from_england_only": {
+          "const": false
+        },
+        "all_belgium_claim_from_flanders_only": {
+          "const": false
+        },
+        "germany_single_land_claim": {
+          "const": false
+        },
+        "country_edition_generation": {
+          "const": false
+        },
+        "local_exam_code_implementation": {
+          "const": false
+        },
+        "teacher_school_facing_overlay": {
+          "const": false
+        },
+        "public_overlay_output": {
+          "const": false
+        },
+        "school_owned_evidence_collection": {
+          "const": false
+        },
+        "package_or_ci_product_integration": {
+          "const": false
+        },
+        "country_specific_legal_claim": {
+          "const": false
+        },
+        "localized_student_facing_chapters": {
+          "const": false
+        },
+        "teacher_school_facing_distribution": {
+          "const": false
+        },
+        "selected_jurisdiction_public_output": {
+          "const": false
+        },
+        "selected_jurisdiction_evidence_pack": {
+          "const": false
+        },
+        "selected_jurisdiction_product_route": {
+          "const": false
+        },
+        "selected_jurisdiction_scale_gate": {
+          "const": false
+        },
+        "selected_jurisdiction_personal_data": {
+          "const": false
+        },
+        "selected_jurisdiction_legal_sufficiency_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_compliance_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_approval_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_accreditation_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_inspection_readiness_claim": {
+          "const": false
+        }
+      }
+    }
+  }
+}

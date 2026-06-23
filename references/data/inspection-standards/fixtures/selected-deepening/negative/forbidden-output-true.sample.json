@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "descriptor_id": "england.deepening.v1",
+  "jurisdiction_id": "england",
+  "jurisdiction_label": "England",
+  "deepening_status": "internal_deep_overlay_readiness_complete",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-sprint-plan.md",
+  "accepted_architecture_decision": "PROCEED_TO_SELECTED_JURISDICTION_DEEPENING",
+  "jurisdiction_boundary": {
+    "boundary_label": "England-only representative AQA deepening",
+    "governance_level": "England education system with one bounded representative awarding-body layer",
+    "includes": [
+      "Ofsted inspection/evaluation sources",
+      "DfE A-level economics subject content",
+      "AQA 7136 as one selected representative awarding body"
+    ],
+    "excludes": [
+      "Scotland",
+      "Wales",
+      "Northern Ireland",
+      "Other awarding bodies",
+      "UK-wide claims",
+      "AQA approval or endorsement claims"
+    ],
+    "boundary_warning": "AQA is selected to test the architecture. It is not all England and does not approve 4veco output."
+  },
+  "authority_type": {
+    "inspection_or_school_evaluation": {
+      "coverage_status": "covered_with_boundary",
+      "authority_anchor": "Ofsted EIF and operating guide",
+      "allowed_use": "Vocabulary and school-owned inspection boundary only.",
+      "forbidden_inference": "No inspection-readiness claim."
+    },
+    "curriculum": {
+      "coverage_status": "covered_with_boundary",
+      "authority_anchor": "DfE subject content plus AQA 7136 subject content",
+      "allowed_use": "Internal topic mapping for market mechanism.",
+      "forbidden_inference": "No country edition or approved specification claim."
+    },
+    "examination": {
+      "coverage_status": "covered_with_boundary",
+      "authority_anchor": "AQA 7136 scheme, command words, assessment resources",
+      "allowed_use": "Representative assessment-form analysis.",
+      "forbidden_inference": "Not all awarding bodies and not a generated exam route."
+    },
+    "accountability": {
+      "coverage_status": "covered_as_context_only",
+      "authority_anchor": "Ofsted sources",
+      "allowed_use": "Keep accountability evidence school-owned.",
+      "forbidden_inference": "No product evidence-pack claim."
+    },
+    "accreditation": {
+      "coverage_status": "not_covered",
+      "authority_anchor": "No accreditation source selected",
+      "allowed_use": "None.",
+      "forbidden_inference": "No accreditation claim."
+    },
+    "regional_or_state_overlay": {
+      "coverage_status": "not_applicable",
+      "authority_anchor": "England boundary only",
+      "allowed_use": "Avoid whole-UK claims.",
+      "forbidden_inference": "No Scotland/Wales/Northern Ireland inference."
+    }
+  },
+  "official_source_allowlist": [
+    {
+      "source_id": "england-ofsted-eif-2025",
+      "authority": "Ofsted",
+      "title": "Education inspection framework: for use from November 2025",
+      "url": "https://www.gov.uk/government/publications/education-inspection-framework-eif/education-inspection-framework-for-use-from-november-2025",
+      "source_type": "inspection framework",
+      "role": "inspection/evaluation boundary",
+      "scope": "England",
+      "publication_or_version_date": "Updated 2025-09-09; for use from 2025-11-10",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Name inspection vocabulary and school-owned evidence boundaries.",
+      "forbidden_inference": "Does not approve product output or prove inspection readiness."
+    },
+    {
+      "source_id": "england-ofsted-operating-guide-2025",
+      "authority": "Ofsted",
+      "title": "[Currently in use] School inspection operating guide for inspectors",
+      "url": "https://www.gov.uk/government/publications/school-inspection-toolkit-operating-guide-and-information/school-inspection-operating-guide-for-inspectors-for-use-from-november-2025",
+      "source_type": "inspection operating guide",
+      "role": "inspection evidence-gathering boundary",
+      "scope": "England",
+      "publication_or_version_date": "Updated 2026-06-12; for use from 2025-11-10",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Keep inspection evidence gathering separate from product evidence.",
+      "forbidden_inference": "Does not authorize evidence-pack generation."
+    },
+    {
+      "source_id": "england-dfe-a-level-economics-content",
+      "authority": "Department for Education",
+      "title": "GCE AS and A level subject content for economics",
+      "url": "https://www.gov.uk/government/publications/gce-as-and-a-level-for-economics",
+      "source_type": "subject content",
+      "role": "qualification subject-content boundary",
+      "scope": "England",
+      "publication_or_version_date": "Published 2014-04-09",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Map economics concept families at subject-content level.",
+      "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+    },
+    {
+      "source_id": "england-aqa-7136-subject-content",
+      "authority": "AQA",
+      "title": "A-level Economics 7136 specification subject content",
+      "url": "https://www.aqa.org.uk/subjects/economics/a-level/economics-7136/specification/subject-content",
+      "source_type": "awarding-body specification",
+      "role": "representative awarding-body subject content",
+      "scope": "AQA A-level Economics 7136",
+      "publication_or_version_date": "Live specification page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official_awarding_body",
+      "allowed_use": "Map representative AQA microeconomics topic 4.1.3.",
+      "forbidden_inference": "Does not represent all awarding bodies or all England."
+    },
+    {
+      "source_id": "england-aqa-7136-scheme-assessment",
+      "authority": "AQA",
+      "title": "A-level Economics 7136 scheme of assessment",
+      "url": "https://www.aqa.org.uk/subjects/economics/a-level/economics-7136/specification/scheme-of-assessment",
+      "source_type": "assessment objectives",
+      "role": "assessment objective and paper-form boundary",
+      "scope": "AQA A-level Economics 7136",
+      "publication_or_version_date": "Live specification page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official_awarding_body",
+      "allowed_use": "Map AO1-AO4 and paper/task families.",
+      "forbidden_inference": "Does not generate AQA exam questions."
+    },
+    {
+      "source_id": "england-aqa-economics-command-words",
+      "authority": "AQA",
+      "title": "Command words for AS and A-level Economics",
+      "url": "https://www.aqa.org.uk/resources/economics/as-and-a-level/economics/teach/command-words",
+      "source_type": "command words",
+      "role": "representative command-word meanings",
+      "scope": "AQA AS/A-level Economics",
+      "publication_or_version_date": "Live resource page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official_awarding_body",
+      "allowed_use": "Bound command-word mapping for internal transformation specs.",
+      "forbidden_inference": "Does not authorize student-facing assessment output."
+    },
+    {
+      "source_id": "england-aqa-7136-assessment-resources",
+      "authority": "AQA",
+      "title": "A-level Economics 7136 assessment resources",
+      "url": "https://www.aqa.org.uk/subjects/economics/a-level/economics-7136/assessment-resources",
+      "source_type": "specimen and mark-scheme index",
+      "role": "representative specimen paper and mark-scheme source layer",
+      "scope": "AQA A-level Economics 7136",
+      "publication_or_version_date": "Live assessment resources page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official_bounded_index",
+      "allowed_use": "Identify representative specimen/paper/mark-scheme layer for internal mapping.",
+      "forbidden_inference": "Does not copy or generate protected assessment material."
+    },
+    {
+      "source_id": "england-send-code-practice",
+      "authority": "Department for Education and Department of Health and Social Care",
+      "title": "SEND code of practice: 0 to 25 years",
+      "url": "https://www.gov.uk/government/publications/send-code-of-practice-0-to-25",
+      "source_type": "accessibility/SEND guidance",
+      "role": "SEND/accessibility terminology boundary",
+      "scope": "England",
+      "publication_or_version_date": "Published 2014-06-11; updated 2024-09-12",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Use SEND terminology and local support boundary.",
+      "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+    }
+  ],
+  "source_freshness": {
+    "access_date": "2026-06-22",
+    "freshness_status": "fresh_for_internal_deepening",
+    "refresh_required_before": [
+      "Any England prototype implementation",
+      "Any school-facing or public output",
+      "Any AQA-specific assessment generation"
+    ],
+    "currentness_checker": "build-scripts/inspection/check-selected-jurisdiction-deepening.js"
+  },
+  "selected_pathway": {
+    "stage": "A level",
+    "pathway": "England GCE A-level Economics, representative AQA 7136 route",
+    "subject_or_goal_family": "Microeconomics: individuals, firms, markets and market failure; price determination in a competitive market",
+    "selection_reason": "Tests language conversion, qualification-content mapping, inspectorate separation, and an explicitly bounded awarding-body layer.",
+    "boundary": "Representative AQA route only; no whole-England awarding-body claim."
+  },
+  "curriculum_mappings": [
+    {
+      "concept_id": "1.2.1_willingness_to_pay_individual_demand",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.1 Individuele vraag",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for willingness to pay and individual demand: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.2.1_consumer_surplus",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.1 Individuele vraag",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for consumer surplus: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.2.2_demand_factors_movement_vs_shift",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.2 Vraagfactoren",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for demand factors: a good's own price changes quantity demanded along the existing demand curve; non-price demand factors shift the whole demand curve. DfE subject content plus AQA 7136 microeconomics specification are representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.2.3_collective_demand",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.3 Van individuele naar collectieve vraag",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for market demand aggregation: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.2.4_mixed_demand_tasks",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.4 Gemengde opgaven",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for mixed demand tasks: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.3.1_supply_curve_supply_factors",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.1 Aanbod",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for supply curve and supply factors: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.3.2_market_equilibrium_shortage_surplus",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.2 Marktevenwicht",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for market equilibrium, shortage, and surplus: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.3.3_shifts_new_equilibrium",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.3 Verschuivingen en nieuw evenwicht",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for new equilibrium after demand and supply shifts: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "1.3.4_mixed_supply_demand_tasks",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.4 Gemengde opgaven",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for mixed supply-demand tasks: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "Requires future local expert review before any England prototype output."
+    },
+    {
+      "concept_id": "book1_output_boundary",
+      "book_scope": "Book 1 Chapters 1.2 and 1.3",
+      "local_heading": "Book 1 current product boundary",
+      "mapping_status": "mapped",
+      "subject_content_topic": "AQA 7136 section 4.1.3 Price determination in a competitive market, bounded by DfE AS/A level economics subject content.",
+      "official_anchor": "England internal anchor for output boundary: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+      "source_citation_required": true,
+      "known_gap": "No localized textbook, student-facing chapter, or teacher/school-facing route is generated."
+    }
+  ],
+  "assessment_mappings": [
+    {
+      "concept_id": "1.2.1_willingness_to_pay_individual_demand",
+      "assessment_status": "mapped",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "define/explain/illustrate/analyse",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.2.1_consumer_surplus",
+      "assessment_status": "mapped",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "define/explain/analyse",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.2.2_demand_factors_movement_vs_shift",
+      "assessment_status": "mapped",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "define/explain/illustrate/analyse",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: explicitly separate own-price movement along the existing demand curve from non-price demand-factor shifts of the whole curve, with accurate diagram arrows and causal explanation.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.2.3_collective_demand",
+      "assessment_status": "mapped",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "define/explain/illustrate/analyse",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.2.4_mixed_demand_tasks",
+      "assessment_status": "mapped_with_boundary",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "analyse/assess/evaluate",
+      "task_form": "Representative AQA Paper 1 data-response or essay style only; not a generated exam question.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.3.1_supply_curve_supply_factors",
+      "assessment_status": "mapped",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "define/explain/illustrate/analyse",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.3.2_market_equilibrium_shortage_surplus",
+      "assessment_status": "mapped",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "define/explain/illustrate/analyse",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.3.3_shifts_new_equilibrium",
+      "assessment_status": "mapped",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "analyse/assess/evaluate",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "1.3.4_mixed_supply_demand_tasks",
+      "assessment_status": "mapped_with_boundary",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "analyse/assess/evaluate",
+      "task_form": "Representative AQA Paper 1 data-response or essay style only; not a generated exam question.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    },
+    {
+      "concept_id": "book1_output_boundary",
+      "assessment_status": "mapped_with_boundary",
+      "assessment_objective": "AQA 7136 AOs: AO1 knowledge/understanding, AO2 application to contexts, AO3 analysis, AO4 evaluation where task depth requires it.",
+      "command_word": "define/explain/illustrate/analyse",
+      "task_form": "Short explanation, diagram-supported analysis, or data-response subtask.",
+      "diagram_convention": "Use English labels, price on the vertical axis, quantity on the horizontal axis, D/S curves, directional arrows for shifts, and equilibrium labels where required by task form.",
+      "mark_scheme_expectation": "Representative AQA mark-scheme expectation: accurate economic definition, application to context, coherent causal analysis, relevant diagram use, and evaluation only when the command word demands it.",
+      "known_gap": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+    }
+  ],
+  "terminology_substitutions": [
+    {
+      "source_term": "vraaglijn",
+      "target_term": "demand curve",
+      "status": "mapped",
+      "note": "Use English economics term and AQA-style graph labels."
+    },
+    {
+      "source_term": "aanbodlijn",
+      "target_term": "supply curve",
+      "status": "mapped",
+      "note": "Use English economics term and AQA-style graph labels."
+    },
+    {
+      "source_term": "betalingsbereidheid",
+      "target_term": "willingness to pay",
+      "status": "mapped",
+      "note": "Use for individual demand reasoning."
+    },
+    {
+      "source_term": "consumentensurplus",
+      "target_term": "consumer surplus",
+      "status": "mapped_with_boundary",
+      "note": "AQA mapping requires task/source context before prototype use."
+    },
+    {
+      "source_term": "marktevenwicht",
+      "target_term": "market equilibrium",
+      "status": "mapped",
+      "note": "Use equilibrium price and quantity language."
+    }
+  ],
+  "institution_example_substitutions": [
+    {
+      "source_context": "Dutch households and euro pricing",
+      "target_context": "England context with pound sterling only after source support",
+      "status": "mapped_with_boundary",
+      "note": "Do not invent UK-wide claims."
+    },
+    {
+      "source_context": "Dutch exam/task labels",
+      "target_context": "AQA command-word/task families",
+      "status": "mapped_with_boundary",
+      "note": "Representative only; no generated AQA questions."
+    }
+  ],
+  "accessibility_inclusion_terminology": [
+    {
+      "source_term": "barriers to learning",
+      "local_term": "SEND and accessibility barriers",
+      "limitation": "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+      "evidence_boundary": "School-owned accommodations, reasonable-adjustment decisions, support plans, learner records, and local legal duties remain outside product proof."
+    },
+    {
+      "source_term": "special educational needs",
+      "local_term": "SEN/SEND",
+      "limitation": "No individual learner data is processed and no support sufficiency is claimed.",
+      "evidence_boundary": "Product accessibility support is separate from school/local-authority accommodation evidence and legal-duty records."
+    }
+  ],
+  "school_owned_evidence_boundary": [
+    {
+      "boundary_area": "Inspection evidence",
+      "why_school_owned": "Ofsted evidence gathering depends on school practice and inspector judgement.",
+      "forbidden_inference": "Product crosswalk cannot prove inspection readiness."
+    },
+    {
+      "boundary_area": "SEND/accessibility support and accommodation duties",
+      "why_school_owned": "Support duties, reasonable-adjustment decisions, accommodation evidence, and records sit with school/local-authority processes.",
+      "forbidden_inference": "Descriptor cannot prove reasonable adjustments, accessibility compliance, legal sufficiency, or support adequacy."
+    }
+  ],
+  "transformation_specification": {
+    "what_remains_unchanged": [
+      "Core supply-demand model logic.",
+      "A good's own price causes movement along the existing demand curve; non-price demand factors shift the whole demand curve.",
+      "Equilibrium, shortage, surplus, and causal reasoning."
+    ],
+    "terminology_replacements": [
+      "vraaglijn -> demand curve",
+      "aanbodlijn -> supply curve",
+      "betalingsbereidheid -> willingness to pay",
+      "marktevenwicht -> market equilibrium"
+    ],
+    "examples_requiring_localization": [
+      "Dutch consumer-product and tax examples require England context review.",
+      "Any NHS, Ofgem, school, or pound-sterling example needs source support."
+    ],
+    "institutions_requiring_replacement": [
+      "Dutch ministry/CvTE/Cito style institutions cannot be carried into England.",
+      "Use DfE, Ofsted, and selected AQA references only inside their bounded roles."
+    ],
+    "currency_unit_changes": [
+      "Euro examples should become pound sterling only when source/context supports it.",
+      "Units must match AQA-style task context if assessment work is later authorized."
+    ],
+    "graphs_and_conventions_requiring_change": [
+      "Use English P/Q labels and AQA-style command-word discipline.",
+      "Keep diagrams representative until an exam-board task source is selected for implementation."
+    ],
+    "assessment_tasks_requiring_replacement": [
+      "Replace Dutch mixed tasks with AQA-bounded task forms before any prototype.",
+      "Do not translate Dutch tests into AQA exam questions."
+    ],
+    "source_citations_required": [
+      "Ofsted EIF/operating guide for inspection boundary.",
+      "DfE subject content for qualification content.",
+      "AQA 7136 specification, scheme, command words, and assessment resources for representative awarding-body layer.",
+      "SEND code for local accessibility terminology."
+    ],
+    "extension_only_content": [
+      "Consumer surplus depth and any welfare diagram beyond selected AQA source use.",
+      "Evaluation tasks until command-word/source review."
+    ],
+    "excluded_content": [
+      "Country edition output.",
+      "Localized student-facing chapters.",
+      "Teacher/school-facing distribution.",
+      "Legal sufficiency, compliance, approval, accreditation, or inspection-readiness claims."
+    ]
+  },
+  "readiness_estimate": {
+    "estimated_reuse_percent": 62,
+    "methodology": "Internal estimate across nine Book 1 concept rows: core model transfer high, language conversion medium, assessment/task replacement high, source citation burden medium.",
+    "not_a_compliance_measure": true,
+    "remaining_blocking_gaps": [
+      "AQA task-form prototype must be separately authorized.",
+      "Local teacher/economics review required.",
+      "No school-facing output authorized."
+    ]
+  },
+  "forbidden_claims": [
+    "England edition is ready.",
+    "AQA approves 4veco.",
+    "Ofsted evidence is satisfied.",
+    "SEND compliance is proven.",
+    "Legal sufficiency is proven."
+  ],
+  "proof_required_to_close": [
+    "England source reviewer PASS.",
+    "Teacher/economics reviewer PASS.",
+    "Legal/privacy/claims reviewer PASS.",
+    "Accessibility/inclusion reviewer PASS.",
+    "Final lead PASS and human review."
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": true,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false,
+    "localized_student_facing_chapters": false,
+    "teacher_school_facing_distribution": false,
+    "selected_jurisdiction_public_output": false,
+    "selected_jurisdiction_evidence_pack": false,
+    "selected_jurisdiction_product_route": false,
+    "selected_jurisdiction_scale_gate": false,
+    "selected_jurisdiction_personal_data": false,
+    "selected_jurisdiction_legal_sufficiency_claim": false,
+    "selected_jurisdiction_compliance_claim": false,
+    "selected_jurisdiction_approval_claim": false,
+    "selected_jurisdiction_accreditation_claim": false,
+    "selected_jurisdiction_inspection_readiness_claim": false
+  },
+  "finding_classification": [
+    {
+      "finding": "England deep descriptor satisfies the selected-jurisdiction internal readiness scope.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for internal human review of the deepening packet.",
+      "does_not_block": "Proceeding to final comparative decision and human review.",
+      "proof_required_to_close": "Checker PASS, specialist reviewer PASS, final lead PASS, fresh PR, and green CI."
+    },
+    {
+      "finding": "England keeps local implementation and school-facing authority blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Country editions, localized student-facing chapters, school-facing output, product routes, Scale Gate, student/product use, legal sufficiency, and compliance or inspection-readiness claims.",
+      "does_not_block": "Internal overlay prototype planning after human acceptance.",
+      "proof_required_to_close": "Separate human-authorized prototype-planning gate with local source and expert review."
+    }
+  ]
+}

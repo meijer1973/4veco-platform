@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "descriptor_id": "flanders.deepening.v1",
+  "jurisdiction_id": "flanders",
+  "jurisdiction_label": "Belgium / Flanders",
+  "deepening_status": "internal_deep_overlay_readiness_complete",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-sprint-plan.md",
+  "accepted_architecture_decision": "PROCEED_TO_SELECTED_JURISDICTION_DEEPENING",
+  "jurisdiction_boundary": {
+    "boundary_label": "Flanders-only 3de graad doorstroomfinaliteit basisvorming",
+    "governance_level": "Flemish Community upper-secondary curriculum-goal and quality-framework system",
+    "includes": [
+      "Onderwijsdoelen.be 3de graad SO doorstroomfinaliteit basisvorming goal family",
+      "Flemish OK quality framework"
+    ],
+    "excludes": [
+      "French Community of Belgium",
+      "German-speaking Community of Belgium",
+      "Belgium-wide claims",
+      "School-network curriculum plans",
+      "School-specific assessment policy"
+    ],
+    "boundary_warning": "Dutch-language similarity does not prove Flemish curriculum fit or school-quality compliance."
+  },
+  "authority_type": {
+    "inspection_or_school_evaluation": {
+      "coverage_status": "covered_with_boundary",
+      "authority_anchor": "Flemish OK framework and inspection method source",
+      "allowed_use": "Quality vocabulary and school-owned boundary.",
+      "forbidden_inference": "No OK compliance claim."
+    },
+    "curriculum": {
+      "coverage_status": "covered_with_boundary",
+      "authority_anchor": "Onderwijsdoelen.be 3de graad SO route",
+      "allowed_use": "Official goal-family mapping for internal deepening.",
+      "forbidden_inference": "No school/network curriculum proof."
+    },
+    "examination": {
+      "coverage_status": "not_covered",
+      "authority_anchor": "No central exam or summative source selected",
+      "allowed_use": "Record assessment boundary.",
+      "forbidden_inference": "No summative, PTA, or school assessment claim."
+    },
+    "accountability": {
+      "coverage_status": "covered_as_context_only",
+      "authority_anchor": "OK framework",
+      "allowed_use": "School-quality/accountability vocabulary only.",
+      "forbidden_inference": "No product evidence-pack claim."
+    },
+    "accreditation": {
+      "coverage_status": "not_covered",
+      "authority_anchor": "No accreditation source selected",
+      "allowed_use": "None.",
+      "forbidden_inference": "No accreditation claim."
+    },
+    "regional_or_state_overlay": {
+      "coverage_status": "covered_with_boundary",
+      "authority_anchor": "Flemish Community only",
+      "allowed_use": "Avoid all-Belgium claims.",
+      "forbidden_inference": "No French/German-speaking Community inference."
+    }
+  },
+  "official_source_allowlist": [
+    {
+      "source_id": "be-flanders-ok-framework",
+      "authority": "Vlaamse overheid / Onderwijsinspectie Vlaanderen",
+      "title": "Referentiekader voor onderwijskwaliteit (het OK)",
+      "url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit/referentiekader-voor-onderwijskwaliteit-het-ok",
+      "source_type": "quality framework",
+      "role": "quality framework boundary",
+      "scope": "Flemish Community",
+      "publication_or_version_date": "Live official page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Name quality expectations and school-owned quality evidence boundary.",
+      "forbidden_inference": "Does not prove OK compliance."
+    },
+    {
+      "source_id": "be-flanders-onderwijsdoelen-so3-doorstroom",
+      "authority": "Vlaamse overheid / Onderwijsdoelen.be",
+      "title": "Secundair onderwijs - 3de graad - onderwijsdoelen",
+      "url": "https://onderwijsdoelen.be/modernisatie-so?onderwijsstructuur=SO_3DE_GRAAD",
+      "source_type": "curriculum goals portal",
+      "role": "official curriculum goal route",
+      "scope": "Flemish Community, 3de graad SO",
+      "publication_or_version_date": "Live official portal verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Map official goal family for 3de graad doorstroomfinaliteit basisvorming.",
+      "forbidden_inference": "Does not prove school/network curriculum or assessment fit."
+    },
+    {
+      "source_id": "be-flanders-inspection-what-do-we-inspect",
+      "authority": "Onderwijsinspectie Vlaanderen",
+      "title": "What do we inspect?",
+      "url": "https://www.onderwijsinspectie.be/en/what-do-we-inspect",
+      "source_type": "inspection method",
+      "role": "inspection-method boundary",
+      "scope": "Flemish Community",
+      "publication_or_version_date": "Live official page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Keep teaching, feedback, evaluation, and learning-effects evidence school-owned.",
+      "forbidden_inference": "Does not authorize evidence-pack deployment."
+    },
+    {
+      "source_id": "be-flanders-education-quality-reference",
+      "authority": "Vlaamse overheid",
+      "title": "Kwaliteitsvol onderwijs aanbieden: referentiekaders",
+      "url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit",
+      "source_type": "quality framework",
+      "role": "quality-framework source family",
+      "scope": "Flemish Community",
+      "publication_or_version_date": "Live official page verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Confirm OK framework source family.",
+      "forbidden_inference": "Does not replace school-level evidence."
+    },
+    {
+      "source_id": "be-flanders-onderwijsdoelen-modernisatie",
+      "authority": "Vlaamse overheid / Onderwijsdoelen.be",
+      "title": "Modernisering secundair onderwijs - onderwijsdoelen route",
+      "url": "https://onderwijsdoelen.be/modernisatie-so",
+      "source_type": "curriculum goals portal",
+      "role": "curriculum-goal route selector",
+      "scope": "Flemish Community",
+      "publication_or_version_date": "Live official portal verified 2026-06-22",
+      "access_date": "2026-06-22",
+      "authority_strength": "official",
+      "allowed_use": "Document exact route selection and dynamic-portal limitation.",
+      "forbidden_inference": "Does not authorize generic Flemish economics claims."
+    }
+  ],
+  "source_freshness": {
+    "access_date": "2026-06-22",
+    "freshness_status": "fresh_with_dynamic_portal_limit",
+    "refresh_required_before": [
+      "Any Flemish prototype implementation",
+      "Any school/network curriculum mapping",
+      "Any school-facing or public output"
+    ],
+    "currentness_checker": "build-scripts/inspection/check-selected-jurisdiction-deepening.js"
+  },
+  "selected_pathway": {
+    "stage": "Secundair onderwijs, 3de graad",
+    "pathway": "Doorstroomfinaliteit, basisvorming",
+    "subject_or_goal_family": "Economic/financial competences, official goal family SC11; exact candidate anchor SC11.05 market mechanism on the product market",
+    "selection_reason": "Tests high reuse of Dutch-language economics while preserving a materially different curriculum and quality-governance system.",
+    "boundary": "No school-network, study-direction, or school-specific curriculum plan is used."
+  },
+  "curriculum_mappings": [
+    {
+      "concept_id": "1.2.1_willingness_to_pay_individual_demand",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.1 Individuele vraag",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "Goal SC11.05 market mechanism on the product market is the exact candidate anchor for willingness to pay and individual demand.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.2.1_consumer_surplus",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.1 Individuele vraag",
+      "mapping_status": "extension_only",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "No exact official minimum-goal anchor is claimed for consumer surplus; keep as extension-only or school/network-dependent.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.2.2_demand_factors_movement_vs_shift",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.2 Vraagfactoren",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "Goal SC11.05 market mechanism on the product market is the exact candidate anchor; the internal mapping must keep own-price movement along the existing demand curve separate from non-price demand-factor shifts of the curve.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.2.3_collective_demand",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.3 Van individuele naar collectieve vraag",
+      "mapping_status": "extension_only",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "No exact official minimum-goal anchor is claimed for market demand aggregation; keep as extension-only or school/network-dependent.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.2.4_mixed_demand_tasks",
+      "book_scope": "Book 1 Chapter 1.2",
+      "local_heading": "1.2.4 Gemengde opgaven",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "Goal SC11.05 market mechanism on the product market is the exact candidate anchor for mixed demand tasks.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.3.1_supply_curve_supply_factors",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.1 Aanbod",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "Goal SC11.05 market mechanism on the product market is the exact candidate anchor for supply curve and supply factors.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.3.2_market_equilibrium_shortage_surplus",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.2 Marktevenwicht",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "Goal SC11.05 market mechanism on the product market is the exact candidate anchor for market equilibrium, shortage, and surplus.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.3.3_shifts_new_equilibrium",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.3 Verschuivingen en nieuw evenwicht",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "Goal SC11.05 market mechanism on the product market is the exact candidate anchor for new equilibrium after demand and supply shifts.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "1.3.4_mixed_supply_demand_tasks",
+      "book_scope": "Book 1 Chapter 1.3",
+      "local_heading": "1.3.4 Gemengde opgaven",
+      "mapping_status": "mapped_with_boundary",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "Goal SC11.05 market mechanism on the product market is the exact candidate anchor for mixed supply-demand tasks.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    },
+    {
+      "concept_id": "book1_output_boundary",
+      "book_scope": "Book 1 Chapters 1.2 and 1.3",
+      "local_heading": "Book 1 current product boundary",
+      "mapping_status": "extension_only",
+      "subject_content_topic": "Flemish 3de graad SO doorstroomfinaliteit basisvorming, economic/financial competences, official goal family SC11.",
+      "official_anchor": "No exact official minimum-goal anchor is claimed for output boundary; keep as extension-only or school/network-dependent.",
+      "source_citation_required": true,
+      "known_gap": "School network curricula, study-direction depth, assessment practice, and local teacher judgement remain outside this descriptor."
+    }
+  ],
+  "assessment_mappings": [
+    {
+      "concept_id": "1.2.1_willingness_to_pay_individual_demand",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.2.1_consumer_surplus",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.2.2_demand_factors_movement_vs_shift",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must explicitly separate own-price movement along the existing demand curve from non-price demand-factor shifts of the whole curve.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.2.3_collective_demand",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.2.4_mixed_demand_tasks",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.3.1_supply_curve_supply_factors",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.3.2_market_equilibrium_shortage_surplus",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.3.3_shifts_new_equilibrium",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "1.3.4_mixed_supply_demand_tasks",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    },
+    {
+      "concept_id": "book1_output_boundary",
+      "assessment_status": "gap",
+      "assessment_objective": "No central Flemish upper-secondary economics exam objective is used in this packet; assessment remains school/network-owned.",
+      "command_word": "Illustreren/uitleggen/redeneren may be used as internal mapping language only after Flemish teacher review.",
+      "task_form": "Internal formative task-family comparison only; no Flemish summative or school-facing assessment task is generated.",
+      "diagram_convention": "Dutch-language graph terms can remain only after Flemish terminology review; no school/network convention is claimed.",
+      "mark_scheme_expectation": "No Flemish mark scheme is selected. Any future rubric must be locally authored and reviewed.",
+      "known_gap": "Assessment-status boundary is a core finding, not a defect: no school/network assessment claim is authorized."
+    }
+  ],
+  "terminology_substitutions": [
+    {
+      "source_term": "vraaglijn",
+      "target_term": "vraagcurve/vraaglijn",
+      "status": "mapped_with_boundary",
+      "note": "Requires Flemish teacher/economics terminology review."
+    },
+    {
+      "source_term": "aanbodlijn",
+      "target_term": "aanbodcurve/aanbodlijn",
+      "status": "mapped_with_boundary",
+      "note": "Requires Flemish teacher/economics terminology review."
+    },
+    {
+      "source_term": "betalingsbereidheid",
+      "target_term": "betalingsbereidheid",
+      "status": "mapped",
+      "note": "Likely reusable Dutch-language term."
+    },
+    {
+      "source_term": "consumentensurplus",
+      "target_term": "consumentensurplus",
+      "status": "extension_only",
+      "note": "Keep extension-only unless exact goal or network curriculum supports it."
+    },
+    {
+      "source_term": "doeloefening",
+      "target_term": "local task label to be determined",
+      "status": "gap",
+      "note": "No school/network task vocabulary selected."
+    }
+  ],
+  "institution_example_substitutions": [
+    {
+      "source_context": "Dutch national institutions",
+      "target_context": "Flemish Community context",
+      "status": "mapped_with_boundary",
+      "note": "No all-Belgium inference."
+    },
+    {
+      "source_context": "Dutch school/exam examples",
+      "target_context": "Flemish school-owned context",
+      "status": "gap",
+      "note": "Requires school/network source before implementation."
+    }
+  ],
+  "accessibility_inclusion_terminology": [
+    {
+      "source_term": "ontwikkeling van lerenden",
+      "local_term": "ontwikkeling van lerenden",
+      "limitation": "OK quality vocabulary can frame internal inclusion/accessibility context only; it does not define accommodations, care policy, or local legal duties.",
+      "evidence_boundary": "School/network-owned accommodations, support policy, learner-support records, and legal-duty evidence remain outside product proof."
+    },
+    {
+      "source_term": "kwaliteitsontwikkeling",
+      "local_term": "kwaliteitsontwikkeling",
+      "limitation": "Quality-development term, not a compliance, sufficiency, or accessibility-support result.",
+      "evidence_boundary": "Product accessibility affordances remain separate from school/network accommodations and local legal duties."
+    }
+  ],
+  "school_owned_evidence_boundary": [
+    {
+      "boundary_area": "OK quality development",
+      "why_school_owned": "Quality development is enacted and evidenced by schools.",
+      "forbidden_inference": "Product crosswalk cannot prove OK fulfilment, legal sufficiency, or support adequacy."
+    },
+    {
+      "boundary_area": "Assessment practice",
+      "why_school_owned": "No central assessment source selected; school/network policy controls task evidence.",
+      "forbidden_inference": "No summative or PTA claim."
+    },
+    {
+      "boundary_area": "Inclusion/accessibility support and accommodation duties",
+      "why_school_owned": "School/network policy and local legal duties govern support decisions, accommodations, learner records, and sufficiency evidence.",
+      "forbidden_inference": "Descriptor cannot prove accessibility compliance, support sufficiency, legal sufficiency, or school readiness."
+    }
+  ],
+  "transformation_specification": {
+    "what_remains_unchanged": [
+      "Core supply-demand model logic.",
+      "A good's own price causes movement along the existing demand curve; non-price demand factors shift the whole demand curve.",
+      "Equilibrium, shortage, surplus, and causal reasoning."
+    ],
+    "terminology_replacements": [
+      "vraaglijn/vraagcurve requires Flemish terminology review",
+      "aanbodlijn/aanbodcurve requires Flemish terminology review",
+      "doeloefening label requires local task-language review"
+    ],
+    "examples_requiring_localization": [
+      "Dutch institutional examples require Flemish Community context review.",
+      "Any school-quality example must remain school-owned and not product evidence."
+    ],
+    "institutions_requiring_replacement": [
+      "Dutch national institutions cannot be treated as Flemish.",
+      "Use Flemish Community/OK/official goals references only inside their bounded roles."
+    ],
+    "currency_unit_changes": [
+      "Euro currency can remain, but Belgian/Flemish institutional context must be checked.",
+      "Dutch tax/benefit values cannot be carried over."
+    ],
+    "graphs_and_conventions_requiring_change": [
+      "Dutch labels can remain only after Flemish terminology check.",
+      "No school/network graph convention is claimed."
+    ],
+    "assessment_tasks_requiring_replacement": [
+      "Replace Dutch mixed tasks with locally reviewed formative tasks before any prototype.",
+      "No central Flemish mark scheme is inferred."
+    ],
+    "source_citations_required": [
+      "Onderwijsdoelen.be for official goal family.",
+      "OK framework for quality boundary.",
+      "Onderwijsinspectie source for inspection-method boundary."
+    ],
+    "extension_only_content": [
+      "Consumer surplus and collective demand unless exact Flemish goals or network curriculum support them.",
+      "Any assessment rubric or school-quality evidence."
+    ],
+    "excluded_content": [
+      "Country edition output.",
+      "Localized student-facing chapters.",
+      "Teacher/school-facing distribution.",
+      "Legal sufficiency, compliance, approval, accreditation, or inspection-readiness claims."
+    ]
+  },
+  "readiness_estimate": {
+    "estimated_reuse_percent": 71,
+    "methodology": "Internal estimate across nine Book 1 concept rows: language transfer high, core model transfer high, school/network assessment dependency high, consumer-surplus/collective-demand placement uncertain.",
+    "not_a_compliance_measure": true,
+    "remaining_blocking_gaps": [
+      "Exact school/network curriculum depth not selected.",
+      "Assessment source absent by design.",
+      "Flemish teacher/economics review required."
+    ]
+  },
+  "forbidden_claims": [
+    "Flemish edition is ready.",
+    "OK expectations are met.",
+    "Belgian compliance is proven.",
+    "Dutch-language similarity proves curriculum fit.",
+    "Legal sufficiency is proven."
+  ],
+  "proof_required_to_close": [
+    "Flanders source reviewer PASS.",
+    "Teacher/economics reviewer PASS.",
+    "Dutch quality-inspection reviewer PASS.",
+    "Legal/privacy/claims reviewer PASS.",
+    "Final lead PASS and human review."
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false,
+    "localized_student_facing_chapters": false,
+    "teacher_school_facing_distribution": false,
+    "selected_jurisdiction_public_output": false,
+    "selected_jurisdiction_evidence_pack": false,
+    "selected_jurisdiction_product_route": false,
+    "selected_jurisdiction_scale_gate": false,
+    "selected_jurisdiction_personal_data": false,
+    "selected_jurisdiction_legal_sufficiency_claim": false,
+    "selected_jurisdiction_compliance_claim": false,
+    "selected_jurisdiction_approval_claim": false,
+    "selected_jurisdiction_accreditation_claim": false,
+    "selected_jurisdiction_inspection_readiness_claim": false
+  },
+  "finding_classification": [
+    {
+      "finding": "Flanders deep descriptor satisfies the selected-jurisdiction internal readiness scope.",
+      "classification": "authority_boundary",
+      "blocks": "Nothing for internal human review of the deepening packet.",
+      "does_not_block": "Proceeding to final comparative decision and human review.",
+      "proof_required_to_close": "Checker PASS, specialist reviewer PASS, final lead PASS, fresh PR, and green CI."
+    },
+    {
+      "finding": "Flanders keeps local implementation and school-facing authority blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Country editions, localized student-facing chapters, school-facing output, product routes, Scale Gate, student/product use, legal sufficiency, and compliance or inspection-readiness claims.",
+      "does_not_block": "Internal overlay prototype planning after human acceptance.",
+      "proof_required_to_close": "Separate human-authorized prototype-planning gate with local source and expert review."
+    }
+  ]
+}
