@@ -17,7 +17,9 @@ describe('MTU-H5 anchor integrity audit', () => {
       maxBuffer: 1024 * 1024 * 20,
     });
 
-    expect(result.status).toBe(0);
+    if (result.status !== 0) {
+      throw new Error(`H5 anchor integrity checker failed\nSTDOUT:\n${result.stdout}\nSTDERR:\n${result.stderr}`);
+    }
     expect(result.stdout).toContain('OK MTU-H5 anchor integrity audit');
     expect(fs.readFileSync(auditJson, 'utf8')).toBe(before.json);
     expect(fs.readFileSync(auditMd, 'utf8')).toBe(before.md);

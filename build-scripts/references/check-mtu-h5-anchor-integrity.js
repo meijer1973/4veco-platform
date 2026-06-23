@@ -75,7 +75,7 @@ function assertCurrent(file, expected) {
     fail(`${path.relative(ROOT, file)} is missing; run node build-scripts/references/check-mtu-h5-anchor-integrity.js --write`);
   }
   const actual = fs.readFileSync(file, 'utf8');
-  if (actual !== expected) {
+  if (actual.replace(/\r\n/g, '\n') !== expected.replace(/\r\n/g, '\n')) {
     fail(`${path.relative(ROOT, file)} is stale; run node build-scripts/references/check-mtu-h5-anchor-integrity.js --write`);
   }
 }
