@@ -22,7 +22,7 @@ const UNITS_PATH = path.join(ROOT, 'references', 'machine', 'micro-teaching-unit
 const PACKAGE_ID = 'MTU-H6-CROSS-EXAM-GENERALIZATION-AND-EVIDENCE-INTEGRITY-BUNDLE-1';
 const FIXTURE_ID = 'MTU-H6-cross-exam-generalization-vwo-havo-2023-2024-review-candidate';
 const SAMPLE_ID = 'MTU-H6-fresh-cross-exam-vwo-havo-2023-2024-sample-001';
-const STATUS = 'ready_for_human_review_after_more_than_satisfied_subagent_review';
+const STATUS = 'ready_for_human_review_after_atomic_h6_closure_readiness_review';
 const MANIFEST_ANCHOR = 'H6_FRESH_CROSS_EXAM_RENDERED_OFFICIAL_EVIDENCE_MANIFEST';
 
 const AUTHORITY_FALSE_KEYS = [
@@ -349,6 +349,21 @@ function checkRequiredUnits(record, operation, units, result, context) {
   }
 }
 
+function checkRequiredRoutes(record, operation, result, context) {
+  const tags = mappedRouteTags(record, operation);
+  for (const tag of asArray(operation.expected_route_tags)) {
+    if (!tags.has(tag)) {
+      add(result.buckets.failed, `${context}-MISSING-ROUTE-${tag}`, {
+        record_id: record.record_id,
+        operation_id: operation.operation_id,
+        defect_class: 'missing_route_tag_for_correction_model_operation',
+        route_tag: tag,
+        reason: `expected route tag ${tag} is not present in mapped_route_tags`,
+      });
+    }
+  }
+}
+
 function checkForbidden(record, operation, result, context) {
   const ids = mappedIds(record, operation);
   const tags = mappedRouteTags(record, operation);
@@ -471,6 +486,7 @@ function evaluateFixture(fixture, units) {
       assert(hasText(operation.answer_model_summary), `${context} must have answer_model_summary`);
       checkRefs(collectOperationRefs(operation), context, result);
       checkRequiredUnits(record, operation, units, result, context);
+      checkRequiredRoutes(record, operation, result, context);
       checkForbidden(record, operation, result, context);
       checkAnswerForm(record, operation, result, context);
       checkSpecialExpectations(record, operation, result, context);
@@ -546,19 +562,30 @@ function checkNegativeFixtures(fixture, units) {
       records: [mutated],
     };
     const evaluation = evaluateFixture(mini, units);
-    const failureClasses = new Set(evaluation.buckets.failed.map((item) => item.defect_class));
+    const matchingFailure = evaluation.buckets.failed.find((item) => (
+      item.defect_class === negative.expected_failure_defect_class &&
+      (!negative.expected_failure_operation_id || item.operation_id === negative.expected_failure_operation_id) &&
+      (!negative.expected_failure_unit_id || item.unit_id === negative.expected_failure_unit_id) &&
+      (!negative.expected_failure_route_tag || item.route_tag === negative.expected_failure_route_tag)
+    ));
     assert(evaluation.status === 'failed', `${negative.fixture_id} must fail`);
     assert(
-      failureClasses.has(negative.expected_failure_defect_class),
-      `${negative.fixture_id} must fail with ${negative.expected_failure_defect_class}`
+      matchingFailure,
+      `${negative.fixture_id} must fail with ${negative.expected_failure_defect_class}` +
+        `${negative.expected_failure_operation_id ? ` on ${negative.expected_failure_operation_id}` : ''}` +
+        `${negative.expected_failure_unit_id ? ` for ${negative.expected_failure_unit_id}` : ''}` +
+        `${negative.expected_failure_route_tag ? ` for ${negative.expected_failure_route_tag}` : ''}`
     );
     results.push({
       fixture_id: negative.fixture_id,
       status: 'failed_as_expected',
       expected_failure_defect_class: negative.expected_failure_defect_class,
+      expected_failure_operation_id: negative.expected_failure_operation_id || null,
+      expected_failure_unit_id: negative.expected_failure_unit_id || null,
+      expected_failure_route_tag: negative.expected_failure_route_tag || null,
     });
   }
-  assert(results.length >= 1, 'at least one negative regression fixture is required');
+  assert(results.length >= (fixture.records || []).length, 'at least one negative regression fixture per fresh record is required');
   return results;
 }
 
@@ -679,6 +706,7 @@ function checkPackageAndGate(packet, gate, fixture, evaluation, negativeResults)
   assert(Array.isArray(gate.core_requirement_checklist) && gate.core_requirement_checklist.length >= 6, 'gate core requirement checklist is required');
   assert(Array.isArray(gate.findings) && gate.findings.length >= 3, 'gate findings are required');
   for (const finding of gate.findings) {
+    assert(hasText(finding.classification), `${finding.finding_id} must include classification`);
     assert(Array.isArray(finding.blocks), `${finding.finding_id} must include blocks`);
     assert(Array.isArray(finding.does_not_block), `${finding.finding_id} must include does_not_block`);
     assert(hasText(finding.proof_required_to_close), `${finding.finding_id} must include proof_required_to_close`);
@@ -749,7 +777,7 @@ function main() {
   checkReport(report, evaluation);
   checkPackageAndGate(packet, gate, fixture, evaluation, negativeResults);
 
-  checkMarkdown(markdownReport, ['MTU-H6 Cross-Exam Generalization Report', 'review_required', 'q4 graph shading', 'q23 macro graph drawing'], rel(REPORT_MD));
+  checkMarkdown(markdownReport, ['MTU-H6 Cross-Exam Generalization Report', 'passed', 'q4 bounded A40', 'q23-specific macro'], rel(REPORT_MD));
   checkMarkdown(markdownPackage, ['MTU-H6 Cross-Exam Generalization And Evidence Integrity Bundle 1', 'not MTU-H6 closure', MANIFEST_ANCHOR], rel(PACKAGE_MD));
   checkMarkdown(markdownGate, ['GATE-MTU-H6 Cross-Exam Generalization And Evidence Integrity Bundle 1', 'pending human review', 'REV-STD-1'], rel(GATE_MD));
   checkMarkdown(bundle, [rel(PACKAGE_JSON), rel(FIXTURE), rel(REPORT_JSON)], rel(GATE_BUNDLE));

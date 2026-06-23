@@ -82,11 +82,11 @@
       "finding": "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON and EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION are embedded dry-run design candidates; candidate storage and writes remain unauthorized."
     },
     {
-      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3",
+      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1",
       "finding": "q3-calc-1 remains an operation_registry_need with A61 support and A15 stale/incorrect; q3-answer-1 remains answer_skill_need."
     },
     {
-      "path": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3",
+      "path": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3-calc-1",
       "finding": "q3 A61 support, A15 rejection, and q3 answer-skill visibility are preserved as routing facts with no candidate writes."
     }
   ],

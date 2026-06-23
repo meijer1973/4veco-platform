@@ -1,115 +1,77 @@
 # GATE-MTU-H6 Cross-Exam Generalization And Evidence Integrity Bundle 1
 
 Status: `pending human review`
-
 Review standard: `REV-STD-1`
 
-## Product End-State
+## Product End State
 
-This review can approve only an MTU-H6 evidence-integrity/generalization review candidate. It does not close MTU-H6 and does not authorize Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, summative use, or student/product use.
+This package prepares MTU-H6 final cross-exam generalization closure-readiness evidence for human review. It does not by itself close MTU-H6 and does not authorize Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, summative use, or student/product use.
+
+Baseline: `../4veco-lessen/specifications/product-end-state.md`
+
+Local validation path: `C:/wt/GOALS-20260608/4veco-lessen/specifications/product-end-state.md`
 
 ## Original Sprint/Gate Spec
 
-After MTU-H5 closure, MTU-H6 must test whether H5 mapping rules generalize to fresh official cross-exam evidence while preserving operation decomposition, required/forbidden MTUs, answer-form/misconception/scale/procedure hooks, explicit negative fixtures, and stronger evidence-reference integrity.
+MTU-H6 starts after MTU-H5 closure and must test cross-exam generalization on fresh official evidence while preserving H5-style operation decomposition, required/forbidden MTUs, answer-form/misconception/scale/procedure hooks, explicit negative fixtures, and stricter evidence-reference integrity.
 
 ## Non-Negotiable Requirements
 
-- Fresh sample relative to MTU-H5.
-- Local official/reference evidence only.
-- Rendered official pages content-addressed by source PDF hash, PNG hash, page, and dimensions.
-- JSON fragment anchors must resolve.
-- Required MTUs must be live and actually mapped.
-- Forbidden MTUs/routes must be covered by negative fixtures.
-- Review-required gaps must not be reported as closure.
-- No product, student, diagnostic, PV, lesson, target-exercise, candidate-write, source-overlay, external-source, machine-reference, or MTU mutation authority.
+- The sample must be fresh relative to MTU-H5 and must not include the H5 q3/q15/q19/q27 records.
+- All source evidence must be local official/reference evidence and must not require mutation of references/external or references/machine.
+- Rendered official evidence must be content-addressed by source PDF SHA-256, PNG SHA-256, page number, and dimensions.
+- JSON references with fragments must resolve to real anchors or records.
+- Required MTUs must be live canonical MTUs and must be actually mapped.
+- Forbidden MTUs and forbidden routes must be checked by at least one negative regression fixture.
+- Review-required gaps must not be reported as PASS WITH FLAGS or closure.
+- No product, student, diagnostic, PV, lesson, target-exercise, candidate-write, source-overlay, or MTU mutation authority is granted.
 
 ## Core Requirement Checklist
 
-| Requirement | Status | Evidence |
-|---|---:|---|
-| Fresh sample | met | VWO/HAVO 2023-2024 records; H5 q3/q15/q19/q27 excluded. |
-| Rendered official evidence | met | 13 content-addressed rendered pages in the H6 manifest. |
-| Operation decomposition | met | Seven official correction-model operation records. |
-| Answer-form/misconception/scale/procedure hooks | proof_required | Hooks are present; q4 and q23 remain answer-form review items. |
-| Negative regression | met | q18 stale A15 and q10 missing incidence fail as expected. |
-| Evidence-reference integrity | met | New resolver validates JSON anchors and synthetic exam-question anchors. |
-| Authority boundary | met | All authority flags are false. |
-| No false closure | met | Status is `review_required`, not closure. |
+- fresh cross-exam official sample: met (MTU-H6-fresh-cross-exam-vwo-havo-2023-2024-sample-001)
+- atomic operation decomposition: met (25 operations)
+- q4 bounded A40 answer-form decision: met (H6_REVIEWED_EQUIVALENT_Q4_A40_BOUNDED_ARCEER_WELFARE_SHADING)
+- q23-specific macro graph reviewed equivalent: met (H6_REVIEWED_EQUIVALENT_Q23_MACRO_MULTI_CURVE_DRAWING)
+- negative fixture per fresh record: met (7 negatives)
+- strict authority boundary: met (all mutation/product-use flags false)
 
 ## Findings
 
-### h6-generalization-partial-pass
+### H6-ATOMIC-PASS
 
 Classification: `core_requirement_met`
 
-Five of seven fresh cross-exam records pass under H5-style decomposition with stricter evidence refs.
+All seven fresh records pass after atomic decomposition and q4/q23 reviewed-equivalent decisions.
 
-Blocks: none.
+Blocks: none
 
-Does not block: human review of this H6 review candidate; merge of checker/evidence-integrity scaffolding if validation passes.
+Does not block: human review of closure-readiness packet
 
-Proof required to close: run the H6 checker and confirm report status `review_required` with five passed records, two review-required records, and zero failed records.
+Proof required to close: Owner/human approval tied to exact PR head.
 
-### q4-q23-answer-form-gaps
+### H6-DOWNSTREAM-AUTHORITY-BOUNDARY
 
-Classification: `proof_required`
+Classification: `downstream_authority_blocker`
 
-q4 graph shading and q23 macro graph drawing need answer-form/equivalent decisions before H6 full closure.
+The packet does not authorize product, student, diagnostics, PV, mastery, sequencing, lesson output, or Scale Gate 1.
 
-Blocks: MTU-H6 full closure; unqualified cross-exam generalization claim; product-route adoption.
+Blocks: product-route adoption, student/product use, Scale Gate 1
 
-Does not block: human review of this bounded evidence-integrity packet; non-product checker hardening.
+Does not block: reviewing this evidence packet
 
-Proof required to close: approve graph-shading/arceer and macro teken answer-form evidence, or explicitly defer them to a later answer-form governance lane.
+Proof required to close: Separate downstream authority packet and explicit owner approval.
 
-### negative-guards-present
+### H6-H5-AUDIT-PASS
 
-Classification: `core_requirement_met`
+Classification: `proof_requirement_met`
 
-The package includes negative fixtures for stale A15 over-trigger and missing incidence/pass-through mapping.
+H5 unique-anchor audit is present and resolves accepted H5 evidence references with zero unresolved or ambiguous refs.
 
-Blocks: none.
+Blocks: none
 
-Does not block: human review of this H6 review candidate.
+Does not block: human review of H6 closure-readiness packet
 
-Proof required to close: checker must show both negative fixtures fail as expected.
+Proof required to close: Keep node build-scripts/references/check-mtu-h5-anchor-integrity.js green on the exact PR head.
 
-### authority-boundary-preserved
 
-Classification: `non_authorization_boundary`
-
-The package is checker/report/evidence work only and grants no product or mutation authority.
-
-Blocks: Scale Gate 1; product-route readiness; diagnostics; PV; lesson output; student/product use.
-
-Does not block: review of the H6 evidence-integrity package.
-
-Proof required to close: separate downstream review must explicitly grant any product or student-use authority.
-
-## Review Packet
-
-Start with:
-
-- `reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.md`
-- `reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json`
-- `reports/mtu-hardening/mtu-h6-cross-exam-generalization-fixture.json`
-- `reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.json`
-- `build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js`
-- `build-scripts/references/lib/evidence-reference-resolver.js`
-
-Then inspect the rendered official evidence under:
-
-`reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/`
-
-## Validation
-
-```bash
-node --check build-scripts/references/lib/evidence-reference-resolver.js
-node --check build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
-node build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
-node build-scripts/reports/validate-report-json.js
-node build-scripts/sprints/emit-url-index.js --check
-npm run agent:index
-npm run check:platform
-git diff --check
-```
+No protected-reference mutation, external-source mutation, machine-reference mutation, target-exercise mutation, MTU mutation, candidate write, lesson output, diagnostics, PV, mastery, sequencing, student-facing AI, summative use, product-route readiness, or student/product use is authorized.

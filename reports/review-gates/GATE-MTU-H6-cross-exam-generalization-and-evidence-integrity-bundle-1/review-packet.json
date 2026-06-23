@@ -5,9 +5,9 @@
   "created": "2026-06-22",
   "status": "pending_human_review",
   "review_standard": "REV-STD-1",
-  "product_end_state": "MTU-H6 may proceed only as a review-candidate evidence-integrity/generalization packet. MTU-H6 full closure, Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, summative use, and student/product use remain unauthorized.",
-  "original_sprint_gate_spec": "After MTU-H5 closure, MTU-H6 must test whether the H5 mapping rules generalize to fresh official cross-exam evidence while preserving operation decomposition, required/forbidden MTUs, answer-form/misconception/scale/procedure hooks, explicit negative fixtures, and stronger evidence-reference integrity.",
-  "review_scope": "Review the H6 evidence-integrity resolver, fresh cross-exam fixture, rendered official evidence manifest, generalization report, negative regression matrix, and explicit review-required q4/q23 answer-form gaps.",
+  "product_end_state": "This package prepares MTU-H6 final cross-exam generalization closure-readiness evidence for human review. It does not by itself close MTU-H6 and does not authorize Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, summative use, or student/product use.",
+  "original_sprint_gate_spec": "MTU-H6 starts after MTU-H5 closure and must test cross-exam generalization on fresh official evidence while preserving H5-style operation decomposition, required/forbidden MTUs, answer-form/misconception/scale/procedure hooks, explicit negative fixtures, and stricter evidence-reference integrity.",
+  "review_scope": "Review the H6 evidence-integrity resolver, fresh cross-exam fixture, rendered official evidence manifest, generalization report, negative regression matrix, executed q4 bounded A40 decision, executed q23-specific macro graph reviewed equivalent, and H5 anchor-integrity audit.",
   "non_negotiable_requirements": [
     "The sample must be fresh relative to MTU-H5 and must not include the H5 q3/q15/q19/q27 records.",
     "All source evidence must be local official/reference evidence and must not require mutation of references/external or references/machine.",
@@ -20,50 +20,40 @@
   ],
   "core_requirement_checklist": [
     {
-      "requirement_id": "core-1-fresh-sample",
+      "requirement": "fresh cross-exam official sample",
       "status": "met",
-      "evidence": "Fixture excludes H5 q3/q15/q19/q27 and uses VWO/HAVO 2023-2024 official local PDFs."
+      "evidence": "MTU-H6-fresh-cross-exam-vwo-havo-2023-2024-sample-001"
     },
     {
-      "requirement_id": "core-2-official-rendered-evidence",
+      "requirement": "atomic operation decomposition",
       "status": "met",
-      "evidence": "H6_FRESH_CROSS_EXAM_RENDERED_OFFICIAL_EVIDENCE_MANIFEST content-addresses 13 rendered official pages."
+      "evidence": "25 operations"
     },
     {
-      "requirement_id": "core-3-operation-decomposition",
+      "requirement": "q4 bounded A40 answer-form decision",
       "status": "met",
-      "evidence": "Seven records contain official correction-model operation ids, answer-model summaries, required MTUs, forbidden MTUs/routes, and route tags."
+      "evidence": "H6_REVIEWED_EQUIVALENT_Q4_A40_BOUNDED_ARCEER_WELFARE_SHADING"
     },
     {
-      "requirement_id": "core-4-answer-form-misconception-scale-procedure-hooks",
-      "status": "proof_required",
-      "evidence": "Hooks are present. q4 graph shading and q23 macro graph drawing intentionally remain review_required for answer-form/equivalent authority."
+      "requirement": "q23-specific macro graph reviewed equivalent",
+      "status": "met",
+      "evidence": "H6_REVIEWED_EQUIVALENT_Q23_MACRO_MULTI_CURVE_DRAWING"
     },
     {
-      "requirement_id": "core-5-negative-regression",
+      "requirement": "negative fixture per fresh record",
       "status": "met",
-      "evidence": "q18 stale A15 elasticity over-trigger and q10 incidence-unmapped negative fixtures fail as expected."
+      "evidence": "7 negatives"
     },
     {
-      "requirement_id": "core-6-evidence-reference-integrity",
+      "requirement": "strict authority boundary",
       "status": "met",
-      "evidence": "build-scripts/references/lib/evidence-reference-resolver.js validates JSON fragment anchors and synthetic exam-question record anchors."
-    },
-    {
-      "requirement_id": "core-7-authority-boundary",
-      "status": "met",
-      "evidence": "Authority flags are false in fixture, package, report, and review packet."
-    },
-    {
-      "requirement_id": "core-8-no-false-closure",
-      "status": "met",
-      "evidence": "Report status is review_required and package explicitly says this is not MTU-H6 closure."
+      "evidence": "all mutation/product-use flags false"
     }
   ],
   "requested_decision": {
-    "decision_needed": "Approve, revise, or reject this H6 evidence-integrity/generalization review candidate.",
+    "decision_needed": "Approve, revise, or reject this H6 atomic evidence-integrity/closure-readiness review candidate after q4/q23 decisions were executed.",
     "valid_decisions": [
-      "APPROVE_H6_REVIEW_CANDIDATE_WITH_Q4_Q23_REVIEW_REQUIRED",
+      "APPROVE_H6_CLOSURE_READINESS_PACKET_FOR_HUMAN_REVIEW_NOT_CLOSURE",
       "REVISE_H6_EVIDENCE_INTEGRITY_PACKET",
       "REJECT_H6_CROSS_EXAM_SAMPLE_OR_CHECKER"
     ],
@@ -115,36 +105,42 @@
   ],
   "findings": [
     {
-      "finding_id": "h6-generalization-partial-pass",
+      "finding_id": "H6-ATOMIC-PASS",
       "classification": "core_requirement_met",
-      "summary": "Five of seven fresh cross-exam records pass under H5-style decomposition with stricter evidence refs.",
+      "severity": "core_requirement_met",
+      "summary": "All seven fresh records pass after atomic decomposition and q4/q23 reviewed-equivalent decisions.",
       "blocks": [],
-      "does_not_block": ["human review of this H6 review candidate", "merge of checker/evidence-integrity scaffolding if validation passes"],
-      "proof_required_to_close": "Run the H6 checker and confirm report status review_required with 5 passed, 2 review_required, 0 failed."
+      "does_not_block": [
+        "human review of closure-readiness packet"
+      ],
+      "proof_required_to_close": "Owner/human approval tied to exact PR head."
     },
     {
-      "finding_id": "q4-q23-answer-form-gaps",
-      "classification": "proof_required",
-      "summary": "q4 graph shading and q23 macro graph drawing need answer-form/equivalent decisions before H6 full closure.",
-      "blocks": ["MTU-H6 full closure", "unqualified cross-exam generalization claim", "product-route adoption"],
-      "does_not_block": ["human review of this bounded evidence-integrity packet", "non-product checker hardening"],
-      "proof_required_to_close": "Approve graph-shading/arceer and macro teken answer-form evidence, or explicitly defer them to a later answer-form governance lane."
+      "finding_id": "H6-DOWNSTREAM-AUTHORITY-BOUNDARY",
+      "classification": "downstream_authority_blocker",
+      "severity": "downstream_authority_blocker",
+      "summary": "The packet does not authorize product, student, diagnostics, PV, mastery, sequencing, lesson output, or Scale Gate 1.",
+      "blocks": [
+        "product-route adoption",
+        "student/product use",
+        "Scale Gate 1"
+      ],
+      "does_not_block": [
+        "reviewing this evidence packet"
+      ],
+      "proof_required_to_close": "Separate downstream authority packet and explicit owner approval."
     },
     {
-      "finding_id": "negative-guards-present",
-      "classification": "core_requirement_met",
-      "summary": "The package includes negative fixtures for stale A15 over-trigger and missing incidence/pass-through mapping.",
+      "finding_id": "H6-H5-AUDIT-PASS",
+      "classification": "proof_requirement_met",
+      "severity": "proof_requirement_met",
+      "summary": "H5 unique-anchor audit is present and resolves accepted H5 evidence references with zero unresolved or ambiguous refs.",
+      "evidence": "reports/mtu-hardening/mtu-h5-anchor-integrity-audit.json",
       "blocks": [],
-      "does_not_block": ["human review of this H6 review candidate"],
-      "proof_required_to_close": "Checker must show both negative fixtures fail as expected."
-    },
-    {
-      "finding_id": "authority-boundary-preserved",
-      "classification": "non_authorization_boundary",
-      "summary": "The package is checker/report/evidence work only and grants no product or mutation authority.",
-      "blocks": ["Scale Gate 1", "product-route readiness", "diagnostics", "PV", "lesson output", "student/product use"],
-      "does_not_block": ["review of the H6 evidence-integrity package"],
-      "proof_required_to_close": "Separate downstream review must explicitly grant any product or student-use authority."
+      "does_not_block": [
+        "human review of H6 closure-readiness packet"
+      ],
+      "proof_required_to_close": "Keep node build-scripts/references/check-mtu-h5-anchor-integrity.js green on the exact PR head."
     }
   ],
   "review_results": {
@@ -185,10 +181,40 @@
     "node --check build-scripts/references/lib/evidence-reference-resolver.js",
     "node --check build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
     "node build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-anchor-integrity.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
     "node build-scripts/reports/validate-report-json.js",
     "node build-scripts/sprints/emit-url-index.js --check",
     "npm run agent:index",
     "npm run check:platform",
     "git diff --check"
+  ],
+  "product_end_state_acceptance_baseline": {
+    "path": "../4veco-lessen/specifications/product-end-state.md",
+    "local_validation_path": "C:/wt/GOALS-20260608/4veco-lessen/specifications/product-end-state.md"
+  },
+  "blocks": [
+    "product-route adoption",
+    "student/product use",
+    "Scale Gate 1"
+  ],
+  "does_not_block": [
+    "human review of closure-readiness packet",
+    "reviewing this evidence packet",
+    "human review of H6 closure-readiness packet"
+  ],
+  "proof_required_to_close": [
+    {
+      "finding_id": "H6-ATOMIC-PASS",
+      "proof": "Owner/human approval tied to exact PR head."
+    },
+    {
+      "finding_id": "H6-DOWNSTREAM-AUTHORITY-BOUNDARY",
+      "proof": "Separate downstream authority packet and explicit owner approval."
+    },
+    {
+      "finding_id": "H6-H5-AUDIT-PASS",
+      "proof": "Keep node build-scripts/references/check-mtu-h5-anchor-integrity.js green on the exact PR head."
+    }
   ]
 }
