@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1",
+  "package_id": "MTU-H6-CROSS-EXAM-GENERALIZATION-AND-EVIDENCE-INTEGRITY-BUNDLE-1",
+  "created": "2026-06-22",
+  "status": "pending_human_review",
+  "review_standard": "REV-STD-1",
+  "product_end_state": "This package prepares MTU-H6 final cross-exam generalization closure-readiness evidence for human review. It does not by itself close MTU-H6 and does not authorize Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, summative use, or student/product use.",
+  "original_sprint_gate_spec": "MTU-H6 starts after MTU-H5 closure and must test cross-exam generalization on fresh official evidence while preserving H5-style operation decomposition, required/forbidden MTUs, answer-form/misconception/scale/procedure hooks, explicit negative fixtures, and stricter evidence-reference integrity.",
+  "review_scope": "Review the H6 evidence-integrity resolver, fresh cross-exam fixture, rendered official evidence manifest, generalization report, negative regression matrix, executed q4 bounded A40 decision, executed q23-specific macro graph reviewed equivalent, and H5 anchor-integrity audit.",
+  "non_negotiable_requirements": [
+    "The sample must be fresh relative to MTU-H5 and must not include the H5 q3/q15/q19/q27 records.",
+    "All source evidence must be local official/reference evidence and must not require mutation of references/external or references/machine.",
+    "Rendered official evidence must be content-addressed by source PDF SHA-256, PNG SHA-256, page number, and dimensions.",
+    "JSON references with fragments must resolve to real anchors or records.",
+    "Required MTUs must be live canonical MTUs and must be actually mapped.",
+    "Forbidden MTUs and forbidden routes must be checked by at least one negative regression fixture.",
+    "Review-required gaps must not be reported as PASS WITH FLAGS or closure.",
+    "No product, student, diagnostic, PV, lesson, target-exercise, candidate-write, source-overlay, or MTU mutation authority is granted."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "fresh cross-exam official sample",
+      "status": "met",
+      "evidence": "MTU-H6-fresh-cross-exam-vwo-havo-2023-2024-sample-001"
+    },
+    {
+      "requirement": "atomic operation decomposition",
+      "status": "met",
+      "evidence": "25 operations"
+    },
+    {
+      "requirement": "q4 bounded A40 answer-form decision",
+      "status": "met",
+      "evidence": "H6_REVIEWED_EQUIVALENT_Q4_A40_BOUNDED_ARCEER_WELFARE_SHADING"
+    },
+    {
+      "requirement": "q23-specific macro graph reviewed equivalent",
+      "status": "met",
+      "evidence": "H6_REVIEWED_EQUIVALENT_Q23_MACRO_MULTI_CURVE_DRAWING"
+    },
+    {
+      "requirement": "negative fixture per fresh record",
+      "status": "met",
+      "evidence": "7 negatives"
+    },
+    {
+      "requirement": "strict authority boundary",
+      "status": "met",
+      "evidence": "all mutation/product-use flags false"
+    }
+  ],
+  "requested_decision": {
+    "decision_needed": "Approve, revise, or reject this H6 atomic evidence-integrity/closure-readiness review candidate after q4/q23 decisions were executed.",
+    "valid_decisions": [
+      "APPROVE_H6_CLOSURE_READINESS_PACKET_FOR_HUMAN_REVIEW_NOT_CLOSURE",
+      "REVISE_H6_EVIDENCE_INTEGRITY_PACKET",
+      "REJECT_H6_CROSS_EXAM_SAMPLE_OR_CHECKER"
+    ],
+    "execution_authorized_by_this_packet": false,
+    "fixture_mutation_authorized_by_this_packet": false,
+    "protected_reference_mutation_authorized_by_this_packet": false,
+    "external_source_mutation_authorized_by_this_packet": false,
+    "source_overlay_mutation_authorized_by_this_packet": false,
+    "product_or_student_use_authorized_by_this_packet": false,
+    "scale_gate_1_authorized_by_this_packet": false
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.md",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json#H6_FRESH_CROSS_EXAM_RENDERED_OFFICIAL_EVIDENCE_MANIFEST",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-fixture.json",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.json",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.md",
+    "build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+    "build-scripts/references/lib/evidence-reference-resolver.js",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-1-correction-11.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-1-opgave-08.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-2-correction-08.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-2-opgave-05.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw23-2-correction-12.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw23-2-opgave-11.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-06.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-07.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-08.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-03.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-04.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-2-correction-10.png",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-2-opgave-09.png"
+  ],
+  "evidence_base": [
+    "references/external/exam-questions.json",
+    "references/machine/micro-teaching-units.json",
+    "references/external/exams/README.md",
+    "references/external/exams/vw-1022-a-24-1-o.pdf",
+    "references/external/exams/vw-1022-a-24-1-c.pdf",
+    "references/external/exams/vw-1022-a-24-2-o.pdf",
+    "references/external/exams/vw-1022-a-24-2-c.pdf",
+    "references/external/exams/ha-1022-a-23-1-o.pdf",
+    "references/external/exams/ha-1022-a-23-1-c.pdf",
+    "references/external/exams/ha-1022-a-23-2-o.pdf",
+    "references/external/exams/ha-1022-a-23-2-c.pdf",
+    "references/external/exams/vw-1022-a-23-2-o.pdf",
+    "references/external/exams/vw-1022-a-23-2-c.pdf"
+  ],
+  "findings": [
+    {
+      "finding_id": "H6-ATOMIC-PASS",
+      "classification": "core_requirement_met",
+      "severity": "core_requirement_met",
+      "summary": "All seven fresh records pass after atomic decomposition and q4/q23 reviewed-equivalent decisions.",
+      "blocks": [],
+      "does_not_block": [
+        "human review of closure-readiness packet"
+      ],
+      "proof_required_to_close": "Owner/human approval tied to exact PR head."
+    },
+    {
+      "finding_id": "H6-DOWNSTREAM-AUTHORITY-BOUNDARY",
+      "classification": "scale_blocker",
+      "severity": "scale_blocker",
+      "summary": "The packet does not authorize product, student, diagnostics, PV, mastery, sequencing, lesson output, or Scale Gate 1.",
+      "blocks": [
+        "product-route adoption",
+        "student/product use",
+        "Scale Gate 1"
+      ],
+      "does_not_block": [
+        "reviewing this evidence packet"
+      ],
+      "proof_required_to_close": "Separate downstream authority packet and explicit owner approval."
+    },
+    {
+      "finding_id": "H6-H5-AUDIT-PASS",
+      "classification": "core_requirement_met",
+      "severity": "core_requirement_met",
+      "summary": "H5 unique-anchor audit is present and resolves accepted H5 evidence references with zero unresolved or ambiguous refs.",
+      "evidence": "reports/mtu-hardening/mtu-h5-anchor-integrity-audit.json",
+      "blocks": [],
+      "does_not_block": [
+        "human review of H6 closure-readiness packet"
+      ],
+      "proof_required_to_close": "Keep node build-scripts/references/check-mtu-h5-anchor-integrity.js green on the exact PR head."
+    }
+  ],
+  "review_results": {
+    "teacher": "MORE_THAN_SATISFIED_TO_ADVANCE_H6_REVIEW_CANDIDATE",
+    "economist": "MORE_THAN_SATISFIED_TO_ADVANCE_H6_REVIEW_CANDIDATE",
+    "quality_inspection": "MORE_THAN_SATISFIED_TO_ADVANCE_H6_REVIEW_CANDIDATE",
+    "lead": "READY_FOR_HUMAN_REVIEW_AS_H6_REVIEW_CANDIDATE_NOT_CLOSURE"
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/lib/evidence-reference-resolver.js",
+    "node --check build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+    "node build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-anchor-integrity.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform",
+    "git diff --check"
+  ],
+  "product_end_state_acceptance_baseline": {
+    "path": "../4veco-lessen/specifications/product-end-state.md",
+    "local_validation_path": "C:/wt/GOALS-20260608/4veco-lessen/specifications/product-end-state.md"
+  },
+  "blocks": [
+    "product-route adoption",
+    "student/product use",
+    "Scale Gate 1"
+  ],
+  "does_not_block": [
+    "human review of closure-readiness packet",
+    "reviewing this evidence packet",
+    "human review of H6 closure-readiness packet"
+  ],
+  "proof_required_to_close": [
+    {
+      "finding_id": "H6-ATOMIC-PASS",
+      "proof": "Owner/human approval tied to exact PR head."
+    },
+    {
+      "finding_id": "H6-DOWNSTREAM-AUTHORITY-BOUNDARY",
+      "proof": "Separate downstream authority packet and explicit owner approval."
+    },
+    {
+      "finding_id": "H6-H5-AUDIT-PASS",
+      "proof": "Keep node build-scripts/references/check-mtu-h5-anchor-integrity.js green on the exact PR head."
+    }
+  ]
+}
