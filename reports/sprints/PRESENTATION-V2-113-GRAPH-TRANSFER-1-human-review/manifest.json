@@ -1,0 +1,309 @@
+{
+  "packet": "PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review",
+  "capturedAt": "2026-06-23T15:20:01.054Z",
+  "captureUrl": "http://127.0.0.1:55739/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20presentatie.html",
+  "platformHeadAtCapture": "29b551383fe835e4537a00b2aaf9cc87cf748116",
+  "lessonHeadAtCapture": "f6d55a9663ee834dceb4766c08434bf6487b867e",
+  "source": {
+    "path": "build-scripts/content/book-1/b1-113-presentation-v2-model.js",
+    "sha256": "17aaed4e857a99a211b3bdc4d83078dbf4c49bf6c871544550d0782294f11c49"
+  },
+  "output": {
+    "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html",
+    "sha256": "1e891b119573391bd9fae97d1dc66a152ae37ffcbd2d7972f62dc598331162a7"
+  },
+  "geometryProof": {
+    "axisConventionPoints": [
+      {
+        "quantity": 100,
+        "price": 3,
+        "x": 58,
+        "y": 34,
+        "label": ""
+      },
+      {
+        "quantity": 200,
+        "price": 2.5,
+        "x": 137,
+        "y": 77,
+        "label": ""
+      },
+      {
+        "quantity": 300,
+        "price": 2,
+        "x": 216,
+        "y": 120,
+        "label": "(300; 2,00)"
+      },
+      {
+        "quantity": 400,
+        "price": 1.5,
+        "x": 295,
+        "y": 163,
+        "label": ""
+      },
+      {
+        "quantity": 500,
+        "price": 1,
+        "x": 374,
+        "y": 206,
+        "label": ""
+      }
+    ],
+    "interpolationGuide": {
+      "x": 255.5,
+      "y": 141.5,
+      "quantity": 350,
+      "price": 1.75,
+      "xLabel": "Q ongeveer 350",
+      "yLabel": "€1,75"
+    },
+    "axisLabels": {
+      "x": "Hoeveelheid ijsjes (Q)",
+      "y": "Prijs per ijsje (P)"
+    },
+    "xTicks": [
+      {
+        "value": 100,
+        "label": "100",
+        "x": 58
+      },
+      {
+        "value": 200,
+        "label": "200",
+        "x": 137
+      },
+      {
+        "value": 300,
+        "label": "300",
+        "x": 216
+      },
+      {
+        "value": 400,
+        "label": "400",
+        "x": 295
+      },
+      {
+        "value": 500,
+        "label": "500",
+        "x": 374
+      }
+    ],
+    "yTicks": [
+      {
+        "value": 1,
+        "label": "€1,00",
+        "y": 206
+      },
+      {
+        "value": 1.5,
+        "label": "€1,50",
+        "y": 163
+      },
+      {
+        "value": 2,
+        "label": "€2,00",
+        "y": 120
+      },
+      {
+        "value": 2.5,
+        "label": "€2,50",
+        "y": 77
+      },
+      {
+        "value": 3,
+        "label": "€3,00",
+        "y": 34
+      }
+    ]
+  },
+  "screenshots": [
+    {
+      "file": "route-contract.png",
+      "label": "Slide 1 route contract with success criteria",
+      "hash": "route",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": null,
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/route-contract.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "1a0015bad6f96c6f71eca4e96ee61d2e004f18faebe9f91a3e0c30b499935b53"
+    },
+    {
+      "file": "table-and-graph.png",
+      "label": "Slide 2 source table plus corrected P-Q graph",
+      "hash": "ijskraam",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": null,
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/table-and-graph.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "bd77ba42d8f4d970865437d135305013e7ba40b8714e7fd16ee808cb2324ad05"
+    },
+    {
+      "file": "axis-convention.png",
+      "label": "Slide 4 axis convention with labelled ticks",
+      "hash": "assen",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": null,
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/axis-convention.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "68fb4f376ffa22f187337391c7179ab5e597a13476c43d12cc980e0347324854"
+    },
+    {
+      "file": "interpolation.png",
+      "label": "Slide 5 interpolation at euro 1.75 and about 350",
+      "hash": "interpoleren",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": null,
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/interpolation.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "86bff80bbb44e31ea66f1a736dc3e21e0833c4c2fd8b63d8ca072ccd39fdf594"
+    },
+    {
+      "file": "misleading-axis.png",
+      "label": "Slide 6 misleading-axis comparison",
+      "hash": "kritisch",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": null,
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/misleading-axis.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "a9cfa021e321d188e3021daf9b92ff4d42e656d3b3fe2665dcea8f68eed4b5b1"
+    },
+    {
+      "file": "retrieval-check.png",
+      "label": "Slide 7 retrieval check with misleading-axis item",
+      "hash": "terughalen",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": null,
+      "openDetails": true,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/retrieval-check.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "9ba914f352eb4bfd8ffb9a1c4460ba2f89729109099a239066d4ccce746b9690"
+    },
+    {
+      "file": "summary-bridge.png",
+      "label": "Slide 8 summary bridge",
+      "hash": "samenvatten",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": null,
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/summary-bridge.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "2b1fee8aa5a81f5a020ae6a399f9fc1136fd4950c5d7f7d6766a3c1d3e9ada60"
+    },
+    {
+      "file": "notes-open.png",
+      "label": "Student notes panel open without teacher cues",
+      "hash": "assen",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": "notes",
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/notes-open.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "9c134bf3ea4cd9c85d49b26cd9819b8bdba4bac5ba2862c8e32edc7308128a02"
+    },
+    {
+      "file": "mobile.png",
+      "label": "Mobile presentation layout",
+      "hash": "interpoleren",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "action": null,
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/mobile.png",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "ed3a1ad75f5ea8f87914f976608ca7bddae9b8474c220c72a487e5ced0a85567"
+    },
+    {
+      "file": "dark-mode.png",
+      "label": "Dark mode presentation layout",
+      "hash": "interpoleren",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": "dark",
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/dark-mode.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "e2be36526736be8461615dac07271fbd5ba6d8ff1c4ca6b4ba93a78be61cbff8"
+    },
+    {
+      "file": "presentation-mode.png",
+      "label": "Presentation mode layout",
+      "hash": "interpoleren",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "action": "presentation",
+      "openDetails": false,
+      "path": "reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/presentation-mode.png",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "a6faf6efd28f77b4fe3654bd25926d6df5b7469a05759808b0e5d4d6195d0e99"
+    }
+  ]
+}

@@ -796,6 +796,21 @@ html[data-theme="dark"] .pv2-option p {
   stroke-width: 2;
 }
 
+.pv2-inline-graph .axis {
+  stroke: var(--pv2-indigo);
+  stroke-width: 2.2;
+}
+
+.pv2-inline-graph .grid {
+  stroke: color-mix(in oklab, var(--pv2-muted) 22%, transparent);
+  stroke-width: 1;
+}
+
+.pv2-inline-graph .tick {
+  stroke: var(--pv2-indigo);
+  stroke-width: 1.4;
+}
+
 .pv2-inline-graph .guide {
   stroke: var(--pv2-coral);
   stroke-dasharray: 5 5;
@@ -818,6 +833,37 @@ html[data-theme="dark"] .pv2-option p {
 .pv2-inline-graph text {
   fill: var(--pv2-muted);
   font: 700 13px 'Inter', sans-serif;
+}
+
+.pv2-inline-graph .tick-label {
+  font-size: 10px;
+  fill: var(--pv2-muted);
+}
+
+.pv2-inline-graph .axis-title,
+.pv2-inline-graph .axis-short-label {
+  fill: var(--pv2-indigo);
+  font-weight: 900;
+}
+
+.pv2-inline-graph .axis-title {
+  font-size: 11px;
+}
+
+.pv2-inline-graph .line-label {
+  fill: var(--pv2-green);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.pv2-inline-graph .point-label,
+.pv2-inline-graph .guide-label {
+  fill: var(--pv2-indigo);
+  font-size: 11px;
+}
+
+.pv2-inline-graph .guide-point {
+  fill: var(--pv2-coral);
 }
 
 .pv2-axis-compare {
@@ -911,7 +957,39 @@ html[data-theme="dark"] .pv2-option p {
 
 .pv2-route-contract {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: auto;
+  margin-top: clamp(0.65rem, 1.7cqw, 1rem);
+}
+
+.pv2-success-criteria {
+  margin-top: clamp(0.58rem, 1.45cqw, 0.82rem);
+  padding: clamp(0.58rem, 1.45cqw, 0.82rem);
+  border: 1px solid var(--pv2-border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--pv2-green) 10%, var(--pv2-slide-bg));
+}
+
+.pv2-success-criteria h3 {
+  margin: 0;
+  color: var(--pv2-indigo);
+  font-size: clamp(0.82rem, 1.65cqw, 1rem);
+  line-height: 1.18;
+}
+
+.pv2-success-criteria ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin: 0.45rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pv2-success-criteria li {
+  min-width: 0;
+  color: var(--pv2-muted);
+  font-size: clamp(0.68rem, 1.32cqw, 0.78rem);
+  font-weight: 760;
+  line-height: 1.28;
 }
 
 .pv2-route-card,
@@ -1163,7 +1241,7 @@ html[data-theme="dark"] .pv2-option p {
 }
 
 .pv2-check-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   margin-top: auto;
 }
 
@@ -1344,6 +1422,7 @@ html[data-theme="dark"] .pv2-option p {
   .pv2-route-with-visual,
   .pv2-visual-combo,
   .pv2-narrative-grid,
+  .pv2-success-criteria ul,
   .pv2-worked-grid {
     grid-template-columns: 1fr;
   }

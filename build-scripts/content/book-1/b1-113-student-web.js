@@ -8,6 +8,13 @@
 const fs = require("fs");
 const path = require("path");
 const { writeDeckHtml } = require("../../lib/render-presentation-v2-html");
+const {
+  formatEuro,
+  formatQuantity,
+  mapPqPoint,
+  mapPqSeries,
+  mapPqTicks,
+} = require("../../lib/pq-plot-mapper");
 const graphTransferPresentationDeck = require("./b1-113-presentation-v2-model");
 
 const NODE_PATH = path.join(process.env.APPDATA || "", "npm", "node_modules");
@@ -21,6 +28,21 @@ const PptxGenJS = require("pptxgenjs");
 const PAR_NR = "1.1.3";
 const PAR_NAME = "Grafieken en tabellen";
 const DASH = "\u2013";
+const STUDENT_PQ_PLOT = { width: 430, height: 270, left: 68, right: 386, top: 36, bottom: 220 };
+const ICE_CREAM_DEMAND_ROWS = [
+  { price: 1, quantity: 500 },
+  { price: 1.5, quantity: 400 },
+  { price: 2, quantity: 300, label: "(300; 2,00)" },
+  { price: 2.5, quantity: 200 },
+  { price: 3, quantity: 100 },
+];
+const ICE_CREAM_PQ_CONFIG = {
+  pMin: 1,
+  pMax: 3,
+  qMin: 100,
+  qMax: 500,
+  plot: STUDENT_PQ_PLOT,
+};
 
 const PLATFORM_ROOT = path.resolve(__dirname, "..", "..", "..");
 const BOOK_ROOT = process.env.MODULE_ROOT
@@ -129,6 +151,12 @@ function pageTemplate({ title, subtitle, active, body, accent = "grafisch" }) {
     .inline-graph .guide{stroke:var(--letop-ink);stroke-width:2;stroke-dasharray:6 5}
     .inline-graph .point{fill:var(--economisch);stroke:var(--bg-card);stroke-width:2}
     .inline-graph text{fill:var(--ink-soft);font:700 13px system-ui,sans-serif}
+    .inline-graph .tick-label{font-size:10px}
+    .inline-graph .axis-title,.inline-graph .axis-short-label{fill:var(--ink);font-weight:900}
+    .inline-graph .axis-title{font-size:11px}
+    .inline-graph .line-label{fill:var(--accent);font-weight:900}
+    .inline-graph .point-label,.inline-graph .guide-label{fill:var(--ink);font-size:11px}
+    .inline-graph .guide-point{fill:var(--letop-ink)}
     .axis-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
     .axis-panel{border:1px solid var(--border);border-radius:8px;padding:10px;background:var(--bg)}
     .axis-bars{height:150px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:end;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:10px 10px 0;margin-top:8px}
@@ -218,33 +246,31 @@ function coffeeTableVisual() {
 }
 
 function pqGraphVisual({ id = "pq_graph", title = "P-Q-grafiek", interpolation = false, caption = "Prijs staat verticaal; hoeveelheid staat horizontaal." } = {}) {
-  const points = [
-    [112, 60, "500;1,00"],
-    [172, 95, "400;1,50"],
-    [232, 130, "300;2,00"],
-    [292, 165, "200;2,50"],
-    [352, 200, "100;3,00"],
-  ];
+  const plot = STUDENT_PQ_PLOT;
+  const points = mapPqSeries(ICE_CREAM_DEMAND_ROWS, ICE_CREAM_PQ_CONFIG);
+  const xTicks = mapPqTicks([100, 200, 300, 400, 500], "quantity", ICE_CREAM_PQ_CONFIG)
+    .map(tick => ({ ...tick, label: formatQuantity(tick.value) }));
+  const yTicks = mapPqTicks([1, 1.5, 2, 2.5, 3], "price", ICE_CREAM_PQ_CONFIG)
+    .map(tick => ({ ...tick, label: formatEuro(tick.value) }));
+  const interpolationPoint = mapPqPoint({ quantity: 350, price: 1.75 }, ICE_CREAM_PQ_CONFIG);
+  const lineLabelPoint = points.find(point => point.quantity === 300 && point.price === 2) || points[Math.floor(points.length / 2)];
   const interpolationMarkup = interpolation
-    ? `\n      <line class="guide" x1="68" y1="112" x2="262" y2="112"></line><line class="guide" x1="262" y1="112" x2="262" y2="220"></line><circle class="point" cx="262" cy="112" r="6"></circle><text x="78" y="104">EUR 1,75</text><text x="270" y="214">ongeveer 350</text>`
+    ? `\n      <line class="guide" x1="${plot.left}" y1="${interpolationPoint.y}" x2="${interpolationPoint.x}" y2="${interpolationPoint.y}"></line><line class="guide" x1="${interpolationPoint.x}" y1="${interpolationPoint.y}" x2="${interpolationPoint.x}" y2="${plot.bottom}"></line><circle class="point guide-point" cx="${interpolationPoint.x}" cy="${interpolationPoint.y}" r="6"></circle><text class="guide-label" x="${plot.left + 10}" y="${interpolationPoint.y - 8}">${esc(formatEuro(1.75))}</text><text class="guide-label" x="${interpolationPoint.x + 8}" y="${plot.bottom - 10}">ongeveer 350</text>`
     : "";
   return `<figure class="visual-object" data-visual-id="${esc(id)}">
     <h3>${esc(title)}</h3>
-    <svg class="inline-graph" viewBox="0 0 430 270" role="img" aria-label="${esc(title)} met prijs op de verticale as en hoeveelheid op de horizontale as">
-      <line class="axis" x1="68" y1="220" x2="386" y2="220"></line>
-      <line class="axis" x1="68" y1="220" x2="68" y2="36"></line>
-      <line class="grid" x1="68" y1="164" x2="386" y2="164"></line>
-      <line class="grid" x1="68" y1="108" x2="386" y2="108"></line>
-      <text x="360" y="248">Q</text>
-      <text x="18" y="50">P</text>
-      <text x="40" y="64">EUR 1</text>
-      <text x="40" y="134">EUR 2</text>
-      <text x="40" y="204">EUR 3</text>
-      <text x="108" y="246">500</text>
-      <text x="228" y="246">300</text>
-      <text x="348" y="246">100</text>
-      <polyline class="curve" points="${points.map(([x, y]) => `${x},${y}`).join(" ")}"></polyline>
-      ${points.map(([x, y, label], i) => `<circle class="point" cx="${x}" cy="${y}" r="5"></circle>${i === 2 ? `<text x="${x + 8}" y="${y - 8}">(${label})</text>` : ""}`).join("")}${interpolationMarkup}
+    <svg class="inline-graph" viewBox="0 0 ${plot.width} ${plot.height}" role="img" aria-label="${esc(title)} met prijs op de verticale as en hoeveelheid op de horizontale as">
+      ${yTicks.map(tick => `<line class="grid" x1="${plot.left}" y1="${tick.y}" x2="${plot.right}" y2="${tick.y}"></line><text class="tick-label" x="${plot.left - 8}" y="${tick.y + 4}" text-anchor="end">${esc(tick.label)}</text>`).join("")}
+      ${xTicks.map(tick => `<line class="grid" x1="${tick.x}" y1="${plot.top}" x2="${tick.x}" y2="${plot.bottom}"></line><text class="tick-label" x="${tick.x}" y="${plot.bottom + 20}" text-anchor="middle">${esc(tick.label)}</text>`).join("")}
+      <line class="axis" x1="${plot.left}" y1="${plot.bottom}" x2="${plot.right}" y2="${plot.bottom}"></line>
+      <line class="axis" x1="${plot.left}" y1="${plot.bottom}" x2="${plot.left}" y2="${plot.top}"></line>
+      <text class="axis-short-label" x="${plot.right - 18}" y="${plot.bottom + 38}">Q</text>
+      <text class="axis-short-label" x="${plot.left - 34}" y="${plot.top + 12}">P</text>
+      <text class="axis-title" x="${(plot.left + plot.right) / 2}" y="${plot.height - 6}" text-anchor="middle">Hoeveelheid ijsjes (Q)</text>
+      <text class="axis-title" x="16" y="${(plot.top + plot.bottom) / 2}" text-anchor="middle" transform="rotate(-90 16 ${(plot.top + plot.bottom) / 2})">Prijs per ijsje (P)</text>
+      <polyline class="curve" points="${points.map(point => `${point.x},${point.y}`).join(" ")}"></polyline>
+      ${points.map(point => `<circle class="point" cx="${point.x}" cy="${point.y}" r="5" data-q="${point.quantity}" data-p="${point.price}"></circle>${point.label ? `<text class="point-label" x="${point.x + 8}" y="${point.y - 8}">${esc(point.label)}</text>` : ""}`).join("")}
+      <text class="line-label" x="${lineLabelPoint.x + 28}" y="${lineLabelPoint.y + 18}">Vraaglijn ijsjes</text>${interpolationMarkup}
     </svg>
     <p>${esc(caption)}</p>
   </figure>`;
@@ -278,17 +304,22 @@ function waterGraphVisual() {
 }
 
 function blankAxesVisual() {
+  const plot = STUDENT_PQ_PLOT;
+  const config = { pMin: 1, pMax: 3, qMin: 40, qMax: 200, plot };
+  const leftTop = mapPqPoint({ quantity: 40, price: 3 }, config);
+  const rightBottom = mapPqPoint({ quantity: 200, price: 1 }, config);
   return `<figure class="visual-object" data-visual-id="blank_axes_template">
     <h3>Assen-template voor tekenen</h3>
     <svg class="inline-graph" viewBox="0 0 430 270" role="img" aria-label="Lege P-Q assen om punten uit een tabel te tekenen">
-      <line class="axis" x1="68" y1="220" x2="386" y2="220"></line>
-      <line class="axis" x1="68" y1="220" x2="68" y2="36"></line>
-      <line class="grid" x1="68" y1="164" x2="386" y2="164"></line>
-      <line class="grid" x1="68" y1="108" x2="386" y2="108"></line>
-      <text x="360" y="248">Q</text>
-      <text x="18" y="50">P</text>
-      <circle class="point" cx="118" cy="188" r="5"></circle><text x="126" y="180">(40;3,00)</text>
-      <circle class="point" cx="352" cy="76" r="5"></circle><text x="250" y="68">(200;1,00)</text>
+      <line class="axis" x1="${plot.left}" y1="${plot.bottom}" x2="${plot.right}" y2="${plot.bottom}"></line>
+      <line class="axis" x1="${plot.left}" y1="${plot.bottom}" x2="${plot.left}" y2="${plot.top}"></line>
+      <line class="grid" x1="${plot.left}" y1="${(plot.top + plot.bottom) / 2}" x2="${plot.right}" y2="${(plot.top + plot.bottom) / 2}"></line>
+      <text class="axis-short-label" x="${plot.right - 18}" y="${plot.bottom + 38}">Q</text>
+      <text class="axis-short-label" x="${plot.left - 34}" y="${plot.top + 12}">P</text>
+      <text class="axis-title" x="${(plot.left + plot.right) / 2}" y="${plot.height - 6}" text-anchor="middle">Hoeveelheid (Q)</text>
+      <text class="axis-title" x="16" y="${(plot.top + plot.bottom) / 2}" text-anchor="middle" transform="rotate(-90 16 ${(plot.top + plot.bottom) / 2})">Prijs (P)</text>
+      <circle class="point" cx="${leftTop.x}" cy="${leftTop.y}" r="5"></circle><text class="point-label" x="${leftTop.x + 8}" y="${leftTop.y + 16}">(40; 3,00)</text>
+      <circle class="point" cx="${rightBottom.x}" cy="${rightBottom.y}" r="5"></circle><text class="point-label" x="${rightBottom.x - 92}" y="${rightBottom.y - 8}">(200; 1,00)</text>
     </svg>
     <p>Zet punten uit als (Q; P), dus hoeveelheid eerst en prijs daarna.</p>
   </figure>`;

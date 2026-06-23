@@ -9,6 +9,82 @@
 const PAR_NR = '1.1.3';
 const PAR_NAME = 'Grafieken en tabellen';
 const DASH = '\u2013';
+const {
+  DEFAULT_PQ_PLOT,
+  formatEuro,
+  formatQuantity,
+  mapPqPoint,
+  mapPqSeries,
+  mapPqTicks,
+} = require('../../lib/pq-plot-mapper');
+
+const iceCreamDemandRows = [
+  { price: 1, quantity: 500 },
+  { price: 1.5, quantity: 400 },
+  { price: 2, quantity: 300, label: '(300; 2,00)' },
+  { price: 2.5, quantity: 200 },
+  { price: 3, quantity: 100 },
+];
+
+const iceCreamPqConfig = {
+  pMin: 1,
+  pMax: 3,
+  qMin: 100,
+  qMax: 500,
+  plot: DEFAULT_PQ_PLOT,
+};
+
+const pTicks = [1, 1.5, 2, 2.5, 3];
+const qTicks = [100, 200, 300, 400, 500];
+
+function pointLabel(point) {
+  return point.label || '';
+}
+
+function createPqVisual({ id, title, guides = null, caption }) {
+  return {
+    type: 'pqGraph',
+    id,
+    title,
+    alt: `${title} met prijs op de verticale as en hoeveelheid op de horizontale as`,
+    plot: iceCreamPqConfig.plot,
+    axes: {
+      x: {
+        label: 'Hoeveelheid ijsjes (Q)',
+        shortLabel: 'Q',
+        ticks: mapPqTicks(qTicks, 'quantity', iceCreamPqConfig).map(tick => ({
+          ...tick,
+          label: formatQuantity(tick.value),
+        })),
+      },
+      y: {
+        label: 'Prijs per ijsje (P)',
+        shortLabel: 'P',
+        ticks: mapPqTicks(pTicks, 'price', iceCreamPqConfig).map(tick => ({
+          ...tick,
+          label: formatEuro(tick.value),
+        })),
+      },
+    },
+    sourceRows: iceCreamDemandRows.map(row => ({
+      quantity: row.quantity,
+      price: row.price,
+      label: pointLabel(row),
+    })),
+    points: mapPqSeries(iceCreamDemandRows, iceCreamPqConfig).map(point => ({
+      quantity: point.quantity,
+      price: point.price,
+      x: point.x,
+      y: point.y,
+      label: pointLabel(point),
+    })),
+    lineLabel: 'Vraaglijn ijsjes',
+    guides,
+    caption,
+  };
+}
+
+const interpolationGuidePoint = mapPqPoint({ quantity: 350, price: 1.75 }, iceCreamPqConfig);
 
 const tableVisual = {
   type: 'table',
@@ -25,28 +101,25 @@ const tableVisual = {
   caption: 'Bronwaarden krijgen pas betekenis met label en eenheid.',
 };
 
-const pqVisual = {
-  type: 'pqGraph',
+const pqVisual = createPqVisual({
   id: 'slide_pq_graph',
   title: 'P-Q-grafiek',
-  alt: 'P-Q-grafiek met prijs verticaal en hoeveelheid horizontaal',
-  points: [
-    { x: 330, y: 62, label: '' },
-    { x: 275, y: 94, label: '' },
-    { x: 220, y: 126, label: '(300; 2,00)' },
-    { x: 165, y: 158, label: '' },
-    { x: 110, y: 190, label: '' },
-  ],
   caption: 'Prijs staat verticaal; hoeveelheid staat horizontaal.',
-};
+});
 
-const interpolationVisual = {
-  ...pqVisual,
+const interpolationVisual = createPqVisual({
   id: 'slide_interpolation_graph',
   title: 'Interpoleren bij \u20ac1,75',
-  guides: { x: 248, y: 112, xLabel: 'Q ongeveer 350', yLabel: '\u20ac1,75' },
+  guides: {
+    x: interpolationGuidePoint.x,
+    y: interpolationGuidePoint.y,
+    quantity: 350,
+    price: 1.75,
+    xLabel: 'Q ongeveer 350',
+    yLabel: '\u20ac1,75',
+  },
   caption: 'Hulplijnen maken de schatting controleerbaar.',
-};
+});
 
 const axisVisual = {
   type: 'axisComparison',
@@ -71,11 +144,12 @@ const axisVisual = {
   caption: 'De ingezoomde as maakt dezelfde daling dramatischer.',
 };
 
-function notes(student, { misconception = [], transition = '' } = {}) {
+function notes(studentExplanation, { misconceptionWatch = [], teacherCue = [], transition = '' } = {}) {
   return {
     label: 'Studentgerichte uitleg',
-    student,
-    misconception,
+    studentExplanation,
+    misconceptionWatch,
+    teacherCue,
     transition,
   };
 }
@@ -153,6 +227,11 @@ const deck = {
         { label: '2', title: 'Grafiek', text: 'Zet P verticaal en Q horizontaal.' },
         { label: '3', title: 'Oordeel', text: 'Controleer schaal, vergelijking en claim.' },
       ],
+      successCriteria: [
+        'Je kiest tabelwaarden met label en eenheid.',
+        'Je leest een P-Q-grafiek met P verticaal en Q horizontaal.',
+        'Je controleert of schaal en vergelijking de grafiekclaim ondersteunen.',
+      ],
       speakerNotes: notes(
         [
           'De lesroute voorkomt dat leerlingen meteen naar losse getallen springen.',
@@ -187,9 +266,11 @@ const deck = {
       speakerNotes: notes(
         [
           'De tabel bevat al informatie, maar het verband wordt sneller zichtbaar in de grafiek.',
-          'Laat leerlingen eerst de kolommen benoemen voordat ze de lijn interpreteren.',
         ],
-        { transition: 'Nu kiezen we precies welke tabelwaarden nodig zijn.' },
+        {
+          teacherCue: ['Laat leerlingen eerst de kolommen benoemen voordat ze de lijn interpreteren.'],
+          transition: 'Nu kiezen we precies welke tabelwaarden nodig zijn.',
+        },
       ),
     },
     procedureSlide({
@@ -235,7 +316,7 @@ const deck = {
       speakerNotes: notes(
         ['De valkuil is dat leerlingen vanuit wiskunde automatisch de prijs horizontaal zetten.'],
         {
-          misconception: ['Draai de assen niet om: in deze economiegrafiek staat P verticaal en Q horizontaal.'],
+          misconceptionWatch: ['Draai de assen niet om: in deze economiegrafiek staat P verticaal en Q horizontaal.'],
           transition: 'Daarna lezen we een tussenwaarde af.',
         },
       ),
@@ -280,7 +361,7 @@ const deck = {
       speakerNotes: notes(
         ['Grafieken zijn niet verdacht, maar schaalkeuzes sturen wel hoe groot een verschil voelt.'],
         {
-          misconception: ['Een steile staaf is geen bewijs zonder de as en waarden te lezen.'],
+          misconceptionWatch: ['Een steile staaf is geen bewijs zonder de as en waarden te lezen.'],
           transition: 'We sluiten af door de kernvragen terug te halen.',
         },
       ),
@@ -312,13 +393,45 @@ const deck = {
           hint: 'Je leest tussen bekende punten.',
           answer: 'Omdat je een beredeneerde schatting maakt tussen bronpunten.',
         },
+        {
+          prompt: 'Waarom kan een ingezoomde as een daling misleidend groot laten lijken?',
+          hint: 'Vergelijk dezelfde waarden met een andere asstart.',
+          answer: 'Omdat dezelfde data visueel steiler of groter lijken wanneer de as niet bij nul begint.',
+        },
       ],
       speakerNotes: notes(
         [
           'Deze check is bedoeld als snelle terughaalronde, niet als bewijs dat alles onder de knie is.',
-          'Laat leerlingen eerst stil antwoorden en daarna per kaart controleren.',
         ],
-        { transition: 'Gebruik dezelfde route in de oefenpagina en het grafiekenspel.' },
+        {
+          teacherCue: ['Laat leerlingen eerst stil antwoorden en daarna per kaart controleren.'],
+          transition: 'Gebruik dezelfde route in de oefenpagina en het grafiekenspel.',
+        },
+      ),
+    },
+    {
+      id: 'samenvatten',
+      role: 'summary_bridge',
+      navTitle: 'Samenvatting',
+      teacherTitle: 'Afronden en doorpakken',
+      studentTitle: 'Samenvatting en volgende stap',
+      title: 'Samenvatting en volgende stap',
+      layout: 'summaryBridge',
+      eyebrow: `${PAR_NR} ${DASH} samenvatting`,
+      assertion: 'De grafiekroute werkt bij elke tabel: bron lezen, grafiek controleren, claim beoordelen.',
+      action: 'Neem deze drie checks mee naar de oefenpagina en het grafiekenspel.',
+      studentExplanation: [
+        'Bron: een tabelwaarde is pas bruikbaar met label en eenheid.',
+        'Grafiek: in deze economiegrafiek staat P verticaal en Q horizontaal.',
+        'Aflezen: een tussenwaarde zoals \u20ac1,75 is een schatting tussen bekende punten.',
+        'Oordeel: schaal en asstart bepalen hoe groot een verschil lijkt.',
+      ],
+      speakerNotes: notes(
+        [
+          'Deze samenvatting verbindt de presentatie met de oefenpagina en het spel zonder nieuw begrip te introduceren.',
+          'De kern is dat leerlingen steeds dezelfde controlevolgorde gebruiken.',
+        ],
+        { transition: 'Daarna oefen je zelfstandig met dezelfde route.' },
       ),
     },
   ],

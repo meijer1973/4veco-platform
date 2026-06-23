@@ -117,10 +117,18 @@ function renderSlideHead(slide, { compact = false } = {}) {
 }
 
 function renderRouteContract(slide) {
+  const criteria = arr(slide.successCriteria);
+  const criteriaMarkup = criteria.length
+    ? `<section class="pv2-success-criteria" aria-label="Succescriteria">
+            <h3>Aan het einde kun je...</h3>
+            <ul>${criteria.map(item => `<li>${esc(item)}</li>`).join('')}</ul>
+          </section>`
+    : '';
   return `${renderSlideHead(slide)}
           <div class="pv2-route-contract" role="list" aria-label="Lesroute">
             ${arr(slide.routeCards).map((card) => `<section class="pv2-route-card" role="listitem"><span>${esc(card.label)}</span><h3>${esc(card.title)}</h3><p>${esc(card.text)}</p></section>`).join('')}
-          </div>`;
+          </div>
+          ${criteriaMarkup}`;
 }
 
 function renderNarrativeAnchor(slide) {
@@ -332,18 +340,40 @@ function renderVisual(visual) {
   if (visual.type === 'pqGraph') {
     const points = arr(visual.points);
     const plotted = points.map((point) => `${point.x},${point.y}`).join(' ');
+    const plot = {
+      width: 420,
+      height: 250,
+      left: 58,
+      right: 374,
+      top: 34,
+      bottom: 206,
+      ...(visual.plot || {}),
+    };
+    const xAxis = visual.axes?.x || {};
+    const yAxis = visual.axes?.y || {};
+    const xTicks = arr(xAxis.ticks);
+    const yTicks = arr(yAxis.ticks);
+    const axisMarkup = `${yTicks.map(tick => `<line class="grid" x1="${esc(plot.left)}" y1="${esc(tick.y)}" x2="${esc(plot.right)}" y2="${esc(tick.y)}"></line><line class="tick" x1="${esc(plot.left - 5)}" y1="${esc(tick.y)}" x2="${esc(plot.left)}" y2="${esc(tick.y)}"></line><text class="tick-label tick-label-y" x="${esc(plot.left - 8)}" y="${esc(tick.y + 4)}" text-anchor="end">${esc(tick.label ?? tick.value)}</text>`).join('')}
+        ${xTicks.map(tick => `<line class="grid" x1="${esc(tick.x)}" y1="${esc(plot.top)}" x2="${esc(tick.x)}" y2="${esc(plot.bottom)}"></line><line class="tick" x1="${esc(tick.x)}" y1="${esc(plot.bottom)}" x2="${esc(tick.x)}" y2="${esc(plot.bottom + 5)}"></line><text class="tick-label tick-label-x" x="${esc(tick.x)}" y="${esc(plot.bottom + 20)}" text-anchor="middle">${esc(tick.label ?? tick.value)}</text>`).join('')}
+        <line class="axis" x1="${esc(plot.left)}" y1="${esc(plot.bottom)}" x2="${esc(plot.right)}" y2="${esc(plot.bottom)}"></line>
+        <line class="axis" x1="${esc(plot.left)}" y1="${esc(plot.bottom)}" x2="${esc(plot.left)}" y2="${esc(plot.top)}"></line>
+        <text class="axis-short-label" x="${esc(plot.right - 10)}" y="${esc(plot.bottom + 36)}">${esc(xAxis.shortLabel || 'Q')}</text>
+        <text class="axis-short-label" x="${esc(plot.left - 36)}" y="${esc(plot.top + 12)}">${esc(yAxis.shortLabel || 'P')}</text>
+        <text class="axis-title axis-title-x" x="${esc((plot.left + plot.right) / 2)}" y="${esc(plot.height - 6)}" text-anchor="middle">${esc(xAxis.label || 'Hoeveelheid (Q)')}</text>
+        <text class="axis-title axis-title-y" x="${esc(16)}" y="${esc((plot.top + plot.bottom) / 2)}" text-anchor="middle" transform="rotate(-90 16 ${(plot.top + plot.bottom) / 2})">${esc(yAxis.label || 'Prijs (P)')}</text>`;
+    const labelAnchor = points.find(point => point.quantity === 300 && Number(point.price) === 2) || points[Math.floor(points.length / 2)] || { x: plot.left, y: plot.top };
+    const lineLabelMarkup = visual.lineLabel
+      ? `<text class="line-label" x="${esc(labelAnchor.x + 28)}" y="${esc(labelAnchor.y + 18)}">${esc(visual.lineLabel)}</text>`
+      : '';
     const guideMarkup = visual.guides
-      ? `\n        <line class="guide" x1="${esc(visual.guides.x)}" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="206"></line><line class="guide" x1="58" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="${esc(visual.guides.y)}"></line><text x="${esc(visual.guides.x + 8)}" y="198">${esc(visual.guides.xLabel)}</text><text x="66" y="${esc(visual.guides.y - 8)}">${esc(visual.guides.yLabel)}</text>`
+      ? `\n        <line class="guide" x1="${esc(visual.guides.x)}" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="${esc(plot.bottom)}"></line><line class="guide" x1="${esc(plot.left)}" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="${esc(visual.guides.y)}"></line><circle class="guide-point" cx="${esc(visual.guides.x)}" cy="${esc(visual.guides.y)}" r="4"></circle><text class="guide-label" x="${esc(visual.guides.x + 8)}" y="${esc(plot.bottom - 10)}">${esc(visual.guides.xLabel)}</text><text class="guide-label" x="${esc(plot.left + 8)}" y="${esc(visual.guides.y - 8)}">${esc(visual.guides.yLabel)}</text>`
       : '';
     return `<figure class="pv2-visual-panel" data-visual-id="${esc(visual.id)}">
       <figcaption>${esc(visual.title)}</figcaption>
-      <svg class="pv2-inline-graph" viewBox="0 0 420 250" role="img" aria-label="${esc(visual.alt || visual.title)}">
-        <line x1="58" y1="206" x2="374" y2="206"></line>
-        <line x1="58" y1="206" x2="58" y2="34"></line>
-        <text x="342" y="232">Q</text>
-        <text x="22" y="48">P</text>
-        <polyline points="${esc(plotted)}"></polyline>
-        ${points.map((point) => `<circle cx="${esc(point.x)}" cy="${esc(point.y)}" r="4"></circle><text x="${esc(point.x + 6)}" y="${esc(point.y - 6)}">${esc(point.label)}</text>`).join('')}${guideMarkup}
+      <svg class="pv2-inline-graph" viewBox="0 0 ${esc(plot.width)} ${esc(plot.height)}" role="img" aria-label="${esc(visual.alt || visual.title)}" data-x-axis-label="${esc(xAxis.label || '')}" data-y-axis-label="${esc(yAxis.label || '')}">
+        ${axisMarkup}
+        <polyline class="curve" data-line-label="${esc(visual.lineLabel || '')}" points="${esc(plotted)}"></polyline>
+        ${points.map((point) => `<circle class="point" cx="${esc(point.x)}" cy="${esc(point.y)}" r="4" data-q="${esc(point.quantity ?? '')}" data-p="${esc(point.price ?? '')}"></circle><text class="point-label" x="${esc(point.x + 6)}" y="${esc(point.y - 6)}">${esc(point.label)}</text>`).join('')}${lineLabelMarkup}${guideMarkup}
       </svg>
       ${visual.caption ? `<p>${esc(visual.caption)}</p>` : ''}
     </figure>`;
@@ -363,9 +393,10 @@ function renderVisual(visual) {
 function renderNotes(notes, deck = {}) {
   const label = notes?.label || deck.notesLabel || 'Studentgerichte uitleg';
   const sections = [];
-  const student = arr(notes?.student).length ? arr(notes.student) : arr(notes?.script);
+  const student = arr(notes?.studentExplanation).length ? arr(notes.studentExplanation) : (arr(notes?.student).length ? arr(notes.student) : arr(notes?.script));
+  const misconception = arr(notes?.misconceptionWatch).length ? arr(notes.misconceptionWatch) : arr(notes?.misconception);
   if (student.length) sections.push(renderNoteSection('Studentuitleg', student));
-  if (arr(notes?.misconception).length) sections.push(renderNoteList('Let op', notes.misconception));
+  if (misconception.length) sections.push(renderNoteList('Let op', misconception));
   if (notes?.transition) sections.push(renderNoteSection('Overgang', [notes.transition]));
   const body = sections.join('') || '<section><p>Geen aanvullende uitleg.</p></section>';
   return `<details class="pv2-notes"><summary>${esc(label)}</summary><div class="pv2-speaker-script">${body}</div></details>`;
@@ -382,8 +413,10 @@ function renderNoteList(title, items) {
 function getSpeakerText(notes) {
   if (!notes) return '';
   const parts = [
+    ...arr(notes.studentExplanation),
     ...arr(notes.student),
     ...arr(notes.script),
+    ...arr(notes.misconceptionWatch),
     ...arr(notes.misconception),
     notes.transition,
   ].filter(Boolean);
