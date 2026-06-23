@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "packet_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "sprint_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "pr_number": null,
+  "pr_url": null,
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "protected_reference",
+  "changed_paths": [
+    "build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js",
+    "references/authored/year2-v6-target-foundation-candidates.json",
+    "references/data/year2-target-foundation/answer-contracts.json",
+    "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+    "references/schemas/year2-v6-target-foundation-candidates.schema.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json",
+    "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.md",
+    "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-review-packet.md",
+    "reports/review-gates/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1/review-packet.json",
+    "reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-plan.md",
+    "reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PENDING_REMOTE_HEAD",
+    "rationale": "This PR creates a protected authored Year 2/v6 target candidate surface, adds a schema, and carries high-authority target-foundation semantics. It must route READY_FOR_HUMAN_REVIEW after exact-head proof."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "protected_reference_touched",
+    "year2_target_foundation",
+    "candidate_surface_created",
+    "lesson_production_review_boundary",
+    "single_account_governance_pilot"
+  ],
+  "date": "2026-06-23",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "references/owned/course-blueprint-v6-three-year.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-governed-mutation-plan.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book5-pension-target-package.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book6-housing-target-package.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book7-risk-information-target-package.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book8-strategic-target-package.md",
+    "reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json"
+  ],
+  "non_negotiable_requirements": [
+    "Create the approved Year 2/v6 candidate surface.",
+    "Install exactly four approved owner records.",
+    "Preserve exactly one owner per record and bounded integration semantics.",
+    "Preserve the active v5 Books 1-4 registry.",
+    "Record the full MTU/task-family union for every OP row.",
+    "Record source reconstruction foundation data for all four source families.",
+    "Record machine-readable answer contracts for every subquestion.",
+    "Keep protected MTU changes as later governed companion plans.",
+    "Keep generated lesson, product, Scale, diagnostics, mastery, PV, summative, and student/product-use authority false.",
+    "Before marking ready or merging, run exact-head PR readiness with live branch-protection output showing ok: true."
+  ],
+  "core_requirement_checklist": [
+    {"requirement": "Product end-state cited", "status": "met", "evidence": "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-review-packet.md"},
+    {"requirement": "Original specs cited", "status": "met", "evidence": "original_sprint_or_gate_spec_refs"},
+    {"requirement": "Candidate surface created", "status": "met", "evidence": "references/authored/year2-v6-target-foundation-candidates.json"},
+    {"requirement": "Four exact records installed", "status": "met", "evidence": "checker exact-compares approved package JSON blocks"},
+    {"requirement": "One owner per record", "status": "met", "evidence": "candidate surface and checker"},
+    {"requirement": "Active v5 registry preserved", "status": "met", "evidence": "checker"},
+    {"requirement": "MTU/task-family review complete", "status": "met", "evidence": "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json"},
+    {"requirement": "Source reconstruction foundation present", "status": "met", "evidence": "references/data/year2-target-foundation/source-reconstruction-foundation.json"},
+    {"requirement": "Answer contracts present", "status": "met", "evidence": "references/data/year2-target-foundation/answer-contracts.json"},
+    {"requirement": "Protected MTU changes deferred", "status": "met", "evidence": "MTU/task-family review"},
+    {"requirement": "Authority boundary false", "status": "met", "evidence": "authority_claims"},
+    {"requirement": "Exact-head PR proof", "status": "pending_remote_pr", "evidence": "single_account_pr_governance_pilot"}
+  ],
+  "authority_claims": {
+    "year2_v6_candidate_surface_created": true,
+    "approved_candidate_records_installed": true,
+    "active_v5_target_registry_mutation_performed": false,
+    "machine_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "mtus_minted": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "official_exam_operation_closure_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "implementation_summary": {
+    "candidate_surface": "references/authored/year2-v6-target-foundation-candidates.json",
+    "record_count": 4,
+    "installed_record_ids": [
+      "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1"
+    ],
+    "target_owner_candidate_ids": ["Y2-B5-P13", "Y2-B6-P12", "Y2-B7-P13", "Y2-B8-P04"],
+    "active_v5_registry_preserved": true,
+    "source_reconstruction_foundation_records": 4,
+    "answer_contract_record_count": 4,
+    "mtu_task_family_records": 4
+  },
+  "carried_flags": [
+    {
+      "id": "Y2TRTF-005",
+      "classification": "scale_blocker",
+      "flag": "Protected MTU/task-family mutations are not executed.",
+      "blocks": ["lesson production", "shared task-shell reliance", "broad OP closure"],
+      "does_not_block": ["candidate-surface installation"],
+      "proof_required_to_close": "Future governed MTU/task-family companion PR with exact operation-specific proof."
+    },
+    {
+      "id": "Y2TRTF-006",
+      "classification": "scale_blocker",
+      "flag": "Source artifacts are not rendered.",
+      "blocks": ["lesson handoff", "product proof"],
+      "does_not_block": ["target-foundation implementation review"],
+      "proof_required_to_close": "Rendered source figures/tables with official locator trace."
+    },
+    {
+      "id": "Y2TRTF-007",
+      "classification": "scale_blocker",
+      "flag": "Product, Scale, and student-use authority remain false.",
+      "blocks": ["CP-6", "Scale Gate", "diagnostics", "mastery", "PV", "summative use", "student/product use"],
+      "does_not_block": ["human review of this candidate-surface implementation"],
+      "proof_required_to_close": "Separate product-proof and Scale Gate review."
+    }
+  ],
+  "proof": {
+    "local_checkers": [
+      {"command": "node --check build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js", "status": "passed"},
+      {"command": "node build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js", "status": "passed"},
+      {"command": "npm.cmd run check:review-throughput -- reports/review-gates/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1/review-packet.json", "status": "passed"},
+      {"command": "npm.cmd run check:platform", "status": "passed"}
+    ]
+  },
+  "single_account_pr_governance_pilot": {
+    "pilot_status": "pending_remote_pr",
+    "expected_route": "READY_FOR_HUMAN_REVIEW",
+    "remote_head_sha": null,
+    "branch_protection_checker_command": "npm.cmd run check:branch-protection -- --repo meijer1973/4veco-platform --branch main",
+    "branch_protection_checker_output": null,
+    "branch_protection_ok_required": true,
+    "pr_readiness_reviewer_command": null,
+    "pr_readiness_decision": null,
+    "lead_review": {
+      "required": true,
+      "path": null,
+      "result": null,
+      "reviewed_commit_sha": null
+    },
+    "owner_authorization_required_to_merge": true,
+    "owner_authorization_exact_sha": null
+  },
+  "decision": {
+    "status": "READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PROOF",
+    "route": "READY_FOR_HUMAN_REVIEW",
+    "human_review_required": true,
+    "mark_ready_allowed": false,
+    "merge_allowed": false,
+    "reason": "Protected authored/schema target-foundation implementation must wait for exact-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the exact SHA."
+  },
+  "recommended_next_action": "Open a draft PR, stamp exact-head governance proof, run PR Readiness Reviewer, and return for owner authorization only after READY_FOR_HUMAN_REVIEW is proven."
+}
