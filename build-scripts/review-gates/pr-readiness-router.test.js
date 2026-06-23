@@ -361,6 +361,51 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).toContain(`platform_candidate_sha mismatch: expected ${fixture.reviewed_pr.head_sha}`);
   });
 
+  test('cross-repo bundle controller rejects stale declared exact members even when compatibility matches them', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const staleExactMembers = bundleExactMembers({
+      platform_candidate_sha: '2'.repeat(40),
+      lesson_candidate_sha: lessonHead,
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: staleExactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              open: true,
+              mergeable: true,
+              is_draft: false,
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
+            },
+          ],
+          compatibility: bundleCompatibility(staleExactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('platform_candidate_sha_does_not_match_member_head');
+    expect(decision.reason_codes).toContain(`platform_candidate_sha mismatch: expected ${fixture.reviewed_pr.head_sha}`);
+  });
+
   test('lesson bundle member can consume delegated controller proof without lesson branch protection', () => {
     const head = '4'.repeat(40);
     const platformHead = '2'.repeat(40);

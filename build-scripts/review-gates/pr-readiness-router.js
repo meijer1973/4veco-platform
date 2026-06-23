@@ -367,19 +367,19 @@ function bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs) {
   return {
     platform_base_sha: explicit.platform_base_sha || explicit.platformBaseSha || raw.platform_base_sha || raw.platformBaseSha || null,
     platform_candidate_sha:
+      (platformMember && platformMember.reviewed_payload_head_sha) ||
       explicit.platform_candidate_sha ||
       explicit.platformCandidateSha ||
       raw.platform_candidate_sha ||
       raw.platformCandidateSha ||
-      (platformMember && platformMember.reviewed_payload_head_sha) ||
       null,
     lesson_base_sha: explicit.lesson_base_sha || explicit.lessonBaseSha || raw.lesson_base_sha || raw.lessonBaseSha || null,
     lesson_candidate_sha:
+      (lessonMember && lessonMember.reviewed_payload_head_sha) ||
       explicit.lesson_candidate_sha ||
       explicit.lessonCandidateSha ||
       raw.lesson_candidate_sha ||
       raw.lessonCandidateSha ||
-      (lessonMember && lessonMember.reviewed_payload_head_sha) ||
       null,
   };
 }
@@ -388,6 +388,24 @@ function collectExactMemberFailures(exactMembers) {
   return Object.entries(exactMembers)
     .filter(([, value]) => !SHA_PATTERN.test(String(value || '')))
     .map(([key]) => `${key}_missing_or_invalid`);
+}
+
+function collectDeclaredExactMemberMismatches(raw, exactMembers) {
+  const explicit = raw.exact_members || raw.exactMembers || {};
+  const mismatches = [];
+  for (const key of ['platform_candidate_sha', 'lesson_candidate_sha']) {
+    const camelKey = key.replace(/_([a-z])/g, (_match, letter) => letter.toUpperCase());
+    const declared = explicit[key] || explicit[camelKey] || raw[key] || raw[camelKey] || null;
+    if (
+      declared &&
+      SHA_PATTERN.test(String(declared)) &&
+      SHA_PATTERN.test(String(exactMembers[key] || '')) &&
+      declared !== exactMembers[key]
+    ) {
+      mismatches.push(`${key}_does_not_match_member_head`);
+    }
+  }
+  return mismatches;
 }
 
 function bundleSafetyProof(proof, evidence) {
@@ -450,6 +468,7 @@ function bundleSafetyProof(proof, evidence) {
   const exactMembers = bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs);
   const exactMemberFailures = collectExactMemberFailures(exactMembers);
   failures.push(...exactMemberFailures);
+  failures.push(...collectDeclaredExactMemberMismatches(raw, exactMembers));
   const compatibilityRaw = raw.compatibility || raw.compatibility_matrix || raw.bundle_compatibility || proof.bundle_compatibility;
   const compatibility = compatibilityRaw
     ? validateCompatibilityProof(compatibilityRaw, {
