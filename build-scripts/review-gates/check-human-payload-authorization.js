@@ -87,6 +87,17 @@ function parseAuthorizationComment(body) {
   return record;
 }
 
+function issueUrlMatchesTarget(issueUrl, repo, prNumber) {
+  const expectedPath = `/repos/${repo}/issues/${Number(prNumber)}`;
+  const raw = String(issueUrl || '').trim();
+  if (!raw) return false;
+  try {
+    return new URL(raw).pathname.replace(/\/+$/, '') === expectedPath;
+  } catch (_error) {
+    return raw.replace(/\/+$/, '') === expectedPath;
+  }
+}
+
 function validateAuthorizationCommentMetadata(comment, record, options = {}) {
   const failures = [];
   const repo = options.expectedRepo || record.repository;
@@ -96,7 +107,7 @@ function validateAuthorizationCommentMetadata(comment, record, options = {}) {
   if (Number(comment && comment.id) !== expectedCommentId) {
     failures.push(`authorization comment id mismatch: expected ${expectedCommentId}`);
   }
-  if (!String(comment && comment.issue_url || '').includes(`/repos/${repo}/issues/${prNumber}`)) {
+  if (!issueUrlMatchesTarget(comment && comment.issue_url, repo, prNumber)) {
     failures.push(`authorization comment must belong to ${repo}#${prNumber}`);
   }
   const login = comment && comment.user && comment.user.login;
@@ -246,6 +257,7 @@ module.exports = {
   MARKER_PATTERN,
   VALID_DECISIONS,
   fetchAuthorizationComment,
+  issueUrlMatchesTarget,
   markerFor,
   markerFieldsFromComment,
   parseAuthorizationComment,

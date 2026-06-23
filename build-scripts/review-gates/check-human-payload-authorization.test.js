@@ -1,4 +1,5 @@
 const {
+  issueUrlMatchesTarget,
   markerFor,
   parseAuthorizationComment,
   validateAuthorizationCommentMetadata,
@@ -99,5 +100,44 @@ describe('human payload authorization', () => {
       'authorization comment author must be meijer1973',
       'authorization comment author_association must be OWNER',
     ]));
+  });
+
+  test('accepts exact target issue URL metadata', () => {
+    const summary = validateAuthorizationCommentMetadata({
+      id: 12345,
+      issue_url: 'https://api.github.com/repos/meijer1973/4veco-platform/issues/136',
+      user: { login: 'meijer1973' },
+      author_association: 'OWNER',
+    }, record, {
+      expectedRepo: 'meijer1973/4veco-platform',
+      expectedPr: 136,
+      expectedCommentId: 12345,
+      expectedAuthorLogin: 'meijer1973',
+    });
+
+    expect(summary.ok).toBe(true);
+    expect(summary.failures).toEqual([]);
+  });
+
+  test('rejects issue URL PR-number prefix collisions', () => {
+    const summary = validateAuthorizationCommentMetadata({
+      id: 12345,
+      issue_url: 'https://api.github.com/repos/meijer1973/4veco-platform/issues/136',
+      user: { login: 'meijer1973' },
+      author_association: 'OWNER',
+    }, { ...record, pr_number: 13 }, {
+      expectedRepo: 'meijer1973/4veco-platform',
+      expectedPr: 13,
+      expectedCommentId: 12345,
+      expectedAuthorLogin: 'meijer1973',
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('authorization comment must belong to meijer1973/4veco-platform#13');
+    expect(issueUrlMatchesTarget(
+      'https://api.github.com/repos/meijer1973/4veco-platform/issues/136',
+      'meijer1973/4veco-platform',
+      13
+    )).toBe(false);
   });
 });
