@@ -59,6 +59,10 @@ Inspect the remote PR and supporting evidence:
 - throughput packet and packet-checker result
 - lead-review path, result, and reviewed SHA
 - paired PRs and shared bundle ID when applicable
+- for cross-repo bundles: controller PR, exact member PRs, exact payload SHAs,
+  green `bundle-final`, at least one green intermediate state, permitted merge
+  orders, and delegated member proof when the reviewed PR is in
+  `4veco-lessen`
 - branch-protection requirements where observable
 
 Use `gh pr view`, `gh pr diff`, `gh api`, and existing repository checkers for
@@ -115,6 +119,11 @@ Do not accept stale proof.
 - Lead review may predate the head only when every later path is an explicitly
   allowed evidence-only tail computed from the GitHub comparison between the
   lead-reviewed SHA and current head.
+- A platform PR with a paired lesson PR must not be routed as independently
+  ready unless the bundle proof shows `bundle-final` green and at least one
+  green intermediate merge order. A lesson member may rely on delegated
+  platform-controller bundle proof instead of standalone platform branch
+  protection on the lesson commit.
 - Do not commit per-PR routing decisions to the same branch after reviewing the
   head; record live routing decisions as idempotent GitHub comments keyed by
   the reviewed head SHA.

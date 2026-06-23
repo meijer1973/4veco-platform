@@ -102,6 +102,57 @@ The lane must:
 15. verify the merge commit is observable on `main` and post-merge `main` CI
     succeeds.
 
+## Cross-Repo Bundle Integration
+
+The required platform `validate-platform` job always represents the state that
+would exist after a platform-first merge: platform candidate head plus lesson
+`main`. It must not substitute a matching lesson branch in the required job.
+When a platform PR depends on a lesson PR candidate, that work is an explicit
+cross-repository bundle instead of an independently mergeable platform PR.
+
+The platform repository is the bundle controller because it owns generators,
+CI, validators, governance, and integration tooling. The lesson repository is a
+generated-output member. A controller PR with a paired lesson PR must carry one
+`bundle_id`, exact paired PR metadata, exact payload SHAs, and compatibility
+proof from `.github/workflows/cross-repo-bundle-compatibility.yml`.
+
+The compatibility workflow checks three exact-ref states and emits
+machine-readable JSON:
+
+- `platform-first`: platform candidate head plus lesson main/base.
+- `lesson-first`: platform main/base plus lesson candidate head.
+- `bundle-final`: platform candidate head plus lesson candidate head.
+
+A bundle may merge only when `bundle-final` is green and at least one
+intermediate state is green. If neither intermediate state is green, neither PR
+may merge until a compatibility bridge makes one order safe.
+
+Human approval for a paired bundle must be recorded with this marker:
+
+```text
+<!-- 4veco-human-bundle-authorization:<bundle-id> -->
+```
+
+The comment must include canonical JSON with decision
+`APPROVE_BUNDLE_AND_MERGE`, the controller PR, every member PR, exact reviewed
+payload SHAs, decision scope, merge order, and invalidation conditions. The
+GitHub comment ID is derived from GitHub metadata; it must not be copied into
+the JSON. Prose-only approval is not valid bundle merge authority.
+
+Use `.github/workflows/authorized-bundle-integration.yml` or
+`npm.cmd run integrate:authorized-bundle` for coordinated bundle merge. The
+workflow uses the same `4veco-main-integration` queue as single-PR integration,
+downloads the explicit compatibility summary, validates the bundle
+authorization, re-fetches both PRs and both `main` refs, selects only a proven
+merge order, merges the first member at its expected head, verifies the
+intermediate platform CI state, refreshes/revalidates the second member when
+needed, merges the second member, and requires final platform CI against final
+platform `main` plus final lesson `main`.
+
+Lesson bundle members consume delegated bundle proof from the platform
+controller. They must not require a standalone platform branch-protection
+context on a lesson-repository commit.
+
 ## Machine Enforcement
 
 During rollout, `check-branch-protection.js` checks the current safe protection

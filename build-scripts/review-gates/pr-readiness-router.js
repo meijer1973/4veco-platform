@@ -3,6 +3,7 @@ const {
   isGovernanceSurface,
   normalizePath,
 } = require('./pr-readiness-governance-surfaces');
+const { validateCompatibilityProof } = require('./cross-repo-bundle-compatibility');
 const crypto = require('crypto');
 
 const ROUTES = Object.freeze({
@@ -320,6 +321,67 @@ function branchProtectionProof(proof, evidence) {
   return branchProtectionApprovalProof((proof && proof.branch_protection) || evidence.branch_protection || {});
 }
 
+function repoIsLesson(repo) {
+  return /\/4veco-lessen$/i.test(String(repo || ''));
+}
+
+function bundleSafetyProof(proof, evidence) {
+  const raw = (proof && proof.bundle) || evidence.bundle || {};
+  const pairedPrs = asArray(raw.paired_prs || (evidence.bundle && evidence.bundle.paired_prs));
+  const bundleId = raw.bundle_id || evidence.bundle_id || (evidence.bundle && evidence.bundle.bundle_id) || null;
+  const required =
+    evidence.throughput.class === 'cross_repo_bundle' ||
+    pairedPrs.length > 0 ||
+    Boolean(bundleId) ||
+    Boolean(raw.delegated === true);
+  const delegated = raw.delegated === true || raw.role === 'member';
+  const failures = [];
+  if (!required) {
+    return { required: false, delegated: false, ok: true, failures: [], summary: null };
+  }
+  if (typeof bundleId !== 'string' || !bundleId.trim()) failures.push('bundle_id_missing');
+  const controller = raw.controller || {};
+  if (!delegated) {
+    if (controller.repository && controller.repository !== evidence.reviewed_pr.repo) {
+      failures.push('bundle_controller_repo_mismatch');
+    }
+    if (controller.pr_number && Number(controller.pr_number) !== Number(evidence.reviewed_pr.number)) {
+      failures.push('bundle_controller_pr_mismatch');
+    }
+    const controllerHead = controller.reviewed_payload_head_sha || controller.head_sha;
+    if (controllerHead && controllerHead !== evidence.reviewed_pr.head_sha) {
+      failures.push('bundle_controller_head_mismatch');
+    }
+  }
+  if (pairedPrs.length === 0) failures.push('paired_prs_missing');
+  for (const paired of pairedPrs) {
+    if (paired && paired.is_draft === true) failures.push('paired_pr_draft');
+    if (paired && (paired.ready === false || paired.current === false || paired.open === false || paired.mergeable === false)) {
+      failures.push('paired_pr_not_ready');
+    }
+    if (paired && paired.reviewed_payload_head_sha && paired.head_sha && paired.reviewed_payload_head_sha !== paired.head_sha) {
+      failures.push('paired_pr_head_mismatch');
+    }
+  }
+  if (raw.complete === false) failures.push('bundle_incomplete');
+  const compatibilityRaw = raw.compatibility || raw.compatibility_matrix || raw.bundle_compatibility || proof.bundle_compatibility;
+  const compatibility = compatibilityRaw
+    ? validateCompatibilityProof(compatibilityRaw, { bundleId: bundleId || undefined })
+    : { ok: false, failures: ['bundle_compatibility_missing'] };
+  if (!compatibility.ok) failures.push(...compatibility.failures);
+  const summary = {
+    required,
+    delegated,
+    ok: failures.length === 0,
+    bundle_id: bundleId,
+    controller: raw.controller || null,
+    paired_prs: pairedPrs,
+    compatibility,
+    failures: uniqueStrings(failures),
+  };
+  return summary;
+}
+
 function leadProof(proof, headSha) {
   const lead = proof.lead_review || {};
   const result = normalizeVerdict(lead.result);
@@ -398,6 +460,8 @@ function collectRevisionReasons(evidence) {
   const checkers = checkerProof(proof);
   const lead = leadProof(proof, headSha);
   const branchProtection = branchProtectionProof(proof, evidence);
+  const bundle = bundleSafetyProof(proof, evidence);
+  const lessonDelegatedBundle = repoIsLesson(evidence.reviewed_pr.repo) && bundle.delegated === true && bundle.ok === true;
   const autonomousLevel = AUTONOMOUS_LEVELS.has(evidence.throughput.level);
   const mergeState = String(evidence.reviewed_pr.merge_state || '');
   const integrationStatusPendingBlock =
@@ -425,7 +489,7 @@ function collectRevisionReasons(evidence) {
   if (autonomousLevel && proof.checkers_required === false) {
     reasons.push('checker_waiver_not_allowed_for_autonomous_lane');
   }
-  if (!ci.ok) {
+  if (!ci.ok && !lessonDelegatedBundle) {
     reasons.push(
       ci.stale
         ? 'ci_not_current_head'
@@ -441,6 +505,7 @@ function collectRevisionReasons(evidence) {
   if (proof.unresolved_review_threads === true) reasons.push('unresolved_review_threads');
   if (proof.requested_changes === true) reasons.push('requested_changes_unresolved');
   if (proof.blocking_comments === true) reasons.push('blocking_comments_unresolved');
+  if (bundle.required && !bundle.ok) reasons.push(...bundle.failures);
   if (evidence.bundle && evidence.bundle.complete === false) reasons.push('bundle_incomplete');
   if (asArray(evidence.bundle && evidence.bundle.paired_prs).some((paired) => paired.ready === false || paired.current === false)) {
     reasons.push('paired_pr_not_ready');
@@ -448,10 +513,11 @@ function collectRevisionReasons(evidence) {
   if (evidence.throughput.level === 'L2' && !evidence.throughput.owner_preapproved) {
     reasons.push('l2_owner_preapproval_missing');
   }
-  return { reasons, ci, checkers, lead, branchProtection };
+  return { reasons: uniqueStrings(reasons), ci, checkers, lead, branchProtection, bundle, lessonDelegatedBundle };
 }
 
 function branchProtectionRevisions(collected) {
+  if (collected.lessonDelegatedBundle === true) return [];
   return collected.branchProtection.approval_count_observable === true
     ? []
     : ['branch_protection_approval_count_unavailable'];
@@ -500,6 +566,7 @@ function proofSummary(evidence, collected) {
     changed_paths_verified: evidence.proof.changed_paths_verified === true,
     checkers: collected.checkers.checkers,
     branch_protection: collected.branchProtection,
+    bundle: collected.bundle.summary || collected.bundle || null,
     human_authorization: evidence.proof.human_authorization || null,
     integration: evidence.proof.integration || null,
   };
@@ -669,34 +736,55 @@ function validateDecision(decision) {
     throw new Error('READY_FOR_HUMAN_REVIEW must not permit auto_merge');
   }
   if (readyRoutes.has(decision.route)) {
-    if (
-      !decision.proof.branch_protection ||
-      decision.proof.branch_protection.approval_count_observable !== true ||
-      !Number.isInteger(decision.proof.branch_protection.required_approving_review_count)
-    ) {
+    const delegatedLessonBundle =
+      repoIsLesson(decision.reviewed_pr.repo) &&
+      decision.proof.bundle &&
+      decision.proof.bundle.delegated === true &&
+      decision.proof.bundle.ok === true;
+    if (decision.throughput.class === 'cross_repo_bundle') {
+      if (!decision.proof.bundle || decision.proof.bundle.ok !== true) {
+        throw new Error(`${decision.route} requires green cross-repo bundle proof`);
+      }
+      const compatibility = decision.proof.bundle.compatibility || {};
+      if (
+        compatibility.ok !== true ||
+        !asArray(compatibility.permitted_merge_orders).length ||
+        !compatibility.recommended_merge_order
+      ) {
+        throw new Error(`${decision.route} requires green bundle-final and intermediate compatibility proof`);
+      }
+    }
+    const branchProtection = decision.proof.branch_protection || null;
+    const missingObservableApprovalCount =
+      !branchProtection ||
+      branchProtection.approval_count_observable !== true ||
+      !Number.isInteger(branchProtection.required_approving_review_count);
+    if (!delegatedLessonBundle && missingObservableApprovalCount) {
       throw new Error(`${decision.route} requires observable branch-protection approval count`);
     }
     if (decision.proof.changed_paths_verified !== true) {
       throw new Error(`${decision.route} requires changed_paths_verified proof`);
     }
-    if (decision.proof.ci_head_sha !== decision.reviewed_pr.head_sha) {
+    if (!delegatedLessonBundle && decision.proof.ci_head_sha !== decision.reviewed_pr.head_sha) {
       throw new Error(`${decision.route} requires CI proof for reviewed head`);
     }
-    if (!successStatus(decision.proof.ci_status)) {
+    if (!delegatedLessonBundle && !successStatus(decision.proof.ci_status)) {
       throw new Error(`${decision.route} requires successful CI status`);
     }
-    if (!asArray(decision.proof.ci_required_contexts).includes('validate-platform')) {
+    if (!delegatedLessonBundle && !asArray(decision.proof.ci_required_contexts).includes('validate-platform')) {
       throw new Error(`${decision.route} requires validate-platform CI context`);
     }
-    if (asArray(decision.proof.ci_missing_contexts).includes('validate-platform')) {
+    if (!delegatedLessonBundle && asArray(decision.proof.ci_missing_contexts).includes('validate-platform')) {
       throw new Error(`${decision.route} requires passing validate-platform CI context`);
     }
-    const validatePlatformCheck = asArray(decision.proof.ci_checks).find((check) => {
-      const status = check && (check.conclusion || check.status || check.state || check.result);
-      return checkNames(check).includes('validate-platform') && successStatus(status);
-    });
-    if (!validatePlatformCheck) {
-      throw new Error(`${decision.route} requires successful validate-platform check proof`);
+    if (!delegatedLessonBundle) {
+      const validatePlatformCheck = asArray(decision.proof.ci_checks).find((check) => {
+        const status = check && (check.conclusion || check.status || check.state || check.result);
+        return checkNames(check).includes('validate-platform') && successStatus(status);
+      });
+      if (!validatePlatformCheck) {
+        throw new Error(`${decision.route} requires successful validate-platform check proof`);
+      }
     }
     const checkers = asArray(decision.proof.checkers);
     if (

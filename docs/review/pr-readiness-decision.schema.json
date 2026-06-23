@@ -265,6 +265,13 @@
           "type": "object",
           "additionalProperties": true
         },
+        "bundle": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
         "human_authorization": {
           "type": [
             "object",

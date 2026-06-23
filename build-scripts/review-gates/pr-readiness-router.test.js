@@ -16,6 +16,7 @@ const {
   applyDecisionToState,
   verifyTransitionPreconditions,
 } = require('./apply-pr-readiness-decision');
+const { stateResult, summarizeCompatibility } = require('./cross-repo-bundle-compatibility');
 const { collectReviewThreadState, mergeSupplementalEvidence, runReview } = require('./review-pr-readiness');
 const { GOVERNANCE_SURFACE_TEST_PATHS } = require('./pr-readiness-governance-surfaces');
 
@@ -59,6 +60,31 @@ function withBranchProtection(fixture, branchProtection) {
       branch_protection: branchProtection,
     },
   };
+}
+
+function bundleCompatibility() {
+  const pBase = '1'.repeat(40);
+  const pHead = '2'.repeat(40);
+  const lBase = '3'.repeat(40);
+  const lHead = '4'.repeat(40);
+  const state = (name, status) => stateResult({
+    bundleId: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+    state: name,
+    platformBaseSha: pBase,
+    platformCandidateSha: pHead,
+    lessonBaseSha: lBase,
+    lessonCandidateSha: lHead,
+    platformStateSha: name === 'lesson-first' ? pBase : pHead,
+    lessonStateSha: name === 'platform-first' ? lBase : lHead,
+    status,
+  });
+  return summarizeCompatibility({
+    states: [
+      state('platform-first', 'failure'),
+      state('lesson-first', 'success'),
+      state('bundle-final', 'success'),
+    ],
+  });
 }
 
 const ROUTER_CASES = [
@@ -174,6 +200,136 @@ describe('pr-readiness-router', () => {
     });
     expect(decision.route).toBe('KEEP_DRAFT_REVISE');
     expect(decision.reason_codes).toContain('review_threads_unavailable');
+  });
+
+  test('cross-repo bundle controller requires green compatibility proof', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      bundle: {
+        bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+        paired_prs: [
+          {
+            repo: 'meijer1973/4veco-lessen',
+            number: 34,
+            open: true,
+            mergeable: true,
+            is_draft: false,
+            head_sha: '4'.repeat(40),
+            reviewed_payload_head_sha: '4'.repeat(40),
+          },
+        ],
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('bundle_compatibility_missing');
+  });
+
+  test('cross-repo bundle controller routes to human review with green matrix proof', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              open: true,
+              mergeable: true,
+              is_draft: false,
+              head_sha: '4'.repeat(40),
+              reviewed_payload_head_sha: '4'.repeat(40),
+            },
+          ],
+          compatibility: bundleCompatibility(),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.proof.bundle.compatibility.recommended_merge_order).toBe('lesson-first');
+  });
+
+  test('lesson bundle member can consume delegated controller proof without lesson branch protection', () => {
+    const head = '4'.repeat(40);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-lessen',
+        number: 34,
+        url: 'https://github.com/meijer1973/4veco-lessen/pull/34',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: head,
+      },
+      changed_paths: ['Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Grafieken/1.1.3 Grafieken en tabellen/index.html'],
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        class: 'cross_repo_bundle',
+        authority_class: 'generated_output',
+        level: 'L4',
+        human_decision_required: true,
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      proof: {
+        ci: {},
+        checkers: [{ command: 'delegated bundle controller proof', status: 'passed' }],
+        lead_review: {
+          path: 'subagent:paired-bundle-review',
+          result: 'PASS',
+          reviewed_commit_sha: head,
+        },
+        changed_paths_verified: true,
+        branch_protection: {
+          ok: false,
+          approval_count_observable: false,
+        },
+        bundle: {
+          delegated: true,
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: 'meijer1973/4veco-platform',
+            pr_number: 140,
+            reviewed_payload_head_sha: '2'.repeat(40),
+          },
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-platform',
+              number: 140,
+              open: true,
+              mergeable: true,
+              is_draft: false,
+              head_sha: '2'.repeat(40),
+              reviewed_payload_head_sha: '2'.repeat(40),
+            },
+          ],
+          compatibility: bundleCompatibility(),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.proof.bundle.delegated).toBe(true);
   });
 
   test('supplemental evidence cannot replace remote-derived PR facts', () => {

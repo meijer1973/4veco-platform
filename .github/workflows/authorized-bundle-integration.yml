@@ -1,0 +1,98 @@
+name: authorized-bundle-integration
+
+on:
+  workflow_dispatch:
+    inputs:
+      controller_pr_number:
+        description: Platform controller pull request number to integrate
+        required: true
+      human_bundle_authorization_comment_id:
+        description: Issue comment id containing the human bundle authorization record
+        required: true
+      compatibility_workflow_run_id:
+        description: Completed cross-repo bundle compatibility workflow run id
+        required: true
+      dry_run:
+        description: Validate only, without merging
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+  checks: read
+  issues: read
+
+concurrency:
+  group: 4veco-main-integration
+  queue: max
+  cancel-in-progress: false
+
+jobs:
+  integrate:
+    name: authorized-bundle-integration
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    defaults:
+      run:
+        shell: pwsh
+
+    steps:
+      - name: Checkout trusted main workflow code
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20.x'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Download bundle compatibility proof
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMPATIBILITY_RUN_ID: ${{ inputs.compatibility_workflow_run_id }}
+        run: |
+          New-Item -ItemType Directory -Force -Path bundle-results | Out-Null
+          gh run download $env:COMPATIBILITY_RUN_ID `
+            --repo meijer1973/4veco-platform `
+            --name bundle-summary `
+            --dir bundle-results
+
+      - name: Integrate authorized bundle
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ inputs.controller_pr_number }}
+          AUTH_COMMENT_ID: ${{ inputs.human_bundle_authorization_comment_id }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          $scriptArgs = @(
+            'run',
+            'integrate:authorized-bundle',
+            '--',
+            '--repo',
+            'meijer1973/4veco-platform',
+            '--pr',
+            $env:PR_NUMBER,
+            '--authorization-comment-id',
+            $env:AUTH_COMMENT_ID,
+            '--compatibility-proof',
+            'bundle-results/bundle-summary.json',
+            '--timeout-seconds',
+            '1800',
+            '--poll-seconds',
+            '20'
+          )
+          if ($env:DRY_RUN -eq 'true') {
+            $scriptArgs += '--dry-run'
+          }
+          & npm.cmd @scriptArgs

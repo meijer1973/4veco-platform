@@ -284,6 +284,33 @@ shape. Use
 to verify the future protected status context. After branch protection requires
 `integration-authorized`, the lane is the only merge path.
 
+#### Paired platform/lesson bundles
+
+Required `platform-ci / validate-platform` always checks the platform
+candidate against lesson `main`. It must not use a same-named lesson branch as
+a hidden dependency. If a platform PR needs a lesson PR candidate in order to
+pass, classify the work as a `cross_repo_bundle` and do not merge either member
+independently.
+
+For paired platform/lesson work:
+
+- keep source, validators, governance, and integration proof in
+  `4veco-platform`;
+- keep generated student-facing output in `4veco-lessen`;
+- put the same `bundle_id`, complete `paired_prs`, exact PR numbers, and exact
+  payload SHAs in the PR evidence;
+- run `.github/workflows/cross-repo-bundle-compatibility.yml` for
+  `platform-first`, `lesson-first`, and `bundle-final`;
+- require `bundle-final` green plus at least one green intermediate state;
+- record one canonical `4veco-human-bundle-authorization` comment for the
+  whole pair when human approval is required;
+- merge through `.github/workflows/authorized-bundle-integration.yml` or
+  `npm.cmd run integrate:authorized-bundle`, which uses the serialized
+  `4veco-main-integration` lane and exact expected heads.
+
+Lesson bundle members consume delegated controller proof. Do not require a
+lesson-repository commit to carry a standalone platform branch-protection
+context.
 
 ### Sprint agent structure
 

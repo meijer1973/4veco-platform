@@ -118,6 +118,38 @@ Do not accept stale proof:
 - Any substantive source, product, governance, checker, generator, or lesson
   change after lead review requires re-review.
 
+## Cross-repo bundles
+
+A platform PR with a paired lesson PR must be classified as
+`cross_repo_bundle`. Readiness requires one `bundle_id`, controller platform PR
+metadata, exact platform and lesson PR numbers, exact payload SHAs, both PRs
+open and mergeable, complete `paired_prs` metadata, and a green bundle
+compatibility proof.
+
+The compatibility proof must come from the platform controller and must record:
+
+- platform base SHA;
+- platform candidate SHA;
+- lesson base SHA;
+- lesson candidate SHA;
+- `platform-first`, `lesson-first`, and `bundle-final` results;
+- permitted merge orders and the recommended merge order.
+
+`bundle-final` success alone is insufficient. At least one intermediate state
+must also be green, otherwise the bundle stays `KEEP_DRAFT_REVISE` until a
+compatibility bridge makes a safe merge order possible.
+
+The highest-risk member determines the review lane. Generated lesson output,
+product-authority changes, protected/reference changes, review-governance
+changes, and other L3/L4 surfaces still require human review even when the
+bundle matrix is green.
+
+Lesson-repository bundle members may consume delegated proof from the platform
+controller. Do not require the lesson PR to carry a standalone platform
+branch-protection context on its commit, but do require exact bundle membership,
+open/non-draft member state, payload SHA match, and green delegated controller
+proof.
+
 ## Branch protection
 
 The platform repository operates in single-account mode: the owner, coding
