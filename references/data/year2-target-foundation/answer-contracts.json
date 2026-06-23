@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "status": "machine_readable_foundation_ready_not_product_closed",
+  "authority_boundary": "answer_contract_foundation_only_no_answer_skill_registry_mutation_no_product_use",
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "official_correction_model": "references/external/exams/vw-1022-a-25-2-c.pdf#page=8-9",
+      "answer_contracts": [
+        {
+          "subquestion": "a",
+          "answer_form": "two_step_explanation",
+          "point_logic": ["current premiums reduce present consumption", "later payouts support future consumption"],
+          "short_answer_model": "Premiums reduce current consumption and payouts support future consumption."
+        },
+        {
+          "subquestion": "b",
+          "answer_form": "two_link_source_explanation",
+          "source_requirements": ["annual inflation = 2%", "annual real economic growth = 0.5%", "welfare-indexed pension outlays"],
+          "point_logic": ["nominal income rises through real growth plus inflation", "welfare-indexed pensions rise with incomes"],
+          "short_answer_model": "Real growth plus inflation raises nominal income, so welfare-indexed outlays rise."
+        },
+        {
+          "subquestion": "c",
+          "answer_form": "classification_with_justification",
+          "source_requirements": ["moment value versus period flow"],
+          "point_logic": ["classify net accumulated pension saving as stock", "justify by moment measurement"],
+          "short_answer_model": "Accumulated saving is a stock because it is measured at a moment."
+        },
+        {
+          "subquestion": "d",
+          "answer_form": "ratio_comparison_with_conclusion",
+          "source_requirements": ["premium pressure as percentage of GDP stays constant", "total pension wealth"],
+          "point_logic": ["pension wealth rises faster than GDP", "constant GDP-share premium falls as wealth share"],
+          "short_answer_model": "Pension wealth rises faster than GDP, so a constant GDP-share premium falls as wealth share."
+        },
+        {
+          "subquestion": "e",
+          "answer_form": "policy_mechanism_explanation",
+          "point_logic": ["higher pension age improves fund balance by more payers or fewer beneficiaries", "lower premium pressure can raise net purchasing power"],
+          "short_answer_model": "A higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "official_correction_model": "references/external/exams/vw-1022-a-23-2-c.pdf#page=13-14",
+      "answer_contracts": [
+        {
+          "subquestion": "a",
+          "answer_form": "calculation_with_unit",
+          "source_requirements": ["maximum rent = EUR 850", "housing stock = 6800"],
+          "point_logic": ["select demand at maximum rent", "subtract housing stock", "state waiting-list count with unit"],
+          "short_answer_model": "Calculate demand at the maximum rent and subtract 6,800 dwellings."
+        },
+        {
+          "subquestion": "b",
+          "answer_form": "calculation_with_conclusion",
+          "source_requirements": ["GO = -0.125Q + 2150", "Q = social rental dwellings", "housing stock = 6800"],
+          "point_logic": ["derive marginal revenue from average revenue", "choose the revenue-maximising quantity", "compare with capacity or waiting-list pressure", "accept or reject the claim"],
+          "short_answer_model": "Derive marginal revenue from average revenue, choose the revenue-maximising quantity, and compare it with capacity or waiting-list pressure."
+        },
+        {
+          "subquestion": "c",
+          "answer_form": "two_link_mechanism",
+          "point_logic": ["lower mortgage rate lowers interest costs", "lower interest costs reduce return/default pressure"],
+          "short_answer_model": "A low mortgage rate lowers interest costs and reduces pressure on returns or default risk."
+        },
+        {
+          "subquestion": "d",
+          "answer_form": "two_link_mechanism",
+          "point_logic": ["housing shortage sustains rental demand", "stable rental income reduces loss risk"],
+          "short_answer_model": "Shortage sustains rental demand and stabilises rent income, reducing loss risk."
+        },
+        {
+          "subquestion": "e",
+          "answer_form": "source_supported_market_explanation",
+          "source_requirements": ["released rental dwellings = -9.9%", "average rent = +6%", "middle incomes = +3%", "income elasticity = +0.4"],
+          "point_logic": ["positive income elasticity and higher incomes increase demand", "fewer released rentals restrict supply", "rent rises"],
+          "short_answer_model": "Middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "official_correction_model": "references/external/exams/vw-1022-a-23-1-c.pdf#page=9-10",
+      "answer_contracts": [
+        {
+          "subquestion": "a",
+          "answer_form": "three_part_explanation",
+          "source_requirements": ["supplier", "credit insurer", "insurance condition"],
+          "point_logic": ["name conflicting interests", "name asymmetric information", "name condition that reduces the problem"],
+          "short_answer_model": "Supplier and insurer have different incentives under asymmetric information; collection handoff or conditions reduce the agency problem."
+        },
+        {
+          "subquestion": "b",
+          "answer_form": "condition_identification_plus_incentive_chain",
+          "source_requirements": ["90% indemnity", "bonus-malus", "collection-cost pass-through"],
+          "point_logic": ["identify two conditions", "explain how each reduces supplier moral hazard"],
+          "short_answer_model": "Deductible-like indemnity and bonus-malus reduce the incentive to claim carelessly."
+        },
+        {
+          "subquestion": "c",
+          "answer_form": "adverse_selection_condition_and_reason",
+          "source_requirements": ["bonus-malus", "voluntary deductible or compulsory insurance route if used"],
+          "point_logic": ["identify condition", "explain how it changes pool composition or selection incentive"],
+          "short_answer_model": "Bonus-malus, voluntary deductible, or compulsory insurance can reduce selection by changing who enters the pool."
+        },
+        {
+          "subquestion": "d",
+          "answer_form": "expected_value_calculation",
+          "source_requirements": ["contract counts", "average turnover", "default probabilities", "90% indemnity"],
+          "point_logic": ["multiply count, turnover, indemnity exposure, and default probability for each row", "sum expected damage"],
+          "expected_damage_eur": 72000,
+          "short_answer_model": "Multiply contract count, turnover, indemnity exposure, and default probability for each row."
+        },
+        {
+          "subquestion": "e",
+          "answer_form": "markup_calculation_and_conclusion",
+          "source_requirements": ["20% markup"],
+          "point_logic": ["add 20% markup to expected damage", "state total credit-insurance premium"],
+          "total_premium_eur": 86400,
+          "short_answer_model": "Add 20% markup to expected damage and state the premium."
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "official_correction_model": "references/external/exams/vw-1022-a-25-1-c.pdf#page=11-12",
+      "answer_contracts": [
+        {
+          "subquestion": "a",
+          "answer_form": "dominant_strategy_identification_and_reason",
+          "source_requirements": ["perfect substitutes", "Orso Bianco enters with lower price"],
+          "point_logic": ["identify lower-price choice as dominant strategy direction", "explain why each firm has incentive to lower price"],
+          "short_answer_model": "Each firm has an incentive to lower price because consumers see the products as perfect substitutes."
+        },
+        {
+          "subquestion": "b",
+          "answer_form": "prisoners_dilemma_two_link_explanation",
+          "point_logic": ["individual lower-price incentives", "jointly worse outcome than cooperation"],
+          "short_answer_model": "Both lowering price can be individually rational while making both worse off than cooperation."
+        },
+        {
+          "subquestion": "c",
+          "answer_form": "self_binding_mechanism",
+          "source_requirements": ["fixed sales price for 2025", "lowest-price guarantee"],
+          "point_logic": ["explain commitment to follow lower price", "explain credibility of the promise"],
+          "short_answer_model": "The guarantee commits Guarda to follow a lower price and makes the promise credible."
+        },
+        {
+          "subquestion": "d",
+          "answer_form": "changed_incentive_explanation",
+          "source_requirements": ["discount of 25% on lower Orso Bianco price"],
+          "point_logic": ["Orso Bianco expects less gain from cutting price", "therefore incentive to start price war falls"],
+          "short_answer_model": "Orso Bianco expects less gain from cutting price, so the incentive to start a price war falls."
+        }
+      ]
+    }
+  ]
+}
