@@ -60,29 +60,30 @@
           "separator": " -> ",
           "steps": [
             {
-              "id": "parking-change",
-              "label": "Parkeren wordt minder aantrekkelijk.",
-              "kind": "answer",
-              "description": "Start uit de bron."
-            },
-            {
-              "id": "bike-attractive",
-              "label": "Fietsen wordt relatief aantrekkelijker.",
-              "kind": "answer"
-            },
-            {
               "id": "demand-up",
               "label": "De vraag naar fietsen neemt toe.",
               "kind": "answer"
             },
             {
-              "id": "supply-same",
-              "label": "Het aanbod blijft eerst gelijk.",
-              "kind": "answer"
+              "id": "parking-change",
+              "label": "Parkeren wordt minder aantrekkelijk.",
+              "kind": "answer",
+              "internalRationale": "Start uit de bron."
             },
             {
               "id": "shortage",
               "label": "Er ontstaat een vraagoverschot.",
+              "kind": "answer"
+            },
+            {
+              "id": "demand-down",
+              "label": "De vraag naar fietsen neemt af.",
+              "kind": "distractor",
+              "distractorFor": "demand-up"
+            },
+            {
+              "id": "bike-attractive",
+              "label": "Fietsen wordt relatief aantrekkelijker.",
               "kind": "answer"
             },
             {
@@ -91,10 +92,9 @@
               "kind": "answer"
             },
             {
-              "id": "demand-down",
-              "label": "De vraag naar fietsen neemt af.",
-              "kind": "distractor",
-              "distractorFor": "demand-up"
+              "id": "supply-same",
+              "label": "Het aanbod blijft eerst gelijk.",
+              "kind": "answer"
             }
           ]
         },
@@ -108,7 +108,10 @@
             "shortage",
             "price-pressure"
           ],
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-market-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Keten klopt",
@@ -206,7 +209,10 @@
             "c1": "daardoor",
             "c2": "terwijl",
             "c3": "dus"
-          }
+          },
+          "sourceEvidenceRefs": [
+            "ctx-market-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Zinnen lopen logisch",
@@ -296,7 +302,10 @@
             "mechanisme": "excess-demand",
             "conclusie": "price-up"
           },
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-market-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Uitleg is compleet",

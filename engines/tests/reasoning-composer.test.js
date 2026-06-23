@@ -42,6 +42,16 @@ function composition(overrides = {}) {
                     title: 'Claim',
                     bodyMarkdown: 'Een redacteur schrijft: bij een hogere prijs worden altijd half zo veel broodjes verkocht.',
                     accessibilitySummary: 'Korte claim over een vraaglijn.'
+                },
+                {
+                    id: 'ctx-table',
+                    type: 'table',
+                    sourceLabel: 'Tabel 1',
+                    caption: 'Tabel 1: Prijs en hoeveelheid broodjes',
+                    sourceMaterialId: 'broodjes-vraag-test',
+                    columns: ['Prijs P', 'Hoeveelheid Q'],
+                    rows: [[2, 600], [8, 300]],
+                    altText: 'Tabel met waargenomen prijzen 2 en 8 en hoeveelheden 600 en 300.'
                 }
             ],
             tasks: [
@@ -50,7 +60,7 @@ function composition(overrides = {}) {
                     family: 'graph_evidence_selector',
                     skillLabel: 'Grafiekpunten kiezen',
                     prompt: 'Kies de twee grafiekpunten die je kunt vergelijken.',
-                    contextRefs: ['ctx-claim'],
+                    contextRefs: ['ctx-claim', 'ctx-table'],
                     interaction: {
                         maxSelections: 2,
                         hitTargetPx: 44,
@@ -68,7 +78,7 @@ function composition(overrides = {}) {
                                     points: [
                                         { id: 'p2-q600', x: 2, y: 600, label: 'P=2, Q=600', kind: 'answer' },
                                         { id: 'p8-q300', x: 8, y: 300, label: 'P=8, Q=300', kind: 'answer' },
-                                        { id: 'p5-q450', x: 5, y: 450, label: 'P=5, Q=450', kind: 'distractor', distractorFor: 'p2-q600' }
+                                        { id: 'p5-estimate', x: 5, y: 450, label: 'P=5 op de lijn', kind: 'distractor', distractorFor: 'p2-q600', pathPoint: false }
                                     ]
                                 }
                             ]
@@ -77,7 +87,8 @@ function composition(overrides = {}) {
                     expected: {
                         kind: 'graph_evidence_selector',
                         pointIds: ['p2-q600', 'p8-q300'],
-                        partialFeedback: 'practice_only'
+                        partialFeedback: 'practice_only',
+                        sourceEvidenceRefs: ['ctx-claim', 'ctx-table']
                     },
                     feedback: {
                         matchTitle: 'Punten passen',
@@ -88,11 +99,42 @@ function composition(overrides = {}) {
                     practiceRoute: { label: 'Volgende stap', href: '#scope' }
                 },
                 {
+                    id: 'estimate-status',
+                    family: 'choice',
+                    skillLabel: 'Schatting begrenzen',
+                    prompt: 'Wat mag je bij P=5 zeggen op basis van de lijn?',
+                    contextRefs: ['ctx-claim', 'ctx-table'],
+                    reasoningOperationSignature: 'observation_vs_interpolation_epistemic_status',
+                    interaction: {
+                        inputLabel: 'Uitspraak bij P=5',
+                        options: [
+                            { id: 'ongeveer', label: 'Q is ongeveer 450 broodjes.' },
+                            { id: 'precies', label: 'Q is precies 450 broodjes.' },
+                            { id: 'niets', label: 'Je kunt niets zeggen tussen P=2 en P=8.' }
+                        ]
+                    },
+                    expected: {
+                        kind: 'choice',
+                        value: 'ongeveer',
+                        operationSignature: 'observation_vs_interpolation_epistemic_status',
+                        epistemicStatus: 'supported_estimate_not_exact_observation',
+                        estimateAtX: 5,
+                        sourceEvidenceRefs: ['ctx-claim', 'ctx-table']
+                    },
+                    feedback: {
+                        matchTitle: 'Schatting past',
+                        matchText: 'De lijn ondersteunt een schatting, geen exact waargenomen tabelpunt.',
+                        retryTitle: 'Let op exactheid',
+                        retryText: 'Gebruik de lijn als schatting en de tabel als waarneming.'
+                    },
+                    practiceRoute: { label: 'Volgende stap', href: '#answer' }
+                },
+                {
                     id: 'scope-answer',
                     family: 'functional_answer_builder',
                     skillLabel: 'Antwoorddelen kiezen',
                     prompt: 'Bouw een voorzichtige conclusie.',
-                    contextRefs: ['ctx-claim'],
+                    contextRefs: ['ctx-claim', 'ctx-table'],
                     interaction: {
                         answerPreview: {
                             label: 'Opgebouwd antwoord',
@@ -133,7 +175,8 @@ function composition(overrides = {}) {
                             interpretatie: 'lager',
                             grens: 'niet-altijd'
                         },
-                        partialFeedback: 'practice_only'
+                        partialFeedback: 'practice_only',
+                        sourceEvidenceRefs: ['ctx-claim', 'ctx-table']
                     },
                     feedback: {
                         matchTitle: 'Conclusie is begrensd',
@@ -148,12 +191,13 @@ function composition(overrides = {}) {
         proofScenarios: {
             wrong: {
                 responses: [
-                    { taskId: 'graph-points', response: { pointIds: ['p5-q450'] } }
+                    { taskId: 'graph-points', response: { pointIds: ['p5-estimate'] } }
                 ]
             },
             correct: {
                 responses: [
                     { taskId: 'graph-points', response: { pointIds: ['p2-q600', 'p8-q300'] } },
+                    { taskId: 'estimate-status', response: { value: 'ongeveer' } },
                     { taskId: 'scope-answer', response: { rows: { waarden: 'punten', interpretatie: 'lager', grens: 'niet-altijd' } } }
                 ]
             }
@@ -175,7 +219,7 @@ describe('ReasoningComposer', () => {
 
     test('builds proof metadata from validated task-shell focus plans', () => {
         const proof = ReasoningComposer.buildProof(composition());
-        expect(proof.task_families).toEqual(['graph_evidence_selector', 'functional_answer_builder']);
+        expect(proof.task_families).toEqual(['graph_evidence_selector', 'choice', 'functional_answer_builder']);
         expect(proof.focus_plans[0].selectors).toContain('[data-task-id="graph-points"][data-graph-evidence-point-id]');
         expect(proof.proof_scenarios).toEqual(['wrong', 'correct']);
     });
@@ -209,7 +253,8 @@ describe('ReasoningComposer', () => {
             points: [{ x: 2, y: 600 }, { x: 8, y: 300 }],
             toleranceX: 0,
             toleranceY: 0,
-            lineShape: 'decreasing'
+            lineShape: 'decreasing',
+            sourceEvidenceRefs: ['ctx-claim', 'ctx-table']
         };
         expect(() => ReasoningComposer.validateComposition(bad)).toThrow(/graph construction/);
 
@@ -226,8 +271,64 @@ describe('ReasoningComposer', () => {
         }))).toThrow(/goal/);
 
         const missingPreview = composition();
-        delete missingPreview.taskSet.tasks[1].interaction.answerPreview;
+        delete missingPreview.taskSet.tasks[2].interaction.answerPreview;
         expect(() => ReasoningComposer.validateComposition(missingPreview)).toThrow(/answerPreview/);
+    });
+
+    test('rejects pre-attempt rationale leaks and missing source evidence', () => {
+        const visibleDescription = composition();
+        visibleDescription.taskSet.tasks[1].interaction.options[0].description = 'Dit is de juiste schatting.';
+        expect(() => ReasoningComposer.validateComposition(visibleDescription)).toThrow(/description/);
+
+        const missingEvidence = composition();
+        delete missingEvidence.taskSet.tasks[0].expected.sourceEvidenceRefs;
+        expect(() => ReasoningComposer.validateComposition(missingEvidence)).toThrow(/sourceEvidenceRefs/);
+    });
+
+    test('rejects graph interpolation loss and direct observed estimate rows', () => {
+        const missingSignature = composition();
+        delete missingSignature.taskSet.tasks[1].reasoningOperationSignature;
+        delete missingSignature.taskSet.tasks[1].expected.operationSignature;
+        expect(() => ReasoningComposer.validateComposition(missingSignature)).toThrow(/observation-vs-interpolation/);
+
+        const directObservation = composition();
+        directObservation.taskSet.contextBlocks[1].rows = [[2, 600], [5, 450], [8, 300]];
+        expect(() => ReasoningComposer.validateComposition(directObservation)).toThrow(/directly observed table row/);
+    });
+
+    test('rejects step-ordering banks that leak expected answer order', () => {
+        const leakyOrder = composition({ archetype_id: 'causal_mechanism' });
+        leakyOrder.taskSet.tasks[0] = {
+            id: 'chain',
+            family: 'step_ordering',
+            skillLabel: 'Keten ordenen',
+            prompt: 'Zet de stappen op volgorde.',
+            contextRefs: ['ctx-claim', 'ctx-table'],
+            interaction: {
+                stepBankLabel: 'Stappen',
+                sequenceLabel: 'Keten',
+                separator: ' -> ',
+                steps: [
+                    { id: 'a', label: 'Stap A', kind: 'answer' },
+                    { id: 'b', label: 'Stap B', kind: 'answer' },
+                    { id: 'c', label: 'Stap C', kind: 'answer' },
+                    { id: 'x', label: 'Afleider', kind: 'distractor', distractorFor: 'b' }
+                ]
+            },
+            expected: {
+                kind: 'step_ordering',
+                order: ['a', 'b', 'c'],
+                sourceEvidenceRefs: ['ctx-claim', 'ctx-table']
+            },
+            feedback: {
+                matchTitle: 'Keten klopt',
+                matchText: 'De volgorde klopt.',
+                retryTitle: 'Controleer volgorde',
+                retryText: 'Kijk naar oorzaak en gevolg.'
+            },
+            practiceRoute: { label: 'Volgende', href: '#next' }
+        };
+        expect(() => ReasoningComposer.validateComposition(leakyOrder)).toThrow(/expected order before attempt/);
     });
 
     test('rejects missing or elevated authority boundaries', () => {

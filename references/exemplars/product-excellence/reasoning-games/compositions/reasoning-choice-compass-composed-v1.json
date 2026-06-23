@@ -42,8 +42,8 @@
         "id": "ctx-choice-source",
         "type": "markdown",
         "title": "Situatie",
-        "bodyMarkdown": "Eva heeft zaterdagmiddag vier uur. Ze kan werken voor 40 euro, leren voor economie, of naar de film. Ze kiest werken.",
-        "accessibilitySummary": "Korte keuzecontext met tijd, geldopbrengst en niet-gekozen alternatieven."
+        "bodyMarkdown": "Eva heeft zaterdagmiddag vier uur. Ze kan werken voor 40 euro, leren voor economie ter waarde van 30 euro, of naar de film ter waarde van 15 euro. Ze kiest werken.",
+        "accessibilitySummary": "Korte keuzecontext met beperkte tijd en vergelijkbare waarden voor drie alternatieven."
       }
     ],
     "tasks": [
@@ -69,8 +69,8 @@
               "label": "Werken levert 40 euro op."
             },
             {
-              "id": "movie-fun",
-              "label": "De film is leuk."
+              "id": "movie-value",
+              "label": "Naar de film is 15 euro waard."
             }
           ]
         },
@@ -81,7 +81,10 @@
             "time-limited",
             "activities-conflict"
           ],
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-choice-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Schaarste is zichtbaar",
@@ -109,23 +112,26 @@
             {
               "id": "study",
               "label": "Leren voor economie",
-              "description": "Het beste alternatief dat ze niet kiest."
+              "internalRationale": "Beste niet-gekozen alternatief: 30 euro."
             },
             {
               "id": "work",
               "label": "Werken voor 40 euro",
-              "description": "Dit is de gekozen optie."
+              "internalRationale": "Gekozen optie, dus geen alternatieve kosten."
             },
             {
               "id": "study-plus-movie",
               "label": "Leren en film samen",
-              "description": "Dit telt alle niet-gekozen opties op."
+              "internalRationale": "Telt niet-gekozen opties onterecht op."
             }
           ]
         },
         "expected": {
           "kind": "choice",
-          "value": "study"
+          "value": "study",
+          "sourceEvidenceRefs": [
+            "ctx-choice-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Beste alternatief gekozen",
@@ -215,7 +221,10 @@
             "cost": "best-forgone",
             "notSum": "not-all"
           },
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-choice-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Uitleg klopt",

@@ -96,10 +96,10 @@ function escapeHtml(value) {
 }
 
 function buildProof() {
-  return {
+  const proof = {
     schema_version: 1,
     goal: 'GOAL-REASONING-GOLDEN-FAMILY-1',
-    generated: '2026-06-20',
+    generated: '2026-06-23',
     rule: 'copy product grammar; re-derive reasoning grammar',
     authority: {
       student_product_adoption: false,
@@ -122,13 +122,27 @@ function buildProof() {
       blind_transfer: composition.composition_id === blindTransfer.composition_id ? composition.blindTransfer : undefined
     }))
   };
+  const existingProofPath = path.join(JSON_DIR, 'reasoning-golden-family-proof.json');
+  const screenshotManifestPath = path.join(REPORT_DIR, 'screenshots', 'manifest.json');
+  if (fs.existsSync(existingProofPath) && fs.existsSync(screenshotManifestPath)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(existingProofPath, 'utf8'));
+      if (existing.screenshot_manifest === 'reports/reasoning-golden-family/screenshots/manifest.json' && Array.isArray(existing.screenshot_cases)) {
+        proof.screenshot_manifest = existing.screenshot_manifest;
+        proof.screenshot_cases = existing.screenshot_cases;
+      }
+    } catch (_error) {
+      // Fresh generation can run before screenshot proof exists.
+    }
+  }
+  return proof;
 }
 
 function proofMarkdown(proof) {
   return [
     '# Reasoning Golden Family Gallery Proof',
     '',
-    'Generated: 2026-06-20',
+    'Generated: 2026-06-23',
     '',
     'Rule: `copy product grammar; re-derive reasoning grammar`.',
     '',

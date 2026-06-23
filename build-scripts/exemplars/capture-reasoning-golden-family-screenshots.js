@@ -168,6 +168,9 @@ async function runScenario(cdp, sessionId, scenario) {
 
 async function applyView(cdp, sessionId, state) {
   const selectors = {
+    partial: '.selected, [data-step-selected-id], [data-source-selected-node-id], [data-answer-row-id].selected, [data-graph-evidence-selected-point-id], [data-selected-tile]:not([data-selected-tile=""])',
+    wrong_retry: '.ts-feedback-card[data-feedback-state="retry"]',
+    correct: '.ts-feedback-card[data-feedback-state="matched"]',
     answer_preview: '[data-answer-preview]',
     next_action: '.ts-feedback-action'
   };
@@ -186,6 +189,80 @@ async function applyView(cdp, sessionId, state) {
   await sleep(250);
 }
 
+async function dispatchTab(cdp, sessionId) {
+  const base = {
+    key: 'Tab',
+    code: 'Tab',
+    windowsVirtualKeyCode: 9,
+    nativeVirtualKeyCode: 9
+  };
+  await cdp.send('Input.dispatchKeyEvent', { ...base, type: 'keyDown' }, sessionId);
+  await cdp.send('Input.dispatchKeyEvent', { ...base, type: 'keyUp' }, sessionId);
+}
+
+async function exerciseKeyboardFocus(cdp, sessionId) {
+  await cdp.send('Runtime.evaluate', {
+    expression: `(() => {
+      const composition = window.ReasoningGameComposer.data();
+      const firstTask = composition.taskSet.tasks[0];
+      window.__rgKeyboardFocusPlan = window.TaskShellEngine.focusPlan(firstTask);
+      window.__rgKeyboardTraversalMatched = false;
+      const taskPane = document.querySelector('[data-rg-task-pane]');
+      if (taskPane) taskPane.scrollTop = 0;
+      window.scrollTo(0, 0);
+      if (!document.body.hasAttribute('tabindex')) document.body.setAttribute('tabindex', '-1');
+      document.body.focus({ preventScroll: true });
+      return window.__rgKeyboardFocusPlan;
+    })()`,
+    returnByValue: true
+  }, sessionId);
+
+  for (let i = 0; i < 32; i += 1) {
+    await dispatchTab(cdp, sessionId);
+    await sleep(75);
+    const result = await cdp.send('Runtime.evaluate', {
+      expression: `(() => {
+        const active = document.activeElement;
+        const plan = window.__rgKeyboardFocusPlan || [];
+        function visibleInViewport(el) {
+          if (!el) return false;
+          const rect = el.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0 &&
+            rect.bottom > 0 && rect.right > 0 &&
+            rect.top < window.innerHeight && rect.left < window.innerWidth;
+        }
+        const selector = plan.find((candidate) => {
+          try { return active && active.matches(candidate); } catch (_error) { return false; }
+        }) || '';
+        if (selector) {
+          active.scrollIntoView({ block: 'center', inline: 'nearest' });
+          window.__rgKeyboardTraversalMatched = true;
+          return {
+            matched: true,
+            selector,
+            tag: active.tagName,
+            text: active.textContent.replace(/\\s+/g, ' ').trim().slice(0, 80),
+            visible: visibleInViewport(active)
+          };
+        }
+        return {
+          matched: false,
+          tag: active ? active.tagName : null,
+          id: active ? active.id : '',
+          text: active ? active.textContent.replace(/\\s+/g, ' ').trim().slice(0, 80) : ''
+        };
+      })()`,
+      returnByValue: true
+    }, sessionId);
+    const value = result.result && result.result.value;
+    if (value && value.matched && value.visible) {
+      await sleep(250);
+      return value;
+    }
+  }
+  return null;
+}
+
 async function collectProof(cdp, sessionId, item) {
   const result = await cdp.send('Runtime.evaluate', {
     expression: `(() => {
@@ -194,6 +271,11 @@ async function collectProof(cdp, sessionId, item) {
       const sourcePane = document.querySelector('[data-rg-source-pane]');
       const taskPane = document.querySelector('[data-rg-task-pane]');
       const feedbackStates = Array.from(document.querySelectorAll('.ts-feedback-card')).map((el) => el.getAttribute('data-feedback-state'));
+      const feedbackCards = Array.from(document.querySelectorAll('.ts-feedback-card')).map((el) => ({
+        state: el.getAttribute('data-feedback-state'),
+        text: el.textContent.replace(/\\s+/g, ' ').trim(),
+        visible: visibleInViewport(el)
+      }));
       function visibleInViewport(el) {
         const rect = el.getBoundingClientRect();
         return rect.width > 0 && rect.height > 0 &&
@@ -242,8 +324,10 @@ async function collectProof(cdp, sessionId, item) {
           break;
         }
       }
-      if (focusEl) focusEl.focus({ preventScroll: true });
       const active = document.activeElement;
+      const activeSelector = focusPlan.find((selector) => {
+        try { return active && active.matches(selector); } catch (_error) { return false; }
+      }) || '';
       const sourceStyle = sourcePane ? getComputedStyle(sourcePane) : null;
       const taskStyle = taskPane ? getComputedStyle(taskPane) : null;
       const mobile = window.innerWidth < 760;
@@ -255,6 +339,7 @@ async function collectProof(cdp, sessionId, item) {
         taskCount: composition.taskSet.tasks.length,
         checkButtonCount: document.querySelectorAll('[data-rg-check-task]').length,
         feedbackStates,
+        feedbackCards,
         answerPreview,
         nextActions,
         graphTargets,
@@ -263,8 +348,12 @@ async function collectProof(cdp, sessionId, item) {
         modePickerVisible: Boolean(document.querySelector('[data-mode], [data-legacy-mode], .mode-picker')),
         focusProof: {
           selector: focusSelector,
+          candidateAvailable: Boolean(focusEl),
+          activeSelector,
           activeTag: active ? active.tagName : null,
-          activeMatches: Boolean(focusEl && active === focusEl)
+          activeText: active ? active.textContent.replace(/\\s+/g, ' ').trim().slice(0, 80) : '',
+          activeMatches: Boolean(activeSelector),
+          keyboardTraversal: window.__rgKeyboardTraversalMatched === true
         },
         paneProof: {
           mobile,
@@ -297,6 +386,9 @@ async function collectProof(cdp, sessionId, item) {
   if (item.state === 'wrong_retry' && !value.feedbackStates.includes('retry')) {
     throw new Error(`${item.composition.composition_id}/${item.state}: retry feedback not rendered`);
   }
+  if (item.state === 'wrong_retry' && !value.feedbackCards.some((card) => card.state === 'retry' && card.visible)) {
+    throw new Error(`${item.composition.composition_id}/${item.state}: retry feedback is not visible`);
+  }
   if ((item.state === 'correct' || item.state === 'answer_preview' || item.state === 'next_action' || item.state === 'mobile_dark_correct') && !value.feedbackStates.includes('matched')) {
     throw new Error(`${item.composition.composition_id}/${item.state}: matched feedback not rendered`);
   }
@@ -312,8 +404,11 @@ async function collectProof(cdp, sessionId, item) {
   if (value.graphTargets.length && value.minGraphTarget < 44) {
     throw new Error(`${item.composition.composition_id}/${item.state}: graph target below 44px`);
   }
-  if (!value.focusProof.activeMatches) {
-    throw new Error(`${item.composition.composition_id}/${item.state}: focus proof failed`);
+  if (!value.focusProof.candidateAvailable) {
+    throw new Error(`${item.composition.composition_id}/${item.state}: focus target unavailable`);
+  }
+  if (item.state === 'keyboard_focus' && (!value.focusProof.keyboardTraversal || !value.focusProof.activeMatches)) {
+    throw new Error(`${item.composition.composition_id}/${item.state}: keyboard traversal did not reach focus target`);
   }
   if (item.size.width >= 760 && value.layout === 'dual_pane_source_task_workspace') {
     if (value.paneProof.sourceOverflowY !== 'auto' || value.paneProof.taskOverflowY !== 'auto') {
@@ -389,6 +484,7 @@ async function main() {
       await applyTheme(cdp, sessionId, item.theme);
       await runScenario(cdp, sessionId, item.scenario);
       await applyView(cdp, sessionId, item.state);
+      if (item.state === 'keyboard_focus') await exerciseKeyboardFocus(cdp, sessionId);
       const proof = await collectProof(cdp, sessionId, item);
       const name = `${item.composition.composition_id}-${item.state}`;
       const outPath = path.join(outputDir, `${name}.png`);
@@ -408,14 +504,14 @@ async function main() {
     const manifestJson = {
       schema_version: 1,
       goal: 'GOAL-REASONING-GOLDEN-FAMILY-1',
-      captured_on: '2026-06-20',
+      captured_on: '2026-06-23',
       cases: manifest
     };
     await fsp.writeFile(path.join(outputDir, 'manifest.json'), JSON.stringify(manifestJson, null, 2) + '\n', 'utf8');
     const manifestMd = [
       '# Reasoning Golden Family Screenshot Manifest',
       '',
-      'Generated: 2026-06-20',
+      'Generated: 2026-06-23',
       '',
       'These screenshots cover initial, partial, wrong/retry, correct, answer-preview, mobile/dark, focus, graph target, and scroll-isolation states. They do not authorize product rollout.',
       '',
@@ -428,7 +524,9 @@ async function main() {
           entry.proof.answerPreview.some((preview) => preview.complete && preview.visible) ? 'answer preview visible' : 'answer preview not in viewport',
           entry.proof.nextActions.some((action) => action.visible) ? 'next action visible' : 'next action not in viewport',
           entry.proof.minGraphTarget ? `graph target min=${entry.proof.minGraphTarget}` : 'no graph target',
-          entry.proof.focusProof.activeMatches ? 'focus ok' : 'focus missing'
+          entry.state === 'keyboard_focus'
+            ? (entry.proof.focusProof.keyboardTraversal && entry.proof.focusProof.activeMatches ? 'keyboard focus ok' : 'keyboard focus missing')
+            : (entry.proof.focusProof.candidateAvailable ? 'focus target available' : 'focus target missing')
         ].join('; ');
         return `| ${entry.name} | ${entry.state} | ${entry.theme} | ${proofBits} | \`${entry.screenshot}\` |`;
       })
@@ -444,10 +542,14 @@ async function main() {
       state: entry.state,
       screenshot: entry.screenshot,
       feedback_states: entry.proof.feedbackStates,
+      feedback_visible: entry.proof.feedbackCards.some((card) => card.visible),
       answer_preview_visible: entry.proof.answerPreview.some((preview) => preview.complete && preview.visible),
       next_action_visible: entry.proof.nextActions.some((action) => action.visible),
       min_graph_target: entry.proof.minGraphTarget,
-      focus_ok: entry.proof.focusProof.activeMatches,
+      focus_ok: entry.state === 'keyboard_focus' ? entry.proof.focusProof.activeMatches : entry.proof.focusProof.candidateAvailable,
+      keyboard_focus_ok: entry.state === 'keyboard_focus'
+        ? entry.proof.focusProof.keyboardTraversal && entry.proof.focusProof.activeMatches
+        : null,
       pane_proof: entry.proof.paneProof
     }));
     await fsp.writeFile(proofPath, JSON.stringify(proofJson, null, 2) + '\n', 'utf8');

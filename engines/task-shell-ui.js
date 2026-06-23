@@ -981,6 +981,7 @@
           y: point.y,
           label: point.label || (String(point.x) + ', ' + String(point.y)),
           description: point.description || '',
+          pathPoint: point.pathPoint,
           seriesLabel: series.label || '',
           xPercent: graphPercent(point.x, axes.x, false),
           yPercent: graphPercent(point.y, axes.y, true)
@@ -998,13 +999,17 @@
     var hitTargetPx = interaction.hitTargetPx || 44;
     var maxSelections = interaction.maxSelections || (task.expected && task.expected.pointIds ? task.expected.pointIds.length : 2);
     var pathHtml = (graph.series || []).map(function (series) {
-      var pathPoints = (series.points || []).map(function (point) {
+      var pathPoints = (series.points || []).filter(function (point) {
+        return point.pathPoint !== false;
+      }).map(function (point) {
         return graphPercent(point.x, axes.x, false).toFixed(3) + ',' + graphPercent(point.y, axes.y, true).toFixed(3);
       }).join(' ');
+      if (!pathPoints) return '';
       return '<polyline class="ts-graph-evidence-line" points="' + escapeHtml(pathPoints) + '"></polyline>';
     }).join('');
     var targetHtml = points.map(function (point) {
-      return '<button type="button" class="ts-graph-evidence-point" aria-pressed="false" ' +
+      var className = 'ts-graph-evidence-point' + (point.pathPoint === false ? ' is-estimate' : ' is-observed');
+      return '<button type="button" class="' + className + '" aria-pressed="false" ' +
         'style="left:' + point.xPercent.toFixed(3) + '%;top:' + point.yPercent.toFixed(3) + '%;width:' + hitTargetPx + 'px;height:' + hitTargetPx + 'px;" ' +
         'data-task-id="' + escapeHtml(task.id) + '" data-graph-evidence-point-id="' + escapeHtml(point.id) + '" ' +
         'data-graph-evidence-label="' + escapeHtml(point.label) + '" aria-label="' + escapeHtml(point.label + (point.description ? ': ' + point.description : '')) + '">' +

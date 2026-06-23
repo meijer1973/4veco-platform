@@ -20,6 +20,13 @@ function feedback(matchTitle, matchText, retryTitle, retryText) {
   return { matchTitle, matchText, retryTitle, retryText };
 }
 
+function withEvidence(expected, refs) {
+  return {
+    ...expected,
+    sourceEvidenceRefs: Array.isArray(refs) ? refs : [refs]
+  };
+}
+
 function markdownContext(id, title, bodyMarkdown, accessibilitySummary) {
   return { id, type: 'markdown', title, bodyMarkdown, accessibilitySummary };
 }
@@ -48,7 +55,7 @@ function withContextRefs(taskSet) {
   return taskSet;
 }
 
-function functionalAnswerTask({ id, prompt, template, rows, expectedRows, matchTitle, matchText, retryTitle, retryText }) {
+function functionalAnswerTask({ id, prompt, template, rows, expectedRows, sourceEvidenceRefs, matchTitle, matchText, retryTitle, retryText }) {
   return {
     id,
     family: 'functional_answer_builder',
@@ -64,11 +71,11 @@ function functionalAnswerTask({ id, prompt, template, rows, expectedRows, matchT
       },
       answerRows: rows
     },
-    expected: {
+    expected: withEvidence({
       kind: 'functional_answer_builder',
       rows: expectedRows,
       partialFeedback: 'practice_only'
-    },
+    }, sourceEvidenceRefs),
     feedback: feedback(matchTitle, matchText, retryTitle, retryText),
     practiceRoute: route('Verder oefenen met deze redenering')
   };
@@ -99,20 +106,20 @@ function marketPriceMechanism() {
           placeholder: 'Kies de schakels van oorzaak naar gevolg.',
           separator: ' -> ',
           steps: [
-            { id: 'parking-change', label: 'Parkeren wordt minder aantrekkelijk.', kind: 'answer', description: 'Start uit de bron.' },
-            { id: 'bike-attractive', label: 'Fietsen wordt relatief aantrekkelijker.', kind: 'answer' },
             { id: 'demand-up', label: 'De vraag naar fietsen neemt toe.', kind: 'answer' },
-            { id: 'supply-same', label: 'Het aanbod blijft eerst gelijk.', kind: 'answer' },
+            { id: 'parking-change', label: 'Parkeren wordt minder aantrekkelijk.', kind: 'answer', internalRationale: 'Start uit de bron.' },
             { id: 'shortage', label: 'Er ontstaat een vraagoverschot.', kind: 'answer' },
+            { id: 'demand-down', label: 'De vraag naar fietsen neemt af.', kind: 'distractor', distractorFor: 'demand-up' },
+            { id: 'bike-attractive', label: 'Fietsen wordt relatief aantrekkelijker.', kind: 'answer' },
             { id: 'price-pressure', label: 'De evenwichtsprijs komt hoger uit.', kind: 'answer' },
-            { id: 'demand-down', label: 'De vraag naar fietsen neemt af.', kind: 'distractor', distractorFor: 'demand-up' }
+            { id: 'supply-same', label: 'Het aanbod blijft eerst gelijk.', kind: 'answer' }
           ]
         },
-        expected: {
+        expected: withEvidence({
           kind: 'step_ordering',
           order: ['parking-change', 'bike-attractive', 'demand-up', 'supply-same', 'shortage', 'price-pressure'],
           partialFeedback: 'practice_only'
-        },
+        }, 'ctx-market-source'),
         feedback: feedback(
           'Keten klopt',
           'De stappen lopen van bronoorzaak naar marktgevolg.',
@@ -150,10 +157,10 @@ function marketPriceMechanism() {
             { id: 'maar', label: 'maar', kind: 'distractor', distractorFor: 'c1' }
           ]
         },
-        expected: {
+        expected: withEvidence({
           kind: 'cloze_tile_select',
           blanks: { c1: 'daardoor', c2: 'terwijl', c3: 'dus' }
-        },
+        }, 'ctx-market-source'),
         feedback: feedback(
           'Zinnen lopen logisch',
           'De verbindingswoorden passen bij oorzaak, contrast en conclusie.',
@@ -193,6 +200,7 @@ function marketPriceMechanism() {
           }
         ],
         expectedRows: { oorzaak: 'parking', mechanisme: 'excess-demand', conclusie: 'price-up' },
+        sourceEvidenceRefs: ['ctx-market-source'],
         matchTitle: 'Uitleg is compleet',
         matchText: 'Je antwoord bevat bronoorzaak, marktmechanisme en conclusie.',
         retryTitle: 'Maak de uitleg economischer',
@@ -240,8 +248,8 @@ function choiceCompass() {
       markdownContext(
         'ctx-choice-source',
         'Situatie',
-        'Eva heeft zaterdagmiddag vier uur. Ze kan werken voor 40 euro, leren voor economie, of naar de film. Ze kiest werken.',
-        'Korte keuzecontext met tijd, geldopbrengst en niet-gekozen alternatieven.'
+        'Eva heeft zaterdagmiddag vier uur. Ze kan werken voor 40 euro, leren voor economie ter waarde van 30 euro, of naar de film ter waarde van 15 euro. Ze kiest werken.',
+        'Korte keuzecontext met beperkte tijd en vergelijkbare waarden voor drie alternatieven.'
       )
     ],
     tasks: [
@@ -257,15 +265,15 @@ function choiceCompass() {
             { id: 'time-limited', label: 'Eva heeft maar vier uur.' },
             { id: 'activities-conflict', label: 'Ze kan de activiteiten niet allemaal tegelijk doen.' },
             { id: 'work-money', label: 'Werken levert 40 euro op.' },
-            { id: 'movie-fun', label: 'De film is leuk.' }
+            { id: 'movie-value', label: 'Naar de film is 15 euro waard.' }
           ]
         },
-        expected: {
+        expected: withEvidence({
           kind: 'multi_select',
           mode: 'exact_set',
           values: ['time-limited', 'activities-conflict'],
           partialFeedback: 'practice_only'
-        },
+        }, 'ctx-choice-source'),
         feedback: feedback(
           'Schaarste is zichtbaar',
           'Je kiest beperkte tijd en de noodzaak om te kiezen.',
@@ -283,12 +291,12 @@ function choiceCompass() {
         interaction: {
           inputLabel: 'Alternatieve kosten',
           options: [
-            { id: 'study', label: 'Leren voor economie', description: 'Het beste alternatief dat ze niet kiest.' },
-            { id: 'work', label: 'Werken voor 40 euro', description: 'Dit is de gekozen optie.' },
-            { id: 'study-plus-movie', label: 'Leren en film samen', description: 'Dit telt alle niet-gekozen opties op.' }
+            { id: 'study', label: 'Leren voor economie', internalRationale: 'Beste niet-gekozen alternatief: 30 euro.' },
+            { id: 'work', label: 'Werken voor 40 euro', internalRationale: 'Gekozen optie, dus geen alternatieve kosten.' },
+            { id: 'study-plus-movie', label: 'Leren en film samen', internalRationale: 'Telt niet-gekozen opties onterecht op.' }
           ]
         },
-        expected: { kind: 'choice', value: 'study' },
+        expected: withEvidence({ kind: 'choice', value: 'study' }, 'ctx-choice-source'),
         feedback: feedback(
           'Beste alternatief gekozen',
           'Alternatieve kosten zijn het beste alternatief dat Eva opgeeft.',
@@ -328,6 +336,7 @@ function choiceCompass() {
           }
         ],
         expectedRows: { scarcity: 'limited-choice', cost: 'best-forgone', notSum: 'not-all' },
+        sourceEvidenceRefs: ['ctx-choice-source'],
         matchTitle: 'Uitleg klopt',
         matchText: 'Je onderscheidt schaarste, gekozen optie en beste niet-gekozen alternatief.',
         retryTitle: 'Controleer de keuze',
@@ -389,12 +398,12 @@ function indexCheck() {
         interaction: {
           inputLabel: 'Betekenis van het verschil',
           options: [
-            { id: 'index-points', label: '6 indexpunten', description: 'Het verschil tussen twee indexcijfers.' },
-            { id: 'percent', label: '6 procent', description: 'Dit verwart indexpunten met procentuele verandering.' },
-            { id: 'euro', label: '6 euro', description: 'Een indexcijfer is geen eurobedrag.' }
+            { id: 'index-points', label: '6 indexpunten', internalRationale: 'Het verschil tussen twee indexcijfers.' },
+            { id: 'percent', label: '6 procent', internalRationale: 'Verwart indexpunten met procentuele verandering.' },
+            { id: 'euro', label: '6 euro', internalRationale: 'Verwart indexcijfer met eurobedrag.' }
           ]
         },
-        expected: { kind: 'choice', value: 'index-points' },
+        expected: withEvidence({ kind: 'choice', value: 'index-points' }, 'ctx-index-source'),
         feedback: feedback(
           'Eenheid klopt',
           'Het verschil tussen indexcijfers noem je indexpunten.',
@@ -418,12 +427,12 @@ function indexCheck() {
             { id: 'minus-is-percent', label: '126 - 120 is meteen 6%' }
           ]
         },
-        expected: {
+        expected: withEvidence({
           kind: 'multi_select',
           mode: 'exact_set',
           values: ['index-base', 'price-base'],
           partialFeedback: 'practice_only'
-        },
+        }, 'ctx-index-source'),
         feedback: feedback(
           'Controles passen',
           'Beide controles gebruiken de oude waarde als basis.',
@@ -463,6 +472,7 @@ function indexCheck() {
           }
         ],
         expectedRows: { unit: 'six-points', base: 'old-120', claim: 'five-percent' },
+        sourceEvidenceRefs: ['ctx-index-source'],
         matchTitle: 'Claim is verbeterd',
         matchText: 'Je onderscheidt indexpunten, basis en procentuele verandering.',
         retryTitle: 'Controleer de basis',
@@ -516,7 +526,7 @@ function graphEditorial() {
         points: [
           { id: 'p2-q600', x: 2, y: 600, label: 'P=2, Q=600', kind: 'answer' },
           { id: 'p8-q300', x: 8, y: 300, label: 'P=8, Q=300', kind: 'answer' },
-          { id: 'p5-q450', x: 5, y: 450, label: 'P=5, Q=450', kind: 'distractor', distractorFor: 'p2-q600' }
+          { id: 'p5-estimate', x: 5, y: 450, label: 'P=5 op de lijn', kind: 'distractor', distractorFor: 'p2-q600', pathPoint: false }
         ]
       }
     ]
@@ -538,8 +548,8 @@ function graphEditorial() {
         caption: 'Tabel 1: Prijs en hoeveelheid broodjes',
         sourceMaterialId: 'broodjes-vraag',
         columns: ['Prijs P', 'Hoeveelheid Q'],
-        rows: [[2, 600], [5, 450], [8, 300]],
-        altText: 'Tabel met prijzen 2, 5 en 8 en hoeveelheden 600, 450 en 300.'
+        rows: [[2, 600], [8, 300]],
+        altText: 'Tabel met waargenomen prijzen 2 en 8 en hoeveelheden 600 en 300.'
       }
     ],
     tasks: [
@@ -556,16 +566,46 @@ function graphEditorial() {
           placeholder: 'Kies twee punten in de grafiek.',
           graph
         },
-        expected: {
+        expected: withEvidence({
           kind: 'graph_evidence_selector',
           pointIds: ['p2-q600', 'p8-q300'],
           partialFeedback: 'practice_only'
-        },
+        }, ['ctx-graph-claim', 'ctx-graph-table']),
         feedback: feedback(
           'Punten passen',
           'Deze twee waargenomen punten horen bij de vergelijking in de kop.',
           'Kies de waargenomen eindpunten',
           'Gebruik de punten die de kop daadwerkelijk vergelijkt.'
+        ),
+        practiceRoute: route('Door naar claimtaal')
+      },
+      {
+        id: 'graph-estimate-status',
+        family: 'choice',
+        skillLabel: 'Schatting begrenzen',
+        purpose: 'Maak onderscheid tussen waarnemen, schatten en te exact formuleren.',
+        prompt: 'Wat mag je bij P=5 zeggen op basis van de lijn tussen de waargenomen punten?',
+        reasoningOperationSignature: 'observation_vs_interpolation_epistemic_status',
+        interaction: {
+          inputLabel: 'Uitspraak bij P=5',
+          options: [
+            { id: 'approx-450', label: 'Q is ongeveer 450 broodjes.', internalRationale: 'Verdedigbare interpolatie op de getekende lijn.' },
+            { id: 'exact-450', label: 'Q is precies 450 broodjes.', internalRationale: 'Overclaimt exactheid; P=5 staat niet als waarneming in de tabel.' },
+            { id: 'no-statement', label: 'Je kunt niets zeggen tussen P=2 en P=8.', internalRationale: 'Negeert dat de getekende lijn een schatting ondersteunt.' }
+          ]
+        },
+        expected: withEvidence({
+          kind: 'choice',
+          value: 'approx-450',
+          operationSignature: 'observation_vs_interpolation_epistemic_status',
+          epistemicStatus: 'supported_estimate_not_exact_observation',
+          estimateAtX: 5
+        }, ['ctx-graph-claim', 'ctx-graph-table']),
+        feedback: feedback(
+          'Schatting goed begrensd',
+          'Bij P=5 kun je de lijn gebruiken voor ongeveer 450, maar niet doen alsof het een exact waargenomen tabelpunt is.',
+          'Let op exact of ongeveer',
+          'Gebruik de lijn als schatting en de tabel voor wat direct is waargenomen.'
         ),
         practiceRoute: route('Door naar claimtaal')
       },
@@ -578,12 +618,12 @@ function graphEditorial() {
         interaction: {
           inputLabel: 'Formulering',
           options: [
-            { id: 'observed-interval', label: 'Tussen P=2 en P=8 daalt Q van 600 naar 300.', description: 'Dit blijft bij waargenomen punten.' },
-            { id: 'always-half', label: 'Elke prijsstijging halveert de verkoop.', description: 'Dit maakt een te algemene regel.' },
-            { id: 'cause-only-price', label: 'De prijs is de enige oorzaak van de daling.', description: 'De grafiek toont geen oorzaak op zichzelf.' }
+            { id: 'observed-interval', label: 'Tussen P=2 en P=8 daalt Q van 600 naar 300.', internalRationale: 'Blijft bij waargenomen punten.' },
+            { id: 'always-half', label: 'Elke prijsstijging halveert de verkoop.', internalRationale: 'Maakt een te algemene regel.' },
+            { id: 'cause-only-price', label: 'De prijs is de enige oorzaak van de daling.', internalRationale: 'De grafiek toont geen volledige oorzaak op zichzelf.' }
           ]
         },
-        expected: { kind: 'choice', value: 'observed-interval' },
+        expected: withEvidence({ kind: 'choice', value: 'observed-interval' }, ['ctx-graph-claim', 'ctx-graph-table']),
         feedback: feedback(
           'Claim is voorzichtig',
           'Je blijft bij wat de grafiek ondersteunt.',
@@ -623,6 +663,7 @@ function graphEditorial() {
           }
         ],
         expectedRows: { values: 'observed-values', interpretation: 'interval-drop', scope: 'headline-too-strong' },
+        sourceEvidenceRefs: ['ctx-graph-claim', 'ctx-graph-table'],
         matchTitle: 'Advies is begrensd',
         matchText: 'Je gebruikt de grafiekwaarden zonder een te sterke algemene claim.',
         retryTitle: 'Beperk de conclusie',
@@ -638,22 +679,23 @@ function graphEditorial() {
     archetype_id: 'graph_evidence_and_epistemic_scope',
     selected_exemplar_ids: ['reasoning-1.1.3-graph-editorial-v2'],
     targetBrief: {
-      reasoningTarget: 'Use observed graph values to bound an editorial claim.',
-      centralMisconception: 'A comparison between two points becomes a universal causal rule.',
+      reasoningTarget: 'Use observed graph values and interpolated estimates to bound an editorial claim.',
+      centralMisconception: 'A comparison between two points becomes either an exact middle observation or a universal causal rule.',
       sourceEvidenceType: 'claim, table and graph',
       requiredAnswerForm: 'values, interpretation, scope',
       mustNotTest: 'graph construction',
       candidateArchetype: 'graph_evidence_and_epistemic_scope',
       selectedGoldenExemplars: ['reasoning-1.1.3-graph-editorial-v2'],
-      mechanicFit: 'Direct graph point selection and answer rows preserve the graph-source reasoning.'
+      mechanicFit: 'Graph point selection, estimate-status choice and answer rows preserve observation-versus-interpolation reasoning.'
     },
     taskSet,
     proofScenarios: {
       partial: { responses: [{ taskId: 'graph-points', response: { pointIds: ['p2-q600'] }, check: false }] },
-      wrong: { responses: [{ taskId: 'graph-points', response: { pointIds: ['p5-q450'] } }] },
+      wrong: { responses: [{ taskId: 'graph-estimate-status', response: { value: 'exact-450' } }] },
       correct: {
         responses: [
           { taskId: 'graph-points', response: { pointIds: ['p2-q600', 'p8-q300'] } },
+          { taskId: 'graph-estimate-status', response: { value: 'approx-450' } },
           { taskId: 'graph-scope', response: { value: 'observed-interval' } },
           { taskId: 'graph-answer', response: { rows: { values: 'observed-values', interpretation: 'interval-drop', scope: 'headline-too-strong' } } }
         ]
@@ -671,7 +713,7 @@ function blindTransferDemandFactors() {
         'ctx-demand-source',
         'Situatie uit 1.2.2',
         'De prijs van boter blijft 2 euro. Op het journaal vertellen wetenschappers dat margarine ongezond is. De volgende week kopen consumenten meer boter.',
-        'Korte bron over een vraagfactor zonder prijsverandering van boter.'
+        'Korte bron over boter en margarine met prijs- en koopinformatie.'
       )
     ],
     tasks: [
@@ -684,12 +726,12 @@ function blindTransferDemandFactors() {
         interaction: {
           inputLabel: 'Oorzaak',
           options: [
-            { id: 'substitute-preference', label: 'Een andere factor dan de prijs van boter verandert: margarine wordt minder aantrekkelijk.', description: 'Dit raakt voorkeuren en substituten.' },
-            { id: 'own-price', label: 'De prijs van boter stijgt.', description: 'In de bron blijft de prijs van boter gelijk.' },
-            { id: 'supply-change', label: 'Het aanbod van boter daalt.', description: 'De bron gaat over vraag, niet aanbod.' }
+            { id: 'substitute-preference', label: 'Het nieuws over margarine.', internalRationale: 'Raakt voorkeuren en substituten.' },
+            { id: 'own-price', label: 'Een hogere boterprijs.', internalRationale: 'In de bron blijft de prijs van boter gelijk.' },
+            { id: 'supply-change', label: 'Minder aanbod van boter.', internalRationale: 'De bron gaat over vraag, niet aanbod.' }
           ]
         },
-        expected: { kind: 'choice', value: 'substitute-preference' },
+        expected: withEvidence({ kind: 'choice', value: 'substitute-preference' }, 'ctx-demand-source'),
         feedback: feedback(
           'Vraagfactor gekozen',
           'De eigen prijs van boter blijft gelijk; een andere factor verandert de vraag.',
@@ -710,18 +752,18 @@ function blindTransferDemandFactors() {
           placeholder: 'Kies de schakels.',
           separator: ' -> ',
           steps: [
-            { id: 'price-same', label: 'De prijs van boter blijft gelijk.', kind: 'answer' },
-            { id: 'margarine-less', label: 'Margarine wordt minder aantrekkelijk.', kind: 'answer' },
             { id: 'butter-more', label: 'Bij dezelfde prijs willen consumenten meer boter.', kind: 'answer' },
+            { id: 'movement', label: 'Je beweegt langs dezelfde vraaglijn omhoog.', kind: 'distractor', distractorFor: 'shift-right' },
+            { id: 'price-same', label: 'De prijs van boter blijft gelijk.', kind: 'answer' },
             { id: 'shift-right', label: 'De vraaglijn van boter verschuift naar rechts.', kind: 'answer' },
-            { id: 'movement', label: 'Je beweegt langs dezelfde vraaglijn omhoog.', kind: 'distractor', distractorFor: 'shift-right' }
+            { id: 'margarine-less', label: 'Margarine wordt minder aantrekkelijk.', kind: 'answer' }
           ]
         },
-        expected: {
+        expected: withEvidence({
           kind: 'step_ordering',
           order: ['price-same', 'margarine-less', 'butter-more', 'shift-right'],
           partialFeedback: 'practice_only'
-        },
+        }, 'ctx-demand-source'),
         feedback: feedback(
           'Redenering past',
           'Je maakt onderscheid tussen eigen prijs en vraagfactor.',
@@ -761,6 +803,7 @@ function blindTransferDemandFactors() {
           }
         ],
         expectedRows: { cause: 'other-factor', distinction: 'same-price', direction: 'right-shift' },
+        sourceEvidenceRefs: ['ctx-demand-source'],
         matchTitle: 'Transferantwoord klopt',
         matchText: 'Je onderscheidt eigen prijs, vraagfactor en verschuiving.',
         retryTitle: 'Maak het onderscheid scherper',

@@ -1,6 +1,6 @@
 # Reasoning Golden Family Gallery Proof
 
-Generated: 2026-06-20
+Generated: 2026-06-23
 
 Rule: `copy product grammar; re-derive reasoning grammar`.
 

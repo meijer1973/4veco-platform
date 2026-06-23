@@ -77,6 +77,8 @@ function validateReviews() {
     'reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round1.md',
     'reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-corrections.md',
     'reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round2.md',
+    'reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-specialist-review.md',
+    'reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-lead-review.md',
     'reports/sprints/REASONING-GOLDEN-FAMILY-1-result.md',
     `reports/review-gates/${GATE}/human-review-packet.md`
   ];
@@ -85,6 +87,10 @@ function validateReviews() {
   assertContains(read('reports/sprints/REASONING-GOLDEN-FAMILY-1-specialist-review.md'), /REVISE/, 'specialist review');
   assertContains(read('reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round1.md'), /REVISE/, 'lead review round 1');
   assertContains(read('reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round2.md'), /PASS WITH FLAGS|PASS/, 'lead review round 2');
+  assertContains(read('reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-specialist-review.md'), /PASS WITH NON-BLOCKING FLAGS|PASS/, 'fidelity repair specialist review');
+  assertContains(read('reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-specialist-review.md'), /rendered product-fidelity/i, 'fidelity repair specialist review');
+  assertContains(read('reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-lead-review.md'), /PASS WITH NON-BLOCKING FLAGS|PASS/, 'fidelity repair lead review');
+  assertContains(read('reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-lead-review.md'), /Choice Compass|Index|Graph|blind transfer/i, 'fidelity repair lead review');
   const gatePacket = read(`reports/review-gates/${GATE}/human-review-packet.md`);
   assertContains(gatePacket, new RegExp(GATE), 'human gate packet');
   assertContains(gatePacket, /Human decision required|Awaiting human decision/i, 'human gate packet');
@@ -148,6 +154,7 @@ function validateProof() {
       }
       if (state === 'keyboard_focus') {
         assert(item.proof.focusProof.activeMatches === true, `${item.name} must prove keyboard focus`);
+        assert(item.proof.focusProof.keyboardTraversal === true, `${item.name} must prove keyboard traversal`);
       }
     });
   });

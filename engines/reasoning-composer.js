@@ -44,6 +44,7 @@
     'summative_use',
     'scale_gate'
   ];
+  var GRAPH_INTERPOLATION_SIGNATURE = 'observation_vs_interpolation_epistemic_status';
 
   function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -110,6 +111,110 @@
     });
   }
 
+  function contextIds(taskSet) {
+    var ids = {};
+    (taskSet.contextBlocks || []).forEach(function (block) {
+      if (block && block.id) ids[block.id] = true;
+    });
+    return ids;
+  }
+
+  function assertNoVisibleDescription(item, path) {
+    if (!isObject(item)) return;
+    assert(
+      !Object.prototype.hasOwnProperty.call(item, 'description'),
+      path + '.description is not allowed on reasoning-game assessed controls; use internalRationale and post-attempt feedback'
+    );
+  }
+
+  function validateNoPreAttemptRationales(task) {
+    var interaction = task.interaction || {};
+    (interaction.options || []).forEach(function (option, index) {
+      assertNoVisibleDescription(option, task.id + '.interaction.options[' + index + ']');
+    });
+    (interaction.steps || []).forEach(function (step, index) {
+      assertNoVisibleDescription(step, task.id + '.interaction.steps[' + index + ']');
+    });
+    (interaction.tiles || []).forEach(function (tile, index) {
+      assertNoVisibleDescription(tile, task.id + '.interaction.tiles[' + index + ']');
+    });
+    (interaction.values || []).forEach(function (value, index) {
+      assertNoVisibleDescription(value, task.id + '.interaction.values[' + index + ']');
+    });
+    (interaction.nodes || []).forEach(function (node, index) {
+      assertNoVisibleDescription(node, task.id + '.interaction.nodes[' + index + ']');
+    });
+    (interaction.answerOptions || []).forEach(function (option, index) {
+      assertNoVisibleDescription(option, task.id + '.interaction.answerOptions[' + index + ']');
+    });
+    (interaction.reasonOptions || []).forEach(function (option, index) {
+      assertNoVisibleDescription(option, task.id + '.interaction.reasonOptions[' + index + ']');
+    });
+    (interaction.answerRows || []).forEach(function (row, rowIndex) {
+      (row.options || []).forEach(function (option, optionIndex) {
+        assertNoVisibleDescription(option, task.id + '.interaction.answerRows[' + rowIndex + '].options[' + optionIndex + ']');
+      });
+    });
+    if (interaction.graph) {
+      (interaction.graph.series || []).forEach(function (series, seriesIndex) {
+        (series.points || []).forEach(function (point, pointIndex) {
+          assertNoVisibleDescription(point, task.id + '.interaction.graph.series[' + seriesIndex + '].points[' + pointIndex + ']');
+        });
+      });
+    }
+  }
+
+  function validateStepOrderingDoesNotLeakOrder(task) {
+    if (task.family !== 'step_ordering') return;
+    if (!task.expected || !Array.isArray(task.expected.order)) return;
+    var visibleAnswerOrder = (task.interaction.steps || [])
+      .filter(function (step) { return step.kind === 'answer'; })
+      .map(function (step) { return step.id; });
+    assert(
+      visibleAnswerOrder.join('\u0001') !== task.expected.order.join('\u0001'),
+      task.id + '.interaction.steps must not present answer steps in expected order before attempt'
+    );
+  }
+
+  function validateExpectedSourceEvidence(composition) {
+    var ids = contextIds(composition.taskSet || {});
+    (composition.taskSet.tasks || []).forEach(function (task) {
+      var refs = task.expected && task.expected.sourceEvidenceRefs;
+      requireArray(refs, task.id + '.expected.sourceEvidenceRefs', 1);
+      refs.forEach(function (ref, index) {
+        requireString(ref, task.id + '.expected.sourceEvidenceRefs[' + index + ']');
+        assert(ids[ref], task.id + '.expected.sourceEvidenceRefs[' + index + '] must match a context block');
+        if (Array.isArray(task.contextRefs)) {
+          assert(task.contextRefs.indexOf(ref) !== -1, task.id + '.expected.sourceEvidenceRefs[' + index + '] must be visible in task.contextRefs');
+        }
+      });
+    });
+  }
+
+  function validateGraphInterpolationOperation(composition) {
+    if (composition.archetype_id !== 'graph_evidence_and_epistemic_scope') return;
+    var tasks = composition.taskSet.tasks || [];
+    var task = tasks.find(function (candidate) {
+      return candidate.reasoningOperationSignature === GRAPH_INTERPOLATION_SIGNATURE ||
+        (candidate.expected && candidate.expected.operationSignature === GRAPH_INTERPOLATION_SIGNATURE);
+    });
+    assert(task, 'graph archetype must include observation-vs-interpolation epistemic-status operation signature');
+    assert(task.family === 'choice', task.id + ' observation-vs-interpolation operation must be a choice task');
+    assert(task.expected.operationSignature === GRAPH_INTERPOLATION_SIGNATURE, task.id + '.expected.operationSignature must preserve observation-vs-interpolation signature');
+    assert(task.expected.epistemicStatus === 'supported_estimate_not_exact_observation', task.id + '.expected.epistemicStatus must distinguish estimate from exact observation');
+    assert(typeof task.expected.estimateAtX === 'number', task.id + '.expected.estimateAtX must identify the interpolated x value');
+    var refs = task.expected.sourceEvidenceRefs || [];
+    (composition.taskSet.contextBlocks || []).forEach(function (block) {
+      if (refs.indexOf(block.id) === -1 || block.type !== 'table') return;
+      (block.rows || []).forEach(function (row, index) {
+        assert(
+          !Array.isArray(row) || row[0] !== task.expected.estimateAtX,
+          task.id + '.expected.estimateAtX must not be a directly observed table row at ' + block.id + '.rows[' + index + ']'
+        );
+      });
+    });
+  }
+
   function validateComposition(composition) {
     assert(isObject(composition), 'composition must be an object');
     assert(composition.schema_version === 1, 'composition must use schema_version 1');
@@ -130,6 +235,9 @@
     requireArray(composition.taskSet.tasks, 'taskSet.tasks', 2);
     assert(composition.taskSet.tasks.length <= 4, 'reasoning-game task loop must have at most four tasks');
     TaskShellEngine.validateTaskSet(composition.taskSet);
+    composition.taskSet.tasks.forEach(validateNoPreAttemptRationales);
+    composition.taskSet.tasks.forEach(validateStepOrderingDoesNotLeakOrder);
+    validateExpectedSourceEvidence(composition);
     scanRestrictedKeys(composition, 'composition');
 
     var taskFamilies = composition.taskSet.tasks.map(function (task) { return task.family; });
@@ -138,6 +246,7 @@
     if (composition.archetype_id === 'graph_evidence_and_epistemic_scope') {
       assert(taskFamilies.indexOf('graph_evidence_selector') !== -1, 'graph archetype must use graph_evidence_selector');
     }
+    validateGraphInterpolationOperation(composition);
     return true;
   }
 

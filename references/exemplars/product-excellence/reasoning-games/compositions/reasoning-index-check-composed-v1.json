@@ -59,23 +59,26 @@
             {
               "id": "index-points",
               "label": "6 indexpunten",
-              "description": "Het verschil tussen twee indexcijfers."
+              "internalRationale": "Het verschil tussen twee indexcijfers."
             },
             {
               "id": "percent",
               "label": "6 procent",
-              "description": "Dit verwart indexpunten met procentuele verandering."
+              "internalRationale": "Verwart indexpunten met procentuele verandering."
             },
             {
               "id": "euro",
               "label": "6 euro",
-              "description": "Een indexcijfer is geen eurobedrag."
+              "internalRationale": "Verwart indexcijfer met eurobedrag."
             }
           ]
         },
         "expected": {
           "kind": "choice",
-          "value": "index-points"
+          "value": "index-points",
+          "sourceEvidenceRefs": [
+            "ctx-index-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Eenheid klopt",
@@ -125,7 +128,10 @@
             "index-base",
             "price-base"
           ],
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-index-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Controles passen",
@@ -215,7 +221,10 @@
             "base": "old-120",
             "claim": "five-percent"
           },
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-index-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Claim is verbeterd",

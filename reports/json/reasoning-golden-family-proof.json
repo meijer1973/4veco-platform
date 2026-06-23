@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
-  "generated": "2026-06-20",
+  "generated": "2026-06-23",
   "rule": "copy product grammar; re-derive reasoning grammar",
   "authority": {
     "student_product_adoption": false,
@@ -233,6 +233,7 @@
         "task_families": [
           "graph_evidence_selector",
           "choice",
+          "choice",
           "functional_answer_builder"
         ],
         "focus_plans": [
@@ -242,6 +243,13 @@
             "selectors": [
               "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
               "[data-task-id=\"graph-points\"][data-graph-evidence-tray]"
+            ]
+          },
+          {
+            "task_id": "graph-estimate-status",
+            "family": "choice",
+            "selectors": [
+              "[data-task-id=\"graph-estimate-status\"][data-choice-id]"
             ]
           },
           {
@@ -359,10 +367,12 @@
       "state": "initial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-initial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -379,10 +389,12 @@
       "state": "partial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-partial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -401,10 +413,12 @@
       "feedback_states": [
         "retry"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": false,
-      "next_action_visible": false,
+      "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -425,10 +439,12 @@
         "matched",
         "matched"
       ],
-      "answer_preview_visible": false,
-      "next_action_visible": false,
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -449,10 +465,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -473,10 +491,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -497,10 +517,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": true,
         "sourceOverflowY": "visible",
@@ -517,10 +539,12 @@
       "state": "keyboard_focus",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-keyboard_focus.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": true,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -537,10 +561,12 @@
       "state": "initial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-initial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -557,10 +583,12 @@
       "state": "partial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-partial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -579,10 +607,12 @@
       "feedback_states": [
         "retry"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": false,
-      "next_action_visible": false,
+      "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -603,10 +633,12 @@
         "matched",
         "matched"
       ],
-      "answer_preview_visible": false,
+      "feedback_visible": true,
+      "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -627,10 +659,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -651,10 +685,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -675,10 +711,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": true,
         "sourceOverflowY": "visible",
@@ -695,10 +733,12 @@
       "state": "keyboard_focus",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-keyboard_focus.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": true,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -715,10 +755,12 @@
       "state": "initial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-initial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -735,10 +777,12 @@
       "state": "partial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-partial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -757,10 +801,12 @@
       "feedback_states": [
         "retry"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": false,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -781,10 +827,12 @@
         "matched",
         "matched"
       ],
-      "answer_preview_visible": false,
+      "feedback_visible": true,
+      "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -805,10 +853,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -829,10 +879,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -853,10 +905,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": true,
         "sourceOverflowY": "visible",
@@ -873,10 +927,12 @@
       "state": "keyboard_focus",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-keyboard_focus.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": true,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -893,10 +949,12 @@
       "state": "initial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-initial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -913,10 +971,12 @@
       "state": "partial",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-partial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -935,10 +995,12 @@
       "feedback_states": [
         "retry"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": false,
-      "next_action_visible": false,
+      "next_action_visible": true,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -957,12 +1019,15 @@
       "feedback_states": [
         "matched",
         "matched",
+        "matched",
         "matched"
       ],
-      "answer_preview_visible": false,
+      "feedback_visible": true,
+      "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -981,12 +1046,15 @@
       "feedback_states": [
         "matched",
         "matched",
+        "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1005,12 +1073,15 @@
       "feedback_states": [
         "matched",
         "matched",
+        "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1029,12 +1100,15 @@
       "feedback_states": [
         "matched",
         "matched",
+        "matched",
         "matched"
       ],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": true,
         "sourceOverflowY": "visible",
@@ -1051,10 +1125,12 @@
       "state": "keyboard_focus",
       "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-keyboard_focus.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": 44,
       "focus_ok": true,
+      "keyboard_focus_ok": true,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1071,10 +1147,12 @@
       "state": "initial",
       "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-initial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1091,10 +1169,12 @@
       "state": "partial",
       "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-partial.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1113,10 +1193,12 @@
       "feedback_states": [
         "retry"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": false,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1137,10 +1219,12 @@
         "matched",
         "matched"
       ],
-      "answer_preview_visible": false,
+      "feedback_visible": true,
+      "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1161,10 +1245,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1185,10 +1271,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": true,
       "answer_preview_visible": true,
       "next_action_visible": true,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",
@@ -1209,10 +1297,12 @@
         "matched",
         "matched"
       ],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": null,
       "pane_proof": {
         "mobile": true,
         "sourceOverflowY": "visible",
@@ -1229,10 +1319,12 @@
       "state": "keyboard_focus",
       "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-keyboard_focus.png",
       "feedback_states": [],
+      "feedback_visible": false,
       "answer_preview_visible": false,
       "next_action_visible": false,
       "min_graph_target": null,
       "focus_ok": true,
+      "keyboard_focus_ok": true,
       "pane_proof": {
         "mobile": false,
         "sourceOverflowY": "auto",

@@ -45,7 +45,7 @@
         "type": "markdown",
         "title": "Situatie uit 1.2.2",
         "bodyMarkdown": "De prijs van boter blijft 2 euro. Op het journaal vertellen wetenschappers dat margarine ongezond is. De volgende week kopen consumenten meer boter.",
-        "accessibilitySummary": "Korte bron over een vraagfactor zonder prijsverandering van boter."
+        "accessibilitySummary": "Korte bron over boter en margarine met prijs- en koopinformatie."
       }
     ],
     "tasks": [
@@ -60,24 +60,27 @@
           "options": [
             {
               "id": "substitute-preference",
-              "label": "Een andere factor dan de prijs van boter verandert: margarine wordt minder aantrekkelijk.",
-              "description": "Dit raakt voorkeuren en substituten."
+              "label": "Het nieuws over margarine.",
+              "internalRationale": "Raakt voorkeuren en substituten."
             },
             {
               "id": "own-price",
-              "label": "De prijs van boter stijgt.",
-              "description": "In de bron blijft de prijs van boter gelijk."
+              "label": "Een hogere boterprijs.",
+              "internalRationale": "In de bron blijft de prijs van boter gelijk."
             },
             {
               "id": "supply-change",
-              "label": "Het aanbod van boter daalt.",
-              "description": "De bron gaat over vraag, niet aanbod."
+              "label": "Minder aanbod van boter.",
+              "internalRationale": "De bron gaat over vraag, niet aanbod."
             }
           ]
         },
         "expected": {
           "kind": "choice",
-          "value": "substitute-preference"
+          "value": "substitute-preference",
+          "sourceEvidenceRefs": [
+            "ctx-demand-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Vraagfactor gekozen",
@@ -106,18 +109,19 @@
           "separator": " -> ",
           "steps": [
             {
-              "id": "price-same",
-              "label": "De prijs van boter blijft gelijk.",
-              "kind": "answer"
-            },
-            {
-              "id": "margarine-less",
-              "label": "Margarine wordt minder aantrekkelijk.",
-              "kind": "answer"
-            },
-            {
               "id": "butter-more",
               "label": "Bij dezelfde prijs willen consumenten meer boter.",
+              "kind": "answer"
+            },
+            {
+              "id": "movement",
+              "label": "Je beweegt langs dezelfde vraaglijn omhoog.",
+              "kind": "distractor",
+              "distractorFor": "shift-right"
+            },
+            {
+              "id": "price-same",
+              "label": "De prijs van boter blijft gelijk.",
               "kind": "answer"
             },
             {
@@ -126,10 +130,9 @@
               "kind": "answer"
             },
             {
-              "id": "movement",
-              "label": "Je beweegt langs dezelfde vraaglijn omhoog.",
-              "kind": "distractor",
-              "distractorFor": "shift-right"
+              "id": "margarine-less",
+              "label": "Margarine wordt minder aantrekkelijk.",
+              "kind": "answer"
             }
           ]
         },
@@ -141,7 +144,10 @@
             "butter-more",
             "shift-right"
           ],
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-demand-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Redenering past",
@@ -231,7 +237,10 @@
             "distinction": "same-price",
             "direction": "right-shift"
           },
-          "partialFeedback": "practice_only"
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-demand-source"
+          ]
         },
         "feedback": {
           "matchTitle": "Transferantwoord klopt",

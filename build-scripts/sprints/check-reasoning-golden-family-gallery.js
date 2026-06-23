@@ -85,7 +85,8 @@ function replaceWithGraphConstruction(task) {
     points: [{ x: 2, y: 600 }, { x: 8, y: 300 }],
     toleranceX: 0,
     toleranceY: 0,
-    lineShape: 'decreasing'
+    lineShape: 'decreasing',
+    sourceEvidenceRefs: ['ctx-graph-claim', 'ctx-graph-table']
   };
 }
 
@@ -96,7 +97,8 @@ function replaceWithStructuredReasoning(task) {
   task.interaction = { inputLabel: 'Redenering' };
   task.expected = {
     kind: 'self_check',
-    criteria: ['Noem oorzaak.', 'Noem gevolg.']
+    criteria: ['Noem oorzaak.', 'Noem gevolg.'],
+    sourceEvidenceRefs: task.contextRefs || []
   };
   task.feedback = {
     selfCheckTitle: 'Controleer je antwoord',
@@ -158,6 +160,29 @@ function applyFixture(fixture) {
     case 'visible_internal_metadata':
       composition.taskSet.tasks[0].prompt = 'Gebruik A96 en kies de correct kaart.';
       break;
+    case 'visible_choice_rationale_leak':
+      composition.taskSet.tasks.find((task) => task.id === 'choice-cost')
+        .interaction.options[0].description = 'Het beste alternatief dat ze niet kiest.';
+      break;
+    case 'missing_source_evidence_reference':
+      delete composition.taskSet.tasks.find((task) => task.id === 'index-unit').expected.sourceEvidenceRefs;
+      break;
+    case 'step_order_bank_in_answer_order': {
+      const chainTask = composition.taskSet.tasks.find((task) => task.id === 'market-chain');
+      chainTask.interaction.steps = chainTask.expected.order
+        .map((id) => chainTask.interaction.steps.find((step) => step.id === id))
+        .concat(chainTask.interaction.steps.filter((step) => step.kind === 'distractor'));
+      break;
+    }
+    case 'missing_graph_interpolation_operation': {
+      const interpolationTask = composition.taskSet.tasks.find((task) => task.id === 'graph-estimate-status');
+      delete interpolationTask.reasoningOperationSignature;
+      delete interpolationTask.expected.operationSignature;
+      break;
+    }
+    case 'graph_interpolation_as_direct_table_row':
+      composition.taskSet.contextBlocks.find((block) => block.id === 'ctx-graph-table').rows = [[2, 600], [5, 450], [8, 300]];
+      break;
     case 'decorative_graph_only':
       composition.taskSet.tasks[0] = {
         ...composition.taskSet.tasks[0],
@@ -171,7 +196,7 @@ function applyFixture(fixture) {
             { id: 'b', label: 'De kop klopt altijd.' }
           ]
         },
-        expected: { kind: 'choice', value: 'a' }
+        expected: { kind: 'choice', value: 'a', sourceEvidenceRefs: ['ctx-graph-claim', 'ctx-graph-table'] }
       };
       break;
     default:
@@ -201,12 +226,16 @@ function validateScreenshots(proof) {
       assert(item.proof && item.proof.compositionId === composition.composition_id, `${item.name} proof composition mismatch`);
       assert(item.proof.checkButtonCount === item.proof.taskCount, `${item.name} must render one check button per task`);
       assert(item.proof.modePickerVisible === false, `${item.name} must not show a mode picker`);
-      assert(item.proof.focusProof && item.proof.focusProof.activeMatches === true, `${item.name} must prove focus target`);
+      assert(item.proof.focusProof && item.proof.focusProof.candidateAvailable === true, `${item.name} must expose a focus target`);
       if (state === 'partial') {
         assert(item.proof.selectedCount > 0, `${item.name} must show a partial interaction state`);
       }
       if (state === 'wrong_retry') {
         assert(item.proof.feedbackStates.includes('retry'), `${item.name} must show retry feedback`);
+        assert(
+          Array.isArray(item.proof.feedbackCards) && item.proof.feedbackCards.some((card) => card.state === 'retry' && card.visible),
+          `${item.name} must visibly frame retry feedback`
+        );
       }
       if (state === 'correct' || state === 'answer_preview' || state === 'next_action' || state === 'mobile_dark_correct') {
         assert(item.proof.feedbackStates.includes('matched'), `${item.name} must show matched feedback`);
@@ -226,9 +255,23 @@ function validateScreenshots(proof) {
         assert(item.proof.paneProof.mobile === true, `${item.name} must be captured in mobile layout`);
       }
       if (state === 'keyboard_focus') {
+        assert(item.proof.focusProof.keyboardTraversal === true, `${item.name} must use keyboard traversal for focus proof`);
         assert(item.proof.focusProof.activeMatches === true, `${item.name} must visibly exercise keyboard focus proof`);
       }
     });
+    const initial = screenshotManifest.cases.find((candidate) => (
+      candidate.composition_id === composition.composition_id && candidate.state === 'initial'
+    ));
+    const keyboard = screenshotManifest.cases.find((candidate) => (
+      candidate.composition_id === composition.composition_id && candidate.state === 'keyboard_focus'
+    ));
+    assert(
+      Buffer.compare(
+        fs.readFileSync(path.join(ROOT, initial.screenshot)),
+        fs.readFileSync(path.join(ROOT, keyboard.screenshot))
+      ) !== 0,
+      `${composition.composition_id} keyboard_focus screenshot must differ from initial screenshot`
+    );
   });
 }
 

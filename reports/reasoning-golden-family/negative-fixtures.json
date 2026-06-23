@@ -52,6 +52,36 @@
       "expect_error": "blocked terms or internal codes"
     },
     {
+      "id": "visible_choice_rationale_leak",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "mutation": "add a correctness-explaining option description before attempt",
+      "expect_error": "pre-attempt|description"
+    },
+    {
+      "id": "missing_source_evidence_reference",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "mutation": "delete sourceEvidenceRefs from an expected answer",
+      "expect_error": "sourceEvidenceRefs"
+    },
+    {
+      "id": "step_order_bank_in_answer_order",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "mutation": "put answer step tokens in the exact expected order before attempt",
+      "expect_error": "expected order before attempt"
+    },
+    {
+      "id": "missing_graph_interpolation_operation",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "mutation": "delete the observation-versus-interpolation operation signature",
+      "expect_error": "observation-vs-interpolation"
+    },
+    {
+      "id": "graph_interpolation_as_direct_table_row",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "mutation": "put P=5, Q=450 back into the observed table rows",
+      "expect_error": "directly observed table row"
+    },
+    {
       "id": "decorative_graph_only",
       "composition_id": "reasoning-graph-editorial-composed-v1",
       "mutation": "replace graph task with ordinary choice",

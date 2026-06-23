@@ -1,47 +1,44 @@
 # GATE-REASONING-GOLDEN-FAMILY-1 Human Review Packet
 
-Generated: 2026-06-20
+Generated: 2026-06-23
 
-Final synchronization stamp: 2026-06-22
+Fidelity repair stamp: 2026-06-23
 
-## Final Remote Synchronization Proof
+## Fidelity Repair Status
 
-This packet was refreshed after `GOAL-REASONING-GOLDEN-FAMILY-1-FINAL-SYNC`
-so the human decision is based on the current paired PR heads, not the earlier
-June 20 local package.
+This packet supersedes the June 20/June 22 gate packet after the human
+REQUEST CHANGES review. The repair run targeted rendered student-product
+fidelity, not only repository wiring.
 
-Validated remote heads before this metadata-only packet stamp:
+Current local repair validation is complete. Final remote CI and exact pushed
+commit metadata must be stamped after the final push.
 
-- platform implementation head:
-  `2730f2a3bc43b99ad198720a69c13913f21136dd`
-- platform `main`: `df8da27324ff5e8b02a8aa1f69ad3e63a626ffdc`
-- lesson PR #32 head: `65caa81874b00d1776c9660e8233e52fd68cbeee`
-- lesson `main`: `cdb26e415cbddc5013b8f863c9878d754b927859`
-- tested paired lesson branch:
-  `codex/reasoning-golden-family-platform-20260620` at
-  `65caa81874b00d1776c9660e8233e52fd68cbeee`
+Validated local platform head before final push:
 
-Fresh paired CI:
+- platform worktree branch:
+  `codex/reasoning-golden-family-platform-20260620`
+- lesson PR branch:
+  `codex/reasoning-golden-family-lessen-20260620`
+- paired lesson CI branch:
+  `codex/reasoning-golden-family-platform-20260620`
+- lesson content: unchanged from PR #32 during fidelity repair
 
-- platform `validate-platform`: PASS
-- run: `27945697101`
-- job: `82689713012`
-- URL:
-  `https://github.com/meijer1973/4veco-platform/actions/runs/27945697101/job/82689713012`
+Remote CI after fidelity repair:
 
-Mergeability at final-sync inspection:
+- platform `validate-platform`: PENDING FINAL PUSH
+- run: PENDING FINAL PUSH
+- job: PENDING FINAL PUSH
+- URL: PENDING FINAL PUSH
 
-- platform PR #128: `CLEAN`
-- lesson PR #32: `CLEAN`
+Mergeability after fidelity repair:
 
-Final lead-review verdict:
+- platform PR #128: PENDING FINAL PUSH CHECK
+- lesson PR #32: PENDING FINAL PUSH CHECK
+
+Final fidelity-repair lead-review verdict:
 
 - PASS WITH NON-BLOCKING FLAGS
-- subagent: `019eeed9-9f6a-7d62-9ed9-69ae5d8d126e`
-
-The packet-stamp commit records metadata and the final lead-review verdict; it
-does not change the validated reasoning-family implementation or paired lesson
-content.
+- subagent: `019ef31c-ca11-7cb0-b0a1-9a6b0cca53fb`
 
 ## Human Decision Required
 
@@ -73,6 +70,27 @@ Re-derive the paragraph-specific reasoning grammar: target operation, source
 evidence, misconception, answer functions, graph/source status, and economic
 mechanism.
 
+## Fidelity Repairs Since Prior Human Review
+
+- Choice Compass source now gives comparable values for work, study, and film,
+  so the expected best forgone alternative follows from visible evidence.
+- Choice Compass and Index no longer render correctness or misconception
+  rationales before attempt.
+- Graph restores the P=5 observation-versus-interpolation operation:
+  approximate 450, exact overclaim, and unsupported silence are distinct.
+- P=5 is not a directly observed table row and is visually distinguished as an
+  estimate target.
+- Market and blind-transfer step banks no longer expose answer order.
+- Blind-transfer source summary and initial choice labels no longer leak the
+  demand-factor classification.
+- Expected answers now carry explicit source-evidence references.
+- Validators and negative fixtures cover visible rationale leaks, missing
+  source evidence, missing graph interpolation signature, P=5 as direct table
+  observation, and step-bank answer-order leakage.
+- Keyboard-focus proof now uses real Tab traversal and fails if
+  `keyboard_focus` screenshots are byte-identical to initial screenshots.
+- Gallery generator preserves screenshot proof links when proof already exists.
+
 ## What Is Included
 
 - Four package exemplars preserved as versioned golden references:
@@ -90,7 +108,8 @@ mechanism.
 - Rendered gallery and screenshot proof for four exemplars plus one blind
   transfer.
 - Blind transfer to unseen paragraph `1.2.2 Vraagfactoren`.
-- Specialist review and two-round lead review.
+- Original specialist/two-round lead review plus fidelity-repair specialist and
+  lead review.
 
 ## What Is Not Authorized
 
@@ -110,7 +129,7 @@ mechanism.
   `reports/sprints/REASONING-GOLDEN-FAMILY-1-plan.md`
 - Result:
   `reports/sprints/REASONING-GOLDEN-FAMILY-1-result.md`
-- Specialist review:
+- Original specialist review:
   `reports/sprints/REASONING-GOLDEN-FAMILY-1-specialist-review.md`
 - Lead review round 1:
   `reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round1.md`
@@ -118,6 +137,10 @@ mechanism.
   `reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-corrections.md`
 - Lead review round 2:
   `reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round2.md`
+- Fidelity repair specialist review:
+  `reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-specialist-review.md`
+- Fidelity repair lead review:
+  `reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-lead-review.md`
 - Exemplar library:
   `references/exemplars/product-excellence/reasoning-games/`
 - Gallery:
@@ -135,10 +158,11 @@ mechanism.
   while preserving distinct reasoning routes?
 - Does the blind transfer to `1.2.2 Vraagfactoren` feel re-derived from the
   paragraph rather than cloned from an exemplar?
-- Are answer previews and feedback useful for students without giving away the
-  answer too early?
-- Does the graph example use graph evidence directly instead of turning into a
-  graph-drawing task?
+- Are initial screens free of visible correctness/rationale leaks?
+- Do answer previews and feedback help students after action without giving away
+  the answer too early?
+- Does the graph example use graph evidence and estimate status directly instead
+  of turning into a graph-drawing task?
 - Are the negative fixtures and checkers sufficient to prevent recurring
   defects?
 - Are the authority boundaries clear enough to prevent rollout or Scale Gate
@@ -146,28 +170,25 @@ mechanism.
 
 ## Validation To Inspect
 
-Remote CI to inspect:
-
-- `validate-platform` run `27945697101`, job `82689713012`.
-
-Local validation rerun during final synchronization:
+Local validation passed after fidelity repair:
 
 ```powershell
-npm.cmd run check:platform
+npm.cmd run capture:reasoning-golden
 npm.cmd run check:reasoning-golden
-npm.cmd run check:landing-v2
-npm.cmd run check:news-detective-v2
-npm.cmd run check:scope-language
-node build-scripts/reports/validate-report-json.js
-node build-scripts/references/check-mtu-evidence-layer.js
-node build-scripts/references/check-roadmap-version-index.js
+npm.cmd run check:platform
+node build-scripts/exemplars/generate-reasoning-golden-family-gallery.js; node build-scripts/sprints/check-reasoning-golden-family-gallery.js
 node build-scripts/sprints/emit-url-index.js --check
-node build-scripts/ci/check-evidence-line-endings.js
+node build-scripts/reports/validate-report-json.js
+git diff --check
 git diff --check origin/main...HEAD
+git -C ../4veco-lessen diff --check
 git -C ../4veco-lessen diff --check origin/main...HEAD
 ```
 
-The gate is ready for human decision only if the current paired PR heads remain
-clean, the remote CI is green, and the authority boundary above remains false
-for rollout, diagnostics, mastery, summative use, broad replacement, and Scale
-Gate claims.
+`npm.cmd run check:platform` passes with existing repository fixture warnings
+printed by Jest.
+
+The gate is ready for human decision only if the final pushed platform PR head
+has green remote CI, the lesson pairing remains valid, and the authority
+boundary above remains false for rollout, diagnostics, mastery, summative use,
+broad replacement, and Scale Gate claims.
