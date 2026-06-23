@@ -51,7 +51,7 @@ Proof required to close: Owner/human approval tied to exact PR head.
 
 ### H6-DOWNSTREAM-AUTHORITY-BOUNDARY
 
-Classification: `downstream_authority_blocker`
+Classification: `scale_blocker`
 
 The packet does not authorize product, student, diagnostics, PV, mastery, sequencing, lesson output, or Scale Gate 1.
 
@@ -63,7 +63,7 @@ Proof required to close: Separate downstream authority packet and explicit owner
 
 ### H6-H5-AUDIT-PASS
 
-Classification: `proof_requirement_met`
+Classification: `core_requirement_met`
 
 H5 unique-anchor audit is present and resolves accepted H5 evidence references with zero unresolved or ambiguous refs.
 

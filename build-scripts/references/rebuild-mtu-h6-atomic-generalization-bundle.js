@@ -638,8 +638,8 @@ function rebuild() {
     },
     {
       finding_id: 'H6-DOWNSTREAM-AUTHORITY-BOUNDARY',
-      classification: 'downstream_authority_blocker',
-      severity: 'downstream_authority_blocker',
+      classification: 'scale_blocker',
+      severity: 'scale_blocker',
       summary: 'The packet does not authorize product, student, diagnostics, PV, mastery, sequencing, lesson output, or Scale Gate 1.',
       blocks: ['product-route adoption', 'student/product use', 'Scale Gate 1'],
       does_not_block: ['reviewing this evidence packet'],
@@ -647,8 +647,8 @@ function rebuild() {
     },
     {
       finding_id: 'H6-H5-AUDIT-PASS',
-      classification: 'proof_requirement_met',
-      severity: 'proof_requirement_met',
+      classification: 'core_requirement_met',
+      severity: 'core_requirement_met',
       summary: 'H5 unique-anchor audit is present and resolves accepted H5 evidence references with zero unresolved or ambiguous refs.',
       evidence: 'reports/mtu-hardening/mtu-h5-anchor-integrity-audit.json',
       blocks: [],
