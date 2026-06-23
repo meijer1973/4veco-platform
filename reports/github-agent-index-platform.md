@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-22T19:37:27.981Z
+Generated: 2026-06-23T06:05:02.016Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/single-account-review-governance-20260622`
-Source commit: `18c0954f9834384f60b1bc72b94bb870e665a61a`
-Files indexed: 5769
+Source branch: `codex/y2-target-registry-task-foundation-impl1-20260623`
+Source commit: `82702f07118a1828fc232e7bbc8478110988cec3`
+Files indexed: 5781
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -134,7 +134,7 @@ Count: 85
 
 ## build scripts
 
-Count: 535
+Count: 536
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -411,6 +411,7 @@ Count: 535
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js
 - build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
 - build-scripts/references/close-and-apply-rx2b-graphical-foundation.js
@@ -721,7 +722,7 @@ Count: 42
 
 ## validators
 
-Count: 525
+Count: 526
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -887,6 +888,7 @@ Count: 525
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js
 - build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/validate-alignment-graph.js
@@ -1251,7 +1253,7 @@ Count: 525
 
 ## references
 
-Count: 675
+Count: 679
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1264,6 +1266,7 @@ Count: 675
 - references/authored/textbook-figure-standard.md
 - references/authored/textbook-rendered-page-acceptance-standard.md
 - references/authored/vraagtypen-en-opgaveontwerp.md
+- references/authored/year2-v6-target-foundation-candidates.json
 - references/data/alignment-graph.json
 - references/data/audits/empty-needs-audit.json
 - references/data/document_inventory.json
@@ -1755,6 +1758,8 @@ Count: 675
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
+- references/data/year2-target-foundation/answer-contracts.json
+- references/data/year2-target-foundation/source-reconstruction-foundation.json
 - references/exemplars/1.1.1-golden-presentation/accepted-snapshot-provenance.md
 - references/exemplars/1.1.1-golden-presentation/content-review-and-revision-notes.md
 - references/exemplars/1.1.1-golden-presentation/didactic-framework.md
@@ -1907,6 +1912,7 @@ Count: 675
 - references/schemas/unit-design-status.schema.json
 - references/schemas/unit.schema.json
 - references/schemas/worked-example.schema.json
+- references/schemas/year2-v6-target-foundation-candidates.schema.json
 - references/SOURCE_OF_TRUTH.md
 - references/ui/book-landing-v2/approved-minimal.html
 - references/ui/book-landing-v2/README.md
@@ -1931,7 +1937,7 @@ Count: 675
 
 ## reports
 
-Count: 3757
+Count: 3764
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2439,6 +2445,9 @@ Count: 3757
 - reports/reference-planning/Y2-ROOT-MAPPING-1-quality-log.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-subagent-review.md
+- reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json
+- reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.md
+- reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-review-packet.md
 - reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-architecture.md
 - reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-candidate-matrix.md
 - reports/reference-planning/Y3-MACRO-SPINE-MAPPING-1-evidence-routing.md
@@ -3491,6 +3500,7 @@ Count: 3757
 - reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
+- reports/review-gates/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/Y3-MACRO-SPINE-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
@@ -5269,6 +5279,7 @@ Count: 3757
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
+- reports/sprints/SINGLE-ACCOUNT-REVIEW-GOVERNANCE-1-lead-review-round1.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
@@ -5683,6 +5694,8 @@ Count: 3757
 - reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md
 - reports/sprints/Y2-ROOT-MAPPING-1-plan.md
 - reports/sprints/Y2-ROOT-MAPPING-1-result.md
+- reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-plan.md
+- reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-result.md
 - reports/sprints/Y3-MACRO-SPINE-MAPPING-1-plan.md
 - reports/sprints/Y3-MACRO-SPINE-MAPPING-1-result.md
 - reports/terminology-drift.md
