@@ -341,7 +341,16 @@ function mergeSupplementalEvidence(remoteEvidence, supplemental = {}) {
 
   const supplementalProof = pickObject(safe.proof);
   output.proof = output.proof || {};
-  for (const key of ['checkers', 'lead_review', 'branch_protection', 'required_ci_contexts', 'checkers_required', 'ci_waiver']) {
+  for (const key of [
+    'checkers',
+    'lead_review',
+    'branch_protection',
+    'human_authorization',
+    'integration',
+    'required_ci_contexts',
+    'checkers_required',
+    'ci_waiver',
+  ]) {
     if (Object.prototype.hasOwnProperty.call(supplementalProof, key)) {
       output.proof[key] = supplementalProof[key];
     }
@@ -377,7 +386,7 @@ function runReview(options) {
   const evidence = options.fixture
     ? readJson(options.fixture)
     : collectLiveEvidence(options.repo || DEFAULT_REPO, options.prNumber);
-  const supplemental = options.evidence ? readJson(options.evidence) : {};
+  const supplemental = options.supplemental || (options.evidence ? readJson(options.evidence) : {});
   const mergedEvidence = completeLeadReviewTailEvidence(mergeSupplementalEvidence(evidence, supplemental), {
     fixture: Boolean(options.fixture),
   });

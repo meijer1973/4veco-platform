@@ -57,6 +57,28 @@ describe('check-branch-protection', () => {
     expect(contexts).toEqual(['validate-platform', 'lint']);
   });
 
+  test('requires integration-authorized when operational flag is enabled', () => {
+    const summary = summarizeProtection(validProtection({
+      required_status_checks: {
+        strict: true,
+        contexts: ['validate-platform', 'integration-authorized'],
+      },
+    }), { requireIntegrationAuthorized: true });
+
+    expect(summary.ok).toBe(true);
+    expect(summary.expected.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
+  });
+
+  test('fails when integration-authorized is required but absent', () => {
+    const summary = summarizeProtection(validProtection(), { requireIntegrationAuthorized: true });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('required status context missing: integration-authorized');
+  });
+
   test('fails if approving review count returns to one', () => {
     const summary = summarizeProtection(validProtection(), {
       pullRequestReviews: {
