@@ -77,6 +77,23 @@ function buildBody(branch) {
   lines.push(`- ${lessen('AGENTS.md')}`);
   lines.push('');
 
+  lines.push('## PR Governance');
+  lines.push('');
+  lines.push(`- ${platform('agents/pr-readiness-reviewer-agent.md')}`);
+  lines.push(`- ${platform('docs/review/pr-throughput-policy.md')}`);
+  lines.push(`- ${platform('docs/review/pr-readiness-routing-policy.md')}`);
+  lines.push(`- ${platform('docs/review/pr-integration-lane-policy.md')}`);
+  lines.push(`- ${platform('docs/review/human-payload-authorization.schema.json')}`);
+  lines.push(`- ${platform('.github/workflows/authorized-pr-integration.yml')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/pr-readiness-router.js')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/review-pr-readiness.js')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/apply-pr-readiness-decision.js')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/check-human-payload-authorization.js')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/check-integration-lineage.js')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/integrate-authorized-pr.js')}`);
+  lines.push(`- ${platform('build-scripts/ci/check-branch-protection.js')}`);
+  lines.push('');
+
   lines.push('## Roadmaps');
   lines.push('');
   lines.push(`- ${platform('references/reference-team-roadmap.md')}`);

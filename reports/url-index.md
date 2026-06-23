@@ -22,6 +22,22 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/AGENTS.md
 
+## PR Governance
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/pr-readiness-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-throughput-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-readiness-routing-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-integration-lane-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/.github/workflows/authorized-pr-integration.yml
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/pr-readiness-router.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/review-pr-readiness.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-pr-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-payload-authorization.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lineage.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-pr.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/ci/check-branch-protection.js
+
 ## Roadmaps
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
@@ -162,6 +178,7 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-mainline-checker-repair/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-q3-fixture-execution/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PV-G2-pilot-content/bundle-urls.md

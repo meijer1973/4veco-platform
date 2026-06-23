@@ -3,6 +3,7 @@ const {
   isGovernanceSurface,
   normalizePath,
 } = require('./pr-readiness-governance-surfaces');
+const crypto = require('crypto');
 
 const ROUTES = Object.freeze({
   KEEP_DRAFT_REVISE: 'KEEP_DRAFT_REVISE',
@@ -94,6 +95,19 @@ function asArray(value) {
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value || {}));
+}
+
+function stableStringify(value) {
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function decisionDigest(decision) {
+  validateDecision(decision);
+  return crypto.createHash('sha256').update(stableStringify(decision)).digest('hex');
 }
 
 function highestLevel(levels) {
@@ -318,27 +332,46 @@ function leadProof(proof, headSha) {
     reviewedSha !== headSha &&
     afterLeadPaths.length > 0 &&
     afterLeadPaths.every(isEvidenceTailPath);
+  const integrationAuthorizedTail = integrationLeadAuthorizationProof(proof, reviewedSha, headSha);
 
   return {
     ok: Boolean(
       lead.path &&
         PASSING_LEAD_RESULTS.has(result) &&
         reviewedSha &&
-        (reviewedSha === headSha || evidenceOnlyTail)
+        (reviewedSha === headSha || evidenceOnlyTail || integrationAuthorizedTail)
     ),
-    stale: Boolean(reviewedSha && headSha && reviewedSha !== headSha && !evidenceOnlyTail),
+    stale: Boolean(reviewedSha && headSha && reviewedSha !== headSha && !evidenceOnlyTail && !integrationAuthorizedTail),
     evidenceOnlyTail,
+    integrationAuthorizedTail,
     postLeadReviewChangedPaths: afterLeadPaths,
     disallowedEvidenceTail: Boolean(
       reviewedSha &&
         reviewedSha !== headSha &&
         afterLeadPaths.length > 0 &&
+        !integrationAuthorizedTail &&
         !afterLeadPaths.every(isEvidenceTailPath)
     ),
     lead,
     result,
     reviewedSha: reviewedSha || null,
   };
+}
+
+function integrationLeadAuthorizationProof(proof, reviewedSha, headSha) {
+  if (!reviewedSha || !headSha || reviewedSha === headSha) return false;
+  const integration = proof.integration || {};
+  const baseDrift = integration.base_drift || {};
+  return Boolean(
+    integration.reviewed_payload_head_sha === reviewedSha &&
+      integration.integration_head_sha === headSha &&
+      integration.authorization_inherited === true &&
+      integration.requires_integration_delta_lead_review !== true &&
+      integration.requires_human_reauthorization !== true &&
+      baseDrift.requires_integration_delta_lead_review !== true &&
+      baseDrift.requires_human_reauthorization !== true &&
+      asArray(integration.failures).length === 0
+  );
 }
 
 function collectBlockers(evidence, signals) {
@@ -366,6 +399,12 @@ function collectRevisionReasons(evidence) {
   const lead = leadProof(proof, headSha);
   const branchProtection = branchProtectionProof(proof, evidence);
   const autonomousLevel = AUTONOMOUS_LEVELS.has(evidence.throughput.level);
+  const mergeState = String(evidence.reviewed_pr.merge_state || '');
+  const integrationStatusPendingBlock =
+    /^BLOCKED$/i.test(mergeState) &&
+    proof.integration &&
+    proof.integration.authorization_inherited === true &&
+    proof.integration.integration_head_sha === headSha;
 
   if (!evidence.reviewed_pr.repo || !evidence.reviewed_pr.number || !evidence.reviewed_pr.url) {
     reasons.push('missing_remote_pr_identity');
@@ -374,7 +413,9 @@ function collectRevisionReasons(evidence) {
   if (
     evidence.reviewed_pr.mergeable === false ||
     /^CONFLICTING$/i.test(String(evidence.reviewed_pr.mergeable || '')) ||
-    /^(DIRTY|BLOCKED|BEHIND)$/i.test(String(evidence.reviewed_pr.merge_state || ''))
+    /^DIRTY$/i.test(mergeState) ||
+    /^BEHIND$/i.test(mergeState) ||
+    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock)
   ) {
     reasons.push('merge_readiness_blocked');
   }
@@ -454,10 +495,13 @@ function proofSummary(evidence, collected) {
     lead_review_result: collected.lead.result || null,
     lead_reviewed_sha: collected.lead.reviewedSha,
     lead_review_evidence_tail_allowed: collected.lead.evidenceOnlyTail,
+    lead_review_integration_authorization_inherited: collected.lead.integrationAuthorizedTail,
     post_lead_review_changed_paths: collected.lead.postLeadReviewChangedPaths,
     changed_paths_verified: evidence.proof.changed_paths_verified === true,
     checkers: collected.checkers.checkers,
     branch_protection: collected.branchProtection,
+    human_authorization: evidence.proof.human_authorization || null,
+    integration: evidence.proof.integration || null,
   };
 }
 
@@ -672,11 +716,31 @@ function validateDecision(decision) {
     }
     if (
       decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
-      decision.proof.lead_review_evidence_tail_allowed !== true
+      decision.proof.lead_review_evidence_tail_allowed !== true &&
+      decision.proof.lead_review_integration_authorization_inherited !== true
     ) {
-      throw new Error(`${decision.route} requires lead review for reviewed head or verified evidence-only tail`);
+      throw new Error(`${decision.route} requires lead review for reviewed head, verified evidence-only tail, or inherited integration authorization`);
     }
-    if (decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha) {
+    if (decision.proof.lead_review_integration_authorization_inherited === true) {
+      const integration = decision.proof.integration || {};
+      const baseDrift = integration.base_drift || {};
+      if (
+        integration.reviewed_payload_head_sha !== decision.proof.lead_reviewed_sha ||
+        integration.integration_head_sha !== decision.reviewed_pr.head_sha ||
+        integration.authorization_inherited !== true ||
+        integration.requires_integration_delta_lead_review === true ||
+        integration.requires_human_reauthorization === true ||
+        baseDrift.requires_integration_delta_lead_review === true ||
+        baseDrift.requires_human_reauthorization === true ||
+        asArray(integration.failures).length > 0
+      ) {
+        throw new Error(`${decision.route} requires valid integration authorization proof`);
+      }
+    }
+    if (
+      decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
+      decision.proof.lead_review_integration_authorization_inherited !== true
+    ) {
       const tailPaths = uniqueStrings(asArray(decision.proof.post_lead_review_changed_paths).map(normalizePath));
       if (tailPaths.length === 0 || !tailPaths.every(isEvidenceTailPath)) {
         throw new Error(`${decision.route} requires verified evidence-only tail paths`);
@@ -691,8 +755,29 @@ function decisionMarker(decision) {
   return `<!-- 4veco-pr-readiness:${decision.reviewed_pr.repo}:${decision.reviewed_pr.number}:${decision.reviewed_pr.head_sha} -->`;
 }
 
+function parseRenderedDecisionMarkdown(body) {
+  const text = String(body || '');
+  const marker = text.match(/<!--\s*4veco-pr-readiness:([^:]+\/[^:]+):(\d+):([a-f0-9]{40})\s*-->/i);
+  if (!marker) throw new Error('PR readiness marker not found');
+  const digestMatch = text.match(/Decision digest:\s*`sha256:([a-f0-9]{64})`/i);
+  if (!digestMatch) throw new Error('PR readiness decision digest not found');
+  const machineBlock = text.match(/## Machine Decision\s+```json\s*([\s\S]*?)```/i);
+  if (!machineBlock) throw new Error('machine-readable PR readiness decision not found');
+  const decision = JSON.parse(machineBlock[1]);
+  validateDecision(decision);
+  const expectedMarker = decisionMarker(decision);
+  if (!text.includes(expectedMarker)) throw new Error('PR readiness marker does not match machine decision');
+  if (marker[1] !== decision.reviewed_pr.repo) throw new Error('PR readiness marker repository mismatch');
+  if (Number(marker[2]) !== decision.reviewed_pr.number) throw new Error('PR readiness marker PR number mismatch');
+  if (marker[3] !== decision.reviewed_pr.head_sha) throw new Error('PR readiness marker head mismatch');
+  const digest = decisionDigest(decision);
+  if (digestMatch[1] !== digest) throw new Error('PR readiness decision digest mismatch');
+  return { decision, digest, marker: expectedMarker };
+}
+
 function renderDecisionMarkdown(decision) {
   validateDecision(decision);
+  const digest = decisionDigest(decision);
   const lines = [
     decisionMarker(decision),
     '# PR Readiness Decision',
@@ -705,6 +790,7 @@ function renderDecisionMarkdown(decision) {
     `- Throughput level: \`${decision.throughput.level}\``,
     `- Human-review payload: \`${decision.human_review_payload}\``,
     `- Human notification required: \`${decision.human_notification_required}\``,
+    `- Decision digest: \`sha256:${digest}\``,
     '',
     '## Reason Codes',
     '',
@@ -730,9 +816,24 @@ function renderDecisionMarkdown(decision) {
     `- Checker proof: ${(decision.proof.checkers || []).map((checker) => `\`${checker.command || 'unknown'}:${checker.status || checker.conclusion || checker.result || 'unknown'}\``).join(', ') || 'none recorded'}`,
     `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``,
     `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
+    `- Integration authorization inherited for lead review: \`${Boolean(decision.proof.lead_review_integration_authorization_inherited)}\``,
     `- Branch protection: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
-  lines.push('');
+  if (decision.proof.human_authorization) {
+    lines.push(`- Human payload authorization: \`${JSON.stringify(decision.proof.human_authorization)}\``);
+  }
+  if (decision.proof.integration) {
+    lines.push(`- Integration proof: \`${JSON.stringify(decision.proof.integration)}\``);
+  }
+  lines.push(
+    '',
+    '## Machine Decision',
+    '',
+    '```json',
+    JSON.stringify(decision, null, 2),
+    '```',
+    ''
+  );
   return `${lines.join('\n')}\n`;
 }
 
@@ -740,8 +841,10 @@ module.exports = {
   ALLOWED_TRANSITIONS,
   ROUTES,
   classifyPrReadiness,
+  decisionDigest,
   decisionMarker,
   normalizeEvidence,
+  parseRenderedDecisionMarkdown,
   renderDecisionMarkdown,
   validateDecision,
 };

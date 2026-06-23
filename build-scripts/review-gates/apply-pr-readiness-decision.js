@@ -231,6 +231,7 @@ if (require.main === module) {
 
 module.exports = {
   applyDecisionToState,
+  applyLiveDecision,
   runApply,
   verifyTransitionPreconditions,
 };

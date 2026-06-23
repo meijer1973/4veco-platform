@@ -107,6 +107,8 @@ Human-readable:
 - `agents/visual-qa-agent.md`
 - `docs/review/pr-throughput-policy.md`
 - `docs/review/pr-readiness-routing-policy.md`
+- `docs/review/pr-integration-lane-policy.md`
+- `docs/review/human-payload-authorization.schema.json`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
@@ -131,6 +133,7 @@ Machine-readable:
     "references/authored/course-target-exercises.json",
     "references/data/inspection-standards/source-register.json",
     "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+    "docs/review/human-payload-authorization.schema.json",
     "docs/roadmaps/roadmap-version-index.json",
     "reports/internal-dashboard/dashboard-data.json"
   ]
@@ -161,6 +164,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-throughput-policy.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-readiness-routing-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-integration-lane-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
@@ -179,6 +184,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/nl-vo-evidence-profile.v0.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
@@ -213,6 +219,10 @@ Use these anchors before free-form browsing.
   "lead_review_agent": "agents/lead-reviewer-agent.md",
   "pr_readiness_reviewer_agent": "agents/pr-readiness-reviewer-agent.md",
   "pr_readiness_routing_policy": "docs/review/pr-readiness-routing-policy.md",
+  "pr_integration_lane_policy": "docs/review/pr-integration-lane-policy.md",
+  "human_payload_authorization_schema": "docs/review/human-payload-authorization.schema.json",
+  "authorized_pr_integration_workflow": ".github/workflows/authorized-pr-integration.yml",
+  "authorized_pr_integration_runner": "build-scripts/review-gates/integrate-authorized-pr.js",
   "testing_agent": "agents/testing-agent.md",
   "accessibility_agent": "agents/accessibility-agent.md",
   "teacher_learning_quality_review_agent": "agents/teacher-learning-quality-review-agent.md",
@@ -244,6 +254,10 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/pr-readiness-reviewer-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-readiness-routing-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-integration-lane-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/.github/workflows/authorized-pr-integration.yml
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-pr.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
@@ -346,6 +360,20 @@ index_anchors (full URLs):
     "agents/econ-companion-visual-review.md",
     "agents/visual-qa-agent.md"
   ],
+  "pr_governance_paths": [
+    ".github/workflows/authorized-pr-integration.yml",
+    "docs/review/pr-throughput-policy.md",
+    "docs/review/pr-readiness-routing-policy.md",
+    "docs/review/pr-integration-lane-policy.md",
+    "docs/review/human-payload-authorization.schema.json",
+    "build-scripts/review-gates/pr-readiness-router.js",
+    "build-scripts/review-gates/review-pr-readiness.js",
+    "build-scripts/review-gates/apply-pr-readiness-decision.js",
+    "build-scripts/review-gates/check-human-payload-authorization.js",
+    "build-scripts/review-gates/check-integration-lineage.js",
+    "build-scripts/review-gates/integrate-authorized-pr.js",
+    "build-scripts/ci/check-branch-protection.js"
+  ],
   "reference_paths": [
     "RESEARCH_AGENT_MAP_REFERENCES.md",
     "references/SOURCE_OF_TRUTH.md",
@@ -431,6 +459,21 @@ review_agent_paths (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/student-experience-review-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
+
+pr_governance_paths (full URLs):
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/.github/workflows/authorized-pr-integration.yml
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-throughput-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-readiness-routing-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-integration-lane-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/pr-readiness-router.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/review-pr-readiness.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-pr-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-payload-authorization.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lineage.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-pr.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/ci/check-branch-protection.js
 
 reference_paths (full URLs):
 
@@ -518,6 +561,7 @@ Agents MUST follow this sequence:
    - reference task -> `RESEARCH_AGENT_MAP_REFERENCES.md` and `RESEARCH_AGENT_PROMPT_REFERENCES.md`
    - multi-agent review orchestration -> `agents/lead-reviewer-agent.md` plus the relevant specialist agents and evidence surfaces
    - draft-to-review PR lifecycle routing -> `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, and the exact remote PR evidence
+   - human-authorized PR integration -> `docs/review/pr-integration-lane-policy.md`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, and `build-scripts/review-gates/integrate-authorized-pr.js`
    - testing or validation evidence -> `agents/testing-agent.md`, `package.json`, and the relevant test/validator scripts
    - accessibility review -> `agents/accessibility-agent.md` plus rendered artifacts, screenshots, OCR/text evidence, and source semantics where relevant
    - teacher learning-quality review -> `agents/teacher-learning-quality-review-agent.md` plus learning goals, paragraph plan, target exercise, formative checks, differentiation paths, and student-facing artifacts
@@ -616,6 +660,22 @@ Rules:
     "BUILD-CHAPTER.md",
     "reports",
     "references"
+  ],
+  "pr_governance": [
+    "AGENTS.md",
+    "agents/pr-readiness-reviewer-agent.md",
+    "docs/review/pr-throughput-policy.md",
+    "docs/review/pr-readiness-routing-policy.md",
+    "docs/review/pr-integration-lane-policy.md",
+    "docs/review/human-payload-authorization.schema.json",
+    ".github/workflows/authorized-pr-integration.yml",
+    "build-scripts/review-gates/pr-readiness-router.js",
+    "build-scripts/review-gates/review-pr-readiness.js",
+    "build-scripts/review-gates/apply-pr-readiness-decision.js",
+    "build-scripts/review-gates/check-human-payload-authorization.js",
+    "build-scripts/review-gates/check-integration-lineage.js",
+    "build-scripts/review-gates/integrate-authorized-pr.js",
+    "build-scripts/ci/check-branch-protection.js"
   ],
   "testing_validation": [
     "agents/testing-agent.md",

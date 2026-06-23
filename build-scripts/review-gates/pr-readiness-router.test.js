@@ -3,6 +3,7 @@ const path = require('path');
 const {
   classifyPrReadiness,
   decisionMarker,
+  parseRenderedDecisionMarkdown,
   renderDecisionMarkdown,
   validateDecision,
 } = require('./pr-readiness-router');
@@ -278,6 +279,162 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).toContain('lead_review_stale_after_substantive_change');
   });
 
+  test('inherited integration authorization preserves payload-head lead review for exact integration head', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-platform',
+        number: 136,
+        url: 'https://github.com/meijer1973/4veco-platform/pull/136',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: integrationHead,
+        merge_state: 'CLEAN',
+        mergeable: true,
+      },
+      changed_paths: ['docs/inspection-standards/england-overlay-deepening.md'],
+      throughput: {
+        class: 'normal_sprint',
+        authority_class: 'protected_reference',
+        level: 'L4',
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: { viable: false, target: null, reason: null },
+      proof: {
+        ...explicitProof(integrationHead),
+        lead_review: {
+          path: 'subagent:exact-head final lead review',
+          result: 'PASS',
+          reviewed_commit_sha: payloadHead,
+        },
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_AND_MERGE',
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: false,
+          failures: [],
+          base_drift: {
+            classification: 'no_substantive_overlap',
+            requires_integration_delta_lead_review: false,
+            requires_human_reauthorization: false,
+          },
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.proof.lead_review_integration_authorization_inherited).toBe(true);
+    expect(validateDecision(decision)).toBe(true);
+    expect(renderDecisionMarkdown(decision)).toContain('Integration authorization inherited for lead review: `true`');
+  });
+
+  test('pending integration-authorized does not turn BLOCKED into a readiness loop', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-platform',
+        number: 136,
+        url: 'https://github.com/meijer1973/4veco-platform/pull/136',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: integrationHead,
+        merge_state: 'BLOCKED',
+        mergeable: true,
+      },
+      changed_paths: ['docs/inspection-standards/england-overlay-deepening.md'],
+      throughput: {
+        class: 'normal_sprint',
+        authority_class: 'protected_reference',
+        level: 'L4',
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: { viable: false, target: null, reason: null },
+      proof: {
+        ...explicitProof(integrationHead),
+        lead_review: {
+          path: 'subagent:exact-head final lead review',
+          result: 'PASS',
+          reviewed_commit_sha: payloadHead,
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: false,
+          failures: [],
+          base_drift: {
+            classification: 'no_substantive_overlap',
+            requires_integration_delta_lead_review: false,
+            requires_human_reauthorization: false,
+          },
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.reason_codes).not.toContain('merge_readiness_blocked');
+  });
+
+  test('integration authorization does not preserve lead review when delta review is required', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-platform',
+        number: 136,
+        url: 'https://github.com/meijer1973/4veco-platform/pull/136',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: integrationHead,
+        merge_state: 'CLEAN',
+        mergeable: true,
+      },
+      changed_paths: ['docs/inspection-standards/england-overlay-deepening.md'],
+      throughput: {
+        class: 'normal_sprint',
+        authority_class: 'protected_reference',
+        level: 'L4',
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: { viable: false, target: null, reason: null },
+      proof: {
+        ...explicitProof(integrationHead),
+        lead_review: {
+          path: 'subagent:exact-head final lead review',
+          result: 'PASS',
+          reviewed_commit_sha: payloadHead,
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: true,
+          failures: [],
+          base_drift: {
+            classification: 'substantive_overlap',
+            requires_integration_delta_lead_review: true,
+            requires_human_reauthorization: false,
+          },
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('lead_review_stale_after_substantive_change');
+  });
+
   test('missing validate-platform is rejected even when another check is green', () => {
     const fixture = readFixture('live-l1-ready.json');
     const decision = classifyPrReadiness({
@@ -424,6 +581,16 @@ describe('pr-readiness-router', () => {
     expect(markdown).toContain('## Proof Summary');
     expect(markdown).toContain('validate-platform');
     expect(markdown).toContain('reports/sprints/LIVE-L1-lead-review-round2.md');
+  });
+
+  test('rendered decision parser rejects marker and machine-decision disagreement', () => {
+    const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
+    const markdown = renderDecisionMarkdown(decision).replace(
+      decisionMarker(decision),
+      '<!-- 4veco-pr-readiness:meijer1973/4veco-platform:999:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->'
+    );
+
+    expect(() => parseRenderedDecisionMarkdown(markdown)).toThrow('PR readiness marker does not match machine decision');
   });
 
   test.each(GOVERNANCE_SURFACE_TEST_PATHS)('governance surface %s forces human review', (changedPath) => {

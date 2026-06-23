@@ -19,6 +19,7 @@ Path reliability:
 | Which engine/source/template should be changed? | `4veco-platform` |
 | How should multiple review/testing agents be coordinated into one go/no-go decision? | `agents/lead-reviewer-agent.md` |
 | How should a completed remote draft PR be routed to revise, batch, lead-only closure, human review, or pause? | `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md` |
+| How should a human-authorized PR be serialized through base refresh, exact-head readiness, and merge? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, `build-scripts/review-gates/integrate-authorized-pr.js` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
 | How should accessibility, readability, contrast, alt text, OCR, or keyboard access be reviewed? | `agents/accessibility-agent.md` |
 | How should learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, transfer, retention, or classroom readiness be reviewed? | `agents/teacher-learning-quality-review-agent.md` |
@@ -62,6 +63,10 @@ Useful entry points:
 - `agents/visual-qa-agent.md`
 - `docs/review/pr-throughput-policy.md`
 - `docs/review/pr-readiness-routing-policy.md`
+- `docs/review/pr-integration-lane-policy.md`
+- `docs/review/human-payload-authorization.schema.json`
+- `.github/workflows/authorized-pr-integration.yml`
+- `build-scripts/review-gates/integrate-authorized-pr.js`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
@@ -75,3 +80,7 @@ Task-routing guidance:
   decisions.
 - Use `4veco-lessen/specifications/product-end-state.md` for the operational
   student route and completeness definition.
+- Use `docs/review/pr-integration-lane-policy.md` plus the authorized
+  integration workflow when an owner decision is already bound to a reviewed PR
+  payload and the remaining work is base refresh, exact-head readiness proof,
+  and serialized merge.

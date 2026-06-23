@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-23T08:09:44.404Z
+Generated: 2026-06-23T13:04:07.065Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/reasoning-golden-family-platform-20260620`
-Source commit: `5acb7c936f45d635618d79cabe3c40823e4f2214`
-Files indexed: 5916
+Source branch: `codex/pr-integration-lane-1-20260623`
+Source commit: `9efdcb3819bd11b1ec2ae451205aa6750d42a029`
+Files indexed: 5976
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -136,7 +136,7 @@ Count: 87
 
 ## build scripts
 
-Count: 543
+Count: 560
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -218,11 +218,14 @@ Count: 543
 - build-scripts/inspection/build-dutch-diagnostic-report.js
 - build-scripts/inspection/build-international-overlay-architecture.js
 - build-scripts/inspection/build-international-quality-standards.js
+- build-scripts/inspection/build-selected-jurisdiction-deepening.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
+- build-scripts/inspection/check-selected-jurisdiction-deepening.js
+- build-scripts/inspection/check-selected-jurisdiction-deepening.test.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
@@ -350,6 +353,8 @@ Count: 543
 - build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
 - build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js
+- build-scripts/references/check-mtu-h5-anchor-integrity.js
+- build-scripts/references/check-mtu-h5-anchor-integrity.test.js
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
@@ -373,6 +378,8 @@ Count: 543
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js
 - build-scripts/references/check-mtu-h5-sample-selection-packet.js
+- build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
+- build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.test.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -427,6 +434,7 @@ Count: 543
 - build-scripts/references/course-blueprint-active.js
 - build-scripts/references/derive-exam-codes.js
 - build-scripts/references/download-exams.js
+- build-scripts/references/evidence-reference-resolver.test.js
 - build-scripts/references/exam-question-gap-audit.js
 - build-scripts/references/execute-mtu-h2f-conditional-lanes.js
 - build-scripts/references/execute-mtu-h2j-a20-a94-a95.js
@@ -435,6 +443,7 @@ Count: 543
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
 - build-scripts/references/inventory-file-hash.js
+- build-scripts/references/lib/evidence-reference-resolver.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-course-target-exercises-v5.js
@@ -443,6 +452,7 @@ Count: 543
 - build-scripts/references/operation-candidate-add.js
 - build-scripts/references/prepare-empty-needs-review.js
 - build-scripts/references/README.md
+- build-scripts/references/rebuild-mtu-h6-atomic-generalization-bundle.js
 - build-scripts/references/refresh-math-procedures.js
 - build-scripts/references/repair-target-exercise-blueprint-refs.js
 - build-scripts/references/rewire-skilltree.js
@@ -484,6 +494,7 @@ Count: 543
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/apply-pr-readiness-decision.js
+- build-scripts/review-gates/authorized-pr-integration-workflow.test.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
 - build-scripts/review-gates/capture-gate-reason-revision1-playable-proof.js
 - build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js
@@ -506,11 +517,17 @@ Count: 543
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-human-payload-authorization.js
+- build-scripts/review-gates/check-human-payload-authorization.test.js
+- build-scripts/review-gates/check-integration-lineage.js
+- build-scripts/review-gates/check-integration-lineage.test.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/emit-gate-reason-revision1-playable-lab.js
 - build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
+- build-scripts/review-gates/integrate-authorized-pr.js
+- build-scripts/review-gates/integrate-authorized-pr.test.js
 - build-scripts/review-gates/pr-readiness-governance-surfaces.js
 - build-scripts/review-gates/pr-readiness-router.js
 - build-scripts/review-gates/pr-readiness-router.test.js
@@ -735,13 +752,14 @@ Count: 46
 
 ## validators
 
-Count: 540
+Count: 551
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
+- archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
@@ -790,6 +808,8 @@ Count: 540
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
+- build-scripts/inspection/check-selected-jurisdiction-deepening.js
+- build-scripts/inspection/check-selected-jurisdiction-deepening.test.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
@@ -835,6 +855,8 @@ Count: 540
 - build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
 - build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js
+- build-scripts/references/check-mtu-h5-anchor-integrity.js
+- build-scripts/references/check-mtu-h5-anchor-integrity.test.js
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
@@ -858,6 +880,8 @@ Count: 540
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js
 - build-scripts/references/check-mtu-h5-sample-selection-packet.js
+- build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
+- build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.test.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -928,6 +952,10 @@ Count: 540
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-human-payload-authorization.js
+- build-scripts/review-gates/check-human-payload-authorization.test.js
+- build-scripts/review-gates/check-integration-lineage.js
+- build-scripts/review-gates/check-integration-lineage.test.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -1280,7 +1308,7 @@ Count: 540
 
 ## references
 
-Count: 725
+Count: 736
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1329,12 +1357,22 @@ Count: 725
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
 - references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/negative/duplicate-source-id.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/negative/extra-authority-property.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/negative/forbidden-output-true.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/negative/invalid-source-url.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/negative/missing-boundary-warning.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/negative/unsupported-finding-classification.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/positive/england.deepening.v1.sample.json
+- references/data/inspection-standards/fixtures/selected-deepening/positive/flanders.deepening.v1.sample.json
 - references/data/inspection-standards/international-authority-profiles.v0.json
 - references/data/inspection-standards/international-common-core.v0.json
 - references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - references/data/inspection-standards/overlays/bavaria.v0.json
 - references/data/inspection-standards/overlays/california.v0.json
+- references/data/inspection-standards/overlays/england.deepening.v1.json
 - references/data/inspection-standards/overlays/england.v0.json
+- references/data/inspection-standards/overlays/flanders.deepening.v1.json
 - references/data/inspection-standards/overlays/flanders.v0.json
 - references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
 - references/data/inspection-standards/README.md
@@ -1966,6 +2004,7 @@ Count: 725
 - references/schemas/game-item.schema.json
 - references/schemas/inspection-evidence.schema.json
 - references/schemas/international-jurisdiction-overlay.schema.json
+- references/schemas/international-jurisdiction-overlay.schema.v1.json
 - references/schemas/misconception.schema.json
 - references/schemas/operation-answer-skill-contract.schema.json
 - references/schemas/operation-candidates.schema.json
@@ -2010,7 +2049,7 @@ Count: 725
 
 ## reports
 
-Count: 3840
+Count: 3860
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2071,16 +2110,8 @@ Count: 3840
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -2119,6 +2150,10 @@ Count: 3840
 - reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md
 - reports/inspection-standards/dutch-school-evidence-pack-candidate.json
 - reports/inspection-standards/dutch-school-evidence-pack-candidate.md
+- reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.json
+- reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.md
+- reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json
+- reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
@@ -2133,11 +2168,11 @@ Count: 3840
 - reports/inspection-standards/international-overlay-archetype-pilot.md
 - reports/inspection-standards/international-overlay-architecture-decision.json
 - reports/inspection-standards/international-overlay-architecture-decision.md
+- reports/inspection-standards/selected-jurisdiction-deepening-decision.json
+- reports/inspection-standards/selected-jurisdiction-deepening-decision.md
+- reports/inspection-standards/selected-jurisdiction-readiness-comparison.json
+- reports/inspection-standards/selected-jurisdiction-readiness-comparison.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2299,6 +2334,8 @@ Count: 3840
 - reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.md
 - reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json
 - reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.md
+- reports/mtu-hardening/mtu-h5-anchor-integrity-audit.json
+- reports/mtu-hardening/mtu-h5-anchor-integrity-audit.md
 - reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json
 - reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.md
 - reports/mtu-hardening/mtu-h5-next-repair-packet.json
@@ -2355,6 +2392,24 @@ Count: 3840
 - reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.md
 - reports/mtu-hardening/mtu-h5-sample-selection-packet.json
 - reports/mtu-hardening/mtu-h5-sample-selection-packet.md
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-1-correction-11.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-1-opgave-08.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-2-correction-08.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/ha23-2-opgave-05.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw23-2-correction-12.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw23-2-opgave-11.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-06.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-07.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-correction-08.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-03.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-1-opgave-04.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-2-correction-10.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1-evidence/vw24-2-opgave-09.png
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.md
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-fixture.json
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.json
+- reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
@@ -3325,6 +3380,9 @@ Count: 3840
 - reports/review-gates/GATE-MTU-H5-RP005-q27-planning-packet/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.json
+- reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json
@@ -4972,6 +5030,7 @@ Count: 3840
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
+- reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -5873,10 +5932,11 @@ _No files indexed in this group._
 
 ## other
 
-Count: 614
+Count: 625
 
 - .gitattributes
 - .github/ci-python-requirements.txt
+- .github/workflows/authorized-pr-integration.yml
 - .github/workflows/platform-ci.yml
 - .gitignore
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-closure-log.md
@@ -5909,6 +5969,11 @@ Count: 614
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-lead-architecture-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-closure-record.md
+- archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-correction-log.md
+- archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-specialist-gate-results.md
+- archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-sprint-plan.md
 - archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 - archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md
@@ -6173,8 +6238,10 @@ Count: 614
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
 - docs/inspection-standards/chapter-1-3-source-traceability.md
+- docs/inspection-standards/england-overlay-deepening.md
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
+- docs/inspection-standards/flanders-overlay-deepening.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
 - docs/inspection-standards/international-common-core-model.md
 - docs/inspection-standards/international-overlay-architecture.md
@@ -6183,9 +6250,12 @@ Count: 614
 - docs/inspection-standards/nl-vo-evidence-model.md
 - docs/inspection-standards/report-only-generator-plan.md
 - docs/inspection-standards/report-only-schema-design.md
+- docs/inspection-standards/selected-jurisdiction-transformation-contract.md
 - docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
+- docs/review/human-payload-authorization.schema.json
+- docs/review/pr-integration-lane-policy.md
 - docs/review/pr-readiness-decision.schema.json
 - docs/review/pr-readiness-routing-policy.md
 - docs/review/pr-throughput-policy.md
