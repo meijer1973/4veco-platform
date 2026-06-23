@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "report_id": "selected-jurisdiction-deepening-decision",
+  "sprint_id": "GOAL-IQS-SELECTED-DEEPENING-1",
+  "generated_date": "2026-06-22",
+  "status": "decision_ready_for_human_review",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-sprint-plan.md",
+  "accepted_architecture_decision": "PROCEED_TO_SELECTED_JURISDICTION_DEEPENING",
+  "accepted_architecture_source": "reports/inspection-standards/international-overlay-architecture-decision.md",
+  "non_negotiable_requirements": [
+    "Use REV-STD-1 and cite product end-state plus original sprint/gate spec.",
+    "Close the accepted shallow-schema carry item before expanded machine consumption.",
+    "Generate nested schema v1 with strict nested additionalProperties:false controls.",
+    "Produce England and Flanders deep descriptors only; keep Bavaria and California as architectural controls.",
+    "Use explicit source and output allowlists only; do not glob directories or scan generated lesson output.",
+    "Map Book 1 Chapters 1.2 and 1.3 to exact local source layers where possible.",
+    "Produce internal transformation specifications only; do not generate localized chapters.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "Do not carry a missing core requirement as PASS WITH FLAGS.",
+    "Keep country editions, school/teacher-facing output, public output, product routes, Scale Gate, diagnostics/mastery/PV, student/product use, personal data, legal sufficiency, compliance, approval, accreditation, and inspection-readiness claims blocked."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "schema_v1",
+      "requirement": "Nested schema v1 enforces required nested fields, enums, strict additionalProperties:false, URI/date controls, source-id uniqueness, false authority flags, and finding fields.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "positive_negative_fixtures",
+      "requirement": "Positive and negative fixtures prove malformed descriptors fail schema validation.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "england_deep_descriptor",
+      "requirement": "England descriptor includes Ofsted, DfE, one bounded awarding body, assessment objectives, command words, representative specimen/mark-scheme source layer, and SEND terminology.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "flanders_deep_descriptor",
+      "requirement": "Flanders descriptor selects exact upper-secondary stage/pathway and official goal family, with quality-framework and school/network limitations explicit.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "england_crosswalk",
+      "requirement": "England Book 1 1.2/1.3 crosswalk maps topic, AO, command word, task form, diagram convention, mark-scheme expectation, terminology, context, and known gap.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "flanders_crosswalk",
+      "requirement": "Flanders Book 1 1.2/1.3 crosswalk maps exact official goals where possible and marks school/network-dependent gaps.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "transformation_specs",
+      "requirement": "Transformation specifications identify unchanged content, terminology, examples, institutions, units/currency, diagrams, assessment replacements, citations, extension-only content, and exclusions, including the own-price movement versus non-price demand-factor shift distinction.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "comparative_decision",
+      "requirement": "Readiness comparison names source completeness, curriculum fit, assessment fit, terminology effort, localization effort, accessibility/inclusion, school-owned evidence, local-expert dependency, reuse estimate, and blockers.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "authority_boundary",
+      "requirement": "All downstream authority remains blocked and visible.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    },
+    {
+      "id": "final_human_review_stop",
+      "requirement": "Return only after specialist corrections, final lead PASS, fresh mergeable PR, and green CI.",
+      "status": "met_for_selected_deepening_packet",
+      "proof_required_to_close": "Checker PASS, schema fixtures PASS, specialist reviews PASS, final lead PASS, fresh PR, green CI, and human review."
+    }
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false,
+    "localized_student_facing_chapters": false,
+    "teacher_school_facing_distribution": false,
+    "selected_jurisdiction_public_output": false,
+    "selected_jurisdiction_evidence_pack": false,
+    "selected_jurisdiction_product_route": false,
+    "selected_jurisdiction_scale_gate": false,
+    "selected_jurisdiction_personal_data": false,
+    "selected_jurisdiction_legal_sufficiency_claim": false,
+    "selected_jurisdiction_compliance_claim": false,
+    "selected_jurisdiction_approval_claim": false,
+    "selected_jurisdiction_accreditation_claim": false,
+    "selected_jurisdiction_inspection_readiness_claim": false
+  },
+  "output_files_written": [
+    "reports/inspection-standards/selected-jurisdiction-deepening-decision.md",
+    "reports/inspection-standards/selected-jurisdiction-deepening-decision.json"
+  ],
+  "final_selected_jurisdiction_deepening_decision": {
+    "selected": "PROCEED_TO_INTERNAL_OVERLAY_PROTOTYPE_PLANNING",
+    "allowed_options": [
+      "PROCEED_TO_INTERNAL_OVERLAY_PROTOTYPE_PLANNING",
+      "LIMIT_DEEPENING_TO_ONE_JURISDICTION",
+      "RESEARCH_GAPS_BEFORE_PROTOTYPE_PLANNING"
+    ],
+    "decision_selection_count": 1,
+    "rationale": "England and Flanders expose different enough source, assessment, language, and quality-governance risks to justify a later internal overlay prototype-planning sprint without producing country editions."
+  },
+  "still_blocked": [
+    "country_compliance_claim",
+    "inspectorate_approval_claim",
+    "legal_compliance_claim",
+    "inspection_readiness_claim",
+    "school_pack_trial",
+    "teacher_school_distribution",
+    "public_external_distribution",
+    "evidence_pack_deployment",
+    "package_script_invocation",
+    "ci_invocation",
+    "dashboard_gate",
+    "quality_ref_integration",
+    "product_route_adoption",
+    "scale_gate_integration",
+    "diagnostics_mastery_pv",
+    "student_or_product_use",
+    "personal_data_processing",
+    "complete_op0_pta_summative_claim",
+    "op0_claim",
+    "pta_validity_claim",
+    "summative_validity_claim",
+    "single_national_us_inspection_claim",
+    "whole_uk_claim_from_england_only",
+    "all_belgium_claim_from_flanders_only",
+    "germany_single_land_claim",
+    "country_edition_generation",
+    "local_exam_code_implementation",
+    "teacher_school_facing_overlay",
+    "public_overlay_output",
+    "school_owned_evidence_collection",
+    "package_or_ci_product_integration",
+    "country_specific_legal_claim",
+    "localized_student_facing_chapters",
+    "teacher_school_facing_distribution",
+    "selected_jurisdiction_public_output",
+    "selected_jurisdiction_evidence_pack",
+    "selected_jurisdiction_product_route",
+    "selected_jurisdiction_scale_gate",
+    "selected_jurisdiction_personal_data",
+    "selected_jurisdiction_legal_sufficiency_claim",
+    "selected_jurisdiction_compliance_claim",
+    "selected_jurisdiction_approval_claim",
+    "selected_jurisdiction_accreditation_claim",
+    "selected_jurisdiction_inspection_readiness_claim"
+  ],
+  "comparison_report": "selected-jurisdiction-readiness-comparison",
+  "next_authorized_work_if_human_accepts": "Internal overlay prototype-planning only; no localized chapters, school-facing output, public output, product route, Scale Gate, personal data, legal sufficiency, compliance, approval, accreditation, or inspection-readiness claim.",
+  "finding_classification": [
+    {
+      "finding": "The selected-deepening packet can proceed to human review with one decision selected.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for human review.",
+      "does_not_block": "A later internal prototype-planning sprint if human accepted.",
+      "proof_required_to_close": "Human owner decision."
+    },
+    {
+      "finding": "All implementation and downstream authority remains blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Country editions, localized student-facing chapters, teacher/school-facing distribution, public output, evidence-pack deployment, product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product use, personal data, legal sufficiency, compliance, approval, accreditation, and inspection-readiness claims.",
+      "does_not_block": "Internal selected-jurisdiction readiness decision.",
+      "proof_required_to_close": "Separate future human authorization with local expert/source/legal/accessibility review."
+    }
+  ]
+}
