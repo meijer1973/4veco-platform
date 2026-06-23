@@ -4,6 +4,10 @@ Generated: 2026-06-23
 
 Fidelity repair stamp: 2026-06-23
 
+Human gate decision: ACCEPT
+
+Human gate decision recorded: 2026-06-23
+
 ## Fidelity Repair Status
 
 This packet supersedes the June 20/June 22 gate packet after the human
@@ -59,20 +63,45 @@ Final fidelity-repair lead-review verdict:
 - PASS WITH NON-BLOCKING FLAGS
 - subagent: `019ef31c-ca11-7cb0-b0a1-9a6b0cca53fb`
 
-## Human Decision Required
+## Human Gate Decision
+
+`GATE-REASONING-GOLDEN-FAMILY-1`: ACCEPT
+
+Authorized:
+
+- canonical reasoning-game golden-family reference;
+- canonical authoring skill and transfer framework;
+- shared reasoning composer and reviewed task primitives;
+- merge of platform PR #128 followed by lesson PR #32.
+
+Not authorized:
+
+- student product rollout;
+- broad replacement of existing reasoning games;
+- target-equivalent proof;
+- diagnostics;
+- mastery or automatic sequencing;
+- summative use;
+- PV projection;
+- Scale Gate claims.
+
+## Human Decision Context
+
+Human decision required: completed with ACCEPT on 2026-06-23.
 
 This packet is the single final human gate for
 `GOAL-REASONING-GOLDEN-FAMILY-1`.
 
-Please decide whether to accept the reasoning-game golden family as the
-canonical repository standard for future `redeneer-spel` work.
+The human owner accepted the reasoning-game golden family as the canonical
+repository standard for future `redeneer-spel` work, with the authority
+boundaries above.
 
 ## Decision Options
 
-1. Accept the adoption package as canonical golden-family capability.
-2. Request corrections and keep the gate open.
+1. Accept the adoption package as canonical golden-family capability. SELECTED.
+2. Request corrections and keep the gate open. Not selected.
 3. Reject the adoption package and keep the current legacy reasoning-game route
-   unchanged.
+   unchanged. Not selected.
 
 ## Core Rule
 
