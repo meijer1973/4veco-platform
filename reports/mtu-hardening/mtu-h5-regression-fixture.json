@@ -64,7 +64,7 @@
         "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
         "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
         "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-1:question-3",
-        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3"
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1"
       ],
       "source_locator": {
         "exam": "vw-1022-a-25-1-o",
@@ -116,7 +116,7 @@
             "A96"
           ],
           "expected_misconception_refs": [
-            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-A15-stale-or-incorrect"
+            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1"
           ],
           "reviewed_equivalent_operation_refs": [
             "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
@@ -166,7 +166,7 @@
             "A96"
           ],
           "expected_misconception_refs": [
-            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-threshold-direction-answer-skill-need"
+            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-answer-1"
           ],
           "reviewed_equivalent_operation_refs": [
             "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
@@ -199,7 +199,7 @@
         "references/external/exams/vw-1022-a-25-1-o.pdf#question-15",
         "references/external/exams/vw-1022-a-25-1-c.pdf#question-15",
         "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-3:question-15",
-        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q15"
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q15-answer-1"
       ],
       "source_locator": {
         "exam": "vw-1022-a-25-1-o",
@@ -321,7 +321,7 @@
         "references/external/exams/vw-1022-a-25-1-o.pdf#question-19",
         "references/external/exams/vw-1022-a-25-1-c.pdf#question-19",
         "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
-        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19",
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19-graph-op-1",
         "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
         "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
         "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",

@@ -30,7 +30,7 @@
   },
   "existing_governance_evidence": [
     {
-      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3",
+      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1",
       "finding": "q3-calc-1 is an operation_registry_need; A61 is source-reading support and A15 is stale/incorrect."
     },
     {
@@ -38,7 +38,7 @@
       "finding": "q3-answer-1 is an answer_skill_need for threshold-conclusion wording."
     },
     {
-      "path": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3",
+      "path": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3-calc-1",
       "finding": "q3 A61 support with A15 rejected and q3 answer-skill visibility are preserved as routing facts."
     },
     {
@@ -182,7 +182,7 @@
       "references/external/exams/vw-1022-a-25-1-o.pdf#page=2&question=3",
       "references/external/exams/vw-1022-a-25-1-c.pdf#page=6&question=3",
       "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1",
-      "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3"
+      "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3-calc-1"
     ],
     "answer_model_refs": [
       "references/external/exams/vw-1022-a-25-1-c.pdf#page=6&question=3:q3-step-1",
