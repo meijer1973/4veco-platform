@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1",
+  "prior_sprint_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "status": "rendered_review_ready_pending_human_closure",
+  "authority_boundary": "rendered_source_reconstruction_proof_only_no_external_mutation_no_lesson_output_no_product_use",
+  "rendered_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html",
+  "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "source_family": "vw-1022-a-25-2-o:q7-q11",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "lesson_goal": "Use the official pension model to explain exchange over time, stock/flow classification, indexation, pension-wealth ratios, and pension-age purchasing-power effects.",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+        "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5"
+      ],
+      "rendered_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book5",
+      "rendered_artifact_ids": [
+        "figuur-1-pensioenmodel-2024-2044",
+        "pensioenmodel-assumptions-a-f"
+      ],
+      "anti_substitution_checked": true,
+      "proof_status": "rendered_review_ready_pending_human_acceptance",
+      "artifacts": [
+        {
+          "artifact_id": "figuur-1-pensioenmodel-2024-2044",
+          "artifact_type": "mixed_bar_line_figure",
+          "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+          "requirements_satisfied": [
+            "time horizon 2024-2044",
+            "official title Pensioenmodel econoom (2024-2044)",
+            "mixed bar/line structure",
+            "legend, left/right axes, axis labels, units, scale, and ticks",
+            "pension wealth, GDP-linked premiums, total pension outlays, and premiums as percentage of total pension wealth"
+          ],
+          "render_note": "Rendered as a visual approximation from the official PDF figure; axes, legend, time horizon, rising bars, and falling line are preserved. No new official numeric data table is claimed."
+        },
+        {
+          "artifact_id": "pensioenmodel-assumptions-a-f",
+          "artifact_type": "source_text_assumptions",
+          "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+          "requirements_satisfied": [
+            {
+              "label": "a",
+              "statement": "annual inflation = 2%"
+            },
+            {
+              "label": "b",
+              "statement": "annual real economic growth = 0.5%"
+            },
+            {
+              "label": "c",
+              "statement": "annual pension-asset return = 3.5%"
+            },
+            {
+              "label": "d",
+              "statement": "premium pressure as percentage of GDP stays constant"
+            },
+            {
+              "label": "e",
+              "statement": "number of premium payers stays constant"
+            },
+            {
+              "label": "f",
+              "statement": "capital incomes stay constant"
+            }
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        }
+      ],
+      "render_blocker_disposition": {
+        "prior_blocker": {
+          "blocks": "lesson handoff and product proof",
+          "does_not_block": "candidate-surface implementation",
+          "proof_required_to_close": "rendered figure plus assumption trace checked against official locators"
+        },
+        "closure_status": "proof_ready_pending_human_review_on_exact_remote_head",
+        "blocks_until_human_acceptance": [
+          "lesson handoff",
+          "product proof"
+        ],
+        "does_not_block": [
+          "human review of this proof PR"
+        ],
+        "proof_required_to_close": "Human reviewer accepts exact-head rendered source reconstruction artifacts and official locator trace."
+      }
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "source_family": "vw-1022-a-23-2-o:q26-q29",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "lesson_goal": "Use the VastWonen/Reder source case to calculate a waiting list, derive revenue-maximising output, explain mortgage-risk channels, and interpret rent-market table evidence.",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=13",
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=12"
+      ],
+      "rendered_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book6",
+      "rendered_artifact_ids": [
+        "tabel-1-vastwonen-financial-data",
+        "tabel-2-particuliere-huurwoningen-reder",
+        "q28-housing-investor-context"
+      ],
+      "anti_substitution_checked": true,
+      "proof_status": "rendered_review_ready_pending_human_acceptance",
+      "artifacts": [
+        {
+          "artifact_id": "tabel-1-vastwonen-financial-data",
+          "artifact_type": "official_style_table",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "requirements_satisfied": [
+            {
+              "label": "maximum_rent",
+              "value": 850,
+              "unit": "EUR per dwelling per month"
+            },
+            {
+              "label": "housing_stock",
+              "value": 6800,
+              "unit": "dwellings"
+            },
+            {
+              "label": "total_monthly_cost_function",
+              "value": "TK = 450Q + 1400000"
+            },
+            {
+              "label": "average_monthly_rent_revenue_function",
+              "value": "GO = -0.125Q + 2150"
+            },
+            {
+              "label": "quantity_symbol",
+              "value": "Q = number of social rental dwellings"
+            }
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        },
+        {
+          "artifact_id": "tabel-2-particuliere-huurwoningen-reder",
+          "artifact_type": "official_style_table",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=13",
+          "requirements_satisfied": [
+            {
+              "label": "released_rental_dwellings",
+              "value": -9.9,
+              "unit": "percent versus previous year"
+            },
+            {
+              "label": "average_rent",
+              "value": 6,
+              "unit": "percent change"
+            },
+            {
+              "label": "middle_incomes",
+              "value": 3,
+              "unit": "percent change"
+            },
+            {
+              "label": "income_elasticity_private_rental_housing_middle_income",
+              "value": 0.4
+            }
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        },
+        {
+          "artifact_id": "q28-housing-investor-context",
+          "artifact_type": "source_context",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "requirements_satisfied": [
+            "VastWonen as only social-housing provider in Reder",
+            "low mortgage-rate claim",
+            "purchase and conversion of old office buildings",
+            "financing through mortgage loans with collateral",
+            "housing-shortage risk argument"
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        }
+      ],
+      "render_blocker_disposition": {
+        "prior_blocker": {
+          "blocks": "lesson handoff and product proof",
+          "does_not_block": "candidate-surface implementation",
+          "proof_required_to_close": "rendered tables, formulas, units, and value-selection trace"
+        },
+        "closure_status": "proof_ready_pending_human_review_on_exact_remote_head",
+        "blocks_until_human_acceptance": [
+          "lesson handoff",
+          "product proof"
+        ],
+        "does_not_block": [
+          "human review of this proof PR"
+        ],
+        "proof_required_to_close": "Human reviewer accepts exact-head rendered source reconstruction artifacts and official locator trace."
+      }
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "source_family": "vw-1022-a-23-1-o:q12-q15",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "lesson_goal": "Use the official credit-insurance case to identify information problems, explain incentive effects, and calculate expected damage plus markup.",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-23-1-o.pdf#page=6",
+        "references/external/exams/vw-1022-a-23-1-o.pdf#page=7"
+      ],
+      "rendered_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book7",
+      "rendered_artifact_ids": [
+        "figuur-1-kredietverzekering-en-voorwaarden",
+        "tabel-1-financiele-gegevens-digibate"
+      ],
+      "anti_substitution_checked": true,
+      "proof_status": "rendered_review_ready_pending_human_acceptance",
+      "artifacts": [
+        {
+          "artifact_id": "figuur-1-kredietverzekering-en-voorwaarden",
+          "artifact_type": "actor_arrow_figure",
+          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=6",
+          "requirements_satisfied": [
+            {
+              "arrow": 1,
+              "meaning": "delivered sold product x"
+            },
+            {
+              "arrow": 2,
+              "meaning": "invoice amount"
+            },
+            {
+              "arrow": 3,
+              "meaning": "credit-insurance premium"
+            },
+            {
+              "arrow": 4,
+              "meaning": "amount paid out when the buying company does not pay"
+            },
+            {
+              "arrow": 5,
+              "meaning": "possible collection service"
+            },
+            {
+              "arrow": 6,
+              "meaning": "collection costs plus surcharge"
+            },
+            {
+              "arrow": 7,
+              "meaning": "outstanding debt to be paid"
+            }
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        },
+        {
+          "artifact_id": "tabel-1-financiele-gegevens-digibate",
+          "artifact_type": "official_style_table",
+          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "requirements_satisfied": [
+            {
+              "contracts": 20,
+              "average_turnover_eur": 1000000,
+              "payment_term_days": 90,
+              "default_probability_percent": 0.05
+            },
+            {
+              "contracts": 30,
+              "average_turnover_eur": 500000,
+              "payment_term_days": 60,
+              "default_probability_percent": 0.2
+            },
+            {
+              "contracts": 80,
+              "average_turnover_eur": 250000,
+              "payment_term_days": 60,
+              "default_probability_percent": 0.2
+            }
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        }
+      ],
+      "render_blocker_disposition": {
+        "prior_blocker": {
+          "blocks": "lesson handoff and product proof",
+          "does_not_block": "candidate-surface implementation",
+          "proof_required_to_close": "conditions figure, financial table, calculation trace, and markup rule"
+        },
+        "closure_status": "proof_ready_pending_human_review_on_exact_remote_head",
+        "blocks_until_human_acceptance": [
+          "lesson handoff",
+          "product proof"
+        ],
+        "does_not_block": [
+          "human review of this proof PR"
+        ],
+        "proof_required_to_close": "Human reviewer accepts exact-head rendered source reconstruction artifacts and official locator trace."
+      }
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "source_family": "vw-1022-a-25-1-o:q15-q16",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "lesson_goal": "Use the official Guarda/Orso Bianco source to explain dominant strategy, prisoner's dilemma, self-binding, and price-war incentives.",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+        "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+        "not_official_derived_from_q15_q16_source"
+      ],
+      "rendered_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book8",
+      "rendered_artifact_ids": [
+        "ijssalon-guarda-orso-bianco-context",
+        "lowest-price-guarantee-self-binding-source",
+        "derived-payoff-representation"
+      ],
+      "anti_substitution_checked": true,
+      "proof_status": "rendered_review_ready_pending_human_acceptance",
+      "artifacts": [
+        {
+          "artifact_id": "ijssalon-guarda-orso-bianco-context",
+          "artifact_type": "source_context",
+          "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "requirements_satisfied": [
+            "beginning of 2025 Guarda loses its monopoly position",
+            "Orso Bianco opens",
+            "same production costs as Guarda",
+            "Orso Bianco enters with a lower price",
+            "consumers view the ice creams as perfect substitutes",
+            "possible price war and prisoner's dilemma"
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        },
+        {
+          "artifact_id": "lowest-price-guarantee-self-binding-source",
+          "artifact_type": "source_context",
+          "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "requirements_satisfied": [
+            "fixed sales price for 2025",
+            "lowest-price guarantee advertised on social media",
+            "discount of 25% on a lower Orso Bianco price"
+          ],
+          "render_note": "Rendered as exact review table/context/diagram values from the foundation file and official locator text."
+        },
+        {
+          "artifact_id": "derived-payoff-representation",
+          "artifact_type": "derived_representation",
+          "official_locator": "not_official_derived_from_q15_q16_source",
+          "requirements_satisfied": [
+            "source-to-derived-representation trace",
+            "dominant-strategy support for q15",
+            "commitment-device support for q16"
+          ],
+          "render_note": "Rendered only as a labelled derived, non-official incentive map."
+        }
+      ],
+      "render_blocker_disposition": {
+        "prior_blocker": {
+          "blocks": "lesson handoff and product proof",
+          "does_not_block": "candidate-surface implementation",
+          "proof_required_to_close": "official-source-only route or labelled derived payoff trace"
+        },
+        "closure_status": "proof_ready_pending_human_review_on_exact_remote_head",
+        "blocks_until_human_acceptance": [
+          "lesson handoff",
+          "product proof"
+        ],
+        "does_not_block": [
+          "human review of this proof PR"
+        ],
+        "proof_required_to_close": "Human reviewer accepts exact-head rendered source reconstruction artifacts and official locator trace."
+      }
+    }
+  ],
+  "authority_claims": {
+    "rendered_source_reconstruction_ready_for_review": true,
+    "external_source_mutation_authorized": false,
+    "lesson_generation_authorized": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

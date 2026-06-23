@@ -96,7 +96,7 @@
         {
           "artifact_id": "figuur-1-kredietverzekering-en-voorwaarden",
           "artifact_type": "actor_arrow_figure",
-          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=6",
           "arrows": [
             {"arrow": 1, "meaning": "delivered sold product x"},
             {"arrow": 2, "meaning": "invoice amount"},
