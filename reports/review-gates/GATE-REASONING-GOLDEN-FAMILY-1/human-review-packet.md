@@ -10,30 +10,49 @@ This packet supersedes the June 20/June 22 gate packet after the human
 REQUEST CHANGES review. The repair run targeted rendered student-product
 fidelity, not only repository wiring.
 
-Current local repair validation is complete. Final remote CI and exact pushed
-commit metadata must be stamped after the final push.
+Current local repair validation and first remote synchronization are complete.
+This packet records the exact implementation/merge head that received green CI.
+If this packet is followed by a metadata-only stamp commit, the final PR status
+line on PR #128 remains the authoritative check for the current head.
 
-Validated local platform head before final push:
+Validated platform implementation/merge head:
 
 - platform worktree branch:
   `codex/reasoning-golden-family-platform-20260620`
+- platform base:
+  `82702f07118a1828fc232e7bbc8478110988cec3`
+- platform validated head:
+  `c63a10f89e8e59b748dc417db7c7f6fdac70f4fb`
 - lesson PR branch:
   `codex/reasoning-golden-family-lessen-20260620`
 - paired lesson CI branch:
   `codex/reasoning-golden-family-platform-20260620`
-- lesson content: unchanged from PR #32 during fidelity repair
+- lesson base:
+  `9f564c25ad2271dcafe5ad5e277ce2ec700b2873`
+- lesson PR/same-name CI branch head:
+  `f20ec7f8e1c805114caddaef12d45bd716ec1b98`
+- lesson PR diff after rebase: only
+  `specifications/companion-core-specifications.md` and
+  `specifications/product-end-state.md`
 
 Remote CI after fidelity repair:
 
-- platform `validate-platform`: PENDING FINAL PUSH
-- run: PENDING FINAL PUSH
-- job: PENDING FINAL PUSH
-- URL: PENDING FINAL PUSH
+- platform `validate-platform`: SUCCESS
+- run: `28007209875`
+- job: `82891816598`
+- run URL:
+  `https://github.com/meijer1973/4veco-platform/actions/runs/28007209875`
+- job URL:
+  `https://github.com/meijer1973/4veco-platform/actions/runs/28007209875/job/82891816598`
+- run head:
+  `c63a10f89e8e59b748dc417db7c7f6fdac70f4fb`
 
 Mergeability after fidelity repair:
 
-- platform PR #128: PENDING FINAL PUSH CHECK
-- lesson PR #32: PENDING FINAL PUSH CHECK
+- platform PR #128: MERGEABLE at
+  `c63a10f89e8e59b748dc417db7c7f6fdac70f4fb`
+- lesson PR #32: MERGEABLE at
+  `f20ec7f8e1c805114caddaef12d45bd716ec1b98`
 
 Final fidelity-repair lead-review verdict:
 
@@ -170,7 +189,7 @@ mechanism.
 
 ## Validation To Inspect
 
-Local validation passed after fidelity repair:
+Local validation passed after fidelity repair and the current-main merge:
 
 ```powershell
 npm.cmd run capture:reasoning-golden
