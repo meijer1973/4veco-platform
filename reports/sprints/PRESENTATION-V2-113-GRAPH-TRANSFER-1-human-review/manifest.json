@@ -1,9 +1,9 @@
 {
   "packet": "PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review",
+  "governanceRoute": "READY_FOR_HUMAN_REVIEW",
+  "headEvidencePolicy": "Committed screenshot artifacts record source/output content hashes and geometry proof. Exact remote PR head evidence is recorded after push in the PR readiness comment because committing a file changes the platform head SHA.",
   "capturedAt": "2026-06-23T15:20:01.054Z",
   "captureUrl": "http://127.0.0.1:55739/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20presentatie.html",
-  "platformHeadAtCapture": "29b551383fe835e4537a00b2aaf9cc87cf748116",
-  "lessonHeadAtCapture": "f6d55a9663ee834dceb4766c08434bf6487b867e",
   "source": {
     "path": "build-scripts/content/book-1/b1-113-presentation-v2-model.js",
     "sha256": "17aaed4e857a99a211b3bdc4d83078dbf4c49bf6c871544550d0782294f11c49"

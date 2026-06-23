@@ -1,7 +1,7 @@
 # PRESENTATION-V2-113-GRAPH-TRANSFER-1 Validation Log
 
 Date: 2026-06-23
-Status: ready for human review
+Status: READY_FOR_HUMAN_REVIEW
 
 ## Generated Output
 
@@ -11,10 +11,12 @@ Platform source:
 - `build-scripts/content/book-1/b1-113-presentation-v2.js`
 - `build-scripts/content/book-1/b1-113-student-web.js`
 - `engines/tests/presentation-v2-113-graph-transfer.test.js`
+- `reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/`
 
 Lesson output:
 
 - `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - presentatie.html`
+- rich-page graph helper output in the 1.1.3 learning pages
 
 ## Commands
 
@@ -23,19 +25,14 @@ Lesson output:
 - `node build-scripts/content/book-1/b1-113-student-web.js`
   - Passes and writes the same presentation HTML from the standalone deck.
   - Does not regenerate the PPTX.
-- `npx.cmd jest --runTestsByPath engines/tests/presentation-v2-113-graph-transfer.test.js engines/tests/l1-6r-dual-coding.test.js engines/tests/graphical-data.test.js --runInBand`
-  - Passes: 2 suites passed, 1 skipped; 10 tests passed, 1 skipped.
-- `npm.cmd run check:golden-presentation-111`
-  - Passes.
-- `npm.cmd run check:golden-graph-advisory-113`
-  - Passes.
+- `npx.cmd jest engines/tests/presentation-v2-113-graph-transfer.test.js --runInBand`
+  - Passes: 9 tests passed.
 - `node scripts/validate-paragraph.js --mode complete --profile student-web "<1.1.3 folder>"`
   - Passes.
-- `node scripts/qa-presentation-v2-html.js "<1.1.3 presentation.html>" "C:\wt\PARA-LANDING-20260610\reports\presentation-v2-113-graph-transfer-1\presentation-v2-qa"`
-  - Passes.
-  - Captures 42 screenshots across desktop, notes, fullscreen, dark, dark-notes, and mobile states.
-- `npm.cmd run check:platform`
-  - Passes: 60 suites passed, 6 skipped, 898 tests passed.
+- committed screenshot packet verification
+  - Passes: 11 PNG files plus manifest and human-review index.
+- `npm.cmd test -- --runInBand`
+  - Passes: 69 suites passed, 6 skipped, 983 tests passed.
   - Console output includes existing validation-fixture warnings; Jest exit code is 0.
 - `git diff --check`
   - Passes in platform and lesson repos.
@@ -48,6 +45,7 @@ The active 1.1.3 presentation HTML contains:
 - `Studentgerichte uitleg`
 - `Presentatiemodus`
 - graph visual ids for ice table, P-Q graph, interpolation graph, and axis comparison
+- eight slides including route success criteria, misleading-axis retrieval, and summary bridge
 
 The active 1.1.3 presentation HTML does not contain:
 
@@ -61,3 +59,4 @@ The active 1.1.3 presentation HTML does not contain:
 - `Download PowerPoint`
 - `Full screen`
 - `Exit full screen`
+- `Laat leerlingen`

@@ -2,6 +2,8 @@
 
 Packet: PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review
 
+Governance route: `READY_FOR_HUMAN_REVIEW`
+
 Captured: 2026-06-23T15:20:01.054Z
 
 ## Source And Output
@@ -11,8 +13,8 @@ Captured: 2026-06-23T15:20:01.054Z
 - Output HTML: `Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html`
 - Output SHA-256: `1e891b119573391bd9fae97d1dc66a152ae37ffcbd2d7972f62dc598331162a7`
 - Capture URL: `http://127.0.0.1:55739/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20presentatie.html`
-- Platform HEAD at capture: `29b551383fe835e4537a00b2aaf9cc87cf748116`
-- Lesson HEAD at capture: `f6d55a9663ee834dceb4766c08434bf6487b867e`
+
+Exact remote PR head evidence is recorded after push in the PR readiness comment. This committed packet records stable source/output hashes and geometry proof; committing a file changes the platform head SHA.
 
 ## Geometry Proof
 
