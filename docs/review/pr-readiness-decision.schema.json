@@ -245,6 +245,9 @@
         "lead_review_evidence_tail_allowed": {
           "type": "boolean"
         },
+        "lead_review_integration_authorization_inherited": {
+          "type": "boolean"
+        },
         "post_lead_review_changed_paths": {
           "type": "array",
           "items": {
@@ -260,6 +263,20 @@
         },
         "branch_protection": {
           "type": "object",
+          "additionalProperties": true
+        },
+        "human_authorization": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "integration": {
+          "type": [
+            "object",
+            "null"
+          ],
           "additionalProperties": true
         }
       }

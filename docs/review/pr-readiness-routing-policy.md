@@ -157,6 +157,13 @@ Merge authority is separate from GitHub approval count:
   and verify the exact head, open/not-draft state, mergeability, required CI,
   and review-thread/requested-changes state.
 
+After the serialized integration lane is operational, merge authority is carried
+through `docs/review/pr-integration-lane-policy.md`. A human decision binds to
+the `reviewed_payload_head`; the lane may refresh to a later `integration_head`
+without re-review only when lineage and base drift checks pass. PR readiness may
+include `proof.human_authorization` and `proof.integration` so the final comment
+shows both the reviewed payload SHA and the validated integration head.
+
 ## Live decision recording
 
 Do not commit per-PR decisions to the same branch after reviewing its head.

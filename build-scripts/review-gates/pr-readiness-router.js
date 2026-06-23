@@ -318,27 +318,46 @@ function leadProof(proof, headSha) {
     reviewedSha !== headSha &&
     afterLeadPaths.length > 0 &&
     afterLeadPaths.every(isEvidenceTailPath);
+  const integrationAuthorizedTail = integrationLeadAuthorizationProof(proof, reviewedSha, headSha);
 
   return {
     ok: Boolean(
       lead.path &&
         PASSING_LEAD_RESULTS.has(result) &&
         reviewedSha &&
-        (reviewedSha === headSha || evidenceOnlyTail)
+        (reviewedSha === headSha || evidenceOnlyTail || integrationAuthorizedTail)
     ),
-    stale: Boolean(reviewedSha && headSha && reviewedSha !== headSha && !evidenceOnlyTail),
+    stale: Boolean(reviewedSha && headSha && reviewedSha !== headSha && !evidenceOnlyTail && !integrationAuthorizedTail),
     evidenceOnlyTail,
+    integrationAuthorizedTail,
     postLeadReviewChangedPaths: afterLeadPaths,
     disallowedEvidenceTail: Boolean(
       reviewedSha &&
         reviewedSha !== headSha &&
         afterLeadPaths.length > 0 &&
+        !integrationAuthorizedTail &&
         !afterLeadPaths.every(isEvidenceTailPath)
     ),
     lead,
     result,
     reviewedSha: reviewedSha || null,
   };
+}
+
+function integrationLeadAuthorizationProof(proof, reviewedSha, headSha) {
+  if (!reviewedSha || !headSha || reviewedSha === headSha) return false;
+  const integration = proof.integration || {};
+  const baseDrift = integration.base_drift || {};
+  return Boolean(
+    integration.reviewed_payload_head_sha === reviewedSha &&
+      integration.integration_head_sha === headSha &&
+      integration.authorization_inherited === true &&
+      integration.requires_integration_delta_lead_review !== true &&
+      integration.requires_human_reauthorization !== true &&
+      baseDrift.requires_integration_delta_lead_review !== true &&
+      baseDrift.requires_human_reauthorization !== true &&
+      asArray(integration.failures).length === 0
+  );
 }
 
 function collectBlockers(evidence, signals) {
@@ -454,10 +473,13 @@ function proofSummary(evidence, collected) {
     lead_review_result: collected.lead.result || null,
     lead_reviewed_sha: collected.lead.reviewedSha,
     lead_review_evidence_tail_allowed: collected.lead.evidenceOnlyTail,
+    lead_review_integration_authorization_inherited: collected.lead.integrationAuthorizedTail,
     post_lead_review_changed_paths: collected.lead.postLeadReviewChangedPaths,
     changed_paths_verified: evidence.proof.changed_paths_verified === true,
     checkers: collected.checkers.checkers,
     branch_protection: collected.branchProtection,
+    human_authorization: evidence.proof.human_authorization || null,
+    integration: evidence.proof.integration || null,
   };
 }
 
@@ -672,11 +694,31 @@ function validateDecision(decision) {
     }
     if (
       decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
-      decision.proof.lead_review_evidence_tail_allowed !== true
+      decision.proof.lead_review_evidence_tail_allowed !== true &&
+      decision.proof.lead_review_integration_authorization_inherited !== true
     ) {
-      throw new Error(`${decision.route} requires lead review for reviewed head or verified evidence-only tail`);
+      throw new Error(`${decision.route} requires lead review for reviewed head, verified evidence-only tail, or inherited integration authorization`);
     }
-    if (decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha) {
+    if (decision.proof.lead_review_integration_authorization_inherited === true) {
+      const integration = decision.proof.integration || {};
+      const baseDrift = integration.base_drift || {};
+      if (
+        integration.reviewed_payload_head_sha !== decision.proof.lead_reviewed_sha ||
+        integration.integration_head_sha !== decision.reviewed_pr.head_sha ||
+        integration.authorization_inherited !== true ||
+        integration.requires_integration_delta_lead_review === true ||
+        integration.requires_human_reauthorization === true ||
+        baseDrift.requires_integration_delta_lead_review === true ||
+        baseDrift.requires_human_reauthorization === true ||
+        asArray(integration.failures).length > 0
+      ) {
+        throw new Error(`${decision.route} requires valid integration authorization proof`);
+      }
+    }
+    if (
+      decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
+      decision.proof.lead_review_integration_authorization_inherited !== true
+    ) {
       const tailPaths = uniqueStrings(asArray(decision.proof.post_lead_review_changed_paths).map(normalizePath));
       if (tailPaths.length === 0 || !tailPaths.every(isEvidenceTailPath)) {
         throw new Error(`${decision.route} requires verified evidence-only tail paths`);
@@ -730,8 +772,15 @@ function renderDecisionMarkdown(decision) {
     `- Checker proof: ${(decision.proof.checkers || []).map((checker) => `\`${checker.command || 'unknown'}:${checker.status || checker.conclusion || checker.result || 'unknown'}\``).join(', ') || 'none recorded'}`,
     `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``,
     `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
+    `- Integration authorization inherited for lead review: \`${Boolean(decision.proof.lead_review_integration_authorization_inherited)}\``,
     `- Branch protection: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
+  if (decision.proof.human_authorization) {
+    lines.push(`- Human payload authorization: \`${JSON.stringify(decision.proof.human_authorization)}\``);
+  }
+  if (decision.proof.integration) {
+    lines.push(`- Integration proof: \`${JSON.stringify(decision.proof.integration)}\``);
+  }
   lines.push('');
   return `${lines.join('\n')}\n`;
 }

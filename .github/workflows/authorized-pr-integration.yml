@@ -1,0 +1,80 @@
+name: authorized-pr-integration
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Pull request number to integrate
+        required: true
+      human_authorization_comment_id:
+        description: Issue comment id containing the human payload authorization record
+        required: true
+      dry_run:
+        description: Validate only, without updating, setting status, or merging
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  pull-requests: write
+  statuses: write
+  actions: read
+  checks: read
+  issues: read
+
+concurrency:
+  group: 4veco-main-integration
+  cancel-in-progress: false
+
+jobs:
+  integrate:
+    name: integration-authorized
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    defaults:
+      run:
+        shell: pwsh
+
+    steps:
+      - name: Checkout trusted main workflow code
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20.x'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Integrate authorized PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+          AUTH_COMMENT_ID: ${{ inputs.human_authorization_comment_id }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          $scriptArgs = @(
+            'build-scripts/review-gates/integrate-authorized-pr.js',
+            '--repo',
+            'meijer1973/4veco-platform',
+            '--pr',
+            $env:PR_NUMBER,
+            '--authorization-comment-id',
+            $env:AUTH_COMMENT_ID,
+            '--max-attempts',
+            '12',
+            '--poll-seconds',
+            '20'
+          )
+          if ($env:DRY_RUN -eq 'true') {
+            $scriptArgs += '--dry-run'
+          }
+          & node @scriptArgs

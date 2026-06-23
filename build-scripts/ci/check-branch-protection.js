@@ -13,6 +13,7 @@ HOW TO ADAPT:
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
 const DEFAULT_BRANCH = 'main';
 const DEFAULT_REQUIRED_CONTEXT = 'validate-platform';
+const INTEGRATION_AUTHORIZED_CONTEXT = 'integration-authorized';
 const EXPECTED_APPROVING_REVIEW_COUNT = 0;
 
 function fail(message) {
@@ -25,6 +26,10 @@ function optionValue(args, name) {
   if (index === -1) return null;
   if (!args[index + 1]) fail(`missing value for ${name}`);
   return args[index + 1];
+}
+
+function flag(args, name) {
+  return args.includes(name);
 }
 
 function booleanValue(value) {
@@ -91,6 +96,10 @@ function summarizePullRequestReviews(reviews, fetchState = {}) {
 
 function summarizeProtection(protection, options = {}) {
   const requiredContext = options.requiredContext || DEFAULT_REQUIRED_CONTEXT;
+  const requiredContexts = [
+    requiredContext,
+    ...(options.requireIntegrationAuthorized ? [INTEGRATION_AUTHORIZED_CONTEXT] : []),
+  ];
   const strict = Boolean(protection.required_status_checks && protection.required_status_checks.strict);
   const contexts = contextsFromProtection(protection);
   const enforceAdmins = booleanValue(protection.enforce_admins);
@@ -104,7 +113,9 @@ function summarizeProtection(protection, options = {}) {
 
   const failures = [];
   if (strict !== true) failures.push('required_status_checks.strict must be true');
-  if (!contexts.includes(requiredContext)) failures.push(`required status context missing: ${requiredContext}`);
+  for (const context of requiredContexts) {
+    if (!contexts.includes(context)) failures.push(`required status context missing: ${context}`);
+  }
   if (enforceAdmins !== true) failures.push('enforce_admins.enabled must be true');
   if (allowForcePushes !== false) failures.push('allow_force_pushes.enabled must be false');
   if (allowDeletions !== false) failures.push('allow_deletions.enabled must be false');
@@ -144,7 +155,7 @@ function summarizeProtection(protection, options = {}) {
     expected: {
       required_status_checks: {
         strict: true,
-        contexts: [requiredContext],
+        contexts: requiredContexts,
       },
       required_pull_request_reviews: {
         required_approving_review_count: EXPECTED_APPROVING_REVIEW_COUNT,
@@ -220,6 +231,7 @@ function runCli(argv) {
   const repo = optionValue(argv, '--repo') || DEFAULT_REPO;
   const branch = optionValue(argv, '--branch') || DEFAULT_BRANCH;
   const requiredContext = optionValue(argv, '--required-context') || DEFAULT_REQUIRED_CONTEXT;
+  const requireIntegrationAuthorized = flag(argv, '--require-integration-authorized');
   const fixture = optionValue(argv, '--fixture');
 
   let protection;
@@ -235,6 +247,7 @@ function runCli(argv) {
     repo,
     branch,
     requiredContext,
+    requireIntegrationAuthorized,
     pullRequestReviews: pullRequestReviewRead.reviews,
     pullRequestReviewFetch: pullRequestReviewRead.fetch,
   });
@@ -250,6 +263,7 @@ module.exports = {
   DEFAULT_REPO,
   DEFAULT_BRANCH,
   DEFAULT_REQUIRED_CONTEXT,
+  INTEGRATION_AUTHORIZED_CONTEXT,
   EXPECTED_APPROVING_REVIEW_COUNT,
   contextsFromProtection,
   summarizePullRequestReviews,

@@ -244,6 +244,35 @@ Merge authority follows the PR-readiness route:
   unresolved review-thread state. Use normal merge; do not use admin bypass as
   a routine substitute for this policy.
 
+### Serialized integration lane
+
+When the authorized integration lane is operational, agents must not call
+`gh pr merge` directly. Use `.github/workflows/authorized-pr-integration.yml`
+with the PR number and the human payload authorization comment ID. The workflow
+runs from trusted `main` code and serializes integrations with the
+`4veco-main-integration` concurrency group.
+
+Human authorization binds to the reviewed payload head, not to every later
+base-sync head. Record authorization with the
+`4veco-human-payload-authorization` marker and the schema in
+`docs/review/human-payload-authorization.schema.json`. The integration lane may
+inherit that authorization only when the reviewed payload SHA remains an
+ancestor of the current PR head and all intervening commits are conflict-free
+base-sync merges or allowlisted deterministic evidence refreshes. Rebase,
+force-push, manual conflict resolution, substantive PR-authored commits after
+authorization, authority-scope changes, or changed effective payload invalidate
+the authorization.
+
+Before the lane may set `integration-authorized`, the PR Readiness Reviewer must
+have posted an exact-head ready comment for the integration head with the human
+authorization and integration proof. A stale readiness marker or a non-ready
+route stops the merge.
+
+During rollout, use
+`npm.cmd run check:branch-protection -- --require-integration-authorized` to
+verify the future protected status context. After branch protection requires
+`integration-authorized`, the lane is the only merge path.
+
 
 ### Sprint agent structure
 
