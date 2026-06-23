@@ -29,7 +29,7 @@ function readJson(rel) {
 
 function main() {
   const skill = read('skills/econ-reasoning-game.md');
-  assert(/^---\n[\s\S]+?\n---/.test(skill), 'skill must include frontmatter');
+  assert(/^---\r?\n[\s\S]+?\r?\n---/.test(skill), 'skill must include frontmatter');
   assert(/name:\s*econ-reasoning-game/.test(skill), 'skill frontmatter must name econ-reasoning-game');
   assert(/econ-companion-artifacts/.test(skill), 'skill must inherit econ-companion-artifacts');
   assert(/copy product grammar[\s\S]*re-derive reasoning grammar/i.test(skill), 'skill must state the governing rule');
