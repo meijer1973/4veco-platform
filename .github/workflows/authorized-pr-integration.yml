@@ -24,6 +24,7 @@ permissions:
 
 concurrency:
   group: 4veco-main-integration
+  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -70,7 +71,7 @@ jobs:
             '--authorization-comment-id',
             $env:AUTH_COMMENT_ID,
             '--max-attempts',
-            '12',
+            '120',
             '--poll-seconds',
             '20'
           )

@@ -386,7 +386,7 @@ function runReview(options) {
   const evidence = options.fixture
     ? readJson(options.fixture)
     : collectLiveEvidence(options.repo || DEFAULT_REPO, options.prNumber);
-  const supplemental = options.evidence ? readJson(options.evidence) : {};
+  const supplemental = options.supplemental || (options.evidence ? readJson(options.evidence) : {});
   const mergedEvidence = completeLeadReviewTailEvidence(mergeSupplementalEvidence(evidence, supplemental), {
     fixture: Boolean(options.fixture),
   });

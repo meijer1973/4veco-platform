@@ -144,6 +144,9 @@ payload SHA and base SHA at review. If `main` advances, the lane may inherit the
 decision only through conflict-free base-sync merges or allowlisted deterministic
 evidence refreshes. Substantive overlap requires integration-delta lead review;
 changed effective payload or authority scope returns to human review.
+The trusted lane recomputes exact-head PR readiness, posts the full
+machine-readable decision with a canonical digest, and verifies post-merge
+`main` CI; a pre-existing marker-only readiness comment is not merge authority.
 
 Do not add a repository-wide CI gate over all historical review packets until
 the archived packet surface is either migrated or an allowlist exists. Focused

@@ -82,6 +82,13 @@
           "changed_effective_payload"
         ]
       }
+    },
+    "supersedes_authorization_sha": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Fa-f0-9]{40}$"
+      }
     }
   }
 }

@@ -250,7 +250,8 @@ When the authorized integration lane is operational, agents must not call
 `gh pr merge` directly. Use `.github/workflows/authorized-pr-integration.yml`
 with the PR number and the human payload authorization comment ID. The workflow
 runs from trusted `main` code and serializes integrations with the
-`4veco-main-integration` concurrency group.
+`4veco-main-integration` concurrency group, `queue: max`, and
+`cancel-in-progress: false`.
 
 Human authorization binds to the reviewed payload head, not to every later
 base-sync head. Record authorization with the
@@ -264,13 +265,23 @@ authorization, authority-scope changes, or changed effective payload invalidate
 the authorization.
 
 Before the lane may set `integration-authorized`, the PR Readiness Reviewer must
-have posted an exact-head ready comment for the integration head with the human
-authorization and integration proof. A stale readiness marker or a non-ready
-route stops the merge.
+be recomputed inside the trusted workflow for the exact integration head. The
+lane constructs live integration evidence, validates the resulting machine
+decision, and posts or updates the exact-head readiness comment with a canonical
+decision digest and full machine decision. A stale readiness marker, marker-only
+comment, or non-ready route stops the merge.
 
-During rollout, use
-`npm.cmd run check:branch-protection -- --require-integration-authorized` to
-verify the future protected status context. After branch protection requires
+The lane must determine base drift from an actual `main...head` comparison, not
+from `mergeStateStatus: BLOCKED`; `BLOCKED` can simply mean the future
+`integration-authorized` status is pending. The lane sets
+`integration-authorized` to pending at entry, sets success only on the final
+validated head, retries when `main` moves or merge eligibility changes, and
+verifies post-merge `main` CI.
+
+During rollout, use `npm.cmd run check:branch-protection` for the current safe
+shape. Use
+`npm.cmd run check:branch-protection -- --require-integration-authorized` only
+to verify the future protected status context. After branch protection requires
 `integration-authorized`, the lane is the only merge path.
 
 

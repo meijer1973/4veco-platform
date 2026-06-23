@@ -5,6 +5,7 @@ describe('authorized PR integration workflow', () => {
 
   test('serializes all authorized integrations through one repository-wide group', () => {
     expect(workflow).toContain('group: 4veco-main-integration');
+    expect(workflow).toContain('queue: max');
     expect(workflow).toContain('cancel-in-progress: false');
   });
 
@@ -16,5 +17,6 @@ describe('authorized PR integration workflow', () => {
   test('passes PR number and authorization comment id to integration script', () => {
     expect(workflow).toContain('--authorization-comment-id');
     expect(workflow).toContain('integrate-authorized-pr.js');
+    expect(workflow).toContain("'120'");
   });
 });

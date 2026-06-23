@@ -1,6 +1,7 @@
 const {
   markerFor,
   parseAuthorizationComment,
+  validateAuthorizationCommentMetadata,
   validateAuthorizationRecord,
 } = require('./check-human-payload-authorization');
 
@@ -52,6 +53,22 @@ describe('human payload authorization', () => {
     expect(summary.failures).toContain('invalidation_conditions missing manual_conflict_resolution');
   });
 
+  test('rejects marker and JSON disagreement', () => {
+    const body = `${markerFor({ ...record, pr_number: 137 })}\n\n\`\`\`json\n${JSON.stringify(record, null, 2)}\n\`\`\`\n`;
+
+    expect(() => parseAuthorizationComment(body)).toThrow('authorization marker PR number mismatch');
+  });
+
+  test('rejects unsupported authorization fields', () => {
+    const summary = validateAuthorizationRecord({
+      ...record,
+      copied_from_pr: 135,
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('unsupported authorization field: copied_from_pr');
+  });
+
   test('rejects mismatched expected payload head', () => {
     const summary = validateAuthorizationRecord(record, {
       expectedPayloadSha: 'ffffffffffffffffffffffffffffffffffffffff',
@@ -61,5 +78,26 @@ describe('human payload authorization', () => {
     expect(summary.failures).toContain(
       'reviewed payload mismatch: expected ffffffffffffffffffffffffffffffffffffffff'
     );
+  });
+
+  test('rejects cross-PR comment metadata and non-owner authors', () => {
+    const summary = validateAuthorizationCommentMetadata({
+      id: 12345,
+      issue_url: 'https://api.github.com/repos/meijer1973/4veco-platform/issues/135',
+      user: { login: 'codex-bot' },
+      author_association: 'CONTRIBUTOR',
+    }, record, {
+      expectedRepo: 'meijer1973/4veco-platform',
+      expectedPr: 136,
+      expectedCommentId: 12345,
+      expectedAuthorLogin: 'meijer1973',
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toEqual(expect.arrayContaining([
+      'authorization comment must belong to meijer1973/4veco-platform#136',
+      'authorization comment author must be meijer1973',
+      'authorization comment author_association must be OWNER',
+    ]));
   });
 });

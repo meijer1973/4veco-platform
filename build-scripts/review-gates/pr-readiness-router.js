@@ -3,6 +3,7 @@ const {
   isGovernanceSurface,
   normalizePath,
 } = require('./pr-readiness-governance-surfaces');
+const crypto = require('crypto');
 
 const ROUTES = Object.freeze({
   KEEP_DRAFT_REVISE: 'KEEP_DRAFT_REVISE',
@@ -94,6 +95,19 @@ function asArray(value) {
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value || {}));
+}
+
+function stableStringify(value) {
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function decisionDigest(decision) {
+  validateDecision(decision);
+  return crypto.createHash('sha256').update(stableStringify(decision)).digest('hex');
 }
 
 function highestLevel(levels) {
@@ -385,6 +399,12 @@ function collectRevisionReasons(evidence) {
   const lead = leadProof(proof, headSha);
   const branchProtection = branchProtectionProof(proof, evidence);
   const autonomousLevel = AUTONOMOUS_LEVELS.has(evidence.throughput.level);
+  const mergeState = String(evidence.reviewed_pr.merge_state || '');
+  const integrationStatusPendingBlock =
+    /^BLOCKED$/i.test(mergeState) &&
+    proof.integration &&
+    proof.integration.authorization_inherited === true &&
+    proof.integration.integration_head_sha === headSha;
 
   if (!evidence.reviewed_pr.repo || !evidence.reviewed_pr.number || !evidence.reviewed_pr.url) {
     reasons.push('missing_remote_pr_identity');
@@ -393,7 +413,9 @@ function collectRevisionReasons(evidence) {
   if (
     evidence.reviewed_pr.mergeable === false ||
     /^CONFLICTING$/i.test(String(evidence.reviewed_pr.mergeable || '')) ||
-    /^(DIRTY|BLOCKED|BEHIND)$/i.test(String(evidence.reviewed_pr.merge_state || ''))
+    /^DIRTY$/i.test(mergeState) ||
+    /^BEHIND$/i.test(mergeState) ||
+    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock)
   ) {
     reasons.push('merge_readiness_blocked');
   }
@@ -733,8 +755,29 @@ function decisionMarker(decision) {
   return `<!-- 4veco-pr-readiness:${decision.reviewed_pr.repo}:${decision.reviewed_pr.number}:${decision.reviewed_pr.head_sha} -->`;
 }
 
+function parseRenderedDecisionMarkdown(body) {
+  const text = String(body || '');
+  const marker = text.match(/<!--\s*4veco-pr-readiness:([^:]+\/[^:]+):(\d+):([a-f0-9]{40})\s*-->/i);
+  if (!marker) throw new Error('PR readiness marker not found');
+  const digestMatch = text.match(/Decision digest:\s*`sha256:([a-f0-9]{64})`/i);
+  if (!digestMatch) throw new Error('PR readiness decision digest not found');
+  const machineBlock = text.match(/## Machine Decision\s+```json\s*([\s\S]*?)```/i);
+  if (!machineBlock) throw new Error('machine-readable PR readiness decision not found');
+  const decision = JSON.parse(machineBlock[1]);
+  validateDecision(decision);
+  const expectedMarker = decisionMarker(decision);
+  if (!text.includes(expectedMarker)) throw new Error('PR readiness marker does not match machine decision');
+  if (marker[1] !== decision.reviewed_pr.repo) throw new Error('PR readiness marker repository mismatch');
+  if (Number(marker[2]) !== decision.reviewed_pr.number) throw new Error('PR readiness marker PR number mismatch');
+  if (marker[3] !== decision.reviewed_pr.head_sha) throw new Error('PR readiness marker head mismatch');
+  const digest = decisionDigest(decision);
+  if (digestMatch[1] !== digest) throw new Error('PR readiness decision digest mismatch');
+  return { decision, digest, marker: expectedMarker };
+}
+
 function renderDecisionMarkdown(decision) {
   validateDecision(decision);
+  const digest = decisionDigest(decision);
   const lines = [
     decisionMarker(decision),
     '# PR Readiness Decision',
@@ -747,6 +790,7 @@ function renderDecisionMarkdown(decision) {
     `- Throughput level: \`${decision.throughput.level}\``,
     `- Human-review payload: \`${decision.human_review_payload}\``,
     `- Human notification required: \`${decision.human_notification_required}\``,
+    `- Decision digest: \`sha256:${digest}\``,
     '',
     '## Reason Codes',
     '',
@@ -781,7 +825,15 @@ function renderDecisionMarkdown(decision) {
   if (decision.proof.integration) {
     lines.push(`- Integration proof: \`${JSON.stringify(decision.proof.integration)}\``);
   }
-  lines.push('');
+  lines.push(
+    '',
+    '## Machine Decision',
+    '',
+    '```json',
+    JSON.stringify(decision, null, 2),
+    '```',
+    ''
+  );
   return `${lines.join('\n')}\n`;
 }
 
@@ -789,8 +841,10 @@ module.exports = {
   ALLOWED_TRANSITIONS,
   ROUTES,
   classifyPrReadiness,
+  decisionDigest,
   decisionMarker,
   normalizeEvidence,
+  parseRenderedDecisionMarkdown,
   renderDecisionMarkdown,
   validateDecision,
 };

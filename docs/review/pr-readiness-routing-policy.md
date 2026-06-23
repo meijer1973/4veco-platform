@@ -179,3 +179,12 @@ self-invalidating committed decisions for every PR.
 The comment is the durable per-head audit record. It must include a concise
 proof summary: CI context/head, checker commands, lead-review path/result and
 reviewed SHA, evidence-only tail status, and branch-protection constraint.
+It must also include either the full validated machine decision or a canonical
+digest over that decision. The current renderer records both. A marker and
+`Route:` line alone are not sufficient authority for transition or merge logic.
+
+The serialized integration lane recomputes PR readiness from trusted workflow
+code for the exact integration head. It may use the payload-head readiness
+decision as evidence for the reviewed payload, but the final integration-head
+comment must be produced from fresh live PR facts, live branch protection,
+validated human authorization, and validated integration lineage.

@@ -6,6 +6,18 @@ const MARKER_PREFIX = '4veco-human-payload-authorization';
 const MARKER_PATTERN = /<!--\s*4veco-human-payload-authorization:([^:]+\/[^:]+):(\d+):([a-f0-9]{40})\s*-->/i;
 const SHA_PATTERN = /^[a-f0-9]{40}$/i;
 const VALID_DECISIONS = new Set(['APPROVE_AND_MERGE', 'APPROVE_FOR_INTEGRATION']);
+const ALLOWED_RECORD_KEYS = new Set([
+  'repository',
+  'pr_number',
+  'reviewed_payload_head_sha',
+  'base_sha_at_review',
+  'decision',
+  'decision_scope',
+  'authorization_comment_id',
+  'permitted_integration_descendants',
+  'invalidation_conditions',
+  'supersedes_authorization_sha',
+]);
 
 function fail(message) {
   console.error(`Human payload authorization check failed: ${message}`);
@@ -49,29 +61,73 @@ function jsonBlockFromComment(body) {
   return String(body || '').slice(firstBrace, lastBrace + 1);
 }
 
+function markerFieldsFromComment(body) {
+  const marker = String(body || '').match(MARKER_PATTERN);
+  if (!marker) throw new Error('authorization marker not found');
+  return {
+    repository: marker[1],
+    pr_number: Number(marker[2]),
+    reviewed_payload_head_sha: marker[3],
+  };
+}
+
 function parseAuthorizationComment(body) {
   const text = String(body || '');
-  const marker = text.match(MARKER_PATTERN);
-  if (!marker) {
-    throw new Error('authorization marker not found');
-  }
+  const marker = markerFieldsFromComment(text);
   const json = jsonBlockFromComment(text);
   if (!json) {
     throw new Error('machine-readable JSON authorization record not found');
   }
   const record = JSON.parse(json);
+  if (record.repository !== marker.repository) throw new Error('authorization marker repository mismatch');
+  if (record.pr_number !== marker.pr_number) throw new Error('authorization marker PR number mismatch');
+  if (record.reviewed_payload_head_sha !== marker.reviewed_payload_head_sha) {
+    throw new Error('authorization marker reviewed payload mismatch');
+  }
+  return record;
+}
+
+function validateAuthorizationCommentMetadata(comment, record, options = {}) {
+  const failures = [];
+  const repo = options.expectedRepo || record.repository;
+  const prNumber = Number(options.expectedPr || record.pr_number);
+  const expectedCommentId = Number(options.expectedCommentId || record.authorization_comment_id);
+  const expectedAuthorLogin = options.expectedAuthorLogin || String(repo || '').split('/')[0];
+  if (Number(comment && comment.id) !== expectedCommentId) {
+    failures.push(`authorization comment id mismatch: expected ${expectedCommentId}`);
+  }
+  if (!String(comment && comment.issue_url || '').includes(`/repos/${repo}/issues/${prNumber}`)) {
+    failures.push(`authorization comment must belong to ${repo}#${prNumber}`);
+  }
+  const login = comment && comment.user && comment.user.login;
+  if (login !== expectedAuthorLogin) {
+    failures.push(`authorization comment author must be ${expectedAuthorLogin}`);
+  }
+  if ((comment && comment.author_association) !== 'OWNER') {
+    failures.push('authorization comment author_association must be OWNER');
+  }
   return {
-    ...record,
-    repository: record.repository || marker[1],
-    pr_number: record.pr_number || Number(marker[2]),
-    reviewed_payload_head_sha: record.reviewed_payload_head_sha || marker[3],
+    ok: failures.length === 0,
+    failures,
+    comment_id: comment && comment.id,
+    issue_url: comment && comment.issue_url,
+    author_login: login || null,
+    author_association: comment && comment.author_association || null,
   };
 }
 
-function fetchAuthorizationComment(repo, commentId) {
+function fetchAuthorizationComment(repo, commentId, options = {}) {
   const raw = runGh(['api', `repos/${repo}/issues/comments/${commentId}`]);
   const comment = JSON.parse(raw);
-  return parseAuthorizationComment(comment.body);
+  const record = parseAuthorizationComment(comment.body);
+  const metadata = validateAuthorizationCommentMetadata(comment, record, {
+    expectedRepo: repo,
+    expectedPr: options.expectedPr,
+    expectedCommentId: commentId,
+    expectedAuthorLogin: options.expectedAuthorLogin,
+  });
+  if (!metadata.ok) throw new Error(metadata.failures.join('; '));
+  return record;
 }
 
 function asArray(value) {
@@ -94,6 +150,9 @@ function validateAuthorizationRecord(record, options = {}) {
   const descendants = asArray(item.permitted_integration_descendants);
   const invalidationConditions = asArray(item.invalidation_conditions);
 
+  for (const key of Object.keys(item)) {
+    if (!ALLOWED_RECORD_KEYS.has(key)) failures.push(`unsupported authorization field: ${key}`);
+  }
   if (typeof repository !== 'string' || !/^[^/\s]+\/[^/\s]+$/.test(repository)) {
     failures.push('repository must be owner/name');
   }
@@ -161,7 +220,9 @@ function runCli(argv) {
   try {
     if (recordFile) record = readJson(recordFile);
     else if (commentFile) record = parseAuthorizationComment(fs.readFileSync(commentFile, 'utf8'));
-    else if (repo && commentId) record = fetchAuthorizationComment(repo, commentId);
+    else if (repo && commentId) record = fetchAuthorizationComment(repo, commentId, {
+      expectedPr: expectedPr ? Number(expectedPr) : null,
+    });
     else fail('provide --record, --comment-file, or --repo with --comment-id');
   } catch (error) {
     fail(error.message);
@@ -186,6 +247,8 @@ module.exports = {
   VALID_DECISIONS,
   fetchAuthorizationComment,
   markerFor,
+  markerFieldsFromComment,
   parseAuthorizationComment,
+  validateAuthorizationCommentMetadata,
   validateAuthorizationRecord,
 };
