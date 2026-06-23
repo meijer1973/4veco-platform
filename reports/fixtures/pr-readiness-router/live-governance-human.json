@@ -45,6 +45,9 @@
       "result": "PASS",
       "reviewed_commit_sha": "3434343434343434343434343434343434343434"
     },
-    "changed_paths_verified": true
+    "changed_paths_verified": true,
+    "branch_protection": {
+      "required_approving_review_count": 0
+    }
   }
 }

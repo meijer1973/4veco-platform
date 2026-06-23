@@ -62,6 +62,9 @@
     "post_lead_review_changed_paths": [
       "reports/sprints/TAIL-lead-review-round2.md",
       "reports/url-index.md"
-    ]
+    ],
+    "branch_protection": {
+      "required_approving_review_count": 0
+    }
   }
 }

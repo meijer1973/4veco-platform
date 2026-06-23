@@ -255,6 +255,57 @@ function checkerProof(proof) {
   };
 }
 
+function countCandidate(value) {
+  return Number.isInteger(value) && value >= 0 ? value : null;
+}
+
+function branchProtectionApprovalProof(rawBranchProtection) {
+  const raw = rawBranchProtection && typeof rawBranchProtection === 'object' ? rawBranchProtection : {};
+  const hasNestedCheckerShape = Boolean(
+    raw.observed &&
+      raw.observed.required_pull_request_reviews &&
+      typeof raw.observed.required_pull_request_reviews === 'object'
+  );
+  const nestedReviewSummary =
+    hasNestedCheckerShape
+      ? raw.observed.required_pull_request_reviews
+      : {};
+  const hasRawApiShape = Boolean(
+    raw.required_pull_request_reviews && typeof raw.required_pull_request_reviews === 'object'
+  );
+  const rawReviewSummary =
+    hasRawApiShape
+      ? raw.required_pull_request_reviews
+      : {};
+  const observed = hasNestedCheckerShape
+    ? {
+        source: 'branch-protection-checker',
+        count: countCandidate(nestedReviewSummary.required_approving_review_count),
+      }
+    : hasRawApiShape
+      ? {
+          source: 'branch-protection-api',
+          count: countCandidate(rawReviewSummary.required_approving_review_count),
+        }
+      : {
+          source: raw.required_approving_review_count === undefined ? null : 'readiness-proof',
+          count: countCandidate(raw.required_approving_review_count),
+        };
+  const normalized = {
+    ...raw,
+    required_approving_review_count: observed.count,
+    approval_count_source: observed.source,
+    approval_count_observable: observed.count !== null,
+    requires_distinct_approval: observed.count !== null ? observed.count > 0 : null,
+  };
+  delete normalized.lead_review_identity_satisfies;
+  return normalized;
+}
+
+function branchProtectionProof(proof, evidence) {
+  return branchProtectionApprovalProof((proof && proof.branch_protection) || evidence.branch_protection || {});
+}
+
 function leadProof(proof, headSha) {
   const lead = proof.lead_review || {};
   const result = normalizeVerdict(lead.result);
@@ -313,6 +364,7 @@ function collectRevisionReasons(evidence) {
   const ci = ciProof(proof, headSha);
   const checkers = checkerProof(proof);
   const lead = leadProof(proof, headSha);
+  const branchProtection = branchProtectionProof(proof, evidence);
   const autonomousLevel = AUTONOMOUS_LEVELS.has(evidence.throughput.level);
 
   if (!evidence.reviewed_pr.repo || !evidence.reviewed_pr.number || !evidence.reviewed_pr.url) {
@@ -355,7 +407,13 @@ function collectRevisionReasons(evidence) {
   if (evidence.throughput.level === 'L2' && !evidence.throughput.owner_preapproved) {
     reasons.push('l2_owner_preapproval_missing');
   }
-  return { reasons, ci, checkers, lead };
+  return { reasons, ci, checkers, lead, branchProtection };
+}
+
+function branchProtectionRevisions(collected) {
+  return collected.branchProtection.approval_count_observable === true
+    ? []
+    : ['branch_protection_approval_count_unavailable'];
 }
 
 function humanReviewRequired(evidence) {
@@ -383,7 +441,6 @@ function reviewedPr(evidence) {
 }
 
 function proofSummary(evidence, collected) {
-  const branchProtection = evidence.proof.branch_protection || evidence.branch_protection || {};
   return {
     ci_head_sha: collected.ci.sha,
     ci_status: collected.ci.status,
@@ -400,7 +457,7 @@ function proofSummary(evidence, collected) {
     post_lead_review_changed_paths: collected.lead.postLeadReviewChangedPaths,
     changed_paths_verified: evidence.proof.changed_paths_verified === true,
     checkers: collected.checkers.checkers,
-    branch_protection: branchProtection,
+    branch_protection: collected.branchProtection,
   };
 }
 
@@ -435,8 +492,7 @@ function buildDecision(evidence, route, reasonCodes, collected, extras = {}) {
   const branchProtection = decision.proof.branch_protection || {};
   if (
     route === ROUTES.READY_FOR_LEAD_ONLY &&
-    branchProtection.requires_distinct_approval === true &&
-    branchProtection.lead_review_identity_satisfies !== true
+    branchProtection.requires_distinct_approval === true
   ) {
     decision.reason_codes.push('branch_protection_merge_constraint');
     decision.follow_up = decision.follow_up || [];
@@ -482,6 +538,13 @@ function classifyPrReadiness(input) {
       );
     }
     if (['substantial', 'consequential_exception'].includes(evidence.human_review_payload)) {
+      const protectionRevisions = branchProtectionRevisions(collected);
+      if (protectionRevisions.length > 0) {
+        return buildDecision(evidence, ROUTES.KEEP_DRAFT_REVISE, protectionRevisions, collected, {
+          corrections: protectionRevisions,
+          escalation_signals: escalation.triggered,
+        });
+      }
       const reasons =
         evidence.human_review_payload === 'consequential_exception'
           ? ['human_authority_consequential_exception']
@@ -492,6 +555,14 @@ function classifyPrReadiness(input) {
     }
     return buildDecision(evidence, ROUTES.KEEP_DRAFT_REVISE, ['human_review_payload_not_reviewable'], collected, {
       corrections: ['human_review_payload_not_reviewable'],
+      escalation_signals: escalation.triggered,
+    });
+  }
+
+  const protectionRevisions = branchProtectionRevisions(collected);
+  if (protectionRevisions.length > 0) {
+    return buildDecision(evidence, ROUTES.KEEP_DRAFT_REVISE, protectionRevisions, collected, {
+      corrections: protectionRevisions,
       escalation_signals: escalation.triggered,
     });
   }
@@ -554,6 +625,13 @@ function validateDecision(decision) {
     throw new Error('READY_FOR_HUMAN_REVIEW must not permit auto_merge');
   }
   if (readyRoutes.has(decision.route)) {
+    if (
+      !decision.proof.branch_protection ||
+      decision.proof.branch_protection.approval_count_observable !== true ||
+      !Number.isInteger(decision.proof.branch_protection.required_approving_review_count)
+    ) {
+      throw new Error(`${decision.route} requires observable branch-protection approval count`);
+    }
     if (decision.proof.changed_paths_verified !== true) {
       throw new Error(`${decision.route} requires changed_paths_verified proof`);
     }

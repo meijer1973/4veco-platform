@@ -1,6 +1,5 @@
 {
   "expected_route": "READY_FOR_LEAD_ONLY",
-  "expected_reason": "branch_protection_merge_constraint",
   "reviewed_pr": {
     "repo": "meijer1973/4veco-platform",
     "number": 102,
@@ -48,8 +47,14 @@
     },
     "changed_paths_verified": true,
     "branch_protection": {
-      "requires_distinct_approval": true,
-      "lead_review_identity_satisfies": false
+      "required_status_checks_strict": true,
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "enforce_admins": true,
+      "allow_force_pushes": false,
+      "allow_deletions": false,
+      "required_approving_review_count": 0
     }
   }
 }

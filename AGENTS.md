@@ -214,6 +214,36 @@ For `KEEP_DRAFT_BATCH`, continue to the next coherent authorized milestone
 rather than stopping merely because a PR exists. Do not add unrelated work just
 to enlarge a PR, and do not batch across a real decision boundary.
 
+### Single-account merge governance
+
+This repository uses a single-account operating model: GitHub cannot
+distinguish the owner, coding agent, lead-review subagent, PR author, and
+merger as independent approval identities. Required GitHub approval count is
+therefore not the substantive review gate for this repository.
+
+Branch protection for `main` must keep strict `validate-platform`, admin
+enforcement, force-push protection, deletion protection, and pull-request
+workflow while setting `required_approving_review_count` to `0`. Validate this
+with `npm.cmd run check:branch-protection`; the checker must fail if the count
+returns to `1` or if observable pull-request bypass allowances are non-empty.
+PR readiness must derive mechanical approval constraints from the observed
+approval count, not from self-declared identity-satisfaction flags, and it must
+keep the PR draft when that count is not observable.
+
+Merge authority follows the PR-readiness route:
+
+- L0-L2 may merge through the normal merge path after exact-head CI, checker
+  proof, lead review, readiness proof, and complete review-thread evidence pass.
+- L3-L4 and governance/self-modification work must stop after
+  `READY_FOR_HUMAN_REVIEW` until the owner gives an explicit merge decision.
+- A human merge decision must identify the PR number, exact head SHA, decision,
+  and decision scope. Record it as a PR comment when the decision happens
+  outside GitHub's review identity model.
+- Immediately before merging, re-fetch the PR and verify the exact head, open
+  and not-draft state, mergeability, required CI, requested-changes state, and
+  unresolved review-thread state. Use normal merge; do not use admin bypass as
+  a routine substitute for this policy.
+
 
 ### Sprint agent structure
 

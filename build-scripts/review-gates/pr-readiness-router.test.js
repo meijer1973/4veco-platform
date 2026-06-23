@@ -44,6 +44,19 @@ function explicitProof(sha) {
       reviewed_commit_sha: sha,
     },
     changed_paths_verified: true,
+    branch_protection: {
+      required_approving_review_count: 0,
+    },
+  };
+}
+
+function withBranchProtection(fixture, branchProtection) {
+  return {
+    ...fixture,
+    proof: {
+      ...fixture.proof,
+      branch_protection: branchProtection,
+    },
   };
 }
 
@@ -279,6 +292,78 @@ describe('pr-readiness-router', () => {
     });
     expect(decision.route).toBe('KEEP_DRAFT_REVISE');
     expect(decision.reason_codes).toContain('required_ci_context_missing_or_not_successful');
+  });
+
+  test('count zero branch protection does not create a mechanical approval constraint', () => {
+    const decision = classifyPrReadiness(readFixture('l1-checker-ready-branch-protection.json'));
+    expect(decision.route).toBe('READY_FOR_LEAD_ONLY');
+    expect(decision.reason_codes).not.toContain('branch_protection_merge_constraint');
+    expect(decision.follow_up || []).toEqual([]);
+    expect(decision.proof.branch_protection.required_approving_review_count).toBe(0);
+    expect(decision.proof.branch_protection.requires_distinct_approval).toBe(false);
+    expect(decision.proof.branch_protection).not.toHaveProperty('lead_review_identity_satisfies');
+  });
+
+  test('count one branch protection creates a mechanical approval constraint', () => {
+    const fixture = readFixture('l1-checker-ready-branch-protection.json');
+    const decision = classifyPrReadiness(withBranchProtection(fixture, {
+      required_approving_review_count: 1,
+    }));
+
+    expect(decision.route).toBe('READY_FOR_LEAD_ONLY');
+    expect(decision.reason_codes).toContain('branch_protection_merge_constraint');
+    expect(decision.follow_up || []).toHaveLength(1);
+    expect(decision.proof.branch_protection.required_approving_review_count).toBe(1);
+    expect(decision.proof.branch_protection.requires_distinct_approval).toBe(true);
+  });
+
+  test('missing branch-protection approval count fails closed', () => {
+    const fixture = readFixture('l1-checker-ready-branch-protection.json');
+    const decision = classifyPrReadiness(withBranchProtection(fixture, {}));
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('branch_protection_approval_count_unavailable');
+    expect(decision.corrections).toContain('branch_protection_approval_count_unavailable');
+    expect(decision.proof.branch_protection.approval_count_observable).toBe(false);
+  });
+
+  test('nested checker approval count overrides stale self-declared booleans', () => {
+    const fixture = readFixture('l1-checker-ready-branch-protection.json');
+    const decision = classifyPrReadiness(withBranchProtection(fixture, {
+      required_approving_review_count: 0,
+      requires_distinct_approval: false,
+      lead_review_identity_satisfies: true,
+      observed: {
+        required_pull_request_reviews: {
+          required_approving_review_count: 1,
+        },
+      },
+    }));
+
+    expect(decision.route).toBe('READY_FOR_LEAD_ONLY');
+    expect(decision.reason_codes).toContain('branch_protection_merge_constraint');
+    expect(decision.proof.branch_protection.required_approving_review_count).toBe(1);
+    expect(decision.proof.branch_protection.approval_count_source).toBe('branch-protection-checker');
+    expect(decision.proof.branch_protection.requires_distinct_approval).toBe(true);
+    expect(decision.proof.branch_protection).not.toHaveProperty('lead_review_identity_satisfies');
+  });
+
+  test('missing nested checker approval count does not fall back to flattened proof', () => {
+    const fixture = readFixture('l1-checker-ready-branch-protection.json');
+    const decision = classifyPrReadiness(withBranchProtection(fixture, {
+      required_approving_review_count: 0,
+      observed: {
+        required_pull_request_reviews: {
+          available: false,
+          required_approving_review_count: null,
+        },
+      },
+    }));
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('branch_protection_approval_count_unavailable');
+    expect(decision.proof.branch_protection.approval_count_source).toBe('branch-protection-checker');
+    expect(decision.proof.branch_protection.approval_count_observable).toBe(false);
   });
 
   test('validate-platform cannot be removed from ready decision proof', () => {

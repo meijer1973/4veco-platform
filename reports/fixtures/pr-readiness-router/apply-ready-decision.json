@@ -40,7 +40,12 @@
         "status": "passed"
       }
     ],
-    "branch_protection": {},
+    "branch_protection": {
+      "required_approving_review_count": 0,
+      "approval_count_source": "readiness-proof",
+      "approval_count_observable": true,
+      "requires_distinct_approval": false
+    },
     "ci_required_contexts": [
       "validate-platform"
     ],
