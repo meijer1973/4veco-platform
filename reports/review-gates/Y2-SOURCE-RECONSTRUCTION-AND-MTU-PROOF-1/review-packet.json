@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "packet_id": "Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1",
+  "sprint_id": "Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1",
+  "pr_number": null,
+  "pr_url": null,
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "protected_reference",
+  "changed_paths": [
+    "build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js",
+    "build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js",
+    "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.md",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.json",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.md",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/review-packet.json",
+    "reports/reference-planning/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-review-packet.md",
+    "reports/sprints/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-plan.md",
+    "reports/sprints/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PENDING_REMOTE_HEAD",
+    "rationale": "This PR creates a rendered source-reconstruction and governed MTU/task-family proof surface for protected Year 2/v6 target-foundation work. It must route READY_FOR_HUMAN_REVIEW after exact-head proof."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "protected_reference_review_gate",
+    "year2_source_reconstruction",
+    "governed_mtu_task_family_proof",
+    "lesson_production_boundary",
+    "single_account_governance_pilot"
+  ],
+  "date": "2026-06-23",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "references/owned/course-blueprint-v6-three-year.md",
+    "reports/review-gates/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1/review-packet.json",
+    "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json",
+    "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+    "references/data/year2-target-foundation/answer-contracts.json",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-governed-mutation-plan.md",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.json"
+  ],
+  "non_negotiable_requirements": [
+    "Render source reconstruction evidence for all four target-foundation families.",
+    "Preserve official locators and anti-substitution rules.",
+    "Label derived Book 8 representation as derived and non-official.",
+    "Repair the Book 7 actor-arrow figure locator to the rendered official page 6 while keeping the Digibate table on page 7.",
+    "Provide governed MTU/task-family proof for every OP row in each record.",
+    "Tie task-family proof to rendered source artifacts and answer contracts.",
+    "Do not mutate references/external/*.",
+    "Do not mint or mutate MTUs.",
+    "Do not mutate operation or answer-skill registries.",
+    "Do not generate lessons.",
+    "Keep product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product-use authority false.",
+    "Before marking ready or merging, run exact-head PR readiness with live branch-protection output showing ok: true.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "reports/reference-planning/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-review-packet.md"
+    },
+    {
+      "requirement": "Original sprint/gate specs cited",
+      "status": "met",
+      "evidence": "original_sprint_or_gate_spec_refs"
+    },
+    {
+      "requirement": "Four source families rendered",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html"
+    },
+    {
+      "requirement": "Source proof JSON present",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json"
+    },
+    {
+      "requirement": "Official locators preserved",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json"
+    },
+    {
+      "requirement": "Book 8 derived representation labelled",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html"
+    },
+    {
+      "requirement": "Book 7 figure locator repaired",
+      "status": "met",
+      "evidence": "references/data/year2-target-foundation/source-reconstruction-foundation.json"
+    },
+    {
+      "requirement": "Every OP row has governed proof case",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.json"
+    },
+    {
+      "requirement": "Answer contracts linked",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.json"
+    },
+    {
+      "requirement": "MTU mutation not authorized",
+      "status": "met",
+      "evidence": "authority_claims"
+    },
+    {
+      "requirement": "Downstream authority false",
+      "status": "met",
+      "evidence": "authority_claims"
+    },
+    {
+      "requirement": "Local checker proof",
+      "status": "met",
+      "evidence": "proof.local_checkers"
+    },
+    {
+      "requirement": "Exact-head PR proof",
+      "status": "pending_remote_pr",
+      "evidence": "single_account_pr_governance_pilot"
+    }
+  ],
+  "authority_claims": {
+    "rendered_source_reconstruction_ready_for_review": true,
+    "governed_mtu_task_family_proof_ready_for_review": true,
+    "source_foundation_locator_repair_ready_for_review": true,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_reference_mutation_authorized": false,
+    "target_registry_mutation_in_scope": false,
+    "target_registry_records_created": false,
+    "mtus_minted": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "official_exam_operation_closure_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "implementation_summary": {
+    "source_records": 4,
+    "source_foundation_locator_repairs": [
+      "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:figuur-1-kredietverzekering-en-voorwaarden -> vw-1022-a-23-1-o.pdf#page=6"
+    ],
+    "mtu_records": 4,
+    "proof_cases": 19,
+    "record_ids": [
+      "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1"
+    ],
+    "target_owner_candidate_ids": [
+      "Y2-B5-P13",
+      "Y2-B6-P12",
+      "Y2-B7-P13",
+      "Y2-B8-P04"
+    ],
+    "prior_flags_addressed_pending_human_acceptance": [
+      "Y2TRTF-005",
+      "Y2TRTF-006"
+    ]
+  },
+  "carried_flags": [
+    {
+      "id": "Y2SRMTP-001",
+      "classification": "proof_required_to_close",
+      "flag": "Source reconstruction and MTU/task-family proof are review-ready but require exact-head human acceptance before downstream closure.",
+      "blocks": [
+        "lesson handoff",
+        "product proof",
+        "broad OP closure"
+      ],
+      "does_not_block": [
+        "human review of this proof PR"
+      ],
+      "proof_required_to_close": "Owner authorization tied to the exact remote head after CI, checker, branch-protection, lead-review, and PR-readiness proof."
+    },
+    {
+      "id": "Y2SRMTP-002",
+      "classification": "scale_blocker",
+      "flag": "Protected MTU, operation, and answer-skill mutations remain future governed work.",
+      "blocks": [
+        "lesson production",
+        "shared task-shell reliance",
+        "broad OP closure"
+      ],
+      "does_not_block": [
+        "review of rendered source/MTU proof"
+      ],
+      "proof_required_to_close": "Future governed mutation PR with exact diffs and human authorization."
+    },
+    {
+      "id": "Y2SRMTP-003",
+      "classification": "scale_blocker",
+      "flag": "Product, Scale, diagnostics, mastery, PV, summative, and student/product authority remain false.",
+      "blocks": [
+        "CP-6",
+        "Scale Gate",
+        "diagnostics",
+        "mastery",
+        "PV",
+        "summative use",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "human review of this proof surface"
+      ],
+      "proof_required_to_close": "Separate REV-STD-1 product-proof and Scale Gate review."
+    }
+  ],
+  "proof": {
+    "local_checkers": [
+      {
+        "command": "node --check build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node --check build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:review-throughput -- reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/review-packet.json",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      }
+    ]
+  },
+  "single_account_pr_governance_pilot": {
+    "pilot_status": "pending_remote_pr",
+    "expected_route": "READY_FOR_HUMAN_REVIEW",
+    "remote_head_sha": null,
+    "branch_protection_checker_command": "npm.cmd run check:branch-protection -- --repo meijer1973/4veco-platform --branch main",
+    "branch_protection_checker_output": null,
+    "branch_protection_ok_required": true,
+    "pr_readiness_reviewer_command": null,
+    "pr_readiness_decision": null,
+    "lead_review": {
+      "required": true,
+      "path": null,
+      "result": null,
+      "reviewed_commit_sha": null
+    },
+    "owner_authorization_required_to_merge": true,
+    "owner_authorization_exact_sha": null
+  },
+  "decision": {
+    "status": "READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PROOF",
+    "route": "READY_FOR_HUMAN_REVIEW",
+    "human_review_required": true,
+    "mark_ready_allowed": false,
+    "merge_allowed": false,
+    "reason": "Protected source-reconstruction and MTU proof surface must wait for exact-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the exact SHA."
+  },
+  "recommended_next_action": "Open a draft PR, run exact-head governance proof, apply readiness decision only if READY_FOR_HUMAN_REVIEW, and return for owner authorization."
+}
