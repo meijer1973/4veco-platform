@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "exemplar_id": "reasoning-choice-111-golden-exemplar-v1",
+  "negative_fixtures": [
+    {
+      "id": "six_step_flowchart_regression",
+      "description": "Task 1 uses a six-step ordered chain for introductory scarcity reasoning.",
+      "must_fail_because": "Order complexity becomes the challenge instead of economics."
+    },
+    {
+      "id": "two_click_selection_regression",
+      "description": "Student must click a card and then click a slot for ordinary evidence selection.",
+      "must_fail_because": "One-click selection is required where target slot is not the assessed skill."
+    },
+    {
+      "id": "clear_all_only_regression",
+      "description": "Selected items cannot be individually removed.",
+      "must_fail_because": "Repairing one mistake should not reset the task."
+    },
+    {
+      "id": "visible_id_tags",
+      "description": "Cards show hidden role/answer tags such as cause, mechanism, correct, B02, or slot ids.",
+      "must_fail_because": "Visible metadata leaks the answer structure."
+    },
+    {
+      "id": "position_encoded_answer",
+      "description": "Cards appear in fixed order matching the intended answer.",
+      "must_fail_because": "Card bank order must be randomized or non-answer-coded."
+    },
+    {
+      "id": "generic_textarea_only",
+      "description": "Final task is one generic textarea with no selectable reasoning structure.",
+      "must_fail_because": "The game should make the reasoning structure visible."
+    },
+    {
+      "id": "opportunity_cost_as_chosen_value",
+      "response": {
+        "opportunity_cost": "bijles_40"
+      },
+      "must_fail_because": "Opportunity cost is not the chosen alternative."
+    },
+    {
+      "id": "opportunity_cost_as_sum",
+      "response": {
+        "opportunity_cost": "studying_plus_movie_45"
+      },
+      "must_fail_because": "Opportunity cost is the best forgone alternative, not all forgone alternatives added together."
+    },
+    {
+      "id": "no_scarcity_because_profit",
+      "response": {
+        "fragment": "Er is geen schaarste, want Eva kan geld verdienen."
+      },
+      "must_fail_because": "Scarcity is about limited means and choices, not whether an option has value."
+    }
+  ],
+  "positive_fixture": {
+    "scarcity_evidence": [
+      "time_limited",
+      "activities_conflict"
+    ],
+    "opportunity_cost": "studying",
+    "answer_fragments": [
+      "scarcity",
+      "cost",
+      "not_sum"
+    ]
+  }
+}

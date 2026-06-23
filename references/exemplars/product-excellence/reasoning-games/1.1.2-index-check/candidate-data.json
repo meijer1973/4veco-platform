@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "surface": "reasoning_game_golden_exemplar",
+  "paragraph_id": "1.1.2",
+  "paragraph_title": "Percentages en indexcijfers",
+  "title": "Indexcheck: klopt de 6%-claim?",
+  "reasoning_target": {
+    "core_question": "Waarom is een stijging van 6 indexpunten niet automatisch een stijging van 6 procent?",
+    "operation_chain": [
+      "Benoem het verschil tussen twee indexcijfers als indexpunten.",
+      "Kies de oude waarde als referentiewaarde voor een procentuele verandering.",
+      "Controleer dezelfde verandering via prijzen en via indexcijfers.",
+      "Formuleer een oordeel dat indexpunten en procenten afzonderlijk benoemt."
+    ],
+    "not_a_target": [
+      "Een lange oorzaak-gevolgflowchart bouwen.",
+      "Alleen een formule reproduceren zonder de referentiewaarde te begrijpen.",
+      "Een generieke meerkeuzequiz met losstaande vragen."
+    ]
+  },
+  "source": {
+    "context": "Een maandabonnement voor de bus wordt gevolgd met 2024 als basisjaar.",
+    "rows": [
+      {
+        "year": 2024,
+        "price_eur": 50,
+        "index": 100,
+        "base_year": true
+      },
+      {
+        "year": 2025,
+        "price_eur": 60,
+        "index": 120
+      },
+      {
+        "year": 2026,
+        "price_eur": 63,
+        "index": 126
+      }
+    ],
+    "claim": "Van 2025 naar 2026 werd het abonnement 6% duurder, want het indexcijfer steeg van 120 naar 126."
+  },
+  "layout": {
+    "desktop": "source_left_tasks_right",
+    "mobile": "source_before_tasks",
+    "task_count": 3,
+    "tasks_unlocked": true,
+    "card_order": "randomize_once_per_session",
+    "visible_internal_ids": false
+  },
+  "tasks": [
+    {
+      "id": "meaning-of-index-difference",
+      "family": "index_difference_classifier",
+      "student_action": "Select one meaning for the numeric difference 126 - 120.",
+      "interaction": "single_click_replaceable_choice",
+      "expected": "points",
+      "distractor_concepts": [
+        "percent",
+        "euro_difference",
+        "new_index_value"
+      ]
+    },
+    {
+      "id": "parallel-change-check",
+      "family": "parallel_calculation_selector",
+      "student_action": "Select exactly one valid price calculation and one valid index calculation for the same period.",
+      "interaction": "order_free_toggle_select_with_individual_remove",
+      "expected": [
+        "price_old",
+        "index_old"
+      ],
+      "required_result": 5,
+      "distractor_concepts": [
+        "divide_by_new",
+        "divide_by_base_100",
+        "subtract_equals_percent"
+      ]
+    },
+    {
+      "id": "repair-index-claim",
+      "family": "claim_repair_sentence_grid",
+      "student_action": "Choose one complete sentence per answer function and inspect the assembled answer.",
+      "interaction": "one_click_per_row_replaceable_selection",
+      "expected": {
+        "verdict": "wrong",
+        "difference": "six_points",
+        "percent": "five"
+      },
+      "answer_form": [
+        "verdict",
+        "index_point_difference",
+        "percentage_with_old_reference"
+      ]
+    }
+  ],
+  "shared_ui_rules": [
+    "One click performs one complete student action.",
+    "Selection can be changed or removed without clearing unrelated work.",
+    "Randomization happens once per session; cards do not jump after selection.",
+    "No visible role, answer, or internal-ID tags.",
+    "Feedback appears only after checking.",
+    "The final answer is visibly assembled from meaningful sentence functions.",
+    "The interface challenge must remain lower than the economics challenge."
+  ],
+  "authority": {
+    "golden_exemplar_candidate": true,
+    "product_route_adoption_authorized": false,
+    "mastery_or_diagnostics_authorized": false,
+    "student_use_authorized": false
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "archetype_catalog_id": "econ-reasoning-game-archetypes-v1",
+  "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
+  "archetypes": [
+    {
+      "id": "causal_mechanism",
+      "golden_exemplar_id": "reasoning-market-price-mechanism-v3",
+      "grammar_template": "source change -> causal chain -> connector sentences -> bounded answer",
+      "default_task_actions": [
+        "source_chain_builder",
+        "cloze_tile_select",
+        "functional_answer_builder"
+      ],
+      "reject_when": [
+        "order_is_not_part_of_the_reasoning",
+        "connector_language_becomes_the_real_test",
+        "goal_reveals_full_chain"
+      ]
+    },
+    {
+      "id": "choice_and_evidence",
+      "golden_exemplar_id": "reasoning-1.1.1-choice-compass-v1",
+      "grammar_template": "source facts -> relevant evidence -> best forgone alternative -> explanation",
+      "default_task_actions": [
+        "multi_select",
+        "choice",
+        "functional_answer_builder"
+      ],
+      "reject_when": [
+        "flowchart_complexity_replaces_choice_reasoning",
+        "opportunity_cost_is_treated_as_chosen_value",
+        "evidence_selection_requires_two_click_assignment"
+      ]
+    },
+    {
+      "id": "reference_value_and_claim_repair",
+      "golden_exemplar_id": "reasoning-1.1.2-index-check-v1",
+      "grammar_template": "difference -> unit -> reference value -> equivalent checks -> repaired claim",
+      "default_task_actions": [
+        "choice",
+        "multi_select",
+        "functional_answer_builder"
+      ],
+      "reject_when": [
+        "game_is_only_calculation_practice",
+        "index_points_are_treated_as_percent",
+        "new_value_is_used_as_reference_without_reason"
+      ]
+    },
+    {
+      "id": "graph_evidence_and_epistemic_scope",
+      "golden_exemplar_id": "reasoning-1.1.3-graph-editorial-v2",
+      "grammar_template": "graph points -> observation or estimate -> bounded conclusion",
+      "default_task_actions": [
+        "graph_evidence_selector",
+        "choice",
+        "functional_answer_builder"
+      ],
+      "reject_when": [
+        "graph_is_decorative",
+        "graph_construction_replaces_reasoning",
+        "target_points_are_smaller_than_44_px",
+        "descriptive_graph_is_used_for_causality_overclaim"
+      ]
+    }
+  ],
+  "new_archetype_policy": {
+    "allowed": true,
+    "requires_written_gap": true,
+    "requires_specialist_review": true,
+    "must_still_use_shared_task_actions": true
+  }
+}

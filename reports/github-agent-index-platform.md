@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-23T06:05:02.016Z
+Generated: 2026-06-23T08:09:44.404Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/y2-target-registry-task-foundation-impl1-20260623`
-Source commit: `82702f07118a1828fc232e7bbc8478110988cec3`
-Files indexed: 5781
+Source branch: `codex/reasoning-golden-family-platform-20260620`
+Source commit: `5acb7c936f45d635618d79cabe3c40823e4f2214`
+Files indexed: 5916
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -44,7 +44,7 @@ Count: 9
 
 ## engines
 
-Count: 85
+Count: 87
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -67,6 +67,7 @@ Count: 85
 - engines/quiz-engine.js
 - engines/quiz-ui.js
 - engines/quiz.css
+- engines/reasoning-composer.js
 - engines/reasoning-engine.js
 - engines/reasoning-ui.js
 - engines/reasoning.css
@@ -115,6 +116,7 @@ Count: 85
 - engines/tests/procedure-engine.test.js
 - engines/tests/quiz-data.test.js
 - engines/tests/quiz-engine.test.js
+- engines/tests/reasoning-composer.test.js
 - engines/tests/reasoning-data.test.js
 - engines/tests/reasoning-engine.test.js
 - engines/tests/reasoning-ui.test.js
@@ -134,7 +136,7 @@ Count: 85
 
 ## build scripts
 
-Count: 536
+Count: 543
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -208,6 +210,10 @@ Count: 536
 - build-scripts/content/legacy-target/vaardigheden-352-naar-het-examen.js
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
+- build-scripts/exemplars/capture-reasoning-golden-family-screenshots.js
+- build-scripts/exemplars/check-reasoning-golden-exemplars.js
+- build-scripts/exemplars/generate-reasoning-golden-family-gallery.js
+- build-scripts/exemplars/reasoning-golden-family-data.js
 - build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
 - build-scripts/inspection/build-international-overlay-architecture.js
@@ -561,6 +567,7 @@ Count: 536
 - build-scripts/sprints/check-gate-ci-proof.js
 - build-scripts/sprints/check-gate-ci-proof.test.js
 - build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js
+- build-scripts/sprints/check-gate-reasoning-golden-family-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
 - build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js
@@ -592,6 +599,8 @@ Count: 536
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-reasoning-game-skill.js
+- build-scripts/sprints/check-reasoning-golden-family-gallery.js
 - build-scripts/sprints/check-rev-std1-flag-disposition.js
 - build-scripts/sprints/check-review-throughput-packet.js
 - build-scripts/sprints/check-review-throughput-packet.test.js
@@ -675,7 +684,7 @@ Count: 536
 
 ## skills
 
-Count: 42
+Count: 46
 
 - .claude/commands/aanpak-samenvattingen.md
 - .claude/commands/econ-book-builder.md
@@ -712,17 +721,21 @@ Count: 42
 - skills/econ-pdf-builder.md
 - skills/econ-pptx-templates.md
 - skills/econ-quality-control.md
+- skills/econ-reasoning-game.md
 - skills/econ-testprep-builder.md
 - skills/econ-textbook-paragraph.md
 - skills/econ-word-templates.md
 - skills/economic-graph.md
 - skills/manage-references.md
 - skills/qc-references.md
+- skills/reasoning-game-archetypes.json
+- skills/reasoning-game-checklist.json
+- skills/reasoning-game-prompt-template.md
 - skills/senior-dev-planning.md
 
 ## validators
 
-Count: 526
+Count: 540
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -771,6 +784,7 @@ Count: 526
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/exemplars/check-reasoning-golden-exemplars.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/check-international-overlay-architecture.js
@@ -943,6 +957,7 @@ Count: 526
 - build-scripts/sprints/check-gate-ci-proof.js
 - build-scripts/sprints/check-gate-ci-proof.test.js
 - build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js
+- build-scripts/sprints/check-gate-reasoning-golden-family-1.js
 - build-scripts/sprints/check-golden-exercise-workbench.js
 - build-scripts/sprints/check-golden-exercise-workbench.test.js
 - build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js
@@ -974,6 +989,8 @@ Count: 526
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-reasoning-game-skill.js
+- build-scripts/sprints/check-reasoning-golden-family-gallery.js
 - build-scripts/sprints/check-rev-std1-flag-disposition.js
 - build-scripts/sprints/check-review-throughput-packet.js
 - build-scripts/sprints/check-review-throughput-packet.test.js
@@ -1043,6 +1060,7 @@ Count: 526
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md
+- references/exemplars/product-excellence/reasoning-games/compositions/reasoning-index-check-composed-v1.json
 - reports/fixtures/review-throughput-1/negative-ci-missing-validate-platform.json
 - reports/fixtures/review-throughput-1/negative-ci-validate-platform-failed.json
 - reports/json/check-route-copy1-proof.json
@@ -1052,6 +1070,15 @@ Count: 526
 - reports/json/graph-check-ux1-proof.json
 - reports/json/short-check-workbench-112-rendered-1-proof.json
 - reports/json/short-check-workbench-policy-1-proof.json
+- reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-answer_preview.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-initial.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-keyboard_focus.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-mobile_dark_correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-next_action.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-partial.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-wrong_retry.png
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -1253,7 +1280,7 @@ Count: 526
 
 ## references
 
-Count: 679
+Count: 725
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1821,6 +1848,52 @@ Count: 679
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/adaptation-notes.md
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/candidate-data.json
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/implementation-handoff.md
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/negative-fixtures.json
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/prototype.html
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/quality-brief.md
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/README.md
+- references/exemplars/product-excellence/reasoning-games/1.1.1-choice-compass/ui-framework.md
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/adaptation-notes.md
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/candidate-data.json
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/implementation-handoff.md
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/negative-fixtures.json
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/prototype.html
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/quality-brief.md
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/README.md
+- references/exemplars/product-excellence/reasoning-games/1.1.2-index-check/ui-framework.md
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/adaptation-notes.md
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/behavior-proof.json
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/candidate-data.json
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/implementation-handoff.md
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/negative-fixtures.json
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/prototype.html
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/quality-brief.md
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/README.md
+- references/exemplars/product-excellence/reasoning-games/1.1.3-graph-editorial/ui-framework.md
+- references/exemplars/product-excellence/reasoning-games/change-notes.md
+- references/exemplars/product-excellence/reasoning-games/compositions/reasoning-choice-compass-composed-v1.json
+- references/exemplars/product-excellence/reasoning-games/compositions/reasoning-graph-editorial-composed-v1.json
+- references/exemplars/product-excellence/reasoning-games/compositions/reasoning-index-check-composed-v1.json
+- references/exemplars/product-excellence/reasoning-games/compositions/reasoning-market-price-mechanism-composed-v1.json
+- references/exemplars/product-excellence/reasoning-games/family-standard.md
+- references/exemplars/product-excellence/reasoning-games/manifest.json
+- references/exemplars/product-excellence/reasoning-games/manifest.schema.json
+- references/exemplars/product-excellence/reasoning-games/market-price-mechanism/candidate-data.json
+- references/exemplars/product-excellence/reasoning-games/market-price-mechanism/implementation-handoff.md
+- references/exemplars/product-excellence/reasoning-games/market-price-mechanism/negative-fixtures.json
+- references/exemplars/product-excellence/reasoning-games/market-price-mechanism/prototype.html
+- references/exemplars/product-excellence/reasoning-games/market-price-mechanism/quality-brief.md
+- references/exemplars/product-excellence/reasoning-games/market-price-mechanism/README.md
+- references/exemplars/product-excellence/reasoning-games/market-price-mechanism/ui-framework.md
+- references/exemplars/product-excellence/reasoning-games/package-origin.json
+- references/exemplars/product-excellence/reasoning-games/policy-adoption-map.md
+- references/exemplars/product-excellence/reasoning-games/policy-traceability.json
+- references/exemplars/product-excellence/reasoning-games/README.md
+- references/exemplars/product-excellence/reasoning-games/reasoning-archetype-decision-tree.md
+- references/exemplars/product-excellence/reasoning-games/transfer-matrix.md
 - references/exemplars/README.md
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
@@ -1937,7 +2010,7 @@ Count: 679
 
 ## reports
 
-Count: 3764
+Count: 3840
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1998,8 +2071,16 @@ Count: 3764
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -2053,6 +2134,10 @@ Count: 3764
 - reports/inspection-standards/international-overlay-architecture-decision.json
 - reports/inspection-standards/international-overlay-architecture-decision.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2118,6 +2203,7 @@ Count: 3764
 - reports/json/reason-replace-audit1.json
 - reports/json/reason-std1-proof.json
 - reports/json/reason-std1-standard-family-map.json
+- reports/json/reasoning-golden-family-proof.json
 - reports/json/reference-cli-coverage.json
 - reports/json/reference-health.json
 - reports/json/reference-quality-issues.json
@@ -2323,6 +2409,58 @@ Count: 3764
 - reports/qc/README.md
 - reports/qc/SUMMARY.md
 - reports/README.md
+- reports/reasoning-golden-family/blind-transfer/blind-transfer-1.2.2-demand-factors-v1.json
+- reports/reasoning-golden-family/gallery-proof.md
+- reports/reasoning-golden-family/gallery.html
+- reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html
+- reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html
+- reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html
+- reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html
+- reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html
+- reports/reasoning-golden-family/negative-fixtures.json
+- reports/reasoning-golden-family/reasoning-composer-gallery.css
+- reports/reasoning-golden-family/screenshot-manifest.md
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-answer_preview.png
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-correct.png
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-initial.png
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-keyboard_focus.png
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-mobile_dark_correct.png
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-next_action.png
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-partial.png
+- reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-wrong_retry.png
+- reports/reasoning-golden-family/screenshots/manifest.json
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-answer_preview.png
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-initial.png
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-keyboard_focus.png
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-mobile_dark_correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-next_action.png
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-partial.png
+- reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-wrong_retry.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-answer_preview.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-initial.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-keyboard_focus.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-mobile_dark_correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-next_action.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-partial.png
+- reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-wrong_retry.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-answer_preview.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-initial.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-keyboard_focus.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-mobile_dark_correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-next_action.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-partial.png
+- reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-wrong_retry.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-answer_preview.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-initial.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-keyboard_focus.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-mobile_dark_correct.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-next_action.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-partial.png
+- reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-wrong_retry.png
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
 - reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-quality-log.md
@@ -3325,6 +3463,7 @@ Count: 3764
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mobile-route-placement.png
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mode0-retry-feedback.png
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mode1-next-action.png
+- reports/review-gates/GATE-REASONING-GOLDEN-FAMILY-1/human-review-packet.md
 - reports/review-gates/GATE-RX1-representation-unit-scope/bundle-urls.md
 - reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.json
 - reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.md
@@ -5081,6 +5220,16 @@ Count: 3764
 - reports/sprints/REASON-UX-2-screenshots/mobile-light-111-reasoning-feedback.png
 - reports/sprints/REASON-UX-2-student-experience-review.md
 - reports/sprints/REASON-UX-2-student-route-proof.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-baseline.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-lead-review.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-fidelity-repair-specialist-review.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-corrections.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round1.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-lead-review-round2.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-plan.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-planning-review.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-result.md
+- reports/sprints/REASONING-GOLDEN-FAMILY-1-specialist-review.md
 - reports/sprints/recent-non-mtu-lead-review-summary.md
 - reports/sprints/REF-CP6-baseline.md
 - reports/sprints/REF-CP6-diff-summary.md

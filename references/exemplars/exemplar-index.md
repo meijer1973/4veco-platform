@@ -10,6 +10,7 @@ This index separates conceptual exemplars from repository-compatible implemented
 conceptual exemplar: product standard, prototype, policy extract, and handoff guidance
 implemented exemplar: committed source snapshot, generated route snapshot, proof notes, and rollout boundary
 answer-form exemplar: reusable answer-form policy for calculation/formula work
+reasoning-game family exemplar library: multi-exemplar product grammar, transfer standard, shared task promotion, and rendered fidelity proof for reasoning games
 ```
 
 ## Canonical Entries
@@ -20,6 +21,7 @@ answer-form exemplar: reusable answer-form policy for calculation/formula work
 | `1.1.3-exit-ticket-conceptual` | conceptual exemplar | `references/exemplars/1.1.3-exit-ticket/` | Product-quality guidance for graph/table exit-ticket design. |
 | `1.1.3-golden-exercise-workbench` | implemented exemplar | `references/exemplars/implemented/1.1.3-golden-exercise-workbench/` | Repository-compatible Golden shell/layout, source-left/task-right, graph/table interaction, and route/no-legacy reference. Not a formula-token reference. |
 | `a96-answer-form` | answer-form exemplar | `references/exemplars/a96-answer-form/` | Calculation/formula answer-form policy, especially visible formula, substitution, notation, conclusion, and hidden-token-trap prevention. |
+| `reasoning-game-golden-family-v1` | reasoning-game family exemplar library | `references/exemplars/product-excellence/reasoning-games/` | Product grammar, archetype decision tree, shared task promotion, negative fixtures, and rendered fidelity proof for reasoning games. |
 
 ## How To Use This Index
 
@@ -30,7 +32,8 @@ For a new Golden Exercise route:
 2. Read the implemented 1.1.3 Golden Exercise Workbench exemplar.
 3. Read the conceptual 1.1.3 exit-ticket exemplar for product intent.
 4. Read A96 when formula, calculation, notation, contextual conclusion, or formula-token policy is part of the task.
-5. Record blockers instead of weakening the operation chain.
+5. Read `references/exemplars/product-excellence/reasoning-games/` when the target is a reasoning game rather than a calculation workbench.
+6. Record blockers instead of weakening the operation chain.
 ```
 
 Do not treat an exemplar as product-use approval. Exemplars preserve implementation and review evidence; they do not authorize Scale Gate 1, diagnostics, mastery, automatic sequencing, summative use, or target-equivalent completion language.
@@ -47,6 +50,8 @@ For a new Golden Presentation route:
 ```
 
 Formula-token boundary: the implemented `1.1.3` source snapshot has local formula-token clarity for its percentage-change task, but it remains a route/workbench exemplar rather than the formula-builder policy exemplar. Future calculation/formula policy work must use `references/exemplars/a96-answer-form/` for reusable-token rules, hidden-token-trap policy, and A96-level formula proof.
+
+Reasoning-game boundary: the reasoning-game family copies product grammar across exemplars and requires paragraph-specific reasoning grammar to be re-derived. It does not authorize product use, diagnostics, mastery, automatic sequencing, summative use, Scale Gate 1, or target-equivalent completion language.
 
 ## Current Rollout Position
 

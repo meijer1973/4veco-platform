@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "authority": {
+    "golden_reference": true,
+    "student_product_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "scale_gate": false
+  },
+  "layout": {
+    "type": "dual_pane_source_task_workspace",
+    "desktopIndependentScroll": true,
+    "mobileFlow": "source_before_tasks",
+    "defaultRoute": "reasoning_composer"
+  },
+  "composition_id": "reasoning-graph-editorial-composed-v1",
+  "title": "Grafiekclaim redigeren",
+  "goal": "Gebruik grafiekwaarden om te bepalen hoe sterk een kop mag zijn.",
+  "archetype_id": "graph_evidence_and_epistemic_scope",
+  "selected_exemplar_ids": [
+    "reasoning-1.1.3-graph-editorial-v2"
+  ],
+  "targetBrief": {
+    "reasoningTarget": "Use observed graph values and interpolated estimates to bound an editorial claim.",
+    "centralMisconception": "A comparison between two points becomes either an exact middle observation or a universal causal rule.",
+    "sourceEvidenceType": "claim, table and graph",
+    "requiredAnswerForm": "values, interpretation, scope",
+    "mustNotTest": "graph construction",
+    "candidateArchetype": "graph_evidence_and_epistemic_scope",
+    "selectedGoldenExemplars": [
+      "reasoning-1.1.3-graph-editorial-v2"
+    ],
+    "mechanicFit": "Graph point selection, estimate-status choice and answer rows preserve observation-versus-interpolation reasoning."
+  },
+  "taskSet": {
+    "schema_version": 1,
+    "title": "Grafiekclaim redigeren",
+    "contextBlocks": [
+      {
+        "id": "ctx-graph-claim",
+        "type": "markdown",
+        "title": "Claim",
+        "bodyMarkdown": "Een kop boven een artikel zegt: als de prijs van broodjes stijgt van 2 naar 8 euro, halveert de verkoop altijd.",
+        "accessibilitySummary": "Korte claim die met grafiekwaarden moet worden begrensd."
+      },
+      {
+        "id": "ctx-graph-table",
+        "type": "table",
+        "sourceLabel": "Tabel 1",
+        "caption": "Tabel 1: Prijs en hoeveelheid broodjes",
+        "sourceMaterialId": "broodjes-vraag",
+        "columns": [
+          "Prijs P",
+          "Hoeveelheid Q"
+        ],
+        "rows": [
+          [
+            2,
+            600
+          ],
+          [
+            8,
+            300
+          ]
+        ],
+        "altText": "Tabel met waargenomen prijzen 2 en 8 en hoeveelheden 600 en 300."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "graph-points",
+        "family": "graph_evidence_selector",
+        "skillLabel": "Grafiekpunten kiezen",
+        "purpose": "Kies direct de punten waarop de claim steunt.",
+        "prompt": "Kies de twee waargenomen punten die de kop vergelijkt.",
+        "interaction": {
+          "maxSelections": 2,
+          "hitTargetPx": 44,
+          "trayLabel": "Gekozen punten",
+          "placeholder": "Kies twee punten in de grafiek.",
+          "graph": {
+            "title": "Vraag naar broodjes",
+            "altText": "Grafiek waarin bij prijs 2 de hoeveelheid 600 is en bij prijs 8 de hoeveelheid 300 is.",
+            "axes": {
+              "x": {
+                "label": "Prijs P",
+                "min": 0,
+                "max": 10,
+                "ticks": [
+                  0,
+                  2,
+                  5,
+                  8,
+                  10
+                ]
+              },
+              "y": {
+                "label": "Hoeveelheid Q",
+                "min": 0,
+                "max": 700,
+                "ticks": [
+                  300,
+                  600
+                ]
+              }
+            },
+            "series": [
+              {
+                "label": "Vraag",
+                "points": [
+                  {
+                    "id": "p2-q600",
+                    "x": 2,
+                    "y": 600,
+                    "label": "P=2, Q=600",
+                    "kind": "answer"
+                  },
+                  {
+                    "id": "p8-q300",
+                    "x": 8,
+                    "y": 300,
+                    "label": "P=8, Q=300",
+                    "kind": "answer"
+                  },
+                  {
+                    "id": "p5-estimate",
+                    "x": 5,
+                    "y": 450,
+                    "label": "P=5 op de lijn",
+                    "kind": "distractor",
+                    "distractorFor": "p2-q600",
+                    "pathPoint": false
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "expected": {
+          "kind": "graph_evidence_selector",
+          "pointIds": [
+            "p2-q600",
+            "p8-q300"
+          ],
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-graph-claim",
+            "ctx-graph-table"
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Punten passen",
+          "matchText": "Deze twee waargenomen punten horen bij de vergelijking in de kop.",
+          "retryTitle": "Kies de waargenomen eindpunten",
+          "retryText": "Gebruik de punten die de kop daadwerkelijk vergelijkt."
+        },
+        "practiceRoute": {
+          "label": "Door naar claimtaal",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-graph-claim",
+          "ctx-graph-table"
+        ]
+      },
+      {
+        "id": "graph-estimate-status",
+        "family": "choice",
+        "skillLabel": "Schatting begrenzen",
+        "purpose": "Maak onderscheid tussen waarnemen, schatten en te exact formuleren.",
+        "prompt": "Wat mag je bij P=5 zeggen op basis van de lijn tussen de waargenomen punten?",
+        "reasoningOperationSignature": "observation_vs_interpolation_epistemic_status",
+        "interaction": {
+          "inputLabel": "Uitspraak bij P=5",
+          "options": [
+            {
+              "id": "approx-450",
+              "label": "Q is ongeveer 450 broodjes.",
+              "internalRationale": "Verdedigbare interpolatie op de getekende lijn."
+            },
+            {
+              "id": "exact-450",
+              "label": "Q is precies 450 broodjes.",
+              "internalRationale": "Overclaimt exactheid; P=5 staat niet als waarneming in de tabel."
+            },
+            {
+              "id": "no-statement",
+              "label": "Je kunt niets zeggen tussen P=2 en P=8.",
+              "internalRationale": "Negeert dat de getekende lijn een schatting ondersteunt."
+            }
+          ]
+        },
+        "expected": {
+          "kind": "choice",
+          "value": "approx-450",
+          "operationSignature": "observation_vs_interpolation_epistemic_status",
+          "epistemicStatus": "supported_estimate_not_exact_observation",
+          "estimateAtX": 5,
+          "sourceEvidenceRefs": [
+            "ctx-graph-claim",
+            "ctx-graph-table"
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Schatting goed begrensd",
+          "matchText": "Bij P=5 kun je de lijn gebruiken voor ongeveer 450, maar niet doen alsof het een exact waargenomen tabelpunt is.",
+          "retryTitle": "Let op exact of ongeveer",
+          "retryText": "Gebruik de lijn als schatting en de tabel voor wat direct is waargenomen."
+        },
+        "practiceRoute": {
+          "label": "Door naar claimtaal",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-graph-claim",
+          "ctx-graph-table"
+        ]
+      },
+      {
+        "id": "graph-scope",
+        "family": "choice",
+        "skillLabel": "Claimsterkte kiezen",
+        "purpose": "Kies taal die bij de bron past.",
+        "prompt": "Welke formulering past het best bij de grafiek?",
+        "interaction": {
+          "inputLabel": "Formulering",
+          "options": [
+            {
+              "id": "observed-interval",
+              "label": "Tussen P=2 en P=8 daalt Q van 600 naar 300.",
+              "internalRationale": "Blijft bij waargenomen punten."
+            },
+            {
+              "id": "always-half",
+              "label": "Elke prijsstijging halveert de verkoop.",
+              "internalRationale": "Maakt een te algemene regel."
+            },
+            {
+              "id": "cause-only-price",
+              "label": "De prijs is de enige oorzaak van de daling.",
+              "internalRationale": "De grafiek toont geen volledige oorzaak op zichzelf."
+            }
+          ]
+        },
+        "expected": {
+          "kind": "choice",
+          "value": "observed-interval",
+          "sourceEvidenceRefs": [
+            "ctx-graph-claim",
+            "ctx-graph-table"
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Claim is voorzichtig",
+          "matchText": "Je blijft bij wat de grafiek ondersteunt.",
+          "retryTitle": "Maak de claim minder algemeen",
+          "retryText": "Een grafiekvergelijking is geen algemene wet of volledige oorzaak."
+        },
+        "practiceRoute": {
+          "label": "Door naar conclusie",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-graph-claim",
+          "ctx-graph-table"
+        ]
+      },
+      {
+        "id": "graph-answer",
+        "family": "functional_answer_builder",
+        "skillLabel": "Antwoorddelen kiezen",
+        "purpose": "Bouw een antwoord waarin elke regel een eigen functie heeft.",
+        "prompt": "Bouw een redactieadvies met waarden, interpretatie en grens.",
+        "interaction": {
+          "rowGroupLabel": "Antwoordregels",
+          "answerPreview": {
+            "label": "Opgebouwd antwoord",
+            "placeholder": "Kies per regel een onderdeel.",
+            "template": "{{values}} {{interpretation}} {{scope}}"
+          },
+          "answerRows": [
+            {
+              "id": "values",
+              "label": "Waarden",
+              "options": [
+                {
+                  "id": "observed-values",
+                  "label": "Bij P=2 is Q=600 en bij P=8 is Q=300.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "exact-middle",
+                  "label": "Bij P=5 is Q exact 450 door de lijn.",
+                  "kind": "distractor",
+                  "distractorFor": "observed-values"
+                }
+              ]
+            },
+            {
+              "id": "interpretation",
+              "label": "Interpretatie",
+              "options": [
+                {
+                  "id": "interval-drop",
+                  "label": "In dit interval is de hoeveelheid lager bij de hogere prijs.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "causal-proof",
+                  "label": "Daarmee is de prijs de volledige oorzaak.",
+                  "kind": "distractor",
+                  "distractorFor": "interval-drop"
+                }
+              ]
+            },
+            {
+              "id": "scope",
+              "label": "Grens",
+              "options": [
+                {
+                  "id": "headline-too-strong",
+                  "label": "Het woord altijd is te sterk voor deze bron.",
+                  "kind": "answer"
+                },
+                {
+                  "id": "headline-correct",
+                  "label": "De kop is in alle situaties precies.",
+                  "kind": "distractor",
+                  "distractorFor": "headline-too-strong"
+                }
+              ]
+            }
+          ]
+        },
+        "expected": {
+          "kind": "functional_answer_builder",
+          "rows": {
+            "values": "observed-values",
+            "interpretation": "interval-drop",
+            "scope": "headline-too-strong"
+          },
+          "partialFeedback": "practice_only",
+          "sourceEvidenceRefs": [
+            "ctx-graph-claim",
+            "ctx-graph-table"
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Advies is begrensd",
+          "matchText": "Je gebruikt de grafiekwaarden zonder een te sterke algemene claim.",
+          "retryTitle": "Beperk de conclusie",
+          "retryText": "Gebruik wat de bron laat zien en vermijd woorden als altijd."
+        },
+        "practiceRoute": {
+          "label": "Verder oefenen met deze redenering",
+          "href": "#next"
+        },
+        "contextRefs": [
+          "ctx-graph-claim",
+          "ctx-graph-table"
+        ]
+      }
+    ]
+  },
+  "proofScenarios": {
+    "partial": {
+      "responses": [
+        {
+          "taskId": "graph-points",
+          "response": {
+            "pointIds": [
+              "p2-q600"
+            ]
+          },
+          "check": false
+        }
+      ]
+    },
+    "wrong": {
+      "responses": [
+        {
+          "taskId": "graph-estimate-status",
+          "response": {
+            "value": "exact-450"
+          }
+        }
+      ]
+    },
+    "correct": {
+      "responses": [
+        {
+          "taskId": "graph-points",
+          "response": {
+            "pointIds": [
+              "p2-q600",
+              "p8-q300"
+            ]
+          }
+        },
+        {
+          "taskId": "graph-estimate-status",
+          "response": {
+            "value": "approx-450"
+          }
+        },
+        {
+          "taskId": "graph-scope",
+          "response": {
+            "value": "observed-interval"
+          }
+        },
+        {
+          "taskId": "graph-answer",
+          "response": {
+            "rows": {
+              "values": "observed-values",
+              "interpretation": "interval-drop",
+              "scope": "headline-too-strong"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

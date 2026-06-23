@@ -30,6 +30,8 @@
     source_value_selection: { label: 'Bronwaarden kiezen', deterministic: true },
     source_chain_builder: { label: 'Bronketen bouwen', deterministic: true },
     label_placement: { label: 'Labels plaatsen', deterministic: true },
+    functional_answer_builder: { label: 'Antwoorddelen kiezen', deterministic: true },
+    graph_evidence_selector: { label: 'Grafiekpunten kiezen', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -158,6 +160,33 @@
 
   function clone(value) {
     return JSON.parse(JSON.stringify(value));
+  }
+
+  function stableHash(value) {
+    var str = String(value == null ? '' : value);
+    var hash = 2166136261;
+    for (var i = 0; i < str.length; i += 1) {
+      hash ^= str.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    return hash >>> 0;
+  }
+
+  function stableSessionShuffle(items, seed) {
+    assert(Array.isArray(items), 'stableSessionShuffle.items must be an array');
+    var keyed = items.map(function (item, index) {
+      var key = isObject(item) && item.id != null ? item.id : JSON.stringify(item);
+      return {
+        item: item,
+        index: index,
+        hash: stableHash(String(seed || 'default') + '\u0001' + key + '\u0001' + index)
+      };
+    });
+    keyed.sort(function (a, b) {
+      if (a.hash !== b.hash) return a.hash - b.hash;
+      return a.index - b.index;
+    });
+    return keyed.map(function (entry) { return clone(entry.item); });
   }
 
   function assert(condition, message) {
@@ -416,6 +445,37 @@
         push(target.label);
         push(target.description);
       });
+      (task.interaction.answerRows || []).forEach(function (row) {
+        push(row.label);
+        push(row.prompt);
+        (row.options || []).forEach(function (option) {
+          push(option.label);
+          push(option.description);
+        });
+      });
+      if (task.interaction.answerPreview) {
+        push(task.interaction.answerPreview.label);
+        push(task.interaction.answerPreview.placeholder);
+        push(task.interaction.answerPreview.template);
+      }
+      if (task.interaction.graph) {
+        push(task.interaction.graph.title);
+        push(task.interaction.graph.altText);
+        if (task.interaction.graph.axes) {
+          if (task.interaction.graph.axes.x) push(task.interaction.graph.axes.x.label);
+          if (task.interaction.graph.axes.y) push(task.interaction.graph.axes.y.label);
+        }
+        (task.interaction.graph.series || []).forEach(function (series) {
+          push(series.label);
+          (series.points || []).forEach(function (point) {
+            push(point.label);
+            push(point.description);
+          });
+        });
+      }
+      push(task.interaction.graphTitle);
+      push(task.interaction.pointBankLabel);
+      push(task.interaction.trayLabel);
       (task.interaction.leftItems || []).forEach(function (item) {
         push(item.label);
         push(item.description);
@@ -1599,6 +1659,165 @@
     };
   }
 
+  function validateFunctionalAnswerBuilderInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.answerRows, path + '.answerRows', 1);
+    optionalString(interaction.rowGroupLabel, path + '.rowGroupLabel');
+    optionalString(interaction.clearLabel, path + '.clearLabel');
+    assert(isObject(interaction.answerPreview), path + '.answerPreview is required');
+    requireString(interaction.answerPreview.label, path + '.answerPreview.label');
+    requireString(interaction.answerPreview.template, path + '.answerPreview.template');
+    optionalString(interaction.answerPreview.placeholder, path + '.answerPreview.placeholder');
+
+    var rowIds = {};
+    var rowLabels = {};
+    var optionIdsByRow = {};
+    var optionLabelsByRow = {};
+    var answerOptionsByRow = {};
+
+    interaction.answerRows.forEach(function (row, rowIndex) {
+      assert(isObject(row), path + '.answerRows[' + rowIndex + '] must be an object');
+      requireString(row.id, path + '.answerRows[' + rowIndex + '].id');
+      requireString(row.label, path + '.answerRows[' + rowIndex + '].label');
+      optionalString(row.prompt, path + '.answerRows[' + rowIndex + '].prompt');
+      requireArray(row.options, path + '.answerRows[' + rowIndex + '].options', 2);
+      assert(!rowIds[row.id], 'duplicate functional answer row id: ' + row.id);
+      rowIds[row.id] = true;
+      rowLabels[row.id] = row.label;
+      optionIdsByRow[row.id] = {};
+      optionLabelsByRow[row.id] = {};
+      answerOptionsByRow[row.id] = [];
+      var rowDistractorCount = 0;
+
+      row.options.forEach(function (option, optionIndex) {
+        var optionPath = path + '.answerRows[' + rowIndex + '].options[' + optionIndex + ']';
+        assert(isObject(option), optionPath + ' must be an object');
+        requireString(option.id, optionPath + '.id');
+        requireString(option.label, optionPath + '.label');
+        requireString(option.kind, optionPath + '.kind');
+        assert(/^(answer|distractor)$/.test(option.kind), optionPath + '.kind must be answer or distractor');
+        optionalString(option.description, optionPath + '.description');
+        assert(!optionIdsByRow[row.id][option.id], 'duplicate functional answer option id in row ' + row.id + ': ' + option.id);
+        optionIdsByRow[row.id][option.id] = true;
+        optionLabelsByRow[row.id][option.id] = option.label;
+        if (option.kind === 'answer') answerOptionsByRow[row.id].push(option.id);
+        if (option.kind === 'distractor') rowDistractorCount += 1;
+      });
+
+      row.options.forEach(function (option, optionIndex) {
+        var optionPath = path + '.answerRows[' + rowIndex + '].options[' + optionIndex + ']';
+        if (option.kind === 'distractor') {
+          requireString(option.distractorFor, optionPath + '.distractorFor');
+          assert(optionIdsByRow[row.id][option.distractorFor], optionPath + '.distractorFor must match an option in the same row');
+        } else {
+          optionalString(option.distractorFor, optionPath + '.distractorFor');
+        }
+      });
+
+      assert(answerOptionsByRow[row.id].length >= 1, path + '.answerRows[' + rowIndex + '] must include an answer option');
+      assert(rowDistractorCount >= 1, path + '.answerRows[' + rowIndex + '] must include at least one distractor option');
+    });
+
+    return {
+      rowIds: rowIds,
+      rowLabels: rowLabels,
+      optionIdsByRow: optionIdsByRow,
+      optionLabelsByRow: optionLabelsByRow,
+      answerOptionsByRow: answerOptionsByRow
+    };
+  }
+
+  function validateGraphEvidenceInteraction(task, path) {
+    var interaction = task.interaction;
+    assert(isObject(interaction.graph), path + '.graph is required');
+    var graph = interaction.graph;
+    requireString(graph.title, path + '.graph.title');
+    requireString(graph.altText, path + '.graph.altText');
+    assert(isObject(graph.axes), path + '.graph.axes must be an object');
+    assert(isObject(graph.axes.x), path + '.graph.axes.x must be an object');
+    assert(isObject(graph.axes.y), path + '.graph.axes.y must be an object');
+    requireString(graph.axes.x.label, path + '.graph.axes.x.label');
+    requireString(graph.axes.y.label, path + '.graph.axes.y.label');
+    assert(isNumber(graph.axes.x.min), path + '.graph.axes.x.min must be numeric');
+    assert(isNumber(graph.axes.x.max), path + '.graph.axes.x.max must be numeric');
+    assert(graph.axes.x.max > graph.axes.x.min, path + '.graph.axes.x.max must be greater than min');
+    assert(isNumber(graph.axes.y.min), path + '.graph.axes.y.min must be numeric');
+    assert(isNumber(graph.axes.y.max), path + '.graph.axes.y.max must be numeric');
+    assert(graph.axes.y.max > graph.axes.y.min, path + '.graph.axes.y.max must be greater than min');
+    if (graph.axes.x.ticks !== undefined) {
+      requireArray(graph.axes.x.ticks, path + '.graph.axes.x.ticks', 2);
+      graph.axes.x.ticks.forEach(function (tick, idx) {
+        assert(isNumber(tick), path + '.graph.axes.x.ticks[' + idx + '] must be numeric');
+      });
+    }
+    if (graph.axes.y.ticks !== undefined) {
+      requireArray(graph.axes.y.ticks, path + '.graph.axes.y.ticks', 2);
+      graph.axes.y.ticks.forEach(function (tick, idx) {
+        assert(isNumber(tick), path + '.graph.axes.y.ticks[' + idx + '] must be numeric');
+      });
+    }
+    requireArray(graph.series, path + '.graph.series', 1);
+    optionalString(interaction.trayLabel, path + '.trayLabel');
+    optionalString(interaction.placeholder, path + '.placeholder');
+    var maxSelections = interaction.maxSelections == null ? 2 : interaction.maxSelections;
+    assert(Number.isInteger(maxSelections) && maxSelections >= 1, path + '.maxSelections must be an integer >= 1');
+    var hitTargetPx = interaction.hitTargetPx == null ? 44 : interaction.hitTargetPx;
+    assert(Number.isInteger(hitTargetPx) && hitTargetPx >= 44, path + '.hitTargetPx must be an integer >= 44');
+
+    var pointIds = {};
+    var pointLabels = {};
+    var answerPointIds = [];
+    var answerPointSet = {};
+    var distractorCount = 0;
+    graph.series.forEach(function (series, seriesIndex) {
+      assert(isObject(series), path + '.graph.series[' + seriesIndex + '] must be an object');
+      requireString(series.label, path + '.graph.series[' + seriesIndex + '].label');
+      requireArray(series.points, path + '.graph.series[' + seriesIndex + '].points', 2);
+      series.points.forEach(function (point, pointIndex) {
+        var pointPath = path + '.graph.series[' + seriesIndex + '].points[' + pointIndex + ']';
+        assert(isObject(point), pointPath + ' must be an object');
+        requireString(point.id, pointPath + '.id');
+        assert(isNumber(point.x), pointPath + '.x must be numeric');
+        assert(isNumber(point.y), pointPath + '.y must be numeric');
+        requireString(point.kind, pointPath + '.kind');
+        assert(/^(answer|distractor|neutral)$/.test(point.kind), pointPath + '.kind must be answer, distractor, or neutral');
+        optionalString(point.label, pointPath + '.label');
+        optionalString(point.description, pointPath + '.description');
+        optionalString(point.distractorFor, pointPath + '.distractorFor');
+        assert(point.x >= graph.axes.x.min && point.x <= graph.axes.x.max, pointPath + '.x must be within the x axis range');
+        assert(point.y >= graph.axes.y.min && point.y <= graph.axes.y.max, pointPath + '.y must be within the y axis range');
+        assert(!pointIds[point.id], 'duplicate graph evidence point id: ' + point.id);
+        pointIds[point.id] = true;
+        pointLabels[point.id] = point.label || (String(point.x) + ', ' + String(point.y));
+        if (point.kind === 'answer') {
+          answerPointIds.push(point.id);
+          answerPointSet[point.id] = true;
+        }
+        if (point.kind === 'distractor') distractorCount += 1;
+      });
+    });
+
+    graph.series.forEach(function (series, seriesIndex) {
+      series.points.forEach(function (point, pointIndex) {
+        if (point.kind === 'distractor') {
+          requireString(point.distractorFor, path + '.graph.series[' + seriesIndex + '].points[' + pointIndex + '].distractorFor');
+          assert(answerPointSet[point.distractorFor], path + '.graph.series[' + seriesIndex + '].points[' + pointIndex + '].distractorFor must match an answer point');
+        }
+      });
+    });
+
+    assert(answerPointIds.length >= 1, path + '.graph.series must include answer points');
+    assert(distractorCount >= 1, path + '.graph.series must include at least one distractor point');
+    assert(maxSelections >= answerPointIds.length, path + '.maxSelections must allow all answer points');
+
+    return {
+      pointIds: pointIds,
+      pointLabels: pointLabels,
+      answerPointIds: answerPointIds,
+      maxSelections: maxSelections
+    };
+  }
+
   function validateStructuredFields(fields, path) {
     requireArray(fields, path, 1);
     var ids = {};
@@ -2301,6 +2520,53 @@
       return;
     }
 
+    if (task.family === 'functional_answer_builder') {
+      assert(expected.kind === 'functional_answer_builder', task.id + '.expected.kind must be functional_answer_builder');
+      assert(isObject(expected.rows), task.id + '.expected.rows must be an object');
+      var functionalRowIds = interactionInfo.rowIds || {};
+      var functionalOptionsByRow = interactionInfo.optionIdsByRow || {};
+      var answerOptionsByRow = interactionInfo.answerOptionsByRow || {};
+      var expectedRowKeys = Object.keys(expected.rows);
+      var requiredRowKeys = Object.keys(functionalRowIds);
+      assert(expectedRowKeys.length === requiredRowKeys.length, task.id + '.expected.rows must include every answer row');
+      requiredRowKeys.forEach(function (rowId) {
+        assert(Object.prototype.hasOwnProperty.call(expected.rows, rowId), task.id + '.expected.rows missing row ' + rowId);
+        requireString(expected.rows[rowId], task.id + '.expected.rows.' + rowId);
+        assert(functionalOptionsByRow[rowId] && functionalOptionsByRow[rowId][expected.rows[rowId]], task.id + '.expected.rows.' + rowId + ' must match a row option');
+        assert(answerOptionsByRow[rowId].indexOf(expected.rows[rowId]) !== -1, task.id + '.expected.rows.' + rowId + ' must be an answer option');
+      });
+      expectedRowKeys.forEach(function (rowId) {
+        assert(functionalRowIds[rowId], task.id + '.expected.rows contains unknown row ' + rowId);
+      });
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
+    if (task.family === 'graph_evidence_selector') {
+      assert(expected.kind === 'graph_evidence_selector', task.id + '.expected.kind must be graph_evidence_selector');
+      requireArray(expected.pointIds, task.id + '.expected.pointIds', 1);
+      var graphPointIds = interactionInfo.pointIds || {};
+      var answerPointIds = interactionInfo.answerPointIds || [];
+      var answerPointSet = {};
+      answerPointIds.forEach(function (pointId) { answerPointSet[pointId] = true; });
+      var seenGraphPoints = {};
+      expected.pointIds.forEach(function (pointId, idx) {
+        requireString(pointId, task.id + '.expected.pointIds[' + idx + ']');
+        assert(graphPointIds[pointId], task.id + '.expected.pointIds[' + idx + '] must match a graph point');
+        assert(answerPointSet[pointId], task.id + '.expected.pointIds[' + idx + '] must be an answer point');
+        assert(!seenGraphPoints[pointId], task.id + '.expected.pointIds uses point more than once');
+        seenGraphPoints[pointId] = true;
+      });
+      assert(expected.pointIds.length === answerPointIds.length, task.id + '.expected.pointIds must include all answer points');
+      assert(expected.pointIds.length <= (interactionInfo.maxSelections || expected.pointIds.length), task.id + '.expected.pointIds exceeds maxSelections');
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
     if (task.family === 'graph_construction_substitute') {
       assert(expected.kind === 'graph_construction_substitute', task.id + '.expected.kind must be graph_construction_substitute');
       assert(isObject(expected.axes), task.id + '.expected.axes must be an object');
@@ -2431,6 +2697,10 @@
       interactionInfo = validateSourceChainInteraction(task, path);
     } else if (task.family === 'label_placement') {
       interactionInfo = validateLabelPlacementInteraction(task, path);
+    } else if (task.family === 'functional_answer_builder') {
+      interactionInfo = validateFunctionalAnswerBuilderInteraction(task, path);
+    } else if (task.family === 'graph_evidence_selector') {
+      interactionInfo = validateGraphEvidenceInteraction(task, path);
     }
 
     return interactionInfo;
@@ -2922,6 +3192,40 @@
     }) && Object.keys(seenExpectedTargets).every(function (targetId) {
       return seenSelectedTargets[targetId];
     });
+  }
+
+  function functionalAnswerMatches(response, expected, rowIds, optionIdsByRow) {
+    if (!isObject(response) || !isObject(response.rows)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'rows') return false;
+    var selectedRows = Object.keys(response.rows);
+    var expectedRows = Object.keys(expected.rows || {});
+    if (selectedRows.length !== expectedRows.length) return false;
+    for (var i = 0; i < selectedRows.length; i += 1) {
+      var rowId = selectedRows[i];
+      if (!rowIds[rowId]) return false;
+      if (!optionIdsByRow[rowId] || !optionIdsByRow[rowId][response.rows[rowId]]) return false;
+      if (response.rows[rowId] !== expected.rows[rowId]) return false;
+    }
+    return expectedRows.every(function (rowId) {
+      return response.rows[rowId] === expected.rows[rowId];
+    });
+  }
+
+  function graphEvidenceMatches(response, expected, pointIds) {
+    if (!isObject(response) || !Array.isArray(response.pointIds)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'pointIds') return false;
+    var selectedSet = normalizeIdSet(response.pointIds);
+    var expectedSet = normalizeIdSet(expected.pointIds || []);
+    if (!selectedSet || !expectedSet) return false;
+    var selectedIds = Object.keys(selectedSet);
+    var expectedIds = Object.keys(expectedSet);
+    if (selectedIds.length !== expectedIds.length) return false;
+    for (var i = 0; i < selectedIds.length; i += 1) {
+      if (!Object.prototype.hasOwnProperty.call(pointIds, selectedIds[i])) return false;
+    }
+    return expectedIds.every(function (pointId) { return selectedSet[pointId]; });
   }
 
   function normalizeIdSet(values) {
@@ -3440,6 +3744,115 @@
     };
   }
 
+  function functionalAnswerOptionEntry(rowId, optionId, rowLabels, optionLabelsByRow) {
+    return {
+      rowId: rowId,
+      rowLabel: rowLabels && rowLabels[rowId] ? rowLabels[rowId] : rowId,
+      id: optionId,
+      label: optionLabelsByRow && optionLabelsByRow[rowId] && optionLabelsByRow[rowId][optionId]
+        ? optionLabelsByRow[rowId][optionId]
+        : optionId
+    };
+  }
+
+  function functionalAnswerFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var selectedRows = isObject(response) && isObject(response.rows) ? response.rows : {};
+    var rowLabels = {};
+    var optionKindsByRow = {};
+    var optionLabelsByRow = {};
+    var expectedRows = task.expected.rows || {};
+    var missingRows = [];
+    var wrongRows = [];
+    var selectedDistractors = [];
+    var correctRows = [];
+
+    (task.interaction.answerRows || []).forEach(function (row) {
+      rowLabels[row.id] = row.label;
+      optionKindsByRow[row.id] = {};
+      optionLabelsByRow[row.id] = {};
+      (row.options || []).forEach(function (option) {
+        optionKindsByRow[row.id][option.id] = option.kind;
+        optionLabelsByRow[row.id][option.id] = option.label;
+      });
+    });
+
+    Object.keys(expectedRows).forEach(function (rowId) {
+      var selected = selectedRows[rowId];
+      if (!selected) {
+        missingRows.push({
+          id: rowId,
+          label: rowLabels[rowId] || rowId
+        });
+        return;
+      }
+      if (selected === expectedRows[rowId]) {
+        correctRows.push(functionalAnswerOptionEntry(rowId, selected, rowLabels, optionLabelsByRow));
+        return;
+      }
+      if (optionKindsByRow[rowId] && optionKindsByRow[rowId][selected] === 'distractor') {
+        selectedDistractors.push(functionalAnswerOptionEntry(rowId, selected, rowLabels, optionLabelsByRow));
+      }
+      wrongRows.push({
+        rowId: rowId,
+        rowLabel: rowLabels[rowId] || rowId,
+        expected: functionalAnswerOptionEntry(rowId, expectedRows[rowId], rowLabels, optionLabelsByRow),
+        actual: functionalAnswerOptionEntry(rowId, selected, rowLabels, optionLabelsByRow)
+      });
+    });
+
+    return {
+      mode: 'practice_only',
+      missingRows: missingRows,
+      wrongRows: wrongRows,
+      selectedDistractors: selectedDistractors,
+      correctRows: correctRows
+    };
+  }
+
+  function graphEvidencePointEntry(pointId, labels) {
+    return {
+      id: pointId,
+      label: labels && labels[pointId] ? labels[pointId] : pointId
+    };
+  }
+
+  function graphEvidenceFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var selected = isObject(response) && Array.isArray(response.pointIds) ? response.pointIds : [];
+    var selectedSet = normalizeIdSet(selected) || {};
+    var expectedSet = normalizeIdSet(task.expected.pointIds || []) || {};
+    var labels = {};
+    var pointKinds = {};
+    (task.interaction.graph.series || []).forEach(function (series) {
+      (series.points || []).forEach(function (point) {
+        labels[point.id] = point.label || (String(point.x) + ', ' + String(point.y));
+        pointKinds[point.id] = point.kind;
+      });
+    });
+
+    var missingRequired = [];
+    var selectedDistractors = [];
+    var correctSelected = [];
+    Object.keys(expectedSet).forEach(function (pointId) {
+      if (selectedSet[pointId]) correctSelected.push(graphEvidencePointEntry(pointId, labels));
+      else missingRequired.push(graphEvidencePointEntry(pointId, labels));
+    });
+    selected.forEach(function (pointId) {
+      if (typeof pointId !== 'string') return;
+      if (!expectedSet[pointId] && pointKinds[pointId] === 'distractor') {
+        selectedDistractors.push(graphEvidencePointEntry(pointId, labels));
+      }
+    });
+
+    return {
+      mode: 'practice_only',
+      missingRequired: missingRequired,
+      selectedDistractors: selectedDistractors,
+      correctSelected: correctSelected
+    };
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       if (task.family === 'table_value_selection' && task.expected.kind === 'advisory_choice') {
@@ -3533,6 +3946,14 @@
       var labelPlacementInfo = validateLabelPlacementInteraction(task, task.id + '.interaction');
       return labelPlacementMatches(response, task.expected, labelPlacementInfo.labelIds, labelPlacementInfo.targetIds);
     }
+    if (task.family === 'functional_answer_builder' && task.expected.kind === 'functional_answer_builder') {
+      var functionalAnswerInfo = validateFunctionalAnswerBuilderInteraction(task, task.id + '.interaction');
+      return functionalAnswerMatches(response, task.expected, functionalAnswerInfo.rowIds, functionalAnswerInfo.optionIdsByRow);
+    }
+    if (task.family === 'graph_evidence_selector' && task.expected.kind === 'graph_evidence_selector') {
+      var graphEvidenceInfo = validateGraphEvidenceInteraction(task, task.id + '.interaction');
+      return graphEvidenceMatches(response, task.expected, graphEvidenceInfo.pointIds);
+    }
     return false;
   }
 
@@ -3608,6 +4029,14 @@
     if (task.family === 'label_placement' && !matched) {
       var placementFeedback = labelPlacementFeedback(response, task);
       if (placementFeedback) result.labelPlacementFeedback = placementFeedback;
+    }
+    if (task.family === 'functional_answer_builder' && !matched) {
+      var functionalFeedback = functionalAnswerFeedback(response, task);
+      if (functionalFeedback) result.functionalAnswerFeedback = functionalFeedback;
+    }
+    if (task.family === 'graph_evidence_selector' && !matched) {
+      var graphEvidence = graphEvidenceFeedback(response, task);
+      if (graphEvidence) result.graphEvidenceFeedback = graphEvidence;
     }
     if (task.family === 'calculation_answer_form_capture' && !matched) {
       result.answerFormFeedback = calculationAnswerFormFeedback(response, task);
@@ -3742,6 +4171,18 @@
         '[data-task-id="' + task.id + '"][data-label-placement-summary]'
       ];
     }
+    if (task.family === 'functional_answer_builder') {
+      return [
+        '[data-task-id="' + task.id + '"][data-answer-row-id]',
+        '[data-task-id="' + task.id + '"][data-answer-preview]'
+      ];
+    }
+    if (task.family === 'graph_evidence_selector') {
+      return [
+        '[data-task-id="' + task.id + '"][data-graph-evidence-point-id]',
+        '[data-task-id="' + task.id + '"][data-graph-evidence-tray]'
+      ];
+    }
     return ['[data-task-id="' + task.id + '"][data-input-role="answer"]'];
   }
 
@@ -3752,6 +4193,7 @@
     CONTEXT_BLOCK_TYPES: clone(CONTEXT_BLOCK_TYPES),
     INTERNAL_CODE_RE: INTERNAL_CODE_RE,
     cleanNumber: cleanNumber,
+    stableSessionShuffle: stableSessionShuffle,
     collectStudentText: collectStudentText,
     collectContextText: collectContextText,
     findStudentTextViolations: findStudentTextViolations,

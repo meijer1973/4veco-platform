@@ -605,6 +605,18 @@ npm test
 5. Commit en push module-repo
 
 ### Nieuw reasoning game toevoegen
+
+For new or substantially repaired `redeneer-spel` work, read `skills/econ-reasoning-game.md` and `references/exemplars/product-excellence/reasoning-games/` first. The durable rule is:
+
+```text
+copy product grammar
+re-derive reasoning grammar
+```
+
+Use shared task-shell actions and the reasoning composer where possible. Do not add another mode-overloaded reasoning engine or use the legacy mode picker as the default authoring route.
+
+Legacy CSV route, when explicitly needed:
+
 1. CSV maken → `source-data/book-1/reasoning/X.Y.Z.csv`
 2. `node build-scripts/platform/build-reasoning-questions.js X.Y.Z <domain> source-data/book-1/reasoning/X.Y.Z.csv --generate-review`
 3. Economics review subagent op het review document
@@ -620,11 +632,12 @@ npm test
 - Data: `shared/questions/X.Y.Z.js` per paragraaf
 - HTML: thin shell in `1. Voorbereiden/`
 
-### Redeneer-spel (5 modi)
+### Redeneer-spel (legacy 5 modi)
 - Engine: `engines/reasoning-engine.js` + `reasoning-ui.js`
 - Data: `shared/reasoning/X.Y.Z.js` (gegenereerd uit CSV)
 - HTML: thin shell in `3. Oefenen/`
 - Domeinen: economics, math-economics, arithmetic
+- New reasoning-game capability uses `skills/econ-reasoning-game.md`, the four-exemplar golden family, shared task-shell primitives, and `engines/reasoning-composer.js` rather than adding more legacy modes.
 
 ### Wiskundevaardigheden (Skill Tree)
 - Engine: `engines/skilltree-engine.js` + `skilltree-ui.js`
