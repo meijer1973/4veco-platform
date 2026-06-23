@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.2.4-HARDEN-MIXED-1",
+  "status": "completed",
+  "completed_on": "2026-06-19",
+  "plan": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-plan.md",
+  "baseline": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-baseline.md",
+  "result": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-result.md",
+  "diff_summary": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.2.4-HARDEN-MIXED-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.2.4-HARDEN-MIXED-1",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/check-course-target-exercises-v5.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/validate-chapter.js \"C:/wt/TEXT-20260608/GOAL-B2-2.2-CHAPTER-COMPLETE-1/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit\"",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"C:/wt/TEXT-20260608/GOAL-B2-2.2-CHAPTER-COMPLETE-1/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C \"C:/wt/TEXT-20260608/GOAL-B2-2.2-CHAPTER-COMPLETE-1/4veco-lessen\" diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-lead-review-assignment.md",
+    "round1": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-lead-review-round1.md",
+    "corrections": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-lead-review-corrections.md",
+    "round2": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": [],
+    "findings": [
+      {
+        "id": "B2-2.2.4-HARDEN-MIXED-1-CORE",
+        "description": "Yes, this is the intended target form for `2.2.4 Gemengde opgaven: elasticiteit`.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/rendered-proof/B2-2.2.4-HARDEN-MIXED-1/2.2.4-opgaven-contact-sheet.png",
+          "reports/rendered-proof/B2-2.2.4-HARDEN-MIXED-1/2.2.4-antwoorden-contact-sheet.png",
+          "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure and coordinated PR preparation.",
+        "proof_required_to_close": "Preserve rendered proof, command log, result, and lead-review evidence."
+      },
+      {
+        "id": "B2-2.2.4-HARDEN-MIXED-1-BOUNDARY",
+        "description": "Chapter 2.3, Book 3, diagnostics, product-route adoption, PV, Scale Gate 1, and check-surface closure remain outside scope.",
+        "classification": "core_requirement_met",
+        "evidence": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-diff-summary.md",
+        "blocks": "Nothing inside this sprint.",
+        "does_not_block": "Chapter 2.2 human review preparation.",
+        "proof_required_to_close": "Separate human-reviewed gate evidence for those downstream surfaces."
+      }
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "packet_id": "Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1",
+  "sprint_id": "Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1",
+  "pr_number": 133,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/133",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js",
+    "references/data/document_inventory.json",
+    "references/data/source-document-registry.json",
+    "references/data/source_manifest.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book5-pension-target-package.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book6-housing-target-package.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book7-risk-information-target-package.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book8-strategic-target-package.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-cross-book-consistency-review.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-governed-mutation-plan.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-quality-log.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-review-packet.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md",
+    "reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json",
+    "reports/sprints/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-plan.md",
+    "reports/sprints/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS_WITH_FLAGS_READ_ONLY_LEAD_REVIEW_AND_REPAIR_LEADS_NO_MISSING_CORE_REQUIREMENTS",
+    "rationale": "This high-authority packet proposes schema-valid Year 2/v6 target-family candidate records for one exact future surface. The PR #133 bounded repair removes active-v5 registry-ready claims, adds one owner per record, and corrects Book 6 OP mapping. Registry mutation and downstream authority remain false."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "year_2_target_foundation",
+    "year2_v6_target_family_candidate_records",
+    "official_exam_evidence",
+    "mtu_task_family_boundary",
+    "product_authority_boundary"
+  ],
+  "date": "2026-06-22",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "references/owned/course-blueprint-v6-three-year.md",
+    "reports/reference-planning/Y2-ROOT-MAPPING-1-paragraph-candidate-matrix.md",
+    "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-evidence-packet.md",
+    "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-integrated-update.md",
+    "reports/reference-planning/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-target-mtu-backlog.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md"
+  ],
+  "non_negotiable_requirements": [
+    "Cover all four Year 2 books with one substantial target family each.",
+    "Include exact paragraph candidate and prerequisite chains.",
+    "Cite official prompt/source/correction-model provenance.",
+    "Define source reconstruction requirements.",
+    "Provide target exercises and subquestions.",
+    "Map operation chains to OP rows.",
+    "Specify answer-form and point-allocation requirements.",
+    "Record prior skills and MTU/task-family compatibility status.",
+    "Give a no-new-theory rationale.",
+    "Provide schema-valid Year 2/v6 target-family candidate records with one explicit owner each, without writing any registry.",
+    "Name exact blockers and proof required before lesson production.",
+    "Include cross-book consistency and governed mutation planning.",
+    "Use read-only teacher, economist, exam-evidence, source/visual, MTU/task-family, and quality reviews before human return.",
+    "Keep target/MTU/lesson/product/Scale/student-use authority false.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {"requirement": "Product end-state cited", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-review-packet.md"},
+    {"requirement": "Original specs cited", "status": "met", "evidence": "original_sprint_or_gate_spec_refs"},
+    {"requirement": "Book 5 target package present", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book5-pension-target-package.md"},
+    {"requirement": "Book 6 target package present", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book6-housing-target-package.md"},
+    {"requirement": "Book 7 target package present", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book7-risk-information-target-package.md"},
+    {"requirement": "Book 8 target package present", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-book8-strategic-target-package.md"},
+    {"requirement": "Official provenance present", "status": "met", "evidence": "target packages"},
+    {"requirement": "Source reconstruction requirements present", "status": "met", "evidence": "target packages"},
+    {"requirement": "Target exercises and answer forms present", "status": "met", "evidence": "target packages"},
+    {"requirement": "Schema-valid candidate records present without mutation", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-governed-mutation-plan.md"},
+    {"requirement": "Cross-book consistency present", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-cross-book-consistency-review.md"},
+    {"requirement": "Authority boundary false", "status": "met", "evidence": "authority_claims"},
+    {"requirement": "Read-only lead review complete", "status": "met", "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md"}
+  ],
+  "authority_claims": {
+    "target_family_candidate_proposals_created": true,
+    "schema_valid_year2_candidate_records_created": true,
+    "target_registry_ready_proposals_created": false,
+    "target_registry_mutation_in_scope": false,
+    "target_registry_records_created": false,
+    "authored_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "mtus_minted": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "operation_candidate_storage_created": false,
+    "answer_skill_candidate_storage_created": false,
+    "generated_lesson_output_authorized": false,
+    "official_exam_operation_closure_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "target_foundation_summary": {
+    "record_count": 4,
+    "schema_surface": "year2_v6_target_family_candidate_surface_v1",
+    "proposed_storage_surface": "references/authored/year2-v6-target-foundation-candidates.json",
+    "books_covered": [5, 6, 7, 8],
+    "proposed_record_ids": [
+      "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1"
+    ],
+    "official_anchor_families": [
+      "vw-1022-a-25-2-o:q7-q11",
+      "vw-1022-a-23-2-o:q26-q29",
+      "vw-1022-a-23-1-o:q12-q15",
+      "vw-1022-a-25-1-o:q15-q16"
+    ],
+    "target_owner_candidate_ids": [
+      "Y2-B5-P13",
+      "Y2-B6-P12",
+      "Y2-B7-P13",
+      "Y2-B8-P04"
+    ],
+    "bounded_retrieval_marker_ids": [
+      "Y2-B6-P14",
+      "Y2-B7-P14",
+      "Y2-B8-P16"
+    ],
+    "operation_mapping_repairs": [
+      "Book 6 q26 uses OP-P1 + OP-D1 + OP-ANS2 and excludes OP-D2.",
+      "Book 6 q27 uses OP-C1 + OP-C2 + OP-P1 + OP-ANS2.",
+      "Book 5 removes OP-F1 from pension-wealth/GDP-share reasoning.",
+      "Book 7 removes OP-F1 from expected-premium calculation."
+    ],
+    "q19_status": "exact_hold_unchanged",
+    "registry_mutation": "not_executed"
+  },
+  "proof": {
+    "lead_reviews": {
+      "teacher_workload_and_sequencing": {"lead": "Averroes", "status": "PASS_WITH_FLAGS", "blockers": [], "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md"},
+      "economist_correctness": {"lead": "Kuhn", "status": "PASS", "blockers": [], "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md"},
+      "exam_evidence_and_correction_model": {"lead": "Godel", "status": "PASS_WITH_FLAGS", "blockers": [], "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md"},
+      "source_visual_reconstruction": {"lead": "Ohm", "status": "PASS_RECHECK", "blockers": [], "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md"},
+      "mtu_task_family_compatibility": {"lead": "Poincare", "status": "PASS_WITH_FLAGS", "blockers": [], "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md"},
+      "quality_rev_std1": {"lead": "Sartre", "status": "PASS_WITH_FLAGS", "blockers": [], "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md"}
+    },
+    "repair_leads": {
+      "registry_contract_repair": {
+        "lead": "Halley",
+        "status": "PASS",
+        "blockers": [],
+        "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md",
+        "disposition": "Initial stale plan wording and proof-record blockers repaired; future Year 2/v6 surface, schema, owner semantics, package record content, active-v5 non-mutation, and false authority flags verified."
+      },
+      "economics_operation_repair": {
+        "lead": "Raman",
+        "status": "PASS",
+        "blockers": [],
+        "evidence": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-subagent-review.md",
+        "disposition": "Initial supersession-guard and proof-record blockers repaired; Book 6 OP mapping, Book 5/7 OP-F1 removal, and unchanged official evidence families verified."
+      }
+    },
+    "checkers": [
+      {"command": "node --check build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js", "status": "passed"},
+      {"command": "node build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js", "status": "passed"},
+      {"command": "npm.cmd run check:review-throughput -- reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json", "status": "passed"},
+      {"command": "node build-scripts/sprints/check-rev-std1-flag-disposition.js", "status": "passed"}
+    ]
+  },
+  "decision": {
+    "status": "ready_for_conditional_merge_after_repair",
+    "target_foundation_wave": "ready_for_conditional_merge_after_repair",
+    "downstream_authority": "blocked",
+    "human_review_required": true,
+    "conditional_human_authorization": "PR #133 verdict authorizes ready/merge after bounded repairs, current branch, clean CI, and unchanged accepted exercise families."
+  }
+}

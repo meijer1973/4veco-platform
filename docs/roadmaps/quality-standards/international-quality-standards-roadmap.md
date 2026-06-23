@@ -1,11 +1,11 @@
 # International Quality Standards Roadmap
 
-Status: active foundation roadmap
+Status: active overlay-architecture roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.1-foundation-human-review`
-Sprint status: `GOAL-IQS-FOUNDATION-1` current / foundation packet for human review
+Roadmap version: `v0.2-overlay-architecture-human-review`
+Sprint status: `GOAL-IQS-OVERLAY-ARCHITECTURE-1` current / architecture packet for human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -44,6 +44,8 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md`
 - International foundation sprint:
   `archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-sprint-plan.md`
+- Current overlay-architecture sprint:
+  `archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md`
 
 ## 2. Non-Negotiable Requirements
 
@@ -64,9 +66,9 @@ The endpoint is:
   Scale Gate, diagnostics/mastery/PV, student-use, personal-data, OP0, PTA,
   summative, and inspection-readiness authority blocked.
 
-## 3. Current Foundation Scope
+## 3. Completed Foundation Scope
 
-`GOAL-IQS-FOUNDATION-1` may create:
+`GOAL-IQS-FOUNDATION-1` was accepted after PR #131 and created:
 
 - official-source authority profiles for the Netherlands, Flanders, England,
   Germany, France, Italy, Spain, Poland, and the United States;
@@ -81,15 +83,41 @@ The endpoint is:
 - manual generator/checker scripts and refusal tests;
 - validation, specialist-review, final lead-review, and human-review records.
 
-It must not create country editions, country compliance claims, local exam-code
+It did not create country editions, country compliance claims, local exam-code
 implementation, teacher/school-facing output, public output, evidence-pack
 deployment, package/CI/dashboard/quality-ref/Scale Gate integration, product
 routes, diagnostics/mastery/PV, student/product use, personal-data processing,
 or school-owned evidence flows.
 
-## 4. Architecture Direction
+## 4. Current Overlay-Architecture Scope
 
-The foundation architecture has four layers:
+`GOAL-IQS-OVERLAY-ARCHITECTURE-1` may create:
+
+- an internal jurisdiction overlay descriptor schema;
+- explicit v0 overlay descriptors for England, Flanders, Bavaria/Germany, and
+  California/United States;
+- internal descriptor-contract and governance-rule documentation;
+- a Book 1 Chapters 1.2/1.3 overlay crosswalk;
+- an archetype report;
+- an architecture decision choosing exactly one of:
+  `PROCEED_TO_SELECTED_JURISDICTION_DEEPENING`,
+  `REVISE_OVERLAY_SCHEMA`, or
+  `RESEARCH_GAPS_BEFORE_PILOT_EXPANSION`;
+- manual generator/checker scripts and refusal tests;
+- validation, specialist-review, final lead-review, PR proof, and human-review
+  records.
+
+It must not create country editions, local implementation, local exam-code
+implementation, teacher/school-facing output, public output, evidence-pack
+deployment, package/CI product integration, dashboard gates, quality-ref or
+Scale Gate integration, product routes, diagnostics/mastery/PV,
+student/product use, personal-data processing, compliance, approval,
+accreditation, OP0, PTA, summative, inspection-readiness, or school-owned
+evidence flows.
+
+## 5. Architecture Direction
+
+The current architecture preserves four layers:
 
 1. Shared economics product core.
 2. Jurisdiction curriculum and assessment overlay.
@@ -100,33 +128,33 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 5. Core-Requirement Checklist
+## 6. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
-| Official-source profiles for all nine requested jurisdictions | current sprint | Generator/checker PASS and country/source reviewer verification |
-| Common-core matrix distinguishes portable product evidence from local overlay needs | current sprint | `international-common-core.v0.json` and final lead PASS |
-| Differences matrix names material divergences | current sprint | `international-commonalities-and-differences.md/json` |
-| Overlay architecture has four bounded layers | current sprint | `international-overlay-architecture.md` and checker PASS |
-| Book 1 portability check remains internal and bounded | current sprint | `international-book-portability-pilot.md/json` |
-| Final decision selects exactly one allowed option | current sprint | `international-foundation-decision.md/json` and checker PASS |
+| Official-source profiles for all nine foundation jurisdictions | closed | PR #131 accepted and merged |
+| Common-core matrix distinguishes portable product evidence from local overlay needs | closed | `international-common-core.v0.json` and PR #131 final lead PASS |
+| Descriptor schema names required overlay fields and blocks implicit discovery | current sprint | `international-jurisdiction-overlay.schema.json` and checker PASS |
+| England, Flanders, Bavaria/Germany, and California/United States descriptors cover four governance archetypes | current sprint | Descriptor JSON, country/source reviews, and final lead PASS |
+| Book 1 Chapters 1.2/1.3 crosswalk remains internal and route-local | current sprint | `book1-1.2-1.3-overlay-crosswalk.md/json` and teacher/economics review |
+| Final overlay decision selects exactly one allowed option | current sprint | `international-overlay-architecture-decision.md/json` and checker PASS |
 | Forbidden authority remains blocked | current sprint | Refusal tests and false authority flags |
 | Specialist reviews are completed and corrections closed | current sprint | Specialist gate record and final lead PASS |
-| Human review happens before next implementation authority | current sprint | Human-review packet and PR proof |
+| Human review happens before next implementation authority | current sprint | Human-review packet, PR freshness, mergeability, and CI proof |
 
-## 6. Candidate Future Sprints
+## 7. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-OVERLAY-DESCRIPTOR-1` | Define descriptor schema for one common core and local overlays without generating country editions. | not authorised |
+| `GOAL-IQS-SELECTED-JURISDICTION-DEEPENING-1` | If the human owner accepts `PROCEED_TO_SELECTED_JURISDICTION_DEEPENING`, deepen one selected jurisdiction internally through source refresh and local-review planning only. | not authorised until human acceptance |
 | `GOAL-IQS-SOURCE-REFRESH-1` | Refresh sources and resolve source gaps for a selected subset of jurisdictions. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 7. Explicitly Blocked Work
+## 8. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -150,17 +178,19 @@ inspection-readiness claim
 school-owned implementation evidence flow
 ```
 
-## 8. Current Recommended Next Step
+## 9. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-FOUNDATION-1 foundation packet after PR publication and
-fresh CI are complete.
+Review the GOAL-IQS-OVERLAY-ARCHITECTURE-1 architecture packet after
+specialist reviews, final lead review, PR publication, branch freshness, and
+green CI are complete.
 ```
 
-Human acceptance of `GOAL-IQS-FOUNDATION-1` may authorise only a later internal
-architecture follow-up. It must not unlock country implementation, school or
-public distribution, product routes, student/product use, personal-data
-processing, compliance, approval, OP0, PTA, summative, or inspection-readiness
-claims.
+Human acceptance of `GOAL-IQS-OVERLAY-ARCHITECTURE-1` may authorise only a
+later internal selected-jurisdiction deepening step. It must not unlock country
+implementation, school or public distribution, product routes, Scale Gate,
+diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative, or
+inspection-readiness claims.

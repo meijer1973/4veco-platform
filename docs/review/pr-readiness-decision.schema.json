@@ -1,0 +1,498 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/meijer1973/4veco-platform/docs/review/pr-readiness-decision.schema.json",
+  "title": "4veco PR readiness decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "reviewed_pr",
+    "throughput",
+    "human_review_payload",
+    "consequence",
+    "batching",
+    "route",
+    "reason_codes",
+    "proof",
+    "allowed_transition",
+    "human_notification_required"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "reviewed_pr": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "number",
+        "url",
+        "base",
+        "head_sha",
+        "was_draft"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "head_sha": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{40}$"
+        },
+        "was_draft": {
+          "type": "boolean"
+        }
+      }
+    },
+    "throughput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class",
+        "authority_class",
+        "level"
+      ],
+      "properties": {
+        "class": {
+          "type": "string",
+          "enum": [
+            "micro_maintenance",
+            "normal_sprint",
+            "generated_output",
+            "high_authority",
+            "cross_repo_bundle"
+          ]
+        },
+        "authority_class": {
+          "type": "string"
+        },
+        "level": {
+          "type": "string",
+          "enum": [
+            "L0",
+            "L1",
+            "L2",
+            "L3",
+            "L4"
+          ]
+        }
+      }
+    },
+    "human_review_payload": {
+      "type": "string",
+      "enum": [
+        "none",
+        "thin",
+        "substantial",
+        "consequential_exception"
+      ]
+    },
+    "consequence": {
+      "type": "string"
+    },
+    "batching": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "viable",
+        "target",
+        "reason"
+      ],
+      "properties": {
+        "viable": {
+          "type": "boolean"
+        },
+        "target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "route": {
+      "type": "string",
+      "enum": [
+        "KEEP_DRAFT_REVISE",
+        "KEEP_DRAFT_BATCH",
+        "READY_FOR_LEAD_ONLY",
+        "READY_FOR_HUMAN_REVIEW",
+        "PAUSE_ESCALATE"
+      ]
+    },
+    "reason_codes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ci_head_sha",
+        "ci_status",
+        "ci_required_contexts",
+        "ci_checks",
+        "lead_review_path",
+        "lead_review_result",
+        "lead_reviewed_sha",
+        "lead_review_evidence_tail_allowed",
+        "changed_paths_verified",
+        "checkers"
+      ],
+      "properties": {
+        "ci_head_sha": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ci_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ci_required_contexts": {
+          "type": "array",
+          "minItems": 1,
+          "contains": {
+            "const": "validate-platform"
+          },
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ci_missing_contexts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ci_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "conclusion"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "conclusion": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "lead_review_path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "lead_review_result": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lead_reviewed_sha": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Fa-f0-9]{40}$"
+        },
+        "changed_paths_verified": {
+          "type": "boolean"
+        },
+        "lead_review_evidence_tail_allowed": {
+          "type": "boolean"
+        },
+        "post_lead_review_changed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "checkers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "branch_protection": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "allowed_transition": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "MARK_READY"
+      ]
+    },
+    "human_notification_required": {
+      "type": "boolean"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "follow_up": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "escalation_signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "auto_merge": {
+      "const": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "enum": [
+              "KEEP_DRAFT_REVISE",
+              "KEEP_DRAFT_BATCH",
+              "PAUSE_ESCALATE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "allowed_transition": {
+            "const": "NONE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "properties": {
+              "ci_status": {
+                "type": "string",
+                "enum": [
+                  "success",
+                  "SUCCESS",
+                  "succeeded",
+                  "SUCCEEDED",
+                  "passed",
+                  "PASSED",
+                  "pass",
+                  "PASS",
+                  "ok",
+                  "OK"
+                ]
+              },
+              "ci_checks": {
+                "minItems": 1,
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "conclusion"
+                  ],
+                  "properties": {
+                    "name": {
+                      "const": "validate-platform"
+                    },
+                    "conclusion": {
+                      "type": "string",
+                      "enum": [
+                        "success",
+                        "SUCCESS",
+                        "succeeded",
+                        "SUCCEEDED",
+                        "passed",
+                        "PASSED",
+                        "pass",
+                        "PASS",
+                        "ok",
+                        "OK"
+                      ]
+                    }
+                  }
+                }
+              },
+              "checkers": {
+                "minItems": 1
+              },
+              "lead_review_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "lead_review_result": {
+                "type": "string",
+                "enum": [
+                  "PASS",
+                  "PASS WITH FLAGS"
+                ]
+              },
+              "lead_reviewed_sha": {
+                "type": "string",
+                "pattern": "^[A-Fa-f0-9]{40}$"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "allowed_transition": {
+            "const": "MARK_READY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "const": "READY_FOR_LEAD_ONLY"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "throughput": {
+            "properties": {
+              "level": {
+                "enum": [
+                  "L0",
+                  "L1",
+                  "L2"
+                ]
+              }
+            }
+          },
+          "human_review_payload": {
+            "const": "none"
+          },
+          "human_notification_required": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "const": "READY_FOR_HUMAN_REVIEW"
+          }
+        }
+      },
+      "then": {
+        "anyOf": [
+          {
+            "properties": {
+              "throughput": {
+                "properties": {
+                  "level": {
+                    "enum": [
+                      "L3",
+                      "L4"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "properties": {
+              "human_review_payload": {
+                "const": "consequential_exception"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "human_notification_required": {
+            "const": true
+          }
+        }
+      }
+    }
+  ]
+}

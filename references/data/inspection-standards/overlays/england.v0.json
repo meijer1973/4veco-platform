@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOAL-IQS-OVERLAY-ARCHITECTURE-1",
+  "generated_date": "2026-06-22",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md",
+  "foundation_decision_source": "reports/inspection-standards/international-foundation-decision.md",
+  "descriptor_id": "england.v0",
+  "jurisdiction_id": "england",
+  "jurisdiction_label": "England",
+  "governance_archetype": "national_inspectorate_plus_qualification",
+  "status": "internal_overlay_descriptor_complete",
+  "jurisdiction_boundary": {
+    "boundary_label": "England-only",
+    "governance_level": "country within the United Kingdom for the cited education sources",
+    "includes": [
+      "England maintained schools, academies, non-association independent schools, and relevant post-16 settings where the cited Ofsted/DfE sources apply."
+    ],
+    "excludes": [
+      "Scotland",
+      "Wales",
+      "Northern Ireland",
+      "UK-wide claims",
+      "exam-board-specific specifications and mark schemes"
+    ],
+    "boundary_warning": "England is not the whole United Kingdom; DfE subject content is not an exam-board approval route."
+  },
+  "authority_type": {
+    "inspection_or_school_evaluation": "covered_for_descriptor: Ofsted education inspection framework and school operating guidance.",
+    "curriculum": "covered_for_descriptor: DfE GCE AS and A level economics subject content.",
+    "examination": "covered_as_qualification_content_only: no exam-board specification, paper, mark scheme, or awarding-body approval is included.",
+    "accountability": "covered_for_school_owned_boundary: Ofsted material informs inspection/accountability vocabulary but not product authority.",
+    "accreditation": "not_covered_in_descriptor: no accreditation source is used.",
+    "regional_or_state_overlay": "not_applicable_to_descriptor: England-only boundary; other UK systems require separate descriptors."
+  },
+  "official_source_allowlist": [
+    {
+      "source_id": "england-ofsted-eif-2025",
+      "authority": "Ofsted",
+      "title": "Education inspection framework: for use from November 2025",
+      "url": "https://www.gov.uk/government/publications/education-inspection-framework-eif/education-inspection-framework-for-use-from-november-2025",
+      "source_type": "inspection framework",
+      "role": "inspection/accountability vocabulary",
+      "scope": "England",
+      "publication_or_version_date": "Updated 2025-09-09; for use from 2025-11-10",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Name England inspection evaluation areas, inclusion/safeguarding vocabulary, and school-owned evidence boundaries.",
+      "forbidden_inference": "Does not approve 4veco, represent the whole UK, or make a textbook inspection-ready."
+    },
+    {
+      "source_id": "england-dfe-a-level-economics-content",
+      "authority": "Department for Education",
+      "title": "GCE AS and A level subject content for economics",
+      "url": "https://www.gov.uk/government/publications/gce-as-and-a-level-for-economics",
+      "source_type": "subject content",
+      "role": "curriculum/qualification subject content",
+      "scope": "England",
+      "publication_or_version_date": "Published 2014-04-09",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Map upper-secondary economics concepts and assessment-objective language at subject-content level.",
+      "forbidden_inference": "Does not make a 4veco book an approved A level specification, exam-board resource, or summative assessment."
+    },
+    {
+      "source_id": "england-ofsted-school-operating-guide-2025",
+      "authority": "Ofsted",
+      "title": "[Currently in use] School inspection operating guide for inspectors",
+      "url": "https://www.gov.uk/government/publications/school-inspection-toolkit-operating-guide-and-information/school-inspection-operating-guide-for-inspectors-for-use-from-november-2025",
+      "source_type": "inspection operating guide",
+      "role": "inspection evidence-gathering method",
+      "scope": "England",
+      "publication_or_version_date": "Updated 2026-06-12; for use from 2025-11-10",
+      "access_date": "2026-06-22",
+      "authority_strength": "official source for the bounded jurisdiction role named here",
+      "allowed_use": "Keep school-owned inspection evidence separate from product evidence.",
+      "forbidden_inference": "Does not authorize automated evidence-pack generation or school-facing inspection claims."
+    }
+  ],
+  "source_freshness": {
+    "access_date": "2026-06-22",
+    "freshness_status": "fresh_for_internal_overlay_architecture",
+    "refresh_required_before": "Any England-specific country edition, teacher/school-facing output, exam-board mapping, inspection claim, or public claim.",
+    "currentness_checker": "build-scripts/inspection/check-international-overlay-architecture.js"
+  },
+  "curriculum_mappings": [
+    {
+      "book_scope": "Book 1 Chapter 1.2 Vraag",
+      "mapping_status": "candidate_internal_crosswalk",
+      "local_authority_anchor": "DfE economics subject content; exam-board specifications remain out of scope.",
+      "portable_core": [
+        "individual demand",
+        "law of demand",
+        "consumer surplus",
+        "demand factors",
+        "demand-curve movement versus shift"
+      ],
+      "overlay_action": "Translate Dutch terms to English economics vocabulary and later map to exact DfE/A level topic and assessment-objective language."
+    },
+    {
+      "book_scope": "Book 1 Chapter 1.3 Aanbod en marktevenwicht",
+      "mapping_status": "candidate_internal_crosswalk",
+      "local_authority_anchor": "DfE economics subject content; Ofsted is inspection vocabulary only.",
+      "portable_core": [
+        "supply",
+        "supply factors",
+        "equilibrium",
+        "shortage/surplus",
+        "demand/supply shifts",
+        "diagram reasoning"
+      ],
+      "overlay_action": "Separate reusable market-mechanism pedagogy from local exam-board question forms."
+    }
+  ],
+  "assessment_mappings": [
+    {
+      "assessment_source_status": "not_covered_in_descriptor",
+      "allowed_internal_use": "Record that DfE subject content can guide concept-level mapping only.",
+      "forbidden_inference": "No A level exam-board specification, mark scheme, grade boundary, or awarding-body approval is included."
+    }
+  ],
+  "terminology_substitutions": [
+    [
+      "vraaglijn",
+      "demand curve"
+    ],
+    [
+      "aanbodlijn",
+      "supply curve"
+    ],
+    [
+      "betalingsbereidheid",
+      "willingness to pay"
+    ],
+    [
+      "consumentensurplus",
+      "consumer surplus"
+    ],
+    [
+      "marktevenwicht",
+      "market equilibrium"
+    ],
+    [
+      "overschot/tekort",
+      "surplus/shortage"
+    ]
+  ],
+  "institution_example_substitutions": [
+    "Use England-specific institutions only after review; do not convert them into UK-wide examples.",
+    "Currency and policy examples require pound sterling and English policy context where used.",
+    "Exam examples require a separately sourced awarding-body overlay before any student-facing use."
+  ],
+  "accessibility_inclusion_terminology": [
+    "inclusion",
+    "safeguarding",
+    "learners who face barriers to learning and/or wellbeing",
+    "school-owned support and accessibility evidence"
+  ],
+  "school_owned_evidence_boundary": [
+    "Ofsted evidence gathering, leadership, safeguarding, attendance, support, and implementation evidence belongs to the school and inspectorate process.",
+    "Product evidence can support curriculum reasoning only; it cannot supply inspection evidence by itself."
+  ],
+  "forbidden_claims": [
+    "4veco is inspection-ready in England.",
+    "The descriptor proves UK compliance.",
+    "The descriptor authorizes a teacher/school-facing England edition.",
+    "DfE subject content equals exam-board approval."
+  ],
+  "proof_required_to_close": [
+    "England source refresh by a country/source reviewer.",
+    "Exam-board-specific source allowlist if assessment mapping is ever authorised.",
+    "Teacher/economics review of all terminology substitutions.",
+    "Human approval before any local edition or public/school-facing output."
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false
+  },
+  "finding_classification": [
+    {
+      "finding": "England descriptor has an explicit jurisdiction boundary and official source allowlist.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for internal overlay architecture.",
+      "does_not_block": "Proceeding to human review for the architecture packet.",
+      "proof_required_to_close": "Country/source reviewer PASS and checker PASS."
+    },
+    {
+      "finding": "England retains local assessment and school-owned evidence gaps.",
+      "classification": "minor_carry_flag",
+      "blocks": "Country edition, public/school-facing output, assessment-readiness, inspection/accreditation, and compliance claims.",
+      "does_not_block": "Internal descriptor and crosswalk architecture.",
+      "proof_required_to_close": "Separate authorised source refresh and human gate before any local implementation."
+    },
+    {
+      "finding": "England forbids downstream product and authority jumps.",
+      "classification": "scale_blocker",
+      "blocks": "Product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product use, personal-data processing, OP0, PTA, summative, and inspection-readiness claims.",
+      "does_not_block": "Manual internal analytical review of the descriptor.",
+      "proof_required_to_close": "Future explicit human authorisation with local expert/legal review."
+    }
+  ]
+}

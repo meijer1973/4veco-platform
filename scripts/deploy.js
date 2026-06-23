@@ -379,6 +379,7 @@ function runBuildScripts() {
         { name: 'Procedure shells', cmd: 'node build-scripts/platform/build-procedure-shells.js' },
         { name: 'Graphical game shells', cmd: 'node build-scripts/platform/build-graphical-shells.js' },
         { name: 'Exit-ticket checkpoint shells', cmd: 'node build-scripts/platform/build-exit-ticket-shells.js' },
+        { name: '§1.1.1 Golden web presentation', cmd: 'node build-scripts/content/book-1/b1-111-presentation-v2.js' },
         { name: 'Landing pages', cmd: 'node build-scripts/platform/build-landing-page.js' },
         // Idempotent: migrates any un-migrated `uitleg vaardigheden.html` files
         // to the shared voorkennis.css/js token system. Safe to re-run; already-

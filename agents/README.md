@@ -9,6 +9,7 @@ Agents in this folder are not generated lesson output, canonical curriculum data
 | Agent | Use when | Output |
 |---|---|---|
 | `lead-reviewer-agent.md` | Orchestrating multiple review/testing agents, checking evidence completeness, and making a consolidated go/no-go recommendation | `lead-review-plan-or-report.md` or the gate-required report path |
+| `pr-readiness-reviewer-agent.md` | Independently routing a remotely inspectable draft PR to revise, batch, lead-only closure, human review, or pause after lead review and current-head evidence exist | `pr-readiness-decision.json` and `pr-readiness-decision.md` |
 | `testing-agent.md` | Selecting relevant tests, overseeing test execution evidence, and reporting test/validator results | `test-report.md` or the gate-required report path |
 | `accessibility-agent.md` | Reviewing readability, contrast, alt text, OCR, semantic clarity, keyboard/interaction access, and inclusive usability | `accessibility-review.md` or the gate-required report path |
 | `teacher-learning-quality-review-agent.md` | Reviewing whether goals, prior knowledge, sequence, formative feedback, differentiation, dual coding, transfer, and retention make learning likely | `teacher-learning-quality-review.md` or the gate-required report path |
@@ -34,6 +35,7 @@ Both verdicts feed `scripts/validate-paragraph.js` via the `partA:` and `compani
 ## Operating rules
 
 - Load `AGENTS.md`, `BUILD-PARAGRAPH.md`, and the requested agent file before reviewing production lesson artifacts.
+- Use `lead-reviewer-agent.md` for substantive quality, specification fulfilment, specialist-review routing, and evidence completeness. Use `pr-readiness-reviewer-agent.md` only after the draft PR is remotely inspectable and lead review exists; it routes PR lifecycle state and must not replace missing lead or specialist review.
 - Inspect rendered output, not only source files. A clean source does not make a generated HTML, DOCX, PPTX, or PDF clean.
 - Use `teacher-learning-quality-review-agent.md` when a task claims classroom readiness or learning quality. Visual polish, accessibility, and passing tests do not prove that students learn the intended concept or skill.
 - Use `student-experience-review-agent.md` when a task claims student readiness or student-facing usability. Teacher learning quality does not prove that a typical student can find the next action, understand the visual, or stay motivated.

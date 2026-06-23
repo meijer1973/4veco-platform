@@ -168,9 +168,72 @@ function validateGoldenPresentation(root = path.resolve(__dirname, '..', '..')) 
   return failures;
 }
 
+function validateImplementedWebSource(root = path.resolve(__dirname, '..', '..')) {
+  const failures = [];
+  const deckPath = path.join(root, 'build-scripts', 'content', 'book-1', 'b1-111-presentation-v2-model.js');
+
+  function check(label, fn) {
+    try {
+      fn();
+    } catch (error) {
+      failures.push(`${label}: ${error.message}`);
+    }
+  }
+
+  check('implemented deck source exists', () => {
+    assert(fs.existsSync(deckPath), `missing ${path.relative(root, deckPath)}`);
+  });
+
+  check('implemented deck source contract', () => {
+    delete require.cache[require.resolve(deckPath)];
+    const deck = require(deckPath);
+    assert(deck.version === 'presentation-v2', 'implemented deck must use presentation-v2');
+    assert(deck.exemplarId === '1.1.1-golden-presentation', 'implemented deck must cite the exemplar id');
+    assert(deck.sourceSnapshot?.sha256 === EXPECTED_HTML_SHA256, 'implemented deck must cite the accepted HTML SHA-256');
+    assert(deck.outputBase === '1.1.1 Schaarste en economisch denken – presentatie', 'implemented deck must write the active presentatie output base');
+    assert(deck.sideLabel === 'Lespresentatie', 'implemented deck must not expose internal Golden labels to students');
+    assert(Array.isArray(deck.slides) && deck.slides.length === 11, 'implemented deck must contain exactly 11 slides');
+    const roles = new Set(deck.slides.map((slide) => slide.role));
+    for (const role of REQUIRED_EXEMPLAR_ROLES) {
+      assert(roles.has(role), `implemented deck missing route role ${role}`);
+    }
+    for (const slide of deck.slides) {
+      assert(slide.layout, `${slide.id} missing renderer layout`);
+      assert(slide.assertion, `${slide.id} missing assertion`);
+      assert(slide.action, `${slide.id} missing action`);
+      assert(slide.speakerNotes?.label === 'Studentgerichte uitleg', `${slide.id} missing student-facing notes label`);
+      assert(Array.isArray(slide.speakerNotes?.student) && slide.speakerNotes.student.length > 0, `${slide.id} missing student-facing note body`);
+      assert(slide.speakerNotes.teacherCue, `${slide.id} missing teacher cue`);
+      assert(slide.speakerNotes.transition, `${slide.id} missing transition`);
+    }
+    validateNoUnauthorizedMasteryClaims(deck);
+    const summaryBridge = deck.slides.find((slide) => slide.id === 'slide-11');
+    assert(
+      summaryBridge?.productionCopyOverride?.reason?.includes('No-mastery product boundary'),
+      'slide-11 must document the governed production-copy override',
+    );
+    assert(!/prototype/i.test(JSON.stringify(deck)), 'implemented deck must not use unfinished-status labels');
+  });
+
+  return failures;
+}
+
+function validateNoUnauthorizedMasteryClaims(deck) {
+  if (deck.masteryAuthority?.studentPresentationAssertions === true) return;
+  for (const slide of deck.slides || []) {
+    assert(
+      !/\bbeheers\w*/iu.test(slide.assertion || ''),
+      `${slide.id} contains an unauthorized student-facing mastery assertion`,
+    );
+  }
+}
+
 function main() {
   const root = path.resolve(__dirname, '..', '..');
-  const failures = validateGoldenPresentation(root);
+  const failures = [
+    ...validateGoldenPresentation(root),
+    ...validateImplementedWebSource(root),
+  ];
   if (failures.length) {
     console.error('Golden presentation 1.1.1 check failed:');
     for (const failure of failures) console.error(`- ${failure}`);
@@ -183,7 +246,9 @@ if (require.main === module) main();
 
 module.exports = {
   validateGoldenPresentation,
+  validateImplementedWebSource,
   validateContentModel,
+  validateNoUnauthorizedMasteryClaims,
   REQUIRED_EXEMPLAR_ROLES,
   REQUIRED_UNIVERSAL_ROLES,
   EXPECTED_HTML_SHA256,

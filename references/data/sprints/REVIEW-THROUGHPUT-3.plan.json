@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REVIEW-THROUGHPUT-3",
+  "name": "PR Readiness Router",
+  "created": "2026-06-22",
+  "plan": "reports/sprints/REVIEW-THROUGHPUT-3-plan.md",
+  "baseline": "reports/sprints/REVIEW-THROUGHPUT-3-baseline.md",
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Add an independent PR Readiness Reviewer role and policy.",
+    "Add a pure PR readiness router with fixtures and tests.",
+    "Add read-only live review collection and explicit apply tooling.",
+    "Extend L0/L1/L2 throughput helper constructors.",
+    "Publish the implementation PR and route it to human review after proof."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-3-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-3",
+    "node node_modules/jest/bin/jest.js build-scripts/review-gates/pr-readiness-router.test.js build-scripts/review-gates/review-throughput-fields.test.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand",
+    "npm.cmd run check:pr-readiness",
+    "npm.cmd run check:branch-protection",
+    "node build-scripts/review-gates/review-pr-readiness.js --fixture reports/fixtures/pr-readiness-router/live-l1-ready.json --format json",
+    "node build-scripts/review-gates/review-pr-readiness.js --fixture reports/fixtures/pr-readiness-router/live-governance-human.json --format markdown",
+    "node build-scripts/review-gates/apply-pr-readiness-decision.js --fixture-pr reports/fixtures/pr-readiness-router/apply-ready-pr.json --decision reports/fixtures/pr-readiness-router/apply-ready-decision.json --dry-run",
+    "npm.cmd run check:scope-language",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run check:platform",
+    "node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-3",
+    "node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-3",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-3-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-3 --complete",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No generated lesson output changes.",
+    "No references/machine or references/external edits.",
+    "No protected reference mutation.",
+    "No product authority changes outside review-routing policy.",
+    "No diagnostics, mastery, PV, Scale Gate 1, student-use, product-use, adaptive-routing, summative-use, or student-facing AI authority changes.",
+    "No pull_request_target workflow, broad write-permission workflow, branch-protection weakening, forced merge, or L3/L4 auto-merge."
+  ]
+}

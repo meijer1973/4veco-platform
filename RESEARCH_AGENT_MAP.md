@@ -98,12 +98,15 @@ Human-readable:
 - `build-scripts/README.md`
 - `agents/README.md`
 - `agents/lead-reviewer-agent.md`
+- `agents/pr-readiness-reviewer-agent.md`
 - `agents/testing-agent.md`
 - `agents/accessibility-agent.md`
 - `agents/teacher-learning-quality-review-agent.md`
 - `agents/student-experience-review-agent.md`
 - `agents/econ-companion-visual-review.md`
 - `agents/visual-qa-agent.md`
+- `docs/review/pr-throughput-policy.md`
+- `docs/review/pr-readiness-routing-policy.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
@@ -149,12 +152,15 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/pr-readiness-reviewer-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/student-experience-review-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-throughput-policy.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-readiness-routing-policy.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
@@ -205,6 +211,8 @@ Use these anchors before free-form browsing.
   "package_scripts": "package.json",
   "reference_map": "RESEARCH_AGENT_MAP_REFERENCES.md",
   "lead_review_agent": "agents/lead-reviewer-agent.md",
+  "pr_readiness_reviewer_agent": "agents/pr-readiness-reviewer-agent.md",
+  "pr_readiness_routing_policy": "docs/review/pr-readiness-routing-policy.md",
   "testing_agent": "agents/testing-agent.md",
   "accessibility_agent": "agents/accessibility-agent.md",
   "teacher_learning_quality_review_agent": "agents/teacher-learning-quality-review-agent.md",
@@ -234,6 +242,8 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/pr-readiness-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-readiness-routing-policy.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
@@ -328,6 +338,7 @@ index_anchors (full URLs):
   "review_agent_paths": [
     "agents/README.md",
     "agents/lead-reviewer-agent.md",
+    "agents/pr-readiness-reviewer-agent.md",
     "agents/testing-agent.md",
     "agents/accessibility-agent.md",
     "agents/teacher-learning-quality-review-agent.md",
@@ -413,6 +424,7 @@ review_agent_paths (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/pr-readiness-reviewer-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/teacher-learning-quality-review-agent.md
@@ -505,6 +517,7 @@ Agents MUST follow this sequence:
 4. Load the matching entry points:
    - reference task -> `RESEARCH_AGENT_MAP_REFERENCES.md` and `RESEARCH_AGENT_PROMPT_REFERENCES.md`
    - multi-agent review orchestration -> `agents/lead-reviewer-agent.md` plus the relevant specialist agents and evidence surfaces
+   - draft-to-review PR lifecycle routing -> `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, and the exact remote PR evidence
    - testing or validation evidence -> `agents/testing-agent.md`, `package.json`, and the relevant test/validator scripts
    - accessibility review -> `agents/accessibility-agent.md` plus rendered artifacts, screenshots, OCR/text evidence, and source semantics where relevant
    - teacher learning-quality review -> `agents/teacher-learning-quality-review-agent.md` plus learning goals, paragraph plan, target exercise, formative checks, differentiation paths, and student-facing artifacts
@@ -596,6 +609,7 @@ Rules:
   ],
   "review_orchestration": [
     "agents/lead-reviewer-agent.md",
+    "agents/pr-readiness-reviewer-agent.md",
     "agents",
     "AGENTS.md",
     "BUILD-PARAGRAPH.md",

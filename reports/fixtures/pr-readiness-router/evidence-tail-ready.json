@@ -1,0 +1,70 @@
+{
+  "expected_route": "READY_FOR_LEAD_ONLY",
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-platform",
+    "number": 107,
+    "url": "https://github.com/meijer1973/4veco-platform/pull/107",
+    "state": "OPEN",
+    "was_draft": true,
+    "base": "main",
+    "head_sha": "bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc"
+  },
+  "throughput": {
+    "class": "normal_sprint",
+    "authority_class": "standard",
+    "level": "L1"
+  },
+  "human_review_payload": "none",
+  "consequence": "low",
+  "changed_paths": [
+    "reports/sprints/TAIL-lead-review-round2.md",
+    "reports/url-index.md"
+  ],
+  "proof": {
+    "ci": {
+      "head_sha": "bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc",
+      "conclusion": "success",
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED"
+        }
+      ]
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run agent:index",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/TAIL-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "post_lead_review_changes": [
+      {
+        "path": "reports/sprints/TAIL-lead-review-round2.md",
+        "kind": "lead_review",
+        "evidence_only": true
+      },
+      {
+        "path": "reports/url-index.md",
+        "kind": "index",
+        "evidence_only": true
+      }
+    ],
+    "changed_paths_verified": true,
+    "post_lead_review_changed_paths": [
+      "reports/sprints/TAIL-lead-review-round2.md",
+      "reports/url-index.md"
+    ],
+    "branch_protection": {
+      "required_approving_review_count": 0
+    }
+  }
+}
