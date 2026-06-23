@@ -8,6 +8,7 @@
 const fs = require("fs");
 const path = require("path");
 const { writeDeckHtml } = require("../../lib/render-presentation-v2-html");
+const graphTransferPresentationDeck = require("./b1-113-presentation-v2-model");
 
 const NODE_PATH = path.join(process.env.APPDATA || "", "npm", "node_modules");
 if (NODE_PATH) {
@@ -939,7 +940,7 @@ PASS WITH FLAGS after human review accepted the correction.
 `);
 
   writeFile(path.join(PAR_DIR, "1.1.3-quality-ref.yaml"), `# Quality Reference - 1.1.3 Grafieken en tabellen
-# Refreshed: 2026-05-19 (L1.6R guided-visual concordance revision)
+# Refreshed: 2026-05-21 (L-CP6E Part A figure-numbering remediation)
 
 paragraph: "1.1.3"
 title: "Grafieken en tabellen"
@@ -964,11 +965,12 @@ partA:
   review:
     file: "1.1.3-review.md"
     unresolved_fails: 0
-    verdict: "FLAG"
-    last_reviewed: "2026-04-14"
+    verdict: "PASS WITH FLAGS"
+    last_reviewed: "2026-05-21"
     flags:
-      - "Figure numbering in Part A is non-sequential."
-      - "Opgaven.md repeats the worked example for standalone exercise use."
+      - "Opgaven.md repeats the worked example for standalone exercise use; CP.6e accepts this as non-blocking standalone-exercise scaffolding."
+    fixed_flags:
+      - "L-CP6E fixed Part A figure first-use order to Figuur 1 -> Figuur 2 -> Figuur 3."
 
 companion:
   review_file: "1.1.3-companion-visual-review.md"
@@ -1141,6 +1143,15 @@ async function writePresentation() {
   console.log("write " + path.relative(path.resolve(PLATFORM_ROOT, ".."), path.join(PAR_DIR, fileName("presentatie"))));
 }
 
+function writeGraphTransferPresentation() {
+  copyEngine("presentation-v2.css");
+  copyEngine("presentation-v2.js");
+  writeDeckHtml(graphTransferPresentationDeck, path.join(PAR_DIR, fileName("presentatie")), {
+    backHref: "index.html"
+  });
+  console.log("write " + path.relative(path.resolve(PLATFORM_ROOT, ".."), path.join(PAR_DIR, fileName("presentatie"))));
+}
+
 function presentationV2Deck() {
   const notes = (...script) => ({ script });
   const tableVisual = {
@@ -1297,7 +1308,7 @@ async function main() {
   writeProcedureData();
   writeReasoningData();
   writeReviewAndQuality();
-  await writePresentation();
+  writeGraphTransferPresentation();
 }
 
 main().catch(err => {
