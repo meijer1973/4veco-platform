@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "traceability_id": "reasoning-golden-family-policy-traceability-v1",
+  "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
+  "stable_policy_surface": [
+    "references/exemplars/product-excellence/reasoning-games/family-standard.md",
+    "references/exemplars/product-excellence/reasoning-games/transfer-matrix.md",
+    "references/exemplars/product-excellence/reasoning-games/reasoning-archetype-decision-tree.md",
+    "references/exemplars/product-excellence/reasoning-games/change-notes.md",
+    "skills/econ-reasoning-game.md"
+  ],
+  "authority_boundary": {
+    "golden_reference": true,
+    "student_product_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "scale_gate": false
+  },
+  "core_rule": {
+    "phrase": "copy product grammar; re-derive reasoning grammar",
+    "validator": "build-scripts/sprints/check-gate-reasoning-golden-family-1.js",
+    "review_question": "Did the implementation copy only the product grammar while deriving the paragraph-specific reasoning chain from the new target?"
+  },
+  "decisions": [
+    {
+      "id": "coherent-loop",
+      "product_standard": "2-4 tasks form one source-to-answer loop.",
+      "skill_instruction": "Compose one loop before choosing controls.",
+      "machine_guard": "composition validator rejects fewer than 2 or more than 4 tasks.",
+      "negative_fixtures": ["mode-overloaded-engine", "generic-mc-only-degradation"],
+      "review_question": "Can a student understand why each task prepares the next?"
+    },
+    {
+      "id": "goal-not-answer",
+      "product_standard": "Goal is prominent and useful but must not reveal the answer chain.",
+      "skill_instruction": "Write a non-answer-giving target brief and inspect first viewport.",
+      "machine_guard": "negative fixture validator rejects answer-giving goals.",
+      "negative_fixtures": ["answer-giving-goal", "hidden-low-contrast-goal"],
+      "review_question": "Does the goal orient the student without solving the task?"
+    },
+    {
+      "id": "local-repair",
+      "product_standard": "Each normal action is reversible locally.",
+      "skill_instruction": "Require remove/replacement controls per row, point, tile, or chain item.",
+      "machine_guard": "task-shell UI proof checks per-item remove controls.",
+      "negative_fixtures": ["clear-all-only-repair"],
+      "review_question": "Can the student repair one wrong choice without restarting the whole task?"
+    },
+    {
+      "id": "stable-shuffle",
+      "product_standard": "Randomization is stable once per session.",
+      "skill_instruction": "Use stable shuffle from the shared shell/composer; never reshuffle on click.",
+      "machine_guard": "engine tests verify stableSessionShuffle is deterministic and non-mutating.",
+      "negative_fixtures": ["reshuffle-after-click"],
+      "review_question": "Does the option order remain stable through interaction states?"
+    },
+    {
+      "id": "visible-answer-functions",
+      "product_standard": "The final answer exposes functional parts rather than a generic textarea.",
+      "skill_instruction": "Use functional answer rows when answer role/operation matters.",
+      "machine_guard": "functional_answer_builder validation requires every answer row and distractors.",
+      "negative_fixtures": ["generic-textarea-only", "missing-answer-preview"],
+      "review_question": "Can the student see what each answer part contributes?"
+    },
+    {
+      "id": "graph-source-directness",
+      "product_standard": "Graph reasoning requires direct graph interaction, sufficient targets, and bounded claim language.",
+      "skill_instruction": "Use graph_evidence_selector for graph evidence; do not replace it with construction.",
+      "machine_guard": "graph_evidence_selector validation requires 44px targets, direct point IDs, and distractors.",
+      "negative_fixtures": ["decorative-graph", "graph-construction-replacement", "tiny-graph-targets"],
+      "review_question": "Does the student use the graph as source evidence rather than merely view or construct it?"
+    },
+    {
+      "id": "authority-boundary",
+      "product_standard": "Golden exemplars do not authorize product rollout or target-equivalent claims.",
+      "skill_instruction": "Include authority boundary in every report and human gate packet.",
+      "machine_guard": "manifest checker and gate checker assert all restricted authority flags remain false.",
+      "negative_fixtures": ["product-authority-creep"],
+      "review_question": "Does any wording imply completion proof, diagnostics, mastery, or Scale Gate approval?"
+    }
+  ]
+}

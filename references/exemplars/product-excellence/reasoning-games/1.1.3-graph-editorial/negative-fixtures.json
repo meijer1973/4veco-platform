@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "exemplar": "reasoning-graph-113-golden-exemplar-v2",
+  "fixtures": [
+    {
+      "id": "graph_is_decorative",
+      "should_fail": true,
+      "reason": "A graph reasoning game must require direct use of graph evidence.",
+      "bad_pattern": "All tasks can be answered without inspecting or interacting with the graph."
+    },
+    {
+      "id": "graph_construction_replaces_reasoning",
+      "should_fail": true,
+      "reason": "The reasoning game should interpret a graph, not duplicate graph practice.",
+      "bad_pattern": "The only task is choosing axes and plotting points."
+    },
+    {
+      "id": "tiny_point_targets",
+      "should_fail": true,
+      "reason": "Motor precision may not be the challenge.",
+      "bad_pattern": "Clickable graph points have hit targets smaller than 44 by 44 pixels."
+    },
+    {
+      "id": "spatial_randomization",
+      "should_fail": true,
+      "reason": "Graph positions are source data and must remain stable.",
+      "bad_pattern": "Point positions, axis order or scales are randomized between renders or clicks."
+    },
+    {
+      "id": "two_click_point_assignment",
+      "should_fail": true,
+      "reason": "Clicking a graph point should complete the selection action.",
+      "bad_pattern": "Student selects a point and must then click a separate evidence slot."
+    },
+    {
+      "id": "clear_all_only",
+      "should_fail": true,
+      "reason": "A single evidence point must be removable without losing the other point.",
+      "bad_pattern": "Only a clear-all button exists."
+    },
+    {
+      "id": "visible_correct_metadata",
+      "should_fail": true,
+      "reason": "Internal IDs, roles and correctness metadata must not leak into the student UI.",
+      "bad_pattern": "Cards or graph points display labels such as correct_endpoint or expected."
+    },
+    {
+      "id": "exact_interpolation_language",
+      "should_fail": true,
+      "reason": "A value between observed points is an estimate, not an exact observation.",
+      "bad_pattern": "The evaluator accepts exactly 450 tickets at €5."
+    },
+    {
+      "id": "interpolation_forbidden",
+      "should_fail": true,
+      "reason": "The connected line supports a reviewed estimate between observed points.",
+      "bad_pattern": "The only accepted response says nothing can be inferred because €5 is absent from the table."
+    },
+    {
+      "id": "universal_rule_from_one_interval",
+      "should_fail": true,
+      "reason": "One comparison may not become a universal price-sales rule.",
+      "bad_pattern": "The final answer claims every €6 price increase always halves sales."
+    },
+    {
+      "id": "causality_overclaim",
+      "should_fail": true,
+      "reason": "A descriptive graph does not prove price alone caused the change.",
+      "bad_pattern": "The evaluator accepts a causal conclusion without causal evidence."
+    },
+    {
+      "id": "generic_textarea_only",
+      "should_fail": true,
+      "reason": "The answer functions must be visible and individually reviewable.",
+      "bad_pattern": "Task 3 is replaced by one generic textarea."
+    },
+    {
+      "id": "answer_giving_goal",
+      "should_fail": true,
+      "reason": "The goal may orient but may not reveal endpoints, percentage or final limitation.",
+      "bad_pattern": "Goal text tells students to select €2 and €8 and conclude 50%."
+    },
+    {
+      "id": "card_reshuffle_after_click",
+      "should_fail": true,
+      "reason": "Text cards may randomize once but must remain spatially stable during play.",
+      "bad_pattern": "Options change position after each selection."
+    },
+    {
+      "id": "headline_buried_below_graph",
+      "should_fail": true,
+      "reason": "The claim determines which evidence the student must inspect and must be visible before the graph.",
+      "bad_pattern": "The headline appears only after the graph and table at the bottom of the source pane."
+    },
+    {
+      "id": "desktop_columns_share_page_scroll",
+      "should_fail": true,
+      "reason": "Students must be able to retrieve source evidence without losing their current question position.",
+      "bad_pattern": "Scrolling the source moves the task column because both columns depend on the document scroll."
+    },
+    {
+      "id": "pane_scroll_chaining",
+      "should_fail": true,
+      "reason": "Reaching the end of one pane may not unexpectedly move the page or the other pane.",
+      "bad_pattern": "A wheel or touch gesture continues into the page or other pane after the active pane reaches its boundary."
+    },
+    {
+      "id": "nested_mobile_scroll_panes",
+      "should_fail": true,
+      "reason": "Independent panes are a desktop affordance; mobile should retain one natural vertical flow.",
+      "bad_pattern": "The mobile layout traps source and tasks in separate short vertical scroll boxes."
+    }
+  ]
+}

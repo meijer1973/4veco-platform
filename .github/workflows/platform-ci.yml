@@ -100,6 +100,9 @@ jobs:
       - name: Validate platform Jest suite
         run: npm run check:platform
 
+      - name: Validate reasoning golden family guardrails
+        run: npm run check:reasoning-golden
+
       - name: Validate paragraph landing V2 guardrails
         run: npm run check:landing-v2
 

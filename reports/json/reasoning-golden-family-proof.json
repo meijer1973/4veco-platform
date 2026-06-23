@@ -1,0 +1,1339 @@
+{
+  "schema_version": 1,
+  "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
+  "generated": "2026-06-23",
+  "rule": "copy product grammar; re-derive reasoning grammar",
+  "authority": {
+    "student_product_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "scale_gate": false
+  },
+  "gallery": "reports/reasoning-golden-family/gallery.html",
+  "generated_pages": [
+    {
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "archetype_id": "causal_mechanism",
+      "selected_exemplar_ids": [
+        "reasoning-market-price-mechanism-v3"
+      ],
+      "page": "reports/reasoning-golden-family/generated/reasoning-market-price-mechanism-composed-v1.html",
+      "json": "references/exemplars/product-excellence/reasoning-games/compositions/reasoning-market-price-mechanism-composed-v1.json",
+      "proof": {
+        "composition_id": "reasoning-market-price-mechanism-composed-v1",
+        "archetype_id": "causal_mechanism",
+        "selected_exemplar_ids": [
+          "reasoning-market-price-mechanism-v3"
+        ],
+        "layout": {
+          "type": "dual_pane_source_task_workspace",
+          "desktopIndependentScroll": true,
+          "mobileFlow": "source_before_tasks",
+          "defaultRoute": "reasoning_composer"
+        },
+        "task_families": [
+          "step_ordering",
+          "cloze_tile_select",
+          "functional_answer_builder"
+        ],
+        "focus_plans": [
+          {
+            "task_id": "market-chain",
+            "family": "step_ordering",
+            "selectors": [
+              "[data-task-id=\"market-chain\"][data-step-id]",
+              "[data-task-id=\"market-chain\"][data-step-sequence]"
+            ]
+          },
+          {
+            "task_id": "market-connectors",
+            "family": "cloze_tile_select",
+            "selectors": [
+              "[data-task-id=\"market-connectors\"][data-cloze-tile-id]",
+              "[data-task-id=\"market-connectors\"][data-cloze-blank-id]"
+            ]
+          },
+          {
+            "task_id": "market-answer",
+            "family": "functional_answer_builder",
+            "selectors": [
+              "[data-task-id=\"market-answer\"][data-answer-row-id]",
+              "[data-task-id=\"market-answer\"][data-answer-preview]"
+            ]
+          }
+        ],
+        "authority": {
+          "golden_reference": true,
+          "student_product_adoption": false,
+          "target_equivalent_proof": false,
+          "diagnostics": false,
+          "mastery_or_sequencing": false,
+          "summative_use": false,
+          "scale_gate": false
+        },
+        "proof_scenarios": [
+          "partial",
+          "wrong",
+          "correct"
+        ]
+      }
+    },
+    {
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "archetype_id": "choice_and_evidence",
+      "selected_exemplar_ids": [
+        "reasoning-1.1.1-choice-compass-v1"
+      ],
+      "page": "reports/reasoning-golden-family/generated/reasoning-choice-compass-composed-v1.html",
+      "json": "references/exemplars/product-excellence/reasoning-games/compositions/reasoning-choice-compass-composed-v1.json",
+      "proof": {
+        "composition_id": "reasoning-choice-compass-composed-v1",
+        "archetype_id": "choice_and_evidence",
+        "selected_exemplar_ids": [
+          "reasoning-1.1.1-choice-compass-v1"
+        ],
+        "layout": {
+          "type": "dual_pane_source_task_workspace",
+          "desktopIndependentScroll": true,
+          "mobileFlow": "source_before_tasks",
+          "defaultRoute": "reasoning_composer"
+        },
+        "task_families": [
+          "multi_select",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "focus_plans": [
+          {
+            "task_id": "choice-scarcity",
+            "family": "multi_select",
+            "selectors": [
+              "[data-task-id=\"choice-scarcity\"][data-multi-option-id]"
+            ]
+          },
+          {
+            "task_id": "choice-cost",
+            "family": "choice",
+            "selectors": [
+              "[data-task-id=\"choice-cost\"][data-choice-id]"
+            ]
+          },
+          {
+            "task_id": "choice-answer",
+            "family": "functional_answer_builder",
+            "selectors": [
+              "[data-task-id=\"choice-answer\"][data-answer-row-id]",
+              "[data-task-id=\"choice-answer\"][data-answer-preview]"
+            ]
+          }
+        ],
+        "authority": {
+          "golden_reference": true,
+          "student_product_adoption": false,
+          "target_equivalent_proof": false,
+          "diagnostics": false,
+          "mastery_or_sequencing": false,
+          "summative_use": false,
+          "scale_gate": false
+        },
+        "proof_scenarios": [
+          "partial",
+          "wrong",
+          "correct"
+        ]
+      }
+    },
+    {
+      "composition_id": "reasoning-index-check-composed-v1",
+      "archetype_id": "reference_value_and_claim_repair",
+      "selected_exemplar_ids": [
+        "reasoning-1.1.2-index-check-v1"
+      ],
+      "page": "reports/reasoning-golden-family/generated/reasoning-index-check-composed-v1.html",
+      "json": "references/exemplars/product-excellence/reasoning-games/compositions/reasoning-index-check-composed-v1.json",
+      "proof": {
+        "composition_id": "reasoning-index-check-composed-v1",
+        "archetype_id": "reference_value_and_claim_repair",
+        "selected_exemplar_ids": [
+          "reasoning-1.1.2-index-check-v1"
+        ],
+        "layout": {
+          "type": "dual_pane_source_task_workspace",
+          "desktopIndependentScroll": true,
+          "mobileFlow": "source_before_tasks",
+          "defaultRoute": "reasoning_composer"
+        },
+        "task_families": [
+          "choice",
+          "multi_select",
+          "functional_answer_builder"
+        ],
+        "focus_plans": [
+          {
+            "task_id": "index-unit",
+            "family": "choice",
+            "selectors": [
+              "[data-task-id=\"index-unit\"][data-choice-id]"
+            ]
+          },
+          {
+            "task_id": "index-checks",
+            "family": "multi_select",
+            "selectors": [
+              "[data-task-id=\"index-checks\"][data-multi-option-id]"
+            ]
+          },
+          {
+            "task_id": "index-answer",
+            "family": "functional_answer_builder",
+            "selectors": [
+              "[data-task-id=\"index-answer\"][data-answer-row-id]",
+              "[data-task-id=\"index-answer\"][data-answer-preview]"
+            ]
+          }
+        ],
+        "authority": {
+          "golden_reference": true,
+          "student_product_adoption": false,
+          "target_equivalent_proof": false,
+          "diagnostics": false,
+          "mastery_or_sequencing": false,
+          "summative_use": false,
+          "scale_gate": false
+        },
+        "proof_scenarios": [
+          "partial",
+          "wrong",
+          "correct"
+        ]
+      }
+    },
+    {
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "archetype_id": "graph_evidence_and_epistemic_scope",
+      "selected_exemplar_ids": [
+        "reasoning-1.1.3-graph-editorial-v2"
+      ],
+      "page": "reports/reasoning-golden-family/generated/reasoning-graph-editorial-composed-v1.html",
+      "json": "references/exemplars/product-excellence/reasoning-games/compositions/reasoning-graph-editorial-composed-v1.json",
+      "proof": {
+        "composition_id": "reasoning-graph-editorial-composed-v1",
+        "archetype_id": "graph_evidence_and_epistemic_scope",
+        "selected_exemplar_ids": [
+          "reasoning-1.1.3-graph-editorial-v2"
+        ],
+        "layout": {
+          "type": "dual_pane_source_task_workspace",
+          "desktopIndependentScroll": true,
+          "mobileFlow": "source_before_tasks",
+          "defaultRoute": "reasoning_composer"
+        },
+        "task_families": [
+          "graph_evidence_selector",
+          "choice",
+          "choice",
+          "functional_answer_builder"
+        ],
+        "focus_plans": [
+          {
+            "task_id": "graph-points",
+            "family": "graph_evidence_selector",
+            "selectors": [
+              "[data-task-id=\"graph-points\"][data-graph-evidence-point-id]",
+              "[data-task-id=\"graph-points\"][data-graph-evidence-tray]"
+            ]
+          },
+          {
+            "task_id": "graph-estimate-status",
+            "family": "choice",
+            "selectors": [
+              "[data-task-id=\"graph-estimate-status\"][data-choice-id]"
+            ]
+          },
+          {
+            "task_id": "graph-scope",
+            "family": "choice",
+            "selectors": [
+              "[data-task-id=\"graph-scope\"][data-choice-id]"
+            ]
+          },
+          {
+            "task_id": "graph-answer",
+            "family": "functional_answer_builder",
+            "selectors": [
+              "[data-task-id=\"graph-answer\"][data-answer-row-id]",
+              "[data-task-id=\"graph-answer\"][data-answer-preview]"
+            ]
+          }
+        ],
+        "authority": {
+          "golden_reference": true,
+          "student_product_adoption": false,
+          "target_equivalent_proof": false,
+          "diagnostics": false,
+          "mastery_or_sequencing": false,
+          "summative_use": false,
+          "scale_gate": false
+        },
+        "proof_scenarios": [
+          "partial",
+          "wrong",
+          "correct"
+        ]
+      }
+    },
+    {
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "archetype_id": "causal_mechanism",
+      "selected_exemplar_ids": [
+        "reasoning-market-price-mechanism-v3",
+        "reasoning-1.1.1-choice-compass-v1"
+      ],
+      "page": "reports/reasoning-golden-family/generated/blind-transfer-1.2.2-demand-factors-v1.html",
+      "json": "reports/reasoning-golden-family/blind-transfer/blind-transfer-1.2.2-demand-factors-v1.json",
+      "proof": {
+        "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+        "archetype_id": "causal_mechanism",
+        "selected_exemplar_ids": [
+          "reasoning-market-price-mechanism-v3",
+          "reasoning-1.1.1-choice-compass-v1"
+        ],
+        "layout": {
+          "type": "dual_pane_source_task_workspace",
+          "desktopIndependentScroll": true,
+          "mobileFlow": "source_before_tasks",
+          "defaultRoute": "reasoning_composer"
+        },
+        "task_families": [
+          "choice",
+          "step_ordering",
+          "functional_answer_builder"
+        ],
+        "focus_plans": [
+          {
+            "task_id": "demand-factor",
+            "family": "choice",
+            "selectors": [
+              "[data-task-id=\"demand-factor\"][data-choice-id]"
+            ]
+          },
+          {
+            "task_id": "demand-chain",
+            "family": "step_ordering",
+            "selectors": [
+              "[data-task-id=\"demand-chain\"][data-step-id]",
+              "[data-task-id=\"demand-chain\"][data-step-sequence]"
+            ]
+          },
+          {
+            "task_id": "demand-answer",
+            "family": "functional_answer_builder",
+            "selectors": [
+              "[data-task-id=\"demand-answer\"][data-answer-row-id]",
+              "[data-task-id=\"demand-answer\"][data-answer-preview]"
+            ]
+          }
+        ],
+        "authority": {
+          "golden_reference": true,
+          "student_product_adoption": false,
+          "target_equivalent_proof": false,
+          "diagnostics": false,
+          "mastery_or_sequencing": false,
+          "summative_use": false,
+          "scale_gate": false
+        },
+        "proof_scenarios": [
+          "partial",
+          "wrong",
+          "correct"
+        ]
+      },
+      "blind_transfer": {
+        "unseenParagraph": "1.2.2 Vraagfactoren",
+        "sourceChecked": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md",
+        "noHumanMicroSpecification": true,
+        "transferRule": "copy product grammar; re-derive reasoning grammar"
+      }
+    }
+  ],
+  "screenshot_manifest": "reports/reasoning-golden-family/screenshots/manifest.json",
+  "screenshot_cases": [
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-initial",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "initial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-initial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-partial",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "partial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-partial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-wrong_retry",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "wrong_retry",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-wrong_retry.png",
+      "feedback_states": [
+        "retry"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": false,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-correct",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-answer_preview",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "answer_preview",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-answer_preview.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-next_action",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "next_action",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-next_action.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "mobile_dark_correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-mobile_dark_correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": true,
+        "sourceOverflowY": "visible",
+        "taskOverflowY": "visible",
+        "sourceOverscroll": "auto",
+        "taskOverscroll": "auto",
+        "sourceMaxHeight": "none",
+        "taskMaxHeight": "none"
+      }
+    },
+    {
+      "name": "reasoning-market-price-mechanism-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-market-price-mechanism-composed-v1",
+      "state": "keyboard_focus",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-market-price-mechanism-composed-v1-keyboard_focus.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": true,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-initial",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "initial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-initial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-partial",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "partial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-partial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-wrong_retry",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "wrong_retry",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-wrong_retry.png",
+      "feedback_states": [
+        "retry"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": false,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-correct",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-answer_preview",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "answer_preview",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-answer_preview.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-next_action",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "next_action",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-next_action.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "mobile_dark_correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-mobile_dark_correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": true,
+        "sourceOverflowY": "visible",
+        "taskOverflowY": "visible",
+        "sourceOverscroll": "auto",
+        "taskOverscroll": "auto",
+        "sourceMaxHeight": "none",
+        "taskMaxHeight": "none"
+      }
+    },
+    {
+      "name": "reasoning-choice-compass-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-choice-compass-composed-v1",
+      "state": "keyboard_focus",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-choice-compass-composed-v1-keyboard_focus.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": true,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-initial",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "initial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-initial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-partial",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "partial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-partial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-wrong_retry",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "wrong_retry",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-wrong_retry.png",
+      "feedback_states": [
+        "retry"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": false,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-correct",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-answer_preview",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "answer_preview",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-answer_preview.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-next_action",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "next_action",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-next_action.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "mobile_dark_correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-mobile_dark_correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": true,
+        "sourceOverflowY": "visible",
+        "taskOverflowY": "visible",
+        "sourceOverscroll": "auto",
+        "taskOverscroll": "auto",
+        "sourceMaxHeight": "none",
+        "taskMaxHeight": "none"
+      }
+    },
+    {
+      "name": "reasoning-index-check-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-index-check-composed-v1",
+      "state": "keyboard_focus",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-index-check-composed-v1-keyboard_focus.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": true,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-initial",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "initial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-initial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-partial",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "partial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-partial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-wrong_retry",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "wrong_retry",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-wrong_retry.png",
+      "feedback_states": [
+        "retry"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": false,
+      "next_action_visible": true,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-correct",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-answer_preview",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "answer_preview",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-answer_preview.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-next_action",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "next_action",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-next_action.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-mobile_dark_correct",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "mobile_dark_correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-mobile_dark_correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": true,
+        "sourceOverflowY": "visible",
+        "taskOverflowY": "visible",
+        "sourceOverscroll": "auto",
+        "taskOverscroll": "auto",
+        "sourceMaxHeight": "none",
+        "taskMaxHeight": "none"
+      }
+    },
+    {
+      "name": "reasoning-graph-editorial-composed-v1-keyboard_focus",
+      "composition_id": "reasoning-graph-editorial-composed-v1",
+      "state": "keyboard_focus",
+      "screenshot": "reports/reasoning-golden-family/screenshots/reasoning-graph-editorial-composed-v1-keyboard_focus.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": 44,
+      "focus_ok": true,
+      "keyboard_focus_ok": true,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-initial",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "initial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-initial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-partial",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "partial",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-partial.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-wrong_retry",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "wrong_retry",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-wrong_retry.png",
+      "feedback_states": [
+        "retry"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": false,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-correct",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-answer_preview",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "answer_preview",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-answer_preview.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-next_action",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "next_action",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-next_action.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": true,
+      "answer_preview_visible": true,
+      "next_action_visible": true,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-mobile_dark_correct",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "mobile_dark_correct",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-mobile_dark_correct.png",
+      "feedback_states": [
+        "matched",
+        "matched",
+        "matched"
+      ],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": null,
+      "pane_proof": {
+        "mobile": true,
+        "sourceOverflowY": "visible",
+        "taskOverflowY": "visible",
+        "sourceOverscroll": "auto",
+        "taskOverscroll": "auto",
+        "sourceMaxHeight": "none",
+        "taskMaxHeight": "none"
+      }
+    },
+    {
+      "name": "blind-transfer-1.2.2-demand-factors-v1-keyboard_focus",
+      "composition_id": "blind-transfer-1.2.2-demand-factors-v1",
+      "state": "keyboard_focus",
+      "screenshot": "reports/reasoning-golden-family/screenshots/blind-transfer-1.2.2-demand-factors-v1-keyboard_focus.png",
+      "feedback_states": [],
+      "feedback_visible": false,
+      "answer_preview_visible": false,
+      "next_action_visible": false,
+      "min_graph_target": null,
+      "focus_ok": true,
+      "keyboard_focus_ok": true,
+      "pane_proof": {
+        "mobile": false,
+        "sourceOverflowY": "auto",
+        "taskOverflowY": "auto",
+        "sourceOverscroll": "contain",
+        "taskOverscroll": "contain",
+        "sourceMaxHeight": "820px",
+        "taskMaxHeight": "820px"
+      }
+    }
+  ]
+}

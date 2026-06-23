@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>§1.1.2 Indexcheck — reasoning game exemplar</title>
+  <style>
+    :root {
+      --bg: #f6f8fc;
+      --panel: #ffffff;
+      --panel-2: #eef2f8;
+      --text: #172235;
+      --muted: #607087;
+      --line: #d8e1ed;
+      --accent: #3b5aa6;
+      --accent-2: #a45f28;
+      --accent-soft: #e9edfb;
+      --good: #17663f;
+      --good-bg: #e7f6ed;
+      --warn: #855700;
+      --warn-bg: #fff3d4;
+      --bad: #8c2020;
+      --bad-bg: #fdeaea;
+      --shadow: 0 14px 38px rgba(21, 37, 68, .10);
+      --radius: 20px;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1420;
+        --panel: #141e2d;
+        --panel-2: #1d2a3d;
+        --text: #edf4fb;
+        --muted: #afbdd0;
+        --line: #334760;
+        --accent: #9db7ff;
+        --accent-2: #f2b374;
+        --accent-soft: #1c2f5a;
+        --good: #92dfb6;
+        --good-bg: #10291e;
+        --warn: #ffd46f;
+        --warn-bg: #352500;
+        --bad: #ffaaa8;
+        --bad-bg: #351516;
+        --shadow: 0 14px 38px rgba(0,0,0,.36);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--accent) 11%, transparent), transparent 30%),
+        radial-gradient(circle at 96% 7%, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 29%),
+        var(--bg);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    button { font: inherit; }
+    .wrap { max-width: 1220px; margin: 0 auto; padding: 24px; }
+    .hero { display: grid; grid-template-columns: minmax(0,1fr) 350px; gap: 18px; margin-bottom: 18px; }
+    .card {
+      min-width: 0;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--panel) 96%, transparent);
+      box-shadow: var(--shadow);
+    }
+    .eyebrow { margin: 0 0 8px; color: var(--accent); font-size: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    h1,h2,h3 { line-height: 1.16; letter-spacing: -.02em; }
+    h1 { margin: 0 0 8px; font-size: clamp(30px, 4vw, 48px); }
+    h2 { margin: 0 0 12px; font-size: clamp(21px, 2.3vw, 28px); }
+    h3 { margin: 0 0 8px; font-size: 18px; }
+    p { margin: 0 0 12px; }
+    .lead { max-width: 78ch; color: var(--muted); font-size: 18px; }
+    .muted { color: var(--muted); }
+
+    .route { display: grid; gap: 10px; align-content: start; }
+    .route-item { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 10px; align-items: center; min-height: 56px; padding: 10px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel-2); }
+    .route-dot { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 900; }
+    .route-item strong, .route-item span { display: block; }
+    .route-item span { color: var(--muted); font-size: 13px; }
+
+    .layout { display: grid; grid-template-columns: 370px minmax(0,1fr); gap: 18px; align-items: start; }
+    .source { position: sticky; top: 16px; display: grid; gap: 14px; }
+    .goal-card { padding: 14px; border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--line)); border-radius: 16px; background: color-mix(in srgb, var(--accent-soft) 58%, var(--panel)); }
+    .goal-card strong { display: block; margin-bottom: 4px; color: var(--accent); }
+    .claim-card { padding: 14px; border-left: 5px solid var(--accent-2); border-radius: 14px; background: color-mix(in srgb, var(--accent-2) 10%, var(--panel)); }
+    .claim-card strong { display: block; margin-bottom: 5px; color: var(--accent-2); }
+    table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 14px; font-size: 15px; }
+    th,td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { background: var(--panel-2); color: var(--muted); font-weight: 800; }
+    tr:last-child td { border-bottom: 0; }
+    .base-chip { display: inline-block; margin-left: 5px; padding: 2px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 900; }
+
+    .task-list { display: grid; gap: 18px; }
+    .task { position: relative; overflow: hidden; }
+    .task::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: linear-gradient(90deg,var(--accent),var(--accent-2)); }
+    .task-head { display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 12px; align-items: start; margin-bottom: 14px; padding-top: 4px; }
+    .badge { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 18px; font-weight: 900; }
+    .task-purpose { margin: 4px 0 0; color: var(--muted); }
+
+    .option-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+    .option-card {
+      width: 100%; min-height: 70px; padding: 12px; border: 1px solid var(--line); border-radius: 16px;
+      background: var(--panel-2); color: var(--text); text-align: left; cursor: pointer;
+      transition: transform .14s ease, border-color .14s ease, background .14s ease;
+    }
+    .option-card:hover,.option-card:focus-visible { transform: translateY(-1px); border-color: var(--accent); outline: 3px solid color-mix(in srgb,var(--accent) 25%,transparent); outline-offset: 2px; }
+    .option-card[aria-pressed="true"],.option-card.is-selected { border-color: var(--accent); background: color-mix(in srgb,var(--accent-soft) 70%,var(--panel)); box-shadow: inset 0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent); }
+    .option-card strong { display: block; margin-bottom: 3px; }
+    .option-card span { display: block; color: var(--muted); font-size: 14px; }
+    .formula-card { font-family: var(--mono); font-size: 16px; }
+    .formula-card span { font-family: var(--sans); }
+
+    .selection-summary { display: flex; flex-wrap: wrap; gap: 8px; min-height: 54px; margin: 12px 0 0; padding: 10px; border: 1px dashed var(--line); border-radius: 16px; background: color-mix(in srgb,var(--panel) 82%,var(--panel-2)); }
+    .selection-summary:empty::before { content: "Nog geen berekeningen gekozen."; color: var(--muted); }
+    .selected-chip { display: inline-flex; gap: 8px; align-items: center; padding: 7px 8px 7px 11px; border: 1px solid var(--accent); border-radius: 999px; background: color-mix(in srgb,var(--accent-soft) 58%,var(--panel)); font-family: var(--mono); }
+    .selected-chip button { display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--text); cursor: pointer; font-weight: 900; }
+
+    .repair-board { display: grid; gap: 14px; margin-top: 12px; }
+    .repair-row { display: grid; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 16px; background: color-mix(in srgb,var(--panel) 88%,var(--panel-2)); }
+    .repair-row > strong { color: var(--accent); }
+    .repair-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+    .repair-option { width: 100%; min-height: 54px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); color: var(--text); text-align: left; cursor: pointer; }
+    .repair-option:hover,.repair-option:focus-visible { border-color: var(--accent); outline: 3px solid color-mix(in srgb,var(--accent) 23%,transparent); outline-offset: 2px; }
+    .repair-option[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--text); font-weight: 800; }
+    .answer-preview { margin-top: 14px; padding: 14px; border: 1px solid color-mix(in srgb,var(--accent) 36%,var(--line)); border-radius: 16px; background: color-mix(in srgb,var(--accent-soft) 40%,var(--panel)); }
+    .answer-preview strong { display: block; margin-bottom: 6px; color: var(--accent); }
+    .answer-preview p { margin: 0; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+    .primary,.secondary { min-height: 42px; padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; font-weight: 800; }
+    .primary { background: var(--accent); color: #fff; border-color: color-mix(in srgb,var(--accent) 80%,#000); }
+    .secondary { background: var(--panel); color: var(--text); }
+    .primary:focus-visible,.secondary:focus-visible { outline: 3px solid color-mix(in srgb,var(--accent) 35%,transparent); outline-offset: 2px; }
+
+    .feedback { display: none; margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 16px; }
+    .feedback.show { display: block; }
+    .feedback.good { background: var(--good-bg); color: var(--good); border-color: color-mix(in srgb,var(--good) 40%,var(--line)); }
+    .feedback.warn { background: var(--warn-bg); color: var(--warn); border-color: color-mix(in srgb,var(--warn) 40%,var(--line)); }
+    .feedback.bad { background: var(--bad-bg); color: var(--bad); border-color: color-mix(in srgb,var(--bad) 40%,var(--line)); }
+    .feedback strong { display: block; margin-bottom: 4px; }
+    .completion { display: none; background: var(--good-bg); color: var(--good); border-color: color-mix(in srgb,var(--good) 40%,var(--line)); }
+    .completion.show { display: block; }
+    details.card summary { cursor: pointer; color: var(--accent); font-weight: 900; }
+    details.card ul { margin: 12px 0 0 18px; color: var(--muted); }
+
+    @media (max-width: 960px) { .hero,.layout { grid-template-columns: 1fr; } .source { position: static; } }
+    @media (max-width: 640px) {
+      .wrap { padding: 12px; }
+      .card { padding: 16px; border-radius: 16px; }
+      .option-grid,.repair-options { grid-template-columns: 1fr; }
+      .lead { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">§1.1.2 Percentages en indexcijfers</p>
+        <h1>Indexcheck: klopt de 6%-claim?</h1>
+        <p class="lead">Een reasoning game over referentiewaarden, indexpunten en procenten. Je bepaalt eerst wat het getal 6 betekent, kiest daarna twee geldige controles en repareert ten slotte de uitspraak.</p>
+      </div>
+      <aside class="card route" aria-label="Spelroute">
+        <div class="route-item"><span class="route-dot">1</span><div><strong>Betekenis bepalen</strong><span>Wat zegt het verschil 126 − 120?</span></div></div>
+        <div class="route-item"><span class="route-dot">2</span><div><strong>Twee routes controleren</strong><span>Prijzen en indexcijfers moeten hetzelfde verhaal geven.</span></div></div>
+        <div class="route-item"><span class="route-dot">3</span><div><strong>Claim repareren</strong><span>Maak van de fout een correct toetsantwoord.</span></div></div>
+      </aside>
+    </section>
+
+    <section class="layout">
+      <aside class="card source" aria-label="Bron">
+        <div class="goal-card">
+          <strong>Doel</strong>
+          <p>Beoordeel een uitspraak over een verandering. Maak duidelijk onderscheid tussen indexpunten en procenten.</p>
+        </div>
+        <div>
+          <h2>Bron — maandabonnement bus</h2>
+          <p>De vervoerder houdt de abonnementsprijs bij met indexcijfers. Het basisjaar is 2024.</p>
+          <table aria-label="Prijs en indexcijfer van een busabonnement">
+            <thead><tr><th>Jaar</th><th>Prijs</th><th>Index</th></tr></thead>
+            <tbody>
+              <tr><td>2024 <span class="base-chip">basis</span></td><td>€50</td><td>100</td></tr>
+              <tr><td>2025</td><td>€60</td><td>120</td></tr>
+              <tr><td>2026</td><td>€63</td><td>126</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="claim-card">
+          <strong>Uitspraak van een leerling</strong>
+          <p>“Van 2025 naar 2026 werd het abonnement 6% duurder, want het indexcijfer steeg van 120 naar 126.”</p>
+        </div>
+      </aside>
+
+      <section class="task-list" aria-label="Speltaken">
+        <article class="card task" id="taskMeaning">
+          <div class="task-head">
+            <span class="badge">1</span>
+            <div>
+              <h2>Wat betekent de 6?</h2>
+              <p class="task-purpose">Klik de omschrijving die precies past bij het verschil tussen index 120 en index 126.</p>
+            </div>
+          </div>
+          <div class="option-grid" id="meaningOptions" aria-label="Betekenissen van het verschil"></div>
+          <div class="actions"><button class="primary" type="button" onclick="checkMeaning()">Controleer betekenis</button></div>
+          <div class="feedback" id="feedbackMeaning" role="status" aria-live="polite" tabindex="-1"></div>
+        </article>
+
+        <article class="card task" id="taskChecks">
+          <div class="task-head">
+            <span class="badge">2</span>
+            <div>
+              <h2>Kies twee berekeningen die dezelfde verandering controleren</h2>
+              <p class="task-purpose">Selecteer één geldige berekening met prijzen en één geldige berekening met indexcijfers. Eén klik selecteert; klik opnieuw of gebruik × om te verwijderen.</p>
+            </div>
+          </div>
+          <div class="selection-summary" id="checkSummary" aria-label="Gekozen berekeningen"></div>
+          <div class="option-grid" id="checkOptions" aria-label="Mogelijke berekeningen"></div>
+          <div class="actions">
+            <button class="primary" type="button" onclick="checkCalculations()">Controleer berekeningen</button>
+            <button class="secondary" type="button" onclick="clearChecks()">Wis keuzes</button>
+          </div>
+          <div class="feedback" id="feedbackChecks" role="status" aria-live="polite" tabindex="-1"></div>
+        </article>
+
+        <article class="card task" id="taskRepair">
+          <div class="task-head">
+            <span class="badge">3</span>
+            <div>
+              <h2>Repareer de uitspraak</h2>
+              <p class="task-purpose">Kies in elke rij één volledige zin. Je antwoord verschijnt direct onder de keuzes.</p>
+            </div>
+          </div>
+          <div class="repair-board" id="repairBoard"></div>
+          <div class="answer-preview" aria-live="polite">
+            <strong>Jouw toetsantwoord</strong>
+            <p id="answerPreview">Kies in elke rij een zin.</p>
+          </div>
+          <div class="actions">
+            <button class="primary" type="button" onclick="checkRepair()">Controleer toetsantwoord</button>
+            <button class="secondary" type="button" onclick="clearRepair()">Wis antwoord</button>
+          </div>
+          <div class="feedback" id="feedbackRepair" role="status" aria-live="polite" tabindex="-1"></div>
+        </article>
+
+        <section class="card completion" id="completion">
+          <h2>Indexcheck afgerond</h2>
+          <p>Je hebt het verschil tussen indexpunten en procenten onderbouwd met twee equivalente berekeningen.</p>
+        </section>
+
+        <details class="card">
+          <summary>Ontwerpnotitie voor repository-teams</summary>
+          <ul>
+            <li>De productgrammatica van het §1.1.1-exemplar blijft: bron links, drie korte taken rechts, één klik per handeling en individuele reparatie.</li>
+            <li>De redeneergrammatica verandert volledig: hier gaat het om betekenis, referentiewaarde en twee equivalente controlepaden.</li>
+            <li>Kaarten worden één keer per sessie gerandomiseerd. Ze mogen na een klik niet verspringen.</li>
+            <li>Er zijn geen verborgen ID- of rolmarkeringen, antwoordgevende option-uitleg of vooraf getoonde correcte uitkomst.</li>
+            <li>De moeilijkheid zit in de economische interpretatie, niet in het bedienen van de interface.</li>
+          </ul>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const DATA = {
+      meaning: [
+        { id: "points", text: "Een verschil van 6 indexpunten", sub: "Dit benoemt de verandering in indexeenheden.", correct: true },
+        { id: "percent", text: "Een prijsstijging van 6%", sub: "Dit verwart indexpunten met procenten.", correct: false },
+        { id: "euro", text: "Een prijsstijging van €6", sub: "De prijs stijgt van €60 naar €63.", correct: false },
+        { id: "index_six", text: "Een nieuw indexcijfer van 6", sub: "Het nieuwe indexcijfer is 126.", correct: false }
+      ],
+      checks: [
+        { id: "price_old", formula: "(63 − 60) ÷ 60 × 100", sub: "Vergelijk de prijsverandering met de oude prijs.", correct: true },
+        { id: "index_old", formula: "(126 − 120) ÷ 120 × 100", sub: "Vergelijk de indexpuntverandering met het oude indexcijfer.", correct: true },
+        { id: "price_new", formula: "(63 − 60) ÷ 63 × 100", sub: "Hier wordt door de nieuwe prijs gedeeld.", correct: false },
+        { id: "index_new", formula: "(126 − 120) ÷ 126 × 100", sub: "Hier wordt door het nieuwe indexcijfer gedeeld.", correct: false },
+        { id: "base_hundred", formula: "(126 − 120) ÷ 100 × 100", sub: "Het basisjaar 100 is niet het oude niveau van 2025.", correct: false },
+        { id: "subtract_only", formula: "126 − 120 = 6%", sub: "Aftrekken geeft indexpunten, nog geen percentage.", correct: false }
+      ],
+      repair: [
+        {
+          id: "verdict", label: "1. Oordeel", options: [
+            { id: "wrong", text: "De uitspraak is onjuist.", correct: true },
+            { id: "right", text: "De uitspraak is juist.", correct: false }
+          ]
+        },
+        {
+          id: "difference", label: "2. Benoem het verschil", options: [
+            { id: "six_points", text: "Het indexcijfer stijgt met 6 indexpunten.", correct: true },
+            { id: "six_percent", text: "Het indexcijfer stijgt met 6 procent.", correct: false },
+            { id: "five_points", text: "Het indexcijfer stijgt met 5 indexpunten.", correct: false }
+          ]
+        },
+        {
+          id: "percent", label: "3. Bereken en verklaar", options: [
+            { id: "five", text: "De prijs stijgt met 5%, want 6 ÷ 120 × 100 = 5%.", correct: true },
+            { id: "six", text: "De prijs stijgt met 6%, want 126 − 120 = 6.", correct: false },
+            { id: "newbase", text: "De prijs stijgt met 4,8%, want 6 ÷ 126 × 100 ≈ 4,8%.", correct: false }
+          ]
+        }
+      ]
+    };
+
+    const state = { meaning: "", checks: [], repair: {} };
+    const order = {
+      meaning: shuffle(DATA.meaning.map(x => x.id)),
+      checks: shuffle(DATA.checks.map(x => x.id)),
+      repair: Object.fromEntries(DATA.repair.map(row => [row.id, shuffle(row.options.map(x => x.id))]))
+    };
+    const passed = { meaning: false, checks: false, repair: false };
+
+    function shuffle(items) {
+      const copy = items.slice();
+      for (let i = copy.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    }
+    function getById(list,id) { return list.find(x => x.id === id); }
+    function hide(id) { const el = document.getElementById(id); el.className = "feedback"; el.innerHTML = ""; }
+    function show(id,kind,title,text) {
+      const el = document.getElementById(id);
+      el.className = `feedback show ${kind}`;
+      el.innerHTML = `<strong>${escapeHtml(title)}</strong><span>${escapeHtml(text)}</span>`;
+      el.focus({preventScroll:true});
+    }
+    function updateCompletion() {
+      document.getElementById("completion").classList.toggle("show", passed.meaning && passed.checks && passed.repair);
+    }
+
+    function renderMeaning() {
+      document.getElementById("meaningOptions").innerHTML = order.meaning.map(id => {
+        const item = getById(DATA.meaning,id);
+        const selected = state.meaning === id;
+        return `<button type="button" class="option-card${selected ? " is-selected" : ""}" aria-pressed="${selected}" onclick="selectMeaning('${id}')"><strong>${escapeHtml(item.text)}</strong></button>`;
+      }).join("");
+    }
+    function selectMeaning(id) { state.meaning = id; passed.meaning = false; hide("feedbackMeaning"); renderMeaning(); updateCompletion(); }
+    function checkMeaning() {
+      const item = getById(DATA.meaning,state.meaning);
+      const ok = Boolean(item && item.correct);
+      passed.meaning = ok;
+      show("feedbackMeaning", ok ? "good" : "warn", ok ? "Betekenis klopt" : "Indexpunten zijn nog geen procenten", ok ? "126 − 120 = 6 benoemt een verschil van 6 indexpunten. Voor een percentage heb je ook een referentiewaarde nodig." : "Aftrekken van twee indexcijfers geeft eerst een verschil in indexpunten. Het percentage vraagt nog om een vergelijking met het oude niveau.");
+      updateCompletion();
+    }
+
+    function renderChecks() {
+      document.getElementById("checkOptions").innerHTML = order.checks.map(id => {
+        const item = getById(DATA.checks,id);
+        const selected = state.checks.includes(id);
+        const disabled = !selected && state.checks.length >= 2;
+        return `<button type="button" class="option-card formula-card${selected ? " is-selected" : ""}" aria-pressed="${selected}" ${disabled ? "disabled" : ""} onclick="toggleCheck('${id}')"><strong>${escapeHtml(item.formula)}</strong></button>`;
+      }).join("");
+      document.getElementById("checkSummary").innerHTML = state.checks.map(id => {
+        const item = getById(DATA.checks,id);
+        return `<span class="selected-chip">${escapeHtml(item.formula)}<button type="button" aria-label="Verwijder berekening" onclick="removeCheck('${id}')">×</button></span>`;
+      }).join("");
+    }
+    function toggleCheck(id) {
+      const idx = state.checks.indexOf(id);
+      if (idx >= 0) state.checks.splice(idx,1);
+      else if (state.checks.length < 2) state.checks.push(id);
+      passed.checks = false; hide("feedbackChecks"); renderChecks(); updateCompletion();
+    }
+    function removeCheck(id) { const idx = state.checks.indexOf(id); if (idx >= 0) state.checks.splice(idx,1); passed.checks = false; hide("feedbackChecks"); renderChecks(); updateCompletion(); }
+    function clearChecks() { state.checks = []; passed.checks = false; hide("feedbackChecks"); renderChecks(); updateCompletion(); }
+    function checkCalculations() {
+      const ok = state.checks.length === 2 && state.checks.every(id => getById(DATA.checks,id).correct);
+      passed.checks = ok;
+      show("feedbackChecks", ok ? "good" : "warn", ok ? "Beide routes komen uit op 5%" : "Controleer de referentiewaarde", ok ? "De prijsroute gebruikt €60 als oude prijs; de indexroute gebruikt 120 als oud indexcijfer. Beide berekeningen meten dezelfde stijging van 5%." : "Voor de verandering van 2025 naar 2026 vergelijk je het verschil steeds met het oude niveau uit 2025. Kies één prijsroute en één indexroute.");
+      updateCompletion();
+    }
+
+    function renderRepair() {
+      document.getElementById("repairBoard").innerHTML = DATA.repair.map(row => {
+        const options = order.repair[row.id].map(id => getById(row.options,id));
+        return `<section class="repair-row"><strong>${escapeHtml(row.label)}</strong><div class="repair-options">${options.map(item => {
+          const selected = state.repair[row.id] === item.id;
+          return `<button type="button" class="repair-option" aria-pressed="${selected}" onclick="selectRepair('${row.id}','${item.id}')">${escapeHtml(item.text)}</button>`;
+        }).join("")}</div></section>`;
+      }).join("");
+      const parts = DATA.repair.map(row => {
+        const id = state.repair[row.id];
+        return id ? getById(row.options,id).text : "[…]";
+      });
+      document.getElementById("answerPreview").textContent = parts.join(" ");
+    }
+    function selectRepair(rowId,optionId) { state.repair[rowId] = optionId; passed.repair = false; hide("feedbackRepair"); renderRepair(); updateCompletion(); }
+    function clearRepair() { state.repair = {}; passed.repair = false; hide("feedbackRepair"); renderRepair(); updateCompletion(); }
+    function checkRepair() {
+      const complete = DATA.repair.every(row => state.repair[row.id]);
+      const ok = complete && DATA.repair.every(row => getById(row.options,state.repair[row.id]).correct);
+      passed.repair = ok;
+      show("feedbackRepair", ok ? "good" : "warn", ok ? "De claim is correct gerepareerd" : "Maak het onderscheid expliciet", ok ? "Je benoemt 6 indexpunten apart en berekent daarna 5% met het oude indexcijfer 120 als referentie." : "Een volledig toetsantwoord bevat drie onderdelen: oordeel, verschil in indexpunten en procentuele verandering ten opzichte van het oude indexcijfer.");
+      updateCompletion();
+    }
+
+    renderMeaning();
+    renderChecks();
+    renderRepair();
+  </script>
+</body>
+</html>

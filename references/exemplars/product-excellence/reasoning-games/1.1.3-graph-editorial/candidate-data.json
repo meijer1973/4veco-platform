@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "surface": "reasoning_game_golden_exemplar",
+  "paragraph": {
+    "id": "1.1.3",
+    "title": "Grafieken en tabellen"
+  },
+  "title": "Grafiekredactie: wat mag in de kop?",
+  "goal": "Bepaal wat een grafiek rechtstreeks ondersteunt, wat alleen een schatting is en hoe precies je een conclusie mag formuleren.",
+  "layout": {
+    "kind": "source_left_task_right",
+    "mobileOrder": [
+      "source",
+      "tasks"
+    ],
+    "desktopScrolling": "independent_panes",
+    "desktopPaneHeight": "bounded_to_viewport",
+    "scrollChaining": "contained",
+    "sourceStickyDesktop": false,
+    "headlinePlacement": "source_top_before_graph",
+    "sourcePresentationOrder": [
+      "goal",
+      "context",
+      "claim",
+      "graph",
+      "table"
+    ]
+  },
+  "source": {
+    "context": "Een pop-upmuseum test op vijf vergelijkbare zaterdagen verschillende toegangsprijzen.",
+    "graph": {
+      "kind": "pq_graph",
+      "xAxis": {
+        "label": "Hoeveelheid Q (tickets)",
+        "min": 0,
+        "max": 700
+      },
+      "yAxis": {
+        "label": "Prijs P (€)",
+        "min": 0,
+        "max": 12
+      },
+      "connectObservedPoints": true,
+      "interpolationPolicy": "straight_segments_between_observed_points",
+      "points": [
+        {
+          "id": "p2",
+          "p": 2,
+          "q": 600
+        },
+        {
+          "id": "p4",
+          "p": 4,
+          "q": 500
+        },
+        {
+          "id": "p6",
+          "p": 6,
+          "q": 400
+        },
+        {
+          "id": "p8",
+          "p": 8,
+          "q": 300
+        },
+        {
+          "id": "p10",
+          "p": 10,
+          "q": 200
+        }
+      ]
+    },
+    "table": {
+      "columns": [
+        "Prijs P (€)",
+        "Tickets Q"
+      ],
+      "rows": [
+        [
+          2,
+          600
+        ],
+        [
+          4,
+          500
+        ],
+        [
+          6,
+          400
+        ],
+        [
+          8,
+          300
+        ],
+        [
+          10,
+          200
+        ]
+      ]
+    },
+    "claim": "Bij een prijs van €8 is het aantal verkochte tickets 50% lager dan bij €2.",
+    "claimLabel": "Te controleren kop"
+  },
+  "tasks": [
+    {
+      "id": "graph-evidence-pair",
+      "family": "graph_evidence_pair_selector",
+      "prompt": "Klik de twee meetpunten die je nodig hebt om de kop te controleren.",
+      "interaction": {
+        "selectionLimit": 2,
+        "selectionMode": "unordered_exact_pair",
+        "pointClick": "toggle",
+        "thirdSelection": "replace_oldest",
+        "individualRemove": true,
+        "minimumHitTargetPx": 44,
+        "keyboardActivation": [
+          "Enter",
+          "Space"
+        ],
+        "randomizeSpatialData": false
+      },
+      "expected": {
+        "pointIds": [
+          "p2",
+          "p8"
+        ]
+      }
+    },
+    {
+      "id": "interpolation-claim-strength",
+      "family": "graph_claim_strength_choice",
+      "prompt": "Kies de formulering die past bij wat de grafiek laat zien voor P = €5.",
+      "interaction": {
+        "singleClickReplace": true,
+        "randomizeOnce": true,
+        "options": [
+          {
+            "id": "estimate",
+            "text": "Bij €5 worden naar schatting ongeveer 450 tickets verkocht; €5 ligt tussen twee meetpunten."
+          },
+          {
+            "id": "exact",
+            "text": "Bij €5 worden exact 450 tickets verkocht; de getekende lijn bewijst dit zonder onzekerheid."
+          },
+          {
+            "id": "impossible",
+            "text": "Over €5 kun je niets zeggen, omdat deze prijs niet als apart meetpunt in de tabel staat."
+          },
+          {
+            "id": "nearest",
+            "text": "Bij €5 worden ongeveer 500 tickets verkocht, omdat €4 het dichtstbijzijnde meetpunt is."
+          }
+        ]
+      },
+      "expected": {
+        "optionId": "estimate"
+      }
+    },
+    {
+      "id": "graph-claim-repair",
+      "family": "graph_evidence_answer_builder",
+      "prompt": "Bouw een antwoord met bronwaarden, interpretatie en een begrensde conclusie.",
+      "interaction": {
+        "rowSelection": "single_click_replace",
+        "answerPreview": true,
+        "randomizeWithinRowsOnce": true,
+        "rows": [
+          {
+            "id": "evidence",
+            "label": "Benoem de bronwaarden",
+            "options": [
+              {
+                "id": "correct_values",
+                "text": "Bij €2 zijn 600 tickets verkocht en bij €8 zijn dat er 300."
+              },
+              {
+                "id": "wrong_values",
+                "text": "Bij €2 zijn 500 tickets verkocht en bij €8 zijn dat er 200."
+              },
+              {
+                "id": "missing_source",
+                "text": "De lijn daalt duidelijk, dus de kop zal wel kloppen."
+              }
+            ]
+          },
+          {
+            "id": "interpretation",
+            "label": "Leg de vergelijking uit",
+            "options": [
+              {
+                "id": "half",
+                "text": "300 is de helft van 600, dus in deze vergelijking is het aantal verkochte tickets 50% lager."
+              },
+              {
+                "id": "points",
+                "text": "Het verschil is 300 tickets, dus de daling is 300%."
+              },
+              {
+                "id": "price_percent",
+                "text": "De prijs stijgt met €6, dus de ticketverkoop daalt met 6%."
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "label": "Begrens de conclusie",
+            "options": [
+              {
+                "id": "bounded",
+                "text": "De grafiek ondersteunt deze vergelijking, maar niet dat elke prijsstijging altijd tot een halvering leidt."
+              },
+              {
+                "id": "always",
+                "text": "Hieruit volgt dat elke prijsstijging van €6 de verkoop altijd halveert."
+              },
+              {
+                "id": "cause",
+                "text": "Hiermee is bewezen dat alleen de prijs de verandering in ticketverkoop heeft veroorzaakt."
+              }
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "selections": {
+          "evidence": "correct_values",
+          "interpretation": "half",
+          "scope": "bounded"
+        }
+      }
+    }
+  ],
+  "shared_engine_targets": [
+    "graph_evidence_pair_selector",
+    "graph_claim_strength_choice",
+    "graph_evidence_answer_builder"
+  ],
+  "authority": {
+    "golden_exemplar_candidate": true,
+    "product_route_adoption_authorized": false,
+    "diagnostics_or_mastery_authorized": false,
+    "scale_gate_authorized": false
+  },
+  "exemplar_version": 2
+}

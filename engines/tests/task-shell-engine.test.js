@@ -3554,4 +3554,191 @@ describe('TaskShellEngine', () => {
             tasks: fixtures()
         })).toBe(true);
     });
+
+    test('validates and evaluates functional answer builder rows with local feedback', () => {
+        const answerTask = baseTask({
+            id: 'reasoning-answer-builder',
+            family: 'functional_answer_builder',
+            skillLabel: 'Antwoorddelen kiezen',
+            prompt: 'Kies per regel het onderdeel dat de redenering controleerbaar maakt.',
+            interaction: {
+                rowGroupLabel: 'Antwoordregels',
+                answerPreview: {
+                    label: 'Opgebouwd antwoord',
+                    placeholder: 'Kies per regel een onderdeel.',
+                    template: '{{oorzaak}} {{mechanisme}} {{conclusie}}'
+                },
+                answerRows: [
+                    {
+                        id: 'oorzaak',
+                        label: 'Oorzaak',
+                        options: [
+                            { id: 'aanbod-daalt', label: 'Het aanbod daalt.', kind: 'answer' },
+                            { id: 'vraag-stijgt', label: 'De vraag stijgt.', kind: 'distractor', distractorFor: 'aanbod-daalt' }
+                        ]
+                    },
+                    {
+                        id: 'mechanisme',
+                        label: 'Mechanisme',
+                        options: [
+                            { id: 'tekort', label: 'Daardoor ontstaat druk op de prijs.', kind: 'answer' },
+                            { id: 'winst', label: 'Daardoor stijgt de winst vanzelf.', kind: 'distractor', distractorFor: 'tekort' }
+                        ]
+                    },
+                    {
+                        id: 'conclusie',
+                        label: 'Conclusie',
+                        options: [
+                            { id: 'prijs-stijgt', label: 'Dus de evenwichtsprijs stijgt.', kind: 'answer' },
+                            { id: 'prijs-daalt', label: 'Dus de evenwichtsprijs daalt.', kind: 'distractor', distractorFor: 'prijs-stijgt' }
+                        ]
+                    }
+                ]
+            },
+            expected: {
+                kind: 'functional_answer_builder',
+                rows: {
+                    oorzaak: 'aanbod-daalt',
+                    mechanisme: 'tekort',
+                    conclusie: 'prijs-stijgt'
+                },
+                partialFeedback: 'practice_only'
+            }
+        });
+
+        expect(TaskShellEngine.validateTask(answerTask)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(answerTask, {
+            rows: {
+                oorzaak: 'aanbod-daalt',
+                mechanisme: 'tekort',
+                conclusie: 'prijs-stijgt'
+            }
+        }).matched).toBe(true);
+
+        const wrong = TaskShellEngine.evaluateTask(answerTask, {
+            rows: {
+                oorzaak: 'vraag-stijgt',
+                mechanisme: 'tekort'
+            }
+        });
+        expect(wrong.matched).toBe(false);
+        expect(wrong.functionalAnswerFeedback.missingRows).toEqual([
+            expect.objectContaining({ id: 'conclusie' })
+        ]);
+        expect(wrong.functionalAnswerFeedback.selectedDistractors).toEqual([
+            expect.objectContaining({ id: 'vraag-stijgt' })
+        ]);
+        expect(TaskShellEngine.focusPlan(answerTask)).toEqual([
+            '[data-task-id="reasoning-answer-builder"][data-answer-row-id]',
+            '[data-task-id="reasoning-answer-builder"][data-answer-preview]'
+        ]);
+    });
+
+    test('rejects functional answer rows that lack a local distractor', () => {
+        const answerTask = baseTask({
+            id: 'answer-row-distractor-guard',
+            family: 'functional_answer_builder',
+            skillLabel: 'Antwoorddelen kiezen',
+            prompt: 'Kies per regel het beste antwoorddeel.',
+            interaction: {
+                answerPreview: {
+                    label: 'Opgebouwd antwoord',
+                    placeholder: 'Kies per regel.',
+                    template: '{{oorzaak}} {{gevolg}}'
+                },
+                answerRows: [
+                    {
+                        id: 'oorzaak',
+                        label: 'Oorzaak',
+                        options: [
+                            { id: 'oorzaak-juist', label: 'De oorzaak klopt.', kind: 'answer' },
+                            { id: 'oorzaak-fout', label: 'De oorzaak klopt niet.', kind: 'distractor', distractorFor: 'oorzaak-juist' }
+                        ]
+                    },
+                    {
+                        id: 'gevolg',
+                        label: 'Gevolg',
+                        options: [
+                            { id: 'gevolg-juist', label: 'Het gevolg klopt.', kind: 'answer' },
+                            { id: 'gevolg-ook-juist', label: 'Nog een correct gevolg.', kind: 'answer' }
+                        ]
+                    }
+                ]
+            },
+            expected: {
+                kind: 'functional_answer_builder',
+                rows: {
+                    oorzaak: 'oorzaak-juist',
+                    gevolg: 'gevolg-juist'
+                }
+            }
+        });
+
+        expect(() => TaskShellEngine.validateTask(answerTask)).toThrow(/answerRows\[1\].*distractor/);
+    });
+
+    test('validates graph evidence selection as direct point picking, not graph construction', () => {
+        const graphTask = baseTask({
+            id: 'graph-point-evidence',
+            family: 'graph_evidence_selector',
+            skillLabel: 'Grafiekpunten kiezen',
+            prompt: 'Kies de twee punten die de uitspraak begrenzen.',
+            interaction: {
+                maxSelections: 2,
+                hitTargetPx: 44,
+                trayLabel: 'Gekozen punten',
+                placeholder: 'Kies twee punten in de grafiek.',
+                graph: {
+                    title: 'Vraaglijn voor broodjes',
+                    altText: 'Grafiek waarin hogere prijzen samengaan met lagere hoeveelheden.',
+                    axes: {
+                        x: { label: 'Prijs P', min: 0, max: 10, ticks: [0, 2, 5, 8, 10] },
+                        y: { label: 'Hoeveelheid Q', min: 0, max: 700, ticks: [0, 300, 600] }
+                    },
+                    series: [
+                        {
+                            label: 'Vraag',
+                            points: [
+                                { id: 'p2-q600', x: 2, y: 600, label: 'P=2, Q=600', kind: 'answer' },
+                                { id: 'p8-q300', x: 8, y: 300, label: 'P=8, Q=300', kind: 'answer' },
+                                { id: 'p5-q450', x: 5, y: 450, label: 'P=5, Q=450', kind: 'distractor', distractorFor: 'p2-q600' }
+                            ]
+                        }
+                    ]
+                }
+            },
+            expected: {
+                kind: 'graph_evidence_selector',
+                pointIds: ['p2-q600', 'p8-q300'],
+                partialFeedback: 'practice_only'
+            }
+        });
+
+        expect(TaskShellEngine.validateTask(graphTask)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(graphTask, { pointIds: ['p8-q300', 'p2-q600'] }).matched).toBe(true);
+        const retry = TaskShellEngine.evaluateTask(graphTask, { pointIds: ['p5-q450'] });
+        expect(retry.matched).toBe(false);
+        expect(retry.graphEvidenceFeedback.missingRequired.length).toBe(2);
+        expect(retry.graphEvidenceFeedback.selectedDistractors).toEqual([
+            expect.objectContaining({ id: 'p5-q450' })
+        ]);
+        expect(TaskShellEngine.focusPlan(graphTask)).toEqual([
+            '[data-task-id="graph-point-evidence"][data-graph-evidence-point-id]',
+            '[data-task-id="graph-point-evidence"][data-graph-evidence-tray]'
+        ]);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...graphTask,
+            interaction: { ...graphTask.interaction, hitTargetPx: 32 }
+        })).toThrow(/hitTargetPx/);
+    });
+
+    test('stable session shuffle is deterministic and non-mutating', () => {
+        const items = [{ id: 'a' }, { id: 'b' }, { id: 'c' }, { id: 'd' }];
+        const once = TaskShellEngine.stableSessionShuffle(items, 'reasoning-game');
+        const twice = TaskShellEngine.stableSessionShuffle(items, 'reasoning-game');
+        expect(once).toEqual(twice);
+        expect(once.map((item) => item.id).sort()).toEqual(['a', 'b', 'c', 'd']);
+        expect(items.map((item) => item.id)).toEqual(['a', 'b', 'c', 'd']);
+    });
 });

@@ -925,6 +925,138 @@
     '</div>';
   }
 
+  function renderFunctionalAnswerBuilder(task) {
+    var rows = task.interaction.answerRows || [];
+    var rowHtml = rows.map(function (row) {
+      var options = (row.options || []).map(function (option) {
+        return '<button type="button" class="ts-answer-row-option" aria-pressed="false" ' +
+          'data-task-id="' + escapeHtml(task.id) + '" data-answer-row-id="' + escapeHtml(row.id) + '" ' +
+          'data-answer-option-id="' + escapeHtml(option.id) + '">' +
+          '<span class="ts-answer-row-option-label">' + escapeHtml(option.label) + '</span>' +
+          (option.description ? '<span class="ts-answer-row-option-description">' + escapeHtml(option.description) + '</span>' : '') +
+        '</button>';
+      }).join('');
+      return '<section class="ts-answer-row" data-answer-row="' + escapeHtml(row.id) + '">' +
+        '<div class="ts-answer-row-head">' +
+          '<strong>' + escapeHtml(row.label) + '</strong>' +
+          (row.prompt ? '<span>' + escapeHtml(row.prompt) + '</span>' : '') +
+        '</div>' +
+        '<div class="ts-answer-row-options" role="group" aria-label="' + escapeHtml(row.label) + '">' +
+          options +
+        '</div>' +
+        '<button type="button" class="ts-answer-row-clear" data-task-id="' + escapeHtml(task.id) + '" ' +
+          'data-answer-row-clear="' + escapeHtml(row.id) + '" hidden>Verwijder keuze</button>' +
+      '</section>';
+    }).join('');
+    var preview = task.interaction.answerPreview || {};
+    return '<div class="ts-functional-answer" data-functional-answer-task="' + escapeHtml(task.id) + '" ' +
+      'data-preview-template="' + escapeHtml(preview.template || '') + '" data-preview-placeholder="' + escapeHtml(preview.placeholder || 'Kies per regel een onderdeel.') + '">' +
+      '<div class="ts-answer-row-list" role="group" aria-label="' + escapeHtml(task.interaction.rowGroupLabel || 'Antwoorddelen') + '">' + rowHtml + '</div>' +
+      '<div class="ts-answer-preview-wrap">' +
+        '<strong>' + escapeHtml(preview.label || 'Opgebouwd antwoord') + '</strong>' +
+        '<p class="ts-answer-preview" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-answer-preview>' +
+          escapeHtml(preview.placeholder || 'Kies per regel een onderdeel.') +
+        '</p>' +
+      '</div>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
+  function graphPercent(value, axis, invert) {
+    if (!axis || typeof axis.min !== 'number' || typeof axis.max !== 'number' || axis.max === axis.min) return 0;
+    var percent = ((value - axis.min) / (axis.max - axis.min)) * 100;
+    percent = Math.max(0, Math.min(100, percent));
+    return invert ? 100 - percent : percent;
+  }
+
+  function graphEvidencePoints(task) {
+    var graph = task.interaction.graph || {};
+    var axes = graph.axes || {};
+    var points = [];
+    (graph.series || []).forEach(function (series) {
+      (series.points || []).forEach(function (point) {
+        points.push({
+          id: point.id,
+          x: point.x,
+          y: point.y,
+          label: point.label || (String(point.x) + ', ' + String(point.y)),
+          description: point.description || '',
+          pathPoint: point.pathPoint,
+          seriesLabel: series.label || '',
+          xPercent: graphPercent(point.x, axes.x, false),
+          yPercent: graphPercent(point.y, axes.y, true)
+        });
+      });
+    });
+    return points;
+  }
+
+  function renderGraphEvidenceSelector(task) {
+    var interaction = task.interaction || {};
+    var graph = interaction.graph || {};
+    var axes = graph.axes || {};
+    var points = graphEvidencePoints(task);
+    var hitTargetPx = interaction.hitTargetPx || 44;
+    var maxSelections = interaction.maxSelections || (task.expected && task.expected.pointIds ? task.expected.pointIds.length : 2);
+    var pathHtml = (graph.series || []).map(function (series) {
+      var pathPoints = (series.points || []).filter(function (point) {
+        return point.pathPoint !== false;
+      }).map(function (point) {
+        return graphPercent(point.x, axes.x, false).toFixed(3) + ',' + graphPercent(point.y, axes.y, true).toFixed(3);
+      }).join(' ');
+      if (!pathPoints) return '';
+      return '<polyline class="ts-graph-evidence-line" points="' + escapeHtml(pathPoints) + '"></polyline>';
+    }).join('');
+    var targetHtml = points.map(function (point) {
+      var className = 'ts-graph-evidence-point' + (point.pathPoint === false ? ' is-estimate' : ' is-observed');
+      return '<button type="button" class="' + className + '" aria-pressed="false" ' +
+        'style="left:' + point.xPercent.toFixed(3) + '%;top:' + point.yPercent.toFixed(3) + '%;width:' + hitTargetPx + 'px;height:' + hitTargetPx + 'px;" ' +
+        'data-task-id="' + escapeHtml(task.id) + '" data-graph-evidence-point-id="' + escapeHtml(point.id) + '" ' +
+        'data-graph-evidence-label="' + escapeHtml(point.label) + '" aria-label="' + escapeHtml(point.label + (point.description ? ': ' + point.description : '')) + '">' +
+        '<span aria-hidden="true"></span>' +
+      '</button>';
+    }).join('');
+    var tickHtml = '';
+    if (axes.x && Array.isArray(axes.x.ticks)) {
+      tickHtml += axes.x.ticks.map(function (tick) {
+        var percent = graphPercent(tick, axes.x, false);
+        var edgeClass = percent <= 0 ? ' is-min' : (percent >= 100 ? ' is-max' : '');
+        return '<span class="ts-graph-evidence-tick ts-graph-evidence-tick-x' + edgeClass + '" style="left:' + percent.toFixed(3) + '%">' + escapeHtml(tick) + '</span>';
+      }).join('');
+    }
+    if (axes.y && Array.isArray(axes.y.ticks)) {
+      tickHtml += axes.y.ticks.map(function (tick) {
+        var percent = graphPercent(tick, axes.y, true);
+        var edgeClass = percent <= 0 ? ' is-min' : (percent >= 100 ? ' is-max' : '');
+        return '<span class="ts-graph-evidence-tick ts-graph-evidence-tick-y' + edgeClass + '" style="top:' + percent.toFixed(3) + '%">' + escapeHtml(tick) + '</span>';
+      }).join('');
+    }
+    return '<div class="ts-graph-evidence" data-graph-evidence-task="' + escapeHtml(task.id) + '" ' +
+      'data-max-selections="' + escapeHtml(maxSelections) + '">' +
+      '<div class="ts-graph-evidence-head">' +
+        '<strong>' + escapeHtml(graph.title) + '</strong>' +
+        '<span>' + escapeHtml(graph.altText) + '</span>' +
+      '</div>' +
+      '<div class="ts-graph-evidence-workspace" role="group" aria-label="' + escapeHtml(graph.altText) + '">' +
+        '<div class="ts-graph-evidence-y-label">' + escapeHtml(axes.y && axes.y.label ? axes.y.label : 'y') + '</div>' +
+        '<div class="ts-graph-evidence-plot">' +
+          '<svg class="ts-graph-evidence-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">' +
+            '<line class="ts-graph-evidence-axis" x1="0" y1="100" x2="100" y2="100"></line>' +
+            '<line class="ts-graph-evidence-axis" x1="0" y1="0" x2="0" y2="100"></line>' +
+            pathHtml +
+          '</svg>' +
+          '<div class="ts-graph-evidence-ticks" aria-hidden="true">' + tickHtml + '</div>' +
+          '<div class="ts-graph-evidence-targets">' + targetHtml + '</div>' +
+        '</div>' +
+        '<div class="ts-graph-evidence-x-label">' + escapeHtml(axes.x && axes.x.label ? axes.x.label : 'x') + '</div>' +
+      '</div>' +
+      '<div class="ts-graph-evidence-tray" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-graph-evidence-tray aria-label="' + escapeHtml(interaction.trayLabel || 'Gekozen punten') + '">' +
+        '<span class="ts-graph-evidence-placeholder">' + escapeHtml(interaction.placeholder || 'Kies punten in de grafiek.') + '</span>' +
+      '</div>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -974,6 +1106,10 @@
         return renderSourceChainBuilder(task);
       case 'label_placement':
         return renderLabelPlacement(task);
+      case 'functional_answer_builder':
+        return renderFunctionalAnswerBuilder(task);
+      case 'graph_evidence_selector':
+        return renderGraphEvidenceSelector(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }
@@ -1020,6 +1156,8 @@
     var sourceValue = renderSourceValueFeedback(result && result.sourceValueFeedback);
     var sourceChain = renderSourceChainFeedback(result && result.sourceChainFeedback);
     var labelPlacement = renderLabelPlacementFeedback(result && result.labelPlacementFeedback);
+    var functionalAnswer = renderFunctionalAnswerFeedback(result && result.functionalAnswerFeedback);
+    var graphEvidence = renderGraphEvidenceFeedback(result && result.graphEvidenceFeedback);
     var matchingPairs = renderMatchingPairsFeedback(result && result.matchingPairsFeedback);
     var twoTier = renderTwoTierFeedback(result && result.twoTierFeedback);
     var assertionReason = renderAssertionReasonFeedback(result && result.assertionReasonFeedback);
@@ -1035,6 +1173,8 @@
       sourceValue +
       sourceChain +
       labelPlacement +
+      functionalAnswer +
+      graphEvidence +
       answerForm +
       criteria +
       (result && result.practiceRoute ? '<div class="ts-feedback-actions"><a class="ts-feedback-action" href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a></div>' : '') +
@@ -1160,6 +1300,38 @@
       renderSelectionList('Afleidend label gekozen', feedback.selectedDistractorLabels) +
       renderSelectionList('Afleidende plek gekozen', feedback.selectedDistractorTargets) +
       renderPlacementPairList('Al goed geplaatst', feedback.correctPlacements) +
+    '</div>';
+  }
+
+  function renderWrongAnswerRows(title, items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return '<div class="ts-selection-feedback-group">' +
+      '<strong>' + escapeHtml(title) + '</strong>' +
+      '<ul>' + items.map(function (item) {
+        var row = item.rowLabel || item.rowId || '';
+        var expected = item.expected && item.expected.label ? item.expected.label : '';
+        var actual = item.actual && item.actual.label ? item.actual.label : 'geen keuze';
+        return '<li>' + escapeHtml(row) + ': verwacht ' + escapeHtml(expected) + ', gekozen ' + escapeHtml(actual) + '</li>';
+      }).join('') + '</ul>' +
+    '</div>';
+  }
+
+  function renderFunctionalAnswerFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    return '<div class="ts-functional-answer-feedback" aria-label="Aanwijzingen bij je opgebouwde antwoord">' +
+      renderSelectionList('Regels nog nodig', feedback.missingRows) +
+      renderWrongAnswerRows('Regel controleren', feedback.wrongRows) +
+      renderSelectionList('Afleider gekozen', feedback.selectedDistractors) +
+      renderSelectionList('Al passend gekozen', feedback.correctRows) +
+    '</div>';
+  }
+
+  function renderGraphEvidenceFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    return '<div class="ts-graph-evidence-feedback" aria-label="Aanwijzingen bij je grafiekpunten">' +
+      renderSelectionList('Punten nog nodig', feedback.missingRequired) +
+      renderSelectionList('Afleidend punt gekozen', feedback.selectedDistractors) +
+      renderSelectionList('Al passend gekozen', feedback.correctSelected) +
     '</div>';
   }
 
@@ -1528,6 +1700,28 @@
     return { placements: placements };
   }
 
+  function collectFunctionalAnswerResponse(rootEl, task) {
+    if (!rootEl || !task) return { rows: {} };
+    var rows = {};
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-answer-row-id].selected');
+    for (var i = 0; i < controls.length; i++) {
+      var rowId = controls[i].getAttribute('data-answer-row-id') || '';
+      var optionId = controls[i].getAttribute('data-answer-option-id') || '';
+      if (rowId && optionId) rows[rowId] = optionId;
+    }
+    return { rows: rows };
+  }
+
+  function collectGraphEvidenceResponse(rootEl, task) {
+    if (!rootEl || !task) return { pointIds: [] };
+    var pointIds = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-graph-evidence-selected-point-id]');
+    for (var i = 0; i < controls.length; i++) {
+      pointIds.push(controls[i].getAttribute('data-graph-evidence-selected-point-id') || '');
+    }
+    return { pointIds: pointIds };
+  }
+
   function collectGraphConstructionResponse(rootEl, task) {
     if (!rootEl || !task) return { axes: { x: '', y: '' }, points: [], lineShape: '' };
     var construction = rootEl.querySelector('[data-graph-construction-task="' + cssEscape(task.id) + '"]');
@@ -1570,6 +1764,163 @@
     var ready = Boolean(xText && yText);
     construction.classList.toggle('ts-graph-guides-selected', ready);
     if (tickLayer) tickLayer.setAttribute('aria-hidden', ready ? 'false' : 'true');
+  }
+
+  function answerRowOptionText(option) {
+    var label = option.querySelector('.ts-answer-row-option-label');
+    return label ? label.textContent : option.textContent;
+  }
+
+  function updateFunctionalAnswerPreview(functional) {
+    var preview = functional.querySelector('[data-answer-preview]');
+    if (!preview) return;
+    var template = functional.getAttribute('data-preview-template') || '';
+    var placeholder = functional.getAttribute('data-preview-placeholder') || 'Kies per regel een onderdeel.';
+    var rows = functional.querySelectorAll('[data-answer-row]');
+    var ready = true;
+    var text = template;
+    for (var i = 0; i < rows.length; i += 1) {
+      var rowId = rows[i].getAttribute('data-answer-row') || '';
+      var selected = rows[i].querySelector('[data-answer-row-id].selected');
+      if (!selected) ready = false;
+      var label = selected ? answerRowOptionText(selected) : '';
+      text = text.replace(new RegExp('\\{\\{' + escapeRegExp(rowId) + '\\}\\}', 'g'), label || '...');
+    }
+    preview.textContent = ready && template ? text : placeholder;
+    preview.classList.toggle('is-complete', ready);
+  }
+
+  function setFunctionalAnswerOption(functional, option) {
+    var rowId = option.getAttribute('data-answer-row-id') || '';
+    var row = functional.querySelector('[data-answer-row="' + cssEscape(rowId) + '"]');
+    if (!row) return;
+    var controls = row.querySelectorAll('[data-answer-row-id]');
+    for (var i = 0; i < controls.length; i += 1) {
+      controls[i].classList.remove('selected');
+      controls[i].setAttribute('aria-pressed', 'false');
+    }
+    option.classList.add('selected');
+    option.setAttribute('aria-pressed', 'true');
+    var clear = row.querySelector('[data-answer-row-clear]');
+    if (clear) clear.hidden = false;
+    updateFunctionalAnswerPreview(functional);
+  }
+
+  function clearFunctionalAnswerRow(functional, rowId) {
+    var row = functional.querySelector('[data-answer-row="' + cssEscape(rowId) + '"]');
+    if (!row) return;
+    var controls = row.querySelectorAll('[data-answer-row-id]');
+    for (var i = 0; i < controls.length; i += 1) {
+      controls[i].classList.remove('selected');
+      controls[i].setAttribute('aria-pressed', 'false');
+    }
+    var clear = row.querySelector('[data-answer-row-clear]');
+    if (clear) clear.hidden = true;
+    updateFunctionalAnswerPreview(functional);
+  }
+
+  function selectedGraphEvidenceIds(graph) {
+    var selected = {};
+    var items = graph.querySelectorAll('[data-graph-evidence-selected-point-id]');
+    for (var i = 0; i < items.length; i += 1) {
+      selected[items[i].getAttribute('data-graph-evidence-selected-point-id') || ''] = true;
+    }
+    return selected;
+  }
+
+  function updateGraphEvidenceState(graph) {
+    var selected = selectedGraphEvidenceIds(graph);
+    var selectedCount = Object.keys(selected).filter(Boolean).length;
+    var maxSelections = Number(graph.getAttribute('data-max-selections') || 2);
+    var points = graph.querySelectorAll('[data-graph-evidence-point-id]');
+    for (var i = 0; i < points.length; i += 1) {
+      var pointId = points[i].getAttribute('data-graph-evidence-point-id') || '';
+      var isSelected = Boolean(selected[pointId]);
+      var disabled = !isSelected && selectedCount >= maxSelections;
+      points[i].classList.toggle('selected', isSelected);
+      points[i].setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+      points[i].disabled = disabled;
+      points[i].setAttribute('aria-disabled', disabled ? 'true' : 'false');
+    }
+    var placeholder = graph.querySelector('.ts-graph-evidence-placeholder');
+    if (placeholder) placeholder.hidden = selectedCount > 0;
+  }
+
+  function addGraphEvidencePoint(graph, point) {
+    var tray = graph.querySelector('[data-graph-evidence-tray]');
+    if (!tray) return;
+    var pointId = point.getAttribute('data-graph-evidence-point-id') || '';
+    if (!pointId || selectedGraphEvidenceIds(graph)[pointId]) return;
+    var label = point.getAttribute('data-graph-evidence-label') || pointId;
+    var item = document.createElement('span');
+    item.className = 'ts-graph-evidence-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('tabindex', '-1');
+    item.setAttribute('data-task-id', point.getAttribute('data-task-id') || '');
+    item.setAttribute('data-graph-evidence-selected-point-id', pointId);
+
+    var labelEl = document.createElement('span');
+    labelEl.className = 'ts-graph-evidence-item-label';
+    labelEl.textContent = label;
+
+    var remove = document.createElement('button');
+    remove.type = 'button';
+    remove.className = 'ts-graph-evidence-remove';
+    remove.setAttribute('data-graph-evidence-remove', pointId);
+    remove.setAttribute('aria-label', 'Verwijder punt ' + label);
+    remove.textContent = '\u00d7';
+
+    item.appendChild(labelEl);
+    item.appendChild(remove);
+    tray.appendChild(item);
+    updateGraphEvidenceState(graph);
+    focusElement(item);
+  }
+
+  function removeGraphEvidencePoint(graph, pointId) {
+    var item = graph.querySelector('[data-graph-evidence-selected-point-id="' + cssEscape(pointId) + '"]');
+    var tray = graph.querySelector('[data-graph-evidence-tray]');
+    if (item && item.parentNode) item.parentNode.removeChild(item);
+    updateGraphEvidenceState(graph);
+    focusElement(tray);
+  }
+
+  function handleFunctionalAnswerClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var functional = event.target.closest('.ts-functional-answer');
+    if (!functional || !rootEl.contains(functional)) return false;
+    var option = event.target.closest('.ts-answer-row-option');
+    var clear = event.target.closest('[data-answer-row-clear]');
+    if (option) {
+      setFunctionalAnswerOption(functional, option);
+      return true;
+    }
+    if (clear) {
+      clearFunctionalAnswerRow(functional, clear.getAttribute('data-answer-row-clear') || '');
+      return true;
+    }
+    return false;
+  }
+
+  function handleGraphEvidenceClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var graph = event.target.closest('.ts-graph-evidence');
+    if (!graph || !rootEl.contains(graph)) return false;
+    var remove = event.target.closest('[data-graph-evidence-remove]');
+    if (remove) {
+      removeGraphEvidencePoint(graph, remove.getAttribute('data-graph-evidence-remove') || '');
+      return true;
+    }
+    var point = event.target.closest('[data-graph-evidence-point-id]');
+    if (!point) return false;
+    var pointId = point.getAttribute('data-graph-evidence-point-id') || '';
+    if (selectedGraphEvidenceIds(graph)[pointId]) {
+      removeGraphEvidencePoint(graph, pointId);
+      return true;
+    }
+    if (point.disabled) return true;
+    addGraphEvidencePoint(graph, point);
+    return true;
   }
 
   function handleSourceValueSelectionClick(rootEl, event) {
@@ -2793,6 +3144,10 @@
     handleSourceChainBuilderClick: handleSourceChainBuilderClick,
     collectLabelPlacementResponse: collectLabelPlacementResponse,
     handleLabelPlacementClick: handleLabelPlacementClick,
+    collectFunctionalAnswerResponse: collectFunctionalAnswerResponse,
+    handleFunctionalAnswerClick: handleFunctionalAnswerClick,
+    collectGraphEvidenceResponse: collectGraphEvidenceResponse,
+    handleGraphEvidenceClick: handleGraphEvidenceClick,
     collectGraphConstructionResponse: collectGraphConstructionResponse,
     handleGraphConstructionClick: handleGraphConstructionClick,
     handleGraphConstructionChange: handleGraphConstructionChange,

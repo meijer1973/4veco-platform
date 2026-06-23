@@ -113,6 +113,30 @@
         "scale_gate_1",
         "target_equivalent_completion_language"
       ]
+    },
+    {
+      "id": "reasoning-game-golden-family-v1",
+      "type": "reasoning_game_family_exemplar_library",
+      "path": "references/exemplars/product-excellence/reasoning-games/",
+      "surface": "reasoning_game_golden_reference_library",
+      "title": "Four-exemplar Golden reasoning-game family",
+      "manifest": "references/exemplars/product-excellence/reasoning-games/manifest.json",
+      "use_for": [
+        "reasoning-game product grammar",
+        "archetype decision tree",
+        "shared task-family promotion",
+        "negative fixture validation",
+        "rendered fidelity review"
+      ],
+      "does_not_authorize": [
+        "student_product_adoption",
+        "route_migration",
+        "diagnostics",
+        "mastery_or_sequencing",
+        "summative_use",
+        "scale_gate_1",
+        "target_equivalent_completion_language"
+      ]
     }
   ],
   "transfer_candidates": [
