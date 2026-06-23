@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "status": "full_op_row_task_family_review_foundation_ready",
+  "authority_boundary": "review_only_no_mtu_mutation_no_operation_closure_no_product_use",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "references/owned/course-blueprint-v6-three-year.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-governed-mutation-plan.md",
+    "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-cross-book-consistency-review.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.json"
+  ],
+  "label_resolution": {
+    "source_value_selection": "select and cite values or source terms from an official source, table, figure, or context",
+    "table_value_selection": "select table rows, units, variables, and comparative changes before calculation or explanation",
+    "source_chain_builder": "compose a sourced causal or incentive chain where each link is traceable to a source element",
+    "calculation_work": "perform arithmetic, formula substitution, expected-value, percentage, or elasticity calculation with units",
+    "formula_derivation": "derive a usable expression such as total revenue or marginal revenue from a source formula",
+    "sentence_builder": "build a complete economic sentence that includes mechanism and consequence",
+    "constructed_response": "produce an open explanation whose correctness depends on a multi-link economic argument",
+    "assertion_reason": "pair a claim with a source-backed economic reason",
+    "matching_pairs": "map source concepts, strategies, actors, or conditions to their functions",
+    "step_ordering": "sequence a reasoning path so the answer form follows the official correction model"
+  },
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "declared_required_task_families": ["source_value_selection", "sentence_builder", "constructed_response"],
+      "complete_op_row_family_union": [
+        {
+          "op_row": "OP-T1",
+          "families": ["source_value_selection", "table_value_selection", "source_chain_builder", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-H1",
+          "families": ["source_chain_builder", "sentence_builder", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-ANS2",
+          "families": ["calculation_work", "table_value_selection", "constructed_response"],
+          "review_status": "answer_contract_required_before_production"
+        },
+        {
+          "op_row": "OP-ANS3",
+          "families": ["sentence_builder", "constructed_response"],
+          "review_status": "answer_contract_required_before_production"
+        }
+      ],
+      "provisional_label_resolution": [
+        "declared source_value_selection is expanded to include table_value_selection and source_chain_builder for OP-T1",
+        "declared sentence_builder/constructed_response remains compatible for OP-H1 and OP-ANS3"
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "OP-T1/OP-H1/OP-ANS2/OP-ANS3 are not production-closed for pension source reasoning.",
+        "blocks": "lesson production and shared task-shell reliance",
+        "does_not_block": "candidate-surface installation"
+      }
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "declared_required_task_families": ["calculation_work", "source_value_selection", "sentence_builder", "constructed_response"],
+      "complete_op_row_family_union": [
+        {
+          "op_row": "OP-P1",
+          "families": ["calculation_work", "table_value_selection", "source_value_selection"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-D1",
+          "families": ["calculation_work", "formula_derivation", "table_value_selection"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-C1",
+          "families": ["formula_derivation", "calculation_work", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-C2",
+          "families": ["formula_derivation", "calculation_work", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-F1",
+          "families": ["source_chain_builder", "sentence_builder", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-E1",
+          "families": ["source_value_selection", "table_value_selection", "source_chain_builder", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-ANS2",
+          "families": ["calculation_work", "formula_derivation", "constructed_response"],
+          "review_status": "answer_contract_required_before_production"
+        },
+        {
+          "op_row": "OP-ANS3",
+          "families": ["sentence_builder", "source_chain_builder", "constructed_response"],
+          "review_status": "answer_contract_required_before_production"
+        }
+      ],
+      "provisional_label_resolution": [
+        "declared calculation_work is expanded to formula_derivation for OP-C1/OP-C2",
+        "declared source_value_selection is expanded to table_value_selection for all table-driven subquestions",
+        "OP-D2 remains excluded because no individual-to-collective aggregation is present"
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "Housing finance, cost/revenue, elasticity, and rent-market source task shells need governed proof.",
+        "blocks": "lesson production and target-equivalent proof",
+        "does_not_block": "candidate-surface installation"
+      }
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "declared_required_task_families": ["calculation_work", "assertion_reason", "source_value_selection", "constructed_response"],
+      "complete_op_row_family_union": [
+        {
+          "op_row": "OP-R1",
+          "families": ["assertion_reason", "source_chain_builder", "source_value_selection", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-M1",
+          "families": ["matching_pairs", "source_value_selection", "sentence_builder"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-ANS2",
+          "families": ["calculation_work", "table_value_selection", "constructed_response"],
+          "review_status": "answer_contract_required_before_production"
+        },
+        {
+          "op_row": "OP-ANS3",
+          "families": ["sentence_builder", "source_chain_builder", "constructed_response"],
+          "review_status": "answer_contract_required_before_production"
+        }
+      ],
+      "provisional_label_resolution": [
+        "declared assertion_reason is expanded to source_chain_builder for information-problem explanations",
+        "declared calculation_work is bounded to expected-value and markup calculation inside OP-R1, not OP-F1"
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "Broad OP-R1 and OP-M1 task shells need governed proof before production closure.",
+        "blocks": "broad risk/information closure and lesson production",
+        "does_not_block": "candidate-surface installation"
+      }
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "declared_required_task_families": ["matching_pairs", "step_ordering", "sentence_builder", "constructed_response"],
+      "complete_op_row_family_union": [
+        {
+          "op_row": "OP-S1",
+          "families": ["matching_pairs", "step_ordering", "source_chain_builder", "constructed_response"],
+          "review_status": "compatible_foundation_only"
+        },
+        {
+          "op_row": "OP-ANS1",
+          "families": ["matching_pairs", "structured_choice", "source_value_selection"],
+          "review_status": "answer_contract_required_before_production"
+        },
+        {
+          "op_row": "OP-ANS3",
+          "families": ["sentence_builder", "source_chain_builder", "constructed_response"],
+          "review_status": "answer_contract_required_before_production"
+        }
+      ],
+      "provisional_label_resolution": [
+        "declared matching_pairs/step_ordering supports dominant-strategy orientation but not product closure",
+        "declared sentence_builder/constructed_response is expanded to source_chain_builder for self-binding explanation"
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "Strategic two-link answer skills and OP-S1/OP-ANS3 proof are not production-closed.",
+        "blocks": "broad OP-S1 closure and lesson production",
+        "does_not_block": "candidate-surface installation"
+      }
+    }
+  ],
+  "global_findings": [
+    {
+      "id": "Y2TRTF-MTU-001",
+      "classification": "core_requirement_met",
+      "finding": "Every OP row in the installed candidate records has a complete task-family union review.",
+      "blocks": "nothing for candidate-surface installation",
+      "does_not_block": "later governed MTU companion planning",
+      "proof_required_to_close": "none for this implementation step"
+    },
+    {
+      "id": "Y2TRTF-MTU-002",
+      "classification": "scale_blocker",
+      "finding": "Protected MTU/task-family mutations remain companion-plan work and are not executed here.",
+      "blocks": "lesson production, shared task shell reliance, and broad OP closure",
+      "does_not_block": "candidate-surface installation",
+      "proof_required_to_close": "future governed MTU/task-family PR with exact operation-specific proof"
+    }
+  ]
+}
