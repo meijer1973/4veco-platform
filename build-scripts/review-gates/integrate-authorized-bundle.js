@@ -233,10 +233,11 @@ function defaultDeps(options = {}) {
     fetchMainSha,
     fetchPr,
     validatePrState,
-    recomputeCompatibility: () => {
+    recomputeCompatibility: (record, exactMembers = {}) => {
       if (!options.compatibilityProofPath) throw new Error('--compatibility-proof is required');
       return validateCompatibilityProof(readJson(options.compatibilityProofPath), {
-        bundleId: options.bundleId || undefined,
+        bundleId: options.bundleId || (record && record.bundle_id) || undefined,
+        exactMembers,
       });
     },
     mergePr,

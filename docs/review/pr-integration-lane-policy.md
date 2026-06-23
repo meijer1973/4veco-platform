@@ -115,6 +115,11 @@ CI, validators, governance, and integration tooling. The lesson repository is a
 generated-output member. A controller PR with a paired lesson PR must carry one
 `bundle_id`, exact paired PR metadata, exact payload SHAs, and compatibility
 proof from `.github/workflows/cross-repo-bundle-compatibility.yml`.
+The controller proof must bind that compatibility output to expected
+`exact_members`: live platform base, platform candidate, lesson base, and
+lesson candidate SHAs. A delegated lesson member consumes the controller proof
+and records its own `current_member` repository, PR number, current head SHA,
+and reviewed payload SHA.
 
 The compatibility workflow checks three exact-ref states and emits
 machine-readable JSON:

@@ -126,6 +126,12 @@ metadata, exact platform and lesson PR numbers, exact payload SHAs, both PRs
 open and mergeable, complete `paired_prs` metadata, and a green bundle
 compatibility proof.
 
+The readiness proof must also carry expected `exact_members` values for the
+live platform base, platform candidate, lesson base, and lesson candidate. A
+delegated lesson member must record its own `current_member` repository, PR
+number, current head SHA, and reviewed payload SHA in addition to the platform
+controller and paired PR metadata.
+
 The compatibility proof must come from the platform controller and must record:
 
 - platform base SHA;

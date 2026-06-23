@@ -62,20 +62,26 @@ function withBranchProtection(fixture, branchProtection) {
   };
 }
 
-function bundleCompatibility() {
-  const pBase = '1'.repeat(40);
-  const pHead = '2'.repeat(40);
-  const lBase = '3'.repeat(40);
-  const lHead = '4'.repeat(40);
+function bundleExactMembers(overrides = {}) {
+  return {
+    platform_base_sha: overrides.platform_base_sha || overrides.platformBaseSha || '1'.repeat(40),
+    platform_candidate_sha: overrides.platform_candidate_sha || overrides.platformCandidateSha || '2'.repeat(40),
+    lesson_base_sha: overrides.lesson_base_sha || overrides.lessonBaseSha || '3'.repeat(40),
+    lesson_candidate_sha: overrides.lesson_candidate_sha || overrides.lessonCandidateSha || '4'.repeat(40),
+  };
+}
+
+function bundleCompatibility(overrides = {}) {
+  const exact = bundleExactMembers(overrides);
   const state = (name, status) => stateResult({
     bundleId: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
     state: name,
-    platformBaseSha: pBase,
-    platformCandidateSha: pHead,
-    lessonBaseSha: lBase,
-    lessonCandidateSha: lHead,
-    platformStateSha: name === 'lesson-first' ? pBase : pHead,
-    lessonStateSha: name === 'platform-first' ? lBase : lHead,
+    platformBaseSha: exact.platform_base_sha,
+    platformCandidateSha: exact.platform_candidate_sha,
+    lessonBaseSha: exact.lesson_base_sha,
+    lessonCandidateSha: exact.lesson_candidate_sha,
+    platformStateSha: name === 'lesson-first' ? exact.platform_base_sha : exact.platform_candidate_sha,
+    lessonStateSha: name === 'platform-first' ? exact.lesson_base_sha : exact.lesson_candidate_sha,
     status,
   });
   return summarizeCompatibility({
@@ -233,6 +239,11 @@ describe('pr-readiness-router', () => {
 
   test('cross-repo bundle controller routes to human review with green matrix proof', () => {
     const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+      lesson_candidate_sha: lessonHead,
+    });
     const decision = classifyPrReadiness({
       ...fixture,
       pr_throughput_class: 'cross_repo_bundle',
@@ -249,6 +260,7 @@ describe('pr-readiness-router', () => {
             pr_number: fixture.reviewed_pr.number,
             reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
           },
+          exact_members: exactMembers,
           paired_prs: [
             {
               repo: 'meijer1973/4veco-lessen',
@@ -256,11 +268,11 @@ describe('pr-readiness-router', () => {
               open: true,
               mergeable: true,
               is_draft: false,
-              head_sha: '4'.repeat(40),
-              reviewed_payload_head_sha: '4'.repeat(40),
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
             },
           ],
-          compatibility: bundleCompatibility(),
+          compatibility: bundleCompatibility(exactMembers),
         },
       },
     });
@@ -269,8 +281,93 @@ describe('pr-readiness-router', () => {
     expect(decision.proof.bundle.compatibility.recommended_merge_order).toBe('lesson-first');
   });
 
+  test('cross-repo bundle controller rejects incomplete paired metadata', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: exactMembers,
+          paired_prs: [{}],
+          compatibility: bundleCompatibility(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('paired_pr_metadata_incomplete');
+  });
+
+  test('cross-repo bundle controller rejects stale exact-member compatibility proof', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+      lesson_candidate_sha: lessonHead,
+    });
+    const staleCompatibility = bundleCompatibility({
+      ...exactMembers,
+      platform_candidate_sha: '2'.repeat(40),
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: exactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              open: true,
+              mergeable: true,
+              is_draft: false,
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
+            },
+          ],
+          compatibility: staleCompatibility,
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain(`platform_candidate_sha mismatch: expected ${fixture.reviewed_pr.head_sha}`);
+  });
+
   test('lesson bundle member can consume delegated controller proof without lesson branch protection', () => {
     const head = '4'.repeat(40);
+    const platformHead = '2'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: platformHead,
+      lesson_candidate_sha: head,
+    });
     const decision = classifyPrReadiness({
       reviewed_pr: {
         repo: 'meijer1973/4veco-lessen',
@@ -310,8 +407,15 @@ describe('pr-readiness-router', () => {
           controller: {
             repository: 'meijer1973/4veco-platform',
             pr_number: 140,
-            reviewed_payload_head_sha: '2'.repeat(40),
+            reviewed_payload_head_sha: platformHead,
           },
+          current_member: {
+            repository: 'meijer1973/4veco-lessen',
+            pr_number: 34,
+            head_sha: head,
+            reviewed_payload_head_sha: head,
+          },
+          exact_members: exactMembers,
           paired_prs: [
             {
               repo: 'meijer1973/4veco-platform',
@@ -319,17 +423,82 @@ describe('pr-readiness-router', () => {
               open: true,
               mergeable: true,
               is_draft: false,
-              head_sha: '2'.repeat(40),
-              reviewed_payload_head_sha: '2'.repeat(40),
+              head_sha: platformHead,
+              reviewed_payload_head_sha: platformHead,
             },
           ],
-          compatibility: bundleCompatibility(),
+          compatibility: bundleCompatibility(exactMembers),
         },
       },
     });
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.proof.bundle.delegated).toBe(true);
+  });
+
+  test('delegated lesson bundle proof rejects incomplete paired metadata', () => {
+    const head = '4'.repeat(40);
+    const platformHead = '2'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: platformHead,
+      lesson_candidate_sha: head,
+    });
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-lessen',
+        number: 34,
+        url: 'https://github.com/meijer1973/4veco-lessen/pull/34',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: head,
+      },
+      changed_paths: ['Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Grafieken/1.1.3 Grafieken en tabellen/index.html'],
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        class: 'cross_repo_bundle',
+        authority_class: 'generated_output',
+        level: 'L4',
+        human_decision_required: true,
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      proof: {
+        ci: {},
+        checkers: [{ command: 'delegated bundle controller proof', status: 'passed' }],
+        lead_review: {
+          path: 'subagent:paired-bundle-review',
+          result: 'PASS',
+          reviewed_commit_sha: head,
+        },
+        changed_paths_verified: true,
+        branch_protection: {
+          ok: false,
+          approval_count_observable: false,
+        },
+        bundle: {
+          delegated: true,
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: 'meijer1973/4veco-platform',
+            pr_number: 140,
+            reviewed_payload_head_sha: platformHead,
+          },
+          current_member: {
+            repository: 'meijer1973/4veco-lessen',
+            pr_number: 34,
+            head_sha: head,
+            reviewed_payload_head_sha: head,
+          },
+          exact_members: exactMembers,
+          paired_prs: [{}],
+          compatibility: bundleCompatibility(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('paired_pr_metadata_incomplete');
   });
 
   test('supplemental evidence cannot replace remote-derived PR facts', () => {

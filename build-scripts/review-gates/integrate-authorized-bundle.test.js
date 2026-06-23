@@ -1,3 +1,6 @@
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
 const { integrateBundle, PLATFORM_REPO, LESSON_REPO } = require('./integrate-authorized-bundle');
 
 const platformBase = '1'.repeat(40);
@@ -222,6 +225,30 @@ describe('authorized cross-repo bundle integration', () => {
     const result = integrateBundle({ ...options, deps });
 
     expect(result).toMatchObject({ ok: false, phase: 'compatibility' });
+    expect(calls.merges).toEqual([]);
+  });
+
+  test('default compatibility loader rejects stale exact member proof', () => {
+    const staleProof = compatibility('lesson-first');
+    staleProof.exact_members = {
+      ...staleProof.exact_members,
+      lesson_candidate_sha: '7'.repeat(40),
+    };
+    const fixtureDir = fs.mkdtempSync(path.join(os.tmpdir(), 'bundle-proof-'));
+    const proofPath = path.join(fixtureDir, 'compatibility.json');
+    fs.writeFileSync(proofPath, `${JSON.stringify(staleProof, null, 2)}\n`);
+    const { calls, options, deps } = harness();
+    const { recomputeCompatibility, ...depsWithoutRecompute } = deps;
+    const result = integrateBundle({
+      ...options,
+      noMerge: true,
+      compatibilityProofPath: proofPath,
+      deps: depsWithoutRecompute,
+    });
+
+    expect(recomputeCompatibility).not.toHaveBeenCalled();
+    expect(result).toMatchObject({ ok: false, phase: 'compatibility' });
+    expect(result.compatibility.failures).toContain(`lesson_candidate_sha mismatch: expected ${lessonHead}`);
     expect(calls.merges).toEqual([]);
   });
 

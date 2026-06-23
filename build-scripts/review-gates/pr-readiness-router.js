@@ -325,9 +325,74 @@ function repoIsLesson(repo) {
   return /\/4veco-lessen$/i.test(String(repo || ''));
 }
 
+function repoIsPlatform(repo) {
+  return /\/4veco-platform$/i.test(String(repo || ''));
+}
+
+function positiveInteger(value) {
+  const number = Number(value);
+  return Number.isInteger(number) && number > 0 ? number : null;
+}
+
+function normalizeBundleMember(member) {
+  const item = member || {};
+  return {
+    ...item,
+    repository: item.repository || item.repo || null,
+    pr_number: positiveInteger(item.pr_number || item.number),
+    head_sha: item.head_sha || item.headRefOid || null,
+    reviewed_payload_head_sha: item.reviewed_payload_head_sha || item.payload_head_sha || null,
+  };
+}
+
+function bundleMemberComplete(member, options = {}) {
+  const requireHead = options.requireHead !== false;
+  return Boolean(
+    member.repository &&
+      member.pr_number &&
+      SHA_PATTERN.test(String(member.reviewed_payload_head_sha || '')) &&
+      (!requireHead || SHA_PATTERN.test(String(member.head_sha || '')))
+  );
+}
+
+function findBundleMemberByRepo(members, predicate) {
+  return members.find((member) => member && predicate(member.repository)) || null;
+}
+
+function bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs) {
+  const explicit = raw.exact_members || raw.exactMembers || {};
+  const allMembers = [controller, currentMember, ...pairedPrs].filter(Boolean);
+  const platformMember = findBundleMemberByRepo(allMembers, repoIsPlatform);
+  const lessonMember = findBundleMemberByRepo(allMembers, repoIsLesson);
+  return {
+    platform_base_sha: explicit.platform_base_sha || explicit.platformBaseSha || raw.platform_base_sha || raw.platformBaseSha || null,
+    platform_candidate_sha:
+      explicit.platform_candidate_sha ||
+      explicit.platformCandidateSha ||
+      raw.platform_candidate_sha ||
+      raw.platformCandidateSha ||
+      (platformMember && platformMember.reviewed_payload_head_sha) ||
+      null,
+    lesson_base_sha: explicit.lesson_base_sha || explicit.lessonBaseSha || raw.lesson_base_sha || raw.lessonBaseSha || null,
+    lesson_candidate_sha:
+      explicit.lesson_candidate_sha ||
+      explicit.lessonCandidateSha ||
+      raw.lesson_candidate_sha ||
+      raw.lessonCandidateSha ||
+      (lessonMember && lessonMember.reviewed_payload_head_sha) ||
+      null,
+  };
+}
+
+function collectExactMemberFailures(exactMembers) {
+  return Object.entries(exactMembers)
+    .filter(([, value]) => !SHA_PATTERN.test(String(value || '')))
+    .map(([key]) => `${key}_missing_or_invalid`);
+}
+
 function bundleSafetyProof(proof, evidence) {
   const raw = (proof && proof.bundle) || evidence.bundle || {};
-  const pairedPrs = asArray(raw.paired_prs || (evidence.bundle && evidence.bundle.paired_prs));
+  const pairedPrs = asArray(raw.paired_prs || (evidence.bundle && evidence.bundle.paired_prs)).map(normalizeBundleMember);
   const bundleId = raw.bundle_id || evidence.bundle_id || (evidence.bundle && evidence.bundle.bundle_id) || null;
   const required =
     evidence.throughput.class === 'cross_repo_bundle' ||
@@ -340,7 +405,10 @@ function bundleSafetyProof(proof, evidence) {
     return { required: false, delegated: false, ok: true, failures: [], summary: null };
   }
   if (typeof bundleId !== 'string' || !bundleId.trim()) failures.push('bundle_id_missing');
-  const controller = raw.controller || {};
+  const controller = normalizeBundleMember(raw.controller || {});
+  if (!bundleMemberComplete(controller, { requireHead: false })) {
+    failures.push('bundle_controller_metadata_incomplete');
+  }
   if (!delegated) {
     if (controller.repository && controller.repository !== evidence.reviewed_pr.repo) {
       failures.push('bundle_controller_repo_mismatch');
@@ -348,13 +416,27 @@ function bundleSafetyProof(proof, evidence) {
     if (controller.pr_number && Number(controller.pr_number) !== Number(evidence.reviewed_pr.number)) {
       failures.push('bundle_controller_pr_mismatch');
     }
-    const controllerHead = controller.reviewed_payload_head_sha || controller.head_sha;
-    if (controllerHead && controllerHead !== evidence.reviewed_pr.head_sha) {
+    if (controller.reviewed_payload_head_sha && controller.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha) {
       failures.push('bundle_controller_head_mismatch');
+    }
+  } else {
+    const currentMember = normalizeBundleMember(raw.current_member || raw.current_pr || raw.member || {});
+    if (!bundleMemberComplete(currentMember)) {
+      failures.push('bundle_member_metadata_incomplete');
+    } else {
+      if (currentMember.repository !== evidence.reviewed_pr.repo) failures.push('bundle_member_repo_mismatch');
+      if (Number(currentMember.pr_number) !== Number(evidence.reviewed_pr.number)) failures.push('bundle_member_pr_mismatch');
+      if (
+        currentMember.head_sha !== evidence.reviewed_pr.head_sha ||
+        currentMember.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha
+      ) {
+        failures.push('bundle_member_head_mismatch');
+      }
     }
   }
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
   for (const paired of pairedPrs) {
+    if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
     if (paired && paired.is_draft === true) failures.push('paired_pr_draft');
     if (paired && (paired.ready === false || paired.current === false || paired.open === false || paired.mergeable === false)) {
       failures.push('paired_pr_not_ready');
@@ -364,9 +446,16 @@ function bundleSafetyProof(proof, evidence) {
     }
   }
   if (raw.complete === false) failures.push('bundle_incomplete');
+  const currentMember = delegated ? normalizeBundleMember(raw.current_member || raw.current_pr || raw.member || {}) : null;
+  const exactMembers = bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs);
+  const exactMemberFailures = collectExactMemberFailures(exactMembers);
+  failures.push(...exactMemberFailures);
   const compatibilityRaw = raw.compatibility || raw.compatibility_matrix || raw.bundle_compatibility || proof.bundle_compatibility;
   const compatibility = compatibilityRaw
-    ? validateCompatibilityProof(compatibilityRaw, { bundleId: bundleId || undefined })
+    ? validateCompatibilityProof(compatibilityRaw, {
+        bundleId: bundleId || undefined,
+        exactMembers,
+      })
     : { ok: false, failures: ['bundle_compatibility_missing'] };
   if (!compatibility.ok) failures.push(...compatibility.failures);
   const summary = {
@@ -374,8 +463,9 @@ function bundleSafetyProof(proof, evidence) {
     delegated,
     ok: failures.length === 0,
     bundle_id: bundleId,
-    controller: raw.controller || null,
+    controller: controller.repository ? controller : null,
     paired_prs: pairedPrs,
+    exact_members: exactMembers,
     compatibility,
     failures: uniqueStrings(failures),
   };
