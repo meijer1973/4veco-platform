@@ -21,9 +21,14 @@ const { collectReviewThreadState, mergeSupplementalEvidence, runReview } = requi
 const { GOVERNANCE_SURFACE_TEST_PATHS } = require('./pr-readiness-governance-surfaces');
 
 const FIXTURE_DIR = path.join(process.cwd(), 'reports', 'fixtures', 'pr-readiness-router');
+const DECISION_SCHEMA_PATH = path.join(process.cwd(), 'docs', 'review', 'pr-readiness-decision.schema.json');
 
 function readFixture(name) {
   return JSON.parse(fs.readFileSync(path.join(FIXTURE_DIR, name), 'utf8'));
+}
+
+function readDecisionSchema() {
+  return JSON.parse(fs.readFileSync(DECISION_SCHEMA_PATH, 'utf8'));
 }
 
 function explicitProof(sha) {
@@ -330,6 +335,76 @@ describe('pr-readiness-router', () => {
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.reason_codes).not.toContain('required_ci_context_missing_or_not_successful');
     expect(decision.proof.bundle_delegated_ci).toBe(true);
+  });
+
+  test('decision schema permits delegated lesson-first controller CI proof', () => {
+    const schema = readDecisionSchema();
+    expect(schema.properties.proof.properties.bundle_delegated_ci).toEqual({ type: 'boolean' });
+    const readyRule = schema.allOf.find((rule) =>
+      rule.if &&
+      rule.if.properties &&
+      rule.if.properties.route &&
+      rule.if.properties.route.enum &&
+      rule.if.properties.route.enum.includes('READY_FOR_HUMAN_REVIEW')
+    );
+    const readyRuleJson = JSON.stringify(readyRule);
+    expect(readyRule.then.properties).toBeUndefined();
+    expect(readyRuleJson).toContain('"bundle_delegated_ci"');
+    expect(readyRuleJson).toContain('"lesson-first"');
+    expect(readyRuleJson).toContain('"meijer1973/4veco-lessen"');
+
+    const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+      lesson_candidate_sha: lessonHead,
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        ci: {
+          head_sha: fixture.reviewed_pr.head_sha,
+          conclusion: 'failure',
+          required_contexts: ['validate-platform'],
+          checks: [{ name: 'validate-platform', conclusion: 'FAILURE' }],
+        },
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: exactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              open: true,
+              mergeable: true,
+              is_draft: false,
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
+            },
+          ],
+          compatibility: bundleCompatibility(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.proof.ci_status).toBe('failure');
+    expect(decision.proof.bundle_delegated_ci).toBe(true);
+    expect(parseRenderedDecisionMarkdown(renderDecisionMarkdown(decision)).decision).toMatchObject({
+      route: 'READY_FOR_HUMAN_REVIEW',
+      proof: { bundle_delegated_ci: true },
+    });
   });
 
   test('cross-repo bundle controller rejects incomplete paired metadata', () => {

@@ -265,6 +265,9 @@
           "type": "object",
           "additionalProperties": true
         },
+        "bundle_delegated_ci": {
+          "type": "boolean"
+        },
         "bundle": {
           "type": [
             "object",
@@ -359,75 +362,197 @@
         }
       },
       "then": {
-        "properties": {
-          "proof": {
+        "allOf": [
+          {
             "properties": {
-              "ci_status": {
-                "type": "string",
-                "enum": [
-                  "success",
-                  "SUCCESS",
-                  "succeeded",
-                  "SUCCEEDED",
-                  "passed",
-                  "PASSED",
-                  "pass",
-                  "PASS",
-                  "ok",
-                  "OK"
-                ]
-              },
-              "ci_checks": {
-                "minItems": 1,
-                "contains": {
-                  "type": "object",
-                  "required": [
-                    "name",
-                    "conclusion"
-                  ],
-                  "properties": {
-                    "name": {
-                      "const": "validate-platform"
-                    },
-                    "conclusion": {
-                      "type": "string",
-                      "enum": [
-                        "success",
-                        "SUCCESS",
-                        "succeeded",
-                        "SUCCEEDED",
-                        "passed",
-                        "PASSED",
-                        "pass",
-                        "PASS",
-                        "ok",
-                        "OK"
-                      ]
+              "proof": {
+                "properties": {
+                  "checkers": {
+                    "minItems": 1
+                  },
+                  "lead_review_path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "lead_review_result": {
+                    "type": "string",
+                    "enum": [
+                      "PASS",
+                      "PASS WITH FLAGS"
+                    ]
+                  },
+                  "lead_reviewed_sha": {
+                    "type": "string",
+                    "pattern": "^[A-Fa-f0-9]{40}$"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "anyOf": [
+              {
+                "properties": {
+                  "proof": {
+                    "properties": {
+                      "ci_status": {
+                        "type": "string",
+                        "enum": [
+                          "success",
+                          "SUCCESS",
+                          "succeeded",
+                          "SUCCEEDED",
+                          "passed",
+                          "PASSED",
+                          "pass",
+                          "PASS",
+                          "ok",
+                          "OK"
+                        ]
+                      },
+                      "ci_checks": {
+                        "minItems": 1,
+                        "contains": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "conclusion"
+                          ],
+                          "properties": {
+                            "name": {
+                              "const": "validate-platform"
+                            },
+                            "conclusion": {
+                              "type": "string",
+                              "enum": [
+                                "success",
+                                "SUCCESS",
+                                "succeeded",
+                                "SUCCEEDED",
+                                "passed",
+                                "PASSED",
+                                "pass",
+                                "PASS",
+                                "ok",
+                                "OK"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               },
-              "checkers": {
-                "minItems": 1
+              {
+                "properties": {
+                  "reviewed_pr": {
+                    "properties": {
+                      "repo": {
+                        "const": "meijer1973/4veco-platform"
+                      }
+                    }
+                  },
+                  "throughput": {
+                    "properties": {
+                      "class": {
+                        "const": "cross_repo_bundle"
+                      }
+                    }
+                  },
+                  "proof": {
+                    "required": [
+                      "bundle_delegated_ci",
+                      "bundle"
+                    ],
+                    "properties": {
+                      "bundle_delegated_ci": {
+                        "const": true
+                      },
+                      "bundle": {
+                        "type": "object",
+                        "required": [
+                          "ok",
+                          "compatibility"
+                        ],
+                        "properties": {
+                          "ok": {
+                            "const": true
+                          },
+                          "compatibility": {
+                            "type": "object",
+                            "required": [
+                              "ok",
+                              "recommended_merge_order",
+                              "permitted_merge_orders"
+                            ],
+                            "properties": {
+                              "ok": {
+                                "const": true
+                              },
+                              "recommended_merge_order": {
+                                "const": "lesson-first"
+                              },
+                              "permitted_merge_orders": {
+                                "type": "array",
+                                "contains": {
+                                  "const": "lesson-first"
+                                }
+                              }
+                            },
+                            "additionalProperties": true
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    }
+                  }
+                }
               },
-              "lead_review_path": {
-                "type": "string",
-                "minLength": 1
-              },
-              "lead_review_result": {
-                "type": "string",
-                "enum": [
-                  "PASS",
-                  "PASS WITH FLAGS"
-                ]
-              },
-              "lead_reviewed_sha": {
-                "type": "string",
-                "pattern": "^[A-Fa-f0-9]{40}$"
+              {
+                "properties": {
+                  "reviewed_pr": {
+                    "properties": {
+                      "repo": {
+                        "const": "meijer1973/4veco-lessen"
+                      }
+                    }
+                  },
+                  "throughput": {
+                    "properties": {
+                      "class": {
+                        "const": "cross_repo_bundle"
+                      }
+                    }
+                  },
+                  "proof": {
+                    "required": [
+                      "bundle"
+                    ],
+                    "properties": {
+                      "bundle": {
+                        "type": "object",
+                        "required": [
+                          "ok",
+                          "delegated"
+                        ],
+                        "properties": {
+                          "ok": {
+                            "const": true
+                          },
+                          "delegated": {
+                            "const": true
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    }
+                  }
+                }
               }
-            }
+            ]
           }
-        }
+        ]
       }
     },
     {
