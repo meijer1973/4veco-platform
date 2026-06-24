@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-23T20:02:27.062Z
+Generated: 2026-06-24T11:36:17.707Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/cross-repo-bundle-safety-1-20260623`
-Source commit: `3495075d7987305439c65b7d30defbac3e9afa47`
-Files indexed: 6054
+Source branch: `codex/mtu-h6-closure-h7-blind-holdout-20260624`
+Source commit: `93038f7d0c5939e43551e3f4ca6fadd8343531a1`
+Files indexed: 6074
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 567
+Count: 577
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -294,6 +294,7 @@ Count: 567
 - build-scripts/references/build-mtu-h2i-a20-cli-execution-packet.js
 - build-scripts/references/build-mtu-h4b-answer-form-cli-execution-packet.js
 - build-scripts/references/build-mtu-h5-regression-report.js
+- build-scripts/references/build-mtu-h6-closure-h7-benchmark-1.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -383,6 +384,8 @@ Count: 567
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js
 - build-scripts/references/check-mtu-h5-sample-selection-packet.js
+- build-scripts/references/check-mtu-h6-closure-h7-benchmark-1.js
+- build-scripts/references/check-mtu-h6-closure-h7-benchmark-1.test.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.test.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
@@ -523,15 +526,22 @@ Count: 567
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-human-bundle-authorization.js
+- build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js
 - build-scripts/review-gates/check-human-payload-authorization.test.js
 - build-scripts/review-gates/check-integration-lineage.js
 - build-scripts/review-gates/check-integration-lineage.test.js
 - build-scripts/review-gates/check-r2-4-packet.js
+- build-scripts/review-gates/cross-repo-bundle-compatibility.js
+- build-scripts/review-gates/cross-repo-bundle-compatibility.test.js
+- build-scripts/review-gates/cross-repo-bundle-workflow.test.js
 - build-scripts/review-gates/emit-gate-reason-revision1-playable-lab.js
 - build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
+- build-scripts/review-gates/integrate-authorized-bundle.js
+- build-scripts/review-gates/integrate-authorized-bundle.test.js
 - build-scripts/review-gates/integrate-authorized-pr.js
 - build-scripts/review-gates/integrate-authorized-pr.test.js
 - build-scripts/review-gates/pr-readiness-governance-surfaces.js
@@ -760,7 +770,7 @@ Count: 46
 
 ## validators
 
-Count: 560
+Count: 564
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -888,6 +898,8 @@ Count: 560
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js
 - build-scripts/references/check-mtu-h5-sample-selection-packet.js
+- build-scripts/references/check-mtu-h6-closure-h7-benchmark-1.js
+- build-scripts/references/check-mtu-h6-closure-h7-benchmark-1.test.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.test.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
@@ -961,6 +973,8 @@ Count: 560
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-human-bundle-authorization.js
+- build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js
 - build-scripts/review-gates/check-human-payload-authorization.test.js
 - build-scripts/review-gates/check-integration-lineage.js
@@ -2066,7 +2080,7 @@ Count: 736
 
 ## reports
 
-Count: 3930
+Count: 3938
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2428,6 +2442,10 @@ Count: 3930
 - reports/mtu-hardening/mtu-h6-cross-exam-generalization-fixture.json
 - reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.json
 - reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.md
+- reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.json
+- reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.md
+- reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json
+- reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
@@ -3399,6 +3417,8 @@ Count: 3930
 - reports/review-gates/GATE-MTU-H5-RP005-q27-planning-packet/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H6-closure-H7-blind-holdout-benchmark-1/review-packet.json
+- reports/review-gates/GATE-MTU-H6-closure-H7-blind-holdout-benchmark-1/review-packet.md
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.md
@@ -4289,6 +4309,8 @@ Count: 3930
 - reports/sprints/CP.6f-planning-review.md
 - reports/sprints/CP.6f-result.md
 - reports/sprints/CP.6f-validation-log.md
+- reports/sprints/CROSS-REPO-BUNDLE-SAFETY-1-lead-review-round3.md
+- reports/sprints/CROSS-REPO-BUNDLE-SAFETY-1-lead-review-round5.md
 - reports/sprints/ENGINE-OP-1-baseline.md
 - reports/sprints/ENGINE-OP-1-diff-summary.md
 - reports/sprints/ENGINE-OP-1-lead-review-assignment.md
@@ -6019,11 +6041,13 @@ _No files indexed in this group._
 
 ## other
 
-Count: 625
+Count: 627
 
 - .gitattributes
 - .github/ci-python-requirements.txt
+- .github/workflows/authorized-bundle-integration.yml
 - .github/workflows/authorized-pr-integration.yml
+- .github/workflows/cross-repo-bundle-compatibility.yml
 - .github/workflows/platform-ci.yml
 - .gitignore
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-closure-log.md
