@@ -124,10 +124,12 @@
             {"contracts": 80, "average_turnover_eur": 250000, "payment_term_days": 60, "default_probability_percent": 0.2}
           ],
           "calculation_trace": {
-            "indemnity_rate": 0.9,
-            "expected_damage_eur": 72000,
+            "premium_base": "contract count x average turnover x default probability",
+            "indemnity_rate_condition": 0.9,
+            "expected_damage_eur": 80000,
             "markup_rate": 0.2,
-            "total_premium_eur": 86400
+            "total_premium_eur": 96000,
+            "indemnity_rate_note": "The 90% indemnity is an insurance condition for incentive analysis; the official q15 premium calculation does not multiply the expected-damage base by 90%."
           }
         }
       ],

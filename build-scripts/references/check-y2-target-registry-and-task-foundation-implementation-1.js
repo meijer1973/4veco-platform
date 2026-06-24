@@ -67,7 +67,7 @@ const EXPECTED = [
     forbiddenOps: ['OP-F1'],
     official: 'vw-1022-a-23-1-o:q12-q15',
     subquestions: 5,
-    sourceNeedles: ['figuur-1-kredietverzekering-en-voorwaarden', '90% indemnity', 'total_premium_eur', '86400'],
+    sourceNeedles: ['figuur-1-kredietverzekering-en-voorwaarden', '90% indemnity', 'total_premium_eur', '96000'],
   },
   {
     id: 'Y2-B8-Q15-Q16-STRATEGIC-TARGET-1',
