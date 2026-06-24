@@ -31,8 +31,10 @@ If a decision routes to `READY_FOR_LEAD_ONLY` or `READY_FOR_HUMAN_REVIEW` and
 returns `allowed_transition: MARK_READY`, applying that transition is mandatory.
 Owner authorization never gates `gh pr ready`; owner authorization gates only a
 later merge when the route requires human review. Use
-`npm.cmd run route-and-apply:pr-readiness -- --pr <number>` to collect live
-evidence, classify, record, and apply the allowed transition in one operation.
+`npm.cmd run route-and-apply:pr-readiness -- --pr <number> --evidence
+<evidence.json> --expect-transition MARK_READY` to collect live evidence,
+merge explicit supplemental proof, classify, record, and apply the expected
+draft-ready transition in one operation.
 
 ## Routes
 

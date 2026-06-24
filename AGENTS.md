@@ -201,7 +201,9 @@ After a normal implementation draft PR is published:
 1. Publish and validate the remote draft PR.
 2. Complete structural lead review and repairs.
 3. Run the independent PR Readiness Reviewer with `npm.cmd run review:pr-readiness`.
-4. Apply only its allowed transition with `npm.cmd run apply:pr-readiness`.
+4. Apply only its allowed transition with `npm.cmd run apply:pr-readiness`, or use
+   `npm.cmd run route-and-apply:pr-readiness -- --pr <number> --evidence <evidence.json> --expect-transition MARK_READY`
+   when current live evidence and supplemental proof should mark the draft ready.
 5. Return to the owner only when the route is `READY_FOR_HUMAN_REVIEW`, a
    genuine `PAUSE_ESCALATE` blocker exists, or autonomous closure has completed
    and a final status report is appropriate.
@@ -297,13 +299,14 @@ to verify the future protected status context. After branch protection requires
 When the PR Readiness Reviewer routes a PR or bundle to
 `READY_FOR_LEAD_ONLY` or `READY_FOR_HUMAN_REVIEW` with
 `allowed_transition: MARK_READY`, the implementation agent must immediately run
-`npm.cmd run route-and-apply:pr-readiness -- --pr <number>` or
+`npm.cmd run route-and-apply:pr-readiness -- --pr <number> --evidence <evidence.json> --expect-transition MARK_READY` or
 `npm.cmd run apply:pr-readiness -- --decision <decision.json>` after re-fetching
 the PR. Reporting "Action taken: none" for such a decision is a process failure.
 
 Before reporting final completion for governance or workflow work, include a
-freshness proof with the current `origin/main` SHA and SHA-256 digests of this
-file, `docs/review/pr-readiness-routing-policy.md`, and
+freshness proof that queries remote `main`, compares it with local
+`origin/main`, records ancestry, and hashes both remote-main and branch policy
+files for this file, `docs/review/pr-readiness-routing-policy.md`, and
 `docs/review/pr-integration-lane-policy.md`. Use
 `npm.cmd run finalization:freshness`.
 

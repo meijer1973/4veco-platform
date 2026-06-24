@@ -1,0 +1,11 @@
+{"command":"npm.cmd run check:pr-readiness","status":"passed","summary":"4 suites, 88 tests"}
+{"command":"npm.cmd run check:active-governance-wording","status":"passed"}
+{"command":"npm.cmd run check:integration-lane","status":"passed","summary":"8 suites, 77 tests"}
+{"command":"npm.cmd run check:scope-language","status":"passed"}
+{"command":"npm.cmd run check:branch-protection -- --allow-missing-secrets","status":"passed","summary":"ok true, required_approving_review_count 0"}
+{"command":"node build-scripts/reports/validate-report-json.js","status":"passed","summary":"14 reports"}
+{"command":"node build-scripts/sprints/emit-url-index.js --check","status":"passed"}
+{"command":"git diff --check","status":"passed"}
+{"command":"npm.cmd run finalization:freshness","status":"passed","summary":"remote main matched local origin/main and was ancestor of HEAD"}
+{"command":"gh run watch <platform-ci-run>","status":"pending_remote_head_push"}
+{"command":"npm.cmd run route-and-apply:pr-readiness -- --pr 149 --evidence <evidence.json> --expect-transition MARK_READY","status":"pending_remote_ci_and_lead_review"}

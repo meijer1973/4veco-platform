@@ -12,6 +12,9 @@ describe('check-active-governance-wording', () => {
       'The human decision must identify the PR number, exact head SHA.',
       'owner_authorization_exact_sha',
       'after exact-head human merge',
+      'do not mark ready or merge until owner authorization',
+      'marking ready still requires owner authorization',
+      'authorization for the exact platform and lesson heads',
     ].join('\n');
 
     const violations = findViolationsInText('AGENTS.md', text);
@@ -22,6 +25,20 @@ describe('check-active-governance-wording', () => {
       'human-decision-exact-head-sha',
       'owner-authorization-exact-sha-field',
       'exact-head-human-merge',
+      'do-not-ready-or-merge-until-owner',
+      'marking-ready-requires-owner',
+      'authorization-exact-platform-lesson-heads',
+    ]);
+  });
+
+  test('flags line-wrapped exact-head authorization instructions', () => {
+    const text = [
+      'Agents must obtain explicit human/owner authorization for the exact',
+      'head SHA before marking ready.',
+    ].join('\n');
+
+    expect(findViolationsInText('CLAUDE.md', text).map((item) => item.pattern)).toEqual([
+      'obtain-authorization-exact-head-sha',
     ]);
   });
 

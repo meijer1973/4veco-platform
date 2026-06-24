@@ -2,7 +2,13 @@
 const fs = require('fs');
 const path = require('path');
 const { runReview } = require('./review-pr-readiness');
-const { applyLiveDecision } = require('./apply-pr-readiness-decision');
+const {
+  ALLOWED_TRANSITIONS,
+} = require('./pr-readiness-router');
+const {
+  applyDecisionToState,
+  applyLiveDecision,
+} = require('./apply-pr-readiness-decision');
 
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
 
@@ -28,28 +34,82 @@ function writeIfRequested(file, content) {
   fs.writeFileSync(file, content);
 }
 
+function readJson(file) {
+  return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
+
+function normalizeFixturePr(fixture) {
+  return {
+    repo: fixture.repo,
+    number: fixture.number,
+    url: fixture.url,
+    state: fixture.state || 'OPEN',
+    is_draft: fixture.is_draft !== false && fixture.isDraft !== false,
+    base: fixture.base || fixture.baseRefName || null,
+    head_sha: fixture.head_sha || fixture.headRefOid,
+    comments: fixture.comments || [],
+  };
+}
+
+function defaultApplyDecision(decision, options = {}) {
+  if (options.fixturePr) {
+    return applyDecisionToState(decision, normalizeFixturePr(readJson(options.fixturePr)), options);
+  }
+  return applyLiveDecision(decision, options);
+}
+
+function validateExpectedTransition(result, expectedTransition) {
+  if (!expectedTransition) return;
+  const allowed = new Set(Object.values(ALLOWED_TRANSITIONS));
+  if (!allowed.has(expectedTransition)) {
+    throw new Error(`--expect-transition must be one of ${[...allowed].join(', ')}`);
+  }
+  if (result.decision.allowed_transition !== expectedTransition) {
+    throw new Error(
+      `expected transition ${expectedTransition}, got ${result.decision.allowed_transition}`
+    );
+  }
+  if (
+    expectedTransition === ALLOWED_TRANSITIONS.MARK_READY &&
+    !['marked_ready', 'already_ready', 'would_mark_ready'].includes(result.application.transition_action)
+  ) {
+    throw new Error(
+      `expected MARK_READY application, got ${result.application.transition_action}`
+    );
+  }
+}
+
 function runRouteAndApply(options, deps = {}) {
   const reviewRunner = deps.runReview || runReview;
-  const applyRunner = deps.applyLiveDecision || applyLiveDecision;
+  const applyRunner = deps.applyDecision || defaultApplyDecision;
   const repo = options.repo || DEFAULT_REPO;
   const prNumber = Number(options.prNumber);
   if (!Number.isInteger(prNumber) || prNumber <= 0) {
     throw new Error('--pr must be a positive integer');
   }
+  if (!options.evidence) {
+    throw new Error('--evidence <file> is required so supplemental proof is explicit');
+  }
 
-  const reviewOptions = { repo, prNumber };
-  if (options.evidence) reviewOptions.evidence = options.evidence;
+  const reviewOptions = options.fixture ? { fixture: options.fixture } : { repo, prNumber };
+  reviewOptions.evidence = options.evidence;
   const review = reviewRunner(reviewOptions);
-  const application = applyRunner(review.decision, { dryRun: Boolean(options.dryRun) });
+  const application = applyRunner(review.decision, {
+    dryRun: Boolean(options.dryRun),
+    fixturePr: options.fixturePr,
+  });
 
-  return {
+  const result = {
     ok: application.ok !== false,
     repo,
     pr_number: prNumber,
+    expected_transition: options.expectTransition || null,
     decision: review.decision,
     application,
     markdown: review.markdown,
   };
+  validateExpectedTransition(result, options.expectTransition || null);
+  return result;
 }
 
 function parseArgs(argv) {
@@ -59,6 +119,9 @@ function parseArgs(argv) {
     repo: optionValue(argv, '--repo') || DEFAULT_REPO,
     prNumber: Number(prValue),
     evidence: optionValue(argv, '--evidence'),
+    expectTransition: optionValue(argv, '--expect-transition'),
+    fixture: optionValue(argv, '--fixture'),
+    fixturePr: optionValue(argv, '--fixture-pr'),
     dryRun: flag(argv, '--dry-run'),
     outputJson: optionValue(argv, '--output-json'),
     outputMarkdown: optionValue(argv, '--output-markdown') || optionValue(argv, '--output-md'),

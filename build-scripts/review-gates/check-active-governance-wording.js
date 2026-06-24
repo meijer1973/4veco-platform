@@ -5,11 +5,19 @@ const path = require('path');
 const ACTIVE_ROOTS = Object.freeze([
   'AGENTS.md',
   'AGENT_GITHUB_ENTRY.md',
+  'CLAUDE.md',
+  'RESEARCH_AGENT_MAP.md',
   'agents',
+  'skills',
+  '.claude/commands',
   'docs/review',
   'build-scripts',
   '.github/workflows',
   'package.json',
+  '../4veco-lessen/AGENTS.md',
+  '../4veco-lessen/AGENT_GITHUB_ENTRY.md',
+  '../4veco-lessen/CLAUDE.md',
+  '../4veco-lessen/RESEARCH_AGENT_MAP.md',
 ]);
 
 const TEXT_EXTENSIONS = new Set([
@@ -77,6 +85,22 @@ const FORBIDDEN_PATTERNS = Object.freeze([
     id: 'exact-head-human-merge',
     regex: /exact-head human merge/i,
   },
+  {
+    id: 'obtain-authorization-exact-head-sha',
+    regex: /obtain explicit (human|owner|human\/owner) authorization for the exact head sha/i,
+  },
+  {
+    id: 'do-not-ready-or-merge-until-owner',
+    regex: /do not mark ready or merge until owner authorization/i,
+  },
+  {
+    id: 'marking-ready-requires-owner',
+    regex: /marking ready still requires owner authorization/i,
+  },
+  {
+    id: 'authorization-exact-platform-lesson-heads',
+    regex: /authorization for the exact platform and lesson heads/i,
+  },
 ]);
 
 function normalizePath(filePath) {
@@ -121,10 +145,12 @@ function collectActiveFiles(roots = ACTIVE_ROOTS, cwd = process.cwd()) {
 function findViolationsInText(filePath, text) {
   const violations = [];
   const lines = String(text).split(/\r?\n/);
+  const matchedPatterns = new Set();
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     for (const pattern of FORBIDDEN_PATTERNS) {
       if (pattern.regex.test(line)) {
+        matchedPatterns.add(pattern.id);
         violations.push({
           file: normalizePath(filePath),
           line: index + 1,
@@ -132,6 +158,19 @@ function findViolationsInText(filePath, text) {
           text: line.trim(),
         });
       }
+    }
+  }
+  const normalized = String(text).replace(/\s+/g, ' ').trim();
+  for (const pattern of FORBIDDEN_PATTERNS) {
+    if (matchedPatterns.has(pattern.id)) continue;
+    const match = normalized.match(pattern.regex);
+    if (match) {
+      violations.push({
+        file: normalizePath(filePath),
+        line: 1,
+        pattern: pattern.id,
+        text: match[0].trim(),
+      });
     }
   }
   return violations;
