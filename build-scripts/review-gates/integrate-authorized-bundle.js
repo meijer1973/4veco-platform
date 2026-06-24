@@ -56,6 +56,21 @@ function runGh(args, options = {}) {
   return result.stdout;
 }
 
+function runGhBuffer(args, options = {}) {
+  if (options.dryRun) return Buffer.from('');
+  const result = spawnSync('gh', args, {
+    cwd: process.cwd(),
+    encoding: null,
+    maxBuffer: 1024 * 1024 * 50,
+  });
+  if (result.status !== 0) {
+    const detail = (result.stderr || result.stdout || Buffer.from('')).toString('utf8').trim();
+    if (options.optional) return null;
+    throw new Error(`gh ${args.join(' ')} failed${detail ? `: ${detail}` : ''}`);
+  }
+  return result.stdout;
+}
+
 function listIssueComments(repo, prNumber) {
   const comments = [];
   for (let page = 1; page <= 20; page += 1) {
@@ -261,6 +276,54 @@ function downloadPlatformCiEvidence(runId, options = {}) {
   };
 }
 
+function parseArtifactSha256Digest(artifact) {
+  const digest = normalizeRunField(artifact, 'digest', 'digest');
+  const match = String(digest || '').match(/^sha256:([a-f0-9]{64})$/i);
+  return match ? match[1].toLowerCase() : null;
+}
+
+function downloadCompatibilityArtifactZip(artifact, options = {}) {
+  if (options.dryRun) return { ok: true, dry_run: true };
+  if (!artifact || !artifact.id) return { ok: false, failure: 'compatibility_artifact_id_missing' };
+  const zip = runGhBuffer(['api', `repos/${PLATFORM_REPO}/actions/artifacts/${artifact.id}/zip`], options);
+  const sha256 = crypto.createHash('sha256').update(zip).digest('hex');
+  const expected = parseArtifactSha256Digest(artifact);
+  return {
+    ok: Boolean(expected) && sha256 === expected,
+    failure: !expected
+      ? 'compatibility_artifact_digest_missing'
+      : sha256 === expected
+        ? null
+        : 'compatibility_artifact_digest_mismatch',
+    sha256,
+    expected_sha256: expected,
+  };
+}
+
+function downloadCompatibilityArtifactSummary(runId, options = {}) {
+  if (options.dryRun) return { ok: true, dry_run: true };
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), `bundle-summary-${runId}-`));
+  runGh([
+    'run',
+    'download',
+    String(runId),
+    '--repo',
+    PLATFORM_REPO,
+    '--name',
+    'bundle-summary',
+    '--dir',
+    dir,
+  ]);
+  const summaryPath = findFileRecursive(dir, 'bundle-summary.json');
+  if (!summaryPath) return { ok: false, failure: 'compatibility_artifact_summary_missing', run_id: runId };
+  return {
+    ok: true,
+    run_id: runId,
+    path: summaryPath,
+    sha256: sha256File(summaryPath),
+  };
+}
+
 function validatePlatformCiEvidence(evidence, expected = {}) {
   const failures = [];
   const item = evidence || {};
@@ -291,7 +354,13 @@ function validateCompatibilityWorkflowProvenance(run, artifact, compatibility, e
   const runId = String(expected.runId || '');
   if (!run || typeof run !== 'object') failures.push('compatibility_workflow_run_missing');
   const runDatabaseId = String(normalizeRunField(run, 'id', 'databaseId') || normalizeRunField(run, 'database_id', 'databaseId') || '');
-  if (runId && runDatabaseId && runDatabaseId !== runId) failures.push(`compatibility_run_id_mismatch: expected ${runId}`);
+  if (!runDatabaseId) failures.push('compatibility_run_id_missing');
+  else if (runId && runDatabaseId !== runId) failures.push(`compatibility_run_id_mismatch: expected ${runId}`);
+  const workflowId = String(normalizeRunField(run, 'workflow_id', 'workflowId') || '');
+  if (!workflowId) failures.push('compatibility_workflow_id_missing');
+  else if (expected.workflowId && workflowId !== String(expected.workflowId)) {
+    failures.push(`compatibility_workflow_id_mismatch: expected ${expected.workflowId}`);
+  }
   const pathValue = normalizeRunField(run, 'path', 'path');
   if (pathValue !== '.github/workflows/cross-repo-bundle-compatibility.yml') {
     failures.push('compatibility_workflow_path_mismatch');
@@ -308,22 +377,43 @@ function validateCompatibilityWorkflowProvenance(run, artifact, compatibility, e
   const artifactName = normalizeRunField(artifact, 'name', 'name');
   if (artifactName !== 'bundle-summary') failures.push('compatibility_artifact_name_mismatch');
   if (artifact && artifact.expired === true) failures.push('compatibility_artifact_expired');
-  const artifactDigest = normalizeRunField(artifact, 'digest', 'digest');
-  if (typeof artifactDigest !== 'string' || !artifactDigest.trim()) failures.push('compatibility_artifact_digest_missing');
-  const provenance = compatibility.provenance || {};
-  if (runId && String(provenance.run_id || '') !== runId) failures.push('compatibility_summary_run_id_mismatch');
-  if (expected.exactMembers && provenance.workflow_sha && provenance.workflow_sha !== expected.exactMembers.platform_base_sha) {
-    failures.push(`compatibility_summary_workflow_sha_mismatch: expected ${expected.exactMembers.platform_base_sha}`);
+  const artifactDigest = parseArtifactSha256Digest(artifact);
+  if (!artifactDigest) failures.push('compatibility_artifact_digest_missing');
+  if (expected.artifactZipFailure) failures.push(expected.artifactZipFailure);
+  if (!expected.artifactZipSha256) {
+    failures.push('compatibility_artifact_digest_unverified');
+  } else if (artifactDigest && String(expected.artifactZipSha256).toLowerCase() !== artifactDigest) {
+    failures.push('compatibility_artifact_digest_mismatch');
   }
-  if (provenance.event_name && provenance.event_name !== 'workflow_dispatch') {
+  if (expected.downloadedProofFailure) failures.push(expected.downloadedProofFailure);
+  if (!expected.proofSha256 || !expected.downloadedProofSha256) {
+    failures.push('compatibility_artifact_summary_unverified');
+  } else if (expected.proofSha256 !== expected.downloadedProofSha256) {
+    failures.push('compatibility_artifact_summary_mismatch');
+  }
+  const provenance = compatibility.provenance || {};
+  if (String(provenance.run_id || '') !== runId) failures.push('compatibility_summary_run_id_mismatch');
+  if (provenance.workflow !== 'cross-repo-bundle-compatibility') {
+    failures.push('compatibility_summary_workflow_name_mismatch');
+  }
+  const expectedWorkflowRef =
+    expected.workflowRef || `${PLATFORM_REPO}/.github/workflows/cross-repo-bundle-compatibility.yml@refs/heads/main`;
+  if (provenance.workflow_ref !== expectedWorkflowRef) {
+    failures.push(`compatibility_summary_workflow_ref_mismatch: expected ${expectedWorkflowRef}`);
+  }
+  const expectedWorkflowSha = expected.exactMembers && expected.exactMembers.platform_base_sha;
+  if (!provenance.workflow_sha || (expectedWorkflowSha && provenance.workflow_sha !== expectedWorkflowSha)) {
+    failures.push(`compatibility_summary_workflow_sha_mismatch: expected ${expectedWorkflowSha || 'trusted workflow sha'}`);
+  }
+  if (provenance.event_name !== 'workflow_dispatch') {
     failures.push('compatibility_summary_event_mismatch');
   }
   const inputs = provenance.inputs || {};
-  if (expected.bundleId && inputs.bundle_id && inputs.bundle_id !== expected.bundleId) {
+  if (expected.bundleId && inputs.bundle_id !== expected.bundleId) {
     failures.push(`compatibility_input_bundle_id_mismatch: expected ${expected.bundleId}`);
   }
   for (const [key, expectedSha] of Object.entries((expected && expected.exactMembers) || {})) {
-    if (inputs[key] && inputs[key] !== expectedSha) {
+    if (inputs[key] !== expectedSha) {
       failures.push(`compatibility_input_${key}_mismatch: expected ${expectedSha}`);
     }
   }
@@ -341,6 +431,10 @@ function fetchCompatibilityArtifact(runId) {
   return artifacts.find((artifact) => artifact.name === 'bundle-summary') || null;
 }
 
+function fetchCompatibilityWorkflowInfo() {
+  return JSON.parse(runGh(['api', `repos/${PLATFORM_REPO}/actions/workflows/cross-repo-bundle-compatibility.yml`]));
+}
+
 function verifyCompatibilityWorkflowRun(runId, compatibility, expected = {}, options = {}) {
   if (!runId) {
     return { ok: false, failures: ['compatibility_workflow_run_id_required'] };
@@ -348,10 +442,20 @@ function verifyCompatibilityWorkflowRun(runId, compatibility, expected = {}, opt
   if (options.dryRun) return { ok: true, dry_run: true, run_id: String(runId) };
   const run = JSON.parse(runGh(['api', `repos/${PLATFORM_REPO}/actions/runs/${runId}`]));
   const artifact = fetchCompatibilityArtifact(runId);
+  const workflow = fetchCompatibilityWorkflowInfo();
+  const zip = downloadCompatibilityArtifactZip(artifact, options);
+  const summary = downloadCompatibilityArtifactSummary(runId, options);
   return validateCompatibilityWorkflowProvenance(run, artifact, compatibility, {
     runId: String(runId),
     bundleId: expected.bundleId,
     exactMembers: expected.exactMembers,
+    workflowId: workflow && workflow.id,
+    compatibilityProofPath: expected.compatibilityProofPath,
+    proofSha256: expected.compatibilityProofPath ? sha256File(expected.compatibilityProofPath) : null,
+    artifactZipSha256: zip.sha256,
+    artifactZipFailure: zip.ok === false ? zip.failure : null,
+    downloadedProofSha256: summary.sha256,
+    downloadedProofFailure: summary.ok === false ? summary.failure : null,
   });
 }
 
@@ -506,6 +610,7 @@ function defaultDeps(options = {}) {
       const provenance = verifier(options.compatibilityRunId, compatibility, {
         bundleId: options.bundleId || (record && record.bundle_id) || undefined,
         exactMembers,
+        compatibilityProofPath: options.compatibilityProofPath,
       }, options);
       return {
         ...compatibility,

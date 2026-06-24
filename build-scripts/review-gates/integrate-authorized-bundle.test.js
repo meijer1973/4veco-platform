@@ -78,6 +78,24 @@ function compatibility(order = 'lesson-first') {
   };
 }
 
+function compatibilitySummary(overrides = {}) {
+  return {
+    ...compatibility('lesson-first'),
+    provenance: {
+      workflow: 'cross-repo-bundle-compatibility',
+      workflow_ref: `${PLATFORM_REPO}/.github/workflows/cross-repo-bundle-compatibility.yml@refs/heads/main`,
+      workflow_sha: platformBase,
+      run_id: '123',
+      event_name: 'workflow_dispatch',
+      inputs: {
+        bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+        ...compatibility('lesson-first').exact_members,
+      },
+    },
+    ...overrides,
+  };
+}
+
 function harness(overrides = {}) {
   const calls = { merges: [], ciTriggers: [], ciWaits: [], refreshes: [] };
   const fetchPr = jest.fn((repo) => {
@@ -357,17 +375,47 @@ describe('authorized cross-repo bundle integration', () => {
     expect(result.failures).toContain(`lesson_head_mismatch: expected ${lessonMerge}`);
   });
 
-  test('wrong compatibility workflow run or artifact digest is rejected', () => {
+  test('trusted compatibility workflow provenance is accepted when fully bound', () => {
+    const proofSha256 = '7'.repeat(64);
     const result = validateCompatibilityWorkflowProvenance(
       {
         id: 123,
+        workflow_id: 456,
+        path: '.github/workflows/cross-repo-bundle-compatibility.yml',
+        event: 'workflow_dispatch',
+        status: 'completed',
+        conclusion: 'success',
+        head_sha: platformBase,
+      },
+      { name: 'bundle-summary', expired: false, digest: `sha256:${proofSha256}` },
+      compatibilitySummary(),
+      {
+        runId: '123',
+        workflowId: 456,
+        bundleId: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+        exactMembers: compatibility('lesson-first').exact_members,
+        artifactZipSha256: proofSha256,
+        proofSha256,
+        downloadedProofSha256: proofSha256,
+      }
+    );
+
+    expect(result.ok).toBe(true);
+  });
+
+  test('wrong compatibility workflow run, digest, or downloaded summary is rejected', () => {
+    const artifactSha256 = '7'.repeat(64);
+    const result = validateCompatibilityWorkflowProvenance(
+      {
+        id: 123,
+        workflow_id: 456,
         path: '.github/workflows/other.yml',
         event: 'push',
         status: 'completed',
         conclusion: 'success',
         head_sha: platformBase,
       },
-      { name: 'bundle-summary', expired: false },
+      { name: 'bundle-summary', expired: false, digest: `sha256:${artifactSha256}` },
       {
         provenance: {
           run_id: '999',
@@ -378,16 +426,57 @@ describe('authorized cross-repo bundle integration', () => {
       },
       {
         runId: '123',
+        workflowId: 999,
+        bundleId: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+        exactMembers: compatibility('lesson-first').exact_members,
+        artifactZipSha256: '8'.repeat(64),
+        proofSha256: '9'.repeat(64),
+        downloadedProofSha256: 'a'.repeat(64),
+      }
+    );
+
+    expect(result.ok).toBe(false);
+    expect(result.failures).toContain('compatibility_workflow_id_mismatch: expected 999');
+    expect(result.failures).toContain('compatibility_workflow_path_mismatch');
+    expect(result.failures).toContain('compatibility_workflow_event_mismatch');
+    expect(result.failures).toContain('compatibility_artifact_digest_mismatch');
+    expect(result.failures).toContain('compatibility_artifact_summary_mismatch');
+    expect(result.failures).toContain('compatibility_summary_run_id_mismatch');
+    expect(result.failures).toContain('compatibility_summary_workflow_name_mismatch');
+    expect(result.failures).toContain(
+      `compatibility_summary_workflow_ref_mismatch: expected ${PLATFORM_REPO}/.github/workflows/cross-repo-bundle-compatibility.yml@refs/heads/main`
+    );
+    expect(result.failures).toContain('compatibility_input_bundle_id_mismatch: expected PRESENTATION-V2-113-GRAPH-TRANSFER-1');
+  });
+
+  test('missing compatibility provenance fields fail closed', () => {
+    const result = validateCompatibilityWorkflowProvenance(
+      {
+        id: 123,
+        workflow_id: 456,
+        path: '.github/workflows/cross-repo-bundle-compatibility.yml',
+        event: 'workflow_dispatch',
+        status: 'completed',
+        conclusion: 'success',
+        head_sha: platformBase,
+      },
+      { name: 'bundle-summary', expired: false, digest: `sha256:${'7'.repeat(64)}` },
+      { provenance: { run_id: '123', inputs: {} } },
+      {
+        runId: '123',
+        workflowId: 456,
         bundleId: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
         exactMembers: compatibility('lesson-first').exact_members,
       }
     );
 
     expect(result.ok).toBe(false);
-    expect(result.failures).toContain('compatibility_workflow_path_mismatch');
-    expect(result.failures).toContain('compatibility_workflow_event_mismatch');
-    expect(result.failures).toContain('compatibility_artifact_digest_missing');
-    expect(result.failures).toContain('compatibility_summary_run_id_mismatch');
+    expect(result.failures).toContain('compatibility_artifact_digest_unverified');
+    expect(result.failures).toContain('compatibility_artifact_summary_unverified');
+    expect(result.failures).toContain('compatibility_summary_workflow_name_mismatch');
+    expect(result.failures).toContain('compatibility_summary_event_mismatch');
+    expect(result.failures).toContain(`compatibility_summary_workflow_sha_mismatch: expected ${platformBase}`);
+    expect(result.failures).toContain(`compatibility_input_platform_base_sha_mismatch: expected ${platformBase}`);
   });
 
   test('unresolved threads on either member block merging', () => {

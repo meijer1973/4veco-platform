@@ -171,12 +171,12 @@ lesson `main` SHAs for the intermediate and final states. A green run for the
 same platform SHA but an older lesson SHA is not valid evidence.
 
 The integration command also verifies the compatibility workflow provenance:
-workflow path, workflow-dispatch event, trusted workflow SHA, run id, exact
-inputs, success conclusion, and the `bundle-summary` artifact metadata. Before
-each member merge it re-fetches both PRs and both `main` refs, requires
-exact-head readiness decisions, requires clean review-thread/requested-change
-state, and stops if a base or head moved outside the proven compatibility
-state.
+workflow id, workflow path, workflow ref, workflow-dispatch event, trusted
+workflow SHA, run id, exact inputs, success conclusion, the server-reported
+`bundle-summary` artifact digest, and the downloaded summary hash. Before each
+member merge it re-fetches both PRs and both `main` refs, requires exact-head
+readiness decisions, requires clean review-thread/requested-change state, and
+stops if a base or head moved outside the proven compatibility state.
 
 Lesson bundle members consume delegated bundle proof from the platform
 controller. They must not require a standalone platform branch-protection
