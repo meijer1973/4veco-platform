@@ -230,8 +230,8 @@ function validateMtuProof(mtuProof, surface, answerContracts, priorMtuReview, so
   assert(mtuProof.authority_boundary.includes('no_mtu_mutation'), 'MTU proof boundary must forbid MTU mutation');
   assertAllAuthorityFalseExcept(mtuProof.authority_claims, 'MTU proof authority_claims');
   assertSameMembers(mtuProof.records.map((record) => record.record_id), EXPECTED.map((spec) => spec.id), 'MTU proof records');
-  assert(mtuProof.closure_effect?.prior_flags_addressed_when_human_review_accepts_exact_head?.includes('Y2TRTF-005'), 'MTU proof must address prior MTU flag pending human acceptance');
-  assert(mtuProof.closure_effect?.prior_flags_addressed_when_human_review_accepts_exact_head?.includes('Y2TRTF-006'), 'MTU proof must address prior source flag pending human acceptance');
+  assert(mtuProof.closure_effect?.prior_flags_addressed_when_human_review_accepts_reviewed_payload?.includes('Y2TRTF-005'), 'MTU proof must address prior MTU flag pending human acceptance');
+  assert(mtuProof.closure_effect?.prior_flags_addressed_when_human_review_accepts_reviewed_payload?.includes('Y2TRTF-006'), 'MTU proof must address prior source flag pending human acceptance');
 
   const surfaceRecords = byId(surface.records, 'id');
   const answerRecords = byId(answerContracts.records, 'record_id');
@@ -324,7 +324,7 @@ function validatePacket(packet, packetMd) {
     assert(ALLOWED_CHECKLIST_STATUS.has(item.status), `invalid checklist status ${item.requirement}: ${item.status}`);
   }
   const pending = packet.core_requirement_checklist.filter((item) => item.status === 'pending_remote_pr');
-  assert(pending.length === 1 && pending[0].requirement === 'Exact-head PR proof', 'only exact-head PR proof may be pending before draft PR');
+  assert(pending.length === 1 && pending[0].requirement === 'Current-head PR proof', 'only current-head PR proof may be pending before draft PR');
 
   for (const flag of asArray(packet.carried_flags)) {
     assert(ALLOWED_FINDINGS.has(flag.classification), `invalid carried flag classification ${flag.classification}`);

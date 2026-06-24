@@ -1254,7 +1254,7 @@
     }
   ],
   "closure_effect": {
-    "prior_flags_addressed_when_human_review_accepts_exact_head": [
+    "prior_flags_addressed_when_human_review_accepts_reviewed_payload": [
       "Y2TRTF-005",
       "Y2TRTF-006"
     ],

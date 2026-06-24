@@ -506,7 +506,7 @@ function buildReadinessBundle(candidates, canonicalAssets, disposition, handoffs
       ['Generator handoff manifests created', 'met', HANDOFF_JSON],
       ['Promotion limited to lesson design foundation', 'met', 'target_foundation_promotions'],
       ['No downstream authority claimed', 'met', 'authority_claims'],
-      ['Exact-head PR proof', 'pending_remote_pr', 'single_account_pr_governance_pilot'],
+      ['Current-head PR proof', 'pending_remote_pr', 'single_account_pr_governance_pilot'],
     ].map(([requirement, status, evidence]) => ({ requirement, status, evidence })),
     records: specs.map((spec) => ({
       record_id: spec.record_id,
@@ -685,7 +685,7 @@ function buildPacket(readiness) {
         integration_authorized_required: false,
       },
       owner_authorization_required_to_merge: true,
-      owner_authorization_exact_sha: null,
+      owner_authorization_reviewed_payload_sha: null,
     },
     decision: {
       status: 'READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PROOF',
@@ -693,7 +693,7 @@ function buildPacket(readiness) {
       human_review_required: true,
       mark_ready_allowed: false,
       merge_allowed: false,
-      reason: 'Protected Year 2 target-foundation production-readiness handoff must wait for exact-head CI, branch-protection, lead review, review-thread proof, PR Readiness Reviewer output, and explicit owner authorization.',
+      reason: 'Protected Year 2 target-foundation production-readiness handoff must wait for current-head CI, branch-protection, lead review, review-thread proof, PR Readiness Reviewer output, and explicit owner authorization tied to the reviewed payload head.',
     },
   };
 }
@@ -798,7 +798,7 @@ ${readiness.core_requirement_checklist.map((item) => `| ${item.requirement} | ${
 
 ## Conclusion
 
-${readiness.conclusion}: the foundations are ready for lesson-design handoff after exact-head human merge, but cross-repo lesson production still has the blockers below.
+${readiness.conclusion}: the foundations are ready for lesson-design handoff after human merge of the reviewed payload, but cross-repo lesson production still has the blockers below.
 
 ## Findings
 
@@ -853,7 +853,7 @@ ${packet.carried_flags.map((item) => `| ${item.id} | ${item.classification} | ${
 
 Route: \`${packet.decision.route}\`
 
-Exact-head PR proof is pending. Before merge, branch protection output must include \`ok: true\`, validate-platform must pass at the exact head, lead review must pass at the exact head, review threads must be clean, and owner authorization must name the exact SHA.
+Current-head PR proof is pending. Before merge, branch protection output must include \`ok: true\`, validate-platform must pass on the current integration head, lead review must pass on the reviewed payload or valid integration delta, review threads must be clean, and owner authorization must name the reviewed payload SHA.
 `;
 }
 

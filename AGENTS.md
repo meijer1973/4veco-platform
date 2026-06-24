@@ -236,13 +236,16 @@ Merge authority follows the PR-readiness route:
   proof, lead review, readiness proof, and complete review-thread evidence pass.
 - L3-L4 and governance/self-modification work must stop after
   `READY_FOR_HUMAN_REVIEW` until the owner gives an explicit merge decision.
-- A human merge decision must identify the PR number, exact head SHA, decision,
-  and decision scope. Record it as a PR comment when the decision happens
-  outside GitHub's review identity model.
-- Immediately before merging, re-fetch the PR and verify the exact head, open
-  and not-draft state, mergeability, required CI, requested-changes state, and
-  unresolved review-thread state. Use normal merge; do not use admin bypass as
-  a routine substitute for this policy.
+- A human merge decision must identify the PR number, reviewed payload head SHA,
+  decision, and decision scope. Record it as a PR comment when the decision
+  happens outside GitHub's review identity model.
+- Human authorization gates merge, not draft-to-ready transition. Owner
+  authorization is never required merely to run `gh pr ready` after a valid
+  readiness decision returns `allowed_transition: MARK_READY`.
+- Immediately before merging, re-fetch the PR and verify the current integration
+  head, open and not-draft state, mergeability, required CI, requested-changes
+  state, and unresolved review-thread state. Use normal merge; do not use admin
+  bypass as a routine substitute for this policy.
 
 ### Serialized integration lane
 
@@ -271,6 +274,11 @@ decision, and posts or updates the exact-head readiness comment with a canonical
 decision digest and full machine decision. A stale readiness marker, marker-only
 comment, or non-ready route stops the merge.
 
+The current integration head is machine-validated, not separately
+human-authorized. A permitted base-sync or deterministic evidence descendant
+does not need renewed owner authorization when payload lineage, base-drift,
+authority-scope, and effective-payload checks remain valid.
+
 The lane must determine base drift from an actual `main...head` comparison, not
 from `mergeStateStatus: BLOCKED`; `BLOCKED` can simply mean the future
 `integration-authorized` status is pending. The lane sets
@@ -283,6 +291,21 @@ shape. Use
 `npm.cmd run check:branch-protection -- --require-integration-authorized` only
 to verify the future protected status context. After branch protection requires
 `integration-authorized`, the lane is the only merge path.
+
+### Mandatory readiness application
+
+When the PR Readiness Reviewer routes a PR or bundle to
+`READY_FOR_LEAD_ONLY` or `READY_FOR_HUMAN_REVIEW` with
+`allowed_transition: MARK_READY`, the implementation agent must immediately run
+`npm.cmd run route-and-apply:pr-readiness -- --pr <number>` or
+`npm.cmd run apply:pr-readiness -- --decision <decision.json>` after re-fetching
+the PR. Reporting "Action taken: none" for such a decision is a process failure.
+
+Before reporting final completion for governance or workflow work, include a
+freshness proof with the current `origin/main` SHA and SHA-256 digests of this
+file, `docs/review/pr-readiness-routing-policy.md`, and
+`docs/review/pr-integration-lane-policy.md`. Use
+`npm.cmd run finalization:freshness`.
 
 #### Paired platform/lesson bundles
 

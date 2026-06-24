@@ -47,7 +47,7 @@ Blocks: none
 
 Does not block: human review of closure-readiness packet
 
-Proof required to close: Owner/human approval tied to exact PR head.
+Proof required to close: Owner/human approval tied to the reviewed payload head and decision scope.
 
 ### H6-DOWNSTREAM-AUTHORITY-BOUNDARY
 

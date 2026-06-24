@@ -40,11 +40,11 @@ Status: foundation_ready_for_lesson_design_after_human_merge_with_production_blo
 | Generator handoff manifests created | met | reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/generator-handoff-manifests.json |
 | Promotion limited to lesson design foundation | met | target_foundation_promotions |
 | No downstream authority claimed | met | authority_claims |
-| Exact-head PR proof | pending_remote_pr | single_account_pr_governance_pilot |
+| Current-head PR proof | pending_remote_pr | single_account_pr_governance_pilot |
 
 ## Conclusion
 
-CONCISE BLOCKER LIST: the foundations are ready for lesson-design handoff after exact-head human merge, but cross-repo lesson production still has the blockers below.
+CONCISE BLOCKER LIST: the foundations are ready for lesson-design handoff after human merge of the reviewed payload, but cross-repo lesson production still has the blockers below.
 
 ## Findings
 

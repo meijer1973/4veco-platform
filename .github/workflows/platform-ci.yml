@@ -94,6 +94,9 @@ jobs:
       - name: Validate active scope language
         run: npm run check:scope-language
 
+      - name: Validate active governance wording
+        run: npm run check:active-governance-wording
+
       - name: Validate Golden Graph Advisory 113 proof
         run: npm run check:golden-graph-advisory-113
 

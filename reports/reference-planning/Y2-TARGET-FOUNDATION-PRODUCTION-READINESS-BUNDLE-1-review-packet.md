@@ -38,7 +38,7 @@
 | Generator handoff manifests created | met | reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/generator-handoff-manifests.json |
 | Promotion limited to lesson design foundation | met | target_foundation_promotions |
 | No downstream authority claimed | met | authority_claims |
-| Exact-head PR proof | pending_remote_pr | single_account_pr_governance_pilot |
+| Current-head PR proof | pending_remote_pr | single_account_pr_governance_pilot |
 
 ## Findings
 
@@ -78,4 +78,4 @@
 
 Route: `READY_FOR_HUMAN_REVIEW`
 
-Exact-head PR proof is pending. Before merge, branch protection output must include `ok: true`, validate-platform must pass at the exact head, lead review must pass at the exact head, review threads must be clean, and owner authorization must name the exact SHA.
+Current-head PR proof is pending. Before merge, branch protection output must include `ok: true`, validate-platform must pass on the current integration head, lead review must pass on the reviewed payload or valid integration delta, review threads must be clean, and owner authorization must name the reviewed payload SHA.

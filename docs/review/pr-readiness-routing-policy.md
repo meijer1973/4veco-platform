@@ -27,6 +27,13 @@ The implementation agent acts on the routing decision. The deterministic
 executor applies only the allowed GitHub transition after re-fetching the PR
 immediately before mutation.
 
+If a decision routes to `READY_FOR_LEAD_ONLY` or `READY_FOR_HUMAN_REVIEW` and
+returns `allowed_transition: MARK_READY`, applying that transition is mandatory.
+Owner authorization never gates `gh pr ready`; owner authorization gates only a
+later merge when the route requires human review. Use
+`npm.cmd run route-and-apply:pr-readiness -- --pr <number>` to collect live
+evidence, classify, record, and apply the allowed transition in one operation.
+
 ## Routes
 
 | Route | Use when | Action |
@@ -34,7 +41,7 @@ immediately before mutation.
 | `KEEP_DRAFT_REVISE` | Implementation, CI, checker proof, packet structure, lead review, rendered proof, review threads, bundle completeness, or merge readiness is deficient. | Keep draft, return concrete corrections to implementation, do not contact the owner. |
 | `KEEP_DRAFT_BATCH` | Human review will eventually be required, but the current PR is a thin fragment that can safely be combined with a coherent related milestone. | Keep draft, name the next bundle target, continue within authorized scope, do not contact the owner. |
 | `READY_FOR_LEAD_ONLY` | L0/L1 or valid owner-preapproved L2 work is complete, current-head evidence is green, lead review is passing, and no human-value decision is hidden. | Mark ready. In single-account mode, the agent may merge after exact-head CI, lead review, readiness proof, and clean review-thread state pass. |
-| `READY_FOR_HUMAN_REVIEW` | Human review is required and the PR/bundle is substantial or a consequential exception. | Mark ready and present one consolidated human handoff. Merge only after an explicit owner merge decision tied to the exact PR head. |
+| `READY_FOR_HUMAN_REVIEW` | Human review is required and the PR/bundle is substantial or a consequential exception. | Mark ready and present one consolidated human handoff. Merge only after an explicit owner merge decision tied to the reviewed payload head and decision scope. |
 | `PAUSE_ESCALATE` | A genuine blocker cannot safely be resolved by implementation, testing, specialist review, batching, or conservative classification. | Pause and escalate the blocker. |
 
 ## Authority and consequence axis
@@ -197,11 +204,11 @@ Merge authority is separate from GitHub approval count:
   evidence all pass.
 - L3-L4 and consequential governance/self-modification work must stop after
   `READY_FOR_HUMAN_REVIEW` until the owner gives an explicit merge decision.
-- The human decision must identify the PR number, exact head SHA, decision, and
-  decision scope. A PR comment is the preferred audit record.
+- The human decision must identify the PR number, reviewed payload head SHA,
+  decision, and decision scope. A PR comment is the preferred audit record.
 - Immediately before any merge, the implementation agent must re-fetch the PR
-  and verify the exact head, open/not-draft state, mergeability, required CI,
-  and review-thread/requested-changes state.
+  and verify the current integration head, open/not-draft state, mergeability,
+  required CI, and review-thread/requested-changes state.
 
 After the serialized integration lane is operational, merge authority is carried
 through `docs/review/pr-integration-lane-policy.md`. A human decision binds to
@@ -209,6 +216,12 @@ the `reviewed_payload_head`; the lane may refresh to a later `integration_head`
 without re-review only when lineage and base drift checks pass. PR readiness may
 include `proof.human_authorization` and `proof.integration` so the final comment
 shows both the reviewed payload SHA and the validated integration head.
+
+The current integration head is machine-validated, not separately
+human-authorized. A permitted base-sync descendant or deterministic evidence
+refresh does not require renewed owner authorization unless lineage, base drift,
+authority scope, or effective payload checks invalidate the reviewed payload
+authorization.
 
 ## Live decision recording
 
