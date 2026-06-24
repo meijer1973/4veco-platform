@@ -9,6 +9,11 @@ Correction: require `--evidence <file>`, add `--expect-transition`, fail when
 the expected transition is absent, and cover the real review/classifier plus
 fixture application path in tests.
 
+Lead review round 1 correction: `--expect-transition MARK_READY` is now required
+before review collection or decision application. Evidence-present invocations
+without the expectation and invocations with a non-`MARK_READY` expectation are
+covered by regressions.
+
 ## Reviewer Finding 2
 
 `finalization:freshness` could certify a stale local `origin/main`.

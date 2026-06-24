@@ -59,10 +59,12 @@ function defaultApplyDecision(decision, options = {}) {
 }
 
 function validateExpectedTransition(result, expectedTransition) {
-  if (!expectedTransition) return;
   const allowed = new Set(Object.values(ALLOWED_TRANSITIONS));
   if (!allowed.has(expectedTransition)) {
     throw new Error(`--expect-transition must be one of ${[...allowed].join(', ')}`);
+  }
+  if (expectedTransition !== ALLOWED_TRANSITIONS.MARK_READY) {
+    throw new Error('--expect-transition MARK_READY is required');
   }
   if (result.decision.allowed_transition !== expectedTransition) {
     throw new Error(
@@ -89,6 +91,12 @@ function runRouteAndApply(options, deps = {}) {
   }
   if (!options.evidence) {
     throw new Error('--evidence <file> is required so supplemental proof is explicit');
+  }
+  if (!options.expectTransition) {
+    throw new Error('--expect-transition MARK_READY is required');
+  }
+  if (options.expectTransition !== ALLOWED_TRANSITIONS.MARK_READY) {
+    throw new Error('--expect-transition MARK_READY is required');
   }
 
   const reviewOptions = options.fixture ? { fixture: options.fixture } : { repo, prNumber };

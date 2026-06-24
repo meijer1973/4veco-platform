@@ -52,6 +52,36 @@ describe('route-and-apply-pr-readiness', () => {
     ).toThrow(/--evidence <file> is required/);
   });
 
+  test('requires expected MARK_READY before collecting or applying evidence', () => {
+    const runReview = jest.fn();
+    const applyDecision = jest.fn();
+
+    expect(() =>
+      runRouteAndApply(
+        {
+          repo: 'meijer1973/4veco-platform',
+          prNumber: 146,
+          evidence: 'evidence.json',
+        },
+        { runReview, applyDecision }
+      )
+    ).toThrow(/--expect-transition MARK_READY is required/);
+
+    expect(runReview).not.toHaveBeenCalled();
+    expect(applyDecision).not.toHaveBeenCalled();
+  });
+
+  test('rejects non-MARK_READY expected transitions', () => {
+    expect(() =>
+      runRouteAndApply({
+        repo: 'meijer1973/4veco-platform',
+        prNumber: 146,
+        evidence: 'evidence.json',
+        expectTransition: 'NONE',
+      })
+    ).toThrow(/--expect-transition MARK_READY is required/);
+  });
+
   test('runs real review and fixture-state application with expected MARK_READY', () => {
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'route-apply-'));
     const fixture = JSON.parse(

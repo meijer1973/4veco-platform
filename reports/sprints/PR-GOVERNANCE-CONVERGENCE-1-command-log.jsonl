@@ -1,4 +1,4 @@
-{"command":"npm.cmd run check:pr-readiness","status":"passed","summary":"4 suites, 88 tests"}
+{"command":"npm.cmd run check:pr-readiness","status":"passed","summary":"4 suites, 90 tests"}
 {"command":"npm.cmd run check:active-governance-wording","status":"passed"}
 {"command":"npm.cmd run check:integration-lane","status":"passed","summary":"8 suites, 77 tests"}
 {"command":"npm.cmd run check:scope-language","status":"passed"}
@@ -7,5 +7,6 @@
 {"command":"node build-scripts/sprints/emit-url-index.js --check","status":"passed"}
 {"command":"git diff --check","status":"passed"}
 {"command":"npm.cmd run finalization:freshness","status":"passed","summary":"remote main matched local origin/main and was ancestor of HEAD"}
-{"command":"gh run watch <platform-ci-run>","status":"pending_remote_head_push"}
+{"command":"lead review round 1 on 9318c3ff6369b506b8a4909cf382c7b0bf52e371","status":"request_changes","summary":"route-and-apply allowed missing --expect-transition MARK_READY"}
+{"command":"gh run watch <platform-ci-run>","status":"pending_corrected_remote_head_push"}
 {"command":"npm.cmd run route-and-apply:pr-readiness -- --pr 149 --evidence <evidence.json> --expect-transition MARK_READY","status":"pending_remote_ci_and_lead_review"}
