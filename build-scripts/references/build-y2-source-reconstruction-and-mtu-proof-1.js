@@ -240,13 +240,13 @@ function sourceGalleryHtml(sourceProof) {
     ].map((row) => row.map(html))
   );
   const b7Table = renderTable(
-    ['aantal contracten', 'gemiddelde omzet', 'betalingstermijn', 'kans wanbetaling', 'verwachte schade bij 90%'],
+    ['aantal contracten', 'gemiddelde omzet', 'betalingstermijn', 'kans wanbetaling', 'verwachte schade'],
     [
-      ['20', 'EUR 1.000.000', '90 dagen', '0.05%', 'EUR 9.000'],
-      ['30', 'EUR 500.000', '60 dagen', '0.2%', 'EUR 27.000'],
-      ['80', 'EUR 250.000', '60 dagen', '0.2%', 'EUR 36.000'],
-      ['totaal', '', '', '', 'EUR 72.000'],
-      ['premie +20%', '', '', '', 'EUR 86.400'],
+      ['20', 'EUR 1.000.000', '90 dagen', '0.05%', 'EUR 10.000'],
+      ['30', 'EUR 500.000', '60 dagen', '0.2%', 'EUR 30.000'],
+      ['80', 'EUR 250.000', '60 dagen', '0.2%', 'EUR 40.000'],
+      ['totaal', '', '', '', 'EUR 80.000'],
+      ['premie +20%', '', '', '', 'EUR 96.000'],
     ].map((row) => row.map(html))
   );
   const b8Matrix = renderTable(

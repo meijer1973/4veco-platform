@@ -104,6 +104,10 @@ coverage.
   0.2% default probability.
 - Preserve the premium rule: expected damage plus a 20% markup on expected
   damage.
+- Preserve the official correction-model calculation: q15 uses contract count
+  x average turnover x default probability, for EUR 80,000 expected damage and
+  EUR 96,000 total premium. The 90% indemnity condition supports the incentive
+  explanations but is not multiplied into the q15 premium base.
 - Mark which source elements support q12-q14 explanation and which support q15
   calculation.
 - Keep Q3 insurance-threshold evidence as complementary, not a production
@@ -144,7 +148,8 @@ insurance conditions change incentives, and calculate an expected premium.
   reduce the financial incentive to claim.
 - c: adverse-selection explanation: bonus-malus or voluntary deductible attracts
   good risks, or compulsory insurance removes selection.
-- d/e: expected-value calculation with markup and final premium conclusion.
+- d/e: expected-value calculation with markup and final premium conclusion,
+  using the official EUR 80,000 expected damage and EUR 96,000 premium.
 
 ## Required Prior Skills And MTU/Task-Family Compatibility
 
@@ -204,8 +209,8 @@ a lesson route.
     ]
   },
   "answer_form": {
-    "point_allocation": ["a: conflicting interests, asymmetric information, and condition", "b: two condition-and-incentive chains", "c: adverse-selection condition and reason", "d: expected-value calculation", "e: markup calculation and final conclusion"],
-    "short_answer_model": ["a: supplier and insurer have different incentives under asymmetric information; collection handoff/conditions reduce the agency problem.", "b: deductible-like indemnity and bonus-malus reduce the incentive to claim carelessly.", "c: bonus-malus, voluntary deductible, or compulsory insurance can reduce selection by changing who enters the pool.", "d: multiply contract count, turnover, indemnity exposure, and default probability for each row.", "e: add 20% markup to expected damage and state the premium."]
+    "point_allocation": ["a: insurer-principal, buying-company-agent, asymmetric information, and collection-cost condition", "b: two condition-and-incentive chains", "c: adverse-selection condition and reason", "d: expected-value calculation", "e: markup calculation and final conclusion"],
+    "short_answer_model": ["a: the credit insurer is principal and the buying company is agent; charging collection costs to the buying company reduces the agency problem.", "b: deductible-like indemnity and bonus-malus reduce the incentive to claim carelessly.", "c: bonus-malus, voluntary deductible, or compulsory insurance can reduce selection by changing who enters the pool.", "d: multiply contract count, turnover, and default probability for each row; expected damage is EUR 80,000.", "e: add the 20% markup; total premium is EUR 96,000."]
   },
   "source_reconstruction_required": true,
   "op_rows": ["OP-R1", "OP-M1", "OP-ANS2", "OP-ANS3"],

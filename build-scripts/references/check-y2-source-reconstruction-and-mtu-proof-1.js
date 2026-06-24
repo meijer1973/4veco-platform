@@ -59,8 +59,8 @@ const EXPECTED = [
     htmlNeedles: [
       'vw-1022-a-23-1-o.pdf#page=6',
       '90% indemnity',
-      'EUR 72.000',
-      'EUR 86.400',
+      'EUR 80.000',
+      'EUR 96.000',
       'bonus-malus',
     ],
   },
