@@ -1,12 +1,12 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-06-23T08:09:44.621Z
+Generated: 2026-06-24T11:56:27.217Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
-Source branch: `codex/reasoning-golden-family-lessen-20260620`
-Source commit: `f20ec7f8e1c805114caddaef12d45bd716ec1b98`
+Source branch: `HEAD`
+Source commit: `062eef805b4c5c2c67958925ff42d96a1065734a`
 Files indexed: 1747
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 

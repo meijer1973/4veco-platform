@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H6-CLOSURE-H7-BLIND-HOLDOUT-GENERALIZATION-BUNDLE-1",
+  "artifact_id": "mtu-h6-current-main-closure-readiness-record-1",
+  "status": "h6_closure_readiness_verified_on_current_main",
+  "generated_at": "2026-06-24T11:50:34.954Z",
+  "current_branch": "codex/mtu-h6-closure-h7-blind-holdout-20260624",
+  "current_main_sha": "93038f7d0c5939e43551e3f4ca6fadd8343531a1",
+  "h6_pr": 132,
+  "h6_reviewed_remote_head_sha": "f23f2e6e151f6c0577bbc9afae76622eae578a86",
+  "h6_merge_sha": "95601ff21b69754d1f82dcca5647edb46ae5a62f",
+  "sibling_lesson_repo_context": {
+    "path": "../4veco-lessen",
+    "local_head_sha_used_for_platform_validation": "062eef805b4c5c2c67958925ff42d96a1065734a"
+  },
+  "source_artifacts": {
+    "h6_package": "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json",
+    "h6_report": "reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.json",
+    "h6_gate": "reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.json",
+    "h5_anchor_audit": "reports/mtu-hardening/mtu-h5-anchor-integrity-audit.json"
+  },
+  "current_main_validation_evidence": {
+    "commands": [
+      {
+        "command": "node build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+        "expected_status": "pass"
+      },
+      {
+        "command": "node build-scripts/references/check-mtu-h5-anchor-integrity.js",
+        "expected_status": "pass"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "expected_status": "pass"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "expected_status": "pass"
+      },
+      {
+        "command": "npm run check:platform",
+        "expected_status": "pass",
+        "local_note": "The sibling lesson repository must be current enough to include the merged graph-transfer presentation output."
+      }
+    ],
+    "last_local_result_recorded_by_builder": "pass_before_artifact_generation"
+  },
+  "h6_evidence_summary": {
+    "package_status": "ready_for_human_review_after_atomic_h6_closure_readiness_review",
+    "report_status": "passed",
+    "gate_status": "pending_human_review",
+    "h5_anchor_integrity_status": "passed",
+    "records": 7,
+    "operations": 25,
+    "rendered_evidence_refs": 13,
+    "negative_regression_fixtures": 7,
+    "record_ids": [
+      "vw-1022-a-24-1-o:opgave-1:question-3",
+      "vw-1022-a-24-1-o:opgave-1:question-4",
+      "vw-1022-a-24-1-o:opgave-1:question-6",
+      "ha-1022-a-23-2-o:opgave-2:question-10",
+      "ha-1022-a-23-1-o:opgave-5:question-22",
+      "vw-1022-a-23-2-o:opgave-5:question-23",
+      "vw-1022-a-24-2-o:opgave-4:question-18"
+    ],
+    "blocker_summary": {
+      "h5_unresolved_refs": 0,
+      "h5_ambiguous_refs": 0,
+      "h5_semantic_mappings_unchanged": true
+    }
+  },
+  "closure_claims": {
+    "h6_closure_readiness_verified_for_tooling_and_review_packet_scope": true,
+    "h6_full_closure_claimed": false,
+    "h6_product_route_ready": false,
+    "scale_gate_ready": false,
+    "diagnostics_mastery_pv_ready": false,
+    "student_or_summative_use_ready": false
+  },
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_authorized": false,
+    "candidate_write_authorized": false,
+    "lesson_output_authorized": false,
+    "product_route_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "adaptive_routing_authorized": false,
+    "sequencing_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false
+  },
+  "next_step": "freeze_method_and_run_h7_blind_holdout_protocol_without_broadening_authority"
+}
