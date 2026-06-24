@@ -8,5 +8,6 @@
 {"command":"git diff --check","status":"passed"}
 {"command":"npm.cmd run finalization:freshness","status":"passed","summary":"remote main matched local origin/main and was ancestor of HEAD"}
 {"command":"lead review round 1 on 9318c3ff6369b506b8a4909cf382c7b0bf52e371","status":"request_changes","summary":"route-and-apply allowed missing --expect-transition MARK_READY"}
-{"command":"gh run watch <platform-ci-run>","status":"pending_corrected_remote_head_push"}
-{"command":"npm.cmd run route-and-apply:pr-readiness -- --pr 149 --evidence <evidence.json> --expect-transition MARK_READY","status":"pending_remote_ci_and_lead_review"}
+{"command":"remote platform-ci run 28105800155 on 8e4ad9d3ad969d691a2a58a0a99ec6ad3beef1d3","status":"passed"}
+{"command":"lead review round 2 on 8e4ad9d3ad969d691a2a58a0a99ec6ad3beef1d3","status":"passed"}
+{"command":"npm.cmd run route-and-apply:pr-readiness -- --pr 149 --evidence <evidence.json> --expect-transition MARK_READY","status":"pending_readiness_application"}

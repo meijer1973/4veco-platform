@@ -12,5 +12,6 @@
 | `git diff --check` | passed |
 | `npm.cmd run finalization:freshness` | passed; remote `main` matched local `origin/main` and was ancestor of `HEAD` |
 | lead review round 1 on `9318c3ff6369b506b8a4909cf382c7b0bf52e371` | request changes; missing `--expect-transition MARK_READY` hard requirement |
-| `gh run watch <platform-ci-run>` | pending corrected remote head push |
-| `npm.cmd run route-and-apply:pr-readiness -- --pr 149 --evidence <evidence.json> --expect-transition MARK_READY` | pending remote CI and lead review |
+| remote `platform-ci` run `28105800155` on `8e4ad9d3ad969d691a2a58a0a99ec6ad3beef1d3` | passed |
+| lead review round 2 on `8e4ad9d3ad969d691a2a58a0a99ec6ad3beef1d3` | passed |
+| `npm.cmd run route-and-apply:pr-readiness -- --pr 149 --evidence <evidence.json> --expect-transition MARK_READY` | pending readiness application |

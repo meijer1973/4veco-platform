@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-24T14:13:35.508Z
+Generated: 2026-06-24T14:33:08.767Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/pr-governance-convergence-1-20260624`
-Source commit: `b6d8a9ef93adf99fe16f43e191b35ae01ea1b4f4`
-Files indexed: 6096
+Source commit: `8e4ad9d3ad969d691a2a58a0a99ec6ad3beef1d3`
+Files indexed: 6102
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2092,7 +2092,7 @@ Count: 737
 
 ## reports
 
-Count: 3951
+Count: 3957
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5101,6 +5101,12 @@ Count: 3951
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.jsonl
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-correction-record.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-lead-review-round2.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-plan.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-result.md
 - reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/axis-convention.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/dark-mode.png
