@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "packet_id": "A96-CALCULATION-ANSWER-FORM-REFINEMENT-1",
+  "sprint_id": "A96-CALCULATION-ANSWER-FORM-REFINEMENT-1",
+  "pr_number": null,
+  "pr_url": null,
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "product_authority",
+  "date": "2026-06-24",
+  "human_decision_required": true,
+  "auto_merge_allowed_after_ci": false,
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+    "rationale": "A96 answer-form refinement is implemented and recaptured. Scale Gate 1 is ready for human review but not authorized or closed by this packet."
+  },
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "references/ui/exercise-workbench-policy.md",
+    "references/ui/interaction-policy.md",
+    "references/ui/layout-registry.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "references/exemplars/a96-answer-form/implementation-handoff.md",
+    "references/exemplars/a96-answer-form/candidate-data.json",
+    "references/exemplars/a96-answer-form/negative-fixtures.json",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-result.md",
+    "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json"
+  ],
+  "non_negotiable_requirements": [
+    "A96 must require visible formula/method, labelled substitution, final answer, notation, and contextual direction sentence.",
+    "Final-answer-only and source-values-only responses must not pass.",
+    "The formula token bank must not be arranged in accepted answer order.",
+    "The old price must be one reusable visible token with maxUses:2, not duplicate hidden answer-token labels.",
+    "The generated lesson output must be regenerated through the normal platform deploy path, not hand-edited.",
+    "Completion language remains held for the first-three exit-ticket routes.",
+    "Do not authorize product-route adoption, diagnostics, mastery/sequencing, PV, summative use, Scale Gate 1 closure, broad product use, student/product use, or target-equivalent completion language.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "A96 exemplar and prior Scale proof packet refs"
+    },
+    {
+      "requirement": "A96 visible answer-form route implemented",
+      "status": "met",
+      "evidence": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json#prijsstijging-procent"
+    },
+    {
+      "requirement": "Formula/method required",
+      "status": "met",
+      "evidence": "expected.methodTokens and rendered formula token controls"
+    },
+    {
+      "requirement": "Labelled substitution required",
+      "status": "met",
+      "evidence": "newPrice, oldPriceNumerator, oldPriceDenominator fields"
+    },
+    {
+      "requirement": "Final answer and notation required",
+      "status": "met",
+      "evidence": "expected.finalAnswer plus expected.notation.required:true"
+    },
+    {
+      "requirement": "Contextual direction sentence required",
+      "status": "met",
+      "evidence": "expected.conclusion.requiredTextGroups"
+    },
+    {
+      "requirement": "Negative A96 cases rejected",
+      "status": "met",
+      "evidence": "Golden layout and engine tests reject final-answer-only and wrong-denominator shapes"
+    },
+    {
+      "requirement": "Generated lesson output refreshed",
+      "status": "met",
+      "evidence": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js"
+    },
+    {
+      "requirement": "Rendered first-three product-path proof recaptured",
+      "status": "met",
+      "evidence": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json"
+    },
+    {
+      "requirement": "Completion language remains held",
+      "status": "met",
+      "evidence": "completionLanguageEligible:false in refreshed proof"
+    },
+    {
+      "requirement": "No downstream authority claimed",
+      "status": "met",
+      "evidence": "authority flags false in A96 and Scale proof JSON"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "lead recommendation is READY_FOR_HUMAN_SCALE_GATE_1_REVIEW, not PASS WITH FLAGS"
+    }
+  ],
+  "changed_paths": [
+    "build-scripts/lib/golden-exercise-policy-checks.js",
+    "build-scripts/platform/build-exit-ticket-shells.test.js",
+    "build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+    "build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+    "engines/exit-ticket-ui.js",
+    "engines/golden-ticket-layout.css",
+    "engines/golden-ticket-layout.js",
+    "engines/tests/exit-ticket-engine.test.js",
+    "engines/tests/exit-ticket-ui.test.js",
+    "engines/tests/golden-ticket-layout.test.js",
+    "references/ui/layout-registry.json",
+    "references/ui/layout-registry.md",
+    "references/ui/shared-task-rollout-policy.md",
+    "reports/json/a96-calculation-answer-form-refinement-1-proof.json",
+    "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "reports/review-gates/A96-CALCULATION-ANSWER-FORM-REFINEMENT-1/",
+    "reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json",
+    "reports/sprints/A96-CALCULATION-ANSWER-FORM-REFINEMENT-1-evidence-map.md",
+    "reports/sprints/A96-CALCULATION-ANSWER-FORM-REFINEMENT-1-plan.md",
+    "reports/sprints/A96-CALCULATION-ANSWER-FORM-REFINEMENT-1-quality-log.md",
+    "reports/sprints/A96-CALCULATION-ANSWER-FORM-REFINEMENT-1-result.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-evidence-map.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-quality-log.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-result.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-desktop-light-overview.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-mobile-dark-exit-row.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-practice-desktop-light-redeneer-spel.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-initial.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-desktop-light-overview.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-mobile-dark-exit-row.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-desktop-light-overview.png",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/manifest.json",
+    "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json"
+  ],
+  "lesson_changed_paths": [
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/index.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket-ui.js",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.css",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.js",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-engine.js",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-ui.js",
+    "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell.css"
+  ],
+  "paired_prs": [],
+  "authority_claims": {
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "source_flags_mutated": false,
+    "route_migration_performed": false,
+    "generated_lesson_output_changed": true
+  },
+  "findings": [],
+  "carried_issues": [],
+  "resolved_issues": [
+    {
+      "id": "SCALE3P-A96-001",
+      "classification": "resolved",
+      "severity": "core_requirement_missing",
+      "summary": "A96 calculation answer-form refinement was implemented and rendered in the real 1.1.2 exit-ticket route.",
+      "blocks": [],
+      "does_not_block": [
+        "human Scale Gate 1 review"
+      ],
+      "proof_required_to_close": "Satisfied by A96 proof JSON plus refreshed Scale proof checker."
+    }
+  ],
+  "proof": {
+    "lead_review": {
+      "verdict": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+      "status": "completed",
+      "summary": "A96 route evidence is complete. Scale Gate 1 is ready for human review and remains unauthorized until explicit owner decision."
+    },
+    "machine_proof": "reports/json/a96-calculation-answer-form-refinement-1-proof.json",
+    "refreshed_scale_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "route_inventory": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md",
+    "screenshot_manifest": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md",
+    "capture": {
+      "command": "node build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+      "status": "passed"
+    },
+    "checker": {
+      "command": "node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+      "status": "passed"
+    },
+    "validation": [
+      {
+        "command": "node scripts/deploy.js \"C:\\wt\\A96-CALCULATION-ANSWER-FORM-20260624\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scale-proof-3p-product-path",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:review-throughput -- reports/review-gates/A96-CALCULATION-ANSWER-FORM-REFINEMENT-1/review-packet.json",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\A96-CALCULATION-ANSWER-FORM-20260624\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ]
+  },
+  "proof_summary": {
+    "a96_ready": {
+      "formula_or_calculation_method": true,
+      "labelled_substitution": true,
+      "intermediate_work_visible_through_formula_and_substitution": true,
+      "final_answer": true,
+      "unit_or_notation_required": true,
+      "short_contextual_conclusion": true,
+      "old_work_textarea_replaced_for_a96_task": true,
+      "token_display_order_not_answer_order": true,
+      "reusable_old_price_token_max_uses_two": true,
+      "duplicate_visible_answer_token_labels_absent": true
+    },
+    "scale_gate_readiness": {
+      "product_path_evidence_ready_for_human_review": true,
+      "scale_gate_1_ready_for_human_review": true,
+      "scale_gate_1_ready": true,
+      "scale_gate_1_authority_status": "READY_FOR_HUMAN_REVIEW_NOT_AUTHORIZED",
+      "scale_gate_1_hold_reason": null,
+      "a96_calculation_answer_form_refinement_ready": true,
+      "product_route_adoption_authorized": false,
+      "diagnostics_mastery_pv_student_use_authorized": false,
+      "claim_scope": "first_three_paragraphs_rendered_product_path_only"
+    },
+    "boundary": {
+      "product_route_adoption_authorized": false,
+      "product_use_authorized": false,
+      "student_product_use_authorized": false,
+      "scale_gate_1_authorized": false,
+      "diagnostics_authorized": false,
+      "mastery_or_sequencing_authorized": false,
+      "pv_authorized": false,
+      "summative_use_authorized": false,
+      "target_equivalent_completion_language_authorized": false
+    }
+  },
+  "review_route": "READY_FOR_HUMAN_REVIEW",
+  "recommended_next_step": "Open paired platform and lesson PRs, run PR Readiness Reviewer on exact heads, then route to human Scale Gate 1 review. Merge only after explicit owner authorization for exact heads.",
+  "escalation_triggers": [
+    "scale_gate_preparation",
+    "product_authority",
+    "student_product_use_boundary",
+    "target_equivalence_boundary",
+    "generated_lesson_output_pair",
+    "a96_calculation_answer_form"
+  ]
+}

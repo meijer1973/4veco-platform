@@ -2,7 +2,7 @@
 
 Date: 2026-06-22
 
-Verdict: PRODUCT_PATH_EVIDENCE_READY_FOR_HUMAN_REVIEW; SCALE_GATE_1_HELD_ON_A96.
+Verdict: SCALE_GATE_1_READY_FOR_HUMAN_REVIEW; NOT AUTHORIZED.
 
 ## What Changed
 
@@ -15,13 +15,16 @@ Verdict: PRODUCT_PATH_EVIDENCE_READY_FOR_HUMAN_REVIEW; SCALE_GATE_1_HELD_ON_A96.
   same-copy hygiene.
 - Wrote machine proof JSON, screenshot manifest, route inventory, plan,
   evidence map, quality log, result, and REV-STD-1 review packet.
+- Refreshed the proof after `A96-CALCULATION-ANSWER-FORM-REFINEMENT-1` so
+  `1.1.2` now uses a rendered calculation answer form rather than a generic
+  work textarea for `prijsstijging-procent`.
 
 ## Proof Summary
 
 | Proof item | Result |
 |---|---|
-| Machine proof status | `scale_proof_3p_product_path_ready_with_a96_hold` |
-| Lead recommendation in proof JSON | `HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1` |
+| Machine proof status | `scale_gate_1_ready_for_human_review` |
+| Lead recommendation in proof JSON | `READY_FOR_HUMAN_SCALE_GATE_1_REVIEW` |
 | Authority issue count | `0` |
 | Screenshots captured | `37` |
 | First-three route families present | true |
@@ -36,8 +39,9 @@ Verdict: PRODUCT_PATH_EVIDENCE_READY_FOR_HUMAN_REVIEW; SCALE_GATE_1_HELD_ON_A96.
 | Broad authority terms absent in captures | true |
 | First-three landing authority copy neutral | true |
 | `1.1.4` same-copy hygiene neutral, not gate claim | true |
-| A96 calculation answer-form refinement ready | false |
-| Scale Gate 1 ready | false |
+| A96 calculation answer-form refinement ready | true |
+| Scale Gate 1 ready for human review | true |
+| Scale Gate 1 authorized | false |
 
 ## Core Requirement Checklist
 
@@ -51,27 +55,27 @@ Verdict: PRODUCT_PATH_EVIDENCE_READY_FOR_HUMAN_REVIEW; SCALE_GATE_1_HELD_ON_A96.
 | Exit tickets remain target-readiness evidence with completion language held | met | `completionLanguageEligible:false` for 1.1.1, 1.1.2, 1.1.3 |
 | All first-three short checks and exit tickets use Golden Workbench | met | `proof.all_first_three_check_exit_surfaces_golden:true` |
 | No downstream authority claimed | met | Authority flags all false |
-| A96 calculation answer-form refinement resolved or waived | not_met | Carried blocker `SCALE3P-A96-001` |
-| No missing core requirement carried under PASS WITH FLAGS | met | Verdict is HOLD for Scale Gate 1, not PASS WITH FLAGS |
+| A96 calculation answer-form refinement resolved or waived | met | `A96-CALCULATION-ANSWER-FORM-REFINEMENT-1` proof JSON and refreshed Scale proof |
+| No missing core requirement carried under PASS WITH FLAGS | met | Verdict is READY_FOR_HUMAN_SCALE_GATE_1_REVIEW, not PASS WITH FLAGS |
 
 ## Internal Review
 
 | Reviewer | Verdict |
 |---|---|
-| authority-boundary | PASS for product-path proof; Scale Gate 1 held |
+| authority-boundary | PASS for review readiness; Scale Gate 1 remains unauthorized |
 | rendered/mobile | PASS |
 | route/link | PASS |
 | teacher/didactic | PASS_WITH_NOTE: one Learn page includes ordinary didactic phrase `je beheerst`; not on landing/check/exit authority surfaces |
 | repository/CI | PASS after focused checker |
-| lead | `HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1` |
+| lead | `READY_FOR_HUMAN_SCALE_GATE_1_REVIEW` |
 
 ## Finding Classification
 
 | Finding | Classification | Blocks | Does not block |
 |---|---|---|---|
-| `SCALE3P-A96-001` A96 calculation answer-form refinement remains unresolved or unwaived | blocks | Scale Gate 1 closure, product-route adoption, student/product use | Human review of the rendered first-three product-path proof packet, ordinary scoped PR work |
+| `SCALE3P-A96-001` A96 calculation answer-form refinement | resolved | none | Human Scale Gate 1 review |
 
-Proof required to close: complete `A96-CALCULATION-ANSWER-FORM-REFINEMENT-1` or record an explicit human waiver, then recapture and rerun the Scale-proof checker.
+Proof used to close: `A96-CALCULATION-ANSWER-FORM-REFINEMENT-1` plus the refreshed `scale-proof-3p-readiness-product-path-proof-1-proof.json`.
 
 ## Boundary
 
@@ -82,12 +86,13 @@ This packet does not authorize:
 - mastery/sequencing;
 - PV;
 - summative use;
-- Scale Gate 1;
+- Scale Gate 1 closure;
 - broad product use;
 - student/product use;
 - target-equivalent completion language.
 
 ## Current Return Condition
 
-The product-path evidence packet is substantial and ready for human review as a
-Scale Gate preparation artifact. Scale Gate 1 itself remains held on A96.
+The product-path evidence packet and A96 refinement are ready for human Scale
+Gate 1 review. Scale Gate 1 itself remains unauthorized until an explicit
+human/owner gate decision.

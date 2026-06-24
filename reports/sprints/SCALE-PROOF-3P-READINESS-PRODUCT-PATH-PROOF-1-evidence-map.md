@@ -38,8 +38,8 @@ Date: 2026-06-22
 |---|---|
 | Product-route adoption not authorized | Proof JSON `authority.product_route_adoption_authorized:false` |
 | Diagnostics/mastery/PV/student use not authorized | Proof JSON `authority.*:false` |
-| Scale Gate 1 not authorized | Proof JSON `authority.scale_gate_1_authorized:false` and `scale_gate_readiness.scale_gate_1_ready:false` |
-| A96 remains held | Proof JSON `scale_gate_readiness.scale_gate_1_hold_reason` and result finding `SCALE3P-A96-001` |
+| Scale Gate 1 ready for human review, not authorized | Proof JSON `scale_gate_readiness.scale_gate_1_ready_for_human_review:true`, `scale_gate_readiness.scale_gate_1_authority_status:READY_FOR_HUMAN_REVIEW_NOT_AUTHORIZED`, and `authority.scale_gate_1_authorized:false` |
+| A96 answer-form refinement ready | Proof JSON `proof.a96_calculation_answer_form_refinement_ready:true` and `reports/json/a96-calculation-answer-form-refinement-1-proof.json` |
 
 ## Checker And CI Wiring
 

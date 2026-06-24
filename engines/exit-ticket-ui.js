@@ -407,6 +407,12 @@
           unitNotation: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="unit-notation"]')
         };
     }
+    if (task.family === 'calculation_answer_form_capture') {
+      var AnswerFormTaskShellUI = resolveTaskShellUI();
+      return AnswerFormTaskShellUI && AnswerFormTaskShellUI.collectCalculationAnswerFormResponse
+        ? AnswerFormTaskShellUI.collectCalculationAnswerFormResponse(wrapper, task)
+        : { methodTokens: [], substitution: {}, finalAnswer: '', notation: '', conclusion: '' };
+    }
     if (task.family === 'structured_short_response') {
       var fields = {};
       var fieldInputs = wrapper.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="structured-field"]');

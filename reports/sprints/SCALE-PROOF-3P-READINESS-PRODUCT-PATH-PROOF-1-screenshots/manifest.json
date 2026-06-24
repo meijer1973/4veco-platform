@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1",
-  "generated": "2026-06-22T10:29:30.680Z",
+  "generated": "2026-06-24T12:09:51.363Z",
   "screenshots": [
     {
       "id": "111-landing-desktop-light-overview",
@@ -16,7 +16,7 @@
       "scroll_selector": ".route-strip",
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-desktop-light-overview.png",
-        "bytes": 344815,
+        "bytes": 344553,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -47,6 +47,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -98,6 +99,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -148,6 +150,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -209,6 +212,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -231,7 +235,7 @@
       },
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-skill-map-desktop-light-wiskundevaardigheden.png",
-        "bytes": 187452,
+        "bytes": 186224,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -262,6 +266,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -327,6 +332,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -386,6 +392,7 @@
           "golden_graph": 0,
           "context_blocks": 4
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [
@@ -459,6 +466,7 @@
           "golden_graph": 0,
           "context_blocks": 4
         },
+        "a96_answer_form": null,
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
@@ -553,6 +561,7 @@
           "golden_graph": 0,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [
@@ -626,6 +635,7 @@
           "golden_graph": 0,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
@@ -720,6 +730,7 @@
           "golden_graph": 0,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
@@ -774,7 +785,7 @@
       },
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-practice-desktop-light-redeneer-spel.png",
-        "bytes": 204604,
+        "bytes": 175011,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -789,7 +800,7 @@
           "height": 900
         },
         "horizontal_overflow": false,
-        "body_text_excerpt": "← Terug naar overzicht 1.1.1 Schaarste en economisch denken – Redeneer-spel Schaarste en economisch denken Train je redeneervaardigheid. Kies een spelmodus om te beginnen. 🔢 Stappen ordenen Selecteer 3 juiste stappen en zet ze in de goede volgorde. 5 rondes ❓ Deelvragen opbouwen Kies de 3 juiste deelvragen in de goede volgorde. 5 rondes 🔍 Vind de fout Welke van de 3 stappen bevat een fout? 5 rondes 📈 Stroomdiagram bouwen Bouw een stroomdiagram door blokken in de juiste volgorde te plaatsen. 5 rondes 🧩 Structuren matchen Koppel 6 opgaven aan 3 paren die dezelfde oplossingsstructuur delen. 1 ronde ✍️ Redeneerantwoord opbouwen Schrijf zelf een korte oorzaak-tussenstap-conclusie redenering. 5 rondes 📊 Structuurtypen in deze les: A: Situatie herkennen → Schaarste benoemen → Alternatieve kosten bepalen (4 opgaven) B: Alternatieven opsommen → Opbrengst per alternatief berekenen → Beste nie",
+        "body_text_excerpt": "← Terug naar overzicht 1.1.1 Schaarste en economisch denken – Redeneer-spel Schaarste en economisch denken Train je redeneervaardigheid. Kies een spelmodus om te beginnen.",
         "forbidden_authority_terms": [],
         "target_completion_terms": [],
         "roots": {
@@ -805,6 +816,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -815,18 +827,7 @@
           "../../shared/skill-map-route.css",
           "../../shared/task-shell.css",
           "../../shared/reasoning.css",
-          "../../shared/theme.js",
-          "../../shared/skill-map-engine.js",
-          "../../shared/skilltree/base-elements.js",
-          "../../shared/skilltree/1.1.1.js",
-          "../../shared/skill-map-route-ui.js",
-          "../../shared/reasoning/1.1.1.js",
-          "../../shared/reasoning/meta-categories.js",
-          "../../shared/adaptive-seam.js",
-          "../../shared/task-shell-engine.js",
-          "../../shared/task-shell-ui.js",
-          "../../shared/reasoning-engine.js",
-          "../../shared/reasoning-ui.js"
+          "../../shared/theme.js"
         ]
       }
     },
@@ -843,7 +844,7 @@
       "scroll_selector": ".route-strip",
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-desktop-light-overview.png",
-        "bytes": 370742,
+        "bytes": 370343,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -874,6 +875,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -894,7 +896,7 @@
       "scroll_selector": "#exit-ticket .tile",
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-mobile-dark-exit-row.png",
-        "bytes": 55937,
+        "bytes": 55191,
         "dimensions": {
           "width": 390,
           "height": 844
@@ -925,6 +927,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -975,6 +978,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1038,6 +1042,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1091,6 +1096,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1156,6 +1162,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1215,6 +1222,7 @@
           "golden_graph": 0,
           "context_blocks": 3
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [
@@ -1288,6 +1296,7 @@
           "golden_graph": 0,
           "context_blocks": 3
         },
+        "a96_answer_form": null,
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
@@ -1338,7 +1347,7 @@
       },
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-initial.png",
-        "bytes": 111111,
+        "bytes": 126668,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -1353,7 +1362,7 @@
           "height": 900
         },
         "horizontal_overflow": false,
-        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Donkere modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKENING Procentuele verandering berekenen Bereken een procentuele stijging vanuit een oude en nieuwe prijs. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Berekening Methode, invulling en tussenstap Antwoord en notatie Eindantwoord in procenten Notatie Controleer onderdeel 2 BEREKENING Indexcijfer berekenen Zet een waarde om naar een ",
+        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Donkere modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKEN-ANTWOORDVORM Bereken-vraag beantwoorden Bouw de volledige bereken-antwoordvorm voor een procentuele prijsstijging. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Gebruik: Bron 1 Kies de formule of rekenregel Gebruik de blokken om de procentuele verandering te bouwen. x 100% nieuwe prijs + ( / oude prijs - nieuwe prijs oude prijs ",
         "forbidden_authority_terms": [],
         "target_completion_terms": [],
         "roots": {
@@ -1376,6 +1385,22 @@
           "golden_task": 4,
           "golden_graph": 0,
           "context_blocks": 3
+        },
+        "a96_answer_form": {
+          "present": true,
+          "family": "calculation_answer_form_capture",
+          "formula_token_count": 11,
+          "selected_formula_token_count": 0,
+          "substitution_field_ids": [
+            "newPrice",
+            "oldPriceNumerator",
+            "oldPriceDenominator"
+          ],
+          "final_answer_field_present": true,
+          "notation_field_present": true,
+          "conclusion_field_present": true,
+          "old_work_textarea_present": false,
+          "missing_feedback_count": 0
         },
         "feedback": [],
         "feedback_good_count": 0,
@@ -1411,7 +1436,7 @@
       },
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png",
-        "bytes": 87430,
+        "bytes": 87416,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -1426,7 +1451,7 @@
           "height": 900
         },
         "horizontal_overflow": false,
-        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Donkere modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKENING Procentuele verandering berekenen Bereken een procentuele stijging vanuit een oude en nieuwe prijs. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Berekening Methode, invulling en tussenstap Antwoord en notatie Eindantwoord in procenten Notatie Controleer onderdeel Berekening klopt Je gebruikt de oude prijs als basis en komt u",
+        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Donkere modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKEN-ANTWOORDVORM Bereken-vraag beantwoorden Bouw de volledige bereken-antwoordvorm voor een procentuele prijsstijging. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Gebruik: Bron 1 Kies de formule of rekenregel Gebruik de blokken om de procentuele verandering te bouwen. x 100% nieuwe prijs + ( / oude prijs - nieuwe prijs oude prijs ",
         "forbidden_authority_terms": [],
         "target_completion_terms": [],
         "roots": {
@@ -1450,11 +1475,27 @@
           "golden_graph": 0,
           "context_blocks": 3
         },
+        "a96_answer_form": {
+          "present": true,
+          "family": "calculation_answer_form_capture",
+          "formula_token_count": 11,
+          "selected_formula_token_count": 8,
+          "substitution_field_ids": [
+            "newPrice",
+            "oldPriceNumerator",
+            "oldPriceDenominator"
+          ],
+          "final_answer_field_present": true,
+          "notation_field_present": true,
+          "conclusion_field_present": true,
+          "old_work_textarea_present": false,
+          "missing_feedback_count": 0
+        },
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
             "tone": "good",
-            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+            "text": "Berekening compleet Je laat methode, invulling, procentnotatie en conclusie zien."
           },
           {
             "selector": "ge-feedback is-visible is-good",
@@ -1505,7 +1546,7 @@
       },
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png",
-        "bytes": 62882,
+        "bytes": 62874,
         "dimensions": {
           "width": 390,
           "height": 844
@@ -1520,7 +1561,7 @@
           "height": 844
         },
         "horizontal_overflow": false,
-        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Lichte modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKENING Procentuele verandering berekenen Bereken een procentuele stijging vanuit een oude en nieuwe prijs. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Berekening Methode, invulling en tussenstap Antwoord en notatie Eindantwoord in procenten Notatie Controleer onderdeel Berekening klopt Je gebruikt de oude prijs als basis en komt ui",
+        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Lichte modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKEN-ANTWOORDVORM Bereken-vraag beantwoorden Bouw de volledige bereken-antwoordvorm voor een procentuele prijsstijging. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Gebruik: Bron 1 Kies de formule of rekenregel Gebruik de blokken om de procentuele verandering te bouwen. x 100% nieuwe prijs + ( / oude prijs - nieuwe prijs oude prijs )",
         "forbidden_authority_terms": [],
         "target_completion_terms": [],
         "roots": {
@@ -1544,11 +1585,27 @@
           "golden_graph": 0,
           "context_blocks": 3
         },
+        "a96_answer_form": {
+          "present": true,
+          "family": "calculation_answer_form_capture",
+          "formula_token_count": 11,
+          "selected_formula_token_count": 8,
+          "substitution_field_ids": [
+            "newPrice",
+            "oldPriceNumerator",
+            "oldPriceDenominator"
+          ],
+          "final_answer_field_present": true,
+          "notation_field_present": true,
+          "conclusion_field_present": true,
+          "old_work_textarea_present": false,
+          "missing_feedback_count": 0
+        },
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
             "tone": "good",
-            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+            "text": "Berekening compleet Je laat methode, invulling, procentnotatie en conclusie zien."
           },
           {
             "selector": "ge-feedback is-visible is-good",
@@ -1629,6 +1686,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1664,7 +1722,7 @@
       "scroll_selector": ".route-strip",
       "screenshot": {
         "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-desktop-light-overview.png",
-        "bytes": 368334,
+        "bytes": 367927,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -1695,6 +1753,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1746,6 +1805,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1796,6 +1856,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1857,6 +1918,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1911,6 +1973,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -1976,6 +2039,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -2035,6 +2099,7 @@
           "golden_graph": 1,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [
@@ -2109,6 +2174,7 @@
           "golden_graph": 1,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
@@ -2199,6 +2265,7 @@
           "golden_graph": 1,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [
@@ -2273,6 +2340,7 @@
           "golden_graph": 1,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
@@ -2363,6 +2431,7 @@
           "golden_graph": 1,
           "context_blocks": 2
         },
+        "a96_answer_form": null,
         "feedback": [
           {
             "selector": "ge-feedback is-visible is-good",
@@ -2444,6 +2513,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],
@@ -2515,6 +2585,7 @@
           "golden_graph": 0,
           "context_blocks": 0
         },
+        "a96_answer_form": null,
         "feedback": [],
         "feedback_good_count": 0,
         "completion_nodes": [],

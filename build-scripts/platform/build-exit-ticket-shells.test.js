@@ -80,6 +80,8 @@ describe('exit-ticket shell Golden Exercise renderer selection', () => {
     expect(html).toContain('shared/exit-ticket/1.1.2-exit-ticket.js');
     expect(html).toContain('shared/golden-ticket-layout.css');
     expect(html).toContain('shared/golden-ticket-layout.js');
+    expect(html).toContain('data-ge-answer-form-task');
+    expect(html).toContain('data-ge-formula-token-id');
     expect(html).toContain('data-ge-work');
     expect(html).toContain('data-ge-structured-choice');
     expect(html).not.toContain('shared/golden-ticket-graph.js');

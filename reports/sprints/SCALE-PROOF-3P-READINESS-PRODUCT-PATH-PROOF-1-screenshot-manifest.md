@@ -1,6 +1,6 @@
 # SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1 Screenshot Manifest
 
-Generated: 2026-06-22T10:29:30.680Z
+Generated: 2026-06-24T12:09:51.363Z
 
 Screenshots were captured from generated Book 1 output served from the local lesson worktree.
 

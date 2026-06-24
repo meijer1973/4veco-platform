@@ -43,15 +43,35 @@ describe('GoldenTicketLayout', () => {
 
     test('evaluates 1.1.2 calculation and structured responses without legacy task-shell UI', () => {
         expect(GoldenTicketLayout.evaluateTaskResponse(task('prijsstijging-procent'), {
-            work: '(920 - 800) / 800 x 100',
-            finalAnswer: '15%',
-            unitNotation: '%',
+            methodTokens: ['open', 'newPrice', 'minus', 'oldPrice', 'close', 'divide', 'oldPrice', 'times100'],
+            substitution: {
+                newPrice: '920',
+                oldPriceNumerator: '800',
+                oldPriceDenominator: '800',
+            },
+            finalAnswer: '15',
+            notation: '%',
+            conclusion: 'De prijs van de fiets stijgt met 15 procent.',
         })).toBe(true);
 
         expect(GoldenTicketLayout.evaluateTaskResponse(task('prijsstijging-procent'), {
-            work: 'ik gok',
-            finalAnswer: '15%',
-            unitNotation: '%',
+            methodTokens: [],
+            substitution: {},
+            finalAnswer: '15',
+            notation: '%',
+            conclusion: 'De prijs van de fiets stijgt met 15 procent.',
+        })).toBe(false);
+
+        expect(GoldenTicketLayout.evaluateTaskResponse(task('prijsstijging-procent'), {
+            methodTokens: ['open', 'newPrice', 'minus', 'oldPrice', 'close', 'divide', 'oldPrice', 'times100'],
+            substitution: {
+                newPrice: '920',
+                oldPriceNumerator: '800',
+                oldPriceDenominator: '920',
+            },
+            finalAnswer: '15',
+            notation: '%',
+            conclusion: 'De prijs van de fiets stijgt met 15 procent.',
         })).toBe(false);
 
         expect(GoldenTicketLayout.evaluateTaskResponse(task('indexpunten-uitleg'), {
@@ -98,6 +118,17 @@ describe('GoldenTicketLayout', () => {
         expect(html).not.toContain('data-ge-work');
         expect(html).not.toContain('data-ge-structured-choice');
         expect(html).not.toContain('ge-locked');
+    });
+
+    test('renders the 1.1.2 A96 answer-form controls in the Golden calculation route', () => {
+        const html = GoldenTicketLayout.renderMain(exit112Data);
+
+        expect(html).toContain('data-ge-answer-form-task');
+        expect(html).toContain('data-ge-formula-token-id="oldPrice"');
+        expect(html).toContain('data-ge-substitution-field data-field-id="oldPriceDenominator"');
+        expect(html).toContain('data-input-role="unit-notation" data-ge-unit-notation');
+        expect(html).toContain('data-input-role="conclusion" data-ge-conclusion');
+        expect(html).toContain('data-ge-work');
     });
 
     test('renders graph advisory short-check controls without legacy or fake graph controls', () => {

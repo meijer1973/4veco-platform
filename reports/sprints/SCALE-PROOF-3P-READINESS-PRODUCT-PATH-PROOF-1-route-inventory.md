@@ -1,6 +1,6 @@
 # SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1 Route Inventory
 
-Generated: 2026-06-22T10:29:30.680Z
+Generated: 2026-06-24T12:09:51.363Z
 
 | Paragraph | Family | Resolved route links |
 |---|---|---|
