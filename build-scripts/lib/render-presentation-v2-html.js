@@ -124,11 +124,11 @@ function renderRouteContract(slide) {
             <ul>${criteria.map(item => `<li>${esc(item)}</li>`).join('')}</ul>
           </section>`
     : '';
+  const criteriaBlock = criteriaMarkup ? `\n          ${criteriaMarkup}` : '';
   return `${renderSlideHead(slide)}
           <div class="pv2-route-contract" role="list" aria-label="Lesroute">
             ${arr(slide.routeCards).map((card) => `<section class="pv2-route-card" role="listitem"><span>${esc(card.label)}</span><h3>${esc(card.title)}</h3><p>${esc(card.text)}</p></section>`).join('')}
-          </div>
-          ${criteriaMarkup}`;
+          </div>${criteriaBlock}`;
 }
 
 function renderNarrativeAnchor(slide) {

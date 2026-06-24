@@ -208,7 +208,7 @@ const deck = {
   outputBase: `${PAR_NR} ${PAR_NAME} ${DASH} presentatie`,
   routeContract: {
     learningGoal: 'Leerlingen lezen tabelwaarden, zetten data om naar een P-Q-grafiek en controleren grafiekclaims.',
-    productBoundary: 'Webpresentatie zonder nieuwe PPTX-generatie; de bestaande PowerPoint blijft alleen een secundaire download.',
+    productBoundary: 'Webpresentatie en PowerPoint-derivaat worden uit hetzelfde semantische model gegenereerd; de PPTX is bedoeld voor live lesgeven met docentondersteunende notities.',
   },
   slides: [
     {
