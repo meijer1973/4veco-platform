@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-23T13:04:07.065Z
+Generated: 2026-06-23T20:02:27.062Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/pr-integration-lane-1-20260623`
-Source commit: `9efdcb3819bd11b1ec2ae451205aa6750d42a029`
-Files indexed: 5976
+Source branch: `codex/cross-repo-bundle-safety-1-20260623`
+Source commit: `3495075d7987305439c65b7d30defbac3e9afa47`
+Files indexed: 6054
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -44,7 +44,7 @@ Count: 9
 
 ## engines
 
-Count: 87
+Count: 88
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -111,6 +111,7 @@ Count: 87
 - engines/tests/newsdetective-v2-ui.test.js
 - engines/tests/presentatie-html-shape.test.js
 - engines/tests/presentation-v2-111-production.test.js
+- engines/tests/presentation-v2-113-graph-transfer.test.js
 - engines/tests/procedure-data-formal-step.test.js
 - engines/tests/procedure-data.test.js
 - engines/tests/procedure-engine.test.js
@@ -136,7 +137,7 @@ Count: 87
 
 ## build scripts
 
-Count: 560
+Count: 567
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -178,6 +179,8 @@ Count: 560
 - build-scripts/content/book-1/b1-112-graphical-data.js
 - build-scripts/content/book-1/b1-112-student-web.js
 - build-scripts/content/book-1/b1-113-graphical-data.js
+- build-scripts/content/book-1/b1-113-presentation-v2-model.js
+- build-scripts/content/book-1/b1-113-presentation-v2.js
 - build-scripts/content/book-1/b1-113-student-web.js
 - build-scripts/content/book-1/README.md
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
@@ -246,6 +249,7 @@ Count: 560
 - build-scripts/lib/lib-table-trace-renderer.js
 - build-scripts/lib/lib-visual-state-renderer.js
 - build-scripts/lib/lib-visual-surfaces.js
+- build-scripts/lib/pq-plot-mapper.js
 - build-scripts/lib/render-presentation-v2-html.js
 - build-scripts/lib/render-presentation-v2-pptx.js
 - build-scripts/lib/verify_svg_geometry.py
@@ -316,6 +320,7 @@ Count: 560
 - build-scripts/references/build-source-document-registry.js
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
+- build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/check-alignment-graph.js
 - build-scripts/references/check-document-inventory.js
 - build-scripts/references/check-empty-needs-audit.js
@@ -424,6 +429,7 @@ Count: 560
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js
 - build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
@@ -555,6 +561,7 @@ Count: 560
 - build-scripts/sprints/capture-reason-answerform2-screenshots.js
 - build-scripts/sprints/capture-reason-play1-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
+- build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js
 - build-scripts/sprints/capture-short-check-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/capture-source-reconstruct2-screenshots.js
@@ -622,6 +629,7 @@ Count: 560
 - build-scripts/sprints/check-review-throughput-packet.js
 - build-scripts/sprints/check-review-throughput-packet.test.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
+- build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
@@ -752,7 +760,7 @@ Count: 46
 
 ## validators
 
-Count: 551
+Count: 560
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -926,6 +934,7 @@ Count: 551
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
+- build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js
 - build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
@@ -1023,6 +1032,7 @@ Count: 551
 - build-scripts/sprints/check-review-throughput-packet.js
 - build-scripts/sprints/check-review-throughput-packet.test.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
+- build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
@@ -1278,6 +1288,13 @@ Count: 551
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
 - reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
 - reports/sprints/LANDING-V2-REGRESSION-GUARD-1-validation-log.md
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-validation-log.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light.png
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
@@ -2049,7 +2066,7 @@ Count: 736
 
 ## reports
 
-Count: 3860
+Count: 3930
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2248,6 +2265,7 @@ Count: 3860
 - reports/json/representation-transfer-gaps.json
 - reports/json/roadmap-flag-cleanup1.json
 - reports/json/scale-proof-3p-prep-1-proof.json
+- reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json
 - reports/json/short-check-workbench-112-rendered-1-proof.json
 - reports/json/short-check-workbench-policy-1-proof.json
 - reports/json/skill-operation-registry.json
@@ -2638,6 +2656,7 @@ Count: 3860
 - reports/reference-planning/Y2-ROOT-MAPPING-1-quality-log.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-subagent-review.md
+- reports/reference-planning/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-review-packet.md
 - reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json
 - reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.md
 - reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-review-packet.md
@@ -3692,11 +3711,18 @@ Count: 3860
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
 - reports/review-gates/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1/review-packet.json
 - reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
+- reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json
 - reports/review-gates/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
+- reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.json
+- reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.md
+- reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/review-packet.json
+- reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html
+- reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json
+- reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.md
 - reports/review-gates/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/Y3-MACRO-SPINE-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
@@ -5031,6 +5057,21 @@ Count: 3860
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
 - reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/axis-convention.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/dark-mode.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/human-review-index.md
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/interpolation.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/manifest.json
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/misleading-axis.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/mobile.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/notes-open.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/presentation-mode.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/retrieval-check.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/route-contract.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/summary-bridge.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/table-and-graph.png
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-review-packet.md
+- reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-validation-log.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -5421,6 +5462,50 @@ Count: 3860
 - reports/sprints/SCALE-PROOF-3P-PREP-1-evidence-map.md
 - reports/sprints/SCALE-PROOF-3P-PREP-1-plan.md
 - reports/sprints/SCALE-PROOF-3P-PREP-1-result.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-evidence-map.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-plan.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-quality-log.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-result.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-desktop-light-initial.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-mobile-dark-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-desktop-light-overview.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-mobile-dark-exit-row.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-learn-desktop-light-uitleg-vaardigheden.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-normal-practice-desktop-light-opgaven.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-practice-desktop-light-redeneer-spel.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-skill-map-desktop-light-wiskundevaardigheden.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-start-desktop-light-instapquiz.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-initial.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-desktop-light-overview.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-mobile-dark-exit-row.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-learn-desktop-light-uitleg-vaardigheden.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-normal-practice-desktop-light-opgaven.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-practice-desktop-light-wiskundevaardigheden.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-skill-map-desktop-light-wiskundevaardigheden.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-start-desktop-light-instapquiz.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-desktop-light-initial.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-mobile-dark-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-desktop-light-overview.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-mobile-dark-exit-row.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-learn-desktop-light-uitleg-vaardigheden.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-normal-practice-desktop-light-opgaven.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-practice-desktop-light-grafiekenspel.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light-completed-feedback.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-skill-map-desktop-light-wiskundevaardigheden.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-start-desktop-light-instapquiz.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/114-landing-mobile-dark-exit-row-same-copy-hygiene.png
+- reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/manifest.json
 - reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-completion.png
 - reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-dark.png
 - reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-initial.png
@@ -5902,6 +5987,8 @@ Count: 3860
 - reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md
 - reports/sprints/Y2-ROOT-MAPPING-1-plan.md
 - reports/sprints/Y2-ROOT-MAPPING-1-result.md
+- reports/sprints/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-plan.md
+- reports/sprints/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-result.md
 - reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-plan.md
 - reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-result.md
 - reports/sprints/Y3-MACRO-SPINE-MAPPING-1-plan.md

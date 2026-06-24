@@ -1,0 +1,225 @@
+name: cross-repo-bundle-compatibility
+
+on:
+  workflow_dispatch:
+    inputs:
+      bundle_id:
+        description: Bundle identifier shared by the platform and lesson PRs.
+        required: true
+        type: string
+      platform_base_sha:
+        description: Current platform main/base SHA.
+        required: true
+        type: string
+      platform_candidate_sha:
+        description: Platform PR candidate head SHA.
+        required: true
+        type: string
+      lesson_base_sha:
+        description: Current lesson main/base SHA.
+        required: true
+        type: string
+      lesson_candidate_sha:
+        description: Lesson PR candidate head SHA.
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: cross-repo-bundle-${{ inputs.bundle_id }}
+  cancel-in-progress: false
+
+jobs:
+  bundle-state:
+    name: bundle-${{ matrix.state }}
+    runs-on: windows-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - state: platform-first
+            platform_sha: ${{ inputs.platform_candidate_sha }}
+            lesson_sha: ${{ inputs.lesson_base_sha }}
+          - state: lesson-first
+            platform_sha: ${{ inputs.platform_base_sha }}
+            lesson_sha: ${{ inputs.lesson_candidate_sha }}
+          - state: bundle-final
+            platform_sha: ${{ inputs.platform_candidate_sha }}
+            lesson_sha: ${{ inputs.lesson_candidate_sha }}
+
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: 4veco-platform
+
+    steps:
+      - name: Checkout platform repository
+        uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-platform
+          ref: ${{ matrix.platform_sha }}
+          path: 4veco-platform
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Checkout trusted platform tooling
+        uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-platform
+          ref: main
+          path: trusted-platform
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Checkout lessen repository
+        uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-lessen
+          ref: ${{ matrix.lesson_sha }}
+          path: 4veco-lessen
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Normalize repository line endings
+        run: |
+          git config --global core.autocrlf false
+          git reset --hard
+          git -c core.autocrlf=false checkout-index -f -- reports/url-index.md
+          git -C ../4veco-lessen reset --hard
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20.x'
+          cache: npm
+          cache-dependency-path: 4veco-platform/package-lock.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: 4veco-platform/.github/ci-python-requirements.txt
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Python support dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r .github/ci-python-requirements.txt
+
+      - name: Validate bundle state and write result
+        env:
+          BUNDLE_ID: ${{ inputs.bundle_id }}
+          STATE: ${{ matrix.state }}
+          PLATFORM_BASE_SHA: ${{ inputs.platform_base_sha }}
+          PLATFORM_CANDIDATE_SHA: ${{ inputs.platform_candidate_sha }}
+          LESSON_BASE_SHA: ${{ inputs.lesson_base_sha }}
+          LESSON_CANDIDATE_SHA: ${{ inputs.lesson_candidate_sha }}
+          PLATFORM_STATE_SHA: ${{ matrix.platform_sha }}
+          LESSON_STATE_SHA: ${{ matrix.lesson_sha }}
+        run: |
+          New-Item -ItemType Directory -Force -Path ..\bundle-results | Out-Null
+          New-Item -ItemType Directory -Force -Path ..\ci-artifacts | Out-Null
+          $commands = @(
+            'node build-scripts/ci/platform-ci-evidence.js write --output ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen',
+            'node build-scripts/ci/platform-ci-evidence.js check ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen',
+            'npm run check:platform',
+            'npm run check:reasoning-golden',
+            'npm run check:landing-v2',
+            'npm run check:news-detective-v2',
+            'npm run check:scope-language',
+            'npm run check:golden-graph-advisory-113',
+            'npm run check:scale-proof-3p-product-path',
+            'node build-scripts/reports/validate-report-json.js',
+            'node build-scripts/references/check-mtu-evidence-layer.js',
+            'node build-scripts/references/check-roadmap-version-index.js',
+            'node build-scripts/sprints/emit-url-index.js --check',
+            'node build-scripts/ci/check-evidence-line-endings.js',
+            'git diff --check',
+            'git -C ../4veco-lessen diff --check'
+          )
+          $status = 'success'
+          $failedCommand = ''
+          foreach ($command in $commands) {
+            Write-Host "bundle-state $env:STATE > $command"
+            Invoke-Expression $command
+            if ($LASTEXITCODE -ne 0) {
+              $status = 'failure'
+              $failedCommand = $command
+              break
+            }
+          }
+          node ..\trusted-platform\build-scripts\review-gates\cross-repo-bundle-compatibility.js state-result `
+            --bundle-id $env:BUNDLE_ID `
+            --state $env:STATE `
+            --platform-base-sha $env:PLATFORM_BASE_SHA `
+            --platform-candidate-sha $env:PLATFORM_CANDIDATE_SHA `
+            --lesson-base-sha $env:LESSON_BASE_SHA `
+            --lesson-candidate-sha $env:LESSON_CANDIDATE_SHA `
+            --platform-state-sha $env:PLATFORM_STATE_SHA `
+            --lesson-state-sha $env:LESSON_STATE_SHA `
+            --status $status `
+            --commands-json "$($commands | ConvertTo-Json -Compress)" `
+            --failed-command "$failedCommand" `
+            --output "..\bundle-results\$env:STATE.json"
+
+      - name: Upload bundle state result
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: bundle-${{ matrix.state }}-result
+          path: bundle-results/${{ matrix.state }}.json
+          if-no-files-found: error
+          retention-days: 14
+
+  summarize-bundle:
+    name: bundle-summary
+    runs-on: windows-latest
+    if: always()
+    needs: bundle-state
+    steps:
+      - name: Checkout platform repository
+        uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-platform
+          ref: main
+          path: 4veco-platform
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Download bundle state results
+        uses: actions/download-artifact@v6
+        with:
+          pattern: bundle-*-result
+          merge-multiple: true
+          path: bundle-results
+
+      - name: Summarize bundle compatibility
+        shell: pwsh
+        working-directory: 4veco-platform
+        env:
+          BUNDLE_ID: ${{ inputs.bundle_id }}
+          PLATFORM_BASE_SHA: ${{ inputs.platform_base_sha }}
+          PLATFORM_CANDIDATE_SHA: ${{ inputs.platform_candidate_sha }}
+          LESSON_BASE_SHA: ${{ inputs.lesson_base_sha }}
+          LESSON_CANDIDATE_SHA: ${{ inputs.lesson_candidate_sha }}
+        run: |
+          node build-scripts/review-gates/cross-repo-bundle-compatibility.js summarize `
+            --input-dir ..\bundle-results `
+            --output ..\bundle-results\bundle-summary.json `
+            --check
+
+      - name: Upload bundle summary
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: bundle-summary
+          path: bundle-results/bundle-summary.json
+          if-no-files-found: error
+          retention-days: 14

@@ -44,24 +44,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Use matching lessen branch when available
-        if: ${{ github.event_name == 'pull_request' && github.head_ref != '' }}
-        env:
-          HEAD_REF: ${{ github.head_ref }}
-        run: |
-          $PSNativeCommandUseErrorActionPreference = $false
-          git -C ../4veco-lessen ls-remote --exit-code --heads origin $env:HEAD_REF | Out-Null
-          if ($LASTEXITCODE -eq 0) {
-            Write-Host "Using paired 4veco-lessen branch $env:HEAD_REF"
-            git -C ../4veco-lessen fetch origin $env:HEAD_REF
-            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-            git -C ../4veco-lessen checkout --detach FETCH_HEAD
-            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          } else {
-            Write-Host "No paired 4veco-lessen branch $env:HEAD_REF found; using default checkout."
-            $global:LASTEXITCODE = 0
-          }
-
       - name: Normalize repository line endings
         run: |
           git config --global core.autocrlf false

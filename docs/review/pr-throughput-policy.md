@@ -197,12 +197,27 @@ For platform/lesson pairs:
 
 - Use the same `bundle_id` in every paired PR.
 - List every paired PR in `paired_prs`.
+- Record exact platform and lesson PR numbers plus exact reviewed payload SHAs.
 - Classify the bundle by the highest authority class and highest ladder level
   required by any PR in the bundle.
 - Keep generated lesson output in the lesson repo and source/checker/proof in
   the platform repo unless a human explicitly authorizes another shape.
-- Do not merge the generated-output PR before the platform source/checker PR is
-  green and the bundle decision is recorded.
+- Treat the platform repository as the controller for generators, CI,
+  validators, governance, and integration tooling. Lesson PRs consume delegated
+  bundle proof from the controller.
+- Required platform `validate-platform` always checks platform candidate plus
+  lesson `main`; it does not substitute a matching lesson branch. If a platform
+  PR needs a lesson candidate to pass, it must be a cross-repo bundle.
+- Run the explicit bundle compatibility workflow for three exact-ref states:
+  `platform-first`, `lesson-first`, and `bundle-final`.
+- Do not merge either PR unless `bundle-final` is green and at least one
+  intermediate state is green. Select only a proven merge order.
+- Record canonical bundle authorization with
+  `<!-- 4veco-human-bundle-authorization:<bundle-id> -->` JSON. Prose-only
+  approval is not sufficient for coordinated bundle integration.
+- Use the authorized bundle integration lane or
+  `npm.cmd run integrate:authorized-bundle`; do not merge one member
+  independently merely because the final combined state passed.
 
 ## Non-Authority Rule
 
