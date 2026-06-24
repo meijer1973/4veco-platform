@@ -136,13 +136,21 @@ function summarizeCompatibility(input) {
   if (typeof bundleId !== 'string' || !bundleId.trim()) failures.push('bundle_id is required');
   for (const raw of rawStates) {
     const rawBundleId = raw.bundle_id || raw.bundleId;
-    if (rawBundleId && bundleId && rawBundleId !== bundleId) {
+    if (!rawBundleId) {
+      failures.push(`${raw.state || 'state'} bundle_id missing`);
+    } else if (bundleId && rawBundleId !== bundleId) {
       failures.push(`${raw.state || 'state'} bundle_id mismatch`);
     }
-    const stateExact = raw.exact_members || {};
+    const stateExact = raw.exact_members || raw.exactMembers;
+    if (!stateExact) {
+      failures.push(`${raw.state || 'state'} exact_members missing`);
+      continue;
+    }
     for (const [key, expected] of Object.entries(exactMembers)) {
       const actual = stateExact[key] || stateExact[key.replace(/_([a-z])/g, (_match, letter) => letter.toUpperCase())];
-      if (actual && expected && actual !== expected) {
+      if (!actual) {
+        failures.push(`${raw.state || 'state'} ${key} missing`);
+      } else if (expected && actual !== expected) {
         failures.push(`${raw.state || 'state'} ${key} mismatch`);
       }
     }

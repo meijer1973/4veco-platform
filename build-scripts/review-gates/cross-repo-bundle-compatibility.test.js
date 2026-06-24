@@ -127,4 +127,24 @@ describe('cross-repo bundle compatibility', () => {
     expect(bad.failures).toContain('lesson-first bundle_id mismatch');
     expect(bad.failures).toContain('bundle-final platform_candidate_sha mismatch');
   });
+
+  test('rejects missing state-level bundle id and exact members', () => {
+    const bad = summarizeCompatibility({
+      states: [
+        {
+          ...state('platform-first', 'success'),
+          bundle_id: undefined,
+        },
+        {
+          ...state('lesson-first', 'success'),
+          exact_members: undefined,
+        },
+        state('bundle-final', 'success'),
+      ],
+    });
+
+    expect(bad.ok).toBe(false);
+    expect(bad.failures).toContain('platform-first bundle_id missing');
+    expect(bad.failures).toContain('lesson-first exact_members missing');
+  });
 });
