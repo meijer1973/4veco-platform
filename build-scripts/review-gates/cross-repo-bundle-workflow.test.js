@@ -25,6 +25,9 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('--commands-json');
     expect(bundleWorkflow).toContain('--check');
     expect(bundleWorkflow).toContain('bundle-summary.json');
+    expect(bundleWorkflow).toContain('Checkout trusted platform tooling');
+    expect(bundleWorkflow).toContain('ref: main');
+    expect(bundleWorkflow).not.toContain("if ($status -ne 'success') { exit 1 }");
   });
 
   test('authorized bundle workflow uses the serialized main integration lane', () => {
@@ -35,5 +38,13 @@ describe('cross-repo bundle workflow safety', () => {
     expect(authorizedBundleWorkflow).toContain('integrate:authorized-bundle');
     expect(authorizedBundleWorkflow).toContain('compatibility_workflow_run_id');
     expect(authorizedBundleWorkflow).toContain('bundle-summary.json');
+  });
+
+  test('authorized bundle workflow uses cross-repo secret only for mutations', () => {
+    expect(authorizedBundleWorkflow).toContain('GH_TOKEN: ${{ github.token }}');
+    expect(authorizedBundleWorkflow).toContain('GH_TOKEN: ${{ secrets.CROSS_REPO_BUNDLE_TOKEN }}');
+    expect(authorizedBundleWorkflow).toContain('Preflight cross-repo bundle token');
+    expect(authorizedBundleWorkflow).toContain('--require-cross-repo-permissions');
+    expect(authorizedBundleWorkflow).toContain('--compatibility-run-id');
   });
 });

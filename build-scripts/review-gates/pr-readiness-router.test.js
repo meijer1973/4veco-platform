@@ -281,6 +281,57 @@ describe('pr-readiness-router', () => {
     expect(decision.proof.bundle.compatibility.recommended_merge_order).toBe('lesson-first');
   });
 
+  test('lesson-first controller can reach human review from exact bundle proof when validate-platform is red', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+      lesson_candidate_sha: lessonHead,
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        ci: {
+          head_sha: fixture.reviewed_pr.head_sha,
+          conclusion: 'failure',
+          required_contexts: ['validate-platform'],
+          checks: [{ name: 'validate-platform', conclusion: 'FAILURE' }],
+        },
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: exactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              open: true,
+              mergeable: true,
+              is_draft: false,
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
+            },
+          ],
+          compatibility: bundleCompatibility(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.reason_codes).not.toContain('required_ci_context_missing_or_not_successful');
+    expect(decision.proof.bundle_delegated_ci).toBe(true);
+  });
+
   test('cross-repo bundle controller rejects incomplete paired metadata', () => {
     const fixture = readFixture('live-governance-human.json');
     const exactMembers = bundleExactMembers({

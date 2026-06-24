@@ -491,6 +491,26 @@ function bundleSafetyProof(proof, evidence) {
   return summary;
 }
 
+function bundleAllowsLessonFirstControllerCi(bundle) {
+  const summary = bundle && (bundle.summary || bundle);
+  const compatibility = summary && summary.compatibility;
+  const states = (compatibility && compatibility.states) || {};
+  const lessonFirst = states['lesson-first'] || {};
+  const bundleFinal = states['bundle-final'] || {};
+  return Boolean(
+    summary &&
+      summary.required === true &&
+      summary.delegated !== true &&
+      summary.ok === true &&
+      compatibility &&
+      compatibility.ok === true &&
+      asArray(compatibility.permitted_merge_orders).includes('lesson-first') &&
+      compatibility.recommended_merge_order === 'lesson-first' &&
+      lessonFirst.status === 'success' &&
+      bundleFinal.status === 'success'
+  );
+}
+
 function leadProof(proof, headSha) {
   const lead = proof.lead_review || {};
   const result = normalizeVerdict(lead.result);
@@ -571,6 +591,9 @@ function collectRevisionReasons(evidence) {
   const branchProtection = branchProtectionProof(proof, evidence);
   const bundle = bundleSafetyProof(proof, evidence);
   const lessonDelegatedBundle = repoIsLesson(evidence.reviewed_pr.repo) && bundle.delegated === true && bundle.ok === true;
+  const controllerDelegatedBundleCi =
+    repoIsPlatform(evidence.reviewed_pr.repo) && bundleAllowsLessonFirstControllerCi(bundle);
+  const bundleDelegatedCi = lessonDelegatedBundle || controllerDelegatedBundleCi;
   const autonomousLevel = AUTONOMOUS_LEVELS.has(evidence.throughput.level);
   const mergeState = String(evidence.reviewed_pr.merge_state || '');
   const integrationStatusPendingBlock =
@@ -598,7 +621,7 @@ function collectRevisionReasons(evidence) {
   if (autonomousLevel && proof.checkers_required === false) {
     reasons.push('checker_waiver_not_allowed_for_autonomous_lane');
   }
-  if (!ci.ok && !lessonDelegatedBundle) {
+  if (!ci.ok && !bundleDelegatedCi) {
     reasons.push(
       ci.stale
         ? 'ci_not_current_head'
@@ -622,7 +645,17 @@ function collectRevisionReasons(evidence) {
   if (evidence.throughput.level === 'L2' && !evidence.throughput.owner_preapproved) {
     reasons.push('l2_owner_preapproval_missing');
   }
-  return { reasons: uniqueStrings(reasons), ci, checkers, lead, branchProtection, bundle, lessonDelegatedBundle };
+  return {
+    reasons: uniqueStrings(reasons),
+    ci,
+    checkers,
+    lead,
+    branchProtection,
+    bundle,
+    lessonDelegatedBundle,
+    controllerDelegatedBundleCi,
+    bundleDelegatedCi,
+  };
 }
 
 function branchProtectionRevisions(collected) {
@@ -676,6 +709,7 @@ function proofSummary(evidence, collected) {
     checkers: collected.checkers.checkers,
     branch_protection: collected.branchProtection,
     bundle: collected.bundle.summary || collected.bundle || null,
+    bundle_delegated_ci: collected.bundleDelegatedCi === true,
     human_authorization: evidence.proof.human_authorization || null,
     integration: evidence.proof.integration || null,
   };
@@ -850,6 +884,11 @@ function validateDecision(decision) {
       decision.proof.bundle &&
       decision.proof.bundle.delegated === true &&
       decision.proof.bundle.ok === true;
+    const bundleDelegatedCi =
+      delegatedLessonBundle ||
+      (repoIsPlatform(decision.reviewed_pr.repo) &&
+        decision.proof.bundle_delegated_ci === true &&
+        bundleAllowsLessonFirstControllerCi(decision.proof.bundle));
     if (decision.throughput.class === 'cross_repo_bundle') {
       if (!decision.proof.bundle || decision.proof.bundle.ok !== true) {
         throw new Error(`${decision.route} requires green cross-repo bundle proof`);
@@ -874,19 +913,19 @@ function validateDecision(decision) {
     if (decision.proof.changed_paths_verified !== true) {
       throw new Error(`${decision.route} requires changed_paths_verified proof`);
     }
-    if (!delegatedLessonBundle && decision.proof.ci_head_sha !== decision.reviewed_pr.head_sha) {
+    if (!bundleDelegatedCi && decision.proof.ci_head_sha !== decision.reviewed_pr.head_sha) {
       throw new Error(`${decision.route} requires CI proof for reviewed head`);
     }
-    if (!delegatedLessonBundle && !successStatus(decision.proof.ci_status)) {
+    if (!bundleDelegatedCi && !successStatus(decision.proof.ci_status)) {
       throw new Error(`${decision.route} requires successful CI status`);
     }
-    if (!delegatedLessonBundle && !asArray(decision.proof.ci_required_contexts).includes('validate-platform')) {
+    if (!bundleDelegatedCi && !asArray(decision.proof.ci_required_contexts).includes('validate-platform')) {
       throw new Error(`${decision.route} requires validate-platform CI context`);
     }
-    if (!delegatedLessonBundle && asArray(decision.proof.ci_missing_contexts).includes('validate-platform')) {
+    if (!bundleDelegatedCi && asArray(decision.proof.ci_missing_contexts).includes('validate-platform')) {
       throw new Error(`${decision.route} requires passing validate-platform CI context`);
     }
-    if (!delegatedLessonBundle) {
+    if (!bundleDelegatedCi) {
       const validatePlatformCheck = asArray(decision.proof.ci_checks).find((check) => {
         const status = check && (check.conclusion || check.status || check.state || check.result);
         return checkNames(check).includes('validate-platform') && successStatus(status);

@@ -89,10 +89,12 @@ function stateResult(options) {
 function normalizeState(item) {
   const result = item || {};
   return {
+    bundle_id: result.bundle_id || result.bundleId || null,
     state: result.state,
     status: normalizeStatus(result.status || result.conclusion || result.result),
     platform_sha: result.platform_sha || result.platformStateSha,
     lesson_sha: result.lesson_sha || result.lessonStateSha,
+    exact_members: result.exact_members || result.exactMembers || null,
     commands: asArray(result.commands),
     failed_command: result.failed_command || result.failedCommand || null,
   };
@@ -132,6 +134,43 @@ function summarizeCompatibility(input) {
   }
   const bundleId = input.bundle_id || input.bundleId || (rawStates[0] && rawStates[0].bundle_id);
   if (typeof bundleId !== 'string' || !bundleId.trim()) failures.push('bundle_id is required');
+  for (const raw of rawStates) {
+    const rawBundleId = raw.bundle_id || raw.bundleId;
+    if (rawBundleId && bundleId && rawBundleId !== bundleId) {
+      failures.push(`${raw.state || 'state'} bundle_id mismatch`);
+    }
+    const stateExact = raw.exact_members || {};
+    for (const [key, expected] of Object.entries(exactMembers)) {
+      const actual = stateExact[key] || stateExact[key.replace(/_([a-z])/g, (_match, letter) => letter.toUpperCase())];
+      if (actual && expected && actual !== expected) {
+        failures.push(`${raw.state || 'state'} ${key} mismatch`);
+      }
+    }
+  }
+  const expectedStateShas = {
+    [STATES.PLATFORM_FIRST]: {
+      platform_sha: exactMembers.platform_candidate_sha,
+      lesson_sha: exactMembers.lesson_base_sha,
+    },
+    [STATES.LESSON_FIRST]: {
+      platform_sha: exactMembers.platform_base_sha,
+      lesson_sha: exactMembers.lesson_candidate_sha,
+    },
+    [STATES.BUNDLE_FINAL]: {
+      platform_sha: exactMembers.platform_candidate_sha,
+      lesson_sha: exactMembers.lesson_candidate_sha,
+    },
+  };
+  for (const [stateName, expected] of Object.entries(expectedStateShas)) {
+    const state = byState[stateName];
+    if (!state) continue;
+    if (state.platform_sha !== expected.platform_sha) {
+      failures.push(`${stateName} platform_sha must match ${expected.platform_sha}`);
+    }
+    if (state.lesson_sha !== expected.lesson_sha) {
+      failures.push(`${stateName} lesson_sha must match ${expected.lesson_sha}`);
+    }
+  }
 
   const platformFirstGreen = byState[STATES.PLATFORM_FIRST] && byState[STATES.PLATFORM_FIRST].status === 'success';
   const lessonFirstGreen = byState[STATES.LESSON_FIRST] && byState[STATES.LESSON_FIRST].status === 'success';
@@ -157,6 +196,7 @@ function summarizeCompatibility(input) {
     permitted_merge_orders: permittedMergeOrders,
     recommended_merge_order: recommendedMergeOrder,
     commands: rawStates.flatMap((state) => asArray(state.commands)),
+    provenance: input.provenance || null,
     ok: failures.length === 0,
     failures,
   };
@@ -225,6 +265,23 @@ function runCli(argv) {
     const inputDir = optionValue(argv, '--input-dir');
     if (!fixture && !inputDir) fail('summarize requires --fixture or --input-dir');
     const input = fixture ? readJson(fixture) : { states: readStateResults(inputDir) };
+    if (!input.provenance && process.env.GITHUB_RUN_ID) {
+      input.provenance = {
+        workflow: process.env.GITHUB_WORKFLOW || null,
+        workflow_ref: process.env.GITHUB_WORKFLOW_REF || null,
+        workflow_sha: process.env.GITHUB_WORKFLOW_SHA || null,
+        run_id: process.env.GITHUB_RUN_ID || null,
+        run_attempt: process.env.GITHUB_RUN_ATTEMPT || null,
+        event_name: process.env.GITHUB_EVENT_NAME || null,
+        inputs: {
+          bundle_id: process.env.BUNDLE_ID || null,
+          platform_base_sha: process.env.PLATFORM_BASE_SHA || null,
+          platform_candidate_sha: process.env.PLATFORM_CANDIDATE_SHA || null,
+          lesson_base_sha: process.env.LESSON_BASE_SHA || null,
+          lesson_candidate_sha: process.env.LESSON_CANDIDATE_SHA || null,
+        },
+      };
+    }
     const summary = summarizeCompatibility(input);
     const output = optionValue(argv, '--output');
     if (output) writeJson(output, summary);

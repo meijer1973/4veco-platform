@@ -86,4 +86,45 @@ describe('cross-repo bundle compatibility', () => {
       exactMembers: { lesson_candidate_sha: '5'.repeat(40) },
     }).failures).toContain(`lesson_candidate_sha mismatch: expected ${'5'.repeat(40)}`);
   });
+
+  test('rejects malformed state-to-SHA mapping', () => {
+    const bad = summarizeCompatibility({
+      states: [
+        state('platform-first', 'success'),
+        {
+          ...state('lesson-first', 'success'),
+          platform_sha: pHead,
+        },
+        state('bundle-final', 'success'),
+      ],
+    });
+
+    expect(bad.ok).toBe(false);
+    expect(bad.failures).toContain(`lesson-first platform_sha must match ${pBase}`);
+  });
+
+  test('rejects inconsistent bundle id and exact members across state results', () => {
+    const bad = summarizeCompatibility({
+      states: [
+        state('platform-first', 'success'),
+        {
+          ...state('lesson-first', 'success'),
+          bundle_id: 'OTHER-BUNDLE',
+        },
+        {
+          ...state('bundle-final', 'success'),
+          exact_members: {
+            platform_base_sha: pBase,
+            platform_candidate_sha: '5'.repeat(40),
+            lesson_base_sha: lBase,
+            lesson_candidate_sha: lHead,
+          },
+        },
+      ],
+    });
+
+    expect(bad.ok).toBe(false);
+    expect(bad.failures).toContain('lesson-first bundle_id mismatch');
+    expect(bad.failures).toContain('bundle-final platform_candidate_sha mismatch');
+  });
 });

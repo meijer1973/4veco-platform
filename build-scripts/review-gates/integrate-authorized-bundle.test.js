@@ -1,7 +1,14 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { integrateBundle, PLATFORM_REPO, LESSON_REPO } = require('./integrate-authorized-bundle');
+const {
+  integrateBundle,
+  PLATFORM_REPO,
+  LESSON_REPO,
+  selectLatestRunForHead,
+  validateCompatibilityWorkflowProvenance,
+  validatePlatformCiEvidence,
+} = require('./integrate-authorized-bundle');
 
 const platformBase = '1'.repeat(40);
 const platformHead = '2'.repeat(40);
@@ -78,8 +85,25 @@ function harness(overrides = {}) {
     return pr(repo, 34, lessonHead);
   });
   const deps = {
-    fetchMainSha: jest.fn((repo) => (repo === PLATFORM_REPO ? platformBase : lessonBase)),
+    fetchMainSha: jest.fn((repo) => {
+      if (calls.merges.some((merge) => merge.repo === repo)) {
+        return repo === PLATFORM_REPO ? platformMerge : lessonMerge;
+      }
+      return repo === PLATFORM_REPO ? platformBase : lessonBase;
+    }),
     fetchPr,
+    fetchReadinessComment: jest.fn(() => ({
+      ok: true,
+      route: 'READY_FOR_HUMAN_REVIEW',
+      decision: { route: 'READY_FOR_HUMAN_REVIEW' },
+    })),
+    fetchReviewThreadState: jest.fn(() => ({
+      available: true,
+      unresolved_count: 0,
+      requested_changes_count: 0,
+    })),
+    latestWorkflowRunDatabaseId: jest.fn(() => 100),
+    preflightCrossRepoPermissions: jest.fn(() => ({ ok: true })),
     recomputeCompatibility: jest.fn(() => compatibility('lesson-first')),
     mergePr: jest.fn((repo, prNumber, headSha) => {
       calls.merges.push({ repo, prNumber, headSha });
@@ -93,12 +117,20 @@ function harness(overrides = {}) {
       calls.ciTriggers.push(true);
       return { triggered: true };
     }),
-    waitForPlatformMainCi: jest.fn((headSha) => {
-      calls.ciWaits.push(headSha);
+    waitForPlatformMainCi: jest.fn((headSha, waitOptions = {}) => {
+      calls.ciWaits.push({
+        headSha,
+        minDatabaseId: waitOptions.minDatabaseId,
+        expectedPlatformSha: waitOptions.expectedPlatformSha,
+        expectedLessonSha: waitOptions.expectedLessonSha,
+      });
       return { ok: true, run: { conclusion: 'success' } };
     }),
-    refreshPlatformPrCi: jest.fn((platformPr) => {
-      calls.refreshes.push(platformPr.headRefOid);
+    refreshPlatformPrCi: jest.fn((platformPr, refreshOptions = {}) => {
+      calls.refreshes.push({
+        headSha: platformPr.headRefOid,
+        expectedLessonSha: refreshOptions.expectedLessonSha,
+      });
       return { ok: true, run: { conclusion: 'success' } };
     }),
     ...(overrides.deps || {}),
@@ -124,7 +156,13 @@ describe('authorized cross-repo bundle integration', () => {
     expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
     expect(calls.ciTriggers).toHaveLength(2);
-    expect(calls.refreshes).toEqual([platformHead]);
+    expect(calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
+    expect(calls.ciWaits[0]).toMatchObject({
+      headSha: platformBase,
+      expectedPlatformSha: platformBase,
+      expectedLessonSha: lessonMerge,
+      minDatabaseId: 100,
+    });
   });
 
   test('lesson-first can recover an initially red platform validate-platform check', () => {
@@ -143,7 +181,7 @@ describe('authorized cross-repo bundle integration', () => {
         }),
         refreshPlatformPrCi: jest.fn(() => {
           refreshed = true;
-          calls.refreshes.push(platformHead);
+          calls.refreshes.push({ headSha: platformHead, expectedLessonSha: lessonMerge });
           return { ok: true, run: { conclusion: 'success' } };
         }),
       },
@@ -152,7 +190,7 @@ describe('authorized cross-repo bundle integration', () => {
 
     expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
-    expect(calls.refreshes).toEqual([platformHead]);
+    expect(calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
   });
 
   test('platform-first state green merges platform first, then lesson', () => {
@@ -166,6 +204,11 @@ describe('authorized cross-repo bundle integration', () => {
     expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'platform-first' });
     expect(calls.merges.map((item) => item.repo)).toEqual([PLATFORM_REPO, LESSON_REPO]);
     expect(calls.refreshes).toEqual([]);
+    expect(calls.ciWaits[0]).toMatchObject({
+      headSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonBase,
+    });
   });
 
   test('both intermediate states green uses deterministic lesson-first default', () => {
@@ -243,6 +286,8 @@ describe('authorized cross-repo bundle integration', () => {
       ...options,
       noMerge: true,
       compatibilityProofPath: proofPath,
+      verifyCompatibilityWorkflowRun: jest.fn(() => ({ ok: true })),
+      compatibilityRunId: '123',
       deps: depsWithoutRecompute,
     });
 
@@ -265,5 +310,120 @@ describe('authorized cross-repo bundle integration', () => {
 
     expect(result).toMatchObject({ ok: false, phase: 'final_ci' });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
+  });
+
+  test('old green platform-ci run with same platform SHA is ignored by minimum run id', () => {
+    const selected = selectLatestRunForHead([
+      { databaseId: 100, headSha: platformBase, status: 'completed', conclusion: 'success' },
+      { databaseId: 101, headSha: platformBase, status: 'completed', conclusion: 'failure' },
+    ], platformBase, { minDatabaseId: 100 });
+
+    expect(selected.databaseId).toBe(101);
+    expect(selectLatestRunForHead([
+      { databaseId: 100, headSha: platformBase, status: 'completed', conclusion: 'success' },
+    ], platformBase, { minDatabaseId: 100 })).toBeNull();
+  });
+
+  test('platform-ci evidence rejects old lesson SHA for same platform SHA', () => {
+    const result = validatePlatformCiEvidence({
+      workflow: 'platform-ci',
+      job: 'validate-platform',
+      github_run_id: '1',
+      github_run_attempt: '1',
+      github_ref: 'refs/heads/main',
+      github_sha: platformBase,
+      platform: {
+        repository: PLATFORM_REPO,
+        path: '4veco-platform',
+        head_sha: platformBase,
+        branch_or_ref: 'main',
+      },
+      lessen: {
+        repository: LESSON_REPO,
+        path: '4veco-lessen',
+        head_sha: lessonBase,
+        branch_or_ref: 'main',
+      },
+      node_version: 'v20.0.0',
+      python_version: 'Python 3.13.0',
+      package_lock_sha256: 'a'.repeat(64),
+      created_at_utc: '2026-06-24T00:00:00.000Z',
+    }, {
+      platformSha: platformBase,
+      lessonSha: lessonMerge,
+    });
+
+    expect(result.ok).toBe(false);
+    expect(result.failures).toContain(`lesson_head_mismatch: expected ${lessonMerge}`);
+  });
+
+  test('wrong compatibility workflow run or artifact digest is rejected', () => {
+    const result = validateCompatibilityWorkflowProvenance(
+      {
+        id: 123,
+        path: '.github/workflows/other.yml',
+        event: 'push',
+        status: 'completed',
+        conclusion: 'success',
+        head_sha: platformBase,
+      },
+      { name: 'bundle-summary', expired: false },
+      {
+        provenance: {
+          run_id: '999',
+          event_name: 'workflow_dispatch',
+          workflow_sha: platformBase,
+          inputs: compatibility('lesson-first').exact_members,
+        },
+      },
+      {
+        runId: '123',
+        bundleId: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+        exactMembers: compatibility('lesson-first').exact_members,
+      }
+    );
+
+    expect(result.ok).toBe(false);
+    expect(result.failures).toContain('compatibility_workflow_path_mismatch');
+    expect(result.failures).toContain('compatibility_workflow_event_mismatch');
+    expect(result.failures).toContain('compatibility_artifact_digest_missing');
+    expect(result.failures).toContain('compatibility_summary_run_id_mismatch');
+  });
+
+  test('unresolved threads on either member block merging', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchReviewThreadState: jest.fn((repo) => ({
+          available: true,
+          unresolved_count: repo === LESSON_REPO ? 1 : 0,
+          requested_changes_count: 0,
+        })),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'preflight' });
+    expect(result.failures).toContain('lesson:unresolved_review_threads');
+    expect(calls.merges).toEqual([]);
+  });
+
+  test('main advancing before a member merge invalidates compatibility proof', () => {
+    let platformMainReads = 0;
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) {
+            platformMainReads += 1;
+            return platformMainReads >= 2 ? '7'.repeat(40) : platformBase;
+          }
+          return lessonBase;
+        }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'base_changed_before_merge' });
+    expect(result.failures).toContain('compatibility_recompute_required');
+    expect(calls.merges).toEqual([]);
   });
 });

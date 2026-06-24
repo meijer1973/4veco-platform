@@ -145,6 +145,14 @@ The compatibility proof must come from the platform controller and must record:
 must also be green, otherwise the bundle stays `KEEP_DRAFT_REVISE` until a
 compatibility bridge makes a safe merge order possible.
 
+When the exact matrix proves `lesson-first` and `bundle-final` green while
+`platform-first` is red, the platform controller may still route
+`READY_FOR_HUMAN_REVIEW`. That route records `bundle_delegated_ci: true` and
+does not claim ordinary `validate-platform` success for the controller head.
+The authorized bundle integrator must merge the lesson member first, then run a
+fresh ordinary `validate-platform` check against the platform candidate and the
+new lesson `main` before the platform merge.
+
 The highest-risk member determines the review lane. Generated lesson output,
 product-authority changes, protected/reference changes, review-governance
 changes, and other L3/L4 surfaces still require human review even when the

@@ -131,6 +131,9 @@ machine-readable JSON:
 A bundle may merge only when `bundle-final` is green and at least one
 intermediate state is green. If neither intermediate state is green, neither PR
 may merge until a compatibility bridge makes one order safe.
+Individual matrix states record success or failure without deciding the whole
+workflow. The trusted `main` summarizer is the final gate, validates the exact
+state-to-SHA mapping, and records workflow provenance for the run.
 
 Human approval for a paired bundle must be recorded with this marker:
 
@@ -153,6 +156,27 @@ merge order, merges the first member at its expected head, verifies the
 intermediate platform CI state, refreshes/revalidates the second member when
 needed, merges the second member, and requires final platform CI against final
 platform `main` plus final lesson `main`.
+
+Cross-repository bundle mutations use `CROSS_REPO_BUNDLE_TOKEN`, a fine-grained
+token from the existing owner account restricted to `4veco-platform` and
+`4veco-lessen`. The ordinary repository `github.token` may be used only for
+platform-local artifact reads. The bundle integrator fails closed unless the
+cross-repository token can access both repositories with merge-capable
+permissions.
+
+After every platform CI dispatch in the bundle lane, the integrator records the
+latest prior workflow-run id and accepts only a newer `platform-ci` run. It then
+downloads `platform-ci-evidence.json` and verifies the exact platform and
+lesson `main` SHAs for the intermediate and final states. A green run for the
+same platform SHA but an older lesson SHA is not valid evidence.
+
+The integration command also verifies the compatibility workflow provenance:
+workflow path, workflow-dispatch event, trusted workflow SHA, run id, exact
+inputs, success conclusion, and the `bundle-summary` artifact metadata. Before
+each member merge it re-fetches both PRs and both `main` refs, requires
+exact-head readiness decisions, requires clean review-thread/requested-change
+state, and stops if a base or head moved outside the proven compatibility
+state.
 
 Lesson bundle members consume delegated bundle proof from the platform
 controller. They must not require a standalone platform branch-protection

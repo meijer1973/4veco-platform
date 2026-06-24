@@ -66,6 +66,15 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Checkout trusted platform tooling
+        uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-platform
+          ref: main
+          path: trusted-platform
+          fetch-depth: 1
+          persist-credentials: false
+
       - name: Checkout lessen repository
         uses: actions/checkout@v6
         with:
@@ -146,7 +155,7 @@ jobs:
               break
             }
           }
-          node build-scripts/review-gates/cross-repo-bundle-compatibility.js state-result `
+          node ..\trusted-platform\build-scripts\review-gates\cross-repo-bundle-compatibility.js state-result `
             --bundle-id $env:BUNDLE_ID `
             --state $env:STATE `
             --platform-base-sha $env:PLATFORM_BASE_SHA `
@@ -159,7 +168,6 @@ jobs:
             --commands-json "$($commands | ConvertTo-Json -Compress)" `
             --failed-command "$failedCommand" `
             --output "..\bundle-results\$env:STATE.json"
-          if ($status -ne 'success') { exit 1 }
 
       - name: Upload bundle state result
         if: always()
@@ -180,7 +188,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: meijer1973/4veco-platform
-          ref: ${{ inputs.platform_candidate_sha }}
+          ref: main
           path: 4veco-platform
           fetch-depth: 1
           persist-credentials: false
@@ -195,6 +203,12 @@ jobs:
       - name: Summarize bundle compatibility
         shell: pwsh
         working-directory: 4veco-platform
+        env:
+          BUNDLE_ID: ${{ inputs.bundle_id }}
+          PLATFORM_BASE_SHA: ${{ inputs.platform_base_sha }}
+          PLATFORM_CANDIDATE_SHA: ${{ inputs.platform_candidate_sha }}
+          LESSON_BASE_SHA: ${{ inputs.lesson_base_sha }}
+          LESSON_CANDIDATE_SHA: ${{ inputs.lesson_candidate_sha }}
         run: |
           node build-scripts/review-gates/cross-repo-bundle-compatibility.js summarize `
             --input-dir ..\bundle-results `
