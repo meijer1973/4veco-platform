@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-24T11:36:17.707Z
+Generated: 2026-06-24T11:56:27.081Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h6-closure-h7-blind-holdout-20260624`
-Source commit: `93038f7d0c5939e43551e3f4ca6fadd8343531a1`
-Files indexed: 6074
+Source commit: `74b48f1074c470e6994597405b80b0854fbc9919`
+Files indexed: 6076
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2080,7 +2080,7 @@ Count: 736
 
 ## reports
 
-Count: 3938
+Count: 3940
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5067,6 +5067,8 @@ Count: 3938
 - reports/sprints/MTU-H4C-plan.md
 - reports/sprints/MTU-H4C-result.md
 - reports/sprints/MTU-H5-blocked-stop-result.md
+- reports/sprints/MTU-H6-CLOSURE-H7-BLIND-HOLDOUT-GENERALIZATION-BUNDLE-1-command-log.md
+- reports/sprints/MTU-H6-CLOSURE-H7-BLIND-HOLDOUT-GENERALIZATION-BUNDLE-1-lead-review-round1.md
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-plan.md
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-result.md
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-review-packet.md
