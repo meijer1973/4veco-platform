@@ -991,7 +991,7 @@ function closureCase(fixture) {
     route_boundary: fixture.route_boundary || 'exact_year2_route_only_no_broad_operation_closure',
     blocks: 'cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged',
     does_not_block: 'foundation state, ordinary non-authority work, and review of unrelated scoped PRs',
-    proof_required_to_close: 'Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact.',
+    proof_required_to_close: 'Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact.',
   };
 }
 
@@ -1015,7 +1015,7 @@ function answerSkillClosureCases() {
         route_boundary: 'answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation',
         blocks: 'cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged',
         does_not_block: 'foundation state, ordinary non-authority work, and review of unrelated scoped PRs',
-        proof_required_to_close: 'Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge.',
+        proof_required_to_close: 'Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization.',
       };
     });
 }

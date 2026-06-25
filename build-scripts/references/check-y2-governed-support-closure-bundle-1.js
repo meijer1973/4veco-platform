@@ -55,18 +55,53 @@ function assertSameMembers(actual, expected, label) {
   assert(sameMembers(actual, expected), `${label} must be [${expected.join(', ')}], got [${asArray(actual).join(', ')}]`);
 }
 
-function gitStatus(paths, label) {
-  const result = spawnSync('git', ['status', '--porcelain', '--', ...paths], {
+function git(args, label) {
+  const result = spawnSync('git', args, {
     cwd: ROOT,
     encoding: 'utf8',
   });
   if (result.status !== 0) {
     process.stderr.write(result.stdout || '');
     process.stderr.write(result.stderr || '');
-    fail(`git status failed for ${label}`);
+    fail(`git ${args.join(' ')} failed for ${label}`);
+  }
+  return result;
+}
+
+function gitStatus(paths, label) {
+  const result = git(['status', '--porcelain', '--', ...paths], label);
+  assert(!result.stdout.trim(), `${label} has forbidden uncommitted changes:\n${result.stdout.trim()}`);
+}
+
+function resolveDiffBase() {
+  const candidates = [
+    process.env.GITHUB_BASE_REF ? `origin/${process.env.GITHUB_BASE_REF}` : null,
+    'origin/main',
+    'main',
+    'HEAD^',
+  ].filter(Boolean);
+
+  for (const candidate of candidates) {
+    const result = spawnSync('git', ['rev-parse', '--verify', `${candidate}^{commit}`], {
+      cwd: ROOT,
+      encoding: 'utf8',
+    });
+    if (result.status === 0 && result.stdout.trim()) {
+      return candidate;
+    }
+  }
+
+  fail(`unable to resolve a committed-diff base from: ${candidates.join(', ')}`);
+  return null;
+}
+
+function gitCommittedDiff(paths, label) {
+  const base = resolveDiffBase();
+  const result = git(['diff', '--name-only', `${base}...HEAD`, '--', ...paths], label);
+  if (result.status !== 0) {
     return;
   }
-  assert(!result.stdout.trim(), `${label} has forbidden changes:\n${result.stdout.trim()}`);
+  assert(!result.stdout.trim(), `${label} has forbidden committed PR changes against ${base}:\n${result.stdout.trim()}`);
 }
 
 const REQUIRED_TRUE_AUTHORITY = [
@@ -112,6 +147,18 @@ function assertAuthority(claims, label) {
 }
 
 function validateRuntimeEvaluation(fixturesJson) {
+  assertAuthority(fixturesJson.authority_claims, 'route-specific fixtures');
+  assertSameMembers(
+    asArray(fixturesJson.runtime_fixtures).map((fixture) => fixture.case_id),
+    ['Y2-B6-P12:OP-D1', 'Y2-B6-P12:OP-C1', 'Y2-B6-P12:OP-C2', 'Y2-B6-P12:OP-ANS2'],
+    'runtime fixture case set'
+  );
+  assertSameMembers(
+    asArray(fixturesJson.extension_fixtures).map((fixture) => fixture.case_id),
+    ['Y2-B5-P13:OP-T1', 'Y2-B5-P13:OP-ANS2', 'Y2-B6-P12:OP-P1', 'Y2-B6-P12:OP-E1', 'Y2-B7-P13:OP-R1', 'Y2-B7-P13:OP-ANS2', 'Y2-B8-P04:OP-S1'],
+    'extension fixture case set'
+  );
+
   const taskSet = fixturesJson.task_set;
   assert(TaskShellEngine.validateTaskSet(taskSet) === true, 'rendered proof task set must validate');
   const taskById = new Map(taskSet.tasks.map((task) => [task.id, task]));
@@ -141,6 +188,9 @@ function validateSemanticChecks(fixturesJson) {
   assert(c2.marginal_revenue === 'MO = -0.25Q + 2150', 'OP-C2 marginal revenue formula mismatch');
   assert(2150 / 0.25 === c2.chosen_output, 'OP-C2 chosen output semantic check mismatch');
   assert(c2.rejected_capacity_only_choice === 6800, 'OP-C2 capacity-only guard mismatch');
+
+  const ans2 = byCase.get('Y2-B6-P12:OP-ANS2').semantic_checks;
+  assertSameMembers(ans2.required_parts, ['method', 'values', 'q_8600', 'p_1075', 'claim_not_correct'], 'OP-ANS2 required semantic answer parts');
 }
 
 function normalizeText(value) {
@@ -323,10 +373,15 @@ function validatePackageScript() {
 
 function validateForbiddenDiffs() {
   gitStatus(['references/machine', 'references/external'], 'external and machine references');
+  gitCommittedDiff(['references/machine', 'references/external'], 'external and machine references');
   gitStatus(['references/authored/course-target-exercises.json'], 'active target-exercise registry');
+  gitCommittedDiff(['references/authored/course-target-exercises.json'], 'active target-exercise registry');
   gitStatus(['references/data/exam-ingestion/answer-skill-candidates.json'], 'answer-skill candidate storage');
+  gitCommittedDiff(['references/data/exam-ingestion/answer-skill-candidates.json'], 'answer-skill candidate storage');
   gitStatus(['source-data'], 'generated lesson source data');
+  gitCommittedDiff(['source-data'], 'generated lesson source data');
   gitStatus(['engines/skilltree/base-elements.js', 'engines/skilltree/generators.js'], 'skilltree route/generator exposure');
+  gitCommittedDiff(['engines/skilltree/base-elements.js', 'engines/skilltree/generators.js'], 'skilltree route/generator exposure');
 }
 
 function main() {

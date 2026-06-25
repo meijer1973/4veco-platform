@@ -78,7 +78,7 @@
       "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B6-P12:OP-C1",
@@ -96,7 +96,7 @@
       "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B6-P12:OP-C2",
@@ -114,7 +114,7 @@
       "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B6-P12:OP-ANS2",
@@ -132,7 +132,7 @@
       "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B5-P13:OP-T1",
@@ -150,7 +150,7 @@
       "route_boundary": "schematic_visual_only_no_exact_numeric_table_claim",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B5-P13:OP-ANS2",
@@ -168,7 +168,7 @@
       "route_boundary": "ratio_conclusion_without_exact_schematic_numeric_extraction",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B6-P12:OP-P1",
@@ -186,7 +186,7 @@
       "route_boundary": "social_housing_waiting_list_exact_source_values",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B6-P12:OP-E1",
@@ -204,7 +204,7 @@
       "route_boundary": "rent_market_income_elasticity_exact_source_proof",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B7-P13:OP-R1",
@@ -222,7 +222,7 @@
       "route_boundary": "principal_agent_actor_condition_exact_route",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B7-P13:OP-ANS2",
@@ -240,7 +240,7 @@
       "route_boundary": "expected_value_plus_markup_answer_format",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B8-P04:OP-S1",
@@ -258,7 +258,7 @@
       "route_boundary": "official_source_first_derived_payoff_labelled",
       "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Exact-head human merge of this bundle with checker proof, rendered fixture proof, and authority boundary intact."
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
     },
     {
       "case_id": "Y2-B5-P13:OP-H1",
@@ -276,7 +276,7 @@
       "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
       "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge."
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
     },
     {
       "case_id": "Y2-B5-P13:OP-ANS3",
@@ -294,7 +294,7 @@
       "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
       "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge."
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
     },
     {
       "case_id": "Y2-B6-P12:OP-F1",
@@ -312,7 +312,7 @@
       "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
       "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge."
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
     },
     {
       "case_id": "Y2-B6-P12:OP-ANS3",
@@ -330,7 +330,7 @@
       "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
       "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge."
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
     },
     {
       "case_id": "Y2-B7-P13:OP-ANS3",
@@ -348,7 +348,7 @@
       "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
       "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge."
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
     },
     {
       "case_id": "Y2-B8-P04:OP-ANS1",
@@ -366,7 +366,7 @@
       "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
       "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge."
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
     },
     {
       "case_id": "Y2-B8-P04:OP-ANS3",
@@ -384,7 +384,7 @@
       "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
       "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
       "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
-      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, and exact-head human merge."
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
     },
     {
       "case_id": "Y2-B7-P13:OP-M1",
