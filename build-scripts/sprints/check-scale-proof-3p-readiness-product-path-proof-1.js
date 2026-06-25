@@ -241,7 +241,47 @@ function checkScreenshots(proof) {
         assert(a96.notation_field_present === true, `${capture.id}: A96 notation field missing`);
         assert(a96.conclusion_field_present === true, `${capture.id}: A96 conclusion field missing`);
         assert(a96.old_work_textarea_present === false, `${capture.id}: A96 must not use old work textarea`);
+        assert(a96.answer_giving_placeholder_count === 0, `${capture.id}: A96 substitution placeholder reveals an answer`);
       }
+
+      const desktopInitial = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'initial' && item.viewport.width === 1280 && item.theme === 'light');
+      const mobileInitial = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'initial' && item.viewport.width === 390);
+      const darkInitial = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'initial' && item.theme === 'dark');
+      assert(desktopInitial, '1.1.2 missing A96 desktop initial screenshot');
+      assert(mobileInitial, '1.1.2 missing A96 mobile initial screenshot');
+      assert(darkInitial, '1.1.2 missing A96 dark initial screenshot');
+      for (const capture of [desktopInitial, mobileInitial, darkInitial]) {
+        assert(capture.inspection.a96_answer_form.answer_giving_placeholder_count === 0, `${capture.id}: A96 initial placeholder reveals an answer`);
+      }
+      assert(
+        mobileInitial.inspection.a96_answer_form.answer_form_visible_in_viewport === true,
+        `${mobileInitial.id}: A96 mobile initial screenshot must show the answer form in the viewport`
+      );
+
+      const negativeActions = [
+        'a96-partial-wrong-formula',
+        'a96-wrong-denominator',
+        'a96-missing-substitution',
+        'a96-missing-notation',
+        'a96-missing-parts-feedback',
+      ];
+      for (const action of negativeActions) {
+        const capture = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === action);
+        assert(capture, `1.1.2 missing ${action} screenshot`);
+        assert(capture.inspection.a96_answer_form.missing_feedback_count > 0, `${capture.id}: A96 negative state lacks missing-part feedback`);
+        assert(capture.inspection.a96_answer_form.feedback_visible_in_viewport === true, `${capture.id}: A96 negative feedback must be visible in the screenshot viewport`);
+        assert(capture.inspection.feedback_good_count === 0, `${capture.id}: A96 negative state should not show good feedback`);
+      }
+
+      const correctA96 = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'a96-correct-response');
+      assert(correctA96, '1.1.2 missing A96 correct-response screenshot');
+      assert(correctA96.inspection.a96_answer_form.missing_feedback_count === 0, `${correctA96.id}: A96 correct response should not list missing parts`);
+      assert(correctA96.inspection.feedback_good_count > 0, `${correctA96.id}: A96 correct response lacks good feedback`);
+      assert(correctA96.inspection.a96_answer_form.feedback_visible_in_viewport === true, `${correctA96.id}: A96 correct feedback must be visible in the screenshot viewport`);
+
+      const exemplar = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'a96-exemplar-comparison');
+      assert(exemplar, '1.1.2 missing A96 v3 exemplar-comparison screenshot');
+      assert(exemplar.inspection.a96_answer_form.exemplar_comparison_present === true, `${exemplar.id}: missing A96 exemplar comparison panel`);
     }
   }
 }
@@ -257,6 +297,7 @@ function checkSummary(proof) {
   assert(summary.rendered_desktop_mobile_dark_coverage === true, 'summary desktop/mobile/dark coverage must pass');
   assert(summary.completed_feedback_states_captured === true, 'summary completed feedback states must pass');
   assert(summary.advisory_feedback_states_captured === true, 'summary advisory feedback states must pass');
+  assert(summary.a96_dedicated_rendered_states_ready === true, 'summary A96 dedicated rendered states must pass');
   assert(summary.a96_calculation_answer_form_refinement_ready === true, 'summary A96 refinement must be ready');
   assert(summary.target_completion_language_held_in_completed_exit_routes === true, 'summary completion language must stay held');
   assert(summary.no_broad_authority_terms_in_captures === true, 'summary broad authority terms must be absent');

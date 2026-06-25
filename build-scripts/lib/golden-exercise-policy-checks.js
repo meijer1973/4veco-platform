@@ -174,6 +174,10 @@ function expectedAnswerNeedles(shell) {
   add(expected.oldValue && expected.oldValue.value);
   add(expected.newValue && expected.newValue.value);
   add(expected.finalAnswer && expected.finalAnswer.value);
+  for (const substitutionExpected of Object.values(expected.substitution || {})) {
+    add(substitutionExpected && substitutionExpected.value);
+    asArray(substitutionExpected && substitutionExpected.accepted).forEach(add);
+  }
   asArray(expected.finalAnswer && expected.finalAnswer.acceptedNotations).forEach(add);
   asArray(expected.acceptedNotations).forEach(add);
   return [...needles];
@@ -641,8 +645,22 @@ function validateExemplarIndexFormulaBoundary() {
 function validateA96FixturePolicy() {
   const fixtures = readJson(PATHS.a96NegativeFixtures);
   const negative = fixtures.negative || {};
-  assert(negative.leftToRightTokenClickOrder, 'A96 negative fixtures missing leftToRightTokenClickOrder');
-  assert(negative.visuallyIdenticalOldPriceTokensWithDistinctIds, 'A96 negative fixtures missing visually identical token trap');
+  [
+    'finalAnswerOnly',
+    'sourceValuesOnly',
+    'missingFormula',
+    'wrongDenominator',
+    'leftToRightTokenClickOrder',
+    'missingSubstitution',
+    'missingNotation',
+    'conclusionWithoutDirection',
+    'vagueExampleOnly',
+    'contradictoryNegation',
+    'contradictoryDecrease',
+    'visuallyIdenticalOldPriceTokensWithDistinctIds',
+  ].forEach((id) => {
+    assert(negative[id], `A96 negative fixtures missing ${id}`);
+  });
   return { exemplar_id: fixtures.exemplar_id, negative_count: Object.keys(negative).length };
 }
 

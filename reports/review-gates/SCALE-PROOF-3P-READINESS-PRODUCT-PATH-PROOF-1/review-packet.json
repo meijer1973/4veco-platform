@@ -235,5 +235,68 @@
       ],
       "proof_required_to_close": "Satisfied by A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 proof and refreshed Scale proof checker."
     }
-  ]
+  ],
+  "rereview_refresh": {
+    "bundle_id": "A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1",
+    "date": "2026-06-25",
+    "platform_pr": {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624",
+      "pr_number": 148,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/148"
+    },
+    "lesson_pr": {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624",
+      "pr_number": 36,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/36"
+    },
+    "lesson_changed_paths": [
+      "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-engine.js"
+    ],
+    "proof": {
+      "hardening_rereview": "reports/json/a96-calculation-answer-form-hardening-and-scale-gate-1-rereview-1-proof.json",
+      "refreshed_scale_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+      "screenshot_count": 46,
+      "a96_dedicated_rendered_states_ready": true
+    },
+    "validation": [
+      {
+        "command": "npm.cmd run check:scale-proof-3p-product-path",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\A96-CALCULATION-ANSWER-FORM-20260624\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ],
+    "note": "Historical Scale proof packet preserved; PR #148 / lesson PR #36 provide the current refreshed proof after A96 hardening."
+  }
 }

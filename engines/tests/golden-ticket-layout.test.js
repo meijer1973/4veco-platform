@@ -3,6 +3,7 @@ const exit112Data = require('../../source-data/book-1/exit-ticket/1.1.2-exit-tic
 const short112Data = require('../../source-data/book-1/exit-ticket/1.1.2-korte-check.json');
 const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
 const short113Data = require('../../source-data/book-1/exit-ticket/1.1.3-korte-check.json');
+const A96ProofData = require('../../build-scripts/sprints/mtu-ans-proof-impl1-a96-data');
 
 function task(id) {
     return exit112Data.tasks.find((item) => item.id === id).taskShell;
@@ -74,6 +75,26 @@ describe('GoldenTicketLayout', () => {
             conclusion: 'De prijs van de fiets stijgt met 15 procent.',
         })).toBe(false);
 
+        [
+            'finalAnswerOnly',
+            'sourceValuesOnly',
+            'missingFormula',
+            'wrongDenominator',
+            'tokenBankOrderedAsAnswer',
+            'missingSubstitution',
+            'missingNotation',
+            'conclusionWithoutDirection',
+            'vagueExampleOnly',
+            'contradictoryNegation',
+            'contradictoryDecrease',
+            'contradictoryHasPercent',
+        ].forEach((caseName) => {
+            expect(GoldenTicketLayout.evaluateTaskResponse(
+                task('prijsstijging-procent'),
+                A96ProofData.negativeResponses[caseName]
+            )).toBe(false);
+        });
+
         expect(GoldenTicketLayout.evaluateTaskResponse(task('indexpunten-uitleg'), {
             fields: {
                 indexpunten: '4 indexpunten',
@@ -126,6 +147,11 @@ describe('GoldenTicketLayout', () => {
         expect(html).toContain('data-ge-answer-form-task');
         expect(html).toContain('data-ge-formula-token-id="oldPrice"');
         expect(html).toContain('data-ge-substitution-field data-field-id="oldPriceDenominator"');
+        expect(html).toContain('placeholder="vul de nieuwe prijs in"');
+        expect(html).toContain('placeholder="vul de oude prijs in"');
+        expect(html).toContain('placeholder="vul de basiswaarde in"');
+        expect(html).not.toContain('placeholder="920"');
+        expect(html).not.toContain('placeholder="800"');
         expect(html).toContain('data-input-role="unit-notation" data-ge-unit-notation');
         expect(html).toContain('data-input-role="conclusion" data-ge-conclusion');
         expect(html).toContain('data-ge-work');

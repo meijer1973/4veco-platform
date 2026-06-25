@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "sprint_id": "A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1",
+  "date": "2026-06-25",
+  "status": "ready_for_human_scale_gate_1_review",
+  "platform_pr": {
+    "repository": "meijer1973/4veco-platform",
+    "pr_number": 148,
+    "url": "https://github.com/meijer1973/4veco-platform/pull/148",
+    "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624"
+  },
+  "lesson_pr": {
+    "repository": "meijer1973/4veco-lessen",
+    "pr_number": 36,
+    "url": "https://github.com/meijer1973/4veco-lessen/pull/36",
+    "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624"
+  },
+  "requirements": {
+    "answer_bearing_substitution_placeholders_absent": true,
+    "formula_or_method_required": true,
+    "labelled_substitution_required": true,
+    "final_answer_required": true,
+    "notation_required": true,
+    "contextual_direction_conclusion_required": true,
+    "contradictory_conclusion_rejected": true,
+    "canonical_negative_fixtures_enforced": true,
+    "dedicated_a96_rendered_states_ready": true,
+    "first_three_scale_proof_recaptured": true,
+    "generated_lesson_output_regenerated": true
+  },
+  "canonical_negative_fixtures": [
+    "finalAnswerOnly",
+    "sourceValuesOnly",
+    "missingFormula",
+    "wrongDenominator",
+    "leftToRightTokenClickOrder",
+    "missingSubstitution",
+    "missingNotation",
+    "conclusionWithoutDirection",
+    "vagueExampleOnly",
+    "contradictoryNegation",
+    "contradictoryDecrease",
+    "visuallyIdenticalOldPriceTokensWithDistinctIds"
+  ],
+  "rendered_a96_states": [
+    "112-exit-ticket-desktop-light-initial",
+    "112-exit-ticket-mobile-light-initial",
+    "112-exit-ticket-desktop-dark-initial",
+    "112-a96-partial-wrong-formula-feedback",
+    "112-a96-wrong-denominator-feedback",
+    "112-a96-missing-substitution-feedback",
+    "112-a96-missing-notation-feedback",
+    "112-a96-missing-parts-feedback-list",
+    "112-a96-correct-response-feedback",
+    "112-exit-ticket-desktop-light-completed-feedback",
+    "112-a96-v3-exemplar-comparison"
+  ],
+  "refreshed_scale_proof": {
+    "path": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "status": "scale_gate_1_ready_for_human_review",
+    "screenshot_count": 46,
+    "a96_dedicated_rendered_states_ready": true
+  },
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "target_equivalent_completion_language_authorized": false
+  },
+  "validation": {
+    "focused_jest": "passed",
+    "lesson_deploy": "passed",
+    "scale_proof_capture": "passed",
+    "scale_proof_checker": "passed",
+    "package_scale_proof_checker": "passed",
+    "final_full_validation": "passed",
+    "final_validation_commands": [
+      {
+        "command": "npm.cmd run check:scale-proof-3p-product-path",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\A96-CALCULATION-ANSWER-FORM-20260624\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ],
+    "specialist_review": "passed",
+    "lead_review": "passed"
+  },
+  "recommended_route": "READY_FOR_HUMAN_REVIEW",
+  "recommended_next_step": "Run specialist/lead review, branch-protection checker, and PR Readiness Reviewer against the exact remote heads. Mark ready only when the readiness route permits it. Merge requires explicit owner authorization tied to the exact heads.",
+  "specialist_reviews": [
+    {
+      "reviewer": "authority-boundary",
+      "verdict": "PASS",
+      "blocks": false
+    },
+    {
+      "reviewer": "rendered-mobile",
+      "verdict": "PASS_AFTER_REPAIR",
+      "blocks": false
+    },
+    {
+      "reviewer": "route-link",
+      "verdict": "PASS",
+      "blocks": false,
+      "note": "P3 old summary count note does not block; canonical proof/manifest show 46 screenshots."
+    },
+    {
+      "reviewer": "teacher-didactic",
+      "verdict": "PASS",
+      "blocks": false
+    },
+    {
+      "reviewer": "repository-ci",
+      "verdict": "PASS_AFTER_METADATA_REPAIR",
+      "blocks": false
+    }
+  ],
+  "lead_review": {
+    "verdict": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+    "status": "completed",
+    "summary": "Specialist rereview and lead review found no blocking A96 product, validator, rendered-proof, repository, route/link, didactic, or authority-boundary findings. The packet is ready for human Scale Gate 1 review on exact heads; no merge or Scale Gate 1 closure is authorized by this verdict."
+  },
+  "lead_verdict": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW"
+}

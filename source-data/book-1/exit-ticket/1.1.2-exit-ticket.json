@@ -218,19 +218,19 @@
               {
                 "id": "newPrice",
                 "label": "nieuwe prijs",
-                "placeholder": "920",
+                "placeholder": "vul de nieuwe prijs in",
                 "inputMode": "decimal"
               },
               {
                 "id": "oldPriceNumerator",
                 "label": "oude prijs in teller",
-                "placeholder": "800",
+                "placeholder": "vul de oude prijs in",
                 "inputMode": "decimal"
               },
               {
                 "id": "oldPriceDenominator",
                 "label": "oude prijs in noemer",
-                "placeholder": "800",
+                "placeholder": "vul de basiswaarde in",
                 "inputMode": "decimal"
               }
             ]
@@ -284,6 +284,25 @@
               ["prijs", "fiets"],
               ["stijgt", "stijging", "duurder", "gestegen"],
               ["15", "vijftien"]
+            ],
+            "rejectText": [
+              "stijgt niet",
+              "niet stijgt",
+              "geen stijging",
+              "daalt",
+              "daling",
+              "gedaald",
+              "heeft 15 procent",
+              "heeft 15%",
+              "bijvoorbeeld"
+            ],
+            "rejectPatterns": [
+              "\\bstijgt\\s+niet\\b",
+              "\\bniet\\s+(?:met\\s+)?(?:15\\s+)?(?:procent\\s+)?stijgt\\b",
+              "\\bgeen\\s+stijging\\b",
+              "\\bdaalt?\\b",
+              "\\bprijs\\s+van\\s+de\\s+fiets\\s+heeft\\s+15\\s*(?:%|procent)\\b",
+              "\\bbijvoorbeeld\\b"
             ]
           },
           "visualTokenIdentityPolicy": {

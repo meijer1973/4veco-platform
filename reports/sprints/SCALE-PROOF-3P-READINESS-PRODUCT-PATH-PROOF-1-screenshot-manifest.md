@@ -1,6 +1,6 @@
 # SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1 Screenshot Manifest
 
-Generated: 2026-06-24T12:09:51.363Z
+Generated: 2026-06-25T13:35:12.674Z
 
 Screenshots were captured from generated Book 1 output served from the local lesson worktree.
 
@@ -29,6 +29,15 @@ Screenshots were captured from generated Book 1 output served from the local les
 | 112-exit-ticket-desktop-light-initial | 1.1.2 | exit-ticket/initial | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-initial.png` |
 | 112-exit-ticket-desktop-light-completed-feedback | 1.1.2 | exit-ticket/complete | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png` |
 | 112-exit-ticket-mobile-dark-completed-feedback | 1.1.2 | exit-ticket/complete | dark | 390x844 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png` |
+| 112-exit-ticket-mobile-light-initial | 1.1.2 | exit-ticket/initial | light | 390x844 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-light-initial.png` |
+| 112-exit-ticket-desktop-dark-initial | 1.1.2 | exit-ticket/initial | dark | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-dark-initial.png` |
+| 112-a96-partial-wrong-formula-feedback | 1.1.2 | exit-ticket/a96-partial-wrong-formula | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-partial-wrong-formula-feedback.png` |
+| 112-a96-wrong-denominator-feedback | 1.1.2 | exit-ticket/a96-wrong-denominator | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-wrong-denominator-feedback.png` |
+| 112-a96-missing-substitution-feedback | 1.1.2 | exit-ticket/a96-missing-substitution | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-substitution-feedback.png` |
+| 112-a96-missing-notation-feedback | 1.1.2 | exit-ticket/a96-missing-notation | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-notation-feedback.png` |
+| 112-a96-missing-parts-feedback-list | 1.1.2 | exit-ticket/a96-missing-parts-feedback | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-parts-feedback-list.png` |
+| 112-a96-correct-response-feedback | 1.1.2 | exit-ticket/a96-correct-response | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-correct-response-feedback.png` |
+| 112-a96-v3-exemplar-comparison | 1.1.2 | exit-ticket/a96-exemplar-comparison | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-v3-exemplar-comparison.png` |
 | 112-practice-desktop-light-wiskundevaardigheden | 1.1.2 | practice | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-practice-desktop-light-wiskundevaardigheden.png` |
 | 113-landing-desktop-light-overview | 1.1.3 | landing | light | 1280x900 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-desktop-light-overview.png` |
 | 113-landing-mobile-dark-exit-row | 1.1.3 | landing | dark | 390x844 | `reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-mobile-dark-exit-row.png` |

@@ -3,6 +3,7 @@ const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.jso
 const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
 const short112Data = require('../../source-data/book-1/exit-ticket/1.1.2-korte-check.json');
 const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
+const A96ProofData = require('../../build-scripts/sprints/mtu-ans-proof-impl1-a96-data');
 
 function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -377,6 +378,12 @@ describe('ExitTicketEngine', () => {
             conclusion: 'De prijs van de fiets stijgt met 15 procent.',
         });
         expect(badWork.matched).toBe(false);
+
+        const contradictoryConclusion = engine.checkTask('prijsstijging-procent', A96ProofData.negativeResponses.contradictoryNegation);
+        expect(contradictoryConclusion).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false,
+        }));
 
         engine.checkTask('index-naar-waarde', {
             work: '162 / 150 x 100',

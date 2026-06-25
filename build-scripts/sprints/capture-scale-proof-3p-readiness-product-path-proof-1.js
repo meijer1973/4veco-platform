@@ -6,6 +6,7 @@ const net = require('net');
 const os = require('os');
 const path = require('path');
 const { spawn } = require('child_process');
+const A96ProofData = require('./mtu-ans-proof-impl1-a96-data');
 
 const SPRINT_ID = 'SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1';
 const platformRoot = path.resolve(__dirname, '..', '..');
@@ -471,6 +472,59 @@ async function driveGolden112Complete(cdp, sessionId) {
   await sleep(500);
 }
 
+async function driveGolden112A96State(cdp, sessionId, response, options = {}) {
+  const script = `(() => {
+    function click(el) {
+      if (!el) throw new Error('Missing clickable element');
+      el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+    }
+    function inputValue(el, value) {
+      if (!el) throw new Error('Missing input element');
+      el.value = value == null ? '' : String(value);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    const response = ${JSON.stringify(response || {})};
+    const step = document.querySelector('[data-task-id="prijsstijging-procent"]');
+    if (!step) throw new Error('Missing A96 answer-form step');
+    (response.methodTokens || []).forEach((tokenId) => {
+      click(step.querySelector('[data-ge-formula-token-id="' + tokenId + '"]'));
+    });
+    const substitution = response.substitution || {};
+    Object.keys(substitution).forEach((fieldId) => {
+      inputValue(step.querySelector('[data-ge-substitution-field][data-field-id="' + fieldId + '"]'), substitution[fieldId]);
+    });
+    inputValue(step.querySelector('[data-ge-final-answer]'), response.finalAnswer || '');
+    inputValue(step.querySelector('[data-ge-unit-notation]'), response.notation || '');
+    inputValue(step.querySelector('[data-ge-conclusion]'), response.conclusion || '');
+    click(step.querySelector('[data-ge-check-task]'));
+    if (${JSON.stringify(options.exemplarComparison === true)}) {
+      const existing = document.querySelector('[data-a96-exemplar-comparison]');
+      if (existing) existing.remove();
+      const panel = document.createElement('section');
+      panel.setAttribute('data-a96-exemplar-comparison', 'true');
+      panel.style.cssText = 'margin:16px 0;padding:16px;border:2px solid #0f766e;background:#fff;color:#111;display:grid;grid-template-columns:1fr 1fr;gap:12px;font:14px system-ui,sans-serif;';
+      panel.innerHTML =
+        '<div><h3 style="margin:0 0 8px;font-size:16px;">Rendered A96 response</h3>' +
+        '<p>Formula: (nieuwe prijs - oude prijs) / oude prijs x 100%</p>' +
+        '<p>Substitution: (920 - 800) / 800 x 100%</p>' +
+        '<p>Answer: 15%</p>' +
+        '<p>Conclusion: De prijs van de fiets stijgt met 15 procent.</p></div>' +
+        '<div><h3 style="margin:0 0 8px;font-size:16px;">A96 v3 exemplar</h3>' +
+        '<p>Required: formula or calculation method</p>' +
+        '<p>Required: labelled substitution with source values</p>' +
+        '<p>Required: final answer plus percent notation</p>' +
+        '<p>Required: contextual direction sentence</p></div>';
+      step.after(panel);
+      panel.scrollIntoView({ block: 'center', inline: 'nearest' });
+    } else {
+      step.scrollIntoView({ block: 'center', inline: 'nearest' });
+    }
+  })()`;
+  await runPageScript(cdp, sessionId, script, 'driveGolden112A96State');
+  await sleep(500);
+}
+
 async function driveGolden113Complete(cdp, sessionId) {
   const script = `(() => {
     const clickPoint = (xValue, yValue) => {
@@ -625,6 +679,54 @@ async function scrollToCompletionOrFeedback(cdp, sessionId) {
   await sleep(250);
 }
 
+async function scrollToA96AnswerForm(cdp, sessionId) {
+  await cdp.send(
+    'Runtime.evaluate',
+    {
+      expression: `(() => {
+        const step = document.querySelector('[data-task-id="prijsstijging-procent"]');
+        if (!step) return false;
+        const el =
+          step.querySelector('[data-ge-formula-token-id]') ||
+          step.querySelector('[data-ge-substitution-field]') ||
+          step.querySelector('[data-ge-final-answer]') ||
+          step;
+        el.scrollIntoView({ block: 'center', inline: 'nearest' });
+        return true;
+      })()`,
+      returnByValue: true,
+    },
+    sessionId
+  );
+  await sleep(250);
+}
+
+async function scrollToA96Feedback(cdp, sessionId) {
+  await cdp.send(
+    'Runtime.evaluate',
+    {
+      expression: `(() => {
+        const step = document.querySelector('[data-task-id="prijsstijging-procent"]');
+        if (!step) return false;
+        const candidates = [
+          '.ge-feedback.is-visible',
+          '[data-ge-answer-form-feedback]:not([hidden])',
+          '[data-ge-check-task]',
+          '[data-ge-conclusion]',
+          '[data-ge-final-answer]'
+        ];
+        const el = candidates.map((selector) => step.querySelector(selector)).find(Boolean);
+        if (!el) return false;
+        el.scrollIntoView({ block: 'center', inline: 'nearest' });
+        return true;
+      })()`,
+      returnByValue: true,
+    },
+    sessionId
+  );
+  await sleep(250);
+}
+
 function pngDimensions(buffer) {
   if (!buffer || buffer.length < 24 || buffer.toString('ascii', 1, 4) !== 'PNG') {
     throw new Error('not a PNG buffer');
@@ -663,12 +765,20 @@ async function inspectPage(cdp, sessionId, surface) {
       const text = document.body ? document.body.innerText.replace(/\\s+/g, ' ').trim() : '';
       const loaded = Array.from(document.querySelectorAll('link[href], script[src]'))
         .map((node) => node.getAttribute('href') || node.getAttribute('src'));
+      const isVisible = (node) => {
+        if (!node) return false;
+        const style = getComputedStyle(node);
+        if (node.hidden || style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity || 1) === 0) return false;
+        const rect = node.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.right > 0 && rect.top < window.innerHeight && rect.left < window.innerWidth;
+      };
       const feedback = Array.from(document.querySelectorAll('.et-feedback, .ge-feedback.is-visible')).map((node) => ({
         selector: node.className || node.getAttribute('data-ge-feedback') || '',
         tone: node.classList.contains('is-good') || node.classList.contains('is-match') ? 'good' :
           node.classList.contains('is-warn') || node.classList.contains('is-retry') ? 'warn' :
           node.classList.contains('is-bad') ? 'bad' : 'unknown',
-        text: node.innerText.replace(/\\s+/g, ' ').trim()
+        text: node.innerText.replace(/\\s+/g, ' ').trim(),
+        visible_in_viewport: isVisible(node)
       }));
       const completionNodes = Array.from(document.querySelectorAll('[data-ge-completion], .et-completion, [data-completion]')).map((node) => ({
         text: node.innerText.replace(/\\s+/g, ' ').trim(),
@@ -717,11 +827,22 @@ async function inspectPage(cdp, sessionId, surface) {
           formula_token_count: a96Step.querySelectorAll('[data-ge-formula-token-id]').length,
           selected_formula_token_count: a96Step.querySelectorAll('[data-ge-selected-formula-token-id]').length,
           substitution_field_ids: Array.from(a96Step.querySelectorAll('[data-ge-substitution-field]')).map((node) => node.getAttribute('data-field-id')),
+          substitution_placeholders: Array.from(a96Step.querySelectorAll('[data-ge-substitution-field]')).map((node) => node.getAttribute('placeholder') || ''),
+          answer_giving_placeholder_count: Array.from(a96Step.querySelectorAll('[data-ge-substitution-field]'))
+            .map((node) => node.getAttribute('placeholder') || '')
+            .filter((value) => /^(?:920|800)$/.test(value.trim())).length,
           final_answer_field_present: Boolean(a96Step.querySelector('[data-ge-final-answer]')),
           notation_field_present: Boolean(a96Step.querySelector('[data-ge-unit-notation]')),
           conclusion_field_present: Boolean(a96Step.querySelector('[data-ge-conclusion]')),
           old_work_textarea_present: Boolean(a96Step.querySelector('[data-ge-work]')),
-          missing_feedback_count: a96Step.querySelectorAll('[data-ge-answer-form-feedback] li').length
+          missing_feedback_count: a96Step.querySelectorAll('[data-ge-answer-form-feedback] li').length,
+          missing_feedback_text: Array.from(a96Step.querySelectorAll('[data-ge-answer-form-feedback] li'))
+            .map((node) => node.innerText.replace(/\\s+/g, ' ').trim()),
+          answer_form_visible_in_viewport: Array.from(a96Step.querySelectorAll('[data-ge-formula-token-id], [data-ge-substitution-field], [data-ge-final-answer], [data-ge-unit-notation], [data-ge-conclusion]'))
+            .some(isVisible),
+          feedback_visible_in_viewport: Array.from(a96Step.querySelectorAll('.ge-feedback.is-visible, [data-ge-answer-form-feedback]:not([hidden])'))
+            .some(isVisible),
+          exemplar_comparison_present: Boolean(document.querySelector('[data-a96-exemplar-comparison]'))
         } : null,
         feedback,
         feedback_good_count: feedback.filter((item) => item.tone === 'good').length,
@@ -1088,6 +1209,108 @@ function buildCases() {
       theme: 'dark',
       viewport: { width: 390, height: 844 },
     });
+    if (paragraph.id === '1.1.2') {
+      cases.push({
+        id: `${base}-exit-ticket-mobile-light-initial`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'initial',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 390, height: 844 },
+        a96_scroll: 'answer-form',
+      });
+      cases.push({
+        id: `${base}-exit-ticket-desktop-dark-initial`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'initial',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'dark',
+        viewport: { width: 1280, height: 900 },
+      });
+      cases.push({
+        id: `${base}-a96-partial-wrong-formula-feedback`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'a96-partial-wrong-formula',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 1280, height: 900 },
+        a96_response: {
+          ...A96ProofData.passingResponse,
+          methodTokens: ['open', 'newPrice', 'plus']
+        },
+        expected_missing_parts: ['formula'],
+      });
+      cases.push({
+        id: `${base}-a96-wrong-denominator-feedback`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'a96-wrong-denominator',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 1280, height: 900 },
+        a96_response: A96ProofData.negativeResponses.wrongDenominator,
+        expected_missing_parts: ['substitution'],
+      });
+      cases.push({
+        id: `${base}-a96-missing-substitution-feedback`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'a96-missing-substitution',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 1280, height: 900 },
+        a96_response: A96ProofData.negativeResponses.missingSubstitution,
+        expected_missing_parts: ['substitution'],
+      });
+      cases.push({
+        id: `${base}-a96-missing-notation-feedback`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'a96-missing-notation',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 1280, height: 900 },
+        a96_response: A96ProofData.negativeResponses.missingNotation,
+        expected_missing_parts: ['notation'],
+      });
+      cases.push({
+        id: `${base}-a96-missing-parts-feedback-list`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'a96-missing-parts-feedback',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 1280, height: 900 },
+        a96_response: A96ProofData.negativeResponses.finalAnswerOnly,
+        expected_missing_parts: ['formula', 'substitution'],
+      });
+      cases.push({
+        id: `${base}-a96-correct-response-feedback`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'a96-correct-response',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 1280, height: 900 },
+        a96_response: A96ProofData.passingResponse,
+        expected_missing_parts: [],
+      });
+      cases.push({
+        id: `${base}-a96-v3-exemplar-comparison`,
+        paragraph: paragraph.id,
+        surface: 'exit-ticket',
+        action: 'a96-exemplar-comparison',
+        path: pageRel(paragraph, 'exit-ticket'),
+        theme: 'light',
+        viewport: { width: 1280, height: 900 },
+        a96_response: A96ProofData.passingResponse,
+        exemplar_comparison: true,
+        expected_missing_parts: [],
+      });
+    }
     cases.push({
       id: `${base}-practice-desktop-light-${paragraph.representative_practice_suffix}`,
       paragraph: paragraph.id,
@@ -1247,6 +1470,16 @@ async function captureCases(cdp, sessionId, serverPort, cases) {
       await driveShortCheckCompletedState(cdp, sessionId, config.paragraph);
       await scrollToCompletionOrFeedback(cdp, sessionId);
     }
+    if (config.a96_response && config.surface === 'exit-ticket' && config.paragraph === '1.1.2') {
+      await driveGolden112A96State(cdp, sessionId, config.a96_response, {
+        exemplarComparison: config.exemplar_comparison === true,
+      });
+      if (config.exemplar_comparison !== true) {
+        await scrollToA96Feedback(cdp, sessionId);
+      }
+    } else if (config.a96_scroll === 'answer-form' && config.surface === 'exit-ticket' && config.paragraph === '1.1.2') {
+      await scrollToA96AnswerForm(cdp, sessionId);
+    }
     const inspection = await inspectPage(cdp, sessionId, config.surface);
     const shot = await screenshot(cdp, sessionId, `${config.id}.png`);
     captures.push({
@@ -1266,7 +1499,7 @@ function a96RenderedProofReady(surface_data, captures) {
   }
   const rendered = captures.filter((item) => item.paragraph === '1.1.2' && item.surface === 'exit-ticket');
   if (!rendered.length) return false;
-  return rendered.every((item) => {
+  const allRenderedControlsPresent = rendered.every((item) => {
     const proof = item.inspection && item.inspection.a96_answer_form;
     return proof &&
       proof.present === true &&
@@ -1275,11 +1508,48 @@ function a96RenderedProofReady(surface_data, captures) {
       proof.substitution_field_ids.includes('newPrice') &&
       proof.substitution_field_ids.includes('oldPriceNumerator') &&
       proof.substitution_field_ids.includes('oldPriceDenominator') &&
+      proof.answer_giving_placeholder_count === 0 &&
       proof.final_answer_field_present === true &&
       proof.notation_field_present === true &&
       proof.conclusion_field_present === true &&
       proof.old_work_textarea_present === false;
   });
+  if (!allRenderedControlsPresent) return false;
+
+  const byAction = new Map(rendered.map((item) => [item.action, item]));
+  const requiredInitialStates = [
+    byAction.get('initial'),
+    rendered.find((item) => item.action === 'initial' && item.viewport.width === 390),
+    rendered.find((item) => item.action === 'initial' && item.theme === 'dark'),
+  ];
+  if (requiredInitialStates.some((item) => !item)) return false;
+
+  const negativeActions = [
+    'a96-partial-wrong-formula',
+    'a96-wrong-denominator',
+    'a96-missing-substitution',
+    'a96-missing-notation',
+    'a96-missing-parts-feedback',
+  ];
+  const negativesReady = negativeActions.every((action) => {
+    const item = byAction.get(action);
+    const proof = item && item.inspection && item.inspection.a96_answer_form;
+    return proof && proof.missing_feedback_count > 0;
+  });
+  if (!negativesReady) return false;
+
+  const correct = byAction.get('a96-correct-response');
+  const correctProof = correct && correct.inspection && correct.inspection.a96_answer_form;
+  if (!correct || correct.inspection.feedback_good_count <= 0 || !correctProof || correctProof.missing_feedback_count !== 0) {
+    return false;
+  }
+
+  const completed = rendered.find((item) => item.action === 'complete' && item.inspection.data_flags && item.inspection.data_flags.completionLanguageEligible === false);
+  if (!completed) return false;
+
+  const exemplar = byAction.get('a96-exemplar-comparison');
+  const exemplarProof = exemplar && exemplar.inspection && exemplar.inspection.a96_answer_form;
+  return Boolean(exemplarProof && exemplarProof.exemplar_comparison_present === true);
 }
 
 function summarizeProof(routeInventory, surface_data, captures, authority_issues, authorityCopyAudit) {
@@ -1342,6 +1612,7 @@ function summarizeProof(routeInventory, surface_data, captures, authority_issues
           item.inspection.feedback_good_count > 0
       )
     ),
+    a96_dedicated_rendered_states_ready: a96Ready,
     a96_calculation_answer_form_refinement_ready: a96Ready,
     target_completion_language_held_in_completed_exit_routes: completedCaptures.every((item) =>
       item.inspection.data_flags && item.inspection.data_flags.completionLanguageEligible === false

@@ -969,6 +969,33 @@
     });
   }
 
+  function rejectedTextMatches(value, rejectText) {
+    var normalized = normalizeAnswer(value);
+    return (Array.isArray(rejectText) ? rejectText : []).some(function (item) {
+      var needle = normalizeAnswer(item);
+      return needle && normalized.indexOf(needle) !== -1;
+    });
+  }
+
+  function rejectedPatternMatches(value, rejectPatterns) {
+    var normalized = normalizeAnswer(value);
+    return (Array.isArray(rejectPatterns) ? rejectPatterns : []).some(function (pattern) {
+      try {
+        return new RegExp(pattern, 'i').test(normalized);
+      } catch (_error) {
+        return false;
+      }
+    });
+  }
+
+  function conclusionTextMatches(value, expected) {
+    expected = expected || {};
+    if (!hasValue(value)) return false;
+    if (rejectedTextMatches(value, expected.rejectText)) return false;
+    if (rejectedPatternMatches(value, expected.rejectPatterns)) return false;
+    return requiredTextGroupsMatch(value, expected.requiredTextGroups);
+  }
+
   function calculationAnswerFormPartMatches(response, task) {
     response = response || {};
     var expected = task.expected || {};
@@ -980,7 +1007,7 @@
       }),
       finalAnswer: answerFormFinalMatches(response.finalAnswer, expected.finalAnswer),
       notation: unitNotationMatches(response.notation, expected.notation),
-      conclusion: requiredTextGroupsMatch(response.conclusion, expected.conclusion && expected.conclusion.requiredTextGroups)
+      conclusion: conclusionTextMatches(response.conclusion, expected.conclusion)
     };
   }
 

@@ -88,6 +88,18 @@
       "notation": "",
       "conclusion": ""
     },
+    "missingFormula": {
+      "why_it_must_fail": "All source values and the final answer are present, but A96 requires the visible formula or calculation method.",
+      "methodTokens": [],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets stijgt met 15 procent."
+    },
     "wrongDenominator": {
       "why_it_must_fail": "Percentage change divides by old value, not new value.",
       "methodTokens": [
@@ -105,6 +117,23 @@
         "oldPriceNumerator": "800",
         "oldPriceDenominator": "920"
       },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets stijgt met 15 procent."
+    },
+    "missingSubstitution": {
+      "why_it_must_fail": "A96 requires labelled substitution; formula, final answer and conclusion alone are not enough.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {},
       "finalAnswer": "15",
       "notation": "%",
       "conclusion": "De prijs van de fiets stijgt met 15 procent."
@@ -150,6 +179,48 @@
       "finalAnswer": "15",
       "notation": "%",
       "conclusion": "De fiets heeft 15 procent."
+    },
+    "contradictoryNegation": {
+      "why_it_must_fail": "Substring matching must not accept a sentence that explicitly negates the required increase.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets stijgt niet met 15 procent."
+    },
+    "contradictoryDecrease": {
+      "why_it_must_fail": "A downward conclusion contradicts the source values and the required direction.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets daalt met 15 procent."
     },
     "vagueExampleOnly": {
       "why_it_must_fail": "Example-like answer does not prove the route-specific answer form.",
