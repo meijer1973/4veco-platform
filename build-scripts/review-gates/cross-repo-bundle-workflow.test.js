@@ -30,6 +30,11 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).not.toContain("if ($status -ne 'success') { exit 1 }");
   });
 
+  test('bundle workflow does not mint platform-ci evidence under a different workflow identity', () => {
+    expect(bundleWorkflow).not.toContain('platform-ci-evidence.js write');
+    expect(bundleWorkflow).not.toContain('platform-ci-evidence.js check');
+  });
+
   test('authorized bundle workflow uses the serialized main integration lane', () => {
     expect(authorizedBundleWorkflow).toContain('group: 4veco-main-integration');
     expect(authorizedBundleWorkflow).toContain('queue: max');
