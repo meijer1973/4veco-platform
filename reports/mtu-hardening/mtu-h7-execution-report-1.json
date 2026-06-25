@@ -3,12 +3,12 @@
   "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
   "report_id": "mtu-h7-execution-report-1",
   "status": "benchmark_executed_hold_for_operation_registry_governance",
-  "generated_at": "2026-06-25T13:50:53.858Z",
+  "generated_at": "2026-06-25T15:09:40.575Z",
   "method_freeze": {
     "h6_frozen_method_anchor": "95601ff21b69754d1f82dcca5647edb46ae5a62f",
     "pr_144_merge_sha": "f05f8e67e3b5528fd8f30401ba1b0fa084042fff",
     "current_main_sha": "d16a33531f710d89224c693ab9bee3f8847b07cb",
-    "local_head_sha": "d16a33531f710d89224c693ab9bee3f8847b07cb",
+    "local_head_sha": "ddf8cd683551b0748af5afb02d89e9ed9a8181cd",
     "method_inputs": [
       {
         "path": "reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json",

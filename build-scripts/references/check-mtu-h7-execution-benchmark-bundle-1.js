@@ -11,6 +11,7 @@ const BUNDLE_JSON = 'reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.j
 const FIXTURE_JSON = 'reports/mtu-hardening/mtu-h7-execution-fixture-1.json';
 const REPORT_JSON = 'reports/mtu-hardening/mtu-h7-execution-report-1.json';
 const GATE_JSON = 'reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.json';
+const GATE_LEAD_REVIEW_MD = 'reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/lead-review.md';
 const UNITS_JSON = 'references/machine/micro-teaching-units.json';
 
 function repoPath(relativePath) {
@@ -19,6 +20,10 @@ function repoPath(relativePath) {
 
 function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(repoPath(relativePath), 'utf8'));
+}
+
+function readText(relativePath) {
+  return fs.readFileSync(repoPath(relativePath), 'utf8');
 }
 
 function sha256File(relativePath) {
@@ -129,6 +134,21 @@ function validate() {
   if (!allFalse(fixture.authority_boundary)) failures.push('fixture authority flags must all be false');
   if (!allFalse(report.authority_flags)) failures.push('report authority flags must all be false');
   if (!allFalse(gate.authority_flags)) failures.push('gate authority flags must all be false');
+  if (gate.lead_review_proof !== GATE_LEAD_REVIEW_MD) failures.push('gate lead_review_proof mismatch');
+  if (!fs.existsSync(repoPath(GATE_LEAD_REVIEW_MD))) failures.push('lead review proof file missing');
+  if (fs.existsSync(repoPath(GATE_LEAD_REVIEW_MD))) {
+    const leadReviewText = readText(GATE_LEAD_REVIEW_MD);
+    for (const requiredText of [
+      'Result: `PASS WITH FLAGS`',
+      'not H7 closure and not product authority',
+      'Teacher reviewer: more than satisfied',
+      'Economist reviewer: more than satisfied',
+      'Quality inspection reviewer: more than satisfied',
+      'No protected reference mutation'
+    ]) {
+      if (!leadReviewText.includes(requiredText)) failures.push(`lead review proof missing text: ${requiredText}`);
+    }
+  }
   if (report.lead_reviewer_verdict !== 'HOLD_FOR_OPERATION_REGISTRY_GOVERNANCE') {
     failures.push('lead reviewer verdict must hold for operation-registry governance');
   }

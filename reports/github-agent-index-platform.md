@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-25T13:51:33.447Z
+Generated: 2026-06-25T15:09:56.151Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h7-blind-holdout-execution-20260625`
-Source commit: `d16a33531f710d89224c693ab9bee3f8847b07cb`
-Files indexed: 6116
+Source commit: `ddf8cd683551b0748af5afb02d89e9ed9a8181cd`
+Files indexed: 6198
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 588
+Count: 596
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -298,6 +298,10 @@ Count: 588
 - build-scripts/references/build-mtu-h4b-answer-form-cli-execution-packet.js
 - build-scripts/references/build-mtu-h5-regression-report.js
 - build-scripts/references/build-mtu-h6-closure-h7-benchmark-1.js
+- build-scripts/references/build-mtu-h7-diagnostic-evidence-manifest-1.js
+- build-scripts/references/build-mtu-h7-execution-benchmark-bundle-1.js
+- build-scripts/references/build-mtu-h7-execution-protocol-views-1.js
+- build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -392,6 +396,10 @@ Count: 588
 - build-scripts/references/check-mtu-h6-closure-h7-benchmark-1.test.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.test.js
+- build-scripts/references/check-mtu-h7-diagnostic-evidence-manifest-1.js
+- build-scripts/references/check-mtu-h7-execution-benchmark-bundle-1.js
+- build-scripts/references/check-mtu-h7-execution-protocol-views-1.js
+- build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -781,7 +789,7 @@ Count: 46
 
 ## validators
 
-Count: 570
+Count: 574
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -916,6 +924,10 @@ Count: 570
 - build-scripts/references/check-mtu-h6-closure-h7-benchmark-1.test.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js
 - build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.test.js
+- build-scripts/references/check-mtu-h7-diagnostic-evidence-manifest-1.js
+- build-scripts/references/check-mtu-h7-execution-benchmark-bundle-1.js
+- build-scripts/references/check-mtu-h7-execution-protocol-views-1.js
+- build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -2098,7 +2110,7 @@ Count: 737
 
 ## reports
 
-Count: 3963
+Count: 4037
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2470,6 +2482,77 @@ Count: 3963
 - reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.md
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.md
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-correction-05-05.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-prompt-02-02.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-correction-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-prompt-04-04.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-prompt-05-05.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q21-correction-11-11.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q21-prompt-08-08.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-correction-09-09.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-prompt-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-2-o-q03-correction-05-05.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-2-o-q03-prompt-02-02.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-correction-12-12.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-prompt-06-6.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-prompt-07-7.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-correction-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-prompt-05-05.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-prompt-06-06.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q04-correction-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q04-prompt-03-03.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q21-correction-11-11.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q21-prompt-10-10.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q09-correction-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q09-prompt-05-05.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-correction-11-11.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-09-09.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-10-10.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-correction-11-11.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-08-08.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q24-correction-14-14.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q24-prompt-11-11.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-correction-07-07.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-prompt-03-03.png
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json
+- reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.md
+- reports/mtu-hardening/mtu-h7-execution-adjudicator-view-1.json
+- reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json
+- reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.md
+- reports/mtu-hardening/mtu-h7-execution-curator-view-1.json
+- reports/mtu-hardening/mtu-h7-execution-fixture-1.json
+- reports/mtu-hardening/mtu-h7-execution-mapper-view-1.json
+- reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json
+- reports/mtu-hardening/mtu-h7-execution-protocol-views-1.md
+- reports/mtu-hardening/mtu-h7-execution-report-1.json
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q12-correction-10-10.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q12-prompt-05-5.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q09-correction-07-07.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q09-prompt-04-04.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q09-prompt-05-05.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q18-correction-09-09.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q18-prompt-08-08.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q18-prompt-09-09.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q11-correction-09-09.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q11-prompt-05-05.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q11-prompt-06-06.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q14-correction-11-11.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q14-prompt-06-06.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q14-prompt-07-07.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-correction-07-07.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-prompt-03-03.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q20-correction-11-11.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q20-prompt-09-09.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q28-correction-13-13.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q28-prompt-13-13.png
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json
+- reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
@@ -3447,6 +3530,9 @@ Count: 3963
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.json
+- reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json

@@ -6,6 +6,8 @@ Requested decision: Review H7 benchmark result and decide whether operation-regi
 
 Lead reviewer verdict: `HOLD_FOR_OPERATION_REGISTRY_GOVERNANCE`
 
+Lead review proof: `reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/lead-review.md`
+
 ## Core Requirements
 
 - [x] Current main and PR #144 baseline sealed (reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json)

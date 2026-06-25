@@ -3,7 +3,7 @@
   "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
   "fixture_id": "mtu-h7-execution-fixture-1",
   "status": "executed_blind_holdout_benchmark_not_product_authority",
-  "generated_at": "2026-06-25T13:50:53.858Z",
+  "generated_at": "2026-06-25T15:09:40.575Z",
   "source_protocol": "reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json",
   "source_diagnostic_evidence_manifest": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
   "source_holdout_evidence_manifest": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json",

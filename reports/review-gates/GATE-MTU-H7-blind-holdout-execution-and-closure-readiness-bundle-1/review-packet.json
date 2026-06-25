@@ -92,6 +92,7 @@
     "Confirm holdout q5 graph-only evidence by source/graph review.",
     "Rerun H5/H6/H7 checkers and platform validation after any allowed generic repair."
   ],
+  "lead_review_proof": "reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/lead-review.md",
   "lead_reviewer_verdict": "HOLD_FOR_OPERATION_REGISTRY_GOVERNANCE",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,

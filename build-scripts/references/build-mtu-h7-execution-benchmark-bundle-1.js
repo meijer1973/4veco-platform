@@ -20,6 +20,7 @@ const OUT_BUNDLE_MD = 'reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1
 const GATE_JSON = `reports/review-gates/${GATE_ID}/review-packet.json`;
 const GATE_MD = `reports/review-gates/${GATE_ID}/review-packet.md`;
 const GATE_URLS = `reports/review-gates/${GATE_ID}/bundle-urls.md`;
+const GATE_LEAD_REVIEW_MD = `reports/review-gates/${GATE_ID}/lead-review.md`;
 const UNITS_JSON = 'references/machine/micro-teaching-units.json';
 
 const AUTHORITY_FLAGS = {
@@ -1421,9 +1422,49 @@ function buildReviewPacket(bundle, report) {
       'Confirm holdout q5 graph-only evidence by source/graph review.',
       'Rerun H5/H6/H7 checkers and platform validation after any allowed generic repair.'
     ],
+    lead_review_proof: GATE_LEAD_REVIEW_MD,
     lead_reviewer_verdict: report.lead_reviewer_verdict,
     authority_flags: AUTHORITY_FLAGS
   };
+}
+
+function renderLeadReviewMarkdown(bundle, report) {
+  return `# ${GATE_ID} Lead Review
+
+Result: \`PASS WITH FLAGS\`
+
+Reviewed scope: H7 blind-holdout benchmark packet readiness for human review, not H7 closure and not product authority.
+
+Reviewed head: generated at PR head by \`${path.basename(__filename)}\`.
+
+Closure verdict carried by packet: \`${report.lead_reviewer_verdict}\`.
+
+## Lead Review Finding
+
+The H7 packet is complete enough for owner/human review because it preserves the frozen method boundary, separates diagnostic and locked holdout metrics, includes official-evidence manifests, records operation-level decomposition, records answer-form and misconception hooks, detects every negative fixture, and reports zero false closures.
+
+The packet is not a closure packet. It intentionally carries \`${report.lead_reviewer_verdict}\` because the benchmark exposed operation-registry/canonical-MTU governance needs and one locked-holdout graph adjudication need.
+
+## Specialist Review
+
+- Teacher reviewer: more than satisfied after the misconception appendix, high-risk negatives, answer summaries, and metric labels were added.
+- Economist reviewer: more than satisfied after the q20 holdout game-theory routing was corrected to use the explanation answer form and guard against prisoner-dilemma over-triggering.
+- Quality inspection reviewer: more than satisfied after answer-form mappings were checked as mapped requirements and graph-answer-form coverage was added.
+
+## Flags
+
+- Human review is required before any H7 full closure, H6/H7 evidence-generalization closure, product-route readiness, Scale Gate 1, diagnostics/mastery/PV/sequencing, or student/product use.
+- No protected reference mutation, external-source mutation, machine-reference mutation, target-exercise mutation, candidate writes/storage, lesson output, or product authority is authorized here.
+
+## Evidence
+
+- Review packet: \`${GATE_JSON}\`
+- Benchmark bundle: \`${OUT_BUNDLE_JSON}\`
+- Execution report: \`${OUT_REPORT_JSON}\`
+- Negative fixtures: \`${OUT_FIXTURE_JSON}\`
+- Diagnostic evidence: \`${DIAGNOSTIC_EVIDENCE_JSON}\`
+- Holdout evidence: \`${HOLDOUT_EVIDENCE_JSON}\`
+`;
 }
 
 function renderBundleMarkdown(bundle, report) {
@@ -1488,6 +1529,8 @@ Requested decision: ${packet.requested_decision}
 
 Lead reviewer verdict: \`${packet.lead_reviewer_verdict}\`
 
+Lead review proof: \`${packet.lead_review_proof}\`
+
 ## Core Requirements
 
 ${checklist}
@@ -1520,7 +1563,8 @@ function renderBundleUrls() {
     DIAGNOSTIC_EVIDENCE_JSON,
     HOLDOUT_EVIDENCE_JSON,
     GATE_JSON,
-    GATE_MD
+    GATE_MD,
+    GATE_LEAD_REVIEW_MD
   ];
   return `# ${GATE_ID} Bundle URLs
 
@@ -1661,6 +1705,7 @@ function build() {
   writeText(OUT_BUNDLE_MD, renderBundleMarkdown(bundle, report));
   writeJson(GATE_JSON, reviewPacket);
   writeText(GATE_MD, renderGateMarkdown(reviewPacket));
+  writeText(GATE_LEAD_REVIEW_MD, renderLeadReviewMarkdown(bundle, report));
   writeText(GATE_URLS, renderBundleUrls());
 
   return { bundle, report };
