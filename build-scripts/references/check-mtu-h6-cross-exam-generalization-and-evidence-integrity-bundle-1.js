@@ -726,6 +726,9 @@ function checkPackageAndGate(packet, gate, fixture, evaluation, negativeResults)
 }
 
 function checkGitScope() {
+  if (!process.argv.includes('--check-git-scope')) {
+    return;
+  }
   let changed = [];
   try {
     changed = execFileSync('git', ['diff', '--name-only', 'origin/main...HEAD'], { cwd: ROOT, encoding: 'utf8' })

@@ -634,7 +634,7 @@ function rebuild() {
       summary: 'All seven fresh records pass after atomic decomposition and q4/q23 reviewed-equivalent decisions.',
       blocks: [],
       does_not_block: ['human review of closure-readiness packet'],
-      proof_required_to_close: 'Owner/human approval tied to exact PR head.',
+      proof_required_to_close: 'Owner/human approval tied to the reviewed payload head and decision scope.',
     },
     {
       finding_id: 'H6-DOWNSTREAM-AUTHORITY-BOUNDARY',

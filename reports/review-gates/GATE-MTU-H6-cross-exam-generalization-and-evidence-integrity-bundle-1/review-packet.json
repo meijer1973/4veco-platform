@@ -113,7 +113,7 @@
       "does_not_block": [
         "human review of closure-readiness packet"
       ],
-      "proof_required_to_close": "Owner/human approval tied to exact PR head."
+      "proof_required_to_close": "Owner/human approval tied to the reviewed payload head and decision scope."
     },
     {
       "finding_id": "H6-DOWNSTREAM-AUTHORITY-BOUNDARY",
@@ -206,7 +206,7 @@
   "proof_required_to_close": [
     {
       "finding_id": "H6-ATOMIC-PASS",
-      "proof": "Owner/human approval tied to exact PR head."
+      "proof": "Owner/human approval tied to the reviewed payload head and decision scope."
     },
     {
       "finding_id": "H6-DOWNSTREAM-AUTHORITY-BOUNDARY",

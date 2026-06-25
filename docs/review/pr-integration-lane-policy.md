@@ -13,6 +13,10 @@ scope.
 and deterministic evidence refreshes. CI, readiness, branch protection, and the
 final merge bind to this exact SHA.
 
+The integration head is machine-validated, not separately human-authorized. A
+human decision binds once to the reviewed payload head and carries through only
+the permitted descendants described below.
+
 ## Human Payload Authorization
 
 Human authorization must be recorded as a machine-readable PR comment with this

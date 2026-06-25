@@ -50,19 +50,19 @@ Original sprint/gate/source specs:
 | MTU mutation not authorized | met | `authority_claims` |
 | Downstream authority false | met | `authority_claims` |
 | Local checker proof | met | `proof.local_checkers` |
-| Exact-head PR proof | pending_remote_pr | `single_account_pr_governance_pilot` |
+| Current-head PR proof | pending_remote_pr | `single_account_pr_governance_pilot` |
 
 ## Findings And Carried Issues
 
 | ID | Classification | Finding | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|---|
-| Y2SRMTP-001 | proof_required_to_close | Source reconstruction and MTU/task-family proof are review-ready but require exact-head human acceptance before downstream closure. | lesson handoff, product proof, broad OP closure | human review of this proof PR | Owner authorization tied to the exact remote head after CI, checker, branch-protection, lead-review, and PR-readiness proof. |
+| Y2SRMTP-001 | proof_required_to_close | Source reconstruction and MTU/task-family proof are review-ready but require human acceptance of the reviewed payload before downstream closure. | lesson handoff, product proof, broad OP closure | human review of this proof PR | Owner authorization tied to the reviewed payload head and decision scope after CI, checker, branch-protection, lead-review, and PR-readiness proof. |
 | Y2SRMTP-002 | scale_blocker | Protected MTU, operation, and answer-skill mutations remain future governed work. | lesson production, shared task-shell reliance, broad OP closure | review of rendered source/MTU proof | Future governed mutation PR with exact diffs and human authorization. |
 | Y2SRMTP-003 | scale_blocker | Product, Scale, diagnostics, mastery, PV, summative, and student/product authority remain false. | CP-6, Scale Gate, diagnostics, mastery, PV, summative use, student/product use | human review of this proof surface | Separate REV-STD-1 product-proof and Scale Gate review. |
 
 ## Proof
 
-Local checker proof is recorded in `reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/review-packet.json`. Exact-head
+Local checker proof is recorded in `reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/review-packet.json`. Current-head
 remote proof remains pending until draft PR creation. The required live
 branch-protection checker output must include `ok: true`.
 

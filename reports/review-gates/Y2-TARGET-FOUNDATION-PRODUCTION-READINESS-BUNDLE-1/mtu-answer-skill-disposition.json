@@ -1,43 +1,28 @@
 {
   "schema_version": 1,
-  "sprint_id": "Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1",
-  "prior_sprint_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
-  "status": "governed_task_family_proof_ready_pending_human_closure_no_mtu_mutation",
-  "authority_boundary": "review_proof_only_no_mtu_mutation_no_operation_closure_no_product_use",
-  "evidence_base": [
-    "references/authored/year2-v6-target-foundation-candidates.json",
-    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
-    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html",
-    "references/data/year2-target-foundation/answer-contracts.json",
-    "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json"
+  "sprint_id": "Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1",
+  "status": "all_19_op_rows_have_exact_disposition_no_runtime_mutation",
+  "authority_boundary": "disposition_only_no_mtu_mutation_no_operation_closure_no_answer_skill_mutation_no_product_use",
+  "allowed_outcomes": [
+    "existing_governed_support_sufficient",
+    "existing_support_requires_extension",
+    "new_task_family_runtime_support_required",
+    "new_answer_skill_record_required"
   ],
   "records": [
     {
       "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
       "target_owner_candidate_id": "Y2-B5-P13",
       "source_family": "vw-1022-a-25-2-o:q7-q11",
-      "op_rows_expected": [
-        "OP-T1",
-        "OP-H1",
-        "OP-ANS2",
-        "OP-ANS3"
-      ],
-      "proof_status": "complete_review_proof_pending_human_acceptance",
-      "source_artifact_ids": [
-        "figuur-1-pensioenmodel-2024-2044",
-        "pensioenmodel-assumptions-a-f"
-      ],
-      "answer_contract_subquestions": [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e"
-      ],
-      "proof_cases": [
+      "status_after_human_merge": "op_row_disposition_ready_for_lesson_design",
+      "disposition_cases": [
         {
           "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-T1",
+          "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+          "target_owner_candidate_id": "Y2-B5-P13",
           "op_row": "OP-T1",
+          "exact_outcome": "existing_support_requires_extension",
+          "rationale": "Existing source_value_selection/source_chain_builder support is useful, but the pension chart needs route-specific schematic-source handling and no numeric-table overclaim.",
           "task_families": [
             "source_value_selection",
             "table_value_selection",
@@ -55,7 +40,7 @@
             "figuur-1-pensioenmodel-2024-2044",
             "pensioenmodel-assumptions-a-f"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "two_step_explanation",
@@ -68,11 +53,6 @@
             {
               "subquestion": "b",
               "answer_form": "two_link_source_explanation",
-              "source_requirements": [
-                "annual inflation = 2%",
-                "annual real economic growth = 0.5%",
-                "welfare-indexed pension outlays"
-              ],
               "point_logic": [
                 "nominal income rises through real growth plus inflation",
                 "welfare-indexed pensions rise with incomes"
@@ -82,9 +62,6 @@
             {
               "subquestion": "c",
               "answer_form": "classification_with_justification",
-              "source_requirements": [
-                "moment value versus period flow"
-              ],
               "point_logic": [
                 "classify net accumulated pension saving as stock",
                 "justify by moment measurement"
@@ -94,10 +71,6 @@
             {
               "subquestion": "d",
               "answer_form": "ratio_comparison_with_conclusion",
-              "source_requirements": [
-                "premium pressure as percentage of GDP stays constant",
-                "total pension wealth"
-              ],
               "point_logic": [
                 "pension wealth rises faster than GDP",
                 "constant GDP-share premium falls as wealth share"
@@ -114,12 +87,17 @@
               "short_answer_model": "A higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
         },
         {
           "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-H1",
+          "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+          "target_owner_candidate_id": "Y2-B5-P13",
           "op_row": "OP-H1",
+          "exact_outcome": "new_answer_skill_record_required",
+          "rationale": "The public-finance/pension-age mechanism needs a reviewed answer-skill record before lesson or exit-ticket reliance.",
           "task_families": [
             "source_chain_builder",
             "sentence_builder",
@@ -133,15 +111,10 @@
             "figuur-1-pensioenmodel-2024-2044",
             "pensioenmodel-assumptions-a-f"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "b",
               "answer_form": "two_link_source_explanation",
-              "source_requirements": [
-                "annual inflation = 2%",
-                "annual real economic growth = 0.5%",
-                "welfare-indexed pension outlays"
-              ],
               "point_logic": [
                 "nominal income rises through real growth plus inflation",
                 "welfare-indexed pensions rise with incomes"
@@ -158,12 +131,17 @@
               "short_answer_model": "A higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and answer-model closure for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
         },
         {
           "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-ANS2",
+          "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+          "target_owner_candidate_id": "Y2-B5-P13",
           "op_row": "OP-ANS2",
+          "exact_outcome": "existing_support_requires_extension",
+          "rationale": "Calculation-answer formatting exists, but the pension ratio response needs route-specific source/ratio proof.",
           "task_families": [
             "calculation_work",
             "table_value_selection",
@@ -176,14 +154,10 @@
             "figuur-1-pensioenmodel-2024-2044",
             "pensioenmodel-assumptions-a-f"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "d",
               "answer_form": "ratio_comparison_with_conclusion",
-              "source_requirements": [
-                "premium pressure as percentage of GDP stays constant",
-                "total pension wealth"
-              ],
               "point_logic": [
                 "pension wealth rises faster than GDP",
                 "constant GDP-share premium falls as wealth share"
@@ -191,12 +165,17 @@
               "short_answer_model": "Pension wealth rises faster than GDP, so a constant GDP-share premium falls as wealth share."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
         },
         {
           "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-ANS3",
+          "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+          "target_owner_candidate_id": "Y2-B5-P13",
           "op_row": "OP-ANS3",
+          "exact_outcome": "new_answer_skill_record_required",
+          "rationale": "The source-supported explanation form needs a reviewed Year 2 answer-skill record.",
           "task_families": [
             "sentence_builder",
             "constructed_response"
@@ -212,7 +191,7 @@
             "figuur-1-pensioenmodel-2024-2044",
             "pensioenmodel-assumptions-a-f"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "two_step_explanation",
@@ -225,11 +204,6 @@
             {
               "subquestion": "b",
               "answer_form": "two_link_source_explanation",
-              "source_requirements": [
-                "annual inflation = 2%",
-                "annual real economic growth = 0.5%",
-                "welfare-indexed pension outlays"
-              ],
               "point_logic": [
                 "nominal income rises through real growth plus inflation",
                 "welfare-indexed pensions rise with incomes"
@@ -239,9 +213,6 @@
             {
               "subquestion": "c",
               "answer_form": "classification_with_justification",
-              "source_requirements": [
-                "moment value versus period flow"
-              ],
               "point_logic": [
                 "classify net accumulated pension saving as stock",
                 "justify by moment measurement"
@@ -251,10 +222,6 @@
             {
               "subquestion": "d",
               "answer_form": "ratio_comparison_with_conclusion",
-              "source_requirements": [
-                "premium pressure as percentage of GDP stays constant",
-                "total pension wealth"
-              ],
               "point_logic": [
                 "pension wealth rises faster than GDP",
                 "constant GDP-share premium falls as wealth share"
@@ -271,50 +238,25 @@
               "short_answer_model": "A higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and answer-model closure for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
         }
-      ],
-      "protected_mtu_change_plan": {
-        "required": true,
-        "status": "companion_plan_required_later",
-        "reason": "OP-T1/OP-H1/OP-ANS2/OP-ANS3 are not production-closed for pension source reasoning.",
-        "blocks": "lesson production and shared task-shell reliance",
-        "does_not_block": "candidate-surface installation",
-        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
-      }
+      ]
     },
     {
       "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
       "target_owner_candidate_id": "Y2-B6-P12",
       "source_family": "vw-1022-a-23-2-o:q26-q29",
-      "op_rows_expected": [
-        "OP-P1",
-        "OP-D1",
-        "OP-C1",
-        "OP-C2",
-        "OP-F1",
-        "OP-E1",
-        "OP-ANS2",
-        "OP-ANS3"
-      ],
-      "proof_status": "complete_review_proof_pending_human_acceptance",
-      "source_artifact_ids": [
-        "tabel-1-vastwonen-financial-data",
-        "tabel-2-particuliere-huurwoningen-reder",
-        "q28-housing-investor-context"
-      ],
-      "answer_contract_subquestions": [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e"
-      ],
-      "proof_cases": [
+      "status_after_human_merge": "op_row_disposition_ready_for_lesson_design",
+      "disposition_cases": [
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-P1",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-P1",
+          "exact_outcome": "existing_support_requires_extension",
+          "rationale": "Price-control and table-selection support exists, but this route needs social-housing waiting-list proof.",
           "task_families": [
             "calculation_work",
             "table_value_selection",
@@ -330,50 +272,31 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "calculation_with_unit",
-              "source_requirements": [
-                "maximum rent = EUR 850",
-                "housing stock = 6800"
-              ],
               "point_logic": [
                 "select demand at maximum rent",
                 "subtract housing stock",
                 "state waiting-list count with unit"
               ],
-              "expected_waiting_list_dwellings": 3600,
               "short_answer_model": "At EUR 850, demand is 10,400 dwellings, so the waiting list is 10,400 - 6,800 = 3,600 dwellings."
             },
             {
               "subquestion": "b",
               "answer_form": "calculation_with_conclusion",
-              "source_requirements": [
-                "GO = -0.125Q + 2150",
-                "Q = social rental dwellings",
-                "housing stock = 6800"
-              ],
               "point_logic": [
                 "derive marginal revenue from average revenue",
                 "choose the revenue-maximising quantity",
                 "compare with capacity or waiting-list pressure",
                 "accept or reject the claim"
               ],
-              "revenue_maximising_quantity": 8600,
-              "revenue_maximising_rent_eur": 1075,
-              "claim_conclusion": "claim_not_correct",
               "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
             },
             {
               "subquestion": "e",
               "answer_form": "source_supported_market_explanation",
-              "source_requirements": [
-                "released rental dwellings = -9.9%",
-                "average rent = +6%",
-                "middle incomes = +3%",
-                "income elasticity = +0.4"
-              ],
               "point_logic": [
                 "positive income elasticity and higher incomes increase demand",
                 "fewer released rentals restrict supply",
@@ -382,12 +305,17 @@
               "short_answer_model": "Middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
         },
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-D1",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-D1",
+          "exact_outcome": "new_task_family_runtime_support_required",
+          "rationale": "Demand-function solving depends on formula derivation plus calculation capture not yet proven for this Year 2 route.",
           "task_families": [
             "calculation_work",
             "formula_derivation",
@@ -401,29 +329,29 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "calculation_with_unit",
-              "source_requirements": [
-                "maximum rent = EUR 850",
-                "housing stock = 6800"
-              ],
               "point_logic": [
                 "select demand at maximum rent",
                 "subtract housing stock",
                 "state waiting-list count with unit"
               ],
-              "expected_waiting_list_dwellings": 3600,
               "short_answer_model": "At EUR 850, demand is 10,400 dwellings, so the waiting list is 10,400 - 6,800 = 3,600 dwellings."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
         },
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-C1",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-C1",
+          "exact_outcome": "new_task_family_runtime_support_required",
+          "rationale": "Revenue/cost calculation needs formula-derivation runtime proof before lesson reliance.",
           "task_families": [
             "formula_derivation",
             "calculation_work",
@@ -437,33 +365,30 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "b",
               "answer_form": "calculation_with_conclusion",
-              "source_requirements": [
-                "GO = -0.125Q + 2150",
-                "Q = social rental dwellings",
-                "housing stock = 6800"
-              ],
               "point_logic": [
                 "derive marginal revenue from average revenue",
                 "choose the revenue-maximising quantity",
                 "compare with capacity or waiting-list pressure",
                 "accept or reject the claim"
               ],
-              "revenue_maximising_quantity": 8600,
-              "revenue_maximising_rent_eur": 1075,
-              "claim_conclusion": "claim_not_correct",
               "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
         },
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-C2",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-C2",
+          "exact_outcome": "new_task_family_runtime_support_required",
+          "rationale": "Marginal-revenue output choice needs formula-derivation and decision-step proof before lesson reliance.",
           "task_families": [
             "formula_derivation",
             "calculation_work",
@@ -477,33 +402,30 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "b",
               "answer_form": "calculation_with_conclusion",
-              "source_requirements": [
-                "GO = -0.125Q + 2150",
-                "Q = social rental dwellings",
-                "housing stock = 6800"
-              ],
               "point_logic": [
                 "derive marginal revenue from average revenue",
                 "choose the revenue-maximising quantity",
                 "compare with capacity or waiting-list pressure",
                 "accept or reject the claim"
               ],
-              "revenue_maximising_quantity": 8600,
-              "revenue_maximising_rent_eur": 1075,
-              "claim_conclusion": "claim_not_correct",
               "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
         },
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-F1",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-F1",
+          "exact_outcome": "new_answer_skill_record_required",
+          "rationale": "Mortgage-rate and rental-income risk mechanisms need a reviewed answer-skill record.",
           "task_families": [
             "source_chain_builder",
             "sentence_builder",
@@ -518,7 +440,7 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "c",
               "answer_form": "two_link_mechanism",
@@ -538,12 +460,17 @@
               "short_answer_model": "Shortage sustains rental demand and stabilises rent income, reducing loss risk."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and answer-model closure for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
         },
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-E1",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-E1",
+          "exact_outcome": "existing_support_requires_extension",
+          "rationale": "Elasticity/source-chain support exists, but the rent-market income-elasticity route needs exact source proof.",
           "task_families": [
             "source_value_selection",
             "table_value_selection",
@@ -558,16 +485,10 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "e",
               "answer_form": "source_supported_market_explanation",
-              "source_requirements": [
-                "released rental dwellings = -9.9%",
-                "average rent = +6%",
-                "middle incomes = +3%",
-                "income elasticity = +0.4"
-              ],
               "point_logic": [
                 "positive income elasticity and higher incomes increase demand",
                 "fewer released rentals restrict supply",
@@ -576,12 +497,17 @@
               "short_answer_model": "Middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
         },
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-ANS2",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-ANS2",
+          "exact_outcome": "new_task_family_runtime_support_required",
+          "rationale": "Calculation-answer formatting depends on route-specific formula derivation and intermediate-step capture.",
           "task_families": [
             "calculation_work",
             "formula_derivation",
@@ -596,48 +522,40 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "calculation_with_unit",
-              "source_requirements": [
-                "maximum rent = EUR 850",
-                "housing stock = 6800"
-              ],
               "point_logic": [
                 "select demand at maximum rent",
                 "subtract housing stock",
                 "state waiting-list count with unit"
               ],
-              "expected_waiting_list_dwellings": 3600,
               "short_answer_model": "At EUR 850, demand is 10,400 dwellings, so the waiting list is 10,400 - 6,800 = 3,600 dwellings."
             },
             {
               "subquestion": "b",
               "answer_form": "calculation_with_conclusion",
-              "source_requirements": [
-                "GO = -0.125Q + 2150",
-                "Q = social rental dwellings",
-                "housing stock = 6800"
-              ],
               "point_logic": [
                 "derive marginal revenue from average revenue",
                 "choose the revenue-maximising quantity",
                 "compare with capacity or waiting-list pressure",
                 "accept or reject the claim"
               ],
-              "revenue_maximising_quantity": 8600,
-              "revenue_maximising_rent_eur": 1075,
-              "claim_conclusion": "claim_not_correct",
               "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
         },
         {
           "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-ANS3",
+          "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+          "target_owner_candidate_id": "Y2-B6-P12",
           "op_row": "OP-ANS3",
+          "exact_outcome": "new_answer_skill_record_required",
+          "rationale": "The source-supported rent/mortgage explanation form needs a Year 2 answer-skill record.",
           "task_families": [
             "sentence_builder",
             "source_chain_builder",
@@ -653,7 +571,7 @@
             "tabel-2-particuliere-huurwoningen-reder",
             "q28-housing-investor-context"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "c",
               "answer_form": "two_link_mechanism",
@@ -675,12 +593,6 @@
             {
               "subquestion": "e",
               "answer_form": "source_supported_market_explanation",
-              "source_requirements": [
-                "released rental dwellings = -9.9%",
-                "average rent = +6%",
-                "middle incomes = +3%",
-                "income elasticity = +0.4"
-              ],
               "point_logic": [
                 "positive income elasticity and higher incomes increase demand",
                 "fewer released rentals restrict supply",
@@ -689,45 +601,25 @@
               "short_answer_model": "Middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and answer-model closure for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
         }
-      ],
-      "protected_mtu_change_plan": {
-        "required": true,
-        "status": "companion_plan_required_later",
-        "reason": "Housing finance, cost/revenue, elasticity, and rent-market source task shells need governed proof.",
-        "blocks": "lesson production and target-equivalent proof",
-        "does_not_block": "candidate-surface installation",
-        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
-      }
+      ]
     },
     {
       "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
       "target_owner_candidate_id": "Y2-B7-P13",
       "source_family": "vw-1022-a-23-1-o:q12-q15",
-      "op_rows_expected": [
-        "OP-R1",
-        "OP-M1",
-        "OP-ANS2",
-        "OP-ANS3"
-      ],
-      "proof_status": "complete_review_proof_pending_human_acceptance",
-      "source_artifact_ids": [
-        "figuur-1-kredietverzekering-en-voorwaarden",
-        "tabel-1-financiele-gegevens-digibate"
-      ],
-      "answer_contract_subquestions": [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e"
-      ],
-      "proof_cases": [
+      "status_after_human_merge": "op_row_disposition_ready_for_lesson_design",
+      "disposition_cases": [
         {
           "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-R1",
+          "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+          "target_owner_candidate_id": "Y2-B7-P13",
           "op_row": "OP-R1",
+          "exact_outcome": "existing_support_requires_extension",
+          "rationale": "Assertion/source-chain support exists, but insurance expected-loss and information-problem routing needs exact route proof.",
           "task_families": [
             "assertion_reason",
             "source_chain_builder",
@@ -745,15 +637,10 @@
             "figuur-1-kredietverzekering-en-voorwaarden",
             "tabel-1-financiele-gegevens-digibate"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "three_part_explanation",
-              "source_requirements": [
-                "credit insurer as principal",
-                "buying company as agent",
-                "collection costs charged to buying company"
-              ],
               "point_logic": [
                 "name conflicting interests",
                 "name asymmetric information",
@@ -764,11 +651,6 @@
             {
               "subquestion": "b",
               "answer_form": "condition_identification_plus_incentive_chain",
-              "source_requirements": [
-                "90% indemnity",
-                "bonus-malus",
-                "collection-cost pass-through"
-              ],
               "point_logic": [
                 "identify two conditions",
                 "explain how each reduces supplier moral hazard"
@@ -778,10 +660,6 @@
             {
               "subquestion": "c",
               "answer_form": "adverse_selection_condition_and_reason",
-              "source_requirements": [
-                "bonus-malus",
-                "voluntary deductible or compulsory insurance route if used"
-              ],
               "point_logic": [
                 "identify condition",
                 "explain how it changes pool composition or selection incentive"
@@ -791,38 +669,33 @@
             {
               "subquestion": "d",
               "answer_form": "expected_value_calculation",
-              "source_requirements": [
-                "contract counts",
-                "average turnover",
-                "default probabilities"
-              ],
               "point_logic": [
                 "multiply count, turnover, and default probability for each row",
                 "sum expected damage"
               ],
-              "expected_damage_eur": 80000,
               "short_answer_model": "Multiply contract count, average turnover, and default probability for each row: EUR 10,000 + EUR 30,000 + EUR 40,000 = EUR 80,000."
             },
             {
               "subquestion": "e",
               "answer_form": "markup_calculation_and_conclusion",
-              "source_requirements": [
-                "20% markup"
-              ],
               "point_logic": [
                 "add 20% markup to expected damage",
                 "state total credit-insurance premium"
               ],
-              "total_premium_eur": 96000,
               "short_answer_model": "The markup is EUR 80,000 x 20% = EUR 16,000, so the total premium is EUR 96,000."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
         },
         {
           "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-M1",
+          "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+          "target_owner_candidate_id": "Y2-B7-P13",
           "op_row": "OP-M1",
+          "exact_outcome": "existing_governed_support_sufficient",
+          "rationale": "Matching/source/sentence support is sufficient for principal-agent actor-condition orientation after route-specific data binding.",
           "task_families": [
             "matching_pairs",
             "source_value_selection",
@@ -835,15 +708,10 @@
             "figuur-1-kredietverzekering-en-voorwaarden",
             "tabel-1-financiele-gegevens-digibate"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "three_part_explanation",
-              "source_requirements": [
-                "credit insurer as principal",
-                "buying company as agent",
-                "collection costs charged to buying company"
-              ],
               "point_logic": [
                 "name conflicting interests",
                 "name asymmetric information",
@@ -852,12 +720,17 @@
               "short_answer_model": "The credit insurer is the principal and the buying company is the agent: the insurer wants to be paid, while the buyer may not pay; charging collection costs to the buying company reduces this agency problem."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "nothing for foundation readiness; later route-specific rendered proof is still required before student/product use",
+          "does_not_block": "reviewed foundation ready for lesson design",
+          "proof_required_to_close": "Keep source asset, answer contract, and route binding together in the lesson-production PR."
         },
         {
           "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-ANS2",
+          "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+          "target_owner_candidate_id": "Y2-B7-P13",
           "op_row": "OP-ANS2",
+          "exact_outcome": "existing_support_requires_extension",
+          "rationale": "Calculation capture exists, but expected-value plus markup answer formatting needs route-specific proof.",
           "task_families": [
             "calculation_work",
             "table_value_selection",
@@ -871,42 +744,37 @@
             "figuur-1-kredietverzekering-en-voorwaarden",
             "tabel-1-financiele-gegevens-digibate"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "d",
               "answer_form": "expected_value_calculation",
-              "source_requirements": [
-                "contract counts",
-                "average turnover",
-                "default probabilities"
-              ],
               "point_logic": [
                 "multiply count, turnover, and default probability for each row",
                 "sum expected damage"
               ],
-              "expected_damage_eur": 80000,
               "short_answer_model": "Multiply contract count, average turnover, and default probability for each row: EUR 10,000 + EUR 30,000 + EUR 40,000 = EUR 80,000."
             },
             {
               "subquestion": "e",
               "answer_form": "markup_calculation_and_conclusion",
-              "source_requirements": [
-                "20% markup"
-              ],
               "point_logic": [
                 "add 20% markup to expected damage",
                 "state total credit-insurance premium"
               ],
-              "total_premium_eur": 96000,
               "short_answer_model": "The markup is EUR 80,000 x 20% = EUR 16,000, so the total premium is EUR 96,000."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
         },
         {
           "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-ANS3",
+          "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+          "target_owner_candidate_id": "Y2-B7-P13",
           "op_row": "OP-ANS3",
+          "exact_outcome": "new_answer_skill_record_required",
+          "rationale": "Condition-based information-problem explanations need a reviewed answer-skill record.",
           "task_families": [
             "sentence_builder",
             "source_chain_builder",
@@ -922,15 +790,10 @@
             "figuur-1-kredietverzekering-en-voorwaarden",
             "tabel-1-financiele-gegevens-digibate"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "three_part_explanation",
-              "source_requirements": [
-                "credit insurer as principal",
-                "buying company as agent",
-                "collection costs charged to buying company"
-              ],
               "point_logic": [
                 "name conflicting interests",
                 "name asymmetric information",
@@ -941,11 +804,6 @@
             {
               "subquestion": "b",
               "answer_form": "condition_identification_plus_incentive_chain",
-              "source_requirements": [
-                "90% indemnity",
-                "bonus-malus",
-                "collection-cost pass-through"
-              ],
               "point_logic": [
                 "identify two conditions",
                 "explain how each reduces supplier moral hazard"
@@ -955,10 +813,6 @@
             {
               "subquestion": "c",
               "answer_form": "adverse_selection_condition_and_reason",
-              "source_requirements": [
-                "bonus-malus",
-                "voluntary deductible or compulsory insurance route if used"
-              ],
               "point_logic": [
                 "identify condition",
                 "explain how it changes pool composition or selection incentive"
@@ -968,55 +822,32 @@
             {
               "subquestion": "e",
               "answer_form": "markup_calculation_and_conclusion",
-              "source_requirements": [
-                "20% markup"
-              ],
               "point_logic": [
                 "add 20% markup to expected damage",
                 "state total credit-insurance premium"
               ],
-              "total_premium_eur": 96000,
               "short_answer_model": "The markup is EUR 80,000 x 20% = EUR 16,000, so the total premium is EUR 96,000."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and answer-model closure for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
         }
-      ],
-      "protected_mtu_change_plan": {
-        "required": true,
-        "status": "companion_plan_required_later",
-        "reason": "Broad OP-R1 and OP-M1 task shells need governed proof before production closure.",
-        "blocks": "broad risk/information closure and lesson production",
-        "does_not_block": "candidate-surface installation",
-        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
-      }
+      ]
     },
     {
       "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
       "target_owner_candidate_id": "Y2-B8-P04",
       "source_family": "vw-1022-a-25-1-o:q15-q16",
-      "op_rows_expected": [
-        "OP-S1",
-        "OP-ANS1",
-        "OP-ANS3"
-      ],
-      "proof_status": "complete_review_proof_pending_human_acceptance",
-      "source_artifact_ids": [
-        "ijssalon-guarda-orso-bianco-context",
-        "lowest-price-guarantee-self-binding-source",
-        "derived-payoff-representation"
-      ],
-      "answer_contract_subquestions": [
-        "a",
-        "b",
-        "c",
-        "d"
-      ],
-      "proof_cases": [
+      "status_after_human_merge": "op_row_disposition_ready_for_lesson_design",
+      "disposition_cases": [
         {
           "proof_case_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-S1",
+          "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+          "target_owner_candidate_id": "Y2-B8-P04",
           "op_row": "OP-S1",
+          "exact_outcome": "existing_support_requires_extension",
+          "rationale": "Matching and step-ordering support exists, but game-theory source-to-derived representation proof must be route-specific.",
           "task_families": [
             "matching_pairs",
             "step_ordering",
@@ -1034,14 +865,10 @@
             "lowest-price-guarantee-self-binding-source",
             "derived-payoff-representation"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "dominant_strategy_identification_and_reason",
-              "source_requirements": [
-                "perfect substitutes",
-                "Orso Bianco enters with lower price"
-              ],
               "point_logic": [
                 "identify lower-price choice as dominant strategy direction",
                 "explain why each firm has incentive to lower price"
@@ -1060,10 +887,6 @@
             {
               "subquestion": "c",
               "answer_form": "self_binding_mechanism",
-              "source_requirements": [
-                "fixed sales price for 2025",
-                "lowest-price guarantee"
-              ],
               "point_logic": [
                 "explain commitment to follow lower price",
                 "explain credibility of the promise"
@@ -1073,9 +896,6 @@
             {
               "subquestion": "d",
               "answer_form": "changed_incentive_explanation",
-              "source_requirements": [
-                "discount of 25% on lower Orso Bianco price"
-              ],
               "point_logic": [
                 "Orso Bianco expects less gain from cutting price",
                 "therefore incentive to start price war falls"
@@ -1083,12 +903,17 @@
               "short_answer_model": "Orso Bianco expects less gain from cutting price, so the incentive to start a price war falls."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
         },
         {
           "proof_case_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-ANS1",
+          "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+          "target_owner_candidate_id": "Y2-B8-P04",
           "op_row": "OP-ANS1",
+          "exact_outcome": "new_answer_skill_record_required",
+          "rationale": "Command-word and point-allocation handling for the strategic prompt needs a reviewed answer-skill record.",
           "task_families": [
             "matching_pairs",
             "structured_choice",
@@ -1102,14 +927,10 @@
             "lowest-price-guarantee-self-binding-source",
             "derived-payoff-representation"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "dominant_strategy_identification_and_reason",
-              "source_requirements": [
-                "perfect substitutes",
-                "Orso Bianco enters with lower price"
-              ],
               "point_logic": [
                 "identify lower-price choice as dominant strategy direction",
                 "explain why each firm has incentive to lower price"
@@ -1117,12 +938,17 @@
               "short_answer_model": "Each firm has an incentive to lower price because consumers see the products as perfect substitutes."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and answer-model closure for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
         },
         {
           "proof_case_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-ANS3",
+          "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+          "target_owner_candidate_id": "Y2-B8-P04",
           "op_row": "OP-ANS3",
+          "exact_outcome": "new_answer_skill_record_required",
+          "rationale": "Two-link correction-model strategic explanations need a reviewed answer-skill record.",
           "task_families": [
             "sentence_builder",
             "source_chain_builder",
@@ -1139,14 +965,10 @@
             "lowest-price-guarantee-self-binding-source",
             "derived-payoff-representation"
           ],
-          "answer_contracts": [
+          "answer_contract_forms": [
             {
               "subquestion": "a",
               "answer_form": "dominant_strategy_identification_and_reason",
-              "source_requirements": [
-                "perfect substitutes",
-                "Orso Bianco enters with lower price"
-              ],
               "point_logic": [
                 "identify lower-price choice as dominant strategy direction",
                 "explain why each firm has incentive to lower price"
@@ -1165,10 +987,6 @@
             {
               "subquestion": "c",
               "answer_form": "self_binding_mechanism",
-              "source_requirements": [
-                "fixed sales price for 2025",
-                "lowest-price guarantee"
-              ],
               "point_logic": [
                 "explain commitment to follow lower price",
                 "explain credibility of the promise"
@@ -1178,9 +996,6 @@
             {
               "subquestion": "d",
               "answer_form": "changed_incentive_explanation",
-              "source_requirements": [
-                "discount of 25% on lower Orso Bianco price"
-              ],
               "point_logic": [
                 "Orso Bianco expects less gain from cutting price",
                 "therefore incentive to start price war falls"
@@ -1188,90 +1003,163 @@
               "short_answer_model": "Orso Bianco expects less gain from cutting price, so the incentive to start a price war falls."
             }
           ],
-          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
-          "mutation_status": "not_mutated_review_proof_only"
+          "blocks": "lesson production and answer-model closure for this OP row",
+          "does_not_block": "foundation promotion and generator handoff",
+          "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
         }
-      ],
-      "protected_mtu_change_plan": {
-        "required": true,
-        "status": "companion_plan_required_later",
-        "reason": "Strategic two-link answer skills and OP-S1/OP-ANS3 proof are not production-closed.",
-        "blocks": "broad OP-S1 closure and lesson production",
-        "does_not_block": "candidate-surface installation",
-        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
-      }
+      ]
     }
   ],
-  "global_findings": [
-    {
-      "id": "Y2SRMTP-MTU-001",
-      "classification": "core_requirement_met",
-      "severity": "high",
-      "finding": "Every OP row in the four target-foundation records has a governed proof case tied to rendered source artifacts and answer contracts.",
-      "blocks": [
-        "nothing for human review of this proof surface"
-      ],
-      "does_not_block": [
-        "human review return",
-        "future governed MTU mutation planning"
-      ],
-      "proof_required_to_close": "Keep this JSON proof, source gallery, answer contracts, and exact-head reviewer acceptance together."
-    },
-    {
-      "id": "Y2SRMTP-MTU-002",
-      "classification": "scale_blocker",
-      "severity": "critical",
-      "finding": "No MTU, operation, or answer-skill registry mutation is executed in this PR.",
-      "blocks": [
-        "lesson production",
-        "shared task-shell reliance",
-        "broad OP closure"
-      ],
-      "does_not_block": [
-        "review of the governed proof surface"
-      ],
-      "proof_required_to_close": "Future governed mutation PR with exact MTU/operation/answer-skill diffs, CI, lead review, and human authorization."
-    },
-    {
-      "id": "Y2SRMTP-MTU-003",
-      "classification": "scale_blocker",
-      "severity": "critical",
-      "finding": "Product, Scale, diagnostics, mastery, PV, summative, and student/product authority remain false.",
-      "blocks": [
-        "product-route adoption",
-        "CP-6",
-        "Scale Gate",
-        "diagnostics",
-        "mastery",
-        "PV",
-        "summative use",
-        "student/product use"
-      ],
-      "does_not_block": [
-        "human review of rendered source and MTU proof"
-      ],
-      "proof_required_to_close": "Separate REV-STD-1 product-proof and Scale Gate packets after governed source/MTU proof is accepted."
-    }
-  ],
-  "closure_effect": {
-    "prior_flags_addressed_when_human_review_accepts_reviewed_payload": [
-      "Y2TRTF-005",
-      "Y2TRTF-006"
-    ],
-    "remaining_downstream_blocks": [
-      "Y2TRTF-007",
-      "product_scale_student_use_boundary"
-    ]
+  "summary": {
+    "existing_governed_support_sufficient": 1,
+    "existing_support_requires_extension": 7,
+    "new_task_family_runtime_support_required": 4,
+    "new_answer_skill_record_required": 7
   },
+  "blocker_list": [
+    {
+      "id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-T1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
+    },
+    {
+      "id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-H1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and answer-model closure for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
+    },
+    {
+      "id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-ANS2:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
+    },
+    {
+      "id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-ANS3:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and answer-model closure for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-P1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-D1:disposition",
+      "classification": "scale_blocker",
+      "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-C1:disposition",
+      "classification": "scale_blocker",
+      "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-C2:disposition",
+      "classification": "scale_blocker",
+      "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-F1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and answer-model closure for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-E1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-ANS2:disposition",
+      "classification": "scale_blocker",
+      "blocks": "lesson production, shared task-shell reliance, and target-equivalent proof for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed runtime/task-family PR with focused tests, rendered proof, CI, lead review, and human authorization."
+    },
+    {
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-ANS3:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and answer-model closure for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
+    },
+    {
+      "id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-R1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
+    },
+    {
+      "id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-ANS2:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
+    },
+    {
+      "id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-ANS3:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and answer-model closure for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
+    },
+    {
+      "id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-S1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and target-equivalent exit-ticket reliance for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed route-specific support extension with rendered proof and exact-head review."
+    },
+    {
+      "id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-ANS1:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and answer-model closure for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
+    },
+    {
+      "id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-ANS3:disposition",
+      "classification": "proof_required_to_close",
+      "blocks": "lesson production and answer-model closure for this OP row",
+      "does_not_block": "foundation promotion and generator handoff",
+      "proof_required_to_close": "Governed answer-skill record with correction-model point logic, route proof, and human authorization."
+    }
+  ],
   "authority_claims": {
-    "governed_mtu_task_family_proof_ready_for_review": true,
+    "canonical_source_assets_ready_for_review": true,
+    "op_row_disposition_ready_for_review": true,
+    "generator_handoff_ready_for_review": true,
+    "foundation_ready_for_lesson_design_after_human_merge": true,
+    "target_registry_records_created": false,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
     "mtus_minted": false,
     "mtu_mutation_authorized": false,
     "operation_registry_mutation_authorized": false,
     "answer_skill_mutation_authorized": false,
-    "official_exam_operation_closure_authorized": false,
     "broad_operation_row_closure_authorized": false,
     "generated_lesson_output_authorized": false,
+    "product_authority": false,
     "product_route_adoption_authorized": false,
     "cp6_closure_authorized": false,
     "scale_gate_authorized": false,
@@ -1280,6 +1168,7 @@
     "mastery_authorized": false,
     "pv_authorized": false,
     "summative_use_authorized": false,
+    "student_use_authorized": false,
     "student_product_use_authorized": false
   }
 }

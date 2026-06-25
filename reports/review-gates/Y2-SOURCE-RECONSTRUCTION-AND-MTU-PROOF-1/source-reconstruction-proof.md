@@ -1,6 +1,6 @@
 # Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1 - Source Reconstruction Proof
 
-Status: rendered source reconstruction ready for exact-head human review.
+Status: rendered source reconstruction ready for human review under payload-lineage governance.
 
 ## Product End-State And Original Specs
 
@@ -36,8 +36,8 @@ Original sprint/gate/source specs:
 
 | ID | Classification | Severity | Finding | blocks | does_not_block | proof_required_to_close |
 |---|---|---:|---|---|---|---|
-| Y2SRMTP-SRC-001 | core_requirement_met | high | All four source families now have a rendered review artifact with official locators. | nothing for human review of this source proof | future governed MTU/lesson planning | exact-head human acceptance of `reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html` and `reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json` |
-| Y2SRMTP-SRC-002 | proof_required_to_close | high | The rendered proof is not itself product authority. | lesson handoff and product proof until human acceptance | review of this proof surface | owner authorization tied to exact remote head |
+| Y2SRMTP-SRC-001 | core_requirement_met | high | All four source families now have a rendered review artifact with official locators. | nothing for human review of this source proof | future governed MTU/lesson planning | human acceptance of reviewed payload artifacts `reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html` and `reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json` |
+| Y2SRMTP-SRC-002 | proof_required_to_close | high | The rendered proof is not itself product authority. | lesson handoff and product proof until human acceptance | review of this proof surface | owner authorization tied to reviewed payload head |
 
 ## Decision
 
