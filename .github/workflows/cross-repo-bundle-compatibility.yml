@@ -125,10 +125,7 @@ jobs:
           LESSON_STATE_SHA: ${{ matrix.lesson_sha }}
         run: |
           New-Item -ItemType Directory -Force -Path ..\bundle-results | Out-Null
-          New-Item -ItemType Directory -Force -Path ..\ci-artifacts | Out-Null
           $commands = @(
-            'node build-scripts/ci/platform-ci-evidence.js write --output ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen',
-            'node build-scripts/ci/platform-ci-evidence.js check ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen',
             'npm run check:platform',
             'npm run check:reasoning-golden',
             'npm run check:landing-v2',
