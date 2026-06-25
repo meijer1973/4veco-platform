@@ -154,6 +154,18 @@ The compatibility proof must come from the platform controller and must record:
 must also be green, otherwise the bundle stays `KEEP_DRAFT_REVISE` until a
 compatibility bridge makes a safe merge order possible.
 
+Draft paired members are not merge-ready. A narrow controller-first transition
+exception exists only for platform-controller mark-ready decisions: an exact
+lesson member may count as `transitionable`, not merge-ready, when it is open,
+current, mergeable, draft, exact-head matched, lead-reviewed, and covered by
+green `platform-first` plus `bundle-final` compatibility. The resulting
+decision may mark the platform controller ready, but must record
+`merge_ready: false` and the transitionable draft member in the bundle proof.
+After the platform controller is non-draft, rerun delegated lesson readiness;
+only then may the lesson member receive its own `MARK_READY` transition. Any
+stale head, closed PR, conflict, missing compatibility, missing lead proof, or
+non-platform-first compatibility must stay `KEEP_DRAFT_REVISE`.
+
 When the exact matrix proves `lesson-first` and `bundle-final` green while
 `platform-first` is red, the platform controller may still route
 `READY_FOR_HUMAN_REVIEW`. That route records `bundle_delegated_ci: true` and
@@ -170,8 +182,9 @@ bundle matrix is green.
 Lesson-repository bundle members may consume delegated proof from the platform
 controller. Do not require the lesson PR to carry a standalone platform
 branch-protection context on its commit, but do require exact bundle membership,
-open/non-draft member state, payload SHA match, and green delegated controller
-proof.
+open member state, payload SHA match, green delegated controller proof, and a
+non-draft paired platform controller before the lesson member can receive
+`MARK_READY`.
 
 ## Branch protection
 
