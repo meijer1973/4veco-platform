@@ -1,13 +1,14 @@
 {
   "schema_version": 1,
   "sprint_id": "PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1",
-  "generated_at": "2026-06-24T11:55:16.695Z",
+  "generated_at": "2026-06-25T13:34:26.126Z",
   "book_root": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
   "toolchain": {
     "renderer": "build-scripts/lib/render-presentation-v2-pptx.js",
     "libreoffice": "C:\\Program Files\\LibreOffice\\program\\soffice.exe",
     "poppler": "pdftoppm -png -r 144"
   },
+  "teacher_read_through_report": "reports/sprints/PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1/teacher-read-through.md",
   "decks": [
     {
       "id": "1.1.1",
@@ -16,10 +17,10 @@
       "model_file": "build-scripts/content/book-1/b1-111-presentation-v2-model.js",
       "model_sha256": "21f6c89b73dd98748f9eb3ba364ffd1d1cd06022c96591dacf15fd645333f448",
       "html_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html",
-      "html_sha256": "5110034c2dd709c71a06abc33052fae4fe95aa99cf3f8b6f1a62ce75a74315c3",
+      "html_sha256": "7dbb3d280ea0e01c5b27bf6d9bd6fbfc3cbbb6741849642992751f46078b01cd",
       "pptx_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx",
-      "pptx_sha256": "f653446070d9e5c0036ec28ab86359e695e84f0eba477d84e1c78f641c1d4719",
-      "pptx_bytes": 61300,
+      "pptx_sha256": "d56010bd7faf2f9580c521c6204d8fa06ca702cd1eebb39102ca9695dd196fd3",
+      "pptx_bytes": 58857,
       "proof_dir": "reports/sprints/PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1/b1-111",
       "slide_count": 11,
       "notes_count": 11,
@@ -27,7 +28,159 @@
       "slide_min_font_pt": 14,
       "notes_min_font_pt": 14,
       "assertions_found": true,
-      "notes_roles_found": true,
+      "teacher_notes_contract": {
+        "classroom_sections_only": true,
+        "internal_metadata_excluded": true,
+        "retrieval_answers_in_notes_only": true
+      },
+      "teacher_read_through": {
+        "all_slides_approx_45s": true,
+        "slides": [
+          {
+            "index": 1,
+            "role": "route_contract",
+            "layout": "routeContract",
+            "title": "Vandaag leer je waarom kiezen kost",
+            "notes_word_count": 111,
+            "visible_text_word_count": 60,
+            "estimated_seconds_at_150_wpm": 45,
+            "visible_text_density": "compact",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 2,
+            "role": "narrative_anchor",
+            "layout": "narrativeAnchor",
+            "title": "Lisa heeft €20, maar wil voor €27",
+            "notes_word_count": 104,
+            "visible_text_word_count": 64,
+            "estimated_seconds_at_150_wpm": 42,
+            "visible_text_density": "compact",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 3,
+            "role": "concept_model_development",
+            "layout": "conceptModel",
+            "title": "Schaarste betekent: behoeften > middelen",
+            "notes_word_count": 101,
+            "visible_text_word_count": 38,
+            "estimated_seconds_at_150_wpm": 41,
+            "visible_text_density": "compact",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 4,
+            "role": "transfer_slide",
+            "layout": "transferCards",
+            "title": "Zo herken je hetzelfde patroon in andere situaties",
+            "notes_word_count": 94,
+            "visible_text_word_count": 79,
+            "estimated_seconds_at_150_wpm": 38,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 5,
+            "role": "concept_model_development",
+            "layout": "conceptModel",
+            "title": "Alternatieve kosten zijn het beste dat je laat liggen",
+            "notes_word_count": 104,
+            "visible_text_word_count": 61,
+            "estimated_seconds_at_150_wpm": 42,
+            "visible_text_density": "compact",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 6,
+            "role": "misconception_slide",
+            "layout": "misconceptionCards",
+            "title": "Wat alternatieve kosten niet zijn",
+            "notes_word_count": 98,
+            "visible_text_word_count": 73,
+            "estimated_seconds_at_150_wpm": 40,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 7,
+            "role": "procedure_route",
+            "layout": "procedureRoute",
+            "title": "Bij ingewikkeldere keuzes gebruik je vier stappen",
+            "notes_word_count": 86,
+            "visible_text_word_count": 78,
+            "estimated_seconds_at_150_wpm": 35,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 8,
+            "role": "worked_example_calculation",
+            "layout": "workedCalculation",
+            "title": "De boer: eerst beide alternatieven berekenen",
+            "notes_word_count": 104,
+            "visible_text_word_count": 70,
+            "estimated_seconds_at_150_wpm": 42,
+            "visible_text_density": "compact",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 9,
+            "role": "worked_example_interpretation",
+            "layout": "workedInterpretation",
+            "title": "Als hij tarwe kiest, geeft hij maïs op",
+            "notes_word_count": 85,
+            "visible_text_word_count": 68,
+            "estimated_seconds_at_150_wpm": 34,
+            "visible_text_density": "compact",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 10,
+            "role": "retrieval_check",
+            "layout": "retrievalCheck",
+            "title": "Vul de drie vaste vragen in",
+            "notes_word_count": 88,
+            "visible_text_word_count": 74,
+            "estimated_seconds_at_150_wpm": 36,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          },
+          {
+            "index": 11,
+            "role": "summary_bridge",
+            "layout": "summaryBridge",
+            "title": "De kern in vijf zinnen",
+            "notes_word_count": 83,
+            "visible_text_word_count": 90,
+            "estimated_seconds_at_150_wpm": 34,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.1"
+          }
+        ]
+      },
       "graph_geometry": null,
       "slides": [
         {
@@ -37,8 +190,13 @@
           "title": "Vandaag leer je waarom kiezen kost",
           "assertion": "Aan het einde kun je een keuzeprobleem herkennen, de alternatieve kosten aanwijzen en een keuze in vier stappen beoordelen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -49,8 +207,13 @@
           "title": "Lisa heeft €20, maar wil voor €27",
           "assertion": "Het probleem is niet dat ze niets kan kopen. Het probleem is dat ze niet alles tegelijk kan kiezen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -61,8 +224,13 @@
           "title": "Schaarste betekent: behoeften > middelen",
           "assertion": "Schaarste is een verhouding, geen ander woord voor “zeldzaam”.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -73,8 +241,13 @@
           "title": "Zo herken je hetzelfde patroon in andere situaties",
           "assertion": "Vraag steeds: wie kiest, welk middel is beperkt, en welke alternatieven strijden om dat middel?",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -85,8 +258,13 @@
           "title": "Alternatieve kosten zijn het beste dat je laat liggen",
           "assertion": "Bij Lisa is dat niet simpelweg de betaalde prijs, maar de waarde van het alternatief dat ze niet kiest.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -97,8 +275,13 @@
           "title": "Wat alternatieve kosten niet zijn",
           "assertion": "Deze twee fouten zorgen later voor verkeerde berekeningen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -109,8 +292,13 @@
           "title": "Bij ingewikkeldere keuzes gebruik je vier stappen",
           "assertion": "De procedure voorkomt dat je te snel “hoogste bedrag = beste keuze” roept.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -121,8 +309,13 @@
           "title": "De boer: eerst beide alternatieven berekenen",
           "assertion": "Het schaarse middel is 10 hectare land; tarwe en maïs gebruiken hetzelfde land.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -133,8 +326,13 @@
           "title": "Als hij tarwe kiest, geeft hij maïs op",
           "assertion": "Maïs is dan het beste niet-gekozen alternatief; daarom zijn de alternatieve kosten €3.500.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -145,8 +343,14 @@
           "title": "Vul de drie vaste vragen in",
           "assertion": "Je begrijpt het pas echt als je het patroon zelf kunt invullen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Antwoord",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": true,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -157,8 +361,13 @@
           "title": "De kern in vijf zinnen",
           "assertion": "Met deze vijf zinnen vat je de basis van §1.1.1 samen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         }
@@ -249,10 +458,10 @@
           "index": 10,
           "role": "retrieval_check",
           "path": "reports/sprints/PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1/b1-111/slide-10.png",
-          "sha256": "334eadf2a3f31bb33db0d71b0679001c774ffac7feeef992dd40ef32ce133bb9",
+          "sha256": "d9213fac7706baf24c4bd86112b92481bc706414e273df4b98be0941ed01fe40",
           "width": 1921,
           "height": 1080,
-          "bytes": 132664
+          "bytes": 120123
         },
         {
           "index": 11,
@@ -272,10 +481,10 @@
       "model_file": "build-scripts/content/book-1/b1-113-presentation-v2-model.js",
       "model_sha256": "ef2c1c7c5204cc7057634d378c66c51bbf362f87e179b4883f4caf63d6e89250",
       "html_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html",
-      "html_sha256": "f3ec669e4c61663c603dddf1730c1163a8dade129b3f7fd15b1639df96e54e27",
+      "html_sha256": "6407331043ef2c3ba6fdebd4989b573ba9b2a30fedfec7cd185ac4d23730a540",
       "pptx_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx",
-      "pptx_sha256": "8c4dd7129425d265a95bcf3a5434179ce0595f3faac3ab4e76701b7d3a187d73",
-      "pptx_bytes": 50884,
+      "pptx_sha256": "82701ca1f959ed8ad9815a4260e7a798c9d4c4fd1f7b0a688b3d333a6125dc1b",
+      "pptx_bytes": 50509,
       "proof_dir": "reports/sprints/PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1/b1-113",
       "slide_count": 8,
       "notes_count": 8,
@@ -283,7 +492,120 @@
       "slide_min_font_pt": 14,
       "notes_min_font_pt": 14,
       "assertions_found": true,
-      "notes_roles_found": true,
+      "teacher_notes_contract": {
+        "classroom_sections_only": true,
+        "internal_metadata_excluded": true,
+        "retrieval_answers_in_notes_only": true
+      },
+      "teacher_read_through": {
+        "all_slides_approx_45s": true,
+        "slides": [
+          {
+            "index": 1,
+            "role": "route_contract",
+            "layout": "routeContract",
+            "title": "Van tabel naar oordeel",
+            "notes_word_count": 59,
+            "visible_text_word_count": 89,
+            "estimated_seconds_at_150_wpm": 24,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          },
+          {
+            "index": 2,
+            "role": "source_table_anchor",
+            "layout": "choiceTensionCover",
+            "title": "Van tabel naar grafiek",
+            "notes_word_count": 75,
+            "visible_text_word_count": 91,
+            "estimated_seconds_at_150_wpm": 30,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          },
+          {
+            "index": 3,
+            "role": "table_value_selection",
+            "layout": "procedureRoute",
+            "title": "Kies de juiste bronwaarde",
+            "notes_word_count": 57,
+            "visible_text_word_count": 107,
+            "estimated_seconds_at_150_wpm": 23,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          },
+          {
+            "index": 4,
+            "role": "axis_convention",
+            "layout": "procedureRoute",
+            "title": "Gebruik de economie-assen",
+            "notes_word_count": 74,
+            "visible_text_word_count": 104,
+            "estimated_seconds_at_150_wpm": 30,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          },
+          {
+            "index": 5,
+            "role": "graph_reading_interpolation",
+            "layout": "procedureRoute",
+            "title": "Lees tussen twee punten",
+            "notes_word_count": 59,
+            "visible_text_word_count": 109,
+            "estimated_seconds_at_150_wpm": 24,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          },
+          {
+            "index": 6,
+            "role": "graph_claim_check",
+            "layout": "procedureRoute",
+            "title": "Controleer de schaal",
+            "notes_word_count": 72,
+            "visible_text_word_count": 100,
+            "estimated_seconds_at_150_wpm": 29,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          },
+          {
+            "index": 7,
+            "role": "retrieval_check",
+            "layout": "retrievalCheck",
+            "title": "Controleer je grafiekroute",
+            "notes_word_count": 103,
+            "visible_text_word_count": 90,
+            "estimated_seconds_at_150_wpm": 42,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          },
+          {
+            "index": 8,
+            "role": "summary_bridge",
+            "layout": "summaryBridge",
+            "title": "Samenvatting en volgende stap",
+            "notes_word_count": 76,
+            "visible_text_word_count": 79,
+            "estimated_seconds_at_150_wpm": 31,
+            "visible_text_density": "moderate",
+            "can_explain_in_approx_45s_without_reading_dense_slide_text_aloud": true,
+            "guidance": "Teach from the notes and use the visible text as checkpoints.",
+            "source": "1.1.3"
+          }
+        ]
+      },
       "graph_geometry": {
         "axis_convention": "P vertical; Q horizontal",
         "upper_left_point": {
@@ -317,8 +639,13 @@
           "title": "Van tabel naar oordeel",
           "assertion": "Je leest eerst de bron, dan pas teken of beoordeel je een grafiek.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -329,8 +656,13 @@
           "title": "Van tabel naar grafiek",
           "assertion": "De tabel ordent de waarden; de grafiek maakt het verband zichtbaar.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -341,8 +673,13 @@
           "title": "Kies de juiste bronwaarde",
           "assertion": "Een getal uit een tabel is pas bruikbaar als je label en eenheid meeneemt.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -353,8 +690,13 @@
           "title": "Gebruik de economie-assen",
           "assertion": "In deze P-Q-grafiek staat prijs op de verticale as en hoeveelheid op de horizontale as.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -365,8 +707,13 @@
           "title": "Lees tussen twee punten",
           "assertion": "Interpoleren is een beredeneerde schatting tussen bekende punten.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -377,8 +724,13 @@
           "title": "Controleer de schaal",
           "assertion": "Een grafiek kan hetzelfde verschil groter of kleiner laten voelen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -389,8 +741,14 @@
           "title": "Controleer je grafiekroute",
           "assertion": "Deze checks vatten de basis van grafieken en tabellen samen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Antwoord",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": true,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         },
@@ -401,8 +759,13 @@
           "title": "Samenvatting en volgende stap",
           "assertion": "De grafiekroute werkt bij elke tabel: bron lezen, grafiek controleren, claim beoordelen.",
           "assertion_found": true,
-          "note_role_found": true,
-          "note_layout_found": true,
+          "note_sections_found": [
+            "Vraag",
+            "Uitleg",
+            "Pitfall",
+            "Overgang"
+          ],
+          "retrieval_answers_in_notes": false,
           "slide_min_font_pt": 14,
           "notes_min_font_pt": 14
         }
@@ -466,10 +829,10 @@
           "index": 7,
           "role": "retrieval_check",
           "path": "reports/sprints/PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1/b1-113/slide-07.png",
-          "sha256": "d752b12b794ae2fba7e6cd5093c002fea2537e7ca353e8e055003e5f85168efb",
+          "sha256": "207c120c2b35c4cf95c742b45de808c4022f2e619229922c6f144faf76a50274",
           "width": 1921,
           "height": 1080,
-          "bytes": 169244
+          "bytes": 153352
         },
         {
           "index": 8,

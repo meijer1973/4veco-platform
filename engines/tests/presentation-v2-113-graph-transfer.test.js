@@ -58,7 +58,8 @@ describeOrSkip('section 1.1.3 graph/table web presentation transfer', () => {
     expect(html).toMatch(/data-exemplar-id="1\.1\.3-graph-transfer-presentation"/);
     expect(html).toMatch(/<span>Lespresentatie<\/span>/);
     expect(html).not.toMatch(/webpresentatie<\/span>/i);
-    expect(html).not.toMatch(/Speaker notes|Full screen|Exit full screen/);
+    expect(html).not.toMatch(/Download PowerPoint|Speaker notes|Full screen|Exit full screen/);
+    if (html.includes('.pptx')) expect(html).toMatch(/PowerPoint downloaden/);
     expect(html).toMatch(/data-pv2-notes aria-pressed="false" aria-expanded="false"[^>]*>Studentgerichte uitleg<\/button>/);
     expect(html).toMatch(/data-pv2-fullscreen aria-pressed="false">Presentatiemodus<\/button>/);
   });

@@ -43,6 +43,12 @@ function collectFontSizes(xml) {
     .map(match => Number(match[1]));
 }
 
+function arr(value) {
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (value) return [value];
+  return [];
+}
+
 function generateDecks(tmpDir) {
   const generatorPath = path.join(tmpDir, 'generate-presentation-v2-pptx.js');
   fs.writeFileSync(generatorPath, `
@@ -101,7 +107,7 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
   test.each([
     ['1.1.1 golden scarcity deck', deck111, () => generated111],
     ['1.1.3 graph transfer deck', deck113, () => generated113],
-  ])('%s preserves slide route, assertions, and teacher-supporting notes', async (_label, deck, generatedFor) => {
+  ])('%s preserves slide route, assertions, and classroom-ready teacher notes', async (_label, deck, generatedFor) => {
     const generated = generatedFor();
     expect(generated.slides).toHaveLength(deck.slides.length);
     expect(generated.notes).toHaveLength(deck.slides.length);
@@ -114,20 +120,46 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
       const noteText = collectText(noteXml);
 
       expect(slideText).toContain(slide.assertion);
-      expect(noteText).toContain(`Rol: ${slide.role}`);
-      expect(noteText).toContain(`Layout: ${slide.layout}`);
-      expect(noteText).toContain('Kernzin:');
+      expect(noteText).toContain('Vraag:');
+      expect(noteText).toContain('Uitleg:');
+      expect(noteText).toContain('Pitfall:');
       expect(noteText).toContain(slide.assertion);
+      expect(noteText).not.toMatch(/\bRol:|\bLayout:|\bKernzin:|\bStudentuitleg:/);
 
       if (slide.speakerNotes && slide.speakerNotes.transition) {
         expect(noteText).toContain('Overgang:');
         expect(noteText).toContain(slide.speakerNotes.transition);
       }
-      if (slide.speakerNotes && Array.isArray(slide.speakerNotes.teacherCue) && slide.speakerNotes.teacherCue.length) {
-        expect(noteText).toContain('Docentcue:');
+      for (const cue of arr(slide.speakerNotes && slide.speakerNotes.teacherCue)) expect(noteText).toContain(cue);
+      for (const item of arr((slide.speakerNotes && slide.speakerNotes.misconceptionWatch) || (slide.speakerNotes && slide.speakerNotes.misconception))) {
+        expect(noteText).toContain(item);
       }
-      if (slide.speakerNotes && Array.isArray(slide.speakerNotes.misconceptionWatch) && slide.speakerNotes.misconceptionWatch.length) {
-        expect(noteText).toContain('Misconceptie-watch:');
+    }
+  });
+
+  test.each([
+    ['1.1.1 golden scarcity deck', deck111, () => generated111],
+    ['1.1.3 graph transfer deck', deck113, () => generated113],
+  ])('%s keeps retrieval answers out of slide XML and in teacher notes', async (_label, deck, generatedFor) => {
+    const generated = generatedFor();
+    const retrievalIndexes = deck.slides
+      .map((slide, index) => ({ slide, index }))
+      .filter(({ slide }) => slide.layout === 'retrievalCheck');
+
+    expect(retrievalIndexes.length).toBeGreaterThan(0);
+
+    for (const { slide, index } of retrievalIndexes) {
+      const slideXml = await generated.zip.file(generated.slides[index]).async('string');
+      const noteXml = await generated.zip.file(generated.notes[index]).async('string');
+      const slideText = collectText(slideXml);
+      const noteText = collectText(noteXml);
+
+      expect(noteText).toContain('Antwoord:');
+      for (const check of slide.checks) {
+        expect(slideText).toContain(check.prompt);
+        expect(slideText).toContain(check.hint);
+        expect(slideText).not.toContain(check.answer);
+        expect(noteText).toContain(check.answer);
       }
     }
   });
@@ -196,7 +228,7 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
     const href = `${deck.outputBase}.pptx`;
     const html = renderDeckHtml(deck, { pptxHref: href, backHref: 'index.html' });
 
-    expect(html).toContain(`href="${href}" download>Download PowerPoint</a>`);
+    expect(html).toContain(`href="${href}" download>PowerPoint downloaden</a>`);
     expect(html).toMatch(/data-pv2-notes aria-pressed="false" aria-expanded="false"/);
     expect(html).toMatch(/data-pv2-fullscreen aria-pressed="false">Presentatiemodus<\/button>/);
   });

@@ -405,7 +405,9 @@ function renderRetrievalCheck(s, slide) {
     addPanel(s, { x, y, w: 5.35, h: 1.62, fill: PC.chalk, line: colorFor(['teal', 'amber', 'coral', 'green'][index]) });
     addText(s, String(index + 1).padStart(2, '0'), { x: x + 0.2, y: y + 0.2, w: 0.55, h: 0.25, fontSize: FONT.label, bold: true, color: colorFor(['teal', 'amber', 'coral', 'green'][index]) });
     addText(s, truncate(check.prompt, 86), { x: x + 0.88, y: y + 0.18, w: 4.1, h: 0.45, fontSize: 18, bold: true, color: PC.indigo });
-    addText(s, truncate(check.answer || check.hint, 94), { x: x + 0.88, y: y + 0.84, w: 4.15, h: 0.42, fontSize: FONT.body, color: PC.smoke });
+    if (check.hint) {
+      addText(s, truncate(check.hint, 94), { x: x + 0.88, y: y + 0.84, w: 4.15, h: 0.42, fontSize: FONT.body, color: PC.smoke });
+    }
   });
 }
 
@@ -561,23 +563,30 @@ function notesText(slide, deck, index) {
   const student = arr(notes.studentExplanation).length ? arr(notes.studentExplanation) : (arr(notes.student).length ? arr(notes.student) : arr(notes.script));
   const misconception = arr(notes.misconceptionWatch).length ? arr(notes.misconceptionWatch) : arr(notes.misconception);
   const cue = arr(notes.teacherCue);
+  const studentSupport = slide.layout === 'retrievalCheck' ? [] : student.slice(0, slide.layout === 'summaryBridge' ? 2 : 1);
+  const explanation = [
+    slide.assertion,
+    ...studentSupport,
+    ...cue,
+  ].filter(Boolean);
+  const answers = arr(slide.checks)
+    .filter(check => check && check.answer)
+    .map((check, checkIndex) => `${checkIndex + 1}. ${check.answer}`);
   const lines = [
     `${deck.paragraph.number} ${deck.paragraph.title}`,
     `Dia ${index + 1}: ${slide.studentTitle || slide.title || slide.navTitle}`,
-    `Rol: ${slide.role}`,
-    `Layout: ${slide.layout}`,
     '',
-    'Kernzin:',
-    slide.assertion || '',
+    'Vraag:',
+    slide.action || slide.prompt || slide.studentTitle || slide.title || slide.assertion || '',
     '',
-    'Studentuitleg:',
-    ...student.map((item) => `- ${item}`),
+    'Uitleg:',
+    ...explanation.map((item) => `- ${item}`),
+    '',
+    'Pitfall:',
+    ...(misconception.length ? misconception.map((item) => `- ${item}`) : ['Geen specifieke valkuil.']),
   ];
-  if (misconception.length) lines.push('', 'Misconceptie-watch:', ...misconception.map((item) => `- ${item}`));
-  if (cue.length) lines.push('', 'Docentcue:', ...cue.map((item) => `- ${item}`));
+  if (answers.length) lines.push('', 'Antwoord:', ...answers.map((item) => `- ${item}`));
   if (notes.transition) lines.push('', 'Overgang:', notes.transition);
-  if (notes.visual) lines.push('', 'Visual:', notes.visual);
-  if (slide.action) lines.push('', 'Actie op de dia:', slide.action);
   return lines.filter((line) => line !== undefined && line !== null).join('\n');
 }
 

@@ -25,7 +25,7 @@ function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', js
   const sideLabel = deck.sideLabel || 'webpresentatie';
   const notesLabel = deck.notesLabel || 'Studentgerichte uitleg';
   const pptxLink = pptxHref
-    ? `          <a class="pv2-action pv2-action-primary" href="${esc(pptxHref)}" download>Download PowerPoint</a>\n`
+    ? `          <a class="pv2-action pv2-action-primary" href="${esc(pptxHref)}" download>PowerPoint downloaden</a>\n`
     : '';
   const sourceAttrs = deck.sourceSnapshot
     ? ` data-source-sha256="${esc(deck.sourceSnapshot.sha256)}" data-source-package="${esc(deck.sourceSnapshot.package)}" data-accepted-on="${esc(deck.sourceSnapshot.acceptedOn)}"`

@@ -109,6 +109,38 @@ function collectFontSizes(xml) {
     .map(match => Number(match[1]) / 100);
 }
 
+function arr(value) {
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (value) return [value];
+  return [];
+}
+
+function wordCount(text) {
+  return (String(text || '').match(/\S+/g) || []).length;
+}
+
+function teacherReadThroughForSlide(target, slide, index, slideText, noteText) {
+  const notesWords = wordCount(noteText);
+  const visibleWords = wordCount(slideText);
+  const estimatedSeconds = Math.ceil((notesWords / 150) * 60);
+  const visibleDensity = visibleWords > 110 ? 'dense_visual_surface' : (visibleWords > 70 ? 'moderate' : 'compact');
+  return {
+    index: index + 1,
+    role: slide.role,
+    layout: slide.layout,
+    title: slide.studentTitle || slide.title || slide.navTitle,
+    notes_word_count: notesWords,
+    visible_text_word_count: visibleWords,
+    estimated_seconds_at_150_wpm: estimatedSeconds,
+    visible_text_density: visibleDensity,
+    can_explain_in_approx_45s_without_reading_dense_slide_text_aloud: estimatedSeconds <= 45,
+    guidance: visibleDensity === 'dense_visual_surface'
+      ? 'Use the slide as a visual object and teach from the notes; do not read every visible label aloud.'
+      : 'Teach from the notes and use the visible text as checkpoints.',
+    source: target.id,
+  };
+}
+
 async function inspectPptx(target, files) {
   const zip = await JSZip.loadAsync(fs.readFileSync(files.pptx));
   const slidePaths = zipPaths(zip, /^ppt\/slides\/slide\d+\.xml$/);
@@ -122,6 +154,7 @@ async function inspectPptx(target, files) {
   const allSlideText = [];
   const allSlideFontSizes = [];
   const allNotesFontSizes = [];
+  const teacherReadThroughSlides = [];
 
   for (let index = 0; index < deck.slides.length; index += 1) {
     const slide = deck.slides[index];
@@ -133,17 +166,38 @@ async function inspectPptx(target, files) {
     const noteSizes = collectFontSizes(noteXml);
 
     assert(slideText.includes(slide.assertion), `${target.id} slide ${index + 1} missing assertion`);
-    assert(noteText.includes(`Rol: ${slide.role}`), `${target.id} slide ${index + 1} missing note role`);
-    assert(noteText.includes(`Layout: ${slide.layout}`), `${target.id} slide ${index + 1} missing note layout`);
+    assert(noteText.includes('Vraag:'), `${target.id} slide ${index + 1} missing Vraag note section`);
+    assert(noteText.includes('Uitleg:'), `${target.id} slide ${index + 1} missing Uitleg note section`);
+    assert(noteText.includes('Pitfall:'), `${target.id} slide ${index + 1} missing Pitfall note section`);
+    assert(!/\bRol:|\bLayout:|\bKernzin:|\bStudentuitleg:/.test(noteText), `${target.id} slide ${index + 1} exposes internal note metadata`);
     assert(slideSizes.length > 0, `${target.id} slide ${index + 1} has no font sizes`);
     assert(noteSizes.length > 0, `${target.id} slide ${index + 1} notes have no font sizes`);
     assert(Math.min(...slideSizes) >= 14, `${target.id} slide ${index + 1} has text below 14 pt`);
     assert(slideSizes.some(size => size >= 18), `${target.id} slide ${index + 1} has no body-size text`);
     assert(Math.min(...noteSizes) >= 14, `${target.id} slide ${index + 1} notes below 14 pt`);
 
+    if (slide.layout === 'retrievalCheck') {
+      assert(noteText.includes('Antwoord:'), `${target.id} slide ${index + 1} retrieval answers missing from notes`);
+      for (const check of arr(slide.checks)) {
+        assert(slideText.includes(check.prompt), `${target.id} slide ${index + 1} missing retrieval prompt: ${check.prompt}`);
+        if (check.hint) assert(slideText.includes(check.hint), `${target.id} slide ${index + 1} missing retrieval hint: ${check.hint}`);
+        assert(!slideText.includes(check.answer), `${target.id} slide ${index + 1} leaks retrieval answer: ${check.answer}`);
+        assert(noteText.includes(check.answer), `${target.id} slide ${index + 1} notes missing retrieval answer: ${check.answer}`);
+      }
+    } else {
+      assert(!noteText.includes('Antwoord:'), `${target.id} slide ${index + 1} non-retrieval slide has Antwoord section`);
+    }
+
+    const readThrough = teacherReadThroughForSlide(target, slide, index, slideText, noteText);
+    assert(
+      readThrough.can_explain_in_approx_45s_without_reading_dense_slide_text_aloud,
+      `${target.id} slide ${index + 1} teacher notes exceed approx 45s read-through`,
+    );
+
     allSlideText.push(slideText);
     allSlideFontSizes.push(...slideSizes);
     allNotesFontSizes.push(...noteSizes);
+    teacherReadThroughSlides.push(readThrough);
     slides.push({
       index: index + 1,
       role: slide.role,
@@ -151,8 +205,8 @@ async function inspectPptx(target, files) {
       title: slide.studentTitle || slide.title || slide.navTitle,
       assertion: slide.assertion,
       assertion_found: true,
-      note_role_found: true,
-      note_layout_found: true,
+      note_sections_found: ['Vraag', 'Uitleg', 'Pitfall'].concat(slide.layout === 'retrievalCheck' ? ['Antwoord'] : []).concat(slide.speakerNotes && slide.speakerNotes.transition ? ['Overgang'] : []),
+      retrieval_answers_in_notes: slide.layout === 'retrievalCheck',
       slide_min_font_pt: Math.min(...slideSizes),
       notes_min_font_pt: Math.min(...noteSizes),
     });
@@ -168,7 +222,15 @@ async function inspectPptx(target, files) {
     slide_min_font_pt: Math.min(...allSlideFontSizes),
     notes_min_font_pt: Math.min(...allNotesFontSizes),
     assertions_found: true,
-    notes_roles_found: true,
+    teacher_notes_contract: {
+      classroom_sections_only: true,
+      internal_metadata_excluded: true,
+      retrieval_answers_in_notes_only: true,
+    },
+    teacher_read_through: {
+      all_slides_approx_45s: teacherReadThroughSlides.every(slide => slide.can_explain_in_approx_45s_without_reading_dense_slide_text_aloud),
+      slides: teacherReadThroughSlides,
+    },
     graph_geometry: graphGeometry,
     slides,
   };
@@ -270,6 +332,7 @@ function deckMarkdown(deckReport) {
     `- PPTX: \`${deckReport.pptx_file}\` (${deckReport.pptx_sha256.slice(0, 12)})`,
     `- Slides/notes/PNGs: ${deckReport.slide_count}/${deckReport.notes_count}/${deckReport.png_count}`,
     `- Font floors: slides ${deckReport.slide_min_font_pt} pt, notes ${deckReport.notes_min_font_pt} pt`,
+    `- Teacher notes: classroom sections only; retrieval answers in notes only; read-through ${deckReport.teacher_read_through.all_slides_approx_45s ? 'all slides approx. 45s' : 'review needed'}`,
     '',
     '| Slide | Role | Layout | PNG proof |',
     '| --- | --- | --- | --- |',
@@ -281,6 +344,32 @@ function deckMarkdown(deckReport) {
   return lines.join('\n');
 }
 
+function writeTeacherReadThroughReport(manifest) {
+  const lines = [
+    `# ${SPRINT_ID} Teacher Read-Through`,
+    '',
+    'This report checks whether each PPTX slide can be explained naturally in roughly 45 seconds from teacher notes, without reading dense visible slide text aloud.',
+    '',
+    `Generated: ${manifest.generated_at}`,
+    '',
+  ];
+
+  for (const deck of manifest.decks) {
+    lines.push(
+      `## ${deck.id} ${deck.title}`,
+      '',
+      '| Slide | Role | Notes words | Est. seconds | Visible text | Approx. 45s? | Guidance |',
+      '| --- | --- | ---: | ---: | ---: | --- | --- |',
+    );
+    for (const entry of deck.teacher_read_through.slides) {
+      lines.push(`| ${entry.index} | \`${entry.role}\` | ${entry.notes_word_count} | ${entry.estimated_seconds_at_150_wpm} | ${entry.visible_text_word_count} (${entry.visible_text_density}) | ${entry.can_explain_in_approx_45s_without_reading_dense_slide_text_aloud ? 'yes' : 'no'} | ${entry.guidance} |`);
+    }
+    lines.push('');
+  }
+
+  fs.writeFileSync(path.join(OUT_DIR, 'teacher-read-through.md'), `${lines.join('\n')}\n`, 'utf8');
+}
+
 function writeMarkdownReport(manifest) {
   const lines = [
     `# ${SPRINT_ID}`,
@@ -290,6 +379,8 @@ function writeMarkdownReport(manifest) {
     'The PPTX files are generated from the same semantic models as the web presentations. LibreOffice converts each PPTX to PDF, Poppler exports every slide as PNG, and this packet records model/HTML/PPTX/PNG hashes plus route, notes, font, and geometry checks.',
     '',
     `Generated: ${manifest.generated_at}`,
+    '',
+    `Teacher read-through report: [teacher-read-through.md](teacher-read-through.md)`,
     '',
     ...manifest.decks.map(deckMarkdown),
     '',
@@ -323,6 +414,7 @@ async function main() {
       libreoffice: SOFFICE,
       poppler: `${PDFTOPPM} -png -r 144`,
     },
+    teacher_read_through_report: rel(path.join(OUT_DIR, 'teacher-read-through.md')),
     decks: [],
   };
 
@@ -357,7 +449,8 @@ async function main() {
         slide_min_font_pt: inspection.slide_min_font_pt,
         notes_min_font_pt: inspection.notes_min_font_pt,
         assertions_found: inspection.assertions_found,
-        notes_roles_found: inspection.notes_roles_found,
+        teacher_notes_contract: inspection.teacher_notes_contract,
+        teacher_read_through: inspection.teacher_read_through,
         graph_geometry: inspection.graph_geometry,
         slides: inspection.slides,
         images,
@@ -368,6 +461,7 @@ async function main() {
   }
 
   fs.writeFileSync(path.join(OUT_DIR, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  writeTeacherReadThroughReport(manifest);
   writeMarkdownReport(manifest);
 
   console.log(`OK ${SPRINT_ID}`);
