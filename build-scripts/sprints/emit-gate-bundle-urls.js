@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Emit reports/review-gates/<gate-id>/bundle-urls.md listing every artifact in
 // the gate directory as a full raw-GitHub URL. Lets external review agents
-// (notably claude.ai web_fetch, which can only fetch URLs that have already
-// appeared as literal strings in its context) reach gate artifacts after a
+// with URL-only fetch tools reach gate artifacts after the artifact URLs have
+// appeared as literal strings in context. This keeps the handoff to a
 // single fetch of the bundle-urls.md file.
 
 const fs = require('fs');

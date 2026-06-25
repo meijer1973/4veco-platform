@@ -6,7 +6,7 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 
 ## Read first
 
-- Use `../CLAUDE.md` "Working agreement — how Claude operates in this repo" for the seven non-negotiable operating rules (read-first, sanity-check-plans, be-honest-about-mistakes, quality-over-patchwork). Applies to every task.
+- Start from this `AGENTS.md` file. It is the canonical operating agreement for every agent in this repo: read first, sanity-check plans, be honest about mistakes, prefer quality over patchwork, and apply these rules to every task.
 - Use `../4veco-lessen/specifications/product-vision.md` as the canonical strategic product read before roadmap, architecture, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/product-end-state.md` as the canonical operational product north star before roadmap, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/companion-core-specifications.md` as the stable companion-surface specification.
@@ -544,7 +544,7 @@ The current legacy game target (historically Module 3) is frozen until September
 │   ├── check-links.js          ← Verifieert alle interne links
 │   ├── verify-deployment.sh    ← Post-push verificatie
 │   └── pre-push-hook.js        ← Git hook
-├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for Claude, Codex, and any agent
+├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — canonical for every agent
 ├── agents/                     ← Reusable review-agent specifications for bounded QA roles
 ├── references/                 ← Authoritative standards, organised by maintenance status:
 │   ├── external/                ←   Mirrored from outside bodies (CvTE, inspectie, school); machine-refreshed
@@ -635,6 +635,7 @@ Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets ge
 ## Skills — Automatische trigger-regels
 
 Skills staan in `skills/`. Ze worden automatisch geladen op basis van de taak.
+Tool-specific command mirrors, if present, are adapters only. They do not override this `AGENTS.md`, `skills/`, or `agents/`.
 
 | Taak | Laad deze skills |
 |------|-----------------|
@@ -773,7 +774,7 @@ Een presentatie is pas af als een docent deze **direct in de les kan gebruiken**
 
 ### MANDATORY: Clean up after every task
 
-You MUST treat temporary/intermediate files as your responsibility. Delete all temp files when done. Use `/tmp/Codex-work/` for intermediate files. Never litter the project root.
+You MUST treat temporary/intermediate files as your responsibility. Delete all temp files when done. Use `/tmp/4veco-agent-work/` for intermediate files. Never litter the project root.
 
 ### Beleid: scripts bewaren
 

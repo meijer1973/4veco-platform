@@ -243,7 +243,7 @@ function validate(csvContent, domain) {
 
 /**
  * Generate a review document for economics content validation.
- * This document is designed to be reviewed by Claude Code subagent.
+ * This document is designed to be reviewed by a lead-review subagent.
  */
 function generateReviewDocument(csvContent, parNr, domain) {
     const lines = csvContent.trim().split('\n');

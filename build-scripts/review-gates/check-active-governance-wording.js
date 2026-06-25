@@ -5,18 +5,15 @@ const path = require('path');
 const ACTIVE_ROOTS = Object.freeze([
   'AGENTS.md',
   'AGENT_GITHUB_ENTRY.md',
-  'CLAUDE.md',
   'RESEARCH_AGENT_MAP.md',
   'agents',
   'skills',
-  '.claude/commands',
   'docs/review',
   'build-scripts',
   '.github/workflows',
   'package.json',
   '../4veco-lessen/AGENTS.md',
   '../4veco-lessen/AGENT_GITHUB_ENTRY.md',
-  '../4veco-lessen/CLAUDE.md',
   '../4veco-lessen/RESEARCH_AGENT_MAP.md',
 ]);
 
@@ -100,6 +97,22 @@ const FORBIDDEN_PATTERNS = Object.freeze([
   {
     id: 'authorization-exact-platform-lesson-heads',
     regex: /authorization for the exact platform and lesson heads/i,
+  },
+  {
+    id: 'claude-md-entrypoint',
+    regex: /\b(?:read|load|use)\b[^\n]{0,80}(?:`)?(?:\.\.\/)?CLAUDE\.md(?:`)?/i,
+  },
+  {
+    id: 'claude-md-operating-rules',
+    regex: /(?:operating rules|root policy|repo operating rules|working agreement)[^\n]{0,100}CLAUDE\.md|CLAUDE\.md[^\n]{0,100}(?:operating rules|root policy|repo operating rules|working agreement)/i,
+  },
+  {
+    id: 'local-claude-rules-key',
+    regex: /local_claude_rules/i,
+  },
+  {
+    id: 'claude-commands-workflow-source',
+    regex: /\.claude\/commands\/?[^\n]{0,100}(?:content-production workflows|operating rules|canonical|shared skills|workflow source)/i,
   },
 ]);
 

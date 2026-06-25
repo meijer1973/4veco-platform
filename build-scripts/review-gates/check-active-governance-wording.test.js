@@ -37,8 +37,24 @@ describe('check-active-governance-wording', () => {
       'head SHA before marking ready.',
     ].join('\n');
 
-    expect(findViolationsInText('CLAUDE.md', text).map((item) => item.pattern)).toEqual([
+    expect(findViolationsInText('AGENTS.md', text).map((item) => item.pattern)).toEqual([
       'obtain-authorization-exact-head-sha',
+    ]);
+  });
+
+  test('flags CLAUDE.md as an active operating-rules source', () => {
+    const text = [
+      'Use `../CLAUDE.md` before editing.',
+      '- `AGENTS.md` and `CLAUDE.md` for operating rules',
+      '"local_claude_rules": "CLAUDE.md",',
+      '- `skills/` and `.claude/commands/` for content-production workflows',
+    ].join('\n');
+
+    expect(findViolationsInText('AGENTS.md', text).map((item) => item.pattern)).toEqual([
+      'claude-md-entrypoint',
+      'claude-md-operating-rules',
+      'local-claude-rules-key',
+      'claude-commands-workflow-source',
     ]);
   });
 

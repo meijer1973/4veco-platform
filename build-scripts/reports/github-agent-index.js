@@ -9,6 +9,7 @@ const reportsDir = path.join(platformRoot, "reports");
 
 const skipDirs = new Set([
   ".git",
+  ".claude",
   "node_modules",
   ".cache",
   ".tmp",
@@ -115,7 +116,7 @@ function classifyGroups(relativePath) {
   if (relativePath.startsWith("agents/")) groups.push("agents");
   if (isEnginePath(relativePath)) groups.push("engines");
   if (relativePath.startsWith("build-scripts/") || relativePath.startsWith("scripts/")) groups.push("build scripts");
-  if (relativePath.startsWith("skills/") || relativePath.startsWith(".claude/commands/")) groups.push("skills");
+  if (relativePath.startsWith("skills/")) groups.push("skills");
   if (lower.includes("validat") || lower.includes("validator") || lower.includes("check-")) groups.push("validators");
   if (relativePath.startsWith("references/")) groups.push("references");
   if (relativePath.startsWith("reports/")) groups.push("reports");
@@ -152,12 +153,24 @@ function listFiles(root) {
       encoding: "utf8",
       stdio: ["ignore", "pipe", "ignore"],
     });
+    const deletedOutput = execFileSync("git", ["ls-files", "--deleted"], {
+      cwd: root,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    const deletedFiles = new Set(
+      deletedOutput
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter(Boolean)
+    );
 
     return output
       .split(/\r?\n/)
       .map((line) => line.trim())
       .filter(Boolean)
       .filter((file) => !file.split("/").some((part) => skipDirs.has(part)))
+      .filter((file) => !deletedFiles.has(file))
       .sort((a, b) => a.localeCompare(b));
   } catch (error) {
     return walk(root).sort((a, b) => a.localeCompare(b));
@@ -200,7 +213,7 @@ function buildIndex(repoName, root) {
     generated_at: new Date().toISOString(),
     ...gitSourceInfo(repoName, root),
     file_count: files.length,
-    inventory_scope: "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
+    inventory_scope: "git-indexed files from `git ls-files --cached`, excluding deleted working-tree paths; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
     skipped_directories: Array.from(skipDirs).sort(),
     groups,
   };

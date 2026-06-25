@@ -1,16 +1,16 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-24T14:33:08.767Z
+Generated: 2026-06-25T13:14:10.144Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/pr-governance-convergence-1-20260624`
-Source commit: `8e4ad9d3ad969d691a2a58a0a99ec6ad3beef1d3`
-Files indexed: 6102
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
+Source branch: `codex/agents-entrypoint-unification-20260625`
+Source commit: `075f00db0281304069564fbffd0e555587585019`
+Files indexed: 6080
+Scope: git-indexed files from `git ls-files --cached`, excluding deleted working-tree paths; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
-Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
+Skipped directories: `.cache`, `.claude`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
 ## maps/prompts
 
@@ -727,29 +727,8 @@ Count: 585
 
 ## skills
 
-Count: 46
+Count: 25
 
-- .claude/commands/aanpak-samenvattingen.md
-- .claude/commands/econ-book-builder.md
-- .claude/commands/econ-chapter-assembler.md
-- .claude/commands/econ-chapter-builder.md
-- .claude/commands/econ-companion-artifacts.md
-- .claude/commands/econ-consolidation-builder.md
-- .claude/commands/econ-didactiek.md
-- .claude/commands/econ-exercise-builder.md
-- .claude/commands/econ-explainer-docs.md
-- .claude/commands/econ-nieuws-exercise.md
-- .claude/commands/econ-paragraph-review.md
-- .claude/commands/econ-pdf-builder.md
-- .claude/commands/econ-pptx-templates.md
-- .claude/commands/econ-quality-control.md
-- .claude/commands/econ-testprep-builder.md
-- .claude/commands/econ-textbook-paragraph.md
-- .claude/commands/econ-word-templates.md
-- .claude/commands/economic-graph.md
-- .claude/commands/manage-references.md
-- .claude/commands/qc-references.md
-- .claude/commands/senior-dev-planning.md
 - skills/aanpak-samenvattingen.md
 - skills/econ-book-builder.md
 - skills/econ-chapter-assembler.md
@@ -6072,7 +6051,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 627
+Count: 626
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6378,7 +6357,6 @@ Count: 627
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
-- CLAUDE.md
 - docs/inspection-standards/chapter-1-3-source-traceability.md
 - docs/inspection-standards/england-overlay-deepening.md
 - docs/inspection-standards/evidence-pack-source-contract.md

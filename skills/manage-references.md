@@ -45,7 +45,7 @@ Everything under `references/` belongs to exactly one of three buckets. The buck
 | `authored/` | Hand-edited standards and references maintained by the project (terminology, didactics, precision rules). Legacy bucket — **shrinks over time** as machine pipelines mature. | Hand-editable by humans. |
 | `machine/` | CLI-only, integrity-enforced. Catalog + derived artifacts. | **Never hand-edit.** All changes flow through `build-scripts/references/*.js`. Hand edits are reverted by the next script run. |
 
-Source: `references/external/README.md`, `references/authored/README.md`, `references/machine/README.md`, `4veco-platform/CLAUDE.md`.
+Source: `references/external/README.md`, `references/authored/README.md`, `references/machine/README.md`, `4veco-platform/AGENTS.md`.
 
 ---
 
@@ -92,7 +92,7 @@ Every rule that governs these files, grouped by topic. Each rule has a source-of
 2. **`external/` is mirrored.** Never hand-edit; refresh via extractor or downloader script.
    *Source:* `references/external/README.md`.
 3. **`authored/` shrinks over time.** Each authored file is a migration candidate to `machine/` once a canonical-editing pipeline exists for it.
-   *Source:* `4veco-platform/CLAUDE.md`.
+   *Source:* `4veco-platform/AGENTS.md`.
 4. **`machine/` is CLI-only.** Hand edits flagged and reverted by the next script run.
    *Source:* `references/machine/README.md`; catalog file preamble.
 
