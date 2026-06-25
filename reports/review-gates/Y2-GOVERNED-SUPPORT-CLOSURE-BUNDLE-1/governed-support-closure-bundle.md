@@ -64,7 +64,7 @@ Enable cross-repo Year 2 lesson-production PRs for the four reviewed target fami
 
 | Issue | Classification | blocks | does_not_block | proof_required_to_close |
 | --- | --- | --- | --- | --- |
-| cross-repo-lesson-production-prs-not-yet-created | proof_required_to_close | actual Year 2 lesson output and target-equivalent exit-ticket reliance | platform support closure after exact human merge | Separate 4veco-lessen lesson-production PRs using the updated handoff manifests and rendered source/task proof. |
+| cross-repo-lesson-production-prs-not-yet-created | proof_required_to_close | actual Year 2 lesson output and target-equivalent exit-ticket reliance | platform support closure after owner authorization and branch-protection proof | Separate 4veco-lessen lesson-production PRs using the updated handoff manifests and rendered source/task proof. |
 | product-route-and-student-use-still-blocked | scale_blocker | product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use | cross-repo lesson-production input readiness after this support closure is human-merged | REV-STD-1 product-proof packet after lesson PRs, with exact rendered output, accessibility, teacher, economist, runtime, and authority reviews. |
 | current-head-merge-proof-pending | merge_proof_required | merge until exact-head CI/readiness/lead-review/thread/branch-protection proof and owner authorization exist | content review of this packet | Run validate-platform, custom checker, PR Readiness Reviewer, thread check, lead review, and branch-protection checker with ok:true on exact remote head. |
 

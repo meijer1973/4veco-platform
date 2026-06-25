@@ -1236,7 +1236,7 @@ function carriedIssues() {
       issue_id: 'cross-repo-lesson-production-prs-not-yet-created',
       classification: 'proof_required_to_close',
       blocks: 'actual Year 2 lesson output and target-equivalent exit-ticket reliance',
-      does_not_block: 'platform support closure after exact human merge',
+      does_not_block: 'platform support closure after owner authorization and branch-protection proof',
       proof_required_to_close: 'Separate 4veco-lessen lesson-production PRs using the updated handoff manifests and rendered source/task proof.',
     },
     {
