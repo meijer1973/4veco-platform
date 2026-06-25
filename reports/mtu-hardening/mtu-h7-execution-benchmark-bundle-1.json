@@ -1,0 +1,1782 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "bundle_id": "mtu-h7-execution-benchmark-bundle-1",
+  "status": "complete_benchmark_ready_for_human_review_hold_for_operation_registry_governance",
+  "generated_at": "2026-06-25T13:50:53.858Z",
+  "protocol_manifest": "reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json",
+  "diagnostic_evidence_manifest": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
+  "holdout_evidence_manifest": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json",
+  "fixture": "reports/mtu-hardening/mtu-h7-execution-fixture-1.json",
+  "report": "reports/mtu-hardening/mtu-h7-execution-report-1.json",
+  "review_packet": "reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.json",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "lead_reviewer_verdict": "HOLD_FOR_OPERATION_REGISTRY_GOVERNANCE",
+  "misconception_hook_appendix": [
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q10_SURPLUS_AND_TAX_AREA_SWAPPED",
+      "record_ids": [
+        "ha-1022-a-25-2-o:opgave-2:question-10"
+      ],
+      "operation_ids": [
+        "h7-ha25-2-q10-consumer-surplus-area",
+        "h7-ha25-2-q10-producer-surplus-area"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-2-o#page=5-6&question=10"
+      ],
+      "expected_wrong_move": "Swap consumer and producer surplus regions after the tax.",
+      "why_plausible": "Both areas sit adjacent to the tax wedge and use similar letter labels."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q10_TAX_RECTANGLE_AS_SURPLUS_TRIANGLE",
+      "record_ids": [
+        "ha-1022-a-25-2-o:opgave-2:question-10"
+      ],
+      "operation_ids": [
+        "h7-ha25-2-q10-tax-revenue-area"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-2-o#page=5-6&question=10"
+      ],
+      "expected_wrong_move": "Give a surplus triangle for tax revenue instead of the wedge-by-quantity rectangle.",
+      "why_plausible": "The same graph also contains surplus triangles, while the official tax revenue is rectangular."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q11_HIGHER_RATE_AS_WORSE_AFFORDABILITY",
+      "record_ids": [
+        "vw-1022-a-25-1-o:opgave-2:question-11"
+      ],
+      "operation_ids": [
+        "h7-vw25-1-q11-new-coverage-affordability"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-1-o#page=5-6&question=11"
+      ],
+      "expected_wrong_move": "Assume a higher discount rate worsens affordability instead of lowering the present value of obligations.",
+      "why_plausible": "Interest-rate effects on savers and pension liabilities pull in different intuitive directions."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q11_RATE_EXPONENT_OR_SCALE",
+      "record_ids": [
+        "vw-1022-a-25-1-o:opgave-2:question-11"
+      ],
+      "operation_ids": [
+        "h7-vw25-1-q11-current-assets-from-coverage"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-1-o#page=5-6&question=11"
+      ],
+      "expected_wrong_move": "Use the wrong exponent or billion scale in present-value/coverage calculations.",
+      "why_plausible": "The correction combines a 25-year discount factor with billion-euro values."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q12_ELASTICITY_BASE_VALUES",
+      "record_ids": [
+        "ha-1022-a-25-1-o:opgave-2:question-12"
+      ],
+      "operation_ids": [
+        "h7-ha25-1-q12-price-and-quantity-percent-changes"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-1-o#page=5-5&question=12"
+      ],
+      "expected_wrong_move": "Use the new price or quantity as the percentage-change denominator.",
+      "why_plausible": "Both old and new values are visible in the source, but the correction uses the original values as base."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q12_INELASTIC_TURNOVER_DIRECTION",
+      "record_ids": [
+        "ha-1022-a-25-1-o:opgave-2:question-12"
+      ],
+      "operation_ids": [
+        "h7-ha25-1-q12-elasticity-turnover-conclusion"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-1-o#page=5-5&question=12"
+      ],
+      "expected_wrong_move": "Conclude turnover falls from lower quantity despite inelastic demand and higher price.",
+      "why_plausible": "Students often track quantity direction but omit the elasticity-to-turnover rule."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q12_NASH_USED_FOR_DIRECT_PAYOFF",
+      "record_ids": [
+        "ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "operation_ids": [
+        "h7-ha24-1-q12-snel-residual-payoff"
+      ],
+      "source_locators": [
+        "ha-1022-a-24-1-o#page=5-5&question=12"
+      ],
+      "expected_wrong_move": "Solve the ultimatum-tree payoff as a Nash-equilibrium problem instead of direct residual payoff arithmetic.",
+      "why_plausible": "The surrounding item is game-theory language, but q12 only asks for two payoff entries in the decision tree."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q12_RESPONDER_PAYOFF_WITHOUT_COST",
+      "record_ids": [
+        "ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "operation_ids": [
+        "h7-ha24-1-q12-sprinter-margin-payoff"
+      ],
+      "source_locators": [
+        "ha-1022-a-24-1-o#page=5-5&question=12"
+      ],
+      "expected_wrong_move": "Use the agreed price as Sprinter payoff without subtracting marginal cost.",
+      "why_plausible": "The price is visible in the source, while the correction explicitly deducts marginal costs before writing the payoff."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q14_COST_INCREASE_NOT_IN_MK",
+      "record_ids": [
+        "vw-1022-a-25-1-o:opgave-3:question-14"
+      ],
+      "operation_ids": [
+        "h7-vw25-1-q14-new-mk-and-mo"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-1-o#page=6-7&question=14"
+      ],
+      "expected_wrong_move": "Add the cost shock to total cost but fail to reflect it in the new marginal-cost function.",
+      "why_plausible": "The variable-cost increase is given per unit and must carry through the derivative."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q14_PASS_THROUGH_DENOMINATOR",
+      "record_ids": [
+        "vw-1022-a-25-1-o:opgave-3:question-14"
+      ],
+      "operation_ids": [
+        "h7-vw25-1-q14-new-price-and-pass-through"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-1-o#page=6-7&question=14"
+      ],
+      "expected_wrong_move": "Divide the price increase by the old price instead of by the cost increase.",
+      "why_plausible": "The answer asks percent of cost passed through, not percent price change."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q15_DENIVELLERING_LABEL_REVERSED",
+      "record_ids": [
+        "ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "operation_ids": [
+        "h7-ha23-2-q15-net-ratio-nivellering"
+      ],
+      "source_locators": [
+        "ha-1022-a-23-2-o#page=7-7&question=15"
+      ],
+      "expected_wrong_move": "Treat a smaller high/low net-income ratio as denivellering instead of increased nivellering.",
+      "why_plausible": "The sign of the distribution label is easy to reverse when the numeric ratio rather than the word definition carries the evidence."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q15_FINAL_R_PI_OMITTED",
+      "record_ids": [
+        "vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "operation_ids": [
+        "h7-vw24-2-q15-ga-mb-second-adjustment-and-table"
+      ],
+      "source_locators": [
+        "vw-1022-a-24-2-o#page=7-8&question=15"
+      ],
+      "expected_wrong_move": "Complete the curve shifts but leave out final r and pi values in the table.",
+      "why_plausible": "The prompt combines drawing and table completion, and the third point is separate from the drawn curves."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q15_GROSS_RATIO_USED_AS_NET_RATIO",
+      "record_ids": [
+        "ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "operation_ids": [
+        "h7-ha23-2-q15-net-income-table"
+      ],
+      "source_locators": [
+        "ha-1022-a-23-2-o#page=7-7&question=15"
+      ],
+      "expected_wrong_move": "Compare gross incomes or pre-credit tax amounts instead of calculating both net incomes.",
+      "why_plausible": "The prompt gives a six-to-one gross-income relation, but the official correction awards the net-income table after credits."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q15_MACRO_CURVE_SEQUENCE_OR_SCALE",
+      "record_ids": [
+        "vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "operation_ids": [
+        "h7-vw24-2-q15-ga-mb-first-adjustment"
+      ],
+      "source_locators": [
+        "vw-1022-a-24-2-o#page=7-8&question=15"
+      ],
+      "expected_wrong_move": "Draw only one adjustment or shift the wrong GA/MB curve in the multi-period sequence.",
+      "why_plausible": "The official correction requires two time steps with different inflation expectations and rate changes."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q16_DOMINANT_STRATEGY_ALWAYS_PD",
+      "record_ids": [
+        "ha-1022-a-25-1-o:opgave-3:question-16"
+      ],
+      "operation_ids": [
+        "h7-ha25-1-q16-no-prisoners-dilemma"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-1-o#page=6-7&question=16"
+      ],
+      "expected_wrong_move": "Conclude prisoner dilemma merely because both firms have dominant strategies.",
+      "why_plausible": "Earlier H5/H6 game items often used dominant strategies as part of a prisoner-dilemma proof, but this correction rejects the PD label."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q16_LOSS_NUMBERS_REVERSED",
+      "record_ids": [
+        "ha-1022-a-25-1-o:opgave-3:question-16"
+      ],
+      "operation_ids": [
+        "h7-ha25-1-q16-dominant-strategies"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-1-o#page=6-7&question=16"
+      ],
+      "expected_wrong_move": "Treat more negative payoff numbers as better and choose the wrong dominant strategy.",
+      "why_plausible": "The matrix entries are negative profit changes, so ordinary greater-than comparison must be applied carefully."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q17_EXCHANGE_RATE_DIRECTION",
+      "record_ids": [
+        "vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "operation_ids": [
+        "h7-vw24-1-q17-no-insurance-loss"
+      ],
+      "source_locators": [
+        "vw-1022-a-24-1-o#page=7-8&question=17"
+      ],
+      "expected_wrong_move": "Multiply or divide by the wrong exchange rate when converting RF receipts back to euros.",
+      "why_plausible": "The source gives exchange rates in RF per euro, so direction errors are common."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q17_PREMIUM_MONTH_FACTOR_OMITTED",
+      "record_ids": [
+        "vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "operation_ids": [
+        "h7-vw24-1-q17-insurance-cost-benefit"
+      ],
+      "source_locators": [
+        "vw-1022-a-24-1-o#page=7-8&question=17"
+      ],
+      "expected_wrong_move": "Calculate only the fixed insurance cost or omit the six-month variable insurance cost.",
+      "why_plausible": "The correction combines a fixed percentage and a monthly variable percentage before comparing against the avoided loss."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q18_NASH_WITHOUT_SUBOPTIMALITY",
+      "record_ids": [
+        "ha-1022-a-25-2-o:opgave-4:question-18"
+      ],
+      "operation_ids": [
+        "h7-ha25-2-q18-prisoners-dilemma"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-2-o#page=8-9&question=18"
+      ],
+      "expected_wrong_move": "Identify the Nash outcome but omit the comparison with the no-campaign outcome.",
+      "why_plausible": "The prisoner-dilemma claim requires a separate collective-outcome comparison."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q18_PERCENT_PAYOFF_ORDER",
+      "record_ids": [
+        "ha-1022-a-25-2-o:opgave-4:question-18"
+      ],
+      "operation_ids": [
+        "h7-ha25-2-q18-dominant-campaign-strategies"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-2-o#page=8-9&question=18"
+      ],
+      "expected_wrong_move": "Misread percentage payoff rankings in the insurer campaign matrix.",
+      "why_plausible": "The matrix mixes positive, zero, and negative percentage changes."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q2_THRESHOLD_OR_WEIGHTED_AVERAGE",
+      "record_ids": [
+        "ha-1022-a-23-1-o:opgave-1:question-2"
+      ],
+      "operation_ids": [
+        "h7-ha23-1-q2-source-percent-average"
+      ],
+      "source_locators": [
+        "ha-1022-a-23-1-o#page=2-2&question=2"
+      ],
+      "expected_wrong_move": "Weight the five source percentages incorrectly or stop before comparing the average with 40 percent.",
+      "why_plausible": "The prompt asks to prove a threshold claim from source data; students can average the visible percentages but omit the concluding comparison."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q20_EXCHANGE_RATE_ONLY_NO_PRICE_LEVEL",
+      "record_ids": [
+        "vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "operation_ids": [
+        "h7-vw23-2-q20-inflation-and-competitiveness"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-2-o#page=9-10&question=20"
+      ],
+      "expected_wrong_move": "Explain only exchange-rate effects and omit domestic price-level/inflation effects on competitiveness.",
+      "why_plausible": "The source is about monetary policy through currency markets, but the correction explicitly moves through domestic spending and price levels."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q20_MATRIX_INEQUALITY_DIRECTION",
+      "record_ids": [
+        "vw-1022-a-25-2-o:opgave-4:question-20"
+      ],
+      "operation_ids": [
+        "h7-vw25-2-q20-dominant-marketing-budget"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-2-o#page=9-9&question=20"
+      ],
+      "expected_wrong_move": "Compare payoff rankings in the wrong direction when choosing 100 percent marketing.",
+      "why_plausible": "The matrix values are changes in reserve and include negative numbers."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q20_MATRIX_SHORTCUT_MISREADS_GAME_TREE",
+      "record_ids": [
+        "vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "operation_ids": [
+        "h7-vw23-2-q20-game-tree-nash"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-2-o#page=9-10&question=20"
+      ],
+      "expected_wrong_move": "Treat the game tree as a simple payoff matrix and skip the sequential payoff comparisons.",
+      "why_plausible": "Canonical F12 is matrix-oriented, while the official evidence uses a game tree."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q20_PD_LABEL_ADDED_WHEN_NOT_ASKED",
+      "record_ids": [
+        "vw-1022-a-25-2-o:opgave-4:question-20"
+      ],
+      "operation_ids": [
+        "h7-vw25-2-q20-nash-equilibrium"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-2-o#page=9-9&question=20"
+      ],
+      "expected_wrong_move": "Add a prisoner-dilemma conclusion although the official item only asks whether there is a Nash equilibrium.",
+      "why_plausible": "Dominant strategies and Nash reasoning often co-occur with prisoner-dilemma tasks, so the label can over-trigger."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q21_GA_SHIFT_INSTEAD_OF_MOVE_ALONG",
+      "record_ids": [
+        "vw-1022-a-23-1-o:opgave-5:question-21"
+      ],
+      "operation_ids": [
+        "h7-vw23-1-q21-underbesteding-lower-inflation"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-1-o#page=10-10&question=21"
+      ],
+      "expected_wrong_move": "Draw or explain a GA-curve shift where the correction asks for movement along GA0.",
+      "why_plausible": "Macro graph tasks commonly involve curve shifts, while this item distinguishes short-run movement along the existing GA curve."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q21_MISSING_MARGIN_CHANNEL",
+      "record_ids": [
+        "vw-1022-a-23-1-o:opgave-5:question-21"
+      ],
+      "operation_ids": [
+        "h7-vw23-1-q21-real-cost-margin-channel"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-1-o#page=10-10&question=21"
+      ],
+      "expected_wrong_move": "Mention lower demand/inflation but omit fixed costs, real costs, or margin pressure.",
+      "why_plausible": "The first point can be answered verbally; the second point requires the less obvious supply-side margin mechanism."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q21_OLIGOPOLY_VS_MONOPOLY_OR_VM",
+      "record_ids": [
+        "ha-1022-a-23-1-o:opgave-5:question-21"
+      ],
+      "operation_ids": [
+        "h7-ha23-1-q21-market-form-name"
+      ],
+      "source_locators": [
+        "ha-1022-a-23-1-o#page=8-8&question=21"
+      ],
+      "expected_wrong_move": "Name monopoly or perfect competition from price movement instead of oligopoly from the limited dominant suppliers.",
+      "why_plausible": "The prompt includes a large price fall and multiple named countries, making it easy to focus on price behavior instead of market-form features."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q24_DOMINANT_WITHOUT_SUBOPTIMALITY",
+      "record_ids": [
+        "vw-1022-a-24-1-o:opgave-5:question-24"
+      ],
+      "operation_ids": [
+        "h7-vw24-1-q24-prisoners-dilemma-conclusion"
+      ],
+      "source_locators": [
+        "vw-1022-a-24-1-o#page=11-11&question=24"
+      ],
+      "expected_wrong_move": "Name dominant strategies but omit the jointly better alternative needed for the prisoner-dilemma conclusion.",
+      "why_plausible": "Dominance alone is insufficient, but many answers stop after finding the Nash cell."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q24_PAYOFF_ORDER_REVERSED",
+      "record_ids": [
+        "vw-1022-a-24-1-o:opgave-5:question-24"
+      ],
+      "operation_ids": [
+        "h7-vw24-1-q24-dominant-price-cut"
+      ],
+      "source_locators": [
+        "vw-1022-a-24-1-o#page=11-11&question=24"
+      ],
+      "expected_wrong_move": "Compare the wrong row/column payoffs when identifying the dominant price-cut strategy.",
+      "why_plausible": "The matrix has two firms and asymmetric payoff positions, so row/column mixups are plausible."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q28_CREDIT_ADDED_OR_BRACKETS_NOT_MARGINAL",
+      "record_ids": [
+        "vw-1022-a-25-2-o:opgave-6:question-28"
+      ],
+      "operation_ids": [
+        "h7-vw25-2-q28-progressive-water-tax"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-2-o#page=13-13&question=28"
+      ],
+      "expected_wrong_move": "Add the credit or apply the highest bracket to all taxable liters.",
+      "why_plausible": "The tax table combines marginal brackets with a heffingskorting, a familiar source of sign and bracket errors."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q28_EXEMPTION_OMITTED",
+      "record_ids": [
+        "vw-1022-a-25-2-o:opgave-6:question-28"
+      ],
+      "operation_ids": [
+        "h7-vw25-2-q28-taxable-water-use"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-2-o#page=13-13&question=28"
+      ],
+      "expected_wrong_move": "Tax the full water use instead of subtracting the exemption first.",
+      "why_plausible": "The yearly use is prominent, while the exemption is a separate table line."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q3_AREA_NOT_OVERSUPPLY_WIDTH",
+      "record_ids": [
+        "ha-1022-a-24-2-o:opgave-1:question-3"
+      ],
+      "operation_ids": [
+        "h7-ha24-2-q3-surplus-quantity-width"
+      ],
+      "source_locators": [
+        "ha-1022-a-24-2-o#page=2-2&question=3"
+      ],
+      "expected_wrong_move": "Identify a price band or surplus triangle without first locating the excess-supply width.",
+      "why_plausible": "The graph has several labeled regions; the official explanation first pins down the surplus quantity before the area."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q3_TRIANGLE_SURPLUS_INSTEAD_OF_BUYOUT_RECTANGLE",
+      "record_ids": [
+        "ha-1022-a-24-2-o:opgave-1:question-3"
+      ],
+      "operation_ids": [
+        "h7-ha24-2-q3-government-buyout-area"
+      ],
+      "source_locators": [
+        "ha-1022-a-24-2-o#page=2-2&question=3"
+      ],
+      "expected_wrong_move": "Shade a welfare-loss triangle instead of the government buyout-cost rectangle.",
+      "why_plausible": "Minimum-price diagrams often ask welfare loss, but this prompt asks the money amount the government buys."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q4_DERIVED_MK_OR_GRAPH_READOFF",
+      "record_ids": [
+        "vw-1022-a-23-1-o:opgave-1:question-4"
+      ],
+      "operation_ids": [
+        "h7-vw23-1-q4-mo-equals-mk-price"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-1-o#page=3-3&question=4"
+      ],
+      "expected_wrong_move": "Derive marginal cost or read Q from the graph instead of using the given MK value in MO = MK.",
+      "why_plausible": "Adjacent monopoly tasks often derive MK from TK, but this correction treats MK as given."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q4_ELASTICITY_INSTEAD_OF_MONOPOLY_MO",
+      "record_ids": [
+        "vw-1022-a-23-1-o:opgave-1:question-4"
+      ],
+      "operation_ids": [
+        "h7-vw23-1-q4-mo-from-go"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-1-o#page=3-3&question=4"
+      ],
+      "expected_wrong_move": "Use price elasticity or graph reading instead of deriving MO from the GO relation.",
+      "why_plausible": "The item is about monopoly price and a demand line, which can trigger unrelated elasticity routines."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q4_MO_NOT_SHIFTED_WITH_GO",
+      "record_ids": [
+        "vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "operation_ids": [
+        "h7-vw25-2-q4-mo-line-with-consumer-subsidy"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-2-o#page=3-3&question=4"
+      ],
+      "expected_wrong_move": "Move GO correctly but leave MO in its original position.",
+      "why_plausible": "MO is derived from GO, so its consistent shift is less directly visible."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q4_SHIFT_ONLY_ONE_REVENUE_LINE",
+      "record_ids": [
+        "vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "operation_ids": [
+        "h7-vw25-2-q4-go-line-with-consumer-subsidy"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-2-o#page=3-3&question=4"
+      ],
+      "expected_wrong_move": "Shift only GO or only MO after the subsidy.",
+      "why_plausible": "The prompt names both lines, but graph habits can lead students to adjust only the visible demand/GO line."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q5_TOTAL_SUBSIDY_AREA_NOT_DWL",
+      "record_ids": [
+        "vw-1022-a-25-2-o:opgave-1:question-5"
+      ],
+      "operation_ids": [
+        "h7-vw25-2-q5-total-subsidy-shading"
+      ],
+      "source_locators": [
+        "vw-1022-a-25-2-o#page=3-3&question=5"
+      ],
+      "expected_wrong_move": "Shade deadweight loss or another welfare triangle instead of total producer-subsidy spending.",
+      "why_plausible": "The graph-only correction allows multiple shadings and the surrounding tasks discuss subsidy welfare."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q9_DWL_AS_TOTAL_SUBSIDY_RECTANGLE",
+      "record_ids": [
+        "vw-1022-a-23-2-o:opgave-2:question-9"
+      ],
+      "operation_ids": [
+        "h7-vw23-2-q9-deadweight-loss-shading"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-2-o#page=5-5&question=9"
+      ],
+      "expected_wrong_move": "Shade the full subsidy rectangle instead of the lost surplus triangle.",
+      "why_plausible": "Both official answers are graph-shading tasks about the same subsidy intervention."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q9_PERCENT_REDUCTION_DENOMINATOR",
+      "record_ids": [
+        "ha-1022-a-25-2-o:opgave-2:question-9"
+      ],
+      "operation_ids": [
+        "h7-ha25-2-q9-old-equilibrium-and-percent-reduction"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-2-o#page=4-5&question=9"
+      ],
+      "expected_wrong_move": "Divide the quantity change by the new quantity instead of the old quantity.",
+      "why_plausible": "The target check depends on a percent decrease, and denominator choice changes the result."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q9_REBUILDING_FUNCTION_OR_ELASTICITY",
+      "record_ids": [
+        "ha-1022-a-23-1-o:opgave-2:question-9"
+      ],
+      "operation_ids": [
+        "h7-ha23-1-q9-labor-market-equilibrium"
+      ],
+      "source_locators": [
+        "ha-1022-a-23-1-o#page=4-5&question=9"
+      ],
+      "expected_wrong_move": "Construct a new labor-market function or use elasticity instead of solving the given demand equation against supply.",
+      "why_plausible": "The source contains a graph/model context, but the correction only requires substituting the fixed supply quantity into the shifted demand relation."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q9_SUBSIDY_AREA_SWAPPED_WITH_DWL",
+      "record_ids": [
+        "vw-1022-a-23-2-o:opgave-2:question-9"
+      ],
+      "operation_ids": [
+        "h7-vw23-2-q9-subsidy-amount-shading"
+      ],
+      "source_locators": [
+        "vw-1022-a-23-2-o#page=5-5&question=9"
+      ],
+      "expected_wrong_move": "Shade the deadweight-loss triangle where the subsidy amount should be shaded.",
+      "why_plausible": "The prompt asks two separate figures, making cross-labeling the two shaded areas predictable."
+    },
+    {
+      "anchor_id": "H7_MISCONCEPTION_Q9_TAX_SHIFT_WRONG_SIDE",
+      "record_ids": [
+        "ha-1022-a-25-2-o:opgave-2:question-9"
+      ],
+      "operation_ids": [
+        "h7-ha25-2-q9-new-tax-equilibrium"
+      ],
+      "source_locators": [
+        "ha-1022-a-25-2-o#page=4-5&question=9"
+      ],
+      "expected_wrong_move": "Shift the wrong function or solve the pre-tax instead of post-tax equilibrium.",
+      "why_plausible": "The tax changes the market equations and the correction first solves the new equilibrium."
+    }
+  ],
+  "answer_summary_appendix": [
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-1:question-2",
+      "split": "diagnostic",
+      "operation_id": "h7-ha23-1-q2-source-percent-average",
+      "question_word": "toon_met_een_berekening_aan",
+      "official_target_outcome_summary": "Average the five source percentages and compare the result with the 40 percent threshold.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-23-1-o#page=2-2&question=2"
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-2:question-9",
+      "split": "diagnostic",
+      "operation_id": "h7-ha23-1-q9-labor-market-equilibrium",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "Use the given demand relation and supply quantity to solve L = 28,450.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-23-1-o#page=4-5&question=9"
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-5:question-21",
+      "split": "diagnostic",
+      "operation_id": "h7-ha23-1-q21-market-form-name",
+      "question_word": "leg_uit_of",
+      "official_target_outcome_summary": "Name oligopoly and support it with two relevant market-form features.",
+      "answer_form_mtu_ids": [
+        "A98"
+      ],
+      "source_locator": "ha-1022-a-23-1-o#page=8-8&question=21"
+    },
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-ha23-2-q15-net-income-table",
+      "question_word": "toon_met_een_berekening_aan",
+      "official_target_outcome_summary": "Compute low and high net incomes from the official tax/credit table.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-23-2-o#page=7-7&question=15"
+    },
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "question_word": "toon_met_een_berekening_aan",
+      "official_target_outcome_summary": "Ratio falls from 4.1 to about 3.9, so income differences narrow.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-23-2-o#page=7-7&question=15"
+    },
+    {
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "Snel keeps the budget amount less the agreed transfer.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-24-1-o#page=5-5&question=12"
+    },
+    {
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "Sprinter keeps the accepted price less marginal cost.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-24-1-o#page=5-5&question=12"
+    },
+    {
+      "record_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-2-q3-surplus-quantity-width",
+      "question_word": "grafisch",
+      "official_target_outcome_summary": "The minimum price creates an excess supply width between supplied and demanded quantity.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "ha-1022-a-24-2-o#page=2-2&question=3"
+    },
+    {
+      "record_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-2-q3-government-buyout-area",
+      "question_word": "grafisch",
+      "official_target_outcome_summary": "Buyout cost is surplus quantity times Pmin, represented by the specified rectangle.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "ha-1022-a-24-2-o#page=2-2&question=3"
+    },
+    {
+      "record_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "split": "diagnostic",
+      "operation_id": "h7-ha25-1-q16-dominant-strategies",
+      "question_word": "leg_uit_of",
+      "official_target_outcome_summary": "Both firms prefer investing under each action of the other firm.",
+      "answer_form_mtu_ids": [
+        "A98"
+      ],
+      "source_locator": "ha-1022-a-25-1-o#page=6-7&question=16"
+    },
+    {
+      "record_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "split": "diagnostic",
+      "operation_id": "h7-ha25-1-q16-no-prisoners-dilemma",
+      "question_word": "leg_uit_of",
+      "official_target_outcome_summary": "The equilibrium is jointly optimal in the official model, so the PD label is rejected.",
+      "answer_form_mtu_ids": [
+        "A98"
+      ],
+      "source_locator": "ha-1022-a-25-1-o#page=6-7&question=16"
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "split": "diagnostic",
+      "operation_id": "h7-ha25-2-q10-consumer-surplus-area",
+      "question_word": "bron",
+      "official_target_outcome_summary": "Consumer surplus after the excise is the upper triangle in the official graph.",
+      "answer_form_mtu_ids": [
+        "A81"
+      ],
+      "source_locator": "ha-1022-a-25-2-o#page=5-6&question=10"
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "split": "diagnostic",
+      "operation_id": "h7-ha25-2-q10-producer-surplus-area",
+      "question_word": "bron",
+      "official_target_outcome_summary": "Producer surplus is the area below the producer price and above supply.",
+      "answer_form_mtu_ids": [
+        "A81"
+      ],
+      "source_locator": "ha-1022-a-25-2-o#page=5-6&question=10"
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "split": "diagnostic",
+      "operation_id": "h7-ha25-2-q10-tax-revenue-area",
+      "question_word": "bron",
+      "official_target_outcome_summary": "Tax revenue is the tax wedge multiplied by the post-tax quantity.",
+      "answer_form_mtu_ids": [
+        "A81"
+      ],
+      "source_locator": "ha-1022-a-25-2-o#page=5-6&question=10"
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-1-q4-mo-from-go",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "GO is used as price function; TO and MO follow from that relation.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-23-1-o#page=3-3&question=4"
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-1-q4-mo-equals-mk-price",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "MO = MK gives Q = 9.9, then GO gives the monopoly price.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-23-1-o#page=3-3&question=4"
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-1-q21-underbesteding-lower-inflation",
+      "question_word": "leg_uit_dat",
+      "official_target_outcome_summary": "Lower demand creates lower-than-expected inflation on the GA0 curve.",
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "source_locator": "vw-1022-a-23-1-o#page=10-10&question=21"
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-1-q21-real-cost-margin-channel",
+      "question_word": "leg_uit_dat",
+      "official_target_outcome_summary": "Prices rise less than expected while costs are fixed, reducing margins and output.",
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "source_locator": "vw-1022-a-23-1-o#page=10-10&question=21"
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-2-q9-subsidy-amount-shading",
+      "question_word": "arceer",
+      "official_target_outcome_summary": "Subsidy spending is subsidy per student times subsidized quantity.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "vw-1022-a-23-2-o#page=5-5&question=9"
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-2-q9-deadweight-loss-shading",
+      "question_word": "arceer",
+      "official_target_outcome_summary": "The subsidy creates a deadweight-loss area that must be shaded separately.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "vw-1022-a-23-2-o#page=5-5&question=9"
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "question_word": "leg_uit_dat",
+      "official_target_outcome_summary": "The official model compares payoffs in a game tree, not a simple matrix.",
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "source_locator": "vw-1022-a-23-2-o#page=9-10&question=20"
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-2-q20-inflation-and-competitiveness",
+      "question_word": "leg_uit_dat",
+      "official_target_outcome_summary": "Expansionary policy raises inflation and the relative price level, weakening competitiveness.",
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "source_locator": "vw-1022-a-23-2-o#page=9-10&question=20"
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-1-q17-no-insurance-loss",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "The RF amount converts back to less than EUR 12 million at the later rate.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-24-1-o#page=7-8&question=17"
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "Insurance cost is subtracted from the avoided loss to determine the net benefit.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-24-1-o#page=7-8&question=17"
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-1-q24-dominant-price-cut",
+      "question_word": "leg_uit_dat",
+      "official_target_outcome_summary": "Both firms prefer lowering price for each possible action of the other firm.",
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "source_locator": "vw-1022-a-24-1-o#page=11-11&question=24"
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-1-q24-prisoners-dilemma-conclusion",
+      "question_word": "leg_uit_dat",
+      "official_target_outcome_summary": "The Nash outcome is suboptimal, so the matrix is a prisoner dilemma.",
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "source_locator": "vw-1022-a-24-1-o#page=11-11&question=24"
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "question_word": "teken",
+      "official_target_outcome_summary": "GA1 and MB1 shift according to expected-minus-realized inflation and a one-point real-rate reduction.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "vw-1022-a-24-2-o#page=7-8&question=15"
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+      "question_word": "teken",
+      "official_target_outcome_summary": "GA2/MB2 plus final r and inflation values complete the official graph/table answer.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "vw-1022-a-24-2-o#page=7-8&question=15"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+      "question_word": "teken",
+      "official_target_outcome_summary": "The GO line shifts to reflect the subsidy-inclusive willingness to pay.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "vw-1022-a-25-2-o#page=3-3&question=4"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw25-2-q4-mo-line-with-consumer-subsidy",
+      "question_word": "teken",
+      "official_target_outcome_summary": "The MO line must be shifted consistently with the GO change.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "vw-1022-a-25-2-o#page=3-3&question=4"
+    },
+    {
+      "record_id": "ha-1022-a-25-1-o:opgave-2:question-12",
+      "split": "locked_holdout",
+      "operation_id": "h7-ha25-1-q12-price-and-quantity-percent-changes",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "Price rises 50 percent and quantity falls 25 percent.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-25-1-o#page=5-5&question=12"
+    },
+    {
+      "record_id": "ha-1022-a-25-1-o:opgave-2:question-12",
+      "split": "locked_holdout",
+      "operation_id": "h7-ha25-1-q12-elasticity-turnover-conclusion",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "Elasticity is -0.5, so price increase raises turnover under inelastic demand.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-25-1-o#page=5-5&question=12"
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-9",
+      "split": "locked_holdout",
+      "operation_id": "h7-ha25-2-q9-new-tax-equilibrium",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "The shifted functions give P = 6 and Q = 2.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-25-2-o#page=4-5&question=9"
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-9",
+      "split": "locked_holdout",
+      "operation_id": "h7-ha25-2-q9-old-equilibrium-and-percent-reduction",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "Old Q is 2.75 and the reduction is about 27.3 percent, so the target is met.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "ha-1022-a-25-2-o#page=4-5&question=9"
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-4:question-18",
+      "split": "locked_holdout",
+      "operation_id": "h7-ha25-2-q18-dominant-campaign-strategies",
+      "question_word": "leg_uit_of",
+      "official_target_outcome_summary": "Each insurer gets a better payoff by campaigning in both columns/rows.",
+      "answer_form_mtu_ids": [
+        "A98"
+      ],
+      "source_locator": "ha-1022-a-25-2-o#page=8-9&question=18"
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-4:question-18",
+      "split": "locked_holdout",
+      "operation_id": "h7-ha25-2-q18-prisoners-dilemma",
+      "question_word": "leg_uit_of",
+      "official_target_outcome_summary": "Both campaigning is worse for both than the no-campaign outcome, so it is a prisoner dilemma.",
+      "answer_form_mtu_ids": [
+        "A98"
+      ],
+      "source_locator": "ha-1022-a-25-2-o#page=8-9&question=18"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-2:question-11",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-1-q11-current-assets-from-coverage",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "The current present value times 92 percent gives current assets.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-25-1-o#page=5-6&question=11"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-2:question-11",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-1-q11-new-coverage-affordability",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "The new coverage ratio is above the original ratio and above full coverage.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-25-1-o#page=5-6&question=11"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-3:question-14",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-1-q14-new-mk-and-mo",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "The new MK and MO functions are required before solving profit maximum.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-25-1-o#page=6-7&question=14"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-3:question-14",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-1-q14-new-price-and-pass-through",
+      "question_word": "bereken",
+      "official_target_outcome_summary": "The price increase divided by the cost increase gives 40 percent pass-through.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-25-1-o#page=6-7&question=14"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+      "question_word": "arceer",
+      "official_target_outcome_summary": "The official answer is graph-only and allows two correct shadings, so source/graph review remains required.",
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "source_locator": "vw-1022-a-25-2-o#page=3-3&question=5"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-2-q20-dominant-marketing-budget",
+      "question_word": "leg_uit_of",
+      "official_target_outcome_summary": "For each possible action of the other school, 100 percent marketing gives the highest reserve result.",
+      "answer_form_mtu_ids": [
+        "A98"
+      ],
+      "source_locator": "vw-1022-a-25-2-o#page=9-9&question=20"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-2-q20-nash-equilibrium",
+      "question_word": "leg_uit_of",
+      "official_target_outcome_summary": "Neither school can improve its reserve given the other school choice.",
+      "answer_form_mtu_ids": [
+        "A98"
+      ],
+      "source_locator": "vw-1022-a-25-2-o#page=9-9&question=20"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-28",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-2-q28-taxable-water-use",
+      "question_word": "toon_met_een_berekening_aan",
+      "official_target_outcome_summary": "The tax base is 40,000 liters after the exemption.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-25-2-o#page=13-13&question=28"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-28",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-2-q28-progressive-water-tax",
+      "question_word": "toon_met_een_berekening_aan",
+      "official_target_outcome_summary": "Two brackets total EUR 180; after the EUR 70 credit the payment is EUR 110.",
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "source_locator": "vw-1022-a-25-2-o#page=13-13&question=28"
+    }
+  ],
+  "summary": {
+    "diagnostic_records": 16,
+    "locked_holdout_records": 8,
+    "diagnostic_passed_records": 10,
+    "holdout_passed_records": 7,
+    "false_closure_count": 0,
+    "negative_fixture_detection_rate": 1
+  },
+  "H7_MISCONCEPTION_Q10_SURPLUS_AND_TAX_AREA_SWAPPED": {
+    "anchor_id": "H7_MISCONCEPTION_Q10_SURPLUS_AND_TAX_AREA_SWAPPED",
+    "record_ids": [
+      "ha-1022-a-25-2-o:opgave-2:question-10"
+    ],
+    "operation_ids": [
+      "h7-ha25-2-q10-consumer-surplus-area",
+      "h7-ha25-2-q10-producer-surplus-area"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-2-o#page=5-6&question=10"
+    ],
+    "expected_wrong_move": "Swap consumer and producer surplus regions after the tax.",
+    "why_plausible": "Both areas sit adjacent to the tax wedge and use similar letter labels."
+  },
+  "H7_MISCONCEPTION_Q10_TAX_RECTANGLE_AS_SURPLUS_TRIANGLE": {
+    "anchor_id": "H7_MISCONCEPTION_Q10_TAX_RECTANGLE_AS_SURPLUS_TRIANGLE",
+    "record_ids": [
+      "ha-1022-a-25-2-o:opgave-2:question-10"
+    ],
+    "operation_ids": [
+      "h7-ha25-2-q10-tax-revenue-area"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-2-o#page=5-6&question=10"
+    ],
+    "expected_wrong_move": "Give a surplus triangle for tax revenue instead of the wedge-by-quantity rectangle.",
+    "why_plausible": "The same graph also contains surplus triangles, while the official tax revenue is rectangular."
+  },
+  "H7_MISCONCEPTION_Q11_HIGHER_RATE_AS_WORSE_AFFORDABILITY": {
+    "anchor_id": "H7_MISCONCEPTION_Q11_HIGHER_RATE_AS_WORSE_AFFORDABILITY",
+    "record_ids": [
+      "vw-1022-a-25-1-o:opgave-2:question-11"
+    ],
+    "operation_ids": [
+      "h7-vw25-1-q11-new-coverage-affordability"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-1-o#page=5-6&question=11"
+    ],
+    "expected_wrong_move": "Assume a higher discount rate worsens affordability instead of lowering the present value of obligations.",
+    "why_plausible": "Interest-rate effects on savers and pension liabilities pull in different intuitive directions."
+  },
+  "H7_MISCONCEPTION_Q11_RATE_EXPONENT_OR_SCALE": {
+    "anchor_id": "H7_MISCONCEPTION_Q11_RATE_EXPONENT_OR_SCALE",
+    "record_ids": [
+      "vw-1022-a-25-1-o:opgave-2:question-11"
+    ],
+    "operation_ids": [
+      "h7-vw25-1-q11-current-assets-from-coverage"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-1-o#page=5-6&question=11"
+    ],
+    "expected_wrong_move": "Use the wrong exponent or billion scale in present-value/coverage calculations.",
+    "why_plausible": "The correction combines a 25-year discount factor with billion-euro values."
+  },
+  "H7_MISCONCEPTION_Q12_ELASTICITY_BASE_VALUES": {
+    "anchor_id": "H7_MISCONCEPTION_Q12_ELASTICITY_BASE_VALUES",
+    "record_ids": [
+      "ha-1022-a-25-1-o:opgave-2:question-12"
+    ],
+    "operation_ids": [
+      "h7-ha25-1-q12-price-and-quantity-percent-changes"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-1-o#page=5-5&question=12"
+    ],
+    "expected_wrong_move": "Use the new price or quantity as the percentage-change denominator.",
+    "why_plausible": "Both old and new values are visible in the source, but the correction uses the original values as base."
+  },
+  "H7_MISCONCEPTION_Q12_INELASTIC_TURNOVER_DIRECTION": {
+    "anchor_id": "H7_MISCONCEPTION_Q12_INELASTIC_TURNOVER_DIRECTION",
+    "record_ids": [
+      "ha-1022-a-25-1-o:opgave-2:question-12"
+    ],
+    "operation_ids": [
+      "h7-ha25-1-q12-elasticity-turnover-conclusion"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-1-o#page=5-5&question=12"
+    ],
+    "expected_wrong_move": "Conclude turnover falls from lower quantity despite inelastic demand and higher price.",
+    "why_plausible": "Students often track quantity direction but omit the elasticity-to-turnover rule."
+  },
+  "H7_MISCONCEPTION_Q12_NASH_USED_FOR_DIRECT_PAYOFF": {
+    "anchor_id": "H7_MISCONCEPTION_Q12_NASH_USED_FOR_DIRECT_PAYOFF",
+    "record_ids": [
+      "ha-1022-a-24-1-o:opgave-2:question-12"
+    ],
+    "operation_ids": [
+      "h7-ha24-1-q12-snel-residual-payoff"
+    ],
+    "source_locators": [
+      "ha-1022-a-24-1-o#page=5-5&question=12"
+    ],
+    "expected_wrong_move": "Solve the ultimatum-tree payoff as a Nash-equilibrium problem instead of direct residual payoff arithmetic.",
+    "why_plausible": "The surrounding item is game-theory language, but q12 only asks for two payoff entries in the decision tree."
+  },
+  "H7_MISCONCEPTION_Q12_RESPONDER_PAYOFF_WITHOUT_COST": {
+    "anchor_id": "H7_MISCONCEPTION_Q12_RESPONDER_PAYOFF_WITHOUT_COST",
+    "record_ids": [
+      "ha-1022-a-24-1-o:opgave-2:question-12"
+    ],
+    "operation_ids": [
+      "h7-ha24-1-q12-sprinter-margin-payoff"
+    ],
+    "source_locators": [
+      "ha-1022-a-24-1-o#page=5-5&question=12"
+    ],
+    "expected_wrong_move": "Use the agreed price as Sprinter payoff without subtracting marginal cost.",
+    "why_plausible": "The price is visible in the source, while the correction explicitly deducts marginal costs before writing the payoff."
+  },
+  "H7_MISCONCEPTION_Q14_COST_INCREASE_NOT_IN_MK": {
+    "anchor_id": "H7_MISCONCEPTION_Q14_COST_INCREASE_NOT_IN_MK",
+    "record_ids": [
+      "vw-1022-a-25-1-o:opgave-3:question-14"
+    ],
+    "operation_ids": [
+      "h7-vw25-1-q14-new-mk-and-mo"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-1-o#page=6-7&question=14"
+    ],
+    "expected_wrong_move": "Add the cost shock to total cost but fail to reflect it in the new marginal-cost function.",
+    "why_plausible": "The variable-cost increase is given per unit and must carry through the derivative."
+  },
+  "H7_MISCONCEPTION_Q14_PASS_THROUGH_DENOMINATOR": {
+    "anchor_id": "H7_MISCONCEPTION_Q14_PASS_THROUGH_DENOMINATOR",
+    "record_ids": [
+      "vw-1022-a-25-1-o:opgave-3:question-14"
+    ],
+    "operation_ids": [
+      "h7-vw25-1-q14-new-price-and-pass-through"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-1-o#page=6-7&question=14"
+    ],
+    "expected_wrong_move": "Divide the price increase by the old price instead of by the cost increase.",
+    "why_plausible": "The answer asks percent of cost passed through, not percent price change."
+  },
+  "H7_MISCONCEPTION_Q15_DENIVELLERING_LABEL_REVERSED": {
+    "anchor_id": "H7_MISCONCEPTION_Q15_DENIVELLERING_LABEL_REVERSED",
+    "record_ids": [
+      "ha-1022-a-23-2-o:opgave-3:question-15"
+    ],
+    "operation_ids": [
+      "h7-ha23-2-q15-net-ratio-nivellering"
+    ],
+    "source_locators": [
+      "ha-1022-a-23-2-o#page=7-7&question=15"
+    ],
+    "expected_wrong_move": "Treat a smaller high/low net-income ratio as denivellering instead of increased nivellering.",
+    "why_plausible": "The sign of the distribution label is easy to reverse when the numeric ratio rather than the word definition carries the evidence."
+  },
+  "H7_MISCONCEPTION_Q15_FINAL_R_PI_OMITTED": {
+    "anchor_id": "H7_MISCONCEPTION_Q15_FINAL_R_PI_OMITTED",
+    "record_ids": [
+      "vw-1022-a-24-2-o:opgave-3:question-15"
+    ],
+    "operation_ids": [
+      "h7-vw24-2-q15-ga-mb-second-adjustment-and-table"
+    ],
+    "source_locators": [
+      "vw-1022-a-24-2-o#page=7-8&question=15"
+    ],
+    "expected_wrong_move": "Complete the curve shifts but leave out final r and pi values in the table.",
+    "why_plausible": "The prompt combines drawing and table completion, and the third point is separate from the drawn curves."
+  },
+  "H7_MISCONCEPTION_Q15_GROSS_RATIO_USED_AS_NET_RATIO": {
+    "anchor_id": "H7_MISCONCEPTION_Q15_GROSS_RATIO_USED_AS_NET_RATIO",
+    "record_ids": [
+      "ha-1022-a-23-2-o:opgave-3:question-15"
+    ],
+    "operation_ids": [
+      "h7-ha23-2-q15-net-income-table"
+    ],
+    "source_locators": [
+      "ha-1022-a-23-2-o#page=7-7&question=15"
+    ],
+    "expected_wrong_move": "Compare gross incomes or pre-credit tax amounts instead of calculating both net incomes.",
+    "why_plausible": "The prompt gives a six-to-one gross-income relation, but the official correction awards the net-income table after credits."
+  },
+  "H7_MISCONCEPTION_Q15_MACRO_CURVE_SEQUENCE_OR_SCALE": {
+    "anchor_id": "H7_MISCONCEPTION_Q15_MACRO_CURVE_SEQUENCE_OR_SCALE",
+    "record_ids": [
+      "vw-1022-a-24-2-o:opgave-3:question-15"
+    ],
+    "operation_ids": [
+      "h7-vw24-2-q15-ga-mb-first-adjustment"
+    ],
+    "source_locators": [
+      "vw-1022-a-24-2-o#page=7-8&question=15"
+    ],
+    "expected_wrong_move": "Draw only one adjustment or shift the wrong GA/MB curve in the multi-period sequence.",
+    "why_plausible": "The official correction requires two time steps with different inflation expectations and rate changes."
+  },
+  "H7_MISCONCEPTION_Q16_DOMINANT_STRATEGY_ALWAYS_PD": {
+    "anchor_id": "H7_MISCONCEPTION_Q16_DOMINANT_STRATEGY_ALWAYS_PD",
+    "record_ids": [
+      "ha-1022-a-25-1-o:opgave-3:question-16"
+    ],
+    "operation_ids": [
+      "h7-ha25-1-q16-no-prisoners-dilemma"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-1-o#page=6-7&question=16"
+    ],
+    "expected_wrong_move": "Conclude prisoner dilemma merely because both firms have dominant strategies.",
+    "why_plausible": "Earlier H5/H6 game items often used dominant strategies as part of a prisoner-dilemma proof, but this correction rejects the PD label."
+  },
+  "H7_MISCONCEPTION_Q16_LOSS_NUMBERS_REVERSED": {
+    "anchor_id": "H7_MISCONCEPTION_Q16_LOSS_NUMBERS_REVERSED",
+    "record_ids": [
+      "ha-1022-a-25-1-o:opgave-3:question-16"
+    ],
+    "operation_ids": [
+      "h7-ha25-1-q16-dominant-strategies"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-1-o#page=6-7&question=16"
+    ],
+    "expected_wrong_move": "Treat more negative payoff numbers as better and choose the wrong dominant strategy.",
+    "why_plausible": "The matrix entries are negative profit changes, so ordinary greater-than comparison must be applied carefully."
+  },
+  "H7_MISCONCEPTION_Q17_EXCHANGE_RATE_DIRECTION": {
+    "anchor_id": "H7_MISCONCEPTION_Q17_EXCHANGE_RATE_DIRECTION",
+    "record_ids": [
+      "vw-1022-a-24-1-o:opgave-3:question-17"
+    ],
+    "operation_ids": [
+      "h7-vw24-1-q17-no-insurance-loss"
+    ],
+    "source_locators": [
+      "vw-1022-a-24-1-o#page=7-8&question=17"
+    ],
+    "expected_wrong_move": "Multiply or divide by the wrong exchange rate when converting RF receipts back to euros.",
+    "why_plausible": "The source gives exchange rates in RF per euro, so direction errors are common."
+  },
+  "H7_MISCONCEPTION_Q17_PREMIUM_MONTH_FACTOR_OMITTED": {
+    "anchor_id": "H7_MISCONCEPTION_Q17_PREMIUM_MONTH_FACTOR_OMITTED",
+    "record_ids": [
+      "vw-1022-a-24-1-o:opgave-3:question-17"
+    ],
+    "operation_ids": [
+      "h7-vw24-1-q17-insurance-cost-benefit"
+    ],
+    "source_locators": [
+      "vw-1022-a-24-1-o#page=7-8&question=17"
+    ],
+    "expected_wrong_move": "Calculate only the fixed insurance cost or omit the six-month variable insurance cost.",
+    "why_plausible": "The correction combines a fixed percentage and a monthly variable percentage before comparing against the avoided loss."
+  },
+  "H7_MISCONCEPTION_Q18_NASH_WITHOUT_SUBOPTIMALITY": {
+    "anchor_id": "H7_MISCONCEPTION_Q18_NASH_WITHOUT_SUBOPTIMALITY",
+    "record_ids": [
+      "ha-1022-a-25-2-o:opgave-4:question-18"
+    ],
+    "operation_ids": [
+      "h7-ha25-2-q18-prisoners-dilemma"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-2-o#page=8-9&question=18"
+    ],
+    "expected_wrong_move": "Identify the Nash outcome but omit the comparison with the no-campaign outcome.",
+    "why_plausible": "The prisoner-dilemma claim requires a separate collective-outcome comparison."
+  },
+  "H7_MISCONCEPTION_Q18_PERCENT_PAYOFF_ORDER": {
+    "anchor_id": "H7_MISCONCEPTION_Q18_PERCENT_PAYOFF_ORDER",
+    "record_ids": [
+      "ha-1022-a-25-2-o:opgave-4:question-18"
+    ],
+    "operation_ids": [
+      "h7-ha25-2-q18-dominant-campaign-strategies"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-2-o#page=8-9&question=18"
+    ],
+    "expected_wrong_move": "Misread percentage payoff rankings in the insurer campaign matrix.",
+    "why_plausible": "The matrix mixes positive, zero, and negative percentage changes."
+  },
+  "H7_MISCONCEPTION_Q2_THRESHOLD_OR_WEIGHTED_AVERAGE": {
+    "anchor_id": "H7_MISCONCEPTION_Q2_THRESHOLD_OR_WEIGHTED_AVERAGE",
+    "record_ids": [
+      "ha-1022-a-23-1-o:opgave-1:question-2"
+    ],
+    "operation_ids": [
+      "h7-ha23-1-q2-source-percent-average"
+    ],
+    "source_locators": [
+      "ha-1022-a-23-1-o#page=2-2&question=2"
+    ],
+    "expected_wrong_move": "Weight the five source percentages incorrectly or stop before comparing the average with 40 percent.",
+    "why_plausible": "The prompt asks to prove a threshold claim from source data; students can average the visible percentages but omit the concluding comparison."
+  },
+  "H7_MISCONCEPTION_Q20_EXCHANGE_RATE_ONLY_NO_PRICE_LEVEL": {
+    "anchor_id": "H7_MISCONCEPTION_Q20_EXCHANGE_RATE_ONLY_NO_PRICE_LEVEL",
+    "record_ids": [
+      "vw-1022-a-23-2-o:opgave-4:question-20"
+    ],
+    "operation_ids": [
+      "h7-vw23-2-q20-inflation-and-competitiveness"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-2-o#page=9-10&question=20"
+    ],
+    "expected_wrong_move": "Explain only exchange-rate effects and omit domestic price-level/inflation effects on competitiveness.",
+    "why_plausible": "The source is about monetary policy through currency markets, but the correction explicitly moves through domestic spending and price levels."
+  },
+  "H7_MISCONCEPTION_Q20_MATRIX_INEQUALITY_DIRECTION": {
+    "anchor_id": "H7_MISCONCEPTION_Q20_MATRIX_INEQUALITY_DIRECTION",
+    "record_ids": [
+      "vw-1022-a-25-2-o:opgave-4:question-20"
+    ],
+    "operation_ids": [
+      "h7-vw25-2-q20-dominant-marketing-budget"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-2-o#page=9-9&question=20"
+    ],
+    "expected_wrong_move": "Compare payoff rankings in the wrong direction when choosing 100 percent marketing.",
+    "why_plausible": "The matrix values are changes in reserve and include negative numbers."
+  },
+  "H7_MISCONCEPTION_Q20_MATRIX_SHORTCUT_MISREADS_GAME_TREE": {
+    "anchor_id": "H7_MISCONCEPTION_Q20_MATRIX_SHORTCUT_MISREADS_GAME_TREE",
+    "record_ids": [
+      "vw-1022-a-23-2-o:opgave-4:question-20"
+    ],
+    "operation_ids": [
+      "h7-vw23-2-q20-game-tree-nash"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-2-o#page=9-10&question=20"
+    ],
+    "expected_wrong_move": "Treat the game tree as a simple payoff matrix and skip the sequential payoff comparisons.",
+    "why_plausible": "Canonical F12 is matrix-oriented, while the official evidence uses a game tree."
+  },
+  "H7_MISCONCEPTION_Q20_PD_LABEL_ADDED_WHEN_NOT_ASKED": {
+    "anchor_id": "H7_MISCONCEPTION_Q20_PD_LABEL_ADDED_WHEN_NOT_ASKED",
+    "record_ids": [
+      "vw-1022-a-25-2-o:opgave-4:question-20"
+    ],
+    "operation_ids": [
+      "h7-vw25-2-q20-nash-equilibrium"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-2-o#page=9-9&question=20"
+    ],
+    "expected_wrong_move": "Add a prisoner-dilemma conclusion although the official item only asks whether there is a Nash equilibrium.",
+    "why_plausible": "Dominant strategies and Nash reasoning often co-occur with prisoner-dilemma tasks, so the label can over-trigger."
+  },
+  "H7_MISCONCEPTION_Q21_GA_SHIFT_INSTEAD_OF_MOVE_ALONG": {
+    "anchor_id": "H7_MISCONCEPTION_Q21_GA_SHIFT_INSTEAD_OF_MOVE_ALONG",
+    "record_ids": [
+      "vw-1022-a-23-1-o:opgave-5:question-21"
+    ],
+    "operation_ids": [
+      "h7-vw23-1-q21-underbesteding-lower-inflation"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-1-o#page=10-10&question=21"
+    ],
+    "expected_wrong_move": "Draw or explain a GA-curve shift where the correction asks for movement along GA0.",
+    "why_plausible": "Macro graph tasks commonly involve curve shifts, while this item distinguishes short-run movement along the existing GA curve."
+  },
+  "H7_MISCONCEPTION_Q21_MISSING_MARGIN_CHANNEL": {
+    "anchor_id": "H7_MISCONCEPTION_Q21_MISSING_MARGIN_CHANNEL",
+    "record_ids": [
+      "vw-1022-a-23-1-o:opgave-5:question-21"
+    ],
+    "operation_ids": [
+      "h7-vw23-1-q21-real-cost-margin-channel"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-1-o#page=10-10&question=21"
+    ],
+    "expected_wrong_move": "Mention lower demand/inflation but omit fixed costs, real costs, or margin pressure.",
+    "why_plausible": "The first point can be answered verbally; the second point requires the less obvious supply-side margin mechanism."
+  },
+  "H7_MISCONCEPTION_Q21_OLIGOPOLY_VS_MONOPOLY_OR_VM": {
+    "anchor_id": "H7_MISCONCEPTION_Q21_OLIGOPOLY_VS_MONOPOLY_OR_VM",
+    "record_ids": [
+      "ha-1022-a-23-1-o:opgave-5:question-21"
+    ],
+    "operation_ids": [
+      "h7-ha23-1-q21-market-form-name"
+    ],
+    "source_locators": [
+      "ha-1022-a-23-1-o#page=8-8&question=21"
+    ],
+    "expected_wrong_move": "Name monopoly or perfect competition from price movement instead of oligopoly from the limited dominant suppliers.",
+    "why_plausible": "The prompt includes a large price fall and multiple named countries, making it easy to focus on price behavior instead of market-form features."
+  },
+  "H7_MISCONCEPTION_Q24_DOMINANT_WITHOUT_SUBOPTIMALITY": {
+    "anchor_id": "H7_MISCONCEPTION_Q24_DOMINANT_WITHOUT_SUBOPTIMALITY",
+    "record_ids": [
+      "vw-1022-a-24-1-o:opgave-5:question-24"
+    ],
+    "operation_ids": [
+      "h7-vw24-1-q24-prisoners-dilemma-conclusion"
+    ],
+    "source_locators": [
+      "vw-1022-a-24-1-o#page=11-11&question=24"
+    ],
+    "expected_wrong_move": "Name dominant strategies but omit the jointly better alternative needed for the prisoner-dilemma conclusion.",
+    "why_plausible": "Dominance alone is insufficient, but many answers stop after finding the Nash cell."
+  },
+  "H7_MISCONCEPTION_Q24_PAYOFF_ORDER_REVERSED": {
+    "anchor_id": "H7_MISCONCEPTION_Q24_PAYOFF_ORDER_REVERSED",
+    "record_ids": [
+      "vw-1022-a-24-1-o:opgave-5:question-24"
+    ],
+    "operation_ids": [
+      "h7-vw24-1-q24-dominant-price-cut"
+    ],
+    "source_locators": [
+      "vw-1022-a-24-1-o#page=11-11&question=24"
+    ],
+    "expected_wrong_move": "Compare the wrong row/column payoffs when identifying the dominant price-cut strategy.",
+    "why_plausible": "The matrix has two firms and asymmetric payoff positions, so row/column mixups are plausible."
+  },
+  "H7_MISCONCEPTION_Q28_CREDIT_ADDED_OR_BRACKETS_NOT_MARGINAL": {
+    "anchor_id": "H7_MISCONCEPTION_Q28_CREDIT_ADDED_OR_BRACKETS_NOT_MARGINAL",
+    "record_ids": [
+      "vw-1022-a-25-2-o:opgave-6:question-28"
+    ],
+    "operation_ids": [
+      "h7-vw25-2-q28-progressive-water-tax"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-2-o#page=13-13&question=28"
+    ],
+    "expected_wrong_move": "Add the credit or apply the highest bracket to all taxable liters.",
+    "why_plausible": "The tax table combines marginal brackets with a heffingskorting, a familiar source of sign and bracket errors."
+  },
+  "H7_MISCONCEPTION_Q28_EXEMPTION_OMITTED": {
+    "anchor_id": "H7_MISCONCEPTION_Q28_EXEMPTION_OMITTED",
+    "record_ids": [
+      "vw-1022-a-25-2-o:opgave-6:question-28"
+    ],
+    "operation_ids": [
+      "h7-vw25-2-q28-taxable-water-use"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-2-o#page=13-13&question=28"
+    ],
+    "expected_wrong_move": "Tax the full water use instead of subtracting the exemption first.",
+    "why_plausible": "The yearly use is prominent, while the exemption is a separate table line."
+  },
+  "H7_MISCONCEPTION_Q3_AREA_NOT_OVERSUPPLY_WIDTH": {
+    "anchor_id": "H7_MISCONCEPTION_Q3_AREA_NOT_OVERSUPPLY_WIDTH",
+    "record_ids": [
+      "ha-1022-a-24-2-o:opgave-1:question-3"
+    ],
+    "operation_ids": [
+      "h7-ha24-2-q3-surplus-quantity-width"
+    ],
+    "source_locators": [
+      "ha-1022-a-24-2-o#page=2-2&question=3"
+    ],
+    "expected_wrong_move": "Identify a price band or surplus triangle without first locating the excess-supply width.",
+    "why_plausible": "The graph has several labeled regions; the official explanation first pins down the surplus quantity before the area."
+  },
+  "H7_MISCONCEPTION_Q3_TRIANGLE_SURPLUS_INSTEAD_OF_BUYOUT_RECTANGLE": {
+    "anchor_id": "H7_MISCONCEPTION_Q3_TRIANGLE_SURPLUS_INSTEAD_OF_BUYOUT_RECTANGLE",
+    "record_ids": [
+      "ha-1022-a-24-2-o:opgave-1:question-3"
+    ],
+    "operation_ids": [
+      "h7-ha24-2-q3-government-buyout-area"
+    ],
+    "source_locators": [
+      "ha-1022-a-24-2-o#page=2-2&question=3"
+    ],
+    "expected_wrong_move": "Shade a welfare-loss triangle instead of the government buyout-cost rectangle.",
+    "why_plausible": "Minimum-price diagrams often ask welfare loss, but this prompt asks the money amount the government buys."
+  },
+  "H7_MISCONCEPTION_Q4_DERIVED_MK_OR_GRAPH_READOFF": {
+    "anchor_id": "H7_MISCONCEPTION_Q4_DERIVED_MK_OR_GRAPH_READOFF",
+    "record_ids": [
+      "vw-1022-a-23-1-o:opgave-1:question-4"
+    ],
+    "operation_ids": [
+      "h7-vw23-1-q4-mo-equals-mk-price"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-1-o#page=3-3&question=4"
+    ],
+    "expected_wrong_move": "Derive marginal cost or read Q from the graph instead of using the given MK value in MO = MK.",
+    "why_plausible": "Adjacent monopoly tasks often derive MK from TK, but this correction treats MK as given."
+  },
+  "H7_MISCONCEPTION_Q4_ELASTICITY_INSTEAD_OF_MONOPOLY_MO": {
+    "anchor_id": "H7_MISCONCEPTION_Q4_ELASTICITY_INSTEAD_OF_MONOPOLY_MO",
+    "record_ids": [
+      "vw-1022-a-23-1-o:opgave-1:question-4"
+    ],
+    "operation_ids": [
+      "h7-vw23-1-q4-mo-from-go"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-1-o#page=3-3&question=4"
+    ],
+    "expected_wrong_move": "Use price elasticity or graph reading instead of deriving MO from the GO relation.",
+    "why_plausible": "The item is about monopoly price and a demand line, which can trigger unrelated elasticity routines."
+  },
+  "H7_MISCONCEPTION_Q4_MO_NOT_SHIFTED_WITH_GO": {
+    "anchor_id": "H7_MISCONCEPTION_Q4_MO_NOT_SHIFTED_WITH_GO",
+    "record_ids": [
+      "vw-1022-a-25-2-o:opgave-1:question-4"
+    ],
+    "operation_ids": [
+      "h7-vw25-2-q4-mo-line-with-consumer-subsidy"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-2-o#page=3-3&question=4"
+    ],
+    "expected_wrong_move": "Move GO correctly but leave MO in its original position.",
+    "why_plausible": "MO is derived from GO, so its consistent shift is less directly visible."
+  },
+  "H7_MISCONCEPTION_Q4_SHIFT_ONLY_ONE_REVENUE_LINE": {
+    "anchor_id": "H7_MISCONCEPTION_Q4_SHIFT_ONLY_ONE_REVENUE_LINE",
+    "record_ids": [
+      "vw-1022-a-25-2-o:opgave-1:question-4"
+    ],
+    "operation_ids": [
+      "h7-vw25-2-q4-go-line-with-consumer-subsidy"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-2-o#page=3-3&question=4"
+    ],
+    "expected_wrong_move": "Shift only GO or only MO after the subsidy.",
+    "why_plausible": "The prompt names both lines, but graph habits can lead students to adjust only the visible demand/GO line."
+  },
+  "H7_MISCONCEPTION_Q5_TOTAL_SUBSIDY_AREA_NOT_DWL": {
+    "anchor_id": "H7_MISCONCEPTION_Q5_TOTAL_SUBSIDY_AREA_NOT_DWL",
+    "record_ids": [
+      "vw-1022-a-25-2-o:opgave-1:question-5"
+    ],
+    "operation_ids": [
+      "h7-vw25-2-q5-total-subsidy-shading"
+    ],
+    "source_locators": [
+      "vw-1022-a-25-2-o#page=3-3&question=5"
+    ],
+    "expected_wrong_move": "Shade deadweight loss or another welfare triangle instead of total producer-subsidy spending.",
+    "why_plausible": "The graph-only correction allows multiple shadings and the surrounding tasks discuss subsidy welfare."
+  },
+  "H7_MISCONCEPTION_Q9_DWL_AS_TOTAL_SUBSIDY_RECTANGLE": {
+    "anchor_id": "H7_MISCONCEPTION_Q9_DWL_AS_TOTAL_SUBSIDY_RECTANGLE",
+    "record_ids": [
+      "vw-1022-a-23-2-o:opgave-2:question-9"
+    ],
+    "operation_ids": [
+      "h7-vw23-2-q9-deadweight-loss-shading"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-2-o#page=5-5&question=9"
+    ],
+    "expected_wrong_move": "Shade the full subsidy rectangle instead of the lost surplus triangle.",
+    "why_plausible": "Both official answers are graph-shading tasks about the same subsidy intervention."
+  },
+  "H7_MISCONCEPTION_Q9_PERCENT_REDUCTION_DENOMINATOR": {
+    "anchor_id": "H7_MISCONCEPTION_Q9_PERCENT_REDUCTION_DENOMINATOR",
+    "record_ids": [
+      "ha-1022-a-25-2-o:opgave-2:question-9"
+    ],
+    "operation_ids": [
+      "h7-ha25-2-q9-old-equilibrium-and-percent-reduction"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-2-o#page=4-5&question=9"
+    ],
+    "expected_wrong_move": "Divide the quantity change by the new quantity instead of the old quantity.",
+    "why_plausible": "The target check depends on a percent decrease, and denominator choice changes the result."
+  },
+  "H7_MISCONCEPTION_Q9_REBUILDING_FUNCTION_OR_ELASTICITY": {
+    "anchor_id": "H7_MISCONCEPTION_Q9_REBUILDING_FUNCTION_OR_ELASTICITY",
+    "record_ids": [
+      "ha-1022-a-23-1-o:opgave-2:question-9"
+    ],
+    "operation_ids": [
+      "h7-ha23-1-q9-labor-market-equilibrium"
+    ],
+    "source_locators": [
+      "ha-1022-a-23-1-o#page=4-5&question=9"
+    ],
+    "expected_wrong_move": "Construct a new labor-market function or use elasticity instead of solving the given demand equation against supply.",
+    "why_plausible": "The source contains a graph/model context, but the correction only requires substituting the fixed supply quantity into the shifted demand relation."
+  },
+  "H7_MISCONCEPTION_Q9_SUBSIDY_AREA_SWAPPED_WITH_DWL": {
+    "anchor_id": "H7_MISCONCEPTION_Q9_SUBSIDY_AREA_SWAPPED_WITH_DWL",
+    "record_ids": [
+      "vw-1022-a-23-2-o:opgave-2:question-9"
+    ],
+    "operation_ids": [
+      "h7-vw23-2-q9-subsidy-amount-shading"
+    ],
+    "source_locators": [
+      "vw-1022-a-23-2-o#page=5-5&question=9"
+    ],
+    "expected_wrong_move": "Shade the deadweight-loss triangle where the subsidy amount should be shaded.",
+    "why_plausible": "The prompt asks two separate figures, making cross-labeling the two shaded areas predictable."
+  },
+  "H7_MISCONCEPTION_Q9_TAX_SHIFT_WRONG_SIDE": {
+    "anchor_id": "H7_MISCONCEPTION_Q9_TAX_SHIFT_WRONG_SIDE",
+    "record_ids": [
+      "ha-1022-a-25-2-o:opgave-2:question-9"
+    ],
+    "operation_ids": [
+      "h7-ha25-2-q9-new-tax-equilibrium"
+    ],
+    "source_locators": [
+      "ha-1022-a-25-2-o#page=4-5&question=9"
+    ],
+    "expected_wrong_move": "Shift the wrong function or solve the pre-tax instead of post-tax equilibrium.",
+    "why_plausible": "The tax changes the market equations and the correction first solves the new equilibrium."
+  }
+}

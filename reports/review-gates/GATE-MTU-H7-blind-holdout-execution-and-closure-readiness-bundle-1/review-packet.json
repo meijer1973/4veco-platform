@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "gate_id": "GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1",
+  "status": "ready_for_human_review_not_product_authority",
+  "requested_decision": "Review H7 benchmark result and decide whether operation-registry/canonical MTU governance work is required before any H6/H7 evidence-generalization closure.",
+  "product_end_state_cited": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_spec_cited": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "non_negotiable_requirements": [
+    "No protected reference mutation",
+    "No external source mutation",
+    "No machine MTU mutation",
+    "No target exercise mutation",
+    "No candidate writes or storage",
+    "No lesson output",
+    "No diagnostics, mastery, sequencing, PV, summative use, product-route claim, or student/product use",
+    "No holdout tuning or rerun after outcome inspection",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Current main and PR #144 baseline sealed",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json"
+    },
+    {
+      "requirement": "Mapper view stripped split/route/selection/outcome data",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-execution-mapper-view-1.json"
+    },
+    {
+      "requirement": "Diagnostic official evidence rendered",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json"
+    },
+    {
+      "requirement": "Locked holdout official evidence rendered after method freeze",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json"
+    },
+    {
+      "requirement": "Diagnostic and holdout metrics reported separately",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-execution-report-1.json"
+    },
+    {
+      "requirement": "At least one meaningful negative fixture per record",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#negative_fixture_matrix"
+    },
+    {
+      "requirement": "All negative fixtures detected with intended defect class",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-execution-report-1.json#negative_fixture_detection"
+    },
+    {
+      "requirement": "Zero false closure count",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-execution-report-1.json#metrics"
+    }
+  ],
+  "findings": [
+    {
+      "id": "H7-FINDING-OPERATION-REGISTRY",
+      "classification": "blocks",
+      "severity": "governance_blocker",
+      "summary": "Diagnostic set exposed operation-registry/canonical-MTU review needs for ultimatum-game payoff, game-tree Nash, currency-insurance cost, multi-period IS-MB-GA drawing, and GO/MO subsidy drawing.",
+      "proof_required_to_close": "Human-governed decision to add reviewed equivalents or canonical MTU/operation-registry entries, without mutating protected references in this PR."
+    },
+    {
+      "id": "H7-FINDING-HOLDOUT-Q5-GRAPH",
+      "classification": "blocks",
+      "severity": "review_required",
+      "summary": "One locked-holdout graph-only correction needs visual source/graph adjudication before closure.",
+      "proof_required_to_close": "Reviewed graph evidence for the accepted producer-subsidy total-area shading."
+    }
+  ],
+  "blocks": [
+    "H7 full closure",
+    "H6/H7 evidence-generalization closure",
+    "Scale Gate 1",
+    "product-route readiness",
+    "diagnostics/mastery/PV/sequencing/student use"
+  ],
+  "does_not_block": [
+    "Checker/report/governance work within the same authority boundary",
+    "Operation-registry candidate packet preparation without candidate writes",
+    "Human review of this benchmark packet"
+  ],
+  "proof_required_to_close": [
+    "Resolve or explicitly accept each review_required operation in the adjudication matrix.",
+    "Confirm holdout q5 graph-only evidence by source/graph review.",
+    "Rerun H5/H6/H7 checkers and platform validation after any allowed generic repair."
+  ],
+  "lead_reviewer_verdict": "HOLD_FOR_OPERATION_REGISTRY_GOVERNANCE",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  }
+}

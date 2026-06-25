@@ -1,0 +1,4631 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "fixture_id": "mtu-h7-execution-fixture-1",
+  "status": "executed_blind_holdout_benchmark_not_product_authority",
+  "generated_at": "2026-06-25T13:50:53.858Z",
+  "source_protocol": "reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json",
+  "source_diagnostic_evidence_manifest": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
+  "source_holdout_evidence_manifest": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "records": [
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-1:question-2",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-1-o:opgave-1:question-2",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-prompt-02-02.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-correction-05-05.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "question_num": 2,
+        "page_start": 2,
+        "page_end": 2
+      },
+      "question_word": "toon_met_een_berekening_aan",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha23-1-q2-source-percent-average",
+          "question_word": "toon_met_een_berekening_aan",
+          "description": "Use source percentages for all income classes to compute the unweighted average share without disability insurance.",
+          "answer_model_summary": "Average the five source percentages and compare the result with the 40 percent threshold.",
+          "official_target_outcome_summary": "Average the five source percentages and compare the result with the 40 percent threshold.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-1-o:opgave-1:question-2"
+          ],
+          "mapped_mtu_ids": [
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "source_reading",
+            "percentage_average",
+            "threshold_conclusion",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "source_reading",
+            "percentage_average",
+            "threshold_conclusion",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [
+            "A38"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q2_THRESHOLD_OR_WEIGHTED_AVERAGE"
+          ],
+          "expected_procedure_unit_ids": [
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A38",
+        "A81",
+        "A96"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "source_reading",
+        "percentage_average",
+        "threshold_conclusion",
+        "answer_form",
+        "procedure"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-2:question-9",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-1-o:opgave-2:question-9",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-prompt-04-04.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-prompt-05-05.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-correction-07-07.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 9,
+        "page_start": 4,
+        "page_end": 5
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha23-1-q9-labor-market-equilibrium",
+          "question_word": "bereken",
+          "description": "Set the shifted labor demand equal to the fixed labor supply and solve for the equilibrium wage.",
+          "answer_model_summary": "Use the given demand relation and supply quantity to solve L = 28,450.",
+          "official_target_outcome_summary": "Use the given demand relation and supply quantity to solve L = 28,450.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-1-o:opgave-2:question-9"
+          ],
+          "mapped_mtu_ids": [
+            "L10",
+            "A02",
+            "A06",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "labor_market_transfer",
+            "market_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "L10",
+            "A02",
+            "A06",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A01",
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "labor_market_transfer",
+            "market_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "new_function_construction",
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q9_REBUILDING_FUNCTION_OR_ELASTICITY"
+          ],
+          "expected_procedure_unit_ids": [
+            "L10",
+            "A02",
+            "A06",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "L10",
+        "A02",
+        "A06",
+        "A81",
+        "A96"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "labor_market_transfer",
+        "market_equilibrium",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-5:question-21",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-1-o:opgave-5:question-21",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q21-prompt-08-08.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q21-correction-11-11.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "question_num": 21,
+        "page_start": 8,
+        "page_end": 8
+      },
+      "question_word": "leg_uit_of",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha23-1-q21-market-form-name",
+          "question_word": "leg_uit_of",
+          "description": "Classify the crude-oil market as oligopoly from the limited dominant suppliers.",
+          "answer_model_summary": "Name oligopoly and support it with two relevant market-form features.",
+          "official_target_outcome_summary": "Name oligopoly and support it with two relevant market-form features.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-1-o:opgave-5:question-21"
+          ],
+          "mapped_mtu_ids": [
+            "D15",
+            "D09",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "classification",
+            "market_form",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "D15",
+            "D09",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "classification",
+            "market_form",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "calculation_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q21_OLIGOPOLY_VS_MONOPOLY_OR_VM"
+          ],
+          "expected_procedure_unit_ids": [
+            "D15",
+            "D09",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "D15",
+        "D09",
+        "A81",
+        "A98"
+      ],
+      "mapped_route_tags": [
+        "classification",
+        "market_form",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-prompt-07-07.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-correction-09-09.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-2-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 3,
+        "question_num": 15,
+        "page_start": 7,
+        "page_end": 7
+      },
+      "question_word": "toon_met_een_berekening_aan",
+      "expected_h7_status": "review_required",
+      "expected_h7_classification": "canonical_mtu_governance_need",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha23-2-q15-net-income-table",
+          "question_word": "toon_met_een_berekening_aan",
+          "description": "Calculate 2014 net incomes after income tax and two credits for low and high income cases.",
+          "answer_model_summary": "Compute low and high net incomes from the official tax/credit table.",
+          "official_target_outcome_summary": "Compute low and high net incomes from the official tax/credit table.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15"
+          ],
+          "mapped_mtu_ids": [
+            "H04",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "tax_brackets",
+            "tax_credits",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "H04",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "tax_brackets",
+            "tax_credits",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_GROSS_RATIO_USED_AS_NET_RATIO"
+          ],
+          "expected_procedure_unit_ids": [
+            "H04",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+          "question_word": "toon_met_een_berekening_aan",
+          "description": "Compare the high/low net-income ratio with the prior 4.1 ratio to show increased equalization.",
+          "answer_model_summary": "Ratio falls from 4.1 to about 3.9, so income differences narrow.",
+          "official_target_outcome_summary": "Ratio falls from 4.1 to about 3.9, so income differences narrow.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15"
+          ],
+          "mapped_mtu_ids": [
+            "H08",
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "income_distribution",
+            "ratio_comparison",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "H08",
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "income_distribution",
+            "ratio_comparison",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_DENIVELLERING_LABEL_REVERSED"
+          ],
+          "expected_procedure_unit_ids": [
+            "H08",
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "canonical_mtu_governance_need:nivellering_positive_counterpart_to_H08"
+          ],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "canonical_mtu_governance_need"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "H04",
+        "A81",
+        "A96",
+        "H08",
+        "A38"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "tax_brackets",
+        "tax_credits",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "income_distribution",
+        "ratio_comparison"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-24-1-o",
+        "level": "havo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 12,
+        "page_start": 5,
+        "page_end": 5
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "review_required",
+      "expected_h7_classification": "operation_registry_need",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+          "question_word": "bereken",
+          "description": "Calculate the proposer residual payoff from budget minus agreed price.",
+          "answer_model_summary": "Snel keeps the budget amount less the agreed transfer.",
+          "official_target_outcome_summary": "Snel keeps the budget amount less the agreed transfer.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+          ],
+          "mapped_mtu_ids": [
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "ultimatum_game",
+            "residual_payoff",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "F12"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "ultimatum_game",
+            "residual_payoff",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "nash_equilibrium",
+            "nash_equilibrium_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_NASH_USED_FOR_DIRECT_PAYOFF"
+          ],
+          "expected_procedure_unit_ids": [
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "operation_registry_need:ultimatum_game_residual_payoff"
+          ],
+          "missing_mtu_expected": true,
+          "missing_mtu_expectation": "No canonical operation unit specifically covers ultimatum-game residual payoff calculation.",
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "operation_registry_need"
+        },
+        {
+          "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+          "question_word": "bereken",
+          "description": "Calculate the responder payoff from agreed price minus marginal cost.",
+          "answer_model_summary": "Sprinter keeps the accepted price less marginal cost.",
+          "official_target_outcome_summary": "Sprinter keeps the accepted price less marginal cost.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+          ],
+          "mapped_mtu_ids": [
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "ultimatum_game",
+            "margin_payoff",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "F12"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "ultimatum_game",
+            "margin_payoff",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "nash_equilibrium",
+            "nash_equilibrium_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_RESPONDER_PAYOFF_WITHOUT_COST"
+          ],
+          "expected_procedure_unit_ids": [
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "operation_registry_need:ultimatum_game_margin_payoff"
+          ],
+          "missing_mtu_expected": true,
+          "missing_mtu_expectation": "No canonical operation unit specifically covers ultimatum-game margin payoff calculation.",
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "operation_registry_need"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "residual_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "margin_payoff"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-2-o:opgave-1:question-3",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-2-o-q03-prompt-02-02.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-2-o-q03-correction-05-05.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-24-2-o",
+        "level": "havo",
+        "year": 2024,
+        "tijdvak": 2,
+        "opgave_num": 1,
+        "question_num": 3,
+        "page_start": 2,
+        "page_end": 2
+      },
+      "question_word": "grafisch",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha24-2-q3-surplus-quantity-width",
+          "question_word": "grafisch",
+          "description": "Identify the surplus quantity caused by the binding minimum price.",
+          "answer_model_summary": "The minimum price creates an excess supply width between supplied and demanded quantity.",
+          "official_target_outcome_summary": "The minimum price creates an excess supply width between supplied and demanded quantity.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-2-o:opgave-1:question-3"
+          ],
+          "mapped_mtu_ids": [
+            "A25",
+            "A51",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "graph_reading",
+            "minimum_price",
+            "excess_supply",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A25",
+            "A51",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "graph_reading",
+            "minimum_price",
+            "excess_supply",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q3_AREA_NOT_OVERSUPPLY_WIDTH"
+          ],
+          "expected_procedure_unit_ids": [
+            "A25",
+            "A51",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha24-2-q3-government-buyout-area",
+          "question_word": "grafisch",
+          "description": "Identify the rectangle for government buyout costs at the minimum price.",
+          "answer_model_summary": "Buyout cost is surplus quantity times Pmin, represented by the specified rectangle.",
+          "official_target_outcome_summary": "Buyout cost is surplus quantity times Pmin, represented by the specified rectangle.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-2-o:opgave-1:question-3"
+          ],
+          "mapped_mtu_ids": [
+            "A25",
+            "A40",
+            "A59",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "graph_reading",
+            "minimum_price",
+            "buyout_cost_area",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A25",
+            "A40",
+            "A59",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "A19"
+          ],
+          "expected_route_tags": [
+            "graph_reading",
+            "minimum_price",
+            "buyout_cost_area",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "surplus_triangle_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q3_TRIANGLE_SURPLUS_INSTEAD_OF_BUYOUT_RECTANGLE"
+          ],
+          "expected_procedure_unit_ids": [
+            "A25",
+            "A40",
+            "A59",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A25",
+        "A51",
+        "A81",
+        "A98",
+        "A40",
+        "A59"
+      ],
+      "mapped_route_tags": [
+        "graph_reading",
+        "minimum_price",
+        "excess_supply",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "buyout_cost_area"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-25-1-o:opgave-3:question-16",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-prompt-06-6.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-prompt-07-7.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-correction-12-12.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-1-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "question_num": 16,
+        "page_start": 6,
+        "page_end": 7
+      },
+      "question_word": "leg_uit_of",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha25-1-q16-dominant-strategies",
+          "question_word": "leg_uit_of",
+          "description": "Compare payoff rows/columns to identify investing as dominant for both firms.",
+          "answer_model_summary": "Both firms prefer investing under each action of the other firm.",
+          "official_target_outcome_summary": "Both firms prefer investing under each action of the other firm.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-25-1-o:opgave-3:question-16"
+          ],
+          "mapped_mtu_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q16_LOSS_NUMBERS_REVERSED"
+          ],
+          "expected_procedure_unit_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha25-1-q16-no-prisoners-dilemma",
+          "question_word": "leg_uit_of",
+          "description": "Conclude that the dominant-strategy equilibrium is not suboptimal and therefore not a prisoner dilemma.",
+          "answer_model_summary": "The equilibrium is jointly optimal in the official model, so the PD label is rejected.",
+          "official_target_outcome_summary": "The equilibrium is jointly optimal in the official model, so the PD label is rejected.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-25-1-o:opgave-3:question-16"
+          ],
+          "mapped_mtu_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "prisoners_dilemma_guard",
+            "nash_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "prisoners_dilemma_guard",
+            "nash_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q16_DOMINANT_STRATEGY_ALWAYS_PD"
+          ],
+          "expected_procedure_unit_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "F03",
+        "F04",
+        "A81",
+        "A98",
+        "F09",
+        "F12"
+      ],
+      "mapped_route_tags": [
+        "game_theory",
+        "dominant_strategy",
+        "payoff_matrix",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "prisoners_dilemma_guard",
+        "nash_equilibrium"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-2:question-10",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-prompt-05-05.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-prompt-06-06.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-correction-07-07.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "question_num": 10,
+        "page_start": 5,
+        "page_end": 6
+      },
+      "question_word": "bron",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha25-2-q10-consumer-surplus-area",
+          "question_word": "bron",
+          "description": "Identify the post-tax consumer surplus area from graph labels.",
+          "answer_model_summary": "Consumer surplus after the excise is the upper triangle in the official graph.",
+          "official_target_outcome_summary": "Consumer surplus after the excise is the upper triangle in the official graph.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-2:question-10"
+          ],
+          "mapped_mtu_ids": [
+            "A19",
+            "A40",
+            "D03",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_reading",
+            "surplus",
+            "tax_wedge",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A19",
+            "A40",
+            "D03",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "graph_reading",
+            "surplus",
+            "tax_wedge",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A81"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q10_SURPLUS_AND_TAX_AREA_SWAPPED"
+          ],
+          "expected_procedure_unit_ids": [
+            "A19",
+            "A40",
+            "D03",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha25-2-q10-producer-surplus-area",
+          "question_word": "bron",
+          "description": "Identify the post-tax producer surplus area from graph labels.",
+          "answer_model_summary": "Producer surplus is the area below the producer price and above supply.",
+          "official_target_outcome_summary": "Producer surplus is the area below the producer price and above supply.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-2:question-10"
+          ],
+          "mapped_mtu_ids": [
+            "A19",
+            "A40",
+            "D03",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_reading",
+            "surplus",
+            "tax_wedge",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A19",
+            "A40",
+            "D03",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "graph_reading",
+            "surplus",
+            "tax_wedge",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A81"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q10_SURPLUS_AND_TAX_AREA_SWAPPED"
+          ],
+          "expected_procedure_unit_ids": [
+            "A19",
+            "A40",
+            "D03",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha25-2-q10-tax-revenue-area",
+          "question_word": "bron",
+          "description": "Identify the excise revenue rectangle from graph labels.",
+          "answer_model_summary": "Tax revenue is the tax wedge multiplied by the post-tax quantity.",
+          "official_target_outcome_summary": "Tax revenue is the tax wedge multiplied by the post-tax quantity.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-2:question-10"
+          ],
+          "mapped_mtu_ids": [
+            "A40",
+            "D05",
+            "D41",
+            "D42",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_reading",
+            "tax_revenue_area",
+            "tax_wedge",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A40",
+            "D05",
+            "D41",
+            "D42",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "graph_reading",
+            "tax_revenue_area",
+            "tax_wedge",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A81"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [
+            "D42"
+          ],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q10_TAX_RECTANGLE_AS_SURPLUS_TRIANGLE"
+          ],
+          "expected_procedure_unit_ids": [
+            "A40",
+            "D05",
+            "D41",
+            "D42",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": true,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A19",
+        "A40",
+        "D03",
+        "A81",
+        "D05",
+        "D41",
+        "D42"
+      ],
+      "mapped_route_tags": [
+        "graph_reading",
+        "surplus",
+        "tax_wedge",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "tax_revenue_area"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-1-o:opgave-1:question-4",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q04-prompt-03-03.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q04-correction-07-07.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-1-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "question_num": 4,
+        "page_start": 3,
+        "page_end": 3
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw23-1-q4-mo-from-go",
+          "question_word": "bereken",
+          "description": "Derive total revenue and marginal revenue from the given GO relation.",
+          "answer_model_summary": "GO is used as price function; TO and MO follow from that relation.",
+          "official_target_outcome_summary": "GO is used as price function; TO and MO follow from that relation.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-1-o:opgave-1:question-4"
+          ],
+          "mapped_mtu_ids": [
+            "A07",
+            "A12",
+            "A89",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "monopoly",
+            "marginal_revenue",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A07",
+            "A12",
+            "A89",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "monopoly",
+            "marginal_revenue",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_ELASTICITY_INSTEAD_OF_MONOPOLY_MO"
+          ],
+          "expected_procedure_unit_ids": [
+            "A07",
+            "A12",
+            "A89",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw23-1-q4-mo-equals-mk-price",
+          "question_word": "bereken",
+          "description": "Set MO equal to given MK, solve quantity, and substitute into GO to get price.",
+          "answer_model_summary": "MO = MK gives Q = 9.9, then GO gives the monopoly price.",
+          "official_target_outcome_summary": "MO = MK gives Q = 9.9, then GO gives the monopoly price.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-1-o:opgave-1:question-4"
+          ],
+          "mapped_mtu_ids": [
+            "A91",
+            "A92",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "monopoly",
+            "given_mk",
+            "price_from_quantity",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A91",
+            "A92",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "A20"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "monopoly",
+            "given_mk",
+            "price_from_quantity",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "derived_mk_route"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_DERIVED_MK_OR_GRAPH_READOFF"
+          ],
+          "expected_procedure_unit_ids": [
+            "A91",
+            "A92",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A07",
+        "A12",
+        "A89",
+        "A81",
+        "A96",
+        "A91",
+        "A92"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "monopoly",
+        "marginal_revenue",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "given_mk",
+        "price_from_quantity"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-1-o:opgave-5:question-21",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q21-prompt-10-10.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q21-correction-11-11.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-1-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "question_num": 21,
+        "page_start": 10,
+        "page_end": 10
+      },
+      "question_word": "leg_uit_dat",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw23-1-q21-underbesteding-lower-inflation",
+          "question_word": "leg_uit_dat",
+          "description": "Explain that under-spending lowers effective demand and inflation relative to expectation.",
+          "answer_model_summary": "Lower demand creates lower-than-expected inflation on the GA0 curve.",
+          "official_target_outcome_summary": "Lower demand creates lower-than-expected inflation on the GA0 curve.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-1-o:opgave-5:question-21"
+          ],
+          "mapped_mtu_ids": [
+            "I07",
+            "I15",
+            "A81",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "macro_model",
+            "is_mb_ga",
+            "ga_curve",
+            "underbesteding",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "I07",
+            "I15",
+            "A81",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "macro_model",
+            "is_mb_ga",
+            "ga_curve",
+            "underbesteding",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q21_GA_SHIFT_INSTEAD_OF_MOVE_ALONG"
+          ],
+          "expected_procedure_unit_ids": [
+            "I07",
+            "I15",
+            "A81",
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw23-1-q21-real-cost-margin-channel",
+          "question_word": "leg_uit_dat",
+          "description": "Explain the fixed-cost/price-margin channel for movement along the GA curve.",
+          "answer_model_summary": "Prices rise less than expected while costs are fixed, reducing margins and output.",
+          "official_target_outcome_summary": "Prices rise less than expected while costs are fixed, reducing margins and output.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-1-o:opgave-5:question-21"
+          ],
+          "mapped_mtu_ids": [
+            "I07",
+            "A81",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "macro_model",
+            "ga_curve",
+            "real_cost_margin_channel",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "I07",
+            "A81",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "macro_model",
+            "ga_curve",
+            "real_cost_margin_channel",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q21_MISSING_MARGIN_CHANNEL"
+          ],
+          "expected_procedure_unit_ids": [
+            "I07",
+            "A81",
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "I07",
+        "I15",
+        "A81",
+        "A97"
+      ],
+      "mapped_route_tags": [
+        "macro_model",
+        "is_mb_ga",
+        "ga_curve",
+        "underbesteding",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "real_cost_margin_channel"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-2:question-9",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q09-prompt-05-05.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q09-correction-07-07.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-2-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "question_num": 9,
+        "page_start": 5,
+        "page_end": 5
+      },
+      "question_word": "arceer",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw23-2-q9-subsidy-amount-shading",
+          "question_word": "arceer",
+          "description": "Shade the government subsidy amount in the first figure.",
+          "answer_model_summary": "Subsidy spending is subsidy per student times subsidized quantity.",
+          "official_target_outcome_summary": "Subsidy spending is subsidy per student times subsidized quantity.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-2:question-9"
+          ],
+          "mapped_mtu_ids": [
+            "A27",
+            "A40",
+            "A58",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_shading",
+            "subsidy_area",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A27",
+            "A40",
+            "A58",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "A45"
+          ],
+          "expected_route_tags": [
+            "graph_shading",
+            "subsidy_area",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "full_graph_construction"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q9_SUBSIDY_AREA_SWAPPED_WITH_DWL"
+          ],
+          "expected_procedure_unit_ids": [
+            "A27",
+            "A40",
+            "A58",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw23-2-q9-deadweight-loss-shading",
+          "question_word": "arceer",
+          "description": "Shade the lost surplus from the subsidy in the second figure.",
+          "answer_model_summary": "The subsidy creates a deadweight-loss area that must be shaded separately.",
+          "official_target_outcome_summary": "The subsidy creates a deadweight-loss area that must be shaded separately.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-2:question-9"
+          ],
+          "mapped_mtu_ids": [
+            "D29",
+            "A40",
+            "D40",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_shading",
+            "deadweight_loss",
+            "subsidy_welfare",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "D29",
+            "A40",
+            "D40",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "A45"
+          ],
+          "expected_route_tags": [
+            "graph_shading",
+            "deadweight_loss",
+            "subsidy_welfare",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "full_graph_construction"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q9_DWL_AS_TOTAL_SUBSIDY_RECTANGLE"
+          ],
+          "expected_procedure_unit_ids": [
+            "D29",
+            "A40",
+            "D40",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A27",
+        "A40",
+        "A58",
+        "A81",
+        "D29",
+        "D40"
+      ],
+      "mapped_route_tags": [
+        "graph_shading",
+        "subsidy_area",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "deadweight_loss",
+        "subsidy_welfare"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-09-09.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-10-10.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-correction-11-11.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-2-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "question_num": 20,
+        "page_start": 9,
+        "page_end": 10
+      },
+      "question_word": "leg_uit_dat",
+      "expected_h7_status": "review_required",
+      "expected_h7_classification": "operation_registry_need",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw23-2-q20-game-tree-nash",
+          "question_word": "leg_uit_dat",
+          "description": "Use the game-tree payoffs to show both central banks choose expansionary policy and identify the Nash outcome.",
+          "answer_model_summary": "The official model compares payoffs in a game tree, not a simple matrix.",
+          "official_target_outcome_summary": "The official model compares payoffs in a game tree, not a simple matrix.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20"
+          ],
+          "mapped_mtu_ids": [
+            "F12",
+            "A81",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "game_tree",
+            "nash_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F12",
+            "A81",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "F04"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "game_tree",
+            "nash_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "payoff_matrix"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q20_MATRIX_SHORTCUT_MISREADS_GAME_TREE"
+          ],
+          "expected_procedure_unit_ids": [
+            "F12",
+            "A81",
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "operation_registry_need:game_tree_nash_equilibrium"
+          ],
+          "missing_mtu_expected": true,
+          "missing_mtu_expectation": "F12 is a payoff-matrix unit; the official evidence uses a game tree/backward comparison.",
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "operation_registry_need"
+        },
+        {
+          "operation_id": "h7-vw23-2-q20-inflation-and-competitiveness",
+          "question_word": "leg_uit_dat",
+          "description": "Explain that lower rates increase domestic spending in high-conjuncture economies and worsen competitiveness via price levels.",
+          "answer_model_summary": "Expansionary policy raises inflation and the relative price level, weakening competitiveness.",
+          "official_target_outcome_summary": "Expansionary policy raises inflation and the relative price level, weakening competitiveness.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20"
+          ],
+          "mapped_mtu_ids": [
+            "I07",
+            "I12",
+            "I19",
+            "A81",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "macro_model",
+            "monetary_policy",
+            "inflation",
+            "international_competitiveness",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "I07",
+            "I12",
+            "I19",
+            "A81",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "macro_model",
+            "monetary_policy",
+            "inflation",
+            "international_competitiveness",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q20_EXCHANGE_RATE_ONLY_NO_PRICE_LEVEL"
+          ],
+          "expected_procedure_unit_ids": [
+            "I07",
+            "I12",
+            "I19",
+            "A81",
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "F12",
+        "A81",
+        "A97",
+        "I07",
+        "I12",
+        "I19"
+      ],
+      "mapped_route_tags": [
+        "game_theory",
+        "game_tree",
+        "nash_equilibrium",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "macro_model",
+        "monetary_policy",
+        "inflation",
+        "international_competitiveness"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-07-07.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-08-08.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-correction-11-11.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "question_num": 17,
+        "page_start": 7,
+        "page_end": 8
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "review_required",
+      "expected_h7_classification": "operation_registry_need",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw24-1-q17-no-insurance-loss",
+          "question_word": "bereken",
+          "description": "Convert the foreign-currency contract receipts at the later exchange rate and compute the loss without insurance.",
+          "answer_model_summary": "The RF amount converts back to less than EUR 12 million at the later rate.",
+          "official_target_outcome_summary": "The RF amount converts back to less than EUR 12 million at the later rate.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17"
+          ],
+          "mapped_mtu_ids": [
+            "H24",
+            "G11",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "exchange_rate",
+            "currency_conversion",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "H24",
+            "G11",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "exchange_rate",
+            "currency_conversion",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [
+            "A88"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q17_EXCHANGE_RATE_DIRECTION"
+          ],
+          "expected_procedure_unit_ids": [
+            "H24",
+            "G11",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+          "question_word": "bereken",
+          "description": "Compute fixed plus variable insurance costs and compare them with the avoided exchange-rate loss.",
+          "answer_model_summary": "Insurance cost is subtracted from the avoided loss to determine the net benefit.",
+          "official_target_outcome_summary": "Insurance cost is subtracted from the avoided loss to determine the net benefit.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17"
+          ],
+          "mapped_mtu_ids": [
+            "A38",
+            "G12",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "insurance_cost",
+            "currency_risk",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A38",
+            "G12",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "insurance_cost",
+            "currency_risk",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q17_PREMIUM_MONTH_FACTOR_OMITTED"
+          ],
+          "expected_procedure_unit_ids": [
+            "A38",
+            "G12",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "procedure_fit_gap:G12_expected_damage_unit_only_partly_matches_fixed_variable_currency_insurance_cost"
+          ],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "procedure_fit_gap"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "H24",
+        "G11",
+        "A88",
+        "A81",
+        "A96",
+        "A38",
+        "G12"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "exchange_rate",
+        "currency_conversion",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "insurance_cost",
+        "currency_risk"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-5:question-24",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q24-prompt-11-11.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q24-correction-14-14.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "question_num": 24,
+        "page_start": 11,
+        "page_end": 11
+      },
+      "question_word": "leg_uit_dat",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw24-1-q24-dominant-price-cut",
+          "question_word": "leg_uit_dat",
+          "description": "Compare payoffs to show lowering price is dominant for both fisheries.",
+          "answer_model_summary": "Both firms prefer lowering price for each possible action of the other firm.",
+          "official_target_outcome_summary": "Both firms prefer lowering price for each possible action of the other firm.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-5:question-24"
+          ],
+          "mapped_mtu_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q24_PAYOFF_ORDER_REVERSED"
+          ],
+          "expected_procedure_unit_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw24-1-q24-prisoners-dilemma-conclusion",
+          "question_word": "leg_uit_dat",
+          "description": "Show that the dominant-strategy outcome is jointly worse than mutual price maintenance.",
+          "answer_model_summary": "The Nash outcome is suboptimal, so the matrix is a prisoner dilemma.",
+          "official_target_outcome_summary": "The Nash outcome is suboptimal, so the matrix is a prisoner dilemma.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-5:question-24"
+          ],
+          "mapped_mtu_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "prisoners_dilemma",
+            "suboptimal_joint_outcome",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "prisoners_dilemma",
+            "suboptimal_joint_outcome",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q24_DOMINANT_WITHOUT_SUBOPTIMALITY"
+          ],
+          "expected_procedure_unit_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "F03",
+        "F04",
+        "A81",
+        "A97",
+        "F09",
+        "F12"
+      ],
+      "mapped_route_tags": [
+        "game_theory",
+        "dominant_strategy",
+        "payoff_matrix",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "prisoners_dilemma",
+        "suboptimal_joint_outcome"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-2-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 2,
+        "opgave_num": 3,
+        "question_num": 15,
+        "page_start": 7,
+        "page_end": 8
+      },
+      "question_word": "teken",
+      "expected_h7_status": "review_required",
+      "expected_h7_classification": "procedure_fit_gap",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+          "question_word": "teken",
+          "description": "Draw the first GA and MB shifts from inflation expectations and the central bank rate step.",
+          "answer_model_summary": "GA1 and MB1 shift according to expected-minus-realized inflation and a one-point real-rate reduction.",
+          "official_target_outcome_summary": "GA1 and MB1 shift according to expected-minus-realized inflation and a one-point real-rate reduction.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+          ],
+          "mapped_mtu_ids": [
+            "I07",
+            "A42",
+            "A40",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "macro_graph_mutation",
+            "is_mb_ga",
+            "ga_shift",
+            "mb_shift",
+            "time_sequence",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "I07",
+            "A42",
+            "A40",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A45"
+          ],
+          "expected_route_tags": [
+            "macro_graph_mutation",
+            "is_mb_ga",
+            "ga_shift",
+            "mb_shift",
+            "time_sequence",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "full_graph_construction"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_MACRO_CURVE_SEQUENCE_OR_SCALE"
+          ],
+          "expected_procedure_unit_ids": [
+            "I07",
+            "A42",
+            "A40",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "procedure_fit_gap:A42_generic_market_shift_not_sufficient_for_multi_period_IS_MB_GA_sequence"
+          ],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "procedure_fit_gap"
+        },
+        {
+          "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+          "question_word": "teken",
+          "description": "Draw the second GA and MB shifts and fill r and pi at zero output gap.",
+          "answer_model_summary": "GA2/MB2 plus final r and inflation values complete the official graph/table answer.",
+          "official_target_outcome_summary": "GA2/MB2 plus final r and inflation values complete the official graph/table answer.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+          ],
+          "mapped_mtu_ids": [
+            "I07",
+            "A42",
+            "A40",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "macro_graph_mutation",
+            "is_mb_ga",
+            "ga_shift",
+            "mb_shift",
+            "table_completion",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "I07",
+            "A42",
+            "A40",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A45"
+          ],
+          "expected_route_tags": [
+            "macro_graph_mutation",
+            "is_mb_ga",
+            "ga_shift",
+            "mb_shift",
+            "table_completion",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "full_graph_construction"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_FINAL_R_PI_OMITTED"
+          ],
+          "expected_procedure_unit_ids": [
+            "I07",
+            "A42",
+            "A40",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "procedure_fit_gap:A42_generic_market_shift_not_sufficient_for_multi_period_IS_MB_GA_sequence"
+          ],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "procedure_fit_gap"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "mapped_route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "time_sequence",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "table_completion"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-prompt-03-03.png",
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-correction-07-07.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 1,
+        "question_num": 4,
+        "page_start": 3,
+        "page_end": 3
+      },
+      "question_word": "teken",
+      "expected_h7_status": "review_required",
+      "expected_h7_classification": "answer_form_gap",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+          "question_word": "teken",
+          "description": "Draw the GO line after a per-unit consumer subsidy.",
+          "answer_model_summary": "The GO line shifts to reflect the subsidy-inclusive willingness to pay.",
+          "official_target_outcome_summary": "The GO line shifts to reflect the subsidy-inclusive willingness to pay.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4"
+          ],
+          "mapped_mtu_ids": [
+            "A27",
+            "A42",
+            "A40",
+            "A89",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_drawing",
+            "subsidy_shift",
+            "go_line",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A27",
+            "A42",
+            "A40",
+            "A89",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "graph_drawing",
+            "subsidy_shift",
+            "go_line",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_SHIFT_ONLY_ONE_REVENUE_LINE"
+          ],
+          "expected_procedure_unit_ids": [
+            "A27",
+            "A42",
+            "A40",
+            "A89",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "answer_form_gap:GO_MO_subsidy_line_drawing_needs_reviewed_equivalent_or_canonical_answer_form"
+          ],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "answer_form_gap"
+        },
+        {
+          "operation_id": "h7-vw25-2-q4-mo-line-with-consumer-subsidy",
+          "question_word": "teken",
+          "description": "Draw the MO line after a per-unit consumer subsidy.",
+          "answer_model_summary": "The MO line must be shifted consistently with the GO change.",
+          "official_target_outcome_summary": "The MO line must be shifted consistently with the GO change.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4"
+          ],
+          "mapped_mtu_ids": [
+            "A27",
+            "A42",
+            "A40",
+            "A90",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_drawing",
+            "subsidy_shift",
+            "mo_line",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A27",
+            "A42",
+            "A40",
+            "A90",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "graph_drawing",
+            "subsidy_shift",
+            "mo_line",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_MO_NOT_SHIFTED_WITH_GO"
+          ],
+          "expected_procedure_unit_ids": [
+            "A27",
+            "A42",
+            "A40",
+            "A90",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "answer_form_gap:GO_MO_subsidy_line_drawing_needs_reviewed_equivalent_or_canonical_answer_form"
+          ],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "answer_form_gap"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A89",
+        "A81",
+        "A90"
+      ],
+      "mapped_route_tags": [
+        "graph_drawing",
+        "subsidy_shift",
+        "go_line",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "mo_line"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-25-1-o:opgave-2:question-12",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-1-o:opgave-2:question-12",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q12-prompt-05-5.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q12-correction-10-10.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-1-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 12,
+        "page_start": 5,
+        "page_end": 5
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha25-1-q12-price-and-quantity-percent-changes",
+          "question_word": "bereken",
+          "description": "Calculate percent price and quantity changes from the graph/source values.",
+          "answer_model_summary": "Price rises 50 percent and quantity falls 25 percent.",
+          "official_target_outcome_summary": "Price rises 50 percent and quantity falls 25 percent.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-1-o:opgave-2:question-12"
+          ],
+          "mapped_mtu_ids": [
+            "A38",
+            "A66",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "percentage_change",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A38",
+            "A66",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A11"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "percentage_change",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "calculus_route"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [
+            "A38"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_ELASTICITY_BASE_VALUES"
+          ],
+          "expected_procedure_unit_ids": [
+            "A38",
+            "A66",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha25-1-q12-elasticity-turnover-conclusion",
+          "question_word": "bereken",
+          "description": "Calculate price elasticity and use inelasticity to conclude that turnover rises after the price increase.",
+          "answer_model_summary": "Elasticity is -0.5, so price increase raises turnover under inelastic demand.",
+          "official_target_outcome_summary": "Elasticity is -0.5, so price increase raises turnover under inelastic demand.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-1-o:opgave-2:question-12"
+          ],
+          "mapped_mtu_ids": [
+            "A15",
+            "A84",
+            "D25",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "price_elasticity",
+            "turnover_effect",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A15",
+            "A84",
+            "D25",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A11"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "price_elasticity",
+            "turnover_effect",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "calculus_route"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_INELASTIC_TURNOVER_DIRECTION"
+          ],
+          "expected_procedure_unit_ids": [
+            "A15",
+            "A84",
+            "D25",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A38",
+        "A66",
+        "A81",
+        "A96",
+        "A15",
+        "A84",
+        "D25"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "percentage_change",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "price_elasticity",
+        "turnover_effect"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-9",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-2:question-9",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q09-prompt-04-04.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q09-prompt-05-05.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q09-correction-07-07.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "question_num": 9,
+        "page_start": 4,
+        "page_end": 5
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha25-2-q9-new-tax-equilibrium",
+          "question_word": "bereken",
+          "description": "Solve the post-excise equilibrium price and quantity.",
+          "answer_model_summary": "The shifted functions give P = 6 and Q = 2.",
+          "official_target_outcome_summary": "The shifted functions give P = 6 and Q = 2.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-2:question-9"
+          ],
+          "mapped_mtu_ids": [
+            "D05",
+            "A41",
+            "A06",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "excise_tax",
+            "market_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "D05",
+            "A41",
+            "A06",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "excise_tax",
+            "market_equilibrium",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [
+            "D05"
+          ],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q9_TAX_SHIFT_WRONG_SIDE"
+          ],
+          "expected_procedure_unit_ids": [
+            "D05",
+            "A41",
+            "A06",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": true,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha25-2-q9-old-equilibrium-and-percent-reduction",
+          "question_word": "bereken",
+          "description": "Compute the old quantity and the percentage reduction to test the policy target.",
+          "answer_model_summary": "Old Q is 2.75 and the reduction is about 27.3 percent, so the target is met.",
+          "official_target_outcome_summary": "Old Q is 2.75 and the reduction is about 27.3 percent, so the target is met.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-2:question-9"
+          ],
+          "mapped_mtu_ids": [
+            "A06",
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "percentage_change",
+            "policy_target_check",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A06",
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "percentage_change",
+            "policy_target_check",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [
+            "A38"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q9_PERCENT_REDUCTION_DENOMINATOR"
+          ],
+          "expected_procedure_unit_ids": [
+            "A06",
+            "A38",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "D05",
+        "A41",
+        "A06",
+        "A81",
+        "A96",
+        "A38"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "excise_tax",
+        "market_equilibrium",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "percentage_change",
+        "policy_target_check"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-4:question-18",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-4:question-18",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q18-prompt-08-08.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q18-prompt-09-09.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q18-correction-09-09.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "question_num": 18,
+        "page_start": 8,
+        "page_end": 9
+      },
+      "question_word": "leg_uit_of",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-ha25-2-q18-dominant-campaign-strategies",
+          "question_word": "leg_uit_of",
+          "description": "Use payoff percentages to show campaigning is dominant for both insurers.",
+          "answer_model_summary": "Each insurer gets a better payoff by campaigning in both columns/rows.",
+          "official_target_outcome_summary": "Each insurer gets a better payoff by campaigning in both columns/rows.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-4:question-18"
+          ],
+          "mapped_mtu_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q18_PERCENT_PAYOFF_ORDER"
+          ],
+          "expected_procedure_unit_ids": [
+            "F03",
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-ha25-2-q18-prisoners-dilemma",
+          "question_word": "leg_uit_of",
+          "description": "Show the campaign/campaign Nash outcome is suboptimal relative to neither campaigning.",
+          "answer_model_summary": "Both campaigning is worse for both than the no-campaign outcome, so it is a prisoner dilemma.",
+          "official_target_outcome_summary": "Both campaigning is worse for both than the no-campaign outcome, so it is a prisoner dilemma.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#ha-1022-a-25-2-o:opgave-4:question-18"
+          ],
+          "mapped_mtu_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "prisoners_dilemma",
+            "suboptimal_joint_outcome",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "prisoners_dilemma",
+            "suboptimal_joint_outcome",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q18_NASH_WITHOUT_SUBOPTIMALITY"
+          ],
+          "expected_procedure_unit_ids": [
+            "F09",
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "F03",
+        "F04",
+        "A81",
+        "A98",
+        "F09",
+        "F12"
+      ],
+      "mapped_route_tags": [
+        "game_theory",
+        "dominant_strategy",
+        "payoff_matrix",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "prisoners_dilemma",
+        "suboptimal_joint_outcome"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-2:question-11",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-1-o:opgave-2:question-11",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q11-prompt-05-05.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q11-prompt-06-06.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q11-correction-09-09.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 11,
+        "page_start": 5,
+        "page_end": 6
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw25-1-q11-current-assets-from-coverage",
+          "question_word": "bereken",
+          "description": "Discount future pension obligations at the current rate and use coverage ratio to compute current assets.",
+          "answer_model_summary": "The current present value times 92 percent gives current assets.",
+          "official_target_outcome_summary": "The current present value times 92 percent gives current assets.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-1-o:opgave-2:question-11"
+          ],
+          "mapped_mtu_ids": [
+            "E03",
+            "A38",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "present_value",
+            "coverage_ratio",
+            "pension",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "E03",
+            "A38",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "present_value",
+            "coverage_ratio",
+            "pension",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [
+            "A88"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q11_RATE_EXPONENT_OR_SCALE"
+          ],
+          "expected_procedure_unit_ids": [
+            "E03",
+            "A38",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw25-1-q11-new-coverage-affordability",
+          "question_word": "bereken",
+          "description": "Discount obligations at the new rate, compute the new coverage ratio, and conclude affordability improves.",
+          "answer_model_summary": "The new coverage ratio is above the original ratio and above full coverage.",
+          "official_target_outcome_summary": "The new coverage ratio is above the original ratio and above full coverage.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-1-o:opgave-2:question-11"
+          ],
+          "mapped_mtu_ids": [
+            "E03",
+            "A38",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "present_value",
+            "coverage_ratio",
+            "pension",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "E03",
+            "A38",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "present_value",
+            "coverage_ratio",
+            "pension",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [
+            "A88"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q11_HIGHER_RATE_AS_WORSE_AFFORDABILITY"
+          ],
+          "expected_procedure_unit_ids": [
+            "E03",
+            "A38",
+            "A88",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "E03",
+        "A38",
+        "A88",
+        "A81",
+        "A96"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "present_value",
+        "coverage_ratio",
+        "pension",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-3:question-14",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-1-o:opgave-3:question-14",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q14-prompt-06-06.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q14-prompt-07-07.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-1-o-q14-correction-11-11.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "question_num": 14,
+        "page_start": 6,
+        "page_end": 7
+      },
+      "question_word": "bereken",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw25-1-q14-new-mk-and-mo",
+          "question_word": "bereken",
+          "description": "Add the variable-cost increase to total cost, derive new MK, and derive MO from demand.",
+          "answer_model_summary": "The new MK and MO functions are required before solving profit maximum.",
+          "official_target_outcome_summary": "The new MK and MO functions are required before solving profit maximum.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-1-o:opgave-3:question-14"
+          ],
+          "mapped_mtu_ids": [
+            "A07",
+            "A12",
+            "A13",
+            "A89",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "monopoly",
+            "cost_increase",
+            "marginal_revenue",
+            "marginal_cost",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A07",
+            "A12",
+            "A13",
+            "A89",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "monopoly",
+            "cost_increase",
+            "marginal_revenue",
+            "marginal_cost",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q14_COST_INCREASE_NOT_IN_MK"
+          ],
+          "expected_procedure_unit_ids": [
+            "A07",
+            "A12",
+            "A13",
+            "A89",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw25-1-q14-new-price-and-pass-through",
+          "question_word": "bereken",
+          "description": "Solve MO = MK, calculate new price, and compute pass-through share of the cost increase.",
+          "answer_model_summary": "The price increase divided by the cost increase gives 40 percent pass-through.",
+          "official_target_outcome_summary": "The price increase divided by the cost increase gives 40 percent pass-through.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-1-o:opgave-3:question-14"
+          ],
+          "mapped_mtu_ids": [
+            "A95",
+            "A92",
+            "D46",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "monopoly",
+            "pass_through",
+            "price_from_quantity",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A95",
+            "A92",
+            "D46",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "monopoly",
+            "pass_through",
+            "price_from_quantity",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [
+            "D46"
+          ],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q14_PASS_THROUGH_DENOMINATOR"
+          ],
+          "expected_procedure_unit_ids": [
+            "A95",
+            "A92",
+            "D46",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": true,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A07",
+        "A12",
+        "A13",
+        "A89",
+        "A81",
+        "A96",
+        "A95",
+        "A92",
+        "D46"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "monopoly",
+        "cost_increase",
+        "marginal_revenue",
+        "marginal_cost",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "pass_through",
+        "price_from_quantity"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-5",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-prompt-03-03.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-correction-07-07.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 1,
+        "question_num": 5,
+        "page_start": 3,
+        "page_end": 3
+      },
+      "question_word": "arceer",
+      "expected_h7_status": "review_required",
+      "expected_h7_classification": "correctly_routed_review_required",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+          "question_word": "arceer",
+          "description": "Shade the total producer-subsidy amount in the monopoly graph.",
+          "answer_model_summary": "The official answer is graph-only and allows two correct shadings, so source/graph review remains required.",
+          "official_target_outcome_summary": "The official answer is graph-only and allows two correct shadings, so source/graph review remains required.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-5"
+          ],
+          "mapped_mtu_ids": [
+            "A27",
+            "A40",
+            "A58",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_shading",
+            "producer_subsidy",
+            "subsidy_area",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A27",
+            "A40",
+            "A58",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "A45"
+          ],
+          "expected_route_tags": [
+            "graph_shading",
+            "producer_subsidy",
+            "subsidy_area",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "full_graph_construction"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A40"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q5_TOTAL_SUBSIDY_AREA_NOT_DWL"
+          ],
+          "expected_procedure_unit_ids": [
+            "A27",
+            "A40",
+            "A58",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [
+            "evidence_gap:graph_only_correction_requires_visual_adjudication"
+          ],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "review_required",
+          "expected_defect_class": "evidence_gap"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A27",
+        "A40",
+        "A58",
+        "A81"
+      ],
+      "mapped_route_tags": [
+        "graph_shading",
+        "producer_subsidy",
+        "subsidy_area",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-4:question-20",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q20-prompt-09-09.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q20-correction-11-11.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "question_num": 20,
+        "page_start": 9,
+        "page_end": 9
+      },
+      "question_word": "leg_uit_of",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw25-2-q20-dominant-marketing-budget",
+          "question_word": "leg_uit_of",
+          "description": "Compare reserve changes to show 100 percent marketing is dominant for both schools.",
+          "answer_model_summary": "For each possible action of the other school, 100 percent marketing gives the highest reserve result.",
+          "official_target_outcome_summary": "For each possible action of the other school, 100 percent marketing gives the highest reserve result.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-4:question-20"
+          ],
+          "mapped_mtu_ids": [
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "F09"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "dominant_strategy",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "prisoners_dilemma"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q20_MATRIX_INEQUALITY_DIRECTION"
+          ],
+          "expected_procedure_unit_ids": [
+            "F04",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw25-2-q20-nash-equilibrium",
+          "question_word": "leg_uit_of",
+          "description": "Conclude that the dominant strategies produce a Nash equilibrium at the 100/100 cell.",
+          "answer_model_summary": "Neither school can improve its reserve given the other school choice.",
+          "official_target_outcome_summary": "Neither school can improve its reserve given the other school choice.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-4:question-20"
+          ],
+          "mapped_mtu_ids": [
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "game_theory",
+            "nash_equilibrium",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15",
+            "F09"
+          ],
+          "expected_route_tags": [
+            "game_theory",
+            "nash_equilibrium",
+            "payoff_matrix",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only",
+            "prisoners_dilemma"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q20_PD_LABEL_ADDED_WHEN_NOT_ASKED"
+          ],
+          "expected_procedure_unit_ids": [
+            "F12",
+            "A81",
+            "A98"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "F04",
+        "A81",
+        "A98",
+        "F12"
+      ],
+      "mapped_route_tags": [
+        "game_theory",
+        "dominant_strategy",
+        "payoff_matrix",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "nash_equilibrium"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-28",
+      "split": "locked_holdout",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-6:question-28",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q28-prompt-13-13.png",
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q28-correction-13-13.png"
+      ],
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 6,
+        "question_num": 28,
+        "page_start": 13,
+        "page_end": 13
+      },
+      "question_word": "toon_met_een_berekening_aan",
+      "expected_h7_status": "passed",
+      "expected_h7_classification": "generalized_pass",
+      "official_correction_model_operations": [
+        {
+          "operation_id": "h7-vw25-2-q28-taxable-water-use",
+          "question_word": "toon_met_een_berekening_aan",
+          "description": "Subtract the exemption from average yearly water use to obtain taxable liters.",
+          "answer_model_summary": "The tax base is 40,000 liters after the exemption.",
+          "official_target_outcome_summary": "The tax base is 40,000 liters after the exemption.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-6:question-28"
+          ],
+          "mapped_mtu_ids": [
+            "H04",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "tax_base",
+            "exemption",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "H04",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "tax_base",
+            "exemption",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q28_EXEMPTION_OMITTED"
+          ],
+          "expected_procedure_unit_ids": [
+            "H04",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        },
+        {
+          "operation_id": "h7-vw25-2-q28-progressive-water-tax",
+          "question_word": "toon_met_een_berekening_aan",
+          "description": "Calculate tax by filled brackets and subtract the credit to show payment exceeds 100 euros.",
+          "answer_model_summary": "Two brackets total EUR 180; after the EUR 70 credit the payment is EUR 110.",
+          "official_target_outcome_summary": "Two brackets total EUR 180; after the EUR 70 credit the payment is EUR 110.",
+          "official_evidence_refs": [
+            "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-6:question-28"
+          ],
+          "mapped_mtu_ids": [
+            "H04",
+            "H18",
+            "A81",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "calculation",
+            "progressive_tax",
+            "tax_credit",
+            "threshold_conclusion",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "H04",
+            "H18",
+            "A81",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "calculation",
+            "progressive_tax",
+            "tax_credit",
+            "threshold_conclusion",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_forbidden_route_tags": [
+            "elasticity_only"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_scaling_mtu_ids": [],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q28_CREDIT_ADDED_OR_BRACKETS_NOT_MARGINAL"
+          ],
+          "expected_procedure_unit_ids": [
+            "H04",
+            "H18",
+            "A81",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "review_required_hooks": [],
+          "missing_mtu_expected": false,
+          "missing_mtu_expectation": null,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_status": "passed",
+          "expected_defect_class": null
+        }
+      ],
+      "mapped_mtu_ids": [
+        "H04",
+        "A81",
+        "A96",
+        "H18"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "tax_base",
+        "exemption",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "progressive_tax",
+        "tax_credit",
+        "threshold_conclusion"
+      ]
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "h7-negative-ha-1022-a-23-1-o-opgave-1-question-2-missing-a38",
+      "based_on_record_id": "ha-1022-a-23-1-o:opgave-1:question-2",
+      "operation_id": "h7-ha23-1-q2-source-percent-average",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A38"
+        ]
+      },
+      "rationale": "Removing A38 must fail the required-MTU check for h7-ha23-1-q2-source-percent-average."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-23-1-o-opgave-2-question-9-missing-l10",
+      "based_on_record_id": "ha-1022-a-23-1-o:opgave-2:question-9",
+      "operation_id": "h7-ha23-1-q9-labor-market-equilibrium",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "L10"
+        ]
+      },
+      "rationale": "Removing L10 must fail the required-MTU check for h7-ha23-1-q9-labor-market-equilibrium."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-23-1-o-opgave-5-question-21-missing-d15",
+      "based_on_record_id": "ha-1022-a-23-1-o:opgave-5:question-21",
+      "operation_id": "h7-ha23-1-q21-market-form-name",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "D15"
+        ]
+      },
+      "rationale": "Removing D15 must fail the required-MTU check for h7-ha23-1-q21-market-form-name."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-23-2-o-opgave-3-question-15-missing-h04",
+      "based_on_record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "operation_id": "h7-ha23-2-q15-net-income-table",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "H04"
+        ]
+      },
+      "rationale": "Removing H04 must fail the required-MTU check for h7-ha23-2-q15-net-income-table."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-24-1-o-opgave-2-question-12-missing-a81",
+      "based_on_record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A81"
+        ]
+      },
+      "rationale": "Removing A81 must fail the required-MTU check for h7-ha24-1-q12-snel-residual-payoff."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-24-2-o-opgave-1-question-3-missing-a25",
+      "based_on_record_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "operation_id": "h7-ha24-2-q3-surplus-quantity-width",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A25"
+        ]
+      },
+      "rationale": "Removing A25 must fail the required-MTU check for h7-ha24-2-q3-surplus-quantity-width."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-25-1-o-opgave-3-question-16-missing-f03",
+      "based_on_record_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "operation_id": "h7-ha25-1-q16-dominant-strategies",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "F03"
+        ]
+      },
+      "rationale": "Removing F03 must fail the required-MTU check for h7-ha25-1-q16-dominant-strategies."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-25-2-o-opgave-2-question-10-missing-a19",
+      "based_on_record_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "operation_id": "h7-ha25-2-q10-consumer-surplus-area",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A19"
+        ]
+      },
+      "rationale": "Removing A19 must fail the required-MTU check for h7-ha25-2-q10-consumer-surplus-area."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-25-2-o-opgave-2-question-10-overtrigger-a15",
+      "based_on_record_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "operation_id": "h7-ha25-2-q10-producer-surplus-area",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "over_trigger",
+      "mutation": {
+        "add_mapped_mtu_ids": [
+          "A15"
+        ]
+      },
+      "rationale": "Adding forbidden A15 must fail the over-trigger guard for h7-ha25-2-q10-producer-surplus-area."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-23-1-o-opgave-1-question-4-missing-a07",
+      "based_on_record_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "operation_id": "h7-vw23-1-q4-mo-from-go",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A07"
+        ]
+      },
+      "rationale": "Removing A07 must fail the required-MTU check for h7-vw23-1-q4-mo-from-go."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-23-1-o-opgave-5-question-21-missing-i07",
+      "based_on_record_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "operation_id": "h7-vw23-1-q21-underbesteding-lower-inflation",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "I07"
+        ]
+      },
+      "rationale": "Removing I07 must fail the required-MTU check for h7-vw23-1-q21-underbesteding-lower-inflation."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-23-2-o-opgave-2-question-9-missing-a27",
+      "based_on_record_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "operation_id": "h7-vw23-2-q9-subsidy-amount-shading",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A27"
+        ]
+      },
+      "rationale": "Removing A27 must fail the required-MTU check for h7-vw23-2-q9-subsidy-amount-shading."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-23-2-o-opgave-4-question-20-missing-f12",
+      "based_on_record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "F12"
+        ]
+      },
+      "rationale": "Removing F12 must fail the required-MTU check for h7-vw23-2-q20-game-tree-nash."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-24-1-o-opgave-3-question-17-missing-h24",
+      "based_on_record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "operation_id": "h7-vw24-1-q17-no-insurance-loss",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "H24"
+        ]
+      },
+      "rationale": "Removing H24 must fail the required-MTU check for h7-vw24-1-q17-no-insurance-loss."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-24-1-o-opgave-5-question-24-missing-f03",
+      "based_on_record_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "operation_id": "h7-vw24-1-q24-dominant-price-cut",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "F03"
+        ]
+      },
+      "rationale": "Removing F03 must fail the required-MTU check for h7-vw24-1-q24-dominant-price-cut."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-24-2-o-opgave-3-question-15-missing-i07",
+      "based_on_record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "I07"
+        ]
+      },
+      "rationale": "Removing I07 must fail the required-MTU check for h7-vw24-2-q15-ga-mb-first-adjustment."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-25-2-o-opgave-1-question-4-missing-a27",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "operation_id": "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A27"
+        ]
+      },
+      "rationale": "Removing A27 must fail the required-MTU check for h7-vw25-2-q4-go-line-with-consumer-subsidy."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-25-1-o-opgave-2-question-12-missing-a38",
+      "based_on_record_id": "ha-1022-a-25-1-o:opgave-2:question-12",
+      "operation_id": "h7-ha25-1-q12-price-and-quantity-percent-changes",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A38"
+        ]
+      },
+      "rationale": "Removing A38 must fail the required-MTU check for h7-ha25-1-q12-price-and-quantity-percent-changes."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-25-2-o-opgave-2-question-9-missing-d05",
+      "based_on_record_id": "ha-1022-a-25-2-o:opgave-2:question-9",
+      "operation_id": "h7-ha25-2-q9-new-tax-equilibrium",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "D05"
+        ]
+      },
+      "rationale": "Removing D05 must fail the required-MTU check for h7-ha25-2-q9-new-tax-equilibrium."
+    },
+    {
+      "fixture_id": "h7-negative-ha-1022-a-25-2-o-opgave-4-question-18-missing-f03",
+      "based_on_record_id": "ha-1022-a-25-2-o:opgave-4:question-18",
+      "operation_id": "h7-ha25-2-q18-dominant-campaign-strategies",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "F03"
+        ]
+      },
+      "rationale": "Removing F03 must fail the required-MTU check for h7-ha25-2-q18-dominant-campaign-strategies."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-25-1-o-opgave-2-question-11-missing-e03",
+      "based_on_record_id": "vw-1022-a-25-1-o:opgave-2:question-11",
+      "operation_id": "h7-vw25-1-q11-current-assets-from-coverage",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "E03"
+        ]
+      },
+      "rationale": "Removing E03 must fail the required-MTU check for h7-vw25-1-q11-current-assets-from-coverage."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-25-1-o-opgave-3-question-14-missing-a07",
+      "based_on_record_id": "vw-1022-a-25-1-o:opgave-3:question-14",
+      "operation_id": "h7-vw25-1-q14-new-mk-and-mo",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A07"
+        ]
+      },
+      "rationale": "Removing A07 must fail the required-MTU check for h7-vw25-1-q14-new-mk-and-mo."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-25-2-o-opgave-1-question-5-missing-a27",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A27"
+        ]
+      },
+      "rationale": "Removing A27 must fail the required-MTU check for h7-vw25-2-q5-total-subsidy-shading."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-25-2-o-opgave-4-question-20-missing-f04",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "operation_id": "h7-vw25-2-q20-dominant-marketing-budget",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "F04"
+        ]
+      },
+      "rationale": "Removing F04 must fail the required-MTU check for h7-vw25-2-q20-dominant-marketing-budget."
+    },
+    {
+      "fixture_id": "h7-negative-vw-1022-a-25-2-o-opgave-6-question-28-missing-h04",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-6:question-28",
+      "operation_id": "h7-vw25-2-q28-taxable-water-use",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "H04"
+        ]
+      },
+      "rationale": "Removing H04 must fail the required-MTU check for h7-vw25-2-q28-taxable-water-use."
+    },
+    {
+      "fixture_id": "h7-negative-vw25-2-q20-nash-mtu-removed",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "operation_id": "h7-vw25-2-q20-nash-equilibrium",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "F12"
+        ]
+      },
+      "rationale": "Removing F12 must fail the Nash-equilibrium operation rather than letting dominant-strategy evidence close the item."
+    },
+    {
+      "fixture_id": "h7-negative-vw25-2-q20-prisoners-dilemma-overtrigger",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "operation_id": "h7-vw25-2-q20-nash-equilibrium",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "over_trigger",
+      "mutation": {
+        "add_mapped_mtu_ids": [
+          "F09"
+        ],
+        "add_mapped_route_tags": [
+          "prisoners_dilemma"
+        ]
+      },
+      "rationale": "Adding F09/prisoners_dilemma must fail because the official q20 answer asks only whether there is a Nash equilibrium."
+    },
+    {
+      "fixture_id": "h7-negative-ha24-1-q12-nash-overtrigger",
+      "based_on_record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "over_trigger",
+      "mutation": {
+        "add_mapped_mtu_ids": [
+          "F12"
+        ],
+        "add_mapped_route_tags": [
+          "nash_equilibrium"
+        ]
+      },
+      "rationale": "The ultimatum-game payoff-entry operation must not be closed by Nash-equilibrium mapping."
+    },
+    {
+      "fixture_id": "h7-negative-vw23-2-q20-payoff-matrix-overtrigger",
+      "based_on_record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "over_trigger",
+      "mutation": {
+        "add_mapped_mtu_ids": [
+          "F04"
+        ],
+        "add_mapped_route_tags": [
+          "payoff_matrix"
+        ]
+      },
+      "rationale": "The game-tree Nash operation must not silently collapse to a simple payoff-matrix shortcut."
+    },
+    {
+      "fixture_id": "h7-negative-vw24-1-q17-insurance-cost-procedure-removed",
+      "based_on_record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "G12"
+        ]
+      },
+      "rationale": "The currency-insurance cost/benefit operation must not pass without its insurance-cost procedure support."
+    },
+    {
+      "fixture_id": "h7-negative-vw24-2-q15-full-graph-overtrigger",
+      "based_on_record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "over_trigger",
+      "mutation": {
+        "add_mapped_mtu_ids": [
+          "A45"
+        ],
+        "add_mapped_route_tags": [
+          "full_graph_construction"
+        ]
+      },
+      "rationale": "The multi-period IS-MB-GA sequence must not trigger generic P-Q full graph construction."
+    },
+    {
+      "fixture_id": "h7-negative-vw25-2-q4-mo-line-support-removed",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "operation_id": "h7-vw25-2-q4-mo-line-with-consumer-subsidy",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "missing_required_mtu",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A90"
+        ]
+      },
+      "rationale": "The MO-line drawing operation must not pass when the MO-from-linear-GO support is removed."
+    },
+    {
+      "fixture_id": "h7-negative-vw25-2-q4-graph-answer-form-removed",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "operation_id": "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "answer_form_gap",
+      "mutation": {
+        "remove_mapped_mtu_ids": [
+          "A40"
+        ]
+      },
+      "rationale": "Removing A40 must fail the graphical answer-form guard for GO/MO subsidy line drawing."
+    },
+    {
+      "fixture_id": "h7-negative-vw25-2-q5-full-graph-overtrigger",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+      "expected_status": "fail",
+      "expected_failure_defect_class": "over_trigger",
+      "mutation": {
+        "add_mapped_mtu_ids": [
+          "A45"
+        ],
+        "add_mapped_route_tags": [
+          "full_graph_construction"
+        ]
+      },
+      "rationale": "The graph-only total-subsidy shading operation must not require drawing a new full P-Q graph."
+    }
+  ]
+}
