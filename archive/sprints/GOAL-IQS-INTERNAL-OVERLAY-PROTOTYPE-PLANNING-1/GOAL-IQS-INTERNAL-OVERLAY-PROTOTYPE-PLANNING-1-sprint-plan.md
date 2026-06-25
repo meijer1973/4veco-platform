@@ -138,8 +138,8 @@ npm run check:platform
 Proof required to close must include review, validator, and test evidence,
 specialist review results, correction records, final lead review, exact remote-head CI,
 branch-protection checker output with `ok: true`, PR Readiness Reviewer route
-output, and human approval tied to the exact PR head SHA. Any new commit after
-readiness review requires a fresh exact-head decision.
+output, route-appropriate owner authorization, and exact remote-head evidence.
+Any new commit after readiness review requires a fresh route decision.
 
 ## Rollback plan
 
