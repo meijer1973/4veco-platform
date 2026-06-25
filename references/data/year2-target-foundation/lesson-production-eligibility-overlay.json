@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "overlay_id": "Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1-lesson-production-eligibility-overlay",
+  "status": "ready_for_human_review_not_active_until_merge",
+  "resolver_rule": "candidate record + approved production-readiness bundle + completed support disposition closure required before generator treats a target as cross-repo lesson-production input.",
+  "required_inputs": {
+    "candidate_records": "references/authored/year2-v6-target-foundation-candidates.json",
+    "production_readiness_bundle": "reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/production-readiness-bundle.json",
+    "prior_support_dispositions": "reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/mtu-answer-skill-disposition.json",
+    "support_closure_bundle": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+  },
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "candidate_record_present": true,
+      "production_readiness_record_present": true,
+      "prior_bundle_status": "foundation_ready_for_lesson_design_after_human_merge_with_production_blockers_listed",
+      "prior_disposition_status": "all_19_op_rows_have_exact_disposition_no_runtime_mutation",
+      "required_support_case_ids": [
+        "Y2-B5-P13:OP-T1",
+        "Y2-B5-P13:OP-ANS2",
+        "Y2-B5-P13:OP-H1",
+        "Y2-B5-P13:OP-ANS3"
+      ],
+      "completed_support_case_ids_after_human_merge": [
+        "Y2-B5-P13:OP-T1",
+        "Y2-B5-P13:OP-ANS2",
+        "Y2-B5-P13:OP-H1",
+        "Y2-B5-P13:OP-ANS3"
+      ],
+      "unresolved_platform_support_blockers_after_human_merge": [],
+      "generator_status_after_human_merge": "eligible_as_cross_repo_lesson_production_input_only",
+      "generator_status_before_human_merge": "blocked_pending_support_closure_merge",
+      "product_route_adoption_authorized": false,
+      "generated_lesson_output_authorized_by_this_pr": false,
+      "student_product_use_authorized": false
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "candidate_record_present": true,
+      "production_readiness_record_present": true,
+      "prior_bundle_status": "foundation_ready_for_lesson_design_after_human_merge_with_production_blockers_listed",
+      "prior_disposition_status": "all_19_op_rows_have_exact_disposition_no_runtime_mutation",
+      "required_support_case_ids": [
+        "Y2-B6-P12:OP-D1",
+        "Y2-B6-P12:OP-C1",
+        "Y2-B6-P12:OP-C2",
+        "Y2-B6-P12:OP-ANS2",
+        "Y2-B6-P12:OP-P1",
+        "Y2-B6-P12:OP-E1",
+        "Y2-B6-P12:OP-F1",
+        "Y2-B6-P12:OP-ANS3"
+      ],
+      "completed_support_case_ids_after_human_merge": [
+        "Y2-B6-P12:OP-D1",
+        "Y2-B6-P12:OP-C1",
+        "Y2-B6-P12:OP-C2",
+        "Y2-B6-P12:OP-ANS2",
+        "Y2-B6-P12:OP-P1",
+        "Y2-B6-P12:OP-E1",
+        "Y2-B6-P12:OP-F1",
+        "Y2-B6-P12:OP-ANS3"
+      ],
+      "unresolved_platform_support_blockers_after_human_merge": [],
+      "generator_status_after_human_merge": "eligible_as_cross_repo_lesson_production_input_only",
+      "generator_status_before_human_merge": "blocked_pending_support_closure_merge",
+      "product_route_adoption_authorized": false,
+      "generated_lesson_output_authorized_by_this_pr": false,
+      "student_product_use_authorized": false
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "candidate_record_present": true,
+      "production_readiness_record_present": true,
+      "prior_bundle_status": "foundation_ready_for_lesson_design_after_human_merge_with_production_blockers_listed",
+      "prior_disposition_status": "all_19_op_rows_have_exact_disposition_no_runtime_mutation",
+      "required_support_case_ids": [
+        "Y2-B7-P13:OP-R1",
+        "Y2-B7-P13:OP-ANS2",
+        "Y2-B7-P13:OP-ANS3"
+      ],
+      "completed_support_case_ids_after_human_merge": [
+        "Y2-B7-P13:OP-R1",
+        "Y2-B7-P13:OP-ANS2",
+        "Y2-B7-P13:OP-ANS3",
+        "Y2-B7-P13:OP-M1"
+      ],
+      "unresolved_platform_support_blockers_after_human_merge": [],
+      "generator_status_after_human_merge": "eligible_as_cross_repo_lesson_production_input_only",
+      "generator_status_before_human_merge": "blocked_pending_support_closure_merge",
+      "product_route_adoption_authorized": false,
+      "generated_lesson_output_authorized_by_this_pr": false,
+      "student_product_use_authorized": false
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "candidate_record_present": true,
+      "production_readiness_record_present": true,
+      "prior_bundle_status": "foundation_ready_for_lesson_design_after_human_merge_with_production_blockers_listed",
+      "prior_disposition_status": "all_19_op_rows_have_exact_disposition_no_runtime_mutation",
+      "required_support_case_ids": [
+        "Y2-B8-P04:OP-S1",
+        "Y2-B8-P04:OP-ANS1",
+        "Y2-B8-P04:OP-ANS3"
+      ],
+      "completed_support_case_ids_after_human_merge": [
+        "Y2-B8-P04:OP-S1",
+        "Y2-B8-P04:OP-ANS1",
+        "Y2-B8-P04:OP-ANS3"
+      ],
+      "unresolved_platform_support_blockers_after_human_merge": [],
+      "generator_status_after_human_merge": "eligible_as_cross_repo_lesson_production_input_only",
+      "generator_status_before_human_merge": "blocked_pending_support_closure_merge",
+      "product_route_adoption_authorized": false,
+      "generated_lesson_output_authorized_by_this_pr": false,
+      "student_product_use_authorized": false
+    }
+  ],
+  "authority_claims": {
+    "protected_year2_support_overlay_created_for_review": true,
+    "route_specific_runtime_support_closed_for_review": true,
+    "route_specific_extension_support_closed_for_review": true,
+    "answer_skill_equivalent_support_closed_for_review": true,
+    "lesson_production_eligibility_overlay_ready_for_review": true,
+    "cross_repo_lesson_production_input_ready_after_human_merge": true,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "live_mtu_registry_mutated": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "candidate_storage_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  }
+}

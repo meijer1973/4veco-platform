@@ -1,0 +1,205 @@
+{
+  "packet_id": "Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1",
+  "status": "READY_FOR_HUMAN_REVIEW_PACKET",
+  "pr_throughput_class": "high_authority",
+  "authority_class": "protected_year2_support_overlay",
+  "review_autonomy": {
+    "level": "L4",
+    "route": "READY_FOR_HUMAN_REVIEW",
+    "reason": "Protected Year 2 support overlay and lesson-production eligibility resolver."
+  },
+  "human_decision_required": true,
+  "auto_merge_allowed_after_ci": false,
+  "product_end_state": "Enable cross-repo Year 2 lesson-production PRs for the four reviewed target families after human merge, while keeping product route, CP-6, Scale Gate, diagnostics, mastery, PV, summative, and student/product use blocked.",
+  "original_specs": [
+    "REV-STD-1 review packet standard",
+    "Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1 production-readiness bundle",
+    "Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1 owner instruction"
+  ],
+  "non_negotiable_requirements": [
+    "Close exactly the 18 platform-side support blockers from the prior bundle.",
+    "Do not mutate active v5 target registry, live MTUs, broad operation registry rows, or answer-skill registry storage.",
+    "Prove all four Book 6 runtime cases with route-specific fixtures and negative guards.",
+    "Resolve seven answer-skill dispositions through minimal reviewed-equivalent support records.",
+    "Preserve no lesson generation, no product route, no CP-6, no Scale Gate, and no student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "18 prior platform support blockers closed",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+    },
+    {
+      "requirement": "Four Book 6 runtime cases have passing and negative fixture proof",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json"
+    },
+    {
+      "requirement": "Seven extension cases have exact route proof",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json"
+    },
+    {
+      "requirement": "Seven answer-skill dispositions map to reviewed-equivalent support records",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json"
+    },
+    {
+      "requirement": "Resolver overlay requires candidate record plus prior production-readiness bundle plus support closure",
+      "status": "met",
+      "evidence": "references/data/year2-target-foundation/lesson-production-eligibility-overlay.json"
+    },
+    {
+      "requirement": "Rendered evidence exists without generated lesson output",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+    },
+    {
+      "requirement": "Current-head PR proof",
+      "status": "pending_remote_pr",
+      "evidence": "Exact-head CI, readiness, lead review, branch protection ok:true, and owner authorization are required before merge."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "Y2GSCB1-001",
+      "classification": "core_requirement_met",
+      "summary": "All 18 prior platform-side support blockers have closure records.",
+      "blocks": "nothing if exact-head proof and human authorization remain valid",
+      "does_not_block": "merge after human authorization",
+      "proof_required_to_close": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+    },
+    {
+      "finding_id": "Y2GSCB1-002",
+      "classification": "carried_issue",
+      "summary": "Lesson output and product use remain outside this PR.",
+      "blocks": "lesson generation, product routes, CP-6, Scale Gate, diagnostics, mastery, PV, summative, and student/product use",
+      "does_not_block": "platform support closure",
+      "proof_required_to_close": "Separate downstream lesson and product-proof PRs."
+    }
+  ],
+  "carried_issues": [
+    {
+      "issue_id": "cross-repo-lesson-production-prs-not-yet-created",
+      "classification": "proof_required_to_close",
+      "blocks": "actual Year 2 lesson output and target-equivalent exit-ticket reliance",
+      "does_not_block": "platform support closure after exact human merge",
+      "proof_required_to_close": "Separate 4veco-lessen lesson-production PRs using the updated handoff manifests and rendered source/task proof."
+    },
+    {
+      "issue_id": "product-route-and-student-use-still-blocked",
+      "classification": "scale_blocker",
+      "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+      "does_not_block": "cross-repo lesson-production input readiness after this support closure is human-merged",
+      "proof_required_to_close": "REV-STD-1 product-proof packet after lesson PRs, with exact rendered output, accessibility, teacher, economist, runtime, and authority reviews."
+    },
+    {
+      "issue_id": "current-head-merge-proof-pending",
+      "classification": "merge_proof_required",
+      "blocks": "merge until exact-head CI/readiness/lead-review/thread/branch-protection proof and owner authorization exist",
+      "does_not_block": "content review of this packet",
+      "proof_required_to_close": "Run validate-platform, custom checker, PR Readiness Reviewer, thread check, lead review, and branch-protection checker with ok:true on exact remote head."
+    }
+  ],
+  "changed_paths": [
+    "build-scripts/references/build-y2-governed-support-closure-bundle-1.js",
+    "build-scripts/references/check-y2-governed-support-closure-bundle-1.js",
+    "references/data/year2-target-foundation/lesson-production-eligibility-overlay.json",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.md",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html",
+    "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/review-packet.json",
+    "reports/reference-planning/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1-review-packet.md",
+    "reports/sprints/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1-plan.md",
+    "reports/sprints/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1-result.md",
+    "package.json"
+  ],
+  "implementation_summary": {
+    "prior_blockers_closed": 18,
+    "runtime_cases_closed": 4,
+    "extension_cases_closed": 7,
+    "answer_skill_dispositions_closed": 7,
+    "prior_sufficient_cases_confirmed": 1,
+    "broad_operation_rows_closed": 0,
+    "generated_lesson_outputs": 0
+  },
+  "proof": {
+    "local_checkers": [
+      {
+        "command": "node --check build-scripts/references/build-y2-governed-support-closure-bundle-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/build-y2-governed-support-closure-bundle-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node --check build-scripts/references/check-y2-governed-support-closure-bundle-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-y2-governed-support-closure-bundle-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "pending_remote_pr"
+      }
+    ],
+    "rendered_proof": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html",
+    "branch_protection": "pending_remote_pr; must include ok: true before merge"
+  },
+  "decision": {
+    "route": "READY_FOR_HUMAN_REVIEW",
+    "merge_authorization_required": true,
+    "mark_ready_allowed_if_pr_readiness_returns_mark_ready": true
+  },
+  "single_account_pr_governance_pilot": {
+    "branch_protection_ok_required": true,
+    "integration_authorized_required": false,
+    "pilot_data_record": {
+      "router_route_vs_retrospective_human_judgment": {
+        "router_route": "READY_FOR_HUMAN_REVIEW",
+        "retrospective_human_judgment": "protected/consequential Year 2 support closure requires owner authorization"
+      },
+      "lead_review_sufficient": "no_for_merge_yes_for_pre_owner_screen",
+      "unnecessary_human_escalation": false,
+      "stale_head_or_incomplete_evidence_failures": [],
+      "queueing_behavior_for_close_together_authorized_prs": "not_applicable_single_pr_lane",
+      "repeated_main_advancement_behavior": "must refresh evidence if payload lineage or decision scope changes; conflict-free base sync follows current governance override",
+      "overlap_or_deterministic_refresh_dead_end": "no overlap detected in local implementation worktree"
+    }
+  },
+  "authority_claims": {
+    "protected_year2_support_overlay_created_for_review": true,
+    "route_specific_runtime_support_closed_for_review": true,
+    "route_specific_extension_support_closed_for_review": true,
+    "answer_skill_equivalent_support_closed_for_review": true,
+    "lesson_production_eligibility_overlay_ready_for_review": true,
+    "cross_repo_lesson_production_input_ready_after_human_merge": true,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "live_mtu_registry_mutated": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "candidate_storage_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  }
+}
