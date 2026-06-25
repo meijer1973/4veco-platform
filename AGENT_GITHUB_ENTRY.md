@@ -18,9 +18,10 @@ Path reliability:
 | Why did a generated artifact look or behave this way? | `4veco-lessen`, then `4veco-platform` |
 | Which engine/source/template should be changed? | `4veco-platform` |
 | How should multiple review/testing agents be coordinated into one go/no-go decision? | `agents/lead-reviewer-agent.md` |
-| How should a completed remote draft PR be routed to revise, batch, lead-only closure, human review, or pause? | `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md` |
+| How should a completed remote draft PR be routed to revise, batch, lead-only closure, human review, or pause? | `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, `build-scripts/review-gates/review-pr-readiness.js`, `build-scripts/review-gates/route-and-apply-pr-readiness.js`, `build-scripts/review-gates/apply-pr-readiness-decision.js` |
 | How should a human-authorized PR be serialized through base refresh, exact-head readiness, and merge? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, `build-scripts/review-gates/integrate-authorized-pr.js` |
 | How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
+| How should active governance wording and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
 | How should accessibility, readability, contrast, alt text, OCR, or keyboard access be reviewed? | `agents/accessibility-agent.md` |
 | How should learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, transfer, retention, or classroom readiness be reviewed? | `agents/teacher-learning-quality-review-agent.md` |
@@ -70,6 +71,9 @@ Useful entry points:
 - `.github/workflows/cross-repo-bundle-compatibility.yml`
 - `.github/workflows/authorized-bundle-integration.yml`
 - `build-scripts/review-gates/integrate-authorized-pr.js`
+- `build-scripts/review-gates/route-and-apply-pr-readiness.js`
+- `build-scripts/review-gates/check-active-governance-wording.js`
+- `build-scripts/review-gates/finalization-freshness-proof.js`
 - `build-scripts/review-gates/cross-repo-bundle-compatibility.js`
 - `build-scripts/review-gates/check-human-bundle-authorization.js`
 - `build-scripts/review-gates/integrate-authorized-bundle.js`
@@ -90,6 +94,12 @@ Task-routing guidance:
   integration workflow when an owner decision is already bound to a reviewed PR
   payload and the remaining work is base refresh, exact-head readiness proof,
   and serialized merge.
+- Use `build-scripts/review-gates/route-and-apply-pr-readiness.js` with
+  `--evidence <file> --expect-transition MARK_READY` when a completed draft PR
+  should be routed and promoted by machine decision in one step.
+- Use `build-scripts/review-gates/check-active-governance-wording.js` and
+  `build-scripts/review-gates/finalization-freshness-proof.js` before closing
+  governance or workflow changes.
 - Use the cross-repo bundle compatibility workflow and authorized bundle
   integration workflow when a platform PR and lesson PR must land as one
   coordinated payload.

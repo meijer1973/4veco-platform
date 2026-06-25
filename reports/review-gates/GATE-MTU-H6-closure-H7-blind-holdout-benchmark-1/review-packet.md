@@ -49,4 +49,4 @@ MTU-H6-CLOSURE-H7-BLIND-HOLDOUT-GENERALIZATION-BUNDLE-1
 - negative regression fixture evidence
 - PR Readiness Reviewer output with exact remote head
 - live branch-protection checker output with ok: true
-- lead review and explicit owner authorization if routed READY_FOR_HUMAN_REVIEW
+- lead review and explicit owner authorization for the reviewed payload if routed READY_FOR_HUMAN_REVIEW

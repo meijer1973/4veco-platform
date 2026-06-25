@@ -1,6 +1,6 @@
 # Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1 - Governed MTU/Task-Family Proof
 
-Status: governed proof ready for exact-head human review; no MTU mutation.
+Status: governed proof ready for human review under payload-lineage governance; no MTU mutation.
 
 ## Product End-State And Original Specs
 

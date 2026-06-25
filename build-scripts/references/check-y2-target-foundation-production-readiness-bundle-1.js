@@ -253,7 +253,7 @@ function validateReadiness(readiness, readinessMd) {
     assert(['met', 'pending_remote_pr'].includes(item.status), `invalid checklist status ${item.status}`);
   }
   const pending = readiness.core_requirement_checklist.filter((item) => item.status === 'pending_remote_pr');
-  assert(pending.length === 1 && pending[0].requirement === 'Exact-head PR proof', 'only exact-head PR proof may be pending');
+  assert(pending.length === 1 && pending[0].requirement === 'Current-head PR proof', 'only current-head PR proof may be pending');
   for (const item of readiness.blocker_list) {
     assert(['proof_required_to_close', 'scale_blocker'].includes(item.classification), `${item.id} invalid classification`);
     assert(item.blocks && item.does_not_block && item.proof_required_to_close, `${item.id} REV-STD-1 fields incomplete`);

@@ -126,7 +126,7 @@
       "evidence": "proof.local_checkers"
     },
     {
-      "requirement": "Exact-head PR proof",
+      "requirement": "Current-head PR proof",
       "status": "pending_remote_pr",
       "evidence": "single_account_pr_governance_pilot"
     }
@@ -187,7 +187,7 @@
     {
       "id": "Y2SRMTP-001",
       "classification": "proof_required_to_close",
-      "flag": "Source reconstruction and MTU/task-family proof are review-ready but require exact-head human acceptance before downstream closure.",
+      "flag": "Source reconstruction and MTU/task-family proof are review-ready but require human acceptance of the reviewed payload before downstream closure.",
       "blocks": [
         "lesson handoff",
         "product proof",
@@ -196,7 +196,7 @@
       "does_not_block": [
         "human review of this proof PR"
       ],
-      "proof_required_to_close": "Owner authorization tied to the exact remote head after CI, checker, branch-protection, lead-review, and PR-readiness proof."
+      "proof_required_to_close": "Owner authorization tied to the reviewed payload head and decision scope after CI, checker, branch-protection, lead-review, and PR-readiness proof."
     },
     {
       "id": "Y2SRMTP-002",
@@ -275,7 +275,7 @@
       "reviewed_commit_sha": null
     },
     "owner_authorization_required_to_merge": true,
-    "owner_authorization_exact_sha": null
+    "owner_authorization_reviewed_payload_sha": null
   },
   "decision": {
     "status": "READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PROOF",
@@ -283,7 +283,7 @@
     "human_review_required": true,
     "mark_ready_allowed": false,
     "merge_allowed": false,
-    "reason": "Protected source-reconstruction and MTU proof surface must wait for exact-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the exact SHA."
+    "reason": "Protected source-reconstruction and MTU proof surface must wait for current-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the reviewed payload head."
   },
-  "recommended_next_action": "Open a draft PR, run exact-head governance proof, apply readiness decision only if READY_FOR_HUMAN_REVIEW, and return for owner authorization."
+  "recommended_next_action": "Open a draft PR, run current-head governance proof, immediately apply any readiness decision with MARK_READY, and return for owner merge authorization only after READY_FOR_HUMAN_REVIEW."
 }

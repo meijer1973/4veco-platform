@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-24T11:56:27.081Z
+Generated: 2026-06-24T14:33:08.767Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/mtu-h6-closure-h7-blind-holdout-20260624`
-Source commit: `74b48f1074c470e6994597405b80b0854fbc9919`
-Files indexed: 6076
+Source branch: `codex/pr-governance-convergence-1-20260624`
+Source commit: `8e4ad9d3ad969d691a2a58a0a99ec6ad3beef1d3`
+Files indexed: 6102
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 577
+Count: 585
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -322,6 +322,7 @@ Count: 577
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js
+- build-scripts/references/build-y2-target-foundation-production-readiness-bundle-1.js
 - build-scripts/references/check-alignment-graph.js
 - build-scripts/references/check-document-inventory.js
 - build-scripts/references/check-empty-needs-audit.js
@@ -433,6 +434,7 @@ Count: 577
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
+- build-scripts/references/check-y2-target-foundation-production-readiness-bundle-1.js
 - build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js
 - build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
@@ -509,6 +511,8 @@ Count: 577
 - build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js
 - build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js
 - build-scripts/review-gates/capture-gate-task-family1-playable-proof.js
+- build-scripts/review-gates/check-active-governance-wording.js
+- build-scripts/review-gates/check-active-governance-wording.test.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
 - build-scripts/review-gates/check-cp6b-target-exercise-review.js
@@ -540,6 +544,8 @@ Count: 577
 - build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
+- build-scripts/review-gates/finalization-freshness-proof.js
+- build-scripts/review-gates/finalization-freshness-proof.test.js
 - build-scripts/review-gates/integrate-authorized-bundle.js
 - build-scripts/review-gates/integrate-authorized-bundle.test.js
 - build-scripts/review-gates/integrate-authorized-pr.js
@@ -550,6 +556,8 @@ Count: 577
 - build-scripts/review-gates/review-pr-readiness.js
 - build-scripts/review-gates/review-throughput-fields.js
 - build-scripts/review-gates/review-throughput-fields.test.js
+- build-scripts/review-gates/route-and-apply-pr-readiness.js
+- build-scripts/review-gates/route-and-apply-pr-readiness.test.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-b1-target-evidence-111-rendered-closure-and-flag-bundle-1.js
@@ -770,7 +778,7 @@ Count: 46
 
 ## validators
 
-Count: 564
+Count: 567
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -947,6 +955,7 @@ Count: 564
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
+- build-scripts/references/check-y2-target-foundation-production-readiness-bundle-1.js
 - build-scripts/references/check-y2-target-registry-and-task-foundation-implementation-1.js
 - build-scripts/references/check-y3-macro-spine-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
@@ -956,6 +965,8 @@ Count: 564
 - build-scripts/references/validate-procedure-visual-registry.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/check-active-governance-wording.js
+- build-scripts/review-gates/check-active-governance-wording.test.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
 - build-scripts/review-gates/check-cp6b-target-exercise-review.js
@@ -1339,7 +1350,7 @@ Count: 564
 
 ## references
 
-Count: 736
+Count: 737
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1855,6 +1866,7 @@ Count: 736
 - references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/data/year2-target-foundation/answer-contracts.json
+- references/data/year2-target-foundation/canonical-source-assets.json
 - references/data/year2-target-foundation/source-reconstruction-foundation.json
 - references/exemplars/1.1.1-golden-presentation/accepted-snapshot-provenance.md
 - references/exemplars/1.1.1-golden-presentation/content-review-and-revision-notes.md
@@ -2080,7 +2092,7 @@ Count: 736
 
 ## reports
 
-Count: 3940
+Count: 3957
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2675,6 +2687,7 @@ Count: 3940
 - reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-subagent-review.md
 - reports/reference-planning/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-review-packet.md
+- reports/reference-planning/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1-review-packet.md
 - reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json
 - reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.md
 - reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-review-packet.md
@@ -3743,6 +3756,14 @@ Count: 3940
 - reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html
 - reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json
 - reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.md
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/canonical-source-assets-gallery.html
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/generator-handoff-manifests.json
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/generator-handoff-manifests.md
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/mtu-answer-skill-disposition.json
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/mtu-answer-skill-disposition.md
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/production-readiness-bundle.json
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/production-readiness-bundle.md
+- reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/review-packet.json
 - reports/review-gates/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/Y3-MACRO-SPINE-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
@@ -5080,6 +5101,12 @@ Count: 3940
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.jsonl
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-correction-record.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-lead-review-round2.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-plan.md
+- reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-result.md
 - reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/axis-convention.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/dark-mode.png
@@ -6013,6 +6040,8 @@ Count: 3940
 - reports/sprints/Y2-ROOT-MAPPING-1-result.md
 - reports/sprints/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-plan.md
 - reports/sprints/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-result.md
+- reports/sprints/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1-plan.md
+- reports/sprints/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1-result.md
 - reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-plan.md
 - reports/sprints/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-result.md
 - reports/sprints/Y3-MACRO-SPINE-MAPPING-1-plan.md

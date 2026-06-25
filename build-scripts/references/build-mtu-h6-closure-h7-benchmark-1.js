@@ -461,7 +461,7 @@ function buildArtifacts() {
       {
         requirement: 'Human closure authority is granted for H7',
         status: 'not_started',
-        proof_required_to_close: 'explicit owner approval tied to exact PR head'
+        proof_required_to_close: 'explicit owner approval tied to the reviewed payload head and decision scope'
       }
     ],
     findings: [
@@ -488,7 +488,7 @@ function buildArtifacts() {
       'negative regression fixture evidence',
       'PR Readiness Reviewer output with exact remote head',
       'live branch-protection checker output with ok: true',
-      'lead review and explicit owner authorization if routed READY_FOR_HUMAN_REVIEW'
+      'lead review and explicit owner authorization for the reviewed payload if routed READY_FOR_HUMAN_REVIEW'
     ],
     authority_flags: authorityFlags
   };

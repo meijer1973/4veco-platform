@@ -75,7 +75,7 @@
       "evidence": "authority_claims"
     },
     {
-      "requirement": "Exact-head PR proof",
+      "requirement": "Current-head PR proof",
       "status": "pending_remote_pr",
       "evidence": "single_account_pr_governance_pilot"
     }

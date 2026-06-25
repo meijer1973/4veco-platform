@@ -607,7 +607,7 @@ function buildMtuProof(surface, sourceProof, answerContracts, mtuReview) {
       },
     ],
     closure_effect: {
-      prior_flags_addressed_when_human_review_accepts_exact_head: ['Y2TRTF-005', 'Y2TRTF-006'],
+      prior_flags_addressed_when_human_review_accepts_reviewed_payload: ['Y2TRTF-005', 'Y2TRTF-006'],
       remaining_downstream_blocks: ['Y2TRTF-007', 'product_scale_student_use_boundary'],
     },
     authority_claims: {
@@ -697,7 +697,7 @@ function buildReviewPacket(sourceProof, mtuProof) {
       { requirement: 'MTU mutation not authorized', status: 'met', evidence: 'authority_claims' },
       { requirement: 'Downstream authority false', status: 'met', evidence: 'authority_claims' },
       { requirement: 'Local checker proof', status: 'met', evidence: 'proof.local_checkers' },
-      { requirement: 'Exact-head PR proof', status: 'pending_remote_pr', evidence: 'single_account_pr_governance_pilot' },
+      { requirement: 'Current-head PR proof', status: 'pending_remote_pr', evidence: 'single_account_pr_governance_pilot' },
     ],
     authority_claims: {
       rendered_source_reconstruction_ready_for_review: true,
@@ -734,16 +734,16 @@ function buildReviewPacket(sourceProof, mtuProof) {
       proof_cases: mtuProof.records.reduce((sum, record) => sum + record.proof_cases.length, 0),
       record_ids: specs.map((spec) => spec.id),
       target_owner_candidate_ids: specs.map((spec) => spec.owner),
-      prior_flags_addressed_pending_human_acceptance: mtuProof.closure_effect.prior_flags_addressed_when_human_review_accepts_exact_head,
+      prior_flags_addressed_pending_human_acceptance: mtuProof.closure_effect.prior_flags_addressed_when_human_review_accepts_reviewed_payload,
     },
     carried_flags: [
       {
         id: 'Y2SRMTP-001',
         classification: 'proof_required_to_close',
-        flag: 'Source reconstruction and MTU/task-family proof are review-ready but require exact-head human acceptance before downstream closure.',
+        flag: 'Source reconstruction and MTU/task-family proof are review-ready but require human acceptance of the reviewed payload before downstream closure.',
         blocks: ['lesson handoff', 'product proof', 'broad OP closure'],
         does_not_block: ['human review of this proof PR'],
-        proof_required_to_close: 'Owner authorization tied to the exact remote head after CI, checker, branch-protection, lead-review, and PR-readiness proof.',
+        proof_required_to_close: 'Owner authorization tied to the reviewed payload head and decision scope after CI, checker, branch-protection, lead-review, and PR-readiness proof.',
       },
       {
         id: 'Y2SRMTP-002',
@@ -788,7 +788,7 @@ function buildReviewPacket(sourceProof, mtuProof) {
         reviewed_commit_sha: null,
       },
       owner_authorization_required_to_merge: true,
-      owner_authorization_exact_sha: null,
+      owner_authorization_reviewed_payload_sha: null,
     },
     decision: {
       status: 'READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PROOF',
@@ -796,9 +796,9 @@ function buildReviewPacket(sourceProof, mtuProof) {
       human_review_required: true,
       mark_ready_allowed: false,
       merge_allowed: false,
-      reason: 'Protected source-reconstruction and MTU proof surface must wait for exact-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the exact SHA.',
+      reason: 'Protected source-reconstruction and MTU proof surface must wait for current-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the reviewed payload head.',
     },
-    recommended_next_action: 'Open a draft PR, run exact-head governance proof, apply readiness decision only if READY_FOR_HUMAN_REVIEW, and return for owner authorization.',
+    recommended_next_action: 'Open a draft PR, run current-head governance proof, immediately apply any readiness decision with MARK_READY, and return for owner merge authorization only after READY_FOR_HUMAN_REVIEW.',
   };
 }
 
@@ -808,7 +808,7 @@ function sourceProofMd(sourceProof) {
     .join('\n');
   return `# ${SPRINT} - Source Reconstruction Proof
 
-Status: rendered source reconstruction ready for exact-head human review.
+Status: rendered source reconstruction ready for human review under payload-lineage governance.
 
 ## Product End-State And Original Specs
 
@@ -843,8 +843,8 @@ ${rows}
 
 | ID | Classification | Severity | Finding | blocks | does_not_block | proof_required_to_close |
 |---|---|---:|---|---|---|---|
-| Y2SRMTP-SRC-001 | core_requirement_met | high | All four source families now have a rendered review artifact with official locators. | nothing for human review of this source proof | future governed MTU/lesson planning | exact-head human acceptance of \`${SOURCE_HTML}\` and \`${SOURCE_JSON}\` |
-| Y2SRMTP-SRC-002 | proof_required_to_close | high | The rendered proof is not itself product authority. | lesson handoff and product proof until human acceptance | review of this proof surface | owner authorization tied to exact remote head |
+| Y2SRMTP-SRC-001 | core_requirement_met | high | All four source families now have a rendered review artifact with official locators. | nothing for human review of this source proof | future governed MTU/lesson planning | human acceptance of reviewed payload artifacts \`${SOURCE_HTML}\` and \`${SOURCE_JSON}\` |
+| Y2SRMTP-SRC-002 | proof_required_to_close | high | The rendered proof is not itself product authority. | lesson handoff and product proof until human acceptance | review of this proof surface | owner authorization tied to reviewed payload head |
 
 ## Decision
 
@@ -863,7 +863,7 @@ function mtuProofMd(mtuProof) {
     .join('\n');
   return `# ${SPRINT} - Governed MTU/Task-Family Proof
 
-Status: governed proof ready for exact-head human review; no MTU mutation.
+Status: governed proof ready for human review under payload-lineage governance; no MTU mutation.
 
 ## Product End-State And Original Specs
 
@@ -956,7 +956,7 @@ ${flags}
 
 ## Proof
 
-Local checker proof is recorded in \`${REVIEW_PACKET_JSON}\`. Exact-head
+Local checker proof is recorded in \`${REVIEW_PACKET_JSON}\`. Current-head
 remote proof remains pending until draft PR creation. The required live
 branch-protection checker output must include \`ok: true\`.
 

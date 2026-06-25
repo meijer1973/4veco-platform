@@ -26,4 +26,4 @@ authorization if the route is `READY_FOR_HUMAN_REVIEW`.
 
 ## Current Decision
 
-`READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PROOF`: Protected source-reconstruction and MTU proof surface must wait for exact-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the exact SHA.
+`READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PROOF`: Protected source-reconstruction and MTU proof surface must wait for current-head CI, branch-protection, lead-review, review-thread, PR Readiness Reviewer output, and explicit owner authorization tied to the reviewed payload head.

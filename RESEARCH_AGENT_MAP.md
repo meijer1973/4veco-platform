@@ -390,7 +390,10 @@ index_anchors (full URLs):
     "docs/review/human-payload-authorization.schema.json",
     "build-scripts/review-gates/pr-readiness-router.js",
     "build-scripts/review-gates/review-pr-readiness.js",
+    "build-scripts/review-gates/route-and-apply-pr-readiness.js",
     "build-scripts/review-gates/apply-pr-readiness-decision.js",
+    "build-scripts/review-gates/check-active-governance-wording.js",
+    "build-scripts/review-gates/finalization-freshness-proof.js",
     "build-scripts/review-gates/check-human-payload-authorization.js",
     "build-scripts/review-gates/check-human-bundle-authorization.js",
     "build-scripts/review-gates/check-integration-lineage.js",
@@ -496,7 +499,10 @@ pr_governance_paths (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/pr-readiness-router.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/review-pr-readiness.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/route-and-apply-pr-readiness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-pr-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-active-governance-wording.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/finalization-freshness-proof.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-payload-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-bundle-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lineage.js
@@ -704,7 +710,10 @@ Rules:
     ".github/workflows/authorized-bundle-integration.yml",
     "build-scripts/review-gates/pr-readiness-router.js",
     "build-scripts/review-gates/review-pr-readiness.js",
+    "build-scripts/review-gates/route-and-apply-pr-readiness.js",
     "build-scripts/review-gates/apply-pr-readiness-decision.js",
+    "build-scripts/review-gates/check-active-governance-wording.js",
+    "build-scripts/review-gates/finalization-freshness-proof.js",
     "build-scripts/review-gates/check-human-payload-authorization.js",
     "build-scripts/review-gates/check-human-bundle-authorization.js",
     "build-scripts/review-gates/check-integration-lineage.js",
