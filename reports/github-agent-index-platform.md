@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-25T15:09:56.151Z
+Generated: 2026-06-26T14:45:30.332Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h7-blind-holdout-execution-20260625`
-Source commit: `ddf8cd683551b0748af5afb02d89e9ed9a8181cd`
-Files indexed: 6198
+Source commit: `f894f4a36003293229f29bf24016793a60149a63`
+Files indexed: 6255
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 596
+Count: 601
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -220,6 +220,7 @@ Count: 596
 - build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
 - build-scripts/inspection/build-internal-overlay-prototype-planning.js
+- build-scripts/inspection/build-internal-overlay-trial-contract.js
 - build-scripts/inspection/build-international-overlay-architecture.js
 - build-scripts/inspection/build-international-quality-standards.js
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
@@ -227,6 +228,8 @@ Count: 596
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.test.js
+- build-scripts/inspection/check-internal-overlay-trial-contract.js
+- build-scripts/inspection/check-internal-overlay-trial-contract.test.js
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
@@ -328,6 +331,7 @@ Count: 596
 - build-scripts/references/build-source-document-registry.js
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
+- build-scripts/references/build-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/build-y2-target-foundation-production-readiness-bundle-1.js
 - build-scripts/references/check-alignment-graph.js
@@ -443,6 +447,7 @@ Count: 596
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
+- build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/check-y2-target-foundation-production-readiness-bundle-1.js
@@ -789,13 +794,14 @@ Count: 46
 
 ## validators
 
-Count: 574
+Count: 580
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-validation-log.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
 - archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
@@ -845,6 +851,8 @@ Count: 574
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.test.js
+- build-scripts/inspection/check-internal-overlay-trial-contract.js
+- build-scripts/inspection/check-internal-overlay-trial-contract.test.js
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
@@ -971,6 +979,7 @@ Count: 574
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
+- build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/check-y2-target-foundation-production-readiness-bundle-1.js
@@ -1144,6 +1153,8 @@ Count: 574
 - references/exemplars/product-excellence/reasoning-games/compositions/reasoning-index-check-composed-v1.json
 - reports/fixtures/review-throughput-1/negative-ci-missing-validate-platform.json
 - reports/fixtures/review-throughput-1/negative-ci-validate-platform-failed.json
+- reports/inspection-standards/internal-overlay-trial-contract-validation.json
+- reports/inspection-standards/internal-overlay-trial-contract-validation.md
 - reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
@@ -1368,7 +1379,7 @@ Count: 574
 
 ## references
 
-Count: 737
+Count: 755
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1408,6 +1419,22 @@ Count: 737
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/directory-globbing.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/implicit-source-discovery.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/inspection-readiness-claims.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/legal-compliance-claims.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/localized-output-request.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/missing-crosswalk-rows.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/personal-data-fields.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/product-route-scale-gate.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/public-output.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/stale-sources.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/student-facing-output.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/support-accommodation-sufficiency.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/teacher-school-facing-output.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/unknown-source-ids.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/england-internal-overlay-trial-contract.sample.json
+- references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/flanders-internal-overlay-trial-contract.sample.json
 - references/data/inspection-standards/fixtures/negative/extra-property.sample.json
 - references/data/inspection-standards/fixtures/negative/full-report-missing-category.sample.json
 - references/data/inspection-standards/fixtures/negative/invalid-category-id.sample.json
@@ -1885,6 +1912,7 @@ Count: 737
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/data/year2-target-foundation/answer-contracts.json
 - references/data/year2-target-foundation/canonical-source-assets.json
+- references/data/year2-target-foundation/lesson-production-eligibility-overlay.json
 - references/data/year2-target-foundation/source-reconstruction-foundation.json
 - references/exemplars/1.1.1-golden-presentation/accepted-snapshot-provenance.md
 - references/exemplars/1.1.1-golden-presentation/content-review-and-revision-notes.md
@@ -2064,6 +2092,7 @@ Count: 737
 - references/schemas/feedback.schema.json
 - references/schemas/game-item.schema.json
 - references/schemas/inspection-evidence.schema.json
+- references/schemas/internal-overlay-trial-contract.schema.v1.json
 - references/schemas/international-jurisdiction-overlay.schema.json
 - references/schemas/international-jurisdiction-overlay.schema.v1.json
 - references/schemas/misconception.schema.json
@@ -2110,7 +2139,7 @@ Count: 737
 
 ## reports
 
-Count: 4037
+Count: 4059
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2213,18 +2242,28 @@ Count: 4037
 - reports/inspection-standards/dutch-school-evidence-pack-candidate.md
 - reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.json
 - reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.md
+- reports/inspection-standards/england-internal-overlay-trial-contract.json
+- reports/inspection-standards/england-internal-overlay-trial-contract.md
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.md
+- reports/inspection-standards/flanders-internal-overlay-trial-contract.json
+- reports/inspection-standards/flanders-internal-overlay-trial-contract.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
+- reports/inspection-standards/internal-overlay-no-output-trial-trace.json
+- reports/inspection-standards/internal-overlay-no-output-trial-trace.md
 - reports/inspection-standards/internal-overlay-prototype-plan.json
 - reports/inspection-standards/internal-overlay-prototype-plan.md
 - reports/inspection-standards/internal-overlay-prototype-planning-decision.json
 - reports/inspection-standards/internal-overlay-prototype-planning-decision.md
 - reports/inspection-standards/internal-overlay-prototype-refusal-matrix.json
 - reports/inspection-standards/internal-overlay-prototype-refusal-matrix.md
+- reports/inspection-standards/internal-overlay-trial-contract-decision.json
+- reports/inspection-standards/internal-overlay-trial-contract-decision.md
+- reports/inspection-standards/internal-overlay-trial-contract-validation.json
+- reports/inspection-standards/internal-overlay-trial-contract-validation.md
 - reports/inspection-standards/international-book-portability-pilot.json
 - reports/inspection-standards/international-book-portability-pilot.md
 - reports/inspection-standards/international-commonalities-and-differences.json
@@ -2773,6 +2812,7 @@ Count: 4037
 - reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-quality-log.md
 - reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-review-packet.md
 - reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md
+- reports/reference-planning/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1-review-packet.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-assessment-retrieval-spine.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-book8-compression-review.md
@@ -3531,6 +3571,7 @@ Count: 4037
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H6-cross-exam-generalization-and-evidence-integrity-bundle-1/review-packet.md
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
@@ -3847,6 +3888,14 @@ Count: 4037
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.md
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/review-packet.json
+- reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
 - reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.json
 - reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.md
@@ -6134,6 +6183,8 @@ Count: 4037
 - reports/sprints/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-result.md
 - reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-plan.md
 - reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md
+- reports/sprints/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1-plan.md
+- reports/sprints/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1-result.md
 - reports/sprints/Y2-ROOT-MAPPING-1-plan.md
 - reports/sprints/Y2-ROOT-MAPPING-1-result.md
 - reports/sprints/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1-plan.md
@@ -6170,7 +6221,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 631
+Count: 642
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6207,6 +6258,17 @@ Count: 631
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-correction-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-correction-log.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-england-source-review.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-flanders-source-review.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-inspection-accessibility-review.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-legal-privacy-review.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-result.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-schema-architecture-review.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-specialist-gate-results.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-teacher-economics-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-correction-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-final-lead-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-lead-architecture-review.md
