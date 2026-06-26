@@ -19,7 +19,7 @@ function fail(message) {
 function optionValue(args, name) {
   const index = args.indexOf(name);
   if (index === -1) return null;
-  if (!args[index + 1]) fail(`missing value for ${name}`);
+  if (index + 1 >= args.length) fail(`missing value for ${name}`);
   return args[index + 1];
 }
 
