@@ -1,0 +1,1225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.example/internal-no-output-trial-simulation.schema.v1.json",
+  "title": "Internal No-Output Trial Simulation",
+  "description": "Strict internal-only no-output simulation schema. It is not runtime, product-route, school-facing, public, source-refresh, local-expert, or compliance authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "report_id",
+    "sprint_id",
+    "status",
+    "internal_only",
+    "manual_invocation_only",
+    "human_review_required",
+    "accepted_trial_contract_decision",
+    "product_end_state",
+    "original_sprint_gate_spec",
+    "core_requirement_checklist",
+    "input_allowlist",
+    "output_allowlist",
+    "output_boundary",
+    "simulation_id",
+    "simulation_mode",
+    "source_contract",
+    "jurisdiction_source_binding",
+    "simulation_no_output_enforcement",
+    "simulation_rows",
+    "closure_disposition",
+    "finding_classification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "report_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sprint_id": {
+      "const": "GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1"
+    },
+    "generated_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "internal_only": {
+      "const": true
+    },
+    "manual_invocation_only": {
+      "const": true
+    },
+    "human_review_required": {
+      "const": true
+    },
+    "accepted_trial_contract_decision": {
+      "const": "PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION"
+    },
+    "accepted_trial_contract_decision_source": {
+      "const": "reports/inspection-standards/internal-overlay-trial-contract-decision.md"
+    },
+    "product_end_state": {
+      "const": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    "original_sprint_gate_spec": {
+      "const": "archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-sprint-plan.md"
+    },
+    "roadmap_source": {
+      "const": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md"
+    },
+    "non_negotiable_requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "core_requirement_checklist": {
+      "type": "array",
+      "minItems": 10
+    },
+    "input_allowlist": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        {
+          "const": "reports/inspection-standards/england-internal-overlay-trial-contract.json"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-internal-overlay-trial-contract.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-overlay-trial-contract-decision.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-overlay-trial-contract-validation.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-overlay-no-output-trial-trace.json"
+        },
+        {
+          "const": "references/schemas/internal-overlay-trial-contract.schema.v1.json"
+        }
+      ]
+    },
+    "output_allowlist": {
+      "type": "array",
+      "minItems": 41,
+      "maxItems": 41,
+      "prefixItems": [
+        {
+          "const": "references/schemas/internal-no-output-trial-simulation.schema.v1.json"
+        },
+        {
+          "const": "reports/inspection-standards/england-internal-no-output-trial-simulation.md"
+        },
+        {
+          "const": "reports/inspection-standards/england-internal-no-output-trial-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-internal-no-output-trial-simulation.md"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-internal-no-output-trial-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation.md"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation-validation.md"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation-validation.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation-decision.md"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation-decision.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/positive/england-internal-no-output-trial-simulation.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/positive/flanders-internal-no-output-trial-simulation.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/missing-contract-row.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/duplicate-contract-row.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/wrong-contract-row.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/wrong-concept-lineage.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/missing-transformation-actions.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/unknown-contract-source.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/localized-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/student-facing-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/runtime-execution.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/teacher-school-facing-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/public-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/personal-data.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/compliance-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/support-accommodation-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/product-route-scale-gate.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/implicit-discovery.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/source-refresh-execution.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-source-refresh-executed.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-local-expert-substituted.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-aqa-approval-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-ok-compliance-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-whole-uk-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-all-belgium-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-legal-sufficiency-ready.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-support-sufficiency-ready.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-public-output-ready.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/decision-overclaim.sample.json"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-sprint-plan.md"
+        }
+      ]
+    },
+    "output_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "country_compliance_claim",
+        "inspectorate_approval_claim",
+        "legal_compliance_claim",
+        "inspection_readiness_claim",
+        "school_pack_trial",
+        "teacher_school_distribution",
+        "public_external_distribution",
+        "evidence_pack_deployment",
+        "package_script_invocation",
+        "ci_invocation",
+        "dashboard_gate",
+        "quality_ref_integration",
+        "product_route_adoption",
+        "scale_gate_integration",
+        "diagnostics_mastery_pv",
+        "student_or_product_use",
+        "personal_data_processing",
+        "complete_op0_pta_summative_claim",
+        "op0_claim",
+        "pta_validity_claim",
+        "summative_validity_claim",
+        "single_national_us_inspection_claim",
+        "whole_uk_claim_from_england_only",
+        "all_belgium_claim_from_flanders_only",
+        "germany_single_land_claim",
+        "country_edition_generation",
+        "local_exam_code_implementation",
+        "teacher_school_facing_overlay",
+        "public_overlay_output",
+        "school_owned_evidence_collection",
+        "package_or_ci_product_integration",
+        "country_specific_legal_claim",
+        "localized_student_facing_chapters",
+        "teacher_school_facing_distribution",
+        "selected_jurisdiction_public_output",
+        "selected_jurisdiction_evidence_pack",
+        "selected_jurisdiction_product_route",
+        "selected_jurisdiction_scale_gate",
+        "selected_jurisdiction_personal_data",
+        "selected_jurisdiction_legal_sufficiency_claim",
+        "selected_jurisdiction_compliance_claim",
+        "selected_jurisdiction_approval_claim",
+        "selected_jurisdiction_accreditation_claim",
+        "selected_jurisdiction_inspection_readiness_claim",
+        "internal_prototype_runtime_execution",
+        "localized_overlay_output_generation",
+        "fixture_to_product_promotion",
+        "teacher_school_pilot",
+        "support_sufficiency_claim",
+        "accommodation_sufficiency_claim",
+        "individual_adjustment_claim",
+        "support_records_personal_data",
+        "automated_source_refresh",
+        "non_allowlisted_source_use",
+        "local_expert_substitution",
+        "internal_no_output_trial_is_not_runtime",
+        "localized_textbook_paragraph_generation",
+        "localized_exercise_generation",
+        "localized_answer_model_generation",
+        "student_facing_file_generation",
+        "teacher_school_contract_output",
+        "public_contract_output",
+        "country_contract_publication",
+        "school_pilot_execution",
+        "trial_simulation_product_integration",
+        "trial_contract_personal_data_fields",
+        "legal_sufficiency_claim",
+        "support_or_accommodation_sufficiency_claim",
+        "trial_runtime_execution",
+        "localized_simulation_output",
+        "simulation_teacher_school_output",
+        "simulation_public_output",
+        "simulation_evidence_pack_generation",
+        "simulation_product_route",
+        "simulation_scale_gate",
+        "simulation_diagnostics_mastery_pv",
+        "simulation_student_product_use",
+        "simulation_personal_data_processing",
+        "source_refresh_execution",
+        "country_edition_from_simulation",
+        "localized_assessment_item_generation",
+        "school_owned_evidence_satisfaction_claim"
+      ],
+      "properties": {
+        "country_compliance_claim": {
+          "const": false
+        },
+        "inspectorate_approval_claim": {
+          "const": false
+        },
+        "legal_compliance_claim": {
+          "const": false
+        },
+        "inspection_readiness_claim": {
+          "const": false
+        },
+        "school_pack_trial": {
+          "const": false
+        },
+        "teacher_school_distribution": {
+          "const": false
+        },
+        "public_external_distribution": {
+          "const": false
+        },
+        "evidence_pack_deployment": {
+          "const": false
+        },
+        "package_script_invocation": {
+          "const": false
+        },
+        "ci_invocation": {
+          "const": false
+        },
+        "dashboard_gate": {
+          "const": false
+        },
+        "quality_ref_integration": {
+          "const": false
+        },
+        "product_route_adoption": {
+          "const": false
+        },
+        "scale_gate_integration": {
+          "const": false
+        },
+        "diagnostics_mastery_pv": {
+          "const": false
+        },
+        "student_or_product_use": {
+          "const": false
+        },
+        "personal_data_processing": {
+          "const": false
+        },
+        "complete_op0_pta_summative_claim": {
+          "const": false
+        },
+        "op0_claim": {
+          "const": false
+        },
+        "pta_validity_claim": {
+          "const": false
+        },
+        "summative_validity_claim": {
+          "const": false
+        },
+        "single_national_us_inspection_claim": {
+          "const": false
+        },
+        "whole_uk_claim_from_england_only": {
+          "const": false
+        },
+        "all_belgium_claim_from_flanders_only": {
+          "const": false
+        },
+        "germany_single_land_claim": {
+          "const": false
+        },
+        "country_edition_generation": {
+          "const": false
+        },
+        "local_exam_code_implementation": {
+          "const": false
+        },
+        "teacher_school_facing_overlay": {
+          "const": false
+        },
+        "public_overlay_output": {
+          "const": false
+        },
+        "school_owned_evidence_collection": {
+          "const": false
+        },
+        "package_or_ci_product_integration": {
+          "const": false
+        },
+        "country_specific_legal_claim": {
+          "const": false
+        },
+        "localized_student_facing_chapters": {
+          "const": false
+        },
+        "teacher_school_facing_distribution": {
+          "const": false
+        },
+        "selected_jurisdiction_public_output": {
+          "const": false
+        },
+        "selected_jurisdiction_evidence_pack": {
+          "const": false
+        },
+        "selected_jurisdiction_product_route": {
+          "const": false
+        },
+        "selected_jurisdiction_scale_gate": {
+          "const": false
+        },
+        "selected_jurisdiction_personal_data": {
+          "const": false
+        },
+        "selected_jurisdiction_legal_sufficiency_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_compliance_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_approval_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_accreditation_claim": {
+          "const": false
+        },
+        "selected_jurisdiction_inspection_readiness_claim": {
+          "const": false
+        },
+        "internal_prototype_runtime_execution": {
+          "const": false
+        },
+        "localized_overlay_output_generation": {
+          "const": false
+        },
+        "fixture_to_product_promotion": {
+          "const": false
+        },
+        "teacher_school_pilot": {
+          "const": false
+        },
+        "support_sufficiency_claim": {
+          "const": false
+        },
+        "accommodation_sufficiency_claim": {
+          "const": false
+        },
+        "individual_adjustment_claim": {
+          "const": false
+        },
+        "support_records_personal_data": {
+          "const": false
+        },
+        "automated_source_refresh": {
+          "const": false
+        },
+        "non_allowlisted_source_use": {
+          "const": false
+        },
+        "local_expert_substitution": {
+          "const": false
+        },
+        "internal_no_output_trial_is_not_runtime": {
+          "const": false
+        },
+        "localized_textbook_paragraph_generation": {
+          "const": false
+        },
+        "localized_exercise_generation": {
+          "const": false
+        },
+        "localized_answer_model_generation": {
+          "const": false
+        },
+        "student_facing_file_generation": {
+          "const": false
+        },
+        "teacher_school_contract_output": {
+          "const": false
+        },
+        "public_contract_output": {
+          "const": false
+        },
+        "country_contract_publication": {
+          "const": false
+        },
+        "school_pilot_execution": {
+          "const": false
+        },
+        "trial_simulation_product_integration": {
+          "const": false
+        },
+        "trial_contract_personal_data_fields": {
+          "const": false
+        },
+        "legal_sufficiency_claim": {
+          "const": false
+        },
+        "support_or_accommodation_sufficiency_claim": {
+          "const": false
+        },
+        "trial_runtime_execution": {
+          "const": false
+        },
+        "localized_simulation_output": {
+          "const": false
+        },
+        "simulation_teacher_school_output": {
+          "const": false
+        },
+        "simulation_public_output": {
+          "const": false
+        },
+        "simulation_evidence_pack_generation": {
+          "const": false
+        },
+        "simulation_product_route": {
+          "const": false
+        },
+        "simulation_scale_gate": {
+          "const": false
+        },
+        "simulation_diagnostics_mastery_pv": {
+          "const": false
+        },
+        "simulation_student_product_use": {
+          "const": false
+        },
+        "simulation_personal_data_processing": {
+          "const": false
+        },
+        "source_refresh_execution": {
+          "const": false
+        },
+        "country_edition_from_simulation": {
+          "const": false
+        },
+        "localized_assessment_item_generation": {
+          "const": false
+        },
+        "school_owned_evidence_satisfaction_claim": {
+          "const": false
+        }
+      }
+    },
+    "simulation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "simulation_mode": {
+      "const": "manual_internal_summary_only"
+    },
+    "source_contract": {
+      "$ref": "#/$defs/sourceContract"
+    },
+    "jurisdiction_source_binding": {
+      "$ref": "#/$defs/jurisdictionSourceBinding"
+    },
+    "simulation_status_vocabulary": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {
+          "const": "blocked_before_any_output"
+        },
+        {
+          "const": "internal_summary_only_no_output_complete"
+        }
+      ]
+    },
+    "simulation_no_output_enforcement": {
+      "$ref": "#/$defs/noOutputEnforcement"
+    },
+    "simulation_rows": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "$ref": "#/$defs/simulationRow"
+      }
+    },
+    "aggregate_blockers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "closure_disposition": {
+      "$ref": "#/$defs/closureDisposition"
+    },
+    "finding_classification": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/findingClassification"
+      }
+    }
+  },
+  "$defs": {
+    "sourceContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report_id",
+        "contract_id",
+        "source_file",
+        "contract_decision",
+        "contract_row_count"
+      ],
+      "properties": {
+        "report_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract_decision": {
+          "const": "PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION"
+        },
+        "contract_row_count": {
+          "const": 10
+        }
+      }
+    },
+    "sourcePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "explicit_contract_inputs_only",
+        "input_allowlist",
+        "directory_globbing_allowed",
+        "implicit_source_discovery",
+        "generated_lesson_output_scanning",
+        "source_refresh_executed",
+        "local_expert_substitution"
+      ],
+      "properties": {
+        "explicit_contract_inputs_only": {
+          "const": true
+        },
+        "input_allowlist": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "prefixItems": [
+            {
+              "const": "reports/inspection-standards/england-internal-overlay-trial-contract.json"
+            },
+            {
+              "const": "reports/inspection-standards/flanders-internal-overlay-trial-contract.json"
+            },
+            {
+              "const": "reports/inspection-standards/internal-overlay-trial-contract-decision.json"
+            },
+            {
+              "const": "reports/inspection-standards/internal-overlay-trial-contract-validation.json"
+            },
+            {
+              "const": "reports/inspection-standards/internal-overlay-no-output-trial-trace.json"
+            },
+            {
+              "const": "references/schemas/internal-overlay-trial-contract.schema.v1.json"
+            }
+          ]
+        },
+        "directory_globbing_allowed": {
+          "const": false
+        },
+        "implicit_source_discovery": {
+          "const": false
+        },
+        "generated_lesson_output_scanning": {
+          "const": false
+        },
+        "source_refresh_executed": {
+          "const": false
+        },
+        "local_expert_substitution": {
+          "const": false
+        }
+      }
+    },
+    "jurisdictionSourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jurisdiction_id",
+        "jurisdiction_label",
+        "descriptor_id",
+        "official_source_ids",
+        "source_policy"
+      ],
+      "properties": {
+        "jurisdiction_id": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "jurisdiction_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "descriptor_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "official_source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_policy": {
+          "$ref": "#/$defs/sourcePolicy"
+        }
+      }
+    },
+    "noOutputEnforcement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "internal_summary_only",
+        "runtime_execution_performed",
+        "localized_textbook_paragraphs_generated",
+        "localized_exercises_generated",
+        "localized_answer_models_generated",
+        "localized_assessment_items_generated",
+        "student_facing_files_generated",
+        "teacher_school_facing_output_generated",
+        "public_output_generated",
+        "evidence_pack_generated",
+        "generated_lesson_output_scanned",
+        "personal_data_fields_present",
+        "product_route_integration_requested",
+        "scale_gate_integration_requested",
+        "diagnostics_mastery_pv_requested",
+        "automated_source_refresh_executed",
+        "local_expert_substituted"
+      ],
+      "properties": {
+        "internal_summary_only": {
+          "const": true
+        },
+        "runtime_execution_performed": {
+          "const": false
+        },
+        "localized_textbook_paragraphs_generated": {
+          "const": false
+        },
+        "localized_exercises_generated": {
+          "const": false
+        },
+        "localized_answer_models_generated": {
+          "const": false
+        },
+        "localized_assessment_items_generated": {
+          "const": false
+        },
+        "student_facing_files_generated": {
+          "const": false
+        },
+        "teacher_school_facing_output_generated": {
+          "const": false
+        },
+        "public_output_generated": {
+          "const": false
+        },
+        "evidence_pack_generated": {
+          "const": false
+        },
+        "generated_lesson_output_scanned": {
+          "const": false
+        },
+        "personal_data_fields_present": {
+          "const": false
+        },
+        "product_route_integration_requested": {
+          "const": false
+        },
+        "scale_gate_integration_requested": {
+          "const": false
+        },
+        "diagnostics_mastery_pv_requested": {
+          "const": false
+        },
+        "automated_source_refresh_executed": {
+          "const": false
+        },
+        "local_expert_substituted": {
+          "const": false
+        }
+      }
+    },
+    "sourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_role",
+        "access_date",
+        "source_scope",
+        "forbidden_inference"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "access_date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_inference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "retainedBlockerDisplay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "route_local_only_evidence_status",
+        "school_owned_evidence_still_needed",
+        "forbidden_inferences",
+        "accessibility_support_limitations",
+        "legal_sufficiency_blocked",
+        "support_sufficiency_blocked",
+        "school_owned_accommodation_evidence_needed",
+        "individual_adjustment_claim_blocked",
+        "support_records_personal_data_blocked",
+        "check_surface_authority_separation",
+        "owner_next_action",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "route_local_only_evidence_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "school_owned_evidence_still_needed": {
+          "const": true
+        },
+        "forbidden_inferences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "accessibility_support_limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "legal_sufficiency_blocked": {
+          "const": true
+        },
+        "support_sufficiency_blocked": {
+          "const": true
+        },
+        "school_owned_accommodation_evidence_needed": {
+          "const": true
+        },
+        "individual_adjustment_claim_blocked": {
+          "const": true
+        },
+        "support_records_personal_data_blocked": {
+          "const": true
+        },
+        "check_surface_authority_separation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner_next_action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "simulationDisposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "finding_classification",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "blocked_before_any_output",
+            "internal_summary_only_no_output_complete"
+          ]
+        },
+        "finding_classification": {
+          "enum": [
+            "core_requirement_met",
+            "quality_improvement_available",
+            "minor_carry_flag",
+            "scale_blocker",
+            "core_spec_failure"
+          ]
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "simulationRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "simulation_row_id",
+        "source_contract_row_id",
+        "jurisdiction_id",
+        "chapter_id",
+        "paragraph_id",
+        "chapter_paragraph",
+        "concept_id",
+        "crosswalk_row_id",
+        "source_ids",
+        "source_bindings",
+        "transformation_actions",
+        "simulated_internal_observation",
+        "no_output_result",
+        "retained_blocker_display",
+        "blocker_codes",
+        "proof_required_to_close",
+        "simulation_disposition"
+      ],
+      "properties": {
+        "simulation_row_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_contract_row_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction_id": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "chapter_id": {
+          "enum": [
+            "1.2",
+            "1.3"
+          ]
+        },
+        "paragraph_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chapter_paragraph": {
+          "type": "string",
+          "minLength": 1
+        },
+        "concept_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "crosswalk_row_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "local_heading": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mapping_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assessment_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_bindings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/sourceBinding"
+          }
+        },
+        "transformation_actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "simulated_internal_observation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "no_output_result": {
+          "$ref": "#/$defs/noOutputEnforcement"
+        },
+        "retained_blocker_display": {
+          "$ref": "#/$defs/retainedBlockerDisplay"
+        },
+        "blocker_codes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        },
+        "simulation_disposition": {
+          "$ref": "#/$defs/simulationDisposition"
+        }
+      }
+    },
+    "closureDisposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "internal_no_output_simulation_complete",
+        "localized_output_generation_ready",
+        "product_route_ready",
+        "scale_gate_ready",
+        "diagnostics_mastery_pv_ready",
+        "school_owned_evidence_still_needed",
+        "source_refresh_needed_before_any_output",
+        "local_expert_review_needed_before_any_output",
+        "source_refresh_executed",
+        "local_expert_substituted",
+        "aqa_approval_claim",
+        "ok_compliance_claim",
+        "legal_sufficiency_ready",
+        "support_sufficiency_ready",
+        "public_output_ready",
+        "whole_uk_claim_from_england_only",
+        "all_belgium_claim_from_flanders_only",
+        "next_allowed_step_if_human_approved"
+      ],
+      "properties": {
+        "internal_no_output_simulation_complete": {
+          "const": true
+        },
+        "localized_output_generation_ready": {
+          "const": false
+        },
+        "product_route_ready": {
+          "const": false
+        },
+        "scale_gate_ready": {
+          "const": false
+        },
+        "diagnostics_mastery_pv_ready": {
+          "const": false
+        },
+        "school_owned_evidence_still_needed": {
+          "type": "boolean"
+        },
+        "source_refresh_needed_before_any_output": {
+          "const": true
+        },
+        "local_expert_review_needed_before_any_output": {
+          "const": true
+        },
+        "source_refresh_executed": {
+          "const": false
+        },
+        "local_expert_substituted": {
+          "const": false
+        },
+        "aqa_approval_claim": {
+          "const": false
+        },
+        "ok_compliance_claim": {
+          "const": false
+        },
+        "legal_sufficiency_ready": {
+          "const": false
+        },
+        "support_sufficiency_ready": {
+          "const": false
+        },
+        "public_output_ready": {
+          "const": false
+        },
+        "whole_uk_claim_from_england_only": {
+          "const": false
+        },
+        "all_belgium_claim_from_flanders_only": {
+          "const": false
+        },
+        "next_allowed_step_if_human_approved": {
+          "const": "PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING"
+        }
+      }
+    },
+    "findingClassification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "finding",
+        "classification",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "finding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "enum": [
+            "core_requirement_met",
+            "quality_improvement_available",
+            "minor_carry_flag",
+            "scale_blocker",
+            "core_spec_failure"
+          ]
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
