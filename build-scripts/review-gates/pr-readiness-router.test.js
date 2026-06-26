@@ -305,8 +305,11 @@ describe('pr-readiness-router', () => {
               repo: 'meijer1973/4veco-lessen',
               number: 34,
               open: true,
+              current: true,
               mergeable: true,
+              ready: true,
               is_draft: false,
+              base: 'main',
               head_sha: lessonHead,
               reviewed_payload_head_sha: lessonHead,
             },
@@ -597,8 +600,11 @@ describe('pr-readiness-router', () => {
               repo: 'meijer1973/4veco-lessen',
               number: 34,
               open: true,
+              current: true,
               mergeable: true,
+              ready: true,
               is_draft: false,
+              base: 'main',
               head_sha: lessonHead,
               reviewed_payload_head_sha: lessonHead,
             },
@@ -626,6 +632,7 @@ describe('pr-readiness-router', () => {
     const readyRuleJson = JSON.stringify(readyRule);
     expect(readyRule.then.properties).toBeUndefined();
     expect(readyRuleJson).toContain('"bundle_delegated_ci"');
+    expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"paired_prs"');
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"transitionable_draft_members"');
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"transition_ready"');
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"merge_ready"');
@@ -667,8 +674,11 @@ describe('pr-readiness-router', () => {
               repo: 'meijer1973/4veco-lessen',
               number: 34,
               open: true,
+              current: true,
               mergeable: true,
+              ready: true,
               is_draft: false,
+              base: 'main',
               head_sha: lessonHead,
               reviewed_payload_head_sha: lessonHead,
             },
@@ -980,8 +990,11 @@ describe('pr-readiness-router', () => {
               repo: 'meijer1973/4veco-platform',
               number: 140,
               open: true,
+              current: true,
               mergeable: true,
+              ready: true,
               is_draft: false,
+              base: 'main',
               head_sha: platformHead,
               reviewed_payload_head_sha: platformHead,
             },
@@ -1155,6 +1168,89 @@ describe('pr-readiness-router', () => {
     expect(decision.allowed_transition).toBe('NONE');
     expect(decision.proof.bundle.transition_ready).toBe(false);
     expect(decision.proof.bundle.merge_ready).toBe(true);
+  });
+
+  test.each([
+    ['missing open', (member) => delete member.open],
+    ['missing current', (member) => delete member.current],
+    ['unknown mergeability', (member) => { member.mergeable = 'UNKNOWN'; }],
+  ])('delegated lesson bundle rejects malformed non-draft paired lifecycle: %s', (_name, mutate) => {
+    const head = '4'.repeat(40);
+    const platformHead = '2'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: platformHead,
+      lesson_candidate_sha: head,
+    });
+    const paired = {
+      repo: 'meijer1973/4veco-platform',
+      number: 140,
+      open: true,
+      current: true,
+      mergeable: true,
+      ready: true,
+      is_draft: false,
+      base: 'main',
+      head_sha: platformHead,
+      reviewed_payload_head_sha: platformHead,
+    };
+    mutate(paired);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-lessen',
+        number: 34,
+        url: 'https://github.com/meijer1973/4veco-lessen/pull/34',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: head,
+      },
+      changed_paths: ['Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Grafieken/1.1.3 Grafieken en tabellen/index.html'],
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        class: 'cross_repo_bundle',
+        authority_class: 'generated_output',
+        level: 'L4',
+        human_decision_required: true,
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      proof: {
+        ci: {},
+        checkers: [{ command: 'delegated bundle controller proof', status: 'passed' }],
+        lead_review: {
+          path: 'subagent:paired-bundle-review',
+          result: 'PASS',
+          reviewed_commit_sha: head,
+        },
+        changed_paths_verified: true,
+        branch_protection: {
+          ok: false,
+          approval_count_observable: false,
+        },
+        bundle: {
+          delegated: true,
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: 'meijer1973/4veco-platform',
+            pr_number: 140,
+            reviewed_payload_head_sha: platformHead,
+          },
+          current_member: {
+            repository: 'meijer1973/4veco-lessen',
+            pr_number: 34,
+            head_sha: head,
+            reviewed_payload_head_sha: head,
+          },
+          exact_members: exactMembers,
+          paired_prs: [paired],
+          compatibility: bundleCompatibilityPlatformFirst(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('paired_pr_not_ready');
+    expect(decision.proof.bundle.merge_ready).toBe(false);
   });
 
   test('delegated lesson member cannot mark ready while the platform controller is still draft', () => {

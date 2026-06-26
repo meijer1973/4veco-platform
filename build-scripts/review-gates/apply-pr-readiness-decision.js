@@ -273,14 +273,13 @@ function applyLiveDecision(decision, options) {
   const body = renderDecisionMarkdown(decision);
 
   let transitionAction = 'none';
-  let shouldMarkReady = false;
   if (decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY) {
     if (currentPr.is_draft) {
       const finalPr = options.dryRun ? currentPr : fetchCurrentPr(repo, number);
       verifyTransitionPreconditions(decision, finalPr);
       verifyPairedTransitionPreconditions(decision, (pairedRepo, pairedNumber) => fetchCurrentPr(pairedRepo, pairedNumber));
       transitionAction = options.dryRun ? 'would_mark_ready' : 'marked_ready';
-      shouldMarkReady = !options.dryRun;
+      if (!options.dryRun) runGh(['pr', 'ready', String(number), '--repo', repo]);
     } else {
       transitionAction = 'already_ready';
     }
@@ -290,8 +289,6 @@ function applyLiveDecision(decision, options) {
   const commentResult = options.dryRun
     ? { action: findExistingComment(comments, marker) ? 'would_update_comment' : 'would_create_comment' }
     : postOrUpdateLiveComment(repo, number, findExistingComment(comments, marker), body);
-
-  if (shouldMarkReady) runGh(['pr', 'ready', String(number), '--repo', repo]);
 
   return {
     ok: true,

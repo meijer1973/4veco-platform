@@ -548,6 +548,7 @@ function bundleSafetyProof(proof, evidence) {
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
   for (const paired of pairedPrs) {
     if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
+    if (paired && !paired.base) failures.push('paired_pr_base_missing');
     if (paired && paired.reviewed_payload_head_sha && paired.head_sha && paired.reviewed_payload_head_sha !== paired.head_sha) {
       failures.push('paired_pr_head_mismatch');
     }
@@ -578,6 +579,7 @@ function bundleSafetyProof(proof, evidence) {
     const pairedLeadReview = pairedLeadReviewFor(paired, proof);
     if (pairedLeadReview) pairedLeadReviews.push(normalizePairedLeadReview(pairedLeadReview));
     const transitionable = controllerFirstDraftTransitionable(paired, transitionContext);
+    const lifecycleOk = bundleMemberLifecycleOk(paired);
     if (transitionable) {
       transitionableDraftMembers.push({
         repository: paired.repository,
@@ -589,17 +591,13 @@ function bundleSafetyProof(proof, evidence) {
       });
     }
     if (paired && paired.is_draft === true && !transitionable) failures.push('paired_pr_draft');
-    if (
-      paired &&
-      (paired.ready === false || paired.current === false || paired.open === false || paired.mergeable === false) &&
-      !transitionable
-    ) {
+    if (paired && (!lifecycleOk || paired.ready !== true) && !transitionable) {
       failures.push('paired_pr_not_ready');
     }
   }
   const reviewedPrIsDraft = evidence.reviewed_pr.was_draft !== false;
   const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
-  const anyPairedNotReady = pairedPrs.some((paired) => paired && paired.ready !== true);
+  const anyPairedNotReady = pairedPrs.some((paired) => paired && (!bundleMemberLifecycleOk(paired) || paired.ready !== true));
   const transitionReady = failures.length === 0 && (reviewedPrIsDraft || transitionableDraftMembers.length > 0);
   const mergeReady =
     failures.length === 0 &&
@@ -1047,7 +1045,10 @@ function validateDecision(decision) {
       const pairedPrs = asArray(decision.proof.bundle.paired_prs);
       const hasTransitionableDraftMembers = asArray(decision.proof.bundle.transitionable_draft_members).length > 0;
       const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
-      const anyPairedNotReady = pairedPrs.some((paired) => paired && paired.ready !== true);
+      const anyPairedNotReady = pairedPrs.some((paired) => {
+        const member = normalizeBundleMember(paired);
+        return !member.base || !bundleMemberLifecycleOk(member) || member.ready !== true;
+      });
       if (
         decision.proof.bundle.merge_ready === true &&
         (decision.reviewed_pr.was_draft !== false ||
