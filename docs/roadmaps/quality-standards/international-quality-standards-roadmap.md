@@ -1,11 +1,11 @@
 # International Quality Standards Roadmap
 
-Status: active internal overlay trial-contract roadmap
+Status: active internal no-output trial-simulation roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.5-internal-overlay-trial-contract-human-review`
-Sprint status: `GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` current / internal-only no-output England/Flanders trial contract packet for human review
+Roadmap version: `v0.6-internal-no-output-trial-simulation-human-review`
+Sprint status: `GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1` current / internal-only no-output England/Flanders simulation packet for human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -176,9 +176,10 @@ accreditation, OP0, PTA, summative, inspection-readiness, school-owned
 evidence collection, support-sufficiency claims, accommodation-sufficiency
 claims, automated source refresh, or local-expert substitution.
 
-## 7. Current Internal Overlay Trial-Contract Scope
+## 7. Completed Internal Overlay Trial-Contract Scope
 
-`GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` may create:
+`GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` was accepted and merged on
+PR #155 and created:
 
 - a strict nested internal trial-contract schema;
 - complete England and Flanders contracts for Book 1 Chapters 1.2 and 1.3;
@@ -194,7 +195,8 @@ claims, automated source refresh, or local-expert substitution.
   `REVISE_TRIAL_CONTRACT`, or
   `STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK`;
 - manual generator/checker scripts, focused Jest tests, validation records,
-  specialist reviews, final lead review, PR proof, and human-review records.
+  specialist reviews, final lead review, PR proof, human-review records, and
+  post-merge CI proof.
 
 It must not create trial runtime execution, localized textbook paragraphs,
 localized exercises, answer models, student-facing files, country editions,
@@ -207,7 +209,45 @@ inspection-readiness, school-owned evidence collection, support-sufficiency
 claims, accommodation-sufficiency claims, automated source refresh, or
 local-expert substitution.
 
-## 8. Architecture Direction
+## 8. Current Internal No-Output Trial Simulation Scope
+
+`GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1` may create:
+
+- a strict nested internal no-output trial-simulation schema;
+- deterministic England and Flanders simulation reports over the accepted
+  trial-contract rows;
+- a combined internal simulation report, validation report, and decision
+  report;
+- positive and negative fixtures proving refusal of missing rows, unknown
+  sources, localized output, student-facing output, runtime execution,
+  teacher/school-facing output, public output, personal data, compliance
+  claims, support/accommodation claims, product-route/Scale Gate requests,
+  implicit discovery, source-refresh execution, and decision overclaims;
+- manual generator/checker scripts and focused Jest tests;
+- validation, specialist-review, final lead-review, PR proof, and human-review
+  records.
+
+It must retain every accepted row's route-local-only evidence status,
+school-owned evidence need, forbidden inferences, accessibility/support
+limitations, check-surface authority separation, owner next action, and proof
+required to close.
+
+It must not create trial runtime execution, source-refresh execution, local
+expert substitution, localized textbook paragraphs, localized exercises,
+localized answer models, localized assessment items, student-facing files,
+country editions, local implementation, local exam-code implementation,
+teacher/school-facing output, public output, evidence-pack deployment,
+package/CI product integration, dashboard gates, quality-ref or Scale Gate
+integration, product routes, diagnostics/mastery/PV, student/product use,
+personal-data processing, compliance, approval, accreditation, OP0, PTA,
+summative, inspection-readiness, school-owned evidence collection,
+support-sufficiency claims, or accommodation-sufficiency claims.
+
+The implemented decision may select only whether to proceed to a later
+planning-only local-expert/source-refresh gate. It does not authorize source
+refresh execution or local expert substitution.
+
+## 9. Architecture Direction
 
 The current architecture preserves four layers:
 
@@ -220,7 +260,7 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 9. Core-Requirement Checklist
+## 10. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
@@ -242,28 +282,36 @@ before any implementation.
 | Planning decision selects exactly one allowed option | closed | `internal-overlay-prototype-planning-decision.md/json` selected `PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT` |
 | Specialist reviews and final lead review are completed before human review | closed | PR #145 final lead PASS and human acceptance |
 | Human review happens before any later trial-contract draft authority | closed | PR #145 readiness proof, owner authorization, merge, and post-merge CI |
-| Internal trial contract schema covers authority, source, scope, transformation, blocker, review, freshness, no-output, refusal, and closure fields | current sprint | `internal-overlay-trial-contract.schema.v1.json` and checker PASS |
-| England and Flanders contracts bind all Book 1 1.2/1.3 crosswalk rows | current sprint | `england-internal-overlay-trial-contract.md/json`, `flanders-internal-overlay-trial-contract.md/json`, and checker PASS |
-| Contract rows use strict transformation-action vocabulary | current sprint | `check-internal-overlay-trial-contract.js` and focused Jest PASS |
-| No-output trace excludes localized paragraphs, exercises, answer models, and student-facing files | current sprint | `internal-overlay-no-output-trial-trace.md/json` and checker PASS |
-| Positive and negative fixtures prove source, freshness, row, discovery, audience, personal-data, claim, support/accommodation, product, and Scale Gate refusals | current sprint | `references/data/inspection-standards/fixtures/internal-overlay-trial-contract/**` and checker PASS |
-| Trial-contract decision selects exactly one allowed option | current sprint | `internal-overlay-trial-contract-decision.md/json` selects `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION` |
-| Specialist reviews and final lead review are completed before human review | current sprint | Specialist records and final lead PASS |
-| Human review happens before any no-output trial simulation authority | current sprint | PR freshness, CI, PR Readiness Reviewer, and human review |
+| Internal trial contract schema covers authority, source, scope, transformation, blocker, review, freshness, no-output, refusal, and closure fields | closed | PR #155 accepted, merged, and post-merge CI passed |
+| England and Flanders contracts bind all Book 1 1.2/1.3 crosswalk rows | closed | `england-internal-overlay-trial-contract.md/json`, `flanders-internal-overlay-trial-contract.md/json`, checker PASS, and PR #155 accepted |
+| Contract rows use strict transformation-action vocabulary | closed | `check-internal-overlay-trial-contract.js`, focused Jest PASS, and PR #155 accepted |
+| No-output trace excludes localized paragraphs, exercises, answer models, and student-facing files | closed | `internal-overlay-no-output-trial-trace.md/json`, checker PASS, and PR #155 accepted |
+| Positive and negative fixtures prove source, freshness, row, discovery, audience, personal-data, claim, support/accommodation, product, and Scale Gate refusals | closed | `references/data/inspection-standards/fixtures/internal-overlay-trial-contract/**`, checker PASS, and PR #155 accepted |
+| Trial-contract decision selects exactly one allowed option | closed | `internal-overlay-trial-contract-decision.md/json` selected `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION`; PR #155 accepted and merged |
+| Specialist reviews and final lead review are completed before human review | closed | Specialist records, final lead PASS, exact-head readiness, and PR #155 human acceptance |
+| Human review happens before any no-output trial simulation authority | closed | PR #155 governed integration, merge, and post-merge CI |
+| Internal no-output simulation schema covers accepted contract lineage, source policy, row simulation, retained blocker display, no-output flags, refusal conditions, and finding classification | current sprint | `internal-no-output-trial-simulation.schema.v1.json` and checker PASS |
+| England and Flanders simulations bind all accepted trial-contract rows | current sprint | `england-internal-no-output-trial-simulation.md/json`, `flanders-internal-no-output-trial-simulation.md/json`, and checker PASS |
+| Simulation rows retain route-local-only status, school-owned evidence needs, forbidden inferences, accessibility/support limitations, check-surface separation, owner next action, and proof required to close | current sprint | Simulation JSON rows and checker PASS |
+| No-output simulation excludes runtime execution, source refresh execution, local expert substitution, localized output, student-facing files, teacher/school-facing output, public output, evidence packs, and personal-data fields | current sprint | No-output flags, fixtures, and checker PASS |
+| Positive and negative fixtures prove missing-row, unknown-source, output, runtime, audience, personal-data, claim, product/Scale Gate, implicit-discovery, source-refresh, and overclaim refusals | current sprint | `references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/**` and checker PASS |
+| Simulation decision selects exactly one allowed option | current sprint | `internal-no-output-trial-simulation-decision.md/json` selects `PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING` |
+| Specialist reviews and final lead review are completed before human review | current sprint | Required before this PR can return for human review |
+| Human review happens before any local-expert/source-refresh gate planning authority | current sprint | PR freshness, CI, PR Readiness Reviewer, and human review |
 
-## 10. Candidate Future Sprints
+## 11. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1` | If the human owner accepts `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION`, run an internal no-output simulation against the accepted contracts without localized student-facing output. | not authorised until human acceptance |
+| `GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-PLANNING-1` | If the human owner accepts `PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING`, plan a later local-expert/source-refresh gate without executing source refresh or substituting local experts. | not authorised until human acceptance |
 | `GOAL-IQS-SOURCE-REFRESH-1` | Refresh sources and resolve source gaps for a selected subset of jurisdictions. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 11. Explicitly Blocked Work
+## 12. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -298,21 +346,23 @@ automated source refresh
 local expert substitution
 ```
 
-## 12. Current Recommended Next Step
+## 13. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1 contract packet after
-specialist reviews, final lead review, PR publication, branch freshness, and
-green CI are complete.
+Review the GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1 simulation packet
+after specialist reviews, final lead review, PR publication, branch freshness,
+and green CI are complete.
 ```
 
-Human acceptance of `GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` may
-authorise only a later internal no-output trial simulation. It must not unlock
-trial runtime execution, country implementation, localized textbook or overlay
-output, localized exercises, answer models, student-facing files, school or
-public distribution, product routes, Scale Gate, diagnostics/mastery/PV,
-student/product use, personal-data processing, compliance, approval,
-accreditation, OP0, PTA, summative, inspection-readiness, support-sufficiency,
-or accommodation-sufficiency claims.
+Human acceptance of `GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1` may
+authorise only later planning for a local-expert/source-refresh gate. It must
+not unlock source refresh execution, local expert substitution, trial runtime
+execution, country implementation, localized textbook or overlay output,
+localized exercises, answer models, assessment items, student-facing files,
+school or public distribution, product routes, Scale Gate,
+diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative,
+inspection-readiness, support-sufficiency, or accommodation-sufficiency
+claims.
