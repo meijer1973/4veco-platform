@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1",
+  "status": "support_closure_ready_for_human_review_not_active_until_merge",
+  "product_end_state": "Enable cross-repo Year 2 lesson-production PRs for the four reviewed target families after human merge, while keeping product route, CP-6, Scale Gate, diagnostics, mastery, PV, summative, and student/product use blocked.",
+  "original_specs": [
+    "REV-STD-1 review packet standard",
+    "Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1 production-readiness bundle",
+    "Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1 owner instruction"
+  ],
+  "non_negotiable_requirements": [
+    "Close exactly the 18 platform-side support blockers from the prior bundle.",
+    "Do not mutate active v5 target registry, live MTUs, broad operation registry rows, or answer-skill registry storage.",
+    "Prove all four Book 6 runtime cases with route-specific fixtures and negative guards.",
+    "Resolve seven answer-skill dispositions through minimal reviewed-equivalent support records.",
+    "Preserve no lesson generation, no product route, no CP-6, no Scale Gate, and no student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "18 prior platform support blockers closed",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+    },
+    {
+      "requirement": "Four Book 6 runtime cases have passing and negative fixture proof",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json"
+    },
+    {
+      "requirement": "Seven extension cases have exact route proof",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json"
+    },
+    {
+      "requirement": "Seven answer-skill dispositions map to reviewed-equivalent support records",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json"
+    },
+    {
+      "requirement": "Resolver overlay requires candidate record plus prior production-readiness bundle plus support closure",
+      "status": "met",
+      "evidence": "references/data/year2-target-foundation/lesson-production-eligibility-overlay.json"
+    },
+    {
+      "requirement": "Rendered evidence exists without generated lesson output",
+      "status": "met",
+      "evidence": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+    },
+    {
+      "requirement": "Current-head PR proof",
+      "status": "pending_remote_pr",
+      "evidence": "Exact-head CI, readiness, lead review, branch protection ok:true, and owner authorization are required before merge."
+    }
+  ],
+  "summary": {
+    "prior_blockers_closed": 18,
+    "runtime_cases_closed": 4,
+    "extension_cases_closed": 7,
+    "answer_skill_dispositions_closed": 7,
+    "prior_sufficient_cases_confirmed": 1,
+    "broad_operation_rows_closed": 0,
+    "generated_lesson_outputs": 0
+  },
+  "cases": [
+    {
+      "case_id": "Y2-B6-P12:OP-D1",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-D1",
+      "prior_disposition": "new_task_family_runtime_support_required",
+      "closure_type": "runtime_fixture_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b6-op-d1-demand-function-solving",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-C1",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-C1",
+      "prior_disposition": "new_task_family_runtime_support_required",
+      "closure_type": "runtime_fixture_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b6-op-c1-revenue-calculation",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-C2",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-C2",
+      "prior_disposition": "new_task_family_runtime_support_required",
+      "closure_type": "runtime_fixture_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b6-op-c2-marginal-revenue-decision",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-ANS2",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-ANS2",
+      "prior_disposition": "new_task_family_runtime_support_required",
+      "closure_type": "runtime_fixture_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b6-op-ans2-claim-answer-format",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B5-P13:OP-T1",
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "op_row": "OP-T1",
+      "prior_disposition": "existing_support_requires_extension",
+      "closure_type": "route_specific_extension_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b5-op-t1-schematic-source-chain",
+      "route_boundary": "schematic_visual_only_no_exact_numeric_table_claim",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B5-P13:OP-ANS2",
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "op_row": "OP-ANS2",
+      "prior_disposition": "existing_support_requires_extension",
+      "closure_type": "route_specific_extension_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b5-op-ans2-ratio-conclusion",
+      "route_boundary": "ratio_conclusion_without_exact_schematic_numeric_extraction",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-P1",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-P1",
+      "prior_disposition": "existing_support_requires_extension",
+      "closure_type": "route_specific_extension_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b6-op-p1-waiting-list-source-values",
+      "route_boundary": "social_housing_waiting_list_exact_source_values",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-E1",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-E1",
+      "prior_disposition": "existing_support_requires_extension",
+      "closure_type": "route_specific_extension_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b6-op-e1-income-elasticity-source-chain",
+      "route_boundary": "rent_market_income_elasticity_exact_source_proof",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B7-P13:OP-R1",
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "op_row": "OP-R1",
+      "prior_disposition": "existing_support_requires_extension",
+      "closure_type": "route_specific_extension_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b7-op-r1-actor-condition-assertion",
+      "route_boundary": "principal_agent_actor_condition_exact_route",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B7-P13:OP-ANS2",
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "op_row": "OP-ANS2",
+      "prior_disposition": "existing_support_requires_extension",
+      "closure_type": "route_specific_extension_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b7-op-ans2-expected-value-markup",
+      "route_boundary": "expected_value_plus_markup_answer_format",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B8-P04:OP-S1",
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "op_row": "OP-S1",
+      "prior_disposition": "existing_support_requires_extension",
+      "closure_type": "route_specific_extension_proof",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/route-specific-support-fixtures.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html"
+      ],
+      "fixture_id": "b8-op-s1-source-to-derived-order",
+      "route_boundary": "official_source_first_derived_payoff_labelled",
+      "blocks": "cross-repo lesson-production reliance for this OP row until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Checker proof, rendered fixture proof, branch-protection proof, lead review, and owner merge authorization with the authority boundary intact."
+    },
+    {
+      "case_id": "Y2-B5-P13:OP-H1",
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "op_row": "OP-H1",
+      "prior_disposition": "new_answer_skill_record_required",
+      "closure_type": "answer_skill_equivalent_support_record",
+      "answer_skill_id": "Y2-EX-ANS-SOURCE-SUPPORTED-MECHANISM-1",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
+      "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
+    },
+    {
+      "case_id": "Y2-B5-P13:OP-ANS3",
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "op_row": "OP-ANS3",
+      "prior_disposition": "new_answer_skill_record_required",
+      "closure_type": "answer_skill_equivalent_support_record",
+      "answer_skill_id": "Y2-EX-ANS-SOURCE-SUPPORTED-MECHANISM-1",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
+      "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-F1",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-F1",
+      "prior_disposition": "new_answer_skill_record_required",
+      "closure_type": "answer_skill_equivalent_support_record",
+      "answer_skill_id": "Y2-EX-ANS-SOURCE-SUPPORTED-MECHANISM-1",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
+      "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-ANS3",
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "op_row": "OP-ANS3",
+      "prior_disposition": "new_answer_skill_record_required",
+      "closure_type": "answer_skill_equivalent_support_record",
+      "answer_skill_id": "Y2-EX-ANS-SOURCE-SUPPORTED-MECHANISM-1",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
+      "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
+    },
+    {
+      "case_id": "Y2-B7-P13:OP-ANS3",
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "op_row": "OP-ANS3",
+      "prior_disposition": "new_answer_skill_record_required",
+      "closure_type": "answer_skill_equivalent_support_record",
+      "answer_skill_id": "Y2-EX-ANS-CONDITION-TWO-LINK-CORRECTION-1",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
+      "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
+    },
+    {
+      "case_id": "Y2-B8-P04:OP-ANS1",
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "op_row": "OP-ANS1",
+      "prior_disposition": "new_answer_skill_record_required",
+      "closure_type": "answer_skill_equivalent_support_record",
+      "answer_skill_id": "Y2-EX-ANS-STRATEGIC-COMMAND-PLANNING-1",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
+      "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
+    },
+    {
+      "case_id": "Y2-B8-P04:OP-ANS3",
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "op_row": "OP-ANS3",
+      "prior_disposition": "new_answer_skill_record_required",
+      "closure_type": "answer_skill_equivalent_support_record",
+      "answer_skill_id": "Y2-EX-ANS-CONDITION-TWO-LINK-CORRECTION-1",
+      "status_after_human_merge": "closed_platform_support_ready_for_cross_repo_lesson_production_input",
+      "proof_refs": [
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "answer_skill_equivalent_for_exact_year2_routes_no_registry_mutation",
+      "blocks": "cross-repo lesson-production reliance for this answer form until this exact support-closure bundle is human-merged",
+      "does_not_block": "foundation state, ordinary non-authority work, and review of unrelated scoped PRs",
+      "proof_required_to_close": "Reviewed equivalent answer-skill record with point logic, route bindings, negative guards, branch-protection proof, lead review, and owner merge authorization."
+    },
+    {
+      "case_id": "Y2-B7-P13:OP-M1",
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "op_row": "OP-M1",
+      "prior_disposition": "existing_governed_support_sufficient",
+      "closure_type": "prior_sufficient_support_confirmed",
+      "status_after_human_merge": "confirmed_no_platform_support_blocker",
+      "proof_refs": [
+        "reports/review-gates/Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1/mtu-answer-skill-disposition.json",
+        "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.json"
+      ],
+      "route_boundary": "principal_agent_actor_condition_orientation_only",
+      "blocks": "nothing for platform-side support closure",
+      "does_not_block": "cross-repo lesson-production input after this bundle is human-merged",
+      "proof_required_to_close": "Keep route-specific source binding in the lesson-production PR."
+    }
+  ],
+  "authority_claims": {
+    "protected_year2_support_overlay_created_for_review": true,
+    "route_specific_runtime_support_closed_for_review": true,
+    "route_specific_extension_support_closed_for_review": true,
+    "answer_skill_equivalent_support_closed_for_review": true,
+    "lesson_production_eligibility_overlay_ready_for_review": true,
+    "cross_repo_lesson_production_input_ready_after_human_merge": true,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "live_mtu_registry_mutated": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "candidate_storage_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  },
+  "carried_issues": [
+    {
+      "issue_id": "cross-repo-lesson-production-prs-not-yet-created",
+      "classification": "proof_required_to_close",
+      "blocks": "actual Year 2 lesson output and target-equivalent exit-ticket reliance",
+      "does_not_block": "platform support closure after owner authorization and branch-protection proof",
+      "proof_required_to_close": "Separate 4veco-lessen lesson-production PRs using the updated handoff manifests and rendered source/task proof."
+    },
+    {
+      "issue_id": "product-route-and-student-use-still-blocked",
+      "classification": "scale_blocker",
+      "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+      "does_not_block": "cross-repo lesson-production input readiness after this support closure is human-merged",
+      "proof_required_to_close": "REV-STD-1 product-proof packet after lesson PRs, with exact rendered output, accessibility, teacher, economist, runtime, and authority reviews."
+    },
+    {
+      "issue_id": "current-head-merge-proof-pending",
+      "classification": "merge_proof_required",
+      "blocks": "merge until exact-head CI/readiness/lead-review/thread/branch-protection proof and owner authorization exist",
+      "does_not_block": "content review of this packet",
+      "proof_required_to_close": "Run validate-platform, custom checker, PR Readiness Reviewer, thread check, lead review, and branch-protection checker with ok:true on exact remote head."
+    }
+  ]
+}
