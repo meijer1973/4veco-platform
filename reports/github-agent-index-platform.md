@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-26T14:45:30.332Z
+Generated: 2026-06-26T14:55:42.513Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h7-blind-holdout-execution-20260625`
-Source commit: `f894f4a36003293229f29bf24016793a60149a63`
-Files indexed: 6255
+Source commit: `3d962ba0d0e23908b50dc51840fdd786fa4b4f16`
+Files indexed: 6312
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 601
+Count: 603
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -331,6 +331,7 @@ Count: 601
 - build-scripts/references/build-source-document-registry.js
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
+- build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/build-y2-target-foundation-production-readiness-bundle-1.js
@@ -447,6 +448,7 @@ Count: 601
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
+- build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
@@ -794,7 +796,7 @@ Count: 46
 
 ## validators
 
-Count: 580
+Count: 597
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -979,6 +981,7 @@ Count: 580
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
+- build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
@@ -1213,6 +1216,22 @@ Count: 580
 - reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-light.png
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -2139,7 +2158,7 @@ Count: 755
 
 ## reports
 
-Count: 4059
+Count: 4114
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3888,6 +3907,61 @@ Count: 4059
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.md
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/rendered-product-proof.html
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshot-manifest.json
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshot-manifest.md
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-light.png
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.md
