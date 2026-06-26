@@ -1,0 +1,361 @@
+{
+  "status": "captured",
+  "screenshot_dir": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots",
+  "manifest_json": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshot-manifest.json",
+  "manifest_md": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshot-manifest.md",
+  "screenshot_count": 48,
+  "expected_count": 48,
+  "qa_page_paths_from_lesson_repo_root": [
+    "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html"
+  ],
+  "qa_command": "node scripts/qa-student-web-pages.js reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+  "cases": [
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-desktop-dark.png",
+      "paragraph": "5.4.2",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-desktop-light.png",
+      "paragraph": "5.4.2",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-mobile-dark.png",
+      "paragraph": "5.4.2",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-mobile-light.png",
+      "paragraph": "5.4.2",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-dark.png",
+      "paragraph": "5.4.2",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-light.png",
+      "paragraph": "5.4.2",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-dark.png",
+      "paragraph": "5.4.2",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-light.png",
+      "paragraph": "5.4.2",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-desktop-dark.png",
+      "paragraph": "5.4.2",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-desktop-light.png",
+      "paragraph": "5.4.2",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-mobile-dark.png",
+      "paragraph": "5.4.2",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-mobile-light.png",
+      "paragraph": "5.4.2",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-desktop-dark.png",
+      "paragraph": "6.4.2",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-desktop-light.png",
+      "paragraph": "6.4.2",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-mobile-dark.png",
+      "paragraph": "6.4.2",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-mobile-light.png",
+      "paragraph": "6.4.2",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-dark.png",
+      "paragraph": "6.4.2",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-light.png",
+      "paragraph": "6.4.2",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-dark.png",
+      "paragraph": "6.4.2",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-light.png",
+      "paragraph": "6.4.2",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-desktop-dark.png",
+      "paragraph": "6.4.2",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-desktop-light.png",
+      "paragraph": "6.4.2",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-mobile-dark.png",
+      "paragraph": "6.4.2",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-mobile-light.png",
+      "paragraph": "6.4.2",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-desktop-dark.png",
+      "paragraph": "7.4.1",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-desktop-light.png",
+      "paragraph": "7.4.1",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-mobile-dark.png",
+      "paragraph": "7.4.1",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-mobile-light.png",
+      "paragraph": "7.4.1",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-dark.png",
+      "paragraph": "7.4.1",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-light.png",
+      "paragraph": "7.4.1",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-dark.png",
+      "paragraph": "7.4.1",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-light.png",
+      "paragraph": "7.4.1",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-desktop-dark.png",
+      "paragraph": "7.4.1",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-desktop-light.png",
+      "paragraph": "7.4.1",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-mobile-dark.png",
+      "paragraph": "7.4.1",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-mobile-light.png",
+      "paragraph": "7.4.1",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-desktop-dark.png",
+      "paragraph": "8.1.4",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-desktop-light.png",
+      "paragraph": "8.1.4",
+      "surface": "exit-ticket",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-mobile-dark.png",
+      "paragraph": "8.1.4",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-mobile-light.png",
+      "paragraph": "8.1.4",
+      "surface": "exit-ticket",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-dark.png",
+      "paragraph": "8.1.4",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-light.png",
+      "paragraph": "8.1.4",
+      "surface": "korte-check",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-dark.png",
+      "paragraph": "8.1.4",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-light.png",
+      "paragraph": "8.1.4",
+      "surface": "korte-check",
+      "viewport": "mobile",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-desktop-dark.png",
+      "paragraph": "8.1.4",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-desktop-light.png",
+      "paragraph": "8.1.4",
+      "surface": "route",
+      "viewport": "desktop",
+      "theme": "light"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-dark.png",
+      "paragraph": "8.1.4",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "dark"
+    },
+    {
+      "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-light.png",
+      "paragraph": "8.1.4",
+      "surface": "route",
+      "viewport": "mobile",
+      "theme": "light"
+    }
+  ]
+}

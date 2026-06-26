@@ -1,11 +1,11 @@
 # International Quality Standards Roadmap
 
-Status: active internal overlay trial-planning roadmap
+Status: active internal overlay trial-contract roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.4-internal-overlay-trial-planning-human-review`
-Sprint status: `GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` current / internal-only overlay trial architecture planning packet for human review
+Roadmap version: `v0.5-internal-overlay-trial-contract-human-review`
+Sprint status: `GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` current / internal-only no-output England/Flanders trial contract packet for human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -48,8 +48,10 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md`
 - Accepted selected-deepening sprint:
   `archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-sprint-plan.md`
-- Current internal overlay trial-planning sprint:
+- Accepted internal overlay trial-planning sprint:
   `archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-sprint-plan.md`
+- Current internal overlay trial-contract sprint:
+  `archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md`
 
 ## 2. Non-Negotiable Requirements
 
@@ -144,9 +146,10 @@ diagnostics/mastery/PV, student/product use, personal-data processing,
 compliance, approval, accreditation, OP0, PTA, summative,
 inspection-readiness, or school-owned evidence flows.
 
-## 6. Current Internal Overlay Trial-Planning Scope
+## 6. Completed Internal Overlay Trial-Planning Scope
 
-`GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` may create:
+`GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` was accepted and merged on
+PR #145 and created:
 
 - an internal overlay trial-planning contract;
 - an internal trial plan in Markdown and JSON;
@@ -157,9 +160,13 @@ inspection-readiness, or school-owned evidence flows.
   `STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK`;
 - a manual generator/checker and focused Jest tests;
 - validation, specialist-review, final lead-review, PR proof, and
-  human-review records.
+  human-review records;
+- a decision selecting exactly one of:
+  `PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT`,
+  `SOURCE_REFRESH_BEFORE_TRIAL_CONTRACT`, or
+  `STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK`.
 
-It must not create trial runtime execution, localized overlay output,
+It did not create trial runtime execution, localized overlay output,
 localized textbook chapters, country editions, local implementation,
 local exam-code implementation, teacher/school-facing output, public output,
 evidence-pack deployment, package/CI product integration, dashboard gates,
@@ -169,7 +176,38 @@ accreditation, OP0, PTA, summative, inspection-readiness, school-owned
 evidence collection, support-sufficiency claims, accommodation-sufficiency
 claims, automated source refresh, or local-expert substitution.
 
-## 7. Architecture Direction
+## 7. Current Internal Overlay Trial-Contract Scope
+
+`GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` may create:
+
+- a strict nested internal trial-contract schema;
+- complete England and Flanders contracts for Book 1 Chapters 1.2 and 1.3;
+- explicit source, output, freshness, transformation-action, blocker, and
+  review-disposition bindings for every deep-crosswalk row;
+- positive and negative fixtures proving refusal of source, freshness, missing
+  row, implicit discovery, forbidden audience, personal-data, claim, support,
+  accommodation, product-route, and Scale Gate failures;
+- an internal no-output trace in Markdown and JSON;
+- a validation report in Markdown and JSON;
+- a decision report choosing exactly one of:
+  `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION`,
+  `REVISE_TRIAL_CONTRACT`, or
+  `STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK`;
+- manual generator/checker scripts, focused Jest tests, validation records,
+  specialist reviews, final lead review, PR proof, and human-review records.
+
+It must not create trial runtime execution, localized textbook paragraphs,
+localized exercises, answer models, student-facing files, country editions,
+local implementation, local exam-code implementation, teacher/school-facing
+output, public output, evidence-pack deployment, package/CI product
+integration, dashboard gates, quality-ref or Scale Gate integration, product
+routes, diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative,
+inspection-readiness, school-owned evidence collection, support-sufficiency
+claims, accommodation-sufficiency claims, automated source refresh, or
+local-expert substitution.
+
+## 8. Architecture Direction
 
 The current architecture preserves four layers:
 
@@ -182,7 +220,7 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 8. Core-Requirement Checklist
+## 9. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
@@ -197,27 +235,35 @@ before any implementation.
 | Book 1 Chapters 1.2/1.3 deep crosswalks classify exact local fit, gaps, and transformation needs | closed | England/Flanders deep crosswalk Markdown/JSON and teacher/economics review |
 | Transformation contract remains internal and excludes localized lesson output | closed | `selected-jurisdiction-transformation-contract.md` and refusal tests |
 | Comparative readiness decision selects exactly one allowed option | closed | Selected-jurisdiction readiness comparison and decision reports selected `PROCEED_TO_INTERNAL_OVERLAY_PROTOTYPE_PLANNING` |
-| Internal planning packet binds to accepted selected-deepening decision | current sprint | `internal-overlay-prototype-plan.md/json` and checker PASS |
-| Internal planning packet uses exact input and output allowlists | current sprint | Generator/checker output allowlist and input allowlist checks |
-| Trial planning preserves no-output, no-runtime, no-product-route, and no-school-facing boundaries | current sprint | Refusal matrix and false blocked-authority flags |
-| Future trial contract field families preserve source traceability and blocker display | current sprint | `internal-overlay-prototype-planning-contract.md` |
-| Planning decision selects exactly one allowed option | current sprint | `internal-overlay-prototype-planning-decision.md/json` |
-| Specialist reviews and final lead review are completed before human review | current sprint | Specialist gate record and final lead PASS |
-| Human review happens before any later trial-contract draft authority | current sprint | PR freshness, CI, PR Readiness Reviewer, and human review |
+| Internal planning packet binds to accepted selected-deepening decision | closed | PR #145 accepted and merged |
+| Internal planning packet uses exact input and output allowlists | closed | Generator/checker output allowlist and input allowlist checks |
+| Trial planning preserves no-output, no-runtime, no-product-route, and no-school-facing boundaries | closed | Refusal matrix and false blocked-authority flags |
+| Future trial contract field families preserve source traceability and blocker display | closed | `internal-overlay-prototype-planning-contract.md` |
+| Planning decision selects exactly one allowed option | closed | `internal-overlay-prototype-planning-decision.md/json` selected `PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT` |
+| Specialist reviews and final lead review are completed before human review | closed | PR #145 final lead PASS and human acceptance |
+| Human review happens before any later trial-contract draft authority | closed | PR #145 readiness proof, owner authorization, merge, and post-merge CI |
+| Internal trial contract schema covers authority, source, scope, transformation, blocker, review, freshness, no-output, refusal, and closure fields | current sprint | `internal-overlay-trial-contract.schema.v1.json` and checker PASS |
+| England and Flanders contracts bind all Book 1 1.2/1.3 crosswalk rows | current sprint | `england-internal-overlay-trial-contract.md/json`, `flanders-internal-overlay-trial-contract.md/json`, and checker PASS |
+| Contract rows use strict transformation-action vocabulary | current sprint | `check-internal-overlay-trial-contract.js` and focused Jest PASS |
+| No-output trace excludes localized paragraphs, exercises, answer models, and student-facing files | current sprint | `internal-overlay-no-output-trial-trace.md/json` and checker PASS |
+| Positive and negative fixtures prove source, freshness, row, discovery, audience, personal-data, claim, support/accommodation, product, and Scale Gate refusals | current sprint | `references/data/inspection-standards/fixtures/internal-overlay-trial-contract/**` and checker PASS |
+| Trial-contract decision selects exactly one allowed option | current sprint | `internal-overlay-trial-contract-decision.md/json` selects `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION` |
+| Specialist reviews and final lead review are completed before human review | current sprint | Specialist records and final lead PASS |
+| Human review happens before any no-output trial simulation authority | current sprint | PR freshness, CI, PR Readiness Reviewer, and human review |
 
-## 9. Candidate Future Sprints
+## 10. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-DRAFT-1` | If the human owner accepts `PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT`, draft a non-executing internal trial contract with schema/fixture boundaries only. | not authorised until human acceptance |
+| `GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1` | If the human owner accepts `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION`, run an internal no-output simulation against the accepted contracts without localized student-facing output. | not authorised until human acceptance |
 | `GOAL-IQS-SOURCE-REFRESH-1` | Refresh sources and resolve source gaps for a selected subset of jurisdictions. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 10. Explicitly Blocked Work
+## 11. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -243,26 +289,30 @@ support-sufficiency claim
 accommodation-sufficiency claim
 trial runtime execution
 localized overlay output generation
+localized textbook paragraph generation
+localized exercise generation
+localized answer-model generation
+student-facing file generation
 fixture-to-product promotion
 automated source refresh
 local expert substitution
 ```
 
-## 11. Current Recommended Next Step
+## 12. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1 planning packet after
+Review the GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1 contract packet after
 specialist reviews, final lead review, PR publication, branch freshness, and
 green CI are complete.
 ```
 
-Human acceptance of `GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` may
-authorise only a later internal trial-contract draft sprint. It must not
-unlock trial runtime execution, country implementation, localized textbook
-or overlay output, school or public distribution, product routes, Scale Gate,
-diagnostics/mastery/PV, student/product use, personal-data processing,
-compliance, approval, accreditation, OP0, PTA, summative, or
-inspection-readiness, support-sufficiency, or accommodation-sufficiency
-claims.
+Human acceptance of `GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` may
+authorise only a later internal no-output trial simulation. It must not unlock
+trial runtime execution, country implementation, localized textbook or overlay
+output, localized exercises, answer models, student-facing files, school or
+public distribution, product routes, Scale Gate, diagnostics/mastery/PV,
+student/product use, personal-data processing, compliance, approval,
+accreditation, OP0, PTA, summative, inspection-readiness, support-sufficiency,
+or accommodation-sufficiency claims.
