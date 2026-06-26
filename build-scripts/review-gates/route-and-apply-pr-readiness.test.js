@@ -78,7 +78,15 @@ function controllerFirstFixture(tempDir, { alreadyReady = false } = {}) {
         path: 'subagent:paired-bundle-review',
         result: 'PASS',
         reviewed_commit_sha: exact.platform_candidate_sha,
-        paired_lesson_reviewed_commit_sha: exact.lesson_candidate_sha,
+        paired_member_reviews: [
+          {
+            repository: 'meijer1973/4veco-lessen',
+            pr_number: 35,
+            reviewed_commit_sha: exact.lesson_candidate_sha,
+            review_result: 'PASS',
+            review_path: 'subagent:paired-bundle-review',
+          },
+        ],
       },
       branch_protection: {
         required_approving_review_count: 0,
@@ -101,6 +109,7 @@ function controllerFirstFixture(tempDir, { alreadyReady = false } = {}) {
           mergeable: true,
           ready: false,
           is_draft: true,
+          base: 'main',
           head_sha: exact.lesson_candidate_sha,
           reviewed_payload_head_sha: exact.lesson_candidate_sha,
         },

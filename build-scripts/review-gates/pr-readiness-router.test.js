@@ -14,6 +14,7 @@ const {
 } = require('./review-throughput-fields');
 const {
   applyDecisionToState,
+  verifyPairedTransitionPreconditions,
   verifyTransitionPreconditions,
 } = require('./apply-pr-readiness-decision');
 const { stateResult, summarizeCompatibility } = require('./cross-repo-bundle-compatibility');
@@ -118,6 +119,17 @@ function bundleCompatibilityPlatformFirst(overrides = {}) {
       state('bundle-final', 'success'),
     ],
   });
+}
+
+function pairedLeadReview(repository, prNumber, reviewedSha, overrides = {}) {
+  return {
+    repository,
+    pr_number: prNumber,
+    reviewed_commit_sha: reviewedSha,
+    review_result: 'PASS',
+    review_path: 'subagent:paired-bundle-review',
+    ...overrides,
+  };
 }
 
 const ROUTER_CASES = [
@@ -326,7 +338,9 @@ describe('pr-readiness-router', () => {
         ...fixture.proof,
         lead_review: {
           ...fixture.proof.lead_review,
-          paired_lesson_reviewed_commit_sha: lessonHead,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
         },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
@@ -345,6 +359,7 @@ describe('pr-readiness-router', () => {
               mergeable: true,
               ready: false,
               is_draft: true,
+              base: 'main',
               head_sha: lessonHead,
               reviewed_payload_head_sha: lessonHead,
             },
@@ -359,15 +374,137 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).not.toContain('paired_pr_draft');
     expect(decision.reason_codes).not.toContain('paired_pr_not_ready');
     expect(decision.proof.bundle.ok).toBe(true);
+    expect(decision.proof.bundle.transition_ready).toBe(true);
     expect(decision.proof.bundle.merge_ready).toBe(false);
+    expect(decision.proof.bundle.paired_lead_reviews).toEqual([
+      pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+    ]);
     expect(decision.proof.bundle.transitionable_draft_members).toEqual([
       expect.objectContaining({
         repository: 'meijer1973/4veco-lessen',
         pr_number: 34,
+        base: 'main',
         head_sha: lessonHead,
         reason: 'controller_first_mark_ready',
       }),
     ]);
+  });
+
+  test('controller-first draft transition rejects self-attested paired lead-review aliases', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+      lesson_candidate_sha: lessonHead,
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        lead_review: {
+          ...fixture.proof.lead_review,
+        },
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: exactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              open: true,
+              current: true,
+              mergeable: true,
+              ready: false,
+              is_draft: true,
+              base: 'main',
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
+              lead_reviewed_sha: lessonHead,
+            },
+          ],
+          compatibility: bundleCompatibilityPlatformFirst(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('paired_pr_draft');
+    expect(decision.proof.bundle.transitionable_draft_members).toEqual([]);
+    expect(decision.proof.bundle.paired_lead_reviews).toEqual([]);
+  });
+
+  test.each([
+    ['missing open state', (member) => delete member.open],
+    ['null open state', (member) => { member.open = null; }],
+    ['unknown mergeability', (member) => { member.mergeable = 'UNKNOWN'; }],
+    ['conflicting mergeability', (member) => { member.mergeable = 'CONFLICTING'; }],
+    ['closed paired PR', (member) => { member.open = false; }],
+    ['missing current state', (member) => delete member.current],
+    ['null current state', (member) => { member.current = null; }],
+    ['stale current state', (member) => { member.current = false; }],
+  ])('controller-first draft transition requires strict paired lifecycle: %s', (_name, mutate) => {
+    const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+      lesson_candidate_sha: lessonHead,
+    });
+    const paired = {
+      repo: 'meijer1973/4veco-lessen',
+      number: 34,
+      open: true,
+      current: true,
+      mergeable: true,
+      ready: false,
+      is_draft: true,
+      base: 'main',
+      head_sha: lessonHead,
+      reviewed_payload_head_sha: lessonHead,
+    };
+    mutate(paired);
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        lead_review: {
+          ...fixture.proof.lead_review,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
+        },
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: exactMembers,
+          paired_prs: [paired],
+          compatibility: bundleCompatibilityPlatformFirst(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.proof.bundle.transitionable_draft_members).toEqual([]);
+    expect(decision.proof.bundle.transition_ready).toBe(false);
+    expect(decision.proof.bundle.merge_ready).toBe(false);
   });
 
   test('controller-first draft transition requires platform-first compatibility', () => {
@@ -388,7 +525,9 @@ describe('pr-readiness-router', () => {
         ...fixture.proof,
         lead_review: {
           ...fixture.proof.lead_review,
-          paired_lesson_reviewed_commit_sha: lessonHead,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
         },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
@@ -407,6 +546,7 @@ describe('pr-readiness-router', () => {
               mergeable: true,
               ready: false,
               is_draft: true,
+              base: 'main',
               head_sha: lessonHead,
               reviewed_payload_head_sha: lessonHead,
             },
@@ -487,7 +627,9 @@ describe('pr-readiness-router', () => {
     expect(readyRule.then.properties).toBeUndefined();
     expect(readyRuleJson).toContain('"bundle_delegated_ci"');
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"transitionable_draft_members"');
+    expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"transition_ready"');
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"merge_ready"');
+    expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"paired_lead_reviews"');
     expect(readyRuleJson).toContain('"lesson-first"');
     expect(readyRuleJson).toContain('"meijer1973/4veco-lessen"');
 
@@ -596,7 +738,9 @@ describe('pr-readiness-router', () => {
         ...fixture.proof,
         lead_review: {
           ...fixture.proof.lead_review,
-          paired_lesson_reviewed_commit_sha: reviewedLessonHead,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, reviewedLessonHead),
+          ],
         },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
@@ -615,6 +759,7 @@ describe('pr-readiness-router', () => {
               mergeable: true,
               ready: false,
               is_draft: true,
+              base: 'main',
               head_sha: currentLessonHead,
               reviewed_payload_head_sha: reviewedLessonHead,
             },
@@ -647,7 +792,9 @@ describe('pr-readiness-router', () => {
         ...fixture.proof,
         lead_review: {
           ...fixture.proof.lead_review,
-          paired_lesson_reviewed_commit_sha: lessonHead,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
         },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
@@ -666,6 +813,7 @@ describe('pr-readiness-router', () => {
               mergeable: false,
               ready: false,
               is_draft: true,
+              base: 'main',
               head_sha: lessonHead,
               reviewed_payload_head_sha: lessonHead,
             },
@@ -911,6 +1059,7 @@ describe('pr-readiness-router', () => {
               mergeable: true,
               ready: true,
               is_draft: false,
+              base: 'main',
               head_sha: platformHead,
               reviewed_payload_head_sha: platformHead,
             },
@@ -923,8 +1072,89 @@ describe('pr-readiness-router', () => {
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.allowed_transition).toBe('MARK_READY');
     expect(decision.proof.bundle.delegated).toBe(true);
-    expect(decision.proof.bundle.merge_ready).toBe(true);
+    expect(decision.proof.bundle.transition_ready).toBe(true);
+    expect(decision.proof.bundle.merge_ready).toBe(false);
     expect(decision.proof.bundle_delegated_ci).toBe(true);
+  });
+
+  test('delegated lesson bundle is merge-ready only after the current lesson PR is non-draft', () => {
+    const head = '4'.repeat(40);
+    const platformHead = '2'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: platformHead,
+      lesson_candidate_sha: head,
+    });
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-lessen',
+        number: 34,
+        url: 'https://github.com/meijer1973/4veco-lessen/pull/34',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: head,
+      },
+      changed_paths: ['Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Grafieken/1.1.3 Grafieken en tabellen/index.html'],
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        class: 'cross_repo_bundle',
+        authority_class: 'generated_output',
+        level: 'L4',
+        human_decision_required: true,
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      proof: {
+        ci: {},
+        checkers: [{ command: 'delegated bundle controller proof', status: 'passed' }],
+        lead_review: {
+          path: 'subagent:paired-bundle-review',
+          result: 'PASS',
+          reviewed_commit_sha: head,
+        },
+        changed_paths_verified: true,
+        branch_protection: {
+          ok: false,
+          approval_count_observable: false,
+        },
+        bundle: {
+          delegated: true,
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: 'meijer1973/4veco-platform',
+            pr_number: 140,
+            reviewed_payload_head_sha: platformHead,
+          },
+          current_member: {
+            repository: 'meijer1973/4veco-lessen',
+            pr_number: 34,
+            head_sha: head,
+            reviewed_payload_head_sha: head,
+          },
+          exact_members: exactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-platform',
+              number: 140,
+              open: true,
+              current: true,
+              mergeable: true,
+              ready: true,
+              is_draft: false,
+              base: 'main',
+              head_sha: platformHead,
+              reviewed_payload_head_sha: platformHead,
+            },
+          ],
+          compatibility: bundleCompatibilityPlatformFirst(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.allowed_transition).toBe('NONE');
+    expect(decision.proof.bundle.transition_ready).toBe(false);
+    expect(decision.proof.bundle.merge_ready).toBe(true);
   });
 
   test('delegated lesson member cannot mark ready while the platform controller is still draft', () => {
@@ -1568,11 +1798,88 @@ describe('review thread collection', () => {
 });
 
 describe('apply-pr-readiness-decision', () => {
+  function pairedApplyDecision() {
+    const pairedHead = '4'.repeat(40);
+    return {
+      ...readFixture('apply-ready-decision.json'),
+      proof: {
+        ...readFixture('apply-ready-decision.json').proof,
+        bundle: {
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 35,
+              open: true,
+              current: true,
+              mergeable: true,
+              ready: false,
+              is_draft: true,
+              base: 'main',
+              head_sha: pairedHead,
+              reviewed_payload_head_sha: pairedHead,
+            },
+          ],
+          transitionable_draft_members: [
+            {
+              repository: 'meijer1973/4veco-lessen',
+              pr_number: 35,
+              base: 'main',
+              head_sha: pairedHead,
+              reviewed_payload_head_sha: pairedHead,
+              reason: 'controller_first_mark_ready',
+            },
+          ],
+        },
+      },
+    };
+  }
+
+  function exactPairedLiveState(overrides = {}) {
+    return {
+      repo: 'meijer1973/4veco-lessen',
+      number: 35,
+      state: 'OPEN',
+      is_draft: true,
+      base: 'main',
+      head_sha: '4'.repeat(40),
+      mergeable: true,
+      ...overrides,
+    };
+  }
+
   test('rejects a head SHA change between review and transition', () => {
     const decision = readFixture('apply-ready-decision.json');
     const currentPr = readFixture('apply-stale-pr.json');
 
     expect(() => verifyTransitionPreconditions(decision, currentPr)).toThrow('head_sha_changed');
+  });
+
+  test('paired transition preconditions accept the exact live paired state', () => {
+    expect(
+      verifyPairedTransitionPreconditions(pairedApplyDecision(), () => exactPairedLiveState())
+    ).toBe(true);
+  });
+
+  test.each([
+    ['head drift', { head_sha: '5'.repeat(40) }, 'paired_pr_head_sha_changed'],
+    ['base drift', { base: 'develop' }, 'paired_pr_base_changed'],
+    ['closed paired PR', { state: 'CLOSED' }, 'paired_pr_not_open'],
+    ['merge conflict', { mergeable: false }, 'paired_pr_not_mergeable'],
+    ['draft state changed', { is_draft: false }, 'paired_pr_draft_state_changed'],
+  ])('paired transition preconditions reject %s', (_name, liveOverrides, failure) => {
+    expect(() =>
+      verifyPairedTransitionPreconditions(pairedApplyDecision(), () => exactPairedLiveState(liveOverrides))
+    ).toThrow(failure);
+  });
+
+  test('paired transition preconditions require expected paired base proof', () => {
+    const decision = pairedApplyDecision();
+    delete decision.proof.bundle.paired_prs[0].base;
+    delete decision.proof.bundle.transitionable_draft_members[0].base;
+
+    expect(() =>
+      verifyPairedTransitionPreconditions(decision, () => exactPairedLiveState())
+    ).toThrow('paired_pr_base_missing');
   });
 
   test('dry-run apply marks ready and creates one idempotent comment action', () => {
@@ -1584,6 +1891,36 @@ describe('apply-pr-readiness-decision', () => {
     expect(result.comment_action).toBe('would_create_comment');
     expect(currentPr.comments).toHaveLength(1);
     expect(currentPr.comments[0].body).toContain(decisionMarker(decision));
+  });
+
+  test('dry-run apply aborts before marking ready when paired live state is stale', () => {
+    const decision = pairedApplyDecision();
+    const currentPr = readFixture('apply-ready-pr.json');
+
+    expect(() =>
+      applyDecisionToState(decision, currentPr, {
+        dryRun: true,
+        fetchPairedPr: () => exactPairedLiveState({ head_sha: '5'.repeat(40) }),
+      })
+    ).toThrow('paired_pr_head_sha_changed');
+    expect(currentPr.comments || []).toHaveLength(0);
+    expect(currentPr.is_draft).toBe(true);
+  });
+
+  test('partial transition retry is idempotent when the reviewed PR is already ready', () => {
+    const decision = pairedApplyDecision();
+    const currentPr = {
+      ...readFixture('apply-ready-pr.json'),
+      is_draft: false,
+    };
+    const fetchPairedPr = jest.fn(() => {
+      throw new Error('paired fetch should not run without a mark-ready mutation');
+    });
+
+    const result = applyDecisionToState(decision, currentPr, { dryRun: true, fetchPairedPr });
+
+    expect(result.transition_action).toBe('already_ready');
+    expect(fetchPairedPr).not.toHaveBeenCalled();
   });
 
   test('duplicate apply updates the existing marker comment instead of adding another', () => {

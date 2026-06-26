@@ -340,6 +340,7 @@ function normalizeBundleMember(member) {
     ...item,
     repository: item.repository || item.repo || null,
     pr_number: positiveInteger(item.pr_number || item.number),
+    base: item.base || item.baseRefName || item.base_branch || null,
     head_sha: item.head_sha || item.headRefOid || null,
     reviewed_payload_head_sha: item.reviewed_payload_head_sha || item.payload_head_sha || null,
   };
@@ -367,9 +368,9 @@ function bundleMemberHeadMatches(member) {
 function bundleMemberLifecycleOk(member) {
   return Boolean(
     member &&
-      member.open !== false &&
-      member.current !== false &&
-      member.mergeable !== false &&
+      member.open === true &&
+      member.current === true &&
+      member.mergeable === true &&
       bundleMemberHeadMatches(member)
   );
 }
@@ -389,16 +390,47 @@ function compatibilityPermitsPlatformFirst(compatibility) {
   );
 }
 
-function pairedLeadReviewed(member, proof) {
+function pairedLeadReviewRecords(proof) {
   const lead = (proof && proof.lead_review) || {};
-  const reviewedSha =
-    member.lead_reviewed_sha ||
-    member.lead_reviewed_commit_sha ||
-    member.reviewed_by_lead_sha ||
-    (repoIsLesson(member.repository)
-      ? lead.paired_lesson_reviewed_commit_sha
-      : lead.paired_platform_reviewed_commit_sha);
-  return reviewedSha === member.head_sha;
+  return [
+    ...asArray(lead.paired_member_reviews),
+    ...asArray(lead.paired_reviews),
+    ...asArray(lead.bundle_member_reviews),
+  ].filter(Boolean);
+}
+
+function pairedLeadReviewFor(member, proof) {
+  if (!member) return null;
+  return pairedLeadReviewRecords(proof).find((record) => {
+    const repository = record.repository || record.repo;
+    const prNumber = positiveInteger(record.pr_number || record.number);
+    const reviewedSha = record.reviewed_commit_sha || record.reviewed_sha || record.reviewed_remote_commit_sha;
+    const result = normalizeVerdict(record.review_result || record.result || record.verdict);
+    const path = record.review_path || record.path || record.report_path;
+    return Boolean(
+      repository === member.repository &&
+        prNumber === member.pr_number &&
+        reviewedSha === member.head_sha &&
+        PASSING_LEAD_RESULTS.has(result) &&
+        typeof path === 'string' &&
+        path.trim()
+    );
+  }) || null;
+}
+
+function pairedLeadReviewed(member, proof) {
+  return Boolean(pairedLeadReviewFor(member, proof));
+}
+
+function normalizePairedLeadReview(record) {
+  const item = record || {};
+  return {
+    repository: item.repository || item.repo || null,
+    pr_number: positiveInteger(item.pr_number || item.number),
+    reviewed_commit_sha: item.reviewed_commit_sha || item.reviewed_sha || item.reviewed_remote_commit_sha || null,
+    review_result: normalizeVerdict(item.review_result || item.result || item.verdict),
+    review_path: item.review_path || item.path || item.report_path || null,
+  };
 }
 
 function controllerFirstDraftTransitionable(member, context) {
@@ -535,6 +567,7 @@ function bundleSafetyProof(proof, evidence) {
     : { ok: false, failures: ['bundle_compatibility_missing'] };
   if (!compatibility.ok) failures.push(...compatibility.failures);
   const transitionableDraftMembers = [];
+  const pairedLeadReviews = [];
   const transitionContext = {
     delegated,
     reviewedRepo: evidence.reviewed_pr.repo,
@@ -542,11 +575,14 @@ function bundleSafetyProof(proof, evidence) {
     compatibility,
   };
   for (const paired of pairedPrs) {
+    const pairedLeadReview = pairedLeadReviewFor(paired, proof);
+    if (pairedLeadReview) pairedLeadReviews.push(normalizePairedLeadReview(pairedLeadReview));
     const transitionable = controllerFirstDraftTransitionable(paired, transitionContext);
     if (transitionable) {
       transitionableDraftMembers.push({
         repository: paired.repository,
         pr_number: paired.pr_number,
+        base: paired.base || null,
         head_sha: paired.head_sha,
         reviewed_payload_head_sha: paired.reviewed_payload_head_sha,
         reason: 'controller_first_mark_ready',
@@ -561,6 +597,16 @@ function bundleSafetyProof(proof, evidence) {
       failures.push('paired_pr_not_ready');
     }
   }
+  const reviewedPrIsDraft = evidence.reviewed_pr.was_draft !== false;
+  const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
+  const anyPairedNotReady = pairedPrs.some((paired) => paired && paired.ready !== true);
+  const transitionReady = failures.length === 0 && (reviewedPrIsDraft || transitionableDraftMembers.length > 0);
+  const mergeReady =
+    failures.length === 0 &&
+    reviewedPrIsDraft === false &&
+    !anyPairedDraft &&
+    !anyPairedNotReady &&
+    transitionableDraftMembers.length === 0;
   const summary = {
     required,
     delegated,
@@ -570,8 +616,10 @@ function bundleSafetyProof(proof, evidence) {
     paired_prs: pairedPrs,
     exact_members: exactMembers,
     compatibility,
-    merge_ready: failures.length === 0 && transitionableDraftMembers.length === 0,
+    transition_ready: transitionReady,
+    merge_ready: mergeReady,
     transitionable_draft_members: transitionableDraftMembers,
+    paired_lead_reviews: pairedLeadReviews,
     failures: uniqueStrings(failures),
   };
   return summary;
@@ -995,6 +1043,25 @@ function validateDecision(decision) {
         !compatibility.recommended_merge_order
       ) {
         throw new Error(`${decision.route} requires green bundle-final and intermediate compatibility proof`);
+      }
+      const pairedPrs = asArray(decision.proof.bundle.paired_prs);
+      const hasTransitionableDraftMembers = asArray(decision.proof.bundle.transitionable_draft_members).length > 0;
+      const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
+      const anyPairedNotReady = pairedPrs.some((paired) => paired && paired.ready !== true);
+      if (
+        decision.proof.bundle.merge_ready === true &&
+        (decision.reviewed_pr.was_draft !== false ||
+          anyPairedDraft ||
+          anyPairedNotReady ||
+          hasTransitionableDraftMembers)
+      ) {
+        throw new Error(`${decision.route} cannot mark bundle merge_ready while a draft or unready member remains`);
+      }
+      if (
+        decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY &&
+        decision.proof.bundle.transition_ready !== true
+      ) {
+        throw new Error(`${decision.route} MARK_READY requires bundle transition_ready proof`);
       }
     }
     const branchProtection = decision.proof.branch_protection || null;
