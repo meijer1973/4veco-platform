@@ -77,6 +77,19 @@ describe('platform-ci-evidence', () => {
     ).toThrow(/platform.head_sha/);
   });
 
+  test('requires explicit allow-list for compatibility workflow evidence', () => {
+    const compatibilityEvidence = validEvidence({
+      workflow: 'cross-repo-bundle-compatibility',
+      job: 'bundle-state',
+    });
+
+    expect(() => validateEvidence(compatibilityEvidence)).toThrow(/workflow must be one of/);
+    expect(validateEvidence(compatibilityEvidence, {
+      allowedWorkflows: ['cross-repo-bundle-compatibility'],
+      allowedJobs: ['bundle-state'],
+    })).toBe(true);
+  });
+
   test('platform workflow always validates against lesson main', () => {
     const workflow = fs.readFileSync(
       path.join(__dirname, '..', '..', '.github', 'workflows', 'platform-ci.yml'),

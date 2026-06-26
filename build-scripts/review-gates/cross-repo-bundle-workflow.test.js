@@ -27,6 +27,8 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('bundle-summary.json');
     expect(bundleWorkflow).toContain('Checkout trusted platform tooling');
     expect(bundleWorkflow).toContain('ref: main');
+    expect(bundleWorkflow).toContain('--allow-workflow cross-repo-bundle-compatibility');
+    expect(bundleWorkflow).toContain('--allow-job bundle-state');
     expect(bundleWorkflow).not.toContain("if ($status -ne 'success') { exit 1 }");
   });
 

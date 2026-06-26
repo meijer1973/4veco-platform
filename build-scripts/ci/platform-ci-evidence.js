@@ -15,6 +15,8 @@ HOW TO ADAPT:
 
 const DEFAULT_PLATFORM_REPO = 'meijer1973/4veco-platform';
 const DEFAULT_LESSEN_REPO = 'meijer1973/4veco-lessen';
+const DEFAULT_WORKFLOW = 'platform-ci';
+const DEFAULT_JOB = 'validate-platform';
 
 function fail(message) {
   console.error(`Platform CI evidence failed: ${message}`);
@@ -26,6 +28,20 @@ function optionValue(args, name) {
   if (index === -1) return null;
   if (!args[index + 1]) fail(`missing value for ${name}`);
   return args[index + 1];
+}
+
+function optionValues(args, name) {
+  const values = [];
+  for (let index = 0; index < args.length; index += 1) {
+    if (args[index] !== name) continue;
+    if (!args[index + 1]) fail(`missing value for ${name}`);
+    values.push(args[index + 1]);
+  }
+  return values;
+}
+
+function allowedSet(defaultValue, additions = []) {
+  return new Set([defaultValue, ...additions.filter(Boolean)]);
 }
 
 function run(command, args, options = {}) {
@@ -96,8 +112,8 @@ function makeEvidence({ platformPath, lessenPath }) {
   const githubSha = process.env.GITHUB_SHA || platformSha;
 
   return {
-    workflow: process.env.GITHUB_WORKFLOW || 'platform-ci',
-    job: process.env.GITHUB_JOB || 'validate-platform',
+    workflow: process.env.GITHUB_WORKFLOW || DEFAULT_WORKFLOW,
+    job: process.env.GITHUB_JOB || DEFAULT_JOB,
     github_run_id: process.env.GITHUB_RUN_ID || 'local',
     github_run_attempt: process.env.GITHUB_RUN_ATTEMPT || 'local',
     github_ref: process.env.GITHUB_REF || gitBranchOrRef(platformRoot),
@@ -127,7 +143,7 @@ function validateSha(value, label) {
   }
 }
 
-function validateEvidence(evidence) {
+function validateEvidence(evidence, options = {}) {
   for (const key of [
     'workflow',
     'job',
@@ -144,8 +160,14 @@ function validateEvidence(evidence) {
       throw new Error(`${key} must be a non-empty string`);
     }
   }
-  if (evidence.workflow !== 'platform-ci') throw new Error('workflow must be platform-ci');
-  if (evidence.job !== 'validate-platform') throw new Error('job must be validate-platform');
+  const allowedWorkflows = allowedSet(DEFAULT_WORKFLOW, options.allowedWorkflows || []);
+  const allowedJobs = allowedSet(DEFAULT_JOB, options.allowedJobs || []);
+  if (!allowedWorkflows.has(evidence.workflow)) {
+    throw new Error(`workflow must be one of: ${[...allowedWorkflows].join(', ')}`);
+  }
+  if (!allowedJobs.has(evidence.job)) {
+    throw new Error(`job must be one of: ${[...allowedJobs].join(', ')}`);
+  }
   validateSha(evidence.github_sha, 'github_sha');
   if (!/^[a-f0-9]{64}$/i.test(evidence.package_lock_sha256)) {
     throw new Error('package_lock_sha256 must be a SHA-256 hex digest');
@@ -168,10 +190,10 @@ function validateEvidence(evidence) {
   return true;
 }
 
-function writeEvidence(outputPath, platformPath, lessenPath) {
+function writeEvidence(outputPath, platformPath, lessenPath, options = {}) {
   assertOutputOutsideRepos(outputPath, platformPath, lessenPath);
   const evidence = makeEvidence({ platformPath, lessenPath });
-  validateEvidence(evidence);
+  validateEvidence(evidence, options);
   fs.mkdirSync(path.dirname(path.resolve(outputPath)), { recursive: true });
   fs.writeFileSync(outputPath, `${JSON.stringify(evidence, null, 2)}\n`, 'utf8');
   return evidence;
@@ -184,17 +206,21 @@ function readEvidence(file) {
 function runCli(argv) {
   const command = argv[0];
   if (!command || !['write', 'check'].includes(command)) {
-    fail('usage: platform-ci-evidence.js write --output <file> --platform-path <path> --lessen-path <path> | check <file> --platform-path <path> --lessen-path <path>');
+    fail('usage: platform-ci-evidence.js write --output <file> --platform-path <path> --lessen-path <path> [--allow-workflow <name>] [--allow-job <name>] | check <file> --platform-path <path> --lessen-path <path> [--allow-workflow <name>] [--allow-job <name>]');
   }
 
   const platformPath = path.resolve(optionValue(argv, '--platform-path') || '.');
   const lessenPath = path.resolve(optionValue(argv, '--lessen-path') || '../4veco-lessen');
+  const validationOptions = {
+    allowedWorkflows: optionValues(argv, '--allow-workflow'),
+    allowedJobs: optionValues(argv, '--allow-job'),
+  };
 
   try {
     if (command === 'write') {
       const outputPath = path.resolve(optionValue(argv, '--output') || '');
       if (!outputPath) throw new Error('missing --output');
-      const evidence = writeEvidence(outputPath, platformPath, lessenPath);
+      const evidence = writeEvidence(outputPath, platformPath, lessenPath, validationOptions);
       console.log(
         `OK wrote platform CI evidence: ${outputPath} platform=${evidence.platform.head_sha} lessen=${evidence.lessen.head_sha}`
       );
@@ -205,7 +231,7 @@ function runCli(argv) {
     if (!file) throw new Error('missing evidence file');
     assertOutputOutsideRepos(file, platformPath, lessenPath);
     const evidence = readEvidence(file);
-    validateEvidence(evidence);
+    validateEvidence(evidence, validationOptions);
     console.log(
       `OK platform CI evidence: workflow=${evidence.workflow} platform=${evidence.platform.head_sha} lessen=${evidence.lessen.head_sha}`
     );
