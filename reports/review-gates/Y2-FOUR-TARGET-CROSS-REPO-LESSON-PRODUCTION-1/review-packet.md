@@ -38,7 +38,7 @@ Rendered proof: 48/48 screenshots captured. See `reports/review-gates/Y2-FOUR-TA
 
 | Finding | Classification | Blocks | Does not block | Proof required to close |
 |---|---|---|---|---|
-| Lead reviews not yet attached in this generated packet | proof_required_to_close | human review readiness | local generation and static validation | attach required read-only lead reviews before final product-review return |
+| Lead reviews and exact-head proof are PR-attached, not embedded in this generated packet | minor_carry_flag | merge authorization until live PR comments attach the proof | local generation, static validation, and content review | attach required read-only lead reviews, exact-head CI, branch-protection, review-thread, and PR Readiness Reviewer output before final product-review return |
 | Product-route and student-use authority remains closed | scale_blocker | product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, student/product use | candidate lesson-output review | separate product-proof gate and explicit owner authorization |
 
 ## Cross-Repo Merge Order

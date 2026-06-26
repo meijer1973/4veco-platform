@@ -12,6 +12,13 @@ const {
 const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
 const REPORT_DIR = path.join(PLATFORM_ROOT, 'reports', 'review-gates', SPRINT_ID);
 const LESSON_OUTPUT_ROOT = 'year2-candidate-lessons/four-target-lesson-production-1';
+const REV_STD_FINDING_CLASSIFICATIONS = new Set([
+  'core_requirement_met',
+  'quality_improvement_available',
+  'minor_carry_flag',
+  'scale_blocker',
+  'core_spec_failure'
+]);
 const REQUIRED_FALSE_FLAGS = [
   'active_v5_registry_mutated',
   'external_source_mutation_authorized',
@@ -66,6 +73,41 @@ function relFromPlatform(file) {
   return path.relative(PLATFORM_ROOT, file).replace(/\\/g, '/');
 }
 
+function qaPagePaths(routes = generatedRoutes()) {
+  return routes.flatMap((route) => [
+    route.output.route,
+    route.output.short_check,
+    route.output.exit_ticket
+  ]);
+}
+
+function assertRevStdClassification(value, context) {
+  assert(
+    REV_STD_FINDING_CLASSIFICATIONS.has(value),
+    `${context} invalid REV-STD-1 classification: ${value}`
+  );
+}
+
+function markdownFindingClassifications(markdown) {
+  const classifications = [];
+  for (const line of markdown.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed.startsWith('|') || !trimmed.endsWith('|')) continue;
+    if (trimmed.includes('---') || trimmed.includes('Classification')) continue;
+    const cells = trimmed.slice(1, -1).split('|').map((cell) => cell.trim().replace(/`/g, ''));
+    if (cells.length === 5) classifications.push(cells[1]);
+  }
+  return classifications;
+}
+
+function checkMarkdownFindingTable(file) {
+  const classifications = markdownFindingClassifications(fs.readFileSync(file, 'utf8'));
+  assert(classifications.length > 0, `${relFromPlatform(file)} missing findings classification rows`);
+  for (const classification of classifications) {
+    assertRevStdClassification(classification, `${relFromPlatform(file)} finding row`);
+  }
+}
+
 function stripHtml(raw) {
   return String(raw)
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
@@ -91,14 +133,19 @@ function visibleTextViolations(file, raw) {
 
 function checkPlatformArtifacts() {
   const bundlePath = path.join(REPORT_DIR, 'lesson-production-bundle.json');
+  const bundleMarkdownPath = path.join(REPORT_DIR, 'lesson-production-bundle.md');
   const reviewPath = path.join(REPORT_DIR, 'review-packet.json');
+  const reviewMarkdownPath = path.join(REPORT_DIR, 'review-packet.md');
   const proofPath = path.join(REPORT_DIR, 'rendered-product-proof.html');
   assert(exists(bundlePath), `missing ${relFromPlatform(bundlePath)}`);
+  assert(exists(bundleMarkdownPath), `missing ${relFromPlatform(bundleMarkdownPath)}`);
   assert(exists(reviewPath), `missing ${relFromPlatform(reviewPath)}`);
+  assert(exists(reviewMarkdownPath), `missing ${relFromPlatform(reviewMarkdownPath)}`);
   assert(exists(proofPath), `missing ${relFromPlatform(proofPath)}`);
 
   const actual = readJson(bundlePath);
   const expected = platformBundle(generatedRoutes());
+  const proofHtml = fs.readFileSync(proofPath, 'utf8');
   assert(actual.schema_version === 1, 'bundle schema_version must be 1');
   assert(actual.sprint_id === SPRINT_ID, 'bundle sprint_id mismatch');
   assert(Array.isArray(actual.records) && actual.records.length === 4, 'bundle must contain four records');
@@ -107,12 +154,22 @@ function checkPlatformArtifacts() {
   if (actual.rendered_screenshot_proof.status === 'captured') {
     assert(actual.rendered_screenshot_proof.screenshot_count === 48, 'rendered screenshot proof must contain 48 screenshots');
     assert(actual.rendered_screenshot_proof.expected_count === 48, 'rendered screenshot expected count must be 48');
+    assert(!actual.rendered_screenshot_proof.qa_command.includes('<twelve'), 'rendered screenshot proof command must not use placeholder pages');
+    assert(
+      JSON.stringify(actual.rendered_screenshot_proof.qa_page_paths_from_lesson_repo_root) === JSON.stringify(qaPagePaths()),
+      'rendered screenshot proof must record the exact 12 lesson page paths'
+    );
     assert(exists(path.join(PLATFORM_ROOT, actual.rendered_screenshot_proof.manifest_json)), 'missing screenshot manifest json');
     assert(exists(path.join(PLATFORM_ROOT, actual.rendered_screenshot_proof.manifest_md)), 'missing screenshot manifest markdown');
+    assert(proofHtml.includes('<img '), 'rendered product proof must embed screenshot thumbnails');
     for (const item of actual.rendered_screenshot_proof.cases) {
       assert(exists(path.join(PLATFORM_ROOT, item.file)), `missing screenshot ${item.file}`);
+      assert(proofHtml.includes(item.file.replace(`reports/review-gates/${SPRINT_ID}/`, '')), `rendered product proof missing screenshot ${item.file}`);
     }
   }
+
+  checkMarkdownFindingTable(bundleMarkdownPath);
+  checkMarkdownFindingTable(reviewMarkdownPath);
 
   for (const flag of REQUIRED_FALSE_FLAGS) {
     assert(actual.authority_claims[flag] === false, `authority flag must remain false: ${flag}`);
@@ -129,6 +186,7 @@ function checkPlatformArtifacts() {
     assert(record.core_requirement_checklist.authority_boundary_preserved === true, `${record.record_id} authority boundary not preserved`);
     assert(Array.isArray(record.carried_issues) && record.carried_issues.length > 0, `${record.record_id} carried issues missing`);
     for (const issue of record.carried_issues) {
+      assertRevStdClassification(issue.classification, `${record.record_id} carried issue`);
       assert(issue.blocks && issue.does_not_block && issue.proof_required_to_close, `${record.record_id} carried issue lacks REV-STD-1 fields`);
     }
   }
