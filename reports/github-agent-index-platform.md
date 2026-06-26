@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-26T15:10:49.626Z
+Generated: 2026-06-26T15:23:18.282Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/skill-progression-20260624`
-Source commit: `e779b892c6fb3234cde646606ce893d66749070a`
-Files indexed: 6322
+Source commit: `3376ec3fbbcab9d7848feaf92e20ac60fa7a6481`
+Files indexed: 6363
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 605
+Count: 608
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -219,6 +219,7 @@ Count: 605
 - build-scripts/exemplars/reasoning-golden-family-data.js
 - build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
+- build-scripts/inspection/build-internal-no-output-trial-simulation.js
 - build-scripts/inspection/build-internal-overlay-prototype-planning.js
 - build-scripts/inspection/build-internal-overlay-trial-contract.js
 - build-scripts/inspection/build-international-overlay-architecture.js
@@ -226,6 +227,8 @@ Count: 605
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-internal-no-output-trial-simulation.js
+- build-scripts/inspection/check-internal-no-output-trial-simulation.test.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.test.js
 - build-scripts/inspection/check-internal-overlay-trial-contract.js
@@ -798,12 +801,13 @@ Count: 46
 
 ## validators
 
-Count: 597
+Count: 602
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-validation-log.md
+- archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
@@ -853,6 +857,8 @@ Count: 597
 - build-scripts/exemplars/check-reasoning-golden-exemplars.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
+- build-scripts/inspection/check-internal-no-output-trial-simulation.js
+- build-scripts/inspection/check-internal-no-output-trial-simulation.test.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.js
 - build-scripts/inspection/check-internal-overlay-prototype-planning.test.js
 - build-scripts/inspection/check-internal-overlay-trial-contract.js
@@ -1158,6 +1164,8 @@ Count: 597
 - references/exemplars/product-excellence/reasoning-games/compositions/reasoning-index-check-composed-v1.json
 - reports/fixtures/review-throughput-1/negative-ci-missing-validate-platform.json
 - reports/fixtures/review-throughput-1/negative-ci-validate-platform-failed.json
+- reports/inspection-standards/internal-no-output-trial-simulation-validation.json
+- reports/inspection-standards/internal-no-output-trial-simulation-validation.md
 - reports/inspection-standards/internal-overlay-trial-contract-validation.json
 - reports/inspection-standards/internal-overlay-trial-contract-validation.md
 - reports/json/check-route-copy1-proof.json
@@ -1400,7 +1408,7 @@ Count: 597
 
 ## references
 
-Count: 755
+Count: 785
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1440,6 +1448,35 @@ Count: 755
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-all-belgium-claim.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-aqa-approval-claim.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-legal-sufficiency-ready.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-local-expert-substituted.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-ok-compliance-claim.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-public-output-ready.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-source-refresh-executed.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-support-sufficiency-ready.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-whole-uk-claim.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/compliance-claim.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/decision-overclaim.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/duplicate-contract-row.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/implicit-discovery.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/localized-output.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/missing-contract-row.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/missing-transformation-actions.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/personal-data.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/product-route-scale-gate.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/public-output.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/runtime-execution.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/source-refresh-execution.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/student-facing-output.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/support-accommodation-claim.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/teacher-school-facing-output.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/unknown-contract-source.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/wrong-concept-lineage.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/wrong-contract-row.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/positive/england-internal-no-output-trial-simulation.sample.json
+- references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/positive/flanders-internal-no-output-trial-simulation.sample.json
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/directory-globbing.sample.json
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/implicit-source-discovery.sample.json
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/inspection-readiness-claims.sample.json
@@ -2113,6 +2150,7 @@ Count: 755
 - references/schemas/feedback.schema.json
 - references/schemas/game-item.schema.json
 - references/schemas/inspection-evidence.schema.json
+- references/schemas/internal-no-output-trial-simulation.schema.v1.json
 - references/schemas/internal-overlay-trial-contract.schema.v1.json
 - references/schemas/international-jurisdiction-overlay.schema.json
 - references/schemas/international-jurisdiction-overlay.schema.v1.json
@@ -2160,7 +2198,7 @@ Count: 755
 
 ## reports
 
-Count: 4122
+Count: 4124
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2221,16 +2259,8 @@ Count: 4122
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -2271,16 +2301,26 @@ Count: 4122
 - reports/inspection-standards/dutch-school-evidence-pack-candidate.md
 - reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.json
 - reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.md
+- reports/inspection-standards/england-internal-no-output-trial-simulation.json
+- reports/inspection-standards/england-internal-no-output-trial-simulation.md
 - reports/inspection-standards/england-internal-overlay-trial-contract.json
 - reports/inspection-standards/england-internal-overlay-trial-contract.md
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.md
+- reports/inspection-standards/flanders-internal-no-output-trial-simulation.json
+- reports/inspection-standards/flanders-internal-no-output-trial-simulation.md
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.json
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
+- reports/inspection-standards/internal-no-output-trial-simulation-decision.json
+- reports/inspection-standards/internal-no-output-trial-simulation-decision.md
+- reports/inspection-standards/internal-no-output-trial-simulation-validation.json
+- reports/inspection-standards/internal-no-output-trial-simulation-validation.md
+- reports/inspection-standards/internal-no-output-trial-simulation.json
+- reports/inspection-standards/internal-no-output-trial-simulation.md
 - reports/inspection-standards/internal-overlay-no-output-trial-trace.json
 - reports/inspection-standards/internal-overlay-no-output-trial-trace.md
 - reports/inspection-standards/internal-overlay-prototype-plan.json
@@ -6305,7 +6345,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 642
+Count: 647
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6339,6 +6379,11 @@ Count: 642
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-correction-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-final-lead-review.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-specialist-gate-results.md
+- archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-correction-log.md
+- archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-result.md
+- archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-specialist-gate-results.md
+- archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-sprint-plan.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-correction-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-sprint-plan.md
