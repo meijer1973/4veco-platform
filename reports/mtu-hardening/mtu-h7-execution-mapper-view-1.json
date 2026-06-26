@@ -1,0 +1,781 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "view_id": "mtu-h7-execution-mapper-view-1",
+  "status": "sealed_mapper_input_no_split_tags_or_outcomes",
+  "generated_at": "2026-06-25T13:32:29.363Z",
+  "source_plan": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "records": [
+    {
+      "mapper_record_id": "h7-map-001",
+      "sample_id": "ha-1022-a-23-1-o:opgave-1:question-2",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "opgave_num": 1,
+        "question_num": 2,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 2,
+        "prompt_page_end": 2,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-002",
+      "sample_id": "ha-1022-a-23-1-o:opgave-2:question-9",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "opgave_num": 2,
+        "question_num": 9,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 4,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-003",
+      "sample_id": "ha-1022-a-23-1-o:opgave-5:question-21",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "opgave_num": 5,
+        "question_num": 21,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 8,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-004",
+      "sample_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-005",
+      "sample_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-24-1-o",
+        "opgave_num": 2,
+        "question_num": 12,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-006",
+      "sample_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-24-2-o",
+        "opgave_num": 1,
+        "question_num": 3,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+        "prompt_page_start": 2,
+        "prompt_page_end": 2,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-007",
+      "sample_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-1-o",
+        "opgave_num": 3,
+        "question_num": 16,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+        "prompt_page_start": 6,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-008",
+      "sample_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "opgave_num": 2,
+        "question_num": 10,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 6,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-009",
+      "sample_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-1-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-010",
+      "sample_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-1-o",
+        "opgave_num": 5,
+        "question_num": 21,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+        "prompt_page_start": 10,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-011",
+      "sample_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-2-o",
+        "opgave_num": 2,
+        "question_num": 9,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-012",
+      "sample_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-2-o",
+        "opgave_num": 4,
+        "question_num": 20,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 9,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-013",
+      "sample_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-1-o",
+        "opgave_num": 3,
+        "question_num": 17,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-014",
+      "sample_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-1-o",
+        "opgave_num": 5,
+        "question_num": 24,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 11,
+        "prompt_page_end": 11,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-015",
+      "sample_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-016",
+      "sample_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-017",
+      "sample_id": "ha-1022-a-25-1-o:opgave-2:question-12",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-1-o",
+        "opgave_num": 2,
+        "question_num": 12,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-018",
+      "sample_id": "ha-1022-a-25-2-o:opgave-2:question-9",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "opgave_num": 2,
+        "question_num": 9,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+        "prompt_page_start": 4,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-019",
+      "sample_id": "ha-1022-a-25-2-o:opgave-4:question-18",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "opgave_num": 4,
+        "question_num": 18,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+        "prompt_page_start": 8,
+        "prompt_page_end": 9,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-020",
+      "sample_id": "vw-1022-a-25-1-o:opgave-2:question-11",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-1-o",
+        "opgave_num": 2,
+        "question_num": 11,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 6,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-021",
+      "sample_id": "vw-1022-a-25-1-o:opgave-3:question-14",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-1-o",
+        "opgave_num": 3,
+        "question_num": 14,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+        "prompt_page_start": 6,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-022",
+      "sample_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 5,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-023",
+      "sample_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 4,
+        "question_num": 20,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 9,
+        "prompt_page_end": 9,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    },
+    {
+      "mapper_record_id": "h7-map-024",
+      "sample_id": "vw-1022-a-25-2-o:opgave-6:question-28",
+      "evidence_state": "mapper_input_no_split_tags_outcomes_or_gold_operations",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 6,
+        "question_num": 28,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 13,
+        "prompt_page_end": 13,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "allowed_mapper_inputs": [
+        "official prompt/source pages",
+        "official correction-model pages after evidence-team extraction",
+        "canonical MTU registry for lookup only",
+        "sealed generic method rules"
+      ],
+      "forbidden_mapper_inputs": [
+        "diagnostic_or_holdout_split",
+        "route_tags",
+        "semantic_selection_tags",
+        "expected_outcomes",
+        "gold_operations",
+        "adjudication_results",
+        "post_outcome_repairs"
+      ]
+    }
+  ],
+  "omitted_fields": [
+    "split",
+    "metadata.question_type",
+    "metadata.exam_codes",
+    "route_tags",
+    "expected_outcomes",
+    "gold_operations",
+    "adjudication_results",
+    "benchmark_classification"
+  ],
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_authorized": false,
+    "candidate_write_authorized": false,
+    "lesson_output_authorized": false,
+    "product_route_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "adaptive_routing_authorized": false,
+    "sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false
+  }
+}

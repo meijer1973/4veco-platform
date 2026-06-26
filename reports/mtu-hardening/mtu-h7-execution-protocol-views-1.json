@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "artifact_id": "mtu-h7-execution-protocol-views-1",
+  "status": "phase_a_protocol_sealed_no_mapping_or_outcomes",
+  "generated_at": "2026-06-25T13:32:29.363Z",
+  "current_head_sha": "d16a33531f710d89224c693ab9bee3f8847b07cb",
+  "current_main_sha": "d16a33531f710d89224c693ab9bee3f8847b07cb",
+  "governed_baseline": {
+    "pr144_merge_sha": "f05f8e67e3b5528fd8f30401ba1b0fa084042fff",
+    "h6_frozen_method_anchor_sha": "95601ff21b69754d1f82dcca5647edb46ae5a62f",
+    "h7_sample_id": "h7-blind-holdout-sample-20260624-1",
+    "h7_plan_path": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+    "h7_plan_status": "method_frozen_sample_selected_not_evaluated"
+  },
+  "method_input_hashes": [
+    {
+      "role": "evidence_resolver",
+      "path": "build-scripts/references/lib/evidence-reference-resolver.js",
+      "exists": true,
+      "sha256": "d77d059f4386d83edb57f68d99edfd392a03a587348fedddcb34403912a3d498"
+    },
+    {
+      "role": "h5_anchor_checker",
+      "path": "build-scripts/references/check-mtu-h5-anchor-integrity.js",
+      "exists": true,
+      "sha256": "c2d00f7db1e94e4d58e427356840e8ea8bf10e550fbb6d4ea6902f3a7d0b77e8"
+    },
+    {
+      "role": "h6_generalization_checker",
+      "path": "build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+      "exists": true,
+      "sha256": "954d23ab0dab0d9971e9f456a8a0ecb0f9a3ed72239680d22da53698eb7e3a69"
+    },
+    {
+      "role": "h6_h7_preparation_checker",
+      "path": "build-scripts/references/check-mtu-h6-closure-h7-benchmark-1.js",
+      "exists": true,
+      "sha256": "5f8e958ddf47121a519b6043232d693d659b180ea67988f46f905e234d9150ae"
+    },
+    {
+      "role": "h6_fixture_method_precedent",
+      "path": "reports/mtu-hardening/mtu-h6-cross-exam-generalization-fixture.json",
+      "exists": true,
+      "sha256": "06dd3bd92ca3a8b6c1967bd8f63e0861bd86b71583caff28744bf27236b50cb8"
+    },
+    {
+      "role": "h6_report_method_precedent",
+      "path": "reports/mtu-hardening/mtu-h6-cross-exam-generalization-report.json",
+      "exists": true,
+      "sha256": "8816b93183375e370fd43a990607481439ed71cd38a87bfcde631c1583b8b7da"
+    },
+    {
+      "role": "h7_frozen_sample_plan",
+      "path": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+      "exists": true,
+      "sha256": "fc8749af531c3a4fc4f0b2339022258424f750c844cda43f0acf73b4e7a33baa"
+    },
+    {
+      "role": "operation_answer_skill_contract",
+      "path": "references/data/exam-ingestion/operation-answer-skill-contract.json",
+      "exists": true,
+      "sha256": "ce6318b1daffabc87afe564cc48cb11c4576db1dee36cbe7d2c61d85d13401ce"
+    },
+    {
+      "role": "operation_answer_skill_schema",
+      "path": "references/schemas/operation-answer-skill-contract.schema.json",
+      "exists": true,
+      "sha256": "2d33e4978459c58d4dc04045d6acc4b0e6909b0f8aa90523c52678977e5751e8"
+    },
+    {
+      "role": "skill_operation_registry",
+      "path": "references/data/skill-operation-registry.json",
+      "exists": true,
+      "sha256": "cd8d2e1fdd41ea4f605c4c8c042f3a6798954410a423e705c483c4930f4f91df"
+    },
+    {
+      "role": "misconception_registry",
+      "path": "reports/json/misconception-registry.json",
+      "exists": true,
+      "sha256": "444bee6dfae7bf771ce15ead617145deb0678fc8b483a29004f5225fc3f7c51f"
+    },
+    {
+      "role": "procedure_coverage_report",
+      "path": "reports/json/procedure-coverage.json",
+      "exists": true,
+      "sha256": "002781b58a4a24123c63df11061b82cab48ad8d167fc4f3c793506bcaa1a83e9"
+    },
+    {
+      "role": "answer_form_gate",
+      "path": "reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json",
+      "exists": true,
+      "sha256": "3ebac92a89c09ba60d99983afdf9ba927a7de23d62573d012873afa12d15838c"
+    },
+    {
+      "role": "failure_taxonomy",
+      "path": "reports/mtu-hardening/failure-taxonomy-v1.md",
+      "exists": true,
+      "sha256": "b6d31cda81693499f9f4137423653001efedfb819c9a07299e022f4d083d98c1"
+    }
+  ],
+  "official_source_pdf_hashes": [
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+      "exists": true,
+      "sha256": "e1bcf98aa57d79c883b5ca233954293f85073d4707b96df75493cc8912487b31"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+      "exists": true,
+      "sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+      "exists": true,
+      "sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+      "exists": true,
+      "sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+      "exists": true,
+      "sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+      "exists": true,
+      "sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+      "exists": true,
+      "sha256": "acd6144b691e9303a9c961cb61a9b35467f3bfe36a141a08e6d88424b71c74cf"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+      "exists": true,
+      "sha256": "3444556a6c6974dbe4c1078147cfba2f2924efb74e5f9fb3505bdae0c86bd0f8"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+      "exists": true,
+      "sha256": "a9b5fcf0f994a657fd2273568c9950edea017b22c4b6b14c38a6bcea29c540ee"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+      "exists": true,
+      "sha256": "ead90d620944bf2e69ea6873bb42aed80d4e9d4221c364628f1fab1c2be82ebd"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+      "exists": true,
+      "sha256": "2f71cc2fc8f9e88bca97c61c4bbc731a90b4ee88a577b141a3a6fd7ccd7dde9f"
+    },
+    {
+      "path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+      "exists": true,
+      "sha256": "e9bf94941a4071d82fc9e9ecb46c1d010debd1207a5498c04c16e5996049b685"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+      "exists": true,
+      "sha256": "ee51dd433d35609aa6e0c3174cb84cc5acc0c68f37e04d4406f7d865e736b08f"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+      "exists": true,
+      "sha256": "1bfc3dfd67382143a171b23d703e72c80dcf87ac7b76198e034a92af037f5759"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+      "exists": true,
+      "sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+      "exists": true,
+      "sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+      "exists": true,
+      "sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+      "exists": true,
+      "sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+      "exists": true,
+      "sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+      "exists": true,
+      "sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+      "exists": true,
+      "sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+      "exists": true,
+      "sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+      "exists": true,
+      "sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0"
+    },
+    {
+      "path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+      "exists": true,
+      "sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410"
+    }
+  ],
+  "sample_counts": {
+    "total_records": 24,
+    "diagnostic_records": 16,
+    "locked_holdout_records": 8
+  },
+  "view_paths": {
+    "protocolJson": "reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json",
+    "protocolMd": "reports/mtu-hardening/mtu-h7-execution-protocol-views-1.md",
+    "curatorView": "reports/mtu-hardening/mtu-h7-execution-curator-view-1.json",
+    "mapperView": "reports/mtu-hardening/mtu-h7-execution-mapper-view-1.json",
+    "adjudicatorView": "reports/mtu-hardening/mtu-h7-execution-adjudicator-view-1.json"
+  },
+  "benchmark_view_policy": {
+    "sample_is_procedurally_locked": true,
+    "cryptographic_blinding_claimed": false,
+    "mapper_view_strips_curator_metadata": true,
+    "holdout_outcomes_recorded": false,
+    "h7_mappings_recorded": false
+  },
+  "negative_fixture_policy": {
+    "minimum_meaningful_negative_fixtures_per_record": 1,
+    "minimum_total_negative_fixtures": 24,
+    "additional_negatives_required_for_high_risk_multi_operation_records": true,
+    "materialization_status": "pending_after_operation_decomposition"
+  },
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_authorized": false,
+    "candidate_write_authorized": false,
+    "lesson_output_authorized": false,
+    "product_route_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "adaptive_routing_authorized": false,
+    "sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false
+  }
+}
