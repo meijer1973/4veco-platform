@@ -1,0 +1,1346 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1",
+  "generated_on": "2026-06-26",
+  "status": "four_target_cross_repo_lesson_candidate_bundle_ready_for_lead_review",
+  "product_end_state": "Complete source-first candidate lesson routes for all four reviewed Year 2 owner paragraphs, paired with generated lesson output for product review.",
+  "original_sprint_gate_spec": {
+    "governed_support_handoff": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json",
+    "lesson_eligibility_overlay": "references/data/year2-target-foundation/lesson-production-eligibility-overlay.json",
+    "canonical_source_assets": "references/data/year2-target-foundation/canonical-source-assets.json",
+    "answer_contracts": "references/data/year2-target-foundation/answer-contracts.json",
+    "target_candidates": "references/authored/year2-v6-target-foundation-candidates.json",
+    "original_sprint_gate_spec": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/review-packet.json",
+    "book_architecture": "reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md"
+  },
+  "non_negotiable_requirements": [
+    "Include all four owner paragraphs in one bundle.",
+    "Cite product end-state and original sprint/gate spec.",
+    "Use approved source assets before tasks.",
+    "Include explanation/practice route, advisory short check, and target-equivalent exit-ticket candidate for every paragraph.",
+    "Preserve the no-product-route-adoption and no-student-use authority boundary.",
+    "Require human review before merge because this is protected Year 2 product-authority work."
+  ],
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "paragraph_code": "5.4.2",
+      "lesson_goal": "Gebruik het officiele pensioenmodel om ruilen over de tijd, voorraad/grootheid, indexatie, verhoudingen en koopkracht uit te leggen.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+        "references/data/year2-target-foundation/canonical-source-assets.json#figuur-1-pensioenmodel-2024-2044",
+        "references/data/year2-target-foundation/canonical-source-assets.json#pensioenmodel-assumptions-a-f"
+      ],
+      "prerequisites": [
+        "Pensioenstelsel",
+        "indexatie",
+        "voorraad en stroomgrootheid",
+        "ruilen over de tijd"
+      ],
+      "source_blocks": [
+        {
+          "kind": "pension_chart",
+          "label": "Bron 1",
+          "title": "Pensioenmodel 2024-2044",
+          "body": "De figuur is een schematisch model. Gebruik de richting van de lijnen en staven, niet losse exacte getallen uit de tekening.",
+          "facts": [
+            "pensioenvermogen stijgt in verhouding tot bbp",
+            "premiedruk als deel van pensioenvermogen daalt",
+            "pensioenuitgaven volgen welvaartsindexatie"
+          ]
+        },
+        {
+          "kind": "table",
+          "label": "Bron 2",
+          "title": "Aannames bij het model",
+          "columns": [
+            "Aannames",
+            "Waarde of regel"
+          ],
+          "rows": [
+            [
+              "Inflatie per jaar",
+              "2%"
+            ],
+            [
+              "Reele economische groei per jaar",
+              "0.5%"
+            ],
+            [
+              "Rendement pensioenvermogen per jaar",
+              "3.5%"
+            ],
+            [
+              "Premiedruk als percentage van bbp",
+              "constant"
+            ],
+            [
+              "Aantal premiebetalers",
+              "constant"
+            ]
+          ],
+          "alt": "Tabel met aannames over inflatie, reele groei, rendement, premiedruk en premiebetalers."
+        }
+      ],
+      "explanation": [
+        {
+          "heading": "Lees eerst de bronrichting",
+          "text": "Het model laat ontwikkelingen door de tijd zien. Een stroomgrootheid hoort bij een periode, een voorraadgrootheid bij een moment."
+        },
+        {
+          "heading": "Koppel aannames aan het mechanisme",
+          "text": "Inflatie en reele groei verhogen nominaal inkomen. Als pensioenen welvaartsgeindexeerd zijn, bewegen uitgaven mee met dat inkomen."
+        },
+        {
+          "heading": "Maak de verhouding zichtbaar",
+          "text": "Als pensioenvermogen sneller groeit dan bbp, kan een premie die constant blijft als bbp-deel toch dalen als aandeel van pensioenvermogen."
+        }
+      ],
+      "practice_steps": [
+        "Markeer welke bronzin over een moment gaat en welke over een periode.",
+        "Leg in twee schakels uit waarom welvaartsindexatie hogere pensioenuitgaven geeft.",
+        "Formuleer een verhouding: premie vergeleken met pensioenvermogen."
+      ],
+      "short_check": [
+        {
+          "id": "stock-flow",
+          "prompt": "Netto opgebouwd pensioensparen wordt gemeten op een peildatum. Wat past daarbij?",
+          "options": [
+            [
+              "a",
+              "Een voorraadgrootheid."
+            ],
+            [
+              "b",
+              "Een stroomgrootheid per jaar."
+            ],
+            [
+              "c",
+              "Alleen een prijsindex."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "Een peildatum wijst op een voorraadgrootheid."
+        },
+        {
+          "id": "indexation",
+          "prompt": "Welke bronkoppeling verklaart stijgende pensioenuitgaven?",
+          "options": [
+            [
+              "a",
+              "Inflatie en reele groei verhogen nominaal inkomen; indexatie laat uitgaven meebewegen."
+            ],
+            [
+              "b",
+              "Alleen het aantal premiebetalers bepaalt de uitgaven."
+            ],
+            [
+              "c",
+              "Een constant bbp-deel betekent dat alle verhoudingen gelijk blijven."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "De twee schakels zijn inkomen omhoog en uitgaven mee via indexatie."
+        },
+        {
+          "id": "ratio",
+          "prompt": "Waarom kan premie als deel van pensioenvermogen dalen?",
+          "options": [
+            [
+              "a",
+              "Omdat pensioenvermogen sneller stijgt dan de premiegrondslag."
+            ],
+            [
+              "b",
+              "Omdat je exacte punten uit de schets mag aflezen."
+            ],
+            [
+              "c",
+              "Omdat inflatie altijd nul is."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "Gebruik de richting van de verhouding, niet exacte getallen uit de schets."
+        }
+      ],
+      "exit_ticket": [
+        {
+          "id": "classify-saving",
+          "prompt": "Classificeer opgebouwd pensioensparen als voorraad of stroom en onderbouw met de bron.",
+          "required_groups": [
+            [
+              "voorraad",
+              "moment",
+              "peildatum"
+            ],
+            [
+              "pensioen",
+              "opgebouwd"
+            ]
+          ]
+        },
+        {
+          "id": "indexation-chain",
+          "prompt": "Leg in twee schakels uit waarom welvaartsindexatie hogere pensioenuitgaven kan geven.",
+          "required_groups": [
+            [
+              "inflatie",
+              "reele groei",
+              "nominaal inkomen"
+            ],
+            [
+              "indexatie",
+              "meebewegen",
+              "uitgaven"
+            ]
+          ]
+        },
+        {
+          "id": "premium-wealth",
+          "prompt": "Leg uit waarom premie als deel van pensioenvermogen kan dalen terwijl premie als bbp-deel constant blijft.",
+          "required_groups": [
+            [
+              "pensioenvermogen",
+              "vermogen"
+            ],
+            [
+              "bbp",
+              "constant"
+            ],
+            [
+              "verhouding",
+              "aandeel",
+              "daalt"
+            ]
+          ]
+        }
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/route-contract.json"
+      },
+      "core_requirement_checklist": {
+        "paragraph_plan_target_alignment": true,
+        "student_facing_explanation_practice_route": true,
+        "advisory_short_check": true,
+        "target_equivalent_exit_ticket_candidate": true,
+        "source_first_layout": true,
+        "rendered_candidate_output": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of this cross-repo candidate lesson-production bundle",
+          "proof_required_to_close": "separate product-proof gate after human-approved rendered output and authority review"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "paragraph_code": "6.4.2",
+      "lesson_goal": "Gebruik de VastWonen/Reder-bronnen om wachtlijst, omzetmaximale productie, hypotheekrisico en huurmarktgegevens te verklaren.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=12-13",
+        "references/data/year2-target-foundation/canonical-source-assets.json#tabel-1-vastwonen-financial-data",
+        "references/data/year2-target-foundation/canonical-source-assets.json#tabel-2-particuliere-huurwoningen-reder"
+      ],
+      "prerequisites": [
+        "vraagfunctie",
+        "totale opbrengst",
+        "marginale opbrengst",
+        "inkomenselasticiteit",
+        "hypotheekrente"
+      ],
+      "source_blocks": [
+        {
+          "kind": "table",
+          "label": "Bron 1",
+          "title": "VastWonen sociale huur",
+          "columns": [
+            "Gegeven",
+            "Waarde"
+          ],
+          "rows": [
+            [
+              "Maximale huur",
+              "EUR 850"
+            ],
+            [
+              "Vraag bij maximale huur",
+              "10,400 woningen"
+            ],
+            [
+              "Woningvoorraad",
+              "6,800 woningen"
+            ],
+            [
+              "Gemiddelde opbrengst",
+              "GO = -0.125Q + 2,150"
+            ],
+            [
+              "Omzetmaximale Q",
+              "8,600 woningen"
+            ],
+            [
+              "Omzetmaximale huur",
+              "EUR 1,075"
+            ]
+          ],
+          "alt": "Tabel met huur, vraag, voorraad, opbrengstfunctie en omzetmaximale keuze."
+        },
+        {
+          "kind": "table",
+          "label": "Bron 2",
+          "title": "Particuliere huurmarkt Reder",
+          "columns": [
+            "Gegeven",
+            "Waarde"
+          ],
+          "rows": [
+            [
+              "Vrijkomende huurwoningen",
+              "-9.9%"
+            ],
+            [
+              "Gemiddelde huur",
+              "+6%"
+            ],
+            [
+              "Middeninkomens",
+              "+3%"
+            ],
+            [
+              "Inkomenselasticiteit",
+              "+0.4"
+            ]
+          ],
+          "alt": "Tabel met aanbod, huur, middeninkomens en inkomenselasticiteit."
+        }
+      ],
+      "explanation": [
+        {
+          "heading": "Begin bij de wachtlijst",
+          "text": "Vraag bij EUR 850 is 10,400 woningen. Trek de voorraad van 6,800 woningen af om de wachtlijst te vinden."
+        },
+        {
+          "heading": "Gebruik opbrengst voor de keuze",
+          "text": "De omzetmaximale keuze gebruikt Q = 8,600 en P = EUR 1,075. De opbrengst is Q maal P."
+        },
+        {
+          "heading": "Verbind finance met huurmarkt",
+          "text": "Lage hypotheekrente verlaagt rentelasten. Een krappe huurmarkt kan huurinkomsten stabieler maken, terwijl inkomensgroei met positieve elasticiteit de vraag ondersteunt."
+        }
+      ],
+      "practice_steps": [
+        "Kies alleen vraag en voorraad voor de wachtlijst.",
+        "Bereken totale opbrengst met Q maal P.",
+        "Maak een bronketen van inkomensgroei, positieve elasticiteit en krapper aanbod naar hogere huur."
+      ],
+      "short_check": [
+        {
+          "id": "waiting-list",
+          "prompt": "Welke berekening hoort bij de wachtlijst bij EUR 850?",
+          "options": [
+            [
+              "a",
+              "10,400 - 6,800 = 3,600 woningen."
+            ],
+            [
+              "b",
+              "8,600 - 6,800 = 1,800 woningen."
+            ],
+            [
+              "c",
+              "1,075 x 8,600 = 9,245,000 euro."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "Voor de wachtlijst gebruik je vraag bij de maximale huur min voorraad."
+        },
+        {
+          "id": "revenue",
+          "prompt": "Welke opbrengst hoort bij Q = 8,600 en P = EUR 1,075?",
+          "options": [
+            [
+              "a",
+              "EUR 9,245,000."
+            ],
+            [
+              "b",
+              "EUR 3,600."
+            ],
+            [
+              "c",
+              "EUR 1,400,000."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "Totale opbrengst is Q maal P: 8,600 x 1,075."
+        },
+        {
+          "id": "rent-chain",
+          "prompt": "Welke bronketen verklaart hogere huur?",
+          "options": [
+            [
+              "a",
+              "Middeninkomens stijgen, elasticiteit is positief, en minder woningen komen vrij."
+            ],
+            [
+              "b",
+              "Elasticiteit is negatief en aanbod stijgt sterk."
+            ],
+            [
+              "c",
+              "Alleen hypotheekrente bepaalt de huur."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "Vraagdruk en een beperkter aanbod ondersteunen de huurtoename."
+        }
+      ],
+      "exit_ticket": [
+        {
+          "id": "waiting-list-open",
+          "prompt": "Bereken de wachtlijst bij EUR 850 en noem de eenheid.",
+          "required_groups": [
+            [
+              "10400",
+              "10,400"
+            ],
+            [
+              "6800",
+              "6,800"
+            ],
+            [
+              "3600",
+              "3,600"
+            ],
+            [
+              "woningen"
+            ]
+          ]
+        },
+        {
+          "id": "revenue-open",
+          "prompt": "Bereken de totale opbrengst bij Q = 8,600 en P = EUR 1,075.",
+          "required_groups": [
+            [
+              "8600",
+              "8,600"
+            ],
+            [
+              "1075",
+              "1,075"
+            ],
+            [
+              "9245000",
+              "9,245,000"
+            ],
+            [
+              "eur",
+              "euro"
+            ]
+          ]
+        },
+        {
+          "id": "rent-market-open",
+          "prompt": "Leg met Bron 2 uit waarom de huur kan stijgen.",
+          "required_groups": [
+            [
+              "middeninkomens",
+              "inkomen"
+            ],
+            [
+              "elasticiteit",
+              "positief"
+            ],
+            [
+              "vrijkomende",
+              "aanbod",
+              "-9.9"
+            ],
+            [
+              "huur",
+              "stijgt"
+            ]
+          ]
+        }
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/route-contract.json"
+      },
+      "core_requirement_checklist": {
+        "paragraph_plan_target_alignment": true,
+        "student_facing_explanation_practice_route": true,
+        "advisory_short_check": true,
+        "target_equivalent_exit_ticket_candidate": true,
+        "source_first_layout": true,
+        "rendered_candidate_output": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of this cross-repo candidate lesson-production bundle",
+          "proof_required_to_close": "separate product-proof gate after human-approved rendered output and authority review"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "paragraph_code": "7.4.1",
+      "lesson_goal": "Gebruik de kredietverzekeringsbron om informatieproblemen, prikkels, verwachte schade en premieopslag te verklaren.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-23-1-o.pdf#page=6-7",
+        "references/data/year2-target-foundation/canonical-source-assets.json#figuur-1-kredietverzekering-en-voorwaarden",
+        "references/data/year2-target-foundation/canonical-source-assets.json#tabel-1-financiele-gegevens-digibate"
+      ],
+      "prerequisites": [
+        "verwachte waarde",
+        "moreel risico",
+        "averechtse selectie",
+        "principaal-agent",
+        "verzekeringspremie"
+      ],
+      "source_blocks": [
+        {
+          "kind": "flow",
+          "label": "Bron 1",
+          "title": "Kredietverzekering en voorwaarden",
+          "body": "Leverancier, kredietverzekeraar en kopende onderneming hebben verschillende informatie en prikkels. Incassokosten worden bij de kopende onderneming gelegd.",
+          "facts": [
+            "kredietverzekeraar is principaal",
+            "kopende onderneming is agent",
+            "incassokosten bij koper verminderen wanbetalingsprikkel",
+            "bonus-malus en eigen risico veranderen claimprikkels"
+          ]
+        },
+        {
+          "kind": "table",
+          "label": "Bron 2",
+          "title": "Financiele gegevens Digibate",
+          "columns": [
+            "Contracten",
+            "Omzet per contract",
+            "Kans op wanbetaling"
+          ],
+          "rows": [
+            [
+              "20",
+              "EUR 1,000,000",
+              "0.05%"
+            ],
+            [
+              "30",
+              "EUR 500,000",
+              "0.2%"
+            ],
+            [
+              "80",
+              "EUR 250,000",
+              "0.2%"
+            ]
+          ],
+          "alt": "Tabel met aantallen contracten, omzet per contract en kans op wanbetaling."
+        }
+      ],
+      "explanation": [
+        {
+          "heading": "Benoem actor en prikkel",
+          "text": "De verzekeraar wil minder wanbetaling en minder onzorgvuldig gedrag. De kopende onderneming reageert op kosten en voorwaarden."
+        },
+        {
+          "heading": "Reken verwachte schade apart uit",
+          "text": "Gebruik contractaantal maal omzet per contract maal kans op wanbetaling per rij. De goedgekeurde route geeft EUR 80,000 verwachte schade."
+        },
+        {
+          "heading": "Voeg premieopslag toe",
+          "text": "Een opslag van 20% betekent vermenigvuldigen met 1.20. De totale premie wordt EUR 96,000."
+        }
+      ],
+      "practice_steps": [
+        "Koppel principaal en agent aan de juiste actoren.",
+        "Leg een verzekeringsvoorwaarde uit als prikkelverandering.",
+        "Bereken verwachte schade en voeg 20% opslag toe."
+      ],
+      "short_check": [
+        {
+          "id": "principal-agent",
+          "prompt": "Welke actorrol past bij deze bronroute?",
+          "options": [
+            [
+              "a",
+              "Kredietverzekeraar principaal, kopende onderneming agent."
+            ],
+            [
+              "b",
+              "Leverancier principaal, verzekeraar agent."
+            ],
+            [
+              "c",
+              "Alle partijen hebben dezelfde prikkel."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "De verzekeraar stelt voorwaarden om gedrag van de koper te sturen."
+        },
+        {
+          "id": "collection-cost",
+          "prompt": "Waarom kunnen incassokosten bij de koper het informatieprobleem verminderen?",
+          "options": [
+            [
+              "a",
+              "De koper krijgt een financiele prikkel om op tijd te betalen."
+            ],
+            [
+              "b",
+              "De verzekeraar betaalt altijd alle kosten zelf."
+            ],
+            [
+              "c",
+              "De leverancier hoeft geen premie meer te betalen."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "De voorwaarde verandert de prikkel van de kopende onderneming."
+        },
+        {
+          "id": "markup",
+          "prompt": "Welke premie volgt uit EUR 80,000 verwachte schade en 20% opslag?",
+          "options": [
+            [
+              "a",
+              "EUR 96,000."
+            ],
+            [
+              "b",
+              "EUR 64,000."
+            ],
+            [
+              "c",
+              "EUR 80,020."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "Vermenigvuldig met 1.20."
+        }
+      ],
+      "exit_ticket": [
+        {
+          "id": "actor-condition",
+          "prompt": "Noem principaal en agent en leg uit hoe incassokosten de prikkel veranderen.",
+          "required_groups": [
+            [
+              "kredietverzekeraar",
+              "verzekeraar"
+            ],
+            [
+              "principaal"
+            ],
+            [
+              "kopende onderneming",
+              "koper"
+            ],
+            [
+              "agent"
+            ],
+            [
+              "incassokosten",
+              "kosten"
+            ],
+            [
+              "prikkel",
+              "wanbetaling"
+            ]
+          ]
+        },
+        {
+          "id": "expected-damage",
+          "prompt": "Bereken de totale premie vanuit EUR 80,000 verwachte schade en 20% opslag.",
+          "required_groups": [
+            [
+              "80000",
+              "80,000"
+            ],
+            [
+              "1.20",
+              "20%"
+            ],
+            [
+              "96000",
+              "96,000"
+            ],
+            [
+              "eur",
+              "euro"
+            ]
+          ]
+        },
+        {
+          "id": "information-chain",
+          "prompt": "Leg een voorwaarde uit die moreel risico of averechtse selectie vermindert.",
+          "required_groups": [
+            [
+              "bonus-malus",
+              "eigen risico",
+              "verplicht"
+            ],
+            [
+              "prikkel",
+              "selectie",
+              "risico"
+            ],
+            [
+              "verzekeraar",
+              "koper",
+              "leverancier"
+            ]
+          ]
+        }
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/route-contract.json"
+      },
+      "core_requirement_checklist": {
+        "paragraph_plan_target_alignment": true,
+        "student_facing_explanation_practice_route": true,
+        "advisory_short_check": true,
+        "target_equivalent_exit_ticket_candidate": true,
+        "source_first_layout": true,
+        "rendered_candidate_output": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of this cross-repo candidate lesson-production bundle",
+          "proof_required_to_close": "separate product-proof gate after human-approved rendered output and authority review"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "paragraph_code": "8.1.4",
+      "lesson_goal": "Gebruik de Guarda/Orso Bianco-bron om dominante strategie, prisoners dilemma, zelfbinding en prijsprikkels uit te leggen.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+        "references/data/year2-target-foundation/canonical-source-assets.json#ijssalon-guarda-orso-bianco-context",
+        "references/data/year2-target-foundation/canonical-source-assets.json#lowest-price-guarantee-self-binding-source",
+        "references/data/year2-target-foundation/canonical-source-assets.json#derived-payoff-representation"
+      ],
+      "prerequisites": [
+        "strategische interactie",
+        "dominante strategie",
+        "prisoners dilemma",
+        "zelfbinding",
+        "prijsgarantie"
+      ],
+      "source_blocks": [
+        {
+          "kind": "flow",
+          "label": "Bron 1",
+          "title": "Guarda en Orso Bianco",
+          "body": "Orso Bianco komt de markt binnen met een lagere prijs. Consumenten zien de ijsjes als perfecte substituten.",
+          "facts": [
+            "Guarda verliest monopoliepositie",
+            "Orso Bianco opent met lagere prijs",
+            "beide bedrijven hebben dezelfde productiekosten",
+            "perfecte substituten versterken de prijsprikkel"
+          ]
+        },
+        {
+          "kind": "payoff",
+          "label": "Afgeleide kaart",
+          "title": "Afgeleide prikkelkaart, niet de officiele bron",
+          "body": "Gebruik deze kaart alleen na Bron 1. De kaart ordent prikkels, maar vervangt de bron niet.",
+          "facts": [
+            "ieder bedrijf heeft een prikkel om prijs te verlagen",
+            "gezamenlijk kan een prijzenoorlog slechter uitpakken",
+            "laagsteprijsgarantie maakt zelfbinding geloofwaardiger"
+          ]
+        }
+      ],
+      "explanation": [
+        {
+          "heading": "Officiele context eerst",
+          "text": "Start met de bronfeiten: lagere prijs, perfecte substituten en dezelfde kosten. Pas daarna mag je een afgeleide prikkelkaart gebruiken."
+        },
+        {
+          "heading": "Dominante strategie en dilemma",
+          "text": "Als elke onderneming individueel voordeel ziet in verlagen, kan de uitkomst voor beiden slechter zijn dan samenwerken."
+        },
+        {
+          "heading": "Zelfbinding verandert prikkels",
+          "text": "Een laagsteprijsgarantie maakt de belofte geloofwaardiger en verkleint voor de ander de winst van een prijzenoorlog."
+        }
+      ],
+      "practice_steps": [
+        "Benoem eerst het bronfeit over perfecte substituten.",
+        "Leg de individuele prijsprikkel uit.",
+        "Gebruik zelfbinding om de veranderde prikkel van de concurrent te verklaren."
+      ],
+      "short_check": [
+        {
+          "id": "source-order",
+          "prompt": "Wat komt eerst in de uitleg?",
+          "options": [
+            [
+              "a",
+              "De officiele context over prijzen en substituten."
+            ],
+            [
+              "b",
+              "Een afgeleide kaart als enige bron."
+            ],
+            [
+              "c",
+              "Alleen een algemene definitie van speltheorie."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "De broncontext blijft leidend; de kaart is alleen een hulpmiddel."
+        },
+        {
+          "id": "dominant-strategy",
+          "prompt": "Waarom is prijs verlagen aantrekkelijk voor elk bedrijf afzonderlijk?",
+          "options": [
+            [
+              "a",
+              "Omdat consumenten de ijsjes als perfecte substituten zien."
+            ],
+            [
+              "b",
+              "Omdat beide bedrijven verplicht samenwerken."
+            ],
+            [
+              "c",
+              "Omdat een hogere prijs altijd meer klanten geeft."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "Bij perfecte substituten kan een lagere prijs klanten aantrekken."
+        },
+        {
+          "id": "self-binding",
+          "prompt": "Wat doet een laagsteprijsgarantie in deze bronroute?",
+          "options": [
+            [
+              "a",
+              "Zij maakt de belofte om een lagere prijs te volgen geloofwaardiger."
+            ],
+            [
+              "b",
+              "Zij maakt alle prijzen wettelijk vast."
+            ],
+            [
+              "c",
+              "Zij verwijdert alle concurrentie."
+            ]
+          ],
+          "answer": "a",
+          "feedback": "De garantie verandert de verwachte opbrengst van prijsverlaging door de ander."
+        }
+      ],
+      "exit_ticket": [
+        {
+          "id": "dominant-open",
+          "prompt": "Leg uit waarom prijs verlagen voor elk bedrijf afzonderlijk aantrekkelijk kan zijn.",
+          "required_groups": [
+            [
+              "prijs",
+              "verlagen"
+            ],
+            [
+              "perfecte substituten",
+              "substituten"
+            ],
+            [
+              "klanten",
+              "vraag",
+              "afzet"
+            ]
+          ]
+        },
+        {
+          "id": "dilemma-open",
+          "prompt": "Leg uit waarom de uitkomst een prisoners dilemma kan zijn.",
+          "required_groups": [
+            [
+              "individueel",
+              "ieder"
+            ],
+            [
+              "gezamenlijk",
+              "beide"
+            ],
+            [
+              "slechter",
+              "prijzenoorlog"
+            ]
+          ]
+        },
+        {
+          "id": "binding-open",
+          "prompt": "Leg in twee schakels uit hoe een laagsteprijsgarantie de prikkel van Orso Bianco verandert.",
+          "required_groups": [
+            [
+              "garantie",
+              "laagsteprijs"
+            ],
+            [
+              "geloofwaardig",
+              "zelfbinding"
+            ],
+            [
+              "prikkel",
+              "minder voordeel",
+              "prijs verlagen"
+            ]
+          ]
+        }
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/route-contract.json"
+      },
+      "core_requirement_checklist": {
+        "paragraph_plan_target_alignment": true,
+        "student_facing_explanation_practice_route": true,
+        "advisory_short_check": true,
+        "target_equivalent_exit_ticket_candidate": true,
+        "source_first_layout": true,
+        "rendered_candidate_output": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of this cross-repo candidate lesson-production bundle",
+          "proof_required_to_close": "separate product-proof gate after human-approved rendered output and authority review"
+        }
+      ]
+    }
+  ],
+  "rendered_screenshot_proof": {
+    "status": "captured",
+    "screenshot_dir": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots",
+    "manifest_json": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshot-manifest.json",
+    "manifest_md": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshot-manifest.md",
+    "screenshot_count": 48,
+    "expected_count": 48,
+    "qa_command": "node scripts/qa-student-web-pages.js reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots <twelve generated route/check/exit-ticket pages>",
+    "cases": [
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-desktop-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-desktop-light.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-mobile-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-exit-ticket-mobile-light.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-light.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-light.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-desktop-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-desktop-light.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-mobile-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-route-mobile-light.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-desktop-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-desktop-light.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-mobile-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-exit-ticket-mobile-light.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-desktop-light.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-korte-check-mobile-light.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-desktop-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-desktop-light.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-mobile-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/6-4-2-route-mobile-light.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-desktop-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-desktop-light.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-mobile-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-exit-ticket-mobile-light.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-desktop-light.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-korte-check-mobile-light.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-desktop-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-desktop-light.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-mobile-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/7-4-1-route-mobile-light.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-desktop-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-desktop-light.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-mobile-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-exit-ticket-mobile-light.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-light.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-light.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-desktop-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-desktop-light.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-light.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      }
+    ]
+  },
+  "cross_repo_merge_order": [
+    "1. Merge platform authoritative source/generator PR after READY_FOR_HUMAN_REVIEW owner authorization.",
+    "2. Merge paired 4veco-lessen generated candidate-output PR after platform PR lands and exact-head readiness is renewed.",
+    "3. Do not route product adoption or student use from this merge."
+  ],
+  "lead_review_requirements": [
+    "economics/source fidelity",
+    "teacher feasibility",
+    "source/visual fidelity",
+    "task-shell/runtime",
+    "answer-form/exit-ticket equivalence",
+    "accessibility/mobile",
+    "authority/completion-language"
+  ],
+  "authority_claims": {
+    "cross_repo_lesson_candidate_output_created_for_review": true,
+    "all_four_owner_paragraphs_included": true,
+    "source_context_first_layout": true,
+    "advisory_short_checks_created": true,
+    "target_equivalent_exit_ticket_candidates_created": true,
+    "rendered_candidate_output_created": true,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "live_mtu_registry_mutated": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  }
+}
