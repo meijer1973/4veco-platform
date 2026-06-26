@@ -203,7 +203,9 @@ After a normal implementation draft PR is published:
 3. Run the independent PR Readiness Reviewer with `npm.cmd run review:pr-readiness`.
 4. Apply only its allowed transition with `npm.cmd run apply:pr-readiness`, or use
    `npm.cmd run route-and-apply:pr-readiness -- --pr <number> --evidence <evidence.json> --expect-transition MARK_READY`
-   when current live evidence and supplemental proof should mark the draft ready.
+   when current live evidence and supplemental proof should mark the draft
+   ready. Use `npm.cmd run apply:bundle-readiness` when one controller decision
+   must mark a paired platform/lesson bundle ready together.
 5. Return to the owner only when the route is `READY_FOR_HUMAN_REVIEW`, a
    genuine `PAUSE_ESCALATE` blocker exists, or autonomous closure has completed
    and a final status report is appropriate.
@@ -328,6 +330,10 @@ For paired platform/lesson work:
 - run `.github/workflows/cross-repo-bundle-compatibility.yml` for
   `platform-first`, `lesson-first`, and `bundle-final`;
 - require `bundle-final` green plus at least one green intermediate state;
+- when both members are draft but substantively ready, use
+  `npm.cmd run apply:bundle-readiness` to post exact-head member readiness
+  decisions and coordinate the `MARK_READY` transitions before requesting merge
+  authorization;
 - record one canonical `4veco-human-bundle-authorization` comment for the
   whole pair when human approval is required;
 - merge through `.github/workflows/authorized-bundle-integration.yml` or

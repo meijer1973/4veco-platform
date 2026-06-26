@@ -102,4 +102,6 @@ Task-routing guidance:
   governance or workflow changes.
 - Use the cross-repo bundle compatibility workflow and authorized bundle
   integration workflow when a platform PR and lesson PR must land as one
-  coordinated payload.
+  coordinated payload. If both members are still draft but substantively ready,
+  run `npm.cmd run apply:bundle-readiness` from the controller decision before
+  requesting bundle merge authorization.

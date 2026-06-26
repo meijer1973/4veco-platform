@@ -408,6 +408,53 @@ function collectDeclaredExactMemberMismatches(raw, exactMembers) {
   return mismatches;
 }
 
+function normalizeReadinessOperation(raw) {
+  const operation = raw.readiness_operation || raw.readinessOperation || raw.coordinated_readiness || {};
+  const kind = operation.kind || operation.operation || null;
+  const coordinatedMarkReady =
+    kind === 'coordinated_mark_ready' ||
+    operation.coordinated_mark_ready === true ||
+    raw.coordinated_mark_ready === true;
+  return {
+    ...operation,
+    operation: coordinatedMarkReady ? 'coordinated_mark_ready' : kind,
+    coordinated_mark_ready: coordinatedMarkReady,
+    both_draft_substantively_ready:
+      operation.both_draft_substantively_ready === true ||
+      raw.both_draft_substantively_ready === true,
+    members: asArray(operation.members || raw.readiness_members).map(normalizeBundleMember),
+  };
+}
+
+function memberKey(member) {
+  if (!member || !member.repository || !member.pr_number) return null;
+  return `${member.repository}#${member.pr_number}`;
+}
+
+function findOperationMember(operation, member) {
+  const key = memberKey(member);
+  if (!key) return null;
+  return (operation.members || []).find((item) => memberKey(item) === key) || null;
+}
+
+function memberSubstantivelyReadyForCoordinatedMarkReady(operation, member) {
+  if (
+    !operation ||
+    operation.coordinated_mark_ready !== true ||
+    operation.both_draft_substantively_ready !== true
+  ) {
+    return false;
+  }
+  const operationMember = findOperationMember(operation, member);
+  return Boolean(
+    member.substantively_ready === true ||
+      member.ready_for_coordinated_mark_ready === true ||
+      (operationMember &&
+        (operationMember.substantively_ready === true ||
+          operationMember.ready_for_coordinated_mark_ready === true))
+  );
+}
+
 function bundleSafetyProof(proof, evidence) {
   const raw = (proof && proof.bundle) || evidence.bundle || {};
   const pairedPrs = asArray(raw.paired_prs || (evidence.bundle && evidence.bundle.paired_prs)).map(normalizeBundleMember);
@@ -422,6 +469,7 @@ function bundleSafetyProof(proof, evidence) {
   if (!required) {
     return { required: false, delegated: false, ok: true, failures: [], summary: null };
   }
+  const readinessOperation = normalizeReadinessOperation(raw);
   if (typeof bundleId !== 'string' || !bundleId.trim()) failures.push('bundle_id_missing');
   const controller = normalizeBundleMember(raw.controller || {});
   if (!bundleMemberComplete(controller, { requireHead: false })) {
@@ -455,8 +503,15 @@ function bundleSafetyProof(proof, evidence) {
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
   for (const paired of pairedPrs) {
     if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
-    if (paired && paired.is_draft === true) failures.push('paired_pr_draft');
-    if (paired && (paired.ready === false || paired.current === false || paired.open === false || paired.mergeable === false)) {
+    const coordinatedDraftReady = memberSubstantivelyReadyForCoordinatedMarkReady(readinessOperation, paired);
+    if (paired && paired.is_draft === true && !coordinatedDraftReady) failures.push('paired_pr_draft');
+    if (
+      paired &&
+      ((paired.ready === false && !coordinatedDraftReady) ||
+        paired.current === false ||
+        paired.open === false ||
+        paired.mergeable === false)
+    ) {
       failures.push('paired_pr_not_ready');
     }
     if (paired && paired.reviewed_payload_head_sha && paired.head_sha && paired.reviewed_payload_head_sha !== paired.head_sha) {
@@ -486,6 +541,7 @@ function bundleSafetyProof(proof, evidence) {
     paired_prs: pairedPrs,
     exact_members: exactMembers,
     compatibility,
+    readiness_operation: readinessOperation.coordinated_mark_ready ? readinessOperation : null,
     failures: uniqueStrings(failures),
   };
   return summary;
@@ -639,7 +695,15 @@ function collectRevisionReasons(evidence) {
   if (proof.blocking_comments === true) reasons.push('blocking_comments_unresolved');
   if (bundle.required && !bundle.ok) reasons.push(...bundle.failures);
   if (evidence.bundle && evidence.bundle.complete === false) reasons.push('bundle_incomplete');
-  if (asArray(evidence.bundle && evidence.bundle.paired_prs).some((paired) => paired.ready === false || paired.current === false)) {
+  const rawBundle = evidence.bundle || {};
+  const rawReadinessOperation = normalizeReadinessOperation(rawBundle);
+  if (
+    asArray(rawBundle.paired_prs).some((paired) => {
+      const normalized = normalizeBundleMember(paired);
+      const coordinatedDraftReady = memberSubstantivelyReadyForCoordinatedMarkReady(rawReadinessOperation, normalized);
+      return (normalized.ready === false && !coordinatedDraftReady) || normalized.current === false;
+    })
+  ) {
     reasons.push('paired_pr_not_ready');
   }
   if (evidence.throughput.level === 'L2' && !evidence.throughput.owner_preapproved) {

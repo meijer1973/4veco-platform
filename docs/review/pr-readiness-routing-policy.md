@@ -170,8 +170,23 @@ bundle matrix is green.
 Lesson-repository bundle members may consume delegated proof from the platform
 controller. Do not require the lesson PR to carry a standalone platform
 branch-protection context on its commit, but do require exact bundle membership,
-open/non-draft member state, payload SHA match, and green delegated controller
-proof.
+payload SHA match, and green delegated controller proof.
+
+Bundle readiness is a separate operation from bundle merge. When both paired
+members are still draft but the platform controller proves both are
+substantively ready at exact heads, the readiness proof may include
+`readiness_operation.operation: coordinated_mark_ready`,
+`both_draft_substantively_ready: true`, and per-member substantive-ready
+entries. In that pre-state, the router may accept `ready: false` and
+`is_draft: true` for paired members only for the coordinated mark-ready
+operation.
+
+Use `npm.cmd run apply:bundle-readiness` to consume one controller decision and
+generate the member decisions. The operation must fetch both PRs, validate the
+exact heads, post or update exact-head readiness comments for both members,
+re-fetch immediately before each `MARK_READY` mutation, verify transitions
+afterward, and grant no merge authority if any member fails. The authorized
+bundle integrator still requires open, non-draft member state before merge.
 
 ## Branch protection
 
