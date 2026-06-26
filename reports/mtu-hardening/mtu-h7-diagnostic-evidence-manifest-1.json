@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "manifest_id": "mtu-h7-diagnostic-evidence-manifest-1",
+  "status": "diagnostic_official_evidence_rendered_no_mapping_or_outcomes",
+  "generated_at": "2026-06-25T13:32:29.738Z",
+  "source_curator_view": "reports/mtu-hardening/mtu-h7-execution-curator-view-1.json",
+  "diagnostic_record_count": 16,
+  "locked_holdout_records_rendered": 0,
+  "records": [
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-1:question-2",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-23-1-o",
+        "opgave_num": 1,
+        "question_num": 2,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 2,
+        "prompt_page_end": 2,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_page_start": 5,
+        "correction_page_end": 5,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+          "source_pdf_sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198",
+          "page_number": 2,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-prompt-02-02.png",
+          "rendered_png_sha256": "857974dc55b5e0b30fc388af10ff2e0a0f10e0fcaad794e3b2002a62792cab4b"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+          "source_pdf_sha256": "e1bcf98aa57d79c883b5ca233954293f85073d4707b96df75493cc8912487b31",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-correction-05-05.png",
+          "rendered_png_sha256": "effb809cf818caca9228dec1ca59eddc893d21dc34da5f652b8203c5391dcb36"
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-2:question-9",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-23-1-o",
+        "opgave_num": 2,
+        "question_num": 9,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 4,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+          "source_pdf_sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198",
+          "page_number": 4,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-prompt-04-04.png",
+          "rendered_png_sha256": "dee9cbf7e239fd13d4ae9b65660592bf28d2f6f47bc6949ceea972e6e479f197"
+        },
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+          "source_pdf_sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-prompt-05-05.png",
+          "rendered_png_sha256": "99a1955b6864ee877bb59ad12403920ed5ea1fe9990c2ee91a875fe838c5fc29"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+          "source_pdf_sha256": "e1bcf98aa57d79c883b5ca233954293f85073d4707b96df75493cc8912487b31",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-correction-07-07.png",
+          "rendered_png_sha256": "38dda876636f0e8f0ce826682c1e700d46ce4379cb751ccbd19e23db63c53c9b"
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-5:question-21",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-23-1-o",
+        "opgave_num": 5,
+        "question_num": 21,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 8,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+          "source_pdf_sha256": "d57164b995c0a26c41865dd78973f55385dc20a5e29b0b3b9827a778494f2198",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q21-prompt-08-08.png",
+          "rendered_png_sha256": "94c84792501e54b3f1d61893cbfd1bd43a3f2feaad7e972e36c79c6c4bf90f0f"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+          "source_pdf_sha256": "e1bcf98aa57d79c883b5ca233954293f85073d4707b96df75493cc8912487b31",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q21-correction-11-11.png",
+          "rendered_png_sha256": "01475a499c8a7c59bb6464b6ecf183ae1eb7f4a5c377f265244cfef9c7c1702f"
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-23-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "34f60793a0ae25efa33e3ddc4bb9f7b4b243fa6cd36ce2ec9277e272e57d365a"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+          "source_pdf_sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "15651a69123775d21c679a4edf84b1afc0a0edebbebe7edfc3dd4b8817436b4c"
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-24-1-o",
+        "opgave_num": 2,
+        "question_num": 12,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+          "rendered_png_sha256": "819492e8638d7e8e7b9dc68813a9e01192d8d35bf91a61d99492a84ea4cacf31"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png",
+          "rendered_png_sha256": "072370c8b6c86a8f76f50d3440dab0921713adcef38926a17ca463d43b667643"
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-24-2-o",
+        "opgave_num": 1,
+        "question_num": 3,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+        "prompt_page_start": 2,
+        "prompt_page_end": 2,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+        "correction_page_start": 5,
+        "correction_page_end": 5,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "3444556a6c6974dbe4c1078147cfba2f2924efb74e5f9fb3505bdae0c86bd0f8",
+          "page_number": 2,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-2-o-q03-prompt-02-02.png",
+          "rendered_png_sha256": "229b1a1a9e627087633312dbfffa40dd6254a811b517e213f4a3eee67fa44a22"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+          "source_pdf_sha256": "acd6144b691e9303a9c961cb61a9b35467f3bfe36a141a08e6d88424b71c74cf",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-2-o-q03-correction-05-05.png",
+          "rendered_png_sha256": "bbac1c278390e2f002eb3511a412dec0be118f6f91b85826893b6559910e289c"
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-25-1-o",
+        "opgave_num": 3,
+        "question_num": 16,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+        "prompt_page_start": 6,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+        "correction_page_start": 12,
+        "correction_page_end": 12,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+          "source_pdf_sha256": "ead90d620944bf2e69ea6873bb42aed80d4e9d4221c364628f1fab1c2be82ebd",
+          "page_number": 6,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-prompt-06-6.png",
+          "rendered_png_sha256": "90eac65fa7d0513c0fbd472578e4792d1e5d2b4bc9e5419bd937dc1ab1c5c814"
+        },
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+          "source_pdf_sha256": "ead90d620944bf2e69ea6873bb42aed80d4e9d4221c364628f1fab1c2be82ebd",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-prompt-07-7.png",
+          "rendered_png_sha256": "904683ab716796bea54496bae11ef3094fa981c2cf86d4172ea93382227b8dee"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+          "source_pdf_sha256": "a9b5fcf0f994a657fd2273568c9950edea017b22c4b6b14c38a6bcea29c540ee",
+          "page_number": 12,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q16-correction-12-12.png",
+          "rendered_png_sha256": "3f9cf018433f3897883a0fe4b1b1d2e74c33087983670e83e46da6e68d363323"
+        }
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "ha-1022-a-25-2-o",
+        "opgave_num": 2,
+        "question_num": 10,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 6,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+          "source_pdf_sha256": "e9bf94941a4071d82fc9e9ecb46c1d010debd1207a5498c04c16e5996049b685",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-prompt-05-05.png",
+          "rendered_png_sha256": "13f085db8370a0449859e375ce63e57d5307b17f9ad365919aac1273e6128b75"
+        },
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+          "source_pdf_sha256": "e9bf94941a4071d82fc9e9ecb46c1d010debd1207a5498c04c16e5996049b685",
+          "page_number": 6,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-prompt-06-06.png",
+          "rendered_png_sha256": "8c39a9cdb4df685c607a4d73c128af0566614d3b825661e5204a93572598bb6a"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+          "source_pdf_sha256": "2f71cc2fc8f9e88bca97c61c4bbc731a90b4ee88a577b141a3a6fd7ccd7dde9f",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q10-correction-07-07.png",
+          "rendered_png_sha256": "2c51146c5f68eff8dea6d5c09b6c64d0ec6350d9acc11809830bb09890b3a8a9"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-23-1-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+          "source_pdf_sha256": "1bfc3dfd67382143a171b23d703e72c80dcf87ac7b76198e034a92af037f5759",
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q04-prompt-03-03.png",
+          "rendered_png_sha256": "b97d2ff487787d7a574bac14065b0267ea786007221fd181c73e8418fc4bc640"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+          "source_pdf_sha256": "ee51dd433d35609aa6e0c3174cb84cc5acc0c68f37e04d4406f7d865e736b08f",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q04-correction-07-07.png",
+          "rendered_png_sha256": "19d59963dd305e25ec51fcdb9585e9bf90408df02e663981222fe4c9aff90700"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-23-1-o",
+        "opgave_num": 5,
+        "question_num": 21,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+        "prompt_page_start": 10,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+          "source_pdf_sha256": "1bfc3dfd67382143a171b23d703e72c80dcf87ac7b76198e034a92af037f5759",
+          "page_number": 10,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q21-prompt-10-10.png",
+          "rendered_png_sha256": "c161ef3fc16067766d589920bab687e3c46b62ccb1f5c2dfc5d00673c67cff60"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+          "source_pdf_sha256": "ee51dd433d35609aa6e0c3174cb84cc5acc0c68f37e04d4406f7d865e736b08f",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-1-o-q21-correction-11-11.png",
+          "rendered_png_sha256": "127e4cab555e5ec193135393d6772d84f5f6765c6735cf274ad7a9b00835fb33"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-23-2-o",
+        "opgave_num": 2,
+        "question_num": 9,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q09-prompt-05-05.png",
+          "rendered_png_sha256": "85a23d132e9601d4e3c14e1632119100ba383a5df40985efb698bd4a78d4440b"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+          "source_pdf_sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q09-correction-07-07.png",
+          "rendered_png_sha256": "8b94a881ac2298e40d9873d45b743678f99f9bd64e6903de1a5890a46d8ebb04"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-23-2-o",
+        "opgave_num": 4,
+        "question_num": 20,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 9,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-09-09.png",
+          "rendered_png_sha256": "bf769fc0f821173b260172f6308cbe963432cdf25504e5da2bf5a6343c0d111e"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+          "page_number": 10,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-10-10.png",
+          "rendered_png_sha256": "c739b184b21efd344e82083ab29766c42888f32623cb2227ed04ec8148c7dec5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+          "source_pdf_sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-correction-11-11.png",
+          "rendered_png_sha256": "f0b01082dbde37edfc31020abaf7fa5561c86dd4675551366dde748fe2a26d24"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-24-1-o",
+        "opgave_num": 3,
+        "question_num": 17,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-07-07.png",
+          "rendered_png_sha256": "28aebd8aff85cf7ed477aee445e05f29d421fae3d9900c8160b1b4ef89e9b7bf"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-08-08.png",
+          "rendered_png_sha256": "3d006a5bc381c5d9bbe8d628d65283ca84a2176d055764ae3189c73b267307f1"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-correction-11-11.png",
+          "rendered_png_sha256": "57d593d7b91bb589b254c88fea484d12d83c34febd1c96a018f7bee22caacf91"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-24-1-o",
+        "opgave_num": 5,
+        "question_num": 24,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 11,
+        "prompt_page_end": 11,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_page_start": 14,
+        "correction_page_end": 14,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q24-prompt-11-11.png",
+          "rendered_png_sha256": "7a36793b0eab930ac000ae68601564a54dde6e295bb36bf74a35e7d1c95ad204"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+          "page_number": 14,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q24-correction-14-14.png",
+          "rendered_png_sha256": "dbd3be688af07b073d18653fa489ecbd642e5f2ccf898aa479cefb5c9add128c"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-24-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "f577e33564069eeab0e7691d65ac25dbbb0a20e5eac5d8865a5b36fea36fb574"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+          "rendered_png_sha256": "dabb49c1a6618281b863cb7a1e33fefddb343f6562a71dac0ec05876806cf7a5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+          "source_pdf_sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "8538534d4d278741927acbcad2de4c38de35407337d734ed3ae54bec6f23f5e2"
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "evidence_state": "diagnostic_official_prompt_and_correction_pages_rendered_no_mapping_or_outcome",
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+          "source_pdf_sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-prompt-03-03.png",
+          "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+          "source_pdf_sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-correction-07-07.png",
+          "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+        }
+      ]
+    }
+  ],
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_authorized": false,
+    "candidate_write_authorized": false,
+    "lesson_output_authorized": false,
+    "product_route_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "adaptive_routing_authorized": false,
+    "sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false
+  }
+}
