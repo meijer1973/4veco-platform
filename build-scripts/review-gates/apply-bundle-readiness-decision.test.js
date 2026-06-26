@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {
   classifyPrReadiness,
+  renderDecisionMarkdown,
   validateDecision,
 } = require('./pr-readiness-router');
 const {
@@ -208,6 +209,31 @@ describe('apply-bundle-readiness-decision', () => {
     expect(lessonDecision.proof.bundle.delegated).toBe(true);
     expect(lessonDecision.proof.ci_status).toBe('failure');
     expect(validateDecision(lessonDecision)).toBe(true);
+  });
+
+  test('rendered delegated lesson member comment names controller proof boundary', () => {
+    const generated = generateBundleMemberDecisions(controllerDecision(), [
+      pr(PLATFORM_REPO, 147, platformHead),
+      pr(LESSON_REPO, 35, lessonHead),
+    ]);
+    const lessonDecision = generated.find((item) => item.reviewed_pr.repo === LESSON_REPO);
+    const markdown = renderDecisionMarkdown(lessonDecision);
+
+    expect(lessonDecision.proof.branch_protection).toEqual({
+      delegated: true,
+      controller_repository: PLATFORM_REPO,
+      controller_pr_number: 147,
+      member_repository: LESSON_REPO,
+      member_pr_number: 35,
+      note: 'lesson branch protection not required; readiness uses delegated controller proof',
+    });
+    expect(markdown).toContain('Delegated bundle controller proof');
+    expect(markdown).toContain('Controller CI head');
+    expect(markdown).toContain('Delegated lead review');
+    expect(markdown).toContain('member reviewed head');
+    expect(markdown).toContain('Delegated branch protection');
+    expect(markdown).toContain('lesson branch protection not required; readiness uses delegated controller proof');
+    expect(markdown).not.toContain('approval_count_source');
   });
 
   test('head change before mutation blocks all mark-ready transitions', () => {

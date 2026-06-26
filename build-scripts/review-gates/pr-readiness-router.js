@@ -437,22 +437,67 @@ function findOperationMember(operation, member) {
   return (operation.members || []).find((item) => memberKey(item) === key) || null;
 }
 
-function memberSubstantivelyReadyForCoordinatedMarkReady(operation, member) {
+function memberReadinessFlag(member) {
+  return Boolean(
+    member &&
+      (member.substantively_ready === true ||
+        member.ready_for_coordinated_mark_ready === true)
+  );
+}
+
+function memberCarriesExactHeadReadiness(member) {
+  const item = normalizeBundleMember(member);
+  return Boolean(
+    memberReadinessFlag(item) &&
+      SHA_PATTERN.test(String(item.head_sha || '')) &&
+      SHA_PATTERN.test(String(item.reviewed_payload_head_sha || '')) &&
+      item.head_sha === item.reviewed_payload_head_sha
+  );
+}
+
+function coordinatedMarkReadyMemberProof(operation, member) {
   if (
     !operation ||
     operation.coordinated_mark_ready !== true ||
     operation.both_draft_substantively_ready !== true
   ) {
-    return false;
+    return { ok: false, failures: [] };
   }
   const operationMember = findOperationMember(operation, member);
-  return Boolean(
-    member.substantively_ready === true ||
-      member.ready_for_coordinated_mark_ready === true ||
-      (operationMember &&
-        (operationMember.substantively_ready === true ||
-          operationMember.ready_for_coordinated_mark_ready === true))
-  );
+  const selfReady = memberCarriesExactHeadReadiness(member);
+  const failures = [];
+  let operationReady = false;
+
+  if (memberReadinessFlag(operationMember)) {
+    const operationHead = operationMember.head_sha;
+    const operationReviewedHead = operationMember.reviewed_payload_head_sha;
+    const headValid = SHA_PATTERN.test(String(operationHead || ''));
+    const reviewedHeadValid = SHA_PATTERN.test(String(operationReviewedHead || ''));
+
+    if (!headValid || !reviewedHeadValid) {
+      if (!selfReady) failures.push('readiness_member_exact_head_missing');
+    }
+    if (headValid && member.head_sha && operationHead !== member.head_sha) {
+      failures.push('readiness_member_head_mismatch');
+    }
+    if (
+      reviewedHeadValid &&
+      member.reviewed_payload_head_sha &&
+      operationReviewedHead !== member.reviewed_payload_head_sha
+    ) {
+      failures.push('readiness_member_reviewed_payload_head_mismatch');
+    }
+    operationReady = headValid && reviewedHeadValid && failures.length === 0;
+  }
+
+  return {
+    ok: (selfReady || operationReady) && failures.length === 0,
+    failures: uniqueStrings(failures),
+  };
+}
+
+function memberSubstantivelyReadyForCoordinatedMarkReady(operation, member) {
+  return coordinatedMarkReadyMemberProof(operation, member).ok;
 }
 
 function bundleSafetyProof(proof, evidence) {
@@ -503,7 +548,9 @@ function bundleSafetyProof(proof, evidence) {
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
   for (const paired of pairedPrs) {
     if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
-    const coordinatedDraftReady = memberSubstantivelyReadyForCoordinatedMarkReady(readinessOperation, paired);
+    const coordinatedProof = coordinatedMarkReadyMemberProof(readinessOperation, paired);
+    failures.push(...coordinatedProof.failures);
+    const coordinatedDraftReady = coordinatedProof.ok;
     if (paired && paired.is_draft === true && !coordinatedDraftReady) failures.push('paired_pr_draft');
     if (
       paired &&
@@ -1078,6 +1125,14 @@ function parseRenderedDecisionMarkdown(body) {
 function renderDecisionMarkdown(decision) {
   validateDecision(decision);
   const digest = decisionDigest(decision);
+  const delegatedBundleProof = Boolean(decision.proof.bundle && decision.proof.bundle.delegated === true);
+  const delegatedController = delegatedBundleProof ? decision.proof.bundle.controller || {} : {};
+  const ciHeadLabel = delegatedBundleProof ? 'Controller CI head' : 'CI head';
+  const ciStatusLabel = delegatedBundleProof ? 'Controller CI status' : 'CI status';
+  const branchProtectionLabel = delegatedBundleProof ? 'Delegated branch protection' : 'Branch protection';
+  const leadReviewLine = delegatedBundleProof
+    ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
+    : `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``;
   const lines = [
     decisionMarker(decision),
     '# PR Readiness Decision',
@@ -1110,14 +1165,19 @@ function renderDecisionMarkdown(decision) {
     '',
     '## Proof Summary',
     '',
-    `- CI head: \`${decision.proof.ci_head_sha || 'missing'}\``,
-    `- CI status: \`${decision.proof.ci_status || 'missing'}\``,
+    ...(delegatedBundleProof
+      ? [
+          `- Delegated bundle controller proof: \`${delegatedController.repository || 'unknown'}#${delegatedController.pr_number || 'unknown'}\``,
+        ]
+      : []),
+    `- ${ciHeadLabel}: \`${decision.proof.ci_head_sha || 'missing'}\``,
+    `- ${ciStatusLabel}: \`${decision.proof.ci_status || 'missing'}\``,
     `- Required CI contexts: ${(decision.proof.ci_required_contexts || []).map((item) => `\`${item}\``).join(', ') || 'none recorded'}`,
     `- Checker proof: ${(decision.proof.checkers || []).map((checker) => `\`${checker.command || 'unknown'}:${checker.status || checker.conclusion || checker.result || 'unknown'}\``).join(', ') || 'none recorded'}`,
-    `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``,
+    leadReviewLine,
     `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
     `- Integration authorization inherited for lead review: \`${Boolean(decision.proof.lead_review_integration_authorization_inherited)}\``,
-    `- Branch protection: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
+    `- ${branchProtectionLabel}: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
   if (decision.proof.human_authorization) {
     lines.push(`- Human payload authorization: \`${JSON.stringify(decision.proof.human_authorization)}\``);

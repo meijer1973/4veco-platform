@@ -98,6 +98,85 @@ function bundleCompatibility(overrides = {}) {
   });
 }
 
+function coordinatedBundleDecision(overrides = {}) {
+  const fixture = readFixture('live-governance-human.json');
+  const lessonHead = overrides.lessonHead || '4'.repeat(40);
+  const exactMembers = bundleExactMembers({
+    platform_candidate_sha: fixture.reviewed_pr.head_sha,
+    lesson_candidate_sha: lessonHead,
+  });
+  const pairedReady =
+    overrides.pairedSubstantivelyReady === undefined
+      ? true
+      : overrides.pairedSubstantivelyReady;
+  const paired = {
+    repo: 'meijer1973/4veco-lessen',
+    number: 34,
+    open: true,
+    mergeable: true,
+    current: true,
+    ready: false,
+    is_draft: true,
+    head_sha: lessonHead,
+    reviewed_payload_head_sha: lessonHead,
+    ...(pairedReady ? { substantively_ready: true } : {}),
+    ...(overrides.paired || {}),
+  };
+  const operationMembers = [
+    {
+      repository: fixture.reviewed_pr.repo,
+      pr_number: fixture.reviewed_pr.number,
+      head_sha: fixture.reviewed_pr.head_sha,
+      reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+      substantively_ready: true,
+    },
+  ];
+  if (overrides.includeOperationLessonMember !== false) {
+    operationMembers.push({
+      repository: 'meijer1973/4veco-lessen',
+      pr_number: 34,
+      head_sha: lessonHead,
+      reviewed_payload_head_sha: lessonHead,
+      substantively_ready: true,
+      ...(overrides.operationLessonMember || {}),
+    });
+  }
+  return classifyPrReadiness({
+    ...fixture,
+    reviewed_pr: {
+      ...fixture.reviewed_pr,
+      was_draft: true,
+    },
+    pr_throughput_class: 'cross_repo_bundle',
+    throughput: {
+      ...fixture.throughput,
+      class: 'cross_repo_bundle',
+    },
+    proof: {
+      ...fixture.proof,
+      bundle: {
+        bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+        controller: {
+          repository: fixture.reviewed_pr.repo,
+          pr_number: fixture.reviewed_pr.number,
+          head_sha: fixture.reviewed_pr.head_sha,
+          reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          is_draft: true,
+          substantively_ready: true,
+        },
+        exact_members: exactMembers,
+        paired_prs: [paired],
+        readiness_operation: {
+          operation: 'coordinated_mark_ready',
+          both_draft_substantively_ready: true,
+          members: operationMembers,
+        },
+        compatibility: bundleCompatibility(exactMembers),
+      },
+    },
+  });
+}
+
 const ROUTER_CASES = [
   'l0-mechanical-ready.json',
   'l1-checker-ready-branch-protection.json',
@@ -415,6 +494,65 @@ describe('pr-readiness-router', () => {
     expect(decision.route).toBe('KEEP_DRAFT_REVISE');
     expect(decision.reason_codes).toContain('paired_pr_draft');
     expect(decision.reason_codes).toContain('paired_pr_not_ready');
+  });
+
+  test('coordinated mark-ready rejects stale readiness operation member head', () => {
+    const decision = coordinatedBundleDecision({
+      pairedSubstantivelyReady: false,
+      operationLessonMember: {
+        head_sha: '5'.repeat(40),
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('readiness_member_head_mismatch');
+    expect(decision.reason_codes).toContain('paired_pr_draft');
+  });
+
+  test('coordinated mark-ready rejects stale readiness operation reviewed payload head', () => {
+    const decision = coordinatedBundleDecision({
+      pairedSubstantivelyReady: false,
+      operationLessonMember: {
+        reviewed_payload_head_sha: '5'.repeat(40),
+      },
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('readiness_member_reviewed_payload_head_mismatch');
+    expect(decision.reason_codes).toContain('paired_pr_not_ready');
+  });
+
+  test('coordinated mark-ready accepts paired member exact-head substantive-ready proof', () => {
+    const decision = coordinatedBundleDecision({
+      pairedSubstantivelyReady: true,
+      includeOperationLessonMember: false,
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.reason_codes).not.toContain('readiness_member_exact_head_missing');
+    expect(decision.reason_codes).not.toContain('paired_pr_not_ready');
+  });
+
+  test('coordinated mark-ready rejects missing operation member heads unless paired member carries exact proof', () => {
+    const rejected = coordinatedBundleDecision({
+      pairedSubstantivelyReady: false,
+      operationLessonMember: {
+        head_sha: undefined,
+        reviewed_payload_head_sha: undefined,
+      },
+    });
+    const accepted = coordinatedBundleDecision({
+      pairedSubstantivelyReady: true,
+      operationLessonMember: {
+        head_sha: undefined,
+        reviewed_payload_head_sha: undefined,
+      },
+    });
+
+    expect(rejected.route).toBe('KEEP_DRAFT_REVISE');
+    expect(rejected.reason_codes).toContain('readiness_member_exact_head_missing');
+    expect(accepted.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(accepted.reason_codes).not.toContain('readiness_member_exact_head_missing');
   });
 
   test('lesson-first controller can reach human review from exact bundle proof when validate-platform is red', () => {

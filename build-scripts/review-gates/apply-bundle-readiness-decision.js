@@ -194,6 +194,17 @@ function memberReviewedPr(member, current) {
   };
 }
 
+function delegatedBranchProtectionProof(controller, member) {
+  return {
+    delegated: true,
+    controller_repository: controller.repository,
+    controller_pr_number: controller.pr_number,
+    member_repository: member.repository,
+    member_pr_number: member.pr_number,
+    note: 'lesson branch protection not required; readiness uses delegated controller proof',
+  };
+}
+
 function decisionForMember(controllerDecision, member, allMembers, currentByKey) {
   const baseDecision = clone(controllerDecision);
   const current = currentByKey.get(memberKey(member));
@@ -231,6 +242,7 @@ function decisionForMember(controllerDecision, member, allMembers, currentByKey)
   };
   if (!isController) {
     baseDecision.proof.lead_reviewed_sha = normalizedMember.lead_reviewed_sha || normalizedMember.reviewed_payload_head_sha;
+    baseDecision.proof.branch_protection = delegatedBranchProtectionProof(normalizedController, normalizedMember);
   }
   baseDecision.allowed_transition = reviewedPr.was_draft
     ? ALLOWED_TRANSITIONS.MARK_READY
