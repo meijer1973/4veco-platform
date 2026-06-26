@@ -1,0 +1,2424 @@
+{
+  "fixture_id": "STOP_STALE_SOURCE",
+  "expected_refusal_code": "STOP_STALE_SOURCE",
+  "contract": {
+    "schema_version": 1,
+    "report_id": "england-internal-overlay-trial-contract",
+    "sprint_id": "GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1",
+    "generated_date": "2026-06-25",
+    "access_date": "2026-06-25",
+    "status": "complete_internal_no_output_trial_contract",
+    "internal_only": true,
+    "manual_invocation_only": true,
+    "human_review_required": true,
+    "accepted_planning_decision": "PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT",
+    "accepted_planning_decision_source": "reports/inspection-standards/internal-overlay-prototype-planning-decision.md",
+    "accepted_deepening_decision_source": "reports/inspection-standards/selected-jurisdiction-deepening-decision.md",
+    "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+    "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md",
+    "roadmap_source": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
+    "non_negotiable_requirements": [
+      "Use REV-STD-1 and cite product end-state plus the original sprint/gate spec.",
+      "Cite the accepted internal overlay prototype planning decision and preserve its authority boundaries.",
+      "Create complete England and Flanders contracts for Book 1 Chapters 1.2 and 1.3 using every deep-crosswalk row.",
+      "Use explicit source and output allowlists only; do not glob directories or scan generated lesson output.",
+      "Use strict allowed transformation actions: unchanged_core, terminology_change, example_change, institution_change, assessment_change, extension_only, exclude.",
+      "Generate internal trace reports only; do not generate localized textbook paragraphs, exercises, answer models, student-facing files, teacher/school-facing output, public output, or evidence packs.",
+      "Keep school-owned evidence, local expert review, legal/privacy, accessibility/support, product-route, Scale Gate, diagnostics/mastery/PV, personal-data, compliance, approval, OP0, PTA, summative, and inspection-readiness authority blocked.",
+      "Add positive and negative validation fixtures for source, freshness, row completeness, discovery, audience, personal-data, claims, and integration refusals.",
+      "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+      "Do not carry a missing core requirement as PASS WITH FLAGS."
+    ],
+    "core_requirement_checklist": [
+      {
+        "id": "contract_identity_authority",
+        "requirement": "The contract cites product end-state, original sprint/gate spec, accepted planning decision, and roadmap context.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "exact_input_allowlist",
+        "requirement": "Only the selected-deepening and accepted planning inputs are read.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "exact_output_allowlist",
+        "requirement": "Only internal contract, validation, trace, decision, schema, fixture, and sprint-plan outputs are written.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "nested_contract_schema",
+        "requirement": "The schema covers authority, source binding, book scope, transformation intent, blocker display, review disposition, source freshness, no-output enforcement, refusal conditions, and closure decision.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "all_crosswalk_rows_bound",
+        "requirement": "England and Flanders each bind all ten deep-crosswalk rows for Book 1 Chapters 1.2 and 1.3.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "source_traceability",
+        "requirement": "Every row binds source IDs, source roles, access dates, freshness triggers, forbidden inference, and proof required to close.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "strict_transformation_actions",
+        "requirement": "Every row uses only the allowed transformation-action vocabulary.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "no_output_enforcement",
+        "requirement": "The trace contains only internal summaries and no localized paragraphs, exercises, answer models, or student-facing files.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "fixture_refusals",
+        "requirement": "Positive and negative fixtures prove refusal for unknown sources, stale sources, missing rows, implicit discovery, forbidden audiences, personal data, claims, support/accommodation sufficiency, and product/Scale Gate integration.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "single_decision",
+        "requirement": "The packet chooses exactly one of the allowed trial-contract decisions.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "review_gates",
+        "requirement": "Specialist and final lead review remain required before human review.",
+        "status": "met_for_internal_trial_contract",
+        "proof_required_to_close": "Generator/checker PASS, positive/negative fixtures PASS, specialist reviews PASS, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      }
+    ],
+    "input_allowlist": [
+      "reports/inspection-standards/internal-overlay-prototype-plan.json",
+      "reports/inspection-standards/internal-overlay-prototype-planning-decision.json",
+      "docs/inspection-standards/internal-overlay-prototype-planning-contract.md",
+      "reports/inspection-standards/selected-jurisdiction-deepening-decision.json",
+      "reports/inspection-standards/selected-jurisdiction-readiness-comparison.json",
+      "reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.json",
+      "reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json",
+      "references/data/inspection-standards/overlays/england.deepening.v1.json",
+      "references/data/inspection-standards/overlays/flanders.deepening.v1.json",
+      "docs/inspection-standards/selected-jurisdiction-transformation-contract.md"
+    ],
+    "output_allowlist": [
+      "references/schemas/internal-overlay-trial-contract.schema.v1.json",
+      "reports/inspection-standards/england-internal-overlay-trial-contract.md",
+      "reports/inspection-standards/england-internal-overlay-trial-contract.json",
+      "reports/inspection-standards/flanders-internal-overlay-trial-contract.md",
+      "reports/inspection-standards/flanders-internal-overlay-trial-contract.json",
+      "reports/inspection-standards/internal-overlay-trial-contract-validation.md",
+      "reports/inspection-standards/internal-overlay-trial-contract-validation.json",
+      "reports/inspection-standards/internal-overlay-no-output-trial-trace.md",
+      "reports/inspection-standards/internal-overlay-no-output-trial-trace.json",
+      "reports/inspection-standards/internal-overlay-trial-contract-decision.md",
+      "reports/inspection-standards/internal-overlay-trial-contract-decision.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/england-internal-overlay-trial-contract.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/flanders-internal-overlay-trial-contract.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/unknown-source-ids.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/stale-sources.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/missing-crosswalk-rows.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/implicit-source-discovery.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/directory-globbing.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/localized-output-request.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/student-facing-output.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/teacher-school-facing-output.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/public-output.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/personal-data-fields.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/legal-compliance-claims.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/inspection-readiness-claims.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/support-accommodation-sufficiency.sample.json",
+      "references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/product-route-scale-gate.sample.json",
+      "archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md"
+    ],
+    "output_boundary": {
+      "country_compliance_claim": false,
+      "inspectorate_approval_claim": false,
+      "legal_compliance_claim": false,
+      "inspection_readiness_claim": false,
+      "school_pack_trial": false,
+      "teacher_school_distribution": false,
+      "public_external_distribution": false,
+      "evidence_pack_deployment": false,
+      "package_script_invocation": false,
+      "ci_invocation": false,
+      "dashboard_gate": false,
+      "quality_ref_integration": false,
+      "product_route_adoption": false,
+      "scale_gate_integration": false,
+      "diagnostics_mastery_pv": false,
+      "student_or_product_use": false,
+      "personal_data_processing": false,
+      "complete_op0_pta_summative_claim": false,
+      "op0_claim": false,
+      "pta_validity_claim": false,
+      "summative_validity_claim": false,
+      "single_national_us_inspection_claim": false,
+      "whole_uk_claim_from_england_only": false,
+      "all_belgium_claim_from_flanders_only": false,
+      "germany_single_land_claim": false,
+      "country_edition_generation": false,
+      "local_exam_code_implementation": false,
+      "teacher_school_facing_overlay": false,
+      "public_overlay_output": false,
+      "school_owned_evidence_collection": false,
+      "package_or_ci_product_integration": false,
+      "country_specific_legal_claim": false,
+      "localized_student_facing_chapters": false,
+      "teacher_school_facing_distribution": false,
+      "selected_jurisdiction_public_output": false,
+      "selected_jurisdiction_evidence_pack": false,
+      "selected_jurisdiction_product_route": false,
+      "selected_jurisdiction_scale_gate": false,
+      "selected_jurisdiction_personal_data": false,
+      "selected_jurisdiction_legal_sufficiency_claim": false,
+      "selected_jurisdiction_compliance_claim": false,
+      "selected_jurisdiction_approval_claim": false,
+      "selected_jurisdiction_accreditation_claim": false,
+      "selected_jurisdiction_inspection_readiness_claim": false,
+      "internal_prototype_runtime_execution": false,
+      "localized_overlay_output_generation": false,
+      "fixture_to_product_promotion": false,
+      "teacher_school_pilot": false,
+      "support_sufficiency_claim": false,
+      "accommodation_sufficiency_claim": false,
+      "individual_adjustment_claim": false,
+      "support_records_personal_data": false,
+      "automated_source_refresh": false,
+      "non_allowlisted_source_use": false,
+      "local_expert_substitution": false,
+      "internal_no_output_trial_is_not_runtime": false,
+      "localized_textbook_paragraph_generation": false,
+      "localized_exercise_generation": false,
+      "localized_answer_model_generation": false,
+      "student_facing_file_generation": false,
+      "teacher_school_contract_output": false,
+      "public_contract_output": false,
+      "country_contract_publication": false,
+      "school_pilot_execution": false,
+      "trial_simulation_product_integration": false,
+      "trial_contract_personal_data_fields": false,
+      "legal_sufficiency_claim": false,
+      "support_or_accommodation_sufficiency_claim": false
+    },
+    "contract_id": "england-book1-1.2-1.3-internal-overlay-trial-contract.v1",
+    "contract_identity_authority": {
+      "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+      "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md",
+      "roadmap_source": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
+      "accepted_planning_decision": "PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT",
+      "accepted_planning_decision_source": "reports/inspection-standards/internal-overlay-prototype-planning-decision.md",
+      "decision_scope": "Internal no-output trial contract only; no runtime, localized output, school-facing output, product route, Scale Gate, diagnostics/mastery/PV, student/product use, personal data, legal sufficiency, compliance, approval, or inspection-readiness authority."
+    },
+    "jurisdiction_source_binding": {
+      "jurisdiction_id": "england",
+      "descriptor_id": "england.deepening.v1",
+      "jurisdiction_label": "England",
+      "source_policy": {
+        "explicit_source_allowlist_only": true,
+        "implicit_source_discovery": false,
+        "directory_globbing_allowed": false,
+        "generated_lesson_output_scanning": false,
+        "automated_source_refresh": false
+      },
+      "official_source_ids": [
+        "england-ofsted-eif-2025",
+        "england-ofsted-operating-guide-2025",
+        "england-dfe-a-level-economics-content",
+        "england-aqa-7136-subject-content",
+        "england-aqa-7136-scheme-assessment",
+        "england-aqa-economics-command-words",
+        "england-aqa-7136-assessment-resources",
+        "england-send-code-practice"
+      ],
+      "source_roles": {
+        "england-ofsted-eif-2025": "inspection/evaluation boundary",
+        "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+        "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+        "england-aqa-7136-subject-content": "representative awarding-body subject content",
+        "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+        "england-aqa-economics-command-words": "representative command-word meanings",
+        "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+        "england-send-code-practice": "SEND/accessibility terminology boundary"
+      },
+      "access_dates": {
+        "england-ofsted-eif-2025": "2026-06-22",
+        "england-ofsted-operating-guide-2025": "2026-06-22",
+        "england-dfe-a-level-economics-content": "2026-06-22",
+        "england-aqa-7136-subject-content": "2026-06-22",
+        "england-aqa-7136-scheme-assessment": "2026-06-22",
+        "england-aqa-economics-command-words": "2026-06-22",
+        "england-aqa-7136-assessment-resources": "2026-06-22",
+        "england-send-code-practice": "2026-06-22"
+      },
+      "source_freshness": {
+        "access_date": "2026-06-22",
+        "freshness_status": "fresh_for_internal_deepening",
+        "refresh_required_before": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "currentness_checker": "build-scripts/inspection/check-selected-jurisdiction-deepening.js"
+      }
+    },
+    "book_scope_binding": {
+      "book": "Book 1",
+      "chapters": [
+        "1.2",
+        "1.3"
+      ],
+      "required_crosswalk_source": "england-book1-1.2-1.3-deep-crosswalk",
+      "required_crosswalk_row_count": 10,
+      "bound_contract_row_count": 10,
+      "route_local_only": true
+    },
+    "allowed_status_vocabulary": {
+      "mapping_status": [
+        "mapped",
+        "mapped_with_boundary",
+        "extension_only",
+        "gap",
+        "not_mapped",
+        "blocked"
+      ],
+      "assessment_status": [
+        "mapped",
+        "mapped_with_boundary",
+        "gap",
+        "not_applicable"
+      ],
+      "transformation_actions": [
+        "unchanged_core",
+        "terminology_change",
+        "example_change",
+        "institution_change",
+        "assessment_change",
+        "extension_only",
+        "exclude"
+      ],
+      "final_decisions": [
+        "PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION",
+        "REVISE_TRIAL_CONTRACT",
+        "STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK"
+      ]
+    },
+    "source_freshness_invalidation": {
+      "access_date": "2026-06-22",
+      "freshness_status": "stale",
+      "freshness_triggers": [
+        "Any England prototype implementation",
+        "Any school-facing or public output",
+        "Any AQA-specific assessment generation"
+      ],
+      "invalidation_conditions": [
+        "source_removed_or_replaced",
+        "source_version_changed",
+        "local_policy_or_exam_spec_changed",
+        "school_facing_or_public_output_requested",
+        "product_route_or_scale_gate_requested",
+        "legal_compliance_or_inspection_readiness_claim_requested"
+      ]
+    },
+    "no_output_enforcement": {
+      "internal_trace_only": true,
+      "localized_output_requested": false,
+      "localized_output_generated": false,
+      "localized_textbook_paragraphs_generated": false,
+      "localized_exercises_generated": false,
+      "localized_answer_models_generated": false,
+      "student_facing_files_generated": false,
+      "teacher_school_facing_output_generated": false,
+      "public_output_generated": false,
+      "evidence_pack_generated": false,
+      "product_route_integration_requested": false,
+      "scale_gate_integration_requested": false,
+      "personal_data_fields_present": false
+    },
+    "refusal_conditions": [
+      {
+        "args": [
+          "--localized-output"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--localized-chapter"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--student-facing"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--teacher"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--school-facing"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--public"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--external"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--evidence-pack"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--country-edition"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_AUDIENCE_OR_OUTPUT"
+      },
+      {
+        "args": [
+          "--prototype-runtime"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_RUNTIME"
+      },
+      {
+        "args": [
+          "--execute-trial"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_RUNTIME"
+      },
+      {
+        "args": [
+          "--product-route"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--scale"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--scale-gate"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--diagnostics"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--mastery"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--pv"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--student"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--personal"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--data-processing"
+        ],
+        "refusal_code": "STOP_DOWNSTREAM_AUTHORITY"
+      },
+      {
+        "args": [
+          "--legal-sufficiency"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--compliance"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--approval"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--accreditation"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--inspection-ready"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--inspection-readiness"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--op0"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--pta"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--summative"
+        ],
+        "refusal_code": "STOP_COMPLIANCE_APPROVAL_CLAIM"
+      },
+      {
+        "args": [
+          "--support-sufficiency"
+        ],
+        "refusal_code": "STOP_SUPPORT_ACCOMMODATION_CLAIM"
+      },
+      {
+        "args": [
+          "--accommodation-sufficiency"
+        ],
+        "refusal_code": "STOP_SUPPORT_ACCOMMODATION_CLAIM"
+      },
+      {
+        "args": [
+          "--individual-adjustment"
+        ],
+        "refusal_code": "STOP_SUPPORT_ACCOMMODATION_CLAIM"
+      },
+      {
+        "args": [
+          "--reasonable-adjustments"
+        ],
+        "refusal_code": "STOP_SUPPORT_ACCOMMODATION_CLAIM"
+      },
+      {
+        "args": [
+          "--support-records"
+        ],
+        "refusal_code": "STOP_SUPPORT_ACCOMMODATION_CLAIM"
+      },
+      {
+        "args": [
+          "--all-belgium"
+        ],
+        "refusal_code": "STOP_GOVERNANCE_OVERGENERALISATION"
+      },
+      {
+        "args": [
+          "--whole-uk"
+        ],
+        "refusal_code": "STOP_GOVERNANCE_OVERGENERALISATION"
+      },
+      {
+        "args": [
+          "--aqa-approval"
+        ],
+        "refusal_code": "STOP_GOVERNANCE_OVERGENERALISATION"
+      },
+      {
+        "args": [
+          "--glob"
+        ],
+        "refusal_code": "STOP_IMPLICIT_DISCOVERY"
+      },
+      {
+        "args": [
+          "--implicit-source"
+        ],
+        "refusal_code": "STOP_IMPLICIT_DISCOVERY"
+      },
+      {
+        "args": [
+          "--scan-generated-lessons"
+        ],
+        "refusal_code": "STOP_IMPLICIT_DISCOVERY"
+      },
+      {
+        "args": [
+          "--package"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_INTEGRATION"
+      },
+      {
+        "args": [
+          "--ci"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_INTEGRATION"
+      },
+      {
+        "args": [
+          "--dashboard"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_INTEGRATION"
+      },
+      {
+        "args": [
+          "--quality-ref"
+        ],
+        "refusal_code": "STOP_FORBIDDEN_INTEGRATION"
+      }
+    ],
+    "contract_rows": [
+      {
+        "row_id": "england:01:1.2.1_willingness_to_pay_individual_demand",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.2",
+        "chapter_id": "1.2",
+        "paragraph_id": "1.2.1",
+        "chapter_paragraph": "1.2.1",
+        "concept_id": "1.2.1_willingness_to_pay_individual_demand",
+        "crosswalk_row_id": "1.2.1_willingness_to_pay_individual_demand",
+        "local_heading": "1.2.1 Individuele vraag",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped",
+        "official_anchor": "England internal anchor for willingness to pay and individual demand: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:02:1.2.1_consumer_surplus",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.2",
+        "chapter_id": "1.2",
+        "paragraph_id": "1.2.1",
+        "chapter_paragraph": "1.2.1",
+        "concept_id": "1.2.1_consumer_surplus",
+        "crosswalk_row_id": "1.2.1_consumer_surplus",
+        "local_heading": "1.2.1 Individuele vraag",
+        "mapping_status": "mapped_with_boundary",
+        "assessment_status": "mapped",
+        "official_anchor": "England internal anchor for consumer surplus: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped_with_boundary",
+          "assessment_basis": "mapped",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:03:1.2.2_demand_factors_movement_vs_shift",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.2",
+        "chapter_id": "1.2",
+        "paragraph_id": "1.2.2",
+        "chapter_paragraph": "1.2.2",
+        "concept_id": "1.2.2_demand_factors_movement_vs_shift",
+        "crosswalk_row_id": "1.2.2_demand_factors_movement_vs_shift",
+        "local_heading": "1.2.2 Vraagfactoren",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped",
+        "official_anchor": "England internal anchor for demand factors: a good's own price changes quantity demanded along the existing demand curve; non-price demand factors shift the whole demand curve. DfE subject content plus AQA 7136 microeconomics specification are representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:04:1.2.3_collective_demand",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.2",
+        "chapter_id": "1.2",
+        "paragraph_id": "1.2.3",
+        "chapter_paragraph": "1.2.3",
+        "concept_id": "1.2.3_collective_demand",
+        "crosswalk_row_id": "1.2.3_collective_demand",
+        "local_heading": "1.2.3 Van individuele naar collectieve vraag",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped",
+        "official_anchor": "England internal anchor for market demand aggregation: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:05:1.2.4_mixed_demand_tasks",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.2",
+        "chapter_id": "1.2",
+        "paragraph_id": "1.2.4",
+        "chapter_paragraph": "1.2.4",
+        "concept_id": "1.2.4_mixed_demand_tasks",
+        "crosswalk_row_id": "1.2.4_mixed_demand_tasks",
+        "local_heading": "1.2.4 Gemengde opgaven",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped_with_boundary",
+        "official_anchor": "England internal anchor for mixed demand tasks: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped_with_boundary",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:06:1.3.1_supply_curve_supply_factors",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.3",
+        "chapter_id": "1.3",
+        "paragraph_id": "1.3.1",
+        "chapter_paragraph": "1.3.1",
+        "concept_id": "1.3.1_supply_curve_supply_factors",
+        "crosswalk_row_id": "1.3.1_supply_curve_supply_factors",
+        "local_heading": "1.3.1 Aanbod",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped",
+        "official_anchor": "England internal anchor for supply curve and supply factors: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:07:1.3.2_market_equilibrium_shortage_surplus",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.3",
+        "chapter_id": "1.3",
+        "paragraph_id": "1.3.2",
+        "chapter_paragraph": "1.3.2",
+        "concept_id": "1.3.2_market_equilibrium_shortage_surplus",
+        "crosswalk_row_id": "1.3.2_market_equilibrium_shortage_surplus",
+        "local_heading": "1.3.2 Marktevenwicht",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped",
+        "official_anchor": "England internal anchor for market equilibrium, shortage, and surplus: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:08:1.3.3_shifts_new_equilibrium",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.3",
+        "chapter_id": "1.3",
+        "paragraph_id": "1.3.3",
+        "chapter_paragraph": "1.3.3",
+        "concept_id": "1.3.3_shifts_new_equilibrium",
+        "crosswalk_row_id": "1.3.3_shifts_new_equilibrium",
+        "local_heading": "1.3.3 Verschuivingen en nieuw evenwicht",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped",
+        "official_anchor": "England internal anchor for new equilibrium after demand and supply shifts: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:09:1.3.4_mixed_supply_demand_tasks",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapter 1.3",
+        "chapter_id": "1.3",
+        "paragraph_id": "1.3.4",
+        "chapter_paragraph": "1.3.4",
+        "concept_id": "1.3.4_mixed_supply_demand_tasks",
+        "crosswalk_row_id": "1.3.4_mixed_supply_demand_tasks",
+        "local_heading": "1.3.4 Gemengde opgaven",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped_with_boundary",
+        "official_anchor": "England internal anchor for mixed supply-demand tasks: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "unchanged_core",
+          "terminology_change",
+          "example_change",
+          "institution_change",
+          "assessment_change"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped_with_boundary",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "core_requirement_met",
+          "blocks": "Any localized output, local compliance claim, source approval claim, assessment-generation claim, support/accommodation sufficiency claim, or product-route use.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      },
+      {
+        "row_id": "england:10:book1_output_boundary",
+        "jurisdiction_id": "england",
+        "source_ids": [
+          "england-dfe-a-level-economics-content",
+          "england-aqa-7136-subject-content",
+          "england-aqa-7136-scheme-assessment",
+          "england-aqa-economics-command-words",
+          "england-aqa-7136-assessment-resources",
+          "england-ofsted-eif-2025",
+          "england-ofsted-operating-guide-2025",
+          "england-send-code-practice"
+        ],
+        "source_bindings": [
+          {
+            "source_id": "england-dfe-a-level-economics-content",
+            "source_role": "qualification subject-content boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+          },
+          {
+            "source_id": "england-aqa-7136-subject-content",
+            "source_role": "representative awarding-body subject content",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not represent all awarding bodies or all England."
+          },
+          {
+            "source_id": "england-aqa-7136-scheme-assessment",
+            "source_role": "assessment objective and paper-form boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not generate AQA exam questions."
+          },
+          {
+            "source_id": "england-aqa-economics-command-words",
+            "source_role": "representative command-word meanings",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA AS/A-level Economics",
+            "forbidden_inference": "Does not authorize student-facing assessment output."
+          },
+          {
+            "source_id": "england-aqa-7136-assessment-resources",
+            "source_role": "representative specimen paper and mark-scheme source layer",
+            "access_date": "2026-06-22",
+            "source_scope": "AQA A-level Economics 7136",
+            "forbidden_inference": "Does not copy or generate protected assessment material."
+          },
+          {
+            "source_id": "england-ofsted-eif-2025",
+            "source_role": "inspection/evaluation boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not approve product output or prove inspection readiness."
+          },
+          {
+            "source_id": "england-ofsted-operating-guide-2025",
+            "source_role": "inspection evidence-gathering boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not authorize evidence-pack generation."
+          },
+          {
+            "source_id": "england-send-code-practice",
+            "source_role": "SEND/accessibility terminology boundary",
+            "access_date": "2026-06-22",
+            "source_scope": "England",
+            "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+          }
+        ],
+        "source_roles": {
+          "england-dfe-a-level-economics-content": "qualification subject-content boundary",
+          "england-aqa-7136-subject-content": "representative awarding-body subject content",
+          "england-aqa-7136-scheme-assessment": "assessment objective and paper-form boundary",
+          "england-aqa-economics-command-words": "representative command-word meanings",
+          "england-aqa-7136-assessment-resources": "representative specimen paper and mark-scheme source layer",
+          "england-ofsted-eif-2025": "inspection/evaluation boundary",
+          "england-ofsted-operating-guide-2025": "inspection evidence-gathering boundary",
+          "england-send-code-practice": "SEND/accessibility terminology boundary"
+        },
+        "access_dates": {
+          "england-dfe-a-level-economics-content": "2026-06-22",
+          "england-aqa-7136-subject-content": "2026-06-22",
+          "england-aqa-7136-scheme-assessment": "2026-06-22",
+          "england-aqa-economics-command-words": "2026-06-22",
+          "england-aqa-7136-assessment-resources": "2026-06-22",
+          "england-ofsted-eif-2025": "2026-06-22",
+          "england-ofsted-operating-guide-2025": "2026-06-22",
+          "england-send-code-practice": "2026-06-22"
+        },
+        "freshness_triggers": [
+          "Any England prototype implementation",
+          "Any school-facing or public output",
+          "Any AQA-specific assessment generation"
+        ],
+        "book_scope": "Book 1 Chapters 1.2 and 1.3",
+        "chapter_id": "1.2-1.3",
+        "paragraph_id": "book1-boundary",
+        "chapter_paragraph": "Book 1 Chapters 1.2 and 1.3 boundary",
+        "concept_id": "book1_output_boundary",
+        "crosswalk_row_id": "book1_output_boundary",
+        "local_heading": "Book 1 current product boundary",
+        "mapping_status": "mapped",
+        "assessment_status": "mapped_with_boundary",
+        "official_anchor": "England internal anchor for output boundary: DfE subject content plus AQA 7136 microeconomics specification; AQA is representative only.",
+        "transformation_actions": [
+          "exclude"
+        ],
+        "transformation_rationale": {
+          "action_basis": "mapped",
+          "assessment_basis": "mapped_with_boundary",
+          "source_citation_required": true,
+          "no_rewritten_student_content": true
+        },
+        "forbidden_inference": [
+          "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks.",
+          "Does not approve an exam-board specification or 4veco tasks.",
+          "Does not represent all awarding bodies or all England.",
+          "Does not generate AQA exam questions.",
+          "Does not authorize student-facing assessment output.",
+          "Does not copy or generate protected assessment material.",
+          "Does not approve product output or prove inspection readiness.",
+          "Does not authorize evidence-pack generation.",
+          "Does not prove accessibility compliance or school support sufficiency."
+        ],
+        "school_owned_evidence_needed": {
+          "still_needed": true,
+          "source": "selected-jurisdiction deepening descriptor",
+          "boundary_areas": [
+            "Inspection evidence",
+            "SEND/accessibility support and accommodation duties"
+          ],
+          "row_specific_reason": "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+        },
+        "local_expert_needed": {
+          "required_before_any_output": true,
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "reason": "AQA is representative only and England is not the whole UK; source and teacher review remain required before any later output."
+        },
+        "blocker_display": {
+          "route_local_only_evidence_status": "internal_contract_only",
+          "school_owned_evidence_still_needed": true,
+          "forbidden_inferences": [
+            "England edition is ready.",
+            "AQA approves 4veco.",
+            "Ofsted evidence is satisfied.",
+            "SEND compliance is proven.",
+            "Legal sufficiency is proven.",
+            "The selected AQA layer is representative. It is not all England, not all awarding bodies, and not approval of 4veco tasks."
+          ],
+          "accessibility_support_limitations": [
+            "Product may use accessibility-aware terminology and general affordance planning only; it may not define individual adjustments or school/local-authority duties.",
+            "No individual learner data is processed and no support sufficiency is claimed."
+          ],
+          "legal_sufficiency_blocked": true,
+          "support_sufficiency_blocked": true,
+          "school_owned_accommodation_evidence_needed": true,
+          "individual_adjustment_claim_blocked": true,
+          "support_records_personal_data_blocked": true,
+          "check_surface_authority_separation": "This contract is not a check-surface, product-route, diagnostics/mastery/PV, Scale Gate, or evidence-pack authority.",
+          "owner_next_action": "Review the complete internal no-output trial-contract packet and decide whether to authorize internal no-output trial simulation only.",
+          "proof_required_to_close": "Fresh source check, all specialist reviews, final lead PASS, exact-head PR readiness proof, green CI, and human review before any later step."
+        },
+        "proof_required_to_close": "No-output contract row may close only with exact source binding, row completeness, specialist review, final lead PASS, and human review.",
+        "review_disposition": {
+          "reviewer_role": "England authority/source reviewer plus teacher/economics, legal/privacy, and accessibility/inclusion reviewers",
+          "finding_classification": "scale_blocker",
+          "blocks": "Any attempt to turn the boundary row into localized output, evidence pack, product route, Scale Gate, or school-facing material.",
+          "does_not_block": "Internal no-output trace analysis and human review of this contract packet.",
+          "proof_required_to_close": "Specialist review verifies source/action/blocker binding and no-output trace remains internal."
+        }
+      }
+    ],
+    "closure_decision": {
+      "selected": "PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION",
+      "allowed_options": [
+        "PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION",
+        "REVISE_TRIAL_CONTRACT",
+        "STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK"
+      ],
+      "decision_selection_count": 1,
+      "does_not_authorize": [
+        "runtime execution",
+        "localized chapters",
+        "localized exercises",
+        "answer models",
+        "student-facing files",
+        "teacher/school-facing output",
+        "public output",
+        "product routes",
+        "Scale Gate",
+        "diagnostics/mastery/PV",
+        "student/product use",
+        "personal-data processing",
+        "legal/compliance/approval claims",
+        "inspection-readiness claims",
+        "support/accommodation sufficiency claims"
+      ]
+    },
+    "finding_classification": [
+      {
+        "finding": "england contract binds every Book 1 1.2/1.3 crosswalk row to explicit source IDs, roles, access dates, transformation actions, blockers, and proof required to close.",
+        "classification": "core_requirement_met",
+        "blocks": "Nothing for internal no-output contract review.",
+        "does_not_block": "Human review of the complete contract packet.",
+        "proof_required_to_close": "Checker PASS, specialist reviews, final lead PASS, exact-head PR readiness, green CI, and human review."
+      },
+      {
+        "finding": "All localized, public, school-facing, product-route, Scale Gate, diagnostics/mastery/PV, student/product-use, personal-data, compliance, inspection-readiness, support-sufficiency, and accommodation-sufficiency authority remains blocked.",
+        "classification": "scale_blocker",
+        "blocks": "Any downstream output or authority jump.",
+        "does_not_block": "Internal no-output trial simulation decision only after human review.",
+        "proof_required_to_close": "Separate future human authorization and specialist proof."
+      }
+    ],
+    "fixture_id": "STOP_STALE_SOURCE"
+  }
+}
