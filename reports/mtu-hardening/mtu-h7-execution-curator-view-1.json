@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "view_id": "mtu-h7-execution-curator-view-1",
+  "status": "curator_only_contains_split_and_selection_tags",
+  "generated_at": "2026-06-25T13:32:29.363Z",
+  "source_plan": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "selected_records": [
+    {
+      "sample_id": "ha-1022-a-23-1-o:opgave-1:question-2",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "question_num": 2,
+        "page_start": 2,
+        "page_end": 2
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 1,
+        "exam_codes": [
+          "A2.12"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2023",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "answer_form_numeric",
+        "scale_factor_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-23-1-o:opgave-2:question-9",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 9,
+        "page_start": 4,
+        "page_end": 5
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 1,
+        "exam_codes": [
+          "A2.10",
+          "A2.12",
+          "A2.15"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2023",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "labor_market",
+        "answer_form_numeric"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-23-1-o:opgave-5:question-21",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-1-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "question_num": 21,
+        "page_start": 8,
+        "page_end": 8
+      },
+      "metadata": {
+        "question_type": "uitleg_of",
+        "points": 2,
+        "exam_codes": [
+          "D2.1"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2023",
+        "tijdvak:1",
+        "question_type:uitleg_of",
+        "explain",
+        "market_form",
+        "misconception_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-23-2-o",
+        "level": "havo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 3,
+        "question_num": 15,
+        "page_start": 7,
+        "page_end": 7
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 2,
+        "exam_codes": [
+          "H4.6"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2023",
+        "tijdvak:2",
+        "question_type:berekenen",
+        "calculation",
+        "tax_incidence",
+        "scale_factor_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-24-1-o",
+        "level": "havo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 12,
+        "page_start": 5,
+        "page_end": 5
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 2,
+        "exam_codes": [
+          "A2.10",
+          "A2.11",
+          "A2.15"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2024",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "game_theory",
+        "procedure_expected"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-24-2-o",
+        "level": "havo",
+        "year": 2024,
+        "tijdvak": 2,
+        "opgave_num": 1,
+        "question_num": 3,
+        "page_start": 2,
+        "page_end": 2
+      },
+      "metadata": {
+        "question_type": "grafisch",
+        "points": 3,
+        "exam_codes": [
+          "A2.16",
+          "A2.17"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2024",
+        "tijdvak:2",
+        "question_type:grafisch",
+        "graphical",
+        "welfare_area",
+        "over_trigger_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-1-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "question_num": 16,
+        "page_start": 6,
+        "page_end": 7
+      },
+      "metadata": {
+        "question_type": "bron",
+        "points": 2,
+        "exam_codes": [
+          "F1.5"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2025",
+        "tijdvak:1",
+        "question_type:bron",
+        "source_interpretation",
+        "game_theory",
+        "misconception_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "question_num": 10,
+        "page_start": 5,
+        "page_end": 6
+      },
+      "metadata": {
+        "question_type": "bron",
+        "points": 3,
+        "exam_codes": [
+          "D3.1"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2025",
+        "tijdvak:2",
+        "question_type:bron",
+        "source_interpretation",
+        "welfare_area",
+        "incidence_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-1-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "question_num": 4,
+        "page_start": 3,
+        "page_end": 3
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 2,
+        "exam_codes": [
+          "A2.1",
+          "A2.10",
+          "A2.11",
+          "A2.12"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2023",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "market_power",
+        "answer_form_numeric"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-1-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "question_num": 21,
+        "page_start": 10,
+        "page_end": 10
+      },
+      "metadata": {
+        "question_type": "grafisch",
+        "points": 2,
+        "exam_codes": [
+          "I4.2"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2023",
+        "tijdvak:1",
+        "question_type:grafisch",
+        "graphical",
+        "macro_curve",
+        "procedure_expected"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-2-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "question_num": 9,
+        "page_start": 5,
+        "page_end": 5
+      },
+      "metadata": {
+        "question_type": "grafisch",
+        "points": 2,
+        "exam_codes": [
+          "A2.16",
+          "A2.17"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2023",
+        "tijdvak:2",
+        "question_type:grafisch",
+        "graphical",
+        "subsidy_welfare",
+        "over_trigger_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-23-2-o",
+        "level": "vwo",
+        "year": 2023,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "question_num": 20,
+        "page_start": 9,
+        "page_end": 10
+      },
+      "metadata": {
+        "question_type": "uitleg_dat",
+        "points": 3,
+        "exam_codes": [
+          "F1.4"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2023",
+        "tijdvak:2",
+        "question_type:uitleg_dat",
+        "explain",
+        "game_theory",
+        "nash_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "question_num": 17,
+        "page_start": 7,
+        "page_end": 8
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 2,
+        "exam_codes": [
+          "G2.1"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2024",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "exchange_rate",
+        "scale_factor_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-1-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 1,
+        "opgave_num": 5,
+        "question_num": 24,
+        "page_start": 11,
+        "page_end": 11
+      },
+      "metadata": {
+        "question_type": "uitleg_dat",
+        "points": 2,
+        "exam_codes": [
+          "F1.5"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2024",
+        "tijdvak:1",
+        "question_type:uitleg_dat",
+        "explain",
+        "game_theory",
+        "procedure_expected"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-24-2-o",
+        "level": "vwo",
+        "year": 2024,
+        "tijdvak": 2,
+        "opgave_num": 3,
+        "question_num": 15,
+        "page_start": 7,
+        "page_end": 8
+      },
+      "metadata": {
+        "question_type": "grafisch",
+        "points": 3,
+        "exam_codes": [
+          "I4.1"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2024",
+        "tijdvak:2",
+        "question_type:grafisch",
+        "graphical",
+        "macro_curve",
+        "over_trigger_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 1,
+        "question_num": 4,
+        "page_start": 3,
+        "page_end": 3
+      },
+      "metadata": {
+        "question_type": "grafisch",
+        "points": 2,
+        "exam_codes": [
+          "A2.10",
+          "A2.11",
+          "A2.15"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2025",
+        "tijdvak:2",
+        "question_type:grafisch",
+        "graphical",
+        "subsidy_welfare",
+        "procedure_expected"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-25-1-o:opgave-2:question-12",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-1-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 12,
+        "page_start": 5,
+        "page_end": 5
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 3,
+        "exam_codes": [
+          "A2.4",
+          "A2.5"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2025",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "elasticity",
+        "answer_form_numeric"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-25-2-o:opgave-2:question-9",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 2,
+        "question_num": 9,
+        "page_start": 4,
+        "page_end": 5
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 3,
+        "exam_codes": [
+          "A2.4",
+          "A2.5"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2025",
+        "tijdvak:2",
+        "question_type:berekenen",
+        "calculation",
+        "tax_incidence",
+        "scale_factor_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "ha-1022-a-25-2-o:opgave-4:question-18",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "ha-1022-a-25-2-o",
+        "level": "havo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "question_num": 18,
+        "page_start": 8,
+        "page_end": 9
+      },
+      "metadata": {
+        "question_type": "uitleg_of",
+        "points": 2,
+        "exam_codes": [
+          "F1.5"
+        ]
+      },
+      "route_tags": [
+        "level:havo",
+        "year:2025",
+        "tijdvak:2",
+        "question_type:uitleg_of",
+        "explain",
+        "game_theory",
+        "misconception_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-25-1-o:opgave-2:question-11",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 2,
+        "question_num": 11,
+        "page_start": 5,
+        "page_end": 6
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 3,
+        "exam_codes": [
+          "E1.1"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2025",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "rate_change",
+        "scale_factor_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-25-1-o:opgave-3:question-14",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "question_num": 14,
+        "page_start": 6,
+        "page_end": 7
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 4,
+        "exam_codes": [
+          "A2.10",
+          "A2.15"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2025",
+        "tijdvak:1",
+        "question_type:berekenen",
+        "calculation",
+        "tax_pass_through",
+        "incidence_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 1,
+        "question_num": 5,
+        "page_start": 3,
+        "page_end": 3
+      },
+      "metadata": {
+        "question_type": "grafisch",
+        "points": 2,
+        "exam_codes": [
+          "A2.15",
+          "A2.16",
+          "A2.17"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2025",
+        "tijdvak:2",
+        "question_type:grafisch",
+        "graphical",
+        "subsidy_area",
+        "over_trigger_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 4,
+        "question_num": 20,
+        "page_start": 9,
+        "page_end": 9
+      },
+      "metadata": {
+        "question_type": "bron",
+        "points": 2,
+        "exam_codes": [
+          "F1.4"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2025",
+        "tijdvak:2",
+        "question_type:bron",
+        "source_interpretation",
+        "game_theory",
+        "nash_watch"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    },
+    {
+      "sample_id": "vw-1022-a-25-2-o:opgave-6:question-28",
+      "split": "locked_holdout",
+      "source_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 6,
+        "question_num": 28,
+        "page_start": 13,
+        "page_end": 13
+      },
+      "metadata": {
+        "question_type": "berekenen",
+        "points": 3,
+        "exam_codes": [
+          "H4.6"
+        ]
+      },
+      "route_tags": [
+        "level:vwo",
+        "year:2025",
+        "tijdvak:2",
+        "question_type:berekenen",
+        "calculation",
+        "tariff_or_tax",
+        "answer_form_numeric"
+      ],
+      "evidence_state": "metadata_selected_only_no_mapping_or_outcome_recorded"
+    }
+  ],
+  "access_policy": {
+    "may_be_used_by": [
+      "curator",
+      "metrics_after_scoring",
+      "subagent_lead"
+    ],
+    "must_not_be_used_by": [
+      "mapper_before_prediction_seal"
+    ],
+    "reason": "Contains split labels and semantic selection tags that are valid for balancing but must not condition independent mapper predictions."
+  },
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_authorized": false,
+    "candidate_write_authorized": false,
+    "lesson_output_authorized": false,
+    "product_route_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "adaptive_routing_authorized": false,
+    "sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false
+  }
+}
