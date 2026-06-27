@@ -340,6 +340,7 @@ function normalizeBundleMember(member) {
     ...item,
     repository: item.repository || item.repo || null,
     pr_number: positiveInteger(item.pr_number || item.number),
+    base: item.base || item.baseRefName || item.base_branch || null,
     head_sha: item.head_sha || item.headRefOid || null,
     reviewed_payload_head_sha: item.reviewed_payload_head_sha || item.payload_head_sha || null,
   };
@@ -352,6 +353,98 @@ function bundleMemberComplete(member, options = {}) {
       member.pr_number &&
       SHA_PATTERN.test(String(member.reviewed_payload_head_sha || '')) &&
       (!requireHead || SHA_PATTERN.test(String(member.head_sha || '')))
+  );
+}
+
+function bundleMemberHeadMatches(member) {
+  return Boolean(
+    member &&
+      SHA_PATTERN.test(String(member.head_sha || '')) &&
+      SHA_PATTERN.test(String(member.reviewed_payload_head_sha || '')) &&
+      member.head_sha === member.reviewed_payload_head_sha
+  );
+}
+
+function bundleMemberLifecycleOk(member) {
+  return Boolean(
+    member &&
+      member.open === true &&
+      member.current === true &&
+      member.mergeable === true &&
+      bundleMemberHeadMatches(member)
+  );
+}
+
+function compatibilityStateGreen(compatibility, stateName) {
+  const state = compatibility && compatibility.states && compatibility.states[stateName];
+  return state && state.status === 'success';
+}
+
+function compatibilityPermitsPlatformFirst(compatibility) {
+  return Boolean(
+    compatibility &&
+      compatibility.ok === true &&
+      asArray(compatibility.permitted_merge_orders).includes('platform-first') &&
+      compatibilityStateGreen(compatibility, 'platform-first') &&
+      compatibilityStateGreen(compatibility, 'bundle-final')
+  );
+}
+
+function pairedLeadReviewRecords(proof) {
+  const lead = (proof && proof.lead_review) || {};
+  return [
+    ...asArray(lead.paired_member_reviews),
+    ...asArray(lead.paired_reviews),
+    ...asArray(lead.bundle_member_reviews),
+  ].filter(Boolean);
+}
+
+function pairedLeadReviewFor(member, proof) {
+  if (!member) return null;
+  return pairedLeadReviewRecords(proof).find((record) => {
+    const repository = record.repository || record.repo;
+    const prNumber = positiveInteger(record.pr_number || record.number);
+    const reviewedSha = record.reviewed_commit_sha || record.reviewed_sha || record.reviewed_remote_commit_sha;
+    const result = normalizeVerdict(record.review_result || record.result || record.verdict);
+    const path = record.review_path || record.path || record.report_path;
+    return Boolean(
+      repository === member.repository &&
+        prNumber === member.pr_number &&
+        reviewedSha === member.head_sha &&
+        PASSING_LEAD_RESULTS.has(result) &&
+        typeof path === 'string' &&
+        path.trim()
+    );
+  }) || null;
+}
+
+function pairedLeadReviewed(member, proof) {
+  return Boolean(pairedLeadReviewFor(member, proof));
+}
+
+function normalizePairedLeadReview(record) {
+  const item = record || {};
+  return {
+    repository: item.repository || item.repo || null,
+    pr_number: positiveInteger(item.pr_number || item.number),
+    reviewed_commit_sha: item.reviewed_commit_sha || item.reviewed_sha || item.reviewed_remote_commit_sha || null,
+    review_result: normalizeVerdict(item.review_result || item.result || item.verdict),
+    review_path: item.review_path || item.path || item.report_path || null,
+  };
+}
+
+function controllerFirstDraftTransitionable(member, context) {
+  return Boolean(
+    context &&
+      context.delegated === false &&
+      repoIsPlatform(context.reviewedRepo) &&
+      repoIsLesson(member && member.repository) &&
+      member.is_draft === true &&
+      member.ready === false &&
+      bundleMemberComplete(member) &&
+      bundleMemberLifecycleOk(member) &&
+      pairedLeadReviewed(member, context.proof) &&
+      compatibilityPermitsPlatformFirst(context.compatibility)
   );
 }
 
@@ -455,10 +548,7 @@ function bundleSafetyProof(proof, evidence) {
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
   for (const paired of pairedPrs) {
     if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
-    if (paired && paired.is_draft === true) failures.push('paired_pr_draft');
-    if (paired && (paired.ready === false || paired.current === false || paired.open === false || paired.mergeable === false)) {
-      failures.push('paired_pr_not_ready');
-    }
+    if (paired && !paired.base) failures.push('paired_pr_base_missing');
     if (paired && paired.reviewed_payload_head_sha && paired.head_sha && paired.reviewed_payload_head_sha !== paired.head_sha) {
       failures.push('paired_pr_head_mismatch');
     }
@@ -477,6 +567,44 @@ function bundleSafetyProof(proof, evidence) {
       })
     : { ok: false, failures: ['bundle_compatibility_missing'] };
   if (!compatibility.ok) failures.push(...compatibility.failures);
+  const transitionableDraftMembers = [];
+  const pairedLeadReviews = [];
+  const transitionContext = {
+    delegated,
+    reviewedRepo: evidence.reviewed_pr.repo,
+    proof,
+    compatibility,
+  };
+  for (const paired of pairedPrs) {
+    const pairedLeadReview = pairedLeadReviewFor(paired, proof);
+    if (pairedLeadReview) pairedLeadReviews.push(normalizePairedLeadReview(pairedLeadReview));
+    const transitionable = controllerFirstDraftTransitionable(paired, transitionContext);
+    const lifecycleOk = bundleMemberLifecycleOk(paired);
+    if (transitionable) {
+      transitionableDraftMembers.push({
+        repository: paired.repository,
+        pr_number: paired.pr_number,
+        base: paired.base || null,
+        head_sha: paired.head_sha,
+        reviewed_payload_head_sha: paired.reviewed_payload_head_sha,
+        reason: 'controller_first_mark_ready',
+      });
+    }
+    if (paired && paired.is_draft === true && !transitionable) failures.push('paired_pr_draft');
+    if (paired && (!lifecycleOk || paired.ready !== true) && !transitionable) {
+      failures.push('paired_pr_not_ready');
+    }
+  }
+  const reviewedPrIsDraft = evidence.reviewed_pr.was_draft !== false;
+  const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
+  const anyPairedNotReady = pairedPrs.some((paired) => paired && (!bundleMemberLifecycleOk(paired) || paired.ready !== true));
+  const transitionReady = failures.length === 0 && (reviewedPrIsDraft || transitionableDraftMembers.length > 0);
+  const mergeReady =
+    failures.length === 0 &&
+    reviewedPrIsDraft === false &&
+    !anyPairedDraft &&
+    !anyPairedNotReady &&
+    transitionableDraftMembers.length === 0;
   const summary = {
     required,
     delegated,
@@ -486,6 +614,10 @@ function bundleSafetyProof(proof, evidence) {
     paired_prs: pairedPrs,
     exact_members: exactMembers,
     compatibility,
+    transition_ready: transitionReady,
+    merge_ready: mergeReady,
+    transitionable_draft_members: transitionableDraftMembers,
+    paired_lead_reviews: pairedLeadReviews,
     failures: uniqueStrings(failures),
   };
   return summary;
@@ -610,7 +742,6 @@ function collectRevisionReasons(evidence) {
     evidence.reviewed_pr.mergeable === false ||
     /^CONFLICTING$/i.test(String(evidence.reviewed_pr.mergeable || '')) ||
     /^DIRTY$/i.test(mergeState) ||
-    /^BEHIND$/i.test(mergeState) ||
     (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock)
   ) {
     reasons.push('merge_readiness_blocked');
@@ -639,7 +770,16 @@ function collectRevisionReasons(evidence) {
   if (proof.blocking_comments === true) reasons.push('blocking_comments_unresolved');
   if (bundle.required && !bundle.ok) reasons.push(...bundle.failures);
   if (evidence.bundle && evidence.bundle.complete === false) reasons.push('bundle_incomplete');
-  if (asArray(evidence.bundle && evidence.bundle.paired_prs).some((paired) => paired.ready === false || paired.current === false)) {
+  const transitionableKeys = new Set(
+    asArray(bundle.transitionable_draft_members).map((member) => `${member.repository}#${member.pr_number}`)
+  );
+  if (asArray(evidence.bundle && evidence.bundle.paired_prs).some((paired) => {
+    const item = normalizeBundleMember(paired);
+    return (
+      (item.ready === false || item.current === false) &&
+      !transitionableKeys.has(`${item.repository}#${item.pr_number}`)
+    );
+  })) {
     reasons.push('paired_pr_not_ready');
   }
   if (evidence.throughput.level === 'L2' && !evidence.throughput.owner_preapproved) {
@@ -900,6 +1040,28 @@ function validateDecision(decision) {
         !compatibility.recommended_merge_order
       ) {
         throw new Error(`${decision.route} requires green bundle-final and intermediate compatibility proof`);
+      }
+      const pairedPrs = asArray(decision.proof.bundle.paired_prs);
+      const hasTransitionableDraftMembers = asArray(decision.proof.bundle.transitionable_draft_members).length > 0;
+      const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
+      const anyPairedNotReady = pairedPrs.some((paired) => {
+        const member = normalizeBundleMember(paired);
+        return !member.base || !bundleMemberLifecycleOk(member) || member.ready !== true;
+      });
+      if (
+        decision.proof.bundle.merge_ready === true &&
+        (decision.reviewed_pr.was_draft !== false ||
+          anyPairedDraft ||
+          anyPairedNotReady ||
+          hasTransitionableDraftMembers)
+      ) {
+        throw new Error(`${decision.route} cannot mark bundle merge_ready while a draft or unready member remains`);
+      }
+      if (
+        decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY &&
+        decision.proof.bundle.transition_ready !== true
+      ) {
+        throw new Error(`${decision.route} MARK_READY requires bundle transition_ready proof`);
       }
     }
     const branchProtection = decision.proof.branch_protection || null;

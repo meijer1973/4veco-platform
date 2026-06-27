@@ -10,6 +10,8 @@ const {
   validateDecision,
 } = require('./pr-readiness-router');
 
+const SHA_PATTERN = /^[a-f0-9]{40}$/i;
+
 function fail(message) {
   console.error(`Apply PR readiness decision failed: ${message}`);
   process.exit(1);
@@ -48,8 +50,16 @@ function runGh(args, options = {}) {
   return result.stdout;
 }
 
+function normalizeMergeable(value) {
+  if (value === true) return true;
+  if (value === false) return false;
+  if (/^MERGEABLE$/i.test(String(value || ''))) return true;
+  if (/^(CONFLICTING|DIRTY|UNKNOWN)$/i.test(String(value || ''))) return false;
+  return null;
+}
+
 function fetchCurrentPr(repo, number) {
-  const fields = ['number', 'url', 'state', 'isDraft', 'baseRefName', 'headRefOid'].join(',');
+  const fields = ['number', 'url', 'state', 'isDraft', 'baseRefName', 'headRefOid', 'mergeable'].join(',');
   const raw = runGh(['pr', 'view', String(number), '--repo', repo, '--json', fields]);
   const pr = JSON.parse(raw);
   return {
@@ -60,6 +70,7 @@ function fetchCurrentPr(repo, number) {
     is_draft: Boolean(pr.isDraft),
     base: pr.baseRefName,
     head_sha: pr.headRefOid,
+    mergeable: normalizeMergeable(pr.mergeable),
   };
 }
 
@@ -72,6 +83,9 @@ function normalizeFixturePr(fixture) {
     is_draft: fixture.is_draft !== false && fixture.isDraft !== false,
     base: fixture.base || fixture.baseRefName || null,
     head_sha: fixture.head_sha || fixture.headRefOid,
+    mergeable: Object.prototype.hasOwnProperty.call(fixture, 'mergeable')
+      ? normalizeMergeable(fixture.mergeable)
+      : null,
     comments: fixture.comments || [],
   };
 }
@@ -96,6 +110,96 @@ function verifyTransitionPreconditions(decision, currentPr) {
   if (decision.route === ROUTES.READY_FOR_HUMAN_REVIEW && decision.auto_merge === true) {
     failures.push('human_route_must_not_auto_merge');
   }
+  if (failures.length > 0) {
+    const error = new Error(`precondition failure: ${failures.join(', ')}`);
+    error.failures = failures;
+    throw error;
+  }
+  return true;
+}
+
+function positiveInteger(value) {
+  const number = Number(value);
+  return Number.isInteger(number) && number > 0 ? number : null;
+}
+
+function normalizeExpectedPairedMember(member) {
+  const item = member || {};
+  return {
+    repo: item.repository || item.repo || null,
+    number: positiveInteger(item.pr_number || item.number),
+    base: item.base || item.baseRefName || item.base_branch || null,
+    head_sha: item.head_sha || item.headRefOid || null,
+    open: item.open,
+    current: item.current,
+    ready: item.ready,
+    is_draft: item.is_draft === undefined ? item.isDraft : item.is_draft,
+    mergeable: normalizeMergeable(item.mergeable),
+  };
+}
+
+function collectExpectedPairedMembers(decision) {
+  if (!decision || decision.allowed_transition !== ALLOWED_TRANSITIONS.MARK_READY) return [];
+  const bundle = decision.proof && decision.proof.bundle;
+  if (!bundle) return [];
+  const byKey = new Map();
+  for (const rawMember of [...(bundle.paired_prs || []), ...(bundle.transitionable_draft_members || [])]) {
+    const member = normalizeExpectedPairedMember(rawMember);
+    if (!member.repo || !member.number) continue;
+    const key = `${member.repo}#${member.number}`;
+    byKey.set(key, {
+      ...(byKey.get(key) || {}),
+      ...Object.fromEntries(Object.entries(member).filter(([, value]) => value !== undefined && value !== null)),
+    });
+  }
+  return [...byKey.values()];
+}
+
+function normalizeFetchedPr(pr, fallbackRepo, fallbackNumber) {
+  const item = pr || {};
+  return {
+    repo: item.repo || item.repository || fallbackRepo || null,
+    number: positiveInteger(item.number || item.pr_number) || fallbackNumber || null,
+    state: item.state || (item.open === true ? 'OPEN' : item.open === false ? 'CLOSED' : null),
+    is_draft: item.is_draft === undefined ? Boolean(item.isDraft) : Boolean(item.is_draft),
+    base: item.base || item.baseRefName || item.base_branch || null,
+    head_sha: item.head_sha || item.headRefOid || null,
+    mergeable: normalizeMergeable(item.mergeable),
+  };
+}
+
+function verifyPairedTransitionPreconditions(decision, fetchPairedPr) {
+  validateDecision(decision);
+  const expectedMembers = collectExpectedPairedMembers(decision);
+  if (decision.allowed_transition !== ALLOWED_TRANSITIONS.MARK_READY || expectedMembers.length === 0) return true;
+  if (typeof fetchPairedPr !== 'function') {
+    throw new Error('precondition failure: paired_pr_fetcher_missing');
+  }
+
+  const failures = [];
+  for (const expected of expectedMembers) {
+    const label = `${expected.repo || 'missing-repo'}#${expected.number || 'missing-pr'}`;
+    if (!expected.repo || !expected.number) failures.push(`${label}:paired_pr_identity_missing`);
+    if (!expected.base) failures.push(`${label}:paired_pr_base_missing`);
+    if (!SHA_PATTERN.test(String(expected.head_sha || ''))) failures.push(`${label}:paired_pr_head_missing`);
+    if (expected.open !== true) failures.push(`${label}:paired_pr_expected_open_not_true`);
+    if (expected.current !== true) failures.push(`${label}:paired_pr_expected_current_not_true`);
+    if (expected.mergeable !== true) failures.push(`${label}:paired_pr_expected_mergeable_not_true`);
+    if (typeof expected.is_draft !== 'boolean') failures.push(`${label}:paired_pr_expected_draft_missing`);
+    if (typeof expected.ready !== 'boolean') failures.push(`${label}:paired_pr_expected_ready_missing`);
+    if (!expected.repo || !expected.number) continue;
+
+    const live = normalizeFetchedPr(fetchPairedPr(expected.repo, expected.number), expected.repo, expected.number);
+    if (live.repo !== expected.repo) failures.push(`${label}:paired_pr_repository_mismatch`);
+    if (live.number !== expected.number) failures.push(`${label}:paired_pr_number_mismatch`);
+    if (live.base !== expected.base) failures.push(`${label}:paired_pr_base_changed`);
+    if (live.head_sha !== expected.head_sha) failures.push(`${label}:paired_pr_head_sha_changed`);
+    if (live.state !== 'OPEN') failures.push(`${label}:paired_pr_not_open`);
+    if (live.is_draft !== expected.is_draft) failures.push(`${label}:paired_pr_draft_state_changed`);
+    if ((live.is_draft === false) !== expected.ready) failures.push(`${label}:paired_pr_ready_state_changed`);
+    if (live.mergeable !== true) failures.push(`${label}:paired_pr_not_mergeable`);
+  }
+
   if (failures.length > 0) {
     const error = new Error(`precondition failure: ${failures.join(', ')}`);
     error.failures = failures;
@@ -142,6 +246,7 @@ function applyDecisionToState(decision, currentPr, options = {}) {
     if (currentPr.is_draft) {
       const finalPr = options.finalPr || currentPr;
       verifyTransitionPreconditions(decision, finalPr);
+      if (options.fetchPairedPr) verifyPairedTransitionPreconditions(decision, options.fetchPairedPr);
       result.transition_action = options.dryRun ? 'would_mark_ready' : 'marked_ready';
       currentPr.is_draft = false;
     } else {
@@ -166,22 +271,24 @@ function applyLiveDecision(decision, options) {
   verifyTransitionPreconditions(decision, currentPr);
   const marker = decisionMarker(decision);
   const body = renderDecisionMarkdown(decision);
-  const comments = listLiveComments(repo, number);
-  const commentResult = options.dryRun
-    ? { action: findExistingComment(comments, marker) ? 'would_update_comment' : 'would_create_comment' }
-    : postOrUpdateLiveComment(repo, number, findExistingComment(comments, marker), body);
 
   let transitionAction = 'none';
   if (decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY) {
     if (currentPr.is_draft) {
       const finalPr = options.dryRun ? currentPr : fetchCurrentPr(repo, number);
       verifyTransitionPreconditions(decision, finalPr);
-      if (!options.dryRun) runGh(['pr', 'ready', String(number), '--repo', repo]);
+      verifyPairedTransitionPreconditions(decision, (pairedRepo, pairedNumber) => fetchCurrentPr(pairedRepo, pairedNumber));
       transitionAction = options.dryRun ? 'would_mark_ready' : 'marked_ready';
+      if (!options.dryRun) runGh(['pr', 'ready', String(number), '--repo', repo]);
     } else {
       transitionAction = 'already_ready';
     }
   }
+
+  const comments = listLiveComments(repo, number);
+  const commentResult = options.dryRun
+    ? { action: findExistingComment(comments, marker) ? 'would_update_comment' : 'would_create_comment' }
+    : postOrUpdateLiveComment(repo, number, findExistingComment(comments, marker), body);
 
   return {
     ok: true,
@@ -232,6 +339,8 @@ if (require.main === module) {
 module.exports = {
   applyDecisionToState,
   applyLiveDecision,
+  collectExpectedPairedMembers,
   runApply,
+  verifyPairedTransitionPreconditions,
   verifyTransitionPreconditions,
 };
