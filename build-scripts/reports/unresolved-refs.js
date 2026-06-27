@@ -21,9 +21,7 @@ const REPORT    = path.join(REPO_ROOT, 'reports/unresolved-refs.md');
 const SCAN_DIRS = [
   'source-data',
   'knowledge',
-  '.claude/plans',
   'skills',
-  '.claude/commands',
 ];
 
 // Paths that are themselves the registry, its tooling, or documentation of

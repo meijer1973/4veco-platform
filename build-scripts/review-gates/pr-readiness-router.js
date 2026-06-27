@@ -831,6 +831,8 @@ function collectRevisionReasons(evidence) {
     proof.integration &&
     proof.integration.authorization_inherited === true &&
     proof.integration.integration_head_sha === headSha;
+  const controllerBundlePendingBlock =
+    /^BLOCKED$/i.test(mergeState) && controllerDelegatedBundleCi;
 
   if (!evidence.reviewed_pr.repo || !evidence.reviewed_pr.number || !evidence.reviewed_pr.url) {
     reasons.push('missing_remote_pr_identity');
@@ -840,7 +842,7 @@ function collectRevisionReasons(evidence) {
     evidence.reviewed_pr.mergeable === false ||
     /^CONFLICTING$/i.test(String(evidence.reviewed_pr.mergeable || '')) ||
     /^DIRTY$/i.test(mergeState) ||
-    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock)
+    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock && !controllerBundlePendingBlock)
   ) {
     reasons.push('merge_readiness_blocked');
   }
