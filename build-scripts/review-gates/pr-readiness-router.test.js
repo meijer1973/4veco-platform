@@ -330,10 +330,16 @@ describe('pr-readiness-router', () => {
           compatibility: bundleCompatibility(exactMembers),
         },
       },
+      reviewed_pr: {
+        ...fixture.reviewed_pr,
+        merge_state: 'BLOCKED',
+        mergeable: true,
+      },
     });
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.reason_codes).not.toContain('required_ci_context_missing_or_not_successful');
+    expect(decision.reason_codes).not.toContain('merge_readiness_blocked');
     expect(decision.proof.bundle_delegated_ci).toBe(true);
   });
 
