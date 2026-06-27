@@ -27,7 +27,10 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('bundle-summary.json');
     expect(bundleWorkflow).toContain('Checkout trusted platform tooling');
     expect(bundleWorkflow).toContain('ref: main');
+    expect(bundleWorkflow).toContain('$stateResultArgs');
+    expect(bundleWorkflow).toContain("IsNullOrWhiteSpace($failedCommand)");
     expect(bundleWorkflow).not.toContain("if ($status -ne 'success') { exit 1 }");
+    expect(bundleWorkflow).not.toContain('--failed-command "$failedCommand"');
   });
 
   test('bundle workflow does not mint platform-ci evidence under a different workflow identity', () => {

@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "report_id": "local-expert-source-refresh-gate-decision",
+  "sprint_id": "GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1",
+  "generated_date": "2026-06-26",
+  "access_date": "2026-06-26",
+  "status": "decision_ready_for_human_review",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "product_end_state_checkout_note": "Cross-repo citation: resolve through the paired 4veco-lessen checkout used for human review; this platform packet does not copy lesson-repo product state.",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md",
+  "roadmap_source": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
+  "accepted_input_decision": "PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING",
+  "non_negotiable_requirements": [
+    "Use REV-STD-1 and cite product end-state plus the original sprint/gate spec.",
+    "Cite the accepted no-output simulation decision and preserve the no-output/no-runtime/no-product-authority boundary.",
+    "Define local expert role contract fields without substituting local expert judgement.",
+    "Define source-refresh protocol fields without executing source refresh.",
+    "Use explicit source and output allowlists only; no directory globbing or generated lesson-output scanning.",
+    "Include England and Flanders jurisdiction-specific gates.",
+    "Simulate source-refresh gate classification cases without refreshing sources or producing localized output.",
+    "Refuse forbidden audiences, claims, integrations, product routes, Scale Gate, diagnostics/mastery/PV, personal data, support/accommodation sufficiency, and compliance/inspection-readiness claims.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "accepted_no_output_decision_bound",
+      "requirement": "The gate is bound to the accepted no-output simulation decision and does not reinterpret it as source-refresh authority.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "local_expert_role_contract_complete",
+      "requirement": "The local expert role contract names allowed review scope, forbidden authority, responsibilities, uncertainty handling, and required output format.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "source_refresh_protocol_complete",
+      "requirement": "Every allowlisted source has source ID, jurisdiction, role, official URL, access date, freshness trigger, staleness condition, replacement rule, human-review trigger, allowed inference, and forbidden inference.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "jurisdiction_gates_complete",
+      "requirement": "England and Flanders gates cover their required authority/source boundaries.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "no_output_enforced",
+      "requirement": "The packet refuses localized content, student/teacher/school/public output, runtime, product, Scale Gate, diagnostics/mastery/PV, and evidence-pack paths.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "simulation_cases_complete",
+      "requirement": "Each jurisdiction includes all required source-refresh gate simulation cases without executing refresh.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "negative_fixtures_cover_forbidden_cases",
+      "requirement": "Negative fixtures cover forbidden source, output, expert-substitution, personal-data, support, compliance, and overgeneralisation cases.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "single_decision",
+      "requirement": "The packet selects exactly one allowed decision.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    },
+    {
+      "id": "review_route_preserved",
+      "requirement": "Specialist reviews, final lead review, PR readiness, green CI, and human review remain required.",
+      "status": "met_for_internal_gate_design",
+      "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+    }
+  ],
+  "input_allowlist": [
+    "reports/inspection-standards/england-internal-no-output-trial-simulation.json",
+    "reports/inspection-standards/flanders-internal-no-output-trial-simulation.json",
+    "reports/inspection-standards/internal-no-output-trial-simulation.json",
+    "reports/inspection-standards/internal-no-output-trial-simulation-decision.json",
+    "reports/inspection-standards/internal-no-output-trial-simulation-validation.json",
+    "references/schemas/internal-no-output-trial-simulation.schema.v1.json",
+    "references/data/inspection-standards/overlays/england.deepening.v1.json",
+    "references/data/inspection-standards/overlays/flanders.deepening.v1.json"
+  ],
+  "output_allowlist": [
+    "references/schemas/local-expert-source-refresh-gate.schema.v1.json",
+    "docs/inspection-standards/local-expert-source-refresh-gate-contract.md",
+    "docs/inspection-standards/england-local-expert-source-gate.md",
+    "docs/inspection-standards/flanders-local-expert-source-gate.md",
+    "reports/inspection-standards/local-expert-source-refresh-gate-plan.md",
+    "reports/inspection-standards/local-expert-source-refresh-gate-plan.json",
+    "reports/inspection-standards/england-source-refresh-gate-simulation.md",
+    "reports/inspection-standards/england-source-refresh-gate-simulation.json",
+    "reports/inspection-standards/flanders-source-refresh-gate-simulation.md",
+    "reports/inspection-standards/flanders-source-refresh-gate-simulation.json",
+    "reports/inspection-standards/local-expert-source-refresh-gate-decision.md",
+    "reports/inspection-standards/local-expert-source-refresh-gate-decision.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/england-source-refresh-gate-simulation.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/flanders-source-refresh-gate-simulation.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/non-official-source.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/source-refresh-executed.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/local-expert-substituted.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/localized-output.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/student-facing-output.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/teacher-school-output.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/public-output.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/personal-data.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/compliance-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-sufficiency-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/whole-uk-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/all-belgium-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-source-condition.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-england-source-allowlist.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/official-url-mismatch.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/individual-adjustment-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/reasonable-adjustment-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/learner-support-record-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-records-personal-data.sample.json",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-correction-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-closure-record.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-specialist-reviews.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-final-lead-review.md"
+  ],
+  "forbidden_authority": {
+    "source_refresh_executed": false,
+    "local_expert_substituted": false,
+    "runtime_execution": false,
+    "localized_paragraphs_generated": false,
+    "localized_exercises_generated": false,
+    "localized_answer_models_generated": false,
+    "localized_assessment_items_generated": false,
+    "student_facing_files_generated": false,
+    "teacher_school_facing_output_generated": false,
+    "public_output_generated": false,
+    "evidence_pack_generated": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_product_use": false,
+    "personal_data_processing": false,
+    "legal_compliance_claim": false,
+    "approval_accreditation_claim": false,
+    "op0_pta_summative_claim": false,
+    "inspection_readiness_claim": false,
+    "support_sufficiency_claim": false,
+    "accommodation_sufficiency_claim": false,
+    "individual_adjustment_claim": false,
+    "reasonable_adjustment_claim": false,
+    "learner_support_record_claim": false,
+    "support_records_personal_data": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "generated_lesson_output_scanning": false,
+    "implicit_source_discovery": false,
+    "directory_globbing": false,
+    "quality_ref_or_dashboard_integration": false
+  },
+  "final_local_expert_source_refresh_gate_decision": {
+    "selected": "PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET",
+    "allowed_options": [
+      "PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET",
+      "REVISE_LOCAL_EXPERT_SOURCE_GATE",
+      "STOP_LOCAL_OVERLAY_TRACK"
+    ],
+    "decision_selection_count": 1,
+    "rationale": "The gate design can control source authority, local expert role, no-output boundaries, and claim refusals, so the next possible sprint may prepare a bounded source-refresh packet without executing it here."
+  },
+  "simulation_case_counts": {
+    "england": 8,
+    "flanders": 8,
+    "required_case_types": [
+      "valid_official_source_refresh_request",
+      "stale_source_detected",
+      "source_gap",
+      "non_official_source_proposed",
+      "local_expert_uncertainty",
+      "attempted_compliance_claim",
+      "attempted_localized_output",
+      "attempted_school_facing_output"
+    ]
+  },
+  "source_refresh_execution_performed": false,
+  "local_expert_substitution_performed": false,
+  "does_not_authorize": [
+    "source refresh execution",
+    "local expert substitution",
+    "runtime execution",
+    "localized output",
+    "country editions",
+    "teacher/school-facing or public output",
+    "evidence packs",
+    "product-route adoption",
+    "Scale Gate",
+    "diagnostics/mastery/PV",
+    "student/product use",
+    "personal-data processing",
+    "individual adjustment claims",
+    "reasonable adjustment claims",
+    "learner/support-record claims",
+    "support-record personal-data processing",
+    "compliance, approval, accreditation, OP0, PTA, summative validity, inspection readiness, support sufficiency, or accommodation sufficiency claims"
+  ],
+  "plan_report": "local-expert-source-refresh-gate-plan",
+  "finding_classification": [
+    {
+      "finding": "The selected decision is PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for internal human review of this gate-design packet.",
+      "does_not_block": "A later bounded source-refresh packet planning step after human acceptance.",
+      "proof_required_to_close": "Final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+    },
+    {
+      "finding": "The decision remains planning-only.",
+      "classification": "scale_blocker",
+      "blocks": "All source-refresh execution, local expert substitution, output, product, student, personal-data, compliance, and inspection-readiness authority.",
+      "does_not_block": "Human review of the planning-only decision.",
+      "proof_required_to_close": "Separate reviewed sprint and explicit owner authorization."
+    }
+  ]
+}

@@ -88,6 +88,7 @@ function buildBody(branch) {
   lines.push(`- ${platform('build-scripts/review-gates/pr-readiness-router.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/review-pr-readiness.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/apply-pr-readiness-decision.js')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/apply-bundle-readiness-decision.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/check-human-payload-authorization.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/check-integration-lineage.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/integrate-authorized-pr.js')}`);
