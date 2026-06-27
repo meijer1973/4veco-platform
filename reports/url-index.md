@@ -33,6 +33,7 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/pr-readiness-router.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/review-pr-readiness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-pr-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-bundle-readiness-decision.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-payload-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lineage.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-pr.js
