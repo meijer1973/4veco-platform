@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-27T11:04:42.823Z
+Generated: 2026-06-27T11:10:13.787Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/agents-md-entrypoint-cleanup-20260627`
-Source commit: `bda34668a921243c5ab73a255d9c99efc09cc7fc`
-Files indexed: 6339
+Source commit: `258652608666e4f421deabb729f75838dd35bdc7`
+Files indexed: 6348
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 606
+Count: 607
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -655,6 +655,7 @@ Count: 606
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
+- build-scripts/sprints/check-pptx-skill-mirror.test.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -778,7 +779,7 @@ Count: 25
 
 ## validators
 
-Count: 602
+Count: 604
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1059,6 +1060,7 @@ Count: 602
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
+- build-scripts/sprints/check-pptx-skill-mirror.test.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -1219,6 +1221,7 @@ Count: 602
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-light.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-dark.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-light.png
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-validation-log.md
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -2175,7 +2178,7 @@ Count: 785
 
 ## reports
 
-Count: 4124
+Count: 4132
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4036,6 +4039,14 @@ Count: 4124
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-implementation-correction-log.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-implementation-review-round1.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-implementation-review-round2.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-plan-correction-log.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-plan-review-round1.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-plan-review-round2.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-plan.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-validation-log.md
 - reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-plan.md
 - reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-result.md
 - reports/sprints/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-plan.md
