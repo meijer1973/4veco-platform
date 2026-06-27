@@ -1,0 +1,811 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1",
+  "generated_on": "2026-06-26",
+  "status": "prepared_for_human_product_proof_review",
+  "product_end_state": "Human-reviewable merged Year 2 four-target candidate lesson routes with source-first route pages, advisory short checks, target-equivalent exit-ticket candidates, route contracts, and rendered proof.",
+  "original_sprint_gate_spec": {
+    "production_review_packet": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/review-packet.json",
+    "production_bundle": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json",
+    "production_screenshot_manifest": "reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshot-manifest.json",
+    "governed_support_handoff": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json",
+    "lesson_eligibility_overlay": "references/data/year2-target-foundation/lesson-production-eligibility-overlay.json",
+    "canonical_source_assets": "references/data/year2-target-foundation/canonical-source-assets.json",
+    "answer_contracts": "references/data/year2-target-foundation/answer-contracts.json",
+    "target_candidates": "references/authored/year2-v6-target-foundation-candidates.json",
+    "original_governed_support_gate": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/review-packet.json",
+    "book_architecture": "reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md"
+  },
+  "merged_state": {
+    "platform_current_head_sha": "bda34668a921243c5ab73a255d9c99efc09cc7fc",
+    "lesson_current_head_sha": "ef06e8b881f953d7fcd6a1ed26a763b2bf01a684",
+    "platform_production_merge_commit": "e5a847dcf873804005f857f349a99d9bd12b4659",
+    "lesson_production_merge_commit": "ef06e8b881f953d7fcd6a1ed26a763b2bf01a684",
+    "platform_production_merge_commit_is_ancestor": true,
+    "lesson_production_merge_commit_is_ancestor": true
+  },
+  "non_negotiable_requirements": [
+    "Consume the merged platform and lesson outputs; do not regenerate or mutate lesson output in this gate.",
+    "Cite product end-state and the original sprint/gate specs.",
+    "Verify all four owner paragraphs and all three required surfaces per paragraph.",
+    "Use rendered screenshot proof across desktop/mobile and light/dark states.",
+    "Verify route contracts and student-visible authority boundaries.",
+    "Keep product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use blocked pending human decision."
+  ],
+  "core_requirement_checklist": {
+    "production_bundle_present": true,
+    "merged_platform_commit_present": true,
+    "merged_lesson_commit_present": true,
+    "all_four_owner_paragraphs_present": true,
+    "all_required_surfaces_present": true,
+    "all_route_contracts_present": true,
+    "rendered_screenshot_proof_complete": true,
+    "student_visible_internal_terms_screened": true,
+    "authority_boundary_preserved": true
+  },
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "paragraph_code": "5.4.2",
+      "product_review_scope": "merged_candidate_lesson_route_surface",
+      "lesson_goal": "Gebruik het officiele pensioenmodel om ruilen over de tijd, voorraad/grootheid, indexatie, verhoudingen en koopkracht uit te leggen.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+        "references/data/year2-target-foundation/canonical-source-assets.json#figuur-1-pensioenmodel-2024-2044",
+        "references/data/year2-target-foundation/canonical-source-assets.json#pensioenmodel-assumptions-a-f"
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/route-contract.json"
+      },
+      "output_evidence": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/_paragraph-plan.md",
+        "contract": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/route-contract.json",
+          "exists": true,
+          "bytes": 1312
+        },
+        "surfaces": {
+          "route": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+            "exists": true,
+            "bytes": 11607
+          },
+          "korte-check": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+            "exists": true,
+            "bytes": 12760
+          },
+          "exit-ticket": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+            "exists": true,
+            "bytes": 12712
+          }
+        }
+      },
+      "screenshot_evidence": {
+        "count": 12,
+        "files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "source_first_route_rendered": true,
+        "advisory_short_check_rendered": true,
+        "target_equivalent_exit_ticket_candidate_rendered": true,
+        "route_contract_present": true,
+        "screenshot_set_complete": true,
+        "student_visible_internal_terms_screened": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-adoption-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of the merged candidate lesson-output proof",
+          "proof_required_to_close": "explicit owner product-proof verdict plus a later bounded adoption/Scale Gate preparation packet"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "paragraph_code": "6.4.2",
+      "product_review_scope": "merged_candidate_lesson_route_surface",
+      "lesson_goal": "Gebruik de VastWonen/Reder-bronnen om wachtlijst, omzetmaximale productie, hypotheekrisico en huurmarktgegevens te verklaren.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=12-13",
+        "references/data/year2-target-foundation/canonical-source-assets.json#tabel-1-vastwonen-financial-data",
+        "references/data/year2-target-foundation/canonical-source-assets.json#tabel-2-particuliere-huurwoningen-reder"
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/route-contract.json"
+      },
+      "output_evidence": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/_paragraph-plan.md",
+        "contract": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/route-contract.json",
+          "exists": true,
+          "bytes": 1221
+        },
+        "surfaces": {
+          "route": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+            "exists": true,
+            "bytes": 10983
+          },
+          "korte-check": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+            "exists": true,
+            "bytes": 12038
+          },
+          "exit-ticket": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+            "exists": true,
+            "bytes": 12025
+          }
+        }
+      },
+      "screenshot_evidence": {
+        "count": 12,
+        "files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "source_first_route_rendered": true,
+        "advisory_short_check_rendered": true,
+        "target_equivalent_exit_ticket_candidate_rendered": true,
+        "route_contract_present": true,
+        "screenshot_set_complete": true,
+        "student_visible_internal_terms_screened": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-adoption-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of the merged candidate lesson-output proof",
+          "proof_required_to_close": "explicit owner product-proof verdict plus a later bounded adoption/Scale Gate preparation packet"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "paragraph_code": "7.4.1",
+      "product_review_scope": "merged_candidate_lesson_route_surface",
+      "lesson_goal": "Gebruik de kredietverzekeringsbron om informatieproblemen, prikkels, verwachte schade en premieopslag te verklaren.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-23-1-o.pdf#page=6-7",
+        "references/data/year2-target-foundation/canonical-source-assets.json#figuur-1-kredietverzekering-en-voorwaarden",
+        "references/data/year2-target-foundation/canonical-source-assets.json#tabel-1-financiele-gegevens-digibate"
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/route-contract.json"
+      },
+      "output_evidence": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/_paragraph-plan.md",
+        "contract": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/route-contract.json",
+          "exists": true,
+          "bytes": 1285
+        },
+        "surfaces": {
+          "route": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+            "exists": true,
+            "bytes": 10784
+          },
+          "korte-check": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+            "exists": true,
+            "bytes": 11927
+          },
+          "exit-ticket": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+            "exists": true,
+            "bytes": 12083
+          }
+        }
+      },
+      "screenshot_evidence": {
+        "count": 12,
+        "files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "source_first_route_rendered": true,
+        "advisory_short_check_rendered": true,
+        "target_equivalent_exit_ticket_candidate_rendered": true,
+        "route_contract_present": true,
+        "screenshot_set_complete": true,
+        "student_visible_internal_terms_screened": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-adoption-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of the merged candidate lesson-output proof",
+          "proof_required_to_close": "explicit owner product-proof verdict plus a later bounded adoption/Scale Gate preparation packet"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "paragraph_code": "8.1.4",
+      "product_review_scope": "merged_candidate_lesson_route_surface",
+      "lesson_goal": "Gebruik de Guarda/Orso Bianco-bron om dominante strategie, prisoners dilemma, zelfbinding en prijsprikkels uit te leggen.",
+      "source_refs": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+        "references/data/year2-target-foundation/canonical-source-assets.json#ijssalon-guarda-orso-bianco-context",
+        "references/data/year2-target-foundation/canonical-source-assets.json#lowest-price-guarantee-self-binding-source",
+        "references/data/year2-target-foundation/canonical-source-assets.json#derived-payoff-representation"
+      ],
+      "lesson_output": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/_paragraph-plan.md",
+        "index": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/index.html",
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+        "short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+        "exit_ticket": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+        "contract": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/route-contract.json"
+      },
+      "output_evidence": {
+        "base": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog",
+        "plan": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/_paragraph-plan.md",
+        "contract": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/route-contract.json",
+          "exists": true,
+          "bytes": 1391
+        },
+        "surfaces": {
+          "route": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+            "exists": true,
+            "bytes": 10964
+          },
+          "korte-check": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+            "exists": true,
+            "bytes": 12196
+          },
+          "exit-ticket": {
+            "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+            "exists": true,
+            "bytes": 12112
+          }
+        }
+      },
+      "screenshot_evidence": {
+        "count": 12,
+        "files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "source_first_route_rendered": true,
+        "advisory_short_check_rendered": true,
+        "target_equivalent_exit_ticket_candidate_rendered": true,
+        "route_contract_present": true,
+        "screenshot_set_complete": true,
+        "student_visible_internal_terms_screened": true,
+        "authority_boundary_preserved": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "product-route-adoption-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+          "does_not_block": "human review of the merged candidate lesson-output proof",
+          "proof_required_to_close": "explicit owner product-proof verdict plus a later bounded adoption/Scale Gate preparation packet"
+        }
+      ]
+    }
+  ],
+  "rendered_screenshot_proof": {
+    "status": "captured",
+    "screenshot_dir": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots",
+    "manifest_json": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshot-manifest.json",
+    "manifest_md": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshot-manifest.md",
+    "screenshot_count": 48,
+    "expected_count": 48,
+    "qa_page_paths_from_lesson_repo_root": [
+      "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html"
+    ],
+    "qa_command": "node scripts/qa-student-web-pages.js reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html <LESSON_REPO_ROOT>/year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+    "cases": [
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-light.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-light.png",
+        "paragraph": "5.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-light.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-light.png",
+        "paragraph": "5.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-light.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-dark.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-light.png",
+        "paragraph": "5.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-light.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-light.png",
+        "paragraph": "6.4.2",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-light.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-light.png",
+        "paragraph": "6.4.2",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-light.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-dark.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-light.png",
+        "paragraph": "6.4.2",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-light.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-light.png",
+        "paragraph": "7.4.1",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-light.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-light.png",
+        "paragraph": "7.4.1",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-light.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-dark.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-light.png",
+        "paragraph": "7.4.1",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-light.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-light.png",
+        "paragraph": "8.1.4",
+        "surface": "exit-ticket",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-light.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-light.png",
+        "paragraph": "8.1.4",
+        "surface": "korte-check",
+        "viewport": "mobile",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-light.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "desktop",
+        "theme": "light"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-dark.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "dark"
+      },
+      {
+        "file": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-light.png",
+        "paragraph": "8.1.4",
+        "surface": "route",
+        "viewport": "mobile",
+        "theme": "light"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding": "Merged four-target candidate lesson proof is complete enough for human product-proof review.",
+      "classification": "core_requirement_met",
+      "blocks": "none for human review of this packet",
+      "does_not_block": "product-proof human review of the merged candidate routes",
+      "proof_required_to_close": "Retain current merged-head checker output, screenshot manifest, and review-thread/readiness evidence on the PR."
+    },
+    {
+      "finding": "Product-route and student-use authority remains closed in this preparation packet.",
+      "classification": "scale_blocker",
+      "blocks": "product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use",
+      "does_not_block": "review of merged candidate route evidence",
+      "proof_required_to_close": "Separate explicit owner product-proof verdict and later bounded product-route/Scale Gate preparation work."
+    },
+    {
+      "finding": "This gate verifies candidate output only; it does not register routes into the product surface.",
+      "classification": "minor_carry_flag",
+      "blocks": "route adoption until a governed adoption lane exists",
+      "does_not_block": "human product-proof review of the candidate route bundle",
+      "proof_required_to_close": "A future adoption packet must name exact route registry changes, rollback, and product-use boundary."
+    }
+  ],
+  "prior_authority_claims": {
+    "cross_repo_lesson_candidate_output_created_for_review": true,
+    "all_four_owner_paragraphs_included": true,
+    "source_context_first_layout": true,
+    "advisory_short_checks_created": true,
+    "target_equivalent_exit_ticket_candidates_created": true,
+    "rendered_candidate_output_created": true,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "live_mtu_registry_mutated": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  },
+  "authority_claims": {
+    "product_proof_packet_prepared": true,
+    "merged_candidate_output_verified": true,
+    "rendered_route_proof_captured": true,
+    "source_first_layout_review_ready": true,
+    "target_equivalent_exit_ticket_review_ready": true,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "protected_mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  },
+  "recommended_next_action": "Human-review this product-proof packet. If accepted, open a later bounded product-route adoption preparation lane; keep CP-6, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use blocked until separately authorized."
+}
