@@ -151,6 +151,14 @@ Individual matrix states record success or failure without deciding the whole
 workflow. The trusted `main` summarizer is the final gate, validates the exact
 state-to-SHA mapping, and records workflow provenance for the run.
 
+If both bundle members are still draft but the controller readiness proof shows
+both are substantively ready at exact heads, run
+`npm.cmd run apply:bundle-readiness` before merge authorization. That operation
+generates member readiness decisions from the one controller decision, posts
+exact-head readiness comments for both PRs, re-fetches heads immediately before
+each `MARK_READY`, verifies the transitions afterward, and grants no merge
+authority on its own.
+
 Human approval for a paired bundle must be recorded with this marker:
 
 ```text

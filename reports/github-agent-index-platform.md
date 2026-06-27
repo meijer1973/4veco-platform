@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-27T11:10:13.787Z
+Generated: 2026-06-27T19:12:22.349Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/agents-md-entrypoint-cleanup-20260627`
-Source commit: `258652608666e4f421deabb729f75838dd35bdc7`
-Files indexed: 6348
+Source commit: `c70ee278cb3dbcc8d2d2ccf84f5c26908f59812d`
+Files indexed: 6458
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 607
+Count: 614
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -224,6 +224,7 @@ Count: 607
 - build-scripts/inspection/build-internal-overlay-trial-contract.js
 - build-scripts/inspection/build-international-overlay-architecture.js
 - build-scripts/inspection/build-international-quality-standards.js
+- build-scripts/inspection/build-local-expert-source-refresh-gate.js
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
@@ -236,6 +237,8 @@ Count: 607
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
+- build-scripts/inspection/check-local-expert-source-refresh-gate.js
+- build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.test.js
 - build-scripts/inspection/validate-inspection-evidence.js
@@ -335,6 +338,7 @@ Count: 607
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
+- build-scripts/references/build-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/build-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/build-y2-target-foundation-production-readiness-bundle-1.js
@@ -452,6 +456,7 @@ Count: 607
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
+- build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
@@ -525,6 +530,8 @@ Count: 607
 - build-scripts/reports/terms-coverage.js
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/apply-bundle-readiness-decision.js
+- build-scripts/review-gates/apply-bundle-readiness-decision.test.js
 - build-scripts/review-gates/apply-pr-readiness-decision.js
 - build-scripts/review-gates/authorized-pr-integration-workflow.test.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
@@ -779,7 +786,7 @@ Count: 25
 
 ## validators
 
-Count: 604
+Count: 624
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -788,6 +795,7 @@ Count: 604
 - archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-validation-log.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
 - archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
@@ -844,6 +852,8 @@ Count: 604
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
+- build-scripts/inspection/check-local-expert-source-refresh-gate.js
+- build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.test.js
 - build-scripts/inspection/validate-inspection-evidence.js
@@ -968,6 +978,7 @@ Count: 604
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
+- build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
@@ -1221,6 +1232,22 @@ Count: 604
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-desktop-light.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-dark.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-light.png
 - reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-validation-log.md
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
@@ -1388,7 +1415,7 @@ Count: 604
 
 ## references
 
-Count: 785
+Count: 807
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1473,6 +1500,27 @@ Count: 785
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/unknown-source-ids.sample.json
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/england-internal-overlay-trial-contract.sample.json
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/flanders-internal-overlay-trial-contract.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/all-belgium-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/compliance-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/individual-adjustment-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/learner-support-record-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/local-expert-substituted.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/localized-output.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-england-source-allowlist.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-source-condition.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/non-official-source.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/official-url-mismatch.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/personal-data.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/public-output.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/reasonable-adjustment-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/source-refresh-executed.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/student-facing-output.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-records-personal-data.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-sufficiency-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/teacher-school-output.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/whole-uk-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/england-source-refresh-gate-simulation.sample.json
+- references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/flanders-source-refresh-gate-simulation.sample.json
 - references/data/inspection-standards/fixtures/negative/extra-property.sample.json
 - references/data/inspection-standards/fixtures/negative/full-report-missing-category.sample.json
 - references/data/inspection-standards/fixtures/negative/invalid-category-id.sample.json
@@ -2134,6 +2182,7 @@ Count: 785
 - references/schemas/internal-overlay-trial-contract.schema.v1.json
 - references/schemas/international-jurisdiction-overlay.schema.json
 - references/schemas/international-jurisdiction-overlay.schema.v1.json
+- references/schemas/local-expert-source-refresh-gate.schema.v1.json
 - references/schemas/misconception.schema.json
 - references/schemas/operation-answer-skill-contract.schema.json
 - references/schemas/operation-candidates.schema.json
@@ -2178,7 +2227,7 @@ Count: 785
 
 ## reports
 
-Count: 4132
+Count: 4204
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2239,8 +2288,16 @@ Count: 4132
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -2285,12 +2342,16 @@ Count: 4132
 - reports/inspection-standards/england-internal-no-output-trial-simulation.md
 - reports/inspection-standards/england-internal-overlay-trial-contract.json
 - reports/inspection-standards/england-internal-overlay-trial-contract.md
+- reports/inspection-standards/england-source-refresh-gate-simulation.json
+- reports/inspection-standards/england-source-refresh-gate-simulation.md
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.md
 - reports/inspection-standards/flanders-internal-no-output-trial-simulation.json
 - reports/inspection-standards/flanders-internal-no-output-trial-simulation.md
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.json
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.md
+- reports/inspection-standards/flanders-source-refresh-gate-simulation.json
+- reports/inspection-standards/flanders-source-refresh-gate-simulation.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
@@ -2323,6 +2384,10 @@ Count: 4132
 - reports/inspection-standards/international-overlay-archetype-pilot.md
 - reports/inspection-standards/international-overlay-architecture-decision.json
 - reports/inspection-standards/international-overlay-architecture-decision.md
+- reports/inspection-standards/local-expert-source-refresh-gate-decision.json
+- reports/inspection-standards/local-expert-source-refresh-gate-decision.md
+- reports/inspection-standards/local-expert-source-refresh-gate-plan.json
+- reports/inspection-standards/local-expert-source-refresh-gate-plan.md
 - reports/inspection-standards/selected-jurisdiction-deepening-decision.json
 - reports/inspection-standards/selected-jurisdiction-deepening-decision.md
 - reports/inspection-standards/selected-jurisdiction-readiness-comparison.json
@@ -3992,6 +4057,61 @@ Count: 4132
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-desktop-light.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-dark.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/8-1-4-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/rendered-product-proof.html
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshot-manifest.json
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshot-manifest.md
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-dark.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-light.png
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.md
@@ -4039,6 +4159,7 @@ Count: 4132
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
+- reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-ci-correction-log.md
 - reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-implementation-correction-log.md
 - reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-implementation-review-round1.md
 - reports/sprints/AGENTS-MD-ENTRYPOINT-CLEANUP-1-implementation-review-round2.md
@@ -6333,7 +6454,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 646
+Count: 654
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6386,6 +6507,11 @@ Count: 646
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-teacher-economics-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-closure-record.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-correction-log.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-specialist-reviews.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-correction-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-final-lead-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-lead-architecture-review.md
@@ -6659,9 +6785,11 @@ Count: 646
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - docs/inspection-standards/chapter-1-3-source-traceability.md
+- docs/inspection-standards/england-local-expert-source-gate.md
 - docs/inspection-standards/england-overlay-deepening.md
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
+- docs/inspection-standards/flanders-local-expert-source-gate.md
 - docs/inspection-standards/flanders-overlay-deepening.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
 - docs/inspection-standards/internal-overlay-prototype-planning-contract.md
@@ -6669,6 +6797,7 @@ Count: 646
 - docs/inspection-standards/international-overlay-architecture.md
 - docs/inspection-standards/international-overlay-descriptor-contract.md
 - docs/inspection-standards/international-overlay-governance-rules.md
+- docs/inspection-standards/local-expert-source-refresh-gate-contract.md
 - docs/inspection-standards/nl-vo-evidence-model.md
 - docs/inspection-standards/report-only-generator-plan.md
 - docs/inspection-standards/report-only-schema-design.md
