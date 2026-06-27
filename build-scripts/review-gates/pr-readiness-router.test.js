@@ -170,6 +170,22 @@ describe('pr-readiness-router', () => {
     expect(decision.allowed_transition).toBe('MARK_READY');
   });
 
+  test('base advancement does not block the draft-ready transition', () => {
+    const fixture = readFixture('l4-router-self-human.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      reviewed_pr: {
+        ...fixture.reviewed_pr,
+        merge_state: 'BEHIND',
+        mergeable: true,
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.allowed_transition).toBe('MARK_READY');
+    expect(decision.reason_codes).not.toContain('merge_readiness_blocked');
+  });
+
   test('does not allow a transition for revise, batch, or pause routes', () => {
     for (const name of ['l3-thin-batch.json', 'missing-stale-ci-revise.json', 'pause-escalate-blocker.json']) {
       const decision = classifyPrReadiness(readFixture(name));

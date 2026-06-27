@@ -46,6 +46,12 @@ draft-ready transition in one operation.
 | `READY_FOR_HUMAN_REVIEW` | Human review is required and the PR/bundle is substantial or a consequential exception. | Mark ready and present one consolidated human handoff. Merge only after an explicit owner merge decision tied to the reviewed payload head and decision scope. |
 | `PAUSE_ESCALATE` | A genuine blocker cannot safely be resolved by implementation, testing, specialist review, batching, or conservative classification. | Pause and escalate the blocker. |
 
+`BEHIND` from normal base advancement does not by itself block
+`allowed_transition: MARK_READY` when current payload-head evidence is green.
+Branch protection and the serialized integration lane handle the required base
+refresh before merge. `DIRTY`, conflicting, or unauthorized blocked states still
+route to revision.
+
 ## Authority and consequence axis
 
 Use the L0-L4 ladder from `docs/review/pr-throughput-policy.md`. Highest risk

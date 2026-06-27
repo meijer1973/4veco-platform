@@ -742,7 +742,6 @@ function collectRevisionReasons(evidence) {
     evidence.reviewed_pr.mergeable === false ||
     /^CONFLICTING$/i.test(String(evidence.reviewed_pr.mergeable || '')) ||
     /^DIRTY$/i.test(mergeState) ||
-    /^BEHIND$/i.test(mergeState) ||
     (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock)
   ) {
     reasons.push('merge_readiness_blocked');
