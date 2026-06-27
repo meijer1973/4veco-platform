@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-27T19:12:22.349Z
+Generated: 2026-06-28T07:15:00.591Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/agents-md-entrypoint-cleanup-20260627`
-Source commit: `c70ee278cb3dbcc8d2d2ccf84f5c26908f59812d`
-Files indexed: 6458
+Source branch: `codex/mtu-h7-operation-registry-governance-20260627`
+Source commit: `7fd95da2d516fe4e243fe6a5c414f4a342201dae`
+Files indexed: 6517
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -137,7 +137,7 @@ Count: 88
 
 ## build scripts
 
-Count: 614
+Count: 621
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -217,6 +217,7 @@ Count: 614
 - build-scripts/exemplars/check-reasoning-golden-exemplars.js
 - build-scripts/exemplars/generate-reasoning-golden-family-gallery.js
 - build-scripts/exemplars/reasoning-golden-family-data.js
+- build-scripts/inspection/build-bounded-source-refresh-packet.js
 - build-scripts/inspection/build-dqs-closure-candidate.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
 - build-scripts/inspection/build-internal-no-output-trial-simulation.js
@@ -226,6 +227,8 @@ Count: 614
 - build-scripts/inspection/build-international-quality-standards.js
 - build-scripts/inspection/build-local-expert-source-refresh-gate.js
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
+- build-scripts/inspection/check-bounded-source-refresh-packet.js
+- build-scripts/inspection/check-bounded-source-refresh-packet.test.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/check-internal-no-output-trial-simulation.js
@@ -311,6 +314,7 @@ Count: 614
 - build-scripts/references/build-mtu-h7-execution-benchmark-bundle-1.js
 - build-scripts/references/build-mtu-h7-execution-protocol-views-1.js
 - build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
+- build-scripts/references/build-mtu-h7-operation-registry-governance-bundle-1.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -339,6 +343,7 @@ Count: 614
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
+- build-scripts/references/build-y2-four-target-product-route-adoption-prep-1.js
 - build-scripts/references/build-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/build-y2-source-reconstruction-and-mtu-proof-1.js
 - build-scripts/references/build-y2-target-foundation-production-readiness-bundle-1.js
@@ -412,6 +417,7 @@ Count: 614
 - build-scripts/references/check-mtu-h7-execution-benchmark-bundle-1.js
 - build-scripts/references/check-mtu-h7-execution-protocol-views-1.js
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
+- build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -457,6 +463,7 @@ Count: 614
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
+- build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
 - build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
@@ -786,10 +793,11 @@ Count: 25
 
 ## validators
 
-Count: 624
+Count: 629
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
+- archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-validation-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1A-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-validation-log.md
@@ -841,6 +849,8 @@ Count: 624
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/exemplars/check-reasoning-golden-exemplars.js
+- build-scripts/inspection/check-bounded-source-refresh-packet.js
+- build-scripts/inspection/check-bounded-source-refresh-packet.test.js
 - build-scripts/inspection/check-dqs-closure-candidate.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/check-internal-no-output-trial-simulation.js
@@ -934,6 +944,7 @@ Count: 624
 - build-scripts/references/check-mtu-h7-execution-benchmark-bundle-1.js
 - build-scripts/references/check-mtu-h7-execution-protocol-views-1.js
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
+- build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -979,6 +990,7 @@ Count: 624
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
+- build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
 - build-scripts/references/check-y2-governed-support-closure-bundle-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/check-y2-source-reconstruction-and-mtu-proof-1.js
@@ -1415,7 +1427,7 @@ Count: 624
 
 ## references
 
-Count: 807
+Count: 826
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1455,6 +1467,24 @@ Count: 807
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/all-belgium-claim.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/compliance-claim.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/expert-legal-advice.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/hidden-discovery.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/local-expert-contacted.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/local-expert-substituted.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/localized-output.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/missing-refresh-state.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/missing-source-inventory.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/non-official-source.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/official-url-mismatch.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/personal-data.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/source-refresh-executed.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/support-sufficiency-claim.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/whole-uk-claim.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/positive/bounded-source-refresh-packet-decision.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/positive/england-bounded-source-refresh-simulation.sample.json
+- references/data/inspection-standards/fixtures/bounded-source-refresh-packet/positive/flanders-bounded-source-refresh-simulation.sample.json
 - references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-all-belgium-claim.sample.json
 - references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-aqa-approval-claim.sample.json
 - references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/negative/closure-legal-sufficiency-ready.sample.json
@@ -2170,6 +2200,7 @@ Count: 807
 - references/reference-team-roadmap.md
 - references/schemas/alignment-edge.schema.json
 - references/schemas/answer-skill-candidates.schema.json
+- references/schemas/bounded-source-refresh-packet.schema.v1.json
 - references/schemas/claim.schema.json
 - references/schemas/evidence-anchor.schema.json
 - references/schemas/exam-ingestion.schema.json
@@ -2227,7 +2258,7 @@ Count: 807
 
 ## reports
 
-Count: 4204
+Count: 4227
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2288,20 +2319,16 @@ Count: 4204
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.md
+- reports/inspection-standards/bounded-source-refresh-packet-decision.json
+- reports/inspection-standards/bounded-source-refresh-packet-decision.md
+- reports/inspection-standards/bounded-source-refresh-packet-plan.json
+- reports/inspection-standards/bounded-source-refresh-packet-plan.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
 - reports/inspection-standards/chapter-1-2-diagnostic-report.md
 - reports/inspection-standards/chapter-1-2-proof-support-remediation.json
@@ -2338,6 +2365,8 @@ Count: 4204
 - reports/inspection-standards/dutch-school-evidence-pack-candidate.md
 - reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.json
 - reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.md
+- reports/inspection-standards/england-bounded-source-refresh-simulation.json
+- reports/inspection-standards/england-bounded-source-refresh-simulation.md
 - reports/inspection-standards/england-internal-no-output-trial-simulation.json
 - reports/inspection-standards/england-internal-no-output-trial-simulation.md
 - reports/inspection-standards/england-internal-overlay-trial-contract.json
@@ -2346,6 +2375,8 @@ Count: 4204
 - reports/inspection-standards/england-source-refresh-gate-simulation.md
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json
 - reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.md
+- reports/inspection-standards/flanders-bounded-source-refresh-simulation.json
+- reports/inspection-standards/flanders-bounded-source-refresh-simulation.md
 - reports/inspection-standards/flanders-internal-no-output-trial-simulation.json
 - reports/inspection-standards/flanders-internal-no-output-trial-simulation.md
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.json
@@ -2635,6 +2666,8 @@ Count: 4204
 - reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.md
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.md
+- reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.json
+- reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.md
 - reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-correction-05-05.png
 - reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-prompt-02-02.png
 - reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q09-correction-07-07.png
@@ -2684,6 +2717,8 @@ Count: 4204
 - reports/mtu-hardening/mtu-h7-execution-protocol-views-1.json
 - reports/mtu-hardening/mtu-h7-execution-protocol-views-1.md
 - reports/mtu-hardening/mtu-h7-execution-report-1.json
+- reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json
+- reports/mtu-hardening/mtu-h7-governance-quality-log-1.md
 - reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q12-correction-10-10.png
 - reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-1-o-q12-prompt-05-5.png
 - reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/ha-1022-a-25-2-o-q09-correction-07-07.png
@@ -2706,6 +2741,14 @@ Count: 4204
 - reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q28-prompt-13-13.png
 - reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json
 - reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.md
+- reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.json
+- reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.md
+- reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json
+- reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json
+- reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.md
+- reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json
+- reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.md
+- reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
@@ -3688,6 +3731,11 @@ Count: 4204
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review-template.md
+- reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md
+- reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.json
+- reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json
@@ -4112,6 +4160,12 @@ Count: 4204
 - reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-light.png
 - reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-dark.png
 - reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-light.png
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/read-only-subagent-reviews.md
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/rendered-adoption-map.html
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/route-adoption-prep-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/route-adoption-prep-packet.md
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/answer-skill-equivalent-support.json
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.md
@@ -6454,7 +6508,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 654
+Count: 663
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6477,6 +6531,11 @@ Count: 654
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-planning-review.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-specialist-gate-results.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-sprint-plan.md
+- archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-closure-record.md
+- archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-correction-log.md
+- archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-specialist-reviews.md
+- archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-sprint-plan.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-authorisation-note.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-closure-log.md
 - archive/sprints/GOAL-IQS-FOUNDATION-1/GOAL-IQS-FOUNDATION-1-correction-log.md
@@ -6784,11 +6843,14 @@ Count: 654
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
+- docs/inspection-standards/bounded-source-refresh-packet-contract.md
 - docs/inspection-standards/chapter-1-3-source-traceability.md
+- docs/inspection-standards/england-bounded-source-refresh-packet.md
 - docs/inspection-standards/england-local-expert-source-gate.md
 - docs/inspection-standards/england-overlay-deepening.md
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
+- docs/inspection-standards/flanders-bounded-source-refresh-packet.md
 - docs/inspection-standards/flanders-local-expert-source-gate.md
 - docs/inspection-standards/flanders-overlay-deepening.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
@@ -6797,6 +6859,7 @@ Count: 654
 - docs/inspection-standards/international-overlay-architecture.md
 - docs/inspection-standards/international-overlay-descriptor-contract.md
 - docs/inspection-standards/international-overlay-governance-rules.md
+- docs/inspection-standards/local-expert-review-request-template.md
 - docs/inspection-standards/local-expert-source-refresh-gate-contract.md
 - docs/inspection-standards/nl-vo-evidence-model.md
 - docs/inspection-standards/report-only-generator-plan.md

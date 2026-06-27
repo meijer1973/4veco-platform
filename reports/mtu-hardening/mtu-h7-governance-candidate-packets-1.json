@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-OPERATION-REGISTRY-GOVERNANCE-AND-HOLDOUT-ADJUDICATION-BUNDLE-1",
+  "packet_id": "mtu-h7-governance-candidate-packets-1",
+  "review_standard": "REV-STD-1",
+  "status": "evidence_only_not_candidate_writes",
+  "generated_at": "2026-06-28T07:14:59.585Z",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "candidates": [
+    {
+      "candidate_packet_id": "H7-CAND-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-ha23-2-q15-net-ratio-nivellering"
+      ],
+      "affected_records": [
+        "ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "route": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "problem_statement": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+      "current_registry_fit": [
+        "H08 is mapped because the official correction proves income differences narrow, but the registry label says denivellering while its kern says tax changes shrink differences. That tension is canonical registry governance, not a fixture repair."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+          "unit_id": "A15",
+          "unit_name": "Prijselasticiteit van de vraag",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "ha-1022-a-23-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 7,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "do_not_close_from_existing_H08_without_human_canonical_decision",
+      "proof_required_to_close": [
+        "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q15-denivellering-label-reversal",
+          "expected_failure_defect_class": "canonical_mtu_governance_need",
+          "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
+          "guard": "A smaller high/low net-income ratio must not silently close as denivellering."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    },
+    {
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-ha24-1-q12-snel-residual-payoff"
+      ],
+      "affected_records": [
+        "ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "problem_statement": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+      "current_registry_fit": [
+        "A81 and A96 cover source use and calculational answer form; F12 must stay forbidden because the official operation is direct residual payoff arithmetic inside an ultimatum setting, not Nash-in-matrix selection."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+          "unit_id": "F12",
+          "unit_name": "Nash-evenwicht in pay-off matrix",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+          "source_locator": {
+            "exam": "ha-1022-a-24-1-o",
+            "opgave_num": 2,
+            "question_num": 12,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "prompt_page_start": 5,
+            "prompt_page_end": 5,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "proof_required_to_close": [
+        "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q12-f12-overtrigger-residual",
+          "expected_failure_defect_class": "over_trigger",
+          "mutation": "Map F12 to the residual-payoff operation.",
+          "guard": "Direct payoff arithmetic must not be closed by Nash pay-off matrix coverage."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    },
+    {
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-ha24-1-q12-sprinter-margin-payoff"
+      ],
+      "affected_records": [
+        "ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "problem_statement": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+      "current_registry_fit": [
+        "A81 and A96 cover source use and answer form; no current canonical operation captures accepted price less marginal cost inside the ultimatum-game payoff table."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+          "unit_id": "F12",
+          "unit_name": "Nash-evenwicht in pay-off matrix",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+          "source_locator": {
+            "exam": "ha-1022-a-24-1-o",
+            "opgave_num": 2,
+            "question_num": 12,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "prompt_page_start": 5,
+            "prompt_page_end": 5,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "proof_required_to_close": [
+        "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q12-cost-omitted-margin",
+          "expected_failure_defect_class": "operation_registry_need",
+          "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
+          "guard": "The margin-payoff operation must retain the marginal-cost subtraction."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    },
+    {
+      "candidate_packet_id": "H7-CAND-OP-GAME-TREE-NASH-BACKWARD-COMPARISON",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-vw23-2-q20-game-tree-nash"
+      ],
+      "affected_records": [
+        "vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "problem_statement": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+      "current_registry_fit": [
+        "F12 names and procedures Nash equilibrium in a pay-off matrix. The official q20 evidence uses a sequential game tree and payoff comparison, so F12 is only a partial concept anchor and must not be the whole closure mechanism."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-vw23-2-q20-game-tree-nash",
+          "unit_id": "A15",
+          "unit_name": "Prijselasticiteit van de vraag",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        },
+        {
+          "operation_id": "h7-vw23-2-q20-game-tree-nash",
+          "unit_id": "F04",
+          "unit_name": "Dominante strategieën in pay-off matrix",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+          "source_locator": {
+            "exam": "vw-1022-a-23-2-o",
+            "opgave_num": 4,
+            "question_num": 20,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+            "prompt_page_start": 9,
+            "prompt_page_end": 10,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+            "correction_page_start": 11,
+            "correction_page_end": 11,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "proof_required_to_close": [
+        "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q20-matrix-shortcut",
+          "expected_failure_defect_class": "operation_registry_need",
+          "mutation": "Close q20 using only F12 matrix procedure text.",
+          "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    },
+    {
+      "candidate_packet_id": "H7-CAND-OP-FIXED-VARIABLE-CURRENCY-INSURANCE-COST-BENEFIT",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-vw24-1-q17-insurance-cost-benefit"
+      ],
+      "affected_records": [
+        "vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "problem_statement": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+      "current_registry_fit": [
+        "G12 covers expected-damage premium calculation. The official q17 operation combines fixed and monthly currency-insurance costs and subtracts them from avoided exchange-rate loss, so the current procedure is only a partial fit."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+          "unit_id": "A15",
+          "unit_name": "Prijselasticiteit van de vraag",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+          "source_locator": {
+            "exam": "vw-1022-a-24-1-o",
+            "opgave_num": 3,
+            "question_num": 17,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+            "correction_page_start": 11,
+            "correction_page_end": 11,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "proof_required_to_close": [
+        "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q17-premium-month-factor-omitted",
+          "expected_failure_defect_class": "procedure_fit_gap",
+          "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
+          "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    },
+    {
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-vw24-2-q15-ga-mb-first-adjustment",
+        "h7-vw24-2-q15-ga-mb-second-adjustment-and-table"
+      ],
+      "affected_records": [
+        "vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "problem_statement": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule. Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+      "current_registry_fit": [
+        "I07 covers IS-MB-GA analysis broadly and A42 covers generic graph shifts. The official q15 operation requires a period-specific GA1/MB1 sequence from expected-minus-realized inflation and real-rate reduction.",
+        "I07 and A42 are partial anchors, but the official second operation requires GA2/MB2 plus final r and inflation table completion."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+          "unit_id": "A45",
+          "unit_name": "P-Q grafiek tekenen uit tabel",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        },
+        {
+          "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+          "unit_id": "A45",
+          "unit_name": "P-Q grafiek tekenen uit tabel",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        },
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "proof_required_to_close": [
+        "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+        "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q15-macro-one-step-only",
+          "expected_failure_defect_class": "procedure_fit_gap",
+          "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
+          "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU."
+        },
+        {
+          "fixture_id": "h7-governance-negative-q15-final-r-pi-omitted",
+          "expected_failure_defect_class": "procedure_fit_gap",
+          "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
+          "guard": "The graph-and-table operation must not close from graph movement alone."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    },
+    {
+      "candidate_packet_id": "H7-CAND-ANSWER-FORM-GO-MO-SUBSIDY-LINE-DRAWING",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+        "h7-vw25-2-q4-mo-line-with-consumer-subsidy"
+      ],
+      "affected_records": [
+        "vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "route": "READY_FOR_HUMAN_H7_CLOSURE_REVIEW",
+      "problem_statement": "Human may approve a reviewed-equivalent closure rule for this specific GO line operation; no canonical mutation is required in this packet. Human may approve a reviewed-equivalent closure rule for this specific MO line operation; no canonical mutation is required in this packet.",
+      "current_registry_fit": [
+        "A27, A42, A40, A89, and A81 jointly cover subsidy analysis, graph shifting, answer-form drawing, GO recognition, and source use. The gap is whether this combination is accepted as the specific GO line drawing answer-form for a consumer subsidy.",
+        "A27, A42, A40, A90, and A81 jointly cover subsidy analysis, graph shifting, drawing answer form, MO from linear GO, and source use. The gap is whether this combination is accepted as the specific MO line drawing answer-form for a consumer subsidy."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+          "unit_id": "A15",
+          "unit_name": "Prijselasticiteit van de vraag",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        },
+        {
+          "operation_id": "h7-vw25-2-q4-mo-line-with-consumer-subsidy",
+          "unit_id": "A15",
+          "unit_name": "Prijselasticiteit van de vraag",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+          "source_locator": {
+            "exam": "vw-1022-a-25-2-o",
+            "opgave_num": 1,
+            "question_num": 4,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+            "prompt_page_start": 3,
+            "prompt_page_end": 3,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+            "correction_page_start": 7,
+            "correction_page_end": 7,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        },
+        {
+          "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+          "source_locator": {
+            "exam": "vw-1022-a-25-2-o",
+            "opgave_num": 1,
+            "question_num": 4,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+            "prompt_page_start": 3,
+            "prompt_page_end": 3,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+            "correction_page_start": 7,
+            "correction_page_end": 7,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "reviewed_equivalent_candidate_prepared_not_applied",
+      "proof_required_to_close": [
+        "Human may approve a reviewed-equivalent closure rule for this specific GO line operation; no canonical mutation is required in this packet.",
+        "Human may approve a reviewed-equivalent closure rule for this specific MO line operation; no canonical mutation is required in this packet."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q4-only-one-revenue-line-shifted",
+          "expected_failure_defect_class": "answer_form_gap",
+          "mutation": "Shift GO only and omit the corresponding MO relationship.",
+          "guard": "GO and MO line drawing must not close when the paired line logic is incomplete."
+        },
+        {
+          "fixture_id": "h7-governance-negative-q4-mo-not-shifted-with-go",
+          "expected_failure_defect_class": "answer_form_gap",
+          "mutation": "Move GO correctly but leave MO in its original position.",
+          "guard": "MO must shift consistently with the subsidy-adjusted GO line."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    },
+    {
+      "candidate_packet_id": "H7-CAND-GRAPH-TOTAL-SUBSIDY-SHADING-MULTI-ACCEPTED",
+      "status": "governance_evidence_only_not_candidate_write",
+      "authority_flags": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "authored_target_exercise_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "unit_update_authorized": false,
+        "unit_split_authorized": false,
+        "unit_merge_authorized": false,
+        "unit_deprecation_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "candidate_storage_creation_authorized": false,
+        "candidate_writes_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "diagnostics_authorized": false,
+        "adaptive_routing_authorized": false,
+        "mastery_authorized": false,
+        "sequencing_authorized": false,
+        "student_facing_ai_authorized": false,
+        "summative_use_authorized": false,
+        "pv_projection_authorized": false,
+        "pv_machine_promotion_authorized": false,
+        "student_product_use_authorized": false,
+        "product_route_readiness_claimed": false,
+        "scale_gate_1_authorized": false
+      },
+      "affected_operations": [
+        "h7-vw25-2-q5-total-subsidy-shading"
+      ],
+      "affected_records": [
+        "vw-1022-a-25-2-o:opgave-1:question-5"
+      ],
+      "route": "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE",
+      "problem_statement": "Human graph-source reviewer must accept both official shading variants or define the exact accepted graph geometry before H7 closure.",
+      "current_registry_fit": [
+        "A27, A40, A58, and A81 cover subsidy analysis, graph shading, subsidy expenditure, and source use. The official correction is graph-only and permits two correct shaded rectangles, so closure needs explicit visual-source adjudication."
+      ],
+      "required_forbidden_mtu_guards": [
+        {
+          "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+          "unit_id": "A15",
+          "unit_name": "Prijselasticiteit van de vraag",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        },
+        {
+          "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+          "unit_id": "A45",
+          "unit_name": "P-Q grafiek tekenen uit tabel",
+          "guard_reason": "Expected forbidden MTU must remain an over-trigger guard."
+        }
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-5"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+          "source_locator": {
+            "exam": "vw-1022-a-25-2-o",
+            "opgave_num": 1,
+            "question_num": 5,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+            "prompt_page_start": 3,
+            "prompt_page_end": 3,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+            "correction_page_start": 7,
+            "correction_page_end": 7,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proposed_non_mutating_decision": "source_graph_adjudication_prepared_not_applied",
+      "proof_required_to_close": [
+        "Human graph-source reviewer must accept both official shading variants or define the exact accepted graph geometry before H7 closure."
+      ],
+      "negative_regression_fixtures": [
+        {
+          "fixture_id": "h7-governance-negative-q5-dwl-instead-of-total-subsidy",
+          "expected_failure_defect_class": "evidence_gap",
+          "mutation": "Accept a deadweight-loss triangle or a single non-official area as total subsidy spending.",
+          "guard": "Total subsidy shading must stay distinct from welfare-loss shading and must preserve the two official correct examples."
+        }
+      ],
+      "prohibited_actions": [
+        "Do not mutate references/machine/* in this packet.",
+        "Do not write canonical MTU or operation-registry candidates from this packet.",
+        "Do not mark H7 full closure, product route, Scale Gate, diagnostics, mastery, PV, or student/product use ready from this packet."
+      ]
+    }
+  ]
+}

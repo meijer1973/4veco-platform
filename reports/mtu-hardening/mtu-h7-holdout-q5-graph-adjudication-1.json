@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-OPERATION-REGISTRY-GOVERNANCE-AND-HOLDOUT-ADJUDICATION-BUNDLE-1",
+  "adjudication_id": "mtu-h7-holdout-q5-graph-adjudication-1",
+  "review_standard": "REV-STD-1",
+  "status": "graph_source_adjudication_prepared_not_applied",
+  "generated_at": "2026-06-28T07:14:59.586Z",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+  "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+  "split": "locked_holdout",
+  "question_word": "arceer",
+  "official_answer_characterization": [
+    "The correction model is graph-only for the arceer answer form.",
+    "The correction page displays two correct examples of the shaded total-subsidy area.",
+    "Both examples shade a rectangle bounded by the subsidy wedge between MK and MK-prime over an accepted output interval.",
+    "The correction model says only 0 or 2 score points are awarded, so partial/shapeless closure is not authorized."
+  ],
+  "source_evidence": {
+    "source_locator": {
+      "exam": "vw-1022-a-25-2-o",
+      "opgave_num": 1,
+      "question_num": 5,
+      "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+      "prompt_page_start": 3,
+      "prompt_page_end": 3,
+      "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+      "correction_page_start": 7,
+      "correction_page_end": 7,
+      "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+    },
+    "prompt_pages": [
+      {
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "source_pdf_sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+        "page_number": 3,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-prompt-03-03.png",
+        "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+      }
+    ],
+    "correction_pages": [
+      {
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "source_pdf_sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+        "page_number": 7,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-correction-07-07.png",
+        "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+      }
+    ],
+    "evidence_refs": [
+      "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-5"
+    ]
+  },
+  "current_mtu_fit": [
+    {
+      "id": "A27",
+      "name": "Subsidie analyseren",
+      "kern": "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel.",
+      "mastery_target": "apply",
+      "procedure": [
+        "Vervang in de aanbodfunctie P door (P + s) — de producent ontvangt meer door de subsidie.",
+        "Werk de nieuwe aanbodfunctie uit (beide termen vermenigvuldigen).",
+        "Stel de nieuwe Qa gelijk aan Qv en los op naar P*_nieuw en Q*_nieuw (zoals in A06).",
+        "Bereken de totale subsidiekosten = s × Q*_nieuw.",
+        "Analyseer: consumentenprijs daalt, producentenprijs (P + s) stijgt; samen is het verschil de subsidie."
+      ]
+    },
+    {
+      "id": "A40",
+      "name": "Welvaartsgebied op P–Q diagram arceren",
+      "kern": "Identificeer en arceer de juiste welvaartsregio op een P–Q diagram: consumentensurplus, producentensurplus, belastingopbrengst-rechthoek, welvaartsverlies-driehoek, subsidie-rechthoek, monopoliewinst-rechthoek, of tarief-DWL.",
+      "mastery_target": "apply",
+      "procedure": [
+        "Identificeer welke grootheid gevraagd wordt (CS, PS, TS, DWL, belastingopbrengst, subsidiekosten, monopoliewinst, Harberger-driehoek).",
+        "Lokaliseer de grenzen: welke curve zit boven, welke onder, op welke Q-interval.",
+        "Teken de gesloten figuur met duidelijk gemarkeerde hoekpunten en label het gebied (CS / PS / DWL / ...).",
+        "Controleer: past de figuur bij de definitie? (CS ligt tussen vraag en prijs; PS tussen prijs en aanbod; DWL tussen Q_oud en Q_nieuw)."
+      ]
+    },
+    {
+      "id": "A58",
+      "name": "Subsidie-uitgaven berekenen",
+      "kern": "Bereken totale subsidie-uitgaven als subsidie per eenheid maal de nieuwe verhandelde hoeveelheid.",
+      "mastery_target": "apply",
+      "procedure": [
+        "Bepaal de subsidie per eenheid.",
+        "Bepaal de nieuwe verhandelde hoeveelheid.",
+        "Vermenigvuldig subsidie per eenheid met Q nieuw.",
+        "Noteer de totale overheidsuitgaven met juiste eenheid."
+      ]
+    },
+    {
+      "id": "A81",
+      "name": "Bron gebruiken in een antwoord",
+      "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+      "mastery_target": "apply",
+      "procedure": [
+        "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+        "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+        "Zeg wat die observatie economisch betekent.",
+        "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+        "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+      ]
+    }
+  ],
+  "forbidden_over_trigger_guards": [
+    {
+      "id": "A15",
+      "name": "Prijselasticiteit van de vraag",
+      "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+      "mastery_target": "apply",
+      "procedure": [
+        "Noteer de oude en nieuwe waarden van P en Q.",
+        "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+        "Bereken Ev = %ΔQv / %ΔP.",
+        "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+        "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+      ]
+    },
+    {
+      "id": "A45",
+      "name": "P-Q grafiek tekenen uit tabel",
+      "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.",
+      "mastery_target": "apply",
+      "procedure": [
+        "Zet prijs op de verticale as en hoeveelheid op de horizontale as.",
+        "Kies een passende schaal op beide assen.",
+        "Plaats elk punt uit de tabel in de grafiek.",
+        "Verbind de punten alleen als de context een lijn of curve ondersteunt."
+      ]
+    }
+  ],
+  "closure_decision": "source_graph_adjudication_prepared_not_applied",
+  "proof_required_to_close": "Human graph-source reviewer must accept both official shading variants or define the exact accepted graph geometry before H7 closure.",
+  "negative_regression_fixture": {
+    "fixture_id": "h7-governance-negative-q5-dwl-instead-of-total-subsidy",
+    "expected_failure_defect_class": "evidence_gap",
+    "mutation": "Accept a deadweight-loss triangle or a single non-official area as total subsidy spending.",
+    "guard": "Total subsidy shading must stay distinct from welfare-loss shading and must preserve the two official correct examples."
+  }
+}
