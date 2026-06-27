@@ -336,12 +336,14 @@ function positiveInteger(value) {
 
 function normalizeBundleMember(member) {
   const item = member || {};
+  const headSha = item.head_sha || item.headRefOid || null;
   return {
     ...item,
     repository: item.repository || item.repo || null,
     pr_number: positiveInteger(item.pr_number || item.number),
     base: item.base || item.baseRefName || item.base_branch || null,
-    head_sha: item.head_sha || item.headRefOid || null,
+    head_sha: headSha,
+    integration_head_sha: item.integration_head_sha || item.integrationHeadSha || headSha,
     reviewed_payload_head_sha: item.reviewed_payload_head_sha || item.payload_head_sha || null,
   };
 }
@@ -357,6 +359,20 @@ function bundleMemberComplete(member, options = {}) {
 }
 
 function bundleMemberHeadMatches(member) {
+  const integrationHead = member && (member.integration_head_sha || member.head_sha);
+  const reviewedHead = member && member.reviewed_payload_head_sha;
+  if (
+    member &&
+    SHA_PATTERN.test(String(member.head_sha || '')) &&
+    SHA_PATTERN.test(String(integrationHead || '')) &&
+    member.head_sha === integrationHead &&
+    member.authorization_inherited === true &&
+    SHA_PATTERN.test(String(reviewedHead || '')) &&
+    reviewedHead !== integrationHead
+  ) {
+    const failures = asArray(member.failures || (member.lineage && member.lineage.failures));
+    return failures.length === 0;
+  }
   return Boolean(
     member &&
       SHA_PATTERN.test(String(member.head_sha || '')) &&
@@ -457,10 +473,11 @@ function bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs) {
   const allMembers = [controller, currentMember, ...pairedPrs].filter(Boolean);
   const platformMember = findBundleMemberByRepo(allMembers, repoIsPlatform);
   const lessonMember = findBundleMemberByRepo(allMembers, repoIsLesson);
+  const candidateHead = (member) => member && (member.integration_head_sha || member.head_sha || member.reviewed_payload_head_sha);
   return {
     platform_base_sha: explicit.platform_base_sha || explicit.platformBaseSha || raw.platform_base_sha || raw.platformBaseSha || null,
     platform_candidate_sha:
-      (platformMember && platformMember.reviewed_payload_head_sha) ||
+      candidateHead(platformMember) ||
       explicit.platform_candidate_sha ||
       explicit.platformCandidateSha ||
       raw.platform_candidate_sha ||
@@ -468,7 +485,7 @@ function bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs) {
       null,
     lesson_base_sha: explicit.lesson_base_sha || explicit.lessonBaseSha || raw.lesson_base_sha || raw.lessonBaseSha || null,
     lesson_candidate_sha:
-      (lessonMember && lessonMember.reviewed_payload_head_sha) ||
+      candidateHead(lessonMember) ||
       explicit.lesson_candidate_sha ||
       explicit.lessonCandidateSha ||
       raw.lesson_candidate_sha ||
@@ -620,7 +637,11 @@ function bundleSafetyProof(proof, evidence) {
     if (controller.pr_number && Number(controller.pr_number) !== Number(evidence.reviewed_pr.number)) {
       failures.push('bundle_controller_pr_mismatch');
     }
-    if (controller.reviewed_payload_head_sha && controller.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha) {
+    if (
+      controller.reviewed_payload_head_sha &&
+      controller.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha &&
+      !bundleMemberHeadMatches({ ...controller, head_sha: evidence.reviewed_pr.head_sha, integration_head_sha: evidence.reviewed_pr.head_sha })
+    ) {
       failures.push('bundle_controller_head_mismatch');
     }
   } else {
@@ -632,7 +653,7 @@ function bundleSafetyProof(proof, evidence) {
       if (Number(currentMember.pr_number) !== Number(evidence.reviewed_pr.number)) failures.push('bundle_member_pr_mismatch');
       if (
         currentMember.head_sha !== evidence.reviewed_pr.head_sha ||
-        currentMember.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha
+        !bundleMemberHeadMatches({ ...currentMember, head_sha: evidence.reviewed_pr.head_sha, integration_head_sha: evidence.reviewed_pr.head_sha })
       ) {
         failures.push('bundle_member_head_mismatch');
       }
@@ -644,7 +665,7 @@ function bundleSafetyProof(proof, evidence) {
     const coordinatedProof = coordinatedMarkReadyMemberProof(readinessOperation, paired);
     failures.push(...coordinatedProof.failures);
     if (paired && !paired.base) failures.push('paired_pr_base_missing');
-    if (paired && paired.reviewed_payload_head_sha && paired.head_sha && paired.reviewed_payload_head_sha !== paired.head_sha) {
+    if (paired && paired.reviewed_payload_head_sha && paired.head_sha && !bundleMemberHeadMatches(paired)) {
       failures.push('paired_pr_head_mismatch');
     }
   }

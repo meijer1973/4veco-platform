@@ -520,6 +520,83 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).toContain('paired_pr_not_ready');
   });
 
+  test('cross-repo bundle controller accepts inherited authorization for refreshed integration head', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const payloadHead = fixture.reviewed_pr.head_sha;
+    const integrationHead = '8'.repeat(40);
+    const lessonHead = '4'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: integrationHead,
+      lesson_candidate_sha: lessonHead,
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      reviewed_pr: {
+        ...fixture.reviewed_pr,
+        head_sha: integrationHead,
+      },
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...explicitProof(integrationHead),
+        lead_review: {
+          path: 'subagent:payload-lead-review',
+          result: 'PASS',
+          reviewed_commit_sha: payloadHead,
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: false,
+          requires_human_reauthorization: false,
+          failures: [],
+          base_drift: {
+            classification: 'no_substantive_overlap',
+            requires_integration_delta_lead_review: false,
+            requires_human_reauthorization: false,
+          },
+        },
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            head_sha: integrationHead,
+            integration_head_sha: integrationHead,
+            reviewed_payload_head_sha: payloadHead,
+            authorization_inherited: true,
+            failures: [],
+          },
+          exact_members: exactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              open: true,
+              current: true,
+              mergeable: true,
+              ready: true,
+              is_draft: false,
+              base: 'main',
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
+            },
+          ],
+          compatibility: bundleCompatibilityPlatformFirst(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.reason_codes).not.toContain('bundle_controller_head_mismatch');
+    expect(decision.proof.bundle.exact_members.platform_candidate_sha).toBe(integrationHead);
+    expect(validateDecision(decision)).toBe(true);
+  });
+
   test('controller-first bundle transition treats an exact draft lesson member as transitionable', () => {
     const fixture = readFixture('live-governance-human.json');
     const lessonHead = '4'.repeat(40);
