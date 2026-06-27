@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1",
+  "status": "prepared_for_human_product_proof_review",
+  "content_verdict_requested": "Review merged Year 2 four-target candidate lesson output; do not infer product adoption or student use.",
+  "product_proof_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json",
+  "rendered_proof": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/rendered-product-proof.html",
+  "authority_claims": {
+    "product_proof_packet_prepared": true,
+    "merged_candidate_output_verified": true,
+    "rendered_route_proof_captured": true,
+    "source_first_layout_review_ready": true,
+    "target_equivalent_exit_ticket_review_ready": true,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "protected_mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  }
+}
