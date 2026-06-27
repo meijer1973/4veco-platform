@@ -92,7 +92,6 @@ Human-readable:
 - `RESEARCH_AGENT_MAP_REFERENCES.md`
 - `AGENT_GITHUB_ENTRY.md`
 - `AGENTS.md`
-- `CLAUDE.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
 - `build-scripts/README.md`
@@ -152,7 +151,6 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/CLAUDE.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
@@ -218,7 +216,6 @@ Use these anchors before free-form browsing.
 ```json
 {
   "repo_operating_rules": "AGENTS.md",
-  "local_claude_rules": "CLAUDE.md",
   "product_vision_spec": "../4veco-lessen/specifications/product-vision.md",
   "product_vision_json": "../4veco-lessen/specifications/product-vision.json",
   "paragraph_build_guide": "BUILD-PARAGRAPH.md",
@@ -260,7 +257,6 @@ Use these anchors before free-form browsing.
 index_anchors (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/CLAUDE.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
@@ -298,7 +294,6 @@ index_anchors (full URLs):
 {
   "root": "https://raw.githubusercontent.com/meijer1973/4veco-platform/main/",
   "declared_path_namespaces": [
-    ".claude",
     "agents",
     "build-scripts",
     "docs",
@@ -313,7 +308,6 @@ index_anchors (full URLs):
   ],
   "root_policy_paths": [
     "AGENTS.md",
-    "CLAUDE.md",
     "BUILD-PARAGRAPH.md",
     "BUILD-CHAPTER.md",
     "RESEARCH_AGENT_MAP.md",
@@ -365,7 +359,6 @@ index_anchors (full URLs):
   "content_workflow_paths": [
     "agents",
     "skills",
-    ".claude/commands",
     "BUILD-PARAGRAPH.md",
     "BUILD-CHAPTER.md"
   ],
@@ -428,7 +421,6 @@ path_registry (full URLs):
 root_policy_paths (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
-- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/CLAUDE.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP.md
@@ -580,8 +572,8 @@ reference_paths (full URLs):
 Agents MUST follow this sequence:
 
 1. Load this map.
-2. Load `AGENTS.md`, `CLAUDE.md`, and for product/paragraph/companion/review
-   questions load the cross-repo product baselines:
+2. Load `AGENTS.md`, and for product/paragraph/companion/review questions
+   load the cross-repo product baselines:
    `../4veco-lessen/specifications/product-vision.md` for strategic
    direction and `../4veco-lessen/specifications/product-end-state.md` for the
    operational student route.
@@ -641,7 +633,6 @@ Rules:
 {
   "repository_orientation": [
     "AGENTS.md",
-    "CLAUDE.md",
     "build-scripts/README.md",
     "package.json"
   ],
@@ -685,7 +676,6 @@ Rules:
     "BUILD-CHAPTER.md",
     "agents",
     "skills",
-    ".claude/commands",
     "references"
   ],
   "review_orchestration": [

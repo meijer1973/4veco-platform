@@ -1,28 +1,67 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const SOURCE_SKILL = 'skills/econ-pptx-templates.md';
-const COMMAND_MIRROR = '.claude/commands/econ-pptx-templates.md';
+const RETIRED_COMMAND_DIR = '.claude/commands';
 
-function validatePptxSkillMirror(root = path.resolve(__dirname, '..', '..')) {
+function normalizePath(value) {
+  return String(value).replace(/\\/g, '/');
+}
+
+function collectPresentFiles(root, relativeDir) {
+  const absoluteDir = path.join(root, relativeDir);
+  if (!fs.existsSync(absoluteDir)) return [];
+  const files = [];
+  function walk(current) {
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const absolute = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        walk(absolute);
+      } else if (entry.isFile()) {
+        files.push(normalizePath(path.relative(root, absolute)));
+      }
+    }
+  }
+  walk(absoluteDir);
+  return files.sort();
+}
+
+function gitTrackedFiles(root, relativeDir) {
+  try {
+    return execFileSync('git', ['ls-files', '--', relativeDir], {
+      cwd: root,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    })
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .map(normalizePath)
+      .sort();
+  } catch (error) {
+    return [];
+  }
+}
+
+function validatePptxSkillMirror(root = path.resolve(__dirname, '..', '..'), options = {}) {
   const sourcePath = path.join(root, SOURCE_SKILL);
-  const mirrorPath = path.join(root, COMMAND_MIRROR);
   const failures = [];
 
   if (!fs.existsSync(sourcePath)) {
     failures.push(`missing ${SOURCE_SKILL}`);
     return failures;
   }
-  if (!fs.existsSync(mirrorPath)) {
-    failures.push(`missing ${COMMAND_MIRROR}`);
-    return failures;
+  const presentFiles = collectPresentFiles(root, RETIRED_COMMAND_DIR);
+  const trackedFiles = options.trackedFiles || gitTrackedFiles(root, RETIRED_COMMAND_DIR);
+
+  if (presentFiles.length > 0) {
+    failures.push(`${RETIRED_COMMAND_DIR} is retired but present files remain: ${presentFiles.join(', ')}`);
   }
 
-  const source = fs.readFileSync(sourcePath);
-  const mirror = fs.readFileSync(mirrorPath);
-  if (!source.equals(mirror)) {
-    failures.push(`${COMMAND_MIRROR} must exactly mirror ${SOURCE_SKILL}`);
+  if (trackedFiles.length > 0) {
+    failures.push(`${RETIRED_COMMAND_DIR} is retired but tracked files remain: ${trackedFiles.join(', ')}`);
   }
 
   return failures;
@@ -32,11 +71,11 @@ function main() {
   const root = path.resolve(__dirname, '..', '..');
   const failures = validatePptxSkillMirror(root);
   if (failures.length) {
-    console.error('PPTX skill mirror check failed:');
+    console.error('PPTX retired mirror check failed:');
     for (const failure of failures) console.error(`- ${failure}`);
     process.exit(1);
   }
-  console.log('OK PPTX skill mirror parity');
+  console.log('OK PPTX skill has no retired command mirror');
 }
 
 if (require.main === module) main();
@@ -44,5 +83,6 @@ if (require.main === module) main();
 module.exports = {
   validatePptxSkillMirror,
   SOURCE_SKILL,
-  COMMAND_MIRROR,
+  RETIRED_COMMAND_DIR,
+  collectPresentFiles,
 };

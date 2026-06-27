@@ -20,9 +20,7 @@ const REPORT    = path.join(REPO_ROOT, 'reports/dead-units.md');
 const SCAN_DIRS = [
   'source-data',
   'knowledge',
-  '.claude/plans',
   'skills',
-  '.claude/commands',
 ];
 
 const EXCLUDE_PATTERNS = [

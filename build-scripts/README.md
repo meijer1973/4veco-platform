@@ -2,7 +2,7 @@
 
 This folder contains all production scripts used to turn source material into the rich paragraph outputs that appear in lesson targets.
 
-If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md).
+If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md).
 
 The strategic product direction lives in
 `../4veco-lessen/specifications/product-vision.md`; the operational product
@@ -153,7 +153,7 @@ This handles engine copy, shell generation (via `platform/`), landing pages, and
 
 ### Building a complete paragraph
 
-Follow [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md). Scripts are used in this order:
+Follow [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md). Scripts are used in this order:
 
 1. Create or update structured game data (CSV / JS data files)
 2. Run platform generators (usually via `deploy.js`)
