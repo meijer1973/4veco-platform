@@ -46,6 +46,12 @@ draft-ready transition in one operation.
 | `READY_FOR_HUMAN_REVIEW` | Human review is required and the PR/bundle is substantial or a consequential exception. | Mark ready and present one consolidated human handoff. Merge only after an explicit owner merge decision tied to the reviewed payload head and decision scope. |
 | `PAUSE_ESCALATE` | A genuine blocker cannot safely be resolved by implementation, testing, specialist review, batching, or conservative classification. | Pause and escalate the blocker. |
 
+`BEHIND` from normal base advancement does not by itself block
+`allowed_transition: MARK_READY` when current payload-head evidence is green.
+Branch protection and the serialized integration lane handle the required base
+refresh before merge. `DIRTY`, conflicting, or unauthorized blocked states still
+route to revision.
+
 ## Authority and consequence axis
 
 Use the L0-L4 ladder from `docs/review/pr-throughput-policy.md`. Highest risk
@@ -135,6 +141,13 @@ metadata, exact platform and lesson PR numbers, exact payload SHAs, both PRs
 open and mergeable, complete `paired_prs` metadata, and a green bundle
 compatibility proof.
 
+Paired member lifecycle evidence is strict. `open`, `current`, and `mergeable`
+must all be `true`; missing, null, unknown, conflicting, closed, or stale
+states fail closed. A paired member may not satisfy lead-review proof by
+carrying its own `lead_reviewed_sha` or similar alias. The lead-review proof
+must include a structured paired-member record with repository, PR number,
+reviewed commit SHA, passing review result, and review path.
+
 The readiness proof must also carry expected `exact_members` values for the
 live platform base, platform candidate, lesson base, and lesson candidate. A
 delegated lesson member must record its own `current_member` repository, PR
@@ -154,6 +167,28 @@ The compatibility proof must come from the platform controller and must record:
 must also be green, otherwise the bundle stays `KEEP_DRAFT_REVISE` until a
 compatibility bridge makes a safe merge order possible.
 
+Draft paired members are not merge-ready. A narrow controller-first transition
+exception exists only for platform-controller mark-ready decisions: an exact
+lesson member may count as `transitionable`, not merge-ready, when it is open,
+current, mergeable, draft, exact-head matched, lead-reviewed, and covered by
+green `platform-first` plus `bundle-final` compatibility. The resulting
+decision may mark the platform controller ready, but must record
+`transition_ready: true`, `merge_ready: false`, and the transitionable draft
+member in the bundle proof. `merge_ready` may become `true` only after the
+reviewed PR is already non-draft, every paired member is non-draft and ready,
+and no transitionable draft member remains.
+After the platform controller is non-draft, rerun delegated lesson readiness;
+only then may the lesson member receive its own `MARK_READY` transition. Any
+stale head, closed PR, conflict, missing compatibility, missing lead proof, or
+non-platform-first compatibility must stay `KEEP_DRAFT_REVISE`.
+
+Immediately before any `MARK_READY` mutation in a bundle, the transition
+executor must re-fetch the exact paired member state from GitHub. For a platform
+controller transition, re-fetch the exact lesson member; for a delegated lesson
+transition, re-fetch the exact platform controller. Abort before mutation if
+the live repository, PR number, base branch, head SHA, open state, draft/ready
+state, or mergeability differs from the readiness packet.
+
 When the exact matrix proves `lesson-first` and `bundle-final` green while
 `platform-first` is red, the platform controller may still route
 `READY_FOR_HUMAN_REVIEW`. That route records `bundle_delegated_ci: true` and
@@ -170,8 +205,9 @@ bundle matrix is green.
 Lesson-repository bundle members may consume delegated proof from the platform
 controller. Do not require the lesson PR to carry a standalone platform
 branch-protection context on its commit, but do require exact bundle membership,
-open/non-draft member state, payload SHA match, and green delegated controller
-proof.
+open member state, payload SHA match, green delegated controller proof, and a
+non-draft paired platform controller before the lesson member can receive
+`MARK_READY`.
 
 ## Branch protection
 
