@@ -45,6 +45,8 @@
     "check:y2-governed-support-closure-bundle-1": "node build-scripts/references/check-y2-governed-support-closure-bundle-1.js",
     "build:y2-four-target-lesson-production": "node build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js",
     "check:y2-four-target-lesson-production": "node build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js",
+    "build:y2-four-target-product-proof": "node build-scripts/references/build-y2-four-target-product-proof-gate-1.js",
+    "check:y2-four-target-product-proof": "node build-scripts/references/check-y2-four-target-product-proof-gate-1.js",
     "check:branch-protection": "node build-scripts/ci/check-branch-protection.js",
     "check:agent-branch-safety": "node build-scripts/ci/check-agent-branch-safety.js",
     "check:agent-worktree-safety": "node build-scripts/ci/check-agent-worktree-safety.js",

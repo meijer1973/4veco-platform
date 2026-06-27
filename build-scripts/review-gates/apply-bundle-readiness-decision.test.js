@@ -100,6 +100,7 @@ function controllerDecision(overrides = {}) {
             current: true,
             ready: false,
             is_draft: true,
+            base: 'main',
             head_sha: lessonHead,
             reviewed_payload_head_sha: lessonHead,
             substantively_ready: true,

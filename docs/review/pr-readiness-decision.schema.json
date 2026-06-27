@@ -273,6 +273,153 @@
             "object",
             "null"
           ],
+          "properties": {
+            "ok": {
+              "type": "boolean"
+            },
+            "merge_ready": {
+              "type": "boolean"
+            },
+            "transition_ready": {
+              "type": "boolean"
+            },
+            "paired_prs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                  "repository",
+                  "pr_number",
+                  "base",
+                  "open",
+                  "current",
+                  "mergeable",
+                  "ready",
+                  "is_draft",
+                  "head_sha",
+                  "reviewed_payload_head_sha"
+                ],
+                "properties": {
+                  "repository": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "pr_number": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "base": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "open": {
+                    "const": true
+                  },
+                  "current": {
+                    "const": true
+                  },
+                  "mergeable": {
+                    "const": true
+                  },
+                  "ready": {
+                    "type": "boolean"
+                  },
+                  "is_draft": {
+                    "type": "boolean"
+                  },
+                  "head_sha": {
+                    "type": "string",
+                    "pattern": "^[A-Fa-f0-9]{40}$"
+                  },
+                  "reviewed_payload_head_sha": {
+                    "type": "string",
+                    "pattern": "^[A-Fa-f0-9]{40}$"
+                  }
+                }
+              }
+            },
+            "transitionable_draft_members": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                  "repository",
+                  "pr_number",
+                  "base",
+                  "head_sha",
+                  "reviewed_payload_head_sha",
+                  "reason"
+                ],
+                "properties": {
+                  "repository": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "pr_number": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "base": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "head_sha": {
+                    "type": "string",
+                    "pattern": "^[A-Fa-f0-9]{40}$"
+                  },
+                  "reviewed_payload_head_sha": {
+                    "type": "string",
+                    "pattern": "^[A-Fa-f0-9]{40}$"
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            },
+            "paired_lead_reviews": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "repository",
+                  "pr_number",
+                  "reviewed_commit_sha",
+                  "review_result",
+                  "review_path"
+                ],
+                "properties": {
+                  "repository": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "pr_number": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "reviewed_commit_sha": {
+                    "type": "string",
+                    "pattern": "^[A-Fa-f0-9]{40}$"
+                  },
+                  "review_result": {
+                    "type": "string",
+                    "enum": [
+                      "PASS",
+                      "PASS WITH FLAGS"
+                    ]
+                  },
+                  "review_path": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          },
           "additionalProperties": true
         },
         "human_authorization": {
