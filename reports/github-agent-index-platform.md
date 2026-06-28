@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-28T11:26:10.160Z
+Generated: 2026-06-28T11:35:47.407Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/integration-authorized-activation-1-20260628`
-Source commit: `cedfb307f46298cb8c6fb969c3afaed529d2c7ae`
-Files indexed: 6645
+Source commit: `fd335492b01057fe533619f05d629c83ad523ff4`
+Files indexed: 6646
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 628
+Count: 629
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -160,6 +160,7 @@ Count: 628
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/ci/fixtures/branch-protection-activated.json
 - build-scripts/ci/platform-ci-evidence.js
 - build-scripts/ci/platform-ci-evidence.test.js
 - build-scripts/content/book-1/b1-111-alt-text.js

@@ -80,6 +80,18 @@ describe('check-branch-protection', () => {
     expect(summary.failures).toContain('required status context missing: integration-authorized');
   });
 
+  test('fails when required status checks include unexpected extra contexts', () => {
+    const summary = summarizeProtection(validProtection({
+      required_status_checks: {
+        strict: true,
+        contexts: ['validate-platform', 'integration-authorized', 'unexpected-extra'],
+      },
+    }), { requireIntegrationAuthorized: true });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('unexpected required status context: unexpected-extra');
+  });
+
   test('activated branch-protection fixture passes with validate-platform and integration-authorized', () => {
     const summary = summarizeProtection(activatedProtectionFixture, {
       requireIntegrationAuthorized: true,
