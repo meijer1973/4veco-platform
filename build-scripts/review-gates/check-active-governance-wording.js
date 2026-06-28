@@ -5,19 +5,18 @@ const path = require('path');
 const ACTIVE_ROOTS = Object.freeze([
   'AGENTS.md',
   'AGENT_GITHUB_ENTRY.md',
-  'CLAUDE.md',
   'RESEARCH_AGENT_MAP.md',
+  'RESEARCH_AGENT_PROMPT.md',
   'agents',
   'skills',
-  '.claude/commands',
   'docs/review',
   'build-scripts',
   '.github/workflows',
   'package.json',
   '../4veco-lessen/AGENTS.md',
   '../4veco-lessen/AGENT_GITHUB_ENTRY.md',
-  '../4veco-lessen/CLAUDE.md',
   '../4veco-lessen/RESEARCH_AGENT_MAP.md',
+  '../4veco-lessen/RESEARCH_AGENT_PROMPT.md',
 ]);
 
 const TEXT_EXTENSIONS = new Set([
@@ -46,6 +45,8 @@ const EXCLUDED_SEGMENTS = new Set([
 const EXCLUDED_FILES = new Set([
   'build-scripts/review-gates/check-active-governance-wording.js',
   'build-scripts/review-gates/check-active-governance-wording.test.js',
+  'build-scripts/sprints/check-pptx-skill-mirror.js',
+  'build-scripts/sprints/check-pptx-skill-mirror.test.js',
 ]);
 
 const FORBIDDEN_PATTERNS = Object.freeze([
@@ -100,6 +101,22 @@ const FORBIDDEN_PATTERNS = Object.freeze([
   {
     id: 'authorization-exact-platform-lesson-heads',
     regex: /authorization for the exact platform and lesson heads/i,
+  },
+  {
+    id: 'claude-md-read-first',
+    regex: /(read|use|load)[^\n]{0,80}`?(\.\.\/)?CLAUDE\.md`?/i,
+  },
+  {
+    id: 'claude-md-operating-rules',
+    regex: /(`?CLAUDE\.md`?[^\n]{0,80}(operating rules|working agreement|policy)|(?:operating rules|working agreement|policy)[^\n]{0,80}`?CLAUDE\.md`?)/i,
+  },
+  {
+    id: 'claude-command-skill-surface',
+    regex: /(\.claude\/commands[^\n]{0,80}(skill|workflow|mirror|command)|(?:skill|workflow|mirror|command)[^\n]{0,80}\.claude\/commands)/i,
+  },
+  {
+    id: 'claude-work-temp-path',
+    regex: /\/tmp\/claude-work/i,
   },
 ]);
 

@@ -48,6 +48,40 @@ describe('check-active-governance-wording', () => {
     expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
   });
 
+  test('flags retired Claude policy and command surfaces in active guidance', () => {
+    const text = [
+      'Use `../CLAUDE.md` before every task.',
+      '`CLAUDE.md` contains the operating rules.',
+      'Use `skills/` and `.claude/commands/` for content-production workflows.',
+      'Create scratch output under `/tmp/claude-work/qc-YYYY-MM-DD/`.',
+    ].join('\n');
+
+    expect(findViolationsInText('AGENTS.md', text).map((item) => item.pattern)).toEqual([
+      'claude-md-read-first',
+      'claude-md-operating-rules',
+      'claude-command-skill-surface',
+      'claude-work-temp-path',
+    ]);
+  });
+
+  test('flags stale Claude entrypoint guidance in research prompts', () => {
+    const violations = scanFiles([
+      {
+        path: 'RESEARCH_AGENT_PROMPT.md',
+        text: '- `AGENTS.md` and `CLAUDE.md` for operating rules',
+      },
+      {
+        path: '../4veco-lessen/RESEARCH_AGENT_PROMPT.md',
+        text: 'Use `skills/` and `.claude/commands/` for content-production workflows.',
+      },
+    ]);
+
+    expect(violations.map((item) => item.pattern)).toEqual([
+      'claude-md-operating-rules',
+      'claude-command-skill-surface',
+    ]);
+  });
+
   test('ignores archived and report paths', () => {
     const violations = scanFiles([
       {

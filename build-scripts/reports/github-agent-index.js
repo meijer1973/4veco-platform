@@ -115,7 +115,7 @@ function classifyGroups(relativePath) {
   if (relativePath.startsWith("agents/")) groups.push("agents");
   if (isEnginePath(relativePath)) groups.push("engines");
   if (relativePath.startsWith("build-scripts/") || relativePath.startsWith("scripts/")) groups.push("build scripts");
-  if (relativePath.startsWith("skills/") || relativePath.startsWith(".claude/commands/")) groups.push("skills");
+  if (relativePath.startsWith("skills/")) groups.push("skills");
   if (lower.includes("validat") || lower.includes("validator") || lower.includes("check-")) groups.push("validators");
   if (relativePath.startsWith("references/")) groups.push("references");
   if (relativePath.startsWith("reports/")) groups.push("reports");

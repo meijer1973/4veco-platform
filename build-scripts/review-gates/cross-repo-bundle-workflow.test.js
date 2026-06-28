@@ -18,6 +18,7 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('platform_candidate_sha');
     expect(bundleWorkflow).toContain('lesson_candidate_sha');
     expect(bundleWorkflow).toContain('cross-repo-bundle-compatibility.js summarize');
+    expect(bundleWorkflow).toContain('npm run check:active-governance-wording');
   });
 
   test('bundle workflow records machine-readable JSON and uses deterministic summary gate', () => {
