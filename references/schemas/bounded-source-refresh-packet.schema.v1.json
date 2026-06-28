@@ -1,0 +1,1333 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/schemas/bounded-source-refresh-packet.schema.v1.json",
+  "title": "Bounded Source Refresh Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "report_type",
+    "report_id",
+    "sprint_id",
+    "internal_only",
+    "manual_invocation_only",
+    "human_review_required",
+    "product_end_state",
+    "original_sprint_gate_spec",
+    "accepted_input_decision",
+    "core_requirement_checklist",
+    "input_allowlist",
+    "output_allowlist",
+    "forbidden_authority"
+  ],
+  "oneOf": [
+    {
+      "$ref": "#/$defs/planReport"
+    },
+    {
+      "$ref": "#/$defs/jurisdictionSimulationReport"
+    },
+    {
+      "$ref": "#/$defs/decisionReport"
+    }
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "report_type": {
+      "enum": [
+        "plan",
+        "jurisdiction_simulation",
+        "decision"
+      ]
+    },
+    "report_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sprint_id": {
+      "const": "GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1"
+    },
+    "generated_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "internal_only": {
+      "const": true
+    },
+    "manual_invocation_only": {
+      "const": true
+    },
+    "human_review_required": {
+      "const": true
+    },
+    "product_end_state": {
+      "const": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    "product_end_state_checkout_note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "original_sprint_gate_spec": {
+      "const": "archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-sprint-plan.md"
+    },
+    "roadmap_source": {
+      "const": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md"
+    },
+    "accepted_input_decision": {
+      "const": "PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET"
+    },
+    "non_negotiable_requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "core_requirement_checklist": {
+      "type": "array",
+      "minItems": 11,
+      "items": {
+        "$ref": "#/$defs/coreRequirement"
+      }
+    },
+    "input_allowlist": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "reports/inspection-standards/local-expert-source-refresh-gate-decision.json"
+        },
+        {
+          "const": "reports/inspection-standards/local-expert-source-refresh-gate-plan.json"
+        },
+        {
+          "const": "reports/inspection-standards/england-source-refresh-gate-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-source-refresh-gate-simulation.json"
+        },
+        {
+          "const": "references/schemas/local-expert-source-refresh-gate.schema.v1.json"
+        },
+        {
+          "const": "references/data/inspection-standards/overlays/england.deepening.v1.json"
+        },
+        {
+          "const": "references/data/inspection-standards/overlays/flanders.deepening.v1.json"
+        }
+      ],
+      "minItems": 7,
+      "maxItems": 7
+    },
+    "output_allowlist": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "references/schemas/bounded-source-refresh-packet.schema.v1.json"
+        },
+        {
+          "const": "docs/inspection-standards/bounded-source-refresh-packet-contract.md"
+        },
+        {
+          "const": "docs/inspection-standards/england-bounded-source-refresh-packet.md"
+        },
+        {
+          "const": "docs/inspection-standards/flanders-bounded-source-refresh-packet.md"
+        },
+        {
+          "const": "docs/inspection-standards/local-expert-review-request-template.md"
+        },
+        {
+          "const": "reports/inspection-standards/bounded-source-refresh-packet-plan.md"
+        },
+        {
+          "const": "reports/inspection-standards/bounded-source-refresh-packet-plan.json"
+        },
+        {
+          "const": "reports/inspection-standards/england-bounded-source-refresh-simulation.md"
+        },
+        {
+          "const": "reports/inspection-standards/england-bounded-source-refresh-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-bounded-source-refresh-simulation.md"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-bounded-source-refresh-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/bounded-source-refresh-packet-decision.md"
+        },
+        {
+          "const": "reports/inspection-standards/bounded-source-refresh-packet-decision.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/positive/england-bounded-source-refresh-simulation.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/positive/flanders-bounded-source-refresh-simulation.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/positive/bounded-source-refresh-packet-decision.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/non-official-source.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/source-refresh-executed.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/local-expert-contacted.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/local-expert-substituted.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/localized-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/personal-data.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/compliance-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/support-sufficiency-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/whole-uk-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/all-belgium-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/missing-refresh-state.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/missing-source-inventory.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/official-url-mismatch.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/hidden-discovery.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/expert-legal-advice.sample.json"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-sprint-plan.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-validation-log.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-correction-log.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-closure-record.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-specialist-reviews.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-final-lead-review.md"
+        }
+      ],
+      "minItems": 37,
+      "maxItems": 37
+    },
+    "forbidden_authority": {
+      "$ref": "#/$defs/forbiddenAuthority"
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "final_decision_options": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT"
+        },
+        {
+          "const": "REVISE_SOURCE_REFRESH_PACKET"
+        },
+        {
+          "const": "STOP_LOCAL_OVERLAY_TRACK"
+        }
+      ],
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "selected_target_decision": {
+      "const": "PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT"
+    },
+    "source_refresh_inventory_summary": {
+      "$ref": "#/$defs/sourceRefreshInventorySummary"
+    },
+    "refresh_state_model": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/refreshState"
+      }
+    },
+    "local_expert_review_request_template": {
+      "$ref": "#/$defs/expertTemplate"
+    },
+    "review_gates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "no_output_enforcement": {
+      "$ref": "#/$defs/noOutput"
+    },
+    "jurisdiction_id": {
+      "enum": [
+        "england",
+        "flanders"
+      ]
+    },
+    "jurisdiction_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_inventory": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sourceInventoryItem"
+      }
+    },
+    "jurisdiction_packet_coverage": {
+      "$ref": "#/$defs/jurisdictionPacketCoverage"
+    },
+    "simulation_cases": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/simulationCase"
+      }
+    },
+    "source_refresh_execution_performed": {
+      "const": false
+    },
+    "local_expert_contacted": {
+      "const": false
+    },
+    "local_expert_substitution_performed": {
+      "const": false
+    },
+    "final_bounded_source_refresh_packet_decision": {
+      "$ref": "#/$defs/finalDecision"
+    },
+    "source_counts": {
+      "$ref": "#/$defs/sourceCounts"
+    },
+    "simulation_case_counts": {
+      "$ref": "#/$defs/simulationCaseCounts"
+    },
+    "plan_report": {
+      "type": "string",
+      "minLength": 1
+    },
+    "does_not_authorize": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required_before_any_execution_pilot": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "finding_classification": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    }
+  },
+  "$defs": {
+    "planReport": {
+      "type": "object",
+      "required": [
+        "report_type",
+        "goal",
+        "final_decision_options",
+        "selected_target_decision",
+        "source_refresh_inventory_summary",
+        "refresh_state_model",
+        "local_expert_review_request_template",
+        "review_gates",
+        "stop_conditions",
+        "no_output_enforcement",
+        "finding_classification"
+      ],
+      "properties": {
+        "report_type": {
+          "const": "plan"
+        }
+      }
+    },
+    "jurisdictionSimulationReport": {
+      "type": "object",
+      "required": [
+        "report_type",
+        "jurisdiction_id",
+        "jurisdiction_label",
+        "source_inventory",
+        "refresh_state_model",
+        "jurisdiction_packet_coverage",
+        "local_expert_review_request_template",
+        "simulation_cases",
+        "source_refresh_execution_performed",
+        "local_expert_contacted",
+        "local_expert_substitution_performed",
+        "no_output_enforcement",
+        "finding_classification"
+      ],
+      "properties": {
+        "report_type": {
+          "const": "jurisdiction_simulation"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "jurisdiction_id": {
+                "const": "england"
+              }
+            },
+            "required": [
+              "jurisdiction_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source_inventory": {
+                "minItems": 8,
+                "maxItems": 8
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "jurisdiction_id": {
+                "const": "flanders"
+              }
+            },
+            "required": [
+              "jurisdiction_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source_inventory": {
+                "minItems": 5,
+                "maxItems": 5
+              }
+            }
+          }
+        }
+      ]
+    },
+    "decisionReport": {
+      "type": "object",
+      "required": [
+        "report_type",
+        "final_bounded_source_refresh_packet_decision",
+        "source_counts",
+        "simulation_case_counts",
+        "source_refresh_execution_performed",
+        "local_expert_contacted",
+        "local_expert_substitution_performed",
+        "no_output_enforcement",
+        "plan_report",
+        "does_not_authorize",
+        "required_before_any_execution_pilot",
+        "finding_classification"
+      ],
+      "properties": {
+        "report_type": {
+          "const": "decision"
+        }
+      }
+    },
+    "coreRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "requirement",
+        "status",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requirement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "forbiddenAuthority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_refresh_executed",
+        "source_refresh_execution_pilot_executed",
+        "local_expert_contacted",
+        "local_expert_substituted",
+        "runtime_execution",
+        "localized_output_generated",
+        "localized_paragraphs_generated",
+        "localized_exercises_generated",
+        "localized_answer_models_generated",
+        "localized_assessment_items_generated",
+        "student_facing_files_generated",
+        "teacher_school_facing_output_generated",
+        "public_output_generated",
+        "country_edition_generated",
+        "evidence_pack_generated",
+        "product_route_adoption",
+        "scale_gate_integration",
+        "diagnostics_mastery_pv",
+        "student_product_use",
+        "personal_data_processing",
+        "legal_compliance_claim",
+        "approval_accreditation_claim",
+        "op0_pta_summative_claim",
+        "inspection_readiness_claim",
+        "support_sufficiency_claim",
+        "accommodation_sufficiency_claim",
+        "accessibility_legal_sufficiency_claim",
+        "school_evidence_claim",
+        "school_owned_evidence_collection",
+        "whole_uk_claim_from_england_only",
+        "all_belgium_claim_from_flanders_only",
+        "generated_lesson_output_scanning",
+        "implicit_source_discovery",
+        "directory_globbing",
+        "quality_ref_or_dashboard_integration",
+        "package_or_ci_product_integration"
+      ],
+      "properties": {
+        "source_refresh_executed": {
+          "const": false
+        },
+        "source_refresh_execution_pilot_executed": {
+          "const": false
+        },
+        "local_expert_contacted": {
+          "const": false
+        },
+        "local_expert_substituted": {
+          "const": false
+        },
+        "runtime_execution": {
+          "const": false
+        },
+        "localized_output_generated": {
+          "const": false
+        },
+        "localized_paragraphs_generated": {
+          "const": false
+        },
+        "localized_exercises_generated": {
+          "const": false
+        },
+        "localized_answer_models_generated": {
+          "const": false
+        },
+        "localized_assessment_items_generated": {
+          "const": false
+        },
+        "student_facing_files_generated": {
+          "const": false
+        },
+        "teacher_school_facing_output_generated": {
+          "const": false
+        },
+        "public_output_generated": {
+          "const": false
+        },
+        "country_edition_generated": {
+          "const": false
+        },
+        "evidence_pack_generated": {
+          "const": false
+        },
+        "product_route_adoption": {
+          "const": false
+        },
+        "scale_gate_integration": {
+          "const": false
+        },
+        "diagnostics_mastery_pv": {
+          "const": false
+        },
+        "student_product_use": {
+          "const": false
+        },
+        "personal_data_processing": {
+          "const": false
+        },
+        "legal_compliance_claim": {
+          "const": false
+        },
+        "approval_accreditation_claim": {
+          "const": false
+        },
+        "op0_pta_summative_claim": {
+          "const": false
+        },
+        "inspection_readiness_claim": {
+          "const": false
+        },
+        "support_sufficiency_claim": {
+          "const": false
+        },
+        "accommodation_sufficiency_claim": {
+          "const": false
+        },
+        "accessibility_legal_sufficiency_claim": {
+          "const": false
+        },
+        "school_evidence_claim": {
+          "const": false
+        },
+        "school_owned_evidence_collection": {
+          "const": false
+        },
+        "whole_uk_claim_from_england_only": {
+          "const": false
+        },
+        "all_belgium_claim_from_flanders_only": {
+          "const": false
+        },
+        "generated_lesson_output_scanning": {
+          "const": false
+        },
+        "implicit_source_discovery": {
+          "const": false
+        },
+        "directory_globbing": {
+          "const": false
+        },
+        "quality_ref_or_dashboard_integration": {
+          "const": false
+        },
+        "package_or_ci_product_integration": {
+          "const": false
+        }
+      }
+    },
+    "noOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_refresh_execution",
+        "source_refresh_execution_pilot",
+        "local_expert_contact",
+        "local_expert_substitution",
+        "runtime_execution",
+        "localized_output",
+        "localized_paragraphs",
+        "localized_exercises",
+        "answer_models",
+        "localized_assessment_items",
+        "student_facing_files",
+        "teacher_school_output",
+        "public_output",
+        "evidence_pack",
+        "product_route",
+        "scale_gate",
+        "diagnostics_mastery_pv",
+        "personal_data",
+        "compliance_claim",
+        "inspection_readiness_claim",
+        "support_sufficiency_claim",
+        "accommodation_sufficiency_claim",
+        "hidden_source_discovery",
+        "generated_lesson_output_scanning"
+      ],
+      "properties": {
+        "source_refresh_execution": {
+          "const": false
+        },
+        "source_refresh_execution_pilot": {
+          "const": false
+        },
+        "local_expert_contact": {
+          "const": false
+        },
+        "local_expert_substitution": {
+          "const": false
+        },
+        "runtime_execution": {
+          "const": false
+        },
+        "localized_output": {
+          "const": false
+        },
+        "localized_paragraphs": {
+          "const": false
+        },
+        "localized_exercises": {
+          "const": false
+        },
+        "answer_models": {
+          "const": false
+        },
+        "localized_assessment_items": {
+          "const": false
+        },
+        "student_facing_files": {
+          "const": false
+        },
+        "teacher_school_output": {
+          "const": false
+        },
+        "public_output": {
+          "const": false
+        },
+        "evidence_pack": {
+          "const": false
+        },
+        "product_route": {
+          "const": false
+        },
+        "scale_gate": {
+          "const": false
+        },
+        "diagnostics_mastery_pv": {
+          "const": false
+        },
+        "personal_data": {
+          "const": false
+        },
+        "compliance_claim": {
+          "const": false
+        },
+        "inspection_readiness_claim": {
+          "const": false
+        },
+        "support_sufficiency_claim": {
+          "const": false
+        },
+        "accommodation_sufficiency_claim": {
+          "const": false
+        },
+        "hidden_source_discovery": {
+          "const": false
+        },
+        "generated_lesson_output_scanning": {
+          "const": false
+        }
+      }
+    },
+    "sourceRefreshInventorySummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "england_sources",
+        "flanders_sources",
+        "candidate_sources_allowed",
+        "candidate_source_policy",
+        "jurisdiction_boundary_notes"
+      ],
+      "properties": {
+        "england_sources": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "flanders_sources": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "candidate_sources_allowed": {
+          "const": false
+        },
+        "candidate_source_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction_boundary_notes": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "refreshState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state_id",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close",
+        "allowed_next_action",
+        "forbidden_next_action"
+      ],
+      "properties": {
+        "state_id": {
+          "enum": [
+            "unchanged",
+            "updated_same_source",
+            "replaced_by_official_successor",
+            "official_source_unavailable",
+            "candidate_gap_found",
+            "out_of_scope_source_found",
+            "requires_local_expert_interpretation",
+            "requires_human_owner_decision"
+          ]
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowed_next_action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_next_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sourceInventoryItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jurisdiction_id",
+        "source_id",
+        "official_url",
+        "authority",
+        "source_role",
+        "current_access_date",
+        "current_known_version_or_publication_date",
+        "freshness_trigger",
+        "staleness_condition",
+        "expected_refresh_method",
+        "allowed_result_states",
+        "forbidden_inference",
+        "human_review_trigger"
+      ],
+      "properties": {
+        "jurisdiction_id": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "official_url": {
+          "type": "string",
+          "pattern": "^https?://"
+        },
+        "authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_access_date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_known_version_or_publication_date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "freshness_trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "staleness_condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_refresh_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowed_result_states": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "unchanged"
+            },
+            {
+              "const": "updated_same_source"
+            },
+            {
+              "const": "replaced_by_official_successor"
+            },
+            {
+              "const": "official_source_unavailable"
+            },
+            {
+              "const": "candidate_gap_found"
+            },
+            {
+              "const": "out_of_scope_source_found"
+            },
+            {
+              "const": "requires_local_expert_interpretation"
+            },
+            {
+              "const": "requires_human_owner_decision"
+            }
+          ],
+          "minItems": 8,
+          "maxItems": 8
+        },
+        "forbidden_inference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "human_review_trigger": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "expertTemplate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "template_id",
+        "purpose",
+        "allowed_questions",
+        "required_response_fields",
+        "forbidden_expert_claims",
+        "stop_conditions"
+      ],
+      "properties": {
+        "template_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowed_questions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required_response_fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "forbidden_expert_claims": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "stop_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "jurisdictionPacketCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required_boundaries",
+        "source_bindings",
+        "jurisdiction_boundary",
+        "forbidden_overclaim"
+      ],
+      "properties": {
+        "required_boundaries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_bindings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/sourceBinding"
+          }
+        },
+        "jurisdiction_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_overclaim": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boundary",
+        "source_ids"
+      ],
+      "properties": {
+        "boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "simulationCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case_type",
+        "jurisdiction_id",
+        "source_id",
+        "simulated_result_state",
+        "boundary_focus",
+        "simulation_only",
+        "source_refresh_executed",
+        "local_expert_contacted",
+        "local_expert_substituted",
+        "generated_output",
+        "expected_finding",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close",
+        "allowed_next_action",
+        "forbidden_next_action"
+      ],
+      "properties": {
+        "case_type": {
+          "enum": [
+            "official_source_unchanged",
+            "official_source_updated",
+            "successor_source_found",
+            "source_unavailable",
+            "non_official_source_suggested",
+            "whole_uk_claim",
+            "all_belgium_claim",
+            "local_expert_substitutes_for_official_source",
+            "legal_compliance_overclaim",
+            "support_accommodation_sufficiency_overclaim",
+            "localized_output_requested",
+            "personal_data_requested"
+          ]
+        },
+        "jurisdiction_id": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "simulated_result_state": {
+          "enum": [
+            "unchanged",
+            "updated_same_source",
+            "replaced_by_official_successor",
+            "official_source_unavailable",
+            "candidate_gap_found",
+            "out_of_scope_source_found",
+            "requires_local_expert_interpretation",
+            "requires_human_owner_decision"
+          ]
+        },
+        "boundary_focus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "simulation_only": {
+          "const": true
+        },
+        "source_refresh_executed": {
+          "const": false
+        },
+        "local_expert_contacted": {
+          "const": false
+        },
+        "local_expert_substituted": {
+          "const": false
+        },
+        "generated_output": {
+          "$ref": "#/$defs/noOutput"
+        },
+        "expected_finding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowed_next_action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_next_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "finalDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selected",
+        "allowed_options",
+        "decision_selection_count",
+        "rationale"
+      ],
+      "properties": {
+        "selected": {
+          "const": "PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT"
+        },
+        "allowed_options": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT"
+            },
+            {
+              "const": "REVISE_SOURCE_REFRESH_PACKET"
+            },
+            {
+              "const": "STOP_LOCAL_OVERLAY_TRACK"
+            }
+          ],
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "decision_selection_count": {
+          "const": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sourceCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "england",
+        "flanders"
+      ],
+      "properties": {
+        "england": {
+          "const": 8
+        },
+        "flanders": {
+          "const": 5
+        }
+      }
+    },
+    "simulationCaseCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "england",
+        "flanders",
+        "required_case_types"
+      ],
+      "properties": {
+        "england": {
+          "const": 12
+        },
+        "flanders": {
+          "const": 12
+        },
+        "required_case_types": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "official_source_unchanged"
+            },
+            {
+              "const": "official_source_updated"
+            },
+            {
+              "const": "successor_source_found"
+            },
+            {
+              "const": "source_unavailable"
+            },
+            {
+              "const": "non_official_source_suggested"
+            },
+            {
+              "const": "whole_uk_claim"
+            },
+            {
+              "const": "all_belgium_claim"
+            },
+            {
+              "const": "local_expert_substitutes_for_official_source"
+            },
+            {
+              "const": "legal_compliance_overclaim"
+            },
+            {
+              "const": "support_accommodation_sufficiency_overclaim"
+            },
+            {
+              "const": "localized_output_requested"
+            },
+            {
+              "const": "personal_data_requested"
+            }
+          ],
+          "minItems": 12,
+          "maxItems": 12
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "finding",
+        "classification",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "finding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "enum": [
+            "core_requirement_met",
+            "quality_improvement_available",
+            "minor_carry_flag",
+            "scale_blocker",
+            "core_spec_failure"
+          ]
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
