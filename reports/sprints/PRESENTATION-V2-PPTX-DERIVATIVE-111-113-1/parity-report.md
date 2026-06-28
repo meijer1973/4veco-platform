@@ -59,4 +59,3 @@ The 1.1.3 graph proof verifies P vertical, Q horizontal, (100; EUR 3.00) in the 
 - LibreOffice: `C:\Program Files\LibreOffice\program\soffice.exe`
 - Poppler: `pdftoppm -png -r 144`
 - Renderer: `build-scripts/lib/render-presentation-v2-pptx.js`
-

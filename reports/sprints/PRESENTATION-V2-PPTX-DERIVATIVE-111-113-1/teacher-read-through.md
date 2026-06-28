@@ -32,4 +32,3 @@ Generated: 2026-06-28T09:01:01.605Z
 | 6 | `graph_claim_check` | 72 | 29 | 100 (moderate) | yes | Teach from the notes and use the visible text as checkpoints. |
 | 7 | `retrieval_check` | 103 | 42 | 90 (moderate) | yes | Teach from the notes and use the visible text as checkpoints. |
 | 8 | `summary_bridge` | 76 | 31 | 79 (moderate) | yes | Teach from the notes and use the visible text as checkpoints. |
-
