@@ -2,7 +2,7 @@
 
 This report checks whether each PPTX slide can be explained naturally in roughly 45 seconds from teacher notes, without reading dense visible slide text aloud.
 
-Generated: 2026-06-25T13:34:26.126Z
+Generated: 2026-06-28T09:01:01.605Z
 
 ## 1.1.1 Schaarste en economisch denken
 

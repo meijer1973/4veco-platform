@@ -4,7 +4,7 @@ PowerPoint derivative proof packet for the semantic presentation-v2 decks.
 
 The PPTX files are generated from the same semantic models as the web presentations. LibreOffice converts each PPTX to PDF, Poppler exports every slide as PNG, and this packet records model/HTML/PPTX/PNG hashes plus route, notes, font, and geometry checks.
 
-Generated: 2026-06-25T13:34:26.126Z
+Generated: 2026-06-28T09:01:01.605Z
 
 Teacher read-through report: [teacher-read-through.md](teacher-read-through.md)
 
@@ -12,7 +12,7 @@ Teacher read-through report: [teacher-read-through.md](teacher-read-through.md)
 
 - Model: `build-scripts/content/book-1/b1-111-presentation-v2-model.js` (21f6c89b73dd)
 - HTML: `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html` (7dbb3d280ea0)
-- PPTX: `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx` (d56010bd7faf)
+- PPTX: `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx` (23d40c0a1207)
 - Slides/notes/PNGs: 11/11/11
 - Font floors: slides 14 pt, notes 14 pt
 - Teacher notes: classroom sections only; retrieval answers in notes only; read-through all slides approx. 45s
@@ -34,7 +34,7 @@ Teacher read-through report: [teacher-read-through.md](teacher-read-through.md)
 
 - Model: `build-scripts/content/book-1/b1-113-presentation-v2-model.js` (ef2c1c7c5204)
 - HTML: `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html` (6407331043ef)
-- PPTX: `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx` (82701ca1f959)
+- PPTX: `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx` (341ea2cbfb08)
 - Slides/notes/PNGs: 8/8/8
 - Font floors: slides 14 pt, notes 14 pt
 - Teacher notes: classroom sections only; retrieval answers in notes only; read-through all slides approx. 45s
