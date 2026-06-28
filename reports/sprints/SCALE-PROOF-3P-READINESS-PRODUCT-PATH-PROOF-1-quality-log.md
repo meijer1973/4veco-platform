@@ -10,6 +10,7 @@ Date: 2026-06-22
 | `node --check build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js` | passed | Syntax check |
 | `node build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js` | passed | Captured 37 rendered screenshots and proof JSON |
 | `npm.cmd run check:scale-proof-3p-product-path` | passed | Focused Scale-proof checker |
+| `node scripts/deploy.js "C:\wt\A96-CALCULATION-ANSWER-FORM-20260624\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"` | passed | Regenerated lesson output after A96 repair |
 | `npm.cmd run check:review-throughput -- reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json` | passed | Active single-account governance packet envelope |
 | `npm.cmd run check:pr-readiness` | passed | PR readiness router tests |
 | `npm.cmd run check:branch-protection` | passed | Live branch-protection checker output reported `ok:true` |
@@ -24,7 +25,7 @@ Date: 2026-06-22
 | `npm.cmd run check:golden-graph-advisory-113` | passed | Existing Golden Graph proof |
 | `npm.cmd run check:platform` | passed | `npm.cmd ci` was required first because the fresh worktree lacked `node_modules` |
 | `git diff --check` | passed | Platform diff hygiene |
-| `git -C C:\wt\SCALE-PROOF-3P-20260622\4veco-lessen diff --check` | passed | Lesson diff hygiene; no lesson changes |
+| `git -C C:\wt\A96-CALCULATION-ANSWER-FORM-20260624\4veco-lessen diff --check` | passed | Lesson diff hygiene after generated A96 output refresh |
 
 ## Quality Notes
 
@@ -49,10 +50,13 @@ Date: 2026-06-22
   `112-learn-desktop-light-uitleg-vaardigheden`, where it appears as ordinary
   didactic explanation text. The hard no-completion-language assertion applies
   to landing, advisory-check, and exit-ticket authority surfaces.
-- No generated lesson output changed in this sprint.
+- The 2026-06-24 refresh regenerated Book 1 lesson output after the A96
+  answer-form repair.
+- The refreshed proof status is `scale_gate_1_ready_for_human_review`; authority
+  flags remain false.
 
 ## Open Risk
 
-`SCALE3P-A96-001` remains open. It blocks Scale Gate 1 closure and downstream
-product/student-use authority until repaired or explicitly waived by human
-review.
+No A96 repository blocker remains in this packet. Scale Gate 1 closure and
+downstream product/student-use authority still require explicit human/owner
+authorization tied to the exact PR head.

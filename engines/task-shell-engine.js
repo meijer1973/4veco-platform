@@ -2022,6 +2022,12 @@
     validateUnitNotation(expected.notation, task.id + '.expected.notation');
     assert(isObject(expected.conclusion), task.id + '.expected.conclusion is required');
     validateRequiredTextGroups(expected.conclusion.requiredTextGroups, task.id + '.expected.conclusion.requiredTextGroups');
+    if (expected.conclusion.rejectText !== undefined) {
+      requireStringArray(expected.conclusion.rejectText, task.id + '.expected.conclusion.rejectText', 1);
+    }
+    if (expected.conclusion.rejectPatterns !== undefined) {
+      requireStringArray(expected.conclusion.rejectPatterns, task.id + '.expected.conclusion.rejectPatterns', 1);
+    }
     if (expected.criteria !== undefined) requireArray(expected.criteria, task.id + '.expected.criteria', 1);
   }
 
@@ -2873,7 +2879,7 @@
       substitution: false,
       finalAnswer: answerFormFinalMatches(response.finalAnswer, expected.finalAnswer),
       notation: unitNotationMatches(response.notation, expected.notation),
-      conclusion: requiredTextGroupsMatch(response.conclusion, expected.conclusion && expected.conclusion.requiredTextGroups)
+      conclusion: conclusionTextMatches(response.conclusion, expected.conclusion)
     };
     var substitution = isObject(response.substitution) ? response.substitution : {};
     parts.substitution = Object.keys(expected.substitution || {}).every(function (fieldId) {
@@ -2940,6 +2946,33 @@
         return needle && normalized.indexOf(needle) !== -1;
       });
     });
+  }
+
+  function rejectedTextMatches(value, rejectText) {
+    var normalized = normalizeText(value);
+    return (rejectText || []).some(function (item) {
+      var needle = normalizeText(item);
+      return needle && normalized.indexOf(needle) !== -1;
+    });
+  }
+
+  function rejectedPatternMatches(value, rejectPatterns) {
+    var normalized = normalizeText(value);
+    return (rejectPatterns || []).some(function (pattern) {
+      try {
+        return new RegExp(pattern, 'i').test(normalized);
+      } catch (_error) {
+        return false;
+      }
+    });
+  }
+
+  function conclusionTextMatches(value, expected) {
+    expected = expected || {};
+    if (!hasValue(value)) return false;
+    if (rejectedTextMatches(value, expected.rejectText)) return false;
+    if (rejectedPatternMatches(value, expected.rejectPatterns)) return false;
+    return requiredTextGroupsMatch(value, expected.requiredTextGroups);
   }
 
   function clozeTextBlankMatches(value, expected) {
