@@ -1,11 +1,11 @@
 # International Quality Standards Roadmap
 
-Status: active internal overlay trial-planning roadmap
+Status: active local-expert/source-refresh gate roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.4-internal-overlay-trial-planning-human-review`
-Sprint status: `GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` current / internal-only overlay trial architecture planning packet for human review
+Roadmap version: `v0.8-bounded-source-refresh-packet-human-review`
+Sprint status: `GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1` current / internal-only England/Flanders bounded source-refresh packet for human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -48,8 +48,14 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md`
 - Accepted selected-deepening sprint:
   `archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-sprint-plan.md`
-- Current internal overlay trial-planning sprint:
+- Accepted internal overlay trial-planning sprint:
   `archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-sprint-plan.md`
+- Accepted internal overlay trial-contract sprint:
+  `archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md`
+- Accepted internal no-output trial-simulation sprint:
+  `archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-sprint-plan.md`
+- Current local-expert/source-refresh gate sprint:
+  `archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md`
 
 ## 2. Non-Negotiable Requirements
 
@@ -144,9 +150,10 @@ diagnostics/mastery/PV, student/product use, personal-data processing,
 compliance, approval, accreditation, OP0, PTA, summative,
 inspection-readiness, or school-owned evidence flows.
 
-## 6. Current Internal Overlay Trial-Planning Scope
+## 6. Completed Internal Overlay Trial-Planning Scope
 
-`GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` may create:
+`GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` was accepted and merged on
+PR #145 and created:
 
 - an internal overlay trial-planning contract;
 - an internal trial plan in Markdown and JSON;
@@ -157,9 +164,13 @@ inspection-readiness, or school-owned evidence flows.
   `STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK`;
 - a manual generator/checker and focused Jest tests;
 - validation, specialist-review, final lead-review, PR proof, and
-  human-review records.
+  human-review records;
+- a decision selecting exactly one of:
+  `PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT`,
+  `SOURCE_REFRESH_BEFORE_TRIAL_CONTRACT`, or
+  `STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK`.
 
-It must not create trial runtime execution, localized overlay output,
+It did not create trial runtime execution, localized overlay output,
 localized textbook chapters, country editions, local implementation,
 local exam-code implementation, teacher/school-facing output, public output,
 evidence-pack deployment, package/CI product integration, dashboard gates,
@@ -169,7 +180,166 @@ accreditation, OP0, PTA, summative, inspection-readiness, school-owned
 evidence collection, support-sufficiency claims, accommodation-sufficiency
 claims, automated source refresh, or local-expert substitution.
 
-## 7. Architecture Direction
+## 7. Completed Internal Overlay Trial-Contract Scope
+
+`GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1` was accepted and merged on
+PR #155 and created:
+
+- a strict nested internal trial-contract schema;
+- complete England and Flanders contracts for Book 1 Chapters 1.2 and 1.3;
+- explicit source, output, freshness, transformation-action, blocker, and
+  review-disposition bindings for every deep-crosswalk row;
+- positive and negative fixtures proving refusal of source, freshness, missing
+  row, implicit discovery, forbidden audience, personal-data, claim, support,
+  accommodation, product-route, and Scale Gate failures;
+- an internal no-output trace in Markdown and JSON;
+- a validation report in Markdown and JSON;
+- a decision report choosing exactly one of:
+  `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION`,
+  `REVISE_TRIAL_CONTRACT`, or
+  `STOP_INTERNAL_OVERLAY_PROTOTYPE_TRACK`;
+- manual generator/checker scripts, focused Jest tests, validation records,
+  specialist reviews, final lead review, PR proof, human-review records, and
+  post-merge CI proof.
+
+It must not create trial runtime execution, localized textbook paragraphs,
+localized exercises, answer models, student-facing files, country editions,
+local implementation, local exam-code implementation, teacher/school-facing
+output, public output, evidence-pack deployment, package/CI product
+integration, dashboard gates, quality-ref or Scale Gate integration, product
+routes, diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative,
+inspection-readiness, school-owned evidence collection, support-sufficiency
+claims, accommodation-sufficiency claims, automated source refresh, or
+local-expert substitution.
+
+## 8. Completed Internal No-Output Trial Simulation Scope
+
+`GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1` was accepted and merged on
+PR #161 and created:
+
+- a strict nested internal no-output trial-simulation schema;
+- deterministic England and Flanders simulation reports over the accepted
+  trial-contract rows;
+- a combined internal simulation report, validation report, and decision
+  report;
+- positive and negative fixtures proving refusal of missing rows, unknown
+  sources, localized output, student-facing output, runtime execution,
+  teacher/school-facing output, public output, personal data, compliance
+  claims, support/accommodation claims, product-route/Scale Gate requests,
+  implicit discovery, source-refresh execution, and decision overclaims;
+- manual generator/checker scripts and focused Jest tests;
+- validation, specialist-review, final lead-review, PR proof, and human-review
+  records.
+
+It must retain every accepted row's route-local-only evidence status,
+school-owned evidence need, forbidden inferences, accessibility/support
+limitations, check-surface authority separation, owner next action, and proof
+required to close.
+
+It must not create trial runtime execution, source-refresh execution, local
+expert substitution, localized textbook paragraphs, localized exercises,
+localized answer models, localized assessment items, student-facing files,
+country editions, local implementation, local exam-code implementation,
+teacher/school-facing output, public output, evidence-pack deployment,
+package/CI product integration, dashboard gates, quality-ref or Scale Gate
+integration, product routes, diagnostics/mastery/PV, student/product use,
+personal-data processing, compliance, approval, accreditation, OP0, PTA,
+summative, inspection-readiness, school-owned evidence collection,
+support-sufficiency claims, or accommodation-sufficiency claims.
+
+The implemented decision selected
+`PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING`. It authorizes only this
+later planning-only local-expert/source-refresh gate. It does not authorize
+source refresh execution or local expert substitution.
+
+## 9. Completed Local Expert Source Refresh Gate Scope
+
+`GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1` was accepted and merged on
+PR #163 and created:
+
+- a strict internal local-expert/source-refresh gate schema;
+- a local expert role contract covering allowed review scope, forbidden
+  authority, source review, curriculum/assessment review, language/terminology
+  review, accessibility/inclusion review, legal-claim boundary, school-owned
+  evidence boundary, uncertainty handling, and required output format;
+- England and Flanders jurisdiction gate docs;
+- deterministic source-refresh protocol records for allowlisted official
+  England and Flanders sources;
+- internal source-refresh gate simulations for valid official source refresh
+  request, stale source, source gap, non-official source, local expert
+  uncertainty, attempted compliance claim, attempted localized output, and
+  attempted school-facing output cases;
+- positive and negative fixtures proving refusal of forbidden source, output,
+  local expert substitution, source refresh execution, personal-data, support,
+  compliance, and jurisdiction-overgeneralisation cases;
+- a planning report and decision report choosing exactly one of:
+  `PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET`,
+  `REVISE_LOCAL_EXPERT_SOURCE_GATE`, or `STOP_LOCAL_OVERLAY_TRACK`;
+- manual generator/checker scripts and focused Jest tests;
+- validation, specialist-review, final lead-review, PR proof, and human-review
+  records.
+
+It must not execute source refresh, contact or substitute local experts,
+produce localized paragraphs, localized exercises, answer models, localized
+assessment items, student-facing files, teacher/school-facing output, public
+output, evidence packs, runtime behavior, package/CI product integration,
+dashboard gates, quality-ref or Scale Gate integration, product routes,
+diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative validity,
+inspection-readiness, support-sufficiency, or accommodation-sufficiency claims.
+
+The implemented decision selected `PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET`.
+It authorizes only this later bounded source-refresh packet. It does not
+authorize source-refresh execution, local expert contact, or local expert
+substitution.
+
+## 10. Current Bounded Source Refresh Packet Scope
+
+`GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1` may create:
+
+- a strict bounded source-refresh packet schema;
+- a packet contract with explicit source and output allowlists;
+- exact England and Flanders source-refresh inventories using only the
+  selected-deepening and gate allowlisted official sources;
+- a refresh-state model covering `unchanged`, `updated_same_source`,
+  `replaced_by_official_successor`, `official_source_unavailable`,
+  `candidate_gap_found`, `out_of_scope_source_found`,
+  `requires_local_expert_interpretation`, and
+  `requires_human_owner_decision`;
+- England and Flanders bounded packet docs;
+- a local expert review request template that forbids legal, compliance,
+  approval, inspection-readiness, school-evidence, student/product-use, and
+  support/accommodation sufficiency claims;
+- deterministic source-refresh simulations for official unchanged, official
+  updated, successor, unavailable, non-official source, whole-UK, all-Belgium,
+  expert-substitution, legal/compliance overclaim, support/accommodation
+  sufficiency overclaim, localized-output, and personal-data cases;
+- positive and negative fixtures proving refusal of forbidden source,
+  execution, expert contact/substitution, output, personal-data, claim,
+  jurisdiction-overgeneralisation, hidden-discovery, state-model, and template
+  failures;
+- a planning report and decision report choosing exactly one source-refresh
+  execution option, revise-packet option, or stop-track option;
+- manual generator/checker scripts and focused Jest tests;
+- validation, specialist-review, final lead-review, PR proof, and human-review
+  records.
+
+It must not execute source refresh, run a source-refresh execution run,
+contact or substitute local experts, produce localized paragraphs, localized
+exercises, answer models, localized assessment items, student-facing files,
+teacher/school-facing output, public output, country editions, evidence packs,
+runtime behavior, package/CI product integration, dashboard gates, quality-ref
+or Scale Gate integration, product routes, diagnostics/mastery/PV,
+student/product use, personal-data processing, compliance, approval,
+accreditation, OP0, PTA, summative validity, inspection-readiness,
+support-sufficiency, accommodation-sufficiency, accessibility/legal
+sufficiency, or school-owned evidence claims.
+
+The implemented decision may select only whether to proceed to a later
+source-refresh execution run. It does not authorize that execution.
+
+## 11. Architecture Direction
 
 The current architecture preserves four layers:
 
@@ -182,7 +352,7 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 8. Core-Requirement Checklist
+## 12. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
@@ -197,27 +367,60 @@ before any implementation.
 | Book 1 Chapters 1.2/1.3 deep crosswalks classify exact local fit, gaps, and transformation needs | closed | England/Flanders deep crosswalk Markdown/JSON and teacher/economics review |
 | Transformation contract remains internal and excludes localized lesson output | closed | `selected-jurisdiction-transformation-contract.md` and refusal tests |
 | Comparative readiness decision selects exactly one allowed option | closed | Selected-jurisdiction readiness comparison and decision reports selected `PROCEED_TO_INTERNAL_OVERLAY_PROTOTYPE_PLANNING` |
-| Internal planning packet binds to accepted selected-deepening decision | current sprint | `internal-overlay-prototype-plan.md/json` and checker PASS |
-| Internal planning packet uses exact input and output allowlists | current sprint | Generator/checker output allowlist and input allowlist checks |
-| Trial planning preserves no-output, no-runtime, no-product-route, and no-school-facing boundaries | current sprint | Refusal matrix and false blocked-authority flags |
-| Future trial contract field families preserve source traceability and blocker display | current sprint | `internal-overlay-prototype-planning-contract.md` |
-| Planning decision selects exactly one allowed option | current sprint | `internal-overlay-prototype-planning-decision.md/json` |
-| Specialist reviews and final lead review are completed before human review | current sprint | Specialist gate record and final lead PASS |
-| Human review happens before any later trial-contract draft authority | current sprint | PR freshness, CI, PR Readiness Reviewer, and human review |
+| Internal planning packet binds to accepted selected-deepening decision | closed | PR #145 accepted and merged |
+| Internal planning packet uses exact input and output allowlists | closed | Generator/checker output allowlist and input allowlist checks |
+| Trial planning preserves no-output, no-runtime, no-product-route, and no-school-facing boundaries | closed | Refusal matrix and false blocked-authority flags |
+| Future trial contract field families preserve source traceability and blocker display | closed | `internal-overlay-prototype-planning-contract.md` |
+| Planning decision selects exactly one allowed option | closed | `internal-overlay-prototype-planning-decision.md/json` selected `PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT` |
+| Specialist reviews and final lead review are completed before human review | closed | PR #145 final lead PASS and human acceptance |
+| Human review happens before any later trial-contract draft authority | closed | PR #145 readiness proof, owner authorization, merge, and post-merge CI |
+| Internal trial contract schema covers authority, source, scope, transformation, blocker, review, freshness, no-output, refusal, and closure fields | closed | PR #155 accepted, merged, and post-merge CI passed |
+| England and Flanders contracts bind all Book 1 1.2/1.3 crosswalk rows | closed | `england-internal-overlay-trial-contract.md/json`, `flanders-internal-overlay-trial-contract.md/json`, checker PASS, and PR #155 accepted |
+| Contract rows use strict transformation-action vocabulary | closed | `check-internal-overlay-trial-contract.js`, focused Jest PASS, and PR #155 accepted |
+| No-output trace excludes localized paragraphs, exercises, answer models, and student-facing files | closed | `internal-overlay-no-output-trial-trace.md/json`, checker PASS, and PR #155 accepted |
+| Positive and negative fixtures prove source, freshness, row, discovery, audience, personal-data, claim, support/accommodation, product, and Scale Gate refusals | closed | `references/data/inspection-standards/fixtures/internal-overlay-trial-contract/**`, checker PASS, and PR #155 accepted |
+| Trial-contract decision selects exactly one allowed option | closed | `internal-overlay-trial-contract-decision.md/json` selected `PROCEED_TO_INTERNAL_NO_OUTPUT_TRIAL_SIMULATION`; PR #155 accepted and merged |
+| Specialist reviews and final lead review are completed before human review | closed | Specialist records, final lead PASS, exact-head readiness, and PR #155 human acceptance |
+| Human review happens before any no-output trial simulation authority | closed | PR #155 governed integration, merge, and post-merge CI |
+| Internal no-output simulation schema covers accepted contract lineage, source policy, row simulation, retained blocker display, no-output flags, refusal conditions, and finding classification | closed | PR #161 accepted, governed integration completed, and post-merge CI passed |
+| England and Flanders simulations bind all accepted trial-contract rows | closed | `england-internal-no-output-trial-simulation.md/json`, `flanders-internal-no-output-trial-simulation.md/json`, checker PASS, PR #161 accepted |
+| Simulation rows retain route-local-only status, school-owned evidence needs, forbidden inferences, accessibility/support limitations, check-surface separation, owner next action, and proof required to close | closed | Simulation JSON rows, checker PASS, and PR #161 accepted |
+| No-output simulation excludes runtime execution, source refresh execution, local expert substitution, localized output, student-facing files, teacher/school-facing output, public output, evidence packs, and personal-data fields | closed | No-output flags, fixtures, checker PASS, and PR #161 accepted |
+| Positive and negative fixtures prove missing-row, unknown-source, output, runtime, audience, personal-data, claim, product/Scale Gate, implicit-discovery, source-refresh, and overclaim refusals | closed | `references/data/inspection-standards/fixtures/internal-no-output-trial-simulation/**`, checker PASS, and PR #161 accepted |
+| Simulation decision selects exactly one allowed option | closed | `internal-no-output-trial-simulation-decision.md/json` selects `PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING`; PR #161 accepted |
+| Specialist reviews and final lead review are completed before human review | closed | PR #161 specialist records, final lead PASS, exact-head readiness, payload authorization, and governed integration |
+| Human review happens before any local-expert/source-refresh gate planning authority | closed | PR #161 human payload authorization and governed integration |
+| Local expert role contract defines allowed scope and forbidden authority | closed | PR #163 accepted, governed integration completed, and post-merge CI passed |
+| Source-refresh protocol distinguishes unchanged, updated, replaced, unavailable, gap, and outside-scope conditions | closed | `local-expert-source-refresh-gate-plan.md/json`, jurisdiction simulations, checker PASS, and PR #163 accepted |
+| England gate covers DfE, Ofsted, AQA boundary, SEND/accessibility, and England-only/not-whole-UK limits | closed | `england-local-expert-source-gate.md`, England simulation checker PASS, and PR #163 accepted |
+| Flanders gate covers Onderwijsdoelen, OK framework, study-direction/school-network, assessment-status, and Flanders-only/not-all-Belgium limits | closed | `flanders-local-expert-source-gate.md`, Flanders simulation checker PASS, and PR #163 accepted |
+| Gate simulation refuses forbidden source, output, expert-substitution, personal-data, support, compliance, and jurisdiction-overgeneralisation cases | closed | `references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/**`, checker PASS, and PR #163 accepted |
+| Local-expert/source-refresh gate decision selects exactly one allowed option | closed | `local-expert-source-refresh-gate-decision.md/json` selects `PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET`; PR #163 accepted |
+| Specialist reviews and final lead review are completed before human review | closed | PR #163 specialist records, final lead PASS, exact-head readiness, payload authorization, governed integration, and post-merge CI |
+| Human review happens before any bounded source-refresh packet authority | closed | PR #163 human payload authorization and governed integration |
+| Bounded packet source inventory uses only allowlisted official England and Flanders sources | current sprint | `england-bounded-source-refresh-simulation.md/json`, `flanders-bounded-source-refresh-simulation.md/json`, and checker PASS |
+| Refresh-state model includes all required states and closure fields | current sprint | `bounded-source-refresh-packet-contract.md`, plan JSON, jurisdiction simulations, and checker PASS |
+| England packet covers DfE, Ofsted EIF, Ofsted operating guide, selected AQA boundary, SEND/accessibility, and England-only/not-whole-UK limits | current sprint | `england-bounded-source-refresh-packet.md` and England simulation checker PASS |
+| Flanders packet covers Onderwijsdoelen, OK framework, assessment-status, study-direction/school-network, accessibility/support, and Flanders-only/not-all-Belgium limits | current sprint | `flanders-bounded-source-refresh-packet.md` and Flanders simulation checker PASS |
+| Local expert review request template forbids legal, compliance, approval, inspection-readiness, school-evidence, student/product-use, and support/accommodation sufficiency claims | current sprint | `local-expert-review-request-template.md`, plan JSON, and checker PASS |
+| Bounded packet simulations and fixtures refuse forbidden source, execution, expert, output, personal-data, claim, jurisdiction-overclaim, hidden-discovery, state-model, and template failures | current sprint | `references/data/inspection-standards/fixtures/bounded-source-refresh-packet/**` and checker PASS |
+| Bounded source-refresh packet decision selects exactly one allowed option | current sprint | `bounded-source-refresh-packet-decision.md/json` selects the source-refresh execution option |
+| Specialist reviews and final lead review are completed before human review | current sprint | Required before this PR can return for human review |
+| Human review happens before any source-refresh execution-run authority | current sprint | PR freshness, CI, PR Readiness Reviewer, branch protection, and human review |
 
-## 9. Candidate Future Sprints
+## 13. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-DRAFT-1` | If the human owner accepts `PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT`, draft a non-executing internal trial contract with schema/fixture boundaries only. | not authorised until human acceptance |
-| `GOAL-IQS-SOURCE-REFRESH-1` | Refresh sources and resolve source gaps for a selected subset of jurisdictions. | not authorised |
+| `GOAL-IQS-SOURCE-REFRESH-EXECUTION-RUN-1` | If the human owner accepts the source-refresh execution option, execute a reviewed source-refresh run using only the bounded packet's official source rows. | not authorised until human acceptance |
+| `GOAL-IQS-SOURCE-REFRESH-1` | Broader source refresh and source-gap resolution for selected jurisdictions after any reviewed execution run. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 10. Explicitly Blocked Work
+## 14. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -243,26 +446,35 @@ support-sufficiency claim
 accommodation-sufficiency claim
 trial runtime execution
 localized overlay output generation
+localized textbook paragraph generation
+localized exercise generation
+localized answer-model generation
+student-facing file generation
 fixture-to-product promotion
 automated source refresh
 local expert substitution
+local expert contact
+source-refresh execution run
+hidden source discovery
 ```
 
-## 11. Current Recommended Next Step
+## 15. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1 planning packet after
-specialist reviews, final lead review, PR publication, branch freshness, and
-green CI are complete.
+Review the GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1 packet after specialist
+reviews, final lead review, PR publication, branch freshness, branch
+protection, PR Readiness Reviewer, and green CI are complete.
 ```
 
-Human acceptance of `GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1` may
-authorise only a later internal trial-contract draft sprint. It must not
-unlock trial runtime execution, country implementation, localized textbook
-or overlay output, school or public distribution, product routes, Scale Gate,
+Human acceptance of `GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1` may authorise
+only a later source-refresh execution run. It must not itself execute source
+refresh, contact local experts, substitute local experts, unlock trial runtime
+execution, country implementation, localized textbook or overlay output,
+localized exercises, answer models, assessment items, student-facing files,
+school or public distribution, product routes, Scale Gate,
 diagnostics/mastery/PV, student/product use, personal-data processing,
-compliance, approval, accreditation, OP0, PTA, summative, or
-inspection-readiness, support-sufficiency, or accommodation-sufficiency
-claims.
+compliance, approval, accreditation, OP0, PTA, summative,
+inspection-readiness, support-sufficiency, accommodation-sufficiency, or
+accessibility/legal sufficiency claims.

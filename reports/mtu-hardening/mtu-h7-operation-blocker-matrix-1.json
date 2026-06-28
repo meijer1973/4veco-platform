@@ -1,0 +1,1892 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-OPERATION-REGISTRY-GOVERNANCE-AND-HOLDOUT-ADJUDICATION-BUNDLE-1",
+  "matrix_id": "mtu-h7-operation-blocker-matrix-1",
+  "review_standard": "REV-STD-1",
+  "status": "hold_matrix_complete_for_human_review",
+  "generated_at": "2026-06-28T07:14:59.586Z",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "summary": {
+    "review_required_records": 7,
+    "review_required_operations": 10,
+    "primary_routes": [
+      "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "READY_FOR_HUMAN_H7_CLOSURE_REVIEW",
+      "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE"
+    ],
+    "protected_governance_operation_count": 7,
+    "reviewed_equivalent_candidate_count": 2,
+    "graph_source_hold_count": 1
+  },
+  "records": [
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_count": 2,
+      "review_required_operation_count": 1,
+      "final_routes": [
+        "HOLD_FOR_CANONICAL_MTU_GOVERNANCE"
+      ],
+      "primary_route": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "candidate_packet_ids": [
+        "H7-CAND-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART"
+      ],
+      "blockers": [
+        "H7-BLOCKER-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART"
+      ]
+    },
+    {
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "operation_count": 2,
+      "review_required_operation_count": 2,
+      "final_routes": [
+        "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      ],
+      "primary_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "candidate_packet_ids": [
+        "H7-CAND-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+        "H7-CAND-OP-ULTIMATUM-MARGIN-PAYOFF"
+      ],
+      "blockers": [
+        "H7-BLOCKER-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+        "H7-BLOCKER-OP-ULTIMATUM-MARGIN-PAYOFF"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "split": "diagnostic",
+      "operation_count": 2,
+      "review_required_operation_count": 1,
+      "final_routes": [
+        "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      ],
+      "primary_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "candidate_packet_ids": [
+        "H7-CAND-OP-GAME-TREE-NASH-BACKWARD-COMPARISON"
+      ],
+      "blockers": [
+        "H7-BLOCKER-OP-GAME-TREE-NASH"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "split": "diagnostic",
+      "operation_count": 2,
+      "review_required_operation_count": 1,
+      "final_routes": [
+        "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      ],
+      "primary_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "candidate_packet_ids": [
+        "H7-CAND-OP-FIXED-VARIABLE-CURRENCY-INSURANCE-COST-BENEFIT"
+      ],
+      "blockers": [
+        "H7-BLOCKER-PROCEDURE-INSURANCE-COST-BENEFIT"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_count": 2,
+      "review_required_operation_count": 2,
+      "final_routes": [
+        "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      ],
+      "primary_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "candidate_packet_ids": [
+        "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE"
+      ],
+      "blockers": [
+        "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-FIRST",
+        "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-SECOND"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_count": 2,
+      "review_required_operation_count": 2,
+      "final_routes": [
+        "READY_FOR_HUMAN_H7_CLOSURE_REVIEW"
+      ],
+      "primary_route": "READY_FOR_HUMAN_H7_CLOSURE_REVIEW",
+      "candidate_packet_ids": [
+        "H7-CAND-ANSWER-FORM-GO-MO-SUBSIDY-LINE-DRAWING"
+      ],
+      "blockers": [
+        "H7-BLOCKER-ANSWER-FORM-GO-LINE-SUBSIDY",
+        "H7-BLOCKER-ANSWER-FORM-MO-LINE-SUBSIDY"
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "split": "locked_holdout",
+      "operation_count": 1,
+      "review_required_operation_count": 1,
+      "final_routes": [
+        "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE"
+      ],
+      "primary_route": "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE",
+      "candidate_packet_ids": [
+        "H7-CAND-GRAPH-TOTAL-SUBSIDY-SHADING-MULTI-ACCEPTED"
+      ],
+      "blockers": [
+        "H7-BLOCKER-GRAPH-Q5-TOTAL-SUBSIDY-SHADING"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "blocker_id": "H7-BLOCKER-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "question_word": "toon_met_een_berekening_aan",
+      "answer_model_summary": "Ratio falls from 4.1 to about 3.9, so income differences narrow.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "source_locator": {
+        "exam": "ha-1022-a-23-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "34f60793a0ae25efa33e3ddc4bb9f7b4b243fa6cd36ce2ec9277e272e57d365a"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+          "source_pdf_sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "15651a69123775d21c679a4edf84b1afc0a0edebbebe7edfc3dd4b8817436b4c"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "H04",
+        "A81",
+        "A96",
+        "H08",
+        "A38"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "tax_brackets",
+        "tax_credits",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "income_distribution",
+        "ratio_comparison"
+      ],
+      "expected_required_mtu_ids": [
+        "H08",
+        "A38",
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "H08",
+        "A38",
+        "A81",
+        "A96"
+      ],
+      "expected_route_tags": [
+        "calculation",
+        "income_distribution",
+        "ratio_comparison",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_DENIVELLERING_LABEL_REVERSED"
+      ],
+      "expected_defect_class": "canonical_mtu_governance_need",
+      "review_required_hooks": [
+        "canonical_mtu_governance_need:nivellering_positive_counterpart_to_H08"
+      ],
+      "missing_mtu_expected": false,
+      "final_route": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "decision": "do_not_close_from_existing_H08_without_human_canonical_decision",
+      "existing_fit_assessment": "H08 is mapped because the official correction proves income differences narrow, but the registry label says denivellering while its kern says tax changes shrink differences. That tension is canonical registry governance, not a fixture repair.",
+      "needed_governance": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+      "candidate_packet_id": "H7-CAND-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "safe_interim_action": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
+      "closure_authority_required": "canonical_mtu_governance_owner",
+      "canonical_unit_fits": [
+        {
+          "id": "H08",
+          "name": "Denivellering en progressieve belasting",
+          "kern": "Denivellering treedt op wanneer belastingveranderingen het verschil in netto-inkomsten tussen inkomensgroepen verkleinen.",
+          "mastery_target": "understand",
+          "procedure": []
+        },
+        {
+          "id": "A38",
+          "name": "Procentuele verandering berekenen",
+          "kern": "Bereken de procentuele verandering met %Δ = (nieuw − oud) / oud × 100, en pas dit toe op prijzen, hoeveelheden, indexcijfers en reële variabelen.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Identificeer de oude en nieuwe waarde — let op welke het basisjaar / uitgangspunt is.",
+            "Bereken het absolute verschil (nieuw − oud).",
+            "Deel door de oude waarde en vermenigvuldig met 100.",
+            "Controleer het teken: stijging positief, daling negatief."
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        },
+        {
+          "id": "A96",
+          "name": "Bereken-vraag beantwoorden",
+          "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+            "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+            "Vul de gegevens zichtbaar in met labels.",
+            "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+            "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A15",
+          "name": "Prijselasticiteit van de vraag",
+          "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Noteer de oude en nieuwe waarden van P en Q.",
+            "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+            "Bereken Ev = %ΔQv / %ΔP.",
+            "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+            "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q15-denivellering-label-reversal",
+        "expected_failure_defect_class": "canonical_mtu_governance_need",
+        "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
+        "guard": "A smaller high/low net-income ratio must not silently close as denivellering."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "question_word": "bereken",
+      "answer_model_summary": "Snel keeps the budget amount less the agreed transfer.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "source_locator": {
+        "exam": "ha-1022-a-24-1-o",
+        "opgave_num": 2,
+        "question_num": 12,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+          "rendered_png_sha256": "819492e8638d7e8e7b9dc68813a9e01192d8d35bf91a61d99492a84ea4cacf31"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png",
+          "rendered_png_sha256": "072370c8b6c86a8f76f50d3440dab0921713adcef38926a17ca463d43b667643"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "residual_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "margin_payoff"
+      ],
+      "expected_required_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "F12"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "A81",
+        "A96"
+      ],
+      "expected_route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "residual_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_NASH_USED_FOR_DIRECT_PAYOFF"
+      ],
+      "expected_defect_class": "operation_registry_need",
+      "review_required_hooks": [
+        "operation_registry_need:ultimatum_game_residual_payoff"
+      ],
+      "missing_mtu_expected": true,
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision": "operation_registry_candidate_needed",
+      "existing_fit_assessment": "A81 and A96 cover source use and calculational answer form; F12 must stay forbidden because the official operation is direct residual payoff arithmetic inside an ultimatum setting, not Nash-in-matrix selection.",
+      "needed_governance": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+      "closure_authority_required": "operation_registry_governance_owner",
+      "canonical_unit_fits": [
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        },
+        {
+          "id": "A96",
+          "name": "Bereken-vraag beantwoorden",
+          "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+            "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+            "Vul de gegevens zichtbaar in met labels.",
+            "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+            "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "F12",
+          "name": "Nash-evenwicht in pay-off matrix",
+          "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
+            "Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling",
+            "Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht",
+            "Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen",
+            "Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken"
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q12-f12-overtrigger-residual",
+        "expected_failure_defect_class": "over_trigger",
+        "mutation": "Map F12 to the residual-payoff operation.",
+        "guard": "Direct payoff arithmetic must not be closed by Nash pay-off matrix coverage."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+      "question_word": "bereken",
+      "answer_model_summary": "Sprinter keeps the accepted price less marginal cost.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "source_locator": {
+        "exam": "ha-1022-a-24-1-o",
+        "opgave_num": 2,
+        "question_num": 12,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+          "rendered_png_sha256": "819492e8638d7e8e7b9dc68813a9e01192d8d35bf91a61d99492a84ea4cacf31"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png",
+          "rendered_png_sha256": "072370c8b6c86a8f76f50d3440dab0921713adcef38926a17ca463d43b667643"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "residual_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "margin_payoff"
+      ],
+      "expected_required_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "F12"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "A81",
+        "A96"
+      ],
+      "expected_route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "margin_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_RESPONDER_PAYOFF_WITHOUT_COST"
+      ],
+      "expected_defect_class": "operation_registry_need",
+      "review_required_hooks": [
+        "operation_registry_need:ultimatum_game_margin_payoff"
+      ],
+      "missing_mtu_expected": true,
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision": "operation_registry_candidate_needed",
+      "existing_fit_assessment": "A81 and A96 cover source use and answer form; no current canonical operation captures accepted price less marginal cost inside the ultimatum-game payoff table.",
+      "needed_governance": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+      "closure_authority_required": "operation_registry_governance_owner",
+      "canonical_unit_fits": [
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        },
+        {
+          "id": "A96",
+          "name": "Bereken-vraag beantwoorden",
+          "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+            "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+            "Vul de gegevens zichtbaar in met labels.",
+            "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+            "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "F12",
+          "name": "Nash-evenwicht in pay-off matrix",
+          "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
+            "Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling",
+            "Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht",
+            "Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen",
+            "Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken"
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q12-cost-omitted-margin",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
+        "guard": "The margin-payoff operation must retain the marginal-cost subtraction."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-OP-GAME-TREE-NASH",
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "question_word": "leg_uit_dat",
+      "answer_model_summary": "The official model compares payoffs in a game tree, not a simple matrix.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-23-2-o",
+        "opgave_num": 4,
+        "question_num": 20,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 9,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-09-09.png",
+          "rendered_png_sha256": "bf769fc0f821173b260172f6308cbe963432cdf25504e5da2bf5a6343c0d111e"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+          "page_number": 10,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-10-10.png",
+          "rendered_png_sha256": "c739b184b21efd344e82083ab29766c42888f32623cb2227ed04ec8148c7dec5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+          "source_pdf_sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-correction-11-11.png",
+          "rendered_png_sha256": "f0b01082dbde37edfc31020abaf7fa5561c86dd4675551366dde748fe2a26d24"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "F12",
+        "A81",
+        "A97",
+        "I07",
+        "I12",
+        "I19"
+      ],
+      "mapped_route_tags": [
+        "game_theory",
+        "game_tree",
+        "nash_equilibrium",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "macro_model",
+        "monetary_policy",
+        "inflation",
+        "international_competitiveness"
+      ],
+      "expected_required_mtu_ids": [
+        "F12",
+        "A81",
+        "A97"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15",
+        "F04"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A97"
+      ],
+      "expected_procedure_unit_ids": [
+        "F12",
+        "A81",
+        "A97"
+      ],
+      "expected_route_tags": [
+        "game_theory",
+        "game_tree",
+        "nash_equilibrium",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q20_MATRIX_SHORTCUT_MISREADS_GAME_TREE"
+      ],
+      "expected_defect_class": "operation_registry_need",
+      "review_required_hooks": [
+        "operation_registry_need:game_tree_nash_equilibrium"
+      ],
+      "missing_mtu_expected": true,
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision": "operation_registry_candidate_needed",
+      "existing_fit_assessment": "F12 names and procedures Nash equilibrium in a pay-off matrix. The official q20 evidence uses a sequential game tree and payoff comparison, so F12 is only a partial concept anchor and must not be the whole closure mechanism.",
+      "needed_governance": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+      "candidate_packet_id": "H7-CAND-OP-GAME-TREE-NASH-BACKWARD-COMPARISON",
+      "safe_interim_action": "Keep review_required and keep matrix-shortcut misconception guard.",
+      "closure_authority_required": "operation_registry_governance_owner",
+      "canonical_unit_fits": [
+        {
+          "id": "F12",
+          "name": "Nash-evenwicht in pay-off matrix",
+          "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
+            "Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling",
+            "Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht",
+            "Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen",
+            "Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken"
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        },
+        {
+          "id": "A97",
+          "name": "Leg-uit-dat antwoord opbouwen",
+          "kern": "Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Neem de conclusie uit de vraag over als eindpunt van je antwoord.",
+            "Bepaal welke economische oorzaak of gegeven in de context het startpunt is.",
+            "Schrijf de eerste causale schakel met het juiste begrip of mechanisme.",
+            "Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.",
+            "Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A15",
+          "name": "Prijselasticiteit van de vraag",
+          "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Noteer de oude en nieuwe waarden van P en Q.",
+            "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+            "Bereken Ev = %ΔQv / %ΔP.",
+            "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+            "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+          ]
+        },
+        {
+          "id": "F04",
+          "name": "Dominante strategieën in pay-off matrix",
+          "kern": "Identificeer dominante strategieën van beide spelers in een pay-off matrix en bepaal de uitkomst waarbij elke speler zijn dominante strategie kiest.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Noteer voor elke speler de uitbetalingen bij elke combinatie van strategieen uit de pay-off matrix",
+            "Vergelijk per speler de uitbetalingen per kolom (speler 1) of rij (speler 2) en onderstreep de hoogste per strategie van de tegenspeler",
+            "Controleer of er een strategie is die voor een speler altijd de hoogste uitbetaling geeft: dat is zijn dominante strategie",
+            "Herhaal voor de tegenspeler en benoem de uitkomstcel waar beide dominante strategieen samenkomen",
+            "Interpreteer de uitkomst economisch: welke winst behaalt elke speler en is dit gezamenlijk optimaal?"
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q20-matrix-shortcut",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Close q20 using only F12 matrix procedure text.",
+        "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-PROCEDURE-INSURANCE-COST-BENEFIT",
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "question_word": "bereken",
+      "answer_model_summary": "Insurance cost is subtracted from the avoided loss to determine the net benefit.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-24-1-o",
+        "opgave_num": 3,
+        "question_num": 17,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-07-07.png",
+          "rendered_png_sha256": "28aebd8aff85cf7ed477aee445e05f29d421fae3d9900c8160b1b4ef89e9b7bf"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-08-08.png",
+          "rendered_png_sha256": "3d006a5bc381c5d9bbe8d628d65283ca84a2176d055764ae3189c73b267307f1"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-correction-11-11.png",
+          "rendered_png_sha256": "57d593d7b91bb589b254c88fea484d12d83c34febd1c96a018f7bee22caacf91"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "H24",
+        "G11",
+        "A88",
+        "A81",
+        "A96",
+        "A38",
+        "G12"
+      ],
+      "mapped_route_tags": [
+        "calculation",
+        "exchange_rate",
+        "currency_conversion",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "insurance_cost",
+        "currency_risk"
+      ],
+      "expected_required_mtu_ids": [
+        "A38",
+        "G12",
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "A38",
+        "G12",
+        "A81",
+        "A96"
+      ],
+      "expected_route_tags": [
+        "calculation",
+        "insurance_cost",
+        "currency_risk",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q17_PREMIUM_MONTH_FACTOR_OMITTED"
+      ],
+      "expected_defect_class": "procedure_fit_gap",
+      "review_required_hooks": [
+        "procedure_fit_gap:G12_expected_damage_unit_only_partly_matches_fixed_variable_currency_insurance_cost"
+      ],
+      "missing_mtu_expected": false,
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision": "procedure_or_operation_registry_candidate_needed",
+      "existing_fit_assessment": "G12 covers expected-damage premium calculation. The official q17 operation combines fixed and monthly currency-insurance costs and subtracts them from avoided exchange-rate loss, so the current procedure is only a partial fit.",
+      "needed_governance": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+      "candidate_packet_id": "H7-CAND-OP-FIXED-VARIABLE-CURRENCY-INSURANCE-COST-BENEFIT",
+      "safe_interim_action": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
+      "closure_authority_required": "operation_registry_governance_owner",
+      "canonical_unit_fits": [
+        {
+          "id": "A38",
+          "name": "Procentuele verandering berekenen",
+          "kern": "Bereken de procentuele verandering met %Δ = (nieuw − oud) / oud × 100, en pas dit toe op prijzen, hoeveelheden, indexcijfers en reële variabelen.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Identificeer de oude en nieuwe waarde — let op welke het basisjaar / uitgangspunt is.",
+            "Bereken het absolute verschil (nieuw − oud).",
+            "Deel door de oude waarde en vermenigvuldig met 100.",
+            "Controleer het teken: stijging positief, daling negatief."
+          ]
+        },
+        {
+          "id": "G12",
+          "name": "Verzekeringspremie berekenen uit verwachte schade",
+          "kern": "Bereken een verzekeringspremie als verwachte schade (kans × schadebedrag) plus opslag voor administratiekosten en risico-/winstmarge; interpreteer verschillen in premie tussen risicogroepen.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Bepaal de kans p op schade (per verzekerde per periode).",
+            "Bepaal het te verzekeren schadebedrag S (vaste claim of gemiddelde claim).",
+            "Bereken de verwachte schade = p × S.",
+            "Voeg de opslag toe (administratiekosten, risico-marge, winst) om de premie te krijgen.",
+            "Controleer: bij een homogene risicogroep moet de totaalpremie de totale verwachte schade plus opslag dekken; bij een gemengde groep leidt één uniforme premie tot solidariteit tussen hoge- en lage-risicoverzekerden."
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        },
+        {
+          "id": "A96",
+          "name": "Bereken-vraag beantwoorden",
+          "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+            "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+            "Vul de gegevens zichtbaar in met labels.",
+            "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+            "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A15",
+          "name": "Prijselasticiteit van de vraag",
+          "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Noteer de oude en nieuwe waarden van P en Q.",
+            "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+            "Bereken Ev = %ΔQv / %ΔP.",
+            "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+            "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q17-premium-month-factor-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
+        "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-FIRST",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "question_word": "teken",
+      "answer_model_summary": "GA1 and MB1 shift according to expected-minus-realized inflation and a one-point real-rate reduction.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-24-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "f577e33564069eeab0e7691d65ac25dbbb0a20e5eac5d8865a5b36fea36fb574"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+          "rendered_png_sha256": "dabb49c1a6618281b863cb7a1e33fefddb343f6562a71dac0ec05876806cf7a5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+          "source_pdf_sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "8538534d4d278741927acbcad2de4c38de35407337d734ed3ae54bec6f23f5e2"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "mapped_route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "time_sequence",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "table_completion"
+      ],
+      "expected_required_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A45"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "expected_route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "time_sequence",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_MACRO_CURVE_SEQUENCE_OR_SCALE"
+      ],
+      "expected_defect_class": "procedure_fit_gap",
+      "review_required_hooks": [
+        "procedure_fit_gap:A42_generic_market_shift_not_sufficient_for_multi_period_IS_MB_GA_sequence"
+      ],
+      "missing_mtu_expected": false,
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision": "procedure_or_operation_registry_candidate_needed",
+      "existing_fit_assessment": "I07 covers IS-MB-GA analysis broadly and A42 covers generic graph shifts. The official q15 operation requires a period-specific GA1/MB1 sequence from expected-minus-realized inflation and real-rate reduction.",
+      "needed_governance": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "safe_interim_action": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
+      "closure_authority_required": "operation_registry_governance_owner",
+      "canonical_unit_fits": [
+        {
+          "id": "I07",
+          "name": "IS-MB-GA-model: outputgap en inflatie",
+          "kern": "Analyseer met het IS-MB-GA-model hoe een schok via outputgap en inflatie doorwerkt op rente, bbp en prijsniveau.",
+          "mastery_target": "analyze",
+          "procedure": [
+            "Teken IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel) en GA-curve (π stijgend in outputgap Y − Y*). Label assen: r verticaal voor IS-MB, π verticaal voor GA.",
+            "Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y.",
+            "Bepaal welke curve verschuift door de schok (vraagschok → IS, aanbodschok → GA) en teken de verschuiving.",
+            "Lees het nieuwe snijpunt af: nieuwe Y, outputgap Y − Y*, nieuwe r en nieuwe π via de GA-curve.",
+            "Beschrijf de reactie van de centrale bank volgens de MB-regel (zie I05) en de terugkeer naar Y*."
+          ]
+        },
+        {
+          "id": "A42",
+          "name": "Grafische verschuiving met voor-en-na pijlen",
+          "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Teken de oorspronkelijke curve, label duidelijk (D of S).",
+            "Teken de verschoven curve in een andere kleur of stippellijn, label als D' of S'.",
+            "Plaats pijlen bij twee representatieve punten op de oude curve die naar de nieuwe curve wijzen — pijlen horizontaal, want hoeveelheid bij gelijke prijs verandert.",
+            "Geef het oude en nieuwe evenwichtspunt aan (E en E')."
+          ]
+        },
+        {
+          "id": "A40",
+          "name": "Welvaartsgebied op P–Q diagram arceren",
+          "kern": "Identificeer en arceer de juiste welvaartsregio op een P–Q diagram: consumentensurplus, producentensurplus, belastingopbrengst-rechthoek, welvaartsverlies-driehoek, subsidie-rechthoek, monopoliewinst-rechthoek, of tarief-DWL.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Identificeer welke grootheid gevraagd wordt (CS, PS, TS, DWL, belastingopbrengst, subsidiekosten, monopoliewinst, Harberger-driehoek).",
+            "Lokaliseer de grenzen: welke curve zit boven, welke onder, op welke Q-interval.",
+            "Teken de gesloten figuur met duidelijk gemarkeerde hoekpunten en label het gebied (CS / PS / DWL / ...).",
+            "Controleer: past de figuur bij de definitie? (CS ligt tussen vraag en prijs; PS tussen prijs en aanbod; DWL tussen Q_oud en Q_nieuw)."
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A45",
+          "name": "P-Q grafiek tekenen uit tabel",
+          "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Zet prijs op de verticale as en hoeveelheid op de horizontale as.",
+            "Kies een passende schaal op beide assen.",
+            "Plaats elk punt uit de tabel in de grafiek.",
+            "Verbind de punten alleen als de context een lijn of curve ondersteunt."
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q15-macro-one-step-only",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
+        "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-SECOND",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+      "question_word": "teken",
+      "answer_model_summary": "GA2/MB2 plus final r and inflation values complete the official graph/table answer.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-24-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "f577e33564069eeab0e7691d65ac25dbbb0a20e5eac5d8865a5b36fea36fb574"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+          "rendered_png_sha256": "dabb49c1a6618281b863cb7a1e33fefddb343f6562a71dac0ec05876806cf7a5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+          "source_pdf_sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "8538534d4d278741927acbcad2de4c38de35407337d734ed3ae54bec6f23f5e2"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "mapped_route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "time_sequence",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "table_completion"
+      ],
+      "expected_required_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A45"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "expected_route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "table_completion",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_FINAL_R_PI_OMITTED"
+      ],
+      "expected_defect_class": "procedure_fit_gap",
+      "review_required_hooks": [
+        "procedure_fit_gap:A42_generic_market_shift_not_sufficient_for_multi_period_IS_MB_GA_sequence"
+      ],
+      "missing_mtu_expected": false,
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision": "procedure_or_operation_registry_candidate_needed",
+      "existing_fit_assessment": "I07 and A42 are partial anchors, but the official second operation requires GA2/MB2 plus final r and inflation table completion.",
+      "needed_governance": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "safe_interim_action": "Keep table_completion route tag and review_required.",
+      "closure_authority_required": "operation_registry_governance_owner",
+      "canonical_unit_fits": [
+        {
+          "id": "I07",
+          "name": "IS-MB-GA-model: outputgap en inflatie",
+          "kern": "Analyseer met het IS-MB-GA-model hoe een schok via outputgap en inflatie doorwerkt op rente, bbp en prijsniveau.",
+          "mastery_target": "analyze",
+          "procedure": [
+            "Teken IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel) en GA-curve (π stijgend in outputgap Y − Y*). Label assen: r verticaal voor IS-MB, π verticaal voor GA.",
+            "Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y.",
+            "Bepaal welke curve verschuift door de schok (vraagschok → IS, aanbodschok → GA) en teken de verschuiving.",
+            "Lees het nieuwe snijpunt af: nieuwe Y, outputgap Y − Y*, nieuwe r en nieuwe π via de GA-curve.",
+            "Beschrijf de reactie van de centrale bank volgens de MB-regel (zie I05) en de terugkeer naar Y*."
+          ]
+        },
+        {
+          "id": "A42",
+          "name": "Grafische verschuiving met voor-en-na pijlen",
+          "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Teken de oorspronkelijke curve, label duidelijk (D of S).",
+            "Teken de verschoven curve in een andere kleur of stippellijn, label als D' of S'.",
+            "Plaats pijlen bij twee representatieve punten op de oude curve die naar de nieuwe curve wijzen — pijlen horizontaal, want hoeveelheid bij gelijke prijs verandert.",
+            "Geef het oude en nieuwe evenwichtspunt aan (E en E')."
+          ]
+        },
+        {
+          "id": "A40",
+          "name": "Welvaartsgebied op P–Q diagram arceren",
+          "kern": "Identificeer en arceer de juiste welvaartsregio op een P–Q diagram: consumentensurplus, producentensurplus, belastingopbrengst-rechthoek, welvaartsverlies-driehoek, subsidie-rechthoek, monopoliewinst-rechthoek, of tarief-DWL.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Identificeer welke grootheid gevraagd wordt (CS, PS, TS, DWL, belastingopbrengst, subsidiekosten, monopoliewinst, Harberger-driehoek).",
+            "Lokaliseer de grenzen: welke curve zit boven, welke onder, op welke Q-interval.",
+            "Teken de gesloten figuur met duidelijk gemarkeerde hoekpunten en label het gebied (CS / PS / DWL / ...).",
+            "Controleer: past de figuur bij de definitie? (CS ligt tussen vraag en prijs; PS tussen prijs en aanbod; DWL tussen Q_oud en Q_nieuw)."
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A45",
+          "name": "P-Q grafiek tekenen uit tabel",
+          "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Zet prijs op de verticale as en hoeveelheid op de horizontale as.",
+            "Kies een passende schaal op beide assen.",
+            "Plaats elk punt uit de tabel in de grafiek.",
+            "Verbind de punten alleen als de context een lijn of curve ondersteunt."
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q15-final-r-pi-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
+        "guard": "The graph-and-table operation must not close from graph movement alone."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-ANSWER-FORM-GO-LINE-SUBSIDY",
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+      "question_word": "teken",
+      "answer_model_summary": "The GO line shifts to reflect the subsidy-inclusive willingness to pay.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+          "source_pdf_sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-prompt-03-03.png",
+          "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+          "source_pdf_sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-correction-07-07.png",
+          "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A89",
+        "A81",
+        "A90"
+      ],
+      "mapped_route_tags": [
+        "graph_drawing",
+        "subsidy_shift",
+        "go_line",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "mo_line"
+      ],
+      "expected_required_mtu_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A89",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A89",
+        "A81"
+      ],
+      "expected_route_tags": [
+        "graph_drawing",
+        "subsidy_shift",
+        "go_line",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_SHIFT_ONLY_ONE_REVENUE_LINE"
+      ],
+      "expected_defect_class": "answer_form_gap",
+      "review_required_hooks": [
+        "answer_form_gap:GO_MO_subsidy_line_drawing_needs_reviewed_equivalent_or_canonical_answer_form"
+      ],
+      "missing_mtu_expected": false,
+      "final_route": "READY_FOR_HUMAN_H7_CLOSURE_REVIEW",
+      "decision": "reviewed_equivalent_candidate_prepared_not_applied",
+      "existing_fit_assessment": "A27, A42, A40, A89, and A81 jointly cover subsidy analysis, graph shifting, answer-form drawing, GO recognition, and source use. The gap is whether this combination is accepted as the specific GO line drawing answer-form for a consumer subsidy.",
+      "needed_governance": "Human may approve a reviewed-equivalent closure rule for this specific GO line operation; no canonical mutation is required in this packet.",
+      "candidate_packet_id": "H7-CAND-ANSWER-FORM-GO-MO-SUBSIDY-LINE-DRAWING",
+      "safe_interim_action": "Keep review_required until human accepts the reviewed-equivalent decision.",
+      "closure_authority_required": "human_h7_closure_reviewer",
+      "canonical_unit_fits": [
+        {
+          "id": "A27",
+          "name": "Subsidie analyseren",
+          "kern": "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Vervang in de aanbodfunctie P door (P + s) — de producent ontvangt meer door de subsidie.",
+            "Werk de nieuwe aanbodfunctie uit (beide termen vermenigvuldigen).",
+            "Stel de nieuwe Qa gelijk aan Qv en los op naar P*_nieuw en Q*_nieuw (zoals in A06).",
+            "Bereken de totale subsidiekosten = s × Q*_nieuw.",
+            "Analyseer: consumentenprijs daalt, producentenprijs (P + s) stijgt; samen is het verschil de subsidie."
+          ]
+        },
+        {
+          "id": "A42",
+          "name": "Grafische verschuiving met voor-en-na pijlen",
+          "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Teken de oorspronkelijke curve, label duidelijk (D of S).",
+            "Teken de verschoven curve in een andere kleur of stippellijn, label als D' of S'.",
+            "Plaats pijlen bij twee representatieve punten op de oude curve die naar de nieuwe curve wijzen — pijlen horizontaal, want hoeveelheid bij gelijke prijs verandert.",
+            "Geef het oude en nieuwe evenwichtspunt aan (E en E')."
+          ]
+        },
+        {
+          "id": "A40",
+          "name": "Welvaartsgebied op P–Q diagram arceren",
+          "kern": "Identificeer en arceer de juiste welvaartsregio op een P–Q diagram: consumentensurplus, producentensurplus, belastingopbrengst-rechthoek, welvaartsverlies-driehoek, subsidie-rechthoek, monopoliewinst-rechthoek, of tarief-DWL.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Identificeer welke grootheid gevraagd wordt (CS, PS, TS, DWL, belastingopbrengst, subsidiekosten, monopoliewinst, Harberger-driehoek).",
+            "Lokaliseer de grenzen: welke curve zit boven, welke onder, op welke Q-interval.",
+            "Teken de gesloten figuur met duidelijk gemarkeerde hoekpunten en label het gebied (CS / PS / DWL / ...).",
+            "Controleer: past de figuur bij de definitie? (CS ligt tussen vraag en prijs; PS tussen prijs en aanbod; DWL tussen Q_oud en Q_nieuw)."
+          ]
+        },
+        {
+          "id": "A89",
+          "name": "GO herkennen als prijsfunctie van de monopolist",
+          "kern": "Herken dat de GO- of vraagfunctie bij een monopolist de prijsfunctie P(Q) geeft die later met Q* moet worden gebruikt.",
+          "mastery_target": "understand",
+          "procedure": [
+            "Zoek in de opgave de GO-, vraag-, of prijsfunctie.",
+            "Benoem dat deze functie de prijs P bij hoeveelheid Q geeft.",
+            "Houd MO apart: MO bepaalt de winstmaximaliserende hoeveelheid, niet de verkoopprijs."
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A15",
+          "name": "Prijselasticiteit van de vraag",
+          "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Noteer de oude en nieuwe waarden van P en Q.",
+            "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+            "Bereken Ev = %ΔQv / %ΔP.",
+            "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+            "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q4-only-one-revenue-line-shifted",
+        "expected_failure_defect_class": "answer_form_gap",
+        "mutation": "Shift GO only and omit the corresponding MO relationship.",
+        "guard": "GO and MO line drawing must not close when the paired line logic is incomplete."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-ANSWER-FORM-MO-LINE-SUBSIDY",
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw25-2-q4-mo-line-with-consumer-subsidy",
+      "question_word": "teken",
+      "answer_model_summary": "The MO line must be shifted consistently with the GO change.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+          "source_pdf_sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-prompt-03-03.png",
+          "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+          "source_pdf_sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-correction-07-07.png",
+          "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A89",
+        "A81",
+        "A90"
+      ],
+      "mapped_route_tags": [
+        "graph_drawing",
+        "subsidy_shift",
+        "go_line",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "mo_line"
+      ],
+      "expected_required_mtu_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A90",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A90",
+        "A81"
+      ],
+      "expected_route_tags": [
+        "graph_drawing",
+        "subsidy_shift",
+        "mo_line",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_MO_NOT_SHIFTED_WITH_GO"
+      ],
+      "expected_defect_class": "answer_form_gap",
+      "review_required_hooks": [
+        "answer_form_gap:GO_MO_subsidy_line_drawing_needs_reviewed_equivalent_or_canonical_answer_form"
+      ],
+      "missing_mtu_expected": false,
+      "final_route": "READY_FOR_HUMAN_H7_CLOSURE_REVIEW",
+      "decision": "reviewed_equivalent_candidate_prepared_not_applied",
+      "existing_fit_assessment": "A27, A42, A40, A90, and A81 jointly cover subsidy analysis, graph shifting, drawing answer form, MO from linear GO, and source use. The gap is whether this combination is accepted as the specific MO line drawing answer-form for a consumer subsidy.",
+      "needed_governance": "Human may approve a reviewed-equivalent closure rule for this specific MO line operation; no canonical mutation is required in this packet.",
+      "candidate_packet_id": "H7-CAND-ANSWER-FORM-GO-MO-SUBSIDY-LINE-DRAWING",
+      "safe_interim_action": "Keep review_required until human accepts the reviewed-equivalent decision.",
+      "closure_authority_required": "human_h7_closure_reviewer",
+      "canonical_unit_fits": [
+        {
+          "id": "A27",
+          "name": "Subsidie analyseren",
+          "kern": "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Vervang in de aanbodfunctie P door (P + s) — de producent ontvangt meer door de subsidie.",
+            "Werk de nieuwe aanbodfunctie uit (beide termen vermenigvuldigen).",
+            "Stel de nieuwe Qa gelijk aan Qv en los op naar P*_nieuw en Q*_nieuw (zoals in A06).",
+            "Bereken de totale subsidiekosten = s × Q*_nieuw.",
+            "Analyseer: consumentenprijs daalt, producentenprijs (P + s) stijgt; samen is het verschil de subsidie."
+          ]
+        },
+        {
+          "id": "A42",
+          "name": "Grafische verschuiving met voor-en-na pijlen",
+          "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Teken de oorspronkelijke curve, label duidelijk (D of S).",
+            "Teken de verschoven curve in een andere kleur of stippellijn, label als D' of S'.",
+            "Plaats pijlen bij twee representatieve punten op de oude curve die naar de nieuwe curve wijzen — pijlen horizontaal, want hoeveelheid bij gelijke prijs verandert.",
+            "Geef het oude en nieuwe evenwichtspunt aan (E en E')."
+          ]
+        },
+        {
+          "id": "A40",
+          "name": "Welvaartsgebied op P–Q diagram arceren",
+          "kern": "Identificeer en arceer de juiste welvaartsregio op een P–Q diagram: consumentensurplus, producentensurplus, belastingopbrengst-rechthoek, welvaartsverlies-driehoek, subsidie-rechthoek, monopoliewinst-rechthoek, of tarief-DWL.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Identificeer welke grootheid gevraagd wordt (CS, PS, TS, DWL, belastingopbrengst, subsidiekosten, monopoliewinst, Harberger-driehoek).",
+            "Lokaliseer de grenzen: welke curve zit boven, welke onder, op welke Q-interval.",
+            "Teken de gesloten figuur met duidelijk gemarkeerde hoekpunten en label het gebied (CS / PS / DWL / ...).",
+            "Controleer: past de figuur bij de definitie? (CS ligt tussen vraag en prijs; PS tussen prijs en aanbod; DWL tussen Q_oud en Q_nieuw)."
+          ]
+        },
+        {
+          "id": "A90",
+          "name": "MO bepalen uit lineaire GO-regel zonder afgeleiden",
+          "kern": "Bepaal bij een lineaire monopolistische prijsfunctie de MO-regel zonder de afgeleide route verplicht te maken.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Herken de lineaire prijsfunctie P = a - bQ.",
+            "Gebruik de lineaire MO-regel: MO = a - 2bQ.",
+            "Controleer dat deze MO-regel alleen de hoeveelheidstap ondersteunt.",
+            "Gebruik later de GO- of prijsfunctie om de verkoopprijs te bepalen."
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A15",
+          "name": "Prijselasticiteit van de vraag",
+          "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Noteer de oude en nieuwe waarden van P en Q.",
+            "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+            "Bereken Ev = %ΔQv / %ΔP.",
+            "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+            "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q4-mo-not-shifted-with-go",
+        "expected_failure_defect_class": "answer_form_gap",
+        "mutation": "Move GO correctly but leave MO in its original position.",
+        "guard": "MO must shift consistently with the subsidy-adjusted GO line."
+      }
+    },
+    {
+      "blocker_id": "H7-BLOCKER-GRAPH-Q5-TOTAL-SUBSIDY-SHADING",
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+      "question_word": "arceer",
+      "answer_model_summary": "The official answer is graph-only and allows two correct shadings, so source/graph review remains required.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-5"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 5,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+          "source_pdf_sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-prompt-03-03.png",
+          "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+          "source_pdf_sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-correction-07-07.png",
+          "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+        }
+      ],
+      "mapped_mtu_ids": [
+        "A27",
+        "A40",
+        "A58",
+        "A81"
+      ],
+      "mapped_route_tags": [
+        "graph_shading",
+        "producer_subsidy",
+        "subsidy_area",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_required_mtu_ids": [
+        "A27",
+        "A40",
+        "A58",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15",
+        "A45"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "A27",
+        "A40",
+        "A58",
+        "A81"
+      ],
+      "expected_route_tags": [
+        "graph_shading",
+        "producer_subsidy",
+        "subsidy_area",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q5_TOTAL_SUBSIDY_AREA_NOT_DWL"
+      ],
+      "expected_defect_class": "evidence_gap",
+      "review_required_hooks": [
+        "evidence_gap:graph_only_correction_requires_visual_adjudication"
+      ],
+      "missing_mtu_expected": false,
+      "final_route": "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE",
+      "decision": "source_graph_adjudication_prepared_not_applied",
+      "existing_fit_assessment": "A27, A40, A58, and A81 cover subsidy analysis, graph shading, subsidy expenditure, and source use. The official correction is graph-only and permits two correct shaded rectangles, so closure needs explicit visual-source adjudication.",
+      "needed_governance": "Human graph-source reviewer must accept both official shading variants or define the exact accepted graph geometry before H7 closure.",
+      "candidate_packet_id": "H7-CAND-GRAPH-TOTAL-SUBSIDY-SHADING-MULTI-ACCEPTED",
+      "safe_interim_action": "Keep q5 locked-holdout review_required; do not tune holdout after inspecting this outcome.",
+      "closure_authority_required": "human_graph_source_reviewer",
+      "canonical_unit_fits": [
+        {
+          "id": "A27",
+          "name": "Subsidie analyseren",
+          "kern": "Bereken het effect van een subsidie op het marktevenwicht, de prijs en de verdeling van het voordeel.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Vervang in de aanbodfunctie P door (P + s) — de producent ontvangt meer door de subsidie.",
+            "Werk de nieuwe aanbodfunctie uit (beide termen vermenigvuldigen).",
+            "Stel de nieuwe Qa gelijk aan Qv en los op naar P*_nieuw en Q*_nieuw (zoals in A06).",
+            "Bereken de totale subsidiekosten = s × Q*_nieuw.",
+            "Analyseer: consumentenprijs daalt, producentenprijs (P + s) stijgt; samen is het verschil de subsidie."
+          ]
+        },
+        {
+          "id": "A40",
+          "name": "Welvaartsgebied op P–Q diagram arceren",
+          "kern": "Identificeer en arceer de juiste welvaartsregio op een P–Q diagram: consumentensurplus, producentensurplus, belastingopbrengst-rechthoek, welvaartsverlies-driehoek, subsidie-rechthoek, monopoliewinst-rechthoek, of tarief-DWL.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Identificeer welke grootheid gevraagd wordt (CS, PS, TS, DWL, belastingopbrengst, subsidiekosten, monopoliewinst, Harberger-driehoek).",
+            "Lokaliseer de grenzen: welke curve zit boven, welke onder, op welke Q-interval.",
+            "Teken de gesloten figuur met duidelijk gemarkeerde hoekpunten en label het gebied (CS / PS / DWL / ...).",
+            "Controleer: past de figuur bij de definitie? (CS ligt tussen vraag en prijs; PS tussen prijs en aanbod; DWL tussen Q_oud en Q_nieuw)."
+          ]
+        },
+        {
+          "id": "A58",
+          "name": "Subsidie-uitgaven berekenen",
+          "kern": "Bereken totale subsidie-uitgaven als subsidie per eenheid maal de nieuwe verhandelde hoeveelheid.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Bepaal de subsidie per eenheid.",
+            "Bepaal de nieuwe verhandelde hoeveelheid.",
+            "Vermenigvuldig subsidie per eenheid met Q nieuw.",
+            "Noteer de totale overheidsuitgaven met juiste eenheid."
+          ]
+        },
+        {
+          "id": "A81",
+          "name": "Bron gebruiken in een antwoord",
+          "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+            "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+            "Zeg wat die observatie economisch betekent.",
+            "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+            "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+          ]
+        }
+      ],
+      "forbidden_unit_guards": [
+        {
+          "id": "A15",
+          "name": "Prijselasticiteit van de vraag",
+          "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Noteer de oude en nieuwe waarden van P en Q.",
+            "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+            "Bereken Ev = %ΔQv / %ΔP.",
+            "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+            "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+          ]
+        },
+        {
+          "id": "A45",
+          "name": "P-Q grafiek tekenen uit tabel",
+          "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.",
+          "mastery_target": "apply",
+          "procedure": [
+            "Zet prijs op de verticale as en hoeveelheid op de horizontale as.",
+            "Kies een passende schaal op beide assen.",
+            "Plaats elk punt uit de tabel in de grafiek.",
+            "Verbind de punten alleen als de context een lijn of curve ondersteunt."
+          ]
+        }
+      ],
+      "negative_regression_fixture": {
+        "fixture_id": "h7-governance-negative-q5-dwl-instead-of-total-subsidy",
+        "expected_failure_defect_class": "evidence_gap",
+        "mutation": "Accept a deadweight-loss triangle or a single non-official area as total subsidy spending.",
+        "guard": "Total subsidy shading must stay distinct from welfare-loss shading and must preserve the two official correct examples."
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-OPERATION-REGISTRY-GOVERNANCE-AND-HOLDOUT-ADJUDICATION-BUNDLE-1",
+  "bundle_id": "mtu-h7-operation-registry-governance-bundle-1",
+  "review_standard": "REV-STD-1",
+  "status": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+  "generated_at": "2026-06-28T07:14:59.680Z",
+  "previous_h7_sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "source_files": [
+    "reports/mtu-hardening/mtu-h7-execution-fixture-1.json",
+    "reports/mtu-hardening/mtu-h7-execution-report-1.json",
+    "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json",
+    "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
+    "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "source_hashes": [
+    {
+      "path": "reports/mtu-hardening/mtu-h7-execution-fixture-1.json",
+      "sha256": "2c611d838ee234e909211cbb20fed97f63e86f12a74f4ead116a70665db1935c"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-execution-report-1.json",
+      "sha256": "de53b642460ec907c1eebeaf444cc7077bb56000a89da9cf7768c956f194b0c1"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json",
+      "sha256": "ba979c48a9c19bf2197eae8fcf6f9a03f549d25a753afe2bf4789bb52c337dc2"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
+      "sha256": "dab1bcfa8451a4d752dffeb4f86845d8072ffa95fdb2115d1a25f917cccb0c9e"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json",
+      "sha256": "770f2dd03ec1abb975da032af2be2f0cb2f9cdc23cbaacb930bd3fbf20249a00"
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json",
+      "sha256": "f6ee9ce927baca85aac3666108a877ac5f716e4ecc7643ae98d75d62e35ac153"
+    }
+  ],
+  "artifacts": {
+    "publication_closure": "reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.json",
+    "blocker_matrix": "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json",
+    "official_evidence_matrix": "reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json",
+    "reviewed_equivalent_decisions": "reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json",
+    "governance_candidate_packets": "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json",
+    "q5_graph_adjudication": "reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.json",
+    "quality_log": "reports/mtu-hardening/mtu-h7-governance-quality-log-1.md",
+    "review_packet": "reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.json",
+    "lead_review": "reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md"
+  },
+  "summary": {
+    "review_required_records": 7,
+    "review_required_operations": 10,
+    "primary_routes": [
+      "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "READY_FOR_HUMAN_H7_CLOSURE_REVIEW",
+      "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE"
+    ],
+    "protected_governance_operation_count": 7,
+    "reviewed_equivalent_candidate_count": 2,
+    "graph_source_hold_count": 1,
+    "false_closure_count": 0
+  },
+  "publication_closure": {
+    "schema_version": 1,
+    "sprint_id": "MTU-H7-OPERATION-REGISTRY-GOVERNANCE-AND-HOLDOUT-ADJUDICATION-BUNDLE-1",
+    "closure_id": "mtu-h7-current-main-publication-closure-1",
+    "review_standard": "REV-STD-1",
+    "status": "current_main_h7_publication_located_and_governed_hold_recorded",
+    "generated_at": "2026-06-28T07:14:59.587Z",
+    "current_branch": "codex/mtu-h7-operation-registry-governance-20260627",
+    "local_head_sha": "7fd95da2d516fe4e243fe6a5c414f4a342201dae",
+    "origin_main_sha": "1986eeaa6bd2875c50aeb1cb4ec8ca712e0c3dbe",
+    "previous_h7_sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+    "previous_h7_report": "reports/mtu-hardening/mtu-h7-execution-report-1.json",
+    "previous_h7_status": "benchmark_executed_hold_for_operation_registry_governance",
+    "previous_h7_lead_reviewer_verdict": "HOLD_FOR_OPERATION_REGISTRY_GOVERNANCE",
+    "publication_closure": [
+      "The merged H7 benchmark packet is present on current main.",
+      "The executed H7 benchmark remains a governed hold, not closure.",
+      "This packet adds non-mutating blocker governance and q5 graph adjudication evidence.",
+      "No generated lesson output, protected-reference mutation, registry mutation, or product authority is introduced."
+    ],
+    "authority_flags": {
+      "protected_reference_mutation_authorized": false,
+      "external_source_mutation_authorized": false,
+      "machine_reference_mutation_authorized": false,
+      "authored_target_exercise_mutation_authorized": false,
+      "unit_minting_authorized": false,
+      "unit_update_authorized": false,
+      "unit_split_authorized": false,
+      "unit_merge_authorized": false,
+      "unit_deprecation_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "candidate_storage_creation_authorized": false,
+      "candidate_writes_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "diagnostics_authorized": false,
+      "adaptive_routing_authorized": false,
+      "mastery_authorized": false,
+      "sequencing_authorized": false,
+      "student_facing_ai_authorized": false,
+      "summative_use_authorized": false,
+      "pv_projection_authorized": false,
+      "pv_machine_promotion_authorized": false,
+      "student_product_use_authorized": false,
+      "product_route_readiness_claimed": false,
+      "scale_gate_1_authorized": false
+    }
+  },
+  "blocker_matrix_hash": "8a64e46233f1d94912d2a3180ed2ec3a8b6139876637f7ed8af0e1279cc030a6",
+  "evidence_matrix_hash": "18420033d3766b6be590dbb6499b441caf6d29e8142a16030a8b5d2b00a862a4",
+  "decisions_hash": "98b257826803e95594ee11487424314b0b3627b7cd3e126057bf3c37c1900fa6",
+  "candidate_packets_hash": "113463f9b80fab55f7461b3f390afd70b729bafbf881c411d420d10265d45090",
+  "q5_graph_adjudication_hash": "bad4ccf954724293a7bd0a512cd6272eca4739c4d1a256bd6a6c5cbd56a1ebee",
+  "prohibited_claims": [
+    "No H7 full closure",
+    "No H6/H7 evidence-generalization closure",
+    "No product-route readiness",
+    "No Scale Gate 1",
+    "No diagnostics/mastery/PV/sequencing/summative/student use",
+    "No protected-reference mutation",
+    "No candidate writes"
+  ]
+}

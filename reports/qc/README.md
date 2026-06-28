@@ -30,4 +30,4 @@ The runner is invoked manually:
 
 ## Provenance
 
-Prompts that drive each test live in `references/qc-prompts/`. Edit them to change what the tests check. The runner skill is `skills/qc-references.md` (mirror in `.claude/commands/`).
+Prompts that drive each test live in `references/qc-prompts/`. Edit them to change what the tests check. The runner skill is `skills/qc-references.md`.

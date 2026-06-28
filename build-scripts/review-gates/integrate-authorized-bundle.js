@@ -10,6 +10,7 @@ const {
 } = require('./check-human-bundle-authorization');
 const { validateCompatibilityProof } = require('./cross-repo-bundle-compatibility');
 const { readinessCommentFromComments } = require('./integrate-authorized-pr');
+const { summarizeLineage } = require('./check-integration-lineage');
 const { collectReviewThreadState } = require('./review-pr-readiness');
 const { readEvidence, validateEvidence } = require('../ci/platform-ci-evidence');
 
@@ -144,6 +145,107 @@ function fetchPr(repo, prNumber) {
 function fetchMainSha(repo) {
   const raw = runGh(['api', `repos/${repo}/git/ref/heads/main`]);
   return JSON.parse(raw).object.sha;
+}
+
+function fetchCompareStatus(repo, baseSha, headSha) {
+  const raw = runGh(['api', `repos/${repo}/compare/${baseSha}...${headSha}`], { optional: true });
+  if (!raw) return { status: 'unavailable', ahead_by: null, behind_by: null };
+  const data = JSON.parse(raw);
+  return {
+    status: data.status,
+    ahead_by: data.ahead_by,
+    behind_by: data.behind_by,
+    merge_base_commit_sha: data.merge_base_commit && data.merge_base_commit.sha,
+  };
+}
+
+function fetchInterveningCommits(repo, baseSha, headSha) {
+  if (!baseSha || !headSha || baseSha === headSha) return [];
+  const commits = [];
+  const seen = new Set();
+  let currentSha = headSha;
+  for (let depth = 0; depth < 100 && currentSha && currentSha !== baseSha; depth += 1) {
+    if (seen.has(currentSha)) throw new Error('cycle detected while walking bundle member first-parent chain');
+    seen.add(currentSha);
+    const detail = JSON.parse(runGh(['api', `repos/${repo}/commits/${currentSha}`]));
+    const parents = (detail.parents || []).map((parent) => parent.sha).filter(Boolean);
+    commits.unshift({
+      sha: currentSha,
+      parents,
+      changed_paths: (detail.files || []).map((file) => file.filename).filter(Boolean),
+    });
+    currentSha = parents[0] || null;
+  }
+  if (currentSha !== baseSha) {
+    throw new Error('reviewed bundle payload head was not reached on member first-parent chain');
+  }
+  return commits;
+}
+
+function fetchComparePaths(repo, baseSha, headSha) {
+  if (!baseSha || !headSha || baseSha === headSha) return [];
+  const raw = runGh(['api', `repos/${repo}/compare/${baseSha}...${headSha}`], { optional: true });
+  if (!raw) return [];
+  return (JSON.parse(raw).files || []).map((file) => file.filename).filter(Boolean);
+}
+
+function buildMemberLineage(repo, member, pr, mainSha, deps) {
+  const reviewedPayload = member.reviewed_payload_head_sha;
+  const integrationHead = pr.headRefOid;
+  const payloadCompare = deps.fetchCompareStatus(repo, reviewedPayload, integrationHead);
+  const payloadAncestor = ['ahead', 'identical'].includes(payloadCompare.status);
+  const needsDriftBase = Boolean(member.base_sha_at_review) || reviewedPayload !== integrationHead;
+  const mainCompare = needsDriftBase ? deps.fetchCompareStatus(repo, reviewedPayload, mainSha) : null;
+  const driftBaseSha = member.base_sha_at_review || (mainCompare && mainCompare.merge_base_commit_sha) || null;
+  return deps.summarizeLineage({
+    reviewed_payload_head_sha: reviewedPayload,
+    integration_head_sha: integrationHead,
+    base_sha_at_review: driftBaseSha,
+    current_main_sha: mainSha,
+    payload_ancestor_of_integration_head: payloadAncestor,
+    payload_paths: driftBaseSha ? deps.fetchComparePaths(repo, driftBaseSha, reviewedPayload) : [],
+    base_delta_paths: driftBaseSha ? deps.fetchComparePaths(repo, driftBaseSha, mainSha) : [],
+    intervening_commits: payloadAncestor ? deps.fetchInterveningCommits(repo, reviewedPayload, integrationHead) : [],
+  });
+}
+
+function memberStateFromPr(repo, member, pr, mainSha, deps) {
+  const lineage = buildMemberLineage(repo, member, pr, mainSha, deps);
+  return {
+    ...member,
+    head_sha: pr.headRefOid,
+    integration_head_sha: pr.headRefOid,
+    authorization_inherited: lineage.authorization_inherited === true,
+    lineage,
+    failures: lineage.failures || [],
+  };
+}
+
+function isHeadCurrentWithMain(repo, mainSha, headSha, deps) {
+  const compare = deps.fetchCompareStatus(repo, mainSha, headSha);
+  return {
+    ok: ['ahead', 'identical'].includes(compare.status),
+    compare,
+  };
+}
+
+function updateBranch(repo, prNumber, expectedHeadSha, options = {}) {
+  if (options.dryRun) return { dry_run: true, repo, prNumber, expected_head_sha: expectedHeadSha };
+  const payload = JSON.stringify({ expected_head_sha: expectedHeadSha });
+  const result = spawnSync(
+    'gh',
+    ['api', '-X', 'PUT', `repos/${repo}/pulls/${prNumber}/update-branch`, '--input', '-'],
+    {
+      input: payload,
+      encoding: 'utf8',
+      maxBuffer: 1024 * 1024 * 20,
+    }
+  );
+  if (result.status !== 0) {
+    const detail = (result.stderr || result.stdout || '').trim();
+    throw new Error(`update-branch failed${detail ? `: ${detail}` : ''}`);
+  }
+  return JSON.parse(result.stdout || '{}');
 }
 
 function mergePr(repo, prNumber, headSha, options = {}) {
@@ -566,20 +668,27 @@ function validateReviewThreadState(reviewThreads) {
   return [];
 }
 
-function validateMemberPreflight(repo, pr, expectedHeadSha, deps, options = {}) {
+function validateMemberPreflight(repo, pr, member, deps, options = {}) {
+  const expectedHeadSha = member.integration_head_sha || member.head_sha || member.reviewed_payload_head_sha;
   const stateFailures = deps.validatePrState(pr, expectedHeadSha, options);
+  const lineageFailures = member.authorization_inherited === true
+    ? []
+    : ['member_payload_not_ancestor'];
   const readiness = deps.fetchReadinessComment(repo, pr.number, expectedHeadSha);
   const reviewThreads = deps.fetchReviewThreadState(repo, pr.number);
   return {
     ok:
       stateFailures.length === 0 &&
+      lineageFailures.length === 0 &&
       validateReadiness(readiness).length === 0 &&
       validateReviewThreadState(reviewThreads).length === 0,
     failures: [
       ...stateFailures,
+      ...lineageFailures,
       ...validateReadiness(readiness),
       ...validateReviewThreadState(reviewThreads),
     ],
+    lineage: member.lineage || null,
     readiness,
     reviewThreads,
   };
@@ -593,6 +702,9 @@ function memberByRepo(record, repo) {
 function defaultDeps(options = {}) {
   return {
     fetchAuthorization: (repo, commentId, fetchOptions) => fetchBundleAuthorizationComment(repo, commentId, fetchOptions),
+    fetchComparePaths,
+    fetchCompareStatus,
+    fetchInterveningCommits,
     fetchMainSha,
     fetchPr,
     fetchReadinessComment,
@@ -621,7 +733,9 @@ function defaultDeps(options = {}) {
     },
     mergePr,
     fetchMergedPr,
+    summarizeLineage,
     triggerPlatformCi,
+    updateBranch,
     waitForPlatformMainCi,
     refreshPlatformPrCi,
   };
@@ -669,17 +783,19 @@ function integrateBundle(options = {}) {
   const lessonMainSha = deps.fetchMainSha(LESSON_REPO);
   const platformPr = deps.fetchPr(PLATFORM_REPO, record.controller.pr_number);
   const lessonPr = deps.fetchPr(LESSON_REPO, lessonMember.pr_number);
+  const platformMember = memberStateFromPr(PLATFORM_REPO, record.controller, platformPr, platformMainSha, deps);
+  const lessonMemberState = memberStateFromPr(LESSON_REPO, lessonMember, lessonPr, lessonMainSha, deps);
   const platformPreflight = validateMemberPreflight(
     PLATFORM_REPO,
     platformPr,
-    record.controller.reviewed_payload_head_sha,
+    platformMember,
     deps,
     { requireValidatePlatform: false }
   );
   const lessonPreflight = validateMemberPreflight(
     LESSON_REPO,
     lessonPr,
-    lessonMember.reviewed_payload_head_sha,
+    lessonMemberState,
     deps,
     { requireValidatePlatform: false }
   );
@@ -701,9 +817,9 @@ function integrateBundle(options = {}) {
 
   const compatibility = deps.recomputeCompatibility(record, {
     platform_base_sha: platformMainSha,
-    platform_candidate_sha: record.controller.reviewed_payload_head_sha,
+    platform_candidate_sha: platformMember.integration_head_sha,
     lesson_base_sha: lessonMainSha,
-    lesson_candidate_sha: lessonMember.reviewed_payload_head_sha,
+    lesson_candidate_sha: lessonMemberState.integration_head_sha,
   });
   if (!compatibility.ok) return { ok: false, phase: 'compatibility', compatibility };
   const order = record.merge_order === 'CI_SELECTED' ? compatibility.recommended_merge_order : record.merge_order;
@@ -714,7 +830,12 @@ function integrateBundle(options = {}) {
     return { ok: true, phase: 'authorized_no_merge', order, compatibility, platform_main_sha: platformMainSha, lesson_main_sha: lessonMainSha };
   }
 
-  const steps = mergeStepForOrder(order, record);
+  const runtimeRecord = {
+    ...record,
+    controller: platformMember,
+    members: [lessonMemberState],
+  };
+  const steps = mergeStepForOrder(order, runtimeRecord);
   const merges = [];
   const expectedMain = {
     [PLATFORM_REPO]: platformMainSha,
@@ -738,6 +859,36 @@ function integrateBundle(options = {}) {
       };
     }
     let pr = deps.fetchPr(repo, member.pr_number);
+    if (pr.headRefOid !== member.integration_head_sha) {
+      return {
+        ok: true,
+        phase: 'member_head_changed_retry',
+        retry_required: true,
+        repo,
+        pr_number: member.pr_number,
+        previous_head_sha: member.integration_head_sha,
+        current_head_sha: pr.headRefOid,
+        merges,
+      };
+    }
+    const currentMainForMember = repo === PLATFORM_REPO ? currentPlatformMain : currentLessonMain;
+    const currentWithMain = isHeadCurrentWithMain(repo, currentMainForMember, pr.headRefOid, deps);
+    if (!currentWithMain.ok) {
+      const update = deps.updateBranch(repo, member.pr_number, pr.headRefOid, options);
+      return {
+        ok: true,
+        phase: 'member_branch_updated',
+        retry_required: true,
+        repo,
+        pr_number: member.pr_number,
+        previous_head_sha: pr.headRefOid,
+        main_sha: currentMainForMember,
+        main_compare: currentWithMain.compare,
+        update,
+        compatibility,
+        merges,
+      };
+    }
     if (repo === PLATFORM_REPO && index > 0 && steps[index - 1].repository === LESSON_REPO) {
       const refreshed = deps.refreshPlatformPrCi(pr, {
         ...options,
@@ -746,11 +897,11 @@ function integrateBundle(options = {}) {
       if (!refreshed.ok) return { ok: false, phase: 'platform_pr_ci_refresh', refreshed, merges };
       pr = deps.fetchPr(repo, member.pr_number);
     }
-    const preMerge = validateMemberPreflight(repo, pr, member.reviewed_payload_head_sha, deps, {
+    const preMerge = validateMemberPreflight(repo, pr, member, deps, {
       requireValidatePlatform: repo === PLATFORM_REPO,
     });
     if (!preMerge.ok) return { ok: false, phase: 'pre_merge', repo, failures: preMerge.failures, pr, pre_merge: preMerge };
-    const merge = deps.mergePr(repo, member.pr_number, member.reviewed_payload_head_sha, options);
+    const merge = deps.mergePr(repo, member.pr_number, member.integration_head_sha, options);
     const merged = validateMergedPr(repo, member.pr_number, deps.fetchMergedPr(repo, member.pr_number));
     if (!merged.ok) return { ok: false, phase: 'merge_verification', merge, merged };
     merges.push({ repo, pr_number: member.pr_number, merge, ...merged });

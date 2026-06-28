@@ -1,3 +1,9 @@
+---
+name: reasoning-game-prompt-template
+description: Template for asking an agent or reviewer to build or repair an economics reasoning game from paragraph reasoning grammar.
+pipeline: "shared infrastructure"
+---
+
 # Reasoning Game Prompt Template
 
 Use this when asking an agent or reviewer to build or repair an economics reasoning game.

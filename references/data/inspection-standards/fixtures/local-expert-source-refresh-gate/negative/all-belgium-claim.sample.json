@@ -1,0 +1,784 @@
+{
+  "fixture_id": "all-belgium-claim",
+  "expected_refusal_code": "STOP_JURISDICTION_OVERGENERALISATION",
+  "gate_simulation": {
+    "schema_version": 1,
+    "report_id": "flanders-source-refresh-gate-simulation",
+    "sprint_id": "GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1",
+    "generated_date": "2026-06-26",
+    "access_date": "2026-06-26",
+    "status": "complete_internal_gate_simulation",
+    "internal_only": true,
+    "manual_invocation_only": true,
+    "human_review_required": true,
+    "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+    "product_end_state_checkout_note": "Cross-repo citation: resolve through the paired 4veco-lessen checkout used for human review; this platform packet does not copy lesson-repo product state.",
+    "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md",
+    "roadmap_source": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
+    "accepted_input_decision": "PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING",
+    "non_negotiable_requirements": [
+      "Use REV-STD-1 and cite product end-state plus the original sprint/gate spec.",
+      "Cite the accepted no-output simulation decision and preserve the no-output/no-runtime/no-product-authority boundary.",
+      "Define local expert role contract fields without substituting local expert judgement.",
+      "Define source-refresh protocol fields without executing source refresh.",
+      "Use explicit source and output allowlists only; no directory globbing or generated lesson-output scanning.",
+      "Include England and Flanders jurisdiction-specific gates.",
+      "Simulate source-refresh gate classification cases without refreshing sources or producing localized output.",
+      "Refuse forbidden audiences, claims, integrations, product routes, Scale Gate, diagnostics/mastery/PV, personal data, support/accommodation sufficiency, and compliance/inspection-readiness claims.",
+      "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+      "PASS WITH FLAGS may not carry a missing core requirement."
+    ],
+    "core_requirement_checklist": [
+      {
+        "id": "accepted_no_output_decision_bound",
+        "requirement": "The gate is bound to the accepted no-output simulation decision and does not reinterpret it as source-refresh authority.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "local_expert_role_contract_complete",
+        "requirement": "The local expert role contract names allowed review scope, forbidden authority, responsibilities, uncertainty handling, and required output format.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "source_refresh_protocol_complete",
+        "requirement": "Every allowlisted source has source ID, jurisdiction, role, official URL, access date, freshness trigger, staleness condition, replacement rule, human-review trigger, allowed inference, and forbidden inference.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "jurisdiction_gates_complete",
+        "requirement": "England and Flanders gates cover their required authority/source boundaries.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "no_output_enforced",
+        "requirement": "The packet refuses localized content, student/teacher/school/public output, runtime, product, Scale Gate, diagnostics/mastery/PV, and evidence-pack paths.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "simulation_cases_complete",
+        "requirement": "Each jurisdiction includes all required source-refresh gate simulation cases without executing refresh.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "negative_fixtures_cover_forbidden_cases",
+        "requirement": "Negative fixtures cover forbidden source, output, expert-substitution, personal-data, support, compliance, and overgeneralisation cases.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "single_decision",
+        "requirement": "The packet selects exactly one allowed decision.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      },
+      {
+        "id": "review_route_preserved",
+        "requirement": "Specialist reviews, final lead review, PR readiness, green CI, and human review remain required.",
+        "status": "met_for_internal_gate_design",
+        "proof_required_to_close": "Generator/checker PASS, fixture/refusal PASS, specialist corrections closed, final lead PASS, exact-head PR readiness proof, green CI, and human review."
+      }
+    ],
+    "input_allowlist": [
+      "reports/inspection-standards/england-internal-no-output-trial-simulation.json",
+      "reports/inspection-standards/flanders-internal-no-output-trial-simulation.json",
+      "reports/inspection-standards/internal-no-output-trial-simulation.json",
+      "reports/inspection-standards/internal-no-output-trial-simulation-decision.json",
+      "reports/inspection-standards/internal-no-output-trial-simulation-validation.json",
+      "references/schemas/internal-no-output-trial-simulation.schema.v1.json",
+      "references/data/inspection-standards/overlays/england.deepening.v1.json",
+      "references/data/inspection-standards/overlays/flanders.deepening.v1.json"
+    ],
+    "output_allowlist": [
+      "references/schemas/local-expert-source-refresh-gate.schema.v1.json",
+      "docs/inspection-standards/local-expert-source-refresh-gate-contract.md",
+      "docs/inspection-standards/england-local-expert-source-gate.md",
+      "docs/inspection-standards/flanders-local-expert-source-gate.md",
+      "reports/inspection-standards/local-expert-source-refresh-gate-plan.md",
+      "reports/inspection-standards/local-expert-source-refresh-gate-plan.json",
+      "reports/inspection-standards/england-source-refresh-gate-simulation.md",
+      "reports/inspection-standards/england-source-refresh-gate-simulation.json",
+      "reports/inspection-standards/flanders-source-refresh-gate-simulation.md",
+      "reports/inspection-standards/flanders-source-refresh-gate-simulation.json",
+      "reports/inspection-standards/local-expert-source-refresh-gate-decision.md",
+      "reports/inspection-standards/local-expert-source-refresh-gate-decision.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/england-source-refresh-gate-simulation.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/flanders-source-refresh-gate-simulation.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/non-official-source.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/source-refresh-executed.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/local-expert-substituted.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/localized-output.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/student-facing-output.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/teacher-school-output.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/public-output.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/personal-data.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/compliance-claim.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-sufficiency-claim.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/whole-uk-claim.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/all-belgium-claim.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-source-condition.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-england-source-allowlist.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/official-url-mismatch.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/individual-adjustment-claim.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/reasonable-adjustment-claim.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/learner-support-record-claim.sample.json",
+      "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-records-personal-data.sample.json",
+      "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md",
+      "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md",
+      "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-correction-log.md",
+      "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-closure-record.md",
+      "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-specialist-reviews.md",
+      "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-final-lead-review.md"
+    ],
+    "forbidden_authority": {
+      "source_refresh_executed": false,
+      "local_expert_substituted": false,
+      "runtime_execution": false,
+      "localized_paragraphs_generated": false,
+      "localized_exercises_generated": false,
+      "localized_answer_models_generated": false,
+      "localized_assessment_items_generated": false,
+      "student_facing_files_generated": false,
+      "teacher_school_facing_output_generated": false,
+      "public_output_generated": false,
+      "evidence_pack_generated": false,
+      "product_route_adoption": false,
+      "scale_gate_integration": false,
+      "diagnostics_mastery_pv": false,
+      "student_product_use": false,
+      "personal_data_processing": false,
+      "legal_compliance_claim": false,
+      "approval_accreditation_claim": false,
+      "op0_pta_summative_claim": false,
+      "inspection_readiness_claim": false,
+      "support_sufficiency_claim": false,
+      "accommodation_sufficiency_claim": false,
+      "individual_adjustment_claim": false,
+      "reasonable_adjustment_claim": false,
+      "learner_support_record_claim": false,
+      "support_records_personal_data": false,
+      "whole_uk_claim_from_england_only": false,
+      "all_belgium_claim_from_flanders_only": true,
+      "generated_lesson_output_scanning": false,
+      "implicit_source_discovery": false,
+      "directory_globbing": false,
+      "quality_ref_or_dashboard_integration": false
+    },
+    "jurisdiction_id": "flanders",
+    "jurisdiction_label": "Belgium / Flanders",
+    "source_protocol": [
+      {
+        "source_id": "be-flanders-ok-framework",
+        "jurisdiction_id": "flanders",
+        "source_role": "quality framework boundary",
+        "official_url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit/referentiekader-voor-onderwijskwaliteit-het-ok",
+        "current_access_date": "2026-06-22",
+        "source_role_boundary": "Does not prove OK compliance.",
+        "freshness_trigger": "Before any bounded source-refresh packet, compare the official URL and source title/version metadata against the recorded access date.",
+        "staleness_condition": "Trigger review if the official page title, version date, publication date, content route, or authority owner changes, or if the URL becomes unavailable.",
+        "replacement_source_rule": "Only a same-authority official successor source may replace this source, and replacement must be recorded as a new source-refresh packet item.",
+        "human_review_trigger": "Any updated, replaced, unavailable, source-gap, or outside-scope condition requires human review before downstream use.",
+        "allowed_inference": "Name quality expectations and school-owned quality evidence boundary.",
+        "forbidden_inference": "Does not prove OK compliance.",
+        "condition_handling": [
+          {
+            "condition": "official_source_unchanged",
+            "gate_action": "record_currentness_only_no_refresh_execution",
+            "blocks": "Does not block internal gate planning; still blocks output and product authority.",
+            "proof_required_to_close": "Record official URL, access date, and no-change observation in a future bounded packet."
+          },
+          {
+            "condition": "official_source_updated",
+            "gate_action": "prepare_bounded_source_refresh_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed diff of official source change, retained forbidden inference, and renewed source binding."
+          },
+          {
+            "condition": "official_source_replaced",
+            "gate_action": "prepare_replacement_source_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed replacement-source record with same authority or explicit scope reduction."
+          },
+          {
+            "condition": "official_source_unavailable",
+            "gate_action": "stop_and_record_unavailable_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Unavailable-source record, retrieval evidence, and owner decision before proceeding."
+          },
+          {
+            "condition": "source_gap_discovered",
+            "gate_action": "stop_and_record_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Named source gap, affected rows, blocker display, and owner decision."
+          },
+          {
+            "condition": "source_outside_allowed_scope",
+            "gate_action": "refuse_source_and_escalate_scope",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Scope refusal record proving the proposed source is outside the allowlist and no inference was carried."
+          }
+        ]
+      },
+      {
+        "source_id": "be-flanders-onderwijsdoelen-so3-doorstroom",
+        "jurisdiction_id": "flanders",
+        "source_role": "official curriculum goal route",
+        "official_url": "https://onderwijsdoelen.be/modernisatie-so?onderwijsstructuur=SO_3DE_GRAAD",
+        "current_access_date": "2026-06-22",
+        "source_role_boundary": "Does not prove school/network curriculum or assessment fit.",
+        "freshness_trigger": "Before any bounded source-refresh packet, compare the official URL and source title/version metadata against the recorded access date.",
+        "staleness_condition": "Trigger review if the official page title, version date, publication date, content route, or authority owner changes, or if the URL becomes unavailable.",
+        "replacement_source_rule": "Only a same-authority official successor source may replace this source, and replacement must be recorded as a new source-refresh packet item.",
+        "human_review_trigger": "Any updated, replaced, unavailable, source-gap, or outside-scope condition requires human review before downstream use.",
+        "allowed_inference": "Map official goal family for 3de graad doorstroomfinaliteit basisvorming.",
+        "forbidden_inference": "Does not prove school/network curriculum or assessment fit.",
+        "condition_handling": [
+          {
+            "condition": "official_source_unchanged",
+            "gate_action": "record_currentness_only_no_refresh_execution",
+            "blocks": "Does not block internal gate planning; still blocks output and product authority.",
+            "proof_required_to_close": "Record official URL, access date, and no-change observation in a future bounded packet."
+          },
+          {
+            "condition": "official_source_updated",
+            "gate_action": "prepare_bounded_source_refresh_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed diff of official source change, retained forbidden inference, and renewed source binding."
+          },
+          {
+            "condition": "official_source_replaced",
+            "gate_action": "prepare_replacement_source_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed replacement-source record with same authority or explicit scope reduction."
+          },
+          {
+            "condition": "official_source_unavailable",
+            "gate_action": "stop_and_record_unavailable_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Unavailable-source record, retrieval evidence, and owner decision before proceeding."
+          },
+          {
+            "condition": "source_gap_discovered",
+            "gate_action": "stop_and_record_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Named source gap, affected rows, blocker display, and owner decision."
+          },
+          {
+            "condition": "source_outside_allowed_scope",
+            "gate_action": "refuse_source_and_escalate_scope",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Scope refusal record proving the proposed source is outside the allowlist and no inference was carried."
+          }
+        ]
+      },
+      {
+        "source_id": "be-flanders-inspection-what-do-we-inspect",
+        "jurisdiction_id": "flanders",
+        "source_role": "inspection-method boundary",
+        "official_url": "https://www.onderwijsinspectie.be/en/what-do-we-inspect",
+        "current_access_date": "2026-06-22",
+        "source_role_boundary": "Does not authorize evidence-pack deployment.",
+        "freshness_trigger": "Before any bounded source-refresh packet, compare the official URL and source title/version metadata against the recorded access date.",
+        "staleness_condition": "Trigger review if the official page title, version date, publication date, content route, or authority owner changes, or if the URL becomes unavailable.",
+        "replacement_source_rule": "Only a same-authority official successor source may replace this source, and replacement must be recorded as a new source-refresh packet item.",
+        "human_review_trigger": "Any updated, replaced, unavailable, source-gap, or outside-scope condition requires human review before downstream use.",
+        "allowed_inference": "Keep teaching, feedback, evaluation, and learning-effects evidence school-owned.",
+        "forbidden_inference": "Does not authorize evidence-pack deployment.",
+        "condition_handling": [
+          {
+            "condition": "official_source_unchanged",
+            "gate_action": "record_currentness_only_no_refresh_execution",
+            "blocks": "Does not block internal gate planning; still blocks output and product authority.",
+            "proof_required_to_close": "Record official URL, access date, and no-change observation in a future bounded packet."
+          },
+          {
+            "condition": "official_source_updated",
+            "gate_action": "prepare_bounded_source_refresh_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed diff of official source change, retained forbidden inference, and renewed source binding."
+          },
+          {
+            "condition": "official_source_replaced",
+            "gate_action": "prepare_replacement_source_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed replacement-source record with same authority or explicit scope reduction."
+          },
+          {
+            "condition": "official_source_unavailable",
+            "gate_action": "stop_and_record_unavailable_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Unavailable-source record, retrieval evidence, and owner decision before proceeding."
+          },
+          {
+            "condition": "source_gap_discovered",
+            "gate_action": "stop_and_record_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Named source gap, affected rows, blocker display, and owner decision."
+          },
+          {
+            "condition": "source_outside_allowed_scope",
+            "gate_action": "refuse_source_and_escalate_scope",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Scope refusal record proving the proposed source is outside the allowlist and no inference was carried."
+          }
+        ]
+      },
+      {
+        "source_id": "be-flanders-education-quality-reference",
+        "jurisdiction_id": "flanders",
+        "source_role": "quality-framework source family",
+        "official_url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit",
+        "current_access_date": "2026-06-22",
+        "source_role_boundary": "Does not replace school-level evidence.",
+        "freshness_trigger": "Before any bounded source-refresh packet, compare the official URL and source title/version metadata against the recorded access date.",
+        "staleness_condition": "Trigger review if the official page title, version date, publication date, content route, or authority owner changes, or if the URL becomes unavailable.",
+        "replacement_source_rule": "Only a same-authority official successor source may replace this source, and replacement must be recorded as a new source-refresh packet item.",
+        "human_review_trigger": "Any updated, replaced, unavailable, source-gap, or outside-scope condition requires human review before downstream use.",
+        "allowed_inference": "Confirm OK framework source family.",
+        "forbidden_inference": "Does not replace school-level evidence.",
+        "condition_handling": [
+          {
+            "condition": "official_source_unchanged",
+            "gate_action": "record_currentness_only_no_refresh_execution",
+            "blocks": "Does not block internal gate planning; still blocks output and product authority.",
+            "proof_required_to_close": "Record official URL, access date, and no-change observation in a future bounded packet."
+          },
+          {
+            "condition": "official_source_updated",
+            "gate_action": "prepare_bounded_source_refresh_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed diff of official source change, retained forbidden inference, and renewed source binding."
+          },
+          {
+            "condition": "official_source_replaced",
+            "gate_action": "prepare_replacement_source_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed replacement-source record with same authority or explicit scope reduction."
+          },
+          {
+            "condition": "official_source_unavailable",
+            "gate_action": "stop_and_record_unavailable_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Unavailable-source record, retrieval evidence, and owner decision before proceeding."
+          },
+          {
+            "condition": "source_gap_discovered",
+            "gate_action": "stop_and_record_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Named source gap, affected rows, blocker display, and owner decision."
+          },
+          {
+            "condition": "source_outside_allowed_scope",
+            "gate_action": "refuse_source_and_escalate_scope",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Scope refusal record proving the proposed source is outside the allowlist and no inference was carried."
+          }
+        ]
+      },
+      {
+        "source_id": "be-flanders-onderwijsdoelen-modernisatie",
+        "jurisdiction_id": "flanders",
+        "source_role": "curriculum-goal route selector",
+        "official_url": "https://onderwijsdoelen.be/modernisatie-so",
+        "current_access_date": "2026-06-22",
+        "source_role_boundary": "Does not authorize generic Flemish economics claims.",
+        "freshness_trigger": "Before any bounded source-refresh packet, compare the official URL and source title/version metadata against the recorded access date.",
+        "staleness_condition": "Trigger review if the official page title, version date, publication date, content route, or authority owner changes, or if the URL becomes unavailable.",
+        "replacement_source_rule": "Only a same-authority official successor source may replace this source, and replacement must be recorded as a new source-refresh packet item.",
+        "human_review_trigger": "Any updated, replaced, unavailable, source-gap, or outside-scope condition requires human review before downstream use.",
+        "allowed_inference": "Document exact route selection and dynamic-portal limitation.",
+        "forbidden_inference": "Does not authorize generic Flemish economics claims.",
+        "condition_handling": [
+          {
+            "condition": "official_source_unchanged",
+            "gate_action": "record_currentness_only_no_refresh_execution",
+            "blocks": "Does not block internal gate planning; still blocks output and product authority.",
+            "proof_required_to_close": "Record official URL, access date, and no-change observation in a future bounded packet."
+          },
+          {
+            "condition": "official_source_updated",
+            "gate_action": "prepare_bounded_source_refresh_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed diff of official source change, retained forbidden inference, and renewed source binding."
+          },
+          {
+            "condition": "official_source_replaced",
+            "gate_action": "prepare_replacement_source_packet_for_human_review",
+            "blocks": "Any localized output, source-derived implementation, or authority claim until a bounded packet is reviewed.",
+            "proof_required_to_close": "Human-reviewed replacement-source record with same authority or explicit scope reduction."
+          },
+          {
+            "condition": "official_source_unavailable",
+            "gate_action": "stop_and_record_unavailable_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Unavailable-source record, retrieval evidence, and owner decision before proceeding."
+          },
+          {
+            "condition": "source_gap_discovered",
+            "gate_action": "stop_and_record_source_gap",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Named source gap, affected rows, blocker display, and owner decision."
+          },
+          {
+            "condition": "source_outside_allowed_scope",
+            "gate_action": "refuse_source_and_escalate_scope",
+            "blocks": "Any source-refresh packet closure until the source issue is resolved by a reviewed human decision.",
+            "proof_required_to_close": "Scope refusal record proving the proposed source is outside the allowlist and no inference was carried."
+          }
+        ]
+      }
+    ],
+    "local_expert_role_contract": {
+      "jurisdiction": "flanders",
+      "jurisdiction_label": "Belgium / Flanders",
+      "expert_role": "Local Flemish economics/curriculum/quality-framework source reviewer",
+      "allowed_review_scope": [
+        "Check official-source interpretation for Book 1 Chapters 1.2 and 1.3 gate planning.",
+        "Identify source gaps, terminology uncertainty, pathway/assessment boundaries, and local review questions.",
+        "Recommend whether a later bounded source-refresh packet is ready to be prepared."
+      ],
+      "forbidden_authority": [
+        "No official authority substitution.",
+        "No legal advice or compliance proof.",
+        "No inspectorate, awarding-body, OK-framework, or school approval claim.",
+        "No school implementation evidence or support/accommodation sufficiency claim.",
+        "No localized student, teacher, school, public, product-route, or Scale Gate output."
+      ],
+      "source_review_responsibility": "Review only the explicit official source allowlist and identify stale, replaced, unavailable, gap, or outside-scope states.",
+      "curriculum_assessment_review_responsibility": "Check Onderwijsdoelen, OK-framework, study-direction, school-network, and assessment-status boundaries without broadening to all Belgium.",
+      "language_terminology_review_responsibility": "Identify terminology that would need local review before any localized output; do not author localized paragraphs or exercises.",
+      "accessibility_inclusion_review_responsibility": "Identify accessibility/inclusion terminology and support-boundary questions; do not decide accommodations or support sufficiency.",
+      "legal_claim_boundary": "Expert review may inform internal source/curriculum interpretation but may not substitute for legal advice, compliance proof, approval, accreditation, OP0, PTA, summative validity, or inspection-readiness claims.",
+      "school_owned_evidence_boundary": "School-owned evidence, learner records, accommodations, support plans, implementation quality, and local assessment evidence remain outside this gate.",
+      "conflict_uncertainty_handling": "Record uncertainty as a blocker with affected source IDs, affected rows, owner next action, and proof required to close.",
+      "required_output_format": "Structured internal review record with source IDs, condition classification, affected rows, allowed inference, forbidden inference, blocks, does_not_block, and proof_required_to_close."
+    },
+    "jurisdiction_specific_gate": {
+      "jurisdiction_id": "flanders",
+      "required_boundaries": [
+        "Onderwijsdoelen source boundary",
+        "OK-framework source boundary",
+        "study-direction / school-network constraints",
+        "assessment-status boundary",
+        "accessibility/inclusion and learner-support boundary",
+        "Flanders-only / not all Belgium boundary"
+      ],
+      "study_direction_boundary": "3de graad doorstroomfinaliteit basisvorming is a selected route; school-network and study-direction detail remains blocked.",
+      "inspection_boundary": "OK and inspection-method sources may frame internal quality vocabulary only.",
+      "assessment_boundary": "No central Flemish summative assessment source is selected; assessment remains school/network-owned.",
+      "accessibility_boundary": "Flemish inclusion terminology, leersteun, redelijke aanpassingen, and learners with specific educational needs are an explicit source-gap blocker until a later bounded packet source-reviews them; no individual-adjustment, support-record, support-sufficiency, or accommodation-sufficiency claim is authorized.",
+      "jurisdiction_boundary": "Flanders is not all Belgium."
+    },
+    "accessibility_inclusion_terminology": [
+      {
+        "source_term": "ontwikkeling van lerenden",
+        "local_term": "ontwikkeling van lerenden",
+        "limitation": "OK quality vocabulary can frame internal inclusion/accessibility context only; it does not define accommodations, care policy, or local legal duties.",
+        "evidence_boundary": "School/network-owned accommodations, support policy, learner-support records, and legal-duty evidence remain outside product proof."
+      },
+      {
+        "source_term": "kwaliteitsontwikkeling",
+        "local_term": "kwaliteitsontwikkeling",
+        "limitation": "Quality-development term, not a compliance, sufficiency, or accessibility-support result.",
+        "evidence_boundary": "Product accessibility affordances remain separate from school/network accommodations and local legal duties."
+      }
+    ],
+    "school_owned_evidence_boundary": [
+      {
+        "boundary_area": "OK quality development",
+        "why_school_owned": "Quality development is enacted and evidenced by schools.",
+        "forbidden_inference": "Product crosswalk cannot prove OK fulfilment, legal sufficiency, or support adequacy."
+      },
+      {
+        "boundary_area": "Assessment practice",
+        "why_school_owned": "No central assessment source selected; school/network policy controls task evidence.",
+        "forbidden_inference": "No summative or PTA claim."
+      },
+      {
+        "boundary_area": "Inclusion/accessibility support and accommodation duties",
+        "why_school_owned": "School/network policy and local legal duties govern support decisions, accommodations, learner records, and sufficiency evidence.",
+        "forbidden_inference": "Descriptor cannot prove accessibility compliance, support sufficiency, legal sufficiency, or school readiness."
+      }
+    ],
+    "source_refresh_execution_performed": false,
+    "local_expert_substitution_performed": false,
+    "gate_simulation_cases": [
+      {
+        "case_type": "valid_official_source_refresh_request",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-flanders-onderwijsdoelen-so3-doorstroom",
+        "source_condition": "official_source_unchanged",
+        "classification": "CLASSIFY_FOR_BOUNDED_PACKET",
+        "boundary_focus": "Onderwijsdoelen source boundary",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "A future request may be classified for packet preparation, but no refresh is executed here.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      },
+      {
+        "case_type": "stale_source_detected",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-flanders-ok-framework",
+        "source_condition": "official_source_updated",
+        "classification": "REQUIRES_HUMAN_REVIEW",
+        "boundary_focus": "OK-framework source boundary",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "Staleness becomes a blocker until a bounded source-refresh packet is reviewed.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      },
+      {
+        "case_type": "source_gap",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-flanders-onderwijsdoelen-modernisatie",
+        "source_condition": "source_gap_discovered",
+        "classification": "BLOCK_SOURCE_GAP",
+        "boundary_focus": "dynamic Onderwijsdoelen route/source-gap boundary",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "A source gap blocks localized or authority claims.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      },
+      {
+        "case_type": "non_official_source_proposed",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-federal-education-source",
+        "source_condition": "source_outside_allowed_scope",
+        "classification": "STOP_NON_OFFICIAL_SOURCE",
+        "boundary_focus": "Flanders-only / not all Belgium boundary",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "Outside-scope or non-official sources are refused.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      },
+      {
+        "case_type": "local_expert_uncertainty",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-flanders-education-quality-reference",
+        "source_condition": "official_source_unchanged",
+        "classification": "RECORD_UNCERTAINTY",
+        "boundary_focus": "study-direction / school-network constraints",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "Expert uncertainty is recorded as a blocker, not resolved by substitution.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      },
+      {
+        "case_type": "attempted_compliance_claim",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-flanders-inspection-what-do-we-inspect",
+        "source_condition": "official_source_unchanged",
+        "classification": "STOP_COMPLIANCE_APPROVAL_CLAIM",
+        "boundary_focus": "OK/compliance and inspection-readiness refusal",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "Compliance and inspection-readiness claims are refused.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      },
+      {
+        "case_type": "attempted_localized_output",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-flanders-onderwijsdoelen-so3-doorstroom",
+        "source_condition": "official_source_unchanged",
+        "classification": "STOP_LOCALIZED_OUTPUT",
+        "boundary_focus": "Onderwijsdoelen do not authorize localized output",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "Localized paragraphs, exercises, answer models, or assessment items are refused.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      },
+      {
+        "case_type": "attempted_school_facing_output",
+        "jurisdiction_id": "flanders",
+        "source_id": "be-flanders-ok-framework",
+        "source_condition": "official_source_unchanged",
+        "classification": "STOP_TEACHER_SCHOOL_FACING_OUTPUT",
+        "boundary_focus": "Flemish inclusion and learner-support evidence remains school-owned",
+        "simulation_only": true,
+        "source_refresh_executed": false,
+        "local_expert_substituted": false,
+        "generated_output": {
+          "localized_paragraphs": false,
+          "localized_exercises": false,
+          "answer_models": false,
+          "localized_assessment_items": false,
+          "student_facing_files": false,
+          "teacher_school_output": false,
+          "public_output": false,
+          "evidence_pack": false,
+          "runtime_execution": false,
+          "product_route": false,
+          "scale_gate": false,
+          "diagnostics_mastery_pv": false,
+          "personal_data": false
+        },
+        "note": "Teacher/school-facing and public output are refused.",
+        "blocks": "Source-refresh execution, local expert substitution, localized output, school/public output, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval, inspection-readiness, support/accommodation sufficiency, and jurisdiction overgeneralisation.",
+        "does_not_block": "Internal gate-design review.",
+        "proof_required_to_close": "Separate reviewed bounded source-refresh packet, local expert review record, final lead PASS, exact-head PR readiness, green CI, and explicit owner authorization."
+      }
+    ],
+    "no_output_enforcement": {
+      "localized_paragraphs": false,
+      "localized_exercises": false,
+      "answer_models": false,
+      "localized_assessment_items": false,
+      "student_facing_files": false,
+      "teacher_school_output": false,
+      "public_output": false,
+      "evidence_pack": false,
+      "runtime_execution": false,
+      "product_route": false,
+      "scale_gate": false,
+      "diagnostics_mastery_pv": false,
+      "personal_data": false
+    },
+    "finding_classification": [
+      {
+        "finding": "Belgium / Flanders gate simulation covers official source, stale source, gap, non-official source, expert uncertainty, claim, localized-output, and school-output cases without executing refresh.",
+        "classification": "core_requirement_met",
+        "blocks": "Nothing for internal gate design review.",
+        "does_not_block": "Proceeding to combined gate decision after specialist review.",
+        "proof_required_to_close": "Checker PASS, negative fixtures PASS, source reviewer PASS, legal/privacy PASS, accessibility/inclusion PASS, final lead PASS, exact-head PR readiness, and human review."
+      },
+      {
+        "finding": "Belgium / Flanders downstream use remains blocked.",
+        "classification": "scale_blocker",
+        "blocks": "Source refresh execution, local expert substitution, localized/student/teacher/school/public output, evidence packs, product routes, Scale Gate, diagnostics/mastery/PV, personal data, compliance/approval/inspection-readiness/support/accommodation claims.",
+        "does_not_block": "Internal no-output gate design and review.",
+        "proof_required_to_close": "Separate reviewed sprint and explicit owner authorization."
+      }
+    ]
+  }
+}

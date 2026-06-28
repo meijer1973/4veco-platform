@@ -36,8 +36,6 @@ const REWRITES = [
 // and their content rewrites happen in-place via the mapping above).
 const TARGET_DIRS = [
   'skills',
-  '.claude/commands',
-  '.claude/plans',
   'knowledge',
   'build-scripts',
   'source-data',
@@ -45,7 +43,7 @@ const TARGET_DIRS = [
 ];
 
 // Also include top-level docs that cite references.
-const EXTRA_FILES = ['CLAUDE.md', 'AGENTS.md', 'BUILD-PARAGRAPH.md', 'BUILD-CHAPTER.md'];
+const EXTRA_FILES = ['AGENTS.md', 'BUILD-PARAGRAPH.md', 'BUILD-CHAPTER.md'];
 
 // Files that DOCUMENT the mapping and must retain the old paths as reference.
 // Excluded from rewriting.
