@@ -21,7 +21,7 @@ Original sprint/gate/source specs:
 - reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md
 
 Merged state:
-- Platform main head: `9458d034b4aa53cab8627e1f0b681e2dd3a2222c`
+- Platform main head: `9dea1b0ca35d13fe8dbe33f81d707431de9e4875`
 - Lesson main head: `bd413817deffdc423a5779c37f18dd985c7e2c81`
 - Product-proof merge commit: `8dfdabce65ab41c0844a66d641de0e68a6e7999d`
 - Lesson production merge commit: `ef06e8b881f953d7fcd6a1ed26a763b2bf01a684`

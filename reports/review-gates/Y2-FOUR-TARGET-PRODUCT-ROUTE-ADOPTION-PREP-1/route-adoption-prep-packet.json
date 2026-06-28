@@ -20,7 +20,7 @@
     "book_architecture": "reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md"
   },
   "merged_state": {
-    "platform_current_main_head_sha": "9458d034b4aa53cab8627e1f0b681e2dd3a2222c",
+    "platform_current_main_head_sha": "9dea1b0ca35d13fe8dbe33f81d707431de9e4875",
     "lesson_current_main_head_sha": "bd413817deffdc423a5779c37f18dd985c7e2c81",
     "product_proof_merge_commit": "8dfdabce65ab41c0844a66d641de0e68a6e7999d",
     "lesson_production_merge_commit": "ef06e8b881f953d7fcd6a1ed26a763b2bf01a684",
