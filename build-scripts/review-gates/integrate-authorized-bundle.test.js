@@ -62,19 +62,23 @@ function pr(repo, number, head, overrides = {}) {
   };
 }
 
-function compatibility(order = 'lesson-first') {
+function compatibility(order = 'lesson-first', overrides = {}) {
+  const exactMembers = {
+    platform_base_sha: platformBase,
+    platform_candidate_sha: platformHead,
+    lesson_base_sha: lessonBase,
+    lesson_candidate_sha: lessonHead,
+    ...(overrides.exact_members || {}),
+  };
   return {
     ok: true,
     bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
-    exact_members: {
-      platform_base_sha: platformBase,
-      platform_candidate_sha: platformHead,
-      lesson_base_sha: lessonBase,
-      lesson_candidate_sha: lessonHead,
-    },
+    exact_members: exactMembers,
     permitted_merge_orders: order === 'both' ? ['platform-first', 'lesson-first'] : [order],
     recommended_merge_order: order === 'both' ? 'lesson-first' : order,
     failures: [],
+    ...overrides,
+    exact_members: exactMembers,
   };
 }
 
@@ -97,7 +101,7 @@ function compatibilitySummary(overrides = {}) {
 }
 
 function harness(overrides = {}) {
-  const calls = { merges: [], ciTriggers: [], ciWaits: [], refreshes: [] };
+  const calls = { merges: [], ciTriggers: [], ciWaits: [], refreshes: [], updates: [] };
   const fetchPr = jest.fn((repo) => {
     if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
     return pr(repo, 34, lessonHead);
@@ -115,6 +119,9 @@ function harness(overrides = {}) {
       route: 'READY_FOR_HUMAN_REVIEW',
       decision: { route: 'READY_FOR_HUMAN_REVIEW' },
     })),
+    fetchComparePaths: jest.fn(() => []),
+    fetchCompareStatus: jest.fn(() => ({ status: 'identical', ahead_by: 0, behind_by: 0 })),
+    fetchInterveningCommits: jest.fn(() => []),
     fetchReviewThreadState: jest.fn(() => ({
       available: true,
       unresolved_count: 0,
@@ -123,6 +130,20 @@ function harness(overrides = {}) {
     latestWorkflowRunDatabaseId: jest.fn(() => 100),
     preflightCrossRepoPermissions: jest.fn(() => ({ ok: true })),
     recomputeCompatibility: jest.fn(() => compatibility('lesson-first')),
+    summarizeLineage: jest.fn((input) => ({
+      ok: input.payload_ancestor_of_integration_head === true,
+      reviewed_payload_head_sha: input.reviewed_payload_head_sha,
+      integration_head_sha: input.integration_head_sha,
+      authorization_inherited: input.payload_ancestor_of_integration_head === true,
+      requires_integration_delta_lead_review: false,
+      requires_deterministic_refresh: false,
+      failures: input.payload_ancestor_of_integration_head === true ? [] : ['reviewed_payload_head_not_ancestor'],
+      base_drift: { classification: 'no_substantive_overlap' },
+    })),
+    updateBranch: jest.fn((repo, prNumber, expectedHeadSha) => {
+      calls.updates.push({ repo, prNumber, expectedHeadSha });
+      return { ok: true };
+    }),
     mergePr: jest.fn((repo, prNumber, headSha) => {
       calls.merges.push({ repo, prNumber, headSha });
       return { merged: true };
@@ -229,6 +250,68 @@ describe('authorized cross-repo bundle integration', () => {
     });
   });
 
+  test('platform-first behind branch updates exact head and stops for renewed compatibility', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        recomputeCompatibility: jest.fn(() => compatibility('platform-first')),
+        fetchCompareStatus: jest
+          .fn()
+          .mockReturnValueOnce({ status: 'identical', ahead_by: 0, behind_by: 0 })
+          .mockReturnValueOnce({ status: 'identical', ahead_by: 0, behind_by: 0 })
+          .mockReturnValueOnce({ status: 'behind', ahead_by: 0, behind_by: 1 }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: true,
+      phase: 'member_branch_updated',
+      retry_required: true,
+      repo: PLATFORM_REPO,
+      pr_number: 140,
+      previous_head_sha: platformHead,
+    });
+    expect(calls.updates).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, expectedHeadSha: platformHead },
+    ]);
+    expect(calls.merges).toEqual([]);
+  });
+
+  test('refreshed integration head can merge when renewed compatibility is exact', () => {
+    const refreshedPlatformHead = '8'.repeat(40);
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, refreshedPlatformHead);
+          return pr(repo, 34, lessonHead);
+        }),
+        fetchCompareStatus: jest
+          .fn()
+          .mockReturnValueOnce({ status: 'ahead', ahead_by: 1, behind_by: 0 })
+          .mockReturnValueOnce({ status: 'diverged', ahead_by: 1, behind_by: 1, merge_base_commit_sha: '9'.repeat(40) })
+          .mockReturnValueOnce({ status: 'identical', ahead_by: 0, behind_by: 0 })
+          .mockReturnValueOnce({ status: 'ahead', ahead_by: 1, behind_by: 0 })
+          .mockReturnValueOnce({ status: 'identical', ahead_by: 0, behind_by: 0 }),
+        recomputeCompatibility: jest.fn((_record, exactMembers) => compatibility('platform-first', {
+          exact_members: exactMembers,
+        })),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'platform-first' });
+    expect(deps.recomputeCompatibility).toHaveBeenCalledWith(expect.any(Object), {
+      platform_base_sha: platformBase,
+      platform_candidate_sha: refreshedPlatformHead,
+      lesson_base_sha: lessonBase,
+      lesson_candidate_sha: lessonHead,
+    });
+    expect(calls.merges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: refreshedPlatformHead },
+      { repo: LESSON_REPO, prNumber: 34, headSha: lessonHead },
+    ]);
+  });
+
   test('both intermediate states green uses deterministic lesson-first default', () => {
     const { calls, options, deps } = harness({
       deps: {
@@ -248,12 +331,16 @@ describe('authorized cross-repo bundle integration', () => {
           if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
           return pr(repo, 34, '7'.repeat(40));
         }),
+        fetchCompareStatus: jest
+          .fn()
+          .mockReturnValueOnce({ status: 'identical', ahead_by: 0, behind_by: 0 })
+          .mockReturnValueOnce({ status: 'diverged', ahead_by: 1, behind_by: 1 }),
       },
     });
     const result = integrateBundle({ ...options, deps });
 
     expect(result).toMatchObject({ ok: false, phase: 'preflight' });
-    expect(result.failures).toContain('lesson:pr_head_mismatch');
+    expect(result.failures).toContain('lesson:member_payload_not_ancestor');
     expect(calls.merges).toEqual([]);
   });
 
