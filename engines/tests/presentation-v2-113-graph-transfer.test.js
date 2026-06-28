@@ -39,7 +39,7 @@ describeOrSkip('section 1.1.3 graph/table web presentation transfer', () => {
   test('uses a standalone semantic presentation-v2 graph transfer deck', () => {
     expect(deck.version).toBe('presentation-v2');
     expect(deck.exemplarId).toBe('1.1.3-graph-transfer-presentation');
-    expect(deck.routeContract.productBoundary).toMatch(/without new PPTX-generation|zonder nieuwe PPTX/i);
+    expect(deck.routeContract.productBoundary).toMatch(/PowerPoint-derivaat|semantische model/i);
     expect(deck.slides).toHaveLength(8);
     expect(deck.slides.map((slide) => slide.role)).toEqual([
       'route_contract',
@@ -59,6 +59,7 @@ describeOrSkip('section 1.1.3 graph/table web presentation transfer', () => {
     expect(html).toMatch(/<span>Lespresentatie<\/span>/);
     expect(html).not.toMatch(/webpresentatie<\/span>/i);
     expect(html).not.toMatch(/Download PowerPoint|Speaker notes|Full screen|Exit full screen/);
+    if (html.includes('.pptx')) expect(html).toMatch(/PowerPoint downloaden/);
     expect(html).toMatch(/data-pv2-notes aria-pressed="false" aria-expanded="false"[^>]*>Studentgerichte uitleg<\/button>/);
     expect(html).toMatch(/data-pv2-fullscreen aria-pressed="false">Presentatiemodus<\/button>/);
   });

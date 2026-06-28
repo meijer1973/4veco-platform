@@ -2,15 +2,14 @@
 /**
  * Build the implemented section 1.1.3 graph/table web presentation.
  *
- * PowerPoint export is intentionally not produced here. The existing PPTX
- * remains a secondary legacy download until a separate derivative consumes this
- * semantic model and passes its own QA.
+ * HTML and PowerPoint derivatives both consume the same semantic model.
  */
 
 const fs = require('fs');
 const path = require('path');
 const deck = require('./b1-113-presentation-v2-model');
 const { writeDeckHtml } = require('../../lib/render-presentation-v2-html');
+const { writeDeckPptx } = require('../../lib/render-presentation-v2-pptx');
 
 const MODULE_ROOT = process.env.MODULE_ROOT || path.resolve(__dirname, '../../../../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod');
 const PARAGRAPH_DIR = path.join(
@@ -31,7 +30,7 @@ function copyEngine(file) {
   fs.writeFileSync(dst, header + fs.readFileSync(src, 'utf8'), 'utf8');
 }
 
-function main() {
+async function main() {
   fs.mkdirSync(PARAGRAPH_DIR, { recursive: true });
   fs.mkdirSync(SHARED_DIR, { recursive: true });
 
@@ -39,12 +38,21 @@ function main() {
   copyEngine('presentation-v2.js');
 
   const htmlOut = path.join(PARAGRAPH_DIR, `${deck.outputBase}.html`);
+  const pptxOut = path.join(PARAGRAPH_DIR, `${deck.outputBase}.pptx`);
   writeDeckHtml(deck, htmlOut, {
     backHref: 'index.html',
+    pptxHref: `${deck.outputBase}.pptx`,
+  });
+  await writeDeckPptx(deck, pptxOut, {
+    roundtrip: process.env.PRESENTATION_V2_PPTX_ROUNDTRIP !== '0',
   });
 
   console.log('OK presentation-v2 graph transfer 1.1.3');
   console.log(`  HTML: ${htmlOut}`);
+  console.log(`  PPTX: ${pptxOut}`);
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

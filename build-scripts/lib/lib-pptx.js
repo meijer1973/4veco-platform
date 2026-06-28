@@ -15,9 +15,6 @@
  *   SC.xxx → #-prefixed hex for SVG strings ("#0B1B3D")
  */
 
-process.env.NODE_PATH = "C:/Users/meije/AppData/Roaming/npm/node_modules";
-require("module").Module._initPaths();
-
 const sharp = require("sharp");
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -204,7 +201,7 @@ async function svgData(svg, w = 1440) { return pngB64(await svgToPng(svg, w)); }
 // ═══════════════════════════════════════════════════════════════════════════
 const fs = require("fs");
 const { execFileSync } = require("child_process");
-const JSZip = require("C:/Users/meije/AppData/Roaming/npm/node_modules/pptxgenjs/node_modules/jszip");
+const JSZip = require("jszip");
 
 async function fixPptxFile(pptxPath) {
   const buf = fs.readFileSync(pptxPath);
@@ -271,11 +268,12 @@ async function fixNotesFontSize(pptxPath, sizePt = 14) {
 
   for (const p of notesPaths) {
     const xml = await zip.file(p).async("string");
-    // Match `<a:rPr ... />` and `<a:rPr ...>` (with content). Add or
-    // replace the sz attribute. The regex captures (open tag) + (attrs)
-    // + (self-close / open-close).
-    const re = /<a:rPr\b([^>]*)\/?>/g;
-    let updated = xml.replace(re, (full, attrs) => {
+    // Match explicit run properties and default run properties in notes.
+    // LibreOffice can emit a small `<a:defRPr sz="1200">` placeholder run
+    // for notes page numbers after roundtrip, so both tag forms need the
+    // same floor repair.
+    const re = /<a:(rPr|defRPr)\b([^>]*)\/?>/g;
+    let updated = xml.replace(re, (full, tag, attrs) => {
       const hasSize = /\bsz="\d+"/.test(attrs);
       let newAttrs = hasSize
         ? attrs.replace(/\bsz="\d+"/, `sz="${sizeHundredths}"`)
@@ -284,8 +282,8 @@ async function fixNotesFontSize(pptxPath, sizePt = 14) {
       const isSelfClose = /\/>$/.test(full);
       bumped++;
       return isSelfClose
-        ? `<a:rPr${newAttrs}/>`
-        : `<a:rPr${newAttrs}>`;
+        ? `<a:${tag}${newAttrs}/>`
+        : `<a:${tag}${newAttrs}>`;
     });
     if (updated !== xml) {
       zip.file(p, updated);
