@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "report_type": "local_expert_review_request_packet",
+  "sprint_id": "GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1",
+  "generated_date": "2026-06-28",
+  "access_date": "2026-06-28",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "product_end_state_checkout_note": "Cross-repo citation: resolve through the paired 4veco-lessen checkout used for human review; this platform packet does not copy lesson-repo product state.",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-sprint-plan.md",
+  "roadmap_source": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
+  "accepted_input_decision": "PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET",
+  "accepted_input_decision_source": "reports/inspection-standards/source-refresh-execution-pilot-decision.json",
+  "input_allowlist": [
+    "reports/inspection-standards/source-refresh-execution-pilot-decision.json",
+    "reports/inspection-standards/england-source-refresh-execution-results.json",
+    "reports/inspection-standards/flanders-source-refresh-execution-results.json",
+    "reports/inspection-standards/source-refresh-delta-impact-analysis.json",
+    "docs/inspection-standards/local-expert-review-request-template.md",
+    "docs/inspection-standards/local-expert-source-refresh-gate-contract.md"
+  ],
+  "output_allowlist": [
+    "references/schemas/local-expert-review-request.schema.v1.json",
+    "references/schemas/local-expert-review-response.schema.v1.json",
+    "docs/inspection-standards/local-expert-review-request-contract.md",
+    "docs/inspection-standards/england-local-expert-review-request.md",
+    "docs/inspection-standards/flanders-local-expert-review-request.md",
+    "reports/inspection-standards/local-expert-review-request-plan.md",
+    "reports/inspection-standards/local-expert-review-request-plan.json",
+    "reports/inspection-standards/england-local-expert-review-request-packet.md",
+    "reports/inspection-standards/england-local-expert-review-request-packet.json",
+    "reports/inspection-standards/flanders-local-expert-review-request-packet.md",
+    "reports/inspection-standards/flanders-local-expert-review-request-packet.json",
+    "reports/inspection-standards/local-expert-review-request-simulation.md",
+    "reports/inspection-standards/local-expert-review-request-simulation.json",
+    "reports/inspection-standards/local-expert-review-request-decision.md",
+    "reports/inspection-standards/local-expert-review-request-decision.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/england-local-expert-review-request-packet.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/flanders-local-expert-review-request-packet.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/local-expert-review-request-simulation.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/local-expert-review-request-decision.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/legal-advice-request.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/compliance-proof-request.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/localized-paragraph-generation.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/exam-ready-exercises.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/school-owned-evidence.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/student-data.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/support-accommodation-sufficiency-overclaim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/expert-as-official-authority.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/hidden-source-uncertainty.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/england-to-uk-generalization.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/flanders-to-belgium-generalization.sample.json",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-sprint-plan.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-correction-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-schema-architecture-lead-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-england-source-expert-scope-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-flanders-source-expert-scope-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-teacher-economics-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-legal-privacy-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-accessibility-inclusion-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-final-lead-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-closure-record.md"
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "product_end_state_and_spec_cited",
+      "requirement": "Product end-state and original sprint/gate spec are cited.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "accepted_source_refresh_decision_bound",
+      "requirement": "Request packet is bound to accepted PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "no_expert_contact_or_substitution",
+      "requirement": "No expert is contacted and no local expert judgment is substituted.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "request_and_response_schemas_complete",
+      "requirement": "Request and response schemas define strict request and expert feedback records.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "england_packet_complete",
+      "requirement": "England request packet covers DfE, Ofsted, AQA, SEND/accessibility, England-only, Book 1 1.2/1.3, and assessment-form boundaries.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "flanders_packet_complete",
+      "requirement": "Flanders request packet covers Onderwijsdoelen, OK, study-direction/school-network, assessment-status, Flanders-only, accessibility/support, Book 1 1.2/1.3, and interpretation-needed sources.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "source_states_trace_to_execution_pilot",
+      "requirement": "Every source state traces to the accepted source-refresh execution pilot.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "forbidden_claims_explicit",
+      "requirement": "Legal, compliance, approval, inspection-readiness, school evidence, student data, support/accommodation sufficiency, accessibility/legal sufficiency, and product adoption claims are forbidden.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "response_schema_forbids_personal_and_school_data",
+      "requirement": "Response schema forbids student data, personal data, school-specific evidence, legal/compliance conclusions, approval conclusions, inspection-readiness conclusions, and direct localized output.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "simulation_and_refusals_complete",
+      "requirement": "Request simulation and negative fixtures cover legal advice, compliance proof, localized paragraphs, exam-ready exercises, school evidence, student data, support/accommodation/accessibility sufficiency overclaims, expert authority substitution, hidden uncertainty, England-to-UK, and Flanders-to-Belgium overclaims.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "single_decision",
+      "requirement": "Exactly one allowed final decision is selected.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "review_route_preserved",
+      "requirement": "Specialist reviews, final lead review, exact-head PR readiness, green CI, and human review remain required.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    }
+  ],
+  "report_id": "england-local-expert-review-request-packet",
+  "packet_id": "england-local-expert-review-request-packet",
+  "status": "simulated_request_packet_ready_for_human_review",
+  "jurisdiction_id": "england",
+  "jurisdiction_label": "England",
+  "expert_profile_needed": "England economics qualification and inspection/source-boundary reviewer familiar with DfE A level economics subject content, Ofsted school inspection sources, representative AQA Economics 7136 specification/assessment surfaces, and SEND/accessibility terminology.",
+  "source_ids_in_scope": [
+    "england-ofsted-eif-2025",
+    "england-ofsted-operating-guide-2025",
+    "england-dfe-a-level-economics-content",
+    "england-aqa-7136-subject-content",
+    "england-aqa-7136-scheme-assessment",
+    "england-aqa-economics-command-words",
+    "england-aqa-7136-assessment-resources",
+    "england-send-code-practice"
+  ],
+  "source_states_from_refresh_pilot": {
+    "england-ofsted-eif-2025": "unchanged",
+    "england-ofsted-operating-guide-2025": "unchanged",
+    "england-dfe-a-level-economics-content": "unchanged",
+    "england-aqa-7136-subject-content": "unchanged",
+    "england-aqa-7136-scheme-assessment": "unchanged",
+    "england-aqa-economics-command-words": "unchanged",
+    "england-aqa-7136-assessment-resources": "unchanged",
+    "england-send-code-practice": "unchanged"
+  },
+  "questions_allowed": [
+    {
+      "question_id": "england-q-dfe-content",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-dfe-a-level-economics-content"
+      ],
+      "source_states_seen": {
+        "england-dfe-a-level-economics-content": "unchanged"
+      },
+      "allowed_question": "Please generalize this England source to the whole UK.",
+      "forbidden_question": "Do not approve any exam-board specification, localized edition, student task, or 4veco material.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "england-q-ofsted-eif",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-ofsted-eif-2025"
+      ],
+      "source_states_seen": {
+        "england-ofsted-eif-2025": "unchanged"
+      },
+      "allowed_question": "Interpret the Ofsted inspection/evaluation boundary that should remain visible if later internal overlay planning references quality or inspection language.",
+      "forbidden_question": "Do not provide inspection-readiness, compliance, evidence-pack, or school judgment claims.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "england-q-ofsted-operating-guide",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-ofsted-operating-guide-2025"
+      ],
+      "source_states_seen": {
+        "england-ofsted-operating-guide-2025": "unchanged"
+      },
+      "allowed_question": "Interpret the evidence-gathering boundary in the Ofsted operating-guide source for internal blocker display only.",
+      "forbidden_question": "Do not say 4veco output would satisfy inspection evidence or school-owned evidence needs.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "england-q-aqa-subject",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-aqa-7136-subject-content"
+      ],
+      "source_states_seen": {
+        "england-aqa-7136-subject-content": "unchanged"
+      },
+      "allowed_question": "Interpret representative AQA 7136 subject-content boundaries that may affect Book 1 1.2/1.3 concept mapping.",
+      "forbidden_question": "Do not treat AQA as all awarding bodies or generate exam-board-ready material.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "england-q-aqa-assessment",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-aqa-7136-scheme-assessment",
+        "england-aqa-economics-command-words",
+        "england-aqa-7136-assessment-resources"
+      ],
+      "source_states_seen": {
+        "england-aqa-7136-scheme-assessment": "unchanged",
+        "england-aqa-economics-command-words": "unchanged",
+        "england-aqa-7136-assessment-resources": "unchanged"
+      },
+      "allowed_question": "Interpret assessment-form, command-word, and resource-index implications that should be retained as internal constraints.",
+      "forbidden_question": "Do not generate exam-ready exercises, mark schemes, assessment items, or protected assessment content.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "england-q-send-accessibility",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-send-code-practice"
+      ],
+      "source_states_seen": {
+        "england-send-code-practice": "unchanged"
+      },
+      "allowed_question": "Interpret SEND/accessibility terminology that should frame support and accommodation boundary questions.",
+      "forbidden_question": "Do not state accessibility compliance, legal sufficiency, support sufficiency, accommodation sufficiency, or individual adjustment sufficiency.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "england-q-england-only",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-ofsted-eif-2025",
+        "england-dfe-a-level-economics-content"
+      ],
+      "source_states_seen": {
+        "england-ofsted-eif-2025": "unchanged",
+        "england-dfe-a-level-economics-content": "unchanged"
+      },
+      "allowed_question": "Identify any England-only phrasing needed to prevent whole-UK or all-awarding-body overclaims.",
+      "forbidden_question": "Do not generalize to Scotland, Wales, Northern Ireland, whole UK, or all awarding bodies.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "england-q-book1-placement",
+      "jurisdiction_id": "england",
+      "source_ids": [
+        "england-dfe-a-level-economics-content",
+        "england-aqa-7136-subject-content"
+      ],
+      "source_states_seen": {
+        "england-dfe-a-level-economics-content": "unchanged",
+        "england-aqa-7136-subject-content": "unchanged"
+      },
+      "allowed_question": "Flag any Book 1 1.2/1.3 concept-placement uncertainty that a later internal transformation sprint must preserve.",
+      "forbidden_question": "Do not rewrite or localize Book 1 paragraphs, exercises, answers, or assessment prompts.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    }
+  ],
+  "questions_forbidden": [
+    "legal advice",
+    "compliance claims",
+    "approval claims",
+    "inspection-readiness claims",
+    "school implementation evidence",
+    "school-owned evidence",
+    "student evidence",
+    "student data",
+    "personal data",
+    "support sufficiency claims",
+    "accommodation sufficiency claims",
+    "accessibility/legal sufficiency claims",
+    "product adoption claims",
+    "official-source substitution",
+    "localized output generation",
+    "exam-ready exercise generation",
+    "Do not generalize England to the whole UK, Scotland, Wales, Northern Ireland, all awarding bodies, all schools, or all local implementation contexts."
+  ],
+  "expected_response_format": [
+    "reviewer_role",
+    "jurisdiction",
+    "source_id",
+    "source_state_seen",
+    "question_id",
+    "answer_type",
+    "interpretation",
+    "confidence",
+    "uncertainty",
+    "cited_source",
+    "forbidden_claims_disclaimed",
+    "does_not_authorize",
+    "proof_required_to_use"
+  ],
+  "uncertainty_handling": "Uncertainty must be explicit. The reviewer may mark cannot_answer, cite why, and state proof_required_to_use. Hidden uncertainty is invalid.",
+  "citation_requirements": "Every answer must cite the official source_id and official URL from the request scope. Non-official material cannot become authority.",
+  "authority_boundary": "Expert feedback is bounded interpretive input for later human review. It is not legal advice, compliance proof, school evidence, official authority, localized output, product adoption, or inspection readiness.",
+  "no_expert_contact_performed": true,
+  "does_not_authorize": [
+    "local expert contact in this sprint",
+    "local expert substitution for official authority",
+    "localized output",
+    "country editions",
+    "student-facing output",
+    "teacher/school-facing output",
+    "public output",
+    "evidence packs",
+    "product-route adoption",
+    "Scale Gate",
+    "diagnostics/mastery/PV",
+    "student/product use",
+    "personal-data processing",
+    "legal advice, compliance, approval, accreditation, OP0, PTA, summative validity, inspection readiness, support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or school-owned evidence claims"
+  ],
+  "source_scope": [
+    {
+      "source_id": "england-ofsted-eif-2025",
+      "source_state_seen": "unchanged",
+      "authority": "Ofsted",
+      "source_role": "inspection/evaluation boundary",
+      "official_url": "https://www.gov.uk/government/publications/education-inspection-framework-eif/education-inspection-framework-for-use-from-november-2025",
+      "evidence_note": "Official GOV.UK page remains titled Education inspection framework: for use from November 2025, shows Updated 9 September 2025, applies to England, and states use on inspections from 10 November 2025.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not approve product output or prove inspection readiness."
+    },
+    {
+      "source_id": "england-ofsted-operating-guide-2025",
+      "source_state_seen": "unchanged",
+      "authority": "Ofsted",
+      "source_role": "inspection evidence-gathering boundary",
+      "official_url": "https://www.gov.uk/government/publications/school-inspection-toolkit-operating-guide-and-information/school-inspection-operating-guide-for-inspectors-for-use-from-november-2025",
+      "evidence_note": "Official GOV.UK page remains titled [Currently in use] School inspection operating guide for inspectors, shows Updated 12 June 2026, applies to England, and states use on inspections from 10 November 2025.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not authorize evidence-pack generation or school evidence sufficiency claims."
+    },
+    {
+      "source_id": "england-dfe-a-level-economics-content",
+      "source_state_seen": "unchanged",
+      "authority": "Department for Education",
+      "source_role": "qualification subject-content boundary",
+      "official_url": "https://www.gov.uk/government/publications/gce-as-and-a-level-for-economics",
+      "evidence_note": "Official GOV.UK page remains titled GCE AS and A level economics, from Department for Education, published 9 April 2014, with subject content details.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not approve an exam-board specification or 4veco tasks."
+    },
+    {
+      "source_id": "england-aqa-7136-subject-content",
+      "source_state_seen": "unchanged",
+      "authority": "AQA",
+      "source_role": "representative awarding-body subject content",
+      "official_url": "https://www.aqa.org.uk/subjects/economics/a-level/economics-7136/specification/subject-content",
+      "evidence_note": "AQA official page remains A-level Economics 7136 subject content, exposes specification 7136 and subject-content sections for microeconomic and macroeconomic content.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not represent all awarding bodies or all England."
+    },
+    {
+      "source_id": "england-aqa-7136-scheme-assessment",
+      "source_state_seen": "unchanged",
+      "authority": "AQA",
+      "source_role": "assessment objective and paper-form boundary",
+      "official_url": "https://www.aqa.org.uk/subjects/economics/a-level/economics-7136/specification/scheme-of-assessment",
+      "evidence_note": "AQA official page remains A-level Economics 7136 scheme of assessment under specification 7136.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not generate AQA exam questions or assessment items."
+    },
+    {
+      "source_id": "england-aqa-economics-command-words",
+      "source_state_seen": "unchanged",
+      "authority": "AQA",
+      "source_role": "representative command-word meanings",
+      "official_url": "https://www.aqa.org.uk/resources/economics/as-and-a-level/economics/teach/command-words",
+      "evidence_note": "AQA official command-words page remains available for AS and A-level Economics command-word interpretation.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not authorize student-facing assessment output."
+    },
+    {
+      "source_id": "england-aqa-7136-assessment-resources",
+      "source_state_seen": "unchanged",
+      "authority": "AQA",
+      "source_role": "representative specimen paper and mark-scheme source layer",
+      "official_url": "https://www.aqa.org.uk/subjects/economics/a-level/economics-7136/assessment-resources",
+      "evidence_note": "AQA official assessment resources page remains available for A-level Economics 7136 and exposes the assessment-resources route/filter surface.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not copy or generate protected assessment material."
+    },
+    {
+      "source_id": "england-send-code-practice",
+      "source_state_seen": "unchanged",
+      "authority": "Department for Education and Department of Health and Social Care",
+      "source_role": "SEND/accessibility terminology boundary",
+      "official_url": "https://www.gov.uk/government/publications/send-code-of-practice-0-to-25",
+      "evidence_note": "Official GOV.UK page remains titled SEND code of practice: 0 to 25 years, from DfE and DHSC, published 11 June 2014 and last updated 12 September 2024.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not prove accessibility compliance or school support sufficiency."
+    }
+  ],
+  "expected_use": "Later expert feedback may inform an internal overlay transformation sprint only after human review, retained citations, and explicit no-authority disclaimers.",
+  "request_not_sent": true,
+  "no_output_flags": {
+    "expert_contacted": false,
+    "expert_substituted": false,
+    "localized_output_generated": false,
+    "country_edition_generated": false,
+    "student_facing_output_generated": false,
+    "teacher_school_facing_output_generated": false,
+    "public_output_generated": false,
+    "evidence_pack_generated": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_product_use": false,
+    "personal_data_processing": false,
+    "legal_advice_requested": false,
+    "legal_compliance_claim": false,
+    "approval_accreditation_claim": false,
+    "op0_pta_summative_claim": false,
+    "inspection_readiness_claim": false,
+    "support_sufficiency_claim": false,
+    "accommodation_sufficiency_claim": false,
+    "accessibility_legal_sufficiency_claim": false,
+    "school_evidence_claim": false,
+    "expert_as_official_authority": false,
+    "source_uncertainty_hidden": false,
+    "whole_uk_claim_from_england": false,
+    "all_belgium_claim_from_flanders": false,
+    "generated_lesson_output_scanning": false,
+    "implicit_source_discovery": false,
+    "directory_globbing": false
+  },
+  "finding_classification": [
+    {
+      "finding": "Negative fixture england-to-uk-generalization.sample.json must be refused with STOP_WHOLE_UK_OVERCLAIM.",
+      "classification": "core_spec_failure",
+      "blocks": "Use of this request as valid local expert packet evidence.",
+      "does_not_block": "Positive request packets.",
+      "proof_required_to_close": "Checker must reject this fixture."
+    }
+  ],
+  "fixture_name": "england-to-uk-generalization.sample.json",
+  "valid": false,
+  "expected_stop_code": "STOP_WHOLE_UK_OVERCLAIM"
+}

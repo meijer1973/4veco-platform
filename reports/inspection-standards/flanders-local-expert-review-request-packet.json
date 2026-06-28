@@ -1,0 +1,624 @@
+{
+  "schema_version": 1,
+  "report_type": "local_expert_review_request_packet",
+  "sprint_id": "GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1",
+  "generated_date": "2026-06-28",
+  "access_date": "2026-06-28",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "product_end_state_checkout_note": "Cross-repo citation: resolve through the paired 4veco-lessen checkout used for human review; this platform packet does not copy lesson-repo product state.",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-sprint-plan.md",
+  "roadmap_source": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
+  "accepted_input_decision": "PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET",
+  "accepted_input_decision_source": "reports/inspection-standards/source-refresh-execution-pilot-decision.json",
+  "input_allowlist": [
+    "reports/inspection-standards/source-refresh-execution-pilot-decision.json",
+    "reports/inspection-standards/england-source-refresh-execution-results.json",
+    "reports/inspection-standards/flanders-source-refresh-execution-results.json",
+    "reports/inspection-standards/source-refresh-delta-impact-analysis.json",
+    "docs/inspection-standards/local-expert-review-request-template.md",
+    "docs/inspection-standards/local-expert-source-refresh-gate-contract.md"
+  ],
+  "output_allowlist": [
+    "references/schemas/local-expert-review-request.schema.v1.json",
+    "references/schemas/local-expert-review-response.schema.v1.json",
+    "docs/inspection-standards/local-expert-review-request-contract.md",
+    "docs/inspection-standards/england-local-expert-review-request.md",
+    "docs/inspection-standards/flanders-local-expert-review-request.md",
+    "reports/inspection-standards/local-expert-review-request-plan.md",
+    "reports/inspection-standards/local-expert-review-request-plan.json",
+    "reports/inspection-standards/england-local-expert-review-request-packet.md",
+    "reports/inspection-standards/england-local-expert-review-request-packet.json",
+    "reports/inspection-standards/flanders-local-expert-review-request-packet.md",
+    "reports/inspection-standards/flanders-local-expert-review-request-packet.json",
+    "reports/inspection-standards/local-expert-review-request-simulation.md",
+    "reports/inspection-standards/local-expert-review-request-simulation.json",
+    "reports/inspection-standards/local-expert-review-request-decision.md",
+    "reports/inspection-standards/local-expert-review-request-decision.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/england-local-expert-review-request-packet.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/flanders-local-expert-review-request-packet.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/local-expert-review-request-simulation.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/positive/local-expert-review-request-decision.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/legal-advice-request.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/compliance-proof-request.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/localized-paragraph-generation.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/exam-ready-exercises.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/school-owned-evidence.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/student-data.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/support-accommodation-sufficiency-overclaim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/expert-as-official-authority.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/hidden-source-uncertainty.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/england-to-uk-generalization.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/flanders-to-belgium-generalization.sample.json",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-sprint-plan.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-correction-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-schema-architecture-lead-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-england-source-expert-scope-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-flanders-source-expert-scope-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-teacher-economics-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-legal-privacy-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-accessibility-inclusion-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-final-lead-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-closure-record.md"
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "product_end_state_and_spec_cited",
+      "requirement": "Product end-state and original sprint/gate spec are cited.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "accepted_source_refresh_decision_bound",
+      "requirement": "Request packet is bound to accepted PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "no_expert_contact_or_substitution",
+      "requirement": "No expert is contacted and no local expert judgment is substituted.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "request_and_response_schemas_complete",
+      "requirement": "Request and response schemas define strict request and expert feedback records.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "england_packet_complete",
+      "requirement": "England request packet covers DfE, Ofsted, AQA, SEND/accessibility, England-only, Book 1 1.2/1.3, and assessment-form boundaries.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "flanders_packet_complete",
+      "requirement": "Flanders request packet covers Onderwijsdoelen, OK, study-direction/school-network, assessment-status, Flanders-only, accessibility/support, Book 1 1.2/1.3, and interpretation-needed sources.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "source_states_trace_to_execution_pilot",
+      "requirement": "Every source state traces to the accepted source-refresh execution pilot.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "forbidden_claims_explicit",
+      "requirement": "Legal, compliance, approval, inspection-readiness, school evidence, student data, support/accommodation sufficiency, accessibility/legal sufficiency, and product adoption claims are forbidden.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "response_schema_forbids_personal_and_school_data",
+      "requirement": "Response schema forbids student data, personal data, school-specific evidence, legal/compliance conclusions, approval conclusions, inspection-readiness conclusions, and direct localized output.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "simulation_and_refusals_complete",
+      "requirement": "Request simulation and negative fixtures cover legal advice, compliance proof, localized paragraphs, exam-ready exercises, school evidence, student data, support/accommodation/accessibility sufficiency overclaims, expert authority substitution, hidden uncertainty, England-to-UK, and Flanders-to-Belgium overclaims.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "single_decision",
+      "requirement": "Exactly one allowed final decision is selected.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    },
+    {
+      "id": "review_route_preserved",
+      "requirement": "Specialist reviews, final lead review, exact-head PR readiness, green CI, and human review remain required.",
+      "status": "met",
+      "proof_required_to_close": "Checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, and human review."
+    }
+  ],
+  "report_id": "flanders-local-expert-review-request-packet",
+  "packet_id": "flanders-local-expert-review-request-packet",
+  "status": "simulated_request_packet_ready_for_human_review",
+  "jurisdiction_id": "flanders",
+  "jurisdiction_label": "Flanders",
+  "expert_profile_needed": "Flemish economics/curriculum and education-quality reviewer familiar with Onderwijsdoelen, the OK framework, Onderwijsinspectie Vlaanderen source boundaries, study-direction/school-network distinctions, and accessibility/support terminology.",
+  "source_ids_in_scope": [
+    "be-flanders-ok-framework",
+    "be-flanders-onderwijsdoelen-so3-doorstroom",
+    "be-flanders-inspection-what-do-we-inspect",
+    "be-flanders-education-quality-reference",
+    "be-flanders-onderwijsdoelen-modernisatie"
+  ],
+  "source_states_from_refresh_pilot": {
+    "be-flanders-ok-framework": "unchanged",
+    "be-flanders-onderwijsdoelen-so3-doorstroom": "requires_local_expert_interpretation",
+    "be-flanders-inspection-what-do-we-inspect": "unchanged",
+    "be-flanders-education-quality-reference": "unchanged",
+    "be-flanders-onderwijsdoelen-modernisatie": "requires_local_expert_interpretation"
+  },
+  "questions_allowed": [
+    {
+      "question_id": "flanders-q-onderwijsdoelen-route",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-onderwijsdoelen-so3-doorstroom"
+      ],
+      "source_states_seen": {
+        "be-flanders-onderwijsdoelen-so3-doorstroom": "requires_local_expert_interpretation"
+      },
+      "allowed_question": "Interpret the official Onderwijsdoelen SO_3DE_GRAAD route for Book 1 1.2/1.3 economics concept placement.",
+      "forbidden_question": "Do not claim school/network curriculum fit, assessment fit, or implementation approval.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "flanders-q-modernisatie-selector",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-onderwijsdoelen-modernisatie"
+      ],
+      "source_states_seen": {
+        "be-flanders-onderwijsdoelen-modernisatie": "requires_local_expert_interpretation"
+      },
+      "allowed_question": "Interpret which route choices or goal-family labels require explicit human review before any internal overlay transformation.",
+      "forbidden_question": "Do not hide dynamic-route uncertainty or treat the route selector as already interpreted.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "flanders-q-ok-framework",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-ok-framework",
+        "be-flanders-education-quality-reference"
+      ],
+      "source_states_seen": {
+        "be-flanders-ok-framework": "unchanged",
+        "be-flanders-education-quality-reference": "unchanged"
+      },
+      "allowed_question": "Interpret the OK-framework boundary and wording that should remain visible in internal quality-language notes.",
+      "forbidden_question": "Do not claim OK compliance, quality assurance, school evidence sufficiency, or inspection readiness.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "flanders-q-inspection-boundary",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-inspection-what-do-we-inspect"
+      ],
+      "source_states_seen": {
+        "be-flanders-inspection-what-do-we-inspect": "unchanged"
+      },
+      "allowed_question": "Interpret the Onderwijsinspectie boundary for quality development, quality areas, and teaching-learning practice language.",
+      "forbidden_question": "Do not authorize evidence packs, school-facing output, or inspection-ready claims.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "flanders-q-study-direction-network",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-onderwijsdoelen-so3-doorstroom",
+        "be-flanders-onderwijsdoelen-modernisatie"
+      ],
+      "source_states_seen": {
+        "be-flanders-onderwijsdoelen-so3-doorstroom": "requires_local_expert_interpretation",
+        "be-flanders-onderwijsdoelen-modernisatie": "requires_local_expert_interpretation"
+      },
+      "allowed_question": "Identify study-direction, school-network, or pathway implications that must remain unresolved until local review.",
+      "forbidden_question": "Do not turn expert feedback into school/network-specific implementation.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "flanders-q-assessment-status",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-onderwijsdoelen-so3-doorstroom",
+        "be-flanders-inspection-what-do-we-inspect"
+      ],
+      "source_states_seen": {
+        "be-flanders-onderwijsdoelen-so3-doorstroom": "requires_local_expert_interpretation",
+        "be-flanders-inspection-what-do-we-inspect": "unchanged"
+      },
+      "allowed_question": "Clarify assessment-status boundaries relevant to Book 1 1.2/1.3 without producing assessment items.",
+      "forbidden_question": "Do not generate exam-ready exercises, assessment rubrics, or school-owned assessment policy.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "flanders-q-accessibility-support",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-ok-framework",
+        "be-flanders-education-quality-reference"
+      ],
+      "source_states_seen": {
+        "be-flanders-ok-framework": "unchanged",
+        "be-flanders-education-quality-reference": "unchanged"
+      },
+      "allowed_question": "Interpret accessibility/support terminology that should remain non-sufficiency language.",
+      "forbidden_question": "Do not claim support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or personal-data processing.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    },
+    {
+      "question_id": "flanders-q-flanders-only",
+      "jurisdiction_id": "flanders",
+      "source_ids": [
+        "be-flanders-ok-framework",
+        "be-flanders-onderwijsdoelen-modernisatie"
+      ],
+      "source_states_seen": {
+        "be-flanders-ok-framework": "unchanged",
+        "be-flanders-onderwijsdoelen-modernisatie": "requires_local_expert_interpretation"
+      },
+      "allowed_question": "Identify wording needed to keep the packet Flanders-only and not all Belgium.",
+      "forbidden_question": "Do not generalize to all Belgium, French Community, German-speaking Community, or all school networks.",
+      "answer_type_allowed": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ],
+      "expected_response_format": [
+        "reviewer_role",
+        "jurisdiction",
+        "source_id",
+        "source_state_seen",
+        "question_id",
+        "answer_type",
+        "interpretation",
+        "confidence",
+        "uncertainty",
+        "cited_source",
+        "forbidden_claims_disclaimed",
+        "does_not_authorize",
+        "proof_required_to_use"
+      ],
+      "uncertainty_handling": "If uncertain, answer with uncertainty and proof_required_to_use; do not infer, fill gaps, or hide uncertainty.",
+      "citation_requirement": "Cite only the official source_id or exact official URL in scope; non-official sources may be mentioned only as out_of_scope and not as authority.",
+      "authority_boundary": "Expert feedback is interpretive input for later human review only and does not authorize local implementation, legal/compliance conclusions, school evidence, localized output, or product use.",
+      "proof_required_to_use": "Human-reviewed expert response using the strict response schema, with source_id, cited_source, uncertainty, forbidden_claims_disclaimed, and does_not_authorize fields populated."
+    }
+  ],
+  "questions_forbidden": [
+    "legal advice",
+    "compliance claims",
+    "approval claims",
+    "inspection-readiness claims",
+    "school implementation evidence",
+    "school-owned evidence",
+    "student evidence",
+    "student data",
+    "personal data",
+    "support sufficiency claims",
+    "accommodation sufficiency claims",
+    "accessibility/legal sufficiency claims",
+    "product adoption claims",
+    "official-source substitution",
+    "localized output generation",
+    "exam-ready exercise generation",
+    "Do not generalize Flanders to all Belgium, French Community, German-speaking Community, school networks, school-owned policy, or implementation approval."
+  ],
+  "expected_response_format": [
+    "reviewer_role",
+    "jurisdiction",
+    "source_id",
+    "source_state_seen",
+    "question_id",
+    "answer_type",
+    "interpretation",
+    "confidence",
+    "uncertainty",
+    "cited_source",
+    "forbidden_claims_disclaimed",
+    "does_not_authorize",
+    "proof_required_to_use"
+  ],
+  "uncertainty_handling": "Uncertainty must be explicit. The reviewer may mark cannot_answer, cite why, and state proof_required_to_use. Hidden uncertainty is invalid.",
+  "citation_requirements": "Every answer must cite the official source_id and official URL from the request scope. Non-official material cannot become authority.",
+  "authority_boundary": "Expert feedback is bounded interpretive input for later human review. It is not legal advice, compliance proof, school evidence, official authority, localized output, product adoption, or inspection readiness.",
+  "no_expert_contact_performed": true,
+  "does_not_authorize": [
+    "local expert contact in this sprint",
+    "local expert substitution for official authority",
+    "localized output",
+    "country editions",
+    "student-facing output",
+    "teacher/school-facing output",
+    "public output",
+    "evidence packs",
+    "product-route adoption",
+    "Scale Gate",
+    "diagnostics/mastery/PV",
+    "student/product use",
+    "personal-data processing",
+    "legal advice, compliance, approval, accreditation, OP0, PTA, summative validity, inspection readiness, support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or school-owned evidence claims"
+  ],
+  "source_scope": [
+    {
+      "source_id": "be-flanders-ok-framework",
+      "source_state_seen": "unchanged",
+      "authority": "Vlaamse overheid / Onderwijsinspectie Vlaanderen",
+      "source_role": "quality framework boundary",
+      "official_url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit/referentiekader-voor-onderwijskwaliteit-het-ok",
+      "evidence_note": "Official Vlaanderen.be page remains Referentiekader voor onderwijskwaliteit (het OK), describes OK as minimum expectations for quality education and links OK documents.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not prove OK compliance."
+    },
+    {
+      "source_id": "be-flanders-onderwijsdoelen-so3-doorstroom",
+      "source_state_seen": "requires_local_expert_interpretation",
+      "authority": "Vlaamse overheid / Onderwijsdoelen.be",
+      "source_role": "official curriculum goal route",
+      "official_url": "https://onderwijsdoelen.be/modernisatie-so?onderwijsstructuur=SO_3DE_GRAAD",
+      "evidence_note": "Official Onderwijsdoelen route remains available as a dynamic portal for SO_3DE_GRAAD, but browser-visible content is loaded by the application and needs route-specific interpretation.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not prove school/network curriculum or assessment fit."
+    },
+    {
+      "source_id": "be-flanders-inspection-what-do-we-inspect",
+      "source_state_seen": "unchanged",
+      "authority": "Onderwijsinspectie Vlaanderen",
+      "source_role": "inspection-method boundary",
+      "official_url": "https://www.onderwijsinspectie.be/en/what-do-we-inspect",
+      "evidence_note": "Official page remains What do we inspect?, naming quality development, quality areas, teaching and learning practices, and habitability/safety/hygiene enquiries.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not authorize evidence-pack deployment."
+    },
+    {
+      "source_id": "be-flanders-education-quality-reference",
+      "source_state_seen": "unchanged",
+      "authority": "Vlaamse overheid",
+      "source_role": "quality-framework source family",
+      "official_url": "https://www.vlaanderen.be/onderwijsprofessionals/organisatie-en-administratie/onderwijskwaliteit-en-toezicht/kwaliteitsvol-onderwijs-aanbieden/referentiekaders-voor-onderwijskwaliteit",
+      "evidence_note": "Official Vlaanderen.be referentiekaders page remains available and lists Referentiekader voor onderwijskwaliteit (het OK) among framework sources.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not replace school-level evidence."
+    },
+    {
+      "source_id": "be-flanders-onderwijsdoelen-modernisatie",
+      "source_state_seen": "requires_local_expert_interpretation",
+      "authority": "Vlaamse overheid / Onderwijsdoelen.be",
+      "source_role": "curriculum-goal route selector",
+      "official_url": "https://onderwijsdoelen.be/modernisatie-so",
+      "evidence_note": "Official Onderwijsdoelen modernisatie route remains available as a dynamic route selector, but route choices and goal-family interpretation require later local expert review.",
+      "allowed_interpretation_use": "Ask bounded interpretation questions only; do not substitute expert opinion for official authority.",
+      "forbidden_inference": "Does not authorize generic Flemish economics claims."
+    }
+  ],
+  "expected_use": "Later expert feedback may inform an internal overlay transformation sprint only after human review, retained citations, and explicit no-authority disclaimers.",
+  "request_not_sent": true,
+  "no_output_flags": {
+    "expert_contacted": false,
+    "expert_substituted": false,
+    "localized_output_generated": false,
+    "country_edition_generated": false,
+    "student_facing_output_generated": false,
+    "teacher_school_facing_output_generated": false,
+    "public_output_generated": false,
+    "evidence_pack_generated": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_product_use": false,
+    "personal_data_processing": false,
+    "legal_advice_requested": false,
+    "legal_compliance_claim": false,
+    "approval_accreditation_claim": false,
+    "op0_pta_summative_claim": false,
+    "inspection_readiness_claim": false,
+    "support_sufficiency_claim": false,
+    "accommodation_sufficiency_claim": false,
+    "accessibility_legal_sufficiency_claim": false,
+    "school_evidence_claim": false,
+    "expert_as_official_authority": false,
+    "source_uncertainty_hidden": false,
+    "whole_uk_claim_from_england": false,
+    "all_belgium_claim_from_flanders": false,
+    "generated_lesson_output_scanning": false,
+    "implicit_source_discovery": false,
+    "directory_globbing": false
+  },
+  "finding_classification": [
+    {
+      "finding": "Flanders local expert request packet is complete and source-bound.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for human review once checker, specialists, final lead, CI, branch protection, and PR readiness pass.",
+      "does_not_block": "Human review of this internal request packet.",
+      "proof_required_to_close": "Checker PASS, source/expert-scope review PASS, final lead PASS, exact-head readiness, green CI, and owner authorization."
+    },
+    {
+      "finding": "Expert contact and downstream authority remain blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Expert contact, expert substitution, localized output, school/public/product output, evidence packs, Scale Gate, diagnostics/mastery/PV, personal data, compliance, inspection-readiness, support/accommodation sufficiency, accessibility/legal sufficiency, and school-owned evidence claims.",
+      "does_not_block": "A later local expert contact pilot only after human authorization.",
+      "proof_required_to_close": "Separate owner authorization for contact pilot and strict response intake."
+    }
+  ]
+}

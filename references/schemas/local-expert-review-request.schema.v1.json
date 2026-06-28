@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/schemas/local-expert-review-request.schema.v1.json",
+  "title": "Local Expert Review Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "jurisdiction_id",
+    "expert_profile_needed",
+    "source_ids_in_scope",
+    "source_states_from_refresh_pilot",
+    "questions_allowed",
+    "questions_forbidden",
+    "expected_response_format",
+    "uncertainty_handling",
+    "citation_requirements",
+    "authority_boundary",
+    "no_expert_contact_performed",
+    "does_not_authorize"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "jurisdiction_id": {
+      "enum": [
+        "england",
+        "flanders"
+      ]
+    },
+    "expert_profile_needed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_ids_in_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source_states_from_refresh_pilot": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "questions_allowed": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1
+    },
+    "questions_forbidden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 16
+    },
+    "expected_response_format": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 13
+    },
+    "uncertainty_handling": {
+      "type": "string",
+      "minLength": 1
+    },
+    "citation_requirements": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority_boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "no_expert_contact_performed": {
+      "const": true
+    },
+    "does_not_authorize": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 10
+    }
+  }
+}

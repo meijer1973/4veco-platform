@@ -4,8 +4,8 @@ Status: active local-expert/source-refresh gate roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.9-source-refresh-execution-run-human-review`
-Sprint status: `GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1` current / internal-only England/Flanders bounded official-source refresh run for human review
+Roadmap version: `v0.10-local-expert-review-request-packet-human-review`
+Sprint status: `GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` current / internal-only England/Flanders local expert review request packet for human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -58,8 +58,10 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md`
 - Accepted bounded source-refresh packet sprint:
   `archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-sprint-plan.md`
-- Current source-refresh execution run sprint:
+- Accepted source-refresh execution run sprint:
   `archive/sprints/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1-sprint-plan.md`
+- Current local expert review request packet sprint:
+  `archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-sprint-plan.md`
 
 ## 2. Non-Negotiable Requirements
 
@@ -351,9 +353,10 @@ compliance, approval, accreditation, OP0, PTA, summative,
 inspection-readiness, support-sufficiency, accommodation-sufficiency, or
 accessibility/legal sufficiency claims.
 
-## 11. Current Source Refresh Execution Scope
+## 11. Completed Source Refresh Execution Scope
 
-`GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1` may create:
+`GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1` was accepted and merged on
+PR #169 and created:
 
 - an internal-only bounded official-source refresh run for England
   and Flanders;
@@ -374,8 +377,8 @@ accessibility/legal sufficiency claims.
   personal data, whole-UK claims, all-Belgium claims, and unavailable-source
   overclaims;
 - manual generator/checker scripts and focused Jest tests;
-- validation, specialist-review, final lead-review, PR proof, and human-review
-  records.
+- validation, specialist-review, final lead-review, PR proof, human-review
+  records, governed integration proof, and post-merge CI proof.
 
 It must not contact or substitute local experts, use non-official or hidden
 sources, run source refresh outside the explicit allowlists, produce localized
@@ -388,11 +391,49 @@ compliance, approval, accreditation, OP0, PTA, summative validity,
 inspection-readiness, support-sufficiency, accommodation-sufficiency,
 accessibility/legal sufficiency, or school-owned evidence claims.
 
-The implemented decision may select only whether to proceed to a later local
-expert review request packet. It must not itself contact local experts or
-substitute local expert judgment.
+The implemented decision selected
+`PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET`. It authorizes only this
+current internal request-packet sprint. It must not itself contact local
+experts or substitute local expert judgment.
 
-## 12. Architecture Direction
+## 12. Current Local Expert Review Request Packet Scope
+
+`GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` may create:
+
+- an internal-only local expert review request contract for England and
+  Flanders;
+- request and response schemas for later expert input capture;
+- England and Flanders request packets using only the accepted
+  source-refresh execution results;
+- request simulations and positive/negative fixtures proving refusal of
+  legal advice, compliance proof, localized output, exam-ready exercise
+  generation, school-owned evidence collection, student/personal data,
+  local-expert authority substitution, hidden uncertainty, whole-UK
+  overclaim, and all-Belgium overclaim cases;
+- a decision report choosing exactly one of:
+  `PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT`,
+  `REVISE_LOCAL_EXPERT_REVIEW_REQUEST_PACKET`, or
+  `STOP_LOCAL_OVERLAY_TRACK`;
+- manual generator/checker scripts and focused Jest tests;
+- validation, specialist-review, final lead-review, PR proof, and
+  human-review records.
+
+It must not contact experts, send requests, substitute expert judgment,
+produce localized paragraphs, localized exercises, answer models, localized
+assessment items, student-facing files, teacher/school-facing output, public
+output, country editions, evidence packs, runtime behavior, package/CI
+product integration, dashboard gates, quality-ref or Scale Gate integration,
+product routes, diagnostics/mastery/PV, student/product use, personal-data
+processing, compliance, approval, accreditation, OP0, PTA, summative validity,
+inspection-readiness, support-sufficiency, accommodation-sufficiency,
+accessibility/legal sufficiency, or school-owned evidence claims.
+
+The implemented decision may select only whether to proceed to a later,
+separately authorized local expert contact pilot. It must not itself contact
+local experts, send request packets, or treat simulated expert responses as
+expert evidence.
+
+## 13. Architecture Direction
 
 The current architecture preserves four layers:
 
@@ -405,7 +446,7 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 13. Core-Requirement Checklist
+## 14. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
@@ -460,27 +501,33 @@ before any implementation.
 | Bounded source-refresh packet decision selects exactly one allowed option | closed | `bounded-source-refresh-packet-decision.md/json` selected `PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT`; PR #167 accepted and merged |
 | Specialist reviews and final lead review are completed before human review | closed | PR #167 specialist records, final lead PASS, exact-head readiness, payload authorization, governed integration, and post-merge CI |
 | Human review happens before any source-refresh execution-run authority | closed | PR #167 human payload authorization and governed integration |
-| Source-refresh execution run uses only allowlisted official England and Flanders source rows | current sprint | `england-source-refresh-execution-results.md/json`, `flanders-source-refresh-execution-results.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
-| Every allowlisted England and Flanders source has exactly one classified refresh result | current sprint | Execution result JSON, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
-| Changed or uncertain source states map to local-expert questions and impact fields without substituting local expert judgment | current sprint | `source-refresh-delta-impact-analysis.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
-| Negative fixtures refuse non-official sources, hidden discovery, no-allowlist refresh, local expert substitution, forbidden audiences, forbidden claims, personal data, jurisdiction overclaims, and unavailable-source overclaims | current sprint | `references/data/inspection-standards/fixtures/source-refresh-execution-pilot/**`, checker PASS, focused Jest PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
-| Source-refresh execution run decision selects exactly one allowed option | current sprint | `source-refresh-execution-pilot-decision.md/json` selects one of the allowed execution-run decisions |
+| Source-refresh execution run uses only allowlisted official England and Flanders source rows | closed | `england-source-refresh-execution-results.md/json`, `flanders-source-refresh-execution-results.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, human review, PR #169 governed integration, and post-merge CI |
+| Every allowlisted England and Flanders source has exactly one classified refresh result | closed | Execution result JSON, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, human review, PR #169 governed integration, and post-merge CI |
+| Changed or uncertain source states map to local-expert questions and impact fields without substituting local expert judgment | closed | `source-refresh-delta-impact-analysis.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, human review, PR #169 governed integration, and post-merge CI |
+| Negative fixtures refuse non-official sources, hidden discovery, no-allowlist refresh, local expert substitution, forbidden audiences, forbidden claims, personal data, jurisdiction overclaims, and unavailable-source overclaims | closed | `references/data/inspection-standards/fixtures/source-refresh-execution-pilot/**`, checker PASS, focused Jest PASS, specialist review, final lead review, exact-head PR readiness, green CI, human review, PR #169 governed integration, and post-merge CI |
+| Source-refresh execution run decision selects exactly one allowed option | closed | `source-refresh-execution-pilot-decision.md/json` selected `PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET`; PR #169 accepted and merged |
+| Specialist reviews and final lead review are completed before human review | closed | PR #169 specialist records, final lead PASS, exact-head readiness, payload authorization, governed integration, and post-merge CI |
+| Human review happens before any local expert review request packet authority | closed | PR #169 human payload authorization and governed integration |
+| Local expert review request schemas define allowed request fields, expected response fields, forbidden fields, authority boundaries, and no-contact proof | current sprint | `local-expert-review-request.schema.v1.json`, `local-expert-review-response.schema.v1.json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
+| England and Flanders request packets use only accepted source-refresh execution results and preserve jurisdiction boundaries | current sprint | `england-local-expert-review-request-packet.md/json`, `flanders-local-expert-review-request-packet.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
+| Simulations and negative fixtures refuse contact, legal/compliance claims, localized output, school-owned evidence, student/personal data, hidden uncertainty, expert-authority substitution, whole-UK overclaim, and all-Belgium overclaim cases | current sprint | `local-expert-review-request-simulation.md/json`, `references/data/inspection-standards/fixtures/local-expert-review-request-packet/**`, checker PASS, focused Jest PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
+| Local expert review request packet decision selects exactly one allowed option | current sprint | `local-expert-review-request-decision.md/json` selects one of the allowed request-packet decisions |
 | Specialist reviews and final lead review are completed before human review | current sprint | Required before this PR can return for human review |
-| Human review happens before any local expert review request packet authority | current sprint | PR freshness, CI, PR Readiness Reviewer, branch protection, and human review |
+| Human review happens before any local expert contact-stage authority | current sprint | PR freshness, CI, PR Readiness Reviewer, branch protection, and human review |
 
-## 14. Candidate Future Sprints
+## 15. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` | If the human owner accepts the execution-run decision, prepare a local expert review request packet without contacting experts or substituting expert judgment. | not authorised until human acceptance |
+| `GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1` | If the human owner accepts the request-packet decision, run a separately governed contact-stage run for contacting local experts from the accepted packet only. | not authorised |
 | `GOAL-IQS-SOURCE-REFRESH-1` | Broader source refresh and source-gap resolution for selected jurisdictions after any reviewed execution run. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 15. Explicitly Blocked Work
+## 16. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -519,23 +566,23 @@ unbounded source-refresh execution run
 hidden source discovery
 ```
 
-## 16. Current Recommended Next Step
+## 17. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1 packet after specialist
-reviews, final lead review, PR publication, branch freshness, branch
+Review the GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1 packet after
+specialist reviews, final lead review, PR publication, branch freshness, branch
 protection, PR Readiness Reviewer, and green CI are complete.
 ```
 
-Human acceptance of `GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1` may authorise
-only a later local expert review request packet. It must not itself contact
-local experts, substitute local experts, unlock trial runtime execution,
-country implementation, localized textbook or overlay output, localized
-exercises, answer models, assessment items, student-facing files, school or
-public distribution, product routes, Scale Gate, diagnostics/mastery/PV,
-student/product use, personal-data processing, compliance, approval,
-accreditation, OP0, PTA, summative, inspection-readiness,
-support-sufficiency, accommodation-sufficiency, or accessibility/legal
-sufficiency claims.
+Human acceptance of `GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` may
+authorise only a later separately governed local expert contact-stage run. It must
+not itself contact local experts, send request packets, substitute local
+experts, unlock trial runtime execution, country implementation, localized
+textbook or overlay output, localized exercises, answer models, assessment
+items, student-facing files, school or public distribution, product routes,
+Scale Gate, diagnostics/mastery/PV, student/product use, personal-data
+processing, compliance, approval, accreditation, OP0, PTA, summative,
+inspection-readiness, support-sufficiency, accommodation-sufficiency, or
+accessibility/legal sufficiency claims.
