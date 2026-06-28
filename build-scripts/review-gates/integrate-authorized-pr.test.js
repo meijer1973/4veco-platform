@@ -4,6 +4,7 @@ const {
   readinessCommentFromComments,
   readinessMarkerFor,
   runIntegrationAttempts,
+  setCommitStatus,
   supplementalFromReadinessDecision,
   validatePrState,
   waitForMainCi,
@@ -374,6 +375,24 @@ describe('authorized PR integration runner', () => {
   test('post-merge CI verifier accepts successful main run', () => {
     const result = waitForMainCi('meijer1973/4veco-platform', headSha, { dryRun: true });
     expect(result).toMatchObject({ ok: true, dry_run: true, head_sha: headSha });
+  });
+
+  test('dry-run does not mint a reusable integration-authorized success status', () => {
+    const result = setCommitStatus(
+      'meijer1973/4veco-platform',
+      headSha,
+      'success',
+      'Would authorize integration',
+      'https://github.com/meijer1973/4veco-platform/pull/136',
+      { dryRun: true }
+    );
+
+    expect(result).toEqual({
+      dry_run: true,
+      state: 'success',
+      sha: headSha,
+      context: 'integration-authorized',
+    });
   });
 
   test('required-but-missing integration-authorized does not create a BLOCKED update loop', () => {

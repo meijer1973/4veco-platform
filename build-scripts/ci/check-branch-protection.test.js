@@ -4,6 +4,7 @@ const {
   summarizeProtection,
   summarizePullRequestReviews,
 } = require('./check-branch-protection');
+const activatedProtectionFixture = require('./fixtures/branch-protection-activated.json');
 
 function validProtection(overrides = {}) {
   return {
@@ -77,6 +78,23 @@ describe('check-branch-protection', () => {
 
     expect(summary.ok).toBe(false);
     expect(summary.failures).toContain('required status context missing: integration-authorized');
+  });
+
+  test('activated branch-protection fixture passes with validate-platform and integration-authorized', () => {
+    const summary = summarizeProtection(activatedProtectionFixture, {
+      requireIntegrationAuthorized: true,
+    });
+
+    expect(summary.ok).toBe(true);
+    expect(summary.failures).toEqual([]);
+    expect(summary.expected.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
+    expect(summary.observed.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
   });
 
   test('fails if approving review count returns to one', () => {

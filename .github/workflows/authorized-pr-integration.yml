@@ -29,7 +29,7 @@ concurrency:
 
 jobs:
   integrate:
-    name: integration-authorized
+    name: authorized-pr-integration-runner
     runs-on: windows-latest
     timeout-minutes: 45
 

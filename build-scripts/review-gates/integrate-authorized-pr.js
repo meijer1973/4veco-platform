@@ -850,6 +850,7 @@ module.exports = {
   readinessCommentFromComments,
   readinessMarkerFor,
   runIntegrationAttempts,
+  setCommitStatus,
   supplementalFromReadinessDecision,
   validateIntegrationDeltaReview,
   validatePrState,

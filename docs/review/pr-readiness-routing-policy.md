@@ -231,7 +231,10 @@ The platform repository operates in single-account mode: the owner, coding
 agent, lead-review subagent, PR author, and merger may share one GitHub account.
 GitHub approval count is therefore not a substantive review signal for this
 repository. Branch protection must require pull-request workflow and strict
-`validate-platform`, but `required_approving_review_count` must be `0`.
+status checks. Before activation, the required context is `validate-platform`;
+after activation, the required contexts are exactly `validate-platform` and
+`integration-authorized`. In both states, `required_approving_review_count`
+must be `0`.
 
 Use `build-scripts/ci/check-branch-protection.js` in read-only mode. It must
 fail if branch protection drifts back to requiring a distinct approving GitHub
@@ -253,7 +256,8 @@ allowances were verified.
 
 Merge authority is separate from GitHub approval count:
 
-- L0-L2 may merge through the normal merge path only after exact-head CI,
+- L0-L2 may merge only through `authorized-pr-integration` or, for paired
+  platform/lesson work, `authorized-bundle-integration` after exact-head CI,
   checker proof, lead review, PR-readiness proof, and complete review-thread
   evidence all pass.
 - L3-L4 and consequential governance/self-modification work must stop after
@@ -276,6 +280,13 @@ human-authorized. A permitted base-sync descendant or deterministic evidence
 refresh does not require renewed owner authorization unless lineage, base drift,
 authority scope, or effective payload checks invalidate the reviewed payload
 authorization.
+
+After activation, agents must not call `gh pr merge` directly for normal PRs.
+The `integration-authorized` context must only be minted by trusted `main`
+workflow code or the equivalent owner-authenticated local lane running trusted
+`main` code. Rollback requires an explicit owner decision and must remove
+`integration-authorized` from required contexts while keeping
+`validate-platform`.
 
 ## Live decision recording
 

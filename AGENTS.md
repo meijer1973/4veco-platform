@@ -225,19 +225,26 @@ distinguish the owner, coding agent, lead-review subagent, PR author, and
 merger as independent approval identities. Required GitHub approval count is
 therefore not the substantive review gate for this repository.
 
-Branch protection for `main` must keep strict `validate-platform`, admin
-enforcement, force-push protection, deletion protection, and pull-request
-workflow while setting `required_approving_review_count` to `0`. Validate this
-with `npm.cmd run check:branch-protection`; the checker must fail if the count
-returns to `1` or if observable pull-request bypass allowances are non-empty.
+Branch protection for `main` must keep strict status checks, admin enforcement,
+force-push protection, deletion protection, required conversation resolution,
+and pull-request workflow while setting `required_approving_review_count` to
+`0`. Before activation, the required context is `validate-platform`; after
+activation, the required contexts are exactly `validate-platform` and
+`integration-authorized`. Validate the pre-activation shape with
+`npm.cmd run check:branch-protection` and the activated shape with
+`npm.cmd run check:branch-protection:activated`. The checker must fail if the
+approval count returns to `1` or if observable pull-request bypass allowances
+are non-empty.
 PR readiness must derive mechanical approval constraints from the observed
 approval count, not from self-declared identity-satisfaction flags, and it must
 keep the PR draft when that count is not observable.
 
 Merge authority follows the PR-readiness route:
 
-- L0-L2 may merge through the normal merge path after exact-head CI, checker
-  proof, lead review, readiness proof, and complete review-thread evidence pass.
+- L0-L2 may merge only through `authorized-pr-integration` or, for paired
+  platform/lesson work, `authorized-bundle-integration` after exact-head CI,
+  checker proof, lead review, readiness proof, and complete review-thread
+  evidence pass.
 - L3-L4 and governance/self-modification work must stop after
   `READY_FOR_HUMAN_REVIEW` until the owner gives an explicit merge decision.
 - A human merge decision must identify the PR number, reviewed payload head SHA,
@@ -246,22 +253,25 @@ Merge authority follows the PR-readiness route:
 - Human authorization gates merge, not draft-to-ready transition. Owner
   authorization is never required merely to run `gh pr ready` after a valid
   readiness decision returns `allowed_transition: MARK_READY`.
-- Immediately before merging, re-fetch the PR and verify the current integration
-  head, open and not-draft state, mergeability, required CI, requested-changes
-  state, and unresolved review-thread state. Use normal merge; do not use admin
-  bypass as a routine substitute for this policy.
+- Immediately before merging, the authorized lane re-fetches the PR and verifies
+  the current integration head, open and not-draft state, mergeability, required
+  CI, requested-changes state, and unresolved review-thread state. Do not use
+  admin bypass as a routine substitute for this policy.
 
 ### Serialized integration lane
 
-When the authorized integration lane is operational, agents must not call
-`gh pr merge` directly. Prefer `.github/workflows/authorized-pr-integration.yml`
-with the PR number and the human payload authorization comment ID when the
-trusted workflow token can verify branch protection. If the workflow token
-cannot read required branch-protection state, use the owner-authenticated local
-fallback `npm.cmd run integrate:authorized-pr` with the same authorization
-comment ID. Both paths serialize integrations through the same policy lane and
-must validate payload lineage, branch protection, CI, readiness, requested
-changes, review threads, and merge eligibility before merging.
+After activation, agents must not call `gh pr merge` directly for normal PRs.
+Use `.github/workflows/authorized-pr-integration.yml` with the PR number and
+the human payload authorization comment ID when the trusted workflow token can
+verify branch protection. If the workflow token cannot read required
+branch-protection state, use the owner-authenticated local fallback
+`npm.cmd run integrate:authorized-pr` with the same authorization comment ID.
+Paired platform/lesson bundles must use
+`.github/workflows/authorized-bundle-integration.yml` or
+`npm.cmd run integrate:authorized-bundle`. All authorized paths serialize
+through the same policy lane and must validate payload lineage, branch
+protection, CI, readiness, requested changes, review threads, and merge
+eligibility before merging.
 
 Human authorization binds to the reviewed payload head, not to every later
 base-sync head. Record authorization with the
@@ -287,17 +297,18 @@ does not need renewed owner authorization when payload lineage, base-drift,
 authority-scope, and effective-payload checks remain valid.
 
 The lane must determine base drift from an actual `main...head` comparison, not
-from `mergeStateStatus: BLOCKED`; `BLOCKED` can simply mean the future
+from `mergeStateStatus: BLOCKED`; `BLOCKED` can simply mean the required
 `integration-authorized` status is pending. The lane sets
 `integration-authorized` to pending at entry, sets success only on the final
 validated head, retries when `main` moves or merge eligibility changes, and
-verifies post-merge `main` CI.
+verifies post-merge `main` CI. The `integration-authorized` context must be
+minted only by trusted `main` workflow code or the equivalent owner-authenticated
+local lane running trusted `main` code; a dry-run must not create a reusable
+successful status.
 
-During rollout, use `npm.cmd run check:branch-protection` for the current safe
-shape. Use
-`npm.cmd run check:branch-protection -- --require-integration-authorized` only
-to verify the future protected status context. After branch protection requires
-`integration-authorized`, the lane is the only merge path.
+Rollback is allowed only by explicit owner decision. A rollback must remove
+`integration-authorized` from required status contexts while keeping strict
+`validate-platform` and the rest of the protected branch shape.
 
 ### Mandatory readiness application
 
