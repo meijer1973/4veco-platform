@@ -4,8 +4,8 @@ Status: active local-expert/source-refresh gate roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.8-bounded-source-refresh-packet-human-review`
-Sprint status: `GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1` current / internal-only England/Flanders bounded source-refresh packet for human review
+Roadmap version: `v0.9-source-refresh-execution-run-human-review`
+Sprint status: `GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1` current / internal-only England/Flanders bounded official-source refresh run for human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -56,6 +56,10 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-sprint-plan.md`
 - Current local-expert/source-refresh gate sprint:
   `archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md`
+- Accepted bounded source-refresh packet sprint:
+  `archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-sprint-plan.md`
+- Current source-refresh execution run sprint:
+  `archive/sprints/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1-sprint-plan.md`
 
 ## 2. Non-Negotiable Requirements
 
@@ -294,9 +298,10 @@ It authorizes only this later bounded source-refresh packet. It does not
 authorize source-refresh execution, local expert contact, or local expert
 substitution.
 
-## 10. Current Bounded Source Refresh Packet Scope
+## 10. Completed Bounded Source Refresh Packet Scope
 
-`GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1` may create:
+`GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1` was accepted and merged on
+PR #167 and created:
 
 - a strict bounded source-refresh packet schema;
 - a packet contract with explicit source and output allowlists;
@@ -336,10 +341,58 @@ accreditation, OP0, PTA, summative validity, inspection-readiness,
 support-sufficiency, accommodation-sufficiency, accessibility/legal
 sufficiency, or school-owned evidence claims.
 
-The implemented decision may select only whether to proceed to a later
-source-refresh execution run. It does not authorize that execution.
+The implemented decision selected `PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT`.
+It authorised only this later bounded official-source refresh run.
+It did not authorise unbounded source refresh, automated source refresh,
+local expert contact, local expert substitution, localized output, runtime
+execution, teacher/school-facing or public output, product routes, Scale Gate,
+diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative,
+inspection-readiness, support-sufficiency, accommodation-sufficiency, or
+accessibility/legal sufficiency claims.
 
-## 11. Architecture Direction
+## 11. Current Source Refresh Execution Scope
+
+`GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1` may create:
+
+- an internal-only bounded official-source refresh run for England
+  and Flanders;
+- per-source refresh results using only the accepted source-state vocabulary;
+- England and Flanders source-refresh execution reports in Markdown and JSON;
+- a delta/impact analysis that maps changed or uncertain source states to
+  Book 1 Chapters 1.2/1.3, terminology, assessment, accessibility/support,
+  school-owned evidence, legal/privacy boundaries, and later local-expert
+  questions;
+- a decision report choosing exactly one of:
+  `PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET`,
+  `REVISE_SOURCE_REFRESH_RESULTS`, or
+  `STOP_LOCAL_OVERLAY_TRACK`;
+- positive and negative fixtures proving refusal of non-official source
+  promotion, hidden discovery, source refresh without allowlists, local expert
+  substitution, legal/compliance overclaims, support/accommodation sufficiency
+  overclaims, localized output, teacher/school-facing output, public output,
+  personal data, whole-UK claims, all-Belgium claims, and unavailable-source
+  overclaims;
+- manual generator/checker scripts and focused Jest tests;
+- validation, specialist-review, final lead-review, PR proof, and human-review
+  records.
+
+It must not contact or substitute local experts, use non-official or hidden
+sources, run source refresh outside the explicit allowlists, produce localized
+paragraphs, localized exercises, answer models, localized assessment items,
+student-facing files, teacher/school-facing output, public output, country
+editions, evidence packs, runtime behavior, package/CI product integration,
+dashboard gates, quality-ref or Scale Gate integration, product routes,
+diagnostics/mastery/PV, student/product use, personal-data processing,
+compliance, approval, accreditation, OP0, PTA, summative validity,
+inspection-readiness, support-sufficiency, accommodation-sufficiency,
+accessibility/legal sufficiency, or school-owned evidence claims.
+
+The implemented decision may select only whether to proceed to a later local
+expert review request packet. It must not itself contact local experts or
+substitute local expert judgment.
+
+## 12. Architecture Direction
 
 The current architecture preserves four layers:
 
@@ -352,7 +405,7 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 12. Core-Requirement Checklist
+## 13. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
@@ -398,29 +451,36 @@ before any implementation.
 | Local-expert/source-refresh gate decision selects exactly one allowed option | closed | `local-expert-source-refresh-gate-decision.md/json` selects `PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET`; PR #163 accepted |
 | Specialist reviews and final lead review are completed before human review | closed | PR #163 specialist records, final lead PASS, exact-head readiness, payload authorization, governed integration, and post-merge CI |
 | Human review happens before any bounded source-refresh packet authority | closed | PR #163 human payload authorization and governed integration |
-| Bounded packet source inventory uses only allowlisted official England and Flanders sources | current sprint | `england-bounded-source-refresh-simulation.md/json`, `flanders-bounded-source-refresh-simulation.md/json`, and checker PASS |
-| Refresh-state model includes all required states and closure fields | current sprint | `bounded-source-refresh-packet-contract.md`, plan JSON, jurisdiction simulations, and checker PASS |
-| England packet covers DfE, Ofsted EIF, Ofsted operating guide, selected AQA boundary, SEND/accessibility, and England-only/not-whole-UK limits | current sprint | `england-bounded-source-refresh-packet.md` and England simulation checker PASS |
-| Flanders packet covers Onderwijsdoelen, OK framework, assessment-status, study-direction/school-network, accessibility/support, and Flanders-only/not-all-Belgium limits | current sprint | `flanders-bounded-source-refresh-packet.md` and Flanders simulation checker PASS |
-| Local expert review request template forbids legal, compliance, approval, inspection-readiness, school-evidence, student/product-use, and support/accommodation sufficiency claims | current sprint | `local-expert-review-request-template.md`, plan JSON, and checker PASS |
-| Bounded packet simulations and fixtures refuse forbidden source, execution, expert, output, personal-data, claim, jurisdiction-overclaim, hidden-discovery, state-model, and template failures | current sprint | `references/data/inspection-standards/fixtures/bounded-source-refresh-packet/**` and checker PASS |
-| Bounded source-refresh packet decision selects exactly one allowed option | current sprint | `bounded-source-refresh-packet-decision.md/json` selects the source-refresh execution option |
+| Bounded packet source inventory uses only allowlisted official England and Flanders sources | closed | `england-bounded-source-refresh-simulation.md/json`, `flanders-bounded-source-refresh-simulation.md/json`, checker PASS, and PR #167 accepted and merged |
+| Refresh-state model includes all required states and closure fields | closed | `bounded-source-refresh-packet-contract.md`, plan JSON, jurisdiction simulations, checker PASS, and PR #167 accepted and merged |
+| England packet covers DfE, Ofsted EIF, Ofsted operating guide, selected AQA boundary, SEND/accessibility, and England-only/not-whole-UK limits | closed | `england-bounded-source-refresh-packet.md`, England simulation checker PASS, and PR #167 accepted and merged |
+| Flanders packet covers Onderwijsdoelen, OK framework, assessment-status, study-direction/school-network, accessibility/support, and Flanders-only/not-all-Belgium limits | closed | `flanders-bounded-source-refresh-packet.md`, Flanders simulation checker PASS, and PR #167 accepted and merged |
+| Local expert review request template forbids legal, compliance, approval, inspection-readiness, school-evidence, student/product-use, and support/accommodation sufficiency claims | closed | `local-expert-review-request-template.md`, plan JSON, checker PASS, and PR #167 accepted and merged |
+| Bounded packet simulations and fixtures refuse forbidden source, execution, expert, output, personal-data, claim, jurisdiction-overclaim, hidden-discovery, state-model, and template failures | closed | `references/data/inspection-standards/fixtures/bounded-source-refresh-packet/**`, checker PASS, and PR #167 accepted and merged |
+| Bounded source-refresh packet decision selects exactly one allowed option | closed | `bounded-source-refresh-packet-decision.md/json` selected `PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT`; PR #167 accepted and merged |
+| Specialist reviews and final lead review are completed before human review | closed | PR #167 specialist records, final lead PASS, exact-head readiness, payload authorization, governed integration, and post-merge CI |
+| Human review happens before any source-refresh execution-run authority | closed | PR #167 human payload authorization and governed integration |
+| Source-refresh execution run uses only allowlisted official England and Flanders source rows | current sprint | `england-source-refresh-execution-results.md/json`, `flanders-source-refresh-execution-results.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
+| Every allowlisted England and Flanders source has exactly one classified refresh result | current sprint | Execution result JSON, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
+| Changed or uncertain source states map to local-expert questions and impact fields without substituting local expert judgment | current sprint | `source-refresh-delta-impact-analysis.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
+| Negative fixtures refuse non-official sources, hidden discovery, no-allowlist refresh, local expert substitution, forbidden audiences, forbidden claims, personal data, jurisdiction overclaims, and unavailable-source overclaims | current sprint | `references/data/inspection-standards/fixtures/source-refresh-execution-pilot/**`, checker PASS, focused Jest PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
+| Source-refresh execution run decision selects exactly one allowed option | current sprint | `source-refresh-execution-pilot-decision.md/json` selects one of the allowed execution-run decisions |
 | Specialist reviews and final lead review are completed before human review | current sprint | Required before this PR can return for human review |
-| Human review happens before any source-refresh execution-run authority | current sprint | PR freshness, CI, PR Readiness Reviewer, branch protection, and human review |
+| Human review happens before any local expert review request packet authority | current sprint | PR freshness, CI, PR Readiness Reviewer, branch protection, and human review |
 
-## 13. Candidate Future Sprints
+## 14. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-SOURCE-REFRESH-EXECUTION-RUN-1` | If the human owner accepts the source-refresh execution option, execute a reviewed source-refresh run using only the bounded packet's official source rows. | not authorised until human acceptance |
+| `GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` | If the human owner accepts the execution-run decision, prepare a local expert review request packet without contacting experts or substituting expert judgment. | not authorised until human acceptance |
 | `GOAL-IQS-SOURCE-REFRESH-1` | Broader source refresh and source-gap resolution for selected jurisdictions after any reviewed execution run. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 14. Explicitly Blocked Work
+## 15. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -452,29 +512,30 @@ localized answer-model generation
 student-facing file generation
 fixture-to-product promotion
 automated source refresh
+source refresh outside explicit allowlists
 local expert substitution
 local expert contact
-source-refresh execution run
+unbounded source-refresh execution run
 hidden source discovery
 ```
 
-## 15. Current Recommended Next Step
+## 16. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1 packet after specialist
+Review the GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1 packet after specialist
 reviews, final lead review, PR publication, branch freshness, branch
 protection, PR Readiness Reviewer, and green CI are complete.
 ```
 
-Human acceptance of `GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1` may authorise
-only a later source-refresh execution run. It must not itself execute source
-refresh, contact local experts, substitute local experts, unlock trial runtime
-execution, country implementation, localized textbook or overlay output,
-localized exercises, answer models, assessment items, student-facing files,
-school or public distribution, product routes, Scale Gate,
-diagnostics/mastery/PV, student/product use, personal-data processing,
-compliance, approval, accreditation, OP0, PTA, summative,
-inspection-readiness, support-sufficiency, accommodation-sufficiency, or
-accessibility/legal sufficiency claims.
+Human acceptance of `GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1` may authorise
+only a later local expert review request packet. It must not itself contact
+local experts, substitute local experts, unlock trial runtime execution,
+country implementation, localized textbook or overlay output, localized
+exercises, answer models, assessment items, student-facing files, school or
+public distribution, product routes, Scale Gate, diagnostics/mastery/PV,
+student/product use, personal-data processing, compliance, approval,
+accreditation, OP0, PTA, summative, inspection-readiness,
+support-sufficiency, accommodation-sufficiency, or accessibility/legal
+sufficiency claims.
