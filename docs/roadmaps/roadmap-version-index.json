@@ -98,14 +98,14 @@
     },
     {
       "roadmap_id": "international-quality-standards-foundation",
-      "version": "v0.4-internal-overlay-trial-planning-human-review",
+      "version": "v0.8-bounded-source-refresh-packet-human-review",
       "title": "International Quality Standards Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-06-24",
+      "updated_on": "2026-06-27",
       "supersedes": [],
-      "notes": "Separate internal-only roadmap after Dutch internal/report-only closure. GOAL-IQS-FOUNDATION-1 was accepted and merged on PR #131 with the foundation decision PROCEED_WITH_COMMON_CORE_AND_OVERLAYS. GOAL-IQS-OVERLAY-ARCHITECTURE-1 was accepted and merged on PR #134 with the architecture decision PROCEED_TO_SELECTED_JURISDICTION_DEEPENING. GOAL-IQS-SELECTED-DEEPENING-1 was accepted and merged on PR #136 with the internal overlay planning decision. The current internal-only planning packet defines exact input/output allowlists, no-output/no-runtime/no-product-route/no-school-facing boundaries, blocker-display requirements, refusal matrix, validation gates, review gates, and the decision PROCEED_TO_INTERNAL_OVERLAY_TRIAL_CONTRACT_DRAFT for human review. It does not authorize trial runtime execution, localized textbook or overlay output, country editions, local implementation, compliance or approval claims, teacher/school-facing output, public output, evidence-pack deployment, package/CI product integration, dashboard gates, quality-ref or Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student/product-use, personal-data processing, OP0, PTA, summative, accreditation, or inspection-readiness claims."
+      "notes": "Separate internal-only roadmap after Dutch internal/report-only closure. GOAL-IQS-FOUNDATION-1, GOAL-IQS-OVERLAY-ARCHITECTURE-1, GOAL-IQS-SELECTED-DEEPENING-1, internal overlay planning, internal overlay trial contract, internal no-output simulation, and the local-expert/source-refresh gate were accepted and merged through PRs #131, #134, #136, #145, #155, #161, and #163. The current bounded source-refresh packet prepares exact England/Flanders official-source inventories, freshness-check methods, refresh-state model, local expert request template, simulations, fixtures, validation, and one source-refresh execution decision option for human review. It does not authorize source refresh execution, any source-refresh execution run, local expert contact or substitution, runtime execution, localized textbook or overlay output, localized exercises, answer models, assessment items, student-facing files, country editions, local implementation, compliance or approval claims, teacher/school-facing output, public output, evidence-pack deployment, package/CI product integration, dashboard gates, quality-ref or Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student/product-use, personal-data processing, OP0, PTA, summative, accreditation, inspection-readiness, support-sufficiency, accommodation-sufficiency, or accessibility/legal sufficiency claims."
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",

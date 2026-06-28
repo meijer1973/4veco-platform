@@ -1,0 +1,3165 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1",
+  "status": "route_specific_fixture_proof_complete_for_review",
+  "rendered_proof": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/rendered-support-proof.html",
+  "task_set": {
+    "schema_version": 1,
+    "title": "Year 2 governed support closure proof lab",
+    "eyebrow": "Review-only support proof",
+    "intro": "This rendered lab proves route-specific runtime, source, answer-form, and authority boundaries for Y2-B5-P13, Y2-B6-P12, Y2-B7-P13, and Y2-B8-P04. It is not generated lesson output.",
+    "surfaceKind": "review_lab",
+    "contextBlocks": [
+      {
+        "id": "ctx-b5-pension",
+        "type": "source_excerpt",
+        "sourceLabel": "Book 5 pension source",
+        "caption": "Bron 1: Pension model 2024-2044",
+        "bodyMarkdown": "The approved source is a schematic pension model. It supports directional stock/flow and ratio reasoning, not exact student numeric extraction from the figure.",
+        "sourceRefs": [
+          "references/data/year2-target-foundation/canonical-source-assets.json#figuur-1-pensioenmodel-2024-2044"
+        ],
+        "accessibilitySummary": "Schematic pension source with directional premium pressure and pension wealth relations."
+      },
+      {
+        "id": "ctx-b6-housing",
+        "type": "table",
+        "sourceLabel": "Book 6 housing tables",
+        "caption": "Tabel 1: VastWonen/Reder route data",
+        "columns": [
+          "Item",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Maximum rent",
+            "EUR 850"
+          ],
+          [
+            "Demand at maximum rent",
+            "10,400 dwellings"
+          ],
+          [
+            "Housing stock",
+            "6,800 dwellings"
+          ],
+          [
+            "GO function",
+            "GO = -0.125Q + 2,150"
+          ],
+          [
+            "Revenue-maximising Q",
+            "8,600 dwellings"
+          ],
+          [
+            "Revenue-maximising rent",
+            "EUR 1,075"
+          ]
+        ],
+        "altText": "Table with Book 6 housing values used for waiting-list and revenue calculations.",
+        "sourceMaterialId": "references/data/year2-target-foundation/canonical-source-assets.json#tabel-1-vastwonen-financial-data"
+      },
+      {
+        "id": "ctx-b7-credit",
+        "type": "source_excerpt",
+        "sourceLabel": "Book 7 credit insurance source",
+        "caption": "Bron 2: Credit insurer, supplier, buyer, and Digibate table",
+        "bodyMarkdown": "The approved route names the credit insurer as principal and the buying company as agent. Expected damage is EUR 80,000 and the 20 percent markup gives a EUR 96,000 total premium.",
+        "sourceRefs": [
+          "references/data/year2-target-foundation/canonical-source-assets.json#figuur-1-kredietverzekering-en-voorwaarden",
+          "references/data/year2-target-foundation/canonical-source-assets.json#tabel-1-financiele-gegevens-digibate"
+        ],
+        "accessibilitySummary": "Credit insurance route with actor-condition and expected-value calculation data."
+      },
+      {
+        "id": "ctx-b8-strategy",
+        "type": "source_excerpt",
+        "sourceLabel": "Book 8 strategic source",
+        "caption": "Bron 3: Guarda/Orso Bianco price-war case",
+        "bodyMarkdown": "Use the official context first. Any payoff representation is derived and non-official, and must stay secondary to the official source facts.",
+        "sourceRefs": [
+          "references/data/year2-target-foundation/canonical-source-assets.json#ijssalon-guarda-orso-bianco-context",
+          "references/data/year2-target-foundation/canonical-source-assets.json#derived-payoff-representation"
+        ],
+        "accessibilitySummary": "Strategic price-war source with a derived payoff representation boundary."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "b6-op-d1-demand-function-solving",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Solve the route-specific demand function and preserve labelled values.",
+        "prompt": "Bereken de gevraagde hoeveelheid woningen bij een maximale huur van EUR 850.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "divide",
+                "label": "/",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "intercept",
+                "label": "2150",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "plus",
+                "label": "+",
+                "kind": "distractor",
+                "category": "operator",
+                "distractorFor": "minus"
+              },
+              {
+                "id": "open",
+                "label": "(",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
+                "id": "rent",
+                "label": "P",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "slope",
+                "label": "0.125",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "close",
+                "label": ")",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
+                "id": "minus",
+                "label": "-",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "times",
+                "label": "x",
+                "kind": "distractor",
+                "category": "operator",
+                "distractorFor": "divide"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "Q = (2150 - P) / 0.125",
+            "fields": [
+              {
+                "id": "intercept",
+                "label": "intercept uit GO",
+                "placeholder": "2150",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "rent",
+                "label": "maximale huur",
+                "placeholder": "850",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "slope",
+                "label": "hellingscoefficient",
+                "placeholder": "0.125",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "open",
+            "intercept",
+            "minus",
+            "rent",
+            "close",
+            "divide",
+            "slope"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "intercept": {
+              "kind": "number",
+              "value": 2150
+            },
+            "rent": {
+              "kind": "number",
+              "value": 850
+            },
+            "slope": {
+              "kind": "number",
+              "value": 0.125
+            }
+          },
+          "finalAnswer": {
+            "kind": "number",
+            "value": 10400
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "woningen",
+              "dwellings",
+              "sociale huurwoningen"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "10400",
+                "10,400"
+              ],
+              [
+                "6800",
+                "6,800"
+              ],
+              [
+                "3600",
+                "3,600",
+                "wachtlijst",
+                "waiting"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use the GO function.",
+            "Fill in EUR 850.",
+            "State 10,400 dwellings and the waiting-list implication."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Vraagfunctie opgelost",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b6-op-c1-revenue-calculation",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Compute total revenue from the route-specific revenue-maximising output and rent.",
+        "prompt": "Bereken de totale opbrengst bij Q = 8600 en P = EUR 1075.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "quantity",
+                "label": "Q",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "plus",
+                "label": "+",
+                "kind": "distractor",
+                "category": "operator",
+                "distractorFor": "times"
+              },
+              {
+                "id": "price",
+                "label": "P",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "times",
+                "label": "x",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "cost",
+                "label": "TK",
+                "kind": "distractor",
+                "category": "variable",
+                "distractorFor": "price"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "TO = Q x P",
+            "fields": [
+              {
+                "id": "quantity",
+                "label": "Q",
+                "placeholder": "8600",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "price",
+                "label": "P",
+                "placeholder": "1075",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "quantity",
+            "times",
+            "price"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "quantity": {
+              "kind": "number",
+              "value": 8600
+            },
+            "price": {
+              "kind": "number",
+              "value": 1075
+            }
+          },
+          "finalAnswer": {
+            "kind": "number",
+            "value": 9245000
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "EUR",
+              "euro",
+              "euros"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "9245000",
+                "9,245,000"
+              ],
+              [
+                "opbrengst",
+                "revenue"
+              ],
+              [
+                "8600",
+                "8,600"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use Q x P.",
+            "Use Q = 8,600 and P = EUR 1,075.",
+            "State the revenue with EUR notation."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Opbrengstberekening compleet",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b6-op-c2-marginal-revenue-decision",
+        "family": "step_ordering",
+        "skillLabel": "Stappen ordenen",
+        "purpose": "Prove the formula-derivation and decision-step order for revenue maximisation.",
+        "prompt": "Zet de stappen voor het bepalen van de omzetmaximaliserende hoeveelheid in de juiste volgorde.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "stepBankLabel": "Stappen",
+          "sequenceLabel": "Gekozen volgorde",
+          "placeholder": "Zet de stappen in de juiste volgorde.",
+          "separator": " -> ",
+          "steps": [
+            {
+              "id": "set-zero",
+              "label": "Stel MO gelijk aan nul",
+              "kind": "answer"
+            },
+            {
+              "id": "capacity-first",
+              "label": "Kies direct 6800 vanwege de woningvoorraad",
+              "kind": "distractor",
+              "distractorFor": "solve-q"
+            },
+            {
+              "id": "derive-mr",
+              "label": "Leid MO af uit TO: MO = -0.25Q + 2150",
+              "kind": "answer"
+            },
+            {
+              "id": "solve-q",
+              "label": "Los -0.25Q + 2150 = 0 op: Q = 8600",
+              "kind": "answer"
+            },
+            {
+              "id": "choose-q",
+              "label": "Gebruik Q = 8600 als omzetmaximaliserende hoeveelheid",
+              "kind": "answer"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "step_ordering",
+          "order": [
+            "derive-mr",
+            "set-zero",
+            "solve-q",
+            "choose-q"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "MO-beslissingsroute klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b6-op-ans2-claim-answer-format",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Format the Book 6 calculation answer with method, values, decision and claim conclusion.",
+        "prompt": "Formuleer het berekenantwoord bij de claim dat afschaffing van de maximumhuur de wachtlijst oplost.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "mr-zero",
+                "label": "MO = 0",
+                "kind": "answer",
+                "category": "notation"
+              },
+              {
+                "id": "capacity-only",
+                "label": "Q = 6800 zonder MO",
+                "kind": "distractor",
+                "category": "value",
+                "distractorFor": "q-8600"
+              },
+              {
+                "id": "q-8600",
+                "label": "Q = 8600",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "p-1075",
+                "label": "P = 1075",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "compare-stock",
+                "label": "vergelijk met 6800 voorraad",
+                "kind": "answer",
+                "category": "operator"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "MO = 0 -> Q = 8600; P = 1075; vergelijk met woningvoorraad",
+            "fields": [
+              {
+                "id": "qMaxRevenue",
+                "label": "omzetmaximaliserende Q",
+                "placeholder": "8600",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "rentAtQ",
+                "label": "huur bij Q",
+                "placeholder": "1075",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "housingStock",
+                "label": "woningvoorraad",
+                "placeholder": "6800",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "mr-zero",
+            "q-8600",
+            "p-1075",
+            "compare-stock"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "qMaxRevenue": {
+              "kind": "number",
+              "value": 8600
+            },
+            "rentAtQ": {
+              "kind": "number",
+              "value": 1075
+            },
+            "housingStock": {
+              "kind": "number",
+              "value": 6800
+            }
+          },
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": [
+              "claim not correct",
+              "not correct",
+              "niet correct",
+              "onjuist"
+            ]
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "conclusie",
+              "claim"
+            ],
+            "required": false
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "niet correct",
+                "not correct",
+                "onjuist"
+              ],
+              [
+                "8600",
+                "8,600"
+              ],
+              [
+                "6800",
+                "6,800",
+                "voorraad",
+                "stock"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Show the MO route.",
+            "State Q = 8,600 and P = EUR 1,075.",
+            "Conclude the claim is not correct."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Claimantwoord compleet",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b5-op-t1-schematic-source-chain",
+        "family": "source_chain_builder",
+        "skillLabel": "Bronketen bouwen",
+        "purpose": "Bind pension source work to a schematic-source route and reject exact numeric-table overclaim.",
+        "prompt": "Bouw de bronketen voor het pensioenmodel zonder exacte tabelclaim.",
+        "contextRefs": [
+          "ctx-b5-pension"
+        ],
+        "interaction": {
+          "nodeBankLabel": "Bronketen onderdelen",
+          "sequenceLabel": "Opgebouwde bronketen",
+          "placeholder": "Bouw de keten van bron naar conclusie.",
+          "separator": " -> ",
+          "nodes": [
+            {
+              "id": "source",
+              "label": "Gebruik Figuur 1 als schematische bron",
+              "kind": "answer",
+              "nodeRole": "source"
+            },
+            {
+              "id": "value",
+              "label": "Lees alleen richting: vermogen stijgt relatief",
+              "kind": "answer",
+              "nodeRole": "value"
+            },
+            {
+              "id": "operation",
+              "label": "Koppel richting aan stock-flow/tijd redenering",
+              "kind": "answer",
+              "nodeRole": "operation"
+            },
+            {
+              "id": "answer",
+              "label": "Formuleer relatieve ratio, niet exact percentage",
+              "kind": "answer",
+              "nodeRole": "answer"
+            },
+            {
+              "id": "conclusion",
+              "label": "Conclusie blijft schematisch begrensd",
+              "kind": "answer",
+              "nodeRole": "conclusion"
+            },
+            {
+              "id": "numeric-table",
+              "label": "Lees exacte tabelwaarden uit de figuur",
+              "kind": "distractor",
+              "nodeRole": "value",
+              "distractorFor": "value"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "source_chain_builder",
+          "chain": [
+            "source",
+            "value",
+            "operation",
+            "answer",
+            "conclusion"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronketen klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b5-op-ans2-ratio-conclusion",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Prove calculation-answer formatting for the pension premium/wealth ratio route.",
+        "prompt": "Formuleer de ratio-conclusie wanneer premie als percentage van bbp constant blijft maar pensioenvermogen sneller stijgt.",
+        "contextRefs": [
+          "ctx-b5-pension"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "premium-share",
+                "label": "premie als bbp-aandeel constant",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "wealth-rises",
+                "label": "pensioenvermogen stijgt sneller",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "ratio-falls",
+                "label": "ratio daalt",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "exact-2044",
+                "label": "exact getal uit 2044 aflezen",
+                "kind": "distractor",
+                "category": "value",
+                "distractorFor": "ratio-falls"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "premie / pensioenvermogen: teller constant als bbp-aandeel, noemer stijgt sneller",
+            "fields": [
+              {
+                "id": "premiumShare",
+                "label": "premiedruk",
+                "placeholder": "constant bbp-aandeel",
+                "inputMode": "text"
+              },
+              {
+                "id": "wealthDirection",
+                "label": "pensioenvermogen",
+                "placeholder": "stijgt sneller",
+                "inputMode": "text"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "premium-share",
+            "wealth-rises",
+            "ratio-falls"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "premiumShare": {
+              "kind": "text",
+              "accepted": [
+                "constant bbp-aandeel",
+                "constant"
+              ]
+            },
+            "wealthDirection": {
+              "kind": "text",
+              "accepted": [
+                "stijgt sneller",
+                "rises faster"
+              ]
+            }
+          },
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": [
+              "daalt",
+              "falls",
+              "decreases"
+            ]
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "ratio",
+              "aandeel"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "daalt",
+                "falls"
+              ],
+              [
+                "premie",
+                "premium"
+              ],
+              [
+                "vermogen",
+                "wealth"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use the schematic source direction.",
+            "Do not extract an exact numeric table value.",
+            "State the ratio direction."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Ratio-antwoord begrensd",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b6-op-p1-waiting-list-source-values",
+        "family": "source_value_selection",
+        "skillLabel": "Bronwaarden kiezen",
+        "purpose": "Prove social-housing waiting-list source selection for the exact Year 2 route.",
+        "prompt": "Kies de twee bronwaarden die nodig zijn voor de wachtlijst bij EUR 850.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "valueBankLabel": "Bronwaarden",
+          "roleLabel": "Rol in deze route",
+          "values": [
+            {
+              "id": "demand-10400",
+              "label": "10,400 woningen",
+              "kind": "answer",
+              "sourceLabel": "vraag bij EUR 850",
+              "unit": "woningen"
+            },
+            {
+              "id": "stock-6800",
+              "label": "6,800 woningen",
+              "kind": "answer",
+              "sourceLabel": "woningvoorraad",
+              "unit": "woningen"
+            },
+            {
+              "id": "q-8600",
+              "label": "8,600 woningen",
+              "kind": "distractor",
+              "sourceLabel": "omzetmaximum",
+              "unit": "woningen",
+              "distractorFor": "stock-6800"
+            }
+          ],
+          "roles": [
+            {
+              "id": "demand",
+              "label": "vraag"
+            },
+            {
+              "id": "stock",
+              "label": "voorraad"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "source_value_selection",
+          "selections": [
+            {
+              "valueId": "demand-10400",
+              "role": "demand"
+            },
+            {
+              "valueId": "stock-6800",
+              "role": "stock"
+            }
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronwaarden kloppen",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b6-op-e1-income-elasticity-source-chain",
+        "family": "source_chain_builder",
+        "skillLabel": "Bronketen bouwen",
+        "purpose": "Bind the rent-market income-elasticity explanation to exact source facts.",
+        "prompt": "Bouw de bronketen voor de huurmarktverklaring met inkomenselasticiteit.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "nodeBankLabel": "Bronketen onderdelen",
+          "sequenceLabel": "Opgebouwde bronketen",
+          "placeholder": "Bouw de keten van bron naar conclusie.",
+          "separator": " -> ",
+          "nodes": [
+            {
+              "id": "source",
+              "label": "Gebruik Reder/VastWonen brongegevens",
+              "kind": "answer",
+              "nodeRole": "source"
+            },
+            {
+              "id": "values",
+              "label": "Middeninkomens +3%, inkomenselasticiteit +0.4, vrijkomende huurwoningen -9.9%",
+              "kind": "answer",
+              "nodeRole": "value"
+            },
+            {
+              "id": "operation",
+              "label": "Positieve elasticiteit verhoogt vraag terwijl aanbod krapper wordt",
+              "kind": "answer",
+              "nodeRole": "operation"
+            },
+            {
+              "id": "answer",
+              "label": "Huur stijgt door vraagdruk en beperkt aanbod",
+              "kind": "answer",
+              "nodeRole": "answer"
+            },
+            {
+              "id": "conclusion",
+              "label": "Bron verklaart gemiddelde huur +6%",
+              "kind": "answer",
+              "nodeRole": "conclusion"
+            },
+            {
+              "id": "negative-elasticity",
+              "label": "Gebruik negatieve inkomenselasticiteit",
+              "kind": "distractor",
+              "nodeRole": "value",
+              "distractorFor": "values"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "source_chain_builder",
+          "chain": [
+            "source",
+            "values",
+            "operation",
+            "answer",
+            "conclusion"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronketen klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b7-op-r1-actor-condition-assertion",
+        "family": "assertion_reason",
+        "skillLabel": "Stelling en reden beoordelen",
+        "purpose": "Prove exact actor-condition routing for the credit-insurance information problem.",
+        "prompt": "Beoordeel de stelling en reden voor de kredietverzekeringsroute.",
+        "contextRefs": [
+          "ctx-b7-credit"
+        ],
+        "interaction": {
+          "assertionLabel": "Stelling",
+          "assertionText": "De kredietverzekeraar is principaal en de kopende onderneming is agent.",
+          "reasonLabel": "Reden",
+          "reasonText": "Door incassokosten bij de kopende onderneming te leggen, vermindert de prikkel tot wanbetaling.",
+          "optionLabel": "Relatie",
+          "options": [
+            {
+              "id": "both-true-reason-explains",
+              "label": "Beide juist en reden verklaart",
+              "description": "Actorrollen en voorwaarde horen bij dezelfde route."
+            },
+            {
+              "id": "both-true-no-link",
+              "label": "Beide juist maar geen verband",
+              "description": "De reden staat los van de stelling."
+            },
+            {
+              "id": "assertion-false",
+              "label": "Stelling onjuist",
+              "description": "Leverancier is principaal volgens deze keuze."
+            },
+            {
+              "id": "reason-false",
+              "label": "Reden onjuist",
+              "description": "Incassokosten zouden geen prikkel veranderen."
+            }
+          ]
+        },
+        "expected": {
+          "kind": "assertion_reason",
+          "value": "both-true-reason-explains",
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Stelling-redenroute klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b7-op-ans2-expected-value-markup",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Prove expected-value plus markup answer formatting for the Book 7 route.",
+        "prompt": "Bereken de totale premie na 20 procent opslag op de verwachte schade.",
+        "contextRefs": [
+          "ctx-b7-credit"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "expected-damage",
+                "label": "verwachte schade",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "times",
+                "label": "x",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "factor-120",
+                "label": "1.20",
+                "kind": "answer",
+                "category": "multiplier"
+              },
+              {
+                "id": "factor-080",
+                "label": "0.80",
+                "kind": "distractor",
+                "category": "multiplier",
+                "distractorFor": "factor-120"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "totale premie = verwachte schade x 1.20",
+            "fields": [
+              {
+                "id": "expectedDamage",
+                "label": "verwachte schade",
+                "placeholder": "80000",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "markupFactor",
+                "label": "opslagfactor",
+                "placeholder": "1.20",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "expected-damage",
+            "times",
+            "factor-120"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "expectedDamage": {
+              "kind": "number",
+              "value": 80000
+            },
+            "markupFactor": {
+              "kind": "number",
+              "value": 1.2
+            }
+          },
+          "finalAnswer": {
+            "kind": "number",
+            "value": 96000
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "EUR",
+              "euro"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "96000",
+                "96,000"
+              ],
+              [
+                "premie",
+                "premium"
+              ],
+              [
+                "80000",
+                "80,000"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use expected damage EUR 80,000.",
+            "Apply 20 percent markup.",
+            "State total premium EUR 96,000."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Premieantwoord compleet",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      {
+        "id": "b8-op-s1-source-to-derived-order",
+        "family": "step_ordering",
+        "skillLabel": "Stappen ordenen",
+        "purpose": "Prove game-theory source-to-derived representation order and label boundary.",
+        "prompt": "Zet de strategische bronroute in de juiste volgorde.",
+        "contextRefs": [
+          "ctx-b8-strategy"
+        ],
+        "interaction": {
+          "stepBankLabel": "Stappen",
+          "sequenceLabel": "Gekozen volgorde",
+          "placeholder": "Zet de stappen in de juiste volgorde.",
+          "separator": " -> ",
+          "steps": [
+            {
+              "id": "official-context",
+              "label": "Lees eerst de officiele context over substituten en prijsgarantie",
+              "kind": "answer"
+            },
+            {
+              "id": "derived-label",
+              "label": "Label de payoffkaart als afgeleid en niet-officieel",
+              "kind": "answer"
+            },
+            {
+              "id": "incentive",
+              "label": "Benoem de prikkel om prijs te verlagen",
+              "kind": "answer"
+            },
+            {
+              "id": "joint-outcome",
+              "label": "Leg het slechtere gezamenlijke resultaat uit",
+              "kind": "answer"
+            },
+            {
+              "id": "payoff-as-source",
+              "label": "Presenteer payoffkaart als officiele bron",
+              "kind": "distractor",
+              "distractorFor": "derived-label"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "step_ordering",
+          "order": [
+            "official-context",
+            "derived-label",
+            "incentive",
+            "joint-outcome"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Strategische bronroute klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      }
+    ]
+  },
+  "runtime_fixtures": [
+    {
+      "case_id": "Y2-B6-P12:OP-D1",
+      "fixture_id": "b6-op-d1-demand-function-solving",
+      "category": "new_task_family_runtime_support_required",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "task": {
+        "id": "b6-op-d1-demand-function-solving",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Solve the route-specific demand function and preserve labelled values.",
+        "prompt": "Bereken de gevraagde hoeveelheid woningen bij een maximale huur van EUR 850.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "divide",
+                "label": "/",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "intercept",
+                "label": "2150",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "plus",
+                "label": "+",
+                "kind": "distractor",
+                "category": "operator",
+                "distractorFor": "minus"
+              },
+              {
+                "id": "open",
+                "label": "(",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
+                "id": "rent",
+                "label": "P",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "slope",
+                "label": "0.125",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "close",
+                "label": ")",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
+                "id": "minus",
+                "label": "-",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "times",
+                "label": "x",
+                "kind": "distractor",
+                "category": "operator",
+                "distractorFor": "divide"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "Q = (2150 - P) / 0.125",
+            "fields": [
+              {
+                "id": "intercept",
+                "label": "intercept uit GO",
+                "placeholder": "2150",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "rent",
+                "label": "maximale huur",
+                "placeholder": "850",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "slope",
+                "label": "hellingscoefficient",
+                "placeholder": "0.125",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "open",
+            "intercept",
+            "minus",
+            "rent",
+            "close",
+            "divide",
+            "slope"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "intercept": {
+              "kind": "number",
+              "value": 2150
+            },
+            "rent": {
+              "kind": "number",
+              "value": 850
+            },
+            "slope": {
+              "kind": "number",
+              "value": 0.125
+            }
+          },
+          "finalAnswer": {
+            "kind": "number",
+            "value": 10400
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "woningen",
+              "dwellings",
+              "sociale huurwoningen"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "10400",
+                "10,400"
+              ],
+              [
+                "6800",
+                "6,800"
+              ],
+              [
+                "3600",
+                "3,600",
+                "wachtlijst",
+                "waiting"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use the GO function.",
+            "Fill in EUR 850.",
+            "State 10,400 dwellings and the waiting-list implication."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Vraagfunctie opgelost",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "methodTokens": [
+          "open",
+          "intercept",
+          "minus",
+          "rent",
+          "close",
+          "divide",
+          "slope"
+        ],
+        "substitution": {
+          "intercept": "2150",
+          "rent": "850",
+          "slope": "0.125"
+        },
+        "finalAnswer": "10400",
+        "notation": "woningen",
+        "conclusion": "Bij EUR 850 is de vraag 10400 woningen; tegenover 6800 woningen ontstaat een wachtlijst van 3600."
+      },
+      "negative_responses": {
+        "finalAnswerOnly": {
+          "methodTokens": [],
+          "substitution": {},
+          "finalAnswer": "10400",
+          "notation": "woningen",
+          "conclusion": "De vraag is 10400 woningen."
+        },
+        "wrongRent": {
+          "methodTokens": [
+            "open",
+            "intercept",
+            "minus",
+            "rent",
+            "close",
+            "divide",
+            "slope"
+          ],
+          "substitution": {
+            "intercept": "2150",
+            "rent": "1075",
+            "slope": "0.125"
+          },
+          "finalAnswer": "10400",
+          "notation": "woningen",
+          "conclusion": "Bij EUR 850 is de vraag 10400 woningen; tegenover 6800 woningen ontstaat een wachtlijst van 3600."
+        },
+        "noWaitingListConclusion": {
+          "methodTokens": [
+            "open",
+            "intercept",
+            "minus",
+            "rent",
+            "close",
+            "divide",
+            "slope"
+          ],
+          "substitution": {
+            "intercept": "2150",
+            "rent": "850",
+            "slope": "0.125"
+          },
+          "finalAnswer": "10400",
+          "notation": "woningen",
+          "conclusion": "De vraag is 10400 woningen."
+        }
+      },
+      "semantic_checks": {
+        "formula": "Q = (2150 - P) / 0.125",
+        "max_rent_eur": 850,
+        "demand_at_max_rent": 10400,
+        "housing_stock": 6800,
+        "waiting_list": 3600
+      }
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-C1",
+      "fixture_id": "b6-op-c1-revenue-calculation",
+      "category": "new_task_family_runtime_support_required",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "task": {
+        "id": "b6-op-c1-revenue-calculation",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Compute total revenue from the route-specific revenue-maximising output and rent.",
+        "prompt": "Bereken de totale opbrengst bij Q = 8600 en P = EUR 1075.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "quantity",
+                "label": "Q",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "plus",
+                "label": "+",
+                "kind": "distractor",
+                "category": "operator",
+                "distractorFor": "times"
+              },
+              {
+                "id": "price",
+                "label": "P",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "times",
+                "label": "x",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "cost",
+                "label": "TK",
+                "kind": "distractor",
+                "category": "variable",
+                "distractorFor": "price"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "TO = Q x P",
+            "fields": [
+              {
+                "id": "quantity",
+                "label": "Q",
+                "placeholder": "8600",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "price",
+                "label": "P",
+                "placeholder": "1075",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "quantity",
+            "times",
+            "price"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "quantity": {
+              "kind": "number",
+              "value": 8600
+            },
+            "price": {
+              "kind": "number",
+              "value": 1075
+            }
+          },
+          "finalAnswer": {
+            "kind": "number",
+            "value": 9245000
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "EUR",
+              "euro",
+              "euros"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "9245000",
+                "9,245,000"
+              ],
+              [
+                "opbrengst",
+                "revenue"
+              ],
+              [
+                "8600",
+                "8,600"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use Q x P.",
+            "Use Q = 8,600 and P = EUR 1,075.",
+            "State the revenue with EUR notation."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Opbrengstberekening compleet",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "methodTokens": [
+          "quantity",
+          "times",
+          "price"
+        ],
+        "substitution": {
+          "quantity": "8600",
+          "price": "1075"
+        },
+        "finalAnswer": "9245000",
+        "notation": "EUR",
+        "conclusion": "De totale opbrengst bij Q 8600 is EUR 9245000 revenue."
+      },
+      "negative_responses": {
+        "wrongQuantity": {
+          "methodTokens": [
+            "quantity",
+            "times",
+            "price"
+          ],
+          "substitution": {
+            "quantity": "6800",
+            "price": "1075"
+          },
+          "finalAnswer": "9245000",
+          "notation": "EUR",
+          "conclusion": "De totale opbrengst bij Q 8600 is EUR 9245000 revenue."
+        },
+        "costDistractorMethod": {
+          "methodTokens": [
+            "quantity",
+            "times",
+            "cost"
+          ],
+          "substitution": {
+            "quantity": "8600",
+            "price": "1075"
+          },
+          "finalAnswer": "9245000",
+          "notation": "EUR",
+          "conclusion": "De totale opbrengst bij Q 8600 is EUR 9245000 revenue."
+        }
+      },
+      "semantic_checks": {
+        "q": 8600,
+        "p": 1075,
+        "total_revenue_eur": 9245000
+      }
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-C2",
+      "fixture_id": "b6-op-c2-marginal-revenue-decision",
+      "category": "new_task_family_runtime_support_required",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "task": {
+        "id": "b6-op-c2-marginal-revenue-decision",
+        "family": "step_ordering",
+        "skillLabel": "Stappen ordenen",
+        "purpose": "Prove the formula-derivation and decision-step order for revenue maximisation.",
+        "prompt": "Zet de stappen voor het bepalen van de omzetmaximaliserende hoeveelheid in de juiste volgorde.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "stepBankLabel": "Stappen",
+          "sequenceLabel": "Gekozen volgorde",
+          "placeholder": "Zet de stappen in de juiste volgorde.",
+          "separator": " -> ",
+          "steps": [
+            {
+              "id": "set-zero",
+              "label": "Stel MO gelijk aan nul",
+              "kind": "answer"
+            },
+            {
+              "id": "capacity-first",
+              "label": "Kies direct 6800 vanwege de woningvoorraad",
+              "kind": "distractor",
+              "distractorFor": "solve-q"
+            },
+            {
+              "id": "derive-mr",
+              "label": "Leid MO af uit TO: MO = -0.25Q + 2150",
+              "kind": "answer"
+            },
+            {
+              "id": "solve-q",
+              "label": "Los -0.25Q + 2150 = 0 op: Q = 8600",
+              "kind": "answer"
+            },
+            {
+              "id": "choose-q",
+              "label": "Gebruik Q = 8600 als omzetmaximaliserende hoeveelheid",
+              "kind": "answer"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "step_ordering",
+          "order": [
+            "derive-mr",
+            "set-zero",
+            "solve-q",
+            "choose-q"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "MO-beslissingsroute klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "order": [
+          "derive-mr",
+          "set-zero",
+          "solve-q",
+          "choose-q"
+        ]
+      },
+      "negative_responses": {
+        "capacityShortcut": {
+          "order": [
+            "capacity-first",
+            "derive-mr",
+            "set-zero",
+            "solve-q"
+          ]
+        },
+        "wrongOrder": {
+          "order": [
+            "set-zero",
+            "derive-mr",
+            "solve-q",
+            "choose-q"
+          ]
+        }
+      },
+      "semantic_checks": {
+        "marginal_revenue": "MO = -0.25Q + 2150",
+        "chosen_output": 8600,
+        "rejected_capacity_only_choice": 6800
+      }
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-ANS2",
+      "fixture_id": "b6-op-ans2-claim-answer-format",
+      "category": "new_task_family_runtime_support_required",
+      "route_boundary": "exact_year2_route_only_no_broad_operation_closure",
+      "task": {
+        "id": "b6-op-ans2-claim-answer-format",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Format the Book 6 calculation answer with method, values, decision and claim conclusion.",
+        "prompt": "Formuleer het berekenantwoord bij de claim dat afschaffing van de maximumhuur de wachtlijst oplost.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "mr-zero",
+                "label": "MO = 0",
+                "kind": "answer",
+                "category": "notation"
+              },
+              {
+                "id": "capacity-only",
+                "label": "Q = 6800 zonder MO",
+                "kind": "distractor",
+                "category": "value",
+                "distractorFor": "q-8600"
+              },
+              {
+                "id": "q-8600",
+                "label": "Q = 8600",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "p-1075",
+                "label": "P = 1075",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "compare-stock",
+                "label": "vergelijk met 6800 voorraad",
+                "kind": "answer",
+                "category": "operator"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "MO = 0 -> Q = 8600; P = 1075; vergelijk met woningvoorraad",
+            "fields": [
+              {
+                "id": "qMaxRevenue",
+                "label": "omzetmaximaliserende Q",
+                "placeholder": "8600",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "rentAtQ",
+                "label": "huur bij Q",
+                "placeholder": "1075",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "housingStock",
+                "label": "woningvoorraad",
+                "placeholder": "6800",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "mr-zero",
+            "q-8600",
+            "p-1075",
+            "compare-stock"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "qMaxRevenue": {
+              "kind": "number",
+              "value": 8600
+            },
+            "rentAtQ": {
+              "kind": "number",
+              "value": 1075
+            },
+            "housingStock": {
+              "kind": "number",
+              "value": 6800
+            }
+          },
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": [
+              "claim not correct",
+              "not correct",
+              "niet correct",
+              "onjuist"
+            ]
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "conclusie",
+              "claim"
+            ],
+            "required": false
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "niet correct",
+                "not correct",
+                "onjuist"
+              ],
+              [
+                "8600",
+                "8,600"
+              ],
+              [
+                "6800",
+                "6,800",
+                "voorraad",
+                "stock"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Show the MO route.",
+            "State Q = 8,600 and P = EUR 1,075.",
+            "Conclude the claim is not correct."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Claimantwoord compleet",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "methodTokens": [
+          "mr-zero",
+          "q-8600",
+          "p-1075",
+          "compare-stock"
+        ],
+        "substitution": {
+          "qMaxRevenue": "8600",
+          "rentAtQ": "1075",
+          "housingStock": "6800"
+        },
+        "finalAnswer": "niet correct",
+        "notation": "",
+        "conclusion": "De claim is niet correct: Q 8600 en voorraad 6800 laten de route niet als volledige oplossing sluiten."
+      },
+      "negative_responses": {
+        "conclusionOnly": {
+          "methodTokens": [],
+          "substitution": {},
+          "finalAnswer": "niet correct",
+          "notation": "",
+          "conclusion": "De claim is niet correct."
+        },
+        "capacityOnly": {
+          "methodTokens": [
+            "capacity-only",
+            "compare-stock"
+          ],
+          "substitution": {
+            "qMaxRevenue": "6800",
+            "rentAtQ": "850",
+            "housingStock": "6800"
+          },
+          "finalAnswer": "correct",
+          "notation": "",
+          "conclusion": "De claim klopt door alleen de voorraad te noemen."
+        }
+      },
+      "semantic_checks": {
+        "required_parts": [
+          "method",
+          "values",
+          "q_8600",
+          "p_1075",
+          "claim_not_correct"
+        ]
+      }
+    }
+  ],
+  "extension_fixtures": [
+    {
+      "case_id": "Y2-B5-P13:OP-T1",
+      "fixture_id": "b5-op-t1-schematic-source-chain",
+      "category": "existing_support_requires_extension",
+      "route_boundary": "schematic_visual_only_no_exact_numeric_table_claim",
+      "task": {
+        "id": "b5-op-t1-schematic-source-chain",
+        "family": "source_chain_builder",
+        "skillLabel": "Bronketen bouwen",
+        "purpose": "Bind pension source work to a schematic-source route and reject exact numeric-table overclaim.",
+        "prompt": "Bouw de bronketen voor het pensioenmodel zonder exacte tabelclaim.",
+        "contextRefs": [
+          "ctx-b5-pension"
+        ],
+        "interaction": {
+          "nodeBankLabel": "Bronketen onderdelen",
+          "sequenceLabel": "Opgebouwde bronketen",
+          "placeholder": "Bouw de keten van bron naar conclusie.",
+          "separator": " -> ",
+          "nodes": [
+            {
+              "id": "source",
+              "label": "Gebruik Figuur 1 als schematische bron",
+              "kind": "answer",
+              "nodeRole": "source"
+            },
+            {
+              "id": "value",
+              "label": "Lees alleen richting: vermogen stijgt relatief",
+              "kind": "answer",
+              "nodeRole": "value"
+            },
+            {
+              "id": "operation",
+              "label": "Koppel richting aan stock-flow/tijd redenering",
+              "kind": "answer",
+              "nodeRole": "operation"
+            },
+            {
+              "id": "answer",
+              "label": "Formuleer relatieve ratio, niet exact percentage",
+              "kind": "answer",
+              "nodeRole": "answer"
+            },
+            {
+              "id": "conclusion",
+              "label": "Conclusie blijft schematisch begrensd",
+              "kind": "answer",
+              "nodeRole": "conclusion"
+            },
+            {
+              "id": "numeric-table",
+              "label": "Lees exacte tabelwaarden uit de figuur",
+              "kind": "distractor",
+              "nodeRole": "value",
+              "distractorFor": "value"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "source_chain_builder",
+          "chain": [
+            "source",
+            "value",
+            "operation",
+            "answer",
+            "conclusion"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronketen klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "chain": [
+          "source",
+          "value",
+          "operation",
+          "answer",
+          "conclusion"
+        ]
+      },
+      "negative_responses": {
+        "numericOverclaim": {
+          "chain": [
+            "source",
+            "numeric-table",
+            "operation",
+            "answer",
+            "conclusion"
+          ]
+        }
+      },
+      "semantic_checks": {}
+    },
+    {
+      "case_id": "Y2-B5-P13:OP-ANS2",
+      "fixture_id": "b5-op-ans2-ratio-conclusion",
+      "category": "existing_support_requires_extension",
+      "route_boundary": "ratio_conclusion_without_exact_schematic_numeric_extraction",
+      "task": {
+        "id": "b5-op-ans2-ratio-conclusion",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Prove calculation-answer formatting for the pension premium/wealth ratio route.",
+        "prompt": "Formuleer de ratio-conclusie wanneer premie als percentage van bbp constant blijft maar pensioenvermogen sneller stijgt.",
+        "contextRefs": [
+          "ctx-b5-pension"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "premium-share",
+                "label": "premie als bbp-aandeel constant",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "wealth-rises",
+                "label": "pensioenvermogen stijgt sneller",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "ratio-falls",
+                "label": "ratio daalt",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "exact-2044",
+                "label": "exact getal uit 2044 aflezen",
+                "kind": "distractor",
+                "category": "value",
+                "distractorFor": "ratio-falls"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "premie / pensioenvermogen: teller constant als bbp-aandeel, noemer stijgt sneller",
+            "fields": [
+              {
+                "id": "premiumShare",
+                "label": "premiedruk",
+                "placeholder": "constant bbp-aandeel",
+                "inputMode": "text"
+              },
+              {
+                "id": "wealthDirection",
+                "label": "pensioenvermogen",
+                "placeholder": "stijgt sneller",
+                "inputMode": "text"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "premium-share",
+            "wealth-rises",
+            "ratio-falls"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "premiumShare": {
+              "kind": "text",
+              "accepted": [
+                "constant bbp-aandeel",
+                "constant"
+              ]
+            },
+            "wealthDirection": {
+              "kind": "text",
+              "accepted": [
+                "stijgt sneller",
+                "rises faster"
+              ]
+            }
+          },
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": [
+              "daalt",
+              "falls",
+              "decreases"
+            ]
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "ratio",
+              "aandeel"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "daalt",
+                "falls"
+              ],
+              [
+                "premie",
+                "premium"
+              ],
+              [
+                "vermogen",
+                "wealth"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use the schematic source direction.",
+            "Do not extract an exact numeric table value.",
+            "State the ratio direction."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Ratio-antwoord begrensd",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "methodTokens": [
+          "premium-share",
+          "wealth-rises",
+          "ratio-falls"
+        ],
+        "substitution": {
+          "premiumShare": "constant bbp-aandeel",
+          "wealthDirection": "stijgt sneller"
+        },
+        "finalAnswer": "daalt",
+        "notation": "ratio",
+        "conclusion": "De premie ratio daalt ten opzichte van het vermogen omdat het pensioenvermogen sneller stijgt."
+      },
+      "negative_responses": {
+        "exactFigureNumber": {
+          "methodTokens": [
+            "premium-share",
+            "exact-2044",
+            "ratio-falls"
+          ],
+          "substitution": {
+            "premiumShare": "constant",
+            "wealthDirection": "42"
+          },
+          "finalAnswer": "daalt",
+          "notation": "ratio",
+          "conclusion": "De premie ratio daalt volgens exact getal 42 uit de figuur."
+        }
+      },
+      "semantic_checks": {}
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-P1",
+      "fixture_id": "b6-op-p1-waiting-list-source-values",
+      "category": "existing_support_requires_extension",
+      "route_boundary": "social_housing_waiting_list_exact_source_values",
+      "task": {
+        "id": "b6-op-p1-waiting-list-source-values",
+        "family": "source_value_selection",
+        "skillLabel": "Bronwaarden kiezen",
+        "purpose": "Prove social-housing waiting-list source selection for the exact Year 2 route.",
+        "prompt": "Kies de twee bronwaarden die nodig zijn voor de wachtlijst bij EUR 850.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "valueBankLabel": "Bronwaarden",
+          "roleLabel": "Rol in deze route",
+          "values": [
+            {
+              "id": "demand-10400",
+              "label": "10,400 woningen",
+              "kind": "answer",
+              "sourceLabel": "vraag bij EUR 850",
+              "unit": "woningen"
+            },
+            {
+              "id": "stock-6800",
+              "label": "6,800 woningen",
+              "kind": "answer",
+              "sourceLabel": "woningvoorraad",
+              "unit": "woningen"
+            },
+            {
+              "id": "q-8600",
+              "label": "8,600 woningen",
+              "kind": "distractor",
+              "sourceLabel": "omzetmaximum",
+              "unit": "woningen",
+              "distractorFor": "stock-6800"
+            }
+          ],
+          "roles": [
+            {
+              "id": "demand",
+              "label": "vraag"
+            },
+            {
+              "id": "stock",
+              "label": "voorraad"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "source_value_selection",
+          "selections": [
+            {
+              "valueId": "demand-10400",
+              "role": "demand"
+            },
+            {
+              "valueId": "stock-6800",
+              "role": "stock"
+            }
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronwaarden kloppen",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "selections": [
+          {
+            "valueId": "demand-10400",
+            "role": "demand"
+          },
+          {
+            "valueId": "stock-6800",
+            "role": "stock"
+          }
+        ]
+      },
+      "negative_responses": {
+        "usesRevenueQuantity": {
+          "selections": [
+            {
+              "valueId": "q-8600",
+              "role": "demand"
+            },
+            {
+              "valueId": "stock-6800",
+              "role": "stock"
+            }
+          ]
+        }
+      },
+      "semantic_checks": {}
+    },
+    {
+      "case_id": "Y2-B6-P12:OP-E1",
+      "fixture_id": "b6-op-e1-income-elasticity-source-chain",
+      "category": "existing_support_requires_extension",
+      "route_boundary": "rent_market_income_elasticity_exact_source_proof",
+      "task": {
+        "id": "b6-op-e1-income-elasticity-source-chain",
+        "family": "source_chain_builder",
+        "skillLabel": "Bronketen bouwen",
+        "purpose": "Bind the rent-market income-elasticity explanation to exact source facts.",
+        "prompt": "Bouw de bronketen voor de huurmarktverklaring met inkomenselasticiteit.",
+        "contextRefs": [
+          "ctx-b6-housing"
+        ],
+        "interaction": {
+          "nodeBankLabel": "Bronketen onderdelen",
+          "sequenceLabel": "Opgebouwde bronketen",
+          "placeholder": "Bouw de keten van bron naar conclusie.",
+          "separator": " -> ",
+          "nodes": [
+            {
+              "id": "source",
+              "label": "Gebruik Reder/VastWonen brongegevens",
+              "kind": "answer",
+              "nodeRole": "source"
+            },
+            {
+              "id": "values",
+              "label": "Middeninkomens +3%, inkomenselasticiteit +0.4, vrijkomende huurwoningen -9.9%",
+              "kind": "answer",
+              "nodeRole": "value"
+            },
+            {
+              "id": "operation",
+              "label": "Positieve elasticiteit verhoogt vraag terwijl aanbod krapper wordt",
+              "kind": "answer",
+              "nodeRole": "operation"
+            },
+            {
+              "id": "answer",
+              "label": "Huur stijgt door vraagdruk en beperkt aanbod",
+              "kind": "answer",
+              "nodeRole": "answer"
+            },
+            {
+              "id": "conclusion",
+              "label": "Bron verklaart gemiddelde huur +6%",
+              "kind": "answer",
+              "nodeRole": "conclusion"
+            },
+            {
+              "id": "negative-elasticity",
+              "label": "Gebruik negatieve inkomenselasticiteit",
+              "kind": "distractor",
+              "nodeRole": "value",
+              "distractorFor": "values"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "source_chain_builder",
+          "chain": [
+            "source",
+            "values",
+            "operation",
+            "answer",
+            "conclusion"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronketen klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "chain": [
+          "source",
+          "values",
+          "operation",
+          "answer",
+          "conclusion"
+        ]
+      },
+      "negative_responses": {
+        "wrongElasticityDirection": {
+          "chain": [
+            "source",
+            "negative-elasticity",
+            "operation",
+            "answer",
+            "conclusion"
+          ]
+        }
+      },
+      "semantic_checks": {}
+    },
+    {
+      "case_id": "Y2-B7-P13:OP-R1",
+      "fixture_id": "b7-op-r1-actor-condition-assertion",
+      "category": "existing_support_requires_extension",
+      "route_boundary": "principal_agent_actor_condition_exact_route",
+      "task": {
+        "id": "b7-op-r1-actor-condition-assertion",
+        "family": "assertion_reason",
+        "skillLabel": "Stelling en reden beoordelen",
+        "purpose": "Prove exact actor-condition routing for the credit-insurance information problem.",
+        "prompt": "Beoordeel de stelling en reden voor de kredietverzekeringsroute.",
+        "contextRefs": [
+          "ctx-b7-credit"
+        ],
+        "interaction": {
+          "assertionLabel": "Stelling",
+          "assertionText": "De kredietverzekeraar is principaal en de kopende onderneming is agent.",
+          "reasonLabel": "Reden",
+          "reasonText": "Door incassokosten bij de kopende onderneming te leggen, vermindert de prikkel tot wanbetaling.",
+          "optionLabel": "Relatie",
+          "options": [
+            {
+              "id": "both-true-reason-explains",
+              "label": "Beide juist en reden verklaart",
+              "description": "Actorrollen en voorwaarde horen bij dezelfde route."
+            },
+            {
+              "id": "both-true-no-link",
+              "label": "Beide juist maar geen verband",
+              "description": "De reden staat los van de stelling."
+            },
+            {
+              "id": "assertion-false",
+              "label": "Stelling onjuist",
+              "description": "Leverancier is principaal volgens deze keuze."
+            },
+            {
+              "id": "reason-false",
+              "label": "Reden onjuist",
+              "description": "Incassokosten zouden geen prikkel veranderen."
+            }
+          ]
+        },
+        "expected": {
+          "kind": "assertion_reason",
+          "value": "both-true-reason-explains",
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Stelling-redenroute klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "value": "both-true-reason-explains"
+      },
+      "negative_responses": {
+        "wrongPrincipal": {
+          "value": "assertion-false"
+        },
+        "noLink": {
+          "value": "both-true-no-link"
+        }
+      },
+      "semantic_checks": {}
+    },
+    {
+      "case_id": "Y2-B7-P13:OP-ANS2",
+      "fixture_id": "b7-op-ans2-expected-value-markup",
+      "category": "existing_support_requires_extension",
+      "route_boundary": "expected_value_plus_markup_answer_format",
+      "task": {
+        "id": "b7-op-ans2-expected-value-markup",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-antwoordvorm",
+        "purpose": "Prove expected-value plus markup answer formatting for the Book 7 route.",
+        "prompt": "Bereken de totale premie na 20 procent opslag op de verwachte schade.",
+        "contextRefs": [
+          "ctx-b7-credit"
+        ],
+        "interaction": {
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Bouw de methode met zichtbare blokken.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw methode",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": false,
+            "tokens": [
+              {
+                "id": "expected-damage",
+                "label": "verwachte schade",
+                "kind": "answer",
+                "category": "value"
+              },
+              {
+                "id": "times",
+                "label": "x",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "factor-120",
+                "label": "1.20",
+                "kind": "answer",
+                "category": "multiplier"
+              },
+              {
+                "id": "factor-080",
+                "label": "0.80",
+                "kind": "distractor",
+                "category": "multiplier",
+                "distractorFor": "factor-120"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "totale premie = verwachte schade x 1.20",
+            "fields": [
+              {
+                "id": "expectedDamage",
+                "label": "verwachte schade",
+                "placeholder": "80000",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "markupFactor",
+                "label": "opslagfactor",
+                "placeholder": "1.20",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer uitkomst en eenheid of notatie apart.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "Vul het antwoord in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "Vul de eenheid in"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Maak de betekenis in de context expliciet.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf een korte conclusie."
+          },
+          "showCriteriaBeforeCheck": false
+        },
+        "expected": {
+          "kind": "calculation_answer_form",
+          "methodTokens": [
+            "expected-damage",
+            "times",
+            "factor-120"
+          ],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "expectedDamage": {
+              "kind": "number",
+              "value": 80000
+            },
+            "markupFactor": {
+              "kind": "number",
+              "value": 1.2
+            }
+          },
+          "finalAnswer": {
+            "kind": "number",
+            "value": 96000
+          },
+          "notation": {
+            "kind": "text",
+            "accepted": [
+              "EUR",
+              "euro"
+            ],
+            "required": true
+          },
+          "conclusion": {
+            "requiredTextGroups": [
+              [
+                "96000",
+                "96,000"
+              ],
+              [
+                "premie",
+                "premium"
+              ],
+              [
+                "80000",
+                "80,000"
+              ]
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": [],
+            "rationale": "The visible proof must not rely on hidden duplicate answer tokens."
+          },
+          "criteria": [
+            "Use expected damage EUR 80,000.",
+            "Apply 20 percent markup.",
+            "State total premium EUR 96,000."
+          ],
+          "answerFormProof": {
+            "route_specific": true,
+            "support_case_ref": "governance packet case matrix",
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_or_decision_step",
+              "final_answer",
+              "unit_or_notation",
+              "contextual_conclusion"
+            ],
+            "standalone_modifier_pass_allowed": false
+          }
+        },
+        "feedback": {
+          "matchTitle": "Premieantwoord compleet",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "methodTokens": [
+          "expected-damage",
+          "times",
+          "factor-120"
+        ],
+        "substitution": {
+          "expectedDamage": "80000",
+          "markupFactor": "1.2"
+        },
+        "finalAnswer": "96000",
+        "notation": "EUR",
+        "conclusion": "De premie is EUR 96000, omdat EUR 80000 verwachte schade met opslag wordt verhoogd."
+      },
+      "negative_responses": {
+        "usesDiscountFactor": {
+          "methodTokens": [
+            "expected-damage",
+            "times",
+            "factor-080"
+          ],
+          "substitution": {
+            "expectedDamage": "80000",
+            "markupFactor": "0.8"
+          },
+          "finalAnswer": "96000",
+          "notation": "EUR",
+          "conclusion": "De premie is EUR 96000, omdat EUR 80000 verwachte schade met opslag wordt verhoogd."
+        }
+      },
+      "semantic_checks": {}
+    },
+    {
+      "case_id": "Y2-B8-P04:OP-S1",
+      "fixture_id": "b8-op-s1-source-to-derived-order",
+      "category": "existing_support_requires_extension",
+      "route_boundary": "official_source_first_derived_payoff_labelled",
+      "task": {
+        "id": "b8-op-s1-source-to-derived-order",
+        "family": "step_ordering",
+        "skillLabel": "Stappen ordenen",
+        "purpose": "Prove game-theory source-to-derived representation order and label boundary.",
+        "prompt": "Zet de strategische bronroute in de juiste volgorde.",
+        "contextRefs": [
+          "ctx-b8-strategy"
+        ],
+        "interaction": {
+          "stepBankLabel": "Stappen",
+          "sequenceLabel": "Gekozen volgorde",
+          "placeholder": "Zet de stappen in de juiste volgorde.",
+          "separator": " -> ",
+          "steps": [
+            {
+              "id": "official-context",
+              "label": "Lees eerst de officiele context over substituten en prijsgarantie",
+              "kind": "answer"
+            },
+            {
+              "id": "derived-label",
+              "label": "Label de payoffkaart als afgeleid en niet-officieel",
+              "kind": "answer"
+            },
+            {
+              "id": "incentive",
+              "label": "Benoem de prikkel om prijs te verlagen",
+              "kind": "answer"
+            },
+            {
+              "id": "joint-outcome",
+              "label": "Leg het slechtere gezamenlijke resultaat uit",
+              "kind": "answer"
+            },
+            {
+              "id": "payoff-as-source",
+              "label": "Presenteer payoffkaart als officiele bron",
+              "kind": "distractor",
+              "distractorFor": "derived-label"
+            }
+          ]
+        },
+        "expected": {
+          "kind": "step_ordering",
+          "order": [
+            "official-context",
+            "derived-label",
+            "incentive",
+            "joint-outcome"
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Strategische bronroute klopt",
+          "matchText": "De route is controleerbaar met bron, bewerking, antwoord en conclusie.",
+          "retryTitle": "Maak de route controleerbaar",
+          "retryText": "Controleer bronwaarden, methode, afleiders en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Review-only support proof",
+          "href": "reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/governed-support-closure-bundle.md"
+        }
+      },
+      "passing_response": {
+        "order": [
+          "official-context",
+          "derived-label",
+          "incentive",
+          "joint-outcome"
+        ]
+      },
+      "negative_responses": {
+        "derivedAsOfficial": {
+          "order": [
+            "payoff-as-source",
+            "official-context",
+            "incentive",
+            "joint-outcome"
+          ]
+        }
+      },
+      "semantic_checks": {}
+    }
+  ],
+  "authority_claims": {
+    "protected_year2_support_overlay_created_for_review": true,
+    "route_specific_runtime_support_closed_for_review": true,
+    "route_specific_extension_support_closed_for_review": true,
+    "answer_skill_equivalent_support_closed_for_review": true,
+    "lesson_production_eligibility_overlay_ready_for_review": true,
+    "cross_repo_lesson_production_input_ready_after_human_merge": true,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "live_mtu_registry_mutated": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "candidate_storage_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  }
+}

@@ -28,8 +28,11 @@
           {
             "id": "golden_calculation_structured_v1",
             "required_task_families": [
-              "calculation_work_capture",
               "structured_short_response"
+            ],
+            "calculation_task_family_any_of": [
+              "calculation_work_capture",
+              "calculation_answer_form_capture"
             ],
             "requires_graph_spec": false,
             "conditional_assets": []

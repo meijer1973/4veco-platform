@@ -45,7 +45,7 @@ When the user invokes `/qc-references`, execute the following sequence:
 ### 1. Set up the run
 
 - Today's date: `YYYY-MM-DD` (UTC date in run filename).
-- Create scratch directory: `/tmp/claude-work/qc-YYYY-MM-DD/` (mkdir -p).
+- Create scratch directory: `/tmp/Codex-work/qc-YYYY-MM-DD/` (mkdir -p).
 - Read all four prompt files from `references/qc-prompts/*.md`.
 - Read current catalog stats: `node -e` to print catalog-units count from `references/machine/micro-teaching-units.json`.
 - Read `reports/qc/SUMMARY.md` to find the most recent prior run row (for "gaps closed" comparison later).
@@ -74,7 +74,7 @@ When the user invokes `/qc-references`, execute the following sequence:
 
 ### 3. Launch all 4 subagents in parallel
 
-In a single message with four Agent tool calls (subagent_type: `general-purpose`), each with `run_in_background: true`. The four prompts are sent verbatim from the prompt files (with substitutions applied). Each subagent writes its output to its assigned scratch path under `/tmp/claude-work/qc-YYYY-MM-DD/`.
+In a single message with four Agent tool calls (subagent_type: `general-purpose`), each with `run_in_background: true`. The four prompts are sent verbatim from the prompt files (with substitutions applied). Each subagent writes its output to its assigned scratch path under `/tmp/Codex-work/qc-YYYY-MM-DD/`.
 
 ### 4. Wait for all four completions
 
@@ -157,7 +157,7 @@ Append (do NOT overwrite earlier rows):
 
 ### 8. Cleanup + report-back
 
-- Delete `/tmp/claude-work/qc-YYYY-MM-DD/` once the synthesised report is written (the per-test agent outputs are no longer needed).
+- Delete `/tmp/Codex-work/qc-YYYY-MM-DD/` once the synthesised report is written (the per-test agent outputs are no longer needed).
 - Tell the user: "QC run complete. Report at `reports/qc/qc-run-YYYY-MM-DD.md`. N new gaps, M closed. Catalog: X units."
 
 The user reviews the report and decides which fixes to apply via `unit-add` / `unit-update` / `unit-deprecate` CLIs. The runner never edits the catalog.

@@ -102,69 +102,240 @@
       "type": "task_shell",
       "taskShell": {
         "id": "prijsstijging-procent",
-        "family": "calculation_work_capture",
-        "skillLabel": "Procentuele verandering berekenen",
-        "purpose": "Bereken een procentuele stijging vanuit een oude en nieuwe prijs.",
+        "family": "calculation_answer_form_capture",
+        "skillLabel": "Bereken-vraag beantwoorden",
+        "purpose": "Bouw de volledige bereken-antwoordvorm voor een procentuele prijsstijging.",
         "prompt": "Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt.",
         "contextRefs": [
           "ctx-112-fietsprijs"
         ],
         "operationChain": [
-          "formula_or_method",
-          "substitution_with_source_values",
+          "formula_or_calculation_method",
+          "labelled_substitution",
           "final_answer",
           "unit_or_notation",
-          "contextual_conclusion"
+          "short_contextual_direction_sentence"
         ],
         "interaction": {
-          "workLabel": "Berekening",
-          "finalAnswerLabel": "Eindantwoord in procenten",
-          "placeholder": "Laat formule, invulling en tussenstap zien.",
-          "finalAnswerPlaceholder": "vul het stijgingspercentage in",
-          "unitNotationLabel": "Notatie",
-          "unitNotationPlaceholder": "vul de notatie in"
+          "formula": {
+            "title": "Kies de formule of rekenregel",
+            "purpose": "Gebruik de blokken om de procentuele verandering te bouwen.",
+            "tokenBankLabel": "Formuleblokken",
+            "sequenceLabel": "Jouw formule",
+            "placeholder": "Zet de blokken in de juiste volgorde.",
+            "separator": " ",
+            "allowReuse": true,
+            "tokens": [
+              {
+                "id": "times100",
+                "label": "x 100%",
+                "kind": "answer",
+                "category": "multiplier",
+                "maxUses": 1
+              },
+              {
+                "id": "newPrice",
+                "label": "nieuwe prijs",
+                "kind": "answer",
+                "category": "variable",
+                "maxUses": 1
+              },
+              {
+                "id": "plus",
+                "label": "+",
+                "kind": "distractor",
+                "category": "operator",
+                "maxUses": 1,
+                "distractorFor": "minus"
+              },
+              {
+                "id": "open",
+                "label": "(",
+                "kind": "answer",
+                "category": "grouping",
+                "maxUses": 1
+              },
+              {
+                "id": "divide",
+                "label": "/",
+                "kind": "answer",
+                "category": "operator",
+                "maxUses": 1
+              },
+              {
+                "id": "oldMinusNew",
+                "label": "oude prijs - nieuwe prijs",
+                "kind": "distractor",
+                "category": "variable",
+                "maxUses": 1,
+                "distractorFor": "newPrice"
+              },
+              {
+                "id": "oldPrice",
+                "label": "oude prijs",
+                "kind": "answer",
+                "category": "variable",
+                "maxUses": 2,
+                "usageHint": "Gebruik deze bouwsteen twee keer."
+              },
+              {
+                "id": "close",
+                "label": ")",
+                "kind": "answer",
+                "category": "grouping",
+                "maxUses": 1
+              },
+              {
+                "id": "minus",
+                "label": "-",
+                "kind": "answer",
+                "category": "operator",
+                "maxUses": 1
+              },
+              {
+                "id": "times10",
+                "label": "x 10",
+                "kind": "distractor",
+                "category": "multiplier",
+                "maxUses": 1,
+                "distractorFor": "times100"
+              },
+              {
+                "id": "newDenominator",
+                "label": "nieuwe prijs als noemer",
+                "kind": "distractor",
+                "category": "denominator",
+                "maxUses": 1,
+                "distractorFor": "oldPrice"
+              }
+            ]
+          },
+          "substitution": {
+            "title": "Vul de bronwaarden in",
+            "purpose": "Laat zien welke waarde bij elk label hoort.",
+            "template": "(nieuwe prijs - oude prijs) / oude prijs x 100%",
+            "fields": [
+              {
+                "id": "newPrice",
+                "label": "nieuwe prijs",
+                "placeholder": "vul de nieuwe prijs in",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "oldPriceNumerator",
+                "label": "oude prijs in teller",
+                "placeholder": "vul de oude prijs in",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "oldPriceDenominator",
+                "label": "oude prijs in noemer",
+                "placeholder": "vul de basiswaarde in",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          "answer": {
+            "title": "Geef het eindantwoord",
+            "purpose": "Noteer de uitkomst en de vereiste procentnotatie.",
+            "finalAnswerLabel": "Eindantwoord",
+            "finalAnswerPlaceholder": "vul het getal in",
+            "unitNotationLabel": "Eenheid of notatie",
+            "unitNotationPlaceholder": "%, procent of procentteken"
+          },
+          "context": {
+            "title": "Schrijf de conclusie",
+            "purpose": "Noem kort wat de berekening betekent voor de fietsprijs.",
+            "label": "Contextuele conclusie",
+            "placeholder": "Schrijf wat er met de prijs gebeurt."
+          },
+          "showCriteriaBeforeCheck": false
         },
         "expected": {
-          "kind": "calculation",
-          "finalAnswer": {
-            "kind": "text",
-            "accepted": ["15", "15%", "15 procent", "15,0", "15,0%", "15.0", "15.0%"]
+          "kind": "calculation_answer_form",
+          "methodTokens": ["open", "newPrice", "minus", "oldPrice", "close", "divide", "oldPrice", "times100"],
+          "tokenDisplayOrderMustNotEqualMethodTokens": true,
+          "substitution": {
+            "newPrice": {
+              "kind": "number",
+              "value": 920
+            },
+            "oldPriceNumerator": {
+              "kind": "number",
+              "value": 800
+            },
+            "oldPriceDenominator": {
+              "kind": "number",
+              "value": 800
+            }
           },
-          "unitNotation": {
+          "finalAnswer": {
+            "kind": "number_or_percent_text",
+            "value": 15,
+            "acceptedNotations": ["15", "15%", "15 procent", "15,0", "15,0%", "15.0", "15.0%"]
+          },
+          "notation": {
             "kind": "text",
             "accepted": ["%", "procent", "procentteken"],
-            "required": false
+            "required": true
           },
-          "workRequired": true,
+          "conclusion": {
+            "requiredTextGroups": [
+              ["prijs", "fiets"],
+              ["stijgt", "stijging", "duurder", "gestegen"],
+              ["15", "vijftien"]
+            ],
+            "rejectText": [
+              "stijgt niet",
+              "niet stijgt",
+              "geen stijging",
+              "daalt",
+              "daling",
+              "gedaald",
+              "heeft 15 procent",
+              "heeft 15%",
+              "bijvoorbeeld"
+            ],
+            "rejectPatterns": [
+              "\\bstijgt\\s+niet\\b",
+              "\\bniet\\s+(?:met\\s+)?(?:15\\s+)?(?:procent\\s+)?stijgt\\b",
+              "\\bgeen\\s+stijging\\b",
+              "\\bdaalt?\\b",
+              "\\bprijs\\s+van\\s+de\\s+fiets\\s+heeft\\s+15\\s*(?:%|procent)\\b",
+              "\\bbijvoorbeeld\\b"
+            ]
+          },
+          "visualTokenIdentityPolicy": {
+            "forbid_identical_labels_with_different_answer_ids": true,
+            "reusable_answer_token_ids": ["oldPrice"],
+            "rationale": "De oude prijs komt in teller en noemer terug als dezelfde zichtbare bouwsteen."
+          },
           "criteria": [
-            "Gebruik nieuw min oud gedeeld door oud.",
-            "Vul 920 en 800 zichtbaar in.",
-            "Geef het eindantwoord in procenten."
+            "Gebruik een formule of rekenregel voor procentuele verandering.",
+            "Vul nieuwe en oude prijs met labels in.",
+            "Laat teller, noemer en procentstap controleerbaar zien.",
+            "Geef eindantwoord, notatie en conclusie in context."
           ],
-          "requiredWorkText": [
-            {
-              "label": "nieuwe prijs",
-              "any": ["920"]
-            },
-            {
-              "label": "oude prijs",
-              "any": ["800"]
-            },
-            {
-              "label": "verandering",
-              "any": ["920 - 800", "920-800", "120"]
-            },
-            {
-              "label": "oude basis",
-              "any": ["/ 800", "/800", "gedeeld door 800"]
-            }
-          ]
+          "answerFormProof": {
+            "unit_id": "A96",
+            "route_specific": true,
+            "required_action_parts": [
+              "formula_or_calculation_method",
+              "labelled_substitution",
+              "intermediate_work",
+              "final_answer",
+              "unit_or_notation",
+              "short_contextual_conclusion"
+            ],
+            "modifier_units": [],
+            "standalone_modifier_pass_allowed": false
+          }
         },
         "feedback": {
-          "matchTitle": "Berekening klopt",
-          "matchText": "Je gebruikt de oude prijs als basis en komt uit op 15 procent.",
-          "retryTitle": "Controleer de basis",
-          "retryText": "Gebruik nieuw min oud gedeeld door oud. De oude prijs is hier 800 euro."
+          "matchTitle": "Berekening compleet",
+          "matchText": "Je laat methode, invulling, procentnotatie en conclusie zien.",
+          "retryTitle": "Maak je berekening controleerbaar",
+          "retryText": "Vul de formule, bronwaarden, uitkomst, notatie en contextzin apart in."
         },
         "practiceRoute": {
           "label": "Oefen percentages nog met Rekenen",

@@ -1,3 +1,8 @@
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+const { spawnSync } = require('child_process');
+
 const {
   stateResult,
   summarizeCompatibility,
@@ -146,5 +151,45 @@ describe('cross-repo bundle compatibility', () => {
     expect(bad.ok).toBe(false);
     expect(bad.failures).toContain('platform-first bundle_id missing');
     expect(bad.failures).toContain('lesson-first exact_members missing');
+  });
+
+  test('state-result CLI accepts an explicitly empty failed-command value', () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'bundle-state-result-'));
+    const output = path.join(dir, 'state.json');
+    const script = path.join(__dirname, 'cross-repo-bundle-compatibility.js');
+    const result = spawnSync(process.execPath, [
+      script,
+      'state-result',
+      '--bundle-id',
+      'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+      '--state',
+      'bundle-final',
+      '--platform-base-sha',
+      pBase,
+      '--platform-candidate-sha',
+      pHead,
+      '--lesson-base-sha',
+      lBase,
+      '--lesson-candidate-sha',
+      lHead,
+      '--platform-state-sha',
+      pHead,
+      '--lesson-state-sha',
+      lHead,
+      '--status',
+      'success',
+      '--commands-json',
+      '["check"]',
+      '--failed-command',
+      '',
+      '--output',
+      output,
+    ], { encoding: 'utf8' });
+
+    expect(result.status).toBe(0);
+    expect(JSON.parse(fs.readFileSync(output, 'utf8'))).toMatchObject({
+      status: 'success',
+      failed_command: null,
+    });
   });
 });

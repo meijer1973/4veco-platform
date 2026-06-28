@@ -125,15 +125,13 @@ jobs:
           LESSON_STATE_SHA: ${{ matrix.lesson_sha }}
         run: |
           New-Item -ItemType Directory -Force -Path ..\bundle-results | Out-Null
-          New-Item -ItemType Directory -Force -Path ..\ci-artifacts | Out-Null
           $commands = @(
-            'node build-scripts/ci/platform-ci-evidence.js write --output ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen',
-            'node build-scripts/ci/platform-ci-evidence.js check ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen',
             'npm run check:platform',
             'npm run check:reasoning-golden',
             'npm run check:landing-v2',
             'npm run check:news-detective-v2',
             'npm run check:scope-language',
+            'npm run check:active-governance-wording',
             'npm run check:golden-graph-advisory-113',
             'npm run check:scale-proof-3p-product-path',
             'node build-scripts/reports/validate-report-json.js',
@@ -155,19 +153,36 @@ jobs:
               break
             }
           }
-          node ..\trusted-platform\build-scripts\review-gates\cross-repo-bundle-compatibility.js state-result `
-            --bundle-id $env:BUNDLE_ID `
-            --state $env:STATE `
-            --platform-base-sha $env:PLATFORM_BASE_SHA `
-            --platform-candidate-sha $env:PLATFORM_CANDIDATE_SHA `
-            --lesson-base-sha $env:LESSON_BASE_SHA `
-            --lesson-candidate-sha $env:LESSON_CANDIDATE_SHA `
-            --platform-state-sha $env:PLATFORM_STATE_SHA `
-            --lesson-state-sha $env:LESSON_STATE_SHA `
-            --status $status `
-            --commands-json "$($commands | ConvertTo-Json -Compress)" `
-            --failed-command "$failedCommand" `
-            --output "..\bundle-results\$env:STATE.json"
+          $stateResultArgs = @(
+            '..\trusted-platform\build-scripts\review-gates\cross-repo-bundle-compatibility.js',
+            'state-result',
+            '--bundle-id',
+            $env:BUNDLE_ID,
+            '--state',
+            $env:STATE,
+            '--platform-base-sha',
+            $env:PLATFORM_BASE_SHA,
+            '--platform-candidate-sha',
+            $env:PLATFORM_CANDIDATE_SHA,
+            '--lesson-base-sha',
+            $env:LESSON_BASE_SHA,
+            '--lesson-candidate-sha',
+            $env:LESSON_CANDIDATE_SHA,
+            '--platform-state-sha',
+            $env:PLATFORM_STATE_SHA,
+            '--lesson-state-sha',
+            $env:LESSON_STATE_SHA,
+            '--status',
+            $status,
+            '--commands-json',
+            "$($commands | ConvertTo-Json -Compress)",
+            '--output',
+            "..\bundle-results\$env:STATE.json"
+          )
+          if (-not [string]::IsNullOrWhiteSpace($failedCommand)) {
+            $stateResultArgs += @('--failed-command', $failedCommand)
+          }
+          node @stateResultArgs
 
       - name: Upload bundle state result
         if: always()

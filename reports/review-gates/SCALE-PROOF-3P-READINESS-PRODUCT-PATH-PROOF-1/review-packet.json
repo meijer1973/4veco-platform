@@ -26,8 +26,8 @@
   "lesson_changed_paths": [],
   "review_autonomy": {
     "level": "L4",
-    "lead_review_result": "HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1",
-    "rationale": "The rendered first-three product-path proof is substantial and clean enough for human review, but Scale Gate 1 cannot close while A96 calculation answer-form refinement is unresolved or unwaived."
+    "lead_review_result": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+    "rationale": "The rendered first-three product-path proof has been refreshed after A96-CALCULATION-ANSWER-FORM-REFINEMENT-1. Scale Gate 1 is ready for human review but remains unauthorized until explicit owner decision."
   },
   "human_decision_required": true,
   "paired_prs": [],
@@ -107,13 +107,13 @@
     },
     {
       "requirement": "A96 calculation answer-form refinement resolved or waived",
-      "status": "not_met",
-      "evidence": "carried issue SCALE3P-A96-001"
+      "status": "met",
+      "evidence": "A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 proof and refreshed Scale proof"
     },
     {
       "requirement": "No missing core requirement carried under PASS WITH FLAGS",
       "status": "met",
-      "evidence": "lead verdict is HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1, not PASS WITH FLAGS"
+      "evidence": "lead verdict is READY_FOR_HUMAN_SCALE_GATE_1_REVIEW, not PASS WITH FLAGS"
     }
   ],
   "authority_claims": {
@@ -130,15 +130,15 @@
     "pv_authorized": false,
     "summative_use_authorized": false,
     "target_equivalent_completion_language_authorized": false,
-    "generated_lesson_output_changed": false,
+    "generated_lesson_output_changed": true,
     "source_flags_mutated": false,
     "route_migration_performed": false
   },
   "proof": {
     "lead_review": {
-      "verdict": "HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1",
+      "verdict": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
       "status": "completed",
-      "summary": "Rendered first-three product-path evidence is ready for human review. Scale Gate 1 remains held because A96 calculation answer-form refinement is unresolved or unwaived."
+      "summary": "Rendered first-three product-path evidence and A96 refinement are ready for human Scale Gate 1 review. No authority is granted by this packet."
     },
     "machine_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
     "route_inventory": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md",
@@ -216,45 +216,87 @@
         "command": "git -C C:\\wt\\SCALE-PROOF-3P-20260622\\4veco-lessen diff --check",
         "status": "passed"
       }
-    ]
+    ],
+    "a96_refinement": "reports/json/a96-calculation-answer-form-refinement-1-proof.json"
   },
-  "carried_issues": [
+  "carried_issues": [],
+  "findings": [],
+  "lead_verdict": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+  "recommended_next_step": "Route to human Scale Gate 1 review. Do not authorize product-route adoption, diagnostics, mastery/sequencing, PV, summative use, Scale Gate 1 closure, broad product use, student/product use, or target-equivalent completion language without explicit owner decision tied to the exact head.",
+  "resolved_issues": [
     {
       "id": "SCALE3P-A96-001",
-      "classification": "blocks",
-      "severity": "scale_gate_core_requirement_missing",
-      "finding": "A96 calculation answer-form refinement remains unresolved or unwaived.",
-      "blocks": [
-        "Scale Gate 1 closure",
-        "product-route adoption",
-        "student/product use"
-      ],
+      "classification": "resolved",
+      "severity": "core_requirement_missing",
+      "finding": "A96 calculation answer-form refinement is implemented and recaptured.",
+      "blocks": [],
       "does_not_block": [
-        "human review of the rendered first-three product-path proof packet",
-        "ordinary scoped PR work that does not reinterpret Scale Gate authority"
+        "human Scale Gate 1 review"
       ],
-      "proof_required_to_close": "Complete A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 or record an explicit human waiver, then recapture and rerun the Scale-proof checker.",
-      "closure_evidence": []
+      "proof_required_to_close": "Satisfied by A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 proof and refreshed Scale proof checker."
     }
   ],
-  "findings": [
-    {
-      "id": "SCALE3P-A96-001",
-      "classification": "blocks",
-      "severity": "scale_gate_core_requirement_missing",
-      "finding": "A96 calculation answer-form refinement remains unresolved or unwaived.",
-      "blocks": [
-        "Scale Gate 1 closure",
-        "product-route adoption",
-        "student/product use"
-      ],
-      "does_not_block": [
-        "human review of the rendered first-three product-path proof packet",
-        "ordinary scoped PR work that does not reinterpret Scale Gate authority"
-      ],
-      "proof_required_to_close": "Complete A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 or record an explicit human waiver, then recapture and rerun the Scale-proof checker."
-    }
-  ],
-  "lead_verdict": "HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1",
-  "recommended_next_step": "Open a platform PR for human review of this rendered first-three product-path proof packet. Do not close Scale Gate 1. The next implementation sprint is A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 unless human review explicitly waives A96."
+  "rereview_refresh": {
+    "bundle_id": "A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1",
+    "date": "2026-06-25",
+    "platform_pr": {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624",
+      "pr_number": 148,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/148"
+    },
+    "lesson_pr": {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624",
+      "pr_number": 36,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/36"
+    },
+    "lesson_changed_paths": [
+      "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-engine.js"
+    ],
+    "proof": {
+      "hardening_rereview": "reports/json/a96-calculation-answer-form-hardening-and-scale-gate-1-rereview-1-proof.json",
+      "refreshed_scale_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+      "screenshot_count": 46,
+      "a96_dedicated_rendered_states_ready": true
+    },
+    "validation": [
+      {
+        "command": "npm.cmd run check:scale-proof-3p-product-path",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\A96-CALCULATION-ANSWER-FORM-20260624\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ],
+    "note": "Historical Scale proof packet preserved; PR #148 / lesson PR #36 provide the current refreshed proof after A96 hardening."
+  }
 }

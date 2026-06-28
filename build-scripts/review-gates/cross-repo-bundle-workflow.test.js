@@ -18,6 +18,7 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('platform_candidate_sha');
     expect(bundleWorkflow).toContain('lesson_candidate_sha');
     expect(bundleWorkflow).toContain('cross-repo-bundle-compatibility.js summarize');
+    expect(bundleWorkflow).toContain('npm run check:active-governance-wording');
   });
 
   test('bundle workflow records machine-readable JSON and uses deterministic summary gate', () => {
@@ -27,7 +28,15 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('bundle-summary.json');
     expect(bundleWorkflow).toContain('Checkout trusted platform tooling');
     expect(bundleWorkflow).toContain('ref: main');
+    expect(bundleWorkflow).toContain('$stateResultArgs');
+    expect(bundleWorkflow).toContain("IsNullOrWhiteSpace($failedCommand)");
     expect(bundleWorkflow).not.toContain("if ($status -ne 'success') { exit 1 }");
+    expect(bundleWorkflow).not.toContain('--failed-command "$failedCommand"');
+  });
+
+  test('bundle workflow does not mint platform-ci evidence under a different workflow identity', () => {
+    expect(bundleWorkflow).not.toContain('platform-ci-evidence.js write');
+    expect(bundleWorkflow).not.toContain('platform-ci-evidence.js check');
   });
 
   test('authorized bundle workflow uses the serialized main integration lane', () => {

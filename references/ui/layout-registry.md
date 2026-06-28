@@ -56,10 +56,10 @@ calculation_work_capture
 graph spec from graph_construction_substitute
 ```
 
-The calculation/structured transfer variant requires task-shell families:
+The calculation/structured transfer variant requires one calculation task family plus the structured short-response family:
 
 ```text
-calculation_work_capture
+calculation_work_capture or calculation_answer_form_capture
 structured_short_response
 contextBlocks referenced by each task
 ```

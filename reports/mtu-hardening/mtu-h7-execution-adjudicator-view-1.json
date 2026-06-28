@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-BLIND-HOLDOUT-EXECUTION-AND-CLOSURE-READINESS-BUNDLE-1",
+  "view_id": "mtu-h7-execution-adjudicator-view-1",
+  "status": "adjudicator_shell_waiting_for_sealed_mapper_predictions",
+  "generated_at": "2026-06-25T13:32:29.363Z",
+  "source_plan": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "records": [
+    {
+      "adjudicator_record_id": "h7-adj-001",
+      "sample_id": "ha-1022-a-23-1-o:opgave-1:question-2",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 2,
+        "prompt_page_end": 2,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-002",
+      "sample_id": "ha-1022-a-23-1-o:opgave-2:question-9",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 4,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-003",
+      "sample_id": "ha-1022-a-23-1-o:opgave-5:question-21",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-1-o.pdf",
+        "prompt_page_start": 8,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-004",
+      "sample_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-005",
+      "sample_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-006",
+      "sample_id": "ha-1022-a-24-2-o:opgave-1:question-3",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-2-o.pdf",
+        "prompt_page_start": 2,
+        "prompt_page_end": 2,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-007",
+      "sample_id": "ha-1022-a-25-1-o:opgave-3:question-16",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+        "prompt_page_start": 6,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-008",
+      "sample_id": "ha-1022-a-25-2-o:opgave-2:question-10",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 6,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-009",
+      "sample_id": "vw-1022-a-23-1-o:opgave-1:question-4",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-010",
+      "sample_id": "vw-1022-a-23-1-o:opgave-5:question-21",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-1-o.pdf",
+        "prompt_page_start": 10,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-011",
+      "sample_id": "vw-1022-a-23-2-o:opgave-2:question-9",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-012",
+      "sample_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 9,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-013",
+      "sample_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-014",
+      "sample_id": "vw-1022-a-24-1-o:opgave-5:question-24",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 11,
+        "prompt_page_end": 11,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-015",
+      "sample_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-016",
+      "sample_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-017",
+      "sample_id": "ha-1022-a-25-1-o:opgave-2:question-12",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-018",
+      "sample_id": "ha-1022-a-25-2-o:opgave-2:question-9",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+        "prompt_page_start": 4,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-019",
+      "sample_id": "ha-1022-a-25-2-o:opgave-4:question-18",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-25-2-o.pdf",
+        "prompt_page_start": 8,
+        "prompt_page_end": 9,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-020",
+      "sample_id": "vw-1022-a-25-1-o:opgave-2:question-11",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 6,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-021",
+      "sample_id": "vw-1022-a-25-1-o:opgave-3:question-14",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-1-o.pdf",
+        "prompt_page_start": 6,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-1-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-022",
+      "sample_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-023",
+      "sample_id": "vw-1022-a-25-2-o:opgave-4:question-20",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 9,
+        "prompt_page_end": 9,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    },
+    {
+      "adjudicator_record_id": "h7-adj-024",
+      "sample_id": "vw-1022-a-25-2-o:opgave-6:question-28",
+      "evidence_state": "official_evidence_ready_for_future_mapper_prediction_seal",
+      "official_evidence_locator": {
+        "registry_path": "references/external/exam-questions.json",
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 13,
+        "prompt_page_end": 13,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_pages_status": "pending_phase_b_extraction"
+      },
+      "sealed_mapper_prediction_path": null,
+      "adjudication_result_path": null,
+      "split_visible_before_scoring": false
+    }
+  ],
+  "adjudication_policy": {
+    "compare_against_official_correction_evidence": true,
+    "record_first_pass_before_repair": true,
+    "do_not_tune_locked_holdout_and_rerun": true
+  },
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_authorized": false,
+    "candidate_write_authorized": false,
+    "lesson_output_authorized": false,
+    "product_route_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "adaptive_routing_authorized": false,
+    "sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false
+  }
+}

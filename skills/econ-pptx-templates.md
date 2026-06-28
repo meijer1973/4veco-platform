@@ -136,7 +136,7 @@ roundtripWithLibreOffice(outPath);       // THE PowerPoint-compat fix (soffice -
 await fixNotesFontSize(outPath, 14);     // L1.5D v2 B8 — bump notes to 14pt AFTER LO roundtrip
 ```
 
-`roundtripWithLibreOffice` hardcodes the Windows path to `soffice.exe`. Project is Windows-only per root CLAUDE.md.
+`roundtripWithLibreOffice` hardcodes the Windows path to `soffice.exe`. Project tooling is Windows-oriented per `AGENTS.md`.
 
 ### 2. Two-digit numbered labels need room
 

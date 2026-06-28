@@ -336,11 +336,14 @@ function positiveInteger(value) {
 
 function normalizeBundleMember(member) {
   const item = member || {};
+  const headSha = item.head_sha || item.headRefOid || null;
   return {
     ...item,
     repository: item.repository || item.repo || null,
     pr_number: positiveInteger(item.pr_number || item.number),
-    head_sha: item.head_sha || item.headRefOid || null,
+    base: item.base || item.baseRefName || item.base_branch || null,
+    head_sha: headSha,
+    integration_head_sha: item.integration_head_sha || item.integrationHeadSha || headSha,
     reviewed_payload_head_sha: item.reviewed_payload_head_sha || item.payload_head_sha || null,
   };
 }
@@ -355,6 +358,112 @@ function bundleMemberComplete(member, options = {}) {
   );
 }
 
+function bundleMemberHeadMatches(member) {
+  const integrationHead = member && (member.integration_head_sha || member.head_sha);
+  const reviewedHead = member && member.reviewed_payload_head_sha;
+  if (
+    member &&
+    SHA_PATTERN.test(String(member.head_sha || '')) &&
+    SHA_PATTERN.test(String(integrationHead || '')) &&
+    member.head_sha === integrationHead &&
+    member.authorization_inherited === true &&
+    SHA_PATTERN.test(String(reviewedHead || '')) &&
+    reviewedHead !== integrationHead
+  ) {
+    const failures = asArray(member.failures || (member.lineage && member.lineage.failures));
+    return failures.length === 0;
+  }
+  return Boolean(
+    member &&
+      SHA_PATTERN.test(String(member.head_sha || '')) &&
+      SHA_PATTERN.test(String(member.reviewed_payload_head_sha || '')) &&
+      member.head_sha === member.reviewed_payload_head_sha
+  );
+}
+
+function bundleMemberLifecycleOk(member) {
+  return Boolean(
+    member &&
+      member.open === true &&
+      member.current === true &&
+      member.mergeable === true &&
+      bundleMemberHeadMatches(member)
+  );
+}
+
+function compatibilityStateGreen(compatibility, stateName) {
+  const state = compatibility && compatibility.states && compatibility.states[stateName];
+  return state && state.status === 'success';
+}
+
+function compatibilityPermitsPlatformFirst(compatibility) {
+  return Boolean(
+    compatibility &&
+      compatibility.ok === true &&
+      asArray(compatibility.permitted_merge_orders).includes('platform-first') &&
+      compatibilityStateGreen(compatibility, 'platform-first') &&
+      compatibilityStateGreen(compatibility, 'bundle-final')
+  );
+}
+
+function pairedLeadReviewRecords(proof) {
+  const lead = (proof && proof.lead_review) || {};
+  return [
+    ...asArray(lead.paired_member_reviews),
+    ...asArray(lead.paired_reviews),
+    ...asArray(lead.bundle_member_reviews),
+  ].filter(Boolean);
+}
+
+function pairedLeadReviewFor(member, proof) {
+  if (!member) return null;
+  return pairedLeadReviewRecords(proof).find((record) => {
+    const repository = record.repository || record.repo;
+    const prNumber = positiveInteger(record.pr_number || record.number);
+    const reviewedSha = record.reviewed_commit_sha || record.reviewed_sha || record.reviewed_remote_commit_sha;
+    const result = normalizeVerdict(record.review_result || record.result || record.verdict);
+    const path = record.review_path || record.path || record.report_path;
+    return Boolean(
+      repository === member.repository &&
+        prNumber === member.pr_number &&
+        reviewedSha === member.head_sha &&
+        PASSING_LEAD_RESULTS.has(result) &&
+        typeof path === 'string' &&
+        path.trim()
+    );
+  }) || null;
+}
+
+function pairedLeadReviewed(member, proof) {
+  return Boolean(pairedLeadReviewFor(member, proof));
+}
+
+function normalizePairedLeadReview(record) {
+  const item = record || {};
+  return {
+    repository: item.repository || item.repo || null,
+    pr_number: positiveInteger(item.pr_number || item.number),
+    reviewed_commit_sha: item.reviewed_commit_sha || item.reviewed_sha || item.reviewed_remote_commit_sha || null,
+    review_result: normalizeVerdict(item.review_result || item.result || item.verdict),
+    review_path: item.review_path || item.path || item.report_path || null,
+  };
+}
+
+function controllerFirstDraftTransitionable(member, context) {
+  return Boolean(
+    context &&
+      context.delegated === false &&
+      repoIsPlatform(context.reviewedRepo) &&
+      repoIsLesson(member && member.repository) &&
+      member.is_draft === true &&
+      member.ready === false &&
+      bundleMemberComplete(member) &&
+      bundleMemberLifecycleOk(member) &&
+      pairedLeadReviewed(member, context.proof) &&
+      compatibilityPermitsPlatformFirst(context.compatibility)
+  );
+}
+
 function findBundleMemberByRepo(members, predicate) {
   return members.find((member) => member && predicate(member.repository)) || null;
 }
@@ -364,10 +473,11 @@ function bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs) {
   const allMembers = [controller, currentMember, ...pairedPrs].filter(Boolean);
   const platformMember = findBundleMemberByRepo(allMembers, repoIsPlatform);
   const lessonMember = findBundleMemberByRepo(allMembers, repoIsLesson);
+  const candidateHead = (member) => member && (member.integration_head_sha || member.head_sha || member.reviewed_payload_head_sha);
   return {
     platform_base_sha: explicit.platform_base_sha || explicit.platformBaseSha || raw.platform_base_sha || raw.platformBaseSha || null,
     platform_candidate_sha:
-      (platformMember && platformMember.reviewed_payload_head_sha) ||
+      candidateHead(platformMember) ||
       explicit.platform_candidate_sha ||
       explicit.platformCandidateSha ||
       raw.platform_candidate_sha ||
@@ -375,7 +485,7 @@ function bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs) {
       null,
     lesson_base_sha: explicit.lesson_base_sha || explicit.lessonBaseSha || raw.lesson_base_sha || raw.lessonBaseSha || null,
     lesson_candidate_sha:
-      (lessonMember && lessonMember.reviewed_payload_head_sha) ||
+      candidateHead(lessonMember) ||
       explicit.lesson_candidate_sha ||
       explicit.lessonCandidateSha ||
       raw.lesson_candidate_sha ||
@@ -408,6 +518,98 @@ function collectDeclaredExactMemberMismatches(raw, exactMembers) {
   return mismatches;
 }
 
+function normalizeReadinessOperation(raw) {
+  const operation = raw.readiness_operation || raw.readinessOperation || raw.coordinated_readiness || {};
+  const kind = operation.kind || operation.operation || null;
+  const coordinatedMarkReady =
+    kind === 'coordinated_mark_ready' ||
+    operation.coordinated_mark_ready === true ||
+    raw.coordinated_mark_ready === true;
+  return {
+    ...operation,
+    operation: coordinatedMarkReady ? 'coordinated_mark_ready' : kind,
+    coordinated_mark_ready: coordinatedMarkReady,
+    both_draft_substantively_ready:
+      operation.both_draft_substantively_ready === true ||
+      raw.both_draft_substantively_ready === true,
+    members: asArray(operation.members || raw.readiness_members).map(normalizeBundleMember),
+  };
+}
+
+function memberKey(member) {
+  if (!member || !member.repository || !member.pr_number) return null;
+  return `${member.repository}#${member.pr_number}`;
+}
+
+function findOperationMember(operation, member) {
+  const key = memberKey(member);
+  if (!key) return null;
+  return (operation.members || []).find((item) => memberKey(item) === key) || null;
+}
+
+function memberReadinessFlag(member) {
+  return Boolean(
+    member &&
+      (member.substantively_ready === true ||
+        member.ready_for_coordinated_mark_ready === true)
+  );
+}
+
+function memberCarriesExactHeadReadiness(member) {
+  const item = normalizeBundleMember(member);
+  return Boolean(
+    memberReadinessFlag(item) &&
+      SHA_PATTERN.test(String(item.head_sha || '')) &&
+      SHA_PATTERN.test(String(item.reviewed_payload_head_sha || '')) &&
+      item.head_sha === item.reviewed_payload_head_sha
+  );
+}
+
+function coordinatedMarkReadyMemberProof(operation, member) {
+  if (
+    !operation ||
+    operation.coordinated_mark_ready !== true ||
+    operation.both_draft_substantively_ready !== true
+  ) {
+    return { ok: false, failures: [] };
+  }
+  const operationMember = findOperationMember(operation, member);
+  const selfReady = memberCarriesExactHeadReadiness(member);
+  const failures = [];
+  let operationReady = false;
+
+  if (memberReadinessFlag(operationMember)) {
+    const operationHead = operationMember.head_sha;
+    const operationReviewedHead = operationMember.reviewed_payload_head_sha;
+    const headValid = SHA_PATTERN.test(String(operationHead || ''));
+    const reviewedHeadValid = SHA_PATTERN.test(String(operationReviewedHead || ''));
+
+    if (!headValid || !reviewedHeadValid) {
+      if (!selfReady) failures.push('readiness_member_exact_head_missing');
+    }
+    if (headValid && member.head_sha && operationHead !== member.head_sha) {
+      failures.push('readiness_member_head_mismatch');
+    }
+    if (
+      reviewedHeadValid &&
+      member.reviewed_payload_head_sha &&
+      operationReviewedHead !== member.reviewed_payload_head_sha
+    ) {
+      failures.push('readiness_member_reviewed_payload_head_mismatch');
+    }
+    operationReady = headValid && reviewedHeadValid && failures.length === 0;
+  }
+
+  return {
+    ok: (selfReady || operationReady) && failures.length === 0,
+    failures: uniqueStrings(failures),
+  };
+}
+
+function memberSubstantivelyReadyForCoordinatedMarkReady(operation, member) {
+  return coordinatedMarkReadyMemberProof(operation, member).ok;
+}
+
 function bundleSafetyProof(proof, evidence) {
   const raw = (proof && proof.bundle) || evidence.bundle || {};
   const pairedPrs = asArray(raw.paired_prs || (evidence.bundle && evidence.bundle.paired_prs)).map(normalizeBundleMember);
@@ -422,6 +624,7 @@ function bundleSafetyProof(proof, evidence) {
   if (!required) {
     return { required: false, delegated: false, ok: true, failures: [], summary: null };
   }
+  const readinessOperation = normalizeReadinessOperation(raw);
   if (typeof bundleId !== 'string' || !bundleId.trim()) failures.push('bundle_id_missing');
   const controller = normalizeBundleMember(raw.controller || {});
   if (!bundleMemberComplete(controller, { requireHead: false })) {
@@ -434,7 +637,11 @@ function bundleSafetyProof(proof, evidence) {
     if (controller.pr_number && Number(controller.pr_number) !== Number(evidence.reviewed_pr.number)) {
       failures.push('bundle_controller_pr_mismatch');
     }
-    if (controller.reviewed_payload_head_sha && controller.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha) {
+    if (
+      controller.reviewed_payload_head_sha &&
+      controller.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha &&
+      !bundleMemberHeadMatches({ ...controller, head_sha: evidence.reviewed_pr.head_sha, integration_head_sha: evidence.reviewed_pr.head_sha })
+    ) {
       failures.push('bundle_controller_head_mismatch');
     }
   } else {
@@ -446,7 +653,7 @@ function bundleSafetyProof(proof, evidence) {
       if (Number(currentMember.pr_number) !== Number(evidence.reviewed_pr.number)) failures.push('bundle_member_pr_mismatch');
       if (
         currentMember.head_sha !== evidence.reviewed_pr.head_sha ||
-        currentMember.reviewed_payload_head_sha !== evidence.reviewed_pr.head_sha
+        !bundleMemberHeadMatches({ ...currentMember, head_sha: evidence.reviewed_pr.head_sha, integration_head_sha: evidence.reviewed_pr.head_sha })
       ) {
         failures.push('bundle_member_head_mismatch');
       }
@@ -455,11 +662,10 @@ function bundleSafetyProof(proof, evidence) {
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
   for (const paired of pairedPrs) {
     if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
-    if (paired && paired.is_draft === true) failures.push('paired_pr_draft');
-    if (paired && (paired.ready === false || paired.current === false || paired.open === false || paired.mergeable === false)) {
-      failures.push('paired_pr_not_ready');
-    }
-    if (paired && paired.reviewed_payload_head_sha && paired.head_sha && paired.reviewed_payload_head_sha !== paired.head_sha) {
+    const coordinatedProof = coordinatedMarkReadyMemberProof(readinessOperation, paired);
+    failures.push(...coordinatedProof.failures);
+    if (paired && !paired.base) failures.push('paired_pr_base_missing');
+    if (paired && paired.reviewed_payload_head_sha && paired.head_sha && !bundleMemberHeadMatches(paired)) {
       failures.push('paired_pr_head_mismatch');
     }
   }
@@ -477,6 +683,46 @@ function bundleSafetyProof(proof, evidence) {
       })
     : { ok: false, failures: ['bundle_compatibility_missing'] };
   if (!compatibility.ok) failures.push(...compatibility.failures);
+  const transitionableDraftMembers = [];
+  const pairedLeadReviews = [];
+  const transitionContext = {
+    delegated,
+    reviewedRepo: evidence.reviewed_pr.repo,
+    proof,
+    compatibility,
+  };
+  for (const paired of pairedPrs) {
+    const pairedLeadReview = pairedLeadReviewFor(paired, proof);
+    if (pairedLeadReview) pairedLeadReviews.push(normalizePairedLeadReview(pairedLeadReview));
+    const coordinatedTransitionable = coordinatedMarkReadyMemberProof(readinessOperation, paired).ok;
+    const controllerTransitionable = controllerFirstDraftTransitionable(paired, transitionContext);
+    const transitionable = coordinatedTransitionable || controllerTransitionable;
+    const lifecycleOk = bundleMemberLifecycleOk(paired);
+    if (transitionable) {
+      transitionableDraftMembers.push({
+        repository: paired.repository,
+        pr_number: paired.pr_number,
+        base: paired.base || null,
+        head_sha: paired.head_sha,
+        reviewed_payload_head_sha: paired.reviewed_payload_head_sha,
+        reason: coordinatedTransitionable ? 'coordinated_mark_ready' : 'controller_first_mark_ready',
+      });
+    }
+    if (paired && paired.is_draft === true && !transitionable) failures.push('paired_pr_draft');
+    if (paired && (!lifecycleOk || paired.ready !== true) && !transitionable) {
+      failures.push('paired_pr_not_ready');
+    }
+  }
+  const reviewedPrIsDraft = evidence.reviewed_pr.was_draft !== false;
+  const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
+  const anyPairedNotReady = pairedPrs.some((paired) => paired && (!bundleMemberLifecycleOk(paired) || paired.ready !== true));
+  const transitionReady = failures.length === 0 && (reviewedPrIsDraft || transitionableDraftMembers.length > 0);
+  const mergeReady =
+    failures.length === 0 &&
+    reviewedPrIsDraft === false &&
+    !anyPairedDraft &&
+    !anyPairedNotReady &&
+    transitionableDraftMembers.length === 0;
   const summary = {
     required,
     delegated,
@@ -486,6 +732,11 @@ function bundleSafetyProof(proof, evidence) {
     paired_prs: pairedPrs,
     exact_members: exactMembers,
     compatibility,
+    readiness_operation: readinessOperation.coordinated_mark_ready ? readinessOperation : null,
+    transition_ready: transitionReady,
+    merge_ready: mergeReady,
+    transitionable_draft_members: transitionableDraftMembers,
+    paired_lead_reviews: pairedLeadReviews,
     failures: uniqueStrings(failures),
   };
   return summary;
@@ -601,6 +852,8 @@ function collectRevisionReasons(evidence) {
     proof.integration &&
     proof.integration.authorization_inherited === true &&
     proof.integration.integration_head_sha === headSha;
+  const controllerBundlePendingBlock =
+    /^BLOCKED$/i.test(mergeState) && controllerDelegatedBundleCi;
 
   if (!evidence.reviewed_pr.repo || !evidence.reviewed_pr.number || !evidence.reviewed_pr.url) {
     reasons.push('missing_remote_pr_identity');
@@ -610,8 +863,7 @@ function collectRevisionReasons(evidence) {
     evidence.reviewed_pr.mergeable === false ||
     /^CONFLICTING$/i.test(String(evidence.reviewed_pr.mergeable || '')) ||
     /^DIRTY$/i.test(mergeState) ||
-    /^BEHIND$/i.test(mergeState) ||
-    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock)
+    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock && !controllerBundlePendingBlock)
   ) {
     reasons.push('merge_readiness_blocked');
   }
@@ -639,7 +891,16 @@ function collectRevisionReasons(evidence) {
   if (proof.blocking_comments === true) reasons.push('blocking_comments_unresolved');
   if (bundle.required && !bundle.ok) reasons.push(...bundle.failures);
   if (evidence.bundle && evidence.bundle.complete === false) reasons.push('bundle_incomplete');
-  if (asArray(evidence.bundle && evidence.bundle.paired_prs).some((paired) => paired.ready === false || paired.current === false)) {
+  const transitionableKeys = new Set(
+    asArray(bundle.transitionable_draft_members).map((member) => `${member.repository}#${member.pr_number}`)
+  );
+  if (asArray(evidence.bundle && evidence.bundle.paired_prs).some((paired) => {
+    const item = normalizeBundleMember(paired);
+    return (
+      (item.ready === false || item.current === false) &&
+      !transitionableKeys.has(`${item.repository}#${item.pr_number}`)
+    );
+  })) {
     reasons.push('paired_pr_not_ready');
   }
   if (evidence.throughput.level === 'L2' && !evidence.throughput.owner_preapproved) {
@@ -901,6 +1162,28 @@ function validateDecision(decision) {
       ) {
         throw new Error(`${decision.route} requires green bundle-final and intermediate compatibility proof`);
       }
+      const pairedPrs = asArray(decision.proof.bundle.paired_prs);
+      const hasTransitionableDraftMembers = asArray(decision.proof.bundle.transitionable_draft_members).length > 0;
+      const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
+      const anyPairedNotReady = pairedPrs.some((paired) => {
+        const member = normalizeBundleMember(paired);
+        return !member.base || !bundleMemberLifecycleOk(member) || member.ready !== true;
+      });
+      if (
+        decision.proof.bundle.merge_ready === true &&
+        (decision.reviewed_pr.was_draft !== false ||
+          anyPairedDraft ||
+          anyPairedNotReady ||
+          hasTransitionableDraftMembers)
+      ) {
+        throw new Error(`${decision.route} cannot mark bundle merge_ready while a draft or unready member remains`);
+      }
+      if (
+        decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY &&
+        decision.proof.bundle.transition_ready !== true
+      ) {
+        throw new Error(`${decision.route} MARK_READY requires bundle transition_ready proof`);
+      }
     }
     const branchProtection = decision.proof.branch_protection || null;
     const missingObservableApprovalCount =
@@ -1014,6 +1297,14 @@ function parseRenderedDecisionMarkdown(body) {
 function renderDecisionMarkdown(decision) {
   validateDecision(decision);
   const digest = decisionDigest(decision);
+  const delegatedBundleProof = Boolean(decision.proof.bundle && decision.proof.bundle.delegated === true);
+  const delegatedController = delegatedBundleProof ? decision.proof.bundle.controller || {} : {};
+  const ciHeadLabel = delegatedBundleProof ? 'Controller CI head' : 'CI head';
+  const ciStatusLabel = delegatedBundleProof ? 'Controller CI status' : 'CI status';
+  const branchProtectionLabel = delegatedBundleProof ? 'Delegated branch protection' : 'Branch protection';
+  const leadReviewLine = delegatedBundleProof
+    ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
+    : `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``;
   const lines = [
     decisionMarker(decision),
     '# PR Readiness Decision',
@@ -1046,14 +1337,19 @@ function renderDecisionMarkdown(decision) {
     '',
     '## Proof Summary',
     '',
-    `- CI head: \`${decision.proof.ci_head_sha || 'missing'}\``,
-    `- CI status: \`${decision.proof.ci_status || 'missing'}\``,
+    ...(delegatedBundleProof
+      ? [
+          `- Delegated bundle controller proof: \`${delegatedController.repository || 'unknown'}#${delegatedController.pr_number || 'unknown'}\``,
+        ]
+      : []),
+    `- ${ciHeadLabel}: \`${decision.proof.ci_head_sha || 'missing'}\``,
+    `- ${ciStatusLabel}: \`${decision.proof.ci_status || 'missing'}\``,
     `- Required CI contexts: ${(decision.proof.ci_required_contexts || []).map((item) => `\`${item}\``).join(', ') || 'none recorded'}`,
     `- Checker proof: ${(decision.proof.checkers || []).map((checker) => `\`${checker.command || 'unknown'}:${checker.status || checker.conclusion || checker.result || 'unknown'}\``).join(', ') || 'none recorded'}`,
-    `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``,
+    leadReviewLine,
     `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
     `- Integration authorization inherited for lead review: \`${Boolean(decision.proof.lead_review_integration_authorization_inherited)}\``,
-    `- Branch protection: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
+    `- ${branchProtectionLabel}: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
   if (decision.proof.human_authorization) {
     lines.push(`- Human payload authorization: \`${JSON.stringify(decision.proof.human_authorization)}\``);

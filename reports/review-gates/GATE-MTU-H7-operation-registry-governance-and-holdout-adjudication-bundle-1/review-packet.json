@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-OPERATION-REGISTRY-GOVERNANCE-AND-HOLDOUT-ADJUDICATION-BUNDLE-1",
+  "gate_id": "GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1",
+  "review_standard": "REV-STD-1",
+  "status": "READY_FOR_HUMAN_H7_GOVERNANCE_REVIEW_NOT_CLOSURE",
+  "requested_decision": "Review the H7 operation-registry/canonical-MTU holds, q4 reviewed-equivalent candidates, and q5 graph-source adjudication; authorize only the exact safe next step or keep the governed hold.",
+  "product_end_state_cited": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_spec_cited": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "non_negotiable_requirements": [
+    "No protected reference mutation",
+    "No external source mutation",
+    "No machine MTU mutation",
+    "No target exercise mutation",
+    "No candidate writes or storage",
+    "No lesson output",
+    "No diagnostics, mastery, sequencing, PV, summative use, product-route claim, or student/product use",
+    "No holdout tuning or rerun after outcome inspection",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Current-main H7 publication located and hold preserved",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.json"
+    },
+    {
+      "requirement": "All seven H7 review-required records inventoried",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json"
+    },
+    {
+      "requirement": "All ten review-required operations carry explicit route, proof, and negative guard",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json"
+    },
+    {
+      "requirement": "Official prompt/correction evidence retained by source locator and rendered PNG",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json"
+    },
+    {
+      "requirement": "Reviewed-equivalent decisions are prepared but not applied",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json"
+    },
+    {
+      "requirement": "Governance candidate packets are evidence-only and not candidate writes",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json"
+    },
+    {
+      "requirement": "q5 graph-only correction is explicitly held for visual/source adjudication",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.json"
+    }
+  ],
+  "findings": [
+    {
+      "id": "H7-GOV-FINDING-PROTECTED-GOVERNANCE",
+      "classification": "blocks",
+      "severity": "governance_blocker",
+      "summary": "Seven of ten review-required operations still need protected canonical-MTU or operation-registry governance before H7 closure.",
+      "proof_required_to_close": "Owner-approved canonical/operation-registry decision tied to the exact operations in the blocker matrix."
+    },
+    {
+      "id": "H7-GOV-FINDING-Q4-REVIEWED-EQUIVALENT",
+      "classification": "proof_required_to_close",
+      "severity": "review_required",
+      "summary": "q4 GO/MO line drawing may be closable as reviewed equivalent, but this packet only prepares the decision.",
+      "proof_required_to_close": "Human H7 reviewer accepts the reviewed-equivalent rule and its negative guards."
+    },
+    {
+      "id": "H7-GOV-FINDING-Q5-GRAPH",
+      "classification": "blocks",
+      "severity": "review_required",
+      "summary": "q5 locked-holdout total-subsidy shading remains graph-source governed because the official correction permits two correct shaded rectangles.",
+      "proof_required_to_close": "Human graph-source reviewer accepts the visual adjudication and both official examples."
+    }
+  ],
+  "blocks": [
+    "H7 full closure",
+    "H6/H7 evidence-generalization closure",
+    "Scale Gate 1",
+    "product-route readiness",
+    "diagnostics/mastery/PV/sequencing/student use"
+  ],
+  "does_not_block": [
+    "Checker/report/governance work within this authority boundary",
+    "Human review of the evidence-only candidate packets",
+    "Further non-mutating PR readiness/checker work"
+  ],
+  "proof_required_to_close": [
+    "Resolve or explicitly accept each operation in the blocker matrix.",
+    "Authorize or reject q4 reviewed-equivalent closure decisions.",
+    "Accept or reject q5 graph-source adjudication.",
+    "Rerun H5/H6/H7 checkers, report JSON validation, URL-index check, agent index, platform tests, and the PR Readiness Reviewer against the exact remote head before merge or closure."
+  ],
+  "bundle": "reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json",
+  "blocker_matrix": "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json",
+  "official_evidence_matrix": "reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json",
+  "reviewed_equivalent_decisions": "reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json",
+  "governance_candidate_packets": "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json",
+  "q5_graph_adjudication": "reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.json",
+  "quality_log": "reports/mtu-hardening/mtu-h7-governance-quality-log-1.md",
+  "lead_review_proof": "reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md",
+  "lead_review_template": "reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review-template.md",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "summary": {
+    "review_required_records": 7,
+    "review_required_operations": 10,
+    "primary_routes": [
+      "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "READY_FOR_HUMAN_H7_CLOSURE_REVIEW",
+      "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE"
+    ],
+    "protected_governance_operation_count": 7,
+    "reviewed_equivalent_candidate_count": 2,
+    "graph_source_hold_count": 1,
+    "false_closure_count": 0
+  },
+  "route": "READY_FOR_HUMAN_REVIEW"
+}
