@@ -664,13 +664,16 @@ describe('ExitTicketUI', () => {
     test('renders the direct 1.1.2 task-shell view with neutral completion copy held', () => {
         const html = targetVisibleHtml();
         expect(html).toContain('Exit ticket');
-        expect(html).toContain('Procentuele verandering berekenen');
+        expect(html).toContain('Bereken-vraag beantwoorden');
         expect(html).toContain('Indexpunten kort uitleggen');
         expect(html).toContain('Je antwoorden zijn lokaal nagekeken.');
         expect(html).not.toContain('eindopgave');
         expect(html).toContain('<section class="et-completion" id="et-completion" hidden>');
+        expect(html).toContain('data-task-family="calculation_answer_form_capture"');
         expect(html).toContain('data-task-family="calculation_work_capture"');
         expect(html).toContain('data-task-family="structured_short_response"');
+        expect(html).toContain('data-formula-token-id="oldPrice"');
+        expect(html).toContain('data-input-role="substitution"');
         expect(html).toContain('data-input-role="unit-notation"');
         expect(html).toContain('data-input-role="structured-field"');
         expect(html).toContain('data-field-id="indexpunten"');
@@ -682,8 +685,8 @@ describe('ExitTicketUI', () => {
         expect(html).not.toContain('Bijvoorbeeld 108');
         expect(html).not.toContain('Bijvoorbeeld 3,7');
         expect(html).not.toContain('Bijvoorbeeld 4 indexpunten');
-        expect(html).toContain('vul het stijgingspercentage in');
-        expect(html).toContain('placeholder="vul de notatie in"');
+        expect(html).toContain('placeholder="vul het getal in"');
+        expect(html).toContain('placeholder="%, procent of procentteken"');
         expect((html.match(/class="et-feedback/g) || []).length).toBe(targetData.tasks.length);
         expect((html.match(/class="ts-feedback"/g) || []).length).toBe(0);
         expect(html).not.toMatch(/\b(?:A\d{2}|D\d{2}|PV|MTU)\b/);
@@ -716,6 +719,8 @@ describe('ExitTicketUI', () => {
         expect(shell).toContain('class="ge-page" data-golden-ticket-root');
         expect(shell).toContain('shared/golden-ticket-layout.css');
         expect(shell).toContain('shared/golden-ticket-layout.js');
+        expect(shell).toContain('data-ge-answer-form-task');
+        expect(shell).toContain('data-ge-formula-token-id');
         expect(shell).toContain('data-ge-work');
         expect(shell).toContain('data-ge-structured-choice');
         expect(shell).not.toContain('shared/golden-ticket-graph.js');

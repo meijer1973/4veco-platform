@@ -179,10 +179,13 @@
     var gaps = [];
     var shells = taskShells(data);
     var families = shells.map(function (entry) { return entry.taskShell.family; });
+    var calculationFamilies = ['calculation_work_capture', 'calculation_answer_form_capture'];
     var unsupported = families.filter(function (family) {
-      return family !== 'calculation_work_capture' && family !== 'structured_short_response';
+      return calculationFamilies.indexOf(family) === -1 && family !== 'structured_short_response';
     });
-    if (!findTask(data, 'calculation_work_capture')) gaps.push('task family calculation_work_capture');
+    if (!findTask(data, 'calculation_work_capture') && !findTask(data, 'calculation_answer_form_capture')) {
+      gaps.push('task family calculation_work_capture or calculation_answer_form_capture');
+    }
     if (!findTask(data, 'structured_short_response')) gaps.push('task family structured_short_response');
     if (unsupported.length) {
       gaps.push('unsupported task families for calculation/structured variant: ' + Array.from(new Set(unsupported)).join(', '));
@@ -269,7 +272,7 @@
         GRAPH_ADVISORY_VARIANT +
         ' (advisory graph construction + graph reading + route choice with false authority flags) and ' +
         CALCULATION_VARIANT +
-        ' (calculation_work_capture + structured_short_response with context blocks) and ' +
+        ' (calculation_work_capture or calculation_answer_form_capture + structured_short_response with context blocks) and ' +
         ADVISORY_SHORT_CHECK_VARIANT +
         ' (advisory choice short check with context blocks and false authority flags); graph variant missing ' +
         gaps.graph.join(', ') +
@@ -532,6 +535,70 @@
     '</li>';
   }
 
+  function renderAnswerFormToken(token) {
+    var title = token.usageHint || token.description || token.label || token.id;
+    return '<button type="button" class="ge-token" aria-pressed="false" data-formula-token-id="' + attr(token.id) + '" data-ge-formula-token-id="' + attr(token.id) + '" data-ge-formula-max-uses="' + attr(token.maxUses || 1) + '" title="' + attr(title) + '">' +
+      escapeHtml(token.label) +
+    '</button>';
+  }
+
+  function renderCalculationAnswerFormStep(data, answerEntry, number) {
+    var task = answerEntry.taskShell;
+    var interaction = task.interaction || {};
+    var formula = interaction.formula || {};
+    var substitution = interaction.substitution || {};
+    var answer = interaction.answer || {};
+    var context = interaction.context || {};
+    var tokens = Array.isArray(formula.tokens) ? formula.tokens : [];
+    var fields = Array.isArray(substitution.fields) ? substitution.fields : [];
+    return '<li class="ge-step ge-step-answer-form" data-ge-step="answer-form" data-ge-answer-form-task data-task-id="' + attr(answerEntry.id) + '" data-task-family="' + attr(task.family) + '">' +
+      renderStepHead(String(number), 'Bereken-antwoordvorm', task.skillLabel, task.purpose) +
+      '<p>' + escapeHtml(task.prompt || '') + '</p>' +
+      renderContextRefs(data || { contextBlocks: [] }, task) +
+      '<div class="ge-claim-grid ge-answer-form-grid">' +
+        '<section class="ge-claim-part">' +
+          '<h4>' + escapeHtml(formula.title || 'Kies de formule of rekenregel') + '</h4>' +
+          '<p class="ge-subtle">' + escapeHtml(formula.purpose || formula.placeholder || 'Klik de bouwstenen in de juiste volgorde.') + '</p>' +
+          '<div class="ge-token-bank" data-ge-answer-form-token-bank>' + tokens.map(renderAnswerFormToken).join('') + '</div>' +
+          '<div class="ge-chosen-tokens" data-formula-sequence data-ge-formula-sequence data-ge-answer-form-sequence aria-label="' + attr(formula.sequenceLabel || 'Jouw formule') + '"></div>' +
+          '<div class="ge-action-row">' +
+            '<button type="button" class="ge-small-button" data-ge-answer-form-undo-token>Laatste bouwsteen weg</button>' +
+            '<button type="button" class="ge-small-button" data-ge-answer-form-clear-formula>Wis formule</button>' +
+          '</div>' +
+        '</section>' +
+        '<section class="ge-claim-part">' +
+          '<h4>' + escapeHtml(substitution.title || 'Vul de bronwaarden in') + '</h4>' +
+          '<p class="ge-subtle">' + escapeHtml(substitution.purpose || substitution.template || '') + '</p>' +
+          '<div class="ge-field-grid">' +
+            fields.map(function (field) {
+              return '<label class="ge-field"><span>' + escapeHtml(field.label || field.id) + '</span>' +
+                '<input type="text" inputmode="' + attr(field.inputMode || 'text') + '" autocomplete="off" data-input-role="substitution" data-ge-substitution-field data-field-id="' + attr(field.id) + '" placeholder="' + attr(field.placeholder || 'vul waarde in') + '">' +
+              '</label>';
+            }).join('') +
+          '</div>' +
+        '</section>' +
+        '<section class="ge-claim-part">' +
+          '<h4>' + escapeHtml(answer.title || 'Geef het eindantwoord') + '</h4>' +
+          '<p class="ge-subtle">' + escapeHtml(answer.purpose || '') + '</p>' +
+          '<div class="ge-field-grid">' +
+            '<label class="ge-field"><span>' + escapeHtml(answer.finalAnswerLabel || 'Eindantwoord') + '</span><input type="text" inputmode="decimal" autocomplete="off" data-input-role="final-answer" data-ge-final-answer placeholder="' + attr(answer.finalAnswerPlaceholder || 'vul je antwoord in') + '"></label>' +
+            '<label class="ge-field"><span>' + escapeHtml(answer.unitNotationLabel || 'Eenheid of notatie') + '</span><input type="text" autocomplete="off" data-input-role="unit-notation" data-ge-unit-notation placeholder="' + attr(answer.unitNotationPlaceholder || 'vul de notatie in') + '"></label>' +
+          '</div>' +
+        '</section>' +
+        '<section class="ge-claim-part">' +
+          '<h4>' + escapeHtml(context.title || 'Schrijf de conclusie') + '</h4>' +
+          '<label class="ge-field ge-field-wide">' +
+            '<span>' + escapeHtml(context.label || 'Contextuele conclusie') + '</span>' +
+            '<textarea rows="3" autocomplete="off" data-input-role="conclusion" data-ge-conclusion placeholder="' + attr(context.placeholder || 'schrijf je conclusie') + '"></textarea>' +
+          '</label>' +
+        '</section>' +
+      '</div>' +
+      '<ul class="ge-answer-form-feedback" data-ge-answer-form-feedback hidden></ul>' +
+      '<div class="ge-action-row"><button type="button" class="ge-small-button" data-ge-check-task>Controleer onderdeel</button></div>' +
+      renderFeedback(task.id) +
+    '</li>';
+  }
+
   function renderStructuredChoice(option) {
     return '<button type="button" class="ge-pill" aria-pressed="false" data-ge-structured-choice data-option-id="' + attr(option.id) + '">' +
       escapeHtml(option.label) +
@@ -722,6 +789,7 @@
           '<ol class="ge-step-list">' +
             entries.map(function (entry, index) {
               if (entry.taskShell.family === 'calculation_work_capture') return renderCalculationStep(entry, index + 1);
+              if (entry.taskShell.family === 'calculation_answer_form_capture') return renderCalculationAnswerFormStep(data, entry, index + 1);
               return renderStructuredStep(entry, index + 1);
             }).join('') +
           '</ol>' +
@@ -817,6 +885,10 @@
     return String(value == null ? '' : value).trim().length > 0;
   }
 
+  function isPlainObject(value) {
+    return Boolean(value && typeof value === 'object' && !Array.isArray(value));
+  }
+
   function textMatches(value, accepted) {
     var normalized = normalizeAnswer(value);
     return (Array.isArray(accepted) ? accepted : []).some(function (item) {
@@ -852,6 +924,116 @@
       unitNotationMatches(response.unitNotation, expected.unitNotation);
   }
 
+  function numberAnswerMatches(value, expected) {
+    expected = expected || {};
+    var actual = typeof value === 'number' ? value : parseNumber(value);
+    var tol = typeof expected.tolerance === 'number' ? Math.max(0, expected.tolerance) : 0;
+    return Number.isFinite(actual) && Math.abs(actual - expected.value) <= tol;
+  }
+
+  function answerFormFinalMatches(value, expected) {
+    expected = expected || {};
+    if (expected.kind === 'number_or_percent_text') {
+      if (textMatches(value, expected.acceptedNotations)) return true;
+      return numberAnswerMatches(value, { value: expected.value, tolerance: expected.tolerance || 0 });
+    }
+    if (expected.kind === 'number') return numberAnswerMatches(value, expected);
+    if (expected.kind === 'text') return textMatches(value, expected.accepted);
+    return false;
+  }
+
+  function methodTokensMatch(tokens, expectedTokens) {
+    if (!Array.isArray(tokens) || !Array.isArray(expectedTokens)) return false;
+    if (tokens.length !== expectedTokens.length) return false;
+    for (var i = 0; i < expectedTokens.length; i += 1) {
+      if (normalizeAnswer(tokens[i]) !== normalizeAnswer(expectedTokens[i])) return false;
+    }
+    return true;
+  }
+
+  function substitutionFieldMatches(value, expected) {
+    expected = expected || {};
+    if (expected.kind === 'number') return numberAnswerMatches(value, expected);
+    if (expected.kind === 'text') return textMatches(value, expected.accepted);
+    return false;
+  }
+
+  function requiredTextGroupsMatch(value, groups) {
+    var normalized = normalizeAnswer(value);
+    if (!normalized) return false;
+    return (Array.isArray(groups) ? groups : []).every(function (group) {
+      return (Array.isArray(group) ? group : []).some(function (accepted) {
+        var needle = normalizeAnswer(accepted);
+        return needle && normalized.indexOf(needle) !== -1;
+      });
+    });
+  }
+
+  function rejectedTextMatches(value, rejectText) {
+    var normalized = normalizeAnswer(value);
+    return (Array.isArray(rejectText) ? rejectText : []).some(function (item) {
+      var needle = normalizeAnswer(item);
+      return needle && normalized.indexOf(needle) !== -1;
+    });
+  }
+
+  function rejectedPatternMatches(value, rejectPatterns) {
+    var normalized = normalizeAnswer(value);
+    return (Array.isArray(rejectPatterns) ? rejectPatterns : []).some(function (pattern) {
+      try {
+        return new RegExp(pattern, 'i').test(normalized);
+      } catch (_error) {
+        return false;
+      }
+    });
+  }
+
+  function conclusionTextMatches(value, expected) {
+    expected = expected || {};
+    if (!hasValue(value)) return false;
+    if (rejectedTextMatches(value, expected.rejectText)) return false;
+    if (rejectedPatternMatches(value, expected.rejectPatterns)) return false;
+    return requiredTextGroupsMatch(value, expected.requiredTextGroups);
+  }
+
+  function calculationAnswerFormPartMatches(response, task) {
+    response = response || {};
+    var expected = task.expected || {};
+    var substitution = isPlainObject(response.substitution) ? response.substitution : {};
+    return {
+      formula: methodTokensMatch(response.methodTokens, expected.methodTokens),
+      substitution: Object.keys(expected.substitution || {}).every(function (fieldId) {
+        return substitutionFieldMatches(substitution[fieldId], expected.substitution[fieldId]);
+      }),
+      finalAnswer: answerFormFinalMatches(response.finalAnswer, expected.finalAnswer),
+      notation: unitNotationMatches(response.notation, expected.notation),
+      conclusion: conclusionTextMatches(response.conclusion, expected.conclusion)
+    };
+  }
+
+  function evaluateCalculationAnswerFormResponse(task, response) {
+    if (!isPlainObject(response)) return false;
+    var keys = Object.keys(response).sort().join('|');
+    if (keys !== 'conclusion|finalAnswer|methodTokens|notation|substitution') return false;
+    var parts = calculationAnswerFormPartMatches(response, task);
+    return parts.formula && parts.substitution && parts.finalAnswer && parts.notation && parts.conclusion;
+  }
+
+  function calculationAnswerFormFeedback(response, task) {
+    var parts = calculationAnswerFormPartMatches(response, task);
+    var labels = [
+      { id: 'formula', label: 'Formule of rekenregel' },
+      { id: 'substitution', label: 'Bronwaarden in de formule' },
+      { id: 'finalAnswer', label: 'Eindantwoord' },
+      { id: 'notation', label: 'Eenheid of notatie' },
+      { id: 'conclusion', label: 'Contextzin met richting' }
+    ];
+    return {
+      missingParts: labels.filter(function (part) { return !parts[part.id]; }),
+      correctParts: labels.filter(function (part) { return parts[part.id]; })
+    };
+  }
+
   function evaluateStructuredResponse(task, response) {
     var expected = task.expected || {};
     response = response || {};
@@ -877,6 +1059,9 @@
     }
     if (task.family === 'calculation_work_capture' && (task.expected || {}).kind === 'calculation') {
       return evaluateCalculationResponse(task, response);
+    }
+    if (task.family === 'calculation_answer_form_capture' && (task.expected || {}).kind === 'calculation_answer_form') {
+      return evaluateCalculationAnswerFormResponse(task, response);
     }
     if (task.family === 'structured_short_response' && (task.expected || {}).kind === 'structured_text_criteria') {
       return evaluateStructuredResponse(task, response);
@@ -960,10 +1145,13 @@
   function initCalculationWorkbench(root, data) {
     var entries = taskShells(data);
     var byId = {};
-    var state = { taskOk: {} };
+    var state = { taskOk: {}, answerFormTokens: {} };
     entries.forEach(function (entry) {
       byId[entry.id] = entry.taskShell;
       state.taskOk[entry.id] = false;
+      if (entry.taskShell.family === 'calculation_answer_form_capture') {
+        state.answerFormTokens[entry.id] = [];
+      }
     });
 
     function collectCalculationResponse(step) {
@@ -971,6 +1159,22 @@
         work: query(step, '[data-ge-work]').value,
         finalAnswer: query(step, '[data-ge-final-answer]').value,
         unitNotation: query(step, '[data-ge-unit-notation]').value
+      };
+    }
+
+    function collectAnswerFormResponse(step) {
+      var substitution = {};
+      queryAll(step, '[data-ge-substitution-field]').forEach(function (field) {
+        substitution[field.getAttribute('data-field-id')] = field.value;
+      });
+      return {
+        methodTokens: queryAll(step, '[data-ge-selected-formula-token-id]').map(function (token) {
+          return token.getAttribute('data-ge-selected-formula-token-id');
+        }),
+        substitution: substitution,
+        finalAnswer: query(step, '[data-ge-final-answer]').value,
+        notation: query(step, '[data-ge-unit-notation]').value,
+        conclusion: query(step, '[data-ge-conclusion]').value
       };
     }
 
@@ -988,8 +1192,73 @@
 
     function collectResponse(step, task) {
       if (task.family === 'calculation_work_capture') return collectCalculationResponse(step);
+      if (task.family === 'calculation_answer_form_capture') return collectAnswerFormResponse(step);
       if (task.family === 'structured_short_response') return collectStructuredResponse(step);
       return {};
+    }
+
+    function tokenConfigById(task) {
+      var configs = {};
+      (((task.interaction || {}).formula || {}).tokens || []).forEach(function (token) {
+        configs[token.id] = token;
+      });
+      return configs;
+    }
+
+    function countToken(tokens, tokenId) {
+      return tokens.filter(function (item) { return item === tokenId; }).length;
+    }
+
+    function renderAnswerFormSequence(step) {
+      if (!step) return;
+      var taskId = step.getAttribute('data-task-id');
+      var task = byId[taskId];
+      var configs = tokenConfigById(task);
+      var tokens = state.answerFormTokens[taskId] || [];
+      var sequence = query(step, '[data-ge-answer-form-sequence]');
+      if (sequence) {
+        sequence.innerHTML = tokens.map(function (tokenId, index) {
+          var token = configs[tokenId] || { label: tokenId };
+          return '<button type="button" class="ge-token ge-token-selected" data-ge-selected-formula-token-id="' + attr(tokenId) + '" data-ge-remove-formula-token="' + attr(index) + '">' +
+            escapeHtml(token.label || tokenId) +
+          '</button>';
+        }).join('');
+      }
+      queryAll(step, '[data-ge-formula-token-id]').forEach(function (button) {
+        var tokenId = button.getAttribute('data-ge-formula-token-id');
+        var token = configs[tokenId] || {};
+        var maxUses = Number(token.maxUses || button.getAttribute('data-ge-formula-max-uses') || 1);
+        var used = countToken(tokens, tokenId);
+        button.disabled = used >= maxUses;
+        button.setAttribute('aria-pressed', used > 0 ? 'true' : 'false');
+      });
+    }
+
+    function clearAnswerFormFeedback(step) {
+      var list = query(step, '[data-ge-answer-form-feedback]');
+      if (!list) return;
+      list.hidden = true;
+      list.innerHTML = '';
+    }
+
+    function renderAnswerFormFeedback(step, feedback, ok) {
+      var list = query(step, '[data-ge-answer-form-feedback]');
+      if (!list) return;
+      if (ok || !feedback || !feedback.missingParts || !feedback.missingParts.length) {
+        clearAnswerFormFeedback(step);
+        return;
+      }
+      list.hidden = false;
+      list.innerHTML = feedback.missingParts.map(function (part) {
+        return '<li>Nog nodig: ' + escapeHtml(part.label) + '</li>';
+      }).join('');
+    }
+
+    function markTaskDirty(step) {
+      if (!step) return;
+      state.taskOk[step.getAttribute('data-task-id')] = false;
+      clearAnswerFormFeedback(step);
+      updateCompletion();
     }
 
     function updateCompletion() {
@@ -1003,8 +1272,12 @@
       if (!step) return false;
       var taskId = step.getAttribute('data-task-id');
       var task = byId[taskId];
-      var ok = evaluateTaskResponse(task, collectResponse(step, task));
+      var response = collectResponse(step, task);
+      var ok = evaluateTaskResponse(task, response);
       state.taskOk[taskId] = ok;
+      if (task.family === 'calculation_answer_form_capture') {
+        renderAnswerFormFeedback(step, calculationAnswerFormFeedback(response, task), ok);
+      }
       var feedback = task.feedback || {};
       setFeedback(
         root,
@@ -1018,12 +1291,67 @@
     }
 
     root.addEventListener('click', function (event) {
+      var answerFormToken = event.target.closest('[data-ge-formula-token-id]');
+      if (answerFormToken && root.contains(answerFormToken)) {
+        var answerFormStep = answerFormToken.closest('[data-ge-answer-form-task]');
+        if (!answerFormStep) return;
+        var answerFormTaskId = answerFormStep.getAttribute('data-task-id');
+        var answerFormTask = byId[answerFormTaskId];
+        var configs = tokenConfigById(answerFormTask);
+        var tokenId = answerFormToken.getAttribute('data-ge-formula-token-id');
+        var token = configs[tokenId] || {};
+        var maxUses = Number(token.maxUses || answerFormToken.getAttribute('data-ge-formula-max-uses') || 1);
+        var tokens = state.answerFormTokens[answerFormTaskId] || [];
+        if (countToken(tokens, tokenId) < maxUses) {
+          tokens.push(tokenId);
+          state.answerFormTokens[answerFormTaskId] = tokens;
+          renderAnswerFormSequence(answerFormStep);
+          markTaskDirty(answerFormStep);
+        }
+        return;
+      }
+
+      var removeFormulaToken = event.target.closest('[data-ge-remove-formula-token]');
+      if (removeFormulaToken && root.contains(removeFormulaToken)) {
+        var removeStep = removeFormulaToken.closest('[data-ge-answer-form-task]');
+        if (!removeStep) return;
+        var removeTaskId = removeStep.getAttribute('data-task-id');
+        var removeIndex = Number(removeFormulaToken.getAttribute('data-ge-remove-formula-token'));
+        var removeTokens = state.answerFormTokens[removeTaskId] || [];
+        if (Number.isInteger(removeIndex) && removeIndex >= 0 && removeIndex < removeTokens.length) {
+          removeTokens.splice(removeIndex, 1);
+          renderAnswerFormSequence(removeStep);
+          markTaskDirty(removeStep);
+        }
+        return;
+      }
+
+      var undoFormulaToken = event.target.closest('[data-ge-answer-form-undo-token]');
+      if (undoFormulaToken && root.contains(undoFormulaToken)) {
+        var undoStep = undoFormulaToken.closest('[data-ge-answer-form-task]');
+        if (!undoStep) return;
+        var undoTaskId = undoStep.getAttribute('data-task-id');
+        (state.answerFormTokens[undoTaskId] || []).pop();
+        renderAnswerFormSequence(undoStep);
+        markTaskDirty(undoStep);
+        return;
+      }
+
+      var clearFormula = event.target.closest('[data-ge-answer-form-clear-formula]');
+      if (clearFormula && root.contains(clearFormula)) {
+        var clearStep = clearFormula.closest('[data-ge-answer-form-task]');
+        if (!clearStep) return;
+        state.answerFormTokens[clearStep.getAttribute('data-task-id')] = [];
+        renderAnswerFormSequence(clearStep);
+        markTaskDirty(clearStep);
+        return;
+      }
+
       var choice = event.target.closest('[data-ge-structured-choice]');
       if (choice && root.contains(choice)) {
         var choiceStep = choice.closest('[data-task-id]');
         setPressed(queryAll(choiceStep, '[data-ge-structured-choice]'), choice);
-        state.taskOk[choiceStep.getAttribute('data-task-id')] = false;
-        updateCompletion();
+        markTaskDirty(choiceStep);
         return;
       }
 
@@ -1041,8 +1369,7 @@
     root.addEventListener('input', function (event) {
       var step = event.target.closest ? event.target.closest('[data-task-id]') : null;
       if (!step || !root.contains(step)) return;
-      state.taskOk[step.getAttribute('data-task-id')] = false;
-      updateCompletion();
+      markTaskDirty(step);
     });
 
     initTheme(root);

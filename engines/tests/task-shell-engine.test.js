@@ -1005,12 +1005,18 @@ describe('TaskShellEngine', () => {
 
         expect(Object.keys(A96ProofData.negativeResponses)).toEqual(expect.arrayContaining([
             'finalAnswerOnly',
-            'sourceOnly',
-            'directionFree',
-            'exampleOnly',
-            'notationOmitted',
-            'standaloneA81',
+            'sourceValuesOnly',
+            'missingFormula',
             'wrongDenominator',
+            'tokenBankOrderedAsAnswer',
+            'missingSubstitution',
+            'missingNotation',
+            'conclusionWithoutDirection',
+            'vagueExampleOnly',
+            'contradictoryNegation',
+            'contradictoryDecrease',
+            'contradictoryHasPercent',
+            'standaloneA81',
             'missingSubstitutionField',
             'leftToRightTokenClickOrder'
         ]));
@@ -1030,6 +1036,8 @@ describe('TaskShellEngine', () => {
             .toEqual(expect.arrayContaining([expect.objectContaining({ id: 'substitution' })]));
         expect(TaskShellEngine.evaluateTask(task, A96ProofData.negativeResponses.leftToRightTokenClickOrder).answerFormFeedback.missingParts)
             .toEqual(expect.arrayContaining([expect.objectContaining({ id: 'formula' })]));
+        expect(TaskShellEngine.evaluateTask(task, A96ProofData.negativeResponses.contradictoryNegation).answerFormFeedback.missingParts)
+            .toEqual(expect.arrayContaining([expect.objectContaining({ id: 'conclusion' })]));
         expect(TaskShellEngine.focusPlan(task)).toEqual([
             '[data-task-id="a96-112-prijsstijging-procent"][data-formula-token-id]',
             '[data-task-id="a96-112-prijsstijging-procent"][data-formula-sequence]',

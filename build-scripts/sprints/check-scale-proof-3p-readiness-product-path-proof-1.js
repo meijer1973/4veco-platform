@@ -61,12 +61,14 @@ function checkShape(proof) {
   assert(typeof proof.generated === 'string' && proof.generated, 'generated timestamp missing');
   assert(
     proof.status === 'hold_for_authority_boundary_repair' ||
-      proof.status === 'scale_proof_3p_product_path_ready_with_a96_hold',
+      proof.status === 'scale_proof_3p_product_path_ready_with_a96_hold' ||
+      proof.status === 'scale_gate_1_ready_for_human_review',
     `unsupported status: ${proof.status}`
   );
   assert(
     proof.lead_recommendation === 'HOLD_FOR_AUTHORITY_BOUNDARY_REPAIR' ||
-      proof.lead_recommendation === 'HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1',
+      proof.lead_recommendation === 'HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1' ||
+      proof.lead_recommendation === 'READY_FOR_HUMAN_SCALE_GATE_1_REVIEW',
     `unsupported lead_recommendation: ${proof.lead_recommendation}`
   );
   assert(relPathExists(proof.screenshot_manifest), `missing screenshot manifest ${proof.screenshot_manifest}`);
@@ -102,12 +104,13 @@ function checkAuthority(proof) {
     }
   }
   if ((proof.authority_issues || []).length === 0) {
-    assert(proof.status === 'scale_proof_3p_product_path_ready_with_a96_hold', 'clean authority proof must still hold Scale Gate on A96');
+    assert(proof.status === 'scale_gate_1_ready_for_human_review', 'clean authority proof must be ready for human Scale Gate 1 review');
     assert(
-      proof.lead_recommendation === 'HOLD_FOR_A96_CALCULATION_REFINEMENT_FOR_SCALE_GATE_1',
-      'clean authority proof must lead-review hold on A96'
+      proof.lead_recommendation === 'READY_FOR_HUMAN_SCALE_GATE_1_REVIEW',
+      'clean authority proof must route to human Scale Gate 1 review'
     );
-    assert(proof.next_repair_sprint === 'A96-CALCULATION-ANSWER-FORM-REFINEMENT-1', 'clean proof must name A96 next repair sprint');
+    assert(proof.next_repair_sprint === null, 'clean proof must not name another A96 repair sprint');
+    assert(typeof proof.next_gate_action === 'string' && proof.next_gate_action.includes('Human Scale Gate 1 review'), 'clean proof must name human gate review as next action');
   }
 }
 
@@ -170,6 +173,10 @@ function checkSurfaceData(proof) {
       assert(exit.targetReadinessEvidence === true, `${paragraph} ${side} exit targetReadinessEvidence must be true`);
       assert(exit.completionLanguageEligible === false, `${paragraph} ${side} exit completionLanguageEligible must be false`);
       assert(exit.metadataStatus === 'target_equivalent_aligned', `${paragraph} ${side} exit status must be target_equivalent_aligned`);
+      if (paragraph === '1.1.2') {
+        assert(exit.a96AnswerFormReady === true, `${paragraph} ${side} exit must record A96 answer-form readiness`);
+        assert(exit.taskFamilies.includes('calculation_answer_form_capture'), `${paragraph} ${side} exit missing A96 answer-form family`);
+      }
 
       const short = shortCheck[side];
       assert(short.surface === 'advisory_short_check', `${paragraph} ${side} short check must be advisory_short_check`);
@@ -221,6 +228,61 @@ function checkScreenshots(proof) {
     assert(completedMobile.inspection.feedback_good_count > 0, `${paragraph} mobile completed exit lacks good feedback`);
     assert(completedDesktop.inspection.data_flags.completionLanguageEligible === false, `${paragraph} desktop completed exit has completion language enabled`);
     assert(completedMobile.inspection.data_flags.completionLanguageEligible === false, `${paragraph} mobile completed exit has completion language enabled`);
+    if (paragraph === '1.1.2') {
+      for (const capture of [completedDesktop, completedMobile]) {
+        const a96 = capture.inspection.a96_answer_form;
+        assert(a96 && a96.present === true, `${capture.id}: A96 answer-form control missing`);
+        assert(a96.family === 'calculation_answer_form_capture', `${capture.id}: A96 family mismatch`);
+        assert(a96.formula_token_count >= 8, `${capture.id}: A96 formula tokens missing`);
+        assert(a96.substitution_field_ids.includes('newPrice'), `${capture.id}: A96 newPrice substitution missing`);
+        assert(a96.substitution_field_ids.includes('oldPriceNumerator'), `${capture.id}: A96 oldPriceNumerator substitution missing`);
+        assert(a96.substitution_field_ids.includes('oldPriceDenominator'), `${capture.id}: A96 oldPriceDenominator substitution missing`);
+        assert(a96.final_answer_field_present === true, `${capture.id}: A96 final answer field missing`);
+        assert(a96.notation_field_present === true, `${capture.id}: A96 notation field missing`);
+        assert(a96.conclusion_field_present === true, `${capture.id}: A96 conclusion field missing`);
+        assert(a96.old_work_textarea_present === false, `${capture.id}: A96 must not use old work textarea`);
+        assert(a96.answer_giving_placeholder_count === 0, `${capture.id}: A96 substitution placeholder reveals an answer`);
+      }
+
+      const desktopInitial = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'initial' && item.viewport.width === 1280 && item.theme === 'light');
+      const mobileInitial = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'initial' && item.viewport.width === 390);
+      const darkInitial = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'initial' && item.theme === 'dark');
+      assert(desktopInitial, '1.1.2 missing A96 desktop initial screenshot');
+      assert(mobileInitial, '1.1.2 missing A96 mobile initial screenshot');
+      assert(darkInitial, '1.1.2 missing A96 dark initial screenshot');
+      for (const capture of [desktopInitial, mobileInitial, darkInitial]) {
+        assert(capture.inspection.a96_answer_form.answer_giving_placeholder_count === 0, `${capture.id}: A96 initial placeholder reveals an answer`);
+      }
+      assert(
+        mobileInitial.inspection.a96_answer_form.answer_form_visible_in_viewport === true,
+        `${mobileInitial.id}: A96 mobile initial screenshot must show the answer form in the viewport`
+      );
+
+      const negativeActions = [
+        'a96-partial-wrong-formula',
+        'a96-wrong-denominator',
+        'a96-missing-substitution',
+        'a96-missing-notation',
+        'a96-missing-parts-feedback',
+      ];
+      for (const action of negativeActions) {
+        const capture = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === action);
+        assert(capture, `1.1.2 missing ${action} screenshot`);
+        assert(capture.inspection.a96_answer_form.missing_feedback_count > 0, `${capture.id}: A96 negative state lacks missing-part feedback`);
+        assert(capture.inspection.a96_answer_form.feedback_visible_in_viewport === true, `${capture.id}: A96 negative feedback must be visible in the screenshot viewport`);
+        assert(capture.inspection.feedback_good_count === 0, `${capture.id}: A96 negative state should not show good feedback`);
+      }
+
+      const correctA96 = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'a96-correct-response');
+      assert(correctA96, '1.1.2 missing A96 correct-response screenshot');
+      assert(correctA96.inspection.a96_answer_form.missing_feedback_count === 0, `${correctA96.id}: A96 correct response should not list missing parts`);
+      assert(correctA96.inspection.feedback_good_count > 0, `${correctA96.id}: A96 correct response lacks good feedback`);
+      assert(correctA96.inspection.a96_answer_form.feedback_visible_in_viewport === true, `${correctA96.id}: A96 correct feedback must be visible in the screenshot viewport`);
+
+      const exemplar = getCapture(proof, paragraph, (item) => item.surface === 'exit-ticket' && item.action === 'a96-exemplar-comparison');
+      assert(exemplar, '1.1.2 missing A96 v3 exemplar-comparison screenshot');
+      assert(exemplar.inspection.a96_answer_form.exemplar_comparison_present === true, `${exemplar.id}: missing A96 exemplar comparison panel`);
+    }
   }
 }
 
@@ -235,7 +297,8 @@ function checkSummary(proof) {
   assert(summary.rendered_desktop_mobile_dark_coverage === true, 'summary desktop/mobile/dark coverage must pass');
   assert(summary.completed_feedback_states_captured === true, 'summary completed feedback states must pass');
   assert(summary.advisory_feedback_states_captured === true, 'summary advisory feedback states must pass');
-  assert(summary.a96_calculation_answer_form_refinement_ready === false, 'summary A96 refinement must remain held');
+  assert(summary.a96_dedicated_rendered_states_ready === true, 'summary A96 dedicated rendered states must pass');
+  assert(summary.a96_calculation_answer_form_refinement_ready === true, 'summary A96 refinement must be ready');
   assert(summary.target_completion_language_held_in_completed_exit_routes === true, 'summary completion language must stay held');
   assert(summary.no_broad_authority_terms_in_captures === true, 'summary broad authority terms must be absent');
   assert(summary.first_three_landing_authority_copy_neutral === true, 'summary first-three authority copy must be neutral');
@@ -246,12 +309,11 @@ function checkSummary(proof) {
 function checkScaleReadiness(proof) {
   const scale = proof.scale_gate_readiness || {};
   assert(scale.product_path_evidence_ready_for_human_review === true, 'product-path evidence must be ready for human review');
-  assert(scale.scale_gate_1_ready === false, 'Scale Gate 1 must remain held');
-  assert(
-    scale.scale_gate_1_hold_reason === 'A96_CALCULATION_ANSWER_FORM_REFINEMENT_REQUIRED_OR_HUMAN_WAIVER',
-    'Scale Gate hold reason must name A96'
-  );
-  assert(scale.a96_calculation_answer_form_refinement_ready === false, 'A96 refinement readiness must be false');
+  assert(scale.scale_gate_1_ready_for_human_review === true, 'Scale Gate 1 must be ready for human review');
+  assert(scale.scale_gate_1_ready === true, 'Scale Gate 1 readiness flag must be true after A96 repair');
+  assert(scale.scale_gate_1_authority_status === 'READY_FOR_HUMAN_REVIEW_NOT_AUTHORIZED', 'Scale Gate authority status must stay review-only');
+  assert(scale.scale_gate_1_hold_reason === null, 'Scale Gate hold reason must be clear after A96 repair');
+  assert(scale.a96_calculation_answer_form_refinement_ready === true, 'A96 refinement readiness must be true');
   assert(scale.product_route_adoption_authorized === false, 'product route adoption must remain unauthorized');
   assert(scale.diagnostics_mastery_pv_student_use_authorized === false, 'diagnostics/mastery/PV/student use must remain unauthorized');
   assert(scale.claim_scope === 'first_three_paragraphs_rendered_product_path_only', 'claim scope must stay first-three rendered product path only');

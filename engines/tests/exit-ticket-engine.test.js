@@ -3,9 +3,25 @@ const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.jso
 const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
 const short112Data = require('../../source-data/book-1/exit-ticket/1.1.2-korte-check.json');
 const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
+const A96ProofData = require('../../build-scripts/sprints/mtu-ans-proof-impl1-a96-data');
 
 function clone(value) {
     return JSON.parse(JSON.stringify(value));
+}
+
+function a96GoodResponse() {
+    const task = targetData.tasks.find((item) => item.id === 'prijsstijging-procent').taskShell;
+    return {
+        methodTokens: task.expected.methodTokens.slice(),
+        substitution: {
+            newPrice: '920',
+            oldPriceNumerator: '800',
+            oldPriceDenominator: '800',
+        },
+        finalAnswer: '15',
+        notation: '%',
+        conclusion: 'De prijs van de fiets stijgt met 15 procent.',
+    };
 }
 
 function graphTaskShellCheckpointData() {
@@ -259,11 +275,7 @@ describe('ExitTicketEngine', () => {
             completionLanguageEligible: false,
         }));
 
-        engine.checkTask('prijsstijging-procent', {
-            work: '(920 - 800) / 800 x 100',
-            finalAnswer: '15',
-            unitNotation: '%'
-        });
+        engine.checkTask('prijsstijging-procent', a96GoodResponse());
         engine.checkTask('index-naar-waarde', {
             work: '162 / 150 x 100',
             finalAnswer: '108',
@@ -295,11 +307,7 @@ describe('ExitTicketEngine', () => {
 
     test('does not mark 1.1.2 as proof-candidate when one operation needs repair', () => {
         const engine = new ExitTicketEngine({ data: targetData });
-        engine.checkTask('prijsstijging-procent', {
-            work: '(920 - 800) / 800 x 100',
-            finalAnswer: '15',
-            unitNotation: '%'
-        });
+        engine.checkTask('prijsstijging-procent', a96GoodResponse());
         engine.checkTask('index-naar-waarde', {
             work: '162 / 150 x 100',
             finalAnswer: '108',
@@ -363,10 +371,19 @@ describe('ExitTicketEngine', () => {
     test('does not accept bogus work or contradictory D31 wording as proof-candidate', () => {
         const engine = new ExitTicketEngine({ data: targetData });
         const badWork = engine.checkTask('prijsstijging-procent', {
-            work: 'ik gok',
-            finalAnswer: '15%'
+            methodTokens: [],
+            substitution: {},
+            finalAnswer: '15',
+            notation: '%',
+            conclusion: 'De prijs van de fiets stijgt met 15 procent.',
         });
         expect(badWork.matched).toBe(false);
+
+        const contradictoryConclusion = engine.checkTask('prijsstijging-procent', A96ProofData.negativeResponses.contradictoryNegation);
+        expect(contradictoryConclusion).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false,
+        }));
 
         engine.checkTask('index-naar-waarde', {
             work: '162 / 150 x 100',

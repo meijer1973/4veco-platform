@@ -682,6 +682,23 @@ a {
   min-height: 46px;
 }
 
+.ge-token-selected {
+  border-color: color-mix(in srgb, var(--ge-accent) 70%, var(--ge-line));
+}
+
+.ge-answer-form-feedback {
+  margin: 12px 0 0;
+  padding: 10px 12px 10px 28px;
+  border: 1px solid color-mix(in srgb, var(--ge-warn) 55%, var(--ge-line));
+  border-radius: 8px;
+  background: var(--ge-warn-bg);
+  color: var(--ge-warn);
+}
+
+.ge-answer-form-feedback[hidden] {
+  display: none;
+}
+
 .ge-feedback {
   display: none;
   margin-top: 12px;

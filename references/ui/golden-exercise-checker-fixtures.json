@@ -95,6 +95,39 @@
       }
     },
     {
+      "id": "answer_giving_substitution_placeholder",
+      "category": "interaction",
+      "expected_violation": "answer_giving_placeholder",
+      "description": "A calculation answer-form substitution placeholder cannot reveal the expected source value.",
+      "payload": {
+        "data": {
+          "parNr": "2.1.1",
+          "layout": { "framework": "golden_exercise_workbench" },
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "a96-placeholder",
+                "family": "calculation_answer_form_capture",
+                "interaction": {
+                  "substitution": {
+                    "fields": [
+                      { "id": "newPrice", "label": "nieuwe prijs", "placeholder": "920" }
+                    ]
+                  }
+                },
+                "expected": {
+                  "substitution": {
+                    "newPrice": { "kind": "number", "value": 920 }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "formula_token_bank_ordered_as_answer",
       "category": "interaction",
       "expected_violation": "formula_tokens_ordered_answer",

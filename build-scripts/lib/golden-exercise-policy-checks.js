@@ -174,6 +174,10 @@ function expectedAnswerNeedles(shell) {
   add(expected.oldValue && expected.oldValue.value);
   add(expected.newValue && expected.newValue.value);
   add(expected.finalAnswer && expected.finalAnswer.value);
+  for (const substitutionExpected of Object.values(expected.substitution || {})) {
+    add(substitutionExpected && substitutionExpected.value);
+    asArray(substitutionExpected && substitutionExpected.accepted).forEach(add);
+  }
   asArray(expected.finalAnswer && expected.finalAnswer.acceptedNotations).forEach(add);
   asArray(expected.acceptedNotations).forEach(add);
   return [...needles];
@@ -351,8 +355,15 @@ function validateLayoutRegistry() {
   ['graph_construction_substitute', 'graph_reading', 'table_value_selection'].forEach((family) => {
     assert(asArray(graphAdvisoryVariant.required_task_families).includes(family), `graph advisory variant missing required task family ${family}`);
   });
-  ['calculation_work_capture', 'structured_short_response'].forEach((family) => {
-    assert(asArray(calculationVariant.required_task_families).includes(family), `calculation variant missing required task family ${family}`);
+  assert(
+    asArray(calculationVariant.required_task_families).includes('structured_short_response'),
+    'calculation variant missing required task family structured_short_response'
+  );
+  ['calculation_work_capture', 'calculation_answer_form_capture'].forEach((family) => {
+    assert(
+      asArray(calculationVariant.calculation_task_family_any_of).includes(family),
+      `calculation variant missing supported calculation task family ${family}`
+    );
   });
   assert(asArray(advisoryVariant.required_task_types).includes('choice'), 'advisory short-check variant must require choice tasks');
   assert(advisoryVariant.surface_type === 'advisory_short_check', 'advisory short-check variant must declare advisory surface type');
@@ -634,8 +645,22 @@ function validateExemplarIndexFormulaBoundary() {
 function validateA96FixturePolicy() {
   const fixtures = readJson(PATHS.a96NegativeFixtures);
   const negative = fixtures.negative || {};
-  assert(negative.leftToRightTokenClickOrder, 'A96 negative fixtures missing leftToRightTokenClickOrder');
-  assert(negative.visuallyIdenticalOldPriceTokensWithDistinctIds, 'A96 negative fixtures missing visually identical token trap');
+  [
+    'finalAnswerOnly',
+    'sourceValuesOnly',
+    'missingFormula',
+    'wrongDenominator',
+    'leftToRightTokenClickOrder',
+    'missingSubstitution',
+    'missingNotation',
+    'conclusionWithoutDirection',
+    'vagueExampleOnly',
+    'contradictoryNegation',
+    'contradictoryDecrease',
+    'visuallyIdenticalOldPriceTokensWithDistinctIds',
+  ].forEach((id) => {
+    assert(negative[id], `A96 negative fixtures missing ${id}`);
+  });
   return { exemplar_id: fixtures.exemplar_id, negative_count: Object.keys(negative).length };
 }
 
