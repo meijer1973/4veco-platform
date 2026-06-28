@@ -501,6 +501,98 @@ function collectDeclaredExactMemberMismatches(raw, exactMembers) {
   return mismatches;
 }
 
+function normalizeReadinessOperation(raw) {
+  const operation = raw.readiness_operation || raw.readinessOperation || raw.coordinated_readiness || {};
+  const kind = operation.kind || operation.operation || null;
+  const coordinatedMarkReady =
+    kind === 'coordinated_mark_ready' ||
+    operation.coordinated_mark_ready === true ||
+    raw.coordinated_mark_ready === true;
+  return {
+    ...operation,
+    operation: coordinatedMarkReady ? 'coordinated_mark_ready' : kind,
+    coordinated_mark_ready: coordinatedMarkReady,
+    both_draft_substantively_ready:
+      operation.both_draft_substantively_ready === true ||
+      raw.both_draft_substantively_ready === true,
+    members: asArray(operation.members || raw.readiness_members).map(normalizeBundleMember),
+  };
+}
+
+function memberKey(member) {
+  if (!member || !member.repository || !member.pr_number) return null;
+  return `${member.repository}#${member.pr_number}`;
+}
+
+function findOperationMember(operation, member) {
+  const key = memberKey(member);
+  if (!key) return null;
+  return (operation.members || []).find((item) => memberKey(item) === key) || null;
+}
+
+function memberReadinessFlag(member) {
+  return Boolean(
+    member &&
+      (member.substantively_ready === true ||
+        member.ready_for_coordinated_mark_ready === true)
+  );
+}
+
+function memberCarriesExactHeadReadiness(member) {
+  const item = normalizeBundleMember(member);
+  return Boolean(
+    memberReadinessFlag(item) &&
+      SHA_PATTERN.test(String(item.head_sha || '')) &&
+      SHA_PATTERN.test(String(item.reviewed_payload_head_sha || '')) &&
+      item.head_sha === item.reviewed_payload_head_sha
+  );
+}
+
+function coordinatedMarkReadyMemberProof(operation, member) {
+  if (
+    !operation ||
+    operation.coordinated_mark_ready !== true ||
+    operation.both_draft_substantively_ready !== true
+  ) {
+    return { ok: false, failures: [] };
+  }
+  const operationMember = findOperationMember(operation, member);
+  const selfReady = memberCarriesExactHeadReadiness(member);
+  const failures = [];
+  let operationReady = false;
+
+  if (memberReadinessFlag(operationMember)) {
+    const operationHead = operationMember.head_sha;
+    const operationReviewedHead = operationMember.reviewed_payload_head_sha;
+    const headValid = SHA_PATTERN.test(String(operationHead || ''));
+    const reviewedHeadValid = SHA_PATTERN.test(String(operationReviewedHead || ''));
+
+    if (!headValid || !reviewedHeadValid) {
+      if (!selfReady) failures.push('readiness_member_exact_head_missing');
+    }
+    if (headValid && member.head_sha && operationHead !== member.head_sha) {
+      failures.push('readiness_member_head_mismatch');
+    }
+    if (
+      reviewedHeadValid &&
+      member.reviewed_payload_head_sha &&
+      operationReviewedHead !== member.reviewed_payload_head_sha
+    ) {
+      failures.push('readiness_member_reviewed_payload_head_mismatch');
+    }
+    operationReady = headValid && reviewedHeadValid && failures.length === 0;
+  }
+
+  return {
+    ok: (selfReady || operationReady) && failures.length === 0,
+    failures: uniqueStrings(failures),
+  };
+}
+
+function memberSubstantivelyReadyForCoordinatedMarkReady(operation, member) {
+  return coordinatedMarkReadyMemberProof(operation, member).ok;
+}
+
 function bundleSafetyProof(proof, evidence) {
   const raw = (proof && proof.bundle) || evidence.bundle || {};
   const pairedPrs = asArray(raw.paired_prs || (evidence.bundle && evidence.bundle.paired_prs)).map(normalizeBundleMember);
@@ -515,6 +607,7 @@ function bundleSafetyProof(proof, evidence) {
   if (!required) {
     return { required: false, delegated: false, ok: true, failures: [], summary: null };
   }
+  const readinessOperation = normalizeReadinessOperation(raw);
   if (typeof bundleId !== 'string' || !bundleId.trim()) failures.push('bundle_id_missing');
   const controller = normalizeBundleMember(raw.controller || {});
   if (!bundleMemberComplete(controller, { requireHead: false })) {
@@ -548,6 +641,8 @@ function bundleSafetyProof(proof, evidence) {
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
   for (const paired of pairedPrs) {
     if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
+    const coordinatedProof = coordinatedMarkReadyMemberProof(readinessOperation, paired);
+    failures.push(...coordinatedProof.failures);
     if (paired && !paired.base) failures.push('paired_pr_base_missing');
     if (paired && paired.reviewed_payload_head_sha && paired.head_sha && paired.reviewed_payload_head_sha !== paired.head_sha) {
       failures.push('paired_pr_head_mismatch');
@@ -578,7 +673,9 @@ function bundleSafetyProof(proof, evidence) {
   for (const paired of pairedPrs) {
     const pairedLeadReview = pairedLeadReviewFor(paired, proof);
     if (pairedLeadReview) pairedLeadReviews.push(normalizePairedLeadReview(pairedLeadReview));
-    const transitionable = controllerFirstDraftTransitionable(paired, transitionContext);
+    const coordinatedTransitionable = coordinatedMarkReadyMemberProof(readinessOperation, paired).ok;
+    const controllerTransitionable = controllerFirstDraftTransitionable(paired, transitionContext);
+    const transitionable = coordinatedTransitionable || controllerTransitionable;
     const lifecycleOk = bundleMemberLifecycleOk(paired);
     if (transitionable) {
       transitionableDraftMembers.push({
@@ -587,7 +684,7 @@ function bundleSafetyProof(proof, evidence) {
         base: paired.base || null,
         head_sha: paired.head_sha,
         reviewed_payload_head_sha: paired.reviewed_payload_head_sha,
-        reason: 'controller_first_mark_ready',
+        reason: coordinatedTransitionable ? 'coordinated_mark_ready' : 'controller_first_mark_ready',
       });
     }
     if (paired && paired.is_draft === true && !transitionable) failures.push('paired_pr_draft');
@@ -614,6 +711,7 @@ function bundleSafetyProof(proof, evidence) {
     paired_prs: pairedPrs,
     exact_members: exactMembers,
     compatibility,
+    readiness_operation: readinessOperation.coordinated_mark_ready ? readinessOperation : null,
     transition_ready: transitionReady,
     merge_ready: mergeReady,
     transitionable_draft_members: transitionableDraftMembers,
@@ -733,6 +831,8 @@ function collectRevisionReasons(evidence) {
     proof.integration &&
     proof.integration.authorization_inherited === true &&
     proof.integration.integration_head_sha === headSha;
+  const controllerBundlePendingBlock =
+    /^BLOCKED$/i.test(mergeState) && controllerDelegatedBundleCi;
 
   if (!evidence.reviewed_pr.repo || !evidence.reviewed_pr.number || !evidence.reviewed_pr.url) {
     reasons.push('missing_remote_pr_identity');
@@ -742,7 +842,7 @@ function collectRevisionReasons(evidence) {
     evidence.reviewed_pr.mergeable === false ||
     /^CONFLICTING$/i.test(String(evidence.reviewed_pr.mergeable || '')) ||
     /^DIRTY$/i.test(mergeState) ||
-    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock)
+    (/^BLOCKED$/i.test(mergeState) && !integrationStatusPendingBlock && !controllerBundlePendingBlock)
   ) {
     reasons.push('merge_readiness_blocked');
   }
@@ -1176,6 +1276,14 @@ function parseRenderedDecisionMarkdown(body) {
 function renderDecisionMarkdown(decision) {
   validateDecision(decision);
   const digest = decisionDigest(decision);
+  const delegatedBundleProof = Boolean(decision.proof.bundle && decision.proof.bundle.delegated === true);
+  const delegatedController = delegatedBundleProof ? decision.proof.bundle.controller || {} : {};
+  const ciHeadLabel = delegatedBundleProof ? 'Controller CI head' : 'CI head';
+  const ciStatusLabel = delegatedBundleProof ? 'Controller CI status' : 'CI status';
+  const branchProtectionLabel = delegatedBundleProof ? 'Delegated branch protection' : 'Branch protection';
+  const leadReviewLine = delegatedBundleProof
+    ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
+    : `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``;
   const lines = [
     decisionMarker(decision),
     '# PR Readiness Decision',
@@ -1208,14 +1316,19 @@ function renderDecisionMarkdown(decision) {
     '',
     '## Proof Summary',
     '',
-    `- CI head: \`${decision.proof.ci_head_sha || 'missing'}\``,
-    `- CI status: \`${decision.proof.ci_status || 'missing'}\``,
+    ...(delegatedBundleProof
+      ? [
+          `- Delegated bundle controller proof: \`${delegatedController.repository || 'unknown'}#${delegatedController.pr_number || 'unknown'}\``,
+        ]
+      : []),
+    `- ${ciHeadLabel}: \`${decision.proof.ci_head_sha || 'missing'}\``,
+    `- ${ciStatusLabel}: \`${decision.proof.ci_status || 'missing'}\``,
     `- Required CI contexts: ${(decision.proof.ci_required_contexts || []).map((item) => `\`${item}\``).join(', ') || 'none recorded'}`,
     `- Checker proof: ${(decision.proof.checkers || []).map((checker) => `\`${checker.command || 'unknown'}:${checker.status || checker.conclusion || checker.result || 'unknown'}\``).join(', ') || 'none recorded'}`,
-    `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``,
+    leadReviewLine,
     `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
     `- Integration authorization inherited for lead review: \`${Boolean(decision.proof.lead_review_integration_authorization_inherited)}\``,
-    `- Branch protection: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
+    `- ${branchProtectionLabel}: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
   if (decision.proof.human_authorization) {
     lines.push(`- Human payload authorization: \`${JSON.stringify(decision.proof.human_authorization)}\``);

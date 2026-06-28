@@ -131,6 +131,7 @@ jobs:
             'npm run check:landing-v2',
             'npm run check:news-detective-v2',
             'npm run check:scope-language',
+            'npm run check:active-governance-wording',
             'npm run check:golden-graph-advisory-113',
             'npm run check:scale-proof-3p-product-path',
             'node build-scripts/reports/validate-report-json.js',

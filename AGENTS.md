@@ -6,12 +6,12 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 
 ## Read first
 
-- Use `../CLAUDE.md` "Working agreement — how Claude operates in this repo" for the seven non-negotiable operating rules (read-first, sanity-check-plans, be-honest-about-mistakes, quality-over-patchwork). Applies to every task.
+- Use this `AGENTS.md` file as the canonical starting point for every agent. The senior-developer operating discipline, read-first expectations, planning sanity checks, honesty about mistakes, and quality-over-patchwork rule all live here.
 - Use `../4veco-lessen/specifications/product-vision.md` as the canonical strategic product read before roadmap, architecture, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/product-end-state.md` as the canonical operational product north star before roadmap, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/companion-core-specifications.md` as the stable companion-surface specification.
-- Use [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) as the end-to-end guide for building a complete paragraph.
-- Use [BUILD-CHAPTER.md](C:\Projects\4veco\4veco-platform\BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
+- Use [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) as the end-to-end guide for building a complete paragraph.
+- Use [BUILD-CHAPTER.md](BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
 - Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
 
@@ -203,7 +203,9 @@ After a normal implementation draft PR is published:
 3. Run the independent PR Readiness Reviewer with `npm.cmd run review:pr-readiness`.
 4. Apply only its allowed transition with `npm.cmd run apply:pr-readiness`, or use
    `npm.cmd run route-and-apply:pr-readiness -- --pr <number> --evidence <evidence.json> --expect-transition MARK_READY`
-   when current live evidence and supplemental proof should mark the draft ready.
+   when current live evidence and supplemental proof should mark the draft
+   ready. Use `npm.cmd run apply:bundle-readiness` when one controller decision
+   must mark a paired platform/lesson bundle ready together.
 5. Return to the owner only when the route is `READY_FOR_HUMAN_REVIEW`, a
    genuine `PAUSE_ESCALATE` blocker exists, or autonomous closure has completed
    and a final status report is appropriate.
@@ -252,11 +254,14 @@ Merge authority follows the PR-readiness route:
 ### Serialized integration lane
 
 When the authorized integration lane is operational, agents must not call
-`gh pr merge` directly. Use `.github/workflows/authorized-pr-integration.yml`
-with the PR number and the human payload authorization comment ID. The workflow
-runs from trusted `main` code and serializes integrations with the
-`4veco-main-integration` concurrency group, `queue: max`, and
-`cancel-in-progress: false`.
+`gh pr merge` directly. Prefer `.github/workflows/authorized-pr-integration.yml`
+with the PR number and the human payload authorization comment ID when the
+trusted workflow token can verify branch protection. If the workflow token
+cannot read required branch-protection state, use the owner-authenticated local
+fallback `npm.cmd run integrate:authorized-pr` with the same authorization
+comment ID. Both paths serialize integrations through the same policy lane and
+must validate payload lineage, branch protection, CI, readiness, requested
+changes, review threads, and merge eligibility before merging.
 
 Human authorization binds to the reviewed payload head, not to every later
 base-sync head. Record authorization with the
@@ -328,6 +333,10 @@ For paired platform/lesson work:
 - run `.github/workflows/cross-repo-bundle-compatibility.yml` for
   `platform-first`, `lesson-first`, and `bundle-final`;
 - require `bundle-final` green plus at least one green intermediate state;
+- when both members are draft but substantively ready, use
+  `npm.cmd run apply:bundle-readiness` to post exact-head member readiness
+  decisions and coordinate the `MARK_READY` transitions before requesting merge
+  authorization;
 - record one canonical `4veco-human-bundle-authorization` comment for the
   whole pair when human approval is required;
 - merge through `.github/workflows/authorized-bundle-integration.yml` or
@@ -544,7 +553,7 @@ The current legacy game target (historically Module 3) is frozen until September
 │   ├── check-links.js          ← Verifieert alle interne links
 │   ├── verify-deployment.sh    ← Post-push verificatie
 │   └── pre-push-hook.js        ← Git hook
-├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for Claude, Codex, and any agent
+├── skills/                     ← Shared skills (didactiek, templates, grafieken, quality control) — for every agent
 ├── agents/                     ← Reusable review-agent specifications for bounded QA roles
 ├── references/                 ← Authoritative standards, organised by maintenance status:
 │   ├── external/                ←   Mirrored from outside bodies (CvTE, inspectie, school); machine-refreshed
@@ -588,7 +597,7 @@ De deploy doet:
 - YouTube-video pagina's
 - docx → html conversies
 
-Voor de volledige paragraaf-productie: volg [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md).
+Voor de volledige paragraaf-productie: volg [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md).
 
 ### Deployen naar een ander target
 ```bash
@@ -616,7 +625,7 @@ MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" node build-s
 | `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
 | `pptx-331-rol-overheid.js` | Presentatie `.pptx` (reference builder; uses `lib-pptx.js`) |
 
-Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets gebruiken reference scripts of converters buiten `deploy.js`. Zie [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) voor de complete productieketen.
+Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets gebruiken reference scripts of converters buiten `deploy.js`. Zie [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) voor de complete productieketen.
 
 ---
 
