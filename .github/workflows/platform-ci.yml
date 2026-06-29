@@ -79,8 +79,19 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r .github/ci-python-requirements.txt
 
+      - name: Install presentation proof tools
+        run: |
+          choco install libreoffice-fresh poppler -y --no-progress
+          "C:\Program Files\LibreOffice\program" | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+
       - name: Validate platform Jest suite
         run: npm run check:platform
+
+      - name: Build presentation-v2 registered decks
+        run: npm run build:presentation-v2
+
+      - name: Validate presentation-v2 PPTX proof
+        run: npm run check:presentation-v2-pptx-proof -- --output-dir ..\ci-artifacts\presentation-v2-pptx-proof
 
       - name: Validate reasoning golden family guardrails
         run: npm run check:reasoning-golden
@@ -135,5 +146,6 @@ jobs:
             4veco-platform/reports/json/*.json
             4veco-platform/reports/url-index.md
             ci-artifacts/platform-ci-evidence.json
+            ci-artifacts/presentation-v2-pptx-proof/**
           if-no-files-found: ignore
           retention-days: 14

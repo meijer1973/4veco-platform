@@ -376,8 +376,8 @@ old 27-file contract.
 | 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | Voorbereiden | Office/legacy only | Adapt `template-B_voorkennis.js` only if Word is requested | Book content + domain knowledge | Optional Office export |
 | 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | Voorbereiden | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Book content + domain knowledge | Generated/converted |
 | 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | Voorbereiden | Office/legacy only | Copy only for Office package | Static file (identical in every paragraph) | Optional Office export |
-| 6 | `X.Y.Z [Naam] – presentatie.pptx` | Leren | Yes | Adapt `pptx-331-rol-overheid.js` (uses `lib-pptx.js`) | Book content + SVG graphs | Scripted-manual |
-| 7 | `X.Y.Z [Naam] – presentatie.html` | Leren | Yes | `convert_presentatie.py` | File #6 (.pptx) | Converted |
+| 6 | `X.Y.Z [Naam] – presentatie.pptx` | Leren | Yes | Presentation V2 semantic model when available; legacy Office builds may adapt `pptx-331-rol-overheid.js` | Book content + semantic visuals/SVG graphs | Scripted-manual |
+| 7 | `X.Y.Z [Naam] – presentatie.html` | Leren | Yes | Presentation V2 semantic model when available; `convert_presentatie.py` is legacy Office/full-package only | Same semantic model or file #6 (.pptx) | Generated/converted |
 | 8 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | Leren | Office/legacy only | Adapt `template-A_vaardigheden.js` only if Word is requested | Book content + domain knowledge | Optional Office export |
 | 9 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Book content + domain knowledge | Generated/converted |
 | 10 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Office/legacy only | Adapt `nieuws-351-352-afsluiting.js` only if Word is requested | Recent Dutch news + SVG visual | Optional Office export |
@@ -859,7 +859,7 @@ The default is **narrative-first** — students connect with stories before abst
 
 ## B8. Build script requirement
 
-**Every scripted-manual file MUST have its build script saved** in `build-scripts/content/book-N/` with naming convention `bN-XYZ-<type>.js` (e.g., `b1-111-presentatie.js`). Older legacy scripts under `build-scripts/content/module-N/` stay where they are; new lessen work writes under `book-N/`.
+**Every scripted-manual file MUST have its build script saved** in `build-scripts/content/book-N/` with naming convention `bN-XYZ-<type>.js` (for example `b1-111-presentation-v2.js` or a registered model such as `b1-111-presentation-v2-model.js`). Older legacy scripts under `build-scripts/content/module-N/` stay where they are; new lessen work writes under `book-N/`.
 
 This ensures:
 - Any file can be regenerated after corrections
