@@ -103,6 +103,14 @@ const FORBIDDEN_PATTERNS = Object.freeze([
     regex: /authorization for the exact platform and lesson heads/i,
   },
   {
+    id: 'normal-merge-path-permission',
+    regex: /\b(normal merge path|use normal merge)\b/i,
+  },
+  {
+    id: 'direct-gh-pr-merge-permission',
+    regex: /\b(may|can|should)\s+(?:directly\s+)?(?:call\s+)?`?gh pr merge`?\b/i,
+  },
+  {
     id: 'claude-md-read-first',
     regex: /(read|use|load)[^\n]{0,80}`?(\.\.\/)?CLAUDE\.md`?/i,
   },

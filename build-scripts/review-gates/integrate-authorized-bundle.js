@@ -9,7 +9,11 @@ const {
   validateBundleAuthorizationRecord,
 } = require('./check-human-bundle-authorization');
 const { validateCompatibilityProof } = require('./cross-repo-bundle-compatibility');
-const { readinessCommentFromComments } = require('./integrate-authorized-pr');
+const {
+  INTEGRATION_CONTEXT,
+  readinessCommentFromComments,
+  setCommitStatus,
+} = require('./integrate-authorized-pr');
 const { summarizeLineage } = require('./check-integration-lineage');
 const { collectReviewThreadState } = require('./review-pr-readiness');
 const { readEvidence, validateEvidence } = require('../ci/platform-ci-evidence');
@@ -252,6 +256,62 @@ function mergePr(repo, prNumber, headSha, options = {}) {
   if (options.dryRun) return { dry_run: true, repo, prNumber, head_sha: headSha };
   runGh(['pr', 'merge', String(prNumber), '--repo', repo, '--merge', '--match-head-commit', headSha]);
   return { merged: true, repo, prNumber, head_sha: headSha };
+}
+
+function setPlatformIntegrationStatus(deps, sha, state, description, targetUrl, options = {}) {
+  if (!sha) {
+    return {
+      ok: false,
+      failure: 'platform_integration_status_head_missing',
+      state,
+      context: INTEGRATION_CONTEXT,
+    };
+  }
+  if (options.dryRun) {
+    return {
+      ok: true,
+      dry_run: true,
+      state,
+      sha,
+      context: INTEGRATION_CONTEXT,
+    };
+  }
+  try {
+    return {
+      ok: true,
+      status: deps.setCommitStatus(PLATFORM_REPO, sha, state, description, targetUrl, options),
+    };
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_integration_status_update_failed',
+      state,
+      sha,
+      context: INTEGRATION_CONTEXT,
+      error: error.message,
+    };
+  }
+}
+
+function platformStatusTarget(pr) {
+  return {
+    sha: pr && pr.headRefOid,
+    url: pr && pr.url,
+  };
+}
+
+function withTerminalFailureStatus(result, deps, target, options, description) {
+  const status = setPlatformIntegrationStatus(
+    deps,
+    target && target.sha,
+    'failure',
+    description,
+    target && target.url,
+    options
+  );
+  return status.ok
+    ? { ...result, integration_status: status }
+    : { ...result, integration_status: status, status_failure: status };
 }
 
 function fetchMergedPr(repo, prNumber) {
@@ -733,6 +793,7 @@ function defaultDeps(options = {}) {
     },
     mergePr,
     fetchMergedPr,
+    setCommitStatus,
     summarizeLineage,
     triggerPlatformCi,
     updateBranch,
@@ -782,6 +843,18 @@ function integrateBundle(options = {}) {
   const platformMainSha = deps.fetchMainSha(PLATFORM_REPO);
   const lessonMainSha = deps.fetchMainSha(LESSON_REPO);
   const platformPr = deps.fetchPr(PLATFORM_REPO, record.controller.pr_number);
+  const platformStatus = platformStatusTarget(platformPr);
+  const pendingStatus = setPlatformIntegrationStatus(
+    deps,
+    platformStatus.sha,
+    'pending',
+    'Authorized bundle integration lane running',
+    platformStatus.url,
+    options
+  );
+  if (!pendingStatus.ok) {
+    return { ok: false, phase: 'integration_status', integration_status: pendingStatus };
+  }
   const lessonPr = deps.fetchPr(LESSON_REPO, lessonMember.pr_number);
   const platformMember = memberStateFromPr(PLATFORM_REPO, record.controller, platformPr, platformMainSha, deps);
   const lessonMemberState = memberStateFromPr(LESSON_REPO, lessonMember, lessonPr, lessonMainSha, deps);
@@ -804,7 +877,7 @@ function integrateBundle(options = {}) {
     ...lessonPreflight.failures.map((failure) => `lesson:${failure}`),
   ];
   if (preflight.length > 0) {
-    return {
+    return withTerminalFailureStatus({
       ok: false,
       phase: 'preflight',
       failures: preflight,
@@ -812,7 +885,7 @@ function integrateBundle(options = {}) {
       lesson_pr: lessonPr,
       platform_preflight: platformPreflight,
       lesson_preflight: lessonPreflight,
-    };
+    }, deps, platformStatus, options, `Bundle preflight failed: ${preflight.join(', ')}`);
   }
 
   const compatibility = deps.recomputeCompatibility(record, {
@@ -821,10 +894,24 @@ function integrateBundle(options = {}) {
     lesson_base_sha: lessonMainSha,
     lesson_candidate_sha: lessonMemberState.integration_head_sha,
   });
-  if (!compatibility.ok) return { ok: false, phase: 'compatibility', compatibility };
+  if (!compatibility.ok) {
+    return withTerminalFailureStatus(
+      { ok: false, phase: 'compatibility', compatibility },
+      deps,
+      platformStatus,
+      options,
+      `Bundle compatibility failed: ${(compatibility.failures || []).join(', ')}`
+    );
+  }
   const order = record.merge_order === 'CI_SELECTED' ? compatibility.recommended_merge_order : record.merge_order;
   if (!compatibility.permitted_merge_orders.includes(order)) {
-    return { ok: false, phase: 'merge_order', compatibility, requested_order: order };
+    return withTerminalFailureStatus(
+      { ok: false, phase: 'merge_order', compatibility, requested_order: order },
+      deps,
+      platformStatus,
+      options,
+      `Bundle merge order not permitted: ${order || 'missing'}`
+    );
   }
   if (options.noMerge) {
     return { ok: true, phase: 'authorized_no_merge', order, compatibility, platform_main_sha: platformMainSha, lesson_main_sha: lessonMainSha };
@@ -846,7 +933,7 @@ function integrateBundle(options = {}) {
     const currentPlatformMain = deps.fetchMainSha(PLATFORM_REPO);
     const currentLessonMain = deps.fetchMainSha(LESSON_REPO);
     if (currentPlatformMain !== expectedMain[PLATFORM_REPO] || currentLessonMain !== expectedMain[LESSON_REPO]) {
-      return {
+      return withTerminalFailureStatus({
         ok: false,
         phase: 'base_changed_before_merge',
         failures: ['compatibility_recompute_required'],
@@ -856,7 +943,7 @@ function integrateBundle(options = {}) {
           [LESSON_REPO]: currentLessonMain,
         },
         merges,
-      };
+      }, deps, platformStatus, options, 'Bundle compatibility recompute required before merge');
     }
     let pr = deps.fetchPr(repo, member.pr_number);
     if (pr.headRefOid !== member.integration_head_sha) {
@@ -894,16 +981,81 @@ function integrateBundle(options = {}) {
         ...options,
         expectedLessonSha: currentLessonMain,
       });
-      if (!refreshed.ok) return { ok: false, phase: 'platform_pr_ci_refresh', refreshed, merges };
+      if (!refreshed.ok) {
+        return withTerminalFailureStatus(
+          { ok: false, phase: 'platform_pr_ci_refresh', refreshed, merges },
+          deps,
+          platformStatus,
+          options,
+          `Bundle platform CI refresh failed: ${refreshed.failure || 'unknown'}`
+        );
+      }
       pr = deps.fetchPr(repo, member.pr_number);
     }
     const preMerge = validateMemberPreflight(repo, pr, member, deps, {
       requireValidatePlatform: repo === PLATFORM_REPO,
     });
-    if (!preMerge.ok) return { ok: false, phase: 'pre_merge', repo, failures: preMerge.failures, pr, pre_merge: preMerge };
-    const merge = deps.mergePr(repo, member.pr_number, member.integration_head_sha, options);
+    if (!preMerge.ok) {
+      return withTerminalFailureStatus(
+        { ok: false, phase: 'pre_merge', repo, failures: preMerge.failures, pr, pre_merge: preMerge },
+        deps,
+        platformStatus,
+        options,
+        `Bundle pre-merge failed for ${repo}: ${preMerge.failures.join(', ')}`
+      );
+    }
+    if (repo === PLATFORM_REPO) {
+      const successStatus = setPlatformIntegrationStatus(
+        deps,
+        member.integration_head_sha,
+        'success',
+        'Bundle authorization inherited for exact platform integration head',
+        pr.url,
+        options
+      );
+      if (!successStatus.ok) {
+        return {
+          ok: false,
+          phase: 'integration_status',
+          repo,
+          pr_number: member.pr_number,
+          integration_status: successStatus,
+          merges,
+        };
+      }
+    }
+    let merge;
+    try {
+      merge = deps.mergePr(repo, member.pr_number, member.integration_head_sha, options);
+    } catch (error) {
+      return withTerminalFailureStatus(
+        { ok: false, phase: 'merge', repo, pr_number: member.pr_number, error: error.message, merges },
+        deps,
+        platformStatus,
+        options,
+        `Bundle merge rejected for ${repo}: ${error.message}`
+      );
+    }
+    if (options.dryRun) {
+      merges.push({
+        repo,
+        pr_number: member.pr_number,
+        merge,
+        dry_run: true,
+        merge_commit: null,
+      });
+      continue;
+    }
     const merged = validateMergedPr(repo, member.pr_number, deps.fetchMergedPr(repo, member.pr_number));
-    if (!merged.ok) return { ok: false, phase: 'merge_verification', merge, merged };
+    if (!merged.ok) {
+      return withTerminalFailureStatus(
+        { ok: false, phase: 'merge_verification', merge, merged },
+        deps,
+        platformStatus,
+        options,
+        `Bundle merge verification failed for ${repo}`
+      );
+    }
     merges.push({ repo, pr_number: member.pr_number, merge, ...merged });
     expectedMain[repo] = deps.fetchMainSha(repo);
     if (index === 0) {
@@ -917,7 +1069,15 @@ function integrateBundle(options = {}) {
         expectedPlatformSha,
         expectedLessonSha,
       });
-      if (!intermediateCi.ok) return { ok: false, phase: 'intermediate_ci', order, intermediate_ci: intermediateCi, merges };
+      if (!intermediateCi.ok) {
+        return withTerminalFailureStatus(
+          { ok: false, phase: 'intermediate_ci', order, intermediate_ci: intermediateCi, merges },
+          deps,
+          platformStatus,
+          options,
+          `Bundle intermediate CI failed: ${intermediateCi.failure || 'unknown'}`
+        );
+      }
     }
   }
   const expectedFinalPlatformSha = deps.fetchMainSha(PLATFORM_REPO);
@@ -930,7 +1090,15 @@ function integrateBundle(options = {}) {
     expectedPlatformSha: expectedFinalPlatformSha,
     expectedLessonSha: expectedFinalLessonSha,
   });
-  if (!finalCi.ok) return { ok: false, phase: 'final_ci', order, final_ci: finalCi, merges };
+  if (!finalCi.ok) {
+    return withTerminalFailureStatus(
+      { ok: false, phase: 'final_ci', order, final_ci: finalCi, merges },
+      deps,
+      platformStatus,
+      options,
+      `Bundle final CI failed: ${finalCi.failure || 'unknown'}`
+    );
+  }
   return { ok: true, phase: 'merged_bundle', order, compatibility, merges, final_ci: finalCi };
 }
 
@@ -968,9 +1136,11 @@ if (require.main === module) {
 module.exports = {
   LESSON_REPO,
   PLATFORM_REPO,
+  INTEGRATION_CONTEXT,
   integrateBundle,
   preflightCrossRepoPermissions,
   selectLatestRunForHead,
+  setPlatformIntegrationStatus,
   validateCompatibilityWorkflowProvenance,
   validatePlatformCiEvidence,
   validatePrState,

@@ -116,6 +116,9 @@ function summarizeProtection(protection, options = {}) {
   for (const context of requiredContexts) {
     if (!contexts.includes(context)) failures.push(`required status context missing: ${context}`);
   }
+  for (const context of contexts) {
+    if (!requiredContexts.includes(context)) failures.push(`unexpected required status context: ${context}`);
+  }
   if (enforceAdmins !== true) failures.push('enforce_admins.enabled must be true');
   if (allowForcePushes !== false) failures.push('allow_force_pushes.enabled must be false');
   if (allowDeletions !== false) failures.push('allow_deletions.enabled must be false');

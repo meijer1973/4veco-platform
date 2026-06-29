@@ -15,6 +15,8 @@ describe('check-active-governance-wording', () => {
       'do not mark ready or merge until owner authorization',
       'marking ready still requires owner authorization',
       'authorization for the exact platform and lesson heads',
+      'L0-L2 may merge through the normal merge path.',
+      'Agents can call `gh pr merge` directly after CI.',
     ].join('\n');
 
     const violations = findViolationsInText('AGENTS.md', text);
@@ -28,6 +30,8 @@ describe('check-active-governance-wording', () => {
       'do-not-ready-or-merge-until-owner',
       'marking-ready-requires-owner',
       'authorization-exact-platform-lesson-heads',
+      'normal-merge-path-permission',
+      'direct-gh-pr-merge-permission',
     ]);
   });
 
@@ -44,6 +48,12 @@ describe('check-active-governance-wording', () => {
 
   test('allows payload-lineage authorization wording', () => {
     const text = 'Human authorization binds to the reviewed payload head, not to every later base-sync head.';
+
+    expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
+  });
+
+  test('allows direct-merge wording when it is explicitly prohibited', () => {
+    const text = 'After activation, agents must not call `gh pr merge` directly; use the authorized integration lane.';
 
     expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
   });

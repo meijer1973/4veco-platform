@@ -230,6 +230,8 @@ Use these anchors before free-form browsing.
   "pr_readiness_routing_policy": "docs/review/pr-readiness-routing-policy.md",
   "pr_integration_lane_policy": "docs/review/pr-integration-lane-policy.md",
   "human_payload_authorization_schema": "docs/review/human-payload-authorization.schema.json",
+  "branch_protection_checker": "build-scripts/ci/check-branch-protection.js",
+  "activated_branch_protection_script": "package.json#scripts.check:branch-protection:activated",
   "authorized_pr_integration_workflow": ".github/workflows/authorized-pr-integration.yml",
   "authorized_pr_integration_runner": "build-scripts/review-gates/integrate-authorized-pr.js",
   "cross_repo_bundle_compatibility_workflow": ".github/workflows/cross-repo-bundle-compatibility.yml",
@@ -595,6 +597,7 @@ Agents MUST follow this sequence:
    - multi-agent review orchestration -> `agents/lead-reviewer-agent.md` plus the relevant specialist agents and evidence surfaces
    - draft-to-review PR lifecycle routing -> `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, and the exact remote PR evidence
    - human-authorized PR integration -> `docs/review/pr-integration-lane-policy.md`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, and `build-scripts/review-gates/integrate-authorized-pr.js`
+   - activated integration-lane branch protection -> `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, and `package.json` script `check:branch-protection:activated`
    - paired platform/lesson bundle readiness and integration -> `docs/review/pr-readiness-routing-policy.md`, `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/apply-bundle-readiness-decision.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, and `build-scripts/review-gates/integrate-authorized-bundle.js`
    - testing or validation evidence -> `agents/testing-agent.md`, `package.json`, and the relevant test/validator scripts
    - accessibility review -> `agents/accessibility-agent.md` plus rendered artifacts, screenshots, OCR/text evidence, and source semantics where relevant
