@@ -93,7 +93,7 @@
     "source_data_book_1": {
       "path": "source-data/book-1",
       "files": [
-        "source-data/book-1/exit-ticket/1.1.1.json",
+        "source-data/book-1/exit-ticket/1.1.1-korte-check.json",
         "source-data/book-1/reasoning/1.1.1.csv",
         "source-data/book-1/reasoning/1.1.2.csv",
         "source-data/book-1/reasoning/README.md"

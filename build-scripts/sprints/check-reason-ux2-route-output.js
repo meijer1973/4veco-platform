@@ -26,8 +26,10 @@ const DEPLOYED_TASK_SHELL_ENGINE = path.join(bookRoot, 'shared', 'task-shell-eng
 const DEPLOYED_TASK_SHELL_UI = path.join(bookRoot, 'shared', 'task-shell-ui.js');
 const TARGET_EXERCISES = path.join(platformRoot, 'references', 'authored', 'course-target-exercises.json');
 const CANDIDATE_STORAGE = path.join(platformRoot, 'references', 'data', 'exam-ingestion', 'answer-skill-candidates.json');
-const EXIT_112_SOURCE = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.2.json');
-const EXIT_113_SOURCE = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.3.json');
+const LEGACY_EXIT_112_SOURCE = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.2.json');
+const LEGACY_EXIT_113_SOURCE = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.3.json');
+const CURRENT_EXIT_112_SOURCE = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.2-exit-ticket.json');
+const CURRENT_EXIT_113_SOURCE = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.3-exit-ticket.json');
 
 function fail(message) {
   throw new Error(message);
@@ -104,8 +106,16 @@ function main() {
   assert(deployedCss.includes('.r-task-shell-mode'), 'deployed reasoning CSS must style embedded task-shell mode');
   assert(deployedCss.includes('.r-feedback-chain'), 'deployed reasoning CSS must style reasoning feedback chains');
 
-  assert(!fs.existsSync(EXIT_112_SOURCE), 'REASON-UX-2 must not write source-data/book-1/exit-ticket/1.1.2.json');
-  assert(!fs.existsSync(EXIT_113_SOURCE), 'REASON-UX-2 must not write source-data/book-1/exit-ticket/1.1.3.json');
+  assert(!fs.existsSync(LEGACY_EXIT_112_SOURCE), 'legacy source-data/book-1/exit-ticket/1.1.2.json must remain absent');
+  assert(!fs.existsSync(LEGACY_EXIT_113_SOURCE), 'legacy source-data/book-1/exit-ticket/1.1.3.json must remain absent');
+  for (const [file, label] of [
+    [CURRENT_EXIT_112_SOURCE, '1.1.2 current suffixed exit-ticket source'],
+    [CURRENT_EXIT_113_SOURCE, '1.1.3 current suffixed exit-ticket source'],
+  ]) {
+    const source = JSON.parse(read(file));
+    assert(source.targetEquivalent && source.targetEquivalent.completionLanguageEligible === false, `${label} must keep completion language held`);
+    assert(source.targetEquivalent.gateApproved === true, `${label} must keep gateApproved true`);
+  }
   assert(!fs.existsSync(CANDIDATE_STORAGE), 'REASON-UX-2 must not create answer-skill candidate storage');
   checkTargetFieldsStillAbsent();
 

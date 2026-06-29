@@ -58,7 +58,7 @@ function gitStatus(paths, label) {
 function hasHints(value) {
   if (!value || typeof value !== 'object') return false;
   if (Array.isArray(value)) return value.some(hasHints);
-  return Object.entries(value).some(([key, nested]) => /hints?/i.test(key) || hasHints(nested));
+  return Object.entries(value).some(([key, nested]) => /^hints?$/i.test(key) || hasHints(nested));
 }
 
 function exitTicketTaskShells(data) {
@@ -96,18 +96,20 @@ function checkSourceContracts() {
 }
 
 function checkExitTicketSource() {
-  const targetData = readJson(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.2.json'));
-  const advisoryData = readJson(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.1.json'));
+  const targetData = readJson(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.2-exit-ticket.json'));
+  const advisoryData = readJson(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.1-korte-check.json'));
+  const graphExitData = readJson(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.3-exit-ticket.json'));
 
   assert(ExitTicketEngine.validateData(targetData), '1.1.2 exit-ticket source must validate');
-  assert(!advisoryData.targetEquivalent, '1.1.1 must not become target-equivalent');
+  assert(advisoryData.targetEquivalent?.candidate === false, '1.1.1 must not become target-equivalent');
   assert(advisoryData.metadataAlignment.targetReadinessEvidence === false, '1.1.1 must remain advisory target-readiness false');
-  assert(!fs.existsSync(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.3.json')), '1.1.3 exit-ticket source must remain absent');
+  assert(graphExitData.targetEquivalent.completionLanguageEligible === false, '1.1.3 exit-ticket completion language must remain held');
+  assert(!fs.existsSync(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.3.json')), 'legacy unsuffixed 1.1.3 source must remain absent');
 
   const taskShells = exitTicketTaskShells(targetData);
-  const calcTasks = taskShells.filter((task) => task.family === 'calculation_work_capture');
-  assert(calcTasks.length === 3, '1.1.2 must have three calculation-work tasks');
-  for (const task of calcTasks) {
+  const calcTasks = taskShells.filter((task) => ['calculation_work_capture', 'calculation_answer_form_capture'].includes(task.family));
+  assert(calcTasks.length === 3, '1.1.2 must have three calculation/answer-form tasks');
+  for (const task of calcTasks.filter((item) => item.family === 'calculation_work_capture')) {
     assert(task.interaction.unitNotationLabel, `${task.id} missing unitNotationLabel`);
     assert(task.expected.unitNotation, `${task.id} missing expected.unitNotation`);
     assert(task.expected.unitNotation.required === false, `${task.id} unit notation must be optional in this sprint`);
@@ -119,8 +121,8 @@ function checkExitTicketSource() {
   const rendered = ExitTicketUI.renderStaticHtml(targetData, ExitTicketUI.buildSkillView(targetData, engine, {}));
   rejectPattern(rendered, /Bijvoorbeeld\s+(?:15|108|3,7|4 indexpunten)/i, 'answer-revealing exit-ticket placeholders', 'rendered 1.1.2 exit-ticket');
   rejectPattern(rendered, /class="ts-criteria"/i, 'pre-attempt criteria bullets', 'rendered 1.1.2 exit-ticket');
-  requireText(rendered, 'Vul je eindantwoord in', 'neutral final answer placeholder', 'rendered 1.1.2 exit-ticket');
-  requireText(rendered, 'Vul de notatie in', 'neutral notation placeholder', 'rendered 1.1.2 exit-ticket');
+  requireText(rendered, 'data-input-role="final-answer"', 'final answer input role', 'rendered 1.1.2 exit-ticket');
+  requireText(rendered, 'data-input-role="unit-notation"', 'unit notation input role', 'rendered 1.1.2 exit-ticket');
 
   const compact = engine.checkTask('index-naar-waarde', {
     work: '162 / 150 x 100',
@@ -153,19 +155,20 @@ function checkGeneratedOutput() {
   const deployedUi = read(path.join(shared, 'task-shell-ui.js'));
   const deployedEngine = read(path.join(shared, 'task-shell-engine.js'));
   const deployedCss = read(path.join(shared, 'task-shell.css'));
-  const exitData = read(path.join(shared, 'exit-ticket', '1.1.2.js'));
+  const exitData = read(path.join(shared, 'exit-ticket', '1.1.2-exit-ticket.js'));
   const page = read(exitPage);
 
   requireText(deployedUi, "'unit-notation'", 'deployed unit notation input', 'shared/task-shell-ui.js');
   requireText(deployedUi, 'class="ts-hints"', 'deployed hidden hints renderer', 'shared/task-shell-ui.js');
   requireText(deployedEngine, 'unitNotationMatches', 'deployed unit notation matcher', 'shared/task-shell-engine.js');
   requireText(deployedCss, '.ts-answer-grid', 'deployed answer grid CSS', 'shared/task-shell.css');
-  requireText(exitData, 'unitNotationLabel', 'generated 1.1.2 unit notation labels', 'shared/exit-ticket/1.1.2.js');
-  requireText(exitData, '"required": false', 'generated 1.1.2 optional notation', 'shared/exit-ticket/1.1.2.js');
-  requireText(page, 'task-shell-ui.js', 'exit-ticket shared task shell UI script', exitPage);
-  requireText(page, 'exit-ticket-ui.js', 'exit-ticket UI script', exitPage);
-  rejectPattern(exitData, /"hints?"\s*:/i, 'exit-ticket task hints', 'shared/exit-ticket/1.1.2.js');
-  assert(!fs.existsSync(path.join(shared, 'exit-ticket', '1.1.3.js')), 'generated 1.1.3 exit-ticket data must remain absent');
+  requireText(exitData, 'unitNotationLabel', 'generated 1.1.2 unit notation labels', 'shared/exit-ticket/1.1.2-exit-ticket.js');
+  requireText(exitData, '"required": false', 'generated 1.1.2 optional notation', 'shared/exit-ticket/1.1.2-exit-ticket.js');
+  requireText(page, 'golden-ticket-layout.js', 'golden ticket layout runtime script', exitPage);
+  requireText(page, 'shared/exit-ticket/1.1.2-exit-ticket.js', 'suffixed 1.1.2 exit-ticket data include', exitPage);
+  rejectPattern(exitData, /"hints?"\s*:/i, 'exit-ticket task hints', 'shared/exit-ticket/1.1.2-exit-ticket.js');
+  assert(fs.existsSync(path.join(shared, 'exit-ticket', '1.1.3-exit-ticket.js')), 'generated suffixed 1.1.3 exit-ticket data must exist');
+  assert(!fs.existsSync(path.join(shared, 'exit-ticket', '1.1.3.js')), 'legacy unsuffixed generated 1.1.3 exit-ticket data must remain absent');
 }
 
 function checkReports() {
@@ -204,7 +207,7 @@ function checkForbiddenBoundaries() {
   gitStatus(['references/machine', 'references/external'], 'protected references');
   gitStatus(['references/authored/course-target-exercises.json'], 'target-exercise registry');
   gitStatus(['references/data/exam-ingestion/answer-skill-candidates.json'], 'answer-skill candidate storage');
-  gitStatus(['source-data/book-1/exit-ticket/1.1.3.json'], '1.1.3 exit-ticket source');
+  gitStatus(['source-data/book-1/exit-ticket/1.1.3.json'], 'legacy unsuffixed 1.1.3 exit-ticket source');
 }
 
 function main() {

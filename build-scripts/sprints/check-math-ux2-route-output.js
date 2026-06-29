@@ -30,7 +30,8 @@ const SKILLTREE_DATA = path.join(bookRoot, 'shared', 'skilltree', '1.1.2.js');
 const DEPLOYED_BASE_ELEMENTS = path.join(bookRoot, 'shared', 'skilltree', 'base-elements.js');
 const DEPLOYED_SKILLTREE_UI = path.join(bookRoot, 'shared', 'skilltree-ui.js');
 const DEPLOYED_SKILLTREE_CSS = path.join(bookRoot, 'shared', 'skilltree.css');
-const SOURCE_EXIT_TICKET = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.2.json');
+const LEGACY_SOURCE_EXIT_TICKET = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.2.json');
+const CURRENT_SOURCE_EXIT_TICKET = path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', '1.1.2-exit-ticket.json');
 const TARGET_EXERCISES = path.join(platformRoot, 'references', 'authored', 'course-target-exercises.json');
 const CANDIDATE_STORAGE = path.join(platformRoot, 'references', 'data', 'exam-ingestion', 'answer-skill-candidates.json');
 
@@ -184,8 +185,11 @@ function main() {
   checkNoStudentCodeLeak(visibleText(page), '1.1.2 math page static HTML');
   checkNoProductClaim(visibleText(page), '1.1.2 math page static HTML');
 
-  assert(!fs.existsSync(EXIT_TICKET_PAGE), 'MATH-UX-2 must not publish a 1.1.2 exit-ticket page');
-  assert(!fs.existsSync(SOURCE_EXIT_TICKET), 'MATH-UX-2 must not write source-data/book-1/exit-ticket/1.1.2.json');
+  const exitTicketPage = read(EXIT_TICKET_PAGE);
+  checkNoStudentCodeLeak(visibleText(exitTicketPage), '1.1.2 exit-ticket page static HTML');
+  checkNoProductClaim(visibleText(exitTicketPage), '1.1.2 exit-ticket page static HTML');
+  assert(fs.existsSync(CURRENT_SOURCE_EXIT_TICKET), 'current suffixed 1.1.2 exit-ticket source must exist');
+  assert(!fs.existsSync(LEGACY_SOURCE_EXIT_TICKET), 'legacy source-data/book-1/exit-ticket/1.1.2.json must remain absent');
   assert(!fs.existsSync(CANDIDATE_STORAGE), 'MATH-UX-2 must not create answer-skill candidate storage');
   checkTargetFieldsStillAbsent();
 
