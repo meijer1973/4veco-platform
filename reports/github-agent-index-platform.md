@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-29T14:52:46.319Z
+Generated: 2026-06-29T14:54:57.724Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/workflow-split-paragraph-a-b-1-20260629`
-Source commit: `3679443b8c3fd8a2372d0edc98e922b4aca838f9`
-Files indexed: 6676
+Source commit: `773df83e1fe0483fcb58bfa997d323c1ba7e7ac2`
+Files indexed: 6668
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2327,7 +2327,7 @@ Count: 860
 
 ## reports
 
-Count: 4300
+Count: 4292
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2388,16 +2388,8 @@ Count: 4300
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
