@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1",
+  "status": "bounded_product_route_adoption_ready_for_human_review",
+  "content_verdict_requested": "Review the exact platform registry plus 4veco-lessen index adoption bundle; do not infer CP-6, Scale Gate, diagnostics, mastery, PV, summative, broad student rollout, or student/product-use authority.",
+  "bounded_route_adoption_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/bounded-route-adoption-packet.json",
+  "product_route_adoption_registry": "references/data/year2-target-foundation/product-route-adoption-registry.json",
+  "rendered_registry_map": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/rendered-registry-map.html",
+  "lesson_index_files": [
+    "index.html",
+    "year2-candidate-lessons/four-target-lesson-production-1/index.html"
+  ],
+  "authority_claims": {
+    "bounded_route_adoption_bundle_prepared": true,
+    "product_route_adoption_registry_record_created": true,
+    "lesson_root_bounded_entry_created": true,
+    "lesson_bundle_index_adoption_state_updated": true,
+    "all_four_routes_adopted_as_bounded_surface_after_owner_merge": true,
+    "product_route_adoption_authorized_before_owner_merge": false,
+    "product_route_adoption_authorized_on_owner_merge": true,
+    "product_authority_change_requires_human_review": true,
+    "default_book_navigation_mutated": false,
+    "active_curriculum_sequence_mutated": false,
+    "protected_mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "broad_student_rollout_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  }
+}
