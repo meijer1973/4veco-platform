@@ -146,7 +146,8 @@ function harness(overrides = {}) {
       calls.updates.push({ repo, prNumber, expectedHeadSha });
       return { ok: true };
     }),
-    mergePr: jest.fn((repo, prNumber, headSha) => {
+    mergePr: jest.fn((repo, prNumber, headSha, mergeOptions = {}) => {
+      if (mergeOptions.dryRun) return { dry_run: true, repo, prNumber, head_sha: headSha };
       calls.events.push({ type: 'merge', repo, prNumber, headSha });
       calls.merges.push({ repo, prNumber, headSha });
       return { merged: true };
@@ -283,11 +284,18 @@ describe('authorized cross-repo bundle integration', () => {
   });
 
   test('dry-run bundle path does not mint a reusable integration-authorized success status', () => {
-    const { calls, options } = harness({ options: { dryRun: true } });
-    const result = integrateBundle(options);
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMergedPr: jest.fn(() => ({ state: 'OPEN', mergeCommit: null })),
+      },
+      options: { dryRun: true },
+    });
+    const result = integrateBundle({ ...options, deps });
 
     expect(result).toMatchObject({ ok: true, phase: 'merged_bundle' });
     expect(calls.statuses).toEqual([]);
+    expect(deps.fetchMergedPr).not.toHaveBeenCalled();
+    expect(result.merges.every((merge) => merge.dry_run === true)).toBe(true);
   });
 
   test('platform status helper reports dry-run success without calling GitHub', () => {

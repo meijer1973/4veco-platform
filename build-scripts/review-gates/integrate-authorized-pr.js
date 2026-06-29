@@ -96,14 +96,15 @@ function summarizeIntegrationBranchProtection(protection, options = {}) {
   };
 }
 
-function fetchBranchProtectionSummary(repo, options = {}) {
-  const rawProtection = runGh(['api', `repos/${repo}/branches/main/protection`]);
-  const reviewRead = runGh(['api', `repos/${repo}/branches/main/protection/required_pull_request_reviews`], {
+function fetchBranchProtectionSummary(repo, options = {}, runner = runGh) {
+  const rawProtection = runner(['api', `repos/${repo}/branches/main/protection`]);
+  const reviewRead = runner(['api', `repos/${repo}/branches/main/protection/required_pull_request_reviews`], {
     optional: true,
   });
   return summarizeIntegrationBranchProtection(JSON.parse(rawProtection), {
     repo,
     branch: 'main',
+    requireIntegrationAuthorized: options.requireIntegrationAuthorized === true,
     pullRequestReviews: reviewRead ? JSON.parse(reviewRead) : null,
     pullRequestReviewFetch: reviewRead
       ? { status: 'available', limitation: null }
@@ -858,6 +859,7 @@ module.exports = {
   buildLineageInput,
   enforceLineagePolicy,
   generateAndApplyReadiness,
+  fetchBranchProtectionSummary,
   integrate,
   isHeadCurrentWithMain,
   parseChecks,

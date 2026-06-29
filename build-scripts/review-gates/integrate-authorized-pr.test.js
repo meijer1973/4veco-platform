@@ -1,5 +1,6 @@
 const {
   enforceLineagePolicy,
+  fetchBranchProtectionSummary,
   integrate,
   readinessCommentFromComments,
   readinessMarkerFor,
@@ -449,6 +450,30 @@ describe('authorized PR integration runner', () => {
 
     expect(summary.ok).toBe(false);
     expect(summary.failures).toContain('required status context missing: integration-authorized');
+  });
+
+  test('live branch-protection fetch forwards forced activated mode', () => {
+    const protection = branchProtectionWithContexts(['validate-platform']);
+    const runner = jest.fn((args) => {
+      const endpoint = args[1];
+      if (endpoint.endsWith('/required_pull_request_reviews')) {
+        return JSON.stringify(protection.required_pull_request_reviews);
+      }
+      return JSON.stringify(protection);
+    });
+
+    const summary = fetchBranchProtectionSummary(
+      'meijer1973/4veco-platform',
+      { requireIntegrationAuthorized: true },
+      runner
+    );
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('required status context missing: integration-authorized');
+    expect(summary.expected.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
   });
 
   test('activated branch protection fails when an extra context is required', () => {

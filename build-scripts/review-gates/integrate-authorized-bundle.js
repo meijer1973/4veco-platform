@@ -1036,6 +1036,16 @@ function integrateBundle(options = {}) {
         `Bundle merge rejected for ${repo}: ${error.message}`
       );
     }
+    if (options.dryRun) {
+      merges.push({
+        repo,
+        pr_number: member.pr_number,
+        merge,
+        dry_run: true,
+        merge_commit: null,
+      });
+      continue;
+    }
     const merged = validateMergedPr(repo, member.pr_number, deps.fetchMergedPr(repo, member.pr_number));
     if (!merged.ok) {
       return withTerminalFailureStatus(
