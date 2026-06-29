@@ -114,16 +114,18 @@ The lane must:
     digest;
 11. re-fetch `main` and the PR immediately before merge;
 12. retry automatically when `main` moved or merge eligibility changed;
-13. set `integration-authorized` success only on the final validated
-    integration head;
-14. before activation, merge directly with the expected PR-head SHA;
-15. after activation, require repository `allow_auto_merge: true`, schedule
+13. before activation, set `integration-authorized` success only on the final
+    validated integration head, then merge directly with the expected PR-head
+    SHA;
+14. after activation, require repository `allow_auto_merge: true`, schedule
     protected-branch-compatible auto-merge with `--auto --merge
-    --match-head-commit <sha>`, and never silently mutate the repository
+    --match-head-commit <sha>` while `integration-authorized` is still pending,
+    verify the auto-merge request is enabled on the same head, then set
+    `integration-authorized` success, and never silently mutate the repository
     setting from the runner;
-16. observe the PR until the merge completes, disabling auto-merge and failing
+15. observe the PR until the merge completes, disabling auto-merge and failing
     closed on timeout or head movement;
-17. verify the merge commit is observable on `main` and post-merge `main` CI
+16. verify the merge commit is observable on `main` and post-merge `main` CI
     succeeds.
 
 A dry-run may validate the lane inputs and policy decisions, but it must not set
@@ -253,23 +255,24 @@ validate a later integration head without renewed human authorization when
 lineage, base drift, decision scope, and effective-payload checks remain valid.
 The repository `allow_auto_merge` setting must be enabled before activated
 integration is attempted. The lane verifies that setting in activated mode,
-then schedules GitHub auto-merge after minting the exact-head
-`integration-authorized` success status and observes the resulting merge
+then schedules GitHub auto-merge while the exact-head
+`integration-authorized` status is still pending, verifies that auto-merge is
+enabled on the same head, mints success, and observes the resulting merge
 instead of assuming the scheduling command merged immediately.
 
 The bundle lane sets `integration-authorized` pending on the platform
 controller head when it starts. It sets failure on terminal bundle-lane
-failures. It sets success only on the exact platform controller integration head
-after bundle authorization, current compatibility proof, member-head checks,
-clean review state, exact-head readiness, required CI, and base-drift checks
-pass, and immediately before the platform member merge. For lesson-first
-bundles, platform success is not set until the lesson member has merged and the
-intermediate platform CI proof has passed. Dry-runs must not create a reusable
-successful status. When activated branch protection is in force, the platform
-member merge uses the same `--auto --merge --match-head-commit <sha>`
-scheduling and observation model as the single-PR lane. Lesson repository
-members keep their repository-local merge behavior because they do not consume
-the platform `integration-authorized` context.
+failures. In pre-activation mode, it sets success only on the exact platform
+controller integration head after bundle authorization, current compatibility
+proof, member-head checks, clean review state, exact-head readiness, required
+CI, and base-drift checks pass, and immediately before the platform member
+merge. When activated branch protection is in force, it schedules platform
+auto-merge first, verifies the auto-merge request is enabled on the same head,
+then sets success. For lesson-first bundles, platform auto-merge and success
+are both delayed until the lesson member has merged and the intermediate
+platform CI proof has passed. Dry-runs must not create a reusable successful
+status. Lesson repository members keep their repository-local merge behavior
+because they do not consume the platform `integration-authorized` context.
 
 Rollback is allowed only by explicit owner decision. Rollback must remove
 `integration-authorized` from required contexts while keeping

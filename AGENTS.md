@@ -307,10 +307,11 @@ from `mergeStateStatus: BLOCKED`; `BLOCKED` can simply mean the required
 validated head, retries when `main` moves or merge eligibility changes, and
 verifies post-merge `main` CI. Before activation, the lane may use the direct
 merge path with an exact `--match-head-commit` guard. After activation, the lane
-must schedule `gh pr merge --auto --merge --match-head-commit <sha>`, observe
-the PR until the merge commit is present on `main`, and disable auto-merge if
-the observed merge does not complete in time. The `integration-authorized`
-context must be
+must schedule `gh pr merge --auto --merge --match-head-commit <sha>` while
+`integration-authorized` is still pending, verify auto-merge is enabled on the
+same head, set success, observe the PR until the merge commit is present on
+`main`, and disable auto-merge if the observed merge does not complete in time.
+The `integration-authorized` context must be
 minted only by trusted `main` workflow code or the equivalent owner-authenticated
 local lane running trusted `main` code; a dry-run must not create a reusable
 successful status.
