@@ -88,7 +88,15 @@ jobs:
           }
           $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source
           if (-not $pdftoppm) {
-            $pdftoppm = (Get-ChildItem -Path "$env:ProgramData\chocolatey\lib" -Filter pdftoppm.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+            $pdftoppm = (Resolve-Path "$env:ProgramData\chocolatey\lib\poppler\tools\*\Library\bin\pdftoppm.exe" -ErrorAction SilentlyContinue | Select-Object -First 1).Path
+          }
+          if (-not $pdftoppm) {
+            $pdftoppm = (& where.exe /R "$env:ProgramData\chocolatey" pdftoppm.exe 2>$null | Select-Object -First 1)
+          }
+          if (-not $pdftoppm) {
+            Get-ChildItem -Path "$env:ProgramData\chocolatey\lib\poppler\tools" -Recurse -File -ErrorAction SilentlyContinue |
+              Select-Object -First 80 -ExpandProperty FullName |
+              ForEach-Object { Write-Host "poppler file: $_" }
           }
           if (-not $soffice) { throw "soffice.exe not found after LibreOffice install" }
           if (-not $pdftoppm) { throw "pdftoppm.exe not found after Poppler install" }
