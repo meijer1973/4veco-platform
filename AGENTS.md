@@ -235,6 +235,10 @@ activation, the required contexts are exactly `validate-platform` and
 `npm.cmd run check:branch-protection:activated`. The checker must fail if the
 approval count returns to `1` or if observable pull-request bypass allowances
 are non-empty.
+Activated integration also requires repository `allow_auto_merge: true` before
+the lane can schedule protected-branch-compatible auto-merge. The runner must
+verify that setting in activated mode; it must not silently enable or disable
+repository auto-merge as part of normal PR integration.
 PR readiness must derive mechanical approval constraints from the observed
 approval count, not from self-declared identity-satisfaction flags, and it must
 keep the PR draft when that count is not observable.
@@ -301,14 +305,20 @@ from `mergeStateStatus: BLOCKED`; `BLOCKED` can simply mean the required
 `integration-authorized` status is pending. The lane sets
 `integration-authorized` to pending at entry, sets success only on the final
 validated head, retries when `main` moves or merge eligibility changes, and
-verifies post-merge `main` CI. The `integration-authorized` context must be
+verifies post-merge `main` CI. Before activation, the lane may use the direct
+merge path with an exact `--match-head-commit` guard. After activation, the lane
+must schedule `gh pr merge --auto --merge --match-head-commit <sha>`, observe
+the PR until the merge commit is present on `main`, and disable auto-merge if
+the observed merge does not complete in time. The `integration-authorized`
+context must be
 minted only by trusted `main` workflow code or the equivalent owner-authenticated
 local lane running trusted `main` code; a dry-run must not create a reusable
 successful status.
 
 Rollback is allowed only by explicit owner decision. A rollback must remove
 `integration-authorized` from required status contexts while keeping strict
-`validate-platform` and the rest of the protected branch shape.
+`validate-platform` and the rest of the protected branch shape. Rollback may
+restore repository `allow_auto_merge: false` until the next activation attempt.
 
 ### Mandatory readiness application
 
