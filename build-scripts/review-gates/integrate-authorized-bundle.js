@@ -872,6 +872,20 @@ function integrateBundle(options = {}) {
       `Platform branch protection mismatch: ${(platformBranchProtection.failures || []).join(', ')}`
     );
   }
+  if (platformBranchProtection.integration_authorized_required === true) {
+    return withTerminalFailureStatus(
+      {
+        ok: false,
+        phase: 'retired_activated_mode',
+        branch_protection: platformBranchProtection,
+        failures: ['integration-authorized required-context activation is retired; keep it optional audit evidence'],
+      },
+      deps,
+      platformStatus,
+      options,
+      'integration-authorized required-context activation is retired; keep it optional audit evidence'
+    );
+  }
   const platformActivatedMerge = platformBranchProtection.integration_authorized_required === true;
   let platformRepositoryMergeSettings = null;
   if (platformActivatedMerge && !options.noMerge && !options.dryRun) {

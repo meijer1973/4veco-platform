@@ -231,10 +231,9 @@ The platform repository operates in single-account mode: the owner, coding
 agent, lead-review subagent, PR author, and merger may share one GitHub account.
 GitHub approval count is therefore not a substantive review signal for this
 repository. Branch protection must require pull-request workflow and strict
-status checks. Before activation, the required context is `validate-platform`;
-after activation, the required contexts are exactly `validate-platform` and
-`integration-authorized`. In both states, `required_approving_review_count`
-must be `0`.
+status checks. The live required context is `validate-platform` only;
+`integration-authorized` is optional audit evidence after the activation pilot
+failed closed. `required_approving_review_count` must be `0`.
 
 Use `build-scripts/ci/check-branch-protection.js` in read-only mode. It must
 fail if branch protection drifts back to requiring a distinct approving GitHub
@@ -281,12 +280,13 @@ refresh does not require renewed owner authorization unless lineage, base drift,
 authority scope, or effective payload checks invalidate the reviewed payload
 authorization.
 
-After activation, agents must not call `gh pr merge` directly for normal PRs.
-The `integration-authorized` context must only be minted by trusted `main`
-workflow code or the equivalent owner-authenticated local lane running trusted
-`main` code. Rollback requires an explicit owner decision and must remove
-`integration-authorized` from required contexts while keeping
-`validate-platform`.
+Agents must not call `gh pr merge` directly for normal PRs. Normal merges must
+go through the authorized single-PR or bundle lane. The
+`integration-authorized` context must only be minted as optional audit evidence
+by trusted `main` workflow code or the equivalent owner-authenticated local lane
+running trusted `main` code. The retired activated required-context mode must
+not be retried without explicit owner decision and concrete new GitHub behavior
+evidence or a different implementation mechanism.
 
 ## Live decision recording
 

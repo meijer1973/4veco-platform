@@ -12,6 +12,8 @@ const ACTIVE_ROOTS = Object.freeze([
   'docs/review',
   'build-scripts',
   '.github/workflows',
+  '.gitattributes',
+  '.gitignore',
   'package.json',
   '../4veco-lessen/AGENTS.md',
   '../4veco-lessen/AGENT_GITHUB_ENTRY.md',
@@ -28,6 +30,11 @@ const TEXT_EXTENSIONS = new Set([
   '.txt',
   '.yaml',
   '.yml',
+]);
+
+const TEXT_BASENAMES = new Set([
+  '.gitattributes',
+  '.gitignore',
 ]);
 
 const EXCLUDED_SEGMENTS = new Set([
@@ -111,6 +118,18 @@ const FORBIDDEN_PATTERNS = Object.freeze([
     regex: /\b(may|can|should)\s+(?:directly\s+)?(?:call\s+)?`?gh pr merge`?\b/i,
   },
   {
+    id: 'activation-required-context-operating-mode',
+    regex: /after activation[^\n]{0,120}required contexts? (?:are|is) exactly[^\n]{0,120}integration-authorized/i,
+  },
+  {
+    id: 'activation-direct-merge-operating-mode',
+    regex: /after activation[^\n]{0,120}agents must not call `?gh pr merge`? directly/i,
+  },
+  {
+    id: 'activation-auto-merge-operating-mode',
+    regex: /activated integration[^\n]{0,120}requires repository `?allow_auto_merge:? ?true`?/i,
+  },
+  {
     id: 'claude-md-read-first',
     regex: /(read|use|load)[^\n]{0,80}`?(\.\.\/)?CLAUDE\.md`?/i,
   },
@@ -121,6 +140,10 @@ const FORBIDDEN_PATTERNS = Object.freeze([
   {
     id: 'claude-command-skill-surface',
     regex: /(\.claude\/commands[^\n]{0,80}(skill|workflow|mirror|command)|(?:skill|workflow|mirror|command)[^\n]{0,80}\.claude\/commands)/i,
+  },
+  {
+    id: 'claude-command-path',
+    regex: /(^|\s)\.claude\/commands\//i,
   },
   {
     id: 'claude-work-temp-path',
@@ -146,7 +169,8 @@ function shouldExcludePath(filePath, cwd = process.cwd()) {
 }
 
 function isTextFile(filePath) {
-  return TEXT_EXTENSIONS.has(path.extname(filePath).toLowerCase());
+  return TEXT_EXTENSIONS.has(path.extname(filePath).toLowerCase()) ||
+    TEXT_BASENAMES.has(path.basename(filePath));
 }
 
 function collectFilesFromRoot(root, cwd = process.cwd()) {

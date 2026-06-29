@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-29T14:47:27.801Z
+Generated: 2026-06-29T14:52:46.319Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/workflow-split-paragraph-a-b-1-20260629`
-Source commit: `48146ee0d033233d9285d51db4dcd080e3c9289f`
-Files indexed: 6664
+Source commit: `3679443b8c3fd8a2372d0edc98e922b4aca838f9`
+Files indexed: 6676
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 643
+Count: 645
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -573,6 +573,8 @@ Count: 643
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-governance-freshness.js
+- build-scripts/review-gates/check-governance-freshness.test.js
 - build-scripts/review-gates/check-human-bundle-authorization.js
 - build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js
@@ -816,7 +818,7 @@ Count: 25
 
 ## validators
 
-Count: 637
+Count: 639
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1052,6 +1054,8 @@ Count: 637
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-governance-freshness.js
+- build-scripts/review-gates/check-governance-freshness.test.js
 - build-scripts/review-gates/check-human-bundle-authorization.js
 - build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js
@@ -2323,7 +2327,7 @@ Count: 860
 
 ## reports
 
-Count: 4290
+Count: 4300
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2384,8 +2388,16 @@ Count: 4290
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -5349,6 +5361,8 @@ Count: 4290
 - reports/sprints/GRAPH-UX-2-student-route-proof.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-COMPAT-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-TRIGGER-1-lead-review-round1.md
+- reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round2.md
+- reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round3.md
 - reports/sprints/L1.7B-Q2-answer-model.md
 - reports/sprints/L1.7B-Q2-baseline.md
 - reports/sprints/L1.7B-Q2-COPY-baseline.md
