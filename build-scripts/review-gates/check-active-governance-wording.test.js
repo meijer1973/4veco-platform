@@ -52,10 +52,24 @@ describe('check-active-governance-wording', () => {
     expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
   });
 
-  test('allows direct-merge wording when it is explicitly prohibited', () => {
-    const text = 'After activation, agents must not call `gh pr merge` directly; use the authorized integration lane.';
+  test('allows direct-merge wording when it is unconditionally prohibited', () => {
+    const text = 'Agents must not call `gh pr merge` directly; use the authorized integration lane.';
 
     expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
+  });
+
+  test('flags stale activation-as-operating-mode wording', () => {
+    const text = [
+      'Before activation, the required context is `validate-platform`; after activation, the required contexts are exactly `validate-platform` and `integration-authorized`.',
+      'After activation, agents must not call `gh pr merge` directly for normal PRs.',
+      'Activated integration also requires repository `allow_auto_merge: true` before the lane can schedule protected-branch-compatible auto-merge.',
+    ].join('\n');
+
+    expect(findViolationsInText('AGENTS.md', text).map((item) => item.pattern)).toEqual([
+      'activation-required-context-operating-mode',
+      'activation-direct-merge-operating-mode',
+      'activation-auto-merge-operating-mode',
+    ]);
   });
 
   test('flags retired Claude policy and command surfaces in active guidance', () => {
@@ -71,6 +85,14 @@ describe('check-active-governance-wording', () => {
       'claude-md-operating-rules',
       'claude-command-skill-surface',
       'claude-work-temp-path',
+    ]);
+  });
+
+  test('flags retired Claude command paths in active metadata', () => {
+    const text = '.claude/commands/econ-pptx-templates.md text eol=lf';
+
+    expect(findViolationsInText('.gitattributes', text).map((item) => item.pattern)).toEqual([
+      'claude-command-path',
     ]);
   });
 

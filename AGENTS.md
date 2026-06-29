@@ -71,8 +71,14 @@ Normal closure for non-trivial work now includes:
 For every mutating task, agents must work on a dedicated task branch.
 Before editing files, run:
 - `git fetch --prune origin`
+- `npm.cmd run check:governance-freshness`
 - `git status --short --branch`
 - `git branch --show-current`
+
+`check:governance-freshness` compares active governance entrypoints against
+`origin/main` before source edits. Use `-- --allow-policy-edit` only when the
+declared task is intentionally editing those same governance files; the checker
+still reports the differing files and observed `origin/main` SHA.
 
 Rules:
 1. Do not work directly on `main`.
@@ -228,17 +234,15 @@ therefore not the substantive review gate for this repository.
 Branch protection for `main` must keep strict status checks, admin enforcement,
 force-push protection, deletion protection, required conversation resolution,
 and pull-request workflow while setting `required_approving_review_count` to
-`0`. Before activation, the required context is `validate-platform`; after
-activation, the required contexts are exactly `validate-platform` and
-`integration-authorized`. Validate the pre-activation shape with
-`npm.cmd run check:branch-protection` and the activated shape with
-`npm.cmd run check:branch-protection:activated`. The checker must fail if the
-approval count returns to `1` or if observable pull-request bypass allowances
-are non-empty.
-Activated integration also requires repository `allow_auto_merge: true` before
-the lane can schedule protected-branch-compatible auto-merge. The runner must
-verify that setting in activated mode; it must not silently enable or disable
-repository auto-merge as part of normal PR integration.
+`0`. The live required context is `validate-platform` only.
+`integration-authorized` remains optional audit evidence, not a required
+branch-protection context, after the activation smoke pilot failed closed.
+Repository `allow_auto_merge` remains `false`. Validate the live shape with
+`npm.cmd run check:branch-protection`. The checker must fail if the approval
+count returns to `1` or if observable pull-request bypass allowances are
+non-empty. Do not attempt to require `integration-authorized` again without an
+explicit owner decision and concrete new GitHub behavior evidence or a different
+implementation mechanism.
 PR readiness must derive mechanical approval constraints from the observed
 approval count, not from self-declared identity-satisfaction flags, and it must
 keep the PR draft when that count is not observable.
@@ -264,9 +268,9 @@ Merge authority follows the PR-readiness route:
 
 ### Serialized integration lane
 
-After activation, agents must not call `gh pr merge` directly for normal PRs.
-Use `.github/workflows/authorized-pr-integration.yml` with the PR number and
-the human payload authorization comment ID when the trusted workflow token can
+Agents must not call `gh pr merge` directly for normal PRs. Use
+`.github/workflows/authorized-pr-integration.yml` with the PR number and the
+human payload authorization comment ID when the trusted workflow token can
 verify branch protection. If the workflow token cannot read required
 branch-protection state, use the owner-authenticated local fallback
 `npm.cmd run integrate:authorized-pr` with the same authorization comment ID.
@@ -275,7 +279,9 @@ Paired platform/lesson bundles must use
 `npm.cmd run integrate:authorized-bundle`. All authorized paths serialize
 through the same policy lane and must validate payload lineage, branch
 protection, CI, readiness, requested changes, review threads, and merge
-eligibility before merging.
+eligibility before merging. The lane may internally invoke a direct merge command
+while live branch protection requires only `validate-platform`; that is an
+implementation detail of trusted lane code, not agent merge authority.
 
 Human authorization binds to the reviewed payload head, not to every later
 base-sync head. Record authorization with the
@@ -301,25 +307,26 @@ does not need renewed owner authorization when payload lineage, base-drift,
 authority-scope, and effective-payload checks remain valid.
 
 The lane must determine base drift from an actual `main...head` comparison, not
-from `mergeStateStatus: BLOCKED`; `BLOCKED` can simply mean the required
-`integration-authorized` status is pending. The lane sets
+from `mergeStateStatus: BLOCKED`; `BLOCKED` is merge-eligibility noise, and in
+the retired activation experiment it could simply mean the required
+`integration-authorized` status was pending. The lane sets
 `integration-authorized` to pending at entry, sets success only on the final
 validated head, retries when `main` moves or merge eligibility changes, and
-verifies post-merge `main` CI. Before activation, the lane may use the direct
-merge path with an exact `--match-head-commit` guard. After activation, the lane
-must schedule `gh pr merge --auto --merge --match-head-commit <sha>` while
-`integration-authorized` is still pending, verify auto-merge is enabled on the
-same head, set success, observe the PR until the merge commit is present on
-`main`, and disable auto-merge if the observed merge does not complete in time.
+verifies post-merge `main` CI. In the current live mode, the trusted lane uses
+the direct merge path with an exact `--match-head-commit` guard after all checks
+pass. The retired activated mode scheduled `gh pr merge --auto --merge
+--match-head-commit <sha>` while `integration-authorized` was pending and then
+observed GitHub auto-merge, but smoke PR #177 proved that required-context mode
+was not reliable in this repository setup. Keep that implementation only as
+dormant/fail-closed reference unless the owner explicitly reopens it.
 The `integration-authorized` context must be
 minted only by trusted `main` workflow code or the equivalent owner-authenticated
 local lane running trusted `main` code; a dry-run must not create a reusable
 successful status.
 
-Rollback is allowed only by explicit owner decision. A rollback must remove
-`integration-authorized` from required status contexts while keeping strict
-`validate-platform` and the rest of the protected branch shape. Rollback may
-restore repository `allow_auto_merge: false` until the next activation attempt.
+The activation rollback is complete: `integration-authorized` is not required,
+strict `validate-platform` remains required, and repository `allow_auto_merge`
+is `false`.
 
 ### Mandatory readiness application
 

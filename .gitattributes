@@ -50,7 +50,6 @@ reports/reasoning-golden-family/**/*.html text eol=lf
 reports/reasoning-golden-family/**/*.json text eol=lf
 reports/reasoning-golden-family/**/*.md text eol=lf
 skills/econ-pptx-templates.md text eol=lf
-.claude/commands/econ-pptx-templates.md text eol=lf
 reports/sprints/CI-LF-HARDEN-1-* text eol=lf
 reports/sprints/CI-EVIDENCE-1-* text eol=lf
 reports/sprints/CI-GATE-PROOF-1-* text eol=lf
