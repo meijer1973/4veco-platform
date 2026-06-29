@@ -430,7 +430,7 @@ function readJson(filePath) {
 }
 
 function changedPathsFromGit(base, head, cwd = process.cwd()) {
-  const result = spawnSync('git', ['diff', '--name-only', '--diff-filter=ACMRT', `${base}...${head}`], {
+  const result = spawnSync('git', ['diff', '--name-only', '--diff-filter=ACMRTD', `${base}...${head}`], {
     cwd,
     encoding: 'utf8',
   });

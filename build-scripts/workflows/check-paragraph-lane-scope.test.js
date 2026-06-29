@@ -212,6 +212,74 @@ describe('check-paragraph-lane-scope', () => {
     }
   });
 
+  test('companion lane rejects deleted Part A textbook files from git range', () => {
+    const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'lane-scope-delete-part-a-'));
+    try {
+      git(['init', '-b', 'main'], repo);
+      const textbookPath = path.join(
+        repo,
+        'Boek 1',
+        '1.1 Hoofdstuk Test',
+        '1.1.1 Test',
+        '1.1.1 Test - paragraaf.md',
+      );
+      const companionPath = path.join(
+        repo,
+        'Boek 1',
+        '1.1 Hoofdstuk Test',
+        '1.1.1 Test',
+        '1.1.1 Test - instapquiz.html',
+      );
+      writeFile(textbookPath, '# textbook\n');
+      git(['add', '.'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'add textbook'], repo);
+      fs.rmSync(textbookPath);
+      writeFile(companionPath, '<!doctype html>\n');
+      git(['add', '-A'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'replace with companion'], repo);
+
+      const code = runCliQuiet(['--cwd', repo, '--lane', 'companion', '--base', 'HEAD~1', '--head', 'HEAD']);
+
+      expect(code).toBe(1);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
+  test('textbook lane rejects deleted companion files from git range', () => {
+    const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'lane-scope-delete-companion-'));
+    try {
+      git(['init', '-b', 'main'], repo);
+      const companionPath = path.join(
+        repo,
+        'Boek 1',
+        '1.1 Hoofdstuk Test',
+        '1.1.1 Test',
+        '1.1.1 Test - instapquiz.html',
+      );
+      const textbookPath = path.join(
+        repo,
+        'Boek 1',
+        '1.1 Hoofdstuk Test',
+        '1.1.1 Test',
+        '1.1.1 Test - paragraaf.md',
+      );
+      writeFile(companionPath, '<!doctype html>\n');
+      git(['add', '.'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'add companion'], repo);
+      fs.rmSync(companionPath);
+      writeFile(textbookPath, '# textbook\n');
+      git(['add', '-A'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'replace with textbook'], repo);
+
+      const code = runCliQuiet(['--cwd', repo, '--lane', 'textbook', '--base', 'HEAD~1', '--head', 'HEAD']);
+
+      expect(code).toBe(1);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
   test('textbook lane rejects shared game data changes', () => {
     const summary = checkLaneScope({
       lane: 'textbook',
