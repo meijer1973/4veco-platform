@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-29T13:45:01.510Z
+Generated: 2026-06-29T13:54:59.356Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/integration-pilot-closure-cleanup-1-20260629`
-Source commit: `8498bd83b3e447ca0fbdb663057b28659c2c5a2f`
-Files indexed: 6648
+Source commit: `a1dbed10ca9dd11398093a294e3b4cc79606eb8e`
+Files indexed: 6650
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 629
+Count: 631
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -573,6 +573,8 @@ Count: 629
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-governance-freshness.js
+- build-scripts/review-gates/check-governance-freshness.test.js
 - build-scripts/review-gates/check-human-bundle-authorization.js
 - build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js
@@ -802,7 +804,7 @@ Count: 25
 
 ## validators
 
-Count: 635
+Count: 637
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1038,6 +1040,8 @@ Count: 635
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
+- build-scripts/review-gates/check-governance-freshness.js
+- build-scripts/review-gates/check-governance-freshness.test.js
 - build-scripts/review-gates/check-human-bundle-authorization.js
 - build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js

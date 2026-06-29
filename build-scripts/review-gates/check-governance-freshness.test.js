@@ -79,6 +79,23 @@ describe('check-governance-freshness', () => {
     expect(summary.failures.join('\n')).toMatch(/governance files differ/);
   });
 
+  test('fails when the GitHub agent entrypoint is stale', () => {
+    const remoteFiles = makeRemoteFiles();
+    const localFiles = { ...remoteFiles, 'AGENT_GITHUB_ENTRY.md': 'stale GitHub entry guidance\n' };
+    const root = makeTempRoot(localFiles);
+
+    const summary = checkGovernanceFreshness({
+      cwd: root,
+      gitRunner: makeGitRunner(remoteFiles),
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.differing_files).toContainEqual({
+      path: 'AGENT_GITHUB_ENTRY.md',
+      reason: 'differs_from_origin_main',
+    });
+  });
+
   test('fails when the integration policy is stale', () => {
     const remoteFiles = makeRemoteFiles();
     const policy = 'docs/review/pr-integration-lane-policy.md';
@@ -119,5 +136,68 @@ describe('check-governance-freshness', () => {
         reason: 'differs_from_origin_main',
       },
     ]);
+  });
+
+  test('fails closed when git fetch cannot run even in policy-edit mode', () => {
+    const remoteFiles = makeRemoteFiles();
+    const root = makeTempRoot(remoteFiles);
+    const gitRunner = jest.fn((args) => {
+      if (args[0] === 'fetch') return { status: null, stdout: '', stderr: '', error: new Error('spawn git ENOENT') };
+      return makeGitRunner(remoteFiles)(args);
+    });
+
+    const summary = checkGovernanceFreshness({
+      cwd: root,
+      gitRunner,
+      allowPolicyEdit: true,
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures.join('\n')).toMatch(/git fetch --prune origin failed: spawn git ENOENT/);
+  });
+
+  test('fails closed when origin main SHA is unavailable in policy-edit mode', () => {
+    const remoteFiles = makeRemoteFiles();
+    const root = makeTempRoot(remoteFiles);
+    const baseRunner = makeGitRunner(remoteFiles);
+    const gitRunner = jest.fn((args) => {
+      if (args[0] === 'rev-parse' && args[1] === 'origin/main') {
+        return { status: 128, stdout: '', stderr: 'unknown revision' };
+      }
+      return baseRunner(args);
+    });
+
+    const summary = checkGovernanceFreshness({
+      cwd: root,
+      gitRunner,
+      allowPolicyEdit: true,
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.origin_main_sha).toBeNull();
+    expect(summary.failures.join('\n')).toMatch(/git rev-parse origin\/main failed: unknown revision/);
+    expect(summary.failures).toContain('origin/main SHA missing or invalid');
+  });
+
+  test('fails closed when HEAD SHA is malformed in policy-edit mode', () => {
+    const remoteFiles = makeRemoteFiles();
+    const root = makeTempRoot(remoteFiles);
+    const baseRunner = makeGitRunner(remoteFiles);
+    const gitRunner = jest.fn((args) => {
+      if (args[0] === 'rev-parse' && args[1] === 'HEAD') {
+        return { status: 0, stdout: 'not-a-sha\n', stderr: '' };
+      }
+      return baseRunner(args);
+    });
+
+    const summary = checkGovernanceFreshness({
+      cwd: root,
+      gitRunner,
+      allowPolicyEdit: true,
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.head_sha).toBe('not-a-sha');
+    expect(summary.failures).toContain('HEAD SHA missing or invalid');
   });
 });

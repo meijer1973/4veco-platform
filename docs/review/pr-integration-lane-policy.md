@@ -241,10 +241,12 @@ owner-authenticated local lane running trusted `main` code.
 
 The single-PR integration runner validates the current live protected shape by
 default. If live branch protection unexpectedly requires
-`integration-authorized`, it validates that legacy activated shape only as a
-fail-closed diagnostic, not as an approved operating mode. The explicit
-`--require-integration-authorized` flag remains available for tests and future
-owner-authorized experiments.
+`integration-authorized`, the runner fails closed instead of treating that
+observation as activation authority. The standalone branch-protection checker
+can still inspect the legacy activated shape with
+`--require-integration-authorized` for tests and future owner-authorized
+experiments, but the integration runners must not schedule auto-merge from that
+shape.
 
 Agents must not call `gh pr merge` directly for normal PRs. Merges must go
 through `authorized-pr-integration` or `authorized-bundle-integration`. Use the

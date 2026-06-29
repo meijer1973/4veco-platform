@@ -5,6 +5,7 @@ const { spawnSync } = require('child_process');
 
 const DEFAULT_FILES = Object.freeze([
   'AGENTS.md',
+  'AGENT_GITHUB_ENTRY.md',
   'docs/review/pr-readiness-routing-policy.md',
   'docs/review/pr-integration-lane-policy.md',
   'docs/review/pr-throughput-policy.md',
@@ -12,6 +13,8 @@ const DEFAULT_FILES = Object.freeze([
   '.github/workflows/platform-ci.yml',
   'build-scripts/ci/check-branch-protection.js',
 ]);
+
+const SHA_PATTERN = /^[0-9a-f]{40}$/i;
 
 function defaultGitRunner(args, cwd) {
   return spawnSync('git', args, {
@@ -24,9 +27,11 @@ function defaultGitRunner(args, cwd) {
 function normalizeGitResult(result) {
   if (typeof result === 'string') return { status: 0, stdout: result, stderr: '' };
   return {
-    status: Number.isInteger(result.status) ? result.status : 0,
+    status: Number.isInteger(result.status) ? result.status : null,
     stdout: result.stdout || '',
     stderr: result.stderr || '',
+    error: result.error ? String(result.error.message || result.error) : null,
+    signal: result.signal || null,
   };
 }
 
@@ -37,7 +42,7 @@ function runGitResult(args, cwd = process.cwd(), runner = defaultGitRunner) {
 function runGit(args, cwd = process.cwd(), runner = defaultGitRunner) {
   const result = runGitResult(args, cwd, runner);
   if (result.status !== 0) {
-    const detail = (result.stderr || result.stdout || '').trim();
+    const detail = (result.error || result.stderr || result.stdout || result.signal || '').trim();
     throw new Error(`git ${args.join(' ')} failed${detail ? `: ${detail}` : ''}`);
   }
   return result.stdout.trim();
@@ -79,7 +84,7 @@ function checkGovernanceFreshness(options = {}) {
   if (options.fetch !== false) {
     const fetchResult = runGitResult(['fetch', '--prune', remote], cwd, runner);
     if (fetchResult.status !== 0) {
-      const detail = (fetchResult.stderr || fetchResult.stdout || '').trim();
+      const detail = (fetchResult.error || fetchResult.stderr || fetchResult.stdout || fetchResult.signal || '').trim();
       failures.push(`git fetch --prune ${remote} failed${detail ? `: ${detail}` : ''}`);
     }
   }
@@ -91,6 +96,12 @@ function checkGovernanceFreshness(options = {}) {
     headSha = runGit(['rev-parse', 'HEAD'], cwd, runner);
   } catch (error) {
     failures.push(error.message);
+  }
+  if (!SHA_PATTERN.test(String(originMainSha || ''))) {
+    failures.push(`${remoteRef} SHA missing or invalid`);
+  }
+  if (!SHA_PATTERN.test(String(headSha || ''))) {
+    failures.push('HEAD SHA missing or invalid');
   }
 
   for (const file of files) {
