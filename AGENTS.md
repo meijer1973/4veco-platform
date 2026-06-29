@@ -236,7 +236,7 @@ force-push protection, deletion protection, required conversation resolution,
 and pull-request workflow while setting `required_approving_review_count` to
 `0`. The live required context is `validate-platform` only.
 `integration-authorized` remains optional audit evidence, not a required
-branch-protection context, after the activation smoke pilot failed closed.
+branch-protection context, after the activation smoke test failed closed.
 Repository `allow_auto_merge` remains `false`. Validate the live shape with
 `npm.cmd run check:branch-protection`. The checker must fail if the approval
 count returns to `1` or if observable pull-request bypass allowances are
