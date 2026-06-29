@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-NONPROTECTED-EXECUTION-AND-PROTECTED-GOVERNANCE-AUTHORIZATION-BUNDLE-2",
+  "fixture_id": "mtu-h7-nonprotected-negative-regression-fixtures-2",
+  "review_standard": "REV-STD-1",
+  "status": "negative_regression_guards_detect_expected_q4_defects",
+  "generated_at": "2026-06-30T07:36:20.425Z",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "source_candidate_packet": "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json#H7-CAND-ANSWER-FORM-GO-MO-SUBSIDY-LINE-DRAWING",
+  "fixtures": [
+    {
+      "fixture_id": "h7-bundle2-negative-q4-go-without-mo-pair",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "operation_ids": [
+        "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+        "h7-vw25-2-q4-mo-line-with-consumer-subsidy"
+      ],
+      "expected_status": "fail",
+      "expected_failure_defect_class": "answer_form_gap",
+      "mutation": "Accept GO subsidy-line drawing while omitting the paired MO-line shift.",
+      "detection_rule": "q4 execution requires both GO and MO operations plus A89/A90 and go_line/mo_line evidence.",
+      "candidate_source_guard": {
+        "fixture_id": "h7-governance-negative-q4-only-one-revenue-line-shifted",
+        "expected_failure_defect_class": "answer_form_gap",
+        "mutation": "Shift GO only and omit the corresponding MO relationship.",
+        "guard": "GO and MO line drawing must not close when the paired line logic is incomplete."
+      },
+      "observed_status": "failed",
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-bundle2-negative-q4-mo-left-original",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "operation_ids": [
+        "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+        "h7-vw25-2-q4-mo-line-with-consumer-subsidy"
+      ],
+      "expected_status": "fail",
+      "expected_failure_defect_class": "answer_form_gap",
+      "mutation": "Move GO correctly but leave MO in its original position.",
+      "detection_rule": "MO must shift consistently with the subsidy-adjusted GO line.",
+      "candidate_source_guard": {
+        "fixture_id": "h7-governance-negative-q4-mo-not-shifted-with-go",
+        "expected_failure_defect_class": "answer_form_gap",
+        "mutation": "Move GO correctly but leave MO in its original position.",
+        "guard": "MO must shift consistently with the subsidy-adjusted GO line."
+      },
+      "observed_status": "failed",
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-bundle2-negative-q4-elasticity-overtrigger",
+      "based_on_record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "operation_ids": [
+        "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+        "h7-vw25-2-q4-mo-line-with-consumer-subsidy"
+      ],
+      "expected_status": "fail",
+      "expected_failure_defect_class": "over_trigger",
+      "mutation": "Add forbidden A15 elasticity coverage to close the graph-line drawing operation.",
+      "detection_rule": "A15 remains forbidden for both q4 operations and cannot be used as a subsidy-line drawing shortcut.",
+      "observed_status": "failed",
+      "detected_with_intended_defect_class": true
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "detected_with_intended_defect_class": 3,
+    "detection_rate": 1
+  }
+}
