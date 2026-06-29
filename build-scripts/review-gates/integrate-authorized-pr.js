@@ -84,16 +84,23 @@ function fetchMainSha(repo) {
 }
 
 function summarizeIntegrationBranchProtection(protection, options = {}) {
-  const requireIntegrationAuthorized =
-    options.requireIntegrationAuthorized === true ||
-    contextsFromProtection(protection).includes(INTEGRATION_CONTEXT);
+  const observedIntegrationAuthorizedRequired = contextsFromProtection(protection).includes(INTEGRATION_CONTEXT);
+  const requireIntegrationAuthorized = options.requireIntegrationAuthorized === true;
   return {
     ...summarizeProtection(protection, {
       ...options,
       requireIntegrationAuthorized,
     }),
     integration_authorized_required: requireIntegrationAuthorized,
+    observed_integration_authorized_required: observedIntegrationAuthorizedRequired,
   };
+}
+
+function retiredActivatedModeFailure(branchProtection) {
+  if (branchProtection && branchProtection.integration_authorized_required === true) {
+    return 'integration-authorized required-context activation is retired; keep it optional audit evidence';
+  }
+  return null;
 }
 
 function fetchBranchProtectionSummary(repo, options = {}, runner = runGh) {
@@ -750,6 +757,16 @@ function integrate(options) {
     deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${branchProtection.failures.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'branch_protection', branch_protection: branchProtection };
   }
+  const retiredActivationFailure = retiredActivatedModeFailure(branchProtection);
+  if (retiredActivationFailure) {
+    deps.setCommitStatus(repo, pr.headRefOid, 'failure', retiredActivationFailure, pr.url, options);
+    return {
+      ok: false,
+      phase: 'retired_activated_mode',
+      branch_protection: branchProtection,
+      failures: [retiredActivationFailure],
+    };
+  }
 
   const preflightFailures = deps.validatePrState(pr, { requireValidatePlatform: false });
   const reviewThreads = deps.fetchReviewThreadState(repo, prNumber);
@@ -820,6 +837,16 @@ function integrate(options) {
   if (!finalBranchProtection.ok) {
     deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${finalBranchProtection.failures.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'final_branch_protection', branch_protection: finalBranchProtection };
+  }
+  const finalRetiredActivationFailure = retiredActivatedModeFailure(finalBranchProtection);
+  if (finalRetiredActivationFailure) {
+    deps.setCommitStatus(repo, pr.headRefOid, 'failure', finalRetiredActivationFailure, pr.url, options);
+    return {
+      ok: false,
+      phase: 'retired_activated_mode',
+      branch_protection: finalBranchProtection,
+      failures: [finalRetiredActivationFailure],
+    };
   }
   const finalLineage = deps.summarizeLineage(deps.buildLineageInput(repo, authorization, pr, finalMainSha));
   const finalPolicy = deps.enforceLineagePolicy(finalLineage, {

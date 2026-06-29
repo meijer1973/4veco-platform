@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Retained as a narrow retired-surface guard: PPTX workflow guidance now lives
+// in skills/, and .claude/commands must not return as a mirrored command tree.
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');

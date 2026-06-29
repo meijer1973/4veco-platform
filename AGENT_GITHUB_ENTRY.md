@@ -20,9 +20,9 @@ Path reliability:
 | How should multiple review/testing agents be coordinated into one go/no-go decision? | `agents/lead-reviewer-agent.md` |
 | How should a completed remote draft PR be routed to revise, batch, lead-only closure, human review, or pause? | `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, `build-scripts/review-gates/review-pr-readiness.js`, `build-scripts/review-gates/route-and-apply-pr-readiness.js`, `build-scripts/review-gates/apply-pr-readiness-decision.js` |
 | How should a human-authorized PR be serialized through base refresh, exact-head readiness, and merge? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, `build-scripts/review-gates/integrate-authorized-pr.js` |
-| How should activated branch protection and repository auto-merge support for the integration lane be verified? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, `package.json` script `check:branch-protection:activated`, `build-scripts/review-gates/integrate-authorized-pr.js` |
+| How should current branch protection and optional `integration-authorized` audit status be verified? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, `build-scripts/review-gates/integrate-authorized-pr.js` |
 | How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
-| How should active governance wording and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
+| How should active governance wording, pre-work governance freshness, and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/check-governance-freshness.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
 | How should accessibility, readability, contrast, alt text, OCR, or keyboard access be reviewed? | `agents/accessibility-agent.md` |
 | How should learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, transfer, retention, or classroom readiness be reviewed? | `agents/teacher-learning-quality-review-agent.md` |
@@ -75,6 +75,7 @@ Useful entry points:
 - `build-scripts/review-gates/integrate-authorized-pr.js`
 - `build-scripts/review-gates/route-and-apply-pr-readiness.js`
 - `build-scripts/review-gates/check-active-governance-wording.js`
+- `build-scripts/review-gates/check-governance-freshness.js`
 - `build-scripts/review-gates/finalization-freshness-proof.js`
 - `build-scripts/review-gates/cross-repo-bundle-compatibility.js`
 - `build-scripts/review-gates/check-human-bundle-authorization.js`
