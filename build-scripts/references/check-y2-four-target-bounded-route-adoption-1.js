@@ -145,12 +145,22 @@ function checkRegistry(lessonRoot) {
   const registry = readJson(registryPath);
   const packet = readJson(packetPath);
   const review = readJson(reviewPath);
+  const packetMd = readText(packetMdPath);
+  const reviewMd = readText(reviewMdPath);
   const expected = adoptionRegistry({ lessonRoot });
   assert(JSON.stringify(registry) === JSON.stringify(packet), 'registry and review-gate packet must match exactly');
   assert(registry.schema_version === 1, 'registry schema_version must be 1');
   assert(registry.sprint_id === SPRINT_ID, 'registry sprint_id mismatch');
   assert(registry.status === 'bounded_product_route_adoption_ready_for_human_review', 'registry status mismatch');
   assert(registry.product_end_state.includes('bounded'), 'product end-state must name bounded route adoption');
+  assert(
+    registry.product_end_state_baseline === '4veco-lessen/specifications/product-end-state.md',
+    'product-end-state baseline citation missing'
+  );
+  assert(
+    registry.companion_core_specification === '4veco-lessen/specifications/companion-core-specifications.md',
+    'companion core specification citation missing'
+  );
   assert(registry.original_sprint_gate_spec.adoption_prep_packet, 'adoption prep packet citation missing');
   assert(registry.adoption_surface.registry_file === REGISTRY_FILE, 'registry file mismatch');
   assert(registry.adoption_surface.lesson_root_index === 'index.html', 'lesson root index not named');
@@ -191,6 +201,10 @@ function checkRegistry(lessonRoot) {
 
   assert(review.product_route_adoption_registry === REGISTRY_FILE, 'review packet registry pointer mismatch');
   assert(JSON.stringify(review.lesson_index_files) === JSON.stringify(['index.html', `${LESSON_OUTPUT_ROOT}/index.html`]), 'review packet must name both lesson index files');
+  assert(packetMd.includes(registry.product_end_state_baseline), 'packet markdown missing product-end-state baseline citation');
+  assert(packetMd.includes(registry.companion_core_specification), 'packet markdown missing companion core specification citation');
+  assert(reviewMd.includes(registry.product_end_state_baseline), 'review markdown missing product-end-state baseline citation');
+  assert(reviewMd.includes(registry.companion_core_specification), 'review markdown missing companion core specification citation');
 
   const rendered = readText(renderedPath);
   assert(rendered.includes('Bounded route adoption'), 'rendered registry missing heading');

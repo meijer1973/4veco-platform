@@ -6,6 +6,9 @@ Status: bounded product-route adoption ready for human review.
 
 Product end-state: Adopt the four reviewed Year 2 candidate lesson routes as a bounded, teacher/owner-reviewed product-route preview surface while keeping CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad student rollout, and student/product use blocked.
 
+Product end-state baseline citation:
+- 4veco-lessen/specifications/product-end-state.md
+
 Original sprint/gate/source specs:
 - reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/route-adoption-prep-packet.json
 - reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json
@@ -15,6 +18,7 @@ Original sprint/gate/source specs:
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/generator-handoff-manifests.json
 - reports/review-gates/Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1/review-packet.json
 - reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md
+- 4veco-lessen/specifications/companion-core-specifications.md
 
 ## Non-Negotiable Requirements
 

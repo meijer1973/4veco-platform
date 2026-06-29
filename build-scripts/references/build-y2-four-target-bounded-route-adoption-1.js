@@ -13,6 +13,8 @@ const REPORT_DIR = path.join(PLATFORM_ROOT, 'reports', 'review-gates', SPRINT_ID
 const PREP_PACKET = `reports/review-gates/${PREP_SPRINT_ID}/route-adoption-prep-packet.json`;
 const REGISTRY_FILE = 'references/data/year2-target-foundation/product-route-adoption-registry.json';
 const LESSON_OUTPUT_ROOT = 'year2-candidate-lessons/four-target-lesson-production-1';
+const PRODUCT_END_STATE_SPEC = '4veco-lessen/specifications/product-end-state.md';
+const COMPANION_CORE_SPEC = '4veco-lessen/specifications/companion-core-specifications.md';
 const GENERATED_ON = '2026-06-29';
 const RECORD_ID = SPRINT_ID;
 
@@ -191,6 +193,8 @@ function adoptionRegistry(options = {}) {
     generated_on: GENERATED_ON,
     status: 'bounded_product_route_adoption_ready_for_human_review',
     product_end_state: 'Adopt the four reviewed Year 2 candidate lesson routes as a bounded, teacher/owner-reviewed product-route preview surface while keeping CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad student rollout, and student/product use blocked.',
+    product_end_state_baseline: PRODUCT_END_STATE_SPEC,
+    companion_core_specification: COMPANION_CORE_SPEC,
     original_sprint_gate_spec: {
       adoption_prep_packet: PREP_PACKET,
       product_proof_packet: prep.original_sprint_gate_spec.product_proof_packet,
@@ -270,6 +274,9 @@ Status: bounded product-route adoption ready for human review.
 
 Product end-state: ${registry.product_end_state}
 
+Product end-state baseline citation:
+- ${registry.product_end_state_baseline}
+
 Original sprint/gate/source specs:
 - ${registry.original_sprint_gate_spec.adoption_prep_packet}
 - ${registry.original_sprint_gate_spec.product_proof_packet}
@@ -279,6 +286,7 @@ Original sprint/gate/source specs:
 - ${registry.original_sprint_gate_spec.governed_support_handoff}
 - ${registry.original_sprint_gate_spec.original_governed_support_gate}
 - ${registry.original_sprint_gate_spec.book_architecture}
+- ${registry.companion_core_specification}
 
 ## Non-Negotiable Requirements
 

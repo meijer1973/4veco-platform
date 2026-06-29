@@ -5,6 +5,8 @@
   "generated_on": "2026-06-29",
   "status": "bounded_product_route_adoption_ready_for_human_review",
   "product_end_state": "Adopt the four reviewed Year 2 candidate lesson routes as a bounded, teacher/owner-reviewed product-route preview surface while keeping CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad student rollout, and student/product use blocked.",
+  "product_end_state_baseline": "4veco-lessen/specifications/product-end-state.md",
+  "companion_core_specification": "4veco-lessen/specifications/companion-core-specifications.md",
   "original_sprint_gate_spec": {
     "adoption_prep_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/route-adoption-prep-packet.json",
     "product_proof_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json",
