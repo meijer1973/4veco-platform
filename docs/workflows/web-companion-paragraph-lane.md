@@ -80,7 +80,13 @@ node scripts/validate-paragraph.js --mode complete --profile student-web "<parag
 Lane scope check for a companion PR:
 
 ```bash
-node build-scripts/workflows/check-paragraph-lane-scope.js --lane companion --base origin/main --head HEAD
+node ../4veco-platform/build-scripts/workflows/check-paragraph-lane-scope.js --lane companion --base origin/main --head HEAD
+```
+
+From the platform repo, point the checker at the lesson-output repo explicitly:
+
+```bash
+node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane companion --base origin/main --head HEAD
 ```
 
 ## Closure Gate

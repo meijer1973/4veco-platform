@@ -221,7 +221,7 @@ Follow `econ-textbook-paragraph` skill exactly:
 For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
 1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
 2. Write `X.Y.Z Gemengde opgaven – antwoorden.md` — answer model
-3. No paragraaf.md — consolidation has no theory section, but its markdown and PDFs are still required
+3. No paragraaf.md — consolidation has no theory section; its markdown and HTML are required for student-web, while PDFs are publisher-print outputs
 
 ## A3: Build graphs
 
@@ -841,7 +841,7 @@ Validation is profile-aware. Use `student-web` for normal paragraph companion
 work, `office` or `legacy-full` only when Word exports are deliberately part of
 the requested product, and `publisher-print` for the separate PDF handoff.
 
-- **Part A/textbook mode**: validates textbook files at the paragraph root. Theory paragraphs require paragraaf/opgaven/antwoorden markdown and PDFs. Consolidation paragraphs require opgaven/antwoorden markdown and PDFs; `paragraaf.md`/`paragraaf.pdf` are not required because consolidation has no theory section.
+- **Part A/textbook mode**: validates textbook files at the paragraph root. In `student-web` and `office` profiles, theory paragraphs require paragraaf/opgaven/antwoorden markdown and HTML; consolidation paragraphs require opgaven/antwoorden markdown and HTML. PDFs and `build_pdf.py` are required only under `legacy-full` or `publisher-print`.
 - **Part B/companion mode**: validates the `student-web` Part B root files listed in B1 by default, including `index.html`; use `legacy-full` or `office` only when those exports are deliberately in scope. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
 - **Complete mode**: validates both Part A and Part B.
 

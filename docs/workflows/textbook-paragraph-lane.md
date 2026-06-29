@@ -67,7 +67,13 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 Lane scope check for a textbook PR:
 
 ```bash
-node build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook --base origin/main --head HEAD
+node ../4veco-platform/build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook --base origin/main --head HEAD
+```
+
+From the platform repo, point the checker at the lesson-output repo explicitly:
+
+```bash
+node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base origin/main --head HEAD
 ```
 
 ## Closure Gate

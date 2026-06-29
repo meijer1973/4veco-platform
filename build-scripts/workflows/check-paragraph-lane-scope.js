@@ -191,7 +191,8 @@ function validateLaneScopeException(exceptionRecord) {
   return { ok: failures.length === 0, failures };
 }
 
-function hasOnlyTail(categories) {
+function hasOnlyTail(categories, hasLaneOwnedQualityRefChange = false) {
+  if (hasLaneOwnedQualityRefChange) return false;
   return categories.partA_textbook.length === 0
     && categories.partB_companion.length === 0
     && categories.shared_platform.length === 0
@@ -199,7 +200,71 @@ function hasOnlyTail(categories) {
     && (categories.generated_indexes.length > 0 || categories.review_evidence.length > 0);
 }
 
-function checkLaneScope({ lane, changedPaths, exception = null }) {
+function extractTopLevelBlock(text, name) {
+  const lines = String(text || '').split(/\r?\n/);
+  const startRe = new RegExp(`^${name}:\\s*$`);
+  const topKeyRe = /^[A-Za-z_][A-Za-z0-9_]*:\s*.*$/;
+  const startIdx = lines.findIndex((line) => startRe.test(line));
+  if (startIdx < 0) return '';
+  let endIdx = lines.length;
+  for (let i = startIdx + 1; i < lines.length; i += 1) {
+    if (topKeyRe.test(lines[i])) {
+      endIdx = i;
+      break;
+    }
+  }
+  return lines.slice(startIdx + 1, endIdx).join('\n').trim();
+}
+
+function stripTopLevelBlock(text, name) {
+  const lines = String(text || '').split(/\r?\n/);
+  const startRe = new RegExp(`^${name}:\\s*$`);
+  const topKeyRe = /^[A-Za-z_][A-Za-z0-9_]*:\s*.*$/;
+  const startIdx = lines.findIndex((line) => startRe.test(line));
+  if (startIdx < 0) return lines;
+  let endIdx = lines.length;
+  for (let i = startIdx + 1; i < lines.length; i += 1) {
+    if (topKeyRe.test(lines[i])) {
+      endIdx = i;
+      break;
+    }
+  }
+  return [...lines.slice(0, startIdx), ...lines.slice(endIdx)];
+}
+
+function legacyPartAContent(text) {
+  return stripTopLevelBlock(String(text || ''), 'companion').join('\n').trim();
+}
+
+function changedQualityRefBlocks(beforeText, afterText) {
+  const before = beforeText || '';
+  const after = afterText || '';
+  const beforePartA = extractTopLevelBlock(before, 'partA') || legacyPartAContent(before);
+  const afterPartA = extractTopLevelBlock(after, 'partA') || legacyPartAContent(after);
+  const beforeCompanion = extractTopLevelBlock(before, 'companion');
+  const afterCompanion = extractTopLevelBlock(after, 'companion');
+  const blocks = [];
+  if (beforePartA !== afterPartA) blocks.push('partA');
+  if (beforeCompanion !== afterCompanion) blocks.push('companion');
+  return blocks;
+}
+
+function qualityRefOwnershipSummary(qualityRefChanges = []) {
+  const summary = {
+    partA: false,
+    companion: false,
+    paths: [],
+  };
+  for (const change of qualityRefChanges || []) {
+    const blocks = new Set(change.blocks || []);
+    if (blocks.has('partA')) summary.partA = true;
+    if (blocks.has('companion')) summary.companion = true;
+    if (change.path) summary.paths.push(change.path);
+  }
+  return summary;
+}
+
+function checkLaneScope({ lane, changedPaths, exception = null, qualityRefChanges = [] }) {
   if (!VALID_LANES.has(lane)) {
     throw new Error(`invalid lane: ${lane}`);
   }
@@ -207,6 +272,9 @@ function checkLaneScope({ lane, changedPaths, exception = null }) {
   const categories = classifyChangedPaths(changedPaths);
   const failures = [];
   const warnings = [];
+  const qualityRefOwnership = qualityRefOwnershipSummary(qualityRefChanges);
+  const laneOwnedQualityRef = (lane === 'textbook' && qualityRefOwnership.partA)
+    || (lane === 'companion' && qualityRefOwnership.companion);
   const exceptionSummary = exception ? validateLaneScopeException(exception) : { ok: false, failures: [] };
   const hasException = Boolean(exception) && exceptionSummary.ok;
   const hasChangedPaths = Object.values(categories).some((items) => items.length > 0);
@@ -228,7 +296,10 @@ function checkLaneScope({ lane, changedPaths, exception = null }) {
     if (categories.partB_companion.length > 0 && !hasException) {
       failures.push(`textbook lane may not change companion files: ${categories.partB_companion.join(', ')}`);
     }
-    if (categories.partA_textbook.length === 0) {
+    if (qualityRefOwnership.companion && !hasException) {
+      failures.push(`textbook lane may not change quality-ref companion block: ${qualityRefOwnership.paths.join(', ')}`);
+    }
+    if (categories.partA_textbook.length === 0 && !qualityRefOwnership.partA) {
       failures.push('textbook lane needs at least one Part A textbook change');
     }
   } else if (lane === 'companion') {
@@ -238,7 +309,10 @@ function checkLaneScope({ lane, changedPaths, exception = null }) {
     if (categories.partA_textbook.length > 0 && !hasException) {
       failures.push(`companion lane may not change Part A textbook files: ${categories.partA_textbook.join(', ')}`);
     }
-    if (categories.partB_companion.length === 0) {
+    if (qualityRefOwnership.partA && !hasException) {
+      failures.push(`companion lane may not change quality-ref partA block: ${qualityRefOwnership.paths.join(', ')}`);
+    }
+    if (categories.partB_companion.length === 0 && !qualityRefOwnership.companion) {
       failures.push('companion lane needs at least one Part B companion change');
     }
   } else if (lane === 'shared') {
@@ -248,12 +322,15 @@ function checkLaneScope({ lane, changedPaths, exception = null }) {
     if (categories.partB_companion.length > 0) {
       failures.push(`shared lane may not change Part B companion files: ${categories.partB_companion.join(', ')}`);
     }
+    if ((qualityRefOwnership.partA || qualityRefOwnership.companion) && !hasException) {
+      failures.push(`shared lane may not change lesson quality-ref blocks: ${qualityRefOwnership.paths.join(', ')}`);
+    }
     if (categories.shared_platform.length === 0) {
       failures.push('shared lane needs at least one shared platform change');
     }
   }
 
-  if (hasOnlyTail(categories)) {
+  if (hasOnlyTail(categories, laneOwnedQualityRef)) {
     failures.push('generated index/report or review-evidence changes are allowed only with lane-owned changes');
   }
   if (hasException) {
@@ -264,6 +341,7 @@ function checkLaneScope({ lane, changedPaths, exception = null }) {
     ok: failures.length === 0,
     lane,
     categories,
+    qualityRefChanges,
     failures,
     warnings,
     exception: exception ? {
@@ -283,6 +361,7 @@ function parseArgs(argv) {
     lane: null,
     base: 'origin/main',
     head: 'HEAD',
+    cwd: null,
     fixture: null,
     exceptionFile: null,
     json: false,
@@ -303,6 +382,10 @@ function parseArgs(argv) {
       options.head = argv[++i];
     } else if (arg.startsWith('--head=')) {
       options.head = arg.slice('--head='.length);
+    } else if (arg === '--cwd') {
+      options.cwd = argv[++i];
+    } else if (arg.startsWith('--cwd=')) {
+      options.cwd = arg.slice('--cwd='.length);
     } else if (arg === '--fixture') {
       options.fixture = argv[++i];
     } else if (arg.startsWith('--fixture=')) {
@@ -334,6 +417,7 @@ function usage() {
   return [
     'Usage:',
     '  node build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook|companion|shared --base origin/main --head HEAD',
+    '  node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base origin/main --head HEAD',
     '  node build-scripts/workflows/check-paragraph-lane-scope.js --lane companion --fixture fixture.json',
     '',
     'Fixture shape:',
@@ -355,6 +439,31 @@ function changedPathsFromGit(base, head, cwd = process.cwd()) {
     throw new Error(`git diff failed${detail ? `: ${detail}` : ''}`);
   }
   return result.stdout.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+}
+
+function readGitFileAt(revision, filePath, cwd = process.cwd()) {
+  const result = spawnSync('git', ['show', `${revision}:${filePath}`], {
+    cwd,
+    encoding: 'utf8',
+    maxBuffer: 1024 * 1024 * 10,
+  });
+  if (result.status !== 0) return null;
+  return result.stdout;
+}
+
+function qualityRefChangesFromGit(base, head, cwd = process.cwd(), changedPaths = null) {
+  const paths = (changedPaths || changedPathsFromGit(base, head, cwd))
+    .filter((changedPath) => /(^|\/)\d+\.\d+\.\d+-quality-ref\.ya?ml$/i.test(normalizePath(changedPath)));
+  const changes = [];
+  for (const changedPath of paths) {
+    const beforeText = readGitFileAt(base, changedPath, cwd);
+    const afterText = readGitFileAt(head, changedPath, cwd);
+    const blocks = changedQualityRefBlocks(beforeText, afterText);
+    if (blocks.length > 0) {
+      changes.push({ path: normalizePath(changedPath), blocks });
+    }
+  }
+  return changes;
 }
 
 function formatSummary(summary) {
@@ -388,15 +497,19 @@ function runCli(argv = process.argv.slice(2), cwd = process.cwd()) {
 
   try {
     let changedPaths;
+    let qualityRefChanges = [];
     let exception = null;
     if (options.fixture) {
       const fixture = readJson(options.fixture);
       changedPaths = fixture.changed_paths || fixture.paths || [];
+      qualityRefChanges = fixture.quality_ref_changes || [];
       exception = fixture.lane_scope_exception
         ? { lane_scope_exception: fixture.lane_scope_exception }
         : null;
     } else {
-      changedPaths = changedPathsFromGit(options.base, options.head, cwd);
+      const targetCwd = options.cwd ? path.resolve(cwd, options.cwd) : cwd;
+      changedPaths = changedPathsFromGit(options.base, options.head, targetCwd);
+      qualityRefChanges = qualityRefChangesFromGit(options.base, options.head, targetCwd, changedPaths);
     }
     if (options.exceptionFile) {
       exception = readJson(options.exceptionFile);
@@ -405,6 +518,7 @@ function runCli(argv = process.argv.slice(2), cwd = process.cwd()) {
       lane: options.lane,
       changedPaths,
       exception,
+      qualityRefChanges,
     });
     if (options.json) console.log(JSON.stringify(summary, null, 2));
     else console.log(formatSummary(summary));
@@ -425,9 +539,11 @@ module.exports = {
   classifyPath,
   classifyChangedPaths,
   validateLaneScopeException,
+  changedQualityRefBlocks,
   checkLaneScope,
   parseArgs,
   changedPathsFromGit,
+  qualityRefChangesFromGit,
   formatSummary,
   runCli,
 };

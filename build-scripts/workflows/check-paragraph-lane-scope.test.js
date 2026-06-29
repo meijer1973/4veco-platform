@@ -1,7 +1,11 @@
 'use strict';
 
+const fs = require('fs');
+const os = require('os');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const {
+  changedQualityRefBlocks,
   classifyPath,
   checkLaneScope,
   parseArgs,
@@ -23,6 +27,22 @@ function runCliQuiet(args) {
     log.mockRestore();
     error.mockRestore();
   }
+}
+
+function git(args, cwd) {
+  const result = spawnSync('git', args, {
+    cwd,
+    encoding: 'utf8',
+  });
+  if (result.status !== 0) {
+    throw new Error(`git ${args.join(' ')} failed: ${(result.stderr || result.stdout || '').trim()}`);
+  }
+  return result.stdout;
+}
+
+function writeFile(filePath, content) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, content, 'utf8');
 }
 
 describe('check-paragraph-lane-scope', () => {
@@ -112,6 +132,86 @@ describe('check-paragraph-lane-scope', () => {
     expect(withShared.ok).toBe(true);
   });
 
+  test('quality-ref companion block only is lane-owned in companion lane', () => {
+    const data = require('./fixtures/paragraph-lane-scope/companion-with-quality-ref-companion-block-only.json');
+    const summary = checkLaneScope({
+      lane: 'companion',
+      changedPaths: data.changed_paths,
+      qualityRefChanges: data.quality_ref_changes,
+    });
+
+    expect(summary.ok).toBe(true);
+  });
+
+  test('companion lane rejects quality-ref partA block edits', () => {
+    const data = require('./fixtures/paragraph-lane-scope/companion-with-quality-ref-partA-block-leak.json');
+    const summary = checkLaneScope({
+      lane: 'companion',
+      changedPaths: data.changed_paths,
+      qualityRefChanges: data.quality_ref_changes,
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures.join('\n')).toMatch(/quality-ref partA block/);
+  });
+
+  test('quality-ref partA block only is lane-owned in textbook lane', () => {
+    const data = require('./fixtures/paragraph-lane-scope/textbook-with-quality-ref-partA-block-only.json');
+    const summary = checkLaneScope({
+      lane: 'textbook',
+      changedPaths: data.changed_paths,
+      qualityRefChanges: data.quality_ref_changes,
+    });
+
+    expect(summary.ok).toBe(true);
+  });
+
+  test('textbook lane rejects quality-ref companion block edits', () => {
+    const data = require('./fixtures/paragraph-lane-scope/textbook-with-quality-ref-companion-block-leak.json');
+    const summary = checkLaneScope({
+      lane: 'textbook',
+      changedPaths: data.changed_paths,
+      qualityRefChanges: data.quality_ref_changes,
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures.join('\n')).toMatch(/quality-ref companion block/);
+  });
+
+  test('detects changed quality-ref blocks from YAML content', () => {
+    const before = [
+      'schema_version: 2',
+      'partA:',
+      '  review_verdict: "PASS"',
+      'companion:',
+      '  review_verdict: "PASS"',
+      '  hard_fails_open: 0',
+      '',
+    ].join('\n');
+    const after = before.replace('hard_fails_open: 0', 'hard_fails_open: 1');
+
+    expect(changedQualityRefBlocks(before, after)).toEqual(['companion']);
+  });
+
+  test('runCli --cwd checks the target repository git range', () => {
+    const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'lane-scope-cwd-'));
+    try {
+      git(['init', '-b', 'main'], repo);
+      writeFile(path.join(repo, 'README.md'), '# temp\n');
+      git(['add', 'README.md'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'initial'], repo);
+      writeFile(path.join(repo, 'docs', 'workflows', 'lane.md'), '# lane\n');
+      git(['add', 'docs/workflows/lane.md'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'add lane doc'], repo);
+
+      const code = runCliQuiet(['--cwd', repo, '--lane', 'shared', '--base', 'HEAD~1', '--head', 'HEAD']);
+
+      expect(code).toBe(0);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
   test('textbook lane rejects shared game data changes', () => {
     const summary = checkLaneScope({
       lane: 'textbook',
@@ -126,8 +226,9 @@ describe('check-paragraph-lane-scope', () => {
   });
 
   test('parseArgs accepts required lane and defaults git range', () => {
-    expect(parseArgs(['--lane', 'shared'])).toMatchObject({
+    expect(parseArgs(['--lane', 'shared', '--cwd', '..\\4veco-lessen'])).toMatchObject({
       lane: 'shared',
+      cwd: '..\\4veco-lessen',
       base: 'origin/main',
       head: 'HEAD',
     });

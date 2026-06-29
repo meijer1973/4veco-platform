@@ -1,0 +1,11 @@
+{
+  "changed_paths": [
+    "Boek 1/1.1/1.1.1 Test/1.1.1-quality-ref.yaml"
+  ],
+  "quality_ref_changes": [
+    {
+      "path": "Boek 1/1.1/1.1.1 Test/1.1.1-quality-ref.yaml",
+      "blocks": ["partA"]
+    }
+  ]
+}
