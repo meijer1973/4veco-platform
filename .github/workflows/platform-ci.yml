@@ -82,7 +82,20 @@ jobs:
       - name: Install presentation proof tools
         run: |
           choco install libreoffice-fresh poppler -y --no-progress
-          "C:\Program Files\LibreOffice\program" | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+          $soffice = "C:\Program Files\LibreOffice\program\soffice.exe"
+          if (-not (Test-Path -LiteralPath $soffice)) {
+            $soffice = (Get-ChildItem -Path "C:\Program Files" -Filter soffice.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+          }
+          $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source
+          if (-not $pdftoppm) {
+            $pdftoppm = (Get-ChildItem -Path "$env:ProgramData\chocolatey\lib" -Filter pdftoppm.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+          }
+          if (-not $soffice) { throw "soffice.exe not found after LibreOffice install" }
+          if (-not $pdftoppm) { throw "pdftoppm.exe not found after Poppler install" }
+          "SOFFICE_PATH=$soffice" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "PDFTOPPM_PATH=$pdftoppm" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          (Split-Path -Parent $soffice) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+          (Split-Path -Parent $pdftoppm) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
 
       - name: Validate platform Jest suite
         run: npm run check:platform
