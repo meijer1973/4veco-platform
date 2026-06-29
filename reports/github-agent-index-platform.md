@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-29T13:59:53.361Z
+Generated: 2026-06-29T14:05:42.048Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/integration-pilot-closure-cleanup-1-20260629`
-Source commit: `0cb4877aa49a8f536e0809127a7e1abb594b2868`
-Files indexed: 6650
+Source commit: `6067a8463ab18a517b3f8d50c4bacbeb8b0700ec`
+Files indexed: 6651
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2311,7 +2311,7 @@ Count: 860
 
 ## reports
 
-Count: 4290
+Count: 4291
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5337,6 +5337,7 @@ Count: 4290
 - reports/sprints/GRAPH-UX-2-student-route-proof.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-COMPAT-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-TRIGGER-1-lead-review-round1.md
+- reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round2.md
 - reports/sprints/L1.7B-Q2-answer-model.md
 - reports/sprints/L1.7B-Q2-baseline.md
 - reports/sprints/L1.7B-Q2-COPY-baseline.md
