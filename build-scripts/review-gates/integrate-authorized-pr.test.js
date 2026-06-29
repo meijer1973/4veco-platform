@@ -5,6 +5,7 @@ const {
   readinessMarkerFor,
   runIntegrationAttempts,
   setCommitStatus,
+  summarizeIntegrationBranchProtection,
   supplementalFromReadinessDecision,
   validatePrState,
   waitForMainCi,
@@ -126,6 +127,38 @@ function sequence(values) {
     index += 1;
     return value;
   });
+}
+
+function branchProtectionWithContexts(contexts) {
+  return {
+    required_status_checks: {
+      strict: true,
+      contexts,
+    },
+    enforce_admins: {
+      enabled: true,
+    },
+    allow_force_pushes: {
+      enabled: false,
+    },
+    allow_deletions: {
+      enabled: false,
+    },
+    required_conversation_resolution: {
+      enabled: true,
+    },
+    required_pull_request_reviews: {
+      dismiss_stale_reviews: false,
+      require_code_owner_reviews: false,
+      require_last_push_approval: false,
+      required_approving_review_count: 0,
+      bypass_pull_request_allowances: {
+        users: [],
+        teams: [],
+        apps: [],
+      },
+    },
+  };
 }
 
 function integrationHarness(overrides = {}) {
@@ -393,6 +426,70 @@ describe('authorized PR integration runner', () => {
       sha: headSha,
       context: 'integration-authorized',
     });
+  });
+
+  test('auto-detects activated branch protection with integration-authorized required', () => {
+    const summary = summarizeIntegrationBranchProtection(
+      branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+    );
+
+    expect(summary.ok).toBe(true);
+    expect(summary.integration_authorized_required).toBe(true);
+    expect(summary.expected.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
+  });
+
+  test('forced activated branch protection fails when integration-authorized is missing', () => {
+    const summary = summarizeIntegrationBranchProtection(
+      branchProtectionWithContexts(['validate-platform']),
+      { requireIntegrationAuthorized: true }
+    );
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('required status context missing: integration-authorized');
+  });
+
+  test('activated branch protection fails when an extra context is required', () => {
+    const summary = summarizeIntegrationBranchProtection(
+      branchProtectionWithContexts(['validate-platform', 'integration-authorized', 'unexpected-extra'])
+    );
+
+    expect(summary.ok).toBe(false);
+    expect(summary.integration_authorized_required).toBe(true);
+    expect(summary.failures).toContain('unexpected required status context: unexpected-extra');
+  });
+
+  test('runner accepts auto-detected activated branch protection summary', () => {
+    const { options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+        )),
+      },
+      options: { noMerge: true },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'authorized_no_merge' });
+  });
+
+  test('runner fails when activated branch protection has an extra required context', () => {
+    const { options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized', 'unexpected-extra'])
+        )),
+      },
+      options: { noMerge: true },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: false, phase: 'branch_protection' });
+    expect(result.branch_protection.failures).toContain('unexpected required status context: unexpected-extra');
   });
 
   test('required-but-missing integration-authorized does not create a BLOCKED update loop', () => {

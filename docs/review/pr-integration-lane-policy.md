@@ -232,6 +232,12 @@ code in `.github/workflows/authorized-pr-integration.yml`,
 `.github/workflows/authorized-bundle-integration.yml`, or the equivalent
 owner-authenticated local lane running trusted `main` code.
 
+The single-PR integration runner auto-detects the live protected shape. If live
+branch protection already requires `integration-authorized`, it validates the
+activated exact context set; otherwise it validates the pre-activation exact
+context set. The explicit `--require-integration-authorized` flag remains
+available for forced post-activation verification and tests.
+
 After activation, agents must not call `gh pr merge` directly for normal PRs.
 Merges must go through `authorized-pr-integration` or
 `authorized-bundle-integration`. Use the trusted workflow when it can verify
@@ -239,6 +245,16 @@ branch protection; otherwise use the owner-authenticated local fallback above.
 Human authorization still binds to the reviewed payload SHA. The lane may
 validate a later integration head without renewed human authorization when
 lineage, base drift, decision scope, and effective-payload checks remain valid.
+
+The bundle lane sets `integration-authorized` pending on the platform
+controller head when it starts. It sets failure on terminal bundle-lane
+failures. It sets success only on the exact platform controller integration head
+after bundle authorization, current compatibility proof, member-head checks,
+clean review state, exact-head readiness, required CI, and base-drift checks
+pass, and immediately before the platform member merge. For lesson-first
+bundles, platform success is not set until the lesson member has merged and the
+intermediate platform CI proof has passed. Dry-runs must not create a reusable
+successful status.
 
 Rollback is allowed only by explicit owner decision. Rollback must remove
 `integration-authorized` from required contexts while keeping

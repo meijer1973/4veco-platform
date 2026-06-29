@@ -6,7 +6,10 @@ const {
   validateAuthorizationRecord,
 } = require('./check-human-payload-authorization');
 const { summarizeLineage } = require('./check-integration-lineage');
-const { summarizeProtection } = require('../ci/check-branch-protection');
+const {
+  contextsFromProtection,
+  summarizeProtection,
+} = require('../ci/check-branch-protection');
 const { applyLiveDecision } = require('./apply-pr-readiness-decision');
 const { parseRenderedDecisionMarkdown } = require('./pr-readiness-router');
 const { runReview } = require('./review-pr-readiness');
@@ -80,15 +83,27 @@ function fetchMainSha(repo) {
   return JSON.parse(raw).object.sha;
 }
 
+function summarizeIntegrationBranchProtection(protection, options = {}) {
+  const requireIntegrationAuthorized =
+    options.requireIntegrationAuthorized === true ||
+    contextsFromProtection(protection).includes(INTEGRATION_CONTEXT);
+  return {
+    ...summarizeProtection(protection, {
+      ...options,
+      requireIntegrationAuthorized,
+    }),
+    integration_authorized_required: requireIntegrationAuthorized,
+  };
+}
+
 function fetchBranchProtectionSummary(repo, options = {}) {
   const rawProtection = runGh(['api', `repos/${repo}/branches/main/protection`]);
   const reviewRead = runGh(['api', `repos/${repo}/branches/main/protection/required_pull_request_reviews`], {
     optional: true,
   });
-  return summarizeProtection(JSON.parse(rawProtection), {
+  return summarizeIntegrationBranchProtection(JSON.parse(rawProtection), {
     repo,
     branch: 'main',
-    requireIntegrationAuthorized: options.requireIntegrationAuthorized === true,
     pullRequestReviews: reviewRead ? JSON.parse(reviewRead) : null,
     pullRequestReviewFetch: reviewRead
       ? { status: 'available', limitation: null }
@@ -851,6 +866,7 @@ module.exports = {
   readinessMarkerFor,
   runIntegrationAttempts,
   setCommitStatus,
+  summarizeIntegrationBranchProtection,
   supplementalFromReadinessDecision,
   validateIntegrationDeltaReview,
   validatePrState,

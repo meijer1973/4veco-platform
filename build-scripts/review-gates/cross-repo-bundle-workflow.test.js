@@ -43,7 +43,9 @@ describe('cross-repo bundle workflow safety', () => {
     expect(authorizedBundleWorkflow).toContain('group: 4veco-main-integration');
     expect(authorizedBundleWorkflow).toContain('queue: max');
     expect(authorizedBundleWorkflow).toContain('cancel-in-progress: false');
+    expect(authorizedBundleWorkflow).toContain('statuses: write');
     expect(authorizedBundleWorkflow).toContain('Checkout trusted main workflow code');
+    expect(authorizedBundleWorkflow).toContain('ref: main');
     expect(authorizedBundleWorkflow).toContain('integrate:authorized-bundle');
     expect(authorizedBundleWorkflow).toContain('compatibility_workflow_run_id');
     expect(authorizedBundleWorkflow).toContain('bundle-summary.json');

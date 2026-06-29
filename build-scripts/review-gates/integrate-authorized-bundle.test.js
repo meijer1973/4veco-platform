@@ -3,9 +3,11 @@ const os = require('os');
 const path = require('path');
 const {
   integrateBundle,
+  INTEGRATION_CONTEXT,
   PLATFORM_REPO,
   LESSON_REPO,
   selectLatestRunForHead,
+  setPlatformIntegrationStatus,
   validateCompatibilityWorkflowProvenance,
   validatePlatformCiEvidence,
 } = require('./integrate-authorized-bundle');
@@ -101,7 +103,7 @@ function compatibilitySummary(overrides = {}) {
 }
 
 function harness(overrides = {}) {
-  const calls = { merges: [], ciTriggers: [], ciWaits: [], refreshes: [], updates: [] };
+  const calls = { events: [], statuses: [], merges: [], ciTriggers: [], ciWaits: [], refreshes: [], updates: [] };
   const fetchPr = jest.fn((repo) => {
     if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
     return pr(repo, 34, lessonHead);
@@ -145,8 +147,15 @@ function harness(overrides = {}) {
       return { ok: true };
     }),
     mergePr: jest.fn((repo, prNumber, headSha) => {
+      calls.events.push({ type: 'merge', repo, prNumber, headSha });
       calls.merges.push({ repo, prNumber, headSha });
       return { merged: true };
+    }),
+    setCommitStatus: jest.fn((repo, sha, state, description, targetUrl, statusOptions = {}) => {
+      const item = { repo, sha, state, description, targetUrl, dryRun: statusOptions.dryRun === true };
+      calls.events.push({ type: 'status', ...item });
+      calls.statuses.push(item);
+      return { ok: true };
     }),
     fetchMergedPr: jest.fn((repo) => ({
       state: 'MERGED',
@@ -202,6 +211,12 @@ describe('authorized cross-repo bundle integration', () => {
       expectedLessonSha: lessonMerge,
       minDatabaseId: 100,
     });
+    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'success']);
+    expect(calls.statuses[calls.statuses.length - 1]).toMatchObject({
+      repo: PLATFORM_REPO,
+      sha: platformHead,
+      state: 'success',
+    });
   });
 
   test('lesson-first can recover an initially red platform validate-platform check', () => {
@@ -248,6 +263,75 @@ describe('authorized cross-repo bundle integration', () => {
       expectedPlatformSha: platformMerge,
       expectedLessonSha: lessonBase,
     });
+    expect(calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')).toBeLessThan(
+      calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO)
+    );
+  });
+
+  test('lesson-first does not mint platform success before lesson merge and intermediate CI', () => {
+    const { calls, options } = harness();
+    const result = integrateBundle(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    const lessonMergeIndex = calls.events.findIndex((event) => event.type === 'merge' && event.repo === LESSON_REPO);
+    const platformSuccessIndex = calls.events.findIndex((event) => event.type === 'status' && event.state === 'success');
+    const platformMergeIndex = calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO);
+
+    expect(lessonMergeIndex).toBeGreaterThan(-1);
+    expect(platformSuccessIndex).toBeGreaterThan(lessonMergeIndex);
+    expect(platformSuccessIndex).toBeLessThan(platformMergeIndex);
+  });
+
+  test('dry-run bundle path does not mint a reusable integration-authorized success status', () => {
+    const { calls, options } = harness({ options: { dryRun: true } });
+    const result = integrateBundle(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle' });
+    expect(calls.statuses).toEqual([]);
+  });
+
+  test('platform status helper reports dry-run success without calling GitHub', () => {
+    const result = setPlatformIntegrationStatus(
+      { setCommitStatus: jest.fn() },
+      platformHead,
+      'success',
+      'Would authorize bundle integration',
+      `https://github.com/${PLATFORM_REPO}/pull/140`,
+      { dryRun: true }
+    );
+
+    expect(result).toEqual({
+      ok: true,
+      dry_run: true,
+      state: 'success',
+      sha: platformHead,
+      context: INTEGRATION_CONTEXT,
+    });
+  });
+
+  test('bundle lane fails before platform merge when integration-authorized cannot be minted', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        recomputeCompatibility: jest.fn(() => compatibility('platform-first')),
+        setCommitStatus: jest
+          .fn()
+          .mockReturnValueOnce({ ok: true })
+          .mockImplementationOnce(() => {
+            throw new Error('statuses permission denied');
+          }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'integration_status',
+      integration_status: {
+        failure: 'platform_integration_status_update_failed',
+        state: 'success',
+      },
+    });
+    expect(calls.merges).toEqual([]);
   });
 
   test('platform-first behind branch updates exact head and stops for renewed compatibility', () => {
