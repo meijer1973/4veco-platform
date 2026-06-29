@@ -102,20 +102,53 @@ function compatibilitySummary(overrides = {}) {
   };
 }
 
+function branchProtectionSummary(activated = false) {
+  return {
+    ok: true,
+    failures: [],
+    integration_authorized_required: activated,
+    observed: {
+      required_status_checks: {
+        contexts: activated ? ['validate-platform', 'integration-authorized'] : ['validate-platform'],
+      },
+    },
+  };
+}
+
 function harness(overrides = {}) {
-  const calls = { events: [], statuses: [], merges: [], ciTriggers: [], ciWaits: [], refreshes: [], updates: [] };
+  const calls = {
+    events: [],
+    statuses: [],
+    merges: [],
+    autoMerges: [],
+    disableAutoMerges: [],
+    waitForPrMerge: [],
+    ciTriggers: [],
+    ciWaits: [],
+    refreshes: [],
+    updates: [],
+  };
   const fetchPr = jest.fn((repo) => {
     if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
     return pr(repo, 34, lessonHead);
   });
   const deps = {
     fetchMainSha: jest.fn((repo) => {
-      if (calls.merges.some((merge) => merge.repo === repo)) {
+      if (
+        calls.merges.some((merge) => merge.repo === repo) ||
+        calls.autoMerges.some((merge) => merge.repo === repo)
+      ) {
         return repo === PLATFORM_REPO ? platformMerge : lessonMerge;
       }
       return repo === PLATFORM_REPO ? platformBase : lessonBase;
     }),
     fetchPr,
+    fetchPlatformBranchProtectionSummary: jest.fn(() => branchProtectionSummary(false)),
+    fetchRepositoryMergeSettings: jest.fn(() => ({
+      repo: PLATFORM_REPO,
+      allow_auto_merge: true,
+      allow_merge_commit: true,
+    })),
     fetchReadinessComment: jest.fn(() => ({
       ok: true,
       route: 'READY_FOR_HUMAN_REVIEW',
@@ -151,6 +184,27 @@ function harness(overrides = {}) {
       calls.events.push({ type: 'merge', repo, prNumber, headSha });
       calls.merges.push({ repo, prNumber, headSha });
       return { merged: true };
+    }),
+    scheduleAutoMergePr: jest.fn((repo, prNumber, headSha, mergeOptions = {}) => {
+      if (mergeOptions.dryRun) return { dry_run: true, repo, prNumber, head_sha: headSha, auto_merge: true };
+      calls.events.push({ type: 'auto_merge', repo, prNumber, headSha });
+      calls.autoMerges.push({ repo, prNumber, headSha });
+      return { auto_merge_scheduled: true, repo, prNumber, head_sha: headSha };
+    }),
+    disableAutoMergePr: jest.fn((repo, prNumber) => {
+      calls.disableAutoMerges.push({ repo, prNumber });
+      return { ok: true, disabled: true };
+    }),
+    waitForPrMerge: jest.fn((repo, prNumber, headSha) => {
+      calls.waitForPrMerge.push({ repo, prNumber, headSha });
+      return {
+        ok: true,
+        pr: {
+          state: 'MERGED',
+          headRefOid: headSha,
+          mergeCommit: { oid: repo === PLATFORM_REPO ? platformMerge : lessonMerge },
+        },
+      };
     }),
     setCommitStatus: jest.fn((repo, sha, state, description, targetUrl, statusOptions = {}) => {
       const item = { repo, sha, state, description, targetUrl, dryRun: statusOptions.dryRun === true };
@@ -267,6 +321,121 @@ describe('authorized cross-repo bundle integration', () => {
     expect(calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')).toBeLessThan(
       calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO)
     );
+  });
+
+  test('activated platform member uses auto-merge and observes completion', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchPlatformBranchProtectionSummary: jest.fn(() => branchProtectionSummary(true)),
+        recomputeCompatibility: jest.fn(() => compatibility('platform-first')),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'platform-first' });
+    expect(calls.autoMerges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: platformHead },
+    ]);
+    expect(calls.waitForPrMerge).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: platformHead },
+    ]);
+    expect(calls.merges).toEqual([
+      { repo: LESSON_REPO, prNumber: 34, headSha: lessonHead },
+    ]);
+    expect(calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')).toBeLessThan(
+      calls.events.findIndex((event) => event.type === 'auto_merge' && event.repo === PLATFORM_REPO)
+    );
+  });
+
+  test('activated platform member fails when repository auto-merge is disabled', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchPlatformBranchProtectionSummary: jest.fn(() => branchProtectionSummary(true)),
+        fetchRepositoryMergeSettings: jest.fn(() => ({
+          repo: PLATFORM_REPO,
+          allow_auto_merge: false,
+          allow_merge_commit: true,
+        })),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'repo_auto_merge_disabled' });
+    expect(calls.autoMerges).toEqual([]);
+    expect(calls.merges).toEqual([]);
+    expect(calls.statuses.map((status) => status.state)).toEqual(['failure']);
+  });
+
+  test('activated platform member auto-merge timeout disables auto-merge', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchPlatformBranchProtectionSummary: jest.fn(() => branchProtectionSummary(true)),
+        recomputeCompatibility: jest.fn(() => compatibility('platform-first')),
+        waitForPrMerge: jest.fn(() => ({ ok: false, failure: 'auto_merge_timeout', pr: pr(PLATFORM_REPO, 140, platformHead) })),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'auto_merge_timeout', repo: PLATFORM_REPO });
+    expect(calls.autoMerges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: platformHead },
+    ]);
+    expect(calls.disableAutoMerges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140 },
+    ]);
+    expect(calls.merges).toEqual([]);
+    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'success', 'failure']);
+  });
+
+  test('activated platform member head movement disables auto-merge and retries', () => {
+    const movedHead = 'p'.repeat(39) + '2';
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchPlatformBranchProtectionSummary: jest.fn(() => branchProtectionSummary(true)),
+        recomputeCompatibility: jest.fn(() => compatibility('platform-first')),
+        waitForPrMerge: jest.fn(() => ({
+          ok: false,
+          failure: 'auto_merge_head_changed',
+          pr: pr(PLATFORM_REPO, 140, movedHead),
+        })),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'member_head_changed_retry',
+      retry_required: true,
+      repo: PLATFORM_REPO,
+      previous_head_sha: platformHead,
+      current_head_sha: movedHead,
+    });
+    expect(calls.autoMerges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: platformHead },
+    ]);
+    expect(calls.disableAutoMerges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140 },
+    ]);
+    expect(calls.merges).toEqual([]);
+    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'success', 'failure']);
+  });
+
+  test('activated bundle dry-run does not schedule auto-merge or mint reusable success', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchPlatformBranchProtectionSummary: jest.fn(() => branchProtectionSummary(true)),
+        recomputeCompatibility: jest.fn(() => compatibility('platform-first')),
+        fetchMergedPr: jest.fn(() => ({ state: 'OPEN', mergeCommit: null })),
+      },
+      options: { dryRun: true },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle' });
+    expect(calls.autoMerges).toEqual([]);
+    expect(calls.statuses).toEqual([]);
+    expect(deps.scheduleAutoMergePr).not.toHaveBeenCalled();
+    expect(deps.fetchMergedPr).not.toHaveBeenCalled();
   });
 
   test('lesson-first does not mint platform success before lesson merge and intermediate CI', () => {

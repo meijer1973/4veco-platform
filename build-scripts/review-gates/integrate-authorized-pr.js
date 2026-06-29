@@ -325,15 +325,68 @@ function updateBranch(repo, prNumber, expectedHeadSha, options = {}) {
   return JSON.parse(result.stdout || '{}');
 }
 
+function fetchRepositoryMergeSettings(repo) {
+  const raw = runGh(['api', `repos/${repo}`]);
+  const info = JSON.parse(raw);
+  return {
+    repo,
+    allow_auto_merge: info.allow_auto_merge === true,
+    allow_merge_commit: info.allow_merge_commit === true,
+    allow_squash_merge: info.allow_squash_merge === true,
+    allow_rebase_merge: info.allow_rebase_merge === true,
+  };
+}
+
 function mergePr(repo, prNumber, headSha, options = {}) {
   if (options.dryRun) return { dry_run: true, head_sha: headSha };
   runGh(['pr', 'merge', String(prNumber), '--repo', repo, '--merge', '--match-head-commit', headSha]);
   return { merged: true, head_sha: headSha };
 }
 
+function scheduleAutoMergePr(repo, prNumber, headSha, options = {}) {
+  if (options.dryRun) return { dry_run: true, auto_merge: true, head_sha: headSha };
+  runGh(['pr', 'merge', String(prNumber), '--repo', repo, '--auto', '--merge', '--match-head-commit', headSha]);
+  return { auto_merge_scheduled: true, head_sha: headSha };
+}
+
+function disableAutoMergePr(repo, prNumber, options = {}) {
+  if (options.dryRun) return { dry_run: true, disabled: true };
+  try {
+    runGh(['pr', 'merge', String(prNumber), '--repo', repo, '--disable-auto']);
+    return { ok: true, disabled: true };
+  } catch (error) {
+    return { ok: false, disabled: false, error: error.message };
+  }
+}
+
 function fetchMergedPr(repo, prNumber) {
   const fields = ['number', 'state', 'mergedAt', 'mergeCommit', 'headRefOid', 'url'].join(',');
   return JSON.parse(runGh(['pr', 'view', String(prNumber), '--repo', repo, '--json', fields]));
+}
+
+function waitForPrMerge(repo, prNumber, expectedHeadSha, options = {}) {
+  if (options.dryRun) {
+    return {
+      ok: true,
+      dry_run: true,
+      pr: { state: 'MERGED', mergeCommit: { oid: expectedHeadSha }, headRefOid: expectedHeadSha },
+    };
+  }
+  const timeoutSeconds = Number(options.autoMergeTimeoutSeconds || options.mergeTimeoutSeconds || options.postMergeCiTimeoutSeconds || 1800);
+  const pollSeconds = Number(options.autoMergePollSeconds || options.pollSeconds || 20);
+  const deadline = Date.now() + timeoutSeconds * 1000;
+  let lastPr = null;
+  while (Date.now() <= deadline) {
+    lastPr = fetchMergedPr(repo, prNumber);
+    if (lastPr.headRefOid && lastPr.headRefOid !== expectedHeadSha) {
+      return { ok: false, failure: 'auto_merge_head_changed', pr: lastPr };
+    }
+    if (lastPr.state === 'MERGED' && lastPr.mergeCommit && lastPr.mergeCommit.oid) {
+      return { ok: true, pr: lastPr };
+    }
+    sleep(pollSeconds * 1000);
+  }
+  return { ok: false, failure: 'auto_merge_timeout', pr: lastPr };
 }
 
 function findMainWorkflowRun(repo, headSha) {
@@ -386,6 +439,7 @@ function defaultIntegrationDeps() {
     fetchAuthorizationComment,
     fetchBranchProtectionSummary,
     fetchCompareStatus,
+    fetchRepositoryMergeSettings,
     fetchMainSha,
     fetchMergedPr,
     fetchPr,
@@ -393,11 +447,14 @@ function defaultIntegrationDeps() {
     generateAndApplyReadiness,
     isHeadCurrentWithMain,
     mergePr,
+    scheduleAutoMergePr,
+    disableAutoMergePr,
     setCommitStatus,
     summarizeLineage,
     updateBranch,
     validateAuthorizationRecord,
     validatePrState,
+    waitForPrMerge,
     waitForMainCi,
   };
 }
@@ -753,30 +810,121 @@ function integrate(options) {
     };
   }
 
+  const activatedMerge = finalBranchProtection.integration_authorized_required === true;
+  let repositoryMergeSettings = null;
+  if (activatedMerge && !options.noMerge && !options.dryRun) {
+    repositoryMergeSettings = deps.fetchRepositoryMergeSettings(repo);
+    if (repositoryMergeSettings.allow_auto_merge !== true) {
+      deps.setCommitStatus(
+        repo,
+        pr.headRefOid,
+        'failure',
+        'Repository auto-merge is disabled for activated integration lane',
+        pr.url,
+        options
+      );
+      return {
+        ok: false,
+        phase: 'repo_auto_merge_disabled',
+        repository_merge_settings: repositoryMergeSettings,
+      };
+    }
+  }
+
   deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
   if (options.noMerge) {
     return { ok: true, phase: 'authorized_no_merge', pr, main_sha: finalMainSha, lineage: finalLineage, readiness };
   }
   let merge;
-  try {
-    merge = deps.mergePr(repo, prNumber, pr.headRefOid, options);
-  } catch (error) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'pending', 'Merge rejected; integration lane will retry if safe', pr.url, options);
-    const nowMainSha = deps.fetchMainSha(repo);
-    if (nowMainSha !== preMergeMainSha) {
-      return {
-        ok: true,
-        phase: 'merge_rejected_main_moved_retry',
-        retry_required: true,
-        previous_main_sha: preMergeMainSha,
-        current_main_sha: nowMainSha,
-        error: error.message,
-      };
+  let mergedPr;
+  if (activatedMerge) {
+    if (options.dryRun) {
+      merge = { dry_run: true, auto_merge: true, head_sha: pr.headRefOid };
+      mergedPr = { state: 'MERGED', mergeCommit: { oid: pr.headRefOid }, headRefOid: pr.headRefOid };
+    } else {
+      try {
+        merge = deps.scheduleAutoMergePr(repo, prNumber, pr.headRefOid, options);
+      } catch (error) {
+        deps.setCommitStatus(repo, pr.headRefOid, 'pending', 'Auto-merge scheduling rejected; integration lane will retry if safe', pr.url, options);
+        const nowMainSha = deps.fetchMainSha(repo);
+        if (nowMainSha !== preMergeMainSha) {
+          return {
+            ok: true,
+            phase: 'auto_merge_schedule_main_moved_retry',
+            retry_required: true,
+            previous_main_sha: preMergeMainSha,
+            current_main_sha: nowMainSha,
+            error: error.message,
+          };
+        }
+        const nowPr = deps.fetchPr(repo, prNumber);
+        if (nowPr.headRefOid !== pr.headRefOid) {
+          return {
+            ok: true,
+            phase: 'auto_merge_schedule_head_moved_retry',
+            retry_required: true,
+            previous_head_sha: pr.headRefOid,
+            current_head_sha: nowPr.headRefOid,
+            error: error.message,
+          };
+        }
+        deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Auto-merge scheduling rejected: ${error.message}`, pr.url, options);
+        return { ok: false, phase: 'auto_merge_schedule', error: error.message };
+      }
+      const observed = deps.waitForPrMerge(repo, prNumber, pr.headRefOid, options);
+      if (!observed.ok) {
+        const disableAutoMerge = deps.disableAutoMergePr(repo, prNumber, options);
+        deps.setCommitStatus(
+          repo,
+          pr.headRefOid,
+          'failure',
+          `Auto-merge did not complete: ${observed.failure || 'unknown'}`,
+          pr.url,
+          options
+        );
+        if (observed.failure === 'auto_merge_head_changed') {
+          return {
+            ok: true,
+            phase: 'auto_merge_head_changed_retry',
+            retry_required: true,
+            previous_head_sha: pr.headRefOid,
+            current_head_sha: observed.pr && observed.pr.headRefOid,
+            merge,
+            auto_merge_observation: observed,
+            disable_auto_merge: disableAutoMerge,
+          };
+        }
+        return {
+          ok: false,
+          phase: observed.failure === 'auto_merge_timeout' ? 'auto_merge_timeout' : 'auto_merge_observation',
+          merge,
+          auto_merge_observation: observed,
+          disable_auto_merge: disableAutoMerge,
+        };
+      }
+      mergedPr = observed.pr;
     }
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Merge rejected: ${error.message}`, pr.url, options);
-    return { ok: false, phase: 'merge', error: error.message };
+  } else {
+    try {
+      merge = deps.mergePr(repo, prNumber, pr.headRefOid, options);
+    } catch (error) {
+      deps.setCommitStatus(repo, pr.headRefOid, 'pending', 'Merge rejected; integration lane will retry if safe', pr.url, options);
+      const nowMainSha = deps.fetchMainSha(repo);
+      if (nowMainSha !== preMergeMainSha) {
+        return {
+          ok: true,
+          phase: 'merge_rejected_main_moved_retry',
+          retry_required: true,
+          previous_main_sha: preMergeMainSha,
+          current_main_sha: nowMainSha,
+          error: error.message,
+        };
+      }
+      deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Merge rejected: ${error.message}`, pr.url, options);
+      return { ok: false, phase: 'merge', error: error.message };
+    }
+    mergedPr = options.dryRun ? { state: 'MERGED', mergeCommit: { oid: pr.headRefOid } } : deps.fetchMergedPr(repo, prNumber);
   }
-  const mergedPr = options.dryRun ? { state: 'MERGED', mergeCommit: { oid: pr.headRefOid } } : deps.fetchMergedPr(repo, prNumber);
   if (mergedPr.state !== 'MERGED' || !mergedPr.mergeCommit || !mergedPr.mergeCommit.oid) {
     deps.setCommitStatus(repo, pr.headRefOid, 'failure', 'Merge commit was not observable after merge', pr.url, options);
     return { ok: false, phase: 'merge_verification', merge, merged_pr: mergedPr };
@@ -798,7 +946,19 @@ function integrate(options) {
   if (!postMergeCi.ok) {
     return { ok: false, phase: 'post_merge_ci', merge, merged_pr: mergedPr, post_merge_ci: postMergeCi };
   }
-  return { ok: true, phase: 'merged', pr, main_sha: finalMainSha, lineage: finalLineage, readiness, merge, merged_pr: mergedPr, post_merge_ci: postMergeCi };
+  return {
+    ok: true,
+    phase: 'merged',
+    pr,
+    main_sha: finalMainSha,
+    lineage: finalLineage,
+    readiness,
+    merge,
+    merged_pr: mergedPr,
+    post_merge_ci: postMergeCi,
+    activated_merge: activatedMerge,
+    repository_merge_settings: repositoryMergeSettings,
+  };
 }
 
 function runIntegrationAttempts(options) {
@@ -860,6 +1020,7 @@ module.exports = {
   enforceLineagePolicy,
   generateAndApplyReadiness,
   fetchBranchProtectionSummary,
+  fetchRepositoryMergeSettings,
   integrate,
   isHeadCurrentWithMain,
   parseChecks,
@@ -867,10 +1028,13 @@ module.exports = {
   readinessCommentFromComments,
   readinessMarkerFor,
   runIntegrationAttempts,
+  scheduleAutoMergePr,
+  disableAutoMergePr,
   setCommitStatus,
   summarizeIntegrationBranchProtection,
   supplementalFromReadinessDecision,
   validateIntegrationDeltaReview,
   validatePrState,
+  waitForPrMerge,
   waitForMainCi,
 };

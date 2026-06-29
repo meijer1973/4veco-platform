@@ -168,18 +168,26 @@ function integrationHarness(overrides = {}) {
     updates: [],
     readiness: [],
     merges: [],
+    autoMerges: [],
+    disableAutoMerges: [],
+    waitForPrMerge: [],
     postMergeCi: [],
   };
   const deps = {
     fetchAuthorizationComment: jest.fn(() => authorizationRecord()),
     validateAuthorizationRecord: jest.fn(() => ({ ok: true, failures: [] })),
     fetchPr: sequence([cleanPr()]),
-    setCommitStatus: jest.fn((repo, sha, state, description) => {
-      calls.statuses.push({ repo, sha, state, description });
+    setCommitStatus: jest.fn((repo, sha, state, description, targetUrl, statusOptions = {}) => {
+      calls.statuses.push({ repo, sha, state, description, dryRun: statusOptions.dryRun === true });
       return { ok: true };
     }),
     fetchMainSha: jest.fn(() => mainSha),
     fetchBranchProtectionSummary: jest.fn(() => ({ ok: true, required_approving_review_count: 0 })),
+    fetchRepositoryMergeSettings: jest.fn(() => ({
+      repo: 'meijer1973/4veco-platform',
+      allow_auto_merge: true,
+      allow_merge_commit: true,
+    })),
     fetchReviewThreadState: jest.fn(() => ({
       available: true,
       unresolved_count: 0,
@@ -213,6 +221,18 @@ function integrationHarness(overrides = {}) {
     mergePr: jest.fn((repo, prNumber, sha) => {
       calls.merges.push({ repo, prNumber, sha });
       return { merged: true, head_sha: sha };
+    }),
+    scheduleAutoMergePr: jest.fn((repo, prNumber, sha) => {
+      calls.autoMerges.push({ repo, prNumber, sha });
+      return { auto_merge_scheduled: true, head_sha: sha };
+    }),
+    disableAutoMergePr: jest.fn((repo, prNumber) => {
+      calls.disableAutoMerges.push({ repo, prNumber });
+      return { ok: true, disabled: true };
+    }),
+    waitForPrMerge: jest.fn((repo, prNumber, sha) => {
+      calls.waitForPrMerge.push({ repo, prNumber, sha });
+      return { ok: true, pr: { state: 'MERGED', mergeCommit: { oid: mergeSha }, headRefOid: sha } };
     }),
     fetchMergedPr: jest.fn(() => ({ state: 'MERGED', mergeCommit: { oid: mergeSha } })),
     fetchCompareStatus: jest.fn(() => ({ status: 'ahead' })),
@@ -499,6 +519,158 @@ describe('authorized PR integration runner', () => {
     const result = integrate(options);
 
     expect(result).toMatchObject({ ok: true, phase: 'authorized_no_merge' });
+  });
+
+  test('activated branch protection schedules auto-merge instead of direct merge', () => {
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+        )),
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged', activated_merge: true });
+    expect(calls.autoMerges).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136, sha: integrationSha },
+    ]);
+    expect(calls.waitForPrMerge).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136, sha: integrationSha },
+    ]);
+    expect(calls.merges).toEqual([]);
+    expect(deps.mergePr).not.toHaveBeenCalled();
+  });
+
+  test('pre-activation branch protection keeps the direct merge path', () => {
+    const { calls, deps, options } = integrationHarness();
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged', activated_merge: false });
+    expect(calls.merges).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136, sha: integrationSha },
+    ]);
+    expect(calls.autoMerges).toEqual([]);
+    expect(deps.scheduleAutoMergePr).not.toHaveBeenCalled();
+  });
+
+  test('activated mode fails closed when repository auto-merge is disabled', () => {
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+        )),
+        fetchRepositoryMergeSettings: jest.fn(() => ({
+          repo: 'meijer1973/4veco-platform',
+          allow_auto_merge: false,
+          allow_merge_commit: true,
+        })),
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: false, phase: 'repo_auto_merge_disabled' });
+    expect(deps.scheduleAutoMergePr).not.toHaveBeenCalled();
+    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'failure']);
+  });
+
+  test('activated auto-merge timeout disables auto-merge and fails closed', () => {
+    const { calls, options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+        )),
+        waitForPrMerge: jest.fn(() => ({ ok: false, failure: 'auto_merge_timeout', pr: cleanPr(integrationSha) })),
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: false, phase: 'auto_merge_timeout' });
+    expect(calls.autoMerges).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136, sha: integrationSha },
+    ]);
+    expect(calls.disableAutoMerges).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136 },
+    ]);
+    expect(calls.postMergeCi).toEqual([]);
+    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'success', 'failure']);
+  });
+
+  test('activated auto-merge observes completion before post-merge CI', () => {
+    const { calls, options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+        )),
+        waitForPrMerge: jest.fn((repo, prNumber, sha) => {
+          calls.waitForPrMerge.push({ repo, prNumber, sha });
+          return { ok: true, pr: { state: 'MERGED', mergeCommit: { oid: mergeSha }, headRefOid: sha } };
+        }),
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged', activated_merge: true });
+    expect(calls.waitForPrMerge).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136, sha: integrationSha },
+    ]);
+    expect(calls.postMergeCi).toEqual([
+      { repo: 'meijer1973/4veco-platform', sha: mergeSha },
+    ]);
+  });
+
+  test('activated auto-merge head movement disables auto-merge and retries through lineage', () => {
+    const movedHead = '9'.repeat(40);
+    const { calls, options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+        )),
+        waitForPrMerge: jest.fn(() => ({
+          ok: false,
+          failure: 'auto_merge_head_changed',
+          pr: { state: 'OPEN', headRefOid: movedHead, mergeCommit: null },
+        })),
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({
+      ok: true,
+      phase: 'auto_merge_head_changed_retry',
+      retry_required: true,
+      previous_head_sha: integrationSha,
+      current_head_sha: movedHead,
+    });
+    expect(calls.disableAutoMerges).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136 },
+    ]);
+    expect(calls.postMergeCi).toEqual([]);
+  });
+
+  test('activated dry-run does not schedule auto-merge', () => {
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => summarizeIntegrationBranchProtection(
+          branchProtectionWithContexts(['validate-platform', 'integration-authorized'])
+        )),
+      },
+      options: { dryRun: true },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged', activated_merge: true });
+    expect(deps.scheduleAutoMergePr).not.toHaveBeenCalled();
+    expect(deps.waitForPrMerge).not.toHaveBeenCalled();
+    expect(calls.autoMerges).toEqual([]);
+    expect(calls.statuses.every((status) => status.dryRun === true)).toBe(true);
   });
 
   test('runner fails when activated branch protection has an extra required context', () => {

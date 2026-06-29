@@ -10,9 +10,14 @@ const {
 } = require('./check-human-bundle-authorization');
 const { validateCompatibilityProof } = require('./cross-repo-bundle-compatibility');
 const {
+  fetchBranchProtectionSummary,
+  fetchRepositoryMergeSettings,
   INTEGRATION_CONTEXT,
   readinessCommentFromComments,
+  scheduleAutoMergePr,
+  disableAutoMergePr,
   setCommitStatus,
+  waitForPrMerge,
 } = require('./integrate-authorized-pr');
 const { summarizeLineage } = require('./check-integration-lineage');
 const { collectReviewThreadState } = require('./review-pr-readiness');
@@ -767,6 +772,8 @@ function defaultDeps(options = {}) {
     fetchInterveningCommits,
     fetchMainSha,
     fetchPr,
+    fetchPlatformBranchProtectionSummary: () => fetchBranchProtectionSummary(PLATFORM_REPO, {}),
+    fetchRepositoryMergeSettings,
     fetchReadinessComment,
     fetchReviewThreadState,
     latestWorkflowRunDatabaseId,
@@ -792,12 +799,15 @@ function defaultDeps(options = {}) {
       };
     },
     mergePr,
+    scheduleAutoMergePr,
+    disableAutoMergePr,
     fetchMergedPr,
     setCommitStatus,
     summarizeLineage,
     triggerPlatformCi,
     updateBranch,
     waitForPlatformMainCi,
+    waitForPrMerge,
     refreshPlatformPrCi,
   };
 }
@@ -844,6 +854,34 @@ function integrateBundle(options = {}) {
   const lessonMainSha = deps.fetchMainSha(LESSON_REPO);
   const platformPr = deps.fetchPr(PLATFORM_REPO, record.controller.pr_number);
   const platformStatus = platformStatusTarget(platformPr);
+  const platformBranchProtection = deps.fetchPlatformBranchProtectionSummary();
+  if (!platformBranchProtection.ok) {
+    return withTerminalFailureStatus(
+      { ok: false, phase: 'platform_branch_protection', branch_protection: platformBranchProtection },
+      deps,
+      platformStatus,
+      options,
+      `Platform branch protection mismatch: ${(platformBranchProtection.failures || []).join(', ')}`
+    );
+  }
+  const platformActivatedMerge = platformBranchProtection.integration_authorized_required === true;
+  let platformRepositoryMergeSettings = null;
+  if (platformActivatedMerge && !options.noMerge && !options.dryRun) {
+    platformRepositoryMergeSettings = deps.fetchRepositoryMergeSettings(PLATFORM_REPO);
+    if (platformRepositoryMergeSettings.allow_auto_merge !== true) {
+      return withTerminalFailureStatus(
+        {
+          ok: false,
+          phase: 'repo_auto_merge_disabled',
+          repository_merge_settings: platformRepositoryMergeSettings,
+        },
+        deps,
+        platformStatus,
+        options,
+        'Repository auto-merge is disabled for activated bundle platform merge'
+      );
+    }
+  }
   const pendingStatus = setPlatformIntegrationStatus(
     deps,
     platformStatus.sha,
@@ -914,7 +952,15 @@ function integrateBundle(options = {}) {
     );
   }
   if (options.noMerge) {
-    return { ok: true, phase: 'authorized_no_merge', order, compatibility, platform_main_sha: platformMainSha, lesson_main_sha: lessonMainSha };
+    return {
+      ok: true,
+      phase: 'authorized_no_merge',
+      order,
+      compatibility,
+      platform_main_sha: platformMainSha,
+      lesson_main_sha: lessonMainSha,
+      platform_branch_protection: platformBranchProtection,
+    };
   }
 
   const runtimeRecord = {
@@ -1024,16 +1070,21 @@ function integrateBundle(options = {}) {
         };
       }
     }
+    const usePlatformAutoMerge = repo === PLATFORM_REPO && platformActivatedMerge;
     let merge;
     try {
-      merge = deps.mergePr(repo, member.pr_number, member.integration_head_sha, options);
+      merge = usePlatformAutoMerge && options.dryRun
+        ? { dry_run: true, auto_merge: true, repo, prNumber: member.pr_number, head_sha: member.integration_head_sha }
+        : usePlatformAutoMerge
+        ? deps.scheduleAutoMergePr(repo, member.pr_number, member.integration_head_sha, options)
+        : deps.mergePr(repo, member.pr_number, member.integration_head_sha, options);
     } catch (error) {
       return withTerminalFailureStatus(
-        { ok: false, phase: 'merge', repo, pr_number: member.pr_number, error: error.message, merges },
+        { ok: false, phase: usePlatformAutoMerge ? 'auto_merge_schedule' : 'merge', repo, pr_number: member.pr_number, error: error.message, merges },
         deps,
         platformStatus,
         options,
-        `Bundle merge rejected for ${repo}: ${error.message}`
+        `Bundle ${usePlatformAutoMerge ? 'auto-merge scheduling' : 'merge'} rejected for ${repo}: ${error.message}`
       );
     }
     if (options.dryRun) {
@@ -1046,7 +1097,52 @@ function integrateBundle(options = {}) {
       });
       continue;
     }
-    const merged = validateMergedPr(repo, member.pr_number, deps.fetchMergedPr(repo, member.pr_number));
+    let mergedPr = null;
+    if (usePlatformAutoMerge) {
+      const observed = deps.waitForPrMerge(repo, member.pr_number, member.integration_head_sha, options);
+      if (!observed.ok) {
+        const disableAutoMerge = deps.disableAutoMergePr(repo, member.pr_number, options);
+        const status = setPlatformIntegrationStatus(
+          deps,
+          member.integration_head_sha,
+          'failure',
+          `Bundle platform auto-merge did not complete: ${observed.failure || 'unknown'}`,
+          pr.url,
+          options
+        );
+        if (observed.failure === 'auto_merge_head_changed') {
+          return {
+            ok: false,
+            phase: 'member_head_changed_retry',
+            retry_required: true,
+            repo,
+            pr_number: member.pr_number,
+            previous_head_sha: member.integration_head_sha,
+            current_head_sha: observed.pr && observed.pr.headRefOid,
+            merge,
+            auto_merge_observation: observed,
+            disable_auto_merge: disableAutoMerge,
+            integration_status: status,
+            merges,
+          };
+        }
+        return {
+          ok: false,
+          phase: observed.failure === 'auto_merge_timeout' ? 'auto_merge_timeout' : 'auto_merge_observation',
+          repo,
+          pr_number: member.pr_number,
+          merge,
+          auto_merge_observation: observed,
+          disable_auto_merge: disableAutoMerge,
+          integration_status: status,
+          merges,
+        };
+      }
+      mergedPr = observed.pr;
+    } else {
+      mergedPr = deps.fetchMergedPr(repo, member.pr_number);
+    }
+    const merged = validateMergedPr(repo, member.pr_number, mergedPr);
     if (!merged.ok) {
       return withTerminalFailureStatus(
         { ok: false, phase: 'merge_verification', merge, merged },
