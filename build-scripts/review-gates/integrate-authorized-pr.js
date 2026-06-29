@@ -360,8 +360,68 @@ function disableAutoMergePr(repo, prNumber, options = {}) {
 }
 
 function fetchMergedPr(repo, prNumber) {
-  const fields = ['number', 'state', 'mergedAt', 'mergeCommit', 'headRefOid', 'url'].join(',');
+  const fields = [
+    'number',
+    'state',
+    'mergedAt',
+    'mergeCommit',
+    'headRefOid',
+    'url',
+    'autoMergeRequest',
+    'mergeStateStatus',
+    'mergeable',
+    'statusCheckRollup',
+  ].join(',');
   return JSON.parse(runGh(['pr', 'view', String(prNumber), '--repo', repo, '--json', fields]));
+}
+
+function fetchAutoMergeState(repo, prNumber) {
+  return fetchMergedPr(repo, prNumber);
+}
+
+function fetchCombinedCommitStatus(repo, headSha) {
+  return JSON.parse(runGh(['api', `repos/${repo}/commits/${headSha}/status`]));
+}
+
+function verifyAutoMergeEnabled(repo, prNumber, expectedHeadSha, deps, options = {}) {
+  if (options.dryRun) {
+    return {
+      ok: true,
+      dry_run: true,
+      pr: {
+        state: 'OPEN',
+        headRefOid: expectedHeadSha,
+        autoMergeRequest: { enabledAt: 'dry-run' },
+      },
+    };
+  }
+  const pr = deps.fetchAutoMergeState(repo, prNumber);
+  if (pr.headRefOid && pr.headRefOid !== expectedHeadSha) {
+    return { ok: false, failure: 'auto_merge_head_changed', pr };
+  }
+  if (!pr.autoMergeRequest) {
+    return { ok: false, failure: 'auto_merge_request_not_enabled', pr };
+  }
+  return { ok: true, pr };
+}
+
+function safeDiagnostic(label, reader) {
+  try {
+    return reader();
+  } catch (error) {
+    return { unavailable: true, label, error: error.message };
+  }
+}
+
+function collectAutoMergeDiagnostics(repo, prNumber, headSha, deps, options = {}) {
+  return {
+    pr: safeDiagnostic('pr_auto_merge_state', () => deps.fetchAutoMergeState(repo, prNumber)),
+    branch_protection: safeDiagnostic('branch_protection', () => deps.fetchBranchProtectionSummary(repo, {
+      requireIntegrationAuthorized: options.requireIntegrationAuthorized,
+    })),
+    combined_status: safeDiagnostic('combined_commit_status', () => deps.fetchCombinedCommitStatus(repo, headSha)),
+    repository_merge_settings: safeDiagnostic('repository_merge_settings', () => deps.fetchRepositoryMergeSettings(repo)),
+  };
 }
 
 function waitForPrMerge(repo, prNumber, expectedHeadSha, options = {}) {
@@ -377,7 +437,7 @@ function waitForPrMerge(repo, prNumber, expectedHeadSha, options = {}) {
   const deadline = Date.now() + timeoutSeconds * 1000;
   let lastPr = null;
   while (Date.now() <= deadline) {
-    lastPr = fetchMergedPr(repo, prNumber);
+    lastPr = fetchAutoMergeState(repo, prNumber);
     if (lastPr.headRefOid && lastPr.headRefOid !== expectedHeadSha) {
       return { ok: false, failure: 'auto_merge_head_changed', pr: lastPr };
     }
@@ -438,6 +498,8 @@ function defaultIntegrationDeps() {
     enforceLineagePolicy,
     fetchAuthorizationComment,
     fetchBranchProtectionSummary,
+    fetchAutoMergeState,
+    fetchCombinedCommitStatus,
     fetchCompareStatus,
     fetchRepositoryMergeSettings,
     fetchMainSha,
@@ -831,15 +893,20 @@ function integrate(options) {
     }
   }
 
-  deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
   if (options.noMerge) {
+    if (!activatedMerge) {
+      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
+    }
     return { ok: true, phase: 'authorized_no_merge', pr, main_sha: finalMainSha, lineage: finalLineage, readiness };
   }
   let merge;
   let mergedPr;
+  let autoMergeState = null;
   if (activatedMerge) {
     if (options.dryRun) {
       merge = { dry_run: true, auto_merge: true, head_sha: pr.headRefOid };
+      autoMergeState = verifyAutoMergeEnabled(repo, prNumber, pr.headRefOid, deps, options);
+      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
       mergedPr = { state: 'MERGED', mergeCommit: { oid: pr.headRefOid }, headRefOid: pr.headRefOid };
     } else {
       try {
@@ -871,8 +938,45 @@ function integrate(options) {
         deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Auto-merge scheduling rejected: ${error.message}`, pr.url, options);
         return { ok: false, phase: 'auto_merge_schedule', error: error.message };
       }
+      autoMergeState = verifyAutoMergeEnabled(repo, prNumber, pr.headRefOid, deps, options);
+      if (!autoMergeState.ok) {
+        const diagnostics = collectAutoMergeDiagnostics(repo, prNumber, pr.headRefOid, deps, options);
+        const disableAutoMerge = autoMergeState.failure === 'auto_merge_head_changed'
+          ? deps.disableAutoMergePr(repo, prNumber, options)
+          : null;
+        deps.setCommitStatus(
+          repo,
+          pr.headRefOid,
+          'failure',
+          `Auto-merge not enabled after scheduling: ${autoMergeState.failure || 'unknown'}`,
+          pr.url,
+          options
+        );
+        if (autoMergeState.failure === 'auto_merge_head_changed') {
+          return {
+            ok: true,
+            phase: 'auto_merge_head_changed_retry',
+            retry_required: true,
+            previous_head_sha: pr.headRefOid,
+            current_head_sha: autoMergeState.pr ? autoMergeState.pr.headRefOid : undefined,
+            merge,
+            auto_merge_state: autoMergeState,
+            auto_merge_diagnostics: diagnostics,
+            disable_auto_merge: disableAutoMerge,
+          };
+        }
+        return {
+          ok: false,
+          phase: 'auto_merge_enable',
+          merge,
+          auto_merge_state: autoMergeState,
+          auto_merge_diagnostics: diagnostics,
+        };
+      }
+      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
       const observed = deps.waitForPrMerge(repo, prNumber, pr.headRefOid, options);
       if (!observed.ok) {
+        const diagnostics = collectAutoMergeDiagnostics(repo, prNumber, pr.headRefOid, deps, options);
         const disableAutoMerge = deps.disableAutoMergePr(repo, prNumber, options);
         deps.setCommitStatus(
           repo,
@@ -890,7 +994,9 @@ function integrate(options) {
             previous_head_sha: pr.headRefOid,
             current_head_sha: observed.pr && observed.pr.headRefOid,
             merge,
+            auto_merge_state: autoMergeState,
             auto_merge_observation: observed,
+            auto_merge_diagnostics: diagnostics,
             disable_auto_merge: disableAutoMerge,
           };
         }
@@ -898,13 +1004,16 @@ function integrate(options) {
           ok: false,
           phase: observed.failure === 'auto_merge_timeout' ? 'auto_merge_timeout' : 'auto_merge_observation',
           merge,
+          auto_merge_state: autoMergeState,
           auto_merge_observation: observed,
+          auto_merge_diagnostics: diagnostics,
           disable_auto_merge: disableAutoMerge,
         };
       }
       mergedPr = observed.pr;
     }
   } else {
+    deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
     try {
       merge = deps.mergePr(repo, prNumber, pr.headRefOid, options);
     } catch (error) {
@@ -958,6 +1067,7 @@ function integrate(options) {
     post_merge_ci: postMergeCi,
     activated_merge: activatedMerge,
     repository_merge_settings: repositoryMergeSettings,
+    auto_merge_state: autoMergeState,
   };
 }
 
@@ -1019,7 +1129,10 @@ module.exports = {
   buildLineageInput,
   enforceLineagePolicy,
   generateAndApplyReadiness,
+  collectAutoMergeDiagnostics,
   fetchBranchProtectionSummary,
+  fetchAutoMergeState,
+  fetchCombinedCommitStatus,
   fetchRepositoryMergeSettings,
   integrate,
   isHeadCurrentWithMain,
@@ -1035,6 +1148,7 @@ module.exports = {
   supplementalFromReadinessDecision,
   validateIntegrationDeltaReview,
   validatePrState,
+  verifyAutoMergeEnabled,
   waitForPrMerge,
   waitForMainCi,
 };
