@@ -81,22 +81,22 @@ jobs:
 
       - name: Install presentation proof tools
         run: |
-          choco install libreoffice-fresh poppler -y --no-progress
+          choco install libreoffice-fresh -y --no-progress
+          $popplerRoot = Join-Path $env:RUNNER_TEMP "poppler"
+          New-Item -ItemType Directory -Force -Path $popplerRoot | Out-Null
+          $release = Invoke-RestMethod -Headers @{ "User-Agent" = "4veco-platform-ci" } -Uri "https://api.github.com/repos/oschwartz10612/poppler-windows/releases/latest"
+          $asset = $release.assets | Where-Object { $_.name -match "^Release-.*\.zip$" } | Select-Object -First 1
+          if (-not $asset) { throw "No Poppler Windows release zip found" }
+          $popplerZip = Join-Path $env:RUNNER_TEMP $asset.name
+          Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $popplerZip
+          Expand-Archive -LiteralPath $popplerZip -DestinationPath $popplerRoot -Force
           $soffice = "C:\Program Files\LibreOffice\program\soffice.exe"
           if (-not (Test-Path -LiteralPath $soffice)) {
             $soffice = (Get-ChildItem -Path "C:\Program Files" -Filter soffice.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
           }
           $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source
           if (-not $pdftoppm) {
-            $pdftoppm = (Resolve-Path "$env:ProgramData\chocolatey\lib\poppler\tools\*\Library\bin\pdftoppm.exe" -ErrorAction SilentlyContinue | Select-Object -First 1).Path
-          }
-          if (-not $pdftoppm) {
-            $pdftoppm = (& where.exe /R "$env:ProgramData\chocolatey" pdftoppm.exe 2>$null | Select-Object -First 1)
-          }
-          if (-not $pdftoppm) {
-            Get-ChildItem -Path "$env:ProgramData\chocolatey\lib\poppler\tools" -Recurse -File -ErrorAction SilentlyContinue |
-              Select-Object -First 80 -ExpandProperty FullName |
-              ForEach-Object { Write-Host "poppler file: $_" }
+            $pdftoppm = (Get-ChildItem -Path $popplerRoot -Filter pdftoppm.exe -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
           }
           if (-not $soffice) { throw "soffice.exe not found after LibreOffice install" }
           if (-not $pdftoppm) { throw "pdftoppm.exe not found after Poppler install" }
