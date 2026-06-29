@@ -1,12 +1,21 @@
 # How to Build a Complete Paragraph
 
+This document is the full reference for paragraph production. Start ordinary
+assignments from the lane runbooks, then use this file for detail:
+
+- Part A textbook lane: `docs/workflows/textbook-paragraph-lane.md`
+- Part B web companion lane: `docs/workflows/web-companion-paragraph-lane.md`
+
+`complete` is an integration verification state after both lanes exist, not the
+default shape of a production assignment.
+
 This document covers two pipelines that can run independently or together.
 
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
 | **Part A only** | Textbook source: markdown + graphs; publisher PDFs only in `--profile publisher-print` | Building source content or the publisher/print packet |
 | **Part B only** | Lessen paragraph companions. Default profile is student-facing HTML/games/presentation; DOCX exports are opt-in | Adding companions to a 4veco-lessen paragraph when textbook content exists |
-| **Both (A → B)** | Complete paragraph: textbook + companions | Full production from scratch |
+| **Both (A → B)** | Complete paragraph: textbook + companions | Integration verification or explicitly authorized complete bundle |
 
 ## Output profiles
 
@@ -104,7 +113,8 @@ These four references frame every paragraph build, regardless of mode. Read them
   review verdicts, and product-use boundaries.
 - **`skills/econ-companion-artifacts.md`** — Part B authoring + regeneration spec. Required reading for any companion edit; per-format Part B skills inherit from it. Skill wins over per-format skill on student-facing rules.
 - **`agents/econ-companion-visual-review.md`** — the Part B closure gate. Companion edits ship only when this agent returns PASS or PASS WITH FLAGS.
-- **`_paragraph-plan.md`** (per paragraph) — the per-paragraph source of truth (concepts, terminology, visual-variants, procedure registry references). Both Part A and Part B builders read it.
+- **`X.Y.Z-textbook-handoff.md`** (per paragraph) — Part A's handoff to Part B, filled from `build-scripts/templates/textbook-to-companion-handoff.md` before companion production starts.
+- **`_paragraph-plan.md`** (per paragraph) — Part B's implementation plan for concepts, terminology, visual variants, procedure registry references, and route construction. Existing paragraphs may already have one; new Part A-only assignments do not need to author companion sections.
 
 **Pipeline-aware validator:**
 
@@ -118,7 +128,7 @@ node scripts/validate-paragraph.js --mode complete "<paragraph folder>" # aggreg
 
 **Quality records (single file, two blocks):**
 
-`${parNr}-quality-ref.yaml` is `schema_version: 2`. Carries a `partA:` block (asset state, content presence, Part A review verdict) and a `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state). Defined in `skills/econ-quality-control` and in `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
+`${parNr}-quality-ref.yaml` is `schema_version: 2`. Carries a `partA:` block (asset state, content presence, Part A review verdict) and a `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state). In Part B and complete modes, the validator requires `companion.review_file`, `companion.review_verdict`, and `companion.hard_fails_open` to match `${parNr}-companion-visual-review.md`. Defined in `skills/econ-quality-control` and in `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
 
 ---
 
@@ -257,6 +267,14 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 
 > "Read `econ-quality-control`. Inventory all components that actually exist (check file existence). Run asset integrity checks. Generate quality_ref YAML. Be honest about gaps."
 
+## A8: Textbook-to-companion handoff
+
+Copy `build-scripts/templates/textbook-to-companion-handoff.md` to
+`X.Y.Z-textbook-handoff.md` and fill the textbook evidence Part B needs:
+source files, target exercise, operation chain, terminology, procedures, core
+visuals, exercise map, and explicit boundaries. This is the clean interface
+between the textbook lane and the companion lane.
+
 ## A-verify: Part A checklist
 
 **Theory paragraphs:**
@@ -267,6 +285,7 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 - [ ] 0 broken image references
 - [ ] `X.Y.Z-review.md` exists (from independent sub-agent)
 - [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
+- [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 
 **Consolidation paragraphs:**
 - [ ] opgaven.md, antwoorden.md exist (no paragraaf.md)
@@ -276,6 +295,7 @@ Generate `X.Y.Z-quality-ref.yaml` via a separate sub-agent:
 - [ ] 0 broken image references
 - [ ] `X.Y.Z-review.md` exists
 - [ ] `X.Y.Z-quality-ref.yaml` exists
+- [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 
 **Part A is complete when all items are checked.**
 
@@ -290,6 +310,10 @@ Word documents are optional Office exports and are not part of the default
 student-web completion gate. Part B can use `_assets/` graphs from Part A as
 source material, but must adapt visuals to the companion surface instead of
 copy-pasting textbook images.
+
+Part B starts from the approved Part A handoff. If the handoff is missing,
+stale, or says `BLOCKED`, stop and request a Part A repair or handoff update
+instead of silently rewriting textbook source files.
 
 **If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
 
@@ -563,7 +587,8 @@ If the destination book does not already contain the static helper file, seed it
 
 This paragraph plan is required for Part B/complete companion production. It is not required for Part A-only textbook paragraphs.
 
-Read the textbook paragraph and answer key thoroughly, then create the paragraph plan.
+Read `X.Y.Z-textbook-handoff.md`, the textbook paragraph, and the answer key
+thoroughly, then create the paragraph plan.
 
 1. Copy `build-scripts/templates/template-paragraph-plan.md` → `<paragraph-folder>/_paragraph-plan.md`
 2. Fill in every section:
@@ -651,6 +676,10 @@ If running Part B only (textbook content already exists), run these QC steps now
 - **5b**: Didactic and precision review (independent sub-agent) — see Part A §A6
 - **5c**: Generate quality_ref (independent sub-agent) — see Part A §A7
 
+These are backfill checks for older paragraphs that predate the handoff. For
+new lane-separated work, Part B should consume the Part A handoff instead of
+rerunning Part A quality ownership.
+
 ### Phase 6: Deploy (2 min)
 ```bash
 node scripts/deploy.js "$BOOK"
@@ -678,12 +707,14 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 
 **Part A prerequisites (skip if running Part B only with existing content):**
 - [ ] Part A checklist passed (see A-verify above)
+- [ ] `X.Y.Z-textbook-handoff.md` exists and Part A verdict is PASS or PASS WITH FLAGS
 
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has SVG+PNG pairs matching every entry in the visuelen-plan and visual-variants-plan
-- [ ] File count: 27 required Part B root files, including index.html
-- [ ] All .docx/.pptx open in Word/PowerPoint without errors
+- [ ] File count: 14 required `student-web` Part B root files, including index.html
+- [ ] Office/legacy exports open in Word/PowerPoint when the selected profile includes them
+- [ ] `X.Y.Z-quality-ref.yaml` has a `companion:` block matching `X.Y.Z-companion-visual-review.md`
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
 - [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
 - [ ] Samenvatting uses table-based infographic layout
@@ -811,7 +842,7 @@ work, `office` or `legacy-full` only when Word exports are deliberately part of
 the requested product, and `publisher-print` for the separate PDF handoff.
 
 - **Part A/textbook mode**: validates textbook files at the paragraph root. Theory paragraphs require paragraaf/opgaven/antwoorden markdown and PDFs. Consolidation paragraphs require opgaven/antwoorden markdown and PDFs; `paragraaf.md`/`paragraaf.pdf` are not required because consolidation has no theory section.
-- **Part B/companion mode**: validates the 27 required Part B root files listed in B1, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
+- **Part B/companion mode**: validates the `student-web` Part B root files listed in B1 by default, including `index.html`; use `legacy-full` or `office` only when those exports are deliberately in scope. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
 - **Complete mode**: validates both Part A and Part B.
 
 For Part B/complete mode, game runtime data lives in `<book>/shared/`:
@@ -833,13 +864,14 @@ node scripts/validate-paragraph.js --mode complete --profile student-web "<path-
 This checks:
 For `student-web`, read the old "27 files" wording below as the legacy/full
 profile contract; the default required Part B count is 14 files.
-- All 27 required Part B files exist at the paragraph root (flat layout), including `index.html`
-- All .docx files are valid zip archives
+- All 14 required `student-web` Part B files exist at the paragraph root (flat layout), including `index.html`
+- Office/legacy `.docx` files are valid zip archives only when the selected profile requires them
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)
 - Quiz has difficulty-3 per category
 - Game data files exist in `<book>/shared/`
 - Reasoning runtime JS exists in `<book>/shared/reasoning/`; source CSV exists in platform `source-data/book-N/reasoning/` when source checks are enabled
+- The `companion:` quality-ref block names the exact companion review file, verdict, and hard-fail count
 
 **A Part B/complete paragraph is not done until the validator passes with 0 errors.**
 
