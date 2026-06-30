@@ -4,7 +4,7 @@ Accepted input decision: `PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT`
 
 ## Goal
 
-Prepare a governed local expert contact-stage pilot packet from the accepted request packets, without dispatching contact before exact-head owner authorization.
+Prepare a governed local expert contact-stage pilot packet from the accepted request packets, without dispatching contact before owner payload authorization.
 
 ## Workstreams
 
@@ -38,7 +38,7 @@ Prepare a governed local expert contact-stage pilot packet from the accepted req
 | Legal advice, compliance proof, approval, inspection-readiness, school-evidence, support/accommodation/accessibility/individual-adjustment sufficiency, product, Scale Gate, and localized-output claims are refused. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
 | England remains England-only and Flanders remains Flanders-only. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
 | Simulations and negative fixtures cover contact authorization, consent, personal data, claims, source/question allowlists, uncertainty, and jurisdiction overclaims. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
-| No real contact dispatch, expert substitution, or real response storage occurs before exact-head owner authorization. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
 | Specialist reviews, final lead review, exact-head PR readiness, green CI, and human review remain required. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
 
 ## Finding Classification

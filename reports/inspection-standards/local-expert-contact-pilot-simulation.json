@@ -131,7 +131,7 @@
     },
     {
       "id": "no_real_contact_before_owner_authorization",
-      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before exact-head owner authorization.",
+      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization.",
       "status": "met",
       "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
     },

@@ -4,7 +4,7 @@
   "bundle_id": "mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2",
   "review_standard": "REV-STD-1",
   "status": "PARTIAL_NONPROTECTED_Q4_EXECUTION_COMPLETE_H7_STILL_HELD",
-  "generated_at": "2026-06-30T07:36:20.426Z",
+  "generated_at": "2026-06-30T11:51:20.905Z",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,
@@ -85,7 +85,7 @@
     },
     {
       "path": "references/machine/micro-teaching-units.json",
-      "sha256": "f6ee9ce927baca85aac3666108a877ac5f716e4ecc7643ae98d75d62e35ac153"
+      "sha256": "96452985bb9694390b610c1d553c910ceffc20f1d54f6d56611310b825edcb50"
     }
   ],
   "artifacts": {
@@ -110,9 +110,9 @@
     "product_route_readiness_claimed": false
   },
   "hashes": {
-    "nonprotected_execution_report": "e6329f62951680b44562d43c4796e051272e8ee92192569eecaa71bf809c446b",
-    "protected_governance_authorization_matrix": "8865a49c994bf9eebfb9facfa83f262c7676a39537557cd1c829463a0b34d1d9",
-    "negative_regression_fixtures": "82b47ca7559916b4da0731356b7549958b0457e7157ea78b3f38e1a72751022d"
+    "nonprotected_execution_report": "65500ce7405d599c89be49d5c379aabb6480e1fee4dfcdc7843614d83fc9cc50",
+    "protected_governance_authorization_matrix": "6fd8726763ec2309eaa2de22ff964a61a227b6711ce263098ed17d34d3493c34",
+    "negative_regression_fixtures": "652e5b61b1ffcb840dc6f2a8d07c04f001f86927b4d501af349be91a5a3714b7"
   },
   "prohibited_claims": [
     "No H7 full closure",

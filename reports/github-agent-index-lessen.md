@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-06-30T07:36:25.599Z
+Generated: 2026-06-30T11:41:31.268Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
-Source branch: `HEAD`
-Source commit: `062eef805b4c5c2c67958925ff42d96a1065734a`
-Files indexed: 1747
+Source branch: `origin/main`
+Source commit: `43a6d921bda67a5593d2f0dcc0a89a44a99d42b5`
+Files indexed: 1775
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -115,7 +115,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 916
+Count: 919
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -364,6 +364,11 @@ Count: 916
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/1.1.1-presentatie-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/1.1.1-presentatie-web-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/prototype-v2.html
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/prototype-v2.pptx
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/README.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_web_dark.png
@@ -436,8 +441,6 @@ Count: 916
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-lead-review-v1.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-web-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-samenvatting-lead-review-v1.md
@@ -1036,7 +1039,7 @@ Count: 916
 
 ## paragraph folders
 
-Count: 747
+Count: 748
 
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.html"
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.md"
@@ -1084,8 +1087,6 @@ Count: 747
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.pdf"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie-v2-prototype.html"
-- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie-v2-prototype.pptx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie.pptx"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 redeneer-spel.html"
@@ -1389,6 +1390,11 @@ Count: 747
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-review.md
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/build_pdf.py
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/1.1.1-presentatie-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/1.1.1-presentatie-web-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/prototype-v2.html
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/prototype-v2.pptx
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/README.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_web_dark.png
@@ -1461,8 +1467,6 @@ Count: 747
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-lead-review-v1.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-web-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-samenvatting-lead-review-v1.md
@@ -1788,7 +1792,7 @@ Count: 747
 
 ## generated artifacts
 
-Count: 869
+Count: 872
 
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
@@ -2075,6 +2079,11 @@ Count: 869
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/1.1.1-presentatie-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/1.1.1-presentatie-web-lead-review-v1.md
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/prototype-v2.html
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/prototype-v2.pptx
+- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_archive/presentation-legacy-20260629/README.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_web_dark.png
@@ -2147,8 +2156,6 @@ Count: 869
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-lead-review-v1.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-presentatie-web-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-samenvatting-lead-review-v1.md
@@ -2662,7 +2669,7 @@ Count: 869
 
 ## other
 
-Count: 461
+Count: 488
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -3125,3 +3132,30 @@ Count: 461
 - specifications/product-vision.json
 - specifications/product-vision.md
 - vw-1022-a-25-1-o.pdf
+- year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/_paragraph-plan.md
+- year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/index.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/route-contract.json
+- year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/_paragraph-plan.md
+- year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/index.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/route-contract.json
+- year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/_paragraph-plan.md
+- year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/index.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/route-contract.json
+- year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/_paragraph-plan.md
+- year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/index.html
+- year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/route-contract.json
+- year2-candidate-lessons/four-target-lesson-production-1/index.html
+- year2-candidate-lessons/four-target-lesson-production-1/manifest.json
+- year2-candidate-lessons/four-target-lesson-production-1/route-contracts.json

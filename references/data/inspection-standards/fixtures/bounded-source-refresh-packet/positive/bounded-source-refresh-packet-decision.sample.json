@@ -258,10 +258,10 @@
     "legal advice, compliance, approval, accreditation, OP0, PTA, summative validity, inspection readiness, support sufficiency, accommodation sufficiency, or accessibility/legal sufficiency claims"
   ],
   "required_before_any_execution_pilot": [
-    "Human acceptance of this packet at exact PR head.",
+    "Owner payload authorization for this packet's reviewed_payload_head_sha.",
     "A separate source-refresh execution pilot sprint with explicit official-source rows and no hidden discovery.",
     "Fresh specialist and final lead review for the execution pilot.",
-    "Explicit owner authorization naming the execution pilot exact head."
+    "Owner payload authorization naming the execution pilot reviewed_payload_head_sha and decision scope."
   ],
   "finding_classification": [
     {
@@ -269,14 +269,14 @@
       "classification": "core_requirement_met",
       "blocks": "Nothing for human review of this packet when validations and reviews pass.",
       "does_not_block": "A later, separately authorized execution pilot.",
-      "proof_required_to_close": "Final lead PASS, exact-head PR readiness, branch protection ok:true, green CI, and explicit owner authorization."
+      "proof_required_to_close": "Final lead PASS, exact-head PR readiness, branch protection ok:true, green CI, and owner payload authorization."
     },
     {
       "finding": "The selected decision does not itself execute refresh or unlock downstream authority.",
       "classification": "scale_blocker",
       "blocks": "All execution, expert contact/substitution, output, product, school, public, student, personal-data, compliance, inspection, support, and accommodation authority.",
       "does_not_block": "Human review of the planning-only packet.",
-      "proof_required_to_close": "Separate reviewed sprint and explicit owner authorization."
+      "proof_required_to_close": "Separate reviewed sprint and owner payload authorization."
     }
   ]
 }

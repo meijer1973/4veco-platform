@@ -98,5 +98,5 @@ inspection-readiness authority.
 
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 | --- | --- | --- | --- | --- |
-| The selected-deepening decision is sufficient to plan a later internal overlay trial contract. | `core_requirement_met` | Nothing for human review of this planning packet. | A later internal trial-contract draft only if human accepted. | Human owner decision tied to exact PR head. |
+| The selected-deepening decision is sufficient to plan a later internal overlay trial contract. | `core_requirement_met` | Nothing for human review of this planning packet. | A later internal trial-contract draft only if human accepted. | Owner payload authorization for reviewed_payload_head_sha and decision scope. |
 | Planning remains non-executing and creates no localized, school-facing, public, product-route, Scale Gate, diagnostic, mastery, PV, student, or personal-data output. | `core_requirement_met` | Any implementation, runtime, product-route, student-use, public, or school-facing use. | Internal planning packet review. | Separate future human authorization after specialist review. |

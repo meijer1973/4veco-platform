@@ -138,15 +138,19 @@ context is `validate-platform` only. `integration-authorized` remains optional
 audit evidence after the activation pilot failed closed.
 L0-L2 merge authority comes from exact-head CI/checker/lead-review/readiness proof;
 L3-L4 and governance/self-modification work still require an explicit owner
-merge decision tied to the PR number, `reviewed_payload_head_sha`, base SHA at
-review when required by the schema, and decision scope.
+payload authorization tied to the PR number, `reviewed_payload_head_sha`, base
+SHA at review when required by the schema, and decision scope. Human-facing
+handoffs must include `AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION` while keeping
+the machine decision token, such as `APPROVE_FOR_INTEGRATION`, schema-compatible.
 
 The serialized integration lane separates the human-reviewed payload from the
 later integration head. Owner decisions for L3/L4 work must record the reviewed
 payload SHA and base SHA at review. If `main` advances, the lane may inherit the
 decision only through conflict-free base-sync merges or allowlisted deterministic
 evidence refreshes. Substantive overlap requires integration-delta lead review;
-changed effective payload or authority scope returns to human review.
+changed effective payload, bundle membership, or authority scope returns to
+human review. Renewed owner authorization is not required when payload lineage,
+effective payload, bundle membership, and authority scope remain valid.
 The trusted lane recomputes exact-head PR readiness, posts the full
 machine-readable decision with a canonical digest, and verifies post-merge
 `main` CI; a pre-existing marker-only readiness comment is not merge authority.

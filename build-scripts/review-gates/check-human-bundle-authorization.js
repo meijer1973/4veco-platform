@@ -52,6 +52,36 @@ function markerFor(record) {
   return `<!-- ${MARKER_PREFIX}:${record.bundle_id} -->`;
 }
 
+function renderBundleAuthorizationTemplate(record) {
+  const summary = validateBundleAuthorizationRecord(record);
+  if (!summary.ok) throw new Error(summary.failures.join('; '));
+  const controller = record.controller || {};
+  const members = asArray(record.members);
+  return [
+    `HUMAN_DECISION: ${record.decision}`,
+    'AUTHORIZATION_TYPE: BUNDLE_PAYLOAD_AUTHORIZATION',
+    `BUNDLE_ID: ${record.bundle_id}`,
+    `CONTROLLER_REPOSITORY: ${controller.repository}`,
+    `CONTROLLER_PR: #${controller.pr_number}`,
+    `CONTROLLER_REVIEWED_PAYLOAD_HEAD: ${controller.reviewed_payload_head_sha}`,
+    ...members.flatMap((member, index) => [
+      `MEMBER_${index + 1}_REPOSITORY: ${member.repository}`,
+      `MEMBER_${index + 1}_PR: #${member.pr_number}`,
+      `MEMBER_${index + 1}_REVIEWED_PAYLOAD_HEAD: ${member.reviewed_payload_head_sha}`,
+    ]),
+    `DECISION_SCOPE: ${record.decision_scope}`,
+    `MERGE_ORDER: ${record.merge_order}`,
+    'ADMIN_BYPASS: prohibited',
+    '',
+    markerFor(record),
+    '',
+    '```json',
+    JSON.stringify(record, null, 2),
+    '```',
+    '',
+  ].join('\n');
+}
+
 function jsonBlockFromComment(body) {
   const fenced = String(body || '').match(/```json\s*([\s\S]*?)```/i);
   if (fenced) return fenced[1];
@@ -232,6 +262,7 @@ module.exports = {
   markerFor,
   markerBundleIdFromComment,
   parseBundleAuthorizationComment,
+  renderBundleAuthorizationTemplate,
   validateBundleAuthorizationCommentMetadata,
   validateBundleAuthorizationRecord,
 };

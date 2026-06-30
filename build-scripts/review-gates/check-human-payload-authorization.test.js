@@ -2,6 +2,7 @@ const {
   issueUrlMatchesTarget,
   markerFor,
   parseAuthorizationComment,
+  renderPayloadAuthorizationTemplate,
   validateAuthorizationCommentMetadata,
   validateAuthorizationRecord,
 } = require('./check-human-payload-authorization');
@@ -39,8 +40,26 @@ describe('human payload authorization', () => {
     expect(summary.marker).toBe(markerFor(record));
   });
 
+  test('keeps existing APPROVE_FOR_INTEGRATION records valid', () => {
+    const summary = validateAuthorizationRecord({
+      ...record,
+      decision: 'APPROVE_FOR_INTEGRATION',
+    });
+
+    expect(summary.ok).toBe(true);
+  });
+
   test('parses the preferred marker and JSON block', () => {
     const body = `${markerFor(record)}\n\n\`\`\`json\n${JSON.stringify(record, null, 2)}\n\`\`\`\n`;
+    expect(parseAuthorizationComment(body)).toEqual(record);
+  });
+
+  test('renders the canonical payload authorization handoff label without changing decision enum', () => {
+    const body = renderPayloadAuthorizationTemplate(record);
+
+    expect(body).toContain('HUMAN_DECISION: APPROVE_AND_MERGE');
+    expect(body).toContain('AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION');
+    expect(body).toContain(`REVIEWED_PAYLOAD_HEAD: ${record.reviewed_payload_head_sha}`);
     expect(parseAuthorizationComment(body)).toEqual(record);
   });
 

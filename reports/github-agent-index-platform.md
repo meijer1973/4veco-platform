@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-30T08:44:44.077Z
+Generated: 2026-06-30T11:41:31.155Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/mtu-h7-nonprotected-execution-governance-bundle-2-20260629`
-Source commit: `04266511f111f15e5797fc5032ff677c5e825782`
-Files indexed: 6763
+Source branch: `codex/payload-authorization-wording-1-20260630`
+Source commit: `cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1`
+Files indexed: 6761
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 655
+Count: 657
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -184,6 +184,8 @@ Count: 655
 - build-scripts/content/book-1/b1-113-presentation-v2-model.js
 - build-scripts/content/book-1/b1-113-presentation-v2.js
 - build-scripts/content/book-1/b1-113-student-web.js
+- build-scripts/content/book-1/build-presentation-v2.js
+- build-scripts/content/book-1/presentation-v2-registry.js
 - build-scripts/content/book-1/README.md
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
 - build-scripts/content/legacy-target/build-infographic-311.js
@@ -2369,7 +2371,7 @@ Count: 884
 
 ## reports
 
-Count: 4340
+Count: 4336
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2432,10 +2434,6 @@ Count: 4340
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json

@@ -5,21 +5,36 @@ another human decision merely because `main` advanced.
 
 ## Identities
 
-`reviewed_payload_head` is the exact PR head that received substantive human
-authorization. The owner decision binds to that payload and the stated decision
-scope.
+`reviewed_payload_head_sha` is the PR payload SHA that received substantive
+payload authorization. The owner decision binds to that payload and the stated
+decision scope.
 
-`integration_head` is the current PR head after permitted base-sync merge commits
-and deterministic evidence refreshes. CI, readiness, branch protection, and the
-final merge bind to this exact SHA.
+`integration_head_sha` is the current PR head after permitted base-sync merge
+commits and deterministic evidence refreshes. CI, readiness, branch protection,
+and the final merge bind to this exact SHA.
 
 The integration head is machine-validated, not separately human-authorized. A
 human decision binds once to the reviewed payload head and carries through only
 the permitted descendants described below.
 
+Owner decisions authorize the reviewed payload head and decision scope. The
+integration lane validates the current integration head. A later integration
+head may be produced by base sync or generated/evidence-only tail handling.
+Renewed owner authorization is not required when payload lineage, effective
+payload, bundle membership, and authority scope remain valid.
+
+Renewed owner authorization is required when:
+
+- reviewed payload is not an ancestor of the integration head;
+- manual conflict resolution changes behavior;
+- substantive source payload changes;
+- bundle membership changes;
+- decision scope or authority class changes;
+- the lane cannot prove lineage/effective-payload equivalence.
+
 ## Human Payload Authorization
 
-Human authorization must be recorded as a machine-readable PR comment with this
+Payload authorization must be recorded as a machine-readable PR comment with this
 marker:
 
 ```text
@@ -31,6 +46,19 @@ The comment must include JSON matching
 repository, PR number, reviewed payload head SHA, base SHA at review, decision,
 decision scope, authorization comment ID, permitted integration descendants, and
 invalidation conditions.
+
+Human-facing handoffs must label this as payload authorization while preserving
+the existing machine decision values:
+
+```text
+HUMAN_DECISION: APPROVE_FOR_INTEGRATION
+AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION
+PR: #...
+REVIEWED_PAYLOAD_HEAD: ...
+DECISION_SCOPE: ...
+MERGE_METHOD: merge commit
+ADMIN_BYPASS: prohibited
+```
 
 The lane must bind the fetched comment to GitHub facts before using it:
 comment ID, target repository, target PR number, owner author login,
@@ -48,9 +76,9 @@ Authorization may survive later PR heads only when:
 - intervening commits are conflict-free main base-sync merges or allowlisted
   deterministic evidence/index refreshes;
 - no rebase or force push removed the reviewed lineage;
-- no manual conflict resolution occurred;
+- no manual conflict resolution changed behavior;
 - no substantive PR-authored commit followed authorization;
-- the authority level and human-review scope did not change.
+- bundle membership, authority level, and human-review scope did not change.
 
 Self-declared commit labels are not proof. The lane must inspect commit graph
 shape, parentage, changed paths, and GitHub comparison data.
@@ -105,7 +133,7 @@ npm.cmd run check:integration-lane-capability
 
 The lane must:
 
-1. validate the human authorization comment;
+1. validate the payload authorization comment;
 2. set `integration-authorized` to pending on the observed PR head at lane
    entry;
 3. re-fetch PR state, `main`, live branch protection, CI, reviews, and threads;
@@ -115,7 +143,7 @@ The lane must:
    by treating `BLOCKED` as drift;
 7. update the branch with `expected_head_sha` only when `main` is not an
    ancestor of the PR head, then retry after the new head receives CI;
-8. await `validate-platform` on the exact integration head;
+8. await `validate-platform` on the current `integration_head_sha`;
 9. enforce base-drift outcomes: no overlap continues, allowlisted overlap
    needs deterministic refresh verification, substantive overlap needs a
    machine-readable integration-delta lead-review `PASS`, and changed payload
@@ -186,10 +214,28 @@ Human approval for a paired bundle must be recorded with this marker:
 ```
 
 The comment must include canonical JSON with decision
-`APPROVE_BUNDLE_AND_MERGE`, the controller PR, every member PR, exact reviewed
-payload SHAs, decision scope, merge order, and invalidation conditions. The
-GitHub comment ID is derived from GitHub metadata; it must not be copied into
-the JSON. Prose-only approval is not valid bundle merge authority.
+`APPROVE_BUNDLE_AND_MERGE`, the controller PR, every member PR, reviewed
+controller/member payload SHAs, decision scope, merge order, and invalidation
+conditions. The GitHub comment ID is derived from GitHub metadata; it must not
+be copied into the JSON. Prose-only approval is not valid bundle merge
+authority.
+
+Human-facing bundle handoffs must use the bundle payload authorization label:
+
+```text
+HUMAN_DECISION: APPROVE_BUNDLE_AND_MERGE
+AUTHORIZATION_TYPE: BUNDLE_PAYLOAD_AUTHORIZATION
+BUNDLE_ID: ...
+CONTROLLER_REPOSITORY: ...
+CONTROLLER_PR: #...
+CONTROLLER_REVIEWED_PAYLOAD_HEAD: ...
+MEMBER_REPOSITORY: ...
+MEMBER_PR: #...
+MEMBER_REVIEWED_PAYLOAD_HEAD: ...
+DECISION_SCOPE: ...
+MERGE_ORDER: CI_SELECTED
+ADMIN_BYPASS: prohibited
+```
 
 Use `.github/workflows/authorized-bundle-integration.yml` or
 `npm.cmd run integrate:authorized-bundle` for coordinated bundle merge. The
@@ -265,8 +311,8 @@ through `authorized-pr-integration` or `authorized-bundle-integration`; for
 single-PR work the owner-authenticated local lane is the default path. The
 trusted cloud workflow may be used only when it can verify branch protection.
 A cloud `branch_protection_read_forbidden` result means use the local lane, not
-raw merge. Human authorization still binds to the reviewed payload SHA. The
-lane may validate a later integration head without renewed human authorization
+raw merge. Payload authorization still binds to the reviewed payload SHA. The
+lane may validate a later integration head without renewed owner authorization
 when lineage, base drift, decision scope, and effective-payload checks remain
 valid. The lane may internally use a direct merge command under the current
 branch-protection shape; that is a trusted-lane implementation detail, not

@@ -45,5 +45,5 @@ Review Bundle 2 as a bounded non-protected q4 reviewed-equivalent execution plus
 
 - Run the Bundle 2 checker and prior H5/H6/H7 checkers.
 - Run report JSON validation, URL-index check, agent index, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.
-- Record explicit owner authorization in the PR thread that names the reviewed PR head SHA before merge.
+- Record owner payload authorization in the PR thread that names reviewed_payload_head_sha and decision scope before merge.
 - Keep H7 closure blocked until seven protected holds and q5 graph execution are separately resolved.

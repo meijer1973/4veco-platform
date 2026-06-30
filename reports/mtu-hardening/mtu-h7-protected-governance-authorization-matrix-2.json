@@ -4,7 +4,7 @@
   "matrix_id": "mtu-h7-protected-governance-authorization-matrix-2",
   "review_standard": "REV-STD-1",
   "status": "protected_and_graph_governance_paths_authorized_not_executed",
-  "generated_at": "2026-06-30T07:36:20.425Z",
+  "generated_at": "2026-06-30T11:51:20.905Z",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,

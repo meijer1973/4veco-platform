@@ -52,6 +52,27 @@ function markerFor(record) {
   return `<!-- ${MARKER_PREFIX}:${record.repository}:${record.pr_number}:${record.reviewed_payload_head_sha} -->`;
 }
 
+function renderPayloadAuthorizationTemplate(record) {
+  const summary = validateAuthorizationRecord(record);
+  if (!summary.ok) throw new Error(summary.failures.join('; '));
+  return [
+    `HUMAN_DECISION: ${record.decision}`,
+    'AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION',
+    `PR: #${record.pr_number}`,
+    `REVIEWED_PAYLOAD_HEAD: ${record.reviewed_payload_head_sha}`,
+    `DECISION_SCOPE: ${record.decision_scope}`,
+    'MERGE_METHOD: merge commit',
+    'ADMIN_BYPASS: prohibited',
+    '',
+    markerFor(record),
+    '',
+    '```json',
+    JSON.stringify(record, null, 2),
+    '```',
+    '',
+  ].join('\n');
+}
+
 function jsonBlockFromComment(body) {
   const fenced = String(body || '').match(/```json\s*([\s\S]*?)```/i);
   if (fenced) return fenced[1];
@@ -261,6 +282,7 @@ module.exports = {
   markerFor,
   markerFieldsFromComment,
   parseAuthorizationComment,
+  renderPayloadAuthorizationTemplate,
   validateAuthorizationCommentMetadata,
   validateAuthorizationRecord,
 };

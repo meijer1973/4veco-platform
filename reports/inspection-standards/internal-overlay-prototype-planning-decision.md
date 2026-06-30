@@ -124,5 +124,5 @@ Decide whether to authorize a later internal-only trial-contract draft sprint. A
 
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 | --- | --- | --- | --- | --- |
-| The planning packet selects one allowed next decision. | `core_requirement_met` | Nothing for human review. | A later internal trial-contract draft sprint if human accepted. | Human owner decision tied to exact PR head. |
+| The planning packet selects one allowed next decision. | `core_requirement_met` | Nothing for human review. | A later internal trial-contract draft sprint if human accepted. | Owner payload authorization for reviewed_payload_head_sha and decision scope. |
 | All implementation and downstream authority remains blocked. | `scale_blocker` | Country editions, localized chapters, teacher/school-facing distribution, public output, evidence packs, product routes, Scale Gate, diagnostics/mastery/PV, student/product use, personal data, legal sufficiency, compliance, approval, OP0, PTA, summative validity, and inspection-readiness claims. | Internal planning decision only. | Separate future human authorization with local expert/source/legal/accessibility review. |

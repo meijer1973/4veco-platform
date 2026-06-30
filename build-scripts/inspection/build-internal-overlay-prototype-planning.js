@@ -374,7 +374,7 @@ function planReport() {
         "core_requirement_met",
         "Nothing for human review of this planning packet.",
         "A later internal trial-contract draft only if human accepted.",
-        "Human owner decision tied to exact PR head."
+        "Owner payload authorization for reviewed_payload_head_sha and decision scope."
       ),
       finding(
         "Planning remains non-executing and creates no localized, school-facing, public, product-route, Scale Gate, diagnostic, mastery, PV, student, or personal-data output.",
@@ -427,7 +427,7 @@ function decisionReport(plan) {
         "core_requirement_met",
         "Nothing for human review.",
         "A later internal trial-contract draft sprint if human accepted.",
-        "Human owner decision tied to exact PR head."
+        "Owner payload authorization for reviewed_payload_head_sha and decision scope."
       ),
       finding(
         "All implementation and downstream authority remains blocked.",

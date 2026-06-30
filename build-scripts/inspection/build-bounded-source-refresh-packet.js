@@ -373,16 +373,16 @@ function stateDetails() {
       blocks: "Blocks source interpretation from becoming authority, legal advice, school evidence, or product output.",
       does_not_block: "Preparing a later bounded expert-review request.",
       proof_required_to_close: "Expert question, allowed interpretation scope, forbidden-claim acknowledgement, and human-reviewed response record.",
-      allowed_next_action: "Ask for bounded interpretation only after owner authorization.",
+      allowed_next_action: "Ask for bounded interpretation only after owner payload authorization.",
       forbidden_next_action: "Contact experts in this packet or use expert judgement as official-source substitute.",
     },
     {
       state_id: "requires_human_owner_decision",
       blocks: "Blocks all automatic transition, merge, source adoption, and downstream authority.",
       does_not_block: "Human-review routing with exact evidence.",
-      proof_required_to_close: "Explicit owner authorization naming the exact PR head and selected decision.",
+      proof_required_to_close: "Owner payload authorization naming reviewed_payload_head_sha and decision scope.",
       allowed_next_action: "Route to READY_FOR_HUMAN_REVIEW with exact-head proof.",
-      forbidden_next_action: "Auto-merge or mark product-authority work ready without owner authorization.",
+      forbidden_next_action: "Auto-merge or merge product-authority work without owner payload authorization.",
     },
   ];
 }
@@ -578,7 +578,7 @@ function jurisdictionReport(jurisdictionId) {
         "scale_blocker",
         "All source refresh execution, localized output, product route, school/public output, Scale Gate, personal-data, compliance, inspection-readiness, and support/accommodation sufficiency authority.",
         "Human review of this bounded source-refresh packet.",
-        "Separate owner authorization naming the exact PR head and a later execution pilot packet."
+        "Separate owner payload authorization naming reviewed_payload_head_sha, decision scope, and a later execution pilot packet."
       ),
     ],
   };
@@ -611,7 +611,7 @@ function planReport(england, flanders) {
       "Accessibility/inclusion review",
       "Final lead review",
       "Exact-head PR Readiness Reviewer route with branch protection ok:true",
-      "Explicit human owner authorization before merge or any later source-refresh execution pilot",
+      "Owner payload authorization before merge or any later source-refresh execution pilot",
     ],
     stop_conditions: [
       "Any source refresh execution or source-refresh execution pilot run.",
@@ -682,10 +682,10 @@ function decisionReport(england, flanders, plan) {
       "legal advice, compliance, approval, accreditation, OP0, PTA, summative validity, inspection readiness, support sufficiency, accommodation sufficiency, or accessibility/legal sufficiency claims",
     ],
     required_before_any_execution_pilot: [
-      "Human acceptance of this packet at exact PR head.",
+      "Owner payload authorization for this packet's reviewed_payload_head_sha.",
       "A separate source-refresh execution pilot sprint with explicit official-source rows and no hidden discovery.",
       "Fresh specialist and final lead review for the execution pilot.",
-      "Explicit owner authorization naming the execution pilot exact head.",
+      "Owner payload authorization naming the execution pilot reviewed_payload_head_sha and decision scope.",
     ],
     finding_classification: [
       finding(
@@ -693,14 +693,14 @@ function decisionReport(england, flanders, plan) {
         "core_requirement_met",
         "Nothing for human review of this packet when validations and reviews pass.",
         "A later, separately authorized execution pilot.",
-        "Final lead PASS, exact-head PR readiness, branch protection ok:true, green CI, and explicit owner authorization."
+        "Final lead PASS, exact-head PR readiness, branch protection ok:true, green CI, and owner payload authorization."
       ),
       finding(
         "The selected decision does not itself execute refresh or unlock downstream authority.",
         "scale_blocker",
         "All execution, expert contact/substitution, output, product, school, public, student, personal-data, compliance, inspection, support, and accommodation authority.",
         "Human review of the planning-only packet.",
-        "Separate reviewed sprint and explicit owner authorization."
+        "Separate reviewed sprint and owner payload authorization."
       ),
     ],
   };
