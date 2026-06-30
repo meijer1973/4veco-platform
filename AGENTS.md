@@ -268,12 +268,19 @@ Merge authority follows the PR-readiness route:
 
 ### Serialized integration lane
 
-Agents must not call `gh pr merge` directly for normal PRs. Use
-`.github/workflows/authorized-pr-integration.yml` with the PR number and the
-human payload authorization comment ID when the trusted workflow token can
-verify branch protection. If the workflow token cannot read required
-branch-protection state, use the owner-authenticated local fallback
-`npm.cmd run integrate:authorized-pr` with the same authorization comment ID.
+Agents must not call `gh pr merge` directly for normal PRs. The default
+single-PR merge path is the owner-authenticated local serialized lane:
+`npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <PR> --authorization-comment-id <COMMENT_ID>`.
+Run it from current `main`/current policy code so it can validate branch
+protection, payload lineage, readiness, CI, review state, merge eligibility, and
+post-merge `main` CI before any merge command is invoked.
+
+`.github/workflows/authorized-pr-integration.yml` remains an optional trusted
+cloud path only when its `github.token` can read branch protection. If that
+workflow returns `phase: branch_protection_read_forbidden`, the token hit the
+expected GitHub Administration-read permission boundary; this is not a
+governance failure and is not permission to merge directly. Use the
+owner-authenticated local lane with the same authorization comment ID.
 Paired platform/lesson bundles must use
 `.github/workflows/authorized-bundle-integration.yml` or
 `npm.cmd run integrate:authorized-bundle`. All authorized paths serialize
