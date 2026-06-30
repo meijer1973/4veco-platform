@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/schemas/local-expert-response-intake.schema.v1.json",
+  "title": "Local Expert Response Intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "intake_id",
+    "jurisdiction_id",
+    "request_packet_id",
+    "consent_confirmed",
+    "response_received",
+    "responses",
+    "validation_status",
+    "rejected_items",
+    "does_not_authorize",
+    "proof_required_to_use"
+  ],
+  "properties": {
+    "intake_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jurisdiction_id": {
+      "enum": [
+        "england",
+        "flanders"
+      ]
+    },
+    "request_packet_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consent_confirmed": {
+      "type": "boolean"
+    },
+    "response_received": {
+      "type": "boolean"
+    },
+    "responses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reviewer_role",
+          "jurisdiction",
+          "source_id",
+          "source_state_seen",
+          "question_id",
+          "answer_type",
+          "interpretation",
+          "confidence",
+          "uncertainty",
+          "cited_source",
+          "forbidden_claims_disclaimed",
+          "does_not_authorize",
+          "proof_required_to_use"
+        ],
+        "properties": {
+          "reviewer_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "jurisdiction": {
+            "enum": [
+              "england",
+              "flanders"
+            ]
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_state_seen": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "answer_type": {
+            "enum": [
+              "bounded_interpretation",
+              "uncertainty_flag",
+              "citation_correction",
+              "out_of_scope"
+            ]
+          },
+          "interpretation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "cannot_answer"
+            ]
+          },
+          "uncertainty": {
+            "type": "string"
+          },
+          "cited_source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "forbidden_claims_disclaimed": {
+            "const": true
+          },
+          "does_not_authorize": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 10
+          },
+          "proof_required_to_use": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "validation_status": {
+      "enum": [
+        "no_response_yet",
+        "accepted_simulation",
+        "accepted_for_internal_review",
+        "rejected"
+      ]
+    },
+    "rejected_items": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "does_not_authorize": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 10
+    },
+    "proof_required_to_use": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "response_received": {
+            "const": true
+          }
+        },
+        "required": [
+          "response_received"
+        ]
+      },
+      "then": {
+        "properties": {
+          "consent_confirmed": {
+            "const": true
+          }
+        },
+        "required": [
+          "consent_confirmed"
+        ]
+      }
+    }
+  ],
+  "response_record_required_fields": [
+    "reviewer_role",
+    "jurisdiction",
+    "source_id",
+    "source_state_seen",
+    "question_id",
+    "answer_type",
+    "interpretation",
+    "confidence",
+    "uncertainty",
+    "cited_source",
+    "forbidden_claims_disclaimed",
+    "does_not_authorize",
+    "proof_required_to_use"
+  ],
+  "forbidden_fields": [
+    "student_data",
+    "personal_data",
+    "school_specific_evidence",
+    "legal_conclusion",
+    "compliance_conclusion",
+    "approval_conclusion",
+    "inspection_readiness_conclusion",
+    "direct_localized_output",
+    "support_sufficiency_conclusion",
+    "accommodation_sufficiency_conclusion",
+    "accessibility_legal_sufficiency_conclusion",
+    "individual_adjustment_sufficiency_conclusion",
+    "named_person",
+    "contact_details"
+  ]
+}

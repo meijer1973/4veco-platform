@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-29T15:07:45.069Z
+Generated: 2026-06-30T06:48:24.690Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/workflow-split-paragraph-a-b-1-20260629`
-Source commit: `3e2b9b37a358412440dd43bcb20d7b1fa09562f5`
-Files indexed: 6668
+Source branch: `codex/integration-lane-permission-smoothing-1-20260630`
+Source commit: `52afe5713cbc3826cf44fb0e070747080d9209cc`
+Files indexed: 6671
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 645
+Count: 647
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -579,6 +579,8 @@ Count: 645
 - build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js
 - build-scripts/review-gates/check-human-payload-authorization.test.js
+- build-scripts/review-gates/check-integration-lane-capability.js
+- build-scripts/review-gates/check-integration-lane-capability.test.js
 - build-scripts/review-gates/check-integration-lineage.js
 - build-scripts/review-gates/check-integration-lineage.test.js
 - build-scripts/review-gates/check-r2-4-packet.js
@@ -818,7 +820,7 @@ Count: 25
 
 ## validators
 
-Count: 639
+Count: 641
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1060,6 +1062,8 @@ Count: 639
 - build-scripts/review-gates/check-human-bundle-authorization.test.js
 - build-scripts/review-gates/check-human-payload-authorization.js
 - build-scripts/review-gates/check-human-payload-authorization.test.js
+- build-scripts/review-gates/check-integration-lane-capability.js
+- build-scripts/review-gates/check-integration-lane-capability.test.js
 - build-scripts/review-gates/check-integration-lineage.js
 - build-scripts/review-gates/check-integration-lineage.test.js
 - build-scripts/review-gates/check-r2-4-packet.js
@@ -2327,7 +2331,7 @@ Count: 860
 
 ## reports
 
-Count: 4292
+Count: 4293
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5353,6 +5357,7 @@ Count: 4292
 - reports/sprints/GRAPH-UX-2-student-route-proof.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-COMPAT-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-TRIGGER-1-lead-review-round1.md
+- reports/sprints/INTEGRATION-LANE-PERMISSION-SMOOTHING-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round2.md
 - reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round3.md
 - reports/sprints/L1.7B-Q2-answer-model.md
