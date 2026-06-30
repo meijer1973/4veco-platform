@@ -16,6 +16,8 @@ const { runReview } = require('./review-pr-readiness');
 
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
 const INTEGRATION_CONTEXT = 'integration-authorized';
+const BRANCH_PROTECTION_READ_FORBIDDEN_PHASE = 'branch_protection_read_forbidden';
+const OWNER_AUTHENTICATED_LOCAL_LANE = 'owner_authenticated_local_lane';
 const READY_READINESS_ROUTES = new Set(['READY_FOR_LEAD_ONLY', 'READY_FOR_HUMAN_REVIEW']);
 
 function fail(message) {
@@ -103,8 +105,80 @@ function retiredActivatedModeFailure(branchProtection) {
   return null;
 }
 
+function isBranchProtectionReadForbiddenError(error) {
+  const message = String(error && error.message ? error.message : error || '');
+  return (
+    /\bHTTP\s*403\b/i.test(message) ||
+    /Resource not accessible by integration/i.test(message) ||
+    /must have admin rights/i.test(message) ||
+    /administration(?:\s+permission)?/i.test(message)
+  );
+}
+
+function localLaneHandoffCommand(repo, prNumber, authorizationCommentId) {
+  const pieces = [
+    'npm.cmd run integrate:authorized-pr --',
+    '--repo',
+    repo,
+    '--pr',
+    String(prNumber),
+    '--authorization-comment-id',
+    String(authorizationCommentId || '<COMMENT_ID>'),
+  ];
+  return pieces.join(' ');
+}
+
+function branchProtectionReadForbiddenSummary(repo, branch, error) {
+  return {
+    repository: repo || DEFAULT_REPO,
+    branch: branch || 'main',
+    ok: false,
+    phase: BRANCH_PROTECTION_READ_FORBIDDEN_PHASE,
+    classification: BRANCH_PROTECTION_READ_FORBIDDEN_PHASE,
+    recommended_next_path: OWNER_AUTHENTICATED_LOCAL_LANE,
+    failures: [BRANCH_PROTECTION_READ_FORBIDDEN_PHASE],
+    limitation: 'current GitHub token cannot read branch protection',
+    error: error && error.message ? error.message : String(error || ''),
+  };
+}
+
+function isBranchProtectionReadForbiddenSummary(summary) {
+  return Boolean(
+    summary &&
+    (
+      summary.phase === BRANCH_PROTECTION_READ_FORBIDDEN_PHASE ||
+      summary.classification === BRANCH_PROTECTION_READ_FORBIDDEN_PHASE ||
+      (Array.isArray(summary.failures) && summary.failures.includes(BRANCH_PROTECTION_READ_FORBIDDEN_PHASE))
+    )
+  );
+}
+
+function branchProtectionReadForbiddenResult(repo, prNumber, authorizationCommentId, pr, branchProtection, deps, options, checkpoint) {
+  const description = 'Branch protection read forbidden; use owner local lane';
+  if (pr && pr.headRefOid) {
+    deps.setCommitStatus(repo, pr.headRefOid, 'failure', description, pr.url, options);
+  }
+  return {
+    ok: false,
+    phase: BRANCH_PROTECTION_READ_FORBIDDEN_PHASE,
+    checkpoint,
+    branch_protection: branchProtection,
+    recommended_next_path: OWNER_AUTHENTICATED_LOCAL_LANE,
+    handoff_command: localLaneHandoffCommand(repo, prNumber, authorizationCommentId),
+    failures: [BRANCH_PROTECTION_READ_FORBIDDEN_PHASE],
+  };
+}
+
 function fetchBranchProtectionSummary(repo, options = {}, runner = runGh) {
-  const rawProtection = runner(['api', `repos/${repo}/branches/main/protection`]);
+  let rawProtection;
+  try {
+    rawProtection = runner(['api', `repos/${repo}/branches/main/protection`]);
+  } catch (error) {
+    if (isBranchProtectionReadForbiddenError(error)) {
+      return branchProtectionReadForbiddenSummary(repo, 'main', error);
+    }
+    throw error;
+  }
   const reviewRead = runner(['api', `repos/${repo}/branches/main/protection/required_pull_request_reviews`], {
     optional: true,
   });
@@ -753,6 +827,18 @@ function integrate(options) {
   const branchProtection = deps.fetchBranchProtectionSummary(repo, {
     requireIntegrationAuthorized: options.requireIntegrationAuthorized,
   });
+  if (isBranchProtectionReadForbiddenSummary(branchProtection)) {
+    return branchProtectionReadForbiddenResult(
+      repo,
+      prNumber,
+      options.authorizationCommentId,
+      pr,
+      branchProtection,
+      deps,
+      options,
+      'initial_branch_protection'
+    );
+  }
   if (!branchProtection.ok) {
     deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${branchProtection.failures.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'branch_protection', branch_protection: branchProtection };
@@ -834,6 +920,18 @@ function integrate(options) {
   const finalBranchProtection = deps.fetchBranchProtectionSummary(repo, {
     requireIntegrationAuthorized: options.requireIntegrationAuthorized,
   });
+  if (isBranchProtectionReadForbiddenSummary(finalBranchProtection)) {
+    return branchProtectionReadForbiddenResult(
+      repo,
+      prNumber,
+      options.authorizationCommentId,
+      pr,
+      finalBranchProtection,
+      deps,
+      options,
+      'final_branch_protection'
+    );
+  }
   if (!finalBranchProtection.ok) {
     deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${finalBranchProtection.failures.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'final_branch_protection', branch_protection: finalBranchProtection };
@@ -1153,7 +1251,10 @@ if (require.main === module) {
 
 module.exports = {
   INTEGRATION_CONTEXT,
+  BRANCH_PROTECTION_READ_FORBIDDEN_PHASE,
+  OWNER_AUTHENTICATED_LOCAL_LANE,
   buildLineageInput,
+  branchProtectionReadForbiddenSummary,
   enforceLineagePolicy,
   generateAndApplyReadiness,
   collectAutoMergeDiagnostics,
@@ -1173,6 +1274,9 @@ module.exports = {
   setCommitStatus,
   summarizeIntegrationBranchProtection,
   supplementalFromReadinessDecision,
+  isBranchProtectionReadForbiddenError,
+  isBranchProtectionReadForbiddenSummary,
+  localLaneHandoffCommand,
   validateIntegrationDeltaReview,
   validatePrState,
   verifyAutoMergeEnabled,
