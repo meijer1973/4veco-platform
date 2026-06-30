@@ -382,12 +382,26 @@ function bundleMemberHeadMatches(member) {
 }
 
 function bundleMemberLifecycleOk(member) {
-  return Boolean(
+  const mergeCommit = member && (
+    member.merge_commit ||
+    member.merge_commit_sha ||
+    member.mergeCommitSha ||
+    (member.mergeCommit && member.mergeCommit.oid)
+  );
+  const mergedOk = Boolean(
     member &&
-      member.open === true &&
+      member.merged === true &&
       member.current === true &&
-      member.mergeable === true &&
+      SHA_PATTERN.test(String(mergeCommit || '')) &&
       bundleMemberHeadMatches(member)
+  );
+  return Boolean(
+    mergedOk ||
+      (member &&
+        member.open === true &&
+        member.current === true &&
+        member.mergeable === true &&
+        bundleMemberHeadMatches(member))
   );
 }
 

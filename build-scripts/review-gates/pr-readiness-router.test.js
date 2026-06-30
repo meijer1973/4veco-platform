@@ -419,6 +419,58 @@ describe('pr-readiness-router', () => {
     expect(decision.proof.bundle.compatibility.recommended_merge_order).toBe('lesson-first');
   });
 
+  test('cross-repo bundle controller accepts a current already-merged paired member', () => {
+    const fixture = readFixture('live-governance-human.json');
+    const lessonHead = '4'.repeat(40);
+    const lessonMerge = '6'.repeat(40);
+    const exactMembers = bundleExactMembers({
+      platform_candidate_sha: fixture.reviewed_pr.head_sha,
+      lesson_candidate_sha: lessonHead,
+    });
+    const decision = classifyPrReadiness({
+      ...fixture,
+      pr_throughput_class: 'cross_repo_bundle',
+      throughput: {
+        ...fixture.throughput,
+        class: 'cross_repo_bundle',
+      },
+      proof: {
+        ...fixture.proof,
+        bundle: {
+          bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+          controller: {
+            repository: fixture.reviewed_pr.repo,
+            pr_number: fixture.reviewed_pr.number,
+            reviewed_payload_head_sha: fixture.reviewed_pr.head_sha,
+          },
+          exact_members: exactMembers,
+          paired_prs: [
+            {
+              repo: 'meijer1973/4veco-lessen',
+              number: 34,
+              merged: true,
+              current: true,
+              ready: true,
+              is_draft: false,
+              base: 'main',
+              head_sha: lessonHead,
+              reviewed_payload_head_sha: lessonHead,
+              merge_commit: lessonMerge,
+            },
+          ],
+          compatibility: bundleCompatibility(exactMembers),
+        },
+      },
+    });
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(decision.proof.bundle.ok).toBe(true);
+    expect(decision.proof.bundle.paired_prs[0]).toMatchObject({
+      merged: true,
+      merge_commit: lessonMerge,
+    });
+  });
+
   test('cross-repo bundle controller accepts coordinated both-draft mark-ready pre-state', () => {
     const fixture = readFixture('live-governance-human.json');
     const lessonHead = '4'.repeat(40);
