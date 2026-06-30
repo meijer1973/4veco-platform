@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-29T15:07:45.069Z
+Generated: 2026-06-30T07:58:48.378Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/workflow-split-paragraph-a-b-1-20260629`
-Source commit: `3e2b9b37a358412440dd43bcb20d7b1fa09562f5`
-Files indexed: 6668
+Source branch: `codex/agent-doc-governance-cleanup-20260630`
+Source commit: `46ac1653564907ea16f4cdb3480a136ed9bb51c0`
+Files indexed: 6698
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 645
+Count: 648
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -349,6 +349,7 @@ Count: 645
 - build-scripts/references/build-source-document-registry.js
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
+- build-scripts/references/build-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/build-y2-four-target-product-route-adoption-prep-1.js
@@ -469,6 +470,7 @@ Count: 645
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
+- build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -648,6 +650,7 @@ Count: 645
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
+- build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
 - build-scripts/sprints/check-exit-ticket-workbench-112-1.js
 - build-scripts/sprints/check-exit-ticket-workbench-112-rendered-1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
@@ -818,7 +821,7 @@ Count: 25
 
 ## validators
 
-Count: 639
+Count: 641
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1019,6 +1022,7 @@ Count: 639
 - build-scripts/references/check-unit-design-status.js
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
+- build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -1084,6 +1088,7 @@ Count: 639
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
+- build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
 - build-scripts/sprints/check-exit-ticket-workbench-112-1.js
 - build-scripts/sprints/check-exit-ticket-workbench-112-rendered-1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
@@ -1462,7 +1467,7 @@ Count: 639
 
 ## references
 
-Count: 860
+Count: 863
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1783,6 +1788,8 @@ Count: 860
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/EXAM-SOURCE-AUTH-1.plan.json
 - references/data/sprints/EXAM-SOURCE-AUTH-1.result.json
+- references/data/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1.plan.json
+- references/data/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1.result.json
 - references/data/sprints/GAME-ARCH-1.plan.json
 - references/data/sprints/GAME-ARCH-1.result.json
 - references/data/sprints/GAME-ARCH-2.plan.json
@@ -2096,6 +2103,7 @@ Count: 860
 - references/data/year2-target-foundation/answer-contracts.json
 - references/data/year2-target-foundation/canonical-source-assets.json
 - references/data/year2-target-foundation/lesson-production-eligibility-overlay.json
+- references/data/year2-target-foundation/product-route-adoption-registry.json
 - references/data/year2-target-foundation/source-reconstruction-foundation.json
 - references/exemplars/1.1.1-golden-presentation/accepted-snapshot-provenance.md
 - references/exemplars/1.1.1-golden-presentation/content-review-and-revision-notes.md
@@ -2327,7 +2335,7 @@ Count: 860
 
 ## reports
 
-Count: 4292
+Count: 4316
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4141,6 +4149,11 @@ Count: 4292
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/review-gates/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/bounded-route-adoption-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/bounded-route-adoption-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/rendered-registry-map.html
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/review-packet.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/rendered-product-proof.html
@@ -4301,6 +4314,12 @@ Count: 4292
 - reports/sprints/AGENT-BRANCH-SAFETY-1-plan.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-result.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-corrections.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-lead-review-round1.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-lead-review-round2.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-result.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-test-evidence.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-baseline.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.md
@@ -5005,6 +5024,19 @@ Count: 4292
 - reports/sprints/EXAM-SOURCE-AUTH-1-result.md
 - reports/sprints/EXAM-SOURCE-AUTH-1-source-authority.md
 - reports/sprints/example-result.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-baseline.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-command-log.jsonl
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-command-log.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-diff-summary.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-assignment.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-corrections.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-round1.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-round2.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-plan-review-round1.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-plan-review-round2.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-plan.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-quality-log.md
+- reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md
 - reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-rendered-proof.md
 - reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
 - reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-after-calculation.png
