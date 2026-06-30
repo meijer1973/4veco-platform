@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/schemas/local-expert-contact-consent.schema.v1.json",
+  "title": "Local Expert Contact Consent Boundary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "consent_statement",
+    "recording_boundary",
+    "storage_boundary",
+    "no_personal_data_instruction",
+    "withdrawal_boundary",
+    "response_use_limit"
+  ],
+  "properties": {
+    "consent_statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recording_boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "storage_boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "no_personal_data_instruction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "withdrawal_boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "response_use_limit": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
