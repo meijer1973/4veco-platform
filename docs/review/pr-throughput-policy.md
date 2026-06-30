@@ -133,12 +133,13 @@ step `npm.cmd run apply:pr-readiness`.
 
 In this repository's single-account GitHub model, approval count is not the
 human-review signal. Branch protection keeps pull-request workflow and strict
-status checks, but the expected approving-review count is `0`. Before
-activation, the required context is `validate-platform`; after activation, the
-required contexts are exactly `validate-platform` and `integration-authorized`.
+status checks, but the expected approving-review count is `0`. The live required
+context is `validate-platform` only. `integration-authorized` remains optional
+audit evidence after the activation pilot failed closed.
 L0-L2 merge authority comes from exact-head CI/checker/lead-review/readiness proof;
 L3-L4 and governance/self-modification work still require an explicit owner
-merge decision tied to the PR number and head SHA.
+merge decision tied to the PR number, `reviewed_payload_head_sha`, base SHA at
+review when required by the schema, and decision scope.
 
 The serialized integration lane separates the human-reviewed payload from the
 later integration head. Owner decisions for L3/L4 work must record the reviewed
@@ -149,9 +150,10 @@ changed effective payload or authority scope returns to human review.
 The trusted lane recomputes exact-head PR readiness, posts the full
 machine-readable decision with a canonical digest, and verifies post-merge
 `main` CI; a pre-existing marker-only readiness comment is not merge authority.
-After activation, agents must not call `gh pr merge` directly for normal PRs.
-Use `authorized-pr-integration` or `authorized-bundle-integration`, and allow
-`integration-authorized` to be minted only by trusted `main` integration code.
+Agents must not call `gh pr merge` directly for normal PRs. Use
+`authorized-pr-integration` or `authorized-bundle-integration`, and allow
+`integration-authorized` to be minted only as optional audit evidence by trusted
+`main` integration code.
 
 Do not add a repository-wide CI gate over all historical review packets until
 the archived packet surface is either migrated or an allowlist exists. Focused
