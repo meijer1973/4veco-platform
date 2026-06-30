@@ -58,6 +58,14 @@ describe('check-active-governance-wording', () => {
     expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
   });
 
+  test('flags cloud workflow fallback wording that permits direct merge', () => {
+    const text = 'If the GitHub-hosted workflow fails with 403 because it cannot read branch protection, use `gh pr merge` after CI.';
+
+    expect(findViolationsInText('AGENTS.md', text).map((item) => item.pattern)).toEqual([
+      'cloud-workflow-fallback-direct-merge',
+    ]);
+  });
+
   test('flags stale activation-as-operating-mode wording', () => {
     const text = [
       'Before activation, the required context is `validate-platform`; after activation, the required contexts are exactly `validate-platform` and `integration-authorized`.',

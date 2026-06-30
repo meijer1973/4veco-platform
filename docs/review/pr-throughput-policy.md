@@ -151,7 +151,13 @@ The trusted lane recomputes exact-head PR readiness, posts the full
 machine-readable decision with a canonical digest, and verifies post-merge
 `main` CI; a pre-existing marker-only readiness comment is not merge authority.
 Agents must not call `gh pr merge` directly for normal PRs. Use
-`authorized-pr-integration` or `authorized-bundle-integration`, and allow
+`authorized-pr-integration` or `authorized-bundle-integration`. For single-PR
+work, the owner-authenticated local serialized lane is the default path:
+`npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <PR> --authorization-comment-id <COMMENT_ID>`.
+The GitHub-hosted workflow is optional only when its token can read branch
+protection. A `branch_protection_read_forbidden` result from that workflow is
+an expected permission boundary; switch to the owner-authenticated local lane
+with the same authorization comment ID and do not direct-merge. Allow
 `integration-authorized` to be minted only as optional audit evidence by trusted
 `main` integration code.
 

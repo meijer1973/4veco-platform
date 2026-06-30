@@ -118,6 +118,10 @@ const FORBIDDEN_PATTERNS = Object.freeze([
     regex: /\b(may|can|should)\s+(?:directly\s+)?(?:call\s+)?`?gh pr merge`?\b/i,
   },
   {
+    id: 'cloud-workflow-fallback-direct-merge',
+    regex: /(cloud|github-hosted|trusted|authorized-pr-integration)[^\n]{0,120}(workflow|lane)[^\n]{0,120}(fails?|403|cannot read branch protection)[^\n]{0,120}(direct merge|`?gh pr merge`?)/i,
+  },
+  {
     id: 'activation-required-context-operating-mode',
     regex: /after activation[^\n]{0,120}required contexts? (?:are|is) exactly[^\n]{0,120}integration-authorized/i,
   },

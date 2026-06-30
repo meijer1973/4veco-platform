@@ -281,12 +281,21 @@ authority scope, or effective payload checks invalidate the reviewed payload
 authorization.
 
 Agents must not call `gh pr merge` directly for normal PRs. Normal merges must
-go through the authorized single-PR or bundle lane. The
-`integration-authorized` context must only be minted as optional audit evidence
-by trusted `main` workflow code or the equivalent owner-authenticated local lane
-running trusted `main` code. The retired activated required-context mode must
-not be retried without explicit owner decision and concrete new GitHub behavior
-evidence or a different implementation mechanism.
+go through the authorized single-PR or bundle lane. For single-PR work, the
+owner-authenticated local serialized lane is the default merge path:
+`npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <PR> --authorization-comment-id <COMMENT_ID>`.
+The GitHub-hosted workflow is optional only when its `github.token` can read
+branch protection. If it returns `phase: branch_protection_read_forbidden`,
+that is an expected permission boundary and the implementation agent should use
+the owner-authenticated local lane, not request direct-merge permission. The
+local lane must still run from current `main`/current policy code and validate
+branch protection, payload lineage, readiness, CI, review state, merge
+eligibility, and post-merge CI. The `integration-authorized` context must only
+be minted as optional audit evidence by trusted `main` workflow code or the
+equivalent owner-authenticated local lane running trusted `main` code. The
+retired activated required-context mode must not be retried without explicit
+owner decision and concrete new GitHub behavior evidence or a different
+implementation mechanism.
 
 ## Live decision recording
 
