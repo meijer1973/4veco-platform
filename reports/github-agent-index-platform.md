@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-29T14:05:42.048Z
+Generated: 2026-06-29T15:07:45.069Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/integration-pilot-closure-cleanup-1-20260629`
-Source commit: `6067a8463ab18a517b3f8d50c4bacbeb8b0700ec`
-Files indexed: 6651
+Source branch: `codex/workflow-split-paragraph-a-b-1-20260629`
+Source commit: `3e2b9b37a358412440dd43bcb20d7b1fa09562f5`
+Files indexed: 6668
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 631
+Count: 645
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -747,7 +747,21 @@ Count: 631
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
 - build-scripts/templates/template-paragraph-plan.md
+- build-scripts/templates/textbook-to-companion-handoff.md
 - build-scripts/tools/build-skill-tree-viewer.js
+- build-scripts/workflows/check-paragraph-lane-scope.js
+- build-scripts/workflows/check-paragraph-lane-scope.test.js
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-companion-block-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-partA-block-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-textbook-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/generated-tail-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/mixed-with-exception.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/shared-platform-with-declared-scope.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-companion-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-quality-ref-companion-block-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-quality-ref-partA-block-only.json
 - scripts/audit-pptx-accessibility.py
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
@@ -804,7 +818,7 @@ Count: 25
 
 ## validators
 
-Count: 637
+Count: 639
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1153,6 +1167,8 @@ Count: 637
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
+- build-scripts/workflows/check-paragraph-lane-scope.js
+- build-scripts/workflows/check-paragraph-lane-scope.test.js
 - docs/inspection-standards/evidence-pack-validation-and-dispatch.md
 - docs/inspection-standards/report-only-validator-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
@@ -2311,7 +2327,7 @@ Count: 860
 
 ## reports
 
-Count: 4291
+Count: 4292
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5338,6 +5354,7 @@ Count: 4291
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-COMPAT-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-TRIGGER-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round2.md
+- reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round3.md
 - reports/sprints/L1.7B-Q2-answer-model.md
 - reports/sprints/L1.7B-Q2-baseline.md
 - reports/sprints/L1.7B-Q2-COPY-baseline.md
@@ -6625,7 +6642,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 686
+Count: 688
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7223,6 +7240,8 @@ Count: 686
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/textbook-paragraph-lane.md
+- docs/workflows/web-companion-paragraph-lane.md
 - knowledge/113-excellent-exit-ticket-v3-package.zip
 - knowledge/course_blueprint_v4.md
 - knowledge/Exercise schema and quality/ChatGPT Image Apr 28, 2026, 10_35_18 PM.png

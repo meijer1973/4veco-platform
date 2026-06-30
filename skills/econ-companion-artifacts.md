@@ -22,6 +22,12 @@ This skill encodes the platform-wide standard. Companion-specific builders (`eco
 
 The matching review agent is `agents/econ-companion-visual-review.md`. Every companion delivery passes through that agent (or its review heuristics simulated by the author) before it is marked done.
 
+**Lane boundary:** this is the Part B companion lane. Start from an approved
+`X.Y.Z-textbook-handoff.md` or name the blocker. Do not rewrite Part A textbook
+markdown, core textbook assets, `build_pdf.py`, or `X.Y.Z-review.md` from this
+lane. If the textbook source is wrong, stop and open a Part A repair follow-up;
+do not hide the repair inside companion generation.
+
 ## When to use this skill
 
 Trigger when:
@@ -61,13 +67,14 @@ If any of these are unclear, the artifact is not finished.
 Before writing or generating the artifact, inspect the relevant sources:
 
 1. **Repository maps and access rules** — `AGENTS.md`, `BUILD-PARAGRAPH.md`, `BUILD-CHAPTER.md`, the lessen tree layout.
-2. **Paragraph plan** — `_paragraph-plan.md` for the target paragraph.
-3. **Paragraph markdown/PDF source** — the textbook content the companion supports.
-4. **Course blueprint and target exercise** — what skill the companion serves.
-5. **Canonical unit/procedure registry** — `references/machine/micro-teaching-units.json`, terminology registry.
-6. **Existing visual assets and required surface variants** — `_assets/` with `_doc`, `_slide`, `_summary`, `_web_light`, `_web_dark` variants.
-7. **Paragraph index and companion route structure** — `index.html` routing for this paragraph.
-8. **Relevant platform generator/template** — the builder script (`b1-XYZ-<companion>.js`), converter (`convert_<companion>.py`), shared engine (`engines/`, `build-scripts/lib/`).
+2. **Part A handoff** — `X.Y.Z-textbook-handoff.md`; it must say READY_FOR_COMPANION or name a blocker.
+3. **Paragraph plan** — `_paragraph-plan.md` for the target paragraph. Create or update it from the handoff when companion work starts.
+4. **Paragraph markdown/PDF source** — the textbook content the companion supports.
+5. **Course blueprint and target exercise** — what skill the companion serves.
+6. **Canonical unit/procedure registry** — `references/machine/micro-teaching-units.json`, terminology registry.
+7. **Existing visual assets and required surface variants** — `_assets/` with `_doc`, `_slide`, `_summary`, `_web_light`, `_web_dark` variants.
+8. **Paragraph index and companion route structure** — `index.html` routing for this paragraph.
+9. **Relevant platform generator/template** — the builder script (`b1-XYZ-<companion>.js`), converter (`convert_<companion>.py`), shared engine (`engines/`, `build-scripts/lib/`).
 
 For an official CvTE or CvTE-derived target exercise, also inspect the
 `Exam-target route trace` section in `_paragraph-plan.md` before creating any

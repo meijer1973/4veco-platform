@@ -8,6 +8,12 @@ pipeline: "Part A producer"
 
 Builds one complete textbook paragraph: theory + worked example + exercises + graphs → markdown + assets + PDF. This skill handles the textbook-specific format and writing rules.
 
+**Lane boundary:** this is the Part A textbook lane. It may not create or edit
+companion route files (`index.html`, companion HTML/PPTX, shared game data,
+`_paragraph-plan.md`, or `X.Y.Z-companion-visual-review.md`). Close the lane by
+producing `X.Y.Z-textbook-handoff.md` for the companion team. Publisher-print
+PDFs are produced only when that profile is explicitly requested.
+
 **Companion skills (always read first):**
 - `econ-didactiek` → pedagogical decision rules (scaffolding, dual coding, Bloom's, misconceptions) — backed by `references/authored/didactiek-principes.md`
 - `econ-exercise-builder` → generates `exercises.md` and `answers.md` (run first)
@@ -54,6 +60,9 @@ Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfacto
 | `_assets/*.svg` | All graphs and diagrams as SVG |
 | `_assets/*.png` | All graphs and diagrams as PNG (rasterised from SVG) |
 | `build_pdf.py` | PDF build script (paragraph-specific CSS + paths) |
+| `X.Y.Z-review.md` | Independent Part A review |
+| `X.Y.Z-quality-ref.yaml` | Part A `partA:` quality-ref block |
+| `X.Y.Z-textbook-handoff.md` | Boundary handoff for the Part B companion lane |
 
 ### 1.3 File naming convention
 

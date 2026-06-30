@@ -20,6 +20,7 @@
     "capture:presentation-v2-pptx-derivatives": "node build-scripts/sprints/capture-presentation-v2-pptx-derivative-proof.js",
     "check:book": "node scripts/check-book.js",
     "check:scope-language": "node build-scripts/sprints/check-scope-language.js --active",
+    "check:paragraph-lane-scope": "node build-scripts/workflows/check-paragraph-lane-scope.js",
     "check:golden-graph-advisory-113": "node build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
     "check:scale-proof-3p-product-path": "node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
     "check:gate-ci-proof": "node build-scripts/sprints/check-gate-ci-proof.js",

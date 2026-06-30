@@ -408,6 +408,45 @@ function countHardFails(content) {
   return (content.match(/^###\s*HF-\d+\b/gm) || []).length;
 }
 
+function extractTopLevelBlock(yaml, name) {
+  const lines = yaml.split('\n');
+  const startRe = new RegExp(`^${name}:\\s*$`);
+  const topKeyRe = /^[A-Za-z_][A-Za-z0-9_]*:\s*.*$/;
+  const startIdx = lines.findIndex(l => startRe.test(l));
+  if (startIdx < 0) return null;
+  let endIdx = lines.length;
+  for (let i = startIdx + 1; i < lines.length; i++) {
+    if (topKeyRe.test(lines[i])) { endIdx = i; break; }
+  }
+  return lines.slice(startIdx + 1, endIdx).join('\n');
+}
+
+function readYamlScalar(block, key) {
+  if (!block) return null;
+  const safeKey = key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = block.match(new RegExp(`^\\s*${safeKey}:\\s*(.*?)\\s*$`, 'm'));
+  if (!match) return null;
+  let value = match[1].trim().replace(/\s+#.*$/, '').trim();
+  if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+    value = value.slice(1, -1);
+  }
+  return value.trim();
+}
+
+function readYamlNumber(block, key) {
+  const value = readYamlScalar(block, key);
+  if (value === null || !/^\d+$/.test(value)) return null;
+  return Number(value);
+}
+
+function normalizeReviewVerdict(value) {
+  const normalized = String(value || '').trim().toUpperCase();
+  if (normalized === 'PASS') return 'PASS';
+  if (normalized === 'PASS WITH FLAGS') return 'PASS WITH FLAGS';
+  if (normalized === 'FAIL') return 'FAIL';
+  return null;
+}
+
 /**
  * F2 / L1.5V: gate on the Part A textbook review file specifically.
  * Uses an EXACT filename match (no flaky endsWith). The verdict is parsed
@@ -445,12 +484,19 @@ function validatePartARecord() {
 function validatePartBRecord() {
   console.log('\n-- Part B QC artifacts --');
   const reviewFile = `${parNr}-companion-visual-review.md`;
+  const reviewRecord = {
+    reviewFile,
+    verdict: null,
+    hardFailsOpen: null,
+  };
   if (!hasFile(reviewFile)) {
     fail(`MISSING companion visual review (${reviewFile}) — run agents/econ-companion-visual-review.md`);
   } else {
     const content = fs.readFileSync(path.join(PAR, reviewFile), 'utf8');
     const verdict = parseReviewVerdict(content);
     const hfCount = countHardFails(content);
+    reviewRecord.verdict = verdict;
+    reviewRecord.hardFailsOpen = hfCount;
     if (verdict === 'FAIL') {
       fail(`Companion review verdict is FAIL (${hfCount} hard-fail section(s)): ${reviewFile}`);
     } else if (verdict === null) {
@@ -467,6 +513,55 @@ function validatePartBRecord() {
     } else {
       pass(`Companion review: ${reviewFile} (verdict ${verdict})`);
     }
+  }
+  validateCompanionQualityRef(reviewRecord);
+}
+
+function validateCompanionQualityRef(reviewRecord) {
+  console.log('\n-- Part B quality-ref companion block --');
+  const qualityRefName = `${parNr}-quality-ref.yaml`;
+  if (!hasFile(qualityRefName)) {
+    fail(`MISSING quality_ref (${qualityRefName}) for companion review record`);
+    return;
+  }
+
+  const beforeErrors = errors;
+  const yaml = fs.readFileSync(path.join(PAR, qualityRefName), 'utf8');
+  const companion = extractTopLevelBlock(yaml, 'companion');
+  if (!companion) {
+    fail(`quality_ref missing companion: block (${qualityRefName})`);
+    return;
+  }
+
+  const expectedReviewFile = `${parNr}-companion-visual-review.md`;
+  const reviewFileValue = readYamlScalar(companion, 'review_file');
+  if (!reviewFileValue) {
+    fail(`quality_ref companion.review_file missing (${qualityRefName})`);
+  } else if (reviewFileValue !== expectedReviewFile) {
+    fail(`quality_ref companion.review_file is ${reviewFileValue}, expected ${expectedReviewFile}`);
+  }
+
+  const reviewVerdictValue = normalizeReviewVerdict(readYamlScalar(companion, 'review_verdict'));
+  if (!reviewVerdictValue) {
+    fail(`quality_ref companion.review_verdict missing or invalid (${qualityRefName})`);
+  } else if (reviewRecord.verdict && reviewVerdictValue !== reviewRecord.verdict) {
+    fail(`quality_ref companion.review_verdict is ${reviewVerdictValue}, review file says ${reviewRecord.verdict}`);
+  }
+
+  const hardFailsValue = readYamlNumber(companion, 'hard_fails_open');
+  if (hardFailsValue === null) {
+    fail(`quality_ref companion.hard_fails_open missing or invalid (${qualityRefName})`);
+  } else {
+    if (reviewRecord.hardFailsOpen !== null && hardFailsValue !== reviewRecord.hardFailsOpen) {
+      fail(`quality_ref companion.hard_fails_open is ${hardFailsValue}, review file has ${reviewRecord.hardFailsOpen}`);
+    }
+    if ((reviewVerdictValue === 'PASS' || reviewVerdictValue === 'PASS WITH FLAGS') && hardFailsValue !== 0) {
+      fail(`quality_ref companion.review_verdict is ${reviewVerdictValue} but hard_fails_open is ${hardFailsValue}`);
+    }
+  }
+
+  if (errors === beforeErrors) {
+    pass(`Quality ref companion block matches ${expectedReviewFile}`);
   }
 }
 
@@ -501,7 +596,7 @@ function validateQualityRef() {
     }
     return lines.slice(startIdx + 1, endIdx).join('\n');
   }
-  const partA = blockOf('partA') || yaml;
+  const partA = extractTopLevelBlock(yaml, 'partA') || yaml;
 
   const missingMatch = partA.match(/missing:\s*\[([^\]]*)\]/);
   const hasMissing = missingMatch && missingMatch[1].trim().length > 0;
@@ -830,9 +925,9 @@ console.log(`Profile: ${profile}`);
 if (mode === 'part-a' || mode === 'complete') validatePartA();
 if (mode === 'part-b' || mode === 'complete') validatePartB();
 // L1.5V Bucket F2: companion-review gate is now mode-aware. `--mode part-b`
-// and `--mode complete` require X.Y.Z-companion-visual-review.md to exist
-// AND have a non-FAIL verdict. The Part A review file is checked inside
-// validatePartA() via validatePartARecord().
+// and `--mode complete` require X.Y.Z-companion-visual-review.md to exist,
+// have a non-FAIL verdict, and match the companion block in quality-ref.yaml.
+// The Part A review file is checked inside validatePartA() via validatePartARecord().
 if (mode === 'part-b' || mode === 'complete') validatePartBRecord();
 if (mode === 'complete') validateB02ProcedureParity();
 if (mode === 'complete') validateDeclaredProcedureStepCounts();
