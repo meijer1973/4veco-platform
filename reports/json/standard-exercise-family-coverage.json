@@ -17,8 +17,8 @@
     "build-scripts/content/book-1/b1-112-graphical-data.js",
     "engines/exit-ticket-engine.js",
     "engines/exit-ticket-ui.js",
-    "source-data/book-1/exit-ticket/1.1.1.json",
-    "source-data/book-1/exit-ticket/1.1.2.json",
+    "source-data/book-1/exit-ticket/1.1.1-korte-check.json",
+    "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
     "source-data/book-1/reasoning/1.1.1.csv",
     "source-data/book-1/reasoning/1.1.2.csv",
     "build-scripts/platform/build-reasoning-questions.js",
@@ -106,8 +106,8 @@
       "coverage_decision": "covered_for_1_1_2_candidate_with_structured_short_response_alignment_flag",
       "follow_up_owner": "CHECK-SHORT-EXIT-2",
       "evidence_paths": [
-        "source-data/book-1/exit-ticket/1.1.1.json",
-        "source-data/book-1/exit-ticket/1.1.2.json",
+        "source-data/book-1/exit-ticket/1.1.1-korte-check.json",
+        "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
         "engines/exit-ticket-engine.js",
         "engines/exit-ticket-ui.js"
       ]
@@ -154,7 +154,7 @@
       "follow_up_owner": "CHECK-SHORT-EXIT-2",
       "evidence_paths": [
         "engines/task-shell-engine.js",
-        "source-data/book-1/exit-ticket/1.1.1.json"
+        "source-data/book-1/exit-ticket/1.1.1-korte-check.json"
       ]
     },
     {
@@ -192,7 +192,7 @@
         "engines/task-shell-engine.js",
         "engines/skilltree/base-elements.js",
         "build-scripts/content/book-1/b1-113-graphical-data.js",
-        "source-data/book-1/exit-ticket/1.1.2.json"
+        "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json"
       ]
     },
     {
@@ -265,7 +265,7 @@
       "evidence_paths": [
         "engines/task-shell-engine.js",
         "engines/task-shell-ui.js",
-        "source-data/book-1/exit-ticket/1.1.2.json"
+        "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json"
       ]
     },
     {

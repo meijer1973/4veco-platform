@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXERCISE-WORKFLOW-CHECKER-CLEANUP-1",
+  "name": "Exercise Workflow Checker Cleanup",
+  "status": "completed",
+  "completed_on": "2026-06-29",
+  "plan": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-plan.md",
+  "baseline": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-baseline.md",
+  "result": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md",
+  "diff_summary": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "engine_behavior_changed": false,
+  "product_authority_changed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-assignment.md",
+    "round1": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-round1.md",
+    "corrections": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-corrections.md",
+    "round2": "reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "findings": [
+      {
+        "id": "split-source-model-proved",
+        "description": "Live validators and the new stale-path sweep prove current suffixed short-check and exit-ticket files instead of relying on legacy unsuffixed paths.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/sprints/check-exercise-workflow-checker-cleanup.js",
+          "build-scripts/sprints/check-standard-exercises1-coverage.js",
+          "build-scripts/sprints/check-task-shell-ux2.js"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure after lead review round 2 and closure validators.",
+        "proof_required_to_close": "Successful command-log entries for stale-path sweep and focused checker validators."
+      },
+      {
+        "id": "active-evidence-current-paths",
+        "description": "Active report JSON and L1.7B-Q2 review evidence cite existing current split paths, and the gate checker verifies path existence.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/json/standard-exercise-family-coverage.json",
+          "reports/json/check-short-exit-inventory.json",
+          "build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure after lead review round 2 and closure validators.",
+        "proof_required_to_close": "Successful command-log entries for report JSON validation and gate-packet checker."
+      },
+      {
+        "id": "forbidden-surfaces-untouched",
+        "description": "The sprint does not change source-data, generated lesson output, engines, protected references, target registry, candidate storage, product authority, or student/product use.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/sprints/check-exercise-workflow-checker-cleanup.js",
+          "git diff --check",
+          "git -C ../4veco-lessen diff --check"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure after lead review round 2 and closure validators.",
+        "proof_required_to_close": "Successful command-log entries for cleanup sweep and lesson diff hygiene."
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-standard-exercises1-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-shell-ux2.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-l1-7b-q2-implementation.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-l1-7b-q2-copy.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-l1-7b-q2-d31-struct.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-check-short-exit1-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-math-ux2-route-output.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-reason-ux2-route-output.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}

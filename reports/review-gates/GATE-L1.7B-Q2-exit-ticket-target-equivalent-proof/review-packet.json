@@ -86,7 +86,7 @@
     "reports/sprints/L1.7B-Q2-live-output-evidence.json",
     "reports/sprints/L1.7B-Q2-screenshot-manifest.md",
     "reports/sprints/L1.7B-Q2-lead-review-round2.md",
-    "source-data/book-1/exit-ticket/1.1.2.json",
+    "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
     "build-scripts/sprints/check-l1-7b-q2-implementation.js",
     "build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js",
     "../4veco-lessen/specifications/product-end-state.md",

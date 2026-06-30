@@ -1,0 +1,796 @@
+# Sprint EXERCISE-WORKFLOW-CHECKER-CLEANUP-1: Command Log
+
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-plan.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:34.722Z`
+- finished_at: `2026-06-29T14:02:34.833Z`
+- duration_ms: `111`
+- exit_code: `0`
+- stdout_sha256: `9b628068ef940f49dd3462e242e7356ee347884560fc2d7529a19b8c4e693a6a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:34.895Z`
+- finished_at: `2026-06-29T14:02:35.094Z`
+- duration_ms: `199`
+- exit_code: `0`
+- stdout_sha256: `4076913083d055e5da697cdfac73d7bd08be1789807e7ea1897ee041276de87c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:35.126Z`
+- finished_at: `2026-06-29T14:02:35.261Z`
+- duration_ms: `135`
+- exit_code: `0`
+- stdout_sha256: `4a87fb5514231a809d0203fc187262bc24eca72bbd63a286c6c796e7b1e8c72b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 stale-path sweep
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-standard-exercises1-coverage.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:35.317Z`
+- finished_at: `2026-06-29T14:02:35.451Z`
+- duration_ms: `134`
+- exit_code: `0`
+- stdout_sha256: `1a253d818b5a64f36c150f4960be0ed46c73608d04089f82281714c5c83ac63f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK STANDARD-EXERCISES-1 coverage audit
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-task-shell-ux2.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:35.490Z`
+- finished_at: `2026-06-29T14:02:35.716Z`
+- duration_ms: `226`
+- exit_code: `0`
+- stdout_sha256: `83cf8bba0f79bc584255095939fd740de73e20e538e43d753fb55139e681820c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+TASK-SHELL-UX-2 check passed
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-l1-7b-q2-implementation.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:35.766Z`
+- finished_at: `2026-06-29T14:02:35.844Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `72a03bfd2d95b1512d358785ee796e19859f95afaa971891447d948a5db30099`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK L1.7B-Q2 implementation
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-l1-7b-q2-copy.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:35.888Z`
+- finished_at: `2026-06-29T14:02:35.969Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `7924d78c8f068c2bde7cf42c5b279be28d94ed57fd3d4da9f0d31ed4ac806de8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK L1.7B-Q2-COPY
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-l1-7b-q2-d31-struct.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:36.015Z`
+- finished_at: `2026-06-29T14:02:36.146Z`
+- duration_ms: `131`
+- exit_code: `0`
+- stdout_sha256: `cea55f169bea63aac07737b9b8655b24c4957e1e105a42086215aeaf60b81629`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK L1.7B-Q2-D31-STRUCT
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-check-short-exit1-inventory.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:36.208Z`
+- finished_at: `2026-06-29T14:02:36.393Z`
+- duration_ms: `185`
+- exit_code: `0`
+- stdout_sha256: `67698434bf0ea34450f3e967189e778a2cbbb2f3232565f388dfd281bfceb1cd`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+CHECK-SHORT-EXIT-1 inventory OK
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-math-ux2-route-output.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:36.440Z`
+- finished_at: `2026-06-29T14:02:36.538Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `8def8efa6a50dd65ab1be8e43fc091c07e8a256d9fcec72361342f145d27ca87`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+MATH-UX-2 route output OK (8 A38/A39 task-shell steps; 4 required families)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-reason-ux2-route-output.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:36.587Z`
+- finished_at: `2026-06-29T14:02:36.685Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `8d3e9bfa106b8b6bff16a020149be0e6ac00f831a00cea9f16d3a324234e7ef1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+REASON-UX-2 route output OK (3 reasoning pages; six modes; structured_reasoning task shell)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:36.726Z`
+- finished_at: `2026-06-29T14:02:36.797Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `82bd637c9f44e7ae1daa07956e58d4d29e3f9902d85998118f3bca52f18057c3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+GATE-L1.7B-Q2 review packet OK
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:36.851Z`
+- finished_at: `2026-06-29T14:02:36.925Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:36.990Z`
+- finished_at: `2026-06-29T14:02:37.095Z`
+- duration_ms: `105`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:37.155Z`
+- finished_at: `2026-06-29T14:02:37.242Z`
+- duration_ms: `87`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:37.299Z`
+- finished_at: `2026-06-29T14:02:37.682Z`
+- duration_ms: `383`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:02:37.730Z`
+- finished_at: `2026-06-29T14:04:41.228Z`
+- duration_ms: `123498`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `6c66b170a60feb5ee3efe4bb690fef534b9456d4abfecf8ba02eed635e088f42`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 87 passed, 87 of 93 total
+Tests:       8 skipped, 1159 passed, 1167 total
+Snapshots:   0 total
+Time:        122.58 s, estimated 152 s
+Ran all test suites.
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:04:41.581Z`
+- finished_at: `2026-06-29T14:04:41.673Z`
+- duration_ms: `92`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:04:41.724Z`
+- finished_at: `2026-06-29T14:04:41.777Z`
+- duration_ms: `53`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:04:41.821Z`
+- finished_at: `2026-06-29T14:04:41.887Z`
+- duration_ms: `66`
+- exit_code: `0`
+- stdout_sha256: `129a2ca48fd28456856587cff471b6b94c3344b6c2138cf91178ad6bb3b49b63`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 (19 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:04:41.933Z`
+- finished_at: `2026-06-29T14:04:42.009Z`
+- duration_ms: `76`
+- exit_code: `0`
+- stdout_sha256: `61ce9fe58cc7b367bfe94b04fa7db3f832ad4c03b3fdb295e29f20d50154cecb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:04:42.077Z`
+- finished_at: `2026-06-29T14:04:42.220Z`
+- duration_ms: `143`
+- exit_code: `0`
+- stdout_sha256: `4dc3fcb1bb0629a7121a01c7843985cb29f181e75675aa3df0117f28d69e8fae`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:04:42.316Z`
+- finished_at: `2026-06-29T14:04:42.796Z`
+- duration_ms: `480`
+- exit_code: `0`
+- stdout_sha256: `94e8bd49af81bbce86c257f50a9359e1625ae27ffd2bb334e7690a9b91e074fa`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:01.399Z`
+- finished_at: `2026-06-29T14:05:01.464Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `78b2d37784f41057edf164654b0703a1c35e0634e5be5fa4de27d0c168145cec`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 (23 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:01.520Z`
+- finished_at: `2026-06-29T14:05:01.592Z`
+- duration_ms: `72`
+- exit_code: `0`
+- stdout_sha256: `61ce9fe58cc7b367bfe94b04fa7db3f832ad4c03b3fdb295e29f20d50154cecb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:01.645Z`
+- finished_at: `2026-06-29T14:05:01.715Z`
+- duration_ms: `70`
+- exit_code: `0`
+- stdout_sha256: `4dc3fcb1bb0629a7121a01c7843985cb29f181e75675aa3df0117f28d69e8fae`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:01.766Z`
+- finished_at: `2026-06-29T14:05:02.226Z`
+- duration_ms: `460`
+- exit_code: `0`
+- stdout_sha256: `94e8bd49af81bbce86c257f50a9359e1625ae27ffd2bb334e7690a9b91e074fa`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:02.269Z`
+- finished_at: `2026-06-29T14:05:02.340Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:02.385Z`
+- finished_at: `2026-06-29T14:05:02.437Z`
+- duration_ms: `52`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:19.018Z`
+- finished_at: `2026-06-29T14:05:19.089Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `d7e8880bbda24422bd177478dfd455e96ee655d3ff4ea13cccffd5f1344bdc23`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 (29 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:19.147Z`
+- finished_at: `2026-06-29T14:05:19.219Z`
+- duration_ms: `72`
+- exit_code: `0`
+- stdout_sha256: `4dc3fcb1bb0629a7121a01c7843985cb29f181e75675aa3df0117f28d69e8fae`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:19.266Z`
+- finished_at: `2026-06-29T14:05:19.764Z`
+- duration_ms: `498`
+- exit_code: `0`
+- stdout_sha256: `94e8bd49af81bbce86c257f50a9359e1625ae27ffd2bb334e7690a9b91e074fa`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-WORKFLOW-CHECKER-CLEANUP-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:19.823Z`
+- finished_at: `2026-06-29T14:05:19.921Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-06-29T14:05:19.973Z`
+- finished_at: `2026-06-29T14:05:20.035Z`
+- duration_ms: `62`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
