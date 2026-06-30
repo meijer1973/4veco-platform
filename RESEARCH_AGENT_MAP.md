@@ -112,6 +112,7 @@ Human-readable:
 - `docs/review/pr-readiness-routing-policy.md`
 - `docs/review/pr-integration-lane-policy.md`
 - `docs/review/human-payload-authorization.schema.json`
+- `build-scripts/review-gates/check-integration-lane-capability.js`
 - `.github/workflows/cross-repo-bundle-compatibility.yml`
 - `.github/workflows/authorized-bundle-integration.yml`
 - `build-scripts/review-gates/cross-repo-bundle-compatibility.js`
@@ -243,6 +244,7 @@ Use these anchors before free-form browsing.
   "pr_integration_lane_policy": "docs/review/pr-integration-lane-policy.md",
   "human_payload_authorization_schema": "docs/review/human-payload-authorization.schema.json",
   "branch_protection_checker": "build-scripts/ci/check-branch-protection.js",
+  "integration_lane_capability_checker": "build-scripts/review-gates/check-integration-lane-capability.js",
   "activated_branch_protection_script": "package.json#scripts.check:branch-protection:activated",
   "authorized_pr_integration_workflow": ".github/workflows/authorized-pr-integration.yml",
   "authorized_pr_integration_runner": "build-scripts/review-gates/integrate-authorized-pr.js",
@@ -285,6 +287,7 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/pr-integration-lane-policy.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/.github/workflows/authorized-pr-integration.yml
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lane-capability.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-pr.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/.github/workflows/cross-repo-bundle-compatibility.yml
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/.github/workflows/authorized-bundle-integration.yml
@@ -407,6 +410,7 @@ index_anchors (full URLs):
     "build-scripts/review-gates/check-human-payload-authorization.js",
     "build-scripts/review-gates/check-human-bundle-authorization.js",
     "build-scripts/review-gates/check-integration-lineage.js",
+    "build-scripts/review-gates/check-integration-lane-capability.js",
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/cross-repo-bundle-compatibility.js",
     "build-scripts/review-gates/apply-bundle-readiness-decision.js",
@@ -516,6 +520,7 @@ pr_governance_paths (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-payload-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-bundle-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lineage.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lane-capability.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-pr.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/cross-repo-bundle-compatibility.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-bundle-readiness-decision.js
@@ -608,7 +613,7 @@ Agents MUST follow this sequence:
    - reference task -> `RESEARCH_AGENT_MAP_REFERENCES.md` and `RESEARCH_AGENT_PROMPT_REFERENCES.md`
    - multi-agent review orchestration -> `agents/lead-reviewer-agent.md` plus the relevant specialist agents and evidence surfaces
    - draft-to-review PR lifecycle routing -> `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, and the exact remote PR evidence
-   - human-authorized PR integration -> `docs/review/pr-integration-lane-policy.md`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, and `build-scripts/review-gates/integrate-authorized-pr.js`
+   - human-authorized PR integration -> `docs/review/pr-integration-lane-policy.md`, `build-scripts/review-gates/check-integration-lane-capability.js`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, and `build-scripts/review-gates/integrate-authorized-pr.js`; the owner-authenticated local lane is the default path, and a cloud `branch_protection_read_forbidden` result means use that local lane rather than a raw merge
    - activated integration-lane branch protection -> `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, and `package.json` script `check:branch-protection:activated`
    - paired platform/lesson bundle readiness and integration -> `docs/review/pr-readiness-routing-policy.md`, `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/apply-bundle-readiness-decision.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, and `build-scripts/review-gates/integrate-authorized-bundle.js`
    - testing or validation evidence -> `agents/testing-agent.md`, `package.json`, and the relevant test/validator scripts
@@ -727,6 +732,7 @@ Rules:
     "build-scripts/review-gates/check-human-payload-authorization.js",
     "build-scripts/review-gates/check-human-bundle-authorization.js",
     "build-scripts/review-gates/check-integration-lineage.js",
+    "build-scripts/review-gates/check-integration-lane-capability.js",
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/cross-repo-bundle-compatibility.js",
     "build-scripts/review-gates/apply-bundle-readiness-decision.js",
