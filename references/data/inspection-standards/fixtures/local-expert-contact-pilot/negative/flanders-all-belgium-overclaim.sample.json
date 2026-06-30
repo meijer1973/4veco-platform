@@ -1,0 +1,77 @@
+{
+  "intake_id": "england-simulated-intake",
+  "jurisdiction_id": "flanders",
+  "request_packet_id": "flanders-local-expert-review-request-packet",
+  "consent_confirmed": false,
+  "response_received": false,
+  "responses": [
+    {
+      "reviewer_role": "SIMULATED Flanders role-only reviewer; not a real expert response",
+      "jurisdiction": "flanders",
+      "source_id": "be-flanders-onderwijsdoelen-so3-doorstroom",
+      "source_state_seen": "requires_local_expert_interpretation",
+      "question_id": "flanders-q-onderwijsdoelen-route",
+      "answer_type": "uncertainty_flag",
+      "interpretation": "This Flanders response applies to all Belgium.",
+      "confidence": "cannot_answer",
+      "uncertainty": "Simulation only; no expert was contacted and no local judgment is supplied.",
+      "cited_source": "be-flanders-onderwijsdoelen-so3-doorstroom",
+      "forbidden_claims_disclaimed": true,
+      "does_not_authorize": [
+        "local expert contact in this sprint",
+        "local expert substitution for official authority",
+        "localized output",
+        "country editions",
+        "student-facing output",
+        "teacher/school-facing output",
+        "public output",
+        "evidence packs",
+        "product-route adoption",
+        "Scale Gate",
+        "diagnostics/mastery/PV",
+        "student/product use",
+        "personal-data processing",
+        "legal advice, compliance, approval, accreditation, OP0, PTA, summative validity, inspection readiness, support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or school-owned evidence claims"
+      ],
+      "proof_required_to_use": "A real owner-authorized response intake record that passes the strict schema and later human review."
+    }
+  ],
+  "validation_status": "accepted_simulation",
+  "rejected_items": [],
+  "does_not_authorize": [
+    "contact dispatch before exact-head owner authorization",
+    "named expert selection",
+    "personal-data processing",
+    "student data or support-record processing",
+    "school-specific evidence collection",
+    "local expert substitution for official authority",
+    "legal advice or legal sufficiency",
+    "compliance proof",
+    "approval, accreditation, OP0, PTA, summative validity, or inspection readiness",
+    "support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or individual adjustment sufficiency",
+    "localized output",
+    "country editions",
+    "student-facing output",
+    "teacher/school-facing output",
+    "public output",
+    "evidence packs",
+    "product-route adoption",
+    "Scale Gate",
+    "diagnostics/mastery/PV",
+    "student/product use",
+    "school-owned evidence claims"
+  ],
+  "proof_required_to_use": "Owner-authorized contact, explicit consent confirmation, strict schema PASS, specialist review, and human review.",
+  "fixture_name": "flanders-all-belgium-overclaim.sample.json",
+  "valid": false,
+  "expected_stop_code": "STOP_ALL_BELGIUM_OVERCLAIM",
+  "finding_classification": [
+    {
+      "finding": "Negative fixture flanders-all-belgium-overclaim.sample.json must be refused with STOP_ALL_BELGIUM_OVERCLAIM.",
+      "classification": "core_spec_failure",
+      "blocks": "Use of this intake/contact record as valid local expert evidence.",
+      "does_not_block": "Positive contact-stage packets and simulated intake records.",
+      "proof_required_to_close": "Checker must reject this fixture."
+    }
+  ]
+}

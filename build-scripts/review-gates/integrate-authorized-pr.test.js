@@ -2,12 +2,15 @@ const {
   enforceLineagePolicy,
   fetchBranchProtectionSummary,
   integrate,
+  branchProtectionReadForbiddenSummary,
   readinessCommentFromComments,
   readinessMarkerFor,
   runIntegrationAttempts,
   setCommitStatus,
   summarizeIntegrationBranchProtection,
   supplementalFromReadinessDecision,
+  isBranchProtectionReadForbiddenSummary,
+  localLaneHandoffCommand,
   validatePrState,
   waitForMainCi,
 } = require('./integrate-authorized-pr');
@@ -514,6 +517,22 @@ describe('authorized PR integration runner', () => {
     ]);
   });
 
+  test('live branch-protection fetch recognizes workflow-token HTTP 403', () => {
+    const runner = jest.fn(() => {
+      throw new Error('gh api repos/meijer1973/4veco-platform/branches/main/protection failed: Resource not accessible by integration (HTTP 403)');
+    });
+
+    const summary = fetchBranchProtectionSummary('meijer1973/4veco-platform', {}, runner);
+
+    expect(summary).toMatchObject({
+      ok: false,
+      phase: 'branch_protection_read_forbidden',
+      recommended_next_path: 'owner_authenticated_local_lane',
+      failures: ['branch_protection_read_forbidden'],
+    });
+    expect(isBranchProtectionReadForbiddenSummary(summary)).toBe(true);
+  });
+
   test('legacy activated branch-protection shape is only accepted by explicit checker request', () => {
     const summary = summarizeIntegrationBranchProtection(
       branchProtectionWithContexts(['validate-platform', 'integration-authorized']),
@@ -539,6 +558,35 @@ describe('authorized PR integration runner', () => {
 
     expect(result).toMatchObject({ ok: false, phase: 'branch_protection' });
     expect(result.branch_protection.failures).toContain('unexpected required status context: integration-authorized');
+  });
+
+  test('runner returns a local-lane handoff when branch-protection read is forbidden', () => {
+    const forbidden = branchProtectionReadForbiddenSummary(
+      'meijer1973/4veco-platform',
+      'main',
+      new Error('Resource not accessible by integration (HTTP 403)')
+    );
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        fetchBranchProtectionSummary: jest.fn(() => forbidden),
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'branch_protection_read_forbidden',
+      checkpoint: 'initial_branch_protection',
+      recommended_next_path: 'owner_authenticated_local_lane',
+      failures: ['branch_protection_read_forbidden'],
+    });
+    expect(result.handoff_command).toBe(
+      localLaneHandoffCommand('meijer1973/4veco-platform', 136, 12345)
+    );
+    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'failure']);
+    expect(calls.merges).toEqual([]);
+    expect(deps.mergePr).not.toHaveBeenCalled();
   });
 
   test('runner rejects forced retired activated mode before scheduling auto-merge', () => {
@@ -573,6 +621,27 @@ describe('authorized PR integration runner', () => {
     ]);
     expect(calls.autoMerges).toEqual([]);
     expect(deps.scheduleAutoMergePr).not.toHaveBeenCalled();
+  });
+
+  test('owner-authenticated local lane still validates authorization, lineage, readiness, review state, and post-merge CI', () => {
+    const { calls, deps, options } = integrationHarness();
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged' });
+    expect(deps.fetchAuthorizationComment).toHaveBeenCalledWith(
+      'meijer1973/4veco-platform',
+      12345,
+      { expectedPr: 136 }
+    );
+    expect(deps.validateAuthorizationRecord).toHaveBeenCalled();
+    expect(deps.fetchBranchProtectionSummary).toHaveBeenCalledTimes(2);
+    expect(deps.summarizeLineage).toHaveBeenCalled();
+    expect(deps.fetchReviewThreadState).toHaveBeenCalledTimes(2);
+    expect(deps.generateAndApplyReadiness).toHaveBeenCalledTimes(1);
+    expect(calls.postMergeCi).toEqual([
+      { repo: 'meijer1973/4veco-platform', sha: mergeSha },
+    ]);
   });
 
   test('runner fails when activated branch protection has an extra required context', () => {

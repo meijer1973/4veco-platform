@@ -71,25 +71,37 @@ authorization and returns the PR to human review.
 
 ## Serialized Workflow
 
-The preferred trusted workflow is
-`.github/workflows/authorized-pr-integration.yml`. It runs from `main` with the
-repository-wide concurrency group `4veco-main-integration`, `queue: max`, and
-`cancel-in-progress: false`. GitHub's default concurrency behavior keeps only
-one pending run; this lane requires the durable queue so multiple authorized
-PRs keep their place. The workflow job name must not be
-`integration-authorized`; that string is reserved for the commit status context
-minted by trusted integration code.
-
-If the workflow token cannot read required branch-protection state, the
-owner-authenticated local fallback is:
+The default single-PR merge path is the owner-authenticated local serialized
+lane:
 
 ```powershell
 npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <pr> --authorization-comment-id <comment-id>
 ```
 
-The fallback is not a raw merge path: it must run the same payload-lineage,
-base-drift, CI, readiness, review, branch-protection, and expected-head checks
+The local lane must be run from current `main`/current policy code. It is not a
+raw merge path: it must run the same payload-lineage, base-drift, CI,
+readiness, review, branch-protection, expected-head, and post-merge CI checks
 before invoking the merge.
+
+The optional cloud path is `.github/workflows/authorized-pr-integration.yml`.
+It runs from `main` with the repository-wide concurrency group
+`4veco-main-integration`, `queue: max`, and `cancel-in-progress: false`.
+GitHub's default concurrency behavior keeps only one pending run; this lane
+requires the durable queue so multiple authorized PRs keep their place. The
+workflow job name must not be `integration-authorized`; that string is reserved
+for the commit status context minted by trusted integration code.
+
+Use the cloud workflow only when its `github.token` can read branch protection.
+If it returns `phase: branch_protection_read_forbidden`, the token hit the
+expected GitHub Administration-read permission boundary. That is not an unknown
+governance failure and it does not permit direct merging. Use the
+owner-authenticated local lane above with the same authorization comment ID.
+
+Agents can check the current environment with:
+
+```powershell
+npm.cmd run check:integration-lane-capability
+```
 
 The lane must:
 
@@ -249,14 +261,16 @@ experiments, but the integration runners must not schedule auto-merge from that
 shape.
 
 Agents must not call `gh pr merge` directly for normal PRs. Merges must go
-through `authorized-pr-integration` or `authorized-bundle-integration`. Use the
-trusted workflow when it can verify branch protection; otherwise use the
-owner-authenticated local fallback above. Human authorization still binds to the
-reviewed payload SHA. The lane may validate a later integration head without
-renewed human authorization when lineage, base drift, decision scope, and
-effective-payload checks remain valid. The lane may internally use a direct
-merge command under the current branch-protection shape; that is a trusted-lane
-implementation detail, not agent merge authority.
+through `authorized-pr-integration` or `authorized-bundle-integration`; for
+single-PR work the owner-authenticated local lane is the default path. The
+trusted cloud workflow may be used only when it can verify branch protection.
+A cloud `branch_protection_read_forbidden` result means use the local lane, not
+raw merge. Human authorization still binds to the reviewed payload SHA. The
+lane may validate a later integration head without renewed human authorization
+when lineage, base drift, decision scope, and effective-payload checks remain
+valid. The lane may internally use a direct merge command under the current
+branch-protection shape; that is a trusted-lane implementation detail, not
+agent merge authority.
 
 The bundle lane sets `integration-authorized` pending on the platform
 controller head when it starts. It sets failure on terminal bundle-lane
