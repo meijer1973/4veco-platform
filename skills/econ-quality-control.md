@@ -125,6 +125,33 @@ The inspectie concretized OP3 in 2023 based on scientific evidence. During class
 
 ## PART 2: THE QUALITY_REF — PARAGRAPH-LEVEL TAG
 
+### 2.0 Lane-separated schema v2
+
+Current paragraph quality refs use `schema_version: 2` with two top-level
+blocks:
+
+```yaml
+schema_version: 2
+partA:
+  review_file: "X.Y.Z-review.md"
+  review_verdict: "PASS"
+  assets:
+    missing: []
+    svgpng_paired: true
+    naming_compliant: true
+companion:
+  review_file: "X.Y.Z-companion-visual-review.md"
+  review_verdict: "PASS"
+  hard_fails_open: 0
+```
+
+Part A owners maintain the `partA:` block. Part B owners maintain the
+`companion:` block. In `--mode part-b` and `--mode complete`,
+`scripts/validate-paragraph.js` requires `companion.review_file`,
+`companion.review_verdict`, and `companion.hard_fails_open` to match the exact
+companion review file. A PASS or PASS WITH FLAGS companion review must have
+`hard_fails_open: 0`.
+
 ### 2.1 When to generate
 
 Generate a quality_ref at the end of every paragraph build, after all components are complete. It should also be generated retroactively for existing paragraphs when the user asks for a quality report that needs them.

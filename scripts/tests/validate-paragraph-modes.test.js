@@ -22,6 +22,20 @@ const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
 const VALIDATOR = path.join(PLATFORM_ROOT, 'scripts', 'validate-paragraph.js');
 const DASH = '\u2013';
 
+function appendCompanionQualityRef(folder, parNr, verdict, hardFailsOpen) {
+    const filePath = path.join(folder, `${parNr}-quality-ref.yaml`);
+    const existing = fs.readFileSync(filePath, 'utf8').replace(/\n?companion:\n[\s\S]*$/m, '').trimEnd();
+    fs.writeFileSync(path.join(folder, `${parNr}-quality-ref.yaml`),
+        [
+            existing,
+            'companion:',
+            `  review_file: "${parNr}-companion-visual-review.md"`,
+            `  review_verdict: "${verdict}"`,
+            `  hard_fails_open: ${hardFailsOpen}`,
+            '',
+        ].join('\n'));
+}
+
 function makeMinimalPartAFolder(tmpDir, parNr, parName, opts = {}) {
     const folder = path.join(tmpDir, `${parNr} ${parName}`);
     fs.mkdirSync(folder, { recursive: true });
@@ -52,6 +66,14 @@ function makeMinimalPartAFolder(tmpDir, parNr, parName, opts = {}) {
         const hf = (opts.companionHardFails || []).map(n => `### HF-${n}\n\nbody.\n`).join('\n');
         fs.writeFileSync(path.join(folder, `${parNr}-companion-visual-review.md`),
             `# Companion Review\n\n## 2. Verdict\n\n**${opts.companionVerdict}**\n\n## 3. Hard-fail findings\n\n${hf}`);
+        if (!opts.skipCompanionQualityRef) {
+            appendCompanionQualityRef(
+                folder,
+                parNr,
+                opts.companionQualityVerdict || opts.companionVerdict,
+                opts.companionQualityHardFails ?? (opts.companionHardFails || []).length
+            );
+        }
     }
 
     return folder;
@@ -158,6 +180,39 @@ describe('validate-paragraph mode dispatch (L1.5V F2)', () => {
         const r = runValidator(folder, 'complete');
         expect(r.code).not.toBe(0);
         expect(r.stdout).toMatch(/PASS but 2 unresolved HF section/);
+    });
+
+    test('--mode part-b FAILS when companion quality-ref block is missing', () => {
+        const folder = makeMinimalPartAFolder(tmpDir, '1.1.1', 'Test', {
+            partAVerdict: 'PASS',
+            companionVerdict: 'PASS',
+            skipCompanionQualityRef: true,
+        });
+        const r = runValidator(folder, 'part-b');
+        expect(r.code).not.toBe(0);
+        expect(r.stdout).toMatch(/quality_ref missing companion: block/);
+    });
+
+    test('--mode part-b FAILS when companion quality-ref verdict is stale', () => {
+        const folder = makeMinimalPartAFolder(tmpDir, '1.1.1', 'Test', {
+            partAVerdict: 'PASS',
+            companionVerdict: 'PASS',
+            companionQualityVerdict: 'FAIL',
+        });
+        const r = runValidator(folder, 'part-b');
+        expect(r.code).not.toBe(0);
+        expect(r.stdout).toMatch(/review_verdict is FAIL, review file says PASS/);
+    });
+
+    test('--mode part-b FAILS when companion quality-ref hard-fail count is stale', () => {
+        const folder = makeMinimalPartAFolder(tmpDir, '1.1.1', 'Test', {
+            partAVerdict: 'PASS',
+            companionVerdict: 'PASS',
+            companionQualityHardFails: 1,
+        });
+        const r = runValidator(folder, 'part-b');
+        expect(r.code).not.toBe(0);
+        expect(r.stdout).toMatch(/hard_fails_open is 1, review file has 0/);
     });
 
     test('exact filename match: `*-review.md` is matched only as `${parNr}-review.md`, not by endsWith', () => {

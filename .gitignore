@@ -2,8 +2,6 @@ node_modules/
 *.tmp
 /tmp/
 __pycache__/
-.claude/settings.local.json
-.claude/launch.json
 
 # Screenshots dropped into knowledge/ while reviewing
 knowledge/*.png

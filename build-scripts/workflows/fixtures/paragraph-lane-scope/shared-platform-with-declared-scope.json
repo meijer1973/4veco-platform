@@ -1,0 +1,8 @@
+{
+  "changed_paths": [
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "docs/workflows/textbook-paragraph-lane.md",
+    "skills/econ-companion-artifacts.md",
+    "package.json"
+  ]
+}
