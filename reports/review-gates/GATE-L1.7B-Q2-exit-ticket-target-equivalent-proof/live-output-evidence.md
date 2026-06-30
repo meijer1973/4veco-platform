@@ -21,7 +21,7 @@ does not replace live inspection during the human review.
 - Lesson output commit:
   `971bf68402e6071804c44d3aa67c67320a987e33`.
 - Source data:
-  `source-data/book-1/exit-ticket/1.1.2.json`.
+  `source-data/book-1/exit-ticket/1.1.2-exit-ticket.json`.
 - Generated lesson output:
   `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html`.
 
