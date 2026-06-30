@@ -7,6 +7,7 @@ const { execFileSync } = require('child_process');
 const JSZip = require('jszip');
 
 const { mapPqPoint } = require('../lib/pq-plot-mapper');
+const { PRESENTATION_V2_DECKS } = require('../content/book-1/presentation-v2-registry');
 
 const SPRINT_ID = 'PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1';
 const ROOT = path.resolve(__dirname, '..', '..');
@@ -15,24 +16,44 @@ const BOOK_ROOT = path.resolve(
   process.env.LESSON_BOOK_ROOT ||
   path.join(ROOT, '..', '4veco-lessen', 'Boek 1 - Grondslagen, vraag en aanbod')
 );
-const OUT_DIR = path.join(ROOT, 'reports', 'sprints', SPRINT_ID);
+const DEFAULT_OUT_DIR = path.join(ROOT, 'reports', 'sprints', SPRINT_ID);
+const CHECK_GENERATED_AT = '1970-01-01T00:00:00.000Z';
+let OUT_DIR = DEFAULT_OUT_DIR;
 const SOFFICE = process.env.SOFFICE_PATH || 'C:\\Program Files\\LibreOffice\\program\\soffice.exe';
 const PDFTOPPM = process.env.PDFTOPPM_PATH || 'pdftoppm';
 
-const targets = [
-  {
-    id: '1.1.1',
-    slug: 'b1-111',
-    modelPath: path.join(ROOT, 'build-scripts', 'content', 'book-1', 'b1-111-presentation-v2-model.js'),
-    deck: require('../content/book-1/b1-111-presentation-v2-model'),
-  },
-  {
-    id: '1.1.3',
-    slug: 'b1-113',
-    modelPath: path.join(ROOT, 'build-scripts', 'content', 'book-1', 'b1-113-presentation-v2-model.js'),
-    deck: require('../content/book-1/b1-113-presentation-v2-model'),
-  },
-];
+const targets = PRESENTATION_V2_DECKS.map(entry => ({
+  id: entry.id,
+  slug: entry.slug,
+  modelPath: entry.modelPath,
+  deck: require(entry.modelPath),
+}));
+
+function parseArgs(argv) {
+  const options = {
+    check: false,
+    outDir: null,
+    generatedAt: null,
+  };
+  const args = [...argv];
+  while (args.length) {
+    const arg = args.shift();
+    if (arg === '--check') {
+      options.check = true;
+    } else if (arg === '--output-dir') {
+      const value = args.shift();
+      if (!value) throw new Error('--output-dir requires a path');
+      options.outDir = path.resolve(value);
+    } else if (arg === '--generated-at') {
+      const value = args.shift();
+      if (!value) throw new Error('--generated-at requires a value');
+      options.generatedAt = value;
+    } else {
+      throw new Error(`Unknown argument: ${arg}`);
+    }
+  }
+  return options;
+}
 
 function fail(message) {
   console.error(`${SPRINT_ID} proof failed: ${message}`);
@@ -399,15 +420,22 @@ function writeMarkdownReport(manifest) {
 }
 
 async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  OUT_DIR = options.outDir || (options.check
+    ? fs.mkdtempSync(path.join(os.tmpdir(), 'pv2-pptx-proof-check-'))
+    : DEFAULT_OUT_DIR);
+
   assert(fs.existsSync(BOOK_ROOT), `lesson book root not found: ${BOOK_ROOT}`);
-  fs.rmSync(OUT_DIR, { recursive: true, force: true });
+  if (!options.check) {
+    fs.rmSync(OUT_DIR, { recursive: true, force: true });
+  }
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'pv2-pptx-proof-'));
   const manifest = {
     schema_version: 1,
     sprint_id: SPRINT_ID,
-    generated_at: new Date().toISOString(),
+    generated_at: options.generatedAt || (options.check ? CHECK_GENERATED_AT : new Date().toISOString()),
     book_root: rel(BOOK_ROOT),
     toolchain: {
       renderer: 'build-scripts/lib/render-presentation-v2-pptx.js',
@@ -464,7 +492,7 @@ async function main() {
   writeTeacherReadThroughReport(manifest);
   writeMarkdownReport(manifest);
 
-  console.log(`OK ${SPRINT_ID}`);
+  console.log(`OK ${SPRINT_ID}${options.check ? ' (check mode)' : ''}`);
   console.log(`  report: ${path.join(OUT_DIR, 'parity-report.md')}`);
   console.log(`  manifest: ${path.join(OUT_DIR, 'manifest.json')}`);
 }

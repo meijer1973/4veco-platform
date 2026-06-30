@@ -331,6 +331,181 @@ describe('authorized cross-repo bundle integration', () => {
     expect(calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
   });
 
+  test('lesson-first partial resume continues after the lesson member is already merged', () => {
+    let callsRef;
+    const setup = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => {
+          if (repo === LESSON_REPO) return lessonMerge;
+          if (callsRef && callsRef.merges.some((merge) => merge.repo === PLATFORM_REPO)) return platformMerge;
+          return platformBase;
+        }),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    callsRef = setup.calls;
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    expect(result.merges[0]).toMatchObject({
+      repo: LESSON_REPO,
+      pr_number: 34,
+      resumed: true,
+      merge_commit: lessonMerge,
+    });
+    expect(setup.calls.merges.map((item) => item.repo)).toEqual([PLATFORM_REPO]);
+    expect(setup.calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
+    expect(setup.calls.ciTriggers).toHaveLength(2);
+    expect(setup.calls.ciWaits[1]).toMatchObject({
+      headSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+    const platformSuccessIndex = setup.calls.events.findIndex(
+      (event) => event.type === 'status' && event.state === 'success'
+    );
+    const platformMergeIndex = setup.calls.events.findIndex(
+      (event) => event.type === 'merge' && event.repo === PLATFORM_REPO
+    );
+    expect(platformSuccessIndex).toBeGreaterThan(-1);
+    expect(platformSuccessIndex).toBeLessThan(platformMergeIndex);
+  });
+
+  test('partial resume fails closed without the explicit resume option', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => (repo === LESSON_REPO ? lessonMerge : platformBase)),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'preflight' });
+    expect(result.failures).toContain('lesson:pr_not_open');
+    expect(calls.merges).toEqual([]);
+  });
+
+  test('partial resume rejects an already-merged lesson member at the wrong head', () => {
+    const wrongLessonHead = '7'.repeat(40);
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => (repo === LESSON_REPO ? lessonMerge : platformBase)),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, wrongLessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'partial_resume' });
+    expect(result.failures).toEqual(expect.arrayContaining([
+      'partial_resume_lesson_candidate_mismatch',
+      'partial_resume_head_mismatch',
+    ]));
+    expect(calls.merges).toEqual([]);
+  });
+
+  test('partial resume rejects a lesson merge commit that is not current main', () => {
+    const staleLessonMain = '8'.repeat(40);
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => (repo === LESSON_REPO ? staleLessonMain : platformBase)),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'partial_resume' });
+    expect(result.failures).toContain('partial_resume_merge_commit_not_current_main');
+    expect(calls.merges).toEqual([]);
+  });
+
+  test('partial resume rejects platform main advancing beyond the compatibility base', () => {
+    const advancedPlatformMain = '9'.repeat(40);
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => (repo === LESSON_REPO ? lessonMerge : advancedPlatformMain)),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'partial_resume' });
+    expect(result.failures).toContain('partial_resume_platform_main_advanced');
+    expect(calls.merges).toEqual([]);
+  });
+
+  test('partial resume requires fresh platform PR CI after the lesson merge', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => {
+          if (repo === LESSON_REPO) return lessonMerge;
+          if (calls.merges.some((merge) => merge.repo === PLATFORM_REPO)) return platformMerge;
+          return platformBase;
+        }),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+        refreshPlatformPrCi: jest.fn(() => ({ ok: false, failure: 'platform_ci_run_not_successful' })),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'platform_pr_ci_refresh' });
+    expect(result.refreshed).toMatchObject({ failure: 'platform_ci_run_not_successful' });
+    expect(result.merges).toHaveLength(1);
+    expect(result.merges[0]).toMatchObject({ repo: LESSON_REPO, resumed: true });
+    expect(calls.merges).toEqual([]);
+    expect(calls.statuses.some((status) => status.state === 'success')).toBe(false);
+  });
+
   test('platform-first state green merges platform first, then lesson', () => {
     const { calls, options, deps } = harness({
       deps: {

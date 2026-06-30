@@ -5,6 +5,7 @@ const { execFileSync } = require('child_process');
 const JSZip = require('jszip');
 
 const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
+const { PRESENTATION_V2_DECKS } = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'presentation-v2-registry.js'));
 const deck111 = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'b1-111-presentation-v2-model.js'));
 const deck113 = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'b1-113-presentation-v2-model.js'));
 const { mapPqPoint } = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'lib', 'pq-plot-mapper.js'));
@@ -56,10 +57,8 @@ const path = require('path');
 const root = process.argv[2];
 const tmpDir = process.argv[3];
 const { writeDeckPptx } = require(path.join(root, 'build-scripts', 'lib', 'render-presentation-v2-pptx.js'));
-const decks = [
-  require(path.join(root, 'build-scripts', 'content', 'book-1', 'b1-111-presentation-v2-model.js')),
-  require(path.join(root, 'build-scripts', 'content', 'book-1', 'b1-113-presentation-v2-model.js')),
-];
+const { PRESENTATION_V2_DECKS } = require(path.join(root, 'build-scripts', 'content', 'book-1', 'presentation-v2-registry.js'));
+const decks = PRESENTATION_V2_DECKS.map(entry => require(entry.modelPath));
 
 (async () => {
   for (const deck of decks) {
@@ -102,6 +101,20 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
 
   afterAll(() => {
     if (tmpDir) fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  test('presentation-v2 registry and workflow scripts cover both implemented decks', () => {
+    expect(PRESENTATION_V2_DECKS.map(deck => deck.slug)).toEqual(['b1-111', 'b1-113']);
+    expect(PRESENTATION_V2_DECKS.map(deck => require(deck.modelPath).paragraph.number)).toEqual(['1.1.1', '1.1.3']);
+
+    const pkg = JSON.parse(fs.readFileSync(path.join(PLATFORM_ROOT, 'package.json'), 'utf8'));
+    expect(pkg.scripts['build:presentation-v2']).toBe('node build-scripts/content/book-1/build-presentation-v2.js --all');
+    expect(pkg.scripts['build:presentation-111']).toBe('node build-scripts/content/book-1/b1-111-presentation-v2.js');
+    expect(pkg.scripts['build:presentation-113']).toBe('node build-scripts/content/book-1/b1-113-presentation-v2.js');
+    expect(pkg.scripts['check:presentation-v2-pptx-proof']).toContain('--check');
+
+    const deploy = fs.readFileSync(path.join(PLATFORM_ROOT, 'scripts', 'deploy.js'), 'utf8');
+    expect(deploy).toContain('build-scripts/content/book-1/build-presentation-v2.js --all');
   });
 
   test.each([

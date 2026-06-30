@@ -79,8 +79,40 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r .github/ci-python-requirements.txt
 
+      - name: Install presentation proof tools
+        run: |
+          choco install libreoffice-fresh -y --no-progress
+          $popplerRoot = Join-Path $env:RUNNER_TEMP "poppler"
+          New-Item -ItemType Directory -Force -Path $popplerRoot | Out-Null
+          $release = Invoke-RestMethod -Headers @{ "User-Agent" = "4veco-platform-ci" } -Uri "https://api.github.com/repos/oschwartz10612/poppler-windows/releases/latest"
+          $asset = $release.assets | Where-Object { $_.name -match "^Release-.*\.zip$" } | Select-Object -First 1
+          if (-not $asset) { throw "No Poppler Windows release zip found" }
+          $popplerZip = Join-Path $env:RUNNER_TEMP $asset.name
+          Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $popplerZip
+          Expand-Archive -LiteralPath $popplerZip -DestinationPath $popplerRoot -Force
+          $soffice = "C:\Program Files\LibreOffice\program\soffice.exe"
+          if (-not (Test-Path -LiteralPath $soffice)) {
+            $soffice = (Get-ChildItem -Path "C:\Program Files" -Filter soffice.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+          }
+          $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source
+          if (-not $pdftoppm) {
+            $pdftoppm = (Get-ChildItem -Path $popplerRoot -Filter pdftoppm.exe -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+          }
+          if (-not $soffice) { throw "soffice.exe not found after LibreOffice install" }
+          if (-not $pdftoppm) { throw "pdftoppm.exe not found after Poppler install" }
+          "SOFFICE_PATH=$soffice" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "PDFTOPPM_PATH=$pdftoppm" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          (Split-Path -Parent $soffice) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+          (Split-Path -Parent $pdftoppm) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+
       - name: Validate platform Jest suite
         run: npm run check:platform
+
+      - name: Build presentation-v2 registered decks
+        run: npm run build:presentation-v2
+
+      - name: Validate presentation-v2 PPTX proof
+        run: npm run check:presentation-v2-pptx-proof -- --output-dir ..\ci-artifacts\presentation-v2-pptx-proof
 
       - name: Validate reasoning golden family guardrails
         run: npm run check:reasoning-golden
@@ -135,5 +167,6 @@ jobs:
             4veco-platform/reports/json/*.json
             4veco-platform/reports/url-index.md
             ci-artifacts/platform-ci-evidence.json
+            ci-artifacts/presentation-v2-pptx-proof/**
           if-no-files-found: ignore
           retention-days: 14
