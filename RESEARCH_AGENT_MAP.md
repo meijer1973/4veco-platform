@@ -94,6 +94,10 @@ Human-readable:
 - `AGENTS.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
+- `docs/workflows/textbook-paragraph-lane.md`
+- `docs/workflows/web-companion-paragraph-lane.md`
+- `build-scripts/templates/textbook-to-companion-handoff.md`
+- `build-scripts/workflows/check-paragraph-lane-scope.js`
 - `build-scripts/README.md`
 - `agents/README.md`
 - `agents/lead-reviewer-agent.md`
@@ -157,6 +161,10 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/textbook-paragraph-lane.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/web-companion-paragraph-lane.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/templates/textbook-to-companion-handoff.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-lane-scope.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
@@ -222,6 +230,10 @@ Use these anchors before free-form browsing.
   "product_vision_spec": "../4veco-lessen/specifications/product-vision.md",
   "product_vision_json": "../4veco-lessen/specifications/product-vision.json",
   "paragraph_build_guide": "BUILD-PARAGRAPH.md",
+  "textbook_paragraph_lane": "docs/workflows/textbook-paragraph-lane.md",
+  "web_companion_paragraph_lane": "docs/workflows/web-companion-paragraph-lane.md",
+  "textbook_to_companion_handoff_template": "build-scripts/templates/textbook-to-companion-handoff.md",
+  "paragraph_lane_scope_checker": "build-scripts/workflows/check-paragraph-lane-scope.js",
   "chapter_build_guide": "BUILD-CHAPTER.md",
   "build_script_guide": "build-scripts/README.md",
   "package_scripts": "package.json",

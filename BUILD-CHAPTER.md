@@ -4,6 +4,10 @@ Builds a complete chapter from blueprint to finished PDF. Two parts:
 - **Part A** — Build all paragraphs (follows `econ-chapter-builder` skill)
 - **Part B** — Assemble into chapter PDF and run QC (follows `econ-chapter-assembler` skill)
 
+In this chapter workflow, "Part B" means textbook/chapter assembly and QC. It
+does not open the web companion paragraph lane. Website companion work uses
+`docs/workflows/web-companion-paragraph-lane.md` and must be planned separately.
+
 ---
 
 ## Part A: Paragraph Production

@@ -50,6 +50,23 @@ function writeZipLike(filePath, size = 200) {
   fs.writeFileSync(filePath, buf);
 }
 
+function writeCompanionQualityRef(dir, parNr, verdict = 'PASS', hardFailsOpen = 0) {
+  const filePath = path.join(dir, `${parNr}-quality-ref.yaml`);
+  let content = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : 'schema_version: 2\n';
+  content = content.replace(/\n?companion:\n[\s\S]*$/m, '').trimEnd();
+  writeText(
+    filePath,
+    [
+      content,
+      'companion:',
+      `  review_file: "${parNr}-companion-visual-review.md"`,
+      `  review_verdict: "${verdict}"`,
+      `  hard_fails_open: ${hardFailsOpen}`,
+      '',
+    ].join('\n')
+  );
+}
+
 function paragraphDir(folderName = '9.9.1 Theory') {
   return path.join(TMP, 'Boek 9 - Test', '9.9 Hoofdstuk Test', folderName);
 }
@@ -149,6 +166,7 @@ function setupPartB(folderName = '9.9.1 Theory', options = {}) {
     path.join(dir, `${parNr}-companion-visual-review.md`),
     `# Companion Visual Review\n\n## 2. Verdict\n\n**PASS**\n`
   );
+  writeCompanionQualityRef(dir, parNr, 'PASS', 0);
 
   writeText(
     path.join(dir, '_paragraph-plan.md'),
@@ -215,6 +233,9 @@ function seedB02ParitySurfaces(dir, options = {}) {
       '    svgpng_paired: true',
       '    naming_compliant: true',
       'companion:',
+      `  review_file: "${parNr}-companion-visual-review.md"`,
+      '  review_verdict: "PASS"',
+      '  hard_fails_open: 0',
       '  procedure_b02_step_count: 4',
     ].join('\n')
   );
@@ -247,6 +268,9 @@ function seedDeclaredProcedureCounts(dir, options = {}) {
       '    svgpng_paired: true',
       '    naming_compliant: true',
       'companion:',
+      `  review_file: "${parNr}-companion-visual-review.md"`,
+      '  review_verdict: "PASS"',
+      '  hard_fails_open: 0',
       '  procedures:',
       '    procentuele_verandering_step_count: 4',
       '    indexcijfer_step_count: 4',

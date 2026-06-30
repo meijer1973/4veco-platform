@@ -29,6 +29,12 @@ Use this agent for student-facing companion artifacts, including:
 
 The agent may also inspect paragraph markdown, paragraph PDF, paragraph plan, unit registry, source generator, CSS, JavaScript, and asset files to determine whether rendered output matches source intent.
 
+This is a Part B companion review. If the companion change also modifies Part A
+textbook artifacts (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, core
+`_assets/*_(fig|we|ex)_*`, `build_pdf.py`, or `X.Y.Z-review.md`), record a
+lane-boundary defect unless the change includes an explicit, reviewed Part A
+repair exception.
+
 ## Invocation
 
 For paragraph companion review, use:
@@ -239,6 +245,11 @@ Categories:
 
 Do not recommend hand edits in generated lesson output unless the team explicitly asks for a temporary patch. Prefer source/generator fixes and regeneration.
 
+Hard fail:
+
+- A companion PR changes Part A textbook artifacts without an explicit Part A
+  repair exception and review path.
+
 ## Verdict rules
 
 Use only these verdicts:
@@ -255,6 +266,7 @@ A review must return **FAIL** if any of these are true:
 - A student-facing visual contains production/debug labels or placeholder text.
 - A checklist, diagnostic, or differentiated path offers no next-step routing.
 - The artifact uses generated output as if it were the source of truth when markdown/registry/generator evidence disagrees.
+- Companion delivery changes Part A textbook artifacts without an explicit Part A repair exception.
 
 ## Required report format
 

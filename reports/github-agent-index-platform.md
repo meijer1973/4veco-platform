@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-30T06:37:09.792Z
+Generated: 2026-06-30T06:39:14.516Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/integration-lane-permission-smoothing-1-20260630`
-Source commit: `6c54702f89e7b611234fa438609044f24507a258`
-Files indexed: 6654
+Source commit: `cb033271820a67cf47c38c2f7add82d5eccb9fac`
+Files indexed: 6674
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 633
+Count: 647
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -749,7 +749,21 @@ Count: 633
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
 - build-scripts/templates/template-paragraph-plan.md
+- build-scripts/templates/textbook-to-companion-handoff.md
 - build-scripts/tools/build-skill-tree-viewer.js
+- build-scripts/workflows/check-paragraph-lane-scope.js
+- build-scripts/workflows/check-paragraph-lane-scope.test.js
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-companion-block-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-partA-block-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-textbook-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/generated-tail-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/mixed-with-exception.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/shared-platform-with-declared-scope.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-only.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-companion-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-quality-ref-companion-block-leak.json
+- build-scripts/workflows/fixtures/paragraph-lane-scope/textbook-with-quality-ref-partA-block-only.json
 - scripts/audit-pptx-accessibility.py
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
@@ -806,7 +820,7 @@ Count: 25
 
 ## validators
 
-Count: 639
+Count: 641
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1157,6 +1171,8 @@ Count: 639
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
+- build-scripts/workflows/check-paragraph-lane-scope.js
+- build-scripts/workflows/check-paragraph-lane-scope.test.js
 - docs/inspection-standards/evidence-pack-validation-and-dispatch.md
 - docs/inspection-standards/report-only-validator-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
@@ -2315,7 +2331,7 @@ Count: 860
 
 ## reports
 
-Count: 4292
+Count: 4296
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2378,6 +2394,10 @@ Count: 4292
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -6630,7 +6650,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 686
+Count: 688
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7228,6 +7248,8 @@ Count: 686
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/textbook-paragraph-lane.md
+- docs/workflows/web-companion-paragraph-lane.md
 - knowledge/113-excellent-exit-ticket-v3-package.zip
 - knowledge/course_blueprint_v4.md
 - knowledge/Exercise schema and quality/ChatGPT Image Apr 28, 2026, 10_35_18 PM.png
