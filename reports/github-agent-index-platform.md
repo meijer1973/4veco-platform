@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-30T08:04:14.256Z
+Generated: 2026-06-30T08:07:44.648Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/agent-doc-governance-cleanup-20260630`
-Source commit: `57970b568841932ad99c0a789640a599db723fc7`
-Files indexed: 6702
+Source commit: `73e9e49a69b32c55dd9701e0b5405f97ddf47604`
+Files indexed: 6705
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2339,7 +2339,7 @@ Count: 863
 
 ## reports
 
-Count: 4318
+Count: 4321
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4318,6 +4318,9 @@ Count: 4318
 - reports/sprints/AGENT-BRANCH-SAFETY-1-plan.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-result.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-lead-review-corrections.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-lead-review-round1.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-lead-review-round2.md
 - reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-corrections.md
 - reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-lead-review-round1.md
 - reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-lead-review-round2.md
