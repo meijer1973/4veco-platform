@@ -1,16 +1,16 @@
 # AGENT-DOC-GOVERNANCE-CLEANUP-20260630 Test Evidence
 
-Status: implementation verification complete before lead-review.
+Status: implementation verification refreshed after platform base sync.
 
 ## Repository State
 
 - Platform worktree: `C:/Projects/4veco-worktrees/AGENT-DOC-GOVERNANCE-CLEANUP-20260630/4veco-platform`
 - Platform branch: `codex/agent-doc-governance-cleanup-20260630`
-- Platform head during source verification: `46ac1653564907ea16f4cdb3480a136ed9bb51c0`
-- Platform `origin/main`: `99a9dde56e5606658ea5f744a6efd819eed708c1`
+- Platform head during refreshed verification: `57970b568841932ad99c0a789640a599db723fc7`
+- Platform `origin/main`: `4df6dde58d18ffbc05412cc6a3ef8c7e559b44c3`
 - Lesson worktree: `C:/Projects/4veco-worktrees/AGENT-DOC-GOVERNANCE-CLEANUP-20260630/4veco-lessen`
 - Lesson branch: `codex/agent-doc-governance-cleanup-20260630`
-- Lesson head during source verification: `aefab74fb4d609e42140723b3e01db61e1f3644e`
+- Lesson head during refreshed verification: `efbef2330dafa42380681e69da6572dce9027591`
 - Lesson `origin/main`: `aefab74fb4d609e42140723b3e01db61e1f3644e`
 
 ## Worktree Safety And Freshness
@@ -21,6 +21,8 @@ Status: implementation verification complete before lead-review.
 | `git fetch --prune origin; git status --short --branch; git branch --show-current; git rev-parse HEAD` | lesson | 0 | branch `codex/agent-doc-governance-cleanup-20260630`, head `aefab74fb4d609e42140723b3e01db61e1f3644e` |
 | `npm.cmd run check:agent-worktree-safety -- --claim --task agent-doc-governance-cleanup-20260630 --agent codex --require-prefix codex/,agent/ --require-clean` | platform | 0 | `ok:true`, branch prefix accepted, clean, lock same owner/task |
 | `npm.cmd --prefix ..\4veco-platform run check:agent-worktree-safety -- --claim --task agent-doc-governance-cleanup-20260630 --agent codex --require-prefix codex/,agent/ --require-clean --worktree C:/Projects/4veco-worktrees/AGENT-DOC-GOVERNANCE-CLEANUP-20260630/4veco-lessen` | lesson | 0 | `ok:true`, branch prefix accepted, clean, lock same owner/task |
+| `git fetch --prune origin; git status --short --branch; git rev-parse origin/main` | platform | 0 | after lead-review stale-base finding, `origin/main` advanced to `4df6dde58d18ffbc05412cc6a3ef8c7e559b44c3` |
+| `git merge --no-edit origin/main` followed by generated index regeneration and merge commit | platform | 0 | base-sync merge committed as `57970b568841932ad99c0a789640a599db723fc7`; generated index conflicts resolved by rerunning generators |
 
 ## Implementation Checks
 
@@ -31,10 +33,11 @@ Status: implementation verification complete before lead-review.
 | `npm.cmd run check:pptx-skill-mirror` | platform | 0 | `OK PPTX skill has no retired command mirror` |
 | `npm.cmd run check:active-governance-wording` | platform | 0 | `Active governance wording check passed.` |
 | `npx jest build-scripts/sprints/check-pptx-skill-mirror.test.js build-scripts/review-gates/check-active-governance-wording.test.js --runInBand` | platform | 1 | Windows PowerShell blocked `npx.ps1` by execution policy; rerun below used `npx.cmd` |
-| `npx.cmd jest build-scripts/sprints/check-pptx-skill-mirror.test.js build-scripts/review-gates/check-active-governance-wording.test.js --runInBand` | platform | 0 | 2 suites passed, 12 tests passed |
+| `npx.cmd jest build-scripts/sprints/check-pptx-skill-mirror.test.js build-scripts/review-gates/check-active-governance-wording.test.js --runInBand` | platform | 0 | 2 suites passed, 13 tests passed |
 | `git diff --check` | platform | 0 | no whitespace errors |
 | `git diff --check` | lesson | 0 | no whitespace errors |
-| `npm.cmd run finalization:freshness` | platform | 0 | remote `main` and local `origin/main` both `99a9dde56e5606658ea5f744a6efd819eed708c1`; remote main is ancestor of platform head; required policy file hashes match remote main |
+| `npm.cmd run finalization:freshness` | platform | 0 | remote `main` and local `origin/main` both `4df6dde58d18ffbc05412cc6a3ef8c7e559b44c3`; remote main is ancestor of platform head `57970b568841932ad99c0a789640a599db723fc7`; required policy file hashes match remote main |
+| `npm.cmd run check:branch-protection` | platform | 0 | strict `validate-platform`, required approving review count `0`, force pushes and deletions disabled, no failures |
 
 ## Generated Index Refresh
 
@@ -52,5 +55,5 @@ Post-refresh changed files:
 
 ## Source Diff Summary
 
-- Platform: plan/review evidence committed in `46ac1653564907ea16f4cdb3480a136ed9bb51c0`; generated agent indexes modified after mandatory refresh.
-- Lesson: `AGENTS.md` initial platform reference block changed from `4veco-platform/...` to `../4veco-platform/...`.
+- Platform: plan/review evidence, result/test evidence, base-sync merge to `origin/main` `4df6dde58d18ffbc05412cc6a3ef8c7e559b44c3`, and generated agent indexes refreshed after the merge.
+- Lesson: `AGENTS.md` initial platform reference block changed from `4veco-platform/...` to `../4veco-platform/...` in commit `efbef2330dafa42380681e69da6572dce9027591`.

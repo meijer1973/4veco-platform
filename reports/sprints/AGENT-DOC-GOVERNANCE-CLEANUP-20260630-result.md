@@ -1,6 +1,6 @@
 # AGENT-DOC-GOVERNANCE-CLEANUP-20260630 Result
 
-Status: ready for completed-work lead review.
+Status: ready for completed-work lead-review recheck after platform base sync.
 
 ## Findings Addressed
 
@@ -34,9 +34,10 @@ Lesson:
 - Lesson platform-link existence checks passed.
 - `npm.cmd run check:pptx-skill-mirror` passed.
 - `npm.cmd run check:active-governance-wording` passed.
-- `npx.cmd jest build-scripts/sprints/check-pptx-skill-mirror.test.js build-scripts/review-gates/check-active-governance-wording.test.js --runInBand` passed: 2 suites, 12 tests.
+- `npx.cmd jest build-scripts/sprints/check-pptx-skill-mirror.test.js build-scripts/review-gates/check-active-governance-wording.test.js --runInBand` passed: 2 suites, 13 tests.
 - `git diff --check` passed in both repositories.
-- `npm.cmd run finalization:freshness` passed for platform policy files.
+- `npm.cmd run finalization:freshness` passed for platform policy files after syncing to `origin/main` `4df6dde58d18ffbc05412cc6a3ef8c7e559b44c3`.
+- `npm.cmd run check:branch-protection` passed for platform `main`.
 
 Detailed command evidence is in `reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-test-evidence.md`.
 
