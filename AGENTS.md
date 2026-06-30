@@ -492,7 +492,7 @@ A student working through all materials for one paragraph should feel like they'
 
 **How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
 
-For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
+For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and the PPTX presentation route). DOCX companion exports are opt-in Office/legacy profile work. PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
 
 For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
 
@@ -504,7 +504,7 @@ Every paragraph carries TWO review records and ONE quality-ref:
 - `${parNr}-companion-visual-review.md` — Part B companion review (output of `econ-companion-visual-review` agent).
 - `${parNr}-quality-ref.yaml` (`schema_version: 2`) — single file with `partA:` block (asset state, content presence, Part A review verdict) and `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state).
 
-`scripts/validate-paragraph.js` reads each review file by EXACT name (no `endsWith` filename match) and parses verdicts structurally from the `## 2. Verdict` block. Modes: `--mode part-a` gates Part A review only; `--mode part-b` gates companion review only; `--mode complete` aggregates both. A FAIL verdict in either review fails the corresponding mode. Part B and complete modes also require `${parNr}-quality-ref.yaml` to contain a `companion:` block whose `review_file`, `review_verdict`, and `hard_fails_open` values match `${parNr}-companion-visual-review.md`. Schema details: `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
+`scripts/validate-paragraph.js` reads each review file by EXACT name (no `endsWith` filename match) and parses verdicts structurally from the `## 2. Verdict` block. Modes: `--mode part-a` gates Part A review only; `--mode part-b` gates companion review only; `--mode complete` aggregates both. A FAIL verdict in either review fails the corresponding mode. Part B and complete modes also require `${parNr}-quality-ref.yaml` to contain a `companion:` block whose `review_file`, `review_verdict`, and `hard_fails_open` values match `${parNr}-companion-visual-review.md`. Current schema details: `docs/workflows/paragraph-quality-ref-schema-v2.md`.
 
 Use `npm run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD` before closing platform workflow/tooling PRs. For lesson-output PRs, run the checker against the lesson repo: from `4veco-lessen`, invoke `../4veco-platform/build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook|companion --base origin/main --head HEAD`; from `4veco-platform`, pass `--cwd ../4veco-lessen`. Textbook lane changes may not contain companion outputs; companion lane changes may not contain Part A textbook outputs; shared lane changes may not contain lesson-output files unless a machine-readable lane-scope exception is included and reviewed.
 
@@ -609,7 +609,7 @@ The current legacy game target (historically Module 3) is frozen until September
 │       ├── reasoning/*.csv     ← Bron-CSV's voor redeneer-spel
 │       └── skilltree/*.js      ← Per-paragraaf skill config
 ├── scripts/
-│   ├── deploy.js               ← Kopieert engines + genereert content naar module-repo
+│   ├── deploy.js               ← Kopieert engines + genereert content naar lesson/book target
 │   ├── check-links.js          ← Verifieert alle interne links
 │   ├── verify-deployment.sh    ← Post-push verificatie
 │   └── pre-push-hook.js        ← Git hook
@@ -689,15 +689,15 @@ Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets ge
 
 ---
 
-## Modelgebruik
+## Review and Tool Routing
 
-| Taak | Model | Toelichting |
-|------|-------|-------------|
-| Opzet en ontwerp presentaties | **Opus 4.6** | Creatieve kwaliteit en visueel ontwerp |
-| Economische grafieken en visuals | **Opus 4.6** | Precisie en vakinhoudelijke correctheid |
-| Subtaken (research, berekeningen) | **Sonnet 4.6 of Opus 4.6** | Bij twijfel Opus |
-| Eindcontroles en QA | **Opus 4.6** | Kritische feedback essentieel |
-| **Nooit gebruiken** | ~~Haiku~~ | Niet geschikt voor presentaties en creatief werk |
+Use the current Codex toolchain and the repository review gates rather than a
+hardcoded vendor/model table. For creative or high-stakes production work,
+prefer stronger reasoning, rendered-output inspection, and the relevant
+specialist reviewer. For routine calculations or narrow checks, use the fastest
+tool that still preserves evidence quality. The durable rule is not model name;
+it is whether the work has the required source, rendered, validator, and review
+proof.
 
 ---
 
@@ -762,9 +762,9 @@ npm test
 ### Engines wijzigen
 1. Edit in `engines/`
 2. Run engine tests
-3. Deploy naar module-repo
+3. Deploy naar lesson/book target
 4. Test in browser
-5. Commit en push module-repo
+5. Commit en push lesson/book target wanneer die repo bewust is aangepast
 
 ### Nieuw reasoning game toevoegen
 
@@ -792,12 +792,12 @@ Legacy CSV route, when explicitly needed:
 ### Instapquiz
 - Engine: `engines/quiz-engine.js` + `quiz-ui.js`
 - Data: `shared/questions/X.Y.Z.js` per paragraaf
-- HTML: thin shell in `1. Voorbereiden/`
+- HTML: thin shell at the paragraph root in the flat `4veco-lessen/Boek N/.../X.Y.Z [Naam]/` layout
 
 ### Redeneer-spel (legacy 5 modi)
 - Engine: `engines/reasoning-engine.js` + `reasoning-ui.js`
 - Data: `shared/reasoning/X.Y.Z.js` (gegenereerd uit CSV)
-- HTML: thin shell in `3. Oefenen/`
+- HTML: thin shell at the paragraph root in the flat lesson layout
 - Domeinen: economics, math-economics, arithmetic
 - New reasoning-game capability uses `skills/econ-reasoning-game.md`, the four-exemplar golden family, shared task-shell primitives, and `engines/reasoning-composer.js` rather than adding more legacy modes.
 
@@ -810,7 +810,7 @@ Legacy CSV route, when explicitly needed:
 ### Nieuws-detective
 - Engine: `engines/newsdetective-engine.js` + `newsdetective-ui.js`
 - Data: `shared/newsdetective/X.Y.Z.js` per paragraaf
-- HTML: thin shell in `1. Voorbereiden/`
+- HTML: thin shell at the paragraph root in the flat lesson layout
 - 4 rondes per paragraaf, score 0-4
 
 ---
@@ -825,7 +825,10 @@ Beschikbare modules: `pptxgenjs`, `sharp`, `docx`, `pdf-lib`, `marked`, `graphvi
 ### Python
 Module `python-docx` voor het lezen van bestaande Word-bestanden.
 
-De Python converters in `build-scripts/` zijn een vast onderdeel van de workflow voor:
+The Python converters in `build-scripts/` are profile-gated. Normal
+`student-web` companion work should use native HTML generators and skips
+DOCX-to-HTML conversion. Run converters only for Office/legacy work that
+intentionally uses Word sources:
 - `uitleg voorkennis.docx` → `uitleg voorkennis.html`
 - `uitleg vaardigheden.docx` → `uitleg vaardigheden.html`
 - `begeleide inoefening` docx-bestanden → interactieve HTML
@@ -836,13 +839,14 @@ De Python converters in `build-scripts/` zijn een vast onderdeel van de workflow
 
 Een presentatie is pas af als een docent deze **direct in de les kan gebruiken**, zonder aanpassingen.
 
-**Bij twijfel over kwaliteit: gebruik Opus 4.6 en doe een extra QA-ronde.**
+**Bij twijfel over kwaliteit: use the stronger available review/tool route and
+doe een extra QA-ronde.**
 
 ## Temporary Files & Workspace Cleanup
 
 ### MANDATORY: Clean up after every task
 
-You MUST treat temporary/intermediate files as your responsibility. Delete all temp files when done. Use `/tmp/Codex-work/` for intermediate files. Never litter the project root.
+You MUST treat temporary/intermediate files as your responsibility. Delete all temp files when done. Use the OS temp directory or a clearly named task folder outside the repository root for intermediate files. Never litter the project root.
 
 ### Beleid: scripts bewaren
 

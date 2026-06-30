@@ -140,7 +140,7 @@ Choose the minimal necessary reviewers:
 
 | Condition | Route to |
 |---|---|
-| Full companion HTML/DOCX/PPTX/PDF family | `econ-companion-visual-review` |
+| Full companion HTML/PPTX family, plus opt-in Office DOCX when in scope | `econ-companion-visual-review` |
 | Single graph, diagram, screenshot, UI state, chart, slide, or asset | `visual-qa-agent` |
 | Test suite, validator, build command, or regression proof | `testing-agent` |
 | Readability, contrast, alt text, OCR, keyboard, semantics, inclusive usability | `accessibility-agent` |

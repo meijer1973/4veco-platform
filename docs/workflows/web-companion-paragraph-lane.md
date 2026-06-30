@@ -3,6 +3,9 @@
 Purpose: build only the Part B web companion route after textbook content
 exists. This lane produces the student-facing route, games, rich HTML
 companions, presentation route, web visual variants, and companion review.
+The normal companion line is web output plus PPTX. PDF output belongs to
+Part A / publisher-print unless a future human decision creates a separate PDF
+lane.
 
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary companion production.
@@ -47,7 +50,7 @@ Do not silently repair textbook artifacts in this lane.
 - `_assets/*_web_light.*`
 - `_assets/*_web_dark.*`
 - `X.Y.Z-companion-visual-review.md`
-- `X.Y.Z-quality-ref.yaml` `companion:` block
+- `X.Y.Z-quality-ref.yaml` `companion:` block (see `docs/workflows/paragraph-quality-ref-schema-v2.md`)
 
 ## Forbidden Unless A Blocker Is Declared
 
@@ -57,6 +60,7 @@ Do not silently repair textbook artifacts in this lane.
 - Core textbook figure assets: `_assets/*_fig_*`, `_assets/*_we_*`,
   `_assets/*_ex_*`
 - `build_pdf.py`
+- `X.Y.Z [Name] <en dash> *.pdf`
 - `X.Y.Z-review.md`
 - `X.Y.Z-quality-ref.yaml` `partA:` values
 

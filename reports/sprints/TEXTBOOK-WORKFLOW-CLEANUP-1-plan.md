@@ -141,9 +141,16 @@ Add a small check under `build-scripts/reports/` and an npm script, likely
 - `reports/github-agent-index-lessen.json`
 
 and fails when a checked index claims the current platform repo but its
-`source_commit` does not match `git rev-parse HEAD`. The lessen index should be
-checked against the sibling lesson repo only when that repo is available; if it
-is not available, the checker should report a skip rather than false failure.
+`source_commit` is not fresh. Fresh means either:
+
+- `source_commit` equals `git rev-parse HEAD`; or
+- `source_commit` equals `HEAD^` and the final commit changes only generated
+  index/url-index files. This allows the normal two-commit closure pattern:
+  code/docs first, generated index refresh second.
+
+The lessen index should be checked against the sibling lesson repo only when
+that repo is available; if it is not available, the checker should report a skip
+rather than false failure.
 
 Add focused tests for the checker.
 
@@ -198,8 +205,9 @@ npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --hea
 npm.cmd run finalization:freshness
 ```
 
-If `agent:index` or `emit-url-index` changes files, include those generated
-updates in the commit. Rerun `check:agent-index-freshness`,
+Commit code/docs before the generated index refresh when possible. If
+`agent:index` or `emit-url-index` changes files, include those generated updates
+in a final generated-index commit. Rerun `check:agent-index-freshness`,
 `check:paragraph-lane-scope`, and `finalization:freshness` on the exact final
 head before push.
 

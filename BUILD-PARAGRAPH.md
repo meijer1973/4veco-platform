@@ -23,9 +23,9 @@ This document covers two pipelines that can run independently or together.
 artifacts:
 
 ```bash
+node scripts/validate-paragraph.js --mode part-a --profile student-web "<paragraph>"
+node scripts/validate-paragraph.js --mode part-b --profile student-web "<paragraph>"
 node scripts/validate-paragraph.js --mode complete --profile student-web "<paragraph>"
-node scripts/validate-paragraph.js --mode complete --profile legacy-full "<paragraph>"
-node scripts/validate-paragraph.js --mode complete --profile office "<paragraph>"
 node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<paragraph>"
 ```
 
@@ -128,7 +128,7 @@ node scripts/validate-paragraph.js --mode complete "<paragraph folder>" # aggreg
 
 **Quality records (single file, two blocks):**
 
-`${parNr}-quality-ref.yaml` is `schema_version: 2`. Carries a `partA:` block (asset state, content presence, Part A review verdict) and a `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state). In Part B and complete modes, the validator requires `companion.review_file`, `companion.review_verdict`, and `companion.hard_fails_open` to match `${parNr}-companion-visual-review.md`. Defined in `skills/econ-quality-control` and in `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
+`${parNr}-quality-ref.yaml` is `schema_version: 2`. Carries a `partA:` block (asset state, content presence, Part A review verdict) and a `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state). In Part B and complete modes, the validator requires `companion.review_file`, `companion.review_verdict`, and `companion.hard_fails_open` to match `${parNr}-companion-visual-review.md`. Defined in `skills/econ-quality-control` and in `docs/workflows/paragraph-quality-ref-schema-v2.md`.
 
 ---
 
@@ -315,15 +315,15 @@ Part B starts from the approved Part A handoff. If the handoff is missing,
 stale, or says `BLOCKED`, stop and request a Part A repair or handoff update
 instead of silently rewriting textbook source files.
 
-**If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
+**If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, optional Office-doc, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
 
 > **Visual variant rule:** Do not treat dual coding as literal reuse of Part A book art. A visual anchor means students see the same concept and data across surfaces, not the same PNG pasted everywhere. Web pages with dark mode require a dark visual variant when the image contains text, axes, colored fills, or a light background.
 
 ## B0. Target and layout
 
-- **Target repo:** `C:\Projects\4veco\4veco-lessen`.
+- **Target repo:** the sibling `../4veco-lessen` checkout unless the task sets an explicit lesson root such as `FOURVECO_LESSEN_ROOT`.
 - **Naming:** `Boek N - Title / N.X Hoofdstuk X - Name / N.X.Y [Naam]`. Books replace the old "Module N" level; chapters and paragraphs keep their two- and three-part numbering.
-- **Per-paragraph layout is flat.** All generated Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, review.md, quality-ref.yaml, and any optional PDFs/Office exports). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
+- **Per-paragraph layout is flat.** All generated Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, review.md, quality-ref.yaml, optional Part A publisher PDFs, and opt-in Office exports). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
 - **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
 - **Legacy subfolder-layout references in older guides are legacy.** For new work, this spec supersedes them. The old game target stays on its subfolder layout until it retires in September 2026.
@@ -576,7 +576,7 @@ BOOK="../4veco-lessen/Boek N - Title"
 PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
 mkdir -p "$PAR"
 # Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
-# Part A outputs and all 27 Part B files, including index.html, live at the paragraph root.
+# Part A outputs, all student-web Part B files, and opt-in Office/legacy files live at the paragraph root.
 # Static "Lees dit..." file — copy from any existing lessen paragraph:
 cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
@@ -693,11 +693,11 @@ legacy-full run where `.docx` sources are deliberately part of the product.
 
 ### Phase 6a: Companion visual review gate
 
-Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and the PPTX presentation route). DOCX companion exports are opt-in Office/legacy profile work. PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
 
 Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
 
-> "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
+> "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, PPTX, and opt-in Office companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
 
 Hard fails from this agent block completion. Fix the source, generator, CSS/JS, asset builder, or registry issue; regenerate; then rerun the companion review. Do not close a generated-output defect by hand-editing the generated lesson artifact unless the team explicitly requests a temporary patch.
 
@@ -855,11 +855,16 @@ For Part B/complete mode, game runtime data lives in `<book>/shared/`:
 
 The raw reasoning CSV source is kept in `source-data/book-N/reasoning/X.Y.Z.csv` in the platform repo, then compiled into `shared/reasoning/X.Y.Z.js`. Do not validate it as `shared/reasoning/X.Y.Z.csv`.
 
-After building, run the paragraph validator:
+After building, run the validator for the lane that changed:
 
 ```bash
+node scripts/validate-paragraph.js --mode part-a --profile student-web "<path-to-paragraph-folder>"
+node scripts/validate-paragraph.js --mode part-b --profile student-web "<path-to-paragraph-folder>"
 node scripts/validate-paragraph.js --mode complete --profile student-web "<path-to-paragraph-folder>"
 ```
+
+Use `complete` only for integration verification after both lanes exist or when
+a complete bundle was explicitly authorized.
 
 This checks:
 For `student-web`, read the old "27 files" wording below as the legacy/full

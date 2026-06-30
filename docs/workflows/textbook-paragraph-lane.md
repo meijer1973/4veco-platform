@@ -2,6 +2,8 @@
 
 Purpose: build only the Part A textbook paragraph. This lane produces theory,
 worked examples, exercises, answers, core visuals, and textbook validation.
+Publisher-print PDFs also belong to this lane, but only when explicitly
+requested.
 
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary textbook paragraph production.
@@ -21,9 +23,10 @@ assignment surface for ordinary textbook paragraph production.
 - `_assets/X.Y.Z_ex_*.svg`
 - `_assets/X.Y.Z_ex_*.png`
 - `X.Y.Z-review.md`
-- `X.Y.Z-quality-ref.yaml` `partA:` block
+- `X.Y.Z-quality-ref.yaml` `partA:` block (see `docs/workflows/paragraph-quality-ref-schema-v2.md`)
 - `X.Y.Z-textbook-handoff.md`
-- Publisher-print PDFs only when explicitly requested.
+- Publisher-print PDFs only when explicitly requested. PDF output is not owned
+  by the Part B companion lane.
 
 ## Forbidden Outputs
 
