@@ -2,8 +2,10 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const { guardHistoricalChecker } = require('../lib/exercise-currentness');
 
 const platformRoot = path.resolve(__dirname, '..', '..');
+guardHistoricalChecker(__filename);
 const gateId = 'GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review';
 const gateDir = path.join(platformRoot, 'reports', 'review-gates', gateId);
 const lessonRoot = path.resolve(platformRoot, '..', '4veco-lessen', 'Boek 1 - Grondslagen, vraag en aanbod');
