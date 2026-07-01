@@ -18,8 +18,8 @@
     "book_architecture": "reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md"
   },
   "source_lineage": {
-    "platform_main_head_sha": "8498bd83b3e447ca0fbdb663057b28659c2c5a2f",
-    "lesson_main_head_sha": "6ecc935ef93de285b78850ab2f24b7e37867ad6c",
+    "platform_main_head_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+    "lesson_main_head_sha": "43a6d921bda67a5593d2f0dcc0a89a44a99d42b5",
     "adoption_prep_expected_return": "YEAR 2 FOUR-TARGET PRODUCT-ROUTE ADOPTION PREP READY",
     "lesson_manifest_status": "generated_candidate_lesson_output_for_cross_repo_product_review",
     "lesson_output_root": "year2-candidate-lessons/four-target-lesson-production-1"

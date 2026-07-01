@@ -41,5 +41,5 @@ Status: plan_ready_for_human_review
 - Accessibility/inclusion review
 - Final lead review
 - Exact-head PR Readiness Reviewer route with branch protection ok:true
-- Explicit human owner authorization before merge or any later source-refresh execution pilot
+- Owner payload authorization before merge or any later source-refresh execution pilot
 

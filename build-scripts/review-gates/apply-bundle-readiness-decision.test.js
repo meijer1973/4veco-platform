@@ -231,7 +231,7 @@ describe('apply-bundle-readiness-decision', () => {
     expect(markdown).toContain('Delegated bundle controller proof');
     expect(markdown).toContain('Controller CI head');
     expect(markdown).toContain('Delegated lead review');
-    expect(markdown).toContain('member reviewed head');
+    expect(markdown).toContain('member reviewed payload head');
     expect(markdown).toContain('Delegated branch protection');
     expect(markdown).toContain('lesson branch protection not required; readiness uses delegated controller proof');
     expect(markdown).not.toContain('approval_count_source');

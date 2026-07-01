@@ -1245,7 +1245,7 @@ function integrateBundle(options = {}) {
         deps,
         member.integration_head_sha,
         'success',
-        'Bundle authorization inherited for exact platform integration head',
+        'Bundle payload authorization inherited; platform integration head validated',
         pr.url,
         options
       );
@@ -1328,7 +1328,7 @@ function integrateBundle(options = {}) {
         deps,
         member.integration_head_sha,
         'success',
-        'Bundle authorization inherited for exact platform integration head',
+        'Bundle payload authorization inherited; platform integration head validated',
         pr.url,
         options
       );

@@ -1,6 +1,7 @@
 const {
   markerFor,
   parseBundleAuthorizationComment,
+  renderBundleAuthorizationTemplate,
   validateBundleAuthorizationCommentMetadata,
   validateBundleAuthorizationRecord,
 } = require('./check-human-bundle-authorization');
@@ -50,6 +51,16 @@ describe('human bundle authorization', () => {
     expect(() => parseBundleAuthorizationComment('APPROVED, please merge both PRs')).toThrow(
       'bundle authorization marker not found'
     );
+  });
+
+  test('renders the canonical bundle payload authorization handoff label', () => {
+    const body = renderBundleAuthorizationTemplate(record);
+
+    expect(body).toContain('HUMAN_DECISION: APPROVE_BUNDLE_AND_MERGE');
+    expect(body).toContain('AUTHORIZATION_TYPE: BUNDLE_PAYLOAD_AUTHORIZATION');
+    expect(body).toContain(`CONTROLLER_REVIEWED_PAYLOAD_HEAD: ${record.controller.reviewed_payload_head_sha}`);
+    expect(body).toContain(`MEMBER_1_REVIEWED_PAYLOAD_HEAD: ${record.members[0].reviewed_payload_head_sha}`);
+    expect(parseBundleAuthorizationComment(body)).toEqual(record);
   });
 
   test('rejects marker and JSON bundle mismatch', () => {

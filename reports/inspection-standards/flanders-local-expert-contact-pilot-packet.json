@@ -131,7 +131,7 @@
     },
     {
       "id": "no_real_contact_before_owner_authorization",
-      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before exact-head owner authorization.",
+      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization.",
       "status": "met",
       "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
     },
@@ -204,7 +204,7 @@
     "evidence packs"
   ],
   "does_not_authorize": [
-    "contact dispatch before exact-head owner authorization",
+    "contact dispatch before owner payload authorization",
     "named expert selection",
     "personal-data processing",
     "student data or support-record processing",
@@ -264,7 +264,7 @@
   },
   "finding_classification": [
     {
-      "finding": "Flanders contact text is ready only for exact-head owner-authorized dispatch.",
+      "finding": "Flanders contact text is ready only for owner payload-authorized dispatch.",
       "classification": "core_requirement_met",
       "blocks": "Nothing for human review once checker, specialists, final lead, CI, branch protection, and PR readiness pass.",
       "does_not_block": "Human review of this internal contact-stage packet.",
@@ -275,7 +275,7 @@
       "classification": "human_authorization_required",
       "blocks": "Sending contact text, storing real expert response records, or treating expert feedback as authority.",
       "does_not_block": "Reviewing the internal contact-stage packet.",
-      "proof_required_to_close": "Explicit owner authorization that cites the PR head and current green checks."
+      "proof_required_to_close": "Owner payload authorization that names reviewed_payload_head_sha and current green checks."
     }
   ]
 }

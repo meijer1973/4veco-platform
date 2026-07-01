@@ -1316,8 +1316,23 @@ function renderDecisionMarkdown(decision) {
   const ciHeadLabel = delegatedBundleProof ? 'Controller CI head' : 'CI head';
   const ciStatusLabel = delegatedBundleProof ? 'Controller CI status' : 'CI status';
   const branchProtectionLabel = delegatedBundleProof ? 'Delegated branch protection' : 'Branch protection';
+  const integrationProof = decision.proof.integration || {};
+  const reviewedPayloadHead = integrationProof.reviewed_payload_head_sha || decision.reviewed_pr.head_sha;
+  const integrationHead = integrationProof.integration_head_sha || decision.reviewed_pr.head_sha;
+  const readyRoute = decision.route === ROUTES.READY_FOR_LEAD_ONLY || decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
+  const payloadAuthorizationRequired = decision.route === ROUTES.READY_FOR_HUMAN_REVIEW && !decision.proof.human_authorization;
+  const bundleProof = decision.proof.bundle || null;
+  const hasBundlePayload = Boolean(
+    bundleProof &&
+      (
+        bundleProof.required === true ||
+        bundleProof.delegated === true ||
+        bundleProof.summary ||
+        (decision.throughput && decision.throughput.class === 'cross_repo_bundle')
+      )
+  );
   const leadReviewLine = delegatedBundleProof
-    ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
+    ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed payload head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
     : `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``;
   const lines = [
     decisionMarker(decision),
@@ -1327,7 +1342,11 @@ function renderDecisionMarkdown(decision) {
     `- Allowed transition: \`${decision.allowed_transition}\``,
     `- Repository: \`${decision.reviewed_pr.repo}\``,
     `- PR: #${decision.reviewed_pr.number}`,
-    `- Reviewed head: \`${decision.reviewed_pr.head_sha}\``,
+    `- Reviewed payload head: \`${reviewedPayloadHead}\``,
+    `- Current PR head: \`${decision.reviewed_pr.head_sha}\``,
+    `- Integration head: \`${integrationHead}\``,
+    `- Payload authorization required: \`${payloadAuthorizationRequired}\``,
+    `- Integration validation required: \`${readyRoute}\``,
     `- Throughput level: \`${decision.throughput.level}\``,
     `- Human-review payload: \`${decision.human_review_payload}\``,
     `- Human notification required: \`${decision.human_notification_required}\``,
@@ -1349,6 +1368,20 @@ function renderDecisionMarkdown(decision) {
   }
   lines.push(
     '',
+    '## Authorization Model',
+    '',
+    '- Owner decisions authorize the reviewed payload head and decision scope.',
+    '- The integration lane validates the current integration head before merge.',
+    '- A later integration head does not require renewed owner authorization when the serialized lane proves payload lineage, effective-payload equivalence, unchanged bundle membership, and unchanged authority scope.',
+    '- Substantive payload change, manual conflict resolution affecting behavior, changed bundle membership, or authority-scope change returns to owner review.'
+  );
+  if (hasBundlePayload) {
+    lines.push(
+      '- Bundle payload authorization is requested for the reviewed controller/member payload heads. The bundle lane will select/validate the integration heads and merge order before merging.'
+    );
+  }
+  lines.push(
+    '',
     '## Proof Summary',
     '',
     ...(delegatedBundleProof
@@ -1366,10 +1399,10 @@ function renderDecisionMarkdown(decision) {
     `- ${branchProtectionLabel}: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
   if (decision.proof.human_authorization) {
-    lines.push(`- Human payload authorization: \`${JSON.stringify(decision.proof.human_authorization)}\``);
+    lines.push(`- Payload authorization record: \`${JSON.stringify(decision.proof.human_authorization)}\``);
   }
   if (decision.proof.integration) {
-    lines.push(`- Integration proof: \`${JSON.stringify(decision.proof.integration)}\``);
+    lines.push(`- Integration validation proof: \`${JSON.stringify(decision.proof.integration)}\``);
   }
   lines.push(
     '',

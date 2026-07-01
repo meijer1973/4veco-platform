@@ -33,15 +33,15 @@ Allowed options:
 
 ## Required Before Any Execution Pilot
 
-- Human acceptance of this packet at exact PR head.
+- Owner payload authorization for this packet's reviewed_payload_head_sha.
 - A separate source-refresh execution pilot sprint with explicit official-source rows and no hidden discovery.
 - Fresh specialist and final lead review for the execution pilot.
-- Explicit owner authorization naming the execution pilot exact head.
+- Owner payload authorization naming the execution pilot reviewed_payload_head_sha and decision scope.
 
 ## Finding Classification
 
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 | --- | --- | --- | --- | --- |
-| The selected decision is PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT. | `core_requirement_met` | Nothing for human review of this packet when validations and reviews pass. | A later, separately authorized execution pilot. | Final lead PASS, exact-head PR readiness, branch protection ok:true, green CI, and explicit owner authorization. |
-| The selected decision does not itself execute refresh or unlock downstream authority. | `scale_blocker` | All execution, expert contact/substitution, output, product, school, public, student, personal-data, compliance, inspection, support, and accommodation authority. | Human review of the planning-only packet. | Separate reviewed sprint and explicit owner authorization. |
+| The selected decision is PROCEED_TO_SOURCE_REFRESH_EXECUTION_PILOT. | `core_requirement_met` | Nothing for human review of this packet when validations and reviews pass. | A later, separately authorized execution pilot. | Final lead PASS, exact-head PR readiness, branch protection ok:true, green CI, and owner payload authorization. |
+| The selected decision does not itself execute refresh or unlock downstream authority. | `scale_blocker` | All execution, expert contact/substitution, output, product, school, public, student, personal-data, compliance, inspection, support, and accommodation authority. | Human review of the planning-only packet. | Separate reviewed sprint and owner payload authorization. |
 

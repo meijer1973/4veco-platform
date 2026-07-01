@@ -2190,8 +2190,128 @@ describe('pr-readiness-router', () => {
     const decision = classifyPrReadiness(readFixture('live-l1-ready.json'));
     const markdown = renderDecisionMarkdown(decision);
     expect(markdown).toContain('## Proof Summary');
+    expect(markdown).toContain('Reviewed payload head');
+    expect(markdown).toContain('Integration head');
+    expect(markdown).toContain('Payload authorization required');
+    expect(markdown).toContain('Integration validation required');
     expect(markdown).toContain('validate-platform');
     expect(markdown).toContain('reports/sprints/LIVE-L1-lead-review-round2.md');
+    expect(markdown).not.toMatch(new RegExp('authorize exact ' + 'head', 'i'));
+    expect(markdown).not.toMatch(new RegExp('exact-head ' + 'authorization', 'i'));
+  });
+
+  test('single-PR human review readiness does not render bundle authorization wording', () => {
+    const decision = classifyPrReadiness(readFixture('live-governance-human.json'));
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(markdown).toContain('Reviewed payload head');
+    expect(markdown).toContain('Integration head');
+    expect(markdown).toContain('Payload authorization required');
+    expect(markdown).not.toContain('Bundle payload authorization is requested');
+  });
+
+  test('cross-repo bundle readiness renders bundle authorization wording', () => {
+    const decision = coordinatedBundleDecision();
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(decision.throughput.class).toBe('cross_repo_bundle');
+    expect(markdown).toContain('Bundle payload authorization is requested');
+  });
+
+  test('default non-bundle proof object does not render bundle authorization wording', () => {
+    const decision = classifyPrReadiness(readFixture('live-governance-human.json'));
+    const markdown = renderDecisionMarkdown({
+      ...decision,
+      proof: {
+        ...decision.proof,
+        bundle: {
+          required: false,
+          delegated: false,
+          ok: true,
+          failures: [],
+          summary: null,
+        },
+      },
+    });
+
+    expect(markdown).not.toContain('Bundle payload authorization is requested');
+  });
+
+  test('rendered integration comment treats base-sync descendants as integration validation', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-platform',
+        number: 136,
+        url: 'https://github.com/meijer1973/4veco-platform/pull/136',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: integrationHead,
+        merge_state: 'CLEAN',
+        mergeable: true,
+      },
+      changed_paths: ['docs/review/pr-integration-lane-policy.md'],
+      throughput: {
+        class: 'normal_sprint',
+        authority_class: 'high_authority',
+        level: 'L4',
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: { viable: false, target: null, reason: null },
+      proof: {
+        ...explicitProof(integrationHead),
+        lead_review: {
+          path: 'subagent:payload-head final lead review',
+          result: 'PASS',
+          reviewed_commit_sha: payloadHead,
+        },
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: false,
+          failures: [],
+          base_drift: {
+            classification: 'no_substantive_overlap',
+            requires_integration_delta_lead_review: false,
+            requires_human_reauthorization: false,
+          },
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain(`Reviewed payload head: \`${payloadHead}\``);
+    expect(markdown).toContain(`Integration head: \`${integrationHead}\``);
+    expect(markdown).toContain('The integration lane validates the current integration head before merge.');
+    expect(markdown).toContain('does not require renewed owner authorization');
+  });
+
+  test('rendered decision comment says substantive payload changes return to owner review', () => {
+    const decision = classifyPrReadiness({
+      ...readFixture('lead-stale-substantive-revise.json'),
+      proof: {
+        ...readFixture('lead-stale-substantive-revise.json').proof,
+        integration: {
+          reviewed_payload_head_sha: 'a'.repeat(40),
+          integration_head_sha: readFixture('lead-stale-substantive-revise.json').reviewed_pr.head_sha,
+          authorization_inherited: false,
+          failures: ['changed_effective_payload'],
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Substantive payload change');
+    expect(markdown).toContain('returns to owner review');
   });
 
   test('rendered decision parser rejects marker and machine-decision disagreement', () => {

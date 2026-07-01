@@ -1020,7 +1020,7 @@ function integrate(options) {
 
   if (options.noMerge) {
     if (!activatedMerge) {
-      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
+      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
     }
     return { ok: true, phase: 'authorized_no_merge', pr, main_sha: finalMainSha, lineage: finalLineage, readiness };
   }
@@ -1031,7 +1031,7 @@ function integrate(options) {
     if (options.dryRun) {
       merge = { dry_run: true, auto_merge: true, head_sha: pr.headRefOid };
       autoMergeState = verifyAutoMergeEnabled(repo, prNumber, pr.headRefOid, deps, options);
-      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
+      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
       mergedPr = { state: 'MERGED', mergeCommit: { oid: pr.headRefOid }, headRefOid: pr.headRefOid };
     } else {
       try {
@@ -1098,7 +1098,7 @@ function integrate(options) {
           auto_merge_diagnostics: diagnostics,
         };
       }
-      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
+      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
       const observed = deps.waitForPrMerge(repo, prNumber, pr.headRefOid, options);
       if (!observed.ok) {
         const diagnostics = collectAutoMergeDiagnostics(repo, prNumber, pr.headRefOid, deps, options);
@@ -1138,7 +1138,7 @@ function integrate(options) {
       mergedPr = observed.pr;
     }
   } else {
-    deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Human payload authorization inherited for exact integration head', pr.url, options);
+    deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
     try {
       merge = deps.mergePr(repo, prNumber, pr.headRefOid, options);
     } catch (error) {
