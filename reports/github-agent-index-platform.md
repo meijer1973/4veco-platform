@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-30T08:07:44.648Z
+Generated: 2026-07-01T06:31:45.915Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/agent-doc-governance-cleanup-20260630`
-Source commit: `73e9e49a69b32c55dd9701e0b5405f97ddf47604`
-Files indexed: 6705
+Source commit: `8e338d48aeb2f241711929e4700e5aa2076cf6fd`
+Files indexed: 6778
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 650
+Count: 657
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -184,6 +184,8 @@ Count: 650
 - build-scripts/content/book-1/b1-113-presentation-v2-model.js
 - build-scripts/content/book-1/b1-113-presentation-v2.js
 - build-scripts/content/book-1/b1-113-student-web.js
+- build-scripts/content/book-1/build-presentation-v2.js
+- build-scripts/content/book-1/presentation-v2-registry.js
 - build-scripts/content/book-1/README.md
 - build-scripts/content/legacy-target/build-311-basisopgaven.js
 - build-scripts/content/legacy-target/build-infographic-311.js
@@ -227,6 +229,7 @@ Count: 650
 - build-scripts/inspection/build-internal-overlay-trial-contract.js
 - build-scripts/inspection/build-international-overlay-architecture.js
 - build-scripts/inspection/build-international-quality-standards.js
+- build-scripts/inspection/build-local-expert-contact-pilot.js
 - build-scripts/inspection/build-local-expert-review-request-packet.js
 - build-scripts/inspection/build-local-expert-source-refresh-gate.js
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
@@ -244,6 +247,8 @@ Count: 650
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
+- build-scripts/inspection/check-local-expert-contact-pilot.js
+- build-scripts/inspection/check-local-expert-contact-pilot.test.js
 - build-scripts/inspection/check-local-expert-review-request-packet.js
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
@@ -322,6 +327,7 @@ Count: 650
 - build-scripts/references/build-mtu-h7-execution-benchmark-bundle-1.js
 - build-scripts/references/build-mtu-h7-execution-protocol-views-1.js
 - build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
+- build-scripts/references/build-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/build-mtu-h7-operation-registry-governance-bundle-1.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
@@ -426,6 +432,7 @@ Count: 650
 - build-scripts/references/check-mtu-h7-execution-benchmark-bundle-1.js
 - build-scripts/references/check-mtu-h7-execution-protocol-views-1.js
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
+- build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
@@ -823,7 +830,7 @@ Count: 25
 
 ## validators
 
-Count: 643
+Count: 647
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -833,6 +840,7 @@ Count: 643
 - archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-validation-log.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
@@ -894,6 +902,8 @@ Count: 643
 - build-scripts/inspection/check-international-overlay-architecture.js
 - build-scripts/inspection/check-international-overlay-architecture.test.js
 - build-scripts/inspection/check-international-quality-standards.js
+- build-scripts/inspection/check-local-expert-contact-pilot.js
+- build-scripts/inspection/check-local-expert-contact-pilot.test.js
 - build-scripts/inspection/check-local-expert-review-request-packet.js
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
@@ -980,6 +990,7 @@ Count: 643
 - build-scripts/references/check-mtu-h7-execution-benchmark-bundle-1.js
 - build-scripts/references/check-mtu-h7-execution-protocol-views-1.js
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
+- build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
@@ -1471,7 +1482,7 @@ Count: 643
 
 ## references
 
-Count: 863
+Count: 884
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1574,6 +1585,25 @@ Count: 863
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/negative/unknown-source-ids.sample.json
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/england-internal-overlay-trial-contract.sample.json
 - references/data/inspection-standards/fixtures/internal-overlay-trial-contract/positive/flanders-internal-overlay-trial-contract.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/england-whole-uk-overclaim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/flanders-all-belgium-overclaim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/hidden-uncertainty.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/jurisdiction-mismatch.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/legal-compliance-claim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/localized-output-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/missing-consent-boundary.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/missing-forbidden-disclaimer.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/out-of-scope-question.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/out-of-scope-source.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/personal-data-in-text.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/personal-data-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/school-specific-evidence-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/support-accommodation-sufficiency-overclaim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/unauthorized-contact-dispatch.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/england-local-expert-contact-pilot-packet.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/flanders-local-expert-contact-pilot-packet.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/local-expert-contact-pilot-decision.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/local-expert-response-intake-report.sample.json
 - references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/compliance-proof-request.sample.json
 - references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/england-to-uk-generalization.sample.json
 - references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/exam-ready-exercises.sample.json
@@ -2292,6 +2322,8 @@ Count: 863
 - references/schemas/internal-overlay-trial-contract.schema.v1.json
 - references/schemas/international-jurisdiction-overlay.schema.json
 - references/schemas/international-jurisdiction-overlay.schema.v1.json
+- references/schemas/local-expert-contact-consent.schema.v1.json
+- references/schemas/local-expert-response-intake.schema.v1.json
 - references/schemas/local-expert-review-request.schema.v1.json
 - references/schemas/local-expert-review-response.schema.v1.json
 - references/schemas/local-expert-source-refresh-gate.schema.v1.json
@@ -2339,7 +2371,7 @@ Count: 863
 
 ## reports
 
-Count: 4321
+Count: 4353
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2400,8 +2432,16 @@ Count: 4321
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -2452,6 +2492,8 @@ Count: 4321
 - reports/inspection-standards/england-internal-no-output-trial-simulation.md
 - reports/inspection-standards/england-internal-overlay-trial-contract.json
 - reports/inspection-standards/england-internal-overlay-trial-contract.md
+- reports/inspection-standards/england-local-expert-contact-pilot-packet.json
+- reports/inspection-standards/england-local-expert-contact-pilot-packet.md
 - reports/inspection-standards/england-local-expert-review-request-packet.json
 - reports/inspection-standards/england-local-expert-review-request-packet.md
 - reports/inspection-standards/england-source-refresh-execution-results.json
@@ -2466,6 +2508,8 @@ Count: 4321
 - reports/inspection-standards/flanders-internal-no-output-trial-simulation.md
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.json
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.md
+- reports/inspection-standards/flanders-local-expert-contact-pilot-packet.json
+- reports/inspection-standards/flanders-local-expert-contact-pilot-packet.md
 - reports/inspection-standards/flanders-local-expert-review-request-packet.json
 - reports/inspection-standards/flanders-local-expert-review-request-packet.md
 - reports/inspection-standards/flanders-source-refresh-execution-results.json
@@ -2504,6 +2548,14 @@ Count: 4321
 - reports/inspection-standards/international-overlay-archetype-pilot.md
 - reports/inspection-standards/international-overlay-architecture-decision.json
 - reports/inspection-standards/international-overlay-architecture-decision.md
+- reports/inspection-standards/local-expert-contact-pilot-decision.json
+- reports/inspection-standards/local-expert-contact-pilot-decision.md
+- reports/inspection-standards/local-expert-contact-pilot-plan.json
+- reports/inspection-standards/local-expert-contact-pilot-plan.md
+- reports/inspection-standards/local-expert-contact-pilot-simulation.json
+- reports/inspection-standards/local-expert-contact-pilot-simulation.md
+- reports/inspection-standards/local-expert-response-intake-report.json
+- reports/inspection-standards/local-expert-response-intake-report.md
 - reports/inspection-standards/local-expert-review-request-decision.json
 - reports/inspection-standards/local-expert-review-request-decision.md
 - reports/inspection-standards/local-expert-review-request-plan.json
@@ -2844,11 +2896,18 @@ Count: 4321
 - reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.md
 - reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.json
 - reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.md
+- reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json
+- reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.md
+- reports/mtu-hardening/mtu-h7-nonprotected-execution-report-2.json
+- reports/mtu-hardening/mtu-h7-nonprotected-execution-report-2.md
+- reports/mtu-hardening/mtu-h7-nonprotected-negative-regression-fixtures-2.json
 - reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json
 - reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json
 - reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.md
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.md
+- reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json
+- reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.md
 - reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
@@ -3834,6 +3893,11 @@ Count: 4321
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/lead-review.md
+- reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/review-packet.json
+- reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/review-packet.md
+- reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/review-team-results.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review-template.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md
@@ -6683,7 +6747,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 688
+Count: 700
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6741,6 +6805,15 @@ Count: 688
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-teacher-economics-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-accessibility-inclusion-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-closure-record.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-correction-log.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-dutch-quality-inspection-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-legal-privacy-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-plan-architecture-lead-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-teacher-economics-review.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-accessibility-inclusion-review.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-closure-record.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-correction-log.md
@@ -7041,12 +7114,14 @@ Count: 688
 - docs/inspection-standards/bounded-source-refresh-packet-contract.md
 - docs/inspection-standards/chapter-1-3-source-traceability.md
 - docs/inspection-standards/england-bounded-source-refresh-packet.md
+- docs/inspection-standards/england-local-expert-contact-text.md
 - docs/inspection-standards/england-local-expert-review-request.md
 - docs/inspection-standards/england-local-expert-source-gate.md
 - docs/inspection-standards/england-overlay-deepening.md
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/flanders-bounded-source-refresh-packet.md
+- docs/inspection-standards/flanders-local-expert-contact-text.md
 - docs/inspection-standards/flanders-local-expert-review-request.md
 - docs/inspection-standards/flanders-local-expert-source-gate.md
 - docs/inspection-standards/flanders-overlay-deepening.md
@@ -7056,6 +7131,7 @@ Count: 688
 - docs/inspection-standards/international-overlay-architecture.md
 - docs/inspection-standards/international-overlay-descriptor-contract.md
 - docs/inspection-standards/international-overlay-governance-rules.md
+- docs/inspection-standards/local-expert-contact-pilot-contract.md
 - docs/inspection-standards/local-expert-review-request-contract.md
 - docs/inspection-standards/local-expert-review-request-template.md
 - docs/inspection-standards/local-expert-source-refresh-gate-contract.md

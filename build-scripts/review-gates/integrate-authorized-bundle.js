@@ -150,6 +150,7 @@ function fetchPr(repo, prNumber) {
     'headRefOid',
     'mergeStateStatus',
     'mergeable',
+    'mergeCommit',
     'statusCheckRollup',
   ].join(',');
   return JSON.parse(runGh(['pr', 'view', String(prNumber), '--repo', repo, '--json', fields]));
@@ -763,6 +764,76 @@ function validateMemberPreflight(repo, pr, member, deps, options = {}) {
   };
 }
 
+function validateMergedMemberResume(repo, pr, member, deps, options = {}) {
+  const expectedHeadSha = options.expectedHeadSha ||
+    member.integration_head_sha ||
+    member.head_sha ||
+    member.reviewed_payload_head_sha;
+  const mergeCommit = pr && pr.mergeCommit && pr.mergeCommit.oid;
+  const currentMainSha = options.currentMainSha || deps.fetchMainSha(repo);
+  const failures = [];
+  if (options.allowPartialResume !== true) failures.push('partial_resume_not_allowed');
+  if (repo !== LESSON_REPO) failures.push('partial_resume_only_lesson_member');
+  if (!pr || pr.state !== 'MERGED') failures.push('partial_resume_member_not_merged');
+  if (pr && pr.headRefOid !== expectedHeadSha) failures.push('partial_resume_head_mismatch');
+  if (!mergeCommit) failures.push('partial_resume_merge_commit_missing');
+  if (mergeCommit && currentMainSha !== mergeCommit) failures.push('partial_resume_merge_commit_not_current_main');
+  const compare = expectedHeadSha && mergeCommit
+    ? deps.fetchCompareStatus(repo, expectedHeadSha, mergeCommit)
+    : null;
+  if (compare && !['ahead', 'identical'].includes(compare.status)) {
+    failures.push('partial_resume_head_not_ancestor_of_merge_commit');
+  }
+  const readiness = pr
+    ? deps.fetchReadinessComment(repo, pr.number, expectedHeadSha)
+    : null;
+  const reviewThreads = pr
+    ? deps.fetchReviewThreadState(repo, pr.number)
+    : null;
+  failures.push(...validateReadiness(readiness));
+  failures.push(...validateReviewThreadState(reviewThreads));
+  return {
+    ok: failures.length === 0,
+    failures,
+    expected_head_sha: expectedHeadSha,
+    merge_commit: mergeCommit || null,
+    current_main_sha: currentMainSha,
+    compare,
+    readiness,
+    reviewThreads,
+  };
+}
+
+function validatePartialResumeCompatibility(compatibility, platformMainSha, platformMember, lessonMember) {
+  const exact = compatibility && compatibility.exact_members || {};
+  const failures = [];
+  if (platformMainSha !== exact.platform_base_sha) failures.push('partial_resume_platform_main_advanced');
+  if (platformMember.integration_head_sha !== exact.platform_candidate_sha) {
+    failures.push('partial_resume_platform_candidate_mismatch');
+  }
+  if (lessonMember.integration_head_sha !== exact.lesson_candidate_sha) {
+    failures.push('partial_resume_lesson_candidate_mismatch');
+  }
+  return {
+    ok: failures.length === 0,
+    failures,
+    exact_members: exact,
+  };
+}
+
+function waitForIntermediatePlatformCi(deps, options = {}) {
+  const expectedPlatformSha = deps.fetchMainSha(PLATFORM_REPO);
+  const expectedLessonSha = deps.fetchMainSha(LESSON_REPO);
+  const minDatabaseId = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, expectedPlatformSha);
+  deps.triggerPlatformCi(options);
+  return deps.waitForPlatformMainCi(expectedPlatformSha, {
+    ...options,
+    minDatabaseId,
+    expectedPlatformSha,
+    expectedLessonSha,
+  });
+}
+
 function memberByRepo(record, repo) {
   if (record.controller && record.controller.repository === repo) return record.controller;
   return (record.members || []).find((member) => member.repository === repo) || null;
@@ -787,16 +858,17 @@ function defaultDeps(options = {}) {
     latestWorkflowRunDatabaseId,
     preflightCrossRepoPermissions,
     validatePrState,
-    recomputeCompatibility: (record, exactMembers = {}) => {
+    recomputeCompatibility: (record, exactMembers = null) => {
       if (!options.compatibilityProofPath) throw new Error('--compatibility-proof is required');
       const compatibility = validateCompatibilityProof(readJson(options.compatibilityProofPath), {
         bundleId: options.bundleId || (record && record.bundle_id) || undefined,
-        exactMembers,
+        exactMembers: exactMembers || {},
       });
+      const expectedExactMembers = exactMembers || compatibility.exact_members || {};
       const verifier = options.verifyCompatibilityWorkflowRun || verifyCompatibilityWorkflowRun;
       const provenance = verifier(options.compatibilityRunId, compatibility, {
         bundleId: options.bundleId || (record && record.bundle_id) || undefined,
-        exactMembers,
+        exactMembers: expectedExactMembers,
         compatibilityProofPath: options.compatibilityProofPath,
       }, options);
       return {
@@ -916,6 +988,8 @@ function integrateBundle(options = {}) {
     return { ok: false, phase: 'integration_status', integration_status: pendingStatus };
   }
   const lessonPr = deps.fetchPr(LESSON_REPO, lessonMember.pr_number);
+  const allowPartialResume = options.allowPartialResume === true;
+  const partialResumeCandidate = allowPartialResume && lessonPr && lessonPr.state === 'MERGED';
   const platformMember = memberStateFromPr(PLATFORM_REPO, record.controller, platformPr, platformMainSha, deps);
   const lessonMemberState = memberStateFromPr(LESSON_REPO, lessonMember, lessonPr, lessonMainSha, deps);
   const platformPreflight = validateMemberPreflight(
@@ -925,13 +999,15 @@ function integrateBundle(options = {}) {
     deps,
     { requireValidatePlatform: false }
   );
-  const lessonPreflight = validateMemberPreflight(
-    LESSON_REPO,
-    lessonPr,
-    lessonMemberState,
-    deps,
-    { requireValidatePlatform: false }
-  );
+  const lessonPreflight = partialResumeCandidate
+    ? { ok: true, failures: [], partial_resume_candidate: true }
+    : validateMemberPreflight(
+      LESSON_REPO,
+      lessonPr,
+      lessonMemberState,
+      deps,
+      { requireValidatePlatform: false }
+    );
   const preflight = [
     ...platformPreflight.failures.map((failure) => `platform:${failure}`),
     ...lessonPreflight.failures.map((failure) => `lesson:${failure}`),
@@ -948,12 +1024,14 @@ function integrateBundle(options = {}) {
     }, deps, platformStatus, options, `Bundle preflight failed: ${preflight.join(', ')}`);
   }
 
-  const compatibility = deps.recomputeCompatibility(record, {
-    platform_base_sha: platformMainSha,
-    platform_candidate_sha: platformMember.integration_head_sha,
-    lesson_base_sha: lessonMainSha,
-    lesson_candidate_sha: lessonMemberState.integration_head_sha,
-  });
+  const compatibility = partialResumeCandidate
+    ? deps.recomputeCompatibility(record, null)
+    : deps.recomputeCompatibility(record, {
+      platform_base_sha: platformMainSha,
+      platform_candidate_sha: platformMember.integration_head_sha,
+      lesson_base_sha: lessonMainSha,
+      lesson_candidate_sha: lessonMemberState.integration_head_sha,
+    });
   if (!compatibility.ok) {
     return withTerminalFailureStatus(
       { ok: false, phase: 'compatibility', compatibility },
@@ -973,6 +1051,50 @@ function integrateBundle(options = {}) {
       `Bundle merge order not permitted: ${order || 'missing'}`
     );
   }
+  let partialResume = null;
+  if (partialResumeCandidate) {
+    if (order !== 'lesson-first') {
+      return withTerminalFailureStatus(
+        { ok: false, phase: 'partial_resume', failures: ['partial_resume_requires_lesson_first'], compatibility },
+        deps,
+        platformStatus,
+        options,
+        'Bundle partial resume requires lesson-first compatibility'
+      );
+    }
+    const compatibilityResume = validatePartialResumeCompatibility(
+      compatibility,
+      platformMainSha,
+      platformMember,
+      lessonMemberState
+    );
+    const mergedResume = validateMergedMemberResume(LESSON_REPO, lessonPr, lessonMemberState, deps, {
+      allowPartialResume,
+      currentMainSha: lessonMainSha,
+      expectedHeadSha: compatibility.exact_members && compatibility.exact_members.lesson_candidate_sha,
+    });
+    const failures = [...compatibilityResume.failures, ...mergedResume.failures];
+    if (failures.length > 0) {
+      return withTerminalFailureStatus(
+        {
+          ok: false,
+          phase: 'partial_resume',
+          failures,
+          compatibility_resume: compatibilityResume,
+          merged_resume: mergedResume,
+        },
+        deps,
+        platformStatus,
+        options,
+        `Bundle partial resume failed: ${failures.join(', ')}`
+      );
+    }
+    partialResume = {
+      repo: LESSON_REPO,
+      pr_number: lessonMember.pr_number,
+      ...mergedResume,
+    };
+  }
   if (options.noMerge) {
     return {
       ok: true,
@@ -991,6 +1113,15 @@ function integrateBundle(options = {}) {
     members: [lessonMemberState],
   };
   const steps = mergeStepForOrder(order, runtimeRecord);
+  if (partialResume && (!steps[0] || steps[0].repository !== LESSON_REPO)) {
+    return withTerminalFailureStatus(
+      { ok: false, phase: 'partial_resume', failures: ['partial_resume_first_member_not_lesson'], compatibility },
+      deps,
+      platformStatus,
+      options,
+      'Bundle partial resume requires the first merge member to be the lesson PR'
+    );
+  }
   const merges = [];
   const expectedMain = {
     [PLATFORM_REPO]: platformMainSha,
@@ -1025,6 +1156,42 @@ function integrateBundle(options = {}) {
         current_head_sha: pr.headRefOid,
         merges,
       };
+    }
+    if (partialResume && index === 0 && repo === LESSON_REPO) {
+      const merged = validateMergedPr(repo, member.pr_number, pr);
+      if (!merged.ok) {
+        return withTerminalFailureStatus(
+          { ok: false, phase: 'partial_resume_verification', merge: partialResume, merged },
+          deps,
+          platformStatus,
+          options,
+          `Bundle partial resume verification failed for ${repo}`
+        );
+      }
+      merges.push({
+        repo,
+        pr_number: member.pr_number,
+        merge: {
+          resumed: true,
+          already_merged: true,
+          head_sha: member.integration_head_sha,
+          merge_commit: partialResume.merge_commit,
+        },
+        resumed: true,
+        ...merged,
+      });
+      expectedMain[repo] = partialResume.merge_commit;
+      const intermediateCi = waitForIntermediatePlatformCi(deps, options);
+      if (!intermediateCi.ok) {
+        return withTerminalFailureStatus(
+          { ok: false, phase: 'intermediate_ci', order, intermediate_ci: intermediateCi, merges },
+          deps,
+          platformStatus,
+          options,
+          `Bundle intermediate CI failed: ${intermediateCi.failure || 'unknown'}`
+        );
+      }
+      continue;
     }
     const currentMainForMember = repo === PLATFORM_REPO ? currentPlatformMain : currentLessonMain;
     const currentWithMain = isHeadCurrentWithMain(repo, currentMainForMember, pr.headRefOid, deps);
@@ -1254,16 +1421,7 @@ function integrateBundle(options = {}) {
     merges.push({ repo, pr_number: member.pr_number, merge, ...merged });
     expectedMain[repo] = deps.fetchMainSha(repo);
     if (index === 0) {
-      const expectedPlatformSha = deps.fetchMainSha(PLATFORM_REPO);
-      const expectedLessonSha = deps.fetchMainSha(LESSON_REPO);
-      const minDatabaseId = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, expectedPlatformSha);
-      deps.triggerPlatformCi(options);
-      const intermediateCi = deps.waitForPlatformMainCi(expectedPlatformSha, {
-        ...options,
-        minDatabaseId,
-        expectedPlatformSha,
-        expectedLessonSha,
-      });
+      const intermediateCi = waitForIntermediatePlatformCi(deps, options);
       if (!intermediateCi.ok) {
         return withTerminalFailureStatus(
           { ok: false, phase: 'intermediate_ci', order, intermediate_ci: intermediateCi, merges },
@@ -1312,6 +1470,7 @@ function runCli(argv) {
       compatibilityProofPath: optionValue(argv, '--compatibility-proof'),
       compatibilityRunId: optionValue(argv, '--compatibility-run-id'),
       requireCrossRepoPermissions: flag(argv, '--require-cross-repo-permissions'),
+      allowPartialResume: flag(argv, '--allow-partial-resume'),
       dryRun: flag(argv, '--dry-run'),
       noMerge: flag(argv, '--no-merge'),
       timeoutSeconds: Number(optionValue(argv, '--timeout-seconds') || 1800),

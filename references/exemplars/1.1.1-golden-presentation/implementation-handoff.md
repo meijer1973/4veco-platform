@@ -22,7 +22,9 @@ Do not hand-edit:
 Inspect and update as needed:
 
 - `build-scripts/content/book-1/b1-111-presentation-v2-model.js`
-- `build-scripts/content/book-1/b1-111-presentation-v2-prototype.js`
+- `build-scripts/content/book-1/presentation-v2-registry.js`
+- `build-scripts/content/book-1/build-presentation-v2.js`
+- `build-scripts/content/book-1/b1-111-presentation-v2.js`
 - `build-scripts/lib/render-presentation-v2-html.js`
 - `build-scripts/lib/render-presentation-v2-pptx.js`
 - `engines/presentation-v2.css`
@@ -30,7 +32,9 @@ Inspect and update as needed:
 - `engines/tests/presentation-v2-prototype.test.js`
 - `scripts/qa-presentation-v2-html.js`
 
-Filename churn is optional. Production labels and generated artifact text must not use unfinished-status wording.
+`b1-111-presentation-v2-prototype.js` is historical compatibility context, not
+the active implemented path. Production labels and generated artifact text must
+not use unfinished-status wording.
 
 ## Required Implementation Changes
 

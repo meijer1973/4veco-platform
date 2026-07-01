@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-NONPROTECTED-EXECUTION-AND-PROTECTED-GOVERNANCE-AUTHORIZATION-BUNDLE-2",
+  "gate_id": "GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2",
+  "review_standard": "REV-STD-1",
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "requested_decision": "Review Bundle 2 as a bounded non-protected q4 reviewed-equivalent execution plus protected/q5 hold authorization. Approve only this report/gate/checker surface, not H7 closure or product authority.",
+  "product_end_state_cited": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_spec_cited": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "source_authorization": {
+    "url": "https://github.com/meijer1973/4veco-platform/pull/166",
+    "approval_comment_url": "https://github.com/meijer1973/4veco-platform/pull/166#issuecomment-4825233240",
+    "reviewed_head_sha": "b504e15270c43b9c86ecadba60f8e19968b66d53",
+    "merge_commit_sha": "f9c0c027cbfeab2de2aa498db7ab0d6ce2851ad4",
+    "approved_decision": "APPROVE PR #166 AS H7 GOVERNANCE PACKET ONLY"
+  },
+  "non_negotiable_requirements": [
+    "No protected reference mutation",
+    "No external source mutation",
+    "No machine MTU mutation",
+    "No target exercise mutation",
+    "No operation-registry mutation",
+    "No candidate writes or storage",
+    "No lesson output",
+    "No q5 graph execution in this bundle",
+    "No H7 full closure",
+    "No H6/H7 evidence-generalization closure",
+    "No diagnostics, mastery, sequencing, PV, summative use, product-route claim, Scale Gate, or student/product use",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Exact-head PR #166 authorization is recorded",
+      "status": "met",
+      "evidence": "https://github.com/meijer1973/4veco-platform/pull/166#issuecomment-4825233240"
+    },
+    {
+      "requirement": "Only two q4 GO/MO operations are executed as bounded reviewed equivalents",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-nonprotected-execution-report-2.json"
+    },
+    {
+      "requirement": "q4 requires paired GO/MO line logic and retains A15 over-trigger guard",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-nonprotected-negative-regression-fixtures-2.json"
+    },
+    {
+      "requirement": "Seven protected/canonical operations remain held and not executed",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json"
+    },
+    {
+      "requirement": "q5 graph-source adjudication remains held until separate authorization/checking",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json"
+    },
+    {
+      "requirement": "Authority flags remain false and no protected/candidate/product writes are claimed",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json"
+    }
+  ],
+  "findings": [
+    {
+      "id": "H7-B2-FINDING-Q4-EXECUTED",
+      "classification": "does_not_block",
+      "severity": "bounded_execution_complete",
+      "summary": "The two q4 GO/MO subsidy-line operations are executed as bounded non-protected reviewed equivalents on a derived report surface.",
+      "proof_required_to_close": "None for this bounded q4 report surface beyond exact-head review/merge validation."
+    },
+    {
+      "id": "H7-B2-FINDING-PROTECTED-HOLDS",
+      "classification": "blocks",
+      "severity": "governance_blocker",
+      "summary": "Seven canonical/protected operations remain held for governance and are not executed here.",
+      "proof_required_to_close": "Separate protected governance owner decision and checker-backed execution path."
+    },
+    {
+      "id": "H7-B2-FINDING-Q5-HELD",
+      "classification": "blocks",
+      "severity": "graph_source_hold",
+      "summary": "q5 graph-source evidence is accepted as a basis from PR #166 but graph/fixture execution is not authorized in this bundle.",
+      "proof_required_to_close": "Separate q5 graph execution authorization and negative regression proof."
+    }
+  ],
+  "blocks": [
+    "H7 full closure",
+    "H6/H7 evidence-generalization closure",
+    "protected-reference mutation",
+    "operation-registry mutation",
+    "candidate writes/storage",
+    "q5 graph execution",
+    "Scale Gate",
+    "product-route readiness",
+    "diagnostics/mastery/PV/sequencing/summative/student use"
+  ],
+  "does_not_block": [
+    "Merging this checker/report/gate Bundle 2 surface after exact-head PR readiness and owner authorization",
+    "Later protected-governance packet preparation without protected mutation",
+    "Later q5 graph execution packet after explicit authorization"
+  ],
+  "proof_required_to_close": [
+    "Run the Bundle 2 checker and prior H5/H6/H7 checkers.",
+    "Run report JSON validation, URL-index check, agent index, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.",
+    "Record explicit owner authorization in the PR thread that names the reviewed PR head SHA before merge.",
+    "Keep H7 closure blocked until seven protected holds and q5 graph execution are separately resolved."
+  ],
+  "bundle": "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
+  "nonprotected_execution_report": "reports/mtu-hardening/mtu-h7-nonprotected-execution-report-2.json",
+  "protected_governance_authorization_matrix": "reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json",
+  "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-nonprotected-negative-regression-fixtures-2.json",
+  "lead_review_proof": "reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/lead-review.md",
+  "review_team_results": "reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/review-team-results.md",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "summary": {
+    "q4_operations_executed": 2,
+    "q4_records_executed": 1,
+    "remaining_review_required_operations": 8,
+    "remaining_review_required_records": 6,
+    "protected_governance_operations_still_held": 7,
+    "graph_source_operations_still_held": 1,
+    "negative_regression_detection_rate": 1,
+    "h7_full_closure_claimed": false,
+    "product_route_readiness_claimed": false
+  }
+}

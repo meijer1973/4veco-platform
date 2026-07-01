@@ -28,4 +28,3 @@ The effective integration delta does not introduce branch-protection,
 activation, PAT, GitHub App, service identity, bypass, or raw merge fallback
 changes. The integration merge is therefore acceptable as a conflict-free
 base-sync descendant of the reviewed payload.
-
