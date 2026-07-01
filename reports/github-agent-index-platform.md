@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T10:59:54.322Z
+Generated: 2026-07-01T11:10:06.511Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h7-q5-graph-protected-governance-bundle-3-20260701`
-Source commit: `fa066b7682daadb41e89a2aef9bdf765cfc66da5`
-Files indexed: 6859
+Source commit: `6dbc3730ec7cb47be371c095e3bdb633ed3df69b`
+Files indexed: 6867
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 665
+Count: 667
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -362,6 +362,7 @@ Count: 665
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/build-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/build-y2-four-target-product-route-adoption-prep-1.js
@@ -486,6 +487,7 @@ Count: 665
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -838,7 +840,7 @@ Count: 25
 
 ## validators
 
-Count: 658
+Count: 659
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1050,6 +1052,7 @@ Count: 658
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -2413,7 +2416,7 @@ Count: 907
 
 ## reports
 
-Count: 4392
+Count: 4398
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4287,6 +4290,12 @@ Count: 4392
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/rendered-scale-precheck.html
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.json
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/rendered-readiness-bundle.html
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/subagent-lead-reviews.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/rendered-product-proof.html
