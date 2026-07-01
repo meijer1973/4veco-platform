@@ -62,8 +62,32 @@ const FORBIDDEN_PATTERNS = Object.freeze([
     regex: /owner authorization required before marking ready/i,
   },
   {
+    id: 'draft-until-stale-lifecycle',
+    regex: /\bdraft until\b/i,
+  },
+  {
+    id: 'do-not-mark-ready-until',
+    regex: /\bdo not mark ready until\b/i,
+  },
+  {
+    id: 'this-pr-should-stay-draft',
+    regex: /\bthis pr should stay draft\b/i,
+  },
+  {
+    id: 'mark-ready-owner-authorization',
+    regex: /MARK_READY allowed only after explicit owner authorization/i,
+  },
+  {
     id: 'do-not-mark-ready-without-owner',
     regex: /do not mark ready without owner authorization/i,
+  },
+  {
+    id: 'authorize-exact-head',
+    regex: /\bauthorize (?:the )?exact head\b/i,
+  },
+  {
+    id: 'exact-head-authorization',
+    regex: /\bexact-head authorization\b/i,
   },
   {
     id: 'human-authorization-every-integration-head',
@@ -72,6 +96,34 @@ const FORBIDDEN_PATTERNS = Object.freeze([
   {
     id: 'owner-approval-tied-to-exact-head',
     regex: /(owner|human|explicit owner)[^\n]{0,80}(approval|authorization)[^\n]{0,80}tied to (the )?exact (pr |remote )?head/i,
+  },
+  {
+    id: 'owner-authorization-naming-exact-pr-head',
+    regex: /(owner|human|explicit owner)[^\n]{0,80}(authorization|approval)[^\n]{0,80}naming the exact pr head/i,
+  },
+  {
+    id: 'owner-decision-tied-to-exact-pr-head',
+    regex: /(owner|human)[^\n]{0,80}decision[^\n]{0,80}tied to (the )?exact pr head/i,
+  },
+  {
+    id: 'authorize-exact-head-packet',
+    regex: /authorize the exact-head [^\n]{0,80}packet/i,
+  },
+  {
+    id: 'owner-authorization-cites-head',
+    regex: /owner authorization[^\n]{0,80}cites? (the )?(current )?(pr )?head/i,
+  },
+  {
+    id: 'exact-head-owner-authorization',
+    regex: /exact-head owner authorization/i,
+  },
+  {
+    id: 'exact-head-owner-authorized',
+    regex: /exact-head owner-authorized/i,
+  },
+  {
+    id: 'reviewed-pr-head-sha-authorization',
+    regex: /(authorization|approval)[^\n]{0,100}reviewed pr head sha/i,
   },
   {
     id: 'owner-approval-tied-to-exact-sha',

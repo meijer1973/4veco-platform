@@ -131,7 +131,7 @@
     },
     {
       "id": "no_real_contact_before_owner_authorization",
-      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before exact-head owner authorization.",
+      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization.",
       "status": "met",
       "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
     },
@@ -163,9 +163,9 @@
     "contact_dispatched": false,
     "real_responses_stored": false
   },
-  "owner_next_action": "Human owner may review whether to authorize the exact-head contact-stage packet for external dispatch. Any dispatch or later intake requires explicit owner authorization that cites the current head and green checks.",
+  "owner_next_action": "Human owner may review whether to grant payload authorization for the contact-stage packet and external dispatch scope. Any dispatch or later intake requires owner payload authorization that names reviewed_payload_head_sha and current green checks.",
   "does_not_authorize": [
-    "contact dispatch before exact-head owner authorization",
+    "contact dispatch before owner payload authorization",
     "named expert selection",
     "personal-data processing",
     "student data or support-record processing",
@@ -236,7 +236,7 @@
       "classification": "human_authorization_required",
       "blocks": "Sending requests, storing real responses, naming experts, processing personal data, or using responses as product/school/public authority.",
       "does_not_block": "Human review of the complete contact-stage packet.",
-      "proof_required_to_close": "Explicit owner authorization that cites the head after merge/readiness evidence."
+      "proof_required_to_close": "Owner payload authorization that names reviewed_payload_head_sha after merge/readiness evidence."
     },
     {
       "finding": "Downstream product and school authority remains blocked.",

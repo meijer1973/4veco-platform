@@ -39,7 +39,7 @@
   "validation_status": "accepted_simulation",
   "rejected_items": [],
   "does_not_authorize": [
-    "contact dispatch before exact-head owner authorization",
+    "contact dispatch before owner payload authorization",
     "named expert selection",
     "personal-data processing",
     "student data or support-record processing",

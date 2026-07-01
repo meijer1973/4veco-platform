@@ -12,7 +12,7 @@
 - Bind the sprint to the accepted `PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT` decision.
 - Use only the accepted England/Flanders request packets as input.
 - Define role-only expert profiles; do not select named people.
-- Generate contact text and response-intake controls, but do not dispatch contact before exact-head owner authorization.
+- Generate contact text and response-intake controls, but do not dispatch contact before owner payload authorization.
 - Require explicit consent, recording, storage, withdrawal, and response-use boundaries.
 - Intake only strict response-schema records and reject personal data, student data, and school-specific evidence.
 - Refuse legal advice, compliance proof, approval, inspection-readiness, support/accommodation/accessibility/individual-adjustment sufficiency, product, Scale Gate, evidence-pack, and localized-output claims.
@@ -83,5 +83,5 @@
 | Legal advice, compliance proof, approval, inspection-readiness, school-evidence, support/accommodation/accessibility/individual-adjustment sufficiency, product, Scale Gate, and localized-output claims are refused. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
 | England remains England-only and Flanders remains Flanders-only. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
 | Simulations and negative fixtures cover contact authorization, consent, personal data, claims, source/question allowlists, uncertainty, and jurisdiction overclaims. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
-| No real contact dispatch, expert substitution, or real response storage occurs before exact-head owner authorization. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
 | Specialist reviews, final lead review, exact-head PR readiness, green CI, and human review remain required. | met | Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |

@@ -179,7 +179,7 @@ const CORE_REQUIREMENTS = [
   ["forbidden_authority_claims_refused", "Legal advice, compliance proof, approval, inspection-readiness, school-evidence, support/accommodation/accessibility/individual-adjustment sufficiency, product, Scale Gate, and localized-output claims are refused."],
   ["jurisdiction_boundaries_preserved", "England remains England-only and Flanders remains Flanders-only."],
   ["simulation_and_negative_fixtures_complete", "Simulations and negative fixtures cover contact authorization, consent, personal data, claims, source/question allowlists, uncertainty, and jurisdiction overclaims."],
-  ["no_real_contact_before_owner_authorization", "No real contact dispatch, expert substitution, or real response storage occurs before exact-head owner authorization."],
+  ["no_real_contact_before_owner_authorization", "No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization."],
   ["review_route_preserved", "Specialist reviews, final lead review, exact-head PR readiness, green CI, and human review remain required."],
 ];
 
@@ -214,7 +214,7 @@ function noOutputFlagsForPilot() {
 
 function doesNotAuthorize() {
   return [
-    "contact dispatch before exact-head owner authorization",
+    "contact dispatch before owner payload authorization",
     "named expert selection",
     "personal-data processing",
     "student data or support-record processing",
@@ -244,7 +244,7 @@ function nonNegotiables() {
     "- Bind the sprint to the accepted `PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT` decision.",
     "- Use only the accepted England/Flanders request packets as input.",
     "- Define role-only expert profiles; do not select named people.",
-    "- Generate contact text and response-intake controls, but do not dispatch contact before exact-head owner authorization.",
+    "- Generate contact text and response-intake controls, but do not dispatch contact before owner payload authorization.",
     "- Require explicit consent, recording, storage, withdrawal, and response-use boundaries.",
     "- Intake only strict response-schema records and reject personal data, student data, and school-specific evidence.",
     "- Refuse legal advice, compliance proof, approval, inspection-readiness, support/accommodation/accessibility/individual-adjustment sufficiency, product, Scale Gate, evidence-pack, and localized-output claims.",
@@ -456,7 +456,7 @@ function contactPacket(jurisdictionId) {
     no_output_flags: noOutputFlagsForPilot(),
     finding_classification: [
       {
-        finding: `${packet.jurisdiction_label} contact text is ready only for exact-head owner-authorized dispatch.`,
+        finding: `${packet.jurisdiction_label} contact text is ready only for owner payload-authorized dispatch.`,
         classification: "core_requirement_met",
         blocks: "Nothing for human review once checker, specialists, final lead, CI, branch protection, and PR readiness pass.",
         does_not_block: "Human review of this internal contact-stage packet.",
@@ -467,7 +467,7 @@ function contactPacket(jurisdictionId) {
         classification: "human_authorization_required",
         blocks: "Sending contact text, storing real expert response records, or treating expert feedback as authority.",
         does_not_block: "Reviewing the internal contact-stage packet.",
-        proof_required_to_close: "Explicit owner authorization that cites the PR head and current green checks.",
+        proof_required_to_close: "Owner payload authorization that names reviewed_payload_head_sha and current green checks.",
       },
     ],
   };
@@ -543,7 +543,7 @@ function planReport() {
     ...baseReport("local_expert_contact_pilot_plan"),
     report_id: "local-expert-contact-pilot-plan",
     status: "contact_stage_packet_ready_for_review",
-    goal: "Prepare a governed local expert contact-stage pilot packet from the accepted request packets, without dispatching contact before exact-head owner authorization.",
+    goal: "Prepare a governed local expert contact-stage pilot packet from the accepted request packets, without dispatching contact before owner payload authorization.",
     required_workstreams: [
       "role_only_expert_profiles",
       "contact_text_from_accepted_packets",
@@ -621,7 +621,7 @@ function decisionReport(england, flanders, intake, simulation) {
       contact_dispatched: false,
       real_responses_stored: false,
     },
-    owner_next_action: "Human owner may review whether to authorize the exact-head contact-stage packet for external dispatch. Any dispatch or later intake requires explicit owner authorization that cites the current head and green checks.",
+    owner_next_action: "Human owner may review whether to grant payload authorization for the contact-stage packet and external dispatch scope. Any dispatch or later intake requires owner payload authorization that names reviewed_payload_head_sha and current green checks.",
     does_not_authorize: doesNotAuthorize(),
     no_output_flags: noOutputFlagsForPilot(),
     finding_classification: [
@@ -637,7 +637,7 @@ function decisionReport(england, flanders, intake, simulation) {
         classification: "human_authorization_required",
         blocks: "Sending requests, storing real responses, naming experts, processing personal data, or using responses as product/school/public authority.",
         does_not_block: "Human review of the complete contact-stage packet.",
-        proof_required_to_close: "Explicit owner authorization that cites the head after merge/readiness evidence.",
+        proof_required_to_close: "Owner payload authorization that names reviewed_payload_head_sha after merge/readiness evidence.",
       },
       {
         finding: "Downstream product and school authority remains blocked.",
@@ -909,9 +909,9 @@ function specialistReview(role, verdict, summary) {
       {
         finding: "Downstream authority remains blocked.",
         classification: "scale_blocker",
-        blocks: "Contact dispatch without exact-head owner authorization, named expert selection, personal data, student data, school evidence, legal/compliance/approval/inspection-readiness claims, localized output, product use, Scale Gate, diagnostics/mastery/PV, support/accommodation/accessibility/individual-adjustment sufficiency claims, and school-owned evidence claims.",
+        blocks: "Contact dispatch without owner payload authorization, named expert selection, personal data, student data, school evidence, legal/compliance/approval/inspection-readiness claims, localized output, product use, Scale Gate, diagnostics/mastery/PV, support/accommodation/accessibility/individual-adjustment sufficiency claims, and school-owned evidence claims.",
         does_not_block: "Internal contact-stage packet human review.",
-        proof_required_to_close: "Separate explicit owner authorization and later governed response-intake review.",
+        proof_required_to_close: "Separate owner payload authorization and later governed response-intake review.",
       },
     ]),
     "",
@@ -1003,7 +1003,7 @@ function closureRecord() {
         classification: "human_authorization_required",
         blocks: "Contact dispatch, real response storage, named expert selection, personal data, student data, school evidence, localized output, public/school/product use, legal/compliance/inspection-readiness claims, Scale Gate, diagnostics/mastery/PV, support/accommodation/accessibility/individual-adjustment sufficiency claims, and school-owned evidence claims.",
         does_not_block: "Human review of this internal packet.",
-        proof_required_to_close: "Owner authorization that cites the PR head and separate governed review for any later use of responses.",
+        proof_required_to_close: "Owner payload authorization that names reviewed_payload_head_sha and separate governed review for any later use of responses.",
       },
     ]),
   ].join("\n");

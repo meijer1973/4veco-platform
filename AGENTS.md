@@ -254,11 +254,14 @@ Merge authority follows the PR-readiness route:
   checker proof, lead review, readiness proof, and complete review-thread
   evidence pass.
 - L3-L4 and governance/self-modification work must stop after
-  `READY_FOR_HUMAN_REVIEW` until the owner gives an explicit merge decision.
-- A human merge decision must identify the PR number, reviewed payload head SHA,
-  decision, and decision scope. Record it as a PR comment when the decision
-  happens outside GitHub's review identity model.
-- Human authorization gates merge, not draft-to-ready transition. Owner
+  `READY_FOR_HUMAN_REVIEW` until the owner gives payload authorization for the
+  reviewed payload head and decision scope.
+- Owner decisions authorize the reviewed payload head and decision scope. A
+  payload authorization must identify the PR number,
+  `reviewed_payload_head_sha`, decision, decision scope, merge method, and
+  admin-bypass prohibition. Record it as a PR comment when the decision happens
+  outside GitHub's review identity model.
+- Payload authorization gates merge, not draft-to-ready transition. Owner
   authorization is never required merely to run `gh pr ready` after a valid
   readiness decision returns `allowed_transition: MARK_READY`.
 - Immediately before merging, the authorized lane re-fetches the PR and verifies
@@ -290,28 +293,47 @@ eligibility before merging. The lane may internally invoke a direct merge comman
 while live branch protection requires only `validate-platform`; that is an
 implementation detail of trusted lane code, not agent merge authority.
 
-Human authorization binds to the reviewed payload head, not to every later
-base-sync head. Record authorization with the
+Payload authorization binds to the reviewed payload head, not to every later
+base-sync head. Record payload authorization with the
 `4veco-human-payload-authorization` marker and the schema in
 `docs/review/human-payload-authorization.schema.json`. The integration lane may
 inherit that authorization only when the reviewed payload SHA remains an
 ancestor of the current PR head and all intervening commits are conflict-free
-base-sync merges or allowlisted deterministic evidence refreshes. Rebase,
-force-push, manual conflict resolution, substantive PR-authored commits after
-authorization, authority-scope changes, or changed effective payload invalidate
-the authorization.
+base-sync merges or allowlisted deterministic evidence refreshes.
+
+Use this human-facing wrapper while keeping the machine decision enum stable:
+
+```text
+HUMAN_DECISION: APPROVE_FOR_INTEGRATION
+AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION
+PR: #...
+REVIEWED_PAYLOAD_HEAD: ...
+DECISION_SCOPE: ...
+MERGE_METHOD: merge commit
+ADMIN_BYPASS: prohibited
+```
+
+The integration lane validates the current `integration_head_sha`. A later
+integration head may be produced by base sync or generated/evidence-only tail
+handling. Renewed owner authorization is not required when payload lineage,
+effective payload, bundle membership, and authority scope remain valid.
+Renewed owner authorization is required when the reviewed payload is not an
+ancestor of the integration head, manual conflict resolution changes behavior,
+substantive source payload changes, bundle membership changes, decision scope
+or authority class changes, or the lane cannot prove lineage/effective-payload
+equivalence.
 
 Before the lane may set `integration-authorized`, the PR Readiness Reviewer must
-be recomputed inside the trusted workflow for the exact integration head. The
-lane constructs live integration evidence, validates the resulting machine
+be recomputed inside the trusted workflow for the current `integration_head_sha`.
+The lane constructs live integration evidence, validates the resulting machine
 decision, and posts or updates the exact-head readiness comment with a canonical
 decision digest and full machine decision. A stale readiness marker, marker-only
 comment, or non-ready route stops the merge.
 
 The current integration head is machine-validated, not separately
 human-authorized. A permitted base-sync or deterministic evidence descendant
-does not need renewed owner authorization when payload lineage, base-drift,
-authority-scope, and effective-payload checks remain valid.
+does not need renewed owner authorization when payload lineage, base drift,
+bundle membership, authority scope, and effective-payload checks remain valid.
 
 The lane must determine base drift from an actual `main...head` comparison, not
 from `mergeStateStatus: BLOCKED`; `BLOCKED` is merge-eligibility noise, and in
