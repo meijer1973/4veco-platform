@@ -126,6 +126,9 @@ jobs:
       - name: Validate active scope language
         run: npm run check:scope-language
 
+      - name: Validate exercise workflow currentness
+        run: npm run check:exercise-workflow-currentness
+
       - name: Validate active governance wording
         run: npm run check:active-governance-wording
 
