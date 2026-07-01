@@ -44,6 +44,12 @@ Passed implementation and platform checks:
 The full platform Jest suite passed with the repository's existing chapter QA
 stderr warnings for fixture content; the process exit code was `0`.
 
+Remote CI repair note: the first draft PR run showed that CI's platform and
+presentation validation can leave the sibling lesson checkout dirty with
+generated presentation files before later checks run. The currentness CI step
+was moved earlier, immediately after `npm ci`, so it validates the clean PR
+checkout boundary before mutating validation steps execute.
+
 ## Changed files
 
 Currentness policy and checker:
@@ -85,6 +91,7 @@ Sprint governance artifacts:
 - `reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round1.md`
 - `reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-corrections.md`
 - `reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round2.md`
+- `reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round3-ci-repair.md`
 - `reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-diff-summary.md`
 - `references/data/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1.result.json`
 

@@ -13,7 +13,8 @@ validators that still encode old check-surface assumptions.
 
 - `package.json` exposes `check:exercise-workflow-currentness`.
 - `.github/workflows/platform-ci.yml` runs the currentness checker in platform
-  CI.
+  CI immediately after `npm ci`, before later validation steps can dirty the
+  sibling lesson checkout with generated presentation proof files.
 - `references/data/exercise-surface-manifest.json` records current
   first-three short-check/exit-ticket surfaces, same-copy hygiene, legacy
   unsuffixed paths, active evidence files, and current/superseded validators.

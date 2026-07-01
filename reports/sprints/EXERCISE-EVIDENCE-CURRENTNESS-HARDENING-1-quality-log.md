@@ -34,3 +34,8 @@ The implementation lead reviewer returned PASS. No material corrections were
 required. The final PR still routes to human review because the sprint changes
 governance/CI behavior, even though it does not change product runtime or
 lesson output.
+
+Remote CI repair: after the initial draft PR run failed because the new
+currentness checker ran after CI steps that dirty the lesson checkout with
+generated presentation proof files, the workflow order was corrected so the
+checker runs while the sibling lesson checkout is still clean.
