@@ -91,7 +91,7 @@
       "classification": "proof_required_to_close",
       "severity": "pr_governance_gate",
       "summary": "Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, CI, and owner authorization are required before ready/merge.",
-      "proof_required_to_close": "Run the single-account PR governance workflow against the exact remote head and record owner authorization tied to that SHA."
+      "proof_required_to_close": "Run the single-account PR governance workflow against the exact remote head and record owner authorization that names the reviewed PR payload SHA."
     }
   ],
   "blocks": [

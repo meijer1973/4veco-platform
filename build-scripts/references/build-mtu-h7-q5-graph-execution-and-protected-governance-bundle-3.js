@@ -472,7 +472,7 @@ function buildPrReadinessEvidence() {
       'Run the PR Readiness Reviewer against the exact remote PR head.',
       'Include full live branch-protection checker output with ok: true.',
       'Run subagent lead review and require Teacher, Economist, and Quality inspection reviewers to be MORE_THAN_SATISFIED.',
-      'Route READY_FOR_HUMAN_REVIEW and wait for explicit owner authorization tied to the exact head SHA.',
+      'Route READY_FOR_HUMAN_REVIEW and wait for explicit owner authorization that names the reviewed PR payload SHA.',
       'Do not use L0-L2 READY_FOR_LEAD_ONLY handling for this Bundle 3 packet.'
     ],
     commands: [
@@ -603,7 +603,7 @@ function buildReviewPacket(bundle, q5Execution, protectedMatrix, negatives, prRe
         classification: 'proof_required_to_close',
         severity: 'pr_governance_gate',
         summary: 'Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, CI, and owner authorization are required before ready/merge.',
-        proof_required_to_close: 'Run the single-account PR governance workflow against the exact remote head and record owner authorization tied to that SHA.'
+        proof_required_to_close: 'Run the single-account PR governance workflow against the exact remote head and record owner authorization that names the reviewed PR payload SHA.'
       }
     ],
     blocks: [

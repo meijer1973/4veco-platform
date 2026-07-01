@@ -21,5 +21,5 @@ The exact remote PR head is not known until the branch is pushed and a PR exists
 - Run the PR Readiness Reviewer against the exact remote PR head.
 - Include full live branch-protection checker output with ok: true.
 - Run subagent lead review and require Teacher, Economist, and Quality inspection reviewers to be MORE_THAN_SATISFIED.
-- Route READY_FOR_HUMAN_REVIEW and wait for explicit owner authorization tied to the exact head SHA.
+- Route READY_FOR_HUMAN_REVIEW and wait for explicit owner authorization that names the reviewed PR payload SHA.
 - Do not use L0-L2 READY_FOR_LEAD_ONLY handling for this Bundle 3 packet.

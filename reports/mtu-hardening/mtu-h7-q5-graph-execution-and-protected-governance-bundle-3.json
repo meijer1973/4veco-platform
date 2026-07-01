@@ -4,7 +4,7 @@
   "bundle_id": "mtu-h7-q5-graph-execution-and-protected-governance-bundle-3",
   "review_standard": "REV-STD-1",
   "status": "Q5_GRAPH_EXECUTION_READY_FOR_HUMAN_REVIEW_PROTECTED_HOLDS_REMAIN",
-  "generated_at": "2026-07-01T05:54:35.034Z",
+  "generated_at": "2026-07-01T06:28:08.017Z",
   "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -121,10 +121,10 @@
     "student_product_use_authorized": false
   },
   "hashes": {
-    "q5_graph_execution_report": "a6877bc611ac47ebe640b24becef3fc06020f6e3873384ab60df689746682a84",
-    "protected_governance_hold_matrix": "db55443c7d2abbaf0d32e084c4f14538bd507e7b8e6de9514de80c34c98fc8c3",
-    "negative_regression_fixtures": "25f80d0e5cdb1a94aa43c9925a9a885e72f1cb8f72acef87090d5a078e6913cc",
-    "pr_readiness_evidence": "2dcac57e12588c9c7b9a52e44507993e50e08333c6427f37ce699db6be258eb0"
+    "q5_graph_execution_report": "2a540a352def16b4005e352fffc67e0160cb747b851cbd85044274449489d8d2",
+    "protected_governance_hold_matrix": "a67ff0fc2892d68338631bc45ad17cd1a87b737ef1cc8584a516b329758264ef",
+    "negative_regression_fixtures": "205067625c4f38162ce9d229a9a08527c8bdf8f94d9990cefc510c99801417ef",
+    "pr_readiness_evidence": "095ede3ff05cefa732e66d5e9b8602b68a5d660159b5e35ec37c2602ee29ac2e"
   },
   "prohibited_claims": [
     "No H7 full closure",
