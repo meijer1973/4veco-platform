@@ -126,7 +126,7 @@ Do not accept stale proof.
   protection on the lesson commit.
 - Do not commit per-PR routing decisions to the same branch after reviewing the
   head; record live routing decisions as idempotent GitHub comments keyed by
-  the reviewed head SHA.
+  the current PR head SHA.
 
 ## Required output
 
@@ -141,7 +141,9 @@ GitHub comment. The Markdown must include:
 Do not post duplicate decisions for the same head SHA.
 The Markdown must include CI context/head, checker summary, lead-review
 path/result/reviewed SHA, evidence-only tail status, and branch-protection
-constraint.
+constraint. It must distinguish `Reviewed payload head`, current PR head,
+`Integration head`, payload authorization required, and integration validation
+required.
 
 ## Behavior rules
 
@@ -159,6 +161,9 @@ The PR Readiness Reviewer must not:
 
 - approve its own implementation work
 - ask the owner for permission merely to run `gh pr ready`
+- ask the owner to authorize a head SHA as a standalone merge condition; human
+  handoffs request payload authorization for the reviewed payload head and
+  decision scope
 - hide human-authority decisions inside lead-only routes
 - batch across real decision boundaries
 - auto-merge L3 or L4 work

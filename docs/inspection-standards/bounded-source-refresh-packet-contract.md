@@ -29,8 +29,8 @@ Status: plan_ready_for_human_review
 | `official_source_unavailable` | Blocks source-refresh closure for affected jurisdiction and source role. | Documenting unavailability and asking for owner direction. | Unavailable-source observation, retrieval timestamp, affected rows, and owner decision to pause, retry, or reduce scope. | Stop affected source row and record unavailable-source blocker. | Use cached unofficial copies, local expert judgement, or generated lesson output as substitute authority. |
 | `candidate_gap_found` | Blocks closure for the affected source role until the gap is reviewed. | Recording the gap and candidate approval requirement. | Named gap, affected jurisdiction/source role, candidate_source_requires_owner_approval flag, and owner decision. | Create a candidate-source review item for human owner approval. | Import candidate sources through hidden discovery or treat expert suggestion as official authority. |
 | `out_of_scope_source_found` | Blocks use of the source and any inference drawn from it. | Refusal documentation and scope clarification. | Refusal record proving the source is outside the explicit allowlist or jurisdiction boundary. | Reject the source and preserve the existing official-source boundary. | Broaden England to whole UK, Flanders to all Belgium, or selected AQA to all awarding bodies. |
-| `requires_local_expert_interpretation` | Blocks source interpretation from becoming authority, legal advice, school evidence, or product output. | Preparing a later bounded expert-review request. | Expert question, allowed interpretation scope, forbidden-claim acknowledgement, and human-reviewed response record. | Ask for bounded interpretation only after owner authorization. | Contact experts in this packet or use expert judgement as official-source substitute. |
-| `requires_human_owner_decision` | Blocks all automatic transition, merge, source adoption, and downstream authority. | Human-review routing with exact evidence. | Explicit owner authorization naming the exact PR head and selected decision. | Route to READY_FOR_HUMAN_REVIEW with exact-head proof. | Auto-merge or mark product-authority work ready without owner authorization. |
+| `requires_local_expert_interpretation` | Blocks source interpretation from becoming authority, legal advice, school evidence, or product output. | Preparing a later bounded expert-review request. | Expert question, allowed interpretation scope, forbidden-claim acknowledgement, and human-reviewed response record. | Ask for bounded interpretation only after owner payload authorization. | Contact experts in this packet or use expert judgement as official-source substitute. |
+| `requires_human_owner_decision` | Blocks all automatic transition, merge, source adoption, and downstream authority. | Human-review routing with exact evidence. | Owner payload authorization naming reviewed_payload_head_sha and decision scope. | Route to READY_FOR_HUMAN_REVIEW with exact-head proof. | Auto-merge or merge product-authority work without owner payload authorization. |
 
 ## Stop Conditions
 
@@ -50,5 +50,5 @@ Status: plan_ready_for_human_review
 - Accessibility/inclusion review
 - Final lead review
 - Exact-head PR Readiness Reviewer route with branch protection ok:true
-- Explicit human owner authorization before merge or any later source-refresh execution pilot
+- Owner payload authorization before merge or any later source-refresh execution pilot
 

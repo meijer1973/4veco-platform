@@ -6,11 +6,11 @@ The contact-stage packet is generated from the accepted request packets, uses ro
 
 ## Owner Next Action
 
-Human owner may review whether to authorize the exact-head contact-stage packet for external dispatch. Any dispatch or later intake requires explicit owner authorization that cites the current head and green checks.
+Human owner may review whether to grant payload authorization for the contact-stage packet and external dispatch scope. Any dispatch or later intake requires owner payload authorization that names reviewed_payload_head_sha and current green checks.
 
 ## Does Not Authorize
 
-- contact dispatch before exact-head owner authorization
+- contact dispatch before owner payload authorization
 - named expert selection
 - personal-data processing
 - student data or support-record processing
@@ -37,5 +37,5 @@ Human owner may review whether to authorize the exact-head contact-stage packet 
 | finding | classification | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|
 | The packet is ready for human review as a governed contact-stage pilot. | `core_requirement_met` | Nothing for human review once final readiness proof is green. | Human decision on whether to authorize external contact under the packet. | Exact-head PR readiness, branch protection ok:true, green CI, and owner authorization. |
-| External contact and response storage remain owner-authorized steps. | `human_authorization_required` | Sending requests, storing real responses, naming experts, processing personal data, or using responses as product/school/public authority. | Human review of the complete contact-stage packet. | Explicit owner authorization that cites the head after merge/readiness evidence. |
+| External contact and response storage remain owner-authorized steps. | `human_authorization_required` | Sending requests, storing real responses, naming experts, processing personal data, or using responses as product/school/public authority. | Human review of the complete contact-stage packet. | Owner payload authorization that names reviewed_payload_head_sha after merge/readiness evidence. |
 | Downstream product and school authority remains blocked. | `scale_blocker` | Localized output, country editions, teacher/school/public output, evidence packs, product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product use, personal-data processing, legal/compliance/approval/inspection-readiness claims, support/accommodation/accessibility/individual-adjustment sufficiency claims, and school-owned evidence claims. | Internal contact-stage packet review. | Separate governed sprint and owner authorization after this contact-stage packet. |

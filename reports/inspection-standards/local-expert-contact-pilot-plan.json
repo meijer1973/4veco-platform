@@ -131,7 +131,7 @@
     },
     {
       "id": "no_real_contact_before_owner_authorization",
-      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before exact-head owner authorization.",
+      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization.",
       "status": "met",
       "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
     },
@@ -144,7 +144,7 @@
   ],
   "report_id": "local-expert-contact-pilot-plan",
   "status": "contact_stage_packet_ready_for_review",
-  "goal": "Prepare a governed local expert contact-stage pilot packet from the accepted request packets, without dispatching contact before exact-head owner authorization.",
+  "goal": "Prepare a governed local expert contact-stage pilot packet from the accepted request packets, without dispatching contact before owner payload authorization.",
   "required_workstreams": [
     "role_only_expert_profiles",
     "contact_text_from_accepted_packets",

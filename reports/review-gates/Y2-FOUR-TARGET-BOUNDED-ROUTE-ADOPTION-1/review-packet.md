@@ -28,7 +28,7 @@ Original sprint/gate/source specs:
 - Do not mutate default book navigation or active curriculum sequencing.
 - Keep CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad student rollout, and student/product use blocked.
 - Include rollback for platform registry and lesson index changes.
-- Route as READY_FOR_HUMAN_REVIEW and require exact-head owner authorization before merge.
+- Route as READY_FOR_HUMAN_REVIEW and require owner payload authorization for reviewed_payload_head_sha and decision scope before merge.
 
 ## Exact Registry / Index Adoption Surface
 

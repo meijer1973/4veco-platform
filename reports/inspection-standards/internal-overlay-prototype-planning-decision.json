@@ -246,7 +246,7 @@
       "classification": "core_requirement_met",
       "blocks": "Nothing for human review.",
       "does_not_block": "A later internal trial-contract draft sprint if human accepted.",
-      "proof_required_to_close": "Human owner decision tied to exact PR head."
+      "proof_required_to_close": "Owner payload authorization for reviewed_payload_head_sha and decision scope."
     },
     {
       "finding": "All implementation and downstream authority remains blocked.",

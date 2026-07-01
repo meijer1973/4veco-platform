@@ -46,6 +46,43 @@ describe('check-active-governance-wording', () => {
     ]);
   });
 
+  test('flags stale lifecycle wording after readiness can mark ready', () => {
+    const text = [
+      'Draft until paired bundle compatibility is green.',
+      'Do not mark ready until owner authorization.',
+      'This PR should stay draft while waiting for owner review.',
+      'MARK_READY allowed only after explicit owner authorization.',
+      'Owner authorization required before marking ready.',
+      'Please authorize exact head before routing.',
+      'This packet requests exact-head authorization.',
+      'Explicit owner authorization naming the exact PR head and selected decision.',
+      'Human owner decision tied to exact PR head.',
+      'Human owner may review whether to authorize the exact-head contact-stage packet.',
+      'Explicit owner authorization that cites the PR head and current green checks.',
+      'Route as READY_FOR_HUMAN_REVIEW and require exact-head owner authorization before merge.',
+      'Contact text is ready only for exact-head owner-authorized dispatch.',
+      'Record explicit owner authorization in the PR thread that names the reviewed PR head SHA before merge.',
+    ].join('\n');
+
+    expect(findViolationsInText('AGENTS.md', text).map((item) => item.pattern)).toEqual([
+      'draft-until-stale-lifecycle',
+      'do-not-mark-ready-until',
+      'this-pr-should-stay-draft',
+      'mark-ready-owner-authorization',
+      'owner-authorization-before-ready',
+      'authorize-exact-head',
+      'exact-head-authorization',
+      'owner-authorization-naming-exact-pr-head',
+      'owner-decision-tied-to-exact-pr-head',
+      'authorize-exact-head-packet',
+      'owner-authorization-cites-head',
+      'exact-head-owner-authorization',
+      'exact-head-owner-authorized',
+      'reviewed-pr-head-sha-authorization',
+      'owner-approval-tied-to-exact-head',
+    ]);
+  });
+
   test('allows payload-lineage authorization wording', () => {
     const text = 'Human authorization binds to the reviewed payload head, not to every later base-sync head.';
 
