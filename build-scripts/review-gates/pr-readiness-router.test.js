@@ -2200,6 +2200,44 @@ describe('pr-readiness-router', () => {
     expect(markdown).not.toMatch(new RegExp('exact-head ' + 'authorization', 'i'));
   });
 
+  test('single-PR human review readiness does not render bundle authorization wording', () => {
+    const decision = classifyPrReadiness(readFixture('live-governance-human.json'));
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(markdown).toContain('Reviewed payload head');
+    expect(markdown).toContain('Integration head');
+    expect(markdown).toContain('Payload authorization required');
+    expect(markdown).not.toContain('Bundle payload authorization is requested');
+  });
+
+  test('cross-repo bundle readiness renders bundle authorization wording', () => {
+    const decision = coordinatedBundleDecision();
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(decision.throughput.class).toBe('cross_repo_bundle');
+    expect(markdown).toContain('Bundle payload authorization is requested');
+  });
+
+  test('default non-bundle proof object does not render bundle authorization wording', () => {
+    const decision = classifyPrReadiness(readFixture('live-governance-human.json'));
+    const markdown = renderDecisionMarkdown({
+      ...decision,
+      proof: {
+        ...decision.proof,
+        bundle: {
+          required: false,
+          delegated: false,
+          ok: true,
+          failures: [],
+          summary: null,
+        },
+      },
+    });
+
+    expect(markdown).not.toContain('Bundle payload authorization is requested');
+  });
+
   test('rendered integration comment treats base-sync descendants as integration validation', () => {
     const payloadHead = 'a'.repeat(40);
     const integrationHead = 'b'.repeat(40);

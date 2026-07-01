@@ -1322,6 +1322,15 @@ function renderDecisionMarkdown(decision) {
   const readyRoute = decision.route === ROUTES.READY_FOR_LEAD_ONLY || decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
   const payloadAuthorizationRequired = decision.route === ROUTES.READY_FOR_HUMAN_REVIEW && !decision.proof.human_authorization;
   const bundleProof = decision.proof.bundle || null;
+  const hasBundlePayload = Boolean(
+    bundleProof &&
+      (
+        bundleProof.required === true ||
+        bundleProof.delegated === true ||
+        bundleProof.summary ||
+        (decision.throughput && decision.throughput.class === 'cross_repo_bundle')
+      )
+  );
   const leadReviewLine = delegatedBundleProof
     ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed payload head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
     : `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``;
@@ -1366,7 +1375,7 @@ function renderDecisionMarkdown(decision) {
     '- A later integration head does not require renewed owner authorization when the serialized lane proves payload lineage, effective-payload equivalence, unchanged bundle membership, and unchanged authority scope.',
     '- Substantive payload change, manual conflict resolution affecting behavior, changed bundle membership, or authority-scope change returns to owner review.'
   );
-  if (bundleProof) {
+  if (hasBundlePayload) {
     lines.push(
       '- Bundle payload authorization is requested for the reviewed controller/member payload heads. The bundle lane will select/validate the integration heads and merge order before merging.'
     );
