@@ -6,7 +6,7 @@ Purpose: lightweight orientation for agents browsing through GitHub. This invent
 
 Root: `4veco-platform`
 Source branch: `codex/skilltree-improvement-20260618`
-Source commit: `b770b7a26afdfb1a3836fe3b1ab66eb84b1ced88`
+Source commit: `17e00d0fb2043a2378bafc781823391becdc89a3`
 Files indexed: 7092
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 

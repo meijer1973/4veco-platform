@@ -4,7 +4,7 @@
   "available": true,
   "generated_at": "2026-07-01T07:36:11.000Z",
   "source_branch": "codex/skilltree-improvement-20260618",
-  "source_commit": "b770b7a26afdfb1a3836fe3b1ab66eb84b1ced88",
+  "source_commit": "17e00d0fb2043a2378bafc781823391becdc89a3",
   "source_remote_url": "https://github.com/meijer1973/4veco-platform.git",
   "file_count": 7092,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
