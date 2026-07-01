@@ -183,6 +183,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PV-G2-pilot-content/bundle-urls.md

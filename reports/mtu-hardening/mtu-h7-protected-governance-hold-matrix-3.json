@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-Q5-GRAPH-EXECUTION-AND-PROTECTED-GOVERNANCE-BUNDLE-3",
+  "matrix_id": "mtu-h7-protected-governance-hold-matrix-3",
+  "review_standard": "REV-STD-1",
+  "status": "seven_protected_canonical_h7_operations_remain_governance_held_not_executed",
+  "generated_at": "2026-07-01T05:54:35.034Z",
+  "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "source_authorization": {
+    "authorization_type": "thread_goal_authorization",
+    "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+    "decision": "BUILD_MTU_H7_BUNDLE_3_FOR_HUMAN_REVIEW",
+    "scope": "q5 graph-source execution evidence and seven protected/canonical H7 governance holds only",
+    "integration_authority": "not_authorized_until_exact_head_owner_authorization"
+  },
+  "protected_holds": [
+    {
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "blocker_id": "H7-BLOCKER-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "final_route": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "execution_status": "held_not_executed_in_bundle_3",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "canonical_mtu_governance_need",
+      "candidate_packet_id": "H7-CAND-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "candidate_status": "governance_evidence_only_not_candidate_write",
+      "proposed_non_mutating_decision": "do_not_close_from_existing_H08_without_human_canonical_decision",
+      "required_mtu_ids": [
+        "H08",
+        "A38",
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "H08",
+        "A38",
+        "A81",
+        "A96"
+      ],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "forbidden_mtu_ids": [
+        "A15"
+      ],
+      "route_tags": [
+        "calculation",
+        "income_distribution",
+        "ratio_comparison",
+        "answer_form",
+        "procedure"
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "ha-1022-a-23-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 7,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proof_required_to_close": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+      "safe_interim_action": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-denivellering-label-reversal",
+        "expected_failure_defect_class": "canonical_mtu_governance_need",
+        "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
+        "guard": "A smaller high/low net-income ratio must not silently close as denivellering."
+      }
+    },
+    {
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed_in_bundle_3",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "operation_registry_need",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "candidate_status": "governance_evidence_only_not_candidate_write",
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "required_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "forbidden_mtu_ids": [
+        "F12"
+      ],
+      "route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "residual_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+          "source_locator": {
+            "exam": "ha-1022-a-24-1-o",
+            "opgave_num": 2,
+            "question_num": 12,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "prompt_page_start": 5,
+            "prompt_page_end": 5,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+      "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q12-f12-overtrigger-residual",
+        "expected_failure_defect_class": "over_trigger",
+        "mutation": "Map F12 to the residual-payoff operation.",
+        "guard": "Direct payoff arithmetic must not be closed by Nash pay-off matrix coverage."
+      }
+    },
+    {
+      "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed_in_bundle_3",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "operation_registry_need",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "candidate_status": "governance_evidence_only_not_candidate_write",
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "required_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "forbidden_mtu_ids": [
+        "F12"
+      ],
+      "route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "margin_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+          "source_locator": {
+            "exam": "ha-1022-a-24-1-o",
+            "opgave_num": 2,
+            "question_num": 12,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "prompt_page_start": 5,
+            "prompt_page_end": 5,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+      "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q12-cost-omitted-margin",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
+        "guard": "The margin-payoff operation must retain the marginal-cost subtraction."
+      }
+    },
+    {
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "blocker_id": "H7-BLOCKER-OP-GAME-TREE-NASH",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed_in_bundle_3",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "operation_registry_need",
+      "candidate_packet_id": "H7-CAND-OP-GAME-TREE-NASH-BACKWARD-COMPARISON",
+      "candidate_status": "governance_evidence_only_not_candidate_write",
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "required_mtu_ids": [
+        "F12",
+        "A81",
+        "A97"
+      ],
+      "mapped_mtu_ids": [
+        "F12",
+        "A81",
+        "A97"
+      ],
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "forbidden_mtu_ids": [
+        "A15",
+        "F04"
+      ],
+      "route_tags": [
+        "game_theory",
+        "game_tree",
+        "nash_equilibrium",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+          "source_locator": {
+            "exam": "vw-1022-a-23-2-o",
+            "opgave_num": 4,
+            "question_num": 20,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+            "prompt_page_start": 9,
+            "prompt_page_end": 10,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+            "correction_page_start": 11,
+            "correction_page_end": 11,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proof_required_to_close": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+      "safe_interim_action": "Keep review_required and keep matrix-shortcut misconception guard.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q20-matrix-shortcut",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Close q20 using only F12 matrix procedure text.",
+        "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking."
+      }
+    },
+    {
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-INSURANCE-COST-BENEFIT",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed_in_bundle_3",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "procedure_fit_gap",
+      "candidate_packet_id": "H7-CAND-OP-FIXED-VARIABLE-CURRENCY-INSURANCE-COST-BENEFIT",
+      "candidate_status": "governance_evidence_only_not_candidate_write",
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "required_mtu_ids": [
+        "A38",
+        "G12",
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "A38",
+        "G12",
+        "A81",
+        "A96"
+      ],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "forbidden_mtu_ids": [
+        "A15"
+      ],
+      "route_tags": [
+        "calculation",
+        "insurance_cost",
+        "currency_risk",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+          "source_locator": {
+            "exam": "vw-1022-a-24-1-o",
+            "opgave_num": 3,
+            "question_num": 17,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+            "correction_page_start": 11,
+            "correction_page_end": 11,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proof_required_to_close": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+      "safe_interim_action": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q17-premium-month-factor-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
+        "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit."
+      }
+    },
+    {
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-FIRST",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed_in_bundle_3",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "procedure_fit_gap",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "candidate_status": "governance_evidence_only_not_candidate_write",
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "required_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "mapped_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "forbidden_mtu_ids": [
+        "A45"
+      ],
+      "route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "time_sequence",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        },
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proof_required_to_close": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+      "safe_interim_action": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-macro-one-step-only",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
+        "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU."
+      }
+    },
+    {
+      "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-SECOND",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed_in_bundle_3",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "procedure_fit_gap",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "candidate_status": "governance_evidence_only_not_candidate_write",
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "required_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "mapped_mtu_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "answer_form_mtu_ids": [
+        "A40"
+      ],
+      "forbidden_mtu_ids": [
+        "A45"
+      ],
+      "route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "table_completion",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        },
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "proof_required_to_close": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+      "safe_interim_action": "Keep table_completion route tag and review_required.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-final-r-pi-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
+        "guard": "The graph-and-table operation must not close from graph movement alone."
+      }
+    }
+  ],
+  "summary": {
+    "protected_holds": 7,
+    "executed_in_this_bundle": 0,
+    "protected_reference_mutations": 0,
+    "operation_registry_mutations": 0,
+    "candidate_writes": 0,
+    "h7_full_closure_claimed": false
+  }
+}

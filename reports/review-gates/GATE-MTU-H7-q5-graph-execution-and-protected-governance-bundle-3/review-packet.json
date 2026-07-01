@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-Q5-GRAPH-EXECUTION-AND-PROTECTED-GOVERNANCE-BUNDLE-3",
+  "gate_id": "GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3",
+  "review_standard": "REV-STD-1",
+  "status": "READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PR_PROOF",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "requested_decision": "Review Bundle 3 as bounded q5 graph-source execution evidence plus seven protected/canonical H7 governance holds. Approve only this report/gate/checker surface, not H7 closure or product authority.",
+  "product_end_state_cited": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_spec_cited": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "source_authorization": {
+    "authorization_type": "thread_goal_authorization",
+    "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+    "decision": "BUILD_MTU_H7_BUNDLE_3_FOR_HUMAN_REVIEW",
+    "scope": "q5 graph-source execution evidence and seven protected/canonical H7 governance holds only",
+    "integration_authority": "not_authorized_until_exact_head_owner_authorization"
+  },
+  "non_negotiable_requirements": [
+    "No protected reference mutation",
+    "No external source mutation",
+    "No machine MTU mutation",
+    "No target exercise mutation",
+    "No operation-registry mutation",
+    "No candidate writes or storage",
+    "No lesson output",
+    "No H7 full closure",
+    "No H6/H7 evidence-generalization closure",
+    "No product-route readiness, Scale Gate, diagnostics, mastery, sequencing, PV, summative use, or student/product use",
+    "PR Readiness Reviewer and live branch-protection proof must be run against the exact remote head before ready/merge",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Base main SHA is the requested current main",
+      "status": "met",
+      "evidence": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1"
+    },
+    {
+      "requirement": "q5 graph-source execution is bounded to one operation and one locked-holdout record",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.json"
+    },
+    {
+      "requirement": "q5 accepts only the official total-subsidy shaded rectangle variants and preserves 0-or-2 scoring boundary",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.json"
+    },
+    {
+      "requirement": "q5 keeps A15 and A45 as forbidden over-trigger guards",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json"
+    },
+    {
+      "requirement": "Seven protected/canonical operations remain held and not executed",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json"
+    },
+    {
+      "requirement": "Every protected hold carries proof-required and negative-regression guard evidence",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json"
+    },
+    {
+      "requirement": "Authority flags remain false and no protected/candidate/product writes are claimed",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json"
+    },
+    {
+      "requirement": "Single-account PR governance route is READY_FOR_HUMAN_REVIEW pending exact remote proof",
+      "status": "proof_required_to_close",
+      "evidence": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json"
+    }
+  ],
+  "findings": [
+    {
+      "id": "H7-B3-FINDING-Q5-GRAPH-EXECUTION",
+      "classification": "does_not_block",
+      "severity": "bounded_execution_ready_for_human_review",
+      "summary": "q5 total-subsidy shading is advanced only as bounded graph-source execution evidence on a derived review surface.",
+      "proof_required_to_close": "Exact-head human review must confirm the official graph geometry and owner authorization before integration."
+    },
+    {
+      "id": "H7-B3-FINDING-PROTECTED-HOLDS",
+      "classification": "blocks",
+      "severity": "governance_blocker",
+      "summary": "Seven canonical/protected operations remain held for governance and are not executed in Bundle 3.",
+      "proof_required_to_close": "Separate protected governance owner decision and checker-backed execution path."
+    },
+    {
+      "id": "H7-B3-FINDING-REMOTE-PR-PROOF-PENDING",
+      "classification": "proof_required_to_close",
+      "severity": "pr_governance_gate",
+      "summary": "Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, CI, and owner authorization are required before ready/merge.",
+      "proof_required_to_close": "Run the single-account PR governance workflow against the exact remote head and record owner authorization tied to that SHA."
+    }
+  ],
+  "blocks": [
+    "H7 full closure",
+    "H6/H7 evidence-generalization closure",
+    "protected-reference mutation",
+    "operation-registry mutation",
+    "candidate writes/storage",
+    "Scale Gate",
+    "product-route readiness",
+    "diagnostics/mastery/PV/sequencing/summative/student use",
+    "merge without exact-head READY_FOR_HUMAN_REVIEW owner authorization"
+  ],
+  "does_not_block": [
+    "Human review of this Bundle 3 packet after exact-head PR readiness proof",
+    "Merging this checker/report/gate surface only after explicit exact-head owner authorization",
+    "Later protected-governance packet preparation without protected mutation"
+  ],
+  "proof_required_to_close": [
+    "Run the Bundle 3 checker and prior H7 Bundle 1/2 checkers.",
+    "Run report JSON validation, URL-index check, agent index, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.",
+    "Run Teacher, Economist, and Quality inspection subagent lead review and require MORE_THAN_SATISFIED from each reviewer.",
+    "Record explicit owner authorization in the PR thread that names the reviewed PR head SHA before merge.",
+    "Keep H7 closure blocked until seven protected holds are separately resolved."
+  ],
+  "bundle": "reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json",
+  "q5_graph_execution_report": "reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.json",
+  "protected_governance_hold_matrix": "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json",
+  "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json",
+  "pr_readiness_evidence": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json",
+  "lead_review_proof": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/lead-review.md",
+  "review_team_results": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-team-results.md",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "summary": {
+    "q5_graph_operations_advanced": 1,
+    "q5_graph_records_advanced": 1,
+    "protected_governance_operations_still_held": 7,
+    "negative_regression_detection_rate": 1,
+    "expected_pr_route": "READY_FOR_HUMAN_REVIEW",
+    "h7_full_closure_claimed": false,
+    "product_route_readiness_claimed": false,
+    "student_product_use_authorized": false
+  }
+}
