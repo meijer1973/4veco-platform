@@ -10,17 +10,19 @@ Date: 2026-06-30.
 The Part B companion main line is web output plus PPTX. PDF output belongs to
 Part A / publisher-print. Do not expand the companion lane to own PDF files.
 DOCX/Office companion exports remain opt-in profile work, not the default Part B
-student-web lane.
+companion/student-web lane.
 
 ## Objective
 
 Clean up the paragraph textbook/companion workflow guidance after the Part A /
 Part B lane split so agents get one coherent operating model:
 
-- Part A: textbook source, textbook web pages, core textbook assets, reviews,
-  quality-ref `partA:`, and publisher-print PDFs when explicitly in scope.
-- Part B: companion route, HTML/game surfaces, PPTX presentation route, web
-  visual variants, companion review, and quality-ref `companion:`.
+- Part A / textbook lane: textbook source, textbook HTML renders, core textbook
+  assets, reviews, quality-ref `partA:`, and publisher-print PDFs when
+  explicitly in scope.
+- Part B / companion / student-web companion lane: companion route, HTML/game
+  surfaces, PPTX presentation route, web visual variants, companion review, and
+  quality-ref `companion:`.
 - Complete mode: integration verification after both lanes exist, not the
   default production assignment.
 
@@ -41,8 +43,9 @@ The PR is acceptable only when:
 4. AGENTS, BUILD-PARAGRAPH, BUILD-CHAPTER, build-scripts README, and the lane
    runbooks agree that normal Part B is web plus PPTX and that PDFs are Part A /
    publisher-print.
-5. Converter guidance is profile-gated: normal student-web deploy skips DOCX
-   converters; Office/legacy profiles may enable them intentionally.
+5. Converter guidance is profile-gated: normal Part B companion/student-web
+   deploy skips DOCX converters; Office/legacy profiles may enable them
+   intentionally.
 6. Legacy target and old subfolder examples are marked legacy or replaced with
    flat-layout guidance.
 7. Local-path guidance is portable enough for current Windows worktrees and
@@ -129,7 +132,7 @@ Update `skills/econ-quality-control.md` so it:
 - treats schema v2 as current;
 - removes or clearly labels legacy top-level `quality_ref:` structure;
 - stores paragraph quality refs at the paragraph root;
-- uses flat layout and 14-file student-web language;
+- uses flat layout and 14-file companion/student-web language;
 - distinguishes Part A and companion block ownership.
 
 ### 4. Add deterministic index freshness check

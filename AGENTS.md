@@ -10,7 +10,7 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 - Use `../4veco-lessen/specifications/product-vision.md` as the canonical strategic product read before roadmap, architecture, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/product-end-state.md` as the canonical operational product north star before roadmap, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/companion-core-specifications.md` as the stable companion-surface specification.
-- Choose the paragraph lane before production work: use [docs/workflows/textbook-paragraph-lane.md](docs/workflows/textbook-paragraph-lane.md) for Part A textbook work, [docs/workflows/web-companion-paragraph-lane.md](docs/workflows/web-companion-paragraph-lane.md) for Part B companion work, and [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) as the full reference for complete/integration checks.
+- Choose the paragraph lane before production work. There are exactly two operational lanes; read [docs/workflows/paragraph-lane-vocabulary.md](docs/workflows/paragraph-lane-vocabulary.md) before using lane terms. Use [docs/workflows/textbook-paragraph-lane.md](docs/workflows/textbook-paragraph-lane.md) for Part A / textbook lane work, [docs/workflows/web-companion-paragraph-lane.md](docs/workflows/web-companion-paragraph-lane.md) for Part B / companion / student-web companion lane work, and [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) as the full reference for complete/integration checks.
 - Use [BUILD-CHAPTER.md](BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
 - Use `build-scripts/README.md` for the distinction between platform generators, converters, reference implementations, and utilities.
@@ -825,8 +825,8 @@ Beschikbare modules: `pptxgenjs`, `sharp`, `docx`, `pdf-lib`, `marked`, `graphvi
 ### Python
 Module `python-docx` voor het lezen van bestaande Word-bestanden.
 
-The Python converters in `build-scripts/` are profile-gated. Normal
-`student-web` companion work should use native HTML generators and skips
+The Python converters in `build-scripts/` are profile-gated. Normal Part B
+companion/student-web work should use native HTML generators and skips
 DOCX-to-HTML conversion. Run converters only for Office/legacy work that
 intentionally uses Word sources:
 - `uitleg voorkennis.docx` → `uitleg voorkennis.html`

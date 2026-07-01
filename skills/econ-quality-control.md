@@ -177,10 +177,11 @@ companion:
   hard_fails_open: 0
 ```
 
-Part A owns textbook fields, textbook asset integrity, and publisher-print PDF
-evidence when that profile is in scope. Part B owns companion review fields for
-the student-web route: HTML/game companions, PPTX presentation route, web visual
-variants, and route/affordance evidence. DOCX companion exports are opt-in
+Part A owns textbook fields, textbook asset integrity, textbook HTML render
+evidence, and publisher-print PDF evidence when that profile is in scope. Part B
+owns companion review fields for the companion/student-web route: HTML/game
+companions, PPTX presentation route, web visual variants, and route/affordance
+evidence. DOCX companion exports are opt-in
 Office/legacy profile work. PDF output is not a normal companion-lane artifact;
 it belongs to Part A / publisher-print unless a future human decision creates a
 separate PDF lane.
@@ -422,7 +423,7 @@ Per paragraph:
  1. Extract leerdoelen from opgaven
  2. Build/update Part A textbook source, review, assets, and publisher-print
     evidence when that profile is in scope
- 3. Build/update Part B student-web companion route, HTML/game surfaces, PPTX
+ 3. Build/update Part B companion/student-web route, HTML/game surfaces, PPTX
     presentation route, and web visual variants when companion work is in scope
  4. Run the lane-appropriate review file:
       Part A -> X.Y.Z-review.md
@@ -456,7 +457,7 @@ When generating a quality_ref, work through this checklist:
 4. Note which components cover each leerdoel
 
 **Component inventory:**
-1. For Part B student-web work, check which of the 14 standard companion
+1. For Part B companion/student-web work, check which of the 14 standard companion
    components exist for this paragraph
 2. For each present component, fill in doel, inspectie, didactiek using the mapping tables in Part 2.3 and 2.4
 3. Flag any expected components that are absent (e.g., no begeleide inoefening for a calculation-heavy paragraph)

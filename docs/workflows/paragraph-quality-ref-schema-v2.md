@@ -37,16 +37,16 @@ the lane-owned block.
 
 ## Ownership
 
-Part A textbook owners maintain `partA:`. This block records textbook review and
-textbook asset state. Publisher-print PDF evidence belongs to Part A when
-`--profile publisher-print` is in scope.
+Part A textbook owners maintain `partA:`. This block records textbook review,
+textbook asset state, and textbook HTML render evidence. Publisher-print PDF
+evidence belongs to Part A when `--profile publisher-print` is in scope.
 
 Part B companion owners maintain `companion:`. This block records the companion
-visual review outcome for the student-web route: HTML/game companions, the PPTX
-presentation route, web visual variants, route/affordance checks, and related
-student-facing companion evidence. Part B does not own PDF output in the normal
-lane; PDF output remains Part A / publisher-print unless a future human decision
-creates a separate PDF lane.
+visual review outcome for the companion/student-web route: HTML/game
+companions, the PPTX presentation route, web visual variants, route/affordance
+checks, and related student-facing companion evidence. Part B does not own PDF
+output in the normal lane; PDF output remains Part A / publisher-print unless a
+future human decision creates a separate PDF lane.
 
 ## Validator Contract
 

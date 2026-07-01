@@ -67,8 +67,10 @@ Intermediate build artifacts (pptx, svg, png) go to `output/{paragraph-code}/` a
 
 ## Output Profiles
 
-New paragraph work is web-first. Use the validator profiles instead of assuming
-every build must emit every Office or print artifact:
+New paragraph work uses two operational lanes: Part A / textbook and Part B /
+companion / student-web companion. `student-web` below is a validator profile
+name, not a separate lane. Use the validator profiles instead of assuming every
+build must emit every Office or print artifact:
 
 ```bash
 node scripts/validate-paragraph.js --mode part-a --profile student-web "<paragraph>"
@@ -77,9 +79,10 @@ node scripts/validate-paragraph.js --mode complete --profile student-web "<parag
 node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<paragraph>"
 ```
 
-- `student-web` is the normal path for paragraph 1.1.2 and later: HTML
-  companions, games, presentation HTML/PPTX, source markdown, plans, reviews,
-  data, and assets.
+- `student-web` is the baseline web-delivery profile for paragraph 1.1.2 and
+  later. In Part A mode it checks textbook source and textbook HTML renders. In
+  Part B mode it checks companion/student-web HTML, games, presentation
+  HTML/PPTX, plans, reviews, data, and assets.
 - `office` is opt-in when DOCX exports are explicitly requested.
 - `legacy-full` checks the older 27-file companion contract.
 - `publisher-print` checks the textbook PDFs for the separate publisher/print
@@ -160,7 +163,7 @@ Follow [BUILD-PARAGRAPH.md](../BUILD-PARAGRAPH.md). Scripts are used in this ord
 3. **Phase 2a**: Create `_paragraph-plan.md` from `templates/template-paragraph-plan.md`
 4. **Phase 4a**: Build shared visual concepts and surface variants in `_assets/` using `lib/lib-svg-utils.js`
 5. **Phase 4b**: Copy the closest `content/book-N/...` or legacy reference builder, adapt, run
-6. For Office/legacy profile work only, run converters (`lib/convert_*.py`) for Word-source HTML versions; normal student-web work should prefer native HTML generators
+6. For Office/legacy profile work only, run converters (`lib/convert_*.py`) for Word-source HTML versions; normal Part B companion/student-web work should prefer native HTML generators
 7. Run `deploy.js`
 8. Verify output
 

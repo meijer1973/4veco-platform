@@ -24,7 +24,7 @@ Path reliability:
 | How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
 | How should active governance wording, pre-work governance freshness, and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/check-governance-freshness.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
-| How should paragraph work be split between textbook production and web companion production? | `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js` |
+| How should paragraph work be split between Part A/textbook and Part B/companion/student-web production? | `docs/workflows/paragraph-lane-vocabulary.md`, `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js` |
 | How should accessibility, readability, contrast, alt text, OCR, or keyboard access be reviewed? | `agents/accessibility-agent.md` |
 | How should learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, transfer, retention, or classroom readiness be reviewed? | `agents/teacher-learning-quality-review-agent.md` |
 | How should student orientation, affordance, cognitive load, motivation, confusion risks, graph understandability, or student readiness be reviewed? | `agents/student-experience-review-agent.md` |
@@ -55,6 +55,7 @@ Useful entry points:
 - `4veco-lessen/specifications/companion-core-specifications.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
+- `docs/workflows/paragraph-lane-vocabulary.md`
 - `docs/workflows/textbook-paragraph-lane.md`
 - `docs/workflows/web-companion-paragraph-lane.md`
 - `docs/workflows/paragraph-quality-ref-schema-v2.md`
