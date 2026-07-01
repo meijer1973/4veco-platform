@@ -26,6 +26,20 @@ commands; PR readiness evidence records the exact final pushed heads.
 | `git diff --check` | lesson | 0 | no whitespace errors |
 | `npm.cmd run check:branch-protection` | platform | 0 | strict `validate-platform`, required approving review count `0`, no failures |
 
+## 2026-07-01 Partial Integration Recovery
+
+The authorized bundle integration lane merged the lesson member first, then
+stopped before platform merge because a concurrent platform `main` update
+cancelled the required intermediate platform CI run.
+
+| Event or Command | Cwd | Exit | Evidence |
+|---|---|---:|---|
+| `authorized-bundle-integration` run `28501386904` | GitHub Actions | 1 | lesson PR #42 merged first at `ba08b9c2e033a877c0d1b57952055ce697912a22`; platform PR #187 was not merged |
+| `npm.cmd run integrate:authorized-bundle -- --allow-partial-resume --dry-run ...` | platform | 1 | stopped with `partial_resume_platform_main_advanced`; renewed platform validation/readiness/authorization required before platform merge |
+| `git fetch origin --prune; git merge --no-edit origin/main` | platform | 0 | refreshed platform branch from `origin/main` `aa824cb50bea6735f9c86a344389ae6528f9b1de`; merge commit `87ed8842a5f4a0a3b94a10c2ef9b56df6e3e7df9` before evidence/index tail |
+| `npm.cmd run agent:index` | platform | 0 | regenerated platform and lesson GitHub agent indexes after platform base refresh and lesson merge |
+| `node build-scripts\sprints\emit-url-index.js` | platform | 0 | regenerated `reports/url-index.md`; no URL-index diff remained |
+
 ## Repository State
 
 - Platform worktree: `C:/Projects/4veco-worktrees/AGENT-DOC-GOVERNANCE-CLEANUP-20260630/4veco-platform`

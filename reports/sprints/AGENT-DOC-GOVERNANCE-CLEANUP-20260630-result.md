@@ -19,6 +19,20 @@ only after GitHub reports the controller PR as mergeable/CLEAN.
   `check:active-governance-wording`, focused Jest coverage with 14 passing
   tests, `git diff --check` in both repos, and `check:branch-protection`.
 
+## 2026-07-01 Partial Integration Recovery
+
+- Human authorization was granted for platform head
+  `d43f00d630ec388b2cfd2e3cfd8ff930a3d5095c` and lesson head
+  `639448b1601d981fcfc41b29d0c88db3f53cd7ac`.
+- The authorized bundle lane merged lesson PR #42 first as instructed; lesson
+  `main` now contains merge commit `ba08b9c2e033a877c0d1b57952055ce697912a22`.
+- The lane stopped before merging platform PR #187 because platform `main`
+  advanced concurrently and cancelled the intermediate platform CI run.
+- Platform PR #187 was refreshed from platform `main`
+  `aa824cb50bea6735f9c86a344389ae6528f9b1de`; the platform head changed after
+  the exact-head authorization, so renewed readiness and human authorization are
+  required before platform merge.
+
 ## Findings Addressed
 
 - Finding 1: verified fixed on platform `origin/main`; platform `AGENTS.md` uses canonical AGENTS wording and no active `../CLAUDE.md` read-first dependency.
