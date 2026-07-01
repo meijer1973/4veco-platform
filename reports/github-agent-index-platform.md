@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-30T11:58:44.224Z
+Generated: 2026-07-01T08:21:31.263Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/payload-authorization-wording-1-20260630`
-Source commit: `0549e71adb6f6bd9d0acf5077745c3bb620a4ffa`
-Files indexed: 6761
+Source branch: `codex/agent-doc-governance-cleanup-20260630`
+Source commit: `be3fa1dd472ba6495a35a63aa742b2d53c62ec49`
+Files indexed: 6843
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 657
+Count: 663
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -230,6 +230,7 @@ Count: 657
 - build-scripts/inspection/build-international-overlay-architecture.js
 - build-scripts/inspection/build-international-quality-standards.js
 - build-scripts/inspection/build-local-expert-contact-pilot.js
+- build-scripts/inspection/build-local-expert-contact-stage.js
 - build-scripts/inspection/build-local-expert-review-request-packet.js
 - build-scripts/inspection/build-local-expert-source-refresh-gate.js
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
@@ -249,6 +250,8 @@ Count: 657
 - build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/check-local-expert-contact-pilot.js
 - build-scripts/inspection/check-local-expert-contact-pilot.test.js
+- build-scripts/inspection/check-local-expert-contact-stage.js
+- build-scripts/inspection/check-local-expert-contact-stage.test.js
 - build-scripts/inspection/check-local-expert-review-request-packet.js
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
@@ -264,6 +267,7 @@ Count: 657
 - build-scripts/lib/convert_samenvatting.py
 - build-scripts/lib/convert_vaardigheden.py
 - build-scripts/lib/convert_voorkennis.py
+- build-scripts/lib/exercise-currentness.js
 - build-scripts/lib/golden-exercise-policy-checks.js
 - build-scripts/lib/lib-begeleide-inoefening.js
 - build-scripts/lib/lib-deploy-config.js
@@ -356,6 +360,7 @@ Count: 657
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-four-target-bounded-route-adoption-1.js
+- build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/build-y2-four-target-product-route-adoption-prep-1.js
@@ -478,6 +483,7 @@ Count: 657
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
+- build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -830,7 +836,7 @@ Count: 25
 
 ## validators
 
-Count: 647
+Count: 657
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -841,6 +847,7 @@ Count: 647
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-validation-log.md
 - archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-validation-log.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
@@ -904,6 +911,8 @@ Count: 647
 - build-scripts/inspection/check-international-quality-standards.js
 - build-scripts/inspection/check-local-expert-contact-pilot.js
 - build-scripts/inspection/check-local-expert-contact-pilot.test.js
+- build-scripts/inspection/check-local-expert-contact-stage.js
+- build-scripts/inspection/check-local-expert-contact-stage.test.js
 - build-scripts/inspection/check-local-expert-review-request-packet.js
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
@@ -920,6 +929,7 @@ Count: 647
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
+- build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-alignment-graph.js
 - build-scripts/references/check-document-inventory.js
 - build-scripts/references/check-empty-needs-audit.js
@@ -1036,6 +1046,7 @@ Count: 647
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
+- build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -1283,6 +1294,11 @@ Count: 647
 - reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/rendered-scale-precheck.html
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-dark.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-light.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-dark.png
@@ -1482,7 +1498,7 @@ Count: 647
 
 ## references
 
-Count: 884
+Count: 907
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1511,6 +1527,7 @@ Count: 884
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json
+- references/data/exercise-surface-manifest.json
 - references/data/exercises/exam-question-overlays.json
 - references/data/exercises/graph-spec-representation-plan.json
 - references/data/exercises/graph-spec-representation-plan.md
@@ -1604,6 +1621,26 @@ Count: 884
 - references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/flanders-local-expert-contact-pilot-packet.sample.json
 - references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/local-expert-contact-pilot-decision.sample.json
 - references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/local-expert-response-intake-report.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/contact-text-drift.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/england-whole-uk-overclaim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/expert-as-official-authority.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/flanders-all-belgium-overclaim.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/forbidden-attachment.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/legal-compliance-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/localized-output-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/missing-jurisdiction-source-review.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/missing-legal-privacy-review.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/named-expert-selected.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/personal-contact-details.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/personal-data-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/response-without-consent.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/school-evidence-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/support-accommodation-sufficiency-response.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/negative/unauthorized-external-dispatch.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/positive/england-local-expert-contact-dispatch-record.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/positive/flanders-local-expert-contact-dispatch-record.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/positive/local-expert-contact-stage-decision.sample.json
+- references/data/inspection-standards/fixtures/local-expert-contact-stage/positive/local-expert-contact-stage-response-intake-report.sample.json
 - references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/compliance-proof-request.sample.json
 - references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/england-to-uk-generalization.sample.json
 - references/data/inspection-standards/fixtures/local-expert-review-request-packet/negative/exam-ready-exercises.sample.json
@@ -1822,6 +1859,8 @@ Count: 884
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/EXAM-SOURCE-AUTH-1.plan.json
 - references/data/sprints/EXAM-SOURCE-AUTH-1.result.json
+- references/data/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1.plan.json
+- references/data/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1.result.json
 - references/data/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1.plan.json
 - references/data/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1.result.json
 - references/data/sprints/GAME-ARCH-1.plan.json
@@ -2371,7 +2410,7 @@ Count: 884
 
 ## reports
 
-Count: 4336
+Count: 4378
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2484,6 +2523,8 @@ Count: 4336
 - reports/inspection-standards/england-internal-no-output-trial-simulation.md
 - reports/inspection-standards/england-internal-overlay-trial-contract.json
 - reports/inspection-standards/england-internal-overlay-trial-contract.md
+- reports/inspection-standards/england-local-expert-contact-dispatch-record.json
+- reports/inspection-standards/england-local-expert-contact-dispatch-record.md
 - reports/inspection-standards/england-local-expert-contact-pilot-packet.json
 - reports/inspection-standards/england-local-expert-contact-pilot-packet.md
 - reports/inspection-standards/england-local-expert-review-request-packet.json
@@ -2500,6 +2541,8 @@ Count: 4336
 - reports/inspection-standards/flanders-internal-no-output-trial-simulation.md
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.json
 - reports/inspection-standards/flanders-internal-overlay-trial-contract.md
+- reports/inspection-standards/flanders-local-expert-contact-dispatch-record.json
+- reports/inspection-standards/flanders-local-expert-contact-dispatch-record.md
 - reports/inspection-standards/flanders-local-expert-contact-pilot-packet.json
 - reports/inspection-standards/flanders-local-expert-contact-pilot-packet.md
 - reports/inspection-standards/flanders-local-expert-review-request-packet.json
@@ -2546,6 +2589,14 @@ Count: 4336
 - reports/inspection-standards/local-expert-contact-pilot-plan.md
 - reports/inspection-standards/local-expert-contact-pilot-simulation.json
 - reports/inspection-standards/local-expert-contact-pilot-simulation.md
+- reports/inspection-standards/local-expert-contact-stage-decision.json
+- reports/inspection-standards/local-expert-contact-stage-decision.md
+- reports/inspection-standards/local-expert-contact-stage-plan.json
+- reports/inspection-standards/local-expert-contact-stage-plan.md
+- reports/inspection-standards/local-expert-contact-stage-quarantine-report.json
+- reports/inspection-standards/local-expert-contact-stage-quarantine-report.md
+- reports/inspection-standards/local-expert-contact-stage-response-intake-report.json
+- reports/inspection-standards/local-expert-contact-stage-response-intake-report.md
 - reports/inspection-standards/local-expert-response-intake-report.json
 - reports/inspection-standards/local-expert-response-intake-report.md
 - reports/inspection-standards/local-expert-review-request-decision.json
@@ -4214,6 +4265,11 @@ Count: 4336
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/rendered-registry-map.html
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/review-packet.json
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/rendered-scale-precheck.html
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/rendered-product-proof.html
@@ -4374,6 +4430,15 @@ Count: 4336
 - reports/sprints/AGENT-BRANCH-SAFETY-1-plan.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-result.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-lead-review-corrections.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-lead-review-round1.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-lead-review-round2.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-corrections.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-lead-review-round1.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan-lead-review-round2.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-plan.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-result.md
+- reports/sprints/AGENT-DOC-GOVERNANCE-CLEANUP-20260630-test-evidence.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-baseline.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.md
@@ -5078,6 +5143,21 @@ Count: 4336
 - reports/sprints/EXAM-SOURCE-AUTH-1-result.md
 - reports/sprints/EXAM-SOURCE-AUTH-1-source-authority.md
 - reports/sprints/example-result.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-baseline.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-command-log.jsonl
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-command-log.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-diff-summary.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-evidence-map.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-assignment.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-corrections.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round1.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round2.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round3-ci-repair.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan-review-round1.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan-review-round2.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-quality-log.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-result.md
 - reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-baseline.md
 - reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-command-log.jsonl
 - reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-command-log.md
@@ -5726,6 +5806,7 @@ Count: 4336
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
+- reports/sprints/PAYLOAD-AUTHORIZATION-WORDING-1-lead-review-round2.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.jsonl
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-correction-record.md
@@ -6730,7 +6811,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 700
+Count: 710
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6797,6 +6878,16 @@ Count: 700
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-plan-architecture-lead-review.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-sprint-plan.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-teacher-economics-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-accessibility-inclusion-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-closure-record.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-correction-log.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-england-jurisdiction-source-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-flanders-jurisdiction-source-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-lead-architecture-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-legal-privacy-review.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-teacher-economics-review.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-accessibility-inclusion-review.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-closure-record.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-correction-log.md
