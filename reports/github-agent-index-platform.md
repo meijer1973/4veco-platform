@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T08:13:02.796Z
+Generated: 2026-07-01T08:21:31.263Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/agent-doc-governance-cleanup-20260630`
-Source commit: `16930858341196fa97f25f2279f02fe612ab0775`
-Files indexed: 6824
+Source commit: `be3fa1dd472ba6495a35a63aa742b2d53c62ec49`
+Files indexed: 6843
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 662
+Count: 663
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -267,6 +267,7 @@ Count: 662
 - build-scripts/lib/convert_samenvatting.py
 - build-scripts/lib/convert_vaardigheden.py
 - build-scripts/lib/convert_voorkennis.py
+- build-scripts/lib/exercise-currentness.js
 - build-scripts/lib/golden-exercise-policy-checks.js
 - build-scripts/lib/lib-begeleide-inoefening.js
 - build-scripts/lib/lib-deploy-config.js
@@ -1497,7 +1498,7 @@ Count: 657
 
 ## references
 
-Count: 904
+Count: 907
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1526,6 +1527,7 @@ Count: 904
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json
+- references/data/exercise-surface-manifest.json
 - references/data/exercises/exam-question-overlays.json
 - references/data/exercises/graph-spec-representation-plan.json
 - references/data/exercises/graph-spec-representation-plan.md
@@ -1857,6 +1859,8 @@ Count: 904
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/EXAM-SOURCE-AUTH-1.plan.json
 - references/data/sprints/EXAM-SOURCE-AUTH-1.result.json
+- references/data/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1.plan.json
+- references/data/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1.result.json
 - references/data/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1.plan.json
 - references/data/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1.result.json
 - references/data/sprints/GAME-ARCH-1.plan.json
@@ -2406,7 +2410,7 @@ Count: 904
 
 ## reports
 
-Count: 4363
+Count: 4378
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5139,6 +5143,21 @@ Count: 4363
 - reports/sprints/EXAM-SOURCE-AUTH-1-result.md
 - reports/sprints/EXAM-SOURCE-AUTH-1-source-authority.md
 - reports/sprints/example-result.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-baseline.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-command-log.jsonl
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-command-log.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-diff-summary.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-evidence-map.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-assignment.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-corrections.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round1.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round2.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-lead-review-round3-ci-repair.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan-review-round1.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan-review-round2.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-quality-log.md
+- reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-result.md
 - reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-baseline.md
 - reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-command-log.jsonl
 - reports/sprints/EXERCISE-WORKFLOW-CHECKER-CLEANUP-1-command-log.md
