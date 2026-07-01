@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-30T11:58:44.224Z
+Generated: 2026-07-01T07:45:21.934Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/payload-authorization-wording-1-20260630`
-Source commit: `0549e71adb6f6bd9d0acf5077745c3bb620a4ffa`
-Files indexed: 6761
+Source branch: `codex/textbook-workflow-cleanup-1-20260630`
+Source commit: `e575d25765ae98bc87141f1ee6a81d565df78885`
+Files indexed: 6774
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 657
+Count: 661
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -356,6 +356,7 @@ Count: 657
 - build-scripts/references/build-unit-design-status-overlay.js
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-four-target-bounded-route-adoption-1.js
+- build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/build-y2-four-target-product-route-adoption-prep-1.js
@@ -478,6 +479,7 @@ Count: 657
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
+- build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -540,7 +542,9 @@ Count: 657
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/agent-index-freshness.test.js
 - build-scripts/reports/aspects-coverage.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/dag-integrity.js
 - build-scripts/reports/dead-units.js
@@ -830,7 +834,7 @@ Count: 25
 
 ## validators
 
-Count: 647
+Count: 655
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -920,6 +924,7 @@ Count: 647
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
+- build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-alignment-graph.js
 - build-scripts/references/check-document-inventory.js
 - build-scripts/references/check-empty-needs-audit.js
@@ -1036,6 +1041,7 @@ Count: 647
 - build-scripts/references/check-y2-evidence-backed-target-foundation-wave-1.js
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
+- build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -1050,6 +1056,7 @@ Count: 647
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-active-governance-wording.js
@@ -1283,6 +1290,11 @@ Count: 647
 - reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/rendered-scale-precheck.html
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-dark.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-desktop-light.png
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/screenshots/5-4-2-korte-check-mobile-dark.png
@@ -2371,7 +2383,7 @@ Count: 884
 
 ## reports
 
-Count: 4336
+Count: 4343
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4214,6 +4226,11 @@ Count: 4336
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/rendered-registry-map.html
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/review-packet.json
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.md
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/rendered-scale-precheck.html
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/rendered-product-proof.html
@@ -5726,6 +5743,7 @@ Count: 4336
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
+- reports/sprints/PAYLOAD-AUTHORIZATION-WORDING-1-lead-review-round2.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.jsonl
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-correction-record.md
@@ -6655,6 +6673,7 @@ Count: 4336
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md
+- reports/sprints/TEXTBOOK-WORKFLOW-CLEANUP-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-result.md
 - reports/sprints/VISION-1-baseline.md
@@ -6730,7 +6749,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 700
+Count: 702
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7340,6 +7359,8 @@ Count: 700
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/paragraph-lane-vocabulary.md
+- docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
 - knowledge/113-excellent-exit-ticket-v3-package.zip
