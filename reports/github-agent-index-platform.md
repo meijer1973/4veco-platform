@@ -6,8 +6,8 @@ Purpose: lightweight orientation for agents browsing through GitHub. This invent
 
 Root: `4veco-platform`
 Source branch: `codex/skilltree-improvement-20260618`
-Source commit: `17e00d0fb2043a2378bafc781823391becdc89a3`
-Files indexed: 7092
+Source commit: `5e1715ea2aed43af9bac111e27f4a6160b8e28e2`
+Files indexed: 7097
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2530,7 +2530,7 @@ Count: 974
 
 ## reports
 
-Count: 4476
+Count: 4479
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5805,6 +5805,9 @@ Count: 4476
 - reports/sprints/LEAD-REVIEW-2-lead-review-round2.md
 - reports/sprints/LEAD-REVIEW-2-plan.md
 - reports/sprints/LEAD-REVIEW-2-result.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-lead-review.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-plan.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-result.md
 - reports/sprints/MATH-REFINE-1-baseline.md
 - reports/sprints/MATH-REFINE-1-diff-summary.md
 - reports/sprints/MATH-REFINE-1-gate-handoff.md
@@ -7029,7 +7032,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 757
+Count: 759
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7045,6 +7048,8 @@ Count: 757
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round3.md
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-209-plan-review.md
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-209-work-review.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-210-plan-review.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-210-work-review.md
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-pr-review-round1.md
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-pr-workflow-packet.md
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-sprint-plan.md
