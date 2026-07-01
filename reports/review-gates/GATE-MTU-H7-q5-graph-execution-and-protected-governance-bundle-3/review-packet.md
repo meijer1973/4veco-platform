@@ -35,12 +35,12 @@ Review Bundle 3 as bounded q5 graph-source execution evidence plus seven protect
 - Scale Gate
 - product-route readiness
 - diagnostics/mastery/PV/sequencing/summative/student use
-- merge without exact-head READY_FOR_HUMAN_REVIEW owner authorization
+- merge before READY_FOR_HUMAN_REVIEW owner authorization is recorded for the reviewed payload
 
 ## Does Not Block
 
 - Human review of this Bundle 3 packet after exact-head PR readiness proof
-- Merging this checker/report/gate surface only after explicit exact-head owner authorization
+- Merging this checker/report/gate surface only after explicit owner authorization is recorded for the reviewed payload
 - Later protected-governance packet preparation without protected mutation
 
 ## Proof Required To Close
@@ -48,5 +48,5 @@ Review Bundle 3 as bounded q5 graph-source execution evidence plus seven protect
 - Run the Bundle 3 checker and prior H7 Bundle 1/2 checkers.
 - Run report JSON validation, URL-index check, agent index, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.
 - Run Teacher, Economist, and Quality inspection subagent lead review and require MORE_THAN_SATISFIED from each reviewer.
-- Record explicit owner authorization in the PR thread that names the reviewed PR head SHA before merge.
+- Record explicit owner authorization in the PR thread with the PR number and reviewed payload commit before merge.
 - Keep H7 closure blocked until seven protected holds are separately resolved.
