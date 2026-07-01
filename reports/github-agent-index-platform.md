@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T08:21:31.263Z
+Generated: 2026-07-01T10:59:54.322Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/agent-doc-governance-cleanup-20260630`
-Source commit: `be3fa1dd472ba6495a35a63aa742b2d53c62ec49`
-Files indexed: 6843
+Source branch: `codex/mtu-h7-q5-graph-protected-governance-bundle-3-20260701`
+Source commit: `fa066b7682daadb41e89a2aef9bdf765cfc66da5`
+Files indexed: 6859
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 663
+Count: 665
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -333,6 +333,7 @@ Count: 663
 - build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/build-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/build-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/build-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -439,6 +440,7 @@ Count: 663
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -836,7 +838,7 @@ Count: 25
 
 ## validators
 
-Count: 657
+Count: 658
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1002,6 +1004,7 @@ Count: 657
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -2410,7 +2413,7 @@ Count: 907
 
 ## reports
 
-Count: 4378
+Count: 4392
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2862,6 +2865,7 @@ Count: 4378
 - reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.md
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.md
+- reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json
 - reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.json
 - reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.md
 - reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-correction-05-05.png
@@ -2951,6 +2955,12 @@ Count: 4378
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.md
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.md
+- reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json
+- reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.md
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.md
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.json
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.md
 - reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
@@ -3946,6 +3956,13 @@ Count: 4378
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/lead-review.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-packet.json
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-packet.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-team-results.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json
