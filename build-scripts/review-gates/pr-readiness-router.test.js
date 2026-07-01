@@ -2339,6 +2339,50 @@ describe('pr-readiness-router', () => {
     expect(markdown).toContain('Next action: return to owner review for refreshed payload authorization');
   });
 
+  test('rendered state invalidates authorization for checker-emitted lineage failure token', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      ...readFixture('live-governance-human.json'),
+      reviewed_pr: {
+        ...readFixture('live-governance-human.json').reviewed_pr,
+        head_sha: integrationHead,
+      },
+      proof: {
+        ...readFixture('live-governance-human.json').proof,
+        ci: {
+          head_sha: integrationHead,
+          conclusion: 'success',
+          required_contexts: ['validate-platform'],
+          checks: [{ name: 'validate-platform', conclusion: 'SUCCESS' }],
+        },
+        lead_review: {
+          path: 'subagent:lead-review',
+          result: 'PASS',
+          reviewed_commit_sha: integrationHead,
+        },
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: false,
+          failures: ['reviewed_payload_head_not_ancestor'],
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Payload state: `PAYLOAD_REAUTHORIZATION_REQUIRED`');
+    expect(markdown).toContain('Payload lineage: `invalid`');
+    expect(markdown).toContain('Payload authorization: `invalidated`');
+    expect(markdown).toContain('Renewed owner authorization: `required`');
+    expect(markdown).toContain('Next action: return to owner review for refreshed payload authorization');
+  });
+
   test('green CI with readiness blockers renders blocked integration validation', () => {
     const fixture = readFixture('live-l1-ready.json');
     const decision = classifyPrReadiness({

@@ -1347,7 +1347,11 @@ function payloadIntegrationStateSummary(decision) {
   const baseDrift = integration.base_drift || {};
   const bundle = proof.bundle || {};
   const bundleRequired = Boolean(bundle.required || bundle.delegated || (bundle.summary && bundle.summary.required));
-  const lineageInvalid = includesAny(failures, ['reviewed_payload_not_ancestor', 'lineage_invalid']);
+  const lineageInvalid = includesAny(failures, [
+    'reviewed_payload_head_not_ancestor',
+    'reviewed_payload_not_ancestor',
+    'lineage_invalid',
+  ]);
   const effectivePayloadChanged = includesAny(failures, ['changed_effective_payload', 'effective_payload_changed']);
   const bundleMembershipChanged = includesAny(failures, ['bundle_membership_change', 'bundle_membership_changed']);
   const authorityScopeChanged = includesAny(failures, ['authority_or_scope_change', 'authority_scope_changed']);
