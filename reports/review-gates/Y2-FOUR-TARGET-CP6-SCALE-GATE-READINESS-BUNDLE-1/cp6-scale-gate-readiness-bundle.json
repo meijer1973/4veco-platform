@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1",
+  "generated_on": "2026-07-01",
+  "status": "cp6_scale_gate_readiness_bundle_ready_for_human_review",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "product_end_state": "Prepare a human-reviewable CP-6 and Scale Gate readiness bundle for the bounded Year 2 four-target route preview, proving current-main route availability, source readability, short-check behavior, exit-ticket target-equivalence candidates, rollback, and authority boundaries without authorizing student/product use.",
+  "original_sprint_gate_spec": {
+    "product_end_state_baseline": "4veco-lessen/specifications/product-end-state.md",
+    "companion_core_specification": "4veco-lessen/specifications/companion-core-specifications.md",
+    "source_reconstruction_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+    "mtu_task_family_governed_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.json",
+    "product_proof_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json",
+    "bounded_adoption_registry": "references/data/year2-target-foundation/product-route-adoption-registry.json",
+    "bounded_adoption_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/bounded-route-adoption-packet.json",
+    "post_adoption_precheck_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.json",
+    "lesson_manifest": "year2-candidate-lessons/four-target-lesson-production-1/manifest.json",
+    "route_contracts": "year2-candidate-lessons/four-target-lesson-production-1/route-contracts.json"
+  },
+  "non_negotiable_requirements": [
+    "Use REV-STD-1 and cite product end-state plus original sprint/gate specs.",
+    "Tie the bundle to current platform main and lesson main evidence.",
+    "Include all four Year 2 target-family routes; do not split into route-only or registry-only proof.",
+    "Confirm rendered source reconstruction and governed MTU/task-family proof are inherited and review-ready.",
+    "Confirm route usability, source readability, advisory short-check behavior, and exit-ticket target-equivalence candidates.",
+    "Record the completion-language decision: candidate-only, no target-equivalent completion language, no summative claim.",
+    "Keep CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use blocked until explicit owner authorization.",
+    "Include subagent lead-review coverage for teacher usability, economics/source fidelity, accessibility/mobile, short-check behavior, exit-ticket equivalence, and authority boundaries."
+  ],
+  "current_main_evidence": {
+    "platform_base_main_head_sha": "cd0b68768461f44e43990f3a5016185d083280c3",
+    "platform_payload_parent_sha": "5df89d1d1cde264fed2a71181864b11e0cec8346",
+    "lesson_current_main_head_sha": "ba08b9c2e033a877c0d1b57952055ce697912a22",
+    "lesson_checked_head_sha": "ba08b9c2e033a877c0d1b57952055ce697912a22",
+    "platform_bounded_adoption_merge_commit": "3e31e3582faf9df794e6d13865efdd5e20367366",
+    "lesson_bounded_adoption_merge_commit": "aefab74fb4d609e42140723b3e01db61e1f3644e",
+    "platform_post_adoption_merge_commit": "aa824cb50bea6735f9c86a344389ae6528f9b1de",
+    "platform_bounded_adoption_is_ancestor": true,
+    "lesson_bounded_adoption_is_ancestor": true,
+    "platform_post_adoption_is_ancestor": true,
+    "lesson_route_output_diff_since_bounded_adoption": [],
+    "lesson_route_output_unchanged_since_bounded_adoption": true
+  },
+  "screenshot_refresh_decision": {
+    "refreshed_screenshots_required": false,
+    "reason": "Lesson root index and year2-candidate lesson output are unchanged since the bounded adoption merge; inherited 48 screenshot proof remains the applicable visual evidence for this packet.",
+    "inherited_product_proof_screenshot_manifest": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshot-manifest.json",
+    "inherited_screenshot_count": 48,
+    "expected_screenshot_count": 48
+  },
+  "readiness_inputs": {
+    "post_adoption_status": "post_adoption_proof_and_scale_precheck_ready_for_human_review",
+    "post_adoption_scale_precheck_result": "PRECHECK_ONLY_BLOCKED_FOR_SCALE_GATE",
+    "source_reconstruction_status": "rendered_review_ready_pending_human_closure",
+    "mtu_task_family_status": "governed_task_family_proof_ready_pending_human_closure_no_mtu_mutation",
+    "product_proof_status": "prepared_for_human_product_proof_review",
+    "registry_status": "bounded_product_route_adoption_ready_for_human_review",
+    "route_count": 4,
+    "lesson_output_root": "year2-candidate-lessons/four-target-lesson-production-1"
+  },
+  "lead_review_requirements": {
+    "required": true,
+    "required_scopes": [
+      "teacher route usability",
+      "economics/source fidelity",
+      "accessibility/mobile",
+      "short-check behavior",
+      "exit-ticket target equivalence",
+      "authority boundaries and rollback"
+    ],
+    "evidence_file": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/subagent-lead-reviews.md",
+    "required_verdicts": [
+      "PASS",
+      "PASS WITH FLAGS"
+    ],
+    "missing_lead_review_blocks_pr_readiness": true
+  },
+  "records": [
+    {
+      "route_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "paragraph_code": "5.4.2",
+      "route_label": "5.4.2 Pensioenmodel en koopkracht",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/route-contract.json"
+      },
+      "route_use_review": {
+        "source_first_route_exists": true,
+        "navigation_between_overview_route_short_check_exit_ticket": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "student_visible_internal_terms_screened": true,
+        "completion_language_forbidden_terms_absent": true
+      },
+      "source_readability_review": {
+        "rendered_source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "anti_substitution_checked": true,
+        "official_locators_count": 2,
+        "rendered_artifact_count": 2,
+        "source_context_visible_in_route": true,
+        "visual_or_table_accessibility_present": true,
+        "proof_ready": true
+      },
+      "short_check_behavior_review": {
+        "advisory_short_check_exists": true,
+        "local_feedback_present": true,
+        "answer_state_local_only": true,
+        "no_score_grade_mastery_language": true,
+        "advisory_not_completion_proof": true
+      },
+      "exit_ticket_target_equivalence_review": {
+        "exit_ticket_candidate_exists": true,
+        "target_equivalent_requirements_count": 3,
+        "target_equivalent_requirements_visible": true,
+        "local_feedback_present": true,
+        "textarea_or_constructed_response_present": true,
+        "no_score_grade_mastery_language": true,
+        "candidate_only": true
+      },
+      "governed_mtu_task_family_review": {
+        "proof_status": "complete_review_proof_pending_human_acceptance",
+        "expected_op_rows": [
+          "OP-T1",
+          "OP-H1",
+          "OP-ANS2",
+          "OP-ANS3"
+        ],
+        "proof_case_count": 4,
+        "proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "completion_language_decision": {
+        "result": "candidate_only_no_completion_language",
+        "target_equivalent_completion_language_authorized": false,
+        "evidence": "No score, grade, mastery, summative, diagnostics, PV, or student-product-use language is allowed on route, short-check, or exit-ticket surfaces."
+      },
+      "rollback": {
+        "registry": "remove route Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1 from references/data/year2-target-foundation/product-route-adoption-registry.json or set adoption_state to rollback_inactive",
+        "lesson_root_index": "remove the year2-candidate-lessons/four-target-lesson-production-1/index.html link from 4veco-lessen index.html",
+        "lesson_bundle_index": "restore candidate-only bundle heading and status text",
+        "downstream_authority": "no MTU, operation, answer-skill, CP-6, Scale Gate, diagnostics, mastery, PV, summative, student-use, or student-product-use closure is implied"
+      },
+      "core_requirement_checklist": {
+        "bounded_entry_point_exists": true,
+        "route_use_review_passed": true,
+        "source_readability_review_passed": true,
+        "short_check_behavior_review_passed": true,
+        "exit_ticket_target_equivalence_review_passed": true,
+        "inherited_screenshot_proof_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "route_contract_boundary_retained": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "paragraph_code": "6.4.2",
+      "route_label": "6.4.2 Woningfinanciering en huurmarkt",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/route-contract.json"
+      },
+      "route_use_review": {
+        "source_first_route_exists": true,
+        "navigation_between_overview_route_short_check_exit_ticket": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "student_visible_internal_terms_screened": true,
+        "completion_language_forbidden_terms_absent": true
+      },
+      "source_readability_review": {
+        "rendered_source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "anti_substitution_checked": true,
+        "official_locators_count": 3,
+        "rendered_artifact_count": 3,
+        "source_context_visible_in_route": true,
+        "visual_or_table_accessibility_present": true,
+        "proof_ready": true
+      },
+      "short_check_behavior_review": {
+        "advisory_short_check_exists": true,
+        "local_feedback_present": true,
+        "answer_state_local_only": true,
+        "no_score_grade_mastery_language": true,
+        "advisory_not_completion_proof": true
+      },
+      "exit_ticket_target_equivalence_review": {
+        "exit_ticket_candidate_exists": true,
+        "target_equivalent_requirements_count": 3,
+        "target_equivalent_requirements_visible": true,
+        "local_feedback_present": true,
+        "textarea_or_constructed_response_present": true,
+        "no_score_grade_mastery_language": true,
+        "candidate_only": true
+      },
+      "governed_mtu_task_family_review": {
+        "proof_status": "complete_review_proof_pending_human_acceptance",
+        "expected_op_rows": [
+          "OP-P1",
+          "OP-D1",
+          "OP-C1",
+          "OP-C2",
+          "OP-F1",
+          "OP-E1",
+          "OP-ANS2",
+          "OP-ANS3"
+        ],
+        "proof_case_count": 8,
+        "proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "completion_language_decision": {
+        "result": "candidate_only_no_completion_language",
+        "target_equivalent_completion_language_authorized": false,
+        "evidence": "No score, grade, mastery, summative, diagnostics, PV, or student-product-use language is allowed on route, short-check, or exit-ticket surfaces."
+      },
+      "rollback": {
+        "registry": "remove route Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1 from references/data/year2-target-foundation/product-route-adoption-registry.json or set adoption_state to rollback_inactive",
+        "lesson_root_index": "remove the year2-candidate-lessons/four-target-lesson-production-1/index.html link from 4veco-lessen index.html",
+        "lesson_bundle_index": "restore candidate-only bundle heading and status text",
+        "downstream_authority": "no MTU, operation, answer-skill, CP-6, Scale Gate, diagnostics, mastery, PV, summative, student-use, or student-product-use closure is implied"
+      },
+      "core_requirement_checklist": {
+        "bounded_entry_point_exists": true,
+        "route_use_review_passed": true,
+        "source_readability_review_passed": true,
+        "short_check_behavior_review_passed": true,
+        "exit_ticket_target_equivalence_review_passed": true,
+        "inherited_screenshot_proof_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "route_contract_boundary_retained": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "paragraph_code": "7.4.1",
+      "route_label": "7.4.1 Kredietverzekering en informatieproblemen",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/route-contract.json"
+      },
+      "route_use_review": {
+        "source_first_route_exists": true,
+        "navigation_between_overview_route_short_check_exit_ticket": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "student_visible_internal_terms_screened": true,
+        "completion_language_forbidden_terms_absent": true
+      },
+      "source_readability_review": {
+        "rendered_source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "anti_substitution_checked": true,
+        "official_locators_count": 2,
+        "rendered_artifact_count": 2,
+        "source_context_visible_in_route": true,
+        "visual_or_table_accessibility_present": true,
+        "proof_ready": true
+      },
+      "short_check_behavior_review": {
+        "advisory_short_check_exists": true,
+        "local_feedback_present": true,
+        "answer_state_local_only": true,
+        "no_score_grade_mastery_language": true,
+        "advisory_not_completion_proof": true
+      },
+      "exit_ticket_target_equivalence_review": {
+        "exit_ticket_candidate_exists": true,
+        "target_equivalent_requirements_count": 3,
+        "target_equivalent_requirements_visible": true,
+        "local_feedback_present": true,
+        "textarea_or_constructed_response_present": true,
+        "no_score_grade_mastery_language": true,
+        "candidate_only": true
+      },
+      "governed_mtu_task_family_review": {
+        "proof_status": "complete_review_proof_pending_human_acceptance",
+        "expected_op_rows": [
+          "OP-R1",
+          "OP-M1",
+          "OP-ANS2",
+          "OP-ANS3"
+        ],
+        "proof_case_count": 4,
+        "proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "completion_language_decision": {
+        "result": "candidate_only_no_completion_language",
+        "target_equivalent_completion_language_authorized": false,
+        "evidence": "No score, grade, mastery, summative, diagnostics, PV, or student-product-use language is allowed on route, short-check, or exit-ticket surfaces."
+      },
+      "rollback": {
+        "registry": "remove route Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1 from references/data/year2-target-foundation/product-route-adoption-registry.json or set adoption_state to rollback_inactive",
+        "lesson_root_index": "remove the year2-candidate-lessons/four-target-lesson-production-1/index.html link from 4veco-lessen index.html",
+        "lesson_bundle_index": "restore candidate-only bundle heading and status text",
+        "downstream_authority": "no MTU, operation, answer-skill, CP-6, Scale Gate, diagnostics, mastery, PV, summative, student-use, or student-product-use closure is implied"
+      },
+      "core_requirement_checklist": {
+        "bounded_entry_point_exists": true,
+        "route_use_review_passed": true,
+        "source_readability_review_passed": true,
+        "short_check_behavior_review_passed": true,
+        "exit_ticket_target_equivalence_review_passed": true,
+        "inherited_screenshot_proof_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "route_contract_boundary_retained": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "paragraph_code": "8.1.4",
+      "route_label": "8.1.4 Zelfbinding en prijzenoorlog",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/route-contract.json"
+      },
+      "route_use_review": {
+        "source_first_route_exists": true,
+        "navigation_between_overview_route_short_check_exit_ticket": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "student_visible_internal_terms_screened": true,
+        "completion_language_forbidden_terms_absent": true
+      },
+      "source_readability_review": {
+        "rendered_source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "anti_substitution_checked": true,
+        "official_locators_count": 3,
+        "rendered_artifact_count": 3,
+        "source_context_visible_in_route": true,
+        "visual_or_table_accessibility_present": true,
+        "proof_ready": true
+      },
+      "short_check_behavior_review": {
+        "advisory_short_check_exists": true,
+        "local_feedback_present": true,
+        "answer_state_local_only": true,
+        "no_score_grade_mastery_language": true,
+        "advisory_not_completion_proof": true
+      },
+      "exit_ticket_target_equivalence_review": {
+        "exit_ticket_candidate_exists": true,
+        "target_equivalent_requirements_count": 3,
+        "target_equivalent_requirements_visible": true,
+        "local_feedback_present": true,
+        "textarea_or_constructed_response_present": true,
+        "no_score_grade_mastery_language": true,
+        "candidate_only": true
+      },
+      "governed_mtu_task_family_review": {
+        "proof_status": "complete_review_proof_pending_human_acceptance",
+        "expected_op_rows": [
+          "OP-S1",
+          "OP-ANS1",
+          "OP-ANS3"
+        ],
+        "proof_case_count": 3,
+        "proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "completion_language_decision": {
+        "result": "candidate_only_no_completion_language",
+        "target_equivalent_completion_language_authorized": false,
+        "evidence": "No score, grade, mastery, summative, diagnostics, PV, or student-product-use language is allowed on route, short-check, or exit-ticket surfaces."
+      },
+      "rollback": {
+        "registry": "remove route Y2-B8-Q15-Q16-STRATEGIC-TARGET-1 from references/data/year2-target-foundation/product-route-adoption-registry.json or set adoption_state to rollback_inactive",
+        "lesson_root_index": "remove the year2-candidate-lessons/four-target-lesson-production-1/index.html link from 4veco-lessen index.html",
+        "lesson_bundle_index": "restore candidate-only bundle heading and status text",
+        "downstream_authority": "no MTU, operation, answer-skill, CP-6, Scale Gate, diagnostics, mastery, PV, summative, student-use, or student-product-use closure is implied"
+      },
+      "core_requirement_checklist": {
+        "bounded_entry_point_exists": true,
+        "route_use_review_passed": true,
+        "source_readability_review_passed": true,
+        "short_check_behavior_review_passed": true,
+        "exit_ticket_target_equivalence_review_passed": true,
+        "inherited_screenshot_proof_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "route_contract_boundary_retained": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    }
+  ],
+  "authority_claims": {
+    "cp6_scale_gate_readiness_bundle_prepared": true,
+    "ready_for_human_cp6_scale_gate_review": true,
+    "bounded_product_route_preview_live": true,
+    "route_registry_current_main_verified": true,
+    "rendered_product_proof_inherited": true,
+    "rendered_source_reconstruction_inherited": true,
+    "governed_mtu_task_family_proof_inherited": true,
+    "completion_language_decision_recorded": true,
+    "rollback_proof_recorded": true,
+    "prior_bounded_product_route_adoption_authorized": true,
+    "bounded_product_route_preview_authorized": true,
+    "new_product_route_adoption_authorized_by_this_packet": false,
+    "broad_product_route_rollout_authorized": false,
+    "cp6_review_ready_for_human_decision": true,
+    "scale_gate_review_ready_for_human_decision": true,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "broad_student_rollout_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "protected_mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "default_book_navigation_mutated": false,
+    "active_curriculum_sequence_mutated": false,
+    "autonomous_merge_authorized": false
+  },
+  "authority_matrix": {
+    "cp6_human_review_ready": true,
+    "scale_gate_human_review_ready": true,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_product_use_authorized": false,
+    "merge_of_this_packet_authorizes": "readiness packet installation only, not downstream product or student use"
+  },
+  "rollback_proof": {
+    "registry": "Deactivate or revert references/data/year2-target-foundation/product-route-adoption-registry.json.",
+    "lesson_navigation": "Remove the bounded Year 2 route-preview link from 4veco-lessen index.html and restore candidate-only bundle copy.",
+    "route_files": "Keep reviewed candidate files as evidence unless a later cleanup PR is separately authorized.",
+    "authority": "All CP-6, Scale Gate, diagnostics, mastery, PV, summative, student-use, and student/product-use flags remain false."
+  },
+  "carried_issues": [
+    {
+      "issue_id": "owner-decision-required-before-cp6-or-scale-gate-closure",
+      "classification": "scale_blocker",
+      "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+      "does_not_block": "human review of this readiness bundle and merge of this evidence packet if authorized",
+      "proof_required_to_close": "explicit owner authorization for the reviewed readiness payload and decision scope, with clean lead review, branch protection ok:true, zero unresolved review threads, and PR Readiness Reviewer output"
+    },
+    {
+      "issue_id": "protected-mtu-operation-answer-skill-mutation-not-authorized",
+      "classification": "scale_blocker",
+      "blocks": "protected MTU mutation, operation registry mutation, answer-skill mutation, and broad operation row closure",
+      "does_not_block": "using existing governed MTU/task-family proof as evidence for human review",
+      "proof_required_to_close": "separate governed mutation PR with exact diffs, validators, lead review, and owner authorization"
+    }
+  ],
+  "core_requirement_checklist": {
+    "product_end_state_and_original_specs_cited": true,
+    "current_platform_and_lesson_main_heads_recorded": true,
+    "bounded_adoption_and_post_adoption_lineage_present": true,
+    "all_four_routes_included": true,
+    "inherited_product_screenshot_proof_complete": true,
+    "no_refreshed_screenshots_required_because_lesson_routes_unchanged": true,
+    "source_readability_review_complete": true,
+    "short_check_behavior_review_complete": true,
+    "exit_ticket_target_equivalence_review_complete": true,
+    "governed_mtu_task_family_proof_complete": true,
+    "completion_language_decision_recorded": true,
+    "rollback_proof_recorded": true,
+    "lead_review_artifact_required_and_named": true,
+    "downstream_authority_flags_false": true
+  },
+  "findings": [
+    {
+      "finding": "The bounded Year 2 four-target route preview is current on platform and lesson main and is ready for human CP-6/Scale Gate review.",
+      "classification": "core_requirement_met",
+      "blocks": "none for human review of this readiness bundle once lead-review and PR-readiness evidence are attached",
+      "does_not_block": "owner review of the exact readiness packet",
+      "proof_required_to_close": "current-main lineage, inherited screenshot proof, route records, lead reviews, exact-head CI, branch-protection ok:true, and PR Readiness Reviewer output"
+    },
+    {
+      "finding": "Rendered source reconstruction and governed MTU/task-family proof are inherited without executing protected mutations.",
+      "classification": "core_requirement_met",
+      "blocks": "none for readiness-bundle review",
+      "does_not_block": "using the proof as evidence for human CP-6/Scale Gate deliberation",
+      "proof_required_to_close": "retain source reconstruction JSON/gallery, governed MTU proof, and no-mutation authority flags together"
+    },
+    {
+      "finding": "Advisory short checks remain practice feedback and exit tickets remain target-equivalent candidates only.",
+      "classification": "core_requirement_met",
+      "blocks": "none for readiness-bundle review",
+      "does_not_block": "human review of short-check behavior and exit-ticket candidate equivalence",
+      "proof_required_to_close": "route-surface checks, route contracts, and completion-language decision preserved on exact head"
+    },
+    {
+      "finding": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use remain blocked until explicit owner authorization.",
+      "classification": "scale_blocker",
+      "blocks": "all downstream product/student-use authority",
+      "does_not_block": "installing and reviewing this readiness packet",
+      "proof_required_to_close": "explicit owner authorization for the reviewed readiness payload and decision scope after required lead reviews"
+    }
+  ],
+  "recommended_next_action": "Send this readiness bundle to human review after subagent lead reviews and exact-head PR readiness proof. Do not authorize CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, or student/product use from this packet without explicit owner decision."
+}
