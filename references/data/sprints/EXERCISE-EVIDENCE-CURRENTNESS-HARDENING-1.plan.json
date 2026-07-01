@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1",
+  "name": "Exercise Evidence Currentness Hardening",
+  "created": "2026-07-01",
+  "plan": "reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan.md",
+  "baseline": "reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-baseline.md",
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Wire exercise workflow currentness into npm and platform CI.",
+    "Move current exercise surface and validator currentness rules into a manifest/registry.",
+    "Guard stale checkers and classify historical metadata that still cites legacy unsuffixed exit-ticket paths.",
+    "Preserve source-data, engine, generated lesson output, product-authority, and student/product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1",
+    "npm.cmd run check:exercise-workflow-currentness",
+    "node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run check:scope-language",
+    "npm.cmd run check:platform",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1-result.md",
+    "node build-scripts/sprints/check-lead-review-substance.js EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1",
+    "node build-scripts/sprints/check-sprint-bundle.js EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1 --complete",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No source-data/book-1/exit-ticket/*.json edits.",
+    "No generated lesson output edits.",
+    "No engine implementation or CSS/JS behavior changes.",
+    "No references/machine or references/external edits.",
+    "No target-exercise registry writes.",
+    "No candidate storage writes.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, product route adoption, broad product use, or student/product use."
+  ]
+}
