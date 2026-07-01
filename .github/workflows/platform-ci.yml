@@ -81,22 +81,45 @@ jobs:
 
       - name: Install presentation proof tools
         run: |
-          choco install libreoffice-fresh -y --no-progress
+          function Invoke-WithRetry {
+            param(
+              [Parameter(Mandatory = $true)][scriptblock]$ScriptBlock,
+              [Parameter(Mandatory = $true)][string]$Label,
+              [int]$Attempts = 3
+            )
+            for ($attempt = 1; $attempt -le $Attempts; $attempt += 1) {
+              try {
+                return & $ScriptBlock
+              } catch {
+                if ($attempt -eq $Attempts) { throw "$Label failed after $Attempts attempts: $($_.Exception.Message)" }
+                Write-Warning "$Label failed on attempt $attempt/${Attempts}: $($_.Exception.Message)"
+                Start-Sleep -Seconds (10 * $attempt)
+              }
+            }
+          }
+          Invoke-WithRetry -Label "LibreOffice install" -ScriptBlock {
+            choco install libreoffice-fresh -y --no-progress
+            if ($LASTEXITCODE -ne 0) { throw "choco exited with $LASTEXITCODE" }
+          }
           $popplerRoot = Join-Path $env:RUNNER_TEMP "poppler"
           New-Item -ItemType Directory -Force -Path $popplerRoot | Out-Null
-          $release = Invoke-RestMethod -Headers @{ "User-Agent" = "4veco-platform-ci" } -Uri "https://api.github.com/repos/oschwartz10612/poppler-windows/releases/latest"
+          $release = Invoke-WithRetry -Label "Poppler release lookup" -ScriptBlock {
+            Invoke-RestMethod -Headers @{ "User-Agent" = "4veco-platform-ci" } -Uri "https://api.github.com/repos/oschwartz10612/poppler-windows/releases/latest"
+          }
           $asset = $release.assets | Where-Object { $_.name -match "^Release-.*\.zip$" } | Select-Object -First 1
           if (-not $asset) { throw "No Poppler Windows release zip found" }
           $popplerZip = Join-Path $env:RUNNER_TEMP $asset.name
-          Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $popplerZip
+          Invoke-WithRetry -Label "Poppler download" -ScriptBlock {
+            Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $popplerZip
+          }
           Expand-Archive -LiteralPath $popplerZip -DestinationPath $popplerRoot -Force
           $soffice = "C:\Program Files\LibreOffice\program\soffice.exe"
           if (-not (Test-Path -LiteralPath $soffice)) {
             $soffice = (Get-ChildItem -Path "C:\Program Files" -Filter soffice.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
           }
-          $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source
+          $pdftoppm = (Get-ChildItem -Path $popplerRoot -Filter pdftoppm.exe -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
           if (-not $pdftoppm) {
-            $pdftoppm = (Get-ChildItem -Path $popplerRoot -Filter pdftoppm.exe -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+            $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source
           }
           if (-not $soffice) { throw "soffice.exe not found after LibreOffice install" }
           if (-not $pdftoppm) { throw "pdftoppm.exe not found after Poppler install" }
@@ -110,6 +133,12 @@ jobs:
 
       - name: Build presentation-v2 registered decks
         run: npm run build:presentation-v2
+
+      - name: Validate presentation-v2 HTML QA
+        run: npm run check:presentation-v2-html-qa -- --output-dir ..\ci-artifacts\presentation-v2-html-qa
+
+      - name: Validate presentation-v2 legacy guard
+        run: npm run check:presentation-v2-legacy-guard -- --output ..\ci-artifacts\presentation-v2-legacy-guard.json
 
       - name: Validate presentation-v2 PPTX proof
         run: npm run check:presentation-v2-pptx-proof -- --output-dir ..\ci-artifacts\presentation-v2-pptx-proof
@@ -167,6 +196,8 @@ jobs:
             4veco-platform/reports/json/*.json
             4veco-platform/reports/url-index.md
             ci-artifacts/platform-ci-evidence.json
+            ci-artifacts/presentation-v2-html-qa/**
+            ci-artifacts/presentation-v2-legacy-guard.json
             ci-artifacts/presentation-v2-pptx-proof/**
           if-no-files-found: ignore
           retention-days: 14

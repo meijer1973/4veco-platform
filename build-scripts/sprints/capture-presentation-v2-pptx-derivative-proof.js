@@ -9,7 +9,7 @@ const JSZip = require('jszip');
 const { mapPqPoint } = require('../lib/pq-plot-mapper');
 const { PRESENTATION_V2_DECKS } = require('../content/book-1/presentation-v2-registry');
 
-const SPRINT_ID = 'PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1';
+const SPRINT_ID = 'PRESENTATION-V2-PPTX-DERIVATIVE-111-112-113-1';
 const ROOT = path.resolve(__dirname, '..', '..');
 const BOOK_ROOT = path.resolve(
   process.env.PRESENTATION_V2_BOOK_ROOT ||
@@ -20,7 +20,7 @@ const DEFAULT_OUT_DIR = path.join(ROOT, 'reports', 'sprints', SPRINT_ID);
 const CHECK_GENERATED_AT = '1970-01-01T00:00:00.000Z';
 let OUT_DIR = DEFAULT_OUT_DIR;
 const SOFFICE = process.env.SOFFICE_PATH || 'C:\\Program Files\\LibreOffice\\program\\soffice.exe';
-const PDFTOPPM = process.env.PDFTOPPM_PATH || 'pdftoppm';
+const PDFTOPPM = resolvePdftoppmPath(process.env.PDFTOPPM_PATH || 'pdftoppm');
 
 const targets = PRESENTATION_V2_DECKS.map(entry => ({
   id: entry.id,
@@ -66,6 +66,58 @@ function assert(condition, message) {
 
 function rel(file) {
   return path.relative(ROOT, file).replace(/\\/g, '/');
+}
+
+function resolvePdftoppmPath(command) {
+  if (process.platform !== 'win32' || !/\.cmd$/i.test(command)) return command;
+  const dir = path.dirname(command);
+  const candidates = [
+    path.resolve(dir, '..', 'native', 'poppler', 'Library', 'bin', 'pdftoppm.exe'),
+    path.resolve(dir, '..', 'Library', 'bin', 'pdftoppm.exe'),
+    command.replace(/\.cmd$/i, '.exe'),
+  ];
+  return candidates.find(candidate => fs.existsSync(candidate)) || command;
+}
+
+function relOrAbs(file) {
+  const relative = path.relative(ROOT, file).replace(/\\/g, '/');
+  return relative.startsWith('..') ? file.replace(/\\/g, '/') : relative;
+}
+
+function gitValue(cwd, args) {
+  return execFileSync('git', args, {
+    cwd,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'ignore'],
+  }).trim();
+}
+
+function gitInfo(cwd) {
+  try {
+    const topLevel = gitValue(cwd, ['rev-parse', '--show-toplevel']);
+    const status = gitValue(topLevel, ['status', '--short']);
+    let remote = null;
+    try {
+      remote = gitValue(topLevel, ['remote', 'get-url', 'origin']);
+    } catch (_error) {
+      remote = null;
+    }
+    return {
+      available: true,
+      top_level: relOrAbs(topLevel),
+      branch: gitValue(topLevel, ['branch', '--show-current']) || null,
+      head: gitValue(topLevel, ['rev-parse', 'HEAD']),
+      origin: remote,
+      dirty: status.length > 0,
+      status_entries: status ? status.split(/\r?\n/).length : 0,
+    };
+  } catch (error) {
+    return {
+      available: false,
+      path: relOrAbs(cwd),
+      error: error.message,
+    };
+  }
 }
 
 function sha256File(file) {
@@ -405,6 +457,12 @@ function writeMarkdownReport(manifest) {
     '',
     ...manifest.decks.map(deckMarkdown),
     '',
+    '## Provenance',
+    '',
+    `- Platform head: \`${manifest.provenance.platform.head || 'unavailable'}\`${manifest.provenance.platform.dirty ? ' (dirty)' : ''}`,
+    `- Lesson head: \`${manifest.provenance.lesson.head || 'unavailable'}\`${manifest.provenance.lesson.dirty ? ' (dirty)' : ''}`,
+    `- Active deck set: ${manifest.provenance.presentation_v2_decks.map(deck => `\`${deck.slug}\``).join(', ')}`,
+    '',
     '## Geometry',
     '',
     'The 1.1.3 graph proof verifies P vertical, Q horizontal, (100; EUR 3.00) in the upper-left direction, (500; EUR 1.00) in the lower-right direction, and interpolation at EUR 1.75 to approximately Q = 350.',
@@ -437,6 +495,16 @@ async function main() {
     sprint_id: SPRINT_ID,
     generated_at: options.generatedAt || (options.check ? CHECK_GENERATED_AT : new Date().toISOString()),
     book_root: rel(BOOK_ROOT),
+    provenance: {
+      platform: gitInfo(ROOT),
+      lesson: gitInfo(BOOK_ROOT),
+      book_root: relOrAbs(BOOK_ROOT),
+      presentation_v2_decks: targets.map(target => ({
+        id: target.id,
+        slug: target.slug,
+        model_file: rel(target.modelPath),
+      })),
+    },
     toolchain: {
       renderer: 'build-scripts/lib/render-presentation-v2-pptx.js',
       libreoffice: SOFFICE,
