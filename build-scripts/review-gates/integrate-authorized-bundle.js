@@ -906,6 +906,66 @@ function mergeStepForOrder(order, record) {
   return [platform, lesson];
 }
 
+function resultMemberLabel(repo, prNumber, headSha) {
+  return `${repo}#${prNumber || 'unknown'}@${headSha || 'unknown-head'}`;
+}
+
+function resultMemberState(repo, member, pr) {
+  return {
+    repo,
+    pr_number: member && member.pr_number,
+    head_sha:
+      (member && (member.integration_head_sha || member.head_sha || member.reviewed_payload_head_sha)) ||
+      (pr && pr.headRefOid) ||
+      null,
+    state: pr && pr.state,
+  };
+}
+
+function compatibilityOrderProof(compatibility, order) {
+  if (order) return order;
+  if (compatibility && compatibility.recommended_merge_order) return compatibility.recommended_merge_order;
+  const orders = compatibility && compatibility.permitted_merge_orders;
+  return Array.isArray(orders) && orders.length > 0 ? orders.join(', ') : 'none';
+}
+
+function applyObservedMergeState(member, merges) {
+  const merge = (merges || []).find((item) => item.repo === member.repo && item.pr_number === member.pr_number);
+  if (!merge) return member;
+  return {
+    ...member,
+    state: 'MERGED',
+    merge_commit: merge.merge_commit,
+  };
+}
+
+function bundleStateForResult(record, compatibility, order, platformPr, lessonPr, platformMember, lessonMemberState, merges = []) {
+  const controller = resultMemberState(PLATFORM_REPO, platformMember || record.controller, platformPr);
+  const lesson = resultMemberState(LESSON_REPO, lessonMemberState || memberByRepo(record, LESSON_REPO), lessonPr);
+  const members = [lesson].filter((member) => member.pr_number).map((member) => applyObservedMergeState(member, merges));
+  const mergedController = applyObservedMergeState(controller, merges);
+  const mergedMembers = members.filter((member) => member.state === 'MERGED');
+  const openMembers = members.filter((member) => member.state === 'OPEN');
+  let residualMode = 'full bundle';
+  if (mergedMembers.length > 0 && openMembers.length === 0 && mergedController.state !== 'MERGED') {
+    residualMode = 'platform-only residual controller';
+  } else if (mergedMembers.length > 0 && openMembers.length > 0) {
+    residualMode = 'lesson-first pending platform';
+  } else if (!compatibility || compatibility.ok !== true) {
+    residualMode = 'blocked';
+  }
+  return {
+    controller_pr_head: resultMemberLabel(controller.repo, controller.pr_number, controller.head_sha),
+    member_pr_heads: members.map((member) => resultMemberLabel(member.repo, member.pr_number, member.head_sha)),
+    merged_members: mergedMembers.map((member) => resultMemberLabel(member.repo, member.pr_number, member.head_sha)),
+    open_members: openMembers.map((member) => resultMemberLabel(member.repo, member.pr_number, member.head_sha)),
+    delegated_branch_protection_proof: 'controller',
+    merge_order_proof: compatibilityOrderProof(compatibility, order),
+    residual_integration_mode: residualMode,
+    controller_state: mergedController.state || 'unknown',
+  };
+}
+
 function integrateBundle(options = {}) {
   const deps = { ...defaultDeps(options), ...(options.deps || {}) };
   const controllerRepo = options.repo || PLATFORM_REPO;
@@ -1101,6 +1161,7 @@ function integrateBundle(options = {}) {
       phase: 'authorized_no_merge',
       order,
       compatibility,
+      bundle_state: bundleStateForResult(record, compatibility, order, platformPr, lessonPr, platformMember, lessonMemberState),
       platform_main_sha: platformMainSha,
       lesson_main_sha: lessonMainSha,
       platform_branch_protection: platformBranchProtection,
@@ -1452,7 +1513,15 @@ function integrateBundle(options = {}) {
       `Bundle final CI failed: ${finalCi.failure || 'unknown'}`
     );
   }
-  return { ok: true, phase: 'merged_bundle', order, compatibility, merges, final_ci: finalCi };
+  return {
+    ok: true,
+    phase: 'merged_bundle',
+    order,
+    compatibility,
+    bundle_state: bundleStateForResult(record, compatibility, order, platformPr, lessonPr, platformMember, lessonMemberState, merges),
+    merges,
+    final_ci: finalCi,
+  };
 }
 
 function runCli(argv) {

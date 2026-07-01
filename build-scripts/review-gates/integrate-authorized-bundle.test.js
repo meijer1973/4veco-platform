@@ -286,6 +286,16 @@ describe('authorized cross-repo bundle integration', () => {
     const result = integrateBundle(options);
 
     expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    expect(result.bundle_state).toMatchObject({
+      controller_pr_head: `${PLATFORM_REPO}#140@${platformHead}`,
+      member_pr_heads: [`${LESSON_REPO}#34@${lessonHead}`],
+      merged_members: [`${LESSON_REPO}#34@${lessonHead}`],
+      open_members: [],
+      delegated_branch_protection_proof: 'controller',
+      merge_order_proof: 'lesson-first',
+      residual_integration_mode: 'full bundle',
+      controller_state: 'MERGED',
+    });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
     expect(calls.ciTriggers).toHaveLength(2);
     expect(calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
@@ -378,6 +388,37 @@ describe('authorized cross-repo bundle integration', () => {
     );
     expect(platformSuccessIndex).toBeGreaterThan(-1);
     expect(platformSuccessIndex).toBeLessThan(platformMergeIndex);
+  });
+
+  test('partial resume no-merge result identifies the residual platform controller', () => {
+    const { options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => (repo === LESSON_REPO ? lessonMerge : platformBase)),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+        noMerge: true,
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'authorized_no_merge', order: 'lesson-first' });
+    expect(result.bundle_state).toMatchObject({
+      member_pr_heads: [`${LESSON_REPO}#34@${lessonHead}`],
+      merged_members: [`${LESSON_REPO}#34@${lessonHead}`],
+      open_members: [],
+      delegated_branch_protection_proof: 'controller',
+      merge_order_proof: 'lesson-first',
+      residual_integration_mode: 'platform-only residual controller',
+      controller_state: 'OPEN',
+    });
   });
 
   test('partial resume fails closed without the explicit resume option', () => {

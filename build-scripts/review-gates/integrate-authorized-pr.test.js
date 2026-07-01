@@ -616,6 +616,16 @@ describe('authorized PR integration runner', () => {
     const result = integrate(options);
 
     expect(result).toMatchObject({ ok: true, phase: 'merged', activated_merge: false });
+    expect(result.payload_integration_state).toMatchObject({
+      payload_state: 'PAYLOAD_AUTHORIZED',
+      integration_state: 'READY_TO_MERGE_VIA_LANE',
+      reviewed_payload_head_sha: payloadSha,
+      current_pr_head_sha: integrationSha,
+      integration_head_sha: integrationSha,
+      lineage_status: 'valid',
+      effective_payload_status: 'unchanged',
+      renewed_owner_authorization: 'not_required_unless_payload_changes',
+    });
     expect(calls.merges).toEqual([
       { repo: 'meijer1973/4veco-platform', prNumber: 136, sha: integrationSha },
     ]);
@@ -671,6 +681,10 @@ describe('authorized PR integration runner', () => {
     const result = integrate(options);
 
     expect(result.phase).toBe('authorized_no_merge');
+    expect(result.payload_integration_state).toMatchObject({
+      integration_validation: 'passed',
+      required_next_action: 'merge through the serialized integration lane',
+    });
     expect(deps.updateBranch).not.toHaveBeenCalled();
     expect(calls.statuses.map((status) => status.state)).toContain('success');
   });
@@ -697,6 +711,13 @@ describe('authorized PR integration runner', () => {
     const result = runIntegrationAttempts(options);
 
     expect(result).toMatchObject({ ok: true, phase: 'merged', attempt: 2 });
+    expect(result.payload_integration_state).toMatchObject({
+      reviewed_payload_head_sha: payloadSha,
+      current_pr_head_sha: refreshedSha,
+      integration_head_sha: refreshedSha,
+      payload_authorization: 'inherited',
+      integration_validation: 'passed',
+    });
     expect(calls.updates).toEqual([
       { repo: 'meijer1973/4veco-platform', prNumber: 136, expectedHeadSha: integrationSha },
     ]);

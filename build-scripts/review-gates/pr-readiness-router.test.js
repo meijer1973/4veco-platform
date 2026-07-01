@@ -469,6 +469,13 @@ describe('pr-readiness-router', () => {
       merged: true,
       merge_commit: lessonMerge,
     });
+    const markdown = renderDecisionMarkdown(decision);
+    expect(markdown).toContain('## Bundle State');
+    expect(markdown).toContain(`Member PR/head: \`meijer1973/4veco-lessen#34@${lessonHead}\``);
+    expect(markdown).toContain(`Merged members: \`meijer1973/4veco-lessen#34@${lessonHead}\``);
+    expect(markdown).toContain('Open members: `none`');
+    expect(markdown).toContain('Residual integration mode: `platform-only residual controller`');
+    expect(markdown).not.toMatch(/exact platform head/i);
   });
 
   test('cross-repo bundle controller accepts coordinated both-draft mark-ready pre-state', () => {
@@ -1397,6 +1404,10 @@ describe('pr-readiness-router', () => {
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.proof.bundle.delegated).toBe(true);
+    const markdown = renderDecisionMarkdown(decision);
+    expect(markdown).toContain('Delegated branch-protection proof: `controller`');
+    expect(markdown).toContain('Delegated branch protection');
+    expect(markdown).toContain(`Controller PR/head: \`meijer1973/4veco-platform#140@${platformHead}\``);
   });
 
   test('delegated lesson member can mark ready after the platform controller is ready', () => {
@@ -2293,6 +2304,15 @@ describe('pr-readiness-router', () => {
     expect(markdown).toContain(`Integration head: \`${integrationHead}\``);
     expect(markdown).toContain('The integration lane validates the current integration head before merge.');
     expect(markdown).toContain('does not require renewed owner authorization');
+    expect(markdown).toContain('## Payload / Integration State');
+    expect(markdown).toContain('Payload state: `PAYLOAD_AUTHORIZED`');
+    expect(markdown).toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+    expect(markdown).toContain('Payload lineage: `valid`');
+    expect(markdown).toContain('Effective payload: `unchanged`');
+    expect(markdown).toContain('Payload authorization: `inherited`');
+    expect(markdown).toContain('Integration validation: `passed`');
+    expect(markdown).toContain('Renewed owner authorization: `not_required_unless_payload_changes`');
+    expect(markdown).not.toMatch(new RegExp('exact-head ' + 'authorization', 'i'));
   });
 
   test('rendered decision comment says substantive payload changes return to owner review', () => {
@@ -2312,6 +2332,31 @@ describe('pr-readiness-router', () => {
 
     expect(markdown).toContain('Substantive payload change');
     expect(markdown).toContain('returns to owner review');
+    expect(markdown).toContain('Payload state: `PAYLOAD_REAUTHORIZATION_REQUIRED`');
+    expect(markdown).toContain('Effective payload: `changed`');
+    expect(markdown).toContain('Payload authorization: `invalidated`');
+    expect(markdown).toContain('Renewed owner authorization: `required`');
+    expect(markdown).toContain('Next action: return to owner review for refreshed payload authorization');
+  });
+
+  test('green CI with readiness blockers renders blocked integration validation', () => {
+    const fixture = readFixture('live-l1-ready.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        checkers: [],
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(decision.proof.ci_status).toBe('success');
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('checker_proof_missing_or_not_successful');
+    expect(markdown).toContain('Route: `KEEP_DRAFT_REVISE`');
+    expect(markdown).toContain('`checker_proof_missing_or_not_successful`');
+    expect(markdown).toContain('Integration validation: `blocked`');
+    expect(markdown).toContain('Next action: resolve readiness blockers before merge');
   });
 
   test('rendered decision parser rejects marker and machine-decision disagreement', () => {

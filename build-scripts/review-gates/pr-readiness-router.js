@@ -1308,6 +1308,180 @@ function parseRenderedDecisionMarkdown(body) {
   return { decision, digest, marker: expectedMarker };
 }
 
+function statusOrUnknown(value) {
+  const text = String(value || '').trim();
+  return text || 'unknown';
+}
+
+function includesAny(values, candidates) {
+  const haystack = asArray(values).map((value) => String(value || ''));
+  return candidates.some((candidate) => haystack.includes(candidate));
+}
+
+function integrationFailures(integrationProof) {
+  return asArray(
+    integrationProof.failures ||
+      (integrationProof.lineage && integrationProof.lineage.failures) ||
+      []
+  );
+}
+
+function statusFromIntegration(integrationProof, key, inheritedStatus) {
+  const direct = integrationProof[key];
+  if (direct) return direct;
+  const nestedKey = key.replace(/_status$/, '');
+  if (integrationProof[nestedKey] && integrationProof[nestedKey].status) return integrationProof[nestedKey].status;
+  return inheritedStatus || 'unknown';
+}
+
+function payloadIntegrationStateSummary(decision) {
+  const proof = decision.proof || {};
+  const integration = proof.integration || {};
+  const authorization = proof.human_authorization || {};
+  const failures = integrationFailures(integration);
+  const reviewedPayloadHead =
+    integration.reviewed_payload_head_sha ||
+    authorization.reviewed_payload_head_sha ||
+    decision.reviewed_pr.head_sha;
+  const integrationHead = integration.integration_head_sha || decision.reviewed_pr.head_sha;
+  const baseDrift = integration.base_drift || {};
+  const bundle = proof.bundle || {};
+  const bundleRequired = Boolean(bundle.required || bundle.delegated || (bundle.summary && bundle.summary.required));
+  const lineageInvalid = includesAny(failures, ['reviewed_payload_not_ancestor', 'lineage_invalid']);
+  const effectivePayloadChanged = includesAny(failures, ['changed_effective_payload', 'effective_payload_changed']);
+  const bundleMembershipChanged = includesAny(failures, ['bundle_membership_change', 'bundle_membership_changed']);
+  const authorityScopeChanged = includesAny(failures, ['authority_or_scope_change', 'authority_scope_changed']);
+  const reauthorizationRequired =
+    integration.requires_human_reauthorization === true ||
+    baseDrift.requires_human_reauthorization === true ||
+    lineageInvalid ||
+    effectivePayloadChanged ||
+    bundleMembershipChanged ||
+    authorityScopeChanged;
+  const readyRoute = decision.route === ROUTES.READY_FOR_LEAD_ONLY || decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
+  const humanRoute = decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
+  const authorizationInherited = integration.authorization_inherited === true;
+  const payloadAuthorization =
+    reauthorizationRequired
+      ? 'invalidated'
+      : authorization.decision || authorizationInherited
+        ? 'inherited'
+        : humanRoute
+          ? 'required'
+          : 'not_required';
+  const integrationValidation =
+    !readyRoute
+      ? 'blocked'
+      : authorization.decision || authorizationInherited
+        ? 'passed'
+        : 'required';
+  let payloadState = 'PAYLOAD_AUTHORIZATION_REQUIRED';
+  if (reauthorizationRequired) payloadState = 'PAYLOAD_REAUTHORIZATION_REQUIRED';
+  else if (payloadAuthorization === 'inherited' || payloadAuthorization === 'not_required') payloadState = 'PAYLOAD_AUTHORIZED';
+
+  let integrationState = 'INTEGRATION_VALIDATION_REQUIRED';
+  if (reauthorizationRequired) integrationState = 'PAYLOAD_REAUTHORIZATION_REQUIRED';
+  else if (integration.requires_integration_delta_lead_review === true || baseDrift.requires_integration_delta_lead_review === true) {
+    integrationState = 'INTEGRATION_DELTA_REVIEW_REQUIRED';
+  } else if (integrationHead !== reviewedPayloadHead && integrationValidation !== 'blocked') {
+    integrationState = authorization.decision || authorizationInherited
+      ? 'READY_TO_MERGE_VIA_LANE'
+      : 'INTEGRATION_HEAD_REFRESHED';
+  } else if (integrationValidation === 'passed') {
+    integrationState = 'READY_TO_MERGE_VIA_LANE';
+  }
+
+  const lineageStatus = lineageInvalid
+    ? 'invalid'
+    : statusFromIntegration(integration, 'lineage_status', authorizationInherited || authorization.decision ? 'valid' : null);
+  const effectivePayloadStatus = effectivePayloadChanged
+    ? 'changed'
+    : statusFromIntegration(integration, 'effective_payload_status', authorizationInherited || authorization.decision ? 'unchanged' : null);
+  const bundleMembershipStatus = !bundleRequired
+    ? 'not_bundle'
+    : bundleMembershipChanged
+      ? 'changed'
+      : statusFromIntegration(integration, 'bundle_membership_status', authorizationInherited || authorization.decision ? 'unchanged' : null);
+  const authorityScopeStatus = authorityScopeChanged
+    ? 'changed'
+    : statusFromIntegration(integration, 'authority_scope_status', authorizationInherited || authorization.decision ? 'unchanged' : null);
+  let requiredNextAction = 'resolve readiness blockers before merge';
+  if (payloadState === 'PAYLOAD_AUTHORIZATION_REQUIRED') {
+    requiredNextAction = 'request owner payload authorization for the reviewed payload head and decision scope';
+  } else if (payloadState === 'PAYLOAD_REAUTHORIZATION_REQUIRED') {
+    requiredNextAction = 'return to owner review for refreshed payload authorization';
+  } else if (integrationState === 'INTEGRATION_DELTA_REVIEW_REQUIRED') {
+    requiredNextAction = 'run integration delta lead review before merge';
+  } else if (integrationState === 'READY_TO_MERGE_VIA_LANE') {
+    requiredNextAction = 'merge through the serialized integration lane';
+  } else if (integrationState === 'INTEGRATION_HEAD_REFRESHED') {
+    requiredNextAction = 'run integration validation for the refreshed integration head';
+  } else if (readyRoute) {
+    requiredNextAction = 'complete integration validation through the serialized lane';
+  }
+
+  return {
+    payload_state: payloadState,
+    integration_state: integrationState,
+    reviewed_payload_head_sha: reviewedPayloadHead,
+    current_pr_head_sha: decision.reviewed_pr.head_sha || null,
+    integration_head_sha: integrationHead,
+    base_sha_at_review: authorization.base_sha_at_review || integration.base_sha_at_review || baseDrift.base_sha_at_review || null,
+    current_base_sha: integration.current_base_sha || integration.current_main_sha || baseDrift.current_base_sha || null,
+    lineage_status: lineageStatus,
+    effective_payload_status: effectivePayloadStatus,
+    bundle_membership_status: bundleMembershipStatus,
+    authority_scope_status: authorityScopeStatus,
+    payload_authorization: payloadAuthorization,
+    integration_validation: integrationValidation,
+    renewed_owner_authorization: reauthorizationRequired ? 'required' : 'not_required_unless_payload_changes',
+    required_next_action: requiredNextAction,
+  };
+}
+
+function memberLabel(member) {
+  const item = member || {};
+  const repo = item.repository || item.repo || 'unknown-repo';
+  const number = item.pr_number || item.number || 'unknown';
+  const head = item.head_sha || item.reviewed_payload_head_sha || 'unknown-head';
+  return `${repo}#${number}@${head}`;
+}
+
+function compatibilityMergeOrder(compatibility) {
+  if (!compatibility) return 'unavailable';
+  if (compatibility.recommended_merge_order) return compatibility.recommended_merge_order;
+  const orders = asArray(compatibility.permitted_merge_orders || compatibility.permitted_orders);
+  if (orders.length > 0) return orders.join(', ');
+  return 'none';
+}
+
+function bundleStateSummary(decision, hasBundlePayload) {
+  const bundle = decision.proof.bundle || {};
+  const summary = bundle.summary || bundle;
+  if (!hasBundlePayload || !summary) return null;
+  const controller = summary.controller || {};
+  const paired = asArray(summary.paired_prs);
+  const mergedMembers = paired.filter((member) => member && member.merged === true);
+  const openMembers = paired.filter((member) => member && member.open === true);
+  let residualMode = 'full bundle';
+  if (mergedMembers.length > 0 && openMembers.length === 0) {
+    residualMode = 'platform-only residual controller';
+  } else if (mergedMembers.length > 0 && openMembers.length > 0) {
+    residualMode = 'lesson-first pending platform';
+  } else if (!summary.ok || asArray(summary.failures).length > 0) {
+    residualMode = 'blocked';
+  }
+  return {
+    controller: controller.repository ? memberLabel(controller) : 'unknown',
+    members: paired.map(memberLabel),
+    merged_members: mergedMembers.map(memberLabel),
+    open_members: openMembers.map(memberLabel),
+    delegated_branch_protection_proof: summary.delegated ? 'controller' : 'none',
+    merge_order_proof: compatibilityMergeOrder(summary.compatibility),
+    residual_integration_mode: residualMode,
+  };
+}
+
 function renderDecisionMarkdown(decision) {
   validateDecision(decision);
   const digest = decisionDigest(decision);
@@ -1331,6 +1505,8 @@ function renderDecisionMarkdown(decision) {
         (decision.throughput && decision.throughput.class === 'cross_repo_bundle')
       )
   );
+  const stateSummary = payloadIntegrationStateSummary(decision);
+  const bundleState = bundleStateSummary(decision, hasBundlePayload);
   const leadReviewLine = delegatedBundleProof
     ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed payload head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
     : `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``;
@@ -1382,6 +1558,41 @@ function renderDecisionMarkdown(decision) {
   }
   lines.push(
     '',
+    '## Payload / Integration State',
+    '',
+    `- Payload state: \`${stateSummary.payload_state}\``,
+    `- Integration state: \`${stateSummary.integration_state}\``,
+    `- Reviewed payload head: \`${statusOrUnknown(stateSummary.reviewed_payload_head_sha)}\``,
+    `- Current PR head: \`${statusOrUnknown(stateSummary.current_pr_head_sha)}\``,
+    `- Integration head: \`${statusOrUnknown(stateSummary.integration_head_sha)}\``,
+    `- Base at review: \`${statusOrUnknown(stateSummary.base_sha_at_review)}\``,
+    `- Current base: \`${statusOrUnknown(stateSummary.current_base_sha)}\``,
+    `- Payload lineage: \`${stateSummary.lineage_status}\``,
+    `- Effective payload: \`${stateSummary.effective_payload_status}\``,
+    `- Bundle membership: \`${stateSummary.bundle_membership_status}\``,
+    `- Authority scope: \`${stateSummary.authority_scope_status}\``,
+    `- Payload authorization: \`${stateSummary.payload_authorization}\``,
+    `- Integration validation: \`${stateSummary.integration_validation}\``,
+    `- Renewed owner authorization: \`${stateSummary.renewed_owner_authorization}\``,
+    '- Renewed owner authorization is not required merely because the current PR head changed; it is required when payload lineage, effective payload, bundle membership, or authority scope changed.',
+    `- Next action: ${stateSummary.required_next_action}`
+  );
+  if (bundleState) {
+    lines.push(
+      '',
+      '## Bundle State',
+      '',
+      `- Controller PR/head: \`${bundleState.controller}\``,
+      `- Member PR/head: ${bundleState.members.map((item) => `\`${item}\``).join(', ') || '`none`'}`,
+      `- Merged members: ${bundleState.merged_members.map((item) => `\`${item}\``).join(', ') || '`none`'}`,
+      `- Open members: ${bundleState.open_members.map((item) => `\`${item}\``).join(', ') || '`none`'}`,
+      `- Delegated branch-protection proof: \`${bundleState.delegated_branch_protection_proof}\``,
+      `- Merge order proof: \`${bundleState.merge_order_proof}\``,
+      `- Residual integration mode: \`${bundleState.residual_integration_mode}\``
+    );
+  }
+  lines.push(
+    '',
     '## Proof Summary',
     '',
     ...(delegatedBundleProof
@@ -1424,6 +1635,8 @@ module.exports = {
   decisionMarker,
   normalizeEvidence,
   parseRenderedDecisionMarkdown,
+  payloadIntegrationStateSummary,
   renderDecisionMarkdown,
+  bundleStateSummary,
   validateDecision,
 };

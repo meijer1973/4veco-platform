@@ -11,7 +11,10 @@ const {
   summarizeProtection,
 } = require('../ci/check-branch-protection');
 const { applyLiveDecision } = require('./apply-pr-readiness-decision');
-const { parseRenderedDecisionMarkdown } = require('./pr-readiness-router');
+const {
+  parseRenderedDecisionMarkdown,
+  payloadIntegrationStateSummary,
+} = require('./pr-readiness-router');
 const { runReview } = require('./review-pr-readiness');
 
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
@@ -731,6 +734,21 @@ function supplementalFromReadinessDecision(payloadDecision, authorization, linea
   };
 }
 
+function payloadIntegrationStateForResult(repo, prNumber, pr, authorization, lineage, route = 'READY_FOR_HUMAN_REVIEW') {
+  return payloadIntegrationStateSummary({
+    route,
+    reviewed_pr: {
+      repo,
+      number: Number(prNumber),
+      head_sha: lineage && lineage.integration_head_sha ? lineage.integration_head_sha : pr && pr.headRefOid,
+    },
+    proof: {
+      human_authorization: authorization,
+      integration: lineage,
+    },
+  });
+}
+
 function payloadReadinessDecisionFromComments(comments, repo, prNumber, payloadSha) {
   const parsed = readinessCommentFromComments(comments, repo, prNumber, payloadSha);
   if (!parsed.ok) {
@@ -885,6 +903,7 @@ function integrate(options) {
       main_sha: mainSha,
       main_compare: currentWithMain.compare,
       lineage: initialLineage,
+      payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, initialLineage),
     };
   }
 
@@ -1022,7 +1041,15 @@ function integrate(options) {
     if (!activatedMerge) {
       deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
     }
-    return { ok: true, phase: 'authorized_no_merge', pr, main_sha: finalMainSha, lineage: finalLineage, readiness };
+    return {
+      ok: true,
+      phase: 'authorized_no_merge',
+      pr,
+      main_sha: finalMainSha,
+      lineage: finalLineage,
+      readiness,
+      payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, finalLineage),
+    };
   }
   let merge;
   let mergedPr;
@@ -1187,6 +1214,7 @@ function integrate(options) {
     main_sha: finalMainSha,
     lineage: finalLineage,
     readiness,
+    payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, finalLineage),
     merge,
     merged_pr: mergedPr,
     post_merge_ci: postMergeCi,

@@ -10,6 +10,9 @@ describe('check-active-governance-wording', () => {
       'Owner authorization required before marking ready.',
       'Owner approval tied to exact PR head.',
       'The human decision must identify the PR number, exact head SHA.',
+      'Authorization valid only for exact head.',
+      'Renewed authorization for exact platform head.',
+      'Any change to either head invalidates authorization.',
       'owner_authorization_exact_sha',
       'after exact-head human merge',
       'do not mark ready or merge until owner authorization',
@@ -25,6 +28,9 @@ describe('check-active-governance-wording', () => {
       'owner-authorization-before-ready',
       'owner-approval-tied-to-exact-head',
       'human-decision-exact-head-sha',
+      'authorization-valid-only-exact-head',
+      'renewed-authorization-exact-platform-head',
+      'any-head-change-invalidates-authorization',
       'owner-authorization-exact-sha-field',
       'exact-head-human-merge',
       'do-not-ready-or-merge-until-owner',
@@ -85,6 +91,16 @@ describe('check-active-governance-wording', () => {
 
   test('allows payload-lineage authorization wording', () => {
     const text = 'Human authorization binds to the reviewed payload head, not to every later base-sync head.';
+
+    expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
+  });
+
+  test('allows canonical payload and bundle authorization type tokens', () => {
+    const text = [
+      'AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION',
+      'AUTHORIZATION_TYPE: BUNDLE_PAYLOAD_AUTHORIZATION',
+      'Owner payload authorization names reviewed_payload_head_sha and decision scope.',
+    ].join('\n');
 
     expect(findViolationsInText('AGENTS.md', text)).toEqual([]);
   });
