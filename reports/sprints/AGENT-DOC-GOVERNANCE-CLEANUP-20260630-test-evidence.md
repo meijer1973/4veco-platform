@@ -1,6 +1,30 @@
 # AGENT-DOC-GOVERNANCE-CLEANUP-20260630 Test Evidence
 
-Status: implementation verification refreshed after platform base sync.
+Status: implementation verification refreshed again on 2026-07-01 after both PR
+branches were stale against live `main`.
+
+## 2026-07-01 Stale-PR Refresh Evidence
+
+This section supersedes the earlier 2026-06-30 base-sync values below. The
+final pushed PR head may include an evidence-only tail commit after these
+commands; PR readiness evidence records the exact final pushed heads.
+
+| Command | Cwd | Exit | Evidence |
+|---|---|---:|---|
+| `git fetch origin --prune; git rev-parse origin/main` | platform | 0 | refreshed platform `origin/main` to `2eaf4d5f1460abbc6dd81bb7adf915174cb23d40` |
+| `git merge --no-edit origin/main` | platform | 0 | merged current platform `main`; generated index conflicts were limited to `reports/github-agent-index-*` and resolved by rerunning `npm.cmd run agent:index`; refreshed validation head `e4454331f37fa328676d20634e8f6ebc5a9fa1e1` |
+| `git fetch origin --prune; git rev-parse origin/main` | lesson | 0 | refreshed lesson `origin/main` to `43a6d921bda67a5593d2f0dcc0a89a44a99d42b5` |
+| `git merge --no-edit origin/main` | lesson | 0 | merged current lesson `main`; no conflict in `AGENTS.md`; refreshed validation head `639448b1601d981fcfc41b29d0c88db3f53cd7ac` |
+| `git diff origin/main...HEAD -- AGENTS.md` | lesson | 0 | lesson source diff remains limited to four path-prefix corrections from `4veco-platform/...` to `../4veco-platform/...` |
+| `npm.cmd run agent:index` | platform | 0 | regenerated platform and lesson GitHub agent indexes after both branch refreshes |
+| `node build-scripts\sprints\emit-url-index.js` | platform | 0 | regenerated `reports/url-index.md`; no final URL-index diff remained |
+| `npm.cmd run finalization:freshness` | platform | 0 | remote `main` and local `origin/main` both `2eaf4d5f1460abbc6dd81bb7adf915174cb23d40`; remote main is ancestor of platform head `e4454331f37fa328676d20634e8f6ebc5a9fa1e1` |
+| `npm.cmd run check:pptx-skill-mirror` | platform | 0 | `OK PPTX skill has no retired command mirror` |
+| `npm.cmd run check:active-governance-wording` | platform | 0 | `Active governance wording check passed.` |
+| `npx.cmd jest build-scripts/sprints/check-pptx-skill-mirror.test.js build-scripts/review-gates/check-active-governance-wording.test.js --runInBand` | platform | 0 | 2 suites passed, 14 tests passed |
+| `git diff --check` | platform | 0 | no whitespace errors |
+| `git diff --check` | lesson | 0 | no whitespace errors |
+| `npm.cmd run check:branch-protection` | platform | 0 | strict `validate-platform`, required approving review count `0`, no failures |
 
 ## Repository State
 

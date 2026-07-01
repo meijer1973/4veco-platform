@@ -1,6 +1,23 @@
 # AGENT-DOC-GOVERNANCE-CLEANUP-20260630 Result
 
-Status: ready for completed-work lead-review recheck after platform base sync.
+Status: refreshed on 2026-07-01 after the live PRs became stale against current
+`main`; ready for renewed bundle compatibility, PR readiness, and human review
+only after GitHub reports the controller PR as mergeable/CLEAN.
+
+## 2026-07-01 Refresh Result
+
+- Platform branch refreshed from current platform `main`
+  `2eaf4d5f1460abbc6dd81bb7adf915174cb23d40`.
+- Lesson branch refreshed from current lesson `main`
+  `43a6d921bda67a5593d2f0dcc0a89a44a99d42b5`.
+- Lesson `AGENTS.md` remains the only lesson source change, limited to the four
+  sibling-repo path corrections.
+- Platform generated GitHub agent indexes were regenerated after the refreshed
+  platform and lesson heads.
+- Local validation passed after the refresh:
+  `finalization:freshness`, `check:pptx-skill-mirror`,
+  `check:active-governance-wording`, focused Jest coverage with 14 passing
+  tests, `git diff --check` in both repos, and `check:branch-protection`.
 
 ## Findings Addressed
 
