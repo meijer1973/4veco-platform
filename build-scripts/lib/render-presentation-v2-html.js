@@ -15,6 +15,10 @@ function arr(value) {
   return [];
 }
 
+function stripTrailingLineWhitespace(value) {
+  return String(value).replace(/[ \t]+$/gm, '');
+}
+
 function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', jsHref = '../../shared/presentation-v2.js', pptxHref = '', backHref = '../index.html' } = {}) {
   const slides = deck.slides.map((slide, index) => renderSlide(slide, index + 1, deck.slides.length, deck)).join('\n');
   const nav = deck.slides.map((slide, index) => {
@@ -34,7 +38,7 @@ function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', js
     ? `  <meta name="presentation-source-sha256" content="${esc(deck.sourceSnapshot.sha256)}">\n`
     : '';
 
-  return `<!doctype html>
+  return stripTrailingLineWhitespace(`<!doctype html>
 <html lang="nl" data-theme="light">
 <head>
   <meta charset="utf-8">
@@ -75,7 +79,7 @@ ${slides}
   </div>
   <script src="${esc(jsHref)}"></script>
 </body>
-</html>`;
+</html>`);
 }
 
 function renderSlide(slide, number, total, deck) {
