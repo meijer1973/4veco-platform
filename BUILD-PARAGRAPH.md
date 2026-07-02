@@ -4,7 +4,21 @@ This document is the full reference for paragraph production. Start ordinary
 assignments from the lane runbooks, then use this file for detail:
 
 - Part A textbook lane: `docs/workflows/textbook-paragraph-lane.md`
-- Part B web companion lane: `docs/workflows/web-companion-paragraph-lane.md`
+- Part B companion/student-web lane: `docs/workflows/web-companion-paragraph-lane.md`
+
+Read `docs/workflows/paragraph-lane-vocabulary.md` before using lane terms.
+There are exactly two operational lanes:
+
+- **Part A / textbook lane** owns textbook source, textbook HTML renders, core
+  textbook visuals, textbook review, `partA:` quality-ref values, handoff, and
+  publisher-print PDFs when explicitly requested.
+- **Part B / companion lane / student-web companion lane** owns companion route
+  files, companion HTML/games, PPTX, web visual variants, shared companion data,
+  `_paragraph-plan.md`, companion review, and `companion:` quality-ref values.
+
+`student-web` is a validator profile name, not a third lane. When used with
+`--mode part-a`, it checks Part A textbook HTML renders and source
+prerequisites; it does not make Part A "student-web material".
 
 `complete` is an integration verification state after both lanes exist, not the
 default shape of a production assignment.
@@ -13,28 +27,28 @@ This document covers two pipelines that can run independently or together.
 
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
-| **Part A only** | Textbook source: markdown + graphs; publisher PDFs only in `--profile publisher-print` | Building source content or the publisher/print packet |
-| **Part B only** | Lessen paragraph companions. Default profile is student-facing HTML/games/presentation; DOCX exports are opt-in | Adding companions to a 4veco-lessen paragraph when textbook content exists |
+| **Part A only** | Textbook source, textbook HTML renders, core visuals; publisher PDFs only in `--profile publisher-print` | Building source content or the publisher/print packet |
+| **Part B only** | Companion/student-web route. Default deliverables are companion HTML/games plus presentation HTML/PPTX; DOCX exports are opt-in | Adding companions to a 4veco-lessen paragraph when textbook content exists |
 | **Both (A → B)** | Complete paragraph: textbook + companions | Integration verification or explicitly authorized complete bundle |
 
 ## Output profiles
 
-`validate-paragraph.js` separates routine student-web output from heavy export
-artifacts:
+`validate-paragraph.js` combines a lane mode with an export/profile selector.
+The profile names are not lane names:
 
 ```bash
+node scripts/validate-paragraph.js --mode part-a --profile student-web "<paragraph>"
+node scripts/validate-paragraph.js --mode part-b --profile student-web "<paragraph>"
 node scripts/validate-paragraph.js --mode complete --profile student-web "<paragraph>"
-node scripts/validate-paragraph.js --mode complete --profile legacy-full "<paragraph>"
-node scripts/validate-paragraph.js --mode complete --profile office "<paragraph>"
 node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<paragraph>"
 ```
 
 | Profile | Purpose | Default? |
 |---------|---------|----------|
-| `student-web` | Student-facing HTML, games, presentation HTML/PPTX, source markdown, plans, reviews, data, and assets. No DOCX or textbook PDF requirement. | Yes for direct `validate-paragraph.js` runs |
+| `student-web` | Baseline web-delivery profile. In Part A mode it checks textbook source plus textbook HTML renders. In Part B mode it checks companion/student-web HTML, games, route files, presentation HTML/PPTX, plans, reviews, data, and assets. No DOCX or textbook PDF requirement. | Yes for direct `validate-paragraph.js` runs |
 | `legacy-full` | Previous 27-file Part B contract, including all DOCX files, for regression checks on older output. | No |
 | `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
-| `publisher-print` | Textbook PDF packet for publisher/print handoff. This is a separate careful pipeline, not the fast student-web build. | `check-book.js` uses this for Part A book health |
+| `publisher-print` | Textbook PDF packet for publisher/print handoff. This is a separate careful pipeline, not the baseline web-delivery profile. | `check-book.js` uses this for Part A book health |
 
 > **Before you start:** Read the strategic product vision at
 > `../4veco-lessen/specifications/product-vision.md`, the operational
@@ -128,17 +142,17 @@ node scripts/validate-paragraph.js --mode complete "<paragraph folder>" # aggreg
 
 **Quality records (single file, two blocks):**
 
-`${parNr}-quality-ref.yaml` is `schema_version: 2`. Carries a `partA:` block (asset state, content presence, Part A review verdict) and a `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state). In Part B and complete modes, the validator requires `companion.review_file`, `companion.review_verdict`, and `companion.hard_fails_open` to match `${parNr}-companion-visual-review.md`. Defined in `skills/econ-quality-control` and in `docs/L1.5V/F-plan-part-a-b-separation.md` §4.3.
+`${parNr}-quality-ref.yaml` is `schema_version: 2`. Carries a `partA:` block (asset state, content presence, Part A review verdict) and a `companion:` block (Part B review verdict, hard-fail count, procedure step count, alt-text + checklist-route + artifact-tool-render flags, surface-by-surface state). In Part B and complete modes, the validator requires `companion.review_file`, `companion.review_verdict`, and `companion.hard_fails_open` to match `${parNr}-companion-visual-review.md`. Defined in `skills/econ-quality-control` and in `docs/workflows/paragraph-quality-ref-schema-v2.md`.
 
 ---
 
-# PART A: TEXTBOOK BUILD (markdown -> graphs -> web/print outputs)
+# PART A: TEXTBOOK BUILD (markdown -> graphs -> textbook HTML / print outputs)
 
 Produces the textbook paragraph: theory, exercises, answer models, and graphs.
-Student-web builds require the markdown source and web pages. The three PDFs
-(`paragraaf.pdf`, `opgaven.pdf`, `antwoorden.pdf`) are publisher-print outputs
-and are checked by `--profile publisher-print`, not by the default student-web
-profile.
+The baseline `student-web` validator profile requires the markdown source and
+textbook HTML renders for Part A. The three PDFs (`paragraaf.pdf`,
+`opgaven.pdf`, `antwoorden.pdf`) are publisher-print outputs and are checked by
+`--profile publisher-print`, not by the baseline profile.
 
 **Skills:** `econ-textbook-paragraph`, `econ-exercise-builder`, `economic-graph`, `econ-pdf-builder`
 
@@ -221,7 +235,7 @@ Follow `econ-textbook-paragraph` skill exactly:
 For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
 1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
 2. Write `X.Y.Z Gemengde opgaven – antwoorden.md` — answer model
-3. No paragraaf.md — consolidation has no theory section; its markdown and HTML are required for student-web, while PDFs are publisher-print outputs
+3. No paragraaf.md — consolidation has no theory section; its markdown and textbook HTML renders are required in Part A baseline validation, while PDFs are publisher-print outputs
 
 ## A3: Build graphs
 
@@ -303,27 +317,28 @@ between the textbook lane and the companion lane.
 
 # PART B: LESSEN COMPANIONS (HTML-first, Office optional)
 
-Produces the student-facing companion layer for a lessen paragraph. The default
-student-web profile requires HTML companions, HTML games, the presentation HTML
-plus editable PPTX, `index.html`, plans, reviews, shared game data, and assets.
+Produces the Part B companion/student-web layer for a lessen paragraph. The
+default Part B deliverable set requires HTML companions, HTML games, the
+presentation HTML plus editable PPTX, `index.html`, plans, reviews, shared game
+data, and assets.
 Word documents are optional Office exports and are not part of the default
-student-web completion gate. Part B can use `_assets/` graphs from Part A as
-source material, but must adapt visuals to the companion surface instead of
+Part B completion gate. Part B can use `_assets/` graphs from Part A as source
+material, but must adapt visuals to the companion surface instead of
 copy-pasting textbook images.
 
 Part B starts from the approved Part A handoff. If the handoff is missing,
 stale, or says `BLOCKED`, stop and request a Part A repair or handoff update
 instead of silently rewriting textbook source files.
 
-**If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, docx, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
+**If Part A was run first:** the `_assets/` folder already contains textbook graphs. Part B builders (presentatie, voorkennis, vaardigheden, nieuws, samenvatting, begeleide inoefening) may derive from these graphs, but the preferred output is surface-specific variants: slide, optional Office-doc, summary thumbnail, web-light, and web-dark where relevant. The economic data and reasoning should stay consistent; the layout, contrast, typography, proportions, annotations, and theme colors should be adapted.
 
 > **Visual variant rule:** Do not treat dual coding as literal reuse of Part A book art. A visual anchor means students see the same concept and data across surfaces, not the same PNG pasted everywhere. Web pages with dark mode require a dark visual variant when the image contains text, axes, colored fills, or a light background.
 
 ## B0. Target and layout
 
-- **Target repo:** `C:\Projects\4veco\4veco-lessen`.
+- **Target repo:** the sibling `../4veco-lessen` checkout unless the task sets an explicit lesson root such as `FOURVECO_LESSEN_ROOT`.
 - **Naming:** `Boek N - Title / N.X Hoofdstuk X - Name / N.X.Y [Naam]`. Books replace the old "Module N" level; chapters and paragraphs keep their two- and three-part numbering.
-- **Per-paragraph layout is flat.** All generated Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, review.md, quality-ref.yaml, and any optional PDFs/Office exports). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
+- **Per-paragraph layout is flat.** All generated Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, review.md, quality-ref.yaml, optional Part A publisher PDFs, and opt-in Office exports). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
 - **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
 - **Legacy subfolder-layout references in older guides are legacy.** For new work, this spec supersedes them. The old game target stays on its subfolder layout until it retires in September 2026.
@@ -355,16 +370,17 @@ The static helper file `Lees dit als je niet weet hoe je moet beginnen met deze 
 Important:
 
 - `scripts/deploy.js` is **not** a read-only probe. It writes engine files and generated shells into the target book.
-- For normal `student-web` builds, deploy skips DOCX-to-HTML converters. Set `RUN_DOCX_CONVERTERS=1` only for Office/legacy builds that intentionally use Word sources.
+- For normal Part B companion/student-web builds, deploy skips DOCX-to-HTML converters. Set `RUN_DOCX_CONVERTERS=1` only for Office/legacy builds that intentionally use Word sources.
 - Do not use deploy as a harmless existence check.
 
 ## B1. Definition of Done
 
-For new paragraphs, the default Part B completion gate is the **student-web**
-profile. It has 14 required root files including `index.html`; Office exports
-are opt-in.
+For new paragraphs, the default Part B completion gate is the
+**companion/student-web** deliverable set. It is validated with `--mode part-b
+--profile student-web`, has 14 required root files including `index.html`, and
+keeps Office exports opt-in.
 
-Student-web required files:
+Part B companion/student-web required files:
 
 1. `X.Y.Z [Naam] – instapquiz.html`
 2. `X.Y.Z [Naam] – nieuws-detective.html`
@@ -550,7 +566,7 @@ chapter structure, paragraph metadata, and per-paragraph game config.
 |------|-------------|------|
 | Book manifest `paragraphs[]` | `{ id, name, chapter, domain, skilltree, kind? }` | Every new Part B/complete lessen paragraph |
 | Book manifest `chapters[]` | `{ id, folder, name, number, domain }` | Only for a new chapter |
-| Paragraph `skilltree` field | `{ skills: ["A38", ...], chapterSkills: ["A38", ...] }`; `{ skills: null }` only for a deliberate all-skills paragraph view | Required for every Part B/complete paragraph because wiskundevaardigheden is one of the student-web required files |
+| Paragraph `skilltree` field | `{ skills: ["A38", ...], chapterSkills: ["A38", ...] }`; `{ skills: null }` only for a deliberate all-skills paragraph view | Required for every Part B/complete paragraph because wiskundevaardigheden is one of the companion/student-web required files |
 | `engines/theme.js` | DOMAIN_COLORS entry | Only for a brand-new domain name (teal/blue/amber/green/purple already exist) |
 
 Existing Part A-only textbook paragraphs may omit `skilltree` until companion production starts. A paragraph is not a complete Part B paragraph until the `skilltree` field is present and the wiskundevaardigheden shell/data have been generated.
@@ -576,7 +592,7 @@ BOOK="../4veco-lessen/Boek N - Title"
 PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
 mkdir -p "$PAR"
 # Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
-# Part A outputs and all 27 Part B files, including index.html, live at the paragraph root.
+# Part A outputs, all Part B companion/student-web files, and opt-in Office/legacy files live at the paragraph root.
 # Static "Lees dit..." file — copy from any existing lessen paragraph:
 cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
@@ -687,17 +703,17 @@ node scripts/deploy.js "$BOOK"
 `$BOOK` points at a lessen book root (e.g. `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod`); `shared/` lives directly under it. This runs ONLY the automated layer: engine copy, game shell generation (flat output into each paragraph root), landing pages, link check, data tests. It does NOT build rich documents.
 
 This command writes to the target book. It is a build/deploy step, not a read-only validation probe.
-In the default student-web profile, deploy skips DOCX-to-HTML converters. Use
+In the default Part B companion/student-web build, deploy skips DOCX-to-HTML converters. Use
 `RUN_DOCX_CONVERTERS=1 node scripts/deploy.js "$BOOK"` only for an Office or
 legacy-full run where `.docx` sources are deliberately part of the product.
 
 ### Phase 6a: Companion visual review gate
 
-Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and the PPTX presentation route). DOCX companion exports are opt-in Office/legacy profile work. PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
 
 Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
 
-> "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
+> "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, PPTX, and opt-in Office companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
 
 Hard fails from this agent block completion. Fix the source, generator, CSS/JS, asset builder, or registry issue; regenerate; then rerun the companion review. Do not close a generated-output defect by hand-editing the generated lesson artifact unless the team explicitly requests a temporary patch.
 
@@ -712,7 +728,7 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has SVG+PNG pairs matching every entry in the visuelen-plan and visual-variants-plan
-- [ ] File count: 14 required `student-web` Part B root files, including index.html
+- [ ] File count: 14 required Part B companion/student-web root files, including index.html
 - [ ] Office/legacy exports open in Word/PowerPoint when the selected profile includes them
 - [ ] `X.Y.Z-quality-ref.yaml` has a `companion:` block matching `X.Y.Z-companion-visual-review.md`
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
@@ -800,9 +816,9 @@ Scripts built for specific paragraphs in earlier work. Useful as examples but no
 
 ## B5. What deploy.js does and does NOT do
 
-For `student-web`, skip the DOCX-only items in the manual layer below. They
-are retained as Office/export tasks for `office` and `legacy-full`, not as the
-default paragraph-2 path.
+For normal Part B companion/student-web work, skip the DOCX-only items in the
+manual layer below. They are retained as Office/export tasks for `office` and
+`legacy-full`, not as the default paragraph-2 path.
 
 ### deploy.js handles (automated layer):
 - Copy engine files (JS/CSS) from `engines/` → `<book>/shared/`
@@ -814,7 +830,7 @@ default paragraph-2 path.
 - Rebuild all landing pages (index.html at paragraph/chapter/book level)
 - Run link checker
 - Run data validation tests
-- Skip DOCX-to-HTML converters by default for student-web builds; converters
+- Skip DOCX-to-HTML converters by default for Part B companion/student-web builds; converters
   run only when `RUN_DOCX_CONVERTERS=1` or `BUILD_PROFILE=office|legacy-full`
 
 ### deploy.js does NOT handle (manual layer):
@@ -837,12 +853,13 @@ default paragraph-2 path.
 
 `validate-paragraph.js` should enforce the flat-layout contract in modes:
 
-Validation is profile-aware. Use `student-web` for normal paragraph companion
-work, `office` or `legacy-full` only when Word exports are deliberately part of
-the requested product, and `publisher-print` for the separate PDF handoff.
+Validation combines lane mode and profile. Use `--mode part-b --profile student-web`
+for normal paragraph companion/student-web work, `office` or `legacy-full` only
+when Word exports are deliberately part of the requested product, and
+`publisher-print` for the separate Part A PDF handoff.
 
-- **Part A/textbook mode**: validates textbook files at the paragraph root. In `student-web` and `office` profiles, theory paragraphs require paragraaf/opgaven/antwoorden markdown and HTML; consolidation paragraphs require opgaven/antwoorden markdown and HTML. PDFs and `build_pdf.py` are required only under `legacy-full` or `publisher-print`.
-- **Part B/companion mode**: validates the `student-web` Part B root files listed in B1 by default, including `index.html`; use `legacy-full` or `office` only when those exports are deliberately in scope. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
+- **Part A/textbook mode**: validates textbook files at the paragraph root. In `student-web` and `office` profiles, theory paragraphs require paragraaf/opgaven/antwoorden markdown and textbook HTML renders; consolidation paragraphs require opgaven/antwoorden markdown and textbook HTML renders. PDFs and `build_pdf.py` are required only under `legacy-full` or `publisher-print`. This remains Part A even though the historical profile name is `student-web`.
+- **Part B/companion mode**: validates the Part B companion/student-web root files listed in B1 by default, including `index.html`; use `legacy-full` or `office` only when those exports are deliberately in scope. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
 - **Complete mode**: validates both Part A and Part B.
 
 For Part B/complete mode, game runtime data lives in `<book>/shared/`:
@@ -855,16 +872,22 @@ For Part B/complete mode, game runtime data lives in `<book>/shared/`:
 
 The raw reasoning CSV source is kept in `source-data/book-N/reasoning/X.Y.Z.csv` in the platform repo, then compiled into `shared/reasoning/X.Y.Z.js`. Do not validate it as `shared/reasoning/X.Y.Z.csv`.
 
-After building, run the paragraph validator:
+After building, run the validator for the lane that changed:
 
 ```bash
+node scripts/validate-paragraph.js --mode part-a --profile student-web "<path-to-paragraph-folder>"
+node scripts/validate-paragraph.js --mode part-b --profile student-web "<path-to-paragraph-folder>"
 node scripts/validate-paragraph.js --mode complete --profile student-web "<path-to-paragraph-folder>"
 ```
 
+Use `complete` only for integration verification after both lanes exist or when
+a complete bundle was explicitly authorized.
+
 This checks:
-For `student-web`, read the old "27 files" wording below as the legacy/full
-profile contract; the default required Part B count is 14 files.
-- All 14 required `student-web` Part B files exist at the paragraph root (flat layout), including `index.html`
+For the `student-web` validator profile, read the old "27 files" wording below
+as the legacy/full profile contract; the default required Part B companion
+count is 14 files.
+- All 14 required Part B companion/student-web files exist at the paragraph root (flat layout), including `index.html`
 - Office/legacy `.docx` files are valid zip archives only when the selected profile requires them
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)

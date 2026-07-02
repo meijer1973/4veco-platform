@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { guardHistoricalChecker } = require('../lib/exercise-currentness');
 
 const ROOT = path.resolve(__dirname, '..', '..');
+guardHistoricalChecker(__filename);
 const BOOK_ROOT = path.resolve(
   process.argv[2] || path.join(ROOT, '..', '4veco-lessen', 'Boek 1 - Grondslagen, vraag en aanbod')
 );

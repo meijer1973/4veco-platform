@@ -46,6 +46,7 @@ function findRepoRoot(repoName, preferredRoot) {
     return path.resolve(process.env.FOURVECO_LESSEN_ROOT);
   }
   if (fs.existsSync(preferredRoot)) return preferredRoot;
+  if (repoName === "4veco-lessen") return preferredRoot;
   const anchorRoot = path.resolve(anchorProjectRoot, repoName);
   if (fs.existsSync(anchorRoot)) return anchorRoot;
   return preferredRoot;
