@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-02T06:24:04.810Z
+Generated: 2026-07-02T06:34:11.811Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h7-q5-graph-protected-governance-bundle-3-20260701`
-Source commit: `b64601db1e2f9630178722f3fd3567b8a4d66ae6`
-Files indexed: 6872
+Source commit: `ba08c18508a5e9dd73008735b0813b40cb3dd767`
+Files indexed: 6876
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 669
+Count: 673
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -179,6 +179,8 @@ Count: 669
 - build-scripts/content/book-1/b1-111-youtube-videos.js
 - build-scripts/content/book-1/b1-111-youtube-videos.md
 - build-scripts/content/book-1/b1-112-graphical-data.js
+- build-scripts/content/book-1/b1-112-presentation-v2-model.js
+- build-scripts/content/book-1/b1-112-presentation-v2.js
 - build-scripts/content/book-1/b1-112-student-web.js
 - build-scripts/content/book-1/b1-113-graphical-data.js
 - build-scripts/content/book-1/b1-113-presentation-v2-model.js
@@ -705,6 +707,8 @@ Count: 669
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-pptx-skill-mirror.test.js
+- build-scripts/sprints/check-presentation-v2-html-qa.js
+- build-scripts/sprints/check-presentation-v2-legacy-guard.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -842,7 +846,7 @@ Count: 25
 
 ## validators
 
-Count: 660
+Count: 662
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1157,6 +1161,8 @@ Count: 660
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-pptx-skill-mirror.test.js
+- build-scripts/sprints/check-presentation-v2-html-qa.js
+- build-scripts/sprints/check-presentation-v2-legacy-guard.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
