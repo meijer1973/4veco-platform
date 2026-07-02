@@ -19,13 +19,18 @@ Use this agent for student-facing companion artifacts, including:
 
 - `uitleg voorkennis.html`
 - `uitleg vaardigheden.html`
+- `presentatie.html` and the matching `presentatie.pptx`
+- `nieuws met visual.html`
+- `samenvatting.html`
+- `youtube-videos.html`
 - `begeleide inoefening.html`
 - `stappenplan.html`
 - `instapquiz.html`
 - `redeneer-spel.html`
 - `nieuws-detective.html`
+- `wiskundevaardigheden.html`
 - differentiated exercise handouts where the visual or route-choice layer matters
-- companion DOCX/PPTX/PDF outputs when they are part of the same surface family
+- companion DOCX/PPTX/PDF outputs when they are intentionally part of the same surface family
 
 The agent may also inspect paragraph markdown, paragraph PDF, paragraph plan, unit registry, source generator, CSS, JavaScript, and asset files to determine whether rendered output matches source intent.
 
@@ -34,7 +39,7 @@ The agent may also inspect paragraph markdown, paragraph PDF, paragraph plan, un
 For paragraph companion review, use:
 
 ```text
-You are the econ-companion-visual-review agent. Read agents/econ-companion-visual-review.md, AGENTS.md, and BUILD-PARAGRAPH.md. Review paragraph [X.Y.Z path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, _paragraph-plan.md, _assets, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as X.Y.Z-companion-visual-review.md in the paragraph folder.
+You are the econ-companion-visual-review agent. Read agents/econ-companion-visual-review.md, AGENTS.md, and BUILD-PARAGRAPH.md. Review paragraph [X.Y.Z path]. Inspect the required student-web companion surfaces plus any intentionally included DOCX/PPTX/PDF exports, rendered browser/document views where possible, _paragraph-plan.md, _assets, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as X.Y.Z-companion-visual-review.md in the paragraph folder.
 ```
 
 If this is part of a formal review gate, save the report path required by that gate instead.
@@ -288,11 +293,11 @@ For each issue, record:
 | Platform handoff required | yes / no |
 | Proof required to close | regenerated artifact, browser screenshot, validator pass, source diff, etc. |
 
-## Suggested closure proof for companion HTML
+## Suggested closure proof for companion surfaces
 
 A defect is not closed until the reviewer can verify:
 
-- regenerated HTML exists;
+- regenerated HTML/game/presentation surface exists, plus intentional Office/PDF exports when in scope;
 - embedded assets load;
 - rendered browser view has been checked;
 - visual/text examples match;

@@ -1,6 +1,6 @@
 ---
 name: econ-companion-artifacts
-description: "Authoring + regeneration spec for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matching DOCX/PPTX/PDF companion outputs). Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in the surface family above. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
+description: "Authoring + regeneration spec for student-facing companion artifacts in the Part B student-web surface set (uitleg voorkennis, uitleg vaardigheden, presentatie HTML/PPTX, nieuws met visual, samenvatting, youtube-videos, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, wiskundevaardigheden, differentiated exercise handouts, and matching DOCX/PPTX/PDF companion outputs when intentionally included). Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in the surface family above. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
 pipeline: "Part B producer (umbrella; per-format Part B skills inherit; if a per-format skill conflicts on student-facing rules, this skill wins)"
 ---
 
@@ -10,13 +10,18 @@ General authoring + regeneration recipe for **student-facing companion artifacts
 
 - `uitleg voorkennis.html`
 - `uitleg vaardigheden.html`
+- `presentatie.html` and the matching `presentatie.pptx`
+- `nieuws met visual.html`
+- `samenvatting.html`
+- `youtube-videos.html`
 - `begeleide inoefening.html`
 - `stappenplan.html`
 - `instapquiz.html`
 - `redeneer-spel.html`
 - `nieuws-detective.html`
+- `wiskundevaardigheden.html`
 - differentiated exercise handouts where the visual or route-choice layer matters
-- companion DOCX/PPTX/PDF outputs when they are part of the same surface family
+- companion DOCX/PPTX/PDF outputs when they are intentionally part of the same surface family
 
 This skill encodes the platform-wide standard. Companion-specific builders (`econ-explainer-docs` for voorkennis/vaardigheden DOCX, `econ-exercise-builder` for fading-exercise handouts, `econ-pptx-templates` for slide companions, etc.) inherit these rules; if a builder skill conflicts with this skill, this skill wins for student-facing rules and the builder skill should be updated.
 
@@ -265,7 +270,7 @@ If the review agent is not available in the current run, simulate the same check
 
 When you hand off the artifact, deliver:
 
-1. **The regenerated artifact** (path in the lessen tree).
+1. **The regenerated artifact or surface set** (path in the lessen tree).
 2. **A short explanation of the changes** (which builders/converters/registry entries changed and why).
 3. **Evidence that the rendered page was checked** (browser/DOCX inspection, not just source diff).
 4. **A source-output parity note** (which source elements you confirmed survive in the rendered output).
@@ -279,4 +284,4 @@ When you hand off the artifact, deliver:
 - **Builders**: `econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, `econ-consolidation-builder`, `econ-testprep-builder`. Builders produce the source; this skill scopes how that source must serve the student.
 - **Review gate**: `agents/econ-companion-visual-review.md` (FAIL on any hard fail listed in the "Review before delivery" section).
 - **Closure**: `econ-quality-control` and `qc-references` for logging defects. A companion is not closed by passing `validate-paragraph.js` alone; the visual review must also pass or pass-with-flags.
-- **Pipeline**: `BUILD-PARAGRAPH.md` Phase 6 (Deploy + validate) runs this skill's review heuristics; closure is recorded as `X.Y.Z-companion-visual-review.md` in the paragraph folder.
+- **Pipeline**: `BUILD-PARAGRAPH.md` Phase 6/6a (deploy + companion review) runs this skill's review heuristics; closure is recorded as `X.Y.Z-companion-visual-review.md` in the paragraph folder.

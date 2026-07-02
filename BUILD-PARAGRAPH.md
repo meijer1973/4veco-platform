@@ -552,7 +552,7 @@ BOOK="../4veco-lessen/Boek N - Title"
 PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
 mkdir -p "$PAR"
 # Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
-# Part A outputs and all 27 Part B files, including index.html, live at the paragraph root.
+# Part A outputs and all required Part B files, including index.html, live at the paragraph root.
 # Static "Lees dit..." file — copy from any existing lessen paragraph:
 cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
@@ -634,13 +634,21 @@ For each document type, copy the reference script, replace the content, run it. 
 
 Run each with: `NODE_PATH="$(npm root -g)" node <script>.js`
 
-### Phase 5: Convert docx → html (2 min)
+### Phase 5: Convert Office DOCX → HTML (office/legacy only)
+
+Skip this phase for the default `student-web` profile when the required rich
+HTML pages are authored natively. Run these converters only for an `office` or
+`legacy-full` build where the `.docx` files are deliberately the companion
+source:
+
 ```bash
 python build-scripts/lib/convert_voorkennis.py "$PAR"
 python build-scripts/lib/convert_vaardigheden.py "$PAR"
 python build-scripts/lib/convert_begeleide_inoefening.py "$PAR"
 ```
-Converters read the source `.docx` from `$PAR` directly (flat layout) and write the `.html` alongside.
+Converters read the source `.docx` from `$PAR` directly (flat layout) and write
+the `.html` alongside. They are not a substitute for reviewing the rendered
+student-web pages.
 
 ### Phase 5a–5c: QC gates
 
@@ -664,9 +672,9 @@ legacy-full run where `.docx` sources are deliberately part of the product.
 
 ### Phase 6a: Companion visual review gate
 
-Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for the full student-web surface set: uitleg voorkennis, uitleg vaardigheden, presentatie HTML/PPTX, nieuws met visual, samenvatting, youtube-videos, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, wiskundevaardigheden, differentiated exercise handouts, and matched DOCX/PPTX/PDF outputs when they are intentionally included). Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
 
-Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
+Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and native or converted companion pages can be inspected as rendered output:
 
 > "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
 
@@ -682,11 +690,11 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has SVG+PNG pairs matching every entry in the visuelen-plan and visual-variants-plan
-- [ ] File count: 27 required Part B root files, including index.html
-- [ ] All .docx/.pptx open in Word/PowerPoint without errors
+- [ ] File count: 14 required `student-web` Part B root files, including `index.html` (27 only for explicit `office`/`legacy-full` validation)
+- [ ] Required PPTX opens in PowerPoint without errors; optional DOCX exports open only when `office`/`legacy-full` is in scope
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
-- [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
-- [ ] Samenvatting uses table-based infographic layout
+- [ ] Nieuws met visual has an embedded chart/visual, source URL, questions, and answer model; Office export font sizes are 16/11/9pt when DOCX is in scope
+- [ ] Samenvatting uses a table/grid infographic structure in its source medium and renders legibly as HTML
 - [ ] Terminology is consistent across all documents (check against terminologie table in plan)
 
 **Design principles:**
@@ -810,8 +818,8 @@ Validation is profile-aware. Use `student-web` for normal paragraph companion
 work, `office` or `legacy-full` only when Word exports are deliberately part of
 the requested product, and `publisher-print` for the separate PDF handoff.
 
-- **Part A/textbook mode**: validates textbook files at the paragraph root. Theory paragraphs require paragraaf/opgaven/antwoorden markdown and PDFs. Consolidation paragraphs require opgaven/antwoorden markdown and PDFs; `paragraaf.md`/`paragraaf.pdf` are not required because consolidation has no theory section.
-- **Part B/companion mode**: validates the 27 required Part B root files listed in B1, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
+- **Part A/textbook mode**: validates textbook files at the paragraph root. Theory paragraphs require paragraaf/opgaven/antwoorden markdown; consolidation paragraphs require opgaven/antwoorden markdown; `paragraaf.md` is not required because consolidation has no theory section. HTML is required by `student-web`/`office`; PDFs and `build_pdf.py` are required by `publisher-print`/`legacy-full`.
+- **Part B/companion mode**: validates the profile-specific Part B root files listed in B1: 14 for default `student-web`, 27 for `office`/`legacy-full`, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
 - **Complete mode**: validates both Part A and Part B.
 
 For Part B/complete mode, game runtime data lives in `<book>/shared/`:
@@ -831,10 +839,8 @@ node scripts/validate-paragraph.js --mode complete --profile student-web "<path-
 ```
 
 This checks:
-For `student-web`, read the old "27 files" wording below as the legacy/full
-profile contract; the default required Part B count is 14 files.
-- All 27 required Part B files exist at the paragraph root (flat layout), including `index.html`
-- All .docx files are valid zip archives
+- All profile-specific required Part B files exist at the paragraph root (flat layout): 14 for default `student-web`, 27 for explicit `office`/`legacy-full`, including `index.html`
+- All required DOCX files are valid zip archives when `office`/`legacy-full` is in scope
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)
 - Quiz has difficulty-3 per category
@@ -888,7 +894,7 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | Intro paragraphs: narrative-first approach | Students connect with stories (Lisa, Tom) before abstractions |
 | Register paragraph AND run deploy | Without deploy, game shells and landing pages are missing — students can't navigate |
 | Create `_paragraph-plan.md` before building documents | Ensures terminology consistency and concept coverage across all 8 documents |
-| Build shared visual variants in `_assets/` before Phase 4c | One concept, many surface-specific variants — fix the source idea once, then render for slide/doc/web contexts |
+| Build shared visual variants in `_assets/` before Phase 4b | One concept, many surface-specific variants — fix the source idea once, then render for slide/doc/web contexts |
 | Use `lib-svg-utils.js` instead of inline `svgToPng()` | The same function was copy-pasted in 8 scripts — import the shared library instead |
 | Begeleide inoefening MUST have `scaffoldImage` for graph exercises | This document is scaffolding for weaker students — visual support is essential, not optional |
 | Run `econ-paragraph-review` two-pass review before delivering | Catches slope errors, missing domain restrictions, broken dual coding, and other issues that are hard to fix after delivery |

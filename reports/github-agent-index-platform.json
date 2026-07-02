@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "4veco-platform",
   "available": true,
-  "generated_at": "2026-06-17T11:33:46.184Z",
-  "file_count": 4791,
+  "generated_at": "2026-07-02T06:59:14.870Z",
+  "file_count": 4799,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
   "skipped_directories": [
     ".cache",
@@ -672,6 +672,7 @@
       "skills/senior-dev-planning.md"
     ],
     "validators": [
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md",
       "archive/sprints/INSPECT-0/INSPECT-0-validation-log.md",
       "archive/sprints/INSPECT-1/INSPECT-1-validation-log.md",
       "archive/sprints/INSPECT-10/INSPECT-10-validation-log.md",
@@ -4757,6 +4758,13 @@
       ".github/ci-python-requirements.txt",
       ".github/workflows/platform-ci.yml",
       ".gitignore",
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-correction-log.md",
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-lead-review-assignment.md",
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round1.md",
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round2.md",
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round3.md",
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-sprint-plan.md",
+      "archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-work-review-round1.md",
       "archive/sprints/INSPECT-0/INSPECT-0-closure-log.md",
       "archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md",
       "archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md",
