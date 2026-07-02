@@ -338,13 +338,13 @@ def toc_anchor_id(kind: str, value: str) -> str:
     slug = re.sub(r"[^0-9A-Za-z]+", "-", value).strip("-").lower()
     return f"book-toc-{kind}-{slug}"
 
-def anchor_span(anchor_id: str) -> str:
-    return f'<span id="{html_escape(anchor_id)}" class="book-toc-anchor"></span>'
+def anchor_block(anchor_id: str) -> str:
+    return f'<div id="{html_escape(anchor_id)}" class="book-toc-anchor"></div>'
 
 def add_toc_anchors(md_text: str, entry: dict) -> str:
     """Add invisible anchors used by generated TOC page-number links."""
     result = md_text
-    chapter_anchor = anchor_span(entry["anchor"])
+    chapter_anchor = anchor_block(entry["anchor"])
     if re.search(r"<h1>Hoofdstuk\b", result):
         result = re.sub(r"(<h1>Hoofdstuk\b)", chapter_anchor + "\n" + r"\1", result, count=1)
     elif re.search(r"^#\s+", result, flags=re.MULTILINE):
@@ -353,7 +353,7 @@ def add_toc_anchors(md_text: str, entry: dict) -> str:
         result = chapter_anchor + "\n\n" + result
 
     for paragraph in entry.get("paragraphs", []):
-        paragraph_anchor = anchor_span(paragraph["anchor"])
+        paragraph_anchor = anchor_block(paragraph["anchor"])
         direct_heading = re.compile(rf"(^#\s+{re.escape(paragraph['nr'])}\b.*$)", flags=re.MULTILINE)
         if direct_heading.search(result):
             result = direct_heading.sub(paragraph_anchor + "\n" + r"\1", result, count=1)
@@ -890,7 +890,10 @@ p { margin: 0 0 10pt 0; }
   content: target-counter(attr(href), page);
 }
 .book-toc-anchor {
-  display: inline;
+  display: block;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
 }
 
 /* ==========================================================================

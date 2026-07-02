@@ -135,6 +135,17 @@ describe('check-book-print-scope.js', () => {
     expect(output).toContain('Paragraph 1.3.2 has duplicate Opgaven sections');
   });
 
+  test('fails when an inline book anchor swallows a markdown heading', () => {
+    const body = defaultBody(REQUIRED).replace(
+      '# 1.1.1 Titel',
+      '<span id="book-toc-paragraph-1-1-1" class="book-toc-anchor"></span>\n# 1.1.1 Titel',
+    );
+    const book = writeBook(REQUIRED, { body });
+    const { exitCode, output } = run([book]);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('inline directly before markdown heading');
+  });
+
   test('fails when a figure caption points to a semantically different SVG', () => {
     const body = [
       defaultBody(REQUIRED),
