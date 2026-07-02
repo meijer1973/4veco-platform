@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1",
+  "name": "Exercise Authority Hygiene Bundle",
+  "status": "completed",
+  "completed_on": "2026-07-01",
+  "plan": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-plan.md",
+  "baseline": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-baseline.md",
+  "result": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md",
+  "diff_summary": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-diff-summary.md",
+  "quality_log": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-quality-log.md",
+  "evidence_map": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-evidence-map.md",
+  "proof": "reports/json/exercise-authority-hygiene-bundle-1-proof.json",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "engine_behavior_changed": false,
+  "zip_binary_changed": false,
+  "product_authority_changed": false,
+  "completion_language_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "findings": [
+      {
+        "id": "canonical-exemplar-authority",
+        "description": "The manifest names the top-level 1.1.3 exit-ticket exemplar as canonical and the product-excellence copy as a historical alias.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/data/exercise-authority-hygiene-manifest.json",
+          "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/README.md",
+          "build-scripts/sprints/check-exercise-authority-hygiene.js"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "PR readiness and human review.",
+        "proof_required_to_close": "Authority-hygiene checker verifies active UI sources cite the canonical path and do not cite the historical alias as current authority."
+      },
+      {
+        "id": "golden-fixture-disposition",
+        "description": "Golden fixture duplicate roots are classified as active checker fixtures and frozen report snapshots without moving or deleting files.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/data/exercise-authority-hygiene-manifest.json",
+          "references/ui/golden-exercise-checker-fixtures.json",
+          "build-scripts/sprints/check-exercise-authority-hygiene.js"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Future fixture relocation work if separately planned.",
+        "proof_required_to_close": "Authority-hygiene checker verifies active fixture roots, report snapshot hashes, and active-only negative fixture disposition."
+      },
+      {
+        "id": "knowledge-zip-disposition",
+        "description": "The 1.1.1 exit-ticket game ZIP is recorded as a tracked historical reference archive with hash, byte size, and non-authority flags.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/data/exercise-authority-hygiene-manifest.json",
+          "knowledge/exit-ticket-game-1.1.1-note.md",
+          "build-scripts/sprints/check-exercise-authority-hygiene.js"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Historical report prose that described earlier archive state.",
+        "proof_required_to_close": "Authority-hygiene checker verifies Git tracking, byte size, SHA256, note wording, and inactive runtime/product/student-use flags."
+      },
+      {
+        "id": "forbidden-surfaces-untouched",
+        "description": "No source-data, generated lesson output, engine behavior, protected reference data, target registry, ZIP binary content, product authority, or student/product-use surface changed.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-command-log.jsonl",
+          "git diff --check",
+          "git -C ../4veco-lessen diff --check"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "PR readiness and human review.",
+        "proof_required_to_close": "Successful command-log entries for authority hygiene, scope language, platform checks, platform diff hygiene, and lesson diff hygiene."
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:exercise-authority-hygiene",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:exercise-workflow-currentness",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}
