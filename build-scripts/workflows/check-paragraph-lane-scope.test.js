@@ -54,6 +54,19 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('RESEARCH_AGENT_MAP.md').category).toBe('generated_indexes');
   });
 
+  test('keeps PDF output out of the companion lane by default', () => {
+    expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test - samenvatting.pdf').category).toBe('partA_textbook');
+    expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test - uitleg vaardigheden.pdf').category).toBe('unknown');
+
+    const companionPdf = checkLaneScope({
+      lane: 'companion',
+      changedPaths: ['Boek 1/1.1/1.1.1 Test/1.1.1 Test - uitleg vaardigheden.pdf'],
+    });
+
+    expect(companionPdf.ok).toBe(false);
+    expect(companionPdf.failures.join('\n')).toMatch(/unknown paths require explicit classification/);
+  });
+
   test('textbook-only fixture passes textbook and fails companion', () => {
     const textbook = runCliQuiet(['--lane', 'textbook', '--fixture', fixture('textbook-only.json'), '--json']);
     const companion = runCliQuiet(['--lane', 'companion', '--fixture', fixture('textbook-only.json'), '--json']);

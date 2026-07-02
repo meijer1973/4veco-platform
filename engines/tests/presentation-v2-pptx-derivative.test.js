@@ -5,12 +5,28 @@ const { execFileSync } = require('child_process');
 const JSZip = require('jszip');
 
 const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
-const { PRESENTATION_V2_DECKS } = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'presentation-v2-registry.js'));
-const deck111 = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'b1-111-presentation-v2-model.js'));
-const deck113 = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'b1-113-presentation-v2-model.js'));
+const {
+  ACTIVE_PRESENTATION_V2_DECK_SLUGS,
+  PRESENTATION_V2_DECKS,
+} = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'content', 'book-1', 'presentation-v2-registry.js'));
 const { mapPqPoint } = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'lib', 'pq-plot-mapper.js'));
 const { renderDeckHtml } = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'lib', 'render-presentation-v2-html.js'));
 const { fixNotesFontSize } = require(path.resolve(__dirname, '..', '..', 'build-scripts', 'lib', 'lib-pptx.js'));
+
+const registeredDecks = PRESENTATION_V2_DECKS.map(entry => ({
+  entry,
+  deck: require(entry.modelPath),
+}));
+const deckBySlug = new Map(registeredDecks.map(({ entry, deck }) => [entry.slug, deck]));
+const deck113 = deckBySlug.get('b1-113');
+const deckCases = registeredDecks.map(({ entry, deck }) => [
+  `${deck.paragraph.number} ${deck.paragraph.title}`,
+  entry.slug,
+  deck,
+]);
+const retrievalDeckCases = deckCases.filter(([, , deck]) =>
+  deck.slides.some(slide => slide.layout === 'retrievalCheck')
+);
 
 function numericPathSort(a, b) {
   return Number(a.match(/(\d+)\.xml$/)[1]) - Number(b.match(/(\d+)\.xml$/)[1]);
@@ -89,39 +105,41 @@ async function loadGeneratedDeck(deck, tmpDir) {
 
 describe('presentation-v2 semantic PPTX derivatives', () => {
   let tmpDir;
-  let generated111;
-  let generated113;
+  let generatedBySlug;
 
   beforeAll(async () => {
     tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'presentation-v2-pptx-'));
     generateDecks(tmpDir);
-    generated111 = await loadGeneratedDeck(deck111, tmpDir);
-    generated113 = await loadGeneratedDeck(deck113, tmpDir);
+    generatedBySlug = new Map();
+    for (const { entry, deck } of registeredDecks) {
+      generatedBySlug.set(entry.slug, await loadGeneratedDeck(deck, tmpDir));
+    }
   }, 30000);
 
   afterAll(() => {
     if (tmpDir) fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  test('presentation-v2 registry and workflow scripts cover both implemented decks', () => {
-    expect(PRESENTATION_V2_DECKS.map(deck => deck.slug)).toEqual(['b1-111', 'b1-113']);
-    expect(PRESENTATION_V2_DECKS.map(deck => require(deck.modelPath).paragraph.number)).toEqual(['1.1.1', '1.1.3']);
+  test('presentation-v2 registry and workflow scripts cover the active deck set', () => {
+    expect(ACTIVE_PRESENTATION_V2_DECK_SLUGS).toEqual(['b1-111', 'b1-112', 'b1-113']);
+    expect(PRESENTATION_V2_DECKS.map(deck => deck.slug)).toEqual(ACTIVE_PRESENTATION_V2_DECK_SLUGS);
+    expect(PRESENTATION_V2_DECKS.map(deck => require(deck.modelPath).paragraph.number)).toEqual(['1.1.1', '1.1.2', '1.1.3']);
 
     const pkg = JSON.parse(fs.readFileSync(path.join(PLATFORM_ROOT, 'package.json'), 'utf8'));
     expect(pkg.scripts['build:presentation-v2']).toBe('node build-scripts/content/book-1/build-presentation-v2.js --all');
     expect(pkg.scripts['build:presentation-111']).toBe('node build-scripts/content/book-1/b1-111-presentation-v2.js');
+    expect(pkg.scripts['build:presentation-112']).toBe('node build-scripts/content/book-1/b1-112-presentation-v2.js');
     expect(pkg.scripts['build:presentation-113']).toBe('node build-scripts/content/book-1/b1-113-presentation-v2.js');
     expect(pkg.scripts['check:presentation-v2-pptx-proof']).toContain('--check');
+    expect(pkg.scripts['check:presentation-v2-html-qa']).toBe('node build-scripts/sprints/check-presentation-v2-html-qa.js');
+    expect(pkg.scripts['check:presentation-v2-legacy-guard']).toBe('node build-scripts/sprints/check-presentation-v2-legacy-guard.js');
 
     const deploy = fs.readFileSync(path.join(PLATFORM_ROOT, 'scripts', 'deploy.js'), 'utf8');
     expect(deploy).toContain('build-scripts/content/book-1/build-presentation-v2.js --all');
   });
 
-  test.each([
-    ['1.1.1 golden scarcity deck', deck111, () => generated111],
-    ['1.1.3 graph transfer deck', deck113, () => generated113],
-  ])('%s preserves slide route, assertions, and classroom-ready teacher notes', async (_label, deck, generatedFor) => {
-    const generated = generatedFor();
+  test.each(deckCases)('%s preserves slide route, assertions, and classroom-ready teacher notes', async (_label, slug, deck) => {
+    const generated = generatedBySlug.get(slug);
     expect(generated.slides).toHaveLength(deck.slides.length);
     expect(generated.notes).toHaveLength(deck.slides.length);
 
@@ -150,11 +168,8 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
     }
   });
 
-  test.each([
-    ['1.1.1 golden scarcity deck', deck111, () => generated111],
-    ['1.1.3 graph transfer deck', deck113, () => generated113],
-  ])('%s keeps retrieval answers out of slide XML and in teacher notes', async (_label, deck, generatedFor) => {
-    const generated = generatedFor();
+  test.each(retrievalDeckCases)('%s keeps retrieval answers out of slide XML and in teacher notes', async (_label, slug, deck) => {
+    const generated = generatedBySlug.get(slug);
     const retrievalIndexes = deck.slides
       .map((slide, index) => ({ slide, index }))
       .filter(({ slide }) => slide.layout === 'retrievalCheck');
@@ -177,11 +192,8 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
     }
   });
 
-  test.each([
-    ['1.1.1 golden scarcity deck', deck111, () => generated111],
-    ['1.1.3 graph transfer deck', deck113, () => generated113],
-  ])('%s keeps labels and notes at the committed font-size floor', async (_label, deck, generatedFor) => {
-    const generated = generatedFor();
+  test.each(deckCases)('%s keeps labels and notes at the committed font-size floor', async (_label, slug, deck) => {
+    const generated = generatedBySlug.get(slug);
 
     for (const slidePath of generated.slides) {
       const xml = await generated.zip.file(slidePath).async('string');
@@ -203,6 +215,7 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
   });
 
   test('1.1.3 PPTX carries graph labels from the semantic P-Q geometry', async () => {
+    const generated113 = generatedBySlug.get('b1-113');
     const text = (await Promise.all(generated113.slides.map(async slidePath => {
       const xml = await generated113.zip.file(slidePath).async('string');
       return collectText(xml);
@@ -234,10 +247,7 @@ describe('presentation-v2 semantic PPTX derivatives', () => {
     expect(visual.guides.y).toBeCloseTo(expectedGuide.y, 2);
   });
 
-  test.each([
-    ['1.1.1 golden scarcity deck', deck111],
-    ['1.1.3 graph transfer deck', deck113],
-  ])('%s web renderer exposes the semantic PPTX derivative link', (_label, deck) => {
+  test.each(deckCases)('%s web renderer exposes the semantic PPTX derivative link', (_label, _slug, deck) => {
     const href = `${deck.outputBase}.pptx`;
     const html = renderDeckHtml(deck, { pptxHref: href, backHref: 'index.html' });
 

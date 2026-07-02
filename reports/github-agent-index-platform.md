@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T11:09:50.684Z
+Generated: 2026-07-02T06:51:04.586Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/payload-integration-state-explainability-1-20260701`
-Source commit: `80a1214e8984e851195c1fd99a2f7bd6f9a4bd8c`
-Files indexed: 6843
+Source commit: `af728c06eee70d7e720fcfeb9baad302a1ccb7d6`
+Files indexed: 6877
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 663
+Count: 673
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -179,6 +179,8 @@ Count: 663
 - build-scripts/content/book-1/b1-111-youtube-videos.js
 - build-scripts/content/book-1/b1-111-youtube-videos.md
 - build-scripts/content/book-1/b1-112-graphical-data.js
+- build-scripts/content/book-1/b1-112-presentation-v2-model.js
+- build-scripts/content/book-1/b1-112-presentation-v2.js
 - build-scripts/content/book-1/b1-112-student-web.js
 - build-scripts/content/book-1/b1-113-graphical-data.js
 - build-scripts/content/book-1/b1-113-presentation-v2-model.js
@@ -333,6 +335,7 @@ Count: 663
 - build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/build-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/build-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/build-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -361,6 +364,7 @@ Count: 663
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/build-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/build-y2-four-target-product-route-adoption-prep-1.js
@@ -439,6 +443,7 @@ Count: 663
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -484,6 +489,7 @@ Count: 663
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -546,7 +552,9 @@ Count: 663
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/agent-index-freshness.test.js
 - build-scripts/reports/aspects-coverage.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/dag-integrity.js
 - build-scripts/reports/dead-units.js
@@ -699,6 +707,8 @@ Count: 663
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-pptx-skill-mirror.test.js
+- build-scripts/sprints/check-presentation-v2-html-qa.js
+- build-scripts/sprints/check-presentation-v2-legacy-guard.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -836,7 +846,7 @@ Count: 25
 
 ## validators
 
-Count: 657
+Count: 662
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1002,6 +1012,7 @@ Count: 657
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -1047,6 +1058,7 @@ Count: 657
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -1061,6 +1073,7 @@ Count: 657
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-active-governance-wording.js
@@ -1148,6 +1161,8 @@ Count: 657
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-pptx-skill-mirror.test.js
+- build-scripts/sprints/check-presentation-v2-html-qa.js
+- build-scripts/sprints/check-presentation-v2-legacy-guard.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -2410,7 +2425,7 @@ Count: 907
 
 ## reports
 
-Count: 4378
+Count: 4400
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2862,6 +2877,7 @@ Count: 4378
 - reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.md
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.md
+- reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json
 - reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.json
 - reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.md
 - reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-correction-05-05.png
@@ -2951,6 +2967,12 @@ Count: 4378
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.md
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.md
+- reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json
+- reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.md
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.md
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.json
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.md
 - reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
@@ -3946,6 +3968,13 @@ Count: 4378
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/lead-review.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-packet.json
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-packet.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-team-results.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json
@@ -4270,6 +4299,12 @@ Count: 4378
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/rendered-scale-precheck.html
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.json
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/rendered-readiness-bundle.html
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/subagent-lead-reviews.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/rendered-product-proof.html
@@ -5807,6 +5842,7 @@ Count: 4378
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
 - reports/sprints/PAYLOAD-AUTHORIZATION-WORDING-1-lead-review-round2.md
+- reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round2.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.jsonl
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-correction-record.md
@@ -6736,6 +6772,7 @@ Count: 4378
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md
+- reports/sprints/TEXTBOOK-WORKFLOW-CLEANUP-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-result.md
 - reports/sprints/VISION-1-baseline.md
@@ -6811,7 +6848,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 710
+Count: 712
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7431,6 +7468,8 @@ Count: 710
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/paragraph-lane-vocabulary.md
+- docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
 - knowledge/113-excellent-exit-ticket-v3-package.zip
