@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T11:22:41.833Z
+Generated: 2026-07-02T06:34:11.811Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/textbook-workflow-cleanup-1-20260630`
-Source commit: `fde3b1bca608c571589d7731ef052e6e3412ca5b`
-Files indexed: 6856
+Source branch: `codex/mtu-h7-q5-graph-protected-governance-bundle-3-20260701`
+Source commit: `ba08c18508a5e9dd73008735b0813b40cb3dd767`
+Files indexed: 6876
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 667
+Count: 673
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -179,6 +179,8 @@ Count: 667
 - build-scripts/content/book-1/b1-111-youtube-videos.js
 - build-scripts/content/book-1/b1-111-youtube-videos.md
 - build-scripts/content/book-1/b1-112-graphical-data.js
+- build-scripts/content/book-1/b1-112-presentation-v2-model.js
+- build-scripts/content/book-1/b1-112-presentation-v2.js
 - build-scripts/content/book-1/b1-112-student-web.js
 - build-scripts/content/book-1/b1-113-graphical-data.js
 - build-scripts/content/book-1/b1-113-presentation-v2-model.js
@@ -333,6 +335,7 @@ Count: 667
 - build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/build-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/build-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/build-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -440,6 +443,7 @@ Count: 667
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -703,6 +707,8 @@ Count: 667
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-pptx-skill-mirror.test.js
+- build-scripts/sprints/check-presentation-v2-html-qa.js
+- build-scripts/sprints/check-presentation-v2-legacy-guard.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -840,7 +846,7 @@ Count: 25
 
 ## validators
 
-Count: 659
+Count: 662
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1006,6 +1012,7 @@ Count: 659
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -1154,6 +1161,8 @@ Count: 659
 - build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-pptx-skill-mirror.js
 - build-scripts/sprints/check-pptx-skill-mirror.test.js
+- build-scripts/sprints/check-presentation-v2-html-qa.js
+- build-scripts/sprints/check-presentation-v2-legacy-guard.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -2416,7 +2425,7 @@ Count: 907
 
 ## reports
 
-Count: 4385
+Count: 4399
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2868,6 +2877,7 @@ Count: 4385
 - reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.md
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json
 - reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.md
+- reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json
 - reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.json
 - reports/mtu-hardening/mtu-h7-current-main-publication-closure-1.md
 - reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-1-o-q02-correction-05-05.png
@@ -2957,6 +2967,12 @@ Count: 4385
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.md
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.md
+- reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json
+- reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.md
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.md
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.json
+- reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.md
 - reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
@@ -3952,6 +3968,13 @@ Count: 4385
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/lead-review.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-packet.json
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-packet.md
+- reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-team-results.md
 - reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json

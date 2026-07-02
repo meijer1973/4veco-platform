@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
-  "sprint_id": "MTU-H7-NONPROTECTED-EXECUTION-AND-PROTECTED-GOVERNANCE-AUTHORIZATION-BUNDLE-2",
-  "bundle_id": "mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2",
+  "sprint_id": "MTU-H7-Q5-GRAPH-EXECUTION-AND-PROTECTED-GOVERNANCE-BUNDLE-3",
+  "bundle_id": "mtu-h7-q5-graph-execution-and-protected-governance-bundle-3",
   "review_standard": "REV-STD-1",
-  "status": "PARTIAL_NONPROTECTED_Q4_EXECUTION_COMPLETE_H7_STILL_HELD",
-  "generated_at": "2026-07-01T06:36:17.995Z",
+  "status": "Q5_GRAPH_EXECUTION_READY_FOR_HUMAN_REVIEW_PROTECTED_HOLDS_REMAIN",
+  "generated_at": "2026-07-01T06:36:18.129Z",
+  "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,
@@ -33,11 +34,11 @@
     "scale_gate_1_authorized": false
   },
   "source_authorization": {
-    "url": "https://github.com/meijer1973/4veco-platform/pull/166",
-    "approval_comment_url": "https://github.com/meijer1973/4veco-platform/pull/166#issuecomment-4825233240",
-    "reviewed_head_sha": "b504e15270c43b9c86ecadba60f8e19968b66d53",
-    "merge_commit_sha": "f9c0c027cbfeab2de2aa498db7ab0d6ce2851ad4",
-    "approved_decision": "APPROVE PR #166 AS H7 GOVERNANCE PACKET ONLY"
+    "authorization_type": "thread_goal_authorization",
+    "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+    "decision": "BUILD_MTU_H7_BUNDLE_3_FOR_HUMAN_REVIEW",
+    "scope": "q5 graph-source execution evidence and seven protected/canonical H7 governance holds only",
+    "integration_authority": "not_authorized_until_exact_head_owner_authorization"
   },
   "source_files": [
     "reports/mtu-hardening/mtu-h7-execution-fixture-1.json",
@@ -48,7 +49,9 @@
     "reports/mtu-hardening/mtu-h7-reviewed-equivalent-decisions-1.json",
     "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json",
     "reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.json",
-    "references/machine/micro-teaching-units.json"
+    "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
+    "reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json",
+    "reports/mtu-hardening/mtu-h7-nonprotected-negative-regression-fixtures-2.json"
   ],
   "source_hashes": [
     {
@@ -84,41 +87,51 @@
       "sha256": "d1f5f144aa725433125c6b27eeba614fbb0cafd96c3dd2e3ad56324d1a6b6dea"
     },
     {
-      "path": "references/machine/micro-teaching-units.json",
-      "sha256": "f6ee9ce927baca85aac3666108a877ac5f716e4ecc7643ae98d75d62e35ac153"
+      "path": "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
+      "sha256": "b554568cdad7b44a451512c1866ca60f0ecd090fc26e69e80566e3036e8109b3"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json",
+      "sha256": "8e062b38504ac8384847a0f478fe4632cbed5db79a4454cfc78b484d2ed4abfd"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-nonprotected-negative-regression-fixtures-2.json",
+      "sha256": "5436b8e47ed6529139fed638b60c856a7e933c90cc1ca2f65a8651f7ab8baeeb"
     }
   ],
   "artifacts": {
-    "build_script": "build-scripts/references/build-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js",
-    "checker_script": "build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js",
-    "nonprotected_execution_report": "reports/mtu-hardening/mtu-h7-nonprotected-execution-report-2.json",
-    "protected_governance_authorization_matrix": "reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json",
-    "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-nonprotected-negative-regression-fixtures-2.json",
-    "review_packet": "reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/review-packet.json",
-    "lead_review": "reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/lead-review.md",
-    "review_team_results": "reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/review-team-results.md"
+    "build_script": "build-scripts/references/build-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js",
+    "checker_script": "build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js",
+    "q5_graph_execution_report": "reports/mtu-hardening/mtu-h7-q5-graph-execution-report-3.json",
+    "protected_governance_hold_matrix": "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json",
+    "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json",
+    "review_packet": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-packet.json",
+    "pr_readiness_evidence": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json",
+    "lead_review": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/lead-review.md",
+    "review_team_results": "reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/review-team-results.md"
   },
   "summary": {
-    "q4_operations_executed": 2,
-    "q4_records_executed": 1,
-    "remaining_review_required_operations": 8,
-    "remaining_review_required_records": 6,
+    "q5_graph_operations_advanced": 1,
+    "q5_graph_records_advanced": 1,
     "protected_governance_operations_still_held": 7,
-    "graph_source_operations_still_held": 1,
     "negative_regression_detection_rate": 1,
+    "expected_pr_route": "READY_FOR_HUMAN_REVIEW",
     "h7_full_closure_claimed": false,
-    "product_route_readiness_claimed": false
+    "product_route_readiness_claimed": false,
+    "student_product_use_authorized": false
   },
   "hashes": {
-    "nonprotected_execution_report": "d2a82123c0e63de21cc321df9f8adc40ef42f9d58e356ca49dc3c9ce2ff57908",
-    "protected_governance_authorization_matrix": "79febfd10ac91f1d2d8502daf1c6232662b5ff4318cfedf5e2a812ee3b07c227",
-    "negative_regression_fixtures": "cd8ba1d64894e40ccd13294188964e3c94ef4f188f806aac44a96001e3b76e19"
+    "q5_graph_execution_report": "aafcbe2ca87b857fee1c589d841ac67b92b397a0b1f65230b5aaebf4960f06ba",
+    "protected_governance_hold_matrix": "bd45d6af1b0146cdd6421a99a7137f105dd96c53760fcefaf2d491ac6bd4a16a",
+    "negative_regression_fixtures": "2ade26927fd17e66c55770aea82f0e3b594ff1e660f6892c7949d4ac7aaf9102",
+    "pr_readiness_evidence": "095ede3ff05cefa732e66d5e9b8602b68a5d660159b5e35ec37c2602ee29ac2e"
   },
   "prohibited_claims": [
     "No H7 full closure",
     "No H6/H7 evidence-generalization closure",
-    "No q5 graph execution",
     "No protected-reference mutation",
+    "No external-source mutation",
+    "No machine-reference mutation",
     "No operation-registry mutation",
     "No canonical MTU mutation",
     "No candidate writes or storage",
