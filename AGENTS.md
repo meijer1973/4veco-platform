@@ -492,7 +492,7 @@ A student working through all materials for one paragraph should feel like they'
 
 **How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
 
-For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and the PPTX presentation route). DOCX companion exports are opt-in Office/legacy profile work. PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
+For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and the PPTX presentation route). DOCX companion exports are opt-in Office/legacy profile work. Paragraph PDF output and `build_pdf.py` belong to Part A textbook production, not the Part B companion lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
 
 For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
 
@@ -682,7 +682,7 @@ MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" node build-s
 | `generate-quiz-shells.js` | HTML shells voor instapquiz |
 | `build-newsdetective-shells.js` | HTML shells voor nieuws-detective |
 | `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module; paragraph pages must use the approved landing V2 fixtures in `references/ui/paragraph-landing-v2/` |
-| `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
+| `template-B_voorkennis.js` | `uitleg voorkennis.docx` (Office/legacy only) |
 | `pptx-331-rol-overheid.js` | Presentatie `.pptx` (reference builder; uses `lib-pptx.js`) |
 
 Let op: deze tabel is niet de volledige paragraph workflow. Veel rijke assets gebruiken reference scripts of converters buiten `deploy.js`. Zie [BUILD-PARAGRAPH.md](BUILD-PARAGRAPH.md) voor de complete productieketen.

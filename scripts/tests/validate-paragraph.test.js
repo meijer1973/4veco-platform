@@ -330,7 +330,7 @@ describe('validate-paragraph.js', () => {
     expect(output).toContain('PASSED all checks');
   });
 
-  test('student-web complete profile does not require PDFs or DOCX files', () => {
+  test('student-web complete profile requires Part A PDFs but not Part B DOCX files', () => {
     const dir = setupPartA('9.9.1 Theory', 'theory', {
       includePdf: false,
       includeBuildPdf: false,
@@ -338,10 +338,22 @@ describe('validate-paragraph.js', () => {
     setupPartB('9.9.1 Theory', { includeOffice: false });
 
     const { exitCode, output } = run(dir, 'complete', 'student-web');
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('Profile: student-web');
+    expect(output).toContain('MISSING paragraaf.pdf');
+    expect(output).toContain('MISSING build_pdf.py');
+    expect(output).not.toContain('MISSING: 9.9.1 Theory – uitleg voorkennis.docx');
+    expect(output).toContain('failed:');
+  });
+
+  test('student-web complete profile passes without Part B DOCX files when Part A PDFs exist', () => {
+    const dir = setupPartA('9.9.1 Theory', 'theory');
+    setupPartB('9.9.1 Theory', { includeOffice: false });
+
+    const { exitCode, output } = run(dir, 'complete', 'student-web');
     expect(exitCode).toBe(0);
     expect(output).toContain('Profile: student-web');
-    expect(output).not.toContain('MISSING paragraaf.pdf');
-    expect(output).not.toContain('MISSING: 9.9.1 Theory – uitleg voorkennis.docx');
+    expect(output).not.toContain('uitleg voorkennis.docx');
     expect(output).toContain('PASSED all checks');
   });
 

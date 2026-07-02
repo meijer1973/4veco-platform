@@ -12,10 +12,10 @@
  *   complete  Part A + Part B.
  *
  * Profiles:
- *   student-web      Default. Student-facing HTML/games/presentation; no DOCX or PDF requirement.
- *   legacy-full      Previous full contract: Part A PDFs + all 27 Part B files.
+ *   student-web      Default. Part A human-review packet + Part B student web/PPTX; no Part B DOCX.
+ *   legacy-full      Previous full contract: normal Part A PDFs + all 27 Part B files.
  *   office           Student web plus Office exports (.docx handouts).
- *   publisher-print  Publisher/print gate: Part A PDFs required; Part B not required.
+ *   publisher-print  Publisher/book print gate for Part A; Part B not required.
  */
 
 'use strict';
@@ -782,7 +782,7 @@ function validatePartA() {
   }
 
   const requireHtml = profile === 'student-web' || profile === 'office';
-  const requirePdf = profile === 'legacy-full' || profile === 'publisher-print';
+  const requirePdf = true;
 
   if (requireHtml) {
     for (const required of spec.requiredMd) {
@@ -808,16 +808,9 @@ function validatePartA() {
       if (size < 10000) fail(`PDF too small: ${file} (${(size / 1024).toFixed(1)} KB)`);
       else pass(`${file} (${(size / 1024).toFixed(0)} KB)`);
     }
-  } else {
-    const pdfsPresent = spec.requiredPdf.filter(required => findRootFileBySuffix(`${required}.pdf`)).length;
-    if (pdfsPresent > 0) pass(`Publisher-print PDFs present but not required by ${profile} profile`);
   }
 
-  if (requirePdf) {
-    hasFile('build_pdf.py') ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
-  } else if (hasFile('build_pdf.py')) {
-    pass(`build_pdf.py present but not required by ${profile} profile`);
-  }
+  hasFile('build_pdf.py') ? pass('build_pdf.py') : fail('MISSING build_pdf.py');
   validateAssets(markdownFiles, {
     includePlannedAssets: mode === 'complete' || profile === 'publisher-print',
   });

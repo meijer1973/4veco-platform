@@ -1,7 +1,12 @@
-# Build Chapter — End-to-End Workflow
+# Build Chapter — Part A Publisher-Print Assembly Workflow
 
-Builds a complete Part A textbook chapter from blueprint to finished PDF. Two
-chapter stages:
+Builds a complete Part A textbook chapter from blueprint to finished chapter
+PDFs. This is the Part A publisher-print chapter/book assembly workflow. Normal
+Part A paragraph production already includes paragraph PDFs and `build_pdf.py`
+for human review; this workflow adds chapter-level assembly, aggregate asset
+checks, and chapter/book print gates.
+
+Two chapter stages:
 
 - **Stage 1** — Build all textbook paragraphs (follows `econ-chapter-builder` skill)
 - **Stage 2** — Assemble into chapter PDF and run QC (follows `econ-chapter-assembler` skill)

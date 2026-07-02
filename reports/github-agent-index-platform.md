@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-02T06:34:11.811Z
+Generated: 2026-07-02T07:48:59.168Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/mtu-h7-q5-graph-protected-governance-bundle-3-20260701`
-Source commit: `ba08c18508a5e9dd73008735b0813b40cb3dd767`
-Files indexed: 6876
+Source branch: `codex/part-a-pdf-human-review-workflow-20260702`
+Source commit: `905399611239f89e5464a5093a2daca3b221743c`
+Files indexed: 6919
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 673
+Count: 676
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -235,6 +235,7 @@ Count: 673
 - build-scripts/inspection/build-local-expert-contact-stage.js
 - build-scripts/inspection/build-local-expert-review-request-packet.js
 - build-scripts/inspection/build-local-expert-source-refresh-gate.js
+- build-scripts/inspection/build-owner-manual-dispatch-and-response-intake.js
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
 - build-scripts/inspection/build-source-refresh-execution-pilot.js
 - build-scripts/inspection/check-bounded-source-refresh-packet.js
@@ -258,6 +259,8 @@ Count: 673
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
+- build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.js
+- build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.test.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.test.js
 - build-scripts/inspection/check-source-refresh-execution-pilot.js
@@ -846,7 +849,7 @@ Count: 25
 
 ## validators
 
-Count: 662
+Count: 665
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -861,6 +864,7 @@ Count: 662
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-validation-log.md
 - archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-validation-log.md
 - archive/sprints/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1-validation-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
@@ -927,6 +931,8 @@ Count: 662
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
+- build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.js
+- build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.test.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.test.js
 - build-scripts/inspection/check-source-refresh-execution-pilot.js
@@ -1513,7 +1519,7 @@ Count: 662
 
 ## references
 
-Count: 907
+Count: 925
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1700,6 +1706,24 @@ Count: 907
 - references/data/inspection-standards/fixtures/negative/missing-op0-boundary.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/england-whole-uk-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/expert-as-official-authority.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/flanders-all-belgium-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/legal-compliance-response.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/localized-output-response.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/material-sent-without-channel.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/named-contact-recorded.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/personal-data-response.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/proceed-to-analysis-without-response.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/response-without-consent.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/school-evidence-response.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/support-accommodation-sufficiency-response.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/unsupported-dispatch-claim.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/positive/england-local-expert-response-intake.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/positive/flanders-local-expert-response-intake.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/positive/local-expert-response-quarantine-report.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/positive/owner-manual-dispatch-and-response-intake-decision.sample.json
+- references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/positive/owner-manual-dispatch-record.sample.json
 - references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
 - references/data/inspection-standards/fixtures/selected-deepening/negative/duplicate-source-id.sample.json
 - references/data/inspection-standards/fixtures/selected-deepening/negative/extra-authority-property.sample.json
@@ -2425,7 +2449,7 @@ Count: 907
 
 ## reports
 
-Count: 4399
+Count: 4409
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2542,6 +2566,8 @@ Count: 4399
 - reports/inspection-standards/england-local-expert-contact-dispatch-record.md
 - reports/inspection-standards/england-local-expert-contact-pilot-packet.json
 - reports/inspection-standards/england-local-expert-contact-pilot-packet.md
+- reports/inspection-standards/england-local-expert-response-intake.json
+- reports/inspection-standards/england-local-expert-response-intake.md
 - reports/inspection-standards/england-local-expert-review-request-packet.json
 - reports/inspection-standards/england-local-expert-review-request-packet.md
 - reports/inspection-standards/england-source-refresh-execution-results.json
@@ -2560,6 +2586,8 @@ Count: 4399
 - reports/inspection-standards/flanders-local-expert-contact-dispatch-record.md
 - reports/inspection-standards/flanders-local-expert-contact-pilot-packet.json
 - reports/inspection-standards/flanders-local-expert-contact-pilot-packet.md
+- reports/inspection-standards/flanders-local-expert-response-intake.json
+- reports/inspection-standards/flanders-local-expert-response-intake.md
 - reports/inspection-standards/flanders-local-expert-review-request-packet.json
 - reports/inspection-standards/flanders-local-expert-review-request-packet.md
 - reports/inspection-standards/flanders-source-refresh-execution-results.json
@@ -2614,6 +2642,8 @@ Count: 4399
 - reports/inspection-standards/local-expert-contact-stage-response-intake-report.md
 - reports/inspection-standards/local-expert-response-intake-report.json
 - reports/inspection-standards/local-expert-response-intake-report.md
+- reports/inspection-standards/local-expert-response-quarantine-report.json
+- reports/inspection-standards/local-expert-response-quarantine-report.md
 - reports/inspection-standards/local-expert-review-request-decision.json
 - reports/inspection-standards/local-expert-review-request-decision.md
 - reports/inspection-standards/local-expert-review-request-plan.json
@@ -2624,6 +2654,10 @@ Count: 4399
 - reports/inspection-standards/local-expert-source-refresh-gate-decision.md
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.json
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.md
+- reports/inspection-standards/owner-manual-dispatch-and-response-intake-decision.json
+- reports/inspection-standards/owner-manual-dispatch-and-response-intake-decision.md
+- reports/inspection-standards/owner-manual-dispatch-record.json
+- reports/inspection-standards/owner-manual-dispatch-record.md
 - reports/inspection-standards/selected-jurisdiction-deepening-decision.json
 - reports/inspection-standards/selected-jurisdiction-deepening-decision.md
 - reports/inspection-standards/selected-jurisdiction-readiness-comparison.json
@@ -6847,7 +6881,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 712
+Count: 723
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -6944,6 +6978,16 @@ Count: 712
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-lead-architecture-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-accessibility-inclusion-review.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-closure-record.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-correction-log.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-england-dispatch-intake-review.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-flanders-dispatch-intake-review.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-lead-architecture-review.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-legal-privacy-review.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-teacher-economics-review.md
 - archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-closure-record.md
 - archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-correction-log.md
 - archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-final-lead-review.md
@@ -7467,6 +7511,7 @@ Count: 712
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/legacy-full-companion-profile.md
 - docs/workflows/paragraph-lane-vocabulary.md
 - docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md

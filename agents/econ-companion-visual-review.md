@@ -25,7 +25,7 @@ Use this agent for student-facing companion artifacts, including:
 - `redeneer-spel.html`
 - `nieuws-detective.html`
 - differentiated exercise handouts where the visual or route-choice layer matters
-- companion PPTX outputs and opt-in Office DOCX outputs when they are part of the same surface family; PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane
+- companion PPTX outputs and opt-in Office DOCX outputs when they are part of the same surface family; paragraph PDF output and `build_pdf.py` belong to Part A textbook production, not the Part B companion lane
 
 The agent may also inspect paragraph markdown, Part A review evidence, paragraph plan, unit registry, source generator, CSS, JavaScript, and asset files to determine whether rendered output matches source intent.
 

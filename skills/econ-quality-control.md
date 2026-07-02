@@ -178,13 +178,13 @@ companion:
 ```
 
 Part A owns textbook fields, textbook asset integrity, textbook HTML render
-evidence, and publisher-print PDF evidence when that profile is in scope. Part B
+evidence, normal paragraph PDF evidence, and publisher-print chapter/book
+handoff evidence when that profile is in scope. Part B
 owns companion review fields for the companion/student-web route: HTML/game
 companions, PPTX presentation route, web visual variants, and route/affordance
 evidence. DOCX companion exports are opt-in
-Office/legacy profile work. PDF output is not a normal companion-lane artifact;
-it belongs to Part A / publisher-print unless a future human decision creates a
-separate PDF lane.
+Office/legacy profile work. PDF output and `build_pdf.py` are not normal
+companion-lane artifacts; they belong to Part A textbook production.
 
 Detailed component inventories, inspectie mappings, freshness fields, or
 verantwoording notes may be added inside the lane-owned block that produced the
@@ -421,8 +421,8 @@ Per paragraph:
       Check last_verified date on references/external/inspectie-standaarden.md
       Apply cascading rules (< 3 mo: proceed; 3-9 mo: quick check; > 9 mo: thorough review)
  1. Extract leerdoelen from opgaven
- 2. Build/update Part A textbook source, review, assets, and publisher-print
-    evidence when that profile is in scope
+ 2. Build/update Part A textbook source, review, assets, paragraph PDF
+    evidence, and publisher-print handoff evidence when that profile is in scope
  3. Build/update Part B companion/student-web route, HTML/game surfaces, PPTX
     presentation route, and web visual variants when companion work is in scope
  4. Run the lane-appropriate review file:

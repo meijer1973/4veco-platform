@@ -7,9 +7,8 @@ aliases for the same lane; do not treat them as separate lanes. See
 Purpose: build only the Part B companion/student-web route after textbook
 content exists. This lane produces the student-facing route, games, rich HTML
 companions, presentation route, web visual variants, and companion review.
-The normal companion line is web output plus PPTX. PDF output belongs to
-Part A / publisher-print unless a future human decision creates a separate PDF
-lane.
+The normal companion line is web output plus PPTX. Paragraph PDF output and
+`build_pdf.py` belong to Part A textbook production, not the companion lane.
 
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary companion production.
