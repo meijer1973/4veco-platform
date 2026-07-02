@@ -9,12 +9,20 @@ const DEFAULT_MODULE_ROOT = path.resolve(
   '../../../../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod',
 );
 
+const ACTIVE_PRESENTATION_V2_DECK_SLUGS = ['b1-111', 'b1-112', 'b1-113'];
+
 const PRESENTATION_V2_DECKS = [
   {
     slug: 'b1-111',
     id: '1.1.1',
     modelPath: path.join(__dirname, 'b1-111-presentation-v2-model.js'),
     successMessage: 'OK presentation-v2 implemented web',
+  },
+  {
+    slug: 'b1-112',
+    id: '1.1.2',
+    modelPath: path.join(__dirname, 'b1-112-presentation-v2-model.js'),
+    successMessage: 'OK presentation-v2 percentages and index 1.1.2',
   },
   {
     slug: 'b1-113',
@@ -38,6 +46,17 @@ function paragraphDir(moduleRoot, deck) {
     deck.paragraph.chapter,
     `${deck.paragraph.number} ${deck.paragraph.title}`,
   );
+}
+
+function presentationOutputPaths(deck, options = {}) {
+  const moduleRoot = moduleRootFrom(options);
+  const paragraphOutDir = paragraphDir(moduleRoot, deck);
+  return {
+    moduleRoot,
+    paragraphOutDir,
+    htmlOut: path.join(paragraphOutDir, `${deck.outputBase}.html`),
+    pptxOut: path.join(paragraphOutDir, `${deck.outputBase}.pptx`),
+  };
 }
 
 function copyEngine(sharedDir, file) {
@@ -64,8 +83,12 @@ function getPresentationDeck(slugOrId) {
 async function buildPresentationDeck(slugOrId, options = {}) {
   const entry = typeof slugOrId === 'string' ? getPresentationDeck(slugOrId) : slugOrId;
   const deck = loadDeck(entry);
-  const moduleRoot = moduleRootFrom(options);
-  const paragraphOutDir = paragraphDir(moduleRoot, deck);
+  const {
+    moduleRoot,
+    paragraphOutDir,
+    htmlOut,
+    pptxOut,
+  } = presentationOutputPaths(deck, options);
   const sharedDir = path.join(moduleRoot, 'shared');
 
   fs.mkdirSync(paragraphOutDir, { recursive: true });
@@ -74,8 +97,6 @@ async function buildPresentationDeck(slugOrId, options = {}) {
   copyEngine(sharedDir, 'presentation-v2.css');
   copyEngine(sharedDir, 'presentation-v2.js');
 
-  const htmlOut = path.join(paragraphOutDir, `${deck.outputBase}.html`);
-  const pptxOut = path.join(paragraphOutDir, `${deck.outputBase}.pptx`);
   writeDeckHtml(deck, htmlOut, {
     backHref: 'index.html',
     pptxHref: `${deck.outputBase}.pptx`,
@@ -111,8 +132,13 @@ async function buildPresentationDecks(options = {}) {
 }
 
 module.exports = {
+  ACTIVE_PRESENTATION_V2_DECK_SLUGS,
   PRESENTATION_V2_DECKS,
   buildPresentationDeck,
   buildPresentationDecks,
   getPresentationDeck,
+  loadDeck,
+  moduleRootFrom,
+  paragraphDir,
+  presentationOutputPaths,
 };

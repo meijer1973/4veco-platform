@@ -30,13 +30,13 @@ The two paragraph pipelines have separate review surfaces. The asymmetry is inte
 | Part A (textbook layer) | `econ-paragraph-review` SKILL | `${parNr}-review.md` | `skills/econ-paragraph-review.md` |
 | Part B (companion layer) | `econ-companion-visual-review` AGENT | `${parNr}-companion-visual-review.md` | this folder |
 
-Both verdicts feed `scripts/validate-paragraph.js` via the `partA:` and `companion:` blocks of `${parNr}-quality-ref.yaml` (schema_version 2). `--mode part-a` reads the Part A review only; `--mode part-b` reads the companion review only; `--mode complete` aggregates both — non-FAIL is required to pass.
+Both verdicts feed `scripts/validate-paragraph.js` via the `partA:` and `companion:` blocks of `${parNr}-quality-ref.yaml` (schema_version 2; see `docs/workflows/paragraph-quality-ref-schema-v2.md`). `--mode part-a` reads the Part A review only; `--mode part-b` reads the companion review only; `--mode complete` aggregates both — non-FAIL is required to pass.
 
 ## Operating rules
 
 - Load `AGENTS.md`, `BUILD-PARAGRAPH.md`, and the requested agent file before reviewing production lesson artifacts.
 - Use `lead-reviewer-agent.md` for substantive quality, specification fulfilment, specialist-review routing, and evidence completeness. Use `pr-readiness-reviewer-agent.md` only after the draft PR is remotely inspectable and lead review exists; it routes PR lifecycle state and must not replace missing lead or specialist review.
-- Inspect rendered output, not only source files. A clean source does not make a generated HTML, DOCX, PPTX, or PDF clean.
+- Inspect rendered output, not only source files. A clean source does not make generated HTML, opt-in DOCX, PPTX, or Part A PDF output clean.
 - Use `teacher-learning-quality-review-agent.md` when a task claims classroom readiness or learning quality. Visual polish, accessibility, and passing tests do not prove that students learn the intended concept or skill.
 - Use `student-experience-review-agent.md` when a task claims student readiness or student-facing usability. Teacher learning quality does not prove that a typical student can find the next action, understand the visual, or stay motivated.
 - Distinguish canonical authority, content source, generated artifact, rendered experience, platform implementation, and quality record in the report.
