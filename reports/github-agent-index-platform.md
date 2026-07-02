@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T11:10:06.511Z
+Generated: 2026-07-02T06:18:02.783Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h7-q5-graph-protected-governance-bundle-3-20260701`
-Source commit: `6dbc3730ec7cb47be371c095e3bdb633ed3df69b`
-Files indexed: 6867
+Source commit: `e04c4c61a3febc4584804523e44c01694c7fa28d`
+Files indexed: 6880
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 667
+Count: 669
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -550,7 +550,9 @@ Count: 667
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/agent-index-freshness.test.js
 - build-scripts/reports/aspects-coverage.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/dag-integrity.js
 - build-scripts/reports/dead-units.js
@@ -840,7 +842,7 @@ Count: 25
 
 ## validators
 
-Count: 659
+Count: 660
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1067,6 +1069,7 @@ Count: 659
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-active-governance-wording.js
@@ -2416,7 +2419,7 @@ Count: 907
 
 ## reports
 
-Count: 4398
+Count: 4407
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2477,8 +2480,16 @@ Count: 4398
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -6762,6 +6773,7 @@ Count: 4398
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md
+- reports/sprints/TEXTBOOK-WORKFLOW-CLEANUP-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-result.md
 - reports/sprints/VISION-1-baseline.md
@@ -6837,7 +6849,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 710
+Count: 712
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7457,6 +7469,8 @@ Count: 710
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/paragraph-lane-vocabulary.md
+- docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
 - knowledge/113-excellent-exit-ticket-v3-package.zip

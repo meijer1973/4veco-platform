@@ -19,6 +19,8 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-lane-vocabulary.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-quality-ref-schema-v2.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/AGENTS.md
 
 ## PR Governance
