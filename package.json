@@ -26,6 +26,7 @@
     "check:paragraph-lane-scope": "node build-scripts/workflows/check-paragraph-lane-scope.js",
     "check:agent-index-freshness": "node build-scripts/reports/check-agent-index-freshness.js",
     "check:exercise-workflow-currentness": "node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js",
+    "check:exercise-authority-hygiene": "node build-scripts/sprints/check-exercise-authority-hygiene.js",
     "check:golden-graph-advisory-113": "node build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
     "check:scale-proof-3p-product-path": "node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
     "check:gate-ci-proof": "node build-scripts/sprints/check-gate-ci-proof.js",
