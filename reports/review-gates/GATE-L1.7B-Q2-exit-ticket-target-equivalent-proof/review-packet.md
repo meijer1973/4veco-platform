@@ -52,7 +52,7 @@ projection, PV machine promotion, Scale Gate 1, or student/product use.
 - `reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-completion.png`
 - `reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-mobile.png`
 - `reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-dark.png`
-- `source-data/book-1/exit-ticket/1.1.2.json`
+- `source-data/book-1/exit-ticket/1.1.2-exit-ticket.json`
 - `build-scripts/sprints/check-l1-7b-q2-implementation.js`
 - `build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js`
 - `../4veco-lessen/specifications/product-end-state.md`

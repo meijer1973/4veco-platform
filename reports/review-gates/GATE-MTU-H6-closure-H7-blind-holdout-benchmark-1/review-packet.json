@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H6-CLOSURE-H7-BLIND-HOLDOUT-GENERALIZATION-BUNDLE-1",
+  "gate_id": "GATE-MTU-H6-closure-H7-blind-holdout-benchmark-1",
+  "status": "prepared_for_h7_execution_not_product_or_scale_closure",
+  "generated_at": "2026-06-24T11:50:34.954Z",
+  "product_end_state": "MTU evidence generalization may proceed from merged H6 closure-readiness tooling into a blind H7 holdout protocol without creating student/product authority.",
+  "original_sprint_or_gate_spec": "MTU-H6-CLOSURE-H7-BLIND-HOLDOUT-GENERALIZATION-BUNDLE-1",
+  "non_negotiable_requirements": [
+    "Do not mutate protected references, machine references, external source records, authored target exercises, or MTU registry entries.",
+    "Freeze the method at the H6 merge before recording H7 holdout outcomes.",
+    "Exclude all H5 and H6 source records from the H7 sample.",
+    "Record first-pass locked-holdout outcomes before repair or tuning.",
+    "Use REV-STD-1 review packet structure before human closure."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "H6 merged-main closure-readiness evidence is recorded",
+      "status": "met",
+      "proof": "reports/mtu-hardening/mtu-h6-current-main-closure-readiness-record-1.json"
+    },
+    {
+      "requirement": "H7 metadata-only blind-holdout sample is selected",
+      "status": "met",
+      "proof": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json"
+    },
+    {
+      "requirement": "H7 first-pass mapping and holdout outcomes are complete",
+      "status": "not_started",
+      "proof_required_to_close": "future H7 mapping report and negative fixture bundle"
+    },
+    {
+      "requirement": "Human closure authority is granted for H7",
+      "status": "not_started",
+      "proof_required_to_close": "explicit owner approval tied to the reviewed payload head and decision scope"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "proof_required_to_close",
+      "finding": "This packet prepares H7 execution and records H6 current-main closure-readiness evidence, but it does not itself close H6/H7 or authorize product routes."
+    }
+  ],
+  "blocks": [
+    "H7 closure",
+    "Scale Gate adoption",
+    "product-route readiness",
+    "diagnostics/mastery/PV",
+    "student or summative use"
+  ],
+  "does_not_block": [
+    "non-mutating H7 evidence decomposition",
+    "non-mutating H7 validator development",
+    "review-packet preparation under the single-account PR governance workflow"
+  ],
+  "proof_required_to_close": [
+    "H7 first-pass diagnostic and locked-holdout result packet",
+    "negative regression fixture evidence",
+    "PR Readiness Reviewer output with exact remote head",
+    "live branch-protection checker output with ok: true",
+    "lead review and explicit owner authorization for the reviewed payload if routed READY_FOR_HUMAN_REVIEW"
+  ],
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_authorized": false,
+    "candidate_write_authorized": false,
+    "lesson_output_authorized": false,
+    "product_route_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "adaptive_routing_authorized": false,
+    "sequencing_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false
+  }
+}

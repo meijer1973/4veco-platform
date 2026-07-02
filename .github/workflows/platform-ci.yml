@@ -44,24 +44,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Use matching lessen branch when available
-        if: ${{ github.event_name == 'pull_request' && github.head_ref != '' }}
-        env:
-          HEAD_REF: ${{ github.head_ref }}
-        run: |
-          $PSNativeCommandUseErrorActionPreference = $false
-          git -C ../4veco-lessen ls-remote --exit-code --heads origin $env:HEAD_REF | Out-Null
-          if ($LASTEXITCODE -eq 0) {
-            Write-Host "Using paired 4veco-lessen branch $env:HEAD_REF"
-            git -C ../4veco-lessen fetch origin $env:HEAD_REF
-            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-            git -C ../4veco-lessen checkout --detach FETCH_HEAD
-            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          } else {
-            Write-Host "No paired 4veco-lessen branch $env:HEAD_REF found; using default checkout."
-            $global:LASTEXITCODE = 0
-          }
-
       - name: Normalize repository line endings
         run: |
           git config --global core.autocrlf false
@@ -92,19 +74,108 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Validate exercise workflow currentness
+        run: npm run check:exercise-workflow-currentness
+
       - name: Install Python support dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r .github/ci-python-requirements.txt
 
+      - name: Install presentation proof tools
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          function Invoke-WithRetry {
+            param(
+              [Parameter(Mandatory = $true)][scriptblock]$ScriptBlock,
+              [Parameter(Mandatory = $true)][string]$Label,
+              [int]$Attempts = 3
+            )
+            for ($attempt = 1; $attempt -le $Attempts; $attempt += 1) {
+              try {
+                return & $ScriptBlock
+              } catch {
+                if ($attempt -eq $Attempts) { throw "$Label failed after $Attempts attempts: $($_.Exception.Message)" }
+                Write-Warning "$Label failed on attempt $attempt/${Attempts}: $($_.Exception.Message)"
+                Start-Sleep -Seconds (10 * $attempt)
+              }
+            }
+          }
+          Invoke-WithRetry -Label "LibreOffice install" -ScriptBlock {
+            choco install libreoffice-fresh -y --no-progress
+            if ($LASTEXITCODE -ne 0) { throw "choco exited with $LASTEXITCODE" }
+          }
+          $popplerRoot = Join-Path $env:RUNNER_TEMP "poppler"
+          New-Item -ItemType Directory -Force -Path $popplerRoot | Out-Null
+          $headers = @{
+            "User-Agent" = "4veco-platform-ci"
+            "Accept" = "application/vnd.github+json"
+            "X-GitHub-Api-Version" = "2022-11-28"
+          }
+          if ($env:GITHUB_TOKEN) {
+            $headers["Authorization"] = "Bearer $env:GITHUB_TOKEN"
+          }
+          $release = Invoke-WithRetry -Label "Poppler release lookup" -ScriptBlock {
+            Invoke-RestMethod -Headers $headers -Uri "https://api.github.com/repos/oschwartz10612/poppler-windows/releases/latest"
+          }
+          $asset = $release.assets | Where-Object { $_.name -match "^Release-.*\.zip$" } | Select-Object -First 1
+          if (-not $asset) { throw "No Poppler Windows release zip found" }
+          $popplerZip = Join-Path $env:RUNNER_TEMP $asset.name
+          Invoke-WithRetry -Label "Poppler download" -ScriptBlock {
+            Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $popplerZip
+          }
+          Expand-Archive -LiteralPath $popplerZip -DestinationPath $popplerRoot -Force
+          $soffice = "C:\Program Files\LibreOffice\program\soffice.exe"
+          if (-not (Test-Path -LiteralPath $soffice)) {
+            $soffice = (Get-ChildItem -Path "C:\Program Files" -Filter soffice.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+          }
+          $pdftoppm = (Get-ChildItem -Path $popplerRoot -Filter pdftoppm.exe -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
+          if (-not $pdftoppm) {
+            $pdftoppm = (Get-Command pdftoppm -ErrorAction SilentlyContinue).Source
+          }
+          if (-not $soffice) { throw "soffice.exe not found after LibreOffice install" }
+          if (-not $pdftoppm) { throw "pdftoppm.exe not found after Poppler install" }
+          "SOFFICE_PATH=$soffice" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "PDFTOPPM_PATH=$pdftoppm" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          (Split-Path -Parent $soffice) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+          (Split-Path -Parent $pdftoppm) | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8
+
       - name: Validate platform Jest suite
         run: npm run check:platform
+
+      - name: Build presentation-v2 registered decks
+        run: npm run build:presentation-v2
+
+      - name: Validate presentation-v2 HTML QA
+        run: npm run check:presentation-v2-html-qa -- --output-dir ..\ci-artifacts\presentation-v2-html-qa
+
+      - name: Validate presentation-v2 legacy guard
+        run: npm run check:presentation-v2-legacy-guard -- --output ..\ci-artifacts\presentation-v2-legacy-guard.json
+
+      - name: Validate presentation-v2 PPTX proof
+        run: npm run check:presentation-v2-pptx-proof -- --output-dir ..\ci-artifacts\presentation-v2-pptx-proof
+
+      - name: Validate reasoning golden family guardrails
+        run: npm run check:reasoning-golden
 
       - name: Validate paragraph landing V2 guardrails
         run: npm run check:landing-v2
 
+      - name: Validate News Detective V2 guardrails
+        run: npm run check:news-detective-v2
+
       - name: Validate active scope language
         run: npm run check:scope-language
+
+      - name: Validate active governance wording
+        run: npm run check:active-governance-wording
+
+      - name: Validate Golden Graph Advisory 113 proof
+        run: npm run check:golden-graph-advisory-113
+
+      - name: Validate Scale Proof 3P product path proof
+        run: npm run check:scale-proof-3p-product-path
 
       - name: Validate report JSON
         run: node build-scripts/reports/validate-report-json.js
@@ -138,5 +209,8 @@ jobs:
             4veco-platform/reports/json/*.json
             4veco-platform/reports/url-index.md
             ci-artifacts/platform-ci-evidence.json
+            ci-artifacts/presentation-v2-html-qa/**
+            ci-artifacts/presentation-v2-legacy-guard.json
+            ci-artifacts/presentation-v2-pptx-proof/**
           if-no-files-found: ignore
           retention-days: 14

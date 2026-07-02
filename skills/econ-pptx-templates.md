@@ -1,10 +1,54 @@
 ---
 name: econ-pptx-templates
-description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (graphs, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
+description: "Build rich economics PPTX presentations via PptxGenJS. Defines pedagogy mandates (instructional visuals, speaker notes, canonical terminology) and the two non-negotiable technical fixes (LibreOffice round-trip for PowerPoint compatibility; 2-digit-number width rule). Recommends — but does not require — the editorial design system in `build-scripts/lib/lib-pptx.js`. Use whenever building presentaties, slides, lesslides, or any PowerPoint deck for economics VWO/HAVO. Always read the `pptx` skill first for PptxGenJS toolchain basics."
 pipeline: "Part B producer"
 ---
 
 # Economics PPTX presentations
+
+## Production direction - web first, PPTX second
+
+For 4veco presentations, the preferred production route is now:
+
+1. Build a semantic web-first presentation model.
+2. Render and review the web presentation.
+3. Use the web version as the source of design truth.
+4. Generate PPTX only after the web version passes student, teacher, visual, and accessibility review.
+
+Do not treat PPTX as the design source when a web presentation route exists.
+
+Read these before building new presentation work:
+
+- `references/exemplars/1.1.1-golden-presentation/`
+- `references/presentation/presentation-policy.md`
+- `references/presentation/speaker-notes-policy.md`
+- `references/presentation/powerpoint-derivative-policy.md`
+
+Every production presentation starts with a route-contract slide:
+
+- what students will learn;
+- why it matters;
+- what route the lesson follows;
+- what students should be able to do at the end.
+
+Universal economics presentation roles:
+
+1. Route contract.
+2. Concept/model development.
+3. Worked example or application.
+4. Retrieval/check.
+5. Summary and bridge.
+6. Student-facing notes.
+
+Conditional route tools:
+
+- concrete narrative or source anchor;
+- transfer to another context;
+- misconception slide;
+- canonical procedure route;
+- separated calculation/setup and interpretation/conclusion.
+
+Use conditional route tools when the topic needs them. Do not turn the accepted §1.1.1 eleven-slide sequence into a quota for every presentation.
 
 Short skill. The previous version prescribed a rigid harness tuned for an older model. This rewrite keeps only what experience proved non-negotiable, drops the rest, and lets designers choose typography, palette, and layout freely.
 
@@ -16,19 +60,24 @@ Short skill. The previous version prescribed a rigid harness tuned for an older 
 
 These are not style choices; they come from `references/authored/didactiek-principes.md`, `references/authored/economic_mathematical_precision_reference.md`, and `references/authored/economie-terminologie.md`. Read those when in doubt.
 
-- **≥ 3 economic graphs per presentation.** Dual coding reinforcement (text + visual). Every key concept in a slide deck should appear at least once as a labeled diagram or chart.
-- **Theory + worked examples only.** NEVER include exercise instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files.
-- **Speaker notes on every slide.** Teacher-facing. Explain reasoning, anticipate misconceptions, list cues.
+- **Meaningful instructional visual coverage.** Every central concept needs an appropriate representation: diagram, comparison card, procedure flow, worked table, graph, chart, image, or other instructional visual. Use actual economic graphs only when the concept or operation is graphical; do not add graph-quota visuals that do not teach the slide move.
+- **Theory + worked examples, plus at most a short retrieval/check moment.** NEVER include exercise-set instructions ("Maak opgave X", "Bereken …", "Beantwoord …"). Opgaven live in separate files. A presentation may include a short retrieval/check slide if it checks immediate understanding and does not replace the paragraph's exercise/check surfaces.
+- **Speaker notes on every slide.** Notes have two modes:
+  - Web-first presentations: student-facing explanations. These notes must be readable by students and explain the slide without relying on live teacher narration.
+  - PPTX live-teaching exports: teacher-supporting notes. These may include prompts, teacher cues, misconception warnings, and transitions.
+  - When one semantic model feeds both outputs, keep notes structured: `studentExplanation`, `misconceptionWatch`, `teacherCue`, `transition`.
 - **Body text ≥ 18pt.** Titles typically 28–44pt. Slide stats/hero numbers can go larger; respect the width rule below.
 - **Canonical Dutch terminology.** Use terms from `references/authored/economie-terminologie.md` (e.g. "alternatieve kosten", NOT "opportuniteitskosten"). No anglicisms.
 - **Economic correctness.** Supply/demand labels, curve directions, units, movement-vs-shift, ceteris paribus — all must match `references/authored/economic_mathematical_precision_reference.md`.
-- **Economic graph geometry.** Read the `economic-graph` skill. Run `build-scripts/lib/verify_svg_geometry.py` after every SVG edit.
+- **Economic graph geometry when graphs are used.** Read the `economic-graph` skill. Run `build-scripts/lib/verify_svg_geometry.py` after every SVG edit.
 
 ---
 
-## MANDATORY — teacher-supporting slides
+## MANDATORY — PPTX live-teaching slide mode
 
-A classroom PPTX is not a textbook page and not a self-study handout. The student is **listening to the teacher and watching the slide at the same time**. When the slide is text-dense, the student's verbal working memory is forced to process speech and reading simultaneously — Sweller's *modality effect* / Mayer's *multimedia-learning* corollary. Output: overload, retention loss. The `samenvatting` and `uitleg` docs cover self-study; the PPTX covers live teaching.
+A classroom PPTX derivative is not a textbook page and not a self-study handout. The student is **listening to the teacher and watching the slide at the same time**. When the slide is text-dense, the student's verbal working memory is forced to process speech and reading simultaneously — Sweller's *modality effect* / Mayer's *multimedia-learning* corollary. Output: overload, retention loss.
+
+For web-first presentations, student-facing notes are allowed and expected; use `references/presentation/speaker-notes-policy.md`. For PPTX live-teaching exports, the rules below apply.
 
 Eight rules. Non-negotiable for new builders; existing builders are migrated as they are touched.
 
@@ -36,7 +85,7 @@ Eight rules. Non-negotiable for new builders; existing builders are migrated as 
 2. **One idea per slide.** A definition, a graph, or one worked-example step. Do not stack definition + side-table + pitfall-callout + image on the same slide. Pitfalls get their own slide or live only in speaker notes.
 3. **Progressive disclosure for graphs.** Build complex graphs across 2–3 slides — curve alone → second curve added → equilibrium marked. Do not show the complete diagram on one slide and narrate over it. This is Mayer's *segmenting* principle.
 4. **Redundancy avoidance.** If the teacher says it aloud (per notes), it does not also appear on the slide. A slide bullet that paraphrases the teacher is cognitive noise, not reinforcement.
-5. **Speaker notes are the content container.** Structured per slide:
+5. **PPTX speaker notes are the teacher-supporting content container.** Structured per slide:
    ```
    Vraag:    [opener prompt for the class]
    Uitleg:   [what to say while the visual is up]
@@ -56,6 +105,19 @@ Eight rules. Non-negotiable for new builders; existing builders are migrated as 
 
 **QA gate — teacher read-through.** After every presentation build, read the speaker notes aloud at ~45s per slide while looking only at the slide PNG. Confirm: the slide never forces reading during narration, every slide has a clear visual anchor, the **Overgang** cues flow naturally into the next slide. Document failure modes in the paragraph's review notes before shipping.
 
+## MANDATORY — PPTX derivative requirements
+
+When generating PPTX from a semantic web-first model:
+
+- Preserve the route-contract slide.
+- Preserve all core assertions.
+- Preserve student-facing notes where possible.
+- Convert notes to teacher-supporting format if the export is intended for live teaching.
+- Keep body text ≥18 pt and labels ≥14 pt.
+- Run LibreOffice roundtrip.
+- Run visual QA on exported slide PNGs.
+- Document any content lost from web to PPTX.
+
 ---
 
 ## MANDATORY — technical (the two hard-won lessons)
@@ -74,7 +136,7 @@ roundtripWithLibreOffice(outPath);       // THE PowerPoint-compat fix (soffice -
 await fixNotesFontSize(outPath, 14);     // L1.5D v2 B8 — bump notes to 14pt AFTER LO roundtrip
 ```
 
-`roundtripWithLibreOffice` hardcodes the Windows path to `soffice.exe`. Project is Windows-only per root CLAUDE.md.
+`roundtripWithLibreOffice` hardcodes the Windows path to `soffice.exe`. Project tooling is Windows-oriented per `AGENTS.md`.
 
 ### 2. Two-digit numbered labels need room
 

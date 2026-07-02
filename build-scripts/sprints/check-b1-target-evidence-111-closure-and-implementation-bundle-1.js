@@ -126,10 +126,15 @@ function adversarialAttempt(data) {
 function checkHeldAuthority(data) {
   assert(data.surface === 'target_equivalent_exit_ticket', '1.1.1 exit ticket keeps target-equivalent surface for review');
   assert(data.targetEquivalent && data.targetEquivalent.candidate === true, '1.1.1 remains a candidate');
-  assert(data.targetEquivalent.gateApproved === false, '1.1.1 gateApproved must remain false');
+  assert(data.targetEquivalent.gateApproved === true, '1.1.1 gateApproved must record narrow readiness approval');
   assert(data.targetEquivalent.completionLanguageEligible === false, '1.1.1 completion language must remain false');
-  assert(data.metadataAlignment.targetReadinessEvidence === false, '1.1.1 targetReadinessEvidence must remain false');
-  assert(data.metadataAlignment.status === 'target_equivalent_candidate_pending_review', '1.1.1 status must remain pending review');
+  assert(data.metadataAlignment.targetReadinessEvidence === true, '1.1.1 targetReadinessEvidence must record narrow readiness approval');
+  assert(data.metadataAlignment.status === 'target_equivalent_aligned', '1.1.1 status must record target-equivalent alignment');
+  assert(
+    JSON.stringify(data.metadataAlignment.notes || []).includes('B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1') &&
+      JSON.stringify(data.metadataAlignment.notes || []).includes('Completion language remains held'),
+    '1.1.1 notes must record narrow readiness approval while holding completion language'
+  );
 }
 
 function checkSurfaceRepair(data) {
@@ -167,7 +172,7 @@ function main() {
 
   const correctProgress = completeCorrectAttempt(source);
   assert(correctProgress.proofCandidate === true, 'complete correct 1.1.1 attempt should be a proof candidate only');
-  assert(correctProgress.gateApproved === false, 'complete correct 1.1.1 attempt must still report held gate approval');
+  assert(correctProgress.gateApproved === true, 'complete correct 1.1.1 attempt must report approved gate');
   assert(correctProgress.completionLanguageEligible === false, 'complete correct 1.1.1 attempt must not authorize completion language');
 
   const adversarialProgress = adversarialAttempt(source);
@@ -187,7 +192,7 @@ function main() {
     schema_version: 1,
     sprint_id: 'B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1',
     generated: new Date().toISOString(),
-    status: 'repair_complete_closure_held',
+    status: 'repair_complete_readiness_approved_completion_held',
     sources: {
       platform_source: rel(sourcePath),
       short_check_source: rel(shortPath),
@@ -209,18 +214,19 @@ function main() {
       adversarial_attempt: adversarialProgress,
     },
     authority: {
-      gate_approved: false,
-      target_readiness_evidence: false,
+      gate_approved: true,
+      target_readiness_evidence: true,
       completion_language_authorized: false,
       product_route_adoption_authorized: false,
       diagnostics_mastery_pv_or_summative_use_authorized: false,
       scale_gate_1_authorized: false,
       student_product_use_authorized: false,
-      human_review_required_to_close: true,
+      human_review_completed_for_readiness: true,
+      human_review_required_to_close: false,
+      human_review_required_for_downstream_closure: true,
     },
     carried_findings: [
-      '1.1.1 still needs renewed human authority review before target-readiness flags may change.',
-      '1.1.1 still needs current rendered/mobile evidence before downstream gate closure can be considered.',
+      '1.1.1 readiness flags are narrowly approved; completion language remains held.',
       'Scale Gate 1, diagnostics, mastery/sequencing, PV, product-route adoption, and student/product use remain blocked.',
     ],
   };

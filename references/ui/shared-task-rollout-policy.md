@@ -45,6 +45,7 @@ graph_construction_substitute
 graph_reading
 formula_builder
 calculation_work_capture
+calculation_answer_form_capture
 source-value/source-chain controls
 claim-reason-evidence controls
 step ordering

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-NONPROTECTED-EXECUTION-AND-PROTECTED-GOVERNANCE-AUTHORIZATION-BUNDLE-2",
+  "matrix_id": "mtu-h7-protected-governance-authorization-matrix-2",
+  "review_standard": "REV-STD-1",
+  "status": "protected_and_graph_governance_paths_authorized_not_executed",
+  "generated_at": "2026-07-01T06:36:17.994Z",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "source_authorization": {
+    "url": "https://github.com/meijer1973/4veco-platform/pull/166",
+    "approval_comment_url": "https://github.com/meijer1973/4veco-platform/pull/166#issuecomment-4825233240",
+    "reviewed_head_sha": "b504e15270c43b9c86ecadba60f8e19968b66d53",
+    "merge_commit_sha": "f9c0c027cbfeab2de2aa498db7ab0d6ce2851ad4",
+    "approved_decision": "APPROVE PR #166 AS H7 GOVERNANCE PACKET ONLY"
+  },
+  "protected_holds": [
+    {
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "blocker_id": "H7-BLOCKER-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "final_route": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "execution_status": "held_not_executed",
+      "authorized_by_pr166_decision": "keep_on_governance_path",
+      "candidate_packet_id": "H7-CAND-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "proof_required_to_close": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-denivellering-label-reversal",
+        "expected_failure_defect_class": "canonical_mtu_governance_need",
+        "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
+        "guard": "A smaller high/low net-income ratio must not silently close as denivellering."
+      }
+    },
+    {
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed",
+      "authorized_by_pr166_decision": "keep_on_governance_path",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q12-f12-overtrigger-residual",
+        "expected_failure_defect_class": "over_trigger",
+        "mutation": "Map F12 to the residual-payoff operation.",
+        "guard": "Direct payoff arithmetic must not be closed by Nash pay-off matrix coverage."
+      }
+    },
+    {
+      "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed",
+      "authorized_by_pr166_decision": "keep_on_governance_path",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q12-cost-omitted-margin",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
+        "guard": "The margin-payoff operation must retain the marginal-cost subtraction."
+      }
+    },
+    {
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "blocker_id": "H7-BLOCKER-OP-GAME-TREE-NASH",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed",
+      "authorized_by_pr166_decision": "keep_on_governance_path",
+      "candidate_packet_id": "H7-CAND-OP-GAME-TREE-NASH-BACKWARD-COMPARISON",
+      "proof_required_to_close": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q20-matrix-shortcut",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Close q20 using only F12 matrix procedure text.",
+        "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking."
+      }
+    },
+    {
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-INSURANCE-COST-BENEFIT",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed",
+      "authorized_by_pr166_decision": "keep_on_governance_path",
+      "candidate_packet_id": "H7-CAND-OP-FIXED-VARIABLE-CURRENCY-INSURANCE-COST-BENEFIT",
+      "proof_required_to_close": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q17-premium-month-factor-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
+        "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit."
+      }
+    },
+    {
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-FIRST",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed",
+      "authorized_by_pr166_decision": "keep_on_governance_path",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "proof_required_to_close": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-macro-one-step-only",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
+        "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU."
+      }
+    },
+    {
+      "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-SECOND",
+      "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "execution_status": "held_not_executed",
+      "authorized_by_pr166_decision": "keep_on_governance_path",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "proof_required_to_close": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-final-r-pi-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
+        "guard": "The graph-and-table operation must not close from graph movement alone."
+      }
+    }
+  ],
+  "q5_graph_hold": {
+    "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+    "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+    "blocker_id": "H7-BLOCKER-GRAPH-Q5-TOTAL-SUBSIDY-SHADING",
+    "final_route": "HOLD_FOR_GRAPH_SOURCE_GOVERNANCE",
+    "execution_status": "held_until_separate_graph_fixture_execution_authorized_and_checked",
+    "authorized_by_pr166_decision": "graph_source_basis_accepted_but_execution_not_authorized_here",
+    "candidate_packet_id": "H7-CAND-GRAPH-TOTAL-SUBSIDY-SHADING-MULTI-ACCEPTED",
+    "proof_required_to_close": "Human graph-source reviewer must accept both official shading variants or define the exact accepted graph geometry before H7 closure.",
+    "negative_guard": {
+      "fixture_id": "h7-governance-negative-q5-dwl-instead-of-total-subsidy",
+      "expected_failure_defect_class": "evidence_gap",
+      "mutation": "Accept a deadweight-loss triangle or a single non-official area as total subsidy spending.",
+      "guard": "Total subsidy shading must stay distinct from welfare-loss shading and must preserve the two official correct examples."
+    }
+  },
+  "summary": {
+    "protected_holds": 7,
+    "graph_source_holds": 1,
+    "executed_in_this_bundle": 0,
+    "protected_reference_mutations": 0,
+    "operation_registry_mutations": 0,
+    "candidate_writes": 0
+  }
+}

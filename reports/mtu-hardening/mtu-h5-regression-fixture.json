@@ -64,7 +64,7 @@
         "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
         "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
         "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-1:question-3",
-        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3"
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1"
       ],
       "source_locator": {
         "exam": "vw-1022-a-25-1-o",
@@ -116,7 +116,7 @@
             "A96"
           ],
           "expected_misconception_refs": [
-            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-A15-stale-or-incorrect"
+            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1"
           ],
           "reviewed_equivalent_operation_refs": [
             "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
@@ -166,7 +166,7 @@
             "A96"
           ],
           "expected_misconception_refs": [
-            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-threshold-direction-answer-skill-need"
+            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-answer-1"
           ],
           "reviewed_equivalent_operation_refs": [
             "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
@@ -199,7 +199,7 @@
         "references/external/exams/vw-1022-a-25-1-o.pdf#question-15",
         "references/external/exams/vw-1022-a-25-1-c.pdf#question-15",
         "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-3:question-15",
-        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q15"
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q15-answer-1"
       ],
       "source_locator": {
         "exam": "vw-1022-a-25-1-o",
@@ -259,15 +259,14 @@
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A97"
           ],
-          "procedure_review_required_unit_ids": [
-            "A97"
+          "procedure_review_required_unit_ids": [],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT"
           ]
         },
         {
@@ -303,15 +302,14 @@
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review q15 two-step correction-model explanation as answer-skill need"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A97"
           ],
-          "procedure_review_required_unit_ids": [
-            "A97"
+          "procedure_review_required_unit_ids": [],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT"
           ]
         }
       ]
@@ -323,7 +321,12 @@
         "references/external/exams/vw-1022-a-25-1-o.pdf#question-19",
         "references/external/exams/vw-1022-a-25-1-c.pdf#question-19",
         "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
-        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19"
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19-graph-op-1",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_DIRECT_RENDERED_OFFICIAL_EVIDENCE_REVIEWED_EQUIVALENT"
       ],
       "source_locator": {
         "exam": "vw-1022-a-25-1-o",
@@ -384,13 +387,13 @@
           "expected_misconception_refs": [
             "source_market_shift_without_price_or_wage_direction"
           ],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP1_LABOR_MARKET_SHIFT_REVIEWED_EQUIVALENT"
+          ],
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "q19-source-annex-gap remains blocking",
-            "q19-graph-object-gap remains blocking"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [
             "full_graph_construction",
             "calculus_route",
@@ -444,12 +447,13 @@
           "expected_misconception_refs": [
             "linked_market_shift_without_inflation_direction"
           ],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP2_CURACAO_INFLATION_SHIFT_REVIEWED_EQUIVALENT"
+          ],
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [
             "full_graph_construction",
             "calculus_route",
@@ -510,6 +514,9 @@
           "expected_misconception_refs": [
             "foreign_spillover_without_aruba_inflation_direction"
           ],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP3_ARUBA_INFLATION_SHIFT_REVIEWED_EQUIVALENT"
+          ],
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
@@ -520,11 +527,7 @@
             "A81"
           ],
           "procedure_review_required_unit_ids": [],
-          "review_required_hooks": [
-            "q19-source-annex-gap remains blocking",
-            "q19-graph-object-gap remains blocking",
-            "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
-          ]
+          "review_required_hooks": []
         }
       ]
     },
@@ -547,14 +550,13 @@
       },
       "question_word": "leg_uit_of",
       "mapped_mtu_ids": [
-        "D07",
         "A98"
       ],
       "mapped_route_tags": [
         "tax_or_levy",
-        "incidence",
         "scaling",
-        "answer_form"
+        "answer_form",
+        "capacity_constraint"
       ],
       "official_correction_model_operations": [
         {
@@ -562,8 +564,10 @@
           "description": "Explain from the graph that the levy increases the price to EUR 2 per 1,000 liter and creates a new equilibrium at Qv2 = Qa2 where Q = 14,000.",
           "answer_model_summary": "The correction model awards one point for the new price and equilibrium quantity after the heffing.",
           "mapped_mtu_ids": [
-            "D07",
-            "A98"
+            "A98",
+            "A88",
+            "D41",
+            "D05"
           ],
           "mapped_route_tags": [
             "tax_or_levy",
@@ -572,7 +576,9 @@
             "answer_form"
           ],
           "expected_required_mtu_ids": [
-            "A98"
+            "A98",
+            "D41",
+            "D05"
           ],
           "expected_forbidden_mtu_ids": [],
           "expected_route_tags": [
@@ -586,39 +592,43 @@
             "A98"
           ],
           "expected_incidence_mtu_ids": [],
-          "expected_scaling_mtu_ids": [],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json#Q27_STEP1_D41_D05_A88_LEVY_EQUILIBRIUM_REVIEWED_EQUIVALENT"
+          ],
+          "expected_scaling_mtu_ids": [
+            "A88"
+          ],
+          "scaling_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json#Q27_STEP1_A88_PER_1000_LITER_SCALE"
+          ],
           "expected_misconception_refs": [
             "heffing_amount_confused_with_price_or_capacity_effect"
           ],
           "scale_factor_expected": true,
           "incidence_or_pass_through_expected": true,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
-            "review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A98",
-            "D07"
+            "D41",
+            "D05"
           ],
-          "procedure_review_required_unit_ids": [
-            "D07"
-          ],
-          "missing_incidence_expected": true,
-          "missing_scaling_expected": true
+          "procedure_review_required_unit_ids": [],
+          "missing_incidence_expected": false,
+          "missing_scaling_expected": false
         },
         {
           "operation_id": "q27-step-2",
           "description": "Conclude that demand equals capacity, so overconsumption is countered.",
           "answer_model_summary": "The correction model awards one point for linking Q = 14,000 to capacity and the conclusion about overconsumption.",
           "mapped_mtu_ids": [
-            "D07",
-            "A98"
+            "A98",
+            "A88"
           ],
           "mapped_route_tags": [
-            "incidence",
             "capacity_constraint",
+            "source_reading",
             "answer_form"
           ],
           "expected_required_mtu_ids": [
@@ -626,7 +636,7 @@
           ],
           "expected_forbidden_mtu_ids": [],
           "expected_route_tags": [
-            "incidence",
+            "capacity_constraint",
             "source_reading",
             "answer_form",
             "procedure"
@@ -639,20 +649,18 @@
             "price_increase_without_quantity_capacity_check"
           ],
           "scale_factor_expected": false,
-          "incidence_or_pass_through_expected": true,
+          "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review whether this is an incidence/pass-through family case or a distinct levy-capacity operation"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
-            "A98",
-            "D07"
+            "A98"
           ],
-          "procedure_review_required_unit_ids": [
-            "D07"
-          ],
-          "missing_incidence_expected": true
+          "procedure_review_required_unit_ids": [],
+          "missing_incidence_expected": false,
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q27_STEP2_CAPACITY_OVERCONSUMPTION_TAXONOMY_REVIEWED_EQUIVALENT"
+          ]
         }
       ]
     }

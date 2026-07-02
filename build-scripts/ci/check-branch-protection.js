@@ -13,6 +13,8 @@ HOW TO ADAPT:
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
 const DEFAULT_BRANCH = 'main';
 const DEFAULT_REQUIRED_CONTEXT = 'validate-platform';
+const INTEGRATION_AUTHORIZED_CONTEXT = 'integration-authorized';
+const EXPECTED_APPROVING_REVIEW_COUNT = 0;
 
 function fail(message) {
   console.error(`Branch protection check failed: ${message}`);
@@ -24,6 +26,10 @@ function optionValue(args, name) {
   if (index === -1) return null;
   if (!args[index + 1]) fail(`missing value for ${name}`);
   return args[index + 1];
+}
+
+function flag(args, name) {
+  return args.includes(name);
 }
 
 function booleanValue(value) {
@@ -90,11 +96,16 @@ function summarizePullRequestReviews(reviews, fetchState = {}) {
 
 function summarizeProtection(protection, options = {}) {
   const requiredContext = options.requiredContext || DEFAULT_REQUIRED_CONTEXT;
+  const requiredContexts = [
+    requiredContext,
+    ...(options.requireIntegrationAuthorized ? [INTEGRATION_AUTHORIZED_CONTEXT] : []),
+  ];
   const strict = Boolean(protection.required_status_checks && protection.required_status_checks.strict);
   const contexts = contextsFromProtection(protection);
   const enforceAdmins = booleanValue(protection.enforce_admins);
   const allowForcePushes = booleanValue(protection.allow_force_pushes);
   const allowDeletions = booleanValue(protection.allow_deletions);
+  const requiredConversationResolution = booleanValue(protection.required_conversation_resolution);
   const pullRequestReviews =
     options.pullRequestReviews ||
     protection.required_pull_request_reviews ||
@@ -102,10 +113,43 @@ function summarizeProtection(protection, options = {}) {
 
   const failures = [];
   if (strict !== true) failures.push('required_status_checks.strict must be true');
-  if (!contexts.includes(requiredContext)) failures.push(`required status context missing: ${requiredContext}`);
+  for (const context of requiredContexts) {
+    if (!contexts.includes(context)) failures.push(`required status context missing: ${context}`);
+  }
+  for (const context of contexts) {
+    if (!requiredContexts.includes(context)) failures.push(`unexpected required status context: ${context}`);
+  }
   if (enforceAdmins !== true) failures.push('enforce_admins.enabled must be true');
   if (allowForcePushes !== false) failures.push('allow_force_pushes.enabled must be false');
   if (allowDeletions !== false) failures.push('allow_deletions.enabled must be false');
+  if (requiredConversationResolution !== true) {
+    failures.push('required_conversation_resolution.enabled must be true');
+  }
+  const pullRequestReviewSummary = summarizePullRequestReviews(
+    pullRequestReviews,
+    options.pullRequestReviewFetch
+  );
+  if (pullRequestReviewSummary.available !== true || pullRequestReviewSummary.required !== true) {
+    failures.push('pull-request review settings must be available');
+  }
+  if (pullRequestReviewSummary.required_approving_review_count !== EXPECTED_APPROVING_REVIEW_COUNT) {
+    failures.push(`required_approving_review_count must be ${EXPECTED_APPROVING_REVIEW_COUNT}`);
+  }
+  if (pullRequestReviewSummary.dismiss_stale_reviews !== false) {
+    failures.push('dismiss_stale_reviews must be false');
+  }
+  if (pullRequestReviewSummary.require_code_owner_reviews !== false) {
+    failures.push('require_code_owner_reviews must be false');
+  }
+  if (pullRequestReviewSummary.require_last_push_approval !== false) {
+    failures.push('require_last_push_approval must be false');
+  }
+  if (
+    pullRequestReviewSummary.bypass_allowances_observable === true &&
+    pullRequestReviewSummary.bypass_disabled !== true
+  ) {
+    failures.push('bypass_pull_request_allowances must be empty');
+  }
 
   return {
     repository: options.repo || DEFAULT_REPO,
@@ -114,11 +158,18 @@ function summarizeProtection(protection, options = {}) {
     expected: {
       required_status_checks: {
         strict: true,
-        contexts: [requiredContext],
+        contexts: requiredContexts,
+      },
+      required_pull_request_reviews: {
+        required_approving_review_count: EXPECTED_APPROVING_REVIEW_COUNT,
+        dismiss_stale_reviews: false,
+        require_code_owner_reviews: false,
+        require_last_push_approval: false,
       },
       enforce_admins: true,
       allow_force_pushes: false,
       allow_deletions: false,
+      required_conversation_resolution: true,
     },
     observed: {
       required_status_checks: {
@@ -128,10 +179,8 @@ function summarizeProtection(protection, options = {}) {
       enforce_admins: enforceAdmins,
       allow_force_pushes: allowForcePushes,
       allow_deletions: allowDeletions,
-      required_pull_request_reviews: summarizePullRequestReviews(
-        pullRequestReviews,
-        options.pullRequestReviewFetch
-      ),
+      required_conversation_resolution: requiredConversationResolution,
+      required_pull_request_reviews: pullRequestReviewSummary,
     },
     failures,
   };
@@ -185,6 +234,7 @@ function runCli(argv) {
   const repo = optionValue(argv, '--repo') || DEFAULT_REPO;
   const branch = optionValue(argv, '--branch') || DEFAULT_BRANCH;
   const requiredContext = optionValue(argv, '--required-context') || DEFAULT_REQUIRED_CONTEXT;
+  const requireIntegrationAuthorized = flag(argv, '--require-integration-authorized');
   const fixture = optionValue(argv, '--fixture');
 
   let protection;
@@ -200,6 +250,7 @@ function runCli(argv) {
     repo,
     branch,
     requiredContext,
+    requireIntegrationAuthorized,
     pullRequestReviews: pullRequestReviewRead.reviews,
     pullRequestReviewFetch: pullRequestReviewRead.fetch,
   });
@@ -215,6 +266,8 @@ module.exports = {
   DEFAULT_REPO,
   DEFAULT_BRANCH,
   DEFAULT_REQUIRED_CONTEXT,
+  INTEGRATION_AUTHORIZED_CONTEXT,
+  EXPECTED_APPROVING_REVIEW_COUNT,
   contextsFromProtection,
   summarizePullRequestReviews,
   summarizeProtection,

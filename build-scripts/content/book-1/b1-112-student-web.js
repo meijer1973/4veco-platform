@@ -9,6 +9,7 @@
 const fs = require("fs");
 const path = require("path");
 const { writeDeckHtml } = require("../../lib/render-presentation-v2-html");
+const presentationV2DeckModel = require("./b1-112-presentation-v2-model");
 
 const NODE_PATH = path.join(process.env.APPDATA || "", "npm", "node_modules");
 if (NODE_PATH) {
@@ -1750,7 +1751,7 @@ async function writePresentation() {
 
   copyEngine("presentation-v2.css");
   copyEngine("presentation-v2.js");
-  writeDeckHtml(presentationV2Deck(), path.join(PAR_DIR, fileName("presentatie")), {
+  writeDeckHtml(presentationV2DeckModel, path.join(PAR_DIR, fileName("presentatie")), {
     pptxHref: fileName("presentatie", "pptx"),
     backHref: "index.html"
   });

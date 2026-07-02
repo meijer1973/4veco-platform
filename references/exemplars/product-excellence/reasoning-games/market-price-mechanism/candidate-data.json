@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "surface": "reasoning_game_golden_exemplar",
+  "gameId": "reasoning-flow-v3",
+  "title": "Redeneerspel: verklaar het prijsmechanisme",
+  "studentFacingLanguage": "nl",
+  "productStatus": {
+    "exemplar": true,
+    "productionReady": false,
+    "routeAdoptionAuthorized": false,
+    "diagnosticsAuthorized": false,
+    "masteryOrSequencingAuthorized": false,
+    "summativeUseAuthorized": false
+  },
+  "layout": {
+    "kind": "source_task_workspace",
+    "desktop": "source-left/task-right",
+    "mobile": "source-before-task",
+    "hero": true,
+    "routePanel": true,
+    "progressMeter": [
+      "Keten",
+      "Verbanden",
+      "Toetszin"
+    ]
+  },
+  "designIntent": {
+    "oneCoreLoop": "Read source, build reasoning chain, label links, write exam-style sentence.",
+    "notAllowed": [
+      "many unrelated game modes",
+      "generic multiple-choice-only reasoning",
+      "hidden correct controls",
+      "feedback before attempt",
+      "diagnostic/mastery/grade language",
+      "visible internal ID/role tags on cards",
+      "vague concept labels such as market pressure",
+      "connector rows that do not form complete sentences",
+      "goal copy that gives away the full answer chain",
+      "forcing daardoor/waardoor distinction when the economics target is causal reasoning"
+    ],
+    "primaryRepresentation": "flowchart/cause-effect chain",
+    "whenToUseOtherRepresentation": "Only when the paragraph target operation is not causal reasoning. Then choose a representation that matches the thinking action: compare, classify, weigh, or evaluate.",
+    "roleTagPolicy": "Do not render hidden card roles such as cause/mechanism/conclusion on selectable cards. The answer frame may show the expected structure, but selectable cards must not carry visible metadata tags.",
+    "conceptLanguagePolicy": "Use concrete exam-usable concepts such as vraagoverschot, aanbodtekort, schaarste, aanbod blijft gelijk, vraag neemt toe. Avoid vague labels such as marktdruk or market pressure.",
+    "goalPlacementPolicy": "The reasoning goal must be prominent, but it may orient only the skill and task type. It must not reveal the full answer mechanism before play.",
+    "connectorPolicy": "Use “daardoor” as the default cause-effect connector in this game. Reuse must be allowed. Do not include “waardoor” as a separate assessed connector unless the language distinction is the explicit target and multiple correct formulations are handled."
+  },
+  "source": {
+    "id": "ctx-station-parking-bike-rental",
+    "title": "Bron — station zonder parkeerplaatsen",
+    "body": "De gemeente haalt een deel van de parkeerplaatsen bij het station weg. Reizigers kunnen daardoor minder makkelijk met de auto naar het station. Het aantal huurfietsen bij het station blijft op korte termijn gelijk.",
+    "givens": [
+      "Er zijn minder parkeerplaatsen bij het station.",
+      "Meer reizigers willen een huurfiets gebruiken.",
+      "Het aanbod van huurfietsen blijft voorlopig gelijk."
+    ],
+    "targetQuestion": "Onderzoek hoe de verandering rond het station de huurprijs van huurfietsen kan beïnvloeden. Gebruik vraag en aanbod in je redenering.",
+    "goalVisibleProminently": true,
+    "goalText": "Bouw een economische redenering over een mogelijke prijsverandering. Gebruik de bron, vraag en aanbod, en sluit af met een conclusie met richting."
+  },
+  "rounds": [
+    {
+      "id": "chain-build",
+      "title": "Bouw de oorzaak-gevolgketen",
+      "interactionFamily": "reasoning_flow_chain_builder",
+      "studentAction": "Place cards in a cause-effect flowchart.",
+      "slots": [
+        {
+          "id": "s1",
+          "label": "Stap 1",
+          "expectedCardId": "parking_less"
+        },
+        {
+          "id": "s2",
+          "label": "Stap 2",
+          "expectedCardId": "bike_demand_more"
+        },
+        {
+          "id": "s3",
+          "label": "Stap 3",
+          "expectedCardId": "demand_up"
+        },
+        {
+          "id": "s4",
+          "label": "Stap 4",
+          "expectedCardId": "supply_same"
+        },
+        {
+          "id": "s5",
+          "label": "Stap 5",
+          "expectedCardId": "shortage"
+        },
+        {
+          "id": "s6",
+          "label": "Stap 6",
+          "expectedCardId": "price_up"
+        }
+      ],
+      "cardBank": [
+        {
+          "id": "parking_less",
+          "label": "Minder parkeerplaatsen bij het station",
+          "kind": "answer",
+          "role": "cause"
+        },
+        {
+          "id": "bike_demand_more",
+          "label": "Meer reizigers willen een huurfiets",
+          "kind": "answer",
+          "role": "direct_effect"
+        },
+        {
+          "id": "demand_up",
+          "label": "De vraag naar huurfietsen neemt toe",
+          "kind": "answer",
+          "role": "mechanism"
+        },
+        {
+          "id": "supply_same",
+          "label": "Het aanbod blijft op korte termijn gelijk",
+          "kind": "answer",
+          "role": "condition"
+        },
+        {
+          "id": "shortage",
+          "label": "Er ontstaat een vraagoverschot bij de huurfietsen",
+          "kind": "answer",
+          "role": "mechanism"
+        },
+        {
+          "id": "price_up",
+          "label": "De huurprijs kan stijgen",
+          "kind": "answer",
+          "role": "conclusion"
+        },
+        {
+          "id": "demand_down",
+          "label": "De vraag naar huurfietsen daalt",
+          "kind": "distractor",
+          "distractorFor": "demand_up"
+        },
+        {
+          "id": "supply_up",
+          "label": "Het aanbod stijgt meteen mee",
+          "kind": "distractor",
+          "distractorFor": "supply_same"
+        },
+        {
+          "id": "price_down",
+          "label": "De huurprijs daalt",
+          "kind": "distractor",
+          "distractorFor": "price_up"
+        }
+      ],
+      "feedback": {
+        "match": "Je oorzaak-gevolgketen loopt van brongegeven naar vraag, gelijk aanbod, vraagoverschot en conclusie.",
+        "retry": "Begin bij het brongegeven en vraag steeds: wat gebeurt daardoor op de markt?"
+      },
+      "visibleCardMetadataPolicy": "Do not show role/type tags on selectable cards. Render only the card label."
+    },
+    {
+      "id": "link-labels",
+      "title": "Leg de verbanden tussen de schakels",
+      "interactionFamily": "reasoning_connector_labeler",
+      "studentAction": "Place connector labels inside complete sentences. Daardoor may be reused for repeated cause-effect links.",
+      "arrows": [
+        {
+          "id": "a1",
+          "before": "Er verdwijnen parkeerplaatsen bij het station;",
+          "after": "willen meer reizigers een huurfiets gebruiken.",
+          "expectedConnectorId": "daardoor"
+        },
+        {
+          "id": "a2",
+          "before": "Meer reizigers willen een huurfiets gebruiken;",
+          "after": "neemt de vraag naar huurfietsen toe.",
+          "expectedConnectorId": "daardoor"
+        },
+        {
+          "id": "a3",
+          "before": "De vraag naar huurfietsen neemt toe,",
+          "after": "het aanbod op korte termijn gelijk blijft.",
+          "expectedConnectorId": "terwijl"
+        },
+        {
+          "id": "a4",
+          "before": "Er ontstaat een vraagoverschot bij de huurfietsen,",
+          "after": "kan de huurprijs stijgen.",
+          "expectedConnectorId": "dus"
+        }
+      ],
+      "connectorBank": [
+        {
+          "id": "daardoor",
+          "label": "daardoor",
+          "kind": "answer",
+          "reusable": true
+        },
+        {
+          "id": "terwijl",
+          "label": "terwijl",
+          "kind": "answer"
+        },
+        {
+          "id": "dus",
+          "label": "dus",
+          "kind": "answer"
+        },
+        {
+          "id": "maar",
+          "label": "maar",
+          "kind": "distractor"
+        },
+        {
+          "id": "omdat",
+          "label": "omdat",
+          "kind": "distractor"
+        }
+      ],
+      "feedback": {
+        "match": "Je verbindingswoorden maken volledige zinnen en benoemen oorzaak-gevolg, aanbodvoorwaarde, vraagoverschot en conclusie.",
+        "retry": "Gebruik “daardoor” voor gewone oorzaak-gevolgzinnen, “terwijl” waar vraag en aanbod tegelijk worden vergeleken, en “dus” pas bij de conclusie."
+      },
+      "sentenceCompletionPolicy": "Each connector item must render as a complete sentence with one connector slot in the middle. Do not render loose fragments such as from/to labels only.",
+      "connectorReusePolicy": "Connectors that express the same repeated causal operation, especially daardoor, must be reusable. Do not disable a connector after one use unless the language target requires single-use fragments."
+    },
+    {
+      "id": "exam-sentence",
+      "title": "Maak een toetszin",
+      "interactionFamily": "reasoning_sentence_builder",
+      "studentAction": "Build a concise exam-style explanation with visible answer slots for cause, mechanism and conclusion, without role tags on the cards.",
+      "slots": [
+        {
+          "id": "cause",
+          "label": "Oorzaak",
+          "expectedFragmentId": "cause_ok"
+        },
+        {
+          "id": "mechanism",
+          "label": "Mechanisme",
+          "expectedFragmentId": "mechanism_ok"
+        },
+        {
+          "id": "conclusion",
+          "label": "Conclusie",
+          "expectedFragmentId": "conclusion_ok"
+        }
+      ],
+      "fragmentBank": [
+        {
+          "id": "cause_ok",
+          "role": "cause",
+          "kind": "answer",
+          "label": "Doordat parkeerplaatsen verdwijnen, willen meer reizigers een huurfiets gebruiken."
+        },
+        {
+          "id": "mechanism_ok",
+          "role": "mechanism",
+          "kind": "answer",
+          "label": "De vraag stijgt, terwijl het aanbod op korte termijn gelijk blijft; daardoor ontstaat schaarste of een vraagoverschot."
+        },
+        {
+          "id": "conclusion_ok",
+          "role": "conclusion",
+          "kind": "answer",
+          "label": "Daardoor kan de huurprijs van huurfietsen stijgen."
+        },
+        {
+          "id": "cause_wrong",
+          "role": "cause",
+          "kind": "distractor",
+          "label": "Doordat het aanbod van fietsen direct stijgt, verandert de markt."
+        },
+        {
+          "id": "mechanism_wrong",
+          "role": "mechanism",
+          "kind": "distractor",
+          "label": "De vraag daalt terwijl het aanbod gelijk blijft."
+        },
+        {
+          "id": "conclusion_wrong",
+          "role": "conclusion",
+          "kind": "distractor",
+          "label": "Daardoor kan de huurprijs van huurfietsen dalen."
+        }
+      ],
+      "optionalConstructedResponse": {
+        "enabled": true,
+        "purpose": "Practice writing the reasoning after constructing it. Not used for high-stakes automatic scoring in this exemplar."
+      },
+      "feedback": {
+        "match": "Je antwoord heeft oorzaak, mechanisme en conclusie met richting.",
+        "retry": "Controleer vooral of de vraag stijgt en of het aanbod gelijk blijft."
+      },
+      "visibleFragmentMetadataPolicy": "Do not show fragment role tags on selectable fragments. Slots may show the target answer structure."
+    }
+  ],
+  "reviewRequired": {
+    "renderedOutput": true,
+    "interactionStateScreenshots": [
+      "initial",
+      "partial-chain",
+      "wrong-chain-feedback",
+      "correct-chain",
+      "connector-feedback",
+      "sentence-feedback",
+      "mobile-dark"
+    ],
+    "specialistReviews": [
+      "teacher-learning-quality",
+      "student-experience",
+      "visual-interaction",
+      "testing-regression",
+      "lead-synthesis"
+    ]
+  }
+}

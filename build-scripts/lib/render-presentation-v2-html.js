@@ -9,30 +9,47 @@ function esc(value) {
     .replace(/"/g, '&quot;');
 }
 
+function arr(value) {
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (value) return [value];
+  return [];
+}
+
+function stripTrailingLineWhitespace(value) {
+  return String(value).replace(/[ \t]+$/gm, '');
+}
+
 function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', jsHref = '../../shared/presentation-v2.js', pptxHref = '', backHref = '../index.html' } = {}) {
-  const slides = deck.slides.map((slide, index) => renderSlide(slide, index + 1, deck.slides.length)).join('\n');
+  const slides = deck.slides.map((slide, index) => renderSlide(slide, index + 1, deck.slides.length, deck)).join('\n');
   const nav = deck.slides.map((slide, index) => {
     const n = String(index + 1).padStart(2, '0');
-    return `<a class="pv2-nav-link" href="#${esc(slide.id)}" data-pv2-link="${index + 1}"><span>${n}</span>${esc(slide.navTitle)}</a>`;
+    return `<a class="pv2-nav-link" href="#${esc(slide.id)}" data-pv2-link="${index + 1}"><span>${n}</span>${esc(slide.navTitle || slide.title || slide.studentTitle)}</a>`;
   }).join('\n');
-  const titleLabel = deck.titleLabel || 'Presentatie v2 prototype';
-  const sideLabel = deck.sideLabel || 'prototype v2';
+  const titleLabel = deck.titleLabel || 'Webpresentatie';
+  const sideLabel = deck.sideLabel || 'webpresentatie';
+  const notesLabel = deck.notesLabel || 'Studentgerichte uitleg';
   const pptxLink = pptxHref
-    ? `<a class="pv2-action pv2-action-primary" href="${esc(pptxHref)}" download>Download PowerPoint</a>`
+    ? `          <a class="pv2-action pv2-action-primary" href="${esc(pptxHref)}" download>PowerPoint downloaden</a>\n`
+    : '';
+  const sourceAttrs = deck.sourceSnapshot
+    ? ` data-source-sha256="${esc(deck.sourceSnapshot.sha256)}" data-source-package="${esc(deck.sourceSnapshot.package)}" data-accepted-on="${esc(deck.sourceSnapshot.acceptedOn)}"`
+    : '';
+  const sourceMeta = deck.sourceSnapshot
+    ? `  <meta name="presentation-source-sha256" content="${esc(deck.sourceSnapshot.sha256)}">\n`
     : '';
 
-  return `<!doctype html>
+  return stripTrailingLineWhitespace(`<!doctype html>
 <html lang="nl" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(deck.paragraph.number)} ${esc(deck.paragraph.title)} — ${esc(titleLabel)}</title>
-  <script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+${sourceMeta}  <script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
   <link rel="stylesheet" href="${esc(cssHref)}">
 </head>
 <body data-layout="presentation-v2">
   <a class="pv2-skip" href="#pv2-stage">Naar dia</a>
-  <div class="pv2-shell" data-pv2>
+  <div class="pv2-shell" data-pv2 data-deck-version="${esc(deck.version)}" data-exemplar-id="${esc(deck.exemplarId || '')}"${sourceAttrs}>
     <aside class="pv2-sidebar" aria-label="Dia's">
       <div class="pv2-sidebar-head">
         <p>${esc(deck.paragraph.number)}</p>
@@ -45,10 +62,9 @@ function renderDeckHtml(deck, { cssHref = '../../shared/presentation-v2.css', js
       <header class="pv2-topbar">
         <a class="pv2-back" href="${esc(backHref)}">Terug naar overzicht</a>
         <div class="pv2-actions">
-          ${pptxLink}
-          <button type="button" class="pv2-action" data-pv2-notes aria-pressed="false" aria-expanded="false">Speaker notes</button>
+${pptxLink}          <button type="button" class="pv2-action" data-pv2-notes aria-pressed="false" aria-expanded="false" data-open-label="${esc(notesLabel)}" data-close-label="Verberg uitleg">${esc(notesLabel)}</button>
           <button type="button" class="pv2-action" data-pv2-theme aria-pressed="false">Dark mode</button>
-          <button type="button" class="pv2-action" data-pv2-fullscreen aria-pressed="false">Full screen</button>
+          <button type="button" class="pv2-action" data-pv2-fullscreen aria-pressed="false">Presentatiemodus</button>
         </div>
       </header>
       <section id="pv2-stage" class="pv2-stage" aria-label="Presentatie">
@@ -63,27 +79,162 @@ ${slides}
   </div>
   <script src="${esc(jsHref)}"></script>
 </body>
-</html>`;
+</html>`);
 }
 
-function renderSlide(slide, number, total) {
-  const classes = `pv2-slide pv2-slide-${esc(slide.layout)}`;
+function renderSlide(slide, number, total, deck) {
+  const classes = `pv2-slide pv2-slide-${esc(slide.layout)} pv2-role-${esc(slide.role || 'generic')}`;
   const speakerText = getSpeakerText(slide.speakerNotes);
-  return `        <article class="${classes}" id="${esc(slide.id)}" data-pv2-slide="${number}" aria-labelledby="${esc(slide.id)}-title" ${number === 1 ? '' : 'hidden'}>
+  return `        <article class="${classes}" id="${esc(slide.id)}" data-pv2-slide="${number}" data-route-role="${esc(slide.role || '')}" aria-labelledby="${esc(slide.id)}-title" ${number === 1 ? '' : 'hidden'}>
           <div class="pv2-slide-canvas">
             <div class="pv2-slide-count">${number} / ${total}</div>
-            ${renderSlideInner(slide)}
+            ${renderSlideInner(slide, deck)}
             <div class="pv2-sr-speaker-text" data-pv2-speaker-text>${esc(speakerText)}</div>
           </div>
-          ${renderNotes(slide.speakerNotes)}
+          ${renderNotes(slide.speakerNotes, deck)}
         </article>`;
 }
 
-function renderSlideInner(slide) {
+function renderSlideInner(slide, deck) {
   if (slide.layout === 'choiceTensionCover') return renderCover(slide);
   if (slide.layout === 'choiceComparison') return renderChoiceComparison(slide);
   if (slide.layout === 'procedureRoute') return renderProcedureRoute(slide);
+  if (slide.layout === 'routeContract') return renderRouteContract(slide);
+  if (slide.layout === 'narrativeAnchor') return renderNarrativeAnchor(slide);
+  if (slide.layout === 'conceptModel') return renderConceptModel(slide);
+  if (slide.layout === 'transferCards') return renderTransferCards(slide);
+  if (slide.layout === 'misconceptionCards') return renderMisconceptionCards(slide);
+  if (slide.layout === 'workedCalculation') return renderWorkedCalculation(slide);
+  if (slide.layout === 'workedInterpretation') return renderWorkedInterpretation(slide);
+  if (slide.layout === 'retrievalCheck') return renderRetrievalCheck(slide);
+  if (slide.layout === 'summaryBridge') return renderSummaryBridge(slide);
   throw new Error(`Unknown presentation-v2 layout: ${slide.layout}`);
+}
+
+function renderSlideHead(slide, { compact = false } = {}) {
+  return `<div class="pv2-slide-head${compact ? ' pv2-slide-head-compact' : ''}">
+            <p class="pv2-eyebrow">${esc(slide.eyebrow || slide.subtitle || '')}</p>
+            <h2 id="${esc(slide.id)}-title" tabindex="-1">${esc(slide.studentTitle || slide.title)}</h2>
+            ${slide.assertion ? `<p class="pv2-assertion">${esc(slide.assertion)}</p>` : ''}
+            ${slide.action ? `<p class="pv2-slide-action">${esc(slide.action)}</p>` : ''}
+          </div>`;
+}
+
+function renderRouteContract(slide) {
+  const criteria = arr(slide.successCriteria);
+  const criteriaMarkup = criteria.length
+    ? `<section class="pv2-success-criteria" aria-label="Succescriteria">
+            <h3>Aan het einde kun je...</h3>
+            <ul>${criteria.map(item => `<li>${esc(item)}</li>`).join('')}</ul>
+          </section>`
+    : '';
+  const criteriaBlock = criteriaMarkup ? `\n          ${criteriaMarkup}` : '';
+  return `${renderSlideHead(slide)}
+          <div class="pv2-route-contract" role="list" aria-label="Lesroute">
+            ${arr(slide.routeCards).map((card) => `<section class="pv2-route-card" role="listitem"><span>${esc(card.label)}</span><h3>${esc(card.title)}</h3><p>${esc(card.text)}</p></section>`).join('')}
+          </div>${criteriaBlock}`;
+}
+
+function renderNarrativeAnchor(slide) {
+  return `${renderSlideHead(slide, { compact: true })}
+          <div class="pv2-narrative-grid">
+            <div class="pv2-tension pv2-tension-inline" aria-label="Budgetspanning">
+              ${renderTensionMetric(slide.tension?.available)}
+              ${renderTensionMetric(slide.tension?.wanted)}
+              ${renderTensionMetric(slide.tension?.gap)}
+            </div>
+            <div class="pv2-choice-lanes" role="list" aria-label="Keuzeopties">
+              ${arr(slide.options).map(opt => renderOption(opt)).join('')}
+            </div>
+          </div>`;
+}
+
+function renderConceptModel(slide) {
+  const relation = slide.relation || {};
+  return `${renderSlideHead(slide)}
+          <div class="pv2-relation" aria-label="Begripsrelatie">
+            ${renderRelationNode(relation.left)}
+            <strong class="pv2-relation-operator">${esc(relation.operator || '→')}</strong>
+            ${renderRelationNode(relation.right)}
+            <div class="pv2-relation-result"><span>dus</span><strong>${esc(relation.result)}</strong>${relation.caution ? `<em>${esc(relation.caution)}</em>` : ''}</div>
+          </div>`;
+}
+
+function renderRelationNode(node = {}) {
+  return `<section class="pv2-relation-node"><span>${esc(node.label)}</span><strong>${esc(node.value)}</strong></section>`;
+}
+
+function renderTransferCards(slide) {
+  return `${renderSlideHead(slide, { compact: true })}
+          <div class="pv2-transfer-grid" role="list" aria-label="Transfercontexten">
+            ${arr(slide.transferCards).map(card => `<section class="pv2-transfer-card" role="listitem">
+              <h3>${esc(card.title)}</h3>
+              <dl>
+                <div><dt>Wie kiest?</dt><dd>${esc(card.chooser)}</dd></div>
+                <div><dt>Beperkt middel</dt><dd>${esc(card.limited)}</dd></div>
+                <div><dt>Alternatieven</dt><dd>${esc(card.alternatives)}</dd></div>
+              </dl>
+            </section>`).join('')}
+          </div>`;
+}
+
+function renderMisconceptionCards(slide) {
+  return `${renderSlideHead(slide, { compact: true })}
+          <div class="pv2-misconception-grid" role="list" aria-label="Misconcepties">
+            ${arr(slide.misconceptions).map(card => `<section class="pv2-misconception-card" role="listitem">
+              <span>${esc(card.title)}</span>
+              <h3>${esc(card.wrong)}</h3>
+              <p>${esc(card.fix)}</p>
+            </section>`).join('')}
+          </div>
+          <p class="pv2-control-question">Controlevraag: wat is gekozen en wat is het beste niet-gekozen alternatief?</p>`;
+}
+
+function renderWorkedCalculation(slide) {
+  const table = slide.table || {};
+  return `${renderSlideHead(slide, { compact: true })}
+          <div class="pv2-worked-grid">
+            <figure class="pv2-visual-panel pv2-worked-table">
+              <figcaption>Opbrengst per alternatief</figcaption>
+              <table class="pv2-data-table">
+                <thead><tr>${arr(table.headers).map(header => `<th>${esc(header)}</th>`).join('')}</tr></thead>
+                <tbody>${arr(table.rows).map(row => `<tr>${arr(row).map(cell => `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
+              </table>
+            </figure>
+            <div class="pv2-formula-stack" role="list" aria-label="Berekeningen">
+              ${arr(slide.formulaCards).map(card => `<section class="pv2-formula-card" role="listitem"><span>${esc(card.title)}</span><strong>${esc(card.formula)}</strong></section>`).join('')}
+            </div>
+          </div>`;
+}
+
+function renderWorkedInterpretation(slide) {
+  const eq = slide.equation || {};
+  return `${renderSlideHead(slide, { compact: true })}
+          <div class="pv2-equation" aria-label="${esc(eq.label || 'Nettowaarde')}">
+            <strong>${esc(eq.chosen)}</strong><span>−</span><strong>${esc(eq.minus)}</strong><span>=</span><strong>${esc(eq.result)}</strong>
+            <em>${esc(eq.label)}</em>
+          </div>
+          <div class="pv2-interpretation-grid" role="list" aria-label="Interpretatie">
+            ${arr(slide.interpretationCards).map(card => `<section class="pv2-interpretation-card" role="listitem"><h3>${esc(card.title)}</h3><p>${esc(card.text)}</p></section>`).join('')}
+          </div>`;
+}
+
+function renderRetrievalCheck(slide) {
+  return `${renderSlideHead(slide, { compact: true })}
+          <div class="pv2-check-grid" role="list" aria-label="Actieve checks">
+            ${arr(slide.checks).map((check, index) => `<details class="pv2-check-card" role="listitem">
+              <summary><span>${String(index + 1).padStart(2, '0')}</span>${esc(check.prompt)}</summary>
+              <p class="pv2-hint">${esc(check.hint)}</p>
+              <p class="pv2-answer">${esc(check.answer)}</p>
+            </details>`).join('')}
+          </div>`;
+}
+
+function renderSummaryBridge(slide) {
+  return `${renderSlideHead(slide, { compact: true })}
+          <ol class="pv2-summary-list" aria-label="Kernzinnen">
+            ${arr(slide.studentExplanation).map(sentence => `<li>${esc(sentence)}</li>`).join('')}
+          </ol>`;
 }
 
 function renderCover(slide) {
@@ -92,7 +243,7 @@ function renderCover(slide) {
     return `<div class="pv2-cover-grid pv2-cover-grid-visual">
               <div class="pv2-cover-copy">
                 <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
-                <h2 id="${esc(slide.id)}-title">${esc(slide.studentTitle)}</h2>
+                <h2 id="${esc(slide.id)}-title" tabindex="-1">${esc(slide.studentTitle)}</h2>
                 <p class="pv2-thesis">${esc(slide.thesis)}</p>
                 <p class="pv2-prompt">${esc(slide.prompt)}</p>
               </div>
@@ -102,19 +253,19 @@ function renderCover(slide) {
             </div>`;
   }
   const pathStrip = visual ? '' : `<div class="pv2-path-strip" aria-label="Keuzepaden">
-            ${slide.paths.map((p, i) => `<div class="pv2-path pv2-path-${i + 1}"><span>${esc(p.label)}</span><strong>${esc(p.text)}</strong></div>`).join('')}
+            ${arr(slide.paths).map((p, i) => `<div class="pv2-path pv2-path-${i + 1}"><span>${esc(p.label)}</span><strong>${esc(p.text)}</strong></div>`).join('')}
           </div>`;
   return `<div class="pv2-cover-grid">
             <div class="pv2-cover-copy">
               <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
-              <h2 id="${esc(slide.id)}-title">${esc(slide.studentTitle)}</h2>
+              <h2 id="${esc(slide.id)}-title" tabindex="-1">${esc(slide.studentTitle)}</h2>
               <p class="pv2-thesis">${esc(slide.thesis)}</p>
               <p class="pv2-prompt">${esc(slide.prompt)}</p>
             </div>
             <div class="pv2-tension" aria-label="Budgetspanning">
-              ${renderTensionMetric(slide.tension.available)}
-              ${renderTensionMetric(slide.tension.wanted)}
-              ${renderTensionMetric(slide.tension.gap)}
+              ${renderTensionMetric(slide.tension?.available)}
+              ${renderTensionMetric(slide.tension?.wanted)}
+              ${renderTensionMetric(slide.tension?.gap)}
             </div>
           </div>
           ${visual}
@@ -122,20 +273,21 @@ function renderCover(slide) {
 }
 
 function renderTensionMetric(metric) {
+  if (!metric) return '';
   return `<div class="pv2-metric"><span>${esc(metric.label)}</span><strong>${esc(metric.value)}</strong></div>`;
 }
 
 function renderChoiceComparison(slide) {
   return `<div class="pv2-slide-head">
             <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
-            <h2 id="${esc(slide.id)}-title">${esc(slide.studentTitle)}</h2>
+            <h2 id="${esc(slide.id)}-title" tabindex="-1">${esc(slide.studentTitle)}</h2>
             <p>${esc(slide.lead)}</p>
           </div>
           <ul class="pv2-goals" aria-label="Leerdoelen">
-            ${slide.goals.map(goal => `<li>${esc(goal)}</li>`).join('')}
+            ${arr(slide.goals).map(goal => `<li>${esc(goal)}</li>`).join('')}
           </ul>
           <div class="pv2-choice-lanes" role="list" aria-label="Keuzeopties">
-            ${slide.options.map(opt => renderOption(opt)).join('')}
+            ${arr(slide.options).map(opt => renderOption(opt)).join('')}
           </div>
           <p class="pv2-conclusion">${esc(slide.conclusion)}</p>`;
 }
@@ -150,17 +302,13 @@ function renderOption(opt) {
 }
 
 function renderProcedureRoute(slide) {
-  const routeLabel = slide.routeLabel || `${slide.studentTitle || slide.teacherTitle || 'Procedure'} in ${slide.steps.length} stappen`;
+  const routeLabel = slide.routeLabel || `${slide.studentTitle || slide.teacherTitle || 'Procedure'} in ${arr(slide.steps).length} stappen`;
   const visual = renderVisual(slide.visual);
-  return `<div class="pv2-slide-head">
-            <p class="pv2-eyebrow">${esc(slide.eyebrow)}</p>
-            <h2 id="${esc(slide.id)}-title">${esc(slide.studentTitle)}</h2>
-            <p>${esc(slide.lead)}</p>
-          </div>
-          <div class="pv2-route-with-visual">
-            ${visual}
+  const visualBlock = visual ? `\n            ${visual}` : '';
+  return `${renderSlideHead(slide, { compact: true })}
+          <div class="pv2-route-with-visual${visual ? '' : ' pv2-route-without-visual'}">${visualBlock}
             <ol class="pv2-route" aria-label="${esc(routeLabel)}">
-              ${slide.steps.map(step => renderStep(step)).join('')}
+              ${arr(slide.steps).map(step => renderStep(step)).join('')}
             </ol>
           </div>
           <p class="pv2-example">${esc(slide.example)}</p>`;
@@ -178,36 +326,58 @@ function renderVisual(visual) {
   if (!visual) return '';
   if (visual.type === 'combo') {
     return `<div class="pv2-visual-combo" data-visual-id="${esc(visual.id)}">
-      ${(visual.items || []).map((item) => renderVisual(item)).join('')}
+      ${arr(visual.items).map((item) => renderVisual(item)).join('')}
     </div>`;
   }
   if (visual.type === 'table') {
     return `<figure class="pv2-visual-panel" data-visual-id="${esc(visual.id)}">
       <figcaption>${esc(visual.title)}</figcaption>
       <table class="pv2-data-table">
-        <thead><tr>${visual.headers.map((header) => `<th>${esc(header)}</th>`).join('')}</tr></thead>
+        <thead><tr>${arr(visual.headers).map((header) => `<th>${esc(header)}</th>`).join('')}</tr></thead>
         <tbody>
-          ${visual.rows.map((row) => `<tr>${row.map((cell) => `<td class="${cell.highlight ? 'is-highlighted' : ''}">${esc(cell.text ?? cell)}</td>`).join('')}</tr>`).join('')}
+          ${arr(visual.rows).map((row) => `<tr>${arr(row).map((cell) => `<td class="${cell.highlight ? 'is-highlighted' : ''}">${esc(cell.text ?? cell)}</td>`).join('')}</tr>`).join('')}
         </tbody>
       </table>
       ${visual.caption ? `<p>${esc(visual.caption)}</p>` : ''}
     </figure>`;
   }
   if (visual.type === 'pqGraph') {
-    const points = visual.points || [];
+    const points = arr(visual.points);
     const plotted = points.map((point) => `${point.x},${point.y}`).join(' ');
+    const plot = {
+      width: 420,
+      height: 250,
+      left: 58,
+      right: 374,
+      top: 34,
+      bottom: 206,
+      ...(visual.plot || {}),
+    };
+    const xAxis = visual.axes?.x || {};
+    const yAxis = visual.axes?.y || {};
+    const xTicks = arr(xAxis.ticks);
+    const yTicks = arr(yAxis.ticks);
+    const axisMarkup = `${yTicks.map(tick => `<line class="grid" x1="${esc(plot.left)}" y1="${esc(tick.y)}" x2="${esc(plot.right)}" y2="${esc(tick.y)}"></line><line class="tick" x1="${esc(plot.left - 5)}" y1="${esc(tick.y)}" x2="${esc(plot.left)}" y2="${esc(tick.y)}"></line><text class="tick-label tick-label-y" x="${esc(plot.left - 8)}" y="${esc(tick.y + 4)}" text-anchor="end">${esc(tick.label ?? tick.value)}</text>`).join('')}
+        ${xTicks.map(tick => `<line class="grid" x1="${esc(tick.x)}" y1="${esc(plot.top)}" x2="${esc(tick.x)}" y2="${esc(plot.bottom)}"></line><line class="tick" x1="${esc(tick.x)}" y1="${esc(plot.bottom)}" x2="${esc(tick.x)}" y2="${esc(plot.bottom + 5)}"></line><text class="tick-label tick-label-x" x="${esc(tick.x)}" y="${esc(plot.bottom + 20)}" text-anchor="middle">${esc(tick.label ?? tick.value)}</text>`).join('')}
+        <line class="axis" x1="${esc(plot.left)}" y1="${esc(plot.bottom)}" x2="${esc(plot.right)}" y2="${esc(plot.bottom)}"></line>
+        <line class="axis" x1="${esc(plot.left)}" y1="${esc(plot.bottom)}" x2="${esc(plot.left)}" y2="${esc(plot.top)}"></line>
+        <text class="axis-short-label" x="${esc(plot.right - 10)}" y="${esc(plot.bottom + 36)}">${esc(xAxis.shortLabel || 'Q')}</text>
+        <text class="axis-short-label" x="${esc(plot.left - 36)}" y="${esc(plot.top + 12)}">${esc(yAxis.shortLabel || 'P')}</text>
+        <text class="axis-title axis-title-x" x="${esc((plot.left + plot.right) / 2)}" y="${esc(plot.height - 6)}" text-anchor="middle">${esc(xAxis.label || 'Hoeveelheid (Q)')}</text>
+        <text class="axis-title axis-title-y" x="${esc(16)}" y="${esc((plot.top + plot.bottom) / 2)}" text-anchor="middle" transform="rotate(-90 16 ${(plot.top + plot.bottom) / 2})">${esc(yAxis.label || 'Prijs (P)')}</text>`;
+    const labelAnchor = points.find(point => point.quantity === 300 && Number(point.price) === 2) || points[Math.floor(points.length / 2)] || { x: plot.left, y: plot.top };
+    const lineLabelMarkup = visual.lineLabel
+      ? `<text class="line-label" x="${esc(labelAnchor.x + 28)}" y="${esc(labelAnchor.y + 18)}">${esc(visual.lineLabel)}</text>`
+      : '';
     const guideMarkup = visual.guides
-      ? `\n        <line class="guide" x1="${esc(visual.guides.x)}" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="206"></line><line class="guide" x1="58" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="${esc(visual.guides.y)}"></line><text x="${esc(visual.guides.x + 8)}" y="198">${esc(visual.guides.xLabel)}</text><text x="66" y="${esc(visual.guides.y - 8)}">${esc(visual.guides.yLabel)}</text>`
+      ? `\n        <line class="guide" x1="${esc(visual.guides.x)}" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="${esc(plot.bottom)}"></line><line class="guide" x1="${esc(plot.left)}" y1="${esc(visual.guides.y)}" x2="${esc(visual.guides.x)}" y2="${esc(visual.guides.y)}"></line><circle class="guide-point" cx="${esc(visual.guides.x)}" cy="${esc(visual.guides.y)}" r="4"></circle><text class="guide-label" x="${esc(visual.guides.x + 8)}" y="${esc(plot.bottom - 10)}">${esc(visual.guides.xLabel)}</text><text class="guide-label" x="${esc(plot.left + 8)}" y="${esc(visual.guides.y - 8)}">${esc(visual.guides.yLabel)}</text>`
       : '';
     return `<figure class="pv2-visual-panel" data-visual-id="${esc(visual.id)}">
       <figcaption>${esc(visual.title)}</figcaption>
-      <svg class="pv2-inline-graph" viewBox="0 0 420 250" role="img" aria-label="${esc(visual.alt || visual.title)}">
-        <line x1="58" y1="206" x2="374" y2="206"></line>
-        <line x1="58" y1="206" x2="58" y2="34"></line>
-        <text x="342" y="232">Q</text>
-        <text x="22" y="48">P</text>
-        <polyline points="${esc(plotted)}"></polyline>
-        ${points.map((point) => `<circle cx="${esc(point.x)}" cy="${esc(point.y)}" r="4"></circle><text x="${esc(point.x + 6)}" y="${esc(point.y - 6)}">${esc(point.label)}</text>`).join('')}${guideMarkup}
+      <svg class="pv2-inline-graph" viewBox="0 0 ${esc(plot.width)} ${esc(plot.height)}" role="img" aria-label="${esc(visual.alt || visual.title)}" data-x-axis-label="${esc(xAxis.label || '')}" data-y-axis-label="${esc(yAxis.label || '')}">
+        ${axisMarkup}
+        <polyline class="curve" data-line-label="${esc(visual.lineLabel || '')}" points="${esc(plotted)}"></polyline>
+        ${points.map((point) => `<circle class="point" cx="${esc(point.x)}" cy="${esc(point.y)}" r="4" data-q="${esc(point.quantity ?? '')}" data-p="${esc(point.price ?? '')}"></circle><text class="point-label" x="${esc(point.x + 6)}" y="${esc(point.y - 6)}">${esc(point.label)}</text>`).join('')}${lineLabelMarkup}${guideMarkup}
       </svg>
       ${visual.caption ? `<p>${esc(visual.caption)}</p>` : ''}
     </figure>`;
@@ -216,7 +386,7 @@ function renderVisual(visual) {
     return `<figure class="pv2-visual-panel" data-visual-id="${esc(visual.id)}">
       <figcaption>${esc(visual.title)}</figcaption>
       <div class="pv2-axis-compare">
-        ${visual.panels.map((panel) => `<section><strong>${esc(panel.title)}</strong>${panel.values.map((value) => `<div class="pv2-mini-bar"><span>${esc(value.label)}</span><i style="height:${esc(value.height)}%"></i><b>${esc(value.value)}</b></div>`).join('')}</section>`).join('')}
+        ${arr(visual.panels).map((panel) => `<section><strong>${esc(panel.title)}</strong>${arr(panel.values).map((value) => `<div class="pv2-mini-bar"><span>${esc(value.label)}</span><i style="height:${esc(value.height)}%"></i><b>${esc(value.value)}</b></div>`).join('')}</section>`).join('')}
       </div>
       ${visual.caption ? `<p>${esc(visual.caption)}</p>` : ''}
     </figure>`;
@@ -224,21 +394,37 @@ function renderVisual(visual) {
   return '';
 }
 
-function renderNotes(notes) {
-  const paragraphs = Array.isArray(notes?.script)
-    ? notes.script
-    : [notes?.script || ''];
-  const body = paragraphs
-    .filter(Boolean)
-    .map((paragraph) => `<p>${esc(paragraph)}</p>`)
-    .join('');
-  return `<details class="pv2-notes"><summary>Speaker notes</summary><div class="pv2-speaker-script">${body}</div></details>`;
+function renderNotes(notes, deck = {}) {
+  const label = notes?.label || deck.notesLabel || 'Studentgerichte uitleg';
+  const sections = [];
+  const student = arr(notes?.studentExplanation).length ? arr(notes.studentExplanation) : (arr(notes?.student).length ? arr(notes.student) : arr(notes?.script));
+  const misconception = arr(notes?.misconceptionWatch).length ? arr(notes.misconceptionWatch) : arr(notes?.misconception);
+  if (student.length) sections.push(renderNoteSection('Studentuitleg', student));
+  if (misconception.length) sections.push(renderNoteList('Let op', misconception));
+  if (notes?.transition) sections.push(renderNoteSection('Overgang', [notes.transition]));
+  const body = sections.join('') || '<section><p>Geen aanvullende uitleg.</p></section>';
+  return `<details class="pv2-notes"><summary>${esc(label)}</summary><div class="pv2-speaker-script">${body}</div></details>`;
+}
+
+function renderNoteSection(title, paragraphs) {
+  return `<section><h3>${esc(title)}</h3>${arr(paragraphs).map(paragraph => `<p>${esc(paragraph)}</p>`).join('')}</section>`;
+}
+
+function renderNoteList(title, items) {
+  return `<section><h3>${esc(title)}</h3><ul>${arr(items).map(item => `<li>${esc(item)}</li>`).join('')}</ul></section>`;
 }
 
 function getSpeakerText(notes) {
   if (!notes) return '';
-  if (Array.isArray(notes.script)) return notes.script.join('\n\n');
-  return notes.script || '';
+  const parts = [
+    ...arr(notes.studentExplanation),
+    ...arr(notes.student),
+    ...arr(notes.script),
+    ...arr(notes.misconceptionWatch),
+    ...arr(notes.misconception),
+    notes.transition,
+  ].filter(Boolean);
+  return parts.join('\n\n');
 }
 
 function writeDeckHtml(deck, outPath, opts = {}) {

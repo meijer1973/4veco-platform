@@ -1,0 +1,576 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-OPERATION-REGISTRY-GOVERNANCE-AND-HOLDOUT-ADJUDICATION-BUNDLE-1",
+  "matrix_id": "mtu-h7-official-evidence-matrix-1",
+  "review_standard": "REV-STD-1",
+  "status": "official_evidence_located_for_human_review",
+  "generated_at": "2026-06-28T07:14:59.586Z",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "operation_evidence": [
+    {
+      "blocker_id": "H7-BLOCKER-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "question_word": "toon_met_een_berekening_aan",
+      "answer_model_summary": "Ratio falls from 4.1 to about 3.9, so income differences narrow.",
+      "source_locator": {
+        "exam": "ha-1022-a-23-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 7,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "34f60793a0ae25efa33e3ddc4bb9f7b4b243fa6cd36ce2ec9277e272e57d365a"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "15651a69123775d21c679a4edf84b1afc0a0edebbebe7edfc3dd4b8817436b4c"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_DENIVELLERING_LABEL_REVERSED"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "H08",
+        "A38",
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "question_word": "bereken",
+      "answer_model_summary": "Snel keeps the budget amount less the agreed transfer.",
+      "source_locator": {
+        "exam": "ha-1022-a-24-1-o",
+        "opgave_num": 2,
+        "question_num": 12,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+          "rendered_png_sha256": "819492e8638d7e8e7b9dc68813a9e01192d8d35bf91a61d99492a84ea4cacf31"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png",
+          "rendered_png_sha256": "072370c8b6c86a8f76f50d3440dab0921713adcef38926a17ca463d43b667643"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_NASH_USED_FOR_DIRECT_PAYOFF"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "F12"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "split": "diagnostic",
+      "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+      "question_word": "bereken",
+      "answer_model_summary": "Sprinter keeps the accepted price less marginal cost.",
+      "source_locator": {
+        "exam": "ha-1022-a-24-1-o",
+        "opgave_num": 2,
+        "question_num": 12,
+        "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+        "prompt_page_start": 5,
+        "prompt_page_end": 5,
+        "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+          "rendered_png_sha256": "819492e8638d7e8e7b9dc68813a9e01192d8d35bf91a61d99492a84ea4cacf31"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png",
+          "rendered_png_sha256": "072370c8b6c86a8f76f50d3440dab0921713adcef38926a17ca463d43b667643"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_RESPONDER_PAYOFF_WITHOUT_COST"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "F12"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-OP-GAME-TREE-NASH",
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "split": "diagnostic",
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "question_word": "leg_uit_dat",
+      "answer_model_summary": "The official model compares payoffs in a game tree, not a simple matrix.",
+      "source_locator": {
+        "exam": "vw-1022-a-23-2-o",
+        "opgave_num": 4,
+        "question_num": 20,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+        "prompt_page_start": 9,
+        "prompt_page_end": 10,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-09-09.png",
+          "rendered_png_sha256": "bf769fc0f821173b260172f6308cbe963432cdf25504e5da2bf5a6343c0d111e"
+        },
+        {
+          "page_number": 10,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-10-10.png",
+          "rendered_png_sha256": "c739b184b21efd344e82083ab29766c42888f32623cb2227ed04ec8148c7dec5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-correction-11-11.png",
+          "rendered_png_sha256": "f0b01082dbde37edfc31020abaf7fa5561c86dd4675551366dde748fe2a26d24"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q20_MATRIX_SHORTCUT_MISREADS_GAME_TREE"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A97"
+      ],
+      "expected_procedure_unit_ids": [
+        "F12",
+        "A81",
+        "A97"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15",
+        "F04"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-PROCEDURE-INSURANCE-COST-BENEFIT",
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "question_word": "bereken",
+      "answer_model_summary": "Insurance cost is subtracted from the avoided loss to determine the net benefit.",
+      "source_locator": {
+        "exam": "vw-1022-a-24-1-o",
+        "opgave_num": 3,
+        "question_num": 17,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+        "correction_page_start": 11,
+        "correction_page_end": 11,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-07-07.png",
+          "rendered_png_sha256": "28aebd8aff85cf7ed477aee445e05f29d421fae3d9900c8160b1b4ef89e9b7bf"
+        },
+        {
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-08-08.png",
+          "rendered_png_sha256": "3d006a5bc381c5d9bbe8d628d65283ca84a2176d055764ae3189c73b267307f1"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-correction-11-11.png",
+          "rendered_png_sha256": "57d593d7b91bb589b254c88fea484d12d83c34febd1c96a018f7bee22caacf91"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q17_PREMIUM_MONTH_FACTOR_OMITTED"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A96"
+      ],
+      "expected_procedure_unit_ids": [
+        "A38",
+        "G12",
+        "A81",
+        "A96"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-FIRST",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "question_word": "teken",
+      "answer_model_summary": "GA1 and MB1 shift according to expected-minus-realized inflation and a one-point real-rate reduction.",
+      "source_locator": {
+        "exam": "vw-1022-a-24-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "f577e33564069eeab0e7691d65ac25dbbb0a20e5eac5d8865a5b36fea36fb574"
+        },
+        {
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+          "rendered_png_sha256": "dabb49c1a6618281b863cb7a1e33fefddb343f6562a71dac0ec05876806cf7a5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "8538534d4d278741927acbcad2de4c38de35407337d734ed3ae54bec6f23f5e2"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_MACRO_CURVE_SEQUENCE_OR_SCALE"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A45"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-SECOND",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "split": "diagnostic",
+      "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+      "question_word": "teken",
+      "answer_model_summary": "GA2/MB2 plus final r and inflation values complete the official graph/table answer.",
+      "source_locator": {
+        "exam": "vw-1022-a-24-2-o",
+        "opgave_num": 3,
+        "question_num": 15,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+        "prompt_page_start": 7,
+        "prompt_page_end": 8,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+        "correction_page_start": 9,
+        "correction_page_end": 9,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "f577e33564069eeab0e7691d65ac25dbbb0a20e5eac5d8865a5b36fea36fb574"
+        },
+        {
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+          "rendered_png_sha256": "dabb49c1a6618281b863cb7a1e33fefddb343f6562a71dac0ec05876806cf7a5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "8538534d4d278741927acbcad2de4c38de35407337d734ed3ae54bec6f23f5e2"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_FINAL_R_PI_OMITTED"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "I07",
+        "A42",
+        "A40",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A45"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-ANSWER-FORM-GO-LINE-SUBSIDY",
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw25-2-q4-go-line-with-consumer-subsidy",
+      "question_word": "teken",
+      "answer_model_summary": "The GO line shifts to reflect the subsidy-inclusive willingness to pay.",
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-prompt-03-03.png",
+          "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-correction-07-07.png",
+          "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_SHIFT_ONLY_ONE_REVENUE_LINE"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A89",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-ANSWER-FORM-MO-LINE-SUBSIDY",
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-4",
+      "split": "diagnostic",
+      "operation_id": "h7-vw25-2-q4-mo-line-with-consumer-subsidy",
+      "question_word": "teken",
+      "answer_model_summary": "The MO line must be shifted consistently with the GO change.",
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 4,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-4"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-prompt-03-03.png",
+          "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q04-correction-07-07.png",
+          "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q4_MO_NOT_SHIFTED_WITH_GO"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "A27",
+        "A42",
+        "A40",
+        "A90",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15"
+      ]
+    },
+    {
+      "blocker_id": "H7-BLOCKER-GRAPH-Q5-TOTAL-SUBSIDY-SHADING",
+      "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+      "split": "locked_holdout",
+      "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+      "question_word": "arceer",
+      "answer_model_summary": "The official answer is graph-only and allows two correct shadings, so source/graph review remains required.",
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "opgave_num": 1,
+        "question_num": 5,
+        "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "prompt_page_start": 3,
+        "prompt_page_end": 3,
+        "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "correction_page_start": 7,
+        "correction_page_end": 7,
+        "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+      },
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-5"
+      ],
+      "rendered_prompt_pages": [
+        {
+          "page_number": 3,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-prompt-03-03.png",
+          "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-correction-07-07.png",
+          "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+        }
+      ],
+      "expected_misconception_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q5_TOTAL_SUBSIDY_AREA_NOT_DWL"
+      ],
+      "expected_answer_form_mtu_ids": [
+        "A40"
+      ],
+      "expected_procedure_unit_ids": [
+        "A27",
+        "A40",
+        "A58",
+        "A81"
+      ],
+      "expected_forbidden_mtu_ids": [
+        "A15",
+        "A45"
+      ]
+    }
+  ]
+}

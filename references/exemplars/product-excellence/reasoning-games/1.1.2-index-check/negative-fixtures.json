@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "paragraph_id": "1.1.2",
+  "fixtures": [
+    {
+      "id": "visible_internal_tags",
+      "must_fail": true,
+      "reason": "Cards expose answer, role, or internal ID metadata."
+    },
+    {
+      "id": "answer_giving_goal",
+      "must_fail": true,
+      "reason": "Goal text reveals that the correct answer is 6 index points and 5 percent."
+    },
+    {
+      "id": "answer_giving_option_explanations",
+      "must_fail": true,
+      "reason": "Selectable cards explain before the attempt which options are misconceptions or correct."
+    },
+    {
+      "id": "subtract_equals_percent",
+      "must_fail": true,
+      "reason": "The game accepts 126 - 120 = 6 percent."
+    },
+    {
+      "id": "divide_by_new_index",
+      "must_fail": true,
+      "reason": "The percentage calculation divides by 126 instead of the old index 120."
+    },
+    {
+      "id": "divide_by_base_year_100",
+      "must_fail": true,
+      "reason": "The game uses index 100 as denominator for the 2025 to 2026 comparison."
+    },
+    {
+      "id": "correct_only_calculation_bank",
+      "must_fail": true,
+      "reason": "All calculation choices are correct, so the student cannot discriminate."
+    },
+    {
+      "id": "two_click_assignment",
+      "must_fail": true,
+      "reason": "A card must first be selected and then assigned to a separate target for a simple choice."
+    },
+    {
+      "id": "clear_all_only",
+      "must_fail": true,
+      "reason": "One mistaken selection forces the student to clear the entire task."
+    },
+    {
+      "id": "reshuffle_after_click",
+      "must_fail": true,
+      "reason": "Card positions change after each selection and create motor-memory confusion."
+    },
+    {
+      "id": "locked_later_tasks",
+      "must_fail": true,
+      "reason": "Normal exploration is blocked by unnecessary task locks."
+    },
+    {
+      "id": "generic_textarea_only",
+      "must_fail": true,
+      "reason": "The conceptual distinction is hidden inside one generic textarea."
+    },
+    {
+      "id": "formula_copy_without_meaning",
+      "must_fail": true,
+      "reason": "The task only asks students to reproduce a formula and never distinguish index points from percent."
+    },
+    {
+      "id": "feedback_before_attempt",
+      "must_fail": true,
+      "reason": "The correct conceptual rule is shown before the student checks an answer."
+    },
+    {
+      "id": "points_percent_language_conflated",
+      "must_fail": true,
+      "reason": "Student-facing copy uses index points and percent interchangeably."
+    }
+  ]
+}

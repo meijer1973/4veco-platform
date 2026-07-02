@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H6",
+  "report_id": "mtu-h6-cross-exam-generalization-report",
+  "fixture_id": "MTU-H6-cross-exam-generalization-vwo-havo-2023-2024-review-candidate",
+  "sample_id": "MTU-H6-fresh-cross-exam-vwo-havo-2023-2024-sample-001",
+  "status": "passed",
+  "generated_by": "build-scripts/references/check-mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.js",
+  "generated_on": "2026-06-23T00:00:00.000Z",
+  "source_files": [
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-fixture.json",
+    "reports/mtu-hardening/mtu-h6-cross-exam-generalization-and-evidence-integrity-bundle-1.json",
+    "references/machine/micro-teaching-units.json",
+    "references/external/exam-questions.json"
+  ],
+  "summary_counts": {
+    "total_records": 7,
+    "passed_records": 7,
+    "review_required_records": 0,
+    "failed_records": 0,
+    "negative_regression_fixtures": 7,
+    "negative_regression_fixtures_failed_as_expected": 7,
+    "rendered_official_evidence_records": 13,
+    "atomic_operations": 25
+  },
+  "record_outcomes": [
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-3",
+      "actual_status": "passed",
+      "classification": "generalized_pass_atomic",
+      "summary": "Atomic decomposition preserves market-A reduction, market-B equilibrium, extra-emissions, and net-reduction checks; A88 and A96 remain required and A15 remains forbidden.",
+      "atomic_operation_count": 4
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-4",
+      "actual_status": "passed",
+      "classification": "generalized_pass_after_bounded_answer_form_decision",
+      "summary": "Human review approved A40 as bounded arceer answer-form/procedure evidence for welfare-region shading; q4 is split into tax-revenue and efficiency-loss shading operations.",
+      "atomic_operation_count": 2
+    },
+    {
+      "record_id": "vw-1022-a-24-1-o:opgave-1:question-6",
+      "actual_status": "passed",
+      "classification": "generalized_pass_atomic",
+      "summary": "Cross-elasticity classification and the demand/production/emission direction are separately asserted; A15 own-price elasticity remains forbidden.",
+      "atomic_operation_count": 3
+    },
+    {
+      "record_id": "ha-1022-a-23-2-o:opgave-2:question-10",
+      "actual_status": "passed",
+      "classification": "generalized_pass_atomic",
+      "summary": "Old/new tax equilibrium and airline burden are independently checked; D05/D07 remain explicit incidence/pass-through support.",
+      "atomic_operation_count": 3
+    },
+    {
+      "record_id": "ha-1022-a-23-1-o:opgave-5:question-22",
+      "actual_status": "passed",
+      "classification": "generalized_pass_atomic",
+      "summary": "Dominant-strategy reasoning and prisoner-dilemma/suboptimal-outcome conclusion are separate operations.",
+      "atomic_operation_count": 4
+    },
+    {
+      "record_id": "vw-1022-a-23-2-o:opgave-5:question-23",
+      "actual_status": "passed",
+      "classification": "generalized_pass_after_reviewed_equivalent",
+      "summary": "Human review approved a q23-specific macro multi-curve drawing reviewed equivalent combining I07/I08/A42/A81, graph-drawing precedent, and official q23 evidence.",
+      "atomic_operation_count": 4
+    },
+    {
+      "record_id": "vw-1022-a-24-2-o:opgave-4:question-18",
+      "actual_status": "passed",
+      "classification": "generalized_pass_atomic",
+      "summary": "The Armington/profit-max route is decomposed into levy-adjusted MK, revenue/MO, MO=MK quantity, and final domestic price; stale A15/H03/A20 remain forbidden.",
+      "atomic_operation_count": 5
+    }
+  ],
+  "review_required_items": [],
+  "negative_regression_results": [
+    {
+      "fixture_id": "h6-negative-q3-scale-factor-unmapped",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "missing_mtu_for_correction_model_operation",
+      "expected_failure_operation_id": "h6-vw24-1-q3-net-co2-reduction-answer",
+      "expected_failure_unit_id": "A88",
+      "expected_failure_route_tag": null
+    },
+    {
+      "fixture_id": "h6-negative-q4-full-graph-construction-overtrigger",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+      "expected_failure_operation_id": "h6-vw24-1-q4-tax-revenue-area-market-a",
+      "expected_failure_unit_id": "A45",
+      "expected_failure_route_tag": null
+    },
+    {
+      "fixture_id": "h6-negative-q6-point-elasticity-overtrigger",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+      "expected_failure_operation_id": "h6-vw24-1-q6-cross-elasticity-sign",
+      "expected_failure_unit_id": "A15",
+      "expected_failure_route_tag": null
+    },
+    {
+      "fixture_id": "h6-negative-q10-incidence-unmapped",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "missing_mtu_for_correction_model_operation",
+      "expected_failure_operation_id": "h6-ha23-2-q10-airline-tax-share-answer",
+      "expected_failure_unit_id": "D07",
+      "expected_failure_route_tag": null
+    },
+    {
+      "fixture_id": "h6-negative-q22-dominant-without-pd-outcome",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "missing_mtu_for_correction_model_operation",
+      "expected_failure_operation_id": "h6-ha23-1-q22-nash-suboptimal-outcome",
+      "expected_failure_unit_id": "F12",
+      "expected_failure_route_tag": null
+    },
+    {
+      "fixture_id": "h6-negative-q23-macro-function-construction-overtrigger",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+      "expected_failure_operation_id": "h6-vw23-2-q23-ga-shift",
+      "expected_failure_unit_id": "A45",
+      "expected_failure_route_tag": null
+    },
+    {
+      "fixture_id": "h6-negative-q18-armington-elasticity-derived-mk-overtrigger",
+      "status": "failed_as_expected",
+      "expected_failure_defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+      "expected_failure_operation_id": "h6-vw24-2-q18-levy-adjusted-given-mk",
+      "expected_failure_unit_id": "A15",
+      "expected_failure_route_tag": null
+    }
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  }
+}

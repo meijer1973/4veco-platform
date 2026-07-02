@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 // Emit reports/review-gates/<gate-id>/bundle-urls.md listing every artifact in
 // the gate directory as a full raw-GitHub URL. Lets external review agents
-// (notably claude.ai web_fetch, which can only fetch URLs that have already
-// appeared as literal strings in its context) reach gate artifacts after a
-// single fetch of the bundle-urls.md file.
+// whose fetch tools require literal URLs in context reach gate artifacts after
+// a single fetch of the bundle-urls.md file.
 
 const fs = require('fs');
 const path = require('path');
@@ -141,7 +140,7 @@ function emit(gateId, branch) {
   const sortedReferences = Array.from(referenceSet).sort();
 
   const lines = [];
-  lines.push(`# ${gateId} — Artifact URLs`);
+  lines.push(`# ${gateId} - Artifact URLs`);
   lines.push('');
   lines.push(
     "This file lists every artifact in this gate's bundle as a full raw-GitHub URL " +

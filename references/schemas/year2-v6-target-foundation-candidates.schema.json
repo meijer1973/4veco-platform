@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/year2-v6-target-foundation-candidates.schema.json",
+  "title": "Year2V6TargetFoundationCandidates",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "schema_surface",
+    "storage_surface",
+    "authority_boundary",
+    "implementation_sprint",
+    "approved_source_packet",
+    "active_v5_registry_preserved",
+    "records"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "schema_surface": { "type": "string", "const": "year2_v6_target_family_candidate_surface_v1" },
+    "storage_surface": {
+      "type": "string",
+      "const": "references/authored/year2-v6-target-foundation-candidates.json"
+    },
+    "authority_boundary": {
+      "type": "string",
+      "const": "candidate_surface_only_no_active_v5_registry_mutation_no_mtu_no_lesson_no_product_use"
+    },
+    "implementation_sprint": {
+      "type": "string",
+      "const": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1"
+    },
+    "approved_source_packet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["packet_id", "governed_mutation_plan", "source_record_policy"],
+      "properties": {
+        "packet_id": {
+          "type": "string",
+          "const": "Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1"
+        },
+        "governed_mutation_plan": {
+          "type": "string",
+          "const": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-governed-mutation-plan.md"
+        },
+        "source_record_policy": {
+          "type": "string",
+          "const": "records_reproduced_from_approved_package_json_blocks_without_substantive_change"
+        }
+      }
+    },
+    "active_v5_registry_preserved": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "blueprint_version", "books"],
+      "properties": {
+        "path": { "type": "string", "const": "references/authored/course-target-exercises.json" },
+        "blueprint_version": { "type": "string", "const": "v5" },
+        "books": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "minItems": 4,
+          "maxItems": 4
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": { "$ref": "#/$defs/candidateRecord" }
+    }
+  },
+  "$defs": {
+    "candidateRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_surface",
+        "proposed_storage_surface",
+        "id",
+        "book",
+        "module",
+        "chapter",
+        "paragraph",
+        "target_owner_candidate_id",
+        "prerequisite_candidate_ids",
+        "integrates_candidate_ids",
+        "bounded_retrieval_marker_ids",
+        "record_status",
+        "official_evidence",
+        "source_reference",
+        "lesson_goal",
+        "target_exercise",
+        "answer_form",
+        "source_reconstruction_required",
+        "op_rows",
+        "operation_mapping",
+        "prior_skills",
+        "required_task_families",
+        "review_evidence",
+        "blockers",
+        "no_new_theory",
+        "authority_boundary"
+      ],
+      "properties": {
+        "schema_surface": { "type": "string", "const": "year2_v6_target_family_candidate_surface_v1" },
+        "proposed_storage_surface": {
+          "type": "string",
+          "const": "references/authored/year2-v6-target-foundation-candidates.json"
+        },
+        "id": { "type": "string" },
+        "book": { "type": "integer" },
+        "module": { "type": "integer", "const": 2 },
+        "chapter": { "type": "integer" },
+        "paragraph": { "type": "integer" },
+        "target_owner_candidate_id": { "type": "string" },
+        "prerequisite_candidate_ids": { "type": "array", "items": { "type": "string" } },
+        "integrates_candidate_ids": { "type": "array", "items": { "type": "string" } },
+        "bounded_retrieval_marker_ids": { "type": "array", "items": { "type": "string" } },
+        "record_status": {
+          "type": "string",
+          "const": "candidate_for_governed_year2_v6_target_foundation"
+        },
+        "official_evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "source_reference": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["prompt_pdf", "correction_model_pdf"],
+          "properties": {
+            "prompt_pdf": { "type": "string" },
+            "correction_model_pdf": { "type": "string" }
+          }
+        },
+        "lesson_goal": { "type": "string" },
+        "target_exercise": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["context", "subquestions"],
+          "properties": {
+            "context": { "type": "string" },
+            "subquestions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["label", "prompt"],
+                "properties": {
+                  "label": { "type": "string" },
+                  "prompt": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "answer_form": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["point_allocation", "short_answer_model"],
+          "properties": {
+            "point_allocation": { "type": "array", "items": { "type": "string" } },
+            "short_answer_model": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "source_reconstruction_required": { "type": "boolean", "const": true },
+        "op_rows": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "operation_mapping": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["subquestion", "op_rows"],
+            "properties": {
+              "subquestion": { "type": "string" },
+              "op_rows": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "prior_skills": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "required_task_families": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "review_evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["blocker", "blocks", "does_not_block", "proof_required_to_close"],
+            "properties": {
+              "blocker": { "type": "string" },
+              "blocks": { "type": "string" },
+              "does_not_block": { "type": "string" },
+              "proof_required_to_close": { "type": "string" }
+            }
+          },
+          "minItems": 1
+        },
+        "no_new_theory": { "type": "boolean", "const": true },
+        "authority_boundary": {
+          "type": "string",
+          "const": "proposal_only_no_registry_write_no_mtu_no_lesson_no_product_use"
+        }
+      }
+    }
+  }
+}

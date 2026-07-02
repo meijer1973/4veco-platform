@@ -22,7 +22,7 @@
   --letop-ink: #8a2d0e;
   --heading-font: 'Fraunces', 'Georgia', serif;
   --heading-weight: 500;
-  --heading-letter: -0.4px;
+  --heading-letter: 0;
   --heading-style: italic;
   --mono: 'JetBrains Mono', 'DM Mono', monospace;
   --pv2-paper: var(--bg);
@@ -77,7 +77,7 @@ html[data-theme="dark"] {
   --letop-ink: #f87171;
   --heading-font: 'Space Grotesk', 'DM Sans', sans-serif;
   --heading-weight: 600;
-  --heading-letter: -0.6px;
+  --heading-letter: 0;
   --heading-style: normal;
   --pv2-shadow: 0 30px 90px rgba(0, 0, 0, 0.44);
   --pv2-primary-bg: var(--economisch);
@@ -108,7 +108,7 @@ html[data-theme="dark"] {
     --letop-ink: #f87171;
     --heading-font: 'Space Grotesk', 'DM Sans', sans-serif;
     --heading-weight: 600;
-    --heading-letter: -0.6px;
+    --heading-letter: 0;
     --heading-style: normal;
     --pv2-shadow: 0 30px 90px rgba(0, 0, 0, 0.44);
     --pv2-primary-bg: var(--economisch);
@@ -134,7 +134,7 @@ body[data-layout="presentation-v2"] {
   color: var(--pv2-ink);
   background: var(--pv2-paper);
   font-feature-settings: "ss01", "cv11";
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
   position: relative;
 }
 
@@ -796,6 +796,21 @@ html[data-theme="dark"] .pv2-option p {
   stroke-width: 2;
 }
 
+.pv2-inline-graph .axis {
+  stroke: var(--pv2-indigo);
+  stroke-width: 2.2;
+}
+
+.pv2-inline-graph .grid {
+  stroke: color-mix(in oklab, var(--pv2-muted) 22%, transparent);
+  stroke-width: 1;
+}
+
+.pv2-inline-graph .tick {
+  stroke: var(--pv2-indigo);
+  stroke-width: 1.4;
+}
+
 .pv2-inline-graph .guide {
   stroke: var(--pv2-coral);
   stroke-dasharray: 5 5;
@@ -818,6 +833,37 @@ html[data-theme="dark"] .pv2-option p {
 .pv2-inline-graph text {
   fill: var(--pv2-muted);
   font: 700 13px 'Inter', sans-serif;
+}
+
+.pv2-inline-graph .tick-label {
+  font-size: 10px;
+  fill: var(--pv2-muted);
+}
+
+.pv2-inline-graph .axis-title,
+.pv2-inline-graph .axis-short-label {
+  fill: var(--pv2-indigo);
+  font-weight: 900;
+}
+
+.pv2-inline-graph .axis-title {
+  font-size: 11px;
+}
+
+.pv2-inline-graph .line-label {
+  fill: var(--pv2-green);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.pv2-inline-graph .point-label,
+.pv2-inline-graph .guide-label {
+  fill: var(--pv2-indigo);
+  font-size: 11px;
+}
+
+.pv2-inline-graph .guide-point {
+  fill: var(--pv2-coral);
 }
 
 .pv2-axis-compare {
@@ -863,9 +909,396 @@ html[data-theme="dark"] .pv2-option p {
 }
 
 .pv2-slide-choiceComparison .pv2-slide-canvas,
-.pv2-slide-procedureRoute .pv2-slide-canvas {
+.pv2-slide-procedureRoute .pv2-slide-canvas,
+.pv2-slide-routeContract .pv2-slide-canvas,
+.pv2-slide-narrativeAnchor .pv2-slide-canvas,
+.pv2-slide-conceptModel .pv2-slide-canvas,
+.pv2-slide-transferCards .pv2-slide-canvas,
+.pv2-slide-misconceptionCards .pv2-slide-canvas,
+.pv2-slide-workedCalculation .pv2-slide-canvas,
+.pv2-slide-workedInterpretation .pv2-slide-canvas,
+.pv2-slide-retrievalCheck .pv2-slide-canvas,
+.pv2-slide-summaryBridge .pv2-slide-canvas {
   display: flex;
   flex-direction: column;
+}
+
+.pv2-slide-head-compact h2,
+.pv2-slide-routeContract .pv2-slide-head h2,
+.pv2-slide-conceptModel .pv2-slide-head h2 {
+  max-width: 24ch;
+  font-size: clamp(1.55rem, 4.35cqw, 2.58rem);
+  line-height: 1.04;
+}
+
+.pv2-assertion,
+.pv2-slide-action {
+  max-width: 48rem;
+  margin: 0.5rem 0 0;
+  color: var(--pv2-muted);
+  font-size: clamp(0.84rem, 1.7cqw, 1rem);
+  line-height: 1.35;
+}
+
+.pv2-slide-action {
+  color: var(--pv2-indigo);
+  font-weight: 850;
+}
+
+.pv2-route-contract,
+.pv2-transfer-grid,
+.pv2-misconception-grid,
+.pv2-check-grid,
+.pv2-interpretation-grid {
+  display: grid;
+  gap: clamp(0.55rem, 1.5cqw, 0.9rem);
+  min-width: 0;
+}
+
+.pv2-route-contract {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: clamp(0.65rem, 1.7cqw, 1rem);
+}
+
+.pv2-success-criteria {
+  margin-top: clamp(0.58rem, 1.45cqw, 0.82rem);
+  padding: clamp(0.58rem, 1.45cqw, 0.82rem);
+  border: 1px solid var(--pv2-border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--pv2-green) 10%, var(--pv2-slide-bg));
+}
+
+.pv2-success-criteria h3 {
+  margin: 0;
+  color: var(--pv2-indigo);
+  font-size: clamp(0.82rem, 1.65cqw, 1rem);
+  line-height: 1.18;
+}
+
+.pv2-success-criteria ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin: 0.45rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pv2-success-criteria li {
+  min-width: 0;
+  color: var(--pv2-muted);
+  font-size: clamp(0.68rem, 1.32cqw, 0.78rem);
+  font-weight: 760;
+  line-height: 1.28;
+}
+
+.pv2-route-card,
+.pv2-transfer-card,
+.pv2-misconception-card,
+.pv2-formula-card,
+.pv2-interpretation-card,
+.pv2-check-card {
+  min-width: 0;
+  border: 1px solid var(--pv2-border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--pv2-paper-2) 76%, var(--pv2-slide-bg));
+}
+
+.pv2-route-card {
+  padding: clamp(0.75rem, 1.8cqw, 1rem);
+}
+
+.pv2-route-card span,
+.pv2-misconception-card span,
+.pv2-formula-card span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 999px;
+  background: var(--pv2-indigo);
+  color: var(--pv2-primary-fg);
+  font-family: var(--mono);
+  font-weight: 900;
+}
+
+.pv2-route-card h3,
+.pv2-transfer-card h3,
+.pv2-misconception-card h3,
+.pv2-interpretation-card h3 {
+  margin: 0.62rem 0 0;
+  color: var(--pv2-indigo);
+  font-size: clamp(1rem, 2.2cqw, 1.25rem);
+  line-height: 1.12;
+}
+
+.pv2-route-card p,
+.pv2-transfer-card dd,
+.pv2-misconception-card p,
+.pv2-interpretation-card p {
+  margin: 0.42rem 0 0;
+  color: var(--pv2-muted);
+  font-size: clamp(0.74rem, 1.48cqw, 0.9rem);
+  line-height: 1.35;
+}
+
+.pv2-narrative-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr);
+  gap: clamp(0.8rem, 2.2cqw, 1.25rem);
+  align-items: stretch;
+  margin-top: clamp(0.7rem, 1.8cqw, 1rem);
+}
+
+.pv2-tension-inline {
+  padding: clamp(0.7rem, 1.8cqw, 1rem);
+  border: 1px solid var(--pv2-border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--pv2-amber) 10%, var(--pv2-slide-bg));
+}
+
+.pv2-tension-inline .pv2-metric strong {
+  font-size: clamp(1.5rem, 4.3cqw, 2.35rem);
+}
+
+.pv2-relation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: clamp(0.7rem, 1.8cqw, 1rem);
+  align-items: center;
+  margin: auto 0;
+}
+
+.pv2-relation-node,
+.pv2-relation-result {
+  min-width: 0;
+  padding: clamp(0.85rem, 2.3cqw, 1.25rem);
+  border: 1px solid var(--pv2-border);
+  border-radius: 12px;
+  background: var(--pv2-paper-2);
+}
+
+.pv2-relation-node span,
+.pv2-relation-result span {
+  display: block;
+  color: var(--pv2-muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pv2-relation-node strong,
+.pv2-relation-result strong {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--pv2-indigo);
+  font-size: clamp(1.5rem, 4.6cqw, 2.45rem);
+  line-height: 1;
+}
+
+.pv2-relation-operator {
+  color: var(--pv2-coral);
+  font-size: clamp(2rem, 5.6cqw, 3.1rem);
+}
+
+.pv2-relation-result {
+  grid-column: 1 / -1;
+  background: color-mix(in oklab, var(--pv2-green) 12%, var(--pv2-slide-bg));
+}
+
+.pv2-relation-result em {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--pv2-coral);
+  font-weight: 850;
+  font-style: normal;
+}
+
+.pv2-transfer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: auto;
+}
+
+.pv2-transfer-card {
+  padding: clamp(0.64rem, 1.55cqw, 0.9rem);
+}
+
+.pv2-transfer-card h3 {
+  margin-top: 0;
+}
+
+.pv2-transfer-card dl {
+  display: grid;
+  gap: 0.34rem;
+  margin: 0.55rem 0 0;
+}
+
+.pv2-transfer-card div {
+  min-width: 0;
+}
+
+.pv2-transfer-card dt {
+  color: var(--pv2-coral);
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.pv2-transfer-card dd {
+  margin-left: 0;
+}
+
+.pv2-misconception-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: auto;
+}
+
+.pv2-misconception-card {
+  padding: clamp(0.85rem, 2cqw, 1.15rem);
+  border-top: 5px solid var(--pv2-coral);
+}
+
+.pv2-control-question {
+  margin: clamp(0.7rem, 1.6cqw, 1rem) 0 0;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--pv2-border);
+  color: var(--pv2-indigo);
+  font-weight: 850;
+}
+
+.pv2-route-without-visual {
+  display: block;
+}
+
+.pv2-worked-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  gap: clamp(0.7rem, 1.8cqw, 1rem);
+  margin-top: auto;
+  align-items: stretch;
+}
+
+.pv2-worked-table {
+  display: grid;
+  align-content: start;
+}
+
+.pv2-formula-stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.pv2-formula-card {
+  padding: clamp(0.7rem, 1.7cqw, 0.95rem);
+}
+
+.pv2-formula-card strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--pv2-indigo);
+  font-size: clamp(1.1rem, 2.7cqw, 1.42rem);
+  line-height: 1.18;
+}
+
+.pv2-equation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: clamp(0.38rem, 1cqw, 0.65rem);
+  margin: clamp(0.8rem, 2.3cqw, 1.1rem) 0;
+  padding: clamp(0.8rem, 2cqw, 1.05rem);
+  border: 1px solid var(--pv2-border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--pv2-amber) 13%, var(--pv2-slide-bg));
+}
+
+.pv2-equation strong {
+  color: var(--pv2-indigo);
+  font-size: clamp(1.65rem, 4.8cqw, 2.8rem);
+  line-height: 1;
+}
+
+.pv2-equation span {
+  color: var(--pv2-coral);
+  font-size: clamp(1.35rem, 3.8cqw, 2.15rem);
+  font-weight: 900;
+}
+
+.pv2-equation em {
+  flex-basis: 100%;
+  color: var(--pv2-muted);
+  font-style: normal;
+  font-weight: 850;
+}
+
+.pv2-interpretation-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pv2-interpretation-card {
+  padding: clamp(0.62rem, 1.45cqw, 0.82rem);
+}
+
+.pv2-check-grid {
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  margin-top: auto;
+}
+
+.pv2-check-card {
+  padding: clamp(0.58rem, 1.45cqw, 0.8rem);
+}
+
+.pv2-check-card summary {
+  cursor: pointer;
+  color: var(--pv2-indigo);
+  font-size: clamp(0.78rem, 1.45cqw, 0.88rem);
+  font-weight: 850;
+  line-height: 1.28;
+}
+
+.pv2-check-card summary span {
+  display: block;
+  margin-bottom: 0.34rem;
+  color: var(--pv2-coral);
+  font-family: var(--mono);
+}
+
+.pv2-check-card:not([open]) > :not(summary) {
+  display: none;
+}
+
+.pv2-hint,
+.pv2-answer {
+  margin: 0.5rem 0 0;
+  color: var(--pv2-muted);
+  font-size: clamp(0.72rem, 1.32cqw, 0.82rem);
+  line-height: 1.3;
+}
+
+.pv2-answer {
+  color: var(--pv2-indigo);
+  font-weight: 850;
+}
+
+.pv2-summary-list {
+  display: grid;
+  gap: 0.44rem;
+  margin: clamp(0.8rem, 2cqw, 1.1rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pv2-summary-list li {
+  min-width: 0;
+  padding: clamp(0.44rem, 1.2cqw, 0.62rem) clamp(0.58rem, 1.5cqw, 0.8rem);
+  border-left: 4px solid var(--pv2-teal);
+  border-radius: 0 10px 10px 0;
+  background: color-mix(in oklab, var(--pv2-teal) 9%, var(--pv2-slide-bg));
+  color: var(--pv2-indigo);
+  font-size: clamp(0.84rem, 1.7cqw, 1rem);
+  font-weight: 760;
+  line-height: 1.28;
 }
 
 .pv2-notes {
@@ -921,6 +1354,29 @@ html[data-theme="dark"] .pv2-option p {
   margin: 0 0 0.75rem;
 }
 
+.pv2-speaker-script section + section {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--pv2-border);
+}
+
+.pv2-speaker-script h3 {
+  margin: 0 0 0.45rem;
+  color: var(--pv2-indigo);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pv2-speaker-script ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.pv2-speaker-script li {
+  margin: 0 0 0.4rem;
+}
+
 .pv2-speaker-script p:last-child {
   margin-bottom: 0;
 }
@@ -964,7 +1420,10 @@ html[data-theme="dark"] .pv2-option p {
 
 @media (max-width: 760px) {
   .pv2-route-with-visual,
-  .pv2-visual-combo {
+  .pv2-visual-combo,
+  .pv2-narrative-grid,
+  .pv2-success-criteria ul,
+  .pv2-worked-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1046,8 +1505,18 @@ html[data-theme="dark"] .pv2-option p {
   .pv2-cover-grid,
   .pv2-choice-lanes,
   .pv2-path-strip,
-  .pv2-route {
+  .pv2-route,
+  .pv2-route-contract,
+  .pv2-transfer-grid,
+  .pv2-misconception-grid,
+  .pv2-check-grid,
+  .pv2-interpretation-grid,
+  .pv2-relation {
     grid-template-columns: 1fr;
+  }
+
+  .pv2-relation-result {
+    grid-column: auto;
   }
 
   .pv2-path-strip {

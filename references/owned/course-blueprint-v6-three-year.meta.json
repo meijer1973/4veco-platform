@@ -1,13 +1,16 @@
 {
   "source_id": "owned:course-blueprint-v6-three-year",
-  "title": "Course Blueprint v6 Three-Year Draft",
+  "title": "Course Blueprint v6 Three-Year Umbrella",
   "path": "references/owned/course-blueprint-v6-three-year.md",
   "source_type": "course_blueprint",
-  "authority_level": "owned_curriculum_design_draft",
-  "completion_status": "draft_three_year_reconciliation",
-  "canonical_owned_source": false,
+  "authority_level": "owned_curriculum_design",
+  "completion_status": "planning_end_state_frozen_by_three_year_blueprint_maturity_bundle_1",
+  "canonical_owned_source": true,
+  "current_role": "umbrella_three_year_blueprint",
+  "planning_end_state_status": "frozen_planning_baseline",
+  "maturity_packet_id": "THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1",
+  "promoted_by": "BLUEPRINT-V6-AUTHORITY-PROMOTION-1",
   "active_year_1_baseline": "owned:course-blueprint-v5",
-  "proposed_role_after_review": "umbrella_three_year_blueprint",
   "embeds_active_year_1_baseline": "owned:course-blueprint-v5",
   "does_not_replace_year_1_detail_until_explicit_migration": true,
   "relationship_to_v4": "historical_evidence_only",
@@ -28,6 +31,73 @@
     "3": 14,
     "4": 16
   },
+  "final_planning_count_model": {
+    "status": "accepted_planning_end_state",
+    "route": "4+4+3",
+    "count_bearing_total": 148,
+    "scheduled_total": 152,
+    "count_bearing_by_book": {
+      "1": 12,
+      "2": 12,
+      "3": 14,
+      "4": 16,
+      "5": 13,
+      "6": 13,
+      "7": 14,
+      "8": 16,
+      "9": 14,
+      "10": 15,
+      "11": 9
+    },
+    "scheduled_by_book": {
+      "1": 12,
+      "2": 12,
+      "3": 14,
+      "4": 16,
+      "5": 13,
+      "6": 13,
+      "7": 14,
+      "8": 16,
+      "9": 14,
+      "10": 15,
+      "11": 13
+    },
+    "count_bearing_by_year": {
+      "1": 54,
+      "2": 56,
+      "3": 38
+    },
+    "scheduled_by_year": {
+      "1": 54,
+      "2": 56,
+      "3": 42
+    },
+    "book_11_model": {
+      "count_bearing_modules": 9,
+      "scheduled_timed_paper_repair_cycles": 4,
+      "scheduled_total": 13,
+      "count_bearing_modules_range": "M01-M08 and M13",
+      "practice_repair_cycles_range": "M09-M12"
+    },
+    "year_2_decisions": {
+      "book_5_count_bearing": 13,
+      "book_6_count_bearing": 13,
+      "y2_b5_p06": "absorbed_non_standalone",
+      "y2_b6_p13": "deferred_non_count_bearing"
+    }
+  },
+  "frozen_baseline_change_control": {
+    "status": "frozen_planning_baseline",
+    "rule": "BLUEPRINT-CHANGE-REVIEW",
+    "requires_review_for": [
+      "route_change",
+      "book_role_change",
+      "book_count_change",
+      "book_11_model_change",
+      "q19_hold_boundary_change",
+      "production_critical_path_change"
+    ]
+  },
   "test_preparation_policy": {
     "status": "web_only_default_pending_later_book_review",
     "count_bearing": false,
@@ -36,8 +106,11 @@
     "book_11_role": "final exam training and cumulative integration, not a separate twelfth or thirteenth book"
   },
   "allowed_use": [
-    "human_review",
-    "course_design_reconciliation",
+    "umbrella_three_year_blueprint_authority",
+    "book_level_course_route_and_sequencing",
+    "formal_test_week_planning",
+    "frozen_planning_count_model",
+    "production_critical_path_planning",
     "three_year_book_level_planning",
     "exam_operation_spine_design",
     "future_target_exercise_review_preparation"
@@ -45,18 +118,24 @@
   "not_allowed_use": [
     "external_authority",
     "automatic_unit_minting_from_prose",
-    "overriding_course_blueprint_v5_before_review",
     "replacing_year_1_detail_without_explicit_migration",
     "overriding_reviewed_machine_references",
     "overriding_external_exam_or_syllabus_authority",
-    "treating_placeholders_as_reviewed_final",
+    "creating_year_2_or_year_3_paragraph_targets",
+    "minting_mtus",
+    "claiming_official_exam_operation_closure_without_exam_evidence",
+    "claiming_product_route_adoption",
+    "claiming_scale_gate_cp6_diagnostics_mastery_pv_summative_or_student_use",
     "student_facing_lesson_output",
     "protected_reference_mutation"
   ],
   "authority_notes": [
-    "This is a draft umbrella blueprint for human review, not the active production baseline.",
-    "Course Blueprint v5 remains the active detailed Year 1 / Books 1-4 source until an explicit migration replaces or absorbs those details.",
+    "This is the owned three-year umbrella blueprint for book-level route, sequencing, formal test-week planning, and the frozen planning count model.",
+    "Course Blueprint v5 remains the detailed Year 1 / Books 1-4 source until an explicit migration replaces or absorbs those details.",
     "The older three-year concept is useful planning input but is not canonical; it used a 13-book model and contains stale registry assumptions.",
-    "Official exam questions, correction models, reviewed target exercises, and CLI-backed registry changes remain stronger than owned prose."
+    "THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1 freezes the 11-book 4+4+3 baseline, Books 5-11 counts, Book 11 9+4 model, and production critical path.",
+    "Structural changes to the frozen baseline require BLUEPRINT-CHANGE-REVIEW.",
+    "Official exam questions, correction models, reviewed target exercises, and CLI-backed registry changes remain stronger than owned prose.",
+    "Product-route adoption, Scale Gate, diagnostics, mastery, PV, summative use, and student/product use require separate gates."
   ]
 }

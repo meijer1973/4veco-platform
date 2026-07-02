@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "schema_surface": "year2_v6_target_family_candidate_surface_v1",
+  "storage_surface": "references/authored/year2-v6-target-foundation-candidates.json",
+  "authority_boundary": "candidate_surface_only_no_active_v5_registry_mutation_no_mtu_no_lesson_no_product_use",
+  "implementation_sprint": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "approved_source_packet": {
+    "packet_id": "Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1",
+    "governed_mutation_plan": "reports/reference-planning/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-governed-mutation-plan.md",
+    "source_record_policy": "records_reproduced_from_approved_package_json_blocks_without_substantive_change"
+  },
+  "active_v5_registry_preserved": {
+    "path": "references/authored/course-target-exercises.json",
+    "blueprint_version": "v5",
+    "books": [1, 2, 3, 4]
+  },
+  "records": [
+    {
+      "schema_surface": "year2_v6_target_family_candidate_surface_v1",
+      "proposed_storage_surface": "references/authored/year2-v6-target-foundation-candidates.json",
+      "id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "book": 5,
+      "module": 2,
+      "chapter": 5,
+      "paragraph": 13,
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "prerequisite_candidate_ids": ["Y2-B5-P08", "Y2-B5-P09", "Y2-B5-P10", "Y2-B5-P11"],
+      "integrates_candidate_ids": ["Y2-B5-P08", "Y2-B5-P09", "Y2-B5-P10", "Y2-B5-P11"],
+      "bounded_retrieval_marker_ids": [],
+      "record_status": "candidate_for_governed_year2_v6_target_foundation",
+      "official_evidence": ["vw-1022-a-25-2-o:q7-q11"],
+      "source_reference": {
+        "prompt_pdf": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+        "correction_model_pdf": "references/external/exams/vw-1022-a-25-2-c.pdf#page=8-9"
+      },
+      "lesson_goal": "Use the official pension model to explain exchange over time, stock/flow classification, indexation, pension-wealth ratios, and pension-age purchasing-power effects.",
+      "target_exercise": {
+        "context": "Students receive the official-style pension model figure and assumption set.",
+        "subquestions": [
+          {"label": "a", "prompt": "Explain why pension premiums and pension payouts can be described as exchange over time."},
+          {"label": "b", "prompt": "Use the model assumptions to explain why welfare-indexed pension outlays rise when income rises."},
+          {"label": "c", "prompt": "Classify net accumulated pension saving as a stock or a flow, and justify from the source."},
+          {"label": "d", "prompt": "Explain why premiums can fall as a percentage of total pension wealth even when they stay constant as a percentage of GDP."},
+          {"label": "e", "prompt": "Explain one route through which a higher pension age can raise current premium payers' purchasing power."}
+        ]
+      },
+      "answer_form": {
+        "point_allocation": ["a: two-step exchange-over-time explanation", "b: two-link income-indexation explanation", "c: stock/flow classification with source justification", "d: ratio comparison with conclusion", "e: policy mechanism and purchasing-power effect"],
+        "short_answer_model": ["a: premiums reduce current consumption and payouts support future consumption.", "b: real growth plus inflation raises nominal income, so welfare-indexed outlays rise.", "c: accumulated saving is a stock because it is measured at a moment.", "d: pension wealth rises faster than GDP, so a constant GDP-share premium falls as wealth share.", "e: a higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."]
+      },
+      "source_reconstruction_required": true,
+      "op_rows": ["OP-T1", "OP-H1", "OP-ANS2", "OP-ANS3"],
+      "operation_mapping": [
+        {"subquestion": "a", "op_rows": ["OP-T1", "OP-ANS3"]},
+        {"subquestion": "b", "op_rows": ["OP-T1", "OP-H1", "OP-ANS3"]},
+        {"subquestion": "c", "op_rows": ["OP-T1", "OP-ANS3"]},
+        {"subquestion": "d", "op_rows": ["OP-T1", "OP-ANS2", "OP-ANS3"]},
+        {"subquestion": "e", "op_rows": ["OP-T1", "OP-H1", "OP-ANS3"]}
+      ],
+      "prior_skills": ["Book 1 percentage/index reading", "Book 1 table/source reading", "Book 5 stock/flow vocabulary", "Book 5 intertemporal exchange vocabulary"],
+      "required_task_families": ["source_value_selection", "sentence_builder", "constructed_response"],
+      "review_evidence": ["read-only teacher/economist/exam-evidence/source-visual/MTU-quality lead review", "PR #133 conditional repair"],
+      "blockers": [
+        {"blocker": "Book 5 pension task-family proof missing", "blocks": "target-registry write, target-equivalent proof, lesson production", "does_not_block": "this planning package", "proof_required_to_close": "governed MTU/task-family review for pension source reasoning"},
+        {"blocker": "official source reconstruction not yet rendered", "blocks": "lesson handoff and product proof", "does_not_block": "proposal review", "proof_required_to_close": "reconstructable source figure, assumptions, and value trace"}
+      ],
+      "no_new_theory": true,
+      "authority_boundary": "proposal_only_no_registry_write_no_mtu_no_lesson_no_product_use"
+    },
+    {
+      "schema_surface": "year2_v6_target_family_candidate_surface_v1",
+      "proposed_storage_surface": "references/authored/year2-v6-target-foundation-candidates.json",
+      "id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "book": 6,
+      "module": 2,
+      "chapter": 6,
+      "paragraph": 12,
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "prerequisite_candidate_ids": ["Y2-B6-P08", "Y2-B6-P09", "Y2-B6-P11"],
+      "integrates_candidate_ids": ["Y2-B6-P08", "Y2-B6-P09", "Y2-B6-P11"],
+      "bounded_retrieval_marker_ids": ["Y2-B6-P14"],
+      "record_status": "candidate_for_governed_year2_v6_target_foundation",
+      "official_evidence": ["vw-1022-a-23-2-o:q26-q29"],
+      "source_reference": {
+        "prompt_pdf": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12-13",
+        "correction_model_pdf": "references/external/exams/vw-1022-a-23-2-c.pdf#page=13-14"
+      },
+      "lesson_goal": "Use the VastWonen/Reder source case to calculate a waiting list, derive revenue-maximising output, explain mortgage-risk channels, and interpret rent-market table evidence.",
+      "target_exercise": {
+        "context": "Students receive two official-style housing-market tables.",
+        "subquestions": [
+          {"label": "a", "prompt": "Calculate the social-housing waiting-list count from the demand and housing-stock data."},
+          {"label": "b", "prompt": "Test whether abolishing the maximum rent removes the waiting list under the provider's revenue-maximizing choice."},
+          {"label": "c", "prompt": "Explain why a low mortgage rate can reduce interest-cost risk for a housing investor."},
+          {"label": "d", "prompt": "Explain why a housing shortage can support stable rental income and lower loss risk."},
+          {"label": "e", "prompt": "Use private-rental table data and income elasticity to explain why rent can rise."}
+        ]
+      },
+      "answer_form": {
+        "point_allocation": ["a: waiting-list calculation with unit", "b: marginal-revenue/output calculation with conclusion", "c: two-link mortgage-rate risk explanation", "d: two-link shortage/rental-income explanation", "e: source-supported demand/supply and elasticity explanation"],
+        "short_answer_model": ["a: calculate demand at the maximum rent and subtract 6,800 dwellings.", "b: derive marginal revenue from average revenue, choose the revenue-maximising quantity, and compare it with capacity/waiting-list pressure.", "c: a low mortgage rate lowers interest costs and reduces pressure on returns/default risk.", "d: shortage sustains rental demand and stabilises rent income, reducing loss risk.", "e: middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."]
+      },
+      "source_reconstruction_required": true,
+      "op_rows": ["OP-P1", "OP-D1", "OP-C1", "OP-C2", "OP-F1", "OP-E1", "OP-ANS2", "OP-ANS3"],
+      "operation_mapping": [
+        {"subquestion": "a", "op_rows": ["OP-P1", "OP-D1", "OP-ANS2"], "note": "OP-D1 is used only for demand-function solving; OP-D2 is excluded."},
+        {"subquestion": "b", "op_rows": ["OP-C1", "OP-C2", "OP-P1", "OP-ANS2"]},
+        {"subquestion": "c", "op_rows": ["OP-F1", "OP-ANS3"]},
+        {"subquestion": "d", "op_rows": ["OP-F1", "OP-ANS3"]},
+        {"subquestion": "e", "op_rows": ["OP-E1", "OP-P1", "OP-ANS3"]}
+      ],
+      "prior_skills": ["Book 1 table and percentage reading", "Book 2 demand/supply and elasticity basics", "Book 2 cost/revenue and marginal reasoning", "Book 5 lifecycle and stock/flow reasoning", "Book 6 interest-rate vocabulary"],
+      "required_task_families": ["calculation_work", "source_value_selection", "sentence_builder", "constructed_response"],
+      "review_evidence": ["read-only teacher/economist/exam-evidence/source-visual/MTU-quality lead review", "PR #133 conditional repair"],
+      "blockers": [
+        {"blocker": "Housing finance and rent-market task-family proof missing", "blocks": "target-registry write, target-equivalent proof, lesson production", "does_not_block": "this planning package", "proof_required_to_close": "governed MTU/task-family review for housing finance, cost/revenue, elasticity, and rent-market source work"},
+        {"blocker": "source-table reconstruction not yet rendered", "blocks": "lesson handoff and product proof", "does_not_block": "proposal review", "proof_required_to_close": "reconstructable tables, formulas, units, and value-selection trace"}
+      ],
+      "no_new_theory": true,
+      "authority_boundary": "proposal_only_no_registry_write_no_mtu_no_lesson_no_product_use"
+    },
+    {
+      "schema_surface": "year2_v6_target_family_candidate_surface_v1",
+      "proposed_storage_surface": "references/authored/year2-v6-target-foundation-candidates.json",
+      "id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "book": 7,
+      "module": 2,
+      "chapter": 7,
+      "paragraph": 13,
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "prerequisite_candidate_ids": ["Y2-B7-P02", "Y2-B7-P09", "Y2-B7-P10", "Y2-B7-P11", "Y2-B7-P12"],
+      "integrates_candidate_ids": ["Y2-B7-P02", "Y2-B7-P09", "Y2-B7-P10", "Y2-B7-P11", "Y2-B7-P12"],
+      "bounded_retrieval_marker_ids": ["Y2-B7-P14"],
+      "record_status": "candidate_for_governed_year2_v6_target_foundation",
+      "official_evidence": ["vw-1022-a-23-1-o:q12-q15"],
+      "source_reference": {
+        "prompt_pdf": "references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+        "correction_model_pdf": "references/external/exams/vw-1022-a-23-1-c.pdf#page=9-10"
+      },
+      "lesson_goal": "Use the official credit-insurance case to identify information problems, explain incentive effects, and calculate expected damage plus markup.",
+      "target_exercise": {
+        "context": "Students receive a credit-insurance source with conditions and a table of contract/default data.",
+        "subquestions": [
+          {"label": "a", "prompt": "Explain the principal-agent problem in the case and name the insurance condition that reduces it."},
+          {"label": "b", "prompt": "Identify two conditions that reduce supplier moral hazard and explain the incentive effect."},
+          {"label": "c", "prompt": "Identify one condition that can reduce adverse selection and explain why."},
+          {"label": "d", "prompt": "Calculate expected damage from contract counts, turnover, and default probabilities."},
+          {"label": "e", "prompt": "Add the premium markup and state the total credit-insurance premium with a conclusion."}
+        ]
+      },
+      "answer_form": {
+        "point_allocation": ["a: insurer-principal, buying-company-agent, asymmetric information, and collection-cost condition", "b: two condition-and-incentive chains", "c: adverse-selection condition and reason", "d: expected-value calculation", "e: markup calculation and final conclusion"],
+        "short_answer_model": ["a: the credit insurer is principal and the buying company is agent; charging collection costs to the buying company reduces the agency problem.", "b: deductible-like indemnity and bonus-malus reduce the incentive to claim carelessly.", "c: bonus-malus, voluntary deductible, or compulsory insurance can reduce selection by changing who enters the pool.", "d: multiply contract count, turnover, and default probability for each row; expected damage is EUR 80,000.", "e: add the 20% markup; total premium is EUR 96,000."]
+      },
+      "source_reconstruction_required": true,
+      "op_rows": ["OP-R1", "OP-M1", "OP-ANS2", "OP-ANS3"],
+      "operation_mapping": [
+        {"subquestion": "a", "op_rows": ["OP-R1", "OP-M1", "OP-ANS3"]},
+        {"subquestion": "b", "op_rows": ["OP-R1", "OP-ANS3"]},
+        {"subquestion": "c", "op_rows": ["OP-R1", "OP-ANS3"]},
+        {"subquestion": "d", "op_rows": ["OP-R1", "OP-ANS2"]},
+        {"subquestion": "e", "op_rows": ["OP-R1", "OP-ANS2", "OP-ANS3"]}
+      ],
+      "prior_skills": ["Book 1 percentages and weighted calculations", "Book 6 household/finance context", "Book 7 risk, insurance, moral hazard, and adverse-selection vocabulary"],
+      "required_task_families": ["calculation_work", "assertion_reason", "source_value_selection", "constructed_response"],
+      "review_evidence": ["read-only teacher/economist/exam-evidence/source-visual/MTU-quality lead review", "PR #133 conditional repair"],
+      "blockers": [
+        {"blocker": "Broad risk/information task-family proof missing", "blocks": "target-registry write, broad OP-R1 closure, lesson production", "does_not_block": "this planning package", "proof_required_to_close": "governed MTU/task-family review for expected premium and information-problem explanations"},
+        {"blocker": "source reconstruction not yet rendered", "blocks": "lesson handoff and product proof", "does_not_block": "proposal review", "proof_required_to_close": "reconstructable conditions figure, financial table, calculation trace, and markup rule"}
+      ],
+      "no_new_theory": true,
+      "authority_boundary": "proposal_only_no_registry_write_no_mtu_no_lesson_no_product_use"
+    },
+    {
+      "schema_surface": "year2_v6_target_family_candidate_surface_v1",
+      "proposed_storage_surface": "references/authored/year2-v6-target-foundation-candidates.json",
+      "id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "book": 8,
+      "module": 2,
+      "chapter": 8,
+      "paragraph": 4,
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "prerequisite_candidate_ids": ["Y2-B8-P02", "Y2-B8-P03"],
+      "integrates_candidate_ids": ["Y2-B8-P02", "Y2-B8-P03"],
+      "bounded_retrieval_marker_ids": ["Y2-B8-P16"],
+      "record_status": "candidate_for_governed_year2_v6_target_foundation",
+      "official_evidence": ["vw-1022-a-25-1-o:q15-q16"],
+      "source_reference": {
+        "prompt_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+        "correction_model_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#page=11-12"
+      },
+      "lesson_goal": "Use the official Guarda/Orso Bianco source to explain dominant strategy, prisoner's dilemma, self-binding, and price-war incentives.",
+      "target_exercise": {
+        "context": "Students receive the official-style ice-cream duopoly source.",
+        "subquestions": [
+          {"label": "a", "prompt": "Identify the price choice that functions as each firm's dominant strategy and explain why."},
+          {"label": "b", "prompt": "Explain why the resulting outcome can be called a prisoner's dilemma."},
+          {"label": "c", "prompt": "Explain how a lowest-price guarantee functions as self-binding."},
+          {"label": "d", "prompt": "Explain why the self-binding device reduces the incentive for the other firm to start a price war."}
+        ]
+      },
+      "answer_form": {
+        "point_allocation": ["a: dominant-strategy identification and reason", "b: individual incentive plus worse joint outcome", "c: self-binding mechanism", "d: changed incentive for the other firm"],
+        "short_answer_model": ["a: each firm has an incentive to lower price because consumers see the products as perfect substitutes.", "b: both lowering price can be individually rational while making both worse off than cooperation.", "c: the guarantee commits Guarda to follow a lower price and makes the promise credible.", "d: Orso Bianco expects less gain from cutting price, so the incentive to start a price war falls."]
+      },
+      "source_reconstruction_required": true,
+      "op_rows": ["OP-S1", "OP-ANS1", "OP-ANS3"],
+      "operation_mapping": [
+        {"subquestion": "a", "op_rows": ["OP-S1", "OP-ANS1", "OP-ANS3"]},
+        {"subquestion": "b", "op_rows": ["OP-S1", "OP-ANS3"]},
+        {"subquestion": "c", "op_rows": ["OP-S1", "OP-ANS3"]},
+        {"subquestion": "d", "op_rows": ["OP-S1", "OP-ANS3"]}
+      ],
+      "prior_skills": ["Book 7 incentive logic", "Basic table/source reading", "Book 8 payoff and strategic-choice vocabulary"],
+      "required_task_families": ["matching_pairs", "step_ordering", "sentence_builder", "constructed_response"],
+      "review_evidence": ["read-only teacher/economist/exam-evidence/source-visual/MTU-quality lead review", "PR #133 conditional repair"],
+      "blockers": [
+        {"blocker": "Q15/Q16 two-link answer-skill route missing", "blocks": "target-registry write, broad OP-S1 closure, broad OP-ANS3 closure", "does_not_block": "this planning package", "proof_required_to_close": "governed answer-skill and task-family review"},
+        {"blocker": "derived payoff matrix not yet reconstructed", "blocks": "lesson handoff and product proof", "does_not_block": "proposal review", "proof_required_to_close": "source-to-derived-representation trace or official-source-only route"}
+      ],
+      "no_new_theory": true,
+      "authority_boundary": "proposal_only_no_registry_write_no_mtu_no_lesson_no_product_use"
+    }
+  ]
+}

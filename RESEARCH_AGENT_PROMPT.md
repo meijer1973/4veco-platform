@@ -47,7 +47,7 @@ If a raw URL returns 404, do not immediately conclude that the file is absent. V
 
 ### Note on agents that cannot construct URLs
 
-Some research environments (notably planning Claude in claude.ai) only fetch URLs that have appeared as literal `https://...` strings in context — they cannot concatenate a base URL with a relative path. For those agents, the map and the references-only map both include parallel `<section_name> (full URLs):` blocks listing each path as a complete raw-GitHub URL. There is also a single-fetch entry point that links to every key surface across both repositories:
+Some research environments only fetch URLs that have appeared as literal `https://...` strings in context; they cannot concatenate a base URL with a relative path. For those agents, the map and the references-only map both include parallel `<section_name> (full URLs):` blocks listing each path as a complete raw-GitHub URL. There is also a single-fetch entry point that links to every key surface across both repositories:
 
 ```text
 https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/url-index.md
@@ -79,12 +79,12 @@ The map is navigation guidance, not a replacement for source evaluation.
 
 Search the repository namespaces relevant to the question. Common surfaces:
 
-- `AGENTS.md` and `CLAUDE.md` for operating rules
+- `AGENTS.md` for operating rules
 - `BUILD-PARAGRAPH.md` and `BUILD-CHAPTER.md` for production workflows
 - `agents/` for bounded reviewer-role protocols such as lead review orchestration, testing evidence, accessibility review, teacher learning-quality review, student-experience review, companion visual review, and specific visual QA
 - `build-scripts/` and `scripts/` for generators, converters, validators, and deploy orchestration
 - `engines/` for game/runtime behavior
-- `skills/` and `.claude/commands/` for content-production workflows
+- `skills/` for content-production workflows
 - `source-data/` for generator inputs
 - `references/` for authority, registries, owned course design, and evidence
 - `reports/` for generated quality and dashboard outputs

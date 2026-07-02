@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "sprint_id": "A96-CALCULATION-ANSWER-FORM-REFINEMENT-1",
+  "generated": "2026-06-24T11:43:27.214Z",
+  "status": "ready_for_human_scale_gate_1_review",
+  "lead_recommendation": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+  "source_refinement": {
+    "route": "1.1.2-exit-ticket",
+    "task_id": "prijsstijging-procent",
+    "family": "calculation_answer_form_capture",
+    "unit_id": "A96",
+    "route_specific": true,
+    "completion_language_eligible": false,
+    "target_readiness_flags_mutated": false
+  },
+  "a96_requirements": {
+    "formula_or_calculation_method": true,
+    "labelled_substitution": true,
+    "intermediate_work_visible_through_formula_and_substitution": true,
+    "final_answer": true,
+    "unit_or_notation_required": true,
+    "short_contextual_conclusion": true,
+    "old_work_textarea_replaced_for_a96_task": true,
+    "token_display_order_not_answer_order": true,
+    "reusable_old_price_token_max_uses_two": true,
+    "duplicate_visible_answer_token_labels_absent": true
+  },
+  "rendered_proof": {
+    "source_a96_ready": true,
+    "generated_a96_ready": true,
+    "rendered_exit_captures_ready": true,
+    "screenshots": [
+      {
+        "id": "112-exit-ticket-desktop-light-initial",
+        "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-initial.png",
+        "a96_answer_form": {
+          "present": true,
+          "family": "calculation_answer_form_capture",
+          "formula_token_count": 11,
+          "selected_formula_token_count": 0,
+          "substitution_field_ids": [
+            "newPrice",
+            "oldPriceNumerator",
+            "oldPriceDenominator"
+          ],
+          "final_answer_field_present": true,
+          "notation_field_present": true,
+          "conclusion_field_present": true,
+          "old_work_textarea_present": false,
+          "missing_feedback_count": 0
+        }
+      },
+      {
+        "id": "112-exit-ticket-desktop-light-completed-feedback",
+        "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png",
+        "a96_answer_form": {
+          "present": true,
+          "family": "calculation_answer_form_capture",
+          "formula_token_count": 11,
+          "selected_formula_token_count": 8,
+          "substitution_field_ids": [
+            "newPrice",
+            "oldPriceNumerator",
+            "oldPriceDenominator"
+          ],
+          "final_answer_field_present": true,
+          "notation_field_present": true,
+          "conclusion_field_present": true,
+          "old_work_textarea_present": false,
+          "missing_feedback_count": 0
+        }
+      },
+      {
+        "id": "112-exit-ticket-mobile-dark-completed-feedback",
+        "file": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png",
+        "a96_answer_form": {
+          "present": true,
+          "family": "calculation_answer_form_capture",
+          "formula_token_count": 11,
+          "selected_formula_token_count": 8,
+          "substitution_field_ids": [
+            "newPrice",
+            "oldPriceNumerator",
+            "oldPriceDenominator"
+          ],
+          "final_answer_field_present": true,
+          "notation_field_present": true,
+          "conclusion_field_present": true,
+          "old_work_textarea_present": false,
+          "missing_feedback_count": 0
+        }
+      }
+    ]
+  },
+  "scale_gate_readiness": {
+    "product_path_evidence_ready_for_human_review": true,
+    "scale_gate_1_ready_for_human_review": true,
+    "scale_gate_1_ready": true,
+    "scale_gate_1_authority_status": "READY_FOR_HUMAN_REVIEW_NOT_AUTHORIZED",
+    "scale_gate_1_hold_reason": null,
+    "a96_calculation_answer_form_refinement_ready": true,
+    "product_route_adoption_authorized": false,
+    "diagnostics_mastery_pv_student_use_authorized": false,
+    "claim_scope": "first_three_paragraphs_rendered_product_path_only"
+  },
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "target_equivalent_completion_language_authorized": false
+  },
+  "boundary": {
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false
+  },
+  "linked_proofs": {
+    "scale_proof_json": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "screenshot_manifest": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md",
+    "screenshot_manifest_json": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/manifest.json",
+    "route_inventory": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md"
+  },
+  "validation": [
+    "node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js"
+  ]
+}

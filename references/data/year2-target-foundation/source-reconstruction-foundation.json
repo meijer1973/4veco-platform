@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "status": "foundation_ready_not_rendered",
+  "authority_boundary": "source_reconstruction_foundation_only_no_external_mutation_no_lesson_output",
+  "source_packet": "Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1",
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "source_family": "vw-1022-a-25-2-o:q7-q11",
+      "required_artifacts": [
+        {
+          "artifact_id": "figuur-1-pensioenmodel-2024-2044",
+          "artifact_type": "mixed_bar_line_figure",
+          "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+          "must_preserve": [
+            "time horizon 2024-2044",
+            "official title Pensioenmodel econoom (2024-2044)",
+            "mixed bar/line structure",
+            "legend, left/right axes, axis labels, units, scale, and ticks",
+            "pension wealth, GDP-linked premiums, total pension outlays, and premiums as percentage of total pension wealth"
+          ],
+          "anti_substitution_rule": "Do not substitute a generic pension diagram."
+        },
+        {
+          "artifact_id": "pensioenmodel-assumptions-a-f",
+          "artifact_type": "source_text_assumptions",
+          "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+          "values": [
+            {"label": "a", "statement": "annual inflation = 2%"},
+            {"label": "b", "statement": "annual real economic growth = 0.5%"},
+            {"label": "c", "statement": "annual pension-asset return = 3.5%"},
+            {"label": "d", "statement": "premium pressure as percentage of GDP stays constant"},
+            {"label": "e", "statement": "number of premium payers stays constant"},
+            {"label": "f", "statement": "capital incomes stay constant"}
+          ]
+        }
+      ],
+      "render_blocker": {
+        "blocks": "lesson handoff and product proof",
+        "does_not_block": "candidate-surface implementation",
+        "proof_required_to_close": "rendered figure plus assumption trace checked against official locators"
+      }
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "source_family": "vw-1022-a-23-2-o:q26-q29",
+      "required_artifacts": [
+        {
+          "artifact_id": "tabel-1-vastwonen-financial-data",
+          "artifact_type": "official_style_table",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "values": [
+            {"label": "maximum_rent", "value": 850, "unit": "EUR per dwelling per month"},
+            {"label": "housing_stock", "value": 6800, "unit": "dwellings"},
+            {"label": "total_monthly_cost_function", "value": "TK = 450Q + 1400000"},
+            {"label": "average_monthly_rent_revenue_function", "value": "GO = -0.125Q + 2150"},
+            {"label": "quantity_symbol", "value": "Q = number of social rental dwellings"}
+          ],
+          "anti_substitution_rule": "Do not substitute generic housing-market tables."
+        },
+        {
+          "artifact_id": "tabel-2-particuliere-huurwoningen-reder",
+          "artifact_type": "official_style_table",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=13",
+          "values": [
+            {"label": "released_rental_dwellings", "value": -9.9, "unit": "percent versus previous year"},
+            {"label": "average_rent", "value": 6, "unit": "percent change"},
+            {"label": "middle_incomes", "value": 3, "unit": "percent change"},
+            {"label": "income_elasticity_private_rental_housing_middle_income", "value": 0.4}
+          ]
+        },
+        {
+          "artifact_id": "q28-housing-investor-context",
+          "artifact_type": "source_context",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "must_preserve": [
+            "VastWonen as only social-housing provider in Reder",
+            "low mortgage-rate claim",
+            "purchase and conversion of old office buildings",
+            "financing through mortgage loans with collateral",
+            "housing-shortage risk argument"
+          ]
+        }
+      ],
+      "render_blocker": {
+        "blocks": "lesson handoff and product proof",
+        "does_not_block": "candidate-surface implementation",
+        "proof_required_to_close": "rendered tables, formulas, units, and value-selection trace"
+      }
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "source_family": "vw-1022-a-23-1-o:q12-q15",
+      "required_artifacts": [
+        {
+          "artifact_id": "figuur-1-kredietverzekering-en-voorwaarden",
+          "artifact_type": "actor_arrow_figure",
+          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=6",
+          "arrows": [
+            {"arrow": 1, "meaning": "delivered sold product x"},
+            {"arrow": 2, "meaning": "invoice amount"},
+            {"arrow": 3, "meaning": "credit-insurance premium"},
+            {"arrow": 4, "meaning": "amount paid out when the buying company does not pay"},
+            {"arrow": 5, "meaning": "possible collection service"},
+            {"arrow": 6, "meaning": "collection costs plus surcharge"},
+            {"arrow": 7, "meaning": "outstanding debt to be paid"}
+          ],
+          "conditions": [
+            "90% indemnity of missed turnover after non-payment",
+            "insurer takes over collection after payment term expires and buyer has not paid",
+            "collection costs are charged to the buying company",
+            "supplier bonus-malus system"
+          ],
+          "anti_substitution_rule": "Do not substitute a generic insurance diagram."
+        },
+        {
+          "artifact_id": "tabel-1-financiele-gegevens-digibate",
+          "artifact_type": "official_style_table",
+          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "rows": [
+            {"contracts": 20, "average_turnover_eur": 1000000, "payment_term_days": 90, "default_probability_percent": 0.05},
+            {"contracts": 30, "average_turnover_eur": 500000, "payment_term_days": 60, "default_probability_percent": 0.2},
+            {"contracts": 80, "average_turnover_eur": 250000, "payment_term_days": 60, "default_probability_percent": 0.2}
+          ],
+          "calculation_trace": {
+            "premium_base": "contract count x average turnover x default probability",
+            "indemnity_rate_condition": 0.9,
+            "expected_damage_eur": 80000,
+            "markup_rate": 0.2,
+            "total_premium_eur": 96000,
+            "indemnity_rate_note": "The 90% indemnity is an insurance condition for incentive analysis; the official q15 premium calculation does not multiply the expected-damage base by 90%."
+          }
+        }
+      ],
+      "render_blocker": {
+        "blocks": "lesson handoff and product proof",
+        "does_not_block": "candidate-surface implementation",
+        "proof_required_to_close": "conditions figure, financial table, calculation trace, and markup rule"
+      }
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "source_family": "vw-1022-a-25-1-o:q15-q16",
+      "required_artifacts": [
+        {
+          "artifact_id": "ijssalon-guarda-orso-bianco-context",
+          "artifact_type": "source_context",
+          "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "must_preserve": [
+            "beginning of 2025 Guarda loses its monopoly position",
+            "Orso Bianco opens",
+            "same production costs as Guarda",
+            "Orso Bianco enters with a lower price",
+            "consumers view the ice creams as perfect substitutes",
+            "possible price war and prisoner's dilemma"
+          ],
+          "anti_substitution_rule": "Do not substitute a generic duopoly."
+        },
+        {
+          "artifact_id": "lowest-price-guarantee-self-binding-source",
+          "artifact_type": "source_context",
+          "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "must_preserve": [
+            "fixed sales price for 2025",
+            "lowest-price guarantee advertised on social media",
+            "discount of 25% on a lower Orso Bianco price"
+          ]
+        },
+        {
+          "artifact_id": "derived-payoff-representation",
+          "artifact_type": "derived_representation",
+          "official_locator": "not_official_derived_from_q15_q16_source",
+          "status": "allowed_only_if_labelled_derived_not_official",
+          "must_preserve": [
+            "source-to-derived-representation trace",
+            "dominant-strategy support for q15",
+            "commitment-device support for q16"
+          ]
+        }
+      ],
+      "render_blocker": {
+        "blocks": "lesson handoff and product proof",
+        "does_not_block": "candidate-surface implementation",
+        "proof_required_to_close": "official-source-only route or labelled derived payoff trace"
+      }
+    }
+  ]
+}

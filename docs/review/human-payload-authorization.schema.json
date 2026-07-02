@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/meijer1973/4veco-platform/docs/review/human-payload-authorization.schema.json",
+  "title": "4veco human payload authorization",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "repository",
+    "pr_number",
+    "reviewed_payload_head_sha",
+    "base_sha_at_review",
+    "decision",
+    "decision_scope",
+    "authorization_comment_id",
+    "permitted_integration_descendants",
+    "invalidation_conditions"
+  ],
+  "properties": {
+    "repository": {
+      "type": "string",
+      "pattern": "^[^/\\s]+/[^/\\s]+$"
+    },
+    "pr_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "reviewed_payload_head_sha": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{40}$"
+    },
+    "base_sha_at_review": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{40}$"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE_AND_MERGE",
+        "APPROVE_FOR_INTEGRATION"
+      ]
+    },
+    "decision_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorization_comment_id": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 1
+        },
+        {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        }
+      ]
+    },
+    "permitted_integration_descendants": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "enum": [
+          "conflict_free_main_base_sync_merge",
+          "allowlisted_deterministic_evidence_refresh"
+        ]
+      },
+      "contains": {
+        "const": "conflict_free_main_base_sync_merge"
+      }
+    },
+    "invalidation_conditions": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "string",
+        "enum": [
+          "reviewed_payload_not_ancestor",
+          "manual_conflict_resolution",
+          "substantive_pr_authored_commit_after_authorization",
+          "authority_or_scope_change",
+          "changed_effective_payload"
+        ]
+      }
+    },
+    "supersedes_authorization_sha": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Fa-f0-9]{40}$"
+      }
+    }
+  }
+}

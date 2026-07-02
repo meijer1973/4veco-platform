@@ -20,7 +20,16 @@
       "workflow": "platform-ci / validate-platform",
       "github_actions_run_id": "27200000005",
       "reviewed_commit_sha": "ffffffffffffffffffffffffffffffffffffffff",
-      "conclusion": "success"
+      "conclusion": "success",
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS"
+        }
+      ]
     },
     "lead_review": {
       "path": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md",

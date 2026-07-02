@@ -1,0 +1,1236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/meijer1973/4veco-platform/references/schemas/local-expert-source-refresh-gate.schema.v1.json",
+  "title": "4veco internal local expert and source refresh gate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "report_id",
+    "sprint_id",
+    "generated_date",
+    "access_date",
+    "status",
+    "internal_only",
+    "manual_invocation_only",
+    "human_review_required",
+    "product_end_state",
+    "product_end_state_checkout_note",
+    "original_sprint_gate_spec",
+    "roadmap_source",
+    "accepted_input_decision",
+    "non_negotiable_requirements",
+    "input_allowlist",
+    "output_allowlist",
+    "forbidden_authority",
+    "core_requirement_checklist",
+    "finding_classification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "report_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sprint_id": {
+      "const": "GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1"
+    },
+    "generated_date": {
+      "const": "2026-06-26"
+    },
+    "access_date": {
+      "const": "2026-06-26"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "internal_only": {
+      "const": true
+    },
+    "manual_invocation_only": {
+      "const": true
+    },
+    "human_review_required": {
+      "const": true
+    },
+    "product_end_state": {
+      "const": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    "product_end_state_checkout_note": {
+      "const": "Cross-repo citation: resolve through the paired 4veco-lessen checkout used for human review; this platform packet does not copy lesson-repo product state."
+    },
+    "original_sprint_gate_spec": {
+      "const": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md"
+    },
+    "roadmap_source": {
+      "const": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md"
+    },
+    "accepted_input_decision": {
+      "const": "PROCEED_TO_LOCAL_EXPERT_SOURCE_REFRESH_GATE_PLANNING"
+    },
+    "non_negotiable_requirements": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "prefixItems": [
+        {
+          "const": "Use REV-STD-1 and cite product end-state plus the original sprint/gate spec."
+        },
+        {
+          "const": "Cite the accepted no-output simulation decision and preserve the no-output/no-runtime/no-product-authority boundary."
+        },
+        {
+          "const": "Define local expert role contract fields without substituting local expert judgement."
+        },
+        {
+          "const": "Define source-refresh protocol fields without executing source refresh."
+        },
+        {
+          "const": "Use explicit source and output allowlists only; no directory globbing or generated lesson-output scanning."
+        },
+        {
+          "const": "Include England and Flanders jurisdiction-specific gates."
+        },
+        {
+          "const": "Simulate source-refresh gate classification cases without refreshing sources or producing localized output."
+        },
+        {
+          "const": "Refuse forbidden audiences, claims, integrations, product routes, Scale Gate, diagnostics/mastery/PV, personal data, support/accommodation sufficiency, and compliance/inspection-readiness claims."
+        },
+        {
+          "const": "Classify findings with blocks, does_not_block, and proof_required_to_close."
+        },
+        {
+          "const": "PASS WITH FLAGS may not carry a missing core requirement."
+        }
+      ]
+    },
+    "core_requirement_checklist": {
+      "type": "array",
+      "minItems": 9,
+      "items": {
+        "$ref": "#/$defs/coreRequirement"
+      }
+    },
+    "input_allowlist": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "prefixItems": [
+        {
+          "const": "reports/inspection-standards/england-internal-no-output-trial-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-internal-no-output-trial-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation-decision.json"
+        },
+        {
+          "const": "reports/inspection-standards/internal-no-output-trial-simulation-validation.json"
+        },
+        {
+          "const": "references/schemas/internal-no-output-trial-simulation.schema.v1.json"
+        },
+        {
+          "const": "references/data/inspection-standards/overlays/england.deepening.v1.json"
+        },
+        {
+          "const": "references/data/inspection-standards/overlays/flanders.deepening.v1.json"
+        }
+      ]
+    },
+    "output_allowlist": {
+      "type": "array",
+      "minItems": 39,
+      "maxItems": 39,
+      "prefixItems": [
+        {
+          "const": "references/schemas/local-expert-source-refresh-gate.schema.v1.json"
+        },
+        {
+          "const": "docs/inspection-standards/local-expert-source-refresh-gate-contract.md"
+        },
+        {
+          "const": "docs/inspection-standards/england-local-expert-source-gate.md"
+        },
+        {
+          "const": "docs/inspection-standards/flanders-local-expert-source-gate.md"
+        },
+        {
+          "const": "reports/inspection-standards/local-expert-source-refresh-gate-plan.md"
+        },
+        {
+          "const": "reports/inspection-standards/local-expert-source-refresh-gate-plan.json"
+        },
+        {
+          "const": "reports/inspection-standards/england-source-refresh-gate-simulation.md"
+        },
+        {
+          "const": "reports/inspection-standards/england-source-refresh-gate-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-source-refresh-gate-simulation.md"
+        },
+        {
+          "const": "reports/inspection-standards/flanders-source-refresh-gate-simulation.json"
+        },
+        {
+          "const": "reports/inspection-standards/local-expert-source-refresh-gate-decision.md"
+        },
+        {
+          "const": "reports/inspection-standards/local-expert-source-refresh-gate-decision.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/england-source-refresh-gate-simulation.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/positive/flanders-source-refresh-gate-simulation.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/non-official-source.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/source-refresh-executed.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/local-expert-substituted.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/localized-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/student-facing-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/teacher-school-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/public-output.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/personal-data.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/compliance-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-sufficiency-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/whole-uk-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/all-belgium-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-source-condition.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/missing-england-source-allowlist.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/official-url-mismatch.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/individual-adjustment-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/reasonable-adjustment-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/learner-support-record-claim.sample.json"
+        },
+        {
+          "const": "references/data/inspection-standards/fixtures/local-expert-source-refresh-gate/negative/support-records-personal-data.sample.json"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-correction-log.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-closure-record.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-specialist-reviews.md"
+        },
+        {
+          "const": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-final-lead-review.md"
+        }
+      ]
+    },
+    "forbidden_authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_refresh_executed",
+        "local_expert_substituted",
+        "runtime_execution",
+        "localized_paragraphs_generated",
+        "localized_exercises_generated",
+        "localized_answer_models_generated",
+        "localized_assessment_items_generated",
+        "student_facing_files_generated",
+        "teacher_school_facing_output_generated",
+        "public_output_generated",
+        "evidence_pack_generated",
+        "product_route_adoption",
+        "scale_gate_integration",
+        "diagnostics_mastery_pv",
+        "student_product_use",
+        "personal_data_processing",
+        "legal_compliance_claim",
+        "approval_accreditation_claim",
+        "op0_pta_summative_claim",
+        "inspection_readiness_claim",
+        "support_sufficiency_claim",
+        "accommodation_sufficiency_claim",
+        "individual_adjustment_claim",
+        "reasonable_adjustment_claim",
+        "learner_support_record_claim",
+        "support_records_personal_data",
+        "whole_uk_claim_from_england_only",
+        "all_belgium_claim_from_flanders_only",
+        "generated_lesson_output_scanning",
+        "implicit_source_discovery",
+        "directory_globbing",
+        "quality_ref_or_dashboard_integration"
+      ],
+      "properties": {
+        "source_refresh_executed": {
+          "const": false
+        },
+        "local_expert_substituted": {
+          "const": false
+        },
+        "runtime_execution": {
+          "const": false
+        },
+        "localized_paragraphs_generated": {
+          "const": false
+        },
+        "localized_exercises_generated": {
+          "const": false
+        },
+        "localized_answer_models_generated": {
+          "const": false
+        },
+        "localized_assessment_items_generated": {
+          "const": false
+        },
+        "student_facing_files_generated": {
+          "const": false
+        },
+        "teacher_school_facing_output_generated": {
+          "const": false
+        },
+        "public_output_generated": {
+          "const": false
+        },
+        "evidence_pack_generated": {
+          "const": false
+        },
+        "product_route_adoption": {
+          "const": false
+        },
+        "scale_gate_integration": {
+          "const": false
+        },
+        "diagnostics_mastery_pv": {
+          "const": false
+        },
+        "student_product_use": {
+          "const": false
+        },
+        "personal_data_processing": {
+          "const": false
+        },
+        "legal_compliance_claim": {
+          "const": false
+        },
+        "approval_accreditation_claim": {
+          "const": false
+        },
+        "op0_pta_summative_claim": {
+          "const": false
+        },
+        "inspection_readiness_claim": {
+          "const": false
+        },
+        "support_sufficiency_claim": {
+          "const": false
+        },
+        "accommodation_sufficiency_claim": {
+          "const": false
+        },
+        "individual_adjustment_claim": {
+          "const": false
+        },
+        "reasonable_adjustment_claim": {
+          "const": false
+        },
+        "learner_support_record_claim": {
+          "const": false
+        },
+        "support_records_personal_data": {
+          "const": false
+        },
+        "whole_uk_claim_from_england_only": {
+          "const": false
+        },
+        "all_belgium_claim_from_flanders_only": {
+          "const": false
+        },
+        "generated_lesson_output_scanning": {
+          "const": false
+        },
+        "implicit_source_discovery": {
+          "const": false
+        },
+        "directory_globbing": {
+          "const": false
+        },
+        "quality_ref_or_dashboard_integration": {
+          "const": false
+        }
+      }
+    },
+    "source_conditions": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        {
+          "const": "official_source_unchanged"
+        },
+        {
+          "const": "official_source_updated"
+        },
+        {
+          "const": "official_source_replaced"
+        },
+        {
+          "const": "official_source_unavailable"
+        },
+        {
+          "const": "source_gap_discovered"
+        },
+        {
+          "const": "source_outside_allowed_scope"
+        }
+      ]
+    },
+    "gate_simulation_case_types": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "prefixItems": [
+        {
+          "const": "valid_official_source_refresh_request"
+        },
+        {
+          "const": "stale_source_detected"
+        },
+        {
+          "const": "source_gap"
+        },
+        {
+          "const": "non_official_source_proposed"
+        },
+        {
+          "const": "local_expert_uncertainty"
+        },
+        {
+          "const": "attempted_compliance_claim"
+        },
+        {
+          "const": "attempted_localized_output"
+        },
+        {
+          "const": "attempted_school_facing_output"
+        }
+      ]
+    },
+    "finding_classification": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "gate_purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "local_expert_role_contracts": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "$ref": "#/$defs/localExpertRoleContract"
+      }
+    },
+    "source_refresh_protocol_summary": {
+      "$ref": "#/$defs/sourceRefreshProtocolSummary"
+    },
+    "jurisdiction_specific_gates": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "$ref": "#/$defs/jurisdictionSpecificGate"
+      }
+    },
+    "validation_and_review_gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "jurisdiction_id": {
+      "enum": [
+        "england",
+        "flanders"
+      ]
+    },
+    "jurisdiction_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_protocol": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/sourceProtocol"
+      }
+    },
+    "local_expert_role_contract": {
+      "$ref": "#/$defs/localExpertRoleContract"
+    },
+    "jurisdiction_specific_gate": {
+      "$ref": "#/$defs/jurisdictionSpecificGate"
+    },
+    "accessibility_inclusion_terminology": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/accessibilityTerm"
+      }
+    },
+    "school_owned_evidence_boundary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/schoolOwnedEvidenceBoundary"
+      }
+    },
+    "source_refresh_execution_performed": {
+      "const": false
+    },
+    "local_expert_substitution_performed": {
+      "const": false
+    },
+    "gate_simulation_cases": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/simulationCase"
+      }
+    },
+    "no_output_enforcement": {
+      "$ref": "#/$defs/noOutputEnforcement"
+    },
+    "final_local_expert_source_refresh_gate_decision": {
+      "$ref": "#/$defs/decisionSelection"
+    },
+    "simulation_case_counts": {
+      "$ref": "#/$defs/simulationCaseCounts"
+    },
+    "does_not_authorize": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "plan_report": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "coreRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "requirement",
+        "status",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requirement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "finding",
+        "classification",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "finding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "enum": [
+            "core_requirement_met",
+            "quality_improvement_available",
+            "minor_carry_flag",
+            "scale_blocker",
+            "core_spec_failure"
+          ]
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "conditionHandling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition",
+        "gate_action",
+        "blocks",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "condition": {
+          "enum": [
+            "official_source_unchanged",
+            "official_source_updated",
+            "official_source_replaced",
+            "official_source_unavailable",
+            "source_gap_discovered",
+            "source_outside_allowed_scope"
+          ]
+        },
+        "gate_action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sourceProtocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "jurisdiction_id",
+        "source_role",
+        "official_url",
+        "current_access_date",
+        "source_role_boundary",
+        "freshness_trigger",
+        "staleness_condition",
+        "replacement_source_rule",
+        "human_review_trigger",
+        "allowed_inference",
+        "forbidden_inference",
+        "condition_handling"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction_id": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "source_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "official_url": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "current_access_date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_role_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "freshness_trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "staleness_condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replacement_source_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "human_review_trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowed_inference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_inference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "condition_handling": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "$ref": "#/$defs/conditionHandling"
+          }
+        }
+      }
+    },
+    "localExpertRoleContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jurisdiction",
+        "jurisdiction_label",
+        "expert_role",
+        "allowed_review_scope",
+        "forbidden_authority",
+        "source_review_responsibility",
+        "curriculum_assessment_review_responsibility",
+        "language_terminology_review_responsibility",
+        "accessibility_inclusion_review_responsibility",
+        "legal_claim_boundary",
+        "school_owned_evidence_boundary",
+        "conflict_uncertainty_handling",
+        "required_output_format"
+      ],
+      "properties": {
+        "jurisdiction": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "jurisdiction_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expert_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowed_review_scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "forbidden_authority": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_review_responsibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "curriculum_assessment_review_responsibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language_terminology_review_responsibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accessibility_inclusion_review_responsibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "legal_claim_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "school_owned_evidence_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conflict_uncertainty_handling": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_output_format": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "jurisdictionSpecificGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jurisdiction_id",
+        "required_boundaries",
+        "inspection_boundary",
+        "jurisdiction_boundary"
+      ],
+      "properties": {
+        "jurisdiction_id": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "required_boundaries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "selected_awarding_body_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inspection_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accessibility_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "study_direction_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assessment_boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "noOutputEnforcement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "localized_paragraphs",
+        "localized_exercises",
+        "answer_models",
+        "localized_assessment_items",
+        "student_facing_files",
+        "teacher_school_output",
+        "public_output",
+        "evidence_pack",
+        "runtime_execution",
+        "product_route",
+        "scale_gate",
+        "diagnostics_mastery_pv",
+        "personal_data"
+      ],
+      "properties": {
+        "localized_paragraphs": {
+          "const": false
+        },
+        "localized_exercises": {
+          "const": false
+        },
+        "answer_models": {
+          "const": false
+        },
+        "localized_assessment_items": {
+          "const": false
+        },
+        "student_facing_files": {
+          "const": false
+        },
+        "teacher_school_output": {
+          "const": false
+        },
+        "public_output": {
+          "const": false
+        },
+        "evidence_pack": {
+          "const": false
+        },
+        "runtime_execution": {
+          "const": false
+        },
+        "product_route": {
+          "const": false
+        },
+        "scale_gate": {
+          "const": false
+        },
+        "diagnostics_mastery_pv": {
+          "const": false
+        },
+        "personal_data": {
+          "const": false
+        }
+      }
+    },
+    "simulationCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case_type",
+        "jurisdiction_id",
+        "source_id",
+        "source_condition",
+        "classification",
+        "boundary_focus",
+        "simulation_only",
+        "source_refresh_executed",
+        "local_expert_substituted",
+        "generated_output",
+        "note",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close"
+      ],
+      "properties": {
+        "case_type": {
+          "enum": [
+            "valid_official_source_refresh_request",
+            "stale_source_detected",
+            "source_gap",
+            "non_official_source_proposed",
+            "local_expert_uncertainty",
+            "attempted_compliance_claim",
+            "attempted_localized_output",
+            "attempted_school_facing_output"
+          ]
+        },
+        "jurisdiction_id": {
+          "enum": [
+            "england",
+            "flanders"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_condition": {
+          "enum": [
+            "official_source_unchanged",
+            "official_source_updated",
+            "official_source_replaced",
+            "official_source_unavailable",
+            "source_gap_discovered",
+            "source_outside_allowed_scope"
+          ]
+        },
+        "classification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "boundary_focus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "simulation_only": {
+          "const": true
+        },
+        "source_refresh_executed": {
+          "const": false
+        },
+        "local_expert_substituted": {
+          "const": false
+        },
+        "generated_output": {
+          "$ref": "#/$defs/noOutputEnforcement"
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "does_not_block": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_required_to_close": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sourceRefreshProtocolSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_conditions",
+        "england_sources",
+        "flanders_sources",
+        "source_refresh_execution_performed",
+        "local_expert_substitution_performed"
+      ],
+      "properties": {
+        "source_conditions": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "prefixItems": [
+            {
+              "const": "official_source_unchanged"
+            },
+            {
+              "const": "official_source_updated"
+            },
+            {
+              "const": "official_source_replaced"
+            },
+            {
+              "const": "official_source_unavailable"
+            },
+            {
+              "const": "source_gap_discovered"
+            },
+            {
+              "const": "source_outside_allowed_scope"
+            }
+          ]
+        },
+        "england_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "flanders_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_refresh_execution_performed": {
+          "const": false
+        },
+        "local_expert_substitution_performed": {
+          "const": false
+        }
+      }
+    },
+    "accessibilityTerm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_term",
+        "limitation",
+        "evidence_boundary"
+      ],
+      "properties": {
+        "source_term": {
+          "type": "string",
+          "minLength": 1
+        },
+        "local_term": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "schoolOwnedEvidenceBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boundary_area",
+        "why_school_owned",
+        "forbidden_inference"
+      ],
+      "properties": {
+        "boundary_area": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_school_owned": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_inference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "decisionSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selected",
+        "allowed_options",
+        "decision_selection_count",
+        "rationale"
+      ],
+      "properties": {
+        "selected": {
+          "const": "PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET"
+        },
+        "allowed_options": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "prefixItems": [
+            {
+              "const": "PROCEED_TO_BOUNDED_SOURCE_REFRESH_PACKET"
+            },
+            {
+              "const": "REVISE_LOCAL_EXPERT_SOURCE_GATE"
+            },
+            {
+              "const": "STOP_LOCAL_OVERLAY_TRACK"
+            }
+          ]
+        },
+        "decision_selection_count": {
+          "const": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "simulationCaseCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "england",
+        "flanders",
+        "required_case_types"
+      ],
+      "properties": {
+        "england": {
+          "const": 8
+        },
+        "flanders": {
+          "const": 8
+        },
+        "required_case_types": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "prefixItems": [
+            {
+              "const": "valid_official_source_refresh_request"
+            },
+            {
+              "const": "stale_source_detected"
+            },
+            {
+              "const": "source_gap"
+            },
+            {
+              "const": "non_official_source_proposed"
+            },
+            {
+              "const": "local_expert_uncertainty"
+            },
+            {
+              "const": "attempted_compliance_claim"
+            },
+            {
+              "const": "attempted_localized_output"
+            },
+            {
+              "const": "attempted_school_facing_output"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

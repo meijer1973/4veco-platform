@@ -102,10 +102,10 @@ The full target-exercise distribution audit is deferred to L2.4-TEA. L1.5Q may c
 | 2.1.2 | theory | Opbrengsten, winst en break-even | reviewed_final |
 | 2.1.3 | theory | Marginale kosten en marginale opbrengsten | reviewed_final |
 | 2.1.4 | gemengde_opgaven | Gemengde opgaven: kosten en opbrengsten | reviewed_final |
-| 2.2.1 | theory | Prijselasticiteit | migrated_from_v4_needs_v5_review |
-| 2.2.2 | theory | Elasticiteit en omzet | migrated_from_v4_needs_v5_review |
-| 2.2.3 | theory | Inkomenselasticiteit en kruiselingse elasticiteit | migrated_from_v4_needs_v5_review |
-| 2.2.4 | gemengde_opgaven | Gemengde opgaven: elasticiteit | placeholder_needs_review |
+| 2.2.1 | theory | Prijselasticiteit | reviewed_final |
+| 2.2.2 | theory | Elasticiteit en omzet | reviewed_final |
+| 2.2.3 | theory | Inkomenselasticiteit en kruiselingse elasticiteit | reviewed_final |
+| 2.2.4 | gemengde_opgaven | Gemengde opgaven: elasticiteit | reviewed_final |
 | 2.3.1 | theory | Consumentensurplus | migrated_from_v4_needs_v5_review |
 | 2.3.2 | theory | Producentensurplus en totaal surplus | migrated_from_v4_needs_v5_review |
 | 2.3.3 | theory | Pareto-efficientie en welvaartsverlies | migrated_from_v4_needs_v5_review |
@@ -219,19 +219,19 @@ Count-bearing gemengde-opgaven paragraph. Introduces no new theory. Reviewed aga
 
 ### §2.2.1 - Prijselasticiteit
 
-Migrated from v4 target exercise §2.1.1. Needs v5 review before it can be marked reviewed_final.
+Reviewed-final in `B2-2.2-TARGET-V5-PROMOTE`. The cinema/petrol target is represented in current student-facing 2.2.1 evidence with old-value percentage denominators, signed `Ev`, and `|Ev|` classification.
 
 ### §2.2.2 - Elasticiteit en omzet
 
-Migrated from v4 target exercise §2.1.2. Needs v5 review before it can be marked reviewed_final.
+Reviewed-final in `B2-2.2-TARGET-V5-PROMOTE`. The target remains bounded to `TO = P x Q` and omzet/totale-opbrengst reasoning, with no profit claim.
 
 ### §2.2.3 - Inkomenselasticiteit en kruiselingse elasticiteit
 
-Migrated from v4 target exercise §2.1.3. Needs v5 review before it can be marked reviewed_final.
+Reviewed-final in `B2-2.2-TARGET-V5-PROMOTE`. The inferior-good ambiguity from the migrated target is repaired: negative `Ei` is classified as inferieur, and the luxury/necessity split is applied only to normal goods. Demand-function reasoning is ceteris paribus.
 
 ### §2.2.4 - Gemengde opgaven: elasticiteit
 
-Count-bearing gemengde-opgaven paragraph. Introduces no new theory; requires a reviewed integration target exercise before final curriculum-quality claims.
+Count-bearing gemengde-opgaven paragraph. Introduces no new theory. Reviewed-final in `B2-2.2-TARGET-V5-PROMOTE` after replacement of the placeholder target with the StreamPlus mixed-transfer target and explicit mixed-target acceptance.
 
 ### §2.3.1 - Consumentensurplus
 

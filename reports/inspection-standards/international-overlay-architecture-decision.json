@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "report_id": "international-overlay-architecture-decision",
+  "sprint_id": "GOAL-IQS-OVERLAY-ARCHITECTURE-1",
+  "generated_date": "2026-06-22",
+  "access_date": "2026-06-22",
+  "status": "human_review_pending",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "foundation_sprint_id": "GOAL-IQS-FOUNDATION-1",
+  "foundation_decision_source": "reports/inspection-standards/international-foundation-decision.md",
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md",
+  "non_negotiable_requirements": [
+    "Cite the product end-state and original sprint/gate specification.",
+    "Cite the accepted GOAL-IQS-FOUNDATION-1 decision and preserve its authority boundaries.",
+    "Name non-negotiable requirements before conclusions.",
+    "Include a core-requirement checklist.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "Do not carry any missing core requirement as PASS WITH FLAGS.",
+    "Generate exactly the allowlisted overlay schema, four descriptors, governance docs, crosswalk, pilot report, and decision report.",
+    "Use explicit per-scope source and output allowlists; do not glob directories or discover sources implicitly.",
+    "Keep all country-edition, compliance, approval, public, school-facing, product-route, Scale Gate, diagnostics/mastery/PV, student-use, personal-data, OP0, PTA, summative, and inspection-readiness authority blocked."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "overlay_schema",
+      "requirement": "The descriptor schema names every required overlay field and blocks implicit source/output discovery.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "four_archetype_descriptors",
+      "requirement": "England, Flanders, Bavaria/Germany, and California/United States descriptors are generated as contrasting governance archetypes.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "official_source_allowlists",
+      "requirement": "Each descriptor carries explicit official-source allowlists with authority type, allowed use, and forbidden inference.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "curriculum_assessment_mapping",
+      "requirement": "Each descriptor separates curriculum mapping from assessment/exam mapping and names v0 gaps.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "book1_crosswalk",
+      "requirement": "Book 1 Chapters 1.2 and 1.3 are crosswalked to the four descriptors without country-edition output.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "school_owned_boundary",
+      "requirement": "Every descriptor preserves school-owned evidence, implementation, inspection, accreditation, and accountability boundaries.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "accessibility_inclusion_terms",
+      "requirement": "Each descriptor records local accessibility/inclusion terminology without compliance claims.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "refusal_and_stop_conditions",
+      "requirement": "Generator and checker refuse forbidden audiences, claims, integrations, and governance overgeneralisations.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "single_decision",
+      "requirement": "The architecture chooses exactly one allowed decision.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    },
+    {
+      "id": "human_review_stop",
+      "requirement": "The packet returns only after all descriptors, crosswalk, validators, specialist reviews, and final PR proof are complete.",
+      "status": "met_for_overlay_architecture",
+      "proof_required_to_close": "Generator/checker PASS, specialist reviews PASS after corrections, final lead PASS, fresh branch, green platform CI, and human review."
+    }
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false
+  },
+  "output_files_written": [
+    "references/schemas/international-jurisdiction-overlay.schema.json",
+    "references/data/inspection-standards/overlays/england.v0.json",
+    "references/data/inspection-standards/overlays/flanders.v0.json",
+    "references/data/inspection-standards/overlays/bavaria.v0.json",
+    "references/data/inspection-standards/overlays/california.v0.json",
+    "docs/inspection-standards/international-overlay-descriptor-contract.md",
+    "docs/inspection-standards/international-overlay-governance-rules.md",
+    "reports/inspection-standards/international-overlay-archetype-pilot.md",
+    "reports/inspection-standards/international-overlay-archetype-pilot.json",
+    "reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.md",
+    "reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json",
+    "reports/inspection-standards/international-overlay-architecture-decision.md",
+    "reports/inspection-standards/international-overlay-architecture-decision.json"
+  ],
+  "final_overlay_architecture_decision": {
+    "selected": "PROCEED_TO_SELECTED_JURISDICTION_DEEPENING",
+    "allowed_options": [
+      "PROCEED_TO_SELECTED_JURISDICTION_DEEPENING",
+      "REVISE_OVERLAY_SCHEMA",
+      "RESEARCH_GAPS_BEFORE_PILOT_EXPANSION"
+    ],
+    "rejected_options": [
+      "REVISE_OVERLAY_SCHEMA",
+      "RESEARCH_GAPS_BEFORE_PILOT_EXPANSION"
+    ],
+    "decision_selection_count": 1,
+    "meaning": "Proceed only to a later internal selected-jurisdiction deepening step if the human owner approves this packet. This does not authorise country editions, local implementation, public/school-facing output, product routes, or Scale Gate use.",
+    "basis": [
+      "international-overlay-archetype-pilot",
+      "book1-1.2-1.3-overlay-crosswalk",
+      "four explicit v0 jurisdiction descriptors",
+      "international-jurisdiction-overlay.schema.json"
+    ]
+  },
+  "authorizes_after_human_approval": [
+    "Internal selected-jurisdiction deepening planning.",
+    "Further source-refresh work for a selected jurisdiction if separately scoped.",
+    "Manual repository validation of descriptor and crosswalk currentness."
+  ],
+  "still_blocked": [
+    "country_compliance_claim",
+    "inspectorate_approval_claim",
+    "legal_compliance_claim",
+    "inspection_readiness_claim",
+    "school_pack_trial",
+    "teacher_school_distribution",
+    "public_external_distribution",
+    "evidence_pack_deployment",
+    "package_script_invocation",
+    "ci_invocation",
+    "dashboard_gate",
+    "quality_ref_integration",
+    "product_route_adoption",
+    "scale_gate_integration",
+    "diagnostics_mastery_pv",
+    "student_or_product_use",
+    "personal_data_processing",
+    "complete_op0_pta_summative_claim",
+    "op0_claim",
+    "pta_validity_claim",
+    "summative_validity_claim",
+    "single_national_us_inspection_claim",
+    "whole_uk_claim_from_england_only",
+    "all_belgium_claim_from_flanders_only",
+    "germany_single_land_claim",
+    "country_edition_generation",
+    "local_exam_code_implementation",
+    "teacher_school_facing_overlay",
+    "public_overlay_output",
+    "school_owned_evidence_collection",
+    "package_or_ci_product_integration",
+    "country_specific_legal_claim"
+  ],
+  "owner_next_action": "Human owner may accept, revise, or reject GOAL-IQS-OVERLAY-ARCHITECTURE-1. Acceptance authorizes only a future internal selected-jurisdiction deepening step, not country-edition or downstream product authority.",
+  "finding_classification": [
+    {
+      "finding": "The overlay descriptor schema, four descriptors, crosswalk, and validators are complete enough for human review.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing if all specialist and CI proof remain green.",
+      "does_not_block": "Human decision on the next internal selected-jurisdiction deepening step.",
+      "proof_required_to_close": "Final lead PASS, fresh mergeable PR, green CI, and human acceptance."
+    },
+    {
+      "finding": "Local implementation authority remains blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Country editions, public/school-facing output, teacher output, evidence packs, dashboard/package/CI product integration, quality-ref, product routes, Scale Gate, diagnostics/mastery/PV, student/product use, personal data, OP0, PTA, summative, inspection-readiness, compliance, and approval claims.",
+      "does_not_block": "Internal architecture review.",
+      "proof_required_to_close": "Separate human-authorised local implementation gate with local source, teacher, legal/privacy, and quality-inspection reviews."
+    }
+  ]
+}

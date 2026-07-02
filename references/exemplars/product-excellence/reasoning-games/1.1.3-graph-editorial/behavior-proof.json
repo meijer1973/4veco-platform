@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "exemplar": "reasoning-graph-113-golden-exemplar-v2",
+  "tested_surface": "reasoning-graph-113-golden-exemplar-v2-prototype.html",
+  "desktop": {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "source_pane": {
+      "client_height": 686,
+      "scroll_height": 1159,
+      "scrollable": true
+    },
+    "task_pane": {
+      "client_height": 688,
+      "scroll_height": 1883,
+      "scrollable": true
+    },
+    "headline_before_graph": true,
+    "headline_visible_in_initial_source_viewport": true,
+    "source_wheel_result": {
+      "source_scroll_top": 473,
+      "task_scroll_top": 0
+    },
+    "source_boundary_overscroll_result": {
+      "task_scroll_unchanged": true,
+      "document_scroll_unchanged": true
+    },
+    "task_wheel_result": {
+      "source_scroll_top": 0,
+      "task_scroll_top": 900
+    }
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "source_overflow_y": "visible",
+    "task_overflow_y": "visible",
+    "single_document_scroll": true,
+    "source_before_tasks": true
+  },
+  "validation": {
+    "embedded_javascript_syntax": "passed",
+    "candidate_json_parse": "passed",
+    "negative_fixture_json_parse": "passed",
+    "zip_integrity": "passed"
+  }
+}

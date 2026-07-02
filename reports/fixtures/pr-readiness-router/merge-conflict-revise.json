@@ -1,0 +1,53 @@
+{
+  "expected_route": "KEEP_DRAFT_REVISE",
+  "expected_reason": "merge_readiness_blocked",
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-platform",
+    "number": 113,
+    "url": "https://github.com/meijer1973/4veco-platform/pull/113",
+    "state": "OPEN",
+    "was_draft": true,
+    "base": "main",
+    "head_sha": "9090909090909090909090909090909090909090",
+    "merge_state": "DIRTY",
+    "mergeable": "CONFLICTING"
+  },
+  "throughput": {
+    "class": "normal_sprint",
+    "authority_class": "standard",
+    "level": "L1"
+  },
+  "human_review_payload": "none",
+  "consequence": "low",
+  "changed_paths": [
+    "build-scripts/review-gates/example.js"
+  ],
+  "proof": {
+    "ci": {
+      "head_sha": "9090909090909090909090909090909090909090",
+      "conclusion": "success",
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED"
+        }
+      ]
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/MERGE-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "9090909090909090909090909090909090909090"
+    },
+    "changed_paths_verified": true
+  }
+}

@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.7-inspect-11a-chapter-13-remediation-plan`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` in progress / Chapter 1.3 diagnostic readiness remediation plan
+Roadmap version: `v2.14-dutch-internal-system-closed`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` closed / Chapter 1.3 diagnostic readiness remediation plan merged; `INSPECT-11B` closed / Chapter 1.3 readiness remediation and diagnostic tool health repair merged; `INSPECT-11C` closed / Chapter 1.3 lesson-side reconciliation and proof remediation merged; `INSPECT-11D` closed / state A accepted and paired PRs merged; `INSPECT-11E/F` closed / Chapter 1.3 internal diagnostic onboarding merged; `GOAL-DQS-CLOSURE-1` accepted partial component; `GOAL-DQS-CLOSURE-1A` accepted and merged / Dutch internal-report-only system closed as `CLOSE_INTERNAL_SYSTEM`
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -39,9 +39,11 @@ The endpoint is:
 > evidence and known gaps without confusing product evidence with school-owned
 > implementation or competent-authority judgement.
 
-Non-Dutch standards work is not part of this roadmap. If the owner later wants
-non-Dutch work, it must start in a separate worktree with a separate roadmap,
-source policy, and review gate.
+Non-Dutch standards work is not part of this Dutch roadmap. The separate
+international roadmap at
+`docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
+may govern internal-only common-core and jurisdiction-overlay foundation work,
+but it does not expand Dutch closure into country editions or external claims.
 
 ## 1. Ownership And Repository Boundary
 
@@ -643,6 +645,291 @@ Acceptance criteria:
 - the recommendation names only a later bounded remediation/proof route, not
   report generation.
 
+### INSPECT-11B - Chapter 1.3 Readiness Remediation And Diagnostic Tool Health Repair
+
+Goal: produce the full post-INSPECT-11A remediation packet before any later
+Chapter 1.3 diagnostic report implementation plan is considered.
+
+Scope:
+
+- repair or formally classify the existing Chapter 1.2 diagnostic
+  byte-stability mismatch;
+- reconcile current `1.3.1` through `1.3.4` lesson-side quality-ref/review
+  status against source-registry target status;
+- create route-local proof-record candidates for operation-chain match,
+  answer-form match, scaffold/no-answer-before-attempt boundary, and
+  local-only authority;
+- decide the `1.3.4` integration/no-code/no-new-theory posture;
+- create accessibility/support and companion/advisory evidence decisions;
+- keep every blocker fielded with `blocks`, `does_not_block`, and
+  `proof_required_to_close`.
+
+Expected outputs:
+
+```text
+archive/sprints/INSPECT-11B/
+reports/inspection-standards/chapter-1-3-readiness-remediation-results.md
+reports/inspection-standards/chapter-1-3-readiness-remediation-results.json
+```
+
+Acceptance criteria:
+
+- the existing Chapter 1.2 diagnostic report pair is byte-stable or the exact
+  blocker remains explicit;
+- no Chapter 1.3 diagnostic report is generated;
+- no evidence pack is generated;
+- no generated lesson output, protected reference, or source-registry record is
+  mutated;
+- Chapter 1.3 is not declared diagnostic-ready while any core requirement is
+  missing;
+- lead review and specialist reviews are complete before human review.
+
+### INSPECT-11C - Chapter 1.3 Lesson-Side Reconciliation And Proof Remediation
+
+Goal: decide whether Chapter 1.3 can move to a later internal diagnostic
+implementation-plan sprint, must remain blocked with narrowed repairs, or should
+be rejected as the next diagnostic candidate because lesson-side divergence is
+too large.
+
+Scope:
+
+- reconcile current `1.3.1` through `1.3.4` quality-ref/review state;
+- resolve or formally carry the `1.3.4` lesson-output / registry divergence;
+- create exact route-local proof-record candidates with exercise IDs, line
+  ranges, answer/model separation, and scaffold/no-answer-before-attempt
+  boundaries;
+- record accessibility/support and companion/advisory evidence as blockers
+  where proof is missing;
+- answer whether an INSPECT-11D internal diagnostic implementation-plan sprint
+  is allowed or still blocked.
+
+Expected outputs:
+
+```text
+archive/sprints/INSPECT-11C/
+reports/inspection-standards/chapter-1-3-reconciliation-and-proof-remediation.md
+reports/inspection-standards/chapter-1-3-reconciliation-and-proof-remediation.json
+```
+
+Acceptance criteria:
+
+- no Chapter 1.3 diagnostic report is generated;
+- no evidence pack is generated;
+- no generated lesson output, protected reference, or source-registry record is
+  mutated;
+- missing proof is classified as a blocker and is not carried as PASS WITH
+  FLAGS;
+- all carried issues include `blocks`, `does_not_block`, and
+  `proof_required_to_close`;
+- lead review and specialist reviews are complete before human review;
+- the recommendation does not authorise report generation, product-route
+  adoption, Scale Gate, diagnostics/mastery/PV, or student/product-use work.
+
+### INSPECT-11D - Chapter 1.3 Paired Lesson Repair And Readiness Closure
+
+Goal: close the concrete Chapter 1.3 blockers narrowed by INSPECT-11C through
+coordinated platform and lesson work, then return one readiness result for
+human review.
+
+Allowed readiness outcomes:
+
+```text
+A. Chapter 1.3 is ready for a later internal diagnostic implementation-plan sprint.
+B. Chapter 1.3 remains blocked, but only by narrowly identified residual repairs.
+C. Chapter 1.3 is excluded as the next diagnostic scope.
+```
+
+Scope:
+
+- repair the `1.3.4` lesson-output/source-registry divergence through platform
+  source/generator changes and regenerated lesson output;
+- reconcile `1.3.1` through `1.3.4` quality-ref/review state;
+- produce exact route-local proof records with exercise IDs, line ranges,
+  operation-chain match, answer-form match, and no-answer-before-attempt
+  boundary;
+- produce rendered mobile/desktop accessibility and support evidence;
+- resolve companion/advisory status through reviewed evidence or explicit
+  not-applicable decision;
+- formalise source traceability for authored-registry versus stale-blueprint
+  ambiguity.
+
+Expected outputs:
+
+```text
+archive/sprints/INSPECT-11D/
+reports/inspection-standards/chapter-1-3-readiness-closure.md
+reports/inspection-standards/chapter-1-3-readiness-closure.json
+docs/inspection-standards/chapter-1-3-source-traceability.md
+Platform PR first, lesson PR second
+```
+
+Acceptance criteria:
+
+- platform source/generator changes drive any lesson output changes;
+- paired platform and lesson PRs are open, mergeable, and green before human
+  review;
+- the packet uses REV-STD-1 and cites product end-state plus original
+  sprint/gate spec;
+- all core requirements are checked and missing core requirements block rather
+  than appear as PASS WITH FLAGS;
+- carried issues include `blocks`, `does_not_block`, and
+  `proof_required_to_close`;
+- lead and specialist subagent reviews are complete and corrections are logged;
+- no Chapter 1.3 diagnostic report is generated;
+- no evidence pack is generated;
+- no product-route adoption, Scale Gate, diagnostics/mastery/PV, student-use,
+  or product-use authority is unlocked.
+
+### INSPECT-11E/F - Chapter 1.3 Internal Diagnostic Onboarding And Stability Closure
+
+Goal: deliver a functioning, manually invoked, internal-only Chapter 1.3
+diagnostic report system while preserving Chapter 1.2 report semantics.
+
+Status: closed and merged in platform PR #119. The Chapter 1.3 internal
+diagnostic report pair and Chapter 1.2 semantic-regression protection are now
+part of the current internal/report-only Dutch quality-standards layer.
+
+This sprint is authorised only because INSPECT-11D reached accepted state A
+after human review and the governed platform-first, lesson-second merge
+sequence. It is not evidence-pack, teacher/school-facing, public/external,
+product-route, Scale Gate, diagnostics/mastery/PV, student-use, or product-use
+authority.
+
+Scope:
+
+- define and lead-review the INSPECT-11E implementation plan;
+- refactor the manual generator into explicit Chapter 1.2 and Chapter 1.3
+  scope descriptors;
+- generate `reports/inspection-standards/chapter-1-3-diagnostic-report.md`
+  and `.json`;
+- preserve Chapter 1.2 report semantics with deterministic currentness checks;
+- require exact per-scope source and output allowlists;
+- refuse forbidden audiences, claims, integrations, unknown scopes, and lesson
+  output scanning;
+- record Chapter 1.1 and Chapter 1.4 Book 1 assembly health as separate
+  `BOOK1-ASSEMBLY-HEALTH-1` backlog context, not as an INSPECT-11E/F blocker.
+
+Acceptance criteria:
+
+- REV-STD-1 is used for plan, review, validation, closure, and PR packet;
+- Chapter 1.2 semantic hash remains unchanged while volatile checkout metadata
+  is deterministic;
+- Chapter 1.3 report visibly carries route-local-only evidence status,
+  school-owned evidence still needed, forbidden inferences,
+  accessibility/support limitations, check-surface authority separation, owner
+  next action, and proof required to close;
+- stability checker verifies both scopes and the exact Chapter 1.3 read-only
+  lesson Markdown proof paths;
+- teacher/economics, legal/privacy, Dutch quality-inspection, and final lead
+  reviews pass after corrections;
+- no package script, CI hook, dashboard gate, quality-ref integration, Scale
+  Gate integration, evidence pack, teacher/school-facing output,
+  public/external output, product-route adoption, diagnostics/mastery/PV,
+  student/product-use, personal-data processing, or compliance/approval claim
+  is created.
+
+### GOAL-DQS-CLOSURE-1 - Dutch Quality Standards Closure Candidate Component
+
+Goal: produce a reviewed closure candidate for the current authorised Dutch
+quality-standards repository layer after INSPECT-11E/F, without claiming full
+L4/L5 teacher/school-facing maturity.
+
+Status: accepted as a strong internal-layer closure component, but incomplete
+for the original authorised closure contract after PR #124 review.
+
+Scope:
+
+- generate a manual internal DQS closure-candidate report pair;
+- inventory authorised Dutch source/profile, report-only schema/validator,
+  bounded INSPECT-7 sample, and Chapter 1.2/1.3 internal diagnostic reports;
+- keep Dutch source register and evidence profile draft/bounded status visible;
+- classify current closure findings and carried blockers with `blocks`,
+  `does_not_block`, and `proof_required_to_close`;
+- update roadmap, ledger, and version index so INSPECT-11E/F is no longer the
+  current next step;
+- run teacher/usefulness, legal/privacy, Dutch quality-inspection, and final
+  lead reviews before human review.
+
+Acceptance criteria:
+
+- REV-STD-1 is used for plan, validation, closure, specialist reviews, final
+  lead review, PR packet, and human-review packet;
+- product end-state and original sprint/gate spec are cited;
+- all current-layer core requirements are met and future-authority gaps are
+  not carried as PASS WITH FLAGS;
+- the DQS closure candidate uses exact source/output allowlists and refusal
+  tests;
+- closure explicitly does not authorise evidence packs, teacher/school-facing
+  output, public/external output, package/CI/dashboard gates, quality-ref,
+  Scale Gate, product-route adoption, diagnostics/mastery/PV,
+  student/product-use, personal-data processing, non-Dutch standards work, or
+  compliance/approval claims.
+
+### GOAL-DQS-CLOSURE-1A - Original Closure Contract Completion
+
+Goal: complete the original Dutch closure contract on the same branch and PR by
+adding the missing Dutch multi-scope roll-up, internal school-evidence-pack
+candidate, and formal closure-policy decision.
+
+Required outputs:
+
+```text
+reports/inspection-standards/dutch-quality-standards-rollup.md
+reports/inspection-standards/dutch-quality-standards-rollup.json
+reports/inspection-standards/dutch-school-evidence-pack-candidate.md
+reports/inspection-standards/dutch-school-evidence-pack-candidate.json
+reports/inspection-standards/dutch-quality-standards-closure-candidate.md
+reports/inspection-standards/dutch-quality-standards-closure-candidate.json
+```
+
+Required final decision vocabulary:
+
+```text
+CLOSE_INTERNAL_SYSTEM
+AUTHORISE_BOUNDED_SCHOOL_PACK_TRIAL
+REMEDIATE_BEFORE_CLOSURE
+```
+
+Current closure-policy decision in PR #124 after 1A completion:
+
+```text
+CLOSE_INTERNAL_SYSTEM
+```
+
+Meaning: the internal/report-only Dutch system is closed and stable after human
+acceptance and merge. No school-pack trial is authorised.
+
+Acceptance criteria:
+
+- REV-STD-1 is used for plan, validation, closure, specialist reviews, final
+  lead review, PR packet, and human-review packet;
+- all three artifact pairs exist and use exact source/output allowlists;
+- the roll-up consolidates Chapter 1.1 historical bounded control, Chapter 1.2
+  internal diagnostic scope with active blockers, Chapter 1.3 internal
+  diagnostic scope with route-local evidence and downstream blockers, and the
+  system layer;
+- each roll-up category includes strong product evidence, route-local
+  diagnostic evidence, weak or missing evidence, school-owned evidence still
+  needed, forbidden inference, `blocks`, `does_not_block`, and
+  `proof_required_to_close`;
+- the internal school-evidence-pack candidate opens with the required
+  internal-only warning text and includes all required sections;
+- the closure candidate chooses exactly one allowed decision based on both the
+  roll-up and internal pack candidate;
+- the DQS checker verifies exact allowlists, safe-use language, false
+  authority flags, draft source/profile visibility, roll-up/pack/closure
+  consistency, no public/school-facing authorisation, no international scope,
+  and refusal cases;
+- teacher/economics, legal/privacy, Dutch quality-inspection, accessibility,
+  and final lead reviews pass after corrections;
+- PR #124 is 0 behind current `main`, non-draft, mergeable, and green before
+  human review.
+
+This sprint does not authorise school-pack trial work, teacher/school-facing
+output, public/external output, product-route adoption, Scale Gate,
+diagnostics/mastery/PV, student/product-use, personal-data processing,
+international work, or compliance/approval claims.
+
 ### INSPECT-12 - Dutch Teacher/School Evidence Pack
 
 Goal: make the Dutch evidence pack useful as a school/teacher review artifact.
@@ -756,31 +1043,39 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Complete INSPECT-11A Chapter 1.3 diagnostic readiness remediation plan
+Use the separate international roadmap only for GOAL-IQS-FOUNDATION-1
+internal common-core and jurisdiction-overlay foundation review.
 ```
 
-Recommended posture after INSPECT-11 merge:
+Recommended posture after GOAL-DQS-CLOSURE-1A merge:
 
 ```text
-accept or revise only INSPECT-11A remediation-plan output and next-route recommendation
-do not generate a new diagnostic report during INSPECT-11A
+recognise GOAL-DQS-CLOSURE-1A as accepted and merged on PR #124
+recognise the Dutch internal/report-only system as closed under CLOSE_INTERNAL_SYSTEM
+recognise GOAL-DQS-CLOSURE-1 as accepted partial internal-layer work only
+recognise Chapter 1.2 and Chapter 1.3 only as manual internal diagnostic reports
+do not generate a Chapter 1.3 distributed evidence pack or any school/public evidence pack
 keep the older multi-scope evidence-pack INSPECT-11 row blocked
-keep Chapter 1.3 diagnostic report generation blocked until later human-reviewed remediation closes core proof gaps
+keep teacher/school-facing, public/external, product-route, and Scale Gate uses blocked
 keep Chapter 1.2 pack-strength, teacher/school-facing, and public/external work blocked
 keep package/CI/dashboard/quality-ref/Scale Gate integration blocked
-keep generated lesson-output mutation blocked
+do not mutate generated lesson output or protected references
 keep product-route adoption, diagnostics/mastery/PV, and student/product-use authority blocked
-keep non-Dutch standards work out of this roadmap
+keep non-Dutch standards work out of this Dutch roadmap
+route international foundation work through docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 keep personal-data processing and compliance/approval claims blocked
 ```
 
-The practical product question carried forward from INSPECT-11 into
-INSPECT-11A is:
+The practical product question carried forward after GOAL-DQS-CLOSURE-1A is:
 
-> What exact proof, quality-ref/review reconciliation, accessibility/support,
-> companion/advisory, and authority-boundary work is required before Chapter
-> 1.3 can move from best next planning candidate to any future diagnostic
-> report consideration?
+> Can the original Dutch closure contract now be accepted with the explicit
+> decision CLOSE_INTERNAL_SYSTEM while keeping school-facing, public, product,
+> Scale Gate, student-use, personal-data, and compliance authority blocked?
+
+That question is answered `yes` by the accepted GOAL-DQS-CLOSURE-1A human
+review and PR #124 merge. Later Dutch product, school-facing, public,
+evidence-pack, Scale Gate, student/product-use, personal-data, compliance, and
+approval work still requires a separate human-authorised sprint.
 
 ## 9. Explicit Out-Of-Scope Work
 
@@ -800,5 +1095,7 @@ Scale Gate integration
 quality-ref integration
 ```
 
-If non-Dutch work is later desired, start a separate worktree and a separate
-roadmap after the Dutch quality-control package has reached clean closure.
+Non-Dutch work is now routed to the separate international roadmap only. That
+roadmap starts with internal foundation analysis and does not authorise country
+implementation, school/public distribution, product routes, or compliance
+claims.

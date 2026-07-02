@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redeneerspel — Bouw de economische keten</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --panel-2: #eef4f8;
+      --text: #142033;
+      --muted: #5d6b7c;
+      --line: #d7e1eb;
+      --accent: #1c5d99;
+      --accent-soft: #e5f0fb;
+      --flow: #1f7a68;
+      --flow-soft: #e6f5f1;
+      --warn: #8a5a00;
+      --warn-bg: #fff4cf;
+      --bad: #8a1f1f;
+      --bad-bg: #fdecec;
+      --good: #216e4e;
+      --good-bg: #e8f7ef;
+      --shadow: 0 14px 36px rgba(15, 23, 42, 0.09);
+      --radius: 18px;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    html[data-theme="dark"] {
+      --bg: #0b1020;
+      --panel: #111827;
+      --panel-2: #172033;
+      --text: #eef2ff;
+      --muted: #a7b2c5;
+      --line: #2e3b52;
+      --accent: #8ec5ff;
+      --accent-soft: #112a45;
+      --flow: #8be0c6;
+      --flow-soft: #103128;
+      --warn: #ffd36d;
+      --warn-bg: #332400;
+      --bad: #ffaaa7;
+      --bad-bg: #351414;
+      --good: #8ce0b5;
+      --good-bg: #10281e;
+      --shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background:
+        radial-gradient(circle at top left, color-mix(in srgb, var(--accent-soft) 72%, transparent), transparent 34rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    button, input, textarea, select { font: inherit; }
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .topbar strong { letter-spacing: -0.01em; }
+    .theme-toggle, .small-button, .primary-button {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--text);
+      padding: 9px 14px;
+      cursor: pointer;
+      font-weight: 750;
+    }
+    .primary-button {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+    .card {
+      background: color-mix(in srgb, var(--panel) 98%, transparent);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.035em;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .lead { margin: 0; max-width: 76ch; color: var(--muted); font-size: 18px; }
+    .route {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .route h2 { margin: 0; font-size: 18px; }
+    .route-item {
+      display: grid;
+      gap: 2px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      background: var(--panel-2);
+    }
+    .route-item span { color: var(--muted); font-size: 13px; }
+    .route-item strong { color: var(--text); }
+    .layout {
+      display: grid;
+      grid-template-columns: 380px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .sticky { position: sticky; top: 16px; }
+    h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
+    h2 { margin: 0 0 12px; font-size: 24px; }
+    h3 { margin: 0 0 8px; font-size: 19px; }
+    p { margin: 0 0 12px; }
+    .source-list {
+      display: grid;
+      gap: 10px;
+      margin: 12px 0 0;
+    }
+    .source-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      background: var(--panel-2);
+    }
+    .source-card strong { display: block; margin-bottom: 4px; }
+    .subtle { color: var(--muted); font-size: 14px; }
+    .task { margin-bottom: 18px; }
+    .task.locked {
+      opacity: .62;
+      position: relative;
+    }
+    .task.locked::after {
+      content: "Rond eerst het vorige onderdeel af.";
+      position: absolute;
+      inset: 12px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: 850;
+      color: var(--muted);
+      background: color-mix(in srgb, var(--panel) 86%, transparent);
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      pointer-events: none;
+    }
+    .task-header {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .badge {
+      flex: none;
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 900;
+    }
+    .task-title { margin: 0; }
+    .task-purpose { margin: 3px 0 0; color: var(--muted); }
+    .meter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .meter-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: var(--panel-2);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+    .meter-step.done { border-color: var(--flow); background: var(--flow-soft); color: var(--flow); }
+    .deck {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+    .flow-card, .connector-card, .sentence-card, .slot, .arrow-slot {
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--text);
+      border-radius: 14px;
+      min-height: 42px;
+      padding: 10px 12px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .flow-card {
+      display: inline-grid;
+      gap: 3px;
+      max-width: 220px;
+      min-width: 150px;
+    }
+    .flow-card small, .connector-card small, .sentence-card small { color: var(--muted); font-weight: 650; }
+    .flow-card[aria-pressed="true"], .connector-card[aria-pressed="true"], .sentence-card[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .flow-card.used, .connector-card.used, .sentence-card.used { opacity: .45; cursor: not-allowed; }
+    .flowchart {
+      display: grid;
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .flow-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 78px minmax(0, 1fr);
+      gap: 8px;
+      align-items: stretch;
+    }
+    .slot, .arrow-slot {
+      width: 100%;
+      min-height: 74px;
+      display: grid;
+      align-content: center;
+      gap: 3px;
+      background: color-mix(in srgb, var(--panel) 96%, var(--panel-2));
+    }
+    .slot strong, .arrow-slot strong { color: var(--muted); font-size: 13px; }
+    .slot .value, .arrow-slot .value { font-weight: 850; color: var(--text); }
+    .slot.filled, .arrow-slot.filled {
+      border-color: var(--flow);
+      background: var(--flow-soft);
+    }
+    .slot.filled .value, .arrow-slot.filled .value { color: var(--flow); }
+    .arrow-slot {
+      min-height: 74px;
+      place-items: center;
+      text-align: center;
+      border-radius: 999px;
+    }
+    .arrow-slot .arrow { display: block; color: var(--muted); }
+    .flow-long {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .flow-long .slot { min-height: 92px; }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      align-items: center;
+    }
+    .feedback {
+      margin-top: 12px;
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    .feedback.show { display: block; }
+    .feedback.good { background: var(--good-bg); color: var(--good); border-color: color-mix(in srgb, var(--good) 42%, var(--line)); }
+    .feedback.warn { background: var(--warn-bg); color: var(--warn); border-color: color-mix(in srgb, var(--warn) 42%, var(--line)); }
+    .feedback.bad { background: var(--bad-bg); color: var(--bad); border-color: color-mix(in srgb, var(--bad) 42%, var(--line)); }
+    .feedback strong { display: block; margin-bottom: 4px; }
+    .sentence-builder {
+      display: grid;
+      gap: 12px;
+    }
+    .answer-frame {
+      display: grid;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      background: color-mix(in srgb, var(--panel) 92%, var(--panel-2));
+    }
+    .answer-row {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 10px;
+      align-items: stretch;
+    }
+    .answer-row label {
+      align-self: center;
+      color: var(--muted);
+      font-weight: 850;
+    }
+    .sentence-slot {
+      min-height: 46px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: var(--panel);
+      cursor: pointer;
+      color: var(--muted);
+    }
+    .sentence-slot.filled { border-style: solid; border-color: var(--flow); background: var(--flow-soft); color: var(--flow); font-weight: 850; }
+    .free-response {
+      display: grid;
+      gap: 6px;
+      margin-top: 14px;
+    }
+    .free-response textarea {
+      min-height: 90px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel);
+      color: var(--text);
+      padding: 12px;
+    }
+
+    .goal-box {
+      display: grid;
+      gap: 6px;
+      margin: 0 0 14px;
+      padding: 14px 16px;
+      border: 2px solid color-mix(in srgb, var(--accent) 50%, var(--line));
+      border-radius: 16px;
+      background: var(--accent-soft);
+    }
+    .goal-box strong {
+      color: var(--accent);
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .goal-box span {
+      font-weight: 750;
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .connector-sentence {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(120px, 160px) minmax(0, 1fr);
+      gap: 10px;
+      align-items: stretch;
+      margin-bottom: 10px;
+    }
+    .sentence-part {
+      display: grid;
+      align-items: center;
+      min-height: 58px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .connector-sentence .arrow-slot {
+      min-height: 58px;
+    }
+    .completion {
+      display: none;
+      margin-top: 18px;
+      border-color: color-mix(in srgb, var(--good) 38%, var(--line));
+      background: var(--good-bg);
+    }
+    .completion.show { display: block; }
+    details { margin-top: 18px; }
+    summary { cursor: pointer; font-weight: 850; }
+    .note-list { margin: 10px 0 0 18px; color: var(--muted); }
+    .note-list li { margin-bottom: 6px; }
+    button:focus-visible, textarea:focus-visible, .slot:focus-visible, .arrow-slot:focus-visible, .sentence-slot:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--accent) 38%, transparent);
+      outline-offset: 2px;
+    }
+    @media (max-width: 980px) {
+      .hero, .layout { grid-template-columns: 1fr; }
+      .sticky { position: static; }
+      .flow-long { grid-template-columns: 1fr; }
+      .flow-row { grid-template-columns: 1fr; }
+      .arrow-slot { min-height: 48px; border-radius: 14px; }
+      .arrow-slot .arrow { transform: rotate(90deg); }
+    }
+    @media (max-width: 760px) {
+      .connector-sentence {
+        grid-template-columns: 1fr;
+      }
+      .connector-sentence .arrow-slot::before,
+      .connector-sentence .arrow-slot::after {
+        content: none;
+      }
+    }
+    @media (max-width: 620px) {
+      .wrap { padding: 12px; }
+      .card { padding: 16px; border-radius: 14px; }
+      .hero h1 { font-size: 30px; }
+      .lead { font-size: 16px; }
+      .answer-row { grid-template-columns: 1fr; }
+      .flow-card { width: 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <strong>4veco · Redeneerspel exemplar</strong>
+      <button type="button" class="theme-toggle" id="themeToggle">Donkere modus</button>
+    </div>
+
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Redeneren · flowchartgame</p>
+        <h1>Bouw de economische keten</h1>
+        <p class="lead">Lees de bron, bouw een oorzaak-gevolgketen, leg de verbanden en maak daarna een toetszin. Eén spelvorm, drie korte rondes, geen mode-overload.</p>
+        <div class="meter" aria-label="Voortgang">
+          <span class="meter-step" id="meter1">1. Keten</span>
+          <span class="meter-step" id="meter2">2. Verbanden</span>
+          <span class="meter-step" id="meter3">3. Toetszin</span>
+        </div>
+      </div>
+      <aside class="card route" aria-label="Oefenroute">
+        <h2>Herstelroute</h2>
+        <div class="route-item"><span>Redeneren</span><strong>Oorzaak → gevolg</strong></div>
+        <div class="route-item"><span>Redeneren</span><strong>Economisch mechanisme</strong></div>
+        <div class="route-item"><span>Schrijven</span><strong>Toetszin met richting</strong></div>
+      </aside>
+    </section>
+
+    <section class="layout">
+      <aside class="card sticky" aria-label="Bronnen">
+        <h2>Bron — station zonder parkeerplaatsen</h2>
+        <div class="goal-box" aria-label="Doel van deze game">
+          <strong>Doel van deze game</strong>
+          <span>Bouw een economische redenering over een mogelijke prijsverandering. Gebruik de bron, vraag en aanbod, en sluit af met een conclusie met richting.</span>
+        </div>
+        <p>De gemeente haalt een deel van de parkeerplaatsen bij het station weg. Reizigers kunnen daardoor minder makkelijk met de auto naar het station. Het aantal huurfietsen bij het station blijft op korte termijn gelijk.</p>
+        <div class="source-list">
+          <div class="source-card"><strong>Gegeven 1</strong><span>Er zijn minder parkeerplaatsen bij het station.</span></div>
+          <div class="source-card"><strong>Gegeven 2</strong><span>Meer reizigers willen een huurfiets gebruiken.</span></div>
+          <div class="source-card"><strong>Gegeven 3</strong><span>Het aanbod van huurfietsen blijft voorlopig gelijk.</span></div>
+        </div>
+        <p class="subtle" style="margin-top:12px;">Gebruik alleen de brongegevens hierboven. Bouw eerst de redenering; formuleer daarna pas je toetszin.</p>
+      </aside>
+
+      <section aria-label="Spelrondes">
+        <article class="card task" id="taskChain">
+          <div class="task-header">
+            <span class="badge">1</span>
+            <div>
+              <h2 class="task-title">Bouw de oorzaak-gevolgketen</h2>
+              <p class="task-purpose">Plaats de kaarten in de volgorde waarin je de redenering straks zou opschrijven.</p>
+            </div>
+          </div>
+          <h3>Kaarten</h3>
+          <p class="subtle">Klik eerst een kaart, klik daarna een vak in de keten. Er zitten afleiders tussen.</p>
+          <div class="deck" id="chainDeck"></div>
+          <div class="flow-long" id="chainSlots"></div>
+          <div class="controls">
+            <button type="button" class="small-button" onclick="resetChain()">Wis keten</button>
+            <button type="button" class="primary-button" onclick="checkChain()">Controleer keten</button>
+          </div>
+          <div class="feedback" id="feedbackChain" tabindex="-1" role="status" aria-live="polite"></div>
+        </article>
+
+        <article class="card task locked" id="taskLinks">
+          <div class="task-header">
+            <span class="badge">2</span>
+            <div>
+              <h2 class="task-title">Maak van de schakels goede zinnen</h2>
+              <p class="task-purpose">Plaats verbindingswoorden zodat elke rij als een goede Nederlandse economische zin leest.</p>
+            </div>
+          </div>
+          <h3>Verbindingswoorden</h3>
+          <p class="subtle">Klik een verbindingswoord en plaats het in een zin. Het woord “daardoor” mag je meer dan één keer gebruiken.</p>
+          <div class="deck" id="connectorDeck"></div>
+          <div class="flowchart" id="connectorSlots"></div>
+          <div class="controls">
+            <button type="button" class="small-button" onclick="resetConnectors()">Wis verbanden</button>
+            <button type="button" class="primary-button" onclick="checkConnectors()">Controleer verbanden</button>
+          </div>
+          <div class="feedback" id="feedbackConnectors" tabindex="-1" role="status" aria-live="polite"></div>
+        </article>
+
+        <article class="card task locked" id="taskSentence">
+          <div class="task-header">
+            <span class="badge">3</span>
+            <div>
+              <h2 class="task-title">Maak een toetszin</h2>
+              <p class="task-purpose">Bouw één toetszin die laat zien hoe een bronverandering via vraag en aanbod tot een prijsgevolg kan leiden.</p>
+            </div>
+          </div>
+          <div class="sentence-builder">
+            <h3>Zinsdelen</h3>
+            <p class="subtle">Kies drie zinsdelen. De slots geven de antwoordstructuur; de kaartjes zelf hebben geen verborgen rol-labels.</p>
+            <div class="deck" id="sentenceDeck"></div>
+            <div class="answer-frame">
+              <div class="answer-row">
+                <label>Oorzaak</label>
+                <button type="button" class="sentence-slot" data-sentence-slot="cause">Nog leeg</button>
+              </div>
+              <div class="answer-row">
+                <label>Mechanisme</label>
+                <button type="button" class="sentence-slot" data-sentence-slot="mechanism">Nog leeg</button>
+              </div>
+              <div class="answer-row">
+                <label>Conclusie</label>
+                <button type="button" class="sentence-slot" data-sentence-slot="conclusion">Nog leeg</button>
+              </div>
+            </div>
+            <div class="free-response">
+              <label for="ownSentence"><strong>Eigen formulering</strong> <span class="subtle">optioneel, maar goed om hardop te oefenen</span></label>
+              <textarea id="ownSentence" placeholder="Schrijf je eigen toetszin in volledige zinnen."></textarea>
+            </div>
+            <div class="controls">
+              <button type="button" class="small-button" onclick="resetSentence()">Wis toetszin</button>
+              <button type="button" class="primary-button" onclick="checkSentence()">Controleer toetszin</button>
+            </div>
+            <div class="feedback" id="feedbackSentence" tabindex="-1" role="status" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <section class="card completion" id="completion">
+          <h2>Redeneerketen afgerond</h2>
+          <p>Je hebt bron, oorzaak, mechanisme en conclusie in één economische redenering gezet. Gebruik dezelfde volgorde in je schrift of bij een toetsvraag.</p>
+        </section>
+
+        <details class="card">
+          <summary>Ontwerpnotitie voor repository-teams</summary>
+          <ul class="note-list">
+            <li>Gebruik één kernspelvorm per reasoning game: bron lezen → keten bouwen → verbanden leggen → toetszin maken.</li>
+            <li>Het doel moet de vaardigheid noemen, maar mag niet de volledige economische antwoordketen vooraf geven.</li>
+            <li>Gebruik “daardoor” als standaard oorzaak-gevolgwoord. Gebruik “waardoor” niet als apart beoordeeld woord tenzij de zinsconstructie dat taalonderscheid expliciet en eerlijk toetst.</li>
+            <li>De layout volgt source-left/task-right op desktop en source-before-task op mobiel.</li>
+            <li>Flowcharts zijn de standaardvorm voor oorzaak-gevolgredeneringen; andere vormen mogen alleen als ze de denkhandeling beter representeren.</li>
+            <li>Laat verkeerde keuzes mogelijk zijn. Afleiders moeten economisch plausibel zijn, niet absurd.</li>
+            <li>Gebruik geen verborgen correcte controles: als iets getoetst wordt, moet de leerling ook fout kunnen kiezen.</li>
+            <li>Feedback komt na controle, noemt de zwakke schakel en verwijst naar een oefenroute. Geen cijfers, mastery, diagnose of summatieve taal.</li>
+            <li>Een goed spel voelt licht en interactief, maar de interactie dient de redenering; gamification mag de economische keten niet verbergen.</li>
+          </ul>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const GAME = {
+      chainCards: [
+        { id: 'parking_less', label: 'Minder parkeerplaatsen bij het station', type: 'oorzaak' },
+        { id: 'bike_demand_more', label: 'Meer reizigers willen een huurfiets', type: 'gevolg' },
+        { id: 'demand_up', label: 'De vraag naar huurfietsen neemt toe', type: 'mechanisme' },
+        { id: 'supply_same', label: 'Het aanbod blijft op korte termijn gelijk', type: 'voorwaarde' },
+        { id: 'shortage', label: 'Er ontstaat een vraagoverschot bij de huurfietsen', type: 'mechanisme' },
+        { id: 'price_up', label: 'De huurprijs kan stijgen', type: 'conclusie' },
+        { id: 'demand_down', label: 'De vraag naar huurfietsen daalt', type: 'afleider' },
+        { id: 'supply_up', label: 'Het aanbod stijgt meteen mee', type: 'afleider' },
+        { id: 'price_down', label: 'De huurprijs daalt', type: 'afleider' }
+      ],
+      chainSlots: [
+        { id: 's1', label: 'Stap 1', expected: 'parking_less' },
+        { id: 's2', label: 'Stap 2', expected: 'bike_demand_more' },
+        { id: 's3', label: 'Stap 3', expected: 'demand_up' },
+        { id: 's4', label: 'Stap 4', expected: 'supply_same' },
+        { id: 's5', label: 'Stap 5', expected: 'shortage' },
+        { id: 's6', label: 'Stap 6', expected: 'price_up' }
+      ],
+      connectors: [
+        { id: 'daardoor', label: 'daardoor', hint: 'oorzaak → gevolg', reusable: true },
+        { id: 'terwijl', label: 'terwijl', hint: 'tegelijk / voorwaarde' },
+        { id: 'dus', label: 'dus', hint: 'conclusie' },
+        { id: 'maar', label: 'maar', hint: 'tegenstelling' },
+        { id: 'omdat', label: 'omdat', hint: 'reden achteraf' }
+      ],
+      connectorSlots: [
+        { id: 'a1', before: 'Er verdwijnen parkeerplaatsen bij het station;', after: 'willen meer reizigers een huurfiets gebruiken.', expected: 'daardoor' },
+        { id: 'a2', before: 'Meer reizigers willen een huurfiets gebruiken;', after: 'neemt de vraag naar huurfietsen toe.', expected: 'daardoor' },
+        { id: 'a3', before: 'De vraag naar huurfietsen neemt toe,', after: 'het aanbod op korte termijn gelijk blijft.', expected: 'terwijl' },
+        { id: 'a4', before: 'Er ontstaat een vraagoverschot bij de huurfietsen,', after: 'kan de huurprijs stijgen.', expected: 'dus' }
+      ],
+      sentenceFragments: [
+        { id: 'cause_ok', role: 'cause', label: 'Doordat parkeerplaatsen verdwijnen, willen meer reizigers een huurfiets gebruiken.' },
+        { id: 'mechanism_ok', role: 'mechanism', label: 'De vraag stijgt terwijl het aanbod op korte termijn gelijk blijft.' },
+        { id: 'conclusion_ok', role: 'conclusion', label: 'Daardoor kan de huurprijs van huurfietsen stijgen.' },
+        { id: 'cause_wrong', role: 'cause', label: 'Doordat het aanbod van fietsen direct stijgt, verandert de markt.' },
+        { id: 'mechanism_wrong', role: 'mechanism', label: 'De vraag daalt terwijl het aanbod gelijk blijft.' },
+        { id: 'conclusion_wrong', role: 'conclusion', label: 'Daardoor kan de huurprijs van huurfietsen dalen.' }
+      ]
+    };
+
+    const state = {
+      selectedChainCard: null,
+      chain: {},
+      selectedConnector: null,
+      connectors: {},
+      selectedSentenceFragment: null,
+      sentence: {}
+    };
+
+    function byId(id) { return document.getElementById(id); }
+    function cardById(id) { return GAME.chainCards.find(c => c.id === id); }
+    function connectorById(id) { return GAME.connectors.find(c => c.id === id); }
+    function sentenceById(id) { return GAME.sentenceFragments.find(c => c.id === id); }
+
+    function render() {
+      renderChainDeck();
+      renderChainSlots();
+      renderConnectorDeck();
+      renderConnectorSlots();
+      renderSentenceDeck();
+      bindSentenceSlots();
+    }
+
+    function renderChainDeck() {
+      byId('chainDeck').innerHTML = GAME.chainCards.map(card => {
+        const used = Object.values(state.chain).includes(card.id);
+        const pressed = state.selectedChainCard === card.id;
+        return `<button type="button" class="flow-card ${used ? 'used' : ''}" ${used ? 'disabled' : ''} aria-pressed="${pressed}" onclick="selectChainCard('${card.id}')"><span>${card.label}</span></button>`;
+      }).join('');
+    }
+
+    function renderChainSlots() {
+      byId('chainSlots').innerHTML = GAME.chainSlots.map(slot => {
+        const card = cardById(state.chain[slot.id]);
+        return `<button type="button" class="slot ${card ? 'filled' : ''}" onclick="placeChainCard('${slot.id}')"><strong>${slot.label}</strong><span class="value">${card ? card.label : 'Klik om kaart te plaatsen'}</span></button>`;
+      }).join('');
+    }
+
+    function selectChainCard(id) {
+      if (Object.values(state.chain).includes(id)) return;
+      state.selectedChainCard = state.selectedChainCard === id ? null : id;
+      renderChainDeck();
+    }
+
+    function placeChainCard(slotId) {
+      if (!state.selectedChainCard) return;
+      state.chain[slotId] = state.selectedChainCard;
+      state.selectedChainCard = null;
+      renderChainDeck();
+      renderChainSlots();
+      hideFeedback('feedbackChain');
+    }
+
+    function resetChain() {
+      state.selectedChainCard = null;
+      state.chain = {};
+      lock('taskLinks');
+      lock('taskSentence');
+      setMeter(1, false);
+      setMeter(2, false);
+      setMeter(3, false);
+      byId('completion').classList.remove('show');
+      renderChainDeck();
+      renderChainSlots();
+      hideFeedback('feedbackChain');
+    }
+
+    function checkChain() {
+      const wrong = GAME.chainSlots.filter(slot => state.chain[slot.id] !== slot.expected);
+      if (wrong.length === 0) {
+        showFeedback('feedbackChain', 'good', 'Keten klopt', 'Je oorzaak-gevolgketen loopt van brongegeven naar vraag, gelijk aanbod, vraagoverschot en conclusie. Ga door naar de verbindingswoorden.');
+        unlock('taskLinks');
+        setMeter(1, true);
+      } else {
+        const missing = GAME.chainSlots.filter(slot => !state.chain[slot.id]).length;
+        const msg = missing ? `Er ontbreken nog ${missing} vak(ken).` : 'Er staat minstens één kaart op een plek waar de redenering niet logisch doorloopt.';
+        showFeedback('feedbackChain', 'bad', 'Keten nog niet logisch', `${msg} Begin bij het brongegeven en vraag steeds: wat verandert er in vraag, aanbod, schaarste en prijs?`);
+      }
+    }
+
+    function renderConnectorDeck() {
+      byId('connectorDeck').innerHTML = GAME.connectors.map(conn => {
+        const used = Object.values(state.connectors).includes(conn.id);
+        const reusable = conn.reusable === true;
+        const pressed = state.selectedConnector === conn.id;
+        return `<button type="button" class="connector-card ${used && !reusable ? 'used' : ''}" ${used && !reusable ? 'disabled' : ''} aria-pressed="${pressed}" onclick="selectConnector('${conn.id}')"><strong>${conn.label}</strong><small>${conn.hint}</small></button>`;
+      }).join('');
+    }
+
+    function renderConnectorSlots() {
+      byId('connectorSlots').innerHTML = GAME.connectorSlots.map((slot, index) => {
+        const conn = connectorById(state.connectors[slot.id]);
+        return `<div class="connector-sentence"><div class="sentence-part">${slot.before}</div><button type="button" class="arrow-slot ${conn ? 'filled' : ''}" onclick="placeConnector('${slot.id}')"><strong>Verbindingswoord</strong><span class="value">${conn ? conn.label : 'Kies'}</span></button><div class="sentence-part">${slot.after}</div></div>`;
+      }).join('');
+    }
+
+    function selectConnector(id) {
+      const conn = connectorById(id);
+      if (!conn || (Object.values(state.connectors).includes(id) && conn.reusable !== true)) return;
+      state.selectedConnector = state.selectedConnector === id ? null : id;
+      renderConnectorDeck();
+    }
+
+    function placeConnector(slotId) {
+      if (isLocked('taskLinks')) return;
+      if (!state.selectedConnector) return;
+      state.connectors[slotId] = state.selectedConnector;
+      state.selectedConnector = null;
+      renderConnectorDeck();
+      renderConnectorSlots();
+      hideFeedback('feedbackConnectors');
+    }
+
+    function resetConnectors() {
+      state.selectedConnector = null;
+      state.connectors = {};
+      lock('taskSentence');
+      setMeter(2, false);
+      setMeter(3, false);
+      byId('completion').classList.remove('show');
+      renderConnectorDeck();
+      renderConnectorSlots();
+      hideFeedback('feedbackConnectors');
+    }
+
+    function checkConnectors() {
+      if (isLocked('taskLinks')) return;
+      const wrong = GAME.connectorSlots.filter(slot => state.connectors[slot.id] !== slot.expected);
+      if (wrong.length === 0) {
+        showFeedback('feedbackConnectors', 'good', 'Verbanden kloppen', 'Je laat zien hoe de stappen aan elkaar hangen: oorzaak-gevolg, aanbodvoorwaarde, vraagoverschot en conclusie. Maak nu de toetszin.');
+        unlock('taskSentence');
+        setMeter(2, true);
+      } else {
+        const missing = GAME.connectorSlots.filter(slot => !state.connectors[slot.id]).length;
+        const msg = missing ? `Er ontbreken nog ${missing} verbindingswoord(en).` : 'Minstens één verbindingswoord past niet bij de pijl.';
+        showFeedback('feedbackConnectors', 'bad', 'Controleer de pijlen', `${msg} Gebruik “daardoor” voor gewone oorzaak-gevolgzinnen, “terwijl” waar vraag en aanbod tegelijk worden vergeleken, en “dus” pas bij de conclusie.`);
+      }
+    }
+
+    function renderSentenceDeck() {
+      byId('sentenceDeck').innerHTML = GAME.sentenceFragments.map(fragment => {
+        const used = Object.values(state.sentence).includes(fragment.id);
+        const pressed = state.selectedSentenceFragment === fragment.id;
+        return `<button type="button" class="sentence-card ${used ? 'used' : ''}" ${used ? 'disabled' : ''} aria-pressed="${pressed}" onclick="selectSentenceFragment('${fragment.id}')"><span>${fragment.label}</span></button>`;
+      }).join('');
+    }
+
+    function bindSentenceSlots() {
+      document.querySelectorAll('[data-sentence-slot]').forEach(slot => {
+        slot.onclick = () => placeSentenceFragment(slot.getAttribute('data-sentence-slot'));
+        const frag = sentenceById(state.sentence[slot.getAttribute('data-sentence-slot')]);
+        slot.textContent = frag ? frag.label : 'Nog leeg';
+        slot.classList.toggle('filled', Boolean(frag));
+      });
+    }
+
+    function selectSentenceFragment(id) {
+      if (Object.values(state.sentence).includes(id)) return;
+      state.selectedSentenceFragment = state.selectedSentenceFragment === id ? null : id;
+      renderSentenceDeck();
+    }
+
+    function placeSentenceFragment(role) {
+      if (isLocked('taskSentence')) return;
+      if (!state.selectedSentenceFragment) return;
+      state.sentence[role] = state.selectedSentenceFragment;
+      state.selectedSentenceFragment = null;
+      renderSentenceDeck();
+      bindSentenceSlots();
+      hideFeedback('feedbackSentence');
+    }
+
+    function resetSentence() {
+      state.selectedSentenceFragment = null;
+      state.sentence = {};
+      byId('ownSentence').value = '';
+      byId('completion').classList.remove('show');
+      setMeter(3, false);
+      renderSentenceDeck();
+      bindSentenceSlots();
+      hideFeedback('feedbackSentence');
+    }
+
+    function checkSentence() {
+      if (isLocked('taskSentence')) return;
+      const expected = { cause: 'cause_ok', mechanism: 'mechanism_ok', conclusion: 'conclusion_ok' };
+      const wrong = Object.keys(expected).filter(role => state.sentence[role] !== expected[role]);
+      if (wrong.length === 0) {
+        showFeedback('feedbackSentence', 'good', 'Toetszin klopt', 'Je antwoord heeft oorzaak, mechanisme en conclusie met richting. Dit is een bruikbare economische redenering.');
+        setMeter(3, true);
+        byId('completion').classList.add('show');
+      } else {
+        const missing = ['cause','mechanism','conclusion'].filter(role => !state.sentence[role]).length;
+        const msg = missing ? `Er ontbreken nog ${missing} zinsdeel/zinsdelen.` : 'Minstens één zinsdeel maakt de redenering economisch onjuist.';
+        showFeedback('feedbackSentence', 'bad', 'Toetszin nog niet scherp', `${msg} Controleer vooral of de vraag stijgt en of het aanbod gelijk blijft.`);
+      }
+    }
+
+    function showFeedback(id, kind, title, text) {
+      const el = byId(id);
+      el.className = `feedback show ${kind}`;
+      el.innerHTML = `<strong>${title}</strong><span>${text}</span>`;
+      el.focus({ preventScroll: true });
+    }
+    function hideFeedback(id) { const el = byId(id); el.className = 'feedback'; el.innerHTML = ''; }
+    function unlock(id) { byId(id).classList.remove('locked'); }
+    function lock(id) { byId(id).classList.add('locked'); }
+    function isLocked(id) { return byId(id).classList.contains('locked'); }
+    function setMeter(step, done) { byId(`meter${step}`).classList.toggle('done', done); }
+
+    byId('themeToggle').addEventListener('click', () => {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      byId('themeToggle').textContent = next === 'dark' ? 'Lichte modus' : 'Donkere modus';
+    });
+
+    render();
+  </script>
+</body>
+</html>

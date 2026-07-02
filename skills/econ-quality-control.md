@@ -125,178 +125,71 @@ The inspectie concretized OP3 in 2023 based on scientific evidence. During class
 
 ## PART 2: THE QUALITY_REF — PARAGRAPH-LEVEL TAG
 
+### 2.0 Lane-separated schema v2
+
+Current paragraph quality refs use `schema_version: 2` with two top-level
+blocks:
+
+```yaml
+schema_version: 2
+partA:
+  review_file: "X.Y.Z-review.md"
+  review_verdict: "PASS"
+  assets:
+    missing: []
+    svgpng_paired: true
+    naming_compliant: true
+companion:
+  review_file: "X.Y.Z-companion-visual-review.md"
+  review_verdict: "PASS"
+  hard_fails_open: 0
+```
+
+Part A owners maintain the `partA:` block. Part B owners maintain the
+`companion:` block. In `--mode part-b` and `--mode complete`,
+`scripts/validate-paragraph.js` requires `companion.review_file`,
+`companion.review_verdict`, and `companion.hard_fails_open` to match the exact
+companion review file. A PASS or PASS WITH FLAGS companion review must have
+`hard_fails_open: 0`.
+
 ### 2.1 When to generate
 
 Generate a quality_ref at the end of every paragraph build, after all components are complete. It should also be generated retroactively for existing paragraphs when the user asks for a quality report that needs them.
 
 ### 2.2 Structure
 
-The quality_ref is a YAML block stored as a `.yaml` file alongside the paragraph materials. It has four sections:
+The paragraph quality-ref is a YAML file stored at the paragraph root. Use the
+current active schema in `docs/workflows/paragraph-quality-ref-schema-v2.md`.
+The minimum shape is:
 
 ```yaml
-# === QUALITY REFERENCE ===
-# Generated: [date]
-# Paragraph: [code + name]
-
-quality_ref:
-  # --- IDENTIFICATION ---
-  paragraph: "3.2.3 Monopolie"
-  module: "3 – Markt en overheid"
-  chapter: "2 – Marktvormen en hun marktevenwicht"
-  niveau: "vwo"
-  
-  # --- FRESHNESS ---
-  generated: "YYYY-MM-DD"                    # date this quality_ref was created/last updated
-  framework_version: "onderzoekskader 2021, bijgesteld 2025"  # which inspectie framework was current
-  standards_verified: "YYYY-MM-DD"           # last_verified date of inspectie-standaarden.md at generation time
-  
-  # --- LEERDOELEN ---
-  # Map every learning goal to eindterm, Bloom level, and which components address it
-  leerdoelen:
-    - id: L1
-      beschrijving: "[what the student should be able to do]"
-      eindterm: "[domein + subdomein code]"
-      bloom: "[onthouden|begrijpen|toepassen|analyseren|evalueren|creëren]"
-      gedekt_in: [presentatie, vaardigheden, opgaven_basis]  # which components cover this
-
-  # --- COMPONENTEN ---
-  # For each component: is it present, what is its purpose, which inspectie standards 
-  # does it serve, and which didactiek principles does it implement?
-  componenten:
-    instapquiz:
-      aanwezig: true|false
-      doel: "[one-line purpose statement]"
-      inspectie: [OP2]  # list of standards served
-      didactiek: ["formatief evalueren"]  # list of principles applied
-    voorkennis:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP2, OP3]
-      didactiek: ["cognitieve belasting verlagen", "preteaching"]
-    nieuwsdetective:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP1]
-      didactiek: ["concept-context", "motivatie"]
-    presentatie:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["dual coding", "expliciet lesdoel"]
-    uitleg_vaardigheden:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["worked examples", "dual coding"]
-    youtube_videos:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["multimodale instructie", "herhaling"]
-    nieuwsopdracht:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP1, OP3]
-      didactiek: ["concept-context", "Bloom-opbouw"]
-    samenvatting:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["retrieval cues", "dual coding"]
-    begeleide_inoefening:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP2, OP3]
-      didactiek: ["scaffolding niveau 2-4", "positieve framing", "fading"]
-    redeneerspel:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["retrieval practice", "oefentijd", "causale ketens"]
-    wiskundevaardigheden:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP0, OP3]
-      didactiek: ["cognitieve belasting splitsen", "instrumentele vaardigheid"]
-    opgaven_basis:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["voldoende oefentijd"]
-    opgaven_midden:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["fading", "differentiatie"]
-    opgaven_verrijking:
-      aanwezig: true|false
-      doel: "[...]"
-      inspectie: [OP3]
-      didactiek: ["differentiatie naar boven", "hogere Bloom-niveaus"]
-
-  # --- TEST PREP COMPONENTS (Chapter 5 paragraphs only) ---
-  # Use this section INSTEAD of the componenten section above for test prep paragraphs.
-  # Test prep paragraphs do not have platform components (instapquiz, voorkennis, etc.)
-  componenten_testprep:                          # only for test prep paragraph types
-    type: testprep-summary|testprep-examskills|testprep-integration|testprep-practicetest
-    # §1 Actieve samenvatting:
-    samenvatting_blokken:
-      aanwezig: true|false
-      aantal_blokken: 5                          # expected: 5
-      mc_per_blok: 2-3                           # expected: 2-3 per block
-      misconcepties_gedocumenteerd: true|false    # distractors sourced from CSV/blueprint
-      inspectie: [OP3]
-      didactiek: ["retrieval practice", "misconceptie-gericht toetsen"]
-    # §2 Examenvaardigheden:
-    examvaardigheden:
-      aanwezig: true|false
-      aantal_oefeningen: 4-5
-      vaardigheden_gedekt: []                    # e.g. [noem, leg_uit, bereken, beoordeel, teken]
-      boek_emphasis_correct: true|false          # matches book-specific emphasis
-      inspectie: [OP3]
-      didactiek: ["antwoordstructurering", "metacognitie"]
-    # §3 Integratieoefening:
-    integratie:
-      aanwezig: true|false
-      aantal_deelvragen: 5-7
-      hoofdstukken_gedekt: []                    # e.g. [1, 2, 3, 4]
-      standpuntbepaling_laatste: true|false
-      cross_book: true|false                     # Book 4 only: requires Books 1-3 skills
-      inspectie: [OP3]
-      didactiek: ["transfer", "integratie", "evalueren"]
-    # §4 Proeftoets:
-    proeftoets:
-      aanwezig: true|false
-      toetsmatrijs_aanwezig: true|false
-      puntenverhouding_correct: true|false       # matches target distributions
-      bloom_verdeling_correct: true|false
-      tijdsduur: 120                             # minutes
-      cross_book: true|false                     # Book 4 only
-      inspectie: [OP2, OP3]
-      didactiek: ["formatief evalueren", "summatieve voorbereiding"]
-
-  # --- ASSET INTEGRITY ---
-  # Automated checks — must all pass before quality_ref is valid
+schema_version: 2
+partA:
+  review_file: "X.Y.Z-review.md"
+  review_verdict: "PASS"
   assets:
-    total_referenced: 0             # total ![...] references across all .md files
-    total_present: 0                # how many of those files actually exist in _assets/
-    missing: []                     # list of missing asset filenames (empty = good)
-    orphaned: []                    # assets in _assets/ not referenced in any .md
-    svgpng_paired: true             # every .svg has a .png and vice versa
-    naming_compliant: true          # all assets follow X.Y.Z_{type}_{number} convention
-
-  # --- VERANTWOORDING ---
-  # Short justification of key design choices
-  verantwoording:
-    differentiatie: "[how differentiation is implemented]"
-    dual_coding: "[how dual coding is applied]"
-    scaffolding_fading: "[how scaffolding fades across components]"
-    voorkennis_aansluiting: "[prerequisite knowledge and how it's handled]"
-    formatief: "[formative assessment points in the materials]"
-    veelgemaakte_fouten: "[common errors addressed and how]"
-    lesdoel_zichtbaarheid: "[how learning goals are made visible]"
-    oefentijd: "[how sufficient practice time is ensured]"
+    missing: []
+    svgpng_paired: true
+    naming_compliant: true
+companion:
+  review_file: "X.Y.Z-companion-visual-review.md"
+  review_verdict: "PASS"
+  hard_fails_open: 0
 ```
+
+Part A owns textbook fields, textbook asset integrity, textbook HTML render
+evidence, and publisher-print PDF evidence when that profile is in scope. Part B
+owns companion review fields for the companion/student-web route: HTML/game
+companions, PPTX presentation route, web visual variants, and route/affordance
+evidence. DOCX companion exports are opt-in
+Office/legacy profile work. PDF output is not a normal companion-lane artifact;
+it belongs to Part A / publisher-print unless a future human decision creates a
+separate PDF lane.
+
+Detailed component inventories, inspectie mappings, freshness fields, or
+verantwoording notes may be added inside the lane-owned block that produced the
+evidence. Do not reintroduce the legacy top-level `quality_ref:` wrapper for new
+or repaired records.
 
 ### 2.3 Component-to-standard mapping (reference table)
 
@@ -536,15 +429,16 @@ Per paragraph:
       Check last_verified date on references/external/inspectie-standaarden.md
       Apply cascading rules (< 3 mo: proceed; 3-9 mo: quick check; > 9 mo: thorough review)
  1. Extract leerdoelen from opgaven
- 2. Build presentatie              (→ econ-pptx-templates)
- 3. Build vaardigheden-document    (→ econ-word-templates)
- 4. Build voorkennis-document      (→ econ-word-templates)
- 5. Build nieuwsopdracht           (→ econ-word-templates)
- 6. Build begeleide inoefening     (→ econ-word-templates)
- 7. Build website components       (quiz, redeneer-spel, wiskunde-oefening)
- 8. ──► GENERATE quality_ref       (→ this skill)
-      Include generated date, framework_version, and standards_verified
- 9. Store quality_ref as [paragraph-code]-quality-ref.yaml
+ 2. Build/update Part A textbook source, review, assets, and publisher-print
+    evidence when that profile is in scope
+ 3. Build/update Part B companion/student-web route, HTML/game surfaces, PPTX
+    presentation route, and web visual variants when companion work is in scope
+ 4. Run the lane-appropriate review file:
+      Part A -> X.Y.Z-review.md
+      Part B -> X.Y.Z-companion-visual-review.md
+ 5. ──► GENERATE/UPDATE quality_ref (→ this skill)
+      Maintain only the lane-owned top-level block (`partA:` or `companion:`)
+ 6. Store quality_ref as X.Y.Z-quality-ref.yaml at the paragraph root
 
 On demand (reports):
  0. ──► FRESHNESS CHECK             (→ Part 0 of this skill)
@@ -569,13 +463,15 @@ The current file shape is `schema_version: 2` with separate `partA:` and
 and `validate-paragraph.js --mode complete` aggregates both.
 
 **Leerdoelen extraction:**
-1. List all vaardigheden from the uitleg-vaardigheden document
+1. List all vaardigheden from the Part A paragraph, target exercise, and any
+   companion skill/procedure plan in scope
 2. Map each to an eindterm (use syllabus)
 3. Assign Bloom level based on the signaalwoorden (see econ-didactiek Part 4.1)
 4. Note which components cover each leerdoel
 
 **Component inventory:**
-1. Check which of the 14 standard components exist for this paragraph
+1. For Part B companion/student-web work, check which of the 14 standard companion
+   components exist for this paragraph
 2. For each present component, fill in doel, inspectie, didactiek using the mapping tables in Part 2.3 and 2.4
 3. Flag any expected components that are absent (e.g., no begeleide inoefening for a calculation-heavy paragraph)
 
@@ -586,7 +482,7 @@ and `validate-paragraph.js --mode complete` aggregates both.
 
 ### 4.3 File storage
 
-Store quality_refs in the paragraph folder:
+Store paragraph quality refs in the flat paragraph root:
 
 Current paragraph layout is flat. The quality-ref sits directly at the
 paragraph root beside `index.html`, `_paragraph-plan.md`, `_assets/`, Part A
@@ -595,9 +491,10 @@ below is retained only as legacy context.
 
 ```
 3.2.3 Paragraaf 3 – Monopolie/
-├── 1. Voorbereiden/
-├── 2. Leren/
-├── 3. Oefenen/
+├── 3.2.3 Monopolie – paragraaf.md
+├── 3.2.3 Monopolie – opgaven.md
+├── 3.2.3 Monopolie – antwoorden.md
+├── _assets/
 ├── index.html
 └── 3.2.3-quality-ref.yaml          ← generated by this skill
 ```

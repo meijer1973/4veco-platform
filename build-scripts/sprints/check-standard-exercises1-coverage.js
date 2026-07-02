@@ -77,7 +77,7 @@ const resultJsonPath = path.join(ROOT, 'references', 'data', 'sprints', 'STANDAR
 const taskShellEnginePath = path.join(ROOT, 'engines', 'task-shell-engine.js');
 const reasoningEnginePath = path.join(ROOT, 'engines', 'reasoning-engine.js');
 const graph113Path = path.join(ROOT, 'build-scripts', 'content', 'book-1', 'b1-113-graphical-data.js');
-const exit112Path = path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.2.json');
+const exit112Path = path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.2-exit-ticket.json');
 const procedureDataPath = path.join(ROOT, 'build-scripts', 'content', 'book-1', 'b1-111-procedure-data.js');
 const guidedBuilderPath = path.join(ROOT, 'build-scripts', 'content', 'book-1', 'b1-111-inoefening.js');
 const platformRoadmapPath = path.join(ROOT, 'references', 'reference-team-roadmap.md');
@@ -291,7 +291,13 @@ if (fs.existsSync(resultJsonPath)) {
   const lessonRoadmap = read(lessonRoadmapPath);
   requireText(platformRoadmap, /\|\s*STANDARD-EXERCISES-1\s*\|[^\n]*\|\s*yes\s*\|[^\n]*CLOSED AUDIT\/CONTRACT/i, 'closed platform roadmap row', platformRoadmapPath);
   requireText(lessonRoadmap, /\|\s*STANDARD-EXERCISES-1\s*\|[^\n]*\|\s*\*\*2026-06-01\*\*\s*\|[^\n]*CLOSED AUDIT\/CONTRACT/i, 'closed lesson roadmap row', lessonRoadmapPath);
-  requireText(platformRoadmap, /Next action:\s+proceed to `TASK-SHELL-UX-2`/i, 'platform immediate next action', platformRoadmapPath);
+  requireText(platformRoadmap, /\|\s*TASK-SHELL-UX-2\s*\|[^\n]*\|\s*yes\s*\|/i, 'closed TASK-SHELL-UX-2 successor row', platformRoadmapPath);
+  requireText(
+    platformRoadmap,
+    /\|\s*EXERCISE-WORKFLOW-CHECKER-CLEANUP-1\s*\|[^\n]*validation\/evidence hygiene only/i,
+    'checker-cleanup roadmap row',
+    platformRoadmapPath
+  );
   requireText(lessonRoadmap, /TASK-SHELL-UX-2[\s\S]*GAME-ROUTE-AFFORDANCE-1/i, 'lesson product proof sequence after STANDARD', lessonRoadmapPath);
 }
 

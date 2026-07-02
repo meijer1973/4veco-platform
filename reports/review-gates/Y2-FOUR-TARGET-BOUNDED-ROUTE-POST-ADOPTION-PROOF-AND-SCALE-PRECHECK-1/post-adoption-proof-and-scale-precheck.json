@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1",
+  "generated_on": "2026-06-30",
+  "status": "post_adoption_proof_and_scale_precheck_ready_for_human_review",
+  "product_end_state": "Prove the authorized bounded Year 2 route preview is live after merge and prepare a Scale Gate precheck while keeping CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, and student/product use blocked.",
+  "original_sprint_gate_spec": {
+    "product_end_state_baseline": "4veco-lessen/specifications/product-end-state.md",
+    "companion_core_specification": "4veco-lessen/specifications/companion-core-specifications.md",
+    "bounded_adoption_registry": "references/data/year2-target-foundation/product-route-adoption-registry.json",
+    "bounded_adoption_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/bounded-route-adoption-packet.json",
+    "bounded_adoption_review_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/review-packet.json",
+    "product_proof_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json",
+    "product_proof_review_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/review-packet.json",
+    "adoption_prep_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-ROUTE-ADOPTION-PREP-1/route-adoption-prep-packet.json",
+    "lesson_manifest": "year2-candidate-lessons/four-target-lesson-production-1/manifest.json",
+    "route_contracts": "year2-candidate-lessons/four-target-lesson-production-1/route-contracts.json"
+  },
+  "merged_state": {
+    "platform_current_main_head_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+    "lesson_current_main_head_sha": "43a6d921bda67a5593d2f0dcc0a89a44a99d42b5",
+    "platform_adoption_merge_commit": "3e31e3582faf9df794e6d13865efdd5e20367366",
+    "lesson_adoption_merge_commit": "aefab74fb4d609e42140723b3e01db61e1f3644e",
+    "platform_adoption_merge_commit_is_ancestor": true,
+    "lesson_adoption_merge_commit_is_ancestor": true
+  },
+  "adopted_surface": {
+    "registry_id": "year2-target-foundation-product-route-adoption-registry",
+    "registry_status": "bounded_product_route_adoption_ready_for_human_review",
+    "adoption_review_status": "bounded_product_route_adoption_ready_for_human_review",
+    "adoption_prep_status": "product_route_adoption_prep_ready_for_human_review",
+    "route_count": 4,
+    "navigation_tier": "bounded Year 2 route preview, not default book navigation or broad student rollout",
+    "lesson_output_root": "year2-candidate-lessons/four-target-lesson-production-1",
+    "bounded_root_link_href": "year2-candidate-lessons/four-target-lesson-production-1/index.html",
+    "default_book_navigation_mutated": false,
+    "active_curriculum_sequence_mutated": false
+  },
+  "inherited_product_proof": {
+    "sprint_id": "Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1",
+    "status": "prepared_for_human_product_proof_review",
+    "screenshot_manifest": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshot-manifest.json",
+    "screenshot_count": 48,
+    "expected_screenshot_count": 48,
+    "qa_page_paths_from_lesson_repo_root": [
+      "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html"
+    ]
+  },
+  "lesson_index_evidence": {
+    "root_index": {
+      "path": "index.html",
+      "exists": true,
+      "bytes": 4186,
+      "bounded_entry_link_present": true,
+      "adoption_marker_present": true,
+      "broad_student_rollout_copy_absent": true,
+      "boundary_copy_present": true
+    },
+    "bundle_index": {
+      "path": "year2-candidate-lessons/four-target-lesson-production-1/index.html",
+      "exists": true,
+      "bytes": 3703,
+      "bounded_state_marker_present": true,
+      "bounded_heading_present": true,
+      "advisory_boundary_copy_present": true,
+      "downstream_boundary_copy_present": true
+    }
+  },
+  "records": [
+    {
+      "route_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "paragraph_code": "5.4.2",
+      "route_label": "5.4.2 Pensioenmodel en koopkracht",
+      "adoption_state": "bounded_product_route_adopted_after_owner_merge",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/index.html",
+      "surfaces": {
+        "route": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+          "exists": true,
+          "bytes": 11607
+        },
+        "advisory_short_check": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+          "exists": true,
+          "bytes": 12760
+        },
+        "target_equivalent_exit_ticket_candidate": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+          "exists": true,
+          "bytes": 12712
+        }
+      },
+      "route_contract": {
+        "path": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/route-contract.json",
+        "exists": true,
+        "bytes": 1312,
+        "authority_boundary": "generated_candidate_lesson_output_for_review_only_no_product_route_adoption_no_student_product_use",
+        "generated_candidate_boundary_retained": true,
+        "required_surfaces": [
+          "route",
+          "advisory_short_check",
+          "target_equivalent_exit_ticket_candidate"
+        ]
+      },
+      "inherited_product_proof": {
+        "product_proof_record_present": true,
+        "screenshot_count": 12,
+        "screenshot_expected_count": 12,
+        "screenshot_files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/5-4-2-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "registry_record_adopted": true,
+        "bounded_entry_point_exists": true,
+        "source_first_route_exists": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "route_contract_present": true,
+        "route_contract_boundary_retained": true,
+        "inherited_product_proof_screenshots_complete": true,
+        "advisory_short_check_still_not_completion_proof": true,
+        "exit_ticket_still_candidate_only": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "scale-gate-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "post-adoption proof that the bounded route preview is live and rollbackable",
+          "proof_required_to_close": "separate owner-authorized Scale Gate / student-use packet with refreshed route-use evidence and explicit downstream authority"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "paragraph_code": "6.4.2",
+      "route_label": "6.4.2 Woningfinanciering en huurmarkt",
+      "adoption_state": "bounded_product_route_adopted_after_owner_merge",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/index.html",
+      "surfaces": {
+        "route": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+          "exists": true,
+          "bytes": 10983
+        },
+        "advisory_short_check": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+          "exists": true,
+          "bytes": 12038
+        },
+        "target_equivalent_exit_ticket_candidate": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+          "exists": true,
+          "bytes": 12025
+        }
+      },
+      "route_contract": {
+        "path": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/route-contract.json",
+        "exists": true,
+        "bytes": 1221,
+        "authority_boundary": "generated_candidate_lesson_output_for_review_only_no_product_route_adoption_no_student_product_use",
+        "generated_candidate_boundary_retained": true,
+        "required_surfaces": [
+          "route",
+          "advisory_short_check",
+          "target_equivalent_exit_ticket_candidate"
+        ]
+      },
+      "inherited_product_proof": {
+        "product_proof_record_present": true,
+        "screenshot_count": 12,
+        "screenshot_expected_count": 12,
+        "screenshot_files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/6-4-2-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "registry_record_adopted": true,
+        "bounded_entry_point_exists": true,
+        "source_first_route_exists": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "route_contract_present": true,
+        "route_contract_boundary_retained": true,
+        "inherited_product_proof_screenshots_complete": true,
+        "advisory_short_check_still_not_completion_proof": true,
+        "exit_ticket_still_candidate_only": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "scale-gate-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "post-adoption proof that the bounded route preview is live and rollbackable",
+          "proof_required_to_close": "separate owner-authorized Scale Gate / student-use packet with refreshed route-use evidence and explicit downstream authority"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "paragraph_code": "7.4.1",
+      "route_label": "7.4.1 Kredietverzekering en informatieproblemen",
+      "adoption_state": "bounded_product_route_adopted_after_owner_merge",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/index.html",
+      "surfaces": {
+        "route": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+          "exists": true,
+          "bytes": 10784
+        },
+        "advisory_short_check": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+          "exists": true,
+          "bytes": 11927
+        },
+        "target_equivalent_exit_ticket_candidate": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+          "exists": true,
+          "bytes": 12083
+        }
+      },
+      "route_contract": {
+        "path": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/route-contract.json",
+        "exists": true,
+        "bytes": 1285,
+        "authority_boundary": "generated_candidate_lesson_output_for_review_only_no_product_route_adoption_no_student_product_use",
+        "generated_candidate_boundary_retained": true,
+        "required_surfaces": [
+          "route",
+          "advisory_short_check",
+          "target_equivalent_exit_ticket_candidate"
+        ]
+      },
+      "inherited_product_proof": {
+        "product_proof_record_present": true,
+        "screenshot_count": 12,
+        "screenshot_expected_count": 12,
+        "screenshot_files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/7-4-1-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "registry_record_adopted": true,
+        "bounded_entry_point_exists": true,
+        "source_first_route_exists": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "route_contract_present": true,
+        "route_contract_boundary_retained": true,
+        "inherited_product_proof_screenshots_complete": true,
+        "advisory_short_check_still_not_completion_proof": true,
+        "exit_ticket_still_candidate_only": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "scale-gate-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "post-adoption proof that the bounded route preview is live and rollbackable",
+          "proof_required_to_close": "separate owner-authorized Scale Gate / student-use packet with refreshed route-use evidence and explicit downstream authority"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "paragraph_code": "8.1.4",
+      "route_label": "8.1.4 Zelfbinding en prijzenoorlog",
+      "adoption_state": "bounded_product_route_adopted_after_owner_merge",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/index.html",
+      "surfaces": {
+        "route": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+          "exists": true,
+          "bytes": 10964
+        },
+        "advisory_short_check": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+          "exists": true,
+          "bytes": 12196
+        },
+        "target_equivalent_exit_ticket_candidate": {
+          "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+          "exists": true,
+          "bytes": 12112
+        }
+      },
+      "route_contract": {
+        "path": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/route-contract.json",
+        "exists": true,
+        "bytes": 1391,
+        "authority_boundary": "generated_candidate_lesson_output_for_review_only_no_product_route_adoption_no_student_product_use",
+        "generated_candidate_boundary_retained": true,
+        "required_surfaces": [
+          "route",
+          "advisory_short_check",
+          "target_equivalent_exit_ticket_candidate"
+        ]
+      },
+      "inherited_product_proof": {
+        "product_proof_record_present": true,
+        "screenshot_count": 12,
+        "screenshot_expected_count": 12,
+        "screenshot_files": [
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-exit-ticket-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-korte-check-mobile-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-desktop-light.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-dark.png",
+          "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/screenshots/8-1-4-route-mobile-light.png"
+        ]
+      },
+      "core_requirement_checklist": {
+        "registry_record_adopted": true,
+        "bounded_entry_point_exists": true,
+        "source_first_route_exists": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "route_contract_present": true,
+        "route_contract_boundary_retained": true,
+        "inherited_product_proof_screenshots_complete": true,
+        "advisory_short_check_still_not_completion_proof": true,
+        "exit_ticket_still_candidate_only": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "scale-gate-and-student-use-still-blocked",
+          "classification": "scale_blocker",
+          "blocks": "CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "post-adoption proof that the bounded route preview is live and rollbackable",
+          "proof_required_to_close": "separate owner-authorized Scale Gate / student-use packet with refreshed route-use evidence and explicit downstream authority"
+        }
+      ]
+    }
+  ],
+  "scale_gate_precheck": {
+    "status": "not_ready_for_scale_gate_authority",
+    "result": "PRECHECK_ONLY_BLOCKED_FOR_SCALE_GATE",
+    "ready_inputs": {
+      "bounded_route_preview_live": true,
+      "all_four_routes_adopted": true,
+      "route_surfaces_exist": true,
+      "inherited_rendered_product_proof_complete": true,
+      "rollback_plan_inherited_from_adoption_registry": true
+    },
+    "blockers": [
+      {
+        "issue_id": "scale-gate-owner-review-not-opened",
+        "classification": "scale_blocker",
+        "blocks": "Scale Gate 1, CP-6 closure, broad rollout, and student/product use",
+        "does_not_block": "bounded route-preview operation under the already-authorized adoption boundary",
+        "proof_required_to_close": "a separate exact-head Scale Gate packet with owner authorization and route-specific product-use evidence"
+      },
+      {
+        "issue_id": "diagnostics-mastery-pv-summative-authority-still-false",
+        "classification": "scale_blocker",
+        "blocks": "diagnostics, mastery/sequencing, PV, summative use, and student-facing product decisions",
+        "does_not_block": "teacher/owner review of the bounded route preview surface",
+        "proof_required_to_close": "separate downstream evidence and human decision explicitly enabling each authority"
+      },
+      {
+        "issue_id": "exit-ticket-candidate-not-summative-closure",
+        "classification": "scale_blocker",
+        "blocks": "target-equivalent completion language, summative status, and Scale Gate reliance on exit tickets alone",
+        "does_not_block": "maintaining exit tickets as candidate evidence inside the bounded preview",
+        "proof_required_to_close": "renewed human review proving target-equivalent closure and allowed completion language"
+      }
+    ],
+    "next_gate_action": "Prepare a separate human-review packet before any CP-6, Scale Gate, diagnostics, mastery, PV, summative, broad rollout, student-use, or student/product-use decision."
+  },
+  "authority_claims": {
+    "post_adoption_proof_packet_prepared": true,
+    "bounded_product_route_preview_authorized": true,
+    "bounded_product_route_preview_live": true,
+    "product_route_adoption_registry_record_live": true,
+    "scale_gate_precheck_prepared": true,
+    "scale_gate_review_authorized": false,
+    "scale_gate_authorized": false,
+    "cp6_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "broad_student_rollout_authorized": false,
+    "default_book_navigation_mutated": false,
+    "active_curriculum_sequence_mutated": false,
+    "broad_product_route_rollout_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "protected_mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "autonomous_merge_authorized": false
+  },
+  "core_requirement_checklist": {
+    "product_end_state_and_original_specs_cited": true,
+    "bounded_adoption_registry_cited": true,
+    "product_proof_packet_cited": true,
+    "adoption_prep_packet_cited": true,
+    "platform_adoption_merge_commit_is_ancestor": true,
+    "lesson_adoption_merge_commit_is_ancestor": true,
+    "all_four_routes_present": true,
+    "all_bounded_entry_points_exist": true,
+    "all_required_route_surfaces_exist": true,
+    "all_route_contract_boundaries_retained": true,
+    "inherited_product_proof_screenshots_complete": true,
+    "lesson_root_index_bounded_marker_present": true,
+    "lesson_bundle_index_bounded_marker_present": true,
+    "scale_gate_precheck_blocks_downstream_authority": true,
+    "downstream_authority_flags_false": true
+  },
+  "findings": [
+    {
+      "finding": "The bounded Year 2 route preview is live after the authorized lesson-first/platform-second adoption bundle merge.",
+      "classification": "core_requirement_met",
+      "blocks": "none for maintaining the bounded preview",
+      "does_not_block": "post-adoption proof review",
+      "proof_required_to_close": "current-main merge ancestry, registry/index markers, and route-surface existence checks"
+    },
+    {
+      "finding": "The inherited rendered product proof remains complete for all four routes and all three surfaces per route.",
+      "classification": "core_requirement_met",
+      "blocks": "none for post-adoption proof",
+      "does_not_block": "bounded route-preview operation",
+      "proof_required_to_close": "existing 48-screenshot product proof plus live route-contract and surface checks"
+    },
+    {
+      "finding": "Scale Gate, CP-6, diagnostics, mastery, PV, summative use, broad rollout, and student/product use remain blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Scale Gate 1, CP-6 closure, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+      "does_not_block": "bounded Year 2 route preview and post-adoption evidence review",
+      "proof_required_to_close": "separate exact-head human review packet that explicitly grants the relevant downstream authority"
+    }
+  ],
+  "recommended_next_action": "Send this post-adoption proof/precheck packet to human review. Do not proceed to CP-6, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, or student/product use without a separate owner authorization."
+}

@@ -1,0 +1,13 @@
+{
+  "changed_paths": [
+    "Boek 1/1.1/1.1.1 Test/_paragraph-plan.md",
+    "Boek 1/1.1/1.1.1 Test/1.1.1 Test \u2013 uitleg vaardigheden.html",
+    "Boek 1/1.1/1.1.1 Test/1.1.1 Test \u2013 opgaven.md"
+  ],
+  "lane_scope_exception": {
+    "allowed": true,
+    "reason": "Companion review found one blocking typo in the exercise prompt that must be repaired with the companion route.",
+    "review_required": "Part A reviewer must approve the opgaven.md repair before companion closeout.",
+    "human_visibility": true
+  }
+}

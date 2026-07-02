@@ -1,12 +1,18 @@
 # Build Chapter — End-to-End Workflow
 
-Builds a complete chapter from blueprint to finished PDF. Two parts:
-- **Part A** — Build all paragraphs (follows `econ-chapter-builder` skill)
-- **Part B** — Assemble into chapter PDF and run QC (follows `econ-chapter-assembler` skill)
+Builds a complete Part A textbook chapter from blueprint to finished PDF. Two
+chapter stages:
+
+- **Stage 1** — Build all textbook paragraphs (follows `econ-chapter-builder` skill)
+- **Stage 2** — Assemble into chapter PDF and run QC (follows `econ-chapter-assembler` skill)
+
+This document is textbook/chapter assembly only. It does not open the Part B
+web companion paragraph lane. Website companion work uses
+`docs/workflows/web-companion-paragraph-lane.md` and must be planned separately.
 
 ---
 
-## Part A: Paragraph Production
+## Stage 1: Paragraph Production
 
 Follow the `econ-chapter-builder` skill for the full orchestration process:
 
@@ -19,7 +25,7 @@ See `econ-chapter-builder` skill for detailed instructions on dependency analysi
 
 ---
 
-## Part B: Assembly and QC
+## Stage 2: Assembly and QC
 
 ### Phase 1: Pre-assembly gate (5 min)
 
@@ -38,7 +44,7 @@ For each paragraph in the chapter, verify:
 4. □ `_assets/` folder exists with SVG + PNG pairs
 5. □ Asset completeness: every image ref in `.md` → file exists in `_assets/`
 6. □ `X.Y.Z-review.md` exists (from independent QC review)
-7. □ `X.Y.Z-quality-ref.yaml` exists and valid (assets.missing is empty, svgpng_paired is true)
+7. □ `X.Y.Z-quality-ref.yaml` exists and the Part A `partA:` block is valid (assets.missing is empty, svgpng_paired is true)
 
 **If any paragraph fails this gate → go back and complete that paragraph first.**
 

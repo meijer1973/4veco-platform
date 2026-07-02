@@ -6,7 +6,7 @@
   "status": "draft",
   "retrieved_date": "2026-06-08",
   "review_status": "draft_accepted_for_bounded_pilot_audit",
-  "authority_boundary_note": "This register distinguishes inspection frameworks, curriculum or standards references, accountability systems, and non-inspection comparators. A source is not treated as curriculum authority unless its source_type and notes explicitly say so. The use_in_v0_profile field records whether a source is an inspection_anchor, curriculum_anchor, accountability_context, or comparator_only for the Dutch v0 profile.",
+  "authority_boundary_note": "This register distinguishes inspection frameworks, curriculum or standards references, accountability systems, and non-inspection comparators. A source is not treated as curriculum authority unless its source_type and notes explicitly say so. The use_in_v0_profile field records whether a source is an inspection_anchor, curriculum_anchor, accountability_context, or comparator_only for the Dutch v0 profile. Non-Dutch entries marked future_overlay_inventory_only are historical inventory and are not v0 profile coverage.",
   "sources": [
     {
       "source_id": "nl-inspectie-onderzoekskader-vo-2025",
@@ -357,8 +357,8 @@
       "authority_boundary": "State-level legal/inspection reference; autonomous communities regulate and exercise inspection within their territory.",
       "why_it_matters_for_4veco": "Records Spain's central inspection/evaluation legal boundary and the need for autonomous-community overlays.",
       "citation_policy": "public",
-      "notes": "Do not create a Spain-wide compliance model; later overlays must be autonomous-community aware.",
-      "use_in_v0_profile": "accountability_context"
+      "notes": "Future-overlay inventory only for GOAL-IQS work. Do not treat as GOAL-IQS-FOUNDATION-1 v0 Spain inspection coverage. Do not create a Spain-wide compliance model; later overlays must be autonomous-community aware.",
+      "use_in_v0_profile": "future_overlay_inventory_only"
     },
     {
       "source_id": "es-inee-evaluaciones-lomloe",
@@ -373,8 +373,8 @@
       "authority_boundary": "System/diagnostic evaluation source, not school-inspection or economics curriculum source.",
       "why_it_matters_for_4veco": "Documents Spain's LOMLOE system and diagnostic-evaluation model, useful for accountability compatibility notes.",
       "citation_policy": "public",
-      "notes": "Use to avoid confusing system evaluations with material approval. Spain overlays must remain autonomous-community aware; do not treat this as one Spain-wide compliance system.",
-      "use_in_v0_profile": "accountability_context"
+      "notes": "Future-overlay inventory only for GOAL-IQS work. Do not treat as GOAL-IQS-FOUNDATION-1 v0 Spain accountability coverage. Use to avoid confusing system evaluations with material approval. Spain overlays must remain autonomous-community aware; do not treat this as one Spain-wide compliance system.",
+      "use_in_v0_profile": "future_overlay_inventory_only"
     },
     {
       "source_id": "pl-men-nadzor-pedagogiczny",

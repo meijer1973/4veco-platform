@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-GOVERNED-SUPPORT-CLOSURE-BUNDLE-1",
+  "status": "answer_skill_equivalent_support_ready_for_human_review_no_registry_mutation",
+  "records": [
+    {
+      "answer_skill_id": "Y2-EX-ANS-SOURCE-SUPPORTED-MECHANISM-1",
+      "label": "Source-supported mechanism or policy explanation",
+      "closes_answer_skill_dispositions": [
+        "Y2-B5-P13:OP-H1",
+        "Y2-B5-P13:OP-ANS3",
+        "Y2-B6-P12:OP-F1",
+        "Y2-B6-P12:OP-ANS3"
+      ],
+      "also_supports_extension_cases": [
+        "Y2-B6-P12:OP-E1"
+      ],
+      "required_parts": [
+        "source_or_policy_fact",
+        "economic_mechanism",
+        "second_link_or_effect",
+        "context_conclusion"
+      ],
+      "point_logic": [
+        "Award one part for the exact source or policy fact.",
+        "Award one part for the first economic mechanism.",
+        "Award one part for the second causal link or effect.",
+        "Require a conclusion tied to the named Year 2 route."
+      ],
+      "accepted_answer_structure": {
+        "requiredTextGroups": [
+          [
+            "source",
+            "policy",
+            "bron",
+            "beleid"
+          ],
+          [
+            "mechanism",
+            "mechanisme",
+            "causes",
+            "leidt"
+          ],
+          [
+            "therefore",
+            "daarom",
+            "so",
+            "zodat"
+          ]
+        ],
+        "rejectText": [
+          "because it says so",
+          "source only",
+          "alleen bron"
+        ]
+      },
+      "negative_guards": [
+        "source-only citation fails",
+        "policy opinion without mechanism fails",
+        "route-free generic explanation fails"
+      ],
+      "storage_status": "reviewed_equivalent_support_record_only",
+      "registry_mutation_authorized": false,
+      "generator_exposure_authorized": false,
+      "student_use_authorized": false
+    },
+    {
+      "answer_skill_id": "Y2-EX-ANS-CONDITION-TWO-LINK-CORRECTION-1",
+      "label": "Condition-based information or correction-model two-link explanation",
+      "closes_answer_skill_dispositions": [
+        "Y2-B7-P13:OP-ANS3",
+        "Y2-B8-P04:OP-ANS3"
+      ],
+      "also_supports_extension_cases": [
+        "Y2-B7-P13:OP-R1",
+        "Y2-B8-P04:OP-S1"
+      ],
+      "required_parts": [
+        "condition_or_command_word",
+        "actor_or_incentive",
+        "two_link_explanation",
+        "correction_model_conclusion"
+      ],
+      "point_logic": [
+        "Name the route condition or command word before explaining.",
+        "Bind actors or strategic incentives to the source.",
+        "Use two explicit links, not a one-hop assertion.",
+        "Close with the correction-model conclusion."
+      ],
+      "accepted_answer_structure": {
+        "requiredTextGroups": [
+          [
+            "condition",
+            "voorwaarde",
+            "guarantee",
+            "garantie"
+          ],
+          [
+            "incentive",
+            "prikkel",
+            "actor",
+            "principal"
+          ],
+          [
+            "therefore",
+            "daarom",
+            "so"
+          ]
+        ],
+        "rejectText": [
+          "one link only",
+          "generic strategy",
+          "not enough information"
+        ]
+      },
+      "negative_guards": [
+        "one-link explanation fails",
+        "wrong actor role fails",
+        "derived payoff as official source fails"
+      ],
+      "storage_status": "reviewed_equivalent_support_record_only",
+      "registry_mutation_authorized": false,
+      "generator_exposure_authorized": false,
+      "student_use_authorized": false
+    },
+    {
+      "answer_skill_id": "Y2-EX-ANS-CALCULATION-RATIO-CONCLUSION-1",
+      "label": "Calculation or ratio conclusion with source and unit",
+      "closes_answer_skill_dispositions": [],
+      "also_supports_extension_cases": [
+        "Y2-B5-P13:OP-ANS2",
+        "Y2-B6-P12:OP-ANS2",
+        "Y2-B7-P13:OP-ANS2"
+      ],
+      "required_parts": [
+        "method",
+        "labelled_values",
+        "intermediate_or_ratio_direction",
+        "unit_or_notation",
+        "context_conclusion"
+      ],
+      "point_logic": [
+        "The method or ratio rule must be visible.",
+        "Source values must be labelled.",
+        "The intermediate value or ratio direction must be present.",
+        "The final answer must include unit or notation and context conclusion."
+      ],
+      "accepted_answer_structure": {
+        "requiredTextGroups": [
+          [
+            "method",
+            "formule",
+            "ratio",
+            "MO"
+          ],
+          [
+            "value",
+            "waarde",
+            "Q",
+            "EUR"
+          ],
+          [
+            "conclusion",
+            "conclusie",
+            "daalt",
+            "niet correct"
+          ]
+        ],
+        "rejectText": [
+          "final answer only",
+          "source only",
+          "no unit"
+        ]
+      },
+      "negative_guards": [
+        "final-answer-only fails",
+        "wrong unit or missing notation fails",
+        "schematic exact-number overclaim fails"
+      ],
+      "storage_status": "reviewed_equivalent_support_record_only",
+      "registry_mutation_authorized": false,
+      "generator_exposure_authorized": false,
+      "student_use_authorized": false
+    },
+    {
+      "answer_skill_id": "Y2-EX-ANS-STRATEGIC-COMMAND-PLANNING-1",
+      "label": "Strategic command-word and point-allocation planning",
+      "closes_answer_skill_dispositions": [
+        "Y2-B8-P04:OP-ANS1"
+      ],
+      "also_supports_extension_cases": [
+        "Y2-B8-P04:OP-S1"
+      ],
+      "required_parts": [
+        "command_word",
+        "point_allocation",
+        "source_fact",
+        "strategic_incentive"
+      ],
+      "point_logic": [
+        "Read the command word before selecting the response shape.",
+        "Allocate points to identification plus reason.",
+        "Use official source fact before derived representation.",
+        "Name the strategic incentive explicitly."
+      ],
+      "accepted_answer_structure": {
+        "requiredTextGroups": [
+          [
+            "command",
+            "vraagwoord",
+            "identify",
+            "noem"
+          ],
+          [
+            "point",
+            "punt"
+          ],
+          [
+            "incentive",
+            "prikkel",
+            "price"
+          ]
+        ],
+        "rejectText": [
+          "payoff only",
+          "no source",
+          "matrix is official"
+        ]
+      },
+      "negative_guards": [
+        "payoff-only answer planning fails",
+        "missing command word fails",
+        "unlabelled derived representation fails"
+      ],
+      "storage_status": "reviewed_equivalent_support_record_only",
+      "registry_mutation_authorized": false,
+      "generator_exposure_authorized": false,
+      "student_use_authorized": false
+    }
+  ],
+  "tests": [
+    {
+      "answer_skill_id": "Y2-EX-ANS-SOURCE-SUPPORTED-MECHANISM-1",
+      "passing": "Use the source policy fact, explain the economic mechanism, and therefore connect the effect to this route.",
+      "negatives": [
+        "source only",
+        "I think this policy is good"
+      ]
+    },
+    {
+      "answer_skill_id": "Y2-EX-ANS-CONDITION-TWO-LINK-CORRECTION-1",
+      "passing": "Name the condition, identify the actor incentive, and therefore give the correction-model conclusion.",
+      "negatives": [
+        "one link only",
+        "generic strategy without actor"
+      ]
+    },
+    {
+      "answer_skill_id": "Y2-EX-ANS-CALCULATION-RATIO-CONCLUSION-1",
+      "passing": "Show the method, label each value in EUR, and state the conclusion with the ratio direction.",
+      "negatives": [
+        "final answer only",
+        "source only"
+      ]
+    },
+    {
+      "answer_skill_id": "Y2-EX-ANS-STRATEGIC-COMMAND-PLANNING-1",
+      "passing": "Read the command word, allocate the point, use the source fact, and name the price incentive.",
+      "negatives": [
+        "payoff only",
+        "matrix is official"
+      ]
+    }
+  ],
+  "authority_claims": {
+    "protected_year2_support_overlay_created_for_review": true,
+    "route_specific_runtime_support_closed_for_review": true,
+    "route_specific_extension_support_closed_for_review": true,
+    "answer_skill_equivalent_support_closed_for_review": true,
+    "lesson_production_eligibility_overlay_ready_for_review": true,
+    "cross_repo_lesson_production_input_ready_after_human_merge": true,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "live_mtu_registry_mutated": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "candidate_storage_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "autonomous_merge_authorized": false
+  }
+}

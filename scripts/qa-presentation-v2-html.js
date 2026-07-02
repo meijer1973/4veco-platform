@@ -187,6 +187,26 @@ async function waitForDeck(cdp) {
   throw new Error('Presentation root [data-pv2] not found');
 }
 
+async function waitForLayout(cdp, scenario) {
+  if (scenario.mobile) {
+    await sleep(300);
+    return;
+  }
+  for (let i = 0; i < 80; i += 1) {
+    const ready = await evaluate(cdp, `(() => {
+      const canvas = document.querySelector('.pv2-slide:not([hidden]) .pv2-slide-canvas');
+      const notes = document.querySelector('.pv2-slide:not([hidden]) .pv2-notes');
+      if (!canvas || !notes) return false;
+      const rect = canvas.getBoundingClientRect();
+      const notesDisplay = getComputedStyle(notes).display;
+      return rect.width > 400 && Math.abs((rect.width / rect.height) - 1.778) < 0.03 && notesDisplay === 'none';
+    })()`);
+    if (ready) return;
+    await sleep(100);
+  }
+  throw new Error('Presentation stylesheet/layout did not settle before QA measurement');
+}
+
 async function evaluate(cdp, expression) {
   const result = await cdp.send('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true });
   if (result.exceptionDetails) throw new Error(JSON.stringify(result.exceptionDetails));
@@ -202,7 +222,7 @@ async function runScenario(cdp, scenario) {
   });
   await cdp.send('Page.navigate', { url: pathToFileURL(htmlPath).href });
   await waitForDeck(cdp);
-  await sleep(250);
+  await waitForLayout(cdp, scenario);
   if (scenario.setup) await evaluate(cdp, scenario.setup);
   await sleep(150);
 
@@ -219,6 +239,59 @@ async function runScenario(cdp, scenario) {
     results.push({ ...result, screenshot: file });
   }
   return results;
+}
+
+async function runInteractionChecks(cdp) {
+  await cdp.send('Emulation.setDeviceMetricsOverride', {
+    width: 1366,
+    height: 768,
+    deviceScaleFactor: 1,
+    mobile: false,
+  });
+  await cdp.send('Page.navigate', { url: pathToFileURL(htmlPath).href });
+  await waitForDeck(cdp);
+  await waitForLayout(cdp, { mobile: false });
+
+  await evaluate(cdp, "document.querySelector('[data-pv2-notes]').click()");
+  const notes = await evaluate(cdp, `(() => {
+    const root = document.querySelector('[data-pv2]');
+    const active = document.querySelector('.pv2-slide.is-active');
+    return {
+      rootOpen: root.classList.contains('pv2-speaker-notes-open'),
+      togglePressed: document.querySelector('[data-pv2-notes]').getAttribute('aria-pressed') === 'true',
+      activeNoteOpen: active.querySelector('.pv2-notes').open,
+      label: document.querySelector('[data-pv2-notes]').textContent.trim(),
+    };
+  })()`);
+
+  await evaluate(cdp, "document.dispatchEvent(new KeyboardEvent('keydown', { key: 'End', bubbles: true }))");
+  await sleep(100);
+  const endState = await evaluate(cdp, interactionStateExpression());
+
+  await evaluate(cdp, "document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Home', bubbles: true }))");
+  await sleep(100);
+  const homeState = await evaluate(cdp, interactionStateExpression());
+
+  return { notes, endState, homeState };
+}
+
+function interactionStateExpression() {
+  return `(() => {
+    const slides = [...document.querySelectorAll('[data-pv2-slide]')];
+    const active = document.querySelector('.pv2-slide.is-active');
+    const activeIndex = slides.indexOf(active) + 1;
+    const activeHeading = active.querySelector('h2');
+    const activeLink = document.querySelector('.pv2-nav-link.is-active');
+    return {
+      activeIndex,
+      currentText: document.querySelector('[data-pv2-current]').textContent.trim(),
+      hash: window.location.hash,
+      focusIsHeading: document.activeElement === activeHeading,
+      ariaCurrent: activeLink && activeLink.getAttribute('aria-current'),
+      activeId: active.id,
+      slideCount: slides.length,
+    };
+  })()`;
 }
 
 function fitExpression(scenarioName, slideNumber) {
@@ -313,13 +386,13 @@ async function main() {
         name: 'dark',
         width: 1366,
         height: 768,
-        setup: "document.querySelector('[data-pv2-theme]').click();",
+        setup: "document.documentElement.setAttribute('data-theme', 'dark'); try { localStorage.setItem('quizMode', 'dark'); } catch (e) {} document.querySelector('[data-pv2-theme]').setAttribute('aria-pressed', 'true'); document.querySelector('[data-pv2-theme]').textContent = 'Light mode';",
       },
       {
         name: 'dark-notes',
         width: 1600,
         height: 900,
-        setup: "document.querySelector('[data-pv2-theme]').click(); document.querySelector('[data-pv2]').classList.add('pv2-speaker-notes-open'); document.querySelectorAll('.pv2-notes').forEach((el) => { el.open = true; });",
+        setup: "document.documentElement.setAttribute('data-theme', 'dark'); try { localStorage.setItem('quizMode', 'dark'); } catch (e) {} document.querySelector('[data-pv2-theme]').setAttribute('aria-pressed', 'true'); document.querySelector('[data-pv2-theme]').textContent = 'Light mode'; document.querySelector('[data-pv2]').classList.add('pv2-speaker-notes-open'); document.querySelectorAll('.pv2-notes').forEach((el) => { el.open = true; });",
       },
       { name: 'mobile', width: 390, height: 844, mobile: true },
     ];
@@ -328,6 +401,7 @@ async function main() {
     for (const scenario of scenarios) {
       results.push(...await runScenario(cdp, scenario));
     }
+    const interactions = await runInteractionChecks(cdp);
     cdp.close();
 
     const failures = results.filter((result) => {
@@ -335,11 +409,28 @@ async function main() {
       const notesBad = result.scenario === 'wide-notes' && result.notes.display !== 'none' && !result.notes.rightSide;
       return result.spills.length || result.horizontalOverflow || ratioBad || notesBad;
     });
+    const interactionFailures = [];
+    if (!interactions.notes.rootOpen || !interactions.notes.togglePressed || !interactions.notes.activeNoteOpen) {
+      interactionFailures.push({ check: 'notes-toggle', value: interactions.notes });
+    }
+    if (interactions.endState.activeIndex !== interactions.endState.slideCount || !interactions.endState.focusIsHeading || interactions.endState.ariaCurrent !== 'page') {
+      interactionFailures.push({ check: 'end-key', value: interactions.endState });
+    }
+    if (interactions.homeState.activeIndex !== 1 || !interactions.homeState.focusIsHeading || interactions.homeState.ariaCurrent !== 'page') {
+      interactionFailures.push({ check: 'home-key', value: interactions.homeState });
+    }
 
-    console.log(JSON.stringify({ htmlPath, outDir, results }, null, 2));
-    if (failures.length) {
-      console.error('\nPresentation v2 QA failed: visible slide content spills outside the canvas.');
-      console.error(JSON.stringify(failures, null, 2));
+    console.log(JSON.stringify({ htmlPath, outDir, results, interactions }, null, 2));
+    if (failures.length || interactionFailures.length) {
+      console.error('\nPresentation v2 QA failed.');
+      if (failures.length) {
+        console.error('Visible slide content spills outside the canvas:');
+        console.error(JSON.stringify(failures, null, 2));
+      }
+      if (interactionFailures.length) {
+        console.error('Interaction checks failed:');
+        console.error(JSON.stringify(interactionFailures, null, 2));
+      }
       process.exit(1);
     }
     console.log(`Presentation v2 QA passed. Screenshots: ${outDir}`);

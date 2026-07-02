@@ -49,6 +49,9 @@ html[data-theme="dark"] {
 body {
   margin: 0;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--ge-bg);
   color: var(--ge-text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -161,9 +164,11 @@ a {
 }
 
 .ge-page {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 28px 24px 56px;
+  overflow-x: hidden;
 }
 
 .ge-hero {
@@ -270,6 +275,7 @@ a {
   background: var(--ge-panel);
   box-shadow: var(--ge-shadow);
   min-width: 0;
+  max-width: 100%;
   overflow-wrap: anywhere;
 }
 
@@ -277,10 +283,12 @@ a {
   position: sticky;
   top: 88px;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 .ge-task-card {
   padding: 22px;
+  overflow-x: hidden;
 }
 
 .ge-source-card h2,
@@ -323,10 +331,12 @@ a {
 
 .ge-source-table {
   width: 100%;
+  max-width: 100%;
   margin-top: 12px;
   border-collapse: collapse;
   font-size: 15px;
   table-layout: fixed;
+  word-break: break-word;
 }
 
 .ge-source-table th,
@@ -549,6 +559,22 @@ a {
   white-space: normal;
 }
 
+.ge-route-choice-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.ge-route-choice-options .ge-choice-option {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+
+.ge-route-choice-options .ge-choice-option span {
+  color: var(--ge-muted);
+  font-weight: 500;
+}
+
 .ge-context-refs {
   display: flex;
   flex-wrap: wrap;
@@ -654,6 +680,23 @@ a {
 .ge-token-bank,
 .ge-chosen-tokens {
   min-height: 46px;
+}
+
+.ge-token-selected {
+  border-color: color-mix(in srgb, var(--ge-accent) 70%, var(--ge-line));
+}
+
+.ge-answer-form-feedback {
+  margin: 12px 0 0;
+  padding: 10px 12px 10px 28px;
+  border: 1px solid color-mix(in srgb, var(--ge-warn) 55%, var(--ge-line));
+  border-radius: 8px;
+  background: var(--ge-warn-bg);
+  color: var(--ge-warn);
+}
+
+.ge-answer-form-feedback[hidden] {
+  display: none;
 }
 
 .ge-feedback {
@@ -792,6 +835,9 @@ a {
     grid-template-columns: 1fr;
     gap: 8px;
     align-items: start;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .ge-topbar strong {
@@ -804,11 +850,13 @@ a {
 
   .ge-page {
     padding: 24px 16px 40px;
+    max-width: 100%;
   }
 
   .ge-hero-card,
   .ge-route-panel {
     padding: 18px;
+    max-width: 100%;
   }
 
   .ge-hero h1 {
@@ -817,6 +865,7 @@ a {
 
   .ge-workbench {
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
 
   .ge-source-card {

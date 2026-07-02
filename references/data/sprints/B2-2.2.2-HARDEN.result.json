@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.2.2-HARDEN",
+  "status": "completed",
+  "plan": "reports/sprints/B2-2.2.2-HARDEN-plan.md",
+  "baseline": "reports/sprints/B2-2.2.2-HARDEN-baseline.md",
+  "result": "reports/sprints/B2-2.2.2-HARDEN-result.md",
+  "diff_summary": "reports/sprints/B2-2.2.2-HARDEN-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "review_standard": "REV-STD-1",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.2.2-HARDEN-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.2.2-HARDEN",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen status --short --branch",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/B2-2.2.2-HARDEN-lead-review-assignment.md",
+    "round1": "reports/sprints/B2-2.2.2-HARDEN-lead-review-round1.md",
+    "corrections": "reports/sprints/B2-2.2.2-HARDEN-lead-review-corrections.md",
+    "round2": "reports/sprints/B2-2.2.2-HARDEN-lead-review-round2.md",
+    "terminology_delta": "reports/sprints/B2-2.2.2-HARDEN-lead-review-terminology-delta.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "target-status",
+        "description": "2.2.2 target record remains migrated_from_v4_needs_v5_review.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "textbook_team",
+        "next_action": "Handle in later governed Chapter 2.2 target-promotion sprint.",
+        "blocking": false,
+        "blocks": "Reviewed-final target claims and target-source promotion.",
+        "does_not_block": "Local printed 2.2.2 hardening.",
+        "proof_required_to_close": "Later governed target promotion sprint."
+      },
+      {
+        "id": "later-paragraphs",
+        "description": "2.2.3 and 2.2.4 remain unaccepted and need their own hardening/proof.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "textbook_team",
+        "next_action": "Open 2.2.3 only after explicit human opening.",
+        "blocking": false,
+        "blocks": "Full Chapter 2.2 acceptance and later-paragraph publication claims.",
+        "does_not_block": "2.2.2-only closure.",
+        "proof_required_to_close": "Separate hardening/proof sprints."
+      },
+      {
+        "id": "unrelated-untracked-assets",
+        "description": "Unrelated lesson 2.1.4 _assets folder remains untracked.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "textbook_team",
+        "next_action": "Keep outside this PR pair or disposition in a separate task.",
+        "blocking": false,
+        "blocks": "Staging unrelated files into this sprint.",
+        "does_not_block": "2.2.2 output and platform proof.",
+        "proof_required_to_close": "PR scope check leaves it unstaged."
+      }
+    ],
+    "findings": [
+      {
+        "id": "core-output-proof",
+        "description": "2.2.2 output, rendered proof, chapter aggregate, and validators satisfy the sprint core requirements.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/B2-2.2.2-HARDEN-rendered-proof.md",
+          "reports/sprints/B2-2.2.2-HARDEN-quality-notes.md",
+          "reports/sprints/B2-2.2.2-HARDEN-command-log.jsonl"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure as PASS WITH FLAGS.",
+        "proof_required_to_close": "Preserve result, rendered proof, command log, and lead-review evidence."
+      },
+      {
+        "id": "target-status",
+        "description": "2.2.2 target remains migrated_from_v4_needs_v5_review.",
+        "classification": "minor_carry_flag",
+        "evidence": "reports/sprints/B2-2.2.2-HARDEN-quality-notes.md",
+        "blocks": "Reviewed-final target claims.",
+        "does_not_block": "Local 2.2.2 hardening.",
+        "proof_required_to_close": "Later target-promotion sprint."
+      },
+      {
+        "id": "later-paragraphs",
+        "description": "2.2.3 and 2.2.4 remain outside this sprint.",
+        "classification": "minor_carry_flag",
+        "evidence": "reports/sprints/B2-2.2.2-HARDEN-result.md",
+        "blocks": "Full Chapter 2.2 acceptance.",
+        "does_not_block": "2.2.2-only closure.",
+        "proof_required_to_close": "Separate hardening/proof sprints."
+      }
+    ]
+  },
+  "outputs": {
+    "lesson_paragraph": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet",
+    "chapter": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit",
+    "rendered_proof": "reports/rendered-proof/B2-2.2.2-HARDEN/manifest.json"
+  },
+  "boundary": "Closes only B2-2.2.2-HARDEN local paragraph hardening. Does not close full Chapter 2.2, promote targets, start later paragraphs, or authorize product/check-surface gates."
+}

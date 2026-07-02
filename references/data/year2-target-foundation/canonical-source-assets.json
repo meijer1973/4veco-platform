@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-TARGET-FOUNDATION-PRODUCTION-READINESS-BUNDLE-1",
+  "status": "canonical_source_assets_ready_for_review_no_lesson_output",
+  "authority_boundary": "canonical_source_asset_handoff_only_no_external_mutation_no_lesson_no_product_use",
+  "source_inputs": [
+    "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json"
+  ],
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "source_family": "vw-1022-a-25-2-o:q7-q11",
+      "status_after_human_merge": "canonical_source_assets_ready_for_lesson_design",
+      "rendered_proof_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book5",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5"
+      ],
+      "assets": [
+        {
+          "asset_id": "figuur-1-pensioenmodel-2024-2044",
+          "artifact_type": "mixed_bar_line_figure",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+          "source_derived_values_or_geometry": {
+            "values": [
+              "time horizon 2024-2044",
+              "official title Pensioenmodel econoom (2024-2044)",
+              "mixed bar/line structure",
+              "legend, left/right axes, axis labels, units, scale, and ticks",
+              "pension wealth, GDP-linked premiums, total pension outlays, and premiums as percentage of total pension wealth"
+            ]
+          },
+          "accessibility_text": "Schematic pension model chart for 2024-2044 showing pension wealth rising relative to GDP and premium pressure falling relative to pension wealth; exact student numeric extraction is not authorized from this schematic.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book5",
+            "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Do not substitute a generic pension diagram.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "schematic_visual_only_no_exact_numeric_table_claim"
+        },
+        {
+          "asset_id": "pensioenmodel-assumptions-a-f",
+          "artifact_type": "source_text_assumptions",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5",
+          "source_derived_values_or_geometry": {
+            "values": [
+              {
+                "label": "a",
+                "statement": "annual inflation = 2%"
+              },
+              {
+                "label": "b",
+                "statement": "annual real economic growth = 0.5%"
+              },
+              {
+                "label": "c",
+                "statement": "annual pension-asset return = 3.5%"
+              },
+              {
+                "label": "d",
+                "statement": "premium pressure as percentage of GDP stays constant"
+              },
+              {
+                "label": "e",
+                "statement": "number of premium payers stays constant"
+              },
+              {
+                "label": "f",
+                "statement": "capital incomes stay constant"
+              }
+            ]
+          },
+          "accessibility_text": "Y2-B5-P13 source asset pensioenmodel-assumptions-a-f with official locator references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book5",
+            "official_locator": "references/external/exams/vw-1022-a-25-2-o.pdf#page=4-5"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Use only this approved source-family asset for the target handoff.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "source_family": "vw-1022-a-23-2-o:q26-q29",
+      "status_after_human_merge": "canonical_source_assets_ready_for_lesson_design",
+      "rendered_proof_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book6",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+        "references/external/exams/vw-1022-a-23-2-o.pdf#page=13"
+      ],
+      "assets": [
+        {
+          "asset_id": "tabel-1-vastwonen-financial-data",
+          "artifact_type": "official_style_table",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "source_derived_values_or_geometry": {
+            "values": [
+              {
+                "label": "maximum_rent",
+                "value": 850,
+                "unit": "EUR per dwelling per month"
+              },
+              {
+                "label": "housing_stock",
+                "value": 6800,
+                "unit": "dwellings"
+              },
+              {
+                "label": "total_monthly_cost_function",
+                "value": "TK = 450Q + 1400000"
+              },
+              {
+                "label": "average_monthly_rent_revenue_function",
+                "value": "GO = -0.125Q + 2150"
+              },
+              {
+                "label": "quantity_symbol",
+                "value": "Q = number of social rental dwellings"
+              }
+            ]
+          },
+          "accessibility_text": "Y2-B6-P12 source asset tabel-1-vastwonen-financial-data with official locator references/external/exams/vw-1022-a-23-2-o.pdf#page=12.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book6",
+            "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Do not substitute generic housing-market tables.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        },
+        {
+          "asset_id": "tabel-2-particuliere-huurwoningen-reder",
+          "artifact_type": "official_style_table",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=13",
+          "source_derived_values_or_geometry": {
+            "values": [
+              {
+                "label": "released_rental_dwellings",
+                "value": -9.9,
+                "unit": "percent versus previous year"
+              },
+              {
+                "label": "average_rent",
+                "value": 6,
+                "unit": "percent change"
+              },
+              {
+                "label": "middle_incomes",
+                "value": 3,
+                "unit": "percent change"
+              },
+              {
+                "label": "income_elasticity_private_rental_housing_middle_income",
+                "value": 0.4
+              }
+            ]
+          },
+          "accessibility_text": "Y2-B6-P12 source asset tabel-2-particuliere-huurwoningen-reder with official locator references/external/exams/vw-1022-a-23-2-o.pdf#page=13.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book6",
+            "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=13"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Use only this approved source-family asset for the target handoff.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        },
+        {
+          "asset_id": "q28-housing-investor-context",
+          "artifact_type": "source_context",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12",
+          "source_derived_values_or_geometry": {
+            "values": [
+              "VastWonen as only social-housing provider in Reder",
+              "low mortgage-rate claim",
+              "purchase and conversion of old office buildings",
+              "financing through mortgage loans with collateral",
+              "housing-shortage risk argument"
+            ]
+          },
+          "accessibility_text": "Y2-B6-P12 source asset q28-housing-investor-context with official locator references/external/exams/vw-1022-a-23-2-o.pdf#page=12.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book6",
+            "official_locator": "references/external/exams/vw-1022-a-23-2-o.pdf#page=12"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Use only this approved source-family asset for the target handoff.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "source_family": "vw-1022-a-23-1-o:q12-q15",
+      "status_after_human_merge": "canonical_source_assets_ready_for_lesson_design",
+      "rendered_proof_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book7",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-23-1-o.pdf#page=6",
+        "references/external/exams/vw-1022-a-23-1-o.pdf#page=7"
+      ],
+      "assets": [
+        {
+          "asset_id": "figuur-1-kredietverzekering-en-voorwaarden",
+          "artifact_type": "actor_arrow_figure",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=6",
+          "source_derived_values_or_geometry": {
+            "values": [
+              {
+                "arrow": 1,
+                "meaning": "delivered sold product x"
+              },
+              {
+                "arrow": 2,
+                "meaning": "invoice amount"
+              },
+              {
+                "arrow": 3,
+                "meaning": "credit-insurance premium"
+              },
+              {
+                "arrow": 4,
+                "meaning": "amount paid out when the buying company does not pay"
+              },
+              {
+                "arrow": 5,
+                "meaning": "possible collection service"
+              },
+              {
+                "arrow": 6,
+                "meaning": "collection costs plus surcharge"
+              },
+              {
+                "arrow": 7,
+                "meaning": "outstanding debt to be paid"
+              }
+            ],
+            "conditions": [
+              "90% indemnity of missed turnover after non-payment",
+              "insurer takes over collection after payment term expires and buyer has not paid",
+              "collection costs are charged to the buying company",
+              "supplier bonus-malus system"
+            ]
+          },
+          "accessibility_text": "Actor-arrow diagram linking supplier, credit insurer, and buying company with numbered arrows for product delivery, invoice, premium, payout, collection service, collection costs, and outstanding debt.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book7",
+            "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=6"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Do not substitute a generic insurance diagram.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        },
+        {
+          "asset_id": "tabel-1-financiele-gegevens-digibate",
+          "artifact_type": "official_style_table",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=7",
+          "source_derived_values_or_geometry": {
+            "values": [
+              {
+                "contracts": 20,
+                "average_turnover_eur": 1000000,
+                "payment_term_days": 90,
+                "default_probability_percent": 0.05
+              },
+              {
+                "contracts": 30,
+                "average_turnover_eur": 500000,
+                "payment_term_days": 60,
+                "default_probability_percent": 0.2
+              },
+              {
+                "contracts": 80,
+                "average_turnover_eur": 250000,
+                "payment_term_days": 60,
+                "default_probability_percent": 0.2
+              }
+            ],
+            "calculation_trace": {
+              "premium_base": "contract count x average turnover x default probability",
+              "indemnity_rate_condition": 0.9,
+              "expected_damage_eur": 80000,
+              "markup_rate": 0.2,
+              "total_premium_eur": 96000,
+              "indemnity_rate_note": "The 90% indemnity is an insurance condition for incentive analysis; the official q15 premium calculation does not multiply the expected-damage base by 90%."
+            }
+          },
+          "accessibility_text": "Y2-B7-P13 source asset tabel-1-financiele-gegevens-digibate with official locator references/external/exams/vw-1022-a-23-1-o.pdf#page=7.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book7",
+            "official_locator": "references/external/exams/vw-1022-a-23-1-o.pdf#page=7"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Use only this approved source-family asset for the target handoff.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        }
+      ]
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "source_family": "vw-1022-a-25-1-o:q15-q16",
+      "status_after_human_merge": "canonical_source_assets_ready_for_lesson_design",
+      "rendered_proof_surface": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book8",
+      "official_locators": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+        "not_official_derived_from_q15_q16_source"
+      ],
+      "assets": [
+        {
+          "asset_id": "ijssalon-guarda-orso-bianco-context",
+          "artifact_type": "source_context",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "source_derived_values_or_geometry": {
+            "values": [
+              "beginning of 2025 Guarda loses its monopoly position",
+              "Orso Bianco opens",
+              "same production costs as Guarda",
+              "Orso Bianco enters with a lower price",
+              "consumers view the ice creams as perfect substitutes",
+              "possible price war and prisoner's dilemma"
+            ]
+          },
+          "accessibility_text": "Y2-B8-P04 source asset ijssalon-guarda-orso-bianco-context with official locator references/external/exams/vw-1022-a-25-1-o.pdf#page=7.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book8",
+            "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Do not substitute a generic duopoly.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        },
+        {
+          "asset_id": "lowest-price-guarantee-self-binding-source",
+          "artifact_type": "source_context",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7",
+          "source_derived_values_or_geometry": {
+            "values": [
+              "fixed sales price for 2025",
+              "lowest-price guarantee advertised on social media",
+              "discount of 25% on a lower Orso Bianco price"
+            ]
+          },
+          "accessibility_text": "Y2-B8-P04 source asset lowest-price-guarantee-self-binding-source with official locator references/external/exams/vw-1022-a-25-1-o.pdf#page=7.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book8",
+            "official_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Use only this approved source-family asset for the target handoff.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "official_source_asset_for_lesson_design_after_human_merge"
+        },
+        {
+          "asset_id": "derived-payoff-representation",
+          "artifact_type": "derived_representation",
+          "canonical_status": "canonical_ready_for_lesson_design_after_human_merge",
+          "official_locator": "not_official_derived_from_q15_q16_source",
+          "source_derived_values_or_geometry": {
+            "values": [
+              "source-to-derived-representation trace",
+              "dominant-strategy support for q15",
+              "commitment-device support for q16"
+            ]
+          },
+          "accessibility_text": "Derived, non-official incentive map for the Guarda and Orso Bianco price-war case; it must be presented after the official source context.",
+          "provenance": {
+            "source_foundation": "references/data/year2-target-foundation/source-reconstruction-foundation.json",
+            "rendered_review_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+            "rendered_gallery": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html#book8",
+            "official_locator": "not_official_derived_from_q15_q16_source"
+          },
+          "anti_substitution_metadata": {
+            "anti_substitution_rule": "Use only this approved source-family asset for the target handoff.",
+            "allowed_substitution": false
+          },
+          "lesson_use_boundary": "derived_non_official_must_be_labelled_and_secondary_to_official_context"
+        }
+      ]
+    }
+  ],
+  "authority_claims": {
+    "canonical_source_assets_ready_for_review": true,
+    "op_row_disposition_ready_for_review": true,
+    "generator_handoff_ready_for_review": true,
+    "foundation_ready_for_lesson_design_after_human_merge": true,
+    "target_registry_records_created": false,
+    "active_v5_registry_mutated": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "mtus_minted": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

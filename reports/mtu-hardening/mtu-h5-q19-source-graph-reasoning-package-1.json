@@ -5,6 +5,13 @@
   "gate_id": "GATE-MTU-H5-Q19-source-graph-reasoning-package-1",
   "created": "2026-06-17",
   "status": "ready_for_remote_human_review_after_subagent_lead_hold_no_fixture_mutation",
+  "superseded_by": {
+    "package_id": "MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1",
+    "path": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json",
+    "superseded_on": "2026-06-20",
+    "status": "historical_non_authoritative_for_current_q19_counts",
+    "note": "The q19 0 failed / 6 review_required hold state in this package is historical. Current q19 regression status is governed by the final resolution bundle."
+  },
   "start_commit": "1104325a066bec624eb4af66bfe968e0ceed8921",
   "review_branch": "codex/mtu-h5-q19-source-graph-reasoning-package-1-20260617",
   "purpose": "Record a current-state, non-mutating q19 source/graph/reasoning hold package after the q19 answer-form and procedure semantic-fit execution lanes. The package prevents future agents from clearing the remaining six q19 review hooks without stronger reviewed evidence.",

@@ -28,8 +28,8 @@ student-facing deployment by itself.
 
 | Level | Name | Meaning | Minimum proof |
 |---|---|---|---|
-| `L0` | Mechanical auto-merge candidate | Pure mechanical maintenance with no authority change and no generated lesson output. | Non-empty string-only `changed_paths`, commit-specific CI proof, checker proof, `proof.lead_review` path/result/reviewed commit proof, no escalation triggers, `human_decision_required: false`. |
-| `L1` | Lead-review autonomous | Normal sprint work can close on lead-review judgment when no high-authority surface is touched. | Non-empty string-only `changed_paths`, commit-specific CI proof, checker proof, `proof.lead_review.result` of PASS or PASS WITH FLAGS, no escalation triggers, `human_decision_required: false`. |
+| `L0` | Mechanical auto-merge candidate | Pure mechanical maintenance with no authority change and no generated lesson output. | Non-empty string-only `changed_paths`, commit-specific CI proof including required protected context, checker proof, `proof.lead_review` path/result/reviewed commit proof, no escalation triggers, `human_decision_required: false`. |
+| `L1` | Lead-review autonomous | Normal sprint work can close on lead-review judgment when no high-authority surface is touched. | Non-empty string-only `changed_paths`, commit-specific CI proof including required protected context, checker proof, `proof.lead_review.result` of PASS or PASS WITH FLAGS, no escalation triggers, `human_decision_required: false`. |
 | `L2` | Owner-preapproved lane | A repeatable lane that the owner has preapproved in writing for a precise class of changes. | Same as L1 plus owner preapproval evidence and exact lane name. |
 | `L3` | Owner one-decision gate | The owner makes one bounded decision after reviewing a complete packet. Use for generated-output or product-adjacent changes that do not require a full multi-review gate. | Complete packet, CI/checker proof or explicit CI waiver, lead review before the owner decision, `human_decision_required: true`. |
 | `L4` | Full human gate | Full human review is required. Use for protected references, product/spec authority, diagnostics, mastery, PV, student/product use, review-gate closure, or unresolved escalation. | Human-review packet, lead review before the human gate, passing CI/checker proof or explicit waiver, recorded decision and closure evidence. |
@@ -55,12 +55,19 @@ companion:
   },
   "human_decision_required": false,
   "paired_prs": [],
-  "auto_merge_allowed_after_ci": true,
+  "auto_merge_allowed_after_ci": false,
   "escalation_triggers": [],
   "proof": {
     "ci": {
       "reviewed_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "conclusion": "success"
+      "conclusion": "success",
+      "required_contexts": ["validate-platform"],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS"
+        }
+      ]
     },
     "checkers": [
       {
@@ -88,9 +95,11 @@ Recommended additional fields:
   the checker with `--changed-paths-file <path>` generated from
   `git diff --name-only origin/main...HEAD` so the packet is checked against
   the actual PR diff.
-- `proof.ci`: reviewed commit SHA and success conclusion. Workflow, context,
-  run ID, or job name are useful metadata but do not prove CI for an
-  autonomous packet without a reviewed commit SHA.
+- `proof.ci`: reviewed commit SHA, success conclusion, and required protected
+  `validate-platform` context evidence. Workflow, run ID, or job name are
+  useful metadata but do not prove CI for an autonomous packet without a
+  reviewed commit SHA and the required context. L0/L1/L2 packets may add
+  stricter contexts, but they must not remove `validate-platform`.
 - `proof.checkers`: passed checker commands.
 - `proof.lead_review`: path, PASS or PASS WITH FLAGS result, and reviewed
   commit SHA. `review_autonomy.lead_review_result` alone is not proof.
@@ -107,6 +116,54 @@ machine-readable envelope instead of hand-copying the field set. Human-gated
 packets should emit `L3` or `L4`, set `human_decision_required: true`, keep
 `auto_merge_allowed_after_ci: false`, and list the generated packet surface in
 `changed_paths`.
+
+The helper also provides L0, L1, and L2 convenience constructors for
+mechanical, lead-review autonomous, and exact owner-preapproved autonomous
+lanes. These constructors require explicit proof objects; they do not
+manufacture CI success, checker pass, or lead-review PASS. They also default
+`auto_merge_allowed_after_ci` to false unless a precise autonomous lane
+explicitly enables it. Autonomous packets still need changed-path evidence,
+commit-specific CI proof, checker proof, `proof.lead_review`, and empty
+escalation triggers.
+
+Draft-to-review routing is governed by
+`docs/review/pr-readiness-routing-policy.md`. The read-only command is
+`npm.cmd run review:pr-readiness`; the mutating command is the explicit second
+step `npm.cmd run apply:pr-readiness`.
+
+In this repository's single-account GitHub model, approval count is not the
+human-review signal. Branch protection keeps pull-request workflow and strict
+status checks, but the expected approving-review count is `0`. The live required
+context is `validate-platform` only. `integration-authorized` remains optional
+audit evidence after the activation pilot failed closed.
+L0-L2 merge authority comes from exact-head CI/checker/lead-review/readiness proof;
+L3-L4 and governance/self-modification work still require an explicit owner
+payload authorization tied to the PR number, `reviewed_payload_head_sha`, base
+SHA at review when required by the schema, and decision scope. Human-facing
+handoffs must include `AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION` while keeping
+the machine decision token, such as `APPROVE_FOR_INTEGRATION`, schema-compatible.
+
+The serialized integration lane separates the human-reviewed payload from the
+later integration head. Owner decisions for L3/L4 work must record the reviewed
+payload SHA and base SHA at review. If `main` advances, the lane may inherit the
+decision only through conflict-free base-sync merges or allowlisted deterministic
+evidence refreshes. Substantive overlap requires integration-delta lead review;
+changed effective payload, bundle membership, or authority scope returns to
+human review. Renewed owner authorization is not required when payload lineage,
+effective payload, bundle membership, and authority scope remain valid.
+The trusted lane recomputes exact-head PR readiness, posts the full
+machine-readable decision with a canonical digest, and verifies post-merge
+`main` CI; a pre-existing marker-only readiness comment is not merge authority.
+Agents must not call `gh pr merge` directly for normal PRs. Use
+`authorized-pr-integration` or `authorized-bundle-integration`. For single-PR
+work, the owner-authenticated local serialized lane is the default path:
+`npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <PR> --authorization-comment-id <COMMENT_ID>`.
+The GitHub-hosted workflow is optional only when its token can read branch
+protection. A `branch_protection_read_forbidden` result from that workflow is
+an expected permission boundary; switch to the owner-authenticated local lane
+with the same authorization comment ID and do not direct-merge. Allow
+`integration-authorized` to be minted only as optional audit evidence by trusted
+`main` integration code.
 
 Do not add a repository-wide CI gate over all historical review packets until
 the archived packet surface is either migrated or an allowlist exists. Focused
@@ -125,6 +182,8 @@ The checker must reject autonomous classification when any of these are true:
 6. Commit-specific CI proof or checker proof is missing.
 7. `proof.lead_review` path/result/reviewed commit proof is missing.
 8. `escalation_triggers` is non-empty.
+9. `ci_waiver` or `checkers_required: false` is used for an L0, L1, or L2
+   lane.
 
 When any trigger fires, set `human_decision_required: true` and move the packet
 to L3 or L4. Do not clear the trigger by changing wording alone; either remove
@@ -155,12 +214,27 @@ For platform/lesson pairs:
 
 - Use the same `bundle_id` in every paired PR.
 - List every paired PR in `paired_prs`.
+- Record exact platform and lesson PR numbers plus exact reviewed payload SHAs.
 - Classify the bundle by the highest authority class and highest ladder level
   required by any PR in the bundle.
 - Keep generated lesson output in the lesson repo and source/checker/proof in
   the platform repo unless a human explicitly authorizes another shape.
-- Do not merge the generated-output PR before the platform source/checker PR is
-  green and the bundle decision is recorded.
+- Treat the platform repository as the controller for generators, CI,
+  validators, governance, and integration tooling. Lesson PRs consume delegated
+  bundle proof from the controller.
+- Required platform `validate-platform` always checks platform candidate plus
+  lesson `main`; it does not substitute a matching lesson branch. If a platform
+  PR needs a lesson candidate to pass, it must be a cross-repo bundle.
+- Run the explicit bundle compatibility workflow for three exact-ref states:
+  `platform-first`, `lesson-first`, and `bundle-final`.
+- Do not merge either PR unless `bundle-final` is green and at least one
+  intermediate state is green. Select only a proven merge order.
+- Record canonical bundle authorization with
+  `<!-- 4veco-human-bundle-authorization:<bundle-id> -->` JSON. Prose-only
+  approval is not sufficient for coordinated bundle integration.
+- Use the authorized bundle integration lane or
+  `npm.cmd run integrate:authorized-bundle`; do not merge one member
+  independently merely because the final combined state passed.
 
 ## Non-Authority Rule
 

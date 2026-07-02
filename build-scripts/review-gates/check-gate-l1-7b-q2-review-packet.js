@@ -34,7 +34,7 @@ const REQUIRED_EVIDENCE = [
   'reports/sprints/L1.7B-Q2-live-output-evidence.json',
   'reports/sprints/L1.7B-Q2-screenshot-manifest.md',
   'reports/sprints/L1.7B-Q2-lead-review-round2.md',
-  'source-data/book-1/exit-ticket/1.1.2.json',
+  'source-data/book-1/exit-ticket/1.1.2-exit-ticket.json',
   '../4veco-lessen/specifications/product-end-state.md',
   '../4veco-lessen/specifications/companion-core-specifications.md'
 ];
@@ -51,6 +51,13 @@ function assert(condition, message) {
 function read(file) {
   if (!fs.existsSync(file)) fail(`missing file: ${file}`);
   return fs.readFileSync(file, 'utf8');
+}
+
+function evidencePathExists(evidence) {
+  const resolved = evidence.startsWith('../4veco-lessen/')
+    ? path.resolve(evidence)
+    : path.resolve(evidence);
+  return fs.existsSync(resolved);
 }
 
 function readJson(file) {
@@ -210,6 +217,7 @@ function main() {
   assert(Array.isArray(packet.minimum_live_output_inspection) && packet.minimum_live_output_inspection.length === 8, 'JSON must include eight live-output inspection items');
 
   for (const evidence of REQUIRED_EVIDENCE) {
+    assert(evidencePathExists(evidence), `review packet evidence path does not exist: ${evidence}`);
     assert(packet.evidence_base.includes(evidence), `review packet JSON missing evidence: ${evidence}`);
     assert(packetMd.includes(evidence), `review packet markdown missing evidence: ${evidence}`);
   }

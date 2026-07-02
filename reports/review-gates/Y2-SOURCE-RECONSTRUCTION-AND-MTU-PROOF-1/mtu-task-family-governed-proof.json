@@ -1,0 +1,1285 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1",
+  "prior_sprint_id": "Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1",
+  "status": "governed_task_family_proof_ready_pending_human_closure_no_mtu_mutation",
+  "authority_boundary": "review_proof_only_no_mtu_mutation_no_operation_closure_no_product_use",
+  "evidence_base": [
+    "references/authored/year2-v6-target-foundation-candidates.json",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+    "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-gallery.html",
+    "references/data/year2-target-foundation/answer-contracts.json",
+    "reports/reference-planning/Y2-TARGET-REGISTRY-AND-TASK-FOUNDATION-IMPLEMENTATION-1-mtu-task-family-review.json"
+  ],
+  "records": [
+    {
+      "record_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "source_family": "vw-1022-a-25-2-o:q7-q11",
+      "op_rows_expected": [
+        "OP-T1",
+        "OP-H1",
+        "OP-ANS2",
+        "OP-ANS3"
+      ],
+      "proof_status": "complete_review_proof_pending_human_acceptance",
+      "source_artifact_ids": [
+        "figuur-1-pensioenmodel-2024-2044",
+        "pensioenmodel-assumptions-a-f"
+      ],
+      "answer_contract_subquestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "proof_cases": [
+        {
+          "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-T1",
+          "op_row": "OP-T1",
+          "task_families": [
+            "source_value_selection",
+            "table_value_selection",
+            "source_chain_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-pensioenmodel-2024-2044",
+            "pensioenmodel-assumptions-a-f"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "two_step_explanation",
+              "point_logic": [
+                "current premiums reduce present consumption",
+                "later payouts support future consumption"
+              ],
+              "short_answer_model": "Premiums reduce current consumption and payouts support future consumption."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "two_link_source_explanation",
+              "source_requirements": [
+                "annual inflation = 2%",
+                "annual real economic growth = 0.5%",
+                "welfare-indexed pension outlays"
+              ],
+              "point_logic": [
+                "nominal income rises through real growth plus inflation",
+                "welfare-indexed pensions rise with incomes"
+              ],
+              "short_answer_model": "Real growth plus inflation raises nominal income, so welfare-indexed outlays rise."
+            },
+            {
+              "subquestion": "c",
+              "answer_form": "classification_with_justification",
+              "source_requirements": [
+                "moment value versus period flow"
+              ],
+              "point_logic": [
+                "classify net accumulated pension saving as stock",
+                "justify by moment measurement"
+              ],
+              "short_answer_model": "Accumulated saving is a stock because it is measured at a moment."
+            },
+            {
+              "subquestion": "d",
+              "answer_form": "ratio_comparison_with_conclusion",
+              "source_requirements": [
+                "premium pressure as percentage of GDP stays constant",
+                "total pension wealth"
+              ],
+              "point_logic": [
+                "pension wealth rises faster than GDP",
+                "constant GDP-share premium falls as wealth share"
+              ],
+              "short_answer_model": "Pension wealth rises faster than GDP, so a constant GDP-share premium falls as wealth share."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "policy_mechanism_explanation",
+              "point_logic": [
+                "higher pension age improves fund balance by more payers or fewer beneficiaries",
+                "lower premium pressure can raise net purchasing power"
+              ],
+              "short_answer_model": "A higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-H1",
+          "op_row": "OP-H1",
+          "task_families": [
+            "source_chain_builder",
+            "sentence_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "b",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-pensioenmodel-2024-2044",
+            "pensioenmodel-assumptions-a-f"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "b",
+              "answer_form": "two_link_source_explanation",
+              "source_requirements": [
+                "annual inflation = 2%",
+                "annual real economic growth = 0.5%",
+                "welfare-indexed pension outlays"
+              ],
+              "point_logic": [
+                "nominal income rises through real growth plus inflation",
+                "welfare-indexed pensions rise with incomes"
+              ],
+              "short_answer_model": "Real growth plus inflation raises nominal income, so welfare-indexed outlays rise."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "policy_mechanism_explanation",
+              "point_logic": [
+                "higher pension age improves fund balance by more payers or fewer beneficiaries",
+                "lower premium pressure can raise net purchasing power"
+              ],
+              "short_answer_model": "A higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-ANS2",
+          "op_row": "OP-ANS2",
+          "task_families": [
+            "calculation_work",
+            "table_value_selection",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "d"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-pensioenmodel-2024-2044",
+            "pensioenmodel-assumptions-a-f"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "d",
+              "answer_form": "ratio_comparison_with_conclusion",
+              "source_requirements": [
+                "premium pressure as percentage of GDP stays constant",
+                "total pension wealth"
+              ],
+              "point_logic": [
+                "pension wealth rises faster than GDP",
+                "constant GDP-share premium falls as wealth share"
+              ],
+              "short_answer_model": "Pension wealth rises faster than GDP, so a constant GDP-share premium falls as wealth share."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1:OP-ANS3",
+          "op_row": "OP-ANS3",
+          "task_families": [
+            "sentence_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-pensioenmodel-2024-2044",
+            "pensioenmodel-assumptions-a-f"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "two_step_explanation",
+              "point_logic": [
+                "current premiums reduce present consumption",
+                "later payouts support future consumption"
+              ],
+              "short_answer_model": "Premiums reduce current consumption and payouts support future consumption."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "two_link_source_explanation",
+              "source_requirements": [
+                "annual inflation = 2%",
+                "annual real economic growth = 0.5%",
+                "welfare-indexed pension outlays"
+              ],
+              "point_logic": [
+                "nominal income rises through real growth plus inflation",
+                "welfare-indexed pensions rise with incomes"
+              ],
+              "short_answer_model": "Real growth plus inflation raises nominal income, so welfare-indexed outlays rise."
+            },
+            {
+              "subquestion": "c",
+              "answer_form": "classification_with_justification",
+              "source_requirements": [
+                "moment value versus period flow"
+              ],
+              "point_logic": [
+                "classify net accumulated pension saving as stock",
+                "justify by moment measurement"
+              ],
+              "short_answer_model": "Accumulated saving is a stock because it is measured at a moment."
+            },
+            {
+              "subquestion": "d",
+              "answer_form": "ratio_comparison_with_conclusion",
+              "source_requirements": [
+                "premium pressure as percentage of GDP stays constant",
+                "total pension wealth"
+              ],
+              "point_logic": [
+                "pension wealth rises faster than GDP",
+                "constant GDP-share premium falls as wealth share"
+              ],
+              "short_answer_model": "Pension wealth rises faster than GDP, so a constant GDP-share premium falls as wealth share."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "policy_mechanism_explanation",
+              "point_logic": [
+                "higher pension age improves fund balance by more payers or fewer beneficiaries",
+                "lower premium pressure can raise net purchasing power"
+              ],
+              "short_answer_model": "A higher pension age can improve the fund balance and lower premium pressure, raising net purchasing power."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        }
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "OP-T1/OP-H1/OP-ANS2/OP-ANS3 are not production-closed for pension source reasoning.",
+        "blocks": "lesson production and shared task-shell reliance",
+        "does_not_block": "candidate-surface installation",
+        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
+      }
+    },
+    {
+      "record_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "source_family": "vw-1022-a-23-2-o:q26-q29",
+      "op_rows_expected": [
+        "OP-P1",
+        "OP-D1",
+        "OP-C1",
+        "OP-C2",
+        "OP-F1",
+        "OP-E1",
+        "OP-ANS2",
+        "OP-ANS3"
+      ],
+      "proof_status": "complete_review_proof_pending_human_acceptance",
+      "source_artifact_ids": [
+        "tabel-1-vastwonen-financial-data",
+        "tabel-2-particuliere-huurwoningen-reder",
+        "q28-housing-investor-context"
+      ],
+      "answer_contract_subquestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "proof_cases": [
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-P1",
+          "op_row": "OP-P1",
+          "task_families": [
+            "calculation_work",
+            "table_value_selection",
+            "source_value_selection"
+          ],
+          "subquestions": [
+            "a",
+            "b",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "calculation_with_unit",
+              "source_requirements": [
+                "maximum rent = EUR 850",
+                "housing stock = 6800"
+              ],
+              "point_logic": [
+                "select demand at maximum rent",
+                "subtract housing stock",
+                "state waiting-list count with unit"
+              ],
+              "expected_waiting_list_dwellings": 3600,
+              "short_answer_model": "At EUR 850, demand is 10,400 dwellings, so the waiting list is 10,400 - 6,800 = 3,600 dwellings."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "calculation_with_conclusion",
+              "source_requirements": [
+                "GO = -0.125Q + 2150",
+                "Q = social rental dwellings",
+                "housing stock = 6800"
+              ],
+              "point_logic": [
+                "derive marginal revenue from average revenue",
+                "choose the revenue-maximising quantity",
+                "compare with capacity or waiting-list pressure",
+                "accept or reject the claim"
+              ],
+              "revenue_maximising_quantity": 8600,
+              "revenue_maximising_rent_eur": 1075,
+              "claim_conclusion": "claim_not_correct",
+              "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "source_supported_market_explanation",
+              "source_requirements": [
+                "released rental dwellings = -9.9%",
+                "average rent = +6%",
+                "middle incomes = +3%",
+                "income elasticity = +0.4"
+              ],
+              "point_logic": [
+                "positive income elasticity and higher incomes increase demand",
+                "fewer released rentals restrict supply",
+                "rent rises"
+              ],
+              "short_answer_model": "Middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-D1",
+          "op_row": "OP-D1",
+          "task_families": [
+            "calculation_work",
+            "formula_derivation",
+            "table_value_selection"
+          ],
+          "subquestions": [
+            "a"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "calculation_with_unit",
+              "source_requirements": [
+                "maximum rent = EUR 850",
+                "housing stock = 6800"
+              ],
+              "point_logic": [
+                "select demand at maximum rent",
+                "subtract housing stock",
+                "state waiting-list count with unit"
+              ],
+              "expected_waiting_list_dwellings": 3600,
+              "short_answer_model": "At EUR 850, demand is 10,400 dwellings, so the waiting list is 10,400 - 6,800 = 3,600 dwellings."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-C1",
+          "op_row": "OP-C1",
+          "task_families": [
+            "formula_derivation",
+            "calculation_work",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "b"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "b",
+              "answer_form": "calculation_with_conclusion",
+              "source_requirements": [
+                "GO = -0.125Q + 2150",
+                "Q = social rental dwellings",
+                "housing stock = 6800"
+              ],
+              "point_logic": [
+                "derive marginal revenue from average revenue",
+                "choose the revenue-maximising quantity",
+                "compare with capacity or waiting-list pressure",
+                "accept or reject the claim"
+              ],
+              "revenue_maximising_quantity": 8600,
+              "revenue_maximising_rent_eur": 1075,
+              "claim_conclusion": "claim_not_correct",
+              "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-C2",
+          "op_row": "OP-C2",
+          "task_families": [
+            "formula_derivation",
+            "calculation_work",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "b"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "b",
+              "answer_form": "calculation_with_conclusion",
+              "source_requirements": [
+                "GO = -0.125Q + 2150",
+                "Q = social rental dwellings",
+                "housing stock = 6800"
+              ],
+              "point_logic": [
+                "derive marginal revenue from average revenue",
+                "choose the revenue-maximising quantity",
+                "compare with capacity or waiting-list pressure",
+                "accept or reject the claim"
+              ],
+              "revenue_maximising_quantity": 8600,
+              "revenue_maximising_rent_eur": 1075,
+              "claim_conclusion": "claim_not_correct",
+              "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-F1",
+          "op_row": "OP-F1",
+          "task_families": [
+            "source_chain_builder",
+            "sentence_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "c",
+            "d"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "c",
+              "answer_form": "two_link_mechanism",
+              "point_logic": [
+                "lower mortgage rate lowers interest costs",
+                "lower interest costs reduce return/default pressure"
+              ],
+              "short_answer_model": "A low mortgage rate lowers interest costs and reduces pressure on returns or default risk."
+            },
+            {
+              "subquestion": "d",
+              "answer_form": "two_link_mechanism",
+              "point_logic": [
+                "housing shortage sustains rental demand",
+                "stable rental income reduces loss risk"
+              ],
+              "short_answer_model": "Shortage sustains rental demand and stabilises rent income, reducing loss risk."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-E1",
+          "op_row": "OP-E1",
+          "task_families": [
+            "source_value_selection",
+            "table_value_selection",
+            "source_chain_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "e"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "e",
+              "answer_form": "source_supported_market_explanation",
+              "source_requirements": [
+                "released rental dwellings = -9.9%",
+                "average rent = +6%",
+                "middle incomes = +3%",
+                "income elasticity = +0.4"
+              ],
+              "point_logic": [
+                "positive income elasticity and higher incomes increase demand",
+                "fewer released rentals restrict supply",
+                "rent rises"
+              ],
+              "short_answer_model": "Middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-ANS2",
+          "op_row": "OP-ANS2",
+          "task_families": [
+            "calculation_work",
+            "formula_derivation",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "a",
+            "b"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "calculation_with_unit",
+              "source_requirements": [
+                "maximum rent = EUR 850",
+                "housing stock = 6800"
+              ],
+              "point_logic": [
+                "select demand at maximum rent",
+                "subtract housing stock",
+                "state waiting-list count with unit"
+              ],
+              "expected_waiting_list_dwellings": 3600,
+              "short_answer_model": "At EUR 850, demand is 10,400 dwellings, so the waiting list is 10,400 - 6,800 = 3,600 dwellings."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "calculation_with_conclusion",
+              "source_requirements": [
+                "GO = -0.125Q + 2150",
+                "Q = social rental dwellings",
+                "housing stock = 6800"
+              ],
+              "point_logic": [
+                "derive marginal revenue from average revenue",
+                "choose the revenue-maximising quantity",
+                "compare with capacity or waiting-list pressure",
+                "accept or reject the claim"
+              ],
+              "revenue_maximising_quantity": 8600,
+              "revenue_maximising_rent_eur": 1075,
+              "claim_conclusion": "claim_not_correct",
+              "short_answer_model": "MO = -0.25Q + 2,150, so revenue is maximised at Q = 8,600 and P = EUR 1,075; the claim that abolishing the maximum rent removes the waiting list is not correct."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1:OP-ANS3",
+          "op_row": "OP-ANS3",
+          "task_families": [
+            "sentence_builder",
+            "source_chain_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "c",
+            "d",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "tabel-1-vastwonen-financial-data",
+            "tabel-2-particuliere-huurwoningen-reder",
+            "q28-housing-investor-context"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "c",
+              "answer_form": "two_link_mechanism",
+              "point_logic": [
+                "lower mortgage rate lowers interest costs",
+                "lower interest costs reduce return/default pressure"
+              ],
+              "short_answer_model": "A low mortgage rate lowers interest costs and reduces pressure on returns or default risk."
+            },
+            {
+              "subquestion": "d",
+              "answer_form": "two_link_mechanism",
+              "point_logic": [
+                "housing shortage sustains rental demand",
+                "stable rental income reduces loss risk"
+              ],
+              "short_answer_model": "Shortage sustains rental demand and stabilises rent income, reducing loss risk."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "source_supported_market_explanation",
+              "source_requirements": [
+                "released rental dwellings = -9.9%",
+                "average rent = +6%",
+                "middle incomes = +3%",
+                "income elasticity = +0.4"
+              ],
+              "point_logic": [
+                "positive income elasticity and higher incomes increase demand",
+                "fewer released rentals restrict supply",
+                "rent rises"
+              ],
+              "short_answer_model": "Middle-income demand rises because income rises with positive elasticity, while fewer released rentals restrict supply and pushes rent upward."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        }
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "Housing finance, cost/revenue, elasticity, and rent-market source task shells need governed proof.",
+        "blocks": "lesson production and target-equivalent proof",
+        "does_not_block": "candidate-surface installation",
+        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
+      }
+    },
+    {
+      "record_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "source_family": "vw-1022-a-23-1-o:q12-q15",
+      "op_rows_expected": [
+        "OP-R1",
+        "OP-M1",
+        "OP-ANS2",
+        "OP-ANS3"
+      ],
+      "proof_status": "complete_review_proof_pending_human_acceptance",
+      "source_artifact_ids": [
+        "figuur-1-kredietverzekering-en-voorwaarden",
+        "tabel-1-financiele-gegevens-digibate"
+      ],
+      "answer_contract_subquestions": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "proof_cases": [
+        {
+          "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-R1",
+          "op_row": "OP-R1",
+          "task_families": [
+            "assertion_reason",
+            "source_chain_builder",
+            "source_value_selection",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-kredietverzekering-en-voorwaarden",
+            "tabel-1-financiele-gegevens-digibate"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "three_part_explanation",
+              "source_requirements": [
+                "credit insurer as principal",
+                "buying company as agent",
+                "collection costs charged to buying company"
+              ],
+              "point_logic": [
+                "name conflicting interests",
+                "name asymmetric information",
+                "name condition that reduces the problem"
+              ],
+              "short_answer_model": "The credit insurer is the principal and the buying company is the agent: the insurer wants to be paid, while the buyer may not pay; charging collection costs to the buying company reduces this agency problem."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "condition_identification_plus_incentive_chain",
+              "source_requirements": [
+                "90% indemnity",
+                "bonus-malus",
+                "collection-cost pass-through"
+              ],
+              "point_logic": [
+                "identify two conditions",
+                "explain how each reduces supplier moral hazard"
+              ],
+              "short_answer_model": "Deductible-like indemnity and bonus-malus reduce the incentive to claim carelessly."
+            },
+            {
+              "subquestion": "c",
+              "answer_form": "adverse_selection_condition_and_reason",
+              "source_requirements": [
+                "bonus-malus",
+                "voluntary deductible or compulsory insurance route if used"
+              ],
+              "point_logic": [
+                "identify condition",
+                "explain how it changes pool composition or selection incentive"
+              ],
+              "short_answer_model": "Bonus-malus, voluntary deductible, or compulsory insurance can reduce selection by changing who enters the pool."
+            },
+            {
+              "subquestion": "d",
+              "answer_form": "expected_value_calculation",
+              "source_requirements": [
+                "contract counts",
+                "average turnover",
+                "default probabilities"
+              ],
+              "point_logic": [
+                "multiply count, turnover, and default probability for each row",
+                "sum expected damage"
+              ],
+              "expected_damage_eur": 80000,
+              "short_answer_model": "Multiply contract count, average turnover, and default probability for each row: EUR 10,000 + EUR 30,000 + EUR 40,000 = EUR 80,000."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "markup_calculation_and_conclusion",
+              "source_requirements": [
+                "20% markup"
+              ],
+              "point_logic": [
+                "add 20% markup to expected damage",
+                "state total credit-insurance premium"
+              ],
+              "total_premium_eur": 96000,
+              "short_answer_model": "The markup is EUR 80,000 x 20% = EUR 16,000, so the total premium is EUR 96,000."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-M1",
+          "op_row": "OP-M1",
+          "task_families": [
+            "matching_pairs",
+            "source_value_selection",
+            "sentence_builder"
+          ],
+          "subquestions": [
+            "a"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-kredietverzekering-en-voorwaarden",
+            "tabel-1-financiele-gegevens-digibate"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "three_part_explanation",
+              "source_requirements": [
+                "credit insurer as principal",
+                "buying company as agent",
+                "collection costs charged to buying company"
+              ],
+              "point_logic": [
+                "name conflicting interests",
+                "name asymmetric information",
+                "name condition that reduces the problem"
+              ],
+              "short_answer_model": "The credit insurer is the principal and the buying company is the agent: the insurer wants to be paid, while the buyer may not pay; charging collection costs to the buying company reduces this agency problem."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-ANS2",
+          "op_row": "OP-ANS2",
+          "task_families": [
+            "calculation_work",
+            "table_value_selection",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "d",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-kredietverzekering-en-voorwaarden",
+            "tabel-1-financiele-gegevens-digibate"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "d",
+              "answer_form": "expected_value_calculation",
+              "source_requirements": [
+                "contract counts",
+                "average turnover",
+                "default probabilities"
+              ],
+              "point_logic": [
+                "multiply count, turnover, and default probability for each row",
+                "sum expected damage"
+              ],
+              "expected_damage_eur": 80000,
+              "short_answer_model": "Multiply contract count, average turnover, and default probability for each row: EUR 10,000 + EUR 30,000 + EUR 40,000 = EUR 80,000."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "markup_calculation_and_conclusion",
+              "source_requirements": [
+                "20% markup"
+              ],
+              "point_logic": [
+                "add 20% markup to expected damage",
+                "state total credit-insurance premium"
+              ],
+              "total_premium_eur": 96000,
+              "short_answer_model": "The markup is EUR 80,000 x 20% = EUR 16,000, so the total premium is EUR 96,000."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1:OP-ANS3",
+          "op_row": "OP-ANS3",
+          "task_families": [
+            "sentence_builder",
+            "source_chain_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "a",
+            "b",
+            "c",
+            "e"
+          ],
+          "source_artifact_ids": [
+            "figuur-1-kredietverzekering-en-voorwaarden",
+            "tabel-1-financiele-gegevens-digibate"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "three_part_explanation",
+              "source_requirements": [
+                "credit insurer as principal",
+                "buying company as agent",
+                "collection costs charged to buying company"
+              ],
+              "point_logic": [
+                "name conflicting interests",
+                "name asymmetric information",
+                "name condition that reduces the problem"
+              ],
+              "short_answer_model": "The credit insurer is the principal and the buying company is the agent: the insurer wants to be paid, while the buyer may not pay; charging collection costs to the buying company reduces this agency problem."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "condition_identification_plus_incentive_chain",
+              "source_requirements": [
+                "90% indemnity",
+                "bonus-malus",
+                "collection-cost pass-through"
+              ],
+              "point_logic": [
+                "identify two conditions",
+                "explain how each reduces supplier moral hazard"
+              ],
+              "short_answer_model": "Deductible-like indemnity and bonus-malus reduce the incentive to claim carelessly."
+            },
+            {
+              "subquestion": "c",
+              "answer_form": "adverse_selection_condition_and_reason",
+              "source_requirements": [
+                "bonus-malus",
+                "voluntary deductible or compulsory insurance route if used"
+              ],
+              "point_logic": [
+                "identify condition",
+                "explain how it changes pool composition or selection incentive"
+              ],
+              "short_answer_model": "Bonus-malus, voluntary deductible, or compulsory insurance can reduce selection by changing who enters the pool."
+            },
+            {
+              "subquestion": "e",
+              "answer_form": "markup_calculation_and_conclusion",
+              "source_requirements": [
+                "20% markup"
+              ],
+              "point_logic": [
+                "add 20% markup to expected damage",
+                "state total credit-insurance premium"
+              ],
+              "total_premium_eur": 96000,
+              "short_answer_model": "The markup is EUR 80,000 x 20% = EUR 16,000, so the total premium is EUR 96,000."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        }
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "Broad OP-R1 and OP-M1 task shells need governed proof before production closure.",
+        "blocks": "broad risk/information closure and lesson production",
+        "does_not_block": "candidate-surface installation",
+        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
+      }
+    },
+    {
+      "record_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "source_family": "vw-1022-a-25-1-o:q15-q16",
+      "op_rows_expected": [
+        "OP-S1",
+        "OP-ANS1",
+        "OP-ANS3"
+      ],
+      "proof_status": "complete_review_proof_pending_human_acceptance",
+      "source_artifact_ids": [
+        "ijssalon-guarda-orso-bianco-context",
+        "lowest-price-guarantee-self-binding-source",
+        "derived-payoff-representation"
+      ],
+      "answer_contract_subquestions": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "proof_cases": [
+        {
+          "proof_case_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-S1",
+          "op_row": "OP-S1",
+          "task_families": [
+            "matching_pairs",
+            "step_ordering",
+            "source_chain_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "source_artifact_ids": [
+            "ijssalon-guarda-orso-bianco-context",
+            "lowest-price-guarantee-self-binding-source",
+            "derived-payoff-representation"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "dominant_strategy_identification_and_reason",
+              "source_requirements": [
+                "perfect substitutes",
+                "Orso Bianco enters with lower price"
+              ],
+              "point_logic": [
+                "identify lower-price choice as dominant strategy direction",
+                "explain why each firm has incentive to lower price"
+              ],
+              "short_answer_model": "Each firm has an incentive to lower price because consumers see the products as perfect substitutes."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "prisoners_dilemma_two_link_explanation",
+              "point_logic": [
+                "individual lower-price incentives",
+                "jointly worse outcome than cooperation"
+              ],
+              "short_answer_model": "Both lowering price can be individually rational while making both worse off than cooperation."
+            },
+            {
+              "subquestion": "c",
+              "answer_form": "self_binding_mechanism",
+              "source_requirements": [
+                "fixed sales price for 2025",
+                "lowest-price guarantee"
+              ],
+              "point_logic": [
+                "explain commitment to follow lower price",
+                "explain credibility of the promise"
+              ],
+              "short_answer_model": "The guarantee commits Guarda to follow a lower price and makes the promise credible."
+            },
+            {
+              "subquestion": "d",
+              "answer_form": "changed_incentive_explanation",
+              "source_requirements": [
+                "discount of 25% on lower Orso Bianco price"
+              ],
+              "point_logic": [
+                "Orso Bianco expects less gain from cutting price",
+                "therefore incentive to start price war falls"
+              ],
+              "short_answer_model": "Orso Bianco expects less gain from cutting price, so the incentive to start a price war falls."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-ANS1",
+          "op_row": "OP-ANS1",
+          "task_families": [
+            "matching_pairs",
+            "structured_choice",
+            "source_value_selection"
+          ],
+          "subquestions": [
+            "a"
+          ],
+          "source_artifact_ids": [
+            "ijssalon-guarda-orso-bianco-context",
+            "lowest-price-guarantee-self-binding-source",
+            "derived-payoff-representation"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "dominant_strategy_identification_and_reason",
+              "source_requirements": [
+                "perfect substitutes",
+                "Orso Bianco enters with lower price"
+              ],
+              "point_logic": [
+                "identify lower-price choice as dominant strategy direction",
+                "explain why each firm has incentive to lower price"
+              ],
+              "short_answer_model": "Each firm has an incentive to lower price because consumers see the products as perfect substitutes."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        },
+        {
+          "proof_case_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1:OP-ANS3",
+          "op_row": "OP-ANS3",
+          "task_families": [
+            "sentence_builder",
+            "source_chain_builder",
+            "constructed_response"
+          ],
+          "subquestions": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "source_artifact_ids": [
+            "ijssalon-guarda-orso-bianco-context",
+            "lowest-price-guarantee-self-binding-source",
+            "derived-payoff-representation"
+          ],
+          "answer_contracts": [
+            {
+              "subquestion": "a",
+              "answer_form": "dominant_strategy_identification_and_reason",
+              "source_requirements": [
+                "perfect substitutes",
+                "Orso Bianco enters with lower price"
+              ],
+              "point_logic": [
+                "identify lower-price choice as dominant strategy direction",
+                "explain why each firm has incentive to lower price"
+              ],
+              "short_answer_model": "Each firm has an incentive to lower price because consumers see the products as perfect substitutes."
+            },
+            {
+              "subquestion": "b",
+              "answer_form": "prisoners_dilemma_two_link_explanation",
+              "point_logic": [
+                "individual lower-price incentives",
+                "jointly worse outcome than cooperation"
+              ],
+              "short_answer_model": "Both lowering price can be individually rational while making both worse off than cooperation."
+            },
+            {
+              "subquestion": "c",
+              "answer_form": "self_binding_mechanism",
+              "source_requirements": [
+                "fixed sales price for 2025",
+                "lowest-price guarantee"
+              ],
+              "point_logic": [
+                "explain commitment to follow lower price",
+                "explain credibility of the promise"
+              ],
+              "short_answer_model": "The guarantee commits Guarda to follow a lower price and makes the promise credible."
+            },
+            {
+              "subquestion": "d",
+              "answer_form": "changed_incentive_explanation",
+              "source_requirements": [
+                "discount of 25% on lower Orso Bianco price"
+              ],
+              "point_logic": [
+                "Orso Bianco expects less gain from cutting price",
+                "therefore incentive to start price war falls"
+              ],
+              "short_answer_model": "Orso Bianco expects less gain from cutting price, so the incentive to start a price war falls."
+            }
+          ],
+          "proof_obligation": "Task-family shell must preserve source trace, answer form, and official correction-model logic before any production use.",
+          "mutation_status": "not_mutated_review_proof_only"
+        }
+      ],
+      "protected_mtu_change_plan": {
+        "required": true,
+        "status": "companion_plan_required_later",
+        "reason": "Strategic two-link answer skills and OP-S1/OP-ANS3 proof are not production-closed.",
+        "blocks": "broad OP-S1 closure and lesson production",
+        "does_not_block": "candidate-surface installation",
+        "closure_status": "governed_proof_surface_created_pending_human_review_no_mtu_write"
+      }
+    }
+  ],
+  "global_findings": [
+    {
+      "id": "Y2SRMTP-MTU-001",
+      "classification": "core_requirement_met",
+      "severity": "high",
+      "finding": "Every OP row in the four target-foundation records has a governed proof case tied to rendered source artifacts and answer contracts.",
+      "blocks": [
+        "nothing for human review of this proof surface"
+      ],
+      "does_not_block": [
+        "human review return",
+        "future governed MTU mutation planning"
+      ],
+      "proof_required_to_close": "Keep this JSON proof, source gallery, answer contracts, and exact-head reviewer acceptance together."
+    },
+    {
+      "id": "Y2SRMTP-MTU-002",
+      "classification": "scale_blocker",
+      "severity": "critical",
+      "finding": "No MTU, operation, or answer-skill registry mutation is executed in this PR.",
+      "blocks": [
+        "lesson production",
+        "shared task-shell reliance",
+        "broad OP closure"
+      ],
+      "does_not_block": [
+        "review of the governed proof surface"
+      ],
+      "proof_required_to_close": "Future governed mutation PR with exact MTU/operation/answer-skill diffs, CI, lead review, and human authorization."
+    },
+    {
+      "id": "Y2SRMTP-MTU-003",
+      "classification": "scale_blocker",
+      "severity": "critical",
+      "finding": "Product, Scale, diagnostics, mastery, PV, summative, and student/product authority remain false.",
+      "blocks": [
+        "product-route adoption",
+        "CP-6",
+        "Scale Gate",
+        "diagnostics",
+        "mastery",
+        "PV",
+        "summative use",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "human review of rendered source and MTU proof"
+      ],
+      "proof_required_to_close": "Separate REV-STD-1 product-proof and Scale Gate packets after governed source/MTU proof is accepted."
+    }
+  ],
+  "closure_effect": {
+    "prior_flags_addressed_when_human_review_accepts_reviewed_payload": [
+      "Y2TRTF-005",
+      "Y2TRTF-006"
+    ],
+    "remaining_downstream_blocks": [
+      "Y2TRTF-007",
+      "product_scale_student_use_boundary"
+    ]
+  },
+  "authority_claims": {
+    "governed_mtu_task_family_proof_ready_for_review": true,
+    "mtus_minted": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "official_exam_operation_closure_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

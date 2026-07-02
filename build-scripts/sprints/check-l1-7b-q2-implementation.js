@@ -5,7 +5,11 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
 const LESSON_BOOK_ROOT = path.resolve(ROOT, '..', '4veco-lessen', 'Boek 1 - Grondslagen, vraag en aanbod');
 const ExitTicketEngine = require('../../engines/exit-ticket-engine');
+const ExitTicketUI = require('../../engines/exit-ticket-ui');
 const { loadConfig } = require('../lib/lib-deploy-config');
+
+const OLD_COMPLETION_COPY = 'Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.';
+const CURRENT_HELD_COPY = 'Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.';
 
 function fail(message) {
   console.error(`L1.7B-Q2 implementation check failed: ${message}`);
@@ -41,24 +45,47 @@ function findParagraphFile(paragraphPath, pattern, label) {
   return path.join(paragraphPath, match);
 }
 
-const advisory = readJson('source-data/book-1/exit-ticket/1.1.1.json');
-const data = readJson('source-data/book-1/exit-ticket/1.1.2.json');
-
-if (advisory.surface === 'target_equivalent_exit_ticket') fail('1.1.1 must remain advisory, not target-equivalent');
-if (advisory.metadataAlignment.targetReadinessEvidence !== false) fail('1.1.1 must not become target-readiness evidence');
-
-try {
-  ExitTicketEngine.validateData(data);
-} catch (error) {
-  fail(`1.1.2 source data does not validate: ${error.message}`);
+function validateHeldCompletion(data, label) {
+  if (data.targetEquivalent?.completionLanguageEligible !== false) {
+    fail(`${label} completionLanguageEligible must remain false`);
+  }
+  if (data.completion?.text !== CURRENT_HELD_COPY) {
+    fail(`${label} must use the current held neutral completion copy`);
+  }
+  const text = JSON.stringify(data);
+  if (text.includes(OLD_COMPLETION_COPY)) fail(`${label} must not contain old approved completion copy`);
+  rejectText(text, /doelopgave-niveau|doelopgave op hetzelfde niveau|antwoordvorm aankunt/i, 'old authority/readiness copy', label);
 }
 
-if (data.surface !== 'target_equivalent_exit_ticket') fail('1.1.2 must use target_equivalent_exit_ticket surface');
-if (!data.targetEquivalent || data.targetEquivalent.candidate !== true) fail('1.1.2 must be a target-equivalent candidate');
-if (data.targetEquivalent.gateApproved !== false) fail('1.1.2 gateApproved must remain false before GATE-L1.7B-Q2');
-if (data.targetEquivalent.completionLanguageEligible !== false) fail('1.1.2 completionLanguageEligible must remain false before GATE-L1.7B-Q2');
-if (data.metadataAlignment.status !== 'target_equivalent_aligned') fail('1.1.2 metadata status must be target_equivalent_aligned');
-if (data.metadataAlignment.targetReadinessEvidence !== true) fail('1.1.2 must carry reviewed target-readiness evidence as candidate input');
+const advisoryShort = readJson('source-data/book-1/exit-ticket/1.1.1-korte-check.json');
+const short112 = readJson('source-data/book-1/exit-ticket/1.1.2-korte-check.json');
+const data = readJson('source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
+const graphExit = readJson('source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
+
+if (fs.existsSync(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.1.json'))) fail('legacy unsuffixed 1.1.1 source must remain absent');
+if (fs.existsSync(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.2.json'))) fail('legacy unsuffixed 1.1.2 source must remain absent');
+if (fs.existsSync(path.join(ROOT, 'source-data', 'book-1', 'exit-ticket', '1.1.3.json'))) fail('legacy unsuffixed 1.1.3 source must remain absent');
+
+if (advisoryShort.surface !== 'advisory_short_check') fail('1.1.1 short check must remain advisory');
+if (advisoryShort.metadataAlignment.targetReadinessEvidence !== false) fail('1.1.1 short check must not become target-readiness evidence');
+if (short112.surface !== 'advisory_short_check') fail('1.1.2 short check must remain advisory');
+if (short112.metadataAlignment.targetReadinessEvidence !== false) fail('1.1.2 short check must not become target-readiness evidence');
+
+for (const [label, source] of [
+  ['1.1.2 exit ticket', data],
+  ['1.1.3 exit ticket', graphExit],
+]) {
+  try {
+    ExitTicketEngine.validateData(source);
+  } catch (error) {
+    fail(`${label} source data does not validate: ${error.message}`);
+  }
+  if (source.surface !== 'target_equivalent_exit_ticket') fail(`${label} must use target_equivalent_exit_ticket surface`);
+  if (source.targetEquivalent?.candidate !== true) fail(`${label} must remain a target-equivalent candidate`);
+  if (source.targetEquivalent?.gateApproved !== true) fail(`${label} gateApproved must remain true`);
+  if (source.metadataAlignment?.targetReadinessEvidence !== true) fail(`${label} must retain target-readiness evidence`);
+  validateHeldCompletion(source, label);
+}
 
 const requiredSkills = ['A38', 'A39', 'D31'];
 for (const id of requiredSkills) {
@@ -69,10 +96,10 @@ for (const id of requiredSkills) {
 
 const taskById = Object.fromEntries(data.tasks.map((task) => [task.id, task]));
 const expectedTasks = {
-  'prijsstijging-procent': 'calculation_work_capture',
+  'prijsstijging-procent': 'calculation_answer_form_capture',
   'index-naar-waarde': 'calculation_work_capture',
   'index-naar-procent': 'calculation_work_capture',
-  'indexpunten-uitleg': 'short_constructed_response',
+  'indexpunten-uitleg': 'structured_short_response',
 };
 for (const [id, family] of Object.entries(expectedTasks)) {
   const task = taskById[id];
@@ -81,60 +108,36 @@ for (const [id, family] of Object.entries(expectedTasks)) {
   if (task.taskShell.family !== family) fail(`${id} must use family ${family}`);
 }
 
-const engine = new ExitTicketEngine({ data });
-engine.checkTask('prijsstijging-procent', { work: '(920 - 800) / 800 x 100', finalAnswer: '15%' });
-engine.checkTask('index-naar-waarde', { work: '162 / 150 x 100', finalAnswer: '108' });
-engine.checkTask('index-naar-procent', { work: '(112 - 108) / 108 x 100', finalAnswer: '3,7%' });
-engine.checkTask(
-  'indexpunten-uitleg',
-  'Het is niet 4 procent. Het zijn 4 indexpunten; de basis is 108 en de stijging is ongeveer 3,7 procent.'
-);
-const progress = engine.getProgress();
-if (progress.proofCandidate !== true) fail('correct 1.1.2 responses must become proofCandidate true');
-if (progress.completionLanguageEligible !== false) fail('proofCandidate must not authorize completion language before gate approval');
-
-const adversarialEngine = new ExitTicketEngine({ data });
-if (adversarialEngine.checkTask('prijsstijging-procent', { work: 'ik gok', finalAnswer: '15%' }).matched !== false) {
-  fail('bogus calculation work must not match with only a correct final answer');
-}
-adversarialEngine.checkTask('index-naar-waarde', { work: '162 / 150 x 100', finalAnswer: '108' });
-adversarialEngine.checkTask('index-naar-procent', { work: '(112 - 108) / 108 x 100', finalAnswer: '3,7%' });
-if (
-  adversarialEngine.checkTask(
-    'indexpunten-uitleg',
-    'Het is niet fout: 4 procent is indexpunten, 108 en 3,7.'
-  ).matched !== false
-) {
-  fail('contradictory D31 answer must not match');
-}
-if (adversarialEngine.getProgress().proofCandidate !== false) {
-  fail('adversarial responses must not become proofCandidate true');
-}
-
-const sourceText = JSON.stringify(data);
-rejectText(sourceText, /Je hebt laten zien|aankunt|bewezen|aangetoond|beheerst/i, 'unauthorized completion claim', '1.1.2 source');
+const rendered = ExitTicketUI.renderStaticHtml(data, {});
+requireText(rendered, /data-task-family="calculation_answer_form_capture"/, 'answer-form calculation family', 'rendered 1.1.2 UI');
+requireText(rendered, /data-task-family="structured_short_response"/, 'structured short response family', 'rendered 1.1.2 UI');
+rejectText(rendered, /doelopgave-niveau|doelopgave op hetzelfde niveau|antwoordvorm aankunt/i, 'old authority/readiness copy', 'rendered 1.1.2 UI');
+rejectText(rendered, /Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt/i, 'old approved completion copy', 'rendered 1.1.2 UI');
 
 if (!fs.existsSync(LESSON_BOOK_ROOT)) fail(`missing lesson book root ${LESSON_BOOK_ROOT}`);
 const config = loadConfig(LESSON_BOOK_ROOT);
 const found = config.findParagraphFolder('1.1.2');
 if (!found) fail('cannot find 1.1.2 paragraph folder in lesson output');
 
-const sharedDataPath = path.join(LESSON_BOOK_ROOT, 'shared', 'exit-ticket', '1.1.2.js');
-if (!fs.existsSync(sharedDataPath)) fail('missing generated shared/exit-ticket/1.1.2.js');
+const sharedDataPath = path.join(LESSON_BOOK_ROOT, 'shared', 'exit-ticket', '1.1.2-exit-ticket.js');
+if (!fs.existsSync(sharedDataPath)) fail('missing generated shared/exit-ticket/1.1.2-exit-ticket.js');
 const sharedData = fs.readFileSync(sharedDataPath, 'utf8');
-requireText(sharedData, /target_equivalent_exit_ticket/, 'target-equivalent surface', 'shared/exit-ticket/1.1.2.js');
-requireText(sharedData, /"gateApproved": false/, 'held gate approval flag', 'shared/exit-ticket/1.1.2.js');
-requireText(sharedData, /"completionLanguageEligible": false/, 'held completion-language flag', 'shared/exit-ticket/1.1.2.js');
-rejectText(sharedData, /Je hebt laten zien|aankunt|bewezen|aangetoond|beheerst/i, 'unauthorized completion claim', 'shared/exit-ticket/1.1.2.js');
+requireText(sharedData, /target_equivalent_exit_ticket/, 'target-equivalent surface', 'shared/exit-ticket/1.1.2-exit-ticket.js');
+requireText(sharedData, /"gateApproved": true/, 'held gate approval flag', 'shared/exit-ticket/1.1.2-exit-ticket.js');
+requireText(sharedData, /"completionLanguageEligible": false/, 'held completion-language flag', 'shared/exit-ticket/1.1.2-exit-ticket.js');
+requireText(sharedData, new RegExp(CURRENT_HELD_COPY.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), 'held neutral completion copy', 'shared/exit-ticket/1.1.2-exit-ticket.js');
+rejectText(sharedData, /Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt|doelopgave-niveau|antwoordvorm aankunt/i, 'old completion/readiness claim', 'shared/exit-ticket/1.1.2-exit-ticket.js');
 
 const shellPath = findParagraphFile(found.fullPath, /exit-ticket\.html$/i, '1.1.2 exit-ticket shell');
 const shell = fs.readFileSync(shellPath, 'utf8');
 requireText(shell, /<title>Percentages en indexcijfers - Exit ticket<\/title>/, 'exit-ticket shell title', shellPath);
-requireText(shell, /shared\/exit-ticket\/1\.1\.2\.js/, '1.1.2 data include', shellPath);
+requireText(shell, /shared\/exit-ticket\/1\.1\.2-exit-ticket\.js/, 'suffixed 1.1.2 data include', shellPath);
+requireText(shell, /shared\/golden-ticket-layout\.js/, 'golden ticket runtime include', shellPath);
 
 const landing = read('index.html', found.fullPath);
 requireText(landing, /Exit ticket/, 'exit-ticket landing card', path.join(found.fullPath, 'index.html'));
-requireText(landing, /Maak de volledige paragraaf-check/, 'target-equivalent landing description', path.join(found.fullPath, 'index.html'));
-requireText(landing, /Rond af met de paragraaf-check/, 'target-equivalent section hint', path.join(found.fullPath, 'index.html'));
+requireText(landing, /Maak de aparte eindcontrole wanneer je de paragraaf hebt geoefend\./, 'neutral exit-ticket landing description', path.join(found.fullPath, 'index.html'));
+requireText(landing, /Werk de eindcontrole uit en gebruik de feedback om je volgende oefenstap te kiezen\./, 'neutral exit-ticket tile copy', path.join(found.fullPath, 'index.html'));
+rejectText(landing, /doelopgave-niveau|doelopgave op hetzelfde niveau|antwoordvorm aankunt|Je hebt laten zien dat je de eindopgave/i, 'old completion/readiness claim', path.join(found.fullPath, 'index.html'));
 
 console.log('OK L1.7B-Q2 implementation');

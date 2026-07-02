@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.internal/schemas/international-jurisdiction-overlay.schema.json",
+  "title": "International Jurisdiction Overlay Descriptor",
+  "description": "Internal-only descriptor contract for bounded jurisdiction overlays. It is not a country edition, compliance claim, inspection-readiness claim, public output, or school-facing artifact.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "descriptor_id",
+    "jurisdiction_id",
+    "jurisdiction_label",
+    "governance_archetype",
+    "status",
+    "jurisdiction_boundary",
+    "authority_type",
+    "official_source_allowlist",
+    "source_freshness",
+    "curriculum_mappings",
+    "assessment_mappings",
+    "terminology_substitutions",
+    "institution_example_substitutions",
+    "accessibility_inclusion_terminology",
+    "school_owned_evidence_boundary",
+    "forbidden_claims",
+    "proof_required_to_close",
+    "output_boundary",
+    "finding_classification"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "descriptor_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+\\.v0$"
+    },
+    "jurisdiction_id": {
+      "type": "string"
+    },
+    "jurisdiction_label": {
+      "type": "string"
+    },
+    "governance_archetype": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "jurisdiction_boundary": {
+      "type": "object"
+    },
+    "authority_type": {
+      "type": "object"
+    },
+    "official_source_allowlist": {
+      "type": "array",
+      "minItems": 2
+    },
+    "source_freshness": {
+      "type": "object"
+    },
+    "curriculum_mappings": {
+      "type": "array",
+      "minItems": 2
+    },
+    "assessment_mappings": {
+      "type": "array",
+      "minItems": 1
+    },
+    "terminology_substitutions": {
+      "type": "array",
+      "minItems": 4
+    },
+    "institution_example_substitutions": {
+      "type": "array",
+      "minItems": 2
+    },
+    "accessibility_inclusion_terminology": {
+      "type": "array",
+      "minItems": 2
+    },
+    "school_owned_evidence_boundary": {
+      "type": "array",
+      "minItems": 2
+    },
+    "forbidden_claims": {
+      "type": "array",
+      "minItems": 4
+    },
+    "proof_required_to_close": {
+      "type": "array",
+      "minItems": 3
+    },
+    "output_boundary": {
+      "type": "object"
+    },
+    "finding_classification": {
+      "type": "array",
+      "minItems": 3
+    }
+  }
+}

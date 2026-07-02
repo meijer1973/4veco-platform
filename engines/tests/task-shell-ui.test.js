@@ -1130,6 +1130,114 @@ describe('TaskShellUI', () => {
         ]);
     });
 
+    test('renders and exports functional answer builder controls', () => {
+        const answerTask = task('functional-answer', 'functional_answer_builder', {
+            rowGroupLabel: 'Antwoordregels',
+            answerPreview: {
+                label: 'Opgebouwd antwoord',
+                placeholder: 'Kies per regel een onderdeel.',
+                template: '{{oorzaak}} {{conclusie}}'
+            },
+            answerRows: [
+                {
+                    id: 'oorzaak',
+                    label: 'Oorzaak',
+                    options: [
+                        { id: 'schaarste', label: 'Er is schaarste.', kind: 'answer' },
+                        { id: 'winst', label: 'Er is winst.', kind: 'distractor', distractorFor: 'schaarste' }
+                    ]
+                },
+                {
+                    id: 'conclusie',
+                    label: 'Conclusie',
+                    options: [
+                        { id: 'kosten', label: 'De kosten zijn het beste alternatief.', kind: 'answer' },
+                        { id: 'som', label: 'De kosten zijn alle alternatieven samen.', kind: 'distractor', distractorFor: 'kosten' }
+                    ]
+                }
+            ]
+        }, {
+            kind: 'functional_answer_builder',
+            rows: { oorzaak: 'schaarste', conclusie: 'kosten' },
+            partialFeedback: 'practice_only'
+        });
+
+        const html = TaskShellUI.renderTask(answerTask, 0, {});
+        expect(html).toContain('data-task-family="functional_answer_builder"');
+        expect(html).toContain('data-functional-answer-task="functional-answer"');
+        expect(html).toContain('data-answer-row-id="oorzaak"');
+        expect(html).toContain('data-answer-preview');
+        expect(typeof TaskShellUI.collectFunctionalAnswerResponse).toBe('function');
+        expect(typeof TaskShellUI.handleFunctionalAnswerClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(answerTask)).toEqual([
+            '[data-task-id="functional-answer"][data-answer-row-id]',
+            '[data-task-id="functional-answer"][data-answer-preview]'
+        ]);
+
+        const root = {
+            querySelectorAll: () => [
+                { getAttribute: (name) => name === 'data-answer-row-id' ? 'oorzaak' : 'schaarste' },
+                { getAttribute: (name) => name === 'data-answer-row-id' ? 'conclusie' : 'kosten' }
+            ]
+        };
+        expect(TaskShellUI.collectFunctionalAnswerResponse(root, answerTask)).toEqual({
+            rows: { oorzaak: 'schaarste', conclusie: 'kosten' }
+        });
+    });
+
+    test('renders and exports direct graph evidence controls', () => {
+        const graphTask = task('graph-evidence', 'graph_evidence_selector', {
+            maxSelections: 2,
+            hitTargetPx: 44,
+            trayLabel: 'Gekozen punten',
+            graph: {
+                title: 'Vraaglijn',
+                altText: 'Grafiek met twee tabelpunten en een afleider.',
+                axes: {
+                    x: { label: 'Prijs P', min: 0, max: 10, ticks: [0, 5, 10] },
+                    y: { label: 'Hoeveelheid Q', min: 0, max: 700, ticks: [0, 300, 600] }
+                },
+                series: [
+                    {
+                        label: 'Vraag',
+                        points: [
+                            { id: 'laag', x: 2, y: 600, label: 'P=2, Q=600', kind: 'answer' },
+                            { id: 'hoog', x: 8, y: 300, label: 'P=8, Q=300', kind: 'answer' },
+                            { id: 'midden', x: 5, y: 450, label: 'P=5, Q=450', kind: 'distractor', distractorFor: 'laag' }
+                        ]
+                    }
+                ]
+            }
+        }, {
+            kind: 'graph_evidence_selector',
+            pointIds: ['laag', 'hoog'],
+            partialFeedback: 'practice_only'
+        });
+
+        const html = TaskShellUI.renderTask(graphTask, 0, {});
+        expect(html).toContain('data-task-family="graph_evidence_selector"');
+        expect(html).toContain('data-graph-evidence-task="graph-evidence"');
+        expect(html).toContain('data-graph-evidence-point-id="laag"');
+        expect(html).toContain('width:44px;height:44px');
+        expect(html).toContain('data-graph-evidence-tray');
+        expect(typeof TaskShellUI.collectGraphEvidenceResponse).toBe('function');
+        expect(typeof TaskShellUI.handleGraphEvidenceClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(graphTask)).toEqual([
+            '[data-task-id="graph-evidence"][data-graph-evidence-point-id]',
+            '[data-task-id="graph-evidence"][data-graph-evidence-tray]'
+        ]);
+
+        const root = {
+            querySelectorAll: () => [
+                { getAttribute: () => 'hoog' },
+                { getAttribute: () => 'laag' }
+            ]
+        };
+        expect(TaskShellUI.collectGraphEvidenceResponse(root, graphTask)).toEqual({
+            pointIds: ['hoog', 'laag']
+        });
+    });
+
     test('escapes task text before rendering', () => {
         const unsafe = data();
         unsafe.tasks[0].prompt = '<script>alert("x")</script>';

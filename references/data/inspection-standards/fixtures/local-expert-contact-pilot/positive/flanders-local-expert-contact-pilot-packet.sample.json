@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "report_type": "local_expert_contact_pilot_packet",
+  "sprint_id": "GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1",
+  "generated_date": "2026-06-29",
+  "access_date": "2026-06-29",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "product_end_state_checkout_note": "Cross-repo citation: resolve through the paired 4veco-lessen checkout used for human review; this platform packet does not copy lesson-repo product state.",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-sprint-plan.md",
+  "roadmap_source": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
+  "source_sprint_id": "GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1",
+  "accepted_input_decision": "PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT",
+  "accepted_input_decision_source": "reports/inspection-standards/local-expert-review-request-decision.json",
+  "input_allowlist": [
+    "reports/inspection-standards/local-expert-review-request-decision.json",
+    "reports/inspection-standards/england-local-expert-review-request-packet.json",
+    "reports/inspection-standards/flanders-local-expert-review-request-packet.json",
+    "references/schemas/local-expert-review-response.schema.v1.json"
+  ],
+  "output_allowlist": [
+    "references/schemas/local-expert-contact-consent.schema.v1.json",
+    "references/schemas/local-expert-response-intake.schema.v1.json",
+    "docs/inspection-standards/local-expert-contact-pilot-contract.md",
+    "docs/inspection-standards/england-local-expert-contact-text.md",
+    "docs/inspection-standards/flanders-local-expert-contact-text.md",
+    "reports/inspection-standards/local-expert-contact-pilot-plan.json",
+    "reports/inspection-standards/local-expert-contact-pilot-plan.md",
+    "reports/inspection-standards/england-local-expert-contact-pilot-packet.json",
+    "reports/inspection-standards/england-local-expert-contact-pilot-packet.md",
+    "reports/inspection-standards/flanders-local-expert-contact-pilot-packet.json",
+    "reports/inspection-standards/flanders-local-expert-contact-pilot-packet.md",
+    "reports/inspection-standards/local-expert-response-intake-report.json",
+    "reports/inspection-standards/local-expert-response-intake-report.md",
+    "reports/inspection-standards/local-expert-contact-pilot-simulation.json",
+    "reports/inspection-standards/local-expert-contact-pilot-simulation.md",
+    "reports/inspection-standards/local-expert-contact-pilot-decision.json",
+    "reports/inspection-standards/local-expert-contact-pilot-decision.md",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/england-local-expert-contact-pilot-packet.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/flanders-local-expert-contact-pilot-packet.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/local-expert-response-intake-report.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/positive/local-expert-contact-pilot-decision.sample.json",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-sprint-plan.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-correction-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-validation-log.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-plan-architecture-lead-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-teacher-economics-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-legal-privacy-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-dutch-quality-inspection-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-accessibility-inclusion-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-final-lead-review.md",
+    "archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-closure-record.md",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/unauthorized-contact-dispatch.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/missing-consent-boundary.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/personal-data-response.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/legal-compliance-claim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/localized-output-response.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/out-of-scope-source.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/out-of-scope-question.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/missing-forbidden-disclaimer.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/hidden-uncertainty.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/jurisdiction-mismatch.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/personal-data-in-text.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/school-specific-evidence-response.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/england-whole-uk-overclaim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/flanders-all-belgium-overclaim.sample.json",
+    "references/data/inspection-standards/fixtures/local-expert-contact-pilot/negative/support-accommodation-sufficiency-overclaim.sample.json"
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "product_end_state_and_spec_cited",
+      "requirement": "Product end-state and original sprint/gate spec are cited.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "accepted_request_packet_decision_bound",
+      "requirement": "Contact pilot is bound to accepted PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "role_only_expert_profiles",
+      "requirement": "Allowed local expert profiles are role-only and contain no named people or personal data.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "contact_text_from_request_packets_only",
+      "requirement": "Contact text is generated only from the accepted England/Flanders request packets.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "consent_and_recording_boundary",
+      "requirement": "Consent, recording, storage, withdrawal, and response-use boundaries are explicit before any contact.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "strict_response_intake_schema",
+      "requirement": "Response intake accepts only strict response-schema records plus consent metadata.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "no_personal_or_student_data",
+      "requirement": "Personal data, student data, school-specific evidence, and support records are refused.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "forbidden_authority_claims_refused",
+      "requirement": "Legal advice, compliance proof, approval, inspection-readiness, school-evidence, support/accommodation/accessibility/individual-adjustment sufficiency, product, Scale Gate, and localized-output claims are refused.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "jurisdiction_boundaries_preserved",
+      "requirement": "England remains England-only and Flanders remains Flanders-only.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "simulation_and_negative_fixtures_complete",
+      "requirement": "Simulations and negative fixtures cover contact authorization, consent, personal data, claims, source/question allowlists, uncertainty, and jurisdiction overclaims.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "no_real_contact_before_owner_authorization",
+      "requirement": "No real contact dispatch, expert substitution, or real response storage occurs before owner payload authorization.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    },
+    {
+      "id": "review_route_preserved",
+      "requirement": "Specialist reviews, final lead review, exact-head PR readiness, green CI, and human review remain required.",
+      "status": "met",
+      "proof_required_to_close": "Generator currentness PASS, checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review."
+    }
+  ],
+  "report_id": "flanders-local-expert-contact-pilot-packet",
+  "contact_id": "flanders-local-expert-contact-stage",
+  "status": "ready_for_owner_authorized_contact_stage",
+  "jurisdiction_id": "flanders",
+  "jurisdiction_label": "Flanders",
+  "request_packet_id": "flanders-local-expert-review-request-packet",
+  "request_packet_source": "reports/inspection-standards/flanders-local-expert-review-request-packet.json",
+  "expert_profile_allowed": "Flemish economics/curriculum and education-quality reviewer familiar with Onderwijsdoelen, the OK framework, Onderwijsinspectie Vlaanderen source boundaries, study-direction/school-network distinctions, and accessibility/support terminology.",
+  "named_expert_selected": false,
+  "source_ids_in_scope": [
+    "be-flanders-ok-framework",
+    "be-flanders-onderwijsdoelen-so3-doorstroom",
+    "be-flanders-inspection-what-do-we-inspect",
+    "be-flanders-education-quality-reference",
+    "be-flanders-onderwijsdoelen-modernisatie"
+  ],
+  "source_states_from_request_packet": {
+    "be-flanders-ok-framework": "unchanged",
+    "be-flanders-onderwijsdoelen-so3-doorstroom": "requires_local_expert_interpretation",
+    "be-flanders-inspection-what-do-we-inspect": "unchanged",
+    "be-flanders-education-quality-reference": "unchanged",
+    "be-flanders-onderwijsdoelen-modernisatie": "requires_local_expert_interpretation"
+  },
+  "question_ids_in_scope": [
+    "flanders-q-onderwijsdoelen-route",
+    "flanders-q-modernisatie-selector",
+    "flanders-q-ok-framework",
+    "flanders-q-inspection-boundary",
+    "flanders-q-study-direction-network",
+    "flanders-q-assessment-status",
+    "flanders-q-accessibility-support",
+    "flanders-q-flanders-only"
+  ],
+  "contact_text": "Internal-only Flanders source-bound review request.\n\nBefore answering, please confirm voluntary participation and the response-use boundary below.\nParticipation is voluntary. The reviewer may decline any question and may answer only within the Flanders source scope.\nDo not include names, email addresses, phone numbers, institutional identifiers, student records, support records, or any personal data in the response.\nResponses are internal interpretive input for later human review only; they do not authorize localized output, product use, school-facing use, legal/compliance claims, inspection-readiness, support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or individual adjustment sufficiency.\n\nPlease answer only the questions below, only against the listed official source IDs, and use the required response fields.\n- flanders-q-onderwijsdoelen-route: Interpret the official Onderwijsdoelen SO_3DE_GRAAD route for Book 1 1.2/1.3 economics concept placement.\n- flanders-q-modernisatie-selector: Interpret which route choices or goal-family labels require explicit human review before any internal overlay transformation.\n- flanders-q-ok-framework: Interpret the OK-framework boundary and wording that should remain visible in internal quality-language notes.\n- flanders-q-inspection-boundary: Interpret the Onderwijsinspectie boundary for quality development, quality areas, and teaching-learning practice language.\n- flanders-q-study-direction-network: Identify study-direction, school-network, or pathway implications that must remain unresolved until local review.\n- flanders-q-assessment-status: Clarify assessment-status boundaries relevant to Book 1 1.2/1.3 without producing assessment items.\n- flanders-q-accessibility-support: Interpret accessibility/support terminology that should remain non-sufficiency language.\n- flanders-q-flanders-only: Identify wording needed to keep the packet Flanders-only and not all Belgium.\n\nRequired response fields:\n- reviewer_role\n- jurisdiction\n- source_id\n- source_state_seen\n- question_id\n- answer_type\n- interpretation\n- confidence\n- uncertainty\n- cited_source\n- forbidden_claims_disclaimed\n- does_not_authorize\n- proof_required_to_use\n\nDo not provide legal advice, compliance proof, approval, inspection-readiness, school evidence, school-specific evidence, student data, personal data, support/accommodation/accessibility/individual-adjustment sufficiency claims, localized output, exam-ready exercise generation, product authority, Scale Gate authority, or public/teacher/school-facing output.",
+  "consent_boundary": {
+    "consent_statement": "Participation is voluntary. The reviewer may decline any question and may answer only within the Flanders source scope.",
+    "recording_boundary": "No audio, video, transcript, meeting note, or identifiable personal metadata may be stored by this repository packet. Only schema-shaped, reviewer-approved written responses may be recorded after owner authorization.",
+    "storage_boundary": "Store only internal response-intake JSON/Markdown that passes the strict schema and contains no personal data, student data, school-specific evidence, or named-person details.",
+    "no_personal_data_instruction": "Do not include names, email addresses, phone numbers, institutional identifiers, student records, support records, or any personal data in the response.",
+    "withdrawal_boundary": "The reviewer may withdraw or decline; a withdrawal produces no substitute answer and no inferred local judgment.",
+    "response_use_limit": "Responses are internal interpretive input for later human review only; they do not authorize localized output, product use, school-facing use, legal/compliance claims, inspection-readiness, support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or individual adjustment sufficiency."
+  },
+  "storage_boundary": "Store only internal response-intake JSON/Markdown that passes the strict schema and contains no personal data, student data, school-specific evidence, or named-person details.",
+  "response_schema_id": "https://4veco.local/schemas/local-expert-review-response.schema.v1.json",
+  "response_intake_schema_id": "https://4veco.local/schemas/local-expert-response-intake.schema.v1.json",
+  "owner_authorization_required": true,
+  "contact_dispatch_performed": false,
+  "response_received": false,
+  "attachments_allowed": [
+    "reports/inspection-standards/flanders-local-expert-review-request-packet.json",
+    "references/schemas/local-expert-review-response.schema.v1.json"
+  ],
+  "attachments_forbidden": [
+    "student records",
+    "personal data",
+    "school-owned evidence",
+    "lesson-output files",
+    "localized drafts",
+    "assessment items",
+    "evidence packs"
+  ],
+  "does_not_authorize": [
+    "contact dispatch before owner payload authorization",
+    "named expert selection",
+    "personal-data processing",
+    "student data or support-record processing",
+    "school-specific evidence collection",
+    "local expert substitution for official authority",
+    "legal advice or legal sufficiency",
+    "compliance proof",
+    "approval, accreditation, OP0, PTA, summative validity, or inspection readiness",
+    "support sufficiency, accommodation sufficiency, accessibility/legal sufficiency, or individual adjustment sufficiency",
+    "localized output",
+    "country editions",
+    "student-facing output",
+    "teacher/school-facing output",
+    "public output",
+    "evidence packs",
+    "product-route adoption",
+    "Scale Gate",
+    "diagnostics/mastery/PV",
+    "student/product use",
+    "school-owned evidence claims"
+  ],
+  "no_output_flags": {
+    "expert_contacted": false,
+    "expert_substituted": false,
+    "localized_output_generated": false,
+    "country_edition_generated": false,
+    "student_facing_output_generated": false,
+    "teacher_school_facing_output_generated": false,
+    "public_output_generated": false,
+    "evidence_pack_generated": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_product_use": false,
+    "personal_data_processing": false,
+    "legal_advice_requested": false,
+    "legal_compliance_claim": false,
+    "approval_accreditation_claim": false,
+    "op0_pta_summative_claim": false,
+    "inspection_readiness_claim": false,
+    "support_sufficiency_claim": false,
+    "accommodation_sufficiency_claim": false,
+    "accessibility_legal_sufficiency_claim": false,
+    "school_evidence_claim": false,
+    "expert_as_official_authority": false,
+    "source_uncertainty_hidden": false,
+    "whole_uk_claim_from_england": false,
+    "all_belgium_claim_from_flanders": false,
+    "generated_lesson_output_scanning": false,
+    "implicit_source_discovery": false,
+    "directory_globbing": false,
+    "contact_text_generated": true,
+    "consent_boundary_defined": true,
+    "response_intake_schema_generated": true,
+    "real_expert_response_stored": false,
+    "owner_authorized_contact_ready": true
+  },
+  "finding_classification": [
+    {
+      "finding": "Flanders contact text is ready only for owner payload-authorized dispatch.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for human review once checker, specialists, final lead, CI, branch protection, and PR readiness pass.",
+      "does_not_block": "Human review of this internal contact-stage packet.",
+      "proof_required_to_close": "Checker PASS, specialist PASS, final lead PASS, exact-head readiness, green CI, branch protection ok:true, and owner authorization."
+    },
+    {
+      "finding": "Contact dispatch and real response storage remain blocked until owner authorization.",
+      "classification": "human_authorization_required",
+      "blocks": "Sending contact text, storing real expert response records, or treating expert feedback as authority.",
+      "does_not_block": "Reviewing the internal contact-stage packet.",
+      "proof_required_to_close": "Owner payload authorization that names reviewed_payload_head_sha and current green checks."
+    }
+  ]
+}

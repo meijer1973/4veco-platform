@@ -8,6 +8,13 @@ const reviewedExitTicket = require(path.join(
   'exit-ticket',
   '1.1.2-exit-ticket.json'
 ));
+const canonicalA96Fixtures = require(path.join(
+  ROOT,
+  'references',
+  'exemplars',
+  'a96-answer-form',
+  'negative-fixtures.json'
+));
 
 const sprintId = 'MTU-ANS-PROOF-IMPL-1';
 const sourceTaskId = 'prijsstijging-procent';
@@ -73,24 +80,24 @@ const strictA96Task = {
       purpose: 'Laat zien welke waarde bij elk label hoort.',
       template: '(nieuwe prijs - oude prijs) / oude prijs x 100%',
       fields: [
-        { id: 'newPrice', label: 'nieuwe prijs', placeholder: '920', inputMode: 'decimal' },
-        { id: 'oldPriceNumerator', label: 'oude prijs in teller', placeholder: '800', inputMode: 'decimal' },
-        { id: 'oldPriceDenominator', label: 'oude prijs in noemer', placeholder: '800', inputMode: 'decimal' }
+        { id: 'newPrice', label: 'nieuwe prijs', placeholder: 'vul de nieuwe prijs in', inputMode: 'decimal' },
+        { id: 'oldPriceNumerator', label: 'oude prijs in teller', placeholder: 'vul de oude prijs in', inputMode: 'decimal' },
+        { id: 'oldPriceDenominator', label: 'oude prijs in noemer', placeholder: 'vul de basiswaarde in', inputMode: 'decimal' }
       ]
     },
     answer: {
       title: 'Geef het eindantwoord',
       purpose: 'Noteer de uitkomst en de vereiste procentnotatie.',
       finalAnswerLabel: 'Eindantwoord',
-      finalAnswerPlaceholder: '15',
+      finalAnswerPlaceholder: 'vul het getal in',
       unitNotationLabel: 'Eenheid of notatie',
-      unitNotationPlaceholder: '%'
+      unitNotationPlaceholder: '%, procent of procentteken'
     },
     context: {
       title: 'Schrijf de conclusie',
       purpose: 'Noem kort wat de berekening betekent voor de fietsprijs.',
       label: 'Contextuele conclusie',
-      placeholder: 'De prijs van de fiets stijgt met ...'
+      placeholder: 'Schrijf wat er met de prijs gebeurt.'
     },
     showCriteriaBeforeCheck: false
   },
@@ -118,6 +125,25 @@ const strictA96Task = {
         ['prijs', 'fiets'],
         ['stijgt', 'stijging', 'duurder', 'gestegen'],
         ['15', 'vijftien']
+      ],
+      rejectText: [
+        'stijgt niet',
+        'niet stijgt',
+        'geen stijging',
+        'daalt',
+        'daling',
+        'gedaald',
+        'heeft 15 procent',
+        'heeft 15%',
+        'bijvoorbeeld'
+      ],
+      rejectPatterns: [
+        '\\bstijgt\\s+niet\\b',
+        '\\bniet\\s+(?:met\\s+)?(?:15\\s+)?(?:procent\\s+)?stijgt\\b',
+        '\\bgeen\\s+stijging\\b',
+        '\\bdaalt?\\b',
+        '\\bprijs\\s+van\\s+de\\s+fiets\\s+heeft\\s+15\\s*(?:%|procent)\\b',
+        '\\bbijvoorbeeld\\b'
       ]
     },
     visualTokenIdentityPolicy: {
@@ -196,53 +222,47 @@ const passingResponse = {
   conclusion: 'De prijs van de fiets stijgt met 15 procent.'
 };
 
+const tokenAliases = {
+  new: 'newPrice',
+  newden: 'newDenominator',
+  oldfirst: 'oldPrice'
+};
+
+function normalizeMethodTokens(tokens) {
+  return (Array.isArray(tokens) ? tokens : []).map((token) => tokenAliases[token] || token);
+}
+
+function canonicalResponse(name, overrides = {}) {
+  const fixture = (canonicalA96Fixtures.negative || {})[name];
+  if (!fixture) throw new Error(`Missing canonical A96 negative fixture: ${name}`);
+  return {
+    methodTokens: normalizeMethodTokens(fixture.methodTokens || []),
+    substitution: { ...(fixture.substitution || {}) },
+    finalAnswer: fixture.finalAnswer || '',
+    notation: fixture.notation || '',
+    conclusion: fixture.conclusion || '',
+    ...overrides
+  };
+}
+
 const negativeResponses = {
-  finalAnswerOnly: {
-    methodTokens: [],
-    substitution: {},
-    finalAnswer: '15',
-    notation: '%',
-    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
+  finalAnswerOnly: canonicalResponse('finalAnswerOnly'),
+  sourceValuesOnly: canonicalResponse('sourceValuesOnly'),
+  missingFormula: canonicalResponse('missingFormula'),
+  wrongDenominator: canonicalResponse('wrongDenominator'),
+  tokenBankOrderedAsAnswer: {
+    ...passingResponse,
+    methodTokens: strictA96Task.interaction.formula.tokens.map((token) => token.id)
   },
-  sourceOnly: {
-    methodTokens: [],
-    substitution: {
-      newPrice: '920',
-      oldPriceNumerator: '800',
-      oldPriceDenominator: '800'
-    },
-    finalAnswer: '',
-    notation: '',
-    conclusion: 'De bron zegt dat de fiets eerst 800 euro kost en daarna 920 euro.'
-  },
-  directionFree: {
-    methodTokens: passingResponse.methodTokens.slice(),
-    substitution: {
-      newPrice: '920',
-      oldPriceNumerator: '800',
-      oldPriceDenominator: '800'
-    },
-    finalAnswer: '15',
-    notation: '%',
+  missingSubstitution: canonicalResponse('missingSubstitution'),
+  missingNotation: canonicalResponse('missingNotation'),
+  conclusionWithoutDirection: canonicalResponse('conclusionWithoutDirection'),
+  vagueExampleOnly: canonicalResponse('vagueExampleOnly'),
+  contradictoryNegation: canonicalResponse('contradictoryNegation'),
+  contradictoryDecrease: canonicalResponse('contradictoryDecrease'),
+  contradictoryHasPercent: {
+    ...passingResponse,
     conclusion: 'De fiets heeft 15 procent.'
-  },
-  exampleOnly: {
-    methodTokens: passingResponse.methodTokens.slice(),
-    substitution: {},
-    finalAnswer: '15%',
-    notation: '%',
-    conclusion: 'Bijvoorbeeld 15 procent.'
-  },
-  notationOmitted: {
-    methodTokens: passingResponse.methodTokens.slice(),
-    substitution: {
-      newPrice: '920',
-      oldPriceNumerator: '800',
-      oldPriceDenominator: '800'
-    },
-    finalAnswer: '15',
-    notation: '',
-    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
   },
   standaloneA81: {
     methodTokens: [],
@@ -250,17 +270,6 @@ const negativeResponses = {
     finalAnswer: '',
     notation: '',
     conclusion: 'Ik gebruik de bron: eerst 800 euro en daarna 920 euro.'
-  },
-  wrongDenominator: {
-    methodTokens: passingResponse.methodTokens.slice(),
-    substitution: {
-      newPrice: '920',
-      oldPriceNumerator: '800',
-      oldPriceDenominator: '920'
-    },
-    finalAnswer: '15',
-    notation: '%',
-    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
   },
   missingSubstitutionField: {
     methodTokens: passingResponse.methodTokens.slice(),
@@ -273,17 +282,13 @@ const negativeResponses = {
     notation: '%',
     conclusion: 'De prijs van de fiets stijgt met 15 procent.'
   },
-  leftToRightTokenClickOrder: {
-    methodTokens: strictA96Task.interaction.formula.tokens.map((token) => token.id),
-    substitution: {
-      newPrice: '920',
-      oldPriceNumerator: '800',
-      oldPriceDenominator: '800'
-    },
-    finalAnswer: '15',
-    notation: '%',
-    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
-  }
+  leftToRightTokenClickOrder: canonicalResponse('leftToRightTokenClickOrder', {
+    methodTokens: strictA96Task.interaction.formula.tokens.map((token) => token.id)
+  }),
+  sourceOnly: canonicalResponse('sourceValuesOnly'),
+  directionFree: canonicalResponse('conclusionWithoutDirection'),
+  exampleOnly: canonicalResponse('vagueExampleOnly'),
+  notationOmitted: canonicalResponse('missingNotation')
 };
 
 const invalidTaskFixtures = {

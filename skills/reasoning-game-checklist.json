@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "checklist_id": "econ-reasoning-game-checklist-v1",
+  "goal": "GOAL-REASONING-GOLDEN-FAMILY-1",
+  "required_sections": [
+    "target_brief",
+    "archetype_selection",
+    "one_coherent_loop",
+    "shared_student_actions",
+    "ui_standard",
+    "misconception_distractors",
+    "negative_fixtures",
+    "rendered_proof",
+    "specialist_reviews",
+    "lead_review_rounds",
+    "authority_boundary"
+  ],
+  "hard_fails": [
+    "calculation_drill_only",
+    "graph_drawing_only",
+    "mode_picker_default",
+    "generic_mc_only",
+    "generic_textarea_only",
+    "answer_giving_goal",
+    "visible_internal_metadata",
+    "correct_only_controls",
+    "missing_local_repair",
+    "reshuffle_after_click",
+    "decorative_graph",
+    "tiny_graph_targets",
+    "missing_answer_preview",
+    "missing_feedback_or_next_route",
+    "initial_screenshot_only"
+  ],
+  "proof_states": [
+    "desktop_light_initial",
+    "partial",
+    "wrong_retry",
+    "repaired_correct",
+    "answer_preview",
+    "next_action",
+    "mobile_dark",
+    "keyboard_focus"
+  ],
+  "graph_specific_proof": [
+    "direct_point_targets",
+    "target_size_min_44_px",
+    "order_insensitive_selection",
+    "local_point_remove",
+    "no_graph_construction_replacement"
+  ],
+  "authority_must_remain_false": [
+    "student_product_adoption",
+    "target_equivalent_proof",
+    "diagnostics",
+    "mastery_or_sequencing",
+    "summative_use",
+    "scale_gate"
+  ]
+}

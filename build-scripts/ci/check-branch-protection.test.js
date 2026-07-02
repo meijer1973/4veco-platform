@@ -1,8 +1,10 @@
 const {
   contextsFromProtection,
+  EXPECTED_APPROVING_REVIEW_COUNT,
   summarizeProtection,
   summarizePullRequestReviews,
 } = require('./check-branch-protection');
+const activatedProtectionFixture = require('./fixtures/branch-protection-activated.json');
 
 function validProtection(overrides = {}) {
   return {
@@ -19,6 +21,15 @@ function validProtection(overrides = {}) {
     allow_deletions: {
       enabled: false,
     },
+    required_conversation_resolution: {
+      enabled: true,
+    },
+    required_pull_request_reviews: {
+      dismiss_stale_reviews: false,
+      require_code_owner_reviews: false,
+      require_last_push_approval: false,
+      required_approving_review_count: EXPECTED_APPROVING_REVIEW_COUNT,
+    },
     ...overrides,
   };
 }
@@ -33,6 +44,8 @@ describe('check-branch-protection', () => {
     expect(summary.ok).toBe(true);
     expect(summary.failures).toEqual([]);
     expect(summary.observed.required_status_checks.contexts).toContain('validate-platform');
+    expect(summary.expected.required_pull_request_reviews.required_approving_review_count).toBe(0);
+    expect(summary.observed.required_pull_request_reviews.required_approving_review_count).toBe(0);
   });
 
   test('extracts contexts from modern checks shape', () => {
@@ -45,7 +58,58 @@ describe('check-branch-protection', () => {
     expect(contexts).toEqual(['validate-platform', 'lint']);
   });
 
-  test('reports pull-request review settings without making them required failures', () => {
+  test('requires integration-authorized when operational flag is enabled', () => {
+    const summary = summarizeProtection(validProtection({
+      required_status_checks: {
+        strict: true,
+        contexts: ['validate-platform', 'integration-authorized'],
+      },
+    }), { requireIntegrationAuthorized: true });
+
+    expect(summary.ok).toBe(true);
+    expect(summary.expected.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
+  });
+
+  test('fails when integration-authorized is required but absent', () => {
+    const summary = summarizeProtection(validProtection(), { requireIntegrationAuthorized: true });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('required status context missing: integration-authorized');
+  });
+
+  test('fails when required status checks include unexpected extra contexts', () => {
+    const summary = summarizeProtection(validProtection({
+      required_status_checks: {
+        strict: true,
+        contexts: ['validate-platform', 'integration-authorized', 'unexpected-extra'],
+      },
+    }), { requireIntegrationAuthorized: true });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('unexpected required status context: unexpected-extra');
+  });
+
+  test('activated branch-protection fixture passes with validate-platform and integration-authorized', () => {
+    const summary = summarizeProtection(activatedProtectionFixture, {
+      requireIntegrationAuthorized: true,
+    });
+
+    expect(summary.ok).toBe(true);
+    expect(summary.failures).toEqual([]);
+    expect(summary.expected.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
+    expect(summary.observed.required_status_checks.contexts).toEqual([
+      'validate-platform',
+      'integration-authorized',
+    ]);
+  });
+
+  test('fails if approving review count returns to one', () => {
     const summary = summarizeProtection(validProtection(), {
       pullRequestReviews: {
         dismiss_stale_reviews: false,
@@ -55,10 +119,10 @@ describe('check-branch-protection', () => {
       },
     });
 
-    expect(summary.ok).toBe(true);
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('required_approving_review_count must be 0');
     expect(summary.observed.required_pull_request_reviews.required).toBe(true);
     expect(summary.observed.required_pull_request_reviews.required_approving_review_count).toBe(1);
-    expect(summary.observed.required_pull_request_reviews.bypass_disabled).toBeNull();
   });
 
   test('reports pull-request review limitation when settings are absent', () => {
@@ -68,6 +132,51 @@ describe('check-branch-protection', () => {
 
     expect(summary.required).toBe(false);
     expect(summary.limitation).toBe('endpoint unavailable');
+  });
+
+  test('passes when observable bypass allowances are empty', () => {
+    const summary = summarizeProtection(
+      validProtection({
+        required_pull_request_reviews: {
+          dismiss_stale_reviews: false,
+          require_code_owner_reviews: false,
+          require_last_push_approval: false,
+          required_approving_review_count: 0,
+          bypass_pull_request_allowances: {
+            users: [],
+            teams: [],
+            apps: [],
+          },
+        },
+      })
+    );
+
+    expect(summary.ok).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.bypass_allowances_observable).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.bypass_disabled).toBe(true);
+  });
+
+  test('fails when observable bypass allowances are non-empty', () => {
+    const summary = summarizeProtection(
+      validProtection({
+        required_pull_request_reviews: {
+          dismiss_stale_reviews: false,
+          require_code_owner_reviews: false,
+          require_last_push_approval: false,
+          required_approving_review_count: 0,
+          bypass_pull_request_allowances: {
+            users: [{ login: 'review-bypass-user' }],
+            teams: [],
+            apps: [],
+          },
+        },
+      })
+    );
+
+    expect(summary.ok).toBe(false);
+    expect(summary.failures).toContain('bypass_pull_request_allowances must be empty');
+    expect(summary.observed.required_pull_request_reviews.bypass_allowances_observable).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.bypass_disabled).toBe(false);
   });
 
   test.each([
@@ -95,6 +204,52 @@ describe('check-branch-protection', () => {
       'deletions allowed',
       validProtection({ allow_deletions: { enabled: true } }),
       'allow_deletions.enabled must be false',
+    ],
+    [
+      'conversation resolution disabled',
+      validProtection({ required_conversation_resolution: { enabled: false } }),
+      'required_conversation_resolution.enabled must be true',
+    ],
+    [
+      'pull-request review settings missing',
+      validProtection({ required_pull_request_reviews: null }),
+      'pull-request review settings must be available',
+    ],
+    [
+      'stale review dismissal enabled',
+      validProtection({
+        required_pull_request_reviews: {
+          dismiss_stale_reviews: true,
+          require_code_owner_reviews: false,
+          require_last_push_approval: false,
+          required_approving_review_count: 0,
+        },
+      }),
+      'dismiss_stale_reviews must be false',
+    ],
+    [
+      'code-owner reviews enabled',
+      validProtection({
+        required_pull_request_reviews: {
+          dismiss_stale_reviews: false,
+          require_code_owner_reviews: true,
+          require_last_push_approval: false,
+          required_approving_review_count: 0,
+        },
+      }),
+      'require_code_owner_reviews must be false',
+    ],
+    [
+      'last-push approval enabled',
+      validProtection({
+        required_pull_request_reviews: {
+          dismiss_stale_reviews: false,
+          require_code_owner_reviews: false,
+          require_last_push_approval: true,
+          required_approving_review_count: 0,
+        },
+      }),
+      'require_last_push_approval must be false',
     ],
   ])('fails when %s', (_label, protection, expectedFailure) => {
     const summary = summarizeProtection(protection);

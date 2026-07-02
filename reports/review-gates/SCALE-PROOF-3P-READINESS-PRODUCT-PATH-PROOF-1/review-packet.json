@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "packet_id": "SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1",
+  "sprint_id": "SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1",
+  "pr_number": 135,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/135",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "product_authority",
+  "changed_paths": [
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+    "build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+    "package.json",
+    "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-plan.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-result.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-quality-log.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-evidence-map.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/manifest.json",
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/*.png",
+    "reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json"
+  ],
+  "lesson_changed_paths": [],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+    "rationale": "The rendered first-three product-path proof has been refreshed after A96-CALCULATION-ANSWER-FORM-REFINEMENT-1. Scale Gate 1 is ready for human review but remains unauthorized until explicit owner decision."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "scale_gate_preparation",
+    "product_path_gate_review",
+    "target_equivalence_boundary",
+    "student_product_use_boundary",
+    "a96_calculation_answer_form"
+  ],
+  "date": "2026-06-22",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "references/ui/exercise-workbench-policy.md",
+    "references/ui/interaction-policy.md",
+    "references/ui/layout-registry.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-result.md",
+    "reports/sprints/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1-blocker-log.md",
+    "reports/sprints/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1-result.md",
+    "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-result.md",
+    "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md"
+  ],
+  "non_negotiable_requirements": [
+    "Capture rendered first-three evidence for landing, Start, Leer, Oefen, skill map, representative practice, advisory checks, exit tickets, feedback, and next-action surfaces.",
+    "Confirm 1.1.1, 1.1.2, and 1.1.3 short checks and exit tickets render in the Golden Exercise Workbench.",
+    "Confirm short checks remain advisory only with candidate:false, gateApproved:false, completionLanguageEligible:false, and targetReadinessEvidence:false.",
+    "Confirm exit tickets remain target-readiness evidence with completionLanguageEligible:false.",
+    "Confirm first-three landing authority copy stays neutral and forbidden target-capability strings are absent.",
+    "Keep 1.1.4 only as same-copy hygiene, not as part of the Scale-proof claim.",
+    "Do not authorize product-route adoption, diagnostics, mastery/sequencing, PV, summative use, Scale Gate 1, broad product use, student/product use, or target-equivalent completion language.",
+    "Do not carry a missing core Scale Gate requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "GATE-PRODUCT-3P and Golden repair refs"
+    },
+    {
+      "requirement": "First-three rendered product path captured",
+      "status": "met",
+      "evidence": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md"
+    },
+    {
+      "requirement": "Route families present and links resolve",
+      "status": "met",
+      "evidence": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md"
+    },
+    {
+      "requirement": "Short checks advisory only",
+      "status": "met",
+      "evidence": "proof.short_checks_advisory_only:true"
+    },
+    {
+      "requirement": "Exit ticket completion language held",
+      "status": "met",
+      "evidence": "completionLanguageEligible:false for 1.1.1, 1.1.2, and 1.1.3"
+    },
+    {
+      "requirement": "First-three short checks and exit tickets are Golden Workbench",
+      "status": "met",
+      "evidence": "proof.all_first_three_check_exit_surfaces_golden:true"
+    },
+    {
+      "requirement": "No downstream authority claimed",
+      "status": "met",
+      "evidence": "authority flags all false"
+    },
+    {
+      "requirement": "A96 calculation answer-form refinement resolved or waived",
+      "status": "met",
+      "evidence": "A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 proof and refreshed Scale proof"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "lead verdict is READY_FOR_HUMAN_SCALE_GATE_1_REVIEW, not PASS WITH FLAGS"
+    }
+  ],
+  "authority_claims": {
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "generated_lesson_output_changed": true,
+    "source_flags_mutated": false,
+    "route_migration_performed": false
+  },
+  "proof": {
+    "lead_review": {
+      "verdict": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+      "status": "completed",
+      "summary": "Rendered first-three product-path evidence and A96 refinement are ready for human Scale Gate 1 review. No authority is granted by this packet."
+    },
+    "machine_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "route_inventory": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md",
+    "screenshot_manifest": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md",
+    "checker": {
+      "command": "node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+      "status": "passed"
+    },
+    "package_checker": {
+      "command": "npm.cmd run check:scale-proof-3p-product-path",
+      "status": "passed"
+    },
+    "capture": {
+      "command": "node build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+      "status": "passed"
+    },
+    "validation": [
+      {
+        "command": "npm.cmd run check:review-throughput -- reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:pr-readiness",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:branch-protection",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-mtu-evidence-layer.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/ci/check-evidence-line-endings.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:landing-v2",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:news-detective-v2",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:golden-graph-advisory-113",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\SCALE-PROOF-3P-20260622\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ],
+    "a96_refinement": "reports/json/a96-calculation-answer-form-refinement-1-proof.json"
+  },
+  "carried_issues": [],
+  "findings": [],
+  "lead_verdict": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+  "recommended_next_step": "Route to human Scale Gate 1 review. Do not authorize product-route adoption, diagnostics, mastery/sequencing, PV, summative use, Scale Gate 1 closure, broad product use, student/product use, or target-equivalent completion language without explicit owner decision tied to the exact head.",
+  "resolved_issues": [
+    {
+      "id": "SCALE3P-A96-001",
+      "classification": "resolved",
+      "severity": "core_requirement_missing",
+      "finding": "A96 calculation answer-form refinement is implemented and recaptured.",
+      "blocks": [],
+      "does_not_block": [
+        "human Scale Gate 1 review"
+      ],
+      "proof_required_to_close": "Satisfied by A96-CALCULATION-ANSWER-FORM-REFINEMENT-1 proof and refreshed Scale proof checker."
+    }
+  ],
+  "rereview_refresh": {
+    "bundle_id": "A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1",
+    "date": "2026-06-25",
+    "platform_pr": {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624",
+      "pr_number": 148,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/148"
+    },
+    "lesson_pr": {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/a96-calculation-answer-form-scale-gate-1-20260624",
+      "pr_number": 36,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/36"
+    },
+    "lesson_changed_paths": [
+      "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-engine.js"
+    ],
+    "proof": {
+      "hardening_rereview": "reports/json/a96-calculation-answer-form-hardening-and-scale-gate-1-rereview-1-proof.json",
+      "refreshed_scale_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+      "screenshot_count": 46,
+      "a96_dedicated_rendered_states_ready": true
+    },
+    "validation": [
+      {
+        "command": "npm.cmd run check:scale-proof-3p-product-path",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\A96-CALCULATION-ANSWER-FORM-20260624\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ],
+    "note": "Historical Scale proof packet preserved; PR #148 / lesson PR #36 provide the current refreshed proof after A96 hardening."
+  }
+}

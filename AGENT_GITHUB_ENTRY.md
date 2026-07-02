@@ -18,7 +18,13 @@ Path reliability:
 | Why did a generated artifact look or behave this way? | `4veco-lessen`, then `4veco-platform` |
 | Which engine/source/template should be changed? | `4veco-platform` |
 | How should multiple review/testing agents be coordinated into one go/no-go decision? | `agents/lead-reviewer-agent.md` |
+| How should a completed remote draft PR be routed to revise, batch, lead-only closure, human review, or pause? | `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, `build-scripts/review-gates/review-pr-readiness.js`, `build-scripts/review-gates/route-and-apply-pr-readiness.js`, `build-scripts/review-gates/apply-pr-readiness-decision.js` |
+| How should a payload-authorized PR be serialized through base refresh, integration validation, exact-head readiness, and merge? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/review-gates/check-integration-lane-capability.js`, `docs/review/human-payload-authorization.schema.json`, `build-scripts/review-gates/check-human-payload-authorization.js`, `build-scripts/review-gates/integrate-authorized-pr.js`, `.github/workflows/authorized-pr-integration.yml` |
+| How should current branch protection and optional `integration-authorized` audit status be verified? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, `build-scripts/review-gates/integrate-authorized-pr.js` |
+| How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
+| How should active governance wording, pre-work governance freshness, and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/check-governance-freshness.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
+| How should paragraph work be split between Part A/textbook and Part B/companion/student-web production? | `docs/workflows/paragraph-lane-vocabulary.md`, `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js` |
 | How should accessibility, readability, contrast, alt text, OCR, or keyboard access be reviewed? | `agents/accessibility-agent.md` |
 | How should learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, transfer, retention, or classroom readiness be reviewed? | `agents/teacher-learning-quality-review-agent.md` |
 | How should student orientation, affordance, cognitive load, motivation, confusion risks, graph understandability, or student readiness be reviewed? | `agents/student-experience-review-agent.md` |
@@ -49,15 +55,39 @@ Useful entry points:
 - `4veco-lessen/specifications/companion-core-specifications.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
+- `docs/workflows/paragraph-lane-vocabulary.md`
+- `docs/workflows/textbook-paragraph-lane.md`
+- `docs/workflows/web-companion-paragraph-lane.md`
+- `docs/workflows/paragraph-quality-ref-schema-v2.md`
+- `build-scripts/templates/textbook-to-companion-handoff.md`
+- `build-scripts/workflows/check-paragraph-lane-scope.js`
 - `build-scripts/README.md`
 - `agents/README.md`
 - `agents/lead-reviewer-agent.md`
+- `agents/pr-readiness-reviewer-agent.md`
 - `agents/testing-agent.md`
 - `agents/accessibility-agent.md`
 - `agents/teacher-learning-quality-review-agent.md`
 - `agents/student-experience-review-agent.md`
 - `agents/econ-companion-visual-review.md`
 - `agents/visual-qa-agent.md`
+- `docs/review/pr-throughput-policy.md`
+- `docs/review/pr-readiness-routing-policy.md`
+- `docs/review/pr-integration-lane-policy.md`
+- `docs/review/human-payload-authorization.schema.json`
+- `build-scripts/ci/check-branch-protection.js`
+- `build-scripts/review-gates/check-integration-lane-capability.js`
+- `.github/workflows/authorized-pr-integration.yml`
+- `.github/workflows/cross-repo-bundle-compatibility.yml`
+- `.github/workflows/authorized-bundle-integration.yml`
+- `build-scripts/review-gates/integrate-authorized-pr.js`
+- `build-scripts/review-gates/route-and-apply-pr-readiness.js`
+- `build-scripts/review-gates/check-active-governance-wording.js`
+- `build-scripts/review-gates/check-governance-freshness.js`
+- `build-scripts/review-gates/finalization-freshness-proof.js`
+- `build-scripts/review-gates/cross-repo-bundle-compatibility.js`
+- `build-scripts/review-gates/check-human-bundle-authorization.js`
+- `build-scripts/review-gates/integrate-authorized-bundle.js`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
@@ -71,3 +101,25 @@ Task-routing guidance:
   decisions.
 - Use `4veco-lessen/specifications/product-end-state.md` for the operational
   student route and completeness definition.
+- Use `docs/review/pr-integration-lane-policy.md` plus
+  `build-scripts/review-gates/check-integration-lane-capability.js` when an
+  owner decision is already bound to a reviewed PR payload and the remaining
+  work is base refresh, integration-head validation, exact-head readiness
+  proof, and serialized merge. Human handoffs should ask for payload
+  authorization, include `AUTHORIZATION_TYPE: PAYLOAD_AUTHORIZATION`, and name
+  the reviewed payload head and decision scope. The owner-authenticated local
+  lane is the default single-PR merge path; the authorized GitHub workflow is
+  optional only when its token can read branch protection. A
+  `branch_protection_read_forbidden` result means use the local lane with the
+  same authorization comment ID, not a raw merge.
+- Use `build-scripts/review-gates/route-and-apply-pr-readiness.js` with
+  `--evidence <file> --expect-transition MARK_READY` when a completed draft PR
+  should be routed and promoted by machine decision in one step.
+- Use `build-scripts/review-gates/check-active-governance-wording.js` and
+  `build-scripts/review-gates/finalization-freshness-proof.js` before closing
+  governance or workflow changes.
+- Use the cross-repo bundle compatibility workflow and authorized bundle
+  integration workflow when a platform PR and lesson PR must land as one
+  coordinated payload. If both members are still draft but substantively ready,
+  run `npm.cmd run apply:bundle-readiness` from the controller decision before
+  requesting bundle merge authorization.

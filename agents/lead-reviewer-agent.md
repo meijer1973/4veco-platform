@@ -140,7 +140,7 @@ Choose the minimal necessary reviewers:
 
 | Condition | Route to |
 |---|---|
-| Full companion HTML/DOCX/PPTX/PDF family | `econ-companion-visual-review` |
+| Full companion HTML/PPTX family, plus opt-in Office DOCX when in scope | `econ-companion-visual-review` |
 | Single graph, diagram, screenshot, UI state, chart, slide, or asset | `visual-qa-agent` |
 | Test suite, validator, build command, or regression proof | `testing-agent` |
 | Readability, contrast, alt text, OCR, keyboard, semantics, inclusive usability | `accessibility-agent` |
@@ -195,6 +195,12 @@ The Lead Reviewer Agent must block completion when:
 - Artifact/task:
 - Requested outcome:
 - Evidence inspected:
+- Reviewed repository and PR, when applicable:
+- Reviewed commit SHA:
+- PR-readiness routing suitability:
+- Human-authority trigger:
+- Batching recommendation:
+- Subsequent changes require re-review:
 
 ## Review Plan
 | Review/Test | Agent or tool | Required evidence | Status |
@@ -251,6 +257,9 @@ The Lead Reviewer Agent must:
 - allow PASS WITH FLAGS only when all carried flags sit outside the sprint core objective
 - make every carried flag name exactly what it blocks and what it does not block
 - end with a concrete operational next action
+- clearly state the reviewed repository/PR and commit SHA when the work is tied to a PR
+- state whether its result is suitable for PR-readiness routing
+- identify any human-authority trigger, batching recommendation, and whether later changes require re-review
 
 The Lead Reviewer Agent must not:
 

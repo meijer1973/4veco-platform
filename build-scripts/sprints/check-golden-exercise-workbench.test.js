@@ -9,6 +9,7 @@ describe('Golden Exercise Workbench policy checks', () => {
       'golden_route_with_legacy_assets',
       'fake_graph_slope_question',
       'answer_giving_placeholder',
+      'answer_giving_substitution_placeholder',
       'formula_token_bank_ordered_as_answer',
       'visually_identical_hidden_token_trap_oldq',
       'visually_identical_hidden_token_trap_unmarked_duplicate',

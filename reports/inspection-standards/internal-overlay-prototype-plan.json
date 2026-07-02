@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "report_id": "internal-overlay-prototype-plan",
+  "sprint_id": "GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1",
+  "generated_date": "2026-06-24",
+  "access_date": "2026-06-24",
+  "status": "ready_for_human_review",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "accepted_deepening_decision": "PROCEED_TO_INTERNAL_OVERLAY_PROTOTYPE_PLANNING",
+  "accepted_deepening_decision_source": "reports/inspection-standards/selected-jurisdiction-deepening-decision.md",
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-sprint-plan.md",
+  "non_negotiable_requirements": [
+    "Use REV-STD-1 and cite product end-state plus the original sprint/gate spec.",
+    "Cite the accepted GOAL-IQS-SELECTED-DEEPENING-1 decision and preserve its authority boundaries.",
+    "Plan internal overlay trial architecture only; do not create localized chapters, country editions, or executable product routes.",
+    "Use explicit input and output allowlists; do not glob directories or scan generated lesson output.",
+    "Define source traceability, blocker display, refusal rules, validation gates, and review gates before any later trial-contract draft.",
+    "Keep England and Flanders as the selected contrasting jurisdictions; do not generalize to whole UK or all Belgium.",
+    "Keep all teacher/school-facing, public, evidence-pack, Scale Gate, diagnostics/mastery/PV, student/product-use, personal-data, compliance, approval, OP0, PTA, summative, and inspection-readiness authority blocked.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "Do not carry a missing core requirement as PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "accepted_decision_bound",
+      "requirement": "The plan is bound to the accepted selected-deepening decision and does not reinterpret it as implementation authority.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "input_allowlist",
+      "requirement": "The plan names an exact input allowlist from selected-deepening reports, crosswalks, descriptors, and transformation contract.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "output_allowlist",
+      "requirement": "The plan names an exact output allowlist for planning records only.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "no_output_boundary",
+      "requirement": "No localized chapters, generated lesson output, country edition, teacher/school-facing output, public output, or evidence pack is created or authorized.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "prototype_scope",
+      "requirement": "The trial architecture is planning-only and manually invoked; it describes a later contract draft without runtime execution.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "source_traceability",
+      "requirement": "Every later trial-contract question must point to selected-jurisdiction sources, crosswalk rows, and known gaps.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "blocker_display",
+      "requirement": "Future trial-contract surfaces must visibly retain route-local-only status, school-owned evidence needs, forbidden inferences, and owner next action.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "support_accommodation_boundary",
+      "requirement": "Future trial-contract rows must keep support sufficiency, accommodation sufficiency, individual adjustment, and support-record personal-data claims blocked.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "refusal_stop_conditions",
+      "requirement": "Forbidden audiences, authority jumps, implicit discovery, integration requests, and compliance claims fail closed.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "review_gates",
+      "requirement": "The plan requires specialist and final lead review before any later trial-contract draft can be returned.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    },
+    {
+      "id": "human_review_stop",
+      "requirement": "The current sprint returns for human review and does not unlock implementation without a separate exact-head decision.",
+      "status": "met_for_internal_planning",
+      "proof_required_to_close": "Generator/checker PASS, specialist review, final lead PASS, PR readiness proof, and human review."
+    }
+  ],
+  "input_allowlist": [
+    "reports/inspection-standards/selected-jurisdiction-deepening-decision.json",
+    "reports/inspection-standards/selected-jurisdiction-readiness-comparison.json",
+    "reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.json",
+    "reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json",
+    "references/data/inspection-standards/overlays/england.deepening.v1.json",
+    "references/data/inspection-standards/overlays/flanders.deepening.v1.json",
+    "docs/inspection-standards/selected-jurisdiction-transformation-contract.md"
+  ],
+  "output_allowlist": [
+    "docs/inspection-standards/internal-overlay-prototype-planning-contract.md",
+    "reports/inspection-standards/internal-overlay-prototype-plan.md",
+    "reports/inspection-standards/internal-overlay-prototype-plan.json",
+    "reports/inspection-standards/internal-overlay-prototype-refusal-matrix.md",
+    "reports/inspection-standards/internal-overlay-prototype-refusal-matrix.json",
+    "reports/inspection-standards/internal-overlay-prototype-planning-decision.md",
+    "reports/inspection-standards/internal-overlay-prototype-planning-decision.json",
+    "archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1/GOAL-IQS-INTERNAL-OVERLAY-PROTOTYPE-PLANNING-1-sprint-plan.md"
+  ],
+  "output_boundary": {
+    "country_compliance_claim": false,
+    "inspectorate_approval_claim": false,
+    "legal_compliance_claim": false,
+    "inspection_readiness_claim": false,
+    "school_pack_trial": false,
+    "teacher_school_distribution": false,
+    "public_external_distribution": false,
+    "evidence_pack_deployment": false,
+    "package_script_invocation": false,
+    "ci_invocation": false,
+    "dashboard_gate": false,
+    "quality_ref_integration": false,
+    "product_route_adoption": false,
+    "scale_gate_integration": false,
+    "diagnostics_mastery_pv": false,
+    "student_or_product_use": false,
+    "personal_data_processing": false,
+    "complete_op0_pta_summative_claim": false,
+    "op0_claim": false,
+    "pta_validity_claim": false,
+    "summative_validity_claim": false,
+    "single_national_us_inspection_claim": false,
+    "whole_uk_claim_from_england_only": false,
+    "all_belgium_claim_from_flanders_only": false,
+    "germany_single_land_claim": false,
+    "country_edition_generation": false,
+    "local_exam_code_implementation": false,
+    "teacher_school_facing_overlay": false,
+    "public_overlay_output": false,
+    "school_owned_evidence_collection": false,
+    "package_or_ci_product_integration": false,
+    "country_specific_legal_claim": false,
+    "localized_student_facing_chapters": false,
+    "teacher_school_facing_distribution": false,
+    "selected_jurisdiction_public_output": false,
+    "selected_jurisdiction_evidence_pack": false,
+    "selected_jurisdiction_product_route": false,
+    "selected_jurisdiction_scale_gate": false,
+    "selected_jurisdiction_personal_data": false,
+    "selected_jurisdiction_legal_sufficiency_claim": false,
+    "selected_jurisdiction_compliance_claim": false,
+    "selected_jurisdiction_approval_claim": false,
+    "selected_jurisdiction_accreditation_claim": false,
+    "selected_jurisdiction_inspection_readiness_claim": false,
+    "internal_prototype_runtime_execution": false,
+    "localized_overlay_output_generation": false,
+    "fixture_to_product_promotion": false,
+    "teacher_school_pilot": false,
+    "support_sufficiency_claim": false,
+    "accommodation_sufficiency_claim": false,
+    "individual_adjustment_claim": false,
+    "support_records_personal_data": false,
+    "automated_source_refresh": false,
+    "non_allowlisted_source_use": false,
+    "local_expert_substitution": false
+  },
+  "planning_scope": {
+    "objective": "Plan a later internal-only overlay trial contract for England and Flanders without runtime execution or localized output.",
+    "in_scope": [
+      "Internal architecture planning.",
+      "Future contract field families.",
+      "Exact allowlist policy.",
+      "Refusal and stop-condition design.",
+      "Validation and specialist-review gate design."
+    ],
+    "out_of_scope": [
+      "country_compliance_claim",
+      "inspectorate_approval_claim",
+      "legal_compliance_claim",
+      "inspection_readiness_claim",
+      "school_pack_trial",
+      "teacher_school_distribution",
+      "public_external_distribution",
+      "evidence_pack_deployment",
+      "package_script_invocation",
+      "ci_invocation",
+      "dashboard_gate",
+      "quality_ref_integration",
+      "product_route_adoption",
+      "scale_gate_integration",
+      "diagnostics_mastery_pv",
+      "student_or_product_use",
+      "personal_data_processing",
+      "complete_op0_pta_summative_claim",
+      "op0_claim",
+      "pta_validity_claim",
+      "summative_validity_claim",
+      "single_national_us_inspection_claim",
+      "whole_uk_claim_from_england_only",
+      "all_belgium_claim_from_flanders_only",
+      "germany_single_land_claim",
+      "country_edition_generation",
+      "local_exam_code_implementation",
+      "teacher_school_facing_overlay",
+      "public_overlay_output",
+      "school_owned_evidence_collection",
+      "package_or_ci_product_integration",
+      "country_specific_legal_claim",
+      "localized_student_facing_chapters",
+      "teacher_school_facing_distribution",
+      "selected_jurisdiction_public_output",
+      "selected_jurisdiction_evidence_pack",
+      "selected_jurisdiction_product_route",
+      "selected_jurisdiction_scale_gate",
+      "selected_jurisdiction_personal_data",
+      "selected_jurisdiction_legal_sufficiency_claim",
+      "selected_jurisdiction_compliance_claim",
+      "selected_jurisdiction_approval_claim",
+      "selected_jurisdiction_accreditation_claim",
+      "selected_jurisdiction_inspection_readiness_claim",
+      "internal_prototype_runtime_execution",
+      "localized_overlay_output_generation",
+      "fixture_to_product_promotion",
+      "teacher_school_pilot",
+      "support_sufficiency_claim",
+      "accommodation_sufficiency_claim",
+      "individual_adjustment_claim",
+      "support_records_personal_data",
+      "automated_source_refresh",
+      "non_allowlisted_source_use",
+      "local_expert_substitution"
+    ]
+  },
+  "planning_phases": [
+    {
+      "phase_id": "phase_0_authority_lock",
+      "purpose": "Import accepted selected-deepening proof as planning context only.",
+      "allowed_actions": [
+        "Read the allowlisted selected-deepening decision, comparison, crosswalks, descriptors, and transformation contract.",
+        "Record authority boundaries and known source gaps."
+      ],
+      "forbidden_actions": [
+        "Treat selected-deepening acceptance as product or local implementation authority.",
+        "Resolve source gaps by implicit web/source discovery."
+      ],
+      "exit_evidence": "Planning packet names accepted decision, still-blocked authority, and exact input allowlist."
+    },
+    {
+      "phase_id": "phase_1_trial_contract_shape",
+      "purpose": "Define the later internal trial contract shape without executing it.",
+      "allowed_actions": [
+        "Draft field families for source binding, concept mapping, transformation intent, blocker display, and reviewer disposition.",
+        "Name future fixture categories and refusal cases."
+      ],
+      "forbidden_actions": [
+        "Generate localized exercises, answer models, lesson pages, teacher packs, or student-facing materials.",
+        "Create package, CI, dashboard, quality-ref, product-route, or Scale Gate integration."
+      ],
+      "exit_evidence": "Future contract fields are bounded to internal, manual, no-output analysis."
+    },
+    {
+      "phase_id": "phase_2_validation_design",
+      "purpose": "Define deterministic validation before any later trial-contract draft.",
+      "allowed_actions": [
+        "Require exact input/output allowlists.",
+        "Require explicit source IDs for each future row.",
+        "Require refusal tests for forbidden audiences, authority jumps, implicit discovery, and integration requests."
+      ],
+      "forbidden_actions": [
+        "Use directory globbing or generated lesson-output scanning.",
+        "Waive source traceability for convenience."
+      ],
+      "exit_evidence": "Checker requirements and refusal matrix are reviewable before implementation."
+    },
+    {
+      "phase_id": "phase_3_review_gate_design",
+      "purpose": "Define review gates needed before any later internal trial-contract draft can proceed.",
+      "allowed_actions": [
+        "Require teacher/economics, legal/privacy, accessibility/inclusion, jurisdiction-source, and final lead review.",
+        "Preserve REV-STD-1 findings and carried-issue fields."
+      ],
+      "forbidden_actions": [
+        "Return a later contract draft without specialist corrections resolved.",
+        "Use PASS WITH FLAGS to carry a missing core requirement."
+      ],
+      "exit_evidence": "Human-review packet can decide whether to authorize a later contract-draft sprint."
+    }
+  ],
+  "jurisdiction_planning": [
+    {
+      "jurisdiction_id": "england",
+      "descriptor_source": "references/data/inspection-standards/overlays/england.deepening.v1.json",
+      "crosswalk_source": "reports/inspection-standards/england-book1-1.2-1.3-deep-crosswalk.json",
+      "planning_use": "Internal planning for how an England overlay trial contract would preserve DfE/Ofsted/AQA-source boundaries.",
+      "must_display_blockers": [
+        "England is not whole UK.",
+        "AQA specimen/mark-scheme evidence is representative only, not awarding-body approval.",
+        "SEND/accessibility terminology is not legal sufficiency or support sufficiency."
+      ],
+      "required_later_review": [
+        "England subject/source reviewer",
+        "teacher/economics reviewer",
+        "legal/privacy reviewer",
+        "accessibility/inclusion reviewer"
+      ]
+    },
+    {
+      "jurisdiction_id": "flanders",
+      "descriptor_source": "references/data/inspection-standards/overlays/flanders.deepening.v1.json",
+      "crosswalk_source": "reports/inspection-standards/flanders-book1-1.2-1.3-deep-crosswalk.json",
+      "planning_use": "Internal planning for how a Flanders overlay trial contract would preserve Flemish-source and school/network boundaries.",
+      "must_display_blockers": [
+        "Flanders is not all Belgium.",
+        "Onderwijsdoelen and Referentiekader Onderwijskwaliteit do not supply school-owned evidence.",
+        "Assessment and OK fulfillment remain local/school/network dependent."
+      ],
+      "required_later_review": [
+        "Flanders source/pathway reviewer",
+        "teacher/economics reviewer",
+        "legal/privacy reviewer",
+        "accessibility/inclusion reviewer"
+      ]
+    }
+  ],
+  "future_contract_field_families": [
+    {
+      "field_family": "source_binding",
+      "required_fields": [
+        "jurisdiction_id",
+        "source_ids",
+        "source_role",
+        "access_date",
+        "forbidden_inference"
+      ],
+      "reason": "Future trial rows must trace to selected-deepening sources instead of discovering sources implicitly."
+    },
+    {
+      "field_family": "book_scope_binding",
+      "required_fields": [
+        "book_scope",
+        "chapter_paragraph",
+        "concept_id",
+        "crosswalk_row_id",
+        "route_local_only"
+      ],
+      "reason": "Trial planning is limited to Book 1 Chapters 1.2 and 1.3 selected-deepening crosswalk evidence."
+    },
+    {
+      "field_family": "transformation_intent",
+      "required_fields": [
+        "unchanged_core",
+        "terminology_change",
+        "example_change",
+        "assessment_change",
+        "exclusion"
+      ],
+      "reason": "Future work must separate portable economics from local terminology, examples, assessment forms, and exclusions."
+    },
+    {
+      "field_family": "blocker_display",
+      "required_fields": [
+        "school_owned_evidence_needed",
+        "school_owned_accommodation_evidence_needed",
+        "local_expert_needed",
+        "legal_sufficiency_blocked",
+        "support_sufficiency_blocked",
+        "accommodation_sufficiency_blocked",
+        "individual_adjustment_claim_blocked",
+        "support_records_personal_data_blocked",
+        "owner_next_action"
+      ],
+      "reason": "The future contract must keep blockers visible instead of burying them in prose."
+    },
+    {
+      "field_family": "review_disposition",
+      "required_fields": [
+        "reviewer_role",
+        "finding_classification",
+        "blocks",
+        "does_not_block",
+        "proof_required_to_close"
+      ],
+      "reason": "REV-STD-1 applies to future planning, specialist review, and human-review packets."
+    }
+  ],
+  "blocker_display_requirements": [
+    "route_local_only evidence status",
+    "school_owned_evidence_still_needed",
+    "forbidden_inferences",
+    "accessibility_support_limitations",
+    "legal_sufficiency_blocked",
+    "support_sufficiency_blocked",
+    "school_owned_accommodation_evidence_needed",
+    "individual_adjustment_claim_blocked",
+    "support_records_personal_data_blocked",
+    "check_surface_authority_separation",
+    "owner_next_action",
+    "proof_required_to_close"
+  ],
+  "validation_gates": [
+    "Generator --check proves output currentness.",
+    "Checker proves exact input/output allowlists and false blocked-authority flags.",
+    "Focused Jest proves committed packet acceptance and forbidden-mode refusal.",
+    "Final PR readiness reviewer runs against exact remote head before human review."
+  ],
+  "review_gates": [
+    "Lead reviewer: planning architecture and authority boundary.",
+    "Teacher/economics reviewer: usefulness of future trial field families.",
+    "Legal/privacy reviewer: audience, sharing, claims, and personal-data boundaries.",
+    "Accessibility/inclusion reviewer: support/accommodation boundary.",
+    "Final lead reviewer: complete packet, tests, generated reports, and PR proof."
+  ],
+  "finding_classification": [
+    {
+      "finding": "The selected-deepening decision is sufficient to plan a later internal overlay trial contract.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for human review of this planning packet.",
+      "does_not_block": "A later internal trial-contract draft only if human accepted.",
+      "proof_required_to_close": "Owner payload authorization for reviewed_payload_head_sha and decision scope."
+    },
+    {
+      "finding": "Planning remains non-executing and creates no localized, school-facing, public, product-route, Scale Gate, diagnostic, mastery, PV, student, or personal-data output.",
+      "classification": "core_requirement_met",
+      "blocks": "Any implementation, runtime, product-route, student-use, public, or school-facing use.",
+      "does_not_block": "Internal planning packet review.",
+      "proof_required_to_close": "Separate future human authorization after specialist review."
+    }
+  ]
+}

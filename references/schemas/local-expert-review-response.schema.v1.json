@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/schemas/local-expert-review-response.schema.v1.json",
+  "title": "Local Expert Review Response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reviewer_role",
+    "jurisdiction",
+    "source_id",
+    "source_state_seen",
+    "question_id",
+    "answer_type",
+    "interpretation",
+    "confidence",
+    "uncertainty",
+    "cited_source",
+    "forbidden_claims_disclaimed",
+    "does_not_authorize",
+    "proof_required_to_use"
+  ],
+  "properties": {
+    "reviewer_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jurisdiction": {
+      "enum": [
+        "england",
+        "flanders"
+      ]
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_state_seen": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answer_type": {
+      "enum": [
+        "bounded_interpretation",
+        "uncertainty_flag",
+        "citation_correction",
+        "out_of_scope"
+      ]
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "cannot_answer"
+      ]
+    },
+    "uncertainty": {
+      "type": "string"
+    },
+    "cited_source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "forbidden_claims_disclaimed": {
+      "const": true
+    },
+    "does_not_authorize": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 10
+    },
+    "proof_required_to_use": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "forbidden_fields": [
+    "student_data",
+    "personal_data",
+    "school_specific_evidence",
+    "legal_conclusion",
+    "compliance_conclusion",
+    "approval_conclusion",
+    "inspection_readiness_conclusion",
+    "direct_localized_output"
+  ]
+}

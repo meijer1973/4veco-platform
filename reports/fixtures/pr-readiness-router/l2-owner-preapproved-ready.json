@@ -1,0 +1,54 @@
+{
+  "expected_route": "READY_FOR_LEAD_ONLY",
+  "reviewed_pr": {
+    "repo": "meijer1973/4veco-lessen",
+    "number": 22,
+    "url": "https://github.com/meijer1973/4veco-lessen/pull/22",
+    "state": "OPEN",
+    "was_draft": true,
+    "base": "main",
+    "head_sha": "4444444444444444444444444444444444444444"
+  },
+  "throughput": {
+    "class": "generated_output",
+    "authority_class": "generated_output",
+    "level": "L2",
+    "owner_preapproved": true
+  },
+  "human_review_payload": "none",
+  "consequence": "low",
+  "changed_paths": [
+    "reports/fixtures/generated-output-refresh.json"
+  ],
+  "proof": {
+    "ci": {
+      "head_sha": "4444444444444444444444444444444444444444",
+      "conclusion": "success",
+      "required_contexts": [
+        "validate-platform"
+      ],
+      "checks": [
+        {
+          "name": "validate-platform",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED"
+        }
+      ]
+    },
+    "checkers": [
+      {
+        "command": "node scripts/check-book.js",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/L2-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "4444444444444444444444444444444444444444"
+    },
+    "changed_paths_verified": true,
+    "branch_protection": {
+      "required_approving_review_count": 0
+    }
+  }
+}

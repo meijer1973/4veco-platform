@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REVIEW-THROUGHPUT-3",
+  "name": "PR Readiness Router",
+  "status": "completed",
+  "completed": "2026-06-22",
+  "completed_on": "2026-06-22",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/REVIEW-THROUGHPUT-3-plan.md",
+  "baseline": "reports/sprints/REVIEW-THROUGHPUT-3-baseline.md",
+  "result": "reports/sprints/REVIEW-THROUGHPUT-3-result.md",
+  "diff_summary": "reports/sprints/REVIEW-THROUGHPUT-3-diff-summary.md",
+  "request_changes_corrections": "reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md",
+  "final_verdict": "PASS WITH FLAGS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "source_data_mutation_executed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/REVIEW-THROUGHPUT-3-lead-review-assignment.md",
+    "round1": "reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round1.md",
+    "corrections": "reports/sprints/REVIEW-THROUGHPUT-3-lead-review-corrections.md",
+    "round2": "reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "findings": [
+      {
+        "id": "REVIEW-THROUGHPUT-3-F1",
+        "description": "The PR readiness reviewer role, routing policy, and decision schema are present and distinguish PR readiness from lead-review quality judgment.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "agents/pr-readiness-reviewer-agent.md",
+          "docs/review/pr-readiness-routing-policy.md",
+          "docs/review/pr-readiness-decision.schema.json"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not authorize product, diagnostics, mastery, PV, Scale Gate 1, generated-output, or student/product use authority.",
+        "proof_required_to_close": "Policy, schema, and agent role remain in the diff and lead review round 2 closes PASS WITH FLAGS."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-F2",
+        "description": "The pure router classifies ready, revise, batch, human-review, and pause/escalate routes with stale-proof and fail-closed safeguards.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/pr-readiness-router.js",
+          "build-scripts/review-gates/pr-readiness-router.test.js",
+          "reports/fixtures/pr-readiness-router/"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not auto-merge or bypass branch protection for L3/L4 or governance changes.",
+        "proof_required_to_close": "Focused Jest suite and check:pr-readiness pass."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-F3",
+        "description": "The live collector is read-only and the executor applies only explicit, current-head marker-comment and draft-ready transitions.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/review-pr-readiness.js",
+          "build-scripts/review-gates/apply-pr-readiness-decision.js",
+          "reports/sprints/REVIEW-THROUGHPUT-3-live-dry-run.md"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not make merge or approval decisions.",
+        "proof_required_to_close": "Fixture reviewer and dry-run executor commands pass; final live PR run must post/update a GitHub marker comment rather than commit per-head decision artifacts."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-F4",
+        "description": "The L0/L1/L2 throughput helper constructors are added and normalized by the router.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/review-throughput-fields.js",
+          "build-scripts/review-gates/review-throughput-fields.test.js"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not grant L3/L4 autonomous readiness.",
+        "proof_required_to_close": "Helper tests and direct helper-output router tests pass."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-F5",
+        "description": "Branch protection remains strict, with one approving review required and bypass allowances not observable through the inspected response.",
+        "classification": "minor_carry_flag",
+        "evidence": "reports/sprints/REVIEW-THROUGHPUT-3-branch-protection.md",
+        "blocks": "Automated merge identity or bypass design for future lead-only lanes.",
+        "does_not_block": "Does not block marking a draft ready for human review.",
+        "proof_required_to_close": "Repository owner or future infrastructure sprint decides whether service identity or explicit bypass rules are needed."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-F6",
+        "description": "This governance implementation PR remains human-review-required.",
+        "classification": "minor_carry_flag",
+        "evidence": [
+          "reports/sprints/REVIEW-THROUGHPUT-3-plan.md",
+          "reports/sprints/REVIEW-THROUGHPUT-3-lead-review-round2.md"
+        ],
+        "blocks": "Autonomous merge of this governance change.",
+        "does_not_block": "Does not block routing the draft PR to READY_FOR_HUMAN_REVIEW and marking it ready.",
+        "proof_required_to_close": "Final PR-readiness run routes the implementation PR to human review after remote CI/checker evidence."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-F7",
+        "description": "Post-review trust-boundary hardening keeps remote-derived GitHub evidence immutable, removes synthetic autonomous proof, requires validate-platform, verifies evidence tails by comparison, and adds final transition re-fetch.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/REVIEW-THROUGHPUT-3-request-changes-corrections.md",
+          "build-scripts/review-gates/pr-readiness-router.test.js",
+          "build-scripts/review-gates/pr-readiness-governance-surfaces.js"
+        ],
+        "blocks": "None after final exact-head lead review and PR-readiness rerun.",
+        "does_not_block": "Does not authorize auto-merge or branch-protection weakening.",
+        "proof_required_to_close": "Focused hardening tests, platform validation, exact-head lead review, remote CI, and final readiness comment pass."
+      }
+    ],
+    "flags": [
+      {
+        "id": "REVIEW-THROUGHPUT-3-FLAG-1",
+        "description": "Branch-protection approval identity or explicit bypass rules for future lead-only lanes remain an infrastructure decision.",
+        "classification": "minor_carry_flag",
+        "disposition": "accepted_follow_up",
+        "owner": "repository owner / future infrastructure sprint",
+        "next_action": "Decide whether retained approval, a service identity, or explicit ruleset support is needed for future lead-only lanes.",
+        "blocks": "Automated merge identity or bypass design.",
+        "does_not_block": "Does not block draft-to-ready routing for human review.",
+        "proof_required_to_close": "Human/infrastructure decision outside this sprint.",
+        "blocking": false
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-3-FLAG-2",
+        "description": "The implementation PR changes review-governance/autonomy machinery and therefore requires human review.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "human reviewer",
+        "next_action": "Review the implementation PR after the readiness router marks the draft ready for human review.",
+        "blocks": "Autonomous merge of this governance change.",
+        "does_not_block": "Does not block publishing and marking the PR ready for human review.",
+        "proof_required_to_close": "PR readiness comment records READY_FOR_HUMAN_REVIEW for the final remote head.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-3-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-3",
+      "status": "passed"
+    },
+    {
+      "command": "node node_modules/jest/bin/jest.js build-scripts/review-gates/pr-readiness-router.test.js build-scripts/review-gates/review-throughput-fields.test.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:pr-readiness",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:branch-protection",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/review-pr-readiness.js --fixture reports/fixtures/pr-readiness-router/live-l1-ready.json --format json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/review-pr-readiness.js --fixture reports/fixtures/pr-readiness-router/live-governance-human.json --format markdown",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/apply-pr-readiness-decision.js --fixture-pr reports/fixtures/pr-readiness-router/apply-ready-pr.json --decision reports/fixtures/pr-readiness-router/apply-ready-decision.json --dry-run",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-3",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-3",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-3-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-3 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false,
+    "product_authority": false
+  },
+  "authorized_next": [
+    "Use review:pr-readiness to classify draft PR readiness after the exact remote head has CI/checker and lead-review proof.",
+    "Use apply:pr-readiness only to post/update the idempotent marker comment and mark an eligible draft ready.",
+    "Route this governance implementation PR to human review; do not auto-merge it.",
+    "Do not infer generated-output approval, product authority, diagnostics, mastery, PV, Scale Gate 1, or student/product use from this sprint."
+  ]
+}

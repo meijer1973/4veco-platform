@@ -2,7 +2,7 @@
 
 Status: active roadmap folder
 Repository: `4veco-platform`
-Updated on: 2026-06-09
+Updated on: 2026-06-21
 
 ## Purpose
 
@@ -23,6 +23,9 @@ materials alone satisfy a school's obligations.
 - `inspection-standards-roadmap.md` - Dutch-only quality-control roadmap for
   inspection-relevant product evidence, evidence gaps, teacher/school-facing
   packets, and clean closure.
+- `international-quality-standards-roadmap.md` - separate internal-only
+  foundation roadmap for international common-core and jurisdiction-overlay
+  analysis after Dutch internal closure.
 - `sprint-ledger.md` - active ledger for quality-standards sprint status,
   outputs, commits, and next authorisation points.
 - `quality-standards-end-state.md` - first attempt at the intended mature
@@ -40,10 +43,11 @@ materials alone satisfy a school's obligations.
 - `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 - `docs/inspection-standards/nl-vo-evidence-model.md`
 
-Non-Dutch standards sources in `source-register.json`, if present, are
-historical source inventory only. They are not active work in this roadmap and
-must not be expanded into mappings, claims, reports, or implementation until a
-separate non-Dutch worktree and roadmap are explicitly authorised.
+Non-Dutch standards work is not part of the Dutch inspection roadmap. The
+separate international roadmap may only authorise internal common-core and
+jurisdiction-overlay foundation analysis; it does not authorise country
+editions, country-compliance claims, school-facing output, public output,
+product routes, student/product use, or personal-data processing.
 
 ## Boundaries
 
@@ -59,4 +63,5 @@ separate non-Dutch worktree and roadmap are explicitly authorised.
   teacher/school-facing claims requires teacher, legal/privacy, and Dutch
   quality-inspection reviewers to each return `MORE_THAN_SATISFIED`.
 - Evidence packs contain no student-level personal data by default.
-- Non-Dutch quality-standards work is outside this roadmap.
+- Non-Dutch quality-standards work belongs only in the separate international
+  roadmap and remains internal unless a later human gate authorises more.

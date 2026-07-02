@@ -1,6 +1,6 @@
 ---
 name: econ-companion-artifacts
-description: "Authoring + regeneration spec for student-facing companion artifacts in the Part B student-web surface set (uitleg voorkennis, uitleg vaardigheden, presentatie HTML/PPTX, nieuws met visual, samenvatting, youtube-videos, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, wiskundevaardigheden, differentiated exercise handouts, and matching DOCX/PPTX/PDF companion outputs when intentionally included). Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in the surface family above. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
+description: "Authoring + regeneration spec for student-facing companion artifacts in the Part B student-web surface set (uitleg voorkennis, uitleg vaardigheden, presentatie HTML/PPTX, nieuws met visual, samenvatting, youtube-videos, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, wiskundevaardigheden, differentiated exercise handouts, web outputs, PPTX, and opt-in Office DOCX companion outputs). Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in the surface family above. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
 pipeline: "Part B producer (umbrella; per-format Part B skills inherit; if a per-format skill conflicts on student-facing rules, this skill wins)"
 ---
 
@@ -21,17 +21,27 @@ General authoring + regeneration recipe for **student-facing companion artifacts
 - `nieuws-detective.html`
 - `wiskundevaardigheden.html`
 - differentiated exercise handouts where the visual or route-choice layer matters
-- companion DOCX/PPTX/PDF outputs when they are intentionally part of the same surface family
+- companion web outputs and PPTX outputs
+- opt-in Office/legacy DOCX outputs when explicitly in scope
+
+PDF output belongs to Part A / publisher-print unless a future human decision
+creates a separate PDF lane.
 
 This skill encodes the platform-wide standard. Companion-specific builders (`econ-explainer-docs` for voorkennis/vaardigheden DOCX, `econ-exercise-builder` for fading-exercise handouts, `econ-pptx-templates` for slide companions, etc.) inherit these rules; if a builder skill conflicts with this skill, this skill wins for student-facing rules and the builder skill should be updated.
 
 The matching review agent is `agents/econ-companion-visual-review.md`. Every companion delivery passes through that agent (or its review heuristics simulated by the author) before it is marked done.
 
+**Lane boundary:** this is the Part B companion lane. Start from an approved
+`X.Y.Z-textbook-handoff.md` or name the blocker. Do not rewrite Part A textbook
+markdown, core textbook assets, `build_pdf.py`, or `X.Y.Z-review.md` from this
+lane. If the textbook source is wrong, stop and open a Part A repair follow-up;
+do not hide the repair inside companion generation.
+
 ## When to use this skill
 
 Trigger when:
 
-- Creating a new companion artifact for any paragraph (HTML, DOCX, PPTX, PDF, or matched set).
+- Creating a new companion artifact for any paragraph (HTML/web, PPTX, opt-in DOCX, or matched set).
 - Regenerating an existing companion artifact after a registry, visual, or content change.
 - Fixing a hard fail or flagged issue from `econ-companion-visual-review`.
 - Reviewing your own companion before handing off, in lieu of the agent if it is unavailable.
@@ -42,13 +52,14 @@ Always read first:
 - `BUILD-PARAGRAPH.md` (paragraph build pipeline)
 - `agents/econ-companion-visual-review.md` (the review gate)
 - The matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, etc.)
+- For `redeneer-spel.html`, also read `skills/econ-reasoning-game.md` before selecting mechanics or task families.
 - The paragraph's `_paragraph-plan.md` and the canonical unit/procedure/terminology registries
 
 ---
 
 ## Core rule
 
-Create student-facing companion artifacts from the **platform source layer**, not by hand-editing generated output. Generated artifacts must be **reproducible, reviewable, and consistent** across HTML, DOCX, PPTX, games, and visual variants.
+Create student-facing companion artifacts from the **platform source layer**, not by hand-editing generated output. Generated artifacts must be **reproducible, reviewable, and consistent** across HTML/web, PPTX, games, visual variants, and opt-in Office DOCX.
 
 The artifact must answer three student questions:
 
@@ -65,13 +76,14 @@ If any of these are unclear, the artifact is not finished.
 Before writing or generating the artifact, inspect the relevant sources:
 
 1. **Repository maps and access rules** — `AGENTS.md`, `BUILD-PARAGRAPH.md`, `BUILD-CHAPTER.md`, the lessen tree layout.
-2. **Paragraph plan** — `_paragraph-plan.md` for the target paragraph.
-3. **Paragraph markdown/PDF source** — the textbook content the companion supports.
-4. **Course blueprint and target exercise** — what skill the companion serves.
-5. **Canonical unit/procedure registry** — `references/machine/micro-teaching-units.json`, terminology registry.
-6. **Existing visual assets and required surface variants** — `_assets/` with `_doc`, `_slide`, `_summary`, `_web_light`, `_web_dark` variants.
-7. **Paragraph index and companion route structure** — `index.html` routing for this paragraph.
-8. **Relevant platform generator/template** — the builder script (`b1-XYZ-<companion>.js`), converter (`convert_<companion>.py`), shared engine (`engines/`, `build-scripts/lib/`).
+2. **Part A handoff** — `X.Y.Z-textbook-handoff.md`; it must say READY_FOR_COMPANION or name a blocker.
+3. **Paragraph plan** — `_paragraph-plan.md` for the target paragraph. Create or update it from the handoff when companion work starts.
+4. **Paragraph markdown / approved textbook source** — the textbook content the companion supports.
+5. **Course blueprint and target exercise** — what skill the companion serves.
+6. **Canonical unit/procedure registry** — `references/machine/micro-teaching-units.json`, terminology registry.
+7. **Existing visual assets and required surface variants** — `_assets/` with `_doc`, `_slide`, `_summary`, `_web_light`, `_web_dark` variants.
+8. **Paragraph index and companion route structure** — `index.html` routing for this paragraph.
+9. **Relevant platform generator/template** — the builder script (`b1-XYZ-<companion>.js`), converter (`convert_<companion>.py`), shared engine (`engines/`, `build-scripts/lib/`).
 
 For an official CvTE or CvTE-derived target exercise, also inspect the
 `Exam-target route trace` section in `_paragraph-plan.md` before creating any
@@ -87,7 +99,7 @@ substitute. If the required task shell or target-equivalent exit ticket is not
 implemented yet, mark the companion handoff as blocked by the named sprint or
 gate instead of weakening the exam requirement into a choice-only task.
 
-**Do not infer artifact existence or correctness from a plan alone. Verify the actual generated artifact** in the lessen tree (HTML in browser, DOCX rendered to PDF, image variants opened directly).
+**Do not infer artifact existence or correctness from a plan alone. Verify the actual generated artifact** in the lessen tree (HTML in browser, PPTX/opt-in DOCX rendered for visual QA, image variants opened directly).
 
 ---
 

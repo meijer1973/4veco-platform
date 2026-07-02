@@ -1,15 +1,15 @@
 # MTU-H5 Regression Report
 
-Generated: 2026-06-17
+Generated: 2026-06-20
 
-Status: `failed`
+Status: `passed`
 
 Fixture: `MTU-H5-vwo-2025-ex1-ex2-approved`
 
 Source validator:
 
 ```text
-node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json
+node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --json
 ```
 
 Post-q3 evidence anchor: PR #43 merge commit `48d0fa6d4ce03dff6feeb66955909125264c06f9`
@@ -25,8 +25,8 @@ AI, summative use, product-route readiness, or student/product use.
 | Bucket | Count |
 | --- | --- |
 | passed | 1 |
-| failed | 3 |
-| review_required | 15 |
+| failed | 0 |
+| review_required | 0 |
 | blocked | 0 |
 
 ## Question And Lane Counts
@@ -34,47 +34,43 @@ AI, summative use, product-route readiness, or student/product use.
 | Surface | Failed | Review required | Status |
 | --- | --- | --- | --- |
 | q3 | 0 | 0 | clean after q3 fixture execution |
-| q19 | 0 | 6 | source_graph_reasoning_review_blocker |
-| q27 | 3 | 5 | incidence_scaling_levy_capacity_procedure_blocker |
-| q15 | 0 | 4 | answer_skill_procedure_semantic_fit_review_blocker |
+| q19 | 0 | 0 | clean_after_q19_final_resolution_reviewed_equivalent |
+| q27 | 0 | 0 | clean_after_q27_step2_capacity_taxonomy_reviewed_equivalent |
+| q15 | 0 | 0 | clean_after_q15_two_step_answer_skill_reviewed_equivalent |
 | global negative guard | 0 | 0 | 1 passed |
 
 ## Remaining Blockers
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
-- q19 remains a source/graph/reasoning review blocker: 0 failed / 6 review_required.
-- q27 remains an incidence/scaling/levy-capacity/procedure blocker: 3 failed / 5 review_required.
-- q15 remains an answer-skill/procedure semantic-fit review blocker: 0 failed / 4 review_required.
-- MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
+- q19 is clean after the final reviewed-equivalent resolution bundle: 0 failed / 0 review_required.
+- q27 is clean after the q27-step-2 capacity/source-readout reviewed-equivalent repair: 0 failed / 0 review_required.
+- q15 is clean after the two-step dominant-strategy/prisoner-dilemma reviewed-equivalent answer-skill repair: 0 failed / 0 review_required.
+- MTU-H5 mapping-regression closure evidence is prepared for human review; Scale Gate 1, product-route readiness, diagnostics, PV, lesson output, and student/product use remain unauthorized until separately approved.
 
 ## Lane-Specific Diagnostic Meaning
 
 | Lane | Diagnostic meaning |
 | --- | --- |
-| q19 | answer-form equivalent accepted by PR #80; procedure semantic-fit accepted by MTU-H5-Q19-PROCEDURE-SEMANTIC-FIT-PACKAGE-1; source-annex and graph-object review; chained multi-market reasoning; third graph-shift dependency |
-| q27 | incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review |
-| q15 | A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review |
+| q19 | q19 direct rendered official source/correction evidence accepted by MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1; A42/D10/D13/A81 preserved; A45 and forbidden route guards preserved |
+| q27 | q27-step-1 D41/D05/A88 reviewed equivalent and q27-step-2 capacity/source-readout reviewed equivalent accepted; no D07/D08 closure claim |
+| q15 | EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION accepted as reviewed-equivalent answer-skill; D27/F03/F09 remain content support and A97 remains answer-form/procedure support |
 
 ## Failed Defect Classes
 
 | Defect class | Count |
 | --- | --- |
-| `incidence_pass_through_task_without_incidence_mtu` | 2 |
-| `scale_factor_usage_without_scaling_unit_mtu` | 1 |
 
 ## Review-Required Classes
 
 | Class or hook group | Count |
 | --- | --- |
-| `apply_analyze_unit_without_usable_canonical_procedure` | 4 |
-| `fixture_review_hooks` | 11 |
+| `fixture_review_hooks` | 0 |
 
 ## Procedure Statuses
 
 | Procedure status | Count |
 | --- | --- |
-| `procedure_present` | 17 |
-| `procedure_review_required` | 4 |
+| `procedure_present` | 21 |
 
 The procedure output distinguishes `procedure_present`, `procedure_missing`,
 and `procedure_review_required`. This run produced no blocked assertions.

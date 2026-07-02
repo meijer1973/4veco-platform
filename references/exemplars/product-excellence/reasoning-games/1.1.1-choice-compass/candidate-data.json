@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "exemplar_id": "reasoning-choice-111-golden-exemplar-v1",
+  "paragraph": {
+    "id": "1.1.1",
+    "title": "Schaarste en economisch denken",
+    "target_focus": [
+      "schaarste herkennen vanuit beperkte middelen",
+      "keuze bij alternatieven uitleggen",
+      "alternatieve kosten als beste opgegeven alternatief benoemen",
+      "niet alle niet-gekozen alternatieven optellen"
+    ]
+  },
+  "surface": "reasoning_game_exemplar",
+  "product_model": "choice_compass",
+  "layout": {
+    "desktop": "source-left / task-right",
+    "mobile": "source-before-task",
+    "interaction_principle": "one-click selection, order-free where possible, individual clearing"
+  },
+  "source": {
+    "title": "Eva’s vrije middag",
+    "facts": [
+      "Eva heeft 4 uur vrije tijd.",
+      "Bijles geven duurt 4 uur en levert €40 op.",
+      "Studeren duurt 4 uur en heeft voor Eva waarde €30.",
+      "Film kijken duurt 4 uur en heeft voor Eva waarde €15.",
+      "Eva kiest bijles geven."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "scarcity-evidence",
+      "family": "scarcity_evidence_selector",
+      "student_action": "select exactly two source-evidence cards; order does not matter",
+      "correct_ids": [
+        "time_limited",
+        "activities_conflict"
+      ],
+      "wrong_possible": true,
+      "ui_rules": [
+        "no visible role/id tags",
+        "click toggles selection",
+        "selected evidence can be removed individually",
+        "card order randomized on render"
+      ]
+    },
+    {
+      "id": "opportunity-cost",
+      "family": "opportunity_cost_choice",
+      "student_action": "select the best alternative that is given up by the fixed choice",
+      "correct_id": "studying",
+      "wrong_possible": true,
+      "distractor_types": [
+        "chosen alternative",
+        "lower-value non-chosen alternative",
+        "sum of all non-chosen alternatives"
+      ]
+    },
+    {
+      "id": "test-answer-builder",
+      "family": "reasoning_fragment_answer_builder",
+      "student_action": "select three answer fragments for a complete economics explanation",
+      "correct_ids": [
+        "scarcity",
+        "cost",
+        "not_sum"
+      ],
+      "order_sensitive": false,
+      "wrong_possible": true,
+      "ui_rules": [
+        "one click fills next empty answer line",
+        "each line can be cleared individually",
+        "selected bank cards are disabled to prevent accidental duplicates"
+      ]
+    }
+  ],
+  "authority": {
+    "prototype_only": true,
+    "not_product_ready": true,
+    "requires_rendered_route_adoption": true,
+    "no_diagnostics": true,
+    "no_mastery": true,
+    "no_summative_use": true
+  }
+}
