@@ -32,6 +32,26 @@ files and refreshing repository indexes; all commands remained PASS.
 | `git branch --show-current` | PASS | Current branch is `codex/skilltree-improvement-20260618`. |
 | `npm.cmd run check:agent-worktree-safety -- --check --task COMPANION-WORKFLOW-GUARDRAILS-1 --agent codex-main --require-prefix codex/,agent/` | PRE-COMMIT FAIL, RESOLUTION REQUIRED | The branch prefix and branch state passed, but the existing dirty worktree had no worktree lock. Because `--claim` requires a clean tree, the PR workflow resolves this by committing the reviewed scope first, then running the clean `--claim --require-clean` form before push. |
 
+## PR Review Round 1 Resolution Validation
+
+Rawls's first PR review found that the packet was local-only, the PR conflicted
+with current `main`, and CI was not yet sufficient for human review.
+
+Resolution evidence:
+
+| Command | Result | Notes |
+|---|---|---|
+| `git merge origin/main` | RESOLVED | Conflicts were resolved in active companion docs/skills and generated index files. Current `main` PDF lane-boundary wording was preserved alongside this sprint's full student-web surface coverage. |
+| `npm.cmd run agent:index` | PASS | Regenerated the platform index after merge resolution. |
+| `node build-scripts/sprints/emit-url-index.js` | PASS | Rewrote the URL index after merge resolution. |
+| Restore `reports/github-agent-index-lessen.*` to `origin/main` | PASS | This sprint does not change lesson inventory; the local lesson checkout is behind lesson `main`, so regenerated lesson-index churn was neutralized. |
+| `npm.cmd test -- scripts/tests/validate-paragraph.test.js` | PASS | 1 suite passed, 13 tests passed after conflict resolution. |
+| `npm.cmd run check:scope-language` | PASS | `OK scope-language check: active surfaces` after conflict resolution. |
+| `git diff --check origin/main` | PASS | PR-relevant diff has no whitespace errors. A plain diff against pre-merge `HEAD` is noisy because incoming current-main files contain existing whitespace issues outside this sprint. |
+| Active stale-text search | PASS | `NO_ACTIVE_STALE_MATCHES` after conflict resolution. |
+| Historical note search | PASS | Historical L1.5V proposal still points to `BUILD-PARAGRAPH.md` plus `scripts/validate-paragraph.js` and names default `student-web` as 14 files. |
+| `npm.cmd run check:agent-worktree-safety -- --check --task COMPANION-WORKFLOW-GUARDRAILS-1 --agent codex-main --require-prefix codex/,agent/` | PASS | Lock owner is `codex-main`, task is `COMPANION-WORKFLOW-GUARDRAILS-1`, branch prefix is valid, and the post-merge worktree was clean. |
+
 ## Dependency Note
 
 `npm.cmd test` initially failed because `jest` was not installed in the local

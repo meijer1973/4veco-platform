@@ -7,7 +7,8 @@
 - State: draft
 - Base: `main`
 - Head branch: `codex/skilltree-improvement-20260618`
-- Reviewed commit: `11252ac05f4aaef350e55f69539fb7a400b61f70`
+- Reviewed content commit after conflict resolution: `74a3b6d329c911431f0028f1f904f5e09ffce0a6`
+- Note: the final PR head may include an evidence-only commit after this packet update; the live PR head SHA is the review target.
 - Title: `[codex] tighten companion workflow guardrails`
 
 ## Scope
@@ -34,19 +35,33 @@ No generated lesson output was changed.
 - `archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/*`
 - `docs/L1.5V/F-plan-part-a-b-separation.md`
 - `reports/github-agent-index-platform.*`
-- `reports/github-agent-index-lessen.*`
 - `skills/econ-companion-artifacts.md`
 - `skills/econ-quality-control.md`
 
 ## Validation
 
-Local validation passed:
+Local validation passed before PR creation and again after merging current
+`origin/main`:
 
 - `npm.cmd test -- scripts/tests/validate-paragraph.test.js`
 - `npm.cmd run check:scope-language`
-- `git diff --check HEAD`
+- `git diff --check origin/main`
 - Active stale-text search returned `NO_ACTIVE_STALE_MATCHES`.
 - Historical 24-file wording remains only in the historical L1.5V proposal with an active-contract pointer.
+
+Conflict-resolution notes:
+
+- Merged `origin/main` into `codex/skilltree-improvement-20260618`.
+- Resolved conflicts in `AGENTS.md`, `BUILD-PARAGRAPH.md`,
+  `agents/econ-companion-visual-review.md`,
+  `skills/econ-companion-artifacts.md`, and generated indexes.
+- Preserved current `main` lane-boundary wording: PDF output belongs to Part A /
+  publisher-print unless a future human decision creates a separate PDF lane.
+- Preserved this sprint's full student-web surface coverage and 14 default / 27
+  office-legacy profile distinction.
+- Re-ran `agent:index` for the platform index, then restored the lesson index to
+  `origin/main` because this sprint does not change lesson inventory and the
+  local lesson checkout is behind lesson `main`.
 
 Work review passed:
 
@@ -65,11 +80,12 @@ Work review passed:
   - `npm.cmd run check:agent-worktree-safety -- --claim --task COMPANION-WORKFLOW-GUARDRAILS-1 --agent codex-main --require-prefix codex/,agent/ --require-clean`
 - Lock owner / agent id: `codex-main`.
 - Worktree path: `C:/wt/SKILLTREE-20260618/4veco-platform`.
+- Post-merge worktree safety check: PASS with the same owner/task lock present.
 
 ## CI State
 
-Initial `gh pr checks 198 --json ...` result: no checks reported yet on
-`codex/skilltree-improvement-20260618`.
+Initial `gh pr checks 198 --json ...` result before the conflict-resolution
+push: no checks reported yet on `codex/skilltree-improvement-20260618`.
 
 Human-review handoff remains blocked until `platform-ci / validate-platform`
 passes for the final reviewed commit or an explicit CI waiver is recorded.

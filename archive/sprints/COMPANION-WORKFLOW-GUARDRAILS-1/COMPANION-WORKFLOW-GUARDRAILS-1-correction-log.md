@@ -63,3 +63,15 @@ Blocking findings to address:
 Proof required:
 
 - PR review round 2 returns OK/PASS after conflict resolution and validation.
+
+Fixes implemented:
+
+- Added and committed the PR workflow packet plus PR review round 1 evidence.
+- Merged current `origin/main`, resolved companion workflow conflicts, and
+  preserved both `main`'s PDF lane-boundary clarification and this sprint's
+  full student-web surface/profile wording.
+- Regenerated the platform GitHub agent index, restored lesson-index files to
+  `origin/main` because lesson inventory is outside this sprint, and reran the
+  focused validation set.
+- Kept the human-review handoff blocked pending final PR review and
+  `platform-ci / validate-platform` pass or explicit CI waiver.
