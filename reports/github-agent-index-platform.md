@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T08:21:31.263Z
+Generated: 2026-07-01T11:22:41.833Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/agent-doc-governance-cleanup-20260630`
-Source commit: `be3fa1dd472ba6495a35a63aa742b2d53c62ec49`
-Files indexed: 6843
+Source branch: `codex/textbook-workflow-cleanup-1-20260630`
+Source commit: `fde3b1bca608c571589d7731ef052e6e3412ca5b`
+Files indexed: 6856
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 663
+Count: 667
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -361,6 +361,7 @@ Count: 663
 - build-scripts/references/build-unit-index.js
 - build-scripts/references/build-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/build-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/build-y2-four-target-product-route-adoption-prep-1.js
@@ -484,6 +485,7 @@ Count: 663
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -546,7 +548,9 @@ Count: 663
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/agent-index-freshness.test.js
 - build-scripts/reports/aspects-coverage.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/dag-integrity.js
 - build-scripts/reports/dead-units.js
@@ -836,7 +840,7 @@ Count: 25
 
 ## validators
 
-Count: 657
+Count: 659
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1047,6 +1051,7 @@ Count: 657
 - build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
 - build-scripts/references/check-y2-four-target-product-route-adoption-prep-1.js
@@ -1061,6 +1066,7 @@ Count: 657
 - build-scripts/references/validate-core-schemas.js
 - build-scripts/references/validate-prior-knowledge-schema.js
 - build-scripts/references/validate-procedure-visual-registry.js
+- build-scripts/reports/check-agent-index-freshness.js
 - build-scripts/reports/check-reference-health.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/check-active-governance-wording.js
@@ -2410,7 +2416,7 @@ Count: 907
 
 ## reports
 
-Count: 4378
+Count: 4385
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4270,6 +4276,12 @@ Count: 4378
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/rendered-scale-precheck.html
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.json
 - reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/rendered-readiness-bundle.html
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/subagent-lead-reviews.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.json
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/lesson-production-bundle.md
 - reports/review-gates/Y2-FOUR-TARGET-CROSS-REPO-LESSON-PRODUCTION-1/rendered-product-proof.html
@@ -6736,6 +6748,7 @@ Count: 4378
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md
+- reports/sprints/TEXTBOOK-WORKFLOW-CLEANUP-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-plan.md
 - reports/sprints/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1-result.md
 - reports/sprints/VISION-1-baseline.md
@@ -6811,7 +6824,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 710
+Count: 712
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7431,6 +7444,8 @@ Count: 710
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/paragraph-lane-vocabulary.md
+- docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md
 - docs/workflows/web-companion-paragraph-lane.md
 - knowledge/113-excellent-exit-ticket-v3-package.zip

@@ -25,9 +25,9 @@ Use this agent for student-facing companion artifacts, including:
 - `redeneer-spel.html`
 - `nieuws-detective.html`
 - differentiated exercise handouts where the visual or route-choice layer matters
-- companion DOCX/PPTX/PDF outputs when they are part of the same surface family
+- companion PPTX outputs and opt-in Office DOCX outputs when they are part of the same surface family; PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane
 
-The agent may also inspect paragraph markdown, paragraph PDF, paragraph plan, unit registry, source generator, CSS, JavaScript, and asset files to determine whether rendered output matches source intent.
+The agent may also inspect paragraph markdown, Part A review evidence, paragraph plan, unit registry, source generator, CSS, JavaScript, and asset files to determine whether rendered output matches source intent.
 
 This is a Part B companion review. If the companion change also modifies Part A
 textbook artifacts (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, core
@@ -40,7 +40,7 @@ repair exception.
 For paragraph companion review, use:
 
 ```text
-You are the econ-companion-visual-review agent. Read agents/econ-companion-visual-review.md, AGENTS.md, and BUILD-PARAGRAPH.md. Review paragraph [X.Y.Z path]. Inspect the available student-facing HTML, DOCX/PPTX/PDF companions, rendered browser/document views where possible, _paragraph-plan.md, _assets, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as X.Y.Z-companion-visual-review.md in the paragraph folder.
+You are the econ-companion-visual-review agent. Read agents/econ-companion-visual-review.md, AGENTS.md, and BUILD-PARAGRAPH.md. Review paragraph [X.Y.Z path]. Inspect the available student-facing HTML, PPTX, and opt-in Office companions, rendered browser/document views where possible, _paragraph-plan.md, _assets, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as X.Y.Z-companion-visual-review.md in the paragraph folder.
 ```
 
 If this is part of a formal review gate, save the report path required by that gate instead.
@@ -51,7 +51,7 @@ Distinguish these layers:
 
 1. **Canonical authority**: unit registry, terminology registry, procedure registry, course blueprint, paragraph plan.
 2. **Content source**: paragraph markdown, target exercise, authored companion source data or generator content.
-3. **Generated artifact**: student-facing HTML, DOCX, PPTX, PDF, SVG/PNG assets.
+3. **Generated artifact**: student-facing HTML/web, PPTX, opt-in DOCX, SVG/PNG assets.
 4. **Rendered experience**: what the student actually sees in browser or document view.
 5. **Platform implementation**: generator, renderer, CSS, shared engine, asset builder.
 6. **Quality record**: quality-ref YAML, review markdown, dashboard/report output.
@@ -65,7 +65,7 @@ For each review, inspect as many of these as are available:
 - The student-facing HTML file.
 - The rendered page, preferably in browser view.
 - All embedded SVG/PNG assets used by the page.
-- The paragraph markdown and, if relevant, paragraph PDF.
+- The paragraph markdown and, if relevant, Part A review evidence.
 - The paragraph plan.
 - The canonical micro-teaching unit(s) and procedure registry entries.
 - The relevant terminology registry or terminology section.
