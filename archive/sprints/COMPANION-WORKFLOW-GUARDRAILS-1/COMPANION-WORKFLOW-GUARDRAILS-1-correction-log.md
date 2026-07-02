@@ -41,3 +41,25 @@ Blocking findings addressed:
 Proof required:
 
 - Plan review round 3 returns OK/PASS.
+
+## PR Review Round 1
+
+Reviewer verdict: REVISE.
+
+Blocking findings to address:
+
+1. PR workflow packet was local only and not yet part of the remote PR.
+   - Fix: add the PR workflow packet and PR review evidence to the branch,
+     update the reviewed commit SHA after final push, and re-review.
+2. PR was merge-conflicting with current `main`.
+   - Fix: update from `origin/main`, resolve conflicts preserving both main
+     authority and this sprint's guardrail fixes, regenerate indexes, and rerun
+     validation.
+3. CI was not sufficient for human review.
+   - Fix: after the final reviewed commit is pushed, require passing
+     `platform-ci / validate-platform` or an explicit CI waiver before the
+     human-review handoff.
+
+Proof required:
+
+- PR review round 2 returns OK/PASS after conflict resolution and validation.
