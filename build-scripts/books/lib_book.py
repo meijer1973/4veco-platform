@@ -262,8 +262,19 @@ def compose_chapter_md(chapter_spec: dict, book_output_dir: Path, platform_root:
 # Front matter (raw HTML)
 # ---------------------------------------------------------------------------
 def render_cover_html(book: dict) -> str:
+    cover_image = (book.get("cover_image") or "").strip()
+    image_html = ""
+    shade_html = ""
+    if cover_image:
+        image_html = (
+            f'<img class="book-cover-image" src="{html_escape(cover_image)}" '
+            'alt="" aria-hidden="true">\n'
+        )
+        shade_html = '<div class="book-cover-shade" aria-hidden="true"></div>\n'
     return (
         '<div class="book-cover">\n'
+        f'{image_html}'
+        f'{shade_html}'
         '<div class="book-cover-inner">\n'
         f'<h1 class="book-title">{html_escape(book["title"])}</h1>\n'
         f'<p class="book-edition">{html_escape(book["edition"])} · {book["year"]}</p>\n'
@@ -512,6 +523,7 @@ def render_formuleoverzicht_html(per_chapter: list[dict]) -> str:
 # Asset handling
 # ---------------------------------------------------------------------------
 ASSET_REF_RE = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+HTML_IMG_SRC_RE = re.compile(r'(<img\b[^>]*\bsrc=")([^"]+)(")', re.IGNORECASE)
 
 def rewrite_chapter_asset_paths(md: str) -> str:
     """Normalize image paths within chapter markdown to point to <book>/_assets/."""
@@ -537,6 +549,13 @@ def referenced_asset_names(md_text: str) -> set[str]:
             names.add(filename[:-4] + ".png")
         elif filename.endswith(".png"):
             names.add(filename[:-4] + ".svg")
+    for match in HTML_IMG_SRC_RE.finditer(md_text):
+        path = match.group(2)
+        if path.startswith(("http://", "https://", "data:")):
+            continue
+        filename = os.path.basename(path)
+        if filename:
+            names.add(filename)
     return names
 
 
@@ -544,8 +563,17 @@ def collect_assets(chapter_dirs: list[Path], book_assets_dir: Path, book_md_text
     book_assets_dir.mkdir(parents=True, exist_ok=True)
     needed_names = referenced_asset_names(book_md_text)
     copied = 0
-    for chapter_dir in chapter_dirs:
-        src = chapter_dir / "_assets"
+    for source in chapter_dirs:
+        if source.is_file():
+            if source.name not in needed_names:
+                continue
+            dest = book_assets_dir / source.name
+            if dest.exists() and filecmp.cmp(source, dest, shallow=False):
+                continue
+            shutil.copy2(source, dest)
+            copied += 1
+            continue
+        src = source / "_assets"
         if not src.is_dir():
             continue
         for asset in src.iterdir():
@@ -572,25 +600,58 @@ def verify_asset_refs(book_md_text: str, book_assets_dir: Path) -> list[str]:
         png_candidate = book_assets_dir / filename.replace(".svg", ".png")
         if not png_candidate.exists() and not (book_assets_dir / filename).exists():
             missing.append(filename)
+    for match in HTML_IMG_SRC_RE.finditer(book_md_text):
+        path = match.group(2)
+        if path.startswith(("http://", "https://", "data:")):
+            continue
+        filename = os.path.basename(path)
+        if filename and not (book_assets_dir / filename).exists():
+            missing.append(filename)
     return missing
 
 # ---------------------------------------------------------------------------
 # PDF build helpers (ported from build_chapter.py)
 # ---------------------------------------------------------------------------
 def embed_images(md: str, asset_dir: Path) -> str:
+    def data_uri_for(filename: str) -> str | None:
+        full = asset_dir / filename
+        if not full.exists():
+            return None
+        ext = full.suffix.lower()
+        mime = "image/png"
+        if ext == ".jpg" or ext == ".jpeg":
+            mime = "image/jpeg"
+        elif ext == ".webp":
+            mime = "image/webp"
+        elif ext == ".svg":
+            mime = "image/svg+xml"
+        b64 = base64.b64encode(full.read_bytes()).decode()
+        return f"data:{mime};base64,{b64}"
+
     def replacer(match):
         alt = match.group(1)
         path = match.group(2)
         if path.startswith(("http://", "https://", "data:")):
             return match.group(0)
         filename = os.path.basename(path).replace(".svg", ".png")
-        full = asset_dir / filename
-        if full.exists():
-            b64 = base64.b64encode(full.read_bytes()).decode()
-            return f"![{alt}](data:image/png;base64,{b64})"
-        print(f"  Warning: missing {full}", file=sys.stderr)
+        data_uri = data_uri_for(filename)
+        if data_uri:
+            return f"![{alt}]({data_uri})"
+        print(f"  Warning: missing {asset_dir / filename}", file=sys.stderr)
         return match.group(0)
-    return ASSET_REF_RE.sub(replacer, md)
+
+    def html_img_replacer(match):
+        prefix, path, suffix = match.group(1), match.group(2), match.group(3)
+        if path.startswith(("http://", "https://", "data:")):
+            return match.group(0)
+        data_uri = data_uri_for(os.path.basename(path))
+        if data_uri:
+            return f"{prefix}{data_uri}{suffix}"
+        print(f"  Warning: missing {asset_dir / os.path.basename(path)}", file=sys.stderr)
+        return match.group(0)
+
+    md = ASSET_REF_RE.sub(replacer, md)
+    return HTML_IMG_SRC_RE.sub(html_img_replacer, md)
 
 def wrap_exercises_simple(html: str) -> str:
     html = re.sub(
@@ -747,8 +808,12 @@ BOOK_CSS = """<style>
 }
 
 /* Suppress running footer on the cover */
-@page cover { @bottom-left { content: ""; } @bottom-center { content: ""; } }
-.book-cover { page: cover; }
+@page cover {
+  size: A4;
+  margin: 0;
+  @bottom-left { content: ""; }
+  @bottom-center { content: ""; }
+}
 
 body {
   font-family: Arial, 'DejaVu Sans', sans-serif;
@@ -769,14 +834,44 @@ p { margin: 0 0 10pt 0; }
 
 /* Cover */
 .book-cover {
+  page: cover;
   break-after: page;
-  height: 85vh;
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  background: #F7FAFC;
 }
-.book-cover-inner { max-width: 80%; }
+.book-cover-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book-cover-shade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:
+    linear-gradient(105deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 38%, rgba(255, 255, 255, 0.20) 68%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, rgba(10, 42, 62, 0.10) 0%, rgba(10, 42, 62, 0) 34%, rgba(10, 42, 62, 0.14) 100%);
+}
+.book-cover-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 116mm;
+  margin: 31mm 20mm 0 24mm;
+}
 .book-cover .book-eyebrow {
   font-size: 13pt;
   color: #1A5276;
@@ -785,22 +880,23 @@ p { margin: 0 0 10pt 0; }
   margin: 0 0 18pt 0;
 }
 .book-cover .book-title {
-  font-size: 36pt;
-  color: #1A5276;
-  border: none;
-  padding: 0;
-  margin: 0 0 24pt 0;
-  line-height: 1.15;
+  font-size: 34pt;
+  color: #123F5D;
+  border-bottom: 2px solid #1A5276;
+  padding: 0 0 8pt 0;
+  margin: 0 0 14pt 0;
+  line-height: 1.12;
   font-weight: bold;
 }
 .book-cover .book-edition {
   font-size: 13pt;
-  color: #555;
-  margin: 0 0 36pt 0;
+  color: #2D3748;
+  margin: 0 0 28pt 0;
+  font-weight: bold;
 }
 .book-cover .book-school {
   font-size: 14pt;
-  color: #1A5276;
+  color: #123F5D;
   margin: 0;
   font-weight: bold;
 }
@@ -1098,10 +1194,16 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
     book_title = book["title"]
     book_title_full = f"Boek {book['nr']} {book_title}"
     book_output_dir = lessen_root / f"Boek {book['nr']} - {book_title}"
+    cover_image_source = (book.get("cover_image_source") or "").strip()
 
     # 1. Locate chapters inside the book folder + load hoofdstuk.md
     chapter_data: list[tuple[str, Path, str, str]] = []
     asset_sources: list[Path] = []
+    if cover_image_source:
+        cover_source_path = platform_root / cover_image_source
+        if not cover_source_path.exists():
+            raise FileNotFoundError(f"Book cover image source not found: {cover_source_path}")
+        asset_sources.append(cover_source_path)
     for chapter_spec in manifest["chapters"]:
         if isinstance(chapter_spec, str):
             chapter_nr = chapter_spec
