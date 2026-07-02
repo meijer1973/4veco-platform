@@ -72,6 +72,8 @@ function buildBody(branch) {
   lines.push(`- ${platform('AGENTS.md')}`);
   lines.push(`- ${platform('BUILD-PARAGRAPH.md')}`);
   lines.push(`- ${platform('BUILD-CHAPTER.md')}`);
+  lines.push(`- ${platform('docs/workflows/paragraph-lane-vocabulary.md')}`);
+  lines.push(`- ${platform('docs/workflows/paragraph-quality-ref-schema-v2.md')}`);
   lines.push(`- ${lessen('AGENTS.md')}`);
   lines.push('');
 

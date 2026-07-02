@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-Q5-GRAPH-EXECUTION-AND-PROTECTED-GOVERNANCE-BUNDLE-3",
+  "report_id": "mtu-h7-q5-graph-execution-report-3",
+  "review_standard": "REV-STD-1",
+  "status": "q5_bounded_graph_source_execution_prepared_for_human_review_h7_still_held",
+  "generated_at": "2026-07-01T06:36:18.127Z",
+  "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "source_authorization": {
+    "authorization_type": "thread_goal_authorization",
+    "base_main_sha": "cd0e6a3f4f3883f8741a57641c12f7d33ef80fe1",
+    "decision": "BUILD_MTU_H7_BUNDLE_3_FOR_HUMAN_REVIEW",
+    "scope": "q5 graph-source execution evidence and seven protected/canonical H7 governance holds only",
+    "integration_authority": "not_authorized_until_exact_head_owner_authorization"
+  },
+  "source_previous_bundle": "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
+  "execution_boundary": [
+    "Only q5 total-subsidy graph-source execution evidence is advanced in this packet.",
+    "Execution is recorded on a derived report/gate surface for human review.",
+    "No protected reference, machine reference, operation registry, candidate storage, lesson, product, diagnostics, mastery, sequencing, PV, summative, or student-use surface is mutated.",
+    "H7 full closure remains blocked by the seven protected/canonical governance holds."
+  ],
+  "operation": {
+    "operation_id": "h7-vw25-2-q5-total-subsidy-shading",
+    "record_id": "vw-1022-a-25-2-o:opgave-1:question-5",
+    "split": "locked_holdout",
+    "question_word": "arceer",
+    "source_prior_status": "review_required",
+    "source_prior_defect_class": "evidence_gap",
+    "execution_status": "bounded_graph_source_execution_for_human_review",
+    "applied_decision": "APPROVE_Q5_TOTAL_SUBSIDY_SHADING_MULTI_ACCEPTED_GRAPH_SOURCE_EXECUTION_BOUNDED",
+    "closure_scope": "operation_level_graph_source_execution_only_not_h7_full_closure",
+    "accepted_answer_characterization": [
+      "The correction model is graph-only for the arceer answer form.",
+      "The correction page displays two correct examples of the shaded total-subsidy area.",
+      "Both examples shade a rectangle bounded by the subsidy wedge between MK and MK-prime over an accepted output interval.",
+      "The correction model says only 0 or 2 score points are awarded, so partial/shapeless closure is not authorized."
+    ],
+    "accepted_geometry": {
+      "answer_form": "graph_shading",
+      "accepted_variants": "both official correction-model examples",
+      "required_region": "rectangle bounded by the subsidy wedge between MK and MK-prime over an accepted output interval",
+      "scoring_boundary": "0_or_2_points_only_no_partial_or_shapeless_closure"
+    },
+    "required_mtu_ids": [
+      "A27",
+      "A40",
+      "A58",
+      "A81"
+    ],
+    "mapped_mtu_ids": [
+      "A27",
+      "A40",
+      "A58",
+      "A81"
+    ],
+    "answer_form_mtu_ids": [
+      "A40"
+    ],
+    "forbidden_mtu_ids": [
+      "A15",
+      "A45"
+    ],
+    "forbidden_route_tags": [
+      "elasticity_only",
+      "full_graph_construction"
+    ],
+    "route_tags": [
+      "graph_shading",
+      "producer_subsidy",
+      "subsidy_area",
+      "source_reading",
+      "answer_form",
+      "procedure"
+    ],
+    "misconception_refs": [
+      "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q5_TOTAL_SUBSIDY_AREA_NOT_DWL"
+    ],
+    "procedure_unit_ids": [
+      "A27",
+      "A40",
+      "A58",
+      "A81"
+    ],
+    "official_evidence_refs": [
+      "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1.json#vw-1022-a-25-2-o:opgave-1:question-5"
+    ],
+    "source_locator": {
+      "exam": "vw-1022-a-25-2-o",
+      "opgave_num": 1,
+      "question_num": 5,
+      "prompt_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+      "prompt_page_start": 3,
+      "prompt_page_end": 3,
+      "correction_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+      "correction_page_start": 7,
+      "correction_page_end": 7,
+      "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+    },
+    "rendered_prompt_pages": [
+      {
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-2-o.pdf",
+        "source_pdf_sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+        "page_number": 3,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-prompt-03-03.png",
+        "rendered_png_sha256": "e2d9ad255d5bc92bedccdaae9484c813dc98315992fab4e60046558ca85208d3"
+      }
+    ],
+    "rendered_correction_pages": [
+      {
+        "source_pdf_path": "references/external/exams/vw-1022-a-25-2-c.pdf",
+        "source_pdf_sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+        "page_number": 7,
+        "rendered_png_path": "reports/mtu-hardening/mtu-h7-holdout-evidence-manifest-1-evidence/vw-1022-a-25-2-o-q05-correction-07-07.png",
+        "rendered_png_sha256": "f730b84fe9813a6fffc4f7ac4a93296c9ee2f2ae9a30fa43ed795480c2f2566f"
+      }
+    ],
+    "review_required_hooks_satisfied_by": [
+      "reports/mtu-hardening/mtu-h7-holdout-q5-graph-adjudication-1.json",
+      "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json#H7-CAND-GRAPH-TOTAL-SUBSIDY-SHADING-MULTI-ACCEPTED",
+      "Bundle 3 exact-head human review and owner authorization required before integration"
+    ],
+    "negative_guard_ids": [
+      "h7-governance-negative-q5-dwl-instead-of-total-subsidy"
+    ]
+  },
+  "summary": {
+    "q5_operations_advanced": 1,
+    "q5_records_advanced": 1,
+    "q5_prior_review_required_operations": 1,
+    "q5_remaining_graph_source_holds_after_packet": 0,
+    "protected_governance_operations_still_held": 7,
+    "h7_full_closure_claimed": false,
+    "product_route_readiness_claimed": false
+  }
+}
