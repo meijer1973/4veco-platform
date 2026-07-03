@@ -68,6 +68,8 @@
     "check:y2-four-target-cp6-scale-readiness": "node build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js",
     "build:y2-four-target-cp6-scale-decision": "node build-scripts/references/build-y2-four-target-cp6-scale-gate-decision-bundle-1.js",
     "check:y2-four-target-cp6-scale-decision": "node build-scripts/references/check-y2-four-target-cp6-scale-gate-decision-bundle-1.js",
+    "build:y2-four-target-cp6-scale-owner-decision": "node build-scripts/references/build-y2-four-target-cp6-scale-gate-owner-decision-1.js",
+    "check:y2-four-target-cp6-scale-owner-decision": "node build-scripts/references/check-y2-four-target-cp6-scale-gate-owner-decision-1.js",
     "check:branch-protection": "node build-scripts/ci/check-branch-protection.js",
     "check:branch-protection:activated": "node build-scripts/ci/check-branch-protection.js --require-integration-authorized",
     "check:agent-branch-safety": "node build-scripts/ci/check-agent-branch-safety.js",
