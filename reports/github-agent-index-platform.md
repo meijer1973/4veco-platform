@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-03T06:39:36.127Z
+Generated: 2026-07-03T07:03:11.515Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/integration-head-lead-review-supersession-1-20260703`
-Source commit: `53d5708d3668d2fddfc159502b3900d4fc1b8c5b`
-Files indexed: 6945
+Source commit: `f31e3a94057e63290da477f69b7fb80103f9c66c`
+Files indexed: 6946
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2457,7 +2457,7 @@ Count: 928
 
 ## reports
 
-Count: 4430
+Count: 4431
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5617,6 +5617,7 @@ Count: 4430
 - reports/sprints/GRAPH-UX-2-student-route-proof.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-COMPAT-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-AUTHORIZED-AUTO-MERGE-TRIGGER-1-lead-review-round1.md
+- reports/sprints/INTEGRATION-HEAD-LEAD-REVIEW-SUPERSESSION-1-lead-review-round2.md
 - reports/sprints/INTEGRATION-LANE-PERMISSION-SMOOTHING-1-lead-review-round1.md
 - reports/sprints/INTEGRATION-LANE-PERMISSION-SMOOTHING-1-lead-review-round2.md
 - reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round2.md
