@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1",
+  "generated_on": "2026-07-03",
+  "status": "owner_decision_intake_ready_for_human_review",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "product_end_state": "Collect the exact owner return for the four-route Year 2 CP-6 / Scale Gate decision after the merged decision bundle, without inferring CP-6 closure, opening Scale Gate, or authorizing diagnostics, mastery, PV, summative use, broad rollout, student use, or student/product use.",
+  "original_sprint_gate_spec": {
+    "product_end_state_baseline": "4veco-lessen/specifications/product-end-state.md",
+    "companion_core_specification": "4veco-lessen/specifications/companion-core-specifications.md",
+    "source_decision_bundle": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/cp6-scale-gate-decision-bundle.json",
+    "source_decision_review_packet": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/review-packet.json",
+    "source_decision_rendered_bundle": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/rendered-decision-bundle.html",
+    "readiness_bundle": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.json",
+    "post_adoption_precheck_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.json",
+    "product_proof_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json",
+    "bounded_adoption_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/bounded-route-adoption-packet.json"
+  },
+  "non_negotiable_requirements": [
+    "Use REV-STD-1 and cite the product end-state plus original sprint/gate specs.",
+    "Do not infer an owner decision from the merge of the decision bundle.",
+    "Accept only one exact owner return: READY or BLOCKED, tied to the reviewed payload lineage and decision scope.",
+    "Keep CP-6 closure and Scale Gate unauthorized until an explicit owner return is supplied and reviewed.",
+    "Keep diagnostics, mastery, adaptive routing, PV, summative use, broad rollout, student use, and student/product use blocked.",
+    "Keep protected MTU mutation, operation registry mutation, answer-skill mutation, and broad OP closure blocked.",
+    "Preserve the four-route bundle: Book 5, Book 6, Book 7, and Book 8 must remain reviewed together.",
+    "Include core-requirement checklist, classified findings, and carried issues with blocks, does_not_block, and proof_required_to_close.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "source_decision_bundle_summary": {
+    "sprint_id": "Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1",
+    "status": "cp6_scale_gate_decision_bundle_ready_for_human_review",
+    "route": "READY_FOR_HUMAN_REVIEW",
+    "expected_owner_returns": [
+      "Y2 FOUR-TARGET CP6 / SCALE GATE DECISION READY",
+      "Y2 FOUR-TARGET CP6 / SCALE GATE DECISION BLOCKED"
+    ],
+    "route_count": 4,
+    "source_decision_merge_commit": "da6fb15caaefca510a90c7fd67caa0403cdd6c0f",
+    "source_decision_merge_is_ancestor": true,
+    "cp6_and_scale_gate_lanes_ready_for_owner_decision": true,
+    "downstream_authority_false_in_source_packet": true,
+    "source_carried_issues": [
+      {
+        "issue_id": "owner-authorization-required-before-cp6-or-scale-gate-effect",
+        "classification": "scale_blocker",
+        "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+        "does_not_block": "human review of this decision bundle and merge of this evidence packet if authorized",
+        "proof_required_to_close": "explicit owner authorization tied to the reviewed payload lineage and decision scope, with exact-head CI, branch-protection ok:true, lead-review, review-thread, and PR Readiness Reviewer proof as supporting evidence"
+      },
+      {
+        "issue_id": "direct-route-deep-links-not-standalone-product-use-proof",
+        "classification": "minor_carry_flag",
+        "blocks": "standalone reliance on route deep links as broad product exposure or student/product-use proof",
+        "does_not_block": "owner CP-6 / Scale Gate decision review when the bundle is reviewed through the bounded packet",
+        "proof_required_to_close": "visible route-level review-only/no-student-product-use boundary or a separately authorized product-exposure decision"
+      },
+      {
+        "issue_id": "static-screenshots-are-not-after-interaction-proof",
+        "classification": "minor_carry_flag",
+        "blocks": "interactive behavior reliance for Scale Gate, student/product use, or summative completion claims",
+        "does_not_block": "review of the bounded routes as decision candidates",
+        "proof_required_to_close": "after-interaction proof for short-check and exit-ticket states before any broader authority is sought"
+      },
+      {
+        "issue_id": "protected-mutation-authority-not-requested",
+        "classification": "scale_blocker",
+        "blocks": "protected MTU mutation, operation registry mutation, answer-skill mutation, and broad OP row closure",
+        "does_not_block": "using existing no-mutation proof as evidence for the owner decision",
+        "proof_required_to_close": "separate governed mutation PR with exact diffs, validators, lead review, and owner authorization"
+      }
+    ]
+  },
+  "current_main_evidence": {
+    "platform_branch": "codex/y2-four-target-cp6-scale-gate-owner-decision-1-20260703",
+    "platform_origin_main_sha": "b73b974e5cf99430dc85ca1111ad97c03d71d8ae",
+    "platform_checked_head_sha": "225f5edaa9fde5bd6e367f6b1aa521fa9cb692cd",
+    "source_decision_bundle_merge_commit": "da6fb15caaefca510a90c7fd67caa0403cdd6c0f",
+    "source_decision_bundle_merge_is_ancestor": true,
+    "source_decision_bundle_path": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/cp6-scale-gate-decision-bundle.json",
+    "owner_decision_packet_protected_surface_mutation": false
+  },
+  "owner_decision_state": {
+    "decision_received": false,
+    "decision_recorded_by_this_packet": false,
+    "accepted_owner_return": null,
+    "allowed_owner_returns": [
+      "Y2 FOUR-TARGET CP6 / SCALE GATE DECISION READY",
+      "Y2 FOUR-TARGET CP6 / SCALE GATE DECISION BLOCKED"
+    ],
+    "required_owner_response_instruction": "Return exactly one of the allowed owner decision strings, tied to the reviewed payload lineage and decision scope.",
+    "decision_scope": "Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1 over the inherited CP-6 / Scale Gate decision bundle for all four bounded Year 2 routes."
+  },
+  "owner_return_effects": [
+    {
+      "owner_return": "Y2 FOUR-TARGET CP6 / SCALE GATE DECISION READY",
+      "status": "ACCEPTABLE_OWNER_INPUT_NOT_PRESENT",
+      "would_close": "the owner-decision-required blocker only after reviewed-payload owner authorization is recorded",
+      "does_not_authorize_without_separate_decision": "diagnostics, mastery, adaptive routing, PV, summative use, broad rollout, student use, student/product use, protected MTU mutation, operation mutation, answer-skill mutation, or broad OP row closure"
+    },
+    {
+      "owner_return": "Y2 FOUR-TARGET CP6 / SCALE GATE DECISION BLOCKED",
+      "status": "ACCEPTABLE_OWNER_INPUT_NOT_PRESENT",
+      "would_close": "the current decision as blocked and keep all downstream authority false",
+      "does_not_authorize_without_separate_decision": "any CP-6 closure, Scale Gate, product route adoption mutation, student use, or student/product use"
+    }
+  ],
+  "authority_claims": {
+    "owner_decision_intake_prepared": true,
+    "ready_for_owner_return": true,
+    "source_decision_bundle_inherited": true,
+    "source_decision_bundle_merge_recorded": true,
+    "owner_decision_received": false,
+    "owner_decision_recorded_by_this_packet": false,
+    "cp6_decision_authorized_by_this_packet": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_decision_authorized_by_this_packet": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "broad_student_rollout_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "protected_mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_route_adoption_mutation_authorized_by_this_packet": false,
+    "default_book_navigation_mutated": false,
+    "active_curriculum_sequence_mutated": false,
+    "autonomous_merge_authorized": false
+  },
+  "core_requirement_checklist": {
+    "product_end_state_and_original_specs_cited": true,
+    "non_negotiable_requirements_named": true,
+    "source_decision_bundle_inherited": true,
+    "source_decision_merge_commit_recorded": true,
+    "expected_owner_return_strings_recorded": true,
+    "no_owner_decision_inferred": true,
+    "all_four_routes_remain_bundled": true,
+    "cp6_scale_gate_lanes_are_ready_for_owner_decision_in_source": true,
+    "downstream_authority_flags_false": true,
+    "carried_issues_classified": true,
+    "lead_review_artifact_required_and_named": true,
+    "owner_decision_state_pending": true
+  },
+  "findings": [
+    {
+      "finding": "The merged CP-6 / Scale Gate decision bundle is inherited as the source evidence for owner decision intake.",
+      "classification": "core_requirement_met",
+      "blocks": "none for human review of this intake packet",
+      "does_not_block": "owner review of the exact READY or BLOCKED return",
+      "proof_required_to_close": "source decision bundle merge commit, exact-head CI, branch-protection ok:true, lead-review, review-thread, and PR Readiness Reviewer proof"
+    },
+    {
+      "finding": "The intake packet records exact allowed owner return strings and does not infer a decision.",
+      "classification": "core_requirement_met",
+      "blocks": "none for human review",
+      "does_not_block": "human owner supplying the exact return",
+      "proof_required_to_close": "owner response tied to reviewed payload lineage and decision scope"
+    },
+    {
+      "finding": "CP-6 closure, Scale Gate, diagnostics, mastery, adaptive routing, PV, summative use, broad rollout, student use, and student/product use remain blocked.",
+      "classification": "scale_blocker",
+      "blocks": "all downstream product/student-use authority",
+      "does_not_block": "reviewing this owner-decision intake packet",
+      "proof_required_to_close": "explicit owner return plus a reviewed decision record"
+    },
+    {
+      "finding": "Protected MTU mutation, operation mutation, answer-skill mutation, and broad OP closure remain outside this lane.",
+      "classification": "scale_blocker",
+      "blocks": "protected mutation and broad operation closure",
+      "does_not_block": "owner CP-6 / Scale Gate decision intake",
+      "proof_required_to_close": "separate governed mutation PR with validators, lead review, and owner authorization"
+    }
+  ],
+  "carried_issues": [
+    {
+      "issue_id": "owner-return-not-yet-recorded",
+      "classification": "scale_blocker",
+      "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+      "does_not_block": "human review and merge of this intake packet if authorized",
+      "proof_required_to_close": "owner returns exactly READY or BLOCKED for the reviewed payload lineage and decision scope"
+    },
+    {
+      "issue_id": "completion-and-student-use-still-out-of-scope",
+      "classification": "scale_blocker",
+      "blocks": "target-equivalent completion claims, summative use, student use, and student/product use",
+      "does_not_block": "CP-6 / Scale Gate owner decision intake with these authorities false",
+      "proof_required_to_close": "separate governed release/product-use decision with after-interaction proof and owner authorization"
+    },
+    {
+      "issue_id": "protected-mutation-authority-not-requested",
+      "classification": "scale_blocker",
+      "blocks": "protected MTU mutation, operation registry mutation, answer-skill mutation, and broad OP row closure",
+      "does_not_block": "using existing no-mutation proof as owner-decision evidence",
+      "proof_required_to_close": "separate governed mutation PR with exact diffs, validators, lead review, and owner authorization"
+    }
+  ],
+  "lead_review_requirements": {
+    "required": true,
+    "required_scopes": [
+      "owner decision intake boundary",
+      "inherited CP-6 / Scale Gate decision bundle",
+      "exact owner return wording",
+      "authority flags and downstream blocks",
+      "REV-STD-1 carried issues"
+    ],
+    "evidence_file": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1/subagent-lead-reviews.md",
+    "required_verdicts": [
+      "PASS",
+      "PASS WITH FLAGS"
+    ],
+    "missing_lead_review_blocks_pr_readiness": true
+  },
+  "recommended_next_action": "Send this owner-decision intake packet to human review with exact-head PR readiness proof. The owner should return exactly one allowed decision string. Do not treat this packet as CP-6 closure, Scale Gate approval, diagnostics/mastery/PV/summative authorization, student use, or student/product use."
+}
