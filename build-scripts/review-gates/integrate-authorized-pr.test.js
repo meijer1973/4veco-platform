@@ -487,7 +487,7 @@ describe('authorized PR integration runner', () => {
   test('integration-head lead review parser accepts markdown review records', () => {
     const parsed = parseIntegrationLeadReview([
       '# Lead Review',
-      'Verdict: PASS',
+      'Verdict: **PASS**',
       `Reviewed integration head: \`${integrationSha}\``,
       `Reviewed payload head: \`${payloadSha}\``,
     ].join('\n'), 'reports/sprints/example-lead-review-round3.md');
@@ -500,12 +500,12 @@ describe('authorized PR integration runner', () => {
     });
   });
 
-  test('integration-head lead review accepts allowlisted evidence tail after reviewed integration head', () => {
+  test('integration-head lead review requires refresh verification for allowlisted evidence tail', () => {
     const reviewedIntegrationHead = '1'.repeat(40);
     const finalHead = '2'.repeat(40);
     const lineage = {
       ...okLineage(finalHead),
-      requires_deterministic_refresh: true,
+      requires_deterministic_refresh: false,
       intervening_commits: [
         { sha: reviewedIntegrationHead, classification: 'conflict_free_main_base_sync_merge', invalidating: false },
         {

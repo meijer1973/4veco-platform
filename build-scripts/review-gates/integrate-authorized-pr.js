@@ -672,6 +672,15 @@ function firstShaLine(text, labels) {
   return null;
 }
 
+function firstResultLine(text) {
+  const line = String(text || '')
+    .split(/\r?\n/)
+    .find((item) => /^\s*(?:Verdict|Result)\s*:/i.test(item));
+  if (!line) return null;
+  const value = line.replace(/^\s*(?:Verdict|Result)\s*:\s*/i, '').trim();
+  return value.replace(/^[`*_]+/, '').replace(/[`*_.\s]+$/, '').trim() || null;
+}
+
 function parseIntegrationLeadReview(text, file = null) {
   const raw = String(text || '').trim();
   if (!raw) return null;
@@ -681,9 +690,8 @@ function parseIntegrationLeadReview(text, file = null) {
       ? { ...parsed, path: file }
       : parsed;
   }
-  const resultMatch = raw.match(/(?:Verdict|Result)\s*:\s*\`?([A-Za-z _-]+)/i);
   return {
-    result: resultMatch ? resultMatch[1].trim() : null,
+    result: firstResultLine(raw),
     reviewed_payload_head_sha: firstShaLine(raw, ['Reviewed payload head', 'reviewed_payload_head_sha', 'Payload head']),
     integration_head_sha: firstShaLine(raw, ['Reviewed integration head', 'integration_head_sha', 'Reviewed integration_head_sha', 'Integration head']),
     path: file,
@@ -766,6 +774,9 @@ function validateIntegrationLeadReview(record, lineage, options = {}) {
   if (review.integration_head_sha && review.integration_head_sha !== lineage.integration_head_sha) {
     const tail = evidenceTailAfterReview(lineage, review.integration_head_sha);
     if (!tail.ok) failures.push(tail.failure);
+    if (tail.ok && tail.tail.length > 0 && options.deterministicRefreshVerified !== true) {
+      failures.push('integration_lead_review_deterministic_refresh_not_verified');
+    }
   }
   return {
     ok: failures.length === 0,
