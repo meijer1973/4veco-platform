@@ -293,7 +293,7 @@ function buildNegativeFixtures(matrix) {
     expected_failure_defect_class: row.negative_guard.expected_failure_defect_class,
     mutation: row.negative_guard.mutation,
     guard: row.negative_guard.guard,
-    detection_rule: 'Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.',
+    detection_rule: 'Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.',
     observed_status: 'prepared_not_executed',
     detected_with_intended_defect_class: true
   }));
@@ -348,7 +348,7 @@ function buildPrReadinessEvidence() {
       'Run the PR Readiness Reviewer against the exact remote PR head.',
       'Include full live branch-protection checker output with ok: true.',
       'Run Teacher, Economist, and Quality inspection lead reviews and require MORE_THAN_SATISFIED from each reviewer.',
-      'Route READY_FOR_HUMAN_REVIEW and wait for explicit owner authorization tied to the reviewed PR payload SHA.',
+      'Route READY_FOR_HUMAN_REVIEW after exact-head readiness proof and wait for explicit owner payload authorization before merge.',
       'Do not use L0-L2 READY_FOR_LEAD_ONLY handling for this protected/canonical adjudication-prep packet.'
     ],
     commands: [
@@ -475,8 +475,8 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
         id: 'H7-B4-FINDING-REMOTE-PR-PROOF-PENDING',
         classification: 'proof_required_to_close',
         severity: 'pr_governance_gate',
-        summary: 'Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, CI, and owner authorization are required before ready/merge.',
-        proof_required_to_close: 'Run the single-account PR governance workflow against the exact remote head and record owner authorization that names the reviewed PR payload SHA.'
+        summary: 'Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, and CI are required before the readiness transition; owner payload authorization is required before merge.',
+        proof_required_to_close: 'Run the single-account PR governance workflow against the exact remote head and record owner payload authorization that names the reviewed payload head SHA.'
       }
     ],
     blocks: [
@@ -489,18 +489,18 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
       'Scale Gate',
       'product-route readiness',
       'diagnostics/mastery/PV/sequencing/summative/student use',
-      'merge before READY_FOR_HUMAN_REVIEW owner authorization is recorded for the reviewed payload'
+      'merge before READY_FOR_HUMAN_REVIEW owner payload authorization is recorded for the reviewed payload'
     ],
     does_not_block: [
       'Human review of this Bundle 4 adjudication-prep packet after exact-head PR readiness proof',
-      'Merging this checker/report/gate surface only after explicit owner authorization is recorded for the reviewed payload',
+      'Merging this checker/report/gate surface only after explicit owner payload authorization is recorded for the reviewed payload',
       'Preparing a later bounded protected-governance execution packet only if the owner explicitly authorizes that next step'
     ],
     proof_required_to_close: [
       'Run the Bundle 4 checker and current Bundle 3 checker. Bundle 1/2 artifacts are historical hash-pinned inputs; their older MTU registry source hash is not current proof.',
       'Run report JSON validation, URL-index check, agent-index freshness, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.',
       'Run Teacher, Economist, and Quality inspection subagent lead review and require MORE_THAN_SATISFIED from each reviewer.',
-      'Record explicit owner authorization in the PR thread with the PR number and reviewed payload commit before merge.',
+      'Record explicit owner payload authorization in the PR thread with the PR number and reviewed payload commit before merge.',
       'Keep H7 closure blocked until a later owner-authorized bounded execution packet resolves the protected/canonical operations.'
     ],
     bundle: OUT_BUNDLE_JSON,

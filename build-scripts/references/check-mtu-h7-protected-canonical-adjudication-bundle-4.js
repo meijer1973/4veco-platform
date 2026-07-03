@@ -175,7 +175,7 @@ function validate() {
   if (gate.gate_id !== GATE_ID || gate.route !== 'READY_FOR_HUMAN_REVIEW') failures.push('gate route/id mismatch');
   if (prReadiness.route !== 'READY_FOR_HUMAN_REVIEW') failures.push('PR readiness route mismatch');
   if (prReadiness.pilot_data?.branch_protection_ok_required !== true) failures.push('branch protection ok:true requirement missing');
-  if (prReadiness.pilot_data?.owner_authorization_required !== true) failures.push('owner authorization requirement missing');
+  if (prReadiness.pilot_data?.owner_authorization_required !== true) failures.push('payload authorization requirement missing');
   if (prReadiness.status === 'PENDING_EXACT_REMOTE_PR_READINESS_PROOF') {
     if (prReadiness.pilot_data?.exact_remote_head_sha !== null) failures.push('pending PR readiness must not record exact_remote_head_sha');
     if (prReadiness.pilot_data?.pr_number !== null) failures.push('pending PR readiness must not record pr_number');

@@ -4,7 +4,7 @@
   "fixture_set_id": "mtu-h7-protected-canonical-negative-regression-fixtures-4",
   "review_standard": "REV-STD-1",
   "status": "NEGATIVE_GUARDS_PIN_PROTECTED_CANONICAL_ADJUDICATION_PREP_ONLY",
-  "generated_at": "2026-07-03T08:37:40.810Z",
+  "generated_at": "2026-07-03T08:57:34.517Z",
   "base_main_sha": "51a08a64684160c8c6d06e5c46df2424d5d98659",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -42,7 +42,7 @@
       "expected_failure_defect_class": "canonical_mtu_governance_need",
       "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
       "guard": "A smaller high/low net-income ratio must not silently close as denivellering.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.",
+      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
       "observed_status": "prepared_not_executed",
       "detected_with_intended_defect_class": true
     },
@@ -54,7 +54,7 @@
       "expected_failure_defect_class": "over_trigger",
       "mutation": "Map F12 to the residual-payoff operation.",
       "guard": "Direct payoff arithmetic must not be closed by Nash pay-off matrix coverage.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.",
+      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
       "observed_status": "prepared_not_executed",
       "detected_with_intended_defect_class": true
     },
@@ -66,7 +66,7 @@
       "expected_failure_defect_class": "operation_registry_need",
       "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
       "guard": "The margin-payoff operation must retain the marginal-cost subtraction.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.",
+      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
       "observed_status": "prepared_not_executed",
       "detected_with_intended_defect_class": true
     },
@@ -78,7 +78,7 @@
       "expected_failure_defect_class": "operation_registry_need",
       "mutation": "Close q20 using only F12 matrix procedure text.",
       "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.",
+      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
       "observed_status": "prepared_not_executed",
       "detected_with_intended_defect_class": true
     },
@@ -90,7 +90,7 @@
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
       "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.",
+      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
       "observed_status": "prepared_not_executed",
       "detected_with_intended_defect_class": true
     },
@@ -102,7 +102,7 @@
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
       "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.",
+      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
       "observed_status": "prepared_not_executed",
       "detected_with_intended_defect_class": true
     },
@@ -114,7 +114,7 @@
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
       "guard": "The graph-and-table operation must not close from graph movement alone.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later exact-head owner authorization exists.",
+      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
       "observed_status": "prepared_not_executed",
       "detected_with_intended_defect_class": true
     }

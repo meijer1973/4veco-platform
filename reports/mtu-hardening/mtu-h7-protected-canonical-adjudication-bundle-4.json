@@ -4,7 +4,7 @@
   "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
   "review_standard": "REV-STD-1",
   "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_READY_FOR_HUMAN_REVIEW_NOT_EXECUTED",
-  "generated_at": "2026-07-03T08:37:40.810Z",
+  "generated_at": "2026-07-03T08:57:34.517Z",
   "base_main_sha": "51a08a64684160c8c6d06e5c46df2424d5d98659",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -112,9 +112,9 @@
     "student_product_use_authorized": false
   },
   "hashes": {
-    "adjudication_matrix": "de0f811463b864182b2d9dc54663249250fe063ee4fe4401a44860b5205a746d",
-    "negative_regression_fixtures": "3014c09c1213ddb5518f9a4661cbb2505ade2f7522ca596e8dcbedf2892c0a0a",
-    "pr_readiness_evidence": "62ba4ae89941efb25d7357dc4cf0991a64cd23e8108dffde808f8583e66ed8bd"
+    "adjudication_matrix": "71b988de7ac4a5d4bb3c69f1a606c9c8f5a50b656a523e5175f53ff74ad737d2",
+    "negative_regression_fixtures": "12e7ebaa3e646dcdad35cb304cd159a7e5f3b2160b9b32b60d074ae975808b98",
+    "pr_readiness_evidence": "d16cb89bcd2d27e45a514ea8ec8454a38f5c42df9a185707a240e5296896d31f"
   },
   "prohibited_claims": [
     "No H7 full closure",
