@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "generated": "2026-07-03T00:00:00.000Z",
+  "status": "ready_for_human_review",
+  "lead_recommendation": "READY_FOR_HUMAN_REVIEW",
+  "paragraphs": ["1.1.1", "1.1.2", "1.1.3"],
+  "surface_ids": [
+    "1.1.1-korte-check",
+    "1.1.1-exit-ticket",
+    "1.1.2-korte-check",
+    "1.1.2-exit-ticket",
+    "1.1.3-korte-check",
+    "1.1.3-exit-ticket"
+  ],
+  "source_files": [
+    "references/data/exercises/y1-golden-rollout-wave-1.json",
+    "references/data/exercise-surface-manifest.json",
+    "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json"
+  ],
+  "workflow_availability": {
+    "first_three_current_split_surfaces": true,
+    "first_three_rendered_product_path_proof_current": true,
+    "route_inventory_links_resolve": true,
+    "all_skill_map_route_hrefs_resolve": true,
+    "first_three_check_exit_surfaces_golden": true,
+    "short_checks_advisory_only": true,
+    "exit_tickets_target_readiness_evidence_only": true,
+    "scale_proof_status": "scale_gate_1_ready_for_human_review",
+    "scale_proof_lead_recommendation": "READY_FOR_HUMAN_SCALE_GATE_1_REVIEW",
+    "scale_proof_screenshot_count": 46
+  },
+  "boundaries": {
+    "not_year1_complete": true,
+    "not_chapter_12_ready": true,
+    "same_copy_hygiene_114_not_gate_claim": true,
+    "scale_gate_1_ready_for_human_review_only": true,
+    "scale_gate_1_authorized": false,
+    "product_route_adoption_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "engine_behavior_changed": false,
+    "protected_reference_data_changed": false
+  },
+  "next_expansion_boundary": {
+    "1.1.4": "same-copy hygiene only in this wave; source authoring requires a separate reviewed sprint",
+    "chapter_1_2": "candidate inventory and target-operation review required before check/exit source creation",
+    "scale_gate_1": "requires explicit human/owner decision tied to exact reviewed evidence"
+  }
+}

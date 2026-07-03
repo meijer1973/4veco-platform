@@ -80,6 +80,9 @@ jobs:
       - name: Validate exercise authority hygiene
         run: npm run check:exercise-authority-hygiene
 
+      - name: Validate Y1 Golden Rollout Wave 1 guard
+        run: npm run check:y1-golden-rollout-wave-1
+
       - name: Install Python support dependencies
         run: |
           python -m pip install --upgrade pip

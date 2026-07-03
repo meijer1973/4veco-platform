@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "packet_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "status": "ready_for_human_review",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "pr_number": null,
+  "pr_url": null,
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+    "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+    "package.json",
+    "references/data/exercises/y1-golden-rollout-wave-1.json",
+    "references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json",
+    "references/reference-team-roadmap.md",
+    "reports/json/y1-golden-rollout-wave-1-proof.json",
+    "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-round1.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-assignment.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round1.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
+    "references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json"
+  ],
+  "lesson_changed_paths": [],
+  "review_autonomy": {
+    "level": "L3",
+    "lead_review_result": "PASS WITH FLAGS",
+    "rationale": "This sprint adds a CI-visible rollout guard and active roadmap governance for exercise workflow authority. It does not change source data or generated lesson output, but human review is required because it changes governance/checker behavior."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "ci_visible_governance_checker",
+    "roadmap_governance",
+    "exercise_workflow_authority_boundary"
+  ],
+  "date": "2026-07-03",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+    "references/reference-team-roadmap.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-result.md",
+    "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+    "references/data/exercise-surface-manifest.json",
+    "reports/sprints/SKILLMAP-OP-1-result.md"
+  ],
+  "non_negotiable_requirements": [
+    "The wave claim is exactly the six current first-three split check surfaces.",
+    "1.1.4 remains same-copy hygiene only and is not part of the gate claim.",
+    "Chapter 1.2 check/exit source authoring remains a later reviewed sprint.",
+    "Use existing rendered product-path proof; do not recapture unchanged screenshots as a substitute for new authority.",
+    "Do not authorize product-route adoption, diagnostics, mastery/sequencing, PV, summative use, Scale Gate 1, broad product use, student/product use, or target-equivalent completion language.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": {
+    "product_end_state_and_original_specs_cited": true,
+    "six_first_three_surfaces_only": true,
+    "first_three_surfaces_current_and_golden": true,
+    "rendered_product_path_proof_cited": true,
+    "skill_map_and_route_links_resolve": true,
+    "same_copy_hygiene_114_not_gate_claim": true,
+    "chapter_12_source_authoring_deferred": true,
+    "authority_flags_false": true,
+    "no_source_data_change": true,
+    "no_generated_lesson_output_change": true,
+    "no_engine_behavior_change": true,
+    "lead_review_completed": true
+  },
+  "authority_claims": {
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "engine_behavior_changed": false,
+    "protected_reference_data_changed": false,
+    "route_migration_performed": false
+  },
+  "proof": {
+    "machine_proof": "reports/json/y1-golden-rollout-wave-1-proof.json",
+    "wave_manifest": "references/data/exercises/y1-golden-rollout-wave-1.json",
+    "checker": {
+      "command": "npm.cmd run check:y1-golden-rollout-wave-1",
+      "status": "passed"
+    },
+    "source_currentness_checker": {
+      "command": "npm.cmd run check:exercise-workflow-currentness",
+      "status": "passed"
+    },
+    "authority_hygiene_checker": {
+      "command": "npm.cmd run check:exercise-authority-hygiene",
+      "status": "passed"
+    },
+    "scale_proof_checker": {
+      "command": "npm.cmd run check:scale-proof-3p-product-path",
+      "status": "passed"
+    }
+  },
+  "carried_issues": [
+    {
+      "issue_id": "scale-gate-1-still-needs-human-owner-decision",
+      "classification": "scale_blocker",
+      "blocks": "Scale Gate 1 closure, broad product use, student/product use, diagnostics, mastery/sequencing, PV, and summative use.",
+      "does_not_block": "Human review of this rollout-control PR and merge of the guard if exact-head CI and PR readiness proof are clean.",
+      "proof_required_to_close": "Explicit human/owner Scale Gate 1 authorization tied to the exact reviewed evidence and current branch-protection proof."
+    },
+    {
+      "issue_id": "year1-expansion-source-authoring-not-in-this-wave",
+      "classification": "quality_improvement_available",
+      "blocks": "Claims that 1.1.4 or chapter 1.2 check/exit surfaces are source-authored or rollout-ready.",
+      "does_not_block": "First-three workflow availability guard and human review of this PR.",
+      "proof_required_to_close": "Separate source-authoring sprint with target-operation review, source/generated parity proof, rendered evidence, and lead/human review as required."
+    }
+  ],
+  "recommended_next_action": "Human review this CI-visible rollout-control PR. If approved, merge it as a first-three workflow-availability guard only, then choose a separate source-authoring or Scale Gate decision sprint without reinterpreting this wave as Year 1 completion."
+}

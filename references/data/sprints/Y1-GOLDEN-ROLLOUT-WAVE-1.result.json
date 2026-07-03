@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "name": "First-Three Golden Workflow Availability Wave",
+  "status": "completed",
+  "completed_on": "2026-07-03",
+  "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+  "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
+  "result": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
+  "diff_summary": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
+  "quality_log": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md",
+  "evidence_map": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md",
+  "proof": "reports/json/y1-golden-rollout-wave-1-proof.json",
+  "review_packet": "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "engine_behavior_changed": false,
+  "product_authority_changed": false,
+  "completion_language_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "findings": [
+      {
+        "id": "first-three-workflow-availability-guard",
+        "description": "The wave manifest and focused checker codify the first-three Golden workflow availability boundary as exactly six current split check surfaces.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/data/exercises/y1-golden-rollout-wave-1.json",
+          "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+          "reports/json/y1-golden-rollout-wave-1-proof.json"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Human PR review and merge if exact-head checks pass.",
+        "proof_required_to_close": "Focused checker, currentness checker, authority-hygiene checker, Scale proof checker, platform tests, complete bundle validation, and diff hygiene pass."
+      },
+      {
+        "id": "downstream-authority-held",
+        "description": "Scale Gate 1, product-route adoption, completion language, diagnostics, mastery/sequencing, PV, summative use, broad product use, and student/product use remain unauthorized.",
+        "classification": "scale_blocker",
+        "evidence": [
+          "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+          "reports/json/y1-golden-rollout-wave-1-proof.json",
+          "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md"
+        ],
+        "blocks": "Scale Gate 1 closure, diagnostics, mastery/sequencing, PV, summative use, broad product use, and student/product use.",
+        "does_not_block": "Merge of this rollout-control guard after human review.",
+        "proof_required_to_close": "Separate exact-head human/owner authorization for Scale Gate 1 or any downstream product authority."
+      }
+    ],
+    "flags": [
+      {
+        "id": "scale-gate-1-held",
+        "description": "Scale Gate 1 and downstream product/student-use authorities remain blocked until separate explicit human/owner decision.",
+        "classification": "scale_blocker",
+        "disposition": "product_scale_blocker",
+        "owner": "Scale Gate 1 decision lane",
+        "next_action": "Run or route the separate Scale Gate 1 human/owner decision against exact reviewed evidence.",
+        "blocks": "Scale Gate 1 closure, diagnostics, mastery/sequencing, PV, summative use, broad product use, and student/product use.",
+        "does_not_block": "Human PR review and merge of this rollout-control guard if exact-head checks pass.",
+        "proof_required_to_close": "Explicit exact-head human/owner authorization for Scale Gate 1 or downstream product authority.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:y1-golden-rollout-wave-1",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:exercise-workflow-currentness",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:exercise-authority-hygiene",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scale-proof-3p-product-path",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete",
+      "status": "passed"
+    }
+  ]
+}

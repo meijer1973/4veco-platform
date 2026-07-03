@@ -48,7 +48,7 @@ Year 1 closure, Scale Gate 1, or student/product use.
 
 ## Current Gate State
 
-As of 2026-06-19:
+As of 2026-07-03:
 
 - `GATE-PRODUCT-3P` is closed only for the first-three rendered product-path
   proof.
@@ -56,12 +56,11 @@ As of 2026-06-19:
 - Product-route adoption, broad product use, student/product use, diagnostics,
   mastery/sequencing, PV, summative use, and target-equivalent completion
   language remain unauthorized.
-- The lead Scale Gate readiness result is
-  `HOLD_FOR_GOLDEN_ROUTE_REPAIR`.
-- The next roadmap-controlled substantial bundle is
-  `GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1`.
-- `EXIT-SHORT-WORKBENCH-111-PLAN-1` is an internal phase of that bundle, not a
-  separate human-review stop.
+- `SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1` is ready for human Scale Gate
+  1 review but does not authorize Scale Gate 1 closure.
+- `Y1-GOLDEN-ROLLOUT-WAVE-1` is the current rollout-control wave. It records the
+  six first-three Golden check surfaces as workflow-available and keeps `1.1.4`
+  and chapter `1.2` source authoring outside the wave.
 
 ## Non-Negotiables
 

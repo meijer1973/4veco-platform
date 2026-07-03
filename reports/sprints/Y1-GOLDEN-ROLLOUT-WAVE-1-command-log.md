@@ -1,0 +1,1002 @@
+# Sprint Y1-GOLDEN-ROLLOUT-WAVE-1: Command Log
+
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:15.397Z`
+- finished_at: `2026-07-03T08:32:15.492Z`
+- duration_ms: `95`
+- exit_code: `0`
+- stdout_sha256: `d886b8bb693d07f8db0ba4e4b64efa6eecbb643a5fc087151fd456e8b52cb247`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:y1-golden-rollout-wave-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:15.543Z`
+- finished_at: `2026-07-03T08:32:16.073Z`
+- duration_ms: `530`
+- exit_code: `0`
+- stdout_sha256: `19cbefd52faa5abb82cd9a4a5468f22ea0d027a83043254ee095b8708b8bace8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:y1-golden-rollout-wave-1
+> node build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+
+OK Y1-GOLDEN-ROLLOUT-WAVE-1 first-three workflow availability guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-workflow-currentness
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:16.123Z`
+- finished_at: `2026-07-03T08:32:16.835Z`
+- duration_ms: `712`
+- exit_code: `0`
+- stdout_sha256: `b005a2910b0a61d9062746983535bb4fae0ce424adfc1d74efdf20c7fa3b67f1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-workflow-currentness
+> node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
+
+OK EXERCISE-WORKFLOW-CURRENTNESS stale-path/currentness sweep
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-authority-hygiene
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:16.886Z`
+- finished_at: `2026-07-03T08:32:17.349Z`
+- duration_ms: `463`
+- exit_code: `0`
+- stdout_sha256: `cd0928cfee43246207cb0e400776a00c251ecb04d521a5a28fff44db77679719`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-authority-hygiene
+> node build-scripts/sprints/check-exercise-authority-hygiene.js
+
+OK EXERCISE-AUTHORITY-HYGIENE manifest/checker proof
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scale-proof-3p-product-path
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:17.394Z`
+- finished_at: `2026-07-03T08:32:17.744Z`
+- duration_ms: `350`
+- exit_code: `0`
+- stdout_sha256: `a7f4fa61ebb03bad1599405e0a91d5f82ec5b7d64534aae761fef00227a46c2e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scale-proof-3p-product-path
+> node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js
+
+OK SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1 proof: scale_gate_1_ready_for_human_review
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:17.784Z`
+- finished_at: `2026-07-03T08:32:17.961Z`
+- duration_ms: `177`
+- exit_code: `0`
+- stdout_sha256: `5a81ff41742fc86d694b93ad3e9ae0f3e110af3e49a24b84b25d536b08191890`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:18.002Z`
+- finished_at: `2026-07-03T08:32:18.068Z`
+- duration_ms: `66`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:18.129Z`
+- finished_at: `2026-07-03T08:32:18.214Z`
+- duration_ms: `85`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:18.263Z`
+- finished_at: `2026-07-03T08:32:18.331Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:18.377Z`
+- finished_at: `2026-07-03T08:32:18.718Z`
+- duration_ms: `341`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:32:18.761Z`
+- finished_at: `2026-07-03T08:33:53.879Z`
+- duration_ms: `95118`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `a4ddb94d142f80017bbd796ac3f622d62f75e3270c54236aa9152bc1802e31b9`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 95 passed, 95 of 101 total
+Tests:       8 skipped, 1237 passed, 1245 total
+Snapshots:   0 total
+Time:        93.136 s, estimated 112 s
+Ran all test suites.
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:33:53.934Z`
+- finished_at: `2026-07-03T08:33:54.028Z`
+- duration_ms: `94`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:33:54.078Z`
+- finished_at: `2026-07-03T08:33:54.140Z`
+- duration_ms: `62`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:42:45.639Z`
+- finished_at: `2026-07-03T08:42:45.717Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `b69821f891762400ebfab82a4bc37b25ce97f76ec8864dc2479b32876fadb1df`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: Y1-GOLDEN-ROLLOUT-WAVE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:42:51.390Z`
+- finished_at: `2026-07-03T08:42:51.464Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `9981b9120e8e9c91ce5e080f078a129ce90b92abcdf565d3623f14631047af3e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: Y1-GOLDEN-ROLLOUT-WAVE-1 (14 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:43:08.392Z`
+- finished_at: `2026-07-03T08:43:08.457Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:43:16.189Z`
+- finished_at: `2026-07-03T08:43:16.406Z`
+- duration_ms: `217`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `cd36fb97407ec5b007163c89a0a7d0377c642cd9a96c817d878d6db062ac4e11`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: references\data\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1.result.json lead_review.findings[1] scale_blocker cannot close as PASS
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:43:49.445Z`
+- finished_at: `2026-07-03T08:43:49.928Z`
+- duration_ms: `483`
+- exit_code: `0`
+- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:y1-golden-rollout-wave-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:44:24.231Z`
+- finished_at: `2026-07-03T08:44:24.670Z`
+- duration_ms: `439`
+- exit_code: `0`
+- stdout_sha256: `19cbefd52faa5abb82cd9a4a5468f22ea0d027a83043254ee095b8708b8bace8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:y1-golden-rollout-wave-1
+> node build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+
+OK Y1-GOLDEN-ROLLOUT-WAVE-1 first-three workflow availability guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:44:24.713Z`
+- finished_at: `2026-07-03T08:44:24.778Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:44:24.825Z`
+- finished_at: `2026-07-03T08:44:24.896Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `b69821f891762400ebfab82a4bc37b25ce97f76ec8864dc2479b32876fadb1df`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: Y1-GOLDEN-ROLLOUT-WAVE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:44:24.960Z`
+- finished_at: `2026-07-03T08:44:25.037Z`
+- duration_ms: `77`
+- exit_code: `0`
+- stdout_sha256: `8ab004940a21c217ad270d51f6b717993b51545a60100c28f3f216da95663b97`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: Y1-GOLDEN-ROLLOUT-WAVE-1 (21 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:44:25.083Z`
+- finished_at: `2026-07-03T08:44:25.608Z`
+- duration_ms: `525`
+- exit_code: `0`
+- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:44:48.361Z`
+- finished_at: `2026-07-03T08:44:48.429Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:44:48.471Z`
+- finished_at: `2026-07-03T08:44:48.528Z`
+- duration_ms: `57`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:y1-golden-rollout-wave-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:39.981Z`
+- finished_at: `2026-07-03T08:47:40.405Z`
+- duration_ms: `424`
+- exit_code: `0`
+- stdout_sha256: `19cbefd52faa5abb82cd9a4a5468f22ea0d027a83043254ee095b8708b8bace8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:y1-golden-rollout-wave-1
+> node build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+
+OK Y1-GOLDEN-ROLLOUT-WAVE-1 first-three workflow availability guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:40.454Z`
+- finished_at: `2026-07-03T08:47:40.523Z`
+- duration_ms: `69`
+- exit_code: `0`
+- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:40.582Z`
+- finished_at: `2026-07-03T08:47:40.670Z`
+- duration_ms: `88`
+- exit_code: `0`
+- stdout_sha256: `b69821f891762400ebfab82a4bc37b25ce97f76ec8864dc2479b32876fadb1df`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: Y1-GOLDEN-ROLLOUT-WAVE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:40.733Z`
+- finished_at: `2026-07-03T08:47:40.824Z`
+- duration_ms: `91`
+- exit_code: `0`
+- stdout_sha256: `baeef290530a96724f185b6ea29b0730975ca90ba0df3e5147639d03c84dbf3f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: Y1-GOLDEN-ROLLOUT-WAVE-1 (28 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:40.892Z`
+- finished_at: `2026-07-03T08:47:41.491Z`
+- duration_ms: `599`
+- exit_code: `0`
+- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:41.547Z`
+- finished_at: `2026-07-03T08:47:41.628Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:41.684Z`
+- finished_at: `2026-07-03T08:47:41.775Z`
+- duration_ms: `91`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:41.827Z`
+- finished_at: `2026-07-03T08:47:41.919Z`
+- duration_ms: `92`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:41.985Z`
+- finished_at: `2026-07-03T08:47:42.520Z`
+- duration_ms: `535`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:42.596Z`
+- finished_at: `2026-07-03T08:47:42.675Z`
+- duration_ms: `79`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:47:42.727Z`
+- finished_at: `2026-07-03T08:47:42.798Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:y1-golden-rollout-wave-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:58:41.895Z`
+- finished_at: `2026-07-03T08:58:42.370Z`
+- duration_ms: `475`
+- exit_code: `0`
+- stdout_sha256: `19cbefd52faa5abb82cd9a4a5468f22ea0d027a83043254ee095b8708b8bace8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:y1-golden-rollout-wave-1
+> node build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+
+OK Y1-GOLDEN-ROLLOUT-WAVE-1 first-three workflow availability guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:58:42.412Z`
+- finished_at: `2026-07-03T08:58:42.476Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:58:42.522Z`
+- finished_at: `2026-07-03T08:58:43.012Z`
+- duration_ms: `490`
+- exit_code: `0`
+- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:58:43.061Z`
+- finished_at: `2026-07-03T08:58:43.137Z`
+- duration_ms: `76`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:58:43.208Z`
+- finished_at: `2026-07-03T08:58:43.319Z`
+- duration_ms: `111`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-03T08:58:54.624Z`
+- finished_at: `2026-07-03T08:58:54.783Z`
+- duration_ms: `159`
+- exit_code: `0`
+- stdout_sha256: `224ae3609b733ab07ba46cd768303927b42539acdc2d73a787aed93f99696892`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: Y1-GOLDEN-ROLLOUT-WAVE-1 (41 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "name": "First-Three Golden Workflow Availability Wave",
+  "created": "2026-07-03",
+  "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+  "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Record the first-three Golden exercise rollout wave as exactly six current split check surfaces.",
+    "Verify workflow availability through existing rendered product-path, route inventory, screenshot, and skill-map proof.",
+    "Make the next-expansion boundary explicit for 1.1.4 and chapter 1.2.",
+    "Preserve all downstream authority boundaries and avoid generated lesson output or source-data edits."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+    "npm.cmd run check:y1-golden-rollout-wave-1",
+    "npm.cmd run check:exercise-workflow-currentness",
+    "npm.cmd run check:exercise-authority-hygiene",
+    "npm.cmd run check:scale-proof-3p-product-path",
+    "node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run check:scope-language",
+    "npm.cmd run check:platform",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
+    "node build-scripts/sprints/check-lead-review-substance.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+    "node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+    "node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No source-data/book-1/exit-ticket/*.json edits.",
+    "No generated lesson output edits.",
+    "No engine implementation, CSS, runtime JavaScript, route migration, or generated route behavior changes.",
+    "No references/machine or references/external edits.",
+    "No references/authored/course-target-exercises.json edits.",
+    "No candidate storage writes.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, product-route adoption, broad product use, target-equivalent completion-language release, or student/product use."
+  ]
+}
