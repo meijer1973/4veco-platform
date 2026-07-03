@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "report_type": "owner_delivery_protocol_decision",
+  "report_id": "owner-delivery-protocol-decision",
+  "sprint_id": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1",
+  "generated_on": "2026-07-03",
+  "internal_only": true,
+  "manual_invocation_only": true,
+  "human_review_required": true,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-sprint-plan.md",
+  "accepted_input_decision": "REVISE_DELIVERY_PROTOCOL",
+  "accepted_input_decision_source": "reports/inspection-standards/owner-delivery-protocol-completion-decision.json",
+  "selected_decision": "READY_FOR_OWNER_CONTROLLED_DISPATCH",
+  "does_not_authorize": [
+    "external dispatch in this sprint",
+    "named expert selection",
+    "private contact-detail storage",
+    "expert response analysis",
+    "localized output",
+    "country editions",
+    "answer models or answer keys",
+    "student-facing output",
+    "teacher/school-facing output",
+    "public output",
+    "evidence packs",
+    "product-route adoption",
+    "Scale Gate",
+    "diagnostics/mastery/PV",
+    "student/product use",
+    "personal/student/school data processing outside the approved boundary",
+    "legal advice",
+    "compliance proof",
+    "approval, accreditation, OP0, PTA, or summative validity",
+    "inspection readiness",
+    "support sufficiency",
+    "accommodation sufficiency",
+    "accessibility/legal sufficiency",
+    "individual-adjustment sufficiency",
+    "school-owned evidence claims",
+    "treating expert feedback as official authority",
+    "treating missing responses as approval"
+  ],
+  "non_negotiable_requirements": [
+    "Cite product end-state and original sprint/gate spec.",
+    "Bind repair to merged PR #199 `REVISE_DELIVERY_PROTOCOL`.",
+    "Define owner-controlled delivery without repository private contact-detail storage.",
+    "Define dispatch proof without exposing private contact details.",
+    "Do not claim external dispatch, sent material, or expert response analysis.",
+    "Do not generate localized output, country editions, answer models, or answer keys.",
+    "Do not request or store personal/student/school data.",
+    "Do not treat expert feedback as official authority, legal advice, compliance proof, school evidence, inspection readiness, product approval, or support/accommodation/accessibility sufficiency proof.",
+    "Preserve England/Flanders boundaries.",
+    "Return through exact-head human review."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "product_end_state_and_spec_cited",
+      "requirement": "Product end-state and original sprint/gate spec are cited.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "prior_completion_decision_bound",
+      "requirement": "Repair is bound to merged PR #199 `REVISE_DELIVERY_PROTOCOL`.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "owner_delivery_protocol_schema_complete",
+      "requirement": "Owner delivery protocol schema is complete and strict.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "delivery_channel_design_complete",
+      "requirement": "Acceptable owner-controlled delivery channels are defined without private contact storage.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "dispatch_proof_format_complete",
+      "requirement": "Dispatch-proof format defines valid proof without exposing private contact details.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "response_intake_completion_rules_complete",
+      "requirement": "Usable, pending, failed, quarantined, and owner-decision response states are defined.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "england_protocol_instance_complete",
+      "requirement": "England protocol instance preserves England-only and no whole-UK/all-awarding-bodies boundaries.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "flanders_protocol_instance_complete",
+      "requirement": "Flanders protocol instance preserves Flanders-only and no all-Belgium/school-network authority boundaries.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "negative_fixtures_cover_forbidden_cases",
+      "requirement": "Negative fixtures cover private contact storage, missing proof, forbidden material, data, claims, overclaims, and premature analysis.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "downstream_authority_blocked",
+      "requirement": "Dispatch, response analysis, localized output, answer models, product/school/public use, evidence packs, Scale Gate, diagnostics/mastery/PV, personal/student/school data, legal/compliance/inspection-readiness, support/accommodation/accessibility sufficiency, school evidence, and official-authority claims remain blocked.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    },
+    {
+      "id": "review_route_preserved",
+      "requirement": "Specialist reviews, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review remain required.",
+      "status": "met",
+      "proof": "GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1 generated repair packet"
+    }
+  ],
+  "final_decision": {
+    "selected": "READY_FOR_OWNER_CONTROLLED_DISPATCH",
+    "allowed_options": [
+      "READY_FOR_OWNER_CONTROLLED_DISPATCH",
+      "REVISE_DELIVERY_CHANNEL_AGAIN",
+      "STOP_LOCAL_EXPERT_CONTACT_TRACK"
+    ],
+    "rationale": "The repair packet supplies a strict owner-controlled delivery protocol, proof format, response-intake completion rules, England/Flanders instances, and negative fixtures without claiming dispatch or response analysis."
+  },
+  "owner_controlled_dispatch_ready": true,
+  "external_dispatch_performed": false,
+  "private_contact_details_stored": false,
+  "response_analysis_authorized": false,
+  "protocol_instances": [
+    "england-owner-delivery-protocol-instance",
+    "flanders-owner-delivery-protocol-instance"
+  ],
+  "decision_logic": [
+    {
+      "rule": "If owner delivery protocol schema or proof format is incomplete -> REVISE_DELIVERY_CHANNEL_AGAIN.",
+      "observed": false,
+      "selected_when_true": "REVISE_DELIVERY_CHANNEL_AGAIN"
+    },
+    {
+      "rule": "If protocol stores private contact details, requests personal/student/school data, or permits forbidden claims -> STOP_LOCAL_EXPERT_CONTACT_TRACK.",
+      "observed": false,
+      "selected_when_true": "STOP_LOCAL_EXPERT_CONTACT_TRACK"
+    },
+    {
+      "rule": "If schema, proof format, England/Flanders instances, and negative fixtures pass while dispatch remains unclaimed -> READY_FOR_OWNER_CONTROLLED_DISPATCH.",
+      "observed": true,
+      "selected_when_true": "READY_FOR_OWNER_CONTROLLED_DISPATCH"
+    }
+  ],
+  "owner_next_action": "Human owner may decide whether to use this protocol for a later owner-controlled dispatch. This packet itself does not dispatch.",
+  "no_output_flags": {
+    "external_dispatch_performed": false,
+    "delivery_claimed": false,
+    "private_contact_details_stored": false,
+    "named_expert_selected": false,
+    "localized_output_generated": false,
+    "country_edition_generated": false,
+    "answer_models_generated": false,
+    "student_data_processed": false,
+    "personal_data_processed": false,
+    "school_evidence_requested": false,
+    "expert_response_analysis_authorized": false,
+    "response_analysis_attempted": false,
+    "owner_controlled_dispatch_protocol_ready": true,
+    "owner_controlled_dispatch_requires_separate_owner_action": true
+  },
+  "finding_classification": [
+    {
+      "finding": "Final decision selects READY_FOR_OWNER_CONTROLLED_DISPATCH.",
+      "classification": "core_requirement_met",
+      "blocks": "Nothing for human review of this decision.",
+      "does_not_block": "Human review and later owner-controlled dispatch decision.",
+      "proof_required_to_close": "Exact-head readiness, branch protection ok:true, green CI, and owner authorization."
+    },
+    {
+      "finding": "Response analysis and downstream authority remain blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Expert response analysis, localized output, answer models, product/school/public use, evidence packs, Scale Gate, diagnostics/mastery/PV, personal/student/school data, legal/compliance/inspection-readiness claims, support/accommodation/accessibility sufficiency claims, school evidence, and official-authority substitution.",
+      "does_not_block": "Owner review of protocol readiness.",
+      "proof_required_to_close": "Valid owner delivery proof, consented schema-passing response, quarantine PASS, specialist review, and separate human review."
+    }
+  ]
+}
