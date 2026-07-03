@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4",
+  "gate_id": "GATE-MTU-H7-protected-canonical-adjudication-bundle-4",
+  "review_standard": "REV-STD-1",
+  "status": "READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PR_PROOF",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "base_main_sha": "51a08a64684160c8c6d06e5c46df2424d5d98659",
+  "requested_decision": "Review Bundle 4 as protected/canonical H7 adjudication preparation only. Approve only whether a later bounded protected-governance execution packet may be prepared, or keep held/reject individual operations. Do not approve H7 closure or product authority.",
+  "product_end_state_cited": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_spec_cited": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
+  "non_negotiable_requirements": [
+    "No protected reference mutation",
+    "No external source mutation",
+    "No machine MTU mutation",
+    "No target exercise mutation",
+    "No operation-registry mutation",
+    "No candidate writes or storage",
+    "No lesson output",
+    "No protected/canonical H7 operation execution in this bundle",
+    "No H7 full closure",
+    "No H6/H7 evidence-generalization closure",
+    "No product-route readiness, Scale Gate, diagnostics, mastery, sequencing, PV, summative use, or student/product use",
+    "PR Readiness Reviewer and live branch-protection proof must be run against the exact remote head before ready/merge",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Current main is recorded as Bundle 4 base",
+      "status": "met",
+      "evidence": "51a08a64684160c8c6d06e5c46df2424d5d98659"
+    },
+    {
+      "requirement": "Exactly seven protected/canonical H7 operations are prepared for adjudication",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
+      "requirement": "Every operation remains prepared_not_executed with no mutation authority",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
+      "requirement": "Every operation carries requested human decision options and proof required to close",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
+      "requirement": "Every operation carries a negative regression guard",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json"
+    },
+    {
+      "requirement": "Authority flags remain false and no protected/candidate/product writes are claimed",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json"
+    },
+    {
+      "requirement": "Single-account PR governance route is READY_FOR_HUMAN_REVIEW pending exact remote proof",
+      "status": "proof_required_to_close",
+      "evidence": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json"
+    }
+  ],
+  "findings": [
+    {
+      "id": "H7-B4-FINDING-CANONICAL-MTU-DECISION",
+      "classification": "blocks",
+      "severity": "canonical_governance_blocker",
+      "summary": "The net-ratio/nivellering operation cannot close from current H08 evidence without an explicit positive-counterpart canonical MTU or reviewed-equivalent decision.",
+      "proof_required_to_close": "Owner decision to approve a canonical MTU/update path, approve a bounded reviewed-equivalent rule, or keep held."
+    },
+    {
+      "id": "H7-B4-FINDING-PROTECTED-OPERATION-RULES",
+      "classification": "blocks",
+      "severity": "operation_registry_governance_blocker",
+      "summary": "Six operation/procedure candidates remain protected-governance decisions, including ultimatum payoff arithmetic, game-tree Nash reasoning, insurance cost-benefit, and multi-period IS-MB-GA sequence operations.",
+      "proof_required_to_close": "Owner decision per operation or candidate family before any bounded execution packet."
+    },
+    {
+      "id": "H7-B4-FINDING-REMOTE-PR-PROOF-PENDING",
+      "classification": "proof_required_to_close",
+      "severity": "pr_governance_gate",
+      "summary": "Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, CI, and owner authorization are required before ready/merge.",
+      "proof_required_to_close": "Run the single-account PR governance workflow against the exact remote head and record owner authorization that names the reviewed PR payload SHA."
+    }
+  ],
+  "blocks": [
+    "H7 full closure",
+    "H6/H7 evidence-generalization closure",
+    "protected/canonical operation execution",
+    "protected-reference mutation",
+    "operation-registry mutation",
+    "candidate writes/storage",
+    "Scale Gate",
+    "product-route readiness",
+    "diagnostics/mastery/PV/sequencing/summative/student use",
+    "merge before READY_FOR_HUMAN_REVIEW owner authorization is recorded for the reviewed payload"
+  ],
+  "does_not_block": [
+    "Human review of this Bundle 4 adjudication-prep packet after exact-head PR readiness proof",
+    "Merging this checker/report/gate surface only after explicit owner authorization is recorded for the reviewed payload",
+    "Preparing a later bounded protected-governance execution packet only if the owner explicitly authorizes that next step"
+  ],
+  "proof_required_to_close": [
+    "Run the Bundle 4 checker and current Bundle 3 checker. Bundle 1/2 artifacts are historical hash-pinned inputs; their older MTU registry source hash is not current proof.",
+    "Run report JSON validation, URL-index check, agent-index freshness, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.",
+    "Run Teacher, Economist, and Quality inspection subagent lead review and require MORE_THAN_SATISFIED from each reviewer.",
+    "Record explicit owner authorization in the PR thread with the PR number and reviewed payload commit before merge.",
+    "Keep H7 closure blocked until a later owner-authorized bounded execution packet resolves the protected/canonical operations."
+  ],
+  "bundle": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json",
+  "adjudication_matrix": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
+  "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
+  "pr_readiness_evidence": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+  "lead_review_proof": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/lead-review.md",
+  "review_team_results": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-team-results.md",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "summary": {
+    "protected_operations_prepared": 7,
+    "unique_candidate_packets": 6,
+    "negative_regression_detection_rate": 1,
+    "expected_pr_route": "READY_FOR_HUMAN_REVIEW",
+    "executed_in_this_bundle": 0,
+    "h7_full_closure_claimed": false,
+    "product_route_readiness_claimed": false,
+    "student_product_use_authorized": false
+  }
+}

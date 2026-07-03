@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4",
+  "gate_id": "GATE-MTU-H7-protected-canonical-adjudication-bundle-4",
+  "review_standard": "REV-STD-1",
+  "status": "PENDING_EXACT_REMOTE_PR_READINESS_PROOF",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "base_main_sha": "51a08a64684160c8c6d06e5c46df2424d5d98659",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "pilot_data": {
+    "workflow": "single-account-pr-governance",
+    "expected_route": "READY_FOR_HUMAN_REVIEW",
+    "exact_remote_head_sha": null,
+    "pr_number": null,
+    "exact_remote_proof_state": "not_recorded_pre_pr",
+    "branch_protection_ok_required": true,
+    "owner_authorization_required": true,
+    "reason": "Bundle 4 prepares protected/canonical H7 adjudication and must remain human-review gated."
+  },
+  "prior_checker_boundary": {
+    "bundle1_checker_current_status": "historical_hash_locked_mtu_registry_drift_not_current_proof",
+    "bundle2_checker_current_status": "historical_hash_locked_mtu_registry_drift_not_current_proof",
+    "current_proof_basis": [
+      "Bundle 4 checker validates current source-file hashes, including the live MTU registry hash.",
+      "Bundle 3 checker remains green on current main and preserves seven protected holds.",
+      "Bundle 1/2 artifacts are consumed as hash-pinned historical evidence, not as current-registry checkers."
+    ]
+  },
+  "required_before_mark_ready_or_merge": [
+    "Run the PR Readiness Reviewer against the exact remote PR head.",
+    "Include full live branch-protection checker output with ok: true.",
+    "Run Teacher, Economist, and Quality inspection lead reviews and require MORE_THAN_SATISFIED from each reviewer.",
+    "Route READY_FOR_HUMAN_REVIEW and wait for explicit owner authorization tied to the reviewed PR payload SHA.",
+    "Do not use L0-L2 READY_FOR_LEAD_ONLY handling for this protected/canonical adjudication-prep packet."
+  ],
+  "commands": [
+    "node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "node build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run check:agent-index-freshness",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:branch-protection",
+    "npm.cmd run review:pr-readiness -- --repo meijer1973/4veco-platform --pr <PR_NUMBER> --evidence reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json"
+  ]
+}
