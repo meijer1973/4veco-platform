@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-03T07:03:11.515Z
+Generated: 2026-07-03T17:09:48.119Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/integration-head-lead-review-supersession-1-20260703`
-Source commit: `f31e3a94057e63290da477f69b7fb80103f9c66c`
-Files indexed: 6946
+Source commit: `276d1126b9e32ce3cd10b3906a6e182302eab63e`
+Files indexed: 7050
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 679
+Count: 687
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -235,6 +235,8 @@ Count: 679
 - build-scripts/inspection/build-local-expert-contact-stage.js
 - build-scripts/inspection/build-local-expert-review-request-packet.js
 - build-scripts/inspection/build-local-expert-source-refresh-gate.js
+- build-scripts/inspection/build-owner-delivery-protocol-completion.js
+- build-scripts/inspection/build-owner-delivery-protocol-repair.js
 - build-scripts/inspection/build-owner-manual-dispatch-and-response-intake.js
 - build-scripts/inspection/build-selected-jurisdiction-deepening.js
 - build-scripts/inspection/build-source-refresh-execution-pilot.js
@@ -259,6 +261,10 @@ Count: 679
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
+- build-scripts/inspection/check-owner-delivery-protocol-completion.js
+- build-scripts/inspection/check-owner-delivery-protocol-completion.test.js
+- build-scripts/inspection/check-owner-delivery-protocol-repair.js
+- build-scripts/inspection/check-owner-delivery-protocol-repair.test.js
 - build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.js
 - build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.test.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.js
@@ -368,6 +374,7 @@ Count: 679
 - build-scripts/references/build-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/build-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/build-y2-four-target-cp6-scale-gate-decision-bundle-1.js
+- build-scripts/references/build-y2-four-target-cp6-scale-gate-owner-decision-1.js
 - build-scripts/references/build-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/build-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/build-y2-four-target-product-proof-gate-1.js
@@ -494,6 +501,7 @@ Count: 679
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-y2-four-target-cp6-scale-gate-decision-bundle-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-owner-decision-1.js
 - build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
@@ -852,7 +860,7 @@ Count: 25
 
 ## validators
 
-Count: 667
+Count: 674
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -867,6 +875,8 @@ Count: 667
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-validation-log.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-validation-log.md
 - archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-validation-log.md
 - archive/sprints/GOAL-IQS-SELECTED-DEEPENING-1/GOAL-IQS-SELECTED-DEEPENING-1-validation-log.md
 - archive/sprints/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1-validation-log.md
@@ -934,6 +944,10 @@ Count: 667
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
+- build-scripts/inspection/check-owner-delivery-protocol-completion.js
+- build-scripts/inspection/check-owner-delivery-protocol-completion.test.js
+- build-scripts/inspection/check-owner-delivery-protocol-repair.js
+- build-scripts/inspection/check-owner-delivery-protocol-repair.test.js
 - build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.js
 - build-scripts/inspection/check-owner-manual-dispatch-and-response-intake.test.js
 - build-scripts/inspection/check-selected-jurisdiction-deepening.js
@@ -1068,6 +1082,7 @@ Count: 667
 - build-scripts/references/check-y2-four-target-bounded-route-adoption-1.js
 - build-scripts/references/check-y2-four-target-bounded-route-post-adoption-proof-and-scale-precheck-1.js
 - build-scripts/references/check-y2-four-target-cp6-scale-gate-decision-bundle-1.js
+- build-scripts/references/check-y2-four-target-cp6-scale-gate-owner-decision-1.js
 - build-scripts/references/check-y2-four-target-cp6-scale-gate-readiness-bundle-1.js
 - build-scripts/references/check-y2-four-target-cross-repo-lesson-production-1.js
 - build-scripts/references/check-y2-four-target-product-proof-gate-1.js
@@ -1524,7 +1539,7 @@ Count: 667
 
 ## references
 
-Count: 928
+Count: 974
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1712,6 +1727,51 @@ Count: 928
 - references/data/inspection-standards/fixtures/negative/missing-op0-boundary.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/delivery-proof-invented.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/england-whole-uk-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/expert-as-official-authority.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/flanders-all-belgium-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/inspection-exam-approval-response.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/legal-compliance-response.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/localized-output-response.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/named-contact-storage.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/personal-data-response.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/proceed-to-analysis-without-delivery-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/response-without-consent.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/school-evidence-response.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/sent-without-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/support-accommodation-sufficiency-response.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/positive/england-owner-delivery-and-response-intake.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/positive/flanders-owner-delivery-and-response-intake.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/positive/owner-delivery-channel-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/positive/owner-delivery-protocol-completion-decision.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/positive/owner-delivery-response-quarantine-report.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/all-belgium-claim.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/all-school-network-claim.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/answer-model-attached.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/delivery-claimed-without-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/expert-treated-as-authority.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/flanders-shared-material.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/legal-compliance-claim-requested.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/localized-output-attached.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/missing-quarantine-classification.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/missing-sufficiency-quarantine.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/named-private-contact-stored.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/proof-format-duplicate-field.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/proof-format-extra-field.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/proof-format-missing-field.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/proof-format-reordered.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/response-analysis-without-schema-response.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/school-evidence-requested.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/student-data-included.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/support-accommodation-sufficiency-claim.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/timestamp-missing.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/unapproved-material-sent.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/negative/whole-uk-claim.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/positive/england-owner-delivery-protocol-instance.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/positive/flanders-owner-delivery-protocol-instance.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/positive/owner-delivery-protocol-decision.sample.json
+- references/data/inspection-standards/fixtures/owner-delivery-protocol-repair/positive/owner-delivery-protocol-plan.sample.json
 - references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/england-whole-uk-overclaim.sample.json
 - references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/expert-as-official-authority.sample.json
 - references/data/inspection-standards/fixtures/owner-manual-dispatch-and-response-intake/negative/flanders-all-belgium-overclaim.sample.json
@@ -2418,6 +2478,7 @@ Count: 928
 - references/schemas/operation-candidates.schema.json
 - references/schemas/owned-content-edge.schema.json
 - references/schemas/owned-source-registry.schema.json
+- references/schemas/owner-delivery-protocol.schema.v1.json
 - references/schemas/prior-knowledge-review.schema.json
 - references/schemas/quality-issue.schema.json
 - references/schemas/rag-chunk.schema.json
@@ -2457,7 +2518,7 @@ Count: 928
 
 ## reports
 
-Count: 4431
+Count: 4455
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2578,6 +2639,10 @@ Count: 4431
 - reports/inspection-standards/england-local-expert-response-intake.md
 - reports/inspection-standards/england-local-expert-review-request-packet.json
 - reports/inspection-standards/england-local-expert-review-request-packet.md
+- reports/inspection-standards/england-owner-delivery-and-response-intake.json
+- reports/inspection-standards/england-owner-delivery-and-response-intake.md
+- reports/inspection-standards/england-owner-delivery-protocol-instance.json
+- reports/inspection-standards/england-owner-delivery-protocol-instance.md
 - reports/inspection-standards/england-source-refresh-execution-results.json
 - reports/inspection-standards/england-source-refresh-execution-results.md
 - reports/inspection-standards/england-source-refresh-gate-simulation.json
@@ -2598,6 +2663,10 @@ Count: 4431
 - reports/inspection-standards/flanders-local-expert-response-intake.md
 - reports/inspection-standards/flanders-local-expert-review-request-packet.json
 - reports/inspection-standards/flanders-local-expert-review-request-packet.md
+- reports/inspection-standards/flanders-owner-delivery-and-response-intake.json
+- reports/inspection-standards/flanders-owner-delivery-and-response-intake.md
+- reports/inspection-standards/flanders-owner-delivery-protocol-instance.json
+- reports/inspection-standards/flanders-owner-delivery-protocol-instance.md
 - reports/inspection-standards/flanders-source-refresh-execution-results.json
 - reports/inspection-standards/flanders-source-refresh-execution-results.md
 - reports/inspection-standards/flanders-source-refresh-gate-simulation.json
@@ -2662,6 +2731,16 @@ Count: 4431
 - reports/inspection-standards/local-expert-source-refresh-gate-decision.md
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.json
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.md
+- reports/inspection-standards/owner-delivery-channel-proof.json
+- reports/inspection-standards/owner-delivery-channel-proof.md
+- reports/inspection-standards/owner-delivery-protocol-completion-decision.json
+- reports/inspection-standards/owner-delivery-protocol-completion-decision.md
+- reports/inspection-standards/owner-delivery-protocol-decision.json
+- reports/inspection-standards/owner-delivery-protocol-decision.md
+- reports/inspection-standards/owner-delivery-protocol-plan.json
+- reports/inspection-standards/owner-delivery-protocol-plan.md
+- reports/inspection-standards/owner-delivery-response-quarantine-report.json
+- reports/inspection-standards/owner-delivery-response-quarantine-report.md
 - reports/inspection-standards/owner-manual-dispatch-and-response-intake-decision.json
 - reports/inspection-standards/owner-manual-dispatch-and-response-intake-decision.md
 - reports/inspection-standards/owner-manual-dispatch-record.json
@@ -4348,6 +4427,12 @@ Count: 4431
 - reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/review-packet.json
 - reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/review-packet.md
 - reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/subagent-lead-reviews.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1/owner-decision-intake.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1/owner-decision-intake.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1/rendered-owner-decision.html
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1/review-packet.json
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1/review-packet.md
+- reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-OWNER-DECISION-1/subagent-lead-reviews.md
 - reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.json
 - reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.md
 - reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/rendered-readiness-bundle.html
@@ -6911,7 +6996,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 722
+Count: 746
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7008,6 +7093,27 @@ Count: 722
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-lead-architecture-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-accessibility-inclusion-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-closure-record.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-correction-log.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-england-dispatch-intake-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-flanders-dispatch-intake-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-lead-architecture-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-legal-privacy-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-teacher-economics-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-accessibility-inclusion-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-closure-record.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-correction-log.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-england-delivery-protocol-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-flanders-delivery-protocol-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-lead-architecture-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-legal-privacy-review.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-subagent-quality-gate-record.md
+- archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-teacher-economics-review.md
 - archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-accessibility-inclusion-review.md
 - archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-closure-record.md
 - archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-correction-log.md
@@ -7302,6 +7408,7 @@ Count: 722
 - docs/inspection-standards/england-local-expert-review-request.md
 - docs/inspection-standards/england-local-expert-source-gate.md
 - docs/inspection-standards/england-overlay-deepening.md
+- docs/inspection-standards/england-owner-delivery-protocol.md
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/flanders-bounded-source-refresh-packet.md
@@ -7309,6 +7416,7 @@ Count: 722
 - docs/inspection-standards/flanders-local-expert-review-request.md
 - docs/inspection-standards/flanders-local-expert-source-gate.md
 - docs/inspection-standards/flanders-overlay-deepening.md
+- docs/inspection-standards/flanders-owner-delivery-protocol.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
 - docs/inspection-standards/internal-overlay-prototype-planning-contract.md
 - docs/inspection-standards/international-common-core-model.md
@@ -7320,6 +7428,7 @@ Count: 722
 - docs/inspection-standards/local-expert-review-request-template.md
 - docs/inspection-standards/local-expert-source-refresh-gate-contract.md
 - docs/inspection-standards/nl-vo-evidence-model.md
+- docs/inspection-standards/owner-delivery-protocol-contract.md
 - docs/inspection-standards/report-only-generator-plan.md
 - docs/inspection-standards/report-only-schema-design.md
 - docs/inspection-standards/selected-jurisdiction-transformation-contract.md
