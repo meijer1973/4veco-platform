@@ -11,7 +11,9 @@ const {
   supplementalFromReadinessDecision,
   isBranchProtectionReadForbiddenSummary,
   localLaneHandoffCommand,
+  parseIntegrationLeadReview,
   validatePrState,
+  validateIntegrationLeadReview,
   waitForMainCi,
 } = require('./integrate-authorized-pr');
 const { renderDecisionMarkdown } = require('./pr-readiness-router');
@@ -211,8 +213,8 @@ function integrationHarness(overrides = {}) {
       return { ok: true };
     }),
     validatePrState,
-    generateAndApplyReadiness: jest.fn((repo, prNumber, authorization, lineage) => {
-      calls.readiness.push({ repo, prNumber, authorization, lineage });
+    generateAndApplyReadiness: jest.fn((repo, prNumber, authorization, lineage, branchProtection, readinessOptions = {}) => {
+      calls.readiness.push({ repo, prNumber, authorization, lineage, branchProtection, options: readinessOptions });
       return {
         ok: true,
         phase: 'readiness',
@@ -448,6 +450,134 @@ describe('authorized PR integration runner', () => {
     );
   });
 
+  test('integration-head lead review supersedes stale payload readiness lead proof', () => {
+    const payloadDecision = readyDecision({
+      proof: {
+        ...readyDecision().proof,
+        lead_review_path: 'reports/sprints/OLD-lead-review-round2.md',
+        lead_reviewed_sha: headSha,
+      },
+    });
+    const review = {
+      result: 'PASS',
+      review_path: 'reports/sprints/NEW-lead-review-round3.md',
+      reviewed_payload_head_sha: payloadSha,
+      integration_head_sha: integrationSha,
+      scope: 'integration-head lineage/effective-payload review',
+    };
+    const supplemental = supplementalFromReadinessDecision(
+      payloadDecision,
+      authorizationRecord(),
+      okLineage(integrationSha),
+      { ok: true, required_approving_review_count: 0 },
+      { integrationLeadReview: review }
+    );
+
+    expect(supplemental.proof.payload_readiness_lead_review).toMatchObject({
+      path: 'reports/sprints/OLD-lead-review-round2.md',
+      reviewed_commit_sha: headSha,
+    });
+    expect(supplemental.proof.lead_review).toEqual({
+      path: 'reports/sprints/NEW-lead-review-round3.md',
+      result: 'PASS',
+      reviewed_commit_sha: integrationSha,
+    });
+  });
+
+  test('integration-head lead review parser accepts markdown review records', () => {
+    const parsed = parseIntegrationLeadReview([
+      '# Lead Review',
+      'Verdict: **PASS**',
+      `Reviewed integration head: \`${integrationSha}\``,
+      `Reviewed payload head: \`${payloadSha}\``,
+    ].join('\n'), 'reports/sprints/example-lead-review-round3.md');
+
+    expect(parsed).toMatchObject({
+      result: 'PASS',
+      integration_head_sha: integrationSha,
+      reviewed_payload_head_sha: payloadSha,
+      path: 'reports/sprints/example-lead-review-round3.md',
+    });
+  });
+
+  test('integration-head lead review requires refresh verification for allowlisted evidence tail', () => {
+    const reviewedIntegrationHead = '1'.repeat(40);
+    const finalHead = '2'.repeat(40);
+    const lineage = {
+      ...okLineage(finalHead),
+      requires_deterministic_refresh: false,
+      intervening_commits: [
+        { sha: reviewedIntegrationHead, classification: 'conflict_free_main_base_sync_merge', invalidating: false },
+        {
+          sha: finalHead,
+          classification: 'allowlisted_deterministic_evidence_refresh',
+          invalidating: false,
+          changed_paths: ['reports/github-agent-index-platform.md'],
+        },
+      ],
+    };
+    const review = {
+      result: 'PASS',
+      review_path: 'reports/sprints/example-lead-review-round3.md',
+      reviewed_payload_head_sha: payloadSha,
+      integration_head_sha: reviewedIntegrationHead,
+    };
+
+    expect(validateIntegrationLeadReview(review, lineage, { deterministicRefreshVerified: true })).toMatchObject({
+      ok: true,
+      failures: [],
+    });
+    expect(validateIntegrationLeadReview(review, lineage)).toMatchObject({
+      ok: false,
+      failures: expect.arrayContaining(['integration_lead_review_deterministic_refresh_not_verified']),
+    });
+  });
+
+  test('integration-head lead review rejects wrong payload, wrong head, and non-passing result', () => {
+    const review = {
+      result: 'REQUEST_CHANGES',
+      review_path: 'reports/sprints/example-lead-review-round3.md',
+      reviewed_payload_head_sha: '9'.repeat(40),
+      integration_head_sha: '8'.repeat(40),
+    };
+
+    expect(validateIntegrationLeadReview(review, okLineage(integrationSha))).toMatchObject({
+      ok: false,
+      failures: expect.arrayContaining([
+        'integration_lead_review_result_not_passing',
+        'integration_lead_review_payload_mismatch',
+        'integration_lead_review_head_not_in_lineage',
+      ]),
+    });
+  });
+
+  test('integration-head lead review fails closed when supplied review is stale after non-evidence tail', () => {
+    const reviewedIntegrationHead = '1'.repeat(40);
+    const finalHead = '2'.repeat(40);
+    const lineage = {
+      ...okLineage(finalHead),
+      intervening_commits: [
+        { sha: reviewedIntegrationHead, classification: 'conflict_free_main_base_sync_merge', invalidating: false },
+        {
+          sha: finalHead,
+          classification: 'substantive_pr_authored_commit_after_authorization',
+          invalidating: true,
+          changed_paths: ['build-scripts/review-gates/integrate-authorized-pr.js'],
+        },
+      ],
+    };
+
+    expect(validateIntegrationLeadReview({
+      result: 'PASS',
+      review_path: 'reports/sprints/example-lead-review-round3.md',
+      reviewed_payload_head_sha: payloadSha,
+      integration_head_sha: reviewedIntegrationHead,
+    }, lineage)).toMatchObject({
+      ok: false,
+      failures: expect.arrayContaining(['integration_lead_review_tail_not_evidence_only']),
+    });
+  });
+
   test('post-merge CI verifier accepts successful main run', () => {
     const result = waitForMainCi('meijer1973/4veco-platform', headSha, { dryRun: true });
     expect(result).toMatchObject({ ok: true, dry_run: true, head_sha: headSha });
@@ -642,6 +772,51 @@ describe('authorized PR integration runner', () => {
     expect(calls.postMergeCi).toEqual([
       { repo: 'meijer1973/4veco-platform', sha: mergeSha },
     ]);
+  });
+
+  test('lane passes validated integration-head lead review into readiness generation', () => {
+    const { calls, options } = integrationHarness({
+      options: {
+        integrationLeadReview: {
+          result: 'PASS',
+          review_path: 'reports/sprints/example-lead-review-round3.md',
+          reviewed_payload_head_sha: payloadSha,
+          integration_head_sha: integrationSha,
+        },
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged' });
+    expect(calls.readiness[0].options.integrationLeadReview).toMatchObject({
+      path: 'reports/sprints/example-lead-review-round3.md',
+      result: 'PASS',
+      reviewed_payload_head_sha: payloadSha,
+      integration_head_sha: integrationSha,
+    });
+  });
+
+  test('lane fails closed when supplied integration-head lead review is invalid', () => {
+    const { calls, options } = integrationHarness({
+      options: {
+        integrationLeadReview: {
+          result: 'REQUEST_CHANGES',
+          review_path: 'reports/sprints/example-lead-review-round3.md',
+          reviewed_payload_head_sha: payloadSha,
+          integration_head_sha: integrationSha,
+        },
+      },
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({ ok: false, phase: 'integration_head_lead_review_invalid' });
+    expect(calls.statuses).toContainEqual(expect.objectContaining({
+      state: 'failure',
+      description: expect.stringContaining('Integration-head lead review invalid'),
+    }));
+    expect(calls.merges).toEqual([]);
   });
 
   test('runner fails when activated branch protection has an extra required context', () => {

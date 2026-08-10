@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "manifest_id": "exercise-authority-hygiene-v1",
+  "status": "current",
+  "updated_by_sprint": "EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1",
+  "authority_boundaries": {
+    "source_data_edits_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "engine_runtime_behavior_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "target_exercise_writes_authorized": false,
+    "product_route_adoption_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "exemplar_authority": [
+    {
+      "id": "1.1.3-exit-ticket",
+      "canonical_path": "references/exemplars/1.1.3-exit-ticket/",
+      "canonical_status": "current_operational_exemplar",
+      "historical_alias_path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/",
+      "historical_alias_status": "historical_review_copy",
+      "current_authority_sources": [
+        "references/ui/layout-registry.json",
+        "references/ui/interaction-policy.json"
+      ],
+      "same_content_files": [
+        "package-readme.md",
+        "prototype.html",
+        "quality-brief.md",
+        "reviews/accessibility-review.md",
+        "reviews/student-experience-review.md",
+        "reviews/testing-regression-review.md",
+        "reviews/visual-interaction-review.md"
+      ],
+      "known_historical_differences": [
+        "README.md",
+        "candidate-data.json",
+        "implementation-handoff.md",
+        "policy-extract.md",
+        "reviews/lead-synthesis.md",
+        "reviews/teacher-learning-quality-review.md"
+      ],
+      "preserve_historical_copy": true,
+      "active_agent_routing_path": "references/exemplars/1.1.3-exit-ticket/"
+    }
+  ],
+  "golden_fixtures": {
+    "active_fixture_root": "build-scripts/sprints/fixtures",
+    "report_snapshot_root": "reports/fixtures/golden-ticket-layout",
+    "ui_fixture_index": "references/ui/golden-exercise-checker-fixtures.json",
+    "duplicate_policy": "active_checker_fixture_with_frozen_report_snapshot",
+    "duplicate_pairs": [
+      {
+        "id": "golden-ticket-reference",
+        "active_fixture": "build-scripts/sprints/fixtures/golden-ticket-reference.html",
+        "report_snapshot": "reports/fixtures/golden-ticket-layout/golden-ticket-reference.html",
+        "sha256": "D7DA108BF0018FE706D3A55CA3A4FC1839FFC638AF8774CA2F481C62E0C1837F"
+      },
+      {
+        "id": "hybrid-frankenstein-exit-ticket",
+        "active_fixture": "build-scripts/sprints/fixtures/hybrid-frankenstein-exit-ticket.html",
+        "report_snapshot": "reports/fixtures/golden-ticket-layout/hybrid-frankenstein-exit-ticket.html",
+        "sha256": "990DEE56F7BED10FE98C549ACF970A30C16077170A8B791D14B6CB88D461B1B9"
+      },
+      {
+        "id": "legacy-exit-ticket",
+        "active_fixture": "build-scripts/sprints/fixtures/legacy-exit-ticket.html",
+        "report_snapshot": "reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html",
+        "sha256": "A98BCC1FAAB7C676B02E1E2755A4061B1E0422091C4604889E79A5BE71D3ED9B"
+      }
+    ],
+    "active_only_fixtures": [
+      {
+        "id": "golden-ticket-layout-boundary-negative",
+        "path": "build-scripts/sprints/fixtures/golden-ticket-layout-boundary-negative.html",
+        "disposition": "active_negative_checker_fixture",
+        "sha256": "9A6E996E55CBD4261B6946EC6C59A0C234DE5186C9346EAB3B2B10755700304D"
+      }
+    ]
+  },
+  "knowledge_artifacts": [
+    {
+      "id": "exit-ticket-game-1.1.1-zip",
+      "path": "knowledge/exit-ticket-game-1.1.1.zip",
+      "note_path": "knowledge/exit-ticket-game-1.1.1-note.md",
+      "git_tracked": true,
+      "bytes": 54420,
+      "sha256": "E791BCC5FC3302140265F9F80BFD276E883DAFE9F96ACEDCAEDFEAE840523DF9",
+      "disposition": "tracked_historical_reference_archive",
+      "active_runtime_dependency": false,
+      "generated_lesson_output": false,
+      "product_authority": false,
+      "student_use_authority": false,
+      "delete_or_replace_without_review": false
+    }
+  ]
+}

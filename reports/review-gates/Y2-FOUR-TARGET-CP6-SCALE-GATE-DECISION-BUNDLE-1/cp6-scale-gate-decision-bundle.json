@@ -1,0 +1,682 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1",
+  "generated_on": "2026-07-02",
+  "status": "cp6_scale_gate_decision_bundle_ready_for_human_review",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "product_end_state": "Prepare the owner-facing CP-6 / Scale Gate decision bundle for the four bounded Year 2 product routes, joining current-main proof, route-use evidence, source reconstruction, governed MTU/task-family proof, exit-ticket candidate decisions, rollback, and authority boundaries without closing CP-6, opening Scale Gate, or authorizing student/product use.",
+  "original_sprint_gate_spec": {
+    "product_end_state_baseline": "4veco-lessen/specifications/product-end-state.md",
+    "companion_core_specification": "4veco-lessen/specifications/companion-core-specifications.md",
+    "source_reconstruction_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/source-reconstruction-proof.json",
+    "mtu_task_family_governed_proof": "reports/review-gates/Y2-SOURCE-RECONSTRUCTION-AND-MTU-PROOF-1/mtu-task-family-governed-proof.json",
+    "product_proof_packet": "reports/review-gates/Y2-FOUR-TARGET-PRODUCT-PROOF-GATE-1/product-proof-packet.json",
+    "bounded_adoption_registry": "references/data/year2-target-foundation/product-route-adoption-registry.json",
+    "bounded_adoption_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-ADOPTION-1/bounded-route-adoption-packet.json",
+    "post_adoption_precheck_packet": "reports/review-gates/Y2-FOUR-TARGET-BOUNDED-ROUTE-POST-ADOPTION-PROOF-AND-SCALE-PRECHECK-1/post-adoption-proof-and-scale-precheck.json",
+    "readiness_bundle": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/cp6-scale-gate-readiness-bundle.json",
+    "readiness_review_packet": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/review-packet.json",
+    "lesson_manifest": "year2-candidate-lessons/four-target-lesson-production-1/manifest.json",
+    "route_contracts": "year2-candidate-lessons/four-target-lesson-production-1/route-contracts.json"
+  },
+  "non_negotiable_requirements": [
+    "Use REV-STD-1 and cite the product end-state plus original sprint/gate specs.",
+    "Preserve the four-route bundle: Book 5, Book 6, Book 7, and Book 8 must be reviewed together.",
+    "Tie the decision bundle to exact current platform and lesson main evidence.",
+    "Confirm PR #193/post-adoption proof lineage is present before owner decision.",
+    "Retain route-use evidence, rendered source reconstruction, governed MTU/task-family proof, and inherited screenshot rationale.",
+    "Record an explicit exit-ticket equivalence decision for each route while keeping completion language candidate-only and unauthorized.",
+    "Keep CP-6 closure and Scale Gate as owner decisions; this packet may only prepare the decision surface.",
+    "Keep diagnostics, mastery, PV, summative use, broad rollout, student use, student/product use, protected MTU mutation, operation mutation, answer-skill mutation, and broad OP closure blocked.",
+    "Attach subagent lead-review evidence before PR readiness or merge review."
+  ],
+  "current_main_evidence": {
+    "platform_branch": "codex/y2-four-target-cp6-scale-gate-decision-bundle-1-20260702",
+    "platform_origin_main_sha": "8619df92716c7d78bb9b539078b5ea1d39410a08",
+    "platform_checked_head_sha": "3d1c0e8856834aa535525bad5457219cde232c85",
+    "lesson_origin_main_sha": "ba08b9c2e033a877c0d1b57952055ce697912a22",
+    "lesson_checked_head_sha": "ba08b9c2e033a877c0d1b57952055ce697912a22",
+    "platform_bounded_route_adoption_and_post_adoption_proof_merge_commit": "a44678734809025656b4200cebe0061f61e8e597",
+    "platform_bounded_route_adoption_and_post_adoption_proof_is_ancestor": true,
+    "inherited_readiness_current_main_evidence": {
+      "platform_base_main_head_sha": "8619df92716c7d78bb9b539078b5ea1d39410a08",
+      "platform_payload_parent_sha": "3d1c0e8856834aa535525bad5457219cde232c85",
+      "lesson_current_main_head_sha": "ba08b9c2e033a877c0d1b57952055ce697912a22",
+      "lesson_checked_head_sha": "ba08b9c2e033a877c0d1b57952055ce697912a22",
+      "platform_bounded_adoption_merge_commit": "3e31e3582faf9df794e6d13865efdd5e20367366",
+      "lesson_bounded_adoption_merge_commit": "aefab74fb4d609e42140723b3e01db61e1f3644e",
+      "platform_post_adoption_merge_commit": "aa824cb50bea6735f9c86a344389ae6528f9b1de",
+      "platform_bounded_adoption_is_ancestor": true,
+      "lesson_bounded_adoption_is_ancestor": true,
+      "platform_post_adoption_is_ancestor": true,
+      "lesson_route_output_diff_since_bounded_adoption": [],
+      "lesson_route_output_unchanged_since_bounded_adoption": true
+    },
+    "protected_route_adoption_surface_diff_since_post_adoption": [
+      "build-scripts/content/book-1/README.md",
+      "build-scripts/content/book-1/b1-112-presentation-v2-model.js",
+      "build-scripts/content/book-1/b1-112-presentation-v2.js",
+      "build-scripts/content/book-1/b1-112-student-web.js",
+      "build-scripts/content/book-1/presentation-v2-registry.js"
+    ],
+    "decision_bundle_protected_surface_diff_against_current_main": [],
+    "protected_route_adoption_surfaces_unchanged_by_decision_bundle": true
+  },
+  "inherited_readiness_bundle": {
+    "sprint_id": "Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1",
+    "status": "cp6_scale_gate_readiness_bundle_ready_for_human_review",
+    "route": "READY_FOR_HUMAN_REVIEW",
+    "lead_review_evidence": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-READINESS-BUNDLE-1/subagent-lead-reviews.md",
+    "authority_claims": {
+      "cp6_scale_gate_readiness_bundle_prepared": true,
+      "ready_for_human_cp6_scale_gate_review": true,
+      "bounded_product_route_preview_live": true,
+      "route_registry_current_main_verified": true,
+      "rendered_product_proof_inherited": true,
+      "rendered_source_reconstruction_inherited": true,
+      "governed_mtu_task_family_proof_inherited": true,
+      "completion_language_decision_recorded": true,
+      "rollback_proof_recorded": true,
+      "prior_bounded_product_route_adoption_authorized": true,
+      "bounded_product_route_preview_authorized": true,
+      "new_product_route_adoption_authorized_by_this_packet": false,
+      "broad_product_route_rollout_authorized": false,
+      "cp6_review_ready_for_human_decision": true,
+      "scale_gate_review_ready_for_human_decision": true,
+      "cp6_closure_authorized": false,
+      "scale_gate_authorized": false,
+      "diagnostics_authorized": false,
+      "adaptive_routing_authorized": false,
+      "mastery_authorized": false,
+      "pv_authorized": false,
+      "summative_use_authorized": false,
+      "broad_student_rollout_authorized": false,
+      "student_use_authorized": false,
+      "student_product_use_authorized": false,
+      "protected_mtu_mutation_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_registry_mutation_authorized": false,
+      "broad_operation_row_closure_authorized": false,
+      "default_book_navigation_mutated": false,
+      "active_curriculum_sequence_mutated": false,
+      "autonomous_merge_authorized": false
+    },
+    "required_false_flags": [
+      "cp6_closure_authorized",
+      "scale_gate_authorized",
+      "diagnostics_authorized",
+      "adaptive_routing_authorized",
+      "mastery_authorized",
+      "pv_authorized",
+      "summative_use_authorized",
+      "broad_student_rollout_authorized",
+      "student_use_authorized",
+      "student_product_use_authorized",
+      "new_product_route_adoption_authorized_by_this_packet",
+      "broad_product_route_rollout_authorized",
+      "protected_mtu_mutation_authorized",
+      "operation_registry_mutation_authorized",
+      "answer_skill_registry_mutation_authorized",
+      "broad_operation_row_closure_authorized",
+      "default_book_navigation_mutated",
+      "active_curriculum_sequence_mutated",
+      "autonomous_merge_authorized"
+    ],
+    "required_lead_review_scopes": [
+      "teacher route usability",
+      "economics/source fidelity",
+      "accessibility/mobile",
+      "short-check behavior",
+      "exit-ticket target equivalence",
+      "authority boundaries and rollback"
+    ],
+    "core_requirement_checklist": {
+      "product_end_state_and_original_specs_cited": true,
+      "current_platform_and_lesson_main_heads_recorded": true,
+      "bounded_adoption_and_post_adoption_lineage_present": true,
+      "all_four_routes_included": true,
+      "inherited_product_screenshot_proof_complete": true,
+      "no_refreshed_screenshots_required_because_lesson_routes_unchanged": true,
+      "source_readability_review_complete": true,
+      "short_check_behavior_review_complete": true,
+      "exit_ticket_target_equivalence_review_complete": true,
+      "governed_mtu_task_family_proof_complete": true,
+      "completion_language_decision_recorded": true,
+      "rollback_proof_recorded": true,
+      "lead_review_artifact_required_and_named": true,
+      "downstream_authority_flags_false": true
+    },
+    "findings": [
+      {
+        "finding": "The bounded Year 2 four-target route preview is current on platform and lesson main and is ready for human CP-6/Scale Gate review.",
+        "classification": "core_requirement_met",
+        "blocks": "none for human review of this readiness bundle once lead-review and PR-readiness evidence are attached",
+        "does_not_block": "owner review of the exact readiness packet",
+        "proof_required_to_close": "current-main lineage, inherited screenshot proof, route records, lead reviews, exact-head CI, branch-protection ok:true, and PR Readiness Reviewer output"
+      },
+      {
+        "finding": "Rendered source reconstruction and governed MTU/task-family proof are inherited without executing protected mutations.",
+        "classification": "core_requirement_met",
+        "blocks": "none for readiness-bundle review",
+        "does_not_block": "using the proof as evidence for human CP-6/Scale Gate deliberation",
+        "proof_required_to_close": "retain source reconstruction JSON/gallery, governed MTU proof, and no-mutation authority flags together"
+      },
+      {
+        "finding": "Advisory short checks remain practice feedback and exit tickets remain target-equivalent candidates only.",
+        "classification": "core_requirement_met",
+        "blocks": "none for readiness-bundle review",
+        "does_not_block": "human review of short-check behavior and exit-ticket candidate equivalence",
+        "proof_required_to_close": "route-surface checks, route contracts, and completion-language decision preserved on exact head"
+      },
+      {
+        "finding": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use remain blocked until explicit owner authorization.",
+        "classification": "scale_blocker",
+        "blocks": "all downstream product/student-use authority",
+        "does_not_block": "installing and reviewing this readiness packet",
+        "proof_required_to_close": "explicit owner authorization for the reviewed readiness payload and decision scope after required lead reviews"
+      }
+    ],
+    "carried_issues": [
+      {
+        "issue_id": "owner-decision-required-before-cp6-or-scale-gate-closure",
+        "classification": "scale_blocker",
+        "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+        "does_not_block": "human review of this readiness bundle and merge of this evidence packet if authorized",
+        "proof_required_to_close": "explicit owner authorization for the reviewed readiness payload and decision scope, with clean lead review, branch protection ok:true, zero unresolved review threads, and PR Readiness Reviewer output"
+      },
+      {
+        "issue_id": "protected-mtu-operation-answer-skill-mutation-not-authorized",
+        "classification": "scale_blocker",
+        "blocks": "protected MTU mutation, operation registry mutation, answer-skill mutation, and broad operation row closure",
+        "does_not_block": "using existing governed MTU/task-family proof as evidence for human review",
+        "proof_required_to_close": "separate governed mutation PR with exact diffs, validators, lead review, and owner authorization"
+      }
+    ]
+  },
+  "route_use_evidence_summary": {
+    "route_count": 4,
+    "bounded_entry_points": [
+      "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/index.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/index.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/index.html",
+      "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/index.html"
+    ],
+    "lesson_output_root": "year2-candidate-lessons/four-target-lesson-production-1",
+    "inherited_screenshot_count": 48,
+    "screenshot_refresh_required": false,
+    "screenshot_refresh_reason": "Lesson root index and year2-candidate lesson output are unchanged since the bounded adoption merge; inherited 48 screenshot proof remains the applicable visual evidence for this packet."
+  },
+  "exit_ticket_equivalence_decision_summary": {
+    "decision_status": "candidate_only_ready_for_owner_decision_not_completion_proof",
+    "all_requirements_visible": true,
+    "all_constructed_response_present": true,
+    "completion_language_authorized": false,
+    "owner_decision_required_before_any_completion_claim": true
+  },
+  "cp6_scale_gate_decision_matrix": [
+    {
+      "decision": "CP-6 closure",
+      "status": "READY_FOR_OWNER_DECISION",
+      "authorized_by_this_packet": false,
+      "blocks": "CP-6 closure and any CP-6-dependent downstream route",
+      "does_not_block": "human review of the exact decision bundle",
+      "proof_required_to_close": "explicit owner authorization for the reviewed decision payload lineage and decision scope, supported by exact-head CI, branch-protection ok:true, lead review, review-thread, and PR Readiness Reviewer proof"
+    },
+    {
+      "decision": "Scale Gate",
+      "status": "READY_FOR_OWNER_DECISION",
+      "authorized_by_this_packet": false,
+      "blocks": "Scale Gate, broad rollout, and student/product-use reliance",
+      "does_not_block": "human review of bounded route readiness and decision evidence",
+      "proof_required_to_close": "explicit owner Scale Gate decision on the reviewed payload lineage with retained scope limits and exact-head PR proof as evidence"
+    },
+    {
+      "decision": "Diagnostics / mastery / adaptive routing / PV",
+      "status": "BLOCKED_NOT_REQUESTED",
+      "authorized_by_this_packet": false,
+      "blocks": "diagnostics, mastery, adaptive routing, and PV use",
+      "does_not_block": "CP-6 / Scale Gate decision review with these authorities false",
+      "proof_required_to_close": "separate governed product-authority PR and owner authorization"
+    },
+    {
+      "decision": "Summative use and target-equivalent completion language",
+      "status": "BLOCKED_NOT_REQUESTED",
+      "authorized_by_this_packet": false,
+      "blocks": "summative use, grades, scores, mastery claims, and completion claims",
+      "does_not_block": "reviewing exit-ticket candidates as candidates only",
+      "proof_required_to_close": "separate summative/target-equivalent decision with answer contracts, after-interaction proof, and owner authorization"
+    },
+    {
+      "decision": "Student use / student-product use / broad rollout",
+      "status": "BLOCKED_NOT_REQUESTED",
+      "authorized_by_this_packet": false,
+      "blocks": "student use, student/product use, and broad rollout",
+      "does_not_block": "owner review of whether the bounded routes are ready for a later authorized gate",
+      "proof_required_to_close": "separate release decision with product routing, support, monitoring, rollback, and owner authorization"
+    },
+    {
+      "decision": "Protected MTU, operation, answer-skill, or broad OP closure mutation",
+      "status": "BLOCKED_NOT_REQUESTED",
+      "authorized_by_this_packet": false,
+      "blocks": "protected MTU mutation, operation registry mutation, answer-skill mutation, and broad OP row closure",
+      "does_not_block": "using no-mutation governed proof as review evidence",
+      "proof_required_to_close": "separate governed mutation PR with validators, lead review, and owner authorization"
+    }
+  ],
+  "teacher_economics_review_requirements": {
+    "teacher_review_must_confirm": [
+      "the four route pages are understandable as teacher/owner review routes, not as default student sequence",
+      "short checks are advisory practice feedback only",
+      "exit tickets are usable target-equivalent candidates without summative/completion language",
+      "direct deep links are not relied on as broad product exposure proof"
+    ],
+    "economics_review_must_confirm": [
+      "source reconstruction remains readable and source-first",
+      "answer contracts and route prompts remain aligned",
+      "Book 6 revenue derivation/output choice keeps OP-C1 and OP-C2, elasticity explanation keeps OP-E1, and OP-D2 stays excluded",
+      "no operation, MTU, or answer-skill mutation is implied by this decision bundle"
+    ]
+  },
+  "lead_review_requirements": {
+    "required": true,
+    "required_scopes": [
+      "teacher decision usability",
+      "economics/source fidelity",
+      "accessibility/mobile",
+      "short-check and exit-ticket behavior",
+      "exit-ticket target-equivalence decision",
+      "CP-6 / Scale Gate authority boundaries",
+      "rollback and scope control"
+    ],
+    "evidence_file": "reports/review-gates/Y2-FOUR-TARGET-CP6-SCALE-GATE-DECISION-BUNDLE-1/subagent-lead-reviews.md",
+    "required_verdicts": [
+      "PASS",
+      "PASS WITH FLAGS"
+    ],
+    "missing_lead_review_blocks_pr_readiness": true
+  },
+  "records": [
+    {
+      "route_id": "Y2-B5-PENSION-TIME-STOCK-FLOW-TARGET-1",
+      "target_owner_candidate_id": "Y2-B5-P13",
+      "paragraph_code": "5.4.2",
+      "route_label": "5.4.2 Pensioenmodel en koopkracht",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/5.4.2-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-5/5.4.2-pensioenmodel-en-koopkracht/route-contract.json"
+      },
+      "route_use_evidence": {
+        "source_first_route_exists": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "student_visible_internal_terms_screened": true,
+        "no_completion_or_student_product_use_language": true
+      },
+      "source_and_mtu_evidence": {
+        "source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "source_context_visible_in_route": true,
+        "official_locators_count": 2,
+        "rendered_artifact_count": 2,
+        "governed_mtu_proof_status": "complete_review_proof_pending_human_acceptance",
+        "governed_mtu_proof_case_count": 4,
+        "governed_mtu_proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "exit_ticket_equivalence_decision": {
+        "decision_status": "candidate_only_ready_for_owner_decision_not_completion_proof",
+        "target_equivalent_requirements_visible": true,
+        "constructed_response_present": true,
+        "local_feedback_present": true,
+        "target_equivalent_completion_language_authorized": false,
+        "student_use_authorized": false,
+        "owner_decision_required_before_any_completion_claim": true,
+        "negative_guards": [
+          "no score, grade, mastery, diagnostics, PV, summative, or student/product-use language",
+          "no target-equivalent completion claim",
+          "no CP-6 or Scale Gate closure claim",
+          "no replacement of teacher/owner judgment with local feedback"
+        ]
+      },
+      "core_requirement_checklist": {
+        "route_use_evidence_complete": true,
+        "source_readability_evidence_complete": true,
+        "short_check_behavior_evidence_complete": true,
+        "exit_ticket_candidate_evidence_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "completion_language_still_unauthorized": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B6-HOUSING-FINANCE-RENT-MARKET-TARGET-1",
+      "target_owner_candidate_id": "Y2-B6-P12",
+      "paragraph_code": "6.4.2",
+      "route_label": "6.4.2 Woningfinanciering en huurmarkt",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/6.4.2-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-6/6.4.2-woningfinanciering-en-huurmarkt/route-contract.json"
+      },
+      "route_use_evidence": {
+        "source_first_route_exists": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "student_visible_internal_terms_screened": true,
+        "no_completion_or_student_product_use_language": true
+      },
+      "source_and_mtu_evidence": {
+        "source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "source_context_visible_in_route": true,
+        "official_locators_count": 3,
+        "rendered_artifact_count": 3,
+        "governed_mtu_proof_status": "complete_review_proof_pending_human_acceptance",
+        "governed_mtu_proof_case_count": 8,
+        "governed_mtu_proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "exit_ticket_equivalence_decision": {
+        "decision_status": "candidate_only_ready_for_owner_decision_not_completion_proof",
+        "target_equivalent_requirements_visible": true,
+        "constructed_response_present": true,
+        "local_feedback_present": true,
+        "target_equivalent_completion_language_authorized": false,
+        "student_use_authorized": false,
+        "owner_decision_required_before_any_completion_claim": true,
+        "negative_guards": [
+          "no score, grade, mastery, diagnostics, PV, summative, or student/product-use language",
+          "no target-equivalent completion claim",
+          "no CP-6 or Scale Gate closure claim",
+          "no replacement of teacher/owner judgment with local feedback"
+        ]
+      },
+      "core_requirement_checklist": {
+        "route_use_evidence_complete": true,
+        "source_readability_evidence_complete": true,
+        "short_check_behavior_evidence_complete": true,
+        "exit_ticket_candidate_evidence_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "completion_language_still_unauthorized": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B7-CREDIT-INSURANCE-INFORMATION-TARGET-1",
+      "target_owner_candidate_id": "Y2-B7-P13",
+      "paragraph_code": "7.4.1",
+      "route_label": "7.4.1 Kredietverzekering en informatieproblemen",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/7.4.1-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-7/7.4.1-kredietverzekering-en-informatieproblemen/route-contract.json"
+      },
+      "route_use_evidence": {
+        "source_first_route_exists": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "student_visible_internal_terms_screened": true,
+        "no_completion_or_student_product_use_language": true
+      },
+      "source_and_mtu_evidence": {
+        "source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "source_context_visible_in_route": true,
+        "official_locators_count": 2,
+        "rendered_artifact_count": 2,
+        "governed_mtu_proof_status": "complete_review_proof_pending_human_acceptance",
+        "governed_mtu_proof_case_count": 4,
+        "governed_mtu_proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "exit_ticket_equivalence_decision": {
+        "decision_status": "candidate_only_ready_for_owner_decision_not_completion_proof",
+        "target_equivalent_requirements_visible": true,
+        "constructed_response_present": true,
+        "local_feedback_present": true,
+        "target_equivalent_completion_language_authorized": false,
+        "student_use_authorized": false,
+        "owner_decision_required_before_any_completion_claim": true,
+        "negative_guards": [
+          "no score, grade, mastery, diagnostics, PV, summative, or student/product-use language",
+          "no target-equivalent completion claim",
+          "no CP-6 or Scale Gate closure claim",
+          "no replacement of teacher/owner judgment with local feedback"
+        ]
+      },
+      "core_requirement_checklist": {
+        "route_use_evidence_complete": true,
+        "source_readability_evidence_complete": true,
+        "short_check_behavior_evidence_complete": true,
+        "exit_ticket_candidate_evidence_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "completion_language_still_unauthorized": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    },
+    {
+      "route_id": "Y2-B8-Q15-Q16-STRATEGIC-TARGET-1",
+      "target_owner_candidate_id": "Y2-B8-P04",
+      "paragraph_code": "8.1.4",
+      "route_label": "8.1.4 Zelfbinding en prijzenoorlog",
+      "bounded_entry_point": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/index.html",
+      "surfaces": {
+        "route": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-route.html",
+        "advisory_short_check": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-korte-check.html",
+        "target_equivalent_exit_ticket_candidate": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/8.1.4-exit-ticket.html",
+        "route_contract": "year2-candidate-lessons/four-target-lesson-production-1/book-8/8.1.4-zelfbinding-en-prijzenoorlog/route-contract.json"
+      },
+      "route_use_evidence": {
+        "source_first_route_exists": true,
+        "source_pane_present": true,
+        "work_pane_present": true,
+        "source_labels_present": true,
+        "advisory_short_check_exists": true,
+        "exit_ticket_candidate_exists": true,
+        "student_visible_internal_terms_screened": true,
+        "no_completion_or_student_product_use_language": true
+      },
+      "source_and_mtu_evidence": {
+        "source_reconstruction_status": "rendered_review_ready_pending_human_acceptance",
+        "source_context_visible_in_route": true,
+        "official_locators_count": 3,
+        "rendered_artifact_count": 3,
+        "governed_mtu_proof_status": "complete_review_proof_pending_human_acceptance",
+        "governed_mtu_proof_case_count": 3,
+        "governed_mtu_proof_cases_complete": true,
+        "mutation_statuses_review_only": true
+      },
+      "exit_ticket_equivalence_decision": {
+        "decision_status": "candidate_only_ready_for_owner_decision_not_completion_proof",
+        "target_equivalent_requirements_visible": true,
+        "constructed_response_present": true,
+        "local_feedback_present": true,
+        "target_equivalent_completion_language_authorized": false,
+        "student_use_authorized": false,
+        "owner_decision_required_before_any_completion_claim": true,
+        "negative_guards": [
+          "no score, grade, mastery, diagnostics, PV, summative, or student/product-use language",
+          "no target-equivalent completion claim",
+          "no CP-6 or Scale Gate closure claim",
+          "no replacement of teacher/owner judgment with local feedback"
+        ]
+      },
+      "core_requirement_checklist": {
+        "route_use_evidence_complete": true,
+        "source_readability_evidence_complete": true,
+        "short_check_behavior_evidence_complete": true,
+        "exit_ticket_candidate_evidence_complete": true,
+        "governed_mtu_task_family_proof_complete": true,
+        "completion_language_still_unauthorized": true,
+        "downstream_authority_blocked": true
+      },
+      "carried_issues": [
+        {
+          "issue_id": "cp6-scale-and-student-use-still-require-owner-decision",
+          "classification": "scale_blocker",
+          "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+          "does_not_block": "installing this readiness packet for human review",
+          "proof_required_to_close": "explicit owner decision on this exact readiness bundle plus refreshed PR readiness, branch-protection, lead-review, and review-thread proof"
+        }
+      ]
+    }
+  ],
+  "authority_claims": {
+    "cp6_scale_gate_decision_bundle_prepared": true,
+    "ready_for_owner_cp6_scale_gate_decision": true,
+    "readiness_bundle_inherited": true,
+    "current_main_proof_recorded": true,
+    "bounded_product_route_preview_live": true,
+    "source_reconstruction_proof_inherited": true,
+    "governed_mtu_task_family_proof_inherited": true,
+    "product_route_use_evidence_recorded": true,
+    "exit_ticket_equivalence_decision_recorded": true,
+    "teacher_economics_review_requirements_recorded": true,
+    "rollback_and_scope_control_recorded": true,
+    "cp6_decision_authorized_by_this_packet": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_decision_authorized_by_this_packet": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "broad_student_rollout_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "protected_mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_registry_mutation_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_route_adoption_mutation_authorized_by_this_packet": false,
+    "default_book_navigation_mutated": false,
+    "active_curriculum_sequence_mutated": false,
+    "autonomous_merge_authorized": false
+  },
+  "rollback_and_scope_control": {
+    "registry": "Revert or deactivate the bounded route records in references/data/year2-target-foundation/product-route-adoption-registry.json only through a separately reviewed rollback PR.",
+    "lesson_navigation": "Remove bounded-preview entry points from 4veco-lessen index.html only through a separately reviewed rollback PR.",
+    "route_files": "Keep reviewed candidate route files as evidence unless a cleanup PR is explicitly authorized.",
+    "decision_bundle": "Revert this report packet without changing route, lesson, MTU, operation, answer-skill, diagnostics, mastery, PV, summative, or student-use surfaces.",
+    "authority": "All downstream authority remains false until an explicit owner decision names the reviewed payload lineage and decision scope."
+  },
+  "carried_issues": [
+    {
+      "issue_id": "owner-authorization-required-before-cp6-or-scale-gate-effect",
+      "classification": "scale_blocker",
+      "blocks": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, and student/product use",
+      "does_not_block": "human review of this decision bundle and merge of this evidence packet if authorized",
+      "proof_required_to_close": "explicit owner authorization tied to the reviewed payload lineage and decision scope, with exact-head CI, branch-protection ok:true, lead-review, review-thread, and PR Readiness Reviewer proof as supporting evidence"
+    },
+    {
+      "issue_id": "direct-route-deep-links-not-standalone-product-use-proof",
+      "classification": "minor_carry_flag",
+      "blocks": "standalone reliance on route deep links as broad product exposure or student/product-use proof",
+      "does_not_block": "owner CP-6 / Scale Gate decision review when the bundle is reviewed through the bounded packet",
+      "proof_required_to_close": "visible route-level review-only/no-student-product-use boundary or a separately authorized product-exposure decision"
+    },
+    {
+      "issue_id": "static-screenshots-are-not-after-interaction-proof",
+      "classification": "minor_carry_flag",
+      "blocks": "interactive behavior reliance for Scale Gate, student/product use, or summative completion claims",
+      "does_not_block": "review of the bounded routes as decision candidates",
+      "proof_required_to_close": "after-interaction proof for short-check and exit-ticket states before any broader authority is sought"
+    },
+    {
+      "issue_id": "protected-mutation-authority-not-requested",
+      "classification": "scale_blocker",
+      "blocks": "protected MTU mutation, operation registry mutation, answer-skill mutation, and broad OP row closure",
+      "does_not_block": "using existing no-mutation proof as evidence for the owner decision",
+      "proof_required_to_close": "separate governed mutation PR with exact diffs, validators, lead review, and owner authorization"
+    }
+  ],
+  "core_requirement_checklist": {
+    "product_end_state_and_original_specs_cited": true,
+    "non_negotiable_requirements_named": true,
+    "current_main_proof_recorded": true,
+    "pr193_post_adoption_lineage_present": true,
+    "decision_bundle_does_not_mutate_route_adoption_surfaces": true,
+    "inherited_readiness_core_requirements_met": true,
+    "all_four_route_records_included": true,
+    "route_use_evidence_complete": true,
+    "source_and_governed_mtu_evidence_complete": true,
+    "exit_ticket_equivalence_decision_recorded": true,
+    "cp6_scale_gate_decision_matrix_recorded": true,
+    "teacher_and_economics_review_requirements_recorded": true,
+    "rollback_and_scope_control_recorded": true,
+    "lead_review_artifact_required_and_named": true,
+    "downstream_authority_flags_false": true
+  },
+  "findings": [
+    {
+      "finding": "The owner-facing CP-6 / Scale Gate decision bundle cites the product end-state, original gate specs, readiness packet, current-main proof, and all four route records.",
+      "classification": "core_requirement_met",
+      "blocks": "none for human review once lead-review and PR-readiness proof are attached",
+      "does_not_block": "owner review of the exact decision bundle",
+      "proof_required_to_close": "exact current-main evidence, route records, lead-review evidence, exact-head CI, branch-protection ok:true, zero unresolved review threads, and PR Readiness Reviewer output"
+    },
+    {
+      "finding": "Route-use, source reconstruction, governed MTU/task-family proof, and inherited screenshot rationale are carried forward without protected mutations.",
+      "classification": "core_requirement_met",
+      "blocks": "none for decision-bundle review",
+      "does_not_block": "using the proof as evidence for owner CP-6 / Scale Gate deliberation",
+      "proof_required_to_close": "retain the readiness packet, no-mutation proof, and false authority flags together"
+    },
+    {
+      "finding": "Exit tickets are recorded as target-equivalent candidates only; completion, summative, mastery, diagnostic, PV, and student/product-use language remains unauthorized.",
+      "classification": "core_requirement_met",
+      "blocks": "none for candidate decision review",
+      "does_not_block": "owner evaluation of the exit-ticket candidate evidence",
+      "proof_required_to_close": "separate explicit owner decision before any completion or student-use claim"
+    },
+    {
+      "finding": "CP-6 closure, Scale Gate, diagnostics, mastery, PV, summative use, broad rollout, student use, student/product use, protected MTU mutation, operation mutation, answer-skill mutation, and broad OP closure remain blocked.",
+      "classification": "scale_blocker",
+      "blocks": "all downstream product/student-use and protected mutation authority",
+      "does_not_block": "installing and reviewing this decision evidence packet",
+      "proof_required_to_close": "explicit owner authorization tied to the reviewed payload lineage and decision scope"
+    }
+  ],
+  "recommended_next_action": "Send this decision bundle to human review after subagent lead review and exact-head PR readiness proof. Expected owner return: Y2 FOUR-TARGET CP6 / SCALE GATE DECISION READY or Y2 FOUR-TARGET CP6 / SCALE GATE DECISION BLOCKED. Do not treat merge of this packet as CP-6 closure, Scale Gate approval, diagnostics/mastery/PV/summative authorization, student use, or student/product use."
+}

@@ -83,6 +83,18 @@ Authorization may survive later PR heads only when:
 Self-declared commit labels are not proof. The lane must inspect commit graph
 shape, parentage, changed paths, and GitHub comparison data.
 
+When an authorized payload-lineage integration head receives a fresh
+integration-head lead review, the lane may use that review as the operative
+lead-review proof for final readiness. Supply it with
+`--integration-lead-review <path>`. The record must bind the reviewed payload
+SHA and the reviewed integration-head SHA, return `PASS` or `PASS WITH FLAGS`,
+and name its review path. A later evidence-only tail after the reviewed
+integration head is acceptable only when the intervening commits are
+allowlisted evidence/index refreshes and deterministic refresh verification has
+passed. This supersedes stale lead-review fields from the original
+payload-head readiness comment; it does not change the owner payload
+authorization.
+
 ## Base Drift
 
 Before inheriting authorization, compute:

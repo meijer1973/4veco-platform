@@ -1,5 +1,10 @@
 # 1.1.3 Exit-Ticket Exemplar
 
+Authority note: Historical alias only. The current operational exemplar
+authority is `references/exemplars/1.1.3-exit-ticket/`. Keep this copy for
+historical product-excellence review context; do not route future agents here
+as the canonical source.
+
 Status: implementation candidate only.
 Next state: `hold_for_exemplar_review`.
 

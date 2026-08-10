@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1",
+  "generated": "2026-07-01T11:05:00.000Z",
+  "status": "ready_for_pr_readiness_and_human_review",
+  "authority": {
+    "source_data_edits_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "engine_runtime_behavior_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "target_exercise_writes_authorized": false,
+    "product_route_adoption_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "exemplar_authority": {
+    "canonical_path": "references/exemplars/1.1.3-exit-ticket/",
+    "historical_alias_path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/",
+    "active_ui_sources": [
+      "references/ui/layout-registry.json",
+      "references/ui/interaction-policy.json"
+    ],
+    "alias_readme_note_required": true,
+    "historical_copy_preserved": true
+  },
+  "golden_fixtures": {
+    "active_fixture_root": "build-scripts/sprints/fixtures",
+    "report_snapshot_root": "reports/fixtures/golden-ticket-layout",
+    "duplicate_policy": "active_checker_fixture_with_frozen_report_snapshot",
+    "duplicate_pairs": [
+      "golden-ticket-reference",
+      "hybrid-frankenstein-exit-ticket",
+      "legacy-exit-ticket"
+    ],
+    "active_only_fixtures": [
+      "golden-ticket-layout-boundary-negative"
+    ]
+  },
+  "knowledge_artifacts": {
+    "zip_path": "knowledge/exit-ticket-game-1.1.1.zip",
+    "note_path": "knowledge/exit-ticket-game-1.1.1-note.md",
+    "git_tracked": true,
+    "bytes": 54420,
+    "sha256": "E791BCC5FC3302140265F9F80BFD276E883DAFE9F96ACEDCAEDFEAE840523DF9",
+    "active_runtime_dependency": false,
+    "product_authority": false,
+    "student_use_authority": false
+  },
+  "proof": {
+    "manifest_present": true,
+    "checker_present": true,
+    "npm_wiring_present": true,
+    "ci_wiring_present": true,
+    "active_registry_uses_canonical_exemplar": true,
+    "historical_alias_not_active_authority": true,
+    "golden_fixture_snapshots_hash_checked": true,
+    "zip_hash_checked": true,
+    "forbidden_surfaces_unchanged": true,
+    "lesson_output_unchanged": true
+  },
+  "command_log": "reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-command-log.jsonl"
+}
