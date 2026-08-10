@@ -160,6 +160,10 @@ function sha256Object(value) {
   return crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 }
 
+function sha256CanonicalJsonFile(relativePath) {
+  return sha256Object(readJson(relativePath));
+}
+
 function asArray(value) {
   return Array.isArray(value) ? value : [];
 }
@@ -803,7 +807,11 @@ function buildBundle(matrix, negatives, prReadiness) {
     base_main_sha: BASE_MAIN_SHA,
     authority_flags: AUTHORITY_FLAGS,
     source_files: sourceFiles,
-    source_hashes: sourceFiles.map((file) => ({ path: file, sha256: sha256File(file) })),
+    source_hashes: sourceFiles.map((file) => ({
+      path: file,
+      hash_kind: 'canonical_parsed_json_sha256',
+      sha256: sha256CanonicalJsonFile(file)
+    })),
     prior_checker_boundary: prReadiness.prior_checker_boundary,
     artifacts: {
       build_script: BUILD_SCRIPT,

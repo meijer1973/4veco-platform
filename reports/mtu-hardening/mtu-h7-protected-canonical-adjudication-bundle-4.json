@@ -4,7 +4,7 @@
   "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
   "review_standard": "REV-STD-1",
   "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_READY_FOR_HUMAN_REVIEW_NOT_EXECUTED",
-  "generated_at": "2026-08-10T14:29:10.637Z",
+  "generated_at": "2026-08-10T14:49:44.483Z",
   "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -49,47 +49,58 @@
   "source_hashes": [
     {
       "path": "reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json",
-      "sha256": "f40bcf6b18c9ecdf535f24f005f7bc90b5f570b0fa6a1c2826089f05280a83ea"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "82b5977ce3ce42ebe9e1b2daa4a352cef98a2e435213240b0fd326ba3ff0c6c2"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json",
-      "sha256": "25ef932b50e13a5a99f90cde94b47574c5d4257faffb30498ce251518da1f366"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "8a64e46233f1d94912d2a3180ed2ec3a8b6139876637f7ed8af0e1279cc030a6"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json",
-      "sha256": "c3609d73b69577d90d2dda3510a7faf6216aed0b98d5d4d343218578befd4e3d"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "113463f9b80fab55f7461b3f390afd70b729bafbf881c411d420d10265d45090"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json",
-      "sha256": "91acb609cab78907d62c446b2faccbc2f624ebf981ff5ea3c747023b89be3e61"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "18420033d3766b6be590dbb6499b441caf6d29e8142a16030a8b5d2b00a862a4"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
-      "sha256": "b554568cdad7b44a451512c1866ca60f0ecd090fc26e69e80566e3036e8109b3"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "dc046a090dcdd5b97c96ef61edf8b2c28274fb815e0cb14b1556bde2028eb4ff"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json",
-      "sha256": "323ff48feee4570425e987d80fea717a5c2f8f37319677556d7b3505edcc14e7"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "5f899b50099980b78289d081072d6dd8e08fbd66d192f592fda51e2b5cda7ccc"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json",
-      "sha256": "0d8aee4786763fe7fe373163b108fd7a74a635e6555293dd5638e97965f17ff8"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "bd45d6af1b0146cdd6421a99a7137f105dd96c53760fcefaf2d491ac6bd4a16a"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json",
-      "sha256": "870b9e43834fabf6fb61c01a61b109300eb649a2b1ce911c4d148a690e16ea44"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "2ade26927fd17e66c55770aea82f0e3b594ff1e660f6892c7949d4ac7aaf9102"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
-      "sha256": "dab1bcfa8451a4d752dffeb4f86845d8072ffa95fdb2115d1a25f917cccb0c9e"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "c18340e15b1a014e15cc9b99cf858c62a45f4531ff190bd00c733b19209f6b71"
     },
     {
       "path": "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json",
-      "sha256": "ba979c48a9c19bf2197eae8fcf6f9a03f549d25a753afe2bf4789bb52c337dc2"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "53c66ceb9fda0d33721c74095c34e634d404e2c37e3fd692121abdeaab423477"
     },
     {
       "path": "references/machine/micro-teaching-units.json",
-      "sha256": "96452985bb9694390b610c1d553c910ceffc20f1d54f6d56611310b825edcb50"
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "77dc835330e2dd99a53670c6a3865e47cece18e9976492c78fed50d38f87369d"
     }
   ],
   "prior_checker_boundary": {
@@ -129,8 +140,8 @@
     "student_product_use_authorized": false
   },
   "hashes": {
-    "adjudication_matrix": "be74d2cebdcf2f9033aa1430a89ce82d62d919ff11d7a3837f8c98cf6b504020",
-    "negative_regression_fixtures": "7ec84754cc4b195c27243e4a9cfba9bfeffb3ba1968ad93b07de80d72807a73a",
+    "adjudication_matrix": "4f37d6a6f217ae6be1e482f24bef7493ba4657e0edc1824c6dc4c52aa3f8ef4a",
+    "negative_regression_fixtures": "5d66e9789619453992bd18f360566ecfc85d7e59a650426425ff3c9c86e26b36",
     "pr_readiness_evidence": "8baa95db366b821b8b99a92cbd40365d756ed2b06fe33ff93826e5273dce0167"
   },
   "prohibited_claims": [

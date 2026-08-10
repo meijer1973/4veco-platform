@@ -127,6 +127,10 @@ function sha256Object(value) {
   return crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 }
 
+function sha256CanonicalJsonFile(relativePath) {
+  return sha256Object(readJson(relativePath));
+}
+
 function asArray(value) {
   return Array.isArray(value) ? value : [];
 }
@@ -621,7 +625,10 @@ function validate() {
   if (!sameSet(sourceHashPaths, EXPECTED_SOURCE_FILES)) failures.push('bundle source_hashes must match exact expected source set');
   if (asArray(bundle.source_hashes).length !== EXPECTED_SOURCE_FILES.length) failures.push('bundle source_hash count mismatch');
   for (const entry of asArray(bundle.source_hashes)) {
-    if (!entry.path || entry.sha256 !== sha256File(entry.path)) failures.push(`source hash mismatch: ${entry.path}`);
+    if (!entry.path || entry.hash_kind !== 'canonical_parsed_json_sha256' ||
+        entry.sha256 !== sha256CanonicalJsonFile(entry.path)) {
+      failures.push(`source hash mismatch: ${entry.path}`);
+    }
   }
   if (bundle.hashes?.adjudication_matrix !== sha256Object(matrix)) failures.push('matrix hash mismatch');
   if (bundle.hashes?.negative_regression_fixtures !== sha256Object(negatives)) failures.push('negative hash mismatch');
