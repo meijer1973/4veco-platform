@@ -11,7 +11,10 @@ const {
   summarizeProtection,
 } = require('../ci/check-branch-protection');
 const { applyLiveDecision } = require('./apply-pr-readiness-decision');
-const { parseRenderedDecisionMarkdown } = require('./pr-readiness-router');
+const {
+  parseRenderedDecisionMarkdown,
+  payloadIntegrationStateSummary,
+} = require('./pr-readiness-router');
 const { runReview } = require('./review-pr-readiness');
 
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
@@ -900,6 +903,26 @@ function supplementalFromReadinessDecision(payloadDecision, authorization, linea
   };
 }
 
+function payloadIntegrationStateForResult(repo, prNumber, pr, authorization, lineage, route = 'READY_FOR_HUMAN_REVIEW', stateOptions = {}) {
+  const integration = {
+    ...(lineage || {}),
+    ...(stateOptions.integration || {}),
+  };
+  const currentHead = stateOptions.currentHeadSha || integration.integration_head_sha || (pr && pr.headRefOid);
+  return payloadIntegrationStateSummary({
+    route,
+    reviewed_pr: {
+      repo,
+      number: Number(prNumber),
+      head_sha: currentHead,
+    },
+    proof: {
+      human_authorization: authorization,
+      integration,
+    },
+  });
+}
+
 function payloadReadinessDecisionFromComments(comments, repo, prNumber, payloadSha) {
   const parsed = readinessCommentFromComments(comments, repo, prNumber, payloadSha);
   if (!parsed.ok) {
@@ -1066,15 +1089,30 @@ function integrate(options) {
 
   const currentWithMain = deps.isHeadCurrentWithMain(repo, mainSha, pr.headRefOid);
   if (!currentWithMain.ok) {
-    deps.updateBranch(repo, prNumber, pr.headRefOid, options);
+    const updateResult = deps.updateBranch(repo, prNumber, pr.headRefOid, options) || {};
+    const pendingHeadSha =
+      updateResult.head_sha ||
+      updateResult.headSha ||
+      updateResult.refreshed_head_sha ||
+      updateResult.current_head_sha ||
+      null;
     return {
       ok: true,
       phase: 'updated_branch',
       retry_required: true,
       previous_head_sha: pr.headRefOid,
+      pending_head_sha: pendingHeadSha,
       main_sha: mainSha,
       main_compare: currentWithMain.compare,
       lineage: initialLineage,
+      payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, initialLineage, 'READY_FOR_HUMAN_REVIEW', {
+        currentHeadSha: pendingHeadSha || pr.headRefOid,
+        integration: {
+          branch_update_pending: true,
+          previous_integration_head_sha: pr.headRefOid,
+          pending_integration_head_sha: pendingHeadSha,
+        },
+      }),
     };
   }
 
@@ -1232,7 +1270,15 @@ function integrate(options) {
     if (!activatedMerge) {
       deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
     }
-    return { ok: true, phase: 'authorized_no_merge', pr, main_sha: finalMainSha, lineage: finalLineage, readiness };
+    return {
+      ok: true,
+      phase: 'authorized_no_merge',
+      pr,
+      main_sha: finalMainSha,
+      lineage: finalLineage,
+      readiness,
+      payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, finalLineage),
+    };
   }
   let merge;
   let mergedPr;
@@ -1397,6 +1443,7 @@ function integrate(options) {
     main_sha: finalMainSha,
     lineage: finalLineage,
     readiness,
+    payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, finalLineage),
     merge,
     merged_pr: mergedPr,
     post_merge_ci: postMergeCi,
