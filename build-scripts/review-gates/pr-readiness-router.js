@@ -1326,6 +1326,55 @@ function integrationFailures(integrationProof) {
   );
 }
 
+function passingReviewResult(value) {
+  return PASSING_LEAD_RESULTS.has(normalizeVerdict(value));
+}
+
+function integrationDeltaReviewComplete(deltaReview, reviewedPayloadHead, integrationHead) {
+  const review = deltaReview || {};
+  const reviewedHead = review.integration_head_sha || review.reviewed_integration_head_sha;
+  return Boolean(
+    review &&
+      typeof review === 'object' &&
+      passingReviewResult(review.result || review.verdict || review.status) &&
+      review.reviewed_payload_head_sha === reviewedPayloadHead &&
+      reviewedHead === integrationHead &&
+      (review.path || review.review_path)
+  );
+}
+
+function integrationLineageProofComplete(integrationProof, currentHeadSha) {
+  const integration = integrationProof || {};
+  const lineageStatus = String(integration.lineage_status || '').trim().toLowerCase();
+  const effectivePayloadStatus = String(integration.effective_payload_status || '').trim().toLowerCase();
+  const bundleMembershipStatus = String(integration.bundle_membership_status || '').trim().toLowerCase();
+  const authorityScopeStatus = String(integration.authority_scope_status || '').trim().toLowerCase();
+  const lineagePositive =
+    integration.payload_ancestor_of_integration_head === true ||
+    lineageStatus === 'valid';
+  const effectivePayloadPositive =
+    !effectivePayloadStatus ||
+    effectivePayloadStatus === 'unchanged';
+  const bundleMembershipPositive =
+    !bundleMembershipStatus ||
+    bundleMembershipStatus === 'unchanged' ||
+    bundleMembershipStatus === 'not_bundle';
+  const authorityScopePositive =
+    !authorityScopeStatus ||
+    authorityScopeStatus === 'unchanged';
+  return Boolean(
+    integration.ok === true &&
+      SHA_PATTERN.test(String(integration.reviewed_payload_head_sha || '')) &&
+      SHA_PATTERN.test(String(integration.integration_head_sha || '')) &&
+      integration.integration_head_sha === currentHeadSha &&
+      integration.authorization_inherited === true &&
+      lineagePositive &&
+      effectivePayloadPositive &&
+      bundleMembershipPositive &&
+      authorityScopePositive
+  );
+}
+
 function statusFromIntegration(integrationProof, key, inheritedStatus) {
   const direct = integrationProof[key];
   if (direct) return direct;
@@ -1347,10 +1396,18 @@ function payloadIntegrationStateSummary(decision) {
   const baseDrift = integration.base_drift || {};
   const bundle = proof.bundle || {};
   const bundleRequired = Boolean(bundle.required || bundle.delegated || (bundle.summary && bundle.summary.required));
+  const integrationProofPresent = Object.keys(integration).length > 0;
+  const branchUpdatePending = integration.branch_update_pending === true;
   const lineageInvalid = includesAny(failures, [
+    'reviewed_payload_head_sha missing or invalid',
+    'integration_head_sha missing or invalid',
     'reviewed_payload_head_not_ancestor',
     'reviewed_payload_not_ancestor',
     'lineage_invalid',
+    'rebase_or_force_push_detected',
+    'manual_conflict_resolution',
+    'merge_changed_payload_or_unexpected_paths',
+    'substantive_pr_authored_commit_after_authorization',
   ]);
   const effectivePayloadChanged = includesAny(failures, ['changed_effective_payload', 'effective_payload_changed']);
   const bundleMembershipChanged = includesAny(failures, ['bundle_membership_change', 'bundle_membership_changed']);
@@ -1358,13 +1415,30 @@ function payloadIntegrationStateSummary(decision) {
   const reauthorizationRequired =
     integration.requires_human_reauthorization === true ||
     baseDrift.requires_human_reauthorization === true ||
-    lineageInvalid ||
-    effectivePayloadChanged ||
-    bundleMembershipChanged ||
-    authorityScopeChanged;
+    failures.length > 0;
+  const deterministicRefreshRequired =
+    integration.requires_deterministic_refresh === true ||
+    baseDrift.requires_deterministic_refresh === true;
+  const deterministicRefreshComplete = !deterministicRefreshRequired || integration.deterministic_refresh_verified === true;
+  const deltaReviewRequired =
+    integration.requires_integration_delta_lead_review === true ||
+    baseDrift.requires_integration_delta_lead_review === true;
+  const deltaReviewComplete =
+    !deltaReviewRequired ||
+    integrationDeltaReviewComplete(integration.delta_review, reviewedPayloadHead, integrationHead);
   const readyRoute = decision.route === ROUTES.READY_FOR_LEAD_ONLY || decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
   const humanRoute = decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
-  const authorizationInherited = integration.authorization_inherited === true;
+  const authorizationInherited = integrationProofPresent && integration.authorization_inherited === true;
+  const integrationProofComplete = integrationLineageProofComplete(integration, decision.reviewed_pr.head_sha);
+  const integrationProofPassed = Boolean(
+    readyRoute &&
+      integrationProofPresent &&
+      !branchUpdatePending &&
+      integrationProofComplete &&
+      failures.length === 0 &&
+      deterministicRefreshComplete &&
+      deltaReviewComplete
+  );
   const payloadAuthorization =
     reauthorizationRequired
       ? 'invalidated'
@@ -1373,49 +1447,56 @@ function payloadIntegrationStateSummary(decision) {
         : humanRoute
           ? 'required'
           : 'not_required';
-  const integrationValidation =
-    !readyRoute
-      ? 'blocked'
-      : authorization.decision || authorizationInherited
-        ? 'passed'
-        : 'required';
   let payloadState = 'PAYLOAD_AUTHORIZATION_REQUIRED';
   if (reauthorizationRequired) payloadState = 'PAYLOAD_REAUTHORIZATION_REQUIRED';
   else if (payloadAuthorization === 'inherited' || payloadAuthorization === 'not_required') payloadState = 'PAYLOAD_AUTHORIZED';
 
   let integrationState = 'INTEGRATION_VALIDATION_REQUIRED';
   if (reauthorizationRequired) integrationState = 'PAYLOAD_REAUTHORIZATION_REQUIRED';
-  else if (integration.requires_integration_delta_lead_review === true || baseDrift.requires_integration_delta_lead_review === true) {
+  else if (branchUpdatePending) {
+    integrationState = 'BRANCH_UPDATE_PENDING';
+  } else if (deltaReviewRequired && !deltaReviewComplete) {
     integrationState = 'INTEGRATION_DELTA_REVIEW_REQUIRED';
-  } else if (integrationHead !== reviewedPayloadHead && integrationValidation !== 'blocked') {
-    integrationState = authorization.decision || authorizationInherited
-      ? 'READY_TO_MERGE_VIA_LANE'
-      : 'INTEGRATION_HEAD_REFRESHED';
-  } else if (integrationValidation === 'passed') {
+  } else if (deterministicRefreshRequired && !deterministicRefreshComplete) {
+    integrationState = 'DETERMINISTIC_REFRESH_REQUIRED';
+  } else if (integrationProofPassed) {
     integrationState = 'READY_TO_MERGE_VIA_LANE';
+  } else if (!integrationProofPresent && integrationHead !== reviewedPayloadHead && readyRoute) {
+    integrationState = 'INTEGRATION_HEAD_REFRESHED';
   }
 
   const lineageStatus = lineageInvalid
     ? 'invalid'
-    : statusFromIntegration(integration, 'lineage_status', authorizationInherited || authorization.decision ? 'valid' : null);
+    : statusFromIntegration(integration, 'lineage_status', authorizationInherited ? 'valid' : null);
   const effectivePayloadStatus = effectivePayloadChanged
     ? 'changed'
-    : statusFromIntegration(integration, 'effective_payload_status', authorizationInherited || authorization.decision ? 'unchanged' : null);
+    : statusFromIntegration(integration, 'effective_payload_status', authorizationInherited ? 'unchanged' : null);
   const bundleMembershipStatus = !bundleRequired
     ? 'not_bundle'
     : bundleMembershipChanged
       ? 'changed'
-      : statusFromIntegration(integration, 'bundle_membership_status', authorizationInherited || authorization.decision ? 'unchanged' : null);
+      : statusFromIntegration(integration, 'bundle_membership_status', authorizationInherited ? 'unchanged' : null);
   const authorityScopeStatus = authorityScopeChanged
     ? 'changed'
-    : statusFromIntegration(integration, 'authority_scope_status', authorizationInherited || authorization.decision ? 'unchanged' : null);
+    : statusFromIntegration(integration, 'authority_scope_status', authorizationInherited ? 'unchanged' : null);
+  let integrationValidation = 'required';
+  if (!readyRoute || reauthorizationRequired) integrationValidation = 'blocked';
+  else if (branchUpdatePending) integrationValidation = 'pending_branch_update';
+  else if (deltaReviewRequired && !deltaReviewComplete) integrationValidation = 'pending_delta_review';
+  else if (deterministicRefreshRequired && !deterministicRefreshComplete) integrationValidation = 'pending_deterministic_refresh';
+  else if (integrationProofPassed) integrationValidation = 'passed';
+
   let requiredNextAction = 'resolve readiness blockers before merge';
   if (payloadState === 'PAYLOAD_AUTHORIZATION_REQUIRED') {
     requiredNextAction = 'request owner payload authorization for the reviewed payload head and decision scope';
   } else if (payloadState === 'PAYLOAD_REAUTHORIZATION_REQUIRED') {
     requiredNextAction = 'return to owner review for refreshed payload authorization';
+  } else if (integrationState === 'BRANCH_UPDATE_PENDING') {
+    requiredNextAction = 'wait for the branch update to finish, then rerun the serialized integration lane';
   } else if (integrationState === 'INTEGRATION_DELTA_REVIEW_REQUIRED') {
     requiredNextAction = 'run integration delta lead review before merge';
+  } else if (integrationState === 'DETERMINISTIC_REFRESH_REQUIRED') {
+    requiredNextAction = 'run deterministic evidence refresh before merge';
   } else if (integrationState === 'READY_TO_MERGE_VIA_LANE') {
     requiredNextAction = 'merge through the serialized integration lane';
   } else if (integrationState === 'INTEGRATION_HEAD_REFRESHED') {
@@ -1430,6 +1511,7 @@ function payloadIntegrationStateSummary(decision) {
     reviewed_payload_head_sha: reviewedPayloadHead,
     current_pr_head_sha: decision.reviewed_pr.head_sha || null,
     integration_head_sha: integrationHead,
+    pending_integration_head_sha: integration.pending_integration_head_sha || integration.refreshed_head_sha || null,
     base_sha_at_review: authorization.base_sha_at_review || integration.base_sha_at_review || baseDrift.base_sha_at_review || null,
     current_base_sha: integration.current_base_sha || integration.current_main_sha || baseDrift.current_base_sha || null,
     lineage_status: lineageStatus,
@@ -1495,10 +1577,7 @@ function renderDecisionMarkdown(decision) {
   const ciStatusLabel = delegatedBundleProof ? 'Controller CI status' : 'CI status';
   const branchProtectionLabel = delegatedBundleProof ? 'Delegated branch protection' : 'Branch protection';
   const integrationProof = decision.proof.integration || {};
-  const reviewedPayloadHead = integrationProof.reviewed_payload_head_sha || decision.reviewed_pr.head_sha;
-  const integrationHead = integrationProof.integration_head_sha || decision.reviewed_pr.head_sha;
   const readyRoute = decision.route === ROUTES.READY_FOR_LEAD_ONLY || decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
-  const payloadAuthorizationRequired = decision.route === ROUTES.READY_FOR_HUMAN_REVIEW && !decision.proof.human_authorization;
   const bundleProof = decision.proof.bundle || null;
   const hasBundlePayload = Boolean(
     bundleProof &&
@@ -1510,6 +1589,13 @@ function renderDecisionMarkdown(decision) {
       )
   );
   const stateSummary = payloadIntegrationStateSummary(decision);
+  const reviewedPayloadHead = stateSummary.reviewed_payload_head_sha || decision.reviewed_pr.head_sha;
+  const integrationHead = stateSummary.integration_head_sha || decision.reviewed_pr.head_sha;
+  const payloadAuthorizationRequired =
+    decision.route === ROUTES.READY_FOR_HUMAN_REVIEW &&
+    ['required', 'invalidated'].includes(stateSummary.payload_authorization);
+  const integrationValidationRequired =
+    readyRoute && stateSummary.integration_validation !== 'passed';
   const bundleState = bundleStateSummary(decision, hasBundlePayload);
   const leadReviewLine = delegatedBundleProof
     ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed payload head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
@@ -1526,7 +1612,7 @@ function renderDecisionMarkdown(decision) {
     `- Current PR head: \`${decision.reviewed_pr.head_sha}\``,
     `- Integration head: \`${integrationHead}\``,
     `- Payload authorization required: \`${payloadAuthorizationRequired}\``,
-    `- Integration validation required: \`${readyRoute}\``,
+    `- Integration validation required: \`${integrationValidationRequired}\``,
     `- Throughput level: \`${decision.throughput.level}\``,
     `- Human-review payload: \`${decision.human_review_payload}\``,
     `- Human notification required: \`${decision.human_notification_required}\``,

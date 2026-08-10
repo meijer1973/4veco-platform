@@ -118,6 +118,7 @@ function okLineage(sha = integrationSha) {
     ok: true,
     reviewed_payload_head_sha: payloadSha,
     integration_head_sha: sha,
+    payload_ancestor_of_integration_head: true,
     authorization_inherited: true,
     requires_integration_delta_lead_review: false,
     requires_deterministic_refresh: false,
@@ -862,6 +863,47 @@ describe('authorized PR integration runner', () => {
     });
     expect(deps.updateBranch).not.toHaveBeenCalled();
     expect(calls.statuses.map((status) => status.state)).toContain('success');
+  });
+
+  test('updated branch result reports pending refreshed head instead of stale ready state', () => {
+    const refreshedSha = '1'.repeat(40);
+    const harness = integrationHarness({
+      deps: {
+        isHeadCurrentWithMain: jest.fn(() => ({ ok: false, compare: { status: 'behind' } })),
+      },
+      options: { maxAttempts: 1 },
+    });
+    const { calls, deps, options } = harness;
+    deps.updateBranch.mockImplementation((repo, prNumber, expectedHeadSha) => {
+      calls.updates.push({ repo, prNumber, expectedHeadSha });
+      return { ok: true, head_sha: refreshedSha };
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({
+      ok: true,
+      phase: 'updated_branch',
+      retry_required: true,
+      previous_head_sha: integrationSha,
+      pending_head_sha: refreshedSha,
+    });
+    expect(result.payload_integration_state).toMatchObject({
+      current_pr_head_sha: refreshedSha,
+      integration_head_sha: integrationSha,
+      pending_integration_head_sha: refreshedSha,
+      integration_state: 'BRANCH_UPDATE_PENDING',
+      integration_validation: 'pending_branch_update',
+      required_next_action: 'wait for the branch update to finish, then rerun the serialized integration lane',
+    });
+    expect(result.payload_integration_state).not.toMatchObject({
+      integration_state: 'READY_TO_MERGE_VIA_LANE',
+      integration_validation: 'passed',
+    });
+    expect(calls.updates).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136, expectedHeadSha: integrationSha },
+    ]);
+    expect(calls.merges).toEqual([]);
   });
 
   test('branch update automatically retries through CI, readiness generation, merge, and post-merge main CI', () => {
