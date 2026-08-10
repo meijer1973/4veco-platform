@@ -324,6 +324,18 @@ function requestedDecision(row) {
   return 'Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held.';
 }
 
+function buildCandidateDecisions(operationId, correction) {
+  return asArray(correction.missing_operation_expectations).map((expectation, index) => ({
+    decision_id: `${operationId}:missing-operation-${index + 1}`,
+    expectation,
+    owner_decision_required: 'Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held.'
+  }));
+}
+
+function currentProofRequired(candidateDecisions) {
+  return `Record an explicit later owner decision for all ${candidateDecisions.length} enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.`;
+}
+
 function assertInputs(docs) {
   const checks = [
     ['bundle1', docs.bundle1, 'HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE'],
@@ -495,6 +507,8 @@ function buildAdjudicationMatrix(docs) {
       forbidden_mtu_ids: correction.forbidden_mtu_ids,
       route_tags: correction.route_tags
     };
+    const candidateDecisionsRequired = buildCandidateDecisions(row.operation_id, correction);
+    const proofRequiredToClose = currentProofRequired(candidateDecisionsRequired);
     const regressionContract = buildRegressionContract(currentOperation);
     const expectedRegressionContract = Object.entries(regressionContract).map(([key, value]) => ({
       key,
@@ -514,7 +528,7 @@ function buildAdjudicationMatrix(docs) {
       source_prior_defect_class: row.source_prior_defect_class,
       question_word: official.question_word,
       answer_model_summary: official.answer_model_summary,
-      requested_human_decision: requestedDecision(row),
+      requested_human_decision: `${requestedDecision(row)} All ${candidateDecisionsRequired.length} enumerated missing-operation expectation(s) require separate disposition.`,
       permissible_owner_decisions: [
         'APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION',
         'KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN',
@@ -532,8 +546,10 @@ function buildAdjudicationMatrix(docs) {
         'student_product_use'
       ],
       proposed_non_mutating_decision: row.proposed_non_mutating_decision,
-      proof_required_to_close: row.proof_required_to_close,
-      safe_interim_action: row.safe_interim_action,
+      proof_required_to_close: proofRequiredToClose,
+      safe_interim_action: correction.current_safe_interim_action,
+      safe_interim_required_route_tags: correction.safe_interim_required_route_tags,
+      candidate_decisions_required: candidateDecisionsRequired,
       required_mtu_ids: correction.full_fit_mtu_ids,
       mapped_mtu_ids: mappedMtuIds,
       partial_anchor_mtu_ids: correction.partial_anchor_mtu_ids,
@@ -568,6 +584,9 @@ function buildAdjudicationMatrix(docs) {
         expected_forbidden_mtu_ids: correction.forbidden_mtu_ids,
         expected_route_tags: correction.route_tags,
         expected_missing_operation_expectations: correction.missing_operation_expectations,
+        expected_safe_interim_action: correction.current_safe_interim_action,
+        expected_safe_interim_required_route_tags: correction.safe_interim_required_route_tags,
+        expected_candidate_decisions_sha256: sha256Object(candidateDecisionsRequired),
         expected_regression_contract: expectedRegressionContract,
         source_locator_sha256: sha256Object(manifest.source_locator),
         source_completeness_sha256: sha256Object(sourceCompleteness),
@@ -580,6 +599,8 @@ function buildAdjudicationMatrix(docs) {
         procedure_unit_ids: blocker.expected_procedure_unit_ids,
         forbidden_mtu_ids: blocker.expected_forbidden_mtu_ids,
         route_tags: blocker.expected_route_tags,
+        historical_proof_required_to_close: row.proof_required_to_close,
+        historical_safe_interim_action: row.safe_interim_action,
         source_sha256: sha256Object({
           blocker: blocker.blocker_id,
           required_mtu_ids: blocker.expected_required_mtu_ids,
@@ -589,10 +610,11 @@ function buildAdjudicationMatrix(docs) {
           route_tags: blocker.expected_route_tags
         })
       },
-      source_blocker_evidence: {
-        needed_governance: blocker.needed_governance,
-        safe_interim_action: blocker.safe_interim_action,
-        final_route: blocker.final_route
+      historical_source_blocker_evidence: {
+        status: 'historical_hash_pinned_input_not_current_guidance',
+        needed_governance_at_source_time: blocker.needed_governance,
+        safe_interim_action_at_source_time: blocker.safe_interim_action,
+        final_route_at_source_time: blocker.final_route
       }
     };
   });
@@ -616,6 +638,7 @@ function buildAdjudicationMatrix(docs) {
       explicit_unavailable_source_limitations: unique(operations.flatMap((row) =>
         asArray(row.source_completeness?.unavailable_sources).map((source) => `${row.record_id}:${source.source_label}`)
       )).length,
+      candidate_decisions_required: operations.reduce((sum, row) => sum + asArray(row.candidate_decisions_required).length, 0),
       canonical_mtu_governance_count: operations.filter((row) => row.decision_family === 'canonical_mtu_governance').length,
       operation_registry_governance_count: operations.filter((row) => row.decision_family === 'operation_registry_governance').length,
       procedure_or_operation_registry_governance_count: operations.filter((row) => row.decision_family === 'procedure_or_operation_registry_governance').length,
@@ -799,6 +822,7 @@ function buildBundle(matrix, negatives, prReadiness) {
       operations_with_partial_anchors: matrix.summary.operations_with_partial_anchors,
       excluded_historical_mtu_role_count: matrix.summary.excluded_historical_mtu_role_count,
       explicit_unavailable_source_limitations: matrix.summary.explicit_unavailable_source_limitations,
+      candidate_decisions_required: matrix.summary.candidate_decisions_required,
       semantically_bound_operations: matrix.operations.filter((row) => row.semantic_binding).length,
       executable_negative_regressions: negatives.summary.executed,
       negative_regression_detection_rate: negatives.summary.detection_rate,
@@ -869,6 +893,7 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
       { requirement: 'Exactly seven protected/canonical H7 operations are prepared for adjudication', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation remains prepared_not_executed with no mutation authority', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation carries requested human decision options and proof required to close', status: 'met', evidence: OUT_MATRIX_JSON },
+      { requirement: 'Every missing-operation expectation is represented by its own explicit later owner-decision item', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every source locator and evidence fragment resolves to the matching manifest, blocker, candidate, and operation', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Supplemental stimulus pages are PDF-hash/text bound and unavailable source annexes are explicit blocking limitations', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every required/forbidden MTU is semantically bound to the live registry and reviewed source snapshot', status: 'met', evidence: OUT_MATRIX_JSON },

@@ -14,8 +14,11 @@ const OPERATION_ADJUDICATION_CORRECTIONS = Object.freeze({
       'answer_form', 'procedure', 'canonical_positive_narrowing_governance'
     ]),
     missing_operation_expectations: Object.freeze([
-      'No live MTU exactly covers comparison of post-tax high-income/low-income ratios; H08 remains only a canonical-governance anchor because its label and kern conflict.'
+      'The H08 label/kern conflict requires a positive narrowing/nivellering canonical or reviewed-equivalent decision.',
+      'No live MTU exactly covers comparison of post-tax high-income/low-income ratios.'
     ]),
+    current_safe_interim_action: 'Keep A81/A96 as full-fit source/calculation wrappers, H08 as a partial canonical-governance anchor, A38 excluded, and the ratio-comparison operation explicitly held.',
+    safe_interim_required_route_tags: Object.freeze(['ratio_comparison', 'canonical_positive_narrowing_governance']),
     correction_basis: 'The official model compares two net-income ratios. It does not calculate a percentage change, so A38 is excluded.'
   }),
   'h7-ha24-1-q12-snel-residual-payoff': Object.freeze({
@@ -32,6 +35,8 @@ const OPERATION_ADJUDICATION_CORRECTIONS = Object.freeze({
     missing_operation_expectations: Object.freeze([
       'No live MTU exactly covers the proposer residual-payoff arithmetic inside an ultimatum-game decision tree.'
     ]),
+    current_safe_interim_action: 'Keep A81/A96 as full-fit wrappers, F12 forbidden, and the residual-payoff operation explicitly held.',
+    safe_interim_required_route_tags: Object.freeze(['residual_payoff']),
     correction_basis: 'A81 and A96 fit the source-use and calculation answer form; F12 remains forbidden because this is not matrix Nash selection.'
   }),
   'h7-ha24-1-q12-sprinter-margin-payoff': Object.freeze({
@@ -49,6 +54,8 @@ const OPERATION_ADJUDICATION_CORRECTIONS = Object.freeze({
     missing_operation_expectations: Object.freeze([
       'No live MTU exactly covers accepted price less marginal cost inside an ultimatum-game decision tree.'
     ]),
+    current_safe_interim_action: 'Keep A81/A96 as full-fit wrappers, F12 forbidden, require marginal-cost subtraction, and keep the margin-payoff operation explicitly held.',
+    safe_interim_required_route_tags: Object.freeze(['margin_payoff', 'marginal_cost_subtraction']),
     correction_basis: 'The operation must subtract the EUR 3,500 marginal cost from the accepted price; A81 and A96 do not replace that missing operation.'
   }),
   'h7-vw23-2-q20-game-tree-nash': Object.freeze({
@@ -66,6 +73,8 @@ const OPERATION_ADJUDICATION_CORRECTIONS = Object.freeze({
     missing_operation_expectations: Object.freeze([
       'No live MTU exactly covers sequential game-tree payoff comparison; F12 is a matrix-only partial concept anchor.'
     ]),
+    current_safe_interim_action: 'Keep A81/A97 as full-fit wrappers, F12 as a partial matrix-only concept anchor, and the sequential game-tree operation explicitly held.',
+    safe_interim_required_route_tags: Object.freeze(['game_tree', 'sequential_payoff_comparison', 'matrix_shortcut_guard']),
     correction_basis: 'F12 is retained only as a partial Nash anchor because its procedure is explicitly matrix based.'
   }),
   'h7-vw24-1-q17-insurance-cost-benefit': Object.freeze({
@@ -84,6 +93,8 @@ const OPERATION_ADJUDICATION_CORRECTIONS = Object.freeze({
     missing_operation_expectations: Object.freeze([
       'No live MTU exactly covers fixed plus monthly currency-insurance cost, six-month scaling, avoided exchange-rate loss, and net-benefit comparison as one operation.'
     ]),
+    current_safe_interim_action: 'Keep H24/A88/A81/A96 as full-fit supports, G11/G12 as partial anchors only, A38 excluded, and the six-month composite cost-benefit operation explicitly held.',
+    safe_interim_required_route_tags: Object.freeze(['monthly_variable_premium', 'six_month_scaling', 'cost_benefit']),
     correction_basis: 'A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.'
   }),
   'h7-vw24-2-q15-ga-mb-first-adjustment': Object.freeze({
@@ -103,6 +114,8 @@ const OPERATION_ADJUDICATION_CORRECTIONS = Object.freeze({
       'No live answer-form MTU exactly covers a multi-period IS-MB-GA drawing.',
       'No live procedure exactly covers the first-period GA1/MB1 sequence from expected-minus-realized inflation and a one-point real-rate reduction.'
     ]),
+    current_safe_interim_action: 'Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and require first_period_sequence plus one_point_real_rate_step while the operation remains held.',
+    safe_interim_required_route_tags: Object.freeze(['first_period_sequence', 'one_point_real_rate_step', 'graph_answer_form_gap', 'procedure_gap']),
     correction_basis: 'A40 is a welfare-area shading MTU and is excluded. I07/A42 are partial graph anchors, not a complete period-specific sequence or answer form.'
   }),
   'h7-vw24-2-q15-ga-mb-second-adjustment-and-table': Object.freeze({
@@ -122,6 +135,8 @@ const OPERATION_ADJUDICATION_CORRECTIONS = Object.freeze({
       'No live answer-form MTU exactly covers the combined multi-period graph and final r/pi table.',
       'No live procedure exactly covers GA2/MB2 plus final real-rate and inflation completion.'
     ]),
+    current_safe_interim_action: 'Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and retain final_r_pi_table_completion plus the graph/table answer-form gap while the operation remains held.',
+    safe_interim_required_route_tags: Object.freeze(['second_period_sequence', 'final_r_pi_table_completion', 'graph_and_table_answer_form_gap', 'procedure_gap']),
     correction_basis: 'A40 is a welfare-area shading MTU and is excluded. I07/A42 remain partial anchors; graph movement alone cannot satisfy the table-completion operation.'
   })
 });

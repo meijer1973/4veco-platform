@@ -4,7 +4,7 @@
   "matrix_id": "mtu-h7-protected-canonical-adjudication-matrix-4",
   "review_standard": "REV-STD-1",
   "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_ONLY_NOT_EXECUTED",
-  "generated_at": "2026-08-10T14:15:31.053Z",
+  "generated_at": "2026-08-10T14:29:10.635Z",
   "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -59,7 +59,7 @@
       "source_prior_defect_class": "canonical_mtu_governance_need",
       "question_word": "toon_met_een_berekening_aan",
       "answer_model_summary": "Ratio falls from 4.1 to about 3.9, so income differences narrow.",
-      "requested_human_decision": "Approve a canonical-MTU decision or explicit reviewed-equivalent positive narrowing/nivellering rule in a later bounded execution bundle, or keep this operation held.",
+      "requested_human_decision": "Approve a canonical-MTU decision or explicit reviewed-equivalent positive narrowing/nivellering rule in a later bounded execution bundle, or keep this operation held. All 2 enumerated missing-operation expectation(s) require separate disposition.",
       "permissible_owner_decisions": [
         "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
         "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
@@ -77,8 +77,24 @@
         "student_product_use"
       ],
       "proposed_non_mutating_decision": "do_not_close_from_existing_H08_without_human_canonical_decision",
-      "proof_required_to_close": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
-      "safe_interim_action": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
+      "proof_required_to_close": "Record an explicit later owner decision for all 2 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A96 as full-fit source/calculation wrappers, H08 as a partial canonical-governance anchor, A38 excluded, and the ratio-comparison operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "ratio_comparison",
+        "canonical_positive_narrowing_governance"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-ha23-2-q15-net-ratio-nivellering:missing-operation-1",
+          "expectation": "The H08 label/kern conflict requires a positive narrowing/nivellering canonical or reviewed-equivalent decision.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        },
+        {
+          "decision_id": "h7-ha23-2-q15-net-ratio-nivellering:missing-operation-2",
+          "expectation": "No live MTU exactly covers comparison of post-tax high-income/low-income ratios.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
       "required_mtu_ids": [
         "A81",
         "A96"
@@ -117,7 +133,8 @@
         "canonical_positive_narrowing_governance"
       ],
       "missing_operation_expectations": [
-        "No live MTU exactly covers comparison of post-tax high-income/low-income ratios; H08 remains only a canonical-governance anchor because its label and kern conflict."
+        "The H08 label/kern conflict requires a positive narrowing/nivellering canonical or reviewed-equivalent decision.",
+        "No live MTU exactly covers comparison of post-tax high-income/low-income ratios."
       ],
       "adjudication_correction_basis": "The official model compares two net-income ratios. It does not calculate a percentage change, so A38 is excluded.",
       "official_evidence_refs": [
@@ -251,8 +268,15 @@
           "canonical_positive_narrowing_governance"
         ],
         "expected_missing_operation_expectations": [
-          "No live MTU exactly covers comparison of post-tax high-income/low-income ratios; H08 remains only a canonical-governance anchor because its label and kern conflict."
+          "The H08 label/kern conflict requires a positive narrowing/nivellering canonical or reviewed-equivalent decision.",
+          "No live MTU exactly covers comparison of post-tax high-income/low-income ratios."
         ],
+        "expected_safe_interim_action": "Keep A81/A96 as full-fit source/calculation wrappers, H08 as a partial canonical-governance anchor, A38 excluded, and the ratio-comparison operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "ratio_comparison",
+          "canonical_positive_narrowing_governance"
+        ],
+        "expected_candidate_decisions_sha256": "cfd921e46e34fb5dbd43ed5af9ecf35c195f5be887be9ffc4432fde3508ef5a9",
         "expected_regression_contract": [
           {
             "key": "positive_narrowing_governance",
@@ -361,12 +385,15 @@
           "answer_form",
           "procedure"
         ],
+        "historical_proof_required_to_close": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+        "historical_safe_interim_action": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
         "source_sha256": "e1d13d89e7c60acd234b27c02cf781237515fe372216b523204b59b31e095d1d"
       },
-      "source_blocker_evidence": {
-        "needed_governance": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
-        "safe_interim_action": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
-        "final_route": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE"
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+        "safe_interim_action_at_source_time": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
+        "final_route_at_source_time": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE"
       }
     },
     {
@@ -381,7 +408,7 @@
       "source_prior_defect_class": "operation_registry_need",
       "question_word": "bereken",
       "answer_model_summary": "Snel keeps the budget amount less the agreed transfer.",
-      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held.",
+      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
       "permissible_owner_decisions": [
         "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
         "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
@@ -399,8 +426,18 @@
         "student_product_use"
       ],
       "proposed_non_mutating_decision": "operation_registry_candidate_needed",
-      "proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
-      "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, and the residual-payoff operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "residual_payoff"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-ha24-1-q12-snel-residual-payoff:missing-operation-1",
+          "expectation": "No live MTU exactly covers the proposer residual-payoff arithmetic inside an ultimatum-game decision tree.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
       "required_mtu_ids": [
         "A81",
         "A96"
@@ -562,6 +599,11 @@
         "expected_missing_operation_expectations": [
           "No live MTU exactly covers the proposer residual-payoff arithmetic inside an ultimatum-game decision tree."
         ],
+        "expected_safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, and the residual-payoff operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "residual_payoff"
+        ],
+        "expected_candidate_decisions_sha256": "90845fcc43e64f90ffeafff02fb22505f915b37776d3c386aef04c7120d5c912",
         "expected_regression_contract": [],
         "source_locator_sha256": "aff020484d18d2f167815813975bea234afc6da41a6554125b59b5b08129b4ea",
         "source_completeness_sha256": "6ca6643d3192858f83395ac2685e30708fc6929381c7aba6b7205ca885061a19",
@@ -648,12 +690,15 @@
           "answer_form",
           "procedure"
         ],
+        "historical_proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+        "historical_safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
         "source_sha256": "09c875841297a796e5b6ae6278cb3a81910097fa36660f6ef58db892b776351a"
       },
-      "source_blocker_evidence": {
-        "needed_governance": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
-        "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
-        "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+        "safe_interim_action_at_source_time": "Keep missing_mtu_expected true and keep F12 forbidden.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
       }
     },
     {
@@ -668,7 +713,7 @@
       "source_prior_defect_class": "operation_registry_need",
       "question_word": "bereken",
       "answer_model_summary": "Sprinter keeps the accepted price less marginal cost.",
-      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held.",
+      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
       "permissible_owner_decisions": [
         "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
         "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
@@ -686,8 +731,19 @@
         "student_product_use"
       ],
       "proposed_non_mutating_decision": "operation_registry_candidate_needed",
-      "proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
-      "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, require marginal-cost subtraction, and keep the margin-payoff operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "margin_payoff",
+        "marginal_cost_subtraction"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-ha24-1-q12-sprinter-margin-payoff:missing-operation-1",
+          "expectation": "No live MTU exactly covers accepted price less marginal cost inside an ultimatum-game decision tree.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
       "required_mtu_ids": [
         "A81",
         "A96"
@@ -853,6 +909,12 @@
         "expected_missing_operation_expectations": [
           "No live MTU exactly covers accepted price less marginal cost inside an ultimatum-game decision tree."
         ],
+        "expected_safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, require marginal-cost subtraction, and keep the margin-payoff operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "margin_payoff",
+          "marginal_cost_subtraction"
+        ],
+        "expected_candidate_decisions_sha256": "9e64014b7df8299eef2f3cf5741019ec3fc7936c113add0191179aa1b50e5062",
         "expected_regression_contract": [
           {
             "key": "responder_margin_cost_subtraction",
@@ -945,12 +1007,15 @@
           "answer_form",
           "procedure"
         ],
+        "historical_proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+        "historical_safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
         "source_sha256": "4411c23425834e384ab38bf2d8ae9ea976e1216f82e8929f0d048149c6922fc9"
       },
-      "source_blocker_evidence": {
-        "needed_governance": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
-        "safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
-        "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+        "safe_interim_action_at_source_time": "Keep missing_mtu_expected true and keep F12 forbidden.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
       }
     },
     {
@@ -965,7 +1030,7 @@
       "source_prior_defect_class": "operation_registry_need",
       "question_word": "leg_uit_dat",
       "answer_model_summary": "The official model compares payoffs in a game tree, not a simple matrix.",
-      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held.",
+      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
       "permissible_owner_decisions": [
         "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
         "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
@@ -983,8 +1048,20 @@
         "student_product_use"
       ],
       "proposed_non_mutating_decision": "operation_registry_candidate_needed",
-      "proof_required_to_close": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
-      "safe_interim_action": "Keep review_required and keep matrix-shortcut misconception guard.",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A97 as full-fit wrappers, F12 as a partial matrix-only concept anchor, and the sequential game-tree operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "game_tree",
+        "sequential_payoff_comparison",
+        "matrix_shortcut_guard"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw23-2-q20-game-tree-nash:missing-operation-1",
+          "expectation": "No live MTU exactly covers sequential game-tree payoff comparison; F12 is a matrix-only partial concept anchor.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
       "required_mtu_ids": [
         "A81",
         "A97"
@@ -1136,6 +1213,13 @@
         "expected_missing_operation_expectations": [
           "No live MTU exactly covers sequential game-tree payoff comparison; F12 is a matrix-only partial concept anchor."
         ],
+        "expected_safe_interim_action": "Keep A81/A97 as full-fit wrappers, F12 as a partial matrix-only concept anchor, and the sequential game-tree operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "game_tree",
+          "sequential_payoff_comparison",
+          "matrix_shortcut_guard"
+        ],
+        "expected_candidate_decisions_sha256": "8518be97a945336f420af45ea407d57dace5d6c2db661709663259f9d1288faf",
         "expected_regression_contract": [
           {
             "key": "game_tree_reasoning_mode",
@@ -1232,12 +1316,15 @@
           "answer_form",
           "procedure"
         ],
+        "historical_proof_required_to_close": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+        "historical_safe_interim_action": "Keep review_required and keep matrix-shortcut misconception guard.",
         "source_sha256": "8345ad54cd9b8d337aed8a878272655f31dd7573d3e900486eac2d0dbbe8a5ea"
       },
-      "source_blocker_evidence": {
-        "needed_governance": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
-        "safe_interim_action": "Keep review_required and keep matrix-shortcut misconception guard.",
-        "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+        "safe_interim_action_at_source_time": "Keep review_required and keep matrix-shortcut misconception guard.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
       }
     },
     {
@@ -1252,7 +1339,7 @@
       "source_prior_defect_class": "procedure_fit_gap",
       "question_word": "bereken",
       "answer_model_summary": "Insurance cost is subtracted from the avoided loss to determine the net benefit.",
-      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held.",
+      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
       "permissible_owner_decisions": [
         "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
         "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
@@ -1270,8 +1357,20 @@
         "student_product_use"
       ],
       "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
-      "proof_required_to_close": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
-      "safe_interim_action": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep H24/A88/A81/A96 as full-fit supports, G11/G12 as partial anchors only, A38 excluded, and the six-month composite cost-benefit operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "monthly_variable_premium",
+        "six_month_scaling",
+        "cost_benefit"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw24-1-q17-insurance-cost-benefit:missing-operation-1",
+          "expectation": "No live MTU exactly covers fixed plus monthly currency-insurance cost, six-month scaling, avoided exchange-rate loss, and net-benefit comparison as one operation.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
       "required_mtu_ids": [
         "H24",
         "A88",
@@ -1467,6 +1566,13 @@
         "expected_missing_operation_expectations": [
           "No live MTU exactly covers fixed plus monthly currency-insurance cost, six-month scaling, avoided exchange-rate loss, and net-benefit comparison as one operation."
         ],
+        "expected_safe_interim_action": "Keep H24/A88/A81/A96 as full-fit supports, G11/G12 as partial anchors only, A38 excluded, and the six-month composite cost-benefit operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "monthly_variable_premium",
+          "six_month_scaling",
+          "cost_benefit"
+        ],
+        "expected_candidate_decisions_sha256": "cd77af60b684e8a45062b0600dc8bbce562ba7cdd71a07fa26a5866600918892",
         "expected_regression_contract": [
           {
             "key": "premium_annualization",
@@ -1632,12 +1738,15 @@
           "answer_form",
           "procedure"
         ],
+        "historical_proof_required_to_close": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+        "historical_safe_interim_action": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
         "source_sha256": "31e4f74b17fc8e4a6df895493d244820708a7ce4dd782d29292a0bdd37770038"
       },
-      "source_blocker_evidence": {
-        "needed_governance": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
-        "safe_interim_action": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
-        "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+        "safe_interim_action_at_source_time": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
       }
     },
     {
@@ -1652,7 +1761,7 @@
       "source_prior_defect_class": "procedure_fit_gap",
       "question_word": "teken",
       "answer_model_summary": "GA1 and MB1 shift according to expected-minus-realized inflation and a one-point real-rate reduction.",
-      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held.",
+      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 2 enumerated missing-operation expectation(s) require separate disposition.",
       "permissible_owner_decisions": [
         "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
         "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
@@ -1670,8 +1779,26 @@
         "student_product_use"
       ],
       "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
-      "proof_required_to_close": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
-      "safe_interim_action": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
+      "proof_required_to_close": "Record an explicit later owner decision for all 2 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and require first_period_sequence plus one_point_real_rate_step while the operation remains held.",
+      "safe_interim_required_route_tags": [
+        "first_period_sequence",
+        "one_point_real_rate_step",
+        "graph_answer_form_gap",
+        "procedure_gap"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-first-adjustment:missing-operation-1",
+          "expectation": "No live answer-form MTU exactly covers a multi-period IS-MB-GA drawing.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        },
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-first-adjustment:missing-operation-2",
+          "expectation": "No live procedure exactly covers the first-period GA1/MB1 sequence from expected-minus-realized inflation and a one-point real-rate reduction.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
       "required_mtu_ids": [
         "A81"
       ],
@@ -1870,6 +1997,14 @@
           "No live answer-form MTU exactly covers a multi-period IS-MB-GA drawing.",
           "No live procedure exactly covers the first-period GA1/MB1 sequence from expected-minus-realized inflation and a one-point real-rate reduction."
         ],
+        "expected_safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and require first_period_sequence plus one_point_real_rate_step while the operation remains held.",
+        "expected_safe_interim_required_route_tags": [
+          "first_period_sequence",
+          "one_point_real_rate_step",
+          "graph_answer_form_gap",
+          "procedure_gap"
+        ],
+        "expected_candidate_decisions_sha256": "09519e5f0335c71920676d2aaf7bd88220752cf88bf86f2e485dadd70ddf9b40",
         "expected_regression_contract": [
           {
             "key": "first_period_ga_mb_sequence",
@@ -1985,12 +2120,15 @@
           "answer_form",
           "procedure"
         ],
+        "historical_proof_required_to_close": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+        "historical_safe_interim_action": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
         "source_sha256": "97d438cbc1ed03540b6b6900f29020be6bd9009e923aab19d4f2e4d98d4284db"
       },
-      "source_blocker_evidence": {
-        "needed_governance": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
-        "safe_interim_action": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
-        "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+        "safe_interim_action_at_source_time": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
       }
     },
     {
@@ -2005,7 +2143,7 @@
       "source_prior_defect_class": "procedure_fit_gap",
       "question_word": "teken",
       "answer_model_summary": "GA2/MB2 plus final r and inflation values complete the official graph/table answer.",
-      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held.",
+      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 2 enumerated missing-operation expectation(s) require separate disposition.",
       "permissible_owner_decisions": [
         "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
         "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
@@ -2023,8 +2161,26 @@
         "student_product_use"
       ],
       "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
-      "proof_required_to_close": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
-      "safe_interim_action": "Keep table_completion route tag and review_required.",
+      "proof_required_to_close": "Record an explicit later owner decision for all 2 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and retain final_r_pi_table_completion plus the graph/table answer-form gap while the operation remains held.",
+      "safe_interim_required_route_tags": [
+        "second_period_sequence",
+        "final_r_pi_table_completion",
+        "graph_and_table_answer_form_gap",
+        "procedure_gap"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table:missing-operation-1",
+          "expectation": "No live answer-form MTU exactly covers the combined multi-period graph and final r/pi table.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        },
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table:missing-operation-2",
+          "expectation": "No live procedure exactly covers GA2/MB2 plus final real-rate and inflation completion.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
       "required_mtu_ids": [
         "A81"
       ],
@@ -2223,6 +2379,14 @@
           "No live answer-form MTU exactly covers the combined multi-period graph and final r/pi table.",
           "No live procedure exactly covers GA2/MB2 plus final real-rate and inflation completion."
         ],
+        "expected_safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and retain final_r_pi_table_completion plus the graph/table answer-form gap while the operation remains held.",
+        "expected_safe_interim_required_route_tags": [
+          "second_period_sequence",
+          "final_r_pi_table_completion",
+          "graph_and_table_answer_form_gap",
+          "procedure_gap"
+        ],
+        "expected_candidate_decisions_sha256": "29cc1029288c7aee1bfbfe9bc2998f6b9e3382e469758b522713937191f21835",
         "expected_regression_contract": [
           {
             "key": "final_r_pi_table_completion",
@@ -2338,12 +2502,15 @@
           "answer_form",
           "procedure"
         ],
+        "historical_proof_required_to_close": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+        "historical_safe_interim_action": "Keep table_completion route tag and review_required.",
         "source_sha256": "eed3992a7e329b5af76ca7219696a376b02668ca33b1ff80edfe564eb34b3da0"
       },
-      "source_blocker_evidence": {
-        "needed_governance": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
-        "safe_interim_action": "Keep table_completion route tag and review_required.",
-        "final_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+        "safe_interim_action_at_source_time": "Keep table_completion route tag and review_required.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
       }
     }
   ],
@@ -2353,6 +2520,7 @@
     "operations_with_partial_anchors": 5,
     "excluded_historical_mtu_role_count": 4,
     "explicit_unavailable_source_limitations": 3,
+    "candidate_decisions_required": 10,
     "canonical_mtu_governance_count": 1,
     "operation_registry_governance_count": 3,
     "procedure_or_operation_registry_governance_count": 3,

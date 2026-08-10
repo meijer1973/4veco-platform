@@ -4,7 +4,7 @@
   "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
   "review_standard": "REV-STD-1",
   "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_READY_FOR_HUMAN_REVIEW_NOT_EXECUTED",
-  "generated_at": "2026-08-10T14:15:31.055Z",
+  "generated_at": "2026-08-10T14:29:10.637Z",
   "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -118,6 +118,7 @@
     "operations_with_partial_anchors": 5,
     "excluded_historical_mtu_role_count": 4,
     "explicit_unavailable_source_limitations": 3,
+    "candidate_decisions_required": 10,
     "semantically_bound_operations": 7,
     "executable_negative_regressions": 7,
     "negative_regression_detection_rate": 1,
@@ -128,8 +129,8 @@
     "student_product_use_authorized": false
   },
   "hashes": {
-    "adjudication_matrix": "2e039afaf99fde7d089d5a57bcb61af30c7af78ff7b77b0815cc5e6141829577",
-    "negative_regression_fixtures": "7a9e00f8b6caec1ce6700645cab4fac9889b33bba2e6d63357cf59571e40719a",
+    "adjudication_matrix": "be74d2cebdcf2f9033aa1430a89ce82d62d919ff11d7a3837f8c98cf6b504020",
+    "negative_regression_fixtures": "7ec84754cc4b195c27243e4a9cfba9bfeffb3ba1968ad93b07de80d72807a73a",
     "pr_readiness_evidence": "8baa95db366b821b8b99a92cbd40365d756ed2b06fe33ff93826e5273dce0167"
   },
   "prohibited_claims": [

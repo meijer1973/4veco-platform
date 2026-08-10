@@ -416,12 +416,11 @@ function validate() {
     if (row.source_route !== hold.final_route || row.source_prior_status !== hold.source_prior_status ||
         row.source_prior_defect_class !== hold.source_prior_defect_class ||
         row.proposed_non_mutating_decision !== hold.proposed_non_mutating_decision ||
-        row.proof_required_to_close !== hold.proof_required_to_close ||
-        row.safe_interim_action !== hold.safe_interim_action ||
-        !sameJson(row.source_blocker_evidence, {
-          needed_governance: blocker.needed_governance,
-          safe_interim_action: blocker.safe_interim_action,
-          final_route: blocker.final_route
+        !sameJson(row.historical_source_blocker_evidence, {
+          status: 'historical_hash_pinned_input_not_current_guidance',
+          needed_governance_at_source_time: blocker.needed_governance,
+          safe_interim_action_at_source_time: blocker.safe_interim_action,
+          final_route_at_source_time: blocker.final_route
         })) {
       failures.push(`held-operation governance fields drifted: ${row.operation_id}`);
     }
@@ -451,8 +450,32 @@ function validate() {
         !sameSet(row.forbidden_mtu_ids, correction.forbidden_mtu_ids) ||
         !sameSet(row.route_tags, correction.route_tags) ||
         !sameJson(row.missing_operation_expectations, correction.missing_operation_expectations) ||
-        row.adjudication_correction_basis !== correction.correction_basis) {
+        row.adjudication_correction_basis !== correction.correction_basis ||
+        row.safe_interim_action !== correction.current_safe_interim_action ||
+        !sameSet(row.safe_interim_required_route_tags, correction.safe_interim_required_route_tags)) {
       failures.push(`current adjudication decomposition drifted: ${row.operation_id}`);
+    }
+    const decisions = asArray(row.candidate_decisions_required);
+    if (decisions.length !== asArray(correction.missing_operation_expectations).length ||
+        !sameSet(decisions.map((decision) => decision.expectation), correction.missing_operation_expectations) ||
+        new Set(decisions.map((decision) => decision.decision_id)).size !== decisions.length ||
+        decisions.some((decision) => !decision.owner_decision_required) ||
+        row.proof_required_to_close !== `Record an explicit later owner decision for all ${decisions.length} enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.`) {
+      failures.push(`candidate decision scope does not cover every missing operation: ${row.operation_id}`);
+    }
+    for (const excludedId of asArray(correction.excluded_historical_mtu_ids)) {
+      const lowerAction = String(row.safe_interim_action || '').toLowerCase();
+      const lowerId = excludedId.toLowerCase();
+      if ([`keep ${lowerId} mapped`, `${lowerId} mapped`, `${lowerId} as full-fit`, `${lowerId} as a partial`]
+        .some((phrase) => lowerAction.includes(phrase))) {
+        failures.push(`active guidance retains excluded MTU: ${row.operation_id} ${excludedId}`);
+      }
+    }
+    for (const routeTag of asArray(correction.safe_interim_required_route_tags)) {
+      if (!asArray(row.route_tags).includes(routeTag)) failures.push(`active guidance requires nonexistent route tag: ${row.operation_id} ${routeTag}`);
+    }
+    for (const token of String(row.safe_interim_action || '').match(/\b[a-z][a-z0-9]*(?:_[a-z0-9]+)+\b/g) || []) {
+      if (!asArray(row.route_tags).includes(token)) failures.push(`active guidance names unregistered route tag: ${row.operation_id} ${token}`);
     }
     const expectedHistorical = {
       status: 'preserved_for_audit_not_current_role_authority',
@@ -461,6 +484,8 @@ function validate() {
       procedure_unit_ids: blocker.expected_procedure_unit_ids,
       forbidden_mtu_ids: blocker.expected_forbidden_mtu_ids,
       route_tags: blocker.expected_route_tags,
+      historical_proof_required_to_close: hold.proof_required_to_close,
+      historical_safe_interim_action: hold.safe_interim_action,
       source_sha256: sha256Object({
         blocker: blocker.blocker_id,
         required_mtu_ids: blocker.expected_required_mtu_ids,
@@ -542,6 +567,9 @@ function validate() {
         !sameSet(binding.expected_forbidden_mtu_ids, correction.forbidden_mtu_ids) ||
         !sameSet(binding.expected_route_tags, correction.route_tags) ||
         !sameJson(binding.expected_missing_operation_expectations, correction.missing_operation_expectations) ||
+        binding.expected_safe_interim_action !== correction.current_safe_interim_action ||
+        !sameSet(binding.expected_safe_interim_required_route_tags, correction.safe_interim_required_route_tags) ||
+        binding.expected_candidate_decisions_sha256 !== sha256Object(row.candidate_decisions_required) ||
         !sameJson(binding.expected_regression_contract, expectedRegressionContract) ||
         binding.source_completeness_sha256 !== sha256Object(row.source_completeness) ||
         !sameJson(row.regression_contract, buildRegressionContract(row))) {

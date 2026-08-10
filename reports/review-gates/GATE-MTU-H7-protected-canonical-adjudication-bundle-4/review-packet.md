@@ -14,6 +14,7 @@ Review and, if satisfied, authorize integration of Bundle 4 as protected/canonic
 - met: Exactly seven protected/canonical H7 operations are prepared for adjudication (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every operation remains prepared_not_executed with no mutation authority (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every operation carries requested human decision options and proof required to close (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
+- met: Every missing-operation expectation is represented by its own explicit later owner-decision item (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every source locator and evidence fragment resolves to the matching manifest, blocker, candidate, and operation (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Supplemental stimulus pages are PDF-hash/text bound and unavailable source annexes are explicit blocking limitations (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every required/forbidden MTU is semantically bound to the live registry and reviewed source snapshot (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)

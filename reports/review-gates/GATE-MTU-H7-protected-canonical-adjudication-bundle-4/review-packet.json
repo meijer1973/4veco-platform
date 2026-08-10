@@ -53,6 +53,11 @@
       "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
     },
     {
+      "requirement": "Every missing-operation expectation is represented by its own explicit later owner-decision item",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
       "requirement": "Every source locator and evidence fragment resolves to the matching manifest, blocker, candidate, and operation",
       "status": "met",
       "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
@@ -199,6 +204,7 @@
     "operations_with_partial_anchors": 5,
     "excluded_historical_mtu_role_count": 4,
     "explicit_unavailable_source_limitations": 3,
+    "candidate_decisions_required": 10,
     "semantically_bound_operations": 7,
     "executable_negative_regressions": 7,
     "negative_regression_detection_rate": 1,
