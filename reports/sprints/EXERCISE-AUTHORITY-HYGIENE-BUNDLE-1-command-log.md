@@ -1,0 +1,1028 @@
+# Sprint EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1: Command Log
+
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-plan.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:00:56.812Z`
+- finished_at: `2026-07-01T11:00:56.940Z`
+- duration_ms: `128`
+- exit_code: `0`
+- stdout_sha256: `67264c231bd89d05de9f3fff3e2f953a7f9a345943df7a84cf5f68abdb0d056d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-authority-hygiene
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:00:59.847Z`
+- finished_at: `2026-07-01T11:01:00.409Z`
+- duration_ms: `562`
+- exit_code: `0`
+- stdout_sha256: `cd0928cfee43246207cb0e400776a00c251ecb04d521a5a28fff44db77679719`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-authority-hygiene
+> node build-scripts/sprints/check-exercise-authority-hygiene.js
+
+OK EXERCISE-AUTHORITY-HYGIENE manifest/checker proof
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-workflow-currentness
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:01:03.232Z`
+- finished_at: `2026-07-01T11:01:04.035Z`
+- duration_ms: `803`
+- exit_code: `0`
+- stdout_sha256: `b005a2910b0a61d9062746983535bb4fae0ce424adfc1d74efdf20c7fa3b67f1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-workflow-currentness
+> node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
+
+OK EXERCISE-WORKFLOW-CURRENTNESS stale-path/currentness sweep
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:01:06.944Z`
+- finished_at: `2026-07-01T11:01:07.157Z`
+- duration_ms: `213`
+- exit_code: `0`
+- stdout_sha256: `210f478aa1cc68c800b2e6385949197cf2eaf80c1295afa854c90524ba930a58`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:01:10.428Z`
+- finished_at: `2026-07-01T11:01:10.499Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:01:13.431Z`
+- finished_at: `2026-07-01T11:01:13.505Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:01:16.918Z`
+- finished_at: `2026-07-01T11:01:17.011Z`
+- duration_ms: `93`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:01:20.463Z`
+- finished_at: `2026-07-01T11:01:21.164Z`
+- duration_ms: `701`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:01:28.612Z`
+- finished_at: `2026-07-01T11:03:24.371Z`
+- duration_ms: `115759`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `b7ce2def438b6b2c559a808b472cb8d20b44f13af32e4898a643ab1488b2a78e`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 92 passed, 92 of 98 total
+Tests:       8 skipped, 1210 passed, 1218 total
+Snapshots:   0 total
+Time:        113.285 s, estimated 124 s
+Ran all test suites.
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:03:58.572Z`
+- finished_at: `2026-07-01T11:03:58.651Z`
+- duration_ms: `79`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:04:30.788Z`
+- finished_at: `2026-07-01T11:04:30.897Z`
+- duration_ms: `109`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-authority-hygiene
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:10:44.818Z`
+- finished_at: `2026-07-01T11:10:45.694Z`
+- duration_ms: `876`
+- exit_code: `0`
+- stdout_sha256: `cd0928cfee43246207cb0e400776a00c251ecb04d521a5a28fff44db77679719`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-authority-hygiene
+> node build-scripts/sprints/check-exercise-authority-hygiene.js
+
+OK EXERCISE-AUTHORITY-HYGIENE manifest/checker proof
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-workflow-currentness
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:10:48.984Z`
+- finished_at: `2026-07-01T11:10:50.246Z`
+- duration_ms: `1262`
+- exit_code: `0`
+- stdout_sha256: `b005a2910b0a61d9062746983535bb4fae0ce424adfc1d74efdf20c7fa3b67f1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-workflow-currentness
+> node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
+
+OK EXERCISE-WORKFLOW-CURRENTNESS stale-path/currentness sweep
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:10:54.286Z`
+- finished_at: `2026-07-01T11:10:54.388Z`
+- duration_ms: `102`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:10:57.844Z`
+- finished_at: `2026-07-01T11:10:57.919Z`
+- duration_ms: `75`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:01.188Z`
+- finished_at: `2026-07-01T11:11:01.255Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:07.852Z`
+- finished_at: `2026-07-01T11:11:08.380Z`
+- duration_ms: `528`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:12.252Z`
+- finished_at: `2026-07-01T11:11:12.316Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `1087d2f24c97252a40316646603b558a6174976626d1e10464c314e6bcec6b1c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:15.950Z`
+- finished_at: `2026-07-01T11:11:16.023Z`
+- duration_ms: `73`
+- exit_code: `0`
+- stdout_sha256: `eb41fd40020e648b2a6068aa42527aa5bd9df36c8eb7a3a38300998b6fddd82d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:19.737Z`
+- finished_at: `2026-07-01T11:11:19.800Z`
+- duration_ms: `63`
+- exit_code: `0`
+- stdout_sha256: `f8f3ebbbe34904308de1900c54bf607ececa61cdee06984dade8367cdf52e7ae`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 (19 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:23.365Z`
+- finished_at: `2026-07-01T11:11:23.999Z`
+- duration_ms: `634`
+- exit_code: `0`
+- stdout_sha256: `994065329f3be4c4bedb90005f39f31796fdfe58b7c5cdf306cf2db90d3e4b56`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:28.469Z`
+- finished_at: `2026-07-01T11:11:28.576Z`
+- duration_ms: `107`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:32.225Z`
+- finished_at: `2026-07-01T11:11:32.319Z`
+- duration_ms: `94`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:47.623Z`
+- finished_at: `2026-07-01T11:11:47.712Z`
+- duration_ms: `89`
+- exit_code: `0`
+- stdout_sha256: `1087d2f24c97252a40316646603b558a6174976626d1e10464c314e6bcec6b1c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:51.557Z`
+- finished_at: `2026-07-01T11:11:51.682Z`
+- duration_ms: `125`
+- exit_code: `0`
+- stdout_sha256: `d72ce4ec0f51605367689a8bde56103c7f41063f011d90e091b4ee545a2b8248`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 (24 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:11:57.608Z`
+- finished_at: `2026-07-01T11:11:58.272Z`
+- duration_ms: `664`
+- exit_code: `0`
+- stdout_sha256: `994065329f3be4c4bedb90005f39f31796fdfe58b7c5cdf306cf2db90d3e4b56`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:12:04.641Z`
+- finished_at: `2026-07-01T11:12:04.711Z`
+- duration_ms: `70`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:12:07.940Z`
+- finished_at: `2026-07-01T11:12:08.017Z`
+- duration_ms: `77`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-authority-hygiene
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:13:12.132Z`
+- finished_at: `2026-07-01T11:13:12.665Z`
+- duration_ms: `533`
+- exit_code: `0`
+- stdout_sha256: `cd0928cfee43246207cb0e400776a00c251ecb04d521a5a28fff44db77679719`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-authority-hygiene
+> node build-scripts/sprints/check-exercise-authority-hygiene.js
+
+OK EXERCISE-AUTHORITY-HYGIENE manifest/checker proof
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-workflow-currentness
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:13:15.979Z`
+- finished_at: `2026-07-01T11:13:16.591Z`
+- duration_ms: `612`
+- exit_code: `0`
+- stdout_sha256: `b005a2910b0a61d9062746983535bb4fae0ce424adfc1d74efdf20c7fa3b67f1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-workflow-currentness
+> node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
+
+OK EXERCISE-WORKFLOW-CURRENTNESS stale-path/currentness sweep
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:13:19.862Z`
+- finished_at: `2026-07-01T11:13:19.981Z`
+- duration_ms: `119`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:13:24.248Z`
+- finished_at: `2026-07-01T11:13:24.338Z`
+- duration_ms: `90`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:13:34.407Z`
+- finished_at: `2026-07-01T11:13:34.489Z`
+- duration_ms: `82`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:13:48.385Z`
+- finished_at: `2026-07-01T11:13:49.246Z`
+- duration_ms: `861`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:14:05.892Z`
+- finished_at: `2026-07-01T11:16:00.609Z`
+- duration_ms: `114717`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `13167cc5d7c89a802aec76dfaab919398860f8d3c0075e1d1083dd14cacafa76`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 92 passed, 92 of 98 total
+Tests:       8 skipped, 1210 passed, 1218 total
+Snapshots:   0 total
+Time:        113.197 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:16:05.136Z`
+- finished_at: `2026-07-01T11:16:05.201Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `1087d2f24c97252a40316646603b558a6174976626d1e10464c314e6bcec6b1c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:16:11.473Z`
+- finished_at: `2026-07-01T11:16:11.536Z`
+- duration_ms: `63`
+- exit_code: `0`
+- stdout_sha256: `eb41fd40020e648b2a6068aa42527aa5bd9df36c8eb7a3a38300998b6fddd82d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:16:15.303Z`
+- finished_at: `2026-07-01T11:16:15.370Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `003ada13078c4b34809f1406468f17fbeae35f35be20707db5c9abe3384f1cd4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 (37 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 --complete
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:16:19.073Z`
+- finished_at: `2026-07-01T11:16:19.803Z`
+- duration_ms: `730`
+- exit_code: `0`
+- stdout_sha256: `994065329f3be4c4bedb90005f39f31796fdfe58b7c5cdf306cf2db90d3e4b56`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: EXERCISE-AUTHORITY-HYGIENE-BUNDLE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:16:24.897Z`
+- finished_at: `2026-07-01T11:16:24.984Z`
+- duration_ms: `87`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\EXERCISES-20260609\4veco-platform`
+- started_at: `2026-07-01T11:16:28.257Z`
+- finished_at: `2026-07-01T11:16:28.307Z`
+- duration_ms: `50`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
