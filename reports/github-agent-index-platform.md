@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-10T13:52:08.743Z
+Generated: 2026-08-10T14:16:38.764Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/mtu-h7-protected-canonical-adjudication-bundle-4-20260703`
-Source commit: `05c8d22398256415aed3a1728a63bd82989d5042`
-Files indexed: 7069
+Source commit: `3c3f89d785c136886223a4e92ff59b16732265ba`
+Files indexed: 7070
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 690
+Count: 691
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -533,6 +533,7 @@ Count: 690
 - build-scripts/references/inventory-file-hash.js
 - build-scripts/references/lib/evidence-reference-resolver.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
+- build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js
 - build-scripts/references/lib/mtu-h7-bundle4-contract.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-course-target-exercises-v5.js
