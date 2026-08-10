@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-10T08:20:15.737Z
+Generated: 2026-08-10T08:27:54.620Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/payload-integration-state-explainability-1-20260701`
-Source commit: `6f8ce77e7e53b29d6726d8b960d30faa14c2dc35`
-Files indexed: 7061
+Source commit: `355bee5671d367892c4f4740c1eb8763c625f947`
+Files indexed: 7054
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2518,7 +2518,7 @@ Count: 974
 
 ## reports
 
-Count: 4466
+Count: 4459
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2579,16 +2579,8 @@ Count: 4466
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -6002,6 +5994,7 @@ Count: 4466
 - reports/sprints/PAYLOAD-AUTHORIZATION-WORDING-1-lead-review-round2.md
 - reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round2.md
 - reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round3.md
+- reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round4.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.jsonl
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-correction-record.md
