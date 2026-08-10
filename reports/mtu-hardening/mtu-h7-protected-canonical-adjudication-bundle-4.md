@@ -8,7 +8,9 @@ This packet prepares protected/canonical H7 operation adjudication only. It does
 
 - Protected operations prepared: 7
 - Unique candidate packets: 6
-- Negative regression detection rate: 1
+- Semantically bound operations: 7
+- Executable negative regressions: 7
+- Observed negative regression detection rate: 1
 - Expected PR route: READY_FOR_HUMAN_REVIEW
 - Executed in this bundle: 0
 - H7 full closure claimed: false

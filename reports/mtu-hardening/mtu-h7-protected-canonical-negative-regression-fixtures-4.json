@@ -4,8 +4,8 @@
   "fixture_set_id": "mtu-h7-protected-canonical-negative-regression-fixtures-4",
   "review_standard": "REV-STD-1",
   "status": "NEGATIVE_GUARDS_PIN_PROTECTED_CANONICAL_ADJUDICATION_PREP_ONLY",
-  "generated_at": "2026-07-03T08:57:34.517Z",
-  "base_main_sha": "51a08a64684160c8c6d06e5c46df2424d5d98659",
+  "generated_at": "2026-08-10T13:47:00.170Z",
+  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,
@@ -41,10 +41,14 @@
       "expected_status": "fail_if_bundle4_executes_or_closes_without_owner_governance_decision",
       "expected_failure_defect_class": "canonical_mtu_governance_need",
       "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
+      "mutation_patch": {
+        "type": "bypass_governance_hold",
+        "adjudication_status": "executed_without_owner_governance_decision"
+      },
       "guard": "A smaller high/low net-income ratio must not silently close as denivellering.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
+      "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
       "observed_status": "prepared_not_executed",
-      "detected_with_intended_defect_class": true
+      "proof_kind": "executable_in_memory_contract_mutation"
     },
     {
       "fixture_id": "h7-governance-negative-q12-f12-overtrigger-residual",
@@ -53,10 +57,14 @@
       "expected_status": "fail_if_bundle4_executes_or_closes_without_owner_governance_decision",
       "expected_failure_defect_class": "over_trigger",
       "mutation": "Map F12 to the residual-payoff operation.",
+      "mutation_patch": {
+        "type": "map_forbidden_mtu",
+        "mtu_id": "F12"
+      },
       "guard": "Direct payoff arithmetic must not be closed by Nash pay-off matrix coverage.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
+      "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
       "observed_status": "prepared_not_executed",
-      "detected_with_intended_defect_class": true
+      "proof_kind": "executable_in_memory_contract_mutation"
     },
     {
       "fixture_id": "h7-governance-negative-q12-cost-omitted-margin",
@@ -65,10 +73,14 @@
       "expected_status": "fail_if_bundle4_executes_or_closes_without_owner_governance_decision",
       "expected_failure_defect_class": "operation_registry_need",
       "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
+      "mutation_patch": {
+        "type": "bypass_governance_hold",
+        "adjudication_status": "executed_without_owner_governance_decision"
+      },
       "guard": "The margin-payoff operation must retain the marginal-cost subtraction.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
+      "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
       "observed_status": "prepared_not_executed",
-      "detected_with_intended_defect_class": true
+      "proof_kind": "executable_in_memory_contract_mutation"
     },
     {
       "fixture_id": "h7-governance-negative-q20-matrix-shortcut",
@@ -77,10 +89,14 @@
       "expected_status": "fail_if_bundle4_executes_or_closes_without_owner_governance_decision",
       "expected_failure_defect_class": "operation_registry_need",
       "mutation": "Close q20 using only F12 matrix procedure text.",
+      "mutation_patch": {
+        "type": "bypass_governance_hold",
+        "adjudication_status": "executed_without_owner_governance_decision"
+      },
       "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
+      "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
       "observed_status": "prepared_not_executed",
-      "detected_with_intended_defect_class": true
+      "proof_kind": "executable_in_memory_contract_mutation"
     },
     {
       "fixture_id": "h7-governance-negative-q17-premium-month-factor-omitted",
@@ -89,10 +105,14 @@
       "expected_status": "fail_if_bundle4_executes_or_closes_without_owner_governance_decision",
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
+      "mutation_patch": {
+        "type": "remove_required_route_tag",
+        "route_tag": "insurance_cost"
+      },
       "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
+      "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
       "observed_status": "prepared_not_executed",
-      "detected_with_intended_defect_class": true
+      "proof_kind": "executable_in_memory_contract_mutation"
     },
     {
       "fixture_id": "h7-governance-negative-q15-macro-one-step-only",
@@ -101,10 +121,14 @@
       "expected_status": "fail_if_bundle4_executes_or_closes_without_owner_governance_decision",
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
+      "mutation_patch": {
+        "type": "remove_required_route_tag",
+        "route_tag": "time_sequence"
+      },
       "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
+      "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
       "observed_status": "prepared_not_executed",
-      "detected_with_intended_defect_class": true
+      "proof_kind": "executable_in_memory_contract_mutation"
     },
     {
       "fixture_id": "h7-governance-negative-q15-final-r-pi-omitted",
@@ -113,15 +137,93 @@
       "expected_status": "fail_if_bundle4_executes_or_closes_without_owner_governance_decision",
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
+      "mutation_patch": {
+        "type": "remove_required_route_tag",
+        "route_tag": "table_completion"
+      },
       "guard": "The graph-and-table operation must not close from graph movement alone.",
-      "detection_rule": "Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.",
+      "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
       "observed_status": "prepared_not_executed",
+      "proof_kind": "executable_in_memory_contract_mutation"
+    }
+  ],
+  "execution_results": [
+    {
+      "fixture_id": "h7-governance-negative-q15-denivellering-label-reversal",
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "mutation_applied": true,
+      "expected_failure_defect_class": "canonical_mtu_governance_need",
+      "observed_failure_defect_classes": [
+        "canonical_mtu_governance_need"
+      ],
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-governance-negative-q12-f12-overtrigger-residual",
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "mutation_applied": true,
+      "expected_failure_defect_class": "over_trigger",
+      "observed_failure_defect_classes": [
+        "over_trigger"
+      ],
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-governance-negative-q12-cost-omitted-margin",
+      "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+      "mutation_applied": true,
+      "expected_failure_defect_class": "operation_registry_need",
+      "observed_failure_defect_classes": [
+        "operation_registry_need"
+      ],
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-governance-negative-q20-matrix-shortcut",
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "mutation_applied": true,
+      "expected_failure_defect_class": "operation_registry_need",
+      "observed_failure_defect_classes": [
+        "operation_registry_need"
+      ],
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-governance-negative-q17-premium-month-factor-omitted",
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "mutation_applied": true,
+      "expected_failure_defect_class": "procedure_fit_gap",
+      "observed_failure_defect_classes": [
+        "procedure_fit_gap"
+      ],
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-governance-negative-q15-macro-one-step-only",
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "mutation_applied": true,
+      "expected_failure_defect_class": "procedure_fit_gap",
+      "observed_failure_defect_classes": [
+        "procedure_fit_gap"
+      ],
+      "detected_with_intended_defect_class": true
+    },
+    {
+      "fixture_id": "h7-governance-negative-q15-final-r-pi-omitted",
+      "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+      "mutation_applied": true,
+      "expected_failure_defect_class": "procedure_fit_gap",
+      "observed_failure_defect_classes": [
+        "procedure_fit_gap"
+      ],
       "detected_with_intended_defect_class": true
     }
   ],
   "summary": {
     "total": 7,
+    "executed": 7,
     "detected_with_intended_defect_class": 7,
-    "detection_rate": 1
+    "detection_rate": 1,
+    "proof_kind": "executed_contract_mutations"
   }
 }

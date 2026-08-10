@@ -5,8 +5,13 @@
   "review_standard": "REV-STD-1",
   "status": "READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PR_PROOF",
   "route": "READY_FOR_HUMAN_REVIEW",
-  "base_main_sha": "51a08a64684160c8c6d06e5c46df2424d5d98659",
-  "requested_decision": "Review Bundle 4 as protected/canonical H7 adjudication preparation only. Approve only whether a later bounded protected-governance execution packet may be prepared, or keep held/reject individual operations. Do not approve H7 closure or product authority.",
+  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
+  "requested_decision": "Review and, if satisfied, authorize integration of Bundle 4 as protected/canonical H7 adjudication preparation only. This payload decision must not authorize any candidate family or later protected-governance execution.",
+  "decision_surfaces": {
+    "payload_integration": "Authorize or reject integration of PR #204 at its reviewed payload head.",
+    "later_candidate_adjudication": "After integration, record a separate explicit owner decision per candidate family before any Bundle 5 execution preparation.",
+    "decisions_must_remain_separate": true
+  },
   "product_end_state_cited": "../4veco-lessen/specifications/product-end-state.md",
   "original_sprint_spec_cited": "reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json",
   "non_negotiable_requirements": [
@@ -28,7 +33,7 @@
     {
       "requirement": "Current main is recorded as Bundle 4 base",
       "status": "met",
-      "evidence": "51a08a64684160c8c6d06e5c46df2424d5d98659"
+      "evidence": "eb8647c7310ab16d5871f2a399636f770dc63bf8"
     },
     {
       "requirement": "Exactly seven protected/canonical H7 operations are prepared for adjudication",
@@ -46,7 +51,17 @@
       "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
     },
     {
-      "requirement": "Every operation carries a negative regression guard",
+      "requirement": "Every source locator and evidence fragment resolves to the matching manifest, blocker, candidate, and operation",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
+      "requirement": "Every required/forbidden MTU is semantically bound to the live registry and reviewed source snapshot",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
+      "requirement": "Every operation carries an executable negative regression mutation with observed intended defect class",
       "status": "met",
       "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json"
     },
@@ -59,6 +74,11 @@
       "requirement": "Single-account PR governance route is READY_FOR_HUMAN_REVIEW pending exact remote proof",
       "status": "proof_required_to_close",
       "evidence": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json"
+    },
+    {
+      "requirement": "Actual specialist results and exact-head PASS/PASS WITH FLAGS lead review are external proof, never generated verdicts",
+      "status": "proof_required_to_close",
+      "evidence": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md"
     }
   ],
   "findings": [
@@ -82,6 +102,13 @@
       "severity": "pr_governance_gate",
       "summary": "Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, and CI are required before the readiness transition; owner payload authorization is required before merge.",
       "proof_required_to_close": "Run the single-account PR governance workflow against the exact remote head and record owner payload authorization that names the reviewed payload head SHA."
+    },
+    {
+      "id": "H7-B4-FINDING-CANDIDATE-AUTHORITY-SEPARATE",
+      "classification": "blocks",
+      "severity": "authority_scope_boundary",
+      "summary": "Payload integration authorization does not authorize any protected/canonical candidate family or later execution preparation.",
+      "proof_required_to_close": "Record a separate explicit owner decision per candidate family after this packet is integrated."
     }
   ],
   "blocks": [
@@ -104,7 +131,8 @@
   "proof_required_to_close": [
     "Run the Bundle 4 checker and current Bundle 3 checker. Bundle 1/2 artifacts are historical hash-pinned inputs; their older MTU registry source hash is not current proof.",
     "Run report JSON validation, URL-index check, agent-index freshness, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.",
-    "Run Teacher, Economist, and Quality inspection subagent lead review and require MORE_THAN_SATISFIED from each reviewer.",
+    "Run Teacher, Economist, and Quality inspection specialist reviews against the exact remote payload head and require MORE_THAN_SATISFIED from each reviewer.",
+    "Record a lead review result of PASS or PASS WITH FLAGS with reviewed_commit_sha equal to the exact remote payload head; PASS WITH FLAGS may not carry a missing core requirement.",
     "Record explicit owner payload authorization in the PR thread with the PR number and reviewed payload commit before merge.",
     "Keep H7 closure blocked until a later owner-authorized bounded execution packet resolves the protected/canonical operations."
   ],
@@ -112,8 +140,7 @@
   "adjudication_matrix": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
   "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
   "pr_readiness_evidence": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
-  "lead_review_proof": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/lead-review.md",
-  "review_team_results": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-team-results.md",
+  "review_proof_requirements": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,
@@ -144,6 +171,8 @@
   "summary": {
     "protected_operations_prepared": 7,
     "unique_candidate_packets": 6,
+    "semantically_bound_operations": 7,
+    "executable_negative_regressions": 7,
     "negative_regression_detection_rate": 1,
     "expected_pr_route": "READY_FOR_HUMAN_REVIEW",
     "executed_in_this_bundle": 0,

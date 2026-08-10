@@ -5,6 +5,10 @@ const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const {
+  buildNegativeMutation,
+  executeNegativeFixtures
+} = require('./lib/mtu-h7-bundle4-contract');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const SPRINT_ID = 'MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4';
@@ -48,11 +52,14 @@ const SOURCE_FILES = Object.freeze({
   bundle3: 'reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json',
   protectedHoldMatrix3: 'reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json',
   bundle3Negatives: 'reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json',
+  diagnosticEvidenceManifest: 'reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json',
+  executionBenchmark: 'reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json',
   mtuRegistry: 'references/machine/micro-teaching-units.json'
 });
 
 const BUILD_SCRIPT = 'build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js';
 const CHECK_SCRIPT = 'build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js';
+const CONTRACT_SCRIPT = 'build-scripts/references/lib/mtu-h7-bundle4-contract.js';
 
 const OUT_MATRIX_JSON = 'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json';
 const OUT_MATRIX_MD = 'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.md';
@@ -64,8 +71,7 @@ const GATE_MD = `reports/review-gates/${GATE_ID}/review-packet.md`;
 const GATE_URLS = `reports/review-gates/${GATE_ID}/bundle-urls.md`;
 const PR_READINESS_JSON = `reports/review-gates/${GATE_ID}/pr-readiness-evidence.json`;
 const PR_READINESS_MD = `reports/review-gates/${GATE_ID}/pr-readiness-evidence.md`;
-const LEAD_REVIEW_MD = `reports/review-gates/${GATE_ID}/lead-review.md`;
-const REVIEW_TEAM_RESULTS_MD = `reports/review-gates/${GATE_ID}/review-team-results.md`;
+const REVIEW_PROOF_REQUIREMENTS_MD = `reports/review-gates/${GATE_ID}/review-proof-requirements.md`;
 
 const PROTECTED_OPERATION_IDS = Object.freeze([
   'h7-ha23-2-q15-net-ratio-nivellering',
@@ -76,26 +82,6 @@ const PROTECTED_OPERATION_IDS = Object.freeze([
   'h7-vw24-2-q15-ga-mb-first-adjustment',
   'h7-vw24-2-q15-ga-mb-second-adjustment-and-table'
 ]);
-
-const REVIEW_TEAM = Object.freeze({
-  status: 'MORE_THAN_SATISFIED_FOR_HUMAN_REVIEW_NOT_CLOSURE_PENDING_EXACT_REMOTE_PR_PROOF',
-  lead_verdict: 'MORE_THAN_SATISFIED_FOR_HUMAN_REVIEW_NOT_CLOSURE',
-  teacher: {
-    agent_id: '019f2712-45c6-7490-afa8-975109858f5b',
-    verdict: 'MORE_THAN_SATISFIED',
-    evidence: 'Confirmed the packet is safe and clear for human review as protected/canonical adjudication preparation only; it limits the decision, keeps all seven operations prepared_not_executed, carries human-readable proof_required_to_close, keeps authority flags false, and claims no H7 closure or product authority.'
-  },
-  economist: {
-    agent_id: '019f2712-60e8-7263-835b-2dff7041d283',
-    verdict: 'MORE_THAN_SATISFIED',
-    evidence: 'Confirmed the seven economic operation families and guards are preserved as adjudication-prep only: positive nivellerings ratio counterpart, ultimatum residual/margin payoff, game-tree Nash, insurance cost-benefit, and multi-period IS-MB-GA graph/table sequence.'
-  },
-  quality: {
-    agent_id: '019f2712-818c-78c3-9a12-6a5adf81cc75',
-    verdict: 'MORE_THAN_SATISFIED',
-    evidence: 'Confirmed the repaired packet addresses Quality findings: exact authority-flag keys, source file/hash parity, live source hashes, pre-PR exact-head semantics, explicit Bundle 1/2 historical hash-drift boundary, green Bundle 3 checker, green report JSON, current URL index, and no protected/reference/source-data/candidate/lesson/product mutation in scope.'
-  }
-});
 
 function repoPath(relativePath) {
   return path.join(ROOT, relativePath);
@@ -158,6 +144,76 @@ function unique(values) {
   return [...new Set(asArray(values).filter(Boolean))];
 }
 
+function sameJson(left, right) {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
+function sameSet(left, right) {
+  return sameJson([...asArray(left)].sort(), [...asArray(right)].sort());
+}
+
+function resolveEvidenceRef(ref) {
+  if (typeof ref !== 'string' || !ref.includes('#')) {
+    throw new Error(`evidence ref must include a file and fragment: ${ref}`);
+  }
+  const splitAt = ref.indexOf('#');
+  const file = ref.slice(0, splitAt);
+  const fragment = ref.slice(splitAt + 1);
+  if (!file || !fragment || !fs.existsSync(repoPath(file))) {
+    throw new Error(`evidence ref does not resolve: ${ref}`);
+  }
+  const doc = readJson(file);
+  if (Object.prototype.hasOwnProperty.call(doc, fragment)) {
+    return { file, fragment, record: doc[fragment] };
+  }
+  for (const value of Object.values(doc)) {
+    if (!Array.isArray(value)) continue;
+    const record = value.find((item) => item && (
+      item.record_id === fragment || item.operation_id === fragment ||
+      item.anchor_id === fragment || item.fixture_id === fragment
+    ));
+    if (record) return { file, fragment, record };
+  }
+  throw new Error(`evidence fragment does not resolve: ${ref}`);
+}
+
+function semanticUnitSnapshot(unit) {
+  return {
+    id: unit.id,
+    name: unit.name,
+    kern: unit.kern,
+    mastery_target: unit.mastery_target,
+    procedure: asArray(unit.procedure)
+  };
+}
+
+function assertSemanticUnitMatchesSource(sourceUnit, liveUnit, operationId, role) {
+  if (!sourceUnit) throw new Error(`${role} MTU source snapshot missing for ${operationId}`);
+  if (!liveUnit) throw new Error(`${role} MTU missing from live registry for ${operationId}`);
+  if (!sameJson(semanticUnitSnapshot(sourceUnit), semanticUnitSnapshot(liveUnit))) {
+    throw new Error(`${role} MTU semantic drift for ${operationId}: ${liveUnit.id}`);
+  }
+}
+
+function assertSourceLocatorFiles(locator, operationId) {
+  for (const key of ['prompt_pdf_path', 'correction_pdf_path']) {
+    if (!locator[key] || !fs.existsSync(repoPath(locator[key]))) {
+      throw new Error(`${operationId} source locator missing ${key}: ${locator[key]}`);
+    }
+  }
+}
+
+function assertRenderedEvidence(record, operationId) {
+  for (const page of [...asArray(record.rendered_prompt_pages), ...asArray(record.rendered_correction_pages)]) {
+    if (!page.rendered_png_path || !fs.existsSync(repoPath(page.rendered_png_path))) {
+      throw new Error(`${operationId} rendered evidence missing: ${page.rendered_png_path}`);
+    }
+    if (page.rendered_png_sha256 && sha256File(page.rendered_png_path) !== page.rendered_png_sha256) {
+      throw new Error(`${operationId} rendered evidence hash drift: ${page.rendered_png_path}`);
+    }
+  }
+}
+
 function decisionFamily(row) {
   if (row.final_route === 'HOLD_FOR_CANONICAL_MTU_GOVERNANCE') return 'canonical_mtu_governance';
   if (/procedure_or_operation/.test(row.proposed_non_mutating_decision || '')) return 'procedure_or_operation_registry_governance';
@@ -191,6 +247,15 @@ function assertInputs(docs) {
   if (docs.holdMatrix3.summary?.protected_holds !== 7) {
     throw new Error('Bundle 3 protected hold matrix must contain seven holds');
   }
+  for (const [name, doc] of [
+    ['diagnosticEvidenceManifest', docs.diagnosticEvidenceManifest],
+    ['executionBenchmark', docs.executionBenchmark]
+  ]) {
+    if (!allFalse(doc.authority_flags)) throw new Error(`${name} authority flags must remain false`);
+  }
+  if (!Array.isArray(docs.mtuRegistry) || docs.mtuRegistry.length === 0) {
+    throw new Error('live MTU registry must be a non-empty array');
+  }
   const holdIds = asArray(docs.holdMatrix3.protected_holds).map((row) => row.operation_id).sort();
   if (JSON.stringify(holdIds) !== JSON.stringify([...PROTECTED_OPERATION_IDS].sort())) {
     throw new Error('protected operation id set drifted');
@@ -200,18 +265,124 @@ function assertInputs(docs) {
 function buildAdjudicationMatrix(docs) {
   const blockerByOperation = indexBy(docs.blockerMatrix1.operations, 'operation_id');
   const candidateById = indexBy(docs.candidatePackets1.candidates, 'candidate_packet_id');
+  const officialByOperation = indexBy(docs.officialEvidence1.operation_evidence, 'operation_id');
+  const manifestByRecord = indexBy(docs.diagnosticEvidenceManifest.records, 'record_id');
+  const registryById = indexBy(docs.mtuRegistry, 'id');
+  const bundle3NegativeByFixture = indexBy(
+    docs.bundle3Negatives.protected_governance_hold_negative_guards,
+    'fixture_id'
+  );
 
   const operations = asArray(docs.holdMatrix3.protected_holds).map((row) => {
     const blocker = blockerByOperation.get(row.operation_id);
     const candidate = candidateById.get(row.candidate_packet_id);
+    const official = officialByOperation.get(row.operation_id);
+    const manifest = manifestByRecord.get(row.record_id);
+    const priorNegative = bundle3NegativeByFixture.get(row.negative_guard?.fixture_id);
     if (!blocker) throw new Error(`blocker missing for ${row.operation_id}`);
     if (!candidate) throw new Error(`candidate packet missing for ${row.candidate_packet_id}`);
+    if (!official) throw new Error(`official evidence missing for ${row.operation_id}`);
+    if (!manifest) throw new Error(`manifest record missing for ${row.record_id}`);
+    if (!priorNegative) throw new Error(`Bundle 3 negative guard missing for ${row.operation_id}`);
     if (candidate.status !== 'governance_evidence_only_not_candidate_write') {
       throw new Error(`candidate must remain evidence-only: ${row.candidate_packet_id}`);
     }
     if (!allFalse(candidate.authority_flags)) {
       throw new Error(`candidate authority flags must remain false: ${row.candidate_packet_id}`);
     }
+
+    for (const source of [blocker, official]) {
+      if (source.operation_id !== row.operation_id || source.record_id !== row.record_id || source.blocker_id !== row.blocker_id) {
+        throw new Error(`operation/blocker/record association drifted for ${row.operation_id}`);
+      }
+    }
+    if (!asArray(candidate.affected_operations).includes(row.operation_id) ||
+        !asArray(candidate.affected_records).includes(row.record_id) ||
+        candidate.route !== row.final_route) {
+      throw new Error(`candidate association drifted for ${row.operation_id}`);
+    }
+    if (!sameSet(row.required_mtu_ids, blocker.expected_required_mtu_ids) ||
+        !sameSet(row.mapped_mtu_ids, blocker.expected_required_mtu_ids) ||
+        !sameSet(row.answer_form_mtu_ids, blocker.expected_answer_form_mtu_ids) ||
+        !sameSet(row.forbidden_mtu_ids, blocker.expected_forbidden_mtu_ids) ||
+        !sameSet(row.route_tags, blocker.expected_route_tags)) {
+      throw new Error(`operation contract drifted from blocker evidence for ${row.operation_id}`);
+    }
+    if (!sameSet(official.expected_answer_form_mtu_ids, blocker.expected_answer_form_mtu_ids) ||
+        !sameSet(official.expected_procedure_unit_ids, blocker.expected_procedure_unit_ids) ||
+        !sameSet(official.expected_forbidden_mtu_ids, blocker.expected_forbidden_mtu_ids)) {
+      throw new Error(`official operation decomposition drifted for ${row.operation_id}`);
+    }
+    if (!sameJson(row.negative_guard, blocker.negative_regression_fixture) ||
+        !sameJson(row.negative_guard, priorNegative && {
+          fixture_id: priorNegative.fixture_id,
+          expected_failure_defect_class: priorNegative.expected_failure_defect_class,
+          mutation: priorNegative.mutation,
+          guard: priorNegative.guard
+        }) ||
+        !asArray(candidate.negative_regression_fixtures).some((item) => sameJson(item, row.negative_guard))) {
+      throw new Error(`negative guard association drifted for ${row.operation_id}`);
+    }
+    if (!asArray(candidate.official_evidence_refs).every((ref) => typeof ref === 'string') ||
+        !asArray(row.official_evidence_refs).every((ref) => asArray(candidate.official_evidence_refs).includes(ref))) {
+      throw new Error(`candidate evidence refs drifted for ${row.operation_id}`);
+    }
+    if (!asArray(candidate.proof_required_to_close).includes(row.proof_required_to_close)) {
+      throw new Error(`candidate closure proof drifted for ${row.operation_id}`);
+    }
+
+    const manifestRef = asArray(row.official_evidence_refs).map(resolveEvidenceRef).find((resolved) => (
+      resolved.file === SOURCE_FILES.diagnosticEvidenceManifest && resolved.fragment === row.record_id
+    ));
+    if (!manifestRef || manifestRef.record.record_id !== row.record_id) {
+      throw new Error(`official manifest ref missing or misbound for ${row.operation_id}`);
+    }
+    if (!sameJson(manifest.source_locator, blocker.source_locator) ||
+        !sameJson(manifest.source_locator, official.source_locator) ||
+        !asArray(row.source_locators).every((item) => item.record_id === row.record_id && sameJson(item.source_locator, manifest.source_locator)) ||
+        !asArray(candidate.source_locators).some((item) => item.record_id === row.record_id && sameJson(item.source_locator, manifest.source_locator))) {
+      throw new Error(`source locator association drifted for ${row.operation_id}`);
+    }
+    assertSourceLocatorFiles(manifest.source_locator, row.operation_id);
+    assertRenderedEvidence(manifest, row.operation_id);
+
+    for (const ref of asArray(blocker.expected_misconception_refs)) {
+      const resolved = resolveEvidenceRef(ref);
+      if (resolved.file !== SOURCE_FILES.executionBenchmark ||
+          resolved.record.anchor_id !== resolved.fragment ||
+          !asArray(resolved.record.operation_ids).includes(row.operation_id) ||
+          !asArray(resolved.record.record_ids).includes(row.record_id)) {
+        throw new Error(`misconception evidence misbound for ${row.operation_id}: ${ref}`);
+      }
+    }
+
+    const requiredBindings = unique([
+      ...asArray(row.required_mtu_ids),
+      ...asArray(row.mapped_mtu_ids),
+      ...asArray(row.answer_form_mtu_ids),
+      ...asArray(blocker.expected_procedure_unit_ids)
+    ]).map((id) => {
+      const sourceUnit = asArray(blocker.canonical_unit_fits).find((unit) => unit.id === id);
+      const liveUnit = registryById.get(id);
+      assertSemanticUnitMatchesSource(sourceUnit, liveUnit, row.operation_id, 'required');
+      return {
+        id,
+        role: 'required_or_mapped',
+        live_registry_sha256: sha256Object(liveUnit),
+        semantic_snapshot: semanticUnitSnapshot(liveUnit)
+      };
+    });
+    const forbiddenBindings = asArray(row.forbidden_mtu_ids).map((id) => {
+      const sourceUnit = asArray(blocker.forbidden_unit_guards).find((unit) => unit.id === id);
+      const liveUnit = registryById.get(id);
+      assertSemanticUnitMatchesSource(sourceUnit, liveUnit, row.operation_id, 'forbidden');
+      return {
+        id,
+        role: 'forbidden_over_trigger_guard',
+        live_registry_sha256: sha256Object(liveUnit),
+        semantic_snapshot: semanticUnitSnapshot(liveUnit)
+      };
+    });
 
     return {
       operation_id: row.operation_id,
@@ -223,6 +394,8 @@ function buildAdjudicationMatrix(docs) {
       decision_family: decisionFamily(row),
       source_prior_status: row.source_prior_status,
       source_prior_defect_class: row.source_prior_defect_class,
+      question_word: official.question_word,
+      answer_model_summary: official.answer_model_summary,
       requested_human_decision: requestedDecision(row),
       permissible_owner_decisions: [
         'APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION',
@@ -249,8 +422,24 @@ function buildAdjudicationMatrix(docs) {
       forbidden_mtu_ids: row.forbidden_mtu_ids,
       route_tags: row.route_tags,
       official_evidence_refs: row.official_evidence_refs,
+      misconception_evidence_refs: blocker.expected_misconception_refs,
       source_locators: row.source_locators,
+      rendered_prompt_pages: manifest.rendered_prompt_pages,
+      rendered_correction_pages: manifest.rendered_correction_pages,
       negative_guard: row.negative_guard,
+      semantic_binding: {
+        blocker_id: blocker.blocker_id,
+        official_evidence_operation_id: official.operation_id,
+        manifest_record_id: manifest.record_id,
+        candidate_packet_id: candidate.candidate_packet_id,
+        expected_required_mtu_ids: blocker.expected_required_mtu_ids,
+        expected_answer_form_mtu_ids: blocker.expected_answer_form_mtu_ids,
+        expected_procedure_unit_ids: blocker.expected_procedure_unit_ids,
+        expected_forbidden_mtu_ids: blocker.expected_forbidden_mtu_ids,
+        expected_route_tags: blocker.expected_route_tags,
+        source_locator_sha256: sha256Object(manifest.source_locator),
+        mtu_objects: [...requiredBindings, ...forbiddenBindings]
+      },
       source_blocker_evidence: {
         needed_governance: blocker.needed_governance,
         safe_interim_action: blocker.safe_interim_action,
@@ -292,11 +481,18 @@ function buildNegativeFixtures(matrix) {
     expected_status: 'fail_if_bundle4_executes_or_closes_without_owner_governance_decision',
     expected_failure_defect_class: row.negative_guard.expected_failure_defect_class,
     mutation: row.negative_guard.mutation,
+    mutation_patch: buildNegativeMutation(row),
     guard: row.negative_guard.guard,
-    detection_rule: 'Bundle 4 checker requires every protected/canonical operation to remain adjudication-prep-only unless a later owner payload authorization permits a bounded execution packet for the reviewed payload.',
+    detection_rule: 'Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.',
     observed_status: 'prepared_not_executed',
-    detected_with_intended_defect_class: true
+    proof_kind: 'executable_in_memory_contract_mutation'
   }));
+  const executionResults = executeNegativeFixtures(matrix, fixtures);
+  const detected = executionResults.filter((result) => result.detected_with_intended_defect_class).length;
+  if (detected !== fixtures.length) {
+    const failed = executionResults.filter((result) => !result.detected_with_intended_defect_class).map((result) => result.fixture_id);
+    throw new Error(`negative fixture execution failed: ${failed.join(', ')}`);
+  }
   return {
     schema_version: 1,
     sprint_id: SPRINT_ID,
@@ -307,15 +503,27 @@ function buildNegativeFixtures(matrix) {
     base_main_sha: BASE_MAIN_SHA,
     authority_flags: AUTHORITY_FLAGS,
     fixtures,
+    execution_results: executionResults,
     summary: {
       total: fixtures.length,
-      detected_with_intended_defect_class: fixtures.length,
-      detection_rate: 1
+      executed: executionResults.length,
+      detected_with_intended_defect_class: detected,
+      detection_rate: fixtures.length === 0 ? null : detected / fixtures.length,
+      proof_kind: 'executed_contract_mutations'
     }
   };
 }
 
 function buildPrReadinessEvidence() {
+  const commands = [
+    'node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js',
+    'node build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js',
+    'node build-scripts/reports/validate-report-json.js',
+    'node build-scripts/sprints/emit-url-index.js --check',
+    'npm.cmd run check:agent-index-freshness',
+    'npm.cmd run check:platform',
+    'npm.cmd run check:branch-protection'
+  ];
   return {
     schema_version: 1,
     sprint_id: SPRINT_ID,
@@ -325,6 +533,36 @@ function buildPrReadinessEvidence() {
     route: 'READY_FOR_HUMAN_REVIEW',
     base_main_sha: BASE_MAIN_SHA,
     authority_flags: AUTHORITY_FLAGS,
+    throughput: {
+      class: 'high_authority',
+      authority_class: 'high_authority',
+      level: 'L4'
+    },
+    human_review_payload: 'substantial',
+    consequence: 'high',
+    human_decision_required: true,
+    batching: {
+      viable: false,
+      target: null,
+      reason: 'Bundle 4 is one coherent protected/canonical adjudication-prep packet.'
+    },
+    risk_signals: {
+      governance: true,
+      protected: true,
+      product_authority: false,
+      student_use: false
+    },
+    proof: {
+      checkers: commands.map((command) => ({ command, status: 'pending_exact_head_execution' })),
+      lead_review: {
+        path: null,
+        result: null,
+        reviewed_commit_sha: null,
+        required_specialist_roles: ['teacher', 'economist', 'quality_inspection'],
+        minimum_specialist_verdict: 'MORE_THAN_SATISFIED'
+      },
+      branch_protection: null
+    },
     pilot_data: {
       workflow: 'single-account-pr-governance',
       expected_route: 'READY_FOR_HUMAN_REVIEW',
@@ -334,6 +572,11 @@ function buildPrReadinessEvidence() {
       branch_protection_ok_required: true,
       owner_authorization_required: true,
       reason: 'Bundle 4 prepares protected/canonical H7 adjudication and must remain human-review gated.'
+    },
+    authorization_boundaries: {
+      payload_authorization: 'May authorize integration of this checker/report/gate packet only after READY_FOR_HUMAN_REVIEW.',
+      candidate_authorization: 'Must be a separate later owner decision per candidate family before any protected-governance execution preparation.',
+      payload_authorization_does_not_imply_candidate_authorization: true
     },
     prior_checker_boundary: {
       bundle1_checker_current_status: 'historical_hash_locked_mtu_registry_drift_not_current_proof',
@@ -352,13 +595,7 @@ function buildPrReadinessEvidence() {
       'Do not use L0-L2 READY_FOR_LEAD_ONLY handling for this protected/canonical adjudication-prep packet.'
     ],
     commands: [
-      'node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js',
-      'node build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js',
-      'node build-scripts/reports/validate-report-json.js',
-      'node build-scripts/sprints/emit-url-index.js --check',
-      'npm.cmd run check:agent-index-freshness',
-      'npm.cmd run check:platform',
-      'npm.cmd run check:branch-protection',
+      ...commands,
       'npm.cmd run review:pr-readiness -- --repo meijer1973/4veco-platform --pr <PR_NUMBER> --evidence reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json'
     ]
   };
@@ -381,16 +618,18 @@ function buildBundle(matrix, negatives, prReadiness) {
     artifacts: {
       build_script: BUILD_SCRIPT,
       checker_script: CHECK_SCRIPT,
+      contract_script: CONTRACT_SCRIPT,
       adjudication_matrix: OUT_MATRIX_JSON,
       negative_regression_fixtures: OUT_NEGATIVE_JSON,
       review_packet: GATE_JSON,
       pr_readiness_evidence: PR_READINESS_JSON,
-      lead_review: LEAD_REVIEW_MD,
-      review_team_results: REVIEW_TEAM_RESULTS_MD
+      review_proof_requirements: REVIEW_PROOF_REQUIREMENTS_MD
     },
     summary: {
       protected_operations_prepared: matrix.summary.protected_operations_prepared,
       unique_candidate_packets: matrix.summary.unique_candidate_packets,
+      semantically_bound_operations: matrix.operations.filter((row) => row.semantic_binding).length,
+      executable_negative_regressions: negatives.summary.executed,
       negative_regression_detection_rate: negatives.summary.detection_rate,
       expected_pr_route: prReadiness.route,
       executed_in_this_bundle: 0,
@@ -429,7 +668,12 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
     status: 'READY_FOR_HUMAN_REVIEW_PENDING_REMOTE_PR_PROOF',
     route: 'READY_FOR_HUMAN_REVIEW',
     base_main_sha: BASE_MAIN_SHA,
-    requested_decision: 'Review Bundle 4 as protected/canonical H7 adjudication preparation only. Approve only whether a later bounded protected-governance execution packet may be prepared, or keep held/reject individual operations. Do not approve H7 closure or product authority.',
+    requested_decision: 'Review and, if satisfied, authorize integration of Bundle 4 as protected/canonical H7 adjudication preparation only. This payload decision must not authorize any candidate family or later protected-governance execution.',
+    decision_surfaces: {
+      payload_integration: 'Authorize or reject integration of PR #204 at its reviewed payload head.',
+      later_candidate_adjudication: 'After integration, record a separate explicit owner decision per candidate family before any Bundle 5 execution preparation.',
+      decisions_must_remain_separate: true
+    },
     product_end_state_cited: '../4veco-lessen/specifications/product-end-state.md',
     original_sprint_spec_cited: 'reports/mtu-hardening/mtu-h7-blind-holdout-benchmark-plan-1.json',
     non_negotiable_requirements: [
@@ -452,9 +696,12 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
       { requirement: 'Exactly seven protected/canonical H7 operations are prepared for adjudication', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation remains prepared_not_executed with no mutation authority', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation carries requested human decision options and proof required to close', status: 'met', evidence: OUT_MATRIX_JSON },
-      { requirement: 'Every operation carries a negative regression guard', status: 'met', evidence: OUT_NEGATIVE_JSON },
+      { requirement: 'Every source locator and evidence fragment resolves to the matching manifest, blocker, candidate, and operation', status: 'met', evidence: OUT_MATRIX_JSON },
+      { requirement: 'Every required/forbidden MTU is semantically bound to the live registry and reviewed source snapshot', status: 'met', evidence: OUT_MATRIX_JSON },
+      { requirement: 'Every operation carries an executable negative regression mutation with observed intended defect class', status: 'met', evidence: OUT_NEGATIVE_JSON },
       { requirement: 'Authority flags remain false and no protected/candidate/product writes are claimed', status: 'met', evidence: OUT_BUNDLE_JSON },
-      { requirement: 'Single-account PR governance route is READY_FOR_HUMAN_REVIEW pending exact remote proof', status: 'proof_required_to_close', evidence: PR_READINESS_JSON }
+      { requirement: 'Single-account PR governance route is READY_FOR_HUMAN_REVIEW pending exact remote proof', status: 'proof_required_to_close', evidence: PR_READINESS_JSON },
+      { requirement: 'Actual specialist results and exact-head PASS/PASS WITH FLAGS lead review are external proof, never generated verdicts', status: 'proof_required_to_close', evidence: REVIEW_PROOF_REQUIREMENTS_MD }
     ],
     findings: [
       {
@@ -477,6 +724,13 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
         severity: 'pr_governance_gate',
         summary: 'Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, and CI are required before the readiness transition; owner payload authorization is required before merge.',
         proof_required_to_close: 'Run the single-account PR governance workflow against the exact remote head and record owner payload authorization that names the reviewed payload head SHA.'
+      },
+      {
+        id: 'H7-B4-FINDING-CANDIDATE-AUTHORITY-SEPARATE',
+        classification: 'blocks',
+        severity: 'authority_scope_boundary',
+        summary: 'Payload integration authorization does not authorize any protected/canonical candidate family or later execution preparation.',
+        proof_required_to_close: 'Record a separate explicit owner decision per candidate family after this packet is integrated.'
       }
     ],
     blocks: [
@@ -499,7 +753,8 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
     proof_required_to_close: [
       'Run the Bundle 4 checker and current Bundle 3 checker. Bundle 1/2 artifacts are historical hash-pinned inputs; their older MTU registry source hash is not current proof.',
       'Run report JSON validation, URL-index check, agent-index freshness, platform tests, PR Readiness Reviewer, and live branch-protection checker against exact remote head.',
-      'Run Teacher, Economist, and Quality inspection subagent lead review and require MORE_THAN_SATISFIED from each reviewer.',
+      'Run Teacher, Economist, and Quality inspection specialist reviews against the exact remote payload head and require MORE_THAN_SATISFIED from each reviewer.',
+      'Record a lead review result of PASS or PASS WITH FLAGS with reviewed_commit_sha equal to the exact remote payload head; PASS WITH FLAGS may not carry a missing core requirement.',
       'Record explicit owner payload authorization in the PR thread with the PR number and reviewed payload commit before merge.',
       'Keep H7 closure blocked until a later owner-authorized bounded execution packet resolves the protected/canonical operations.'
     ],
@@ -507,8 +762,7 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
     adjudication_matrix: OUT_MATRIX_JSON,
     negative_regression_fixtures: OUT_NEGATIVE_JSON,
     pr_readiness_evidence: PR_READINESS_JSON,
-    lead_review_proof: LEAD_REVIEW_MD,
-    review_team_results: REVIEW_TEAM_RESULTS_MD,
+    review_proof_requirements: REVIEW_PROOF_REQUIREMENTS_MD,
     authority_flags: AUTHORITY_FLAGS,
     summary: bundle.summary
   };
@@ -548,7 +802,9 @@ This packet prepares protected/canonical H7 operation adjudication only. It does
 
 - Protected operations prepared: ${bundle.summary.protected_operations_prepared}
 - Unique candidate packets: ${bundle.summary.unique_candidate_packets}
-- Negative regression detection rate: ${bundle.summary.negative_regression_detection_rate}
+- Semantically bound operations: ${bundle.summary.semantically_bound_operations}
+- Executable negative regressions: ${bundle.summary.executable_negative_regressions}
+- Observed negative regression detection rate: ${bundle.summary.negative_regression_detection_rate}
 - Expected PR route: ${bundle.summary.expected_pr_route}
 - Executed in this bundle: ${bundle.summary.executed_in_this_bundle}
 - H7 full closure claimed: ${bundle.summary.h7_full_closure_claimed}
@@ -601,53 +857,24 @@ ${prReadiness.commands.map((command) => `- \`${command}\``).join('\n')}
 `;
 }
 
-function renderLeadReview(packet) {
-  return `# ${packet.gate_id} Lead Review
+function renderReviewProofRequirements() {
+  return `# ${GATE_ID} Review Proof Requirements
 
-Review standard: REV-STD-1
+Status: \`PENDING_EXACT_REMOTE_HEAD_REVIEW\`
 
-Lead verdict: \`${REVIEW_TEAM.lead_verdict}\`
+This file defines requirements only. The builder does not generate reviewer identities, verdicts, or lead-review approval.
 
-Route: \`${packet.route}\`
+Required external proof against the exact remote payload head:
 
-Teacher reviewer: \`${REVIEW_TEAM.teacher.verdict}\`. Agent: \`${REVIEW_TEAM.teacher.agent_id || 'pending'}\`. ${REVIEW_TEAM.teacher.evidence}
+- Teacher verdict: \`MORE_THAN_SATISFIED\`
+- Economist verdict: \`MORE_THAN_SATISFIED\`
+- Quality inspection verdict: \`MORE_THAN_SATISFIED\`
+- Lead result: \`PASS\` or \`PASS WITH FLAGS\`
+- Lead \`reviewed_commit_sha\`: exact remote payload head
+- Full live branch-protection output with \`ok: true\`
+- Exact-head required CI and Bundle 4 checker success
 
-Economist reviewer: \`${REVIEW_TEAM.economist.verdict}\`. Agent: \`${REVIEW_TEAM.economist.agent_id || 'pending'}\`. ${REVIEW_TEAM.economist.evidence}
-
-Quality inspection reviewer: \`${REVIEW_TEAM.quality.verdict}\`. Agent: \`${REVIEW_TEAM.quality.agent_id || 'pending'}\`. ${REVIEW_TEAM.quality.evidence}
-
-This packet does not close H7 and does not authorize protected mutation, operation-registry mutation, candidate writes, lesson output, product-route readiness, Scale Gate, diagnostics, mastery, PV, sequencing, summative use, or student/product use.
-`;
-}
-
-function renderReviewTeamResults() {
-  return `# ${GATE_ID} Review Team Results
-
-Status: \`${REVIEW_TEAM.status}\`
-
-## Teacher Reviewer
-
-Teacher reviewer: \`${REVIEW_TEAM.teacher.verdict}\`
-
-Agent: \`${REVIEW_TEAM.teacher.agent_id || 'pending'}\`
-
-${REVIEW_TEAM.teacher.evidence}
-
-## Economist Reviewer
-
-Economist reviewer: \`${REVIEW_TEAM.economist.verdict}\`
-
-Agent: \`${REVIEW_TEAM.economist.agent_id || 'pending'}\`
-
-${REVIEW_TEAM.economist.evidence}
-
-## Quality Inspection Reviewer
-
-Quality inspection reviewer: \`${REVIEW_TEAM.quality.verdict}\`
-
-Agent: \`${REVIEW_TEAM.quality.agent_id || 'pending'}\`
-
-${REVIEW_TEAM.quality.evidence}
+\`PASS WITH FLAGS\` may not carry a missing core requirement. Payload integration authorization and later per-candidate execution-preparation authority are separate decisions.
 `;
 }
 
@@ -655,6 +882,7 @@ function renderBundleUrls() {
   const files = [
     BUILD_SCRIPT,
     CHECK_SCRIPT,
+    CONTRACT_SCRIPT,
     OUT_BUNDLE_JSON,
     OUT_BUNDLE_MD,
     OUT_MATRIX_JSON,
@@ -665,8 +893,7 @@ function renderBundleUrls() {
     GATE_URLS,
     PR_READINESS_JSON,
     PR_READINESS_MD,
-    LEAD_REVIEW_MD,
-    REVIEW_TEAM_RESULTS_MD
+    REVIEW_PROOF_REQUIREMENTS_MD
   ];
   return `# ${GATE_ID} Bundle URLs
 
@@ -686,6 +913,8 @@ function build() {
     bundle3: readJson(SOURCE_FILES.bundle3),
     holdMatrix3: readJson(SOURCE_FILES.protectedHoldMatrix3),
     bundle3Negatives: readJson(SOURCE_FILES.bundle3Negatives),
+    diagnosticEvidenceManifest: readJson(SOURCE_FILES.diagnosticEvidenceManifest),
+    executionBenchmark: readJson(SOURCE_FILES.executionBenchmark),
     mtuRegistry: readJson(SOURCE_FILES.mtuRegistry)
   };
   assertInputs(docs);
@@ -705,8 +934,7 @@ function build() {
   writeJson(GATE_JSON, packet);
   writeText(GATE_MD, renderGateMarkdown(packet));
   writeText(GATE_URLS, renderBundleUrls());
-  writeText(LEAD_REVIEW_MD, renderLeadReview(packet));
-  writeText(REVIEW_TEAM_RESULTS_MD, renderReviewTeamResults());
+  writeText(REVIEW_PROOF_REQUIREMENTS_MD, renderReviewProofRequirements());
   return bundle;
 }
 

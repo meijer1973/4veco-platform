@@ -5,7 +5,7 @@
   "review_standard": "REV-STD-1",
   "status": "PENDING_EXACT_REMOTE_PR_READINESS_PROOF",
   "route": "READY_FOR_HUMAN_REVIEW",
-  "base_main_sha": "51a08a64684160c8c6d06e5c46df2424d5d98659",
+  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,
@@ -33,6 +33,69 @@
     "product_route_readiness_claimed": false,
     "scale_gate_1_authorized": false
   },
+  "throughput": {
+    "class": "high_authority",
+    "authority_class": "high_authority",
+    "level": "L4"
+  },
+  "human_review_payload": "substantial",
+  "consequence": "high",
+  "human_decision_required": true,
+  "batching": {
+    "viable": false,
+    "target": null,
+    "reason": "Bundle 4 is one coherent protected/canonical adjudication-prep packet."
+  },
+  "risk_signals": {
+    "governance": true,
+    "protected": true,
+    "product_authority": false,
+    "student_use": false
+  },
+  "proof": {
+    "checkers": [
+      {
+        "command": "node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "npm.cmd run check:agent-index-freshness",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "npm.cmd run check:branch-protection",
+        "status": "pending_exact_head_execution"
+      }
+    ],
+    "lead_review": {
+      "path": null,
+      "result": null,
+      "reviewed_commit_sha": null,
+      "required_specialist_roles": [
+        "teacher",
+        "economist",
+        "quality_inspection"
+      ],
+      "minimum_specialist_verdict": "MORE_THAN_SATISFIED"
+    },
+    "branch_protection": null
+  },
   "pilot_data": {
     "workflow": "single-account-pr-governance",
     "expected_route": "READY_FOR_HUMAN_REVIEW",
@@ -42,6 +105,11 @@
     "branch_protection_ok_required": true,
     "owner_authorization_required": true,
     "reason": "Bundle 4 prepares protected/canonical H7 adjudication and must remain human-review gated."
+  },
+  "authorization_boundaries": {
+    "payload_authorization": "May authorize integration of this checker/report/gate packet only after READY_FOR_HUMAN_REVIEW.",
+    "candidate_authorization": "Must be a separate later owner decision per candidate family before any protected-governance execution preparation.",
+    "payload_authorization_does_not_imply_candidate_authorization": true
   },
   "prior_checker_boundary": {
     "bundle1_checker_current_status": "historical_hash_locked_mtu_registry_drift_not_current_proof",
