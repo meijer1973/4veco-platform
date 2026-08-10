@@ -33,6 +33,45 @@
     "product_route_readiness_claimed": false,
     "scale_gate_1_authorized": false
   },
+  "packet_id": "GATE-MTU-H7-protected-canonical-adjudication-bundle-4",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
+  "authority_class": "high_authority",
+  "changed_paths": [
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "build-scripts/references/lib/mtu-h7-bundle4-contract.js",
+    "build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js",
+    "package.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.md",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.md",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/bundle-urls.md",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.md",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.md",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md",
+    "reports/url-index.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "rationale": "L4 human gate required because Bundle 4 prepares protected/canonical H7 governance adjudication."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "human_gate_required",
+    "protected_canonical_candidate_authority_requires_separate_owner_decision"
+  ],
   "throughput": {
     "class": "high_authority",
     "authority_class": "high_authority",
@@ -40,7 +79,6 @@
   },
   "human_review_payload": "substantial",
   "consequence": "high",
-  "human_decision_required": true,
   "batching": {
     "viable": false,
     "target": null,
@@ -68,6 +106,10 @@
       },
       {
         "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
         "status": "pending_exact_head_execution"
       },
       {
@@ -132,6 +174,7 @@
     "node build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js",
     "node build-scripts/reports/validate-report-json.js",
     "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
     "npm.cmd run check:agent-index-freshness",
     "npm.cmd run check:platform",
     "npm.cmd run check:branch-protection",

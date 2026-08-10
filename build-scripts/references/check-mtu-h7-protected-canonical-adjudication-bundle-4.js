@@ -7,8 +7,13 @@ const fs = require('fs');
 const path = require('path');
 const {
   PREP_STATUS,
+  buildRegressionContract,
   executeNegativeFixtures
 } = require('./lib/mtu-h7-bundle4-contract');
+const {
+  OPERATION_ADJUDICATION_CORRECTIONS,
+  RECORD_SOURCE_COMPLETENESS
+} = require('./lib/mtu-h7-bundle4-adjudication-evidence');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const SPRINT_ID = 'MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4';
@@ -71,6 +76,7 @@ const REQUIRED_FILES = Object.freeze([
   'build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js',
   'build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js',
   'build-scripts/references/lib/mtu-h7-bundle4-contract.js',
+  'build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js',
   'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json',
   'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.md',
   'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json',
@@ -179,10 +185,95 @@ function resolveEvidenceRef(ref) {
 
 function validateRenderedEvidence(record, operationId, failures) {
   for (const page of [...asArray(record.rendered_prompt_pages), ...asArray(record.rendered_correction_pages)]) {
+    if (!page.source_pdf_path || !fs.existsSync(repoPath(page.source_pdf_path))) {
+      failures.push(`rendered evidence source PDF missing: ${operationId} ${page.source_pdf_path}`);
+    } else if (page.source_pdf_sha256 !== sha256File(page.source_pdf_path)) {
+      failures.push(`rendered evidence source PDF hash drift: ${operationId} ${page.source_pdf_path}`);
+    }
     if (!page.rendered_png_path || !fs.existsSync(repoPath(page.rendered_png_path))) {
       failures.push(`rendered evidence missing: ${operationId} ${page.rendered_png_path}`);
     } else if (page.rendered_png_sha256 && sha256File(page.rendered_png_path) !== page.rendered_png_sha256) {
       failures.push(`rendered evidence hash drift: ${operationId} ${page.rendered_png_path}`);
+    }
+  }
+}
+
+function pdfTextPage(relativePath, pageNumber) {
+  return execFileSync('pdftotext', [
+    '-f', String(pageNumber), '-l', String(pageNumber), '-layout', repoPath(relativePath), '-'
+  ], {
+    cwd: ROOT,
+    encoding: 'utf8',
+    maxBuffer: 1024 * 1024 * 10
+  });
+}
+
+function validateSourceCompleteness(row, failures) {
+  const expected = RECORD_SOURCE_COMPLETENESS[row.record_id] || {
+    supplemental_pages: [],
+    correction_model_pages: [],
+    unavailable_sources: []
+  };
+  const actual = row.source_completeness || {};
+  if (asArray(actual.supplemental_pages).length !== asArray(expected.supplemental_pages).length ||
+      asArray(actual.correction_model_semantic_pages).length !== asArray(expected.correction_model_pages).length ||
+      asArray(actual.unavailable_sources).length !== asArray(expected.unavailable_sources).length) {
+    failures.push(`source completeness count drifted: ${row.operation_id}`);
+    return;
+  }
+  for (const expectedPage of asArray(expected.correction_model_pages)) {
+    const page = asArray(actual.correction_model_semantic_pages).find((item) =>
+      item.source_pdf_path === expectedPage.source_pdf_path && item.page_number === expectedPage.page_number
+    );
+    if (!page || !sameSet(page.required_text_patterns, expectedPage.required_text_patterns) ||
+        page.binding_status !== 'source_pdf_page_hash_and_required_text_verified') {
+      failures.push(`correction-model semantic page contract drifted: ${row.operation_id} page ${expectedPage.page_number}`);
+      continue;
+    }
+    if (!fs.existsSync(repoPath(page.source_pdf_path)) || page.source_pdf_sha256 !== sha256File(page.source_pdf_path)) {
+      failures.push(`correction-model source PDF hash drifted: ${row.operation_id} ${page.source_pdf_path}`);
+      continue;
+    }
+    const extractedText = pdfTextPage(page.source_pdf_path, page.page_number);
+    if (page.extracted_text_sha256 !== sha256Object(extractedText)) {
+      failures.push(`correction-model source text hash drifted: ${row.operation_id} page ${page.page_number}`);
+    }
+    for (const pattern of asArray(expectedPage.required_text_patterns)) {
+      if (!extractedText.includes(pattern)) failures.push(`correction-model semantic text missing: ${row.operation_id} ${pattern}`);
+    }
+  }
+  for (const expectedPage of asArray(expected.supplemental_pages)) {
+    const page = asArray(actual.supplemental_pages).find((item) =>
+      item.source_pdf_path === expectedPage.source_pdf_path && item.page_number === expectedPage.page_number
+    );
+    if (!page || !sameSet(page.required_text_patterns, expectedPage.required_text_patterns) ||
+        page.role !== expectedPage.role || page.binding_status !== 'source_pdf_page_hash_and_required_text_verified') {
+      failures.push(`supplemental source page contract drifted: ${row.operation_id} page ${expectedPage.page_number}`);
+      continue;
+    }
+    if (!fs.existsSync(repoPath(page.source_pdf_path)) || page.source_pdf_sha256 !== sha256File(page.source_pdf_path)) {
+      failures.push(`supplemental source PDF hash drifted: ${row.operation_id} ${page.source_pdf_path}`);
+      continue;
+    }
+    const extractedText = pdfTextPage(page.source_pdf_path, page.page_number);
+    if (page.extracted_text_sha256 !== sha256Object(extractedText)) {
+      failures.push(`supplemental source text hash drifted: ${row.operation_id} page ${page.page_number}`);
+    }
+    for (const pattern of asArray(expectedPage.required_text_patterns)) {
+      if (!extractedText.includes(pattern)) failures.push(`supplemental source semantic text missing: ${row.operation_id} ${pattern}`);
+    }
+  }
+  for (const expectedSource of asArray(expected.unavailable_sources)) {
+    const source = asArray(actual.unavailable_sources).find((item) => item.source_label === expectedSource.source_label);
+    if (!source || source.status !== 'unavailable_in_repository_explicit_blocking_limitation' ||
+        !sameSet(source.repository_file_candidates, expectedSource.repository_file_candidates) ||
+        source.impact !== expectedSource.impact || source.checked_status !== 'candidate_paths_absent_at_build_time' ||
+        asArray(source.discovered_paths).length !== 0) {
+      failures.push(`unavailable source limitation drifted: ${row.operation_id} ${expectedSource.source_label}`);
+      continue;
+    }
+    for (const candidate of asArray(expectedSource.repository_file_candidates)) {
+      if (fs.existsSync(repoPath(candidate))) failures.push(`source marked unavailable now exists: ${row.operation_id} ${candidate}`);
     }
   }
 }
@@ -231,6 +322,14 @@ function validate() {
   if (gate.gate_id !== GATE_ID || gate.route !== 'READY_FOR_HUMAN_REVIEW') failures.push('gate route/id mismatch');
   if (prReadiness.route !== 'READY_FOR_HUMAN_REVIEW') failures.push('PR readiness route mismatch');
   if (prReadiness.throughput?.level !== 'L4' || prReadiness.throughput?.class !== 'high_authority') failures.push('PR readiness L4 throughput schema missing');
+  if (prReadiness.packet_id !== GATE_ID || prReadiness.pr_throughput_class !== 'high_authority' ||
+      prReadiness.bundle_id !== 'mtu-h7-protected-canonical-adjudication-bundle-4' ||
+      prReadiness.authority_class !== 'high_authority' || prReadiness.review_autonomy?.level !== 'L4' ||
+      !Array.isArray(prReadiness.changed_paths) || prReadiness.changed_paths.length === 0 ||
+      !Array.isArray(prReadiness.paired_prs) || prReadiness.auto_merge_allowed_after_ci !== false ||
+      !Array.isArray(prReadiness.escalation_triggers) || prReadiness.escalation_triggers.length === 0) {
+    failures.push('canonical full L4 review-throughput fields missing');
+  }
   if (prReadiness.human_review_payload !== 'substantial' || prReadiness.human_decision_required !== true) failures.push('PR readiness human-review fields missing');
   if (prReadiness.authorization_boundaries?.payload_authorization_does_not_imply_candidate_authorization !== true) failures.push('payload/candidate authority separation missing');
   if (prReadiness.pilot_data?.branch_protection_ok_required !== true) failures.push('branch protection ok:true requirement missing');
@@ -303,7 +402,8 @@ function validate() {
     const hold = holdByOperation.get(row.operation_id);
     const manifest = manifestByRecord.get(row.record_id);
     const priorNegative = bundle3NegativeByFixture.get(row.negative_guard?.fixture_id);
-    if (!blocker || !candidate || !official || !hold || !manifest || !priorNegative) {
+    const correction = OPERATION_ADJUDICATION_CORRECTIONS[row.operation_id];
+    if (!blocker || !candidate || !official || !hold || !manifest || !priorNegative || !correction) {
       failures.push(`semantic source object missing: ${row.operation_id}`);
       continue;
     }
@@ -331,18 +431,47 @@ function validate() {
         candidate.route !== row.source_route) {
       failures.push(`candidate association drifted: ${row.operation_id}`);
     }
-    if (!sameSet(row.required_mtu_ids, blocker.expected_required_mtu_ids) ||
-        !sameSet(row.mapped_mtu_ids, blocker.expected_required_mtu_ids) ||
-        !sameSet(row.answer_form_mtu_ids, blocker.expected_answer_form_mtu_ids) ||
-        !sameSet(row.forbidden_mtu_ids, blocker.expected_forbidden_mtu_ids) ||
-        !sameSet(row.route_tags, blocker.expected_route_tags)) {
-      failures.push(`operation contract drifted from blocker evidence: ${row.operation_id}`);
-    }
     if (!sameSet(official.expected_answer_form_mtu_ids, blocker.expected_answer_form_mtu_ids) ||
         !sameSet(official.expected_procedure_unit_ids, blocker.expected_procedure_unit_ids) ||
         !sameSet(official.expected_forbidden_mtu_ids, blocker.expected_forbidden_mtu_ids) ||
         row.question_word !== official.question_word || row.answer_model_summary !== official.answer_model_summary) {
       failures.push(`official decomposition drifted: ${row.operation_id}`);
+    }
+    const expectedMappedIds = [...new Set([
+      ...asArray(correction.full_fit_mtu_ids),
+      ...asArray(correction.partial_anchor_mtu_ids)
+    ])];
+    if (!sameSet(row.required_mtu_ids, correction.full_fit_mtu_ids) ||
+        !sameSet(row.mapped_mtu_ids, expectedMappedIds) ||
+        !sameSet(row.partial_anchor_mtu_ids, correction.partial_anchor_mtu_ids) ||
+        !sameSet(row.excluded_historical_mtu_ids, correction.excluded_historical_mtu_ids) ||
+        !sameSet(row.answer_form_mtu_ids, correction.answer_form_mtu_ids) ||
+        !sameSet(row.procedure_mtu_ids, correction.procedure_mtu_ids) ||
+        !sameSet(row.partial_procedure_anchor_mtu_ids, correction.partial_procedure_anchor_mtu_ids) ||
+        !sameSet(row.forbidden_mtu_ids, correction.forbidden_mtu_ids) ||
+        !sameSet(row.route_tags, correction.route_tags) ||
+        !sameJson(row.missing_operation_expectations, correction.missing_operation_expectations) ||
+        row.adjudication_correction_basis !== correction.correction_basis) {
+      failures.push(`current adjudication decomposition drifted: ${row.operation_id}`);
+    }
+    const expectedHistorical = {
+      status: 'preserved_for_audit_not_current_role_authority',
+      required_mtu_ids: blocker.expected_required_mtu_ids,
+      answer_form_mtu_ids: blocker.expected_answer_form_mtu_ids,
+      procedure_unit_ids: blocker.expected_procedure_unit_ids,
+      forbidden_mtu_ids: blocker.expected_forbidden_mtu_ids,
+      route_tags: blocker.expected_route_tags,
+      source_sha256: sha256Object({
+        blocker: blocker.blocker_id,
+        required_mtu_ids: blocker.expected_required_mtu_ids,
+        answer_form_mtu_ids: blocker.expected_answer_form_mtu_ids,
+        procedure_unit_ids: blocker.expected_procedure_unit_ids,
+        forbidden_mtu_ids: blocker.expected_forbidden_mtu_ids,
+        route_tags: blocker.expected_route_tags
+      })
+    };
+    if (!sameJson(row.historical_decomposition, expectedHistorical)) {
+      failures.push(`historical decomposition audit binding drifted: ${row.operation_id}`);
     }
     if (!sameJson(row.negative_guard, hold.negative_guard) ||
         !sameJson(row.negative_guard, blocker.negative_regression_fixture) ||
@@ -380,6 +509,7 @@ function validate() {
       }
     }
     validateRenderedEvidence(manifest, row.operation_id, failures);
+    validateSourceCompleteness(row, failures);
 
     if (!sameSet(row.misconception_evidence_refs, blocker.expected_misconception_refs)) {
       failures.push(`misconception refs drifted: ${row.operation_id}`);
@@ -395,20 +525,34 @@ function validate() {
     }
 
     const binding = row.semantic_binding || {};
+    const expectedRegressionContract = Object.entries(buildRegressionContract(row)).map(([key, value]) => ({
+      key,
+      value,
+      defect_class: row.negative_guard.expected_failure_defect_class
+    }));
     if (binding.blocker_id !== blocker.blocker_id || binding.official_evidence_operation_id !== official.operation_id ||
         binding.manifest_record_id !== manifest.record_id || binding.candidate_packet_id !== candidate.candidate_packet_id ||
-        !sameSet(binding.expected_required_mtu_ids, blocker.expected_required_mtu_ids) ||
-        !sameSet(binding.expected_answer_form_mtu_ids, blocker.expected_answer_form_mtu_ids) ||
-        !sameSet(binding.expected_procedure_unit_ids, blocker.expected_procedure_unit_ids) ||
-        !sameSet(binding.expected_forbidden_mtu_ids, blocker.expected_forbidden_mtu_ids) ||
-        !sameSet(binding.expected_route_tags, blocker.expected_route_tags)) {
+        binding.current_decomposition_status !== 'reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs' ||
+        !sameSet(binding.expected_required_mtu_ids, correction.full_fit_mtu_ids) ||
+        !sameSet(binding.expected_partial_anchor_mtu_ids, correction.partial_anchor_mtu_ids) ||
+        !sameSet(binding.expected_excluded_historical_mtu_ids, correction.excluded_historical_mtu_ids) ||
+        !sameSet(binding.expected_answer_form_mtu_ids, correction.answer_form_mtu_ids) ||
+        !sameSet(binding.expected_procedure_unit_ids, correction.procedure_mtu_ids) ||
+        !sameSet(binding.expected_partial_procedure_anchor_mtu_ids, correction.partial_procedure_anchor_mtu_ids) ||
+        !sameSet(binding.expected_forbidden_mtu_ids, correction.forbidden_mtu_ids) ||
+        !sameSet(binding.expected_route_tags, correction.route_tags) ||
+        !sameJson(binding.expected_missing_operation_expectations, correction.missing_operation_expectations) ||
+        !sameJson(binding.expected_regression_contract, expectedRegressionContract) ||
+        binding.source_completeness_sha256 !== sha256Object(row.source_completeness) ||
+        !sameJson(row.regression_contract, buildRegressionContract(row))) {
       failures.push(`semantic binding contract drifted: ${row.operation_id}`);
     }
     const expectedBindingIds = new Set([
       ...asArray(row.required_mtu_ids),
       ...asArray(row.mapped_mtu_ids),
       ...asArray(row.answer_form_mtu_ids),
-      ...asArray(blocker.expected_procedure_unit_ids),
+      ...asArray(row.procedure_mtu_ids),
+      ...asArray(row.partial_procedure_anchor_mtu_ids),
       ...asArray(row.forbidden_mtu_ids)
     ]);
     if (!sameSet(asArray(binding.mtu_objects).map((item) => item.id), [...expectedBindingIds])) {
@@ -416,11 +560,11 @@ function validate() {
     }
     for (const item of asArray(binding.mtu_objects)) {
       const liveUnit = registryById.get(item.id);
-      const sourceUnit = item.role === 'forbidden_over_trigger_guard'
-        ? asArray(blocker.forbidden_unit_guards).find((unit) => unit.id === item.id)
-        : asArray(blocker.canonical_unit_fits).find((unit) => unit.id === item.id);
-      if (!liveUnit || !sourceUnit ||
-          !sameJson(semanticUnitSnapshot(sourceUnit), semanticUnitSnapshot(liveUnit)) ||
+      const sourceUnit = asArray(blocker.forbidden_unit_guards).find((unit) => unit.id === item.id);
+      if (!liveUnit ||
+          (item.role === 'forbidden_over_trigger_guard' && (!sourceUnit || !sameJson(semanticUnitSnapshot(sourceUnit), semanticUnitSnapshot(liveUnit)))) ||
+          (!['full_fit', 'partial_anchor_only', 'forbidden_over_trigger_guard'].includes(item.role)) ||
+          (item.role !== 'forbidden_over_trigger_guard' && item.role_basis !== correction.correction_basis) ||
           !sameJson(item.semantic_snapshot, semanticUnitSnapshot(liveUnit)) ||
           item.live_registry_sha256 !== sha256Object(liveUnit)) {
         failures.push(`live MTU semantic binding drifted: ${row.operation_id} ${item.id}`);

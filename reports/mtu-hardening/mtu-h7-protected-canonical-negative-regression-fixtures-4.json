@@ -4,7 +4,7 @@
   "fixture_set_id": "mtu-h7-protected-canonical-negative-regression-fixtures-4",
   "review_standard": "REV-STD-1",
   "status": "NEGATIVE_GUARDS_PIN_PROTECTED_CANONICAL_ADJUDICATION_PREP_ONLY",
-  "generated_at": "2026-08-10T13:47:00.170Z",
+  "generated_at": "2026-08-10T14:15:31.054Z",
   "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -42,8 +42,9 @@
       "expected_failure_defect_class": "canonical_mtu_governance_need",
       "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
       "mutation_patch": {
-        "type": "bypass_governance_hold",
-        "adjudication_status": "executed_without_owner_governance_decision"
+        "type": "set_semantic_regression_value",
+        "key": "positive_narrowing_governance",
+        "value": "closed_as_denivellering_without_positive_counterpart_authority"
       },
       "guard": "A smaller high/low net-income ratio must not silently close as denivellering.",
       "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
@@ -74,8 +75,9 @@
       "expected_failure_defect_class": "operation_registry_need",
       "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
       "mutation_patch": {
-        "type": "bypass_governance_hold",
-        "adjudication_status": "executed_without_owner_governance_decision"
+        "type": "set_semantic_regression_value",
+        "key": "responder_margin_cost_subtraction",
+        "value": "cost_subtraction_omitted"
       },
       "guard": "The margin-payoff operation must retain the marginal-cost subtraction.",
       "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
@@ -90,8 +92,9 @@
       "expected_failure_defect_class": "operation_registry_need",
       "mutation": "Close q20 using only F12 matrix procedure text.",
       "mutation_patch": {
-        "type": "bypass_governance_hold",
-        "adjudication_status": "executed_without_owner_governance_decision"
+        "type": "set_semantic_regression_value",
+        "key": "game_tree_reasoning_mode",
+        "value": "payoff_matrix_shortcut_substituted"
       },
       "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking.",
       "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
@@ -106,8 +109,9 @@
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
       "mutation_patch": {
-        "type": "remove_required_route_tag",
-        "route_tag": "insurance_cost"
+        "type": "set_semantic_regression_value",
+        "key": "premium_annualization",
+        "value": "month_factor_omitted"
       },
       "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit.",
       "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
@@ -122,8 +126,9 @@
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
       "mutation_patch": {
-        "type": "remove_required_route_tag",
-        "route_tag": "time_sequence"
+        "type": "set_semantic_regression_value",
+        "key": "first_period_ga_mb_sequence",
+        "value": "collapsed_to_one_generic_shift"
       },
       "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU.",
       "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",
@@ -138,8 +143,9 @@
       "expected_failure_defect_class": "procedure_fit_gap",
       "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
       "mutation_patch": {
-        "type": "remove_required_route_tag",
-        "route_tag": "table_completion"
+        "type": "set_semantic_regression_value",
+        "key": "final_r_pi_table_completion",
+        "value": "final_values_omitted"
       },
       "guard": "The graph-and-table operation must not close from graph movement alone.",
       "detection_rule": "Apply mutation_patch in memory and evaluate the mutated operation against its prep-only status, forbidden-MTU, and required-route-tag contract.",

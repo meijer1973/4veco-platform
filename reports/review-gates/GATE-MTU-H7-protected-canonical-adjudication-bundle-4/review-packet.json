@@ -23,6 +23,8 @@
     "No candidate writes or storage",
     "No lesson output",
     "No protected/canonical H7 operation execution in this bundle",
+    "Historical MTU-role decompositions remain audit evidence only; current full-fit, partial-anchor, excluded, and missing-operation fields govern this packet",
+    "Missing source annexes or response sheets must remain explicit blocking limitations",
     "No H7 full closure",
     "No H6/H7 evidence-generalization closure",
     "No product-route readiness, Scale Gate, diagnostics, mastery, sequencing, PV, summative use, or student/product use",
@@ -56,7 +58,17 @@
       "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
     },
     {
+      "requirement": "Supplemental stimulus pages are PDF-hash/text bound and unavailable source annexes are explicit blocking limitations",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
       "requirement": "Every required/forbidden MTU is semantically bound to the live registry and reviewed source snapshot",
+      "status": "met",
+      "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
+    },
+    {
+      "requirement": "Current full-fit, partial-anchor, excluded historical, answer-form, scaling, and procedure roles are separated for all seven operations",
       "status": "met",
       "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json"
     },
@@ -69,6 +81,11 @@
       "requirement": "Authority flags remain false and no protected/candidate/product writes are claimed",
       "status": "met",
       "evidence": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json"
+    },
+    {
+      "requirement": "Canonical review-throughput packet validator accepts the complete L4 schema",
+      "status": "met",
+      "evidence": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json"
     },
     {
       "requirement": "Single-account PR governance route is READY_FOR_HUMAN_REVIEW pending exact remote proof",
@@ -97,6 +114,13 @@
       "proof_required_to_close": "Owner decision per operation or candidate family before any bounded execution packet."
     },
     {
+      "id": "H7-B4-FINDING-SOURCE-ANNEX-LIMITATIONS",
+      "classification": "blocks",
+      "severity": "official_source_evidence_gap",
+      "summary": "The income q15 source tables, ultimatum q12 decision tree, and macro q15 official response sheet are absent from the repository. Available official prompt/correction pages are hash/text bound, and the missing materials remain explicit.",
+      "proof_required_to_close": "Obtain and review authoritative source-annex/response-sheet evidence, or record a later explicit owner decision that accepts the visible limitation for a precisely bounded execution."
+    },
+    {
       "id": "H7-B4-FINDING-REMOTE-PR-PROOF-PENDING",
       "classification": "proof_required_to_close",
       "severity": "pr_governance_gate",
@@ -115,6 +139,7 @@
     "H7 full closure",
     "H6/H7 evidence-generalization closure",
     "protected/canonical operation execution",
+    "candidate execution that relies on an unavailable source annex or response sheet without an explicit later owner decision",
     "protected-reference mutation",
     "operation-registry mutation",
     "candidate writes/storage",
@@ -171,6 +196,9 @@
   "summary": {
     "protected_operations_prepared": 7,
     "unique_candidate_packets": 6,
+    "operations_with_partial_anchors": 5,
+    "excluded_historical_mtu_role_count": 4,
+    "explicit_unavailable_source_limitations": 3,
     "semantically_bound_operations": 7,
     "executable_negative_regressions": 7,
     "negative_regression_detection_rate": 1,

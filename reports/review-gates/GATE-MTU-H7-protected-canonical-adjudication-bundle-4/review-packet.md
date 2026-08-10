@@ -15,9 +15,12 @@ Review and, if satisfied, authorize integration of Bundle 4 as protected/canonic
 - met: Every operation remains prepared_not_executed with no mutation authority (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every operation carries requested human decision options and proof required to close (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every source locator and evidence fragment resolves to the matching manifest, blocker, candidate, and operation (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
+- met: Supplemental stimulus pages are PDF-hash/text bound and unavailable source annexes are explicit blocking limitations (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every required/forbidden MTU is semantically bound to the live registry and reviewed source snapshot (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
+- met: Current full-fit, partial-anchor, excluded historical, answer-form, scaling, and procedure roles are separated for all seven operations (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every operation carries an executable negative regression mutation with observed intended defect class (reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json)
 - met: Authority flags remain false and no protected/candidate/product writes are claimed (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json)
+- met: Canonical review-throughput packet validator accepts the complete L4 schema (reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json)
 - proof_required_to_close: Single-account PR governance route is READY_FOR_HUMAN_REVIEW pending exact remote proof (reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json)
 - proof_required_to_close: Actual specialist results and exact-head PASS/PASS WITH FLAGS lead review are external proof, never generated verdicts (reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md)
 
@@ -25,6 +28,7 @@ Review and, if satisfied, authorize integration of Bundle 4 as protected/canonic
 
 - blocks: H7-B4-FINDING-CANONICAL-MTU-DECISION; The net-ratio/nivellering operation cannot close from current H08 evidence without an explicit positive-counterpart canonical MTU or reviewed-equivalent decision.
 - blocks: H7-B4-FINDING-PROTECTED-OPERATION-RULES; Six operation/procedure candidates remain protected-governance decisions, including ultimatum payoff arithmetic, game-tree Nash reasoning, insurance cost-benefit, and multi-period IS-MB-GA sequence operations.
+- blocks: H7-B4-FINDING-SOURCE-ANNEX-LIMITATIONS; The income q15 source tables, ultimatum q12 decision tree, and macro q15 official response sheet are absent from the repository. Available official prompt/correction pages are hash/text bound, and the missing materials remain explicit.
 - proof_required_to_close: H7-B4-FINDING-REMOTE-PR-PROOF-PENDING; Exact remote PR head, PR Readiness Reviewer output, branch-protection ok:true output, and CI are required before the readiness transition; owner payload authorization is required before merge.
 - blocks: H7-B4-FINDING-CANDIDATE-AUTHORITY-SEPARATE; Payload integration authorization does not authorize any protected/canonical candidate family or later execution preparation.
 
@@ -33,6 +37,7 @@ Review and, if satisfied, authorize integration of Bundle 4 as protected/canonic
 - H7 full closure
 - H6/H7 evidence-generalization closure
 - protected/canonical operation execution
+- candidate execution that relies on an unavailable source annex or response sheet without an explicit later owner decision
 - protected-reference mutation
 - operation-registry mutation
 - candidate writes/storage

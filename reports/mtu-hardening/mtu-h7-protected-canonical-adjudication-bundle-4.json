@@ -4,7 +4,7 @@
   "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
   "review_standard": "REV-STD-1",
   "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_READY_FOR_HUMAN_REVIEW_NOT_EXECUTED",
-  "generated_at": "2026-08-10T13:47:00.170Z",
+  "generated_at": "2026-08-10T14:15:31.055Z",
   "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
@@ -105,6 +105,7 @@
     "build_script": "build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js",
     "checker_script": "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
     "contract_script": "build-scripts/references/lib/mtu-h7-bundle4-contract.js",
+    "adjudication_evidence_script": "build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js",
     "adjudication_matrix": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
     "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
     "review_packet": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json",
@@ -114,6 +115,9 @@
   "summary": {
     "protected_operations_prepared": 7,
     "unique_candidate_packets": 6,
+    "operations_with_partial_anchors": 5,
+    "excluded_historical_mtu_role_count": 4,
+    "explicit_unavailable_source_limitations": 3,
     "semantically_bound_operations": 7,
     "executable_negative_regressions": 7,
     "negative_regression_detection_rate": 1,
@@ -124,9 +128,9 @@
     "student_product_use_authorized": false
   },
   "hashes": {
-    "adjudication_matrix": "ec458fc7f7d86237d0ac2a859942b0c0ff6aa9c0a00118d08e96d0ced7d03fb6",
-    "negative_regression_fixtures": "0821a1d4b2c717ea579e88e1c2ede3af1347f47306857cfd4c95d26a3b68bf6c",
-    "pr_readiness_evidence": "45b2eca0bbd9e18ad48c2e042bca6a06bddc2e89515aeda9af41d3adcd0bc6a6"
+    "adjudication_matrix": "2e039afaf99fde7d089d5a57bcb61af30c7af78ff7b77b0815cc5e6141829577",
+    "negative_regression_fixtures": "7a9e00f8b6caec1ce6700645cab4fac9889b33bba2e6d63357cf59571e40719a",
+    "pr_readiness_evidence": "8baa95db366b821b8b99a92cbd40365d756ed2b06fe33ff93826e5273dce0167"
   },
   "prohibited_claims": [
     "No H7 full closure",
