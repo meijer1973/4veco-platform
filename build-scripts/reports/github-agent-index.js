@@ -215,7 +215,9 @@ function buildIndex(repoName, root, options = {}) {
     generated_at: new Date().toISOString(),
     ...gitSourceInfo(repoName, root, sourceRef),
     file_count: files.length,
-    inventory_scope: "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
+    inventory_scope: sourceRef === "HEAD"
+      ? "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path"
+      : `committed tree files from \`git ls-tree -r --name-only ${sourceRef}\`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path`,
     skipped_directories: Array.from(skipDirs).sort(),
     groups,
   };

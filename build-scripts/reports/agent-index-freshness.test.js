@@ -83,6 +83,7 @@ describe('check-agent-index-freshness', () => {
 
       expect(index.source_branch).toBe('origin/main');
       expect(index.source_commit).toBe(liveMain);
+      expect(index.inventory_scope).toContain('git ls-tree -r --name-only origin/main');
       expect(indexedFiles).toContain('year2-candidate-lessons/four-target-lesson-production-1/lesson.md');
       expect(checkIndex({
         label: '4veco-lessen',
@@ -145,6 +146,39 @@ describe('check-agent-index-freshness', () => {
       const result = checkIndex({ label: 'repo', indexPath, repoRoot: repo });
       expect(result.ok).toBe(false);
       expect(result.accepted_parent_generated_tail).toBe(false);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
+  test('accepts an index-only payload tail through a synthetic PR merge parent', () => {
+    const repo = makeRepo();
+    try {
+      const base = git(['rev-parse', 'HEAD'], repo);
+      git(['checkout', '-b', 'feature'], repo);
+      fs.writeFileSync(path.join(repo, 'source.md'), 'feature payload\n', 'utf8');
+      git(['add', 'source.md'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'payload'], repo);
+      const sourceHead = git(['rev-parse', 'HEAD'], repo);
+
+      const reportsDir = path.join(repo, 'reports');
+      fs.mkdirSync(reportsDir);
+      const indexPath = path.join(reportsDir, 'github-agent-index-platform.json');
+      fs.writeFileSync(indexPath, JSON.stringify({ source_commit: sourceHead }), 'utf8');
+      git(['add', 'reports/github-agent-index-platform.json'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'index tail'], repo);
+      const payloadHead = git(['rev-parse', 'HEAD'], repo);
+
+      git(['checkout', 'main'], repo);
+      expect(git(['rev-parse', 'HEAD'], repo)).toBe(base);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'merge', '--no-ff', 'feature', '-m', 'synthetic PR merge'], repo);
+      const mergeHead = git(['rev-parse', 'HEAD'], repo);
+      const result = checkIndex({ label: 'repo', indexPath, repoRoot: repo });
+
+      expect(result.ok).toBe(true);
+      expect(result.head).toBe(mergeHead);
+      expect(result.accepted_parent_generated_tail).toBe(true);
+      expect(result.accepted_generated_index_tail_ref).toBe(payloadHead);
     } finally {
       fs.rmSync(repo, { recursive: true, force: true });
     }

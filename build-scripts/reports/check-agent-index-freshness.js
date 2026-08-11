@@ -47,6 +47,20 @@ function isGeneratedIndexOnlyTail(repoRoot, parent, head) {
     && changedPaths.every(isGeneratedIndexPath);
 }
 
+function directParents(repoRoot, commit) {
+  const line = gitValue(repoRoot, ['rev-list', '--parents', '-n', '1', commit]);
+  if (!line) return [];
+  return line.split(/\s+/).slice(1).filter(Boolean);
+}
+
+function findGeneratedIndexTailRef(repoRoot, sourceCommit, head) {
+  const candidates = [head, ...directParents(repoRoot, head)];
+  return candidates.find((candidate) => {
+    const parent = gitValue(repoRoot, ['rev-parse', `${candidate}^`]);
+    return parent === sourceCommit && isGeneratedIndexOnlyTail(repoRoot, sourceCommit, candidate);
+  }) || null;
+}
+
 function checkIndex({
   label,
   indexPath,
@@ -78,12 +92,16 @@ function checkIndex({
   const failures = [];
   const warnings = [];
   let accepted_parent_generated_tail = false;
+  let accepted_generated_index_tail_ref = null;
   if (!sourceCommit) failures.push(`${label} index has no source_commit`);
   else if (sourceCommit !== targetCommit) {
-    const parent = gitValue(repoRoot, ['rev-parse', 'HEAD^']);
-    if (allowGeneratedIndexTail && head && parent && sourceCommit === parent && isGeneratedIndexOnlyTail(repoRoot, parent, head)) {
+    const generatedTailRef = allowGeneratedIndexTail && head
+      ? findGeneratedIndexTailRef(repoRoot, sourceCommit, head)
+      : null;
+    if (generatedTailRef) {
       accepted_parent_generated_tail = true;
-      warnings.push(`${label} index source_commit matches HEAD^ and HEAD only changes generated index files`);
+      accepted_generated_index_tail_ref = generatedTailRef;
+      warnings.push(`${label} index source_commit precedes generated-index-only ref ${generatedTailRef}`);
     } else {
       failures.push(`${label} index source_commit ${sourceCommit} does not match ${sourceRef} ${targetCommit}`);
     }
@@ -103,6 +121,7 @@ function checkIndex({
     source_ref: sourceRef,
     target_commit: targetCommit,
     accepted_parent_generated_tail,
+    accepted_generated_index_tail_ref,
   };
 }
 
@@ -153,6 +172,8 @@ module.exports = {
   resolveLessenRoot,
   isGeneratedIndexPath,
   isGeneratedIndexOnlyTail,
+  directParents,
+  findGeneratedIndexTailRef,
   checkIndex,
   checkAgentIndexFreshness,
   runCli,
