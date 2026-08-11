@@ -184,6 +184,62 @@ describe('check-agent-index-freshness', () => {
     }
   });
 
+  test('rejects later linear source drift after a valid generated-index tail', () => {
+    const repo = makeRepo();
+    try {
+      const sourceHead = git(['rev-parse', 'HEAD'], repo);
+      const reportsDir = path.join(repo, 'reports');
+      fs.mkdirSync(reportsDir);
+      const indexPath = path.join(reportsDir, 'github-agent-index-platform.json');
+      fs.writeFileSync(indexPath, JSON.stringify({ source_commit: sourceHead }), 'utf8');
+      git(['add', 'reports/github-agent-index-platform.json'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'generated index tail'], repo);
+
+      fs.writeFileSync(path.join(repo, 'later-source.md'), 'later source drift\n', 'utf8');
+      git(['add', 'later-source.md'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'later source drift'], repo);
+
+      const result = checkIndex({ label: 'repo', indexPath, repoRoot: repo });
+      expect(result.ok).toBe(false);
+      expect(result.accepted_parent_generated_tail).toBe(false);
+      expect(result.accepted_generated_index_tail_ref).toBe(null);
+      expect(result.failures.join('\n')).toMatch(/does not match HEAD/);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
+  test('rejects a merge when another parent contains unindexed source drift', () => {
+    const repo = makeRepo();
+    try {
+      git(['checkout', '-b', 'feature'], repo);
+      fs.writeFileSync(path.join(repo, 'feature-source.md'), 'feature source\n', 'utf8');
+      git(['add', 'feature-source.md'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'feature source'], repo);
+      const sourceHead = git(['rev-parse', 'HEAD'], repo);
+
+      const reportsDir = path.join(repo, 'reports');
+      fs.mkdirSync(reportsDir);
+      const indexPath = path.join(reportsDir, 'github-agent-index-platform.json');
+      fs.writeFileSync(indexPath, JSON.stringify({ source_commit: sourceHead }), 'utf8');
+      git(['add', 'reports/github-agent-index-platform.json'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'feature index tail'], repo);
+
+      git(['checkout', 'main'], repo);
+      fs.writeFileSync(path.join(repo, 'main-source.md'), 'unindexed main source\n', 'utf8');
+      git(['add', 'main-source.md'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'main source drift'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'merge', '--no-ff', 'feature', '-m', 'merge with stale index'], repo);
+
+      const result = checkIndex({ label: 'repo', indexPath, repoRoot: repo });
+      expect(result.ok).toBe(false);
+      expect(result.accepted_parent_generated_tail).toBe(false);
+      expect(result.accepted_generated_index_tail_ref).toBe(null);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
   test('skips optional lesson index when lesson root is unavailable', () => {
     const result = checkIndex({
       label: '4veco-lessen',

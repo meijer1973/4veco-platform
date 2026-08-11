@@ -53,11 +53,24 @@ function directParents(repoRoot, commit) {
   return line.split(/\s+/).slice(1).filter(Boolean);
 }
 
+function isGitAncestor(repoRoot, ancestor, descendant) {
+  const result = spawnSync('git', ['merge-base', '--is-ancestor', ancestor, descendant], {
+    cwd: repoRoot,
+    encoding: 'utf8',
+  });
+  return result.status === 0;
+}
+
 function findGeneratedIndexTailRef(repoRoot, sourceCommit, head) {
-  const candidates = [head, ...directParents(repoRoot, head)];
+  const parents = directParents(repoRoot, head);
+  const candidates = [head, ...(parents.length > 1 ? parents : [])];
   return candidates.find((candidate) => {
     const parent = gitValue(repoRoot, ['rev-parse', `${candidate}^`]);
-    return parent === sourceCommit && isGeneratedIndexOnlyTail(repoRoot, sourceCommit, candidate);
+    if (parent !== sourceCommit || !isGeneratedIndexOnlyTail(repoRoot, sourceCommit, candidate)) return false;
+    if (candidate === head) return true;
+    return parents
+      .filter((mergeParent) => mergeParent !== candidate)
+      .every((mergeParent) => isGitAncestor(repoRoot, mergeParent, sourceCommit));
   }) || null;
 }
 
@@ -173,6 +186,7 @@ module.exports = {
   isGeneratedIndexPath,
   isGeneratedIndexOnlyTail,
   directParents,
+  isGitAncestor,
   findGeneratedIndexTailRef,
   checkIndex,
   checkAgentIndexFreshness,
