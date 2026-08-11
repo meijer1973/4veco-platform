@@ -67,6 +67,8 @@ const BUILD_SCRIPT = 'build-scripts/references/build-mtu-h7-protected-canonical-
 const CHECK_SCRIPT = 'build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js';
 const CONTRACT_SCRIPT = 'build-scripts/references/lib/mtu-h7-bundle4-contract.js';
 const ADJUDICATION_EVIDENCE_SCRIPT = 'build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js';
+const PROVENANCE_SCRIPT = 'build-scripts/references/lib/mtu-h7-bundle4-provenance.js';
+const PROVENANCE_TEST = 'build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js';
 
 const OUT_MATRIX_JSON = 'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json';
 const OUT_MATRIX_MD = 'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.md';
@@ -96,6 +98,8 @@ const PR_CHANGED_PATHS = Object.freeze([
   CHECK_SCRIPT,
   CONTRACT_SCRIPT,
   ADJUDICATION_EVIDENCE_SCRIPT,
+  PROVENANCE_SCRIPT,
+  PROVENANCE_TEST,
   'package.json',
   'reports/github-agent-index-lessen.json',
   'reports/github-agent-index-lessen.md',
@@ -818,6 +822,8 @@ function buildBundle(matrix, negatives, prReadiness) {
       checker_script: CHECK_SCRIPT,
       contract_script: CONTRACT_SCRIPT,
       adjudication_evidence_script: ADJUDICATION_EVIDENCE_SCRIPT,
+      provenance_script: PROVENANCE_SCRIPT,
+      provenance_regression_test: PROVENANCE_TEST,
       adjudication_matrix: OUT_MATRIX_JSON,
       negative_regression_fixtures: OUT_NEGATIVE_JSON,
       review_packet: GATE_JSON,
@@ -897,7 +903,8 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
       'PASS WITH FLAGS may not carry a missing core requirement'
     ],
     core_requirement_checklist: [
-      { requirement: 'Current main is recorded as Bundle 4 base', status: 'met', evidence: BASE_MAIN_SHA },
+      { requirement: 'Bundle 4 generation base is recorded as historical provenance', status: 'met', evidence: BASE_MAIN_SHA },
+      { requirement: 'Checker validates historical-base ancestry across feature, post-merge, and later-main states while retaining strict source-drift detection', status: 'met', evidence: PROVENANCE_TEST },
       { requirement: 'Exactly seven protected/canonical H7 operations are prepared for adjudication', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation remains prepared_not_executed with no mutation authority', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation carries requested human decision options and proof required to close', status: 'met', evidence: OUT_MATRIX_JSON },
@@ -1109,6 +1116,8 @@ function renderBundleUrls() {
     CHECK_SCRIPT,
     CONTRACT_SCRIPT,
     ADJUDICATION_EVIDENCE_SCRIPT,
+    PROVENANCE_SCRIPT,
+    PROVENANCE_TEST,
     OUT_BUNDLE_JSON,
     OUT_BUNDLE_MD,
     OUT_MATRIX_JSON,

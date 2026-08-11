@@ -43,6 +43,8 @@
     "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
     "build-scripts/references/lib/mtu-h7-bundle4-contract.js",
     "build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js",
+    "build-scripts/references/lib/mtu-h7-bundle4-provenance.js",
+    "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js",
     "package.json",
     "reports/github-agent-index-lessen.json",
     "reports/github-agent-index-lessen.md",

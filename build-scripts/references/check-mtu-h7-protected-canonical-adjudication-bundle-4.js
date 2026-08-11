@@ -14,11 +14,15 @@ const {
   OPERATION_ADJUDICATION_CORRECTIONS,
   RECORD_SOURCE_COMPLETENESS
 } = require('./lib/mtu-h7-bundle4-adjudication-evidence');
+const {
+  validateCanonicalSourceHashes,
+  validateHistoricalBaseMain
+} = require('./lib/mtu-h7-bundle4-provenance');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const SPRINT_ID = 'MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4';
 const GATE_ID = 'GATE-MTU-H7-protected-canonical-adjudication-bundle-4';
-const BASE_MAIN_SHA = resolveBaseMainSha();
+const CURRENT_MAIN_SHA = resolveCurrentMainSha();
 
 const REQUIRED_OPERATION_IDS = Object.freeze([
   'h7-ha23-2-q15-net-ratio-nivellering',
@@ -77,6 +81,8 @@ const REQUIRED_FILES = Object.freeze([
   'build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js',
   'build-scripts/references/lib/mtu-h7-bundle4-contract.js',
   'build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js',
+  'build-scripts/references/lib/mtu-h7-bundle4-provenance.js',
+  'build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js',
   'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json',
   'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.md',
   'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json',
@@ -102,12 +108,24 @@ function git(args) {
   }).trim();
 }
 
-function resolveBaseMainSha() {
+function resolveCurrentMainSha() {
   try {
-    const originMain = git(['rev-parse', '--verify', 'origin/main']);
-    return git(['merge-base', 'HEAD', originMain]);
+    return git(['rev-parse', '--verify', 'origin/main']);
   } catch (error) {
     return git(['rev-parse', 'HEAD']);
+  }
+}
+
+function isGitAncestor(ancestor, descendant) {
+  try {
+    execFileSync('git', ['merge-base', '--is-ancestor', ancestor, descendant], {
+      cwd: ROOT,
+      stdio: 'ignore'
+    });
+    return true;
+  } catch (error) {
+    if (error.status === 1) return false;
+    throw error;
   }
 }
 
@@ -314,10 +332,21 @@ function validate() {
   ]) {
     if (doc.sprint_id !== SPRINT_ID) failures.push(`${name} sprint_id mismatch`);
     if (doc.review_standard !== 'REV-STD-1') failures.push(`${name} review_standard must be REV-STD-1`);
-    if (doc.base_main_sha !== BASE_MAIN_SHA) failures.push(`${name} base_main_sha mismatch`);
     if (!allFalse(doc.authority_flags)) failures.push(`${name} authority flags must all be false`);
     if (!exactAuthorityFlags(doc.authority_flags)) failures.push(`${name} authority flags must match exact expected key set`);
   }
+  const provenance = validateHistoricalBaseMain({
+    documents: [
+      { name: 'bundle', doc: bundle },
+      { name: 'matrix', doc: matrix },
+      { name: 'negatives', doc: negatives },
+      { name: 'gate', doc: gate },
+      { name: 'prReadiness', doc: prReadiness }
+    ],
+    currentMainSha: CURRENT_MAIN_SHA,
+    isAncestor: isGitAncestor
+  });
+  failures.push(...provenance.failures);
 
   if (bundle.bundle_id !== 'mtu-h7-protected-canonical-adjudication-bundle-4') failures.push('bundle_id mismatch');
   if (bundle.status !== 'PROTECTED_CANONICAL_ADJUDICATION_PREP_READY_FOR_HUMAN_REVIEW_NOT_EXECUTED') {
@@ -621,15 +650,12 @@ function validate() {
   }
 
   if (!sameSet(asArray(bundle.source_files), EXPECTED_SOURCE_FILES)) failures.push('bundle source_files must match exact expected source set');
-  const sourceHashPaths = asArray(bundle.source_hashes).map((entry) => entry.path);
-  if (!sameSet(sourceHashPaths, EXPECTED_SOURCE_FILES)) failures.push('bundle source_hashes must match exact expected source set');
-  if (asArray(bundle.source_hashes).length !== EXPECTED_SOURCE_FILES.length) failures.push('bundle source_hash count mismatch');
-  for (const entry of asArray(bundle.source_hashes)) {
-    if (!entry.path || entry.hash_kind !== 'canonical_parsed_json_sha256' ||
-        entry.sha256 !== sha256CanonicalJsonFile(entry.path)) {
-      failures.push(`source hash mismatch: ${entry.path}`);
-    }
-  }
+  const sourceHashValidation = validateCanonicalSourceHashes({
+    entries: bundle.source_hashes,
+    expectedPaths: EXPECTED_SOURCE_FILES,
+    canonicalHashForPath: sha256CanonicalJsonFile
+  });
+  failures.push(...sourceHashValidation.failures);
   if (bundle.hashes?.adjudication_matrix !== sha256Object(matrix)) failures.push('matrix hash mismatch');
   if (bundle.hashes?.negative_regression_fixtures !== sha256Object(negatives)) failures.push('negative hash mismatch');
   if (bundle.hashes?.pr_readiness_evidence !== sha256Object(prReadiness)) failures.push('PR readiness hash mismatch');
@@ -672,18 +698,24 @@ function validate() {
       negative_mutations_executed: asArray(negatives.execution_results).length,
       negative_mutations_detected: asArray(negatives.execution_results).filter((result) => result.detected_with_intended_defect_class).length,
       semantically_bound_operations: operations.filter((row) => row.semantic_binding).length,
+      historical_base_main_sha: provenance.historicalBaseMainSha,
+      current_main_sha: provenance.currentMainSha,
       route: gate.route
     }
   };
 }
 
-const result = validate();
-if (process.argv.includes('--json')) {
-  console.log(JSON.stringify(result, null, 2));
-} else if (result.ok) {
-  console.log(`OK ${SPRINT_ID}: Bundle 4 checked (${result.summary.protected_operations_prepared} operations semantically bound, ${result.summary.negative_mutations_detected}/${result.summary.negative_mutations_executed} negative mutations detected, route ${result.summary.route})`);
-} else {
-  console.error(`FAIL ${SPRINT_ID}: ${result.failures.length} issue(s)`);
-  for (const failure of result.failures) console.error(`- ${failure}`);
+if (require.main === module) {
+  const result = validate();
+  if (process.argv.includes('--json')) {
+    console.log(JSON.stringify(result, null, 2));
+  } else if (result.ok) {
+    console.log(`OK ${SPRINT_ID}: Bundle 4 checked (${result.summary.protected_operations_prepared} operations semantically bound, ${result.summary.negative_mutations_detected}/${result.summary.negative_mutations_executed} negative mutations detected, route ${result.summary.route})`);
+  } else {
+    console.error(`FAIL ${SPRINT_ID}: ${result.failures.length} issue(s)`);
+    for (const failure of result.failures) console.error(`- ${failure}`);
+  }
+  process.exit(result.ok ? 0 : 1);
 }
-process.exit(result.ok ? 0 : 1);
+
+module.exports = { validate };

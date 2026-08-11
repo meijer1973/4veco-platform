@@ -33,9 +33,14 @@
   ],
   "core_requirement_checklist": [
     {
-      "requirement": "Current main is recorded as Bundle 4 base",
+      "requirement": "Bundle 4 generation base is recorded as historical provenance",
       "status": "met",
       "evidence": "eb8647c7310ab16d5871f2a399636f770dc63bf8"
+    },
+    {
+      "requirement": "Checker validates historical-base ancestry across feature, post-merge, and later-main states while retaining strict source-drift detection",
+      "status": "met",
+      "evidence": "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js"
     },
     {
       "requirement": "Exactly seven protected/canonical H7 operations are prepared for adjudication",
