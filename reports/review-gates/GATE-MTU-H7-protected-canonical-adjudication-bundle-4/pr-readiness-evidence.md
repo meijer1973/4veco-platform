@@ -10,7 +10,7 @@ Review autonomy: `L4` / authority `high_authority`
 
 Human decision required: `true`; auto-merge after CI: `false`
 
-Declared changed paths: 24
+Declared changed paths: 27
 
 Before marking ready or merging, run these commands against the exact remote head and record full output, including branch protection with `ok: true`.
 

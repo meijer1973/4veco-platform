@@ -47,7 +47,15 @@ function isGeneratedIndexOnlyTail(repoRoot, parent, head) {
     && changedPaths.every(isGeneratedIndexPath);
 }
 
-function checkIndex({ label, indexPath, repoRoot, required = true }) {
+function checkIndex({
+  label,
+  indexPath,
+  repoRoot,
+  required = true,
+  sourceRef = 'HEAD',
+  expectedSourceBranch = null,
+  allowGeneratedIndexTail = sourceRef === 'HEAD',
+}) {
   if (!repoRoot || !fs.existsSync(repoRoot)) {
     return required
       ? { label, ok: false, skipped: false, failures: [`${label} repo root not found`] }
@@ -60,8 +68,9 @@ function checkIndex({ label, indexPath, repoRoot, required = true }) {
   }
 
   const head = gitValue(repoRoot, ['rev-parse', 'HEAD']);
-  if (!head) {
-    return { label, ok: false, skipped: false, failures: [`${label} HEAD could not be read`] };
+  const targetCommit = gitValue(repoRoot, ['rev-parse', sourceRef]);
+  if (!targetCommit) {
+    return { label, ok: false, skipped: false, failures: [`${label} ${sourceRef} could not be read`] };
   }
 
   const index = readJson(indexPath);
@@ -70,14 +79,17 @@ function checkIndex({ label, indexPath, repoRoot, required = true }) {
   const warnings = [];
   let accepted_parent_generated_tail = false;
   if (!sourceCommit) failures.push(`${label} index has no source_commit`);
-  else if (sourceCommit !== head) {
+  else if (sourceCommit !== targetCommit) {
     const parent = gitValue(repoRoot, ['rev-parse', 'HEAD^']);
-    if (parent && sourceCommit === parent && isGeneratedIndexOnlyTail(repoRoot, parent, head)) {
+    if (allowGeneratedIndexTail && head && parent && sourceCommit === parent && isGeneratedIndexOnlyTail(repoRoot, parent, head)) {
       accepted_parent_generated_tail = true;
       warnings.push(`${label} index source_commit matches HEAD^ and HEAD only changes generated index files`);
     } else {
-      failures.push(`${label} index source_commit ${sourceCommit} does not match HEAD ${head}`);
+      failures.push(`${label} index source_commit ${sourceCommit} does not match ${sourceRef} ${targetCommit}`);
     }
+  }
+  if (expectedSourceBranch && index.source_branch !== expectedSourceBranch) {
+    failures.push(`${label} index source_branch ${index.source_branch || 'missing'} does not match ${expectedSourceBranch}`);
   }
 
   return {
@@ -88,6 +100,8 @@ function checkIndex({ label, indexPath, repoRoot, required = true }) {
     warnings,
     source_commit: sourceCommit,
     head,
+    source_ref: sourceRef,
+    target_commit: targetCommit,
     accepted_parent_generated_tail,
   };
 }
@@ -111,6 +125,9 @@ function checkAgentIndexFreshness(options = {}) {
       indexPath: path.join(reportsDir, 'github-agent-index-lessen.json'),
       repoRoot: lessenRoot,
       required: false,
+      sourceRef: (options.env || process.env).FOURVECO_LESSEN_SOURCE_REF || 'origin/main',
+      expectedSourceBranch: (options.env || process.env).FOURVECO_LESSEN_SOURCE_REF || 'origin/main',
+      allowGeneratedIndexTail: false,
     }),
   ];
 

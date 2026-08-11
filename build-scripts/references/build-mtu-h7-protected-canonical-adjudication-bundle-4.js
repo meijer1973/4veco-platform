@@ -69,6 +69,9 @@ const CONTRACT_SCRIPT = 'build-scripts/references/lib/mtu-h7-bundle4-contract.js
 const ADJUDICATION_EVIDENCE_SCRIPT = 'build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js';
 const PROVENANCE_SCRIPT = 'build-scripts/references/lib/mtu-h7-bundle4-provenance.js';
 const PROVENANCE_TEST = 'build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js';
+const AGENT_INDEX_BUILDER = 'build-scripts/reports/github-agent-index.js';
+const AGENT_INDEX_FRESHNESS_CHECKER = 'build-scripts/reports/check-agent-index-freshness.js';
+const AGENT_INDEX_FRESHNESS_TEST = 'build-scripts/reports/agent-index-freshness.test.js';
 
 const OUT_MATRIX_JSON = 'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json';
 const OUT_MATRIX_MD = 'reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.md';
@@ -100,6 +103,9 @@ const PR_CHANGED_PATHS = Object.freeze([
   ADJUDICATION_EVIDENCE_SCRIPT,
   PROVENANCE_SCRIPT,
   PROVENANCE_TEST,
+  AGENT_INDEX_BUILDER,
+  AGENT_INDEX_FRESHNESS_CHECKER,
+  AGENT_INDEX_FRESHNESS_TEST,
   'package.json',
   'reports/github-agent-index-lessen.json',
   'reports/github-agent-index-lessen.md',
@@ -905,6 +911,7 @@ function buildReviewPacket(bundle, matrix, negatives, prReadiness) {
     core_requirement_checklist: [
       { requirement: 'Bundle 4 generation base is recorded as historical provenance', status: 'met', evidence: BASE_MAIN_SHA },
       { requirement: 'Checker validates historical-base ancestry across feature, post-merge, and later-main states while retaining strict source-drift detection', status: 'met', evidence: PROVENANCE_TEST },
+      { requirement: 'GitHub-facing lesson index generation and CI freshness validation use lesson origin/main rather than a potentially stale local HEAD', status: 'met', evidence: AGENT_INDEX_FRESHNESS_TEST },
       { requirement: 'Exactly seven protected/canonical H7 operations are prepared for adjudication', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation remains prepared_not_executed with no mutation authority', status: 'met', evidence: OUT_MATRIX_JSON },
       { requirement: 'Every operation carries requested human decision options and proof required to close', status: 'met', evidence: OUT_MATRIX_JSON },
@@ -1118,6 +1125,10 @@ function renderBundleUrls() {
     ADJUDICATION_EVIDENCE_SCRIPT,
     PROVENANCE_SCRIPT,
     PROVENANCE_TEST,
+    AGENT_INDEX_BUILDER,
+    AGENT_INDEX_FRESHNESS_CHECKER,
+    AGENT_INDEX_FRESHNESS_TEST,
+    '.github/workflows/platform-ci.yml',
     OUT_BUNDLE_JSON,
     OUT_BUNDLE_MD,
     OUT_MATRIX_JSON,

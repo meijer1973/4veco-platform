@@ -12,6 +12,7 @@ Review and, if satisfied, authorize integration of Bundle 4 as protected/canonic
 
 - met: Bundle 4 generation base is recorded as historical provenance (eb8647c7310ab16d5871f2a399636f770dc63bf8)
 - met: Checker validates historical-base ancestry across feature, post-merge, and later-main states while retaining strict source-drift detection (build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js)
+- met: GitHub-facing lesson index generation and CI freshness validation use lesson origin/main rather than a potentially stale local HEAD (build-scripts/reports/agent-index-freshness.test.js)
 - met: Exactly seven protected/canonical H7 operations are prepared for adjudication (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every operation remains prepared_not_executed with no mutation authority (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)
 - met: Every operation carries requested human decision options and proof required to close (reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json)

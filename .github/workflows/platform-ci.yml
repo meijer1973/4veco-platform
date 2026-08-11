@@ -195,6 +195,9 @@ jobs:
       - name: Check URL index is current
         run: node build-scripts/sprints/emit-url-index.js --check
 
+      - name: Check GitHub agent indexes against repository heads
+        run: npm run check:agent-index-freshness
+
       - name: Check CI evidence line endings
         run: node build-scripts/ci/check-evidence-line-endings.js
 

@@ -8,6 +8,7 @@ const {
   resolveLessenRoot,
   checkIndex,
 } = require('./check-agent-index-freshness');
+const { buildIndex, resolveSourceRef } = require('./github-agent-index');
 
 function git(args, cwd) {
   const result = spawnSync('git', args, {
@@ -30,6 +31,11 @@ function makeRepo() {
 }
 
 describe('check-agent-index-freshness', () => {
+  test('lesson generation defaults to live origin/main', () => {
+    expect(resolveSourceRef('4veco-lessen', {})).toBe('origin/main');
+    expect(resolveSourceRef('4veco-platform', {})).toBe('HEAD');
+  });
+
   test('passes when index source_commit matches repo HEAD', () => {
     const repo = makeRepo();
     try {
@@ -52,6 +58,56 @@ describe('check-agent-index-freshness', () => {
       const result = checkIndex({ label: 'repo', indexPath, repoRoot: repo });
       expect(result.ok).toBe(false);
       expect(result.failures.join('\n')).toMatch(/does not match HEAD/);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
+  test('lesson index follows origin/main even when local HEAD is stale', () => {
+    const repo = makeRepo();
+    try {
+      const staleHead = git(['rev-parse', 'HEAD'], repo);
+      const year2Path = path.join(repo, 'year2-candidate-lessons', 'four-target-lesson-production-1', 'lesson.md');
+      fs.mkdirSync(path.dirname(year2Path), { recursive: true });
+      fs.writeFileSync(year2Path, '# live Year 2 lesson\n', 'utf8');
+      git(['add', '.'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'live lesson main'], repo);
+      const liveMain = git(['rev-parse', 'HEAD'], repo);
+      git(['update-ref', 'refs/remotes/origin/main', liveMain], repo);
+      git(['checkout', '--detach', staleHead], repo);
+
+      const index = buildIndex('4veco-lessen', repo, { sourceRef: 'origin/main' });
+      const indexPath = path.join(repo, 'index.json');
+      fs.writeFileSync(indexPath, JSON.stringify(index), 'utf8');
+      const indexedFiles = Object.values(index.groups).flat();
+
+      expect(index.source_branch).toBe('origin/main');
+      expect(index.source_commit).toBe(liveMain);
+      expect(indexedFiles).toContain('year2-candidate-lessons/four-target-lesson-production-1/lesson.md');
+      expect(checkIndex({
+        label: '4veco-lessen',
+        indexPath,
+        repoRoot: repo,
+        sourceRef: 'origin/main',
+        expectedSourceBranch: 'origin/main',
+        allowGeneratedIndexTail: false,
+      }).ok).toBe(true);
+
+      fs.writeFileSync(indexPath, JSON.stringify({
+        ...index,
+        source_branch: 'HEAD',
+        source_commit: staleHead,
+      }), 'utf8');
+      const staleResult = checkIndex({
+        label: '4veco-lessen',
+        indexPath,
+        repoRoot: repo,
+        sourceRef: 'origin/main',
+        expectedSourceBranch: 'origin/main',
+        allowGeneratedIndexTail: false,
+      });
+      expect(staleResult.ok).toBe(false);
+      expect(staleResult.failures.join('\n')).toMatch(/does not match origin\/main/);
     } finally {
       fs.rmSync(repo, { recursive: true, force: true });
     }
