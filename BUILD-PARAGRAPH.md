@@ -606,11 +606,18 @@ PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
 mkdir -p "$PAR"
 # Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
 # Part A outputs, all Part B companion/student-web files, and opt-in Office/legacy files live at the paragraph root.
-# Static "Lees dit..." file — copy from any existing lessen paragraph:
-cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
 
-If the destination book does not already contain the static helper file, seed it from the verified legacy source listed in **B0a** before continuing.
+For an explicit `office` or `legacy-full` build only, add the static helper
+DOCX:
+
+```bash
+cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a verified legacy source."
+```
+
+If that export profile is selected and the destination book does not already
+contain the static helper file, seed it from the verified legacy source listed
+in **B0a**. Do not add this DOCX to a default `student-web` build.
 
 ### Phase 2a: Create paragraph plan (15 min)
 
@@ -666,27 +673,45 @@ Build all SVG graphics listed in the visuelen-plan, plus the surface variants li
 
 For critical standalone visuals, screenshots, charts, diagrams, or rendered UI states, use `agents/visual-qa-agent.md` as the specific visual-item gate before embedding the item into companion outputs. Use `agents/econ-companion-visual-review.md` later for the complete rendered companion surface.
 
-#### Phase 4b — Build documents
+#### Phase 4b — Build companion surfaces
 
-For each document type, copy the reference script, replace the content, run it. Each builder should:
+Every builder should:
 - Read `_paragraph-plan.md` for its outline, terminology, and concept coverage
 - Read pre-built adapted variants from `_assets/` instead of generating SVGs inline
 - Use `const { svgToPng, pngToBase64, GRAPH_COLORS } = require('./lib-svg-utils')` instead of inline copies
-- **Dual coding**: embed every adapted visual variant listed in the visuelen-toewijzing for this builder (use `ImageRun` in docx scripts)
+- **Dual coding**: embed every adapted visual variant listed in the visuelen-toewijzing for this builder; use `ImageRun` only in DOCX scripts
 - **Unified experience**: follow the exact step sequence from the procedure-stappen-plan — same labels, same order, same approach. The stappenplan game procedures must mirror vaardigheden skill steps exactly.
 
-| Document | Reference script | Output location |
-|----------|-----------------|-----------------|
-| Uitleg voorkennis | `template-B_voorkennis.js` | `<paragraph folder>` |
-| Uitleg vaardigheden | `template-A_vaardigheden.js` | `<paragraph folder>` |
-| Presentatie | `pptx-331-rol-overheid.js` | `<paragraph folder>` |
-| Nieuws met visual | `nieuws-351-352-afsluiting.js` | `<paragraph folder>` |
-| Samenvatting | `samenvatting-351-352-rebuild.js` | `<paragraph folder>` |
-| YouTube videos | Write HTML directly | `<paragraph folder>` |
-| Begeleide inoefening | `inoefening-351-afsluiting.js` | `<paragraph folder>` |
-| Opgavensets (3 levels) | `opgaven-351-afsluiting.js` | `<paragraph folder>` |
+For the default `student-web` profile, build the native HTML/PPTX products in
+the 14-file baseline. The game and route shells are generated in Phase 6.
 
-Run each with: `NODE_PATH="$(npm root -g)" node <script>.js`
+| Baseline surface | Builder route | Output location |
+|------------------|---------------|-----------------|
+| Uitleg voorkennis HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Uitleg vaardigheden HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Presentatie HTML + PPTX | Presentation V2 semantic model | `<paragraph folder>` |
+| Nieuws met visual HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Samenvatting HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| YouTube videos HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Begeleide inoefening HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+
+For an explicit `office` or `legacy-full` profile, build the 14 baseline files
+first, then add exactly these 13 DOCX exports:
+
+| Additional DOCX output | Reference route |
+|------------------------|-----------------|
+| Uitleg voorkennis (1) | `template-B_voorkennis.js` |
+| Static `Lees dit...` helper (1) | Verified legacy source from B0a |
+| Uitleg vaardigheden (1) | `template-A_vaardigheden.js` |
+| Nieuws met visual (1) | `nieuws-351-352-afsluiting.js` |
+| Samenvatting (1) | `samenvatting-351-352-rebuild.js` |
+| Begeleide inoefening, vragen + antwoorden (2) | `inoefening-351-afsluiting.js` |
+| Basis, vragen + antwoorden (2) | `opgaven-351-afsluiting.js` |
+| Midden, vragen + antwoorden (2) | `opgaven-351-afsluiting.js` |
+| Verrijking, vragen + antwoorden (2) | `opgaven-351-afsluiting.js` |
+
+Run a selected Node builder with:
+`NODE_PATH="$(npm root -g)" node <script>.js`.
 
 ### Phase 5: Convert Office DOCX → HTML (office/legacy only)
 
@@ -759,7 +784,8 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 - [ ] Terminology is consistent across all documents (check against terminologie table in plan)
 
 **Design principles:**
-- [ ] **Dual coding**: vaardigheden and voorkennis .docx files contain embedded adapted variants from `_assets/` (not text-only and not raw textbook copy-paste)
+- [ ] **Dual coding (`student-web`)**: vaardigheden and voorkennis HTML plus the presentation HTML/PPTX contain the adapted variants assigned in `_assets/` (not text-only and not raw textbook copy-paste)
+- [ ] **Dual coding (Office/legacy only)**: when that profile is selected, vaardigheden and voorkennis DOCX files contain embedded adapted variants from `_assets/`
 - [ ] **Theme variants**: every themed web visual has a light and dark variant, and the HTML/JS swaps to the correct one
 - [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
 - [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
@@ -855,19 +881,17 @@ manual layer below. They are retained as Office/export tasks for `office` and
 - Skip DOCX-to-HTML converters by default for Part B companion/student-web builds; converters
   run only when `RUN_DOCX_CONVERTERS=1` or `BUILD_PROFILE=office|legacy-full`
 
-### deploy.js does NOT handle (manual layer):
-- Presentatie (.pptx) — must run paragraph-specific pptx script
-- Uitleg voorkennis (.docx) — must run adapted template-B script
-- Uitleg vaardigheden (.docx) — must run adapted template-A script
-- Nieuws met visual (.docx) — must run adapted nieuws script
-- Samenvatting (.docx) — must run adapted samenvatting script
-- YouTube videos (.html) — must write manually
-- Begeleide inoefening (.docx) — must run adapted inoefening script
-- Opgavensets (.docx) — must run adapted opgaven script
-- HTML conversions (.docx → .html) — must run Python converters
-- Static file copy ("Lees dit...") — must copy manually
+### deploy.js does NOT handle (paragraph-specific layer):
+- Presentatie HTML/PPTX — build from the paragraph-specific semantic model
+- Rich `student-web` companion HTML — run the paragraph-specific native HTML builders
+- YouTube videos HTML — write the paragraph-specific page
+- Office/legacy DOCX exports — only for an explicit `office` or `legacy-full` profile
+- Office/legacy HTML conversions (DOCX → HTML) — only when Word files are the deliberate source
+- Static `Lees dit...` copy — only for an explicit `office` or `legacy-full` profile
 
-**In short:** deploy.js builds the interactive shell. The rich teaching documents require paragraph-specific work before deploying.
+**In short:** deploy.js builds the interactive shell. Rich baseline HTML/PPTX
+requires paragraph-specific work before deploying; the 13 DOCX outputs are an
+additional Office/legacy step only.
 
 ---
 

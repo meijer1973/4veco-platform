@@ -102,3 +102,25 @@ Proof required:
   exact-head CI pass.
 - Exact-remote-head lead review returns PASS/OK.
 - PR Readiness returns `READY_FOR_HUMAN_REVIEW` and marks the draft ready.
+
+## August Lead Review Round 1
+
+Reviewer verdict: REVISE.
+
+Blocking findings addressed:
+
+1. Default folder setup still copied the Office-only static helper DOCX.
+   - Fix: moved the copy command behind an explicit `office`/`legacy-full`
+     condition and prohibited it for default `student-web`.
+2. Phase 4b still instructed builders to create every rich output through the
+   DOCX-heavy script family.
+   - Fix: split native baseline HTML/PPTX production from a counted table of
+     the 13 additional Office/legacy DOCX exports.
+3. The verification checklist still required DOCX dual coding unconditionally.
+   - Fix: added a baseline HTML/PPTX dual-coding check and a separately scoped
+     Office/legacy DOCX check.
+
+Proof required:
+
+- Regenerate the platform index, rerun focused checks, and obtain PASS/OK on
+  the corrected exact head.
