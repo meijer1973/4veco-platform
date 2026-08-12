@@ -41,7 +41,7 @@ Resolution evidence:
 
 | Command | Result | Notes |
 |---|---|---|
-| `git merge origin/main` | RESOLVED | Conflicts were resolved in active companion docs/skills and generated index files. Current `main` PDF lane-boundary wording was preserved alongside this sprint's full student-web surface coverage. |
+| `git merge origin/main` | RESOLVED | Conflicts were resolved in active companion docs/skills and generated index files. Current `main` PDF lane-boundary wording was preserved alongside this sprint's 14-file student-web validation baseline. |
 | `npm.cmd run agent:index` | PASS | Regenerated the platform index after merge resolution. |
 | `node build-scripts/sprints/emit-url-index.js` | PASS | Rewrote the URL index after merge resolution. |
 | Restore `reports/github-agent-index-lessen.*` to `origin/main` | PASS | This sprint does not change lesson inventory; the local lesson checkout is behind lesson `main`, so regenerated lesson-index churn was neutralized. |

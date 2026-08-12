@@ -1,12 +1,15 @@
 ---
 name: econ-companion-artifacts
-description: "Authoring + regeneration spec for student-facing companion artifacts in the Part B student-web surface set (uitleg voorkennis, uitleg vaardigheden, presentatie HTML/PPTX, nieuws met visual, samenvatting, youtube-videos, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, wiskundevaardigheden, differentiated exercise handouts, web outputs, PPTX, and opt-in Office DOCX companion outputs). Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in the surface family above. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
+description: "Authoring + regeneration spec for Part B companion artifacts: the 14-file student-web validator baseline, the wider Start-to-exit-ticket product route, and 13 opt-in Office/legacy DOCX exports. Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in those scopes. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
 pipeline: "Part B producer (umbrella; per-format Part B skills inherit; if a per-format skill conflicts on student-facing rules, this skill wins)"
 ---
 
 # Companion Learning Artifacts Skill
 
-General authoring + regeneration recipe for **student-facing companion artifacts**, including:
+General authoring + regeneration recipe for **student-facing companion
+artifacts**. Keep these three scopes distinct.
+
+The 14-file `student-web` **validator baseline** consists of:
 
 - `uitleg voorkennis.html`
 - `uitleg vaardigheden.html`
@@ -20,9 +23,18 @@ General authoring + regeneration recipe for **student-facing companion artifacts
 - `redeneer-spel.html`
 - `nieuws-detective.html`
 - `wiskundevaardigheden.html`
-- differentiated exercise handouts where the visual or route-choice layer matters
-- companion web outputs and PPTX outputs
-- opt-in Office/legacy DOCX outputs when explicitly in scope
+- `index.html`
+
+The wider product route is `Start -> Leer -> Check -> Oefen -> Exit ticket`.
+It includes an advisory short check and a separate target-equivalent exit
+ticket. Passing the 14-file baseline does not prove those surfaces or the
+route complete; inspect their rendered behavior and name missing work as a
+blocker, follow-up, or explicit human waiver.
+
+The `office`/`legacy-full` profiles add 13 DOCX files to the baseline, including
+differentiated basis/midden/verrijking exercise handouts. Review those exports
+only when that profile is explicitly in scope; they are not default
+`student-web` files.
 
 PDF output belongs to Part A / publisher-print unless a future human decision
 creates a separate PDF lane.
@@ -50,6 +62,8 @@ Always read first:
 
 - `AGENTS.md` (architecture + canonical authority)
 - `BUILD-PARAGRAPH.md` (paragraph build pipeline)
+- `../4veco-lessen/specifications/product-end-state.md` (full route and maturity definitions)
+- `../4veco-lessen/specifications/companion-core-specifications.md` (stable route/check/exit-ticket contract)
 - `agents/econ-companion-visual-review.md` (the review gate)
 - The matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, etc.)
 - For `redeneer-spel.html`, also read `skills/econ-reasoning-game.md` before selecting mechanics or task families.
@@ -60,6 +74,10 @@ Always read first:
 ## Core rule
 
 Create student-facing companion artifacts from the **platform source layer**, not by hand-editing generated output. Generated artifacts must be **reproducible, reviewable, and consistent** across HTML/web, PPTX, games, visual variants, and opt-in Office DOCX.
+
+Validator completeness and product completeness are separate claims. Never use
+the presence of the 14 baseline files as sole evidence that the full route,
+advisory short check, or target-equivalent exit ticket is complete.
 
 The artifact must answer three student questions:
 

@@ -69,9 +69,36 @@ Fixes implemented:
 - Added and committed the PR workflow packet plus PR review round 1 evidence.
 - Merged current `origin/main`, resolved companion workflow conflicts, and
   preserved both `main`'s PDF lane-boundary clarification and this sprint's
-  full student-web surface/profile wording.
+  student-web validator-profile wording.
 - Regenerated the platform GitHub agent index, restored lesson-index files to
   `origin/main` because lesson inventory is outside this sprint, and reran the
   focused validation set.
 - Kept the human-review handoff blocked pending final PR review and
   `platform-ci / validate-platform` pass or explicit CI waiver.
+
+## Owner Hold/Revise Review
+
+Reviewer verdict: HOLD_REVISE.
+
+Blocking findings addressed in the August refresh:
+
+1. The branch was 61 commits behind `main` and conflicting.
+   - Fix: moved PR #198 back to draft, fetched current `main`, merged it, and
+     regenerated the GitHub-facing indexes with the current generator.
+2. Exact-head lead-review and readiness evidence was not inspectable.
+   - Fix: supersede the July packet snapshot, publish the final lead-review
+     result on PR #198 for the exact remote head, and run the current PR
+     Readiness router so its durable comment is the lifecycle authority.
+3. The 14 files were described as the full student-web surface.
+   - Fix: call them the `student-web` validation baseline, separate the 13
+     additional Office/legacy DOCX files, and require separate review of the
+     `Start -> Leer -> Check -> Oefen -> Exit ticket` route, advisory short
+     check, and target-equivalent exit ticket.
+
+Proof required:
+
+- Current agent-index freshness checker passes.
+- Focused validator, scope/governance, finalization-freshness, and full
+  exact-head CI pass.
+- Exact-remote-head lead review returns PASS/OK.
+- PR Readiness returns `READY_FOR_HUMAN_REVIEW` and marks the draft ready.

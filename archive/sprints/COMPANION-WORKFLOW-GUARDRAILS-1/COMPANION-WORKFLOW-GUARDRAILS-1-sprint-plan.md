@@ -17,25 +17,26 @@ opportunities:
 
 - `BUILD-PARAGRAPH.md` had stale default-Part-B wording around 27 required
   files even though `validate-paragraph.js` and its tests define default
-  `student-web` as 14 required Part B files.
+  `student-web` as a 14-file Part B validator baseline.
 - DOCX conversion was described as a default production phase even though
   `student-web` is HTML-first and Office exports are opt-in.
 - `AGENTS.md`, `skills/econ-companion-artifacts.md`, and
   `agents/econ-companion-visual-review.md` listed only part of the current
-  student-web surface family.
+  validator-baseline surface family, without distinguishing it from the wider
+  product route.
 - `docs/L1.5V/F-plan-part-a-b-separation.md` remains useful as design history
   but contains old 24-file wording that could be misread as current workflow.
 - `skills/econ-quality-control.md` still carries old subfolder/DOCX-heavy
   guidance and an active "never do" bullet that conflicts with the current
-  validator-required student-web surface set.
+  14-file student-web validation baseline.
 
 ## Quality Standard
 
 - Active instructions must match executable validator behavior.
 - Historical records may remain, but must be labelled as historical when they
   conflict with the active production contract.
-- The authoring spec, review agent, and AGENTS entry must name the same current
-  Part B student-web surface family.
+- The authoring spec, review agent, and AGENTS entry must name the same 14-file
+  Part B validator baseline and distinguish it from the wider product route.
 - Quality-control guidance must preserve the `schema_version: 2` split between
   `partA:` and `companion:` and must not treat validator-required student-web
   surfaces as optional by default.
@@ -49,7 +50,7 @@ opportunities:
 |---|---|---|---|
 | Default Part B `student-web` has 14 required root files | `scripts/validate-paragraph.js`; `scripts/tests/validate-paragraph.test.js`; `BUILD-PARAGRAPH.md` B1 | `BUILD-PARAGRAPH.md` B-verify and validation sections say 14 for `student-web`, 27 only for `office`/`legacy-full` | Active docs no longer contain stale 27-file default wording |
 | Office/DOCX exports are opt-in | `BUILD-PARAGRAPH.md` output profiles; validator profiles | Phase 5 says DOCX conversion is office/legacy only | `student-web` path does not require DOCX conversion |
-| Companion authoring/review covers full current surface family | `BUILD-PARAGRAPH.md` B1; `AGENTS.md`; `econ-companion-artifacts`; `econ-companion-visual-review` | AGENTS, skill, and agent include presentation, news visual, summary, YouTube, wiskundevaardigheden, and intentional exports | No guardrail list omits current required student-web surfaces |
+| Companion authoring/review covers the validator baseline without overclaiming product completeness | `BUILD-PARAGRAPH.md` B1; product end-state; `AGENTS.md`; `econ-companion-artifacts`; `econ-companion-visual-review` | AGENTS, skill, and agent distinguish 14 baseline files, 13 opt-in DOCX files, and the short-check/exit-ticket route | No guardrail calls the 14 files the full product surface |
 | Historical L1.5V proposal is not mistaken for current contract | `docs/L1.5V/F-plan-part-a-b-separation.md`; active `BUILD-PARAGRAPH.md` | Add historical note and active-contract pointer | Old 24-file wording is clearly historical |
 | Quality-control guidance is profile-aware and schema-v2-aware | `skills/econ-quality-control.md`; validator review gates | Add current workflow override, schema-v2 note, flat-layout note, and remove conflicting optional-14 guidance | Quality-control skill no longer contradicts active profile behavior |
 
@@ -61,9 +62,11 @@ opportunities:
   - Align B-verify and validation text to 14 default / 27 office-legacy.
   - Fix the stale Phase 4c reference to Phase 4b.
 - `AGENTS.md`
-  - Expand the companion authoring sentence to the full student-web surface set.
+  - Expand the companion authoring sentence to the 14-file validator baseline
+    and distinguish the full product route.
 - `skills/econ-companion-artifacts.md`
-  - Expand frontmatter and scope list to the full surface family.
+  - Expand frontmatter and scope list to the validator baseline, wider product
+    route, and opt-in exports.
   - Clarify intentional Office/PDF exports.
 - `agents/econ-companion-visual-review.md`
   - Expand scope list and invocation text so closure review inspects required

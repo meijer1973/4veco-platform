@@ -1,5 +1,10 @@
 # COMPANION-WORKFLOW-GUARDRAILS-1 PR Workflow Packet
 
+> Historical snapshot from the July publication attempt. Its draft state,
+> reviewed SHA, CI state, and blocked-handoff wording are superseded. Current
+> lifecycle authority is the exact-head PR Readiness comment on PR #198,
+> generated under `docs/review/pr-readiness-routing-policy.md`.
+
 ## PR
 
 - Repository: `meijer1973/4veco-platform`
@@ -16,10 +21,12 @@
 This PR updates active companion-material, also called Part B, workflow
 guardrails so they match the profile-aware validator:
 
-- `student-web` is the default Part B profile with 14 required root files.
-- `office` and `legacy-full` are the opt-in export-heavy profiles with the 27-file contract.
+- `student-web` is the default Part B profile with a 14-file validator baseline.
+- `office` and `legacy-full` add 13 DOCX files to that baseline for the opt-in 27-file contract.
 - DOCX conversion is office/legacy only, not a default student-web phase.
-- Companion authoring and visual-review rules list the same current student-web surface family.
+- Companion authoring and visual-review rules distinguish the validator baseline
+  from the wider product route, advisory short check, and target-equivalent
+  exit ticket.
 - The L1.5V 24-file design proposal is marked historical and points to the active workflow.
 - Quality-control guidance now names the schema-v2 `partA:` / `companion:` split and flat paragraph layout.
 - Sprint plan, plan review rounds, correction log, validation log, and work review are included.
@@ -57,8 +64,8 @@ Conflict-resolution notes:
   `skills/econ-companion-artifacts.md`, and generated indexes.
 - Preserved current `main` lane-boundary wording: PDF output belongs to Part A /
   publisher-print unless a future human decision creates a separate PDF lane.
-- Preserved this sprint's full student-web surface coverage and 14 default / 27
-  office-legacy profile distinction.
+- Preserved this sprint's 14-file validator baseline / 13 additional DOCX
+  distinction while separating it from product-route completeness.
 - Re-ran `agent:index` for the platform index, then restored the lesson index to
   `origin/main` because this sprint does not change lesson inventory and the
   local lesson checkout is behind lesson `main`.
@@ -82,13 +89,14 @@ Work review passed:
 - Worktree path: `C:/wt/SKILLTREE-20260618/4veco-platform`.
 - Post-merge worktree safety check: PASS with the same owner/task lock present.
 
-## CI State
+## Historical CI State
 
 Initial `gh pr checks 198 --json ...` result before the conflict-resolution
 push: no checks reported yet on `codex/skilltree-improvement-20260618`.
 
-Human-review handoff remains blocked until `platform-ci / validate-platform`
-passes for the final reviewed commit or an explicit CI waiver is recorded.
+At the time of this July snapshot, human-review handoff remained blocked until
+`platform-ci / validate-platform` passed. This is not the current decision;
+the exact-head PR Readiness comment is authoritative.
 
 ## PR Lead-Review Request
 

@@ -45,7 +45,7 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 
 | Profile | Purpose | Default? |
 |---------|---------|----------|
-| `student-web` | Baseline web-delivery profile. In Part A mode it checks textbook source plus textbook HTML renders. In Part B mode it checks companion/student-web HTML, games, route files, presentation HTML/PPTX, plans, reviews, data, and assets. No DOCX or textbook PDF requirement. | Yes for direct `validate-paragraph.js` runs |
+| `student-web` | Baseline web-delivery validation profile. In Part A mode it checks textbook source plus textbook HTML renders. In Part B mode it checks the 14-file companion baseline plus plans, reviews, data, and assets. Passing this profile does not by itself prove the full product route or end-state maturity. No DOCX or textbook PDF requirement. | Yes for direct `validate-paragraph.js` runs |
 | `legacy-full` | Previous 27-file Part B contract, including all DOCX files, for regression checks on older output. | No |
 | `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
 | `publisher-print` | Textbook PDF packet for publisher/print handoff. This is a separate careful pipeline, not the baseline web-delivery profile. | `check-book.js` uses this for Part A book health |
@@ -373,14 +373,15 @@ Important:
 - For normal Part B companion/student-web builds, deploy skips DOCX-to-HTML converters. Set `RUN_DOCX_CONVERTERS=1` only for Office/legacy builds that intentionally use Word sources.
 - Do not use deploy as a harmless existence check.
 
-## B1. Definition of Done
+## B1. Definition of Done: validator baseline and export profiles
 
-For new paragraphs, the default Part B completion gate is the
-**companion/student-web** deliverable set. It is validated with `--mode part-b
---profile student-web`, has 14 required root files including `index.html`, and
-keeps Office exports opt-in.
+The default Part B **validation baseline** is checked with `--mode part-b
+--profile student-web`. It has 14 required root files including `index.html`
+and keeps Office exports opt-in. Passing this baseline proves the executable
+file/profile contract only; it is not, by itself, a claim that the full
+student product route or product end state is complete.
 
-Part B companion/student-web required files:
+Part B `student-web` validation-baseline files:
 
 1. `X.Y.Z [Naam] – instapquiz.html`
 2. `X.Y.Z [Naam] – nieuws-detective.html`
@@ -397,6 +398,15 @@ Part B companion/student-web required files:
 13. `X.Y.Z [Naam] – begeleide inoefening.html`
 14. `index.html`
 
+The current product end state is a coherent route:
+`Start -> Leer -> Check -> Oefen -> Exit ticket`. `Check` includes an advisory
+short check for feedback and repair, while the exit ticket is a separate
+target-equivalent proof task. Those route obligations may be implemented
+within or alongside the baseline files, but file existence alone does not
+establish their completeness. Plans, rendered reviews, and quality records
+must inspect the actual route and name any missing short-check or exit-ticket
+surface as a blocker, follow-up, or explicit human waiver.
+
 Student-web is not a minimal shell contract. For a new scaling paragraph, the
 rich HTML companions (`uitleg voorkennis`, `uitleg vaardigheden`,
 `samenvatting`, `nieuws met visual`, `youtube-videos`, and
@@ -405,9 +415,12 @@ shared `voorkennis.css` layout, left navigation, hero cards, clear route
 affordances, light/dark theme support, and no student-facing internal unit
 codes. Use native HTML directly only when it preserves this shared structure.
 
-The table below is the **legacy-full / office export matrix**. Use it only when
-the requested product explicitly includes Word handouts or when validating the
-old 27-file contract.
+The table below is the **legacy-full / office export matrix**. It consists of
+the 14 baseline files plus exactly 13 additional DOCX files, for 27 root files
+in total. Use it only when the requested product explicitly includes Word
+handouts or when validating the old 27-file contract. Differentiated
+basis/midden/verrijking handouts are Office/legacy exports, not default
+`student-web` baseline files.
 
 | # | File | Section | Required | Builder | Source input | Output type |
 |---|------|---------|----------|---------|--------------|-------------|
@@ -717,7 +730,7 @@ legacy-full run where `.docx` sources are deliberately part of the product.
 
 ### Phase 6a: Companion visual review gate
 
-Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for the full student-web surface set: uitleg voorkennis, uitleg vaardigheden, presentatie HTML/PPTX, nieuws met visual, samenvatting, youtube-videos, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, wiskundevaardigheden, differentiated exercise handouts, and opt-in Office DOCX exports when they are intentionally included). PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+Author/regenerate every in-scope student-facing companion against `skills/econ-companion-artifacts.md`. Review the 14-file `student-web` validation baseline, the actual `Start -> Leer -> Check -> Oefen -> Exit ticket` route (including advisory short check and separate target-equivalent exit ticket), and the 13 additional Office/legacy DOCX files only when that export profile is explicitly selected. Differentiated DOCX handouts belong to the Office/legacy set, not the default baseline. PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
 
 Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and native or converted companion pages can be inspected as rendered output:
 
@@ -736,7 +749,8 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has SVG+PNG pairs matching every entry in the visuelen-plan and visual-variants-plan
-- [ ] File count: 14 required Part B companion/student-web root files, including index.html
+- [ ] Validator baseline: 14 required Part B `student-web` root files, including `index.html`
+- [ ] Product route: rendered `Start -> Leer -> Check -> Oefen -> Exit ticket` flow is inspected; advisory short check and separate target-equivalent exit ticket are present or explicitly blocked/followed up/waived
 - [ ] Office/legacy exports open in Word/PowerPoint when the selected profile includes them (27-file contract only for explicit `office`/`legacy-full` validation)
 - [ ] `X.Y.Z-quality-ref.yaml` has a `companion:` block matching `X.Y.Z-companion-visual-review.md`
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
@@ -867,7 +881,7 @@ when Word exports are deliberately part of the requested product, and
 `publisher-print` for the separate Part A PDF handoff.
 
 - **Part A/textbook mode**: validates textbook files at the paragraph root. In `student-web` and `office` profiles, theory paragraphs require paragraaf/opgaven/antwoorden markdown and textbook HTML renders; consolidation paragraphs require opgaven/antwoorden markdown and textbook HTML renders. PDFs and `build_pdf.py` are required only under `legacy-full` or `publisher-print`. This remains Part A even though the historical profile name is `student-web`.
-- **Part B/companion mode**: validates the profile-specific Part B companion/student-web root files listed in B1: 14 for default `student-web`, 27 for explicit `office`/`legacy-full`, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
+- **Part B/companion mode**: validates the profile-specific Part B root-file baseline listed in B1: 14 for default `student-web`, or those same 14 plus 13 DOCX files (27 total) for explicit `office`/`legacy-full`, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders. This validator result does not replace rendered proof of the full product route, advisory short check, or separate target-equivalent exit ticket.
 - **Complete mode**: validates both Part A and Part B.
 
 For Part B/complete mode, game runtime data lives in `<book>/shared/`:
@@ -892,7 +906,7 @@ Use `complete` only for integration verification after both lanes exist or when
 a complete bundle was explicitly authorized.
 
 This checks:
-- All 14 required Part B companion/student-web files exist at the paragraph root (flat layout), including `index.html`
+- All 14 Part B `student-web` validation-baseline files exist at the paragraph root (flat layout), including `index.html`; route completeness still requires separate rendered/product review
 - Office/legacy `.docx` files are valid zip archives only when the selected profile requires them; the 27-file contract applies only to explicit `office`/`legacy-full`
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)

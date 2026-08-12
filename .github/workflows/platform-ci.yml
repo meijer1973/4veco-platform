@@ -77,6 +77,9 @@ jobs:
       - name: Validate exercise workflow currentness
         run: npm run check:exercise-workflow-currentness
 
+      - name: Validate exercise authority hygiene
+        run: npm run check:exercise-authority-hygiene
+
       - name: Install Python support dependencies
         run: |
           python -m pip install --upgrade pip
@@ -183,11 +186,17 @@ jobs:
       - name: Validate MTU evidence layer freshness
         run: node build-scripts/references/check-mtu-evidence-layer.js
 
+      - name: Validate MTU-H7 Bundle 4 protected adjudication packet
+        run: npm run check:mtu-h7-bundle4
+
       - name: Validate roadmap version index
         run: node build-scripts/references/check-roadmap-version-index.js
 
       - name: Check URL index is current
         run: node build-scripts/sprints/emit-url-index.js --check
+
+      - name: Check GitHub agent indexes against repository heads
+        run: npm run check:agent-index-freshness
 
       - name: Check CI evidence line endings
         run: node build-scripts/ci/check-evidence-line-endings.js

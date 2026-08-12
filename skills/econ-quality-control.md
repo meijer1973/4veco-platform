@@ -417,9 +417,12 @@ begeleide inoefening → basis → midden → verrijking]
 
 > **Current workflow override:** For active paragraph production, use
 > `BUILD-PARAGRAPH.md` and `scripts/validate-paragraph.js` as the authoritative
-> profile-aware contract. The default Part B profile is `student-web` with 14
-> required root files; `office` and `legacy-full` are opt-in export-heavy
-> profiles; `publisher-print` is the separate Part A PDF handoff. The older
+> profile-aware contract. The default Part B profile is `student-web` with a
+> 14-file validation baseline; `office` and `legacy-full` add 13 opt-in DOCX
+> files for a 27-file export contract; `publisher-print` is the separate Part
+> A PDF handoff. Passing the baseline does not prove the wider
+> `Start -> Leer -> Check -> Oefen -> Exit ticket` product route, advisory
+> short check, or separate target-equivalent exit ticket complete. The older
 > DOCX-heavy sequence below is historical guidance for Office-style companion
 > production, not the default student-web path.
 
@@ -470,10 +473,13 @@ and `validate-paragraph.js --mode complete` aggregates both.
 4. Note which components cover each leerdoel
 
 **Component inventory:**
-1. For Part B companion/student-web work, check which of the 14 standard companion
+1. For Part B companion/student-web work, check which of the 14 validator-baseline
    components exist for this paragraph
 2. For each present component, fill in doel, inspectie, didactiek using the mapping tables in Part 2.3 and 2.4
 3. Flag any expected components that are absent (e.g., no begeleide inoefening for a calculation-heavy paragraph)
+4. Separately inspect the rendered `Start -> Leer -> Check -> Oefen -> Exit ticket`
+   route, including advisory short check and target-equivalent exit ticket;
+   baseline file existence is not product-completeness evidence
 
 **Verantwoording:**
 1. For each of the 8 verantwoording categories, write one sentence describing the design choice
@@ -590,3 +596,4 @@ Always use inspectie terminology when writing reports:
 - Generate a quality_ref before the paragraph build is complete — it should reflect what actually exists
 - Treat optional Office/legacy exports as required in the default `student-web` profile.
 - Treat missing `student-web` validator-required surfaces as acceptable just because an older quality-ref example called them optional; record an explicit profile, follow-up, blocker, or waiver instead.
+- Claim full route or product completeness solely because the 14-file `student-web` validator baseline passes.
