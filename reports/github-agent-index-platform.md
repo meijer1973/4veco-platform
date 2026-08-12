@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-10T10:09:40.392Z
+Generated: 2026-08-11T14:59:45.693Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/payload-integration-state-explainability-1-20260701`
-Source commit: `ffdeaacfe1631114106b8cf4d5748bb3275a3fb7`
-Files indexed: 7055
+Source branch: `codex/mtu-h7-protected-canonical-adjudication-bundle-4-20260703`
+Source commit: `acf1fd3928178e1959c5fe93116f0180b01ea3ca`
+Files indexed: 7072
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 687
+Count: 693
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -344,6 +344,7 @@ Count: 687
 - build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/build-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/build-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js
 - build-scripts/references/build-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
@@ -454,6 +455,8 @@ Count: 687
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js
 - build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
@@ -531,6 +534,9 @@ Count: 687
 - build-scripts/references/inventory-file-hash.js
 - build-scripts/references/lib/evidence-reference-resolver.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
+- build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js
+- build-scripts/references/lib/mtu-h7-bundle4-contract.js
+- build-scripts/references/lib/mtu-h7-bundle4-provenance.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-course-target-exercises-v5.js
 - build-scripts/references/migrate-l0-to-l1-economic.js
@@ -860,7 +866,7 @@ Count: 25
 
 ## validators
 
-Count: 674
+Count: 676
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -1035,6 +1041,8 @@ Count: 674
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js
 - build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
@@ -2518,7 +2526,7 @@ Count: 974
 
 ## reports
 
-Count: 4460
+Count: 4471
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3087,6 +3095,11 @@ Count: 4460
 - reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.md
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.md
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.md
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.md
+- reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.md
 - reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json
@@ -4090,6 +4103,12 @@ Count: 4460
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md
 - reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/bundle-urls.md
 - reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/lead-review.md
 - reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json
