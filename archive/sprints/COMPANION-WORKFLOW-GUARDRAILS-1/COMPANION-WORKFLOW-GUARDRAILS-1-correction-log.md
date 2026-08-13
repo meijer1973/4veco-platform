@@ -188,3 +188,22 @@ CI, and three-state compatibility.
 Lead work re-review verdict: OK. The reviewer verified wrapped inline route
 extraction at lesson `origin/main` line 49 and confirmed that backtick/tilde
 fenced routes remain ignored.
+
+## Bundle Readiness Workflow Review Round 1
+
+Reviewer verdict: REVISE.
+
+- Finding: the coordinated readiness executor did not fetch/preserve live
+  mergeability, tolerated an unexpectedly ready PR, and checked only the target
+  immediately before each mutation.
+- Fix: require all members to begin draft/open/mergeable at exact heads; re-fetch
+  and verify every member before each transition; require earlier members to be
+  newly non-draft and later members to remain draft; remove the `already_ready`
+  path; simulate the same state sequence in dry-run mode.
+- Regression proof: non-mergeable member, unexpected pre-ready member, and
+  controller draft-state regression before lesson mutation all fail closed.
+
+Workflow re-review verdict: OK. The reviewer confirmed full-bundle re-fetches,
+fail-closed head/base/open/draft/mergeability checks, controller-first state
+progression, dry-run simulation, `transition_ready: true`, `merge_ready: false`,
+and `merge_authority: false`.

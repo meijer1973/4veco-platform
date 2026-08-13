@@ -81,6 +81,7 @@ function repoUrl(repo, number) {
 
 function normalizeCurrentPr(repo, pr) {
   const item = pr || {};
+  const rawMergeable = item.mergeable;
   return {
     repo,
     number: Number(item.number),
@@ -89,6 +90,8 @@ function normalizeCurrentPr(repo, pr) {
     is_draft: item.is_draft !== undefined ? Boolean(item.is_draft) : Boolean(item.isDraft),
     base: item.base || item.baseRefName || null,
     head_sha: item.head_sha || item.headRefOid || null,
+    mergeable: rawMergeable === true || /^MERGEABLE$/i.test(String(rawMergeable || '')),
+    merge_state: item.merge_state || item.mergeStateStatus || null,
     comments: item.comments || [],
   };
 }
@@ -112,7 +115,16 @@ function readOptions(options = {}) {
 }
 
 function fetchCurrentPr(repo, number, options = {}) {
-  const fields = ['number', 'url', 'state', 'isDraft', 'baseRefName', 'headRefOid'].join(',');
+  const fields = [
+    'number',
+    'url',
+    'state',
+    'isDraft',
+    'baseRefName',
+    'headRefOid',
+    'mergeable',
+    'mergeStateStatus',
+  ].join(',');
   const raw = runGh(['pr', 'view', String(number), '--repo', repo, '--json', fields], readOptions(options));
   return normalizeCurrentPr(repo, JSON.parse(raw));
 }
@@ -263,15 +275,24 @@ function generateBundleMemberDecisions(controllerDecision, currentPrs = []) {
   return members.map((member) => decisionForMember(controllerDecision, member, members, currentByKey));
 }
 
-function verifyDecisionAgainstCurrent(decision, currentPr) {
+function verifyDecisionAgainstCurrent(decision, currentPr, options = {}) {
   verifyTransitionPreconditions(decision, currentPr);
   if (decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY && currentPr.state !== 'OPEN') {
     throw new Error('mark_ready_pr_not_open');
   }
+  if (currentPr.mergeable !== true) throw new Error('mark_ready_pr_not_mergeable');
+  if (
+    typeof options.expectedDraft === 'boolean' &&
+    currentPr.is_draft !== options.expectedDraft
+  ) {
+    throw new Error(options.expectedDraft
+      ? 'mark_ready_expected_draft_pr'
+      : 'mark_ready_expected_newly_ready_pr');
+  }
   return true;
 }
 
-function collectFailures(step, decisions, currentPrs) {
+function collectFailures(step, decisions, currentPrs, options = {}) {
   const failures = [];
   const byKey = currentPrMap(currentPrs);
   for (const decision of decisions) {
@@ -279,7 +300,10 @@ function collectFailures(step, decisions, currentPrs) {
     const current = byKey.get(key);
     try {
       if (!current) throw new Error('pr_missing');
-      verifyDecisionAgainstCurrent(decision, current);
+      const expectedDraft = typeof options.expectedDraft === 'function'
+        ? options.expectedDraft(decision)
+        : options.expectedDraft;
+      verifyDecisionAgainstCurrent(decision, current, { expectedDraft });
     } catch (error) {
       failures.push(`${decision.reviewed_pr.repo}#${decision.reviewed_pr.number}:${error.message}`);
     }
@@ -300,7 +324,15 @@ function applyBundleReadiness(options = {}) {
     normalizeCurrentPr(members[index].repository, pr)
   );
   const decisions = generateBundleMemberDecisions(controllerDecision, initialPrs);
-  const preflightFailures = collectFailures('preflight', decisions, initialPrs);
+  const transitionPlanFailures = decisions
+    .filter((decision) => decision.allowed_transition !== ALLOWED_TRANSITIONS.MARK_READY)
+    .map((decision) => (
+      `preflight:${decision.reviewed_pr.repo}#${decision.reviewed_pr.number}:mark_ready_expected_draft_pr`
+    ));
+  const preflightFailures = [
+    ...transitionPlanFailures,
+    ...collectFailures('preflight', decisions, initialPrs, { expectedDraft: true }),
+  ];
   if (preflightFailures.length > 0) {
     return { ok: false, phase: 'preflight', failures: preflightFailures, merge_authority: false };
   }
@@ -332,7 +364,9 @@ function applyBundleReadiness(options = {}) {
   const beforeMutationPrs = fetchMembers(deps, members, options).map((pr, index) =>
     normalizeCurrentPr(members[index].repository, pr)
   );
-  const preMutationFailures = collectFailures('pre_mutation', decisions, beforeMutationPrs);
+  const preMutationFailures = collectFailures('pre_mutation', decisions, beforeMutationPrs, {
+    expectedDraft: true,
+  });
   if (preMutationFailures.length > 0) {
     return {
       ok: false,
@@ -344,26 +378,56 @@ function applyBundleReadiness(options = {}) {
   }
 
   const transitions = [];
+  const transitioned = new Set();
   for (const decision of decisions) {
-    const current = normalizeCurrentPr(
-      decision.reviewed_pr.repo,
-      deps.fetchPr(decision.reviewed_pr.repo, decision.reviewed_pr.number, options)
+    const livePrs = fetchMembers(deps, members, options).map((pr, index) =>
+      normalizeCurrentPr(members[index].repository, pr)
     );
-    try {
-      verifyDecisionAgainstCurrent(decision, current);
-      if (decision.allowed_transition === ALLOWED_TRANSITIONS.MARK_READY && current.is_draft === true) {
-        const transition = deps.markReady(decision.reviewed_pr.repo, decision.reviewed_pr.number, options);
-        transitions.push({ repo: decision.reviewed_pr.repo, pr_number: decision.reviewed_pr.number, ...transition });
-        if (options.dryRun) continue;
-      } else {
-        transitions.push({ repo: decision.reviewed_pr.repo, pr_number: decision.reviewed_pr.number, action: 'already_ready' });
+    const sequentialPrs = options.dryRun
+      ? livePrs.map((pr) => transitioned.has(memberKey({ repository: pr.repo, pr_number: pr.number }))
+        ? { ...pr, is_draft: false }
+        : pr)
+      : livePrs;
+    const beforeMemberFailures = collectFailures(
+      'before_member_mutation',
+      decisions,
+      sequentialPrs,
+      {
+        expectedDraft: (candidate) => !transitioned.has(memberKey({
+          repository: candidate.reviewed_pr.repo,
+          pr_number: candidate.reviewed_pr.number,
+        })),
       }
+    );
+    if (beforeMemberFailures.length > 0) {
+      return {
+        ok: false,
+        phase: transitions.length > 0 ? 'partial_transition' : 'pre_mutation',
+        failures: beforeMemberFailures,
+        comments: commentResults,
+        transitions,
+        recovery_required: transitions.length > 0,
+        merge_authority: false,
+      };
+    }
+    const current = currentPrMap(sequentialPrs).get(memberKey({
+      repository: decision.reviewed_pr.repo,
+      pr_number: decision.reviewed_pr.number,
+    }));
+    try {
+      verifyDecisionAgainstCurrent(decision, current, { expectedDraft: true });
+      const transition = deps.markReady(decision.reviewed_pr.repo, decision.reviewed_pr.number, options);
+      transitions.push({ repo: decision.reviewed_pr.repo, pr_number: decision.reviewed_pr.number, ...transition });
+      transitioned.add(memberKey({
+        repository: decision.reviewed_pr.repo,
+        pr_number: decision.reviewed_pr.number,
+      }));
+      if (options.dryRun) continue;
       const verified = normalizeCurrentPr(
         decision.reviewed_pr.repo,
         deps.fetchPr(decision.reviewed_pr.repo, decision.reviewed_pr.number, options)
       );
-      verifyDecisionAgainstCurrent(decision, verified);
-      if (verified.is_draft === true) throw new Error('mark_ready_not_verified');
+      verifyDecisionAgainstCurrent(decision, verified, { expectedDraft: false });
     } catch (error) {
       return {
         ok: false,

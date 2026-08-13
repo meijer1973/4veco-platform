@@ -143,6 +143,7 @@ function pr(repo, number, head, overrides = {}) {
     is_draft: true,
     base: 'main',
     head_sha: head,
+    mergeable: true,
     comments: [],
     ...overrides,
   };
@@ -256,6 +257,59 @@ describe('apply-bundle-readiness-decision', () => {
     expect(result).toMatchObject({ ok: false, phase: 'pre_mutation', merge_authority: false });
     expect(result.failures.join('\n')).toContain('head_sha_changed');
     expect(base.calls.transitions).toEqual([]);
+  });
+
+  test('non-mergeable member blocks before comments or transitions', () => {
+    const base = harness();
+    const key = `${LESSON_REPO}#35`;
+    base.states.set(key, { ...base.states.get(key), mergeable: false });
+
+    const result = applyBundleReadiness({ controllerDecision: controllerDecision(), deps: base.deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'preflight', merge_authority: false });
+    expect(result.failures.join('\n')).toContain('mark_ready_pr_not_mergeable');
+    expect(base.calls.comments).toEqual([]);
+    expect(base.calls.transitions).toEqual([]);
+  });
+
+  test('unexpected already-ready member is rejected instead of accepted', () => {
+    const base = harness();
+    const key = `${LESSON_REPO}#35`;
+    base.states.set(key, { ...base.states.get(key), is_draft: false });
+
+    const result = applyBundleReadiness({ controllerDecision: controllerDecision(), deps: base.deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'preflight', merge_authority: false });
+    expect(result.failures.join('\n')).toContain('mark_ready_expected_draft_pr');
+    expect(base.calls.transitions).toEqual([]);
+  });
+
+  test('revalidates controller as newly ready before lesson mutation', () => {
+    const base = harness();
+    let controllerFetches = 0;
+    const deps = {
+      ...base.deps,
+      fetchPr: jest.fn((repo, number) => {
+        const current = { ...base.states.get(`${repo}#${number}`) };
+        if (repo === PLATFORM_REPO) {
+          controllerFetches += 1;
+          if (controllerFetches === 5) return { ...current, is_draft: true };
+        }
+        return current;
+      }),
+    };
+
+    const result = applyBundleReadiness({ controllerDecision: controllerDecision(), deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'partial_transition',
+      recovery_required: true,
+      merge_authority: false,
+    });
+    expect(result.failures.join('\n')).toContain('mark_ready_expected_newly_ready_pr');
+    expect(base.calls.transitions.map((item) => item.repo)).toEqual([PLATFORM_REPO]);
+    expect(base.states.get(`${LESSON_REPO}#35`).is_draft).toBe(true);
   });
 
   test('partial transition failure records recovery state and grants no merge authority', () => {
