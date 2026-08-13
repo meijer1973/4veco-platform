@@ -336,7 +336,7 @@ function maskFencedCode(text) {
 
 function extractRouteDeclarations(text) {
   const declarations = [];
-  const backtickPattern = /(?<!`)`([^`\r\n]+)`(?!`)/g;
+  const backtickPattern = /(?<!`)`([^`]+)`(?!`)/g;
   const source = maskFencedCode(text);
   let match;
 

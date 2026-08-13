@@ -170,3 +170,21 @@ Work review round 2 verdict: OK.
 The reviewer verified the fence masking, route parsing, lane ownership,
 14-file boundary, lesson route, diagnostics, focused 53-test proof, live route
 scan, and both repository diff checks.
+
+## Exact-Head CI Diagnostic Repair
+
+The first exact-head platform CI run (`31698484527`) failed only at the
+expected lesson-main route dependency, but diagnosed the wrapped stale route as
+missing. Lesson `main` carries that inline-code declaration across two lines.
+Because fenced blocks are now masked before parsing, multiline inline-code
+matching is safe to restore. The stale-route regression now uses the exact
+wrapped shape and must report the observed noncanonical route rather than a
+missing declaration.
+
+This is a substantive checker correction. It invalidates the first exact-head
+review and bundle proof and requires new commits, exact-head reviews, platform
+CI, and three-state compatibility.
+
+Lead work re-review verdict: OK. The reviewer verified wrapped inline route
+extraction at lesson `origin/main` line 49 and confirmed that backtick/tilde
+fenced routes remain ignored.

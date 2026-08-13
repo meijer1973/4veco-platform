@@ -41,7 +41,10 @@ describe('check-active-governance-wording', () => {
       {
         repository: '4veco-lessen',
         path: 'AGENTS.md',
-        text: 'Route: `Start \u2192 Leer \u2192 Oefen \u2192 Check \u2192 Verdiep`.',
+        text: [
+          'Route: `Start \u2192 Leer \u2192 Oefen \u2192 Check \u2192',
+          'Verdiep`.',
+        ].join('\n'),
       },
     ]);
 
