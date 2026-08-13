@@ -322,6 +322,19 @@ describe('validate-paragraph.js', () => {
     expect(output).toContain('PASSED all checks');
   });
 
+  test('wider-route check pages remain outside the 14-file student-web baseline', () => {
+    const dir = setupPartB('9.9.1 Theory', { includeOffice: false });
+    writeHtml(path.join(dir, `9.9.1 Theory ${DASH} korte-check.html`));
+    writeHtml(path.join(dir, `9.9.1 Theory ${DASH} exit-ticket.html`));
+
+    const { exitCode, output } = run(dir, 'part-b', 'student-web');
+
+    expect(exitCode).toBe(0);
+    expect(output).toContain('Output profile: student-web (14 required Part B file(s))');
+    expect(output).toContain('14/14 required Part B files present (student-web)');
+    expect(output).not.toContain('16 required Part B file(s)');
+  });
+
   test('legacy-full profile validates the old 27 flat companion root files', () => {
     const dir = setupPartB();
     const { exitCode, output } = run(dir, 'part-b', 'legacy-full');

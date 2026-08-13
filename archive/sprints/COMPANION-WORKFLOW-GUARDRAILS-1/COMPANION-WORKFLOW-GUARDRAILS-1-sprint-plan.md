@@ -201,3 +201,35 @@ Follow the GitHub publish workflow and the repo remote-publication rules:
 - Draft PR opened and presented for human review.
 - Passing `platform-ci / validate-platform` status for the reviewed commit, or
   explicit CI waiver, recorded in the human-review handoff.
+
+## August 2026 Route-Consistency Repair
+
+Owner review returned `HOLD_REVISE` for two remaining contract gaps. This
+paired repair uses bundle id `COMPANION-ROUTE-CONSISTENCY-20260813-1` and keeps
+both pull requests draft until exact-head review, platform CI, compatibility,
+and coordinated PR Readiness all pass.
+
+1. Verify the existing platform worktree claim and establish a clean dedicated
+   lesson worktree claim under `COMPANION-WORKFLOW-GUARDRAILS-1`.
+2. Classify flat `korte-check.html` and `exit-ticket.html` pages as Part B
+   companion outputs. Prove companion-lane acceptance and prove that both stay
+   outside the 14-file `student-web` validator baseline.
+3. Correct lesson `AGENTS.md` to
+   `Start -> Leer -> Check -> Oefen -> Exit ticket`.
+4. Add an allowlisted cross-repository route-declaration check for platform
+   `AGENTS.md`, the companion-lane workflow, lesson `AGENTS.md`, product vision,
+   and product end-state. Parse only inline-code route declarations, normalize
+   ASCII/Unicode arrows, permit repeated identical declarations, and reject
+   missing, noncanonical, or conflicting distinct values with repository/file
+   diagnostics.
+5. Cover canonical order, ASCII/Unicode arrows, the known stale route, missing
+   files/declarations, identical duplicates, and conflicting declarations.
+6. Refresh indexes and evidence before exact-head review. Any later
+   content-changing commit restarts that review.
+7. Publish a paired lesson PR and bind both PRs to exact payload SHAs. Run
+   platform synthetic-merge CI plus three-state cross-repository compatibility
+   against those exact heads, then apply coordinated bundle readiness.
+8. Do not merge. Present the aligned pair for human payload review.
+
+Lead plan reviewer Rawls (`019ffaf1-c6b8-7152-88ff-d66366207ccb`) returned
+`OK` after two revision rounds.

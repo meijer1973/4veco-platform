@@ -1,10 +1,158 @@
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
 const {
+  CANONICAL_ROUTE,
+  checkCanonicalRouteDeclarations,
   findViolationsInText,
   scanFiles,
   shouldExcludePath,
 } = require('./check-active-governance-wording');
 
+function checkRoutes(files) {
+  const cwd = fs.mkdtempSync(path.join(os.tmpdir(), 'active-route-contract-'));
+  const contracts = [];
+  try {
+    for (const file of files) {
+      contracts.push({ repository: file.repository, path: file.path });
+      if (file.text === undefined) continue;
+      const absolute = path.join(cwd, file.path);
+      fs.mkdirSync(path.dirname(absolute), { recursive: true });
+      fs.writeFileSync(absolute, file.text, 'utf8');
+    }
+    return checkCanonicalRouteDeclarations({ cwd, contracts });
+  } finally {
+    fs.rmSync(cwd, { recursive: true, force: true });
+  }
+}
+
 describe('check-active-governance-wording', () => {
+  test('accepts the canonical route with ASCII and Unicode arrows', () => {
+    const violations = checkRoutes([
+      { repository: '4veco-platform', path: 'AGENTS.md', text: `Route: \`${CANONICAL_ROUTE}\`.` },
+      { repository: '4veco-lessen', path: 'AGENTS.md', text: 'Route: `Start \u2192 Leer \u2192 Check \u2192 Oefen \u2192 Exit ticket`.' },
+    ]);
+
+    expect(violations).toEqual([]);
+  });
+
+  test('flags the known stale route with actionable cross-repository diagnostics', () => {
+    const violations = checkRoutes([
+      {
+        repository: '4veco-lessen',
+        path: 'AGENTS.md',
+        text: 'Route: `Start \u2192 Leer \u2192 Oefen \u2192 Check \u2192 Verdiep`.',
+      },
+    ]);
+
+    expect(violations).toEqual([
+      expect.objectContaining({
+        repository: '4veco-lessen',
+        file: 'AGENTS.md',
+        pattern: 'canonical-route-mismatch',
+        expected: CANONICAL_ROUTE,
+        observed: 'Start -> Leer -> Oefen -> Check -> Verdiep',
+      }),
+    ]);
+  });
+
+  test('flags missing authoritative route files and declarations', () => {
+    const violations = checkRoutes([
+      { repository: '4veco-platform', path: 'missing.md' },
+      { repository: '4veco-lessen', path: 'AGENTS.md', text: 'No declared student route.' },
+    ]);
+
+    expect(violations.map((item) => item.pattern)).toEqual([
+      'canonical-route-file-missing',
+      'canonical-route-declaration-missing',
+    ]);
+    expect(violations.every((item) => item.expected === CANONICAL_ROUTE)).toBe(true);
+  });
+
+  test('allows identical duplicate declarations and rejects conflicting routes', () => {
+    const identical = checkRoutes([
+      {
+        repository: '4veco-platform',
+        path: 'workflow.md',
+        text: `First \`${CANONICAL_ROUTE}\`. Later \`Start \u2192 Leer \u2192 Check \u2192 Oefen \u2192 Exit ticket\`.`,
+      },
+    ]);
+    const conflicting = checkRoutes([
+      {
+        repository: '4veco-platform',
+        path: 'workflow.md',
+        text: `First \`${CANONICAL_ROUTE}\`. Later \`Start -> Leer -> Oefen -> Check -> Exit ticket\`.`,
+      },
+    ]);
+
+    expect(identical).toEqual([]);
+    expect(conflicting).toEqual([
+      expect.objectContaining({
+        repository: '4veco-platform',
+        file: 'workflow.md',
+        pattern: 'canonical-route-declaration-conflict',
+        expected: CANONICAL_ROUTE,
+        observed: `${CANONICAL_ROUTE} | Start -> Leer -> Oefen -> Check -> Exit ticket`,
+      }),
+    ]);
+  });
+
+  test('does not treat a route inside a backtick fence as an authoritative declaration', () => {
+    const violations = checkRoutes([
+      {
+        repository: '4veco-platform',
+        path: 'AGENTS.md',
+        text: [
+          '```md',
+          'Example: `Start -> Leer -> Check -> Oefen -> Exit ticket`.',
+          '```',
+        ].join('\n'),
+      },
+    ]);
+
+    expect(violations).toEqual([
+      expect.objectContaining({ pattern: 'canonical-route-declaration-missing' }),
+    ]);
+  });
+
+  test('ignores stale fenced examples beside a canonical inline declaration', () => {
+    const violations = checkRoutes([
+      {
+        repository: '4veco-platform',
+        path: 'AGENTS.md',
+        text: [
+          `Current route: \`${CANONICAL_ROUTE}\`.`,
+          '```md',
+          'Old example: `Start -> Leer -> Oefen -> Check -> Verdiep`.',
+          '```',
+        ].join('\n'),
+      },
+    ]);
+
+    expect(violations).toEqual([]);
+  });
+
+  test('ignores both backtick and tilde fenced route examples', () => {
+    const violations = checkRoutes([
+      {
+        repository: '4veco-lessen',
+        path: 'AGENTS.md',
+        text: [
+          '~~~md',
+          '`Start \u2192 Leer \u2192 Check \u2192 Oefen \u2192 Exit ticket`',
+          '~~~~',
+          '```text',
+          '`Start -> Leer -> Oefen -> Check -> Verdiep`',
+          '```',
+        ].join('\n'),
+      },
+    ]);
+
+    expect(violations).toEqual([
+      expect.objectContaining({ pattern: 'canonical-route-declaration-missing' }),
+    ]);
+  });
+
   test('flags stale owner-ready and exact-head authorization wording', () => {
     const text = [
       'Owner authorization required before marking ready.',

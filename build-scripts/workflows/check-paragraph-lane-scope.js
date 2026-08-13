@@ -69,6 +69,8 @@ const COMPANION_SUFFIXES = [
   'samenvatting.docx',
   'youtube-videos.html',
   'stappenplan.html',
+  'korte-check.html',
+  'exit-ticket.html',
   'redeneer-spel.html',
   'wiskundevaardigheden.html',
   'begeleide inoefening.html',

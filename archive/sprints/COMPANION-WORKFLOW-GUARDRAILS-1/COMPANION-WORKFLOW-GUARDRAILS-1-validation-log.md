@@ -63,3 +63,31 @@ items (1 low, 1 moderate); no dependency versions were changed in this sprint.
 
 This sprint changed platform documentation, skills, agents, and sprint-review
 records only. It did not mutate generated lesson output in `../4veco-lessen`.
+
+## August Route-Consistency Repair Validation
+
+Bundle id: `COMPANION-ROUTE-CONSISTENCY-20260813-1`.
+
+| Command | Result | Notes |
+|---|---|---|
+| `npm.cmd test -- build-scripts/workflows/check-paragraph-lane-scope.test.js build-scripts/review-gates/check-active-governance-wording.test.js scripts/tests/validate-paragraph.test.js --runInBand` | PASS | 3 suites, 53 tests after work-review repair. Covers the two wider-route filenames, the unchanged 14-file validator count, cross-repository route declarations, and exclusion of backtick/tilde fenced examples. |
+| Direct `checkLaneScope({ lane: 'companion', ... })` for flat `korte-check.html` and `exit-ticket.html` filenames | PASS | Both paths classified as `partB_companion`; no unknown paths or lane failures. |
+| `npm.cmd run check:platform` | PASS | 97 suites and 1,287 tests passed; 6 suites and 8 tests skipped by the existing suite configuration. |
+| `npm.cmd run check:scope-language` | PASS | Active scope language passed. |
+| `npm.cmd run check:active-governance-wording` | PASS | All five allowlisted platform/lesson route-bearing files expose one canonical distinct route. |
+| `npm.cmd run check:governance-freshness -- --allow-policy-edit` | PASS | Current `origin/main` is an ancestor and the intentional governance delta is permitted for review. |
+| `npm.cmd run finalization:freshness` | PASS | Remote-main ancestry and policy-file hashes recorded. |
+| `npm.cmd run check:agent-index-freshness` | PASS | Platform index binds to the pre-index head; lesson inventory remains intentionally bound to lesson `origin/main`. |
+| Platform and lesson `git diff --check` | PASS | No whitespace errors. |
+| Platform and lesson worktree safety checks | PASS | Both claims belong to `codex-main` / `COMPANION-WORKFLOW-GUARDRAILS-1`; lesson is clean on its dedicated branch. |
+
+The first full-suite attempt stopped because the local dependency tree lacked
+`jszip` and `jsdom`. `npm.cmd ci` restored dependencies from the checked-in
+lockfile without changing dependency metadata; the rerun passed. The install
+reported 5 existing audit findings (1 low, 4 high), outside this repair scope.
+
+Paired lesson publication:
+
+- PR: `meijer1973/4veco-lessen#44`
+- payload head: `318b5184a896f0eaa6249ff6fa9f7298e29bb2c1`
+- state during implementation review: draft

@@ -124,3 +124,49 @@ Proof required:
 
 - Regenerate the platform index, rerun focused checks, and obtain PASS/OK on
   the corrected exact head.
+
+## August Route-Consistency Plan Review
+
+Lead reviewer: Rawls (`019ffaf1-c6b8-7152-88ff-d66366207ccb`).
+
+Round 1 verdict: REVISE.
+
+1. Narrow route consistency to an explicit authoritative-file allowlist and
+   parse identified route declarations instead of general prose.
+2. Prove short-check and exit-ticket outputs stay outside the 14-file validator
+   baseline as well as passing companion lane classification.
+3. Bind synthetic-merge and bundle proof to exact platform and lesson heads.
+4. Cover ASCII/Unicode arrows, stale order, missing declarations, and
+   duplicate/conflicting declarations with actionable diagnostics.
+5. Verify both worktree claims and keep both PRs draft through review.
+6. Generate and commit indexes/evidence before exact-head review.
+
+Round 2 verdict: REVISE.
+
+- The companion workflow intentionally repeats the canonical route. The rule
+  was corrected to require one distinct normalized value while allowing
+  repeated identical declarations.
+
+Round 3 verdict: OK.
+
+Implementation note: the first live route scan exposed Markdown code-fence
+interference in the inline-code parser. The parser was narrowed to single-line
+inline code spans; focused tests and the live five-file scan then passed.
+
+## August Route-Consistency Work Review Round 1
+
+Reviewer verdict: REVISE.
+
+- Finding: a single-backticked route inside a fenced Markdown example could be
+  treated as authoritative and conflict with the live inline declaration.
+- Fix: mask backtick and tilde fenced blocks while preserving line positions;
+  add regressions for fence-only routes, stale fenced examples beside canonical
+  declarations, and both supported fence marker styles.
+- Proof required: focused tests, live route scan, and work re-review return
+  PASS/OK.
+
+Work review round 2 verdict: OK.
+
+The reviewer verified the fence masking, route parsing, lane ownership,
+14-file boundary, lesson route, diagnostics, focused 53-test proof, live route
+scan, and both repository diff checks.
