@@ -9,6 +9,16 @@ const {
 } = require('./refresh-bundle-agent-indexes');
 
 const trustedRoot = path.resolve(__dirname, '..', '..');
+const refreshHelperPath = 'build-scripts/review-gates/refresh-bundle-agent-indexes.js';
+const refreshHelperUrl = `https://raw.githubusercontent.com/meijer1973/4veco-platform/main/${refreshHelperPath}`;
+
+function markdownSection(text, start, end) {
+  const startIndex = text.indexOf(start);
+  if (startIndex === -1) throw new Error(`missing section start: ${start}`);
+  const endIndex = end ? text.indexOf(end, startIndex + start.length) : text.length;
+  if (end && endIndex === -1) throw new Error(`missing section end: ${end}`);
+  return text.slice(startIndex, endIndex);
+}
 
 function git(args, cwd) {
   const result = spawnSync('git', args, { cwd, encoding: 'utf8' });
@@ -75,6 +85,42 @@ function setupFixture() {
 }
 
 describe('trusted bundle agent-index refresh', () => {
+  test('keeps the trusted refresh helper discoverable in every canonical navigation surface', () => {
+    const researchMap = fs.readFileSync(path.join(trustedRoot, 'RESEARCH_AGENT_MAP.md'), 'utf8');
+    const githubEntry = fs.readFileSync(path.join(trustedRoot, 'AGENT_GITHUB_ENTRY.md'), 'utf8');
+    const urlIndexSource = fs.readFileSync(
+      path.join(trustedRoot, 'build-scripts', 'sprints', 'emit-url-index.js'),
+      'utf8'
+    );
+    const urlIndex = fs.readFileSync(path.join(trustedRoot, 'reports', 'url-index.md'), 'utf8');
+
+    const entryPoints = markdownSection(researchMap, '## Entry Points', '## Index Anchors');
+    const anchors = markdownSection(researchMap, '## Index Anchors', '## Path Registry');
+    const pathRegistry = markdownSection(researchMap, '## Path Registry', '## Layer Semantics');
+    const traversal = markdownSection(researchMap, '## Agent Traversal Protocol', '## Dependency Flow');
+    const taskRouting = markdownSection(researchMap, '## Research Task Routing', '## Agent Rules');
+
+    expect(entryPoints).toContain(`- \`${refreshHelperPath}\``);
+    expect(entryPoints).toContain(`"${refreshHelperPath}"`);
+    expect(entryPoints).toContain(`- ${refreshHelperUrl}`);
+    expect(anchors).toContain(`"bundle_agent_index_refresh_runner": "${refreshHelperPath}"`);
+    expect(anchors).toContain(`- ${refreshHelperUrl}`);
+    expect(pathRegistry).toContain('"pr_governance_paths"');
+    expect(pathRegistry).toContain(`"${refreshHelperPath}"`);
+    expect(pathRegistry).toContain(`- ${refreshHelperUrl}`);
+    expect(traversal).toContain(`\`${refreshHelperPath}\``);
+    expect(taskRouting).toContain(`"${refreshHelperPath}"`);
+
+    const bundleQuestion = githubEntry
+      .split(/\r?\n/)
+      .find((line) => line.startsWith('| How should a paired platform/lesson PR bundle'));
+    expect(bundleQuestion).toContain(`\`${refreshHelperPath}\``);
+    expect(githubEntry).toContain(`- \`${refreshHelperPath}\``);
+    expect(githubEntry).toContain(`uses\n  \`${refreshHelperPath}\` after the lesson`);
+    expect(urlIndexSource).toContain(`platform('${refreshHelperPath}')`);
+    expect(urlIndex).toContain(`- ${refreshHelperUrl}`);
+  });
+
   test('creates one canonical refresh commit for a distinct lesson merge commit and reuses it', () => {
     const fixture = setupFixture();
     try {

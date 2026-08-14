@@ -216,6 +216,21 @@ The held bundle remains unapproved. This task must not authorize or merge
   - Validate order-specific refresh metadata structurally in every layer.
 - Round 2: `OK`.
 
+### Human HOLD_REVISE Correction
+
+- Human review: `HOLD_REVISE` because the trusted refresh helper was absent
+  from the canonical repository navigation maps and no regression enforced that
+  discovery surface.
+- Rawls correction-plan Round 1: `REVISE`.
+  - Supersede old exact-head evidence in PR #209, commit a new review record,
+    and validate the final generated-index-only tail before publication.
+- Rawls correction-plan Round 2: `REVISE`.
+  - Review and bind the exact substantive correction commit before adding the
+    evidence-only lead-review record.
+- Rawls correction-plan Round 3: `REVISE`.
+  - Publish actual exact-head CI and PR-review URLs only after those checks run.
+- Rawls correction-plan Round 4: `OK`.
+
 ## Implementation Review Log
 
 - Round 1: `REVISE`.

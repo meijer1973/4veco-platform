@@ -1,6 +1,6 @@
 # BUNDLE-INDEX-REFRESH-1 Result
 
-Status: implementation complete; ready for draft PR publication
+Status: canonical map correction locally complete; exact-head republication pending
 
 ## Result
 
@@ -24,15 +24,27 @@ match the compatibility-tested lesson candidate in runtime classification,
 standalone decision validation, and structural schema validation. Delegated
 lesson rendering identifies the lesson as the current member.
 
+After human review returned `HOLD_REVISE`, the trusted refresh helper was added
+to every applicable canonical repository-map representation and to the
+generated URL index. The focused refresh regression now reads those real map
+sections and fails when the helper is missing from an entry point, anchor,
+governance path, task route, GitHub entry guide, URL-index source, or generated
+URL index. `RESEARCH_AGENT_MAP_REFERENCES.md` remains unchanged because its
+declared scope is the reference corpus rather than PR-governance execution.
+
 ## Validation
 
-- Full platform suite: 98 suites passed; 1,306 tests passed; 8 skipped.
+- Full platform suite: 98 suites passed; 1,307 tests passed; 8 skipped.
 - Focused router: 139 passed.
 - Authorized bundle integration: 44 passed.
 - Compatibility: 12 passed.
 - Workflow contract: 6 passed.
-- Deterministic refresh real-Git suite: 6 passed.
+- Trusted refresh and canonical navigation suite: 7 passed.
 - Readiness application: 5 passed.
+- PR Readiness aggregate: 169 passed.
+- Integration-lane aggregate: 145 passed.
+- Active governance wording, branch protection, URL-index freshness, agent-index
+  freshness, and `git diff --check`: passed.
 - Rawls implementation review Round 8: `OK`.
 
 ## Authority Boundary
@@ -44,5 +56,7 @@ evidence are rebuilt, and the owner reviews the renewed payload coordinates.
 
 ## Next Action
 
-Publish a draft repair PR, obtain exact-head CI and PR-level Rawls approval, run
-PR Readiness, and present the repair PR for human review without merging it.
+Bind this exact substantive correction commit to a new Rawls review record,
+regenerate the agent indexes, and rerun exact-head CI, PR-level Rawls review,
+and PR Readiness before presenting PR #209 for renewed human review without
+merging it.
