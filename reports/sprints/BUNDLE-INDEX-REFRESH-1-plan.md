@@ -350,3 +350,15 @@ The held bundle remains unapproved. This task must not authorize or merge
     extra foreign member/review records; focused router and readiness-apply
     suites pass.
 - Round 8: `OK`.
+- Human correction Round 1 (overall Round 9): `REVISE`.
+  - Scope the navigation regression to exact Markdown subsections and parsed
+    fenced-JSON arrays rather than broad section substring matches.
+  - Add independent omission or misplacement cases for every required map,
+    GitHub-entry, and URL-index representation.
+- Human correction Round 1 corrections:
+  - Entry-point, anchor, path-registry, and task-routing arrays are parsed and
+    checked by exact key; traversal, GitHub entry, and URL-index assertions are
+    constrained to their named row or subsection.
+  - Fourteen table-driven negative cases remove one exact representation at a
+    time while leaving all other occurrences present, and each fails with its
+    own surface identifier.

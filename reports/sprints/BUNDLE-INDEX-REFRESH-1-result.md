@@ -34,12 +34,13 @@ declared scope is the reference corpus rather than PR-governance execution.
 
 ## Validation
 
-- Full platform suite: 98 suites passed; 1,307 tests passed; 8 skipped.
+- Full platform suite: 98 suites passed; 1,321 tests passed; 8 skipped.
 - Focused router: 139 passed.
 - Authorized bundle integration: 44 passed.
 - Compatibility: 12 passed.
 - Workflow contract: 6 passed.
-- Trusted refresh and canonical navigation suite: 7 passed.
+- Trusted refresh and canonical navigation suite: 21 passed, including 14
+  independent omission or misplacement regressions.
 - Readiness application: 5 passed.
 - PR Readiness aggregate: 169 passed.
 - Integration-lane aggregate: 145 passed.
