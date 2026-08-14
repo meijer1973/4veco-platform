@@ -1,6 +1,6 @@
 # BUNDLE-INDEX-REFRESH-1 Result
 
-Status: canonical map correction locally complete; exact-head republication pending
+Status: CI startup hardening locally complete; exact-commit review pending
 
 ## Result
 
@@ -32,15 +32,27 @@ governance path, task route, GitHub entry guide, URL-index source, or generated
 URL index. `RESEARCH_AGENT_MAP_REFERENCES.md` remains unchanged because its
 declared scope is the reference corpus rather than PR-governance execution.
 
+Exact-head GitHub Actions attempts 1-3 then exposed an unrelated CI startup
+race: the presentation browser was allowed only eight seconds to expose its
+DevTools endpoint, and browser output was discarded. The exact local HTML QA
+passed. The launcher now waits up to 30 seconds, races endpoint polling against
+spawn error and early exit, settles once with listener/timer cleanup, and emits
+bounded browser-path, spawn, exit, endpoint, and stderr diagnostics. Rendering
+and interaction assertions are unchanged.
+
 ## Validation
 
-- Full platform suite: 98 suites passed; 1,321 tests passed; 8 skipped.
+- Full platform suite: 99 suites passed; 1,325 tests passed; 8 skipped.
 - Focused router: 139 passed.
 - Authorized bundle integration: 44 passed.
 - Compatibility: 12 passed.
 - Workflow contract: 6 passed.
 - Trusted refresh and canonical navigation suite: 21 passed, including 14
   independent omission or misplacement regressions.
+- Browser-startup regression suite: 4 passed (delayed success, bounded timeout,
+  early exit, and spawn error).
+- Exact local presentation-v2 HTML QA: passed with all screenshot and
+  interaction checks.
 - Readiness application: 5 passed.
 - PR Readiness aggregate: 169 passed.
 - Integration-lane aggregate: 145 passed.
@@ -59,7 +71,7 @@ evidence are rebuilt, and the owner reviews the renewed payload coordinates.
 
 ## Next Action
 
-Bind this exact substantive correction commit to a new Rawls review record,
-regenerate the agent indexes, and rerun exact-head CI, PR-level Rawls review,
-and PR Readiness before presenting PR #209 for renewed human review without
-merging it.
+Bind the CI-hardening substantive commit to a new Rawls review record,
+regenerate the agent indexes from the evidence commit, and rerun exact-head CI,
+PR-level Rawls review, and PR Readiness before presenting PR #209 for renewed
+human review without merging it.

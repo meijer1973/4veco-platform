@@ -231,6 +231,20 @@ The held bundle remains unapproved. This task must not authorize or merge
   - Publish actual exact-head CI and PR-review URLs only after those checks run.
 - Rawls correction-plan Round 4: `OK`.
 
+### Exact-Head CI Supplemental Plan
+
+- GitHub Actions attempts 1-3 at `63a3d22ff7598a19a100e308c001e277656dc2b9`
+  passed the platform Jest suite and presentation build, then failed before HTML
+  evaluation because Chrome/Edge did not expose DevTools within the fixed
+  eight-second startup window. The exact local HTML QA passed.
+- Rawls supplemental-plan Round 1: `REVISE`.
+  - Race endpoint polling against both child `error` and early `exit`, settle
+    once, clean up timers/listeners, preserve bounded diagnostics, and add a
+    deterministic spawn-error regression.
+  - Validate final agent-index metadata and freshness after the reviewed
+    evidence commit and four-file generated tail.
+- Rawls supplemental-plan Round 2: `OK`.
+
 ## Implementation Review Log
 
 - Round 1: `REVISE`.
