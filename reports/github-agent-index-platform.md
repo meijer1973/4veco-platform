@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-14T10:43:31.195Z
+Generated: 2026-08-14T11:23:46.666Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/bundle-index-refresh-20260814`
-Source commit: `c5a999fe0884d443c0266897406d1ac9ab3b520e`
-Files indexed: 7078
+Source commit: `0f0204ad4c92c5e549e1d09ec72a80bc763acd0f`
+Files indexed: 7080
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 695
+Count: 696
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -828,6 +828,7 @@ Count: 695
 - scripts/tests/check-book.test.js
 - scripts/tests/check-course-target-exercises-v5.test.js
 - scripts/tests/procedure-contracts.test.js
+- scripts/tests/qa-presentation-v2-html-startup.test.js
 - scripts/tests/validate-chapter.test.js
 - scripts/tests/validate-paragraph-modes.test.js
 - scripts/tests/validate-paragraph.test.js
@@ -2528,7 +2529,7 @@ Count: 974
 
 ## reports
 
-Count: 4475
+Count: 4476
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4894,6 +4895,7 @@ Count: 4475
 - reports/sprints/BOOK1-FIX-1-plan.md
 - reports/sprints/BOOK1-FIX-1-result.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
