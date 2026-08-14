@@ -44,8 +44,10 @@ declared scope is the reference corpus rather than PR-governance execution.
 - Readiness application: 5 passed.
 - PR Readiness aggregate: 169 passed.
 - Integration-lane aggregate: 145 passed.
-- Active governance wording, branch protection, URL-index freshness, agent-index
-  freshness, and `git diff --check`: passed.
+- Active governance wording, branch protection, URL-index freshness, and
+  `git diff --check`: passed.
+- Agent-index freshness: intentionally pending until the reviewed evidence
+  commit and final generated-index-only tail are created.
 - Rawls implementation review Round 8: `OK`.
 
 ## Authority Boundary

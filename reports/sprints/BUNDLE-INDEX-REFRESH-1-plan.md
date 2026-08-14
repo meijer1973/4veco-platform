@@ -362,3 +362,9 @@ The held bundle remains unapproved. This task must not authorize or merge
   - Fourteen table-driven negative cases remove one exact representation at a
     time while leaving all other occurrences present, and each fails with its
     own surface identifier.
+- Human correction Round 2 (overall Round 10): `REVISE`.
+  - Do not report agent-index freshness as passing at a substantive commit that
+    necessarily precedes regeneration of the four committed indexes.
+- Human correction Round 2 correction:
+  - Agent-index freshness is explicitly pending until the reviewed evidence
+    commit and final generated-index-only tail exist.
