@@ -125,7 +125,17 @@ jobs:
           LESSON_STATE_SHA: ${{ matrix.lesson_sha }}
         run: |
           New-Item -ItemType Directory -Force -Path ..\bundle-results | Out-Null
+          $env:FOURVECO_PLATFORM_ROOT = (Get-Location).Path
+          $env:FOURVECO_REPORTS_DIR = (Join-Path (Get-Location).Path 'reports')
+          $env:FOURVECO_LESSEN_ROOT = (Resolve-Path '..\4veco-lessen').Path
+          $env:FOURVECO_PLATFORM_SOURCE_REF = 'HEAD'
+          $env:FOURVECO_PLATFORM_SOURCE_BRANCH = "compatibility/$env:STATE/platform"
+          $env:FOURVECO_LESSEN_SOURCE_REF = 'HEAD'
+          $env:FOURVECO_LESSEN_SOURCE_BRANCH = "compatibility/$env:STATE/lesson"
+          $env:FOURVECO_INDEX_GENERATED_AT = git -C ..\4veco-lessen show -s --format=%cI HEAD
           $commands = @(
+            'node ..\trusted-platform\build-scripts\reports\github-agent-index.js',
+            'node ..\trusted-platform\build-scripts\reports\check-agent-index-freshness.js',
             'npm run check:platform',
             'npm run check:reasoning-golden',
             'npm run check:landing-v2',

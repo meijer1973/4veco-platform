@@ -79,6 +79,15 @@ function controllerDecision(overrides = {}) {
       lead_review: {
         ...fixture.proof.lead_review,
         reviewed_commit_sha: platformHead,
+        paired_member_reviews: [
+          {
+            repository: LESSON_REPO,
+            pr_number: 35,
+            reviewed_commit_sha: lessonHead,
+            review_result: 'PASS',
+            review_path: 'subagent:paired-bundle-review',
+          },
+        ],
       },
       bundle: {
         bundle_id: 'PRESENTATION-V2-PPTX-DERIVATIVE-111-113-1',

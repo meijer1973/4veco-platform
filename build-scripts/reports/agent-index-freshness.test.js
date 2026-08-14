@@ -8,7 +8,7 @@ const {
   resolveLessenRoot,
   checkIndex,
 } = require('./check-agent-index-freshness');
-const { buildIndex, resolveSourceRef } = require('./github-agent-index');
+const { buildIndex, resolveSourceBranch, resolveSourceRef } = require('./github-agent-index');
 
 function git(args, cwd) {
   const result = spawnSync('git', args, {
@@ -34,6 +34,27 @@ describe('check-agent-index-freshness', () => {
   test('lesson generation defaults to live origin/main', () => {
     expect(resolveSourceRef('4veco-lessen', {})).toBe('origin/main');
     expect(resolveSourceRef('4veco-platform', {})).toBe('HEAD');
+  });
+
+  test('trusted refresh inputs pin source labels and generated_at', () => {
+    const repo = makeRepo();
+    try {
+      const generatedAt = '2026-08-14T06:30:00+00:00';
+      const env = {
+        FOURVECO_PLATFORM_SOURCE_REF: 'HEAD',
+        FOURVECO_PLATFORM_SOURCE_BRANCH: 'codex/controller-branch',
+        FOURVECO_INDEX_GENERATED_AT: generatedAt,
+      };
+      const index = buildIndex('4veco-platform', repo, { env });
+
+      expect(resolveSourceRef('4veco-platform', env)).toBe('HEAD');
+      expect(resolveSourceBranch('4veco-platform', repo, 'HEAD', env)).toBe('codex/controller-branch');
+      expect(index.source_branch).toBe('codex/controller-branch');
+      expect(index.source_commit).toBe(git(['rev-parse', 'HEAD'], repo));
+      expect(index.generated_at).toBe(generatedAt);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
   });
 
   test('passes when index source_commit matches repo HEAD', () => {

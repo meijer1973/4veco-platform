@@ -4,10 +4,13 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const {
+  integrationRefreshReadinessAttestationDigest,
   stateResult,
   summarizeCompatibility,
   validateCompatibilityProof,
+  validateIntegrationRefreshProof,
 } = require('./cross-repo-bundle-compatibility');
+const { INDEX_PATHS } = require('./refresh-bundle-agent-indexes');
 
 const pBase = '1'.repeat(40);
 const pHead = '2'.repeat(40);
@@ -37,6 +40,65 @@ function matrix(platformFirst, lessonFirst, bundleFinal = 'success') {
       state('bundle-final', bundleFinal),
     ],
   });
+}
+
+function integrationRefreshProof(overrides = {}) {
+  const integrationHead = '5'.repeat(40);
+  const lessonMerge = '6'.repeat(40);
+  const proof = {
+    status: 'complete',
+    order: 'lesson-first',
+    platform_payload_sha: pHead,
+    platform_integration_head_sha: integrationHead,
+    lesson_payload_sha: lHead,
+    lesson_merge_commit_sha: lessonMerge,
+    refresh_result: {
+      status: 'created',
+      trusted_executor: 'platform-main',
+      previous_platform_head_sha: pHead,
+      platform_integration_head_sha: integrationHead,
+      lesson_merge_commit_sha: lessonMerge,
+      changed_paths: INDEX_PATHS,
+      hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+      metadata: {
+        platform_source_commit: pHead,
+        platform_source_branch: 'codex/controller',
+        lesson_source_commit: lessonMerge,
+        lesson_source_branch: 'origin/main',
+        generated_at: '2026-08-14T00:00:00.000Z',
+      },
+    },
+    lineage: {
+      reviewed_payload_head_sha: pHead,
+      integration_head_sha: integrationHead,
+      payload_ancestor_of_integration_head: true,
+      authorization_inherited: true,
+      failures: [],
+    },
+    readiness: {
+      head_sha: integrationHead,
+      route: 'READY_FOR_HUMAN_REVIEW',
+      attestation_schema_version: 1,
+      attestation_digest: null,
+    },
+    ci: {
+      status: 'success',
+      platform_sha: integrationHead,
+      lesson_sha: lessonMerge,
+    },
+  };
+  const result = {
+    ...proof,
+    ...overrides,
+    refresh_result: { ...proof.refresh_result, ...(overrides.refresh_result || {}) },
+    lineage: { ...proof.lineage, ...(overrides.lineage || {}) },
+    readiness: { ...proof.readiness, ...(overrides.readiness || {}) },
+    ci: { ...proof.ci, ...(overrides.ci || {}) },
+  };
+  if (!Object.prototype.hasOwnProperty.call(overrides.readiness || {}, 'attestation_digest')) {
+    result.readiness.attestation_digest = integrationRefreshReadinessAttestationDigest(result);
+  }
+  return result;
 }
 
 describe('cross-repo bundle compatibility', () => {
@@ -90,6 +152,88 @@ describe('cross-repo bundle compatibility', () => {
     expect(validateCompatibilityProof(summary, {
       exactMembers: { lesson_candidate_sha: '5'.repeat(40) },
     }).failures).toContain(`lesson_candidate_sha mismatch: expected ${'5'.repeat(40)}`);
+  });
+
+  test('requires the exact lesson-first post-merge refresh contract', () => {
+    const summary = matrix('failure', 'success');
+    const missing = { ...summary };
+    delete missing.integration_contract;
+    expect(validateCompatibilityProof(missing).failures).toContain('lesson-first integration_contract missing');
+
+    const tampered = JSON.parse(JSON.stringify(summary));
+    tampered.integration_contract.post_first_merge_refresh.trusted_executor = 'candidate-branch';
+    expect(validateCompatibilityProof(tampered).failures).toContain('integration_contract trusted_executor mismatch');
+
+    const wrongPaths = JSON.parse(JSON.stringify(summary));
+    wrongPaths.integration_contract.post_first_merge_refresh.changed_paths.pop();
+    expect(validateCompatibilityProof(wrongPaths).failures).toContain('integration_contract changed_paths mismatch');
+  });
+
+  test('keeps immutable payload coordinates separate from runtime refresh evidence', () => {
+    const compatibility = matrix('failure', 'success');
+    const proof = integrationRefreshProof();
+    expect(validateIntegrationRefreshProof(proof, {
+      compatibility,
+      controllerHead: proof.platform_integration_head_sha,
+      lessonMergeSha: proof.lesson_merge_commit_sha,
+    }).ok).toBe(true);
+
+    const mixedPayload = integrationRefreshProof({ platform_payload_sha: proof.platform_integration_head_sha });
+    expect(validateIntegrationRefreshProof(mixedPayload, { compatibility }).failures)
+      .toContain('integration_refresh platform payload mismatch');
+
+    const staleReadiness = integrationRefreshProof({
+      readiness: { ...proof.readiness, head_sha: pHead },
+    });
+    expect(validateIntegrationRefreshProof(staleReadiness, { compatibility }).failures)
+      .toContain('integration_refresh readiness invalid');
+
+    const wrongLessonCi = integrationRefreshProof({
+      ci: { ...proof.ci, lesson_sha: lHead },
+    });
+    expect(validateIntegrationRefreshProof(wrongLessonCi, { compatibility }).failures)
+      .toContain('integration_refresh CI binding invalid');
+
+    const untrusted = integrationRefreshProof({
+      refresh_result: { ...proof.refresh_result, trusted_executor: 'candidate-branch' },
+    });
+    expect(validateIntegrationRefreshProof(untrusted, { compatibility }).failures)
+      .toContain('integration_refresh executor mismatch');
+
+    const arbitraryDigest = integrationRefreshProof({
+      readiness: { attestation_digest: `sha256:${'f'.repeat(64)}` },
+    });
+    expect(validateIntegrationRefreshProof(arbitraryDigest, { compatibility }).failures)
+      .toContain('integration_refresh readiness attestation mismatch');
+
+    const missingMetadata = integrationRefreshProof({
+      refresh_result: { metadata: undefined },
+    });
+    expect(validateIntegrationRefreshProof(missingMetadata, { compatibility }).failures)
+      .toEqual(expect.arrayContaining([
+        'integration_refresh platform source commit mismatch',
+        'integration_refresh lesson source commit mismatch',
+        'integration_refresh generated_at invalid',
+      ]));
+
+    const tamperedMetadata = integrationRefreshProof({
+      refresh_result: {
+        previous_platform_head_sha: '7'.repeat(40),
+        metadata: {
+          ...proof.refresh_result.metadata,
+          platform_source_branch: '',
+          lesson_source_branch: 'agent/lesson-payload',
+          generated_at: 'not-a-date',
+        },
+      },
+    });
+    expect(validateIntegrationRefreshProof(tamperedMetadata, { compatibility }).failures)
+      .toEqual(expect.arrayContaining([
+        'integration_refresh platform source commit mismatch',
+        'integration_refresh platform source branch missing',
+        'integration_refresh lesson source branch mismatch',
+        'integration_refresh generated_at invalid',
+      ]));
   });
 
   test('rejects malformed state-to-SHA mapping', () => {
