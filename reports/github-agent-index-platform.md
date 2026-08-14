@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-14T09:06:40.976Z
+Generated: 2026-08-14T10:43:31.195Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/bundle-index-refresh-20260814`
-Source commit: `fdcd54167085ee9e542fab5258b294ed50e81bce`
-Files indexed: 7077
+Source commit: `c5a999fe0884d443c0266897406d1ac9ab3b520e`
+Files indexed: 7078
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2528,7 +2528,7 @@ Count: 974
 
 ## reports
 
-Count: 4474
+Count: 4475
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4893,6 +4893,7 @@ Count: 4474
 - reports/sprints/BOOK1-FIX-1-lead-review-round2.md
 - reports/sprints/BOOK1-FIX-1-plan.md
 - reports/sprints/BOOK1-FIX-1-result.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
