@@ -294,3 +294,22 @@ deltas because the lesson source and timestamp are unchanged. Rawls returned
 `OK` for a two-file terminal tail and prohibited an artificial lesson delta.
 The exact four-path requirement applies to the later post-lesson-merge
 `integration_refresh`.
+
+## Post-#210 Bundle Renewal Plan Review
+
+Lead reviewer: Rawls (`019ffaf1-c6b8-7152-88ff-d66366207ccb`).
+
+Round 1 required the final index tail to bind directly to committed review
+evidence, trusted-main generator/checker pinning, immutable compatibility
+contract wording, fresh four-ref checks at each proof boundary, and an explicit
+canonical authorization/integration sequence.
+
+Round 2 restored mirrored PR metadata and supersession evidence, made both
+`READY_FOR_HUMAN_REVIEW` plus coordinated `MARK_READY` mandatory, and limited
+the authorization record to canonical invalidation identifiers.
+
+Round 3 removed base SHA fields from the canonical machine authorization
+record. Exact bases remain in surrounding compatibility and readiness evidence;
+the trusted integration lane re-fetches them independently.
+
+Round 4 verdict: `OK`.

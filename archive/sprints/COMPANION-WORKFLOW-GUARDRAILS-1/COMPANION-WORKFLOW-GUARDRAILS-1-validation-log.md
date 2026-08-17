@@ -186,3 +186,29 @@ platform JSON and Markdown changed to bind the renewed evidence SHA. Rawls
 returned `OK` for that actual two-path terminal delta and confirmed that the
 later post-lesson-merge `integration_refresh`, not this pre-readiness evidence
 refresh, owns the exact four-path delta requirement.
+
+## Post-#210 Base Synchronization
+
+PR #210 was integrated only after exact owner authorization. The serialized
+lane produced platform merge commit
+`446491cc9a1e5da9e4e7da990fcf1e14d7de02b4`; post-merge `main` CI run
+`32018065977` passed.
+
+| Check | Result | Notes |
+|---|---|---|
+| Four-ref preflight | PASS | Platform main `446491cc9a1e5da9e4e7da990fcf1e14d7de02b4`; PR #198 `04b7eb8a118b286eda774bcf65ea61b7b0de98ca`; lesson main `ba08b9c2e033a877c0d1b57952055ce697912a22`; PR #44 `318b5184a896f0eaa6249ff6fa9f7298e29bb2c1`. Both PRs remained open and draft. |
+| Pre-merge tree | PASS | Only `reports/github-agent-index-platform.json` and `.md` conflicted. The substantive fixture auto-merged to PR #210's contamination, `env: {}`, and `finally` restoration behavior. |
+| Platform main merge | PASS | Merge commit `74020313985af5e0ba654cc9196d94876372a7a1` contains the trusted base. The two generated conflicts were retained temporarily from the PR branch and remain scheduled for trusted terminal regeneration. No behavioral conflict was manually resolved. |
+| Focused synthetic lesson-first validation | PASS | 5 suites and 85 tests passed with explicit compatibility source-branch labels. |
+| Full synthetic lesson-first platform validation | PASS | 99 suites and 1,349 tests passed; 6 suites and 8 tests skipped by suite configuration. |
+| `npm.cmd run check:integration-lane` | PASS | 10 suites and 160 tests passed. |
+| `npm.cmd run check:pr-readiness` | PASS | 5 suites and 176 tests passed. |
+| Scope and route wording | PASS | Active scope language and the five-file platform/lesson route declaration check passed against the lesson candidate. |
+| Governance/finalization freshness | PASS | Trusted platform `main` `446491cc...` is an ancestor; finalization proof binds to merge checkpoint `74020313...`. |
+| Branch protection | PASS | Strict `validate-platform`, admin enforcement, force-push/deletion protection, and conversation resolution match policy. |
+| Worktree safety | PASS | Existing `codex-main` / `COMPANION-WORKFLOW-GUARDRAILS-1` claim is current; branch prefix and ownership checks pass. |
+| URL index and diff hygiene | PASS | URL regeneration produced no tracked delta; platform and lesson `git diff --check` passed. |
+
+Current proof stops before index regeneration. The synchronized evidence commit
+must receive exact-SHA Rawls review; its committed review record must then be
+the direct parent/source commit of the terminal generated-index tail.

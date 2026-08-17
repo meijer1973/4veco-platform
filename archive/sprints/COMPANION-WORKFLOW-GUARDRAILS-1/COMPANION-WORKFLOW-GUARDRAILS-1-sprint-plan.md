@@ -272,3 +272,47 @@ The resynchronization plan is:
 Rawls approved this plan after one revision round. The revision bound work
 review to a committed substantive SHA, required exact remote-CI and freshness
 ordering, and made generated-tail provenance explicit.
+
+## August 17 2026 Post-#210 Bundle Renewal
+
+Platform bridge PR #210 merged through the authorized integration lane as
+`446491cc9a1e5da9e4e7da990fcf1e14d7de02b4`; post-merge platform `main` CI
+run `32018065977` passed. The held bundle may therefore rebuild evidence from
+that exact trusted base. PR #198 and lesson PR #44 still have no bundle merge
+authorization.
+
+1. Re-fetch both mains and both PRs before every proof boundary. Any head,
+   base, or lifecycle movement invalidates the affected proof.
+2. Merge trusted platform `main` into PR #198 with a merge commit and no force
+   push. Resolve generated index conflicts temporarily. Any manual behavioral
+   conflict returns to lead review.
+3. Preserve PR #210's hermetic fixture regression: contaminate the outer
+   lesson source-branch label, pass `env: {}`, and restore the environment in
+   `finally`.
+4. Validate, commit the synchronized evidence state, and obtain Rawls `OK` on
+   that exact commit. Commit the review record next.
+5. Pin generator and checker tooling to trusted platform `main`. Make the
+   committed review-evidence SHA the platform index `source_commit` and the
+   direct parent of the terminal generated-index tail. Generate lesson indexes
+   from lesson `main`; commit only actual byte-level deltas; add no later commit.
+6. Push without force, classify exact-head CI, then run replacement three-state
+   compatibility from exact trusted bases and candidates. Require
+   `bundle-final` and `lesson-first` green; `platform-first` may remain red.
+7. Verify the immutable artifact records the canonical lesson-first contract:
+   trusted generation refreshes PR #198 against the actual lesson merge commit
+   during later authorized integration. Pre-merge evidence must not claim a
+   runtime `integration_refresh`.
+8. Mirror identical exact bundle metadata, URLs, hashes, state results,
+   supersession, and authority boundaries onto both PRs. Renew exact-head Rawls
+   reviews and coordinated PR Readiness.
+9. Mark both PRs ready only if both machine decisions are
+   `READY_FOR_HUMAN_REVIEW` with `MARK_READY`; keep `merge_ready: false` and do
+   not merge.
+10. Request one canonical `4veco-human-bundle-authorization` for the exact
+    reviewed payloads. Its machine record uses only canonical supported fields
+    and the five canonical invalidation identifiers. Authorized integration,
+    if later granted, must be lesson-first and must revalidate the refreshed
+    platform integration head before merge.
+
+Rawls approved this plan after four review rounds. The final review is recorded
+in `COMPANION-WORKFLOW-GUARDRAILS-1-post-210-plan-review.md`.
