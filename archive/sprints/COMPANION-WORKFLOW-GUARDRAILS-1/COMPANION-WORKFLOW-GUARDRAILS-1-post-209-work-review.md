@@ -30,3 +30,15 @@ Verdict: `OK`.
 Rawls accepted the fail-closed implementation and the repeated proof: focused
 94 tests, integration-lane 160 tests, PR-readiness 176 tests, and full platform
 99 suites with 1,349 passing tests and 8 skipped tests.
+
+## Compatibility Isolation Review
+
+Reviewed commit: `47f890f52b005d63b635de3776911aaf07683a07`
+
+Verdict: `OK`.
+
+Compatibility run `32010370282` exposed one ambient-environment leak in the
+default lesson-source unit test. Rawls accepted the explicit empty fixture
+environment and the exact synthetic-label reproduction: agent-index 12 tests,
+focused 106 tests, and full platform 1,349 tests all passed. The failed run and
+its earlier generated tail are superseded.

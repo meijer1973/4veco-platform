@@ -173,3 +173,7 @@ must be rebuilt after renewed work review.
 | Focused set with compatibility source labels | PASS | 6 suites and 106 tests passed. |
 | Full platform suite with compatibility source labels | PASS | 99 suites and 1,349 tests passed; 6 suites and 8 tests skipped. This reproduces the environment that failed run `32010370282`. |
 | `git diff --check` | PASS | No whitespace errors in the correction. |
+
+Rawls returned `OK` on exact compatibility-isolation correction commit
+`47f890f52b005d63b635de3776911aaf07683a07`. A renewed evidence commit and
+trusted-main four-file tail are required before the next remote cycle.
