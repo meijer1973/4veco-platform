@@ -86,6 +86,8 @@ describe('check-agent-index-freshness', () => {
 
   test('lesson index follows origin/main even when local HEAD is stale', () => {
     const repo = makeRepo();
+    const previousSourceBranch = process.env.FOURVECO_LESSEN_SOURCE_BRANCH;
+    process.env.FOURVECO_LESSEN_SOURCE_BRANCH = 'compatibility/lesson-first/lesson';
     try {
       const staleHead = git(['rev-parse', 'HEAD'], repo);
       const year2Path = path.join(repo, 'year2-candidate-lessons', 'four-target-lesson-production-1', 'lesson.md');
@@ -131,6 +133,8 @@ describe('check-agent-index-freshness', () => {
       expect(staleResult.ok).toBe(false);
       expect(staleResult.failures.join('\n')).toMatch(/does not match origin\/main/);
     } finally {
+      if (previousSourceBranch === undefined) delete process.env.FOURVECO_LESSEN_SOURCE_BRANCH;
+      else process.env.FOURVECO_LESSEN_SOURCE_BRANCH = previousSourceBranch;
       fs.rmSync(repo, { recursive: true, force: true });
     }
   });
