@@ -44,10 +44,14 @@ compatibility run uses that new exact base.
 - `npm.cmd run check:integration-lane`: 10 suites and 145 tests passed.
 - `npm.cmd run check:pr-readiness`: 5 suites and 169 tests passed.
 - Active governance wording against lesson `main`, active scope language,
-  governance freshness, URL-index freshness, agent-index freshness, branch
-  protection, worktree ownership/branch safety, and `git diff --check`: passed.
-- Agent-index regeneration is intentionally deferred until after exact-SHA
-  work review and the committed review record.
+  governance freshness, URL-index freshness, branch protection, worktree
+  ownership/branch safety, and `git diff --check`: passed.
+- Lesson-index freshness passed at lesson `main`
+  `ba08b9c2e033a877c0d1b57952055ce697912a22`. Platform-index freshness is
+  intentionally pending after the substantive commit because the committed
+  index still references the pre-bridge generated source `0f0204ad...`.
+  Trusted-main regeneration is deferred until after exact-SHA work review and
+  the committed review record.
 
 ## Authority Boundary
 
