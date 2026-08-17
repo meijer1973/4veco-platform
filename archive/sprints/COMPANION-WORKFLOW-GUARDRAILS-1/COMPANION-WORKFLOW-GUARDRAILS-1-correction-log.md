@@ -229,3 +229,21 @@ Round 2 verdict: OK.
 The revised plan adds those ordering and provenance boundaries, requires fresh
 main/head/state checks before readiness and each transition, and keeps bundle
 authorization and merge outside this run.
+
+## Post-#209 Implementation Review Round 1
+
+Reviewer verdict: REVISE.
+
+- Finding: live PR normalization defaulted a missing lifecycle `state` to
+  `OPEN` and a missing/null draft field to `false`. Final verification rejected
+  only an explicit `true` draft value. An incomplete GitHub response could
+  therefore appear transitionable or successfully ready without observed
+  lifecycle state.
+- Fix: preserve absent/null lifecycle values as `null`; require explicit
+  `OPEN` and the phase-specific draft boolean through the common verifier; use
+  `expectedDraft: false` for the final full-bundle re-fetch.
+- Regression proof: missing and null `state` and draft fields now fail closed
+  independently at preflight, per-member post-transition verification, and the
+  final bundle re-fetch.
+- Required closure: rerun focused/full readiness and platform validation, commit
+  the correction, and obtain Rawls `OK` on the new exact substantive SHA.

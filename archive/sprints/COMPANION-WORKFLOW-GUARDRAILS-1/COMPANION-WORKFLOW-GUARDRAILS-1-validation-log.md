@@ -135,3 +135,18 @@ earlier bundle runs.
 Agent-index freshness is intentionally deferred until after exact-SHA work
 review and the committed review record. Trusted-main generation must then
 produce the terminal four-file tail.
+
+### Implementation Review Round 1 Correction
+
+Rawls found one fail-closed lifecycle normalization gap. The readiness executor
+now preserves unknown `state`/draft values and requires explicit phase-correct
+values at every live verification point.
+
+| Command | Result | Notes |
+|---|---|---|
+| `npm.cmd test -- --runInBand build-scripts/review-gates/apply-bundle-readiness-decision.test.js` | PASS | 1 suite and 20 tests passed, including 12 missing/null lifecycle regressions across preflight, per-member verification, and final re-fetch. |
+| `git diff --check` | PASS | No whitespace errors after the correction. |
+| Repeated focused route/lane/validator/readiness/refresh set | PASS | 5 suites and 94 tests passed. |
+| Repeated `npm.cmd run check:integration-lane` | PASS | 10 suites and 160 tests passed. |
+| Repeated `npm.cmd run check:pr-readiness` | PASS | 5 suites and 176 tests passed. |
+| Repeated `npm.cmd run check:platform` | PASS | 99 suites and 1,349 tests passed; 6 suites and 8 tests skipped by suite configuration. |

@@ -82,12 +82,17 @@ function repoUrl(repo, number) {
 function normalizeCurrentPr(repo, pr) {
   const item = pr || {};
   const rawMergeable = item.mergeable;
+  const draftState = typeof item.is_draft === 'boolean'
+    ? item.is_draft
+    : typeof item.isDraft === 'boolean'
+      ? item.isDraft
+      : null;
   return {
     repo,
     number: Number(item.number),
     url: item.url || repoUrl(repo, item.number),
-    state: item.state || 'OPEN',
-    is_draft: item.is_draft !== undefined ? Boolean(item.is_draft) : Boolean(item.isDraft),
+    state: typeof item.state === 'string' && item.state.trim() ? item.state : null,
+    is_draft: draftState,
     base: item.base || item.baseRefName || null,
     head_sha: item.head_sha || item.headRefOid || null,
     mergeable: rawMergeable === true || /^MERGEABLE$/i.test(String(rawMergeable || '')),
@@ -445,12 +450,9 @@ function applyBundleReadiness(options = {}) {
     const verifiedPrs = fetchMembers(deps, members, options).map((pr, index) =>
       normalizeCurrentPr(members[index].repository, pr)
     );
-    const verificationFailures = [
-      ...collectFailures('post_transition', decisions, verifiedPrs),
-      ...verifiedPrs
-        .filter((pr) => pr.is_draft === true)
-        .map((pr) => `post_transition:${pr.repo}#${pr.number}:mark_ready_not_verified`),
-    ];
+    const verificationFailures = collectFailures('post_transition', decisions, verifiedPrs, {
+      expectedDraft: false,
+    });
     if (verificationFailures.length > 0) {
       return {
         ok: false,

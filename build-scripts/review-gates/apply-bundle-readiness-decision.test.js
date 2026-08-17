@@ -293,6 +293,91 @@ describe('apply-bundle-readiness-decision', () => {
     expect(base.calls.transitions).toEqual([]);
   });
 
+  test.each([
+    ['missing state', 'state', undefined],
+    ['null state', 'state', null],
+    ['missing draft state', 'is_draft', undefined],
+    ['null draft state', 'is_draft', null],
+  ])('rejects %s during preflight', (_label, field, value) => {
+    const base = harness();
+    const key = `${LESSON_REPO}#35`;
+    const current = { ...base.states.get(key) };
+    if (value === undefined) delete current[field];
+    else current[field] = value;
+    base.states.set(key, current);
+
+    const result = applyBundleReadiness({ controllerDecision: controllerDecision(), deps: base.deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'preflight', merge_authority: false });
+    expect(base.calls.comments).toEqual([]);
+    expect(base.calls.transitions).toEqual([]);
+  });
+
+  test.each([
+    ['missing state', 'state', undefined],
+    ['null state', 'state', null],
+    ['missing draft state', 'is_draft', undefined],
+    ['null draft state', 'is_draft', null],
+  ])('rejects %s during per-member post-transition verification', (_label, field, value) => {
+    const base = harness();
+    let platformFetches = 0;
+    const deps = {
+      ...base.deps,
+      fetchPr: jest.fn((repo, number) => {
+        const current = { ...base.states.get(`${repo}#${number}`) };
+        if (repo !== PLATFORM_REPO) return current;
+        platformFetches += 1;
+        if (platformFetches !== 4) return current;
+        if (value === undefined) delete current[field];
+        else current[field] = value;
+        return current;
+      }),
+    };
+
+    const result = applyBundleReadiness({ controllerDecision: controllerDecision(), deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'partial_transition',
+      recovery_required: true,
+      merge_authority: false,
+    });
+    expect(base.calls.transitions.map((item) => item.repo)).toEqual([PLATFORM_REPO]);
+    expect(base.states.get(`${LESSON_REPO}#35`).is_draft).toBe(true);
+  });
+
+  test.each([
+    ['missing state', 'state', undefined],
+    ['null state', 'state', null],
+    ['missing draft state', 'is_draft', undefined],
+    ['null draft state', 'is_draft', null],
+  ])('rejects %s during the final bundle re-fetch', (_label, field, value) => {
+    const base = harness();
+    let platformFetches = 0;
+    const deps = {
+      ...base.deps,
+      fetchPr: jest.fn((repo, number) => {
+        const current = { ...base.states.get(`${repo}#${number}`) };
+        if (repo !== PLATFORM_REPO) return current;
+        platformFetches += 1;
+        if (platformFetches !== 6) return current;
+        if (value === undefined) delete current[field];
+        else current[field] = value;
+        return current;
+      }),
+    };
+
+    const result = applyBundleReadiness({ controllerDecision: controllerDecision(), deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'post_transition',
+      recovery_required: true,
+      merge_authority: false,
+    });
+    expect(base.calls.transitions.map((item) => item.repo)).toEqual([PLATFORM_REPO, LESSON_REPO]);
+  });
+
   test('revalidates controller as newly ready before lesson mutation', () => {
     const base = harness();
     let controllerFetches = 0;
