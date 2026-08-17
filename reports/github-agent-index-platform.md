@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-14T11:23:46.666Z
+Generated: 2026-07-01T07:36:11.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/bundle-index-refresh-20260814`
-Source commit: `0f0204ad4c92c5e549e1d09ec72a80bc763acd0f`
-Files indexed: 7080
+Source branch: `codex/lesson-first-agent-index-hermeticity-20260817`
+Source commit: `c13dc811f3793f32c68608bc5cd8112bfb99b615`
+Files indexed: 7083
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2529,7 +2529,7 @@ Count: 974
 
 ## reports
 
-Count: 4476
+Count: 4479
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5804,6 +5804,9 @@ Count: 4476
 - reports/sprints/LEAD-REVIEW-2-lead-review-round2.md
 - reports/sprints/LEAD-REVIEW-2-plan.md
 - reports/sprints/LEAD-REVIEW-2-result.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-lead-review.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-plan.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-result.md
 - reports/sprints/MATH-REFINE-1-baseline.md
 - reports/sprints/MATH-REFINE-1-diff-summary.md
 - reports/sprints/MATH-REFINE-1-gate-handoff.md
