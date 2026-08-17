@@ -2,10 +2,15 @@ const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
 
-const platformRoot = path.resolve(__dirname, "..", "..");
+const defaultPlatformRoot = path.resolve(__dirname, "..", "..");
+const platformRoot = process.env.FOURVECO_PLATFORM_ROOT
+  ? path.resolve(process.env.FOURVECO_PLATFORM_ROOT)
+  : defaultPlatformRoot;
 const anchorProjectRoot = process.env.FOURVECO_PROJECT_ROOT || "C:/Projects/4veco";
 const lessenRoot = findRepoRoot("4veco-lessen", path.resolve(platformRoot, "..", "4veco-lessen"));
-const reportsDir = path.join(platformRoot, "reports");
+const reportsDir = process.env.FOURVECO_REPORTS_DIR
+  ? path.resolve(process.env.FOURVECO_REPORTS_DIR)
+  : path.join(platformRoot, "reports");
 
 const skipDirs = new Set([
   ".git",
@@ -68,14 +73,22 @@ function resolveSourceRef(repoName, env = process.env) {
   if (repoName === "4veco-lessen") {
     return env.FOURVECO_LESSEN_SOURCE_REF || "origin/main";
   }
-  return "HEAD";
+  return env.FOURVECO_PLATFORM_SOURCE_REF || "HEAD";
 }
 
-function gitSourceInfo(repoName, root, sourceRef) {
-  const commit = gitValue(root, ["rev-parse", sourceRef]);
-  const branch = sourceRef !== "HEAD"
+function resolveSourceBranch(repoName, root, sourceRef, env = process.env) {
+  const explicit = repoName === "4veco-lessen"
+    ? env.FOURVECO_LESSEN_SOURCE_BRANCH
+    : env.FOURVECO_PLATFORM_SOURCE_BRANCH;
+  if (explicit) return explicit;
+  return sourceRef !== "HEAD"
     ? sourceRef
     : gitValue(root, ["rev-parse", "--abbrev-ref", "HEAD"]);
+}
+
+function gitSourceInfo(repoName, root, sourceRef, env = process.env) {
+  const commit = gitValue(root, ["rev-parse", sourceRef]);
+  const branch = resolveSourceBranch(repoName, root, sourceRef, env);
   const remoteUrl = gitValue(root, ["remote", "get-url", "origin"]);
   return {
     source_branch: branch || "unknown",
@@ -187,18 +200,19 @@ function publishedRoot(repoName) {
 }
 
 function buildIndex(repoName, root, options = {}) {
+  const env = options.env || process.env;
   if (!fs.existsSync(root)) {
     return {
       repo: repoName,
       root: publishedRoot(repoName),
       available: false,
-      generated_at: new Date().toISOString(),
+      generated_at: options.generatedAt || env.FOURVECO_INDEX_GENERATED_AT || new Date().toISOString(),
       note: `${repoName} is unavailable from the current local checkout; no file inventory was generated for this repository.`,
       groups: emptyGroups(),
     };
   }
 
-  const sourceRef = options.sourceRef || resolveSourceRef(repoName, options.env || process.env);
+  const sourceRef = options.sourceRef || resolveSourceRef(repoName, env);
   const files = listFiles(root, sourceRef);
   const groups = emptyGroups();
 
@@ -212,8 +226,8 @@ function buildIndex(repoName, root, options = {}) {
     repo: repoName,
     root: publishedRoot(repoName),
     available: true,
-    generated_at: new Date().toISOString(),
-    ...gitSourceInfo(repoName, root, sourceRef),
+    generated_at: options.generatedAt || env.FOURVECO_INDEX_GENERATED_AT || new Date().toISOString(),
+    ...gitSourceInfo(repoName, root, sourceRef, env),
     file_count: files.length,
     inventory_scope: sourceRef === "HEAD"
       ? "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path"
@@ -309,5 +323,6 @@ if (require.main === module) {
 module.exports = {
   buildIndex,
   listFiles,
+  resolveSourceBranch,
   resolveSourceRef
 };

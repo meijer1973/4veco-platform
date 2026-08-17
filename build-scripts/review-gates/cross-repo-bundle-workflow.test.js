@@ -19,6 +19,11 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('lesson_candidate_sha');
     expect(bundleWorkflow).toContain('cross-repo-bundle-compatibility.js summarize');
     expect(bundleWorkflow).toContain('npm run check:active-governance-wording');
+    expect(bundleWorkflow).toContain('node ..\\trusted-platform\\build-scripts\\reports\\github-agent-index.js');
+    expect(bundleWorkflow).toContain('node ..\\trusted-platform\\build-scripts\\reports\\check-agent-index-freshness.js');
+    expect(bundleWorkflow).toContain('FOURVECO_PLATFORM_ROOT');
+    expect(bundleWorkflow).toContain('FOURVECO_LESSEN_ROOT');
+    expect(bundleWorkflow).not.toContain("'npm run agent:index'");
   });
 
   test('bundle workflow records machine-readable JSON and uses deterministic summary gate', () => {
@@ -49,6 +54,8 @@ describe('cross-repo bundle workflow safety', () => {
     expect(authorizedBundleWorkflow).toContain('integrate:authorized-bundle');
     expect(authorizedBundleWorkflow).toContain('compatibility_workflow_run_id');
     expect(authorizedBundleWorkflow).toContain('bundle-summary.json');
+    expect(authorizedBundleWorkflow).toContain('--allow-partial-resume');
+    expect(authorizedBundleWorkflow).toContain('timeout-minutes: 120');
   });
 
   test('authorized bundle workflow uses cross-repo secret only for mutations', () => {

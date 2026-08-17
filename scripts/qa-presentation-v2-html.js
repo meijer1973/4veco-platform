@@ -6,19 +6,15 @@ const crypto = require('crypto');
 const { spawn } = require('child_process');
 const { pathToFileURL } = require('url');
 
-const htmlPath = path.resolve(process.argv[2] || '');
-const outDir = path.resolve(process.argv[3] || path.join(process.env.TEMP || 'C:\\tmp', 'presentation-v2-qa'));
+let htmlPath;
+let outDir;
+let browserPath;
+let port;
+let profile;
 
-if (!htmlPath || !fs.existsSync(htmlPath)) {
-  console.error('Usage: node scripts/qa-presentation-v2-html.js <presentation.html> [screenshot-dir]');
-  process.exit(2);
-}
-
-fs.mkdirSync(outDir, { recursive: true });
-
-const browserPath = findBrowser();
-const port = 9400 + Math.floor(Math.random() * 400);
-const profile = path.join(process.env.TEMP || 'C:\\tmp', `pv2-chrome-${Date.now()}`);
+const BROWSER_STARTUP_TIMEOUT_MS = 30000;
+const BROWSER_POLL_INTERVAL_MS = 100;
+const BROWSER_STDERR_LIMIT = 4096;
 
 function findBrowser() {
   const candidates = [
@@ -43,15 +39,97 @@ async function fetchJson(url, opts) {
   return res.json();
 }
 
-async function waitForChrome() {
-  for (let i = 0; i < 80; i += 1) {
-    try {
-      return await fetchJson(`http://127.0.0.1:${port}/json/version`);
-    } catch (_err) {
-      await sleep(100);
-    }
-  }
-  throw new Error('Chrome/Edge did not expose the DevTools endpoint');
+function appendBounded(current, chunk, limit) {
+  const combined = `${current}${String(chunk)}`;
+  return combined.length > limit ? combined.slice(-limit) : combined;
+}
+
+function diagnosticValue(value) {
+  if (value === undefined || value === null || value === '') return '<none>';
+  return String(value).replace(/\s+/g, ' ').trim();
+}
+
+function browserStartupError(reason, state) {
+  const details = [
+    `reason=${reason}`,
+    `browser_path=${diagnosticValue(state.executablePath)}`,
+    `spawn_error=${diagnosticValue(state.spawnError && state.spawnError.message)}`,
+    `spawn_error_code=${diagnosticValue(state.spawnError && state.spawnError.code)}`,
+    `exit_code=${diagnosticValue(state.exitCode)}`,
+    `exit_signal=${diagnosticValue(state.exitSignal)}`,
+    `last_endpoint_error=${diagnosticValue(state.lastEndpointError && state.lastEndpointError.message)}`,
+    `stderr_tail=${diagnosticValue(state.stderr)}`,
+  ];
+  return new Error(`Chrome/Edge did not expose the DevTools endpoint: ${details.join('; ')}`);
+}
+
+function waitForChrome(options = {}) {
+  const browser = options.browser;
+  if (!browser) throw new Error('waitForChrome requires a browser child process');
+  const executablePath = options.executablePath || browserPath;
+  const debugPort = options.port || port;
+  const timeoutMs = options.timeoutMs || BROWSER_STARTUP_TIMEOUT_MS;
+  const pollIntervalMs = options.pollIntervalMs ?? BROWSER_POLL_INTERVAL_MS;
+  const stderrLimit = options.stderrLimit || BROWSER_STDERR_LIMIT;
+  const fetchVersion = options.fetchVersion || fetchJson;
+
+  return new Promise((resolve, reject) => {
+    const state = {
+      executablePath,
+      spawnError: null,
+      exitCode: null,
+      exitSignal: null,
+      lastEndpointError: null,
+      stderr: '',
+    };
+    let settled = false;
+    let pollTimer = null;
+    let timeoutTimer = null;
+
+    const cleanup = () => {
+      if (pollTimer) clearTimeout(pollTimer);
+      if (timeoutTimer) clearTimeout(timeoutTimer);
+      browser.removeListener('error', onError);
+      browser.removeListener('exit', onExit);
+      if (browser.stderr) browser.stderr.removeListener('data', onStderr);
+    };
+    const finish = (error, value) => {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      if (error) reject(error);
+      else resolve(value);
+    };
+    const fail = (reason) => finish(browserStartupError(reason, state));
+    const onError = (error) => {
+      state.spawnError = error;
+      fail('spawn_error');
+    };
+    const onExit = (code, signal) => {
+      state.exitCode = code;
+      state.exitSignal = signal;
+      fail('early_exit');
+    };
+    const onStderr = (chunk) => {
+      state.stderr = appendBounded(state.stderr, chunk, stderrLimit);
+    };
+    const poll = async () => {
+      if (settled) return;
+      try {
+        const version = await fetchVersion(`http://127.0.0.1:${debugPort}/json/version`);
+        finish(null, version);
+      } catch (error) {
+        state.lastEndpointError = error;
+        if (!settled) pollTimer = setTimeout(poll, pollIntervalMs);
+      }
+    };
+
+    browser.once('error', onError);
+    browser.once('exit', onExit);
+    if (browser.stderr) browser.stderr.on('data', onStderr);
+    timeoutTimer = setTimeout(() => fail('timeout'), timeoutMs);
+    poll();
+  });
 }
 
 class CdpSocket {
@@ -357,10 +435,10 @@ async function main() {
     '--no-first-run',
     '--no-default-browser-check',
     'about:blank',
-  ], { stdio: 'ignore' });
+  ], { stdio: ['ignore', 'ignore', 'pipe'] });
 
   try {
-    await waitForChrome();
+    await waitForChrome({ browser, executablePath: browserPath, port });
     const target = await fetchJson(`http://127.0.0.1:${port}/json/new?about:blank`, { method: 'PUT' });
     const cdp = new CdpSocket(target.webSocketDebuggerUrl);
     await cdp.connect();
@@ -435,11 +513,31 @@ async function main() {
     }
     console.log(`Presentation v2 QA passed. Screenshots: ${outDir}`);
   } finally {
-    browser.kill();
+    try {
+      browser.kill();
+    } catch (_error) {
+      // Browser startup diagnostics already report spawn and early-exit failures.
+    }
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  htmlPath = path.resolve(process.argv[2] || '');
+  outDir = path.resolve(process.argv[3] || path.join(process.env.TEMP || 'C:\\tmp', 'presentation-v2-qa'));
+  if (!htmlPath || !fs.existsSync(htmlPath)) {
+    console.error('Usage: node scripts/qa-presentation-v2-html.js <presentation.html> [screenshot-dir]');
+    process.exit(2);
+  }
+  fs.mkdirSync(outDir, { recursive: true });
+  browserPath = findBrowser();
+  port = 9400 + Math.floor(Math.random() * 400);
+  profile = path.join(process.env.TEMP || 'C:\\tmp', `pv2-chrome-${Date.now()}`);
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  waitForChrome,
+};

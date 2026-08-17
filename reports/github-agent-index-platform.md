@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-11T14:59:45.693Z
+Generated: 2026-08-14T11:23:46.666Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/mtu-h7-protected-canonical-adjudication-bundle-4-20260703`
-Source commit: `acf1fd3928178e1959c5fe93116f0180b01ea3ca`
-Files indexed: 7072
+Source branch: `codex/bundle-index-refresh-20260814`
+Source commit: `0f0204ad4c92c5e549e1d09ec72a80bc763acd0f`
+Files indexed: 7080
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 693
+Count: 696
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -642,6 +642,8 @@ Count: 693
 - build-scripts/review-gates/pr-readiness-governance-surfaces.js
 - build-scripts/review-gates/pr-readiness-router.js
 - build-scripts/review-gates/pr-readiness-router.test.js
+- build-scripts/review-gates/refresh-bundle-agent-indexes.js
+- build-scripts/review-gates/refresh-bundle-agent-indexes.test.js
 - build-scripts/review-gates/review-pr-readiness.js
 - build-scripts/review-gates/review-throughput-fields.js
 - build-scripts/review-gates/review-throughput-fields.test.js
@@ -826,6 +828,7 @@ Count: 693
 - scripts/tests/check-book.test.js
 - scripts/tests/check-course-target-exercises-v5.test.js
 - scripts/tests/procedure-contracts.test.js
+- scripts/tests/qa-presentation-v2-html-startup.test.js
 - scripts/tests/validate-chapter.test.js
 - scripts/tests/validate-paragraph-modes.test.js
 - scripts/tests/validate-paragraph.test.js
@@ -2526,7 +2529,7 @@ Count: 974
 
 ## reports
 
-Count: 4471
+Count: 4476
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4891,6 +4894,11 @@ Count: 4471
 - reports/sprints/BOOK1-FIX-1-lead-review-round2.md
 - reports/sprints/BOOK1-FIX-1-plan.md
 - reports/sprints/BOOK1-FIX-1-result.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-result.md
