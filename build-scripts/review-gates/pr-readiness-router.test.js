@@ -703,6 +703,7 @@ describe('pr-readiness-router', () => {
         platform_integration_head_sha: integrationHead,
         lesson_merge_commit_sha: lessonMerge,
         changed_paths: INDEX_PATHS,
+        verified_paths: INDEX_PATHS,
         hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
         metadata: {
           platform_source_commit: payloadHead,
@@ -710,6 +711,11 @@ describe('pr-readiness-router', () => {
           lesson_source_commit: lessonMerge,
           lesson_source_branch: 'origin/main',
           generated_at: '2026-08-14T00:00:00.000Z',
+        },
+        commit: {
+          sha: integrationHead,
+          parent_sha: payloadHead,
+          changed_paths: INDEX_PATHS,
         },
       },
       lineage: {
@@ -722,7 +728,7 @@ describe('pr-readiness-router', () => {
       readiness: {
         head_sha: integrationHead,
         route: 'READY_FOR_HUMAN_REVIEW',
-        attestation_schema_version: 1,
+        attestation_schema_version: 2,
         attestation_digest: null,
       },
       ci: {
@@ -922,6 +928,16 @@ describe('pr-readiness-router', () => {
     const tamperedDigest = JSON.parse(JSON.stringify(decision));
     tamperedDigest.proof.bundle.integration_refresh.readiness.attestation_digest = `sha256:${'f'.repeat(64)}`;
     expect(() => validateDecision(tamperedDigest)).toThrow('integration_refresh decision binding invalid');
+
+    const tamperedChangedPaths = JSON.parse(JSON.stringify(decision));
+    const platformOnlyPaths = INDEX_PATHS.slice(2);
+    tamperedChangedPaths.proof.bundle.integration_refresh.refresh_result.changed_paths = platformOnlyPaths;
+    tamperedChangedPaths.proof.bundle.integration_refresh.refresh_result.commit.changed_paths = platformOnlyPaths;
+    expect(() => validateDecision(tamperedChangedPaths)).toThrow('integration_refresh decision binding invalid');
+
+    const tamperedVerifiedPaths = JSON.parse(JSON.stringify(decision));
+    tamperedVerifiedPaths.proof.bundle.integration_refresh.refresh_result.verified_paths = [...INDEX_PATHS].reverse();
+    expect(() => validateDecision(tamperedVerifiedPaths)).toThrow('integration_refresh decision binding invalid');
 
     const mismatchedRoute = JSON.parse(JSON.stringify(decision));
     mismatchedRoute.proof.bundle.integration_refresh.readiness.route = 'READY_FOR_LEAD_ONLY';
@@ -1424,6 +1440,7 @@ describe('pr-readiness-router', () => {
         platform_integration_head_sha: integrationHead,
         lesson_merge_commit_sha: lessonMerge,
         changed_paths: INDEX_PATHS,
+        verified_paths: INDEX_PATHS,
         hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
         metadata: {
           platform_source_commit: '3'.repeat(40),
@@ -1431,6 +1448,11 @@ describe('pr-readiness-router', () => {
           lesson_source_commit: lessonMerge,
           lesson_source_branch: 'origin/main',
           generated_at: '2026-08-14T00:00:00.000Z',
+        },
+        commit: {
+          sha: integrationHead,
+          parent_sha: '3'.repeat(40),
+          changed_paths: INDEX_PATHS,
         },
       },
       lineage: {
@@ -1443,7 +1465,7 @@ describe('pr-readiness-router', () => {
       readiness: {
         head_sha: integrationHead,
         route: 'READY_FOR_HUMAN_REVIEW',
-        attestation_schema_version: 1,
+        attestation_schema_version: 2,
         attestation_digest: `sha256:${'b'.repeat(64)}`,
       },
       ci: {
@@ -1461,7 +1483,33 @@ describe('pr-readiness-router', () => {
       { ...proof, readiness: { ...proof.readiness, attestation_digest: 'arbitrary' } },
       {
         ...proof,
-        refresh_result: { ...proof.refresh_result, changed_paths: INDEX_PATHS.slice(0, 3) },
+        refresh_result: { ...proof.refresh_result, changed_paths: [] },
+      },
+      {
+        ...proof,
+        refresh_result: {
+          ...proof.refresh_result,
+          changed_paths: [INDEX_PATHS[2], INDEX_PATHS[2]],
+        },
+      },
+      {
+        ...proof,
+        refresh_result: { ...proof.refresh_result, changed_paths: ['AGENTS.md'] },
+      },
+      {
+        ...proof,
+        refresh_result: { ...proof.refresh_result, verified_paths: INDEX_PATHS.slice(0, 3) },
+      },
+      {
+        ...proof,
+        refresh_result: {
+          ...proof.refresh_result,
+          commit: { ...proof.refresh_result.commit, changed_paths: ['AGENTS.md'] },
+        },
+      },
+      {
+        ...proof,
+        readiness: { ...proof.readiness, attestation_schema_version: 1 },
       },
       {
         ...proof,
@@ -1510,6 +1558,10 @@ describe('pr-readiness-router', () => {
     const malformedContracts = [
       {
         ...contract,
+        schema_version: 1,
+      },
+      {
+        ...contract,
         post_first_merge_refresh: {
           ...contract.post_first_merge_refresh,
           generator: 42,
@@ -1526,7 +1578,14 @@ describe('pr-readiness-router', () => {
         ...contract,
         post_first_merge_refresh: {
           ...contract.post_first_merge_refresh,
-          changed_paths: ['wrong'],
+          generated_and_verified_paths: ['wrong'],
+        },
+      },
+      {
+        ...contract,
+        post_first_merge_refresh: {
+          ...contract.post_first_merge_refresh,
+          actual_changed_paths_policy: 'exact-four',
         },
       },
       {
@@ -2259,6 +2318,7 @@ describe('pr-readiness-router', () => {
         ...readFixture('live-l1-ready.json').proof,
         requested_changes: true,
         unresolved_review_threads: true,
+        post_lead_review_changed_paths: ['build-scripts/review-gates/review-pr-readiness.js'],
       },
     };
     const merged = mergeSupplementalEvidence(remote, {
@@ -2274,6 +2334,10 @@ describe('pr-readiness-router', () => {
         },
         requested_changes: false,
         unresolved_review_threads: false,
+        post_lead_review_changed_paths: [],
+        lead_review: {
+          post_review_changed_paths: [],
+        },
         checkers: [{ command: 'npm.cmd run check:platform', status: 'passed' }],
       },
     });
@@ -2284,6 +2348,27 @@ describe('pr-readiness-router', () => {
     expect(merged.proof.ci.head_sha).toBe(remote.proof.ci.head_sha);
     expect(merged.proof.requested_changes).toBe(true);
     expect(merged.proof.unresolved_review_threads).toBe(true);
+    expect(merged.proof.post_lead_review_changed_paths).toEqual(
+      remote.proof.post_lead_review_changed_paths
+    );
+  });
+
+  test('supplemental lead-review paths cannot replace GitHub-derived tail paths', () => {
+    const fixture = readFixture('evidence-tail-ready.json');
+    const proof = {
+      ...fixture.proof,
+      lead_review: {
+        ...fixture.proof.lead_review,
+        post_review_changed_paths: [...fixture.proof.post_lead_review_changed_paths],
+      },
+    };
+    delete proof.post_lead_review_changed_paths;
+
+    const decision = classifyPrReadiness({ ...fixture, proof });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('lead_review_stale_after_substantive_change');
+    expect(decision.proof.post_lead_review_changed_paths).toEqual([]);
   });
 
   test('L0-L2 lanes reject CI and checker waivers', () => {

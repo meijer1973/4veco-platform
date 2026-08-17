@@ -855,7 +855,7 @@ function leadProof(proof, headSha) {
   const result = normalizeVerdict(lead.result);
   const reviewedSha = lead.reviewed_commit_sha || lead.reviewed_sha || lead.reviewed_remote_commit_sha;
   const afterLeadPaths = uniqueStrings(
-    asArray(proof.post_lead_review_changed_paths || lead.post_review_changed_paths).map(normalizePath)
+    asArray(proof.post_lead_review_changed_paths).map(normalizePath)
   );
   const evidenceOnlyTail =
     reviewedSha &&
