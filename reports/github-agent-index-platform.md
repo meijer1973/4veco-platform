@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-17T13:15:13.813Z
+Generated: 2026-08-17T11:26:20.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/pr-readiness-comment-body-file-20260703`
-Source commit: `0a4275745774cc1c6dd5dcde6ef454b5dc19c1b3`
-Files indexed: 7087
+Source commit: `afc769e053cc943c2a31634d3be9e49c95975245`
+Files indexed: 7093
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2531,7 +2531,7 @@ Count: 974
 
 ## reports
 
-Count: 4484
+Count: 4487
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6040,6 +6040,9 @@ Count: 4484
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-plan.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-result.md
 - reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-1-lead-review.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-1-plan.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-1-result.md
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/axis-convention.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/dark-mode.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/human-review-index.md
