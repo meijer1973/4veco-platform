@@ -54,7 +54,7 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1/GOAL-IQS-INTERNAL-OVERLAY-TRIAL-CONTRACT-1-sprint-plan.md`
 - Accepted internal no-output trial-simulation sprint:
   `archive/sprints/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1/GOAL-IQS-INTERNAL-NO-OUTPUT-TRIAL-SIMULATION-1-sprint-plan.md`
-- Current local-expert/source-refresh gate sprint:
+- Accepted local-expert/source-refresh gate sprint:
   `archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-sprint-plan.md`
 - Accepted bounded source-refresh packet sprint:
   `archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-sprint-plan.md`

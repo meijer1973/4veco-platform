@@ -1,8 +1,8 @@
 # Quality Standards Sprint Ledger
 
 Status: active
-Updated on: 2026-06-21
-Branch in use: `codex/goal-iqs-foundation-1-20260621`
+Updated on: 2026-08-17
+Branch in use: `codex/goal-iqs-owner-controlled-dispatch-1-20260703`
 
 ## Purpose
 
