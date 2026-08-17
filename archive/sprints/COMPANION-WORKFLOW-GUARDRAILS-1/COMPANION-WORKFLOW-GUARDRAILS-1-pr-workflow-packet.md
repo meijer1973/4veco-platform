@@ -123,7 +123,8 @@ comments generated after compatibility and lead review.
 - Current state: both PRs remain draft and held; all previous compatibility,
   review, and readiness evidence is superseded for authorization purposes.
 - Required remaining proof: committed substantive-SHA Rawls review, trusted-main
-  four-file index tail, exact-head CI classification, exact three-state bundle
+  regeneration and verification of all four indexes followed by a terminal
+  generated-index delta, exact-head CI classification, exact three-state bundle
   compatibility, remote Rawls review, and coordinated PR Readiness.
 - Boundary: this refresh does not create bundle authorization, does not claim an
   integration refresh, and does not merge either member.

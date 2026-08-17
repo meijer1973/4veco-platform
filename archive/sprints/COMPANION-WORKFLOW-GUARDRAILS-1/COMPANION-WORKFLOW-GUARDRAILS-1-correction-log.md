@@ -218,8 +218,9 @@ Round 1 verdict: REVISE.
    review-record or generated-index tail commit.
 2. After push, classify exact-head platform CI before compatibility and record
    exact workflow, artifact, state, and supersession evidence in both PRs.
-3. Generate the final four-file tail with trusted-main tooling, explicit
-   platform/lesson source commits, deterministic hashes, and no later commit.
+3. Regenerate and verify all four indexes with trusted-main tooling, explicit
+   platform/lesson source commits, deterministic hashes, and no later commit
+   after the generated-index tail.
 4. Keep immutable payload compatibility distinct from the later
    `integration_refresh` proof created only during authorized lesson-first
    integration.
@@ -276,7 +277,7 @@ Fix:
 - Re-run the test under explicit compatibility environment variables, then the
   focused and full suites.
 - Because this changes the candidate after exact-head review, repeat committed
-  work review, review evidence, trusted-main four-file tail, PR CI, and the
+  work review, review evidence, trusted-main generated-index tail, PR CI, and the
   complete compatibility workflow. Run `32010370282` is superseded.
 
 Renewed implementation review verdict: OK.
@@ -284,3 +285,12 @@ Renewed implementation review verdict: OK.
 Rawls reviewed exact commit `47f890f52b005d63b635de3776911aaf07683a07`
 and accepted `env: {}` as the correct hermetic boundary for the default-source
 fixture, together with the exact compatibility-environment reproduction.
+
+## Pre-Readiness Generated-Tail Clarification
+
+Trusted-main regeneration verified all four indexes twice at canonical time
+`2026-07-01T07:36:11.000Z`. Only the platform JSON and Markdown have byte-level
+deltas because the lesson source and timestamp are unchanged. Rawls returned
+`OK` for a two-file terminal tail and prohibited an artificial lesson delta.
+The exact four-path requirement applies to the later post-lesson-merge
+`integration_refresh`.

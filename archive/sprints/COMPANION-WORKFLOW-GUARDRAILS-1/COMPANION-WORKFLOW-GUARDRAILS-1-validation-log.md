@@ -134,7 +134,8 @@ earlier bundle runs.
 
 Agent-index freshness is intentionally deferred until after exact-SHA work
 review and the committed review record. Trusted-main generation must then
-produce the terminal four-file tail.
+regenerate and verify all four indexes before producing the terminal
+generated-index tail.
 
 ### Implementation Review Round 1 Correction
 
@@ -176,4 +177,12 @@ must be rebuilt after renewed work review.
 
 Rawls returned `OK` on exact compatibility-isolation correction commit
 `47f890f52b005d63b635de3776911aaf07683a07`. A renewed evidence commit and
-trusted-main four-file tail are required before the next remote cycle.
+trusted-main generated-index tail are required before the next remote cycle.
+
+Trusted-main generation then refreshed and checked all four indexes twice with
+canonical timestamp `2026-07-01T07:36:11.000Z`. The lesson pair remained
+byte-identical because its source commit and timestamp did not move; only the
+platform JSON and Markdown changed to bind the renewed evidence SHA. Rawls
+returned `OK` for that actual two-path terminal delta and confirmed that the
+later post-lesson-merge `integration_refresh`, not this pre-readiness evidence
+refresh, owns the exact four-path delta requirement.

@@ -251,11 +251,14 @@ The resynchronization plan is:
 3. Commit the complete substantive result and obtain Rawls `OK` on that exact
    commit. Any substantive correction creates a new review target.
 4. Commit the review record, then use tooling pinned to trusted platform
-   `main` to regenerate exactly the four GitHub agent indexes. The evidence
+   `main` to regenerate and verify all four GitHub agent indexes. The evidence
    commit is the platform `source_commit`; lesson `main` at
    `ba08b9c2e033a877c0d1b57952055ce697912a22` is the lesson source.
 5. Prove deterministic regeneration and freshness, and finish with a
-   single-parent four-file generated tail. No other commit may follow it.
+   single-parent generated-index tail containing only files with byte-level
+   deltas. The unchanged lesson pair must not be modified. No other commit may
+   follow the tail. The authorized post-lesson-merge `integration_refresh`
+   separately requires an exact four-path delta.
 6. Push without force, classify exact-head platform CI, and accept failure only
    when the sole cause is the known lesson-`main` route mismatch.
 7. Run trusted-main three-state compatibility on the exact platform and lesson
