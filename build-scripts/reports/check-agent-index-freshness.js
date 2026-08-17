@@ -47,7 +47,42 @@ function isGeneratedIndexOnlyTail(repoRoot, parent, head) {
     && changedPaths.every(isGeneratedIndexPath);
 }
 
-function checkIndex({ label, indexPath, repoRoot, required = true }) {
+function directParents(repoRoot, commit) {
+  const line = gitValue(repoRoot, ['rev-list', '--parents', '-n', '1', commit]);
+  if (!line) return [];
+  return line.split(/\s+/).slice(1).filter(Boolean);
+}
+
+function isGitAncestor(repoRoot, ancestor, descendant) {
+  const result = spawnSync('git', ['merge-base', '--is-ancestor', ancestor, descendant], {
+    cwd: repoRoot,
+    encoding: 'utf8',
+  });
+  return result.status === 0;
+}
+
+function findGeneratedIndexTailRef(repoRoot, sourceCommit, head) {
+  const parents = directParents(repoRoot, head);
+  const candidates = [head, ...(parents.length > 1 ? parents : [])];
+  return candidates.find((candidate) => {
+    const parent = gitValue(repoRoot, ['rev-parse', `${candidate}^`]);
+    if (parent !== sourceCommit || !isGeneratedIndexOnlyTail(repoRoot, sourceCommit, candidate)) return false;
+    if (candidate === head) return true;
+    return parents
+      .filter((mergeParent) => mergeParent !== candidate)
+      .every((mergeParent) => isGitAncestor(repoRoot, mergeParent, sourceCommit));
+  }) || null;
+}
+
+function checkIndex({
+  label,
+  indexPath,
+  repoRoot,
+  required = true,
+  sourceRef = 'HEAD',
+  expectedSourceBranch = null,
+  allowGeneratedIndexTail = sourceRef === 'HEAD',
+}) {
   if (!repoRoot || !fs.existsSync(repoRoot)) {
     return required
       ? { label, ok: false, skipped: false, failures: [`${label} repo root not found`] }
@@ -60,8 +95,9 @@ function checkIndex({ label, indexPath, repoRoot, required = true }) {
   }
 
   const head = gitValue(repoRoot, ['rev-parse', 'HEAD']);
-  if (!head) {
-    return { label, ok: false, skipped: false, failures: [`${label} HEAD could not be read`] };
+  const targetCommit = gitValue(repoRoot, ['rev-parse', sourceRef]);
+  if (!targetCommit) {
+    return { label, ok: false, skipped: false, failures: [`${label} ${sourceRef} could not be read`] };
   }
 
   const index = readJson(indexPath);
@@ -69,15 +105,22 @@ function checkIndex({ label, indexPath, repoRoot, required = true }) {
   const failures = [];
   const warnings = [];
   let accepted_parent_generated_tail = false;
+  let accepted_generated_index_tail_ref = null;
   if (!sourceCommit) failures.push(`${label} index has no source_commit`);
-  else if (sourceCommit !== head) {
-    const parent = gitValue(repoRoot, ['rev-parse', 'HEAD^']);
-    if (parent && sourceCommit === parent && isGeneratedIndexOnlyTail(repoRoot, parent, head)) {
+  else if (sourceCommit !== targetCommit) {
+    const generatedTailRef = allowGeneratedIndexTail && head
+      ? findGeneratedIndexTailRef(repoRoot, sourceCommit, head)
+      : null;
+    if (generatedTailRef) {
       accepted_parent_generated_tail = true;
-      warnings.push(`${label} index source_commit matches HEAD^ and HEAD only changes generated index files`);
+      accepted_generated_index_tail_ref = generatedTailRef;
+      warnings.push(`${label} index source_commit precedes generated-index-only ref ${generatedTailRef}`);
     } else {
-      failures.push(`${label} index source_commit ${sourceCommit} does not match HEAD ${head}`);
+      failures.push(`${label} index source_commit ${sourceCommit} does not match ${sourceRef} ${targetCommit}`);
     }
+  }
+  if (expectedSourceBranch && index.source_branch !== expectedSourceBranch) {
+    failures.push(`${label} index source_branch ${index.source_branch || 'missing'} does not match ${expectedSourceBranch}`);
   }
 
   return {
@@ -88,16 +131,22 @@ function checkIndex({ label, indexPath, repoRoot, required = true }) {
     warnings,
     source_commit: sourceCommit,
     head,
+    source_ref: sourceRef,
+    target_commit: targetCommit,
     accepted_parent_generated_tail,
+    accepted_generated_index_tail_ref,
   };
 }
 
 function checkAgentIndexFreshness(options = {}) {
-  const platformRoot = options.platformRoot || path.resolve(__dirname, '..', '..');
-  const reportsDir = options.reportsDir || path.join(platformRoot, 'reports');
+  const env = options.env || process.env;
+  const platformRoot = options.platformRoot || env.FOURVECO_PLATFORM_ROOT || path.resolve(__dirname, '..', '..');
+  const reportsDir = options.reportsDir || env.FOURVECO_REPORTS_DIR || path.join(platformRoot, 'reports');
   const lessenRoot = options.lessenRoot === undefined
-    ? resolveLessenRoot(platformRoot, options.env || process.env)
+    ? resolveLessenRoot(platformRoot, env)
     : options.lessenRoot;
+  const lessenSourceRef = env.FOURVECO_LESSEN_SOURCE_REF || 'origin/main';
+  const lessenSourceBranch = env.FOURVECO_LESSEN_SOURCE_BRANCH || lessenSourceRef;
 
   const checks = [
     checkIndex({
@@ -111,6 +160,9 @@ function checkAgentIndexFreshness(options = {}) {
       indexPath: path.join(reportsDir, 'github-agent-index-lessen.json'),
       repoRoot: lessenRoot,
       required: false,
+      sourceRef: lessenSourceRef,
+      expectedSourceBranch: lessenSourceBranch,
+      allowGeneratedIndexTail: false,
     }),
   ];
 
@@ -136,6 +188,9 @@ module.exports = {
   resolveLessenRoot,
   isGeneratedIndexPath,
   isGeneratedIndexOnlyTail,
+  directParents,
+  isGitAncestor,
+  findGeneratedIndexTailRef,
   checkIndex,
   checkAgentIndexFreshness,
   runCli,

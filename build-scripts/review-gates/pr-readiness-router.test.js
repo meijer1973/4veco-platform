@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const Ajv2020 = require('ajv/dist/2020');
+const addFormats = require('ajv-formats');
 const {
   classifyPrReadiness,
   decisionMarker,
@@ -17,9 +19,15 @@ const {
   verifyPairedTransitionPreconditions,
   verifyTransitionPreconditions,
 } = require('./apply-pr-readiness-decision');
-const { stateResult, summarizeCompatibility } = require('./cross-repo-bundle-compatibility');
+const {
+  integrationRefreshReadinessAttestationDigest,
+  lessonFirstIntegrationContract,
+  stateResult,
+  summarizeCompatibility,
+} = require('./cross-repo-bundle-compatibility');
 const { collectReviewThreadState, mergeSupplementalEvidence, runReview } = require('./review-pr-readiness');
 const { GOVERNANCE_SURFACE_TEST_PATHS } = require('./pr-readiness-governance-surfaces');
+const { INDEX_PATHS } = require('./refresh-bundle-agent-indexes');
 
 const FIXTURE_DIR = path.join(process.cwd(), 'reports', 'fixtures', 'pr-readiness-router');
 const DECISION_SCHEMA_PATH = path.join(process.cwd(), 'docs', 'review', 'pr-readiness-decision.schema.json');
@@ -30,6 +38,12 @@ function readFixture(name) {
 
 function readDecisionSchema() {
   return JSON.parse(fs.readFileSync(DECISION_SCHEMA_PATH, 'utf8'));
+}
+
+function schemaValidator() {
+  const validator = new Ajv2020({ allErrors: true, strict: false });
+  addFormats(validator);
+  return validator;
 }
 
 function explicitProof(sha) {
@@ -110,6 +124,7 @@ function coordinatedBundleDecision(overrides = {}) {
     overrides.pairedSubstantivelyReady === undefined
       ? true
       : overrides.pairedSubstantivelyReady;
+  const pairedLeadHead = overrides.pairedLeadHead || lessonHead;
   const paired = {
     repo: 'meijer1973/4veco-lessen',
     number: 34,
@@ -156,6 +171,12 @@ function coordinatedBundleDecision(overrides = {}) {
     },
     proof: {
       ...fixture.proof,
+      lead_review: {
+        ...fixture.proof.lead_review,
+        paired_member_reviews: [
+          pairedLeadReview('meijer1973/4veco-lessen', 34, pairedLeadHead),
+        ],
+      },
       bundle: {
         bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
         controller: {
@@ -252,14 +273,15 @@ describe('pr-readiness-router', () => {
 
   test('base advancement does not block the draft-ready transition', () => {
     const fixture = readFixture('l4-router-self-human.json');
-    const decision = classifyPrReadiness({
+    const evidence = {
       ...fixture,
       reviewed_pr: {
         ...fixture.reviewed_pr,
         merge_state: 'BEHIND',
         mergeable: true,
       },
-    });
+    };
+    const decision = classifyPrReadiness(evidence);
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.allowed_transition).toBe('MARK_READY');
@@ -379,7 +401,7 @@ describe('pr-readiness-router', () => {
       platform_candidate_sha: fixture.reviewed_pr.head_sha,
       lesson_candidate_sha: lessonHead,
     });
-    const decision = classifyPrReadiness({
+    const evidence = {
       ...fixture,
       pr_throughput_class: 'cross_repo_bundle',
       throughput: {
@@ -388,6 +410,12 @@ describe('pr-readiness-router', () => {
       },
       proof: {
         ...fixture.proof,
+        lead_review: {
+          ...fixture.proof.lead_review,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
+        },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
           controller: {
@@ -413,10 +441,47 @@ describe('pr-readiness-router', () => {
           compatibility: bundleCompatibility(exactMembers),
         },
       },
-    });
+    };
+    const decision = classifyPrReadiness(evidence);
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.proof.bundle.compatibility.recommended_merge_order).toBe('lesson-first');
+    const validateOpenDecision = schemaValidator().compile(readDecisionSchema());
+    if (!validateOpenDecision(decision)) {
+      throw new Error(`open bundle decision schema mismatch: ${JSON.stringify(validateOpenDecision.errors)}`);
+    }
+    expect(decision.proof.bundle.paired_prs[0]).not.toHaveProperty('merge_commit_sha');
+    expect(decision.proof.bundle).not.toHaveProperty('integration_refresh');
+
+    const tampered = JSON.parse(JSON.stringify(evidence));
+    const tamperedLessonHead = '7'.repeat(40);
+    tampered.proof.bundle.paired_prs[0].head_sha = tamperedLessonHead;
+    tampered.proof.bundle.paired_prs[0].integration_head_sha = tamperedLessonHead;
+    tampered.proof.bundle.paired_prs[0].reviewed_payload_head_sha = tamperedLessonHead;
+    tampered.proof.lead_review.paired_member_reviews[0].reviewed_commit_sha = tamperedLessonHead;
+    const rejected = classifyPrReadiness(tampered);
+    expect(rejected.route).toBe('KEEP_DRAFT_REVISE');
+    expect(rejected.reason_codes).toContain('lesson_candidate_sha_does_not_match_member_head');
+
+    const extraMember = JSON.parse(JSON.stringify(evidence));
+    extraMember.proof.bundle.paired_prs.push({
+      repo: 'example/foreign-repository',
+      number: 99,
+      open: true,
+      current: true,
+      mergeable: true,
+      ready: true,
+      is_draft: false,
+      base: 'main',
+      head_sha: '6'.repeat(40),
+      reviewed_payload_head_sha: '6'.repeat(40),
+    });
+    extraMember.proof.lead_review.paired_member_reviews.push(
+      pairedLeadReview('example/foreign-repository', 99, '6'.repeat(40))
+    );
+    const rejectedExtraMember = classifyPrReadiness(extraMember);
+    expect(rejectedExtraMember.route).toBe('KEEP_DRAFT_REVISE');
+    expect(rejectedExtraMember.reason_codes).toContain('paired_lesson_member_count_invalid');
   });
 
   test('cross-repo bundle controller accepts a current already-merged paired member', () => {
@@ -427,7 +492,7 @@ describe('pr-readiness-router', () => {
       platform_candidate_sha: fixture.reviewed_pr.head_sha,
       lesson_candidate_sha: lessonHead,
     });
-    const decision = classifyPrReadiness({
+    const evidence = {
       ...fixture,
       pr_throughput_class: 'cross_repo_bundle',
       throughput: {
@@ -436,6 +501,12 @@ describe('pr-readiness-router', () => {
       },
       proof: {
         ...fixture.proof,
+        lead_review: {
+          ...fixture.proof.lead_review,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
+        },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
           controller: {
@@ -448,8 +519,10 @@ describe('pr-readiness-router', () => {
             {
               repo: 'meijer1973/4veco-lessen',
               number: 34,
+              open: false,
               merged: true,
               current: true,
+              mergeable: true,
               ready: true,
               is_draft: false,
               base: 'main',
@@ -461,7 +534,8 @@ describe('pr-readiness-router', () => {
           compatibility: bundleCompatibility(exactMembers),
         },
       },
-    });
+    };
+    const decision = classifyPrReadiness(evidence);
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.proof.bundle.ok).toBe(true);
@@ -469,6 +543,33 @@ describe('pr-readiness-router', () => {
       merged: true,
       merge_commit: lessonMerge,
     });
+    const validateMergedDecision = schemaValidator().compile(readDecisionSchema());
+    if (!validateMergedDecision(decision)) {
+      throw new Error(`merged bundle decision schema mismatch: ${JSON.stringify(validateMergedDecision.errors)}`);
+    }
+    const markdown = renderDecisionMarkdown(decision);
+    expect(markdown).toContain('## Bundle State');
+    expect(markdown).toContain(`Member PR/head: \`meijer1973/4veco-lessen#34@${lessonHead}\``);
+    expect(markdown).toContain(`Merged members: \`meijer1973/4veco-lessen#34@${lessonHead}\``);
+    expect(markdown).toContain('Open members: `none`');
+    expect(markdown).toContain('Residual integration mode: `platform-only residual controller`');
+    expect(markdown).not.toMatch(/exact platform head/i);
+
+    const contradictory = JSON.parse(JSON.stringify(evidence));
+    contradictory.proof.bundle.paired_prs[0].open = true;
+    const rejected = classifyPrReadiness(contradictory);
+    expect(rejected.route).toBe('KEEP_DRAFT_REVISE');
+    expect(rejected.proof.bundle.ok).toBe(false);
+
+    const tamperedLesson = JSON.parse(JSON.stringify(evidence));
+    const tamperedLessonHead = '7'.repeat(40);
+    tamperedLesson.proof.bundle.paired_prs[0].head_sha = tamperedLessonHead;
+    tamperedLesson.proof.bundle.paired_prs[0].integration_head_sha = tamperedLessonHead;
+    tamperedLesson.proof.bundle.paired_prs[0].reviewed_payload_head_sha = tamperedLessonHead;
+    tamperedLesson.proof.lead_review.paired_member_reviews[0].reviewed_commit_sha = tamperedLessonHead;
+    const rejectedTampering = classifyPrReadiness(tamperedLesson);
+    expect(rejectedTampering.route).toBe('KEEP_DRAFT_REVISE');
+    expect(rejectedTampering.reason_codes).toContain('lesson_candidate_sha_does_not_match_member_head');
   });
 
   test('cross-repo bundle controller accepts coordinated both-draft mark-ready pre-state', () => {
@@ -491,6 +592,12 @@ describe('pr-readiness-router', () => {
       },
       proof: {
         ...fixture.proof,
+        lead_review: {
+          ...fixture.proof.lead_review,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
+        },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
           controller: {
@@ -577,10 +684,54 @@ describe('pr-readiness-router', () => {
     const payloadHead = fixture.reviewed_pr.head_sha;
     const integrationHead = '8'.repeat(40);
     const lessonHead = '4'.repeat(40);
+    const lessonMerge = '9'.repeat(40);
     const exactMembers = bundleExactMembers({
-      platform_candidate_sha: integrationHead,
+      platform_candidate_sha: payloadHead,
       lesson_candidate_sha: lessonHead,
     });
+    const integrationRefresh = {
+      status: 'complete',
+      order: 'lesson-first',
+      platform_payload_sha: payloadHead,
+      platform_integration_head_sha: integrationHead,
+      lesson_payload_sha: lessonHead,
+      lesson_merge_commit_sha: lessonMerge,
+      refresh_result: {
+        status: 'created',
+        trusted_executor: 'platform-main',
+        previous_platform_head_sha: payloadHead,
+        platform_integration_head_sha: integrationHead,
+        lesson_merge_commit_sha: lessonMerge,
+        changed_paths: INDEX_PATHS,
+        hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+        metadata: {
+          platform_source_commit: payloadHead,
+          platform_source_branch: 'codex/controller',
+          lesson_source_commit: lessonMerge,
+          lesson_source_branch: 'origin/main',
+          generated_at: '2026-08-14T00:00:00.000Z',
+        },
+      },
+      lineage: {
+        reviewed_payload_head_sha: payloadHead,
+        integration_head_sha: integrationHead,
+        payload_ancestor_of_integration_head: true,
+        authorization_inherited: true,
+        failures: [],
+      },
+      readiness: {
+        head_sha: integrationHead,
+        route: 'READY_FOR_HUMAN_REVIEW',
+        attestation_schema_version: 1,
+        attestation_digest: null,
+      },
+      ci: {
+        status: 'success',
+        platform_sha: integrationHead,
+        lesson_sha: lessonMerge,
+      },
+    };
+    integrationRefresh.readiness.attestation_digest = integrationRefreshReadinessAttestationDigest(integrationRefresh);
     const decision = classifyPrReadiness({
       ...fixture,
       reviewed_pr: {
@@ -598,10 +749,15 @@ describe('pr-readiness-router', () => {
           path: 'subagent:payload-lead-review',
           result: 'PASS',
           reviewed_commit_sha: payloadHead,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
         },
         integration: {
+          ok: true,
           reviewed_payload_head_sha: payloadHead,
           integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: false,
           requires_human_reauthorization: false,
@@ -628,7 +784,9 @@ describe('pr-readiness-router', () => {
             {
               repo: 'meijer1973/4veco-lessen',
               number: 34,
-              open: true,
+              open: false,
+              merged: true,
+              merge_commit_sha: lessonMerge,
               current: true,
               mergeable: true,
               ready: true,
@@ -638,15 +796,138 @@ describe('pr-readiness-router', () => {
               reviewed_payload_head_sha: lessonHead,
             },
           ],
-          compatibility: bundleCompatibilityPlatformFirst(exactMembers),
+          compatibility: bundleCompatibility(exactMembers),
+          integration_refresh: integrationRefresh,
         },
       },
     });
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.reason_codes).not.toContain('bundle_controller_head_mismatch');
-    expect(decision.proof.bundle.exact_members.platform_candidate_sha).toBe(integrationHead);
+    expect(decision.proof.bundle.exact_members.platform_candidate_sha).toBe(payloadHead);
+    expect(decision.proof.bundle.integration_refresh_validation.ok).toBe(true);
     expect(validateDecision(decision)).toBe(true);
+    const validateFullSchema = schemaValidator().compile(readDecisionSchema());
+    if (!validateFullSchema(decision)) {
+      throw new Error(`refreshed decision schema mismatch: ${JSON.stringify(validateFullSchema.errors)}`);
+    }
+    const contradictoryLifecycle = JSON.parse(JSON.stringify(decision));
+    contradictoryLifecycle.proof.bundle.paired_prs[0].open = true;
+    expect(validateFullSchema(contradictoryLifecycle)).toBe(false);
+    const missingControllerSchema = JSON.parse(JSON.stringify(decision));
+    delete missingControllerSchema.proof.bundle.controller;
+    expect(validateFullSchema(missingControllerSchema)).toBe(false);
+    const missingExactSchema = JSON.parse(JSON.stringify(decision));
+    delete missingExactSchema.proof.bundle.exact_members;
+    expect(validateFullSchema(missingExactSchema)).toBe(false);
+    const missingLessonSchema = JSON.parse(JSON.stringify(decision));
+    missingLessonSchema.proof.bundle.paired_prs = [];
+    expect(validateFullSchema(missingLessonSchema)).toBe(false);
+    const duplicateLessonSchema = JSON.parse(JSON.stringify(decision));
+    duplicateLessonSchema.proof.bundle.paired_prs.push({ ...duplicateLessonSchema.proof.bundle.paired_prs[0] });
+    expect(validateFullSchema(duplicateLessonSchema)).toBe(false);
+    const foreignExtraMemberSchema = JSON.parse(JSON.stringify(decision));
+    foreignExtraMemberSchema.proof.bundle.paired_prs.push({
+      ...foreignExtraMemberSchema.proof.bundle.paired_prs[0],
+      repository: 'example/foreign-repository',
+      pr_number: 99,
+    });
+    expect(validateFullSchema(foreignExtraMemberSchema)).toBe(false);
+    const wrongLessonRepositorySchema = JSON.parse(JSON.stringify(decision));
+    wrongLessonRepositorySchema.proof.bundle.paired_prs[0].repository = 'meijer1973/4veco-platform';
+    expect(validateFullSchema(wrongLessonRepositorySchema)).toBe(false);
+    const missingLessonLeadReviewSchema = JSON.parse(JSON.stringify(decision));
+    missingLessonLeadReviewSchema.proof.bundle.paired_lead_reviews = [];
+    expect(validateFullSchema(missingLessonLeadReviewSchema)).toBe(false);
+    const foreignExtraLeadReviewSchema = JSON.parse(JSON.stringify(decision));
+    foreignExtraLeadReviewSchema.proof.bundle.paired_lead_reviews.push(
+      pairedLeadReview('example/foreign-repository', 99, lessonHead)
+    );
+    expect(validateFullSchema(foreignExtraLeadReviewSchema)).toBe(false);
+    const missingRefresh = JSON.parse(JSON.stringify(decision));
+    delete missingRefresh.proof.bundle.integration_refresh;
+    delete missingRefresh.proof.bundle.integration_refresh_validation;
+    expect(() => validateDecision(missingRefresh))
+      .toThrow('refreshed platform decision requires integration_refresh proof');
+    const missingExactMembers = JSON.parse(JSON.stringify(decision));
+    delete missingExactMembers.proof.bundle.exact_members;
+    expect(() => validateDecision(missingExactMembers))
+      .toThrow('ready platform bundle exact_members must match compatibility');
+
+    const mismatchedExactMembers = JSON.parse(JSON.stringify(decision));
+    mismatchedExactMembers.proof.bundle.exact_members.platform_candidate_sha = '7'.repeat(40);
+    expect(() => validateDecision(mismatchedExactMembers))
+      .toThrow('ready platform bundle exact_members must match compatibility');
+
+    const mismatchedControllerPayload = JSON.parse(JSON.stringify(decision));
+    mismatchedControllerPayload.proof.bundle.controller.reviewed_payload_head_sha = '7'.repeat(40);
+    expect(() => validateDecision(mismatchedControllerPayload))
+      .toThrow('ready platform bundle controller payload must match compatibility');
+
+    const mismatchedLessonPayload = JSON.parse(JSON.stringify(decision));
+    mismatchedLessonPayload.proof.bundle.paired_prs[0].head_sha = '7'.repeat(40);
+    mismatchedLessonPayload.proof.bundle.paired_prs[0].integration_head_sha = '7'.repeat(40);
+    mismatchedLessonPayload.proof.bundle.paired_prs[0].reviewed_payload_head_sha = '7'.repeat(40);
+    mismatchedLessonPayload.proof.bundle.paired_lead_reviews[0].reviewed_commit_sha = '7'.repeat(40);
+    expect(() => validateDecision(mismatchedLessonPayload))
+      .toThrow('ready platform bundle lesson payload must match compatibility');
+
+    const mismatchedLessonLeadReview = JSON.parse(JSON.stringify(decision));
+    mismatchedLessonLeadReview.proof.bundle.paired_lead_reviews[0].reviewed_commit_sha = '7'.repeat(40);
+    expect(() => validateDecision(mismatchedLessonLeadReview))
+      .toThrow('ready platform bundle lesson lead review must match compatibility');
+
+    const omittedLesson = JSON.parse(JSON.stringify(decision));
+    omittedLesson.proof.bundle.paired_prs = [];
+    expect(() => validateDecision(omittedLesson))
+      .toThrow('ready platform bundle requires exactly one paired lesson member');
+
+    const duplicateLesson = JSON.parse(JSON.stringify(decision));
+    duplicateLesson.proof.bundle.paired_prs.push({ ...duplicateLesson.proof.bundle.paired_prs[0] });
+    expect(() => validateDecision(duplicateLesson))
+      .toThrow('ready platform bundle requires exactly one paired lesson member');
+
+    const foreignExtraMember = JSON.parse(JSON.stringify(decision));
+    foreignExtraMember.proof.bundle.paired_prs.push({
+      ...foreignExtraMember.proof.bundle.paired_prs[0],
+      repository: 'example/foreign-repository',
+      pr_number: 99,
+    });
+    foreignExtraMember.proof.bundle.paired_lead_reviews.push(
+      pairedLeadReview('example/foreign-repository', 99, lessonHead)
+    );
+    expect(() => validateDecision(foreignExtraMember))
+      .toThrow('ready platform bundle requires exactly one paired lesson member');
+
+    const omittedLessonLeadReview = JSON.parse(JSON.stringify(decision));
+    omittedLessonLeadReview.proof.bundle.paired_lead_reviews = [];
+    expect(() => validateDecision(omittedLessonLeadReview))
+      .toThrow('ready platform bundle lesson lead review must match compatibility');
+
+    const foreignExtraLeadReview = JSON.parse(JSON.stringify(decision));
+    foreignExtraLeadReview.proof.bundle.paired_lead_reviews.push(
+      pairedLeadReview('example/foreign-repository', 99, lessonHead)
+    );
+    expect(() => validateDecision(foreignExtraLeadReview))
+      .toThrow('ready platform bundle lesson lead review must match compatibility');
+
+    const coordinatedTampering = JSON.parse(JSON.stringify(decision));
+    coordinatedTampering.proof.bundle.compatibility.exact_members.platform_candidate_sha = integrationHead;
+    coordinatedTampering.proof.bundle.exact_members.platform_candidate_sha = integrationHead;
+    coordinatedTampering.proof.bundle.controller.reviewed_payload_head_sha = integrationHead;
+    delete coordinatedTampering.proof.bundle.integration_refresh;
+    delete coordinatedTampering.proof.bundle.integration_refresh_validation;
+    expect(() => validateDecision(coordinatedTampering))
+      .toThrow('ready platform bundle compatibility invalid');
+    const tamperedDigest = JSON.parse(JSON.stringify(decision));
+    tamperedDigest.proof.bundle.integration_refresh.readiness.attestation_digest = `sha256:${'f'.repeat(64)}`;
+    expect(() => validateDecision(tamperedDigest)).toThrow('integration_refresh decision binding invalid');
+
+    const mismatchedRoute = JSON.parse(JSON.stringify(decision));
+    mismatchedRoute.proof.bundle.integration_refresh.readiness.route = 'READY_FOR_LEAD_ONLY';
+    mismatchedRoute.proof.bundle.integration_refresh.readiness.attestation_digest =
+      integrationRefreshReadinessAttestationDigest(mismatchedRoute.proof.bundle.integration_refresh);
+    expect(() => validateDecision(mismatchedRoute)).toThrow('integration_refresh decision binding invalid');
   });
 
   test('controller-first bundle transition treats an exact draft lesson member as transitionable', () => {
@@ -928,6 +1209,25 @@ describe('pr-readiness-router', () => {
     expect(decision.reason_codes).not.toContain('paired_pr_not_ready');
   });
 
+  test('coordinated mark-ready rejects lesson identity tampering across member, operation, and lead review', () => {
+    const tamperedLessonHead = '7'.repeat(40);
+    const decision = coordinatedBundleDecision({
+      paired: {
+        head_sha: tamperedLessonHead,
+        integration_head_sha: tamperedLessonHead,
+        reviewed_payload_head_sha: tamperedLessonHead,
+      },
+      operationLessonMember: {
+        head_sha: tamperedLessonHead,
+        reviewed_payload_head_sha: tamperedLessonHead,
+      },
+      pairedLeadHead: tamperedLessonHead,
+    });
+
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('lesson_candidate_sha_does_not_match_member_head');
+  });
+
   test('coordinated mark-ready rejects missing operation member heads unless paired member carries exact proof', () => {
     const rejected = coordinatedBundleDecision({
       pairedSubstantivelyReady: false,
@@ -972,6 +1272,12 @@ describe('pr-readiness-router', () => {
           required_contexts: ['validate-platform'],
           checks: [{ name: 'validate-platform', conclusion: 'FAILURE' }],
         },
+        lead_review: {
+          ...fixture.proof.lead_review,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
+        },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
           controller: {
@@ -1014,6 +1320,7 @@ describe('pr-readiness-router', () => {
     const schema = readDecisionSchema();
     expect(schema.properties.proof.properties.bundle_delegated_ci).toEqual({ type: 'boolean' });
     const readyRule = schema.allOf.find((rule) =>
+      rule.then && Array.isArray(rule.then.allOf) &&
       rule.if &&
       rule.if.properties &&
       rule.if.properties.route &&
@@ -1028,6 +1335,9 @@ describe('pr-readiness-router', () => {
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"transition_ready"');
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"merge_ready"');
     expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"paired_lead_reviews"');
+    expect(JSON.stringify(schema.properties.proof.properties.bundle)).toContain('"integration_refresh"');
+    expect(readyRuleJson).toContain('"integration_contract"');
+    expect(readyRuleJson).toContain('"after_lesson_merge_before_platform_ci"');
     expect(readyRuleJson).toContain('"lesson-first"');
     expect(readyRuleJson).toContain('"meijer1973/4veco-lessen"');
 
@@ -1051,6 +1361,12 @@ describe('pr-readiness-router', () => {
           conclusion: 'failure',
           required_contexts: ['validate-platform'],
           checks: [{ name: 'validate-platform', conclusion: 'FAILURE' }],
+        },
+        lead_review: {
+          ...fixture.proof.lead_review,
+          paired_member_reviews: [
+            pairedLeadReview('meijer1973/4veco-lessen', 34, lessonHead),
+          ],
         },
         bundle: {
           bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
@@ -1086,6 +1402,149 @@ describe('pr-readiness-router', () => {
       route: 'READY_FOR_HUMAN_REVIEW',
       proof: { bundle_delegated_ci: true },
     });
+  });
+
+  test('integration-refresh schema rejects malformed structural proof', () => {
+    const schema = readDecisionSchema();
+    const refreshSchema = schema.properties.proof.properties.bundle.properties.integration_refresh;
+    const validateRefresh = schemaValidator().compile(refreshSchema);
+    const integrationHead = '8'.repeat(40);
+    const lessonMerge = '9'.repeat(40);
+    const proof = {
+      status: 'complete',
+      order: 'lesson-first',
+      platform_payload_sha: '3'.repeat(40),
+      platform_integration_head_sha: integrationHead,
+      lesson_payload_sha: '4'.repeat(40),
+      lesson_merge_commit_sha: lessonMerge,
+      refresh_result: {
+        status: 'created',
+        trusted_executor: 'platform-main',
+        previous_platform_head_sha: '3'.repeat(40),
+        platform_integration_head_sha: integrationHead,
+        lesson_merge_commit_sha: lessonMerge,
+        changed_paths: INDEX_PATHS,
+        hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+        metadata: {
+          platform_source_commit: '3'.repeat(40),
+          platform_source_branch: 'codex/controller',
+          lesson_source_commit: lessonMerge,
+          lesson_source_branch: 'origin/main',
+          generated_at: '2026-08-14T00:00:00.000Z',
+        },
+      },
+      lineage: {
+        reviewed_payload_head_sha: '3'.repeat(40),
+        integration_head_sha: integrationHead,
+        payload_ancestor_of_integration_head: true,
+        authorization_inherited: true,
+        failures: [],
+      },
+      readiness: {
+        head_sha: integrationHead,
+        route: 'READY_FOR_HUMAN_REVIEW',
+        attestation_schema_version: 1,
+        attestation_digest: `sha256:${'b'.repeat(64)}`,
+      },
+      ci: {
+        status: 'success',
+        platform_sha: integrationHead,
+        lesson_sha: lessonMerge,
+        run_id: 202,
+      },
+    };
+    expect(validateRefresh(proof)).toBe(true);
+
+    const malformed = [
+      { ...proof, ci: { ...proof.ci, status: 'failure' } },
+      { ...proof, lineage: { ...proof.lineage, authorization_inherited: false } },
+      { ...proof, readiness: { ...proof.readiness, attestation_digest: 'arbitrary' } },
+      {
+        ...proof,
+        refresh_result: { ...proof.refresh_result, changed_paths: INDEX_PATHS.slice(0, 3) },
+      },
+      {
+        ...proof,
+        refresh_result: {
+          ...proof.refresh_result,
+          hashes: { ...proof.refresh_result.hashes, [INDEX_PATHS[0]]: 'short' },
+        },
+      },
+      {
+        ...proof,
+        refresh_result: {
+          ...proof.refresh_result,
+          metadata: { ...proof.refresh_result.metadata, lesson_source_branch: 'candidate' },
+        },
+      },
+      {
+        ...proof,
+        refresh_result: {
+          ...proof.refresh_result,
+          metadata: { ...proof.refresh_result.metadata, generated_at: '2026-08-14Tgarbage' },
+        },
+      },
+    ];
+    for (const item of malformed) expect(validateRefresh(item)).toBe(false);
+
+    const readyRule = schema.allOf.find((rule) =>
+      rule.then && Array.isArray(rule.then.allOf) &&
+      rule.if && rule.if.properties && rule.if.properties.route &&
+      Array.isArray(rule.if.properties.route.enum) &&
+      rule.if.properties.route.enum.includes('READY_FOR_HUMAN_REVIEW')
+    );
+    const bundleAlternatives = readyRule.then.allOf.find((rule) => Array.isArray(rule.anyOf)).anyOf;
+    const platformBundleRule = bundleAlternatives.find((rule) =>
+      rule.properties && rule.properties.reviewed_pr &&
+      rule.properties.reviewed_pr.properties.repo.const === 'meijer1973/4veco-platform' &&
+      rule.properties.proof && rule.properties.proof.properties &&
+      rule.properties.proof.properties.bundle &&
+      rule.properties.proof.properties.bundle.properties &&
+      rule.properties.proof.properties.bundle.properties.compatibility
+    );
+    const contractSchema = platformBundleRule.properties.proof.properties.bundle
+      .properties.compatibility.properties.integration_contract;
+    const validateContract = schemaValidator().compile(contractSchema);
+    const contract = lessonFirstIntegrationContract();
+    expect(validateContract(contract)).toBe(true);
+    const malformedContracts = [
+      {
+        ...contract,
+        post_first_merge_refresh: {
+          ...contract.post_first_merge_refresh,
+          generator: 42,
+        },
+      },
+      {
+        ...contract,
+        post_first_merge_refresh: {
+          ...contract.post_first_merge_refresh,
+          freshness_checker: false,
+        },
+      },
+      {
+        ...contract,
+        post_first_merge_refresh: {
+          ...contract.post_first_merge_refresh,
+          changed_paths: ['wrong'],
+        },
+      },
+      {
+        ...contract,
+        post_first_merge_refresh: {
+          ...contract.post_first_merge_refresh,
+          deterministic_inputs: null,
+        },
+      },
+      {
+        ...contract,
+        post_first_merge_refresh: {
+          ...contract.post_first_merge_refresh,
+          exact_ci_binding: 'unbound',
+        },
+      },
+    ];
+    for (const item of malformedContracts) expect(validateContract(item)).toBe(false);
   });
 
   test('cross-repo bundle controller rejects incomplete paired metadata', () => {
@@ -1318,7 +1777,6 @@ describe('pr-readiness-router', () => {
 
     expect(decision.route).toBe('KEEP_DRAFT_REVISE');
     expect(decision.reason_codes).toContain('platform_candidate_sha_does_not_match_member_head');
-    expect(decision.reason_codes).toContain(`platform_candidate_sha mismatch: expected ${fixture.reviewed_pr.head_sha}`);
   });
 
   test('lesson bundle member can consume delegated controller proof without lesson branch protection', () => {
@@ -1397,6 +1855,13 @@ describe('pr-readiness-router', () => {
 
     expect(decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(decision.proof.bundle.delegated).toBe(true);
+    const markdown = renderDecisionMarkdown(decision);
+    expect(markdown).toContain('Delegated branch-protection proof: `controller`');
+    expect(markdown).toContain('Delegated branch protection');
+    expect(markdown).toContain(`Controller PR/head: \`meijer1973/4veco-platform#140@${platformHead}\``);
+    expect(markdown).toContain(`Member PR/head: \`meijer1973/4veco-lessen#34@${head}\``);
+    expect(markdown).not.toContain(`Member PR/head: \`meijer1973/4veco-platform#140@${platformHead}\``);
+    expect(markdown).toContain('Post-first-merge index refresh: `required_after_lesson_merge`');
   });
 
   test('delegated lesson member can mark ready after the platform controller is ready', () => {
@@ -1926,8 +2391,10 @@ describe('pr-readiness-router', () => {
           decision: 'APPROVE_AND_MERGE',
         },
         integration: {
+          ok: true,
           reviewed_payload_head_sha: payloadHead,
           integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: false,
           failures: [],
@@ -1978,8 +2445,10 @@ describe('pr-readiness-router', () => {
           reviewed_commit_sha: payloadHead,
         },
         integration: {
+          ok: true,
           reviewed_payload_head_sha: payloadHead,
           integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: false,
           failures: [],
@@ -2028,8 +2497,10 @@ describe('pr-readiness-router', () => {
           reviewed_commit_sha: payloadHead,
         },
         integration: {
+          ok: true,
           reviewed_payload_head_sha: payloadHead,
           integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: true,
           failures: [],
@@ -2274,8 +2745,10 @@ describe('pr-readiness-router', () => {
           decision: 'APPROVE_FOR_INTEGRATION',
         },
         integration: {
+          ok: true,
           reviewed_payload_head_sha: payloadHead,
           integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: false,
           failures: [],
@@ -2293,6 +2766,305 @@ describe('pr-readiness-router', () => {
     expect(markdown).toContain(`Integration head: \`${integrationHead}\``);
     expect(markdown).toContain('The integration lane validates the current integration head before merge.');
     expect(markdown).toContain('does not require renewed owner authorization');
+    expect(markdown).toContain('## Payload / Integration State');
+    expect(markdown).toContain('Payload state: `PAYLOAD_AUTHORIZED`');
+    expect(markdown).toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+    expect(markdown).toContain('Payload lineage: `valid`');
+    expect(markdown).toContain('Effective payload: `unchanged`');
+    expect(markdown).toContain('Payload authorization: `inherited`');
+    expect(markdown).toContain('Integration validation: `passed`');
+    expect(markdown).toContain('Renewed owner authorization: `not_required_unless_payload_changes`');
+    expect(markdown).not.toMatch(new RegExp('exact-head ' + 'authorization', 'i'));
+  });
+
+  test('payload authorization without integration proof does not render as ready to merge', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-platform',
+        number: 136,
+        url: 'https://github.com/meijer1973/4veco-platform/pull/136',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: integrationHead,
+        merge_state: 'CLEAN',
+        mergeable: true,
+      },
+      changed_paths: ['docs/review/pr-integration-lane-policy.md'],
+      throughput: {
+        class: 'normal_sprint',
+        authority_class: 'high_authority',
+        level: 'L4',
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: { viable: false, target: null, reason: null },
+      proof: {
+        ...explicitProof(integrationHead),
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: null,
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Payload state: `PAYLOAD_AUTHORIZED`');
+    expect(markdown).toContain('Integration state: `INTEGRATION_HEAD_REFRESHED`');
+    expect(markdown).toContain('Payload authorization: `inherited`');
+    expect(markdown).toContain('Integration validation: `required`');
+    expect(markdown).toContain('Integration validation required: `true`');
+    expect(markdown).toContain('Next action: run integration validation for the refreshed integration head');
+    expect(markdown).not.toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+  });
+
+  test('sparse inherited integration object does not render as completed proof', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      reviewed_pr: {
+        repo: 'meijer1973/4veco-platform',
+        number: 136,
+        url: 'https://github.com/meijer1973/4veco-platform/pull/136',
+        state: 'OPEN',
+        was_draft: false,
+        base: 'main',
+        head_sha: integrationHead,
+        merge_state: 'CLEAN',
+        mergeable: true,
+      },
+      changed_paths: ['docs/review/pr-integration-lane-policy.md'],
+      throughput: {
+        class: 'normal_sprint',
+        authority_class: 'high_authority',
+        level: 'L4',
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: { viable: false, target: null, reason: null },
+      proof: {
+        ...explicitProof(integrationHead),
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          authorization_inherited: true,
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Payload state: `PAYLOAD_AUTHORIZED`');
+    expect(markdown).toContain('Integration state: `INTEGRATION_VALIDATION_REQUIRED`');
+    expect(markdown).toContain('Integration validation: `required`');
+    expect(markdown).toContain('Integration validation required: `true`');
+    expect(markdown).not.toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+    expect(markdown).not.toContain('Integration validation: `passed`');
+  });
+
+  test.each([
+    'reviewed_payload_head_sha missing or invalid',
+    'integration_head_sha missing or invalid',
+    'reviewed_payload_head_not_ancestor',
+    'rebase_or_force_push_detected',
+    'manual_conflict_resolution',
+    'merge_changed_payload_or_unexpected_paths',
+    'substantive_pr_authored_commit_after_authorization',
+    'authority_or_scope_change',
+    'changed_effective_payload',
+  ])('rendered state invalidates authorization for lineage failure %s', (failureToken) => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      ...readFixture('live-governance-human.json'),
+      reviewed_pr: {
+        ...readFixture('live-governance-human.json').reviewed_pr,
+        head_sha: integrationHead,
+      },
+      proof: {
+        ...readFixture('live-governance-human.json').proof,
+        ci: {
+          head_sha: integrationHead,
+          conclusion: 'success',
+          required_contexts: ['validate-platform'],
+          checks: [{ name: 'validate-platform', conclusion: 'SUCCESS' }],
+        },
+        lead_review: {
+          path: 'subagent:lead-review',
+          result: 'PASS',
+          reviewed_commit_sha: integrationHead,
+        },
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: false,
+          failures: [failureToken],
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Payload authorization required: `true`');
+    expect(markdown).toContain('Payload state: `PAYLOAD_REAUTHORIZATION_REQUIRED`');
+    expect(markdown).toContain('Payload authorization: `invalidated`');
+    expect(markdown).toContain('Integration validation: `blocked`');
+    expect(markdown).toContain('Renewed owner authorization: `required`');
+    expect(markdown).toContain('Next action: return to owner review for refreshed payload authorization');
+    expect(markdown).not.toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+  });
+
+  test('deterministic refresh pending is separate from completed integration proof', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      ...readFixture('live-governance-human.json'),
+      reviewed_pr: {
+        ...readFixture('live-governance-human.json').reviewed_pr,
+        head_sha: integrationHead,
+      },
+      proof: {
+        ...explicitProof(integrationHead),
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_deterministic_refresh: true,
+          failures: [],
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Integration state: `DETERMINISTIC_REFRESH_REQUIRED`');
+    expect(markdown).toContain('Integration validation: `pending_deterministic_refresh`');
+    expect(markdown).toContain('Next action: run deterministic evidence refresh before merge');
+    expect(markdown).not.toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+  });
+
+  test('deterministic refresh proof can complete integration validation', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      ...readFixture('live-governance-human.json'),
+      reviewed_pr: {
+        ...readFixture('live-governance-human.json').reviewed_pr,
+        head_sha: integrationHead,
+      },
+      proof: {
+        ...explicitProof(integrationHead),
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          ok: true,
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
+          authorization_inherited: true,
+          requires_deterministic_refresh: true,
+          deterministic_refresh_verified: true,
+          failures: [],
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+    expect(markdown).toContain('Integration validation: `passed`');
+  });
+
+  test('delta review pending is separate from completed integration proof', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      ...readFixture('live-governance-human.json'),
+      reviewed_pr: {
+        ...readFixture('live-governance-human.json').reviewed_pr,
+        head_sha: integrationHead,
+      },
+      proof: {
+        ...explicitProof(integrationHead),
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          ok: true,
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: true,
+          failures: [],
+          base_drift: {
+            classification: 'substantive_overlap',
+            requires_integration_delta_lead_review: true,
+          },
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Integration state: `INTEGRATION_DELTA_REVIEW_REQUIRED`');
+    expect(markdown).toContain('Integration validation: `pending_delta_review`');
+    expect(markdown).toContain('Next action: run integration delta lead review before merge');
+    expect(markdown).not.toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+  });
+
+  test('delta review proof can complete integration validation', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      ...readFixture('live-governance-human.json'),
+      reviewed_pr: {
+        ...readFixture('live-governance-human.json').reviewed_pr,
+        head_sha: integrationHead,
+      },
+      proof: {
+        ...explicitProof(integrationHead),
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          ok: true,
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          payload_ancestor_of_integration_head: true,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: true,
+          failures: [],
+          delta_review: {
+            path: 'reports/sprints/example-integration-delta-review.md',
+            result: 'PASS',
+            reviewed_payload_head_sha: payloadHead,
+            integration_head_sha: integrationHead,
+          },
+          base_drift: {
+            classification: 'substantive_overlap',
+            requires_integration_delta_lead_review: true,
+          },
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Integration state: `READY_TO_MERGE_VIA_LANE`');
+    expect(markdown).toContain('Integration validation: `passed`');
   });
 
   test('rendered decision comment says substantive payload changes return to owner review', () => {
@@ -2312,6 +3084,75 @@ describe('pr-readiness-router', () => {
 
     expect(markdown).toContain('Substantive payload change');
     expect(markdown).toContain('returns to owner review');
+    expect(markdown).toContain('Payload state: `PAYLOAD_REAUTHORIZATION_REQUIRED`');
+    expect(markdown).toContain('Effective payload: `changed`');
+    expect(markdown).toContain('Payload authorization: `invalidated`');
+    expect(markdown).toContain('Renewed owner authorization: `required`');
+    expect(markdown).toContain('Next action: return to owner review for refreshed payload authorization');
+  });
+
+  test('rendered state invalidates authorization for checker-emitted lineage failure token', () => {
+    const payloadHead = 'a'.repeat(40);
+    const integrationHead = 'b'.repeat(40);
+    const decision = classifyPrReadiness({
+      ...readFixture('live-governance-human.json'),
+      reviewed_pr: {
+        ...readFixture('live-governance-human.json').reviewed_pr,
+        head_sha: integrationHead,
+      },
+      proof: {
+        ...readFixture('live-governance-human.json').proof,
+        ci: {
+          head_sha: integrationHead,
+          conclusion: 'success',
+          required_contexts: ['validate-platform'],
+          checks: [{ name: 'validate-platform', conclusion: 'SUCCESS' }],
+        },
+        lead_review: {
+          path: 'subagent:lead-review',
+          result: 'PASS',
+          reviewed_commit_sha: integrationHead,
+        },
+        human_authorization: {
+          reviewed_payload_head_sha: payloadHead,
+          decision: 'APPROVE_FOR_INTEGRATION',
+        },
+        integration: {
+          reviewed_payload_head_sha: payloadHead,
+          integration_head_sha: integrationHead,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: false,
+          failures: ['reviewed_payload_head_not_ancestor'],
+        },
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(markdown).toContain('Payload state: `PAYLOAD_REAUTHORIZATION_REQUIRED`');
+    expect(markdown).toContain('Payload lineage: `invalid`');
+    expect(markdown).toContain('Payload authorization: `invalidated`');
+    expect(markdown).toContain('Renewed owner authorization: `required`');
+    expect(markdown).toContain('Next action: return to owner review for refreshed payload authorization');
+  });
+
+  test('green CI with readiness blockers renders blocked integration validation', () => {
+    const fixture = readFixture('live-l1-ready.json');
+    const decision = classifyPrReadiness({
+      ...fixture,
+      proof: {
+        ...fixture.proof,
+        checkers: [],
+      },
+    });
+    const markdown = renderDecisionMarkdown(decision);
+
+    expect(decision.proof.ci_status).toBe('success');
+    expect(decision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(decision.reason_codes).toContain('checker_proof_missing_or_not_successful');
+    expect(markdown).toContain('Route: `KEEP_DRAFT_REVISE`');
+    expect(markdown).toContain('`checker_proof_missing_or_not_successful`');
+    expect(markdown).toContain('Integration validation: `blocked`');
+    expect(markdown).toContain('Next action: resolve readiness blockers before merge');
   });
 
   test('rendered decision parser rejects marker and machine-decision disagreement', () => {

@@ -8,7 +8,11 @@ const {
   fetchBundleAuthorizationComment,
   validateBundleAuthorizationRecord,
 } = require('./check-human-bundle-authorization');
-const { validateCompatibilityProof } = require('./cross-repo-bundle-compatibility');
+const {
+  integrationRefreshReadinessAttestationDigest,
+  validateCompatibilityProof,
+  validateIntegrationRefreshProof,
+} = require('./cross-repo-bundle-compatibility');
 const {
   collectAutoMergeDiagnostics,
   fetchBranchProtectionSummary,
@@ -24,7 +28,13 @@ const {
   waitForPrMerge,
 } = require('./integrate-authorized-pr');
 const { summarizeLineage } = require('./check-integration-lineage');
-const { collectReviewThreadState } = require('./review-pr-readiness');
+const { collectReviewThreadState, runReview } = require('./review-pr-readiness');
+const { applyLiveDecision } = require('./apply-pr-readiness-decision');
+const { decisionDigest } = require('./pr-readiness-router');
+const {
+  INDEX_PATHS,
+  refreshBundleAgentIndexes,
+} = require('./refresh-bundle-agent-indexes');
 const { readEvidence, validateEvidence } = require('../ci/platform-ci-evidence');
 
 const PLATFORM_REPO = 'meijer1973/4veco-platform';
@@ -698,13 +708,186 @@ function refreshPlatformPrCi(pr, options = {}) {
   if (options.dryRun) return { ok: true, dry_run: true, head_sha: pr.headRefOid };
   if (!pr || !pr.headRefOid) return { ok: false, failure: 'platform_pr_head_missing' };
   const ref = pr.headRefName || pr.headRefOid;
-  const minDatabaseId = latestWorkflowRunDatabaseId(PLATFORM_REPO, pr.headRefOid);
-  triggerPlatformCiForRef(ref, options);
-  return waitForPlatformHeadCi(pr.headRefOid, {
+  const findRun = options.findWorkflowRunForHead || findWorkflowRunForHead;
+  const verifyRun = options.verifyPlatformCiRun || verifyPlatformCiRun;
+  const existingRun = findRun(PLATFORM_REPO, pr.headRefOid, options);
+  if (existingRun && existingRun.status === 'completed' && existingRun.conclusion === 'success') {
+    const existing = verifyRun(existingRun, {
+      platformSha: pr.headRefOid,
+      lessonSha: options.expectedLessonSha,
+    }, options);
+    if (existing.ok) {
+      return { ...existing, reused: true, head_sha: pr.headRefOid };
+    }
+  }
+  const latestRunId = options.latestWorkflowRunDatabaseId || latestWorkflowRunDatabaseId;
+  const trigger = options.triggerPlatformCiForRef || triggerPlatformCiForRef;
+  const wait = options.waitForPlatformHeadCi || waitForPlatformHeadCi;
+  const minDatabaseId = latestRunId(PLATFORM_REPO, pr.headRefOid);
+  trigger(ref, options);
+  return wait(pr.headRefOid, {
     ...options,
     minDatabaseId,
     expectedPlatformSha: pr.headRefOid,
   });
+}
+
+function generateBundleIntegrationReadiness(input, options = {}) {
+  const payloadReadiness = input.payloadReadiness;
+  if (!payloadReadiness || payloadReadiness.ok !== true || !payloadReadiness.decision) {
+    return { ok: false, phase: 'payload_readiness', failure: 'payload_readiness_decision_missing_or_invalid' };
+  }
+  const payloadDecision = payloadReadiness.decision;
+  if (!READY_READINESS_ROUTES.has(payloadDecision.route)) {
+    return { ok: false, phase: 'payload_readiness', failure: 'payload_readiness_decision_not_ready' };
+  }
+  const payloadProof = payloadDecision.proof || {};
+  const compatibility = input.compatibility;
+  const refreshProof = {
+    status: 'complete',
+    order: 'lesson-first',
+    platform_payload_sha: input.platformPayloadSha,
+    platform_integration_head_sha: input.platformPr.headRefOid,
+    lesson_payload_sha: input.lessonPayloadSha,
+    lesson_merge_commit_sha: input.lessonMergeCommitSha,
+    refresh_result: input.refreshResult,
+    lineage: input.lineage,
+    readiness: {
+      head_sha: input.platformPr.headRefOid,
+      route: payloadDecision.route,
+      attestation_schema_version: 1,
+      attestation_digest: null,
+    },
+    ci: input.ci,
+  };
+  refreshProof.readiness.attestation_digest = integrationRefreshReadinessAttestationDigest(refreshProof);
+  const refreshValidation = validateIntegrationRefreshProof(refreshProof, {
+    compatibility,
+    controllerHead: input.platformPr.headRefOid,
+    lessonMergeSha: input.lessonMergeCommitSha,
+    platformBranch: input.platformPr.headRefName,
+  });
+  if (!refreshValidation.ok) {
+    return { ok: false, phase: 'integration_refresh_proof', failures: refreshValidation.failures };
+  }
+  const payloadBundle = payloadProof.bundle || {};
+  const supplemental = {
+    throughput: payloadDecision.throughput,
+    human_review_payload: payloadDecision.human_review_payload,
+    consequence: payloadDecision.consequence,
+    batching: payloadDecision.batching,
+    proof: {
+      checkers: [
+        ...((payloadProof.checkers || []).map((checker) => ({ ...checker }))),
+        { command: 'trusted post-first-merge agent-index refresh', status: 'passed' },
+        { command: 'check-integration-lineage', status: 'passed' },
+        { command: 'exact refreshed-head platform CI', status: 'passed' },
+      ],
+      lead_review: {
+        path: payloadProof.lead_review_path,
+        result: payloadProof.lead_review_result,
+        reviewed_commit_sha: payloadProof.lead_reviewed_sha,
+        paired_member_reviews: payloadBundle.paired_lead_reviews || [],
+      },
+      changed_paths_verified: true,
+      post_lead_review_changed_paths: [...INDEX_PATHS],
+      branch_protection: input.branchProtection,
+      human_authorization: {
+        decision: input.authorization.decision,
+        reviewed_payload_head_sha: input.platformPayloadSha,
+        bundle_id: input.authorization.bundle_id,
+      },
+      integration: {
+        ...input.lineage,
+        deterministic_refresh_verified: true,
+      },
+    },
+    bundle: {
+      ...payloadBundle,
+      bundle_id: input.authorization.bundle_id,
+      complete: true,
+      controller: {
+        repository: PLATFORM_REPO,
+        pr_number: input.platformPr.number,
+        base: 'main',
+        head_sha: input.platformPr.headRefOid,
+        integration_head_sha: input.platformPr.headRefOid,
+        reviewed_payload_head_sha: input.platformPayloadSha,
+        authorization_inherited: true,
+        lineage: input.lineage,
+        failures: input.lineage.failures || [],
+        open: true,
+        current: true,
+        mergeable: true,
+        ready: true,
+        is_draft: false,
+      },
+      paired_prs: [{
+        repository: LESSON_REPO,
+        pr_number: input.lessonPr.number,
+        base: 'main',
+        head_sha: input.lessonPayloadSha,
+        integration_head_sha: input.lessonPayloadSha,
+        reviewed_payload_head_sha: input.lessonPayloadSha,
+        merge_commit_sha: input.lessonMergeCommitSha,
+        merged: true,
+        open: false,
+        current: true,
+        mergeable: true,
+        ready: true,
+        is_draft: false,
+      }],
+      exact_members: compatibility.exact_members,
+      compatibility,
+      integration_refresh: refreshProof,
+    },
+  };
+  let review;
+  try {
+    review = (options.runReview || runReview)({
+      repo: PLATFORM_REPO,
+      prNumber: input.platformPr.number,
+      supplemental,
+    });
+  } catch (error) {
+    return { ok: false, phase: 'integration_head_readiness', error: error.message };
+  }
+  if (
+    review.decision.route !== refreshProof.readiness.route ||
+    review.decision.reviewed_pr.head_sha !== input.platformPr.headRefOid
+  ) {
+    return { ok: false, phase: 'integration_head_readiness', decision: review.decision };
+  }
+  const boundRefresh = validateIntegrationRefreshProof(refreshProof, {
+    compatibility,
+    controllerHead: input.platformPr.headRefOid,
+    lessonMergeSha: input.lessonMergeCommitSha,
+    platformBranch: input.platformPr.headRefName,
+    readinessDecision: review.decision,
+  });
+  if (!boundRefresh.ok) {
+    return { ok: false, phase: 'integration_refresh_readiness_binding', failures: boundRefresh.failures };
+  }
+  let apply;
+  try {
+    apply = options.dryRun
+      ? { ok: true, dry_run: true, comment_action: 'would_apply_comment', transition_action: 'none' }
+      : (options.applyLiveDecision || applyLiveDecision)(review.decision, { dryRun: false });
+  } catch (error) {
+    return { ok: false, phase: 'integration_head_readiness_publication', error: error.message };
+  }
+  if (!apply || apply.ok !== true) {
+    return { ok: false, phase: 'integration_head_readiness_publication', apply };
+  }
+  return {
+    ok: true,
+    phase: 'integration_head_readiness',
+    decision: review.decision,
+    decision_digest: `sha256:${decisionDigest(review.decision)}`,
+    markdown: review.markdown,
+    apply,
+    integration_refresh: refreshProof,
+  };
 }
 
 
@@ -744,18 +927,19 @@ function validateMemberPreflight(repo, pr, member, deps, options = {}) {
   const lineageFailures = member.authorization_inherited === true
     ? []
     : ['member_payload_not_ancestor'];
-  const readiness = deps.fetchReadinessComment(repo, pr.number, expectedHeadSha);
+  const readinessRequired = options.requireReadiness !== false;
+  const readiness = readinessRequired ? deps.fetchReadinessComment(repo, pr.number, expectedHeadSha) : null;
   const reviewThreads = deps.fetchReviewThreadState(repo, pr.number);
   return {
     ok:
       stateFailures.length === 0 &&
       lineageFailures.length === 0 &&
-      validateReadiness(readiness).length === 0 &&
+      (!readinessRequired || validateReadiness(readiness).length === 0) &&
       validateReviewThreadState(reviewThreads).length === 0,
     failures: [
       ...stateFailures,
       ...lineageFailures,
-      ...validateReadiness(readiness),
+      ...(readinessRequired ? validateReadiness(readiness) : []),
       ...validateReviewThreadState(reviewThreads),
     ],
     lineage: member.lineage || null,
@@ -808,10 +992,19 @@ function validatePartialResumeCompatibility(compatibility, platformMainSha, plat
   const exact = compatibility && compatibility.exact_members || {};
   const failures = [];
   if (platformMainSha !== exact.platform_base_sha) failures.push('partial_resume_platform_main_advanced');
-  if (platformMember.integration_head_sha !== exact.platform_candidate_sha) {
+  if (platformMember.reviewed_payload_head_sha !== exact.platform_candidate_sha) {
     failures.push('partial_resume_platform_candidate_mismatch');
   }
-  if (lessonMember.integration_head_sha !== exact.lesson_candidate_sha) {
+  if (
+    platformMember.authorization_inherited !== true ||
+    (platformMember.failures || []).length > 0
+  ) {
+    failures.push('partial_resume_platform_lineage_invalid');
+  }
+  if (
+    lessonMember.reviewed_payload_head_sha !== exact.lesson_candidate_sha ||
+    lessonMember.integration_head_sha !== exact.lesson_candidate_sha
+  ) {
     failures.push('partial_resume_lesson_candidate_mismatch');
   }
   return {
@@ -889,6 +1082,12 @@ function defaultDeps(options = {}) {
     waitForPlatformMainCi,
     waitForPrMerge,
     refreshPlatformPrCi,
+    refreshBundleAgentIndexes: (refreshOptions) => refreshBundleAgentIndexes({
+      ...refreshOptions,
+      trustedRoot: path.resolve(__dirname, '..', '..'),
+      fetchPlatformPr: () => fetchPr(PLATFORM_REPO, refreshOptions.platformPr.number),
+    }),
+    generateBundleIntegrationReadiness,
   };
 }
 
@@ -904,6 +1103,66 @@ function mergeStepForOrder(order, record) {
   const platform = record.controller;
   if (order === 'lesson-first') return [lesson, platform];
   return [platform, lesson];
+}
+
+function resultMemberLabel(repo, prNumber, headSha) {
+  return `${repo}#${prNumber || 'unknown'}@${headSha || 'unknown-head'}`;
+}
+
+function resultMemberState(repo, member, pr) {
+  return {
+    repo,
+    pr_number: member && member.pr_number,
+    head_sha:
+      (member && (member.integration_head_sha || member.head_sha || member.reviewed_payload_head_sha)) ||
+      (pr && pr.headRefOid) ||
+      null,
+    state: pr && pr.state,
+  };
+}
+
+function compatibilityOrderProof(compatibility, order) {
+  if (order) return order;
+  if (compatibility && compatibility.recommended_merge_order) return compatibility.recommended_merge_order;
+  const orders = compatibility && compatibility.permitted_merge_orders;
+  return Array.isArray(orders) && orders.length > 0 ? orders.join(', ') : 'none';
+}
+
+function applyObservedMergeState(member, merges) {
+  const merge = (merges || []).find((item) => item.repo === member.repo && item.pr_number === member.pr_number);
+  if (!merge) return member;
+  return {
+    ...member,
+    state: 'MERGED',
+    merge_commit: merge.merge_commit,
+  };
+}
+
+function bundleStateForResult(record, compatibility, order, platformPr, lessonPr, platformMember, lessonMemberState, merges = []) {
+  const controller = resultMemberState(PLATFORM_REPO, platformMember || record.controller, platformPr);
+  const lesson = resultMemberState(LESSON_REPO, lessonMemberState || memberByRepo(record, LESSON_REPO), lessonPr);
+  const members = [lesson].filter((member) => member.pr_number).map((member) => applyObservedMergeState(member, merges));
+  const mergedController = applyObservedMergeState(controller, merges);
+  const mergedMembers = members.filter((member) => member.state === 'MERGED');
+  const openMembers = members.filter((member) => member.state === 'OPEN');
+  let residualMode = 'full bundle';
+  if (mergedMembers.length > 0 && openMembers.length === 0 && mergedController.state !== 'MERGED') {
+    residualMode = 'platform-only residual controller';
+  } else if (mergedMembers.length > 0 && openMembers.length > 0) {
+    residualMode = 'lesson-first pending platform';
+  } else if (!compatibility || compatibility.ok !== true) {
+    residualMode = 'blocked';
+  }
+  return {
+    controller_pr_head: resultMemberLabel(controller.repo, controller.pr_number, controller.head_sha),
+    member_pr_heads: members.map((member) => resultMemberLabel(member.repo, member.pr_number, member.head_sha)),
+    merged_members: mergedMembers.map((member) => resultMemberLabel(member.repo, member.pr_number, member.head_sha)),
+    open_members: openMembers.map((member) => resultMemberLabel(member.repo, member.pr_number, member.head_sha)),
+    delegated_branch_protection_proof: 'controller',
+    merge_order_proof: compatibilityOrderProof(compatibility, order),
+    residual_integration_mode: residualMode,
+    controller_state: mergedController.state || 'unknown',
+  };
 }
 
 function integrateBundle(options = {}) {
@@ -933,7 +1192,7 @@ function integrateBundle(options = {}) {
   const platformMainSha = deps.fetchMainSha(PLATFORM_REPO);
   const lessonMainSha = deps.fetchMainSha(LESSON_REPO);
   const platformPr = deps.fetchPr(PLATFORM_REPO, record.controller.pr_number);
-  const platformStatus = platformStatusTarget(platformPr);
+  let platformStatus = platformStatusTarget(platformPr);
   const platformBranchProtection = deps.fetchPlatformBranchProtectionSummary();
   if (!platformBranchProtection.ok) {
     return withTerminalFailureStatus(
@@ -997,7 +1256,10 @@ function integrateBundle(options = {}) {
     platformPr,
     platformMember,
     deps,
-    { requireValidatePlatform: false }
+    {
+      requireValidatePlatform: false,
+      requireReadiness: !partialResumeCandidate,
+    }
   );
   const lessonPreflight = partialResumeCandidate
     ? { ok: true, failures: [], partial_resume_candidate: true }
@@ -1101,6 +1363,7 @@ function integrateBundle(options = {}) {
       phase: 'authorized_no_merge',
       order,
       compatibility,
+      bundle_state: bundleStateForResult(record, compatibility, order, platformPr, lessonPr, platformMember, lessonMemberState),
       platform_main_sha: platformMainSha,
       lesson_main_sha: lessonMainSha,
       platform_branch_protection: platformBranchProtection,
@@ -1181,16 +1444,6 @@ function integrateBundle(options = {}) {
         ...merged,
       });
       expectedMain[repo] = partialResume.merge_commit;
-      const intermediateCi = waitForIntermediatePlatformCi(deps, options);
-      if (!intermediateCi.ok) {
-        return withTerminalFailureStatus(
-          { ok: false, phase: 'intermediate_ci', order, intermediate_ci: intermediateCi, merges },
-          deps,
-          platformStatus,
-          options,
-          `Bundle intermediate CI failed: ${intermediateCi.failure || 'unknown'}`
-        );
-      }
       continue;
     }
     const currentMainForMember = repo === PLATFORM_REPO ? currentPlatformMain : currentLessonMain;
@@ -1212,20 +1465,144 @@ function integrateBundle(options = {}) {
       };
     }
     if (repo === PLATFORM_REPO && index > 0 && steps[index - 1].repository === LESSON_REPO) {
-      const refreshed = deps.refreshPlatformPrCi(pr, {
-        ...options,
-        expectedLessonSha: currentLessonMain,
-      });
-      if (!refreshed.ok) {
+      let indexRefresh;
+      try {
+        indexRefresh = deps.refreshBundleAgentIndexes({
+          platformPr: pr,
+          lessonMergeSha: currentLessonMain,
+          reviewedPlatformPayloadSha: member.reviewed_payload_head_sha,
+          dryRun: options.dryRun,
+        });
+      } catch (error) {
         return withTerminalFailureStatus(
-          { ok: false, phase: 'platform_pr_ci_refresh', refreshed, merges },
+          { ok: false, phase: 'platform_index_refresh', error: error.message, merges },
           deps,
           platformStatus,
           options,
-          `Bundle platform CI refresh failed: ${refreshed.failure || 'unknown'}`
+          `Bundle platform index refresh failed: ${error.message}`
         );
       }
-      pr = deps.fetchPr(repo, member.pr_number);
+      if (!indexRefresh || indexRefresh.ok !== true) {
+        return withTerminalFailureStatus(
+          { ok: false, phase: 'platform_index_refresh', refresh: indexRefresh, merges },
+          deps,
+          platformStatus,
+          options,
+          'Bundle platform index refresh failed'
+        );
+      }
+      if (!options.dryRun) {
+        pr = deps.fetchPr(repo, member.pr_number);
+        if (pr.headRefOid !== indexRefresh.platform_integration_head_sha) {
+          return withTerminalFailureStatus(
+            { ok: false, phase: 'platform_index_refresh_refetch', refresh: indexRefresh, pr, merges },
+            deps,
+            platformStatus,
+            options,
+            'Bundle platform index refresh head mismatch after push'
+          );
+        }
+        const refreshedMember = memberStateFromPr(PLATFORM_REPO, record.controller, pr, currentPlatformMain, deps);
+        if (!refreshedMember.authorization_inherited || refreshedMember.failures.length > 0) {
+          return withTerminalFailureStatus(
+            { ok: false, phase: 'platform_index_refresh_lineage', refresh: indexRefresh, member: refreshedMember, merges },
+            deps,
+            platformStatus,
+            options,
+            'Bundle platform index refresh lineage invalid'
+          );
+        }
+        Object.assign(member, refreshedMember);
+        platformStatus = platformStatusTarget(pr);
+        const refreshedPending = setPlatformIntegrationStatus(
+          deps,
+          pr.headRefOid,
+          'pending',
+          'Authorized bundle integration validating refreshed index descendant',
+          pr.url,
+          options
+        );
+        if (!refreshedPending.ok) {
+          return { ok: false, phase: 'integration_status', integration_status: refreshedPending, merges };
+        }
+      }
+      const refreshedCi = deps.refreshPlatformPrCi(pr, {
+        ...options,
+        expectedLessonSha: currentLessonMain,
+      });
+      if (!refreshedCi.ok) {
+        return withTerminalFailureStatus(
+          { ok: false, phase: 'platform_pr_ci_refresh', refreshed: refreshedCi, refresh: indexRefresh, merges },
+          deps,
+          platformStatus,
+          options,
+          `Bundle platform CI refresh failed: ${refreshedCi.failure || 'unknown'}`
+        );
+      }
+      if (!options.dryRun) {
+        pr = deps.fetchPr(repo, member.pr_number);
+        if (pr.headRefOid !== member.integration_head_sha) {
+          return withTerminalFailureStatus(
+            { ok: false, phase: 'platform_head_changed_after_ci', previous_head_sha: member.integration_head_sha, pr, merges },
+            deps,
+            platformStatus,
+            options,
+            'Bundle platform head changed after refreshed CI'
+          );
+        }
+        const payloadReadiness = deps.fetchReadinessComment(
+          PLATFORM_REPO,
+          member.pr_number,
+          member.reviewed_payload_head_sha
+        );
+        const integrationReadiness = deps.generateBundleIntegrationReadiness({
+          authorization: record,
+          branchProtection: platformBranchProtection,
+          compatibility,
+          platformPayloadSha: member.reviewed_payload_head_sha,
+          platformPr: pr,
+          lessonPayloadSha: lessonMemberState.reviewed_payload_head_sha,
+          lessonMergeCommitSha: currentLessonMain,
+          lessonPr,
+          refreshResult: indexRefresh,
+          lineage: member.lineage,
+          payloadReadiness,
+          ci: {
+            status: 'success',
+            platform_sha: pr.headRefOid,
+            lesson_sha: currentLessonMain,
+            run_id: refreshedCi.run && (refreshedCi.run.databaseId || refreshedCi.run.id),
+          },
+        }, options);
+        if (!integrationReadiness.ok) {
+          return withTerminalFailureStatus(
+            { ok: false, phase: 'integration_head_readiness', readiness: integrationReadiness, refresh: indexRefresh, merges },
+            deps,
+            platformStatus,
+            options,
+            'Bundle refreshed integration-head readiness failed'
+          );
+        }
+        pr = deps.fetchPr(repo, member.pr_number);
+      }
+    }
+    const finalPlatformMain = deps.fetchMainSha(PLATFORM_REPO);
+    const finalLessonMain = deps.fetchMainSha(LESSON_REPO);
+    if (
+      finalPlatformMain !== expectedMain[PLATFORM_REPO] ||
+      finalLessonMain !== expectedMain[LESSON_REPO]
+    ) {
+      return withTerminalFailureStatus({
+        ok: false,
+        phase: 'base_changed_before_final_merge',
+        failures: ['compatibility_recompute_required'],
+        expected_main: { ...expectedMain },
+        current_main: {
+          [PLATFORM_REPO]: finalPlatformMain,
+          [LESSON_REPO]: finalLessonMain,
+        },
+        merges,
+      }, deps, platformStatus, options, 'Bundle compatibility recompute required before final member merge');
     }
     const preMerge = validateMemberPreflight(repo, pr, member, deps, {
       requireValidatePlatform: repo === PLATFORM_REPO,
@@ -1420,7 +1797,7 @@ function integrateBundle(options = {}) {
     }
     merges.push({ repo, pr_number: member.pr_number, merge, ...merged });
     expectedMain[repo] = deps.fetchMainSha(repo);
-    if (index === 0) {
+    if (index === 0 && !(order === 'lesson-first' && repo === LESSON_REPO)) {
       const intermediateCi = waitForIntermediatePlatformCi(deps, options);
       if (!intermediateCi.ok) {
         return withTerminalFailureStatus(
@@ -1452,7 +1829,15 @@ function integrateBundle(options = {}) {
       `Bundle final CI failed: ${finalCi.failure || 'unknown'}`
     );
   }
-  return { ok: true, phase: 'merged_bundle', order, compatibility, merges, final_ci: finalCi };
+  return {
+    ok: true,
+    phase: 'merged_bundle',
+    order,
+    compatibility,
+    bundle_state: bundleStateForResult(record, compatibility, order, platformPr, lessonPr, platformMember, lessonMemberState, merges),
+    merges,
+    final_ci: finalCi,
+  };
 }
 
 function runCli(argv) {
@@ -1491,8 +1876,10 @@ module.exports = {
   LESSON_REPO,
   PLATFORM_REPO,
   INTEGRATION_CONTEXT,
+  generateBundleIntegrationReadiness,
   integrateBundle,
   preflightCrossRepoPermissions,
+  refreshPlatformPrCi,
   selectLatestRunForHead,
   setPlatformIntegrationStatus,
   validateCompatibilityWorkflowProvenance,

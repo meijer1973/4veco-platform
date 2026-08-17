@@ -2,15 +2,21 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const {
+  generateBundleIntegrationReadiness,
   integrateBundle,
   INTEGRATION_CONTEXT,
   PLATFORM_REPO,
+  refreshPlatformPrCi,
   LESSON_REPO,
   selectLatestRunForHead,
   setPlatformIntegrationStatus,
   validateCompatibilityWorkflowProvenance,
   validatePlatformCiEvidence,
 } = require('./integrate-authorized-bundle');
+const { lessonFirstIntegrationContract } = require('./cross-repo-bundle-compatibility');
+const { INDEX_PATHS, refreshBundleAgentIndexes } = require('./refresh-bundle-agent-indexes');
+const { mergeSupplementalEvidence } = require('./review-pr-readiness');
+const { classifyPrReadiness, validateDecision } = require('./pr-readiness-router');
 
 const platformBase = '1'.repeat(40);
 const platformHead = '2'.repeat(40);
@@ -18,6 +24,111 @@ const lessonBase = '3'.repeat(40);
 const lessonHead = '4'.repeat(40);
 const platformMerge = '5'.repeat(40);
 const lessonMerge = '6'.repeat(40);
+
+function platformCiEvidence(platformSha, lessonSha) {
+  return {
+    workflow: 'platform-ci',
+    job: 'validate-platform',
+    github_run_id: '202',
+    github_run_attempt: '1',
+    github_ref: 'refs/heads/main',
+    github_sha: platformSha,
+    platform: {
+      repository: PLATFORM_REPO,
+      path: '4veco-platform',
+      head_sha: platformSha,
+      branch_or_ref: 'main',
+    },
+    lessen: {
+      repository: LESSON_REPO,
+      path: '4veco-lessen',
+      head_sha: lessonSha,
+      branch_or_ref: 'main',
+    },
+    node_version: 'v20.0.0',
+    python_version: 'Python 3.13.0',
+    package_lock_sha256: 'a'.repeat(64),
+    created_at_utc: '2026-08-14T00:00:00.000Z',
+  };
+}
+
+function gitExec(args, cwd) {
+  const result = require('child_process').spawnSync('git', args, { cwd, encoding: 'utf8' });
+  if (result.status !== 0) {
+    throw new Error(`git ${args.join(' ')} failed: ${(result.stderr || result.stdout || '').trim()}`);
+  }
+  return result.stdout.trim();
+}
+
+function initGitRemote(root, name) {
+  const work = path.join(root, `${name}-work`);
+  const bare = path.join(root, `${name}.git`);
+  fs.mkdirSync(work, { recursive: true });
+  gitExec(['init', '-b', 'main'], work);
+  gitExec(['config', 'core.autocrlf', 'false'], work);
+  gitExec(['init', '--bare', bare], root);
+  gitExec(['remote', 'add', 'origin', bare], work);
+  return { work, bare };
+}
+
+function gitCommit(cwd, message) {
+  gitExec(['add', '.'], cwd);
+  gitExec(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', message], cwd);
+  return gitExec(['rev-parse', 'HEAD'], cwd);
+}
+
+function setupRealBundleRepos() {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'bundle-integration-git-'));
+  const platform = initGitRemote(root, 'platform');
+  const lesson = initGitRemote(root, 'lesson');
+  fs.writeFileSync(path.join(platform.work, 'README.md'), '# platform\n');
+  for (const relativePath of INDEX_PATHS) {
+    const absolutePath = path.join(platform.work, relativePath);
+    fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
+    fs.writeFileSync(absolutePath, relativePath.endsWith('.json') ? '{}\n' : '# stale\n');
+  }
+  const platformBaseSha = gitCommit(platform.work, 'platform base');
+  gitExec(['checkout', '-b', 'codex/controller'], platform.work);
+  fs.writeFileSync(path.join(platform.work, 'controller.txt'), 'payload\n');
+  const platformPayloadSha = gitCommit(platform.work, 'platform payload');
+  gitExec(['push', '-u', 'origin', 'main'], platform.work);
+  gitExec(['push', '-u', 'origin', 'codex/controller'], platform.work);
+
+  fs.writeFileSync(path.join(lesson.work, 'AGENTS.md'), 'old route\n');
+  const lessonBaseSha = gitCommit(lesson.work, 'lesson base');
+  gitExec(['checkout', '-b', 'agent/lesson-payload'], lesson.work);
+  fs.writeFileSync(path.join(lesson.work, 'AGENTS.md'), 'canonical route\n');
+  const lessonPayloadSha = gitCommit(lesson.work, 'lesson payload');
+  gitExec(['push', '-u', 'origin', 'main'], lesson.work);
+  gitExec(['push', '-u', 'origin', 'agent/lesson-payload'], lesson.work);
+  return {
+    root,
+    platform,
+    lesson,
+    platformBaseSha,
+    platformPayloadSha,
+    lessonBaseSha,
+    lessonPayloadSha,
+  };
+}
+
+function bareRef(bare, ref) {
+  return gitExec(['--git-dir', bare, 'rev-parse', ref], path.dirname(bare));
+}
+
+function mergeRemoteBranch(repo, branch, message) {
+  gitExec(['fetch', 'origin'], repo.work);
+  gitExec(['checkout', 'main'], repo.work);
+  gitExec(['merge', '--ff-only', 'origin/main'], repo.work);
+  gitExec([
+    '-c', 'user.name=Test',
+    '-c', 'user.email=test@example.com',
+    'merge', '--no-ff', `origin/${branch}`, '-m', message,
+  ], repo.work);
+  const mergeSha = gitExec(['rev-parse', 'HEAD'], repo.work);
+  gitExec(['push', 'origin', 'main'], repo.work);
+  return mergeSha;
+}
 
 function authorization() {
   return {
@@ -72,12 +183,45 @@ function compatibility(order = 'lesson-first', overrides = {}) {
     lesson_candidate_sha: lessonHead,
     ...(overrides.exact_members || {}),
   };
+  const state = (name, status, platformSha, lessonSha) => ({
+    bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+    state: name,
+    status,
+    platform_sha: platformSha,
+    lesson_sha: lessonSha,
+    exact_members: exactMembers,
+    commands: [],
+    failed_command: status === 'success' ? null : 'expected incompatible order',
+  });
+  const states = {
+    'platform-first': state(
+      'platform-first',
+      order === 'platform-first' || order === 'both' ? 'success' : 'failure',
+      exactMembers.platform_candidate_sha,
+      exactMembers.lesson_base_sha
+    ),
+    'lesson-first': state(
+      'lesson-first',
+      order === 'lesson-first' || order === 'both' ? 'success' : 'failure',
+      exactMembers.platform_base_sha,
+      exactMembers.lesson_candidate_sha
+    ),
+    'bundle-final': state(
+      'bundle-final',
+      'success',
+      exactMembers.platform_candidate_sha,
+      exactMembers.lesson_candidate_sha
+    ),
+  };
   return {
     ok: true,
+    schema_version: 2,
     bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
     exact_members: exactMembers,
     permitted_merge_orders: order === 'both' ? ['platform-first', 'lesson-first'] : [order],
     recommended_merge_order: order === 'both' ? 'lesson-first' : order,
+    integration_contract: lessonFirstIntegrationContract(),
+    states,
     failures: [],
     ...overrides,
     exact_members: exactMembers,
@@ -107,9 +251,87 @@ function branchProtectionSummary(activated = false) {
     ok: true,
     failures: [],
     integration_authorized_required: activated,
+    required_approving_review_count: 0,
+    approval_count_source: 'test-fixture',
+    approval_count_observable: true,
+    requires_distinct_approval: false,
     observed: {
       required_status_checks: {
         contexts: activated ? ['validate-platform', 'integration-authorized'] : ['validate-platform'],
+      },
+    },
+  };
+}
+
+function integrationReadinessEvidence(headSha) {
+  const evidence = JSON.parse(fs.readFileSync(path.join(
+    process.cwd(),
+    'reports',
+    'fixtures',
+    'pr-readiness-router',
+    'live-governance-human.json'
+  ), 'utf8'));
+  evidence.reviewed_pr = {
+    ...evidence.reviewed_pr,
+    repo: PLATFORM_REPO,
+    number: 140,
+    url: `https://github.com/${PLATFORM_REPO}/pull/140`,
+    state: 'OPEN',
+    was_draft: false,
+    base: 'main',
+    head_sha: headSha,
+  };
+  evidence.proof = {
+    ...evidence.proof,
+    ci: {
+      ...evidence.proof.ci,
+      head_sha: headSha,
+      conclusion: 'success',
+      checks: [{ name: 'validate-platform', conclusion: 'SUCCESS', status: 'COMPLETED' }],
+    },
+    changed_paths_verified: true,
+    post_lead_review_changed_paths: [...INDEX_PATHS],
+  };
+  return evidence;
+}
+
+function productionReviewAdapter(headSha) {
+  const baseEvidence = integrationReadinessEvidence(headSha);
+  const runReview = jest.fn(({ supplemental }) => {
+    const decision = classifyPrReadiness(mergeSupplementalEvidence(baseEvidence, supplemental));
+    validateDecision(decision);
+    return { decision, markdown: 'readiness' };
+  });
+  return { baseEvidence, runReview };
+}
+
+function payloadReadinessDecision() {
+  return {
+    ok: true,
+    decision: {
+      route: 'READY_FOR_HUMAN_REVIEW',
+      throughput: { class: 'cross_repo_bundle', authority_class: 'high_authority', level: 'L4' },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: {
+        viable: false,
+        target: null,
+        reason: 'This exact two-PR bundle is ready for one coordinated owner review.',
+      },
+      proof: {
+        checkers: [],
+        lead_review_path: 'subagent:payload-review',
+        lead_review_result: 'PASS',
+        lead_reviewed_sha: platformHead,
+        bundle: {
+          paired_lead_reviews: [{
+            repository: LESSON_REPO,
+            pr_number: 34,
+            reviewed_commit_sha: lessonHead,
+            review_result: 'PASS',
+            review_path: 'subagent:lesson-review',
+          }],
+        },
       },
     },
   };
@@ -126,6 +348,8 @@ function harness(overrides = {}) {
     ciTriggers: [],
     ciWaits: [],
     refreshes: [],
+    indexRefreshes: [],
+    readinessRefreshes: [],
     updates: [],
   };
   const fetchPr = jest.fn((repo) => {
@@ -186,6 +410,7 @@ function harness(overrides = {}) {
       ok: input.payload_ancestor_of_integration_head === true,
       reviewed_payload_head_sha: input.reviewed_payload_head_sha,
       integration_head_sha: input.integration_head_sha,
+      payload_ancestor_of_integration_head: input.payload_ancestor_of_integration_head === true,
       authorization_inherited: input.payload_ancestor_of_integration_head === true,
       requires_integration_delta_lead_review: false,
       requires_deterministic_refresh: false,
@@ -265,6 +490,33 @@ function harness(overrides = {}) {
       });
       return { ok: true, run: { conclusion: 'success' } };
     }),
+    refreshBundleAgentIndexes: jest.fn((refreshOptions = {}) => {
+      const item = {
+        platformHeadSha: refreshOptions.platformPr.headRefOid,
+        lessonMergeSha: refreshOptions.lessonMergeSha,
+      };
+      calls.events.push({ type: 'refresh_agent_indexes', ...item });
+      calls.indexRefreshes.push(item);
+      return {
+        ok: true,
+        status: 'reused',
+        previous_platform_head_sha: refreshOptions.platformPr.headRefOid,
+        platform_integration_head_sha: refreshOptions.platformPr.headRefOid,
+        lesson_merge_commit_sha: refreshOptions.lessonMergeSha,
+        changed_paths: INDEX_PATHS,
+        trusted_executor: 'platform-main',
+        hashes: Object.fromEntries(INDEX_PATHS.map((itemPath) => [itemPath, 'a'.repeat(64)])),
+      };
+    }),
+    generateBundleIntegrationReadiness: jest.fn((readinessOptions = {}) => {
+      const item = {
+        platformHeadSha: readinessOptions.platformPr.headRefOid,
+        lessonMergeSha: readinessOptions.lessonMergeCommitSha,
+      };
+      calls.events.push({ type: 'integration_head_readiness', ...item });
+      calls.readinessRefreshes.push(item);
+      return { ok: true, decision: { route: 'READY_FOR_HUMAN_REVIEW' } };
+    }),
     ...(overrides.deps || {}),
   };
   return {
@@ -281,21 +533,358 @@ function harness(overrides = {}) {
 }
 
 describe('authorized cross-repo bundle integration', () => {
+  test('real Git lesson-first sequence refreshes the distinct lesson merge before platform merge', () => {
+    const fixture = setupRealBundleRepos();
+    try {
+      let lessonMerged = false;
+      let lessonMergeSha = null;
+      let platformMergeSha = null;
+      let callsRef;
+      const record = authorization();
+      record.controller.reviewed_payload_head_sha = fixture.platformPayloadSha;
+      record.members[0].reviewed_payload_head_sha = fixture.lessonPayloadSha;
+      const exactMembers = {
+        platform_base_sha: fixture.platformBaseSha,
+        platform_candidate_sha: fixture.platformPayloadSha,
+        lesson_base_sha: fixture.lessonBaseSha,
+        lesson_candidate_sha: fixture.lessonPayloadSha,
+      };
+      const setup = harness({
+        options: { authorization: record },
+        deps: {
+          fetchMainSha: jest.fn((repo) => {
+            if (callsRef && callsRef.events.some((event) => event.type === 'integration_head_readiness')) {
+              callsRef.events.push({ type: 'final_main_refetch', repo });
+            }
+            return bareRef(
+              repo === PLATFORM_REPO ? fixture.platform.bare : fixture.lesson.bare,
+              'refs/heads/main'
+            );
+          }),
+          fetchPr: jest.fn((repo) => {
+            if (repo === PLATFORM_REPO) {
+              return pr(repo, 140, bareRef(fixture.platform.bare, 'refs/heads/codex/controller'), {
+                headRefName: 'codex/controller',
+              });
+            }
+            return pr(repo, 34, fixture.lessonPayloadSha, lessonMerged ? {
+              state: 'MERGED',
+              mergeCommit: { oid: lessonMergeSha },
+            } : { headRefName: 'agent/lesson-payload' });
+          }),
+          recomputeCompatibility: jest.fn(() => compatibility('lesson-first', { exact_members: exactMembers })),
+          summarizeLineage: jest.fn((input) => {
+            if (
+              callsRef &&
+              input.reviewed_payload_head_sha === fixture.platformPayloadSha &&
+              input.integration_head_sha !== fixture.platformPayloadSha
+            ) {
+              callsRef.events.push({ type: 'rebuilt_lineage', headSha: input.integration_head_sha });
+            }
+            return {
+              ok: true,
+              reviewed_payload_head_sha: input.reviewed_payload_head_sha,
+              integration_head_sha: input.integration_head_sha,
+              payload_ancestor_of_integration_head: true,
+              authorization_inherited: true,
+              requires_integration_delta_lead_review: false,
+              requires_deterministic_refresh: false,
+              failures: [],
+              base_drift: { classification: 'no_substantive_overlap' },
+            };
+          }),
+          mergePr: jest.fn((repo, prNumber, headSha) => {
+            if (repo === LESSON_REPO) {
+              lessonMergeSha = mergeRemoteBranch(fixture.lesson, 'agent/lesson-payload', 'merge lesson payload');
+              lessonMerged = true;
+            } else {
+              platformMergeSha = mergeRemoteBranch(fixture.platform, 'codex/controller', 'merge platform controller');
+            }
+            callsRef.events.push({ type: 'merge', repo, prNumber, headSha });
+            callsRef.merges.push({ repo, prNumber, headSha });
+            return { merged: true };
+          }),
+          fetchMergedPr: jest.fn((repo) => ({
+            state: 'MERGED',
+            mergeCommit: { oid: repo === PLATFORM_REPO ? platformMergeSha : lessonMergeSha },
+          })),
+          refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
+            const result = refreshBundleAgentIndexes({
+              ...refreshOptions,
+              trustedRoot: path.resolve(__dirname, '..', '..'),
+              platformRemote: fixture.platform.bare,
+              lessonRemote: fixture.lesson.bare,
+              fetchPlatformPr: () => ({
+                headRefOid: bareRef(fixture.platform.bare, 'refs/heads/codex/controller'),
+              }),
+            });
+            callsRef.events.push({ type: 'refresh_agent_indexes', headSha: result.platform_integration_head_sha });
+            return result;
+          }),
+          refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
+            const evidence = validatePlatformCiEvidence(
+              platformCiEvidence(platformPr.headRefOid, refreshOptions.expectedLessonSha),
+              { platformSha: platformPr.headRefOid, lessonSha: lessonMergeSha }
+            );
+            callsRef.events.push({ type: 'refresh_platform_pr_ci', headSha: platformPr.headRefOid });
+            return { ok: evidence.ok, run: { conclusion: 'success', databaseId: 204 }, evidence };
+          }),
+          generateBundleIntegrationReadiness: jest.fn((readinessOptions) => {
+            callsRef.events.push({
+              type: 'integration_head_readiness',
+              headSha: readinessOptions.platformPr.headRefOid,
+            });
+            return { ok: true, decision: { route: 'READY_FOR_HUMAN_REVIEW' } };
+          }),
+        },
+      });
+      callsRef = setup.calls;
+      const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+      expect(fixture.lessonPayloadSha).not.toBe(lessonMergeSha);
+      expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+      const refreshedHead = setup.calls.events.find((event) => event.type === 'refresh_agent_indexes').headSha;
+      const lessonIndex = JSON.parse(gitExec([
+        '--git-dir', fixture.platform.bare,
+        'show', `${refreshedHead}:reports/github-agent-index-lessen.json`,
+      ], fixture.root));
+      expect(lessonIndex.source_commit).toBe(lessonMergeSha);
+      expect(bareRef(fixture.platform.bare, 'refs/heads/main')).toBe(platformMergeSha);
+      const eventTypes = setup.calls.events.map((event) => event.type);
+      expect(eventTypes.indexOf('merge')).toBeLessThan(eventTypes.indexOf('refresh_agent_indexes'));
+      expect(eventTypes.indexOf('refresh_agent_indexes')).toBeLessThan(eventTypes.indexOf('rebuilt_lineage'));
+      expect(eventTypes.indexOf('rebuilt_lineage')).toBeLessThan(eventTypes.indexOf('refresh_platform_pr_ci'));
+      expect(eventTypes.indexOf('refresh_platform_pr_ci')).toBeLessThan(eventTypes.indexOf('integration_head_readiness'));
+      const readinessEvent = setup.calls.events.findIndex((event) => event.type === 'integration_head_readiness');
+      const finalMainRefetch = setup.calls.events.findIndex((event) => event.type === 'final_main_refetch');
+      const successStatus = setup.calls.events.findIndex((event) => event.type === 'status' && event.state === 'success');
+      const platformMerge = setup.calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO);
+      const finalCi = setup.calls.events.findIndex((event) => event.type === 'wait_ci');
+      expect(readinessEvent).toBeLessThan(finalMainRefetch);
+      expect(finalMainRefetch).toBeLessThan(successStatus);
+      expect(successStatus).toBeLessThan(platformMerge);
+      expect(platformMerge).toBeLessThan(finalCi);
+      expect(setup.calls.ciWaits[0]).toMatchObject({
+        headSha: platformMergeSha,
+        expectedPlatformSha: platformMergeSha,
+        expectedLessonSha: lessonMergeSha,
+      });
+    } finally {
+      fs.rmSync(fixture.root, { recursive: true, force: true });
+    }
+  }, 60000);
+
+  test('builds and applies refreshed-head readiness without rewriting payload compatibility', () => {
+    const refreshedHead = '8'.repeat(40);
+    const refreshResult = {
+      ok: true,
+      status: 'created',
+      previous_platform_head_sha: platformHead,
+      platform_integration_head_sha: refreshedHead,
+      lesson_merge_commit_sha: lessonMerge,
+      changed_paths: INDEX_PATHS,
+      trusted_executor: 'platform-main',
+      hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+      metadata: {
+        platform_source_commit: platformHead,
+        platform_source_branch: 'codex/pr-140',
+        lesson_source_commit: lessonMerge,
+        lesson_source_branch: 'origin/main',
+        generated_at: '2026-08-14T00:00:00.000Z',
+      },
+    };
+    const { baseEvidence, runReview } = productionReviewAdapter(refreshedHead);
+    const applyLiveDecision = jest.fn(() => ({ ok: true, comment_action: 'created' }));
+    const result = generateBundleIntegrationReadiness({
+      payloadReadiness: payloadReadinessDecision(),
+      authorization: authorization(),
+      branchProtection: branchProtectionSummary(false),
+      compatibility: compatibility('lesson-first'),
+      platformPayloadSha: platformHead,
+      platformPr: pr(PLATFORM_REPO, 140, refreshedHead),
+      lessonPayloadSha: lessonHead,
+      lessonMergeCommitSha: lessonMerge,
+      lessonPr: pr(LESSON_REPO, 34, lessonHead, {
+        state: 'MERGED',
+        mergeCommit: { oid: lessonMerge },
+      }),
+      refreshResult,
+      lineage: {
+        reviewed_payload_head_sha: platformHead,
+        integration_head_sha: refreshedHead,
+        payload_ancestor_of_integration_head: true,
+        authorization_inherited: true,
+        failures: [],
+      },
+      ci: {
+        status: 'success',
+        platform_sha: refreshedHead,
+        lesson_sha: lessonMerge,
+        run_id: 202,
+      },
+    }, { runReview, applyLiveDecision });
+
+    expect(result).toMatchObject({ ok: true, phase: 'integration_head_readiness' });
+    expect(result.decision.route).toBe('READY_FOR_HUMAN_REVIEW');
+    expect(result.integration_refresh).toMatchObject({
+      platform_payload_sha: platformHead,
+      platform_integration_head_sha: refreshedHead,
+      lesson_payload_sha: lessonHead,
+      lesson_merge_commit_sha: lessonMerge,
+    });
+    const supplemental = runReview.mock.calls[0][0].supplemental;
+    expect(supplemental.bundle.exact_members.platform_candidate_sha).toBe(platformHead);
+    expect(supplemental.bundle.controller.integration_head_sha).toBe(refreshedHead);
+    expect(supplemental.bundle.integration_refresh).toEqual(result.integration_refresh);
+    expect(supplemental.proof).not.toHaveProperty('bundle');
+    expect(applyLiveDecision).toHaveBeenCalledTimes(1);
+
+    const legacySupplemental = {
+      ...supplemental,
+      proof: { ...supplemental.proof, bundle: supplemental.bundle },
+    };
+    delete legacySupplemental.bundle;
+    const legacyDecision = classifyPrReadiness(
+      mergeSupplementalEvidence(baseEvidence, legacySupplemental)
+    );
+    validateDecision(legacyDecision);
+    expect(legacyDecision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(legacyDecision.reason_codes).toEqual(expect.arrayContaining([
+      'bundle_id_missing',
+      'bundle_controller_metadata_incomplete',
+      'bundle_compatibility_missing',
+    ]));
+
+    const mixed = generateBundleIntegrationReadiness({
+      payloadReadiness: { ok: true, decision: { route: 'READY_FOR_HUMAN_REVIEW', proof: {} } },
+      authorization: authorization(),
+      compatibility: compatibility('lesson-first'),
+      platformPayloadSha: platformHead,
+      platformPr: pr(PLATFORM_REPO, 140, refreshedHead),
+      lessonPayloadSha: lessonHead,
+      lessonMergeCommitSha: lessonMerge,
+      refreshResult: { ...refreshResult, lesson_merge_commit_sha: lessonHead },
+      lineage: result.integration_refresh.lineage,
+      ci: result.integration_refresh.ci,
+    }, { runReview, applyLiveDecision });
+    expect(mixed).toMatchObject({ ok: false, phase: 'integration_refresh_proof' });
+    expect(mixed.failures).toContain('integration_refresh result lesson mismatch');
+    expect(runReview).toHaveBeenCalledTimes(1);
+
+    const publicationFailure = generateBundleIntegrationReadiness({
+      payloadReadiness: payloadReadinessDecision(),
+      authorization: authorization(),
+      branchProtection: branchProtectionSummary(false),
+      compatibility: compatibility('lesson-first'),
+      platformPayloadSha: platformHead,
+      platformPr: pr(PLATFORM_REPO, 140, refreshedHead),
+      lessonPayloadSha: lessonHead,
+      lessonMergeCommitSha: lessonMerge,
+      lessonPr: pr(LESSON_REPO, 34, lessonHead),
+      refreshResult,
+      lineage: result.integration_refresh.lineage,
+      ci: result.integration_refresh.ci,
+    }, {
+      runReview,
+      applyLiveDecision: jest.fn(() => ({ ok: false, failure: 'comment_write_failed' })),
+    });
+    expect(publicationFailure).toMatchObject({
+      ok: false,
+      phase: 'integration_head_readiness_publication',
+    });
+  });
+
+  test('reuses a completed exact-coordinate platform CI run without dispatching another run', () => {
+    const refreshedHead = '8'.repeat(40);
+    const existingRun = {
+      databaseId: 203,
+      headSha: refreshedHead,
+      status: 'completed',
+      conclusion: 'success',
+    };
+    const trigger = jest.fn();
+    const wait = jest.fn();
+    const verify = jest.fn((_run, expected) => ({
+      ok: expected.platformSha === refreshedHead && expected.lessonSha === lessonMerge,
+      run: existingRun,
+      evidence: validatePlatformCiEvidence(
+        platformCiEvidence(refreshedHead, lessonMerge),
+        expected
+      ),
+    }));
+    const result = refreshPlatformPrCi(pr(PLATFORM_REPO, 140, refreshedHead), {
+      expectedLessonSha: lessonMerge,
+      findWorkflowRunForHead: jest.fn(() => existingRun),
+      verifyPlatformCiRun: verify,
+      triggerPlatformCiForRef: trigger,
+      waitForPlatformHeadCi: wait,
+    });
+
+    expect(result).toMatchObject({ ok: true, reused: true, head_sha: refreshedHead });
+    expect(verify).toHaveBeenCalledWith(existingRun, {
+      platformSha: refreshedHead,
+      lessonSha: lessonMerge,
+    }, expect.any(Object));
+    expect(trigger).not.toHaveBeenCalled();
+    expect(wait).not.toHaveBeenCalled();
+  });
+
+  test('does not reuse a green platform CI run whose lesson evidence is stale', () => {
+    const refreshedHead = '8'.repeat(40);
+    const existingRun = {
+      databaseId: 203,
+      headSha: refreshedHead,
+      status: 'completed',
+      conclusion: 'success',
+    };
+    const trigger = jest.fn();
+    const wait = jest.fn(() => ({ ok: false, failure: 'replacement_run_failed' }));
+    const result = refreshPlatformPrCi(pr(PLATFORM_REPO, 140, refreshedHead), {
+      expectedLessonSha: lessonMerge,
+      findWorkflowRunForHead: jest.fn(() => existingRun),
+      verifyPlatformCiRun: jest.fn(() => ({
+        ok: false,
+        failure: 'platform_ci_evidence_mismatch',
+        evidence: validatePlatformCiEvidence(
+          platformCiEvidence(refreshedHead, lessonHead),
+          { platformSha: refreshedHead, lessonSha: lessonMerge }
+        ),
+      })),
+      latestWorkflowRunDatabaseId: jest.fn(() => 203),
+      triggerPlatformCiForRef: trigger,
+      waitForPlatformHeadCi: wait,
+    });
+
+    expect(result).toMatchObject({ ok: false, failure: 'replacement_run_failed' });
+    expect(trigger).toHaveBeenCalledTimes(1);
+    expect(wait).toHaveBeenCalledTimes(1);
+  });
+
   test('lesson-first state green merges lesson first, then platform', () => {
     const { calls, options } = harness();
     const result = integrateBundle(options);
 
     expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    expect(result.bundle_state).toMatchObject({
+      controller_pr_head: `${PLATFORM_REPO}#140@${platformHead}`,
+      member_pr_heads: [`${LESSON_REPO}#34@${lessonHead}`],
+      merged_members: [`${LESSON_REPO}#34@${lessonHead}`],
+      open_members: [],
+      delegated_branch_protection_proof: 'controller',
+      merge_order_proof: 'lesson-first',
+      residual_integration_mode: 'full bundle',
+      controller_state: 'MERGED',
+    });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
-    expect(calls.ciTriggers).toHaveLength(2);
+    expect(calls.ciTriggers).toHaveLength(1);
+    expect(calls.indexRefreshes).toEqual([{ platformHeadSha: platformHead, lessonMergeSha: lessonMerge }]);
     expect(calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
     expect(calls.ciWaits[0]).toMatchObject({
-      headSha: platformBase,
-      expectedPlatformSha: platformBase,
+      headSha: platformMerge,
+      expectedPlatformSha: platformMerge,
       expectedLessonSha: lessonMerge,
-      minDatabaseId: 100,
     });
-    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'success']);
+    expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'pending', 'success']);
     expect(calls.statuses[calls.statuses.length - 1]).toMatchObject({
       repo: PLATFORM_REPO,
       sha: platformHead,
@@ -331,6 +920,214 @@ describe('authorized cross-repo bundle integration', () => {
     expect(calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
   });
 
+  test('lesson-first validates a distinct index-only integration head before platform merge', () => {
+    const refreshedHead = '8'.repeat(40);
+    let callsRef;
+    let currentPlatformHead = platformHead;
+    const setup = harness({
+      deps: {
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, currentPlatformHead);
+          return pr(repo, 34, lessonHead);
+        }),
+        refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
+          callsRef.events.push({ type: 'refresh_agent_indexes', platformHeadSha: refreshOptions.platformPr.headRefOid });
+          currentPlatformHead = refreshedHead;
+          return {
+            ok: true,
+            status: 'created',
+            previous_platform_head_sha: platformHead,
+            platform_integration_head_sha: refreshedHead,
+            lesson_merge_commit_sha: lessonMerge,
+            changed_paths: INDEX_PATHS,
+            trusted_executor: 'platform-main',
+            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+          };
+        }),
+        refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
+          callsRef.events.push({
+            type: 'refresh_platform_pr_ci',
+            headSha: platformPr.headRefOid,
+            expectedLessonSha: refreshOptions.expectedLessonSha,
+          });
+          const evidence = validatePlatformCiEvidence(
+            platformCiEvidence(platformPr.headRefOid, refreshOptions.expectedLessonSha),
+            {
+              platformSha: platformPr.headRefOid,
+              lessonSha: lessonMerge,
+            }
+          );
+          return {
+            ok: evidence.ok,
+            failure: evidence.ok ? null : 'platform_ci_evidence_mismatch',
+            run: { conclusion: evidence.ok ? 'success' : 'failure', databaseId: 202 },
+            evidence,
+          };
+        }),
+        generateBundleIntegrationReadiness: jest.fn((readinessOptions) => {
+          callsRef.events.push({
+            type: 'integration_head_readiness',
+            platformHeadSha: readinessOptions.platformPr.headRefOid,
+            lessonMergeSha: readinessOptions.lessonMergeCommitSha,
+          });
+          return { ok: true, decision: { route: 'READY_FOR_HUMAN_REVIEW' } };
+        }),
+      },
+    });
+    callsRef = setup.calls;
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    expect(setup.calls.merges).toEqual([
+      { repo: LESSON_REPO, prNumber: 34, headSha: lessonHead },
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: refreshedHead },
+    ]);
+    const lessonMergeEvent = setup.calls.events.findIndex((event) => event.type === 'merge' && event.repo === LESSON_REPO);
+    const refreshEvent = setup.calls.events.findIndex((event) => event.type === 'refresh_agent_indexes');
+    const ciEvent = setup.calls.events.findIndex((event) => event.type === 'refresh_platform_pr_ci');
+    const readinessEvent = setup.calls.events.findIndex((event) => event.type === 'integration_head_readiness');
+    const successEvent = setup.calls.events.findIndex((event) => event.type === 'status' && event.state === 'success');
+    const platformMergeEvent = setup.calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO);
+    expect(lessonMergeEvent).toBeLessThan(refreshEvent);
+    expect(refreshEvent).toBeLessThan(ciEvent);
+    expect(ciEvent).toBeLessThan(readinessEvent);
+    expect(readinessEvent).toBeLessThan(successEvent);
+    expect(successEvent).toBeLessThan(platformMergeEvent);
+  });
+
+  test.each([
+    ['index refresh commit', {
+      refreshBundleAgentIndexes: jest.fn(() => { throw new Error('injected commit failure'); }),
+    }, 'platform_index_refresh'],
+    ['refreshed CI', {
+      refreshPlatformPrCi: jest.fn(() => ({ ok: false, failure: 'ci failed' })),
+    }, 'platform_pr_ci_refresh'],
+    ['integration-head readiness', {
+      generateBundleIntegrationReadiness: jest.fn(() => ({ ok: false, failure: 'readiness failed' })),
+    }, 'integration_head_readiness'],
+  ])('lesson-first %s failure cannot merge platform or mint success', (_label, dependencyOverride, phase) => {
+    const { calls, options, deps } = harness({ deps: dependencyOverride });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase });
+    expect(calls.merges.some((item) => item.repo === PLATFORM_REPO)).toBe(false);
+    expect(calls.statuses.some((item) => item.state === 'success')).toBe(false);
+  });
+
+  test('lesson-first rejects refreshed CI bound to the payload lesson SHA', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        refreshPlatformPrCi: jest.fn((platformPr) => {
+          const evidence = validatePlatformCiEvidence(
+            platformCiEvidence(platformPr.headRefOid, lessonHead),
+            { platformSha: platformPr.headRefOid, lessonSha: lessonMerge }
+          );
+          return {
+            ok: evidence.ok,
+            failure: evidence.ok ? null : 'platform_ci_evidence_mismatch',
+            evidence,
+          };
+        }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'platform_pr_ci_refresh' });
+    expect(result.refreshed.failure).toBe('platform_ci_evidence_mismatch');
+    expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
+    expect(calls.statuses.some((item) => item.state === 'success')).toBe(false);
+  });
+
+  test('lesson-first rejects invalid lineage after the refresh push', () => {
+    const refreshedHead = '8'.repeat(40);
+    let currentPlatformHead = platformHead;
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, currentPlatformHead);
+          return pr(repo, 34, lessonHead);
+        }),
+        refreshBundleAgentIndexes: jest.fn(() => {
+          currentPlatformHead = refreshedHead;
+          return {
+            ok: true,
+            status: 'created',
+            previous_platform_head_sha: platformHead,
+            platform_integration_head_sha: refreshedHead,
+            lesson_merge_commit_sha: lessonMerge,
+            changed_paths: INDEX_PATHS,
+            trusted_executor: 'platform-main',
+            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+          };
+        }),
+        summarizeLineage: jest.fn((input) => {
+          const inherited = input.reviewed_payload_head_sha === input.integration_head_sha;
+          return {
+            ok: inherited,
+            reviewed_payload_head_sha: input.reviewed_payload_head_sha,
+            integration_head_sha: input.integration_head_sha,
+            payload_ancestor_of_integration_head: true,
+            authorization_inherited: inherited,
+            failures: inherited ? [] : ['unexpected_integration_delta'],
+            base_drift: { classification: 'no_substantive_overlap' },
+          };
+        }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'platform_index_refresh_lineage' });
+    expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
+    expect(calls.statuses.some((item) => item.state === 'success')).toBe(false);
+  });
+
+  test('lesson-first final PR refetch rejects a head move after readiness publication', () => {
+    const movedHead = '7'.repeat(40);
+    let callsRef;
+    const setup = harness({
+      deps: {
+        fetchPr: jest.fn((repo) => {
+          if (repo === LESSON_REPO) return pr(repo, 34, lessonHead);
+          const readinessPublished = callsRef && callsRef.events.some((event) => event.type === 'integration_head_readiness');
+          return pr(repo, 140, readinessPublished ? movedHead : platformHead);
+        }),
+      },
+    });
+    callsRef = setup.calls;
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'pre_merge' });
+    expect(result.failures).toContain('pr_head_mismatch');
+    expect(setup.calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
+    expect(setup.calls.statuses.some((item) => item.state === 'success')).toBe(false);
+  });
+
+  test.each([
+    ['platform', PLATFORM_REPO, '7'.repeat(40)],
+    ['lesson', LESSON_REPO, '7'.repeat(40)],
+  ])('lesson-first blocks when %s main moves after refreshed readiness', (_label, movedRepo, movedSha) => {
+    let callsRef;
+    const setup = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => {
+          const readinessPublished = callsRef && callsRef.events.some((event) => event.type === 'integration_head_readiness');
+          if (readinessPublished && repo === movedRepo) return movedSha;
+          if (repo === LESSON_REPO && callsRef && callsRef.merges.some((merge) => merge.repo === LESSON_REPO)) {
+            return lessonMerge;
+          }
+          return repo === PLATFORM_REPO ? platformBase : lessonBase;
+        }),
+      },
+    });
+    callsRef = setup.calls;
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({ ok: false, phase: 'base_changed_before_final_merge' });
+    expect(result.failures).toContain('compatibility_recompute_required');
+    expect(setup.calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
+    expect(setup.calls.statuses.some((item) => item.state === 'success')).toBe(false);
+  });
+
   test('lesson-first partial resume continues after the lesson member is already merged', () => {
     let callsRef;
     const setup = harness({
@@ -364,8 +1161,8 @@ describe('authorized cross-repo bundle integration', () => {
     });
     expect(setup.calls.merges.map((item) => item.repo)).toEqual([PLATFORM_REPO]);
     expect(setup.calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
-    expect(setup.calls.ciTriggers).toHaveLength(2);
-    expect(setup.calls.ciWaits[1]).toMatchObject({
+    expect(setup.calls.ciTriggers).toHaveLength(1);
+    expect(setup.calls.ciWaits[0]).toMatchObject({
       headSha: platformMerge,
       expectedPlatformSha: platformMerge,
       expectedLessonSha: lessonMerge,
@@ -378,6 +1175,295 @@ describe('authorized cross-repo bundle integration', () => {
     );
     expect(platformSuccessIndex).toBeGreaterThan(-1);
     expect(platformSuccessIndex).toBeLessThan(platformMergeIndex);
+  });
+
+  test('partial resume accepts a repaired platform base with immutable payload candidates', () => {
+    const repairedPlatformBase = '9'.repeat(40);
+    const synchronizedHead = '7'.repeat(40);
+    const refreshedHead = '8'.repeat(40);
+    const replacementCompatibility = compatibility('lesson-first', {
+      exact_members: {
+        platform_base_sha: repairedPlatformBase,
+        platform_candidate_sha: platformHead,
+        lesson_base_sha: lessonBase,
+        lesson_candidate_sha: lessonHead,
+      },
+    });
+    const { runReview } = productionReviewAdapter(refreshedHead);
+    const applyLiveDecision = jest.fn(() => ({ ok: true, comment_action: 'created' }));
+    let callsRef;
+    let integrationDecision = null;
+    const setup = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => {
+          if (repo === LESSON_REPO) return lessonMerge;
+          if (callsRef && callsRef.merges.some((merge) => merge.repo === PLATFORM_REPO)) return platformMerge;
+          return repairedPlatformBase;
+        }),
+        fetchPr: jest.fn((repo) => {
+          if (repo === LESSON_REPO) {
+            return pr(repo, 34, lessonHead, {
+              state: 'MERGED',
+              mergeCommit: { oid: lessonMerge },
+            });
+          }
+          const refreshed = callsRef && callsRef.events.some((event) => event.type === 'refresh_agent_indexes');
+          return pr(repo, 140, refreshed ? refreshedHead : synchronizedHead);
+        }),
+        fetchReadinessComment: jest.fn((repo, _prNumber, expectedHeadSha) => {
+          if (repo === PLATFORM_REPO && expectedHeadSha === platformHead) return payloadReadinessDecision();
+          if (repo === PLATFORM_REPO && expectedHeadSha === refreshedHead && integrationDecision) {
+            return {
+              ok: true,
+              route: integrationDecision.route,
+              decision: integrationDecision,
+            };
+          }
+          return {
+            ok: true,
+            route: 'READY_FOR_HUMAN_REVIEW',
+            decision: { route: 'READY_FOR_HUMAN_REVIEW' },
+          };
+        }),
+        recomputeCompatibility: jest.fn(() => replacementCompatibility),
+        refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
+          callsRef.events.push({
+            type: 'refresh_agent_indexes',
+            platformHeadSha: refreshOptions.platformPr.headRefOid,
+            lessonMergeSha: refreshOptions.lessonMergeSha,
+          });
+          callsRef.indexRefreshes.push({
+            platformHeadSha: refreshOptions.platformPr.headRefOid,
+            lessonMergeSha: refreshOptions.lessonMergeSha,
+          });
+          return {
+            ok: true,
+            status: 'created',
+            previous_platform_head_sha: synchronizedHead,
+            platform_integration_head_sha: refreshedHead,
+            lesson_merge_commit_sha: lessonMerge,
+            changed_paths: [...INDEX_PATHS],
+            trusted_executor: 'platform-main',
+            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+            metadata: {
+              platform_source_commit: synchronizedHead,
+              platform_source_branch: 'codex/pr-140',
+              lesson_source_commit: lessonMerge,
+              lesson_source_branch: 'origin/main',
+              generated_at: '2026-08-17T11:26:20.000Z',
+            },
+          };
+        }),
+        refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
+          callsRef.events.push({
+            type: 'refresh_platform_pr_ci',
+            headSha: platformPr.headRefOid,
+            expectedLessonSha: refreshOptions.expectedLessonSha,
+          });
+          callsRef.refreshes.push({
+            headSha: platformPr.headRefOid,
+            expectedLessonSha: refreshOptions.expectedLessonSha,
+          });
+          return {
+            ok: true,
+            head_sha: platformPr.headRefOid,
+            run: { conclusion: 'success', databaseId: 204 },
+          };
+        }),
+        generateBundleIntegrationReadiness: jest.fn((readinessOptions) => {
+          callsRef.events.push({
+            type: 'integration_head_readiness',
+            platformHeadSha: readinessOptions.platformPr.headRefOid,
+            lessonMergeSha: readinessOptions.lessonMergeCommitSha,
+          });
+          callsRef.readinessRefreshes.push({
+            platformHeadSha: readinessOptions.platformPr.headRefOid,
+            lessonMergeSha: readinessOptions.lessonMergeCommitSha,
+          });
+          const readiness = generateBundleIntegrationReadiness(readinessOptions, {
+            runReview,
+            applyLiveDecision,
+          });
+          integrationDecision = readiness.decision || null;
+          return readiness;
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    callsRef = setup.calls;
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    expect(setup.deps.recomputeCompatibility).toHaveBeenCalledWith(expect.any(Object), null);
+    expect(replacementCompatibility.exact_members).toEqual({
+      platform_base_sha: repairedPlatformBase,
+      platform_candidate_sha: platformHead,
+      lesson_base_sha: lessonBase,
+      lesson_candidate_sha: lessonHead,
+    });
+    expect(result.merges[0]).toMatchObject({
+      repo: LESSON_REPO,
+      resumed: true,
+      merge_commit: lessonMerge,
+    });
+    expect(setup.calls.merges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: refreshedHead },
+    ]);
+    expect(setup.calls.indexRefreshes).toEqual([{
+      platformHeadSha: synchronizedHead,
+      lessonMergeSha: lessonMerge,
+    }]);
+    expect(setup.calls.refreshes).toEqual([{
+      headSha: refreshedHead,
+      expectedLessonSha: lessonMerge,
+    }]);
+    expect(integrationDecision).toMatchObject({
+      route: 'READY_FOR_HUMAN_REVIEW',
+      reviewed_pr: { head_sha: refreshedHead },
+      proof: {
+        bundle: {
+          integration_refresh: {
+            platform_payload_sha: platformHead,
+            platform_integration_head_sha: refreshedHead,
+            lesson_payload_sha: lessonHead,
+            lesson_merge_commit_sha: lessonMerge,
+          },
+        },
+      },
+    });
+    const eventTypes = setup.calls.events.map((event) => event.type);
+    expect(eventTypes.indexOf('refresh_agent_indexes')).toBeLessThan(eventTypes.indexOf('refresh_platform_pr_ci'));
+    expect(eventTypes.indexOf('refresh_platform_pr_ci')).toBeLessThan(eventTypes.indexOf('integration_head_readiness'));
+    expect(eventTypes.indexOf('integration_head_readiness')).toBeLessThan(
+      setup.calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')
+    );
+    expect(setup.calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')).toBeLessThan(
+      setup.calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO)
+    );
+    expect(setup.calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO)).toBeLessThan(
+      eventTypes.indexOf('wait_ci')
+    );
+    expect(setup.calls.ciWaits[0]).toMatchObject({
+      headSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+  });
+
+  test('a separate partial-resume invocation reuses an already-pushed refreshed controller head', () => {
+    const refreshedHead = '8'.repeat(40);
+    const currentPlatformHead = refreshedHead;
+    let callsRef;
+    const setup = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => {
+          if (repo === LESSON_REPO) return lessonMerge;
+          if (callsRef && callsRef.merges.some((merge) => merge.repo === PLATFORM_REPO)) return platformMerge;
+          return platformBase;
+        }),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, currentPlatformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+        refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
+          callsRef.events.push({ type: 'refresh_agent_indexes', platformHeadSha: refreshOptions.platformPr.headRefOid });
+          return {
+            ok: true,
+            status: 'reused',
+            previous_platform_head_sha: platformHead,
+            platform_integration_head_sha: refreshedHead,
+            lesson_merge_commit_sha: lessonMerge,
+            changed_paths: INDEX_PATHS,
+            trusted_executor: 'platform-main',
+            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+          };
+        }),
+        refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
+          callsRef.events.push({
+            type: 'refresh_platform_pr_ci',
+            headSha: platformPr.headRefOid,
+            expectedLessonSha: refreshOptions.expectedLessonSha,
+          });
+          callsRef.refreshes.push({
+            headSha: platformPr.headRefOid,
+            expectedLessonSha: refreshOptions.expectedLessonSha,
+          });
+          const evidence = validatePlatformCiEvidence(
+            platformCiEvidence(platformPr.headRefOid, refreshOptions.expectedLessonSha),
+            {
+              platformSha: refreshedHead,
+              lessonSha: lessonMerge,
+            }
+          );
+          return {
+            ok: evidence.ok,
+            failure: evidence.ok ? null : 'platform_ci_evidence_mismatch',
+            run: { conclusion: evidence.ok ? 'success' : 'failure', databaseId: 203 },
+            evidence,
+          };
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    callsRef = setup.calls;
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    expect(result.merges[0]).toMatchObject({
+      repo: LESSON_REPO,
+      resumed: true,
+      merge_commit: lessonMerge,
+    });
+    expect(setup.calls.merges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: refreshedHead },
+    ]);
+    expect(setup.calls.events.find((event) => event.type === 'refresh_agent_indexes')).toMatchObject({
+      platformHeadSha: refreshedHead,
+    });
+    expect(setup.calls.refreshes).toEqual([
+      { headSha: refreshedHead, expectedLessonSha: lessonMerge },
+    ]);
+    expect(setup.calls.readinessRefreshes).toEqual([
+      { platformHeadSha: refreshedHead, lessonMergeSha: lessonMerge },
+    ]);
+  });
+
+  test('partial resume no-merge result identifies the residual platform controller', () => {
+    const { options, deps } = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => (repo === LESSON_REPO ? lessonMerge : platformBase)),
+        fetchPr: jest.fn((repo) => {
+          if (repo === PLATFORM_REPO) return pr(repo, 140, platformHead);
+          return pr(repo, 34, lessonHead, {
+            state: 'MERGED',
+            mergeCommit: { oid: lessonMerge },
+          });
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+        noMerge: true,
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'authorized_no_merge', order: 'lesson-first' });
+    expect(result.bundle_state).toMatchObject({
+      member_pr_heads: [`${LESSON_REPO}#34@${lessonHead}`],
+      merged_members: [`${LESSON_REPO}#34@${lessonHead}`],
+      open_members: [],
+      delegated_branch_protection_proof: 'controller',
+      merge_order_proof: 'lesson-first',
+      residual_integration_mode: 'platform-only residual controller',
+      controller_state: 'OPEN',
+    });
   });
 
   test('partial resume fails closed without the explicit resume option', () => {
@@ -774,7 +1860,6 @@ describe('authorized cross-repo bundle integration', () => {
       deps: {
         waitForPlatformMainCi: jest
           .fn()
-          .mockReturnValueOnce({ ok: true })
           .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_failed' }),
       },
     });
@@ -797,30 +1882,7 @@ describe('authorized cross-repo bundle integration', () => {
   });
 
   test('platform-ci evidence rejects old lesson SHA for same platform SHA', () => {
-    const result = validatePlatformCiEvidence({
-      workflow: 'platform-ci',
-      job: 'validate-platform',
-      github_run_id: '1',
-      github_run_attempt: '1',
-      github_ref: 'refs/heads/main',
-      github_sha: platformBase,
-      platform: {
-        repository: PLATFORM_REPO,
-        path: '4veco-platform',
-        head_sha: platformBase,
-        branch_or_ref: 'main',
-      },
-      lessen: {
-        repository: LESSON_REPO,
-        path: '4veco-lessen',
-        head_sha: lessonBase,
-        branch_or_ref: 'main',
-      },
-      node_version: 'v20.0.0',
-      python_version: 'Python 3.13.0',
-      package_lock_sha256: 'a'.repeat(64),
-      created_at_utc: '2026-06-24T00:00:00.000Z',
-    }, {
+    const result = validatePlatformCiEvidence(platformCiEvidence(platformBase, lessonBase), {
       platformSha: platformBase,
       lessonSha: lessonMerge,
     });

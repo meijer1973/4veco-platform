@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4",
+  "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
+  "review_standard": "REV-STD-1",
+  "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_READY_FOR_HUMAN_REVIEW_NOT_EXECUTED",
+  "generated_at": "2026-08-11T14:26:36.701Z",
+  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "source_files": [
+    "reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json",
+    "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json",
+    "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json",
+    "reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json",
+    "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
+    "reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json",
+    "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json",
+    "reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json",
+    "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
+    "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "source_hashes": [
+    {
+      "path": "reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "82b5977ce3ce42ebe9e1b2daa4a352cef98a2e435213240b0fd326ba3ff0c6c2"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "8a64e46233f1d94912d2a3180ed2ec3a8b6139876637f7ed8af0e1279cc030a6"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "113463f9b80fab55f7461b3f390afd70b729bafbf881c411d420d10265d45090"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "18420033d3766b6be590dbb6499b441caf6d29e8142a16030a8b5d2b00a862a4"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "dc046a090dcdd5b97c96ef61edf8b2c28274fb815e0cb14b1556bde2028eb4ff"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "5f899b50099980b78289d081072d6dd8e08fbd66d192f592fda51e2b5cda7ccc"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "bd45d6af1b0146cdd6421a99a7137f105dd96c53760fcefaf2d491ac6bd4a16a"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "2ade26927fd17e66c55770aea82f0e3b594ff1e660f6892c7949d4ac7aaf9102"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "c18340e15b1a014e15cc9b99cf858c62a45f4531ff190bd00c733b19209f6b71"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "53c66ceb9fda0d33721c74095c34e634d404e2c37e3fd692121abdeaab423477"
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json",
+      "hash_kind": "canonical_parsed_json_sha256",
+      "sha256": "77dc835330e2dd99a53670c6a3865e47cece18e9976492c78fed50d38f87369d"
+    }
+  ],
+  "prior_checker_boundary": {
+    "bundle1_checker_current_status": "historical_hash_locked_mtu_registry_drift_not_current_proof",
+    "bundle2_checker_current_status": "historical_hash_locked_mtu_registry_drift_not_current_proof",
+    "current_proof_basis": [
+      "Bundle 4 checker validates current source-file hashes, including the live MTU registry hash.",
+      "Bundle 3 checker remains green on current main and preserves seven protected holds.",
+      "Bundle 1/2 artifacts are consumed as hash-pinned historical evidence, not as current-registry checkers."
+    ]
+  },
+  "artifacts": {
+    "build_script": "build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "checker_script": "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "contract_script": "build-scripts/references/lib/mtu-h7-bundle4-contract.js",
+    "adjudication_evidence_script": "build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js",
+    "provenance_script": "build-scripts/references/lib/mtu-h7-bundle4-provenance.js",
+    "provenance_regression_test": "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js",
+    "adjudication_matrix": "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
+    "negative_regression_fixtures": "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
+    "review_packet": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json",
+    "pr_readiness_evidence": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+    "review_proof_requirements": "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md"
+  },
+  "summary": {
+    "protected_operations_prepared": 7,
+    "unique_candidate_packets": 6,
+    "operations_with_partial_anchors": 5,
+    "excluded_historical_mtu_role_count": 4,
+    "explicit_unavailable_source_limitations": 3,
+    "candidate_decisions_required": 10,
+    "semantically_bound_operations": 7,
+    "executable_negative_regressions": 7,
+    "negative_regression_detection_rate": 1,
+    "expected_pr_route": "READY_FOR_HUMAN_REVIEW",
+    "executed_in_this_bundle": 0,
+    "h7_full_closure_claimed": false,
+    "product_route_readiness_claimed": false,
+    "student_product_use_authorized": false
+  },
+  "hashes": {
+    "adjudication_matrix": "43c2ac11c82d2531c54f7dc0f3f0a2860a2d5c5d78722ec643d740946037d44e",
+    "negative_regression_fixtures": "7d05a45b36b392b61726d7f6a70b30610f117ac52c5c08b9610f5948b1dea918",
+    "pr_readiness_evidence": "d797d3b653a93dedea35b98bb778cee3d529ccb9bf4fef9f0902c5e65aeb5e59"
+  },
+  "prohibited_claims": [
+    "No H7 full closure",
+    "No H6/H7 evidence-generalization closure",
+    "No protected-reference mutation",
+    "No external-source mutation",
+    "No machine-reference mutation",
+    "No operation-registry mutation",
+    "No canonical MTU mutation",
+    "No candidate writes or storage",
+    "No lesson output",
+    "No product-route readiness",
+    "No Scale Gate",
+    "No diagnostics, mastery, PV, sequencing, summative use, or student/product use"
+  ]
+}

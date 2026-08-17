@@ -90,6 +90,18 @@ const FORBIDDEN_PATTERNS = Object.freeze([
     regex: /\bexact-head authorization\b/i,
   },
   {
+    id: 'authorization-valid-only-exact-head',
+    regex: /authorization[^\n]{0,80}valid only for (?:the )?exact (?:pr |platform |lesson )?head/i,
+  },
+  {
+    id: 'renewed-authorization-exact-platform-head',
+    regex: /renewed (?:human |owner )?authorization[^\n]{0,80}exact platform head/i,
+  },
+  {
+    id: 'any-head-change-invalidates-authorization',
+    regex: /any change to (?:either |the )?(?:pr |platform |lesson )?heads?[^\n]{0,80}invalidates authorization/i,
+  },
+  {
     id: 'human-authorization-every-integration-head',
     regex: /human authorization tied to every exact integration head/i,
   },
