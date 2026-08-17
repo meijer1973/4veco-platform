@@ -150,3 +150,7 @@ values at every live verification point.
 | Repeated `npm.cmd run check:integration-lane` | PASS | 10 suites and 160 tests passed. |
 | Repeated `npm.cmd run check:pr-readiness` | PASS | 5 suites and 176 tests passed. |
 | Repeated `npm.cmd run check:platform` | PASS | 99 suites and 1,349 tests passed; 6 suites and 8 tests skipped by suite configuration. |
+
+Rawls returned `OK` on exact substantive commit
+`d2ad31cd55e8611dcfa48ef0cce7ae5a8ef86f19`. The committed review record is
+the last evidence change before trusted-main index generation.
