@@ -1,11 +1,11 @@
 # International Quality Standards Roadmap
 
-Status: active local-expert/source-refresh gate roadmap
+Status: active owner-controlled dispatch revision roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 Roadmap ID: `international-quality-standards-foundation`
-Roadmap version: `v0.10-local-expert-review-request-packet-human-review`
-Sprint status: `GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` current / internal-only England/Flanders local expert review request packet for human review
+Roadmap version: `v0.16-owner-controlled-dispatch-revision-human-review`
+Sprint status: `GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1` payload approved / governed integration in progress with decision `REVISE_OWNER_DISPATCH_PROCESS`
 Human owner: HCS / Marcel
 Team mode: isolated worktree, internal analysis only, no country edition or external claim
 
@@ -60,8 +60,20 @@ The endpoint is:
   `archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-sprint-plan.md`
 - Accepted source-refresh execution run sprint:
   `archive/sprints/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1/GOAL-IQS-SOURCE-REFRESH-EXECUTION-PILOT-1-sprint-plan.md`
-- Current local expert review request packet sprint:
+- Accepted local expert review request packet sprint:
   `archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-sprint-plan.md`
+- Accepted local expert contact-preparation sprint:
+  `archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1-sprint-plan.md`
+- Accepted local expert contact-stage sprint:
+  `archive/sprints/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1/GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1-sprint-plan.md`
+- Accepted owner manual dispatch/intake sprint:
+  `archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-sprint-plan.md`
+- Accepted owner delivery protocol-completion sprint:
+  `archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-sprint-plan.md`
+- Accepted owner delivery protocol-repair sprint:
+  `archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-sprint-plan.md`
+- Current owner-controlled dispatch sprint:
+  `archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-sprint-plan.md`
 
 ## 2. Non-Negotiable Requirements
 
@@ -396,9 +408,10 @@ The implemented decision selected
 current internal request-packet sprint. It must not itself contact local
 experts or substitute local expert judgment.
 
-## 12. Current Local Expert Review Request Packet Scope
+## 12. Completed Local Expert Review Request Packet Scope
 
-`GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` may create:
+`GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` was accepted and merged on
+PR #170. It created:
 
 - an internal-only local expert review request contract for England and
   Flanders;
@@ -428,12 +441,93 @@ processing, compliance, approval, accreditation, OP0, PTA, summative validity,
 inspection-readiness, support-sufficiency, accommodation-sufficiency,
 accessibility/legal sufficiency, or school-owned evidence claims.
 
-The implemented decision may select only whether to proceed to a later,
-separately authorized local expert contact pilot. It must not itself contact
-local experts, send request packets, or treat simulated expert responses as
-expert evidence.
+The implemented decision selected `PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT`.
+It authorised only the later internal contact-preparation packet and did not itself
+contact experts, send request packets, or treat simulated responses as expert
+evidence.
 
-## 13. Architecture Direction
+## 13. Completed Local Expert Contact Preparation Scope
+
+`GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1` was accepted and merged on PR #180.
+It created a no-dispatch England/Flanders contact-preparation packet, strict response
+intake and quarantine contracts, simulations, fixtures, specialist reviews,
+and the decision `READY_FOR_OWNER_AUTHORIZED_LOCAL_EXPERT_CONTACT_STAGE`.
+
+It did not dispatch contact, select named experts, store private endpoints,
+process personal/student/school data, create localized output, or unlock any
+product, school, public, evidence-pack, Scale Gate, diagnostic, compliance,
+inspection-readiness, or sufficiency authority.
+
+## 14. Completed Local Expert Contact Stage Scope
+
+`GOAL-IQS-LOCAL-EXPERT-CONTACT-STAGE-1` was accepted and merged on PR #190.
+It created owner-controlled England/Flanders dispatch records, role-only
+candidate rules, consent and response-storage boundaries, strict intake and
+quarantine records, simulations, fixtures, specialist reviews, and the
+decision `READY_FOR_OWNER_MANUAL_DISPATCH_AND_RESPONSE_INTAKE`.
+
+It did not perform external dispatch, select named experts, store private
+contact endpoints, accept expert evidence, create localized output, or unlock
+downstream product, school, public, legal, compliance, inspection-readiness,
+Scale Gate, diagnostic, or sufficiency authority.
+
+## 15. Completed Owner Manual Dispatch And Response Intake Scope
+
+`GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1` was accepted and merged
+on PR #196. It recorded the honest no-delivery/no-response state, bounded the
+owner-controlled dispatch and strict response-intake process, retained
+jurisdiction-specific quarantine handling, and selected
+`REVISE_DISPATCH_OR_INTAKE_PROTOCOL`.
+
+It did not invent delivery proof, treat missing responses as approval, perform
+external dispatch, analyse expert responses, or unlock localized, product,
+school, public, evidence-pack, Scale Gate, diagnostic, personal-data,
+compliance, inspection-readiness, or sufficiency authority.
+
+## 16. Completed Owner Delivery Protocol Completion Scope
+
+`GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1` was accepted and merged on
+PR #199. It formalised the owner delivery-proof and response-intake contract,
+England/Flanders records, quarantine rules, fixtures, specialist reviews, and
+the decision `REVISE_DELIVERY_PROTOCOL` because no owner delivery proof or
+accepted response existed.
+
+It did not claim delivery, accept a response, authorise response analysis, or
+unlock any downstream authority.
+
+## 17. Completed Owner Delivery Protocol Repair Scope
+
+`GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1` was accepted and merged on PR #203.
+It repaired proof-format and jurisdiction-boundary weaknesses, strengthened
+negative fixtures and static refusal coverage, and selected
+`READY_FOR_OWNER_CONTROLLED_DISPATCH` while continuing to record that dispatch
+had not occurred.
+
+It authorised only a later repository-bound owner-controlled dispatch/intake
+recording sprint. External dispatch, expert response analysis, localized
+output, personal data, and all downstream product/school/public authority
+remained blocked.
+
+## 18. Current Owner-Controlled Dispatch Scope
+
+`GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1` is the payload-approved PR #207 packet.
+It adds deterministic owner-controlled dispatch, England/Flanders intake,
+quarantine, fixture, specialist-review, and final-decision records. The packet
+truthfully records:
+
+- no owner delivery proof;
+- no dispatch timestamp or owner delivery reference;
+- no material sent;
+- no consented, schema-passing, quarantine-clean expert response;
+- no accepted response and no response-analysis authority.
+
+The selected decision is `REVISE_OWNER_DISPATCH_PROCESS`. This decision blocks
+expert-response analysis and every downstream authority jump. It does not
+block governed integration of the honest internal packet after payload
+equivalence, current-main CI, exact-head readiness, branch protection, and an
+integration-head lead review pass.
+
+## 19. Architecture Direction
 
 The current architecture preserves four layers:
 
@@ -446,7 +540,7 @@ The first layer may become a shared textbook/product architecture. The other
 layers require source refresh, local expert review, and separate human approval
 before any implementation.
 
-## 14. Core-Requirement Checklist
+## 20. Core-Requirement Checklist
 
 | Requirement | Status | Proof required to close |
 |---|---|---|
@@ -508,26 +602,28 @@ before any implementation.
 | Source-refresh execution run decision selects exactly one allowed option | closed | `source-refresh-execution-pilot-decision.md/json` selected `PROCEED_TO_LOCAL_EXPERT_REVIEW_REQUEST_PACKET`; PR #169 accepted and merged |
 | Specialist reviews and final lead review are completed before human review | closed | PR #169 specialist records, final lead PASS, exact-head readiness, payload authorization, governed integration, and post-merge CI |
 | Human review happens before any local expert review request packet authority | closed | PR #169 human payload authorization and governed integration |
-| Local expert review request schemas define allowed request fields, expected response fields, forbidden fields, authority boundaries, and no-contact proof | current sprint | `local-expert-review-request.schema.v1.json`, `local-expert-review-response.schema.v1.json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
-| England and Flanders request packets use only accepted source-refresh execution results and preserve jurisdiction boundaries | current sprint | `england-local-expert-review-request-packet.md/json`, `flanders-local-expert-review-request-packet.md/json`, checker PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
-| Simulations and negative fixtures refuse contact, legal/compliance claims, localized output, school-owned evidence, student/personal data, hidden uncertainty, expert-authority substitution, whole-UK overclaim, and all-Belgium overclaim cases | current sprint | `local-expert-review-request-simulation.md/json`, `references/data/inspection-standards/fixtures/local-expert-review-request-packet/**`, checker PASS, focused Jest PASS, specialist review, final lead review, exact-head PR readiness, green CI, and human review |
-| Local expert review request packet decision selects exactly one allowed option | current sprint | `local-expert-review-request-decision.md/json` selects one of the allowed request-packet decisions |
-| Specialist reviews and final lead review are completed before human review | current sprint | Required before this PR can return for human review |
-| Human review happens before any local expert contact-stage authority | current sprint | PR freshness, CI, PR Readiness Reviewer, branch protection, and human review |
+| Local expert review request packet preserves no-contact and jurisdiction boundaries | closed | PR #170 accepted `PROCEED_TO_LOCAL_EXPERT_CONTACT_PILOT` and merged through governed integration |
+| Contact preparation preserves no-dispatch, role-only, consent, intake, and quarantine boundaries | closed | PR #180 accepted `READY_FOR_OWNER_AUTHORIZED_LOCAL_EXPERT_CONTACT_STAGE` and merged through governed integration |
+| Contact stage preserves owner-controlled dispatch and forbids private endpoints and named-expert selection | closed | PR #190 accepted `READY_FOR_OWNER_MANUAL_DISPATCH_AND_RESPONSE_INTAKE` and merged through governed integration |
+| Owner manual dispatch/intake packet records no proof or response without invention | closed | PR #196 selected `REVISE_DISPATCH_OR_INTAKE_PROTOCOL` and merged through governed integration |
+| Owner delivery protocol completion keeps analysis blocked without delivery proof and an accepted response | closed | PR #199 selected `REVISE_DELIVERY_PROTOCOL` and merged through governed integration |
+| Owner delivery protocol repair closes proof-format and England/Flanders boundary weaknesses | closed | PR #203 selected `READY_FOR_OWNER_CONTROLLED_DISPATCH` and merged through governed integration |
+| Owner-controlled dispatch packet records no delivery proof, no sent material, and no accepted response | payload approved / integration pending | PR #207 generator/checker, fixtures, specialist reviews, final lead PASS, owner payload authorization, current-main integration-head lead review, fresh CI/readiness, and branch protection `ok: true` |
+| Owner-controlled dispatch decision selects the rule-matched revision outcome | payload approved / integration pending | `owner-controlled-dispatch-decision.md/json` selects `REVISE_OWNER_DISPATCH_PROCESS`; governed integration must preserve effective payload and authority scope |
 
-## 15. Candidate Future Sprints
+## 21. Candidate Future Sprints
 
 These rows are not implementation authority unless a later human review
 explicitly approves them.
 
 | Candidate sprint | Intended scope | Authorisation status |
 |---|---|---|
-| `GOAL-IQS-LOCAL-EXPERT-CONTACT-PILOT-1` | If the human owner accepts the request-packet decision, run a separately governed contact-stage run for contacting local experts from the accepted packet only. | not authorised |
+| `GOAL-IQS-OWNER-DISPATCH-AND-EXPERT-RESPONSE-1` | Record real owner delivery proof outside repository contact storage, strictly intake and quarantine consented responses, and perform bounded analysis only after at least one schema-passing response exists. | not authorised; requires real owner-controlled delivery evidence or a definitive revise/stop basis |
 | `GOAL-IQS-SOURCE-REFRESH-1` | Broader source refresh and source-gap resolution for selected jurisdictions after any reviewed execution run. | not authorised |
 | `GOAL-IQS-LOCAL-EXPERT-GATE-1` | Require local subject/inspection/legal review before any local overlay implementation. | not authorised |
 | `GOAL-IQS-BOOK1-PORTABILITY-2` | Deepen the Book 1 portability check after local overlay descriptors exist. | not authorised |
 
-## 16. Explicitly Blocked Work
+## 22. Explicitly Blocked Work
 
 ```text
 country-compliant edition
@@ -566,23 +662,24 @@ unbounded source-refresh execution run
 hidden source discovery
 ```
 
-## 17. Current Recommended Next Step
+## 23. Current Recommended Next Step
 
 Recommended next operational step:
 
 ```text
-Review the GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1 packet after
-specialist reviews, final lead review, PR publication, branch freshness, branch
-protection, PR Readiness Reviewer, and green CI are complete.
+Complete governed Integration Lane processing for the payload-approved PR #207
+without changing its effective payload, decision, behavior, bundle membership,
+or authority scope. After merge, wait for real owner-controlled delivery
+evidence before starting GOAL-IQS-OWNER-DISPATCH-AND-EXPERT-RESPONSE-1.
 ```
 
-Human acceptance of `GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1` may
-authorise only a later separately governed local expert contact-stage run. It must
-not itself contact local experts, send request packets, substitute local
-experts, unlock trial runtime execution, country implementation, localized
-textbook or overlay output, localized exercises, answer models, assessment
-items, student-facing files, school or public distribution, product routes,
-Scale Gate, diagnostics/mastery/PV, student/product use, personal-data
-processing, compliance, approval, accreditation, OP0, PTA, summative,
-inspection-readiness, support-sufficiency, accommodation-sufficiency, or
-accessibility/legal sufficiency claims.
+Do not start another protocol-only sprint. A later substantial goal may proceed
+only after the owner executes or supplies an approved delivery channel outside
+repository storage. Until then, external dispatch, expert-response analysis,
+country implementation, localized textbook or overlay output, localized
+exercises, answer models, assessment items, student-facing files, school or
+public distribution, product routes, Scale Gate, diagnostics/mastery/PV,
+student/product use, personal-data processing, compliance, approval,
+accreditation, OP0, PTA, summative, inspection-readiness, support-sufficiency,
+accommodation-sufficiency, and accessibility/legal sufficiency claims remain
+blocked.

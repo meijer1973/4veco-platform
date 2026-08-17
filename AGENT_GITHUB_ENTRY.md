@@ -33,6 +33,7 @@ Path reliability:
 | Which book/chapter/paragraph files are published now? | `4veco-lessen` |
 | Are references, validators, roadmaps, or sprint reports current? | `4veco-platform` |
 | How should inspection/accountability evidence work be scoped? | `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, `docs/roadmaps/quality-standards/sprint-ledger.md`, `docs/roadmaps/quality-standards/quality-standards-end-state.md`, `references/data/inspection-standards/source-register.json`, `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`, `docs/inspection-standards/nl-vo-evidence-model.md`, `references/SOURCE_OF_TRUTH.md`, `4veco-lessen/specifications/product-end-state.md` |
+| How should international common-core, jurisdiction-overlay, or local-expert evidence work be scoped? | `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`, `docs/roadmaps/quality-standards/sprint-ledger.md`, `docs/roadmaps/roadmap-version-index.json`, and the named England/Flanders reports under `reports/inspection-standards/` |
 | Is a copied `shared/` engine file authoritative? | `4veco-platform` |
 | How should official exam-question ingestion, source annexes, correction models, or answer-model decomposition be handled? | `AGENTS.md`, `references/SOURCE_OF_TRUTH.md`, `references/data/exercises/README.md`, `references/reference-team-roadmap.md` |
 
@@ -90,6 +91,7 @@ Useful entry points:
 - `build-scripts/review-gates/refresh-bundle-agent-indexes.js`
 - `build-scripts/review-gates/integrate-authorized-bundle.js`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
+- `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
 - `references/owned/course-blueprint-v6-three-year.md` (draft three-year blueprint; v5 remains active until review)
