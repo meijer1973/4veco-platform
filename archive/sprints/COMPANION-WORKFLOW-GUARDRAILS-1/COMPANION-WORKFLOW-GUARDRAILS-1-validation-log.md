@@ -91,3 +91,46 @@ Paired lesson publication:
 - PR: `meijer1973/4veco-lessen#44`
 - payload head: `318b5184a896f0eaa6249ff6fa9f7298e29bb2c1`
 - state during implementation review: draft
+
+## Post-#209 Resynchronization Validation
+
+Bundle resynchronization began only after PR #209 merged and post-merge
+platform CI passed.
+
+| Check | Result | Notes |
+|---|---|---|
+| Platform base | PASS | `origin/main` is `20955635f15b4ce0f23adf13179dd5d3d8006a90`. |
+| Lesson base/candidate | PASS | Lesson `main` remains `ba08b9c2e033a877c0d1b57952055ce697912a22`; PR #44 remains the one-line candidate `318b5184a896f0eaa6249ff6fa9f7298e29bb2c1`. |
+| Pre-merge `git merge-tree` | PASS | Only the four generated GitHub agent-index files conflicted. |
+| Platform main merge | PASS | Merge commit `f19dbc90aa3320fe3af4543347e14fa0007161f5`; generated conflicts temporarily resolved from trusted `main`; no substantive manual conflict resolution. |
+| Effective changed-path audit | PASS | The post-merge PR diff contains the intended companion workflow, route checker, bundle readiness, tests, and sprint records; no PR #209 implementation path appears as a PR-authored delta. |
+| Focused Jest set | PASS | 5 suites and 82 tests passed: validator profiles, paragraph lane scope, active governance wording, bundle readiness, and trusted bundle-index refresh. |
+
+Full local validation, exact substantive-SHA work review, final-tail freshness,
+remote CI classification, compatibility, exact-head PR review, and coordinated
+readiness remain pending at this checkpoint. They must not be inferred from
+earlier bundle runs.
+
+### Full Pre-Review Validation
+
+| Command | Result | Notes |
+|---|---|---|
+| First `npm.cmd run check:platform` | ENVIRONMENT FAIL | 98 suites and 1,198 tests passed before `pr-readiness-router.test.js` could load `ajv/dist/2020`; the worktree dependencies predated the merged lockfile. |
+| `npm.cmd ci` | PASS | Restored 385 packages from the committed lockfile without changing tracked dependency metadata. Existing audit output: 1 low, 1 moderate, 4 high. |
+| Repeated `npm.cmd run check:platform` | PASS | 99 suites and 1,337 tests passed; 6 suites and 8 tests skipped by suite configuration. |
+| Focused route/lane/validator/readiness/refresh set | PASS | 5 suites and 82 tests passed. |
+| `npm.cmd run check:integration-lane` | PASS | 10 suites and 148 tests passed. |
+| `npm.cmd run check:pr-readiness` | PASS | 5 suites and 176 tests passed. |
+| `npm.cmd run check:scope-language` | PASS | Active scope language passed. |
+| `npm.cmd run check:active-governance-wording` | PASS | Local platform candidate plus lesson candidate expose the canonical route. |
+| `npm.cmd run check:governance-freshness -- --allow-policy-edit` | PASS | Platform `main` `20955635...` is an ancestor; the intentional `AGENTS.md` delta is reported. |
+| `npm.cmd run finalization:freshness` | PASS | Remote/main ancestry and policy hashes bind to merge checkpoint `f19dbc90...`. |
+| Platform and lesson shared-lane checks | PASS | Platform reports 14 shared paths plus review evidence; lesson reports only `AGENTS.md`. |
+| `npm.cmd run check:branch-protection` | PASS | Required `validate-platform`, strict checks, admin enforcement, and conversation resolution match policy. |
+| Platform and lesson `git diff --check` | PASS | No whitespace errors. |
+| `node build-scripts/sprints/emit-url-index.js` | PASS | Regeneration produced no tracked URL-index delta. |
+| Pre-commit worktree safety check | ADMINISTRATIVE FAIL | The stale lock belongs to prior task `COMPANION-INTEGRATION-INDEX-REPAIR-1`. After this evidence is committed, reclaim the clean worktree for `COMPANION-WORKFLOW-GUARDRAILS-1` under the existing `codex-main` owner before review. |
+
+Agent-index freshness is intentionally deferred until after exact-SHA work
+review and the committed review record. Trusted-main generation must then
+produce the terminal four-file tail.

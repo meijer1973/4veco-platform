@@ -233,3 +233,39 @@ and coordinated PR Readiness all pass.
 
 Lead plan reviewer Rawls (`019ffaf1-c6b8-7152-88ff-d66366207ccb`) returned
 `OK` after two revision rounds.
+
+## August 17 2026 Post-#209 Resynchronization
+
+Platform PR #209 merged as `20955635f15b4ce0f23adf13179dd5d3d8006a90`
+and its post-merge `main` CI passed. That closes the trusted lesson-first index
+refresh blocker. Bundle `COMPANION-ROUTE-CONSISTENCY-20260813-1` may now rebuild
+its evidence, but neither member has merge authorization.
+
+The resynchronization plan is:
+
+1. Merge platform `main` into PR #198 without rebasing or force-pushing.
+   Resolve only the four generated agent-index conflicts from trusted `main`;
+   any substantive conflict stops the run.
+2. Run focused route, lane, validator, readiness, and trusted-refresh tests,
+   then the full platform suite and current governance/scope checks.
+3. Commit the complete substantive result and obtain Rawls `OK` on that exact
+   commit. Any substantive correction creates a new review target.
+4. Commit the review record, then use tooling pinned to trusted platform
+   `main` to regenerate exactly the four GitHub agent indexes. The evidence
+   commit is the platform `source_commit`; lesson `main` at
+   `ba08b9c2e033a877c0d1b57952055ce697912a22` is the lesson source.
+5. Prove deterministic regeneration and freshness, and finish with a
+   single-parent four-file generated tail. No other commit may follow it.
+6. Push without force, classify exact-head platform CI, and accept failure only
+   when the sole cause is the known lesson-`main` route mismatch.
+7. Run trusted-main three-state compatibility on the exact platform and lesson
+   candidates. Require `bundle-final` plus at least one intermediate success;
+   the expected viable order is `lesson-first`.
+8. Publish aligned exact-head evidence and obtain Rawls `OK` on both remote PRs.
+   Re-run the proof cycle after any head or base movement.
+9. Run coordinated bundle PR Readiness. Mark both members ready only when the
+   machine decision allows it. Do not create bundle authorization or merge.
+
+Rawls approved this plan after one revision round. The revision bound work
+review to a committed substantive SHA, required exact remote-CI and freshness
+ordering, and made generated-tail provenance explicit.

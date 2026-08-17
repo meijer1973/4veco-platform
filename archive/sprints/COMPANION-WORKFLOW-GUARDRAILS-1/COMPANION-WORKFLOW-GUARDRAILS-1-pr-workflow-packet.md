@@ -108,3 +108,22 @@ required corrections:
 - Are generated index changes acceptable and in scope?
 - Is validation sufficient for docs/skills/agent guardrail changes?
 - Is the PR still blocked from human review until CI passes or a waiver exists?
+
+## August 17 2026 Current Bundle Refresh
+
+This section supersedes the historical snapshot above for the current refresh
+cycle. Final lifecycle authority will still be the exact-head bundle readiness
+comments generated after compatibility and lead review.
+
+- Bundle: `COMPANION-ROUTE-CONSISTENCY-20260813-1`
+- Platform base: `20955635f15b4ce0f23adf13179dd5d3d8006a90`
+- Lesson base: `ba08b9c2e033a877c0d1b57952055ce697912a22`
+- Lesson candidate: `318b5184a896f0eaa6249ff6fa9f7298e29bb2c1`
+- Platform merge checkpoint: `f19dbc90aa3320fe3af4543347e14fa0007161f5`
+- Current state: both PRs remain draft and held; all previous compatibility,
+  review, and readiness evidence is superseded for authorization purposes.
+- Required remaining proof: committed substantive-SHA Rawls review, trusted-main
+  four-file index tail, exact-head CI classification, exact three-state bundle
+  compatibility, remote Rawls review, and coordinated PR Readiness.
+- Boundary: this refresh does not create bundle authorization, does not claim an
+  integration refresh, and does not merge either member.

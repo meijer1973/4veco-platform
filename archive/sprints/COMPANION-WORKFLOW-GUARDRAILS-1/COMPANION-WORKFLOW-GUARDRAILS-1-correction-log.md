@@ -207,3 +207,25 @@ Workflow re-review verdict: OK. The reviewer confirmed full-bundle re-fetches,
 fail-closed head/base/open/draft/mergeability checks, controller-first state
 progression, dry-run simulation, `transition_ready: true`, `merge_ready: false`,
 and `merge_authority: false`.
+
+## Post-#209 Resynchronization Plan Review
+
+Lead reviewer: Rawls (`019ffaf1-c6b8-7152-88ff-d66366207ccb`).
+
+Round 1 verdict: REVISE.
+
+1. Bind implementation review to an exact committed substantive SHA before any
+   review-record or generated-index tail commit.
+2. After push, classify exact-head platform CI before compatibility and record
+   exact workflow, artifact, state, and supersession evidence in both PRs.
+3. Generate the final four-file tail with trusted-main tooling, explicit
+   platform/lesson source commits, deterministic hashes, and no later commit.
+4. Keep immutable payload compatibility distinct from the later
+   `integration_refresh` proof created only during authorized lesson-first
+   integration.
+
+Round 2 verdict: OK.
+
+The revised plan adds those ordering and provenance boundaries, requires fresh
+main/head/state checks before readiness and each transition, and keeps bundle
+authorization and merge outside this run.
