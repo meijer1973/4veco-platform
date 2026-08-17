@@ -21,7 +21,7 @@ Path reliability:
 | How should a completed remote draft PR be routed to revise, batch, lead-only closure, human review, or pause? | `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, `build-scripts/review-gates/review-pr-readiness.js`, `build-scripts/review-gates/route-and-apply-pr-readiness.js`, `build-scripts/review-gates/apply-pr-readiness-decision.js` |
 | How should a payload-authorized PR be serialized through base refresh, integration validation, exact-head readiness, and merge? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/review-gates/check-integration-lane-capability.js`, `docs/review/human-payload-authorization.schema.json`, `build-scripts/review-gates/check-human-payload-authorization.js`, `build-scripts/review-gates/integrate-authorized-pr.js`, `.github/workflows/authorized-pr-integration.yml` |
 | How should current branch protection and optional `integration-authorized` audit status be verified? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, `build-scripts/review-gates/integrate-authorized-pr.js` |
-| How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
+| How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/refresh-bundle-agent-indexes.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
 | How should active governance wording, pre-work governance freshness, and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/check-governance-freshness.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
 | How should paragraph work be split between Part A/textbook and Part B/companion/student-web production? | `docs/workflows/paragraph-lane-vocabulary.md`, `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js` |
@@ -87,6 +87,7 @@ Useful entry points:
 - `build-scripts/review-gates/finalization-freshness-proof.js`
 - `build-scripts/review-gates/cross-repo-bundle-compatibility.js`
 - `build-scripts/review-gates/check-human-bundle-authorization.js`
+- `build-scripts/review-gates/refresh-bundle-agent-indexes.js`
 - `build-scripts/review-gates/integrate-authorized-bundle.js`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
@@ -120,6 +121,8 @@ Task-routing guidance:
   governance or workflow changes.
 - Use the cross-repo bundle compatibility workflow and authorized bundle
   integration workflow when a platform PR and lesson PR must land as one
-  coordinated payload. If both members are still draft but substantively ready,
-  run `npm.cmd run apply:bundle-readiness` from the controller decision before
-  requesting bundle merge authorization.
+  coordinated payload. The trusted lesson-first path uses
+  `build-scripts/review-gates/refresh-bundle-agent-indexes.js` after the lesson
+  merge and before refreshed-head platform validation. If both members are
+  still draft but substantively ready, run `npm.cmd run apply:bundle-readiness`
+  from the controller decision before requesting bundle merge authorization.

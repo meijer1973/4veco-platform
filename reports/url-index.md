@@ -35,6 +35,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/review-pr-readiness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-pr-readiness-decision.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-bundle-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/refresh-bundle-agent-indexes.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-payload-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lineage.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lane-capability.js

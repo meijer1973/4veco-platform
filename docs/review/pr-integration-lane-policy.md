@@ -204,6 +204,14 @@ machine-readable JSON:
 - `lesson-first`: platform main/base plus lesson candidate head.
 - `bundle-final`: platform candidate head plus lesson candidate head.
 
+Those `exact_members` are immutable reviewed payload coordinates. A
+lesson-first result must also carry the canonical order-specific integration
+contract declaring that the runtime lane will refresh the generated agent
+indexes after the lesson merge and before platform PR CI. The matrix runs the
+trusted platform-`main` generator and freshness checker against explicit
+candidate roots for each simulated state; candidate-branch scripts are not
+trusted or executed.
+
 A bundle may merge only when `bundle-final` is green and at least one
 intermediate state is green. If neither intermediate state is green, neither PR
 may merge until a compatibility bridge makes one order safe.
@@ -254,10 +262,34 @@ Use `.github/workflows/authorized-bundle-integration.yml` or
 workflow uses the same `4veco-main-integration` queue as single-PR integration,
 downloads the explicit compatibility summary, validates the bundle
 authorization, re-fetches both PRs and both `main` refs, selects only a proven
-merge order, merges the first member at its expected head, verifies the
-intermediate platform CI state, refreshes/revalidates the second member when
-needed, merges the second member, and requires final platform CI against final
-platform `main` plus final lesson `main`.
+merge order, merges the first member at its expected head, refreshes and
+revalidates the second member when needed, verifies the exact intermediate
+platform CI state, merges the second member, and requires final platform CI
+against final platform `main` plus final lesson `main`.
+
+For lesson-first order, the lesson merge commit normally differs from the
+reviewed lesson payload SHA. After verifying that merge commit, the lane skips
+the now-stale platform-`main` intermediate check. Trusted platform-`main` code
+clones the exact platform head and exact lesson merge commit into isolated
+checkouts, regenerates the four
+`reports/github-agent-index-{platform,lessen}.{json,md}` files with canonical
+source labels and the lesson merge committer timestamp, runs the trusted
+freshness checker, repeats generation to prove deterministic hashes, and
+permits no other changed paths. It commits and pushes an index-only
+fast-forward descendant, re-fetches that exact head, and verifies payload
+lineage. It then runs platform PR CI bound to the refreshed platform head and
+lesson merge commit, rebuilds exact-head readiness, and repeats the final live
+head, base, review, mergeability, and CI checks before platform merge. No
+candidate checkout script or hook is executed by this privileged refresh.
+
+Compatibility remains an immutable payload proof. The runtime lane records a
+separate validated `integration_refresh` proof binding payload SHAs, lesson
+merge commit, refreshed platform head, deterministic file hashes, lineage,
+exact-head readiness, and exact CI coordinates. Partial resume is explicit and
+idempotent: `--allow-partial-resume` may verify an already-merged lesson and
+reuse the one valid refresh descendant, while stale or tampered descendants,
+mixed SHAs, or any non-fast-forward movement fail closed. Final platform-main
+CI after both member merges is unchanged.
 
 Cross-repository bundle mutations use `CROSS_REPO_BUNDLE_TOKEN`, a fine-grained
 token from the existing owner account restricted to `4veco-platform` and

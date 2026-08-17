@@ -139,11 +139,14 @@ function checkIndex({
 }
 
 function checkAgentIndexFreshness(options = {}) {
-  const platformRoot = options.platformRoot || path.resolve(__dirname, '..', '..');
-  const reportsDir = options.reportsDir || path.join(platformRoot, 'reports');
+  const env = options.env || process.env;
+  const platformRoot = options.platformRoot || env.FOURVECO_PLATFORM_ROOT || path.resolve(__dirname, '..', '..');
+  const reportsDir = options.reportsDir || env.FOURVECO_REPORTS_DIR || path.join(platformRoot, 'reports');
   const lessenRoot = options.lessenRoot === undefined
-    ? resolveLessenRoot(platformRoot, options.env || process.env)
+    ? resolveLessenRoot(platformRoot, env)
     : options.lessenRoot;
+  const lessenSourceRef = env.FOURVECO_LESSEN_SOURCE_REF || 'origin/main';
+  const lessenSourceBranch = env.FOURVECO_LESSEN_SOURCE_BRANCH || lessenSourceRef;
 
   const checks = [
     checkIndex({
@@ -157,8 +160,8 @@ function checkAgentIndexFreshness(options = {}) {
       indexPath: path.join(reportsDir, 'github-agent-index-lessen.json'),
       repoRoot: lessenRoot,
       required: false,
-      sourceRef: (options.env || process.env).FOURVECO_LESSEN_SOURCE_REF || 'origin/main',
-      expectedSourceBranch: (options.env || process.env).FOURVECO_LESSEN_SOURCE_REF || 'origin/main',
+      sourceRef: lessenSourceRef,
+      expectedSourceBranch: lessenSourceBranch,
       allowGeneratedIndexTail: false,
     }),
   ];

@@ -390,6 +390,9 @@ For paired platform/lesson work:
   payload SHAs in the PR evidence;
 - run `.github/workflows/cross-repo-bundle-compatibility.yml` for
   `platform-first`, `lesson-first`, and `bundle-final`;
+- keep compatibility `exact_members` bound to the immutable reviewed payload
+  heads, and require its lesson-first contract to declare the trusted
+  post-lesson-merge index refresh;
 - require `bundle-final` green plus at least one green intermediate state;
 - when both members are draft but substantively ready, use
   `npm.cmd run apply:bundle-readiness` to post exact-head member readiness
@@ -400,6 +403,20 @@ For paired platform/lesson work:
 - merge through `.github/workflows/authorized-bundle-integration.yml` or
   `npm.cmd run integrate:authorized-bundle`, which uses the serialized
   `4veco-main-integration` lane and exact expected heads.
+
+For a lesson-first bundle, the verified lesson merge commit becomes the exact
+lesson source for a deterministic generated-index descendant of the reviewed
+platform payload. Before platform PR CI, the lane must use trusted platform
+`main` generator and freshness-checker code in isolated exact-SHA checkouts,
+allow only the four `reports/github-agent-index-{platform,lessen}.{json,md}`
+paths, push/refetch the descendant without force, rebuild lineage, and publish
+readiness for that exact integration head. Platform PR CI must bind that head
+to the lesson merge commit. Keep the immutable compatibility proof separate
+from this runtime `integration_refresh` proof. A retry with
+`--allow-partial-resume` must reuse a valid existing refresh commit; missing,
+stale, mixed-SHA, or tampered refresh evidence stops before platform merge.
+Do not execute candidate-branch generators or hooks in this privileged phase.
+Final platform `main` CI after both merges remains mandatory.
 
 Lesson bundle members consume delegated controller proof. Do not require a
 lesson-repository commit to carry a standalone platform branch-protection
