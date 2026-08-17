@@ -254,3 +254,27 @@ Rawls reviewed exact substantive commit
 `d2ad31cd55e8611dcfa48ef0cce7ae5a8ef86f19` and accepted the explicit
 lifecycle-state handling, all 12 missing/null regressions, and the repeated
 focused, integration, readiness, and full-platform proof.
+
+## Exact-Head Compatibility Run 32010370282
+
+The first post-#209 compatibility run failed its trusted summary because all
+three state payloads reported `npm run check:platform` failure.
+
+Root cause:
+
+- `agent-index-freshness.test.js` claimed to verify default lesson
+  `origin/main` metadata but called `buildIndex` without an isolated `env`.
+- The compatibility workflow intentionally exports synthetic source labels such
+  as `compatibility/bundle-final/lesson` for its exact-state generation.
+- The unit test inherited that outer label and compared it to `origin/main`.
+  All other tests passed in every state.
+
+Fix:
+
+- Pass `env: {}` to the default-behavior test so workflow-level compatibility
+  metadata cannot alter its fixture contract.
+- Re-run the test under explicit compatibility environment variables, then the
+  focused and full suites.
+- Because this changes the candidate after exact-head review, repeat committed
+  work review, review evidence, trusted-main four-file tail, PR CI, and the
+  complete compatibility workflow. Run `32010370282` is superseded.

@@ -154,3 +154,22 @@ values at every live verification point.
 Rawls returned `OK` on exact substantive commit
 `d2ad31cd55e8611dcfa48ef0cce7ae5a8ef86f19`. The committed review record is
 the last evidence change before trusted-main index generation.
+
+### First Exact-Head Remote Cycle
+
+| Evidence | Result | Notes |
+|---|---|---|
+| Platform CI `32009685630` at `b6a67829...` | EXPECTED FAILURE | The only failed step was active governance wording against lesson `main`; it reported the known stale route and no unrelated failure. |
+| Compatibility `32010370282` | SUPERSEDED FAILURE | State jobs completed and produced exact-member artifacts, but all three state results failed `npm run check:platform` because one agent-index unit test inherited the workflow's synthetic lesson source-branch label. |
+| Compatibility defect classification | TEST ISOLATION | `agent-index-freshness.test.js` expected default `origin/main` metadata without passing an isolated environment to `buildIndex`. The workflow correctly supplied `compatibility/<state>/lesson`. |
+
+The test now passes `env: {}` for its default-behavior fixture. This substantive
+change invalidates tail `b6a67829...` and run `32010370282`; all exact-head proof
+must be rebuilt after renewed work review.
+
+| Command | Result | Notes |
+|---|---|---|
+| Agent-index test with compatibility source labels | PASS | 1 suite and 12 tests passed with `FOURVECO_*_SOURCE_BRANCH=compatibility/bundle-final/*`. |
+| Focused set with compatibility source labels | PASS | 6 suites and 106 tests passed. |
+| Full platform suite with compatibility source labels | PASS | 99 suites and 1,349 tests passed; 6 suites and 8 tests skipped. This reproduces the environment that failed run `32010370282`. |
+| `git diff --check` | PASS | No whitespace errors in the correction. |

@@ -97,7 +97,7 @@ describe('check-agent-index-freshness', () => {
       git(['update-ref', 'refs/remotes/origin/main', liveMain], repo);
       git(['checkout', '--detach', staleHead], repo);
 
-      const index = buildIndex('4veco-lessen', repo, { sourceRef: 'origin/main' });
+      const index = buildIndex('4veco-lessen', repo, { sourceRef: 'origin/main', env: {} });
       const indexPath = path.join(repo, 'index.json');
       fs.writeFileSync(indexPath, JSON.stringify(index), 'utf8');
       const indexedFiles = Object.values(index.groups).flat();
