@@ -1,7 +1,6 @@
 # BUNDLE-INDEX-SUBSET-BRIDGE-1 Result
 
-Status: implementation revised after work-review round 1; exact-commit review
-pending
+Status: implementation complete; exact-commit work review `OK`
 
 ## Result
 
@@ -58,7 +57,8 @@ Reviewer: Rawls (`019ffaf1-c6b8-7152-88ff-d66366207ccb`).
 - Closure: creation now verifies canonical bytes and hashes at both trust
   boundaries; this plan/result pair logs the reviewed v2 bridge without
   rewriting historical evidence; the requested fail-closed matrix passes.
-- Exact-commit round: pending.
+- Round 2: `OK` on substantive commit
+  `7363e9621ac0bd4ea117c6596e13b0eb13b6b964`.
 
 ## Validation
 
