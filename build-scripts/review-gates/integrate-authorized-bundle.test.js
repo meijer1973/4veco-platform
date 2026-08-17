@@ -15,7 +15,8 @@ const {
 } = require('./integrate-authorized-bundle');
 const { lessonFirstIntegrationContract } = require('./cross-repo-bundle-compatibility');
 const { INDEX_PATHS, refreshBundleAgentIndexes } = require('./refresh-bundle-agent-indexes');
-const { classifyPrReadiness } = require('./pr-readiness-router');
+const { mergeSupplementalEvidence } = require('./review-pr-readiness');
+const { classifyPrReadiness, validateDecision } = require('./pr-readiness-router');
 
 const platformBase = '1'.repeat(40);
 const platformHead = '2'.repeat(40);
@@ -182,6 +183,36 @@ function compatibility(order = 'lesson-first', overrides = {}) {
     lesson_candidate_sha: lessonHead,
     ...(overrides.exact_members || {}),
   };
+  const state = (name, status, platformSha, lessonSha) => ({
+    bundle_id: 'PRESENTATION-V2-113-GRAPH-TRANSFER-1',
+    state: name,
+    status,
+    platform_sha: platformSha,
+    lesson_sha: lessonSha,
+    exact_members: exactMembers,
+    commands: [],
+    failed_command: status === 'success' ? null : 'expected incompatible order',
+  });
+  const states = {
+    'platform-first': state(
+      'platform-first',
+      order === 'platform-first' || order === 'both' ? 'success' : 'failure',
+      exactMembers.platform_candidate_sha,
+      exactMembers.lesson_base_sha
+    ),
+    'lesson-first': state(
+      'lesson-first',
+      order === 'lesson-first' || order === 'both' ? 'success' : 'failure',
+      exactMembers.platform_base_sha,
+      exactMembers.lesson_candidate_sha
+    ),
+    'bundle-final': state(
+      'bundle-final',
+      'success',
+      exactMembers.platform_candidate_sha,
+      exactMembers.lesson_candidate_sha
+    ),
+  };
   return {
     ok: true,
     schema_version: 2,
@@ -190,6 +221,7 @@ function compatibility(order = 'lesson-first', overrides = {}) {
     permitted_merge_orders: order === 'both' ? ['platform-first', 'lesson-first'] : [order],
     recommended_merge_order: order === 'both' ? 'lesson-first' : order,
     integration_contract: lessonFirstIntegrationContract(),
+    states,
     failures: [],
     ...overrides,
     exact_members: exactMembers,
@@ -219,9 +251,87 @@ function branchProtectionSummary(activated = false) {
     ok: true,
     failures: [],
     integration_authorized_required: activated,
+    required_approving_review_count: 0,
+    approval_count_source: 'test-fixture',
+    approval_count_observable: true,
+    requires_distinct_approval: false,
     observed: {
       required_status_checks: {
         contexts: activated ? ['validate-platform', 'integration-authorized'] : ['validate-platform'],
+      },
+    },
+  };
+}
+
+function integrationReadinessEvidence(headSha) {
+  const evidence = JSON.parse(fs.readFileSync(path.join(
+    process.cwd(),
+    'reports',
+    'fixtures',
+    'pr-readiness-router',
+    'live-governance-human.json'
+  ), 'utf8'));
+  evidence.reviewed_pr = {
+    ...evidence.reviewed_pr,
+    repo: PLATFORM_REPO,
+    number: 140,
+    url: `https://github.com/${PLATFORM_REPO}/pull/140`,
+    state: 'OPEN',
+    was_draft: false,
+    base: 'main',
+    head_sha: headSha,
+  };
+  evidence.proof = {
+    ...evidence.proof,
+    ci: {
+      ...evidence.proof.ci,
+      head_sha: headSha,
+      conclusion: 'success',
+      checks: [{ name: 'validate-platform', conclusion: 'SUCCESS', status: 'COMPLETED' }],
+    },
+    changed_paths_verified: true,
+    post_lead_review_changed_paths: [...INDEX_PATHS],
+  };
+  return evidence;
+}
+
+function productionReviewAdapter(headSha) {
+  const baseEvidence = integrationReadinessEvidence(headSha);
+  const runReview = jest.fn(({ supplemental }) => {
+    const decision = classifyPrReadiness(mergeSupplementalEvidence(baseEvidence, supplemental));
+    validateDecision(decision);
+    return { decision, markdown: 'readiness' };
+  });
+  return { baseEvidence, runReview };
+}
+
+function payloadReadinessDecision() {
+  return {
+    ok: true,
+    decision: {
+      route: 'READY_FOR_HUMAN_REVIEW',
+      throughput: { class: 'cross_repo_bundle', authority_class: 'high_authority', level: 'L4' },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: {
+        viable: false,
+        target: null,
+        reason: 'This exact two-PR bundle is ready for one coordinated owner review.',
+      },
+      proof: {
+        checkers: [],
+        lead_review_path: 'subagent:payload-review',
+        lead_review_result: 'PASS',
+        lead_reviewed_sha: platformHead,
+        bundle: {
+          paired_lead_reviews: [{
+            repository: LESSON_REPO,
+            pr_number: 34,
+            reviewed_commit_sha: lessonHead,
+            review_result: 'PASS',
+            review_path: 'subagent:lesson-review',
+          }],
+        },
       },
     },
   };
@@ -300,6 +410,7 @@ function harness(overrides = {}) {
       ok: input.payload_ancestor_of_integration_head === true,
       reviewed_payload_head_sha: input.reviewed_payload_head_sha,
       integration_head_sha: input.integration_head_sha,
+      payload_ancestor_of_integration_head: input.payload_ancestor_of_integration_head === true,
       authorization_inherited: input.payload_ancestor_of_integration_head === true,
       requires_integration_delta_lead_review: false,
       requires_deterministic_refresh: false,
@@ -582,51 +693,10 @@ describe('authorized cross-repo bundle integration', () => {
         generated_at: '2026-08-14T00:00:00.000Z',
       },
     };
-    const runReview = jest.fn(({ supplemental }) => {
-      const baseEvidence = JSON.parse(fs.readFileSync(path.join(
-        process.cwd(),
-        'reports',
-        'fixtures',
-        'pr-readiness-router',
-        'live-governance-human.json'
-      ), 'utf8'));
-      const decision = classifyPrReadiness(baseEvidence);
-      return {
-        decision: {
-          ...decision,
-          reviewed_pr: { ...decision.reviewed_pr, head_sha: refreshedHead },
-          proof: {
-            ...decision.proof,
-            ...supplemental.proof,
-            ci: { ...decision.proof.ci, head_sha: refreshedHead },
-            ci_head_sha: refreshedHead,
-            branch_protection: decision.proof.branch_protection,
-            lead_reviewed_sha: platformHead,
-            lead_review_integration_authorization_inherited: true,
-          },
-        },
-        markdown: 'readiness',
-      };
-    });
+    const { baseEvidence, runReview } = productionReviewAdapter(refreshedHead);
     const applyLiveDecision = jest.fn(() => ({ ok: true, comment_action: 'created' }));
     const result = generateBundleIntegrationReadiness({
-      payloadReadiness: {
-        ok: true,
-        decision: {
-          route: 'READY_FOR_HUMAN_REVIEW',
-          throughput: { class: 'cross_repo_bundle' },
-          human_review_payload: {},
-          consequence: {},
-          batching: {},
-          proof: {
-            checkers: [],
-            lead_review_path: 'subagent:payload-review',
-            lead_review_result: 'PASS',
-            lead_reviewed_sha: platformHead,
-            bundle: { paired_lead_reviews: [] },
-          },
-        },
-      },
+      payloadReadiness: payloadReadinessDecision(),
       authorization: authorization(),
       branchProtection: branchProtectionSummary(false),
       compatibility: compatibility('lesson-first'),
@@ -655,6 +725,7 @@ describe('authorized cross-repo bundle integration', () => {
     }, { runReview, applyLiveDecision });
 
     expect(result).toMatchObject({ ok: true, phase: 'integration_head_readiness' });
+    expect(result.decision.route).toBe('READY_FOR_HUMAN_REVIEW');
     expect(result.integration_refresh).toMatchObject({
       platform_payload_sha: platformHead,
       platform_integration_head_sha: refreshedHead,
@@ -662,9 +733,27 @@ describe('authorized cross-repo bundle integration', () => {
       lesson_merge_commit_sha: lessonMerge,
     });
     const supplemental = runReview.mock.calls[0][0].supplemental;
-    expect(supplemental.proof.bundle.exact_members.platform_candidate_sha).toBe(platformHead);
-    expect(supplemental.proof.bundle.controller.integration_head_sha).toBe(refreshedHead);
+    expect(supplemental.bundle.exact_members.platform_candidate_sha).toBe(platformHead);
+    expect(supplemental.bundle.controller.integration_head_sha).toBe(refreshedHead);
+    expect(supplemental.bundle.integration_refresh).toEqual(result.integration_refresh);
+    expect(supplemental.proof).not.toHaveProperty('bundle');
     expect(applyLiveDecision).toHaveBeenCalledTimes(1);
+
+    const legacySupplemental = {
+      ...supplemental,
+      proof: { ...supplemental.proof, bundle: supplemental.bundle },
+    };
+    delete legacySupplemental.bundle;
+    const legacyDecision = classifyPrReadiness(
+      mergeSupplementalEvidence(baseEvidence, legacySupplemental)
+    );
+    validateDecision(legacyDecision);
+    expect(legacyDecision.route).toBe('KEEP_DRAFT_REVISE');
+    expect(legacyDecision.reason_codes).toEqual(expect.arrayContaining([
+      'bundle_id_missing',
+      'bundle_controller_metadata_incomplete',
+      'bundle_compatibility_missing',
+    ]));
 
     const mixed = generateBundleIntegrationReadiness({
       payloadReadiness: { ok: true, decision: { route: 'READY_FOR_HUMAN_REVIEW', proof: {} } },
@@ -683,23 +772,7 @@ describe('authorized cross-repo bundle integration', () => {
     expect(runReview).toHaveBeenCalledTimes(1);
 
     const publicationFailure = generateBundleIntegrationReadiness({
-      payloadReadiness: {
-        ok: true,
-        decision: {
-          route: 'READY_FOR_HUMAN_REVIEW',
-          throughput: { class: 'cross_repo_bundle' },
-          human_review_payload: {},
-          consequence: {},
-          batching: {},
-          proof: {
-            checkers: [],
-            lead_review_path: 'subagent:payload-review',
-            lead_review_result: 'PASS',
-            lead_reviewed_sha: platformHead,
-            bundle: { paired_lead_reviews: [] },
-          },
-        },
-      },
+      payloadReadiness: payloadReadinessDecision(),
       authorization: authorization(),
       branchProtection: branchProtectionSummary(false),
       compatibility: compatibility('lesson-first'),
@@ -1102,6 +1175,181 @@ describe('authorized cross-repo bundle integration', () => {
     );
     expect(platformSuccessIndex).toBeGreaterThan(-1);
     expect(platformSuccessIndex).toBeLessThan(platformMergeIndex);
+  });
+
+  test('partial resume accepts a repaired platform base with immutable payload candidates', () => {
+    const repairedPlatformBase = '9'.repeat(40);
+    const synchronizedHead = '7'.repeat(40);
+    const refreshedHead = '8'.repeat(40);
+    const replacementCompatibility = compatibility('lesson-first', {
+      exact_members: {
+        platform_base_sha: repairedPlatformBase,
+        platform_candidate_sha: platformHead,
+        lesson_base_sha: lessonBase,
+        lesson_candidate_sha: lessonHead,
+      },
+    });
+    const { runReview } = productionReviewAdapter(refreshedHead);
+    const applyLiveDecision = jest.fn(() => ({ ok: true, comment_action: 'created' }));
+    let callsRef;
+    let integrationDecision = null;
+    const setup = harness({
+      deps: {
+        fetchMainSha: jest.fn((repo) => {
+          if (repo === LESSON_REPO) return lessonMerge;
+          if (callsRef && callsRef.merges.some((merge) => merge.repo === PLATFORM_REPO)) return platformMerge;
+          return repairedPlatformBase;
+        }),
+        fetchPr: jest.fn((repo) => {
+          if (repo === LESSON_REPO) {
+            return pr(repo, 34, lessonHead, {
+              state: 'MERGED',
+              mergeCommit: { oid: lessonMerge },
+            });
+          }
+          const refreshed = callsRef && callsRef.events.some((event) => event.type === 'refresh_agent_indexes');
+          return pr(repo, 140, refreshed ? refreshedHead : synchronizedHead);
+        }),
+        fetchReadinessComment: jest.fn((repo, _prNumber, expectedHeadSha) => {
+          if (repo === PLATFORM_REPO && expectedHeadSha === platformHead) return payloadReadinessDecision();
+          if (repo === PLATFORM_REPO && expectedHeadSha === refreshedHead && integrationDecision) {
+            return {
+              ok: true,
+              route: integrationDecision.route,
+              decision: integrationDecision,
+            };
+          }
+          return {
+            ok: true,
+            route: 'READY_FOR_HUMAN_REVIEW',
+            decision: { route: 'READY_FOR_HUMAN_REVIEW' },
+          };
+        }),
+        recomputeCompatibility: jest.fn(() => replacementCompatibility),
+        refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
+          callsRef.events.push({
+            type: 'refresh_agent_indexes',
+            platformHeadSha: refreshOptions.platformPr.headRefOid,
+            lessonMergeSha: refreshOptions.lessonMergeSha,
+          });
+          callsRef.indexRefreshes.push({
+            platformHeadSha: refreshOptions.platformPr.headRefOid,
+            lessonMergeSha: refreshOptions.lessonMergeSha,
+          });
+          return {
+            ok: true,
+            status: 'created',
+            previous_platform_head_sha: synchronizedHead,
+            platform_integration_head_sha: refreshedHead,
+            lesson_merge_commit_sha: lessonMerge,
+            changed_paths: [...INDEX_PATHS],
+            trusted_executor: 'platform-main',
+            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+            metadata: {
+              platform_source_commit: synchronizedHead,
+              platform_source_branch: 'codex/pr-140',
+              lesson_source_commit: lessonMerge,
+              lesson_source_branch: 'origin/main',
+              generated_at: '2026-08-17T11:26:20.000Z',
+            },
+          };
+        }),
+        refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
+          callsRef.events.push({
+            type: 'refresh_platform_pr_ci',
+            headSha: platformPr.headRefOid,
+            expectedLessonSha: refreshOptions.expectedLessonSha,
+          });
+          callsRef.refreshes.push({
+            headSha: platformPr.headRefOid,
+            expectedLessonSha: refreshOptions.expectedLessonSha,
+          });
+          return {
+            ok: true,
+            head_sha: platformPr.headRefOid,
+            run: { conclusion: 'success', databaseId: 204 },
+          };
+        }),
+        generateBundleIntegrationReadiness: jest.fn((readinessOptions) => {
+          callsRef.events.push({
+            type: 'integration_head_readiness',
+            platformHeadSha: readinessOptions.platformPr.headRefOid,
+            lessonMergeSha: readinessOptions.lessonMergeCommitSha,
+          });
+          callsRef.readinessRefreshes.push({
+            platformHeadSha: readinessOptions.platformPr.headRefOid,
+            lessonMergeSha: readinessOptions.lessonMergeCommitSha,
+          });
+          const readiness = generateBundleIntegrationReadiness(readinessOptions, {
+            runReview,
+            applyLiveDecision,
+          });
+          integrationDecision = readiness.decision || null;
+          return readiness;
+        }),
+      },
+      options: {
+        allowPartialResume: true,
+      },
+    });
+    callsRef = setup.calls;
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({ ok: true, phase: 'merged_bundle', order: 'lesson-first' });
+    expect(setup.deps.recomputeCompatibility).toHaveBeenCalledWith(expect.any(Object), null);
+    expect(replacementCompatibility.exact_members).toEqual({
+      platform_base_sha: repairedPlatformBase,
+      platform_candidate_sha: platformHead,
+      lesson_base_sha: lessonBase,
+      lesson_candidate_sha: lessonHead,
+    });
+    expect(result.merges[0]).toMatchObject({
+      repo: LESSON_REPO,
+      resumed: true,
+      merge_commit: lessonMerge,
+    });
+    expect(setup.calls.merges).toEqual([
+      { repo: PLATFORM_REPO, prNumber: 140, headSha: refreshedHead },
+    ]);
+    expect(setup.calls.indexRefreshes).toEqual([{
+      platformHeadSha: synchronizedHead,
+      lessonMergeSha: lessonMerge,
+    }]);
+    expect(setup.calls.refreshes).toEqual([{
+      headSha: refreshedHead,
+      expectedLessonSha: lessonMerge,
+    }]);
+    expect(integrationDecision).toMatchObject({
+      route: 'READY_FOR_HUMAN_REVIEW',
+      reviewed_pr: { head_sha: refreshedHead },
+      proof: {
+        bundle: {
+          integration_refresh: {
+            platform_payload_sha: platformHead,
+            platform_integration_head_sha: refreshedHead,
+            lesson_payload_sha: lessonHead,
+            lesson_merge_commit_sha: lessonMerge,
+          },
+        },
+      },
+    });
+    const eventTypes = setup.calls.events.map((event) => event.type);
+    expect(eventTypes.indexOf('refresh_agent_indexes')).toBeLessThan(eventTypes.indexOf('refresh_platform_pr_ci'));
+    expect(eventTypes.indexOf('refresh_platform_pr_ci')).toBeLessThan(eventTypes.indexOf('integration_head_readiness'));
+    expect(eventTypes.indexOf('integration_head_readiness')).toBeLessThan(
+      setup.calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')
+    );
+    expect(setup.calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')).toBeLessThan(
+      setup.calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO)
+    );
+    expect(setup.calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO)).toBeLessThan(
+      eventTypes.indexOf('wait_ci')
+    );
+    expect(setup.calls.ciWaits[0]).toMatchObject({
+      headSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
   });
 
   test('a separate partial-resume invocation reuses an already-pushed refreshed controller head', () => {
