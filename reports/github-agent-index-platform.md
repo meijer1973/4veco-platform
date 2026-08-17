@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-01T07:36:11.000Z
+Generated: 2026-08-17T11:26:20.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/lesson-first-agent-index-hermeticity-20260817`
-Source commit: `c13dc811f3793f32c68608bc5cd8112bfb99b615`
-Files indexed: 7083
+Source branch: `agent/bundle-readiness-envelope-bridge-20260817`
+Source commit: `48c2657ef4ce4cc7f527d44be560f24ce7c136db`
+Files indexed: 7085
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2529,7 +2529,7 @@ Count: 974
 
 ## reports
 
-Count: 4479
+Count: 4481
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4899,6 +4899,8 @@ Count: 4479
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
+- reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-result.md
