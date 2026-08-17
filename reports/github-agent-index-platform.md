@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-17T11:26:20.000Z
+Generated: 2026-08-17T13:15:13.813Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/bundle-readiness-envelope-bridge-20260817`
-Source commit: `48c2657ef4ce4cc7f527d44be560f24ce7c136db`
-Files indexed: 7085
+Source branch: `codex/pr-readiness-comment-body-file-20260703`
+Source commit: `0a4275745774cc1c6dd5dcde6ef454b5dc19c1b3`
+Files indexed: 7087
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 696
+Count: 698
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -590,6 +590,7 @@ Count: 696
 - build-scripts/review-gates/apply-bundle-readiness-decision.js
 - build-scripts/review-gates/apply-bundle-readiness-decision.test.js
 - build-scripts/review-gates/apply-pr-readiness-decision.js
+- build-scripts/review-gates/apply-pr-readiness-decision.test.js
 - build-scripts/review-gates/authorized-pr-integration-workflow.test.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
 - build-scripts/review-gates/capture-gate-reason-revision1-playable-proof.js
@@ -635,6 +636,7 @@ Count: 696
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
 - build-scripts/review-gates/finalization-freshness-proof.js
 - build-scripts/review-gates/finalization-freshness-proof.test.js
+- build-scripts/review-gates/gh-json-input.js
 - build-scripts/review-gates/integrate-authorized-bundle.js
 - build-scripts/review-gates/integrate-authorized-bundle.test.js
 - build-scripts/review-gates/integrate-authorized-pr.js
