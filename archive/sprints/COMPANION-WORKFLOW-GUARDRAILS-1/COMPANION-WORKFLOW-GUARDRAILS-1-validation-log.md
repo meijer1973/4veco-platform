@@ -212,3 +212,9 @@ lane produced platform merge commit
 Current proof stops before index regeneration. The synchronized evidence commit
 must receive exact-SHA Rawls review; its committed review record must then be
 the direct parent/source commit of the terminal generated-index tail.
+
+Rawls returned `OK` on exact synchronized evidence commit
+`7074e9221a744259fbe469b3ae0064b8e8075fc9`. The verdict is recorded in
+`COMPANION-WORKFLOW-GUARDRAILS-1-post-210-work-review.md`. The commit containing
+that record is the only remaining evidence commit before trusted-main index
+generation.
