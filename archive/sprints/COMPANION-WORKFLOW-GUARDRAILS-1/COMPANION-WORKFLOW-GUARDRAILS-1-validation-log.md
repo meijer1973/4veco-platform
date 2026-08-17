@@ -130,6 +130,7 @@ earlier bundle runs.
 | Platform and lesson `git diff --check` | PASS | No whitespace errors. |
 | `node build-scripts/sprints/emit-url-index.js` | PASS | Regeneration produced no tracked URL-index delta. |
 | Pre-commit worktree safety check | ADMINISTRATIVE FAIL | The stale lock belongs to prior task `COMPANION-INTEGRATION-INDEX-REPAIR-1`. After this evidence is committed, reclaim the clean worktree for `COMPANION-WORKFLOW-GUARDRAILS-1` under the existing `codex-main` owner before review. |
+| Clean worktree release/claim/check | PASS | Released the exact stale `COMPANION-INTEGRATION-INDEX-REPAIR-1` claim owned by `codex-main`, claimed `COMPANION-WORKFLOW-GUARDRAILS-1` at clean checkpoint `6966a8be...`, and rechecked matching owner/task, branch prefix, and cleanliness. |
 
 Agent-index freshness is intentionally deferred until after exact-SHA work
 review and the committed review record. Trusted-main generation must then
