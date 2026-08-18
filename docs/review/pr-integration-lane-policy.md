@@ -295,6 +295,22 @@ reuse the one valid refresh descendant, while stale or tampered descendants,
 mixed SHAs, or any non-fast-forward movement fail closed. Final platform-main
 CI after both member merges is unchanged.
 
+When refreshed platform lineage reports substantive base overlap requiring an
+integration-delta lead review, dual review binding is mandatory. The canonical
+payload lead review remains bound to the immutable platform candidate; a
+separate JSON record supplied as `--delta-review <file>` must pass and bind that
+payload plus the exact final platform integration head. The lane validates this
+record before constructing the schema-v2 readiness attestation, calling the
+readiness router, publishing a comment, or merging. Missing, malformed,
+wrong-payload, wrong-head, non-passing, or unexpected delta evidence fails
+closed. Create the record only after the terminal generated-index head exists;
+any later head movement invalidates it.
+
+The hosted `authorized-bundle-integration` dispatch does not transport local
+review files. Delta-required resumes therefore use the owner-authenticated local
+trusted-main command. A hosted invocation without the required record must stop
+at the delta-review gate; workflow dispatch is not an evidence waiver.
+
 Cross-repository bundle mutations use `CROSS_REPO_BUNDLE_TOKEN`, a fine-grained
 token from the existing owner account restricted to `4veco-platform` and
 `4veco-lessen`. The ordinary repository `github.token` may be used only for

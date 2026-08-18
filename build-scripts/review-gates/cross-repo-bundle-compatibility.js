@@ -178,7 +178,12 @@ function validateIntegrationRefreshProof(proof, options = {}) {
     readinessDecision.reviewed_pr.head_sha !== readiness.head_sha ||
     readinessDecision.route !== readiness.route
   )) {
-    failures.push('integration_refresh readiness decision mismatch');
+    failures.push(
+      `integration_refresh readiness decision mismatch (attested ${readiness.head_sha || 'missing'} ` +
+      `${readiness.route || 'missing'}, decision ` +
+      `${(readinessDecision.reviewed_pr && readinessDecision.reviewed_pr.head_sha) || 'missing'} ` +
+      `${readinessDecision.route || 'missing'})`
+    );
   }
   return { ok: failures.length === 0, failures, proof: item };
 }

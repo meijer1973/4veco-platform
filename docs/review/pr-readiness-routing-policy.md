@@ -299,6 +299,15 @@ is not an ancestor, manual conflict resolution changes behavior, substantive
 payload changes, bundle membership changes, authority scope changes, or the
 lane cannot prove lineage/effective-payload equivalence.
 
+For a refreshed platform bundle with substantive base overlap, lead freshness
+uses dual proof. `proof.lead_review` remains the immutable payload review and
+must continue to match the compatibility platform candidate.
+`proof.integration.delta_review` separately binds a passing exact-head review to
+that payload and the current integration head. A ready route requires both when
+lineage declares `requires_integration_delta_lead_review`; malformed, missing,
+stale, wrong-payload, wrong-head, non-passing, or unexpected delta proof is a
+revision result and cannot be repaired by replacing the payload lead review.
+
 Agents must not call `gh pr merge` directly for normal PRs. Normal merges must
 go through the authorized single-PR or bundle lane. For single-PR work, the
 owner-authenticated local serialized lane is the default merge path:

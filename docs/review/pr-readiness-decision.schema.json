@@ -248,6 +248,9 @@
         "lead_review_integration_authorization_inherited": {
           "type": "boolean"
         },
+        "lead_review_integration_delta_reviewed": {
+          "type": "boolean"
+        },
         "post_lead_review_changed_paths": {
           "type": "array",
           "items": {
@@ -819,7 +822,108 @@
             "object",
             "null"
           ],
-          "additionalProperties": true
+          "additionalProperties": true,
+          "properties": {
+            "delta_review": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "reviewed_payload_head_sha"
+              ],
+              "properties": {
+                "result": {
+                  "type": "string",
+                  "enum": [
+                    "PASS",
+                    "PASS WITH FLAGS"
+                  ]
+                },
+                "verdict": {
+                  "type": "string",
+                  "enum": [
+                    "PASS",
+                    "PASS WITH FLAGS"
+                  ]
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "PASS",
+                    "PASS WITH FLAGS"
+                  ]
+                },
+                "reviewed_payload_head_sha": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "integration_head_sha": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "reviewed_integration_head_sha": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "review_path": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "allOf": [
+                {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "result"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "verdict"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "status"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "integration_head_sha"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "reviewed_integration_head_sha"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "path"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "review_path"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       }
     },

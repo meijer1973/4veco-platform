@@ -850,6 +850,15 @@ function bundleAllowsLessonFirstControllerCi(bundle) {
   );
 }
 
+function integrationDeltaReviewRequired(integrationProof) {
+  const integration = integrationProof || {};
+  const baseDrift = integration.base_drift || {};
+  return Boolean(
+    integration.requires_integration_delta_lead_review === true ||
+    baseDrift.requires_integration_delta_lead_review === true
+  );
+}
+
 function leadProof(proof, headSha) {
   const lead = proof.lead_review || {};
   const result = normalizeVerdict(lead.result);
@@ -863,17 +872,48 @@ function leadProof(proof, headSha) {
     afterLeadPaths.length > 0 &&
     afterLeadPaths.every(isEvidenceTailPath);
   const integrationAuthorizedTail = integrationLeadAuthorizationProof(proof, reviewedSha, headSha);
+  const integration = proof.integration || {};
+  const deltaReviewRequired = integrationDeltaReviewRequired(integration);
+  const deltaReviewPresent = Boolean(integration.delta_review);
+  const deltaReviewComplete = integrationDeltaReviewComplete(
+    integration.delta_review,
+    integration.reviewed_payload_head_sha,
+    headSha
+  );
+  const integrationDeltaReviewedTail = Boolean(
+    reviewedSha &&
+      reviewedSha !== headSha &&
+      reviewedSha === integration.reviewed_payload_head_sha &&
+      integration.ok === true &&
+      integration.authorization_inherited === true &&
+      integrationFailures(integration).length === 0 &&
+      deltaReviewRequired &&
+      deltaReviewComplete
+  );
+  const unexpectedDeltaReview = deltaReviewPresent && !deltaReviewRequired;
 
   return {
     ok: Boolean(
-      lead.path &&
+      !unexpectedDeltaReview &&
+        lead.path &&
         PASSING_LEAD_RESULTS.has(result) &&
         reviewedSha &&
-        (reviewedSha === headSha || evidenceOnlyTail || integrationAuthorizedTail)
+        (reviewedSha === headSha || evidenceOnlyTail || integrationAuthorizedTail || integrationDeltaReviewedTail)
     ),
-    stale: Boolean(reviewedSha && headSha && reviewedSha !== headSha && !evidenceOnlyTail && !integrationAuthorizedTail),
+    stale: Boolean(
+      reviewedSha &&
+        headSha &&
+        reviewedSha !== headSha &&
+        !evidenceOnlyTail &&
+        !integrationAuthorizedTail &&
+        !integrationDeltaReviewedTail
+    ),
     evidenceOnlyTail,
     integrationAuthorizedTail,
+    integrationDeltaReviewedTail,
+    deltaReviewRequired,
+    deltaReviewComplete,
+    unexpectedDeltaReview,
     postLeadReviewChangedPaths: afterLeadPaths,
     disallowedEvidenceTail: Boolean(
       reviewedSha &&
@@ -972,6 +1012,10 @@ function collectRevisionReasons(evidence) {
   }
   if (!checkers.ok) reasons.push('checker_proof_missing_or_not_successful');
   if (proof.lead_review_compare_unavailable === true) reasons.push('lead_review_compare_unavailable');
+  if (lead.unexpectedDeltaReview) reasons.push('integration_delta_review_unexpected');
+  if (lead.deltaReviewRequired && !lead.deltaReviewComplete) {
+    reasons.push('integration_delta_review_missing_or_invalid');
+  }
   if (!lead.ok) reasons.push(lead.stale ? 'lead_review_stale_after_substantive_change' : 'lead_review_missing_or_not_passing');
   if (proof.review_threads_unavailable === true) reasons.push('review_threads_unavailable');
   if (proof.unresolved_review_threads === true) reasons.push('unresolved_review_threads');
@@ -1053,6 +1097,7 @@ function proofSummary(evidence, collected) {
     lead_reviewed_sha: collected.lead.reviewedSha,
     lead_review_evidence_tail_allowed: collected.lead.evidenceOnlyTail,
     lead_review_integration_authorization_inherited: collected.lead.integrationAuthorizedTail,
+    lead_review_integration_delta_reviewed: collected.lead.integrationDeltaReviewedTail,
     post_lead_review_changed_paths: collected.lead.postLeadReviewChangedPaths,
     changed_paths_verified: evidence.proof.changed_paths_verified === true,
     checkers: collected.checkers.checkers,
@@ -1237,6 +1282,20 @@ function validateDecision(decision) {
     if (decision.proof.lead_reviewed_sha !== compatibilityExact.platform_candidate_sha) {
       throw new Error('ready platform bundle lead-reviewed payload must match compatibility');
     }
+    const integrationProof = decision.proof.integration || {};
+    const deltaReviewRequired = integrationDeltaReviewRequired(integrationProof);
+    const deltaReviewPresent = Boolean(integrationProof.delta_review);
+    const deltaReviewComplete = integrationDeltaReviewComplete(
+      integrationProof.delta_review,
+      compatibilityExact.platform_candidate_sha,
+      decision.reviewed_pr.head_sha
+    );
+    if (deltaReviewRequired && !deltaReviewComplete) {
+      throw new Error('ready platform bundle requires valid integration delta review');
+    }
+    if (!deltaReviewRequired && deltaReviewPresent) {
+      throw new Error('ready platform bundle integration delta review is unexpected');
+    }
     const pairedMembers = asArray(bundleProof.paired_prs);
     const lessonMembers = pairedMembers.filter((member) =>
       repoIsLesson(member.repository || member.repo)
@@ -1297,7 +1356,11 @@ function validateDecision(decision) {
       readinessDecision: decision,
     });
     if (!refreshValidation.ok) {
-      throw new Error(`integration_refresh decision binding invalid: ${refreshValidation.failures.join(', ')}`);
+      const reasons = asArray(decision.reason_codes).join(', ') || 'none';
+      throw new Error(
+        `integration_refresh decision binding invalid: ${refreshValidation.failures.join(', ')}; ` +
+        `decision reasons: ${reasons}`
+      );
     }
   }
   const readyRoutes = new Set([ROUTES.READY_FOR_LEAD_ONLY, ROUTES.READY_FOR_HUMAN_REVIEW]);
@@ -1421,7 +1484,8 @@ function validateDecision(decision) {
     if (
       decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
       decision.proof.lead_review_evidence_tail_allowed !== true &&
-      decision.proof.lead_review_integration_authorization_inherited !== true
+      decision.proof.lead_review_integration_authorization_inherited !== true &&
+      decision.proof.lead_review_integration_delta_reviewed !== true
     ) {
       throw new Error(`${decision.route} requires lead review for reviewed head, verified evidence-only tail, or inherited integration authorization`);
     }
@@ -1441,9 +1505,27 @@ function validateDecision(decision) {
         throw new Error(`${decision.route} requires valid integration authorization proof`);
       }
     }
+    if (decision.proof.lead_review_integration_delta_reviewed === true) {
+      const integration = decision.proof.integration || {};
+      if (
+        decision.proof.lead_reviewed_sha !== integration.reviewed_payload_head_sha ||
+        integration.ok !== true ||
+        integration.authorization_inherited !== true ||
+        integrationFailures(integration).length > 0 ||
+        !integrationDeltaReviewRequired(integration) ||
+        !integrationDeltaReviewComplete(
+          integration.delta_review,
+          decision.proof.lead_reviewed_sha,
+          decision.reviewed_pr.head_sha
+        )
+      ) {
+        throw new Error(`${decision.route} requires valid integration delta review proof`);
+      }
+    }
     if (
       decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
-      decision.proof.lead_review_integration_authorization_inherited !== true
+      decision.proof.lead_review_integration_authorization_inherited !== true &&
+      decision.proof.lead_review_integration_delta_reviewed !== true
     ) {
       const tailPaths = uniqueStrings(asArray(decision.proof.post_lead_review_changed_paths).map(normalizePath));
       if (tailPaths.length === 0 || !tailPaths.every(isEvidenceTailPath)) {
@@ -1882,6 +1964,7 @@ function renderDecisionMarkdown(decision) {
     leadReviewLine,
     `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
     `- Integration authorization inherited for lead review: \`${Boolean(decision.proof.lead_review_integration_authorization_inherited)}\``,
+    `- Integration delta review satisfies lead freshness: \`${Boolean(decision.proof.lead_review_integration_delta_reviewed)}\``,
     `- ${branchProtectionLabel}: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
   if (decision.proof.human_authorization) {
