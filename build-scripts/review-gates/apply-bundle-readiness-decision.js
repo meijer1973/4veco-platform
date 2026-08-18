@@ -10,6 +10,7 @@ const {
   validateDecision,
 } = require('./pr-readiness-router');
 const { verifyTransitionPreconditions } = require('./apply-pr-readiness-decision');
+const { runGhWithJsonInput } = require('./gh-json-input');
 
 const READY_ROUTES = new Set([ROUTES.READY_FOR_LEAD_ONLY, ROUTES.READY_FOR_HUMAN_REVIEW]);
 
@@ -148,10 +149,10 @@ function postOrUpdateComment(repo, number, comment, body, options = {}) {
     return { action: comment ? 'would_update_comment' : 'would_create_comment', id: comment && comment.id };
   }
   if (comment && comment.id) {
-    runGh(['api', '-X', 'PATCH', `repos/${repo}/issues/comments/${comment.id}`, '-f', `body=${body}`], options);
+    runGhWithJsonInput(runGh, ['api', '-X', 'PATCH', `repos/${repo}/issues/comments/${comment.id}`], { body }, options);
     return { action: 'updated_comment', id: comment.id };
   }
-  const raw = runGh(['api', '-X', 'POST', `repos/${repo}/issues/${number}/comments`, '-f', `body=${body}`], options);
+  const raw = runGhWithJsonInput(runGh, ['api', '-X', 'POST', `repos/${repo}/issues/${number}/comments`], { body }, options);
   const created = JSON.parse(raw || '{}');
   return { action: 'created_comment', id: created.id || null };
 }
@@ -506,4 +507,5 @@ if (require.main === module) {
 module.exports = {
   applyBundleReadiness,
   generateBundleMemberDecisions,
+  postOrUpdateComment,
 };

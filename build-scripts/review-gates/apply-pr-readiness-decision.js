@@ -9,6 +9,7 @@ const {
   renderDecisionMarkdown,
   validateDecision,
 } = require('./pr-readiness-router');
+const { runGhWithJsonInput } = require('./gh-json-input');
 
 const SHA_PATTERN = /^[a-f0-9]{40}$/i;
 
@@ -45,7 +46,7 @@ function runGh(args, options = {}) {
   });
   if (result.status !== 0) {
     const detail = (result.stderr || result.stdout || '').trim();
-    fail(`gh ${args.join(' ')} failed${detail ? `: ${detail}` : ''}`);
+    throw new Error(`gh ${args.join(' ')} failed${detail ? `: ${detail}` : ''}`);
   }
   return result.stdout;
 }
@@ -219,10 +220,10 @@ function listLiveComments(repo, number) {
 
 function postOrUpdateLiveComment(repo, number, comment, body) {
   if (comment && comment.id) {
-    runGh(['api', '-X', 'PATCH', `repos/${repo}/issues/comments/${comment.id}`, '-f', `body=${body}`]);
+    runGhWithJsonInput(runGh, ['api', '-X', 'PATCH', `repos/${repo}/issues/comments/${comment.id}`], { body });
     return { action: 'updated_comment', id: comment.id };
   }
-  const raw = runGh(['api', '-X', 'POST', `repos/${repo}/issues/${number}/comments`, '-f', `body=${body}`]);
+  const raw = runGhWithJsonInput(runGh, ['api', '-X', 'POST', `repos/${repo}/issues/${number}/comments`], { body });
   const created = JSON.parse(raw || '{}');
   return { action: 'created_comment', id: created.id || null };
 }
@@ -323,7 +324,12 @@ function parseArgs(argv) {
 
 function runCli(argv) {
   const options = parseArgs(argv);
-  const result = runApply(options);
+  let result;
+  try {
+    result = runApply(options);
+  } catch (error) {
+    fail(error.message);
+  }
   const json = `${JSON.stringify(result, null, 2)}\n`;
   if (options.output) {
     fs.mkdirSync(path.dirname(options.output), { recursive: true });

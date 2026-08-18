@@ -101,6 +101,7 @@ function buildBody(branch) {
   lines.push('');
   lines.push(`- ${platform('references/reference-team-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/quality-standards/inspection-standards-roadmap.md')}`);
+  lines.push(`- ${platform('docs/roadmaps/quality-standards/international-quality-standards-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/roadmap-version-index.json')}`);
   lines.push(`- ${platform('knowledge/old/platform-team-roadmap.md')}`);
   lines.push(`- ${platform('knowledge/old/three-month-roadmap.md')}`);
@@ -110,6 +111,7 @@ function buildBody(branch) {
   lines.push('## Inspection Standards');
   lines.push('');
   lines.push(`- ${platform('docs/roadmaps/quality-standards/inspection-standards-roadmap.md')}`);
+  lines.push(`- ${platform('docs/roadmaps/quality-standards/international-quality-standards-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/quality-standards/sprint-ledger.md')}`);
   lines.push(`- ${platform('docs/roadmaps/quality-standards/quality-standards-end-state.md')}`);
   lines.push(`- ${platform('references/data/inspection-standards/source-register.json')}`);
