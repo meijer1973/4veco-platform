@@ -15,6 +15,7 @@ const INDEX_PATHS = Object.freeze([
 ]);
 const TRUSTED_GENERATOR = 'build-scripts/reports/github-agent-index.js';
 const TRUSTED_FRESHNESS_CHECKER = 'build-scripts/reports/check-agent-index-freshness.js';
+const ACTUAL_CHANGED_PATHS_POLICY = 'non_empty_subset_of_generated_and_verified_paths';
 
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
@@ -40,6 +41,12 @@ function normalizePaths(values) {
 
 function samePaths(left, right) {
   return JSON.stringify(normalizePaths(left)) === JSON.stringify(normalizePaths(right));
+}
+
+function isNonEmptyIndexSubset(values) {
+  const raw = (values || []).map((item) => String(item).replace(/\\/g, '/')).filter(Boolean);
+  const normalized = normalizePaths(raw);
+  return normalized.length > 0 && normalized.length === raw.length && normalized.every((item) => INDEX_PATHS.includes(item));
 }
 
 function sha256(buffer) {
@@ -159,6 +166,19 @@ function commitPaths(repoRoot, commitSha) {
   return { parents, paths: normalizePaths(paths) };
 }
 
+function verifyRefreshCommitShape(repoRoot, commitSha, expectedParentSha, expectedPaths) {
+  const shape = commitPaths(repoRoot, commitSha);
+  if (shape.parents.length !== 1) throw new Error('trusted refresh commit must have exactly one parent');
+  if (shape.parents[0] !== expectedParentSha) throw new Error('trusted refresh commit parent mismatch');
+  if (!isNonEmptyIndexSubset(shape.paths)) throw new Error('trusted refresh commit paths must be a non-empty allowlisted subset');
+  if (!samePaths(shape.paths, expectedPaths)) throw new Error('trusted refresh commit paths mismatch');
+  return {
+    sha: commitSha,
+    parent_sha: shape.parents[0],
+    changed_paths: shape.paths,
+  };
+}
+
 function compareGeneratedToCommit(generatedRoot, commitRoot, commitSha) {
   return INDEX_PATHS.every((relativePath) => {
     const expected = fs.readFileSync(path.join(generatedRoot, relativePath));
@@ -173,13 +193,19 @@ function compareGeneratedToCommit(generatedRoot, commitRoot, commitSha) {
   });
 }
 
+function verifyCommittedIndexes(generatedRoot, commitRoot, commitSha, expectedHashes) {
+  if (JSON.stringify(fileHashes(generatedRoot)) !== JSON.stringify(expectedHashes)) {
+    throw new Error('generated agent index bytes changed before commit verification');
+  }
+  if (!compareGeneratedToCommit(generatedRoot, commitRoot, commitSha)) {
+    throw new Error('committed agent indexes do not match the generated canonical bytes');
+  }
+}
+
 function verifyExistingRefresh(input) {
   const shape = commitPaths(input.platformRoot, input.currentHeadSha);
-  const indexOnly = shape.paths.length > 0 && shape.paths.every((item) => INDEX_PATHS.includes(item));
+  const indexOnly = isNonEmptyIndexSubset(shape.paths);
   if (shape.parents.length !== 1 || !indexOnly) return null;
-  if (!samePaths(shape.paths, INDEX_PATHS)) {
-    throw new Error('existing index-only refresh descendant is stale or tampered');
-  }
   const parentSha = shape.parents[0];
   const verificationRoot = path.join(input.tempRoot, 'platform-refresh-verification');
   cloneAt(input.platformRemote, PLATFORM_REPO, verificationRoot, parentSha);
@@ -191,12 +217,21 @@ function verifyExistingRefresh(input) {
   if (!compareGeneratedToCommit(verificationRoot, input.platformRoot, input.currentHeadSha)) {
     throw new Error('existing index-only refresh descendant is stale or tampered');
   }
+  const commit = verifyRefreshCommitShape(
+    input.platformRoot,
+    input.currentHeadSha,
+    parentSha,
+    shape.paths
+  );
   return {
     status: 'reused',
     previous_platform_head_sha: parentSha,
     platform_integration_head_sha: input.currentHeadSha,
+    changed_paths: shape.paths,
+    verified_paths: [...INDEX_PATHS],
     hashes: generated.hashes,
     metadata: generated.metadata,
+    commit,
   };
 }
 
@@ -220,11 +255,14 @@ function refreshBundleAgentIndexes(options) {
   if (options.dryRun) {
     return {
       ok: true,
-      status: 'would_refresh',
+      status: 'would_verify',
       previous_platform_head_sha: currentHeadSha,
       platform_integration_head_sha: currentHeadSha,
       lesson_merge_commit_sha: lessonMergeSha,
-      changed_paths: [...INDEX_PATHS],
+      changed_paths: null,
+      actual_changed_paths: null,
+      verified_paths: [...INDEX_PATHS],
+      would_verify_paths: [...INDEX_PATHS],
       trusted_executor: 'platform-main',
     };
   }
@@ -262,7 +300,6 @@ function refreshBundleAgentIndexes(options) {
         ok: true,
         ...existing,
         lesson_merge_commit_sha: lessonMergeSha,
-        changed_paths: [...INDEX_PATHS],
         trusted_executor: 'platform-main',
       };
     }
@@ -272,7 +309,7 @@ function refreshBundleAgentIndexes(options) {
       platformSourceSha: currentHeadSha,
     });
     const changedPaths = worktreeChangedPaths(platformRoot);
-    if (!samePaths(changedPaths, INDEX_PATHS)) {
+    if (!isNonEmptyIndexSubset(changedPaths)) {
       throw new Error(`trusted refresh changed unexpected paths: ${normalizePaths(changedPaths).join(', ') || 'none'}`);
     }
     git(['add', '--', ...INDEX_PATHS], platformRoot);
@@ -282,6 +319,8 @@ function refreshBundleAgentIndexes(options) {
       lessonMergeSha,
     });
     const newHeadSha = git(['rev-parse', 'HEAD'], platformRoot);
+    verifyRefreshCommitShape(platformRoot, newHeadSha, currentHeadSha, changedPaths);
+    verifyCommittedIndexes(platformRoot, platformRoot, newHeadSha, generated.hashes);
     git(['push', 'origin', `${newHeadSha}:refs/heads/${platformBranch}`], platformRoot);
     const observedHead = remoteBranchHead({
       platformRoot,
@@ -289,16 +328,23 @@ function refreshBundleAgentIndexes(options) {
       fetchPlatformPr: options.fetchPlatformPr,
     });
     if (observedHead !== newHeadSha) throw new Error('platform refresh push/refetch head mismatch');
+    git(['fetch', '--no-tags', 'origin', `refs/heads/${platformBranch}`], platformRoot);
+    const refetchedHead = git(['rev-parse', 'FETCH_HEAD'], platformRoot);
+    if (refetchedHead !== newHeadSha) throw new Error('platform refresh fetched head mismatch');
+    const refetchedCommit = verifyRefreshCommitShape(platformRoot, refetchedHead, currentHeadSha, changedPaths);
+    verifyCommittedIndexes(platformRoot, platformRoot, refetchedHead, generated.hashes);
     return {
       ok: true,
       status: 'created',
       previous_platform_head_sha: currentHeadSha,
       platform_integration_head_sha: newHeadSha,
       lesson_merge_commit_sha: lessonMergeSha,
-      changed_paths: [...INDEX_PATHS],
+      changed_paths: changedPaths,
+      verified_paths: [...INDEX_PATHS],
       trusted_executor: 'platform-main',
       hashes: generated.hashes,
       metadata: generated.metadata,
+      commit: refetchedCommit,
     };
   } finally {
     fs.rmSync(tempRoot, { recursive: true, force: true });
@@ -306,14 +352,18 @@ function refreshBundleAgentIndexes(options) {
 }
 
 module.exports = {
+  ACTUAL_CHANGED_PATHS_POLICY,
   INDEX_PATHS,
   TRUSTED_FRESHNESS_CHECKER,
   TRUSTED_GENERATOR,
   canonicalGeneratedAt,
   commitGeneratedIndexes,
   generateCanonicalIndexes,
+  isNonEmptyIndexSubset,
   refreshBundleAgentIndexes,
   runTrustedGeneration,
   samePaths,
+  verifyCommittedIndexes,
+  verifyRefreshCommitShape,
   worktreeChangedPaths,
 };

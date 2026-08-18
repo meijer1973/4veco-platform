@@ -2531,7 +2531,7 @@ Count: 974
 
 ## reports
 
-Count: 4481
+Count: 4484
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4901,6 +4901,9 @@ Count: 4481
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-plan.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-result.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md

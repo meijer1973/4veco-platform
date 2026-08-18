@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const {
+  ACTUAL_CHANGED_PATHS_POLICY,
   INDEX_PATHS,
   TRUSTED_FRESHNESS_CHECKER,
   TRUSTED_GENERATOR,
@@ -19,7 +20,7 @@ const SUCCESS_VALUES = new Set(['success', 'succeeded', 'passed', 'pass', 'ok'])
 
 function lessonFirstIntegrationContract() {
   return {
-    schema_version: 1,
+    schema_version: 2,
     order: STATES.LESSON_FIRST,
     post_first_merge_refresh: {
       required: true,
@@ -28,7 +29,8 @@ function lessonFirstIntegrationContract() {
       trusted_executor: 'platform-main',
       generator: TRUSTED_GENERATOR,
       freshness_checker: TRUSTED_FRESHNESS_CHECKER,
-      changed_paths: [...INDEX_PATHS],
+      generated_and_verified_paths: [...INDEX_PATHS],
+      actual_changed_paths_policy: ACTUAL_CHANGED_PATHS_POLICY,
       deterministic_inputs: [
         'platform_refresh_parent_sha',
         'lesson_merge_commit_sha',
@@ -58,8 +60,11 @@ function validateIntegrationContract(contract) {
       failures.push(`integration_contract ${key} mismatch`);
     }
   }
-  if (!sameStringArray(refresh.changed_paths, expected.post_first_merge_refresh.changed_paths)) {
-    failures.push('integration_contract changed_paths mismatch');
+  if (!sameStringArray(refresh.generated_and_verified_paths, expected.post_first_merge_refresh.generated_and_verified_paths)) {
+    failures.push('integration_contract generated_and_verified_paths mismatch');
+  }
+  if (refresh.actual_changed_paths_policy !== expected.post_first_merge_refresh.actual_changed_paths_policy) {
+    failures.push('integration_contract actual_changed_paths_policy mismatch');
   }
   if (!sameStringArray(refresh.deterministic_inputs, expected.post_first_merge_refresh.deterministic_inputs)) {
     failures.push('integration_contract deterministic_inputs mismatch');
@@ -111,6 +116,7 @@ function validateIntegrationRefreshProof(proof, options = {}) {
   }
   requireSha(refreshResult.previous_platform_head_sha, 'integration_refresh previous platform head', failures);
   const metadata = refreshResult.metadata || {};
+  const commit = refreshResult.commit || {};
   if (metadata.platform_source_commit !== refreshResult.previous_platform_head_sha) {
     failures.push('integration_refresh platform source commit mismatch');
   }
@@ -129,7 +135,13 @@ function validateIntegrationRefreshProof(proof, options = {}) {
   if (options.platformBranch && metadata.platform_source_branch !== options.platformBranch) {
     failures.push('integration_refresh platform source branch mismatch');
   }
-  if (!sameStringArray(refreshResult.changed_paths, INDEX_PATHS)) failures.push('integration_refresh paths mismatch');
+  if (!isNonEmptyIndexSubset(refreshResult.changed_paths)) failures.push('integration_refresh changed paths invalid');
+  if (!sameStringArray(refreshResult.verified_paths, INDEX_PATHS)) failures.push('integration_refresh verified paths mismatch');
+  if (commit.sha !== item.platform_integration_head_sha) failures.push('integration_refresh commit head mismatch');
+  if (commit.parent_sha !== refreshResult.previous_platform_head_sha) failures.push('integration_refresh commit parent mismatch');
+  if (!sameStringArray(commit.changed_paths, refreshResult.changed_paths)) {
+    failures.push('integration_refresh commit paths mismatch');
+  }
   const hashes = refreshResult.hashes || {};
   if (!INDEX_PATHS.every((file) => /^[a-f0-9]{64}$/i.test(String(hashes[file] || '')))) {
     failures.push('integration_refresh deterministic hashes missing');
@@ -146,7 +158,7 @@ function validateIntegrationRefreshProof(proof, options = {}) {
   if (
     readiness.head_sha !== item.platform_integration_head_sha ||
     !['READY_FOR_LEAD_ONLY', 'READY_FOR_HUMAN_REVIEW'].includes(readiness.route) ||
-    readiness.attestation_schema_version !== 1 ||
+    readiness.attestation_schema_version !== 2 ||
     !/^sha256:[a-f0-9]{64}$/i.test(String(readiness.attestation_digest || ''))
   ) {
     failures.push('integration_refresh readiness invalid');
@@ -185,7 +197,7 @@ function integrationRefreshReadinessAttestationDigest(proof) {
   const refreshResult = item.refresh_result || {};
   const ci = item.ci || {};
   const canonical = {
-    schema_version: 1,
+    schema_version: 2,
     order: item.order,
     platform_payload_sha: item.platform_payload_sha,
     platform_integration_head_sha: item.platform_integration_head_sha,
@@ -193,6 +205,8 @@ function integrationRefreshReadinessAttestationDigest(proof) {
     lesson_merge_commit_sha: item.lesson_merge_commit_sha,
     refresh_status: refreshResult.status,
     refresh_parent_sha: refreshResult.previous_platform_head_sha,
+    refresh_changed_paths: refreshResult.changed_paths,
+    refresh_verified_paths: refreshResult.verified_paths,
     refresh_hashes: refreshResult.hashes,
     refresh_metadata: refreshResult.metadata,
     readiness_head_sha: readiness.head_sha,
@@ -208,6 +222,12 @@ function integrationRefreshReadinessAttestationDigest(proof) {
 function sameStringArray(left, right) {
   const normalize = (value) => asArray(value).map(String).sort();
   return JSON.stringify(normalize(left)) === JSON.stringify(normalize(right));
+}
+
+function isNonEmptyIndexSubset(values) {
+  const raw = asArray(values).map(String);
+  const normalized = [...new Set(raw)].sort();
+  return raw.length > 0 && normalized.length === raw.length && normalized.every((item) => INDEX_PATHS.includes(item));
 }
 
 function fail(message) {
