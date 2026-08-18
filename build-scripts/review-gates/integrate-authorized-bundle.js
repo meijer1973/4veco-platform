@@ -31,10 +31,7 @@ const { summarizeLineage } = require('./check-integration-lineage');
 const { collectReviewThreadState, runReview } = require('./review-pr-readiness');
 const { applyLiveDecision } = require('./apply-pr-readiness-decision');
 const { decisionDigest } = require('./pr-readiness-router');
-const {
-  INDEX_PATHS,
-  refreshBundleAgentIndexes,
-} = require('./refresh-bundle-agent-indexes');
+const { refreshBundleAgentIndexes } = require('./refresh-bundle-agent-indexes');
 const { readEvidence, validateEvidence } = require('../ci/platform-ci-evidence');
 
 const PLATFORM_REPO = 'meijer1973/4veco-platform';
@@ -755,7 +752,7 @@ function generateBundleIntegrationReadiness(input, options = {}) {
     readiness: {
       head_sha: input.platformPr.headRefOid,
       route: payloadDecision.route,
-      attestation_schema_version: 1,
+      attestation_schema_version: 2,
       attestation_digest: null,
     },
     ci: input.ci,
@@ -789,8 +786,6 @@ function generateBundleIntegrationReadiness(input, options = {}) {
         reviewed_commit_sha: payloadProof.lead_reviewed_sha,
         paired_member_reviews: payloadBundle.paired_lead_reviews || [],
       },
-      changed_paths_verified: true,
-      post_lead_review_changed_paths: [...INDEX_PATHS],
       branch_protection: input.branchProtection,
       human_authorization: {
         decision: input.authorization.decision,

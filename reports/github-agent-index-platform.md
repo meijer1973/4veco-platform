@@ -5,9 +5,9 @@ Generated: 2026-08-17T11:26:20.000Z
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/skilltree-improvement-20260618`
-Source commit: `4b4ad45bb2454f9b7f69169a75dc0c0c83f8e9a2`
-Files indexed: 7097
+Source branch: `agent/bundle-index-subset-refresh-bridge-20260817`
+Source commit: `fffbf28ebd03eafc740ece4ac2b08cb3263fa457`
+Files indexed: 7088
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -869,9 +869,8 @@ Count: 25
 
 ## validators
 
-Count: 677
+Count: 676
 
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
 - archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-validation-log.md
@@ -2530,7 +2529,7 @@ Count: 974
 
 ## reports
 
-Count: 4479
+Count: 4484
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4900,6 +4899,11 @@ Count: 4479
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-plan.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-result.md
+- reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-result.md
@@ -7032,7 +7036,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 759
+Count: 746
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7041,19 +7045,6 @@ Count: 759
 - .github/workflows/cross-repo-bundle-compatibility.yml
 - .github/workflows/platform-ci.yml
 - .gitignore
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-correction-log.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-lead-review-assignment.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round1.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round2.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round3.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-209-plan-review.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-209-work-review.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-210-plan-review.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-210-work-review.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-pr-review-round1.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-pr-workflow-packet.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-sprint-plan.md
-- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-work-review-round1.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-closure-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-correction-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-final-lead-review.md

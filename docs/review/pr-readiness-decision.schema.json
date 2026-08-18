@@ -554,8 +554,10 @@
                     "previous_platform_head_sha",
                     "lesson_merge_commit_sha",
                     "changed_paths",
+                    "verified_paths",
                     "hashes",
-                    "metadata"
+                    "metadata",
+                    "commit"
                   ],
                   "properties": {
                     "status": {
@@ -580,6 +582,20 @@
                       "pattern": "^[A-Fa-f0-9]{40}$"
                     },
                     "changed_paths": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "uniqueItems": true,
+                      "items": {
+                        "enum": [
+                          "reports/github-agent-index-lessen.json",
+                          "reports/github-agent-index-lessen.md",
+                          "reports/github-agent-index-platform.json",
+                          "reports/github-agent-index-platform.md"
+                        ]
+                      }
+                    },
+                    "verified_paths": {
                       "type": "array",
                       "minItems": 4,
                       "maxItems": 4,
@@ -653,6 +669,39 @@
                         }
                       },
                       "additionalProperties": false
+                    },
+                    "commit": {
+                      "type": "object",
+                      "required": [
+                        "sha",
+                        "parent_sha",
+                        "changed_paths"
+                      ],
+                      "properties": {
+                        "sha": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{40}$"
+                        },
+                        "parent_sha": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{40}$"
+                        },
+                        "changed_paths": {
+                          "type": "array",
+                          "minItems": 1,
+                          "maxItems": 4,
+                          "uniqueItems": true,
+                          "items": {
+                            "enum": [
+                              "reports/github-agent-index-lessen.json",
+                              "reports/github-agent-index-lessen.md",
+                              "reports/github-agent-index-platform.json",
+                              "reports/github-agent-index-platform.md"
+                            ]
+                          }
+                        }
+                      },
+                      "additionalProperties": false
                     }
                   },
                   "additionalProperties": true
@@ -708,7 +757,7 @@
                       ]
                     },
                     "attestation_schema_version": {
-                      "const": 1
+                      "const": 2
                     },
                     "attestation_digest": {
                       "type": "string",
@@ -1125,7 +1174,7 @@
                                 ],
                                 "properties": {
                                   "schema_version": {
-                                    "const": 1
+                                    "const": 2
                                   },
                                   "order": {
                                     "const": "lesson-first"
@@ -1139,7 +1188,8 @@
                                       "trusted_executor",
                                       "generator",
                                       "freshness_checker",
-                                      "changed_paths",
+                                      "generated_and_verified_paths",
+                                      "actual_changed_paths_policy",
                                       "deterministic_inputs",
                                       "exact_readiness_head",
                                       "exact_ci_binding"
@@ -1163,7 +1213,7 @@
                                       "freshness_checker": {
                                         "const": "build-scripts/reports/check-agent-index-freshness.js"
                                       },
-                                      "changed_paths": {
+                                      "generated_and_verified_paths": {
                                         "type": "array",
                                         "minItems": 4,
                                         "maxItems": 4,
@@ -1176,6 +1226,9 @@
                                             "reports/github-agent-index-platform.md"
                                           ]
                                         }
+                                      },
+                                      "actual_changed_paths_policy": {
+                                        "const": "non_empty_subset_of_generated_and_verified_paths"
                                       },
                                       "deterministic_inputs": {
                                         "type": "array",
