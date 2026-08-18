@@ -22,11 +22,11 @@ integration readiness for PR #198 but failed before merge while passing the
 large Markdown body in a `gh` command argument on Windows.
 
 The production-path regression now calls `applyLiveDecision` with a large
-rendered readiness decision and covers both comment creation and update. It
-asserts exact JSON body bytes, rejects any `body=...` argument, verifies the
-`--input` file exists only during the call, and confirms cleanup after success
-and API failure. Bundle-member comment create, update, and failure cleanup use
-the same transport.
+rendered readiness decision for comment creation, update, and API failure. Each
+path asserts exact JSON body bytes, rejects `body=...`, the full body, and any
+oversized command argument, verifies the `--input` file exists only during the
+call, and confirms cleanup after success or failure. Bundle-member comment
+create, update, and failure cleanup use the same transport.
 
 ## Validation
 

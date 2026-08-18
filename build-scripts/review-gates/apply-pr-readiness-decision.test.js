@@ -81,13 +81,16 @@ function currentPrResponse(decision) {
   };
 }
 
-function expectJsonTransport(args) {
+function expectJsonTransport(args, expectedBody) {
   expect(args).not.toContain('-f');
   expect(args.some((arg) => String(arg).startsWith('body='))).toBe(false);
+  expect(args).not.toContain(expectedBody);
+  expect(args.every((arg) => String(arg).length < 4096)).toBe(true);
   const inputIndex = args.indexOf('--input');
   expect(inputIndex).toBeGreaterThan(-1);
   const inputPath = args[inputIndex + 1];
   const payload = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+  expect(payload.body).toBe(expectedBody);
   return { inputPath, payload };
 }
 
@@ -114,7 +117,7 @@ describe('apply-pr-readiness-decision live comment transport', () => {
         return { status: 0, stdout: '[]', stderr: '' };
       }
       if (joined.startsWith('api -X POST repos/meijer1973/4veco-platform/issues/136/comments')) {
-        const { inputPath, payload } = expectJsonTransport(args);
+        const { inputPath, payload } = expectJsonTransport(args, renderedBody);
         inputPaths.push(inputPath);
         apiBodies.push(payload.body);
         return { status: 0, stdout: JSON.stringify({ id: 99 }), stderr: '' };
@@ -134,11 +137,13 @@ describe('apply-pr-readiness-decision live comment transport', () => {
   });
 
   test('updates existing readiness comment through exact JSON input payload', () => {
-    const decision = readyDecision();
+    const decision = largeReadyDecision();
     const renderedBody = renderDecisionMarkdown(decision);
     const marker = decisionMarker(decision);
     const inputPaths = [];
     const apiBodies = [];
+
+    expect(renderedBody.length).toBeGreaterThan(70000);
 
     spawnSync.mockImplementation((command, args) => {
       expect(command).toBe('gh');
@@ -150,7 +155,7 @@ describe('apply-pr-readiness-decision live comment transport', () => {
         return { status: 0, stdout: JSON.stringify([{ id: 44, body: `existing\n${marker}` }]), stderr: '' };
       }
       if (joined.startsWith('api -X PATCH repos/meijer1973/4veco-platform/issues/comments/44')) {
-        const { inputPath, payload } = expectJsonTransport(args);
+        const { inputPath, payload } = expectJsonTransport(args, renderedBody);
         inputPaths.push(inputPath);
         apiBodies.push(payload.body);
         return { status: 0, stdout: '{}', stderr: '' };
@@ -169,8 +174,11 @@ describe('apply-pr-readiness-decision live comment transport', () => {
   });
 
   test('removes JSON input file after gh api failure', () => {
-    const decision = readyDecision();
+    const decision = largeReadyDecision();
+    const renderedBody = renderDecisionMarkdown(decision);
     let inputPath = null;
+
+    expect(renderedBody.length).toBeGreaterThan(70000);
 
     spawnSync.mockImplementation((command, args) => {
       expect(command).toBe('gh');
@@ -182,9 +190,9 @@ describe('apply-pr-readiness-decision live comment transport', () => {
         return { status: 0, stdout: '[]', stderr: '' };
       }
       if (joined.startsWith('api -X POST repos/meijer1973/4veco-platform/issues/136/comments')) {
-        const transport = expectJsonTransport(args);
+        const transport = expectJsonTransport(args, renderedBody);
         inputPath = transport.inputPath;
-        expect(transport.payload.body).toBe(renderDecisionMarkdown(decision));
+        expect(transport.payload.body).toBe(renderedBody);
         return { status: 1, stdout: '', stderr: 'permission denied' };
       }
       throw new Error(`unexpected gh call: ${joined}`);
