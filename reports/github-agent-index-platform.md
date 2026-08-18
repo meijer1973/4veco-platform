@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-17T13:20:45.236Z
+Generated: 2026-08-17T11:26:20.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/goal-iqs-owner-controlled-dispatch-1-20260703`
-Source commit: `64dc30612f4e8da823893078a00c07513a08fa18`
-Files indexed: 7140
+Source branch: `agent/bundle-index-subset-refresh-bridge-20260817`
+Source commit: `fffbf28ebd03eafc740ece4ac2b08cb3263fa457`
+Files indexed: 7088
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 699
+Count: 696
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -235,7 +235,6 @@ Count: 699
 - build-scripts/inspection/build-local-expert-contact-stage.js
 - build-scripts/inspection/build-local-expert-review-request-packet.js
 - build-scripts/inspection/build-local-expert-source-refresh-gate.js
-- build-scripts/inspection/build-owner-controlled-dispatch.js
 - build-scripts/inspection/build-owner-delivery-protocol-completion.js
 - build-scripts/inspection/build-owner-delivery-protocol-repair.js
 - build-scripts/inspection/build-owner-manual-dispatch-and-response-intake.js
@@ -262,8 +261,6 @@ Count: 699
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
-- build-scripts/inspection/check-owner-controlled-dispatch.js
-- build-scripts/inspection/check-owner-controlled-dispatch.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-repair.js
@@ -872,7 +869,7 @@ Count: 25
 
 ## validators
 
-Count: 679
+Count: 676
 
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
@@ -887,7 +884,6 @@ Count: 679
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-validation-log.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-validation-log.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-validation-log.md
 - archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-validation-log.md
@@ -957,8 +953,6 @@ Count: 679
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
-- build-scripts/inspection/check-owner-controlled-dispatch.js
-- build-scripts/inspection/check-owner-controlled-dispatch.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-repair.js
@@ -1556,7 +1550,7 @@ Count: 679
 
 ## references
 
-Count: 1003
+Count: 974
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1744,35 +1738,6 @@ Count: 1003
 - references/data/inspection-standards/fixtures/negative/missing-op0-boundary.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/dispatch-claimed-without-owner-proof.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/england-whole-uk-overclaim.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/expert-as-official-authority.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-all-belgium-overclaim.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-all-school-network-overclaim.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-boundary-overclaim.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-role-authority-overclaim.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-school-network-overclaim.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-source-use-product-approval.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/forbidden-attachment-sent.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/invented-dispatch-proof.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/legal-compliance-claim.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/localized-output-response.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/missing-not-sent-reason.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/named-expert-recorded.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/personal-data-response.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/private-contact-endpoint-stored.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/proceed-without-clean-response.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/response-analysis-without-schema-pass.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/response-not-quarantined.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/school-evidence-response.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/student-data-response.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/support-accommodation-accessibility-sufficiency.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/unapproved-material-sent.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/england-owner-controlled-dispatch-and-response-intake.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/flanders-owner-controlled-dispatch-and-response-intake.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/owner-controlled-dispatch-decision.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/owner-controlled-dispatch-record.sample.json
-- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/owner-controlled-response-quarantine-report.sample.json
 - references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/delivery-proof-invented.sample.json
 - references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/england-whole-uk-overclaim.sample.json
 - references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/expert-as-official-authority.sample.json
@@ -2564,7 +2529,7 @@ Count: 1003
 
 ## reports
 
-Count: 4492
+Count: 4484
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2685,8 +2650,6 @@ Count: 4492
 - reports/inspection-standards/england-local-expert-response-intake.md
 - reports/inspection-standards/england-local-expert-review-request-packet.json
 - reports/inspection-standards/england-local-expert-review-request-packet.md
-- reports/inspection-standards/england-owner-controlled-dispatch-and-response-intake.json
-- reports/inspection-standards/england-owner-controlled-dispatch-and-response-intake.md
 - reports/inspection-standards/england-owner-delivery-and-response-intake.json
 - reports/inspection-standards/england-owner-delivery-and-response-intake.md
 - reports/inspection-standards/england-owner-delivery-protocol-instance.json
@@ -2711,8 +2674,6 @@ Count: 4492
 - reports/inspection-standards/flanders-local-expert-response-intake.md
 - reports/inspection-standards/flanders-local-expert-review-request-packet.json
 - reports/inspection-standards/flanders-local-expert-review-request-packet.md
-- reports/inspection-standards/flanders-owner-controlled-dispatch-and-response-intake.json
-- reports/inspection-standards/flanders-owner-controlled-dispatch-and-response-intake.md
 - reports/inspection-standards/flanders-owner-delivery-and-response-intake.json
 - reports/inspection-standards/flanders-owner-delivery-and-response-intake.md
 - reports/inspection-standards/flanders-owner-delivery-protocol-instance.json
@@ -2781,12 +2742,6 @@ Count: 4492
 - reports/inspection-standards/local-expert-source-refresh-gate-decision.md
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.json
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.md
-- reports/inspection-standards/owner-controlled-dispatch-decision.json
-- reports/inspection-standards/owner-controlled-dispatch-decision.md
-- reports/inspection-standards/owner-controlled-dispatch-record.json
-- reports/inspection-standards/owner-controlled-dispatch-record.md
-- reports/inspection-standards/owner-controlled-response-quarantine-report.json
-- reports/inspection-standards/owner-controlled-response-quarantine-report.md
 - reports/inspection-standards/owner-delivery-channel-proof.json
 - reports/inspection-standards/owner-delivery-channel-proof.md
 - reports/inspection-standards/owner-delivery-protocol-completion-decision.json
@@ -4944,6 +4899,9 @@ Count: 4492
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-plan.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-result.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
@@ -6080,7 +6038,6 @@ Count: 4492
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-plan.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-result.md
 - reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
-- reports/sprints/PR207-INTEGRATION-lead-review-round1.md
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/axis-convention.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/dark-mode.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/human-review-index.md
@@ -7079,7 +7036,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 757
+Count: 746
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7176,17 +7133,6 @@ Count: 757
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-lead-architecture-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-accessibility-inclusion-review.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-closure-record.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-correction-log.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-england-jurisdiction-source-review.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-final-lead-review.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-flanders-jurisdiction-source-review.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-lead-architecture-review.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-legal-privacy-review.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-sprint-plan.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-subagent-quality-gate-record.md
-- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-teacher-economics-review.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-accessibility-inclusion-review.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-closure-record.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-correction-log.md

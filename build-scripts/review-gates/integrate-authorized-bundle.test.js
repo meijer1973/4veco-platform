@@ -25,6 +25,40 @@ const lessonHead = '4'.repeat(40);
 const platformMerge = '5'.repeat(40);
 const lessonMerge = '6'.repeat(40);
 
+function refreshResultFixture({
+  previousPlatformHeadSha = platformBase,
+  integrationHeadSha = platformHead,
+  lessonMergeCommitSha = lessonMerge,
+  status = 'reused',
+  changedPaths = INDEX_PATHS,
+  platformBranch = 'codex/pr-140',
+  generatedAt = '2026-08-14T00:00:00.000Z',
+} = {}) {
+  return {
+    ok: true,
+    status,
+    previous_platform_head_sha: previousPlatformHeadSha,
+    platform_integration_head_sha: integrationHeadSha,
+    lesson_merge_commit_sha: lessonMergeCommitSha,
+    changed_paths: [...changedPaths],
+    verified_paths: [...INDEX_PATHS],
+    trusted_executor: 'platform-main',
+    hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
+    metadata: {
+      platform_source_commit: previousPlatformHeadSha,
+      platform_source_branch: platformBranch,
+      lesson_source_commit: lessonMergeCommitSha,
+      lesson_source_branch: 'origin/main',
+      generated_at: generatedAt,
+    },
+    commit: {
+      sha: integrationHeadSha,
+      parent_sha: previousPlatformHeadSha,
+      changed_paths: [...changedPaths],
+    },
+  };
+}
+
 function platformCiEvidence(platformSha, lessonSha) {
   return {
     workflow: 'platform-ci',
@@ -497,16 +531,10 @@ function harness(overrides = {}) {
       };
       calls.events.push({ type: 'refresh_agent_indexes', ...item });
       calls.indexRefreshes.push(item);
-      return {
-        ok: true,
-        status: 'reused',
-        previous_platform_head_sha: refreshOptions.platformPr.headRefOid,
-        platform_integration_head_sha: refreshOptions.platformPr.headRefOid,
-        lesson_merge_commit_sha: refreshOptions.lessonMergeSha,
-        changed_paths: INDEX_PATHS,
-        trusted_executor: 'platform-main',
-        hashes: Object.fromEntries(INDEX_PATHS.map((itemPath) => [itemPath, 'a'.repeat(64)])),
-      };
+      return refreshResultFixture({
+        integrationHeadSha: refreshOptions.platformPr.headRefOid,
+        lessonMergeCommitSha: refreshOptions.lessonMergeSha,
+      });
     }),
     generateBundleIntegrationReadiness: jest.fn((readinessOptions = {}) => {
       const item = {
@@ -676,23 +704,11 @@ describe('authorized cross-repo bundle integration', () => {
 
   test('builds and applies refreshed-head readiness without rewriting payload compatibility', () => {
     const refreshedHead = '8'.repeat(40);
-    const refreshResult = {
-      ok: true,
+    const refreshResult = refreshResultFixture({
+      previousPlatformHeadSha: platformHead,
+      integrationHeadSha: refreshedHead,
       status: 'created',
-      previous_platform_head_sha: platformHead,
-      platform_integration_head_sha: refreshedHead,
-      lesson_merge_commit_sha: lessonMerge,
-      changed_paths: INDEX_PATHS,
-      trusted_executor: 'platform-main',
-      hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
-      metadata: {
-        platform_source_commit: platformHead,
-        platform_source_branch: 'codex/pr-140',
-        lesson_source_commit: lessonMerge,
-        lesson_source_branch: 'origin/main',
-        generated_at: '2026-08-14T00:00:00.000Z',
-      },
-    };
+    });
     const { baseEvidence, runReview } = productionReviewAdapter(refreshedHead);
     const applyLiveDecision = jest.fn(() => ({ ok: true, comment_action: 'created' }));
     const result = generateBundleIntegrationReadiness({
@@ -933,16 +949,11 @@ describe('authorized cross-repo bundle integration', () => {
         refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
           callsRef.events.push({ type: 'refresh_agent_indexes', platformHeadSha: refreshOptions.platformPr.headRefOid });
           currentPlatformHead = refreshedHead;
-          return {
-            ok: true,
+          return refreshResultFixture({
+            previousPlatformHeadSha: platformHead,
+            integrationHeadSha: refreshedHead,
             status: 'created',
-            previous_platform_head_sha: platformHead,
-            platform_integration_head_sha: refreshedHead,
-            lesson_merge_commit_sha: lessonMerge,
-            changed_paths: INDEX_PATHS,
-            trusted_executor: 'platform-main',
-            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
-          };
+          });
         }),
         refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
           callsRef.events.push({
@@ -1049,16 +1060,11 @@ describe('authorized cross-repo bundle integration', () => {
         }),
         refreshBundleAgentIndexes: jest.fn(() => {
           currentPlatformHead = refreshedHead;
-          return {
-            ok: true,
+          return refreshResultFixture({
+            previousPlatformHeadSha: platformHead,
+            integrationHeadSha: refreshedHead,
             status: 'created',
-            previous_platform_head_sha: platformHead,
-            platform_integration_head_sha: refreshedHead,
-            lesson_merge_commit_sha: lessonMerge,
-            changed_paths: INDEX_PATHS,
-            trusted_executor: 'platform-main',
-            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
-          };
+          });
         }),
         summarizeLineage: jest.fn((input) => {
           const inherited = input.reviewed_payload_head_sha === input.integration_head_sha;
@@ -1236,23 +1242,12 @@ describe('authorized cross-repo bundle integration', () => {
             platformHeadSha: refreshOptions.platformPr.headRefOid,
             lessonMergeSha: refreshOptions.lessonMergeSha,
           });
-          return {
-            ok: true,
+          return refreshResultFixture({
+            previousPlatformHeadSha: synchronizedHead,
+            integrationHeadSha: refreshedHead,
             status: 'created',
-            previous_platform_head_sha: synchronizedHead,
-            platform_integration_head_sha: refreshedHead,
-            lesson_merge_commit_sha: lessonMerge,
-            changed_paths: [...INDEX_PATHS],
-            trusted_executor: 'platform-main',
-            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
-            metadata: {
-              platform_source_commit: synchronizedHead,
-              platform_source_branch: 'codex/pr-140',
-              lesson_source_commit: lessonMerge,
-              lesson_source_branch: 'origin/main',
-              generated_at: '2026-08-17T11:26:20.000Z',
-            },
-          };
+            generatedAt: '2026-08-17T11:26:20.000Z',
+          });
         }),
         refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
           callsRef.events.push({
@@ -1372,16 +1367,10 @@ describe('authorized cross-repo bundle integration', () => {
         }),
         refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
           callsRef.events.push({ type: 'refresh_agent_indexes', platformHeadSha: refreshOptions.platformPr.headRefOid });
-          return {
-            ok: true,
-            status: 'reused',
-            previous_platform_head_sha: platformHead,
-            platform_integration_head_sha: refreshedHead,
-            lesson_merge_commit_sha: lessonMerge,
-            changed_paths: INDEX_PATHS,
-            trusted_executor: 'platform-main',
-            hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
-          };
+          return refreshResultFixture({
+            previousPlatformHeadSha: platformHead,
+            integrationHeadSha: refreshedHead,
+          });
         }),
         refreshPlatformPrCi: jest.fn((platformPr, refreshOptions) => {
           callsRef.events.push({
