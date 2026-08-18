@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-17T11:26:20.000Z
+Generated: 2026-08-18T15:32:19.852Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/pr-readiness-comment-body-file-20260703`
-Source commit: `aef23ba337164374d9679647d85edf67704cb7d1`
-Files indexed: 7151
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
+Source branch: `codex/bundle-delta-review-bridge-20260818`
+Source commit: `7086e8d089cb10566b82f38e253ea9ed55b10bac`
+Files indexed: 7155
+Scope: committed tree files from `git ls-tree -r --name-only 7086e8d089cb10566b82f38e253ea9ed55b10bac`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -2566,7 +2566,7 @@ Count: 1003
 
 ## reports
 
-Count: 4501
+Count: 4505
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4949,6 +4949,10 @@ Count: 4501
 - reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-lead-review.md
 - reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-plan.md
 - reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-result.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-plan.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-planning-review.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-result.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
