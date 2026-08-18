@@ -1,5 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+
+jest.mock('child_process', () => ({
+  spawnSync: jest.fn(),
+}));
+
+const { spawnSync } = require('child_process');
 const {
   classifyPrReadiness,
   renderDecisionMarkdown,
@@ -8,6 +14,7 @@ const {
 const {
   applyBundleReadiness,
   generateBundleMemberDecisions,
+  postOrUpdateComment,
 } = require('./apply-bundle-readiness-decision');
 const { stateResult, summarizeCompatibility } = require('./cross-repo-bundle-compatibility');
 
@@ -184,7 +191,21 @@ function harness(overrides = {}) {
   return { states, comments, calls, deps };
 }
 
+function expectJsonTransport(args) {
+  expect(args).not.toContain('-f');
+  expect(args.some((arg) => String(arg).startsWith('body='))).toBe(false);
+  const inputIndex = args.indexOf('--input');
+  expect(inputIndex).toBeGreaterThan(-1);
+  const inputPath = args[inputIndex + 1];
+  const payload = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+  return { inputPath, payload };
+}
+
 describe('apply-bundle-readiness-decision', () => {
+  beforeEach(() => {
+    spawnSync.mockReset();
+  });
+
   test('marks both draft bundle members ready from one controller decision', () => {
     const { states, calls, deps } = harness();
     const result = applyBundleReadiness({ controllerDecision: controllerDecision(), deps });
@@ -288,5 +309,79 @@ describe('apply-bundle-readiness-decision', () => {
     expect(result.failures.join('\n')).toContain('lesson_ready_api_failed');
     expect(base.states.get(`${PLATFORM_REPO}#147`).is_draft).toBe(false);
     expect(base.states.get(`${LESSON_REPO}#35`).is_draft).toBe(true);
+  });
+
+  test('creates bundle-member readiness comment through JSON input file and cleans up on success', () => {
+    const body = `bundle readiness\n${'x'.repeat(70000)}`;
+    const inputPaths = [];
+    const apiBodies = [];
+
+    spawnSync.mockImplementation((command, args) => {
+      expect(command).toBe('gh');
+      const joined = args.join(' ');
+      if (joined.startsWith('api -X POST repos/meijer1973/4veco-platform/issues/147/comments')) {
+        const { inputPath, payload } = expectJsonTransport(args);
+        inputPaths.push(inputPath);
+        apiBodies.push(payload.body);
+        return { status: 0, stdout: JSON.stringify({ id: 14701 }), stderr: '' };
+      }
+      throw new Error(`unexpected gh call: ${joined}`);
+    });
+
+    const result = postOrUpdateComment(PLATFORM_REPO, 147, null, body);
+
+    expect(result).toEqual({ action: 'created_comment', id: 14701 });
+    expect(apiBodies).toEqual([body]);
+    expect(inputPaths).toHaveLength(1);
+    expect(fs.existsSync(inputPaths[0])).toBe(false);
+    expect(fs.existsSync(path.dirname(inputPaths[0]))).toBe(false);
+  });
+
+  test('updates bundle-member readiness comment through exact JSON input payload', () => {
+    const body = 'bundle readiness update';
+    const inputPaths = [];
+    const apiBodies = [];
+
+    spawnSync.mockImplementation((command, args) => {
+      expect(command).toBe('gh');
+      const joined = args.join(' ');
+      if (joined.startsWith('api -X PATCH repos/meijer1973/4veco-lessen/issues/comments/8801')) {
+        const { inputPath, payload } = expectJsonTransport(args);
+        inputPaths.push(inputPath);
+        apiBodies.push(payload.body);
+        return { status: 0, stdout: '{}', stderr: '' };
+      }
+      throw new Error(`unexpected gh call: ${joined}`);
+    });
+
+    const result = postOrUpdateComment(LESSON_REPO, 35, { id: 8801 }, body);
+
+    expect(result).toEqual({ action: 'updated_comment', id: 8801 });
+    expect(apiBodies).toEqual([body]);
+    expect(inputPaths).toHaveLength(1);
+    expect(fs.existsSync(inputPaths[0])).toBe(false);
+    expect(fs.existsSync(path.dirname(inputPaths[0]))).toBe(false);
+  });
+
+  test('removes bundle JSON input file after gh api failure', () => {
+    const body = 'bundle failure cleanup';
+    let inputPath = null;
+
+    spawnSync.mockImplementation((command, args) => {
+      expect(command).toBe('gh');
+      const joined = args.join(' ');
+      if (joined.startsWith('api -X POST repos/meijer1973/4veco-platform/issues/147/comments')) {
+        const transport = expectJsonTransport(args);
+        inputPath = transport.inputPath;
+        expect(transport.payload.body).toBe(body);
+        return { status: 1, stdout: '', stderr: 'bundle comment failed' };
+      }
+      throw new Error(`unexpected gh call: ${joined}`);
+    });
+
+    expect(() => postOrUpdateComment(PLATFORM_REPO, 147, null, body)).toThrow(/bundle comment failed/);
+    expect(inputPath).toBeTruthy();
+    expect(fs.existsSync(inputPath)).toBe(false);
+    expect(fs.existsSync(path.dirname(inputPath))).toBe(false);
   });
 });
