@@ -1,5 +1,7 @@
 # BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1 result
 
+Status: implementation complete; exact-commit work review `OK`
+
 ## Result
 
 Implementation validation passed. The bridge preserves the immutable payload
@@ -94,10 +96,11 @@ Reviewer: Rawls (`019ffaf1-c6b8-7152-88ff-d66366207ccb`).
   inherited authorization, empty failures, both reauthorization decisions, and
   the canonical exact-head review; validator/schema/dry-run regressions cover
   all reported counterexamples.
+- Round 2 on `26e69f2f7d8caa50b57827cf1dc73089e362ebfa`:
+  `OK`. No blocking findings remain.
 
 ## Remaining gates
 
-The corrected substantive commit requires Rawls `OK`. After that review is recorded, the
-four canonical indexes must be regenerated as the terminal commit and the draft
-PR must pass exact-head CI, Rawls PR review, and PR Readiness before human
+The four canonical indexes must be regenerated as the terminal commit and the
+draft PR must pass exact-head CI, Rawls PR review, and PR Readiness before human
 authorization is requested.
