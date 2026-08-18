@@ -163,7 +163,8 @@ The compatibility proof must come from the platform controller and must record:
 - `platform-first`, `lesson-first`, and `bundle-final` results;
 - permitted merge orders and the recommended merge order;
 - the canonical lesson-first integration contract, including its trusted
-  post-lesson-merge index refresh, exact four paths, deterministic inputs,
+  post-lesson-merge index refresh, exact four generated-and-verified paths,
+  non-empty allowlisted actual changed-path subset, deterministic inputs,
   exact-head readiness, and platform/lesson CI binding.
 
 Compatibility `exact_members` always identifies the immutable reviewed

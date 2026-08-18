@@ -3,6 +3,7 @@ const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const {
+  commitGeneratedIndexes,
   INDEX_PATHS,
   refreshBundleAgentIndexes,
   runTrustedGeneration,
@@ -243,9 +244,15 @@ describe('trusted bundle agent-index refresh', () => {
         previous_platform_head_sha: fixture.platformPayload,
         lesson_merge_commit_sha: fixture.lessonMerge,
         changed_paths: INDEX_PATHS,
+        verified_paths: INDEX_PATHS,
         trusted_executor: 'platform-main',
+        commit: {
+          parent_sha: fixture.platformPayload,
+          changed_paths: INDEX_PATHS,
+        },
       });
       expect(first.platform_integration_head_sha).not.toBe(fixture.platformPayload);
+      expect(first.commit.sha).toBe(first.platform_integration_head_sha);
       expect(git(['--git-dir', fixture.platform.bare, 'rev-parse', 'refs/heads/codex/controller'], fixture.root))
         .toBe(first.platform_integration_head_sha);
       const lessonIndex = JSON.parse(git([
@@ -271,11 +278,107 @@ describe('trusted bundle agent-index refresh', () => {
         status: 'reused',
         platform_integration_head_sha: first.platform_integration_head_sha,
         lesson_merge_commit_sha: fixture.lessonMerge,
+        changed_paths: INDEX_PATHS,
+        verified_paths: INDEX_PATHS,
+        commit: first.commit,
       });
     } finally {
       fs.rmSync(fixture.root, { recursive: true, force: true });
     }
   }, 30000);
+
+  test('creates and reuses a platform-only index subset while verifying all four indexes', () => {
+    const fixture = setupFixture();
+    try {
+      const initial = refreshBundleAgentIndexes({
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: fixture.platformPayload,
+        },
+      });
+      const bridgeWork = path.join(fixture.root, 'bridge-work');
+      git(['clone', '--branch', 'codex/controller', fixture.platform.bare, bridgeWork], fixture.root);
+      fs.writeFileSync(path.join(bridgeWork, 'bridge.txt'), 'trusted main repair\n');
+      const bridgeHead = commit(bridgeWork, 'trusted main repair');
+      git(['push', 'origin', 'codex/controller'], bridgeWork);
+
+      const created = refreshBundleAgentIndexes({
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: bridgeHead,
+        },
+      });
+      const platformIndexPaths = INDEX_PATHS.filter((item) => item.includes('-platform.'));
+      expect(created).toMatchObject({
+        ok: true,
+        status: 'created',
+        previous_platform_head_sha: bridgeHead,
+        lesson_merge_commit_sha: fixture.lessonMerge,
+        changed_paths: platformIndexPaths,
+        verified_paths: INDEX_PATHS,
+        commit: {
+          parent_sha: bridgeHead,
+          changed_paths: platformIndexPaths,
+        },
+      });
+      expect(created.commit.sha).toBe(created.platform_integration_head_sha);
+      expect(created.platform_integration_head_sha).not.toBe(initial.platform_integration_head_sha);
+
+      const reused = refreshBundleAgentIndexes({
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: created.platform_integration_head_sha,
+        },
+      });
+      expect(reused).toMatchObject({
+        ok: true,
+        status: 'reused',
+        changed_paths: platformIndexPaths,
+        verified_paths: INDEX_PATHS,
+        commit: created.commit,
+      });
+    } finally {
+      fs.rmSync(fixture.root, { recursive: true, force: true });
+    }
+  }, 60000);
+
+  test('dry-run reports what would be verified without claiming a commit delta', () => {
+    const result = refreshBundleAgentIndexes({
+      dryRun: true,
+      lessonMergeSha: '1'.repeat(40),
+      platformPr: {
+        headRefName: 'codex/controller',
+        headRefOid: '2'.repeat(40),
+      },
+    });
+
+    expect(result).toMatchObject({
+      ok: true,
+      status: 'would_verify',
+      changed_paths: null,
+      actual_changed_paths: null,
+      verified_paths: INDEX_PATHS,
+      would_verify_paths: INDEX_PATHS,
+      trusted_executor: 'platform-main',
+    });
+    expect(result).not.toHaveProperty('commit');
+    expect(result).not.toHaveProperty('hashes');
+  });
 
   test('rejects a tampered index-only descendant instead of stacking another refresh', () => {
     const fixture = setupFixture();
@@ -437,6 +540,95 @@ describe('trusted bundle agent-index refresh', () => {
         '--git-dir', fixture.platform.bare,
         'rev-parse', 'refs/heads/codex/controller',
       ], fixture.root)).toBe(fixture.platformPayload);
+    } finally {
+      fs.rmSync(fixture.root, { recursive: true, force: true });
+    }
+  }, 30000);
+
+  test('rejects an allowlisted-file mutation introduced during commit creation', () => {
+    const fixture = setupFixture();
+    try {
+      expect(() => refreshBundleAgentIndexes({
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        commitGeneratedIndexes: (input) => {
+          fs.appendFileSync(path.join(input.platformRoot, INDEX_PATHS[2]), '\ncommit-time tamper\n');
+          git(['add', '--', INDEX_PATHS[2]], input.platformRoot);
+          commitGeneratedIndexes(input);
+        },
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: fixture.platformPayload,
+        },
+      })).toThrow(/generated agent index bytes changed before commit verification/);
+      expect(git([
+        '--git-dir', fixture.platform.bare,
+        'rev-parse', 'refs/heads/codex/controller',
+      ], fixture.root)).toBe(fixture.platformPayload);
+    } finally {
+      fs.rmSync(fixture.root, { recursive: true, force: true });
+    }
+  }, 30000);
+
+  test('rejects an empty refresh commit', () => {
+    const fixture = setupFixture();
+    try {
+      expect(() => refreshBundleAgentIndexes({
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        commitGeneratedIndexes: (input) => {
+          git(['reset', '--hard', 'HEAD'], input.platformRoot);
+          git([
+            '-c', 'user.name=Test',
+            '-c', 'user.email=test@example.com',
+            'commit', '--allow-empty', '-m', 'empty refresh',
+          ], input.platformRoot);
+        },
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: fixture.platformPayload,
+        },
+      })).toThrow(/non-empty allowlisted subset/);
+    } finally {
+      fs.rmSync(fixture.root, { recursive: true, force: true });
+    }
+  }, 30000);
+
+  test('rejects the expected index subset when the commit has the wrong parent', () => {
+    const fixture = setupFixture();
+    try {
+      expect(() => refreshBundleAgentIndexes({
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        commitGeneratedIndexes: (input) => {
+          const generatedBytes = Object.fromEntries(INDEX_PATHS.map((relativePath) => [
+            relativePath,
+            fs.readFileSync(path.join(input.platformRoot, relativePath)),
+          ]));
+          const wrongParent = git(['rev-parse', 'HEAD^'], input.platformRoot);
+          git(['reset', '--hard', wrongParent], input.platformRoot);
+          for (const [relativePath, bytes] of Object.entries(generatedBytes)) {
+            const absolutePath = path.join(input.platformRoot, relativePath);
+            fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
+            fs.writeFileSync(absolutePath, bytes);
+          }
+          git(['add', '--', ...INDEX_PATHS], input.platformRoot);
+          commitGeneratedIndexes(input);
+        },
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: fixture.platformPayload,
+        },
+      })).toThrow(/trusted refresh commit parent mismatch/);
     } finally {
       fs.rmSync(fixture.root, { recursive: true, force: true });
     }

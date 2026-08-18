@@ -275,16 +275,20 @@ checkouts, regenerates the four
 `reports/github-agent-index-{platform,lessen}.{json,md}` files with canonical
 source labels and the lesson merge committer timestamp, runs the trusted
 freshness checker, repeats generation to prove deterministic hashes, and
-permits no other changed paths. It commits and pushes an index-only
-fast-forward descendant, re-fetches that exact head, and verifies payload
-lineage. It then runs platform PR CI bound to the refreshed platform head and
+permits no other generated paths. The resulting commit must change a non-empty
+subset of those four files; files whose canonical bytes are already current
+remain unchanged. The lane verifies all four outputs and their hashes, verifies
+the commit's exact parent and actual path subset before push and after refetch,
+then pushes the index-only fast-forward descendant and verifies payload lineage.
+It then runs platform PR CI bound to the refreshed platform head and
 lesson merge commit, rebuilds exact-head readiness, and repeats the final live
 head, base, review, mergeability, and CI checks before platform merge. No
 candidate checkout script or hook is executed by this privileged refresh.
 
 Compatibility remains an immutable payload proof. The runtime lane records a
 separate validated `integration_refresh` proof binding payload SHAs, lesson
-merge commit, refreshed platform head, deterministic file hashes, lineage,
+merge commit, refreshed platform head, the actual non-empty changed-path
+subset, all four verified paths and deterministic file hashes, lineage,
 exact-head readiness, and exact CI coordinates. Partial resume is explicit and
 idempotent: `--allow-partial-resume` may verify an already-merged lesson and
 reuse the one valid refresh descendant, while stale or tampered descendants,

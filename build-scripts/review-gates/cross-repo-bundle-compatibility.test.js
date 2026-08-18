@@ -59,6 +59,7 @@ function integrationRefreshProof(overrides = {}) {
       platform_integration_head_sha: integrationHead,
       lesson_merge_commit_sha: lessonMerge,
       changed_paths: INDEX_PATHS,
+      verified_paths: INDEX_PATHS,
       hashes: Object.fromEntries(INDEX_PATHS.map((item) => [item, 'a'.repeat(64)])),
       metadata: {
         platform_source_commit: pHead,
@@ -66,6 +67,11 @@ function integrationRefreshProof(overrides = {}) {
         lesson_source_commit: lessonMerge,
         lesson_source_branch: 'origin/main',
         generated_at: '2026-08-14T00:00:00.000Z',
+      },
+      commit: {
+        sha: integrationHead,
+        parent_sha: pHead,
+        changed_paths: INDEX_PATHS,
       },
     },
     lineage: {
@@ -78,7 +84,7 @@ function integrationRefreshProof(overrides = {}) {
     readiness: {
       head_sha: integrationHead,
       route: 'READY_FOR_HUMAN_REVIEW',
-      attestation_schema_version: 1,
+      attestation_schema_version: 2,
       attestation_digest: null,
     },
     ci: {
@@ -160,13 +166,24 @@ describe('cross-repo bundle compatibility', () => {
     delete missing.integration_contract;
     expect(validateCompatibilityProof(missing).failures).toContain('lesson-first integration_contract missing');
 
+    const legacySchema = JSON.parse(JSON.stringify(summary));
+    legacySchema.integration_contract.schema_version = 1;
+    expect(validateCompatibilityProof(legacySchema).failures)
+      .toContain('integration_contract schema_version mismatch');
+
     const tampered = JSON.parse(JSON.stringify(summary));
     tampered.integration_contract.post_first_merge_refresh.trusted_executor = 'candidate-branch';
     expect(validateCompatibilityProof(tampered).failures).toContain('integration_contract trusted_executor mismatch');
 
     const wrongPaths = JSON.parse(JSON.stringify(summary));
-    wrongPaths.integration_contract.post_first_merge_refresh.changed_paths.pop();
-    expect(validateCompatibilityProof(wrongPaths).failures).toContain('integration_contract changed_paths mismatch');
+    wrongPaths.integration_contract.post_first_merge_refresh.generated_and_verified_paths.pop();
+    expect(validateCompatibilityProof(wrongPaths).failures)
+      .toContain('integration_contract generated_and_verified_paths mismatch');
+
+    const wrongPolicy = JSON.parse(JSON.stringify(summary));
+    wrongPolicy.integration_contract.post_first_merge_refresh.actual_changed_paths_policy = 'exact-four';
+    expect(validateCompatibilityProof(wrongPolicy).failures)
+      .toContain('integration_contract actual_changed_paths_policy mismatch');
   });
 
   test('keeps immutable payload coordinates separate from runtime refresh evidence', () => {
@@ -200,10 +217,85 @@ describe('cross-repo bundle compatibility', () => {
     expect(validateIntegrationRefreshProof(untrusted, { compatibility }).failures)
       .toContain('integration_refresh executor mismatch');
 
+    const subset = INDEX_PATHS.slice(2);
+    const validSubset = integrationRefreshProof({
+      refresh_result: {
+        changed_paths: subset,
+        commit: {
+          sha: proof.platform_integration_head_sha,
+          parent_sha: pHead,
+          changed_paths: subset,
+        },
+      },
+    });
+    expect(validateIntegrationRefreshProof(validSubset, { compatibility }).ok).toBe(true);
+
+    const duplicateSubset = integrationRefreshProof({
+      refresh_result: {
+        changed_paths: [INDEX_PATHS[2], INDEX_PATHS[2]],
+        commit: {
+          sha: proof.platform_integration_head_sha,
+          parent_sha: pHead,
+          changed_paths: [INDEX_PATHS[2], INDEX_PATHS[2]],
+        },
+      },
+    });
+    expect(validateIntegrationRefreshProof(duplicateSubset, { compatibility }).failures)
+      .toContain('integration_refresh changed paths invalid');
+
+    const outsideSubset = integrationRefreshProof({
+      refresh_result: {
+        changed_paths: ['AGENTS.md'],
+        commit: {
+          sha: proof.platform_integration_head_sha,
+          parent_sha: pHead,
+          changed_paths: ['AGENTS.md'],
+        },
+      },
+    });
+    expect(validateIntegrationRefreshProof(outsideSubset, { compatibility }).failures)
+      .toContain('integration_refresh changed paths invalid');
+
+    const hiddenCommittedPath = integrationRefreshProof({
+      refresh_result: {
+        changed_paths: subset,
+        commit: {
+          sha: proof.platform_integration_head_sha,
+          parent_sha: pHead,
+          changed_paths: [...subset, INDEX_PATHS[0]],
+        },
+      },
+    });
+    expect(validateIntegrationRefreshProof(hiddenCommittedPath, { compatibility }).failures)
+      .toContain('integration_refresh commit paths mismatch');
+
+    const incompleteVerification = integrationRefreshProof({
+      refresh_result: { verified_paths: INDEX_PATHS.slice(1) },
+    });
+    expect(validateIntegrationRefreshProof(incompleteVerification, { compatibility }).failures)
+      .toContain('integration_refresh verified paths mismatch');
+
+    const legacyAttestation = integrationRefreshProof({
+      readiness: { attestation_schema_version: 1 },
+    });
+    expect(validateIntegrationRefreshProof(legacyAttestation, { compatibility }).failures)
+      .toContain('integration_refresh readiness invalid');
+
     const arbitraryDigest = integrationRefreshProof({
       readiness: { attestation_digest: `sha256:${'f'.repeat(64)}` },
     });
     expect(validateIntegrationRefreshProof(arbitraryDigest, { compatibility }).failures)
+      .toContain('integration_refresh readiness attestation mismatch');
+
+    const changedPathAttestationTamper = integrationRefreshProof();
+    changedPathAttestationTamper.refresh_result.changed_paths = [...subset];
+    changedPathAttestationTamper.refresh_result.commit.changed_paths = [...subset];
+    expect(validateIntegrationRefreshProof(changedPathAttestationTamper, { compatibility }).failures)
+      .toContain('integration_refresh readiness attestation mismatch');
+
+    const verifiedPathAttestationTamper = integrationRefreshProof();
+    verifiedPathAttestationTamper.refresh_result.verified_paths = [...INDEX_PATHS].reverse();
+    expect(validateIntegrationRefreshProof(verifiedPathAttestationTamper, { compatibility }).failures)
       .toContain('integration_refresh readiness attestation mismatch');
 
     const missingMetadata = integrationRefreshProof({
