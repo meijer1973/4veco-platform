@@ -1017,6 +1017,9 @@ describe('pr-readiness-router', () => {
       (item) => { item.integration_head_sha = '7'.repeat(40); },
       (item) => { item.result = 'REVISE'; },
       (item) => { delete item.path; },
+      (item) => { item.path = 7; },
+      (item) => { item.status = 'REVISE'; },
+      (item) => { item.reviewed_integration_head_sha = '7'.repeat(40); },
     ]) {
       const invalidEvidence = JSON.parse(JSON.stringify(missingDeltaEvidence));
       invalidEvidence.proof.integration.delta_review = { ...deltaReview };
@@ -1024,6 +1027,19 @@ describe('pr-readiness-router', () => {
       const invalidDecision = classifyPrReadiness(invalidEvidence);
       expect(invalidDecision.route).toBe('KEEP_DRAFT_REVISE');
       expect(invalidDecision.reason_codes).toContain('integration_delta_review_missing_or_invalid');
+    }
+
+    for (const mutation of [
+      (item) => { item.integration_head_sha = '7'.repeat(40); },
+      (item) => { item.requires_human_reauthorization = true; },
+      (item) => { item.base_drift.requires_human_reauthorization = true; },
+    ]) {
+      const contradictoryEvidence = JSON.parse(JSON.stringify(missingDeltaEvidence));
+      contradictoryEvidence.proof.integration.delta_review = { ...deltaReview };
+      mutation(contradictoryEvidence.proof.integration);
+      const contradictoryDecision = classifyPrReadiness(contradictoryEvidence);
+      expect(contradictoryDecision.route).toBe('KEEP_DRAFT_REVISE');
+      expect(contradictoryDecision.reason_codes).toContain('integration_delta_review_missing_or_invalid');
     }
 
     const unexpectedDeltaEvidence = JSON.parse(JSON.stringify({
@@ -1051,6 +1067,12 @@ describe('pr-readiness-router', () => {
       (item) => { item.proof.integration.delta_review.reviewed_payload_head_sha = '7'.repeat(40); },
       (item) => { item.proof.integration.delta_review.integration_head_sha = '7'.repeat(40); },
       (item) => { item.proof.integration.delta_review.result = 'REVISE'; },
+      (item) => { item.proof.integration.delta_review.path = 7; },
+      (item) => { item.proof.integration.delta_review.status = 'REVISE'; },
+      (item) => { item.proof.integration.delta_review.reviewed_integration_head_sha = '7'.repeat(40); },
+      (item) => { item.proof.integration.integration_head_sha = '7'.repeat(40); },
+      (item) => { item.proof.integration.requires_human_reauthorization = true; },
+      (item) => { item.proof.integration.base_drift.requires_human_reauthorization = true; },
     ]) {
       const tampered = JSON.parse(JSON.stringify(dualReviewDecision));
       mutate(tampered);
@@ -1061,6 +1083,14 @@ describe('pr-readiness-router', () => {
     const schemaInvalidDelta = JSON.parse(JSON.stringify(dualReviewDecision));
     schemaInvalidDelta.proof.integration.delta_review.result = 'REVISE';
     expect(validateFullSchema(schemaInvalidDelta)).toBe(false);
+
+    const schemaMissingDelta = JSON.parse(JSON.stringify(dualReviewDecision));
+    delete schemaMissingDelta.proof.integration.delta_review;
+    expect(validateFullSchema(schemaMissingDelta)).toBe(false);
+
+    const schemaFalseMarker = JSON.parse(JSON.stringify(dualReviewDecision));
+    schemaFalseMarker.proof.lead_review_integration_delta_reviewed = false;
+    expect(validateFullSchema(schemaFalseMarker)).toBe(false);
   });
 
   test('controller-first bundle transition treats an exact draft lesson member as transitionable', () => {
@@ -2705,10 +2735,12 @@ describe('pr-readiness-router', () => {
           payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: true,
+          requires_human_reauthorization: false,
           failures: [],
           base_drift: {
             classification: 'substantive_overlap',
             requires_integration_delta_lead_review: true,
+            requires_human_reauthorization: false,
             requires_human_reauthorization: false,
           },
         },
@@ -3211,10 +3243,12 @@ describe('pr-readiness-router', () => {
           payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: true,
+          requires_human_reauthorization: false,
           failures: [],
           base_drift: {
             classification: 'substantive_overlap',
             requires_integration_delta_lead_review: true,
+            requires_human_reauthorization: false,
           },
         },
       },
@@ -3251,6 +3285,7 @@ describe('pr-readiness-router', () => {
           payload_ancestor_of_integration_head: true,
           authorization_inherited: true,
           requires_integration_delta_lead_review: true,
+          requires_human_reauthorization: false,
           failures: [],
           delta_review: {
             path: 'reports/sprints/example-integration-delta-review.md',
@@ -3261,6 +3296,7 @@ describe('pr-readiness-router', () => {
           base_drift: {
             classification: 'substantive_overlap',
             requires_integration_delta_lead_review: true,
+            requires_human_reauthorization: false,
           },
         },
       },

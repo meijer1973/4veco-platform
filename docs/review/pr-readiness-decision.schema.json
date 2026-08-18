@@ -828,24 +828,13 @@
               "type": "object",
               "additionalProperties": true,
               "required": [
-                "reviewed_payload_head_sha"
+                "result",
+                "reviewed_payload_head_sha",
+                "integration_head_sha",
+                "path"
               ],
               "properties": {
                 "result": {
-                  "type": "string",
-                  "enum": [
-                    "PASS",
-                    "PASS WITH FLAGS"
-                  ]
-                },
-                "verdict": {
-                  "type": "string",
-                  "enum": [
-                    "PASS",
-                    "PASS WITH FLAGS"
-                  ]
-                },
-                "status": {
                   "type": "string",
                   "enum": [
                     "PASS",
@@ -860,68 +849,11 @@
                   "type": "string",
                   "pattern": "^[a-f0-9]{40}$"
                 },
-                "reviewed_integration_head_sha": {
-                  "type": "string",
-                  "pattern": "^[a-f0-9]{40}$"
-                },
                 "path": {
                   "type": "string",
                   "minLength": 1
-                },
-                "review_path": {
-                  "type": "string",
-                  "minLength": 1
                 }
-              },
-              "allOf": [
-                {
-                  "anyOf": [
-                    {
-                      "required": [
-                        "result"
-                      ]
-                    },
-                    {
-                      "required": [
-                        "verdict"
-                      ]
-                    },
-                    {
-                      "required": [
-                        "status"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "anyOf": [
-                    {
-                      "required": [
-                        "integration_head_sha"
-                      ]
-                    },
-                    {
-                      "required": [
-                        "reviewed_integration_head_sha"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "anyOf": [
-                    {
-                      "required": [
-                        "path"
-                      ]
-                    },
-                    {
-                      "required": [
-                        "review_path"
-                      ]
-                    }
-                  ]
-                }
-              ]
+              }
             }
           }
         }
@@ -966,6 +898,142 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "required": [
+          "proof"
+        ],
+        "properties": {
+          "proof": {
+            "required": [
+              "lead_review_integration_delta_reviewed"
+            ],
+            "properties": {
+              "lead_review_integration_delta_reviewed": {
+                "const": true
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "required": [
+              "integration"
+            ],
+            "properties": {
+              "integration": {
+                "type": "object",
+                "required": [
+                  "ok",
+                  "reviewed_payload_head_sha",
+                  "integration_head_sha",
+                  "authorization_inherited",
+                  "requires_human_reauthorization",
+                  "base_drift",
+                  "delta_review"
+                ],
+                "properties": {
+                  "ok": {
+                    "const": true
+                  },
+                  "authorization_inherited": {
+                    "const": true
+                  },
+                  "requires_human_reauthorization": {
+                    "const": false
+                  },
+                  "base_drift": {
+                    "type": "object",
+                    "required": [
+                      "requires_human_reauthorization"
+                    ],
+                    "properties": {
+                      "requires_human_reauthorization": {
+                        "const": false
+                      }
+                    }
+                  }
+                },
+                "anyOf": [
+                  {
+                    "required": [
+                      "requires_integration_delta_lead_review"
+                    ],
+                    "properties": {
+                      "requires_integration_delta_lead_review": {
+                        "const": true
+                      }
+                    }
+                  },
+                  {
+                    "required": [
+                      "base_drift"
+                    ],
+                    "properties": {
+                      "base_drift": {
+                        "required": [
+                          "requires_integration_delta_lead_review"
+                        ],
+                        "properties": {
+                          "requires_integration_delta_lead_review": {
+                            "const": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "route",
+          "proof"
+        ],
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          },
+          "proof": {
+            "required": [
+              "integration"
+            ],
+            "properties": {
+              "integration": {
+                "type": "object",
+                "required": [
+                  "delta_review"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "required": [
+              "lead_review_integration_delta_reviewed"
+            ],
+            "properties": {
+              "lead_review_integration_delta_reviewed": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
     {
       "if": {
         "properties": {

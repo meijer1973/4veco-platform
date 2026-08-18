@@ -425,7 +425,9 @@ non-passing, or unexpected delta review stops before readiness attestation,
 publication, or merge. The hosted bundle workflow does not transport local
 review files, so delta-required partial resume must use the owner-authenticated
 local trusted-main lane; invoking the hosted path without that evidence fails
-closed and does not waive the review.
+closed and does not waive the review. A delta-required dry-run also fails
+explicitly because it cannot publish and re-fetch the exact integration-head
+readiness needed to establish this gate.
 Do not execute candidate-branch generators or hooks in this privileged phase.
 Final platform `main` CI after both merges remains mandatory.
 

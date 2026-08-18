@@ -1395,6 +1395,21 @@ function integrateBundle(options = {}) {
       ...mergedResume,
     };
   }
+  const platformLineage = platformMember.lineage || {};
+  const platformBaseDrift = platformLineage.base_drift || {};
+  const dryRunDeltaReviewRequired = Boolean(
+    platformLineage.requires_integration_delta_lead_review === true ||
+    platformBaseDrift.requires_integration_delta_lead_review === true
+  );
+  if (options.dryRun && dryRunDeltaReviewRequired) {
+    return {
+      ok: false,
+      phase: 'integration_delta_lead_review_required',
+      failures: ['dry_run_cannot_validate_integration_delta_review'],
+      lineage: platformLineage,
+      dry_run: true,
+    };
+  }
   if (options.noMerge) {
     return {
       ok: true,

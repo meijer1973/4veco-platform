@@ -859,6 +859,36 @@ function integrationDeltaReviewRequired(integrationProof) {
   );
 }
 
+function integrationDeltaReviewState(integrationProof, reviewedPayloadHead, integrationHead) {
+  const integration = integrationProof || {};
+  const baseDrift = integration.base_drift || {};
+  const required = integrationDeltaReviewRequired(integration);
+  const present = Boolean(integration.delta_review);
+  const reviewComplete = integrationDeltaReviewComplete(
+    integration.delta_review,
+    reviewedPayloadHead,
+    integrationHead
+  );
+  const valid = Boolean(
+    required &&
+      reviewComplete &&
+      integration.reviewed_payload_head_sha === reviewedPayloadHead &&
+      integration.integration_head_sha === integrationHead &&
+      integration.ok === true &&
+      integration.authorization_inherited === true &&
+      integration.requires_human_reauthorization === false &&
+      baseDrift.requires_human_reauthorization === false &&
+      integrationFailures(integration).length === 0
+  );
+  return {
+    required,
+    present,
+    reviewComplete,
+    valid,
+    unexpected: present && !required,
+  };
+}
+
 function leadProof(proof, headSha) {
   const lead = proof.lead_review || {};
   const result = normalizeVerdict(lead.result);
@@ -873,10 +903,8 @@ function leadProof(proof, headSha) {
     afterLeadPaths.every(isEvidenceTailPath);
   const integrationAuthorizedTail = integrationLeadAuthorizationProof(proof, reviewedSha, headSha);
   const integration = proof.integration || {};
-  const deltaReviewRequired = integrationDeltaReviewRequired(integration);
-  const deltaReviewPresent = Boolean(integration.delta_review);
-  const deltaReviewComplete = integrationDeltaReviewComplete(
-    integration.delta_review,
+  const deltaReview = integrationDeltaReviewState(
+    integration,
     integration.reviewed_payload_head_sha,
     headSha
   );
@@ -884,13 +912,9 @@ function leadProof(proof, headSha) {
     reviewedSha &&
       reviewedSha !== headSha &&
       reviewedSha === integration.reviewed_payload_head_sha &&
-      integration.ok === true &&
-      integration.authorization_inherited === true &&
-      integrationFailures(integration).length === 0 &&
-      deltaReviewRequired &&
-      deltaReviewComplete
+      deltaReview.valid
   );
-  const unexpectedDeltaReview = deltaReviewPresent && !deltaReviewRequired;
+  const unexpectedDeltaReview = deltaReview.unexpected;
 
   return {
     ok: Boolean(
@@ -911,8 +935,8 @@ function leadProof(proof, headSha) {
     evidenceOnlyTail,
     integrationAuthorizedTail,
     integrationDeltaReviewedTail,
-    deltaReviewRequired,
-    deltaReviewComplete,
+    deltaReviewRequired: deltaReview.required,
+    deltaReviewComplete: deltaReview.valid,
     unexpectedDeltaReview,
     postLeadReviewChangedPaths: afterLeadPaths,
     disallowedEvidenceTail: Boolean(
@@ -1283,17 +1307,15 @@ function validateDecision(decision) {
       throw new Error('ready platform bundle lead-reviewed payload must match compatibility');
     }
     const integrationProof = decision.proof.integration || {};
-    const deltaReviewRequired = integrationDeltaReviewRequired(integrationProof);
-    const deltaReviewPresent = Boolean(integrationProof.delta_review);
-    const deltaReviewComplete = integrationDeltaReviewComplete(
-      integrationProof.delta_review,
+    const deltaReview = integrationDeltaReviewState(
+      integrationProof,
       compatibilityExact.platform_candidate_sha,
       decision.reviewed_pr.head_sha
     );
-    if (deltaReviewRequired && !deltaReviewComplete) {
+    if (deltaReview.required && !deltaReview.valid) {
       throw new Error('ready platform bundle requires valid integration delta review');
     }
-    if (!deltaReviewRequired && deltaReviewPresent) {
+    if (deltaReview.unexpected) {
       throw new Error('ready platform bundle integration delta review is unexpected');
     }
     const pairedMembers = asArray(bundleProof.paired_prs);
@@ -1507,17 +1529,13 @@ function validateDecision(decision) {
     }
     if (decision.proof.lead_review_integration_delta_reviewed === true) {
       const integration = decision.proof.integration || {};
+      const deltaReview = integrationDeltaReviewState(
+        integration,
+        decision.proof.lead_reviewed_sha,
+        decision.reviewed_pr.head_sha
+      );
       if (
-        decision.proof.lead_reviewed_sha !== integration.reviewed_payload_head_sha ||
-        integration.ok !== true ||
-        integration.authorization_inherited !== true ||
-        integrationFailures(integration).length > 0 ||
-        !integrationDeltaReviewRequired(integration) ||
-        !integrationDeltaReviewComplete(
-          integration.delta_review,
-          decision.proof.lead_reviewed_sha,
-          decision.reviewed_pr.head_sha
-        )
+        !deltaReview.valid
       ) {
         throw new Error(`${decision.route} requires valid integration delta review proof`);
       }
@@ -1585,14 +1603,33 @@ function passingReviewResult(value) {
 
 function integrationDeltaReviewComplete(deltaReview, reviewedPayloadHead, integrationHead) {
   const review = deltaReview || {};
-  const reviewedHead = review.integration_head_sha || review.reviewed_integration_head_sha;
+  const resultAliases = ['result', 'verdict', 'status']
+    .filter((key) => Object.prototype.hasOwnProperty.call(review, key))
+    .map((key) => normalizeVerdict(review[key]));
+  const headAliases = ['integration_head_sha', 'reviewed_integration_head_sha']
+    .filter((key) => Object.prototype.hasOwnProperty.call(review, key))
+    .map((key) => review[key]);
+  const pathAliases = ['path', 'review_path']
+    .filter((key) => Object.prototype.hasOwnProperty.call(review, key))
+    .map((key) => review[key]);
+  const validPaths = pathAliases
+    .filter((value) => typeof value === 'string' && value.trim())
+    .map((value) => value.trim());
+  const result = resultAliases[0] || '';
+  const reviewedHead = headAliases[0] || null;
   return Boolean(
     review &&
       typeof review === 'object' &&
-      passingReviewResult(review.result || review.verdict || review.status) &&
+      resultAliases.length > 0 &&
+      new Set(resultAliases).size === 1 &&
+      passingReviewResult(result) &&
       review.reviewed_payload_head_sha === reviewedPayloadHead &&
+      headAliases.length > 0 &&
+      new Set(headAliases).size === 1 &&
       reviewedHead === integrationHead &&
-      (review.path || review.review_path)
+      pathAliases.length > 0 &&
+      validPaths.length === pathAliases.length &&
+      new Set(validPaths).size === 1
   );
 }
 

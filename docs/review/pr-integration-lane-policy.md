@@ -309,7 +309,10 @@ any later head movement invalidates it.
 The hosted `authorized-bundle-integration` dispatch does not transport local
 review files. Delta-required resumes therefore use the owner-authenticated local
 trusted-main command. A hosted invocation without the required record must stop
-at the delta-review gate; workflow dispatch is not an evidence waiver.
+at the delta-review gate; workflow dispatch is not an evidence waiver. A dry-run
+whose current platform lineage requires a delta review must return an explicit
+failure rather than report a simulated `merged_bundle`: it cannot publish and
+re-fetch exact integration-head readiness.
 
 Cross-repository bundle mutations use `CROSS_REPO_BUNDLE_TOKEN`, a fine-grained
 token from the existing owner account restricted to `4veco-platform` and

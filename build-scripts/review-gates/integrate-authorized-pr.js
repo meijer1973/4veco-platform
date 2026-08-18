@@ -641,19 +641,47 @@ function readJsonIfPresent(file) {
 function validateIntegrationDeltaReview(record, lineage) {
   const failures = [];
   const item = record || {};
-  const result = String(item.result || item.verdict || '').trim().replace(/_/g, ' ').toUpperCase();
+  const resultAliases = ['result', 'verdict', 'status']
+    .filter((key) => Object.prototype.hasOwnProperty.call(item, key))
+    .map((key) => String(item[key] || '').trim().replace(/_/g, ' ').toUpperCase());
+  const result = resultAliases[0] || '';
+  if (new Set(resultAliases).size > 1) failures.push('integration_delta_review_result_alias_conflict');
   if (!['PASS', 'PASS WITH FLAGS'].includes(result)) failures.push('integration_delta_review_result_not_passing');
   if (item.reviewed_payload_head_sha !== lineage.reviewed_payload_head_sha) {
     failures.push('integration_delta_review_payload_mismatch');
   }
-  if (item.integration_head_sha !== lineage.integration_head_sha && item.reviewed_integration_head_sha !== lineage.integration_head_sha) {
+  const headAliases = ['integration_head_sha', 'reviewed_integration_head_sha']
+    .filter((key) => Object.prototype.hasOwnProperty.call(item, key))
+    .map((key) => item[key]);
+  const integrationHeadSha = headAliases[0] || null;
+  if (new Set(headAliases).size > 1) failures.push('integration_delta_review_head_alias_conflict');
+  if (integrationHeadSha !== lineage.integration_head_sha) {
     failures.push('integration_delta_review_head_mismatch');
   }
-  if (!item.path && !item.review_path) failures.push('integration_delta_review_path_missing');
+  const pathAliases = ['path', 'review_path']
+    .filter((key) => Object.prototype.hasOwnProperty.call(item, key))
+    .map((key) => item[key]);
+  const validPaths = pathAliases
+    .filter((value) => typeof value === 'string' && value.trim())
+    .map((value) => value.trim());
+  const path = validPaths[0] || null;
+  if (pathAliases.length === 0 || validPaths.length === 0) failures.push('integration_delta_review_path_missing');
+  if (pathAliases.some((value) => typeof value !== 'string' || !value.trim())) {
+    failures.push('integration_delta_review_path_invalid');
+  }
+  if (new Set(validPaths).size > 1) failures.push('integration_delta_review_path_alias_conflict');
+  const normalizedReview = { ...item };
+  delete normalizedReview.verdict;
+  delete normalizedReview.status;
+  delete normalizedReview.reviewed_integration_head_sha;
+  delete normalizedReview.review_path;
+  normalizedReview.result = result;
+  normalizedReview.integration_head_sha = integrationHeadSha;
+  normalizedReview.path = path;
   return {
     ok: failures.length === 0,
     failures,
-    review: item,
+    review: normalizedReview,
   };
 }
 
@@ -1204,7 +1232,7 @@ function integrate(options) {
   }
 
   const readiness = deps.generateAndApplyReadiness(repo, prNumber, authorization, finalLineage, finalBranchProtection, {
-    deltaReview,
+    deltaReview: finalPolicy.delta_review ? finalPolicy.delta_review.review : deltaReview,
     deterministicRefreshVerified: options.deterministicRefreshVerified,
     integrationLeadReview: finalIntegrationLeadReviewPolicy.review,
     dryRun: options.dryRun,

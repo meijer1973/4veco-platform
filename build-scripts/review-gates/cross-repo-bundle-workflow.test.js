@@ -75,5 +75,7 @@ describe('cross-repo bundle workflow safety', () => {
     expect(agents).toContain('delta-required partial resume must use the owner-authenticated');
     expect(integrationPolicy).toContain('Delta-required resumes therefore use the owner-authenticated local');
     expect(integrationPolicy).toContain('workflow dispatch is not an evidence waiver');
+    expect(integrationPolicy).toContain('must return an explicit');
+    expect(agents).toContain('A delta-required dry-run also fails');
   });
 });
