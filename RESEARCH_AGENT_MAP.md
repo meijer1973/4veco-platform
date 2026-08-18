@@ -124,6 +124,7 @@ Human-readable:
 - `build-scripts/review-gates/integrate-authorized-bundle.js`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
+- `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
 - `docs/inspection-standards/nl-vo-evidence-model.md`
@@ -194,6 +195,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-bundle.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
@@ -273,6 +275,7 @@ Use these anchors before free-form browsing.
   "visual_qa_agent": "agents/visual-qa-agent.md",
   "reference_team_plan": "references/reference-team-roadmap.md",
   "inspection_standards_roadmap": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+  "international_quality_standards_roadmap": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
   "quality_standards_sprint_ledger": "docs/roadmaps/quality-standards/sprint-ledger.md",
   "quality_standards_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
   "inspection_source_register": "references/data/inspection-standards/source-register.json",
@@ -314,6 +317,7 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
@@ -350,6 +354,7 @@ index_anchors (full URLs):
   "roadmap_paths": [
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "docs/roadmaps/roadmap-version-index.json",
@@ -359,6 +364,7 @@ index_anchors (full URLs):
   "inspection_standards_paths": [
     "docs/roadmaps/quality-standards/README.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "references/data/inspection-standards/README.md",
@@ -640,7 +646,7 @@ Agents MUST follow this sequence:
    - chapter production -> `BUILD-CHAPTER.md` plus relevant `skills/`
    - build/deploy -> `build-scripts/README.md`, `scripts/deploy.js`, relevant `build-scripts/platform/*`
    - engine behavior -> relevant `engines/*` files and `engines/tests/*`
-   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
+   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
 5. Search declared namespaces only after loading relevant guides and indexes.
 6. Distinguish source files, generated files, and deploy/build targets before making conclusions.
 7. Label every conclusion as one of:
@@ -679,11 +685,13 @@ Rules:
     "RESEARCH_AGENT_MAP_REFERENCES.md",
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "references/SOURCE_OF_TRUTH.md",
     "references"
   ],
   "inspection_standards_research": [
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "references/data/inspection-standards/source-register.json",
     "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
     "docs/inspection-standards/nl-vo-evidence-model.md",
@@ -820,6 +828,7 @@ Rules:
     "knowledge/old/three-month-roadmap.md",
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "reports/internal-dashboard/dashboard-data.json"
   ]
 }
