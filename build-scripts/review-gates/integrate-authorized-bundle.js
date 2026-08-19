@@ -24,6 +24,7 @@ const {
   scheduleAutoMergePr,
   disableAutoMergePr,
   setCommitStatus,
+  validateIntegrationDeltaReview,
   verifyAutoMergeEnabled,
   waitForPrMerge,
 } = require('./integrate-authorized-pr');
@@ -56,6 +57,15 @@ function flag(args, name) {
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
+
+function readReviewJson(file) {
+  if (!file) return null;
+  const review = readJson(file);
+  if (review && typeof review === 'object' && !Array.isArray(review) && !review.path && !review.review_path) {
+    return { ...review, path: file };
+  }
+  return review;
 }
 
 function sha256File(file) {
@@ -739,6 +749,30 @@ function generateBundleIntegrationReadiness(input, options = {}) {
     return { ok: false, phase: 'payload_readiness', failure: 'payload_readiness_decision_not_ready' };
   }
   const payloadProof = payloadDecision.proof || {};
+  const lineage = input.lineage || {};
+  const baseDrift = lineage.base_drift || {};
+  const deltaReviewRequired =
+    lineage.requires_integration_delta_lead_review === true ||
+    baseDrift.requires_integration_delta_lead_review === true;
+  const deltaReviewValidation = input.deltaReview
+    ? validateIntegrationDeltaReview(input.deltaReview, lineage)
+    : { ok: false, failures: ['integration_delta_review_missing'], review: null };
+  if (deltaReviewRequired && !deltaReviewValidation.ok) {
+    return {
+      ok: false,
+      phase: 'integration_delta_lead_review_required',
+      failures: deltaReviewValidation.failures,
+      delta_review: deltaReviewValidation,
+    };
+  }
+  if (!deltaReviewRequired && input.deltaReview) {
+    return {
+      ok: false,
+      phase: 'integration_delta_lead_review_unexpected',
+      failures: ['integration_delta_review_not_required'],
+    };
+  }
+  const validatedDeltaReview = deltaReviewRequired ? deltaReviewValidation.review : null;
   const compatibility = input.compatibility;
   const refreshProof = {
     status: 'complete',
@@ -748,7 +782,7 @@ function generateBundleIntegrationReadiness(input, options = {}) {
     lesson_payload_sha: input.lessonPayloadSha,
     lesson_merge_commit_sha: input.lessonMergeCommitSha,
     refresh_result: input.refreshResult,
-    lineage: input.lineage,
+    lineage,
     readiness: {
       head_sha: input.platformPr.headRefOid,
       route: payloadDecision.route,
@@ -779,6 +813,13 @@ function generateBundleIntegrationReadiness(input, options = {}) {
         { command: 'trusted post-first-merge agent-index refresh', status: 'passed' },
         { command: 'check-integration-lineage', status: 'passed' },
         { command: 'exact refreshed-head platform CI', status: 'passed' },
+        ...(validatedDeltaReview
+          ? [{
+              command: 'integration delta lead review',
+              status: 'passed',
+              reviewed_commit_sha: input.platformPr.headRefOid,
+            }]
+          : []),
       ],
       lead_review: {
         path: payloadProof.lead_review_path,
@@ -793,8 +834,9 @@ function generateBundleIntegrationReadiness(input, options = {}) {
         bundle_id: input.authorization.bundle_id,
       },
       integration: {
-        ...input.lineage,
+        ...lineage,
         deterministic_refresh_verified: true,
+        ...(validatedDeltaReview ? { delta_review: validatedDeltaReview } : {}),
       },
     },
     bundle: {
@@ -1162,6 +1204,7 @@ function bundleStateForResult(record, compatibility, order, platformPr, lessonPr
 
 function integrateBundle(options = {}) {
   const deps = { ...defaultDeps(options), ...(options.deps || {}) };
+  const deltaReview = options.deltaReview || readReviewJson(options.deltaReviewPath);
   const controllerRepo = options.repo || PLATFORM_REPO;
   const controllerPrNumber = Number(options.prNumber);
   if (!Number.isInteger(controllerPrNumber) || controllerPrNumber < 1) {
@@ -1350,6 +1393,21 @@ function integrateBundle(options = {}) {
       repo: LESSON_REPO,
       pr_number: lessonMember.pr_number,
       ...mergedResume,
+    };
+  }
+  const platformLineage = platformMember.lineage || {};
+  const platformBaseDrift = platformLineage.base_drift || {};
+  const dryRunDeltaReviewRequired = Boolean(
+    platformLineage.requires_integration_delta_lead_review === true ||
+    platformBaseDrift.requires_integration_delta_lead_review === true
+  );
+  if (options.dryRun && dryRunDeltaReviewRequired) {
+    return {
+      ok: false,
+      phase: 'integration_delta_lead_review_required',
+      failures: ['dry_run_cannot_validate_integration_delta_review'],
+      lineage: platformLineage,
+      dry_run: true,
     };
   }
   if (options.noMerge) {
@@ -1561,6 +1619,7 @@ function integrateBundle(options = {}) {
           lessonPr,
           refreshResult: indexRefresh,
           lineage: member.lineage,
+          deltaReview,
           payloadReadiness,
           ci: {
             status: 'success',
@@ -1849,6 +1908,7 @@ function runCli(argv) {
       bundleId: optionValue(argv, '--bundle-id'),
       compatibilityProofPath: optionValue(argv, '--compatibility-proof'),
       compatibilityRunId: optionValue(argv, '--compatibility-run-id'),
+      deltaReviewPath: optionValue(argv, '--delta-review'),
       requireCrossRepoPermissions: flag(argv, '--require-cross-repo-permissions'),
       allowPartialResume: flag(argv, '--allow-partial-resume'),
       dryRun: flag(argv, '--dry-run'),

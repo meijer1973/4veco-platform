@@ -329,14 +329,27 @@ function integrationReadinessEvidence(headSha) {
   return evidence;
 }
 
-function productionReviewAdapter(headSha) {
+function productionReviewAdapter(headSha, options = {}) {
   const baseEvidence = integrationReadinessEvidence(headSha);
+  if (options.postLeadReviewChangedPaths) {
+    baseEvidence.proof.post_lead_review_changed_paths = [...options.postLeadReviewChangedPaths];
+  }
   const runReview = jest.fn(({ supplemental }) => {
     const decision = classifyPrReadiness(mergeSupplementalEvidence(baseEvidence, supplemental));
     validateDecision(decision);
     return { decision, markdown: 'readiness' };
   });
   return { baseEvidence, runReview };
+}
+
+function deltaReview(integrationHeadSha, overrides = {}) {
+  return {
+    path: 'subagent:exact-integration-head-review',
+    result: 'PASS',
+    reviewed_payload_head_sha: platformHead,
+    integration_head_sha: integrationHeadSha,
+    ...overrides,
+  };
 }
 
 function payloadReadinessDecision() {
@@ -810,6 +823,217 @@ describe('authorized cross-repo bundle integration', () => {
     });
   });
 
+  test('binds required integration-delta review without replacing immutable payload lead proof', () => {
+    const refreshedHead = '8'.repeat(40);
+    const refreshResult = refreshResultFixture({
+      previousPlatformHeadSha: platformHead,
+      integrationHeadSha: refreshedHead,
+      status: 'reused',
+    });
+    const { runReview } = productionReviewAdapter(refreshedHead, {
+      postLeadReviewChangedPaths: ['build-scripts/review-gates/apply-bundle-readiness-decision.js'],
+    });
+    const applyLiveDecision = jest.fn(() => ({ ok: true, comment_action: 'created' }));
+    const lineage = {
+      ok: true,
+      reviewed_payload_head_sha: platformHead,
+      integration_head_sha: refreshedHead,
+      payload_ancestor_of_integration_head: true,
+      authorization_inherited: true,
+      requires_integration_delta_lead_review: true,
+      requires_human_reauthorization: false,
+      failures: [],
+      base_drift: {
+        classification: 'substantive_overlap',
+        requires_integration_delta_lead_review: true,
+        requires_human_reauthorization: false,
+      },
+    };
+    const result = generateBundleIntegrationReadiness({
+      payloadReadiness: payloadReadinessDecision(),
+      authorization: authorization(),
+      branchProtection: branchProtectionSummary(false),
+      compatibility: compatibility('lesson-first'),
+      platformPayloadSha: platformHead,
+      platformPr: pr(PLATFORM_REPO, 140, refreshedHead),
+      lessonPayloadSha: lessonHead,
+      lessonMergeCommitSha: lessonMerge,
+      lessonPr: pr(LESSON_REPO, 34, lessonHead, {
+        state: 'MERGED',
+        mergeCommit: { oid: lessonMerge },
+      }),
+      refreshResult,
+      lineage,
+      deltaReview: deltaReview(refreshedHead),
+      ci: {
+        status: 'success',
+        platform_sha: refreshedHead,
+        lesson_sha: lessonMerge,
+        run_id: 202,
+      },
+    }, { runReview, applyLiveDecision });
+
+    expect(result).toMatchObject({ ok: true, phase: 'integration_head_readiness' });
+    expect(result.decision).toMatchObject({
+      route: 'READY_FOR_HUMAN_REVIEW',
+      proof: {
+        lead_reviewed_sha: platformHead,
+        integration: {
+          delta_review: {
+            reviewed_payload_head_sha: platformHead,
+            integration_head_sha: refreshedHead,
+          },
+        },
+      },
+    });
+    const supplemental = runReview.mock.calls[0][0].supplemental;
+    expect(supplemental.proof.lead_review).toEqual({
+      path: 'subagent:payload-review',
+      result: 'PASS',
+      reviewed_commit_sha: platformHead,
+      paired_member_reviews: payloadReadinessDecision().decision.proof.bundle.paired_lead_reviews,
+    });
+    expect(supplemental.proof.integration.delta_review).toEqual(deltaReview(refreshedHead));
+    expect(applyLiveDecision).toHaveBeenCalledTimes(1);
+  });
+
+  test('normalizes consistent integration-delta review aliases before readiness publication', () => {
+    const refreshedHead = '8'.repeat(40);
+    const refreshResult = refreshResultFixture({
+      previousPlatformHeadSha: platformHead,
+      integrationHeadSha: refreshedHead,
+      status: 'reused',
+    });
+    const { runReview } = productionReviewAdapter(refreshedHead, {
+      postLeadReviewChangedPaths: ['build-scripts/review-gates/apply-bundle-readiness-decision.js'],
+    });
+    const result = generateBundleIntegrationReadiness({
+      payloadReadiness: payloadReadinessDecision(),
+      authorization: authorization(),
+      branchProtection: branchProtectionSummary(false),
+      compatibility: compatibility('lesson-first'),
+      platformPayloadSha: platformHead,
+      platformPr: pr(PLATFORM_REPO, 140, refreshedHead),
+      lessonPayloadSha: lessonHead,
+      lessonMergeCommitSha: lessonMerge,
+      lessonPr: pr(LESSON_REPO, 34, lessonHead, {
+        state: 'MERGED',
+        mergeCommit: { oid: lessonMerge },
+      }),
+      refreshResult,
+      lineage: {
+        ok: true,
+        reviewed_payload_head_sha: platformHead,
+        integration_head_sha: refreshedHead,
+        payload_ancestor_of_integration_head: true,
+        authorization_inherited: true,
+        requires_integration_delta_lead_review: true,
+        requires_human_reauthorization: false,
+        failures: [],
+        base_drift: {
+          classification: 'substantive_overlap',
+          requires_integration_delta_lead_review: true,
+          requires_human_reauthorization: false,
+        },
+      },
+      deltaReview: {
+        verdict: 'PASS_WITH_FLAGS',
+        reviewed_payload_head_sha: platformHead,
+        reviewed_integration_head_sha: refreshedHead,
+        review_path: ' subagent:aliased-exact-head-review ',
+        reviewer: 'Rawls',
+      },
+      ci: { status: 'success', platform_sha: refreshedHead, lesson_sha: lessonMerge },
+    }, { runReview, applyLiveDecision: jest.fn(() => ({ ok: true })) });
+
+    expect(result).toMatchObject({ ok: true, phase: 'integration_head_readiness' });
+    expect(runReview.mock.calls[0][0].supplemental.proof.integration.delta_review).toEqual({
+      result: 'PASS WITH FLAGS',
+      reviewed_payload_head_sha: platformHead,
+      integration_head_sha: refreshedHead,
+      path: 'subagent:aliased-exact-head-review',
+      reviewer: 'Rawls',
+    });
+  });
+
+  test.each([
+    ['missing', null, ['integration_delta_review_missing']],
+    ['wrong payload', deltaReview('8'.repeat(40), { reviewed_payload_head_sha: '9'.repeat(40) }), ['integration_delta_review_payload_mismatch']],
+    ['wrong head', deltaReview('9'.repeat(40)), ['integration_delta_review_head_mismatch']],
+    ['non-passing', deltaReview('8'.repeat(40), { result: 'REVISE' }), ['integration_delta_review_result_not_passing']],
+    ['missing path', deltaReview('8'.repeat(40), { path: null }), ['integration_delta_review_path_missing']],
+    ['malformed path', deltaReview('8'.repeat(40), { path: 7 }), ['integration_delta_review_path_invalid']],
+    ['conflicting result aliases', deltaReview('8'.repeat(40), { status: 'REVISE' }), ['integration_delta_review_result_alias_conflict']],
+    ['conflicting head aliases', deltaReview('8'.repeat(40), { reviewed_integration_head_sha: '9'.repeat(40) }), ['integration_delta_review_head_alias_conflict']],
+  ])('fails before attestation and review for %s required delta review', (_label, review, expectedFailures) => {
+    const refreshedHead = '8'.repeat(40);
+    const runReview = jest.fn();
+    const applyLiveDecision = jest.fn();
+    const result = generateBundleIntegrationReadiness({
+      payloadReadiness: payloadReadinessDecision(),
+      authorization: authorization(),
+      compatibility: compatibility('lesson-first'),
+      platformPayloadSha: platformHead,
+      platformPr: pr(PLATFORM_REPO, 140, refreshedHead),
+      lessonPayloadSha: lessonHead,
+      lessonMergeCommitSha: lessonMerge,
+      refreshResult: refreshResultFixture({ integrationHeadSha: refreshedHead }),
+      lineage: {
+        ok: true,
+        reviewed_payload_head_sha: platformHead,
+        integration_head_sha: refreshedHead,
+        payload_ancestor_of_integration_head: true,
+        authorization_inherited: true,
+        requires_integration_delta_lead_review: true,
+        failures: [],
+        base_drift: { requires_integration_delta_lead_review: true },
+      },
+      deltaReview: review,
+      ci: { status: 'success', platform_sha: refreshedHead, lesson_sha: lessonMerge },
+    }, { runReview, applyLiveDecision });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'integration_delta_lead_review_required',
+      failures: expect.arrayContaining(expectedFailures),
+    });
+    expect(runReview).not.toHaveBeenCalled();
+    expect(applyLiveDecision).not.toHaveBeenCalled();
+  });
+
+  test('rejects an integration-delta review when refreshed lineage does not require one', () => {
+    const refreshedHead = '8'.repeat(40);
+    const runReview = jest.fn();
+    const result = generateBundleIntegrationReadiness({
+      payloadReadiness: payloadReadinessDecision(),
+      authorization: authorization(),
+      compatibility: compatibility('lesson-first'),
+      platformPayloadSha: platformHead,
+      platformPr: pr(PLATFORM_REPO, 140, refreshedHead),
+      lessonPayloadSha: lessonHead,
+      lessonMergeCommitSha: lessonMerge,
+      refreshResult: refreshResultFixture({ integrationHeadSha: refreshedHead }),
+      lineage: {
+        ok: true,
+        reviewed_payload_head_sha: platformHead,
+        integration_head_sha: refreshedHead,
+        payload_ancestor_of_integration_head: true,
+        authorization_inherited: true,
+        requires_integration_delta_lead_review: false,
+        failures: [],
+      },
+      deltaReview: deltaReview(refreshedHead),
+      ci: { status: 'success', platform_sha: refreshedHead, lesson_sha: lessonMerge },
+    }, { runReview });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'integration_delta_lead_review_unexpected',
+      failures: ['integration_delta_review_not_required'],
+    });
+    expect(runReview).not.toHaveBeenCalled();
+  });
+
   test('reuses a completed exact-coordinate platform CI run without dispatching another run', () => {
     const refreshedHead = '8'.repeat(40);
     const existingRun = {
@@ -1195,7 +1419,9 @@ describe('authorized cross-repo bundle integration', () => {
         lesson_candidate_sha: lessonHead,
       },
     });
-    const { runReview } = productionReviewAdapter(refreshedHead);
+    const { runReview } = productionReviewAdapter(refreshedHead, {
+      postLeadReviewChangedPaths: ['build-scripts/review-gates/apply-bundle-readiness-decision.js'],
+    });
     const applyLiveDecision = jest.fn(() => ({ ok: true, comment_action: 'created' }));
     let callsRef;
     let integrationDecision = null;
@@ -1232,6 +1458,25 @@ describe('authorized cross-repo bundle integration', () => {
           };
         }),
         recomputeCompatibility: jest.fn(() => replacementCompatibility),
+        summarizeLineage: jest.fn((input) => {
+          const requiresDelta = input.reviewed_payload_head_sha === platformHead;
+          return {
+            ok: input.payload_ancestor_of_integration_head === true,
+            reviewed_payload_head_sha: input.reviewed_payload_head_sha,
+            integration_head_sha: input.integration_head_sha,
+            payload_ancestor_of_integration_head: input.payload_ancestor_of_integration_head === true,
+            authorization_inherited: input.payload_ancestor_of_integration_head === true,
+            requires_integration_delta_lead_review: requiresDelta,
+            requires_human_reauthorization: false,
+            requires_deterministic_refresh: false,
+            failures: input.payload_ancestor_of_integration_head === true ? [] : ['reviewed_payload_head_not_ancestor'],
+            base_drift: {
+              classification: requiresDelta ? 'substantive_overlap' : 'no_substantive_overlap',
+              requires_integration_delta_lead_review: requiresDelta,
+              requires_human_reauthorization: false,
+            },
+          };
+        }),
         refreshBundleAgentIndexes: jest.fn((refreshOptions) => {
           callsRef.events.push({
             type: 'refresh_agent_indexes',
@@ -1285,6 +1530,7 @@ describe('authorized cross-repo bundle integration', () => {
       },
       options: {
         allowPartialResume: true,
+        deltaReview: deltaReview(refreshedHead),
       },
     });
     callsRef = setup.calls;
@@ -1318,6 +1564,13 @@ describe('authorized cross-repo bundle integration', () => {
       route: 'READY_FOR_HUMAN_REVIEW',
       reviewed_pr: { head_sha: refreshedHead },
       proof: {
+        lead_reviewed_sha: platformHead,
+        integration: {
+          delta_review: {
+            reviewed_payload_head_sha: platformHead,
+            integration_head_sha: refreshedHead,
+          },
+        },
         bundle: {
           integration_refresh: {
             platform_payload_sha: platformHead,
@@ -1646,6 +1899,43 @@ describe('authorized cross-repo bundle integration', () => {
     expect(calls.statuses).toEqual([]);
     expect(deps.fetchMergedPr).not.toHaveBeenCalled();
     expect(result.merges.every((merge) => merge.dry_run === true)).toBe(true);
+  });
+
+  test('delta-required dry-run fails before simulated merge or readiness publication', () => {
+    const setup = harness({
+      deps: {
+        summarizeLineage: jest.fn((input) => ({
+          ok: true,
+          reviewed_payload_head_sha: input.reviewed_payload_head_sha,
+          integration_head_sha: input.integration_head_sha,
+          payload_ancestor_of_integration_head: true,
+          authorization_inherited: true,
+          requires_integration_delta_lead_review: true,
+          requires_human_reauthorization: false,
+          failures: [],
+          base_drift: {
+            classification: 'substantive_overlap',
+            requires_integration_delta_lead_review: true,
+            requires_human_reauthorization: false,
+          },
+        })),
+      },
+      options: {
+        dryRun: true,
+        deltaReview: deltaReview(platformHead),
+      },
+    });
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'integration_delta_lead_review_required',
+      failures: ['dry_run_cannot_validate_integration_delta_review'],
+      dry_run: true,
+    });
+    expect(setup.calls.merges).toEqual([]);
+    expect(setup.calls.indexRefreshes).toEqual([]);
+    expect(setup.calls.readinessRefreshes).toEqual([]);
   });
 
   test('platform status helper reports dry-run success without calling GitHub', () => {

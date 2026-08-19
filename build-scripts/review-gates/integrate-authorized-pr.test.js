@@ -412,7 +412,45 @@ describe('authorized PR integration runner', () => {
         integration_head_sha: 'c'.repeat(40),
         path: 'subagent:delta-review',
       },
-    })).toMatchObject({ ok: true });
+    })).toMatchObject({
+      ok: true,
+      delta_review: {
+        review: {
+          result: 'PASS',
+          reviewed_payload_head_sha: 'b'.repeat(40),
+          integration_head_sha: 'c'.repeat(40),
+          path: 'subagent:delta-review',
+        },
+      },
+    });
+
+    for (const deltaReview of [
+      {
+        result: 'PASS',
+        status: 'REVISE',
+        reviewed_payload_head_sha: 'b'.repeat(40),
+        integration_head_sha: 'c'.repeat(40),
+        path: 'subagent:delta-review',
+      },
+      {
+        result: 'PASS',
+        reviewed_payload_head_sha: 'b'.repeat(40),
+        integration_head_sha: 'c'.repeat(40),
+        reviewed_integration_head_sha: 'd'.repeat(40),
+        path: 'subagent:delta-review',
+      },
+      {
+        result: 'PASS',
+        reviewed_payload_head_sha: 'b'.repeat(40),
+        integration_head_sha: 'c'.repeat(40),
+        path: 7,
+      },
+    ]) {
+      expect(enforceLineagePolicy(lineage, { deltaReview })).toMatchObject({
+        ok: false,
+        phase: 'integration_delta_lead_review_required',
+      });
+    }
   });
 
   test('deterministic refresh requirement cannot be ignored', () => {

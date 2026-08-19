@@ -415,6 +415,19 @@ to the lesson merge commit. Keep the immutable compatibility proof separate
 from this runtime `integration_refresh` proof. A retry with
 `--allow-partial-resume` must reuse a valid existing refresh commit; missing,
 stale, mixed-SHA, or tampered refresh evidence stops before platform merge.
+If refreshed lineage requires an integration-delta lead review, the immutable
+payload lead review remains bound to the reviewed payload SHA and the exact-head
+review is carried separately as `proof.integration.delta_review`. Supply that
+review as JSON with `--delta-review <file>` only after the final terminal index
+head exists; it must pass and bind both the reviewed payload and exact current
+integration head. A missing, malformed, stale, wrong-payload, wrong-head,
+non-passing, or unexpected delta review stops before readiness attestation,
+publication, or merge. The hosted bundle workflow does not transport local
+review files, so delta-required partial resume must use the owner-authenticated
+local trusted-main lane; invoking the hosted path without that evidence fails
+closed and does not waive the review. A delta-required dry-run also fails
+explicitly because it cannot publish and re-fetch the exact integration-head
+readiness needed to establish this gate.
 Do not execute candidate-branch generators or hooks in this privileged phase.
 Final platform `main` CI after both merges remains mandatory.
 
