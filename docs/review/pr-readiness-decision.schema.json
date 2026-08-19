@@ -248,6 +248,9 @@
         "lead_review_integration_authorization_inherited": {
           "type": "boolean"
         },
+        "lead_review_integration_delta_reviewed": {
+          "type": "boolean"
+        },
         "post_lead_review_changed_paths": {
           "type": "array",
           "items": {
@@ -819,7 +822,40 @@
             "object",
             "null"
           ],
-          "additionalProperties": true
+          "additionalProperties": true,
+          "properties": {
+            "delta_review": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "result",
+                "reviewed_payload_head_sha",
+                "integration_head_sha",
+                "path"
+              ],
+              "properties": {
+                "result": {
+                  "type": "string",
+                  "enum": [
+                    "PASS",
+                    "PASS WITH FLAGS"
+                  ]
+                },
+                "reviewed_payload_head_sha": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "integration_head_sha": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -862,6 +898,142 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "required": [
+          "proof"
+        ],
+        "properties": {
+          "proof": {
+            "required": [
+              "lead_review_integration_delta_reviewed"
+            ],
+            "properties": {
+              "lead_review_integration_delta_reviewed": {
+                "const": true
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "required": [
+              "integration"
+            ],
+            "properties": {
+              "integration": {
+                "type": "object",
+                "required": [
+                  "ok",
+                  "reviewed_payload_head_sha",
+                  "integration_head_sha",
+                  "authorization_inherited",
+                  "requires_human_reauthorization",
+                  "base_drift",
+                  "delta_review"
+                ],
+                "properties": {
+                  "ok": {
+                    "const": true
+                  },
+                  "authorization_inherited": {
+                    "const": true
+                  },
+                  "requires_human_reauthorization": {
+                    "const": false
+                  },
+                  "base_drift": {
+                    "type": "object",
+                    "required": [
+                      "requires_human_reauthorization"
+                    ],
+                    "properties": {
+                      "requires_human_reauthorization": {
+                        "const": false
+                      }
+                    }
+                  }
+                },
+                "anyOf": [
+                  {
+                    "required": [
+                      "requires_integration_delta_lead_review"
+                    ],
+                    "properties": {
+                      "requires_integration_delta_lead_review": {
+                        "const": true
+                      }
+                    }
+                  },
+                  {
+                    "required": [
+                      "base_drift"
+                    ],
+                    "properties": {
+                      "base_drift": {
+                        "required": [
+                          "requires_integration_delta_lead_review"
+                        ],
+                        "properties": {
+                          "requires_integration_delta_lead_review": {
+                            "const": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "route",
+          "proof"
+        ],
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          },
+          "proof": {
+            "required": [
+              "integration"
+            ],
+            "properties": {
+              "integration": {
+                "type": "object",
+                "required": [
+                  "delta_review"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "required": [
+              "lead_review_integration_delta_reviewed"
+            ],
+            "properties": {
+              "lead_review_integration_delta_reviewed": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
     {
       "if": {
         "properties": {
