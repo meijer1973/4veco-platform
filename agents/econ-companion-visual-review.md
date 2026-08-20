@@ -15,17 +15,32 @@ Use this agent after companion generation/deploy when the student-facing or teac
 
 ## Scope
 
-Use this agent for student-facing companion artifacts, including:
+Use this agent for the 14-file `student-web` validation baseline, including:
 
 - `uitleg voorkennis.html`
 - `uitleg vaardigheden.html`
+- `presentatie.html` and the matching `presentatie.pptx`
+- `nieuws met visual.html`
+- `samenvatting.html`
+- `youtube-videos.html`
 - `begeleide inoefening.html`
 - `stappenplan.html`
 - `instapquiz.html`
 - `redeneer-spel.html`
 - `nieuws-detective.html`
-- differentiated exercise handouts where the visual or route-choice layer matters
-- companion PPTX outputs and opt-in Office DOCX outputs when they are part of the same surface family; PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane
+- `wiskundevaardigheden.html`
+- `index.html`
+
+Also review the actual `Start -> Leer -> Check -> Oefen -> Exit ticket` route,
+including the advisory short check and separate target-equivalent exit ticket.
+The 14-file baseline is not proof that these product-route surfaces are
+complete.
+
+When an `office` or `legacy-full` profile is explicitly in scope, review the 13
+additional DOCX files, including differentiated basis/midden/verrijking
+handouts. Those exports are not default `student-web` baseline files. PDF
+output belongs to Part A / publisher-print unless a future human decision
+creates a separate PDF lane.
 
 The agent may also inspect paragraph markdown, Part A review evidence, paragraph plan, unit registry, source generator, CSS, JavaScript, and asset files to determine whether rendered output matches source intent.
 
@@ -40,7 +55,7 @@ repair exception.
 For paragraph companion review, use:
 
 ```text
-You are the econ-companion-visual-review agent. Read agents/econ-companion-visual-review.md, AGENTS.md, and BUILD-PARAGRAPH.md. Review paragraph [X.Y.Z path]. Inspect the available student-facing HTML, PPTX, and opt-in Office companions, rendered browser/document views where possible, _paragraph-plan.md, _assets, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as X.Y.Z-companion-visual-review.md in the paragraph folder.
+You are the econ-companion-visual-review agent. Read agents/econ-companion-visual-review.md, AGENTS.md, BUILD-PARAGRAPH.md, and the current product-end-state and companion-core specifications. Review paragraph [X.Y.Z path]. Inspect the 14-file student-web validator baseline, the rendered Start -> Leer -> Check -> Oefen -> Exit ticket route including advisory short check and separate target-equivalent exit ticket, and the 13 additional Office/legacy DOCX files only when that profile is explicitly in scope. Also inspect _paragraph-plan.md, _assets, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as X.Y.Z-companion-visual-review.md in the paragraph folder.
 ```
 
 If this is part of a formal review gate, save the report path required by that gate instead.
@@ -267,6 +282,7 @@ A review must return **FAIL** if any of these are true:
 - A checklist, diagnostic, or differentiated path offers no next-step routing.
 - The artifact uses generated output as if it were the source of truth when markdown/registry/generator evidence disagrees.
 - Companion delivery changes Part A textbook artifacts without an explicit Part A repair exception.
+- The review claims full product-route completeness from the 14-file validator baseline without inspecting the advisory short check, target-equivalent exit ticket, and rendered route.
 
 ## Required report format
 
@@ -300,11 +316,11 @@ For each issue, record:
 | Platform handoff required | yes / no |
 | Proof required to close | regenerated artifact, browser screenshot, validator pass, source diff, etc. |
 
-## Suggested closure proof for companion HTML
+## Suggested closure proof for companion surfaces
 
 A defect is not closed until the reviewer can verify:
 
-- regenerated HTML exists;
+- regenerated HTML/game/presentation surface exists, plus intentional Office/PDF exports when in scope;
 - embedded assets load;
 - rendered browser view has been checked;
 - visual/text examples match;

@@ -219,6 +219,15 @@ const FORBIDDEN_PATTERNS = Object.freeze([
   },
 ]);
 
+const CANONICAL_ROUTE = 'Start -> Leer -> Check -> Oefen -> Exit ticket';
+const ROUTE_CONTRACTS = Object.freeze([
+  { repository: '4veco-platform', path: 'AGENTS.md' },
+  { repository: '4veco-platform', path: 'docs/workflows/web-companion-paragraph-lane.md' },
+  { repository: '4veco-lessen', path: '../4veco-lessen/AGENTS.md' },
+  { repository: '4veco-lessen', path: '../4veco-lessen/specifications/product-vision.md' },
+  { repository: '4veco-lessen', path: '../4veco-lessen/specifications/product-end-state.md' },
+]);
+
 function normalizePath(filePath) {
   return String(filePath).replace(/\\/g, '/');
 }
@@ -305,10 +314,110 @@ function scanFiles(files, options = {}) {
   return violations;
 }
 
+function maskFencedCode(text) {
+  const lines = String(text || '').split(/\r?\n/);
+  let fence = null;
+
+  return lines.map((line) => {
+    const marker = line.match(/^ {0,3}(`{3,}|~{3,})/);
+    if (!fence && marker) {
+      fence = { character: marker[1][0], length: marker[1].length };
+      return '';
+    }
+    if (!fence) return line;
+
+    const closingPattern = new RegExp(
+      `^ {0,3}${fence.character === '`' ? '`' : '~'}{${fence.length},}\\s*$`
+    );
+    if (closingPattern.test(line)) fence = null;
+    return '';
+  }).join('\n');
+}
+
+function extractRouteDeclarations(text) {
+  const declarations = [];
+  const backtickPattern = /(?<!`)`([^`]+)`(?!`)/g;
+  const source = maskFencedCode(text);
+  let match;
+
+  while ((match = backtickPattern.exec(source)) !== null) {
+    const raw = match[1].replace(/\s+/g, ' ').trim();
+    if (!/^Start\b/.test(raw) || !/(?:->|\u2192)/.test(raw)) continue;
+    const steps = raw.split(/\s*(?:->|\u2192)\s*/).map((step) => step.trim());
+    if (steps.length < 2 || steps.some((step) => !step)) continue;
+    declarations.push({
+      raw,
+      normalized: steps.join(' -> '),
+      line: source.slice(0, match.index).split(/\r?\n/).length,
+    });
+  }
+
+  return declarations;
+}
+
+function routeViolation(contract, pattern, observed, line = 1) {
+  return {
+    repository: contract.repository,
+    file: normalizePath(contract.path),
+    line,
+    pattern,
+    expected: CANONICAL_ROUTE,
+    observed,
+    text: `repository=${contract.repository}; expected=${CANONICAL_ROUTE}; observed=${observed}`,
+  };
+}
+
+function checkCanonicalRouteDeclarations(options = {}) {
+  const cwd = options.cwd || process.cwd();
+  const contracts = options.contracts || ROUTE_CONTRACTS;
+  const violations = [];
+
+  for (const contract of contracts) {
+    const absolute = path.resolve(cwd, contract.path);
+    if (!fs.existsSync(absolute)) {
+      violations.push(routeViolation(contract, 'canonical-route-file-missing', '<missing file>'));
+      continue;
+    }
+
+    const declarations = extractRouteDeclarations(fs.readFileSync(absolute, 'utf8'));
+    if (declarations.length === 0) {
+      violations.push(routeViolation(contract, 'canonical-route-declaration-missing', '<missing declaration>'));
+      continue;
+    }
+
+    const distinct = [...new Map(
+      declarations.map((declaration) => [declaration.normalized, declaration])
+    ).values()];
+    if (distinct.length > 1) {
+      violations.push(routeViolation(
+        contract,
+        'canonical-route-declaration-conflict',
+        distinct.map((declaration) => declaration.normalized).join(' | '),
+        distinct[0].line
+      ));
+      continue;
+    }
+
+    if (distinct[0].normalized !== CANONICAL_ROUTE) {
+      violations.push(routeViolation(
+        contract,
+        'canonical-route-mismatch',
+        distinct[0].normalized,
+        distinct[0].line
+      ));
+    }
+  }
+
+  return violations;
+}
+
 function scanActiveGovernanceWording(options = {}) {
   const cwd = options.cwd || process.cwd();
   const roots = options.roots || ACTIVE_ROOTS;
-  return scanFiles(collectActiveFiles(roots, cwd), { cwd });
+  return [
+    ...scanFiles(collectActiveFiles(roots, cwd), { cwd }),
+    ...checkCanonicalRouteDeclarations({ cwd, contracts: options.routeContracts }),
+  ];
 }
 
 function optionValues(args, name) {
@@ -328,8 +437,9 @@ function runCli(argv) {
   }
   process.stderr.write('Active governance wording check failed:\n');
   for (const violation of violations) {
+    const repository = violation.repository ? ` repository=${violation.repository}` : '';
     process.stderr.write(
-      `- ${violation.file}:${violation.line} [${violation.pattern}] ${violation.text}\n`
+      `- ${violation.file}:${violation.line} [${violation.pattern}]${repository} ${violation.text}\n`
     );
   }
   process.exit(1);
@@ -340,8 +450,13 @@ if (require.main === module) {
 }
 
 module.exports = {
+  CANONICAL_ROUTE,
+  ROUTE_CONTRACTS,
+  checkCanonicalRouteDeclarations,
   collectActiveFiles,
+  extractRouteDeclarations,
   findViolationsInText,
+  maskFencedCode,
   scanActiveGovernanceWording,
   scanFiles,
   shouldExcludePath,

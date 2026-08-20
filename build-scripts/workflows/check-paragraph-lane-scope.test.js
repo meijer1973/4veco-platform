@@ -54,6 +54,22 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('RESEARCH_AGENT_MAP.md').category).toBe('generated_indexes');
   });
 
+  test('accepts wider-route short-check and exit-ticket outputs in the companion lane', () => {
+    const changedPaths = [
+      'Boek 1/1.1/1.1.1 Test/1.1.1 Test \u2013 korte-check.html',
+      'Boek 1/1.1/1.1.1 Test/1.1.1 Test \u2013 exit-ticket.html',
+    ];
+
+    expect(changedPaths.map((filePath) => classifyPath(filePath).category)).toEqual([
+      'partB_companion',
+      'partB_companion',
+    ]);
+    expect(checkLaneScope({ lane: 'companion', changedPaths })).toMatchObject({
+      ok: true,
+      failures: [],
+    });
+  });
+
   test('keeps PDF output out of the companion lane by default', () => {
     expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test - samenvatting.pdf').category).toBe('partA_textbook');
     expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test - uitleg vaardigheden.pdf').category).toBe('unknown');

@@ -1,15 +1,22 @@
 # L1.5V Bucket F — Part A / Part B Quality-Cycle Separation: Design Proposal
 
-**Status:** F-plan deliverable. F-execute is gated on user approval of this document.
+**Status:** Historical F-plan deliverable. F-execute was gated on user approval of this document.
 **Author:** F-plan sub-agent.
 **Date:** 2026-05-09.
 **Worktree / branch:** `C:/Projects/4veco/4veco-platform-companion`, branch `content/1.1.1-companion-quality`, off platform main `5dcaf2a` (HEAD `fb77a74`).
+
+> **Historical note:** This file is the L1.5V design proposal and audit record,
+> not the current Part B production contract. For active companion-material
+> workflow, output profiles, and file-count requirements, use
+> `BUILD-PARAGRAPH.md` plus `scripts/validate-paragraph.js`. The current default
+> `student-web` Part B gate is profile-aware and requires 14 root files; the
+> older 24/27-file wording below is retained only as design-history context.
 **Pilot paragraph:** §1.1.1 Schaarste en economisch denken.
 **Scope:** §1.1.1 only. L1.4 paragraph 2 inherits the cleaned pipeline; older paragraphs out of scope.
 
 This proposal answers the seven questions in the roadmap (Bucket F, lines 712-872 of `lessen-team-roadmap.md`) and in section 7 of `plan-l1.5v-companion-quality.md`. The reader should be able to approve, override, or reject any single decision without rereading the audited source.
 
-Throughout, "Part A" means the textbook-build pipeline (markdown + graphs + PDFs, consumed by chapter assembly). "Part B" means the lessen-companion pipeline (24 root files including `index.html`, consumed by students through the lessen book site). "Shared infra" means anything that is neither (validators, registries, didactic skills, PDF builder, etc.).
+Throughout this historical proposal, "Part A" means the textbook-build pipeline (markdown + graphs + PDFs, consumed by chapter assembly). At the time of the proposal, "Part B" meant the lessen-companion pipeline with 24 root files including `index.html`; the active workflow now uses profile-aware validation (`student-web` default 14 files; `office`/`legacy-full` for the older export-heavy contract). "Shared infra" means anything that is neither (validators, registries, didactic skills, PDF builder, etc.).
 
 ---
 

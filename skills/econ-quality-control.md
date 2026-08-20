@@ -415,6 +415,17 @@ begeleide inoefening → basis → midden → verrijking]
 
 ### 4.1 Updated build pipeline
 
+> **Current workflow override:** For active paragraph production, use
+> `BUILD-PARAGRAPH.md` and `scripts/validate-paragraph.js` as the authoritative
+> profile-aware contract. The default Part B profile is `student-web` with a
+> 14-file validation baseline; `office` and `legacy-full` add 13 opt-in DOCX
+> files for a 27-file export contract; `publisher-print` is the separate Part
+> A PDF handoff. Passing the baseline does not prove the wider
+> `Start -> Leer -> Check -> Oefen -> Exit ticket` product route, advisory
+> short check, or separate target-equivalent exit ticket complete. The older
+> DOCX-heavy sequence below is historical guidance for Office-style companion
+> production, not the default student-web path.
+
 ```
 Per paragraph:
  0. ──► FRESHNESS CHECK             (→ Part 0 of this skill)
@@ -449,6 +460,11 @@ On demand (reports):
 
 When generating a quality_ref, work through this checklist:
 
+The current file shape is `schema_version: 2` with separate `partA:` and
+`companion:` blocks. Do not collapse Part A and Part B verdicts into one status:
+`X.Y.Z-review.md` gates Part A, `X.Y.Z-companion-visual-review.md` gates Part B,
+and `validate-paragraph.js --mode complete` aggregates both.
+
 **Leerdoelen extraction:**
 1. List all vaardigheden from the Part A paragraph, target exercise, and any
    companion skill/procedure plan in scope
@@ -457,10 +473,13 @@ When generating a quality_ref, work through this checklist:
 4. Note which components cover each leerdoel
 
 **Component inventory:**
-1. For Part B companion/student-web work, check which of the 14 standard companion
+1. For Part B companion/student-web work, check which of the 14 validator-baseline
    components exist for this paragraph
 2. For each present component, fill in doel, inspectie, didactiek using the mapping tables in Part 2.3 and 2.4
 3. Flag any expected components that are absent (e.g., no begeleide inoefening for a calculation-heavy paragraph)
+4. Separately inspect the rendered `Start -> Leer -> Check -> Oefen -> Exit ticket`
+   route, including advisory short check and target-equivalent exit ticket;
+   baseline file existence is not product-completeness evidence
 
 **Verantwoording:**
 1. For each of the 8 verantwoording categories, write one sentence describing the design choice
@@ -470,6 +489,11 @@ When generating a quality_ref, work through this checklist:
 ### 4.3 File storage
 
 Store paragraph quality refs in the flat paragraph root:
+
+Current paragraph layout is flat. The quality-ref sits directly at the
+paragraph root beside `index.html`, `_paragraph-plan.md`, `_assets/`, Part A
+source files, and generated Part B files. The older phase-subfolder example
+below is retained only as legacy context.
 
 ```
 3.2.3 Paragraaf 3 – Monopolie/
@@ -570,4 +594,6 @@ Always use inspectie terminology when writing reports:
 - Assess a dimension as "voldoende" when components are missing that the standard requires
 - Use stigmatizing labels in quality_refs or reports (the materials shouldn't have them, and neither should the QC documentation)
 - Generate a quality_ref before the paragraph build is complete — it should reflect what actually exists
-- Assume all paragraphs need all 14 components — some paragraphs legitimately skip certain components (e.g., no wiskundevaardigheden for a purely conceptual paragraph)
+- Treat optional Office/legacy exports as required in the default `student-web` profile.
+- Treat missing `student-web` validator-required surfaces as acceptable just because an older quality-ref example called them optional; record an explicit profile, follow-up, blocker, or waiver instead.
+- Claim full route or product completeness solely because the 14-file `student-web` validator baseline passes.
