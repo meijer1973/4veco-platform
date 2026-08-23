@@ -34,6 +34,7 @@
   },
   "authority": {
     "actual_rollout_or_adoption_authorized": false,
+    "automatic_repository_wide_migration_authorized": false,
     "product_route_adoption_authorized": false,
     "broad_product_use_authorized": false,
     "product_use_authorized": false,

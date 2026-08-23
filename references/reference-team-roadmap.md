@@ -48,6 +48,7 @@ The first-three product-proof sequence is complete. The owner decision on
 platform PR #148 recorded Scale Gate 1 as `PASS_CONTROLLED_ROLLOUT`. Exactly six
 Golden short-check and exit-ticket surfaces for `1.1.1` through `1.1.3` are
 workflow-available for separately governed controlled waves. This decision
+records exit tickets as target-readiness-only with completion language held. It
 does not authorize actual rollout, product-route adoption, completion language,
 automatic migration, diagnostics, mastery/sequencing, PV, summative use, broad
 product use, or student/product use.
@@ -2762,9 +2763,9 @@ action while real exam source authority is unresolved. The closed task-family
 runtimes may not be adopted in generated lesson routes before a later adoption
 sprint supplies product-route rendered proof.
 
-`GATE-SHARED-TASK-INGEST-REPAIR-1` is now closed PASS WITH FLAGS for
-review-only source-context ingestion readiness. `CHECK-SHORT-EXIT-2` is in a
-post-review repair sequence after `REVISE / hold_for_surface_repair`;
+`GATE-SHARED-TASK-INGEST-REPAIR-1` is closed PASS WITH FLAGS for review-only
+source-context ingestion readiness. `CHECK-SHORT-EXIT-2` and its subsequent
+repair sequence are closed historical work;
 `CHECKSURFACE-RESET-1`, `GRAPH-CHECK-UX-1`, `GRAPH-EXIT-UX-1`,
 `CHECK-ROUTE-COPY-1`, `VISUAL-QA-HARDEN-2`, and
 `CHECK-SURFACE-PREGATE-1` are complete baseline repair evidence. The old
@@ -2772,17 +2773,16 @@ post-review repair sequence after `REVISE / hold_for_surface_repair`;
 feedback. `CHECKSURFACE-POLICY-REGRESSION-1`,
 `CHECKSURFACE-EXCELLENCE-REDESIGN-1`,
 `CHECKSURFACE-EXCELLENCE-AUDIT-3P`, and
-`CHECKSURFACE-GATE-RETRY-EXCELLENT-1` are complete as renewed packet
-preparation; the renewed packet is the next direct human review surface.
+`CHECKSURFACE-GATE-RETRY-EXCELLENT-1` are complete historical gate work.
 `SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, and the narrow Scale Gate 1 decision are
 now complete; platform PR #148 records `PASS_CONTROLLED_ROLLOUT`. Their evidence
 must be renewed after relevant source/output drift, and their held downstream
 authorities remain unchanged.
 `REV-STD-1` is closed as review-standard hardening only. The earlier exact
-local `1.1.2` completion copy remains historical and non-summative only; the
-current `1.1.2` Golden Workbench transfer keeps target-equivalent readiness and
-completion language held pending review. No diagnostics, adaptive routing,
-mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1,
+local `1.1.2` completion copy remains historical and non-summative only. For
+the current first-three Golden set, target-readiness evidence is approved while
+completion language remains held. No diagnostics, adaptive routing,
+mastery/sequencing, student-facing AI, summative use, PV, further Scale Gate 1,
 CP-6/Year-1 reliance, or product-wide use is authorized by the closed
 task-family, source-ingestion, and product-proof preparation sprints.
 

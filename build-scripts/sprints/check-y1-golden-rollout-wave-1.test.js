@@ -17,9 +17,11 @@ function baseWave() {
     scale_gate_1: {
       decision: 'PASS_CONTROLLED_ROLLOUT',
       controlled_wave_eligibility_authorized: true,
+      automatic_repository_wide_migration_authorized: false,
     },
     authority: {
       actual_rollout_or_adoption_authorized: false,
+      automatic_repository_wide_migration_authorized: false,
       product_route_adoption_authorized: false,
       broad_product_use_authorized: false,
       product_use_authorized: false,
@@ -91,7 +93,7 @@ function basePacketAndProof() {
       human_decision_required: true,
       auto_merge_allowed_after_ci: false,
       route: 'READY_FOR_HUMAN_REVIEW',
-      reviewed_payload_head_sha: 'a'.repeat(40),
+      reviewed_payload_head_sha: 'c'.repeat(40),
       authority_claims: authority,
     },
     proof: {
@@ -100,7 +102,9 @@ function basePacketAndProof() {
       scale_gate_1: {
         decision: 'PASS_CONTROLLED_ROLLOUT',
         controlled_wave_eligibility_authorized: true,
+        automatic_repository_wide_migration_authorized: false,
       },
+      rendered_evidence: { reviewed_platform_payload_sha: 'c'.repeat(40) },
       authority,
     },
   };
@@ -187,17 +191,18 @@ function commit(root, files, message = 'change') {
   return git(root, ['rev-parse', 'HEAD']);
 }
 
-function runScopeCli({ root, policyPath, base, head, eventMode = 'manual', scopeMode = 'required', env = {} }) {
-  return spawnSync(process.execPath, [
+function runScopeCli({ root, policyPath, base, head, eventMode = 'manual', scopeMode = 'required', scopeOnly = true, env = {} }) {
+  const args = [
     SCRIPT,
-    '--scope-only',
     '--repo-root', root,
     '--policy-file', policyPath,
     '--event-mode', eventMode,
     '--scope-mode', scopeMode,
     '--base', base,
     '--head', head,
-  ], {
+  ];
+  if (scopeOnly) args.splice(1, 0, '--scope-only');
+  return spawnSync(process.execPath, args, {
     cwd: root,
     encoding: 'utf8',
     env: { ...process.env, ...env },
@@ -234,6 +239,11 @@ describe('Y1 Golden rollout wave state contracts', () => {
     wave.authority.student_product_use_authorized = true;
     expect(() => checker.validateWaveAndSurfaces({ wave, manifest: baseManifest(), skipFiles: true }))
       .toThrow(/student_product_use_authorized must be false/);
+
+    const migration = baseWave();
+    migration.authority.automatic_repository_wide_migration_authorized = true;
+    expect(() => checker.validateWaveAndSurfaces({ wave: migration, manifest: baseManifest(), skipFiles: true }))
+      .toThrow(/automatic_repository_wide_migration_authorized must be false/);
 
     const decision = baseWave();
     decision.scale_gate_1.decision = 'READY_FOR_HUMAN_REVIEW';
@@ -327,10 +337,26 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
       'GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1',
       'A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1',
       'SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1',
+      'All six surfaces keep `completionLanguageEligible:false`',
+      'Exit tickets record bounded target-readiness evidence',
       'HOLD_FOR_GOLDEN_ROUTE_REPAIR',
     ].join('\n');
-    const reference = `## Product Proof Track And Scale Gate 1 Decision\nPASS_CONTROLLED_ROLLOUT ${checker.WAVE_ID}\n## Next\n## Immediate Next Sprint\n${checker.WAVE_ID}\n## End`;
+    const reference = `## Product Proof Track And Scale Gate 1 Decision\nPASS_CONTROLLED_ROLLOUT ${checker.WAVE_ID}\nExit tickets remain target-readiness-only with completion language held.\n## Next\n## Immediate Next Sprint\n${checker.WAVE_ID}\nTarget-readiness evidence is approved while completion language remains held.\n## End`;
     expect(() => checker.validateRoadmapTexts(golden, reference)).toThrow(/stale Golden-route hold/);
+  });
+
+  test('rejects stale active-roadmap readiness and check-surface review language', () => {
+    const golden = [
+      'PASS_CONTROLLED_ROLLOUT', checker.WAVE_ID,
+      'GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1',
+      'GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1',
+      'A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1',
+      'SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1',
+      'All six surfaces keep `completionLanguageEligible:false`',
+      'Exit tickets record bounded target-readiness evidence',
+    ].join('\n');
+    const stale = `## Product Proof Track And Scale Gate 1 Decision\nPASS_CONTROLLED_ROLLOUT ${checker.WAVE_ID}\nExit tickets remain target-readiness-only with completion language held.\n## Next\n## Immediate Next Sprint\n${checker.WAVE_ID}\nThe renewed packet is the next direct human review surface.\nThe transfer keeps target-equivalent readiness and completion language held pending review.\n## End`;
+    expect(() => checker.validateRoadmapTexts(golden, stale)).toThrow(/stale check-surface review action|incorrectly holds accepted target readiness/);
   });
 
   test('rejects stale root-map and dashboard projections', () => {
@@ -348,13 +374,25 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
 
   test('rejects null PR binding and L3 classification', () => {
     const { packet, proof } = basePacketAndProof();
+    const delta = baseDeltaRecord();
     packet.pr_number = null;
     packet.pr_url = null;
-    expect(() => checker.validatePacketObjects(packet, proof, false)).toThrow(/pr_number must be bound/);
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/pr_number must be bound/);
     packet.pr_number = 999;
     packet.pr_url = 'https://github.com/meijer1973/4veco-platform/pull/999';
     packet.review_autonomy.level = 'L3';
-    expect(() => checker.validatePacketObjects(packet, proof, false)).toThrow(/autonomy must be L4/);
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/autonomy must be L4/);
+  });
+
+  test('cross-binds packet PR URL and reviewed payload to proof and delta evidence', () => {
+    const { packet, proof } = basePacketAndProof();
+    const delta = baseDeltaRecord();
+    packet.pr_url = 'https://github.com/meijer1973/4veco-platform/pull/998';
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/pr_url must match pr_number/);
+
+    packet.pr_url = 'https://github.com/meijer1973/4veco-platform/pull/999';
+    packet.reviewed_payload_head_sha = 'd'.repeat(40);
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/payload SHA must match delta-proof renewal payload/);
   });
 });
 
@@ -482,5 +520,25 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     });
     expect(result.status).toBe(0);
     expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
+  });
+
+  test('full mode exits cleanly for unrelated future work but evidence-tail validation rejects substantive drift', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const unrelatedHead = commit(repo.root, { 'docs/future-authorized-work.md': 'future\n' });
+    const unrelated = runScopeCli({
+      ...repo,
+      head: unrelatedHead,
+      eventMode: 'main_push',
+      scopeMode: 'auto',
+      scopeOnly: false,
+      env: { Y1_GOLDEN_EVENT_BASE_SHA: repo.base, Y1_GOLDEN_EVENT_HEAD_SHA: unrelatedHead },
+    });
+    expect(unrelated.status).toBe(0);
+    expect(unrelated.stdout).toMatch(/"scope_attestation_triggered": false/);
+
+    const payload = unrelatedHead;
+    const forbiddenTail = commit(repo.root, { 'build-scripts/sprints/forbidden-renewal-change.js': 'module.exports = {};\n' });
+    expect(() => checker.validateEvidenceTail(payload, forbiddenTail, repo.root)).toThrow(/substantive path changed after reviewed payload/);
   });
 });

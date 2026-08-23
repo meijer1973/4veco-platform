@@ -61,6 +61,7 @@ const REQUIRED_SCALE_FLAGS = [
 
 const HELD_AUTHORITY_KEYS = [
   'actual_rollout_or_adoption_authorized',
+  'automatic_repository_wide_migration_authorized',
   'product_route_adoption_authorized',
   'broad_product_use_authorized',
   'product_use_authorized',
@@ -386,6 +387,7 @@ function validateWaveAndSurfaces(options = {}) {
   sameSet(wave.surface_ids || [], EXPECTED_SURFACES, 'wave surface ids');
   check(wave.scale_gate_1?.decision === 'PASS_CONTROLLED_ROLLOUT', 'wave must record PASS_CONTROLLED_ROLLOUT');
   check(wave.scale_gate_1?.controlled_wave_eligibility_authorized === true, 'controlled wave eligibility must be true');
+  check(wave.scale_gate_1?.automatic_repository_wide_migration_authorized === false, 'automatic repository-wide migration must remain held');
   assertHeldAuthorities(wave.authority, 'wave.authority');
   check(wave.authority?.generated_lesson_output_changed === false, 'wave must record no lesson output changes');
   check(wave.authority?.source_data_changed === false, 'wave must record no source-data changes');
@@ -684,8 +686,8 @@ function evidenceTailPathAllowed(relativePath) {
     || EVIDENCE_TAIL_PREFIXES.some((prefix) => normalized.startsWith(prefix));
 }
 
-function validateEvidenceTail(payloadRef, exactHeadRef) {
-  const delta = changedEntries(payloadRef, exactHeadRef, ROOT);
+function validateEvidenceTail(payloadRef, exactHeadRef, repoRoot = ROOT) {
+  const delta = changedEntries(payloadRef, exactHeadRef, repoRoot);
   for (const entry of delta.entries) {
     check(/^(A|M)$/.test(entry.status), `evidence tail may only add or modify files: ${entry.status} ${entry.path}`);
     for (const relativePath of entryPaths(entry)) {
@@ -747,13 +749,19 @@ function validateRoadmapTexts(goldenText, referenceText) {
   }
   check(!goldenText.includes('HOLD_FOR_GOLDEN_ROUTE_REPAIR'), 'Golden roadmap retains stale Golden-route hold');
   check(!goldenText.includes('The next roadmap-controlled substantial bundle is\n  `GOLDEN-ROUTE-111'), 'Golden roadmap retains stale next-bundle statement');
+  check(/All six surfaces keep `completionLanguageEligible:false`/.test(goldenText), 'Golden roadmap missing completion-language hold');
+  check(/Exit tickets record bounded target-readiness evidence/.test(goldenText), 'Golden roadmap missing accepted target-readiness state');
 
   const proofTrack = referenceText.match(/## Product Proof Track And Scale Gate 1 Decision[\s\S]*?(?=\n## )/)?.[0] || '';
   check(proofTrack.includes('PASS_CONTROLLED_ROLLOUT'), 'reference roadmap Product Proof Track missing controlled-rollout decision');
   check(proofTrack.includes(WAVE_ID), 'reference roadmap Product Proof Track missing current wave');
   check(!/Scale Gate 1 is blocked/i.test(proofTrack), 'reference roadmap Product Proof Track retains stale blocked statement');
+  check(/exit tickets remain target-readiness-only with completion language held/i.test(proofTrack), 'reference roadmap Product Proof Track missing current target-readiness/completion boundary');
   const immediate = referenceText.match(/## Immediate Next Sprint[\s\S]*?(?=\n## )/)?.[0] || '';
   check(immediate.includes(WAVE_ID), 'reference roadmap Immediate Next Sprint missing current wave');
+  check(!/renewed packet is the next direct human review surface/i.test(immediate), 'reference roadmap retains stale check-surface review action');
+  check(!/keeps target-equivalent readiness and\s+completion language held pending review/i.test(immediate), 'reference roadmap incorrectly holds accepted target readiness');
+  check(/target-readiness evidence is approved while\s+completion language remains held/i.test(immediate), 'reference roadmap Immediate Next Sprint missing current target-readiness/completion boundary');
 }
 
 function validateNavigationTexts(texts) {
@@ -783,7 +791,7 @@ function validateWiring() {
   validateWiringTexts(readJson('package.json'), readText('.github/workflows/platform-ci.yml'));
 }
 
-function validatePacketObjects(packet, proof, allowUnbound) {
+function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
   check(packet.schema_version === 1 && packet.sprint_id === WAVE_ID, 'review packet identity mismatch');
   check(packet.pr_throughput_class === 'high_authority', 'review packet throughput class must be high_authority');
   check(packet.authority_class === 'product_authority', 'review packet authority class must be product_authority');
@@ -794,18 +802,21 @@ function validatePacketObjects(packet, proof, allowUnbound) {
   assertHeldAuthorities(packet.authority_claims, 'packet.authority_claims');
   if (!allowUnbound) {
     check(Number.isInteger(packet.pr_number) && packet.pr_number > 0, 'review packet pr_number must be bound');
-    check(/^https:\/\/github\.com\/meijer1973\/4veco-platform\/pull\/\d+$/.test(packet.pr_url || ''), 'review packet pr_url must be bound');
-    check(/^[0-9a-f]{40}$/.test(packet.reviewed_payload_head_sha || ''), 'review packet reviewed payload SHA must be bound');
+    check(packet.pr_url === `https://github.com/meijer1973/4veco-platform/pull/${packet.pr_number}`, 'review packet pr_url must match pr_number');
   }
+  check(/^[0-9a-f]{40}$/.test(packet.reviewed_payload_head_sha || ''), 'review packet reviewed payload SHA must be bound');
+  check(deltaProof?.commit_chain?.platform?.renewal_payload === packet.reviewed_payload_head_sha, 'review packet payload SHA must match delta-proof renewal payload');
 
   check(proof.schema_version === 2 && proof.sprint_id === WAVE_ID, 'wave proof identity mismatch');
   check(proof.scale_gate_1?.decision === 'PASS_CONTROLLED_ROLLOUT', 'wave proof controlled-rollout decision mismatch');
   check(proof.scale_gate_1?.controlled_wave_eligibility_authorized === true, 'wave proof must record controlled eligibility');
+  check(proof.scale_gate_1?.automatic_repository_wide_migration_authorized === false, 'wave proof must hold automatic repository-wide migration');
+  check(proof.rendered_evidence?.reviewed_platform_payload_sha === packet.reviewed_payload_head_sha, 'wave proof rendered payload must match review packet payload');
   assertHeldAuthorities(proof.authority, 'proof.authority');
 }
 
-function validatePacketAndProof(allowUnbound) {
-  validatePacketObjects(readJson(PATHS.packet), readJson(PATHS.proof), allowUnbound);
+function validatePacketAndProof(allowUnbound, deltaProof) {
+  validatePacketObjects(readJson(PATHS.packet), readJson(PATHS.proof), allowUnbound, deltaProof);
 }
 
 function parseArgs(argv) {
@@ -857,21 +868,18 @@ function run(options) {
     };
   }
   check(!options.scopeOnly || options.repoRoot, '--scope-only requires a repository root');
-  let wave;
-  if (options.scopeOnly && options.policyFile) {
-    wave = JSON.parse(fs.readFileSync(options.policyFile, 'utf8'));
-  } else {
-    wave = options.scopeOnly ? readJson(PATHS.wave) : validateWaveAndSurfaces().wave;
-  }
+  const policyWave = options.policyFile
+    ? JSON.parse(fs.readFileSync(options.policyFile, 'utf8'))
+    : readJson(PATHS.wave);
   const delta = changedEntries(options.base, options.head, options.repoRoot);
   validateEventRefs(options, delta, options.repoRoot);
-  const scope = validateChangedEntries(delta.entries, wave.changed_path_policy, options.scopeMode);
-  if (options.scopeOnly) return { delta, scope };
+  const scope = validateChangedEntries(delta.entries, policyWave.changed_path_policy, options.scopeMode);
+  if (options.scopeOnly || !scope.triggered) return { delta, scope };
 
+  validateWaveAndSurfaces();
   validateScaleProof();
   validateWiring();
   validateRoadmapTexts(readText(PATHS.goldenRoadmap), readText(PATHS.referenceRoadmap));
-  validatePacketAndProof(options.allowUnbound);
 
   let recordedDelta;
   if (options.writeDeltaProof) {
@@ -881,6 +889,7 @@ function run(options) {
   } else {
     recordedDelta = readJson(PATHS.deltaProof);
   }
+  validatePacketAndProof(options.allowUnbound, recordedDelta);
   const recomputedDelta = buildDeltaProof({
     platformHead: recordedDelta.commit_chain?.platform?.renewal_payload,
     lessonHead: recordedDelta.commit_chain?.lesson?.renewal_snapshot,
