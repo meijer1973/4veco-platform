@@ -27,8 +27,10 @@
     "round1": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round1.md",
     "corrections": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md",
     "round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
+    "round3": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round3.md",
     "round1_verdict": "REVISE_IMPLEMENTATION",
     "round2_verdict": "PASS WITH FLAGS",
+    "round3_verdict": "PASS WITH FLAGS",
     "final_verdict": "PASS WITH FLAGS",
     "findings": [
       {

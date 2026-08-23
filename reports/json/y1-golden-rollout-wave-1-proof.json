@@ -34,7 +34,7 @@
     "delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
     "screenshots_recaptured": false,
     "reuse_status": "commit_bound_reuse_attested",
-    "reviewed_platform_payload_sha": "8b94538f805d8750469803280d9e935bd9a29b64",
+    "reviewed_platform_payload_sha": "38b37befae0f2aa597dbe6e808fc6c834393d3cf",
     "lesson_snapshot_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
     "platform_equal_path_count": 64,
     "lesson_equal_path_count": 78,
