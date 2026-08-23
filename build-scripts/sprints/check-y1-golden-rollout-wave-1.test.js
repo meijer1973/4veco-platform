@@ -106,6 +106,40 @@ function basePacketAndProof() {
   };
 }
 
+function baseDeltaRecord() {
+  return {
+    schema_version: 1,
+    sprint_id: checker.WAVE_ID,
+    commit_chain: {
+      platform: { capture_payload: 'a'.repeat(40), old_pr_ci: 'b'.repeat(40), renewal_payload: 'c'.repeat(40) },
+      lesson: { capture_payload: 'd'.repeat(40), old_pr_ci: 'e'.repeat(40), renewal_snapshot: 'f'.repeat(40) },
+    },
+    dependency_discovery: {
+      capture_pages_from_scale_proof: true,
+      local_browser_assets_from_capture_inspection: true,
+      html_src_require_blob_equality: true,
+      html_link_href_require_blob_equality: true,
+      anchor_href_require_existence_only: true,
+      navigation_destination_content_outside_screenshot_claim: true,
+      landing_route_targets_exist_at_all_commits: true,
+      platform_source_generator_runtime_and_proof_inputs_explicit: true,
+      proof_defined_list_accepted_without_cross_check: false,
+    },
+    summary: {
+      screenshots_reusable: true,
+      recapture_required: false,
+      changed_or_missing_input_count: 0,
+      changed_or_missing_paths: [],
+      historical_artifact_count: 1,
+      historical_artifacts_blob_equal: true,
+      screenshot_manifest_integrity_passed: true,
+    },
+    platform_equal_paths: [{ path: 'a', blobs: { renewal_payload: 'blob-a' }, status: 'equal' }],
+    lesson_equal_paths: [{ path: 'b', blobs: { renewal_snapshot: 'blob-b' }, status: 'equal' }],
+    lesson_existence_only_paths: [{ path: 'c', blobs: { renewal_snapshot: 'blob-c' }, status: 'present' }],
+  };
+}
+
 function git(cwd, args) {
   const result = spawnSync('git', args, { cwd, encoding: 'utf8' });
   if (result.status !== 0) throw new Error(result.stderr || result.stdout);
@@ -210,7 +244,7 @@ describe('Y1 Golden rollout wave state contracts', () => {
   test('rejects missing and escaping route links', () => {
     const source = { parNr: '1.1.1', parName: 'Schaarste en economisch denken' };
     expect(() => checker.routeTarget(source, '')).toThrow(/href is empty/);
-    expect(() => checker.routeTarget(source, '../../outside.html')).toThrow(/escapes paragraph directory/);
+    expect(() => checker.routeTarget(source, '../../../outside.html')).toThrow(/escapes Book 1 root/);
     expect(() => checker.routeTarget(source, 'missing-route.html')).toThrow(/does not resolve/);
   });
 
@@ -226,6 +260,12 @@ describe('Y1 Golden rollout wave state contracts', () => {
       fs.rmSync(platformRoot, { recursive: true, force: true });
       fs.rmSync(lessonRoot, { recursive: true, force: true });
     }
+  });
+
+  test('rejects exact legacy assets without rejecting generated exit-ticket data', () => {
+    expect(checker.containsLegacyAsset('<script src="../../shared/exit-ticket/1.1.1-exit-ticket.js"></script>')).toBe(false);
+    expect(checker.containsLegacyAsset('<script src="../../shared/exit-ticket.js"></script>')).toBe(true);
+    expect(checker.containsLegacyAsset('<link href="../../shared/task-shell.css" rel="stylesheet">')).toBe(true);
   });
 
   test('classifies rendered inputs separately from navigation destinations', () => {
@@ -246,35 +286,32 @@ describe('Y1 Golden rollout wave state contracts', () => {
 
 describe('Y1 Golden rollout wave evidence and governance contracts', () => {
   test('rejects stale or incomplete delta-proof dependency sets', () => {
-    const recorded = {
-      schema_version: 1,
-      sprint_id: checker.WAVE_ID,
-      summary: {
-        screenshots_reusable: true,
-        changed_or_missing_input_count: 0,
-        changed_or_missing_paths: [],
-        historical_artifact_count: 0,
-        historical_artifacts_blob_equal: true,
-        screenshot_manifest_integrity_passed: true,
-      },
-      platform_equal_paths: [{ path: 'a' }],
-      lesson_equal_paths: [{ path: 'b' }],
-      lesson_existence_only_paths: [],
-    };
-    const recomputed = {
-      summary: {
-        screenshots_reusable: true,
-        changed_or_missing_input_count: 0,
-        changed_or_missing_paths: [],
-        historical_artifact_count: 0,
-        historical_artifacts_blob_equal: true,
-        screenshot_manifest_integrity_passed: true,
-      },
-      platform_equal_paths: [{ path: 'a' }, { path: 'omitted-runtime.js' }],
-      lesson_equal_paths: [{ path: 'b' }],
-      lesson_existence_only_paths: [],
-    };
+    const recorded = baseDeltaRecord();
+    const recomputed = structuredClone(recorded);
+    recomputed.platform_equal_paths.push({ path: 'omitted-runtime.js', blobs: {}, status: 'equal' });
     expect(() => checker.validateDeltaProof(recorded, recomputed)).toThrow(/platform_equal_paths mismatch/);
+  });
+
+  test('rejects stale delta commit chains, classifier flags, blobs, counts, and reuse decisions', () => {
+    const mutateAndExpect = (mutate, pattern) => {
+      const recorded = baseDeltaRecord();
+      const recomputed = structuredClone(recorded);
+      mutate(recorded, recomputed);
+      expect(() => checker.validateDeltaProof(recorded, recomputed)).toThrow(pattern);
+    };
+    mutateAndExpect((recorded) => { recorded.commit_chain.platform.renewal_payload = '9'.repeat(40); }, /commit chain is stale/);
+    mutateAndExpect((recorded) => { recorded.dependency_discovery.anchor_href_require_existence_only = false; }, /dependency classification is stale/);
+    mutateAndExpect((recorded) => { recorded.platform_equal_paths[0].blobs.renewal_payload = 'stale'; }, /blob evidence is stale/);
+    mutateAndExpect((recorded) => { recorded.summary.historical_artifact_count = 2; }, /artifact count is stale/);
+    mutateAndExpect((recorded) => { recorded.summary.screenshots_reusable = false; }, /reuse decision is stale/);
+    mutateAndExpect((recorded) => { recorded.summary.recapture_required = true; }, /complete summary is stale/);
+  });
+
+  test('limits the post-payload evidence tail to deterministic evidence paths', () => {
+    expect(checker.evidenceTailPathAllowed('reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json')).toBe(true);
+    expect(checker.evidenceTailPathAllowed('reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md')).toBe(true);
+    expect(checker.evidenceTailPathAllowed('build-scripts/sprints/check-y1-golden-rollout-wave-1.js')).toBe(false);
+    expect(checker.evidenceTailPathAllowed('source-data/book-1/exit-ticket/1.1.1-exit-ticket.json')).toBe(false);
   });
 
   test('rejects missing exact event wiring', () => {
@@ -302,7 +339,8 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
       researchMap: common,
       referenceMap: common,
       githubEntry: common,
-      urlIndex: `${checker.PATHS.packet}\n${checker.PATHS.proof}`,
+      urlIndex: checker.PATHS.bundleUrls,
+      bundleUrls: `${checker.PATHS.packet}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}`,
       platformAgentIndex: checker.PATHS.packet,
       dashboard: checker.WAVE_ID,
     })).toThrow(/controlled-rollout state/);

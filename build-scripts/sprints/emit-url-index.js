@@ -32,7 +32,7 @@ function listGates() {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && /^GATE-/.test(entry.name))
+    .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .sort();
 }

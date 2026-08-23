@@ -21,6 +21,7 @@ const PATHS = {
   proof: 'reports/json/y1-golden-rollout-wave-1-proof.json',
   deltaProof: 'reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json',
   packet: 'reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json',
+  bundleUrls: 'reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md',
   goldenRoadmap: 'docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md',
   referenceRoadmap: 'references/reference-team-roadmap.md',
 };
@@ -86,6 +87,27 @@ const PLATFORM_RENDER_INPUTS = [
   PATHS.scaleRouteInventory,
   'build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js',
   'build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js',
+];
+
+const EVIDENCE_TAIL_EXACT = [
+  'AGENT_GITHUB_ENTRY.md',
+  'RESEARCH_AGENT_MAP.md',
+  'RESEARCH_AGENT_MAP_REFERENCES.md',
+  'references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json',
+  PATHS.proof,
+  PATHS.deltaProof,
+  'reports/url-index.md',
+  'reports/github-agent-index-platform.json',
+  'reports/github-agent-index-platform.md',
+  'reports/github-agent-index-lessen.json',
+  'reports/github-agent-index-lessen.md',
+  'reports/internal-dashboard/dashboard-data.json',
+  'reports/internal-dashboard/index.html',
+];
+
+const EVIDENCE_TAIL_PREFIXES = [
+  'reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-',
 ];
 
 class CheckError extends Error {}
@@ -286,8 +308,9 @@ function routeTarget(source, href, lessonRoot = LESSON_ROOT) {
   check(!/^[a-z]+:/i.test(clean) && !clean.startsWith('//'), `${source.parNr} route href must be local: ${href}`);
   const paragraphDir = paragraphDirectory(source, lessonRoot);
   const target = path.resolve(paragraphDir, decodeURIComponent(clean));
-  const prefix = `${path.resolve(paragraphDir)}${path.sep}`.toLowerCase();
-  check(target.toLowerCase().startsWith(prefix), `${source.parNr} route href escapes paragraph directory: ${href}`);
+  const bookRoot = path.resolve(lessonRoot, BOOK_REL);
+  const prefix = `${bookRoot}${path.sep}`.toLowerCase();
+  check(target.toLowerCase().startsWith(prefix), `${source.parNr} route href escapes Book 1 root: ${href}`);
   check(fs.existsSync(target), `${source.parNr} route href does not resolve: ${href}`);
   return target;
 }
@@ -331,6 +354,10 @@ function validateSurfaceContract(surface, source, generated) {
   return { source, generated };
 }
 
+function containsLegacyAsset(html) {
+  return /(?:^|\/)(?:task-shell|exit-ticket|skill-map-route)\.(?:css|js)(?:["'?#]|$)/m.test(html);
+}
+
 function validateSurfaceState(surface, options = {}) {
   const platformRoot = options.platformRoot || ROOT;
   const lessonRoot = options.lessonRoot || LESSON_ROOT;
@@ -345,7 +372,7 @@ function validateSurfaceState(surface, options = {}) {
   const html = fs.readFileSync(pagePath, 'utf8');
   check(/data-golden-ticket-root/.test(html), `${surface.id} page missing Golden root`);
   check(!/id=["']exit-ticket-app["']/.test(html), `${surface.id} page contains legacy exit-ticket root`);
-  check(!/(?:task-shell|exit-ticket|skill-map-route)\.(?:css|js)/.test(html), `${surface.id} page loads legacy/hybrid assets`);
+  check(!containsLegacyAsset(html), `${surface.id} page loads legacy/hybrid assets`);
 }
 
 function validateWaveAndSurfaces(options = {}) {
@@ -567,15 +594,15 @@ function buildDeltaProof(options = {}) {
   const platformRefs = {
     capture_payload: resolveRef(CAPTURE_PLATFORM_SHA, ROOT),
     old_pr_ci: resolveRef(OLD_CI_PLATFORM_SHA, ROOT),
-    renewal_current: platformCurrent,
+    renewal_payload: platformCurrent,
   };
   const lessonRefs = {
     capture_payload: resolveRef(CAPTURE_LESSON_SHA, LESSON_ROOT),
     old_pr_ci: resolveRef(OLD_CI_LESSON_SHA, LESSON_ROOT),
-    renewal_current: lessonCurrent,
+    renewal_snapshot: lessonCurrent,
   };
   const scaleProof = validateScaleProof();
-  const lessonDependencies = deriveLessonDependencies(scaleProof, lessonRefs.capture_payload, lessonRefs.renewal_current);
+  const lessonDependencies = deriveLessonDependencies(scaleProof, lessonRefs.capture_payload, lessonRefs.renewal_snapshot);
   const platformPaths = platformEvidencePaths(scaleProof);
   const platform = attestEqualPaths(platformPaths, platformRefs, ROOT, 'platform rendered input');
   const lesson = attestEqualPaths(lessonDependencies.equal_paths, lessonRefs, LESSON_ROOT, 'lesson rendered input');
@@ -607,7 +634,10 @@ function buildDeltaProof(options = {}) {
     dependency_discovery: {
       capture_pages_from_scale_proof: true,
       local_browser_assets_from_capture_inspection: true,
-      html_src_and_href_dependencies_from_git_blobs: true,
+      html_src_require_blob_equality: true,
+      html_link_href_require_blob_equality: true,
+      anchor_href_require_existence_only: true,
+      navigation_destination_content_outside_screenshot_claim: true,
       landing_route_targets_exist_at_all_commits: true,
       platform_source_generator_runtime_and_proof_inputs_explicit: true,
       proof_defined_list_accepted_without_cross_check: false,
@@ -633,17 +663,75 @@ function buildDeltaProof(options = {}) {
 function validateDeltaProof(recorded, recomputed) {
   check(recorded.schema_version === 1 && recorded.sprint_id === WAVE_ID, 'delta proof identity mismatch');
   check(JSON.stringify(recorded.commit_chain) === JSON.stringify(recomputed.commit_chain), 'delta proof commit chain is stale');
+  check(JSON.stringify(recorded.dependency_discovery) === JSON.stringify(recomputed.dependency_discovery), 'delta proof dependency classification is stale');
   check(recorded.summary?.screenshots_reusable === recomputed.summary.screenshots_reusable, 'delta proof reuse decision is stale');
   check(recorded.summary?.changed_or_missing_input_count === recomputed.summary.changed_or_missing_input_count, 'delta proof changed/missing count is stale');
   check(recorded.summary?.historical_artifact_count === recomputed.summary.historical_artifact_count, 'delta proof historical artifact count is stale');
   check(recorded.summary?.historical_artifacts_blob_equal === true && recomputed.summary.historical_artifacts_blob_equal === true, 'historical Scale Proof artifacts must remain blob-equal');
   check(recorded.summary?.screenshot_manifest_integrity_passed === true, 'delta proof screenshot/manifest integrity is missing');
   sameSet(recorded.summary?.changed_or_missing_paths || [], recomputed.summary.changed_or_missing_paths || [], 'delta proof changed/missing paths');
+  check(JSON.stringify(recorded.summary) === JSON.stringify(recomputed.summary), 'delta proof complete summary is stale');
   for (const section of ['platform_equal_paths', 'lesson_equal_paths', 'lesson_existence_only_paths']) {
     sameSet((recorded[section] || []).map((item) => item.path), (recomputed[section] || []).map((item) => item.path), `delta proof ${section}`);
     check(JSON.stringify(recorded[section]) === JSON.stringify(recomputed[section]), `delta proof ${section} blob evidence is stale`);
   }
   return true;
+}
+
+function evidenceTailPathAllowed(relativePath) {
+  const normalized = normalizePath(relativePath);
+  return EVIDENCE_TAIL_EXACT.includes(normalized)
+    || EVIDENCE_TAIL_PREFIXES.some((prefix) => normalized.startsWith(prefix));
+}
+
+function validateEvidenceTail(payloadRef, exactHeadRef) {
+  const delta = changedEntries(payloadRef, exactHeadRef, ROOT);
+  for (const entry of delta.entries) {
+    check(/^(A|M)$/.test(entry.status), `evidence tail may only add or modify files: ${entry.status} ${entry.path}`);
+    for (const relativePath of entryPaths(entry)) {
+      check(evidenceTailPathAllowed(relativePath), `substantive path changed after reviewed payload: ${relativePath}`);
+    }
+  }
+  return delta;
+}
+
+function validateExactHeadDelta(recorded, exactPlatformHead, exactLessonHead) {
+  const payloadPlatform = resolveRef(recorded.commit_chain?.platform?.renewal_payload, ROOT);
+  const snapshotLesson = resolveRef(recorded.commit_chain?.lesson?.renewal_snapshot, LESSON_ROOT);
+  const currentPlatform = resolveRef(exactPlatformHead, ROOT);
+  const currentLesson = resolveRef(exactLessonHead, LESSON_ROOT);
+  const ancestor = spawnSync('git', ['merge-base', '--is-ancestor', payloadPlatform, currentPlatform], { cwd: ROOT });
+  check(ancestor.status === 0, 'recorded rendered payload must be an ancestor of exact platform head');
+
+  const proof = validateScaleProof();
+  const platform = attestEqualPaths(platformEvidencePaths(proof), {
+    renewal_payload: payloadPlatform,
+    exact_head: currentPlatform,
+  }, ROOT, 'exact-head platform rendered input');
+  const lessonDependencies = deriveLessonDependencies(proof, snapshotLesson, currentLesson);
+  const lesson = attestEqualPaths(lessonDependencies.equal_paths, {
+    renewal_snapshot: snapshotLesson,
+    exact_head: currentLesson,
+  }, LESSON_ROOT, 'exact-head lesson rendered input');
+  const lessonExistence = attestExistencePaths(lessonDependencies.existence_only_paths, {
+    renewal_snapshot: snapshotLesson,
+    exact_head: currentLesson,
+  }, LESSON_ROOT, 'exact-head lesson route target');
+  check(platform.every((item) => item.status === 'equal'), 'platform rendered inputs changed after reviewed payload');
+  check(lesson.every((item) => item.status === 'equal'), 'lesson rendered inputs changed after recorded snapshot');
+  check(lessonExistence.every((item) => item.status === 'present'), 'lesson route destination missing at exact head');
+
+  return {
+    platform_payload_sha: payloadPlatform,
+    platform_exact_head_sha: currentPlatform,
+    lesson_snapshot_sha: snapshotLesson,
+    lesson_exact_head_sha: currentLesson,
+    platform_equal_path_count: platform.length,
+    lesson_equal_path_count: lesson.length,
+    lesson_existence_only_path_count: lessonExistence.length,
+    rendered_inputs_unchanged: true,
+    route_destinations_present: true,
+  };
 }
 
 function validateRoadmapTexts(goldenText, referenceText) {
@@ -673,8 +761,10 @@ function validateNavigationTexts(texts) {
     check(texts[name]?.includes(WAVE_ID), `${name} missing ${WAVE_ID}`);
     check(texts[name]?.includes('check-y1-golden-rollout-wave-1.js'), `${name} missing Y1 checker path`);
   }
-  check(texts.urlIndex?.includes(PATHS.packet), 'URL index missing Y1 review packet');
-  check(texts.urlIndex?.includes(PATHS.proof), 'URL index missing Y1 proof');
+  check(texts.urlIndex?.includes(PATHS.bundleUrls), 'URL index missing Y1 review bundle');
+  check(texts.bundleUrls?.includes(PATHS.packet), 'Y1 review bundle missing packet');
+  check(texts.bundleUrls?.includes(PATHS.proof), 'Y1 review bundle missing proof');
+  check(texts.bundleUrls?.includes(PATHS.deltaProof), 'Y1 review bundle missing delta proof');
   check(texts.platformAgentIndex?.includes(PATHS.packet), 'platform agent index missing Y1 packet');
   check(texts.dashboard?.includes(WAVE_ID), 'internal dashboard missing current Y1 wave');
   check(texts.dashboard?.includes('PASS_CONTROLLED_ROLLOUT'), 'internal dashboard missing controlled-rollout state');
@@ -783,24 +873,33 @@ function run(options) {
   validateRoadmapTexts(readText(PATHS.goldenRoadmap), readText(PATHS.referenceRoadmap));
   validatePacketAndProof(options.allowUnbound);
 
-  const recomputedDelta = buildDeltaProof({ platformHead: options.head, lessonHead: options.lessonHead });
+  let recordedDelta;
   if (options.writeDeltaProof) {
+    recordedDelta = buildDeltaProof({ platformHead: options.head, lessonHead: options.lessonHead });
     fs.mkdirSync(path.dirname(filePath(ROOT, PATHS.deltaProof)), { recursive: true });
-    fs.writeFileSync(filePath(ROOT, PATHS.deltaProof), `${JSON.stringify(recomputedDelta, null, 2)}\n`, 'utf8');
+    fs.writeFileSync(filePath(ROOT, PATHS.deltaProof), `${JSON.stringify(recordedDelta, null, 2)}\n`, 'utf8');
   } else {
-    validateDeltaProof(readJson(PATHS.deltaProof), recomputedDelta);
+    recordedDelta = readJson(PATHS.deltaProof);
   }
+  const recomputedDelta = buildDeltaProof({
+    platformHead: recordedDelta.commit_chain?.platform?.renewal_payload,
+    lessonHead: recordedDelta.commit_chain?.lesson?.renewal_snapshot,
+  });
+  validateDeltaProof(recordedDelta, recomputedDelta);
+  const exactHeadDelta = validateExactHeadDelta(recordedDelta, options.head, options.lessonHead);
+  const evidenceTail = validateEvidenceTail(recordedDelta.commit_chain.platform.renewal_payload, options.head);
 
   validateNavigationTexts({
     researchMap: readText('RESEARCH_AGENT_MAP.md'),
     referenceMap: readText('RESEARCH_AGENT_MAP_REFERENCES.md'),
     githubEntry: readText('AGENT_GITHUB_ENTRY.md'),
     urlIndex: readText('reports/url-index.md'),
+    bundleUrls: readText(PATHS.bundleUrls),
     platformAgentIndex: readText('reports/github-agent-index-platform.json'),
     dashboard: readText('reports/internal-dashboard/dashboard-data.json'),
   });
 
-  return { delta, scope, delta_proof: recomputedDelta };
+  return { delta, scope, delta_proof: recomputedDelta, exact_head_delta: exactHeadDelta, evidence_tail: evidenceTail };
 }
 
 function cli(argv) {
@@ -817,6 +916,8 @@ function cli(argv) {
       scope_attestation_triggered: result.scope.triggered,
       changed_paths: result.scope.changed_paths,
       screenshots_reusable: result.delta_proof?.summary?.screenshots_reusable ?? null,
+      rendered_inputs_unchanged_through_exact_head: result.exact_head_delta?.rendered_inputs_unchanged ?? null,
+      evidence_tail_paths: uniqueSorted((result.evidence_tail?.entries || []).flatMap(entryPaths)),
     }, null, 2));
   } catch (error) {
     console.error(`Y1-GOLDEN-ROLLOUT-WAVE-1 check failed: ${error.message}`);
@@ -838,8 +939,10 @@ module.exports = {
   WAVE_ID,
   attestEqualPaths,
   buildDeltaProof,
+  containsLegacyAsset,
   changedEntries,
   deriveLessonDependencies,
+  evidenceTailPathAllowed,
   classifyLocalHtmlReferences,
   extractLocalReferences,
   lessonCapturePaths,
@@ -851,7 +954,9 @@ module.exports = {
   scopeTriggered,
   validateChangedEntries,
   validateDeltaProof,
+  validateEvidenceTail,
   validateEventRefs,
+  validateExactHeadDelta,
   validateNavigationTexts,
   validatePacketObjects,
   validateRoadmapTexts,

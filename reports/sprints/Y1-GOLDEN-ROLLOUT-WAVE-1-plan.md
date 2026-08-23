@@ -194,7 +194,7 @@ Validate:
 - current split source/generated paths;
 - source/generated parity for surface type and authority flags;
 - Golden layout without legacy/hybrid roots;
-- route href presence, containment within the lesson paragraph, and target
+- route href presence, containment within the Book 1 lesson root, and target
   existence;
 - current Scale Proof route/link/rendered flags;
 - short-check advisory feedback and exit-ticket completion-held boundaries;
@@ -215,12 +215,22 @@ Create a delta-proof JSON that distinguishes and records:
 
 The dependency inventory may use the capture manifest as one input, but it may
 not trust a proof-defined list as complete. It must independently derive and
-cross-check page paths, HTML `src`/`href` dependencies, browser-loaded local
-assets, manifest source paths, registered Golden runtime/generator paths,
-landing destinations, and proof inputs. The checker independently recomputes
-blob IDs at every recorded commit boundary. If any relevant input changed or a
-dependency is omitted, screenshot reuse fails and this renewal must recapture
-rendered proof rather than weaken the claim.
+cross-check page paths, HTML `src` dependencies, `<link href>` dependencies,
+browser-loaded local assets, anchor/navigation destinations, manifest source
+paths, registered Golden runtime/generator paths, landing destinations, and
+proof inputs. Rendered pages, `src` inputs, `<link href>` inputs, and loaded
+local assets require blob equality. Anchor/navigation destinations require
+existence at every commit but their content is outside the accepted screenshot
+claim unless a capture case renders them. The checker independently recomputes
+blob IDs at every recorded commit boundary. If any rendered input changed, a
+route destination disappeared, or a dependency is omitted, screenshot reuse
+fails and this renewal must recapture rendered proof rather than weaken the
+claim.
+
+The committed delta proof binds the reviewed substantive payload SHA. Exact-PR
+head validation then proves that the payload is an ancestor, the later diff is
+an allowlisted evidence-only tail, and all rendered inputs remain unchanged
+through that exact head. This avoids a self-referential proof commit.
 
 ### 5. Roadmap correction
 
@@ -306,6 +316,7 @@ state in the renewal result evidence.
 - `package.json`
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1.js`
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js`
+- `build-scripts/sprints/emit-url-index.js`
 - `references/data/exercises/y1-golden-rollout-wave-1.json`
 - `references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json`
 - `references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json`
