@@ -42,7 +42,7 @@
         "evidence": "Final checker control flow plus synthetic full-mode pass and rendered-drift rejection.",
         "blocks": "Nothing; the original finding is resolved.",
         "does_not_block": "Implementation closure and PR handoff.",
-        "proof_required_to_close": "Closed by the 23-test focused suite and final lead reinspection."
+        "proof_required_to_close": "Closed by the 24-test focused suite and final lead reinspection."
       },
       {
         "id": "Y1-LEAD-R1-AUTHORITY",

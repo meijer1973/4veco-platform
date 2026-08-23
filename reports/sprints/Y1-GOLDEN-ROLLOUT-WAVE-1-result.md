@@ -26,7 +26,7 @@ target-readiness flag changes.
 ## Current Evidence
 
 - Plan review: `OK_TO_IMPLEMENT` after correction round.
-- Focused checker suite: 23 tests passing after lead-review corrections.
+- Focused checker suite: 24 tests passing after lead-review corrections.
 - Roadmap version index: passing after current-state correction.
 - Historical reuse decision: accepted after independent input/navigation
   classification; zero rendered-input drift.
@@ -53,8 +53,8 @@ target-readiness flag changes.
 
 ## Acceptance test results
 
-- Platform Jest: 104 suites and 1454 tests passed; 6 suites and 8 tests skipped.
-- Focused Y1 checker: 23 tests passed.
+- Platform Jest: 104 suites and 1455 tests passed; 6 suites and 8 tests skipped.
+- Focused Y1 checker: 24 tests passed.
 - Full Y1 checker, currentness, Scale Proof, review-throughput, report JSON,
   roadmap index, URL index, agent-index freshness, scope language, and platform
   and lesson diff hygiene passed.
