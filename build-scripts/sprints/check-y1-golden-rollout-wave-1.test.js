@@ -568,35 +568,34 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     }), 'utf8');
 
     const unrelatedHead = syntheticCommit(root, base, { 'docs/future-authorized-work.md': 'future\n' });
-    const unrelated = runScopeCli({
-      root,
-      policyPath,
+    const common = {
+      repoRoot: root,
+      policyFile: policyPath,
       base,
-      head: unrelatedHead,
       eventMode: 'main_push',
       scopeMode: 'auto',
       scopeOnly: false,
       allowUnbound: true,
-      env: { Y1_GOLDEN_EVENT_BASE_SHA: base, Y1_GOLDEN_EVENT_HEAD_SHA: unrelatedHead },
+      writeDeltaProof: false,
+      writeDeltaProofOnly: false,
+      lessonHead: '96c0970f45739a8758cf7e932c6bce77806cd68d',
+      eventBaseSha: base,
+    };
+    const unrelated = checker.run({
+      ...common,
+      head: unrelatedHead,
+      eventHeadSha: unrelatedHead,
     });
-    expect(unrelated.status).toBe(0);
-    expect(unrelated.stdout).toMatch(/"scope_attestation_triggered": false/);
+    expect(unrelated.scope.triggered).toBe(false);
+    expect(unrelated.exact_head_delta.rendered_inputs_unchanged).toBe(true);
 
     const renderedDriftHead = syntheticCommit(root, base, {
       'build-scripts/platform/build-landing-page.js': 'module.exports = { unauthorizedDrift: true };\n',
     });
-    const renderedDrift = runScopeCli({
-      root,
-      policyPath,
-      base,
+    expect(() => checker.run({
+      ...common,
       head: renderedDriftHead,
-      eventMode: 'main_push',
-      scopeMode: 'auto',
-      scopeOnly: false,
-      allowUnbound: true,
-      env: { Y1_GOLDEN_EVENT_BASE_SHA: base, Y1_GOLDEN_EVENT_HEAD_SHA: renderedDriftHead },
-    });
-    expect(renderedDrift.status).not.toBe(0);
-    expect(renderedDrift.stderr).toMatch(/platform rendered inputs changed after reviewed payload/);
+      eventHeadSha: renderedDriftHead,
+    })).toThrow(/platform rendered inputs changed after reviewed payload/);
   });
 });
