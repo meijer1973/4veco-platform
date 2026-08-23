@@ -4,7 +4,7 @@
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "pr_number": null,
   "pr_url": null,
-  "reviewed_payload_head_sha": null,
+  "reviewed_payload_head_sha": "a61b75d0aed90a523137b912d0af81fc01a834d9",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "product_authority",
@@ -19,7 +19,7 @@
   ],
   "review_autonomy": {
     "level": "L4",
-    "lead_review_result": "PENDING_IMPLEMENTATION_REVIEW",
+    "lead_review_result": "PASS WITH FLAGS",
     "rationale": "The renewal governs the historical PASS_CONTROLLED_ROLLOUT boundary and changes CI. Exact-head human review remains required."
   },
   "product_end_state_refs": [
@@ -45,6 +45,7 @@
   "content_verdict_requested": "Approve or reject the renewed controlled workflow-availability guard only.",
   "authority_claims": {
     "actual_rollout_or_adoption_authorized": false,
+    "automatic_repository_wide_migration_authorized": false,
     "product_route_adoption_authorized": false,
     "broad_product_use_authorized": false,
     "product_use_authorized": false,
@@ -60,15 +61,15 @@
     "engine_behavior_changed": false
   },
   "core_requirement_checklist": [
-    { "requirement": "Current-main branch and fresh evidence", "status": "in_progress" },
-    { "requirement": "Six-surface state and route contract", "status": "in_progress" },
-    { "requirement": "Committed changed-path guard", "status": "in_progress" },
-    { "requirement": "Dedicated negative regression suite", "status": "in_progress" },
-    { "requirement": "Commit-bound rendered delta proof", "status": "in_progress" },
-    { "requirement": "Coherent active roadmaps", "status": "in_progress" },
-    { "requirement": "Maps, indexes, and dashboard closure", "status": "in_progress" },
-    { "requirement": "Replacement PR and exact-head evidence binding", "status": "pending_pr" },
-    { "requirement": "PR #205 superseded and closed", "status": "pending_replacement_pr" }
+    { "requirement": "Current-main branch and fresh evidence", "status": "met" },
+    { "requirement": "Six-surface state and route contract", "status": "met" },
+    { "requirement": "Committed changed-path guard", "status": "met" },
+    { "requirement": "Dedicated negative regression suite", "status": "met" },
+    { "requirement": "Commit-bound rendered delta proof", "status": "met" },
+    { "requirement": "Coherent active roadmaps", "status": "met" },
+    { "requirement": "Maps, indexes, and dashboard closure", "status": "met" },
+    { "requirement": "Replacement PR and exact-head evidence binding", "status": "not met" },
+    { "requirement": "PR #205 superseded and closed", "status": "not met" }
   ],
   "carried_issues": [
     {
@@ -85,12 +86,12 @@
     "rendered_delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
     "checker": {
       "command": "npm.cmd run check:y1-golden-rollout-wave-1",
-      "status": "pending"
+      "status": "local_passed_allow_unbound"
     },
     "lead_review": {
       "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
-      "result": "pending",
-      "reviewed_commit_sha": null
+      "result": "PASS WITH FLAGS",
+      "reviewed_commit_sha": "a61b75d0aed90a523137b912d0af81fc01a834d9"
     },
     "ci": {
       "required_contexts": ["validate-platform"],

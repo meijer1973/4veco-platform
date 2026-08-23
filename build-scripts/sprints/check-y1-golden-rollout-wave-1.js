@@ -20,8 +20,8 @@ const PATHS = {
   scaleRouteInventory: 'reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md',
   proof: 'reports/json/y1-golden-rollout-wave-1-proof.json',
   deltaProof: 'reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json',
-  packet: 'reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json',
-  bundleUrls: 'reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md',
+  packet: 'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json',
+  bundleUrls: 'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md',
   goldenRoadmap: 'docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md',
   referenceRoadmap: 'references/reference-team-roadmap.md',
 };
@@ -107,7 +107,7 @@ const EVIDENCE_TAIL_EXACT = [
 ];
 
 const EVIDENCE_TAIL_PREFIXES = [
-  'reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/',
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/',
   'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-',
 ];
 

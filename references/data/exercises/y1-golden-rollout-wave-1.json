@@ -61,7 +61,7 @@
       "references/data/exercises/y1-golden-rollout-wave-1.json",
       "reports/json/y1-golden-rollout-wave-1-proof.json",
       "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
-      "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json"
+      "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json"
     ],
     "trigger_prefixes": [
       "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-"
@@ -84,8 +84,8 @@
       "references/reference-team-roadmap.md",
       "reports/json/y1-golden-rollout-wave-1-proof.json",
       "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
-      "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
-      "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md",
+      "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+      "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md",
       "reports/url-index.md",
       "reports/github-agent-index-platform.json",
       "reports/github-agent-index-platform.md",
