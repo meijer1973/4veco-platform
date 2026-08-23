@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "generated": "2026-08-23T18:03:15.896Z",
+  "generated": "2026-08-23T18:41:46.864Z",
   "purpose": "commit-bound rendered proof reuse attestation",
   "commit_chain": {
     "platform": {
       "capture_payload": "5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7",
       "old_pr_ci": "571d435a172240524ed96394a41682ef003bfcad",
-      "renewal_payload": "3ee039acf3bacc3c55d74cce69bbde7ebea237fc"
+      "renewal_payload": "e830965cb4ca81678c2164e0c07e02b02d75a212"
     },
     "lesson": {
       "capture_payload": "071a465a03e287bc5768d88aabbec3e63b15ee09",

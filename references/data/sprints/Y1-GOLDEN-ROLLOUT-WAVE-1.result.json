@@ -29,10 +29,12 @@
     "round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
     "round3": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round3.md",
     "round4": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round4.md",
+    "round5": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round5.md",
     "round1_verdict": "REVISE_IMPLEMENTATION",
     "round2_verdict": "PASS WITH FLAGS",
     "round3_verdict": "PASS WITH FLAGS",
     "round4_verdict": "PASS WITH FLAGS",
+    "round5_verdict": "PASS WITH FLAGS",
     "final_verdict": "PASS WITH FLAGS",
     "findings": [
       {

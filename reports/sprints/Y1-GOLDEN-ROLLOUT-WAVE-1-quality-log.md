@@ -17,5 +17,6 @@ Generated: 2026-08-23
 | Local authority-hygiene hashes expose a pre-existing LF/CRLF portability mismatch. | minor_carry_flag | remote_proof_required | Exact-head remote `validate-platform` must pass; no unrelated fixture rewrite is included. |
 | Full-mode synthetic-Git regression hid its checker error behind a child-process status. | quality_improvement_available | corrected | Direct `checker.run()` orchestration keeps real Git history and exposes exact checker failures. |
 | Fresh Windows CI could not query a historical lesson path containing an en dash through Git argv. | core_spec_failure | corrected | Git batch stdin object reads, strict framing/error handling, empty/missing distinction, six protocol edge cases, and lead-review `OK_TO_COMMIT`. |
+| Exact-head PR checkout did not contain GitHub's synthetic merge object. | core_spec_failure | corrected | PR event validation now checks the supplied full SHA and compares it directly with the resolved payload head; the focused regression accepts an unfetched synthetic SHA and still rejects payload/synthetic equality. |
 
 No missing core requirement may be carried under `PASS WITH FLAGS`.
