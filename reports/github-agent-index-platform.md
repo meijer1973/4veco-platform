@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-17T11:26:20.000Z
+Generated: 2026-08-23T00:00:00.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/skilltree-improvement-20260618`
-Source commit: `358c618959df99657945b43519556a28c27bc284`
-Files indexed: 7171
+Source branch: `codex/part-a-pdf-human-review-workflow-20260702`
+Source commit: `ff5062038caa6314932dc29eef80efa70464918f`
+Files indexed: 7184
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 701
+Count: 705
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -806,6 +806,10 @@ Count: 701
 - build-scripts/tools/build-skill-tree-viewer.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
+- build-scripts/workflows/check-paragraph-workflow-wording.js
+- build-scripts/workflows/check-paragraph-workflow-wording.test.js
+- build-scripts/workflows/check-part-a-pdf-readiness.js
+- build-scripts/workflows/check-part-a-pdf-readiness.test.js
 - build-scripts/workflows/fixtures/paragraph-lane-scope/companion-only.json
 - build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-companion-block-only.json
 - build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-partA-block-leak.json
@@ -874,7 +878,7 @@ Count: 25
 
 ## validators
 
-Count: 680
+Count: 684
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1261,6 +1265,10 @@ Count: 680
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
+- build-scripts/workflows/check-paragraph-workflow-wording.js
+- build-scripts/workflows/check-paragraph-workflow-wording.test.js
+- build-scripts/workflows/check-part-a-pdf-readiness.js
+- build-scripts/workflows/check-part-a-pdf-readiness.test.js
 - docs/inspection-standards/evidence-pack-validation-and-dispatch.md
 - docs/inspection-standards/report-only-validator-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
@@ -2567,7 +2575,7 @@ Count: 1003
 
 ## reports
 
-Count: 4507
+Count: 4515
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4476,6 +4484,14 @@ Count: 4507
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
 - reports/review-gates/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1/review-packet.json
 - reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
+- reports/review-gates/PR200-RENEWAL-20260823/conflict-resolution-log.md
+- reports/review-gates/PR200-RENEWAL-20260823/lesson-main-pdf-inventory.json
+- reports/review-gates/PR200-RENEWAL-20260823/lesson-main-pdf-inventory.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round1.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round2.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round3.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round4.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan.md
 - reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json
 - reports/review-gates/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
@@ -7097,7 +7113,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 770
+Count: 771
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7775,6 +7791,7 @@ Count: 770
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/legacy-full-companion-profile.md
 - docs/workflows/paragraph-lane-vocabulary.md
 - docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md
