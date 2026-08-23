@@ -536,6 +536,27 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     expect(renameResult.stderr).toMatch(/unexpected committed path/);
   });
 
+  test('reads Unicode Git paths through the batch protocol', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const relativePath = 'bewijs/route – exit-ticket.html';
+    const head = commit(repo.root, {
+      [relativePath]: '<main>bewijs</main>\n',
+      'bewijs/empty.html': '',
+    });
+
+    expect(checker.gitBlob(head, relativePath, repo.root)).toMatch(/^[0-9a-f]{40}$/);
+    expect(checker.gitShow(head, relativePath, repo.root)).toBe('<main>bewijs</main>\n');
+    expect(checker.gitBlob(head, 'bewijs/empty.html', repo.root)).toMatch(/^[0-9a-f]{40}$/);
+    expect(checker.gitShow(head, 'bewijs/empty.html', repo.root)).toBe('');
+    expect(checker.gitBlob(head, 'bewijs/missing.html', repo.root)).toBeNull();
+    expect(checker.gitShow(head, 'bewijs/missing.html', repo.root)).toBeNull();
+    expect(() => checker.gitShow(head, 'bewijs/line\nbreak.html', repo.root)).toThrow(/forbidden control character/);
+    expect(() => checker.gitBlob(head, 'bewijs/carriage\rreturn.html', repo.root)).toThrow(/forbidden control character/);
+    expect(() => checker.gitBlob(head, relativePath, path.join(repo.root, 'missing-root'))).toThrow(/git cat-file --batch-check failed/);
+    expect(() => checker.parseGitBlobHeader('not a batch header', `${head}:x`, 'x')).toThrow(/unexpected git cat-file header/);
+  });
+
   test('does not apply the renewal allowlist to an unrelated future main push in auto mode', () => {
     const repo = makeRepo();
     roots.push(repo.root);

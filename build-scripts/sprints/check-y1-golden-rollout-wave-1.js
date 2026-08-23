@@ -174,25 +174,66 @@ function resolveRef(ref, cwd) {
   return runGit(['rev-parse', '--verify', `${ref}^{commit}`], cwd);
 }
 
-function gitBlob(ref, relativePath, cwd) {
+function parseGitBlobHeader(header, query, normalized) {
+  if (header === `${query} missing`) return null;
+  const match = header.match(/^([0-9a-f]+) blob (\d+)$/i);
+  check(match, `unexpected git cat-file header for ${normalized}: ${header}`);
+  return { oid: match[1], size: Number(match[2]) };
+}
+
+function gitBlobQuery(ref, relativePath) {
   const normalized = normalizePath(relativePath);
-  const result = spawnSync('git', ['rev-parse', `${ref}:${normalized}`], {
+  const refText = String(ref || '');
+  check(!/[\0\r\n]/.test(refText), 'Git ref contains a forbidden control character');
+  check(!/[\0\r\n]/.test(normalized), `Git path contains a forbidden control character: ${JSON.stringify(normalized)}`);
+  return { normalized, query: `${refText}:${normalized}` };
+}
+
+function runGitCatFile(mode, query, cwd, maxBuffer) {
+  const result = spawnSync('git', ['cat-file', mode], {
     cwd,
-    encoding: 'utf8',
+    input: Buffer.from(`${query}\n`, 'utf8'),
+    maxBuffer,
   });
-  if (result.status !== 0) return null;
-  return String(result.stdout || '').trim() || null;
+  if (result.error) throw new CheckError(`git cat-file ${mode} failed: ${result.error.message}`);
+  if (result.status !== 0) {
+    const detail = Buffer.from(result.stderr || '').toString('utf8').trim();
+    throw new CheckError(`git cat-file ${mode} failed${detail ? `: ${detail}` : ''}`);
+  }
+  return Buffer.isBuffer(result.stdout) ? result.stdout : Buffer.from(result.stdout || '');
+}
+
+function readGitBlob(ref, relativePath, cwd) {
+  const { normalized, query } = gitBlobQuery(ref, relativePath);
+  const output = runGitCatFile('--batch', query, cwd, 1024 * 1024 * 20);
+  const headerEnd = output.indexOf(0x0a);
+  check(headerEnd >= 0, `git cat-file response missing header delimiter for ${normalized}`);
+  const header = output.subarray(0, headerEnd).toString('utf8').replace(/\r$/, '');
+  const parsed = parseGitBlobHeader(header, query, normalized);
+  if (!parsed) {
+    check(output.length === headerEnd + 1, `unexpected data after missing git blob response for ${normalized}`);
+    return null;
+  }
+  const start = headerEnd + 1;
+  const end = start + parsed.size;
+  check(output.length === end + 1, `unexpected git blob response length for ${normalized}`);
+  check(output[end] === 0x0a, `git blob response missing trailing delimiter for ${normalized}`);
+  return { oid: parsed.oid, content: output.subarray(start, end) };
+}
+
+function gitBlob(ref, relativePath, cwd) {
+  const { normalized, query } = gitBlobQuery(ref, relativePath);
+  const output = runGitCatFile('--batch-check', query, cwd, 1024 * 1024);
+  const headerEnd = output.indexOf(0x0a);
+  check(headerEnd >= 0, `git cat-file response missing header delimiter for ${normalized}`);
+  check(output.length === headerEnd + 1, `unexpected git cat-file header data for ${normalized}`);
+  const header = output.subarray(0, headerEnd).toString('utf8').replace(/\r$/, '');
+  return parseGitBlobHeader(header, query, normalized)?.oid || null;
 }
 
 function gitShow(ref, relativePath, cwd) {
-  const normalized = normalizePath(relativePath);
-  const result = spawnSync('git', ['show', `${ref}:${normalized}`], {
-    cwd,
-    encoding: 'utf8',
-    maxBuffer: 1024 * 1024 * 20,
-  });
-  if (result.status !== 0) return null;
-  return String(result.stdout || '');
+  const blob = readGitBlob(ref, relativePath, cwd);
+  return blob ? blob.content.toString('utf8') : null;
 }
 
 function parseNameStatus(output) {
@@ -956,9 +997,12 @@ module.exports = {
   evidenceTailPathAllowed,
   classifyLocalHtmlReferences,
   extractLocalReferences,
+  gitBlob,
+  gitShow,
   lessonCapturePaths,
   lessonRepoPath,
   parseArgs,
+  parseGitBlobHeader,
   parseNameStatus,
   run,
   sameSet,
