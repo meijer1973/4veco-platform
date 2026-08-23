@@ -65,13 +65,13 @@ function makeLessonRepo(options = {}) {
   return { root, head };
 }
 
-function run(repo, expectedSha = repo.head) {
+function run(repo, expectedSha = repo.head, lessonRoot = repo.root) {
   const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'part-a-pdf-evidence-'));
   const jsonOut = path.join(outDir, 'inventory.json');
   const markdownOut = path.join(outDir, 'inventory.md');
   const result = spawnSync(process.execPath, [
     checker,
-    '--lesson-root', repo.root,
+    '--lesson-root', lessonRoot,
     '--expected-lesson-sha', expectedSha,
     '--json-out', jsonOut,
     '--markdown-out', markdownOut,
@@ -116,6 +116,26 @@ describe('check-part-a-pdf-readiness', () => {
       });
       expect(fs.readFileSync(result.markdownOut, 'utf8')).toContain('Verdict: `PASS`');
     } finally {
+      fs.rmSync(repo.root, { recursive: true, force: true });
+      fs.rmSync(result.outDir, { recursive: true, force: true });
+    }
+  });
+
+  test('canonicalizes an aliased lesson root before checking repository identity', () => {
+    const repo = makeLessonRepo();
+    const aliasParent = fs.mkdtempSync(path.join(os.tmpdir(), 'part-a-pdf-alias-'));
+    const alias = path.join(aliasParent, 'lesson-link');
+    fs.symlinkSync(repo.root, alias, 'junction');
+    const result = run(repo, repo.head, alias);
+    try {
+      expect({
+        status: result.status,
+        stderr: result.stderr,
+        failures: result.report && result.report.failures,
+      }).toEqual({ status: 0, stderr: '', failures: [] });
+      expect(result.report.lesson_root).toBe(fs.realpathSync.native(repo.root).replace(/\\/g, '/'));
+    } finally {
+      fs.rmSync(aliasParent, { recursive: true, force: true });
       fs.rmSync(repo.root, { recursive: true, force: true });
       fs.rmSync(result.outDir, { recursive: true, force: true });
     }

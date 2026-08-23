@@ -119,9 +119,11 @@ function inspectParagraph(root, directory, files) {
 }
 
 function buildReport(options) {
-  const lessonRoot = path.resolve(options.lessonRoot);
+  const lessonRoot = fs.realpathSync.native(path.resolve(options.lessonRoot));
   const expectedLessonSha = options.expectedLessonSha.toLowerCase();
-  const repositoryRoot = path.resolve(gitValue(lessonRoot, ['rev-parse', '--show-toplevel']));
+  const repositoryRoot = fs.realpathSync.native(
+    path.resolve(gitValue(lessonRoot, ['rev-parse', '--show-toplevel']))
+  );
   const headSha = gitValue(lessonRoot, ['rev-parse', 'HEAD']).toLowerCase();
   const originMainSha = gitValue(lessonRoot, ['rev-parse', 'origin/main']).toLowerCase();
   const status = git(lessonRoot, ['status', '--porcelain']).trim();
