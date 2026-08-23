@@ -178,13 +178,13 @@ companion:
 ```
 
 Part A owns textbook fields, textbook asset integrity, textbook HTML render
-evidence, and publisher-print PDF evidence when that profile is in scope. Part B
+evidence, normal paragraph PDF evidence, and publisher-print chapter/book
+handoff evidence when that profile is in scope. Part B
 owns companion review fields for the companion/student-web route: HTML/game
 companions, PPTX presentation route, web visual variants, and route/affordance
 evidence. DOCX companion exports are opt-in
-Office/legacy profile work. PDF output is not a normal companion-lane artifact;
-it belongs to Part A / publisher-print unless a future human decision creates a
-separate PDF lane.
+Office/legacy profile work. PDF output and `build_pdf.py` are not normal
+companion-lane artifacts; they belong to Part A textbook production.
 
 Detailed component inventories, inspectie mappings, freshness fields, or
 verantwoording notes may be added inside the lane-owned block that produced the
@@ -419,8 +419,9 @@ begeleide inoefening → basis → midden → verrijking]
 > `BUILD-PARAGRAPH.md` and `scripts/validate-paragraph.js` as the authoritative
 > profile-aware contract. The default Part B profile is `student-web` with a
 > 14-file validation baseline; `office` and `legacy-full` add 13 opt-in DOCX
-> files for a 27-file export contract; `publisher-print` is the separate Part
-> A PDF handoff. Passing the baseline does not prove the wider
+> files for a 27-file export contract. Paragraph PDFs and `build_pdf.py` are
+> normal Part A human-review outputs; `publisher-print` is the later Part A
+> chapter/book handoff profile. Passing the Part B baseline does not prove the wider
 > `Start -> Leer -> Check -> Oefen -> Exit ticket` product route, advisory
 > short check, or separate target-equivalent exit ticket complete. The older
 > DOCX-heavy sequence below is historical guidance for Office-style companion
@@ -432,8 +433,8 @@ Per paragraph:
       Check last_verified date on references/external/inspectie-standaarden.md
       Apply cascading rules (< 3 mo: proceed; 3-9 mo: quick check; > 9 mo: thorough review)
  1. Extract leerdoelen from opgaven
- 2. Build/update Part A textbook source, review, assets, and publisher-print
-    evidence when that profile is in scope
+ 2. Build/update Part A textbook source, review, assets, paragraph PDF
+    evidence, and publisher-print handoff evidence when that profile is in scope
  3. Build/update Part B companion/student-web route, HTML/game surfaces, PPTX
     presentation route, and web visual variants when companion work is in scope
  4. Run the lane-appropriate review file:

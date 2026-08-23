@@ -1,12 +1,17 @@
 ---
 name: econ-explainer-docs
-description: "Complete recipe for creating 'uitleg voorkennis' and 'uitleg vaardigheden' Word documents for economics education. Covers content architecture, section structure, domain assignment, content writing guidelines, and quality standards. Use this skill whenever building explainer documents for any paragraph. Always use together with econ-word-templates (for components) and economic-graph (for any embedded visuals)."
-pipeline: "Part B producer"
+description: "Office/legacy profile recipe for creating 'uitleg voorkennis' and 'uitleg vaardigheden' Word documents (.docx) for economics education. Covers content architecture, section structure, domain assignment, content writing guidelines, and quality standards for Word exports only. Use this skill only when office/legacy-full output or editable Word handouts are explicitly requested. For normal Part B companion/student-web HTML work, use econ-companion-artifacts and BUILD-PARAGRAPH native HTML guidance instead. Always use together with econ-word-templates (for DOCX components) and economic-graph (for any embedded visuals)."
+pipeline: "Part B producer (Office/legacy DOCX profile)"
 ---
 
 # Explainer Word Documents Skill
 
-Recipe for building two types of explainer documents per paragraph:
+This is an Office/legacy DOCX-profile skill. It is not the default Part B
+companion/student-web authoring path. Normal student-web explainer surfaces are
+native HTML companions governed by `econ-companion-artifacts` and
+`BUILD-PARAGRAPH.md`.
+
+Recipe for building two types of explainer Word exports per paragraph:
 - **Uitleg voorkennis** — what students must already know before starting
 - **Uitleg vaardigheden** — what skills students will learn in this paragraph
 
@@ -26,9 +31,14 @@ These documents make the classroom presentation self-readable. They add the cont
 ## PART 1: WHEN TO USE THIS SKILL
 
 Trigger when:
-- Creating `uitleg voorkennis` or `uitleg vaardigheden` for any paragraph
-- Reviewing or improving existing explainer documents
-- Building batch explainer documents for a chapter
+- Creating Office/legacy `uitleg voorkennis` or `uitleg vaardigheden` DOCX
+  exports for any paragraph
+- Reviewing or improving existing explainer Word documents
+- Building batch explainer Word documents for a chapter
+
+Do not use this skill merely because normal `student-web` HTML explainers are
+in scope. For those, use native HTML guidance in `econ-companion-artifacts` and
+`BUILD-PARAGRAPH.md`.
 
 Output files per paragraph:
 - `X.Y.Z [Naam] – uitleg voorkennis.docx`

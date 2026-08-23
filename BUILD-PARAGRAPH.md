@@ -10,8 +10,9 @@ Read `docs/workflows/paragraph-lane-vocabulary.md` before using lane terms.
 There are exactly two operational lanes:
 
 - **Part A / textbook lane** owns textbook source, textbook HTML renders, core
-  textbook visuals, textbook review, `partA:` quality-ref values, handoff, and
-  publisher-print PDFs when explicitly requested.
+  textbook visuals, `build_pdf.py`, paragraph PDFs for human review, textbook
+  review, `partA:` quality-ref values, and handoff. Publisher-print chapter/book
+  handoff also stays in this lane.
 - **Part B / companion lane / student-web companion lane** owns companion route
   files, companion HTML/games, PPTX, web visual variants, shared companion data,
   `_paragraph-plan.md`, companion review, and `companion:` quality-ref values.
@@ -27,7 +28,7 @@ This document covers two pipelines that can run independently or together.
 
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
-| **Part A only** | Textbook source, textbook HTML renders, core visuals; publisher PDFs only in `--profile publisher-print` | Building source content or the publisher/print packet |
+| **Part A only** | Textbook source, textbook HTML renders, core visuals, `build_pdf.py`, and paragraph PDFs | Building source content, the human-review packet, or a publisher/print handoff |
 | **Part B only** | Companion/student-web route. Default deliverables are companion HTML/games plus presentation HTML/PPTX; DOCX exports are opt-in | Adding companions to a 4veco-lessen paragraph when textbook content exists |
 | **Both (A → B)** | Complete paragraph: textbook + companions | Integration verification or explicitly authorized complete bundle |
 
@@ -45,10 +46,14 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 
 | Profile | Purpose | Default? |
 |---------|---------|----------|
-| `student-web` | Baseline web-delivery validation profile. In Part A mode it checks textbook source plus textbook HTML renders. In Part B mode it checks the 14-file companion baseline plus plans, reviews, data, and assets. Passing this profile does not by itself prove the full product route or end-state maturity. No DOCX or textbook PDF requirement. | Yes for direct `validate-paragraph.js` runs |
+| `student-web` | Baseline validation profile. In Part A mode it checks textbook source, textbook HTML renders, `build_pdf.py`, and paragraph PDFs for human review. In Part B mode it checks the 14-file companion baseline plus plans, reviews, data, and assets. Passing this profile does not by itself prove the full product route or end-state maturity. No Part B DOCX requirement. | Yes for direct `validate-paragraph.js` runs |
 | `legacy-full` | Previous 27-file Part B contract, including all DOCX files, for regression checks on older output. | No |
 | `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
-| `publisher-print` | Textbook PDF packet for publisher/print handoff. This is a separate careful pipeline, not the baseline web-delivery profile. | `check-book.js` uses this for Part A book health |
+| `publisher-print` | Part A publisher/book print handoff and book-health profile. Paragraph PDFs are already normal Part A human-review outputs; this profile keeps the chapter/book print gate explicit. | `check-book.js` uses this for Part A book health |
+
+For the older 27-file contract, use the opt-in Part B
+[legacy-full companion profile](docs/workflows/legacy-full-companion-profile.md).
+It does not create a third lane and does not prove the complete product route.
 
 > **Before you start:** Read the strategic product vision at
 > `../4veco-lessen/specifications/product-vision.md`, the operational
@@ -148,11 +153,12 @@ node scripts/validate-paragraph.js --mode complete "<paragraph folder>" # aggreg
 
 # PART A: TEXTBOOK BUILD (markdown -> graphs -> textbook HTML / print outputs)
 
-Produces the textbook paragraph: theory, exercises, answer models, and graphs.
-The baseline `student-web` validator profile requires the markdown source and
-textbook HTML renders for Part A. The three PDFs (`paragraaf.pdf`,
-`opgaven.pdf`, `antwoorden.pdf`) are publisher-print outputs and are checked by
-`--profile publisher-print`, not by the baseline profile.
+Produces the textbook paragraph: theory, exercises, answer models, graphs,
+textbook HTML renders, and paragraph PDFs. The baseline `student-web` validator
+profile requires the markdown source, textbook HTML renders, `build_pdf.py`,
+and the type-specific PDF packet for Part A human review. `publisher-print`
+remains a Part A chapter/book print-handoff profile; it is not the only
+paragraph PDF gate.
 
 **Skills:** `econ-textbook-paragraph`, `econ-exercise-builder`, `economic-graph`, `econ-pdf-builder`
 
@@ -235,7 +241,7 @@ Follow `econ-textbook-paragraph` skill exactly:
 For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
 1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
 2. Write `X.Y.Z Gemengde opgaven – antwoorden.md` — answer model
-3. No paragraaf.md — consolidation has no theory section; its markdown and textbook HTML renders are required in Part A baseline validation, while PDFs are publisher-print outputs
+3. No paragraaf.md — consolidation has no theory section; its opgaven/antwoorden markdown, textbook HTML renders, `build_pdf.py`, and PDFs are required in Part A baseline validation
 
 ## A3: Build graphs
 
@@ -247,7 +253,7 @@ Follow `economic-graph` skill:
 4. Save both in `_assets/` with naming: `X.Y.Z_{type}_{number}.{svg|png}`
    - Types: `fig` (theory), `ex` (exercises), `we` (worked example)
 
-## A4: Build publisher PDFs
+## A4: Build Part A paragraph PDFs
 
 1. Create `build_pdf.py` (adapt from existing template — `ASSET_DIR="_assets"`, strip Pandoc defaults, paragraph name in footer)
 2. Run to generate: paragraaf.pdf, opgaven.pdf, antwoorden.pdf (or opgaven.pdf + antwoorden.pdf for consolidation)
@@ -261,7 +267,7 @@ Before any review, verify:
 2. Every `.svg` has a matching `.png`
 3. Asset naming follows `X.Y.Z_{type}_{number}.{ext}`
 4. No orphaned assets (files in `_assets/` not referenced in any .md)
-5. In `publisher-print` profile, all PDFs exist and are >10KB
+5. All required Part A PDFs exist and are >10KB
 
 **If anything fails → go back and fix it. Cannot proceed with missing assets.**
 
@@ -755,7 +761,7 @@ legacy-full run where `.docx` sources are deliberately part of the product.
 
 ### Phase 6a: Companion visual review gate
 
-Author/regenerate every in-scope student-facing companion against `skills/econ-companion-artifacts.md`. Review the 14-file `student-web` validation baseline, the actual `Start -> Leer -> Check -> Oefen -> Exit ticket` route (including advisory short check and separate target-equivalent exit ticket), and the 13 additional Office/legacy DOCX files only when that export profile is explicitly selected. Differentiated DOCX handouts belong to the Office/legacy set, not the default baseline. PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+Author/regenerate every in-scope student-facing companion against `skills/econ-companion-artifacts.md`. Review the 14-file `student-web` validation baseline, the actual `Start -> Leer -> Check -> Oefen -> Exit ticket` route (including advisory short check and separate target-equivalent exit ticket), and the 13 additional Office/legacy DOCX files only when that export profile is explicitly selected. Differentiated DOCX handouts belong to the Office/legacy set, not the default baseline. Paragraph PDFs and `build_pdf.py` are normal Part A textbook outputs for human review; `publisher-print` is the later Part A chapter/book handoff profile. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
 
 Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and native or converted companion pages can be inspected as rendered output:
 
@@ -899,12 +905,14 @@ additional Office/legacy step only.
 
 `validate-paragraph.js` should enforce the flat-layout contract in modes:
 
-Validation combines lane mode and profile. Use `--mode part-b --profile student-web`
-for normal paragraph companion/student-web work, `office` or `legacy-full` only
-when Word exports are deliberately part of the requested product, and
-`publisher-print` for the separate Part A PDF handoff.
+Validation combines lane mode and profile. Use `--mode part-a --profile
+student-web` for normal Part A textbook work, including the paragraph PDF
+human-review packet. Use `--mode part-b --profile student-web` for normal
+paragraph companion/student-web work, and `office` or `legacy-full` only when
+Word exports are deliberately part of the requested product. Use
+`publisher-print` for the Part A chapter/book print handoff or book-health gate.
 
-- **Part A/textbook mode**: validates textbook files at the paragraph root. In `student-web` and `office` profiles, theory paragraphs require paragraaf/opgaven/antwoorden markdown and textbook HTML renders; consolidation paragraphs require opgaven/antwoorden markdown and textbook HTML renders. PDFs and `build_pdf.py` are required only under `legacy-full` or `publisher-print`. This remains Part A even though the historical profile name is `student-web`.
+- **Part A/textbook mode**: validates textbook files at the paragraph root. Every profile requires `build_pdf.py` and the type-specific paragraph PDFs for human review. In `student-web` and `office` profiles, theory paragraphs also require paragraaf/opgaven/antwoorden markdown plus textbook HTML renders; consolidation paragraphs require opgaven/antwoorden markdown plus textbook HTML renders. This remains Part A even though the historical profile name is `student-web`.
 - **Part B/companion mode**: validates the profile-specific Part B root-file baseline listed in B1: 14 for default `student-web`, or those same 14 plus 13 DOCX files (27 total) for explicit `office`/`legacy-full`, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders. This validator result does not replace rendered proof of the full product route, advisory short check, or separate target-equivalent exit ticket.
 - **Complete mode**: validates both Part A and Part B.
 
@@ -930,6 +938,8 @@ Use `complete` only for integration verification after both lanes exist or when
 a complete bundle was explicitly authorized.
 
 This checks:
+- Part A validation requires `build_pdf.py` and the complete type-specific
+  paragraph PDF packet for human review
 - All 14 Part B `student-web` validation-baseline files exist at the paragraph root (flat layout), including `index.html`; route completeness still requires separate rendered/product review
 - Office/legacy `.docx` files are valid zip archives only when the selected profile requires them; the 27-file contract applies only to explicit `office`/`legacy-full`
 - Presentation > 100KB (has graphs)

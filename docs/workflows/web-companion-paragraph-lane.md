@@ -7,9 +7,8 @@ aliases for the same lane; do not treat them as separate lanes. See
 Purpose: build only the Part B companion/student-web route after textbook
 content exists. This lane produces the student-facing route, games, rich HTML
 companions, presentation route, web visual variants, and companion review.
-The normal companion line is web output plus PPTX. PDF output belongs to
-Part A / publisher-print unless a future human decision creates a separate PDF
-lane.
+The normal companion line is web output plus PPTX. Paragraph PDF output and
+`build_pdf.py` belong to Part A textbook production, not the companion lane.
 
 The listed root outputs form the 14-file `student-web` validator baseline.
 They are not, by themselves, the full product end state. The current route is
@@ -18,7 +17,10 @@ and a separate target-equivalent exit ticket. Treat missing route surfaces as
 named blockers, follow-ups, or explicit human waivers. `office` and
 `legacy-full` add 13 DOCX files to the baseline for a 27-file export contract;
 differentiated basis/midden/verrijking handouts belong to that opt-in export
-set.
+set. Use the opt-in Part B
+[legacy-full companion profile](legacy-full-companion-profile.md) for its exact
+contract. It does not create a third lane and does not prove the complete
+product route.
 
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary companion production.

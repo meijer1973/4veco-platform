@@ -36,8 +36,8 @@ differentiated basis/midden/verrijking exercise handouts. Review those exports
 only when that profile is explicitly in scope; they are not default
 `student-web` files.
 
-PDF output belongs to Part A / publisher-print unless a future human decision
-creates a separate PDF lane.
+Paragraph PDF output and `build_pdf.py` belong to Part A textbook production,
+not the Part B companion lane.
 
 This skill encodes the platform-wide standard. Companion-specific builders (`econ-explainer-docs` for voorkennis/vaardigheden DOCX, `econ-exercise-builder` for fading-exercise handouts, `econ-pptx-templates` for slide companions, etc.) inherit these rules; if a builder skill conflicts with this skill, this skill wins for student-facing rules and the builder skill should be updated.
 

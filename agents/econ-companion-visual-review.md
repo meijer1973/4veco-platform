@@ -38,9 +38,10 @@ complete.
 
 When an `office` or `legacy-full` profile is explicitly in scope, review the 13
 additional DOCX files, including differentiated basis/midden/verrijking
-handouts. Those exports are not default `student-web` baseline files. PDF
-output belongs to Part A / publisher-print unless a future human decision
-creates a separate PDF lane.
+handouts. Those exports are not default `student-web` baseline files. Paragraph
+PDF output and `build_pdf.py` are normal Part A textbook outputs for human
+review. `publisher-print` remains the Part A chapter/book handoff profile; it
+does not create another lane and is not the only PDF gate.
 
 The agent may also inspect paragraph markdown, Part A review evidence, paragraph plan, unit registry, source generator, CSS, JavaScript, and asset files to determine whether rendered output matches source intent.
 

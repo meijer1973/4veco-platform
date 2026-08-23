@@ -114,7 +114,11 @@ function isGeneratedIndexPath(filePath) {
 
 function isReviewEvidencePath(filePath) {
   const p = normalizedLower(filePath);
-  if (p.startsWith('reports/sprints/') || p.startsWith('archive/sprints/')) return true;
+  if (
+    (p.startsWith('reports/review-gates/') && /\.(md|json|txt)$/.test(p))
+    || p.startsWith('reports/sprints/')
+    || p.startsWith('archive/sprints/')
+  ) return true;
   if (/\/evidence\/.+\.(md|json|txt)$/i.test(p)) return true;
   if (/(^|\/)\d+\.\d+\.\d+-quality-ref\.ya?ml$/.test(p)) return true;
   return false;

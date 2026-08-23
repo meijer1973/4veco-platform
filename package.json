@@ -24,6 +24,7 @@
     "check:book": "node scripts/check-book.js",
     "check:scope-language": "node build-scripts/sprints/check-scope-language.js --active",
     "check:paragraph-lane-scope": "node build-scripts/workflows/check-paragraph-lane-scope.js",
+    "check:paragraph-workflow-wording": "node build-scripts/workflows/check-paragraph-workflow-wording.js",
     "check:agent-index-freshness": "node build-scripts/reports/check-agent-index-freshness.js",
     "check:exercise-workflow-currentness": "node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js",
     "check:exercise-authority-hygiene": "node build-scripts/sprints/check-exercise-authority-hygiene.js",
