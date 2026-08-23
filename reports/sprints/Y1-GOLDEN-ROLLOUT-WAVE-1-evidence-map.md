@@ -13,7 +13,7 @@ Generated: 2026-08-23
 | Coherent current roadmap | Golden and reference-team roadmaps | Roadmap index checker and Y1 semantic checker | Authority-boundary review |
 | Repository navigation | Three root maps, URL/index/dashboard outputs | Agent-index, URL-index, dashboard semantic checks | Repository/testing review |
 | PR governance | L4 packet and live PR evidence | Branch protection, CI, Rawls, PR Readiness Reviewer | Human owner review |
-| PR #205 supersession | GitHub PR state | Replacement link/comment URL and closed state | Lead/human packet |
+| PR #205 supersession | GitHub PR state | Replacement PR #214; [supersession comment](https://github.com/meijer1973/4veco-platform/pull/205#issuecomment-5387272832); closed state | Lead/human packet |
 
 The refreshed rendered claim remains limited to `1.1.1` through `1.1.3`.
 `1.1.4` is same-copy hygiene only.

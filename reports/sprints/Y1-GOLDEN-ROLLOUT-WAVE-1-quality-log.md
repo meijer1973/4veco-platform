@@ -6,7 +6,7 @@ Generated: 2026-08-23
 |---|---|---|---|
 | Old guard inspected worktree cleanliness instead of committed PR changes. | core_spec_failure | replaced | Exact event base/head `git diff --name-status -M` checker and real-Git negative tests. |
 | Old roadmap described completed prerequisites as future work. | core_spec_failure | corrected | Golden roadmap v1.3 and reference-team roadmap v3.57. |
-| Old packet was null-bound and classified L3 instead of L4. | core_spec_failure | corrected_pending_pr_binding | Packet is L4/high-authority, cross-binds its PR number/URL and rendered payload, and will bind the replacement PR. |
+| Old packet was null-bound and classified L3 instead of L4. | core_spec_failure | corrected | Packet is L4/high-authority and cross-binds replacement PR #214, its URL, and the reviewed rendered payload. |
 | Old bundle omitted maps, indexes, URL index, and dashboard closure. | core_spec_failure | corrected | Root maps and generated indexes, URL index, and dashboard are refreshed in the deterministic evidence tail. |
 | No dedicated negative tests existed. | core_spec_failure | corrected | Dedicated 23-test Jest suite covers state, route, authority, scope, event, roadmap, wiring, packet, map, and Git failures. |
 | Full checker would enforce the renewal evidence tail on unrelated future CI. | core_spec_failure | corrected | Full-mode auto-scope regression proves unrelated future work exits cleanly; renewal scope still runs the full contract. |

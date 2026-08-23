@@ -2,8 +2,8 @@
 
 Generated: 2026-08-23
 
-Status: implementation complete with subagent `OK_TO_CLOSE`; pending replacement
-PR binding, exact-head readiness, and human review.
+Status: implementation complete with subagent `OK_TO_CLOSE`; replacement PR
+bound and pending exact-head readiness and human review.
 
 ## Plan reference
 
@@ -40,8 +40,12 @@ target-readiness flag changes.
   triggers the renewal allowlist and deterministic evidence-tail restriction.
 - Final implementation lead review: `OK_TO_CLOSE`, normalized to
   `PASS WITH FLAGS` for repository metadata. No core requirement remains open.
-- Replacement PR and exact-head evidence: pending.
-- PR #205 supersession: pending replacement PR creation.
+- Replacement PR: platform PR #214, bound to reviewed payload
+  `8b94538f805d8750469803280d9e935bd9a29b64`.
+- PR #205 supersession: closed with an explicit replacement link; old head
+  `571d435a172240524ed96394a41682ef003bfcad` remains unauthorized.
+- Exact-head CI, branch-protection, lead, and PR Readiness Reviewer evidence:
+  pending the final remote evidence head.
 
 ## Acceptance test results
 
@@ -81,11 +85,10 @@ adaptive routing, PV, summative use, broad product use, or student/product use.
 
 ## Open follow-ups
 
-1. Finalize proof, packet, command log, indexes, dashboard, and validation.
-2. Open the replacement draft PR, bind its substantive payload, and supersede
-   PR #205.
-3. Run exact-head CI, branch protection, Rawls, and PR Readiness Reviewer, then
-   present the L4 packet for human review.
+1. Run exact-head CI, live branch protection, lead review, and the PR Readiness
+   Reviewer for platform PR #214.
+2. Present the L4 exact-head packet for human review; do not merge without
+   explicit owner authorization tied to that head SHA.
 
 ## Rollback instructions
 

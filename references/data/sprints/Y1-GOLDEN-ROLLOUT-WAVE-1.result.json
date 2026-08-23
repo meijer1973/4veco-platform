@@ -5,13 +5,13 @@
   "status": "completed",
   "completed": "2026-08-23",
   "completed_on": "2026-08-23",
-  "verdict": "READY_FOR_HUMAN_REVIEW_PENDING_PR_PROOF",
+  "verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
   "result_status": "completed_pending_human_review",
   "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
   "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
   "result": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
   "diff_summary": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
-  "final_verdict": "READY_FOR_HUMAN_REVIEW_PENDING_PR_PROOF",
+  "final_verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
   "protected_reference_data_changed": false,
   "generated_output_changed": false,
   "implementation_changed": true,
@@ -150,11 +150,13 @@
   "supersession": {
     "old_pr": 205,
     "old_head_sha": "571d435a172240524ed96394a41682ef003bfcad",
-    "replacement_pr": null,
-    "old_pr_closed": false
+    "replacement_pr": 214,
+    "replacement_pr_url": "https://github.com/meijer1973/4veco-platform/pull/214",
+    "supersession_comment_url": "https://github.com/meijer1973/4veco-platform/pull/205#issuecomment-5387272832",
+    "old_pr_closed": true
   },
   "authorized_next": [
-    "Open and bind a replacement draft PR, then supersede PR #205.",
+    "Complete exact-head CI, live branch-protection, lead, and PR Readiness Reviewer proof for replacement PR #214.",
     "Return the exact-head L4 packet for human review; do not merge without owner authorization."
   ]
 }
