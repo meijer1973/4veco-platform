@@ -6,8 +6,8 @@ Purpose: lightweight orientation for agents browsing through GitHub. This invent
 
 Root: `4veco-platform`
 Source branch: `codex/part-a-pdf-human-review-workflow-20260702`
-Source commit: `ff5062038caa6314932dc29eef80efa70464918f`
-Files indexed: 7184
+Source commit: `2068c281d877d3f5d05d9f89231c6c360a08a85e`
+Files indexed: 7186
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 705
+Count: 706
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -827,6 +827,7 @@ Count: 705
 - scripts/check-course-target-exercises-v5.js
 - scripts/check-links.js
 - scripts/deploy.js
+- scripts/lib/paragraph-types.js
 - scripts/post-push-hook.js
 - scripts/pre-push-hook.js
 - scripts/qa-presentation-v2-html.js
@@ -2575,7 +2576,7 @@ Count: 1003
 
 ## reports
 
-Count: 4515
+Count: 4516
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4492,6 +4493,7 @@ Count: 4515
 - reports/review-gates/PR200-RENEWAL-20260823/plan-review-round3.md
 - reports/review-gates/PR200-RENEWAL-20260823/plan-review-round4.md
 - reports/review-gates/PR200-RENEWAL-20260823/plan.md
+- reports/review-gates/PR200-RENEWAL-20260823/work-review-round1.md
 - reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json
 - reports/review-gates/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
