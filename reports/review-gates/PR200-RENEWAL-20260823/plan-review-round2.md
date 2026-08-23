@@ -26,4 +26,3 @@ Sub-agent lead reviewer: `01a02e30-612d-7722-a8a2-42a9bb1f12ad`
 - Added fixed lesson root/ref/timestamp inputs and explicit freshness and
   idempotence checks.
 - Added a tested `check-part-a-pdf-readiness.js` contract and exact invocation.
-

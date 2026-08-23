@@ -20,4 +20,3 @@ The reviewer confirmed that all prior findings are closed. The plan now:
 - proves deterministic idempotence before committing `G`;
 - checks freshness and generated-path scope on committed `G`; and
 - includes the fail-closed lesson audit test in focused validation.
-

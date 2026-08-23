@@ -27,4 +27,3 @@ Sub-agent lead reviewer: `01a02e30-612d-7722-a8a2-42a9bb1f12ad`
 - The source `S` / generated `G` sequence now stages, reruns, compares, commits,
   allowlist-checks, and validates freshness in executable order.
 - The focused Jest command now includes the lesson PDF readiness checker test.
-

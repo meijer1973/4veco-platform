@@ -4,6 +4,8 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const { PARA_TYPES } = require('../../scripts/lib/paragraph-types');
+const { PARAGRAPH_TYPES } = require('./check-part-a-pdf-readiness');
 
 const checker = path.resolve(__dirname, 'check-part-a-pdf-readiness.js');
 const DASH = '\u2013';
@@ -49,6 +51,12 @@ function makeLessonRepo(options = {}) {
   addParagraph(root, 'Boek 1 - Fixture/1.1 Hoofdstuk/1.1.4 Proeftoets', {
     roles: ['toets', 'antwoorden', 'toetsmatrijs'],
   });
+  addParagraph(root, 'Boek 1 - Fixture/1.1 Hoofdstuk/1.1.5 Examenvaardigheden', {
+    roles: ['opgaven', 'antwoorden'],
+  });
+  addParagraph(root, 'Boek 1 - Fixture/1.1 Hoofdstuk/1.1.6 Integratieoefening', {
+    roles: ['opgaven', 'antwoorden'],
+  });
   addParagraph(root, 'archive/1.1.9 Archived', { missingBuildScript: true });
   git(root, ['add', '.']);
   git(root, ['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'fixture']);
@@ -78,6 +86,13 @@ function run(repo, expectedSha = repo.head) {
 }
 
 describe('check-part-a-pdf-readiness', () => {
+  test('uses the validator packet contract for all six paragraph types', () => {
+    expect(Object.fromEntries(PARAGRAPH_TYPES.map(({ type, required }) => [type, required]))).toEqual(
+      Object.fromEntries(Object.entries(PARA_TYPES).map(([type, spec]) => [type, spec.requiredPdf]))
+    );
+    expect(Object.keys(PARA_TYPES)).toHaveLength(6);
+  });
+
   test('passes and binds evidence to a clean lesson origin/main', () => {
     const repo = makeLessonRepo();
     const result = run(repo);
@@ -87,14 +102,14 @@ describe('check-part-a-pdf-readiness', () => {
       expect(result.report.observed_head_sha).toBe(repo.head);
       expect(result.report.observed_origin_main_sha).toBe(repo.head);
       expect(result.report.summary).toEqual({
-        paragraphs_checked: 4,
-        passed: 4,
+        paragraphs_checked: 6,
+        passed: 6,
         failed: 0,
         by_type: {
           consolidation: 1,
           'testprep-summary': 1,
-          'testprep-examskills': 0,
-          'testprep-integration': 0,
+          'testprep-examskills': 1,
+          'testprep-integration': 1,
           'testprep-practicetest': 1,
           theory: 1,
         },

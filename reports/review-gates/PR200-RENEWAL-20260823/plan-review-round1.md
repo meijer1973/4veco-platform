@@ -32,4 +32,3 @@ Sub-agent lead reviewer: `01a02e30-612d-7722-a8a2-42a9bb1f12ad`
 - Added the nine-path conflict inventory and resolution log.
 - Expanded focused tests, generated-output idempotence checks, and finalization
   freshness timing.
-

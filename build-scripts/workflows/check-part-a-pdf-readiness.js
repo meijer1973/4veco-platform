@@ -4,19 +4,16 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const { PARA_TYPES, classifyParagraph } = require('../../scripts/lib/paragraph-types');
 
 const MIN_PDF_BYTES = 10000;
 const ACTIVE_BOOK_PATTERN = /^Boek \d+ - /;
 const PARAGRAPH_PATTERN = /^\d+\.\d+\.\d+ /;
 const TEXTBOOK_MARKDOWN_PATTERN = /(?:paragraaf|opgaven|antwoorden|samenvatting|toets|toetsmatrijs)\.md$/i;
-const PARAGRAPH_TYPES = Object.freeze([
-  { type: 'consolidation', pattern: /gemengde\s+opgaven/i, required: ['opgaven', 'antwoorden'] },
-  { type: 'testprep-summary', pattern: /actieve\s+samenvatting/i, required: ['samenvatting', 'antwoorden'] },
-  { type: 'testprep-examskills', pattern: /examenvaardigheden/i, required: ['opgaven', 'antwoorden'] },
-  { type: 'testprep-integration', pattern: /integratieoefening/i, required: ['opgaven', 'antwoorden'] },
-  { type: 'testprep-practicetest', pattern: /proeftoets/i, required: ['toets', 'antwoorden', 'toetsmatrijs'] },
-  { type: 'theory', pattern: null, required: ['paragraaf', 'opgaven', 'antwoorden'] },
-]);
+const PARAGRAPH_TYPES = Object.freeze(Object.entries(PARA_TYPES).map(([type, spec]) => Object.freeze({
+  type,
+  required: spec.requiredPdf,
+})));
 
 function parseArgs(argv) {
   const options = {};
@@ -80,7 +77,8 @@ function fileSizeAtRef(root, ref, file) {
 
 function paragraphType(directory) {
   const name = path.posix.basename(directory);
-  return PARAGRAPH_TYPES.find((entry) => !entry.pattern || entry.pattern.test(name));
+  const type = classifyParagraph(name);
+  return PARAGRAPH_TYPES.find((entry) => entry.type === type);
 }
 
 function inspectParagraph(root, directory, files) {

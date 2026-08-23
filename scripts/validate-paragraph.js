@@ -22,6 +22,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { PARA_TYPES, classifyParagraph } = require('./lib/paragraph-types');
 
 const DASH = '\u2013';
 const VALID_MODES = new Set(['auto', 'part-a', 'part-b', 'complete']);
@@ -133,52 +134,6 @@ function isDocxLike(name) {
   if (!fs.existsSync(fullPath)) return false;
   const buf = fs.readFileSync(fullPath);
   return buf.length >= 100 && buf[0] === 0x50 && buf[1] === 0x4B;
-}
-
-const PARA_TYPES = {
-  consolidation: {
-    pattern: /gemengde\s+opgaven/i,
-    requiredMd: ['opgaven', 'antwoorden'],
-    requiredPdf: ['opgaven', 'antwoorden'],
-    label: 'consolidation',
-  },
-  'testprep-summary': {
-    pattern: /actieve\s+samenvatting/i,
-    requiredMd: ['samenvatting', 'antwoorden'],
-    requiredPdf: ['samenvatting', 'antwoorden'],
-    label: 'test prep summary',
-  },
-  'testprep-examskills': {
-    pattern: /examenvaardigheden/i,
-    requiredMd: ['opgaven', 'antwoorden'],
-    requiredPdf: ['opgaven', 'antwoorden'],
-    label: 'test prep exam skills',
-  },
-  'testprep-integration': {
-    pattern: /integratieoefening/i,
-    requiredMd: ['opgaven', 'antwoorden'],
-    requiredPdf: ['opgaven', 'antwoorden'],
-    label: 'test prep integration',
-  },
-  'testprep-practicetest': {
-    pattern: /proeftoets/i,
-    requiredMd: ['toets', 'antwoorden', 'toetsmatrijs'],
-    requiredPdf: ['toets', 'antwoorden', 'toetsmatrijs'],
-    label: 'test prep practice test',
-  },
-  theory: {
-    pattern: null,
-    requiredMd: ['paragraaf', 'opgaven', 'antwoorden'],
-    requiredPdf: ['paragraaf', 'opgaven', 'antwoorden'],
-    label: 'theory',
-  },
-};
-
-function classifyParagraph(name) {
-  for (const [type, spec] of Object.entries(PARA_TYPES)) {
-    if (spec.pattern && spec.pattern.test(name)) return type;
-  }
-  return 'theory';
 }
 
 function studentWebPartBFiles() {
