@@ -6,6 +6,13 @@
   "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
   "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
   "human_review_required": true,
+  "gate_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "review_packet": "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+  "valid_gate_statuses": [
+    "READY_FOR_HUMAN_REVIEW",
+    "REVISE",
+    "REJECT"
+  ],
   "lead_review_required": true,
   "lead_review_schema_version": 3,
   "lead_review_phase": "before_human_gate",
