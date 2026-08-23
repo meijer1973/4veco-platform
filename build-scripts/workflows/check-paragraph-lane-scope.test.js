@@ -52,6 +52,7 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('Boek 1/shared/reasoning/1.1.1.js').category).toBe('partB_companion');
     expect(classifyPath('build-scripts/workflows/check-paragraph-lane-scope.js').category).toBe('shared_platform');
     expect(classifyPath('RESEARCH_AGENT_MAP.md').category).toBe('generated_indexes');
+    expect(classifyPath('reports/review-gates/PR200/plan.md').category).toBe('review_evidence');
   });
 
   test('accepts wider-route short-check and exit-ticket outputs in the companion lane', () => {
