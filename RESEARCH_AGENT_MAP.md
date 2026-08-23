@@ -86,6 +86,12 @@ Access rules:
 
 Human-readable:
 
+For paragraph work, `check-part-a-pdf-readiness.js` and
+`scripts/lib/paragraph-types.js` are Part A surfaces,
+`legacy-full-companion-profile.md` is an opt-in Part B profile, and
+`check-paragraph-workflow-wording.js` is the shared two-lane guardrail. These
+names do not create additional operational lanes.
+
 - `RESEARCH_AGENT_PROMPT.md`
 - `RESEARCH_AGENT_MAP.md`
 - `RESEARCH_AGENT_PROMPT_REFERENCES.md`
@@ -97,9 +103,13 @@ Human-readable:
 - `docs/workflows/paragraph-lane-vocabulary.md`
 - `docs/workflows/textbook-paragraph-lane.md`
 - `docs/workflows/web-companion-paragraph-lane.md`
+- `docs/workflows/legacy-full-companion-profile.md`
 - `docs/workflows/paragraph-quality-ref-schema-v2.md`
 - `build-scripts/templates/textbook-to-companion-handoff.md`
+- `build-scripts/workflows/check-part-a-pdf-readiness.js`
+- `build-scripts/workflows/check-paragraph-workflow-wording.js`
 - `build-scripts/workflows/check-paragraph-lane-scope.js`
+- `scripts/lib/paragraph-types.js`
 - `build-scripts/README.md`
 - `agents/README.md`
 - `agents/lead-reviewer-agent.md`
@@ -169,9 +179,13 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-lane-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/textbook-paragraph-lane.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/web-companion-paragraph-lane.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/legacy-full-companion-profile.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-quality-ref-schema-v2.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/templates/textbook-to-companion-handoff.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-pdf-readiness.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-workflow-wording.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-lane-scope.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/lib/paragraph-types.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md
@@ -243,9 +257,13 @@ Use these anchors before free-form browsing.
   "paragraph_lane_vocabulary": "docs/workflows/paragraph-lane-vocabulary.md",
   "textbook_paragraph_lane": "docs/workflows/textbook-paragraph-lane.md",
   "web_companion_paragraph_lane": "docs/workflows/web-companion-paragraph-lane.md",
+  "legacy_full_companion_profile": "docs/workflows/legacy-full-companion-profile.md",
   "paragraph_quality_ref_schema": "docs/workflows/paragraph-quality-ref-schema-v2.md",
   "textbook_to_companion_handoff_template": "build-scripts/templates/textbook-to-companion-handoff.md",
+  "part_a_pdf_readiness_checker": "build-scripts/workflows/check-part-a-pdf-readiness.js",
+  "paragraph_workflow_wording_checker": "build-scripts/workflows/check-paragraph-workflow-wording.js",
   "paragraph_lane_scope_checker": "build-scripts/workflows/check-paragraph-lane-scope.js",
+  "paragraph_type_contract": "scripts/lib/paragraph-types.js",
   "chapter_build_guide": "BUILD-CHAPTER.md",
   "build_script_guide": "build-scripts/README.md",
   "package_scripts": "package.json",
@@ -292,7 +310,11 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/legacy-full-companion-profile.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-pdf-readiness.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-workflow-wording.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/lib/paragraph-types.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/lead-reviewer-agent.md

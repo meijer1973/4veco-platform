@@ -89,7 +89,9 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
   review must also inspect the advisory short check and separate
   target-equivalent exit ticket.
 - `office` is opt-in when DOCX exports are explicitly requested.
-- `legacy-full` checks the older 27-file companion contract.
+- `legacy-full` checks the older 27-file companion contract. See the opt-in
+  Part B [legacy-full companion profile](../docs/workflows/legacy-full-companion-profile.md).
+  It does not create a third lane and does not prove the complete product route.
 - `publisher-print` keeps the Part A chapter/book print-handoff and book-health
   gate explicit. Paragraph PDFs are already normal Part A human-review output.
 

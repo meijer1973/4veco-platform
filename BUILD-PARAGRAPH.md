@@ -51,6 +51,10 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 | `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
 | `publisher-print` | Part A publisher/book print handoff and book-health profile. Paragraph PDFs are already normal Part A human-review outputs; this profile keeps the chapter/book print gate explicit. | `check-book.js` uses this for Part A book health |
 
+For the older 27-file contract, use the opt-in Part B
+[legacy-full companion profile](docs/workflows/legacy-full-companion-profile.md).
+It does not create a third lane and does not prove the complete product route.
+
 > **Before you start:** Read the strategic product vision at
 > `../4veco-lessen/specifications/product-vision.md`, the operational
 > product end-state specification at

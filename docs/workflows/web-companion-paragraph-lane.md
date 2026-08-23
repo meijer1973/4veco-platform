@@ -17,7 +17,10 @@ and a separate target-equivalent exit ticket. Treat missing route surfaces as
 named blockers, follow-ups, or explicit human waivers. `office` and
 `legacy-full` add 13 DOCX files to the baseline for a 27-file export contract;
 differentiated basis/midden/verrijking handouts belong to that opt-in export
-set.
+set. Use the opt-in Part B
+[legacy-full companion profile](legacy-full-companion-profile.md) for its exact
+contract. It does not create a third lane and does not prove the complete
+product route.
 
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary companion production.

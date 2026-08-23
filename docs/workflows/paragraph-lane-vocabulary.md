@@ -18,7 +18,10 @@ Use exactly two operational lane names for paragraph work.
   production lane.
 - `office`, `legacy-full`, and `publisher-print` are export/validation
   profiles, not lanes. `publisher-print` is a Part A chapter/book handoff
-  profile; paragraph PDFs are normal Part A outputs.
+  profile; paragraph PDFs are normal Part A outputs. The opt-in Part B
+  [legacy-full companion profile](legacy-full-companion-profile.md) documents
+  the older 27-file contract. It does not create a third lane and does not
+  prove the complete product route.
 
 ## Preferred Wording
 

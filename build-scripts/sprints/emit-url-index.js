@@ -73,7 +73,11 @@ function buildBody(branch) {
   lines.push(`- ${platform('BUILD-PARAGRAPH.md')}`);
   lines.push(`- ${platform('BUILD-CHAPTER.md')}`);
   lines.push(`- ${platform('docs/workflows/paragraph-lane-vocabulary.md')}`);
+  lines.push(`- ${platform('docs/workflows/legacy-full-companion-profile.md')}`);
   lines.push(`- ${platform('docs/workflows/paragraph-quality-ref-schema-v2.md')}`);
+  lines.push(`- ${platform('build-scripts/workflows/check-part-a-pdf-readiness.js')}`);
+  lines.push(`- ${platform('build-scripts/workflows/check-paragraph-workflow-wording.js')}`);
+  lines.push(`- ${platform('scripts/lib/paragraph-types.js')}`);
   lines.push(`- ${lessen('AGENTS.md')}`);
   lines.push('');
 

@@ -24,7 +24,7 @@ Path reliability:
 | How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/refresh-bundle-agent-indexes.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
 | How should active governance wording, pre-work governance freshness, and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/check-governance-freshness.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
-| How should paragraph work be split between Part A/textbook and Part B/companion/student-web production? | `docs/workflows/paragraph-lane-vocabulary.md`, `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js` |
+| How should paragraph work be split between Part A/textbook and Part B/companion/student-web production? | Start with `docs/workflows/paragraph-lane-vocabulary.md` and the two lane runbooks. Part A PDF readiness and paragraph-type rules: `build-scripts/workflows/check-part-a-pdf-readiness.js`, `scripts/lib/paragraph-types.js`. Opt-in Part B legacy profile: `docs/workflows/legacy-full-companion-profile.md`. Shared two-lane wording guardrail: `build-scripts/workflows/check-paragraph-workflow-wording.js`. Supporting surfaces: `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js`. These are surfaces within exactly two lanes, not additional lanes. |
 | How should accessibility, readability, contrast, alt text, OCR, or keyboard access be reviewed? | `agents/accessibility-agent.md` |
 | How should learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, transfer, retention, or classroom readiness be reviewed? | `agents/teacher-learning-quality-review-agent.md` |
 | How should student orientation, affordance, cognitive load, motivation, confusion risks, graph understandability, or student readiness be reviewed? | `agents/student-experience-review-agent.md` |
@@ -59,9 +59,13 @@ Useful entry points:
 - `docs/workflows/paragraph-lane-vocabulary.md`
 - `docs/workflows/textbook-paragraph-lane.md`
 - `docs/workflows/web-companion-paragraph-lane.md`
+- `docs/workflows/legacy-full-companion-profile.md`
 - `docs/workflows/paragraph-quality-ref-schema-v2.md`
 - `build-scripts/templates/textbook-to-companion-handoff.md`
+- `build-scripts/workflows/check-part-a-pdf-readiness.js`
+- `build-scripts/workflows/check-paragraph-workflow-wording.js`
 - `build-scripts/workflows/check-paragraph-lane-scope.js`
+- `scripts/lib/paragraph-types.js`
 - `build-scripts/README.md`
 - `agents/README.md`
 - `agents/lead-reviewer-agent.md`
