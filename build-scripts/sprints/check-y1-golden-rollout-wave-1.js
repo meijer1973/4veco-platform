@@ -395,7 +395,40 @@ function validateScaleProof(
     check(data?.exit_ticket?.rendered_shell === 'golden_exercise_workbench', `${paragraph} exit ticket is not Golden`);
     check(data.short_check.links_resolve === true && data.exit_ticket.links_resolve === true, `${paragraph} surface links do not resolve`);
   }
+  validateScreenshotIntegrity(proof);
   return proof;
+}
+
+function pngDimensions(file) {
+  const buffer = fs.readFileSync(file);
+  check(buffer.length >= 24 && buffer.subarray(1, 4).toString('ascii') === 'PNG', `invalid PNG: ${normalizePath(path.relative(ROOT, file))}`);
+  return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+}
+
+function validateScreenshotIntegrity(proof) {
+  const screenshots = proof.screenshots || [];
+  check(screenshots.length === 46, `historical Scale Proof must retain 46 screenshot cases, got ${screenshots.length}`);
+  const manifest = readJson(PATHS.scaleManifest);
+  const manifestScreenshots = manifest.screenshots || [];
+  sameSet(screenshots.map((item) => item.id), manifestScreenshots.map((item) => item.id), 'Scale Proof screenshot/manifest ids');
+  const manifestById = new Map(manifestScreenshots.map((item) => [item.id, item]));
+  const manifestMarkdown = readText(PATHS.scaleManifestMd);
+
+  for (const item of screenshots) {
+    const relativePath = normalizePath(item.screenshot?.file);
+    check(relativePath, `Scale Proof screenshot file missing for ${item.id}`);
+    const target = filePath(ROOT, relativePath);
+    check(fs.existsSync(target), `Scale Proof screenshot missing: ${relativePath}`);
+    const stats = fs.statSync(target);
+    check(stats.size === item.screenshot.bytes, `Scale Proof screenshot byte mismatch: ${relativePath}`);
+    const dimensions = pngDimensions(target);
+    check(dimensions.width === item.screenshot.dimensions?.width && dimensions.height === item.screenshot.dimensions?.height, `Scale Proof screenshot dimension mismatch: ${relativePath}`);
+    const manifestItem = manifestById.get(item.id);
+    check(manifestItem?.screenshot?.file === item.screenshot.file, `Scale Proof manifest file mismatch: ${item.id}`);
+    check(manifestItem?.screenshot?.bytes === item.screenshot.bytes, `Scale Proof manifest byte mismatch: ${item.id}`);
+    check(manifestMarkdown.includes(relativePath), `Scale Proof Markdown manifest missing: ${relativePath}`);
+  }
+  return true;
 }
 
 function resolveLocalHtmlReference(value, pagePath) {
@@ -552,6 +585,15 @@ function buildDeltaProof(options = {}) {
     ...lesson.filter((item) => item.status !== 'equal'),
     ...lessonExistence.filter((item) => item.status !== 'present'),
   ];
+  const historicalArtifactPaths = uniqueSorted([
+    PATHS.scaleProof,
+    PATHS.scaleManifest,
+    PATHS.scaleManifestMd,
+    PATHS.scaleRouteInventory,
+    ...lessonCaptures(scaleProof).map((capture) => capture.screenshot?.file).filter(Boolean),
+  ]);
+  const historicalArtifacts = platform.filter((item) => historicalArtifactPaths.includes(item.path));
+  check(historicalArtifacts.length === historicalArtifactPaths.length, 'historical Scale Proof artifact inventory is incomplete');
 
   return {
     schema_version: 1,
@@ -581,17 +623,25 @@ function buildDeltaProof(options = {}) {
       changed_or_missing_paths: changedOrMissing.map((item) => item.path),
       screenshots_reusable: changedOrMissing.length === 0,
       recapture_required: changedOrMissing.length > 0,
+      historical_artifact_count: historicalArtifacts.length,
+      historical_artifacts_blob_equal: historicalArtifacts.every((item) => item.status === 'equal'),
+      screenshot_manifest_integrity_passed: true,
     },
   };
 }
 
 function validateDeltaProof(recorded, recomputed) {
   check(recorded.schema_version === 1 && recorded.sprint_id === WAVE_ID, 'delta proof identity mismatch');
+  check(JSON.stringify(recorded.commit_chain) === JSON.stringify(recomputed.commit_chain), 'delta proof commit chain is stale');
   check(recorded.summary?.screenshots_reusable === recomputed.summary.screenshots_reusable, 'delta proof reuse decision is stale');
   check(recorded.summary?.changed_or_missing_input_count === recomputed.summary.changed_or_missing_input_count, 'delta proof changed/missing count is stale');
+  check(recorded.summary?.historical_artifact_count === recomputed.summary.historical_artifact_count, 'delta proof historical artifact count is stale');
+  check(recorded.summary?.historical_artifacts_blob_equal === true && recomputed.summary.historical_artifacts_blob_equal === true, 'historical Scale Proof artifacts must remain blob-equal');
+  check(recorded.summary?.screenshot_manifest_integrity_passed === true, 'delta proof screenshot/manifest integrity is missing');
   sameSet(recorded.summary?.changed_or_missing_paths || [], recomputed.summary.changed_or_missing_paths || [], 'delta proof changed/missing paths');
   for (const section of ['platform_equal_paths', 'lesson_equal_paths', 'lesson_existence_only_paths']) {
     sameSet((recorded[section] || []).map((item) => item.path), (recomputed[section] || []).map((item) => item.path), `delta proof ${section}`);
+    check(JSON.stringify(recorded[section]) === JSON.stringify(recomputed[section]), `delta proof ${section} blob evidence is stale`);
   }
   return true;
 }
@@ -806,6 +856,7 @@ module.exports = {
   validatePacketObjects,
   validateRoadmapTexts,
   validateScaleProof,
+  validateScreenshotIntegrity,
   validateSurfaceContract,
   validateSurfaceState,
   validateWiringTexts,

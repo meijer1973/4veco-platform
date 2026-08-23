@@ -249,13 +249,27 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     const recorded = {
       schema_version: 1,
       sprint_id: checker.WAVE_ID,
-      summary: { screenshots_reusable: true, changed_or_missing_input_count: 0, changed_or_missing_paths: [] },
+      summary: {
+        screenshots_reusable: true,
+        changed_or_missing_input_count: 0,
+        changed_or_missing_paths: [],
+        historical_artifact_count: 0,
+        historical_artifacts_blob_equal: true,
+        screenshot_manifest_integrity_passed: true,
+      },
       platform_equal_paths: [{ path: 'a' }],
       lesson_equal_paths: [{ path: 'b' }],
       lesson_existence_only_paths: [],
     };
     const recomputed = {
-      summary: { screenshots_reusable: true, changed_or_missing_input_count: 0, changed_or_missing_paths: [] },
+      summary: {
+        screenshots_reusable: true,
+        changed_or_missing_input_count: 0,
+        changed_or_missing_paths: [],
+        historical_artifact_count: 0,
+        historical_artifacts_blob_equal: true,
+        screenshot_manifest_integrity_passed: true,
+      },
       platform_equal_paths: [{ path: 'a' }, { path: 'omitted-runtime.js' }],
       lesson_equal_paths: [{ path: 'b' }],
       lesson_existence_only_paths: [],
