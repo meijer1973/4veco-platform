@@ -90,7 +90,7 @@ Current Golden controlled-wave renewal:
 
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md`
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md`
-- `reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
+- `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
 - `reports/json/y1-golden-rollout-wave-1-proof.json`
 - `reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json`
 - `references/data/exercises/y1-golden-rollout-wave-1.json`

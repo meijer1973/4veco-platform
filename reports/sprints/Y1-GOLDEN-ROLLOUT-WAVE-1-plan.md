@@ -334,7 +334,7 @@ state in the renewal result evidence.
 - generated internal dashboard files owned by `npm.cmd run dashboard:internal`
 - `reports/json/y1-golden-rollout-wave-1-proof.json`
 - `reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json`
-- `reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
+- `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-*`
 - generated repository maps, URL indexes, GitHub agent indexes, and internal
   dashboard artifacts required by current repository rules
@@ -447,7 +447,7 @@ npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode r
 npm.cmd run check:exercise-workflow-currentness
 npm.cmd run check:exercise-authority-hygiene
 npm.cmd run check:scale-proof-3p-product-path
-npm.cmd run check:review-throughput -- reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
+npm.cmd run check:review-throughput -- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
 node build-scripts/reports/validate-report-json.js
 node build-scripts/references/check-roadmap-version-index.js
 node build-scripts/sprints/emit-url-index.js --check

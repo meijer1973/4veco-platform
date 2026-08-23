@@ -4,7 +4,7 @@
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "pr_number": null,
   "pr_url": null,
-  "reviewed_payload_head_sha": "a61b75d0aed90a523137b912d0af81fc01a834d9",
+  "reviewed_payload_head_sha": "8b94538f805d8750469803280d9e935bd9a29b64",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "product_authority",
@@ -91,7 +91,7 @@
     "lead_review": {
       "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
       "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "a61b75d0aed90a523137b912d0af81fc01a834d9"
+      "reviewed_commit_sha": "8b94538f805d8750469803280d9e935bd9a29b64"
     },
     "ci": {
       "required_contexts": ["validate-platform"],
@@ -99,5 +99,5 @@
       "reviewed_commit_sha": null
     }
   },
-  "recommended_next_action": "Complete implementation review, bind the replacement draft PR and payload, run exact-head CI/Rawls/readiness, then return for human review."
+  "recommended_next_action": "Bind the replacement draft PR and payload, supersede PR #205, run exact-head CI/Rawls/readiness, then return for human review."
 }

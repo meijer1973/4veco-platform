@@ -1,6 +1,10 @@
-# Y1-GOLDEN-ROLLOUT-WAVE-1 Baseline
+# Sprint Y1-GOLDEN-ROLLOUT-WAVE-1: Baseline
 
 Recorded: 2026-08-23
+
+## Plan reference
+
+`reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md`
 
 ## Repository State
 
@@ -99,3 +103,9 @@ After correction, all 64 platform proof/runtime inputs and all 78 rendered
 lesson inputs are blob-equal across original capture, old PR CI, and current
 heads. All 55 navigation destinations remain present. Historical screenshot
 reuse is therefore valid for the bounded claim, and recapture is not required.
+
+## Data integrity notes
+
+Protected reference data under `references/machine/` and
+`references/external/` is unchanged. Exercise source data, runtime engines,
+target-readiness flags, and generated lesson output are also unchanged.

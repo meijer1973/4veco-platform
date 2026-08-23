@@ -2,8 +2,8 @@
   "schema_version": 2,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "generated": "2026-08-23T00:00:00.000Z",
-  "status": "draft_unbound",
-  "lead_recommendation": "PENDING_IMPLEMENTATION_REVIEW",
+  "status": "implementation_complete_pending_pr_binding_and_human_review",
+  "lead_recommendation": "READY_FOR_HUMAN_REVIEW",
   "paragraphs": ["1.1.1", "1.1.2", "1.1.3"],
   "surface_ids": [
     "1.1.1-korte-check",
@@ -17,7 +17,8 @@
     "decision": "PASS_CONTROLLED_ROLLOUT",
     "decision_source": "platform PR #148 owner authorization comment 4807419611",
     "controlled_wave_eligibility_authorized": true,
-    "actual_rollout_or_adoption_authorized": false
+    "actual_rollout_or_adoption_authorized": false,
+    "automatic_repository_wide_migration_authorized": false
   },
   "workflow_availability": {
     "first_three_current_split_surfaces": true,
@@ -32,7 +33,16 @@
     "source_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
     "delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
     "screenshots_recaptured": false,
-    "reuse_status": "pending_delta_generation"
+    "reuse_status": "commit_bound_reuse_attested",
+    "reviewed_platform_payload_sha": "8b94538f805d8750469803280d9e935bd9a29b64",
+    "lesson_snapshot_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+    "platform_equal_path_count": 64,
+    "lesson_equal_path_count": 78,
+    "lesson_existence_only_path_count": 55,
+    "historical_artifact_count": 50,
+    "changed_or_missing_input_count": 0,
+    "screenshots_reusable": true,
+    "recapture_required": false
   },
   "supersession": {
     "old_platform_pr": 205,
@@ -51,6 +61,7 @@
   },
   "authority": {
     "actual_rollout_or_adoption_authorized": false,
+    "automatic_repository_wide_migration_authorized": false,
     "product_route_adoption_authorized": false,
     "broad_product_use_authorized": false,
     "product_use_authorized": false,

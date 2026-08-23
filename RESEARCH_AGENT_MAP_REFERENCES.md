@@ -74,7 +74,7 @@ Current Golden controlled-wave renewal:
 - `docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md`
 - `references/reference-team-roadmap.md`
 - `references/data/exercises/y1-golden-rollout-wave-1.json`
-- `reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
+- `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
 - `reports/json/y1-golden-rollout-wave-1-proof.json`
 - `reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json`
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1.js`

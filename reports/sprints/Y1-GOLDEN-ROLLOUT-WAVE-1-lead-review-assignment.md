@@ -4,6 +4,8 @@ Generated: 2026-08-23
 
 Sprint: `Y1-GOLDEN-ROLLOUT-WAVE-1`
 
+Reviewer: subagent lead reviewer.
+
 ## Scope
 
 Review the current-main renewal of the first-three Golden controlled-wave
@@ -30,7 +32,7 @@ guard. The result must remain L4 and must not broaden the historical
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1.js`
 - `build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js`
 - `reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json`
-- `reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
+- `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
 - `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl`
 
 Round 1 must classify every finding. Corrections are mandatory for any core

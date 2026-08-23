@@ -8,10 +8,15 @@ Generated: 2026-08-23
   proof, sprint evidence, and a deterministic checker.
 - Adds a dedicated negative Jest suite and wires the checker into package/CI
   using exact PR, push, and manual base/head ranges.
+- Skips the renewal-specific full contract for unrelated future changes in
+  auto-scope mode while retaining fail-closed scope and evidence-tail checks
+  whenever renewal paths trigger the guard.
 - Adds independently derived rendered-input and navigation-target dependency
   classification so historical screenshots are reused only when visual inputs
   remain blob-equal and route destinations remain present.
 - Corrects the Golden and reference-team roadmaps and their version index.
+- Cross-binds the L4 packet, machine proof, and rendered delta payload while
+  machine-holding automatic repository-wide migration.
 - Refreshes root maps, generated agent indexes, URL index, and dashboard.
 
 ## Lesson Changes
