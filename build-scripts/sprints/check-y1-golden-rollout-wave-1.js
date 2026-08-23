@@ -770,9 +770,9 @@ function validateNavigationTexts(texts) {
     check(texts[name]?.includes('check-y1-golden-rollout-wave-1.js'), `${name} missing Y1 checker path`);
   }
   check(texts.urlIndex?.includes(PATHS.bundleUrls), 'URL index missing Y1 review bundle');
+  check(texts.urlIndex?.includes(PATHS.proof), 'URL index missing Y1 proof');
+  check(texts.urlIndex?.includes(PATHS.deltaProof), 'URL index missing Y1 delta proof');
   check(texts.bundleUrls?.includes(PATHS.packet), 'Y1 review bundle missing packet');
-  check(texts.bundleUrls?.includes(PATHS.proof), 'Y1 review bundle missing proof');
-  check(texts.bundleUrls?.includes(PATHS.deltaProof), 'Y1 review bundle missing delta proof');
   check(texts.platformAgentIndex?.includes(PATHS.packet), 'platform agent index missing Y1 packet');
   check(texts.dashboard?.includes(WAVE_ID), 'internal dashboard missing current Y1 wave');
   check(texts.dashboard?.includes('PASS_CONTROLLED_ROLLOUT'), 'internal dashboard missing controlled-rollout state');

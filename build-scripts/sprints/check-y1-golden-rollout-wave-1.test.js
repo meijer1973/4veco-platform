@@ -394,8 +394,8 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
       researchMap: common,
       referenceMap: common,
       githubEntry: common,
-      urlIndex: checker.PATHS.bundleUrls,
-      bundleUrls: `${checker.PATHS.packet}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}`,
+      urlIndex: `${checker.PATHS.bundleUrls}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}`,
+      bundleUrls: checker.PATHS.packet,
       platformAgentIndex: checker.PATHS.packet,
       dashboard: checker.WAVE_ID,
     })).toThrow(/controlled-rollout state/);
