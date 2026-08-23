@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-23T15:44:40.089Z
+Generated: 2026-08-23T17:11:16.108Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/y1-golden-rollout-wave-renewal-20260823`
-Source commit: `b7ec603880bcd8cc98c93526121ca71d3f31edcd`
-Files indexed: 7186
+Source commit: `5ac8602feffaad24da93dba4c14a4db6eaa7d050`
+Files indexed: 7216
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 706
+Count: 708
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -785,6 +785,8 @@ Count: 706
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
@@ -879,7 +881,7 @@ Count: 25
 
 ## validators
 
-Count: 684
+Count: 686
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1263,6 +1265,8 @@ Count: 684
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
@@ -1568,7 +1572,7 @@ Count: 684
 
 ## references
 
-Count: 1003
+Count: 1006
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1610,6 +1614,7 @@ Count: 1003
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/exercises/y1-golden-rollout-wave-1.json
 - references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/all-belgium-claim.sample.json
 - references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/compliance-claim.sample.json
 - references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/expert-legal-advice.sample.json
@@ -2337,6 +2342,8 @@ Count: 1003
 - references/data/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1.result.json
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
+- references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json
+- references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/data/year2-target-foundation/answer-contracts.json
 - references/data/year2-target-foundation/canonical-source-assets.json
@@ -2576,7 +2583,7 @@ Count: 1003
 
 ## reports
 
-Count: 4516
+Count: 4541
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2935,6 +2942,8 @@ Count: 4516
 - reports/json/unit-term-slug-migration.json
 - reports/json/unresolved-refs.json
 - reports/json/visual-qa-harden2-proof.json
+- reports/json/y1-golden-rollout-wave-1-proof.json
+- reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json
 - reports/markdown/aspects-coverage.md
 - reports/markdown/begrippen-coverage.md
 - reports/markdown/dag-integrity.md
@@ -4483,6 +4492,8 @@ Count: 4516
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md
+- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
 - reports/review-gates/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1/review-packet.json
 - reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
 - reports/review-gates/PR200-RENEWAL-20260823/conflict-resolution-log.md
@@ -7071,6 +7082,27 @@ Count: 4516
 - reports/sprints/Y1-FOUNDATION-CLOSURE-REVIEW-1-result.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-plan.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-assignment.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-intermediate-recheck.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-corrections-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-corrections-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-review-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-review-round3.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-corrections.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-result.md
 - reports/sprints/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-plan.md
