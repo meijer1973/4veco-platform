@@ -161,7 +161,21 @@ The compatibility proof must come from the platform controller and must record:
 - lesson base SHA;
 - lesson candidate SHA;
 - `platform-first`, `lesson-first`, and `bundle-final` results;
-- permitted merge orders and the recommended merge order.
+- permitted merge orders and the recommended merge order;
+- the canonical lesson-first integration contract, including its trusted
+  post-lesson-merge index refresh, exact four generated-and-verified paths,
+  non-empty allowlisted actual changed-path subset, deterministic inputs,
+  exact-head readiness, and platform/lesson CI binding.
+
+Compatibility `exact_members` always identifies the immutable reviewed
+payloads. When lesson-first integration has advanced lesson `main`, readiness
+for a generated platform integration descendant must carry a distinct
+`integration_refresh` proof. That proof binds the reviewed payloads, exact
+lesson merge commit, refreshed platform head, trusted deterministic refresh
+result, inherited lineage, readiness decision for the refreshed head, and CI
+for that same platform/lesson pair. Missing refresh proof, a payload/head mix,
+an untrusted executor, altered path set, stale readiness, or CI for either
+wrong SHA fails closed.
 
 `bundle-final` success alone is insufficient. At least one intermediate state
 must also be green, otherwise the bundle stays `KEEP_DRAFT_REVISE` until a
@@ -194,8 +208,9 @@ When the exact matrix proves `lesson-first` and `bundle-final` green while
 `READY_FOR_HUMAN_REVIEW`. That route records `bundle_delegated_ci: true` and
 does not claim ordinary `validate-platform` success for the controller head.
 The authorized bundle integrator must merge the lesson member first, then run a
-fresh ordinary `validate-platform` check against the platform candidate and the
-new lesson `main` before the platform merge.
+trusted deterministic index refresh, recompute readiness for the resulting
+platform integration head, and run fresh platform PR CI against that exact head
+and the lesson merge commit before the platform merge.
 
 The highest-risk member determines the review lane. Generated lesson output,
 product-authority changes, protected/reference changes, review-governance
@@ -283,6 +298,15 @@ refresh does not require renewed owner authorization unless the reviewed payload
 is not an ancestor, manual conflict resolution changes behavior, substantive
 payload changes, bundle membership changes, authority scope changes, or the
 lane cannot prove lineage/effective-payload equivalence.
+
+For a refreshed platform bundle with substantive base overlap, lead freshness
+uses dual proof. `proof.lead_review` remains the immutable payload review and
+must continue to match the compatibility platform candidate.
+`proof.integration.delta_review` separately binds a passing exact-head review to
+that payload and the current integration head. A ready route requires both when
+lineage declares `requires_integration_delta_lead_review`; malformed, missing,
+stale, wrong-payload, wrong-head, non-passing, or unexpected delta proof is a
+revision result and cannot be repaired by replacing the payload lead review.
 
 Agents must not call `gh pr merge` directly for normal PRs. Normal merges must
 go through the authorized single-PR or bundle lane. For single-PR work, the

@@ -1,0 +1,2532 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4",
+  "matrix_id": "mtu-h7-protected-canonical-adjudication-matrix-4",
+  "review_standard": "REV-STD-1",
+  "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_ONLY_NOT_EXECUTED",
+  "generated_at": "2026-08-11T14:26:36.699Z",
+  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "source_files": [
+    "reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json",
+    "reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.json",
+    "reports/mtu-hardening/mtu-h7-governance-candidate-packets-1.json",
+    "reports/mtu-hardening/mtu-h7-official-evidence-matrix-1.json",
+    "reports/mtu-hardening/mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.json",
+    "reports/mtu-hardening/mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.json",
+    "reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json",
+    "reports/mtu-hardening/mtu-h7-bundle3-negative-regression-fixtures.json",
+    "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json",
+    "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "operations": [
+    {
+      "operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+      "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+      "candidate_packet_id": "H7-CAND-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "blocker_id": "H7-BLOCKER-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+      "adjudication_status": "prepared_for_human_protected_canonical_adjudication_not_executed",
+      "source_route": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE",
+      "decision_family": "canonical_mtu_governance",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "canonical_mtu_governance_need",
+      "question_word": "toon_met_een_berekening_aan",
+      "answer_model_summary": "Ratio falls from 4.1 to about 3.9, so income differences narrow.",
+      "requested_human_decision": "Approve a canonical-MTU decision or explicit reviewed-equivalent positive narrowing/nivellering rule in a later bounded execution bundle, or keep this operation held. All 2 enumerated missing-operation expectation(s) require separate disposition.",
+      "permissible_owner_decisions": [
+        "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
+        "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
+        "REJECT_OR_RETURN_FOR_EVIDENCE_REPAIR"
+      ],
+      "non_authorized_in_this_bundle": [
+        "execution",
+        "protected_reference_mutation",
+        "operation_registry_mutation",
+        "canonical_mtu_mutation",
+        "candidate_write",
+        "lesson_output",
+        "h7_closure",
+        "product_route_readiness",
+        "student_product_use"
+      ],
+      "proposed_non_mutating_decision": "do_not_close_from_existing_H08_without_human_canonical_decision",
+      "proof_required_to_close": "Record an explicit later owner decision for all 2 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A96 as full-fit source/calculation wrappers, H08 as a partial canonical-governance anchor, A38 excluded, and the ratio-comparison operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "ratio_comparison",
+        "canonical_positive_narrowing_governance"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-ha23-2-q15-net-ratio-nivellering:missing-operation-1",
+          "expectation": "The H08 label/kern conflict requires a positive narrowing/nivellering canonical or reviewed-equivalent decision.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        },
+        {
+          "decision_id": "h7-ha23-2-q15-net-ratio-nivellering:missing-operation-2",
+          "expectation": "No live MTU exactly covers comparison of post-tax high-income/low-income ratios.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
+      "required_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96",
+        "H08"
+      ],
+      "partial_anchor_mtu_ids": [
+        "H08"
+      ],
+      "excluded_historical_mtu_ids": [
+        "A38"
+      ],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "procedure_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "partial_procedure_anchor_mtu_ids": [
+        "H08"
+      ],
+      "forbidden_mtu_ids": [
+        "A15"
+      ],
+      "route_tags": [
+        "calculation",
+        "income_distribution",
+        "ratio_comparison",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "canonical_positive_narrowing_governance"
+      ],
+      "missing_operation_expectations": [
+        "The H08 label/kern conflict requires a positive narrowing/nivellering canonical or reviewed-equivalent decision.",
+        "No live MTU exactly covers comparison of post-tax high-income/low-income ratios."
+      ],
+      "adjudication_correction_basis": "The official model compares two net-income ratios. It does not calculate a percentage change, so A38 is excluded.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-23-2-o:opgave-3:question-15"
+      ],
+      "misconception_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_DENIVELLERING_LABEL_REVERSED"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "ha-1022-a-23-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 7,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "34f60793a0ae25efa33e3ddc4bb9f7b4b243fa6cd36ce2ec9277e272e57d365a"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+          "source_pdf_sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-23-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "15651a69123775d21c679a4edf84b1afc0a0edebbebe7edfc3dd4b8817436b4c"
+        }
+      ],
+      "source_completeness": {
+        "completeness_status": "available_pages_verified_with_explicit_blocking_source_annex_limitation",
+        "supplemental_pages": [
+          {
+            "role": "opgave_context_preceding_question",
+            "source_pdf_path": "references/external/exams/ha-1022-a-23-2-o.pdf",
+            "page_number": 6,
+            "required_text_patterns": [
+              "Heffingskortingen inkomensafhankelijk",
+              "bron 1"
+            ],
+            "source_pdf_sha256": "2eca63d9fc6828e1e68018b113b3b8ab0f637a1d21e662a0d6f2e4f1519fb880",
+            "extracted_text_sha256": "c87a16558a741a52bfb75dc2ebb91ca31bd2a82f11c83516d27ae690fbe4ae98",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "correction_model_semantic_pages": [
+          {
+            "source_pdf_path": "references/external/exams/ha-1022-a-23-2-c.pdf",
+            "page_number": 9,
+            "required_text_patterns": [
+              "66.113/16.920 = 3,9",
+              "toegenomen nivellering"
+            ],
+            "source_pdf_sha256": "155b7adfdd6c711dd933fff4256045714d6fee4c75a52a5589f02b98064622e3",
+            "extracted_text_sha256": "0365bf182ae42f64cd0b003853fb46f178a3856b27440daa5d7c1c00020e4076",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "unavailable_sources": [
+          {
+            "source_label": "bron 1 and bron 2 referenced by question 15",
+            "repository_file_candidates": [
+              "references/external/exams/ha-1022-a-23-2-b.pdf"
+            ],
+            "status": "unavailable_in_repository_explicit_blocking_limitation",
+            "impact": "The official correction-model calculation is present, but the two source tables cannot be visually re-reviewed from this repository; later execution must remain held or obtain authoritative source-annex evidence.",
+            "discovered_paths": [],
+            "checked_status": "candidate_paths_absent_at_build_time"
+          }
+        ]
+      },
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-denivellering-label-reversal",
+        "expected_failure_defect_class": "canonical_mtu_governance_need",
+        "mutation": "Treat ratio decrease as denivellering closure without explicit positive-counterpart authority.",
+        "guard": "A smaller high/low net-income ratio must not silently close as denivellering."
+      },
+      "regression_contract": {
+        "positive_narrowing_governance": "held_for_explicit_positive_counterpart_decision"
+      },
+      "semantic_binding": {
+        "blocker_id": "H7-BLOCKER-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+        "official_evidence_operation_id": "h7-ha23-2-q15-net-ratio-nivellering",
+        "manifest_record_id": "ha-1022-a-23-2-o:opgave-3:question-15",
+        "candidate_packet_id": "H7-CAND-CANONICAL-NIVELLERING-POSITIVE-COUNTERPART",
+        "current_decomposition_status": "reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs",
+        "expected_required_mtu_ids": [
+          "A81",
+          "A96"
+        ],
+        "expected_partial_anchor_mtu_ids": [
+          "H08"
+        ],
+        "expected_excluded_historical_mtu_ids": [
+          "A38"
+        ],
+        "expected_answer_form_mtu_ids": [
+          "A96"
+        ],
+        "expected_procedure_unit_ids": [
+          "A81",
+          "A96"
+        ],
+        "expected_partial_procedure_anchor_mtu_ids": [
+          "H08"
+        ],
+        "expected_forbidden_mtu_ids": [
+          "A15"
+        ],
+        "expected_route_tags": [
+          "calculation",
+          "income_distribution",
+          "ratio_comparison",
+          "source_reading",
+          "answer_form",
+          "procedure",
+          "canonical_positive_narrowing_governance"
+        ],
+        "expected_missing_operation_expectations": [
+          "The H08 label/kern conflict requires a positive narrowing/nivellering canonical or reviewed-equivalent decision.",
+          "No live MTU exactly covers comparison of post-tax high-income/low-income ratios."
+        ],
+        "expected_safe_interim_action": "Keep A81/A96 as full-fit source/calculation wrappers, H08 as a partial canonical-governance anchor, A38 excluded, and the ratio-comparison operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "ratio_comparison",
+          "canonical_positive_narrowing_governance"
+        ],
+        "expected_candidate_decisions_sha256": "cfd921e46e34fb5dbd43ed5af9ecf35c195f5be887be9ffc4432fde3508ef5a9",
+        "expected_regression_contract": [
+          {
+            "key": "positive_narrowing_governance",
+            "value": "held_for_explicit_positive_counterpart_decision",
+            "defect_class": "canonical_mtu_governance_need"
+          }
+        ],
+        "source_locator_sha256": "095a87c0701da6964a4c3d3c60a501c5e2d2963a436f3d9ac79e8951e1300e52",
+        "source_completeness_sha256": "61c89824db689d7a1239b165f5276fe63609ff29029aec4c59a19f1b83dbe15d",
+        "mtu_objects": [
+          {
+            "id": "A81",
+            "role": "full_fit",
+            "role_basis": "The official model compares two net-income ratios. It does not calculate a percentage change, so A38 is excluded.",
+            "live_registry_sha256": "9ad230a4bde1f8480ab8a6466014a9b5c679f97fcbab8bfff5959d818da4cedf",
+            "semantic_snapshot": {
+              "id": "A81",
+              "name": "Bron gebruiken in een antwoord",
+              "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+                "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+                "Zeg wat die observatie economisch betekent.",
+                "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+                "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+              ]
+            }
+          },
+          {
+            "id": "A96",
+            "role": "full_fit",
+            "role_basis": "The official model compares two net-income ratios. It does not calculate a percentage change, so A38 is excluded.",
+            "live_registry_sha256": "faac9162b9f2b9f63a15703216728aac3dd90ac6907dd0dd43c16fc75a61d96a",
+            "semantic_snapshot": {
+              "id": "A96",
+              "name": "Bereken-vraag beantwoorden",
+              "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+                "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+                "Vul de gegevens zichtbaar in met labels.",
+                "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+                "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+              ]
+            }
+          },
+          {
+            "id": "H08",
+            "role": "partial_anchor_only",
+            "role_basis": "The official model compares two net-income ratios. It does not calculate a percentage change, so A38 is excluded.",
+            "live_registry_sha256": "42d02ecc0716795ba3c4cd615f5ebeccce9683949daf9ca993295e297717d327",
+            "semantic_snapshot": {
+              "id": "H08",
+              "name": "Denivellering en progressieve belasting",
+              "kern": "Denivellering treedt op wanneer belastingveranderingen het verschil in netto-inkomsten tussen inkomensgroepen verkleinen.",
+              "mastery_target": "understand",
+              "procedure": []
+            }
+          },
+          {
+            "id": "A15",
+            "role": "forbidden_over_trigger_guard",
+            "live_registry_sha256": "eb64a4928068eb55059a08f189d54bc0e7eefdc845e8c957c37675f8e836274f",
+            "semantic_snapshot": {
+              "id": "A15",
+              "name": "Prijselasticiteit van de vraag",
+              "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Noteer de oude en nieuwe waarden van P en Q.",
+                "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+                "Bereken Ev = %ΔQv / %ΔP.",
+                "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+                "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+              ]
+            }
+          }
+        ]
+      },
+      "historical_decomposition": {
+        "status": "preserved_for_audit_not_current_role_authority",
+        "required_mtu_ids": [
+          "H08",
+          "A38",
+          "A81",
+          "A96"
+        ],
+        "answer_form_mtu_ids": [
+          "A96"
+        ],
+        "procedure_unit_ids": [
+          "H08",
+          "A38",
+          "A81",
+          "A96"
+        ],
+        "forbidden_mtu_ids": [
+          "A15"
+        ],
+        "route_tags": [
+          "calculation",
+          "income_distribution",
+          "ratio_comparison",
+          "answer_form",
+          "procedure"
+        ],
+        "historical_proof_required_to_close": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+        "historical_safe_interim_action": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
+        "source_sha256": "e1d13d89e7c60acd234b27c02cf781237515fe372216b523204b59b31e095d1d"
+      },
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a canonical MTU/update or explicit reviewed-equivalent rule for the positive narrowing/nivellering counterpart before H7 closure.",
+        "safe_interim_action_at_source_time": "Keep H08 as evidence anchor, keep A15 forbidden, and keep review_required.",
+        "final_route_at_source_time": "HOLD_FOR_CANONICAL_MTU_GOVERNANCE"
+      }
+    },
+    {
+      "operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+      "adjudication_status": "prepared_for_human_protected_canonical_adjudication_not_executed",
+      "source_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision_family": "operation_registry_governance",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "operation_registry_need",
+      "question_word": "bereken",
+      "answer_model_summary": "Snel keeps the budget amount less the agreed transfer.",
+      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
+      "permissible_owner_decisions": [
+        "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
+        "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
+        "REJECT_OR_RETURN_FOR_EVIDENCE_REPAIR"
+      ],
+      "non_authorized_in_this_bundle": [
+        "execution",
+        "protected_reference_mutation",
+        "operation_registry_mutation",
+        "canonical_mtu_mutation",
+        "candidate_write",
+        "lesson_output",
+        "h7_closure",
+        "product_route_readiness",
+        "student_product_use"
+      ],
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, and the residual-payoff operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "residual_payoff"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-ha24-1-q12-snel-residual-payoff:missing-operation-1",
+          "expectation": "No live MTU exactly covers the proposer residual-payoff arithmetic inside an ultimatum-game decision tree.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
+      "required_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "partial_anchor_mtu_ids": [],
+      "excluded_historical_mtu_ids": [],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "procedure_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "partial_procedure_anchor_mtu_ids": [],
+      "forbidden_mtu_ids": [
+        "F12"
+      ],
+      "route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "residual_payoff",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "missing_operation_expectations": [
+        "No live MTU exactly covers the proposer residual-payoff arithmetic inside an ultimatum-game decision tree."
+      ],
+      "adjudication_correction_basis": "A81 and A96 fit the source-use and calculation answer form; F12 remains forbidden because this is not matrix Nash selection.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "misconception_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_NASH_USED_FOR_DIRECT_PAYOFF"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+          "source_locator": {
+            "exam": "ha-1022-a-24-1-o",
+            "opgave_num": 2,
+            "question_num": 12,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "prompt_page_start": 5,
+            "prompt_page_end": 5,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+          "rendered_png_sha256": "819492e8638d7e8e7b9dc68813a9e01192d8d35bf91a61d99492a84ea4cacf31"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png",
+          "rendered_png_sha256": "072370c8b6c86a8f76f50d3440dab0921713adcef38926a17ca463d43b667643"
+        }
+      ],
+      "source_completeness": {
+        "completeness_status": "available_pages_verified_with_explicit_blocking_source_annex_limitation",
+        "supplemental_pages": [
+          {
+            "role": "opgave_rules_budget_and_marginal_cost",
+            "source_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "page_number": 4,
+            "required_text_patterns": [
+              "Marginale kosten",
+              "3.500",
+              "budget van",
+              "6.000"
+            ],
+            "source_pdf_sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+            "extracted_text_sha256": "5e374d75bcb206d76e5135127913c0fac7ec097c6c79e1db31da31e8dfb05428",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "correction_model_semantic_pages": [
+          {
+            "source_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "page_number": 9,
+            "required_text_patterns": [
+              "budgetbedrag",
+              "marginale kosten",
+              "4.500",
+              "3.500"
+            ],
+            "source_pdf_sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+            "extracted_text_sha256": "7259b61e6b2147be38681c2c2b09d710b893367151c4e244a4f86a29acd4fe71",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "unavailable_sources": [
+          {
+            "source_label": "bron 2 ultimatum-game decision tree referenced by question 12",
+            "repository_file_candidates": [
+              "references/external/exams/ha-1022-a-24-1-b.pdf"
+            ],
+            "status": "unavailable_in_repository_explicit_blocking_limitation",
+            "impact": "The official correction-model payoffs are present, but the decision-tree geometry cannot be visually re-reviewed; later execution must remain held or obtain authoritative source-annex evidence.",
+            "discovered_paths": [],
+            "checked_status": "candidate_paths_absent_at_build_time"
+          }
+        ]
+      },
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q12-f12-overtrigger-residual",
+        "expected_failure_defect_class": "over_trigger",
+        "mutation": "Map F12 to the residual-payoff operation.",
+        "guard": "Direct payoff arithmetic must not be closed by Nash pay-off matrix coverage."
+      },
+      "regression_contract": {},
+      "semantic_binding": {
+        "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+        "official_evidence_operation_id": "h7-ha24-1-q12-snel-residual-payoff",
+        "manifest_record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+        "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-RESIDUAL-PAYOFF",
+        "current_decomposition_status": "reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs",
+        "expected_required_mtu_ids": [
+          "A81",
+          "A96"
+        ],
+        "expected_partial_anchor_mtu_ids": [],
+        "expected_excluded_historical_mtu_ids": [],
+        "expected_answer_form_mtu_ids": [
+          "A96"
+        ],
+        "expected_procedure_unit_ids": [
+          "A81",
+          "A96"
+        ],
+        "expected_partial_procedure_anchor_mtu_ids": [],
+        "expected_forbidden_mtu_ids": [
+          "F12"
+        ],
+        "expected_route_tags": [
+          "calculation",
+          "ultimatum_game",
+          "residual_payoff",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "expected_missing_operation_expectations": [
+          "No live MTU exactly covers the proposer residual-payoff arithmetic inside an ultimatum-game decision tree."
+        ],
+        "expected_safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, and the residual-payoff operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "residual_payoff"
+        ],
+        "expected_candidate_decisions_sha256": "90845fcc43e64f90ffeafff02fb22505f915b37776d3c386aef04c7120d5c912",
+        "expected_regression_contract": [],
+        "source_locator_sha256": "aff020484d18d2f167815813975bea234afc6da41a6554125b59b5b08129b4ea",
+        "source_completeness_sha256": "6ca6643d3192858f83395ac2685e30708fc6929381c7aba6b7205ca885061a19",
+        "mtu_objects": [
+          {
+            "id": "A81",
+            "role": "full_fit",
+            "role_basis": "A81 and A96 fit the source-use and calculation answer form; F12 remains forbidden because this is not matrix Nash selection.",
+            "live_registry_sha256": "9ad230a4bde1f8480ab8a6466014a9b5c679f97fcbab8bfff5959d818da4cedf",
+            "semantic_snapshot": {
+              "id": "A81",
+              "name": "Bron gebruiken in een antwoord",
+              "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+                "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+                "Zeg wat die observatie economisch betekent.",
+                "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+                "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+              ]
+            }
+          },
+          {
+            "id": "A96",
+            "role": "full_fit",
+            "role_basis": "A81 and A96 fit the source-use and calculation answer form; F12 remains forbidden because this is not matrix Nash selection.",
+            "live_registry_sha256": "faac9162b9f2b9f63a15703216728aac3dd90ac6907dd0dd43c16fc75a61d96a",
+            "semantic_snapshot": {
+              "id": "A96",
+              "name": "Bereken-vraag beantwoorden",
+              "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+                "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+                "Vul de gegevens zichtbaar in met labels.",
+                "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+                "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+              ]
+            }
+          },
+          {
+            "id": "F12",
+            "role": "forbidden_over_trigger_guard",
+            "live_registry_sha256": "ef6e049770ea419eab6504e30863534b4e37255ad7e3f6c60b615c8732c8e7c4",
+            "semantic_snapshot": {
+              "id": "F12",
+              "name": "Nash-evenwicht in pay-off matrix",
+              "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
+                "Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling",
+                "Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht",
+                "Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen",
+                "Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken"
+              ]
+            }
+          }
+        ]
+      },
+      "historical_decomposition": {
+        "status": "preserved_for_audit_not_current_role_authority",
+        "required_mtu_ids": [
+          "A81",
+          "A96"
+        ],
+        "answer_form_mtu_ids": [
+          "A96"
+        ],
+        "procedure_unit_ids": [
+          "A81",
+          "A96"
+        ],
+        "forbidden_mtu_ids": [
+          "F12"
+        ],
+        "route_tags": [
+          "calculation",
+          "ultimatum_game",
+          "residual_payoff",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "historical_proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+        "historical_safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+        "source_sha256": "09c875841297a796e5b6ae6278cb3a81910097fa36660f6ef58db892b776351a"
+      },
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game residual payoff arithmetic.",
+        "safe_interim_action_at_source_time": "Keep missing_mtu_expected true and keep F12 forbidden.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      }
+    },
+    {
+      "operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+      "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+      "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-MARGIN-PAYOFF",
+      "adjudication_status": "prepared_for_human_protected_canonical_adjudication_not_executed",
+      "source_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision_family": "operation_registry_governance",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "operation_registry_need",
+      "question_word": "bereken",
+      "answer_model_summary": "Sprinter keeps the accepted price less marginal cost.",
+      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
+      "permissible_owner_decisions": [
+        "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
+        "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
+        "REJECT_OR_RETURN_FOR_EVIDENCE_REPAIR"
+      ],
+      "non_authorized_in_this_bundle": [
+        "execution",
+        "protected_reference_mutation",
+        "operation_registry_mutation",
+        "canonical_mtu_mutation",
+        "candidate_write",
+        "lesson_output",
+        "h7_closure",
+        "product_route_readiness",
+        "student_product_use"
+      ],
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, require marginal-cost subtraction, and keep the margin-payoff operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "margin_payoff",
+        "marginal_cost_subtraction"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-ha24-1-q12-sprinter-margin-payoff:missing-operation-1",
+          "expectation": "No live MTU exactly covers accepted price less marginal cost inside an ultimatum-game decision tree.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
+      "required_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "partial_anchor_mtu_ids": [],
+      "excluded_historical_mtu_ids": [],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "procedure_mtu_ids": [
+        "A81",
+        "A96"
+      ],
+      "partial_procedure_anchor_mtu_ids": [],
+      "forbidden_mtu_ids": [
+        "F12"
+      ],
+      "route_tags": [
+        "calculation",
+        "ultimatum_game",
+        "margin_payoff",
+        "marginal_cost_subtraction",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "missing_operation_expectations": [
+        "No live MTU exactly covers accepted price less marginal cost inside an ultimatum-game decision tree."
+      ],
+      "adjudication_correction_basis": "The operation must subtract the EUR 3,500 marginal cost from the accepted price; A81 and A96 do not replace that missing operation.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#ha-1022-a-24-1-o:opgave-2:question-12"
+      ],
+      "misconception_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q12_RESPONDER_PAYOFF_WITHOUT_COST"
+      ],
+      "source_locators": [
+        {
+          "record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+          "source_locator": {
+            "exam": "ha-1022-a-24-1-o",
+            "opgave_num": 2,
+            "question_num": 12,
+            "prompt_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "prompt_page_start": 5,
+            "prompt_page_end": 5,
+            "correction_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+          "page_number": 5,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-prompt-05-05.png",
+          "rendered_png_sha256": "819492e8638d7e8e7b9dc68813a9e01192d8d35bf91a61d99492a84ea4cacf31"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/ha-1022-a-24-1-o-q12-correction-09-09.png",
+          "rendered_png_sha256": "072370c8b6c86a8f76f50d3440dab0921713adcef38926a17ca463d43b667643"
+        }
+      ],
+      "source_completeness": {
+        "completeness_status": "available_pages_verified_with_explicit_blocking_source_annex_limitation",
+        "supplemental_pages": [
+          {
+            "role": "opgave_rules_budget_and_marginal_cost",
+            "source_pdf_path": "references/external/exams/ha-1022-a-24-1-o.pdf",
+            "page_number": 4,
+            "required_text_patterns": [
+              "Marginale kosten",
+              "3.500",
+              "budget van",
+              "6.000"
+            ],
+            "source_pdf_sha256": "ec3f1e7b12540d7478311163d8b9b41bb3dfea823523a64cc4dddfb18863ba8b",
+            "extracted_text_sha256": "5e374d75bcb206d76e5135127913c0fac7ec097c6c79e1db31da31e8dfb05428",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "correction_model_semantic_pages": [
+          {
+            "source_pdf_path": "references/external/exams/ha-1022-a-24-1-c.pdf",
+            "page_number": 9,
+            "required_text_patterns": [
+              "budgetbedrag",
+              "marginale kosten",
+              "4.500",
+              "3.500"
+            ],
+            "source_pdf_sha256": "53f722084f3fcff6fcb684bf540c5240f210aae1fd5c2c8b3c0c0c77eda85f62",
+            "extracted_text_sha256": "7259b61e6b2147be38681c2c2b09d710b893367151c4e244a4f86a29acd4fe71",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "unavailable_sources": [
+          {
+            "source_label": "bron 2 ultimatum-game decision tree referenced by question 12",
+            "repository_file_candidates": [
+              "references/external/exams/ha-1022-a-24-1-b.pdf"
+            ],
+            "status": "unavailable_in_repository_explicit_blocking_limitation",
+            "impact": "The official correction-model payoffs are present, but the decision-tree geometry cannot be visually re-reviewed; later execution must remain held or obtain authoritative source-annex evidence.",
+            "discovered_paths": [],
+            "checked_status": "candidate_paths_absent_at_build_time"
+          }
+        ]
+      },
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q12-cost-omitted-margin",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Accept price as Sprinter payoff without subtracting marginal cost.",
+        "guard": "The margin-payoff operation must retain the marginal-cost subtraction."
+      },
+      "regression_contract": {
+        "responder_margin_cost_subtraction": "cost_subtraction_required"
+      },
+      "semantic_binding": {
+        "blocker_id": "H7-BLOCKER-OP-ULTIMATUM-MARGIN-PAYOFF",
+        "official_evidence_operation_id": "h7-ha24-1-q12-sprinter-margin-payoff",
+        "manifest_record_id": "ha-1022-a-24-1-o:opgave-2:question-12",
+        "candidate_packet_id": "H7-CAND-OP-ULTIMATUM-MARGIN-PAYOFF",
+        "current_decomposition_status": "reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs",
+        "expected_required_mtu_ids": [
+          "A81",
+          "A96"
+        ],
+        "expected_partial_anchor_mtu_ids": [],
+        "expected_excluded_historical_mtu_ids": [],
+        "expected_answer_form_mtu_ids": [
+          "A96"
+        ],
+        "expected_procedure_unit_ids": [
+          "A81",
+          "A96"
+        ],
+        "expected_partial_procedure_anchor_mtu_ids": [],
+        "expected_forbidden_mtu_ids": [
+          "F12"
+        ],
+        "expected_route_tags": [
+          "calculation",
+          "ultimatum_game",
+          "margin_payoff",
+          "marginal_cost_subtraction",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "expected_missing_operation_expectations": [
+          "No live MTU exactly covers accepted price less marginal cost inside an ultimatum-game decision tree."
+        ],
+        "expected_safe_interim_action": "Keep A81/A96 as full-fit wrappers, F12 forbidden, require marginal-cost subtraction, and keep the margin-payoff operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "margin_payoff",
+          "marginal_cost_subtraction"
+        ],
+        "expected_candidate_decisions_sha256": "9e64014b7df8299eef2f3cf5741019ec3fc7936c113add0191179aa1b50e5062",
+        "expected_regression_contract": [
+          {
+            "key": "responder_margin_cost_subtraction",
+            "value": "cost_subtraction_required",
+            "defect_class": "operation_registry_need"
+          }
+        ],
+        "source_locator_sha256": "aff020484d18d2f167815813975bea234afc6da41a6554125b59b5b08129b4ea",
+        "source_completeness_sha256": "6ca6643d3192858f83395ac2685e30708fc6929381c7aba6b7205ca885061a19",
+        "mtu_objects": [
+          {
+            "id": "A81",
+            "role": "full_fit",
+            "role_basis": "The operation must subtract the EUR 3,500 marginal cost from the accepted price; A81 and A96 do not replace that missing operation.",
+            "live_registry_sha256": "9ad230a4bde1f8480ab8a6466014a9b5c679f97fcbab8bfff5959d818da4cedf",
+            "semantic_snapshot": {
+              "id": "A81",
+              "name": "Bron gebruiken in een antwoord",
+              "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+                "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+                "Zeg wat die observatie economisch betekent.",
+                "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+                "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+              ]
+            }
+          },
+          {
+            "id": "A96",
+            "role": "full_fit",
+            "role_basis": "The operation must subtract the EUR 3,500 marginal cost from the accepted price; A81 and A96 do not replace that missing operation.",
+            "live_registry_sha256": "faac9162b9f2b9f63a15703216728aac3dd90ac6907dd0dd43c16fc75a61d96a",
+            "semantic_snapshot": {
+              "id": "A96",
+              "name": "Bereken-vraag beantwoorden",
+              "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+                "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+                "Vul de gegevens zichtbaar in met labels.",
+                "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+                "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+              ]
+            }
+          },
+          {
+            "id": "F12",
+            "role": "forbidden_over_trigger_guard",
+            "live_registry_sha256": "ef6e049770ea419eab6504e30863534b4e37255ad7e3f6c60b615c8732c8e7c4",
+            "semantic_snapshot": {
+              "id": "F12",
+              "name": "Nash-evenwicht in pay-off matrix",
+              "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
+                "Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling",
+                "Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht",
+                "Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen",
+                "Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken"
+              ]
+            }
+          }
+        ]
+      },
+      "historical_decomposition": {
+        "status": "preserved_for_audit_not_current_role_authority",
+        "required_mtu_ids": [
+          "A81",
+          "A96"
+        ],
+        "answer_form_mtu_ids": [
+          "A96"
+        ],
+        "procedure_unit_ids": [
+          "A81",
+          "A96"
+        ],
+        "forbidden_mtu_ids": [
+          "F12"
+        ],
+        "route_tags": [
+          "calculation",
+          "ultimatum_game",
+          "margin_payoff",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "historical_proof_required_to_close": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+        "historical_safe_interim_action": "Keep missing_mtu_expected true and keep F12 forbidden.",
+        "source_sha256": "4411c23425834e384ab38bf2d8ae9ea976e1216f82e8929f0d048149c6922fc9"
+      },
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve an operation-registry entry or reviewed-equivalent rule for ultimatum-game margin payoff arithmetic.",
+        "safe_interim_action_at_source_time": "Keep missing_mtu_expected true and keep F12 forbidden.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      }
+    },
+    {
+      "operation_id": "h7-vw23-2-q20-game-tree-nash",
+      "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+      "candidate_packet_id": "H7-CAND-OP-GAME-TREE-NASH-BACKWARD-COMPARISON",
+      "blocker_id": "H7-BLOCKER-OP-GAME-TREE-NASH",
+      "adjudication_status": "prepared_for_human_protected_canonical_adjudication_not_executed",
+      "source_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision_family": "operation_registry_governance",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "operation_registry_need",
+      "question_word": "leg_uit_dat",
+      "answer_model_summary": "The official model compares payoffs in a game tree, not a simple matrix.",
+      "requested_human_decision": "Approve a protected operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
+      "permissible_owner_decisions": [
+        "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
+        "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
+        "REJECT_OR_RETURN_FOR_EVIDENCE_REPAIR"
+      ],
+      "non_authorized_in_this_bundle": [
+        "execution",
+        "protected_reference_mutation",
+        "operation_registry_mutation",
+        "canonical_mtu_mutation",
+        "candidate_write",
+        "lesson_output",
+        "h7_closure",
+        "product_route_readiness",
+        "student_product_use"
+      ],
+      "proposed_non_mutating_decision": "operation_registry_candidate_needed",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81/A97 as full-fit wrappers, F12 as a partial matrix-only concept anchor, and the sequential game-tree operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "game_tree",
+        "sequential_payoff_comparison",
+        "matrix_shortcut_guard"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw23-2-q20-game-tree-nash:missing-operation-1",
+          "expectation": "No live MTU exactly covers sequential game-tree payoff comparison; F12 is a matrix-only partial concept anchor.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
+      "required_mtu_ids": [
+        "A81",
+        "A97"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "A97",
+        "F12"
+      ],
+      "partial_anchor_mtu_ids": [
+        "F12"
+      ],
+      "excluded_historical_mtu_ids": [],
+      "answer_form_mtu_ids": [
+        "A97"
+      ],
+      "procedure_mtu_ids": [
+        "A81",
+        "A97"
+      ],
+      "partial_procedure_anchor_mtu_ids": [
+        "F12"
+      ],
+      "forbidden_mtu_ids": [],
+      "route_tags": [
+        "game_theory",
+        "game_tree",
+        "sequential_payoff_comparison",
+        "nash_equilibrium",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "matrix_shortcut_guard"
+      ],
+      "missing_operation_expectations": [
+        "No live MTU exactly covers sequential game-tree payoff comparison; F12 is a matrix-only partial concept anchor."
+      ],
+      "adjudication_correction_basis": "F12 is retained only as a partial Nash anchor because its procedure is explicitly matrix based.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-23-2-o:opgave-4:question-20"
+      ],
+      "misconception_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q20_MATRIX_SHORTCUT_MISREADS_GAME_TREE"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+          "source_locator": {
+            "exam": "vw-1022-a-23-2-o",
+            "opgave_num": 4,
+            "question_num": 20,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+            "prompt_page_start": 9,
+            "prompt_page_end": 10,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+            "correction_page_start": 11,
+            "correction_page_end": 11,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-09-09.png",
+          "rendered_png_sha256": "bf769fc0f821173b260172f6308cbe963432cdf25504e5da2bf5a6343c0d111e"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-o.pdf",
+          "source_pdf_sha256": "5d54e348b3360edaec50a6129d24fb8e58ca446ebe1f2c2e5e6a23e01137733b",
+          "page_number": 10,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-prompt-10-10.png",
+          "rendered_png_sha256": "c739b184b21efd344e82083ab29766c42888f32623cb2227ed04ec8148c7dec5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+          "source_pdf_sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-23-2-o-q20-correction-11-11.png",
+          "rendered_png_sha256": "f0b01082dbde37edfc31020abaf7fa5561c86dd4675551366dde748fe2a26d24"
+        }
+      ],
+      "source_completeness": {
+        "completeness_status": "required_repository_pages_verified",
+        "supplemental_pages": [],
+        "correction_model_semantic_pages": [
+          {
+            "source_pdf_path": "references/external/exams/vw-1022-a-23-2-c.pdf",
+            "page_number": 11,
+            "required_text_patterns": [
+              "104 > 100",
+              "Nash-evenwicht"
+            ],
+            "source_pdf_sha256": "5e1ce21751e52f760c5dfe2882afe91e06717219c6afbf036dadd2797f3b36ba",
+            "extracted_text_sha256": "2298f4cb05679214cb9c7ca1951ff3d3d13ee2a658bef5727468bd9bc307b10d",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "unavailable_sources": []
+      },
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q20-matrix-shortcut",
+        "expected_failure_defect_class": "operation_registry_need",
+        "mutation": "Close q20 using only F12 matrix procedure text.",
+        "guard": "Game-tree payoff comparison cannot be reduced to matrix cell marking."
+      },
+      "regression_contract": {
+        "game_tree_reasoning_mode": "backward_induction_required"
+      },
+      "semantic_binding": {
+        "blocker_id": "H7-BLOCKER-OP-GAME-TREE-NASH",
+        "official_evidence_operation_id": "h7-vw23-2-q20-game-tree-nash",
+        "manifest_record_id": "vw-1022-a-23-2-o:opgave-4:question-20",
+        "candidate_packet_id": "H7-CAND-OP-GAME-TREE-NASH-BACKWARD-COMPARISON",
+        "current_decomposition_status": "reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs",
+        "expected_required_mtu_ids": [
+          "A81",
+          "A97"
+        ],
+        "expected_partial_anchor_mtu_ids": [
+          "F12"
+        ],
+        "expected_excluded_historical_mtu_ids": [],
+        "expected_answer_form_mtu_ids": [
+          "A97"
+        ],
+        "expected_procedure_unit_ids": [
+          "A81",
+          "A97"
+        ],
+        "expected_partial_procedure_anchor_mtu_ids": [
+          "F12"
+        ],
+        "expected_forbidden_mtu_ids": [],
+        "expected_route_tags": [
+          "game_theory",
+          "game_tree",
+          "sequential_payoff_comparison",
+          "nash_equilibrium",
+          "source_reading",
+          "answer_form",
+          "procedure",
+          "matrix_shortcut_guard"
+        ],
+        "expected_missing_operation_expectations": [
+          "No live MTU exactly covers sequential game-tree payoff comparison; F12 is a matrix-only partial concept anchor."
+        ],
+        "expected_safe_interim_action": "Keep A81/A97 as full-fit wrappers, F12 as a partial matrix-only concept anchor, and the sequential game-tree operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "game_tree",
+          "sequential_payoff_comparison",
+          "matrix_shortcut_guard"
+        ],
+        "expected_candidate_decisions_sha256": "8518be97a945336f420af45ea407d57dace5d6c2db661709663259f9d1288faf",
+        "expected_regression_contract": [
+          {
+            "key": "game_tree_reasoning_mode",
+            "value": "backward_induction_required",
+            "defect_class": "operation_registry_need"
+          }
+        ],
+        "source_locator_sha256": "e5e2ef621d29335f079d83828ee0f28b0ea951aae9fab118939791fbd64eb62d",
+        "source_completeness_sha256": "e5f034cb168a570363fbe4ead6f3fdba6f2d3472d1ffef47f5758d4e57a6749e",
+        "mtu_objects": [
+          {
+            "id": "A81",
+            "role": "full_fit",
+            "role_basis": "F12 is retained only as a partial Nash anchor because its procedure is explicitly matrix based.",
+            "live_registry_sha256": "9ad230a4bde1f8480ab8a6466014a9b5c679f97fcbab8bfff5959d818da4cedf",
+            "semantic_snapshot": {
+              "id": "A81",
+              "name": "Bron gebruiken in een antwoord",
+              "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+                "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+                "Zeg wat die observatie economisch betekent.",
+                "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+                "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+              ]
+            }
+          },
+          {
+            "id": "A97",
+            "role": "full_fit",
+            "role_basis": "F12 is retained only as a partial Nash anchor because its procedure is explicitly matrix based.",
+            "live_registry_sha256": "60232be3fd4cc9de1bbdc8975056e40f46416387b7f0d23632277a5c7af7fa98",
+            "semantic_snapshot": {
+              "id": "A97",
+              "name": "Leg-uit-dat antwoord opbouwen",
+              "kern": "Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Neem de conclusie uit de vraag over als eindpunt van je antwoord.",
+                "Bepaal welke economische oorzaak of gegeven in de context het startpunt is.",
+                "Schrijf de eerste causale schakel met het juiste begrip of mechanisme.",
+                "Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.",
+                "Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering."
+              ]
+            }
+          },
+          {
+            "id": "F12",
+            "role": "partial_anchor_only",
+            "role_basis": "F12 is retained only as a partial Nash anchor because its procedure is explicitly matrix based.",
+            "live_registry_sha256": "ef6e049770ea419eab6504e30863534b4e37255ad7e3f6c60b615c8732c8e7c4",
+            "semantic_snapshot": {
+              "id": "F12",
+              "name": "Nash-evenwicht in pay-off matrix",
+              "kern": "Bepaal het Nash-evenwicht in een pay-off matrix: de uitkomst waarbij geen van beide spelers zijn strategie wil veranderen gegeven de keuze van de ander.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Markeer voor speler 1 per kolom (strategie van speler 2) de hoogste uitbetaling",
+                "Markeer voor speler 2 per rij (strategie van speler 1) de hoogste uitbetaling",
+                "Zoek de cel(len) waarin beide uitbetalingen gemarkeerd zijn: dit is het Nash-evenwicht",
+                "Controleer of er meerdere Nash-evenwichten zijn of geen in zuivere strategieen",
+                "Beschrijf in woorden waarom geen van beide spelers eenzijdig wil afwijken"
+              ]
+            }
+          }
+        ]
+      },
+      "historical_decomposition": {
+        "status": "preserved_for_audit_not_current_role_authority",
+        "required_mtu_ids": [
+          "F12",
+          "A81",
+          "A97"
+        ],
+        "answer_form_mtu_ids": [
+          "A97"
+        ],
+        "procedure_unit_ids": [
+          "F12",
+          "A81",
+          "A97"
+        ],
+        "forbidden_mtu_ids": [
+          "A15",
+          "F04"
+        ],
+        "route_tags": [
+          "game_theory",
+          "game_tree",
+          "nash_equilibrium",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "historical_proof_required_to_close": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+        "historical_safe_interim_action": "Keep review_required and keep matrix-shortcut misconception guard.",
+        "source_sha256": "8345ad54cd9b8d337aed8a878272655f31dd7573d3e900486eac2d0dbbe8a5ea"
+      },
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a game-tree Nash/backward-comparison operation or reviewed-equivalent rule that explicitly distinguishes tree reasoning from matrix marking.",
+        "safe_interim_action_at_source_time": "Keep review_required and keep matrix-shortcut misconception guard.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      }
+    },
+    {
+      "operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+      "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+      "candidate_packet_id": "H7-CAND-OP-FIXED-VARIABLE-CURRENCY-INSURANCE-COST-BENEFIT",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-INSURANCE-COST-BENEFIT",
+      "adjudication_status": "prepared_for_human_protected_canonical_adjudication_not_executed",
+      "source_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision_family": "procedure_or_operation_registry_governance",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "procedure_fit_gap",
+      "question_word": "bereken",
+      "answer_model_summary": "Insurance cost is subtracted from the avoided loss to determine the net benefit.",
+      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 1 enumerated missing-operation expectation(s) require separate disposition.",
+      "permissible_owner_decisions": [
+        "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
+        "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
+        "REJECT_OR_RETURN_FOR_EVIDENCE_REPAIR"
+      ],
+      "non_authorized_in_this_bundle": [
+        "execution",
+        "protected_reference_mutation",
+        "operation_registry_mutation",
+        "canonical_mtu_mutation",
+        "candidate_write",
+        "lesson_output",
+        "h7_closure",
+        "product_route_readiness",
+        "student_product_use"
+      ],
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "proof_required_to_close": "Record an explicit later owner decision for all 1 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep H24/A88/A81/A96 as full-fit supports, G11/G12 as partial anchors only, A38 excluded, and the six-month composite cost-benefit operation explicitly held.",
+      "safe_interim_required_route_tags": [
+        "monthly_variable_premium",
+        "six_month_scaling",
+        "cost_benefit"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw24-1-q17-insurance-cost-benefit:missing-operation-1",
+          "expectation": "No live MTU exactly covers fixed plus monthly currency-insurance cost, six-month scaling, avoided exchange-rate loss, and net-benefit comparison as one operation.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
+      "required_mtu_ids": [
+        "H24",
+        "A88",
+        "A81",
+        "A96"
+      ],
+      "mapped_mtu_ids": [
+        "H24",
+        "A88",
+        "A81",
+        "A96",
+        "G11",
+        "G12"
+      ],
+      "partial_anchor_mtu_ids": [
+        "G11",
+        "G12"
+      ],
+      "excluded_historical_mtu_ids": [
+        "A38"
+      ],
+      "answer_form_mtu_ids": [
+        "A96"
+      ],
+      "procedure_mtu_ids": [
+        "H24",
+        "A88",
+        "A81",
+        "A96"
+      ],
+      "partial_procedure_anchor_mtu_ids": [
+        "G12"
+      ],
+      "forbidden_mtu_ids": [
+        "A15"
+      ],
+      "route_tags": [
+        "calculation",
+        "insurance_cost",
+        "currency_risk",
+        "currency_conversion",
+        "fixed_premium",
+        "monthly_variable_premium",
+        "six_month_scaling",
+        "cost_benefit",
+        "source_reading",
+        "answer_form",
+        "scaling",
+        "procedure"
+      ],
+      "missing_operation_expectations": [
+        "No live MTU exactly covers fixed plus monthly currency-insurance cost, six-month scaling, avoided exchange-rate loss, and net-benefit comparison as one operation."
+      ],
+      "adjudication_correction_basis": "A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-1-o:opgave-3:question-17"
+      ],
+      "misconception_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q17_PREMIUM_MONTH_FACTOR_OMITTED"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+          "source_locator": {
+            "exam": "vw-1022-a-24-1-o",
+            "opgave_num": 3,
+            "question_num": 17,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+            "correction_page_start": 11,
+            "correction_page_end": 11,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-07-07.png",
+          "rendered_png_sha256": "28aebd8aff85cf7ed477aee445e05f29d421fae3d9900c8160b1b4ef89e9b7bf"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+          "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-prompt-08-08.png",
+          "rendered_png_sha256": "3d006a5bc381c5d9bbe8d628d65283ca84a2176d055764ae3189c73b267307f1"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+          "source_pdf_sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+          "page_number": 11,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-1-o-q17-correction-11-11.png",
+          "rendered_png_sha256": "57d593d7b91bb589b254c88fea484d12d83c34febd1c96a018f7bee22caacf91"
+        }
+      ],
+      "source_completeness": {
+        "completeness_status": "required_repository_pages_verified",
+        "supplemental_pages": [
+          {
+            "role": "table_1_fixed_and_monthly_premium_terms",
+            "source_pdf_path": "references/external/exams/vw-1022-a-24-1-o.pdf",
+            "page_number": 6,
+            "required_text_patterns": [
+              "vaste premie van 0,5%",
+              "0,25% per",
+              "maand"
+            ],
+            "source_pdf_sha256": "4239099731dec0aac021d0377602a71f11be5450590c278cc864d7650090686f",
+            "extracted_text_sha256": "ce2a2da45694566e02b24f7c583b921248f2262d9c7af5581d140bd45a1c8b2f",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "correction_model_semantic_pages": [
+          {
+            "source_pdf_path": "references/external/exams/vw-1022-a-24-1-c.pdf",
+            "page_number": 11,
+            "required_text_patterns": [
+              "0,0025 x 6",
+              "515.625",
+              "275.625"
+            ],
+            "source_pdf_sha256": "faad3d1db469c529834e11288d99d88e0193b4a435261496863a57215373c70f",
+            "extracted_text_sha256": "9318e2d4c9a811b8d939ac1628afe72434516bed3ee509782d89308c4c4d056d",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "unavailable_sources": []
+      },
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q17-premium-month-factor-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Calculate only the fixed insurance cost and omit monthly variable cost.",
+        "guard": "Procedure closure must include all fixed/monthly insurance cost components before net benefit."
+      },
+      "regression_contract": {
+        "premium_annualization": "month_factor_required"
+      },
+      "semantic_binding": {
+        "blocker_id": "H7-BLOCKER-PROCEDURE-INSURANCE-COST-BENEFIT",
+        "official_evidence_operation_id": "h7-vw24-1-q17-insurance-cost-benefit",
+        "manifest_record_id": "vw-1022-a-24-1-o:opgave-3:question-17",
+        "candidate_packet_id": "H7-CAND-OP-FIXED-VARIABLE-CURRENCY-INSURANCE-COST-BENEFIT",
+        "current_decomposition_status": "reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs",
+        "expected_required_mtu_ids": [
+          "H24",
+          "A88",
+          "A81",
+          "A96"
+        ],
+        "expected_partial_anchor_mtu_ids": [
+          "G11",
+          "G12"
+        ],
+        "expected_excluded_historical_mtu_ids": [
+          "A38"
+        ],
+        "expected_answer_form_mtu_ids": [
+          "A96"
+        ],
+        "expected_procedure_unit_ids": [
+          "H24",
+          "A88",
+          "A81",
+          "A96"
+        ],
+        "expected_partial_procedure_anchor_mtu_ids": [
+          "G12"
+        ],
+        "expected_forbidden_mtu_ids": [
+          "A15"
+        ],
+        "expected_route_tags": [
+          "calculation",
+          "insurance_cost",
+          "currency_risk",
+          "currency_conversion",
+          "fixed_premium",
+          "monthly_variable_premium",
+          "six_month_scaling",
+          "cost_benefit",
+          "source_reading",
+          "answer_form",
+          "scaling",
+          "procedure"
+        ],
+        "expected_missing_operation_expectations": [
+          "No live MTU exactly covers fixed plus monthly currency-insurance cost, six-month scaling, avoided exchange-rate loss, and net-benefit comparison as one operation."
+        ],
+        "expected_safe_interim_action": "Keep H24/A88/A81/A96 as full-fit supports, G11/G12 as partial anchors only, A38 excluded, and the six-month composite cost-benefit operation explicitly held.",
+        "expected_safe_interim_required_route_tags": [
+          "monthly_variable_premium",
+          "six_month_scaling",
+          "cost_benefit"
+        ],
+        "expected_candidate_decisions_sha256": "cd77af60b684e8a45062b0600dc8bbce562ba7cdd71a07fa26a5866600918892",
+        "expected_regression_contract": [
+          {
+            "key": "premium_annualization",
+            "value": "month_factor_required",
+            "defect_class": "procedure_fit_gap"
+          }
+        ],
+        "source_locator_sha256": "3cd841e43a39c5e67030883abaa238f56aac4a3ba345c840c9d0a62fee3cec30",
+        "source_completeness_sha256": "3be20f902de5c4ce6f192e87ef2aa1e2cab4946e7dca6ae2ed0a9467f25e89c3",
+        "mtu_objects": [
+          {
+            "id": "H24",
+            "role": "full_fit",
+            "role_basis": "A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.",
+            "live_registry_sha256": "ea6110b9c0a43bc9221788c8c76901f74a4b5faa4a651cab2741c7c4741075c0",
+            "semantic_snapshot": {
+              "id": "H24",
+              "name": "Wisselkoers en depreciatie",
+              "kern": "Bereken wisselkoerseffecten van depreciatie en leg uit hoe deze reële inkomens beïnvloeden.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Noteer de oude wisselkoers (prijs buitenlandse valuta in binnenlandse, bv. €/$)",
+                "Noteer de nieuwe wisselkoers na depreciatie",
+                "Bereken procentuele depreciatie = (nieuw − oud) / oud × 100%",
+                "Reken een importprijs of exportopbrengst om naar binnenlandse valuta bij beide koersen",
+                "Interpreteer: depreciatie maakt import duurder (reële koopkracht daalt) en export goedkoper voor buitenlandse kopers"
+              ]
+            }
+          },
+          {
+            "id": "A88",
+            "role": "full_fit",
+            "role_basis": "A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.",
+            "live_registry_sha256": "049294691f6ae3ed42cfb80a1714517031c8e9db939bd7e0fd3807180e77862f",
+            "semantic_snapshot": {
+              "id": "A88",
+              "name": "Schaalfactoren in examencijfers toepassen",
+              "kern": "Gebruik schaalvermeldingen zoals x 1.000 correct in formules, tabellen, grafieklabels en eindantwoorden.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Zoek of waarden een schaalvermelding hebben, zoals x 1.000 of mln.",
+                "Noteer of je rekent in weergegeven eenheden of werkelijke eenheden.",
+                "Pas de schaalfactor consequent toe in formules en tussenstappen.",
+                "Geef het eindantwoord met de juiste eenheid en eventuele vermenigvuldigingsfactor."
+              ]
+            }
+          },
+          {
+            "id": "A81",
+            "role": "full_fit",
+            "role_basis": "A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.",
+            "live_registry_sha256": "9ad230a4bde1f8480ab8a6466014a9b5c679f97fcbab8bfff5959d818da4cedf",
+            "semantic_snapshot": {
+              "id": "A81",
+              "name": "Bron gebruiken in een antwoord",
+              "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+                "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+                "Zeg wat die observatie economisch betekent.",
+                "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+                "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+              ]
+            }
+          },
+          {
+            "id": "A96",
+            "role": "full_fit",
+            "role_basis": "A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.",
+            "live_registry_sha256": "faac9162b9f2b9f63a15703216728aac3dd90ac6907dd0dd43c16fc75a61d96a",
+            "semantic_snapshot": {
+              "id": "A96",
+              "name": "Bereken-vraag beantwoorden",
+              "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+                "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+                "Vul de gegevens zichtbaar in met labels.",
+                "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+                "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+              ]
+            }
+          },
+          {
+            "id": "G11",
+            "role": "partial_anchor_only",
+            "role_basis": "A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.",
+            "live_registry_sha256": "014efc257c34a1dfa84fc6422fc982c7cd021ee85544868d75773e2bdc1592f3",
+            "semantic_snapshot": {
+              "id": "G11",
+              "name": "Wisselkoersrisico bij internationale handel",
+              "kern": "Bij betalingen in vreemde valuta leidt een ongunstige wisselkoersverandering tussen contractmoment en betalingsmoment tot lagere reële opbrengsten voor de exporteur of hogere kosten voor de importeur.",
+              "mastery_target": "understand",
+              "procedure": []
+            }
+          },
+          {
+            "id": "G12",
+            "role": "partial_anchor_only",
+            "role_basis": "A38 is inapplicable. G12 is only a partial insurance anchor; H24/A88/A81/A96 cover conversion, scale, source use, and answer form without closing the composite procedure.",
+            "live_registry_sha256": "cbec83334e0c08bfe550650547e01e90c792907aa146f979621fca7f12183a46",
+            "semantic_snapshot": {
+              "id": "G12",
+              "name": "Verzekeringspremie berekenen uit verwachte schade",
+              "kern": "Bereken een verzekeringspremie als verwachte schade (kans × schadebedrag) plus opslag voor administratiekosten en risico-/winstmarge; interpreteer verschillen in premie tussen risicogroepen.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Bepaal de kans p op schade (per verzekerde per periode).",
+                "Bepaal het te verzekeren schadebedrag S (vaste claim of gemiddelde claim).",
+                "Bereken de verwachte schade = p × S.",
+                "Voeg de opslag toe (administratiekosten, risico-marge, winst) om de premie te krijgen.",
+                "Controleer: bij een homogene risicogroep moet de totaalpremie de totale verwachte schade plus opslag dekken; bij een gemengde groep leidt één uniforme premie tot solidariteit tussen hoge- en lage-risicoverzekerden."
+              ]
+            }
+          },
+          {
+            "id": "A15",
+            "role": "forbidden_over_trigger_guard",
+            "live_registry_sha256": "eb64a4928068eb55059a08f189d54bc0e7eefdc845e8c957c37675f8e836274f",
+            "semantic_snapshot": {
+              "id": "A15",
+              "name": "Prijselasticiteit van de vraag",
+              "kern": "Bereken de prijselasticiteit: Ev = %ΔQv / %ΔP. Bepaal of de vraag elastisch of inelastisch is.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Noteer de oude en nieuwe waarden van P en Q.",
+                "Bereken %ΔQv = (ΔQv / Qv_oud) × 100% en %ΔP = (ΔP / P_oud) × 100% met correct teken.",
+                "Bereken Ev = %ΔQv / %ΔP.",
+                "Interpreteer: |Ev| > 1 = elastisch, |Ev| < 1 = inelastisch, |Ev| = 1 = unitair.",
+                "Controleer het teken: Ev is bij een normale vraag altijd negatief."
+              ]
+            }
+          }
+        ]
+      },
+      "historical_decomposition": {
+        "status": "preserved_for_audit_not_current_role_authority",
+        "required_mtu_ids": [
+          "A38",
+          "G12",
+          "A81",
+          "A96"
+        ],
+        "answer_form_mtu_ids": [
+          "A96"
+        ],
+        "procedure_unit_ids": [
+          "A38",
+          "G12",
+          "A81",
+          "A96"
+        ],
+        "forbidden_mtu_ids": [
+          "A15"
+        ],
+        "route_tags": [
+          "calculation",
+          "insurance_cost",
+          "currency_risk",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "historical_proof_required_to_close": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+        "historical_safe_interim_action": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
+        "source_sha256": "31e4f74b17fc8e4a6df895493d244820708a7ce4dd782d29292a0bdd37770038"
+      },
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a fixed/variable currency-insurance cost-benefit operation or reviewed-equivalent procedure rule.",
+        "safe_interim_action_at_source_time": "Keep G12 mapped as partial insurance anchor but keep procedure_fit_gap.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      }
+    },
+    {
+      "operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-FIRST",
+      "adjudication_status": "prepared_for_human_protected_canonical_adjudication_not_executed",
+      "source_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision_family": "procedure_or_operation_registry_governance",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "procedure_fit_gap",
+      "question_word": "teken",
+      "answer_model_summary": "GA1 and MB1 shift according to expected-minus-realized inflation and a one-point real-rate reduction.",
+      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 2 enumerated missing-operation expectation(s) require separate disposition.",
+      "permissible_owner_decisions": [
+        "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
+        "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
+        "REJECT_OR_RETURN_FOR_EVIDENCE_REPAIR"
+      ],
+      "non_authorized_in_this_bundle": [
+        "execution",
+        "protected_reference_mutation",
+        "operation_registry_mutation",
+        "canonical_mtu_mutation",
+        "candidate_write",
+        "lesson_output",
+        "h7_closure",
+        "product_route_readiness",
+        "student_product_use"
+      ],
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "proof_required_to_close": "Record an explicit later owner decision for all 2 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and require first_period_sequence plus one_point_real_rate_step while the operation remains held.",
+      "safe_interim_required_route_tags": [
+        "first_period_sequence",
+        "one_point_real_rate_step",
+        "graph_answer_form_gap",
+        "procedure_gap"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-first-adjustment:missing-operation-1",
+          "expectation": "No live answer-form MTU exactly covers a multi-period IS-MB-GA drawing.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        },
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-first-adjustment:missing-operation-2",
+          "expectation": "No live procedure exactly covers the first-period GA1/MB1 sequence from expected-minus-realized inflation and a one-point real-rate reduction.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
+      "required_mtu_ids": [
+        "A81"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "I07",
+        "A42"
+      ],
+      "partial_anchor_mtu_ids": [
+        "I07",
+        "A42"
+      ],
+      "excluded_historical_mtu_ids": [
+        "A40"
+      ],
+      "answer_form_mtu_ids": [],
+      "procedure_mtu_ids": [],
+      "partial_procedure_anchor_mtu_ids": [
+        "I07",
+        "A42"
+      ],
+      "forbidden_mtu_ids": [
+        "A45"
+      ],
+      "route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "time_sequence",
+        "first_period_sequence",
+        "one_point_real_rate_step",
+        "source_reading",
+        "graph_answer_form_gap",
+        "procedure_gap"
+      ],
+      "missing_operation_expectations": [
+        "No live answer-form MTU exactly covers a multi-period IS-MB-GA drawing.",
+        "No live procedure exactly covers the first-period GA1/MB1 sequence from expected-minus-realized inflation and a one-point real-rate reduction."
+      ],
+      "adjudication_correction_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 are partial graph anchors, not a complete period-specific sequence or answer form.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "misconception_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_MACRO_CURVE_SEQUENCE_OR_SCALE"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        },
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "f577e33564069eeab0e7691d65ac25dbbb0a20e5eac5d8865a5b36fea36fb574"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+          "rendered_png_sha256": "dabb49c1a6618281b863cb7a1e33fefddb343f6562a71dac0ec05876806cf7a5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+          "source_pdf_sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "8538534d4d278741927acbcad2de4c38de35407337d734ed3ae54bec6f23f5e2"
+        }
+      ],
+      "source_completeness": {
+        "completeness_status": "available_pages_verified_with_explicit_blocking_source_annex_limitation",
+        "supplemental_pages": [
+          {
+            "role": "starting_is_mb_ga_figure_and_low_conjuncture_state",
+            "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "page_number": 6,
+            "required_text_patterns": [
+              "Beleidsdilemma",
+              "IS-MB-GA-model",
+              "laagconjunctuur"
+            ],
+            "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+            "extracted_text_sha256": "7f0036c631070b9764c857a2422b224c3e17b9c2bed90a543d70d9c73e3f3886",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "correction_model_semantic_pages": [
+          {
+            "source_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "page_number": 9,
+            "required_text_patterns": [
+              "GA2 en MB2",
+              "r = 2%",
+              "3,4%"
+            ],
+            "source_pdf_sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+            "extracted_text_sha256": "e5969d3837ee9cff235f1d17a0b2099a663d759272c06672d2286b38208396f0",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "unavailable_sources": [
+          {
+            "source_label": "question 15 official uitwerkbijlage graph and final r/pi table",
+            "repository_file_candidates": [
+              "references/external/exams/vw-1022-a-24-2-u.pdf"
+            ],
+            "status": "unavailable_in_repository_explicit_blocking_limitation",
+            "impact": "The starting graph and correction model are present, but the official response-sheet geometry and table cannot be visually re-reviewed; later execution must remain held or obtain authoritative uitwerkbijlage evidence.",
+            "discovered_paths": [],
+            "checked_status": "candidate_paths_absent_at_build_time"
+          }
+        ]
+      },
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-macro-one-step-only",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw only one generic shift and skip the first-period sequence evidence.",
+        "guard": "The first GA/MB adjustment cannot be collapsed into a generic graph-shift MTU."
+      },
+      "regression_contract": {
+        "first_period_ga_mb_sequence": "period_specific_sequence_required"
+      },
+      "semantic_binding": {
+        "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-FIRST",
+        "official_evidence_operation_id": "h7-vw24-2-q15-ga-mb-first-adjustment",
+        "manifest_record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+        "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+        "current_decomposition_status": "reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs",
+        "expected_required_mtu_ids": [
+          "A81"
+        ],
+        "expected_partial_anchor_mtu_ids": [
+          "I07",
+          "A42"
+        ],
+        "expected_excluded_historical_mtu_ids": [
+          "A40"
+        ],
+        "expected_answer_form_mtu_ids": [],
+        "expected_procedure_unit_ids": [],
+        "expected_partial_procedure_anchor_mtu_ids": [
+          "I07",
+          "A42"
+        ],
+        "expected_forbidden_mtu_ids": [
+          "A45"
+        ],
+        "expected_route_tags": [
+          "macro_graph_mutation",
+          "is_mb_ga",
+          "ga_shift",
+          "mb_shift",
+          "time_sequence",
+          "first_period_sequence",
+          "one_point_real_rate_step",
+          "source_reading",
+          "graph_answer_form_gap",
+          "procedure_gap"
+        ],
+        "expected_missing_operation_expectations": [
+          "No live answer-form MTU exactly covers a multi-period IS-MB-GA drawing.",
+          "No live procedure exactly covers the first-period GA1/MB1 sequence from expected-minus-realized inflation and a one-point real-rate reduction."
+        ],
+        "expected_safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and require first_period_sequence plus one_point_real_rate_step while the operation remains held.",
+        "expected_safe_interim_required_route_tags": [
+          "first_period_sequence",
+          "one_point_real_rate_step",
+          "graph_answer_form_gap",
+          "procedure_gap"
+        ],
+        "expected_candidate_decisions_sha256": "09519e5f0335c71920676d2aaf7bd88220752cf88bf86f2e485dadd70ddf9b40",
+        "expected_regression_contract": [
+          {
+            "key": "first_period_ga_mb_sequence",
+            "value": "period_specific_sequence_required",
+            "defect_class": "procedure_fit_gap"
+          }
+        ],
+        "source_locator_sha256": "d3e73f95ebf0594f9e62f349adc0b95ee1cf3f9c9cc4b3c7d5faa806d9c35d95",
+        "source_completeness_sha256": "d427c0f11b0811ebe1255f05f901921660cd8178624849e70d28e3787cf0b141",
+        "mtu_objects": [
+          {
+            "id": "A81",
+            "role": "full_fit",
+            "role_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 are partial graph anchors, not a complete period-specific sequence or answer form.",
+            "live_registry_sha256": "9ad230a4bde1f8480ab8a6466014a9b5c679f97fcbab8bfff5959d818da4cedf",
+            "semantic_snapshot": {
+              "id": "A81",
+              "name": "Bron gebruiken in een antwoord",
+              "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+                "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+                "Zeg wat die observatie economisch betekent.",
+                "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+                "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+              ]
+            }
+          },
+          {
+            "id": "I07",
+            "role": "partial_anchor_only",
+            "role_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 are partial graph anchors, not a complete period-specific sequence or answer form.",
+            "live_registry_sha256": "436fe1b8ffd57d3ebec773ee9dd08bc2cdbde53adb560480371f1f36d7f076c6",
+            "semantic_snapshot": {
+              "id": "I07",
+              "name": "IS-MB-GA-model: outputgap en inflatie",
+              "kern": "Analyseer met het IS-MB-GA-model hoe een schok via outputgap en inflatie doorwerkt op rente, bbp en prijsniveau.",
+              "mastery_target": "analyze",
+              "procedure": [
+                "Teken IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel) en GA-curve (π stijgend in outputgap Y − Y*). Label assen: r verticaal voor IS-MB, π verticaal voor GA.",
+                "Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y.",
+                "Bepaal welke curve verschuift door de schok (vraagschok → IS, aanbodschok → GA) en teken de verschuiving.",
+                "Lees het nieuwe snijpunt af: nieuwe Y, outputgap Y − Y*, nieuwe r en nieuwe π via de GA-curve.",
+                "Beschrijf de reactie van de centrale bank volgens de MB-regel (zie I05) en de terugkeer naar Y*."
+              ]
+            }
+          },
+          {
+            "id": "A42",
+            "role": "partial_anchor_only",
+            "role_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 are partial graph anchors, not a complete period-specific sequence or answer form.",
+            "live_registry_sha256": "dd0e8cdc3ad02996ebeb7e6f7d445a2728ceb25987d156f76e90cdf48d30a405",
+            "semantic_snapshot": {
+              "id": "A42",
+              "name": "Grafische verschuiving met voor-en-na pijlen",
+              "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Teken de oorspronkelijke curve, label duidelijk (D of S).",
+                "Teken de verschoven curve in een andere kleur of stippellijn, label als D' of S'.",
+                "Plaats pijlen bij twee representatieve punten op de oude curve die naar de nieuwe curve wijzen — pijlen horizontaal, want hoeveelheid bij gelijke prijs verandert.",
+                "Geef het oude en nieuwe evenwichtspunt aan (E en E')."
+              ]
+            }
+          },
+          {
+            "id": "A45",
+            "role": "forbidden_over_trigger_guard",
+            "live_registry_sha256": "b5bff4439061e238717cca411f2ac1f087aa05421a55b9bf3640d3d4b97b505d",
+            "semantic_snapshot": {
+              "id": "A45",
+              "name": "P-Q grafiek tekenen uit tabel",
+              "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Zet prijs op de verticale as en hoeveelheid op de horizontale as.",
+                "Kies een passende schaal op beide assen.",
+                "Plaats elk punt uit de tabel in de grafiek.",
+                "Verbind de punten alleen als de context een lijn of curve ondersteunt."
+              ]
+            }
+          }
+        ]
+      },
+      "historical_decomposition": {
+        "status": "preserved_for_audit_not_current_role_authority",
+        "required_mtu_ids": [
+          "I07",
+          "A42",
+          "A40",
+          "A81"
+        ],
+        "answer_form_mtu_ids": [
+          "A40"
+        ],
+        "procedure_unit_ids": [
+          "I07",
+          "A42",
+          "A40",
+          "A81"
+        ],
+        "forbidden_mtu_ids": [
+          "A45"
+        ],
+        "route_tags": [
+          "macro_graph_mutation",
+          "is_mb_ga",
+          "ga_shift",
+          "mb_shift",
+          "time_sequence",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "historical_proof_required_to_close": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+        "historical_safe_interim_action": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
+        "source_sha256": "97d438cbc1ed03540b6b6900f29020be6bd9009e923aab19d4f2e4d98d4284db"
+      },
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a multi-period IS-MB-GA sequence operation or reviewed-equivalent procedure rule.",
+        "safe_interim_action_at_source_time": "Keep I07/A42/A40/A81 mapped but keep procedure_fit_gap.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      }
+    },
+    {
+      "operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+      "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+      "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+      "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-SECOND",
+      "adjudication_status": "prepared_for_human_protected_canonical_adjudication_not_executed",
+      "source_route": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE",
+      "decision_family": "procedure_or_operation_registry_governance",
+      "source_prior_status": "review_required",
+      "source_prior_defect_class": "procedure_fit_gap",
+      "question_word": "teken",
+      "answer_model_summary": "GA2/MB2 plus final r and inflation values complete the official graph/table answer.",
+      "requested_human_decision": "Approve a protected procedure/operation-registry reviewed-equivalent rule in a later bounded execution bundle, or keep this operation held. All 2 enumerated missing-operation expectation(s) require separate disposition.",
+      "permissible_owner_decisions": [
+        "APPROVE_FOR_LATER_BOUNDED_PROTECTED_GOVERNANCE_EXECUTION",
+        "KEEP_HELD_REQUIRE_CANONICAL_OR_OPERATION_REGISTRY_MUTATION_PLAN",
+        "REJECT_OR_RETURN_FOR_EVIDENCE_REPAIR"
+      ],
+      "non_authorized_in_this_bundle": [
+        "execution",
+        "protected_reference_mutation",
+        "operation_registry_mutation",
+        "canonical_mtu_mutation",
+        "candidate_write",
+        "lesson_output",
+        "h7_closure",
+        "product_route_readiness",
+        "student_product_use"
+      ],
+      "proposed_non_mutating_decision": "procedure_or_operation_registry_candidate_needed",
+      "proof_required_to_close": "Record an explicit later owner decision for all 2 enumerated missing-operation expectation(s); payload integration alone supplies none of those decisions.",
+      "safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and retain final_r_pi_table_completion plus the graph/table answer-form gap while the operation remains held.",
+      "safe_interim_required_route_tags": [
+        "second_period_sequence",
+        "final_r_pi_table_completion",
+        "graph_and_table_answer_form_gap",
+        "procedure_gap"
+      ],
+      "candidate_decisions_required": [
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table:missing-operation-1",
+          "expectation": "No live answer-form MTU exactly covers the combined multi-period graph and final r/pi table.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        },
+        {
+          "decision_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table:missing-operation-2",
+          "expectation": "No live procedure exactly covers GA2/MB2 plus final real-rate and inflation completion.",
+          "owner_decision_required": "Approve a precisely bounded reviewed-equivalent route for later execution, require a governed mutation plan, or keep held."
+        }
+      ],
+      "required_mtu_ids": [
+        "A81"
+      ],
+      "mapped_mtu_ids": [
+        "A81",
+        "I07",
+        "A42"
+      ],
+      "partial_anchor_mtu_ids": [
+        "I07",
+        "A42"
+      ],
+      "excluded_historical_mtu_ids": [
+        "A40"
+      ],
+      "answer_form_mtu_ids": [],
+      "procedure_mtu_ids": [],
+      "partial_procedure_anchor_mtu_ids": [
+        "I07",
+        "A42"
+      ],
+      "forbidden_mtu_ids": [
+        "A45"
+      ],
+      "route_tags": [
+        "macro_graph_mutation",
+        "is_mb_ga",
+        "ga_shift",
+        "mb_shift",
+        "time_sequence",
+        "second_period_sequence",
+        "final_r_pi_table_completion",
+        "source_reading",
+        "graph_and_table_answer_form_gap",
+        "procedure_gap"
+      ],
+      "missing_operation_expectations": [
+        "No live answer-form MTU exactly covers the combined multi-period graph and final r/pi table.",
+        "No live procedure exactly covers GA2/MB2 plus final real-rate and inflation completion."
+      ],
+      "adjudication_correction_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 remain partial anchors; graph movement alone cannot satisfy the table-completion operation.",
+      "official_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1.json#vw-1022-a-24-2-o:opgave-3:question-15"
+      ],
+      "misconception_evidence_refs": [
+        "reports/mtu-hardening/mtu-h7-execution-benchmark-bundle-1.json#H7_MISCONCEPTION_Q15_FINAL_R_PI_OMITTED"
+      ],
+      "source_locators": [
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        },
+        {
+          "record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+          "source_locator": {
+            "exam": "vw-1022-a-24-2-o",
+            "opgave_num": 3,
+            "question_num": 15,
+            "prompt_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "prompt_page_start": 7,
+            "prompt_page_end": 8,
+            "correction_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "correction_page_start": 9,
+            "correction_page_end": 9,
+            "correction_page_detection": "pdftotext_layout_question_number_maximumscore"
+          }
+        }
+      ],
+      "rendered_prompt_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 7,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-07-07.png",
+          "rendered_png_sha256": "f577e33564069eeab0e7691d65ac25dbbb0a20e5eac5d8865a5b36fea36fb574"
+        },
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+          "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+          "page_number": 8,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-prompt-08-08.png",
+          "rendered_png_sha256": "dabb49c1a6618281b863cb7a1e33fefddb343f6562a71dac0ec05876806cf7a5"
+        }
+      ],
+      "rendered_correction_pages": [
+        {
+          "source_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+          "source_pdf_sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+          "page_number": 9,
+          "rendered_png_path": "reports/mtu-hardening/mtu-h7-diagnostic-evidence-manifest-1-evidence/vw-1022-a-24-2-o-q15-correction-09-09.png",
+          "rendered_png_sha256": "8538534d4d278741927acbcad2de4c38de35407337d734ed3ae54bec6f23f5e2"
+        }
+      ],
+      "source_completeness": {
+        "completeness_status": "available_pages_verified_with_explicit_blocking_source_annex_limitation",
+        "supplemental_pages": [
+          {
+            "role": "starting_is_mb_ga_figure_and_low_conjuncture_state",
+            "source_pdf_path": "references/external/exams/vw-1022-a-24-2-o.pdf",
+            "page_number": 6,
+            "required_text_patterns": [
+              "Beleidsdilemma",
+              "IS-MB-GA-model",
+              "laagconjunctuur"
+            ],
+            "source_pdf_sha256": "08a26f8deea66bf92b99817fdcc311792e08a4b8cfa79d62339a2fffd9a3d210",
+            "extracted_text_sha256": "7f0036c631070b9764c857a2422b224c3e17b9c2bed90a543d70d9c73e3f3886",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "correction_model_semantic_pages": [
+          {
+            "source_pdf_path": "references/external/exams/vw-1022-a-24-2-c.pdf",
+            "page_number": 9,
+            "required_text_patterns": [
+              "GA2 en MB2",
+              "r = 2%",
+              "3,4%"
+            ],
+            "source_pdf_sha256": "8981461d5c43d8b072c605273ab3d555ccf15270062cf3d6d98ef832cd693045",
+            "extracted_text_sha256": "e5969d3837ee9cff235f1d17a0b2099a663d759272c06672d2286b38208396f0",
+            "binding_status": "source_pdf_page_hash_and_required_text_verified"
+          }
+        ],
+        "unavailable_sources": [
+          {
+            "source_label": "question 15 official uitwerkbijlage graph and final r/pi table",
+            "repository_file_candidates": [
+              "references/external/exams/vw-1022-a-24-2-u.pdf"
+            ],
+            "status": "unavailable_in_repository_explicit_blocking_limitation",
+            "impact": "The starting graph and correction model are present, but the official response-sheet geometry and table cannot be visually re-reviewed; later execution must remain held or obtain authoritative uitwerkbijlage evidence.",
+            "discovered_paths": [],
+            "checked_status": "candidate_paths_absent_at_build_time"
+          }
+        ]
+      },
+      "negative_guard": {
+        "fixture_id": "h7-governance-negative-q15-final-r-pi-omitted",
+        "expected_failure_defect_class": "procedure_fit_gap",
+        "mutation": "Draw GA2/MB2 but omit final r and pi table values.",
+        "guard": "The graph-and-table operation must not close from graph movement alone."
+      },
+      "regression_contract": {
+        "final_r_pi_table_completion": "final_values_required"
+      },
+      "semantic_binding": {
+        "blocker_id": "H7-BLOCKER-PROCEDURE-IS-MB-GA-SEQUENCE-SECOND",
+        "official_evidence_operation_id": "h7-vw24-2-q15-ga-mb-second-adjustment-and-table",
+        "manifest_record_id": "vw-1022-a-24-2-o:opgave-3:question-15",
+        "candidate_packet_id": "H7-CAND-OP-MULTIPERIOD-IS-MB-GA-SEQUENCE",
+        "current_decomposition_status": "reviewed_current_adjudication_correction_over_historical_hash_pinned_inputs",
+        "expected_required_mtu_ids": [
+          "A81"
+        ],
+        "expected_partial_anchor_mtu_ids": [
+          "I07",
+          "A42"
+        ],
+        "expected_excluded_historical_mtu_ids": [
+          "A40"
+        ],
+        "expected_answer_form_mtu_ids": [],
+        "expected_procedure_unit_ids": [],
+        "expected_partial_procedure_anchor_mtu_ids": [
+          "I07",
+          "A42"
+        ],
+        "expected_forbidden_mtu_ids": [
+          "A45"
+        ],
+        "expected_route_tags": [
+          "macro_graph_mutation",
+          "is_mb_ga",
+          "ga_shift",
+          "mb_shift",
+          "time_sequence",
+          "second_period_sequence",
+          "final_r_pi_table_completion",
+          "source_reading",
+          "graph_and_table_answer_form_gap",
+          "procedure_gap"
+        ],
+        "expected_missing_operation_expectations": [
+          "No live answer-form MTU exactly covers the combined multi-period graph and final r/pi table.",
+          "No live procedure exactly covers GA2/MB2 plus final real-rate and inflation completion."
+        ],
+        "expected_safe_interim_action": "Keep A81 as full-fit source use, I07/A42 as partial anchors only, A40 excluded, and retain final_r_pi_table_completion plus the graph/table answer-form gap while the operation remains held.",
+        "expected_safe_interim_required_route_tags": [
+          "second_period_sequence",
+          "final_r_pi_table_completion",
+          "graph_and_table_answer_form_gap",
+          "procedure_gap"
+        ],
+        "expected_candidate_decisions_sha256": "29cc1029288c7aee1bfbfe9bc2998f6b9e3382e469758b522713937191f21835",
+        "expected_regression_contract": [
+          {
+            "key": "final_r_pi_table_completion",
+            "value": "final_values_required",
+            "defect_class": "procedure_fit_gap"
+          }
+        ],
+        "source_locator_sha256": "d3e73f95ebf0594f9e62f349adc0b95ee1cf3f9c9cc4b3c7d5faa806d9c35d95",
+        "source_completeness_sha256": "d427c0f11b0811ebe1255f05f901921660cd8178624849e70d28e3787cf0b141",
+        "mtu_objects": [
+          {
+            "id": "A81",
+            "role": "full_fit",
+            "role_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 remain partial anchors; graph movement alone cannot satisfy the table-completion operation.",
+            "live_registry_sha256": "9ad230a4bde1f8480ab8a6466014a9b5c679f97fcbab8bfff5959d818da4cedf",
+            "semantic_snapshot": {
+              "id": "A81",
+              "name": "Bron gebruiken in een antwoord",
+              "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+                "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+                "Zeg wat die observatie economisch betekent.",
+                "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+                "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+              ]
+            }
+          },
+          {
+            "id": "I07",
+            "role": "partial_anchor_only",
+            "role_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 remain partial anchors; graph movement alone cannot satisfy the table-completion operation.",
+            "live_registry_sha256": "436fe1b8ffd57d3ebec773ee9dd08bc2cdbde53adb560480371f1f36d7f076c6",
+            "semantic_snapshot": {
+              "id": "I07",
+              "name": "IS-MB-GA-model: outputgap en inflatie",
+              "kern": "Analyseer met het IS-MB-GA-model hoe een schok via outputgap en inflatie doorwerkt op rente, bbp en prijsniveau.",
+              "mastery_target": "analyze",
+              "procedure": [
+                "Teken IS-curve (Y dalend in reële rente r), MB-curve (beleidsregel) en GA-curve (π stijgend in outputgap Y − Y*). Label assen: r verticaal voor IS-MB, π verticaal voor GA.",
+                "Identificeer het beginevenwicht: snijpunt IS-MB bepaalt Y en r; GA bepaalt π bij die Y.",
+                "Bepaal welke curve verschuift door de schok (vraagschok → IS, aanbodschok → GA) en teken de verschuiving.",
+                "Lees het nieuwe snijpunt af: nieuwe Y, outputgap Y − Y*, nieuwe r en nieuwe π via de GA-curve.",
+                "Beschrijf de reactie van de centrale bank volgens de MB-regel (zie I05) en de terugkeer naar Y*."
+              ]
+            }
+          },
+          {
+            "id": "A42",
+            "role": "partial_anchor_only",
+            "role_basis": "A40 is a welfare-area shading MTU and is excluded. I07/A42 remain partial anchors; graph movement alone cannot satisfy the table-completion operation.",
+            "live_registry_sha256": "dd0e8cdc3ad02996ebeb7e6f7d445a2728ceb25987d156f76e90cdf48d30a405",
+            "semantic_snapshot": {
+              "id": "A42",
+              "name": "Grafische verschuiving met voor-en-na pijlen",
+              "kern": "Teken een grafische verschuiving (vraag- of aanbodcurve) met zowel de oude als de nieuwe curve, gelabeld D / D' of S / S', en geef de richting aan met pijlen tussen de oude en nieuwe positie.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Teken de oorspronkelijke curve, label duidelijk (D of S).",
+                "Teken de verschoven curve in een andere kleur of stippellijn, label als D' of S'.",
+                "Plaats pijlen bij twee representatieve punten op de oude curve die naar de nieuwe curve wijzen — pijlen horizontaal, want hoeveelheid bij gelijke prijs verandert.",
+                "Geef het oude en nieuwe evenwichtspunt aan (E en E')."
+              ]
+            }
+          },
+          {
+            "id": "A45",
+            "role": "forbidden_over_trigger_guard",
+            "live_registry_sha256": "b5bff4439061e238717cca411f2ac1f087aa05421a55b9bf3640d3d4b97b505d",
+            "semantic_snapshot": {
+              "id": "A45",
+              "name": "P-Q grafiek tekenen uit tabel",
+              "kern": "Teken een prijs-hoeveelheidsgrafiek uit tabelwaarden met prijs op de verticale as en hoeveelheid op de horizontale as.",
+              "mastery_target": "apply",
+              "procedure": [
+                "Zet prijs op de verticale as en hoeveelheid op de horizontale as.",
+                "Kies een passende schaal op beide assen.",
+                "Plaats elk punt uit de tabel in de grafiek.",
+                "Verbind de punten alleen als de context een lijn of curve ondersteunt."
+              ]
+            }
+          }
+        ]
+      },
+      "historical_decomposition": {
+        "status": "preserved_for_audit_not_current_role_authority",
+        "required_mtu_ids": [
+          "I07",
+          "A42",
+          "A40",
+          "A81"
+        ],
+        "answer_form_mtu_ids": [
+          "A40"
+        ],
+        "procedure_unit_ids": [
+          "I07",
+          "A42",
+          "A40",
+          "A81"
+        ],
+        "forbidden_mtu_ids": [
+          "A45"
+        ],
+        "route_tags": [
+          "macro_graph_mutation",
+          "is_mb_ga",
+          "ga_shift",
+          "mb_shift",
+          "table_completion",
+          "source_reading",
+          "answer_form",
+          "procedure"
+        ],
+        "historical_proof_required_to_close": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+        "historical_safe_interim_action": "Keep table_completion route tag and review_required.",
+        "source_sha256": "eed3992a7e329b5af76ca7219696a376b02668ca33b1ff80edfe564eb34b3da0"
+      },
+      "historical_source_blocker_evidence": {
+        "status": "historical_hash_pinned_input_not_current_guidance",
+        "needed_governance_at_source_time": "Approve a multi-period IS-MB-GA graph-plus-table operation or reviewed-equivalent procedure rule.",
+        "safe_interim_action_at_source_time": "Keep table_completion route tag and review_required.",
+        "final_route_at_source_time": "HOLD_FOR_PROTECTED_OPERATION_REGISTRY_GOVERNANCE"
+      }
+    }
+  ],
+  "summary": {
+    "protected_operations_prepared": 7,
+    "unique_candidate_packets": 6,
+    "operations_with_partial_anchors": 5,
+    "excluded_historical_mtu_role_count": 4,
+    "explicit_unavailable_source_limitations": 3,
+    "candidate_decisions_required": 10,
+    "canonical_mtu_governance_count": 1,
+    "operation_registry_governance_count": 3,
+    "procedure_or_operation_registry_governance_count": 3,
+    "executed_in_this_bundle": 0,
+    "h7_full_closure_claimed": false,
+    "product_route_readiness_claimed": false,
+    "student_product_use_authorized": false
+  }
+}

@@ -120,9 +120,11 @@ Human-readable:
 - `build-scripts/review-gates/cross-repo-bundle-compatibility.js`
 - `build-scripts/review-gates/check-human-bundle-authorization.js`
 - `build-scripts/review-gates/apply-bundle-readiness-decision.js`
+- `build-scripts/review-gates/refresh-bundle-agent-indexes.js`
 - `build-scripts/review-gates/integrate-authorized-bundle.js`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
+- `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
 - `docs/inspection-standards/nl-vo-evidence-model.md`
@@ -146,6 +148,7 @@ Machine-readable:
     "references/data/inspection-standards/source-register.json",
     "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
     "docs/review/human-payload-authorization.schema.json",
+    "build-scripts/review-gates/refresh-bundle-agent-indexes.js",
     "docs/roadmaps/roadmap-version-index.json",
     "reports/internal-dashboard/dashboard-data.json"
   ]
@@ -188,9 +191,11 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/cross-repo-bundle-compatibility.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-bundle-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-bundle-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/refresh-bundle-agent-indexes.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-bundle.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
@@ -208,6 +213,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/review/human-payload-authorization.schema.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/refresh-bundle-agent-indexes.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
@@ -259,6 +265,7 @@ Use these anchors before free-form browsing.
   "cross_repo_bundle_compatibility_runner": "build-scripts/review-gates/cross-repo-bundle-compatibility.js",
   "human_bundle_authorization_checker": "build-scripts/review-gates/check-human-bundle-authorization.js",
   "bundle_readiness_apply_runner": "build-scripts/review-gates/apply-bundle-readiness-decision.js",
+  "bundle_agent_index_refresh_runner": "build-scripts/review-gates/refresh-bundle-agent-indexes.js",
   "authorized_bundle_integration_runner": "build-scripts/review-gates/integrate-authorized-bundle.js",
   "testing_agent": "agents/testing-agent.md",
   "accessibility_agent": "agents/accessibility-agent.md",
@@ -268,6 +275,7 @@ Use these anchors before free-form browsing.
   "visual_qa_agent": "agents/visual-qa-agent.md",
   "reference_team_plan": "references/reference-team-roadmap.md",
   "inspection_standards_roadmap": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+  "international_quality_standards_roadmap": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
   "quality_standards_sprint_ledger": "docs/roadmaps/quality-standards/sprint-ledger.md",
   "quality_standards_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
   "inspection_source_register": "references/data/inspection-standards/source-register.json",
@@ -299,6 +307,7 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/.github/workflows/authorized-bundle-integration.yml
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/cross-repo-bundle-compatibility.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-bundle-authorization.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/refresh-bundle-agent-indexes.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-bundle.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/testing-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/accessibility-agent.md
@@ -308,6 +317,7 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
@@ -344,6 +354,7 @@ index_anchors (full URLs):
   "roadmap_paths": [
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "docs/roadmaps/roadmap-version-index.json",
@@ -353,6 +364,7 @@ index_anchors (full URLs):
   "inspection_standards_paths": [
     "docs/roadmaps/quality-standards/README.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "references/data/inspection-standards/README.md",
@@ -420,6 +432,7 @@ index_anchors (full URLs):
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/cross-repo-bundle-compatibility.js",
     "build-scripts/review-gates/apply-bundle-readiness-decision.js",
+    "build-scripts/review-gates/refresh-bundle-agent-indexes.js",
     "build-scripts/review-gates/integrate-authorized-bundle.js",
     "build-scripts/ci/check-branch-protection.js"
   ],
@@ -530,6 +543,7 @@ pr_governance_paths (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-pr.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/cross-repo-bundle-compatibility.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-bundle-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/refresh-bundle-agent-indexes.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/integrate-authorized-bundle.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/ci/check-branch-protection.js
 
@@ -621,7 +635,7 @@ Agents MUST follow this sequence:
    - draft-to-review PR lifecycle routing -> `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, and the exact remote PR evidence
    - human-authorized PR integration -> `docs/review/pr-integration-lane-policy.md`, `build-scripts/review-gates/check-integration-lane-capability.js`, `.github/workflows/authorized-pr-integration.yml`, `docs/review/human-payload-authorization.schema.json`, and `build-scripts/review-gates/integrate-authorized-pr.js`; the owner-authenticated local lane is the default path, and a cloud `branch_protection_read_forbidden` result means use that local lane rather than a raw merge
    - activated integration-lane branch protection -> `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, and `package.json` script `check:branch-protection:activated`
-   - paired platform/lesson bundle readiness and integration -> `docs/review/pr-readiness-routing-policy.md`, `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/apply-bundle-readiness-decision.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, and `build-scripts/review-gates/integrate-authorized-bundle.js`
+   - paired platform/lesson bundle readiness and integration -> `docs/review/pr-readiness-routing-policy.md`, `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/apply-bundle-readiness-decision.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/refresh-bundle-agent-indexes.js`, and `build-scripts/review-gates/integrate-authorized-bundle.js`
    - testing or validation evidence -> `agents/testing-agent.md`, `package.json`, and the relevant test/validator scripts
    - accessibility review -> `agents/accessibility-agent.md` plus rendered artifacts, screenshots, OCR/text evidence, and source semantics where relevant
    - teacher learning-quality review -> `agents/teacher-learning-quality-review-agent.md` plus learning goals, paragraph plan, target exercise, formative checks, differentiation paths, and student-facing artifacts
@@ -632,7 +646,7 @@ Agents MUST follow this sequence:
    - chapter production -> `BUILD-CHAPTER.md` plus relevant `skills/`
    - build/deploy -> `build-scripts/README.md`, `scripts/deploy.js`, relevant `build-scripts/platform/*`
    - engine behavior -> relevant `engines/*` files and `engines/tests/*`
-   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
+   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
 5. Search declared namespaces only after loading relevant guides and indexes.
 6. Distinguish source files, generated files, and deploy/build targets before making conclusions.
 7. Label every conclusion as one of:
@@ -671,11 +685,13 @@ Rules:
     "RESEARCH_AGENT_MAP_REFERENCES.md",
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "references/SOURCE_OF_TRUTH.md",
     "references"
   ],
   "inspection_standards_research": [
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "references/data/inspection-standards/source-register.json",
     "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
     "docs/inspection-standards/nl-vo-evidence-model.md",
@@ -742,6 +758,7 @@ Rules:
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/cross-repo-bundle-compatibility.js",
     "build-scripts/review-gates/apply-bundle-readiness-decision.js",
+    "build-scripts/review-gates/refresh-bundle-agent-indexes.js",
     "build-scripts/review-gates/integrate-authorized-bundle.js",
     "build-scripts/ci/check-branch-protection.js"
   ],
@@ -811,6 +828,7 @@ Rules:
     "knowledge/old/three-month-roadmap.md",
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "reports/internal-dashboard/dashboard-data.json"
   ]
 }

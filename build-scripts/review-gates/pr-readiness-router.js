@@ -3,7 +3,10 @@ const {
   isGovernanceSurface,
   normalizePath,
 } = require('./pr-readiness-governance-surfaces');
-const { validateCompatibilityProof } = require('./cross-repo-bundle-compatibility');
+const {
+  validateCompatibilityProof,
+  validateIntegrationRefreshProof,
+} = require('./cross-repo-bundle-compatibility');
 const crypto = require('crypto');
 
 const ROUTES = Object.freeze({
@@ -337,7 +340,9 @@ function positiveInteger(value) {
 function normalizeBundleMember(member) {
   const item = member || {};
   const headSha = item.head_sha || item.headRefOid || null;
-  return {
+  const mergeCommitSha = item.merge_commit_sha || item.merge_commit || item.mergeCommitSha ||
+    (item.mergeCommit && item.mergeCommit.oid) || null;
+  const normalized = {
     ...item,
     repository: item.repository || item.repo || null,
     pr_number: positiveInteger(item.pr_number || item.number),
@@ -346,6 +351,9 @@ function normalizeBundleMember(member) {
     integration_head_sha: item.integration_head_sha || item.integrationHeadSha || headSha,
     reviewed_payload_head_sha: item.reviewed_payload_head_sha || item.payload_head_sha || null,
   };
+  if (mergeCommitSha) normalized.merge_commit_sha = mergeCommitSha;
+  else delete normalized.merge_commit_sha;
+  return normalized;
 }
 
 function bundleMemberComplete(member, options = {}) {
@@ -391,6 +399,7 @@ function bundleMemberLifecycleOk(member) {
   const mergedOk = Boolean(
     member &&
       member.merged === true &&
+      member.open === false &&
       member.current === true &&
       SHA_PATTERN.test(String(mergeCommit || '')) &&
       bundleMemberHeadMatches(member)
@@ -399,6 +408,8 @@ function bundleMemberLifecycleOk(member) {
     mergedOk ||
       (member &&
         member.open === true &&
+        member.merged !== true &&
+        !mergeCommit &&
         member.current === true &&
         member.mergeable === true &&
         bundleMemberHeadMatches(member))
@@ -491,11 +502,11 @@ function bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs) {
   return {
     platform_base_sha: explicit.platform_base_sha || explicit.platformBaseSha || raw.platform_base_sha || raw.platformBaseSha || null,
     platform_candidate_sha:
-      candidateHead(platformMember) ||
       explicit.platform_candidate_sha ||
       explicit.platformCandidateSha ||
       raw.platform_candidate_sha ||
       raw.platformCandidateSha ||
+      candidateHead(platformMember) ||
       null,
     lesson_base_sha: explicit.lesson_base_sha || explicit.lessonBaseSha || raw.lesson_base_sha || raw.lessonBaseSha || null,
     lesson_candidate_sha:
@@ -514,7 +525,7 @@ function collectExactMemberFailures(exactMembers) {
     .map(([key]) => `${key}_missing_or_invalid`);
 }
 
-function collectDeclaredExactMemberMismatches(raw, exactMembers) {
+function collectDeclaredExactMemberMismatches(raw, exactMembers, options = {}) {
   const explicit = raw.exact_members || raw.exactMembers || {};
   const mismatches = [];
   for (const key of ['platform_candidate_sha', 'lesson_candidate_sha']) {
@@ -526,6 +537,7 @@ function collectDeclaredExactMemberMismatches(raw, exactMembers) {
       SHA_PATTERN.test(String(exactMembers[key] || '')) &&
       declared !== exactMembers[key]
     ) {
+      if (key === 'platform_candidate_sha' && options.integrationRefreshOk === true) continue;
       mismatches.push(`${key}_does_not_match_member_head`);
     }
   }
@@ -674,6 +686,11 @@ function bundleSafetyProof(proof, evidence) {
     }
   }
   if (pairedPrs.length === 0) failures.push('paired_prs_missing');
+  const pairedLessonMembers = pairedPrs.filter((member) => repoIsLesson(member.repository));
+  const platformController = !delegated && repoIsPlatform(evidence.reviewed_pr.repo);
+  if (platformController && (pairedPrs.length !== 1 || pairedLessonMembers.length !== 1)) {
+    failures.push('paired_lesson_member_count_invalid');
+  }
   for (const paired of pairedPrs) {
     if (!bundleMemberComplete(paired)) failures.push('paired_pr_metadata_incomplete');
     const coordinatedProof = coordinatedMarkReadyMemberProof(readinessOperation, paired);
@@ -688,7 +705,13 @@ function bundleSafetyProof(proof, evidence) {
   const exactMembers = bundleExpectedExactMembers(raw, controller, currentMember, pairedPrs);
   const exactMemberFailures = collectExactMemberFailures(exactMembers);
   failures.push(...exactMemberFailures);
-  failures.push(...collectDeclaredExactMemberMismatches(raw, exactMembers));
+  if (
+    controller.reviewed_payload_head_sha &&
+    exactMembers.platform_candidate_sha &&
+    controller.reviewed_payload_head_sha !== exactMembers.platform_candidate_sha
+  ) {
+    failures.push('platform_candidate_sha_does_not_match_member_head');
+  }
   const compatibilityRaw = raw.compatibility || raw.compatibility_matrix || raw.bundle_compatibility || proof.bundle_compatibility;
   const compatibility = compatibilityRaw
     ? validateCompatibilityProof(compatibilityRaw, {
@@ -697,6 +720,32 @@ function bundleSafetyProof(proof, evidence) {
       })
     : { ok: false, failures: ['bundle_compatibility_missing'] };
   if (!compatibility.ok) failures.push(...compatibility.failures);
+  const platformHead = controller.integration_head_sha || controller.head_sha || null;
+  const lessonMember = findBundleMemberByRepo([currentMember, ...pairedPrs].filter(Boolean), repoIsLesson);
+  const lessonMergeSha = lessonMember && (
+    lessonMember.merge_commit ||
+    lessonMember.merge_commit_sha ||
+    lessonMember.mergeCommitSha ||
+    (lessonMember.mergeCommit && lessonMember.mergeCommit.oid)
+  );
+  const integrationRefreshRaw = raw.integration_refresh || raw.integrationRefresh || null;
+  const integrationRefreshRequired = Boolean(
+    platformHead &&
+    exactMembers.platform_candidate_sha &&
+    platformHead !== exactMembers.platform_candidate_sha
+  );
+  const integrationRefresh = integrationRefreshRaw
+    ? validateIntegrationRefreshProof(integrationRefreshRaw, {
+        compatibility,
+        controllerHead: platformHead,
+        lessonMergeSha: lessonMergeSha || undefined,
+      })
+    : { ok: false, failures: ['integration_refresh missing'], proof: null };
+  if (integrationRefreshRequired && !integrationRefresh.ok) failures.push(...integrationRefresh.failures);
+  if (!integrationRefreshRequired && integrationRefreshRaw && !integrationRefresh.ok) failures.push(...integrationRefresh.failures);
+  failures.push(...collectDeclaredExactMemberMismatches(raw, exactMembers, {
+    integrationRefreshOk: integrationRefreshRequired && integrationRefresh.ok,
+  }));
   const transitionableDraftMembers = [];
   const pairedLeadReviews = [];
   const transitionContext = {
@@ -727,6 +776,26 @@ function bundleSafetyProof(proof, evidence) {
       failures.push('paired_pr_not_ready');
     }
   }
+  if (platformController && pairedLessonMembers.length === 1) {
+    const lesson = pairedLessonMembers[0];
+    const lessonSha = exactMembers.lesson_candidate_sha;
+    if (
+      lesson.head_sha !== lessonSha ||
+      lesson.integration_head_sha !== lessonSha ||
+      lesson.reviewed_payload_head_sha !== lessonSha
+    ) {
+      failures.push('lesson_candidate_sha_does_not_match_member_head');
+    }
+    const lessonLeadReviews = pairedLeadReviews.filter((review) =>
+      repoIsLesson(review.repository) && review.pr_number === lesson.pr_number
+    );
+    if (
+      lessonLeadReviews.length !== 1 ||
+      lessonLeadReviews[0].reviewed_commit_sha !== lessonSha
+    ) {
+      failures.push('paired_lesson_lead_review_missing_or_invalid');
+    }
+  }
   const reviewedPrIsDraft = evidence.reviewed_pr.was_draft !== false;
   const anyPairedDraft = pairedPrs.some((paired) => paired && paired.is_draft === true);
   const anyPairedNotReady = pairedPrs.some((paired) => paired && (!bundleMemberLifecycleOk(paired) || paired.ready !== true));
@@ -743,6 +812,7 @@ function bundleSafetyProof(proof, evidence) {
     ok: failures.length === 0,
     bundle_id: bundleId,
     controller: controller.repository ? controller : null,
+    current_member: currentMember,
     paired_prs: pairedPrs,
     exact_members: exactMembers,
     compatibility,
@@ -753,6 +823,10 @@ function bundleSafetyProof(proof, evidence) {
     paired_lead_reviews: pairedLeadReviews,
     failures: uniqueStrings(failures),
   };
+  if (integrationRefreshRaw) {
+    summary.integration_refresh = integrationRefreshRaw;
+    summary.integration_refresh_validation = integrationRefresh;
+  }
   return summary;
 }
 
@@ -776,12 +850,51 @@ function bundleAllowsLessonFirstControllerCi(bundle) {
   );
 }
 
+function integrationDeltaReviewRequired(integrationProof) {
+  const integration = integrationProof || {};
+  const baseDrift = integration.base_drift || {};
+  return Boolean(
+    integration.requires_integration_delta_lead_review === true ||
+    baseDrift.requires_integration_delta_lead_review === true
+  );
+}
+
+function integrationDeltaReviewState(integrationProof, reviewedPayloadHead, integrationHead) {
+  const integration = integrationProof || {};
+  const baseDrift = integration.base_drift || {};
+  const required = integrationDeltaReviewRequired(integration);
+  const present = Boolean(integration.delta_review);
+  const reviewComplete = integrationDeltaReviewComplete(
+    integration.delta_review,
+    reviewedPayloadHead,
+    integrationHead
+  );
+  const valid = Boolean(
+    required &&
+      reviewComplete &&
+      integration.reviewed_payload_head_sha === reviewedPayloadHead &&
+      integration.integration_head_sha === integrationHead &&
+      integration.ok === true &&
+      integration.authorization_inherited === true &&
+      integration.requires_human_reauthorization === false &&
+      baseDrift.requires_human_reauthorization === false &&
+      integrationFailures(integration).length === 0
+  );
+  return {
+    required,
+    present,
+    reviewComplete,
+    valid,
+    unexpected: present && !required,
+  };
+}
+
 function leadProof(proof, headSha) {
   const lead = proof.lead_review || {};
   const result = normalizeVerdict(lead.result);
   const reviewedSha = lead.reviewed_commit_sha || lead.reviewed_sha || lead.reviewed_remote_commit_sha;
   const afterLeadPaths = uniqueStrings(
-    asArray(proof.post_lead_review_changed_paths || lead.post_review_changed_paths).map(normalizePath)
+    asArray(proof.post_lead_review_changed_paths).map(normalizePath)
   );
   const evidenceOnlyTail =
     reviewedSha &&
@@ -789,17 +902,42 @@ function leadProof(proof, headSha) {
     afterLeadPaths.length > 0 &&
     afterLeadPaths.every(isEvidenceTailPath);
   const integrationAuthorizedTail = integrationLeadAuthorizationProof(proof, reviewedSha, headSha);
+  const integration = proof.integration || {};
+  const deltaReview = integrationDeltaReviewState(
+    integration,
+    integration.reviewed_payload_head_sha,
+    headSha
+  );
+  const integrationDeltaReviewedTail = Boolean(
+    reviewedSha &&
+      reviewedSha !== headSha &&
+      reviewedSha === integration.reviewed_payload_head_sha &&
+      deltaReview.valid
+  );
+  const unexpectedDeltaReview = deltaReview.unexpected;
 
   return {
     ok: Boolean(
-      lead.path &&
+      !unexpectedDeltaReview &&
+        lead.path &&
         PASSING_LEAD_RESULTS.has(result) &&
         reviewedSha &&
-        (reviewedSha === headSha || evidenceOnlyTail || integrationAuthorizedTail)
+        (reviewedSha === headSha || evidenceOnlyTail || integrationAuthorizedTail || integrationDeltaReviewedTail)
     ),
-    stale: Boolean(reviewedSha && headSha && reviewedSha !== headSha && !evidenceOnlyTail && !integrationAuthorizedTail),
+    stale: Boolean(
+      reviewedSha &&
+        headSha &&
+        reviewedSha !== headSha &&
+        !evidenceOnlyTail &&
+        !integrationAuthorizedTail &&
+        !integrationDeltaReviewedTail
+    ),
     evidenceOnlyTail,
     integrationAuthorizedTail,
+    integrationDeltaReviewedTail,
+    deltaReviewRequired: deltaReview.required,
+    deltaReviewComplete: deltaReview.valid,
+    unexpectedDeltaReview,
     postLeadReviewChangedPaths: afterLeadPaths,
     disallowedEvidenceTail: Boolean(
       reviewedSha &&
@@ -898,6 +1036,10 @@ function collectRevisionReasons(evidence) {
   }
   if (!checkers.ok) reasons.push('checker_proof_missing_or_not_successful');
   if (proof.lead_review_compare_unavailable === true) reasons.push('lead_review_compare_unavailable');
+  if (lead.unexpectedDeltaReview) reasons.push('integration_delta_review_unexpected');
+  if (lead.deltaReviewRequired && !lead.deltaReviewComplete) {
+    reasons.push('integration_delta_review_missing_or_invalid');
+  }
   if (!lead.ok) reasons.push(lead.stale ? 'lead_review_stale_after_substantive_change' : 'lead_review_missing_or_not_passing');
   if (proof.review_threads_unavailable === true) reasons.push('review_threads_unavailable');
   if (proof.unresolved_review_threads === true) reasons.push('unresolved_review_threads');
@@ -979,6 +1121,7 @@ function proofSummary(evidence, collected) {
     lead_reviewed_sha: collected.lead.reviewedSha,
     lead_review_evidence_tail_allowed: collected.lead.evidenceOnlyTail,
     lead_review_integration_authorization_inherited: collected.lead.integrationAuthorizedTail,
+    lead_review_integration_delta_reviewed: collected.lead.integrationDeltaReviewedTail,
     post_lead_review_changed_paths: collected.lead.postLeadReviewChangedPaths,
     changed_paths_verified: evidence.proof.changed_paths_verified === true,
     checkers: collected.checkers.checkers,
@@ -1129,6 +1272,119 @@ function validateDecision(decision) {
   if (!HUMAN_PAYLOADS.has(decision.human_review_payload)) {
     throw new Error(`unsupported human_review_payload: ${decision.human_review_payload}`);
   }
+  const bundleProof = decision.proof.bundle || {};
+  const compatibilityValidation = bundleProof.compatibility
+    ? validateCompatibilityProof(bundleProof.compatibility)
+    : { ok: false, failures: ['bundle_compatibility_missing'], exact_members: {} };
+  const compatibilityExact = compatibilityValidation.exact_members || {};
+  const declaredExact = bundleProof.exact_members || {};
+  const controllerProof = bundleProof.controller || {};
+  const platformReadyBundle = Boolean(
+    [ROUTES.READY_FOR_LEAD_ONLY, ROUTES.READY_FOR_HUMAN_REVIEW].includes(decision.route) &&
+    repoIsPlatform(decision.reviewed_pr.repo) &&
+    decision.throughput.class === 'cross_repo_bundle'
+  );
+  if (platformReadyBundle) {
+    if (!compatibilityValidation.ok) {
+      throw new Error(`ready platform bundle compatibility invalid: ${compatibilityValidation.failures.join(', ')}`);
+    }
+    const exactKeys = [
+      'platform_base_sha',
+      'platform_candidate_sha',
+      'lesson_base_sha',
+      'lesson_candidate_sha',
+    ];
+    if (!exactKeys.every((key) => SHA_PATTERN.test(String(compatibilityExact[key] || '')))) {
+      throw new Error('ready platform bundle requires compatibility exact_members');
+    }
+    if (!exactKeys.every((key) => declaredExact[key] === compatibilityExact[key])) {
+      throw new Error('ready platform bundle exact_members must match compatibility');
+    }
+    if (controllerProof.reviewed_payload_head_sha !== compatibilityExact.platform_candidate_sha) {
+      throw new Error('ready platform bundle controller payload must match compatibility');
+    }
+    if (decision.proof.lead_reviewed_sha !== compatibilityExact.platform_candidate_sha) {
+      throw new Error('ready platform bundle lead-reviewed payload must match compatibility');
+    }
+    const integrationProof = decision.proof.integration || {};
+    const deltaReview = integrationDeltaReviewState(
+      integrationProof,
+      compatibilityExact.platform_candidate_sha,
+      decision.reviewed_pr.head_sha
+    );
+    if (deltaReview.required && !deltaReview.valid) {
+      throw new Error('ready platform bundle requires valid integration delta review');
+    }
+    if (deltaReview.unexpected) {
+      throw new Error('ready platform bundle integration delta review is unexpected');
+    }
+    const pairedMembers = asArray(bundleProof.paired_prs);
+    const lessonMembers = pairedMembers.filter((member) =>
+      repoIsLesson(member.repository || member.repo)
+    );
+    if (pairedMembers.length !== 1 || lessonMembers.length !== 1) {
+      throw new Error('ready platform bundle requires exactly one paired lesson member and no other paired members');
+    }
+    const lesson = normalizeBundleMember(lessonMembers[0]);
+    if (
+      lesson.head_sha !== compatibilityExact.lesson_candidate_sha ||
+      lesson.integration_head_sha !== compatibilityExact.lesson_candidate_sha ||
+      lesson.reviewed_payload_head_sha !== compatibilityExact.lesson_candidate_sha
+    ) {
+      throw new Error('ready platform bundle lesson payload must match compatibility');
+    }
+    const pairedLeadReviews = asArray(bundleProof.paired_lead_reviews);
+    const lessonLeadReviews = pairedLeadReviews.filter((review) =>
+      repoIsLesson(review.repository || review.repo) &&
+      positiveInteger(review.pr_number || review.number) === lesson.pr_number
+    );
+    if (
+      pairedLeadReviews.length !== 1 ||
+      lessonLeadReviews.length !== 1 ||
+      lessonLeadReviews[0].reviewed_commit_sha !== compatibilityExact.lesson_candidate_sha ||
+      !PASSING_LEAD_RESULTS.has(normalizeVerdict(lessonLeadReviews[0].review_result)) ||
+      typeof lessonLeadReviews[0].review_path !== 'string' ||
+      !lessonLeadReviews[0].review_path.trim()
+    ) {
+      throw new Error('ready platform bundle lesson lead review must match compatibility');
+    }
+  }
+  const refreshRequired = Boolean(
+    platformReadyBundle &&
+    decision.reviewed_pr.head_sha !== compatibilityExact.platform_candidate_sha
+  );
+  if (refreshRequired && !bundleProof.integration_refresh) {
+    throw new Error('refreshed platform decision requires integration_refresh proof');
+  }
+  if (
+    refreshRequired &&
+    (!decision.proof.integration ||
+      decision.proof.integration.reviewed_payload_head_sha !== compatibilityExact.platform_candidate_sha)
+  ) {
+    throw new Error('refreshed platform decision integration payload must match compatibility');
+  }
+  if (bundleProof.integration_refresh) {
+    const lesson = findBundleMemberByRepo(asArray(bundleProof.paired_prs), repoIsLesson);
+    const lessonMergeSha = lesson && (
+      lesson.merge_commit ||
+      lesson.merge_commit_sha ||
+      lesson.mergeCommitSha ||
+      (lesson.mergeCommit && lesson.mergeCommit.oid)
+    );
+    const refreshValidation = validateIntegrationRefreshProof(bundleProof.integration_refresh, {
+      compatibility: bundleProof.compatibility,
+      controllerHead: decision.reviewed_pr.head_sha,
+      lessonMergeSha: lessonMergeSha || undefined,
+      readinessDecision: decision,
+    });
+    if (!refreshValidation.ok) {
+      const reasons = asArray(decision.reason_codes).join(', ') || 'none';
+      throw new Error(
+        `integration_refresh decision binding invalid: ${refreshValidation.failures.join(', ')}; ` +
+        `decision reasons: ${reasons}`
+      );
+    }
+  }
   const readyRoutes = new Set([ROUTES.READY_FOR_LEAD_ONLY, ROUTES.READY_FOR_HUMAN_REVIEW]);
   const nonTransitionRoutes = new Set([ROUTES.KEEP_DRAFT_REVISE, ROUTES.KEEP_DRAFT_BATCH, ROUTES.PAUSE_ESCALATE]);
   if (nonTransitionRoutes.has(decision.route) && decision.allowed_transition !== ALLOWED_TRANSITIONS.NONE) {
@@ -1250,7 +1506,8 @@ function validateDecision(decision) {
     if (
       decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
       decision.proof.lead_review_evidence_tail_allowed !== true &&
-      decision.proof.lead_review_integration_authorization_inherited !== true
+      decision.proof.lead_review_integration_authorization_inherited !== true &&
+      decision.proof.lead_review_integration_delta_reviewed !== true
     ) {
       throw new Error(`${decision.route} requires lead review for reviewed head, verified evidence-only tail, or inherited integration authorization`);
     }
@@ -1270,9 +1527,23 @@ function validateDecision(decision) {
         throw new Error(`${decision.route} requires valid integration authorization proof`);
       }
     }
+    if (decision.proof.lead_review_integration_delta_reviewed === true) {
+      const integration = decision.proof.integration || {};
+      const deltaReview = integrationDeltaReviewState(
+        integration,
+        decision.proof.lead_reviewed_sha,
+        decision.reviewed_pr.head_sha
+      );
+      if (
+        !deltaReview.valid
+      ) {
+        throw new Error(`${decision.route} requires valid integration delta review proof`);
+      }
+    }
     if (
       decision.proof.lead_reviewed_sha !== decision.reviewed_pr.head_sha &&
-      decision.proof.lead_review_integration_authorization_inherited !== true
+      decision.proof.lead_review_integration_authorization_inherited !== true &&
+      decision.proof.lead_review_integration_delta_reviewed !== true
     ) {
       const tailPaths = uniqueStrings(asArray(decision.proof.post_lead_review_changed_paths).map(normalizePath));
       if (tailPaths.length === 0 || !tailPaths.every(isEvidenceTailPath)) {
@@ -1308,6 +1579,298 @@ function parseRenderedDecisionMarkdown(body) {
   return { decision, digest, marker: expectedMarker };
 }
 
+function statusOrUnknown(value) {
+  const text = String(value || '').trim();
+  return text || 'unknown';
+}
+
+function includesAny(values, candidates) {
+  const haystack = asArray(values).map((value) => String(value || ''));
+  return candidates.some((candidate) => haystack.includes(candidate));
+}
+
+function integrationFailures(integrationProof) {
+  return asArray(
+    integrationProof.failures ||
+      (integrationProof.lineage && integrationProof.lineage.failures) ||
+      []
+  );
+}
+
+function passingReviewResult(value) {
+  return PASSING_LEAD_RESULTS.has(normalizeVerdict(value));
+}
+
+function integrationDeltaReviewComplete(deltaReview, reviewedPayloadHead, integrationHead) {
+  const review = deltaReview || {};
+  const resultAliases = ['result', 'verdict', 'status']
+    .filter((key) => Object.prototype.hasOwnProperty.call(review, key))
+    .map((key) => normalizeVerdict(review[key]));
+  const headAliases = ['integration_head_sha', 'reviewed_integration_head_sha']
+    .filter((key) => Object.prototype.hasOwnProperty.call(review, key))
+    .map((key) => review[key]);
+  const pathAliases = ['path', 'review_path']
+    .filter((key) => Object.prototype.hasOwnProperty.call(review, key))
+    .map((key) => review[key]);
+  const validPaths = pathAliases
+    .filter((value) => typeof value === 'string' && value.trim())
+    .map((value) => value.trim());
+  const result = resultAliases[0] || '';
+  const reviewedHead = headAliases[0] || null;
+  return Boolean(
+    review &&
+      typeof review === 'object' &&
+      resultAliases.length > 0 &&
+      new Set(resultAliases).size === 1 &&
+      passingReviewResult(result) &&
+      review.reviewed_payload_head_sha === reviewedPayloadHead &&
+      headAliases.length > 0 &&
+      new Set(headAliases).size === 1 &&
+      reviewedHead === integrationHead &&
+      pathAliases.length > 0 &&
+      validPaths.length === pathAliases.length &&
+      new Set(validPaths).size === 1
+  );
+}
+
+function integrationLineageProofComplete(integrationProof, currentHeadSha) {
+  const integration = integrationProof || {};
+  const lineageStatus = String(integration.lineage_status || '').trim().toLowerCase();
+  const effectivePayloadStatus = String(integration.effective_payload_status || '').trim().toLowerCase();
+  const bundleMembershipStatus = String(integration.bundle_membership_status || '').trim().toLowerCase();
+  const authorityScopeStatus = String(integration.authority_scope_status || '').trim().toLowerCase();
+  const lineagePositive =
+    integration.payload_ancestor_of_integration_head === true ||
+    lineageStatus === 'valid';
+  const effectivePayloadPositive =
+    !effectivePayloadStatus ||
+    effectivePayloadStatus === 'unchanged';
+  const bundleMembershipPositive =
+    !bundleMembershipStatus ||
+    bundleMembershipStatus === 'unchanged' ||
+    bundleMembershipStatus === 'not_bundle';
+  const authorityScopePositive =
+    !authorityScopeStatus ||
+    authorityScopeStatus === 'unchanged';
+  return Boolean(
+    integration.ok === true &&
+      SHA_PATTERN.test(String(integration.reviewed_payload_head_sha || '')) &&
+      SHA_PATTERN.test(String(integration.integration_head_sha || '')) &&
+      integration.integration_head_sha === currentHeadSha &&
+      integration.authorization_inherited === true &&
+      lineagePositive &&
+      effectivePayloadPositive &&
+      bundleMembershipPositive &&
+      authorityScopePositive
+  );
+}
+
+function statusFromIntegration(integrationProof, key, inheritedStatus) {
+  const direct = integrationProof[key];
+  if (direct) return direct;
+  const nestedKey = key.replace(/_status$/, '');
+  if (integrationProof[nestedKey] && integrationProof[nestedKey].status) return integrationProof[nestedKey].status;
+  return inheritedStatus || 'unknown';
+}
+
+function payloadIntegrationStateSummary(decision) {
+  const proof = decision.proof || {};
+  const integration = proof.integration || {};
+  const authorization = proof.human_authorization || {};
+  const failures = integrationFailures(integration);
+  const reviewedPayloadHead =
+    integration.reviewed_payload_head_sha ||
+    authorization.reviewed_payload_head_sha ||
+    decision.reviewed_pr.head_sha;
+  const integrationHead = integration.integration_head_sha || decision.reviewed_pr.head_sha;
+  const baseDrift = integration.base_drift || {};
+  const bundle = proof.bundle || {};
+  const bundleRequired = Boolean(bundle.required || bundle.delegated || (bundle.summary && bundle.summary.required));
+  const integrationProofPresent = Object.keys(integration).length > 0;
+  const branchUpdatePending = integration.branch_update_pending === true;
+  const lineageInvalid = includesAny(failures, [
+    'reviewed_payload_head_sha missing or invalid',
+    'integration_head_sha missing or invalid',
+    'reviewed_payload_head_not_ancestor',
+    'reviewed_payload_not_ancestor',
+    'lineage_invalid',
+    'rebase_or_force_push_detected',
+    'manual_conflict_resolution',
+    'merge_changed_payload_or_unexpected_paths',
+    'substantive_pr_authored_commit_after_authorization',
+  ]);
+  const effectivePayloadChanged = includesAny(failures, ['changed_effective_payload', 'effective_payload_changed']);
+  const bundleMembershipChanged = includesAny(failures, ['bundle_membership_change', 'bundle_membership_changed']);
+  const authorityScopeChanged = includesAny(failures, ['authority_or_scope_change', 'authority_scope_changed']);
+  const reauthorizationRequired =
+    integration.requires_human_reauthorization === true ||
+    baseDrift.requires_human_reauthorization === true ||
+    failures.length > 0;
+  const deterministicRefreshRequired =
+    integration.requires_deterministic_refresh === true ||
+    baseDrift.requires_deterministic_refresh === true;
+  const deterministicRefreshComplete = !deterministicRefreshRequired || integration.deterministic_refresh_verified === true;
+  const deltaReviewRequired =
+    integration.requires_integration_delta_lead_review === true ||
+    baseDrift.requires_integration_delta_lead_review === true;
+  const deltaReviewComplete =
+    !deltaReviewRequired ||
+    integrationDeltaReviewComplete(integration.delta_review, reviewedPayloadHead, integrationHead);
+  const readyRoute = decision.route === ROUTES.READY_FOR_LEAD_ONLY || decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
+  const humanRoute = decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
+  const authorizationInherited = integrationProofPresent && integration.authorization_inherited === true;
+  const integrationProofComplete = integrationLineageProofComplete(integration, decision.reviewed_pr.head_sha);
+  const integrationProofPassed = Boolean(
+    readyRoute &&
+      integrationProofPresent &&
+      !branchUpdatePending &&
+      integrationProofComplete &&
+      failures.length === 0 &&
+      deterministicRefreshComplete &&
+      deltaReviewComplete
+  );
+  const payloadAuthorization =
+    reauthorizationRequired
+      ? 'invalidated'
+      : authorization.decision || authorizationInherited
+        ? 'inherited'
+        : humanRoute
+          ? 'required'
+          : 'not_required';
+  let payloadState = 'PAYLOAD_AUTHORIZATION_REQUIRED';
+  if (reauthorizationRequired) payloadState = 'PAYLOAD_REAUTHORIZATION_REQUIRED';
+  else if (payloadAuthorization === 'inherited' || payloadAuthorization === 'not_required') payloadState = 'PAYLOAD_AUTHORIZED';
+
+  let integrationState = 'INTEGRATION_VALIDATION_REQUIRED';
+  if (reauthorizationRequired) integrationState = 'PAYLOAD_REAUTHORIZATION_REQUIRED';
+  else if (branchUpdatePending) {
+    integrationState = 'BRANCH_UPDATE_PENDING';
+  } else if (deltaReviewRequired && !deltaReviewComplete) {
+    integrationState = 'INTEGRATION_DELTA_REVIEW_REQUIRED';
+  } else if (deterministicRefreshRequired && !deterministicRefreshComplete) {
+    integrationState = 'DETERMINISTIC_REFRESH_REQUIRED';
+  } else if (integrationProofPassed) {
+    integrationState = 'READY_TO_MERGE_VIA_LANE';
+  } else if (!integrationProofPresent && integrationHead !== reviewedPayloadHead && readyRoute) {
+    integrationState = 'INTEGRATION_HEAD_REFRESHED';
+  }
+
+  const lineageStatus = lineageInvalid
+    ? 'invalid'
+    : statusFromIntegration(integration, 'lineage_status', authorizationInherited ? 'valid' : null);
+  const effectivePayloadStatus = effectivePayloadChanged
+    ? 'changed'
+    : statusFromIntegration(integration, 'effective_payload_status', authorizationInherited ? 'unchanged' : null);
+  const bundleMembershipStatus = !bundleRequired
+    ? 'not_bundle'
+    : bundleMembershipChanged
+      ? 'changed'
+      : statusFromIntegration(integration, 'bundle_membership_status', authorizationInherited ? 'unchanged' : null);
+  const authorityScopeStatus = authorityScopeChanged
+    ? 'changed'
+    : statusFromIntegration(integration, 'authority_scope_status', authorizationInherited ? 'unchanged' : null);
+  let integrationValidation = 'required';
+  if (!readyRoute || reauthorizationRequired) integrationValidation = 'blocked';
+  else if (branchUpdatePending) integrationValidation = 'pending_branch_update';
+  else if (deltaReviewRequired && !deltaReviewComplete) integrationValidation = 'pending_delta_review';
+  else if (deterministicRefreshRequired && !deterministicRefreshComplete) integrationValidation = 'pending_deterministic_refresh';
+  else if (integrationProofPassed) integrationValidation = 'passed';
+
+  let requiredNextAction = 'resolve readiness blockers before merge';
+  if (payloadState === 'PAYLOAD_AUTHORIZATION_REQUIRED') {
+    requiredNextAction = 'request owner payload authorization for the reviewed payload head and decision scope';
+  } else if (payloadState === 'PAYLOAD_REAUTHORIZATION_REQUIRED') {
+    requiredNextAction = 'return to owner review for refreshed payload authorization';
+  } else if (integrationState === 'BRANCH_UPDATE_PENDING') {
+    requiredNextAction = 'wait for the branch update to finish, then rerun the serialized integration lane';
+  } else if (integrationState === 'INTEGRATION_DELTA_REVIEW_REQUIRED') {
+    requiredNextAction = 'run integration delta lead review before merge';
+  } else if (integrationState === 'DETERMINISTIC_REFRESH_REQUIRED') {
+    requiredNextAction = 'run deterministic evidence refresh before merge';
+  } else if (integrationState === 'READY_TO_MERGE_VIA_LANE') {
+    requiredNextAction = 'merge through the serialized integration lane';
+  } else if (integrationState === 'INTEGRATION_HEAD_REFRESHED') {
+    requiredNextAction = 'run integration validation for the refreshed integration head';
+  } else if (readyRoute) {
+    requiredNextAction = 'complete integration validation through the serialized lane';
+  }
+
+  return {
+    payload_state: payloadState,
+    integration_state: integrationState,
+    reviewed_payload_head_sha: reviewedPayloadHead,
+    current_pr_head_sha: decision.reviewed_pr.head_sha || null,
+    integration_head_sha: integrationHead,
+    pending_integration_head_sha: integration.pending_integration_head_sha || integration.refreshed_head_sha || null,
+    base_sha_at_review: authorization.base_sha_at_review || integration.base_sha_at_review || baseDrift.base_sha_at_review || null,
+    current_base_sha: integration.current_base_sha || integration.current_main_sha || baseDrift.current_base_sha || null,
+    lineage_status: lineageStatus,
+    effective_payload_status: effectivePayloadStatus,
+    bundle_membership_status: bundleMembershipStatus,
+    authority_scope_status: authorityScopeStatus,
+    payload_authorization: payloadAuthorization,
+    integration_validation: integrationValidation,
+    renewed_owner_authorization: reauthorizationRequired ? 'required' : 'not_required_unless_payload_changes',
+    required_next_action: requiredNextAction,
+  };
+}
+
+function memberLabel(member) {
+  const item = member || {};
+  const repo = item.repository || item.repo || 'unknown-repo';
+  const number = item.pr_number || item.number || 'unknown';
+  const head = item.head_sha || item.reviewed_payload_head_sha || 'unknown-head';
+  return `${repo}#${number}@${head}`;
+}
+
+function compatibilityMergeOrder(compatibility) {
+  if (!compatibility) return 'unavailable';
+  if (compatibility.recommended_merge_order) return compatibility.recommended_merge_order;
+  const orders = asArray(compatibility.permitted_merge_orders || compatibility.permitted_orders);
+  if (orders.length > 0) return orders.join(', ');
+  return 'none';
+}
+
+function bundleStateSummary(decision, hasBundlePayload) {
+  const bundle = decision.proof.bundle || {};
+  const summary = bundle.summary || bundle;
+  if (!hasBundlePayload || !summary) return null;
+  const controller = summary.controller || {};
+  const paired = asArray(summary.paired_prs);
+  const currentMember = summary.current_member || summary.current_pr || summary.member || null;
+  const displayedMembers = summary.delegated === true && currentMember ? [currentMember] : paired;
+  const mergedMembers = displayedMembers.filter((member) => member && member.merged === true);
+  const openMembers = displayedMembers.filter((member) => member && member.open === true);
+  const refreshContract = summary.compatibility && summary.compatibility.integration_contract;
+  const refreshRequired = Boolean(
+    refreshContract &&
+    refreshContract.post_first_merge_refresh &&
+    refreshContract.post_first_merge_refresh.required === true
+  );
+  const refreshValidation = summary.integration_refresh_validation || {};
+  const refreshStatus = refreshRequired
+    ? refreshValidation.ok === true ? 'complete' : 'required_after_lesson_merge'
+    : 'not_required';
+  let residualMode = 'full bundle';
+  if (mergedMembers.length > 0 && openMembers.length === 0) {
+    residualMode = 'platform-only residual controller';
+  } else if (mergedMembers.length > 0 && openMembers.length > 0) {
+    residualMode = 'lesson-first pending platform';
+  } else if (!summary.ok || asArray(summary.failures).length > 0) {
+    residualMode = 'blocked';
+  }
+  return {
+    controller: controller.repository ? memberLabel(controller) : 'unknown',
+    members: displayedMembers.map(memberLabel),
+    merged_members: mergedMembers.map(memberLabel),
+    open_members: openMembers.map(memberLabel),
+    delegated_branch_protection_proof: summary.delegated ? 'controller' : 'none',
+    merge_order_proof: compatibilityMergeOrder(summary.compatibility),
+    post_first_merge_index_refresh: refreshStatus,
+    residual_integration_mode: residualMode,
+  };
+}
+
 function renderDecisionMarkdown(decision) {
   validateDecision(decision);
   const digest = decisionDigest(decision);
@@ -1317,10 +1880,7 @@ function renderDecisionMarkdown(decision) {
   const ciStatusLabel = delegatedBundleProof ? 'Controller CI status' : 'CI status';
   const branchProtectionLabel = delegatedBundleProof ? 'Delegated branch protection' : 'Branch protection';
   const integrationProof = decision.proof.integration || {};
-  const reviewedPayloadHead = integrationProof.reviewed_payload_head_sha || decision.reviewed_pr.head_sha;
-  const integrationHead = integrationProof.integration_head_sha || decision.reviewed_pr.head_sha;
   const readyRoute = decision.route === ROUTES.READY_FOR_LEAD_ONLY || decision.route === ROUTES.READY_FOR_HUMAN_REVIEW;
-  const payloadAuthorizationRequired = decision.route === ROUTES.READY_FOR_HUMAN_REVIEW && !decision.proof.human_authorization;
   const bundleProof = decision.proof.bundle || null;
   const hasBundlePayload = Boolean(
     bundleProof &&
@@ -1331,6 +1891,15 @@ function renderDecisionMarkdown(decision) {
         (decision.throughput && decision.throughput.class === 'cross_repo_bundle')
       )
   );
+  const stateSummary = payloadIntegrationStateSummary(decision);
+  const reviewedPayloadHead = stateSummary.reviewed_payload_head_sha || decision.reviewed_pr.head_sha;
+  const integrationHead = stateSummary.integration_head_sha || decision.reviewed_pr.head_sha;
+  const payloadAuthorizationRequired =
+    decision.route === ROUTES.READY_FOR_HUMAN_REVIEW &&
+    ['required', 'invalidated'].includes(stateSummary.payload_authorization);
+  const integrationValidationRequired =
+    readyRoute && stateSummary.integration_validation !== 'passed';
+  const bundleState = bundleStateSummary(decision, hasBundlePayload);
   const leadReviewLine = delegatedBundleProof
     ? `- Delegated lead review: controller proof \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\`; member reviewed payload head \`${decision.proof.lead_reviewed_sha || 'missing'}\``
     : `- Lead review: \`${decision.proof.lead_review_path || 'missing'}\` / \`${decision.proof.lead_review_result || 'missing'}\` at \`${decision.proof.lead_reviewed_sha || 'missing'}\``;
@@ -1346,7 +1915,7 @@ function renderDecisionMarkdown(decision) {
     `- Current PR head: \`${decision.reviewed_pr.head_sha}\``,
     `- Integration head: \`${integrationHead}\``,
     `- Payload authorization required: \`${payloadAuthorizationRequired}\``,
-    `- Integration validation required: \`${readyRoute}\``,
+    `- Integration validation required: \`${integrationValidationRequired}\``,
     `- Throughput level: \`${decision.throughput.level}\``,
     `- Human-review payload: \`${decision.human_review_payload}\``,
     `- Human notification required: \`${decision.human_notification_required}\``,
@@ -1382,6 +1951,42 @@ function renderDecisionMarkdown(decision) {
   }
   lines.push(
     '',
+    '## Payload / Integration State',
+    '',
+    `- Payload state: \`${stateSummary.payload_state}\``,
+    `- Integration state: \`${stateSummary.integration_state}\``,
+    `- Reviewed payload head: \`${statusOrUnknown(stateSummary.reviewed_payload_head_sha)}\``,
+    `- Current PR head: \`${statusOrUnknown(stateSummary.current_pr_head_sha)}\``,
+    `- Integration head: \`${statusOrUnknown(stateSummary.integration_head_sha)}\``,
+    `- Base at review: \`${statusOrUnknown(stateSummary.base_sha_at_review)}\``,
+    `- Current base: \`${statusOrUnknown(stateSummary.current_base_sha)}\``,
+    `- Payload lineage: \`${stateSummary.lineage_status}\``,
+    `- Effective payload: \`${stateSummary.effective_payload_status}\``,
+    `- Bundle membership: \`${stateSummary.bundle_membership_status}\``,
+    `- Authority scope: \`${stateSummary.authority_scope_status}\``,
+    `- Payload authorization: \`${stateSummary.payload_authorization}\``,
+    `- Integration validation: \`${stateSummary.integration_validation}\``,
+    `- Renewed owner authorization: \`${stateSummary.renewed_owner_authorization}\``,
+    '- Renewed owner authorization is not required merely because the current PR head changed; it is required when payload lineage, effective payload, bundle membership, or authority scope changed.',
+    `- Next action: ${stateSummary.required_next_action}`
+  );
+  if (bundleState) {
+    lines.push(
+      '',
+      '## Bundle State',
+      '',
+      `- Controller PR/head: \`${bundleState.controller}\``,
+      `- Member PR/head: ${bundleState.members.map((item) => `\`${item}\``).join(', ') || '`none`'}`,
+      `- Merged members: ${bundleState.merged_members.map((item) => `\`${item}\``).join(', ') || '`none`'}`,
+      `- Open members: ${bundleState.open_members.map((item) => `\`${item}\``).join(', ') || '`none`'}`,
+      `- Delegated branch-protection proof: \`${bundleState.delegated_branch_protection_proof}\``,
+      `- Merge order proof: \`${bundleState.merge_order_proof}\``,
+      `- Post-first-merge index refresh: \`${bundleState.post_first_merge_index_refresh}\``,
+      `- Residual integration mode: \`${bundleState.residual_integration_mode}\``
+    );
+  }
+  lines.push(
+    '',
     '## Proof Summary',
     '',
     ...(delegatedBundleProof
@@ -1396,6 +2001,7 @@ function renderDecisionMarkdown(decision) {
     leadReviewLine,
     `- Evidence-only tail allowed: \`${Boolean(decision.proof.lead_review_evidence_tail_allowed)}\``,
     `- Integration authorization inherited for lead review: \`${Boolean(decision.proof.lead_review_integration_authorization_inherited)}\``,
+    `- Integration delta review satisfies lead freshness: \`${Boolean(decision.proof.lead_review_integration_delta_reviewed)}\``,
     `- ${branchProtectionLabel}: \`${JSON.stringify(decision.proof.branch_protection || {})}\``
   );
   if (decision.proof.human_authorization) {
@@ -1424,6 +2030,8 @@ module.exports = {
   decisionMarker,
   normalizeEvidence,
   parseRenderedDecisionMarkdown,
+  payloadIntegrationStateSummary,
   renderDecisionMarkdown,
+  bundleStateSummary,
   validateDecision,
 };

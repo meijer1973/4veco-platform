@@ -1,23 +1,40 @@
 ---
 name: econ-companion-artifacts
-description: "Authoring + regeneration spec for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, web outputs, PPTX, and opt-in Office DOCX companion outputs). Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in the surface family above. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
+description: "Authoring + regeneration spec for Part B companion artifacts: the 14-file student-web validator baseline, the wider Start-to-exit-ticket product route, and 13 opt-in Office/legacy DOCX exports. Defines the source-first rule, required pre-checks, procedure-fidelity rules, visual-as-instruction rules, dual coding, cognitive load, scaffold appropriateness, source-output parity, affordance/routing, terminology, and the self-review-before-delivery gate. ALWAYS use this skill when creating, regenerating, or fixing any companion artifact in those scopes. Pair with the matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, etc.) and run `agents/econ-companion-visual-review.md` as the closure gate."
 pipeline: "Part B producer (umbrella; per-format Part B skills inherit; if a per-format skill conflicts on student-facing rules, this skill wins)"
 ---
 
 # Companion Learning Artifacts Skill
 
-General authoring + regeneration recipe for **student-facing companion artifacts**, including:
+General authoring + regeneration recipe for **student-facing companion
+artifacts**. Keep these three scopes distinct.
+
+The 14-file `student-web` **validator baseline** consists of:
 
 - `uitleg voorkennis.html`
 - `uitleg vaardigheden.html`
+- `presentatie.html` and the matching `presentatie.pptx`
+- `nieuws met visual.html`
+- `samenvatting.html`
+- `youtube-videos.html`
 - `begeleide inoefening.html`
 - `stappenplan.html`
 - `instapquiz.html`
 - `redeneer-spel.html`
 - `nieuws-detective.html`
-- differentiated exercise handouts where the visual or route-choice layer matters
-- companion web outputs and PPTX outputs
-- opt-in Office/legacy DOCX outputs when explicitly in scope
+- `wiskundevaardigheden.html`
+- `index.html`
+
+The wider product route is `Start -> Leer -> Check -> Oefen -> Exit ticket`.
+It includes an advisory short check and a separate target-equivalent exit
+ticket. Passing the 14-file baseline does not prove those surfaces or the
+route complete; inspect their rendered behavior and name missing work as a
+blocker, follow-up, or explicit human waiver.
+
+The `office`/`legacy-full` profiles add 13 DOCX files to the baseline, including
+differentiated basis/midden/verrijking exercise handouts. Review those exports
+only when that profile is explicitly in scope; they are not default
+`student-web` files.
 
 Paragraph PDF output and `build_pdf.py` belong to Part A textbook production,
 not the Part B companion lane.
@@ -45,6 +62,8 @@ Always read first:
 
 - `AGENTS.md` (architecture + canonical authority)
 - `BUILD-PARAGRAPH.md` (paragraph build pipeline)
+- `../4veco-lessen/specifications/product-end-state.md` (full route and maturity definitions)
+- `../4veco-lessen/specifications/companion-core-specifications.md` (stable route/check/exit-ticket contract)
 - `agents/econ-companion-visual-review.md` (the review gate)
 - The matching builder skill (`econ-explainer-docs`, `econ-exercise-builder`, etc.)
 - For `redeneer-spel.html`, also read `skills/econ-reasoning-game.md` before selecting mechanics or task families.
@@ -55,6 +74,10 @@ Always read first:
 ## Core rule
 
 Create student-facing companion artifacts from the **platform source layer**, not by hand-editing generated output. Generated artifacts must be **reproducible, reviewable, and consistent** across HTML/web, PPTX, games, visual variants, and opt-in Office DOCX.
+
+Validator completeness and product completeness are separate claims. Never use
+the presence of the 14 baseline files as sole evidence that the full route,
+advisory short check, or target-equivalent exit ticket is complete.
 
 The artifact must answer three student questions:
 
@@ -277,7 +300,7 @@ If the review agent is not available in the current run, simulate the same check
 
 When you hand off the artifact, deliver:
 
-1. **The regenerated artifact** (path in the lessen tree).
+1. **The regenerated artifact or surface set** (path in the lessen tree).
 2. **A short explanation of the changes** (which builders/converters/registry entries changed and why).
 3. **Evidence that the rendered page was checked** (browser/DOCX inspection, not just source diff).
 4. **A source-output parity note** (which source elements you confirmed survive in the rendered output).
@@ -291,4 +314,4 @@ When you hand off the artifact, deliver:
 - **Builders**: `econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, `econ-word-templates`, `economic-graph`, `econ-nieuws-exercise`, `econ-consolidation-builder`, `econ-testprep-builder`. Builders produce the source; this skill scopes how that source must serve the student.
 - **Review gate**: `agents/econ-companion-visual-review.md` (FAIL on any hard fail listed in the "Review before delivery" section).
 - **Closure**: `econ-quality-control` and `qc-references` for logging defects. A companion is not closed by passing `validate-paragraph.js` alone; the visual review must also pass or pass-with-flags.
-- **Pipeline**: `BUILD-PARAGRAPH.md` Phase 6 (Deploy + validate) runs this skill's review heuristics; closure is recorded as `X.Y.Z-companion-visual-review.md` in the paragraph folder.
+- **Pipeline**: `BUILD-PARAGRAPH.md` Phase 6/6a (deploy + companion review) runs this skill's review heuristics; closure is recorded as `X.Y.Z-companion-visual-review.md` in the paragraph folder.

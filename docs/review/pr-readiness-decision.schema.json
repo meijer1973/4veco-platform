@@ -248,6 +248,9 @@
         "lead_review_integration_authorization_inherited": {
           "type": "boolean"
         },
+        "lead_review_integration_delta_reviewed": {
+          "type": "boolean"
+        },
         "post_lead_review_changed_paths": {
           "type": "array",
           "items": {
@@ -283,6 +286,57 @@
             "transition_ready": {
               "type": "boolean"
             },
+            "controller": {
+              "type": "object",
+              "required": [
+                "repository",
+                "pr_number",
+                "reviewed_payload_head_sha"
+              ],
+              "properties": {
+                "repository": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "pr_number": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "reviewed_payload_head_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                }
+              },
+              "additionalProperties": true
+            },
+            "exact_members": {
+              "type": "object",
+              "required": [
+                "platform_base_sha",
+                "platform_candidate_sha",
+                "lesson_base_sha",
+                "lesson_candidate_sha"
+              ],
+              "properties": {
+                "platform_base_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                },
+                "platform_candidate_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                },
+                "lesson_base_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                },
+                "lesson_candidate_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                }
+              },
+              "additionalProperties": false
+            },
             "paired_prs": {
               "type": "array",
               "items": {
@@ -314,7 +368,7 @@
                     "minLength": 1
                   },
                   "open": {
-                    "const": true
+                    "type": "boolean"
                   },
                   "current": {
                     "const": true
@@ -335,8 +389,46 @@
                   "reviewed_payload_head_sha": {
                     "type": "string",
                     "pattern": "^[A-Fa-f0-9]{40}$"
+                  },
+                  "merged": {
+                    "type": "boolean"
+                  },
+                  "merge_commit_sha": {
+                    "type": "string",
+                    "pattern": "^[A-Fa-f0-9]{40}$"
                   }
-                }
+                },
+                "oneOf": [
+                  {
+                    "properties": {
+                      "open": {
+                        "const": true
+                      },
+                      "merged": {
+                        "const": false
+                      }
+                    },
+                    "not": {
+                      "required": [
+                        "merge_commit_sha"
+                      ]
+                    }
+                  },
+                  {
+                    "required": [
+                      "merged",
+                      "merge_commit_sha"
+                    ],
+                    "properties": {
+                      "open": {
+                        "const": false
+                      },
+                      "merged": {
+                        "const": true
+                      }
+                    }
+                  }
+                ]
               }
             },
             "transitionable_draft_members": {
@@ -418,6 +510,302 @@
                   }
                 }
               }
+            },
+            "integration_refresh": {
+              "type": "object",
+              "required": [
+                "status",
+                "order",
+                "platform_payload_sha",
+                "platform_integration_head_sha",
+                "lesson_payload_sha",
+                "lesson_merge_commit_sha",
+                "refresh_result",
+                "lineage",
+                "readiness",
+                "ci"
+              ],
+              "properties": {
+                "status": {
+                  "const": "complete"
+                },
+                "order": {
+                  "const": "lesson-first"
+                },
+                "platform_payload_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                },
+                "platform_integration_head_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                },
+                "lesson_payload_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                },
+                "lesson_merge_commit_sha": {
+                  "type": "string",
+                  "pattern": "^[A-Fa-f0-9]{40}$"
+                },
+                "refresh_result": {
+                  "type": "object",
+                  "required": [
+                    "status",
+                    "trusted_executor",
+                    "platform_integration_head_sha",
+                    "previous_platform_head_sha",
+                    "lesson_merge_commit_sha",
+                    "changed_paths",
+                    "verified_paths",
+                    "hashes",
+                    "metadata",
+                    "commit"
+                  ],
+                  "properties": {
+                    "status": {
+                      "enum": [
+                        "created",
+                        "reused"
+                      ]
+                    },
+                    "trusted_executor": {
+                      "const": "platform-main"
+                    },
+                    "platform_integration_head_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "previous_platform_head_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "lesson_merge_commit_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "changed_paths": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "uniqueItems": true,
+                      "items": {
+                        "enum": [
+                          "reports/github-agent-index-lessen.json",
+                          "reports/github-agent-index-lessen.md",
+                          "reports/github-agent-index-platform.json",
+                          "reports/github-agent-index-platform.md"
+                        ]
+                      }
+                    },
+                    "verified_paths": {
+                      "type": "array",
+                      "minItems": 4,
+                      "maxItems": 4,
+                      "uniqueItems": true,
+                      "items": {
+                        "enum": [
+                          "reports/github-agent-index-lessen.json",
+                          "reports/github-agent-index-lessen.md",
+                          "reports/github-agent-index-platform.json",
+                          "reports/github-agent-index-platform.md"
+                        ]
+                      }
+                    },
+                    "hashes": {
+                      "type": "object",
+                      "required": [
+                        "reports/github-agent-index-lessen.json",
+                        "reports/github-agent-index-lessen.md",
+                        "reports/github-agent-index-platform.json",
+                        "reports/github-agent-index-platform.md"
+                      ],
+                      "properties": {
+                        "reports/github-agent-index-lessen.json": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{64}$"
+                        },
+                        "reports/github-agent-index-lessen.md": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{64}$"
+                        },
+                        "reports/github-agent-index-platform.json": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{64}$"
+                        },
+                        "reports/github-agent-index-platform.md": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{64}$"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "required": [
+                        "platform_source_commit",
+                        "platform_source_branch",
+                        "lesson_source_commit",
+                        "lesson_source_branch",
+                        "generated_at"
+                      ],
+                      "properties": {
+                        "platform_source_commit": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{40}$"
+                        },
+                        "platform_source_branch": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "lesson_source_commit": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{40}$"
+                        },
+                        "lesson_source_branch": {
+                          "const": "origin/main"
+                        },
+                        "generated_at": {
+                          "type": "string",
+                          "format": "date-time",
+                          "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d\\.\\d{3}Z$"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "commit": {
+                      "type": "object",
+                      "required": [
+                        "sha",
+                        "parent_sha",
+                        "changed_paths"
+                      ],
+                      "properties": {
+                        "sha": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{40}$"
+                        },
+                        "parent_sha": {
+                          "type": "string",
+                          "pattern": "^[A-Fa-f0-9]{40}$"
+                        },
+                        "changed_paths": {
+                          "type": "array",
+                          "minItems": 1,
+                          "maxItems": 4,
+                          "uniqueItems": true,
+                          "items": {
+                            "enum": [
+                              "reports/github-agent-index-lessen.json",
+                              "reports/github-agent-index-lessen.md",
+                              "reports/github-agent-index-platform.json",
+                              "reports/github-agent-index-platform.md"
+                            ]
+                          }
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "lineage": {
+                  "type": "object",
+                  "required": [
+                    "reviewed_payload_head_sha",
+                    "integration_head_sha",
+                    "payload_ancestor_of_integration_head",
+                    "authorization_inherited",
+                    "failures"
+                  ],
+                  "properties": {
+                    "reviewed_payload_head_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "integration_head_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "payload_ancestor_of_integration_head": {
+                      "const": true
+                    },
+                    "authorization_inherited": {
+                      "const": true
+                    },
+                    "failures": {
+                      "type": "array",
+                      "maxItems": 0
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "readiness": {
+                  "type": "object",
+                  "required": [
+                    "head_sha",
+                    "route",
+                    "attestation_schema_version",
+                    "attestation_digest"
+                  ],
+                  "properties": {
+                    "head_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "route": {
+                      "enum": [
+                        "READY_FOR_LEAD_ONLY",
+                        "READY_FOR_HUMAN_REVIEW"
+                      ]
+                    },
+                    "attestation_schema_version": {
+                      "const": 2
+                    },
+                    "attestation_digest": {
+                      "type": "string",
+                      "pattern": "^sha256:[A-Fa-f0-9]{64}$"
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "ci": {
+                  "type": "object",
+                  "required": [
+                    "status",
+                    "platform_sha",
+                    "lesson_sha"
+                  ],
+                  "properties": {
+                    "status": {
+                      "enum": [
+                        "success",
+                        "succeeded",
+                        "passed",
+                        "pass",
+                        "ok"
+                      ]
+                    },
+                    "platform_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "lesson_sha": {
+                      "type": "string",
+                      "pattern": "^[A-Fa-f0-9]{40}$"
+                    },
+                    "run_id": {
+                      "type": [
+                        "integer",
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              },
+              "additionalProperties": true
             }
           },
           "additionalProperties": true
@@ -434,7 +822,40 @@
             "object",
             "null"
           ],
-          "additionalProperties": true
+          "additionalProperties": true,
+          "properties": {
+            "delta_review": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "result",
+                "reviewed_payload_head_sha",
+                "integration_head_sha",
+                "path"
+              ],
+              "properties": {
+                "result": {
+                  "type": "string",
+                  "enum": [
+                    "PASS",
+                    "PASS WITH FLAGS"
+                  ]
+                },
+                "reviewed_payload_head_sha": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "integration_head_sha": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{40}$"
+                },
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -477,6 +898,218 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "required": [
+          "proof"
+        ],
+        "properties": {
+          "proof": {
+            "required": [
+              "lead_review_integration_delta_reviewed"
+            ],
+            "properties": {
+              "lead_review_integration_delta_reviewed": {
+                "const": true
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "required": [
+              "integration"
+            ],
+            "properties": {
+              "integration": {
+                "type": "object",
+                "required": [
+                  "ok",
+                  "reviewed_payload_head_sha",
+                  "integration_head_sha",
+                  "authorization_inherited",
+                  "requires_human_reauthorization",
+                  "base_drift",
+                  "delta_review"
+                ],
+                "properties": {
+                  "ok": {
+                    "const": true
+                  },
+                  "authorization_inherited": {
+                    "const": true
+                  },
+                  "requires_human_reauthorization": {
+                    "const": false
+                  },
+                  "base_drift": {
+                    "type": "object",
+                    "required": [
+                      "requires_human_reauthorization"
+                    ],
+                    "properties": {
+                      "requires_human_reauthorization": {
+                        "const": false
+                      }
+                    }
+                  }
+                },
+                "anyOf": [
+                  {
+                    "required": [
+                      "requires_integration_delta_lead_review"
+                    ],
+                    "properties": {
+                      "requires_integration_delta_lead_review": {
+                        "const": true
+                      }
+                    }
+                  },
+                  {
+                    "required": [
+                      "base_drift"
+                    ],
+                    "properties": {
+                      "base_drift": {
+                        "required": [
+                          "requires_integration_delta_lead_review"
+                        ],
+                        "properties": {
+                          "requires_integration_delta_lead_review": {
+                            "const": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "route",
+          "proof"
+        ],
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          },
+          "proof": {
+            "required": [
+              "integration"
+            ],
+            "properties": {
+              "integration": {
+                "type": "object",
+                "required": [
+                  "delta_review"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "required": [
+              "lead_review_integration_delta_reviewed"
+            ],
+            "properties": {
+              "lead_review_integration_delta_reviewed": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "route": {
+            "enum": [
+              "READY_FOR_LEAD_ONLY",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          },
+          "reviewed_pr": {
+            "properties": {
+              "repo": {
+                "const": "meijer1973/4veco-platform"
+              }
+            }
+          },
+          "throughput": {
+            "properties": {
+              "class": {
+                "const": "cross_repo_bundle"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "proof": {
+            "required": [
+              "bundle"
+            ],
+            "properties": {
+              "bundle": {
+                "required": [
+                  "controller",
+                  "exact_members",
+                  "compatibility",
+                  "paired_prs",
+                  "paired_lead_reviews"
+                ],
+                "properties": {
+                  "paired_prs": {
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "items": {
+                      "required": [
+                        "repository"
+                      ],
+                      "properties": {
+                        "repository": {
+                          "const": "meijer1973/4veco-lessen"
+                        }
+                      }
+                    }
+                  },
+                  "paired_lead_reviews": {
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "items": {
+                      "required": [
+                        "repository"
+                      ],
+                      "properties": {
+                        "repository": {
+                          "const": "meijer1973/4veco-lessen"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     {
       "if": {
         "properties": {
@@ -620,18 +1253,76 @@
                         "type": "object",
                         "required": [
                           "ok",
+                          "bundle_id",
+                          "controller",
+                          "exact_members",
                           "compatibility"
                         ],
                         "properties": {
                           "ok": {
                             "const": true
                           },
+                          "bundle_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "controller": {
+                            "type": "object",
+                            "required": [
+                              "repository",
+                              "pr_number",
+                              "reviewed_payload_head_sha"
+                            ],
+                            "properties": {
+                              "repository": {
+                                "const": "meijer1973/4veco-platform"
+                              },
+                              "pr_number": {
+                                "type": "integer",
+                                "minimum": 1
+                              },
+                              "reviewed_payload_head_sha": {
+                                "type": "string",
+                                "pattern": "^[A-Fa-f0-9]{40}$"
+                              }
+                            },
+                            "additionalProperties": true
+                          },
+                          "exact_members": {
+                            "type": "object",
+                            "required": [
+                              "platform_base_sha",
+                              "platform_candidate_sha",
+                              "lesson_base_sha",
+                              "lesson_candidate_sha"
+                            ],
+                            "properties": {
+                              "platform_base_sha": {
+                                "type": "string",
+                                "pattern": "^[A-Fa-f0-9]{40}$"
+                              },
+                              "platform_candidate_sha": {
+                                "type": "string",
+                                "pattern": "^[A-Fa-f0-9]{40}$"
+                              },
+                              "lesson_base_sha": {
+                                "type": "string",
+                                "pattern": "^[A-Fa-f0-9]{40}$"
+                              },
+                              "lesson_candidate_sha": {
+                                "type": "string",
+                                "pattern": "^[A-Fa-f0-9]{40}$"
+                              }
+                            },
+                            "additionalProperties": false
+                          },
                           "compatibility": {
                             "type": "object",
                             "required": [
                               "ok",
                               "recommended_merge_order",
-                              "permitted_merge_orders"
+                              "permitted_merge_orders",
+                              "integration_contract"
                             ],
                             "properties": {
                               "ok": {
@@ -645,6 +1336,110 @@
                                 "contains": {
                                   "const": "lesson-first"
                                 }
+                              },
+                              "integration_contract": {
+                                "type": "object",
+                                "required": [
+                                  "schema_version",
+                                  "order",
+                                  "post_first_merge_refresh"
+                                ],
+                                "properties": {
+                                  "schema_version": {
+                                    "const": 2
+                                  },
+                                  "order": {
+                                    "const": "lesson-first"
+                                  },
+                                  "post_first_merge_refresh": {
+                                    "type": "object",
+                                    "required": [
+                                      "required",
+                                      "phase",
+                                      "source",
+                                      "trusted_executor",
+                                      "generator",
+                                      "freshness_checker",
+                                      "generated_and_verified_paths",
+                                      "actual_changed_paths_policy",
+                                      "deterministic_inputs",
+                                      "exact_readiness_head",
+                                      "exact_ci_binding"
+                                    ],
+                                    "properties": {
+                                      "required": {
+                                        "const": true
+                                      },
+                                      "phase": {
+                                        "const": "after_lesson_merge_before_platform_ci"
+                                      },
+                                      "source": {
+                                        "const": "lesson_merge_commit"
+                                      },
+                                      "trusted_executor": {
+                                        "const": "platform-main"
+                                      },
+                                      "generator": {
+                                        "const": "build-scripts/reports/github-agent-index.js"
+                                      },
+                                      "freshness_checker": {
+                                        "const": "build-scripts/reports/check-agent-index-freshness.js"
+                                      },
+                                      "generated_and_verified_paths": {
+                                        "type": "array",
+                                        "minItems": 4,
+                                        "maxItems": 4,
+                                        "uniqueItems": true,
+                                        "items": {
+                                          "enum": [
+                                            "reports/github-agent-index-lessen.json",
+                                            "reports/github-agent-index-lessen.md",
+                                            "reports/github-agent-index-platform.json",
+                                            "reports/github-agent-index-platform.md"
+                                          ]
+                                        }
+                                      },
+                                      "actual_changed_paths_policy": {
+                                        "const": "non_empty_subset_of_generated_and_verified_paths"
+                                      },
+                                      "deterministic_inputs": {
+                                        "type": "array",
+                                        "minItems": 4,
+                                        "maxItems": 4,
+                                        "uniqueItems": true,
+                                        "items": {
+                                          "enum": [
+                                            "platform_refresh_parent_sha",
+                                            "lesson_merge_commit_sha",
+                                            "lesson_merge_committer_timestamp",
+                                            "canonical_source_branches"
+                                          ]
+                                        }
+                                      },
+                                      "exact_readiness_head": {
+                                        "const": "platform_integration_head_sha"
+                                      },
+                                      "exact_ci_binding": {
+                                        "type": "object",
+                                        "required": [
+                                          "platform_sha",
+                                          "lesson_sha"
+                                        ],
+                                        "properties": {
+                                          "platform_sha": {
+                                            "const": "platform_integration_head_sha"
+                                          },
+                                          "lesson_sha": {
+                                            "const": "lesson_merge_commit_sha"
+                                          }
+                                        },
+                                        "additionalProperties": false
+                                      }
+                                    },
+                                    "additionalProperties": true
+                                  }
+                                },
+                                "additionalProperties": true
                               }
                             },
                             "additionalProperties": true

@@ -3,6 +3,13 @@
 This is the archived Office/legacy companion contract for paragraph validation.
 It is not the normal Part B companion/student-web lane.
 
+The normal Part B `student-web` profile has a 14-file validation baseline, but
+that baseline is not the complete product route. Product review must still
+inspect `Start -> Leer -> Check -> Oefen -> Exit ticket`, including the
+advisory short check and the separate target-equivalent exit ticket. Selecting
+`legacy-full` adds Office exports; it does not replace or prove those route
+requirements.
+
 Use this profile only when one of these is true:
 
 - the requested product explicitly includes editable Word handouts;

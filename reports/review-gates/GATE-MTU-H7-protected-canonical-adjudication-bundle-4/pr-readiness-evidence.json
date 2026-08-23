@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4",
+  "gate_id": "GATE-MTU-H7-protected-canonical-adjudication-bundle-4",
+  "review_standard": "REV-STD-1",
+  "status": "PENDING_EXACT_REMOTE_PR_READINESS_PROOF",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
+  "authority_flags": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "packet_id": "GATE-MTU-H7-protected-canonical-adjudication-bundle-4",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
+  "authority_class": "high_authority",
+  "changed_paths": [
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "build-scripts/references/lib/mtu-h7-bundle4-contract.js",
+    "build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js",
+    "build-scripts/references/lib/mtu-h7-bundle4-provenance.js",
+    "build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js",
+    "build-scripts/reports/github-agent-index.js",
+    "build-scripts/reports/check-agent-index-freshness.js",
+    "build-scripts/reports/agent-index-freshness.test.js",
+    "package.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.md",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.md",
+    "reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/bundle-urls.md",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.md",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.md",
+    "reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md",
+    "reports/url-index.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "rationale": "L4 human gate required because Bundle 4 prepares protected/canonical H7 governance adjudication."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "human_gate_required",
+    "protected_canonical_candidate_authority_requires_separate_owner_decision"
+  ],
+  "throughput": {
+    "class": "high_authority",
+    "authority_class": "high_authority",
+    "level": "L4"
+  },
+  "human_review_payload": "substantial",
+  "consequence": "high",
+  "batching": {
+    "viable": false,
+    "target": null,
+    "reason": "Bundle 4 is one coherent protected/canonical adjudication-prep packet."
+  },
+  "risk_signals": {
+    "governance": true,
+    "protected": true,
+    "product_authority": false,
+    "student_use": false
+  },
+  "proof": {
+    "checkers": [
+      {
+        "command": "node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "npm.cmd run check:agent-index-freshness",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "pending_exact_head_execution"
+      },
+      {
+        "command": "npm.cmd run check:branch-protection",
+        "status": "pending_exact_head_execution"
+      }
+    ],
+    "lead_review": {
+      "path": null,
+      "result": null,
+      "reviewed_commit_sha": null,
+      "required_specialist_roles": [
+        "teacher",
+        "economist",
+        "quality_inspection"
+      ],
+      "minimum_specialist_verdict": "MORE_THAN_SATISFIED"
+    },
+    "branch_protection": null
+  },
+  "pilot_data": {
+    "workflow": "single-account-pr-governance",
+    "expected_route": "READY_FOR_HUMAN_REVIEW",
+    "exact_remote_head_sha": null,
+    "pr_number": null,
+    "exact_remote_proof_state": "not_recorded_pre_pr",
+    "branch_protection_ok_required": true,
+    "owner_authorization_required": true,
+    "reason": "Bundle 4 prepares protected/canonical H7 adjudication and must remain human-review gated."
+  },
+  "authorization_boundaries": {
+    "payload_authorization": "May authorize integration of this checker/report/gate packet only after READY_FOR_HUMAN_REVIEW.",
+    "candidate_authorization": "Must be a separate later owner decision per candidate family before any protected-governance execution preparation.",
+    "payload_authorization_does_not_imply_candidate_authorization": true
+  },
+  "prior_checker_boundary": {
+    "bundle1_checker_current_status": "historical_hash_locked_mtu_registry_drift_not_current_proof",
+    "bundle2_checker_current_status": "historical_hash_locked_mtu_registry_drift_not_current_proof",
+    "current_proof_basis": [
+      "Bundle 4 checker validates current source-file hashes, including the live MTU registry hash.",
+      "Bundle 3 checker remains green on current main and preserves seven protected holds.",
+      "Bundle 1/2 artifacts are consumed as hash-pinned historical evidence, not as current-registry checkers."
+    ]
+  },
+  "required_before_mark_ready_or_merge": [
+    "Run the PR Readiness Reviewer against the exact remote PR head.",
+    "Include full live branch-protection checker output with ok: true.",
+    "Run Teacher, Economist, and Quality inspection lead reviews and require MORE_THAN_SATISFIED from each reviewer.",
+    "Route READY_FOR_HUMAN_REVIEW after exact-head readiness proof and wait for explicit owner payload authorization before merge.",
+    "Do not use L0-L2 READY_FOR_LEAD_ONLY handling for this protected/canonical adjudication-prep packet."
+  ],
+  "commands": [
+    "node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js",
+    "node build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
+    "npm.cmd run check:agent-index-freshness",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:branch-protection",
+    "npm.cmd run review:pr-readiness -- --repo meijer1973/4veco-platform --pr <PR_NUMBER> --evidence reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json"
+  ]
+}

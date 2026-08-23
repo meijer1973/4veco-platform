@@ -11,7 +11,10 @@ const {
   summarizeProtection,
 } = require('../ci/check-branch-protection');
 const { applyLiveDecision } = require('./apply-pr-readiness-decision');
-const { parseRenderedDecisionMarkdown } = require('./pr-readiness-router');
+const {
+  parseRenderedDecisionMarkdown,
+  payloadIntegrationStateSummary,
+} = require('./pr-readiness-router');
 const { runReview } = require('./review-pr-readiness');
 
 const DEFAULT_REPO = 'meijer1973/4veco-platform';
@@ -576,6 +579,7 @@ function waitForMainCi(repo, headSha, options = {}) {
 function defaultIntegrationDeps() {
   return {
     buildLineageInput,
+    enforceIntegrationLeadReviewPolicy,
     enforceLineagePolicy,
     fetchAuthorizationComment,
     fetchBranchProtectionSummary,
@@ -627,26 +631,204 @@ function buildLineageInput(repo, authorization, pr, mainSha) {
 
 function readJsonIfPresent(file) {
   if (!file) return null;
-  return JSON.parse(fs.readFileSync(file, 'utf8'));
+  const record = JSON.parse(fs.readFileSync(file, 'utf8'));
+  if (record && typeof record === 'object' && !Array.isArray(record) && !record.path && !record.review_path) {
+    return { ...record, path: file };
+  }
+  return record;
 }
 
 function validateIntegrationDeltaReview(record, lineage) {
   const failures = [];
   const item = record || {};
-  const result = String(item.result || item.verdict || '').trim().replace(/_/g, ' ').toUpperCase();
+  const resultAliases = ['result', 'verdict', 'status']
+    .filter((key) => Object.prototype.hasOwnProperty.call(item, key))
+    .map((key) => String(item[key] || '').trim().replace(/_/g, ' ').toUpperCase());
+  const result = resultAliases[0] || '';
+  if (new Set(resultAliases).size > 1) failures.push('integration_delta_review_result_alias_conflict');
   if (!['PASS', 'PASS WITH FLAGS'].includes(result)) failures.push('integration_delta_review_result_not_passing');
   if (item.reviewed_payload_head_sha !== lineage.reviewed_payload_head_sha) {
     failures.push('integration_delta_review_payload_mismatch');
   }
-  if (item.integration_head_sha !== lineage.integration_head_sha && item.reviewed_integration_head_sha !== lineage.integration_head_sha) {
+  const headAliases = ['integration_head_sha', 'reviewed_integration_head_sha']
+    .filter((key) => Object.prototype.hasOwnProperty.call(item, key))
+    .map((key) => item[key]);
+  const integrationHeadSha = headAliases[0] || null;
+  if (new Set(headAliases).size > 1) failures.push('integration_delta_review_head_alias_conflict');
+  if (integrationHeadSha !== lineage.integration_head_sha) {
     failures.push('integration_delta_review_head_mismatch');
   }
-  if (!item.path && !item.review_path) failures.push('integration_delta_review_path_missing');
+  const pathAliases = ['path', 'review_path']
+    .filter((key) => Object.prototype.hasOwnProperty.call(item, key))
+    .map((key) => item[key]);
+  const validPaths = pathAliases
+    .filter((value) => typeof value === 'string' && value.trim())
+    .map((value) => value.trim());
+  const path = validPaths[0] || null;
+  if (pathAliases.length === 0 || validPaths.length === 0) failures.push('integration_delta_review_path_missing');
+  if (pathAliases.some((value) => typeof value !== 'string' || !value.trim())) {
+    failures.push('integration_delta_review_path_invalid');
+  }
+  if (new Set(validPaths).size > 1) failures.push('integration_delta_review_path_alias_conflict');
+  const normalizedReview = { ...item };
+  delete normalizedReview.verdict;
+  delete normalizedReview.status;
+  delete normalizedReview.reviewed_integration_head_sha;
+  delete normalizedReview.review_path;
+  normalizedReview.result = result;
+  normalizedReview.integration_head_sha = integrationHeadSha;
+  normalizedReview.path = path;
   return {
     ok: failures.length === 0,
     failures,
-    review: item,
+    review: normalizedReview,
   };
+}
+
+function normalizedReviewResult(value) {
+  return String(value || '').trim().replace(/_/g, ' ').toUpperCase();
+}
+
+function reviewPath(record) {
+  const item = record || {};
+  return item.path || item.review_path || item.reviewPath || null;
+}
+
+function firstShaLine(text, labels) {
+  for (const label of labels) {
+    const pattern = new RegExp(`${label}\\s*:\\s*\`?([a-f0-9]{40})\`?`, 'i');
+    const match = String(text || '').match(pattern);
+    if (match) return match[1];
+  }
+  return null;
+}
+
+function firstResultLine(text) {
+  const line = String(text || '')
+    .split(/\r?\n/)
+    .find((item) => /^\s*(?:Verdict|Result)\s*:/i.test(item));
+  if (!line) return null;
+  const value = line.replace(/^\s*(?:Verdict|Result)\s*:\s*/i, '').trim();
+  return value.replace(/^[`*_]+/, '').replace(/[`*_.\s]+$/, '').trim() || null;
+}
+
+function parseIntegrationLeadReview(text, file = null) {
+  const raw = String(text || '').trim();
+  if (!raw) return null;
+  if (raw.startsWith('{')) {
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed) && file && !parsed.path && !parsed.review_path
+      ? { ...parsed, path: file }
+      : parsed;
+  }
+  return {
+    result: firstResultLine(raw),
+    reviewed_payload_head_sha: firstShaLine(raw, ['Reviewed payload head', 'reviewed_payload_head_sha', 'Payload head']),
+    integration_head_sha: firstShaLine(raw, ['Reviewed integration head', 'integration_head_sha', 'Reviewed integration_head_sha', 'Integration head']),
+    path: file,
+    review_path: file,
+  };
+}
+
+function readIntegrationLeadReviewIfPresent(file) {
+  if (!file) return null;
+  return parseIntegrationLeadReview(fs.readFileSync(file, 'utf8'), file);
+}
+
+function normalizeIntegrationLeadReview(record) {
+  const item = record || {};
+  return {
+    result: normalizedReviewResult(item.result || item.verdict),
+    path: reviewPath(item),
+    reviewed_payload_head_sha:
+      item.reviewed_payload_head_sha ||
+      item.reviewed_payload_sha ||
+      item.payload_head_sha ||
+      null,
+    integration_head_sha:
+      item.integration_head_sha ||
+      item.reviewed_integration_head_sha ||
+      item.reviewed_integration_sha ||
+      null,
+    scope: item.scope || item.review_scope || null,
+    raw: item,
+  };
+}
+
+function evidenceTailAfterReview(lineage, reviewedIntegrationHead) {
+  if (!reviewedIntegrationHead || reviewedIntegrationHead === lineage.integration_head_sha) return { ok: true, tail: [] };
+  const commits = Array.isArray(lineage.intervening_commits) ? lineage.intervening_commits : [];
+  const index = commits.findIndex((commit) => commit && commit.sha === reviewedIntegrationHead);
+  if (index === -1) {
+    return { ok: false, failure: 'integration_lead_review_head_not_in_lineage', tail: [] };
+  }
+  const tail = commits.slice(index + 1);
+  const invalid = tail.filter((commit) => {
+    if (!commit || commit.invalidating === true) return true;
+    return commit.classification !== 'allowlisted_deterministic_evidence_refresh';
+  });
+  return {
+    ok: invalid.length === 0,
+    failure: invalid.length > 0 ? 'integration_lead_review_tail_not_evidence_only' : null,
+    tail,
+  };
+}
+
+function validateIntegrationLeadReview(record, lineage, options = {}) {
+  const failures = [];
+  const review = normalizeIntegrationLeadReview(record);
+  const baseDrift = (lineage && lineage.base_drift) || {};
+  if (!['PASS', 'PASS WITH FLAGS'].includes(review.result)) {
+    failures.push('integration_lead_review_result_not_passing');
+  }
+  if (!review.path) failures.push('integration_lead_review_path_missing');
+  if (review.reviewed_payload_head_sha !== lineage.reviewed_payload_head_sha) {
+    failures.push('integration_lead_review_payload_mismatch');
+  }
+  if (!review.integration_head_sha) {
+    failures.push('integration_lead_review_head_missing');
+  }
+  if (lineage.ok !== true || lineage.authorization_inherited !== true || Array.isArray(lineage.failures) && lineage.failures.length > 0) {
+    failures.push('integration_lead_review_lineage_not_authorized');
+  }
+  if (
+    lineage.requires_integration_delta_lead_review === true ||
+    lineage.requires_human_reauthorization === true ||
+    baseDrift.requires_integration_delta_lead_review === true ||
+    baseDrift.requires_human_reauthorization === true
+  ) {
+    failures.push('integration_lead_review_lineage_requires_escalation');
+  }
+  if (lineage.requires_deterministic_refresh === true && options.deterministicRefreshVerified !== true) {
+    failures.push('integration_lead_review_deterministic_refresh_not_verified');
+  }
+  if (review.integration_head_sha && review.integration_head_sha !== lineage.integration_head_sha) {
+    const tail = evidenceTailAfterReview(lineage, review.integration_head_sha);
+    if (!tail.ok) failures.push(tail.failure);
+    if (tail.ok && tail.tail.length > 0 && options.deterministicRefreshVerified !== true) {
+      failures.push('integration_lead_review_deterministic_refresh_not_verified');
+    }
+  }
+  return {
+    ok: failures.length === 0,
+    failures: [...new Set(failures)],
+    review,
+  };
+}
+
+function enforceIntegrationLeadReviewPolicy(record, lineage, options = {}) {
+  if (!record) return { ok: true, review: null };
+  const validation = validateIntegrationLeadReview(record, lineage, options);
+  if (!validation.ok) {
+    return {
+      ok: false,
+      phase: 'integration_head_lead_review_invalid',
+      status_state: 'failure',
+      status_description: `Integration-head lead review invalid: ${validation.failures.join(', ')}`,
+      integration_lead_review: validation,
+    };
+  }
+  return { ok: true, review: validation.review };
 }
 
 function enforceLineagePolicy(lineage, options = {}) {
@@ -687,6 +869,27 @@ function enforceLineagePolicy(lineage, options = {}) {
 
 function supplementalFromReadinessDecision(payloadDecision, authorization, lineage, branchProtection, options = {}) {
   const proof = payloadDecision.proof || {};
+  const payloadReadinessLeadReview = {
+    path: proof.lead_review_path,
+    result: proof.lead_review_result,
+    reviewed_commit_sha: proof.lead_reviewed_sha,
+  };
+  const suppliedIntegrationLeadReview = options.integrationLeadReview
+    ? validateIntegrationLeadReview(options.integrationLeadReview, lineage, {
+        deterministicRefreshVerified: options.deterministicRefreshVerified,
+      })
+    : null;
+  if (suppliedIntegrationLeadReview && !suppliedIntegrationLeadReview.ok) {
+    throw new Error(`integration-head lead review invalid: ${suppliedIntegrationLeadReview.failures.join(', ')}`);
+  }
+  const operativeIntegrationLeadReview = suppliedIntegrationLeadReview && suppliedIntegrationLeadReview.review;
+  const operativeLeadReview = operativeIntegrationLeadReview
+    ? {
+        path: operativeIntegrationLeadReview.path,
+        result: operativeIntegrationLeadReview.result,
+        reviewed_commit_sha: operativeIntegrationLeadReview.integration_head_sha,
+      }
+    : payloadReadinessLeadReview;
   const checkers = [
     ...((proof.checkers || []).map((checker) => ({ ...checker }))),
     {
@@ -719,16 +922,33 @@ function supplementalFromReadinessDecision(payloadDecision, authorization, linea
     batching: payloadDecision.batching,
     proof: {
       checkers,
-      lead_review: {
-        path: proof.lead_review_path,
-        result: proof.lead_review_result,
-        reviewed_commit_sha: proof.lead_reviewed_sha,
-      },
+      payload_readiness_lead_review: payloadReadinessLeadReview,
+      lead_review: operativeLeadReview,
       branch_protection: branchProtection,
       human_authorization: authorization,
       integration: integrationProof,
     },
   };
+}
+
+function payloadIntegrationStateForResult(repo, prNumber, pr, authorization, lineage, route = 'READY_FOR_HUMAN_REVIEW', stateOptions = {}) {
+  const integration = {
+    ...(lineage || {}),
+    ...(stateOptions.integration || {}),
+  };
+  const currentHead = stateOptions.currentHeadSha || integration.integration_head_sha || (pr && pr.headRefOid);
+  return payloadIntegrationStateSummary({
+    route,
+    reviewed_pr: {
+      repo,
+      number: Number(prNumber),
+      head_sha: currentHead,
+    },
+    proof: {
+      human_authorization: authorization,
+      integration,
+    },
+  });
 }
 
 function payloadReadinessDecisionFromComments(comments, repo, prNumber, payloadSha) {
@@ -808,6 +1028,8 @@ function integrate(options) {
   if (!Number.isInteger(prNumber) || prNumber < 1) throw new Error('--pr must be a positive integer');
   const deps = integrationDeps(options);
   const deltaReview = options.deltaReview || readJsonIfPresent(options.deltaReviewPath);
+  const integrationLeadReview =
+    options.integrationLeadReview || readIntegrationLeadReviewIfPresent(options.integrationLeadReviewPath);
   const authorization = options.authorization ||
     deps.fetchAuthorizationComment(repo, options.authorizationCommentId, { expectedPr: prNumber });
   const authorizationSummary = deps.validateAuthorizationRecord(authorization, {
@@ -873,18 +1095,52 @@ function integrate(options) {
     deps.setCommitStatus(repo, pr.headRefOid, initialPolicy.status_state, initialPolicy.status_description, pr.url, options);
     return { ok: false, phase: initialPolicy.phase, lineage: initialLineage, policy: initialPolicy };
   }
+  const initialIntegrationLeadReviewPolicy = deps.enforceIntegrationLeadReviewPolicy(integrationLeadReview, initialLineage, {
+    deterministicRefreshVerified: options.deterministicRefreshVerified,
+  });
+  if (!initialIntegrationLeadReviewPolicy.ok) {
+    deps.setCommitStatus(
+      repo,
+      pr.headRefOid,
+      initialIntegrationLeadReviewPolicy.status_state,
+      initialIntegrationLeadReviewPolicy.status_description,
+      pr.url,
+      options
+    );
+    return {
+      ok: false,
+      phase: initialIntegrationLeadReviewPolicy.phase,
+      lineage: initialLineage,
+      integration_lead_review: initialIntegrationLeadReviewPolicy.integration_lead_review,
+    };
+  }
 
   const currentWithMain = deps.isHeadCurrentWithMain(repo, mainSha, pr.headRefOid);
   if (!currentWithMain.ok) {
-    deps.updateBranch(repo, prNumber, pr.headRefOid, options);
+    const updateResult = deps.updateBranch(repo, prNumber, pr.headRefOid, options) || {};
+    const pendingHeadSha =
+      updateResult.head_sha ||
+      updateResult.headSha ||
+      updateResult.refreshed_head_sha ||
+      updateResult.current_head_sha ||
+      null;
     return {
       ok: true,
       phase: 'updated_branch',
       retry_required: true,
       previous_head_sha: pr.headRefOid,
+      pending_head_sha: pendingHeadSha,
       main_sha: mainSha,
       main_compare: currentWithMain.compare,
       lineage: initialLineage,
+      payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, initialLineage, 'READY_FOR_HUMAN_REVIEW', {
+        currentHeadSha: pendingHeadSha || pr.headRefOid,
+        integration: {
+          branch_update_pending: true,
+          previous_integration_head_sha: pr.headRefOid,
+          pending_integration_head_sha: pendingHeadSha,
+        },
+      }),
     };
   }
 
@@ -955,10 +1211,30 @@ function integrate(options) {
     deps.setCommitStatus(repo, pr.headRefOid, finalPolicy.status_state, finalPolicy.status_description, pr.url, options);
     return { ok: false, phase: finalPolicy.phase, lineage: finalLineage, policy: finalPolicy };
   }
+  const finalIntegrationLeadReviewPolicy = deps.enforceIntegrationLeadReviewPolicy(integrationLeadReview, finalLineage, {
+    deterministicRefreshVerified: options.deterministicRefreshVerified,
+  });
+  if (!finalIntegrationLeadReviewPolicy.ok) {
+    deps.setCommitStatus(
+      repo,
+      pr.headRefOid,
+      finalIntegrationLeadReviewPolicy.status_state,
+      finalIntegrationLeadReviewPolicy.status_description,
+      pr.url,
+      options
+    );
+    return {
+      ok: false,
+      phase: finalIntegrationLeadReviewPolicy.phase,
+      lineage: finalLineage,
+      integration_lead_review: finalIntegrationLeadReviewPolicy.integration_lead_review,
+    };
+  }
 
   const readiness = deps.generateAndApplyReadiness(repo, prNumber, authorization, finalLineage, finalBranchProtection, {
-    deltaReview,
+    deltaReview: finalPolicy.delta_review ? finalPolicy.delta_review.review : deltaReview,
     deterministicRefreshVerified: options.deterministicRefreshVerified,
+    integrationLeadReview: finalIntegrationLeadReviewPolicy.review,
     dryRun: options.dryRun,
     payloadReadinessDecision: options.payloadReadinessDecision,
   });
@@ -1022,7 +1298,15 @@ function integrate(options) {
     if (!activatedMerge) {
       deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
     }
-    return { ok: true, phase: 'authorized_no_merge', pr, main_sha: finalMainSha, lineage: finalLineage, readiness };
+    return {
+      ok: true,
+      phase: 'authorized_no_merge',
+      pr,
+      main_sha: finalMainSha,
+      lineage: finalLineage,
+      readiness,
+      payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, finalLineage),
+    };
   }
   let merge;
   let mergedPr;
@@ -1187,6 +1471,7 @@ function integrate(options) {
     main_sha: finalMainSha,
     lineage: finalLineage,
     readiness,
+    payload_integration_state: payloadIntegrationStateForResult(repo, prNumber, pr, authorization, finalLineage),
     merge,
     merged_pr: mergedPr,
     post_merge_ci: postMergeCi,
@@ -1229,6 +1514,7 @@ function runCli(argv) {
       authorizationCommentId,
       payloadSha: optionValue(argv, '--payload-sha'),
       deltaReviewPath: optionValue(argv, '--delta-review'),
+      integrationLeadReviewPath: optionValue(argv, '--integration-lead-review'),
       deterministicRefreshVerified: flag(argv, '--deterministic-refresh-verified'),
       requireIntegrationAuthorized: flag(argv, '--require-integration-authorized'),
       postMergeCiTimeoutSeconds: Number(optionValue(argv, '--post-merge-ci-timeout-seconds') || 1800),
@@ -1255,6 +1541,7 @@ module.exports = {
   OWNER_AUTHENTICATED_LOCAL_LANE,
   buildLineageInput,
   branchProtectionReadForbiddenSummary,
+  enforceIntegrationLeadReviewPolicy,
   enforceLineagePolicy,
   generateAndApplyReadiness,
   collectAutoMergeDiagnostics,
@@ -1277,7 +1564,10 @@ module.exports = {
   isBranchProtectionReadForbiddenError,
   isBranchProtectionReadForbiddenSummary,
   localLaneHandoffCommand,
+  parseIntegrationLeadReview,
+  readIntegrationLeadReviewIfPresent,
   validateIntegrationDeltaReview,
+  validateIntegrationLeadReview,
   validatePrState,
   verifyAutoMergeEnabled,
   waitForPrMerge,

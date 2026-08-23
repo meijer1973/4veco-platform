@@ -2,10 +2,15 @@ const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
 
-const platformRoot = path.resolve(__dirname, "..", "..");
+const defaultPlatformRoot = path.resolve(__dirname, "..", "..");
+const platformRoot = process.env.FOURVECO_PLATFORM_ROOT
+  ? path.resolve(process.env.FOURVECO_PLATFORM_ROOT)
+  : defaultPlatformRoot;
 const anchorProjectRoot = process.env.FOURVECO_PROJECT_ROOT || "C:/Projects/4veco";
 const lessenRoot = findRepoRoot("4veco-lessen", path.resolve(platformRoot, "..", "4veco-lessen"));
-const reportsDir = path.join(platformRoot, "reports");
+const reportsDir = process.env.FOURVECO_REPORTS_DIR
+  ? path.resolve(process.env.FOURVECO_REPORTS_DIR)
+  : path.join(platformRoot, "reports");
 
 const skipDirs = new Set([
   ".git",
@@ -64,11 +69,26 @@ function gitValue(root, args) {
   }
 }
 
-function gitSourceInfo(repoName, root) {
-  const commit = gitValue(root, ["rev-parse", "HEAD"]);
-  const branch = repoName === "4veco-lessen" && process.env.FOURVECO_LESSEN_SOURCE_REF
-    ? process.env.FOURVECO_LESSEN_SOURCE_REF
+function resolveSourceRef(repoName, env = process.env) {
+  if (repoName === "4veco-lessen") {
+    return env.FOURVECO_LESSEN_SOURCE_REF || "origin/main";
+  }
+  return env.FOURVECO_PLATFORM_SOURCE_REF || "HEAD";
+}
+
+function resolveSourceBranch(repoName, root, sourceRef, env = process.env) {
+  const explicit = repoName === "4veco-lessen"
+    ? env.FOURVECO_LESSEN_SOURCE_BRANCH
+    : env.FOURVECO_PLATFORM_SOURCE_BRANCH;
+  if (explicit) return explicit;
+  return sourceRef !== "HEAD"
+    ? sourceRef
     : gitValue(root, ["rev-parse", "--abbrev-ref", "HEAD"]);
+}
+
+function gitSourceInfo(repoName, root, sourceRef, env = process.env) {
+  const commit = gitValue(root, ["rev-parse", sourceRef]);
+  const branch = resolveSourceBranch(repoName, root, sourceRef, env);
   const remoteUrl = gitValue(root, ["remote", "get-url", "origin"]);
   return {
     source_branch: branch || "unknown",
@@ -146,9 +166,12 @@ function walk(root, current = root, files = []) {
   return files;
 }
 
-function listFiles(root) {
+function listFiles(root, sourceRef = "HEAD") {
   try {
-    const output = execFileSync("git", ["ls-files", "--cached"], {
+    const args = sourceRef === "HEAD"
+      ? ["ls-files", "--cached"]
+      : ["ls-tree", "-r", "--name-only", sourceRef, "--"];
+    const output = execFileSync("git", args, {
       cwd: root,
       encoding: "utf8",
       stdio: ["ignore", "pipe", "ignore"],
@@ -161,6 +184,9 @@ function listFiles(root) {
       .filter((file) => !file.split("/").some((part) => skipDirs.has(part)))
       .sort((a, b) => a.localeCompare(b));
   } catch (error) {
+    if (sourceRef !== "HEAD") {
+      throw new Error(`Cannot index explicit source ref ${sourceRef} at ${root}`);
+    }
     return walk(root).sort((a, b) => a.localeCompare(b));
   }
 }
@@ -173,19 +199,21 @@ function publishedRoot(repoName) {
   return repoName;
 }
 
-function buildIndex(repoName, root) {
+function buildIndex(repoName, root, options = {}) {
+  const env = options.env || process.env;
   if (!fs.existsSync(root)) {
     return {
       repo: repoName,
       root: publishedRoot(repoName),
       available: false,
-      generated_at: new Date().toISOString(),
+      generated_at: options.generatedAt || env.FOURVECO_INDEX_GENERATED_AT || new Date().toISOString(),
       note: `${repoName} is unavailable from the current local checkout; no file inventory was generated for this repository.`,
       groups: emptyGroups(),
     };
   }
 
-  const files = listFiles(root);
+  const sourceRef = options.sourceRef || resolveSourceRef(repoName, env);
+  const files = listFiles(root, sourceRef);
   const groups = emptyGroups();
 
   for (const file of files) {
@@ -198,10 +226,12 @@ function buildIndex(repoName, root) {
     repo: repoName,
     root: publishedRoot(repoName),
     available: true,
-    generated_at: new Date().toISOString(),
-    ...gitSourceInfo(repoName, root),
+    generated_at: options.generatedAt || env.FOURVECO_INDEX_GENERATED_AT || new Date().toISOString(),
+    ...gitSourceInfo(repoName, root, sourceRef, env),
     file_count: files.length,
-    inventory_scope: "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
+    inventory_scope: sourceRef === "HEAD"
+      ? "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path"
+      : `committed tree files from \`git ls-tree -r --name-only ${sourceRef}\`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path`,
     skipped_directories: Array.from(skipDirs).sort(),
     groups,
   };
@@ -286,4 +316,13 @@ function main() {
   }
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  buildIndex,
+  listFiles,
+  resolveSourceBranch,
+  resolveSourceRef
+};

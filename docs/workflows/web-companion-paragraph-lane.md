@@ -10,6 +10,15 @@ companions, presentation route, web visual variants, and companion review.
 The normal companion line is web output plus PPTX. Paragraph PDF output and
 `build_pdf.py` belong to Part A textbook production, not the companion lane.
 
+The listed root outputs form the 14-file `student-web` validator baseline.
+They are not, by themselves, the full product end state. The current route is
+`Start -> Leer -> Check -> Oefen -> Exit ticket`, with an advisory short check
+and a separate target-equivalent exit ticket. Treat missing route surfaces as
+named blockers, follow-ups, or explicit human waivers. `office` and
+`legacy-full` add 13 DOCX files to the baseline for a 27-file export contract;
+differentiated basis/midden/verrijking handouts belong to that opt-in export
+set.
+
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary companion production.
 
@@ -27,6 +36,11 @@ Do not silently repair textbook artifacts in this lane. Textbook HTML renders
 belong to Part A; companion/student-web HTML belongs to Part B.
 
 ## Allowed Outputs
+
+The named `index.html`, companion HTML/game, and presentation PPTX outputs
+below comprise the 14-file validator baseline. Current route/check and
+exit-ticket surfaces are also lane-owned even when implemented inside or
+alongside those files.
 
 - `_paragraph-plan.md` or companion implementation plan.
 - `index.html`
@@ -106,6 +120,10 @@ The lane is closed only when:
 - `companion.hard_fails_open` is `0` for `PASS` or `PASS WITH FLAGS`.
 - Rendered student-facing outputs were inspected, not only source files.
 - The lane-scope checker has no Part A leak.
+- The rendered route was reviewed as `Start -> Leer -> Check -> Oefen -> Exit ticket`,
+  including advisory short check and separate target-equivalent exit ticket,
+  or each missing route surface has a named blocker, follow-up, or waiver.
+- No completeness claim relies only on existence of the 14 baseline files.
 
 `complete` validation is an integration/check state, not a normal companion
 production assignment.

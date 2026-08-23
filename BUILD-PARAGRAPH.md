@@ -9,9 +9,9 @@ assignments from the lane runbooks, then use this file for detail:
 Read `docs/workflows/paragraph-lane-vocabulary.md` before using lane terms.
 There are exactly two operational lanes:
 
-- **Part A / textbook lane** owns textbook source, textbook HTML renders,
-  paragraph PDFs, `build_pdf.py`, core textbook visuals, textbook review,
-  `partA:` quality-ref values, and handoff. Publisher-print chapter/book
+- **Part A / textbook lane** owns textbook source, textbook HTML renders, core
+  textbook visuals, `build_pdf.py`, paragraph PDFs for human review, textbook
+  review, `partA:` quality-ref values, and handoff. Publisher-print chapter/book
   handoff also stays in this lane.
 - **Part B / companion lane / student-web companion lane** owns companion route
   files, companion HTML/games, PPTX, web visual variants, shared companion data,
@@ -28,7 +28,7 @@ This document covers two pipelines that can run independently or together.
 
 | Mode | What it produces | When to use |
 |------|-----------------|-------------|
-| **Part A only** | Textbook source, textbook HTML renders, core visuals, `build_pdf.py`, and paragraph PDFs | Building source content, human-review output, or the publisher/print packet |
+| **Part A only** | Textbook source, textbook HTML renders, core visuals, `build_pdf.py`, and paragraph PDFs | Building source content, the human-review packet, or a publisher/print handoff |
 | **Part B only** | Companion/student-web route. Default deliverables are companion HTML/games plus presentation HTML/PPTX; DOCX exports are opt-in | Adding companions to a 4veco-lessen paragraph when textbook content exists |
 | **Both (A → B)** | Complete paragraph: textbook + companions | Integration verification or explicitly authorized complete bundle |
 
@@ -46,10 +46,10 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 
 | Profile | Purpose | Default? |
 |---------|---------|----------|
-| `student-web` | Baseline profile. In Part A mode it checks textbook source, textbook HTML renders, `build_pdf.py`, and paragraph PDFs for human review. In Part B mode it checks companion/student-web HTML, games, route files, presentation HTML/PPTX, plans, reviews, data, and assets. No Part B DOCX requirement. | Yes for direct `validate-paragraph.js` runs |
+| `student-web` | Baseline validation profile. In Part A mode it checks textbook source, textbook HTML renders, `build_pdf.py`, and paragraph PDFs for human review. In Part B mode it checks the 14-file companion baseline plus plans, reviews, data, and assets. Passing this profile does not by itself prove the full product route or end-state maturity. No Part B DOCX requirement. | Yes for direct `validate-paragraph.js` runs |
 | `legacy-full` | Previous 27-file Part B contract, including all DOCX files, for regression checks on older output. | No |
 | `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
-| `publisher-print` | Part A publisher/book print handoff and book-health profile. Paragraph PDFs are already normal Part A outputs; this profile keeps the print-oriented gate explicit. | `check-book.js` uses this for Part A book health |
+| `publisher-print` | Part A publisher/book print handoff and book-health profile. Paragraph PDFs are already normal Part A human-review outputs; this profile keeps the chapter/book print gate explicit. | `check-book.js` uses this for Part A book health |
 
 > **Before you start:** Read the strategic product vision at
 > `../4veco-lessen/specifications/product-vision.md`, the operational
@@ -92,7 +92,7 @@ paragraph plan with a matrix like this:
 |---|---|---|---|
 | Student knows current route | Rendered landing/page screenshot | Student-experience review | pending |
 | Procedure matches canonical steps | Source and rendered artifact comparison | Companion visual review | pending |
-| Visuals support the concept | Rendered textbook/companion HTML and PPTX evidence; DOCX only for Office/legacy profiles | Visual/companion review | pending |
+| Visuals support the concept | Rendered HTML/DOCX/PPTX evidence | Visual/companion review | pending |
 | Target exercise skills are covered | Paragraph plan, tasks, and answer model | Teacher-learning-quality review | pending |
 | Feedback gives next step | Interaction/screenshot evidence | Student-experience review | pending |
 
@@ -147,13 +147,14 @@ node scripts/validate-paragraph.js --mode complete "<paragraph folder>" # aggreg
 
 ---
 
-# PART A: TEXTBOOK BUILD (markdown -> graphs -> textbook HTML / paragraph PDFs)
+# PART A: TEXTBOOK BUILD (markdown -> graphs -> textbook HTML / print outputs)
 
 Produces the textbook paragraph: theory, exercises, answer models, graphs,
 textbook HTML renders, and paragraph PDFs. The baseline `student-web` validator
 profile requires the markdown source, textbook HTML renders, `build_pdf.py`,
-and PDFs for Part A human review. `publisher-print` remains a Part A
-chapter/book print-handoff profile; it is not the only paragraph PDF gate.
+and the type-specific PDF packet for Part A human review. `publisher-print`
+remains a Part A chapter/book print-handoff profile; it is not the only
+paragraph PDF gate.
 
 **Skills:** `econ-textbook-paragraph`, `econ-exercise-builder`, `economic-graph`, `econ-pdf-builder`
 
@@ -236,7 +237,7 @@ Follow `econ-textbook-paragraph` skill exactly:
 For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
 1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
 2. Write `X.Y.Z Gemengde opgaven – antwoorden.md` — answer model
-3. No paragraaf.md — consolidation has no theory section; its markdown, textbook HTML renders, `build_pdf.py`, and PDFs are required in Part A baseline validation
+3. No paragraaf.md — consolidation has no theory section; its opgaven/antwoorden markdown, textbook HTML renders, `build_pdf.py`, and PDFs are required in Part A baseline validation
 
 ## A3: Build graphs
 
@@ -339,7 +340,7 @@ instead of silently rewriting textbook source files.
 
 - **Target repo:** the sibling `../4veco-lessen` checkout unless the task sets an explicit lesson root such as `FOURVECO_LESSEN_ROOT`.
 - **Naming:** `Boek N - Title / N.X Hoofdstuk X - Name / N.X.Y [Naam]`. Books replace the old "Module N" level; chapters and paragraphs keep their two- and three-part numbering.
-- **Per-paragraph layout is flat.** All generated Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, textbook HTML renders, Part A PDFs, `build_pdf.py`, `_assets/`, review.md, quality-ref.yaml, and opt-in Office exports). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
+- **Per-paragraph layout is flat.** All generated Part B files, including `index.html`, sit directly in the paragraph folder alongside Part A outputs (`paragraaf.md`, `opgaven.md`, `antwoorden.md`, `_assets/`, review.md, quality-ref.yaml, optional Part A publisher PDFs, and opt-in Office exports). No `1. Voorbereiden/`, `2. Leren/`, `3. Oefenen/` subfolders.
 - **Section labels** in tables below (Voorbereiden / Leren / Oefenen) identify the pedagogical role of a file, not a folder. Files are grouped by filename convention (`uitleg voorkennis`, `presentatie`, `begeleide inoefening –`, `basis –`, etc.).
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
 - **Legacy subfolder-layout references in older guides are legacy.** For new work, this spec supersedes them. The old game target stays on its subfolder layout until it retires in September 2026.
@@ -366,7 +367,7 @@ For Book 1, the manifest path is:
 
 `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json`
 
-The static helper file `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` is Office/legacy-only. When that profile is explicitly in scope, seed it from a verified helper-source document in the current book/source workflow. Prefer a book-local source under `../4veco-lessen/` or an owned reference template when one exists.
+The static helper file `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` can be seeded from a verified helper-source document in the current book/source workflow. Prefer a book-local source under `../4veco-lessen/` or an owned reference template when one exists.
 
 Important:
 
@@ -374,14 +375,15 @@ Important:
 - For normal Part B companion/student-web builds, deploy skips DOCX-to-HTML converters. Set `RUN_DOCX_CONVERTERS=1` only for Office/legacy builds that intentionally use Word sources.
 - Do not use deploy as a harmless existence check.
 
-## B1. Definition of Done
+## B1. Definition of Done: validator baseline and export profiles
 
-For new paragraphs, the default Part B completion gate is the
-**companion/student-web** deliverable set. It is validated with `--mode part-b
---profile student-web`, has 14 required root files including `index.html`, and
-keeps Office exports opt-in.
+The default Part B **validation baseline** is checked with `--mode part-b
+--profile student-web`. It has 14 required root files including `index.html`
+and keeps Office exports opt-in. Passing this baseline proves the executable
+file/profile contract only; it is not, by itself, a claim that the full
+student product route or product end state is complete.
 
-Part B companion/student-web required files:
+Part B `student-web` validation-baseline files:
 
 1. `X.Y.Z [Naam] – instapquiz.html`
 2. `X.Y.Z [Naam] – nieuws-detective.html`
@@ -398,6 +400,15 @@ Part B companion/student-web required files:
 13. `X.Y.Z [Naam] – begeleide inoefening.html`
 14. `index.html`
 
+The current product end state is a coherent route:
+`Start -> Leer -> Check -> Oefen -> Exit ticket`. `Check` includes an advisory
+short check for feedback and repair, while the exit ticket is a separate
+target-equivalent proof task. Those route obligations may be implemented
+within or alongside the baseline files, but file existence alone does not
+establish their completeness. Plans, rendered reviews, and quality records
+must inspect the actual route and name any missing short-check or exit-ticket
+surface as a blocker, follow-up, or explicit human waiver.
+
 Student-web is not a minimal shell contract. For a new scaling paragraph, the
 rich HTML companions (`uitleg voorkennis`, `uitleg vaardigheden`,
 `samenvatting`, `nieuws met visual`, `youtube-videos`, and
@@ -406,11 +417,42 @@ shared `voorkennis.css` layout, left navigation, hero cards, clear route
 affordances, light/dark theme support, and no student-facing internal unit
 codes. Use native HTML directly only when it preserves this shared structure.
 
-The old **legacy-full / Office export matrix** is not part of active
-student-web production. Use
-`docs/workflows/legacy-full-companion-profile.md` only when the requested
-product explicitly includes Word handouts or when validating the old 27-file
-contract.
+The table below is the **legacy-full / office export matrix**. It consists of
+the 14 baseline files plus exactly 13 additional DOCX files, for 27 root files
+in total. Use it only when the requested product explicitly includes Word
+handouts or when validating the old 27-file contract. Differentiated
+basis/midden/verrijking handouts are Office/legacy exports, not default
+`student-web` baseline files.
+
+| # | File | Section | Required | Builder | Source input | Output type |
+|---|------|---------|----------|---------|--------------|-------------|
+| 1 | `X.Y.Z [Naam] – instapquiz.html` | Voorbereiden | Yes | `generate-quiz-shells.js` (auto) | `shared/questions/X.Y.Z.js` | Generated |
+| 2 | `X.Y.Z [Naam] – nieuws-detective.html` | Voorbereiden | Yes | `build-newsdetective-shells.js` (auto) | `shared/newsdetective/X.Y.Z.js` | Generated |
+| 3 | `X.Y.Z [Naam] – uitleg voorkennis.docx` | Voorbereiden | Office/legacy only | Adapt `template-B_voorkennis.js` only if Word is requested | Book content + domain knowledge | Optional Office export |
+| 4 | `X.Y.Z [Naam] – uitleg voorkennis.html` | Voorbereiden | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Book content + domain knowledge | Generated/converted |
+| 5 | `Lees dit als je niet weet hoe je moet beginnen met deze les.docx` | Voorbereiden | Office/legacy only | Copy only for Office package | Static file (identical in every paragraph) | Optional Office export |
+| 6 | `X.Y.Z [Naam] – presentatie.pptx` | Leren | Yes | Presentation V2 semantic model when available; legacy Office builds may adapt `pptx-331-rol-overheid.js` | Book content + semantic visuals/SVG graphs | Scripted-manual |
+| 7 | `X.Y.Z [Naam] – presentatie.html` | Leren | Yes | Presentation V2 semantic model when available; `convert_presentatie.py` is legacy Office/full-package only | Same semantic model or file #6 (.pptx) | Generated/converted |
+| 8 | `X.Y.Z [Naam] – uitleg vaardigheden.docx` | Leren | Office/legacy only | Adapt `template-A_vaardigheden.js` only if Word is requested | Book content + domain knowledge | Optional Office export |
+| 9 | `X.Y.Z [Naam] – uitleg vaardigheden.html` | Leren | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Book content + domain knowledge | Generated/converted |
+| 10 | `X.Y.Z [Naam] – nieuws met visual.docx` | Leren | Office/legacy only | Adapt `nieuws-351-352-afsluiting.js` only if Word is requested | Recent Dutch news + SVG visual | Optional Office export |
+| 11 | `X.Y.Z [Naam] – nieuws met visual.html` | Leren | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Recent Dutch news + SVG visual | Generated/converted |
+| 12 | `X.Y.Z [Naam] – samenvatting.docx` | Leren | Office/legacy only | Adapt `samenvatting-351-352-rebuild.js` only if Word is requested | Key concepts from paragraph | Optional Office export |
+| 13 | `X.Y.Z [Naam] – samenvatting.html` | Leren | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Key concepts from paragraph | Generated/converted |
+| 14 | `X.Y.Z [Naam] – youtube-videos.html` | Leren | Yes | Small per-paragraph generator (e.g. `b1-111-youtube-videos.js`) using shared voorkennis.css | 3 real YouTube video IDs | Scripted-manual |
+| 15 | `X.Y.Z [Naam] – stappenplan.html` | Leren | Yes | `build-procedure-shells.js` (auto) | `shared/procedure/X.Y.Z.js` | Generated |
+| 16 | `X.Y.Z [Naam] – redeneer-spel.html` | Oefenen | Yes | `build-reasoning-engine.js` (auto) | `shared/reasoning/X.Y.Z.js` | Generated |
+| 17 | `X.Y.Z [Naam] – wiskundevaardigheden.html` | Oefenen | Yes | `build-skilltree-shells.js` (auto) | `skilltree` field in book manifest | Generated |
+| 18 | `X.Y.Z [Naam] – begeleide inoefening – vragen.docx` | Oefenen/begeleide inoefening | Office/legacy only | Adapt `inoefening-351-afsluiting.js` only if Word is requested | Exercises with scaffolding | Optional Office export |
+| 19 | `X.Y.Z [Naam] – begeleide inoefening – antwoorden.docx` | Oefenen/begeleide inoefening | Office/legacy only | Same script as #18 | Same | Optional Office export |
+| 20 | `X.Y.Z [Naam] – begeleide inoefening.html` | Oefenen/begeleide inoefening | Yes | Native HTML generator preferred; converter allowed for Office/legacy | Textbook opgaven + answer model | Generated/converted |
+| 21 | `X.Y.Z [Naam] – basis – vragen.docx` | Oefenen/basisopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 22 | `X.Y.Z [Naam] – basis – antwoorden.docx` | Oefenen/basisopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 23 | `X.Y.Z [Naam] – midden – vragen.docx` | Oefenen/middenopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 24 | `X.Y.Z [Naam] – midden – antwoorden.docx` | Oefenen/middenopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 25 | `X.Y.Z [Naam] – verrijking – vragen.docx` | Oefenen/verrijkingsopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 26 | `X.Y.Z [Naam] – verrijking – antwoorden.docx` | Oefenen/verrijkingsopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
+| 27 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
 
 > **Flat-layout filename change:** in the retargeted Part B, opgavenset and begeleide-inoefening filenames keep the `X.Y.Z [Naam] –` prefix so they stay unique at the paragraph root (since there are no longer `basisopgaven/` or `begeleide inoefening/` subfolders to disambiguate them). Role labels in the Section column identify pedagogical role only, not folder paths.
 
@@ -419,7 +461,7 @@ contract.
 | Type | Meaning | Human effort |
 |------|---------|--------------|
 | **Generated** | Fully automated from data files. deploy.js handles this. | Create the data file only. |
-| **Converted** | Office/legacy-only transformation of an existing .docx to .html. | Run the converter only when Word exports are in scope. |
+| **Converted** | Automated transformation of an existing .docx to .html. | Run the converter after creating the .docx. |
 | **Scripted-manual** | A Node.js script generates the file, but the script must be written per-paragraph with paragraph-specific content. Copy a reference script, replace the content section. | Write economics content, adapt a reference script, run it. |
 | **Manual** | Written by hand (no generator). | Create the file directly. |
 | **Static** | Identical copy in every paragraph. | Copy from an existing paragraph. |
@@ -440,21 +482,14 @@ These are the raw inputs needed to build one paragraph. They must exist BEFORE r
 | Procedure data | `shared/procedure/X.Y.Z.js` | JS: `var PROCEDURE_DATA = { meta, procedures }` | Agent writes the JS file. Steps aligned with uitleg vaardigheden. |
 | Skilltree config | `skilltree` field in the book manifest paragraph entry | JSON: `{ "skills": ["A38", ...], "chapterSkills": ["A38", ...] }`; use `{ "skills": null }` only when paragraph mode should deliberately expose all skills | Agent adds to manifest. Data file auto-generated in `shared/skilltree/`. |
 
-### B. Rich companion content — student-web first, Office/legacy when requested
+### B. Rich document content — per-asset production specs
 
-Normal Part B companion/student-web work builds native HTML companion outputs,
-games, route files, shared data, and the PPTX presentation. Do not create DOCX
-sources or run DOCX-to-HTML converters unless the selected profile is `office`
-or `legacy-full`.
-
-For student-web HTML pages, author the native HTML from Part A source,
-`_paragraph-plan.md`, adapted visuals, and the shared companion styles. The
-DOCX-oriented recipes below are retained only for Office/legacy exports.
+Each scripted-manual asset follows the same pattern: **read source → write build script with content → run script → get .docx/.pptx**. But the raw input, the extraction process, and the reusable vs custom split differ per asset. Here is the exact spec for each.
 
 #### Presentatie (.pptx)
 | | |
 |---|---|
-| **Raw input** | Part A source markdown, textbook handoff, and `_paragraph-plan.md`: concepts, formulas, worked examples, route terminology, and visual plan. Use python-docx only for explicit Office/legacy source documents. |
+| **Raw input** | Textbook paragraph: concepts, formulas, worked examples. Read via python-docx. |
 | **Agent process** | Extract 5-8 key concepts. For each: write a theory slide + design an SVG graph that visualises it. |
 | **Reference script** | `pptx-331-rol-overheid.js` — copy, replace slide content + SVG graph functions. Uses shared `lib-pptx.js`. |
 | **Reusable (don't change)** | `lib-pptx.js` exports: PC/SC/HEX palettes, T typography presets, `defineMasters()`, `svgToPng()`, `ICON`/`placeIcon()`, `svgHeader()`, `editorialTitle()`, `fixPptxFile()`, `roundtripWithLibreOffice()`. |
@@ -463,7 +498,7 @@ DOCX-oriented recipes below are retained only for Office/legacy exports.
 | **Hard rules** | Theory + worked examples only, NEVER exercise instructions. Min 3 SVG→PNG graphs. Min 18pt font. After `writeFile()` always call `fixPptxFile()` + `roundtripWithLibreOffice()` — raw PptxGenJS output triggers PowerPoint repair dialog. **Teacher-supporting slide rules** (see `econ-pptx-templates` skill): one idea per slide, on-slide prose ≤ one sentence per concept, long explanations live in speaker notes using the `Vraag / Uitleg / Pitfall / Overgang` template, complex graphs use progressive disclosure across 2–3 slides. |
 | **QA gate — teacher read-through** | After LibreOffice round-trip, render to PDF+PNG (`soffice --convert-to pdf` → `pdftoppm -r 90`). Read the speaker notes aloud at ~45s per slide while looking only at the slide PNG. Confirm: the slide never forces reading during narration, every slide has a clear visual anchor, the `Overgang` cues flow naturally into the next slide. Log failure modes in the paragraph review notes before shipping. |
 
-#### Uitleg voorkennis (student-web HTML; Office/legacy DOCX only)
+#### Uitleg voorkennis (.docx)
 | | |
 |---|---|
 | **Raw input** | Prerequisite knowledge: what must students already know from earlier paragraphs? Identify by reading the textbook exercises — which concepts do they assume? |
@@ -473,7 +508,7 @@ DOCX-oriented recipes below are retained only for Office/legacy exports.
 | **Custom** | Content sections only (text between ════ markers). |
 | **Skills** | `econ-explainer-docs` + `econ-word-templates` |
 
-#### Uitleg vaardigheden (student-web HTML; Office/legacy DOCX only)
+#### Uitleg vaardigheden (.docx)
 | | |
 |---|---|
 | **Raw input** | Skills taught in this paragraph. Identify from textbook learning goals and exercise types. |
@@ -483,7 +518,7 @@ DOCX-oriented recipes below are retained only for Office/legacy exports.
 | **Custom** | Content sections only. |
 | **Skills** | `econ-explainer-docs` + `econ-word-templates` |
 
-#### Nieuws met visual (student-web HTML; Office/legacy DOCX only)
+#### Nieuws met visual (.docx)
 | | |
 |---|---|
 | **Raw input** | A real, recent Dutch news article (NOS, RTL, Volkskrant, etc.) related to the paragraph topic. Must have a verifiable sourceUrl. |
@@ -494,7 +529,7 @@ DOCX-oriented recipes below are retained only for Office/legacy exports.
 | **Skills** | `econ-nieuws-exercise` + `economic-graph` |
 | **Hard rules** | Font sizes 16/11/9pt. Real SVG→PNG chart, NOT text placeholder. sourceUrl required. |
 
-#### Samenvatting (student-web HTML; Office/legacy DOCX only)
+#### Samenvatting (.docx)
 | | |
 |---|---|
 | **Raw input** | The paragraph's key concepts, terms, formulas — distilled from the textbook and from the other documents you've already built for this paragraph. |
@@ -504,7 +539,7 @@ DOCX-oriented recipes below are retained only for Office/legacy exports.
 | **Custom** | Content cells, concept groupings, which colors map to which sections. |
 | **Hard rule** | TABLE-BASED infographic layout. Never use paragraph-based layout. |
 
-#### Begeleide inoefening (student-web HTML; Office/legacy DOCX only)
+#### Begeleide inoefening (vragen.docx + antwoorden.docx)
 | | |
 |---|---|
 | **Raw input** | Textbook exercises for this paragraph + worked solutions from the answer key docx. Extract any textbook graphs for reuse. |
@@ -573,14 +608,18 @@ PAR="$BOOK/N.X Hoofdstuk X - Name/N.X.Y [Naam]"
 mkdir -p "$PAR"
 # Flat layout: no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders.
 # Part A outputs, all Part B companion/student-web files, and opt-in Office/legacy files live at the paragraph root.
-# Office/legacy only: copy the static "Lees dit..." Word helper when Word
-# handouts are explicitly in scope.
-# cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a legacy source on first run."
 ```
 
-If the selected profile is `office` or `legacy-full` and the destination book
-does not already contain the static helper file, seed it from the verified
-legacy source listed in **B0a** before continuing.
+For an explicit `office` or `legacy-full` build only, add the static helper
+DOCX:
+
+```bash
+cp "$BOOK/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/Lees dit als je niet weet hoe je moet beginnen met deze les.docx" "$PAR/" 2>/dev/null || echo "Seed the static file from a verified legacy source."
+```
+
+If that export profile is selected and the destination book does not already
+contain the static helper file, seed it from the verified legacy source listed
+in **B0a**. Do not add this DOCX to a default `student-web` build.
 
 ### Phase 2a: Create paragraph plan (15 min)
 
@@ -638,37 +677,50 @@ For critical standalone visuals, screenshots, charts, diagrams, or rendered UI s
 
 #### Phase 4b — Build companion surfaces
 
-For normal `student-web`, build the native HTML companion pages and PPTX route
-directly. Skip DOCX source generation and DOCX-to-HTML conversion. Use
-Office/legacy reference scripts only when `office` or `legacy-full` is
-explicitly in scope.
-
-Each student-web builder should:
+Every builder should:
 - Read `_paragraph-plan.md` for its outline, terminology, and concept coverage
 - Read pre-built adapted variants from `_assets/` instead of generating SVGs inline
 - Use `const { svgToPng, pngToBase64, GRAPH_COLORS } = require('./lib-svg-utils')` instead of inline copies
-- **Dual coding**: embed every adapted visual variant listed in the visuelen-toewijzing for this builder
+- **Dual coding**: embed every adapted visual variant listed in the visuelen-toewijzing for this builder; use `ImageRun` only in DOCX scripts
 - **Unified experience**: follow the exact step sequence from the procedure-stappen-plan — same labels, same order, same approach. The stappenplan game procedures must mirror vaardigheden skill steps exactly.
 
-| Student-web surface | Default build route | Output |
-|----------|---------------------|--------|
-| Uitleg voorkennis | Native HTML from Part A source and paragraph plan | `uitleg voorkennis.html` |
-| Uitleg vaardigheden | Native HTML from canonical procedure/skill plan | `uitleg vaardigheden.html` |
-| Presentatie | Presentation V2 semantic model / PPTX script | `presentatie.pptx` and `presentatie.html` |
-| Nieuws met visual | Native HTML with reviewed news source and visual variant | `nieuws met visual.html` |
-| Samenvatting | Native HTML summary from Part A source | `samenvatting.html` |
-| YouTube videos | Write HTML directly | `youtube-videos.html` |
-| Begeleide inoefening | Native HTML scaffolded practice | `begeleide inoefening.html` |
+For the default `student-web` profile, build the native HTML/PPTX products in
+the 14-file baseline. The game and route shells are generated in Phase 6.
 
-Office/legacy DOCX exports, when explicitly requested, use the reference
-scripts named in `docs/workflows/legacy-full-companion-profile.md`. Run those
-scripts with: `NODE_PATH="$(npm root -g)" node <script>.js`
+| Baseline surface | Builder route | Output location |
+|------------------|---------------|-----------------|
+| Uitleg voorkennis HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Uitleg vaardigheden HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Presentatie HTML + PPTX | Presentation V2 semantic model | `<paragraph folder>` |
+| Nieuws met visual HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Samenvatting HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| YouTube videos HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
+| Begeleide inoefening HTML | Native paragraph-specific HTML generator | `<paragraph folder>` |
 
-### Phase 5: Convert DOCX to HTML (Office/legacy only)
+For an explicit `office` or `legacy-full` profile, build the 14 baseline files
+first, then add exactly these 13 DOCX exports:
 
-Do not run this phase for normal Part B companion/student-web work. Use it only
-when `office` or `legacy-full` deliberately makes DOCX sources part of the
-product:
+| Additional DOCX output | Reference route |
+|------------------------|-----------------|
+| Uitleg voorkennis (1) | `template-B_voorkennis.js` |
+| Static `Lees dit...` helper (1) | Verified legacy source from B0a |
+| Uitleg vaardigheden (1) | `template-A_vaardigheden.js` |
+| Nieuws met visual (1) | `nieuws-351-352-afsluiting.js` |
+| Samenvatting (1) | `samenvatting-351-352-rebuild.js` |
+| Begeleide inoefening, vragen + antwoorden (2) | `inoefening-351-afsluiting.js` |
+| Basis, vragen + antwoorden (2) | `opgaven-351-afsluiting.js` |
+| Midden, vragen + antwoorden (2) | `opgaven-351-afsluiting.js` |
+| Verrijking, vragen + antwoorden (2) | `opgaven-351-afsluiting.js` |
+
+Run a selected Node builder with:
+`NODE_PATH="$(npm root -g)" node <script>.js`.
+
+### Phase 5: Convert Office DOCX → HTML (office/legacy only)
+
+Skip this phase for the default `student-web` profile when the required rich
+HTML pages are authored natively. Run these converters only for an `office` or
+`legacy-full` build where the `.docx` files are deliberately the companion
+source:
 
 ```bash
 python build-scripts/lib/convert_voorkennis.py "$PAR"
@@ -676,7 +728,8 @@ python build-scripts/lib/convert_vaardigheden.py "$PAR"
 python build-scripts/lib/convert_begeleide_inoefening.py "$PAR"
 ```
 Converters read the source `.docx` from `$PAR` directly (flat layout) and write
-the `.html` alongside.
+the `.html` alongside. They are not a substitute for reviewing the rendered
+student-web pages.
 
 ### Phase 5a–5c: QC gates
 
@@ -704,9 +757,9 @@ legacy-full run where `.docx` sources are deliberately part of the product.
 
 ### Phase 6a: Companion visual review gate
 
-Author/regenerate every student-facing companion against `skills/econ-companion-artifacts.md` (authoring spec for uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and the PPTX presentation route). DOCX companion exports are opt-in Office/legacy profile work. PDF output belongs to Part A textbook production, not the Part B companion lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
+Author/regenerate every in-scope student-facing companion against `skills/econ-companion-artifacts.md`. Review the 14-file `student-web` validation baseline, the actual `Start -> Leer -> Check -> Oefen -> Exit ticket` route (including advisory short check and separate target-equivalent exit ticket), and the 13 additional Office/legacy DOCX files only when that export profile is explicitly selected. Differentiated DOCX handouts belong to the Office/legacy set, not the default baseline. Paragraph PDFs and `build_pdf.py` are normal Part A textbook outputs for human review; `publisher-print` is the later Part A chapter/book handoff profile. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules.
 
-Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and converted companion pages can be inspected as rendered output:
+Then run `agents/econ-companion-visual-review.md` as the closure gate when the generated HTML/game shells and native or converted companion pages can be inspected as rendered output:
 
 > "You are the econ-companion-visual-review agent. Read `agents/econ-companion-visual-review.md`, `AGENTS.md`, and `BUILD-PARAGRAPH.md`. Review paragraph [path]. Inspect the available student-facing HTML, PPTX, and opt-in Office companions, rendered browser/document views where possible, `_paragraph-plan.md`, `_assets/`, source builders, canonical units/procedures/terminology, and quality records. Return the required report format and save it as `X.Y.Z-companion-visual-review.md` in the paragraph folder."
 
@@ -723,16 +776,18 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 **Platform files:**
 - [ ] `_paragraph-plan.md` exists and all sections are filled in
 - [ ] `_assets/` folder has SVG+PNG pairs matching every entry in the visuelen-plan and visual-variants-plan
-- [ ] File count: 14 required Part B companion/student-web root files, including index.html
-- [ ] Office/legacy exports open in Word/PowerPoint when the selected profile includes them
+- [ ] Validator baseline: 14 required Part B `student-web` root files, including `index.html`
+- [ ] Product route: rendered `Start -> Leer -> Check -> Oefen -> Exit ticket` flow is inspected; advisory short check and separate target-equivalent exit ticket are present or explicitly blocked/followed up/waived
+- [ ] Office/legacy exports open in Word/PowerPoint when the selected profile includes them (27-file contract only for explicit `office`/`legacy-full` validation)
 - [ ] `X.Y.Z-quality-ref.yaml` has a `companion:` block matching `X.Y.Z-companion-visual-review.md`
 - [ ] Presentatie has ≥3 economic graphs, presents theory (no exercise instructions)
-- [ ] Nieuws met visual has embedded SVG→PNG chart, font sizes 16/11/9pt
-- [ ] Samenvatting uses table-based infographic layout
-- [ ] Terminology is consistent across all companion surfaces (check against terminologie table in plan)
+- [ ] Nieuws met visual has an embedded chart/visual, source URL, questions, and answer model; Office export font sizes are 16/11/9pt when DOCX is in scope
+- [ ] Samenvatting uses a table/grid infographic structure in its source medium and renders legibly as HTML
+- [ ] Terminology is consistent across all documents (check against terminologie table in plan)
 
 **Design principles:**
-- [ ] **Dual coding**: vaardigheden and voorkennis HTML pages contain embedded adapted variants from `_assets/`; Office/legacy DOCX exports do the same when that profile is selected
+- [ ] **Dual coding (`student-web`)**: vaardigheden and voorkennis HTML plus the presentation HTML/PPTX contain the adapted variants assigned in `_assets/` (not text-only and not raw textbook copy-paste)
+- [ ] **Dual coding (Office/legacy only)**: when that profile is selected, vaardigheden and voorkennis DOCX files contain embedded adapted variants from `_assets/`
 - [ ] **Theme variants**: every themed web visual has a light and dark variant, and the HTML/JS swaps to the correct one
 - [ ] **Unified experience**: stappenplan game procedures use the same step labels and sequence as vaardigheden skills
 - [ ] **Visuelen-toewijzing**: every visual listed for a builder in the plan is actually embedded in that builder's output
@@ -743,8 +798,7 @@ For broad QA coordination across companion visual review, specific visual QA, ac
 **Deployment:**
 - [ ] Browser: all 4 games load, all section cards appear in landing page
 - [ ] Data tests pass: `MODULE_ROOT="$BOOK" npx jest --testPathPatterns "engines/tests/.*-data\.test\.js"`
-- [ ] Part B validation passes: `node scripts/validate-paragraph.js --mode part-b --profile student-web "$PARAGRAPH"`
-- [ ] Complete integration validation passes only after Part A and Part B both exist: `node scripts/validate-paragraph.js --mode complete --profile student-web "$PARAGRAPH"`
+- [ ] `validate-paragraph.js` passes with 0 errors
 
 ---
 
@@ -765,10 +819,7 @@ Fully automated from data files. deploy.js runs these.
 
 > **Flat layout:** all generators emit directly to the paragraph root — there are no phase subfolders. Each generator calls `loadConfig(MODULE_ROOT)` to read the book's `deploy-config.json` and resolves each `parNr` to its folder via the manifest. Data files whose parNr is not in the manifest are skipped with a warning. The current skilltree generator only emits for paragraphs that declare `skilltree`; for a complete Part B paragraph, that declaration is required.
 
-### Reusable converters (Office/legacy only, after DOCX creation)
-
-Do not run these converters for normal `student-web` work; build native HTML
-instead.
+### Reusable converters (run manually after .docx creation)
 
 | Script | Input | Output |
 |--------|-------|--------|
@@ -777,20 +828,17 @@ instead.
 | `convert_begeleide_inoefening.py` | `begeleide inoefening – vragen.docx` + `antwoorden.docx` | `begeleide inoefening.html` alongside |
 
 ### Reference implementations (copy + adapt for each paragraph)
-For normal `student-web`, use the PPTX script and native HTML builders. DOCX
-scripts in this table are Office/legacy only.
-
 These are paragraph-specific scripts that serve as templates. Copy one, change the content section (marked with `════`), update the output path, run.
 
 | Script | What it builds | Copy for new paragraph |
 |--------|---------------|----------------------|
-| `template-B_voorkennis.js` | `uitleg voorkennis.docx` | Office/legacy only |
-| `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` | Office/legacy only |
+| `template-B_voorkennis.js` | `uitleg voorkennis.docx` | Yes — adapt content section |
+| `template-A_vaardigheden.js` | `uitleg vaardigheden.docx` | Yes — adapt content section |
 | `pptx-331-rol-overheid.js` | `presentatie.pptx` (with SVG graphs + editorial design) | Yes — new slides + graphs; uses `lib-pptx.js` |
-| `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` (with SVG chart) | Office/legacy only |
-| `samenvatting-351-352-rebuild.js` | `samenvatting.docx` (table-based) | Office/legacy only |
-| `inoefening-351-afsluiting.js` | `begeleide inoefening` DOCX outputs | Office/legacy only |
-| `opgaven-351-afsluiting.js` | Legacy opgavensets DOCX outputs | Office/legacy only |
+| `nieuws-351-352-afsluiting.js` | `nieuws met visual.docx` (with SVG chart) | Yes — new article + chart |
+| `samenvatting-351-352-rebuild.js` | `samenvatting.docx` (table-based) | Yes — new content |
+| `inoefening-351-afsluiting.js` | `begeleide inoefening` (vragen + antwoorden) | Yes — new exercises |
+| `opgaven-351-afsluiting.js` | `opgavensets` (3 levels × 2 docs) | Yes — new exercises |
 | `lib-begeleide-inoefening.js` | Shared library used by inoefening scripts | No — import, don't copy |
 
 ### Paragraph-specific productions (archival, not templates)
@@ -835,21 +883,17 @@ manual layer below. They are retained as Office/export tasks for `office` and
 - Skip DOCX-to-HTML converters by default for Part B companion/student-web builds; converters
   run only when `RUN_DOCX_CONVERTERS=1` or `BUILD_PROFILE=office|legacy-full`
 
-### deploy.js does NOT handle (manual layer):
-- Presentatie (.pptx) — must run paragraph-specific PPTX/scripted route
-- Native rich HTML companions — must be authored or regenerated per paragraph
-  for `uitleg voorkennis`, `uitleg vaardigheden`, `nieuws met visual`,
-  `samenvatting`, `youtube-videos`, and `begeleide inoefening`
-- Office/legacy DOCX exports — run adapted DOCX scripts only when
-  `BUILD_PROFILE=office|legacy-full` or the user explicitly requests Word
-  handouts
-- HTML conversions from DOCX — run Python converters only for Office/legacy
-  source workflows
-- Static file copy ("Lees dit...") — copy manually only for Office packages
+### deploy.js does NOT handle (paragraph-specific layer):
+- Presentatie HTML/PPTX — build from the paragraph-specific semantic model
+- Rich `student-web` companion HTML — run the paragraph-specific native HTML builders
+- YouTube videos HTML — write the paragraph-specific page
+- Office/legacy DOCX exports — only for an explicit `office` or `legacy-full` profile
+- Office/legacy HTML conversions (DOCX → HTML) — only when Word files are the deliberate source
+- Static `Lees dit...` copy — only for an explicit `office` or `legacy-full` profile
 
-**In short:** deploy.js builds the interactive shell. The rich student-web HTML
-and PPTX companion surfaces require paragraph-specific work before deploying;
-DOCX exports are not part of the default Part B path.
+**In short:** deploy.js builds the interactive shell. Rich baseline HTML/PPTX
+requires paragraph-specific work before deploying; the 13 DOCX outputs are an
+additional Office/legacy step only.
 
 ---
 
@@ -858,14 +902,14 @@ DOCX exports are not part of the default Part B path.
 `validate-paragraph.js` should enforce the flat-layout contract in modes:
 
 Validation combines lane mode and profile. Use `--mode part-a --profile
-student-web` for normal Part A textbook work, including paragraph PDFs for
-human review. Use `--mode part-b --profile student-web` for normal paragraph
-companion/student-web work, and `office` or `legacy-full` only when Word exports
-are deliberately part of the requested product. Use `publisher-print` for the
-Part A chapter/book print handoff or book-health profile.
+student-web` for normal Part A textbook work, including the paragraph PDF
+human-review packet. Use `--mode part-b --profile student-web` for normal
+paragraph companion/student-web work, and `office` or `legacy-full` only when
+Word exports are deliberately part of the requested product. Use
+`publisher-print` for the Part A chapter/book print handoff or book-health gate.
 
-- **Part A/textbook mode**: validates textbook files at the paragraph root. In `student-web` and `office` profiles, theory paragraphs require paragraaf/opgaven/antwoorden markdown, textbook HTML renders, `build_pdf.py`, and PDFs; consolidation paragraphs require opgaven/antwoorden markdown, textbook HTML renders, `build_pdf.py`, and PDFs. This remains Part A even though the historical profile name is `student-web`.
-- **Part B/companion mode**: validates the Part B companion/student-web root files listed in B1 by default, including `index.html`; use `legacy-full` or `office` only when those exports are deliberately in scope. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders.
+- **Part A/textbook mode**: validates textbook files at the paragraph root. Every profile requires `build_pdf.py` and the type-specific paragraph PDFs for human review. In `student-web` and `office` profiles, theory paragraphs also require paragraaf/opgaven/antwoorden markdown plus textbook HTML renders; consolidation paragraphs require opgaven/antwoorden markdown plus textbook HTML renders. This remains Part A even though the historical profile name is `student-web`.
+- **Part B/companion mode**: validates the profile-specific Part B root-file baseline listed in B1: 14 for default `student-web`, or those same 14 plus 13 DOCX files (27 total) for explicit `office`/`legacy-full`, including `index.html`. `_paragraph-plan.md` is required in this mode because it is the source of truth for companion builders. This validator result does not replace rendered proof of the full product route, advisory short check, or separate target-equivalent exit ticket.
 - **Complete mode**: validates both Part A and Part B.
 
 For Part B/complete mode, game runtime data lives in `<book>/shared/`:
@@ -890,10 +934,10 @@ Use `complete` only for integration verification after both lanes exist or when
 a complete bundle was explicitly authorized.
 
 This checks:
-- Part A validation requires the normal human-review PDF packet (`build_pdf.py`
-  plus the required paragraph PDFs).
-- All 14 required Part B companion/student-web files exist at the paragraph root (flat layout), including `index.html`
-- Office/legacy `.docx` files are valid zip archives only when the selected profile requires them
+- Part A validation requires `build_pdf.py` and the complete type-specific
+  paragraph PDF packet for human review
+- All 14 Part B `student-web` validation-baseline files exist at the paragraph root (flat layout), including `index.html`; route completeness still requires separate rendered/product review
+- Office/legacy `.docx` files are valid zip archives only when the selected profile requires them; the 27-file contract applies only to explicit `office`/`legacy-full`
 - Presentation > 100KB (has graphs)
 - All .html files have content (not empty shells)
 - Quiz has difficulty-3 per category
@@ -948,7 +992,7 @@ If a build script is not saved, the paragraph build is **incomplete**.
 | Intro paragraphs: narrative-first approach | Students connect with stories (Lisa, Tom) before abstractions |
 | Register paragraph AND run deploy | Without deploy, game shells and landing pages are missing — students can't navigate |
 | Create `_paragraph-plan.md` before building documents | Ensures terminology consistency and concept coverage across all 8 documents |
-| Build shared visual variants in `_assets/` before Phase 4c | One concept, many surface-specific variants — fix the source idea once, then render for slide/doc/web contexts |
+| Build shared visual variants in `_assets/` before Phase 4b | One concept, many surface-specific variants — fix the source idea once, then render for slide/doc/web contexts |
 | Use `lib-svg-utils.js` instead of inline `svgToPng()` | The same function was copy-pasted in 8 scripts — import the shared library instead |
 | Begeleide inoefening MUST have `scaffoldImage` for graph exercises | This document is scaffolding for weaker students — visual support is essential, not optional |
 | Run `econ-paragraph-review` two-pass review before delivering | Catches slope errors, missing domain restrictions, broken dual coding, and other issues that are hard to fix after delivery |

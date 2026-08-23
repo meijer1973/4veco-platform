@@ -79,14 +79,19 @@ node scripts/validate-paragraph.js --mode complete --profile student-web "<parag
 node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<paragraph>"
 ```
 
-- `student-web` is the baseline web-delivery profile for paragraph 1.1.2 and
-  later. In Part A mode it checks textbook source and textbook HTML renders. In
+- `student-web` is the baseline validation profile for paragraph 1.1.2 and
+  later. In Part A mode it checks textbook source, textbook HTML renders,
+  `build_pdf.py`, and the complete paragraph PDF packet for human review. In
   Part B mode it checks companion/student-web HTML, games, presentation
-  HTML/PPTX, plans, reviews, data, and assets.
+  HTML/PPTX, plans, reviews, data, and assets without requiring DOCX. The
+  14-file Part B baseline is not proof that the full
+  `Start -> Leer -> Check -> Oefen -> Exit ticket` route is complete; rendered
+  review must also inspect the advisory short check and separate
+  target-equivalent exit ticket.
 - `office` is opt-in when DOCX exports are explicitly requested.
 - `legacy-full` checks the older 27-file companion contract.
-- `publisher-print` checks the textbook PDFs for the separate publisher/print
-  pipeline.
+- `publisher-print` keeps the Part A chapter/book print-handoff and book-health
+  gate explicit. Paragraph PDFs are already normal Part A human-review output.
 
 ### 1. Platform Generators — `platform/`
 

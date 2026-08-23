@@ -39,6 +39,7 @@ describe('integration lineage', () => {
 
     expect(summary.ok).toBe(true);
     expect(summary.authorization_inherited).toBe(true);
+    expect(summary.requires_human_reauthorization).toBe(false);
     expect(summary.base_drift.classification).toBe('no_substantive_overlap');
   });
 
@@ -131,6 +132,7 @@ describe('integration lineage', () => {
 
     expect(summary.ok).toBe(false);
     expect(summary.failures).toContain('authority_or_scope_change');
+    expect(summary.requires_human_reauthorization).toBe(true);
   });
 
   test('generated index and evidence-only refresh is accepted only through allowlist', () => {

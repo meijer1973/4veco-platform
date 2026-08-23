@@ -72,6 +72,7 @@ Human-readable:
 - `RESEARCH_AGENT_PROMPT_REFERENCES.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
+- `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
 - `docs/inspection-standards/nl-vo-evidence-model.md`
@@ -108,6 +109,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
@@ -142,6 +144,7 @@ URL index (single fetch unlocks the rest of the surface):
 {
   "reference_team_plan": "references/reference-team-roadmap.md",
   "inspection_standards_roadmap": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+  "international_quality_standards_roadmap": "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
   "quality_standards_sprint_ledger": "docs/roadmaps/quality-standards/sprint-ledger.md",
   "quality_standards_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
   "inspection_source_register": "references/data/inspection-standards/source-register.json",
@@ -165,6 +168,7 @@ index_anchors (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
@@ -207,6 +211,7 @@ Use these index anchors before free-form browsing. They reduce inference and con
   "roadmap_paths": [
     "references/reference-team-roadmap.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "docs/roadmaps/roadmap-version-index.json",
@@ -216,6 +221,7 @@ Use these index anchors before free-form browsing. They reduce inference and con
   "inspection_standards_paths": [
     "docs/roadmaps/quality-standards/README.md",
     "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "docs/roadmaps/quality-standards/sprint-ledger.md",
     "docs/roadmaps/quality-standards/quality-standards-end-state.md",
     "references/data/inspection-standards/README.md",
@@ -289,6 +295,7 @@ roadmap_paths (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
@@ -575,6 +582,7 @@ Rules:
   "roadmap_implications": [
     "references/reference-team-roadmap.md",
     "docs/roadmaps/roadmap-version-index.json",
+    "docs/roadmaps/quality-standards/international-quality-standards-roadmap.md",
     "knowledge/old/platform-team-roadmap.md",
     "reports/internal-dashboard/dashboard-data.json"
   ]

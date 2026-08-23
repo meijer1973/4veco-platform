@@ -313,6 +313,30 @@ describe('validate-paragraph.js', () => {
     expect(output).toContain('MISSING quality_ref');
   });
 
+  test('Part A student-web baseline fails without build_pdf.py', () => {
+    const dir = setupPartA('9.9.1 Theory', 'theory', {
+      includeBuildPdf: false,
+    });
+
+    const { exitCode, output } = run(dir, 'part-a', 'student-web');
+
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('MISSING build_pdf.py');
+    expect(output).not.toContain('MISSING paragraaf.pdf');
+  });
+
+  test('Part A student-web baseline fails when any required PDF is missing', () => {
+    const dir = setupPartA();
+    fs.rmSync(path.join(dir, `9.9.1 Theory ${DASH} opgaven.pdf`));
+
+    const { exitCode, output } = run(dir, 'part-a', 'student-web');
+
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('MISSING opgaven.pdf');
+    expect(output).not.toContain('MISSING paragraaf.pdf');
+    expect(output).not.toContain('MISSING antwoorden.pdf');
+  });
+
   test('Part B mode validates the student-web companion profile without Office files', () => {
     const dir = setupPartB('9.9.1 Theory', { includeOffice: false });
     const { exitCode, output } = run(dir, 'part-b', 'student-web');
@@ -320,6 +344,19 @@ describe('validate-paragraph.js', () => {
     expect(output).toContain('Output profile: student-web (14 required Part B file(s))');
     expect(output).toContain('14/14 required Part B files present (student-web)');
     expect(output).toContain('PASSED all checks');
+  });
+
+  test('wider-route check pages remain outside the 14-file student-web baseline', () => {
+    const dir = setupPartB('9.9.1 Theory', { includeOffice: false });
+    writeHtml(path.join(dir, `9.9.1 Theory ${DASH} korte-check.html`));
+    writeHtml(path.join(dir, `9.9.1 Theory ${DASH} exit-ticket.html`));
+
+    const { exitCode, output } = run(dir, 'part-b', 'student-web');
+
+    expect(exitCode).toBe(0);
+    expect(output).toContain('Output profile: student-web (14 required Part B file(s))');
+    expect(output).toContain('14/14 required Part B files present (student-web)');
+    expect(output).not.toContain('16 required Part B file(s)');
   });
 
   test('legacy-full profile validates the old 27 flat companion root files', () => {

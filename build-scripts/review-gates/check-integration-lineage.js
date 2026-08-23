@@ -166,6 +166,8 @@ function summarizeLineage(input) {
       failures.length === 0 && baseDrift.requires_integration_delta_lead_review === true,
     requires_deterministic_refresh:
       failures.length === 0 && baseDrift.requires_deterministic_refresh === true,
+    requires_human_reauthorization:
+      failures.length > 0 || baseDrift.requires_human_reauthorization === true,
     failures: [...new Set(failures)],
   };
 }
