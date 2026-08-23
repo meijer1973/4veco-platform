@@ -214,6 +214,12 @@ function buildBody(branch) {
   }
   lines.push('');
 
+  lines.push('## Golden Controlled-Wave Evidence');
+  lines.push('');
+  lines.push(`- ${platform('reports/json/y1-golden-rollout-wave-1-proof.json')}`);
+  lines.push(`- ${platform('reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json')}`);
+  lines.push('');
+
   return lines.join('\n');
 }
 
