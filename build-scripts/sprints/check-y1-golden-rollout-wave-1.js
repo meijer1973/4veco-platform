@@ -874,7 +874,7 @@ function run(options) {
   const delta = changedEntries(options.base, options.head, options.repoRoot);
   validateEventRefs(options, delta, options.repoRoot);
   const scope = validateChangedEntries(delta.entries, policyWave.changed_path_policy, options.scopeMode);
-  if (options.scopeOnly || !scope.triggered) return { delta, scope };
+  if (options.scopeOnly) return { delta, scope };
 
   validateWaveAndSurfaces();
   validateScaleProof();
@@ -896,7 +896,9 @@ function run(options) {
   });
   validateDeltaProof(recordedDelta, recomputedDelta);
   const exactHeadDelta = validateExactHeadDelta(recordedDelta, options.head, options.lessonHead);
-  const evidenceTail = validateEvidenceTail(recordedDelta.commit_chain.platform.renewal_payload, options.head);
+  const evidenceTail = scope.triggered
+    ? validateEvidenceTail(recordedDelta.commit_chain.platform.renewal_payload, options.head)
+    : { entries: [] };
 
   validateNavigationTexts({
     researchMap: readText('RESEARCH_AGENT_MAP.md'),

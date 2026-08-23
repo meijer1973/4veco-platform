@@ -150,6 +150,34 @@ function git(cwd, args) {
   return String(result.stdout || '').trim();
 }
 
+function syntheticCommit(root, parent, files) {
+  const indexPath = path.join(os.tmpdir(), `y1-golden-index-${process.pid}-${Date.now()}-${Math.random()}`);
+  const env = {
+    ...process.env,
+    GIT_INDEX_FILE: indexPath,
+    GIT_AUTHOR_NAME: 'Y1 Golden Test',
+    GIT_AUTHOR_EMAIL: 'test@example.com',
+    GIT_COMMITTER_NAME: 'Y1 Golden Test',
+    GIT_COMMITTER_EMAIL: 'test@example.com',
+  };
+  const run = (args, input = undefined) => {
+    const result = spawnSync('git', args, { cwd: root, encoding: 'utf8', env, input });
+    if (result.status !== 0) throw new Error(result.stderr || result.stdout);
+    return String(result.stdout || '').trim();
+  };
+  try {
+    run(['read-tree', parent]);
+    for (const [relativePath, content] of Object.entries(files)) {
+      const blob = run(['hash-object', '-w', '--stdin'], content);
+      run(['update-index', '--add', '--cacheinfo', '100644', blob, relativePath]);
+    }
+    const tree = run(['write-tree']);
+    return run(['commit-tree', tree, '-p', parent], 'synthetic full-mode test\n');
+  } finally {
+    fs.rmSync(indexPath, { force: true });
+  }
+}
+
 function write(root, relativePath, content) {
   const target = path.join(root, relativePath);
   fs.mkdirSync(path.dirname(target), { recursive: true });
@@ -191,7 +219,7 @@ function commit(root, files, message = 'change') {
   return git(root, ['rev-parse', 'HEAD']);
 }
 
-function runScopeCli({ root, policyPath, base, head, eventMode = 'manual', scopeMode = 'required', scopeOnly = true, env = {} }) {
+function runScopeCli({ root, policyPath, base, head, eventMode = 'manual', scopeMode = 'required', scopeOnly = true, allowUnbound = false, env = {} }) {
   const args = [
     SCRIPT,
     '--repo-root', root,
@@ -202,6 +230,7 @@ function runScopeCli({ root, policyPath, base, head, eventMode = 'manual', scope
     '--head', head,
   ];
   if (scopeOnly) args.splice(1, 0, '--scope-only');
+  if (allowUnbound) args.push('--allow-unbound-packet');
   return spawnSync(process.execPath, args, {
     cwd: root,
     encoding: 'utf8',
@@ -522,23 +551,52 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
   });
 
-  test('full mode exits cleanly for unrelated future work but evidence-tail validation rejects substantive drift', () => {
-    const repo = makeRepo();
-    roots.push(repo.root);
-    const unrelatedHead = commit(repo.root, { 'docs/future-authorized-work.md': 'future\n' });
+  test('full mode keeps state checks for unrelated work and rejects rendered-input drift', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const base = git(root, ['rev-parse', 'HEAD']);
+    const policyRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'y1-golden-policy-'));
+    roots.push(policyRoot);
+    const policyPath = path.join(policyRoot, 'policy.json');
+    fs.writeFileSync(policyPath, JSON.stringify({
+      changed_path_policy: {
+        allowed_exact: ['package.json'],
+        allowed_prefixes: ['reports/sprints/Y1-'],
+        forbidden_prefixes: ['source-data/', 'engines/'],
+        trigger_prefixes: ['reports/sprints/Y1-'],
+        trigger_exact: ['package.json'],
+      },
+    }), 'utf8');
+
+    const unrelatedHead = syntheticCommit(root, base, { 'docs/future-authorized-work.md': 'future\n' });
     const unrelated = runScopeCli({
-      ...repo,
+      root,
+      policyPath,
+      base,
       head: unrelatedHead,
       eventMode: 'main_push',
       scopeMode: 'auto',
       scopeOnly: false,
-      env: { Y1_GOLDEN_EVENT_BASE_SHA: repo.base, Y1_GOLDEN_EVENT_HEAD_SHA: unrelatedHead },
+      allowUnbound: true,
+      env: { Y1_GOLDEN_EVENT_BASE_SHA: base, Y1_GOLDEN_EVENT_HEAD_SHA: unrelatedHead },
     });
     expect(unrelated.status).toBe(0);
     expect(unrelated.stdout).toMatch(/"scope_attestation_triggered": false/);
 
-    const payload = unrelatedHead;
-    const forbiddenTail = commit(repo.root, { 'build-scripts/sprints/forbidden-renewal-change.js': 'module.exports = {};\n' });
-    expect(() => checker.validateEvidenceTail(payload, forbiddenTail, repo.root)).toThrow(/substantive path changed after reviewed payload/);
+    const renderedDriftHead = syntheticCommit(root, base, {
+      'build-scripts/platform/build-landing-page.js': 'module.exports = { unauthorizedDrift: true };\n',
+    });
+    const renderedDrift = runScopeCli({
+      root,
+      policyPath,
+      base,
+      head: renderedDriftHead,
+      eventMode: 'main_push',
+      scopeMode: 'auto',
+      scopeOnly: false,
+      allowUnbound: true,
+      env: { Y1_GOLDEN_EVENT_BASE_SHA: base, Y1_GOLDEN_EVENT_HEAD_SHA: renderedDriftHead },
+    });
+    expect(renderedDrift.status).not.toBe(0);
+    expect(renderedDrift.stderr).toMatch(/platform rendered inputs changed after reviewed payload/);
   });
 });
