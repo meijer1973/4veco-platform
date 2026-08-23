@@ -31,7 +31,7 @@ target-readiness flag changes.
 - Historical reuse decision: accepted after independent input/navigation
   classification; zero rendered-input drift.
 - Commit-bound delta proof: generated against renewed substantive payload
-  `38b37befae0f2aa597dbe6e808fc6c834393d3cf` and lesson snapshot
+  `3ee039acf3bacc3c55d74cce69bbde7ebea237fc` and lesson snapshot
   `96c0970f45739a8758cf7e932c6bce77806cd68d`.
 - Lead review round 1: `REVISE_IMPLEMENTATION`; all five core failures were
   corrected and the portability flag remains explicitly carried to remote CI.
@@ -41,10 +41,11 @@ target-readiness flag changes.
 - Final implementation lead review: `OK_TO_CLOSE`, normalized to
   `PASS WITH FLAGS` for repository metadata. No core requirement remains open.
 - CI repair lead review: `OK_TO_COMMIT`, normalized to `PASS WITH FLAGS`; the
-  real-Git full-mode test now invokes the checker directly and passes under
-  Node 20, Node 24, and the full local platform suite.
+  real-Git full-mode test now invokes the checker directly, and historical Git
+  object reads use a reviewed Windows-safe batch protocol with 24 focused
+  regressions.
 - Replacement PR: platform PR #214, bound to reviewed payload
-  `38b37befae0f2aa597dbe6e808fc6c834393d3cf`.
+  `3ee039acf3bacc3c55d74cce69bbde7ebea237fc`.
 - PR #205 supersession: closed with an explicit replacement link; old head
   `571d435a172240524ed96394a41682ef003bfcad` remains unauthorized.
 - Exact-head CI, branch-protection, lead, and PR Readiness Reviewer evidence:

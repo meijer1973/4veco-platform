@@ -15,6 +15,7 @@ Generated: 2026-08-23
 | Four linked presentation destinations changed. | quality_improvement_available | classified | They are navigation destinations, not rendered capture inputs. Delta proof requires existence at every commit and records zero rendered-input drift. |
 | Actual rollout/adoption and downstream product authority remain held. | scale_blocker | carried | Separate source/generated/rendered wave evidence and owner authorization are required. |
 | Local authority-hygiene hashes expose a pre-existing LF/CRLF portability mismatch. | minor_carry_flag | remote_proof_required | Exact-head remote `validate-platform` must pass; no unrelated fixture rewrite is included. |
-| Full-mode synthetic-Git regression returned a hidden child-process failure in remote Jest while passing locally. | core_spec_failure | corrected | Direct `checker.run()` orchestration keeps real Git history and both assertions; lead review returned `OK_TO_COMMIT`, and Node 20/24 focused plus full platform Jest pass locally. |
+| Full-mode synthetic-Git regression hid its checker error behind a child-process status. | quality_improvement_available | corrected | Direct `checker.run()` orchestration keeps real Git history and exposes exact checker failures. |
+| Fresh Windows CI could not query a historical lesson path containing an en dash through Git argv. | core_spec_failure | corrected | Git batch stdin object reads, strict framing/error handling, empty/missing distinction, six protocol edge cases, and lead-review `OK_TO_COMMIT`. |
 
 No missing core requirement may be carried under `PASS WITH FLAGS`.
