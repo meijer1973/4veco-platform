@@ -443,6 +443,18 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     });
     expect(pass.status).toBe(0);
 
+    const exactHeadCheckout = runScopeCli({
+      ...repo,
+      head,
+      eventMode: 'pull_request',
+      env: {
+        Y1_GOLDEN_EVENT_BASE_SHA: repo.base,
+        Y1_GOLDEN_EVENT_HEAD_SHA: head,
+        Y1_GOLDEN_SYNTHETIC_MERGE_SHA: '0'.repeat(40),
+      },
+    });
+    expect(exactHeadCheckout.status).toBe(0);
+
     const fail = runScopeCli({
       ...repo,
       head,

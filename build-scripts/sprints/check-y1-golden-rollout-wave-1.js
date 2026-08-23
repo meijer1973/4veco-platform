@@ -311,7 +311,8 @@ function validateEventRefs(options, resolved, cwd = ROOT) {
   if (mode === 'pull_request') {
     const synthetic = process.env.Y1_GOLDEN_SYNTHETIC_MERGE_SHA;
     if (synthetic) {
-      check(resolveRef(synthetic, cwd) !== resolved.head_sha, 'pull-request payload head must not be the synthetic merge SHA');
+      check(/^[0-9a-f]{40}$/i.test(synthetic), 'synthetic merge SHA must be a full commit SHA');
+      check(synthetic.toLowerCase() !== resolved.head_sha, 'pull-request payload head must not be the synthetic merge SHA');
     }
   }
   const ancestor = spawnSync('git', ['merge-base', '--is-ancestor', resolved.base_sha, resolved.head_sha], {
