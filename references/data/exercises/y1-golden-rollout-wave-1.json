@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "wave_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "status": "draft_unbound",
+  "updated_on": "2026-08-23",
+  "scope": "first_three_controlled_workflow_availability",
+  "paragraphs": ["1.1.1", "1.1.2", "1.1.3"],
+  "surface_ids": [
+    "1.1.1-korte-check",
+    "1.1.1-exit-ticket",
+    "1.1.2-korte-check",
+    "1.1.2-exit-ticket",
+    "1.1.3-korte-check",
+    "1.1.3-exit-ticket"
+  ],
+  "surface_source": "references/data/exercise-surface-manifest.json",
+  "rendered_product_path_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+  "rendered_delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+  "same_copy_hygiene_not_gate_claim": ["1.1.4"],
+  "owner_decision": {
+    "repository": "meijer1973/4veco-platform",
+    "platform_pr": 148,
+    "comment_id": 4807419611,
+    "comment_url": "https://github.com/meijer1973/4veco-platform/pull/148#issuecomment-4807419611",
+    "reviewed_platform_payload_sha": "5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7",
+    "reviewed_lesson_payload_sha": "071a465a03e287bc5768d88aabbec3e63b15ee09"
+  },
+  "scale_gate_1": {
+    "decision": "PASS_CONTROLLED_ROLLOUT",
+    "decision_source": "historical owner decision on platform PR #148",
+    "controlled_wave_eligibility_authorized": true,
+    "actual_rollout_or_adoption_authorized": false,
+    "automatic_repository_wide_migration_authorized": false
+  },
+  "authority": {
+    "actual_rollout_or_adoption_authorized": false,
+    "product_route_adoption_authorized": false,
+    "broad_product_use_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "engine_behavior_changed": false,
+    "protected_reference_data_changed": false
+  },
+  "changed_path_policy": {
+    "mode": "renewal_payload_only",
+    "trigger_exact": [
+      ".github/workflows/platform-ci.yml",
+      "package.json",
+      "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+      "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+      "references/data/exercises/y1-golden-rollout-wave-1.json",
+      "reports/json/y1-golden-rollout-wave-1-proof.json",
+      "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+      "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json"
+    ],
+    "trigger_prefixes": [
+      "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-"
+    ],
+    "allowed_exact": [
+      ".github/workflows/platform-ci.yml",
+      "package.json",
+      "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+      "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+      "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+      "docs/roadmaps/roadmap-version-index.json",
+      "docs/roadmaps/roadmap-version-index.md",
+      "RESEARCH_AGENT_MAP.md",
+      "RESEARCH_AGENT_MAP_REFERENCES.md",
+      "AGENT_GITHUB_ENTRY.md",
+      "references/data/exercises/y1-golden-rollout-wave-1.json",
+      "references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json",
+      "references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json",
+      "references/reference-team-roadmap.md",
+      "reports/json/y1-golden-rollout-wave-1-proof.json",
+      "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+      "reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+      "reports/url-index.md",
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/github-agent-index-lessen.json",
+      "reports/github-agent-index-lessen.md",
+      "reports/internal-dashboard/dashboard-data.json",
+      "reports/internal-dashboard/index.html"
+    ],
+    "allowed_prefixes": [
+      "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-"
+    ],
+    "forbidden_exact": [
+      "references/authored/course-target-exercises.json"
+    ],
+    "forbidden_prefixes": [
+      "source-data/book-1/exit-ticket/",
+      "engines/",
+      "references/machine/",
+      "references/external/",
+      "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+    ]
+  },
+  "not_in_this_wave": [
+    "1.1.4 check/exit source authoring",
+    "Chapter 1.2 check/exit source authoring",
+    "actual rollout or route adoption",
+    "completion-language enablement",
+    "automatic repository-wide migration",
+    "diagnostics, mastery/sequencing, adaptive routing, PV, summative, broad product, or student/product use"
+  ],
+  "next_expansion_candidates": [
+    {
+      "candidate": "Y1-GOLDEN-SOURCE-AUTHORING-114-1",
+      "scope": "Establish target-operation authority before any reviewed 1.1.4 check/exit source work."
+    },
+    {
+      "candidate": "Y1-GOLDEN-CHAPTER-12-CANDIDATE-INVENTORY-1",
+      "scope": "Inventory Chapter 1.2 target-operation evidence before creating check/exit sources."
+    }
+  ]
+}

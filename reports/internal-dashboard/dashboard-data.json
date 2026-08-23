@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T07:57:38.502Z",
+  "generatedAt": "2026-08-23T15:44:20.650Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,8 +160,15 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-06 Roadmap ID: references-team-roadmap Roadmap version: v3.56-shared-task-ingest-gate-closed Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econo...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-08-23 Roadmap ID: references-team-roadmap Roadmap version: v3.57-y1-golden-controlled-wave-renewal Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE ec...",
           "sprints": [
+            {
+              "sprint": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+              "name": "Current-Main Golden Controlled-Wave Guard Renewal",
+              "completed": "no",
+              "currentState": "Active L4 renewal from current `main`. Replaces stale PR #205 with exact base/head committed-scope checks, dedicated negative tests, coherent roadmap state, refreshed maps/indexes/dashboard, and a current commit-bound 46-case rendered proof because historical screenshot reuse was rejected. Historical Scale Gate 1 decision: `PASS_CONTROLLED_ROLLOUT`. No exercise source, engine behavior, generated lesson output, route, target-readiness flag, actual rollout/adoption, completion language, diagnostics, mastery/sequencing, PV, summative use, broad product use, or student/product use is authorized.",
+              "exitGate": ""
+            },
             {
               "sprint": "MTU-ANS-GEN-DESIGN-1",
               "name": "Answer-Form Generator And Proof Design",
@@ -1459,6 +1466,14 @@
         }
       ],
       "sprints": [
+        {
+          "sprint": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+          "name": "Current-Main Golden Controlled-Wave Guard Renewal",
+          "completed": "no",
+          "currentState": "Active L4 renewal from current `main`. Replaces stale PR #205 with exact base/head committed-scope checks, dedicated negative tests, coherent roadmap state, refreshed maps/indexes/dashboard, and a current commit-bound 46-case rendered proof because historical screenshot reuse was rejected. Historical Scale Gate 1 decision: `PASS_CONTROLLED_ROLLOUT`. No exercise source, engine behavior, generated lesson output, route, target-readiness flag, actual rollout/adoption, completion language, diagnostics, mastery/sequencing, PV, summative use, broad product use, or student/product use is authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
         {
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
@@ -2901,7 +2916,7 @@
         }
       ],
       "completedCount": 170,
-      "openCount": 10
+      "openCount": 11
     },
     {
       "id": "lessen",

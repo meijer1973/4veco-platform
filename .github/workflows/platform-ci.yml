@@ -8,6 +8,15 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      y1_base_sha:
+        description: Exact platform base SHA for the Y1 Golden scope attestation
+        required: true
+        type: string
+      y1_head_sha:
+        description: Exact platform head SHA for the Y1 Golden scope attestation
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -33,6 +42,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           path: 4veco-platform
+          ref: ${{ inputs.y1_head_sha || github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 0
           persist-credentials: false
 
@@ -179,6 +189,33 @@ jobs:
 
       - name: Validate Scale Proof 3P product path proof
         run: npm run check:scale-proof-3p-product-path
+
+      - name: Validate Y1 Golden rollout wave
+        env:
+          Y1_GOLDEN_PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          Y1_GOLDEN_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          Y1_GOLDEN_PUSH_BASE_SHA: ${{ github.event.before }}
+          Y1_GOLDEN_PUSH_HEAD_SHA: ${{ github.sha }}
+          Y1_GOLDEN_MANUAL_BASE_SHA: ${{ inputs.y1_base_sha }}
+          Y1_GOLDEN_MANUAL_HEAD_SHA: ${{ inputs.y1_head_sha }}
+        run: |
+          if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+            $mode = 'pull_request'
+            $base = $env:Y1_GOLDEN_PR_BASE_SHA
+            $head = $env:Y1_GOLDEN_PR_HEAD_SHA
+            $env:Y1_GOLDEN_SYNTHETIC_MERGE_SHA = $env:GITHUB_SHA
+          } elseif ($env:GITHUB_EVENT_NAME -eq 'push') {
+            $mode = 'main_push'
+            $base = $env:Y1_GOLDEN_PUSH_BASE_SHA
+            $head = $env:Y1_GOLDEN_PUSH_HEAD_SHA
+          } else {
+            $mode = 'manual'
+            $base = $env:Y1_GOLDEN_MANUAL_BASE_SHA
+            $head = $env:Y1_GOLDEN_MANUAL_HEAD_SHA
+          }
+          $env:Y1_GOLDEN_EVENT_BASE_SHA = $base
+          $env:Y1_GOLDEN_EVENT_HEAD_SHA = $head
+          npm run check:y1-golden-rollout-wave-1 -- --event-mode $mode --scope-mode auto --base $base --head $head --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head HEAD
 
       - name: Validate report JSON
         run: node build-scripts/reports/validate-report-json.js

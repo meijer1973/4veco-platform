@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "name": "Year 1 Golden Rollout Wave 1 Current-Main Renewal",
+  "status": "in_progress",
+  "completed": "2026-08-23",
+  "completed_on": "2026-08-23",
+  "verdict": "PENDING_LEAD_AND_HUMAN_REVIEW",
+  "result_status": "in_progress",
+  "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+  "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
+  "result": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
+  "diff_summary": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
+  "final_verdict": "PENDING_LEAD_AND_HUMAN_REVIEW",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "source_data_mutation_executed": false,
+  "exit_ticket_source_data_changed": false,
+  "engine_behavior_changed": false,
+  "lesson_repository_changed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
+    "round1_verdict": "pending",
+    "round2_verdict": "pending",
+    "final_verdict": "pending",
+    "flags": []
+  },
+  "acceptance_tests": [],
+  "product_boundaries": {
+    "controlled_wave_eligibility": true,
+    "actual_rollout_or_adoption": false,
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "student_product_use": false,
+    "broad_scaling": false
+  },
+  "supersession": {
+    "old_pr": 205,
+    "old_head_sha": "571d435a172240524ed96394a41682ef003bfcad",
+    "replacement_pr": null,
+    "old_pr_closed": false
+  },
+  "authorized_next": [
+    "Complete commit-bound screenshot-reuse proof and implementation lead review.",
+    "Open and bind a replacement draft PR, then supersede PR #205.",
+    "Return the exact-head L4 packet for human review; do not merge without owner authorization."
+  ]
+}

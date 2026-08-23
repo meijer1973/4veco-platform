@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "name": "Year 1 Golden Rollout Wave 1 Current-Main Renewal",
+  "created": "2026-08-23",
+  "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+  "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "supersedes": {
+    "repository": "meijer1973/4veco-platform",
+    "pr_number": 205,
+    "head_sha": "571d435a172240524ed96394a41682ef003bfcad",
+    "authorization_valid": false
+  },
+  "scope": [
+    "Renew the first-three Golden workflow availability guard from current main.",
+    "Replace worktree-cleanliness scope claims with event-specific committed base/head allowlist and forbidden-path validation for PR, main-push, and manual modes.",
+    "Correct the Golden rollout roadmap to the completed prerequisites and PASS_CONTROLLED_ROLLOUT decision.",
+    "Add dedicated negative regression tests for state, route, authority, roadmap, wiring, packet, delta-proof, and committed-path failures.",
+    "Publish commit-bound rendered-input delta proof across original capture payloads, old PR CI snapshots, and current heads so unchanged screenshots can be reused, while classifying navigation destinations separately as existence-only route evidence.",
+    "Refresh repository navigation, dashboard, review, and exact-head PR evidence without changing source, runtime, or generated lesson output."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+    "npx.cmd jest build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js --runInBand",
+    "npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base b7ec603880bcd8cc98c93526121ca71d3f31edcd --head HEAD --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head origin/main",
+    "npm.cmd run check:exercise-workflow-currentness",
+    "npm.cmd run check:exercise-authority-hygiene",
+    "npm.cmd run check:scale-proof-3p-product-path",
+    "npm.cmd run check:review-throughput -- reports/review-gates/Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run check:agent-index-freshness",
+    "npm.cmd run check:scope-language",
+    "npm.cmd run check:platform",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
+    "node build-scripts/sprints/check-lead-review-substance.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+    "node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1",
+    "node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No exercise source-data edits.",
+    "No engine/runtime behavior changes.",
+    "No generated lesson output edits or lesson PR.",
+    "No protected machine/external reference or target-exercise authority mutation.",
+    "No route migration or automatic repository-wide rollout.",
+    "No completion-language, diagnostics, mastery/sequencing, adaptive routing, PV, summative, broad product, or student/product-use authority.",
+    "No authorization, integration, or merge of PR #205.",
+    "No direct merge of the replacement PR."
+  ]
+}

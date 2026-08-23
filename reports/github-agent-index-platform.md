@@ -1,14 +1,14 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-23T00:00:00.000Z
+Generated: 2026-08-23T15:44:40.089Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/part-a-pdf-human-review-workflow-20260702`
-Source commit: `c0fc60227ea2d4c3bbe65659a78981ae521e6089`
+Source branch: `codex/y1-golden-rollout-wave-renewal-20260823`
+Source commit: `b7ec603880bcd8cc98c93526121ca71d3f31edcd`
 Files indexed: 7186
-Scope: committed tree files from `git ls-tree -r --name-only c0fc60227ea2d4c3bbe65659a78981ae521e6089`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
+Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
