@@ -30,6 +30,7 @@
     "check:exercise-authority-hygiene": "node build-scripts/sprints/check-exercise-authority-hygiene.js",
     "check:golden-graph-advisory-113": "node build-scripts/sprints/check-golden-graph-advisory-113-bundle-1.js",
     "check:scale-proof-3p-product-path": "node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+    "check:y1-golden-rollout-wave-1": "node build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
     "check:mtu-h7-bundle4": "node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js && node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json",
     "check:gate-ci-proof": "node build-scripts/sprints/check-gate-ci-proof.js",
     "check:reasoning-golden:exemplars": "node build-scripts/exemplars/check-reasoning-golden-exemplars.js",

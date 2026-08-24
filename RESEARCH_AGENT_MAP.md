@@ -86,6 +86,22 @@ Access rules:
 
 Human-readable:
 
+Current Golden controlled-wave renewal:
+
+- `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md`
+- `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md`
+- `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
+- `reports/json/y1-golden-rollout-wave-1-proof.json`
+- `reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json`
+- `references/data/exercises/y1-golden-rollout-wave-1.json`
+- `build-scripts/sprints/check-y1-golden-rollout-wave-1.js`
+
+`Y1-GOLDEN-ROLLOUT-WAVE-1` renews the exact six-surface
+`PASS_CONTROLLED_ROLLOUT` workflow-availability guard from current `main`.
+It does not authorize actual rollout/adoption, completion language, automatic
+migration, diagnostics, mastery/sequencing, PV, broad product use, or
+student/product use.
+
 For paragraph work, `check-part-a-pdf-readiness.js` and
 `scripts/lib/paragraph-types.js` are Part A surfaces,
 `legacy-full-companion-profile.md` is an opt-in Part B profile, and

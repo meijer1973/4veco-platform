@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-06-06
+Last strategic update: 2026-08-23
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v3.56-shared-task-ingest-gate-closed`
+Roadmap version: `v3.57-y1-golden-controlled-wave-renewal`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -42,12 +42,16 @@ Do not mint units from syllabus prose alone. Exam questions, official
 correction models, and reviewed target exercises are stronger evidence than
 abstract syllabus descriptions.
 
-## Product Proof Track Before Scale Gate 1
+## Product Proof Track And Scale Gate 1 Decision
 
-Scale Gate 1 is blocked until the first three paragraphs operate as a coherent
-student-visible product, not merely as improved engines or isolated checks.
-The track below is the required sequence unless a later human review explicitly
-waives a requirement with stated consequences.
+The first-three product-proof sequence is complete. The owner decision on
+platform PR #148 recorded Scale Gate 1 as `PASS_CONTROLLED_ROLLOUT`. Exactly six
+Golden short-check and exit-ticket surfaces for `1.1.1` through `1.1.3` are
+workflow-available for separately governed controlled waves. This decision
+records exit tickets as target-readiness-only with completion language held. It
+does not authorize actual rollout, product-route adoption, completion language,
+automatic migration, diagnostics, mastery/sequencing, PV, summative use, broad
+product use, or student/product use.
 
 Strategic baseline: `../4veco-lessen/specifications/product-vision.md`.
 Acceptance baseline: `../4veco-lessen/specifications/product-end-state.md`
@@ -94,6 +98,7 @@ Core standard:
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| Y1-GOLDEN-ROLLOUT-WAVE-1 | Current-Main Golden Controlled-Wave Guard Renewal | yes | Implementation complete with subagent `OK_TO_CLOSE`; replacement PR creation, exact-head CI/readiness, and human authorization remain pending. Replaces stale PR #205 with exact base/head committed-scope checks, dedicated negative tests, coherent roadmap state, refreshed maps/indexes/dashboard, and commit-bound rendered-input equality proof for historical screenshot reuse. No exercise source, engine behavior, generated lesson output, route, target-readiness flag, actual rollout/adoption, completion language, diagnostics, mastery/sequencing, PV, summative use, broad product use, or student/product use is authorized. |
 | B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1 | 1.1.3 Graph Evidence Flag Implementation | yes | Closed implementation sprint after `B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1` recorded the human decision. Set only the `1.1.3` target-equivalent exit-ticket source flags to `gateApproved:true` and `targetReadinessEvidence:true`, kept `completionLanguageEligible:false`, regenerated paired Book 1 lesson output from platform source, and updated current validators/tests that previously encoded the pre-review hold. `1.1.3-korte-check` remains advisory and non-target-readiness. No Year 1 closure, CP-6 closure, Scale Gate 1, product-route adoption, diagnostics, mastery, PV, or student/product use is authorized. |
 | MTU-ANS-GEN-DESIGN-1 | Answer-Form Generator And Proof Design | yes | Closed 2026-06-07 as PASS. Designed the reviewed generator/proof route for `A80`, `A81`, and `A96`-`A99` while preserving generator-blocked no-exposure guardrails. The design classifies `A80`, `A81`, and `A96`-`A98` as route-specific shared-task-shell proof work, keeps `A81` modifier-only with an underlying answer form, and keeps `A99` held pending live evidence. No generator implementation, source-data write, generated lesson output, PV projection, diagnostics, adaptive routing, mastery/sequencing, Scale Gate 1, product-route adoption, or student/product authority was authorized. |
 | MTU-ANS-PROOF-IMPL-1 | A96 Answer-Form Proof Implementation | yes | Closed bounded proof sprint. Implements a route-specific shared-task-shell proof for `A96` using the reviewed `1.1.2` calculation prompt, requiring method/rule, labelled substitution, intermediate work, final answer, required notation, and contextual conclusion. Keeps `A96` out of generic `ROUTE_SKILLS`, avoids `GEN_A96`, keeps `A81` modifier-only, keeps `A99` blocked, and authorizes no generated lesson output, product-route adoption, target-equivalent claim, diagnostics, mastery/sequencing, PV projection, Scale Gate 1, or student/product use. |
@@ -171,17 +176,17 @@ Core standard:
 | SHARED-TASK-INGEST-PLAYABLE-REPAIR-4 | Final Interaction Clarity Repair | yes | Closed 2026-06-05 as PASS WITH FLAGS / review-lab repair evidence only after fourth direct human `REVISE` plus reviewer correction pass. Preserved three-card economy and review-only boundaries while replacing exam select-all-numbers task 1 with conceptual setup, accepting `649` plus reasonable yearly unit variants and `22x12 = 264, 264 + 385 = 649` shortcut work, adding targeted feedback and progressive support, drawing the textbook graph line inside the same workspace, attaching axis selectors to the graph, keeping grid visible from the start while hiding labels/scale until correct axes, using table-derived graph ticks, simplifying the 50 percent follow-up with conclusion acceptance and shared `interval_halving_check` focus-plan evidence, removing duplicate visible Bron/Tabel labels, strengthening visual QA/checkers/screenshots, adding lead-review/verification artifacts, and refreshing the review packet. Final human review then closed `GATE-SHARED-TASK-INGEST-REPAIR-1` PASS WITH FLAGS on this evidence. Repair 4 itself authorized no generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use. |
 | DUAL-CODING-STD-1 | Dual-Coding Exercise Standard | no | Residual task-selection policy only. `CONTEXT-VISUAL-STD-1` absorbed the visual-source policy for source context blocks, so any remaining scope must decide when a task needs plain text, table, graph, flowchart, diagram, formula box, or visual construction based on target-exercise operations. Must not remain a generic decoration sprint. |
 | ENGINE-UNIFY-1 | Unified Engine Experience Refactor Plan | no | Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, accessibility, context block rendering, source reconstruction output, table/graph/SVG rendering, task-family controls, and mobile/dark behavior around the shared route and task shell. |
-| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Direct human review returned `REVISE` with gate direction `hold_for_surface_repair` and additional direction `replan before the next human gate`; the gate is not closed and no product authority exists. The earlier `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded after renewed human/lead feedback found that accepted shared-task decisions were not preserved. The inserted sequence `CHECKSURFACE-POLICY-REGRESSION-1` -> `CHECKSURFACE-EXCELLENCE-REDESIGN-1` -> `CHECKSURFACE-EXCELLENCE-AUDIT-3P` -> `CHECKSURFACE-GATE-RETRY-EXCELLENT-1` is now complete as renewed packet preparation: stable policy added, regression fixtures/checker pass, `1.1.3` short/exit redesigned and regenerated through deploy, fresh screenshot/proof evidence captured, six-surface audit recorded, and `GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review` packet/checker/bundle are ready for direct human review comments after push. Preserve the historical exact `1.1.2` completion-copy boundary, but keep the current `1.1.2` Golden Workbench transfer, `1.1.1`, and `1.1.3` completion language held pending review. Do not proceed to `SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption, diagnostics, mastery/sequencing, PV, or student/product use before the renewed human gate authorizes it. |
+| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | yes | Closed through the subsequent repair, migration, advisory-graph, authority-copy, and A96 bundles. Current `main` contains exactly six first-three Golden surfaces. Short checks remain advisory-only; exit tickets remain target-readiness-only with completion language held. |
 | CHECKSURFACE-POLICY-REGRESSION-1 | Check-Surface Policy And Regression Memory | yes | Closed PASS. Added durable shared-task/check-surface integrity policy to stable specs, paused stale retry-packet roadmap text, added negative fixtures and `check-checksurface-policy-regression1.js`, and wrote `checksurface-policy-regression1-proof.json` proving duplicate surfaces, procedure-giving exits, answer leakage, correct-only selectors, choice-only substitutions, missing feedback/next action, and authority overclaim are caught. No generated lesson output, retry comments, gate closure, new completion language, product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. |
 | CHECKSURFACE-EXCELLENCE-REDESIGN-1 | Check-Surface Excellence Redesign | yes | Closed PASS WITH FLAGS. Hardened interval/conclusion validation, added delayed graph-axis guide behavior, redesigned `1.1.3` short check around a distinct smoothie context, removed procedure-giving context from `1.1.3` exit ticket, added interval/conclusion distractors, regenerated Book 1 output through deploy, and refreshed graph/check proof. Flags: `1.1.3` remains a held candidate; graph substitute remains reviewable task-shell proof, not final graph-engine maturity. |
 | CHECKSURFACE-EXCELLENCE-AUDIT-3P | First-Three Check-Surface Excellence Audit | yes | Closed PASS WITH FLAGS. Added six-surface audit matrix and proof for `1.1.1`-`1.1.3` short checks and exit tickets: purpose, target skill, student action, answer-giveaway guard, independence, feedback/next action, and authority. No retry comments, gate closure, new completion language, product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. |
 | CHECKSURFACE-GATE-RETRY-EXCELLENT-1 | Renewed Excellent Check-Surface Gate Packet | yes | Packet preparation complete. Created `GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review` with review packet, JSON, live-output evidence, review lab, bundle URLs, and checker. The old retry packet is superseded. Next action after push: send this renewed packet for direct human review comments. No gate closure before returned comments and resolution log. |
 | MERGE-HANDOFF-CHECKSURFACE-1 | Check Surface Branch Preservation Merge | yes | Preserves the `codex/check-short-exit-2` branch work on `main` so a new team can continue from a clean baseline. This is not a human gate closure and does not approve `GATE-CHECK-SURFACE-EXCELLENT-1`. No product-route adoption, new completion language for `1.1.1`/`1.1.3`, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student use authorized. Next team must start a new branch and continue product-quality work from the merged evidence. |
 | REV-STD-1 | Core-Spec Review Standard Hardening | yes | Closed 2026-06-10 as review-standard and flag-disposition hardening only. Lead-review instructions, stable review specification, active review packet fields, bundle schema v3, and REV-STD-1 flag-disposition checker/report now require `product-end-state.md`, the original sprint or gate specification, non-negotiable requirements, a core-requirement checklist, and finding classifications `core_requirement_met`, `quality_improvement_available`, `minor_carry_flag`, `scale_blocker`, and `core_spec_failure`. No generated lesson output, product-route adoption, target-equivalent claim, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student/product use authorized. |
-| SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Still blocked until `CHECK-SHORT-EXIT-2` and `GATE-PRODUCT-3P` supply rendered student-path proof or a human waiver explicitly records consequences. Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action. |
-| GATE-PRODUCT-3P | Human Product Readiness Review | no | Human review of the three-paragraph product before Scale Gate 1. PASS WITH FLAGS may not carry missing core product requirements. |
+| SCALE-PROOF-3P | Three-Paragraph Product Proof | yes | Closed by `SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1` with rendered landing, Start, Leer, Oefen, skill-map, practice, advisory-check, exit-ticket, feedback, next-action, mobile, and dark evidence. Later source/output drift requires either commit-bound equality proof or renewed capture; `Y1-GOLDEN-ROLLOUT-WAVE-1` enforces that rule. |
+| GATE-PRODUCT-3P | Human Product Readiness Review | yes | Closed narrowly for the first-three rendered product path. It did not grant actual product-route adoption, completion language, broad product use, or student/product use. |
 | SHARED-TASK-HARDENING-SERIES-PLAN-1 | Shared Task Maturity Series Planning | no | Queued later planning row only; do not start immediately and do not let it block the next necessary adoption-preparation work unless the roadmap owner explicitly reorders. Plan a later sprint series to mature shared tasks after the current context/ingestion proof. Scope includes standard multiple choice with high-quality answer-specific feedback, guided-exercise ingestion, support/hint-rich guided practice variants, explanation detours with return-to-question flow, more bounded textbook and exam ingestion trials, graph-construction hardening, carried-value task chaining, progressive feedback, stability checks across source/task types, and proof that these are general shared-task standards rather than ad hoc patches. This is planning only and does not authorize product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, Scale Gate 1, or student/product use. |
-| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `CHECK-SHORT-EXIT-2`, `SCALE-PROOF-3P`, and `GATE-PRODUCT-3P`, or a human waiver explicitly records consequences. `REV-STD-1` is now closed as review-standard hardening only, and the repaired shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-REPAIR-1` is closed PASS WITH FLAGS for adoption-preparation only; neither closure authorizes Scale Gate 1. Scale Gate 1 may not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion before the remaining proof gates close. |
+| Scale Gate 1 | Foundation Hardening Scale Gate | yes | Owner decision on platform PR #148: `PASS_CONTROLLED_ROLLOUT`. This authorizes eligibility for bounded, separately reviewed Golden rollout waves only. Actual rollout/adoption, completion language, automatic migration, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, broad product use, and student/product use remain held. |
 
 ## Sprint Ledger
 
@@ -193,6 +198,7 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| Y1-GOLDEN-ROLLOUT-WAVE-1 | Current-Main Golden Controlled-Wave Guard Renewal | yes | Implementation complete with subagent `OK_TO_CLOSE`; replacement PR creation, exact-head CI/readiness, and human authorization remain pending. The renewal replaces stale PR #205 with exact base/head committed-scope checks, dedicated negative tests, coherent roadmap state, refreshed maps/indexes/dashboard, and a commit-bound proof that all rendered inputs remain equal while navigation destinations remain present. Historical Scale Gate 1 decision: `PASS_CONTROLLED_ROLLOUT`. No exercise source, engine behavior, generated lesson output, route, target-readiness flag, actual rollout/adoption, completion language, diagnostics, mastery/sequencing, PV, summative use, broad product use, or student/product use is authorized. |
 | MTU-ANS-GEN-DESIGN-1 | Answer-Form Generator And Proof Design | yes | Completed. Produced a checked generator/proof design and implementation handoff for `A80`, `A81`, and `A96`-`A99`. Preserves the merged generator-blocked guardrail, keeps `A81` modifier-only with an underlying answer form, keeps `A99` held pending live evidence, and requires later rendered proof plus review before product-route adoption. |
 | MTU-GENBLOCK-HARDEN-1 | Generator-Blocked MTU Exposure Hardening | yes | Completed. Generator-blocked A-domain units remain explicit non-interactive metadata and are excluded from both interactive exports and student-visible route exports. Generated lesson-output route checks, missing-generator implementation, PV projection, diagnostics, adaptive routing, mastery/sequencing, Scale Gate 1, product-route adoption, and student/product authority remain unauthorized follow-up scope. |
 | TASK-FAMILY-CHOICE-1 | Structured Choice Task-Family Contract | yes | Closed no-implementation contract sprint. Produced `reports/sprints/TASK-FAMILY-CHOICE-1-contract.md`, `reports/json/task-family-choice-contract.json`, and checker `build-scripts/sprints/check-task-family-choice1-contract.js`. It defines `cloze_text`, `multi_select`, `matching_pairs`, `step_ordering`, `two_tier_choice`, and `assertion_reason` as reviewed student actions with response shapes, validation/evaluation ownership, feedback ownership, focus/keyboard expectations, product-boundary flags, route/checkpoint use cases, and explicit target-proof limits. No implementation or generated output. |
@@ -2695,17 +2701,16 @@ Update 2026-06-02: `GATE-TASK-FAMILY-1 Structured Choice And Construction Task-F
 
 ## Immediate Next Sprint
 
-Next action after `B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1`: complete PR
-review and merge for the source/generated parity implementation, then prepare
-the next product-proof or Scale Gate preparation packet only if it preserves
-the remaining holds. The previous `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is
-superseded and must not be sent as current evidence. Do not start
-`SHARED-TASK-HARDENING-SERIES-PLAN-1`, broad product-route adoption, diagnostics,
-mastery, PV, student/product use, or Scale Gate 1 closure from this flag
-implementation alone.
+Current immediate action: publish the completed `Y1-GOLDEN-ROLLOUT-WAVE-1`
+implementation as a replacement for stale platform PR #205, then return the
+exact-head L4 renewal for human review. After acceptance, choose one bounded evidence-first candidate:
+`Y1-GOLDEN-SOURCE-AUTHORING-114-1` or
+`Y1-GOLDEN-CHAPTER-12-CANDIDATE-INVENTORY-1`. Do not infer actual rollout,
+product-route adoption, completion language, diagnostics, mastery/sequencing,
+PV, broad product use, or student/product use from controlled-wave eligibility.
 
-The repaired shared task context/ingestion lane must run in this order unless
-a later human waiver explicitly records consequences:
+The following sequence is retained as historical execution context, not as the
+current Golden next-sprint queue:
 
 ```text
 EXAM-SOURCE-AUTH-1
@@ -2758,9 +2763,9 @@ action while real exam source authority is unresolved. The closed task-family
 runtimes may not be adopted in generated lesson routes before a later adoption
 sprint supplies product-route rendered proof.
 
-`GATE-SHARED-TASK-INGEST-REPAIR-1` is now closed PASS WITH FLAGS for
-review-only source-context ingestion readiness. `CHECK-SHORT-EXIT-2` is in a
-post-review repair sequence after `REVISE / hold_for_surface_repair`;
+`GATE-SHARED-TASK-INGEST-REPAIR-1` is closed PASS WITH FLAGS for review-only
+source-context ingestion readiness. `CHECK-SHORT-EXIT-2` and its subsequent
+repair sequence are closed historical work;
 `CHECKSURFACE-RESET-1`, `GRAPH-CHECK-UX-1`, `GRAPH-EXIT-UX-1`,
 `CHECK-ROUTE-COPY-1`, `VISUAL-QA-HARDEN-2`, and
 `CHECK-SURFACE-PREGATE-1` are complete baseline repair evidence. The old
@@ -2768,16 +2773,16 @@ post-review repair sequence after `REVISE / hold_for_surface_repair`;
 feedback. `CHECKSURFACE-POLICY-REGRESSION-1`,
 `CHECKSURFACE-EXCELLENCE-REDESIGN-1`,
 `CHECKSURFACE-EXCELLENCE-AUDIT-3P`, and
-`CHECKSURFACE-GATE-RETRY-EXCELLENT-1` are complete as renewed packet
-preparation; the renewed packet is the next direct human review surface.
-`SCALE-PROOF-3P`,
-`GATE-PRODUCT-3P`, and Scale Gate 1 still require their own rendered
-student-path proof and review.
+`CHECKSURFACE-GATE-RETRY-EXCELLENT-1` are complete historical gate work.
+`SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, and the narrow Scale Gate 1 decision are
+now complete; platform PR #148 records `PASS_CONTROLLED_ROLLOUT`. Their evidence
+must be renewed after relevant source/output drift, and their held downstream
+authorities remain unchanged.
 `REV-STD-1` is closed as review-standard hardening only. The earlier exact
-local `1.1.2` completion copy remains historical and non-summative only; the
-current `1.1.2` Golden Workbench transfer keeps target-equivalent readiness and
-completion language held pending review. No diagnostics, adaptive routing,
-mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1,
+local `1.1.2` completion copy remains historical and non-summative only. For
+the current first-three Golden set, target-readiness evidence is approved while
+completion language remains held. No diagnostics, adaptive routing,
+mastery/sequencing, student-facing AI, summative use, PV, further Scale Gate 1,
 CP-6/Year-1 reliance, or product-wide use is authorized by the closed
 task-family, source-ingestion, and product-proof preparation sprints.
 

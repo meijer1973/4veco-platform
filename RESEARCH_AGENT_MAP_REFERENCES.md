@@ -69,6 +69,20 @@ Access rules:
 
 Human-readable:
 
+Current Golden controlled-wave renewal:
+
+- `docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md`
+- `references/reference-team-roadmap.md`
+- `references/data/exercises/y1-golden-rollout-wave-1.json`
+- `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
+- `reports/json/y1-golden-rollout-wave-1-proof.json`
+- `reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json`
+- `build-scripts/sprints/check-y1-golden-rollout-wave-1.js`
+
+The six first-three Golden surfaces are workflow-available only for separately
+governed controlled waves under the historical `PASS_CONTROLLED_ROLLOUT`
+decision. Actual rollout/adoption and student/product authority remain held.
+
 - `RESEARCH_AGENT_PROMPT_REFERENCES.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`

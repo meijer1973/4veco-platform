@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "packet_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "pr_number": 214,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/214",
+  "reviewed_payload_head_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "product_authority",
+  "date": "2026-08-23",
+  "human_decision_required": true,
+  "auto_merge_allowed_after_ci": false,
+  "paired_prs": [],
+  "escalation_triggers": [
+    "product_authority_boundary",
+    "ci_workflow_changed",
+    "supersedes_stale_human_handoff"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS WITH FLAGS",
+    "rationale": "The renewal governs the historical PASS_CONTROLLED_ROLLOUT boundary and changes CI. Exact-head human review remains required."
+  },
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "docs/roadmaps/golden-workbench/golden-workbench-rollout-original-plan-20260612.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+    "https://github.com/meijer1973/4veco-platform/pull/148#issuecomment-4807419611"
+  ],
+  "non_negotiable_requirements": [
+    "Exactly six first-three split Golden surfaces.",
+    "Short checks remain advisory-only.",
+    "Exit tickets remain target-readiness-only with completionLanguageEligible:false.",
+    "Scale Gate 1 is recorded only as historical PASS_CONTROLLED_ROLLOUT.",
+    "Committed PR scope uses exact event base/head changed-path proof.",
+    "Reused screenshots require commit-bound independently derived input-delta proof.",
+    "No actual rollout/adoption, automatic migration, completion language, broad product use, or student use."
+  ],
+  "status": "draft_exact_head_proof_pending",
+  "route": "READY_FOR_HUMAN_REVIEW",
+  "content_verdict_requested": "Approve or reject the renewed controlled workflow-availability guard only.",
+  "authority_claims": {
+    "actual_rollout_or_adoption_authorized": false,
+    "automatic_repository_wide_migration_authorized": false,
+    "product_route_adoption_authorized": false,
+    "broad_product_use_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "engine_behavior_changed": false
+  },
+  "core_requirement_checklist": [
+    { "requirement": "Current-main branch and fresh evidence", "status": "met" },
+    { "requirement": "Six-surface state and route contract", "status": "met" },
+    { "requirement": "Committed changed-path guard", "status": "met" },
+    { "requirement": "Shared infrastructure does not trigger the renewal-only allowlist", "status": "met" },
+    { "requirement": "Dedicated negative regression suite", "status": "met" },
+    { "requirement": "Commit-bound rendered delta proof", "status": "met" },
+    { "requirement": "Coherent active roadmaps", "status": "met" },
+    { "requirement": "Maps, indexes, and dashboard closure", "status": "met" },
+    { "requirement": "Replacement PR and reviewed-payload binding", "status": "met" },
+    { "requirement": "Exact-head CI, branch-protection, lead, and readiness proof", "status": "not met" },
+    { "requirement": "PR #205 superseded and closed", "status": "met" }
+  ],
+  "carried_issues": [
+    {
+      "issue_id": "DOWNSTREAM_AUTHORITY_REMAINS_HELD",
+      "classification": "scale_blocker",
+      "blocks": "Actual rollout/adoption, completion language, automatic migration, broad product use, and student/product use.",
+      "does_not_block": "Human review of this current-main workflow-availability guard.",
+      "proof_required_to_close": "Separate authorized rollout/adoption and student-use gates with current source/generated/rendered evidence."
+    }
+  ],
+  "proof": {
+    "wave": "references/data/exercises/y1-golden-rollout-wave-1.json",
+    "machine_proof": "reports/json/y1-golden-rollout-wave-1-proof.json",
+    "rendered_delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+    "checker": {
+      "command": "npm.cmd run check:y1-golden-rollout-wave-1",
+      "status": "local_passed_allow_unbound"
+    },
+    "lead_review": {
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md",
+      "result": "PASS WITH FLAGS",
+      "reviewed_commit_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc"
+    },
+    "ci": {
+      "required_contexts": ["validate-platform"],
+      "status": "pending",
+      "reviewed_commit_sha": null
+    }
+  },
+  "recommended_next_action": "Run exact-head CI, live branch-protection, lead, and PR Readiness Reviewer checks for PR #214, then return the L4 packet for human review."
+}

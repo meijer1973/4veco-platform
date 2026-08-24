@@ -32,7 +32,7 @@ function listGates() {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && /^GATE-/.test(entry.name))
+    .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .sort();
 }
@@ -212,6 +212,12 @@ function buildBody(branch) {
     const rel = path.posix.join('reports', 'review-gates', gate, 'bundle-urls.md');
     lines.push(`- ${platform(rel)}`);
   }
+  lines.push('');
+
+  lines.push('## Golden Controlled-Wave Evidence');
+  lines.push('');
+  lines.push(`- ${platform('reports/json/y1-golden-rollout-wave-1-proof.json')}`);
+  lines.push(`- ${platform('reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json')}`);
   lines.push('');
 
   return lines.join('\n');
