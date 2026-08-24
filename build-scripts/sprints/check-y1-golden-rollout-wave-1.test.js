@@ -584,6 +584,59 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
   });
 
+  test('shared infrastructure paths do not activate the renewal allowlist for future mixed work', () => {
+    const actualPolicyPath = path.resolve(__dirname, '..', '..', 'references', 'data', 'exercises', 'y1-golden-rollout-wave-1.json');
+    const actualPolicy = JSON.parse(fs.readFileSync(actualPolicyPath, 'utf8')).changed_path_policy;
+    const sharedPaths = [
+      '.github/workflows/platform-ci.yml',
+      'package.json',
+      'build-scripts/sprints/emit-url-index.js',
+    ];
+
+    for (const sharedPath of sharedPaths) expect(actualPolicy.allowed_exact).toContain(sharedPath);
+    for (const sharedPath of sharedPaths) expect(actualPolicy.trigger_exact).not.toContain(sharedPath);
+
+    for (let mask = 1; mask < (1 << sharedPaths.length); mask += 1) {
+      const repo = makeRepo();
+      roots.push(repo.root);
+      const files = { 'docs/future-authorized-work.md': 'future\n' };
+      for (let index = 0; index < sharedPaths.length; index += 1) {
+        if (mask & (1 << index)) files[sharedPaths[index]] = `shared ${index}\n`;
+      }
+      const head = commit(repo.root, files, `shared subset ${mask}`);
+      const result = runScopeCli({
+        ...repo,
+        policyPath: actualPolicyPath,
+        head,
+        eventMode: 'main_push',
+        scopeMode: 'auto',
+        env: { Y1_GOLDEN_EVENT_BASE_SHA: repo.base, Y1_GOLDEN_EVENT_HEAD_SHA: head },
+      });
+      expect(result.status).toBe(0);
+      expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
+    }
+  });
+
+  test('a Y1-specific trigger still rejects unrelated mixed work', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const actualPolicyPath = path.resolve(__dirname, '..', '..', 'references', 'data', 'exercises', 'y1-golden-rollout-wave-1.json');
+    const head = commit(repo.root, {
+      'build-scripts/sprints/check-y1-golden-rollout-wave-1.js': 'y1 repair\n',
+      'docs/future-authorized-work.md': 'future\n',
+    });
+    const result = runScopeCli({
+      ...repo,
+      policyPath: actualPolicyPath,
+      head,
+      eventMode: 'main_push',
+      scopeMode: 'auto',
+      env: { Y1_GOLDEN_EVENT_BASE_SHA: repo.base, Y1_GOLDEN_EVENT_HEAD_SHA: head },
+    });
+    expect(result.status).not.toBe(0);
+    expect(result.stderr).toMatch(/unexpected committed path changed: docs\/future-authorized-work\.md/);
+  });
+
   test('full mode keeps state checks for unrelated work and rejects rendered-input drift', () => {
     const root = path.resolve(__dirname, '..', '..');
     const base = git(root, ['rev-parse', 'HEAD']);

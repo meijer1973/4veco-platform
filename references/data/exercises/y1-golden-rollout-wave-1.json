@@ -53,11 +53,8 @@
   "changed_path_policy": {
     "mode": "renewal_payload_only",
     "trigger_exact": [
-      ".github/workflows/platform-ci.yml",
-      "package.json",
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
-      "build-scripts/sprints/emit-url-index.js",
       "references/data/exercises/y1-golden-rollout-wave-1.json",
       "reports/json/y1-golden-rollout-wave-1-proof.json",
       "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
