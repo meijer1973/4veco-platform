@@ -4,7 +4,7 @@
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "pr_number": 214,
   "pr_url": "https://github.com/meijer1973/4veco-platform/pull/214",
-  "reviewed_payload_head_sha": "e830965cb4ca81678c2164e0c07e02b02d75a212",
+  "reviewed_payload_head_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "product_authority",
@@ -64,6 +64,7 @@
     { "requirement": "Current-main branch and fresh evidence", "status": "met" },
     { "requirement": "Six-surface state and route contract", "status": "met" },
     { "requirement": "Committed changed-path guard", "status": "met" },
+    { "requirement": "Shared infrastructure does not trigger the renewal-only allowlist", "status": "met" },
     { "requirement": "Dedicated negative regression suite", "status": "met" },
     { "requirement": "Commit-bound rendered delta proof", "status": "met" },
     { "requirement": "Coherent active roadmaps", "status": "met" },
@@ -90,9 +91,9 @@
       "status": "local_passed_allow_unbound"
     },
     "lead_review": {
-      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round5.md",
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md",
       "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "e830965cb4ca81678c2164e0c07e02b02d75a212"
+      "reviewed_commit_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc"
     },
     "ci": {
       "required_contexts": ["validate-platform"],

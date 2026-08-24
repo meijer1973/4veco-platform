@@ -1,6 +1,6 @@
 # Y1-GOLDEN-ROLLOUT-WAVE-1 Evidence Map
 
-Generated: 2026-08-23
+Generated: 2026-08-24
 
 | Requirement | Source | Machine/check proof | Review proof |
 |---|---|---|---|
@@ -8,6 +8,7 @@ Generated: 2026-08-23
 | Advisory/exit authority held | Six split source files and generated lesson data | Y1 checker source/generated parity and held-authority assertions | Authority-boundary review |
 | Automatic migration held | Wave, packet, proof, and result authority surfaces | Shared held-authority assertion and negative drift fixture | Authority-boundary review |
 | Committed scope protection | Git event base/head history | Y1 checker `--event-mode` and real-Git Jest tests | Repository/testing review |
+| Future shared-file CI safety | Actual wave trigger policy | Seven shared-path subset regressions plus Y1 mixed-scope rejection | Lead review round 6 |
 | Current rendered product-path claim | Historical 46-case proof plus current lesson output | Historical Scale Proof and commit-bound rendered-input equality delta | Rendered-proof-boundary review |
 | Historical screenshot disposition | Capture and old-CI commits | `reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json` | Lead review |
 | Coherent current roadmap | Golden and reference-team roadmaps | Roadmap index checker and Y1 semantic checker | Authority-boundary review |

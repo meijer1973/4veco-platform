@@ -26,12 +26,12 @@ target-readiness flag changes.
 ## Current Evidence
 
 - Plan review: `OK_TO_IMPLEMENT` after correction round.
-- Focused checker suite: 24 tests passing after lead-review corrections.
+- Focused checker suite: 26 tests passing after lead-review corrections.
 - Roadmap version index: passing after current-state correction.
 - Historical reuse decision: accepted after independent input/navigation
   classification; zero rendered-input drift.
 - Commit-bound delta proof: generated against renewed substantive payload
-  `e830965cb4ca81678c2164e0c07e02b02d75a212` and lesson snapshot
+  `12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc` and lesson snapshot
   `96c0970f45739a8758cf7e932c6bce77806cd68d`.
 - Lead review round 1: `REVISE_IMPLEMENTATION`; all five core failures were
   corrected and the portability flag remains explicitly carried to remote CI.
@@ -42,13 +42,16 @@ target-readiness flag changes.
   `PASS WITH FLAGS` for repository metadata. No core requirement remains open.
 - CI repair lead review: `OK_TO_COMMIT`, normalized to `PASS WITH FLAGS`; the
   real-Git full-mode test now invokes the checker directly, and historical Git
-  object reads use a reviewed Windows-safe batch protocol with 24 focused
+  object reads use a reviewed Windows-safe batch protocol with 26 focused
   regressions.
 - Exact-head PR repair review: `OK_TO_COMMIT`, normalized to `PASS WITH FLAGS`;
   an unfetched GitHub synthetic merge SHA is accepted while payload/synthetic
   equality remains rejected.
+- Trigger-policy repair review: `OK_TO_COMMIT`, normalized to
+  `PASS WITH FLAGS`; shared infrastructure remains allowed without activating
+  renewal scope, and Y1-specific mixed scope remains rejected.
 - Replacement PR: platform PR #214, bound to reviewed payload
-  `e830965cb4ca81678c2164e0c07e02b02d75a212`.
+  `12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc`.
 - PR #205 supersession: closed with an explicit replacement link; old head
   `571d435a172240524ed96394a41682ef003bfcad` remains unauthorized.
 - Exact-head CI, branch-protection, lead, and PR Readiness Reviewer evidence:
@@ -56,8 +59,8 @@ target-readiness flag changes.
 
 ## Acceptance test results
 
-- Platform Jest: 104 suites and 1455 tests passed; 6 suites and 8 tests skipped.
-- Focused Y1 checker: 24 tests passed.
+- Platform Jest: 104 suites and 1457 tests passed; 6 suites and 8 tests skipped.
+- Focused Y1 checker: 26 tests passed.
 - Full Y1 checker, currentness, Scale Proof, review-throughput, report JSON,
   roadmap index, URL index, agent-index freshness, scope language, and platform
   and lesson diff hygiene passed.

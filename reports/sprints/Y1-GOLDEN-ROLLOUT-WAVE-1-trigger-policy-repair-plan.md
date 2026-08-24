@@ -1,4 +1,4 @@
-# Y1-GOLDEN-ROLLOUT-WAVE-1 Trigger Policy Repair Plan
+# Sprint Y1-GOLDEN-ROLLOUT-WAVE-1: Trigger Policy Repair Plan
 
 Generated: 2026-08-24
 
@@ -15,14 +15,14 @@ Generated: 2026-08-24
 - Current gate packet:
   `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`
 
-## Objective
+## Goal
 
 Repair the future-PR CI regression found in human review of platform PR #214.
 Shared infrastructure files that were legitimately changed by the renewal must
 remain allowed without activating the renewal-only fixed-path allowlist for
 later unrelated work.
 
-## Blocking finding
+## Context
 
 The current policy includes these shared paths in both `allowed_exact` and
 `trigger_exact`:
@@ -34,6 +34,49 @@ The current policy includes these shared paths in both `allowed_exact` and
 In `auto` mode, any one of those paths currently activates the Y1 renewal
 allowlist for the whole changed-path range. A future legitimate change combining
 a shared path with a non-Y1 path can therefore fail required platform CI.
+
+## Quality Standard
+
+The governing specification and existing Y1 quality floor remain unchanged.
+No rendered output or student-facing behavior changes. Closure requires
+machine-checkable proof, independent lead review, exact-head CI, and an explicit
+follow-up human decision; no missing core requirement is carried.
+
+## Specification Fulfilment Matrix
+
+| Specification requirement | Implementation evidence required | Review/proof required | Status |
+|---|---|---|---|
+| Shared paths remain allowed but do not trigger renewal scope | Actual wave policy diff | Seven-subset regression review | implemented_pending_exact_head |
+| Y1 mixed scope remains rejected | Real-Git negative regression | Focused suite and lead review | implemented_pending_exact_head |
+| Stable checks and authority holds remain intact | Exact Y1 checker and full platform suite | CI and human review | pending_exact_head |
+
+## Quality Improvement Candidates
+
+- `include_now`: all seven non-empty shared-path subsets plus unrelated work.
+- `defer_named_follow_up`: generic policy-schema normalization outside this Y1
+  renewal if future guards need a shared trigger taxonomy.
+- `reject_scope_creep`: exercise, engine, lesson-output, route, screenshot, and
+  product-authority changes.
+
+## Allowed paths
+
+- `references/data/exercises/y1-golden-rollout-wave-1.json`
+- `build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js`
+- `reports/json/y1-golden-rollout-wave-1-*.json`
+- `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/`
+- `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-*`
+- `references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json`
+- deterministic dashboard and GitHub agent-index outputs
+- PR #214 description and review comments
+
+## Forbidden paths
+
+- `references/machine/` and `references/external/`
+- exercise source data and target-readiness flags
+- engines, runtime behavior, or generated lesson output
+- lesson repository files
+- product routes, screenshots, and rendered exercise content
+- unrelated governance or branch-protection policy
 
 ## Repair
 
@@ -69,12 +112,47 @@ validation:
 6. Mark ready only if the route is `READY_FOR_HUMAN_REVIEW`; do not merge without
    explicit owner authorization for the final exact head.
 
-## Validation
+## Inputs
 
-```text
+- Human HOLD verdict on PR #214 exact head `b5ddbae3...`.
+- Current `main` at `b7ec603880bcd8cc98c93526121ca71d3f31edcd`.
+- Current lesson evidence snapshot
+  `96c0970f45739a8758cf7e932c6bce77806cd68d`.
+- Existing Y1 wave policy, checker, focused suite, packet, and rendered delta
+  proof.
+
+## Outputs
+
+- Corrected trigger policy with shared paths retained only as allowed paths.
+- Actual-policy real-Git regression coverage for future mixed work.
+- Rebound proof, packet, result, lead evidence, dashboard, and indexes.
+- Updated PR description with observed post-repair test totals.
+- Renewed exact-head CI, lead review, branch-protection, and readiness evidence.
+
+## Operationalized sprint procedure
+
+1. Keep PR #214 in draft and record the human HOLD; verify current `main` before
+   implementation and stop for relevant base advancement.
+2. Obtain lead approval of this plan, implement only the trigger-policy and
+   regression repair, then run the focused tests and lead implementation review.
+3. Commit the substantive payload, regenerate commit-bound proof, and run the
+   exact Y1 validator plus the full platform acceptance suite.
+4. Rebind evidence to the substantive payload, regenerate dashboard and indexes
+   in deterministic commits, and update the PR description from observed output.
+5. Run exact-head lead review, remote CI, live branch protection, and the PR
+   Readiness Reviewer. Stop on any stale head, blocker, or route other than
+   `READY_FOR_HUMAN_REVIEW`.
+6. Mark ready only after those validators pass and return for a new human
+   decision. Do not merge without exact-head owner authorization.
+
+## Acceptance tests
+
+```bash
 npm.cmd test -- --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode pull_request --scope-mode auto --base b7ec603880bcd8cc98c93526121ca71d3f31edcd --head <exact-head> --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head 96c0970f45739a8758cf7e932c6bce77806cd68d
 npm.cmd run check:platform
+node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-trigger-policy-repair-plan.md
+node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
 node build-scripts/reports/validate-report-json.js
 node build-scripts/references/check-roadmap-version-index.js
 node build-scripts/sprints/emit-url-index.js --check
@@ -123,3 +201,25 @@ generated lesson output, routes, screenshots, or target-readiness flags.
 | Published test totals are current | Totals captured from post-repair focused and full runs |
 | Authority holds remain intact | Packet/proof/result assertions and scope-language validation |
 | Exact-head publication workflow is complete | Green CI, branch protection `ok:true`, lead verdict, and readiness decision |
+
+## Proof Required to Close
+
+Closure proof must show all seven shared-path subsets plus unrelated work pass
+without triggering renewal scope, Y1-specific mixed scope still fails, the
+focused and full test suites pass with observed totals, and the exact Y1
+validator accepts the rebound evidence tail. Lead review, report validators,
+remote exact-head CI, live branch protection, and readiness review must all be
+current before the repair can close.
+
+## Rollback plan
+
+Before merge, keep or return PR #214 to draft and revert the trigger-policy
+repair commits on its branch. After merge, revert PR #214 as one unit. No lesson
+regeneration, exercise-source restoration, or screenshot recapture is required.
+
+## Human review required
+
+Human review is mandatory because this PR changes required CI behavior and an
+L4 product-authority guard. The PR may be marked ready only after the readiness
+route is `READY_FOR_HUMAN_REVIEW`, and merge requires new explicit owner
+authorization tied to the final exact head.

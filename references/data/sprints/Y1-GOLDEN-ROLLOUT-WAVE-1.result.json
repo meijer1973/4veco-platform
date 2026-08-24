@@ -30,11 +30,13 @@
     "round3": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round3.md",
     "round4": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round4.md",
     "round5": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round5.md",
+    "round6": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md",
     "round1_verdict": "REVISE_IMPLEMENTATION",
     "round2_verdict": "PASS WITH FLAGS",
     "round3_verdict": "PASS WITH FLAGS",
     "round4_verdict": "PASS WITH FLAGS",
     "round5_verdict": "PASS WITH FLAGS",
+    "round6_verdict": "PASS WITH FLAGS",
     "final_verdict": "PASS WITH FLAGS",
     "findings": [
       {
@@ -44,7 +46,7 @@
         "evidence": "Final checker control flow plus synthetic full-mode pass and rendered-drift rejection.",
         "blocks": "Nothing; the original finding is resolved.",
         "does_not_block": "Implementation closure and PR handoff.",
-        "proof_required_to_close": "Closed by the 24-test focused suite and final lead reinspection."
+        "proof_required_to_close": "Closed by the 26-test focused suite and final lead reinspection."
       },
       {
         "id": "Y1-LEAD-R1-AUTHORITY",
