@@ -19,6 +19,7 @@
     "runner_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
     "runner_blob": "ee749d3edefa4b73b274ce38a62b16286f2816e8",
     "selector_path": "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
     "selector_blob": "e411eff9f7b2ac4d4b3ceec5a64775a508a57775",
     "selection": "exact_capture_id_only",
     "capture_count": 1,

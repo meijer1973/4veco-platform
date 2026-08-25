@@ -378,6 +378,7 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     ['changed pixel', (record) => { record.pixel_comparison.changed_pixels = 1; }, /changed-pixel result mismatch/],
     ['wrong page', (record) => { record.lesson.page_path = 'wrong.html'; }, /lesson page mismatch/],
     ['multiple captures', (record) => { record.canonical_process.capture_count = 2; }, /exactly one selected capture/],
+    ['selector commit drift', (record) => { record.canonical_process.selector_platform_sha = record.starting_platform_sha; }, /selector platform SHA mismatch/],
     ['stale screenshot hash', (record) => { record.renewed_capture.sha256 = '0'.repeat(64); }, /replacement screenshot hash mismatch/],
     ['failed visual review', (record) => { record.human_visual_review.status = 'FAIL'; }, /human visual review must pass/],
     ['stale visual review hash', (record) => { record.human_visual_review.review_sha256 = '0'.repeat(64); }, /visual review hash mismatch/],
@@ -546,6 +547,25 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     });
     expect(fail.status).not.toBe(0);
     expect(fail.stderr).toMatch(/synthetic merge SHA/);
+  });
+
+  test('validates selector provenance from committed bytes after worktree line-ending drift', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const selectorPath = 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js';
+    const selectorPlatform = commit(repo.root, { [selectorPath]: 'first\nsecond\n' }, 'selector');
+    const selectorBlob = checker.gitBlob(selectorPlatform, selectorPath, repo.root);
+    write(repo.root, selectorPath, 'first\r\nsecond\r\n');
+
+    expect(git(repo.root, ['hash-object', selectorPath])).not.toBe(selectorBlob);
+    expect(checker.validateSelectorProvenance({
+      selector_path: selectorPath,
+      selector_platform_sha: selectorPlatform,
+      selector_blob: selectorBlob,
+    }, repo.root, selectorPlatform)).toEqual({
+      selector_platform_sha: selectorPlatform,
+      selector_blob: selectorBlob,
+    });
   });
 
   test('passes the actual main-push before/after range', () => {

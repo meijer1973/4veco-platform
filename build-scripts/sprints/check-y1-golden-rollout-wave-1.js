@@ -33,6 +33,7 @@ const CAPTURE_LESSON_SHA = '071a465a03e287bc5768d88aabbec3e63b15ee09';
 const OLD_CI_PLATFORM_SHA = '571d435a172240524ed96394a41682ef003bfcad';
 const OLD_CI_LESSON_SHA = 'ba08b9c2e033a877c0d1b57952055ce697912a22';
 const AUTHORIZED_CONTINUATION_PLATFORM_SHA = 'e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8';
+const SELECTOR_PLATFORM_SHA = '8f612ac6755a299fe7457910001e58fac8cd7b83';
 
 const PARAGRAPHS = ['1.1.1', '1.1.2', '1.1.3'];
 const EXPECTED_SURFACES = [
@@ -322,6 +323,14 @@ function gitIsAncestor(ancestor, descendant, repoRoot = ROOT) {
   return spawnSync('git', ['merge-base', '--is-ancestor', ancestor, descendant], { cwd: repoRoot }).status === 0;
 }
 
+function validateSelectorProvenance(process, repoRoot = ROOT, expectedRef = SELECTOR_PLATFORM_SHA) {
+  check(process.selector_path === 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js', 'rendered renewal selector path mismatch');
+  const selectorPlatform = resolveRef(process.selector_platform_sha, repoRoot);
+  check(selectorPlatform === resolveRef(expectedRef, repoRoot), 'rendered renewal selector platform SHA mismatch');
+  check(process.selector_blob === gitBlob(selectorPlatform, process.selector_path, repoRoot), 'rendered renewal selector blob mismatch');
+  return { selector_platform_sha: selectorPlatform, selector_blob: process.selector_blob };
+}
+
 function selectScopeDelta(eventDelta, policy, repoRoot = ROOT) {
   const continuationRef = policy?.authorized_continuation_base;
   if (!continuationRef) return eventDelta;
@@ -586,8 +595,8 @@ function validateRenderedRenewal(
   check(runnerPlatform === startingPlatform, 'rendered renewal runner platform SHA mismatch');
   check(process.runner_path === 'build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js', 'rendered renewal runner path mismatch');
   check(process.runner_blob === gitBlob(runnerPlatform, process.runner_path, ROOT), 'rendered renewal runner blob mismatch');
-  check(process.selector_path === 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js', 'rendered renewal selector path mismatch');
-  check(process.selector_blob === runGit(['hash-object', filePath(ROOT, process.selector_path)], ROOT), 'rendered renewal selector blob mismatch');
+  const selector = validateSelectorProvenance(process);
+  check(gitIsAncestor(startingPlatform, selector.selector_platform_sha), 'rendered renewal selector platform must descend from authorized starting platform');
   check(process.selection === 'exact_capture_id_only' && process.capture_count === 1, 'rendered renewal must contain exactly one selected capture');
   check(process.viewport?.width === 1280 && process.viewport?.height === 900, 'rendered renewal viewport mismatch');
   check(process.theme === 'light' && process.device_scale_factor === 1, 'rendered renewal theme/device scale mismatch');
@@ -1245,6 +1254,7 @@ module.exports = {
   OLD_CI_PLATFORM_SHA,
   PARAGRAPHS,
   PATHS,
+  SELECTOR_PLATFORM_SHA,
   WAVE_ID,
   attestEqualPaths,
   buildDeltaProof,
@@ -1275,6 +1285,7 @@ module.exports = {
   validatePacketObjects,
   validateRenderedRenewal,
   validateRoadmapTexts,
+  validateSelectorProvenance,
   validateScaleProof,
   validateScreenshotIntegrity,
   validateSurfaceContract,
