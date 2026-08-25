@@ -5,7 +5,7 @@ Bundle: `BOOK1-TEXTBOOK-RENEWAL-20260825`
 
 ## Authority and scope
 
-- Product end state: `docs/product-end-state.md` and the textbook publisher-print lane.
+- Product end state: `../4veco-lessen/specifications/product-end-state.md` and the textbook publisher-print lane.
 - Governing visual standard: `references/authored/textbook-rendered-page-acceptance-standard.md`.
 - Original gate: the 2026-08-25 human request-changes review for platform PR #208 and lesson PR #43.
 - Proof manifest: `reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/manifest.json`.
