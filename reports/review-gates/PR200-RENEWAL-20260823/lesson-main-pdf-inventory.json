@@ -1,0 +1,894 @@
+{
+  "schema_version": 1,
+  "check": "part-a-pdf-readiness",
+  "source_ref": "origin/main",
+  "lesson_root": "C:/wt/PR198-POST206-RENEWAL-20260818/4veco-lessen",
+  "expected_lesson_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+  "observed_head_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+  "observed_origin_main_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+  "lesson_worktree_clean": true,
+  "active_paragraph_rule": "tracked textbook markdown inside Boek N paragraph directories named X.Y.Z Name",
+  "minimum_pdf_bytes": 10000,
+  "summary": {
+    "paragraphs_checked": 29,
+    "passed": 29,
+    "failed": 0,
+    "by_type": {
+      "consolidation": 6,
+      "testprep-summary": 1,
+      "testprep-examskills": 1,
+      "testprep-integration": 1,
+      "testprep-practicetest": 1,
+      "theory": 19
+    }
+  },
+  "paragraphs": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.pdf",
+          "bytes": 387224,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.pdf",
+          "bytes": 129441,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.pdf",
+          "bytes": 25846,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.pdf",
+          "bytes": 250276,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.pdf",
+          "bytes": 84150,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.pdf",
+          "bytes": 23040,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.pdf",
+          "bytes": 296594,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.pdf",
+          "bytes": 168549,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.pdf",
+          "bytes": 23727,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven",
+      "type": "consolidation",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 155338,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 145204,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.pdf",
+          "bytes": 704990,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.pdf",
+          "bytes": 277723,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.pdf",
+          "bytes": 137239,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.pdf",
+          "bytes": 707007,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.pdf",
+          "bytes": 301436,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.pdf",
+          "bytes": 209051,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.pdf",
+          "bytes": 601674,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.pdf",
+          "bytes": 165880,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.pdf",
+          "bytes": 51164,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven",
+      "type": "consolidation",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 134946,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 130051,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.pdf",
+          "bytes": 503056,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.pdf",
+          "bytes": 235705,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.pdf",
+          "bytes": 225138,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.pdf",
+          "bytes": 464722,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.pdf",
+          "bytes": 215460,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.pdf",
+          "bytes": 183735,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.pdf",
+          "bytes": 574411,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.pdf",
+          "bytes": 194514,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.pdf",
+          "bytes": 128271,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven",
+      "type": "consolidation",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 77579,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 76459,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.pdf",
+          "bytes": 181347,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.pdf",
+          "bytes": 83378,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.pdf",
+          "bytes": 62313,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.pdf",
+          "bytes": 287069,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.pdf",
+          "bytes": 111647,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.pdf",
+          "bytes": 30430,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.pdf",
+          "bytes": 277044,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.pdf",
+          "bytes": 103064,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.pdf",
+          "bytes": 35878,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.pdf",
+          "bytes": 218738,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.pdf",
+          "bytes": 82284,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.pdf",
+          "bytes": 30067,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven",
+      "type": "consolidation",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.pdf",
+          "bytes": 87690,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 28857,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting",
+      "type": "testprep-summary",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "samenvatting",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.pdf",
+          "bytes": 311078,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.pdf",
+          "bytes": 29566,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden",
+      "type": "testprep-examskills",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.pdf",
+          "bytes": 145362,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.pdf",
+          "bytes": 86127,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening",
+      "type": "testprep-integration",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.pdf",
+          "bytes": 59511,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.pdf",
+          "bytes": 100799,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets",
+      "type": "testprep-practicetest",
+      "textbook_markdown": [
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.md",
+        "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.md"
+      ],
+      "build_pdf": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "toets",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.pdf",
+          "bytes": 87073,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.pdf",
+          "bytes": 108275,
+          "ok": true
+        },
+        {
+          "role": "toetsmatrijs",
+          "file": "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.pdf",
+          "bytes": 27995,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf",
+          "bytes": 345508,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf",
+          "bytes": 333746,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf",
+          "bytes": 37085,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf",
+          "bytes": 1016460,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf",
+          "bytes": 478751,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf",
+          "bytes": 40899,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+          "bytes": 1385063,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+          "bytes": 45042,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+          "bytes": 41481,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven",
+      "type": "consolidation",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.pdf",
+          "bytes": 31576,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf",
+          "bytes": 38389,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+          "bytes": 1068621,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+          "bytes": 28704,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+          "bytes": 28547,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+          "bytes": 44664,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf",
+          "bytes": 30005,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+          "bytes": 32551,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit",
+      "type": "theory",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "paragraaf",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+          "bytes": 52479,
+          "ok": true
+        },
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+          "bytes": 37134,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+          "bytes": 35735,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit",
+      "type": "consolidation",
+      "textbook_markdown": [
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.md",
+        "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.md"
+      ],
+      "build_pdf": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/build_pdf.py",
+      "required_pdfs": [
+        {
+          "role": "opgaven",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+          "bytes": 37844,
+          "ok": true
+        },
+        {
+          "role": "antwoorden",
+          "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+          "bytes": 37187,
+          "ok": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    }
+  ],
+  "failures": [],
+  "ok": true
+}

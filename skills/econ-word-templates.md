@@ -1,12 +1,16 @@
 ---
 name: econ-word-templates
-description: "Reusable JavaScript templates for creating professional, visually rich Word documents (.docx) for economics education. Contains ready-to-use functions for domain-colored section banners, formula boxes with accent stripes, tip/warning/check boxes, summary schema tables, visual tables of contents, domain legends, definition tables, and full document scaffolds for vaardigheden-documents, voorkennis-documents, nieuwsopdrachten, and begeleide inoefening documents. Use this skill whenever building Word documents for economics lessons in combination with the docx skill and the economic-graph skill. Trigger when the user asks for uitleg vaardigheden, uitleg voorkennis, nieuwsopdracht, begeleide inoefening, or any economics lesson handout as a .docx file. Also trigger when the user mentions dual coding, kleurcodering, samenvattend schema, visuele inhoudsopgave, scaffolding, denkstappen, or hints for economics materials."
-pipeline: "Part B producer (component library)"
+description: "Office/legacy DOCX component library for creating professional, visually rich Word documents (.docx) for economics education. Contains ready-to-use functions for domain-colored section banners, formula boxes with accent stripes, tip/warning/check boxes, summary schema tables, visual tables of contents, domain legends, definition tables, and full document scaffolds for vaardigheden-documents, voorkennis-documents, nieuwsopdrachten, and begeleide inoefening documents. Use this skill only when building Word exports for economics lessons in combination with the docx skill and the economic-graph skill. Normal Part B companion/student-web HTML work uses native HTML through econ-companion-artifacts / BUILD-PARAGRAPH instead. Trigger when the user explicitly asks for a .docx file, Office export, legacy-full output, or editable Word handout."
+pipeline: "Part B producer (Office/legacy DOCX component library)"
 ---
 
 # Economics Word Document Templates v3
 
-Reusable JavaScript code for building professional, visually rich economics lesson documents with docx-js. All templates produce A4 documents with consistent styling, domain-based color coding, headers, footers, and page numbers.
+Reusable JavaScript code for building professional, visually rich economics
+lesson Word exports with docx-js. This is an Office/legacy profile component
+library, not the default student-web HTML path. Normal Part B companion work
+uses native HTML surfaces through `econ-companion-artifacts` and
+`BUILD-PARAGRAPH.md`.
 
 **Key design principles (dual coding):**
 - Every skill section gets a **domain color** (blue/amber/green) so students see structure at a glance

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T08:02:40.017Z",
+  "generatedAt": "2026-08-24T07:15:53.296Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,8 +160,15 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-06 Roadmap ID: references-team-roadmap Roadmap version: v3.56-shared-task-ingest-gate-closed Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econo...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-08-23 Roadmap ID: references-team-roadmap Roadmap version: v3.57-y1-golden-controlled-wave-renewal Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE ec...",
           "sprints": [
+            {
+              "sprint": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+              "name": "Current-Main Golden Controlled-Wave Guard Renewal",
+              "completed": "yes",
+              "currentState": "Implementation complete with subagent `OK_TO_CLOSE`; replacement PR creation, exact-head CI/readiness, and human authorization remain pending. The renewal replaces stale PR #205 with exact base/head committed-scope checks, dedicated negative tests, coherent roadmap state, refreshed maps/indexes/dashboard, and a commit-bound proof that all rendered inputs remain equal while navigation destinations remain present. Historical Scale Gate 1 decision: `PASS_CONTROLLED_ROLLOUT`. No exercise source, engine behavior, generated lesson output, route, target-readiness flag, actual rollout/adoption, completion language, diagnostics, mastery/sequencing, PV, summative use, broad product use, or student/product use is authorized.",
+              "exitGate": ""
+            },
             {
               "sprint": "MTU-ANS-GEN-DESIGN-1",
               "name": "Answer-Form Generator And Proof Design",
@@ -334,7 +341,7 @@
               "sprint": "L1.7B-Q2",
               "name": "Exit Ticket Target-Equivalent Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS as the first target-equivalent exit-ticket implementation candidate. Implemented `1.1.2 Percentages en indexcijfers` because it has no existing advisory short-check source, the target chain is compact, and the shared task shell supports calculation/work, final-answer, notation, and short-response families. Added source-controlled `source-data/book-1/exit-ticket/1.1.2.json`, generated Book 1 output through the platform deploy route only, updated target-equivalent landing/page copy to `Exit ticket`, kept `1.1.1` advisory-only, and added deterministic proof handling for reviewed calculation work plus D31 text criteria. Lead review round 1 returned REVISE for bogus-work and contradictory-D31 matcher weaknesses; corrections added required work text, reject text, adversarial tests, and refreshed evidence; round 2 closed PASS WITH FLAGS. Carried flag: deterministic text-group matching is not symbolic math parsing or semantic language understanding, so `GATE-L1.7B-Q2` must explicitly review criterion sufficiency before local completion language. No protected reference mutation, target-exercise field writes, candidate storage, paragraph-completion language, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product use was authorized.",
+              "currentState": "Closed PASS WITH FLAGS as the first target-equivalent exit-ticket implementation candidate. Implemented `1.1.2 Percentages en indexcijfers` because it has no existing advisory short-check source, the target chain is compact, and the shared task shell supports calculation/work, final-answer, notation, and short-response families. Added source-controlled `source-data/book-1/exit-ticket/1.1.2.json` as the historical pre-split source path; current operational evidence now uses the split-surface manifest governed by `EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1`. Generated Book 1 output through the platform deploy route only, updated target-equivalent landing/page copy to `Exit ticket`, kept `1.1.1` advisory-only, and added deterministic proof handling for reviewed calculation work plus D31 text criteria. Lead review round 1 returned REVISE for bogus-work and contradictory-D31 matcher weaknesses; corrections added required work text, reject text, adversarial tests, and refreshed evidence; round 2 closed PASS WITH FLAGS. Carried flag: deterministic text-group matching is not symbolic math parsing or semantic language understanding, so `GATE-L1.7B-Q2` must explicitly review criterion sufficiency before local completion language. No protected reference mutation, target-exercise field writes, candidate storage, paragraph-completion language, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product use was authorized.",
               "exitGate": ""
             },
             {
@@ -1443,7 +1450,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-21 Branch in use: codex/goal-iqs-foundation-1-20260621 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap section, this l...",
+          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-08-17 Branch in use: codex/goal-iqs-owner-controlled-dispatch-1-20260703 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap...",
           "sprints": []
         },
         {
@@ -1536,6 +1543,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `L1.7B-Q2` implemented the first `1.1.2` target-equivalent exit-ticket candidate while keeping completion language behind human review; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output; SKILLMAP-OP-1 made the shared route visible and scoped in live Book 1 output without granting product-use authority; GRAPH-UX-2 integrated the shared task shell into the live `1.1.3` graph/table route with checkpoint-style graph UI proof but no target-equivalent checkpoint publication; MATH-UX-2 integrated the shared task shell into the live `1.1.2` calculation/index route with no target-equivalent checkpoint publication; REASON-UX-2 integrated the shared task shell into the live reasoning route with structured self-check and richer feedback but no target-equivalent checkpoint publication; GAME-ARCH-1 kept the short check as advisory; GAME-ARCH-2 produced the integrated architecture plan before engine gate reliance; and GATE-ENGINE-1 closed PASS WITH FLAGS while authorizing only named downstream planning/preparation sprints. Broad lesson-companion scaling remains blocked until lesson `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+          "name": "Current-Main Golden Controlled-Wave Guard Renewal",
+          "completed": "yes",
+          "currentState": "Implementation complete with subagent `OK_TO_CLOSE`; replacement PR creation, exact-head CI/readiness, and human authorization remain pending. The renewal replaces stale PR #205 with exact base/head committed-scope checks, dedicated negative tests, coherent roadmap state, refreshed maps/indexes/dashboard, and a commit-bound proof that all rendered inputs remain equal while navigation destinations remain present. Historical Scale Gate 1 decision: `PASS_CONTROLLED_ROLLOUT`. No exercise source, engine behavior, generated lesson output, route, target-readiness flag, actual rollout/adoption, completion language, diagnostics, mastery/sequencing, PV, summative use, broad product use, or student/product use is authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1735,7 +1750,7 @@
           "sprint": "L1.7B-Q2",
           "name": "Exit Ticket Target-Equivalent Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS as the first target-equivalent exit-ticket implementation candidate. Implemented `1.1.2 Percentages en indexcijfers` because it has no existing advisory short-check source, the target chain is compact, and the shared task shell supports calculation/work, final-answer, notation, and short-response families. Added source-controlled `source-data/book-1/exit-ticket/1.1.2.json`, generated Book 1 output through the platform deploy route only, updated target-equivalent landing/page copy to `Exit ticket`, kept `1.1.1` advisory-only, and added deterministic proof handling for reviewed calculation work plus D31 text criteria. Lead review round 1 returned REVISE for bogus-work and contradictory-D31 matcher weaknesses; corrections added required work text, reject text, adversarial tests, and refreshed evidence; round 2 closed PASS WITH FLAGS. Carried flag: deterministic text-group matching is not symbolic math parsing or semantic language understanding, so `GATE-L1.7B-Q2` must explicitly review criterion sufficiency before local completion language. No protected reference mutation, target-exercise field writes, candidate storage, paragraph-completion language, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product use was authorized.",
+          "currentState": "Closed PASS WITH FLAGS as the first target-equivalent exit-ticket implementation candidate. Implemented `1.1.2 Percentages en indexcijfers` because it has no existing advisory short-check source, the target chain is compact, and the shared task shell supports calculation/work, final-answer, notation, and short-response families. Added source-controlled `source-data/book-1/exit-ticket/1.1.2.json` as the historical pre-split source path; current operational evidence now uses the split-surface manifest governed by `EXERCISE-EVIDENCE-CURRENTNESS-HARDENING-1`. Generated Book 1 output through the platform deploy route only, updated target-equivalent landing/page copy to `Exit ticket`, kept `1.1.1` advisory-only, and added deterministic proof handling for reviewed calculation work plus D31 text criteria. Lead review round 1 returned REVISE for bogus-work and contradictory-D31 matcher weaknesses; corrections added required work text, reject text, adversarial tests, and refreshed evidence; round 2 closed PASS WITH FLAGS. Carried flag: deterministic text-group matching is not symbolic math parsing or semantic language understanding, so `GATE-L1.7B-Q2` must explicitly review criterion sufficiency before local completion language. No protected reference mutation, target-exercise field writes, candidate storage, paragraph-completion language, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product use was authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2900,7 +2915,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 170,
+      "completedCount": 171,
       "openCount": 10
     },
     {

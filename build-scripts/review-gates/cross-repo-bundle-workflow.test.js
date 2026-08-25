@@ -4,6 +4,9 @@ describe('cross-repo bundle workflow safety', () => {
   const platformCi = fs.readFileSync('.github/workflows/platform-ci.yml', 'utf8');
   const bundleWorkflow = fs.readFileSync('.github/workflows/cross-repo-bundle-compatibility.yml', 'utf8');
   const authorizedBundleWorkflow = fs.readFileSync('.github/workflows/authorized-bundle-integration.yml', 'utf8');
+  const authorizedBundleLane = fs.readFileSync('build-scripts/review-gates/integrate-authorized-bundle.js', 'utf8');
+  const agents = fs.readFileSync('AGENTS.md', 'utf8');
+  const integrationPolicy = fs.readFileSync('docs/review/pr-integration-lane-policy.md', 'utf8');
 
   test('required validate-platform no longer substitutes matching lesson branches', () => {
     expect(platformCi).not.toContain('Use matching lessen branch when available');
@@ -19,6 +22,11 @@ describe('cross-repo bundle workflow safety', () => {
     expect(bundleWorkflow).toContain('lesson_candidate_sha');
     expect(bundleWorkflow).toContain('cross-repo-bundle-compatibility.js summarize');
     expect(bundleWorkflow).toContain('npm run check:active-governance-wording');
+    expect(bundleWorkflow).toContain('node ..\\trusted-platform\\build-scripts\\reports\\github-agent-index.js');
+    expect(bundleWorkflow).toContain('node ..\\trusted-platform\\build-scripts\\reports\\check-agent-index-freshness.js');
+    expect(bundleWorkflow).toContain('FOURVECO_PLATFORM_ROOT');
+    expect(bundleWorkflow).toContain('FOURVECO_LESSEN_ROOT');
+    expect(bundleWorkflow).not.toContain("'npm run agent:index'");
   });
 
   test('bundle workflow records machine-readable JSON and uses deterministic summary gate', () => {
@@ -49,6 +57,8 @@ describe('cross-repo bundle workflow safety', () => {
     expect(authorizedBundleWorkflow).toContain('integrate:authorized-bundle');
     expect(authorizedBundleWorkflow).toContain('compatibility_workflow_run_id');
     expect(authorizedBundleWorkflow).toContain('bundle-summary.json');
+    expect(authorizedBundleWorkflow).toContain('--allow-partial-resume');
+    expect(authorizedBundleWorkflow).toContain('timeout-minutes: 120');
   });
 
   test('authorized bundle workflow uses cross-repo secret only for mutations', () => {
@@ -57,5 +67,15 @@ describe('cross-repo bundle workflow safety', () => {
     expect(authorizedBundleWorkflow).toContain('Preflight cross-repo bundle token');
     expect(authorizedBundleWorkflow).toContain('--require-cross-repo-permissions');
     expect(authorizedBundleWorkflow).toContain('--compatibility-run-id');
+  });
+
+  test('delta-required partial resume is explicit local evidence and hosted dispatch cannot imply it', () => {
+    expect(authorizedBundleLane).toContain("optionValue(argv, '--delta-review')");
+    expect(authorizedBundleWorkflow).not.toContain('--delta-review');
+    expect(agents).toContain('delta-required partial resume must use the owner-authenticated');
+    expect(integrationPolicy).toContain('Delta-required resumes therefore use the owner-authenticated local');
+    expect(integrationPolicy).toContain('workflow dispatch is not an evidence waiver');
+    expect(integrationPolicy).toContain('must return an explicit');
+    expect(agents).toContain('A delta-required dry-run also fails');
   });
 });

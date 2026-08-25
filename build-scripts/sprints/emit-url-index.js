@@ -32,7 +32,7 @@ function listGates() {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && /^GATE-/.test(entry.name))
+    .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .sort();
 }
@@ -73,7 +73,11 @@ function buildBody(branch) {
   lines.push(`- ${platform('BUILD-PARAGRAPH.md')}`);
   lines.push(`- ${platform('BUILD-CHAPTER.md')}`);
   lines.push(`- ${platform('docs/workflows/paragraph-lane-vocabulary.md')}`);
+  lines.push(`- ${platform('docs/workflows/legacy-full-companion-profile.md')}`);
   lines.push(`- ${platform('docs/workflows/paragraph-quality-ref-schema-v2.md')}`);
+  lines.push(`- ${platform('build-scripts/workflows/check-part-a-pdf-readiness.js')}`);
+  lines.push(`- ${platform('build-scripts/workflows/check-paragraph-workflow-wording.js')}`);
+  lines.push(`- ${platform('scripts/lib/paragraph-types.js')}`);
   lines.push(`- ${lessen('AGENTS.md')}`);
   lines.push('');
 
@@ -89,6 +93,7 @@ function buildBody(branch) {
   lines.push(`- ${platform('build-scripts/review-gates/review-pr-readiness.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/apply-pr-readiness-decision.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/apply-bundle-readiness-decision.js')}`);
+  lines.push(`- ${platform('build-scripts/review-gates/refresh-bundle-agent-indexes.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/check-human-payload-authorization.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/check-integration-lineage.js')}`);
   lines.push(`- ${platform('build-scripts/review-gates/check-integration-lane-capability.js')}`);
@@ -100,6 +105,7 @@ function buildBody(branch) {
   lines.push('');
   lines.push(`- ${platform('references/reference-team-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/quality-standards/inspection-standards-roadmap.md')}`);
+  lines.push(`- ${platform('docs/roadmaps/quality-standards/international-quality-standards-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/roadmap-version-index.json')}`);
   lines.push(`- ${platform('knowledge/old/platform-team-roadmap.md')}`);
   lines.push(`- ${platform('knowledge/old/three-month-roadmap.md')}`);
@@ -109,6 +115,7 @@ function buildBody(branch) {
   lines.push('## Inspection Standards');
   lines.push('');
   lines.push(`- ${platform('docs/roadmaps/quality-standards/inspection-standards-roadmap.md')}`);
+  lines.push(`- ${platform('docs/roadmaps/quality-standards/international-quality-standards-roadmap.md')}`);
   lines.push(`- ${platform('docs/roadmaps/quality-standards/sprint-ledger.md')}`);
   lines.push(`- ${platform('docs/roadmaps/quality-standards/quality-standards-end-state.md')}`);
   lines.push(`- ${platform('references/data/inspection-standards/source-register.json')}`);
@@ -205,6 +212,12 @@ function buildBody(branch) {
     const rel = path.posix.join('reports', 'review-gates', gate, 'bundle-urls.md');
     lines.push(`- ${platform(rel)}`);
   }
+  lines.push('');
+
+  lines.push('## Golden Controlled-Wave Evidence');
+  lines.push('');
+  lines.push(`- ${platform('reports/json/y1-golden-rollout-wave-1-proof.json')}`);
+  lines.push(`- ${platform('reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json')}`);
   lines.push('');
 
   return lines.join('\n');

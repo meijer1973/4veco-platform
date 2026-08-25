@@ -1,0 +1,2411 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "generated": "2026-08-24T07:06:26.609Z",
+  "purpose": "commit-bound rendered proof reuse attestation",
+  "commit_chain": {
+    "platform": {
+      "capture_payload": "5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7",
+      "old_pr_ci": "571d435a172240524ed96394a41682ef003bfcad",
+      "renewal_payload": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc"
+    },
+    "lesson": {
+      "capture_payload": "071a465a03e287bc5768d88aabbec3e63b15ee09",
+      "old_pr_ci": "ba08b9c2e033a877c0d1b57952055ce697912a22",
+      "renewal_snapshot": "96c0970f45739a8758cf7e932c6bce77806cd68d"
+    }
+  },
+  "dependency_discovery": {
+    "capture_pages_from_scale_proof": true,
+    "local_browser_assets_from_capture_inspection": true,
+    "html_src_require_blob_equality": true,
+    "html_link_href_require_blob_equality": true,
+    "anchor_href_require_existence_only": true,
+    "navigation_destination_content_outside_screenshot_claim": true,
+    "landing_route_targets_exist_at_all_commits": true,
+    "platform_source_generator_runtime_and_proof_inputs_explicit": true,
+    "proof_defined_list_accepted_without_cross_check": false
+  },
+  "platform_equal_paths": [
+    {
+      "path": "build-scripts/platform/build-exit-ticket-shells.js",
+      "blobs": {
+        "capture_payload": "67d5f1a80bece178435aabf1156884b7c78cb7b8",
+        "old_pr_ci": "67d5f1a80bece178435aabf1156884b7c78cb7b8",
+        "renewal_payload": "67d5f1a80bece178435aabf1156884b7c78cb7b8"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "build-scripts/platform/build-landing-page.js",
+      "blobs": {
+        "capture_payload": "a96c55dafa9717be0690e2f5f692d863830402f1",
+        "old_pr_ci": "a96c55dafa9717be0690e2f5f692d863830402f1",
+        "renewal_payload": "a96c55dafa9717be0690e2f5f692d863830402f1"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+      "blobs": {
+        "capture_payload": "ee749d3edefa4b73b274ce38a62b16286f2816e8",
+        "old_pr_ci": "ee749d3edefa4b73b274ce38a62b16286f2816e8",
+        "renewal_payload": "ee749d3edefa4b73b274ce38a62b16286f2816e8"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js",
+      "blobs": {
+        "capture_payload": "e7b1f41a7520b016517f0ced7b187d1b77803675",
+        "old_pr_ci": "e7b1f41a7520b016517f0ced7b187d1b77803675",
+        "renewal_payload": "e7b1f41a7520b016517f0ced7b187d1b77803675"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "engines/golden-ticket-graph.js",
+      "blobs": {
+        "capture_payload": "c2dae7f13197206b5db7c17addb9efa2491c7814",
+        "old_pr_ci": "c2dae7f13197206b5db7c17addb9efa2491c7814",
+        "renewal_payload": "c2dae7f13197206b5db7c17addb9efa2491c7814"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "engines/golden-ticket-layout.css",
+      "blobs": {
+        "capture_payload": "294f3ec6819c45b7571ea0bbd22121f650387559",
+        "old_pr_ci": "294f3ec6819c45b7571ea0bbd22121f650387559",
+        "renewal_payload": "294f3ec6819c45b7571ea0bbd22121f650387559"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "engines/golden-ticket-layout.js",
+      "blobs": {
+        "capture_payload": "2a777247c6a55ab1ec22fdb2ff8a2d4b85860bca",
+        "old_pr_ci": "2a777247c6a55ab1ec22fdb2ff8a2d4b85860bca",
+        "renewal_payload": "2a777247c6a55ab1ec22fdb2ff8a2d4b85860bca"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "references/ui/golden-exercise-checker-fixtures.json",
+      "blobs": {
+        "capture_payload": "626a32eb5af07982c601adf188adfab84f2452d8",
+        "old_pr_ci": "626a32eb5af07982c601adf188adfab84f2452d8",
+        "renewal_payload": "626a32eb5af07982c601adf188adfab84f2452d8"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
+      "blobs": {
+        "capture_payload": "1be086f61bf16f2bbfb45192b698d7cebbbe8198",
+        "old_pr_ci": "1be086f61bf16f2bbfb45192b698d7cebbbe8198",
+        "renewal_payload": "1be086f61bf16f2bbfb45192b698d7cebbbe8198"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md",
+      "blobs": {
+        "capture_payload": "0c37b82343a6aa123762d27fd638da9363403adc",
+        "old_pr_ci": "0c37b82343a6aa123762d27fd638da9363403adc",
+        "renewal_payload": "0c37b82343a6aa123762d27fd638da9363403adc"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshot-manifest.md",
+      "blobs": {
+        "capture_payload": "ac9df3bbd728f8e6d0985a3d0e4b04ba455fb328",
+        "old_pr_ci": "ac9df3bbd728f8e6d0985a3d0e4b04ba455fb328",
+        "renewal_payload": "ac9df3bbd728f8e6d0985a3d0e4b04ba455fb328"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-desktop-light-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "8f77cee5065e459d37803d0fc49783de3d111b91",
+        "old_pr_ci": "8f77cee5065e459d37803d0fc49783de3d111b91",
+        "renewal_payload": "8f77cee5065e459d37803d0fc49783de3d111b91"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-desktop-light-initial.png",
+      "blobs": {
+        "capture_payload": "098e90fcefb482846210d945ca25c04a2cfd09ab",
+        "old_pr_ci": "098e90fcefb482846210d945ca25c04a2cfd09ab",
+        "renewal_payload": "098e90fcefb482846210d945ca25c04a2cfd09ab"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-exit-ticket-mobile-dark-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "a396e52206ba4ecb8a09f5c63dddc4e7d3e202d2",
+        "old_pr_ci": "a396e52206ba4ecb8a09f5c63dddc4e7d3e202d2",
+        "renewal_payload": "a396e52206ba4ecb8a09f5c63dddc4e7d3e202d2"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-desktop-light-overview.png",
+      "blobs": {
+        "capture_payload": "c59a7ffe7ffce4f58246881c0fd6df4dfc6dcb2d",
+        "old_pr_ci": "c59a7ffe7ffce4f58246881c0fd6df4dfc6dcb2d",
+        "renewal_payload": "c59a7ffe7ffce4f58246881c0fd6df4dfc6dcb2d"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-landing-mobile-dark-exit-row.png",
+      "blobs": {
+        "capture_payload": "e3fe168f5585e0659cb03e4d8ef14981e2a9fc7e",
+        "old_pr_ci": "e3fe168f5585e0659cb03e4d8ef14981e2a9fc7e",
+        "renewal_payload": "e3fe168f5585e0659cb03e4d8ef14981e2a9fc7e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-learn-desktop-light-uitleg-vaardigheden.png",
+      "blobs": {
+        "capture_payload": "75d50b01b9ba3d837353b4f4840f4d08f5589698",
+        "old_pr_ci": "75d50b01b9ba3d837353b4f4840f4d08f5589698",
+        "renewal_payload": "75d50b01b9ba3d837353b4f4840f4d08f5589698"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-normal-practice-desktop-light-opgaven.png",
+      "blobs": {
+        "capture_payload": "e02a1119e44734c28adea9f78018b6d3ed1f143c",
+        "old_pr_ci": "e02a1119e44734c28adea9f78018b6d3ed1f143c",
+        "renewal_payload": "e02a1119e44734c28adea9f78018b6d3ed1f143c"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-practice-desktop-light-redeneer-spel.png",
+      "blobs": {
+        "capture_payload": "f26a90551e30d9970667841ea3f0012b15888d98",
+        "old_pr_ci": "f26a90551e30d9970667841ea3f0012b15888d98",
+        "renewal_payload": "f26a90551e30d9970667841ea3f0012b15888d98"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "fa0b978379b7370b2ba889ca403a51642c0e64f4",
+        "old_pr_ci": "fa0b978379b7370b2ba889ca403a51642c0e64f4",
+        "renewal_payload": "fa0b978379b7370b2ba889ca403a51642c0e64f4"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-short-check-desktop-light.png",
+      "blobs": {
+        "capture_payload": "d0d8af98de81a5cb1f39abcbfeb7b364d9be26f2",
+        "old_pr_ci": "d0d8af98de81a5cb1f39abcbfeb7b364d9be26f2",
+        "renewal_payload": "d0d8af98de81a5cb1f39abcbfeb7b364d9be26f2"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-skill-map-desktop-light-wiskundevaardigheden.png",
+      "blobs": {
+        "capture_payload": "2d2ac66805cf8f82945b85c0f42b3926db182e8e",
+        "old_pr_ci": "2d2ac66805cf8f82945b85c0f42b3926db182e8e",
+        "renewal_payload": "2d2ac66805cf8f82945b85c0f42b3926db182e8e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/111-start-desktop-light-instapquiz.png",
+      "blobs": {
+        "capture_payload": "0d2b78151c047a091ab7d9a93cf8ab0fddf51785",
+        "old_pr_ci": "0d2b78151c047a091ab7d9a93cf8ab0fddf51785",
+        "renewal_payload": "0d2b78151c047a091ab7d9a93cf8ab0fddf51785"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-correct-response-feedback.png",
+      "blobs": {
+        "capture_payload": "1501dc07a4bd8cb3eb89b9e391011f44582ce4f2",
+        "old_pr_ci": "1501dc07a4bd8cb3eb89b9e391011f44582ce4f2",
+        "renewal_payload": "1501dc07a4bd8cb3eb89b9e391011f44582ce4f2"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-notation-feedback.png",
+      "blobs": {
+        "capture_payload": "5f1050009da95bb4d3fb4d3f766b3bb6e0a279c2",
+        "old_pr_ci": "5f1050009da95bb4d3fb4d3f766b3bb6e0a279c2",
+        "renewal_payload": "5f1050009da95bb4d3fb4d3f766b3bb6e0a279c2"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-parts-feedback-list.png",
+      "blobs": {
+        "capture_payload": "9c1799c2606cfd642995e3bba990a329f0981b62",
+        "old_pr_ci": "9c1799c2606cfd642995e3bba990a329f0981b62",
+        "renewal_payload": "9c1799c2606cfd642995e3bba990a329f0981b62"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-missing-substitution-feedback.png",
+      "blobs": {
+        "capture_payload": "822a39a153e2ed47428f392bcf4f2decb3e4ff37",
+        "old_pr_ci": "822a39a153e2ed47428f392bcf4f2decb3e4ff37",
+        "renewal_payload": "822a39a153e2ed47428f392bcf4f2decb3e4ff37"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-partial-wrong-formula-feedback.png",
+      "blobs": {
+        "capture_payload": "cd6a745279e261a887b6804131eb20b9c2ba8e99",
+        "old_pr_ci": "cd6a745279e261a887b6804131eb20b9c2ba8e99",
+        "renewal_payload": "cd6a745279e261a887b6804131eb20b9c2ba8e99"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-v3-exemplar-comparison.png",
+      "blobs": {
+        "capture_payload": "b60e576e7e2907c70703ea3e1d00f17878c7cd4b",
+        "old_pr_ci": "b60e576e7e2907c70703ea3e1d00f17878c7cd4b",
+        "renewal_payload": "b60e576e7e2907c70703ea3e1d00f17878c7cd4b"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-a96-wrong-denominator-feedback.png",
+      "blobs": {
+        "capture_payload": "822a39a153e2ed47428f392bcf4f2decb3e4ff37",
+        "old_pr_ci": "822a39a153e2ed47428f392bcf4f2decb3e4ff37",
+        "renewal_payload": "822a39a153e2ed47428f392bcf4f2decb3e4ff37"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-dark-initial.png",
+      "blobs": {
+        "capture_payload": "9fd69ab3611a484203e920baf9ef81ccf27cf2f6",
+        "old_pr_ci": "9fd69ab3611a484203e920baf9ef81ccf27cf2f6",
+        "renewal_payload": "9fd69ab3611a484203e920baf9ef81ccf27cf2f6"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "93432c1d05d9e508e1342c50b051fda8cf49997f",
+        "old_pr_ci": "93432c1d05d9e508e1342c50b051fda8cf49997f",
+        "renewal_payload": "93432c1d05d9e508e1342c50b051fda8cf49997f"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-desktop-light-initial.png",
+      "blobs": {
+        "capture_payload": "1c44395e2e9f845d41af0d47882e37c18f3d97b7",
+        "old_pr_ci": "1c44395e2e9f845d41af0d47882e37c18f3d97b7",
+        "renewal_payload": "1c44395e2e9f845d41af0d47882e37c18f3d97b7"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "2eb12a4d02e01ba02c83b1ede2357d5cb929d74f",
+        "old_pr_ci": "2eb12a4d02e01ba02c83b1ede2357d5cb929d74f",
+        "renewal_payload": "2eb12a4d02e01ba02c83b1ede2357d5cb929d74f"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-exit-ticket-mobile-light-initial.png",
+      "blobs": {
+        "capture_payload": "3a6c7476270f7767fe79514c82ee4aebe4ab8976",
+        "old_pr_ci": "3a6c7476270f7767fe79514c82ee4aebe4ab8976",
+        "renewal_payload": "3a6c7476270f7767fe79514c82ee4aebe4ab8976"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-desktop-light-overview.png",
+      "blobs": {
+        "capture_payload": "5faa19660e06663116d2a866d7bf2a8dc0be4c69",
+        "old_pr_ci": "5faa19660e06663116d2a866d7bf2a8dc0be4c69",
+        "renewal_payload": "5faa19660e06663116d2a866d7bf2a8dc0be4c69"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-landing-mobile-dark-exit-row.png",
+      "blobs": {
+        "capture_payload": "34d5a84626be25e93695a4fe6de0f76b45e78da2",
+        "old_pr_ci": "34d5a84626be25e93695a4fe6de0f76b45e78da2",
+        "renewal_payload": "34d5a84626be25e93695a4fe6de0f76b45e78da2"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-learn-desktop-light-uitleg-vaardigheden.png",
+      "blobs": {
+        "capture_payload": "be80563454a9bc79f43f750a758703c288d04f30",
+        "old_pr_ci": "be80563454a9bc79f43f750a758703c288d04f30",
+        "renewal_payload": "be80563454a9bc79f43f750a758703c288d04f30"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-normal-practice-desktop-light-opgaven.png",
+      "blobs": {
+        "capture_payload": "0219c0f353cf4b179ab0e0dae15c413804e549c0",
+        "old_pr_ci": "0219c0f353cf4b179ab0e0dae15c413804e549c0",
+        "renewal_payload": "0219c0f353cf4b179ab0e0dae15c413804e549c0"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-practice-desktop-light-wiskundevaardigheden.png",
+      "blobs": {
+        "capture_payload": "1cbf9b5296e40353738549a5ff5a0bd26dadad48",
+        "old_pr_ci": "1cbf9b5296e40353738549a5ff5a0bd26dadad48",
+        "renewal_payload": "1cbf9b5296e40353738549a5ff5a0bd26dadad48"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "6d0f17ad02b2bf487807c67990d614206fa39123",
+        "old_pr_ci": "6d0f17ad02b2bf487807c67990d614206fa39123",
+        "renewal_payload": "6d0f17ad02b2bf487807c67990d614206fa39123"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-short-check-desktop-light.png",
+      "blobs": {
+        "capture_payload": "d96fc9b0ae356f28b324bf7a5ef554917acd2c53",
+        "old_pr_ci": "d96fc9b0ae356f28b324bf7a5ef554917acd2c53",
+        "renewal_payload": "d96fc9b0ae356f28b324bf7a5ef554917acd2c53"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-skill-map-desktop-light-wiskundevaardigheden.png",
+      "blobs": {
+        "capture_payload": "1cbf9b5296e40353738549a5ff5a0bd26dadad48",
+        "old_pr_ci": "1cbf9b5296e40353738549a5ff5a0bd26dadad48",
+        "renewal_payload": "1cbf9b5296e40353738549a5ff5a0bd26dadad48"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-start-desktop-light-instapquiz.png",
+      "blobs": {
+        "capture_payload": "dbed43ea10489b7b63107116f588e7bd04513726",
+        "old_pr_ci": "dbed43ea10489b7b63107116f588e7bd04513726",
+        "renewal_payload": "dbed43ea10489b7b63107116f588e7bd04513726"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-desktop-light-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "cb78134bc05fbfa0cb2c7fceb15463f11de0292e",
+        "old_pr_ci": "cb78134bc05fbfa0cb2c7fceb15463f11de0292e",
+        "renewal_payload": "cb78134bc05fbfa0cb2c7fceb15463f11de0292e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-desktop-light-initial.png",
+      "blobs": {
+        "capture_payload": "5a70d7567d251fb6e7a6feae3c5c7765d2092d49",
+        "old_pr_ci": "5a70d7567d251fb6e7a6feae3c5c7765d2092d49",
+        "renewal_payload": "5a70d7567d251fb6e7a6feae3c5c7765d2092d49"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-exit-ticket-mobile-dark-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "14e1b8e666eb7b04b5a56906b4e3ef69cd824818",
+        "old_pr_ci": "14e1b8e666eb7b04b5a56906b4e3ef69cd824818",
+        "renewal_payload": "14e1b8e666eb7b04b5a56906b4e3ef69cd824818"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-desktop-light-overview.png",
+      "blobs": {
+        "capture_payload": "ca27d667f3d4cf065d3f2062813d179471117d1c",
+        "old_pr_ci": "ca27d667f3d4cf065d3f2062813d179471117d1c",
+        "renewal_payload": "ca27d667f3d4cf065d3f2062813d179471117d1c"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-landing-mobile-dark-exit-row.png",
+      "blobs": {
+        "capture_payload": "d142395300e0e74a300fc771c7918ac628be591d",
+        "old_pr_ci": "d142395300e0e74a300fc771c7918ac628be591d",
+        "renewal_payload": "d142395300e0e74a300fc771c7918ac628be591d"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-learn-desktop-light-uitleg-vaardigheden.png",
+      "blobs": {
+        "capture_payload": "63ba8676cc1c05d1fd5fb8bbca9df9668039112b",
+        "old_pr_ci": "63ba8676cc1c05d1fd5fb8bbca9df9668039112b",
+        "renewal_payload": "63ba8676cc1c05d1fd5fb8bbca9df9668039112b"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-normal-practice-desktop-light-opgaven.png",
+      "blobs": {
+        "capture_payload": "d80e2d4ed993506e9a819396974ce1f4e9500802",
+        "old_pr_ci": "d80e2d4ed993506e9a819396974ce1f4e9500802",
+        "renewal_payload": "d80e2d4ed993506e9a819396974ce1f4e9500802"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-practice-desktop-light-grafiekenspel.png",
+      "blobs": {
+        "capture_payload": "cf9a0947496f71f0e1b89db097c1346b161ea24d",
+        "old_pr_ci": "cf9a0947496f71f0e1b89db097c1346b161ea24d",
+        "renewal_payload": "cf9a0947496f71f0e1b89db097c1346b161ea24d"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light-completed-feedback.png",
+      "blobs": {
+        "capture_payload": "7375387147156f4551b06de1a03fe1b385dc93d4",
+        "old_pr_ci": "7375387147156f4551b06de1a03fe1b385dc93d4",
+        "renewal_payload": "7375387147156f4551b06de1a03fe1b385dc93d4"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-short-check-desktop-light.png",
+      "blobs": {
+        "capture_payload": "581c1c23e1418781c72c83e4e91c1d31dd21fe3e",
+        "old_pr_ci": "581c1c23e1418781c72c83e4e91c1d31dd21fe3e",
+        "renewal_payload": "581c1c23e1418781c72c83e4e91c1d31dd21fe3e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-skill-map-desktop-light-wiskundevaardigheden.png",
+      "blobs": {
+        "capture_payload": "532b83548459e9d9a9faa7570f9e6c24f618970a",
+        "old_pr_ci": "532b83548459e9d9a9faa7570f9e6c24f618970a",
+        "renewal_payload": "532b83548459e9d9a9faa7570f9e6c24f618970a"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/113-start-desktop-light-instapquiz.png",
+      "blobs": {
+        "capture_payload": "99a0dc634ff1baf475db7cf9e0ef1ccc7f4185f0",
+        "old_pr_ci": "99a0dc634ff1baf475db7cf9e0ef1ccc7f4185f0",
+        "renewal_payload": "99a0dc634ff1baf475db7cf9e0ef1ccc7f4185f0"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/114-landing-mobile-dark-exit-row-same-copy-hygiene.png",
+      "blobs": {
+        "capture_payload": "e16f96957de68b3a4141f109638b9e458a79aa22",
+        "old_pr_ci": "e16f96957de68b3a4141f109638b9e458a79aa22",
+        "renewal_payload": "e16f96957de68b3a4141f109638b9e458a79aa22"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/manifest.json",
+      "blobs": {
+        "capture_payload": "10bf5299d8cdbccf4380c83a7274222824faee41",
+        "old_pr_ci": "10bf5299d8cdbccf4380c83a7274222824faee41",
+        "renewal_payload": "10bf5299d8cdbccf4380c83a7274222824faee41"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.1-exit-ticket.json",
+      "blobs": {
+        "capture_payload": "af6209f98395eb6220c415ea5a9a32eb4bc63f9e",
+        "old_pr_ci": "af6209f98395eb6220c415ea5a9a32eb4bc63f9e",
+        "renewal_payload": "af6209f98395eb6220c415ea5a9a32eb4bc63f9e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.1-korte-check.json",
+      "blobs": {
+        "capture_payload": "dd9ba73e21a137ace9e4170d417f0190474998e7",
+        "old_pr_ci": "dd9ba73e21a137ace9e4170d417f0190474998e7",
+        "renewal_payload": "dd9ba73e21a137ace9e4170d417f0190474998e7"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+      "blobs": {
+        "capture_payload": "4030c551d959ef7d7a705279e97b619559adf7c7",
+        "old_pr_ci": "4030c551d959ef7d7a705279e97b619559adf7c7",
+        "renewal_payload": "4030c551d959ef7d7a705279e97b619559adf7c7"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.2-korte-check.json",
+      "blobs": {
+        "capture_payload": "a244ce68c97ba09003813aac15662e76f8639794",
+        "old_pr_ci": "a244ce68c97ba09003813aac15662e76f8639794",
+        "renewal_payload": "a244ce68c97ba09003813aac15662e76f8639794"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json",
+      "blobs": {
+        "capture_payload": "24ef5a6336ec37935b47ce3ff26275751c560cca",
+        "old_pr_ci": "24ef5a6336ec37935b47ce3ff26275751c560cca",
+        "renewal_payload": "24ef5a6336ec37935b47ce3ff26275751c560cca"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    },
+    {
+      "path": "source-data/book-1/exit-ticket/1.1.3-korte-check.json",
+      "blobs": {
+        "capture_payload": "91d44dcd61130daaab9ffd90ccf77365605f0154",
+        "old_pr_ci": "91d44dcd61130daaab9ffd90ccf77365605f0154",
+        "renewal_payload": "91d44dcd61130daaab9ffd90ccf77365605f0154"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "platform rendered input"
+    }
+  ],
+  "lesson_equal_paths": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_1_web_dark.svg",
+      "blobs": {
+        "capture_payload": "e1633326d86b2e538fd0ae0eeb2d28a5bb8fc96e",
+        "old_pr_ci": "e1633326d86b2e538fd0ae0eeb2d28a5bb8fc96e",
+        "renewal_snapshot": "e1633326d86b2e538fd0ae0eeb2d28a5bb8fc96e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_1_web_light.svg",
+      "blobs": {
+        "capture_payload": "9b9c569cfc9b01c6a66c01a1458fe434503468f3",
+        "old_pr_ci": "9b9c569cfc9b01c6a66c01a1458fe434503468f3",
+        "renewal_snapshot": "9b9c569cfc9b01c6a66c01a1458fe434503468f3"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_1.svg",
+      "blobs": {
+        "capture_payload": "9cd1d300e00b5983c1851e67f796e43aae453662",
+        "old_pr_ci": "9cd1d300e00b5983c1851e67f796e43aae453662",
+        "renewal_snapshot": "9cd1d300e00b5983c1851e67f796e43aae453662"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_2_web_dark.svg",
+      "blobs": {
+        "capture_payload": "d000481c8f9f861aff6faf5f6be9c91f7f777b60",
+        "old_pr_ci": "d000481c8f9f861aff6faf5f6be9c91f7f777b60",
+        "renewal_snapshot": "d000481c8f9f861aff6faf5f6be9c91f7f777b60"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_2_web_light.svg",
+      "blobs": {
+        "capture_payload": "eb1da5aa7abea87748ba1905605b47371fd8553a",
+        "old_pr_ci": "eb1da5aa7abea87748ba1905605b47371fd8553a",
+        "renewal_snapshot": "eb1da5aa7abea87748ba1905605b47371fd8553a"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_2.svg",
+      "blobs": {
+        "capture_payload": "db0168dbe17ca2fb3af0adf29ceb58817aa7beef",
+        "old_pr_ci": "db0168dbe17ca2fb3af0adf29ceb58817aa7beef",
+        "renewal_snapshot": "db0168dbe17ca2fb3af0adf29ceb58817aa7beef"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_3_web_dark.svg",
+      "blobs": {
+        "capture_payload": "88b404c4bd618c36db0b0aaf8865011c4a1a9558",
+        "old_pr_ci": "88b404c4bd618c36db0b0aaf8865011c4a1a9558",
+        "renewal_snapshot": "88b404c4bd618c36db0b0aaf8865011c4a1a9558"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_3_web_light.svg",
+      "blobs": {
+        "capture_payload": "c25fffb1b84ffddb83b8403f7c77bf4885040364",
+        "old_pr_ci": "c25fffb1b84ffddb83b8403f7c77bf4885040364",
+        "renewal_snapshot": "c25fffb1b84ffddb83b8403f7c77bf4885040364"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_fig_3.svg",
+      "blobs": {
+        "capture_payload": "bf37fb0cf18e852d879fb96a6014a79328fcee45",
+        "old_pr_ci": "bf37fb0cf18e852d879fb96a6014a79328fcee45",
+        "renewal_snapshot": "bf37fb0cf18e852d879fb96a6014a79328fcee45"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1_web_dark.svg",
+      "blobs": {
+        "capture_payload": "c6978db898f642e6322af06e96fc90c6837c722f",
+        "old_pr_ci": "c6978db898f642e6322af06e96fc90c6837c722f",
+        "renewal_snapshot": "c6978db898f642e6322af06e96fc90c6837c722f"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1_web_light.svg",
+      "blobs": {
+        "capture_payload": "eeb3bcadf137f9ddbc12c0a6959a02a405cb0a4e",
+        "old_pr_ci": "eeb3bcadf137f9ddbc12c0a6959a02a405cb0a4e",
+        "renewal_snapshot": "eeb3bcadf137f9ddbc12c0a6959a02a405cb0a4e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_we_1.svg",
+      "blobs": {
+        "capture_payload": "666040f93fdde1cef584673ca306269434248b15",
+        "old_pr_ci": "666040f93fdde1cef584673ca306269434248b15",
+        "renewal_snapshot": "666040f93fdde1cef584673ca306269434248b15"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+      "blobs": {
+        "capture_payload": "329db9a7a82d8c90b58c2706d0dfb44a13c78d5e",
+        "old_pr_ci": "329db9a7a82d8c90b58c2706d0dfb44a13c78d5e",
+        "renewal_snapshot": "329db9a7a82d8c90b58c2706d0dfb44a13c78d5e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html",
+      "blobs": {
+        "capture_payload": "ed3912bcb77c65bb4720b8b303c4f39b718e4eaf",
+        "old_pr_ci": "ed3912bcb77c65bb4720b8b303c4f39b718e4eaf",
+        "renewal_snapshot": "ed3912bcb77c65bb4720b8b303c4f39b718e4eaf"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – korte-check.html",
+      "blobs": {
+        "capture_payload": "3b8f9b483ba8c9e564a186e0b63406d74c16c591",
+        "old_pr_ci": "3b8f9b483ba8c9e564a186e0b63406d74c16c591",
+        "renewal_snapshot": "3b8f9b483ba8c9e564a186e0b63406d74c16c591"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.html",
+      "blobs": {
+        "capture_payload": "5ed342e6be63bbc765fe257963232d1e7fd6bbfd",
+        "old_pr_ci": "5ed342e6be63bbc765fe257963232d1e7fd6bbfd",
+        "renewal_snapshot": "5ed342e6be63bbc765fe257963232d1e7fd6bbfd"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html",
+      "blobs": {
+        "capture_payload": "68edad998d48e36c6849d8b8f4364f6070f61adc",
+        "old_pr_ci": "68edad998d48e36c6849d8b8f4364f6070f61adc",
+        "renewal_snapshot": "68edad998d48e36c6849d8b8f4364f6070f61adc"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.html",
+      "blobs": {
+        "capture_payload": "8fa10e4dbfc9dbab0d84a417593bda5b4d94eb5b",
+        "old_pr_ci": "8fa10e4dbfc9dbab0d84a417593bda5b4d94eb5b",
+        "renewal_snapshot": "8fa10e4dbfc9dbab0d84a417593bda5b4d94eb5b"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – wiskundevaardigheden.html",
+      "blobs": {
+        "capture_payload": "aedfe14d3393e0b6858d5119d55382d320758b13",
+        "old_pr_ci": "aedfe14d3393e0b6858d5119d55382d320758b13",
+        "renewal_snapshot": "aedfe14d3393e0b6858d5119d55382d320758b13"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+      "blobs": {
+        "capture_payload": "e0e1b7044a7eb3f3033381e909db9ad157a564a3",
+        "old_pr_ci": "e0e1b7044a7eb3f3033381e909db9ad157a564a3",
+        "renewal_snapshot": "e0e1b7044a7eb3f3033381e909db9ad157a564a3"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+      "blobs": {
+        "capture_payload": "fe2706932d7891ebc8df29a9a5d2275d9567b89f",
+        "old_pr_ci": "fe2706932d7891ebc8df29a9a5d2275d9567b89f",
+        "renewal_snapshot": "fe2706932d7891ebc8df29a9a5d2275d9567b89f"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – instapquiz.html",
+      "blobs": {
+        "capture_payload": "a9333a8fe4807912c77f37fddf7ecd5614ca3175",
+        "old_pr_ci": "a9333a8fe4807912c77f37fddf7ecd5614ca3175",
+        "renewal_snapshot": "a9333a8fe4807912c77f37fddf7ecd5614ca3175"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – korte-check.html",
+      "blobs": {
+        "capture_payload": "e927dd16deed8569774ddb2c9df4fdc9fbf8d091",
+        "old_pr_ci": "e927dd16deed8569774ddb2c9df4fdc9fbf8d091",
+        "renewal_snapshot": "e927dd16deed8569774ddb2c9df4fdc9fbf8d091"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html",
+      "blobs": {
+        "capture_payload": "8fe1efd325273c5beb543931c9ac255af3da4b9c",
+        "old_pr_ci": "8fe1efd325273c5beb543931c9ac255af3da4b9c",
+        "renewal_snapshot": "8fe1efd325273c5beb543931c9ac255af3da4b9c"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html",
+      "blobs": {
+        "capture_payload": "6eff5535f040c9e7737067ade4cbf58cc78f2842",
+        "old_pr_ci": "6eff5535f040c9e7737067ade4cbf58cc78f2842",
+        "renewal_snapshot": "6eff5535f040c9e7737067ade4cbf58cc78f2842"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html",
+      "blobs": {
+        "capture_payload": "2c749e24f4707cad33e13eab600028690ac595a7",
+        "old_pr_ci": "2c749e24f4707cad33e13eab600028690ac595a7",
+        "renewal_snapshot": "2c749e24f4707cad33e13eab600028690ac595a7"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+      "blobs": {
+        "capture_payload": "986612e922e646ca7dccce249b5208af2ceb4f79",
+        "old_pr_ci": "986612e922e646ca7dccce249b5208af2ceb4f79",
+        "renewal_snapshot": "986612e922e646ca7dccce249b5208af2ceb4f79"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
+      "blobs": {
+        "capture_payload": "99708c790647def6832cf5bdbd295943d545ba84",
+        "old_pr_ci": "99708c790647def6832cf5bdbd295943d545ba84",
+        "renewal_snapshot": "99708c790647def6832cf5bdbd295943d545ba84"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – grafiekenspel.html",
+      "blobs": {
+        "capture_payload": "7467df022820351de65675c24d1c7f64eafcafa0",
+        "old_pr_ci": "7467df022820351de65675c24d1c7f64eafcafa0",
+        "renewal_snapshot": "7467df022820351de65675c24d1c7f64eafcafa0"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – instapquiz.html",
+      "blobs": {
+        "capture_payload": "043e72ce877b44e0e76710fdad26edf584cd118e",
+        "old_pr_ci": "043e72ce877b44e0e76710fdad26edf584cd118e",
+        "renewal_snapshot": "043e72ce877b44e0e76710fdad26edf584cd118e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – korte-check.html",
+      "blobs": {
+        "capture_payload": "414fccce7cf9a5afbb1505e8277aff2927b45f6a",
+        "old_pr_ci": "414fccce7cf9a5afbb1505e8277aff2927b45f6a",
+        "renewal_snapshot": "414fccce7cf9a5afbb1505e8277aff2927b45f6a"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.html",
+      "blobs": {
+        "capture_payload": "1b72b280a973c484e92d106cf116a045851078ec",
+        "old_pr_ci": "1b72b280a973c484e92d106cf116a045851078ec",
+        "renewal_snapshot": "1b72b280a973c484e92d106cf116a045851078ec"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg vaardigheden.html",
+      "blobs": {
+        "capture_payload": "5ba0c186add37f9f4782571fd7f31bc3157e85a5",
+        "old_pr_ci": "5ba0c186add37f9f4782571fd7f31bc3157e85a5",
+        "renewal_snapshot": "5ba0c186add37f9f4782571fd7f31bc3157e85a5"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – wiskundevaardigheden.html",
+      "blobs": {
+        "capture_payload": "1a143e8618e2b97bf689cb208d98b2c9d6d80ba2",
+        "old_pr_ci": "1a143e8618e2b97bf689cb208d98b2c9d6d80ba2",
+        "renewal_snapshot": "1a143e8618e2b97bf689cb208d98b2c9d6d80ba2"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+      "blobs": {
+        "capture_payload": "2b6930609dd4401f2cf0b36c01691efc82c2fb31",
+        "old_pr_ci": "2b6930609dd4401f2cf0b36c01691efc82c2fb31",
+        "renewal_snapshot": "2b6930609dd4401f2cf0b36c01691efc82c2fb31"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/index.html",
+      "blobs": {
+        "capture_payload": "fd40943d1cd8b153cfb05bdac27838a013a38b99",
+        "old_pr_ci": "fd40943d1cd8b153cfb05bdac27838a013a38b99",
+        "renewal_snapshot": "fd40943d1cd8b153cfb05bdac27838a013a38b99"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/adaptive-seam.js",
+      "blobs": {
+        "capture_payload": "b57e1d336b6e8f60edfd2ee8789c5026c179a5e1",
+        "old_pr_ci": "b57e1d336b6e8f60edfd2ee8789c5026c179a5e1",
+        "renewal_snapshot": "b57e1d336b6e8f60edfd2ee8789c5026c179a5e1"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.1-exit-ticket.js",
+      "blobs": {
+        "capture_payload": "96d2cb47fa2b5e4ce01f4991dbef116a8e0bc653",
+        "old_pr_ci": "96d2cb47fa2b5e4ce01f4991dbef116a8e0bc653",
+        "renewal_snapshot": "96d2cb47fa2b5e4ce01f4991dbef116a8e0bc653"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.1-korte-check.js",
+      "blobs": {
+        "capture_payload": "dbde850a6be7621879be5944c4ed06f21cadc59d",
+        "old_pr_ci": "dbde850a6be7621879be5944c4ed06f21cadc59d",
+        "renewal_snapshot": "dbde850a6be7621879be5944c4ed06f21cadc59d"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js",
+      "blobs": {
+        "capture_payload": "d775fbc6b32bed6ad4d05212ee8300d6a5fa6aa1",
+        "old_pr_ci": "d775fbc6b32bed6ad4d05212ee8300d6a5fa6aa1",
+        "renewal_snapshot": "d775fbc6b32bed6ad4d05212ee8300d6a5fa6aa1"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-korte-check.js",
+      "blobs": {
+        "capture_payload": "b82d1aa09482a4b2b5ad5ac2dbef09113f8fb78e",
+        "old_pr_ci": "b82d1aa09482a4b2b5ad5ac2dbef09113f8fb78e",
+        "renewal_snapshot": "b82d1aa09482a4b2b5ad5ac2dbef09113f8fb78e"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-exit-ticket.js",
+      "blobs": {
+        "capture_payload": "cedec9aba56f05ae898d78c5dbf59d5a3b88f30c",
+        "old_pr_ci": "cedec9aba56f05ae898d78c5dbf59d5a3b88f30c",
+        "renewal_snapshot": "cedec9aba56f05ae898d78c5dbf59d5a3b88f30c"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-korte-check.js",
+      "blobs": {
+        "capture_payload": "0def50a6f33e74ebc2d9d6ac327a5f3520bc9524",
+        "old_pr_ci": "0def50a6f33e74ebc2d9d6ac327a5f3520bc9524",
+        "renewal_snapshot": "0def50a6f33e74ebc2d9d6ac327a5f3520bc9524"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-graph.js",
+      "blobs": {
+        "capture_payload": "1805a98b26ea1a13556984f6a1e86bfc416ee42b",
+        "old_pr_ci": "1805a98b26ea1a13556984f6a1e86bfc416ee42b",
+        "renewal_snapshot": "1805a98b26ea1a13556984f6a1e86bfc416ee42b"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.css",
+      "blobs": {
+        "capture_payload": "b63d69d5127897f515e0213e67757b6ef50d7d77",
+        "old_pr_ci": "b63d69d5127897f515e0213e67757b6ef50d7d77",
+        "renewal_snapshot": "b63d69d5127897f515e0213e67757b6ef50d7d77"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/golden-ticket-layout.js",
+      "blobs": {
+        "capture_payload": "e7113c9816535b1a0e4b06297e9f4a2309599f82",
+        "old_pr_ci": "e7113c9816535b1a0e4b06297e9f4a2309599f82",
+        "renewal_snapshot": "e7113c9816535b1a0e4b06297e9f4a2309599f82"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-engine.js",
+      "blobs": {
+        "capture_payload": "c5a02686fee2ea18b4c13ef6877bda69fe5bea13",
+        "old_pr_ci": "c5a02686fee2ea18b4c13ef6877bda69fe5bea13",
+        "renewal_snapshot": "c5a02686fee2ea18b4c13ef6877bda69fe5bea13"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-ui.js",
+      "blobs": {
+        "capture_payload": "48ba5d528034bf36149931637ca898765c8d2442",
+        "old_pr_ci": "48ba5d528034bf36149931637ca898765c8d2442",
+        "renewal_snapshot": "48ba5d528034bf36149931637ca898765c8d2442"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/graphical.css",
+      "blobs": {
+        "capture_payload": "3652482b745a7966d1b40f5b31fec38c02dd7e33",
+        "old_pr_ci": "3652482b745a7966d1b40f5b31fec38c02dd7e33",
+        "renewal_snapshot": "3652482b745a7966d1b40f5b31fec38c02dd7e33"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/graphical/1.1.3.js",
+      "blobs": {
+        "capture_payload": "2deb90749ceebd415144cd09e6ab06450cb33960",
+        "old_pr_ci": "2deb90749ceebd415144cd09e6ab06450cb33960",
+        "renewal_snapshot": "2deb90749ceebd415144cd09e6ab06450cb33960"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.1.js",
+      "blobs": {
+        "capture_payload": "6620de2c37688cc324e4b2ce8aec7f311a5661ef",
+        "old_pr_ci": "6620de2c37688cc324e4b2ce8aec7f311a5661ef",
+        "renewal_snapshot": "6620de2c37688cc324e4b2ce8aec7f311a5661ef"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.2.js",
+      "blobs": {
+        "capture_payload": "3a36eba998532f59a486af4e2197e6dde022b870",
+        "old_pr_ci": "3a36eba998532f59a486af4e2197e6dde022b870",
+        "renewal_snapshot": "3a36eba998532f59a486af4e2197e6dde022b870"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/questions/1.1.3.js",
+      "blobs": {
+        "capture_payload": "631fd948712c11ee665e9d9c75a9872d7664f148",
+        "old_pr_ci": "631fd948712c11ee665e9d9c75a9872d7664f148",
+        "renewal_snapshot": "631fd948712c11ee665e9d9c75a9872d7664f148"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/quiz-engine.js",
+      "blobs": {
+        "capture_payload": "1746477d328b9f220df87c9f3e23a27fe88e18d6",
+        "old_pr_ci": "1746477d328b9f220df87c9f3e23a27fe88e18d6",
+        "renewal_snapshot": "1746477d328b9f220df87c9f3e23a27fe88e18d6"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/quiz-ui.js",
+      "blobs": {
+        "capture_payload": "950edbd54507bdb7771185612a59d86b6aab0d05",
+        "old_pr_ci": "950edbd54507bdb7771185612a59d86b6aab0d05",
+        "renewal_snapshot": "950edbd54507bdb7771185612a59d86b6aab0d05"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/quiz.css",
+      "blobs": {
+        "capture_payload": "9b5e8b986b196e93fd73ce1ccf6610804e06a2e3",
+        "old_pr_ci": "9b5e8b986b196e93fd73ce1ccf6610804e06a2e3",
+        "renewal_snapshot": "9b5e8b986b196e93fd73ce1ccf6610804e06a2e3"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning-engine.js",
+      "blobs": {
+        "capture_payload": "0a6ad17c5dffb90a35785ddfd5e5a1aebaf6e5bc",
+        "old_pr_ci": "0a6ad17c5dffb90a35785ddfd5e5a1aebaf6e5bc",
+        "renewal_snapshot": "0a6ad17c5dffb90a35785ddfd5e5a1aebaf6e5bc"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning-ui.js",
+      "blobs": {
+        "capture_payload": "b19dce35d3313403fc2d8db8d0c7b0b609f5136c",
+        "old_pr_ci": "b19dce35d3313403fc2d8db8d0c7b0b609f5136c",
+        "renewal_snapshot": "b19dce35d3313403fc2d8db8d0c7b0b609f5136c"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning.css",
+      "blobs": {
+        "capture_payload": "9b9ce11c46efddfe7d343fa8bedb073dc005a1c0",
+        "old_pr_ci": "9b9ce11c46efddfe7d343fa8bedb073dc005a1c0",
+        "renewal_snapshot": "9b9ce11c46efddfe7d343fa8bedb073dc005a1c0"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.1.js",
+      "blobs": {
+        "capture_payload": "ca7104093cabd8e91beecd02345a3b9da87cd432",
+        "old_pr_ci": "ca7104093cabd8e91beecd02345a3b9da87cd432",
+        "renewal_snapshot": "ca7104093cabd8e91beecd02345a3b9da87cd432"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/meta-categories.js",
+      "blobs": {
+        "capture_payload": "f49e0cd7e865748d7387ac2381fa371de2af5494",
+        "old_pr_ci": "f49e0cd7e865748d7387ac2381fa371de2af5494",
+        "renewal_snapshot": "f49e0cd7e865748d7387ac2381fa371de2af5494"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-engine.js",
+      "blobs": {
+        "capture_payload": "4aaa10938f266bc0b5f33f3ad37ee6ccc8ff3840",
+        "old_pr_ci": "4aaa10938f266bc0b5f33f3ad37ee6ccc8ff3840",
+        "renewal_snapshot": "4aaa10938f266bc0b5f33f3ad37ee6ccc8ff3840"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-route-ui.js",
+      "blobs": {
+        "capture_payload": "4eafb5bddbe5170b32a261fc3772d108f589a3b4",
+        "old_pr_ci": "4eafb5bddbe5170b32a261fc3772d108f589a3b4",
+        "renewal_snapshot": "4eafb5bddbe5170b32a261fc3772d108f589a3b4"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skill-map-route.css",
+      "blobs": {
+        "capture_payload": "d35f5bd5344885b222f898e7f4cb878a049ccb21",
+        "old_pr_ci": "d35f5bd5344885b222f898e7f4cb878a049ccb21",
+        "renewal_snapshot": "d35f5bd5344885b222f898e7f4cb878a049ccb21"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-engine.js",
+      "blobs": {
+        "capture_payload": "941a68763c60af7afe566481ac545f33b098ec83",
+        "old_pr_ci": "941a68763c60af7afe566481ac545f33b098ec83",
+        "renewal_snapshot": "941a68763c60af7afe566481ac545f33b098ec83"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree-ui.js",
+      "blobs": {
+        "capture_payload": "df024a3650e755d755140a56e6d5bcca897046a5",
+        "old_pr_ci": "df024a3650e755d755140a56e6d5bcca897046a5",
+        "renewal_snapshot": "df024a3650e755d755140a56e6d5bcca897046a5"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree.css",
+      "blobs": {
+        "capture_payload": "eeab775ab1a82af5e507d1bfe5f982c9b6c1fe2b",
+        "old_pr_ci": "eeab775ab1a82af5e507d1bfe5f982c9b6c1fe2b",
+        "renewal_snapshot": "eeab775ab1a82af5e507d1bfe5f982c9b6c1fe2b"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.1.js",
+      "blobs": {
+        "capture_payload": "dd8089c14f168c035b0648b24eb6f721a31af0ca",
+        "old_pr_ci": "dd8089c14f168c035b0648b24eb6f721a31af0ca",
+        "renewal_snapshot": "dd8089c14f168c035b0648b24eb6f721a31af0ca"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.2.js",
+      "blobs": {
+        "capture_payload": "88ef0223bc87b69a0dea4fb909b1f44db4a02157",
+        "old_pr_ci": "88ef0223bc87b69a0dea4fb909b1f44db4a02157",
+        "renewal_snapshot": "88ef0223bc87b69a0dea4fb909b1f44db4a02157"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/1.1.3.js",
+      "blobs": {
+        "capture_payload": "09a017a0bd1d622e66736d9522ceae5f63ca1807",
+        "old_pr_ci": "09a017a0bd1d622e66736d9522ceae5f63ca1807",
+        "renewal_snapshot": "09a017a0bd1d622e66736d9522ceae5f63ca1807"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/base-elements.js",
+      "blobs": {
+        "capture_payload": "87cb6a8c5e57d9a60a2162de3c3c0bd7b96887d3",
+        "old_pr_ci": "87cb6a8c5e57d9a60a2162de3c3c0bd7b96887d3",
+        "renewal_snapshot": "87cb6a8c5e57d9a60a2162de3c3c0bd7b96887d3"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/skilltree/explanations.js",
+      "blobs": {
+        "capture_payload": "3eb1529e157f5ff8bd64303da12b50c0cc8eb1e1",
+        "old_pr_ci": "3eb1529e157f5ff8bd64303da12b50c0cc8eb1e1",
+        "renewal_snapshot": "3eb1529e157f5ff8bd64303da12b50c0cc8eb1e1"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-engine.js",
+      "blobs": {
+        "capture_payload": "7daa49a010aee2f0e3d46919c93bf3d8bbea30ee",
+        "old_pr_ci": "7daa49a010aee2f0e3d46919c93bf3d8bbea30ee",
+        "renewal_snapshot": "7daa49a010aee2f0e3d46919c93bf3d8bbea30ee"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell-ui.js",
+      "blobs": {
+        "capture_payload": "d84d527549a1653eed594ea6c65c54a089356100",
+        "old_pr_ci": "d84d527549a1653eed594ea6c65c54a089356100",
+        "renewal_snapshot": "d84d527549a1653eed594ea6c65c54a089356100"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/task-shell.css",
+      "blobs": {
+        "capture_payload": "e1fe641ba83da72caa3a4dc9b2cb2d7b7fd0e57c",
+        "old_pr_ci": "e1fe641ba83da72caa3a4dc9b2cb2d7b7fd0e57c",
+        "renewal_snapshot": "e1fe641ba83da72caa3a4dc9b2cb2d7b7fd0e57c"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/theme.js",
+      "blobs": {
+        "capture_payload": "117606429a436c62de40a2e097b62351226caaa5",
+        "old_pr_ci": "117606429a436c62de40a2e097b62351226caaa5",
+        "renewal_snapshot": "117606429a436c62de40a2e097b62351226caaa5"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/voorkennis.css",
+      "blobs": {
+        "capture_payload": "01222b3463ac7252ec150b271e3fa167aa809d04",
+        "old_pr_ci": "01222b3463ac7252ec150b271e3fa167aa809d04",
+        "renewal_snapshot": "01222b3463ac7252ec150b271e3fa167aa809d04"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/shared/voorkennis.js",
+      "blobs": {
+        "capture_payload": "37782018a6f10f9901c0af40127bea55a75301ff",
+        "old_pr_ci": "37782018a6f10f9901c0af40127bea55a75301ff",
+        "renewal_snapshot": "37782018a6f10f9901c0af40127bea55a75301ff"
+      },
+      "comparison": "blob_equality",
+      "status": "equal",
+      "missing_at": [],
+      "label": "lesson rendered input"
+    }
+  ],
+  "lesson_existence_only_paths": [
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.html",
+      "blobs": {
+        "capture_payload": "0e55dcd19e88d57b2bd092571d3d4830d444f08c",
+        "old_pr_ci": "0e55dcd19e88d57b2bd092571d3d4830d444f08c",
+        "renewal_snapshot": "0e55dcd19e88d57b2bd092571d3d4830d444f08c"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.pdf",
+      "blobs": {
+        "capture_payload": "ddc6be1caae889fb1f772823e129aa039d5cfdec",
+        "old_pr_ci": "ddc6be1caae889fb1f772823e129aa039d5cfdec",
+        "renewal_snapshot": "ddc6be1caae889fb1f772823e129aa039d5cfdec"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – vragen.docx",
+      "blobs": {
+        "capture_payload": "3438e1085be323c51c33f834d5a70b8c622d6c69",
+        "old_pr_ci": "3438e1085be323c51c33f834d5a70b8c622d6c69",
+        "renewal_snapshot": "3438e1085be323c51c33f834d5a70b8c622d6c69"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html",
+      "blobs": {
+        "capture_payload": "2db85fa28f72a91c11f74adcad38ee18860de926",
+        "old_pr_ci": "2db85fa28f72a91c11f74adcad38ee18860de926",
+        "renewal_snapshot": "2db85fa28f72a91c11f74adcad38ee18860de926"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – vragen.docx",
+      "blobs": {
+        "capture_payload": "beb7501aa741a7e0dd25d6e1ad1ecd5f4f63422a",
+        "old_pr_ci": "beb7501aa741a7e0dd25d6e1ad1ecd5f4f63422a",
+        "renewal_snapshot": "beb7501aa741a7e0dd25d6e1ad1ecd5f4f63422a"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.html",
+      "blobs": {
+        "capture_payload": "e99df5ef3a1d991d8d280d3a144289f698d098db",
+        "old_pr_ci": "e99df5ef3a1d991d8d280d3a144289f698d098db",
+        "renewal_snapshot": "e99df5ef3a1d991d8d280d3a144289f698d098db"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws-detective.html",
+      "blobs": {
+        "capture_payload": "71a3b12dce5cf4afe002777566c688e18072ee05",
+        "old_pr_ci": "71a3b12dce5cf4afe002777566c688e18072ee05",
+        "renewal_snapshot": "71a3b12dce5cf4afe002777566c688e18072ee05"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.pdf",
+      "blobs": {
+        "capture_payload": "6c5111b0adc309d59e0c44fb79ec5806e9e71fa7",
+        "old_pr_ci": "6c5111b0adc309d59e0c44fb79ec5806e9e71fa7",
+        "renewal_snapshot": "6c5111b0adc309d59e0c44fb79ec5806e9e71fa7"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.html",
+      "blobs": {
+        "capture_payload": "d3754179818eab7b8a13cc9566dc963d629b788d",
+        "old_pr_ci": "d3754179818eab7b8a13cc9566dc963d629b788d",
+        "renewal_snapshot": "d3754179818eab7b8a13cc9566dc963d629b788d"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.pdf",
+      "blobs": {
+        "capture_payload": "a12d05c270e88f43173bb32d0152e2abe0022cf3",
+        "old_pr_ci": "a12d05c270e88f43173bb32d0152e2abe0022cf3",
+        "renewal_snapshot": "a12d05c270e88f43173bb32d0152e2abe0022cf3"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html",
+      "blobs": {
+        "capture_payload": "874d03a32ac1de5ea3b35dc3122351964ee90f4a",
+        "old_pr_ci": "556cc36611cb95d8dc23373a20f4d2a9634fb5be",
+        "renewal_snapshot": "556cc36611cb95d8dc23373a20f4d2a9634fb5be"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx",
+      "blobs": {
+        "capture_payload": "9ac94d6da35d587e3a13a46e0b4e9531f17a4715",
+        "old_pr_ci": "44cf9f8a4c3050f9e2bd2c776ac17703be34e809",
+        "renewal_snapshot": "44cf9f8a4c3050f9e2bd2c776ac17703be34e809"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.html",
+      "blobs": {
+        "capture_payload": "46b526fc8de17f0070b53ca2c128a802c49e8d75",
+        "old_pr_ci": "46b526fc8de17f0070b53ca2c128a802c49e8d75",
+        "renewal_snapshot": "46b526fc8de17f0070b53ca2c128a802c49e8d75"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – stappenplan.html",
+      "blobs": {
+        "capture_payload": "13a05c84418f2a11c2ccbd99a803ac847c65b814",
+        "old_pr_ci": "13a05c84418f2a11c2ccbd99a803ac847c65b814",
+        "renewal_snapshot": "13a05c84418f2a11c2ccbd99a803ac847c65b814"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx",
+      "blobs": {
+        "capture_payload": "3f5a3fc86e44e502a3114ca1baa52070d90c9d22",
+        "old_pr_ci": "3f5a3fc86e44e502a3114ca1baa52070d90c9d22",
+        "renewal_snapshot": "3f5a3fc86e44e502a3114ca1baa52070d90c9d22"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.html",
+      "blobs": {
+        "capture_payload": "c06cff2f6cdcc8b9e7a324b16c6aaca4801998e6",
+        "old_pr_ci": "c06cff2f6cdcc8b9e7a324b16c6aaca4801998e6",
+        "renewal_snapshot": "c06cff2f6cdcc8b9e7a324b16c6aaca4801998e6"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – verrijking – vragen.docx",
+      "blobs": {
+        "capture_payload": "0c78bf59a584cf1000fb09d9bbfff23ed326adcb",
+        "old_pr_ci": "0c78bf59a584cf1000fb09d9bbfff23ed326adcb",
+        "renewal_snapshot": "0c78bf59a584cf1000fb09d9bbfff23ed326adcb"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – youtube-videos.html",
+      "blobs": {
+        "capture_payload": "f65d2e11fb0783669ad68047ec0c41a3ef155fa0",
+        "old_pr_ci": "f65d2e11fb0783669ad68047ec0c41a3ef155fa0",
+        "renewal_snapshot": "f65d2e11fb0783669ad68047ec0c41a3ef155fa0"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.html",
+      "blobs": {
+        "capture_payload": "03e27e0b4089ac9daffda5b293344c327da2f423",
+        "old_pr_ci": "03e27e0b4089ac9daffda5b293344c327da2f423",
+        "renewal_snapshot": "03e27e0b4089ac9daffda5b293344c327da2f423"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.pdf",
+      "blobs": {
+        "capture_payload": "b466cd98a86aafb3d31d80b4e4d6447a59f33fdc",
+        "old_pr_ci": "b466cd98a86aafb3d31d80b4e4d6447a59f33fdc",
+        "renewal_snapshot": "b466cd98a86aafb3d31d80b4e4d6447a59f33fdc"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – begeleide inoefening.html",
+      "blobs": {
+        "capture_payload": "1651eb16fe66779c80caf3389b0d812f527cee25",
+        "old_pr_ci": "1651eb16fe66779c80caf3389b0d812f527cee25",
+        "renewal_snapshot": "1651eb16fe66779c80caf3389b0d812f527cee25"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – grafiekenspel.html",
+      "blobs": {
+        "capture_payload": "ce7afe67fb5dd091b066f5c7ef22b4afe1e064d9",
+        "old_pr_ci": "ce7afe67fb5dd091b066f5c7ef22b4afe1e064d9",
+        "renewal_snapshot": "ce7afe67fb5dd091b066f5c7ef22b4afe1e064d9"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws met visual.html",
+      "blobs": {
+        "capture_payload": "21c9b0e3578e8ee04e46a54894489ece05267a88",
+        "old_pr_ci": "21c9b0e3578e8ee04e46a54894489ece05267a88",
+        "renewal_snapshot": "21c9b0e3578e8ee04e46a54894489ece05267a88"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws-detective.html",
+      "blobs": {
+        "capture_payload": "a988bc45a45781f4fc52876c2d8bf7d5c1f9368e",
+        "old_pr_ci": "a988bc45a45781f4fc52876c2d8bf7d5c1f9368e",
+        "renewal_snapshot": "a988bc45a45781f4fc52876c2d8bf7d5c1f9368e"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.pdf",
+      "blobs": {
+        "capture_payload": "30155e90e77b924b8c3e659cf2603e8cc1fa81b7",
+        "old_pr_ci": "30155e90e77b924b8c3e659cf2603e8cc1fa81b7",
+        "renewal_snapshot": "30155e90e77b924b8c3e659cf2603e8cc1fa81b7"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.html",
+      "blobs": {
+        "capture_payload": "d96df366f1c08c894512e2febffd1913ee2160df",
+        "old_pr_ci": "d96df366f1c08c894512e2febffd1913ee2160df",
+        "renewal_snapshot": "d96df366f1c08c894512e2febffd1913ee2160df"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.pdf",
+      "blobs": {
+        "capture_payload": "3b32ed3df230326d81c03ae5a08615e218f1182d",
+        "old_pr_ci": "3b32ed3df230326d81c03ae5a08615e218f1182d",
+        "renewal_snapshot": "3b32ed3df230326d81c03ae5a08615e218f1182d"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html",
+      "blobs": {
+        "capture_payload": "02f89a832bff4ae7de3588a5cca48d05a41fb6ee",
+        "old_pr_ci": "02f89a832bff4ae7de3588a5cca48d05a41fb6ee",
+        "renewal_snapshot": "02f89a832bff4ae7de3588a5cca48d05a41fb6ee"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.pptx",
+      "blobs": {
+        "capture_payload": "9cf4ce0022ee7cfc56715a75f508151fc11e346a",
+        "old_pr_ci": "9cf4ce0022ee7cfc56715a75f508151fc11e346a",
+        "renewal_snapshot": "9cf4ce0022ee7cfc56715a75f508151fc11e346a"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – redeneer-spel.html",
+      "blobs": {
+        "capture_payload": "1f585f256d8ecf431e979b4887fc0a42717a3e66",
+        "old_pr_ci": "1f585f256d8ecf431e979b4887fc0a42717a3e66",
+        "renewal_snapshot": "1f585f256d8ecf431e979b4887fc0a42717a3e66"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – samenvatting.html",
+      "blobs": {
+        "capture_payload": "c0a2466bce6859e25ef80f7e343f8563f17c53dc",
+        "old_pr_ci": "c0a2466bce6859e25ef80f7e343f8563f17c53dc",
+        "renewal_snapshot": "c0a2466bce6859e25ef80f7e343f8563f17c53dc"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – stappenplan.html",
+      "blobs": {
+        "capture_payload": "96731967f7d2f12d7908fa632377022c1d981caa",
+        "old_pr_ci": "96731967f7d2f12d7908fa632377022c1d981caa",
+        "renewal_snapshot": "96731967f7d2f12d7908fa632377022c1d981caa"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg voorkennis.html",
+      "blobs": {
+        "capture_payload": "07e24c76bc4af4195756b4159e1643ee2ca5ef53",
+        "old_pr_ci": "07e24c76bc4af4195756b4159e1643ee2ca5ef53",
+        "renewal_snapshot": "07e24c76bc4af4195756b4159e1643ee2ca5ef53"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – youtube-videos.html",
+      "blobs": {
+        "capture_payload": "4270f3f18b4191d69c849f39e57f5f4f4e6d4e8c",
+        "old_pr_ci": "4270f3f18b4191d69c849f39e57f5f4f4e6d4e8c",
+        "renewal_snapshot": "4270f3f18b4191d69c849f39e57f5f4f4e6d4e8c"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.html",
+      "blobs": {
+        "capture_payload": "7b705f4d233f7c5c42d33f1e615c289dd3b59a48",
+        "old_pr_ci": "7b705f4d233f7c5c42d33f1e615c289dd3b59a48",
+        "renewal_snapshot": "7b705f4d233f7c5c42d33f1e615c289dd3b59a48"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.pdf",
+      "blobs": {
+        "capture_payload": "8603b06eb016c2629ac412857b03260f11032c82",
+        "old_pr_ci": "8603b06eb016c2629ac412857b03260f11032c82",
+        "renewal_snapshot": "8603b06eb016c2629ac412857b03260f11032c82"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – begeleide inoefening.html",
+      "blobs": {
+        "capture_payload": "2bdedf7e555220a21de8cba60c14055814880f3c",
+        "old_pr_ci": "2bdedf7e555220a21de8cba60c14055814880f3c",
+        "renewal_snapshot": "2bdedf7e555220a21de8cba60c14055814880f3c"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws met visual.html",
+      "blobs": {
+        "capture_payload": "af679414df11fb103292ae9a4d8dcff071b25a25",
+        "old_pr_ci": "af679414df11fb103292ae9a4d8dcff071b25a25",
+        "renewal_snapshot": "af679414df11fb103292ae9a4d8dcff071b25a25"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws-detective.html",
+      "blobs": {
+        "capture_payload": "dabffb66d9a2e4fd346aa659507448f4aa2c92c4",
+        "old_pr_ci": "dabffb66d9a2e4fd346aa659507448f4aa2c92c4",
+        "renewal_snapshot": "dabffb66d9a2e4fd346aa659507448f4aa2c92c4"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.pdf",
+      "blobs": {
+        "capture_payload": "55039096527f8d8ab637d7ef1095d3710acad64c",
+        "old_pr_ci": "55039096527f8d8ab637d7ef1095d3710acad64c",
+        "renewal_snapshot": "55039096527f8d8ab637d7ef1095d3710acad64c"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.html",
+      "blobs": {
+        "capture_payload": "8b4d18c7f34dc76ac2eca7546b8255b20c2dc1dd",
+        "old_pr_ci": "8b4d18c7f34dc76ac2eca7546b8255b20c2dc1dd",
+        "renewal_snapshot": "8b4d18c7f34dc76ac2eca7546b8255b20c2dc1dd"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.pdf",
+      "blobs": {
+        "capture_payload": "c536448ecf29f314df6ee0a6aae2890ef72c10a6",
+        "old_pr_ci": "c536448ecf29f314df6ee0a6aae2890ef72c10a6",
+        "renewal_snapshot": "c536448ecf29f314df6ee0a6aae2890ef72c10a6"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html",
+      "blobs": {
+        "capture_payload": "3dafd1c086d6167b2080bd489f68a09629d47565",
+        "old_pr_ci": "be598d7bfacd6797cdff83c8f56061f7f92bfd02",
+        "renewal_snapshot": "be598d7bfacd6797cdff83c8f56061f7f92bfd02"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx",
+      "blobs": {
+        "capture_payload": "4bba465abaa3f3a0e1db761097d3a885b6064f37",
+        "old_pr_ci": "7397674b06e3f79d0ffcda6614707c5ab239cf0b",
+        "renewal_snapshot": "7397674b06e3f79d0ffcda6614707c5ab239cf0b"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – redeneer-spel.html",
+      "blobs": {
+        "capture_payload": "80181e87ec1d81f20de8d62db592af0f60646b36",
+        "old_pr_ci": "80181e87ec1d81f20de8d62db592af0f60646b36",
+        "renewal_snapshot": "80181e87ec1d81f20de8d62db592af0f60646b36"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – samenvatting.html",
+      "blobs": {
+        "capture_payload": "63608a7166f1ce7d019c2f22a4ad54813b9a1884",
+        "old_pr_ci": "63608a7166f1ce7d019c2f22a4ad54813b9a1884",
+        "renewal_snapshot": "63608a7166f1ce7d019c2f22a4ad54813b9a1884"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – stappenplan.html",
+      "blobs": {
+        "capture_payload": "3d12ee448480a6013708ce99fbbb3ee0bfad3fb0",
+        "old_pr_ci": "3d12ee448480a6013708ce99fbbb3ee0bfad3fb0",
+        "renewal_snapshot": "3d12ee448480a6013708ce99fbbb3ee0bfad3fb0"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg voorkennis.html",
+      "blobs": {
+        "capture_payload": "3cf70547302b80af25244ef8039eb1b1d2d0f27a",
+        "old_pr_ci": "3cf70547302b80af25244ef8039eb1b1d2d0f27a",
+        "renewal_snapshot": "3cf70547302b80af25244ef8039eb1b1d2d0f27a"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – youtube-videos.html",
+      "blobs": {
+        "capture_payload": "dc5fb8905d4571358b28474e2c7679fac1f2057c",
+        "old_pr_ci": "dc5fb8905d4571358b28474e2c7679fac1f2057c",
+        "renewal_snapshot": "dc5fb8905d4571358b28474e2c7679fac1f2057c"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.html",
+      "blobs": {
+        "capture_payload": "3d9a0dd032a2630e5b1679b2d57046bf23d502af",
+        "old_pr_ci": "3d9a0dd032a2630e5b1679b2d57046bf23d502af",
+        "renewal_snapshot": "3d9a0dd032a2630e5b1679b2d57046bf23d502af"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.pdf",
+      "blobs": {
+        "capture_payload": "0b74d983cdc1d7e049d1fd47c4ca72aa8c81c152",
+        "old_pr_ci": "0b74d983cdc1d7e049d1fd47c4ca72aa8c81c152",
+        "renewal_snapshot": "0b74d983cdc1d7e049d1fd47c4ca72aa8c81c152"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.html",
+      "blobs": {
+        "capture_payload": "3b23c0b7b99da1c1da1ae1079fbf70be3de75d43",
+        "old_pr_ci": "3b23c0b7b99da1c1da1ae1079fbf70be3de75d43",
+        "renewal_snapshot": "3b23c0b7b99da1c1da1ae1079fbf70be3de75d43"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.pdf",
+      "blobs": {
+        "capture_payload": "99e39c572abe166ff0344a13f5277693e92e09c4",
+        "old_pr_ci": "99e39c572abe166ff0344a13f5277693e92e09c4",
+        "renewal_snapshot": "99e39c572abe166ff0344a13f5277693e92e09c4"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/index.html",
+      "blobs": {
+        "capture_payload": "e72aa36ec9b792ea092516e5e9214a0a44e82f0a",
+        "old_pr_ci": "e72aa36ec9b792ea092516e5e9214a0a44e82f0a",
+        "renewal_snapshot": "e72aa36ec9b792ea092516e5e9214a0a44e82f0a"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    },
+    {
+      "path": "Boek 1 - Grondslagen, vraag en aanbod/index.html",
+      "blobs": {
+        "capture_payload": "1662ee5c3f52e3848e8075c5cc30bf291cb7ed0c",
+        "old_pr_ci": "1662ee5c3f52e3848e8075c5cc30bf291cb7ed0c",
+        "renewal_snapshot": "1662ee5c3f52e3848e8075c5cc30bf291cb7ed0c"
+      },
+      "comparison": "existence_only",
+      "status": "present",
+      "missing_at": [],
+      "label": "lesson route target"
+    }
+  ],
+  "summary": {
+    "platform_equal_path_count": 64,
+    "lesson_equal_path_count": 78,
+    "lesson_existence_only_path_count": 55,
+    "changed_or_missing_input_count": 0,
+    "changed_or_missing_paths": [],
+    "screenshots_reusable": true,
+    "recapture_required": false,
+    "historical_artifact_count": 50,
+    "historical_artifacts_blob_equal": true,
+    "screenshot_manifest_integrity_passed": true
+  }
+}

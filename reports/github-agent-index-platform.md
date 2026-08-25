@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-07-03T17:30:19.175Z
+Generated: 2026-08-24T07:16:00.462Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/integration-head-lead-review-supersession-1-20260703`
-Source commit: `f8acbcf009b172207012f32e385f28c57fc9335e`
-Files indexed: 7051
+Source branch: `codex/y1-golden-rollout-wave-renewal-20260823`
+Source commit: `bb0caa9178377fd2b09c3594062f7657fc366a6a`
+Files indexed: 7221
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 687
+Count: 708
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -235,6 +235,7 @@ Count: 687
 - build-scripts/inspection/build-local-expert-contact-stage.js
 - build-scripts/inspection/build-local-expert-review-request-packet.js
 - build-scripts/inspection/build-local-expert-source-refresh-gate.js
+- build-scripts/inspection/build-owner-controlled-dispatch.js
 - build-scripts/inspection/build-owner-delivery-protocol-completion.js
 - build-scripts/inspection/build-owner-delivery-protocol-repair.js
 - build-scripts/inspection/build-owner-manual-dispatch-and-response-intake.js
@@ -261,6 +262,8 @@ Count: 687
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
+- build-scripts/inspection/check-owner-controlled-dispatch.js
+- build-scripts/inspection/check-owner-controlled-dispatch.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-repair.js
@@ -344,6 +347,7 @@ Count: 687
 - build-scripts/references/build-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/build-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/build-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/build-mtu-h7-protected-canonical-adjudication-bundle-4.js
 - build-scripts/references/build-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
@@ -454,6 +458,8 @@ Count: 687
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js
 - build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
@@ -531,6 +537,9 @@ Count: 687
 - build-scripts/references/inventory-file-hash.js
 - build-scripts/references/lib/evidence-reference-resolver.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
+- build-scripts/references/lib/mtu-h7-bundle4-adjudication-evidence.js
+- build-scripts/references/lib/mtu-h7-bundle4-contract.js
+- build-scripts/references/lib/mtu-h7-bundle4-provenance.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-course-target-exercises-v5.js
 - build-scripts/references/migrate-l0-to-l1-economic.js
@@ -584,6 +593,7 @@ Count: 687
 - build-scripts/review-gates/apply-bundle-readiness-decision.js
 - build-scripts/review-gates/apply-bundle-readiness-decision.test.js
 - build-scripts/review-gates/apply-pr-readiness-decision.js
+- build-scripts/review-gates/apply-pr-readiness-decision.test.js
 - build-scripts/review-gates/authorized-pr-integration-workflow.test.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
 - build-scripts/review-gates/capture-gate-reason-revision1-playable-proof.js
@@ -629,6 +639,7 @@ Count: 687
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
 - build-scripts/review-gates/finalization-freshness-proof.js
 - build-scripts/review-gates/finalization-freshness-proof.test.js
+- build-scripts/review-gates/gh-json-input.js
 - build-scripts/review-gates/integrate-authorized-bundle.js
 - build-scripts/review-gates/integrate-authorized-bundle.test.js
 - build-scripts/review-gates/integrate-authorized-pr.js
@@ -636,6 +647,8 @@ Count: 687
 - build-scripts/review-gates/pr-readiness-governance-surfaces.js
 - build-scripts/review-gates/pr-readiness-router.js
 - build-scripts/review-gates/pr-readiness-router.test.js
+- build-scripts/review-gates/refresh-bundle-agent-indexes.js
+- build-scripts/review-gates/refresh-bundle-agent-indexes.test.js
 - build-scripts/review-gates/review-pr-readiness.js
 - build-scripts/review-gates/review-throughput-fields.js
 - build-scripts/review-gates/review-throughput-fields.test.js
@@ -772,6 +785,8 @@ Count: 687
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
@@ -793,6 +808,10 @@ Count: 687
 - build-scripts/tools/build-skill-tree-viewer.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
+- build-scripts/workflows/check-paragraph-workflow-wording.js
+- build-scripts/workflows/check-paragraph-workflow-wording.test.js
+- build-scripts/workflows/check-part-a-pdf-readiness.js
+- build-scripts/workflows/check-part-a-pdf-readiness.test.js
 - build-scripts/workflows/fixtures/paragraph-lane-scope/companion-only.json
 - build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-companion-block-only.json
 - build-scripts/workflows/fixtures/paragraph-lane-scope/companion-with-quality-ref-partA-block-leak.json
@@ -810,6 +829,7 @@ Count: 687
 - scripts/check-course-target-exercises-v5.js
 - scripts/check-links.js
 - scripts/deploy.js
+- scripts/lib/paragraph-types.js
 - scripts/post-push-hook.js
 - scripts/pre-push-hook.js
 - scripts/qa-presentation-v2-html.js
@@ -820,6 +840,7 @@ Count: 687
 - scripts/tests/check-book.test.js
 - scripts/tests/check-course-target-exercises-v5.test.js
 - scripts/tests/procedure-contracts.test.js
+- scripts/tests/qa-presentation-v2-html-startup.test.js
 - scripts/tests/validate-chapter.test.js
 - scripts/tests/validate-paragraph-modes.test.js
 - scripts/tests/validate-paragraph.test.js
@@ -860,8 +881,9 @@ Count: 25
 
 ## validators
 
-Count: 674
+Count: 686
 
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1A/GOAL-DQS-CLOSURE-1A-validation-log.md
 - archive/sprints/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1/GOAL-IQS-BOUNDED-SOURCE-REFRESH-PACKET-1-validation-log.md
@@ -875,6 +897,7 @@ Count: 674
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1/GOAL-IQS-LOCAL-EXPERT-REVIEW-REQUEST-PACKET-1-validation-log.md
 - archive/sprints/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1/GOAL-IQS-LOCAL-EXPERT-SOURCE-REFRESH-GATE-1-validation-log.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-validation-log.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-validation-log.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-validation-log.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-REPAIR-1-validation-log.md
 - archive/sprints/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1/GOAL-IQS-OWNER-MANUAL-DISPATCH-AND-RESPONSE-INTAKE-1-validation-log.md
@@ -944,6 +967,8 @@ Count: 674
 - build-scripts/inspection/check-local-expert-review-request-packet.test.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.js
 - build-scripts/inspection/check-local-expert-source-refresh-gate.test.js
+- build-scripts/inspection/check-owner-controlled-dispatch.js
+- build-scripts/inspection/check-owner-controlled-dispatch.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.js
 - build-scripts/inspection/check-owner-delivery-protocol-completion.test.js
 - build-scripts/inspection/check-owner-delivery-protocol-repair.js
@@ -1035,6 +1060,8 @@ Count: 674
 - build-scripts/references/check-mtu-h7-holdout-evidence-manifest-1.js
 - build-scripts/references/check-mtu-h7-nonprotected-execution-and-protected-governance-authorization-bundle-2.js
 - build-scripts/references/check-mtu-h7-operation-registry-governance-bundle-1.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js
+- build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.test.js
 - build-scripts/references/check-mtu-h7-q5-graph-execution-and-protected-governance-bundle-3.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
@@ -1238,9 +1265,15 @@ Count: 674
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+- build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
+- build-scripts/workflows/check-paragraph-workflow-wording.js
+- build-scripts/workflows/check-paragraph-workflow-wording.test.js
+- build-scripts/workflows/check-part-a-pdf-readiness.js
+- build-scripts/workflows/check-part-a-pdf-readiness.test.js
 - docs/inspection-standards/evidence-pack-validation-and-dispatch.md
 - docs/inspection-standards/report-only-validator-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
@@ -1539,7 +1572,7 @@ Count: 674
 
 ## references
 
-Count: 974
+Count: 1006
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1581,6 +1614,7 @@ Count: 974
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/exercises/y1-golden-rollout-wave-1.json
 - references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/all-belgium-claim.sample.json
 - references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/compliance-claim.sample.json
 - references/data/inspection-standards/fixtures/bounded-source-refresh-packet/negative/expert-legal-advice.sample.json
@@ -1727,6 +1761,35 @@ Count: 974
 - references/data/inspection-standards/fixtures/negative/missing-op0-boundary.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/dispatch-claimed-without-owner-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/england-whole-uk-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/expert-as-official-authority.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-all-belgium-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-all-school-network-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-boundary-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-role-authority-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-school-network-overclaim.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/flanders-static-source-use-product-approval.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/forbidden-attachment-sent.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/invented-dispatch-proof.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/legal-compliance-claim.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/localized-output-response.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/missing-not-sent-reason.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/named-expert-recorded.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/personal-data-response.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/private-contact-endpoint-stored.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/proceed-without-clean-response.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/response-analysis-without-schema-pass.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/response-not-quarantined.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/school-evidence-response.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/student-data-response.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/support-accommodation-accessibility-sufficiency.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/negative/unapproved-material-sent.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/england-owner-controlled-dispatch-and-response-intake.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/flanders-owner-controlled-dispatch-and-response-intake.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/owner-controlled-dispatch-decision.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/owner-controlled-dispatch-record.sample.json
+- references/data/inspection-standards/fixtures/owner-controlled-dispatch/positive/owner-controlled-response-quarantine-report.sample.json
 - references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/delivery-proof-invented.sample.json
 - references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/england-whole-uk-overclaim.sample.json
 - references/data/inspection-standards/fixtures/owner-delivery-protocol-completion/negative/expert-as-official-authority.sample.json
@@ -2279,6 +2342,8 @@ Count: 974
 - references/data/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1.result.json
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
+- references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json
+- references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/data/year2-target-foundation/answer-contracts.json
 - references/data/year2-target-foundation/canonical-source-assets.json
@@ -2518,7 +2583,7 @@ Count: 974
 
 ## reports
 
-Count: 4456
+Count: 4546
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2639,6 +2704,8 @@ Count: 4456
 - reports/inspection-standards/england-local-expert-response-intake.md
 - reports/inspection-standards/england-local-expert-review-request-packet.json
 - reports/inspection-standards/england-local-expert-review-request-packet.md
+- reports/inspection-standards/england-owner-controlled-dispatch-and-response-intake.json
+- reports/inspection-standards/england-owner-controlled-dispatch-and-response-intake.md
 - reports/inspection-standards/england-owner-delivery-and-response-intake.json
 - reports/inspection-standards/england-owner-delivery-and-response-intake.md
 - reports/inspection-standards/england-owner-delivery-protocol-instance.json
@@ -2663,6 +2730,8 @@ Count: 4456
 - reports/inspection-standards/flanders-local-expert-response-intake.md
 - reports/inspection-standards/flanders-local-expert-review-request-packet.json
 - reports/inspection-standards/flanders-local-expert-review-request-packet.md
+- reports/inspection-standards/flanders-owner-controlled-dispatch-and-response-intake.json
+- reports/inspection-standards/flanders-owner-controlled-dispatch-and-response-intake.md
 - reports/inspection-standards/flanders-owner-delivery-and-response-intake.json
 - reports/inspection-standards/flanders-owner-delivery-and-response-intake.md
 - reports/inspection-standards/flanders-owner-delivery-protocol-instance.json
@@ -2731,6 +2800,12 @@ Count: 4456
 - reports/inspection-standards/local-expert-source-refresh-gate-decision.md
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.json
 - reports/inspection-standards/local-expert-source-refresh-gate-plan.md
+- reports/inspection-standards/owner-controlled-dispatch-decision.json
+- reports/inspection-standards/owner-controlled-dispatch-decision.md
+- reports/inspection-standards/owner-controlled-dispatch-record.json
+- reports/inspection-standards/owner-controlled-dispatch-record.md
+- reports/inspection-standards/owner-controlled-response-quarantine-report.json
+- reports/inspection-standards/owner-controlled-response-quarantine-report.md
 - reports/inspection-standards/owner-delivery-channel-proof.json
 - reports/inspection-standards/owner-delivery-channel-proof.md
 - reports/inspection-standards/owner-delivery-protocol-completion-decision.json
@@ -2867,6 +2942,8 @@ Count: 4456
 - reports/json/unit-term-slug-migration.json
 - reports/json/unresolved-refs.json
 - reports/json/visual-qa-harden2-proof.json
+- reports/json/y1-golden-rollout-wave-1-proof.json
+- reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json
 - reports/markdown/aspects-coverage.md
 - reports/markdown/begrippen-coverage.md
 - reports/markdown/dag-integrity.md
@@ -3087,6 +3164,11 @@ Count: 4456
 - reports/mtu-hardening/mtu-h7-operation-blocker-matrix-1.md
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.json
 - reports/mtu-hardening/mtu-h7-operation-registry-governance-bundle-1.md
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.json
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-bundle-4.md
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.json
+- reports/mtu-hardening/mtu-h7-protected-canonical-adjudication-matrix-4.md
+- reports/mtu-hardening/mtu-h7-protected-canonical-negative-regression-fixtures-4.json
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.json
 - reports/mtu-hardening/mtu-h7-protected-governance-authorization-matrix-2.md
 - reports/mtu-hardening/mtu-h7-protected-governance-hold-matrix-3.json
@@ -4090,6 +4172,12 @@ Count: 4456
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/lead-review.md
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.json
 - reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/review-packet.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/bundle-urls.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.json
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-packet.md
+- reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/review-proof-requirements.md
 - reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/bundle-urls.md
 - reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/lead-review.md
 - reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/pr-readiness-evidence.json
@@ -4404,8 +4492,19 @@ Count: 4456
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md
+- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
 - reports/review-gates/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1/review-packet.json
 - reports/review-gates/GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1/review-packet.json
+- reports/review-gates/PR200-RENEWAL-20260823/conflict-resolution-log.md
+- reports/review-gates/PR200-RENEWAL-20260823/lesson-main-pdf-inventory.json
+- reports/review-gates/PR200-RENEWAL-20260823/lesson-main-pdf-inventory.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round1.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round2.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round3.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan-review-round4.md
+- reports/review-gates/PR200-RENEWAL-20260823/plan.md
+- reports/review-gates/PR200-RENEWAL-20260823/work-review-round1.md
 - reports/review-gates/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1/review-packet.json
 - reports/review-gates/THREE-YEAR-BLUEPRINT-MATURITY-BUNDLE-1/review-packet.json
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
@@ -4872,6 +4971,20 @@ Count: 4456
 - reports/sprints/BOOK1-FIX-1-lead-review-round2.md
 - reports/sprints/BOOK1-FIX-1-plan.md
 - reports/sprints/BOOK1-FIX-1-result.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-plan.md
+- reports/sprints/BUNDLE-INDEX-REFRESH-1-result.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-plan.md
+- reports/sprints/BUNDLE-INDEX-SUBSET-BRIDGE-1-result.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-plan.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-planning-review.md
+- reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-result.md
+- reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
+- reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-result.md
@@ -5102,6 +5215,8 @@ Count: 4456
 - reports/sprints/CI-REMOTE-1A-lead-review-round2.md
 - reports/sprints/CI-REMOTE-1A-plan.md
 - reports/sprints/CI-REMOTE-1A-result.md
+- reports/sprints/COMPANION-ROUTE-CONSISTENCY-POST206-RECOVERY-1-lead-review-round1.md
+- reports/sprints/COMPANION-ROUTE-CONSISTENCY-POST213-RECOVERY-1-lead-review-round1.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.jsonl
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.md
@@ -5777,6 +5892,9 @@ Count: 4456
 - reports/sprints/LEAD-REVIEW-2-lead-review-round2.md
 - reports/sprints/LEAD-REVIEW-2-plan.md
 - reports/sprints/LEAD-REVIEW-2-result.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-lead-review.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-plan.md
+- reports/sprints/LESSON-FIRST-HERMETIC-BRIDGE-1-result.md
 - reports/sprints/MATH-REFINE-1-baseline.md
 - reports/sprints/MATH-REFINE-1-diff-summary.md
 - reports/sprints/MATH-REFINE-1-gate-handoff.md
@@ -5992,6 +6110,10 @@ Count: 4456
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
 - reports/sprints/PAYLOAD-AUTHORIZATION-WORDING-1-lead-review-round2.md
+- reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round2.md
+- reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round3.md
+- reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round4.md
+- reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round5.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.jsonl
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-command-log.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-correction-record.md
@@ -5999,6 +6121,13 @@ Count: 4456
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-plan.md
 - reports/sprints/PR-GOVERNANCE-CONVERGENCE-1-result.md
 - reports/sprints/PR-INTEGRATION-LANE-1.1-lead-review-round2.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-1-lead-review.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-1-plan.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-1-result.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-2-lead-review.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-2-plan.md
+- reports/sprints/PR-READINESS-COMMENT-TRANSPORT-RECOVERY-2-result.md
+- reports/sprints/PR207-INTEGRATION-lead-review-round1.md
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/axis-convention.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/dark-mode.png
 - reports/sprints/PRESENTATION-V2-113-GRAPH-TRANSFER-1-human-review/human-review-index.md
@@ -6953,6 +7082,32 @@ Count: 4456
 - reports/sprints/Y1-FOUNDATION-CLOSURE-REVIEW-1-result.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-plan.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-assignment.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-intermediate-recheck.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round3.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round4.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round5.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-corrections-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-corrections-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-review-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-amendment-review-round3.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-corrections.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-trigger-policy-repair-plan.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-result.md
 - reports/sprints/Y2-EVIDENCE-BACKED-TARGET-FOUNDATION-WAVE-1-plan.md
@@ -6997,7 +7152,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 746
+Count: 771
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -7006,6 +7161,19 @@ Count: 746
 - .github/workflows/cross-repo-bundle-compatibility.yml
 - .github/workflows/platform-ci.yml
 - .gitignore
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-correction-log.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-lead-review-assignment.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round1.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round2.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-plan-review-round3.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-209-plan-review.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-209-work-review.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-210-plan-review.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-post-210-work-review.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-pr-review-round1.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-pr-workflow-packet.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-sprint-plan.md
+- archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-work-review-round1.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-closure-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-correction-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-final-lead-review.md
@@ -7094,6 +7262,17 @@ Count: 746
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-lead-architecture-review.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-specialist-gate-results.md
 - archive/sprints/GOAL-IQS-OVERLAY-ARCHITECTURE-1/GOAL-IQS-OVERLAY-ARCHITECTURE-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-accessibility-inclusion-review.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-closure-record.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-correction-log.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-england-jurisdiction-source-review.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-final-lead-review.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-flanders-jurisdiction-source-review.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-lead-architecture-review.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-legal-privacy-review.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-sprint-plan.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-subagent-quality-gate-record.md
+- archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-teacher-economics-review.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-accessibility-inclusion-review.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-closure-record.md
 - archive/sprints/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1/GOAL-IQS-OWNER-DELIVERY-PROTOCOL-COMPLETION-1-correction-log.md
@@ -7651,6 +7830,7 @@ Count: 746
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- docs/workflows/legacy-full-companion-profile.md
 - docs/workflows/paragraph-lane-vocabulary.md
 - docs/workflows/paragraph-quality-ref-schema-v2.md
 - docs/workflows/textbook-paragraph-lane.md

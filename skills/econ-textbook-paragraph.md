@@ -12,7 +12,8 @@ Builds one complete textbook paragraph: theory + worked example + exercises + gr
 companion route files (`index.html`, companion HTML/PPTX, shared game data,
 `_paragraph-plan.md`, or `X.Y.Z-companion-visual-review.md`). Close the lane by
 producing `X.Y.Z-textbook-handoff.md` for the companion team. Publisher-print
-PDFs are produced only when that profile is explicitly requested.
+chapter/book handoff also remains in Part A, but paragraph PDFs are normal Part
+A human-review outputs.
 
 **Companion skills (always read first):**
 - `econ-didactiek` → pedagogical decision rules (scaffolding, dual coding, Bloom's, misconceptions) — backed by `references/authored/didactiek-principes.md`

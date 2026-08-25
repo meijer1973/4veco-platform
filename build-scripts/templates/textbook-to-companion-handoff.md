@@ -20,7 +20,9 @@
 - opgaven.md:
 - antwoorden.md:
 - HTML outputs:
-- PDF outputs, if publisher-print was in scope:
+- build_pdf.py:
+- Part A paragraph PDF outputs for human review:
+- Publisher-print chapter/book handoff evidence, if that profile was in scope:
 
 ## 3. Target Exercise And Operation Chain
 

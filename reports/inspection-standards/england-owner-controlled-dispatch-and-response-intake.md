@@ -1,0 +1,51 @@
+# England Owner-Controlled Dispatch And Response Intake
+
+Delivery status: `not_sent_owner_blocked`
+Response status: `no_response_yet`
+Response received: `false`
+
+## Product End-State And Original Spec
+
+- Product end-state: `../4veco-lessen/specifications/product-end-state.md`
+- Original sprint/gate spec: `archive/sprints/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1/GOAL-IQS-OWNER-CONTROLLED-DISPATCH-1-sprint-plan.md`
+
+## Jurisdiction Boundary
+
+England only; not the whole UK, not Scotland, not Wales, not Northern Ireland, and not all awarding bodies.
+
+## Pending Items
+
+- owner delivery proof
+- approved no-personal-data delivery channel
+- delivery timestamp
+- owner delivery reference
+- explicit response-storage consent
+- schema-passing response
+- quarantine check
+- specialist review
+- human review before response analysis
+
+## Core-Requirement Checklist
+
+| requirement | status | proof_required_to_close |
+|---|---|---|
+| Product end-state and original sprint/gate spec are cited. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| All records are bound to merged PR #203 `READY_FOR_OWNER_CONTROLLED_DISPATCH`. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| Owner continuation is recorded only for repository-bound dispatch/intake evidence, not external sending. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| Owner-controlled dispatch status is recorded for England and Flanders. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| PR #203 proof fields, delivery-status vocabulary, and intake-state vocabulary are reused. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| No owner delivery proof, timestamp, sent material, or response is invented. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| Only the approved request packet, role-only contact text, consent boundary, and response-intake instructions are sendable if proof later exists. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| No named expert, private contact details, or private dispatch endpoint is stored. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| Each jurisdiction has a strict response-intake record using the approved response schema boundary. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| Out-of-scope, personal/student/school data, forbidden claims, localized output, sufficiency claims, and authority overclaims are quarantined. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| The packet cannot proceed to expert response analysis without owner proof and accepted, consented, schema-passing responses. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| Localized output, product/school/public use, evidence packs, Scale Gate, diagnostics/mastery/PV, student/product use, legal/compliance/inspection-readiness, support/accommodation/accessibility sufficiency, school evidence, and official-authority claims remain blocked. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+| Specialist reviews, final lead review, exact-head PR readiness, green CI, branch protection ok:true, and human review remain required. | met | Generator currentness PASS, owner-controlled dispatch checker PASS, focused Jest PASS, specialist review PASS, final lead PASS, exact-head PR readiness, green CI, branch protection ok:true, and human review. |
+
+## Findings
+
+| finding | classification | blocks | does_not_block | proof_required_to_close |
+|---|---|---|---|---|
+| England dispatch/intake is recorded as not sent because no owner delivery proof exists; no response is stored or interpreted. | `core_requirement_met` | Nothing for internal human review once exact-head readiness, CI, and branch protection pass. | Owner review of the complete owner-controlled dispatch/intake packet. | Exact-head PR readiness, green CI, branch protection ok:true, and owner authorization. |
+| No owner delivery proof, sent material, consented response, schema-passing response, or accepted response exists in this workspace. | `scale_blocker` | Expert response analysis, localized output, product/school/public use, evidence packs, Scale Gate, diagnostics/mastery/PV, personal/student/school data, legal/compliance/inspection-readiness claims, support/accommodation/accessibility sufficiency claims, school evidence, and official-authority substitution. | Internal review of the honest dispatch/intake status and a later owner-run dispatch proof step. | Owner delivery proof, consented schema-passing responses, quarantine PASS, specialist review, and separate human review. |

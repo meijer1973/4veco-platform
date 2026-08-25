@@ -21,10 +21,11 @@ Path reliability:
 | How should a completed remote draft PR be routed to revise, batch, lead-only closure, human review, or pause? | `agents/pr-readiness-reviewer-agent.md`, `docs/review/pr-readiness-routing-policy.md`, `build-scripts/review-gates/review-pr-readiness.js`, `build-scripts/review-gates/route-and-apply-pr-readiness.js`, `build-scripts/review-gates/apply-pr-readiness-decision.js` |
 | How should a payload-authorized PR be serialized through base refresh, integration validation, exact-head readiness, and merge? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/review-gates/check-integration-lane-capability.js`, `docs/review/human-payload-authorization.schema.json`, `build-scripts/review-gates/check-human-payload-authorization.js`, `build-scripts/review-gates/integrate-authorized-pr.js`, `.github/workflows/authorized-pr-integration.yml` |
 | How should current branch protection and optional `integration-authorized` audit status be verified? | `docs/review/pr-integration-lane-policy.md`, `build-scripts/ci/check-branch-protection.js`, `build-scripts/review-gates/integrate-authorized-pr.js` |
-| How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
+| How should a paired platform/lesson PR bundle be compatibility-checked and merged as one unit? | `docs/review/pr-integration-lane-policy.md`, `.github/workflows/cross-repo-bundle-compatibility.yml`, `.github/workflows/authorized-bundle-integration.yml`, `build-scripts/review-gates/cross-repo-bundle-compatibility.js`, `build-scripts/review-gates/check-human-bundle-authorization.js`, `build-scripts/review-gates/refresh-bundle-agent-indexes.js`, `build-scripts/review-gates/integrate-authorized-bundle.js` |
 | How should active governance wording, pre-work governance freshness, and finalization freshness be verified? | `build-scripts/review-gates/check-active-governance-wording.js`, `build-scripts/review-gates/check-governance-freshness.js`, `build-scripts/review-gates/finalization-freshness-proof.js`, `.github/workflows/platform-ci.yml` |
+| How should the first-three Golden controlled-wave surface set and its exact committed PR scope be verified? | `docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md`, `references/data/exercises/y1-golden-rollout-wave-1.json`, `build-scripts/sprints/check-y1-golden-rollout-wave-1.js`, `reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json`, `reports/json/y1-golden-rollout-wave-1-proof.json` |
 | How should test commands, validator results, and residual testing risk be reported? | `agents/testing-agent.md` |
-| How should paragraph work be split between Part A/textbook and Part B/companion/student-web production? | `docs/workflows/paragraph-lane-vocabulary.md`, `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js` |
+| How should paragraph work be split between Part A/textbook and Part B/companion/student-web production? | Start with `docs/workflows/paragraph-lane-vocabulary.md` and the two lane runbooks. Part A PDF readiness and paragraph-type rules: `build-scripts/workflows/check-part-a-pdf-readiness.js`, `scripts/lib/paragraph-types.js`. Opt-in Part B legacy profile: `docs/workflows/legacy-full-companion-profile.md`. Shared two-lane wording guardrail: `build-scripts/workflows/check-paragraph-workflow-wording.js`. Supporting surfaces: `docs/workflows/textbook-paragraph-lane.md`, `docs/workflows/web-companion-paragraph-lane.md`, `docs/workflows/paragraph-quality-ref-schema-v2.md`, `build-scripts/templates/textbook-to-companion-handoff.md`, `build-scripts/workflows/check-paragraph-lane-scope.js`. These are surfaces within exactly two lanes, not additional lanes. |
 | How should accessibility, readability, contrast, alt text, OCR, or keyboard access be reviewed? | `agents/accessibility-agent.md` |
 | How should learning goals, prior knowledge, didactic sequence, formative feedback, differentiation, transfer, retention, or classroom readiness be reviewed? | `agents/teacher-learning-quality-review-agent.md` |
 | How should student orientation, affordance, cognitive load, motivation, confusion risks, graph understandability, or student readiness be reviewed? | `agents/student-experience-review-agent.md` |
@@ -33,6 +34,7 @@ Path reliability:
 | Which book/chapter/paragraph files are published now? | `4veco-lessen` |
 | Are references, validators, roadmaps, or sprint reports current? | `4veco-platform` |
 | How should inspection/accountability evidence work be scoped? | `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`, `docs/roadmaps/quality-standards/sprint-ledger.md`, `docs/roadmaps/quality-standards/quality-standards-end-state.md`, `references/data/inspection-standards/source-register.json`, `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`, `docs/inspection-standards/nl-vo-evidence-model.md`, `references/SOURCE_OF_TRUTH.md`, `4veco-lessen/specifications/product-end-state.md` |
+| How should international common-core, jurisdiction-overlay, or local-expert evidence work be scoped? | `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`, `docs/roadmaps/quality-standards/sprint-ledger.md`, `docs/roadmaps/roadmap-version-index.json`, and the named England/Flanders reports under `reports/inspection-standards/` |
 | Is a copied `shared/` engine file authoritative? | `4veco-platform` |
 | How should official exam-question ingestion, source annexes, correction models, or answer-model decomposition be handled? | `AGENTS.md`, `references/SOURCE_OF_TRUTH.md`, `references/data/exercises/README.md`, `references/reference-team-roadmap.md` |
 
@@ -58,9 +60,13 @@ Useful entry points:
 - `docs/workflows/paragraph-lane-vocabulary.md`
 - `docs/workflows/textbook-paragraph-lane.md`
 - `docs/workflows/web-companion-paragraph-lane.md`
+- `docs/workflows/legacy-full-companion-profile.md`
 - `docs/workflows/paragraph-quality-ref-schema-v2.md`
 - `build-scripts/templates/textbook-to-companion-handoff.md`
+- `build-scripts/workflows/check-part-a-pdf-readiness.js`
+- `build-scripts/workflows/check-paragraph-workflow-wording.js`
 - `build-scripts/workflows/check-paragraph-lane-scope.js`
+- `scripts/lib/paragraph-types.js`
 - `build-scripts/README.md`
 - `agents/README.md`
 - `agents/lead-reviewer-agent.md`
@@ -87,8 +93,10 @@ Useful entry points:
 - `build-scripts/review-gates/finalization-freshness-proof.js`
 - `build-scripts/review-gates/cross-repo-bundle-compatibility.js`
 - `build-scripts/review-gates/check-human-bundle-authorization.js`
+- `build-scripts/review-gates/refresh-bundle-agent-indexes.js`
 - `build-scripts/review-gates/integrate-authorized-bundle.js`
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
+- `docs/roadmaps/quality-standards/international-quality-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
 - `references/owned/course-blueprint-v6-three-year.md` (draft three-year blueprint; v5 remains active until review)
@@ -120,6 +128,8 @@ Task-routing guidance:
   governance or workflow changes.
 - Use the cross-repo bundle compatibility workflow and authorized bundle
   integration workflow when a platform PR and lesson PR must land as one
-  coordinated payload. If both members are still draft but substantively ready,
-  run `npm.cmd run apply:bundle-readiness` from the controller decision before
-  requesting bundle merge authorization.
+  coordinated payload. The trusted lesson-first path uses
+  `build-scripts/review-gates/refresh-bundle-agent-indexes.js` after the lesson
+  merge and before refreshed-head platform validation. If both members are
+  still draft but substantively ready, run `npm.cmd run apply:bundle-readiness`
+  from the controller decision before requesting bundle merge authorization.

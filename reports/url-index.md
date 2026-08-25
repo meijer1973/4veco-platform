@@ -20,7 +20,11 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-lane-vocabulary.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/legacy-full-companion-profile.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-quality-ref-schema-v2.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-pdf-readiness.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-workflow-wording.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/lib/paragraph-types.js
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/AGENTS.md
 
 ## PR Governance
@@ -35,6 +39,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/review-pr-readiness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-pr-readiness-decision.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/apply-bundle-readiness-decision.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/refresh-bundle-agent-indexes.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-human-payload-authorization.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lineage.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/review-gates/check-integration-lane-capability.js
@@ -45,6 +50,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
@@ -53,6 +59,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 ## Inspection Standards
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/international-quality-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/sprint-ledger.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
@@ -185,6 +192,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-blind-holdout-execution-and-closure-readiness-bundle-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-nonprotected-execution-and-protected-governance-authorization-bundle-2/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-operation-registry-governance-and-holdout-adjudication-bundle-1/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H7-q5-graph-execution-and-protected-governance-bundle-3/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -212,3 +220,9 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX6-skilltree-generator-integration/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md
+
+## Golden Controlled-Wave Evidence
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/json/y1-golden-rollout-wave-1-proof.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json

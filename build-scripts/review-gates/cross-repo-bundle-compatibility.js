@@ -1,6 +1,13 @@
 #!/usr/bin/env node
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const {
+  ACTUAL_CHANGED_PATHS_POLICY,
+  INDEX_PATHS,
+  TRUSTED_FRESHNESS_CHECKER,
+  TRUSTED_GENERATOR,
+} = require('./refresh-bundle-agent-indexes');
 
 const SHA_PATTERN = /^[a-f0-9]{40}$/i;
 const STATES = Object.freeze({
@@ -10,6 +17,223 @@ const STATES = Object.freeze({
 });
 const STATE_VALUES = new Set(Object.values(STATES));
 const SUCCESS_VALUES = new Set(['success', 'succeeded', 'passed', 'pass', 'ok']);
+
+function lessonFirstIntegrationContract() {
+  return {
+    schema_version: 2,
+    order: STATES.LESSON_FIRST,
+    post_first_merge_refresh: {
+      required: true,
+      phase: 'after_lesson_merge_before_platform_ci',
+      source: 'lesson_merge_commit',
+      trusted_executor: 'platform-main',
+      generator: TRUSTED_GENERATOR,
+      freshness_checker: TRUSTED_FRESHNESS_CHECKER,
+      generated_and_verified_paths: [...INDEX_PATHS],
+      actual_changed_paths_policy: ACTUAL_CHANGED_PATHS_POLICY,
+      deterministic_inputs: [
+        'platform_refresh_parent_sha',
+        'lesson_merge_commit_sha',
+        'lesson_merge_committer_timestamp',
+        'canonical_source_branches',
+      ],
+      exact_readiness_head: 'platform_integration_head_sha',
+      exact_ci_binding: {
+        platform_sha: 'platform_integration_head_sha',
+        lesson_sha: 'lesson_merge_commit_sha',
+      },
+    },
+  };
+}
+
+function validateIntegrationContract(contract) {
+  const expected = lessonFirstIntegrationContract();
+  const failures = [];
+  if (!contract || typeof contract !== 'object') {
+    return { ok: false, failures: ['lesson-first integration_contract missing'], contract: null };
+  }
+  const refresh = contract.post_first_merge_refresh || {};
+  if (contract.schema_version !== expected.schema_version) failures.push('integration_contract schema_version mismatch');
+  if (contract.order !== expected.order) failures.push('integration_contract order mismatch');
+  for (const key of ['required', 'phase', 'source', 'trusted_executor', 'generator', 'freshness_checker', 'exact_readiness_head']) {
+    if (refresh[key] !== expected.post_first_merge_refresh[key]) {
+      failures.push(`integration_contract ${key} mismatch`);
+    }
+  }
+  if (!sameStringArray(refresh.generated_and_verified_paths, expected.post_first_merge_refresh.generated_and_verified_paths)) {
+    failures.push('integration_contract generated_and_verified_paths mismatch');
+  }
+  if (refresh.actual_changed_paths_policy !== expected.post_first_merge_refresh.actual_changed_paths_policy) {
+    failures.push('integration_contract actual_changed_paths_policy mismatch');
+  }
+  if (!sameStringArray(refresh.deterministic_inputs, expected.post_first_merge_refresh.deterministic_inputs)) {
+    failures.push('integration_contract deterministic_inputs mismatch');
+  }
+  const ci = refresh.exact_ci_binding || {};
+  if (ci.platform_sha !== expected.post_first_merge_refresh.exact_ci_binding.platform_sha) {
+    failures.push('integration_contract platform CI binding mismatch');
+  }
+  if (ci.lesson_sha !== expected.post_first_merge_refresh.exact_ci_binding.lesson_sha) {
+    failures.push('integration_contract lesson CI binding mismatch');
+  }
+  return { ok: failures.length === 0, failures, contract };
+}
+
+function validateIntegrationRefreshProof(proof, options = {}) {
+  const item = proof || {};
+  const compatibility = options.compatibility || {};
+  const exact = compatibility.exact_members || options.exactMembers || {};
+  const failures = [];
+  const refreshResult = item.refresh_result || {};
+  const lineage = item.lineage || {};
+  const readiness = item.readiness || {};
+  const ci = item.ci || {};
+  if (item.status !== 'complete') failures.push('integration_refresh status must be complete');
+  if (item.order !== STATES.LESSON_FIRST) failures.push('integration_refresh order mismatch');
+  if (item.platform_payload_sha !== exact.platform_candidate_sha) failures.push('integration_refresh platform payload mismatch');
+  if (item.lesson_payload_sha !== exact.lesson_candidate_sha) failures.push('integration_refresh lesson payload mismatch');
+  requireSha(item.platform_integration_head_sha, 'integration_refresh platform_integration_head_sha', failures);
+  requireSha(item.lesson_merge_commit_sha, 'integration_refresh lesson_merge_commit_sha', failures);
+  if (item.platform_integration_head_sha === item.platform_payload_sha) {
+    failures.push('integration_refresh head must be a descendant, not the payload head');
+  }
+  if (item.lesson_merge_commit_sha === item.lesson_payload_sha) {
+    failures.push('integration_refresh lesson merge commit must differ from payload head');
+  }
+  if (options.controllerHead && item.platform_integration_head_sha !== options.controllerHead) {
+    failures.push('integration_refresh controller head mismatch');
+  }
+  if (options.lessonMergeSha && item.lesson_merge_commit_sha !== options.lessonMergeSha) {
+    failures.push('integration_refresh lesson main mismatch');
+  }
+  if (refreshResult.trusted_executor !== 'platform-main') failures.push('integration_refresh executor mismatch');
+  if (!['created', 'reused'].includes(refreshResult.status)) failures.push('integration_refresh result status mismatch');
+  if (refreshResult.platform_integration_head_sha !== item.platform_integration_head_sha) {
+    failures.push('integration_refresh result head mismatch');
+  }
+  if (refreshResult.lesson_merge_commit_sha !== item.lesson_merge_commit_sha) {
+    failures.push('integration_refresh result lesson mismatch');
+  }
+  requireSha(refreshResult.previous_platform_head_sha, 'integration_refresh previous platform head', failures);
+  const metadata = refreshResult.metadata || {};
+  const commit = refreshResult.commit || {};
+  if (metadata.platform_source_commit !== refreshResult.previous_platform_head_sha) {
+    failures.push('integration_refresh platform source commit mismatch');
+  }
+  if (typeof metadata.platform_source_branch !== 'string' || !metadata.platform_source_branch.trim()) {
+    failures.push('integration_refresh platform source branch missing');
+  }
+  if (metadata.lesson_source_commit !== item.lesson_merge_commit_sha) {
+    failures.push('integration_refresh lesson source commit mismatch');
+  }
+  if (metadata.lesson_source_branch !== 'origin/main') {
+    failures.push('integration_refresh lesson source branch mismatch');
+  }
+  if (!metadata.generated_at || Number.isNaN(Date.parse(metadata.generated_at))) {
+    failures.push('integration_refresh generated_at invalid');
+  }
+  if (options.platformBranch && metadata.platform_source_branch !== options.platformBranch) {
+    failures.push('integration_refresh platform source branch mismatch');
+  }
+  if (!isNonEmptyIndexSubset(refreshResult.changed_paths)) failures.push('integration_refresh changed paths invalid');
+  if (!sameStringArray(refreshResult.verified_paths, INDEX_PATHS)) failures.push('integration_refresh verified paths mismatch');
+  if (commit.sha !== item.platform_integration_head_sha) failures.push('integration_refresh commit head mismatch');
+  if (commit.parent_sha !== refreshResult.previous_platform_head_sha) failures.push('integration_refresh commit parent mismatch');
+  if (!sameStringArray(commit.changed_paths, refreshResult.changed_paths)) {
+    failures.push('integration_refresh commit paths mismatch');
+  }
+  const hashes = refreshResult.hashes || {};
+  if (!INDEX_PATHS.every((file) => /^[a-f0-9]{64}$/i.test(String(hashes[file] || '')))) {
+    failures.push('integration_refresh deterministic hashes missing');
+  }
+  if (
+    lineage.reviewed_payload_head_sha !== item.platform_payload_sha ||
+    lineage.integration_head_sha !== item.platform_integration_head_sha ||
+    lineage.payload_ancestor_of_integration_head !== true ||
+    lineage.authorization_inherited !== true ||
+    asArray(lineage.failures).length > 0
+  ) {
+    failures.push('integration_refresh lineage invalid');
+  }
+  if (
+    readiness.head_sha !== item.platform_integration_head_sha ||
+    !['READY_FOR_LEAD_ONLY', 'READY_FOR_HUMAN_REVIEW'].includes(readiness.route) ||
+    readiness.attestation_schema_version !== 2 ||
+    !/^sha256:[a-f0-9]{64}$/i.test(String(readiness.attestation_digest || ''))
+  ) {
+    failures.push('integration_refresh readiness invalid');
+  } else if (readiness.attestation_digest !== integrationRefreshReadinessAttestationDigest(item)) {
+    failures.push('integration_refresh readiness attestation mismatch');
+  }
+  if (
+    !isSuccess(ci.status) ||
+    ci.platform_sha !== item.platform_integration_head_sha ||
+    ci.lesson_sha !== item.lesson_merge_commit_sha
+  ) {
+    failures.push('integration_refresh CI binding invalid');
+  }
+  const readinessDecision = options.readinessDecision;
+  if (readinessDecision && (
+    !readinessDecision.reviewed_pr ||
+    readinessDecision.reviewed_pr.head_sha !== readiness.head_sha ||
+    readinessDecision.route !== readiness.route
+  )) {
+    failures.push(
+      `integration_refresh readiness decision mismatch (attested ${readiness.head_sha || 'missing'} ` +
+      `${readiness.route || 'missing'}, decision ` +
+      `${(readinessDecision.reviewed_pr && readinessDecision.reviewed_pr.head_sha) || 'missing'} ` +
+      `${readinessDecision.route || 'missing'})`
+    );
+  }
+  return { ok: failures.length === 0, failures, proof: item };
+}
+
+function stableStringify(value) {
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function integrationRefreshReadinessAttestationDigest(proof) {
+  const item = proof || {};
+  const readiness = item.readiness || {};
+  const refreshResult = item.refresh_result || {};
+  const ci = item.ci || {};
+  const canonical = {
+    schema_version: 2,
+    order: item.order,
+    platform_payload_sha: item.platform_payload_sha,
+    platform_integration_head_sha: item.platform_integration_head_sha,
+    lesson_payload_sha: item.lesson_payload_sha,
+    lesson_merge_commit_sha: item.lesson_merge_commit_sha,
+    refresh_status: refreshResult.status,
+    refresh_parent_sha: refreshResult.previous_platform_head_sha,
+    refresh_changed_paths: refreshResult.changed_paths,
+    refresh_verified_paths: refreshResult.verified_paths,
+    refresh_hashes: refreshResult.hashes,
+    refresh_metadata: refreshResult.metadata,
+    readiness_head_sha: readiness.head_sha,
+    readiness_route: readiness.route,
+    ci_status: ci.status,
+    ci_platform_sha: ci.platform_sha,
+    ci_lesson_sha: ci.lesson_sha,
+    ci_run_id: ci.run_id || null,
+  };
+  return `sha256:${crypto.createHash('sha256').update(stableStringify(canonical)).digest('hex')}`;
+}
+
+function sameStringArray(left, right) {
+  const normalize = (value) => asArray(value).map(String).sort();
+  return JSON.stringify(normalize(left)) === JSON.stringify(normalize(right));
+}
+
+function isNonEmptyIndexSubset(values) {
+  const raw = asArray(values).map(String);
+  const normalized = [...new Set(raw)].sort();
+  return raw.length > 0 && normalized.length === raw.length && normalized.every((item) => INDEX_PATHS.includes(item));
+}
 
 function fail(message) {
   console.error(`Cross-repo bundle compatibility failed: ${message}`);
@@ -111,7 +335,7 @@ function collectExactMembers(states) {
   };
 }
 
-function summarizeCompatibility(input) {
+function summarizeCompatibility(input, options = {}) {
   const failures = [];
   const rawStates = Array.isArray(input.states)
     ? input.states
@@ -191,9 +415,14 @@ function summarizeCompatibility(input) {
   const recommendedMergeOrder = permittedMergeOrders.includes('lesson-first')
     ? 'lesson-first'
     : permittedMergeOrders[0] || null;
+  const integrationContract = input.integration_contract || (
+    options.synthesizeIntegrationContract === false ? null : lessonFirstIntegrationContract()
+  );
+  const contractValidation = validateIntegrationContract(integrationContract);
+  failures.push(...contractValidation.failures);
 
   return {
-    schema_version: 1,
+    schema_version: 2,
     bundle_id: bundleId || null,
     exact_members: exactMembers,
     states: {
@@ -203,6 +432,7 @@ function summarizeCompatibility(input) {
     },
     permitted_merge_orders: permittedMergeOrders,
     recommended_merge_order: recommendedMergeOrder,
+    integration_contract: integrationContract,
     commands: rawStates.flatMap((state) => asArray(state.commands)),
     provenance: input.provenance || null,
     ok: failures.length === 0,
@@ -211,7 +441,7 @@ function summarizeCompatibility(input) {
 }
 
 function validateCompatibilityProof(proof, options = {}) {
-  const summary = summarizeCompatibility(proof || {});
+  const summary = summarizeCompatibility(proof || {}, { synthesizeIntegrationContract: false });
   const failures = [...summary.failures];
   if (options.bundleId && summary.bundle_id !== options.bundleId) {
     failures.push(`bundle_id mismatch: expected ${options.bundleId}`);
@@ -307,7 +537,11 @@ if (require.main === module) {
 module.exports = {
   STATES,
   isSuccess,
+  lessonFirstIntegrationContract,
+  integrationRefreshReadinessAttestationDigest,
   stateResult,
   summarizeCompatibility,
+  validateIntegrationContract,
+  validateIntegrationRefreshProof,
   validateCompatibilityProof,
 };

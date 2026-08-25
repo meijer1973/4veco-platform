@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "name": "Year 1 Golden Rollout Wave 1 Current-Main Renewal",
+  "status": "completed",
+  "completed": "2026-08-23",
+  "completed_on": "2026-08-23",
+  "verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
+  "result_status": "completed_pending_human_review",
+  "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+  "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
+  "result": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
+  "diff_summary": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
+  "final_verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "source_data_mutation_executed": false,
+  "exit_ticket_source_data_changed": false,
+  "engine_behavior_changed": false,
+  "lesson_repository_changed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md",
+    "round3": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round3.md",
+    "round4": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round4.md",
+    "round5": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round5.md",
+    "round6": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md",
+    "round1_verdict": "REVISE_IMPLEMENTATION",
+    "round2_verdict": "PASS WITH FLAGS",
+    "round3_verdict": "PASS WITH FLAGS",
+    "round4_verdict": "PASS WITH FLAGS",
+    "round5_verdict": "PASS WITH FLAGS",
+    "round6_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "findings": [
+      {
+        "id": "Y1-LEAD-R1-SCOPE",
+        "description": "Renewal scope now conditions only the renewal allowlist and evidence-tail restriction while stable state validation always runs.",
+        "classification": "core_requirement_met",
+        "evidence": "Final checker control flow plus synthetic full-mode pass and rendered-drift rejection.",
+        "blocks": "Nothing; the original finding is resolved.",
+        "does_not_block": "Implementation closure and PR handoff.",
+        "proof_required_to_close": "Closed by the 26-test focused suite and final lead reinspection."
+      },
+      {
+        "id": "Y1-LEAD-R1-AUTHORITY",
+        "description": "Automatic repository-wide migration is held across every authority surface.",
+        "classification": "core_requirement_met",
+        "evidence": "Shared false assertion across wave, packet, proof, and result plus negative fixture.",
+        "blocks": "Nothing; the original finding is resolved.",
+        "does_not_block": "Implementation closure and rendered proof reuse.",
+        "proof_required_to_close": "Closed by authority negative tests and final lead reinspection."
+      },
+      {
+        "id": "Y1-LEAD-R1-ROADMAP",
+        "description": "The active reference roadmap records accepted target readiness, held completion language, and prior review work as historical.",
+        "classification": "core_requirement_met",
+        "evidence": "Current roadmap wording plus semantic stale-state tests.",
+        "blocks": "Nothing; the original finding is resolved.",
+        "does_not_block": "Implementation closure and screenshot evidence.",
+        "proof_required_to_close": "Closed by roadmap semantic tests and final lead reinspection."
+      },
+      {
+        "id": "Y1-LEAD-R1-BINDING",
+        "description": "Packet PR fields and packet/proof/delta payload fields are cross-bound.",
+        "classification": "core_requirement_met",
+        "evidence": "PR URL/number and packet/proof/delta payload cross-binding with mismatch fixtures.",
+        "blocks": "Nothing; the original finding is resolved.",
+        "does_not_block": "Implementation closure and draft PR preparation.",
+        "proof_required_to_close": "Closed by mismatch fixtures and final lead reinspection."
+      },
+      {
+        "id": "Y1-LEAD-R1-CLOSURE",
+        "description": "Closure artifacts and generated navigation are current and staged.",
+        "classification": "core_requirement_met",
+        "evidence": "Current result, packet, command log, indexes, URL index, and dashboard.",
+        "blocks": "Nothing; the original finding is resolved.",
+        "does_not_block": "Implementation closure and publication readiness.",
+        "proof_required_to_close": "Closed by complete staging and final lead reinspection."
+      },
+      {
+        "id": "Y1-LEAD-R1-LINE-ENDINGS",
+        "description": "Exercise-authority hygiene exposes a pre-existing LF/CRLF manifest-hash portability mismatch locally.",
+        "classification": "minor_carry_flag",
+        "evidence": "Logged local checker failure and zero-diff proof for the manifest and fixture paths.",
+        "blocks": "Claiming clean local cross-platform authority-hygiene validation.",
+        "does_not_block": "This renewal if exact-head remote validate-platform passes.",
+        "proof_required_to_close": "Exact-head remote CI; repair hash portability in separate scope."
+      }
+    ],
+    "flags": [
+      {
+        "id": "Y1-LEAD-F1-LINE-ENDINGS",
+        "description": "Local authority-hygiene hashes expose a pre-existing LF/CRLF fixture portability mismatch.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "platform CI owner",
+        "next_action": "Require exact-head remote validate-platform and repair portability separately.",
+        "blocks": "Claiming clean local cross-platform authority-hygiene validation.",
+        "does_not_block": "Human review and integration of this renewal after exact-head remote CI passes.",
+        "proof_required_to_close": "Successful validate-platform on the exact remote PR head.",
+        "blocking": false
+      },
+      {
+        "id": "Y1-LEAD-F2-DOWNSTREAM-AUTHORITY",
+        "description": "Actual rollout, route adoption, completion language, automatic migration, and student/product use remain outside this guard renewal.",
+        "classification": "scale_blocker",
+        "disposition": "product_scale_blocker",
+        "owner": "future product-authority gate owner",
+        "next_action": "Use separate authorized gates with current source, generated, and rendered evidence.",
+        "blocks": "Downstream rollout/adoption and product/student authority only.",
+        "does_not_block": "Review and integration of the current-main workflow-availability guard.",
+        "proof_required_to_close": "Separate owner-authorized rollout/adoption and student-use gate evidence.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md", "status": "passed" },
+    { "command": "npm.cmd test -- --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js", "status": "passed" },
+    { "command": "npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base b7ec603880bcd8cc98c93526121ca71d3f31edcd --head HEAD --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head 96c0970f45739a8758cf7e932c6bce77806cd68d --allow-unbound-packet", "status": "passed" },
+    { "command": "npm.cmd run check:platform", "status": "passed" },
+    { "command": "npm.cmd run check:exercise-workflow-currentness", "status": "passed" },
+    { "command": "npm.cmd run check:scale-proof-3p-product-path", "status": "passed" },
+    { "command": "npm.cmd run check:review-throughput -- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json", "status": "passed" },
+    { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" },
+    { "command": "node build-scripts/references/check-roadmap-version-index.js", "status": "passed" },
+    { "command": "node build-scripts/sprints/emit-url-index.js --check", "status": "passed" },
+    { "command": "npm.cmd run check:agent-index-freshness", "status": "passed" },
+    { "command": "npm.cmd run check:scope-language", "status": "passed" },
+    { "command": "git diff --check HEAD", "status": "passed" },
+    { "command": "git -C \"C:\\\\Projects\\\\4veco-worktrees\\\\Y1-GOLDEN-ROLLOUT-WAVE-RENEWAL-1-20260823\\\\4veco-lessen\" diff --check", "status": "passed" },
+    { "command": "npm.cmd run check:exercise-authority-hygiene", "status": "skipped_with_reason", "reason": "Local LF/CRLF fixture-hash portability mismatch is pre-existing; exact-head remote validate-platform is required." },
+    { "command": "git diff --exit-code b7ec603880bcd8cc98c93526121ca71d3f31edcd..HEAD -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html", "status": "passed" }
+  ],
+  "product_boundaries": {
+    "controlled_wave_eligibility": true,
+    "actual_rollout_or_adoption": false,
+    "automatic_repository_wide_migration": false,
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "student_product_use": false,
+    "broad_scaling": false
+  },
+  "supersession": {
+    "old_pr": 205,
+    "old_head_sha": "571d435a172240524ed96394a41682ef003bfcad",
+    "replacement_pr": 214,
+    "replacement_pr_url": "https://github.com/meijer1973/4veco-platform/pull/214",
+    "supersession_comment_url": "https://github.com/meijer1973/4veco-platform/pull/205#issuecomment-5387272832",
+    "old_pr_closed": true
+  },
+  "authorized_next": [
+    "Complete exact-head CI, live branch-protection, lead, and PR Readiness Reviewer proof for replacement PR #214.",
+    "Return the exact-head L4 packet for human review; do not merge without owner authorization."
+  ]
+}

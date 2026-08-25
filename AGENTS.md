@@ -390,6 +390,9 @@ For paired platform/lesson work:
   payload SHAs in the PR evidence;
 - run `.github/workflows/cross-repo-bundle-compatibility.yml` for
   `platform-first`, `lesson-first`, and `bundle-final`;
+- keep compatibility `exact_members` bound to the immutable reviewed payload
+  heads, and require its lesson-first contract to declare the trusted
+  post-lesson-merge index refresh;
 - require `bundle-final` green plus at least one green intermediate state;
 - when both members are draft but substantively ready, use
   `npm.cmd run apply:bundle-readiness` to post exact-head member readiness
@@ -400,6 +403,33 @@ For paired platform/lesson work:
 - merge through `.github/workflows/authorized-bundle-integration.yml` or
   `npm.cmd run integrate:authorized-bundle`, which uses the serialized
   `4veco-main-integration` lane and exact expected heads.
+
+For a lesson-first bundle, the verified lesson merge commit becomes the exact
+lesson source for a deterministic generated-index descendant of the reviewed
+platform payload. Before platform PR CI, the lane must use trusted platform
+`main` generator and freshness-checker code in isolated exact-SHA checkouts,
+allow only the four `reports/github-agent-index-{platform,lessen}.{json,md}`
+paths, push/refetch the descendant without force, rebuild lineage, and publish
+readiness for that exact integration head. Platform PR CI must bind that head
+to the lesson merge commit. Keep the immutable compatibility proof separate
+from this runtime `integration_refresh` proof. A retry with
+`--allow-partial-resume` must reuse a valid existing refresh commit; missing,
+stale, mixed-SHA, or tampered refresh evidence stops before platform merge.
+If refreshed lineage requires an integration-delta lead review, the immutable
+payload lead review remains bound to the reviewed payload SHA and the exact-head
+review is carried separately as `proof.integration.delta_review`. Supply that
+review as JSON with `--delta-review <file>` only after the final terminal index
+head exists; it must pass and bind both the reviewed payload and exact current
+integration head. A missing, malformed, stale, wrong-payload, wrong-head,
+non-passing, or unexpected delta review stops before readiness attestation,
+publication, or merge. The hosted bundle workflow does not transport local
+review files, so delta-required partial resume must use the owner-authenticated
+local trusted-main lane; invoking the hosted path without that evidence fails
+closed and does not waive the review. A delta-required dry-run also fails
+explicitly because it cannot publish and re-fetch the exact integration-head
+readiness needed to establish this gate.
+Do not execute candidate-branch generators or hooks in this privileged phase.
+Final platform `main` CI after both merges remains mandatory.
 
 Lesson bundle members consume delegated controller proof. Do not require a
 lesson-repository commit to carry a standalone platform branch-protection
@@ -492,7 +522,7 @@ A student working through all materials for one paragraph should feel like they'
 
 **How to enforce:** The `_paragraph-plan.md` contains a **procedure-stappen-plan** that defines the canonical step sequence for each skill. All builders — vaardigheden, stappenplan game, presentatie, inoefening — must follow these exact steps. A **visual-variants plan** maps each concept visual to its surface-specific files, and a **visuelen-toewijzing** table maps those variants to every builder that must embed them.
 
-For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for student-facing companion artifacts (uitleg voorkennis, uitleg vaardigheden, begeleide inoefening, stappenplan, instapquiz, redeneer-spel, nieuws-detective, differentiated exercise handouts, and the PPTX presentation route). DOCX companion exports are opt-in Office/legacy profile work. PDF output belongs to Part A / publisher-print unless a future human decision creates a separate PDF lane. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
+For companion artifact **authoring and regeneration**, use `skills/econ-companion-artifacts.md`. It is the platform-wide standard for the 14-file Part B `student-web` validation baseline (the paragraph route/index, companion HTML and games, and presentation HTML/PPTX), the wider product route, and explicitly scoped exports. Treat the 14 files as a validator baseline, not as proof that the full product route is complete: the current end state is `Start -> Leer -> Check -> Oefen -> Exit ticket`, with an advisory short check and a separate target-equivalent exit ticket. The `office`/`legacy-full` profiles add 13 DOCX files, including differentiated handouts; those exports are not part of the default baseline. Paragraph PDFs and `build_pdf.py` are normal Part A textbook outputs for human review; `publisher-print` remains the later Part A chapter/book handoff profile, not a separate lane or the only PDF gate. Builder skills (`econ-explainer-docs`, `econ-exercise-builder`, `econ-pptx-templates`, etc.) inherit those rules; if a builder skill conflicts, the companion-artifacts skill wins on student-facing rules.
 
 For companion artifact **review**, use `agents/econ-companion-visual-review.md`. It checks the rendered student experience, not just source files: visual-text synchronization, procedure fidelity, affordance, cognitive load, accessibility, and source-output parity. A companion surface with missing visual variants, conflicting visual/text examples, broken procedure steps, debug labels, or no next-step routing is not done. The skill above and this agent are aligned: the skill is the authoring spec, the agent is the closure gate.
 

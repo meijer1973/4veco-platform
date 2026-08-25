@@ -204,6 +204,14 @@ machine-readable JSON:
 - `lesson-first`: platform main/base plus lesson candidate head.
 - `bundle-final`: platform candidate head plus lesson candidate head.
 
+Those `exact_members` are immutable reviewed payload coordinates. A
+lesson-first result must also carry the canonical order-specific integration
+contract declaring that the runtime lane will refresh the generated agent
+indexes after the lesson merge and before platform PR CI. The matrix runs the
+trusted platform-`main` generator and freshness checker against explicit
+candidate roots for each simulated state; candidate-branch scripts are not
+trusted or executed.
+
 A bundle may merge only when `bundle-final` is green and at least one
 intermediate state is green. If neither intermediate state is green, neither PR
 may merge until a compatibility bridge makes one order safe.
@@ -254,10 +262,57 @@ Use `.github/workflows/authorized-bundle-integration.yml` or
 workflow uses the same `4veco-main-integration` queue as single-PR integration,
 downloads the explicit compatibility summary, validates the bundle
 authorization, re-fetches both PRs and both `main` refs, selects only a proven
-merge order, merges the first member at its expected head, verifies the
-intermediate platform CI state, refreshes/revalidates the second member when
-needed, merges the second member, and requires final platform CI against final
-platform `main` plus final lesson `main`.
+merge order, merges the first member at its expected head, refreshes and
+revalidates the second member when needed, verifies the exact intermediate
+platform CI state, merges the second member, and requires final platform CI
+against final platform `main` plus final lesson `main`.
+
+For lesson-first order, the lesson merge commit normally differs from the
+reviewed lesson payload SHA. After verifying that merge commit, the lane skips
+the now-stale platform-`main` intermediate check. Trusted platform-`main` code
+clones the exact platform head and exact lesson merge commit into isolated
+checkouts, regenerates the four
+`reports/github-agent-index-{platform,lessen}.{json,md}` files with canonical
+source labels and the lesson merge committer timestamp, runs the trusted
+freshness checker, repeats generation to prove deterministic hashes, and
+permits no other generated paths. The resulting commit must change a non-empty
+subset of those four files; files whose canonical bytes are already current
+remain unchanged. The lane verifies all four outputs and their hashes, verifies
+the commit's exact parent and actual path subset before push and after refetch,
+then pushes the index-only fast-forward descendant and verifies payload lineage.
+It then runs platform PR CI bound to the refreshed platform head and
+lesson merge commit, rebuilds exact-head readiness, and repeats the final live
+head, base, review, mergeability, and CI checks before platform merge. No
+candidate checkout script or hook is executed by this privileged refresh.
+
+Compatibility remains an immutable payload proof. The runtime lane records a
+separate validated `integration_refresh` proof binding payload SHAs, lesson
+merge commit, refreshed platform head, the actual non-empty changed-path
+subset, all four verified paths and deterministic file hashes, lineage,
+exact-head readiness, and exact CI coordinates. Partial resume is explicit and
+idempotent: `--allow-partial-resume` may verify an already-merged lesson and
+reuse the one valid refresh descendant, while stale or tampered descendants,
+mixed SHAs, or any non-fast-forward movement fail closed. Final platform-main
+CI after both member merges is unchanged.
+
+When refreshed platform lineage reports substantive base overlap requiring an
+integration-delta lead review, dual review binding is mandatory. The canonical
+payload lead review remains bound to the immutable platform candidate; a
+separate JSON record supplied as `--delta-review <file>` must pass and bind that
+payload plus the exact final platform integration head. The lane validates this
+record before constructing the schema-v2 readiness attestation, calling the
+readiness router, publishing a comment, or merging. Missing, malformed,
+wrong-payload, wrong-head, non-passing, or unexpected delta evidence fails
+closed. Create the record only after the terminal generated-index head exists;
+any later head movement invalidates it.
+
+The hosted `authorized-bundle-integration` dispatch does not transport local
+review files. Delta-required resumes therefore use the owner-authenticated local
+trusted-main command. A hosted invocation without the required record must stop
+at the delta-review gate; workflow dispatch is not an evidence waiver. A dry-run
+whose current platform lineage requires a delta review must return an explicit
+failure rather than report a simulated `merged_bundle`: it cannot publish and
+re-fetch exact integration-head readiness.
 
 Cross-repository bundle mutations use `CROSS_REPO_BUNDLE_TOKEN`, a fine-grained
 token from the existing owner account restricted to `4veco-platform` and

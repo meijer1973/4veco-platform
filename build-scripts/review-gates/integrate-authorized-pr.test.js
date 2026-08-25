@@ -118,6 +118,7 @@ function okLineage(sha = integrationSha) {
     ok: true,
     reviewed_payload_head_sha: payloadSha,
     integration_head_sha: sha,
+    payload_ancestor_of_integration_head: true,
     authorization_inherited: true,
     requires_integration_delta_lead_review: false,
     requires_deterministic_refresh: false,
@@ -411,7 +412,45 @@ describe('authorized PR integration runner', () => {
         integration_head_sha: 'c'.repeat(40),
         path: 'subagent:delta-review',
       },
-    })).toMatchObject({ ok: true });
+    })).toMatchObject({
+      ok: true,
+      delta_review: {
+        review: {
+          result: 'PASS',
+          reviewed_payload_head_sha: 'b'.repeat(40),
+          integration_head_sha: 'c'.repeat(40),
+          path: 'subagent:delta-review',
+        },
+      },
+    });
+
+    for (const deltaReview of [
+      {
+        result: 'PASS',
+        status: 'REVISE',
+        reviewed_payload_head_sha: 'b'.repeat(40),
+        integration_head_sha: 'c'.repeat(40),
+        path: 'subagent:delta-review',
+      },
+      {
+        result: 'PASS',
+        reviewed_payload_head_sha: 'b'.repeat(40),
+        integration_head_sha: 'c'.repeat(40),
+        reviewed_integration_head_sha: 'd'.repeat(40),
+        path: 'subagent:delta-review',
+      },
+      {
+        result: 'PASS',
+        reviewed_payload_head_sha: 'b'.repeat(40),
+        integration_head_sha: 'c'.repeat(40),
+        path: 7,
+      },
+    ]) {
+      expect(enforceLineagePolicy(lineage, { deltaReview })).toMatchObject({
+        ok: false,
+        phase: 'integration_delta_lead_review_required',
+      });
+    }
   });
 
   test('deterministic refresh requirement cannot be ignored', () => {
@@ -746,6 +785,16 @@ describe('authorized PR integration runner', () => {
     const result = integrate(options);
 
     expect(result).toMatchObject({ ok: true, phase: 'merged', activated_merge: false });
+    expect(result.payload_integration_state).toMatchObject({
+      payload_state: 'PAYLOAD_AUTHORIZED',
+      integration_state: 'READY_TO_MERGE_VIA_LANE',
+      reviewed_payload_head_sha: payloadSha,
+      current_pr_head_sha: integrationSha,
+      integration_head_sha: integrationSha,
+      lineage_status: 'valid',
+      effective_payload_status: 'unchanged',
+      renewed_owner_authorization: 'not_required_unless_payload_changes',
+    });
     expect(calls.merges).toEqual([
       { repo: 'meijer1973/4veco-platform', prNumber: 136, sha: integrationSha },
     ]);
@@ -846,8 +895,53 @@ describe('authorized PR integration runner', () => {
     const result = integrate(options);
 
     expect(result.phase).toBe('authorized_no_merge');
+    expect(result.payload_integration_state).toMatchObject({
+      integration_validation: 'passed',
+      required_next_action: 'merge through the serialized integration lane',
+    });
     expect(deps.updateBranch).not.toHaveBeenCalled();
     expect(calls.statuses.map((status) => status.state)).toContain('success');
+  });
+
+  test('updated branch result reports pending refreshed head instead of stale ready state', () => {
+    const refreshedSha = '1'.repeat(40);
+    const harness = integrationHarness({
+      deps: {
+        isHeadCurrentWithMain: jest.fn(() => ({ ok: false, compare: { status: 'behind' } })),
+      },
+      options: { maxAttempts: 1 },
+    });
+    const { calls, deps, options } = harness;
+    deps.updateBranch.mockImplementation((repo, prNumber, expectedHeadSha) => {
+      calls.updates.push({ repo, prNumber, expectedHeadSha });
+      return { ok: true, head_sha: refreshedSha };
+    });
+
+    const result = integrate(options);
+
+    expect(result).toMatchObject({
+      ok: true,
+      phase: 'updated_branch',
+      retry_required: true,
+      previous_head_sha: integrationSha,
+      pending_head_sha: refreshedSha,
+    });
+    expect(result.payload_integration_state).toMatchObject({
+      current_pr_head_sha: refreshedSha,
+      integration_head_sha: integrationSha,
+      pending_integration_head_sha: refreshedSha,
+      integration_state: 'BRANCH_UPDATE_PENDING',
+      integration_validation: 'pending_branch_update',
+      required_next_action: 'wait for the branch update to finish, then rerun the serialized integration lane',
+    });
+    expect(result.payload_integration_state).not.toMatchObject({
+      integration_state: 'READY_TO_MERGE_VIA_LANE',
+      integration_validation: 'passed',
+    });
+    expect(calls.updates).toEqual([
+      { repo: 'meijer1973/4veco-platform', prNumber: 136, expectedHeadSha: integrationSha },
+    ]);
+    expect(calls.merges).toEqual([]);
   });
 
   test('branch update automatically retries through CI, readiness generation, merge, and post-merge main CI', () => {
@@ -872,6 +966,13 @@ describe('authorized PR integration runner', () => {
     const result = runIntegrationAttempts(options);
 
     expect(result).toMatchObject({ ok: true, phase: 'merged', attempt: 2 });
+    expect(result.payload_integration_state).toMatchObject({
+      reviewed_payload_head_sha: payloadSha,
+      current_pr_head_sha: refreshedSha,
+      integration_head_sha: refreshedSha,
+      payload_authorization: 'inherited',
+      integration_validation: 'passed',
+    });
     expect(calls.updates).toEqual([
       { repo: 'meijer1973/4veco-platform', prNumber: 136, expectedHeadSha: integrationSha },
     ]);

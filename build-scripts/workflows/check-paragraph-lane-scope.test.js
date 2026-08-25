@@ -52,6 +52,25 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('Boek 1/shared/reasoning/1.1.1.js').category).toBe('partB_companion');
     expect(classifyPath('build-scripts/workflows/check-paragraph-lane-scope.js').category).toBe('shared_platform');
     expect(classifyPath('RESEARCH_AGENT_MAP.md').category).toBe('generated_indexes');
+    expect(classifyPath('reports/review-gates/PR200/plan.md').category).toBe('review_evidence');
+    expect(classifyPath('reports/review-gates/PR200/run.js').category).toBe('unknown');
+    expect(classifyPath('reports/review-gates/PR200/packet.pdf').category).toBe('unknown');
+  });
+
+  test('accepts wider-route short-check and exit-ticket outputs in the companion lane', () => {
+    const changedPaths = [
+      'Boek 1/1.1/1.1.1 Test/1.1.1 Test \u2013 korte-check.html',
+      'Boek 1/1.1/1.1.1 Test/1.1.1 Test \u2013 exit-ticket.html',
+    ];
+
+    expect(changedPaths.map((filePath) => classifyPath(filePath).category)).toEqual([
+      'partB_companion',
+      'partB_companion',
+    ]);
+    expect(checkLaneScope({ lane: 'companion', changedPaths })).toMatchObject({
+      ok: true,
+      failures: [],
+    });
   });
 
   test('classifies chapter and book aggregate outputs as textbook artifacts', () => {
