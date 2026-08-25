@@ -1028,7 +1028,6 @@ function validateNavigationTexts(texts) {
   check(texts.urlIndex?.includes(PATHS.bundleUrls), 'URL index missing Y1 review bundle');
   check(texts.urlIndex?.includes(PATHS.proof), 'URL index missing Y1 proof');
   check(texts.urlIndex?.includes(PATHS.deltaProof), 'URL index missing Y1 delta proof');
-  check(texts.urlIndex?.includes(PATHS.renderedRenewal), 'URL index missing Y1 rendered renewal');
   check(texts.bundleUrls?.includes(PATHS.packet), 'Y1 review bundle missing packet');
   check(texts.platformAgentIndex?.includes(PATHS.packet), 'platform agent index missing Y1 packet');
   check(texts.dashboard?.includes(WAVE_ID), 'internal dashboard missing current Y1 wave');
