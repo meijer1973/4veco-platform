@@ -75,6 +75,7 @@ describe('check-paragraph-lane-scope', () => {
 
   test('classifies chapter and book aggregate outputs as textbook artifacts', () => {
     expect(classifyPath('Boek 1/1.1 Hoofdstuk Test/1.1 Test - hoofdstuk.md').category).toBe('partA_textbook');
+    expect(classifyPath('Boek 1/1.1 Hoofdstuk Test/build_chapter.py').category).toBe('partA_textbook');
     expect(classifyPath('Boek 1/Boek 1 Test - boek.pdf').category).toBe('partA_textbook');
     expect(classifyPath('Boek 1/_assets/book-1-cover.png').category).toBe('partA_textbook');
   });

@@ -144,7 +144,7 @@ function isPartBCompanionPath(filePath) {
 function isPartATextbookPath(filePath) {
   const p = normalizedLower(filePath);
   const base = basenameLower(filePath).replace(/\u2013/g, '-');
-  if (base === 'build_pdf.py') return true;
+  if (base === 'build_pdf.py' || base === 'build_chapter.py') return true;
   if (/(^|\/)\d+\.\d+\.\d+-review\.md$/.test(p)) return true;
   if (/(^|\/)\d+\.\d+\.\d+-textbook-handoff\.md$/.test(p)) return true;
   if (/(^|\/)\d+\.\d+\.\d+-target-contract\.md$/.test(p)) return true;
