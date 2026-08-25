@@ -4,7 +4,7 @@
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "pr_number": 208,
   "pr_url": "https://github.com/meijer1973/4veco-platform/pull/208",
-  "reviewed_payload_head_sha": "bf8349e37b8520618f5dcd46561921860253333d",
+  "reviewed_payload_head_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
   "pr_throughput_class": "high_authority",
   "bundle_id": "BOOK1-TEXTBOOK-RENEWAL-20260825",
   "authority_class": "product_authority",
@@ -107,7 +107,7 @@
     "lead_review": {
       "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round2.md",
       "result": "PASS",
-      "reviewed_commit_sha": "bf8349e37b8520618f5dcd46561921860253333d"
+      "reviewed_commit_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803"
     },
     "ci": {
       "required_contexts": ["validate-platform"],

@@ -51,7 +51,7 @@
         "evidence": "Final checker control flow plus synthetic full-mode pass and rendered-drift rejection.",
         "blocks": "Nothing; the original finding is resolved.",
         "does_not_block": "Implementation closure and PR handoff.",
-        "proof_required_to_close": "Closed by the 40-test focused suite and final lead reinspection."
+        "proof_required_to_close": "Closed by the 42-test focused suite and final lead reinspection."
       },
       {
         "id": "Y1-LEAD-R1-AUTHORITY",
@@ -130,7 +130,7 @@
     { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md", "status": "passed" },
     { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md", "status": "passed" },
     { "command": "npm.cmd test -- --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js", "status": "passed" },
-    { "command": "npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base origin/main --head bf8349e37b8520618f5dcd46561921860253333d --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d", "status": "passed" },
+    { "command": "npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base origin/main --head 4b49d82d4a35915ef586f0de01554068fa7b5803 --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d", "status": "passed" },
     { "command": "npm.cmd run check:platform", "status": "passed" },
     { "command": "npm.cmd run check:exercise-workflow-currentness", "status": "passed" },
     { "command": "npm.cmd run check:scale-proof-3p-product-path", "status": "passed" },
@@ -145,7 +145,7 @@
     { "command": "git diff --check HEAD", "status": "passed" },
     { "command": "git -C C:/Projects/4veco-worktrees/y1-evidence-lesson-f09fd6 diff --check", "status": "passed" },
     { "command": "npm.cmd run check:exercise-authority-hygiene", "status": "skipped_with_reason", "reason": "Local LF/CRLF fixture-hash portability mismatch is pre-existing; exact-head remote validate-platform is required." },
-    { "command": "git diff --exit-code e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8..bf8349e37b8520618f5dcd46561921860253333d -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html", "status": "passed" }
+    { "command": "git diff --exit-code e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8..4b49d82d4a35915ef586f0de01554068fa7b5803 -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html", "status": "passed" }
   ],
   "product_boundaries": {
     "controlled_wave_eligibility": true,
@@ -172,7 +172,7 @@
     "old_pr_closed": true,
     "current_integration_pr": 208,
     "current_integration_pr_url": "https://github.com/meijer1973/4veco-platform/pull/208",
-    "current_renewal_payload_sha": "bf8349e37b8520618f5dcd46561921860253333d",
+    "current_renewal_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
     "lesson_merge_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
   },
   "authorized_next": [

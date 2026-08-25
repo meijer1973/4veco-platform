@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "generated": "2026-08-25T15:02:08.823Z",
+  "generated": "2026-08-25T15:35:20.659Z",
   "purpose": "commit-bound rendered proof reuse attestation",
   "commit_chain": {
     "platform": {
       "capture_payload": "5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7",
       "old_pr_ci": "571d435a172240524ed96394a41682ef003bfcad",
-      "renewal_payload": "bf8349e37b8520618f5dcd46561921860253333d"
+      "renewal_payload": "4b49d82d4a35915ef586f0de01554068fa7b5803"
     },
     "lesson": {
       "capture_payload": "071a465a03e287bc5768d88aabbec3e63b15ee09",
@@ -2400,7 +2400,7 @@
   "rendered_renewals": [
     {
       "evidence_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
-      "evidence_sha256": "501635dfa77d5f90aa26a5d80971fc5ee5f066f6dd4f59e86d796164f1554e9e",
+      "evidence_sha256": "0ae03b415ec1df81fd486c71e2a6566d6f3b230e51e34bf2041e660a78c76208",
       "capture_id": "112-normal-practice-desktop-light-opgaven",
       "lesson_path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html",
       "historical_lesson_sha": "071a465a03e287bc5768d88aabbec3e63b15ee09",

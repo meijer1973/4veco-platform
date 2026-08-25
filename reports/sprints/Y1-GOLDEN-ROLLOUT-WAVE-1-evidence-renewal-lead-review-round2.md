@@ -22,9 +22,10 @@ PASS
 - policy formatting is clean and the lesson and historical Scale Proof remain
   unchanged.
 
-Post-payload verification is green: all 40 focused tests pass after proof
+Post-payload verification is green: all 42 focused tests pass after proof
 regeneration. The continuation-boundary regressions preserve exact event
 lineage, scope this authorized renewal at `e2deb65...`, retain complete later
-event ranges, and reject divergent heads.
+event ranges, and reject divergent heads. The selector is attested from its
+committed Git object, including a worktree line-ending drift regression.
 
 This verdict does not authorize merging Platform PR #208.

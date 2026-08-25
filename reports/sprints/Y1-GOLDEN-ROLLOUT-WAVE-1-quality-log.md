@@ -8,7 +8,7 @@ Generated: 2026-08-25
 | Old roadmap described completed prerequisites as future work. | core_spec_failure | corrected | Golden roadmap v1.3 and reference-team roadmap v3.57. |
 | Old packet was null-bound and classified L3 instead of L4. | core_spec_failure | corrected | Packet is L4/high-authority and cross-binds integration PR #208, its URL, and the reviewed rendered payload. |
 | Old bundle omitted maps, indexes, URL index, and dashboard closure. | core_spec_failure | corrected | Root maps and generated indexes, URL index, and dashboard are refreshed in the deterministic evidence tail. |
-| No dedicated negative tests existed. | core_spec_failure | corrected | Dedicated 40-test Jest suite covers state, route, authority, scope, event, roadmap, wiring, packet, rendered renewal, continuation lineage, and Git failures. |
+| No dedicated negative tests existed. | core_spec_failure | corrected | Dedicated 42-test Jest suite covers state, route, authority, scope, event, roadmap, wiring, packet, rendered renewal, continuation lineage, committed-selector portability, and Git failures. |
 | Full checker would enforce the renewal evidence tail on unrelated future CI. | core_spec_failure | corrected | Full-mode auto-scope regression proves unrelated future work exits cleanly; renewal scope still runs the full contract. |
 | Automatic repository-wide migration hold was not shared across authority surfaces. | core_spec_failure | corrected | Shared held-authority key plus wave/packet/proof/result recording and a negative drift test. |
 | Active reference roadmap still held accepted target-readiness evidence and named closed review work as next. | core_spec_failure | corrected | Current authority wording plus semantic stale-state rejection. |
@@ -25,5 +25,6 @@ Generated: 2026-08-25
 | Single-capture and browser provenance were not independently reproducible. | quality_improvement_available | corrected | Y1 runner pins the canonical runner blob and lesson SHA, selects one capture, emits sanitized CDP metadata, and cross-binds manifest/comparison/renewal. |
 | Independent visual-review Markdown was not initially artifact-bound. | quality_improvement_available | corrected | Review path and SHA are verified and protected through the exact-head artifact set. |
 | The integration event range starts before the newly authorized evidence-renewal boundary. | core_spec_failure | corrected | Event base/head lineage remains exact while the renewal allowlist scopes from authorized continuation `e2deb65...`; tests retain the full range for later events and reject divergent heads. |
+| Exact-head CI normalized the selector worktree line endings before Jest, invalidating a working-tree byte hash. | core_spec_failure | corrected | Selector provenance now resolves the exact committed Git object at `8f612ac...`; a regression rewrites only worktree line endings and proves the committed attestation remains stable. |
 
 No missing core requirement may be carried under `PASS WITH FLAGS`.

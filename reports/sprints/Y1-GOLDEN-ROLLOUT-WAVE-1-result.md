@@ -32,14 +32,14 @@ protected-reference, route, or authority change is included.
 ## Current Evidence
 
 - Plan review: `OK_TO_IMPLEMENT` after correction round.
-- Focused checker suite: 40 tests passing, including the exact authorized
+- Focused checker suite: 42 tests passing, including the exact authorized
   continuation boundary and divergent-lineage rejection.
 - Roadmap version index: passing after current-state correction.
 - Historical reuse decision: accepted after independent input/navigation
   classification; one changed rendered input is resolved by exact equivalence,
   with zero unresolved rendered drift.
 - Commit-bound delta proof: generated against renewed substantive payload
-  `bf8349e37b8520618f5dcd46561921860253333d` and lesson snapshot
+  `4b49d82d4a35915ef586f0de01554068fa7b5803` and lesson snapshot
   `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 - Bounded replacement capture: SHA-256
   `5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f`,
@@ -58,7 +58,7 @@ protected-reference, route, or authority change is included.
 - CI repair lead review: `OK_TO_COMMIT`, normalized to `PASS WITH FLAGS`; the
   real-Git full-mode test now invokes the checker directly, and historical Git
   object reads use a reviewed Windows-safe batch protocol within the current
-  40-test focused suite.
+  42-test focused suite.
 - Exact-head PR repair review: `OK_TO_COMMIT`, normalized to `PASS WITH FLAGS`;
   an unfetched GitHub synthetic merge SHA is accepted while payload/synthetic
   equality remains rejected.
@@ -66,7 +66,7 @@ protected-reference, route, or authority change is included.
   `PASS WITH FLAGS`; shared infrastructure remains allowed without activating
   renewal scope, and Y1-specific mixed scope remains rejected.
 - Current integration PR: platform PR #208, bound to reviewed renewal payload
-  `bf8349e37b8520618f5dcd46561921860253333d` pending its evidence tail.
+  `4b49d82d4a35915ef586f0de01554068fa7b5803` pending its evidence tail.
 - PR #205 supersession: closed with an explicit replacement link; old head
   `571d435a172240524ed96394a41682ef003bfcad` remains unauthorized.
 - Exact-head CI, refreshed readiness/integration-lineage, and renewed owner
@@ -74,8 +74,9 @@ protected-reference, route, or authority change is included.
 
 ## Acceptance test results
 
-- Platform Jest: 105 suites and 1475 tests passed; 6 suites and 8 tests skipped.
-- Focused Y1 checker: 40 passed, including the post-payload evidence bindings
+- Platform Jest: 105 suites and 1477 tests passed; 6 suites and 8 tests skipped.
+- Focused Y1 checker: 42 passed, including the post-payload evidence bindings,
+  committed-selector portability,
   and authorized-continuation lineage regressions.
 - Full Y1 checker, currentness, Scale Proof, review-throughput, report JSON,
   roadmap index, URL index, agent-index freshness, scope language, and platform

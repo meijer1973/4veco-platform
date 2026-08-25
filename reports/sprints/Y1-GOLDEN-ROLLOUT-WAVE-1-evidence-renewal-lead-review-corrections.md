@@ -19,7 +19,9 @@ Responds to:
 3. Focused regressions reject an unresolved delta even when packet/proof counts
    are made consistent, and reject required authority-key substitution.
 
-Post-payload closure is green: all 40 focused tests pass after the substantive
+Post-payload closure is green: all 42 focused tests pass after the substantive
 payload commit and commit-bound proof regeneration. The added lineage cases
 prove that the authorized pre-renewal event range scopes at `e2deb65...`, later
-events retain their full range, and divergent heads fail closed.
+events retain their full range, and divergent heads fail closed. Selector
+provenance is read from its committed Git object, so worktree line-ending
+normalization cannot invalidate the evidence binding.

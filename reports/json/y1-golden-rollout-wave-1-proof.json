@@ -36,7 +36,7 @@
     "rendered_renewal": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
     "screenshots_recaptured": true,
     "reuse_status": "verified_exact_rendered_equivalence",
-    "reviewed_platform_payload_sha": "bf8349e37b8520618f5dcd46561921860253333d",
+    "reviewed_platform_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
     "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "platform_equal_path_count": 64,
     "lesson_equal_path_count": 78,

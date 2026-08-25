@@ -16,7 +16,7 @@ Generated: 2026-08-25
 | Coherent current roadmap | Golden and reference-team roadmaps | Roadmap index checker and Y1 semantic checker | Authority-boundary review |
 | Repository navigation | Three root maps, URL/index/dashboard outputs | Agent-index, URL-index, dashboard semantic checks | Repository/testing review |
 | PR governance | L4 packet and live PR evidence | Branch protection, CI, Rawls, PR Readiness Reviewer | Human owner review |
-| Current integration | Lesson PR #43 merge plus Platform PR #208 | Payload `bf8349e3...`, lesson `f09fd6e...`, exact-head CI/readiness pending | Renewed owner review; merge not authorized |
+| Current integration | Lesson PR #43 merge plus Platform PR #208 | Payload `4b49d82d...`, lesson `f09fd6e...`, exact-head CI/readiness pending | Renewed owner review; merge not authorized |
 
 The refreshed rendered claim remains limited to `1.1.1` through `1.1.3`.
 The renewed equivalence claim is further limited to the recorded 1280×900
