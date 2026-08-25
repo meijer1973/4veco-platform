@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1",
+  "generated": "2026-08-25T14:44:53.780Z",
+  "browser": {
+    "product": "Edg/151.0.4129.101",
+    "protocol_version": "1.3",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0",
+    "v8_version": "15.1.23.9",
+    "webkit_version": "537.36 (@cc1d9f4080fd9140611a9600b8d1615db310105d)"
+  },
+  "screenshots": [
+    {
+      "id": "112-normal-practice-desktop-light-opgaven",
+      "paragraph": "1.1.2",
+      "surface": "normal-practice",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
+        "bytes": 61713,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "normal-practice",
+        "title": "-",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "1.1.2 Percentages en indexcijfers — opgaven Uitgewerkt voorbeeld Opgave: De gemiddelde benzineprijs was €1,80 per liter in 2022. In 2023 steeg de prijs naar €1,98. In 2024 daalde de prijs naar €1,89. (a) Bereken de procentuele verandering van de benzineprijs van 2022 naar 2023. (b) Bereken het indexcijfer van de benzineprijs in 2023 en 2024 (basisjaar 2022 = 100). (c) Bereken de procentuele verandering van de benzineprijs van 2023 naar 2024 met behulp van de indexcijfers. Uitwerking (a): Procentuele verandering berekenen Stap Uitwerking 1. Noteer de oude en nieuwe waarde Oud = €1,80 · Nieuw = €1,98 2. Bereken het verschil 1,98 − 1,80 = €0,18 3. Deel door oud en × 100% 0,18 / 1,80 × 100% = 10% 4. Interpreteer het teken Positief → prijsstijging van 10% Uitwerking (b): Indexcijfer berekenen Stap Uitwerking 1. Bepaal het basisjaar Basisjaar = 2022, basiswaarde = €1,80 2. Bepaal de doelwaarde",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "a96_answer_form": null,
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    }
+  ]
+}

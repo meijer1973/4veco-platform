@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const crypto = require('crypto');
 const path = require('path');
 const vm = require('vm');
 const { spawnSync } = require('child_process');
@@ -20,6 +21,7 @@ const PATHS = {
   scaleRouteInventory: 'reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md',
   proof: 'reports/json/y1-golden-rollout-wave-1-proof.json',
   deltaProof: 'reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json',
+  renderedRenewal: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json',
   packet: 'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json',
   bundleUrls: 'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md',
   goldenRoadmap: 'docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md',
@@ -65,6 +67,23 @@ const HELD_AUTHORITY_KEYS = [
   'product_route_adoption_authorized',
   'broad_product_use_authorized',
   'product_use_authorized',
+  'student_product_use_authorized',
+  'completion_language_authorized',
+  'diagnostics_authorized',
+  'mastery_or_sequencing_authorized',
+  'adaptive_routing_authorized',
+  'summative_use_authorized',
+  'pv_authorized',
+];
+
+const RENDERED_RENEWAL_HELD_AUTHORITY_KEYS = [
+  'lesson_change_authorized',
+  'merge_authorized',
+  'engine_change_authorized',
+  'source_data_change_authorized',
+  'protected_reference_change_authorized',
+  'rollout_or_adoption_authorized',
+  'product_route_adoption_authorized',
   'student_product_use_authorized',
   'completion_language_authorized',
   'diagnostics_authorized',
@@ -502,6 +521,159 @@ function validateScreenshotIntegrity(proof) {
   return true;
 }
 
+function sha256Buffer(buffer) {
+  return crypto.createHash('sha256').update(buffer).digest('hex');
+}
+
+function sha256File(relativePath) {
+  const target = filePath(ROOT, relativePath);
+  check(fs.existsSync(target), `rendered renewal artifact missing: ${normalizePath(relativePath)}`);
+  return sha256Buffer(fs.readFileSync(target));
+}
+
+function validateRenderedRenewal(
+  renewal = readJson(PATHS.renderedRenewal),
+  scaleProof = validateScaleProof(),
+  options = {}
+) {
+  check(renewal.schema_version === 1 && renewal.sprint_id === WAVE_ID, 'rendered renewal identity mismatch');
+  check(renewal.capture_id === '112-normal-practice-desktop-light-opgaven', 'rendered renewal capture id mismatch');
+  check(renewal.status === 'exact_rendered_equivalence', 'rendered renewal must record exact rendered equivalence');
+
+  const scaleCapture = lessonCaptures(scaleProof).find((item) => item.id === renewal.capture_id);
+  check(scaleCapture, `historical Scale Proof capture missing: ${renewal.capture_id}`);
+  const lessonPath = lessonRepoPath(scaleCapture.path);
+  check(renewal.lesson?.page_path === lessonPath, 'rendered renewal lesson page mismatch');
+
+  const historicalLesson = resolveRef(renewal.lesson?.historical_capture_sha, LESSON_ROOT);
+  const priorLesson = resolveRef(renewal.lesson?.prior_y1_snapshot_sha, LESSON_ROOT);
+  const renewedLesson = resolveRef(renewal.lesson?.renewed_snapshot_sha, LESSON_ROOT);
+  check(historicalLesson === CAPTURE_LESSON_SHA, 'rendered renewal historical lesson SHA mismatch');
+  if (options.renewedLessonRef) {
+    check(renewedLesson === resolveRef(options.renewedLessonRef, LESSON_ROOT), 'rendered renewal exact lesson SHA mismatch');
+  }
+  const lessonBlobs = {
+    historical: gitBlob(historicalLesson, lessonPath, LESSON_ROOT),
+    prior: gitBlob(priorLesson, lessonPath, LESSON_ROOT),
+    renewed: gitBlob(renewedLesson, lessonPath, LESSON_ROOT),
+  };
+  check(renewal.lesson.historical_blob === lessonBlobs.historical, 'rendered renewal historical lesson blob mismatch');
+  check(renewal.lesson.prior_y1_blob === lessonBlobs.prior, 'rendered renewal prior Y1 lesson blob mismatch');
+  check(renewal.lesson.renewed_blob === lessonBlobs.renewed, 'rendered renewal renewed lesson blob mismatch');
+  check(lessonBlobs.historical === lessonBlobs.prior, 'rendered renewal historical/prior lesson blobs must match');
+  check(lessonBlobs.renewed !== lessonBlobs.historical, 'rendered renewal must cover a changed lesson input');
+
+  const process = renewal.canonical_process || {};
+  const startingPlatform = resolveRef(renewal.starting_platform_sha, ROOT);
+  const runnerPlatform = resolveRef(process.runner_platform_sha, ROOT);
+  check(startingPlatform === 'e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8', 'rendered renewal starting platform SHA mismatch');
+  check(runnerPlatform === startingPlatform, 'rendered renewal runner platform SHA mismatch');
+  check(process.runner_path === 'build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js', 'rendered renewal runner path mismatch');
+  check(process.runner_blob === gitBlob(runnerPlatform, process.runner_path, ROOT), 'rendered renewal runner blob mismatch');
+  check(process.selector_path === 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js', 'rendered renewal selector path mismatch');
+  check(process.selector_blob === runGit(['hash-object', filePath(ROOT, process.selector_path)], ROOT), 'rendered renewal selector blob mismatch');
+  check(process.selection === 'exact_capture_id_only' && process.capture_count === 1, 'rendered renewal must contain exactly one selected capture');
+  check(process.viewport?.width === 1280 && process.viewport?.height === 900, 'rendered renewal viewport mismatch');
+  check(process.theme === 'light' && process.device_scale_factor === 1, 'rendered renewal theme/device scale mismatch');
+  check(process.capture_beyond_viewport === false && process.hide_scrollbars === true, 'rendered renewal capture settings mismatch');
+  check(typeof process.browser?.product === 'string' && process.browser.product.trim(), 'rendered renewal browser product is missing');
+  check(typeof process.browser?.protocol_version === 'string' && process.browser.protocol_version.trim(), 'rendered renewal browser protocol version is missing');
+
+  const rawManifestPath = normalizePath(process.raw_manifest_path);
+  check(process.raw_manifest_sha256 === sha256File(rawManifestPath), 'rendered renewal raw manifest hash mismatch');
+  const rawManifest = readJson(rawManifestPath);
+  check(rawManifest.generated === renewal.captured_at, 'rendered renewal capture timestamp mismatch');
+  check(JSON.stringify(rawManifest.browser) === JSON.stringify(process.browser), 'rendered renewal emitted browser metadata mismatch');
+  check(Array.isArray(rawManifest.screenshots) && rawManifest.screenshots.length === 1, 'rendered renewal raw manifest must contain exactly one capture');
+  const rawCapture = rawManifest.screenshots[0];
+  check(rawCapture.id === renewal.capture_id, 'rendered renewal raw manifest capture mismatch');
+  check(rawCapture.path === scaleCapture.path, 'rendered renewal raw manifest lesson path mismatch');
+  check(rawCapture.theme === 'light', 'rendered renewal raw manifest theme mismatch');
+  check(rawCapture.viewport?.width === 1280 && rawCapture.viewport?.height === 900, 'rendered renewal raw manifest viewport mismatch');
+  check(JSON.stringify(rawCapture.inspection) === JSON.stringify(scaleCapture.inspection), 'rendered renewal inspection differs from historical capture');
+
+  const historical = renewal.historical_capture || {};
+  const renewed = renewal.renewed_capture || {};
+  check(historical.path === scaleCapture.screenshot?.file, 'rendered renewal historical screenshot path mismatch');
+  check(renewed.path === rawCapture.screenshot?.file, 'rendered renewal replacement screenshot path mismatch');
+  const historicalBuffer = fs.readFileSync(filePath(ROOT, historical.path));
+  const renewedBuffer = fs.readFileSync(filePath(ROOT, renewed.path));
+  check(historical.sha256 === sha256Buffer(historicalBuffer), 'rendered renewal historical screenshot hash mismatch');
+  check(renewed.sha256 === sha256Buffer(renewedBuffer), 'rendered renewal replacement screenshot hash mismatch');
+  check(historical.bytes === historicalBuffer.length && renewed.bytes === renewedBuffer.length, 'rendered renewal screenshot byte count mismatch');
+  check(rawCapture.screenshot?.bytes === renewed.bytes, 'rendered renewal raw manifest screenshot byte count mismatch');
+  check(rawCapture.screenshot?.dimensions?.width === renewed.width && rawCapture.screenshot?.dimensions?.height === renewed.height, 'rendered renewal raw manifest screenshot dimensions mismatch');
+  const historicalDimensions = pngDimensions(filePath(ROOT, historical.path));
+  const renewedDimensions = pngDimensions(filePath(ROOT, renewed.path));
+  check(historical.width === 1280 && historical.height === 900, 'rendered renewal historical dimensions mismatch');
+  check(renewed.width === 1280 && renewed.height === 900, 'rendered renewal replacement dimensions mismatch');
+  check(JSON.stringify(historicalDimensions) === JSON.stringify(renewedDimensions), 'rendered renewal screenshot dimensions differ');
+  check(historicalBuffer.equals(renewedBuffer), 'rendered renewal screenshots are not byte-equal');
+
+  const comparison = renewal.pixel_comparison || {};
+  check(process.comparison_sha256 === sha256File(process.comparison_path), 'rendered renewal comparison artifact hash mismatch');
+  const comparisonArtifact = readJson(process.comparison_path);
+  check(comparisonArtifact.capture_id === renewal.capture_id, 'rendered renewal comparison capture mismatch');
+  check(comparisonArtifact.captured_at === renewal.captured_at, 'rendered renewal comparison timestamp mismatch');
+  check(comparisonArtifact.platform_starting_sha === startingPlatform, 'rendered renewal comparison platform SHA mismatch');
+  check(comparisonArtifact.lesson_sha === renewedLesson, 'rendered renewal comparison lesson SHA mismatch');
+  check(comparisonArtifact.canonical_runner_blob === process.runner_blob, 'rendered renewal comparison runner blob mismatch');
+  check(comparisonArtifact.capture_count === 1, 'rendered renewal comparison capture count mismatch');
+  check(JSON.stringify(comparisonArtifact.browser) === JSON.stringify(process.browser), 'rendered renewal comparison browser metadata mismatch');
+  check(comparison.method === 'decoded_rgba_absolute_difference', 'rendered renewal comparison method mismatch');
+  check(comparison.byte_equal === true, 'rendered renewal byte equality must pass');
+  check(comparison.changed_pixels === 0 && comparison.total_pixels === 1280 * 900, 'rendered renewal changed-pixel result mismatch');
+  check(comparison.changed_pixel_ratio === 0, 'rendered renewal changed-pixel ratio must be zero');
+  check(comparison.maximum_channel_delta === 0 && comparison.mean_absolute_channel_delta === 0, 'rendered renewal channel delta must be zero');
+  check(comparison.diff_sha256 === sha256File(comparison.diff_path), 'rendered renewal diff hash mismatch');
+  check(comparisonArtifact.comparison.historical_sha256 === historical.sha256, 'rendered renewal comparison historical hash mismatch');
+  check(comparisonArtifact.comparison.renewed_sha256 === renewed.sha256, 'rendered renewal comparison replacement hash mismatch');
+  check(comparisonArtifact.comparison.width === 1280 && comparisonArtifact.comparison.height === 900, 'rendered renewal comparison dimensions mismatch');
+  for (const key of ['method', 'byte_equal', 'changed_pixels', 'total_pixels', 'changed_pixel_ratio', 'maximum_channel_delta', 'mean_absolute_channel_delta', 'diff_path', 'diff_sha256']) {
+    check(comparisonArtifact.comparison[key] === comparison[key], `rendered renewal comparison field mismatch: ${key}`);
+  }
+  const diffDimensions = pngDimensions(filePath(ROOT, comparison.diff_path));
+  check(diffDimensions.width === 1280 && diffDimensions.height === 900, 'rendered renewal diff dimensions mismatch');
+
+  const historicalExcerptHash = sha256Buffer(Buffer.from(scaleCapture.inspection?.body_text_excerpt || '', 'utf8'));
+  const renewedExcerptHash = sha256Buffer(Buffer.from(rawCapture.inspection?.body_text_excerpt || '', 'utf8'));
+  check(renewal.inspection?.historical_body_text_excerpt_sha256 === historicalExcerptHash, 'rendered renewal historical inspection hash mismatch');
+  check(renewal.inspection?.renewed_body_text_excerpt_sha256 === renewedExcerptHash, 'rendered renewal replacement inspection hash mismatch');
+  check(renewal.inspection?.excerpt_equal === true && historicalExcerptHash === renewedExcerptHash, 'rendered renewal inspection excerpt differs');
+  check(renewal.inspection?.horizontal_overflow === false && rawCapture.inspection?.horizontal_overflow === false, 'rendered renewal horizontal overflow detected');
+  check(Array.isArray(renewal.inspection?.forbidden_authority_terms) && renewal.inspection.forbidden_authority_terms.length === 0, 'rendered renewal contains forbidden authority terms');
+  check(Array.isArray(renewal.inspection?.target_completion_terms) && renewal.inspection.target_completion_terms.length === 0, 'rendered renewal contains completion terms');
+
+  const human = renewal.human_visual_review || {};
+  check(human.status === 'PASS' && human.visible_regression === false, 'rendered renewal human visual review must pass');
+  check(human.reviewer === '/root/y1_visual_review', 'rendered renewal independent human reviewer mismatch');
+  check(human.review_path === 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md', 'rendered renewal visual review path mismatch');
+  check(human.review_sha256 === sha256File(human.review_path), 'rendered renewal visual review hash mismatch');
+  check(typeof human.verdict === 'string' && human.verdict.trim(), 'rendered renewal human verdict is missing');
+  check(Array.isArray(human.flags) && human.flags.length === 0, 'rendered renewal human visual review has unresolved flags');
+  sameSet(Object.keys(renewal.authority || {}), RENDERED_RENEWAL_HELD_AUTHORITY_KEYS, 'rendered renewal authority keys');
+  for (const key of RENDERED_RENEWAL_HELD_AUTHORITY_KEYS) {
+    check(renewal.authority[key] === false, `rendered renewal authority.${key} must be false`);
+  }
+
+  return {
+    evidence_path: PATHS.renderedRenewal,
+    evidence_sha256: sha256File(PATHS.renderedRenewal),
+    capture_id: renewal.capture_id,
+    lesson_path: lessonPath,
+    historical_lesson_sha: historicalLesson,
+    prior_y1_lesson_sha: priorLesson,
+    renewed_lesson_sha: renewedLesson,
+    historical_blob: lessonBlobs.historical,
+    renewed_blob: lessonBlobs.renewed,
+    historical_screenshot_sha256: historical.sha256,
+    renewed_screenshot_sha256: renewed.sha256,
+    changed_pixels: comparison.changed_pixels,
+    status: renewal.status,
+    human_visual_review: human.status,
+  };
+}
+
 function resolveLocalHtmlReference(value, pagePath) {
   const clean = String(value || '').split('#')[0].split('?')[0];
   if (!clean || clean.startsWith('#') || /^[a-z]+:/i.test(clean) || clean.startsWith('//')) return null;
@@ -651,11 +823,25 @@ function buildDeltaProof(options = {}) {
   const platform = attestEqualPaths(platformPaths, platformRefs, ROOT, 'platform rendered input');
   const lesson = attestEqualPaths(lessonDependencies.equal_paths, lessonRefs, LESSON_ROOT, 'lesson rendered input');
   const lessonExistence = attestExistencePaths(lessonDependencies.existence_only_paths, lessonRefs, LESSON_ROOT, 'lesson route target');
+  const renderedRenewal = validateRenderedRenewal(readJson(PATHS.renderedRenewal), scaleProof, {
+    renewedLessonRef: lessonCurrent,
+  });
   const changedOrMissing = [
     ...platform.filter((item) => item.status !== 'equal'),
     ...lesson.filter((item) => item.status !== 'equal'),
     ...lessonExistence.filter((item) => item.status !== 'present'),
   ];
+  const verifiedRenderedRenewals = changedOrMissing.filter(
+    (item) =>
+      item.label === 'lesson rendered input' &&
+      item.status === 'changed' &&
+      item.path === renderedRenewal.lesson_path &&
+      item.blobs?.capture_payload === renderedRenewal.historical_blob &&
+      item.blobs?.renewal_snapshot === renderedRenewal.renewed_blob
+  );
+  check(verifiedRenderedRenewals.length === 1, 'rendered renewal must resolve exactly one changed lesson input');
+  const unresolvedChangedOrMissing = changedOrMissing.filter((item) => !verifiedRenderedRenewals.includes(item));
+  check(unresolvedChangedOrMissing.length === 0, `unresolved rendered inputs remain: ${unresolvedChangedOrMissing.map((item) => item.path).join(', ')}`);
   const historicalArtifactPaths = uniqueSorted([
     PATHS.scaleProof,
     PATHS.scaleManifest,
@@ -667,7 +853,7 @@ function buildDeltaProof(options = {}) {
   check(historicalArtifacts.length === historicalArtifactPaths.length, 'historical Scale Proof artifact inventory is incomplete');
 
   return {
-    schema_version: 1,
+    schema_version: 2,
     sprint_id: WAVE_ID,
     generated: new Date().toISOString(),
     purpose: 'commit-bound rendered proof reuse attestation',
@@ -685,18 +871,26 @@ function buildDeltaProof(options = {}) {
       landing_route_targets_exist_at_all_commits: true,
       platform_source_generator_runtime_and_proof_inputs_explicit: true,
       proof_defined_list_accepted_without_cross_check: false,
+      changed_capture_inputs_require_verified_rendered_renewal: true,
     },
     platform_equal_paths: platform,
     lesson_equal_paths: lesson,
     lesson_existence_only_paths: lessonExistence,
+    rendered_renewals: [renderedRenewal],
     summary: {
       platform_equal_path_count: platform.length,
       lesson_equal_path_count: lesson.length,
       lesson_existence_only_path_count: lessonExistence.length,
       changed_or_missing_input_count: changedOrMissing.length,
       changed_or_missing_paths: changedOrMissing.map((item) => item.path),
-      screenshots_reusable: changedOrMissing.length === 0,
-      recapture_required: changedOrMissing.length > 0,
+      verified_rendered_renewal_count: verifiedRenderedRenewals.length,
+      verified_rendered_renewal_paths: verifiedRenderedRenewals.map((item) => item.path),
+      unresolved_changed_or_missing_input_count: unresolvedChangedOrMissing.length,
+      unresolved_changed_or_missing_paths: unresolvedChangedOrMissing.map((item) => item.path),
+      screenshots_reusable: unresolvedChangedOrMissing.length === 0,
+      recapture_required: unresolvedChangedOrMissing.length > 0,
+      replacement_capture_count: 1,
+      exact_rendered_equivalence_count: 1,
       historical_artifact_count: historicalArtifacts.length,
       historical_artifacts_blob_equal: historicalArtifacts.every((item) => item.status === 'equal'),
       screenshot_manifest_integrity_passed: true,
@@ -705,7 +899,7 @@ function buildDeltaProof(options = {}) {
 }
 
 function validateDeltaProof(recorded, recomputed) {
-  check(recorded.schema_version === 1 && recorded.sprint_id === WAVE_ID, 'delta proof identity mismatch');
+  check(recorded.schema_version === 2 && recorded.sprint_id === WAVE_ID, 'delta proof identity mismatch');
   check(JSON.stringify(recorded.commit_chain) === JSON.stringify(recomputed.commit_chain), 'delta proof commit chain is stale');
   check(JSON.stringify(recorded.dependency_discovery) === JSON.stringify(recomputed.dependency_discovery), 'delta proof dependency classification is stale');
   check(recorded.summary?.screenshots_reusable === recomputed.summary.screenshots_reusable, 'delta proof reuse decision is stale');
@@ -715,6 +909,7 @@ function validateDeltaProof(recorded, recomputed) {
   check(recorded.summary?.screenshot_manifest_integrity_passed === true, 'delta proof screenshot/manifest integrity is missing');
   sameSet(recorded.summary?.changed_or_missing_paths || [], recomputed.summary.changed_or_missing_paths || [], 'delta proof changed/missing paths');
   check(JSON.stringify(recorded.summary) === JSON.stringify(recomputed.summary), 'delta proof complete summary is stale');
+  check(JSON.stringify(recorded.rendered_renewals) === JSON.stringify(recomputed.rendered_renewals), 'delta proof rendered renewal evidence is stale');
   for (const section of ['platform_equal_paths', 'lesson_equal_paths', 'lesson_existence_only_paths']) {
     sameSet((recorded[section] || []).map((item) => item.path), (recomputed[section] || []).map((item) => item.path), `delta proof ${section}`);
     check(JSON.stringify(recorded[section]) === JSON.stringify(recomputed[section]), `delta proof ${section} blob evidence is stale`);
@@ -748,6 +943,10 @@ function validateExactHeadDelta(recorded, exactPlatformHead, exactLessonHead) {
   check(ancestor.status === 0, 'recorded rendered payload must be an ancestor of exact platform head');
 
   const proof = validateScaleProof();
+  const renewalRecord = readJson(PATHS.renderedRenewal);
+  const renderedRenewal = validateRenderedRenewal(renewalRecord, proof, {
+    renewedLessonRef: currentLesson,
+  });
   const platform = attestEqualPaths(platformEvidencePaths(proof), {
     renewal_payload: payloadPlatform,
     exact_head: currentPlatform,
@@ -764,6 +963,19 @@ function validateExactHeadDelta(recorded, exactPlatformHead, exactLessonHead) {
   check(platform.every((item) => item.status === 'equal'), 'platform rendered inputs changed after reviewed payload');
   check(lesson.every((item) => item.status === 'equal'), 'lesson rendered inputs changed after recorded snapshot');
   check(lessonExistence.every((item) => item.status === 'present'), 'lesson route destination missing at exact head');
+  const renewalArtifacts = attestEqualPaths(uniqueSorted([
+    PATHS.renderedRenewal,
+    renewalRecord.canonical_process.selector_path,
+    renewalRecord.canonical_process.raw_manifest_path,
+    renewalRecord.canonical_process.comparison_path,
+    renewalRecord.renewed_capture.path,
+    renewalRecord.pixel_comparison.diff_path,
+    renewalRecord.human_visual_review.review_path,
+  ]), {
+    renewal_payload: payloadPlatform,
+    exact_head: currentPlatform,
+  }, ROOT, 'exact-head rendered renewal artifact');
+  check(renewalArtifacts.every((item) => item.status === 'equal'), 'rendered renewal artifacts changed after reviewed payload');
 
   return {
     platform_payload_sha: payloadPlatform,
@@ -773,6 +985,8 @@ function validateExactHeadDelta(recorded, exactPlatformHead, exactLessonHead) {
     platform_equal_path_count: platform.length,
     lesson_equal_path_count: lesson.length,
     lesson_existence_only_path_count: lessonExistence.length,
+    verified_rendered_renewal_count: 1,
+    verified_rendered_renewal_capture_id: renderedRenewal.capture_id,
     rendered_inputs_unchanged: true,
     route_destinations_present: true,
   };
@@ -814,7 +1028,9 @@ function validateNavigationTexts(texts) {
   check(texts.urlIndex?.includes(PATHS.bundleUrls), 'URL index missing Y1 review bundle');
   check(texts.urlIndex?.includes(PATHS.proof), 'URL index missing Y1 proof');
   check(texts.urlIndex?.includes(PATHS.deltaProof), 'URL index missing Y1 delta proof');
+  check(texts.urlIndex?.includes(PATHS.renderedRenewal), 'URL index missing Y1 rendered renewal');
   check(texts.bundleUrls?.includes(PATHS.packet), 'Y1 review bundle missing packet');
+  check(texts.bundleUrls?.includes(PATHS.renderedRenewal), 'Y1 review bundle missing rendered renewal');
   check(texts.platformAgentIndex?.includes(PATHS.packet), 'platform agent index missing Y1 packet');
   check(texts.dashboard?.includes(WAVE_ID), 'internal dashboard missing current Y1 wave');
   check(texts.dashboard?.includes('PASS_CONTROLLED_ROLLOUT'), 'internal dashboard missing controlled-rollout state');
@@ -854,6 +1070,24 @@ function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
   check(proof.scale_gate_1?.controlled_wave_eligibility_authorized === true, 'wave proof must record controlled eligibility');
   check(proof.scale_gate_1?.automatic_repository_wide_migration_authorized === false, 'wave proof must hold automatic repository-wide migration');
   check(proof.rendered_evidence?.reviewed_platform_payload_sha === packet.reviewed_payload_head_sha, 'wave proof rendered payload must match review packet payload');
+  check(proof.rendered_evidence?.lesson_snapshot_sha === deltaProof.commit_chain?.lesson?.renewal_snapshot, 'wave proof lesson snapshot must match delta proof');
+  check(proof.rendered_evidence?.rendered_renewal === PATHS.renderedRenewal, 'wave proof rendered renewal path mismatch');
+  check(proof.rendered_evidence?.reuse_status === 'verified_exact_rendered_equivalence', 'wave proof rendered equivalence status mismatch');
+  check(proof.rendered_evidence?.screenshots_recaptured === true, 'wave proof must record the bounded replacement capture');
+  check(proof.rendered_evidence?.verified_rendered_renewal_count === 1, 'wave proof verified renewal count mismatch');
+  check(proof.rendered_evidence?.changed_or_missing_input_count === 1, 'wave proof raw changed input count mismatch');
+  check(proof.rendered_evidence?.unresolved_changed_or_missing_input_count === 0, 'wave proof must have zero unresolved rendered inputs');
+  check(packet.proof?.rendered_renewal === PATHS.renderedRenewal, 'review packet rendered renewal path mismatch');
+  check(deltaProof.summary?.changed_or_missing_input_count === 1, 'delta proof must record exactly one raw changed rendered input');
+  check(deltaProof.summary?.verified_rendered_renewal_count === 1, 'delta proof must verify exactly one rendered renewal');
+  check(deltaProof.summary?.unresolved_changed_or_missing_input_count === 0, 'delta proof must have zero unresolved rendered inputs');
+  check(Array.isArray(deltaProof.summary?.unresolved_changed_or_missing_paths) && deltaProof.summary.unresolved_changed_or_missing_paths.length === 0, 'delta proof unresolved rendered paths must be empty');
+  check(deltaProof.summary?.screenshots_reusable === true && deltaProof.summary?.recapture_required === false, 'delta proof rendered reuse decision must pass');
+  check(deltaProof.summary?.replacement_capture_count === 1 && deltaProof.summary?.exact_rendered_equivalence_count === 1, 'delta proof replacement/equivalence count mismatch');
+  check(Array.isArray(deltaProof.rendered_renewals) && deltaProof.rendered_renewals.length === 1, 'delta proof rendered renewal inventory mismatch');
+  check(proof.rendered_evidence?.changed_or_missing_input_count === deltaProof.summary.changed_or_missing_input_count, 'wave proof raw changed count must match delta proof');
+  check(proof.rendered_evidence?.verified_rendered_renewal_count === deltaProof.summary.verified_rendered_renewal_count, 'wave proof renewal count must match delta proof');
+  check(proof.rendered_evidence?.unresolved_changed_or_missing_input_count === deltaProof.summary.unresolved_changed_or_missing_input_count, 'wave proof unresolved count must match delta proof');
   assertHeldAuthorities(proof.authority, 'proof.authority');
 }
 
@@ -969,6 +1203,8 @@ function cli(argv) {
       scope_attestation_triggered: result.scope.triggered,
       changed_paths: result.scope.changed_paths,
       screenshots_reusable: result.delta_proof?.summary?.screenshots_reusable ?? null,
+      verified_rendered_renewal_count: result.delta_proof?.summary?.verified_rendered_renewal_count ?? null,
+      unresolved_changed_or_missing_input_count: result.delta_proof?.summary?.unresolved_changed_or_missing_input_count ?? null,
       rendered_inputs_unchanged_through_exact_head: result.exact_head_delta?.rendered_inputs_unchanged ?? null,
       evidence_tail_paths: uniqueSorted((result.evidence_tail?.entries || []).flatMap(entryPaths)),
     }, null, 2));
@@ -1015,6 +1251,7 @@ module.exports = {
   validateExactHeadDelta,
   validateNavigationTexts,
   validatePacketObjects,
+  validateRenderedRenewal,
   validateRoadmapTexts,
   validateScaleProof,
   validateScreenshotIntegrity,

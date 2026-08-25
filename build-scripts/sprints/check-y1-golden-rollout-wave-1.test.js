@@ -95,6 +95,7 @@ function basePacketAndProof() {
       route: 'READY_FOR_HUMAN_REVIEW',
       reviewed_payload_head_sha: 'c'.repeat(40),
       authority_claims: authority,
+      proof: { rendered_renewal: checker.PATHS.renderedRenewal },
     },
     proof: {
       schema_version: 2,
@@ -104,7 +105,16 @@ function basePacketAndProof() {
         controlled_wave_eligibility_authorized: true,
         automatic_repository_wide_migration_authorized: false,
       },
-      rendered_evidence: { reviewed_platform_payload_sha: 'c'.repeat(40) },
+      rendered_evidence: {
+        reviewed_platform_payload_sha: 'c'.repeat(40),
+        lesson_snapshot_sha: 'f'.repeat(40),
+        rendered_renewal: checker.PATHS.renderedRenewal,
+        reuse_status: 'verified_exact_rendered_equivalence',
+        screenshots_recaptured: true,
+        verified_rendered_renewal_count: 1,
+        changed_or_missing_input_count: 1,
+        unresolved_changed_or_missing_input_count: 0,
+      },
       authority,
     },
   };
@@ -112,7 +122,7 @@ function basePacketAndProof() {
 
 function baseDeltaRecord() {
   return {
-    schema_version: 1,
+    schema_version: 2,
     sprint_id: checker.WAVE_ID,
     commit_chain: {
       platform: { capture_payload: 'a'.repeat(40), old_pr_ci: 'b'.repeat(40), renewal_payload: 'c'.repeat(40) },
@@ -128,19 +138,27 @@ function baseDeltaRecord() {
       landing_route_targets_exist_at_all_commits: true,
       platform_source_generator_runtime_and_proof_inputs_explicit: true,
       proof_defined_list_accepted_without_cross_check: false,
+      changed_capture_inputs_require_verified_rendered_renewal: true,
     },
     summary: {
       screenshots_reusable: true,
       recapture_required: false,
-      changed_or_missing_input_count: 0,
-      changed_or_missing_paths: [],
+      changed_or_missing_input_count: 1,
+      changed_or_missing_paths: ['b'],
+      verified_rendered_renewal_count: 1,
+      verified_rendered_renewal_paths: ['b'],
+      unresolved_changed_or_missing_input_count: 0,
+      unresolved_changed_or_missing_paths: [],
+      replacement_capture_count: 1,
+      exact_rendered_equivalence_count: 1,
       historical_artifact_count: 1,
       historical_artifacts_blob_equal: true,
       screenshot_manifest_integrity_passed: true,
     },
     platform_equal_paths: [{ path: 'a', blobs: { renewal_payload: 'blob-a' }, status: 'equal' }],
-    lesson_equal_paths: [{ path: 'b', blobs: { renewal_snapshot: 'blob-b' }, status: 'equal' }],
+    lesson_equal_paths: [{ path: 'b', blobs: { renewal_snapshot: 'blob-b' }, status: 'changed' }],
     lesson_existence_only_paths: [{ path: 'c', blobs: { renewal_snapshot: 'blob-c' }, status: 'present' }],
+    rendered_renewals: [{ evidence_path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json', status: 'exact_rendered_equivalence' }],
   };
 }
 
@@ -324,6 +342,47 @@ describe('Y1 Golden rollout wave state contracts', () => {
 });
 
 describe('Y1 Golden rollout wave evidence and governance contracts', () => {
+  test('accepts the exact one-capture rendered-equivalence renewal', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const scaleProof = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.scaleProof), 'utf8'));
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.renderedRenewal), 'utf8'));
+    const result = checker.validateRenderedRenewal(renewal, scaleProof, {
+      renewedLessonRef: renewal.lesson.renewed_snapshot_sha,
+    });
+    expect(result.capture_id).toBe('112-normal-practice-desktop-light-opgaven');
+    expect(result.changed_pixels).toBe(0);
+    expect(result.status).toBe('exact_rendered_equivalence');
+  });
+
+  test('keeps the changed opgaven page in the rendered dependency set', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const scaleProof = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.scaleProof), 'utf8'));
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.renderedRenewal), 'utf8'));
+    const dependencies = checker.deriveLessonDependencies(
+      scaleProof,
+      renewal.lesson.historical_capture_sha,
+      renewal.lesson.renewed_snapshot_sha
+    );
+    expect(dependencies.equal_paths).toContain(renewal.lesson.page_path);
+  });
+
+  test.each([
+    ['changed pixel', (record) => { record.pixel_comparison.changed_pixels = 1; }, /changed-pixel result mismatch/],
+    ['wrong page', (record) => { record.lesson.page_path = 'wrong.html'; }, /lesson page mismatch/],
+    ['multiple captures', (record) => { record.canonical_process.capture_count = 2; }, /exactly one selected capture/],
+    ['stale screenshot hash', (record) => { record.renewed_capture.sha256 = '0'.repeat(64); }, /replacement screenshot hash mismatch/],
+    ['failed visual review', (record) => { record.human_visual_review.status = 'FAIL'; }, /human visual review must pass/],
+    ['stale visual review hash', (record) => { record.human_visual_review.review_sha256 = '0'.repeat(64); }, /visual review hash mismatch/],
+    ['authority escalation', (record) => { record.authority.merge_authorized = true; }, /authority.merge_authorized must be false/],
+    ['missing required authority hold', (record) => { delete record.authority.merge_authorized; record.authority.unrelated_placeholder = false; }, /authority keys mismatch/],
+  ])('rejects a rendered renewal with %s', (_label, mutate, pattern) => {
+    const root = path.resolve(__dirname, '..', '..');
+    const scaleProof = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.scaleProof), 'utf8'));
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.renderedRenewal), 'utf8'));
+    mutate(renewal);
+    expect(() => checker.validateRenderedRenewal(renewal, scaleProof)).toThrow(pattern);
+  });
+
   test('rejects stale or incomplete delta-proof dependency sets', () => {
     const recorded = baseDeltaRecord();
     const recomputed = structuredClone(recorded);
@@ -344,6 +403,7 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     mutateAndExpect((recorded) => { recorded.summary.historical_artifact_count = 2; }, /artifact count is stale/);
     mutateAndExpect((recorded) => { recorded.summary.screenshots_reusable = false; }, /reuse decision is stale/);
     mutateAndExpect((recorded) => { recorded.summary.recapture_required = true; }, /complete summary is stale/);
+    mutateAndExpect((recorded) => { recorded.rendered_renewals[0].status = 'stale'; }, /rendered renewal evidence is stale/);
   });
 
   test('limits the post-payload evidence tail to deterministic evidence paths', () => {
@@ -394,8 +454,8 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
       researchMap: common,
       referenceMap: common,
       githubEntry: common,
-      urlIndex: `${checker.PATHS.bundleUrls}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}`,
-      bundleUrls: checker.PATHS.packet,
+      urlIndex: `${checker.PATHS.bundleUrls}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}\n${checker.PATHS.renderedRenewal}`,
+      bundleUrls: `${checker.PATHS.packet}\n${checker.PATHS.renderedRenewal}`,
       platformAgentIndex: checker.PATHS.packet,
       dashboard: checker.WAVE_ID,
     })).toThrow(/controlled-rollout state/);
@@ -422,6 +482,17 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     packet.pr_url = 'https://github.com/meijer1973/4veco-platform/pull/999';
     packet.reviewed_payload_head_sha = 'd'.repeat(40);
     expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/payload SHA must match delta-proof renewal payload/);
+  });
+
+  test('rejects unresolved rendered drift even when packet and proof counts are made consistent', () => {
+    const { packet, proof } = basePacketAndProof();
+    const delta = baseDeltaRecord();
+    delta.summary.unresolved_changed_or_missing_input_count = 1;
+    delta.summary.unresolved_changed_or_missing_paths = ['unverified.html'];
+    delta.summary.screenshots_reusable = false;
+    delta.summary.recapture_required = true;
+    proof.rendered_evidence.unresolved_changed_or_missing_input_count = 1;
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/zero unresolved rendered inputs/);
   });
 });
 
@@ -595,6 +666,9 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
 
     for (const sharedPath of sharedPaths) expect(actualPolicy.allowed_exact).toContain(sharedPath);
     for (const sharedPath of sharedPaths) expect(actualPolicy.trigger_exact).not.toContain(sharedPath);
+    const captureTool = 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js';
+    expect(actualPolicy.allowed_exact).toContain(captureTool);
+    expect(actualPolicy.trigger_exact).toContain(captureTool);
 
     for (let mask = 1; mask < (1 << sharedPaths.length); mask += 1) {
       const repo = makeRepo();
@@ -664,7 +738,7 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
       allowUnbound: true,
       writeDeltaProof: false,
       writeDeltaProofOnly: false,
-      lessonHead: '96c0970f45739a8758cf7e932c6bce77806cd68d',
+      lessonHead: 'f09fd6e88edc5049b026b16b0158e7e188091d2d',
       eventBaseSha: base,
     };
     const unrelated = checker.run({
