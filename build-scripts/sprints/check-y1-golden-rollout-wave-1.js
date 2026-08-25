@@ -32,6 +32,7 @@ const CAPTURE_PLATFORM_SHA = '5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7';
 const CAPTURE_LESSON_SHA = '071a465a03e287bc5768d88aabbec3e63b15ee09';
 const OLD_CI_PLATFORM_SHA = '571d435a172240524ed96394a41682ef003bfcad';
 const OLD_CI_LESSON_SHA = 'ba08b9c2e033a877c0d1b57952055ce697912a22';
+const AUTHORIZED_CONTINUATION_PLATFORM_SHA = 'e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8';
 
 const PARAGRAPHS = ['1.1.1', '1.1.2', '1.1.3'];
 const EXPECTED_SURFACES = [
@@ -317,6 +318,20 @@ function validateChangedEntries(entries, policy, scopeMode) {
   return { triggered: true, changed_paths: uniqueSorted(entries.flatMap(entryPaths)) };
 }
 
+function gitIsAncestor(ancestor, descendant, repoRoot = ROOT) {
+  return spawnSync('git', ['merge-base', '--is-ancestor', ancestor, descendant], { cwd: repoRoot }).status === 0;
+}
+
+function selectScopeDelta(eventDelta, policy, repoRoot = ROOT) {
+  const continuationRef = policy?.authorized_continuation_base;
+  if (!continuationRef) return eventDelta;
+  const continuation = resolveRef(continuationRef, repoRoot);
+  if (gitIsAncestor(continuation, eventDelta.base_sha, repoRoot)) return eventDelta;
+  check(gitIsAncestor(eventDelta.base_sha, continuation, repoRoot), 'authorized continuation base is not descended from exact event base');
+  check(gitIsAncestor(continuation, eventDelta.head_sha, repoRoot), 'exact event head does not descend from authorized continuation base');
+  return changedEntries(continuation, eventDelta.head_sha, repoRoot);
+}
+
 function validateEventRefs(options, resolved, cwd = ROOT) {
   const mode = options.eventMode;
   check(['pull_request', 'main_push', 'manual'].includes(mode), `unsupported event mode: ${mode}`);
@@ -454,6 +469,7 @@ function validateWaveAndSurfaces(options = {}) {
   check(wave.authority?.source_data_changed === false, 'wave must record no source-data changes');
   check(wave.authority?.engine_behavior_changed === false, 'wave must record no engine changes');
   check(wave.owner_decision?.platform_pr === 148 && wave.owner_decision?.comment_id === 4807419611, 'wave owner decision binding mismatch');
+  check(wave.changed_path_policy?.authorized_continuation_base === AUTHORIZED_CONTINUATION_PLATFORM_SHA, 'wave authorized continuation base mismatch');
 
   const firstThree = (manifest.surfaces || []).filter((item) => item.scope === 'first_three_product_proof');
   sameSet(firstThree.map((item) => item.id), EXPECTED_SURFACES, 'manifest first-three surfaces');
@@ -1147,7 +1163,10 @@ function run(options) {
     : readJson(PATHS.wave);
   const delta = changedEntries(options.base, options.head, options.repoRoot);
   validateEventRefs(options, delta, options.repoRoot);
-  const scope = validateChangedEntries(delta.entries, policyWave.changed_path_policy, options.scopeMode);
+  const scopeDelta = options.scopeOnly
+    ? delta
+    : selectScopeDelta(delta, policyWave.changed_path_policy, options.repoRoot);
+  const scope = validateChangedEntries(scopeDelta.entries, policyWave.changed_path_policy, options.scopeMode);
   if (options.scopeOnly) return { delta, scope };
 
   validateWaveAndSurfaces();
@@ -1184,7 +1203,7 @@ function run(options) {
     dashboard: readText('reports/internal-dashboard/dashboard-data.json'),
   });
 
-  return { delta, scope, delta_proof: recomputedDelta, exact_head_delta: exactHeadDelta, evidence_tail: evidenceTail };
+  return { delta, scope_delta: scopeDelta, scope, delta_proof: recomputedDelta, exact_head_delta: exactHeadDelta, evidence_tail: evidenceTail };
 }
 
 function cli(argv) {
@@ -1198,6 +1217,8 @@ function cli(argv) {
       scope_mode: options.scopeMode,
       base_sha: result.delta.base_sha,
       head_sha: result.delta.head_sha,
+      scope_base_sha: result.scope_delta?.base_sha || result.delta.base_sha,
+      scope_head_sha: result.scope_delta?.head_sha || result.delta.head_sha,
       scope_attestation_triggered: result.scope.triggered,
       changed_paths: result.scope.changed_paths,
       screenshots_reusable: result.delta_proof?.summary?.screenshots_reusable ?? null,
@@ -1215,6 +1236,7 @@ function cli(argv) {
 if (require.main === module) cli(process.argv.slice(2));
 
 module.exports = {
+  AUTHORIZED_CONTINUATION_PLATFORM_SHA,
   CAPTURE_LESSON_SHA,
   CAPTURE_PLATFORM_SHA,
   CheckError,
@@ -1230,6 +1252,7 @@ module.exports = {
   changedEntries,
   deriveLessonDependencies,
   evidenceTailPathAllowed,
+  entryPaths,
   classifyLocalHtmlReferences,
   extractLocalReferences,
   gitBlob,
@@ -1241,6 +1264,7 @@ module.exports = {
   parseNameStatus,
   run,
   sameSet,
+  selectScopeDelta,
   scopeTriggered,
   validateChangedEntries,
   validateDeltaProof,

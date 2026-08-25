@@ -52,6 +52,7 @@
   },
   "changed_path_policy": {
     "mode": "renewal_payload_only",
+    "authorized_continuation_base": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
     "trigger_exact": [
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",

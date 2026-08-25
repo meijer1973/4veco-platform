@@ -36,6 +36,9 @@ function baseWave() {
       source_data_changed: false,
       engine_behavior_changed: false,
     },
+    changed_path_policy: {
+      authorized_continuation_base: checker.AUTHORIZED_CONTINUATION_PLATFORM_SHA,
+    },
     owner_decision: { platform_pr: 148, comment_id: 4807419611 },
   };
 }
@@ -296,6 +299,11 @@ describe('Y1 Golden rollout wave state contracts', () => {
     decision.scale_gate_1.decision = 'READY_FOR_HUMAN_REVIEW';
     expect(() => checker.validateWaveAndSurfaces({ wave: decision, manifest: baseManifest(), skipFiles: true }))
       .toThrow(/PASS_CONTROLLED_ROLLOUT/);
+
+    const continuation = baseWave();
+    continuation.changed_path_policy.authorized_continuation_base = '0'.repeat(40);
+    expect(() => checker.validateWaveAndSurfaces({ wave: continuation, manifest: baseManifest(), skipFiles: true }))
+      .toThrow(/authorized continuation base mismatch/);
   });
 
   test('rejects missing and escaping route links', () => {
@@ -552,6 +560,63 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     });
     expect(result.status).toBe(0);
     expect(result.stdout).toMatch(/"scope_attestation_triggered": true/);
+  });
+
+  test('scopes a pre-renewal event range from the exact authorized continuation base', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const continuation = commit(repo.root, {
+      'docs/prior-authorized-platform-change.md': 'already reviewed\n',
+    }, 'prior authorized integration');
+    const head = commit(repo.root, {
+      'reports/sprints/Y1-renewal.md': 'renewal\n',
+    }, 'bounded evidence renewal');
+    const eventDelta = checker.changedEntries(repo.base, head, repo.root);
+    const scoped = checker.selectScopeDelta(eventDelta, {
+      authorized_continuation_base: continuation,
+    }, repo.root);
+
+    expect(scoped.base_sha).toBe(continuation);
+    expect(scoped.head_sha).toBe(head);
+    expect(scoped.entries.flatMap(checker.entryPaths)).toEqual(['reports/sprints/Y1-renewal.md']);
+  });
+
+  test('uses the full event range after the authorized continuation base', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const continuation = commit(repo.root, {
+      'reports/sprints/Y1-renewal.md': 'renewal\n',
+    }, 'bounded evidence renewal');
+    const futureBase = commit(repo.root, {
+      'docs/future-base.md': 'future base\n',
+    }, 'future base');
+    const head = commit(repo.root, {
+      'docs/future-head.md': 'future head\n',
+    }, 'future head');
+    const eventDelta = checker.changedEntries(futureBase, head, repo.root);
+    const scoped = checker.selectScopeDelta(eventDelta, {
+      authorized_continuation_base: continuation,
+    }, repo.root);
+
+    expect(scoped).toEqual(eventDelta);
+    expect(scoped.entries.flatMap(checker.entryPaths)).toEqual(['docs/future-head.md']);
+  });
+
+  test('fails closed when an event head does not descend from the authorized continuation base', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const continuation = commit(repo.root, {
+      'reports/sprints/Y1-renewal.md': 'renewal\n',
+    }, 'bounded evidence renewal');
+    git(repo.root, ['checkout', '--detach', repo.base]);
+    const unrelatedHead = commit(repo.root, {
+      'reports/sprints/Y1-unrelated.md': 'unrelated\n',
+    }, 'unrelated lineage');
+    const eventDelta = checker.changedEntries(repo.base, unrelatedHead, repo.root);
+
+    expect(() => checker.selectScopeDelta(eventDelta, {
+      authorized_continuation_base: continuation,
+    }, repo.root)).toThrow(/does not descend from authorized continuation base/);
   });
 
   test('fails closed on stale refs and exact event-ref mismatch', () => {
