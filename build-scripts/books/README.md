@@ -11,6 +11,7 @@ outputs in `4veco-lessen/Boek N - <title>/`.
 books/
 ├── build-book.py                      CLI entry point
 ├── lib_book.py                        Core library (manifest, assembly, PDF)
+├── book-toolchain.json                Supported reproducible build toolchain
 ├── book-manifests/
 │   ├── book-1.json                    Per-book configuration
 │   └── book-1-voorwoord.md            Per-book preface content
@@ -27,6 +28,18 @@ python build-scripts/books/build-book.py --book 1
 
 Output lands in `../4veco-lessen/Boek 1 - [title]/` as `.md`, `.html`, `.pdf`,
 and a consolidated `_assets/`.
+
+## Supported toolchain
+
+The machine-readable support record is `book-toolchain.json`. The reviewed
+publisher route records Pandoc `3.9.0.1` and pins WeasyPrint `68.1`. The builder
+prints the observed Python, Pandoc, and WeasyPrint versions at the start of
+every run so a regeneration log can be matched to that record.
+
+Pandoc 3.x releases emit different default `<style>` contents. The builder
+therefore removes all Pandoc-owned style blocks from `<head>` before injecting
+the project stylesheet; it does not depend on a version-specific comment.
+Regression fixtures cover the observed 3.1.3 and 3.9.0.1 stylesheet shapes.
 
 ## Prerequisite
 

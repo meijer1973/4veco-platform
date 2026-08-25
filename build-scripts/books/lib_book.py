@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import base64
 import filecmp
+import importlib.metadata
 import json
 import os
 import re
@@ -26,6 +27,9 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 BOOK_CONTENT_START = "<!-- BOOK-CONTENT-START -->"
 BOOK_CONTENT_END = "<!-- BOOK-CONTENT-END -->"
+PANDOC_STYLE_RE = re.compile(r"<style\b[^>]*>.*?</style>", re.IGNORECASE | re.DOTALL)
+HEAD_RE = re.compile(r"(<head\b[^>]*>)(.*?)(</head>)", re.IGNORECASE | re.DOTALL)
+TOOLCHAIN_RECORD = Path(__file__).with_name("book-toolchain.json")
 
 # ---------------------------------------------------------------------------
 # Manifest loading + validation
@@ -653,15 +657,73 @@ def embed_images(md: str, asset_dir: Path) -> str:
     md = ASSET_REF_RE.sub(replacer, md)
     return HTML_IMG_SRC_RE.sub(html_img_replacer, md)
 
-def wrap_exercises_simple(html: str) -> str:
-    html = re.sub(
-        r"<p><strong>(Opgave \d+)",
-        r'</div><div class="exercise"><p><strong>\1',
-        html,
+def strip_pandoc_stylesheets(html: str) -> str:
+    """Remove Pandoc-owned style blocks from <head>, independent of version."""
+    def strip_head(match: re.Match) -> str:
+        cleaned = PANDOC_STYLE_RE.sub("", match.group(2))
+        return f"{match.group(1)}{cleaned}{match.group(3)}"
+
+    cleaned, count = HEAD_RE.subn(strip_head, html, count=1)
+    if count != 1:
+        raise ValueError("Pandoc HTML is missing a <head> element")
+    return cleaned
+
+def detect_toolchain_versions() -> dict[str, str]:
+    """Return observed build-tool versions for reproducibility logs."""
+    pandoc = subprocess.run(
+        ["pandoc", "--version"], capture_output=True, text=True, check=False
     )
-    html = html.replace('</div><div class="exercise">', '<div class="exercise">', 1)
-    html = re.sub(r"(<h[23])", r"</div>\1", html)
-    return html
+    pandoc_version = "unavailable"
+    if pandoc.returncode == 0 and pandoc.stdout.strip():
+        pandoc_version = pandoc.stdout.splitlines()[0].strip()
+    try:
+        weasyprint_version = importlib.metadata.version("weasyprint")
+    except importlib.metadata.PackageNotFoundError:
+        weasyprint_version = "unavailable"
+    return {
+        "python": sys.version.split()[0],
+        "pandoc": pandoc_version,
+        "weasyprint": weasyprint_version,
+    }
+
+def wrap_exercises_simple(html: str) -> str:
+    """Wrap exercise blocks without emitting stray or cross-section divs."""
+    token_re = re.compile(
+        r'(<p><strong>Opgave\s+\d+\b|<div class="page-break"></div>|'
+        r'<h[123]\b|</body>)',
+        re.IGNORECASE,
+    )
+    pieces: list[str] = []
+    last = 0
+    open_exercise = False
+
+    for match in token_re.finditer(html):
+        token = match.group(0)
+        pieces.append(html[last:match.start()])
+
+        if token.lower().startswith("<p><strong>opgave"):
+            if open_exercise:
+                pieces.append("</div>")
+            pieces.extend(('<div class="exercise">', token))
+            open_exercise = True
+        else:
+            if open_exercise:
+                pieces.append("</div>")
+                open_exercise = False
+            pieces.append(token)
+
+        last = match.end()
+
+    pieces.append(html[last:])
+    if open_exercise:
+        pieces.append("</div>")
+    wrapped = "".join(pieces)
+    return re.sub(
+        r'(<h3\b[^>]*>[^<]*</h3>\s*)<div class="exercise">',
+        r'<div class="exercise">\1',
+        wrapped,
+        flags=re.IGNORECASE,
+    )
 
 CHAPTER_FRONT_OPEN_RE = re.compile(r'<div class="chapter-front">')
 DIV_TAG_RE = re.compile(r"<(/?)div\b[^>]*>")
@@ -1169,13 +1231,19 @@ figcaption { font-weight: bold; font-size: 10.5pt; color: #1a1a1a; text-align: l
 img { max-width: 100%; width: 100%; display: block; margin: 14pt auto; break-inside: avoid; }
 p + figure, p + p > img { break-before: avoid; }
 
-/* Exercises */
-.exercise { margin-bottom: 14pt; orphans: 2; widows: 2; }
+/* Keep an exercise together whenever it fits on one page. */
+.exercise {
+  margin-bottom: 14pt;
+  orphans: 2;
+  widows: 2;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
 .exercise > p:first-child { break-after: avoid; page-break-after: avoid; }
 .exercise p { margin: 0 0 1pt 0; }
 
 /* Misc */
-code { background: #EDF2F7; padding: 1pt 5pt; border-radius: 3px; font-family: 'Consolas', 'DejaVu Sans Mono', monospace; font-size: 10pt; }
+code { background: #EDF2F7; padding: 1pt 5pt; border-radius: 3px; font-family: 'Consolas', 'DejaVu Sans Mono', monospace; font-size: 10pt; white-space: normal; overflow-wrap: anywhere; }
 hr { border: none; border-top: 1px solid #BBB; margin: 18pt 0; }
 em { color: #444; }
 ul, ol { margin: 0 0 10pt 0; padding-left: 20pt; }
@@ -1327,13 +1395,9 @@ def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: d
         raise RuntimeError(f"Pandoc error: {result.stderr.decode()}")
     html = result.stdout.decode("utf-8")
 
-    # 3. Strip Pandoc default stylesheet
-    html = re.sub(
-        r"<style>\s*/\* Default styles provided by pandoc.*?</style>",
-        "",
-        html,
-        flags=re.DOTALL,
-    )
+    # 3. Strip every Pandoc-owned head stylesheet. Pandoc 3.x stylesheet
+    # comments vary by release, so matching a comment is not reproducible.
+    html = strip_pandoc_stylesheets(html)
 
     # 4. Wrap exercises (only in content region; skip chapter-front and book-* divs)
     html = wrap_exercises_in_book(html)
@@ -1387,6 +1451,12 @@ def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: d
 def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
     print(f"=== Loading manifest: {manifest_path.name} ===")
     manifest = load_manifest(manifest_path)
+    versions = detect_toolchain_versions()
+    print(
+        "Toolchain "
+        f"(policy: {TOOLCHAIN_RECORD.name}): Python {versions['python']}; "
+        f"{versions['pandoc']}; WeasyPrint {versions['weasyprint']}"
+    )
 
     print(f"\n=== Assembling book ===")
     book_md, asset_sources, book_title_full, book_output_dir, book = assemble_book_md(

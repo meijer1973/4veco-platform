@@ -93,16 +93,25 @@ html = result.stdout
 
 If pandoc warns about a missing title, ignore the warning — it only affects the HTML `<title>` tag which is invisible in PDF.
 
-### 3.3 Strip Pandoc default stylesheet
+### 3.3 Strip Pandoc default stylesheets
 
-Pandoc `--standalone` injects a default stylesheet with `body { max-width: 36em; padding: 50px; }` and `p { margin: 1em 0; }`. These conflict with our custom CSS (especially page margins and spacing). **Always strip it** before injecting our own:
+Pandoc `--standalone` injects default styles such as `body { max-width: 36em; padding: 50px; }` and `p { margin: 1em 0; }`. These conflict with our custom CSS (especially page margins and spacing). Pandoc versions do not use one stable leading comment, so **strip every `<style>` block inside `<head>`** before injecting our own:
 
 ```python
 import re
-html = re.sub(
-    r'<style>\s*/\* Default styles provided by pandoc.*?</style>',
-    '', html, flags=re.DOTALL
-)
+
+style_re = re.compile(r'<style\b[^>]*>.*?</style>', re.IGNORECASE | re.DOTALL)
+head_re = re.compile(r'(<head\b[^>]*>)(.*?)(</head>)', re.IGNORECASE | re.DOTALL)
+
+def strip_pandoc_stylesheets(html):
+    def strip_head(match):
+        return match.group(1) + style_re.sub('', match.group(2)) + match.group(3)
+    cleaned, count = head_re.subn(strip_head, html, count=1)
+    if count != 1:
+        raise ValueError('Pandoc HTML is missing a <head> element')
+    return cleaned
+
+html = strip_pandoc_stylesheets(html)
 ```
 
 ---
@@ -117,18 +126,39 @@ Exercises in the markdown are just `**Opgave X**` paragraphs. Weasyprint cannot 
 import re
 
 def wrap_exercises(html):
-    """Wrap each Opgave block in a div for page-break control."""
-    html = re.sub(
-        r'<p><strong>(Opgave \d+)',
-        r'</div><div class="exercise"><p><strong>\1',
-        html
+    """Wrap Opgave blocks and close them at structural boundaries."""
+    token_re = re.compile(
+        r'(<p><strong>Opgave\s+\d+\b|<div class="page-break"></div>|'
+        r'<h[123]\b|</body>)',
+        re.IGNORECASE,
     )
-    # Clean up the first stray </div>
-    html = html.replace('</div><div class="exercise">',
-                        '<div class="exercise">', 1)
-    # Close last exercise div before next section header
-    html = re.sub(r'(<h[23])', r'</div>\1', html)
-    return html
+    pieces, last, open_exercise = [], 0, False
+    for match in token_re.finditer(html):
+        token = match.group(0)
+        pieces.append(html[last:match.start()])
+        if token.lower().startswith('<p><strong>opgave'):
+            if open_exercise:
+                pieces.append('</div>')
+            pieces.extend(('<div class="exercise">', token))
+            open_exercise = True
+        else:
+            if open_exercise:
+                pieces.append('</div>')
+                open_exercise = False
+            pieces.append(token)
+        last = match.end()
+    pieces.append(html[last:])
+    if open_exercise:
+        pieces.append('</div>')
+    wrapped = ''.join(pieces)
+    # Keep an immediately preceding exercise label (for example Denketøy)
+    # inside the same non-breaking block.
+    return re.sub(
+        r'(<h3\b[^>]*>[^<]*</h3>\s*)<div class="exercise">',
+        r'<div class="exercise">\1',
+        wrapped,
+        flags=re.IGNORECASE,
+    )
 ```
 
 ### 4.2 Rebalance table column widths
@@ -320,6 +350,8 @@ p + figure, p + p > img {
   margin-bottom: 14pt;
   orphans: 2;
   widows: 2;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .exercise > p:first-child {
@@ -341,6 +373,8 @@ code {
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 10pt;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 hr {
@@ -443,14 +477,7 @@ def build_pdf(md_path, output_path, asset_dir=None):
     html = result.stdout
     
     # 4. Wrap exercises in divs
-    html = re.sub(
-        r'<p><strong>(Opgave \d+)',
-        r'</div><div class="exercise"><p><strong>\1',
-        html
-    )
-    html = html.replace('</div><div class="exercise">',
-                        '<div class="exercise">', 1)
-    html = re.sub(r'(<h[23])', r'</div>\1', html)
+    html = wrap_exercises(html)
     
     # 5. Inject CSS
     css = "<style>" + Path(__file__).parent.joinpath(
