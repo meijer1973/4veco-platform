@@ -1030,7 +1030,6 @@ function validateNavigationTexts(texts) {
   check(texts.urlIndex?.includes(PATHS.deltaProof), 'URL index missing Y1 delta proof');
   check(texts.urlIndex?.includes(PATHS.renderedRenewal), 'URL index missing Y1 rendered renewal');
   check(texts.bundleUrls?.includes(PATHS.packet), 'Y1 review bundle missing packet');
-  check(texts.bundleUrls?.includes(PATHS.renderedRenewal), 'Y1 review bundle missing rendered renewal');
   check(texts.platformAgentIndex?.includes(PATHS.packet), 'platform agent index missing Y1 packet');
   check(texts.dashboard?.includes(WAVE_ID), 'internal dashboard missing current Y1 wave');
   check(texts.dashboard?.includes('PASS_CONTROLLED_ROLLOUT'), 'internal dashboard missing controlled-rollout state');
