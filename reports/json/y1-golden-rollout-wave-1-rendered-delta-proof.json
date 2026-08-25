@@ -1,18 +1,18 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "generated": "2026-08-24T07:06:26.609Z",
+  "generated": "2026-08-25T15:02:08.823Z",
   "purpose": "commit-bound rendered proof reuse attestation",
   "commit_chain": {
     "platform": {
       "capture_payload": "5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7",
       "old_pr_ci": "571d435a172240524ed96394a41682ef003bfcad",
-      "renewal_payload": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc"
+      "renewal_payload": "bf8349e37b8520618f5dcd46561921860253333d"
     },
     "lesson": {
       "capture_payload": "071a465a03e287bc5768d88aabbec3e63b15ee09",
       "old_pr_ci": "ba08b9c2e033a877c0d1b57952055ce697912a22",
-      "renewal_snapshot": "96c0970f45739a8758cf7e932c6bce77806cd68d"
+      "renewal_snapshot": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
     }
   },
   "dependency_discovery": {
@@ -24,7 +24,8 @@
     "navigation_destination_content_outside_screenshot_claim": true,
     "landing_route_targets_exist_at_all_commits": true,
     "platform_source_generator_runtime_and_proof_inputs_explicit": true,
-    "proof_defined_list_accepted_without_cross_check": false
+    "proof_defined_list_accepted_without_cross_check": false,
+    "changed_capture_inputs_require_verified_rendered_renewal": true
   },
   "platform_equal_paths": [
     {
@@ -1078,10 +1079,10 @@
       "blobs": {
         "capture_payload": "8fe1efd325273c5beb543931c9ac255af3da4b9c",
         "old_pr_ci": "8fe1efd325273c5beb543931c9ac255af3da4b9c",
-        "renewal_snapshot": "8fe1efd325273c5beb543931c9ac255af3da4b9c"
+        "renewal_snapshot": "0a0148b381eac432da4899b17f2ae05f681582af"
       },
       "comparison": "blob_equality",
-      "status": "equal",
+      "status": "changed",
       "missing_at": [],
       "label": "lesson rendered input"
     },
@@ -1956,7 +1957,7 @@
       "blobs": {
         "capture_payload": "03e27e0b4089ac9daffda5b293344c327da2f423",
         "old_pr_ci": "03e27e0b4089ac9daffda5b293344c327da2f423",
-        "renewal_snapshot": "03e27e0b4089ac9daffda5b293344c327da2f423"
+        "renewal_snapshot": "7104cfe91f23d874a22c7edc105f120b1b2326ee"
       },
       "comparison": "existence_only",
       "status": "present",
@@ -1968,7 +1969,7 @@
       "blobs": {
         "capture_payload": "b466cd98a86aafb3d31d80b4e4d6447a59f33fdc",
         "old_pr_ci": "b466cd98a86aafb3d31d80b4e4d6447a59f33fdc",
-        "renewal_snapshot": "b466cd98a86aafb3d31d80b4e4d6447a59f33fdc"
+        "renewal_snapshot": "9cfa1df04fdc8333fbcee3876260ae577880d1e9"
       },
       "comparison": "existence_only",
       "status": "present",
@@ -2028,7 +2029,7 @@
       "blobs": {
         "capture_payload": "30155e90e77b924b8c3e659cf2603e8cc1fa81b7",
         "old_pr_ci": "30155e90e77b924b8c3e659cf2603e8cc1fa81b7",
-        "renewal_snapshot": "30155e90e77b924b8c3e659cf2603e8cc1fa81b7"
+        "renewal_snapshot": "4d4cccae39b9aa510dc6c8117f80ad825a73660c"
       },
       "comparison": "existence_only",
       "status": "present",
@@ -2040,7 +2041,7 @@
       "blobs": {
         "capture_payload": "d96df366f1c08c894512e2febffd1913ee2160df",
         "old_pr_ci": "d96df366f1c08c894512e2febffd1913ee2160df",
-        "renewal_snapshot": "d96df366f1c08c894512e2febffd1913ee2160df"
+        "renewal_snapshot": "4f2c793568c94cdd006d5bf45e1e52966f8c18a9"
       },
       "comparison": "existence_only",
       "status": "present",
@@ -2052,7 +2053,7 @@
       "blobs": {
         "capture_payload": "3b32ed3df230326d81c03ae5a08615e218f1182d",
         "old_pr_ci": "3b32ed3df230326d81c03ae5a08615e218f1182d",
-        "renewal_snapshot": "3b32ed3df230326d81c03ae5a08615e218f1182d"
+        "renewal_snapshot": "a2e5890a3b96b8fb9de61367ffbaa500e57fd4e1"
       },
       "comparison": "existence_only",
       "status": "present",
@@ -2396,14 +2397,42 @@
       "label": "lesson route target"
     }
   ],
+  "rendered_renewals": [
+    {
+      "evidence_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+      "evidence_sha256": "501635dfa77d5f90aa26a5d80971fc5ee5f066f6dd4f59e86d796164f1554e9e",
+      "capture_id": "112-normal-practice-desktop-light-opgaven",
+      "lesson_path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html",
+      "historical_lesson_sha": "071a465a03e287bc5768d88aabbec3e63b15ee09",
+      "prior_y1_lesson_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+      "renewed_lesson_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "historical_blob": "8fe1efd325273c5beb543931c9ac255af3da4b9c",
+      "renewed_blob": "0a0148b381eac432da4899b17f2ae05f681582af",
+      "historical_screenshot_sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f",
+      "renewed_screenshot_sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f",
+      "changed_pixels": 0,
+      "status": "exact_rendered_equivalence",
+      "human_visual_review": "PASS"
+    }
+  ],
   "summary": {
     "platform_equal_path_count": 64,
     "lesson_equal_path_count": 78,
     "lesson_existence_only_path_count": 55,
-    "changed_or_missing_input_count": 0,
-    "changed_or_missing_paths": [],
+    "changed_or_missing_input_count": 1,
+    "changed_or_missing_paths": [
+      "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html"
+    ],
+    "verified_rendered_renewal_count": 1,
+    "verified_rendered_renewal_paths": [
+      "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html"
+    ],
+    "unresolved_changed_or_missing_input_count": 0,
+    "unresolved_changed_or_missing_paths": [],
     "screenshots_reusable": true,
     "recapture_required": false,
+    "replacement_capture_count": 1,
+    "exact_rendered_equivalence_count": 1,
     "historical_artifact_count": 50,
     "historical_artifacts_blob_equal": true,
     "screenshot_manifest_integrity_passed": true

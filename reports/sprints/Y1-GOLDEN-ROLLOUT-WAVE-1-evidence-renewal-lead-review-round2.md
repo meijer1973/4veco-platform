@@ -22,9 +22,9 @@ PASS
 - policy formatting is clean and the lesson and historical Scale Proof remain
   unchanged.
 
-The fresh staged focused result is 36 passed and 1 expected pre-payload failure
-(37 total). The failing exact-head test must become green after the payload
-commit and proof regeneration; no code or evidence-integrity blocker remains
-before that staged commit.
+Post-payload verification is green: all 40 focused tests pass after proof
+regeneration. The continuation-boundary regressions preserve exact event
+lineage, scope this authorized renewal at `e2deb65...`, retain complete later
+event ranges, and reject divergent heads.
 
 This verdict does not authorize merging Platform PR #208.

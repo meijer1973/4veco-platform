@@ -19,8 +19,7 @@ Responds to:
 3. Focused regressions reject an unresolved delta even when packet/proof counts
    are made consistent, and reject required authority-key substitution.
 
-The final fresh staged result recorded 36 tests passed and 1 expected pre-payload
-failure (37 total) because the still-historical proof did not yet contain the
-rendered-renewal path. A filtered diagnostic confirmed all other 36 tests pass.
-Full focused closure must be green after the substantive payload SHA is
-committed and the commit-bound proof is regenerated.
+Post-payload closure is green: all 40 focused tests pass after the substantive
+payload commit and commit-bound proof regeneration. The added lineage cases
+prove that the authorized pre-renewal event range scopes at `e2deb65...`, later
+events retain their full range, and divergent heads fail closed.

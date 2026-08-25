@@ -3,15 +3,16 @@
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "name": "Year 1 Golden Rollout Wave 1 Current-Main Renewal",
   "status": "completed",
-  "completed": "2026-08-23",
-  "completed_on": "2026-08-23",
-  "verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
-  "result_status": "completed_pending_human_review",
+  "completed": "2026-08-25",
+  "completed_on": "2026-08-25",
+  "verdict": "EVIDENCE_RENEWAL_PENDING_EXACT_HEAD_CI",
+  "result_status": "evidence_renewal_pending_exact_head_ci",
   "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+  "renewal_plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md",
   "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
   "result": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
   "diff_summary": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
-  "final_verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
+  "final_verdict": "EVIDENCE_RENEWAL_PENDING_EXACT_HEAD_CI",
   "protected_reference_data_changed": false,
   "generated_output_changed": false,
   "implementation_changed": true,
@@ -31,6 +32,9 @@
     "round4": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round4.md",
     "round5": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round5.md",
     "round6": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md",
+    "evidence_renewal_round1": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round1.md",
+    "evidence_renewal_corrections": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-corrections.md",
+    "evidence_renewal_round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round2.md",
     "round1_verdict": "REVISE_IMPLEMENTATION",
     "round2_verdict": "PASS WITH FLAGS",
     "round3_verdict": "PASS WITH FLAGS",
@@ -38,6 +42,7 @@
     "round5_verdict": "PASS WITH FLAGS",
     "round6_verdict": "PASS WITH FLAGS",
     "final_verdict": "PASS WITH FLAGS",
+    "evidence_renewal_final_verdict": "PASS",
     "findings": [
       {
         "id": "Y1-LEAD-R1-SCOPE",
@@ -46,7 +51,7 @@
         "evidence": "Final checker control flow plus synthetic full-mode pass and rendered-drift rejection.",
         "blocks": "Nothing; the original finding is resolved.",
         "does_not_block": "Implementation closure and PR handoff.",
-        "proof_required_to_close": "Closed by the 26-test focused suite and final lead reinspection."
+        "proof_required_to_close": "Closed by the 40-test focused suite and final lead reinspection."
       },
       {
         "id": "Y1-LEAD-R1-AUTHORITY",
@@ -123,8 +128,9 @@
   },
   "acceptance_tests": [
     { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md", "status": "passed" },
     { "command": "npm.cmd test -- --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js", "status": "passed" },
-    { "command": "npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base b7ec603880bcd8cc98c93526121ca71d3f31edcd --head HEAD --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head 96c0970f45739a8758cf7e932c6bce77806cd68d --allow-unbound-packet", "status": "passed" },
+    { "command": "npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base origin/main --head bf8349e37b8520618f5dcd46561921860253333d --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d", "status": "passed" },
     { "command": "npm.cmd run check:platform", "status": "passed" },
     { "command": "npm.cmd run check:exercise-workflow-currentness", "status": "passed" },
     { "command": "npm.cmd run check:scale-proof-3p-product-path", "status": "passed" },
@@ -134,10 +140,12 @@
     { "command": "node build-scripts/sprints/emit-url-index.js --check", "status": "passed" },
     { "command": "npm.cmd run check:agent-index-freshness", "status": "passed" },
     { "command": "npm.cmd run check:scope-language", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete", "status": "passed" },
     { "command": "git diff --check HEAD", "status": "passed" },
-    { "command": "git -C \"C:\\\\Projects\\\\4veco-worktrees\\\\Y1-GOLDEN-ROLLOUT-WAVE-RENEWAL-1-20260823\\\\4veco-lessen\" diff --check", "status": "passed" },
+    { "command": "git -C C:/Projects/4veco-worktrees/y1-evidence-lesson-f09fd6 diff --check", "status": "passed" },
     { "command": "npm.cmd run check:exercise-authority-hygiene", "status": "skipped_with_reason", "reason": "Local LF/CRLF fixture-hash portability mismatch is pre-existing; exact-head remote validate-platform is required." },
-    { "command": "git diff --exit-code b7ec603880bcd8cc98c93526121ca71d3f31edcd..HEAD -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html", "status": "passed" }
+    { "command": "git diff --exit-code e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8..bf8349e37b8520618f5dcd46561921860253333d -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html", "status": "passed" }
   ],
   "product_boundaries": {
     "controlled_wave_eligibility": true,
@@ -161,10 +169,14 @@
     "replacement_pr": 214,
     "replacement_pr_url": "https://github.com/meijer1973/4veco-platform/pull/214",
     "supersession_comment_url": "https://github.com/meijer1973/4veco-platform/pull/205#issuecomment-5387272832",
-    "old_pr_closed": true
+    "old_pr_closed": true,
+    "current_integration_pr": 208,
+    "current_integration_pr_url": "https://github.com/meijer1973/4veco-platform/pull/208",
+    "current_renewal_payload_sha": "bf8349e37b8520618f5dcd46561921860253333d",
+    "lesson_merge_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
   },
   "authorized_next": [
-    "Complete exact-head CI, live branch-protection, lead, and PR Readiness Reviewer proof for replacement PR #214.",
+    "Complete the deterministic evidence tail, exact-head CI, and refreshed readiness/integration-lineage proof for current Platform PR #208.",
     "Return the exact-head L4 packet for human review; do not merge without owner authorization."
   ]
 }

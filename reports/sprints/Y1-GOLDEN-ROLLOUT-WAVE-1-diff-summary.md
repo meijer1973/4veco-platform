@@ -1,6 +1,6 @@
 # Sprint Y1-GOLDEN-ROLLOUT-WAVE-1: Diff Summary
 
-Generated: 2026-08-23
+Generated: 2026-08-25
 
 ## Platform Changes
 
@@ -18,14 +18,25 @@ Generated: 2026-08-23
 - Cross-binds the L4 packet, machine proof, and rendered delta payload while
   machine-holding automatic repository-wide migration.
 - Refreshes root maps, generated agent indexes, URL index, and dashboard.
+- Adds a Y1-owned, one-capture renewal runner pinned to the historical canonical
+  runner blob and exact lesson merge SHA.
+- Adds exact screenshot/hash/pixel/inspection/browser/visual-review evidence for
+  `112-normal-practice-desktop-light-opgaven` and minimally extends the checker
+  so changed captured input is accepted only with that fail-closed evidence.
+- Preserves exact event base/head validation while binding the renewal-only
+  changed-path allowlist to the authorized `e2deb65...` continuation boundary;
+  later events retain their complete event range and divergent lineage fails.
 
 ## Lesson Changes
 
-None. The lesson worktree remains clean and current lesson output is read-only
-evidence for parity, route, and rendered checks.
+None in this renewal. The lesson worktree remains clean at merge
+`f09fd6e88edc5049b026b16b0158e7e188091d2d` and its output is read-only evidence.
 
 ## Protected Surfaces
 
 No `source-data/book-1/exit-ticket/`, `engines/`, protected machine/external
 reference, target-exercise authority, or generated lesson output changes are
 included. No route migration or product/student authority is included.
+
+All historical Scale Proof JSON, manifests, route inventory, and screenshots
+remain blob-equal. The new capture is stored only under the Y1 renewal prefix.

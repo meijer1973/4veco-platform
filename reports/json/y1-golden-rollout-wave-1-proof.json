@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "generated": "2026-08-23T00:00:00.000Z",
-  "status": "implementation_complete_pending_exact_head_proof_and_human_review",
+  "generated": "2026-08-25T14:49:08.088Z",
+  "status": "evidence_renewal_payload_committed_pending_exact_head_ci_and_human_review",
   "lead_recommendation": "READY_FOR_HUMAN_REVIEW",
   "paragraphs": ["1.1.1", "1.1.2", "1.1.3"],
   "surface_ids": [
@@ -27,20 +27,26 @@
     "exit_tickets_target_readiness_evidence_only": true,
     "completion_language_held": true,
     "route_inventory_links_resolve": true,
-    "rendered_evidence_reuse_requires_delta_proof": true
+    "rendered_evidence_reuse_requires_delta_proof": true,
+    "changed_capture_input_requires_verified_rendered_renewal": true
   },
   "rendered_evidence": {
     "source_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
     "delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
-    "screenshots_recaptured": false,
-    "reuse_status": "commit_bound_reuse_attested",
-    "reviewed_platform_payload_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc",
-    "lesson_snapshot_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+    "rendered_renewal": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+    "screenshots_recaptured": true,
+    "reuse_status": "verified_exact_rendered_equivalence",
+    "reviewed_platform_payload_sha": "bf8349e37b8520618f5dcd46561921860253333d",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "platform_equal_path_count": 64,
     "lesson_equal_path_count": 78,
     "lesson_existence_only_path_count": 55,
     "historical_artifact_count": 50,
-    "changed_or_missing_input_count": 0,
+    "changed_or_missing_input_count": 1,
+    "verified_rendered_renewal_count": 1,
+    "unresolved_changed_or_missing_input_count": 0,
+    "replacement_capture_count": 1,
+    "exact_rendered_equivalence_count": 1,
     "screenshots_reusable": true,
     "recapture_required": false
   },
@@ -58,7 +64,9 @@
     "not_year1_complete": true,
     "not_chapter_12_ready": true,
     "not_actual_rollout_or_adoption": true,
-    "not_automatic_repository_wide_migration": true
+    "not_automatic_repository_wide_migration": true,
+    "not_platform_pr_208_merge_authorization": true,
+    "capture_equivalence_scope_limited_to_recorded_1280x900_viewport": true
   },
   "authority": {
     "actual_rollout_or_adoption_authorized": false,

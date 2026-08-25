@@ -2,25 +2,33 @@
   "schema_version": 1,
   "packet_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "pr_number": 214,
-  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/214",
-  "reviewed_payload_head_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc",
+  "pr_number": 208,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/208",
+  "reviewed_payload_head_sha": "bf8349e37b8520618f5dcd46561921860253333d",
   "pr_throughput_class": "high_authority",
-  "bundle_id": null,
+  "bundle_id": "BOOK1-TEXTBOOK-RENEWAL-20260825",
   "authority_class": "product_authority",
-  "date": "2026-08-23",
+  "date": "2026-08-25",
   "human_decision_required": true,
   "auto_merge_allowed_after_ci": false,
-  "paired_prs": [],
+  "paired_prs": [
+    {
+      "repo": "meijer1973/4veco-lessen",
+      "pr_number": 43,
+      "status": "merged",
+      "merge_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
+    }
+  ],
   "escalation_triggers": [
     "product_authority_boundary",
     "ci_workflow_changed",
-    "supersedes_stale_human_handoff"
+    "supersedes_stale_human_handoff",
+    "changed_rendered_lesson_input_with_exact_equivalence_renewal"
   ],
   "review_autonomy": {
     "level": "L4",
-    "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "The renewal governs the historical PASS_CONTROLLED_ROLLOUT boundary and changes CI. Exact-head human review remains required."
+    "lead_review_result": "PASS",
+    "rationale": "The bounded renewal verifies one changed lesson input through an exact one-capture rendered-equivalence attestation. Exact-head CI and human merge authorization remain required."
   },
   "product_end_state_refs": [
     "../4veco-lessen/specifications/product-end-state.md",
@@ -29,6 +37,7 @@
   "original_sprint_or_gate_spec_refs": [
     "docs/roadmaps/golden-workbench/golden-workbench-rollout-original-plan-20260612.md",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md",
     "https://github.com/meijer1973/4veco-platform/pull/148#issuecomment-4807419611"
   ],
   "non_negotiable_requirements": [
@@ -37,12 +46,14 @@
     "Exit tickets remain target-readiness-only with completionLanguageEligible:false.",
     "Scale Gate 1 is recorded only as historical PASS_CONTROLLED_ROLLOUT.",
     "Committed PR scope uses exact event base/head changed-path proof.",
-    "Reused screenshots require commit-bound independently derived input-delta proof.",
+    "Changed captured inputs require commit-bound independently derived delta proof plus exact rendered-equivalence or replacement-capture evidence.",
+    "The opgaven.html page remains in the rendered dependency set.",
+    "All historical Scale Proof artifacts remain blob-equal.",
     "No actual rollout/adoption, automatic migration, completion language, broad product use, or student use."
   ],
-  "status": "draft_exact_head_proof_pending",
+  "status": "payload_bound_exact_head_ci_pending",
   "route": "READY_FOR_HUMAN_REVIEW",
-  "content_verdict_requested": "Approve or reject the renewed controlled workflow-availability guard only.",
+  "content_verdict_requested": "Review the bounded Y1 exact-rendered-equivalence renewal for lesson f09fd6e; do not merge Platform PR #208 without a new explicit owner authorization.",
   "authority_claims": {
     "actual_rollout_or_adoption_authorized": false,
     "automatic_repository_wide_migration_authorized": false,
@@ -67,6 +78,8 @@
     { "requirement": "Shared infrastructure does not trigger the renewal-only allowlist", "status": "met" },
     { "requirement": "Dedicated negative regression suite", "status": "met" },
     { "requirement": "Commit-bound rendered delta proof", "status": "met" },
+    { "requirement": "One-capture exact rendered equivalence for 112-normal-practice-desktop-light-opgaven", "status": "met" },
+    { "requirement": "Historical Scale Proof artifacts preserved", "status": "met" },
     { "requirement": "Coherent active roadmaps", "status": "met" },
     { "requirement": "Maps, indexes, and dashboard closure", "status": "met" },
     { "requirement": "Replacement PR and reviewed-payload binding", "status": "met" },
@@ -86,14 +99,15 @@
     "wave": "references/data/exercises/y1-golden-rollout-wave-1.json",
     "machine_proof": "reports/json/y1-golden-rollout-wave-1-proof.json",
     "rendered_delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+    "rendered_renewal": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
     "checker": {
       "command": "npm.cmd run check:y1-golden-rollout-wave-1",
-      "status": "local_passed_allow_unbound"
+      "status": "passed_local_exact_payload"
     },
     "lead_review": {
-      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md",
-      "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc"
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "bf8349e37b8520618f5dcd46561921860253333d"
     },
     "ci": {
       "required_contexts": ["validate-platform"],
@@ -101,5 +115,5 @@
       "reviewed_commit_sha": null
     }
   },
-  "recommended_next_action": "Run exact-head CI, live branch-protection, lead, and PR Readiness Reviewer checks for PR #214, then return the L4 packet for human review."
+  "recommended_next_action": "Bind the deterministic evidence tail, obtain exact-head CI and refreshed readiness/integration-lineage proof for PR #208, then return for explicit owner merge authorization."
 }
