@@ -39,6 +39,7 @@ from the 2026-08-25 human review without merging either PR.
 | Review evidence current | Refreshed Part A review and quality-ref `partA:` block | Independent paragraph reviewer and independent quality-record reviewer |
 | Reproducible generated lesson outputs | Clean rebuild of paragraph, Chapter 1.1, and full Book 1 | Source/output diff audit, page count, print-scope and paragraph/chapter/book validators |
 | Current cross-repo bundle proof | Exact-member metadata and three-state workflow summary | Green `bundle-final` plus at least one green intermediate state |
+| Persisted rendered-page proof | 177 full-page PNGs plus contact sheets for §1.1.2, Chapter 1.1, and complete Book 1 | `rendered-proof.md` and `reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/manifest.json` |
 | Review lifecycle complete | Exact-head lead review, CI, PR readiness, coordinated apply | Both PRs transitioned only by `apply:bundle-readiness` |
 
 ## Execution
