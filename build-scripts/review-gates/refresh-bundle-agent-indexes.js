@@ -252,21 +252,6 @@ function refreshBundleAgentIndexes(options) {
   if (!/^[a-f0-9]{40}$/i.test(String(currentHeadSha || ''))) throw new Error('platform PR head is missing or invalid');
   if (!platformBranch) throw new Error('platform PR branch is missing');
   if (!/^[a-f0-9]{40}$/i.test(String(lessonMergeSha || ''))) throw new Error('lesson merge SHA is missing or invalid');
-  if (options.dryRun) {
-    return {
-      ok: true,
-      status: 'would_verify',
-      previous_platform_head_sha: currentHeadSha,
-      platform_integration_head_sha: currentHeadSha,
-      lesson_merge_commit_sha: lessonMergeSha,
-      changed_paths: null,
-      actual_changed_paths: null,
-      verified_paths: [...INDEX_PATHS],
-      would_verify_paths: [...INDEX_PATHS],
-      trusted_executor: 'platform-main',
-    };
-  }
-
   const trustedRoot = options.trustedRoot || path.resolve(__dirname, '..', '..');
   const tempRoot = fs.mkdtempSync(path.join(options.tempRoot || os.tmpdir(), '4veco-bundle-index-refresh-'));
   const platformRoot = path.join(tempRoot, 'platform');
@@ -299,9 +284,14 @@ function refreshBundleAgentIndexes(options) {
       return {
         ok: true,
         ...existing,
+        ...(options.dryRun ? { dry_run: true, would_reuse_existing_refresh: true } : {}),
         lesson_merge_commit_sha: lessonMergeSha,
         trusted_executor: 'platform-main',
       };
+    }
+
+    if (options.dryRun) {
+      throw new Error('dry-run requires an existing verified index-only refresh descendant');
     }
 
     const generated = generateCanonicalIndexes({

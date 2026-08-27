@@ -12,6 +12,10 @@ on:
       compatibility_workflow_run_id:
         description: Completed cross-repo bundle compatibility workflow run id
         required: true
+      payload_lead_review_json:
+        description: Exact reviewed-payload lead-review record for a residual readiness bridge
+        required: false
+        default: ''
       dry_run:
         description: Validate only, without merging
         required: false
@@ -85,6 +89,7 @@ jobs:
           PR_NUMBER: ${{ inputs.controller_pr_number }}
           AUTH_COMMENT_ID: ${{ inputs.human_bundle_authorization_comment_id }}
           COMPATIBILITY_RUN_ID: ${{ inputs.compatibility_workflow_run_id }}
+          PAYLOAD_LEAD_REVIEW_JSON: ${{ inputs.payload_lead_review_json }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           $scriptArgs = @(
@@ -110,5 +115,14 @@ jobs:
           )
           if ($env:DRY_RUN -eq 'true') {
             $scriptArgs += '--dry-run'
+          }
+          if (-not [string]::IsNullOrWhiteSpace($env:PAYLOAD_LEAD_REVIEW_JSON)) {
+            $leadReviewPath = Join-Path $env:RUNNER_TEMP 'bundle-payload-lead-review.json'
+            [System.IO.File]::WriteAllText(
+              $leadReviewPath,
+              $env:PAYLOAD_LEAD_REVIEW_JSON,
+              [System.Text.UTF8Encoding]::new($false)
+            )
+            $scriptArgs += @('--payload-lead-review', $leadReviewPath)
           }
           & npm.cmd @scriptArgs

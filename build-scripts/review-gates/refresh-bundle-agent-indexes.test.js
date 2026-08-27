@@ -357,28 +357,77 @@ describe('trusted bundle agent-index refresh', () => {
     }
   }, 60000);
 
-  test('dry-run reports what would be verified without claiming a commit delta', () => {
-    const result = refreshBundleAgentIndexes({
-      dryRun: true,
-      lessonMergeSha: '1'.repeat(40),
-      platformPr: {
-        headRefName: 'codex/controller',
-        headRefOid: '2'.repeat(40),
-      },
-    });
+  test('dry-run canonically verifies and reuses an existing refresh without pushing', () => {
+    const fixture = setupFixture();
+    try {
+      const initial = refreshBundleAgentIndexes({
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: fixture.platformPayload,
+        },
+      });
+      const before = git([
+        '--git-dir', fixture.platform.bare,
+        'rev-parse', 'refs/heads/codex/controller',
+      ], fixture.root);
 
-    expect(result).toMatchObject({
-      ok: true,
-      status: 'would_verify',
-      changed_paths: null,
-      actual_changed_paths: null,
-      verified_paths: INDEX_PATHS,
-      would_verify_paths: INDEX_PATHS,
-      trusted_executor: 'platform-main',
-    });
-    expect(result).not.toHaveProperty('commit');
-    expect(result).not.toHaveProperty('hashes');
-  });
+      const result = refreshBundleAgentIndexes({
+        dryRun: true,
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: initial.platform_integration_head_sha,
+        },
+      });
+
+      expect(result).toMatchObject({
+        ok: true,
+        dry_run: true,
+        status: 'reused',
+        would_reuse_existing_refresh: true,
+        platform_integration_head_sha: initial.platform_integration_head_sha,
+        changed_paths: INDEX_PATHS,
+        verified_paths: INDEX_PATHS,
+        commit: initial.commit,
+      });
+      expect(result.hashes).toBeDefined();
+      expect(git([
+        '--git-dir', fixture.platform.bare,
+        'rev-parse', 'refs/heads/codex/controller',
+      ], fixture.root)).toBe(before);
+    } finally {
+      fs.rmSync(fixture.root, { recursive: true, force: true });
+    }
+  }, 60000);
+
+  test('dry-run fails when no existing index refresh can be verified', () => {
+    const fixture = setupFixture();
+    try {
+      expect(() => refreshBundleAgentIndexes({
+        dryRun: true,
+        trustedRoot,
+        platformRemote: fixture.platform.bare,
+        lessonRemote: fixture.lesson.bare,
+        reviewedPlatformPayloadSha: fixture.platformPayload,
+        lessonMergeSha: fixture.lessonMerge,
+        platformPr: {
+          headRefName: 'codex/controller',
+          headRefOid: fixture.platformPayload,
+        },
+      })).toThrow('dry-run requires an existing verified index-only refresh descendant');
+    } finally {
+      fs.rmSync(fixture.root, { recursive: true, force: true });
+    }
+  }, 60000);
 
   test('rejects a tampered index-only descendant instead of stacking another refresh', () => {
     const fixture = setupFixture();

@@ -175,8 +175,12 @@ The lane must:
 15. verify the merge commit is observable on `main` and post-merge `main` CI
     succeeds.
 
-A dry-run may validate the lane inputs and policy decisions, but it must not set
-a reusable successful `integration-authorized` status.
+A dry-run validates the same read-only compatibility provenance, existing
+deterministic refresh, exact-pair CI, live PR/base/thread state, and readiness
+decision inputs as the live lane. It must not dispatch CI, update a branch,
+create or update comments, set a reusable successful `integration-authorized`
+status, or merge. A successful residual dry-run reports
+`would_create_exact_head_readiness` and stops at `validated_dry_run`.
 
 ## Cross-Repo Bundle Integration
 
@@ -294,6 +298,53 @@ idempotent: `--allow-partial-resume` may verify an already-merged lesson and
 reuse the one valid refresh descendant, while stale or tampered descendants,
 mixed SHAs, or any non-fast-forward movement fail closed. Final platform-main
 CI after both member merges is unchanged.
+
+If a lesson-first partial resume has no exact readiness comment for the
+controller's reviewed payload, the lane may use the residual-bundle readiness
+bridge. This bridge does not create or backdate a payload-head comment. It
+requires all of the following:
+
+- the lesson PR is merged from the exact authorized lesson payload, its merge
+  commit is current lesson `main`, and its exact payload readiness comment
+  contains a matching passing lesson lead review;
+- the controller payload is an authorized ancestor of the current integration
+  head with no substantive or authority-changing tail;
+- the existing index-only integration descendant is regenerated in isolation
+  and byte/commit-shape verified, including in dry-run mode;
+- compatibility workflow provenance and exact immutable member coordinates are
+  revalidated, including in dry-run mode;
+- a completed successful platform CI run is proven to bind the exact current
+  platform head and lesson merge commit; dry-run may reuse it but may not
+  dispatch a replacement;
+- a separate payload lead-review JSON record is supplied with
+  `--payload-lead-review <file>`. It must have `schema_version: 1`, result
+  `PASS` or `PASS WITH FLAGS`, a non-empty review path, and exact `repository`,
+  `pr_number`, `bundle_id`, and `reviewed_payload_head_sha` fields.
+
+The payload lead-review record is review evidence, not authorization. The lane
+must not derive it from `APPROVE_BUNDLE_AND_MERGE`, discover arbitrary passing
+files from the candidate branch, or substitute an old readiness comment. The
+bridge always constructs an L4 `READY_FOR_HUMAN_REVIEW` decision from live PR
+facts and the validated authorization, compatibility, lineage, lesson review,
+payload review, branch protection, deterministic refresh, and exact-pair CI.
+The integration refresh attestation binds the reviewed controller payload,
+current integration head, reviewed lesson payload, lesson merge commit,
+authorization comment, compatibility proof, review paths, and CI run
+coordinates.
+
+In dry-run mode that decision remains in memory and is passed to final preflight
+without publication. In live mode the lane publishes the current
+integration-head decision, re-fetches its exact marker and full machine record,
+and requires the canonical decision digest, route, repository, PR, and head to
+match the just-recomputed decision before final head/base/thread checks and
+merge. Publication failure, malformed re-fetch, digest mismatch, or any later
+head/base movement stops the lane.
+
+The hosted workflow transports this narrowly scoped record through the optional
+`payload_lead_review_json` dispatch input, writes it only to runner-temporary
+storage, and passes that path to trusted-main integrator code. Omitting the
+record is valid only when an exact payload readiness decision already exists;
+it is never an evidence waiver.
 
 When refreshed platform lineage reports substantive base overlap requiring an
 integration-delta lead review, dual review binding is mandatory. The canonical

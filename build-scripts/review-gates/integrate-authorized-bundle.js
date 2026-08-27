@@ -439,7 +439,6 @@ function findFileRecursive(root, fileName) {
 }
 
 function downloadPlatformCiEvidence(runId, options = {}) {
-  if (options.dryRun) return { ok: true, dry_run: true };
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), `platform-ci-${runId}-`));
   runGh([
     'run',
@@ -472,9 +471,11 @@ function parseArtifactSha256Digest(artifact) {
 }
 
 function downloadCompatibilityArtifactZip(artifact, options = {}) {
-  if (options.dryRun) return { ok: true, dry_run: true };
   if (!artifact || !artifact.id) return { ok: false, failure: 'compatibility_artifact_id_missing' };
-  const zip = runGhBuffer(['api', `repos/${PLATFORM_REPO}/actions/artifacts/${artifact.id}/zip`], options);
+  const zip = runGhBuffer(
+    ['api', `repos/${PLATFORM_REPO}/actions/artifacts/${artifact.id}/zip`],
+    { ...options, dryRun: false }
+  );
   const sha256 = crypto.createHash('sha256').update(zip).digest('hex');
   const expected = parseArtifactSha256Digest(artifact);
   return {
@@ -490,7 +491,6 @@ function downloadCompatibilityArtifactZip(artifact, options = {}) {
 }
 
 function downloadCompatibilityArtifactSummary(runId, options = {}) {
-  if (options.dryRun) return { ok: true, dry_run: true };
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), `bundle-summary-${runId}-`));
   runGh([
     'run',
@@ -628,12 +628,17 @@ function verifyCompatibilityWorkflowRun(runId, compatibility, expected = {}, opt
   if (!runId) {
     return { ok: false, failures: ['compatibility_workflow_run_id_required'] };
   }
-  if (options.dryRun) return { ok: true, dry_run: true, run_id: String(runId) };
-  const run = JSON.parse(runGh(['api', `repos/${PLATFORM_REPO}/actions/runs/${runId}`]));
-  const artifact = fetchCompatibilityArtifact(runId);
-  const workflow = fetchCompatibilityWorkflowInfo();
-  const zip = downloadCompatibilityArtifactZip(artifact, options);
-  const summary = downloadCompatibilityArtifactSummary(runId, options);
+  const fetchRun = options.fetchCompatibilityWorkflowRun || ((id) =>
+    JSON.parse(runGh(['api', `repos/${PLATFORM_REPO}/actions/runs/${id}`])));
+  const fetchArtifact = options.fetchCompatibilityArtifact || fetchCompatibilityArtifact;
+  const fetchWorkflow = options.fetchCompatibilityWorkflowInfo || fetchCompatibilityWorkflowInfo;
+  const downloadZip = options.downloadCompatibilityArtifactZip || downloadCompatibilityArtifactZip;
+  const downloadSummary = options.downloadCompatibilityArtifactSummary || downloadCompatibilityArtifactSummary;
+  const run = fetchRun(runId);
+  const artifact = fetchArtifact(runId);
+  const workflow = fetchWorkflow();
+  const zip = downloadZip(artifact, { ...options, dryRun: false });
+  const summary = downloadSummary(runId, { ...options, dryRun: false });
   return validateCompatibilityWorkflowProvenance(run, artifact, compatibility, {
     runId: String(runId),
     bundleId: expected.bundleId,
@@ -712,7 +717,6 @@ function waitForPlatformHeadCi(headSha, options = {}) {
 }
 
 function refreshPlatformPrCi(pr, options = {}) {
-  if (options.dryRun) return { ok: true, dry_run: true, head_sha: pr.headRefOid };
   if (!pr || !pr.headRefOid) return { ok: false, failure: 'platform_pr_head_missing' };
   const ref = pr.headRefName || pr.headRefOid;
   const findRun = options.findWorkflowRunForHead || findWorkflowRunForHead;
@@ -724,8 +728,16 @@ function refreshPlatformPrCi(pr, options = {}) {
       lessonSha: options.expectedLessonSha,
     }, options);
     if (existing.ok) {
-      return { ...existing, reused: true, head_sha: pr.headRefOid };
+      return { ...existing, reused: true, head_sha: pr.headRefOid, ...(options.dryRun ? { dry_run: true } : {}) };
     }
+  }
+  if (options.dryRun) {
+    return {
+      ok: false,
+      dry_run: true,
+      head_sha: pr.headRefOid,
+      failure: 'exact_pair_platform_ci_missing_or_invalid',
+    };
   }
   const latestRunId = options.latestWorkflowRunDatabaseId || latestWorkflowRunDatabaseId;
   const trigger = options.triggerPlatformCiForRef || triggerPlatformCiForRef;
@@ -739,16 +751,138 @@ function refreshPlatformPrCi(pr, options = {}) {
   });
 }
 
-function generateBundleIntegrationReadiness(input, options = {}) {
+function normalizeBundlePayloadLeadReview(record) {
+  const item = record && typeof record === 'object' && !Array.isArray(record) ? record : {};
+  return {
+    schema_version: item.schema_version,
+    result: String(item.result || item.review_result || item.verdict || '').trim().toUpperCase(),
+    path: item.path || item.review_path || null,
+    repository: item.repository || item.repo || null,
+    pr_number: Number(item.pr_number || item.number || 0) || null,
+    bundle_id: item.bundle_id || null,
+    reviewed_payload_head_sha:
+      item.reviewed_payload_head_sha || item.reviewed_commit_sha || item.reviewed_sha || null,
+  };
+}
+
+function validateBundlePayloadLeadReview(record, expected = {}) {
+  const review = normalizeBundlePayloadLeadReview(record);
+  const failures = [];
+  if (review.schema_version !== 1) failures.push('payload_lead_review_schema_version_invalid');
+  if (!['PASS', 'PASS WITH FLAGS'].includes(review.result)) failures.push('payload_lead_review_result_not_passing');
+  if (typeof review.path !== 'string' || !review.path.trim()) failures.push('payload_lead_review_path_missing');
+  if (review.repository !== expected.repository) failures.push('payload_lead_review_repository_mismatch');
+  if (review.pr_number !== Number(expected.prNumber)) failures.push('payload_lead_review_pr_mismatch');
+  if (review.bundle_id !== expected.bundleId) failures.push('payload_lead_review_bundle_mismatch');
+  if (review.reviewed_payload_head_sha !== expected.payloadSha) failures.push('payload_lead_review_payload_mismatch');
+  return { ok: failures.length === 0, failures, review };
+}
+
+function validateLessonLeadReadiness(readiness, expected = {}) {
+  const failures = [];
+  if (!readiness || readiness.ok !== true || !readiness.decision) {
+    failures.push('lesson_payload_readiness_missing_or_invalid');
+  }
+  const decision = readiness && readiness.decision || {};
+  if (!READY_READINESS_ROUTES.has(decision.route)) failures.push('lesson_payload_readiness_not_ready');
+  const reviewedPr = decision.reviewed_pr || {};
+  if (reviewedPr.repo !== LESSON_REPO) failures.push('lesson_payload_readiness_repository_mismatch');
+  if (Number(reviewedPr.number) !== Number(expected.prNumber)) failures.push('lesson_payload_readiness_pr_mismatch');
+  if (reviewedPr.head_sha !== expected.payloadSha) failures.push('lesson_payload_readiness_head_mismatch');
+  const proof = decision.proof || {};
+  if (!['PASS', 'PASS WITH FLAGS'].includes(String(proof.lead_review_result || '').trim().toUpperCase())) {
+    failures.push('lesson_payload_lead_review_result_not_passing');
+  }
+  if (typeof proof.lead_review_path !== 'string' || !proof.lead_review_path.trim()) {
+    failures.push('lesson_payload_lead_review_path_missing');
+  }
+  if (proof.lead_reviewed_sha !== expected.payloadSha) failures.push('lesson_payload_lead_review_sha_mismatch');
+  return {
+    ok: failures.length === 0,
+    failures,
+    decision,
+    paired_review: {
+      repository: LESSON_REPO,
+      pr_number: Number(expected.prNumber),
+      reviewed_commit_sha: expected.payloadSha,
+      review_result: proof.lead_review_result || null,
+      review_path: proof.lead_review_path || null,
+    },
+  };
+}
+
+function resolveBundleReadinessSeed(input) {
   const payloadReadiness = input.payloadReadiness;
-  if (!payloadReadiness || payloadReadiness.ok !== true || !payloadReadiness.decision) {
-    return { ok: false, phase: 'payload_readiness', failure: 'payload_readiness_decision_missing_or_invalid' };
+  if (payloadReadiness && payloadReadiness.ok === true && payloadReadiness.decision) {
+    if (!READY_READINESS_ROUTES.has(payloadReadiness.decision.route)) {
+      return { ok: false, phase: 'payload_readiness', failure: 'payload_readiness_decision_not_ready' };
+    }
+    const proof = payloadReadiness.decision.proof || {};
+    return {
+      ok: true,
+      source: 'payload_readiness',
+      route: payloadReadiness.decision.route,
+      decision: payloadReadiness.decision,
+      proof,
+      bundle: proof.bundle || {},
+    };
   }
-  const payloadDecision = payloadReadiness.decision;
-  if (!READY_READINESS_ROUTES.has(payloadDecision.route)) {
-    return { ok: false, phase: 'payload_readiness', failure: 'payload_readiness_decision_not_ready' };
+
+  const platformReview = validateBundlePayloadLeadReview(input.payloadLeadReview, {
+    repository: PLATFORM_REPO,
+    prNumber: input.platformPr && input.platformPr.number,
+    bundleId: input.authorization && input.authorization.bundle_id,
+    payloadSha: input.platformPayloadSha,
+  });
+  if (!platformReview.ok) {
+    return { ok: false, phase: 'payload_lead_review', failures: platformReview.failures, review: platformReview.review };
   }
-  const payloadProof = payloadDecision.proof || {};
+  const lessonReview = validateLessonLeadReadiness(input.lessonReadiness, {
+    prNumber: input.lessonPr && input.lessonPr.number,
+    payloadSha: input.lessonPayloadSha,
+  });
+  if (!lessonReview.ok) {
+    return { ok: false, phase: 'lesson_lead_review', failures: lessonReview.failures };
+  }
+  return {
+    ok: true,
+    source: 'residual_readiness_bridge',
+    route: 'READY_FOR_HUMAN_REVIEW',
+    decision: {
+      route: 'READY_FOR_HUMAN_REVIEW',
+      throughput: {
+        class: 'cross_repo_bundle',
+        authority_class: 'high_authority',
+        level: 'L4',
+        human_decision_required: true,
+      },
+      human_review_payload: 'consequential_exception',
+      consequence: 'high',
+      batching: {
+        viable: false,
+        target: null,
+        reason: 'Residual bundle readiness requires exact-head human review.',
+      },
+    },
+    proof: {
+      checkers: [],
+      lead_review_path: platformReview.review.path,
+      lead_review_result: platformReview.review.result,
+      lead_reviewed_sha: platformReview.review.reviewed_payload_head_sha,
+    },
+    bundle: {
+      paired_lead_reviews: [lessonReview.paired_review],
+    },
+    payload_lead_review: platformReview.review,
+    lesson_lead_review: lessonReview.paired_review,
+  };
+}
+
+function generateBundleIntegrationReadiness(input, options = {}) {
+  const seed = resolveBundleReadinessSeed(input);
+  if (!seed.ok) return seed;
+  const payloadDecision = seed.decision;
+  const payloadProof = seed.proof;
   const lineage = input.lineage || {};
   const baseDrift = lineage.base_drift || {};
   const deltaReviewRequired =
@@ -785,7 +919,7 @@ function generateBundleIntegrationReadiness(input, options = {}) {
     lineage,
     readiness: {
       head_sha: input.platformPr.headRefOid,
-      route: payloadDecision.route,
+      route: seed.route,
       attestation_schema_version: 2,
       attestation_digest: null,
     },
@@ -801,7 +935,7 @@ function generateBundleIntegrationReadiness(input, options = {}) {
   if (!refreshValidation.ok) {
     return { ok: false, phase: 'integration_refresh_proof', failures: refreshValidation.failures };
   }
-  const payloadBundle = payloadProof.bundle || {};
+  const payloadBundle = seed.bundle;
   const supplemental = {
     throughput: payloadDecision.throughput,
     human_review_payload: payloadDecision.human_review_payload,
@@ -810,6 +944,8 @@ function generateBundleIntegrationReadiness(input, options = {}) {
     proof: {
       checkers: [
         ...((payloadProof.checkers || []).map((checker) => ({ ...checker }))),
+        { command: 'check-human-bundle-authorization', status: 'passed' },
+        { command: 'verify-compatibility-workflow-provenance', status: 'passed' },
         { command: 'trusted post-first-merge agent-index refresh', status: 'passed' },
         { command: 'check-integration-lineage', status: 'passed' },
         { command: 'exact refreshed-head platform CI', status: 'passed' },
@@ -832,6 +968,7 @@ function generateBundleIntegrationReadiness(input, options = {}) {
         decision: input.authorization.decision,
         reviewed_payload_head_sha: input.platformPayloadSha,
         bundle_id: input.authorization.bundle_id,
+        comment_id: input.authorizationCommentId || null,
       },
       integration: {
         ...lineage,
@@ -919,10 +1056,13 @@ function generateBundleIntegrationReadiness(input, options = {}) {
   return {
     ok: true,
     phase: 'integration_head_readiness',
+    source: seed.source,
     decision: review.decision,
     decision_digest: `sha256:${decisionDigest(review.decision)}`,
     markdown: review.markdown,
-    apply,
+    apply: options.dryRun
+      ? { ...apply, comment_action: 'would_create_exact_head_readiness' }
+      : apply,
     integration_refresh: refreshProof,
   };
 }
@@ -951,6 +1091,32 @@ function validateReadiness(readiness) {
   return [];
 }
 
+function validatePublishedReadiness(readiness, expectedDecision) {
+  const failures = [...validateReadiness(readiness)];
+  const decision = readiness && readiness.decision;
+  if (!decision || typeof decision !== 'object') failures.push('exact_head_readiness_decision_missing');
+  if (decision && expectedDecision) {
+    if (decision.route !== expectedDecision.route) failures.push('exact_head_readiness_route_mismatch');
+    if (
+      !decision.reviewed_pr ||
+      !expectedDecision.reviewed_pr ||
+      decision.reviewed_pr.repo !== expectedDecision.reviewed_pr.repo ||
+      Number(decision.reviewed_pr.number) !== Number(expectedDecision.reviewed_pr.number) ||
+      decision.reviewed_pr.head_sha !== expectedDecision.reviewed_pr.head_sha
+    ) {
+      failures.push('exact_head_readiness_target_mismatch');
+    }
+    try {
+      if (decisionDigest(decision) !== decisionDigest(expectedDecision)) {
+        failures.push('exact_head_readiness_decision_digest_mismatch');
+      }
+    } catch (_error) {
+      failures.push('exact_head_readiness_decision_invalid');
+    }
+  }
+  return { ok: failures.length === 0, failures: [...new Set(failures)], readiness };
+}
+
 function validateReviewThreadState(reviewThreads) {
   if (!reviewThreads || reviewThreads.available !== true) return ['review_threads_unavailable'];
   if (Number(reviewThreads.unresolved_count || 0) > 0) return ['unresolved_review_threads'];
@@ -965,7 +1131,9 @@ function validateMemberPreflight(repo, pr, member, deps, options = {}) {
     ? []
     : ['member_payload_not_ancestor'];
   const readinessRequired = options.requireReadiness !== false;
-  const readiness = readinessRequired ? deps.fetchReadinessComment(repo, pr.number, expectedHeadSha) : null;
+  const readiness = readinessRequired
+    ? options.readiness || deps.fetchReadinessComment(repo, pr.number, expectedHeadSha)
+    : null;
   const reviewThreads = deps.fetchReviewThreadState(repo, pr.number);
   return {
     ok:
@@ -1205,6 +1373,7 @@ function bundleStateForResult(record, compatibility, order, platformPr, lessonPr
 function integrateBundle(options = {}) {
   const deps = { ...defaultDeps(options), ...(options.deps || {}) };
   const deltaReview = options.deltaReview || readReviewJson(options.deltaReviewPath);
+  const payloadLeadReview = options.payloadLeadReview || readReviewJson(options.payloadLeadReviewPath);
   const controllerRepo = options.repo || PLATFORM_REPO;
   const controllerPrNumber = Number(options.prNumber);
   if (!Number.isInteger(controllerPrNumber) || controllerPrNumber < 1) {
@@ -1439,6 +1608,9 @@ function integrateBundle(options = {}) {
     );
   }
   const merges = [];
+  let platformIntegrationReadiness = null;
+  let platformIntegrationRefresh = null;
+  let platformIntegrationCi = null;
   const expectedMain = {
     [PLATFORM_REPO]: platformMainSha,
     [LESSON_REPO]: lessonMainSha,
@@ -1603,40 +1775,74 @@ function integrateBundle(options = {}) {
             'Bundle platform head changed after refreshed CI'
           );
         }
-        const payloadReadiness = deps.fetchReadinessComment(
+      }
+      const payloadReadiness = deps.fetchReadinessComment(
+        PLATFORM_REPO,
+        member.pr_number,
+        member.reviewed_payload_head_sha
+      );
+      const integrationReadiness = deps.generateBundleIntegrationReadiness({
+        authorization: record,
+        authorizationCommentId: options.authorizationCommentId,
+        branchProtection: platformBranchProtection,
+        compatibility,
+        platformPayloadSha: member.reviewed_payload_head_sha,
+        platformPr: pr,
+        lessonPayloadSha: lessonMemberState.reviewed_payload_head_sha,
+        lessonMergeCommitSha: currentLessonMain,
+        lessonPr,
+        lessonReadiness: partialResume && partialResume.readiness,
+        refreshResult: indexRefresh,
+        lineage: member.lineage,
+        deltaReview,
+        payloadReadiness,
+        payloadLeadReview,
+        ci: {
+          status: 'success',
+          platform_sha: pr.headRefOid,
+          lesson_sha: currentLessonMain,
+          run_id: refreshedCi.run && (refreshedCi.run.databaseId || refreshedCi.run.id),
+        },
+      }, options);
+      if (!integrationReadiness.ok) {
+        return withTerminalFailureStatus(
+          { ok: false, phase: 'integration_head_readiness', readiness: integrationReadiness, refresh: indexRefresh, merges },
+          deps,
+          platformStatus,
+          options,
+          'Bundle refreshed integration-head readiness failed'
+        );
+      }
+      platformIntegrationReadiness = integrationReadiness;
+      platformIntegrationRefresh = indexRefresh;
+      platformIntegrationCi = refreshedCi;
+      if (!options.dryRun) {
+        const persistedReadiness = deps.fetchReadinessComment(
           PLATFORM_REPO,
           member.pr_number,
-          member.reviewed_payload_head_sha
+          pr.headRefOid
         );
-        const integrationReadiness = deps.generateBundleIntegrationReadiness({
-          authorization: record,
-          branchProtection: platformBranchProtection,
-          compatibility,
-          platformPayloadSha: member.reviewed_payload_head_sha,
-          platformPr: pr,
-          lessonPayloadSha: lessonMemberState.reviewed_payload_head_sha,
-          lessonMergeCommitSha: currentLessonMain,
-          lessonPr,
-          refreshResult: indexRefresh,
-          lineage: member.lineage,
-          deltaReview,
-          payloadReadiness,
-          ci: {
-            status: 'success',
-            platform_sha: pr.headRefOid,
-            lesson_sha: currentLessonMain,
-            run_id: refreshedCi.run && (refreshedCi.run.databaseId || refreshedCi.run.id),
-          },
-        }, options);
-        if (!integrationReadiness.ok) {
+        const published = validatePublishedReadiness(persistedReadiness, integrationReadiness.decision);
+        if (!published.ok) {
           return withTerminalFailureStatus(
-            { ok: false, phase: 'integration_head_readiness', readiness: integrationReadiness, refresh: indexRefresh, merges },
+            {
+              ok: false,
+              phase: 'integration_head_readiness_refetch',
+              failures: published.failures,
+              readiness: integrationReadiness,
+              persisted_readiness: persistedReadiness,
+              refresh: indexRefresh,
+              merges,
+            },
             deps,
             platformStatus,
             options,
-            'Bundle refreshed integration-head readiness failed'
+            'Bundle refreshed integration-head readiness could not be revalidated after publication'
           );
         }
+        platformIntegrationReadiness.persisted = persistedReadiness;
+        pr = deps.fetchPr(repo, member.pr_number);
+      } else {
         pr = deps.fetchPr(repo, member.pr_number);
       }
     }
@@ -1660,6 +1866,16 @@ function integrateBundle(options = {}) {
     }
     const preMerge = validateMemberPreflight(repo, pr, member, deps, {
       requireValidatePlatform: repo === PLATFORM_REPO,
+      readiness: repo === PLATFORM_REPO && platformIntegrationReadiness
+        ? options.dryRun
+          ? {
+              ok: true,
+              route: platformIntegrationReadiness.decision.route,
+              decision: platformIntegrationReadiness.decision,
+              in_memory: true,
+            }
+          : platformIntegrationReadiness.persisted
+        : undefined,
     });
     if (!preMerge.ok) {
       return withTerminalFailureStatus(
@@ -1669,6 +1885,21 @@ function integrateBundle(options = {}) {
         options,
         `Bundle pre-merge failed for ${repo}: ${preMerge.failures.join(', ')}`
       );
+    }
+    if (options.dryRun && repo === PLATFORM_REPO) {
+      return {
+        ok: true,
+        phase: 'validated_dry_run',
+        dry_run: true,
+        order,
+        compatibility,
+        would_create_exact_head_readiness: Boolean(platformIntegrationReadiness),
+        readiness: platformIntegrationReadiness,
+        refresh: platformIntegrationRefresh,
+        exact_pair_ci: platformIntegrationCi,
+        pre_merge: preMerge,
+        merges,
+      };
     }
     const usePlatformAutoMerge = repo === PLATFORM_REPO && platformActivatedMerge;
     if (repo === PLATFORM_REPO && !usePlatformAutoMerge) {
@@ -1909,6 +2140,7 @@ function runCli(argv) {
       compatibilityProofPath: optionValue(argv, '--compatibility-proof'),
       compatibilityRunId: optionValue(argv, '--compatibility-run-id'),
       deltaReviewPath: optionValue(argv, '--delta-review'),
+      payloadLeadReviewPath: optionValue(argv, '--payload-lead-review'),
       requireCrossRepoPermissions: flag(argv, '--require-cross-repo-permissions'),
       allowPartialResume: flag(argv, '--allow-partial-resume'),
       dryRun: flag(argv, '--dry-run'),
@@ -1938,6 +2170,10 @@ module.exports = {
   selectLatestRunForHead,
   setPlatformIntegrationStatus,
   validateCompatibilityWorkflowProvenance,
+  validateBundlePayloadLeadReview,
+  validateLessonLeadReadiness,
   validatePlatformCiEvidence,
+  validatePublishedReadiness,
+  verifyCompatibilityWorkflowRun,
   validatePrState,
 };
