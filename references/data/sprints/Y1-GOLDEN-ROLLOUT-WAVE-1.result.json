@@ -1,17 +1,73 @@
 {
   "schema_version": 1,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "name": "Year 1 Golden Rollout Wave 1 Current-Main Renewal",
+  "name": "Year 1 Golden Rollout Wave 1 Main-Based Evidence Prerequisite",
   "status": "completed",
-  "completed": "2026-08-23",
-  "completed_on": "2026-08-23",
-  "verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
-  "result_status": "completed_pending_human_review",
+  "completed": "2026-08-27",
+  "completed_on": "2026-08-27",
+  "verdict": "PREREQUISITE_PAYLOAD_REVIEWED_PENDING_EXACT_HEAD_CI_AND_HUMAN_REVIEW",
+  "result_status": "evidence_prerequisite_pending_exact_head_ci_and_human_review",
   "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
   "baseline": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-baseline.md",
   "result": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
   "diff_summary": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
-  "final_verdict": "READY_FOR_HUMAN_REVIEW_PENDING_EXACT_HEAD_PROOF",
+  "final_verdict": "PREREQUISITE_PAYLOAD_REVIEWED_PENDING_EXACT_HEAD_CI_AND_HUMAN_REVIEW",
+  "source_provenance": {
+    "renewal_start_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+    "reviewed_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+    "sealed_evidence_sha": "aa06ada217b4ec8ac9f042f08100513381b30366"
+  },
+  "current_evidence": {
+    "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+    "reviewed_payload_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "binding_model": "historical_provenance_separate_from_current_lineage"
+  },
+  "bindings": {
+    "delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+    "wave_proof": "reports/json/y1-golden-rollout-wave-1-proof.json",
+    "review_packet": "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json"
+  },
+  "rendered_evidence": {
+    "changed_or_missing_input_count": 1,
+    "changed_or_missing_paths": [
+      "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html"
+    ],
+    "verified_rendered_renewal_count": 1,
+    "unresolved_changed_or_missing_input_count": 0,
+    "unresolved_changed_or_missing_paths": [],
+    "first_viewport_only": true,
+    "below_fold_exercises_attested": false
+  },
+  "authority": {
+    "actual_rollout_or_adoption_authorized": false,
+    "automatic_repository_wide_migration_authorized": false,
+    "product_route_adoption_authorized": false,
+    "broad_product_use_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "engine_behavior_changed": false,
+    "protected_reference_data_changed": false
+  },
+  "evidence_prerequisite_review": {
+    "assignment": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md",
+    "round1": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md",
+    "corrections": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md",
+    "round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
+    "reviewed_payload_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS"
+  },
   "protected_reference_data_changed": false,
   "generated_output_changed": false,
   "implementation_changed": true,
@@ -122,6 +178,12 @@
     ]
   },
   "acceptance_tests": [
+    { "command": "jest.cmd --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base 9c9d3cc7fa8e72d536e03af192f53f7079823dbe --head a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41 --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md", "status": "passed" },
+    { "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD", "status": "passed" },
+    { "command": "npm.cmd run finalization:freshness", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete", "status": "passed" },
     { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md", "status": "passed" },
     { "command": "npm.cmd test -- --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js", "status": "passed" },
     { "command": "npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base b7ec603880bcd8cc98c93526121ca71d3f31edcd --head HEAD --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head 96c0970f45739a8758cf7e932c6bce77806cd68d --allow-unbound-packet", "status": "passed" },
@@ -136,7 +198,7 @@
     { "command": "npm.cmd run check:scope-language", "status": "passed" },
     { "command": "git diff --check HEAD", "status": "passed" },
     { "command": "git -C \"C:\\\\Projects\\\\4veco-worktrees\\\\Y1-GOLDEN-ROLLOUT-WAVE-RENEWAL-1-20260823\\\\4veco-lessen\" diff --check", "status": "passed" },
-    { "command": "npm.cmd run check:exercise-authority-hygiene", "status": "skipped_with_reason", "reason": "Local LF/CRLF fixture-hash portability mismatch is pre-existing; exact-head remote validate-platform is required." },
+    { "command": "npm.cmd run check:exercise-authority-hygiene", "status": "skipped_with_reason", "reason": "Local LF/CRLF fixture-hash portability mismatch is pre-existing; exact-head remote validate-platform normalizes line endings and is required." },
     { "command": "git diff --exit-code b7ec603880bcd8cc98c93526121ca71d3f31edcd..HEAD -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html", "status": "passed" }
   ],
   "product_boundaries": {

@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-24T07:16:00.462Z
+Generated: 2026-08-27T12:54:30.377Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/y1-golden-rollout-wave-renewal-20260823`
-Source commit: `bb0caa9178377fd2b09c3594062f7657fc366a6a`
-Files indexed: 7221
+Source branch: `codex/y1-evidence-prerequisite-20260827`
+Source commit: `a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41`
+Files indexed: 7235
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 708
+Count: 709
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -684,6 +684,7 @@ Count: 708
 - build-scripts/sprints/capture-task-ingest-transform2-screenshots.js
 - build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
+- build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js
 - build-scripts/sprints/check-b1-target-evidence-111-closure-and-implementation-bundle-1.js
 - build-scripts/sprints/check-b1-target-evidence-111-rendered-closure-and-flag-bundle-1.js
 - build-scripts/sprints/check-batch-sprint-closure.js
@@ -2583,7 +2584,7 @@ Count: 1006
 
 ## reports
 
-Count: 4546
+Count: 4559
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -7087,6 +7088,18 @@ Count: 4546
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-assignment.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-corrections.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-intermediate-recheck.md
@@ -7106,6 +7119,7 @@ Count: 4546
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan-review-round2.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-trigger-policy-repair-plan.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md

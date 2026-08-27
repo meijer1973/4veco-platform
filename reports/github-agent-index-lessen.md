@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-08-24T07:16:00.631Z
+Generated: 2026-08-27T12:54:30.520Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
 Source branch: `origin/main`
-Source commit: `96c0970f45739a8758cf7e932c6bce77806cd68d`
-Files indexed: 1775
+Source commit: `f09fd6e88edc5049b026b16b0158e7e188091d2d`
+Files indexed: 1776
 Scope: committed tree files from `git ls-tree -r --name-only origin/main`; no working-tree fallback is permitted for an explicit source ref; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -115,7 +115,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 919
+Count: 920
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -331,6 +331,7 @@ Count: 919
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.5.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.5.4_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.5.4_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/_assets/book-1-cover.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.1_fig_1.png
@@ -1792,7 +1793,7 @@ Count: 748
 
 ## generated artifacts
 
-Count: 872
+Count: 873
 
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
@@ -2046,6 +2047,7 @@ Count: 872
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.5.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.5.4_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.5.4_fig_1.svg
+- Boek 1 - Grondslagen, vraag en aanbod/_assets/book-1-cover.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.1_fig_1.png

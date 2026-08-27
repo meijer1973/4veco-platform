@@ -2,25 +2,25 @@
   "schema_version": 1,
   "packet_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "pr_number": 214,
-  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/214",
-  "reviewed_payload_head_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc",
+  "pr_number": 216,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/216",
+  "reviewed_payload_head_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "product_authority",
-  "date": "2026-08-23",
+  "date": "2026-08-27",
   "human_decision_required": true,
   "auto_merge_allowed_after_ci": false,
   "paired_prs": [],
   "escalation_triggers": [
     "product_authority_boundary",
-    "ci_workflow_changed",
-    "supersedes_stale_human_handoff"
+    "main_based_y1_evidence_prerequisite",
+    "changed_rendered_lesson_input_with_exact_equivalence_renewal"
   ],
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "The renewal governs the historical PASS_CONTROLLED_ROLLOUT boundary and changes CI. Exact-head human review remains required."
+    "rationale": "Round 2 found no substantive blocker. The bounded prerequisite carries one reviewed renewal onto current main with separate historical provenance and current lineage. Exact-head CI and human merge authorization remain required."
   },
   "product_end_state_refs": [
     "../4veco-lessen/specifications/product-end-state.md",
@@ -29,20 +29,50 @@
   "original_sprint_or_gate_spec_refs": [
     "docs/roadmaps/golden-workbench/golden-workbench-rollout-original-plan-20260612.md",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md",
     "https://github.com/meijer1973/4veco-platform/pull/148#issuecomment-4807419611"
   ],
+  "prerequisite_evidence": {
+    "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md",
+    "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "current_visual_review": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
+    "round2_review": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md"
+  },
   "non_negotiable_requirements": [
     "Exactly six first-three split Golden surfaces.",
     "Short checks remain advisory-only.",
     "Exit tickets remain target-readiness-only with completionLanguageEligible:false.",
     "Scale Gate 1 is recorded only as historical PASS_CONTROLLED_ROLLOUT.",
     "Committed PR scope uses exact event base/head changed-path proof.",
-    "Reused screenshots require commit-bound independently derived input-delta proof.",
+    "Changed captured inputs require commit-bound independently derived delta proof plus exact rendered-equivalence evidence.",
+    "The opgaven.html page remains in the rendered dependency set.",
+    "The exact-equivalence claim is limited to the recorded 1280x900 first viewport and does not attest below-fold exercises.",
+    "Historical PR #208 commits remain source provenance only and are not current payload ancestry.",
     "No actual rollout/adoption, automatic migration, completion language, broad product use, or student use."
   ],
-  "status": "draft_exact_head_proof_pending",
+  "status": "payload_bound_round2_passed_exact_head_ci_pending",
   "route": "READY_FOR_HUMAN_REVIEW",
-  "content_verdict_requested": "Approve or reject the renewed controlled workflow-availability guard only.",
+  "content_verdict_requested": "Review the bounded main-based Y1 evidence prerequisite only; do not merge without renewed owner authorization.",
+  "source_provenance": {
+    "renewal_start_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+    "reviewed_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+    "sealed_evidence_sha": "aa06ada217b4ec8ac9f042f08100513381b30366"
+  },
+  "current_evidence": {
+    "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+    "reviewed_payload_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "binding_model": "historical_provenance_separate_from_current_lineage"
+  },
+  "evidence_scope": {
+    "viewport": "1280x900",
+    "theme": "light",
+    "device_scale_factor": 1,
+    "first_viewport_only": true,
+    "below_fold_exercises_attested": false
+  },
   "authority_claims": {
     "actual_rollout_or_adoption_authorized": false,
     "automatic_repository_wide_migration_authorized": false,
@@ -58,13 +88,14 @@
     "pv_authorized": false,
     "generated_lesson_output_changed": false,
     "source_data_changed": false,
-    "engine_behavior_changed": false
+    "engine_behavior_changed": false,
+    "protected_reference_data_changed": false
   },
   "core_requirement_checklist": [
     { "requirement": "Current-main branch and fresh evidence", "status": "met" },
     { "requirement": "Six-surface state and route contract", "status": "met" },
     { "requirement": "Committed changed-path guard", "status": "met" },
-    { "requirement": "Shared infrastructure does not trigger the renewal-only allowlist", "status": "met" },
+    { "requirement": "Workflow, package, roadmap, root-map, and wildcard sprint paths are excluded", "status": "met" },
     { "requirement": "Dedicated negative regression suite", "status": "met" },
     { "requirement": "Commit-bound rendered delta proof", "status": "met" },
     { "requirement": "Coherent active roadmaps", "status": "met" },
@@ -86,14 +117,15 @@
     "wave": "references/data/exercises/y1-golden-rollout-wave-1.json",
     "machine_proof": "reports/json/y1-golden-rollout-wave-1-proof.json",
     "rendered_delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+    "rendered_renewal": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
     "checker": {
       "command": "npm.cmd run check:y1-golden-rollout-wave-1",
-      "status": "local_passed_allow_unbound"
+      "status": "passed_local_payload_and_proposed_evidence_tail"
     },
     "lead_review": {
-      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round6.md",
+      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
       "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc"
+      "reviewed_commit_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41"
     },
     "ci": {
       "required_contexts": ["validate-platform"],
@@ -101,5 +133,5 @@
       "reviewed_commit_sha": null
     }
   },
-  "recommended_next_action": "Run exact-head CI, live branch-protection, lead, and PR Readiness Reviewer checks for PR #214, then return the L4 packet for human review."
+  "recommended_next_action": "Bind the evidence-only terminal head, obtain exact-head CI and readiness for PR #216, then return for explicit owner merge authorization."
 }
