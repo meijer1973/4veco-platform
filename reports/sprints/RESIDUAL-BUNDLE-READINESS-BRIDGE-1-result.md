@@ -8,6 +8,11 @@ The trusted lesson-first partial-resume lane can now construct current
 integration-head readiness without requiring or fabricating a historical
 controller payload-head readiness comment.
 
+It also has a bounded trusted preparation phase, so a conflict-free base sync,
+canonical generated-index refresh, and exact-pair CI can complete before the
+required green dry run. Preparation stops before readiness publication,
+reusable success status, merge, or post-merge CI.
+
 The residual bridge requires an explicit machine-readable controller payload
 lead review, validates the merged lesson's exact payload readiness and lead
 proof, and recomputes a conservative L4 `READY_FOR_HUMAN_REVIEW` decision from
@@ -35,15 +40,26 @@ protection, deterministic refresh, review, and CI evidence.
 6. Head/base movement, substantive lineage, altered membership, wrong CI
    coordinates, invalid authorization, publication failure, malformed re-fetch,
    and unresolved review evidence remain fail-closed.
-7. The hosted trusted-main workflow can carry the narrowly scoped payload lead
-   JSON through runner-temporary storage. It does not infer review from bundle
-   authorization and still cannot transport an integration-delta review.
+7. `--prepare-only` is restricted to a validated partial resume. It may update
+   an exact behind branch and stop for retry, or create/reuse the canonical
+   refresh and exact-pair CI before returning `prepared_integration_head`.
+8. Preparation and dry-run are mutually exclusive. Repeated preparation is
+   idempotent, and the required operational sequence is `prepare -> dry-run ->
+   live`.
+9. The hosted trusted-main workflow can carry the narrowly scoped payload lead
+   JSON through runner-temporary storage and exposes the bounded preparation
+   input. It does not infer review from bundle authorization and still cannot
+   transport an integration-delta review.
 
 ## Regression coverage
 
 - Positive residual partial-resume dry run and live publication/refetch/merge.
 - Live restart reusing an already-pushed deterministic refresh descendant.
 - Existing payload-readiness-backed path remains compatible.
+- Initial preparation, repeated preparation, completely green dry-run reuse,
+  and final live integration as one stateful sequence.
+- Preparation branch-update retry, invalid mode/scope, exact-pair CI failure,
+  and head/base movement after CI.
 - Missing, non-passing, malformed, wrong-repository, wrong-PR, wrong-bundle,
   wrong-payload, and stale lesson review records.
 - Missing/stale/wrong-coordinate exact-pair CI, including dry-run.
@@ -56,11 +72,10 @@ protection, deterministic refresh, review, and CI evidence.
 
 | Check | Result |
 | --- | --- |
-| Focused residual integrator + workflow tests | PASS: 2 suites, 85 tests |
-| Canonical index-refresh tests | PASS: 27 tests |
-| `npm.cmd run check:integration-lane` | PASS: 10 suites, 198 tests |
+| Focused residual integrator + workflow/index-refresh tests | PASS: 3 suites, 119 tests |
+| `npm.cmd run check:integration-lane` | PASS: 10 suites, 205 tests |
 | `npm.cmd run check:pr-readiness` | PASS: 6 suites, 180 tests |
-| Full `npm.cmd test -- --runInBand` with lesson `f09fd6e8...` | PASS: 104 suites, 1,479 tests; 6 suites and 8 tests skipped |
+| Full `npm.cmd test -- --runInBand` with lesson `f09fd6e8...` | PASS: 104 suites, 1,486 tests; 6 suites and 8 tests skipped |
 | Governance wording/freshness and scope language | PASS |
 | Worktree ownership, JavaScript syntax, workflow YAML, `git diff --check` | PASS |
 
@@ -76,6 +91,7 @@ independent exact-commit lead review, green exact-head remote CI, fresh
 readiness evidence, and explicit human review before integration.
 
 After this repair is independently merged, PR #208 still requires newly
-generated compatibility evidence against the advanced platform `main`, a green
-dry run, and a separate live trusted-lane invocation under its existing bundle
-authorization.
+generated compatibility evidence against the advanced platform `main`, trusted
+preparation (including any conflict-free base sync and deterministic index
+refresh), a completely green dry run, and a separate live trusted-lane
+invocation under its existing bundle authorization.

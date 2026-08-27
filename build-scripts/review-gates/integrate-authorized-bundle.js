@@ -1371,6 +1371,16 @@ function bundleStateForResult(record, compatibility, order, platformPr, lessonPr
 }
 
 function integrateBundle(options = {}) {
+  const modeFailures = [];
+  if (options.prepareOnly === true && options.dryRun === true) {
+    modeFailures.push('prepare_only_and_dry_run_are_mutually_exclusive');
+  }
+  if (options.prepareOnly === true && options.noMerge === true) {
+    modeFailures.push('prepare_only_and_no_merge_are_mutually_exclusive');
+  }
+  if (modeFailures.length > 0) {
+    return { ok: false, phase: 'integration_mode', failures: modeFailures };
+  }
   const deps = { ...defaultDeps(options), ...(options.deps || {}) };
   const deltaReview = options.deltaReview || readReviewJson(options.deltaReviewPath);
   const payloadLeadReview = options.payloadLeadReview || readReviewJson(options.payloadLeadReviewPath);
@@ -1563,6 +1573,19 @@ function integrateBundle(options = {}) {
       pr_number: lessonMember.pr_number,
       ...mergedResume,
     };
+  }
+  if (options.prepareOnly === true && !partialResume) {
+    return withTerminalFailureStatus(
+      {
+        ok: false,
+        phase: 'preparation_scope',
+        failures: ['prepare_only_requires_validated_partial_resume'],
+      },
+      deps,
+      platformStatus,
+      options,
+      'Bundle preparation-only mode requires a validated partial resume'
+    );
   }
   const platformLineage = platformMember.lineage || {};
   const platformBaseDrift = platformLineage.base_drift || {};
@@ -1775,6 +1798,48 @@ function integrateBundle(options = {}) {
             'Bundle platform head changed after refreshed CI'
           );
         }
+      }
+      if (options.prepareOnly === true) {
+        const preparedPlatformMain = deps.fetchMainSha(PLATFORM_REPO);
+        const preparedLessonMain = deps.fetchMainSha(LESSON_REPO);
+        if (
+          preparedPlatformMain !== expectedMain[PLATFORM_REPO] ||
+          preparedLessonMain !== expectedMain[LESSON_REPO]
+        ) {
+          return withTerminalFailureStatus(
+            {
+              ok: false,
+              phase: 'base_changed_before_preparation_complete',
+              failures: ['compatibility_recompute_required'],
+              expected_main: { ...expectedMain },
+              current_main: {
+                [PLATFORM_REPO]: preparedPlatformMain,
+                [LESSON_REPO]: preparedLessonMain,
+              },
+              refresh: indexRefresh,
+              exact_pair_ci: refreshedCi,
+              merges,
+            },
+            deps,
+            platformStatus,
+            options,
+            'Bundle compatibility recompute required before preparation completed'
+          );
+        }
+        return {
+          ok: true,
+          phase: 'prepared_integration_head',
+          preparation_only: true,
+          order,
+          compatibility,
+          platform_integration_head_sha: pr.headRefOid,
+          lesson_merge_commit_sha: currentLessonMain,
+          refresh: indexRefresh,
+          exact_pair_ci: refreshedCi,
+          readiness_published: false,
+          reusable_success_status_created: false,
+          merges,
+        };
       }
       const payloadReadiness = deps.fetchReadinessComment(
         PLATFORM_REPO,
@@ -2143,6 +2208,7 @@ function runCli(argv) {
       payloadLeadReviewPath: optionValue(argv, '--payload-lead-review'),
       requireCrossRepoPermissions: flag(argv, '--require-cross-repo-permissions'),
       allowPartialResume: flag(argv, '--allow-partial-resume'),
+      prepareOnly: flag(argv, '--prepare-only'),
       dryRun: flag(argv, '--dry-run'),
       noMerge: flag(argv, '--no-merge'),
       timeoutSeconds: Number(optionValue(argv, '--timeout-seconds') || 1800),

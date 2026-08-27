@@ -299,6 +299,24 @@ reuse the one valid refresh descendant, while stale or tampered descendants,
 mixed SHAs, or any non-fast-forward movement fail closed. Final platform-main
 CI after both member merges is unchanged.
 
+When the residual controller is behind current platform `main` or does not yet
+have its canonical generated-index descendant and exact-pair CI, the trusted
+lane must first run with `--prepare-only`. Preparation is valid only for a
+validated partial resume. It may perform an exact-head conflict-free branch
+update and stop for renewed compatibility, then create or reuse the canonical
+index-only descendant and obtain CI bound to that platform head and the current
+lesson merge. It re-fetches both `main` refs and the controller head before
+returning `prepared_integration_head`. It must not construct or publish
+readiness, create a reusable success status, merge a PR, or run post-merge CI.
+`--prepare-only` is mutually exclusive with `--dry-run` and `--no-merge`.
+
+The required operational order is preparation, then a completely green dry
+run over the prepared immutable head, then the live integration. Repeated
+preparation may only reuse the same verified canonical descendant and exact-pair
+CI. The hosted workflow exposes the preparation phase through `prepare_only`;
+it does not confer merge authority because trusted integrator code stops before
+the readiness and merge stages.
+
 If a lesson-first partial resume has no exact readiness comment for the
 controller's reviewed payload, the lane may use the residual-bundle readiness
 bridge. This bridge does not create or backdate a payload-head comment. It

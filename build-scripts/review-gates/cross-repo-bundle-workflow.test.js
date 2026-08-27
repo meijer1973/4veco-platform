@@ -59,6 +59,9 @@ describe('cross-repo bundle workflow safety', () => {
     expect(authorizedBundleWorkflow).toContain('bundle-summary.json');
     expect(authorizedBundleWorkflow).toContain('--allow-partial-resume');
     expect(authorizedBundleWorkflow).toContain('payload_lead_review_json');
+    expect(authorizedBundleWorkflow).toContain('prepare_only');
+    expect(authorizedBundleWorkflow).toContain("$scriptArgs += '--prepare-only'");
+    expect(authorizedBundleWorkflow).toContain('prepare_only and dry_run are mutually exclusive');
     expect(authorizedBundleWorkflow).toContain('bundle-payload-lead-review.json');
     expect(authorizedBundleWorkflow).toContain("@('--payload-lead-review', $leadReviewPath)");
     expect(authorizedBundleWorkflow).toContain('timeout-minutes: 120');
@@ -88,5 +91,7 @@ describe('cross-repo bundle workflow safety', () => {
     expect(integrationPolicy).toContain('must not derive it from `APPROVE_BUNDLE_AND_MERGE`');
     expect(integrationPolicy).toContain('would_create_exact_head_readiness');
     expect(integrationPolicy).toContain('canonical decision digest');
+    expect(integrationPolicy).toContain('The required operational order is preparation');
+    expect(integrationPolicy).toContain('must not construct or publish');
   });
 });

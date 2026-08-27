@@ -8,7 +8,7 @@ Base: `9c9d3cc7fa8e72d536e03af192f53f7079823dbe`
 
 ## Objective
 
-Repair the trusted bundle integration lane so an already-merged member can resume without a historical readiness comment on the controller payload head. The lane must derive an exact integration-head decision from current, independently validated facts; dry runs must evaluate that decision only in memory; live runs must publish and re-fetch it before any merge.
+Repair the trusted bundle integration lane so an already-merged member can resume without a historical readiness comment on the controller payload head. The lane must support a bounded trusted preparation phase for conflict-free base synchronization, canonical index refresh, and exact-pair CI; derive an exact integration-head decision from current, independently validated facts; evaluate that decision only in memory during the subsequent dry run; and publish and re-fetch it during the final live run before any merge.
 
 This is a separate governance change. It must not modify or merge Platform PR #208, create a retrospective readiness record for `aa06ada217b4ec8ac9f042f08100513381b30366`, or alter Book 1/Y1 product content.
 
@@ -18,6 +18,7 @@ This is a separate governance change. It must not modify or merge Platform PR #2
 - Require explicit residual integration lead-review evidence when a current payload-head readiness decision is absent; authorization alone is not review evidence.
 - Construct the bridge decision from live PR/member state plus validated immutable evidence, never from caller-supplied conclusions.
 - Keep dry runs side-effect free: no comments, reusable success statuses, pushes, or merges.
+- Keep preparation bounded: it may update the exact authorized branch, create or reuse the canonical generated-index descendant, and obtain exact-pair CI, but it must stop before readiness publication, reusable success status, or merge.
 - Keep live runs fail-closed: publish, re-fetch, parse, and revalidate the exact-head readiness record before merging.
 - Retain the existing path unchanged when an exact payload-head readiness decision exists.
 
@@ -31,15 +32,17 @@ This is a separate governance change. It must not modify or merge Platform PR #2
 6. Reject stale/moved heads or bases, wrong CI coordinates, substantive descendant tails, missing/invalid lead review, changed bundle membership, publication failure, and movement after readiness publication.
 7. Expose the review-evidence input through the hosted authorized-bundle workflow without logging or persisting it as a repository artifact.
 8. Document the residual-resume contract narrowly in the integration-lane policy.
+9. Expose a trusted preparation-only workflow input so the required `prepare -> dry-run -> live` sequence is executable without deliberately failing or cancelling a live integration.
 
 ## Procedure
 
 1. Add a residual bundle review validator and bridge decision constructor to `integrate-authorized-bundle.js`, reusing the existing integration lead-review validator and live authorization/compatibility/lineage facts.
 2. Make exact-pair CI validation read-only in dry runs rather than treating it as automatically satisfied.
 3. Route the in-memory bridge decision through final dry-run preflight; route the persisted, re-fetched decision through live preflight.
-4. Add an optional hosted-workflow input for the residual review record and pass it to the integrator from runner temporary storage.
-5. Add focused positive and negative regressions, then run the full platform suite and governance/map validations.
-6. Commit and publish a draft governance PR. Obtain independent structural lead review against an exact commit, repair any findings, run exact-head CI, and publish current readiness evidence for human review.
+4. Add optional hosted-workflow inputs for the residual review record and the mutually exclusive preparation-only mode; pass the review record from runner temporary storage.
+5. Stop preparation after exact-pair CI and after a final current-head/current-base check, before constructing or publishing readiness.
+6. Add focused positive and negative regressions, including the complete `prepare -> dry-run -> live` sequence, then run the full platform suite and governance/map validations.
+7. Commit and publish a draft governance PR. Obtain independent structural lead review against an exact commit, repair any findings, run exact-head CI, and publish current readiness evidence for human review.
 
 ## Test matrix
 
@@ -49,6 +52,8 @@ Positive:
 - Live partial resume derives, publishes, re-fetches, and uses exact-head readiness before merge.
 - Live partial resume can restart after an already-published valid exact-head readiness record.
 - Existing payload-readiness-backed bundle integration remains compatible.
+- Preparation can perform a conflict-free branch update and stop for retry, then create/reuse the canonical refresh, validate exact-pair CI, and stop without readiness publication, success status, or merge.
+- A prepared integration head completes a green dry run and is then reused by the live integration.
 
 Negative:
 
@@ -60,6 +65,7 @@ Negative:
 - Readiness comment publication failure or malformed re-fetch.
 - Authorization, compatibility, lineage, or bundle-membership mismatch.
 - Any dry-run attempt to publish status/comment or merge.
+- Preparation combined with dry-run, preparation outside a partial-resume bundle, and head/base movement before preparation completes.
 
 ## Evidence and review gate
 
