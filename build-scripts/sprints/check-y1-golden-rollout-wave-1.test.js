@@ -7,6 +7,25 @@ const checker = require('./check-y1-golden-rollout-wave-1');
 
 const SCRIPT = path.resolve(__dirname, 'check-y1-golden-rollout-wave-1.js');
 
+function sourceProvenance() {
+  return {
+    renewal_start_platform_sha: checker.SOURCE_RENEWAL_START_PLATFORM_SHA,
+    selector_platform_sha: checker.SELECTOR_PLATFORM_SHA,
+    reviewed_payload_sha: checker.SOURCE_REVIEWED_PAYLOAD_SHA,
+    sealed_evidence_sha: checker.SOURCE_SEALED_EVIDENCE_SHA,
+  };
+}
+
+function currentEvidence() {
+  return {
+    platform_base_sha: checker.PREREQUISITE_BASE_PLATFORM_SHA,
+    reviewed_payload_sha: checker.PREREQUISITE_BASE_PLATFORM_SHA,
+    lesson_snapshot_sha: 'f'.repeat(40),
+    source_manifest: checker.PATHS.sourceManifest,
+    binding_model: 'historical_provenance_separate_from_current_lineage',
+  };
+}
+
 function baseWave() {
   return {
     schema_version: 2,
@@ -35,6 +54,9 @@ function baseWave() {
       generated_lesson_output_changed: false,
       source_data_changed: false,
       engine_behavior_changed: false,
+    },
+    changed_path_policy: {
+      prerequisite_base: checker.PREREQUISITE_BASE_PLATFORM_SHA,
     },
     owner_decision: { platform_pr: 148, comment_id: 4807419611 },
   };
@@ -93,8 +115,12 @@ function basePacketAndProof() {
       human_decision_required: true,
       auto_merge_allowed_after_ci: false,
       route: 'READY_FOR_HUMAN_REVIEW',
-      reviewed_payload_head_sha: 'c'.repeat(40),
+      reviewed_payload_head_sha: checker.PREREQUISITE_BASE_PLATFORM_SHA,
       authority_claims: authority,
+      proof: { rendered_renewal: checker.PATHS.renderedRenewal },
+      source_provenance: sourceProvenance(),
+      current_evidence: currentEvidence(),
+      evidence_scope: { first_viewport_only: true, below_fold_exercises_attested: false },
     },
     proof: {
       schema_version: 2,
@@ -104,7 +130,20 @@ function basePacketAndProof() {
         controlled_wave_eligibility_authorized: true,
         automatic_repository_wide_migration_authorized: false,
       },
-      rendered_evidence: { reviewed_platform_payload_sha: 'c'.repeat(40) },
+      rendered_evidence: {
+        reviewed_platform_payload_sha: checker.PREREQUISITE_BASE_PLATFORM_SHA,
+        lesson_snapshot_sha: 'f'.repeat(40),
+        rendered_renewal: checker.PATHS.renderedRenewal,
+        reuse_status: 'verified_exact_rendered_equivalence',
+        screenshots_recaptured: true,
+        verified_rendered_renewal_count: 1,
+        changed_or_missing_input_count: 1,
+        unresolved_changed_or_missing_input_count: 0,
+        first_viewport_only: true,
+        below_fold_exercises_attested: false,
+      },
+      source_provenance: sourceProvenance(),
+      current_evidence: currentEvidence(),
       authority,
     },
   };
@@ -112,10 +151,12 @@ function basePacketAndProof() {
 
 function baseDeltaRecord() {
   return {
-    schema_version: 1,
+    schema_version: 2,
     sprint_id: checker.WAVE_ID,
+    source_provenance: sourceProvenance(),
+    current_evidence: currentEvidence(),
     commit_chain: {
-      platform: { capture_payload: 'a'.repeat(40), old_pr_ci: 'b'.repeat(40), renewal_payload: 'c'.repeat(40) },
+      platform: { capture_payload: 'a'.repeat(40), old_pr_ci: 'b'.repeat(40), renewal_payload: checker.PREREQUISITE_BASE_PLATFORM_SHA },
       lesson: { capture_payload: 'd'.repeat(40), old_pr_ci: 'e'.repeat(40), renewal_snapshot: 'f'.repeat(40) },
     },
     dependency_discovery: {
@@ -128,19 +169,29 @@ function baseDeltaRecord() {
       landing_route_targets_exist_at_all_commits: true,
       platform_source_generator_runtime_and_proof_inputs_explicit: true,
       proof_defined_list_accepted_without_cross_check: false,
+      changed_capture_inputs_require_verified_rendered_renewal: true,
     },
     summary: {
       screenshots_reusable: true,
       recapture_required: false,
-      changed_or_missing_input_count: 0,
-      changed_or_missing_paths: [],
+      changed_or_missing_input_count: 1,
+      changed_or_missing_paths: ['b'],
+      verified_rendered_renewal_count: 1,
+      verified_rendered_renewal_paths: ['b'],
+      unresolved_changed_or_missing_input_count: 0,
+      unresolved_changed_or_missing_paths: [],
+      replacement_capture_count: 1,
+      exact_rendered_equivalence_count: 1,
       historical_artifact_count: 1,
       historical_artifacts_blob_equal: true,
       screenshot_manifest_integrity_passed: true,
+      first_viewport_only: true,
+      below_fold_exercises_attested: false,
     },
     platform_equal_paths: [{ path: 'a', blobs: { renewal_payload: 'blob-a' }, status: 'equal' }],
-    lesson_equal_paths: [{ path: 'b', blobs: { renewal_snapshot: 'blob-b' }, status: 'equal' }],
+    lesson_equal_paths: [{ path: 'b', blobs: { renewal_snapshot: 'blob-b' }, status: 'changed' }],
     lesson_existence_only_paths: [{ path: 'c', blobs: { renewal_snapshot: 'blob-c' }, status: 'present' }],
+    rendered_renewals: [{ evidence_path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json', lesson_path: 'b', status: 'exact_rendered_equivalence' }],
   };
 }
 
@@ -278,6 +329,11 @@ describe('Y1 Golden rollout wave state contracts', () => {
     decision.scale_gate_1.decision = 'READY_FOR_HUMAN_REVIEW';
     expect(() => checker.validateWaveAndSurfaces({ wave: decision, manifest: baseManifest(), skipFiles: true }))
       .toThrow(/PASS_CONTROLLED_ROLLOUT/);
+
+    const prerequisite = baseWave();
+    prerequisite.changed_path_policy.prerequisite_base = '0'.repeat(40);
+    expect(() => checker.validateWaveAndSurfaces({ wave: prerequisite, manifest: baseManifest(), skipFiles: true }))
+      .toThrow(/prerequisite base mismatch/);
   });
 
   test('rejects missing and escaping route links', () => {
@@ -324,6 +380,54 @@ describe('Y1 Golden rollout wave state contracts', () => {
 });
 
 describe('Y1 Golden rollout wave evidence and governance contracts', () => {
+  test('accepts the exact one-capture rendered-equivalence renewal', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const scaleProof = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.scaleProof), 'utf8'));
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.renderedRenewal), 'utf8'));
+    const result = checker.validateRenderedRenewal(renewal, scaleProof, {
+      renewedLessonRef: renewal.lesson.renewed_snapshot_sha,
+    });
+    expect(result.capture_id).toBe('112-normal-practice-desktop-light-opgaven');
+    expect(result.changed_pixels).toBe(0);
+    expect(result.status).toBe('exact_rendered_equivalence');
+  });
+
+  test('keeps the changed opgaven page in the rendered dependency set', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const scaleProof = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.scaleProof), 'utf8'));
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.renderedRenewal), 'utf8'));
+    const dependencies = checker.deriveLessonDependencies(
+      scaleProof,
+      renewal.lesson.historical_capture_sha,
+      renewal.lesson.renewed_snapshot_sha
+    );
+    expect(dependencies.equal_paths).toContain(renewal.lesson.page_path);
+  });
+
+  test.each([
+    ['source provenance drift', (record) => { record.source_provenance.reviewed_payload_sha = checker.PREREQUISITE_BASE_PLATFORM_SHA; }, /source provenance commit chain mismatch/],
+    ['current base drift', (record) => { record.current_evidence.platform_base_sha = record.starting_platform_sha; }, /current platform base mismatch/],
+    ['missing first-viewport qualification', (record) => { record.scope_qualification.first_viewport_only = false; }, /first-viewport-only qualification/],
+    ['changed pixel', (record) => { record.pixel_comparison.changed_pixels = 1; }, /changed-pixel result mismatch/],
+    ['wrong page', (record) => { record.lesson.page_path = 'wrong.html'; }, /lesson page mismatch/],
+    ['multiple captures', (record) => { record.canonical_process.capture_count = 2; }, /exactly one selected capture/],
+    ['selector commit drift', (record) => { record.canonical_process.selector_platform_sha = record.starting_platform_sha; }, /selector platform SHA mismatch/],
+    ['stale screenshot hash', (record) => { record.renewed_capture.sha256 = '0'.repeat(64); }, /replacement screenshot hash mismatch/],
+    ['failed visual review', (record) => { record.human_visual_review.status = 'FAIL'; }, /human visual review must pass/],
+    ['stale visual review hash', (record) => { record.human_visual_review.review_sha256 = '0'.repeat(64); }, /visual review hash mismatch/],
+    ['failed current visual review', (record) => { record.current_visual_review.status = 'FAIL'; }, /current visual review must pass/],
+    ['stale current visual review hash', (record) => { record.current_visual_review.review_sha256 = '0'.repeat(64); }, /current visual review hash mismatch/],
+    ['authority escalation', (record) => { record.authority.merge_authorized = true; }, /authority.merge_authorized must be false/],
+    ['missing required authority hold', (record) => { delete record.authority.merge_authorized; record.authority.unrelated_placeholder = false; }, /authority keys mismatch/],
+    ['added authority key', (record) => { record.authority.unrelated_placeholder = false; }, /authority keys mismatch/],
+  ])('rejects a rendered renewal with %s', (_label, mutate, pattern) => {
+    const root = path.resolve(__dirname, '..', '..');
+    const scaleProof = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.scaleProof), 'utf8'));
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.renderedRenewal), 'utf8'));
+    mutate(renewal);
+    expect(() => checker.validateRenderedRenewal(renewal, scaleProof)).toThrow(pattern);
+  });
+
   test('rejects stale or incomplete delta-proof dependency sets', () => {
     const recorded = baseDeltaRecord();
     const recomputed = structuredClone(recorded);
@@ -338,12 +442,47 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
       mutate(recorded, recomputed);
       expect(() => checker.validateDeltaProof(recorded, recomputed)).toThrow(pattern);
     };
-    mutateAndExpect((recorded) => { recorded.commit_chain.platform.renewal_payload = '9'.repeat(40); }, /commit chain is stale/);
+    mutateAndExpect((recorded) => { recorded.commit_chain.platform.renewal_payload = '9'.repeat(40); }, /current payload mismatch|commit chain is stale/);
     mutateAndExpect((recorded) => { recorded.dependency_discovery.anchor_href_require_existence_only = false; }, /dependency classification is stale/);
     mutateAndExpect((recorded) => { recorded.platform_equal_paths[0].blobs.renewal_payload = 'stale'; }, /blob evidence is stale/);
     mutateAndExpect((recorded) => { recorded.summary.historical_artifact_count = 2; }, /artifact count is stale/);
     mutateAndExpect((recorded) => { recorded.summary.screenshots_reusable = false; }, /reuse decision is stale/);
     mutateAndExpect((recorded) => { recorded.summary.recapture_required = true; }, /complete summary is stale/);
+    mutateAndExpect((recorded) => { recorded.rendered_renewals[0].status = 'stale'; }, /rendered renewal evidence is stale/);
+    mutateAndExpect((recorded, recomputed) => {
+      recorded.summary.changed_or_missing_paths = ['wrong.html'];
+      recomputed.summary.changed_or_missing_paths = ['wrong.html'];
+    }, /exact changed dependency mismatch/);
+    mutateAndExpect((recorded, recomputed) => {
+      for (const item of [recorded, recomputed]) {
+        item.current_evidence.reviewed_payload_sha = checker.SOURCE_REVIEWED_PAYLOAD_SHA;
+        item.commit_chain.platform.renewal_payload = checker.SOURCE_REVIEWED_PAYLOAD_SHA;
+      }
+    }, /source provenance SHA cannot be used as current reviewed payload/);
+  });
+
+  test('validates the exact historical provenance chain', () => {
+    expect(checker.validateSourceCommitChain(sourceProvenance())).toEqual(sourceProvenance());
+  });
+
+  test('validates every source-manifest artifact against committed source and destination bytes', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const manifest = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.sourceManifest), 'utf8'));
+    const result = checker.validateSourceManifest(manifest, { currentPlatformRef: 'HEAD' });
+    expect(result.artifact_count).toBe(checker.SOURCE_MANIFEST_ARTIFACTS.length);
+  });
+
+  test.each([
+    ['source blob', (item) => { item.source_blob_oid = '0'.repeat(40); }, /source blob mismatch/],
+    ['source hash', (item) => { item.source_sha256 = '0'.repeat(64); }, /source SHA-256 mismatch/],
+    ['destination path', (item) => { item.destination_path = 'wrong/path'; }, /path mismatch/],
+    ['destination blob', (item) => { item.destination_blob_oid = '0'.repeat(40); }, /destination blob mismatch/],
+    ['destination hash', (item) => { item.destination_sha256 = '0'.repeat(64); }, /destination SHA-256 mismatch/],
+  ])('rejects source-manifest %s drift', (_label, mutate, pattern) => {
+    const root = path.resolve(__dirname, '..', '..');
+    const manifest = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.sourceManifest), 'utf8'));
+    mutate(manifest.artifacts[0]);
+    expect(() => checker.validateSourceManifest(manifest, { currentPlatformRef: 'HEAD' })).toThrow(pattern);
   });
 
   test('limits the post-payload evidence tail to deterministic evidence paths', () => {
@@ -394,8 +533,8 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
       researchMap: common,
       referenceMap: common,
       githubEntry: common,
-      urlIndex: `${checker.PATHS.bundleUrls}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}`,
-      bundleUrls: checker.PATHS.packet,
+      urlIndex: `${checker.PATHS.bundleUrls}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}\n${checker.PATHS.renderedRenewal}\n${checker.PATHS.sourceManifest}\n${checker.PATHS.prerequisiteVisualReview}`,
+      bundleUrls: `${checker.PATHS.packet}\n${checker.PATHS.renderedRenewal}\n${checker.PATHS.sourceManifest}\n${checker.PATHS.prerequisiteVisualReview}`,
       platformAgentIndex: checker.PATHS.packet,
       dashboard: checker.WAVE_ID,
     })).toThrow(/controlled-rollout state/);
@@ -422,6 +561,27 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     packet.pr_url = 'https://github.com/meijer1973/4veco-platform/pull/999';
     packet.reviewed_payload_head_sha = 'd'.repeat(40);
     expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/payload SHA must match delta-proof renewal payload/);
+  });
+
+  test('rejects unresolved rendered drift even when packet and proof counts are made consistent', () => {
+    const { packet, proof } = basePacketAndProof();
+    const delta = baseDeltaRecord();
+    delta.summary.unresolved_changed_or_missing_input_count = 1;
+    delta.summary.unresolved_changed_or_missing_paths = ['unverified.html'];
+    delta.summary.screenshots_reusable = false;
+    delta.summary.recapture_required = true;
+    proof.rendered_evidence.unresolved_changed_or_missing_input_count = 1;
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/zero unresolved rendered inputs/);
+  });
+
+  test('rejects missing first-viewport qualification in packet or proof', () => {
+    const { packet, proof } = basePacketAndProof();
+    const delta = baseDeltaRecord();
+    packet.evidence_scope.first_viewport_only = false;
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/review packet first-viewport qualification/);
+    packet.evidence_scope.first_viewport_only = true;
+    proof.rendered_evidence.below_fold_exercises_attested = true;
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/wave proof first-viewport qualification/);
   });
 });
 
@@ -469,6 +629,78 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     expect(fail.stderr).toMatch(/synthetic merge SHA/);
   });
 
+  test('validates selector provenance from committed bytes after worktree line-ending drift', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const selectorPath = 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js';
+    const selectorPlatform = commit(repo.root, { [selectorPath]: 'first\nsecond\n' }, 'selector');
+    const selectorBlob = checker.gitBlob(selectorPlatform, selectorPath, repo.root);
+    write(repo.root, selectorPath, 'first\r\nsecond\r\n');
+
+    expect(git(repo.root, ['hash-object', selectorPath])).not.toBe(selectorBlob);
+    expect(checker.validateSelectorProvenance({
+      selector_path: selectorPath,
+      selector_platform_sha: selectorPlatform,
+      selector_blob: selectorBlob,
+    }, repo.root, selectorPlatform)).toEqual({
+      selector_platform_sha: selectorPlatform,
+      selector_blob: selectorBlob,
+    });
+  });
+
+  test('rejects non-commit source provenance objects and broken source lineage', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const selector = commit(repo.root, { 'selector.js': 'selector\n' }, 'selector');
+    const reviewed = commit(repo.root, { 'reviewed.json': '{}\n' }, 'reviewed');
+    const sealed = commit(repo.root, { 'sealed.json': '{}\n' }, 'sealed');
+    const valid = {
+      renewal_start_platform_sha: repo.base,
+      selector_platform_sha: selector,
+      reviewed_payload_sha: reviewed,
+      sealed_evidence_sha: sealed,
+    };
+    expect(checker.validateSourceCommitChain(valid, repo.root, valid)).toEqual(valid);
+
+    const blob = git(repo.root, ['rev-parse', 'HEAD:sealed.json']);
+    const nonCommit = { ...valid, renewal_start_platform_sha: blob };
+    expect(() => checker.validateSourceCommitChain(nonCommit, repo.root, nonCommit)).toThrow(/rev-parse/);
+
+    git(repo.root, ['checkout', '--detach', repo.base]);
+    const unrelated = commit(repo.root, { 'unrelated.txt': 'unrelated\n' }, 'unrelated');
+    const broken = { ...valid, reviewed_payload_sha: unrelated };
+    expect(() => checker.validateSourceCommitChain(broken, repo.root, broken)).toThrow(/source selector must be an ancestor/);
+  });
+
+  test('validates current base-payload-head lineage and rejects stale substantive tails', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const payload = commit(repo.root, { 'reports/sprints/Y1-payload.md': 'payload\n' }, 'payload');
+    const head = commit(repo.root, { 'reports/sprints/Y1-review.md': 'review\n' }, 'head');
+    const current = { platform_base_sha: repo.base, reviewed_payload_sha: payload };
+    expect(checker.validateCurrentLineage(current, head, repo.root, {
+      expectedBase: repo.base,
+      forbiddenShas: [],
+    })).toEqual({
+      platform_base_sha: repo.base,
+      reviewed_payload_sha: payload,
+      exact_head_sha: head,
+    });
+    expect(checker.validateEvidenceTail(payload, head, repo.root).entries).toHaveLength(1);
+
+    const substantiveHead = commit(repo.root, {
+      'build-scripts/sprints/check-y1-golden-rollout-wave-1.js': 'substantive correction\n',
+    }, 'stale payload correction');
+    expect(() => checker.validateEvidenceTail(payload, substantiveHead, repo.root)).toThrow(/substantive path changed after reviewed payload/);
+
+    git(repo.root, ['checkout', '--detach', repo.base]);
+    const unrelatedHead = commit(repo.root, { 'reports/sprints/Y1-unrelated.md': 'unrelated\n' }, 'unrelated');
+    expect(() => checker.validateCurrentLineage(current, unrelatedHead, repo.root, {
+      expectedBase: repo.base,
+      forbiddenShas: [],
+    })).toThrow(/current exact head must descend from reviewed payload/);
+  });
+
   test('passes the actual main-push before/after range', () => {
     const repo = makeRepo();
     roots.push(repo.root);
@@ -481,6 +713,63 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     });
     expect(result.status).toBe(0);
     expect(result.stdout).toMatch(/"scope_attestation_triggered": true/);
+  });
+
+  test('scopes a pre-prerequisite event range from the exact prerequisite base', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const continuation = commit(repo.root, {
+      'docs/prior-authorized-platform-change.md': 'already reviewed\n',
+    }, 'prior authorized integration');
+    const head = commit(repo.root, {
+      'reports/sprints/Y1-renewal.md': 'renewal\n',
+    }, 'bounded evidence renewal');
+    const eventDelta = checker.changedEntries(repo.base, head, repo.root);
+    const scoped = checker.selectScopeDelta(eventDelta, {
+      prerequisite_base: continuation,
+    }, repo.root);
+
+    expect(scoped.base_sha).toBe(continuation);
+    expect(scoped.head_sha).toBe(head);
+    expect(scoped.entries.flatMap(checker.entryPaths)).toEqual(['reports/sprints/Y1-renewal.md']);
+  });
+
+  test('uses the full event range after the prerequisite base', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const continuation = commit(repo.root, {
+      'reports/sprints/Y1-renewal.md': 'renewal\n',
+    }, 'bounded evidence renewal');
+    const futureBase = commit(repo.root, {
+      'docs/future-base.md': 'future base\n',
+    }, 'future base');
+    const head = commit(repo.root, {
+      'docs/future-head.md': 'future head\n',
+    }, 'future head');
+    const eventDelta = checker.changedEntries(futureBase, head, repo.root);
+    const scoped = checker.selectScopeDelta(eventDelta, {
+      prerequisite_base: continuation,
+    }, repo.root);
+
+    expect(scoped).toEqual(eventDelta);
+    expect(scoped.entries.flatMap(checker.entryPaths)).toEqual(['docs/future-head.md']);
+  });
+
+  test('fails closed when an event head does not descend from the prerequisite base', () => {
+    const repo = makeRepo();
+    roots.push(repo.root);
+    const continuation = commit(repo.root, {
+      'reports/sprints/Y1-renewal.md': 'renewal\n',
+    }, 'bounded evidence renewal');
+    git(repo.root, ['checkout', '--detach', repo.base]);
+    const unrelatedHead = commit(repo.root, {
+      'reports/sprints/Y1-unrelated.md': 'unrelated\n',
+    }, 'unrelated lineage');
+    const eventDelta = checker.changedEntries(repo.base, unrelatedHead, repo.root);
+
+    expect(() => checker.selectScopeDelta(eventDelta, {
+      prerequisite_base: continuation,
+    }, repo.root)).toThrow(/does not descend from prerequisite base/);
   });
 
   test('fails closed on stale refs and exact event-ref mismatch', () => {
@@ -595,6 +884,9 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
 
     for (const sharedPath of sharedPaths) expect(actualPolicy.allowed_exact).toContain(sharedPath);
     for (const sharedPath of sharedPaths) expect(actualPolicy.trigger_exact).not.toContain(sharedPath);
+    const captureTool = 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js';
+    expect(actualPolicy.allowed_exact).toContain(captureTool);
+    expect(actualPolicy.trigger_exact).toContain(captureTool);
 
     for (let mask = 1; mask < (1 << sharedPaths.length); mask += 1) {
       const repo = makeRepo();
@@ -664,7 +956,7 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
       allowUnbound: true,
       writeDeltaProof: false,
       writeDeltaProofOnly: false,
-      lessonHead: '96c0970f45739a8758cf7e932c6bce77806cd68d',
+      lessonHead: 'f09fd6e88edc5049b026b16b0158e7e188091d2d',
       eventBaseSha: base,
     };
     const unrelated = checker.run({

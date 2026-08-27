@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "capture_id": "112-normal-practice-desktop-light-opgaven",
+  "captured_at": "2026-08-25T14:44:53.780Z",
+  "platform_starting_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+  "lesson_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "canonical_runner_blob": "ee749d3edefa4b73b274ce38a62b16286f2816e8",
+  "capture_count": 1,
+  "browser": {
+    "product": "Edg/151.0.4129.101",
+    "protocol_version": "1.3",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0",
+    "v8_version": "15.1.23.9",
+    "webkit_version": "537.36 (@cc1d9f4080fd9140611a9600b8d1615db310105d)"
+  },
+  "comparison": {
+    "method": "decoded_rgba_absolute_difference",
+    "historical_sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f",
+    "renewed_sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f",
+    "byte_equal": true,
+    "width": 1280,
+    "height": 900,
+    "changed_pixels": 0,
+    "total_pixels": 1152000,
+    "changed_pixel_ratio": 0,
+    "maximum_channel_delta": 0,
+    "mean_absolute_channel_delta": 0,
+    "diff_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
+    "diff_sha256": "b0e8d470d52693cfce5a2a9eb42d1fcde18eba3a468781750c1d9b60efde2be0"
+  }
+}

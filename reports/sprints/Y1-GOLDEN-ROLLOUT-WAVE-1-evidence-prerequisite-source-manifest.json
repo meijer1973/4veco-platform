@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "generated": "2026-08-27",
+  "source_provenance": {
+    "renewal_start_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+    "reviewed_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+    "sealed_evidence_sha": "aa06ada217b4ec8ac9f042f08100513381b30366"
+  },
+  "current_evidence": {
+    "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "binding_model": "historical_provenance_separate_from_current_lineage"
+  },
+  "artifacts": [
+    {
+      "id": "capture_selector",
+      "reuse_mode": "exact_bytes",
+      "source_commit_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+      "source_path": "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
+      "source_blob_oid": "e411eff9f7b2ac4d4b3ceec5a64775a508a57775",
+      "source_sha256": "b083b2a0fa31a728c5d70120db8c541b35ca9174601f2da205b080b6471fb2bd",
+      "destination_path": "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
+      "destination_blob_oid": "e411eff9f7b2ac4d4b3ceec5a64775a508a57775",
+      "destination_sha256": "b083b2a0fa31a728c5d70120db8c541b35ca9174601f2da205b080b6471fb2bd"
+    },
+    {
+      "id": "y1_checker",
+      "reuse_mode": "adapted",
+      "source_commit_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+      "source_path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+      "source_blob_oid": "e4a439fae8a59e8ee4075f94ac8122f678f024c6",
+      "source_sha256": "eb91eceae9d07431229c4063ca565454173c58cf63680615463ab0478bfab4a7",
+      "destination_path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+      "destination_blob_oid": "cbfa17c96a2fe300b78fd8d95766630804e8d1b6",
+      "destination_sha256": "2e681c95d2d8fd86b403b7e7ffeeba7f25d2d7ae9eec2b89640778d9590cffdc"
+    },
+    {
+      "id": "y1_checker_tests",
+      "reuse_mode": "adapted",
+      "source_commit_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+      "source_path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+      "source_blob_oid": "fcf39fbe9c6b21da6ad8cde228de157327442c7c",
+      "source_sha256": "b74a650a28cca8017889ee70a6babbe29d9109702fc2bcf61fac84ab9d62fe8d",
+      "destination_path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+      "destination_blob_oid": "3022cf2a6dc96617defc883c949df13e06733354",
+      "destination_sha256": "0f6c17e3ed711cda265a2eba7f2ebc67cc10bca5d3dd91b050405a32ab53ec2b"
+    },
+    {
+      "id": "y1_changed_path_policy",
+      "reuse_mode": "adapted",
+      "source_commit_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+      "source_path": "references/data/exercises/y1-golden-rollout-wave-1.json",
+      "source_blob_oid": "0f801bde9b7f9cf0cecf9e31c955ee1161b38385",
+      "source_sha256": "800b8065e227f2b1a0645758b7d34bc618890329bb34b6651ce75ac6a2060b14",
+      "destination_path": "references/data/exercises/y1-golden-rollout-wave-1.json",
+      "destination_blob_oid": "3048c30a1f0f394ea71afc371da6ed315a850def",
+      "destination_sha256": "e9153205cecdc00fc5b085b3bf4ad8b1a093398dc0076c8cbd2821691615deea"
+    },
+    {
+      "id": "replacement_capture",
+      "reuse_mode": "exact_bytes",
+      "source_commit_sha": "aa06ada217b4ec8ac9f042f08100513381b30366",
+      "source_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
+      "source_blob_oid": "0219c0f353cf4b179ab0e0dae15c413804e549c0",
+      "source_sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f",
+      "destination_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
+      "destination_blob_oid": "0219c0f353cf4b179ab0e0dae15c413804e549c0",
+      "destination_sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f"
+    },
+    {
+      "id": "zero_delta_image",
+      "reuse_mode": "exact_bytes",
+      "source_commit_sha": "aa06ada217b4ec8ac9f042f08100513381b30366",
+      "source_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
+      "source_blob_oid": "c3ae4e82d4a8422d88f29ce9226faff0eddf187e",
+      "source_sha256": "b0e8d470d52693cfce5a2a9eb42d1fcde18eba3a468781750c1d9b60efde2be0",
+      "destination_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
+      "destination_blob_oid": "c3ae4e82d4a8422d88f29ce9226faff0eddf187e",
+      "destination_sha256": "b0e8d470d52693cfce5a2a9eb42d1fcde18eba3a468781750c1d9b60efde2be0"
+    },
+    {
+      "id": "comparison",
+      "reuse_mode": "exact_bytes",
+      "source_commit_sha": "aa06ada217b4ec8ac9f042f08100513381b30366",
+      "source_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
+      "source_blob_oid": "ffa76be4d90bade4e1e0bd88cbba720c2c7ff91f",
+      "source_sha256": "b3594a34e9cc433803e2b512f9e8d1a242746fcf382e5bb10335c25406499d55",
+      "destination_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
+      "destination_blob_oid": "ffa76be4d90bade4e1e0bd88cbba720c2c7ff91f",
+      "destination_sha256": "b3594a34e9cc433803e2b512f9e8d1a242746fcf382e5bb10335c25406499d55"
+    },
+    {
+      "id": "capture_manifest",
+      "reuse_mode": "exact_bytes",
+      "source_commit_sha": "aa06ada217b4ec8ac9f042f08100513381b30366",
+      "source_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json",
+      "source_blob_oid": "6e52638cfe6a64f4083ff46addd3f98a7d825ccb",
+      "source_sha256": "b1059a580a6d9895a78364d5addbaf1cbcef19a7bee2d66f2556f1a3e446a0e0",
+      "destination_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json",
+      "destination_blob_oid": "6e52638cfe6a64f4083ff46addd3f98a7d825ccb",
+      "destination_sha256": "b1059a580a6d9895a78364d5addbaf1cbcef19a7bee2d66f2556f1a3e446a0e0"
+    },
+    {
+      "id": "source_visual_review",
+      "reuse_mode": "exact_bytes",
+      "source_commit_sha": "aa06ada217b4ec8ac9f042f08100513381b30366",
+      "source_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md",
+      "source_blob_oid": "ce4cc48f20fc612f3284ff5c09f2f8b0fda30b6e",
+      "source_sha256": "11d225a0e10567cf3eb1c021ef8650b556921604bc98b19a137b0d41a5ed9a74",
+      "destination_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md",
+      "destination_blob_oid": "ce4cc48f20fc612f3284ff5c09f2f8b0fda30b6e",
+      "destination_sha256": "11d225a0e10567cf3eb1c021ef8650b556921604bc98b19a137b0d41a5ed9a74"
+    },
+    {
+      "id": "rendered_renewal_record",
+      "reuse_mode": "adapted",
+      "source_commit_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+      "source_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+      "source_blob_oid": "094577ce230617c2ffe24c349be32a4b167012b6",
+      "source_sha256": "0ae03b415ec1df81fd486c71e2a6566d6f3b230e51e34bf2041e660a78c76208",
+      "destination_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+      "destination_blob_oid": "685fd9338ded50bdd34978f455ab64154d99cc02",
+      "destination_sha256": "152f5d507bc8049e42b40a0337eb2aeeb4f3dfff6324f86809030fe640cd452f"
+    }
+  ]
+}

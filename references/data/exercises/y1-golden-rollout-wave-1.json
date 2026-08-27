@@ -52,9 +52,11 @@
   },
   "changed_path_policy": {
     "mode": "renewal_payload_only",
+    "prerequisite_base": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
     "trigger_exact": [
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+      "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
       "references/data/exercises/y1-golden-rollout-wave-1.json",
       "reports/json/y1-golden-rollout-wave-1-proof.json",
       "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
@@ -68,6 +70,7 @@
       "package.json",
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
       "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+      "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
       "build-scripts/sprints/emit-url-index.js",
       "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
       "docs/roadmaps/roadmap-version-index.json",
@@ -83,6 +86,8 @@
       "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
       "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
       "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md",
+      "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-evidence.json",
+      "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-decision.json",
       "reports/url-index.md",
       "reports/github-agent-index-platform.json",
       "reports/github-agent-index-platform.md",
