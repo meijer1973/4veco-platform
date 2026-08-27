@@ -33,8 +33,8 @@
       "source_blob_oid": "e4a439fae8a59e8ee4075f94ac8122f678f024c6",
       "source_sha256": "eb91eceae9d07431229c4063ca565454173c58cf63680615463ab0478bfab4a7",
       "destination_path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
-      "destination_blob_oid": "cbfa17c96a2fe300b78fd8d95766630804e8d1b6",
-      "destination_sha256": "2e681c95d2d8fd86b403b7e7ffeeba7f25d2d7ae9eec2b89640778d9590cffdc"
+      "destination_blob_oid": "6d0f02a78b0339c3dbc78165b0c83188452fda48",
+      "destination_sha256": "f1d8674c3d2ab959e6522d44f2466571e66dcba306690797c9f9e9f6a3e688f5"
     },
     {
       "id": "y1_checker_tests",
@@ -44,8 +44,8 @@
       "source_blob_oid": "fcf39fbe9c6b21da6ad8cde228de157327442c7c",
       "source_sha256": "b74a650a28cca8017889ee70a6babbe29d9109702fc2bcf61fac84ab9d62fe8d",
       "destination_path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
-      "destination_blob_oid": "be48269d651d9aee57ce0b6b8abc42257ba7ad02",
-      "destination_sha256": "d6ad1c46aed015f00c005bd883118aa734efc791c2608ca814c0ef027e3ab724"
+      "destination_blob_oid": "7033e6dc7ec81a6fbeac87faeb719c753bd19a00",
+      "destination_sha256": "afa1b3b3fffbbd8eb0e8ac7178ad4add60e90ed6476ddbc85d3fb061807e41a8"
     },
     {
       "id": "y1_changed_path_policy",
@@ -55,8 +55,8 @@
       "source_blob_oid": "0f801bde9b7f9cf0cecf9e31c955ee1161b38385",
       "source_sha256": "800b8065e227f2b1a0645758b7d34bc618890329bb34b6651ce75ac6a2060b14",
       "destination_path": "references/data/exercises/y1-golden-rollout-wave-1.json",
-      "destination_blob_oid": "3048c30a1f0f394ea71afc371da6ed315a850def",
-      "destination_sha256": "e9153205cecdc00fc5b085b3bf4ad8b1a093398dc0076c8cbd2821691615deea"
+      "destination_blob_oid": "368588ee52e62cef463191898537b7437a244e2b",
+      "destination_sha256": "ad28792ec581673ba4397290fb9fff8cef9b8cbe4463409f7fe467a36fc2a683"
     },
     {
       "id": "replacement_capture",

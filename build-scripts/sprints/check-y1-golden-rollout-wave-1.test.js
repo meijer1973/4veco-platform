@@ -54,9 +54,15 @@ function baseWave() {
       generated_lesson_output_changed: false,
       source_data_changed: false,
       engine_behavior_changed: false,
+      protected_reference_data_changed: false,
     },
     changed_path_policy: {
+      mode: 'renewal_payload_only',
       prerequisite_base: checker.PREREQUISITE_BASE_PLATFORM_SHA,
+      trigger_exact: [...checker.PREREQUISITE_MUTATION_PATHS],
+      trigger_prefixes: [],
+      allowed_exact: [...checker.PREREQUISITE_MUTATION_PATHS],
+      allowed_prefixes: [],
     },
     owner_decision: { platform_pr: 148, comment_id: 4807419611 },
   };
@@ -192,6 +198,30 @@ function baseDeltaRecord() {
     lesson_equal_paths: [{ path: 'b', blobs: { renewal_snapshot: 'blob-b' }, status: 'changed' }],
     lesson_existence_only_paths: [{ path: 'c', blobs: { renewal_snapshot: 'blob-c' }, status: 'present' }],
     rendered_renewals: [{ evidence_path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json', lesson_path: 'b', status: 'exact_rendered_equivalence' }],
+  };
+}
+
+function baseResult(delta = baseDeltaRecord()) {
+  return {
+    schema_version: 2,
+    sprint_id: checker.WAVE_ID,
+    source_provenance: sourceProvenance(),
+    current_evidence: currentEvidence(),
+    bindings: {
+      delta_proof: checker.PATHS.deltaProof,
+      wave_proof: checker.PATHS.proof,
+      review_packet: checker.PATHS.packet,
+    },
+    rendered_evidence: {
+      changed_or_missing_input_count: 1,
+      changed_or_missing_paths: [...delta.summary.changed_or_missing_paths],
+      verified_rendered_renewal_count: 1,
+      unresolved_changed_or_missing_input_count: 0,
+      unresolved_changed_or_missing_paths: [],
+      first_viewport_only: true,
+      below_fold_exercises_attested: false,
+    },
+    authority: structuredClone(baseWave().authority),
   };
 }
 
@@ -334,6 +364,40 @@ describe('Y1 Golden rollout wave state contracts', () => {
     prerequisite.changed_path_policy.prerequisite_base = '0'.repeat(40);
     expect(() => checker.validateWaveAndSurfaces({ wave: prerequisite, manifest: baseManifest(), skipFiles: true }))
       .toThrow(/prerequisite base mismatch/);
+  });
+
+  test.each([
+    ['protected-reference escalation', (authority) => { authority.protected_reference_data_changed = true; }],
+    ['added key', (authority) => { authority.unexpected_authority_key = true; }],
+    ['missing key', (authority) => { delete authority.protected_reference_data_changed; }],
+    ['renamed key', (authority) => { delete authority.pv_authorized; authority.pv_authority = false; }],
+  ])('rejects wave authority inventory drift: %s', (_label, mutate) => {
+    const wave = baseWave();
+    mutate(wave.authority);
+    expect(() => checker.validateWaveAndSurfaces({ wave, manifest: baseManifest(), skipFiles: true }))
+      .toThrow(/wave\.authority/);
+  });
+
+  test('requires the exact authorized mutation inventory without wildcard paths', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const wave = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.wave), 'utf8'));
+    expect(checker.validateChangedPathPolicy(wave.changed_path_policy)).toBe(wave.changed_path_policy);
+    expect(wave.changed_path_policy.allowed_prefixes).toEqual([]);
+    expect(wave.changed_path_policy.trigger_prefixes).toEqual([]);
+    expect(new Set(wave.changed_path_policy.allowed_exact)).toEqual(new Set(checker.PREREQUISITE_MUTATION_PATHS));
+    for (const unexpected of [
+      '.github/workflows/platform-ci.yml',
+      'package.json',
+      'docs/roadmaps/roadmap-version-index.json',
+      'AGENT_GITHUB_ENTRY.md',
+      'references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json',
+      'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-arbitrary-unplanned-file.md',
+    ]) {
+      expect(() => checker.validateChangedEntries([
+        { status: 'M', path: 'build-scripts/sprints/check-y1-golden-rollout-wave-1.js' },
+        { status: 'M', path: unexpected },
+      ], wave.changed_path_policy, 'required')).toThrow(/unexpected committed path/);
+    }
   });
 
   test('rejects missing and escaping route links', () => {
@@ -485,11 +549,42 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     expect(() => checker.validateSourceManifest(manifest, { currentPlatformRef: 'HEAD' })).toThrow(pattern);
   });
 
+  test('rejects duplicate and extra source-manifest artifact records', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const original = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.sourceManifest), 'utf8'));
+    const duplicate = structuredClone(original);
+    duplicate.artifacts.push({
+      ...duplicate.artifacts[0],
+      source_path: 'engines/unauthorized.js',
+      destination_path: 'engines/unauthorized.js',
+      source_blob_oid: '0'.repeat(40),
+      destination_blob_oid: '0'.repeat(40),
+    });
+    expect(() => checker.validateSourceManifest(duplicate, { currentPlatformRef: 'HEAD' }))
+      .toThrow(/artifact count mismatch/);
+
+    const duplicateWithinCount = structuredClone(original);
+    duplicateWithinCount.artifacts[1] = structuredClone(duplicateWithinCount.artifacts[0]);
+    expect(() => checker.validateSourceManifest(duplicateWithinCount, { currentPlatformRef: 'HEAD' }))
+      .toThrow(/artifact ids must be unique/);
+
+    const extra = structuredClone(original);
+    extra.artifacts.push({ id: 'unexpected_artifact' });
+    expect(() => checker.validateSourceManifest(extra, { currentPlatformRef: 'HEAD' }))
+      .toThrow(/artifact count mismatch/);
+  });
+
   test('limits the post-payload evidence tail to deterministic evidence paths', () => {
     expect(checker.evidenceTailPathAllowed('reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json')).toBe(true);
-    expect(checker.evidenceTailPathAllowed('reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-lead-review-round2.md')).toBe(true);
+    expect(checker.evidenceTailPathAllowed('reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md')).toBe(true);
     expect(checker.evidenceTailPathAllowed('build-scripts/sprints/check-y1-golden-rollout-wave-1.js')).toBe(false);
     expect(checker.evidenceTailPathAllowed('source-data/book-1/exit-ticket/1.1.1-exit-ticket.json')).toBe(false);
+    expect(checker.evidenceTailPathAllowed('.github/workflows/platform-ci.yml')).toBe(false);
+    expect(checker.evidenceTailPathAllowed('package.json')).toBe(false);
+    expect(checker.evidenceTailPathAllowed('docs/roadmaps/roadmap-version-index.json')).toBe(false);
+    expect(checker.evidenceTailPathAllowed('AGENT_GITHUB_ENTRY.md')).toBe(false);
+    expect(checker.evidenceTailPathAllowed('references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json')).toBe(false);
+    expect(checker.evidenceTailPathAllowed('reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-arbitrary-unplanned-file.md')).toBe(false);
   });
 
   test('rejects missing exact event wiring', () => {
@@ -582,6 +677,53 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     packet.evidence_scope.first_viewport_only = true;
     proof.rendered_evidence.below_fold_exercises_attested = true;
     expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/wave proof first-viewport qualification/);
+  });
+
+  test.each([
+    ['packet protected-reference escalation', 'packet', (authority) => { authority.protected_reference_data_changed = true; }],
+    ['packet added key', 'packet', (authority) => { authority.unexpected_authority_key = false; }],
+    ['proof missing key', 'proof', (authority) => { delete authority.protected_reference_data_changed; }],
+    ['proof renamed key', 'proof', (authority) => { delete authority.pv_authorized; authority.pv_authority = false; }],
+  ])('rejects packet/proof authority inventory drift: %s', (_label, target, mutate) => {
+    const { packet, proof } = basePacketAndProof();
+    const delta = baseDeltaRecord();
+    mutate(target === 'packet' ? packet.authority_claims : proof.authority);
+    expect(() => checker.validatePacketObjects(packet, proof, false, delta)).toThrow(/authority/);
+  });
+
+  test('cross-binds the terminal result to provenance, current evidence, counts, scope, and authority', () => {
+    const { packet, proof } = basePacketAndProof();
+    const delta = baseDeltaRecord();
+    expect(checker.validateResultObject(baseResult(delta), packet, proof, delta)).toBe(true);
+
+    const staleSha = baseResult(delta);
+    staleSha.current_evidence.reviewed_payload_sha = '0'.repeat(40);
+    expect(() => checker.validateResultObject(staleSha, packet, proof, delta)).toThrow(/current evidence mismatch/);
+
+    const staleViewport = baseResult(delta);
+    staleViewport.rendered_evidence.first_viewport_only = false;
+    expect(() => checker.validateResultObject(staleViewport, packet, proof, delta)).toThrow(/first-viewport qualification/);
+
+    const staleCount = baseResult(delta);
+    staleCount.rendered_evidence.changed_or_missing_input_count = 2;
+    expect(() => checker.validateResultObject(staleCount, packet, proof, delta)).toThrow(/changed dependency count/);
+
+    const stalePath = baseResult(delta);
+    stalePath.rendered_evidence.changed_or_missing_paths = ['wrong.html'];
+    expect(() => checker.validateResultObject(stalePath, packet, proof, delta)).toThrow(/changed dependency paths mismatch/);
+
+    const unresolved = baseResult(delta);
+    unresolved.rendered_evidence.unresolved_changed_or_missing_input_count = 1;
+    unresolved.rendered_evidence.unresolved_changed_or_missing_paths = ['b'];
+    expect(() => checker.validateResultObject(unresolved, packet, proof, delta)).toThrow(/unresolved rendered input count/);
+
+    const escalated = baseResult(delta);
+    escalated.authority.protected_reference_data_changed = true;
+    expect(() => checker.validateResultObject(escalated, packet, proof, delta)).toThrow(/protected_reference_data_changed must be false/);
+
+    const added = baseResult(delta);
+    added.authority.unexpected_authority_key = false;
+    expect(() => checker.validateResultObject(added, packet, proof, delta)).toThrow(/result\.authority keys mismatch/);
   });
 });
 
@@ -875,39 +1017,27 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
   });
 
-  test('shared infrastructure paths do not activate the renewal allowlist for future mixed work', () => {
+  test('shared infrastructure and inherited roadmap paths are excluded from the prerequisite allowlist', () => {
     const actualPolicyPath = path.resolve(__dirname, '..', '..', 'references', 'data', 'exercises', 'y1-golden-rollout-wave-1.json');
     const actualPolicy = JSON.parse(fs.readFileSync(actualPolicyPath, 'utf8')).changed_path_policy;
-    const sharedPaths = [
+    const excludedPaths = [
       '.github/workflows/platform-ci.yml',
       'package.json',
       'build-scripts/sprints/emit-url-index.js',
+      'docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md',
+      'docs/roadmaps/roadmap-version-index.json',
+      'RESEARCH_AGENT_MAP.md',
+      'references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.plan.json',
+      'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-arbitrary-unplanned-file.md',
     ];
 
-    for (const sharedPath of sharedPaths) expect(actualPolicy.allowed_exact).toContain(sharedPath);
-    for (const sharedPath of sharedPaths) expect(actualPolicy.trigger_exact).not.toContain(sharedPath);
-    const captureTool = 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js';
-    expect(actualPolicy.allowed_exact).toContain(captureTool);
-    expect(actualPolicy.trigger_exact).toContain(captureTool);
-
-    for (let mask = 1; mask < (1 << sharedPaths.length); mask += 1) {
-      const repo = makeRepo();
-      roots.push(repo.root);
-      const files = { 'docs/future-authorized-work.md': 'future\n' };
-      for (let index = 0; index < sharedPaths.length; index += 1) {
-        if (mask & (1 << index)) files[sharedPaths[index]] = `shared ${index}\n`;
-      }
-      const head = commit(repo.root, files, `shared subset ${mask}`);
-      const result = runScopeCli({
-        ...repo,
-        policyPath: actualPolicyPath,
-        head,
-        eventMode: 'main_push',
-        scopeMode: 'auto',
-        env: { Y1_GOLDEN_EVENT_BASE_SHA: repo.base, Y1_GOLDEN_EVENT_HEAD_SHA: head },
-      });
-      expect(result.status).toBe(0);
-      expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
+    for (const excludedPath of excludedPaths) {
+      expect(actualPolicy.allowed_exact).not.toContain(excludedPath);
+      expect(actualPolicy.trigger_exact).not.toContain(excludedPath);
+      expect(() => checker.validateChangedEntries([
+        { status: 'M', path: 'build-scripts/sprints/check-y1-golden-rollout-wave-1.js' },
+        { status: 'M', path: excludedPath },
+      ], actualPolicy, 'auto')).toThrow(/unexpected committed path/);
     }
   });
 

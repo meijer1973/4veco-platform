@@ -21,6 +21,7 @@ const PATHS = {
   scaleRouteInventory: 'reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md',
   proof: 'reports/json/y1-golden-rollout-wave-1-proof.json',
   deltaProof: 'reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json',
+  result: 'references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json',
   renderedRenewal: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json',
   sourceManifest: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json',
   prerequisiteVisualReview: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md',
@@ -74,7 +75,7 @@ const REQUIRED_SCALE_FLAGS = [
   'same_copy_hygiene_114_neutral_not_gate_claim',
 ];
 
-const HELD_AUTHORITY_KEYS = [
+const WAVE_AUTHORITY_KEYS = [
   'actual_rollout_or_adoption_authorized',
   'automatic_repository_wide_migration_authorized',
   'product_route_adoption_authorized',
@@ -87,6 +88,10 @@ const HELD_AUTHORITY_KEYS = [
   'adaptive_routing_authorized',
   'summative_use_authorized',
   'pv_authorized',
+  'generated_lesson_output_changed',
+  'source_data_changed',
+  'engine_behavior_changed',
+  'protected_reference_data_changed',
 ];
 
 const RENDERED_RENEWAL_HELD_AUTHORITY_KEYS = [
@@ -185,14 +190,38 @@ const PLATFORM_RENDER_INPUTS = [
   'build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js',
 ];
 
-const EVIDENCE_TAIL_EXACT = [
-  'AGENT_GITHUB_ENTRY.md',
-  'RESEARCH_AGENT_MAP.md',
-  'RESEARCH_AGENT_MAP_REFERENCES.md',
+const PREREQUISITE_MUTATION_PATHS = [
+  'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js',
+  'build-scripts/sprints/check-y1-golden-rollout-wave-1.js',
+  'build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js',
+  'references/data/exercises/y1-golden-rollout-wave-1.json',
   'references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json',
   PATHS.proof,
   PATHS.deltaProof,
   PATHS.sourceManifest,
+  PATHS.prerequisiteVisualReview,
+  PATHS.renderedRenewal,
+  PATHS.packet,
+  PATHS.bundleUrls,
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-evidence.json',
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-decision.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md',
   'reports/url-index.md',
   'reports/github-agent-index-platform.json',
   'reports/github-agent-index-platform.md',
@@ -202,9 +231,28 @@ const EVIDENCE_TAIL_EXACT = [
   'reports/internal-dashboard/index.html',
 ];
 
-const EVIDENCE_TAIL_PREFIXES = [
-  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/',
-  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-',
+const EVIDENCE_TAIL_EXACT = [
+  PATHS.result,
+  PATHS.proof,
+  PATHS.deltaProof,
+  PATHS.packet,
+  PATHS.bundleUrls,
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-evidence.json',
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-decision.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md',
+  'reports/url-index.md',
+  'reports/github-agent-index-platform.json',
+  'reports/github-agent-index-platform.md',
+  'reports/github-agent-index-lessen.json',
+  'reports/github-agent-index-lessen.md',
+  'reports/internal-dashboard/dashboard-data.json',
+  'reports/internal-dashboard/index.html',
 ];
 
 class CheckError extends Error {}
@@ -436,7 +484,10 @@ function validateSourceManifest(
   check(manifest.current_evidence?.binding_model === 'historical_provenance_separate_from_current_lineage', 'source manifest binding model mismatch');
   check(!SOURCE_PROVENANCE_SHAS.includes(manifest.current_evidence.platform_base_sha), 'source provenance SHA cannot be the current platform base');
   check(Array.isArray(manifest.artifacts), 'source manifest artifacts must be an array');
-  sameSet(manifest.artifacts.map((item) => item.id), SOURCE_MANIFEST_ARTIFACTS.map((item) => item.id), 'source manifest artifact ids');
+  const artifactIds = manifest.artifacts.map((item) => item.id);
+  check(manifest.artifacts.length === SOURCE_MANIFEST_ARTIFACTS.length, 'source manifest artifact count mismatch');
+  check(new Set(artifactIds).size === artifactIds.length, 'source manifest artifact ids must be unique');
+  sameSet(artifactIds, SOURCE_MANIFEST_ARTIFACTS.map((item) => item.id), 'source manifest artifact ids');
 
   for (const expected of SOURCE_MANIFEST_ARTIFACTS) {
     const item = manifest.artifacts.find((candidate) => candidate.id === expected.id);
@@ -550,10 +601,22 @@ function expectedPagePath(source, surfaceId, lessonRoot = LESSON_ROOT) {
   return path.join(paragraphDirectory(source, lessonRoot), `${source.parNr} ${source.parName} \u2013 ${suffix}.html`);
 }
 
-function assertHeldAuthorities(authority, label) {
-  for (const key of HELD_AUTHORITY_KEYS) {
+function assertExactFalseAuthorities(authority, expectedKeys, label) {
+  check(authority && typeof authority === 'object' && !Array.isArray(authority), `${label} must be an object`);
+  sameSet(Object.keys(authority), expectedKeys, `${label} keys`);
+  for (const key of expectedKeys) {
     check(authority && authority[key] === false, `${label}.${key} must be false`);
   }
+}
+
+function validateChangedPathPolicy(policy) {
+  check(policy?.mode === 'renewal_payload_only', 'wave changed-path policy mode mismatch');
+  check(policy?.prerequisite_base === PREREQUISITE_BASE_PLATFORM_SHA, 'wave prerequisite base mismatch');
+  sameSet(policy.trigger_exact || [], PREREQUISITE_MUTATION_PATHS, 'wave trigger exact paths');
+  sameSet(policy.allowed_exact || [], PREREQUISITE_MUTATION_PATHS, 'wave allowed exact paths');
+  sameSet(policy.trigger_prefixes || [], [], 'wave trigger prefixes');
+  sameSet(policy.allowed_prefixes || [], [], 'wave allowed prefixes');
+  return policy;
 }
 
 function validateSurfaceContract(surface, source, generated) {
@@ -617,12 +680,9 @@ function validateWaveAndSurfaces(options = {}) {
   check(wave.scale_gate_1?.decision === 'PASS_CONTROLLED_ROLLOUT', 'wave must record PASS_CONTROLLED_ROLLOUT');
   check(wave.scale_gate_1?.controlled_wave_eligibility_authorized === true, 'controlled wave eligibility must be true');
   check(wave.scale_gate_1?.automatic_repository_wide_migration_authorized === false, 'automatic repository-wide migration must remain held');
-  assertHeldAuthorities(wave.authority, 'wave.authority');
-  check(wave.authority?.generated_lesson_output_changed === false, 'wave must record no lesson output changes');
-  check(wave.authority?.source_data_changed === false, 'wave must record no source-data changes');
-  check(wave.authority?.engine_behavior_changed === false, 'wave must record no engine changes');
+  assertExactFalseAuthorities(wave.authority, WAVE_AUTHORITY_KEYS, 'wave.authority');
   check(wave.owner_decision?.platform_pr === 148 && wave.owner_decision?.comment_id === 4807419611, 'wave owner decision binding mismatch');
-  check(wave.changed_path_policy?.prerequisite_base === PREREQUISITE_BASE_PLATFORM_SHA, 'wave prerequisite base mismatch');
+  validateChangedPathPolicy(wave.changed_path_policy);
 
   const firstThree = (manifest.surfaces || []).filter((item) => item.scope === 'first_three_product_proof');
   sameSet(firstThree.map((item) => item.id), EXPECTED_SURFACES, 'manifest first-three surfaces');
@@ -1134,8 +1194,7 @@ function validateDeltaProof(recorded, recomputed) {
 
 function evidenceTailPathAllowed(relativePath) {
   const normalized = normalizePath(relativePath);
-  return EVIDENCE_TAIL_EXACT.includes(normalized)
-    || EVIDENCE_TAIL_PREFIXES.some((prefix) => normalized.startsWith(prefix));
+  return EVIDENCE_TAIL_EXACT.includes(normalized);
 }
 
 function validateEvidenceTail(payloadRef, exactHeadRef, repoRoot = ROOT) {
@@ -1281,7 +1340,7 @@ function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
   check(packet.human_decision_required === true, 'review packet must require human decision');
   check(packet.auto_merge_allowed_after_ci === false, 'review packet must prohibit auto merge');
   check(packet.route === 'READY_FOR_HUMAN_REVIEW', 'review packet route must be READY_FOR_HUMAN_REVIEW');
-  assertHeldAuthorities(packet.authority_claims, 'packet.authority_claims');
+  assertExactFalseAuthorities(packet.authority_claims, WAVE_AUTHORITY_KEYS, 'packet.authority_claims');
   if (!allowUnbound) {
     check(Number.isInteger(packet.pr_number) && packet.pr_number > 0, 'review packet pr_number must be bound');
     check(packet.pr_url === `https://github.com/meijer1973/4veco-platform/pull/${packet.pr_number}`, 'review packet pr_url must match pr_number');
@@ -1319,11 +1378,39 @@ function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
   check(proof.rendered_evidence?.changed_or_missing_input_count === deltaProof.summary.changed_or_missing_input_count, 'wave proof raw changed count must match delta proof');
   check(proof.rendered_evidence?.verified_rendered_renewal_count === deltaProof.summary.verified_rendered_renewal_count, 'wave proof renewal count must match delta proof');
   check(proof.rendered_evidence?.unresolved_changed_or_missing_input_count === deltaProof.summary.unresolved_changed_or_missing_input_count, 'wave proof unresolved count must match delta proof');
-  assertHeldAuthorities(proof.authority, 'proof.authority');
+  assertExactFalseAuthorities(proof.authority, WAVE_AUTHORITY_KEYS, 'proof.authority');
+}
+
+function validateResultObject(result, packet, proof, deltaProof) {
+  check(result.schema_version === 2 && result.sprint_id === WAVE_ID, 'result identity mismatch');
+  validateSourceCommitChain(result.source_provenance);
+  check(JSON.stringify(result.source_provenance) === JSON.stringify(deltaProof.source_provenance), 'result source provenance mismatch');
+  check(JSON.stringify(result.current_evidence) === JSON.stringify(deltaProof.current_evidence), 'result current evidence mismatch');
+  check(JSON.stringify(result.current_evidence) === JSON.stringify(packet.current_evidence), 'result/packet current evidence mismatch');
+  check(JSON.stringify(result.current_evidence) === JSON.stringify(proof.current_evidence), 'result/proof current evidence mismatch');
+  check(result.bindings?.delta_proof === PATHS.deltaProof, 'result delta-proof binding mismatch');
+  check(result.bindings?.wave_proof === PATHS.proof, 'result wave-proof binding mismatch');
+  check(result.bindings?.review_packet === PATHS.packet, 'result review-packet binding mismatch');
+  check(result.rendered_evidence?.changed_or_missing_input_count === 1, 'result changed dependency count mismatch');
+  sameSet(result.rendered_evidence?.changed_or_missing_paths || [], deltaProof.summary?.changed_or_missing_paths || [], 'result changed dependency paths');
+  check(result.rendered_evidence?.verified_rendered_renewal_count === 1, 'result verified renewal count mismatch');
+  check(result.rendered_evidence?.unresolved_changed_or_missing_input_count === 0, 'result unresolved rendered input count mismatch');
+  check(Array.isArray(result.rendered_evidence?.unresolved_changed_or_missing_paths) && result.rendered_evidence.unresolved_changed_or_missing_paths.length === 0, 'result unresolved rendered paths must be empty');
+  check(result.rendered_evidence?.first_viewport_only === true && result.rendered_evidence?.below_fold_exercises_attested === false, 'result first-viewport qualification mismatch');
+  check(result.rendered_evidence.changed_or_missing_input_count === proof.rendered_evidence?.changed_or_missing_input_count, 'result/proof changed count mismatch');
+  check(result.rendered_evidence.verified_rendered_renewal_count === proof.rendered_evidence?.verified_rendered_renewal_count, 'result/proof renewal count mismatch');
+  check(result.rendered_evidence.unresolved_changed_or_missing_input_count === proof.rendered_evidence?.unresolved_changed_or_missing_input_count, 'result/proof unresolved count mismatch');
+  check(result.rendered_evidence.first_viewport_only === packet.evidence_scope?.first_viewport_only, 'result/packet viewport scope mismatch');
+  check(result.rendered_evidence.below_fold_exercises_attested === packet.evidence_scope?.below_fold_exercises_attested, 'result/packet below-fold scope mismatch');
+  assertExactFalseAuthorities(result.authority, WAVE_AUTHORITY_KEYS, 'result.authority');
+  return true;
 }
 
 function validatePacketAndProof(allowUnbound, deltaProof) {
-  validatePacketObjects(readJson(PATHS.packet), readJson(PATHS.proof), allowUnbound, deltaProof);
+  const packet = readJson(PATHS.packet);
+  const proof = readJson(PATHS.proof);
+  validatePacketObjects(packet, proof, allowUnbound, deltaProof);
+  validateResultObject(readJson(PATHS.result), packet, proof, deltaProof);
 }
 
 function parseArgs(argv) {
@@ -1462,12 +1549,14 @@ module.exports = {
   PARAGRAPHS,
   PATHS,
   PREREQUISITE_BASE_PLATFORM_SHA,
+  PREREQUISITE_MUTATION_PATHS,
   SELECTOR_PLATFORM_SHA,
   SOURCE_MANIFEST_ARTIFACTS,
   SOURCE_RENEWAL_START_PLATFORM_SHA,
   SOURCE_REVIEWED_PAYLOAD_SHA,
   SOURCE_SEALED_EVIDENCE_SHA,
   WAVE_ID,
+  WAVE_AUTHORITY_KEYS,
   attestEqualPaths,
   buildDeltaProof,
   containsLegacyAsset,
@@ -1496,6 +1585,7 @@ module.exports = {
   validateExactHeadDelta,
   validateNavigationTexts,
   validatePacketObjects,
+  validateResultObject,
   validateRenderedRenewal,
   validateRoadmapTexts,
   validateSelectorProvenance,
@@ -1507,5 +1597,6 @@ module.exports = {
   validateSurfaceState,
   validateWiringTexts,
   validateWaveAndSurfaces,
+  validateChangedPathPolicy,
   routeTarget,
 };

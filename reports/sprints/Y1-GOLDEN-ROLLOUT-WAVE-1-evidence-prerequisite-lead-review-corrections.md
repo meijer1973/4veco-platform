@@ -1,0 +1,50 @@
+# Y1 Golden Evidence Prerequisite Lead Review — Round 1 Corrections
+
+Recorded: 2026-08-27
+
+## Correction status
+
+All four round-1 findings are addressed in the corrected substantive payload
+that contains this record. Terminal P-bound proof, packet, and result records
+remain deliberately deferred until after this payload is frozen.
+
+## Corrections
+
+1. `Y1-PREREQ-R1-PATHS` — closed.
+   - Replaced inherited initial-scope entries with the plan's exact 38-path
+     mutation inventory.
+   - Removed all trigger and allowed prefixes.
+   - Replaced the P..H wildcard prefixes with an exact evidence-tail inventory.
+   - Added negative coverage for workflow, package, URL-emitter, roadmap,
+     root-map, old-plan, and arbitrary same-prefix paths.
+2. `Y1-PREREQ-R1-AUTHORITY` — closed.
+   - Added an exact 16-key wave/proof/packet/result authority inventory.
+   - Every value must be false, including
+     `protected_reference_data_changed`.
+   - Added missing, added, renamed, protected-reference, and true-value
+     regressions across the wave, proof, packet, and result surfaces.
+3. `Y1-PREREQ-R1-RESULT` — closed.
+   - Added a terminal result validator.
+   - It cross-binds source provenance and current base/payload/lesson evidence
+     to the delta proof, proof, and packet.
+   - It requires exactly one changed dependency, one verified renewal, zero
+     unresolved inputs, first-viewport-only scope, no below-fold attestation,
+     and exact authority holds.
+   - Added stale-SHA, path/count, unresolved, viewport, and authority negatives.
+4. `Y1-PREREQ-R1-MANIFEST` — closed.
+   - The source manifest now requires exact array length and unique artifact IDs
+     before per-record validation.
+   - Added duplicate-with-extra, duplicate-within-count, and extra-ID tests.
+
+## Verification before payload freeze
+
+- JavaScript syntax checks pass for checker and tests.
+- The wave JSON parses and its exact path policy validates.
+- The focused suite passes every substantive unit and negative regression; the
+  single full-mode test remains expected to fail until the terminal records are
+  rebound to the newly frozen payload.
+- Imported screenshots were not modified, so the independent visual review
+  remains applicable.
+
+Round 2 must inspect the exact corrected payload after its SHA is frozen and
+must not treat this correction record as merge authorization.
