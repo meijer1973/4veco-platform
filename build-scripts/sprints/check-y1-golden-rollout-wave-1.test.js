@@ -676,7 +676,9 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     const repo = makeRepo();
     roots.push(repo.root);
     const payload = commit(repo.root, { 'reports/sprints/Y1-payload.md': 'payload\n' }, 'payload');
-    const head = commit(repo.root, { 'reports/sprints/Y1-review.md': 'review\n' }, 'head');
+    const head = commit(repo.root, {
+      'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md': 'review\n',
+    }, 'head');
     const current = { platform_base_sha: repo.base, reviewed_payload_sha: payload };
     expect(checker.validateCurrentLineage(current, head, repo.root, {
       expectedBase: repo.base,

@@ -44,8 +44,8 @@
       "source_blob_oid": "fcf39fbe9c6b21da6ad8cde228de157327442c7c",
       "source_sha256": "b74a650a28cca8017889ee70a6babbe29d9109702fc2bcf61fac84ab9d62fe8d",
       "destination_path": "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
-      "destination_blob_oid": "3022cf2a6dc96617defc883c949df13e06733354",
-      "destination_sha256": "0f6c17e3ed711cda265a2eba7f2ebc67cc10bca5d3dd91b050405a32ab53ec2b"
+      "destination_blob_oid": "be48269d651d9aee57ce0b6b8abc42257ba7ad02",
+      "destination_sha256": "d6ad1c46aed015f00c005bd883118aa734efc791c2608ca814c0ef027e3ab724"
     },
     {
       "id": "y1_changed_path_policy",
