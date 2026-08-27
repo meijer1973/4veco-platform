@@ -1309,8 +1309,6 @@ function validateNavigationTexts(texts) {
   check(texts.urlIndex?.includes(PATHS.bundleUrls), 'URL index missing Y1 review bundle');
   check(texts.urlIndex?.includes(PATHS.proof), 'URL index missing Y1 proof');
   check(texts.urlIndex?.includes(PATHS.deltaProof), 'URL index missing Y1 delta proof');
-  check(texts.urlIndex?.includes(PATHS.sourceManifest), 'URL index missing Y1 source manifest');
-  check(texts.urlIndex?.includes(PATHS.prerequisiteVisualReview), 'URL index missing Y1 prerequisite visual review');
   check(texts.bundleUrls?.includes(PATHS.packet), 'Y1 review bundle missing packet');
   check(texts.bundleUrls?.includes(PATHS.sourceManifest), 'Y1 review bundle missing source manifest');
   check(texts.bundleUrls?.includes(PATHS.prerequisiteVisualReview), 'Y1 review bundle missing prerequisite visual review');

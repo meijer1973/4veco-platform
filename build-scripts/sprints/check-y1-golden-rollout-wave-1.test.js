@@ -635,6 +635,19 @@ describe('Y1 Golden rollout wave evidence and governance contracts', () => {
     })).toThrow(/controlled-rollout state/);
   });
 
+  test('accepts canonical URL-index indirection through the complete Y1 gate bundle', () => {
+    const common = `${checker.WAVE_ID} check-y1-golden-rollout-wave-1.js`;
+    expect(() => checker.validateNavigationTexts({
+      researchMap: common,
+      referenceMap: common,
+      githubEntry: common,
+      urlIndex: `${checker.PATHS.bundleUrls}\n${checker.PATHS.proof}\n${checker.PATHS.deltaProof}`,
+      bundleUrls: `${checker.PATHS.packet}\n${checker.PATHS.sourceManifest}\n${checker.PATHS.prerequisiteVisualReview}`,
+      platformAgentIndex: checker.PATHS.packet,
+      dashboard: `${checker.WAVE_ID} PASS_CONTROLLED_ROLLOUT`,
+    })).not.toThrow();
+  });
+
   test('rejects null PR binding and L3 classification', () => {
     const { packet, proof } = basePacketAndProof();
     const delta = baseDeltaRecord();

@@ -36,6 +36,17 @@ remain deliberately deferred until after this payload is frozen.
      before per-record validation.
    - Added duplicate-with-extra, duplicate-within-count, and extra-ID tests.
 
+## Pre-terminal generator alignment
+
+The first round-2 lifecycle check showed that the canonical URL-index generator
+links to the Y1 gate bundle, while the checker also demanded direct URL-index
+entries for the source manifest and visual review. The gate bundle already
+contains and validates those direct artifact URLs. The checker now accepts that
+canonical indirection and retains direct manifest/visual-review requirements in
+the bundle itself. A positive regression covers the generated topology. Because
+this changed the checker after the first candidate payload, that candidate was
+invalidated and round 2 must review the replacement substantive payload.
+
 ## Verification before payload freeze
 
 - JavaScript syntax checks pass for checker and tests.
