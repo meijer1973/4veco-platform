@@ -203,7 +203,7 @@ function baseDeltaRecord() {
 
 function baseResult(delta = baseDeltaRecord()) {
   return {
-    schema_version: 2,
+    schema_version: 1,
     sprint_id: checker.WAVE_ID,
     source_provenance: sourceProvenance(),
     current_evidence: currentEvidence(),

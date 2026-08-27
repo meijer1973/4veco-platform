@@ -1382,7 +1382,7 @@ function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
 }
 
 function validateResultObject(result, packet, proof, deltaProof) {
-  check(result.schema_version === 2 && result.sprint_id === WAVE_ID, 'result identity mismatch');
+  check(result.schema_version === 1 && result.sprint_id === WAVE_ID, 'result identity mismatch');
   validateSourceCommitChain(result.source_provenance);
   check(JSON.stringify(result.source_provenance) === JSON.stringify(deltaProof.source_provenance), 'result source provenance mismatch');
   check(JSON.stringify(result.current_evidence) === JSON.stringify(deltaProof.current_evidence), 'result current evidence mismatch');
