@@ -1,0 +1,137 @@
+{
+  "schema_version": 2,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "capture_id": "112-normal-practice-desktop-light-opgaven",
+  "status": "exact_rendered_equivalence",
+  "captured_at": "2026-08-25T14:44:53.780Z",
+  "source_provenance": {
+    "renewal_start_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+    "reviewed_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+    "sealed_evidence_sha": "aa06ada217b4ec8ac9f042f08100513381b30366"
+  },
+  "current_evidence": {
+    "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "binding_model": "historical_provenance_separate_from_current_lineage"
+  },
+  "scope_qualification": {
+    "first_viewport_only": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "theme": "light",
+    "device_scale_factor": 1,
+    "below_fold_exercises_attested": false
+  },
+  "starting_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+  "lesson": {
+    "historical_capture_sha": "071a465a03e287bc5768d88aabbec3e63b15ee09",
+    "prior_y1_snapshot_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+    "renewed_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "page_path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html",
+    "historical_blob": "8fe1efd325273c5beb543931c9ac255af3da4b9c",
+    "prior_y1_blob": "8fe1efd325273c5beb543931c9ac255af3da4b9c",
+    "renewed_blob": "0a0148b381eac432da4899b17f2ae05f681582af"
+  },
+  "canonical_process": {
+    "runner_path": "build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js",
+    "runner_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+    "runner_blob": "ee749d3edefa4b73b274ce38a62b16286f2816e8",
+    "selector_path": "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+    "selector_blob": "e411eff9f7b2ac4d4b3ceec5a64775a508a57775",
+    "selection": "exact_capture_id_only",
+    "capture_count": 1,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "theme": "light",
+    "device_scale_factor": 1,
+    "capture_beyond_viewport": false,
+    "hide_scrollbars": true,
+    "browser": {
+      "product": "Edg/151.0.4129.101",
+      "protocol_version": "1.3",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0",
+      "v8_version": "15.1.23.9",
+      "webkit_version": "537.36 (@cc1d9f4080fd9140611a9600b8d1615db310105d)"
+    },
+    "raw_manifest_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json",
+    "raw_manifest_sha256": "b1059a580a6d9895a78364d5addbaf1cbcef19a7bee2d66f2556f1a3e446a0e0",
+    "comparison_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
+    "comparison_sha256": "b3594a34e9cc433803e2b512f9e8d1a242746fcf382e5bb10335c25406499d55"
+  },
+  "historical_capture": {
+    "path": "reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-screenshots/112-normal-practice-desktop-light-opgaven.png",
+    "sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f",
+    "bytes": 61713,
+    "width": 1280,
+    "height": 900
+  },
+  "renewed_capture": {
+    "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
+    "sha256": "5a2692481110d68e2d23992373c3b06f0a198518265dba754a4f022125ea515f",
+    "bytes": 61713,
+    "width": 1280,
+    "height": 900
+  },
+  "pixel_comparison": {
+    "method": "decoded_rgba_absolute_difference",
+    "byte_equal": true,
+    "changed_pixels": 0,
+    "total_pixels": 1152000,
+    "changed_pixel_ratio": 0,
+    "maximum_channel_delta": 0,
+    "mean_absolute_channel_delta": 0,
+    "diff_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
+    "diff_sha256": "b0e8d470d52693cfce5a2a9eb42d1fcde18eba3a468781750c1d9b60efde2be0"
+  },
+  "inspection": {
+    "historical_body_text_excerpt_sha256": "971128fa7dff9be02a72c59cca620d465b7e4fbac05a93f3961e3a88d3b2157c",
+    "renewed_body_text_excerpt_sha256": "971128fa7dff9be02a72c59cca620d465b7e4fbac05a93f3961e3a88d3b2157c",
+    "excerpt_equal": true,
+    "horizontal_overflow": false,
+    "forbidden_authority_terms": [],
+    "target_completion_terms": []
+  },
+  "human_visual_review": {
+    "status": "PASS",
+    "reviewer": "/root/y1_visual_review",
+    "inspected_at": "2026-08-25T14:05:19.802Z",
+    "review_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md",
+    "review_sha256": "11d225a0e10567cf3eb1c021ef8650b556921604bc98b19a137b0d41a5ed9a74",
+    "visible_regression": false,
+    "flags": [],
+    "verdict": "Historical and renewed 1280x900 light-mode captures are visually identical; text is legible and no clipping, overlap, missing visible content, or horizontal overflow is present within the recorded viewport. This does not visually attest newly added exercises below the fold."
+  },
+  "current_visual_review": {
+    "status": "PASS",
+    "reviewer": "/root/y1_prerequisite_visual_review",
+    "inspected_at": "2026-08-27",
+    "review_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
+    "review_sha256": "6db71a502e83079aa07123c92dafe8964aa02cd927bc5823c94f56e113bc71b8",
+    "visible_regression": false,
+    "flags": [],
+    "verdict": "Exact byte and zero-pixel equivalence in the recorded 1280x900 light-mode first viewport; below-the-fold exercises are not visually attested."
+  },
+  "authority": {
+    "lesson_change_authorized": false,
+    "merge_authorized": false,
+    "engine_change_authorized": false,
+    "source_data_change_authorized": false,
+    "protected_reference_change_authorized": false,
+    "rollout_or_adoption_authorized": false,
+    "product_route_adoption_authorized": false,
+    "student_product_use_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "adaptive_routing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false
+  }
+}
