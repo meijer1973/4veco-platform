@@ -1,9 +1,22 @@
 {
   "schema_version": 2,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "generated": "2026-08-23T00:00:00.000Z",
-  "status": "implementation_complete_pending_exact_head_proof_and_human_review",
+  "generated": "2026-08-27T00:00:00.000Z",
+  "status": "main_based_evidence_prerequisite_payload_bound_pending_exact_head_ci_and_human_review",
   "lead_recommendation": "READY_FOR_HUMAN_REVIEW",
+  "source_provenance": {
+    "renewal_start_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+    "reviewed_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+    "sealed_evidence_sha": "aa06ada217b4ec8ac9f042f08100513381b30366"
+  },
+  "current_evidence": {
+    "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+    "reviewed_payload_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "binding_model": "historical_provenance_separate_from_current_lineage"
+  },
   "paragraphs": ["1.1.1", "1.1.2", "1.1.3"],
   "surface_ids": [
     "1.1.1-korte-check",
@@ -27,20 +40,28 @@
     "exit_tickets_target_readiness_evidence_only": true,
     "completion_language_held": true,
     "route_inventory_links_resolve": true,
-    "rendered_evidence_reuse_requires_delta_proof": true
+    "rendered_evidence_reuse_requires_delta_proof": true,
+    "changed_capture_input_requires_verified_rendered_renewal": true
   },
   "rendered_evidence": {
     "source_proof": "reports/json/scale-proof-3p-readiness-product-path-proof-1-proof.json",
     "delta_proof": "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
-    "screenshots_recaptured": false,
-    "reuse_status": "commit_bound_reuse_attested",
-    "reviewed_platform_payload_sha": "12a95a9a6ee2fecc2e4c82f6ba2daa03481691bc",
-    "lesson_snapshot_sha": "96c0970f45739a8758cf7e932c6bce77806cd68d",
+    "rendered_renewal": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+    "screenshots_recaptured": true,
+    "reuse_status": "verified_exact_rendered_equivalence",
+    "reviewed_platform_payload_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "platform_equal_path_count": 64,
     "lesson_equal_path_count": 78,
     "lesson_existence_only_path_count": 55,
     "historical_artifact_count": 50,
-    "changed_or_missing_input_count": 0,
+    "changed_or_missing_input_count": 1,
+    "verified_rendered_renewal_count": 1,
+    "unresolved_changed_or_missing_input_count": 0,
+    "replacement_capture_count": 1,
+    "exact_rendered_equivalence_count": 1,
+    "first_viewport_only": true,
+    "below_fold_exercises_attested": false,
     "screenshots_reusable": true,
     "recapture_required": false
   },
@@ -58,7 +79,9 @@
     "not_year1_complete": true,
     "not_chapter_12_ready": true,
     "not_actual_rollout_or_adoption": true,
-    "not_automatic_repository_wide_migration": true
+    "not_automatic_repository_wide_migration": true,
+    "not_platform_pr_208_merge_authorization": true,
+    "capture_equivalence_scope_limited_to_recorded_1280x900_viewport": true
   },
   "authority": {
     "actual_rollout_or_adoption_authorized": false,
@@ -72,6 +95,10 @@
     "mastery_or_sequencing_authorized": false,
     "adaptive_routing_authorized": false,
     "summative_use_authorized": false,
-    "pv_authorized": false
+    "pv_authorized": false,
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "engine_behavior_changed": false,
+    "protected_reference_data_changed": false
   }
 }

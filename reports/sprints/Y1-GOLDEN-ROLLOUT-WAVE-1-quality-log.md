@@ -1,23 +1,20 @@
 # Y1-GOLDEN-ROLLOUT-WAVE-1 Quality Log
 
-Generated: 2026-08-23
+Generated: 2026-08-27
 
 | Finding | Classification | Disposition | Proof |
 |---|---|---|---|
-| Old guard inspected worktree cleanliness instead of committed PR changes. | core_spec_failure | replaced | Exact event base/head `git diff --name-status -M` checker and real-Git negative tests. |
-| Old roadmap described completed prerequisites as future work. | core_spec_failure | corrected | Golden roadmap v1.3 and reference-team roadmap v3.57. |
-| Old packet was null-bound and classified L3 instead of L4. | core_spec_failure | corrected | Packet is L4/high-authority and cross-binds replacement PR #214, its URL, and the reviewed rendered payload. |
-| Old bundle omitted maps, indexes, URL index, and dashboard closure. | core_spec_failure | corrected | Root maps and generated indexes, URL index, and dashboard are refreshed in the deterministic evidence tail. |
-| No dedicated negative tests existed. | core_spec_failure | corrected | Dedicated 26-test Jest suite covers state, route, authority, scope, event, roadmap, wiring, packet, map, and Git failures. |
-| Full checker would enforce the renewal evidence tail on unrelated future CI. | core_spec_failure | corrected | Full-mode auto-scope regression proves unrelated future work exits cleanly; renewal scope still runs the full contract. |
-| Automatic repository-wide migration hold was not shared across authority surfaces. | core_spec_failure | corrected | Shared held-authority key plus wave/packet/proof/result recording and a negative drift test. |
-| Active reference roadmap still held accepted target-readiness evidence and named closed review work as next. | core_spec_failure | corrected | Current authority wording plus semantic stale-state rejection. |
-| Four linked presentation destinations changed. | quality_improvement_available | classified | They are navigation destinations, not rendered capture inputs. Delta proof requires existence at every commit and records zero rendered-input drift. |
-| Actual rollout/adoption and downstream product authority remain held. | scale_blocker | carried | Separate source/generated/rendered wave evidence and owner authorization are required. |
-| Local authority-hygiene hashes expose a pre-existing LF/CRLF portability mismatch. | minor_carry_flag | remote_proof_required | Exact-head remote `validate-platform` must pass; no unrelated fixture rewrite is included. |
-| Full-mode synthetic-Git regression hid its checker error behind a child-process status. | quality_improvement_available | corrected | Direct `checker.run()` orchestration keeps real Git history and exposes exact checker failures. |
-| Fresh Windows CI could not query a historical lesson path containing an en dash through Git argv. | core_spec_failure | corrected | Git batch stdin object reads, strict framing/error handling, empty/missing distinction, six protocol edge cases, and lead-review `OK_TO_COMMIT`. |
-| Exact-head PR checkout did not contain GitHub's synthetic merge object. | core_spec_failure | corrected | PR event validation now checks the supplied full SHA and compares it directly with the resolved payload head; the focused regression accepts an unfetched synthetic SHA and still rejects payload/synthetic equality. |
-| Shared infrastructure paths activated the fixed renewal allowlist for unrelated future work. | core_spec_failure | corrected | Shared paths remain allowed but are no longer triggers; actual-policy real-Git tests cover all seven shared-path subsets plus unrelated work and preserve Y1 mixed-scope rejection. |
+| Platform `main` Y1 evidence targeted an older Lesson snapshot. | blocking evidence freshness | corrected in prerequisite | P-bound delta targets Lesson `f09fd6e...`. |
+| PR #208 evidence commits cannot be the main-based payload ancestry. | core governance requirement | corrected | Separate source-provenance and current-lineage objects plus negative tests. |
+| The inherited mutation allowlist admitted workflow/package/roadmap/root-map files and an arbitrary sprint prefix. | fail-open blocker | corrected | Exact 38-path policy, exact P..H tail, and excluded-path regressions. |
+| Shared URL/index/dashboard closure files also activated the restrictive Y1 scope for unrelated future work. | future-CI blocker | corrected | Separate exact inventories: 31 Y1 triggers, 38 allowed paths, seven allowed non-triggers; per-file and exact PR #215-shaped event regressions. |
+| Wave/proof/packet authority validation omitted exact-key enforcement and protected-reference drift. | fail-open blocker | corrected | Exact 16-key all-false inventories across wave/proof/packet/result. |
+| The result record could remain stale or unbound. | fail-open blocker | corrected | Result cross-binding validator and stale SHA/count/path/scope/authority tests. |
+| Duplicate source-manifest IDs could hide an unvalidated artifact. | fail-open blocker | corrected | Exact count, unique IDs, and duplicate/extra negative tests. |
+| §1.1.2 `opgaven.html` is the sole changed rendered dependency. | rendered-input blocker | corrected | One verified renewal and zero unresolved inputs. |
+| Screenshot evidence covers only the first 1280×900 viewport. | non-blocking qualification | retained | Proof, packet, result, renewal, and visual review all deny below-fold attestation. |
+| Historical and replacement screenshot bytes/pixels differ. | stop condition | not observed | Byte-identical SHA `5a269248...`; 0/1,152,000 pixel delta. |
+| Downstream product authority remains held. | scale blocker | carried | All authority fields remain false; separate owner gates are required. |
 
-No missing core requirement may be carried under `PASS WITH FLAGS`.
+No missing core prerequisite requirement may be carried under a passing lead
+or readiness verdict.
