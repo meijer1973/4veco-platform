@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "generated": "2026-08-27T12:47:33.931Z",
+  "generated": "2026-08-28T13:44:02.679Z",
   "purpose": "commit-bound rendered proof reuse attestation",
   "source_provenance": {
     "renewal_start_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
@@ -11,7 +11,7 @@
   },
   "current_evidence": {
     "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
-    "reviewed_payload_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+    "reviewed_payload_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c",
     "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
     "binding_model": "historical_provenance_separate_from_current_lineage"
@@ -20,7 +20,7 @@
     "platform": {
       "capture_payload": "5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7",
       "old_pr_ci": "571d435a172240524ed96394a41682ef003bfcad",
-      "renewal_payload": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41"
+      "renewal_payload": "34a398374f3eecc3276cdd72a72636e4dda26e3c"
     },
     "lesson": {
       "capture_payload": "071a465a03e287bc5768d88aabbec3e63b15ee09",

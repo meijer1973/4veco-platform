@@ -8,8 +8,13 @@ Generated: 2026-08-27
   without importing PR #208 product commits.
 - Separates historical source provenance
   (`e2deb65... -> 8f612ac... -> 4b49d82... -> aa06ada...`) from current
-  lineage (`9c9d3cc7... -> a86c617e... -> H`).
-- Uses exact initial and post-payload path inventories with no wildcard prefix.
+  lineage (`9c9d3cc7... -> 34a39837... -> H`).
+- Uses a 31-path Y1-specific trigger inventory, the broader exact 38-path
+  allow inventory, and an exact post-payload path inventory with no wildcard
+  prefix.
+- Keeps the URL index, four agent indexes, and two dashboard files allowed as
+  deterministic closure outputs without letting them activate the restrictive
+  Y1 scope during unrelated future work.
 - Enforces exact authority-key inventories across renewal, wave, proof, packet,
   and result records.
 - Cross-binds the terminal result to the source/current evidence tuple, proof,

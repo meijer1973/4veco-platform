@@ -4,7 +4,7 @@
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "pr_number": 216,
   "pr_url": "https://github.com/meijer1973/4veco-platform/pull/216",
-  "reviewed_payload_head_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+  "reviewed_payload_head_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "product_authority",
@@ -20,7 +20,7 @@
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "Round 2 found no substantive blocker. The bounded prerequisite carries one reviewed renewal onto current main with separate historical provenance and current lineage. Exact-head CI and human merge authorization remain required."
+    "rationale": "The exact correction payload review found no substantive blocker. The bounded prerequisite carries one reviewed renewal onto current main, separates shared generated closure paths from Y1-specific triggers, and preserves historical provenance/current lineage. Exact-head CI and human merge authorization remain required."
   },
   "product_end_state_refs": [
     "../4veco-lessen/specifications/product-end-state.md",
@@ -36,7 +36,8 @@
     "plan": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md",
     "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
     "current_visual_review": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
-    "round2_review": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md"
+    "round2_review": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
+    "trigger_correction_review": "https://github.com/meijer1973/4veco-platform/pull/216#issuecomment-5453361025"
   },
   "non_negotiable_requirements": [
     "Exactly six first-three split Golden surfaces.",
@@ -61,7 +62,7 @@
   },
   "current_evidence": {
     "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
-    "reviewed_payload_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+    "reviewed_payload_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c",
     "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
     "binding_model": "historical_provenance_separate_from_current_lineage"
@@ -96,6 +97,7 @@
     { "requirement": "Six-surface state and route contract", "status": "met" },
     { "requirement": "Committed changed-path guard", "status": "met" },
     { "requirement": "Workflow, package, roadmap, root-map, and wildcard sprint paths are excluded", "status": "met" },
+    { "requirement": "Shared generated closure paths remain allowed without activating the Y1 renewal scope", "status": "met" },
     { "requirement": "Dedicated negative regression suite", "status": "met" },
     { "requirement": "Commit-bound rendered delta proof", "status": "met" },
     { "requirement": "Coherent active roadmaps", "status": "met" },
@@ -123,9 +125,9 @@
       "status": "passed_local_payload_and_proposed_evidence_tail"
     },
     "lead_review": {
-      "path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
+      "path": "https://github.com/meijer1973/4veco-platform/pull/216#issuecomment-5453361025",
       "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41"
+      "reviewed_commit_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c"
     },
     "ci": {
       "required_contexts": ["validate-platform"],

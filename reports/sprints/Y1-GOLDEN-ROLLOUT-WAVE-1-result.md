@@ -18,7 +18,7 @@ This prerequisite closes the blocking mismatch between Platform `main` at
 `9c9d3cc7...` and Lesson `main` at `f09fd6e...` without importing PR #208
 product commits or claiming their ancestry. Historical commits `e2deb65...`,
 `8f612ac...`, `4b49d82...`, and `aa06ada...` remain source provenance only.
-The current reviewed payload is `a86c617e...`.
+The corrected current reviewed payload is `34a39837...`.
 
 The independently recomputed dependency set contains exactly one changed
 captured input: §1.1.2 `opgaven.html`. It is closed by the previously reviewed
@@ -37,10 +37,12 @@ summative, PV, or student-use authority change is included.
 - Planning review: PASS after all five plan findings were corrected.
 - Independent visual review: PASS for the first viewport only.
 - Structural lead round 1: REVISE; all four fail-closed findings corrected.
-- Structural lead round 2: PASS WITH FLAGS; only terminal CI/readiness lifecycle
-  work remains.
-- Focused checker suite: 70/70 passed with P-bound proposed evidence.
-- Full local platform suite: 104 suites and 1,501 tests passed; 6 suites and 8
+- Structural correction review: PASS WITH FLAGS at `34a39837...`; no blocking
+  implementation finding remains.
+- Focused checker suite: 80/80 passed, including all seven shared closure paths,
+  exact PR #215-shaped pull-request/main-push histories, and fail-closed mixed
+  Y1 work in both modes.
+- Full corrected local platform suite: 104 suites and 1,511 tests passed; 6 suites and 8
   tests skipped.
 - P-bound delta construction: one changed dependency, one verified renewal,
   zero unresolved inputs, 64 platform-equal inputs, 78 lesson-equal inputs, 55
@@ -58,6 +60,11 @@ policy, imported screenshot/comparison/manifest/review bytes, adapted renewal
 record, prerequisite plan/reviews, source manifest, and visual review. The
 terminal tail is restricted to the exact proof, packet, result, review, log,
 URL/index/dashboard, and readiness paths named in the prerequisite plan.
+
+The corrected path policy has 31 Y1-specific trigger paths and retains all 38
+allowed paths. The URL index, four agent indexes, and two internal-dashboard
+files are allowed closure artifacts but no longer activate the Y1 renewal
+scope by themselves.
 
 ## Data integrity notes
 
