@@ -59,7 +59,7 @@ function baseWave() {
     changed_path_policy: {
       mode: 'renewal_payload_only',
       prerequisite_base: checker.PREREQUISITE_BASE_PLATFORM_SHA,
-      trigger_exact: [...checker.PREREQUISITE_MUTATION_PATHS],
+      trigger_exact: [...checker.PREREQUISITE_TRIGGER_PATHS],
       trigger_prefixes: [],
       allowed_exact: [...checker.PREREQUISITE_MUTATION_PATHS],
       allowed_prefixes: [],
@@ -385,6 +385,12 @@ describe('Y1 Golden rollout wave state contracts', () => {
     expect(wave.changed_path_policy.allowed_prefixes).toEqual([]);
     expect(wave.changed_path_policy.trigger_prefixes).toEqual([]);
     expect(new Set(wave.changed_path_policy.allowed_exact)).toEqual(new Set(checker.PREREQUISITE_MUTATION_PATHS));
+    expect(new Set(wave.changed_path_policy.trigger_exact)).toEqual(new Set(checker.PREREQUISITE_TRIGGER_PATHS));
+    expect(checker.SHARED_GENERATED_CLOSURE_PATHS).toHaveLength(7);
+    for (const sharedPath of checker.SHARED_GENERATED_CLOSURE_PATHS) {
+      expect(wave.changed_path_policy.allowed_exact).toContain(sharedPath);
+      expect(wave.changed_path_policy.trigger_exact).not.toContain(sharedPath);
+    }
     for (const unexpected of [
       '.github/workflows/platform-ci.yml',
       'package.json',
@@ -1030,6 +1036,63 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
   });
 
+  test.each(checker.SHARED_GENERATED_CLOSURE_PATHS)(
+    'shared generated closure path %s plus unrelated work does not activate the renewal allowlist',
+    (sharedPath) => {
+      const actualPolicyPath = path.resolve(__dirname, '..', '..', 'references', 'data', 'exercises', 'y1-golden-rollout-wave-1.json');
+      const actualPolicy = JSON.parse(fs.readFileSync(actualPolicyPath, 'utf8')).changed_path_policy;
+      expect(checker.validateChangedEntries([
+        { status: 'M', path: sharedPath },
+        { status: 'M', path: '.github/workflows/authorized-bundle-integration.yml' },
+      ], actualPolicy, 'auto')).toEqual({
+        triggered: false,
+        changed_paths: [
+          '.github/workflows/authorized-bundle-integration.yml',
+          sharedPath,
+        ].sort(),
+      });
+    }
+  );
+
+  test.each(['pull_request', 'main_push'])(
+    'PR215-shaped %s history does not activate the renewal allowlist',
+    (eventMode) => {
+      const repo = makeRepo();
+      roots.push(repo.root);
+      const actualPolicyPath = path.resolve(__dirname, '..', '..', 'references', 'data', 'exercises', 'y1-golden-rollout-wave-1.json');
+      const pr215Paths = [
+        '.github/workflows/authorized-bundle-integration.yml',
+        'build-scripts/review-gates/cross-repo-bundle-workflow.test.js',
+        'build-scripts/review-gates/integrate-authorized-bundle.js',
+        'build-scripts/review-gates/integrate-authorized-bundle.test.js',
+        'build-scripts/review-gates/refresh-bundle-agent-indexes.js',
+        'build-scripts/review-gates/refresh-bundle-agent-indexes.test.js',
+        'docs/review/pr-integration-lane-policy.md',
+        'reports/github-agent-index-lessen.json',
+        'reports/github-agent-index-lessen.md',
+        'reports/github-agent-index-platform.json',
+        'reports/github-agent-index-platform.md',
+        'reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-lead-review-assignment.md',
+        'reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-lead-review-round-1.md',
+        'reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-lead-review-round-2.md',
+        'reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-plan.md',
+        'reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-planning-review.md',
+        'reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-result.md',
+      ];
+      const head = commit(repo.root, Object.fromEntries(pr215Paths.map((relativePath) => [relativePath, `${relativePath}\n`])));
+      const result = runScopeCli({
+        ...repo,
+        policyPath: actualPolicyPath,
+        head,
+        eventMode,
+        scopeMode: 'auto',
+        env: { Y1_GOLDEN_EVENT_BASE_SHA: repo.base, Y1_GOLDEN_EVENT_HEAD_SHA: head },
+      });
+      expect(result.status).toBe(0);
+      expect(result.stdout).toMatch(/"scope_attestation_triggered": false/);
+    }
+  );
+
   test('shared infrastructure and inherited roadmap paths are excluded from the prerequisite allowlist', () => {
     const actualPolicyPath = path.resolve(__dirname, '..', '..', 'references', 'data', 'exercises', 'y1-golden-rollout-wave-1.json');
     const actualPolicy = JSON.parse(fs.readFileSync(actualPolicyPath, 'utf8')).changed_path_policy;
@@ -1054,7 +1117,7 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
     }
   });
 
-  test('a Y1-specific trigger still rejects unrelated mixed work', () => {
+  test.each(['pull_request', 'main_push'])('a Y1-specific trigger still rejects unrelated mixed %s work', (eventMode) => {
     const repo = makeRepo();
     roots.push(repo.root);
     const actualPolicyPath = path.resolve(__dirname, '..', '..', 'references', 'data', 'exercises', 'y1-golden-rollout-wave-1.json');
@@ -1066,7 +1129,7 @@ describe('Y1 Golden rollout wave real Git CLI scope attestation', () => {
       ...repo,
       policyPath: actualPolicyPath,
       head,
-      eventMode: 'main_push',
+      eventMode,
       scopeMode: 'auto',
       env: { Y1_GOLDEN_EVENT_BASE_SHA: repo.base, Y1_GOLDEN_EVENT_HEAD_SHA: head },
     });

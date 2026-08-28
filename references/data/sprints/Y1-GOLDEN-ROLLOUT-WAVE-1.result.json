@@ -226,7 +226,7 @@
     "old_pr_closed": true
   },
   "authorized_next": [
-    "Complete exact-head CI, live branch-protection, lead, and PR Readiness Reviewer proof for replacement PR #214.",
+    "Complete exact-head CI, live branch-protection, lead, and PR Readiness Reviewer proof for corrected PR #216.",
     "Return the exact-head L4 packet for human review; do not merge without owner authorization."
   ]
 }

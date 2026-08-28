@@ -84,14 +84,7 @@
       "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md",
       "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
       "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md",
-      "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md",
-      "reports/url-index.md",
-      "reports/github-agent-index-platform.json",
-      "reports/github-agent-index-platform.md",
-      "reports/github-agent-index-lessen.json",
-      "reports/github-agent-index-lessen.md",
-      "reports/internal-dashboard/dashboard-data.json",
-      "reports/internal-dashboard/index.html"
+      "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md"
     ],
     "trigger_prefixes": [],
     "allowed_exact": [

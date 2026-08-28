@@ -47,3 +47,12 @@ REVISE
 
 PASS — all five round-1 findings are closed. Implementation may begin within
 the corrected plan and exact path allowlist.
+
+## 2026-08-28 trigger-policy correction review
+
+PASS — the correction fully covers the required exact trigger/allow split,
+keeps the seven shared generated closure paths allowed without making them
+triggers, adds per-file and PR215-shaped pull-request/main-push regressions,
+preserves a genuine Y1 mixed-work fail-closed case, corrects the stale PR #214
+lifecycle instruction, and retains all evidence, authority, repository, CI,
+readiness, and no-merge boundaries.

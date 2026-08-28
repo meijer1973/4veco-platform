@@ -231,6 +231,20 @@ const PREREQUISITE_MUTATION_PATHS = [
   'reports/internal-dashboard/index.html',
 ];
 
+const SHARED_GENERATED_CLOSURE_PATHS = [
+  'reports/url-index.md',
+  'reports/github-agent-index-platform.json',
+  'reports/github-agent-index-platform.md',
+  'reports/github-agent-index-lessen.json',
+  'reports/github-agent-index-lessen.md',
+  'reports/internal-dashboard/dashboard-data.json',
+  'reports/internal-dashboard/index.html',
+];
+
+const PREREQUISITE_TRIGGER_PATHS = PREREQUISITE_MUTATION_PATHS.filter(
+  (relativePath) => !SHARED_GENERATED_CLOSURE_PATHS.includes(relativePath)
+);
+
 const EVIDENCE_TAIL_EXACT = [
   PATHS.result,
   PATHS.proof,
@@ -612,7 +626,7 @@ function assertExactFalseAuthorities(authority, expectedKeys, label) {
 function validateChangedPathPolicy(policy) {
   check(policy?.mode === 'renewal_payload_only', 'wave changed-path policy mode mismatch');
   check(policy?.prerequisite_base === PREREQUISITE_BASE_PLATFORM_SHA, 'wave prerequisite base mismatch');
-  sameSet(policy.trigger_exact || [], PREREQUISITE_MUTATION_PATHS, 'wave trigger exact paths');
+  sameSet(policy.trigger_exact || [], PREREQUISITE_TRIGGER_PATHS, 'wave trigger exact paths');
   sameSet(policy.allowed_exact || [], PREREQUISITE_MUTATION_PATHS, 'wave allowed exact paths');
   sameSet(policy.trigger_prefixes || [], [], 'wave trigger prefixes');
   sameSet(policy.allowed_prefixes || [], [], 'wave allowed prefixes');
@@ -1548,7 +1562,9 @@ module.exports = {
   PATHS,
   PREREQUISITE_BASE_PLATFORM_SHA,
   PREREQUISITE_MUTATION_PATHS,
+  PREREQUISITE_TRIGGER_PATHS,
   SELECTOR_PLATFORM_SHA,
+  SHARED_GENERATED_CLOSURE_PATHS,
   SOURCE_MANIFEST_ARTIFACTS,
   SOURCE_RENEWAL_START_PLATFORM_SHA,
   SOURCE_REVIEWED_PAYLOAD_SHA,

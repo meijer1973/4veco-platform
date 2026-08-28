@@ -41,6 +41,36 @@ prerequisite which reuses that evidence with explicit source provenance and
 recomputes current bindings without importing PR #208 product commits or
 fabricating their ancestry.
 
+## 2026-08-28 changed-path trigger correction
+
+Human review of PR #216 at `30b4e834...` found one blocking future-CI
+regression. The 38-path `allowed_exact` inventory was also used unchanged as
+`trigger_exact`, so seven shared deterministic closure artifacts could activate
+the restrictive Y1 renewal scope during otherwise unrelated future work. That
+would reject a synchronized PR #215-shaped delta containing its four generated
+agent indexes plus authorized integration-lane files.
+
+The correction keeps the full 38-path exact allowlist but splits activation
+into a narrower exact trigger inventory. These seven closure paths remain
+allowed when genuine Y1 work activates the scope, but must not activate it by
+themselves:
+
+- `reports/url-index.md`
+- `reports/github-agent-index-platform.json`
+- `reports/github-agent-index-platform.md`
+- `reports/github-agent-index-lessen.json`
+- `reports/github-agent-index-lessen.md`
+- `reports/internal-dashboard/dashboard-data.json`
+- `reports/internal-dashboard/index.html`
+
+Acceptance requires direct unit coverage for each shared file mixed with
+unrelated work, PR215-shaped pull-request and main-push histories, and a
+fail-closed mixed history containing a genuine Y1 trigger. The correction also
+replaces the stale PR #214 instruction in the sprint result with the current
+PR #216 human-review sequence. No rendered evidence, screenshot, provenance,
+authority, lesson, product, engine, source-data, or protected-reference bytes
+may change.
+
 ## Quality Standard
 
 The governing specification requires student-facing rendered output proof;
@@ -77,6 +107,8 @@ rendered drift is a stop condition.
 | Preserve 1280×900 first-viewport qualification | canonical capture record and review wording | screenshot/manifest/visual-review validation | pending |
 | Preserve byte identity and zero pixels | SHA-256, decoded RGBA comparison, zero-delta image | independent visual inspection | pending |
 | Remain fail-closed | minimal checker extension | focused positive and negative Jest suite | pending |
+| Avoid future shared-index false activation | split exact trigger and allow inventories | per-file, PR215-shaped pull-request, and main-push regressions | correction required |
+| Keep lifecycle guidance current | PR #216-specific `authorized_next` | result validator and lead review | correction required |
 | Preserve all authority holds | proof, packet, result, and renewal record | scope-language and lead review | pending |
 | Complete all CI stages | full local validation and exact-head remote CI | green `validate-platform` run | pending |
 | Return without merging | draft PR, readiness route, human gate | PR remains open and unmerged | pending |
@@ -241,6 +273,11 @@ review rather than silently widening scope.
 11. Re-fetch live PR state, produce an exact-head readiness decision for `H`,
     post/apply only `MARK_READY`, and return for renewed human merge review.
     The explicit decision is to stop before merge.
+12. For the 2026-08-28 correction, return PR #216 to draft; split the exact
+    trigger/allow inventories; add the shared-closure and PR215-shaped event
+    regressions; correct `authorized_next`; freeze a new substantive payload;
+    rerun focused/full validation, exact-head lead review, remote CI, and
+    readiness. Do not modify PR #208 or PR #215.
 
 The focused suite must positively prove the exact intended record and reject:
 missing or non-commit provenance objects; broken `8f612ac... -> 4b49d82... ->

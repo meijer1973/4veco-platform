@@ -59,3 +59,27 @@ invalidated and round 2 must review the replacement substantive payload.
 
 Round 2 must inspect the exact corrected payload after its SHA is frozen and
 must not treat this correction record as merge authorization.
+
+## 2026-08-28 human-review correction
+
+`Y1-PREREQ-FUTURE-CI-TRIGGER` — closed in the replacement substantive
+payload pending exact-head review and CI.
+
+- Split the changed-path policy into a 31-path Y1-specific trigger inventory
+  and the existing 38-path exact allow inventory.
+- Kept the URL index, four agent indexes, and two internal-dashboard outputs in
+  `allowed_exact`, while removing all seven from `trigger_exact`.
+- Added a regression for every shared closure path mixed with unrelated
+  integration work.
+- Added exact PR #215-shaped 17-path histories for both `pull_request` and
+  `main_push`; neither activates the renewal scope.
+- Extended the genuine Y1-trigger plus unrelated-work rejection to both event
+  modes, preserving fail-closed behavior.
+- Corrected the stale replacement-PR #214 instruction to corrected PR #216.
+- Did not modify screenshots, rendered-renewal evidence, historical provenance,
+  Lesson, product, engine, source-data, protected references, PR #208, or PR
+  #215.
+
+Focused validation passes 80/80 tests. The full local suite, P-bound evidence
+rebinding, independent lead review, exact-head CI, and readiness remain required
+before the PR may leave draft again.
