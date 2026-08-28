@@ -20,7 +20,7 @@
   },
   "current_evidence": {
     "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
-    "reviewed_payload_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c",
+    "reviewed_payload_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
     "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
     "binding_model": "historical_provenance_separate_from_current_lineage"
@@ -64,8 +64,9 @@
     "round1": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md",
     "corrections": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md",
     "round2": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
-    "trigger_correction_review": "https://github.com/meijer1973/4veco-platform/pull/216#issuecomment-5453361025",
-    "reviewed_payload_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c",
+    "trigger_correction_review": "https://github.com/meijer1973/4veco-platform/pull/216#issuecomment-5453614976",
+    "reviewed_payload_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+    "reviewed_payload_verdict": "PASS",
     "round1_verdict": "REVISE",
     "round2_verdict": "PASS WITH FLAGS"
   },
@@ -180,7 +181,7 @@
   },
   "acceptance_tests": [
     { "command": "jest.cmd --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js", "status": "passed" },
-    { "command": "node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base 9c9d3cc7fa8e72d536e03af192f53f7079823dbe --head 34a398374f3eecc3276cdd72a72636e4dda26e3c --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base 9c9d3cc7fa8e72d536e03af192f53f7079823dbe --head b5a4bb38dfe3cc405a2ee1af6c633783f86d234a --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d", "status": "passed" },
     { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md", "status": "passed" },
     { "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD", "status": "passed" },
     { "command": "npm.cmd run finalization:freshness", "status": "passed" },

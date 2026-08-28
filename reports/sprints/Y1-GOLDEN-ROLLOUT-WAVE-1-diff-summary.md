@@ -8,7 +8,7 @@ Generated: 2026-08-27
   without importing PR #208 product commits.
 - Separates historical source provenance
   (`e2deb65... -> 8f612ac... -> 4b49d82... -> aa06ada...`) from current
-  lineage (`9c9d3cc7... -> 34a39837... -> H`).
+  lineage (`9c9d3cc7... -> b5a4bb38... -> H`).
 - Uses a 31-path Y1-specific trigger inventory, the broader exact 38-path
   allow inventory, and an exact post-payload path inventory with no wildcard
   prefix.

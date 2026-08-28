@@ -2659,3 +2659,77 @@ Ran all test suites.
 ```text
 
 ```
+## node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base 9c9d3cc7fa8e72d536e03af192f53f7079823dbe --head b5a4bb38dfe3cc405a2ee1af6c633783f86d234a --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-28T14:11:59.019Z`
+- finished_at: `2026-08-28T14:12:38.727Z`
+- duration_ms: `39708`
+- exit_code: `0`
+- stdout_sha256: `61c65714acdfaff9d120e6b12b0fc32a788ed065486c4f863d841e0b7f6d9029`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "ok": true,
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "event_mode": "manual",
+  "scope_mode": "required",
+  "base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "head_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+  "scope_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "scope_head_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+  "scope_attestation_triggered": true,
+  "changed_paths": [
+    "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
+    "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+    "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+    "references/data/exercises/y1-golden-rollout-wave-1.json",
+    "references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/y1-golden-rollout-wave-1-proof.json",
+    "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+    "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md",
+    "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md"
+  ],
+  "screenshots_reusable": true,
+  "verified_rendered_renewal_count": 1,
+  "unresolved_changed_or_missing_input_count": 0,
+  "rendered_inputs_unchanged_through_exact_head": true,
+  "evidence_tail_paths": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```

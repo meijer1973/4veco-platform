@@ -18,7 +18,9 @@ This prerequisite closes the blocking mismatch between Platform `main` at
 `9c9d3cc7...` and Lesson `main` at `f09fd6e...` without importing PR #208
 product commits or claiming their ancestry. Historical commits `e2deb65...`,
 `8f612ac...`, `4b49d82...`, and `aa06ada...` remain source provenance only.
-The corrected current reviewed payload is `34a39837...`.
+The corrected current reviewed payload is `b5a4bb38...`; it includes the
+source manifest before the evidence-only terminal tail so the exact-head guard
+can prove every rendered renewal artifact remained immutable.
 
 The independently recomputed dependency set contains exactly one changed
 captured input: §1.1.2 `opgaven.html`. It is closed by the previously reviewed
