@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-27T09:46:44.934Z
+Generated: 2026-08-28T18:24:11.837Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/residual-bundle-readiness-20260827`
-Source commit: `24dfbaf8ec0029919fe375406d6aa66b9bfd3966`
-Files indexed: 7227
+Source commit: `91ccaf99c866d3c4ff6df0664bdce6e0f850fff9`
+Files indexed: 7242
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2584,7 +2584,7 @@ Count: 1006
 
 ## reports
 
-Count: 4552
+Count: 4566
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
