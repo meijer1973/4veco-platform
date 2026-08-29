@@ -10,6 +10,7 @@ const {
   refreshPlatformPrCi,
   LESSON_REPO,
   platformCiDispatchArgs,
+  runCli,
   selectLatestRunForHead,
   setPlatformIntegrationStatus,
   triggerPlatformCi,
@@ -3278,6 +3279,125 @@ describe('authorized cross-repo bundle integration', () => {
     });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
     expect(result.completed_merges).toHaveLength(2);
+  });
+
+  test('fetchMergedPr throwing after a successful merge invocation preserves an unknown merge outcome', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMergedPr: jest.fn(() => {
+          throw new Error('transient merged PR lookup failure');
+        }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'merge_observation',
+      error: 'transient merged PR lookup failure',
+      merge_outcome_unknown: true,
+      completed_merges: [],
+      unknown_merge_outcomes: [{
+        repo: LESSON_REPO,
+        pr_number: 34,
+        head_sha: lessonHead,
+        method: 'merge_pr',
+        outcome: 'unknown',
+      }],
+    });
+    expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
+  });
+
+  test('fetchMainSha throwing after the first merge retains the observed completed merge', () => {
+    const setup = harness();
+    const fetchMainSha = setup.deps.fetchMainSha;
+    let failed = false;
+    setup.deps.fetchMainSha = jest.fn((repo) => {
+      if (!failed && setup.calls.merges.length === 1) {
+        failed = true;
+        throw new Error('transient main lookup after first merge');
+      }
+      return fetchMainSha(repo);
+    });
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'post_merge_main_state',
+      error: 'transient main lookup after first merge',
+      merge_outcome_unknown: false,
+    });
+    expect(result.completed_merges).toHaveLength(1);
+    expect(result.completed_merges[0]).toMatchObject({ repo: LESSON_REPO, merge_commit: lessonMerge });
+  });
+
+  test('state retrieval throwing after both merges retains both observed completed merges', () => {
+    const setup = harness();
+    const fetchMainSha = setup.deps.fetchMainSha;
+    let failed = false;
+    setup.deps.fetchMainSha = jest.fn((repo) => {
+      if (
+        !failed &&
+        setup.calls.merges.length === 2
+      ) {
+        failed = true;
+        throw new Error('transient state lookup after both merges');
+      }
+      return fetchMainSha(repo);
+    });
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'post_merge_main_state',
+      error: 'transient state lookup after both merges',
+      merge_outcome_unknown: false,
+    });
+    expect(result.completed_merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
+  });
+
+  test('CLI output retains irreversible-state diagnostics for a post-merge exception', () => {
+    const setup = harness();
+    const fetchMainSha = setup.deps.fetchMainSha;
+    let failed = false;
+    setup.deps.fetchMainSha = jest.fn((repo) => {
+      if (!failed && setup.calls.merges.length === 1) {
+        failed = true;
+        throw new Error('CLI post-merge state lookup failed');
+      }
+      return fetchMainSha(repo);
+    });
+    const stdout = jest.fn();
+    const exit = jest.fn();
+
+    runCli([
+      '--repo', PLATFORM_REPO,
+      '--pr', '140',
+      '--authorization-comment-id', '123',
+    ], {
+      integrateBundle: (cliOptions) => integrateBundle({
+        ...setup.options,
+        ...cliOptions,
+        deps: setup.deps,
+      }),
+      stdout,
+      exit,
+    });
+
+    expect(exit).toHaveBeenCalledWith(1);
+    expect(stdout).toHaveBeenCalledTimes(1);
+    const output = JSON.parse(stdout.mock.calls[0][0]);
+    expect(output).toMatchObject({
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'post_merge_main_state',
+      error: 'CLI post-merge state lookup failed',
+      merge_outcome_unknown: false,
+    });
+    expect(output.completed_merges).toHaveLength(1);
+    expect(output.merge_invocations).toHaveLength(1);
   });
 
   test('old green platform-ci run with same platform SHA is ignored by minimum run id', () => {

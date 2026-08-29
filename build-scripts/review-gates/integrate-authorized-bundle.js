@@ -1552,6 +1552,72 @@ function validateMergedPr(repo, prNumber, mergedPr) {
   return { ok: true, repo, prNumber, merge_commit: mergedPr.mergeCommit.oid, merged_pr: mergedPr };
 }
 
+function createIntegrationExecutionJournal() {
+  return {
+    verification_subphase: null,
+    merge_invocations: [],
+    completed_merges: [],
+  };
+}
+
+function setJournalSubphase(journal, subphase) {
+  if (journal) journal.verification_subphase = subphase;
+}
+
+function recordMergeInvocation(journal, details) {
+  if (!journal) return null;
+  const invocation = {
+    repo: details.repo,
+    pr_number: details.pr_number,
+    head_sha: details.head_sha,
+    method: details.method,
+    outcome: 'unknown',
+    merge_commit: null,
+  };
+  journal.merge_invocations.push(invocation);
+  return invocation;
+}
+
+function recordCompletedMerge(journal, invocation, completedMerge) {
+  if (invocation) {
+    invocation.outcome = 'observed_merged';
+    invocation.merge_commit = completedMerge.merge_commit;
+  }
+  journal.completed_merges.push(completedMerge);
+}
+
+function hasIrreversibleMergeState(journal) {
+  return journal.merge_invocations.length > 0 || journal.completed_merges.some(
+    (item) => item && item.dry_run !== true && item.merge_commit
+  );
+}
+
+function postMergeFailureResult(result, journal, error = null) {
+  const completedMerges = journal.completed_merges.filter(
+    (item) => item && item.dry_run !== true && item.merge_commit
+  );
+  const unknownMergeOutcomes = journal.merge_invocations.filter(
+    (item) => item && item.outcome !== 'observed_merged'
+  );
+  const verificationSubphase =
+    (result && result.verification_subphase) ||
+    (result && result.phase) ||
+    journal.verification_subphase ||
+    'unknown';
+  return {
+    ...(result || {}),
+    ok: false,
+    phase: 'merged_but_postmerge_verification_failed',
+    verification_subphase: verificationSubphase,
+    ...(error ? { error: error.message || String(error) } : {}),
+    merges: [...journal.completed_merges],
+    completed_merges: completedMerges,
+    merge_outcome_unknown: unknownMergeOutcomes.length > 0,
+    unknown_merge_outcomes: unknownMergeOutcomes,
+    merge_invocations: [...journal.merge_invocations],
+  };
+}
+
 function mergeStepForOrder(order, record) {
   const lesson = memberByRepo(record, LESSON_REPO);
   const platform = record.controller;
@@ -1631,6 +1697,7 @@ function integrateBundleCore(options = {}) {
     return { ok: false, phase: 'integration_mode', failures: modeFailures };
   }
   const deps = { ...defaultDeps(options), ...(options.deps || {}) };
+  const executionJournal = options.executionJournal || createIntegrationExecutionJournal();
   const deltaReview = options.deltaReview || readReviewJson(options.deltaReviewPath);
   const payloadLeadReview = options.payloadLeadReview || readReviewJson(options.payloadLeadReviewPath);
   const controllerRepo = options.repo || PLATFORM_REPO;
@@ -1879,7 +1946,7 @@ function integrateBundleCore(options = {}) {
       'Bundle partial resume requires the first merge member to be the lesson PR'
     );
   }
-  const merges = [];
+  const merges = executionJournal.completed_merges;
   let platformIntegrationReadiness = null;
   let platformIntegrationRefresh = null;
   let platformIntegrationCi = null;
@@ -1890,6 +1957,7 @@ function integrateBundleCore(options = {}) {
   };
   for (const [index, member] of steps.entries()) {
     const repo = member.repository;
+    setJournalSubphase(executionJournal, index === 0 ? 'first_member_state' : 'next_member_state');
     const currentPlatformMain = deps.fetchMainSha(PLATFORM_REPO);
     const currentLessonMain = deps.fetchMainSha(LESSON_REPO);
     if (currentPlatformMain !== expectedMain[PLATFORM_REPO] || currentLessonMain !== expectedMain[LESSON_REPO]) {
@@ -2243,12 +2311,21 @@ function integrateBundleCore(options = {}) {
       ? deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, transitionPlatformBaseSha)
       : 0;
     let merge;
+    let mergeInvocation = null;
     try {
       merge = usePlatformAutoMerge && options.dryRun
         ? { dry_run: true, auto_merge: true, repo, prNumber: member.pr_number, head_sha: member.integration_head_sha }
         : usePlatformAutoMerge
         ? deps.scheduleAutoMergePr(repo, member.pr_number, member.integration_head_sha, options)
         : deps.mergePr(repo, member.pr_number, member.integration_head_sha, options);
+      if (!options.dryRun && !usePlatformAutoMerge) {
+        mergeInvocation = recordMergeInvocation(executionJournal, {
+          repo,
+          pr_number: member.pr_number,
+          head_sha: member.integration_head_sha,
+          method: 'merge_pr',
+        });
+      }
     } catch (error) {
       return withTerminalFailureStatus(
         { ok: false, phase: usePlatformAutoMerge ? 'auto_merge_schedule' : 'merge', repo, pr_number: member.pr_number, error: error.message, merges },
@@ -2387,9 +2464,17 @@ function integrateBundleCore(options = {}) {
         };
       }
       mergedPr = observed.pr;
+      mergeInvocation = recordMergeInvocation(executionJournal, {
+        repo,
+        pr_number: member.pr_number,
+        head_sha: member.integration_head_sha,
+        method: 'auto_merge_observed',
+      });
     } else {
+      setJournalSubphase(executionJournal, 'merge_observation');
       mergedPr = deps.fetchMergedPr(repo, member.pr_number);
     }
+    setJournalSubphase(executionJournal, 'merge_verification');
     const merged = validateMergedPr(repo, member.pr_number, mergedPr);
     if (!merged.ok) {
       return withTerminalFailureStatus(
@@ -2400,7 +2485,12 @@ function integrateBundleCore(options = {}) {
         `Bundle merge verification failed for ${repo}`
       );
     }
-    merges.push({ repo, pr_number: member.pr_number, merge, ...merged });
+    recordCompletedMerge(
+      executionJournal,
+      mergeInvocation,
+      { repo, pr_number: member.pr_number, merge, ...merged }
+    );
+    setJournalSubphase(executionJournal, 'post_merge_main_state');
     expectedMain[repo] = deps.fetchMainSha(repo);
     const transitionPlatformHeadSha = deps.fetchMainSha(PLATFORM_REPO);
     const transitionLessonHeadSha = deps.fetchMainSha(LESSON_REPO);
@@ -2412,6 +2502,7 @@ function integrateBundleCore(options = {}) {
       automaticMinDatabaseId: transitionAutomaticMinDatabaseId,
     };
     if (index === 0 && !(order === 'lesson-first' && repo === LESSON_REPO)) {
+      setJournalSubphase(executionJournal, 'intermediate_ci');
       const intermediateCi = waitForIntermediatePlatformCi(deps, finalCiCoordinates, options);
       if (!intermediateCi.ok) {
         return withTerminalFailureStatus(
@@ -2424,8 +2515,10 @@ function integrateBundleCore(options = {}) {
       }
     }
   }
+  setJournalSubphase(executionJournal, 'final_state');
   const expectedFinalPlatformSha = deps.fetchMainSha(PLATFORM_REPO);
   const expectedFinalLessonSha = deps.fetchMainSha(LESSON_REPO);
+  setJournalSubphase(executionJournal, 'final_ci');
   const finalCi = acquirePlatformMainCi(deps, {
     ...(finalCiCoordinates || {}),
     expectedPlatformSha: expectedFinalPlatformSha,
@@ -2453,28 +2546,28 @@ function integrateBundleCore(options = {}) {
 }
 
 function integrateBundle(options = {}) {
-  const result = integrateBundleCore(options);
-  const completedMerges = Array.isArray(result && result.merges)
-    ? result.merges.filter((item) => item && item.dry_run !== true && item.merge_commit)
-    : [];
-  if (!result || result.ok !== false || completedMerges.length === 0) return result;
+  const executionJournal = createIntegrationExecutionJournal();
+  let result;
+  try {
+    result = integrateBundleCore({ ...options, executionJournal });
+  } catch (error) {
+    if (!hasIrreversibleMergeState(executionJournal)) throw error;
+    return postMergeFailureResult(null, executionJournal, error);
+  }
+  const irreversibleStateRecorded = hasIrreversibleMergeState(executionJournal);
+  if (!result || result.ok !== false || !irreversibleStateRecorded) return result;
   if (result.phase === 'merged_but_postmerge_verification_failed') return result;
-  return {
-    ...result,
-    phase: 'merged_but_postmerge_verification_failed',
-    verification_subphase: result.phase || 'unknown',
-    completed_merges: completedMerges,
-  };
+  return postMergeFailureResult(result, executionJournal);
 }
 
-function runCli(argv) {
+function runCli(argv, cli = {}) {
   const prNumber = optionValue(argv, '--pr');
   const authorizationCommentId = optionValue(argv, '--authorization-comment-id');
   if (!prNumber) fail('--pr is required');
   if (!authorizationCommentId) fail('--authorization-comment-id is required');
   let result;
   try {
-    result = integrateBundle({
+    result = (cli.integrateBundle || integrateBundle)({
       repo: optionValue(argv, '--repo') || PLATFORM_REPO,
       prNumber,
       authorizationCommentId,
@@ -2494,8 +2587,9 @@ function runCli(argv) {
   } catch (error) {
     fail(error.message);
   }
-  console.log(JSON.stringify(result, null, 2));
-  if (!result.ok) process.exit(1);
+  (cli.stdout || console.log)(JSON.stringify(result, null, 2));
+  if (!result.ok) (cli.exit || process.exit)(1);
+  return result;
 }
 
 if (require.main === module) {
@@ -2509,6 +2603,7 @@ module.exports = {
   acquirePlatformMainCi,
   generateBundleIntegrationReadiness,
   integrateBundle,
+  runCli,
   platformCiDispatchArgs,
   preflightCrossRepoPermissions,
   refreshPlatformPrCi,
