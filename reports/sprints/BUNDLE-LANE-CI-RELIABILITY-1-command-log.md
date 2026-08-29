@@ -257,3 +257,92 @@ OK lead-review substance: BUNDLE-LANE-CI-RELIABILITY-1
 ```text
 
 ```
+## node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T12:43:43.825Z`
+- finished_at: `2026-08-29T12:43:44.048Z`
+- duration_ms: `223`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `d64eff1218a49ea1a1795a63fc378da64e6be82d347c66e45a12834acb6a8d7f`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint result check failed: passed command lacks command-log exit_code 0 evidence: node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete
+Sprint bundle check failed: validator failed: node build-scripts\sprints\check-sprint-result.js reports\sprints\BUNDLE-LANE-CI-RELIABILITY-1-result.md
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T12:43:57.213Z`
+- finished_at: `2026-08-29T12:43:57.517Z`
+- duration_ms: `304`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `d1567a7baa1eba7aedf15d8f59e5e1c29acb9d83588d1691acc9b464d0cdad6a`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: reports\sprints\BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md must identify sprint BUNDLE-LANE-CI-RELIABILITY-1
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T12:44:20.378Z`
+- finished_at: `2026-08-29T12:44:20.674Z`
+- duration_ms: `296`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `2ac7cce61214ea98ab24b6730d1dfae581cefef7c3b7b435f4c55bf628e6ae30`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: reports\sprints\BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md Consolidated Verdict must include a verdict
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T12:44:30.699Z`
+- finished_at: `2026-08-29T12:44:31.376Z`
+- duration_ms: `677`
+- exit_code: `0`
+- stdout_sha256: `15dca37bdb15c30ff98895ce763d352bb72c8dffc33546e60383f8fca45655b7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BUNDLE-LANE-CI-RELIABILITY-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```

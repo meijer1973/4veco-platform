@@ -33,7 +33,7 @@ authorization remains required after correction and re-review.
 
 ## Consolidated Verdict
 
-Verdict: `REVISE`
+Verdict: REVISE
 
 One core race permits a duplicate manual fallback after a qualifying automatic
 push run appears. Passing tests at this head did not exercise that state.
