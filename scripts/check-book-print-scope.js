@@ -217,6 +217,17 @@ function figureConcordanceErrors(md, bookRoot) {
   return errors;
 }
 
+function inlineAnchorHeadingErrors(md) {
+  const errors = [];
+  const anchorHeadingRe = /<span\s+id="(book-toc-(?:chapter|paragraph)-[^"]+)"\s+class="book-toc-anchor"><\/span>\r?\n(#{1,6})\s+/g;
+  let match;
+  while ((match = anchorHeadingRe.exec(md)) !== null) {
+    const line = md.slice(0, match.index).split(/\r?\n/).length;
+    errors.push(`Book TOC anchor ${match[1]} is inline directly before markdown heading at line ${line}; use a block anchor or a blank line so Pandoc keeps the heading styled`);
+  }
+  return errors;
+}
+
 function assertBookPrintScope(bookRoot) {
   const bookMd = findBookMd(bookRoot);
   const md = fs.readFileSync(bookMd, 'utf8');
@@ -272,6 +283,7 @@ function assertBookPrintScope(bookRoot) {
   }
 
   errors.push(...figureConcordanceErrors(md, bookRoot));
+  errors.push(...inlineAnchorHeadingErrors(md));
 
   if (/vijf hoofdstukken/i.test(md)) {
     errors.push('Voorwoord still says "vijf hoofdstukken"');

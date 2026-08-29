@@ -73,6 +73,13 @@ describe('check-paragraph-lane-scope', () => {
     });
   });
 
+  test('classifies chapter and book aggregate outputs as textbook artifacts', () => {
+    expect(classifyPath('Boek 1/1.1 Hoofdstuk Test/1.1 Test - hoofdstuk.md').category).toBe('partA_textbook');
+    expect(classifyPath('Boek 1/1.1 Hoofdstuk Test/build_chapter.py').category).toBe('partA_textbook');
+    expect(classifyPath('Boek 1/Boek 1 Test - boek.pdf').category).toBe('partA_textbook');
+    expect(classifyPath('Boek 1/_assets/book-1-cover.png').category).toBe('partA_textbook');
+  });
+
   test('keeps PDF output out of the companion lane by default', () => {
     expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test - samenvatting.pdf').category).toBe('partA_textbook');
     expect(classifyPath('Boek 1/1.1/1.1.1 Test/1.1.1 Test - uitleg vaardigheden.pdf').category).toBe('unknown');
@@ -237,6 +244,25 @@ describe('check-paragraph-lane-scope', () => {
       git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'add lane doc'], repo);
 
       const code = runCliQuiet(['--cwd', repo, '--lane', 'shared', '--base', 'HEAD~1', '--head', 'HEAD']);
+
+      expect(code).toBe(0);
+    } finally {
+      fs.rmSync(repo, { recursive: true, force: true });
+    }
+  });
+
+  test('runCli preserves non-ASCII textbook paths from git ranges', () => {
+    const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'lane-scope-unicode-'));
+    try {
+      git(['init', '-b', 'main'], repo);
+      writeFile(path.join(repo, 'README.md'), '# temp\n');
+      git(['add', 'README.md'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'initial'], repo);
+      writeFile(path.join(repo, 'Boek 1', 'Boek 1 Test – boek.md'), '# book\n');
+      git(['add', '.'], repo);
+      git(['-c', 'user.name=Test', '-c', 'user.email=test@example.com', 'commit', '-m', 'add book'], repo);
+
+      const code = runCliQuiet(['--cwd', repo, '--lane', 'textbook', '--base', 'HEAD~1', '--head', 'HEAD']);
 
       expect(code).toBe(0);
     } finally {

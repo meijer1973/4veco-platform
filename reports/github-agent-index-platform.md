@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-28T18:24:11.837Z
+Generated: 2026-08-25T12:18:09.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/residual-bundle-readiness-20260827`
-Source commit: `91ccaf99c866d3c4ff6df0664bdce6e0f850fff9`
-Files indexed: 7242
+Source branch: `codex/book-heading-anchors-20260702`
+Source commit: `1bc95346bf2b3ba6c41b7204a7e16d64d53cb425`
+Files indexed: 7436
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 709
+Count: 713
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -146,12 +146,16 @@ Count: 709
 - build-scripts/archive/README.md
 - build-scripts/archive/restyle-instapquiz.js
 - build-scripts/archive/roundtrip-pptx.py
+- build-scripts/books/book-manifests/assets/book-1-cover.png
 - build-scripts/books/book-manifests/book-1-print-1.3.4-gemengde-opgaven.md
 - build-scripts/books/book-manifests/book-1-voorwoord.md
 - build-scripts/books/book-manifests/book-1.json
+- build-scripts/books/book-toolchain.json
 - build-scripts/books/build-book.py
 - build-scripts/books/lib_book.py
+- build-scripts/books/lib_book.test.js
 - build-scripts/books/README.md
+- build-scripts/books/test_lib_book.py
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -2584,7 +2588,7 @@ Count: 1006
 
 ## reports
 
-Count: 4566
+Count: 4756
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3806,6 +3810,190 @@ Count: 4566
 - reports/rendered-proof/B2-2.2.4-HARDEN-MIXED-1/2.2.4-opgaven/page-5.png
 - reports/rendered-proof/B2-2.2.4-HARDEN-MIXED-1/2.2.4-opgaven/page-6.png
 - reports/rendered-proof/B2-2.2.4-HARDEN-MIXED-1/manifest.json
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1-contact-sheet-pages-001-034.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1-contact-sheet-pages-035-068.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1-contact-sheet-pages-069-102.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1-contact-sheet-pages-103-136.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-001.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-002.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-003.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-004.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-005.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-006.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-007.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-008.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-009.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-010.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-011.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-012.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-013.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-014.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-015.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-016.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-017.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-018.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-019.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-020.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-021.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-022.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-023.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-024.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-025.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-026.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-027.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-028.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-029.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-030.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-031.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-032.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-033.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-034.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-035.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-036.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-037.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-038.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-039.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-040.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-041.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-042.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-043.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-044.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-045.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-046.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-047.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-048.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-049.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-050.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-051.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-052.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-053.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-054.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-055.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-056.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-057.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-058.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-059.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-060.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-061.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-062.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-063.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-064.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-065.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-066.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-067.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-068.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-069.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-070.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-071.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-072.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-073.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-074.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-075.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-076.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-077.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-078.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-079.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-080.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-081.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-082.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-083.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-084.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-085.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-086.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-087.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-088.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-089.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-090.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-091.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-092.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-093.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-094.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-095.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-096.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-097.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-098.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-099.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-100.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-101.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-102.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-103.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-104.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-105.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-106.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-107.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-108.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-109.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-110.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-111.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-112.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-113.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-114.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-115.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-116.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-117.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-118.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-119.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-120.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-121.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-122.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-123.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-124.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-125.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-126.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-127.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-128.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-129.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-130.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-131.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-132.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-133.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-134.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-135.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/book-1/page-136.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1-contact-sheet.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-01.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-02.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-03.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-04.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-05.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-06.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-07.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-08.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-09.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-10.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-11.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-12.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-13.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-14.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-15.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-16.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-17.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-18.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-19.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-20.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-21.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-22.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-23.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-24.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-25.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-26.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-27.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-28.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-29.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-30.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-31.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/chapter-1.1/page-32.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/manifest.json
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2-contact-sheet.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-1.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-2.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-3.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-4.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-5.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-6.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-7.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-8.png
+- reports/rendered-proof/BOOK1-TEXTBOOK-RENEWAL-20260825/paragraph-1.1.2/page-9.png
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/A96-CALCULATION-ANSWER-FORM-HARDENING-AND-SCALE-GATE-1-REREVIEW-1/review-packet.json
@@ -3824,6 +4012,8 @@ Count: 4566
 - reports/review-gates/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
 - reports/review-gates/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1/review-packet.json
 - reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
+- reports/review-gates/BOOK1-TEXTBOOK-RENEWAL-20260825/plan.md
+- reports/review-gates/BOOK1-TEXTBOOK-RENEWAL-20260825/rendered-proof.md
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
@@ -7102,6 +7292,10 @@ Count: 4566
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-corrections.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round1.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round2.md
+- reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png
 - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json

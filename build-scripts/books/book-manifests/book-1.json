@@ -3,7 +3,9 @@
     "nr": 1,
     "title": "Grondslagen, vraag en aanbod",
     "edition": "1e editie",
-    "year": 2026
+    "year": 2026,
+    "cover_image": "_assets/book-1-cover.png",
+    "cover_image_source": "build-scripts/books/book-manifests/assets/book-1-cover.png"
   },
   "print_scope": {
     "school_year": "2026/27",

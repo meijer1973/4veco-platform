@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import base64
 import filecmp
+import importlib.metadata
 import json
 import os
 import re
@@ -26,6 +27,9 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 BOOK_CONTENT_START = "<!-- BOOK-CONTENT-START -->"
 BOOK_CONTENT_END = "<!-- BOOK-CONTENT-END -->"
+PANDOC_STYLE_RE = re.compile(r"<style\b[^>]*>.*?</style>", re.IGNORECASE | re.DOTALL)
+HEAD_RE = re.compile(r"(<head\b[^>]*>)(.*?)(</head>)", re.IGNORECASE | re.DOTALL)
+TOOLCHAIN_RECORD = Path(__file__).with_name("book-toolchain.json")
 
 # ---------------------------------------------------------------------------
 # Manifest loading + validation
@@ -262,8 +266,19 @@ def compose_chapter_md(chapter_spec: dict, book_output_dir: Path, platform_root:
 # Front matter (raw HTML)
 # ---------------------------------------------------------------------------
 def render_cover_html(book: dict) -> str:
+    cover_image = (book.get("cover_image") or "").strip()
+    image_html = ""
+    shade_html = ""
+    if cover_image:
+        image_html = (
+            f'<img class="book-cover-image" src="{html_escape(cover_image)}" '
+            'alt="" aria-hidden="true">\n'
+        )
+        shade_html = '<div class="book-cover-shade" aria-hidden="true"></div>\n'
     return (
         '<div class="book-cover">\n'
+        f'{image_html}'
+        f'{shade_html}'
         '<div class="book-cover-inner">\n'
         f'<h1 class="book-title">{html_escape(book["title"])}</h1>\n'
         f'<p class="book-edition">{html_escape(book["edition"])} · {book["year"]}</p>\n'
@@ -338,13 +353,13 @@ def toc_anchor_id(kind: str, value: str) -> str:
     slug = re.sub(r"[^0-9A-Za-z]+", "-", value).strip("-").lower()
     return f"book-toc-{kind}-{slug}"
 
-def anchor_span(anchor_id: str) -> str:
-    return f'<span id="{html_escape(anchor_id)}" class="book-toc-anchor"></span>'
+def anchor_block(anchor_id: str) -> str:
+    return f'<div id="{html_escape(anchor_id)}" class="book-toc-anchor"></div>'
 
 def add_toc_anchors(md_text: str, entry: dict) -> str:
     """Add invisible anchors used by generated TOC page-number links."""
     result = md_text
-    chapter_anchor = anchor_span(entry["anchor"])
+    chapter_anchor = anchor_block(entry["anchor"])
     if re.search(r"<h1>Hoofdstuk\b", result):
         result = re.sub(r"(<h1>Hoofdstuk\b)", chapter_anchor + "\n" + r"\1", result, count=1)
     elif re.search(r"^#\s+", result, flags=re.MULTILINE):
@@ -353,7 +368,7 @@ def add_toc_anchors(md_text: str, entry: dict) -> str:
         result = chapter_anchor + "\n\n" + result
 
     for paragraph in entry.get("paragraphs", []):
-        paragraph_anchor = anchor_span(paragraph["anchor"])
+        paragraph_anchor = anchor_block(paragraph["anchor"])
         direct_heading = re.compile(rf"(^#\s+{re.escape(paragraph['nr'])}\b.*$)", flags=re.MULTILINE)
         if direct_heading.search(result):
             result = direct_heading.sub(paragraph_anchor + "\n" + r"\1", result, count=1)
@@ -512,6 +527,7 @@ def render_formuleoverzicht_html(per_chapter: list[dict]) -> str:
 # Asset handling
 # ---------------------------------------------------------------------------
 ASSET_REF_RE = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+HTML_IMG_SRC_RE = re.compile(r'(<img\b[^>]*\bsrc=")([^"]+)(")', re.IGNORECASE)
 
 def rewrite_chapter_asset_paths(md: str) -> str:
     """Normalize image paths within chapter markdown to point to <book>/_assets/."""
@@ -537,6 +553,13 @@ def referenced_asset_names(md_text: str) -> set[str]:
             names.add(filename[:-4] + ".png")
         elif filename.endswith(".png"):
             names.add(filename[:-4] + ".svg")
+    for match in HTML_IMG_SRC_RE.finditer(md_text):
+        path = match.group(2)
+        if path.startswith(("http://", "https://", "data:")):
+            continue
+        filename = os.path.basename(path)
+        if filename:
+            names.add(filename)
     return names
 
 
@@ -544,8 +567,17 @@ def collect_assets(chapter_dirs: list[Path], book_assets_dir: Path, book_md_text
     book_assets_dir.mkdir(parents=True, exist_ok=True)
     needed_names = referenced_asset_names(book_md_text)
     copied = 0
-    for chapter_dir in chapter_dirs:
-        src = chapter_dir / "_assets"
+    for source in chapter_dirs:
+        if source.is_file():
+            if source.name not in needed_names:
+                continue
+            dest = book_assets_dir / source.name
+            if dest.exists() and filecmp.cmp(source, dest, shallow=False):
+                continue
+            shutil.copy2(source, dest)
+            copied += 1
+            continue
+        src = source / "_assets"
         if not src.is_dir():
             continue
         for asset in src.iterdir():
@@ -572,35 +604,126 @@ def verify_asset_refs(book_md_text: str, book_assets_dir: Path) -> list[str]:
         png_candidate = book_assets_dir / filename.replace(".svg", ".png")
         if not png_candidate.exists() and not (book_assets_dir / filename).exists():
             missing.append(filename)
+    for match in HTML_IMG_SRC_RE.finditer(book_md_text):
+        path = match.group(2)
+        if path.startswith(("http://", "https://", "data:")):
+            continue
+        filename = os.path.basename(path)
+        if filename and not (book_assets_dir / filename).exists():
+            missing.append(filename)
     return missing
 
 # ---------------------------------------------------------------------------
 # PDF build helpers (ported from build_chapter.py)
 # ---------------------------------------------------------------------------
 def embed_images(md: str, asset_dir: Path) -> str:
+    def data_uri_for(filename: str) -> str | None:
+        full = asset_dir / filename
+        if not full.exists():
+            return None
+        ext = full.suffix.lower()
+        mime = "image/png"
+        if ext == ".jpg" or ext == ".jpeg":
+            mime = "image/jpeg"
+        elif ext == ".webp":
+            mime = "image/webp"
+        elif ext == ".svg":
+            mime = "image/svg+xml"
+        b64 = base64.b64encode(full.read_bytes()).decode()
+        return f"data:{mime};base64,{b64}"
+
     def replacer(match):
         alt = match.group(1)
         path = match.group(2)
         if path.startswith(("http://", "https://", "data:")):
             return match.group(0)
         filename = os.path.basename(path).replace(".svg", ".png")
-        full = asset_dir / filename
-        if full.exists():
-            b64 = base64.b64encode(full.read_bytes()).decode()
-            return f"![{alt}](data:image/png;base64,{b64})"
-        print(f"  Warning: missing {full}", file=sys.stderr)
+        data_uri = data_uri_for(filename)
+        if data_uri:
+            return f"![{alt}]({data_uri})"
+        print(f"  Warning: missing {asset_dir / filename}", file=sys.stderr)
         return match.group(0)
-    return ASSET_REF_RE.sub(replacer, md)
+
+    def html_img_replacer(match):
+        prefix, path, suffix = match.group(1), match.group(2), match.group(3)
+        if path.startswith(("http://", "https://", "data:")):
+            return match.group(0)
+        data_uri = data_uri_for(os.path.basename(path))
+        if data_uri:
+            return f"{prefix}{data_uri}{suffix}"
+        print(f"  Warning: missing {asset_dir / os.path.basename(path)}", file=sys.stderr)
+        return match.group(0)
+
+    md = ASSET_REF_RE.sub(replacer, md)
+    return HTML_IMG_SRC_RE.sub(html_img_replacer, md)
+
+def strip_pandoc_stylesheets(html: str) -> str:
+    """Remove Pandoc-owned style blocks from <head>, independent of version."""
+    def strip_head(match: re.Match) -> str:
+        cleaned = PANDOC_STYLE_RE.sub("", match.group(2))
+        return f"{match.group(1)}{cleaned}{match.group(3)}"
+
+    cleaned, count = HEAD_RE.subn(strip_head, html, count=1)
+    if count != 1:
+        raise ValueError("Pandoc HTML is missing a <head> element")
+    return cleaned
+
+def detect_toolchain_versions() -> dict[str, str]:
+    """Return observed build-tool versions for reproducibility logs."""
+    pandoc = subprocess.run(
+        ["pandoc", "--version"], capture_output=True, text=True, check=False
+    )
+    pandoc_version = "unavailable"
+    if pandoc.returncode == 0 and pandoc.stdout.strip():
+        pandoc_version = pandoc.stdout.splitlines()[0].strip()
+    try:
+        weasyprint_version = importlib.metadata.version("weasyprint")
+    except importlib.metadata.PackageNotFoundError:
+        weasyprint_version = "unavailable"
+    return {
+        "python": sys.version.split()[0],
+        "pandoc": pandoc_version,
+        "weasyprint": weasyprint_version,
+    }
 
 def wrap_exercises_simple(html: str) -> str:
-    html = re.sub(
-        r"<p><strong>(Opgave \d+)",
-        r'</div><div class="exercise"><p><strong>\1',
-        html,
+    """Wrap exercise blocks without emitting stray or cross-section divs."""
+    token_re = re.compile(
+        r'(<p><strong>Opgave\s+\d+\b|<div class="page-break"></div>|'
+        r'<h[123]\b|</body>)',
+        re.IGNORECASE,
     )
-    html = html.replace('</div><div class="exercise">', '<div class="exercise">', 1)
-    html = re.sub(r"(<h[23])", r"</div>\1", html)
-    return html
+    pieces: list[str] = []
+    last = 0
+    open_exercise = False
+
+    for match in token_re.finditer(html):
+        token = match.group(0)
+        pieces.append(html[last:match.start()])
+
+        if token.lower().startswith("<p><strong>opgave"):
+            if open_exercise:
+                pieces.append("</div>")
+            pieces.extend(('<div class="exercise">', token))
+            open_exercise = True
+        else:
+            if open_exercise:
+                pieces.append("</div>")
+                open_exercise = False
+            pieces.append(token)
+
+        last = match.end()
+
+    pieces.append(html[last:])
+    if open_exercise:
+        pieces.append("</div>")
+    wrapped = "".join(pieces)
+    return re.sub(
+        r'(<h3\b[^>]*>[^<]*</h3>\s*)<div class="exercise">',
+        r'<div class="exercise">\1',
+        wrapped,
+        flags=re.IGNORECASE,
+    )
 
 CHAPTER_FRONT_OPEN_RE = re.compile(r'<div class="chapter-front">')
 DIV_TAG_RE = re.compile(r"<(/?)div\b[^>]*>")
@@ -747,8 +870,12 @@ BOOK_CSS = """<style>
 }
 
 /* Suppress running footer on the cover */
-@page cover { @bottom-left { content: ""; } @bottom-center { content: ""; } }
-.book-cover { page: cover; }
+@page cover {
+  size: A4;
+  margin: 0;
+  @bottom-left { content: ""; }
+  @bottom-center { content: ""; }
+}
 
 body {
   font-family: Arial, 'DejaVu Sans', sans-serif;
@@ -769,14 +896,44 @@ p { margin: 0 0 10pt 0; }
 
 /* Cover */
 .book-cover {
+  page: cover;
   break-after: page;
-  height: 85vh;
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  background: #F7FAFC;
 }
-.book-cover-inner { max-width: 80%; }
+.book-cover-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book-cover-shade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:
+    linear-gradient(105deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 38%, rgba(255, 255, 255, 0.20) 68%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, rgba(10, 42, 62, 0.10) 0%, rgba(10, 42, 62, 0) 34%, rgba(10, 42, 62, 0.14) 100%);
+}
+.book-cover-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 116mm;
+  margin: 31mm 20mm 0 24mm;
+}
 .book-cover .book-eyebrow {
   font-size: 13pt;
   color: #1A5276;
@@ -785,22 +942,23 @@ p { margin: 0 0 10pt 0; }
   margin: 0 0 18pt 0;
 }
 .book-cover .book-title {
-  font-size: 36pt;
-  color: #1A5276;
-  border: none;
-  padding: 0;
-  margin: 0 0 24pt 0;
-  line-height: 1.15;
+  font-size: 34pt;
+  color: #123F5D;
+  border-bottom: 2px solid #1A5276;
+  padding: 0 0 8pt 0;
+  margin: 0 0 14pt 0;
+  line-height: 1.12;
   font-weight: bold;
 }
 .book-cover .book-edition {
   font-size: 13pt;
-  color: #555;
-  margin: 0 0 36pt 0;
+  color: #2D3748;
+  margin: 0 0 28pt 0;
+  font-weight: bold;
 }
 .book-cover .book-school {
   font-size: 14pt;
-  color: #1A5276;
+  color: #123F5D;
   margin: 0;
   font-weight: bold;
 }
@@ -890,7 +1048,10 @@ p { margin: 0 0 10pt 0; }
   content: target-counter(attr(href), page);
 }
 .book-toc-anchor {
-  display: inline;
+  display: block;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
 }
 
 /* ==========================================================================
@@ -1070,13 +1231,19 @@ figcaption { font-weight: bold; font-size: 10.5pt; color: #1a1a1a; text-align: l
 img { max-width: 100%; width: 100%; display: block; margin: 14pt auto; break-inside: avoid; }
 p + figure, p + p > img { break-before: avoid; }
 
-/* Exercises */
-.exercise { margin-bottom: 14pt; orphans: 2; widows: 2; }
+/* Keep an exercise together whenever it fits on one page. */
+.exercise {
+  margin-bottom: 14pt;
+  orphans: 2;
+  widows: 2;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
 .exercise > p:first-child { break-after: avoid; page-break-after: avoid; }
 .exercise p { margin: 0 0 1pt 0; }
 
 /* Misc */
-code { background: #EDF2F7; padding: 1pt 5pt; border-radius: 3px; font-family: 'Consolas', 'DejaVu Sans Mono', monospace; font-size: 10pt; }
+code { background: #EDF2F7; padding: 1pt 5pt; border-radius: 3px; font-family: 'Consolas', 'DejaVu Sans Mono', monospace; font-size: 10pt; white-space: normal; overflow-wrap: anywhere; }
 hr { border: none; border-top: 1px solid #BBB; margin: 18pt 0; }
 em { color: #444; }
 ul, ol { margin: 0 0 10pt 0; padding-left: 20pt; }
@@ -1095,10 +1262,16 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
     book_title = book["title"]
     book_title_full = f"Boek {book['nr']} {book_title}"
     book_output_dir = lessen_root / f"Boek {book['nr']} - {book_title}"
+    cover_image_source = (book.get("cover_image_source") or "").strip()
 
     # 1. Locate chapters inside the book folder + load hoofdstuk.md
     chapter_data: list[tuple[str, Path, str, str]] = []
     asset_sources: list[Path] = []
+    if cover_image_source:
+        cover_source_path = platform_root / cover_image_source
+        if not cover_source_path.exists():
+            raise FileNotFoundError(f"Book cover image source not found: {cover_source_path}")
+        asset_sources.append(cover_source_path)
     for chapter_spec in manifest["chapters"]:
         if isinstance(chapter_spec, str):
             chapter_nr = chapter_spec
@@ -1222,13 +1395,9 @@ def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: d
         raise RuntimeError(f"Pandoc error: {result.stderr.decode()}")
     html = result.stdout.decode("utf-8")
 
-    # 3. Strip Pandoc default stylesheet
-    html = re.sub(
-        r"<style>\s*/\* Default styles provided by pandoc.*?</style>",
-        "",
-        html,
-        flags=re.DOTALL,
-    )
+    # 3. Strip every Pandoc-owned head stylesheet. Pandoc 3.x stylesheet
+    # comments vary by release, so matching a comment is not reproducible.
+    html = strip_pandoc_stylesheets(html)
 
     # 4. Wrap exercises (only in content region; skip chapter-front and book-* divs)
     html = wrap_exercises_in_book(html)
@@ -1282,6 +1451,12 @@ def md_to_pdf(book_md: str, book_output_dir: Path, book_title_full: str, book: d
 def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
     print(f"=== Loading manifest: {manifest_path.name} ===")
     manifest = load_manifest(manifest_path)
+    versions = detect_toolchain_versions()
+    print(
+        "Toolchain "
+        f"(policy: {TOOLCHAIN_RECORD.name}): Python {versions['python']}; "
+        f"{versions['pandoc']}; WeasyPrint {versions['weasyprint']}"
+    )
 
     print(f"\n=== Assembling book ===")
     book_md, asset_sources, book_title_full, book_output_dir, book = assemble_book_md(

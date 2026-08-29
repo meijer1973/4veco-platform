@@ -144,12 +144,13 @@ function isPartBCompanionPath(filePath) {
 function isPartATextbookPath(filePath) {
   const p = normalizedLower(filePath);
   const base = basenameLower(filePath).replace(/\u2013/g, '-');
-  if (base === 'build_pdf.py') return true;
+  if (base === 'build_pdf.py' || base === 'build_chapter.py') return true;
   if (/(^|\/)\d+\.\d+\.\d+-review\.md$/.test(p)) return true;
   if (/(^|\/)\d+\.\d+\.\d+-textbook-handoff\.md$/.test(p)) return true;
   if (/(^|\/)\d+\.\d+\.\d+-target-contract\.md$/.test(p)) return true;
   if (/(^|\/)_assets\/.+_(fig|we|ex)_.+\.(svg|png|jpg|jpeg|webp)$/.test(p)) return true;
-  return /\s-\s(paragraaf|opgaven|antwoorden|samenvatting|toets|toetsmatrijs)\.(md|html|pdf)$/.test(base);
+  if (/(^|\/)_assets\/book-\d+-cover\.(png|jpg|jpeg|webp|svg)$/.test(p)) return true;
+  return /\s-\s(paragraaf|opgaven|antwoorden|samenvatting|toets|toetsmatrijs|hoofdstuk|boek)\.(md|html|pdf)$/.test(base);
 }
 
 function classifyPath(filePath) {
@@ -436,7 +437,7 @@ function readJson(filePath) {
 }
 
 function changedPathsFromGit(base, head, cwd = process.cwd()) {
-  const result = spawnSync('git', ['diff', '--name-only', '--diff-filter=ACMRTD', `${base}...${head}`], {
+  const result = spawnSync('git', ['-c', 'core.quotepath=false', 'diff', '--name-only', '--diff-filter=ACMRTD', `${base}...${head}`], {
     cwd,
     encoding: 'utf8',
   });
