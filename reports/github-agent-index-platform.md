@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-29T12:47:22.994Z
+Generated: 2026-08-29T15:07:19.278Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/bundle-lane-ci-reliability-20260829`
-Source commit: `2b78f8fe61f3c1fb1a5f5abd0b42209d1169e5f6`
-Files indexed: 7452
+Source commit: `0357701620f35fa4c956f1aea42a7d0f1af17188`
+Files indexed: 7453
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2590,7 +2590,7 @@ Count: 1008
 
 ## reports
 
-Count: 4770
+Count: 4771
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5185,6 +5185,7 @@ Count: 4770
 - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md
 - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md
 - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md
 - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md
 - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md
 - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md
