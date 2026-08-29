@@ -1658,23 +1658,19 @@ OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
 ```text
 
 ```
-## npm.cmd test -- --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
+## jest.cmd --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:10:31.928Z`
-- finished_at: `2026-08-25T15:11:43.082Z`
-- duration_ms: `71154`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:56:10.812Z`
+- finished_at: `2026-08-27T12:57:37.626Z`
+- duration_ms: `86814`
 - exit_code: `0`
-- stdout_sha256: `4ec906cb678d5864ea5e7675f789ccbb7249bd1a2178b712ff7b61f816aa2728`
-- stderr_sha256: `89ecf5b150e06715bc5634839a845a4312763d05eede0d463c7c4e324f7ff676`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `627dd2a046a71b85f12d7ac6b2adbeb9fd19f6b5c7d0455acb81b1c93d6b903a`
 
 ### stdout excerpt
 
 ```text
-
-> 4veco-platform@1.0.0 test
-> jest --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
-
 
 ```
 
@@ -1682,48 +1678,47 @@ OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
 
 ```text
 Test Suites: 1 passed, 1 total
-Tests:       40 passed, 40 total
+Tests:       70 passed, 70 total
 Snapshots:   0 total
-Time:        70.428 s, estimated 77 s
+Time:        86.247 s, estimated 94 s
 Ran all test suites matching build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js.
 
 ```
-## npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base origin/main --head bf8349e37b8520618f5dcd46561921860253333d --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
+## node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base 9c9d3cc7fa8e72d536e03af192f53f7079823dbe --head a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41 --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:12:00.407Z`
-- finished_at: `2026-08-25T15:12:27.160Z`
-- duration_ms: `26753`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:57:45.066Z`
+- finished_at: `2026-08-27T12:58:16.433Z`
+- duration_ms: `31367`
 - exit_code: `0`
-- stdout_sha256: `848e60ac48377d3fe1f49668ff441f09a8c68d57ae4e36378689453d12d21f5d`
+- stdout_sha256: `4f6e8a522609d438d9993b0ec7cb585f4f29d79c8fb03dac4b27ded443bfe1e6`
 - stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
 
 ### stdout excerpt
 
 ```text
-
-> 4veco-platform@1.0.0 check:y1-golden-rollout-wave-1
-> node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base origin/main --head bf8349e37b8520618f5dcd46561921860253333d --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
-
 {
   "ok": true,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "event_mode": "manual",
   "scope_mode": "required",
   "base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
-  "head_sha": "bf8349e37b8520618f5dcd46561921860253333d",
-  "scope_base_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
-  "scope_head_sha": "bf8349e37b8520618f5dcd46561921860253333d",
+  "head_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+  "scope_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "scope_head_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
   "scope_attestation_triggered": true,
   "changed_paths": [
     "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
     "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
     "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
     "references/data/exercises/y1-golden-rollout-wave-1.json",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-corrections.md",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round1.md",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round2.md",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
@@ -1745,15 +1740,631 @@ Ran all test suites matching build-scripts/sprints/check-y1-golden-rollout-wave-
 ```text
 
 ```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:58:37.810Z`
+- finished_at: `2026-08-27T12:58:37.931Z`
+- duration_ms: `121`
+- exit_code: `0`
+- stdout_sha256: `9654bc357ca2fdfd5964f1814d7e587b462c55a870a9ec0f81c25ed085e21e84`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-workflow-currentness
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:58:38.282Z`
+- finished_at: `2026-08-27T12:58:39.135Z`
+- duration_ms: `853`
+- exit_code: `0`
+- stdout_sha256: `b005a2910b0a61d9062746983535bb4fae0ce424adfc1d74efdf20c7fa3b67f1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-workflow-currentness
+> node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
+
+OK EXERCISE-WORKFLOW-CURRENTNESS stale-path/currentness sweep
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-authority-hygiene
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:58:39.403Z`
+- finished_at: `2026-08-27T12:58:39.737Z`
+- duration_ms: `334`
+- exit_code: `1`
+- stdout_sha256: `97717507ba8c10686c5c6f511edf579847b44ff1b8b09c4492b0196a5fc8c96c`
+- stderr_sha256: `590705de7d92a5818b387e3f3396600ffde23d538538ea8e22c572f2052bb753`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-authority-hygiene
+> node build-scripts/sprints/check-exercise-authority-hygiene.js
+
+
+```
+
+### stderr excerpt
+
+```text
+EXERCISE-AUTHORITY-HYGIENE check failed: build-scripts/sprints/fixtures/golden-ticket-reference.html hash mismatch in manifest
+
+```
+## npm.cmd run check:scale-proof-3p-product-path
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:58:55.350Z`
+- finished_at: `2026-08-27T12:58:55.772Z`
+- duration_ms: `422`
+- exit_code: `0`
+- stdout_sha256: `a7f4fa61ebb03bad1599405e0a91d5f82ec5b7d64534aae761fef00227a46c2e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scale-proof-3p-product-path
+> node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js
+
+OK SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1 proof: scale_gate_1_ready_for_human_review
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:review-throughput -- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:58:56.141Z`
+- finished_at: `2026-08-27T12:58:56.438Z`
+- duration_ms: `297`
+- exit_code: `1`
+- stdout_sha256: `b0a3656db7bee4e9ff3947c9683741d3019b16962e7fa3af9ba76d872d0d6044`
+- stderr_sha256: `fbcf5f3ca22c38b8ad876938b5bba9caffa038cf85c403aadeb67428531a9730`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
+
+
+```
+
+### stderr excerpt
+
+```text
+Review throughput packet check failed: paired_prs requires a non-empty bundle_id
+
+```
+## npm.cmd run check:review-throughput -- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:18.338Z`
+- finished_at: `2026-08-27T12:59:18.740Z`
+- duration_ms: `402`
+- exit_code: `0`
+- stdout_sha256: `f4b5868f42465f4ae4c8d878580f34ab6be7ee0e491e86f78981926ec30beab4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
+
+OK review throughput packet: Y1-GOLDEN-ROLLOUT-WAVE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:19.100Z`
+- finished_at: `2026-08-27T12:59:19.195Z`
+- duration_ms: `95`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:19.546Z`
+- finished_at: `2026-08-27T12:59:19.608Z`
+- duration_ms: `62`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:19.863Z`
+- finished_at: `2026-08-27T12:59:19.931Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:agent-index-freshness
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:20.193Z`
+- finished_at: `2026-08-27T12:59:20.577Z`
+- duration_ms: `384`
+- exit_code: `0`
+- stdout_sha256: `7b6c7cd80a41f0f5818f6e96329d2a6923a8d068d095946047bdd67626f33607`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-index-freshness
+> node build-scripts/reports/check-agent-index-freshness.js
+
+{
+  "ok": true,
+  "checks": [
+    {
+      "label": "4veco-platform",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+      "head": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+      "source_ref": "HEAD",
+      "target_commit": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    },
+    {
+      "label": "4veco-lessen",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "source_ref": "origin/main",
+      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    }
+  ],
+  "failures": [],
+  "warnings": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:20.836Z`
+- finished_at: `2026-08-27T12:59:21.175Z`
+- duration_ms: `339`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:33.459Z`
+- finished_at: `2026-08-27T12:59:33.915Z`
+- duration_ms: `456`
+- exit_code: `0`
+- stdout_sha256: `7dee4cdddd0c3b7d6feced90a21c3e1ccc199b85e0097e2a55eee7572913ab59`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:paragraph-lane-scope
+> node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD
+
+Paragraph lane scope: PASS (shared)
+- shared platform: 4
+  - build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js
+  - build-scripts/sprints/check-y1-golden-rollout-wave-1.js
+  - build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
+  - references/data/exercises/y1-golden-rollout-wave-1.json
+- review evidence: 13
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md
+  - reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:34.254Z`
+- finished_at: `2026-08-27T12:59:34.323Z`
+- duration_ms: `69`
+- exit_code: `0`
+- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T12:59:34.655Z`
+- finished_at: `2026-08-27T12:59:35.028Z`
+- duration_ms: `373`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `67d67641b716614f9add19c031d7c7851ffc1f3e041d3d145883c5ff1b374e89`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+check-bundle-urls: URL points outside gate directory: https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json
+Sprint bundle check failed: validator failed: node build-scripts\sprints\check-bundle-urls.js GATE-Y1-GOLDEN-ROLLOUT-WAVE-1
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:00:36.672Z`
+- finished_at: `2026-08-27T13:00:37.213Z`
+- duration_ms: `541`
+- exit_code: `0`
+- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js Y1-GOLDEN-ROLLOUT-WAVE-1
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:00:37.559Z`
+- finished_at: `2026-08-27T13:00:37.635Z`
+- duration_ms: `76`
+- exit_code: `0`
+- stdout_sha256: `c4758a66ee14f7bec130a7c77093fab1114b702a0ca8eddc4873ee5b6c534f90`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: Y1-GOLDEN-ROLLOUT-WAVE-1 (66 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run finalization:freshness
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:00:37.969Z`
+- finished_at: `2026-08-27T13:00:39.081Z`
+- duration_ms: `1112`
+- exit_code: `0`
+- stdout_sha256: `34ee2b86d70760be363c1fa42523cd5f9ace579a53231026542a9e889341fcea`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 finalization:freshness
+> node build-scripts/review-gates/finalization-freshness-proof.js
+
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-27T13:00:38.984Z",
+  "repository": "meijer1973/4veco-platform",
+  "head_sha": "a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41",
+  "remote": "origin",
+  "remote_main_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "origin_main_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "remote_main_matches_origin_main": true,
+  "remote_main_is_ancestor_of_head": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "working_tree_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b",
+      "remote_main_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b"
+    },
+    {
+      "path": "docs/review/pr-readiness-routing-policy.md",
+      "working_tree_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0",
+      "remote_main_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0"
+    },
+    {
+      "path": "docs/review/pr-integration-lane-policy.md",
+      "working_tree_sha256": "4afb80ebfedfeb50349c4ecbf37a2c4db3fbf165fa6abfb58302d3942d108d32",
+      "remote_main_sha256": "4afb80ebfedfeb50349c4ecbf37a2c4db3fbf165fa6abfb58302d3942d108d32"
+    }
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
 ## npm.cmd run check:platform
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:12:31.943Z`
-- finished_at: `2026-08-25T15:16:02.633Z`
-- duration_ms: `210690`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:00:45.973Z`
+- finished_at: `2026-08-27T13:04:46.188Z`
+- duration_ms: `240215`
+- exit_code: `1`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `3171e9c75e59c6653d97348da8de353b3f90c1261c209dcfc848417261647d80`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+FAIL build-scripts/review-gates/pr-readiness-router.test.js
+  ● Test suite failed to run
+
+    Cannot find module 'ajv/dist/2020' from 'build-scripts/review-gates/pr-readiness-router.test.js'
+
+      1 | const fs = require('fs');
+      2 | const path = require('path');
+    > 3 | const Ajv2020 = require('ajv/dist/2020');
+        |                 ^
+      4 | const addFormats = require('ajv-formats');
+      5 | const {
+      6 |   classifyPrReadiness,
+
+      at Resolver._throwModNotFoundError (../../../4veco/4veco-platform/node_modules/jest-resolve/build/index.js:863:11)
+      at Object.require (build-scripts/review-gates/pr-readiness-router.test.js:3:17)
+
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+FAIL engines/tests/presentation-v2-pptx-derivative.test.js
+  ● Test suite failed to run
+
+    Cannot find module 'jszip' from 'engines/tests/presentation-v2-pptx-derivative.test.js'
+
+      3 | const path = require('path');
+      4 | const { execFileSync } = require('child_process');
+    > 5 | const JSZip = require('jszip');
+        |               ^
+      6 |
+      7 | const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
+      8 | const {
+
+      at Resolver._throwModNotFoundError (../../../4veco/4veco-platform/node_modules/jest-resolve/build/index.js:863:11)
+      at Object.require (engines/tests/presentation-v2-pptx-derivative.test.js:5:15)
+
+FAIL engines/tests/newsdetective-v2-interaction.test.js
+  ● Test suite failed to run
+
+    Cannot find module 'jsdom' from 'engines/tests/newsdetective-v2-interaction.test.js'
+
+      1 | const fs = require('fs');
+      2 | const path = require('path');
+    > 3 | const { JSDOM } = require('jsdom');
+        |                   ^
+      4 | const NewsDetectiveEngine = require('../newsdetective-engine');
+      5 |
+      6 | const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
+
+      at Resolver._throwModNotFoundError (../../../4veco/4veco-platform/node_modules/jest-resolve/build/index.js:863:11)
+      at Object.require (engines/tests/newsdetective-v2-interaction.test.js:3:19)
+
+FAIL engines/tests/golden-presentation-reference.test.js
+  ● Test suite failed to run
+
+    Cannot find module 'jsdom' from 'scripts/qa-presentation-web.js'
+
+    Require stack:
+      scripts/qa-presentation-web.js
+      engines/tests/golden-presentation-reference.test.js
+
+      2 | const fs = require('fs');
+      3 | const path = require('path');
+    > 4 | const { JSDOM } = require('jsdom');
+        |                   ^
+      5 |
+      6
+...[truncated 3376 chars]
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:05:19.100Z`
+- finished_at: `2026-08-27T13:09:37.303Z`
+- duration_ms: `258203`
 - exit_code: `0`
 - stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
-- stderr_sha256: `7850e02c15d667f7354d2dde1e52b54f80c9d18f07f39e04c23f703d8ebee9b2`
+- stderr_sha256: `3b9ef417f4aefcf26c0fa76f50e1dd4fda6b1e3857145df1e49c94a0fff3fe77`
 
 ### stdout excerpt
 
@@ -1808,27 +2419,26 @@ Expected format: "X.Y Hoofdstuk Name"
   ⚠ Orphaned asset: 9.9.4_ex_1.svg
   ⚠ No _chapter-plan.md
 
-Test Suites: 6 skipped, 105 passed, 105 of 111 total
-Tests:       8 skipped, 1475 passed, 1483 total
+Test Suites: 6 skipped, 104 passed, 104 of 110 total
+Tests:       8 skipped, 1501 passed, 1509 total
 Snapshots:   0 total
-Time:        210.009 s, estimated 224 s
+Time:        257.485 s
 Ran all test suites.
 
 ```
-## node build-scripts/sprints/emit-gate-bundle-urls.js GATE-Y1-GOLDEN-ROLLOUT-WAVE-1
+## git diff --exit-code 9c9d3cc7fa8e72d536e03af192f53f7079823dbe..a86c617e0e9005c0bd75b0de9eb7163dd3f4fb41 -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:16:31.697Z`
-- finished_at: `2026-08-25T15:16:31.778Z`
-- duration_ms: `81`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:10:15.181Z`
+- finished_at: `2026-08-27T13:10:15.254Z`
+- duration_ms: `73`
 - exit_code: `0`
-- stdout_sha256: `c115a488de2a0bd29f9099effa4bc6510886ce50be25d5233cc324c77429bfc0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
 - stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
 
 ### stdout excerpt
 
 ```text
-wrote reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md (2 artifacts)
 
 ```
 
@@ -1837,98 +2447,21 @@ wrote reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md (2 artif
 ```text
 
 ```
-## node build-scripts/sprints/emit-url-index.js
+## git diff --check
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:16:37.873Z`
-- finished_at: `2026-08-25T15:16:37.954Z`
-- duration_ms: `81`
-- exit_code: `0`
-- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-wrote reports/url-index.md
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run dashboard:internal
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:16:41.356Z`
-- finished_at: `2026-08-25T15:16:41.718Z`
-- duration_ms: `362`
-- exit_code: `0`
-- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 dashboard:internal
-> node build-scripts/reports/internal-dashboard.js
-
-Internal dashboard written to reports\internal-dashboard\index.html
-Dashboard data written to reports\internal-dashboard\dashboard-data.json
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run agent:index
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:16:48.436Z`
-- finished_at: `2026-08-25T15:16:49.090Z`
-- duration_ms: `654`
-- exit_code: `0`
-- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 agent:index
-> node build-scripts/reports/github-agent-index.js
-
-Wrote reports\github-agent-index-platform.md
-Wrote reports\github-agent-index-platform.json
-Wrote reports\github-agent-index-lessen.md
-Wrote reports\github-agent-index-lessen.json
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:09.529Z`
-- finished_at: `2026-08-25T15:17:09.652Z`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:10:15.612Z`
+- finished_at: `2026-08-27T13:10:15.735Z`
 - duration_ms: `123`
-- exit_code: `0`
-- stdout_sha256: `d886b8bb693d07f8db0ba4e4b64efa6eecbb643a5fc087151fd456e8b52cb247`
+- exit_code: `2`
+- stdout_sha256: `259116d65817ca82204ef36e1e37b4ac38020142965daf0995eafa8e46bfe780`
 - stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
 
 ### stdout excerpt
 
 ```text
-OK sprint plan: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
+reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md:2356: trailing whitespace.
++      6
 
 ```
 
@@ -1937,20 +2470,21 @@ OK sprint plan: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-plan.md
 ```text
 
 ```
-## node build-scripts/sprints/check-sprint-plan.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md
+## git diff --check
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:09.982Z`
-- finished_at: `2026-08-25T15:17:10.094Z`
-- duration_ms: `112`
-- exit_code: `0`
-- stdout_sha256: `957161171e16445316952677ac7053e44bf5adf12ceebd82606cca2fa34c4502`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-27T13:10:34.559Z`
+- finished_at: `2026-08-27T13:10:34.686Z`
+- duration_ms: `127`
+- exit_code: `2`
+- stdout_sha256: `892c7c5cb8e6aa1dd77760d8c28e3830978d767119fbbf4a23813282e451099c`
 - stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
 
 ### stdout excerpt
 
 ```text
-OK sprint plan: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md
+reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md:2464: trailing whitespace.
+++      6
 
 ```
 
@@ -1959,560 +2493,19 @@ OK sprint plan: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.m
 ```text
 
 ```
-## npm.cmd run check:exercise-workflow-currentness
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:10.434Z`
-- finished_at: `2026-08-25T15:17:10.932Z`
-- duration_ms: `498`
-- exit_code: `0`
-- stdout_sha256: `b005a2910b0a61d9062746983535bb4fae0ce424adfc1d74efdf20c7fa3b67f1`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:exercise-workflow-currentness
-> node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
-
-OK EXERCISE-WORKFLOW-CURRENTNESS stale-path/currentness sweep
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:scale-proof-3p-product-path
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:11.197Z`
-- finished_at: `2026-08-25T15:17:11.498Z`
-- duration_ms: `301`
-- exit_code: `0`
-- stdout_sha256: `a7f4fa61ebb03bad1599405e0a91d5f82ec5b7d64534aae761fef00227a46c2e`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:scale-proof-3p-product-path
-> node build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js
-
-OK SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1 proof: scale_gate_1_ready_for_human_review
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:review-throughput -- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:11.750Z`
-- finished_at: `2026-08-25T15:17:12.056Z`
-- duration_ms: `306`
-- exit_code: `0`
-- stdout_sha256: `f4b5868f42465f4ae4c8d878580f34ab6be7ee0e491e86f78981926ec30beab4`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:review-throughput
-> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
-
-OK review throughput packet: Y1-GOLDEN-ROLLOUT-WAVE-1
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/reports/validate-report-json.js
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:12.306Z`
-- finished_at: `2026-08-25T15:17:12.369Z`
-- duration_ms: `63`
-- exit_code: `0`
-- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK report JSON contract: 14 report(s)
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/references/check-roadmap-version-index.js
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:12.650Z`
-- finished_at: `2026-08-25T15:17:12.714Z`
-- duration_ms: `64`
-- exit_code: `0`
-- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK roadmap version index: 152 entries
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/emit-url-index.js --check
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:12.968Z`
-- finished_at: `2026-08-25T15:17:13.031Z`
-- duration_ms: `63`
-- exit_code: `0`
-- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK url-index: reports/url-index.md is current
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:agent-index-freshness
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:13.287Z`
-- finished_at: `2026-08-25T15:17:13.699Z`
-- duration_ms: `412`
-- exit_code: `0`
-- stdout_sha256: `4348110192438ad4ac22f8f34b53e0c1e6cacab1be759558f26a988c7c3ca73c`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:agent-index-freshness
-> node build-scripts/reports/check-agent-index-freshness.js
-
-{
-  "ok": true,
-  "checks": [
-    {
-      "label": "4veco-platform",
-      "ok": true,
-      "skipped": false,
-      "failures": [],
-      "warnings": [],
-      "source_commit": "bf8349e37b8520618f5dcd46561921860253333d",
-      "head": "bf8349e37b8520618f5dcd46561921860253333d",
-      "source_ref": "HEAD",
-      "target_commit": "bf8349e37b8520618f5dcd46561921860253333d",
-      "accepted_parent_generated_tail": false,
-      "accepted_generated_index_tail_ref": null
-    },
-    {
-      "label": "4veco-lessen",
-      "ok": true,
-      "skipped": false,
-      "failures": [],
-      "warnings": [],
-      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-      "head": "f6ad546420b447d26baa11804a2939f9cc3b9f59",
-      "source_ref": "origin/main",
-      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-      "accepted_parent_generated_tail": false,
-      "accepted_generated_index_tail_ref": null
-    }
-  ],
-  "failures": [],
-  "warnings": []
-}
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:scope-language
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:13.950Z`
-- finished_at: `2026-08-25T15:17:14.282Z`
-- duration_ms: `332`
-- exit_code: `0`
-- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:scope-language
-> node build-scripts/sprints/check-scope-language.js --active
-
-OK scope-language check: active surfaces
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:14.563Z`
-- finished_at: `2026-08-25T15:17:14.623Z`
-- duration_ms: `60`
-- exit_code: `1`
-- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-- stderr_sha256: `ae45fece0de3da0aab50a7f854aa1078c2999b7e4695081e7b291a60f04c41c8`
-
-### stdout excerpt
-
-```text
-
-```
-
-### stderr excerpt
-
-```text
-Sprint result check failed: passed command lacks command-log exit_code 0 evidence: git -C C:/Projects/4veco-worktrees/y1-evidence-lesson-f09fd6 diff --check
-
-```
-## git diff --check HEAD
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:24.679Z`
-- finished_at: `2026-08-25T15:17:24.825Z`
-- duration_ms: `146`
+## "C:\\Projects\\4veco-worktrees\\book-heading-anchors-20260702\\4veco-platform\\node_modules\\.bin\\jest.cmd" build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js --runInBand
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-28T13:55:20.394Z`
+- finished_at: `2026-08-28T13:57:15.130Z`
+- duration_ms: `114736`
 - exit_code: `0`
 - stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `c3bc5c250228ad2b08e9b006eb05e6768bcb668e9c89f6fc157330186e576742`
 
 ### stdout excerpt
 
 ```text
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## git -C C:/Projects/4veco-worktrees/y1-evidence-lesson-f09fd6 diff --check
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:25.144Z`
-- finished_at: `2026-08-25T15:17:25.204Z`
-- duration_ms: `60`
-- exit_code: `0`
-- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## git diff --exit-code e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8..bf8349e37b8520618f5dcd46561921860253333d -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:25.543Z`
-- finished_at: `2026-08-25T15:17:25.608Z`
-- duration_ms: `65`
-- exit_code: `0`
-- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:17:25.837Z`
-- finished_at: `2026-08-25T15:17:25.895Z`
-- duration_ms: `58`
-- exit_code: `0`
-- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:18:43.005Z`
-- finished_at: `2026-08-25T15:18:43.518Z`
-- duration_ms: `513`
-- exit_code: `0`
-- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run dashboard:internal
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:18:59.043Z`
-- finished_at: `2026-08-25T15:18:59.459Z`
-- duration_ms: `416`
-- exit_code: `0`
-- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 dashboard:internal
-> node build-scripts/reports/internal-dashboard.js
-
-Internal dashboard written to reports\internal-dashboard\index.html
-Dashboard data written to reports\internal-dashboard\dashboard-data.json
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run agent:index
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:18:59.771Z`
-- finished_at: `2026-08-25T15:19:00.449Z`
-- duration_ms: `678`
-- exit_code: `0`
-- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 agent:index
-> node build-scripts/reports/github-agent-index.js
-
-Wrote reports\github-agent-index-platform.md
-Wrote reports\github-agent-index-platform.json
-Wrote reports\github-agent-index-lessen.md
-Wrote reports\github-agent-index-lessen.json
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:agent-index-freshness
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:19:00.744Z`
-- finished_at: `2026-08-25T15:19:01.135Z`
-- duration_ms: `391`
-- exit_code: `0`
-- stdout_sha256: `4348110192438ad4ac22f8f34b53e0c1e6cacab1be759558f26a988c7c3ca73c`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:agent-index-freshness
-> node build-scripts/reports/check-agent-index-freshness.js
-
-{
-  "ok": true,
-  "checks": [
-    {
-      "label": "4veco-platform",
-      "ok": true,
-      "skipped": false,
-      "failures": [],
-      "warnings": [],
-      "source_commit": "bf8349e37b8520618f5dcd46561921860253333d",
-      "head": "bf8349e37b8520618f5dcd46561921860253333d",
-      "source_ref": "HEAD",
-      "target_commit": "bf8349e37b8520618f5dcd46561921860253333d",
-      "accepted_parent_generated_tail": false,
-      "accepted_generated_index_tail_ref": null
-    },
-    {
-      "label": "4veco-lessen",
-      "ok": true,
-      "skipped": false,
-      "failures": [],
-      "warnings": [],
-      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-      "head": "f6ad546420b447d26baa11804a2939f9cc3b9f59",
-      "source_ref": "origin/main",
-      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-      "accepted_parent_generated_tail": false,
-      "accepted_generated_index_tail_ref": null
-    }
-  ],
-  "failures": [],
-  "warnings": []
-}
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/reports/validate-report-json.js
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:19:01.376Z`
-- finished_at: `2026-08-25T15:19:01.444Z`
-- duration_ms: `68`
-- exit_code: `0`
-- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK report JSON contract: 14 report(s)
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:19:01.668Z`
-- finished_at: `2026-08-25T15:19:01.730Z`
-- duration_ms: `62`
-- exit_code: `0`
-- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:19:01.978Z`
-- finished_at: `2026-08-25T15:19:02.405Z`
-- duration_ms: `427`
-- exit_code: `0`
-- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd test -- --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:38:18.612Z`
-- finished_at: `2026-08-25T15:39:30.802Z`
-- duration_ms: `72190`
-- exit_code: `0`
-- stdout_sha256: `4ec906cb678d5864ea5e7675f789ccbb7249bd1a2178b712ff7b61f816aa2728`
-- stderr_sha256: `1baa57fbe0f3eec2bf5651b008b805579c43fc93895816661188b53c2154093b`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 test
-> jest --runInBand build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
-
 
 ```
 
@@ -2520,38 +2513,100 @@ OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
 
 ```text
 Test Suites: 1 passed, 1 total
-Tests:       42 passed, 42 total
+Tests:       80 passed, 80 total
 Snapshots:   0 total
-Time:        71.307 s
+Time:        98.24 s, estimated 126 s
 Ran all test suites matching build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js.
 
 ```
-## npm.cmd run check:y1-golden-rollout-wave-1 -- --event-mode manual --scope-mode required --base origin/main --head 4b49d82d4a35915ef586f0de01554068fa7b5803 --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
+## "C:\\Projects\\4veco-worktrees\\book-heading-anchors-20260702\\4veco-platform\\node_modules\\.bin\\jest.cmd" --runInBand
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:39:39.374Z`
-- finished_at: `2026-08-25T15:40:06.114Z`
-- duration_ms: `26740`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-28T13:57:26.671Z`
+- finished_at: `2026-08-28T14:01:51.614Z`
+- duration_ms: `264943`
 - exit_code: `0`
-- stdout_sha256: `d6242ce085cd12f3e495fbf97435b3c43b4d93ff3b619ac49230b8df561fc800`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `4b4ad852171f55b063f6ffa7a1a2e76255544bca64f74ac30f499b15ce5dc547`
 
 ### stdout excerpt
 
 ```text
 
-> 4veco-platform@1.0.0 check:y1-golden-rollout-wave-1
-> node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base origin/main --head 4b49d82d4a35915ef586f0de01554068fa7b5803 --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
+```
 
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 104 passed, 104 of 110 total
+Tests:       8 skipped, 1511 passed, 1519 total
+Snapshots:   0 total
+Time:        264.421 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base 9c9d3cc7fa8e72d536e03af192f53f7079823dbe --head 34a398374f3eecc3276cdd72a72636e4dda26e3c --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
+
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-28T14:02:30.253Z`
+- finished_at: `2026-08-28T14:03:01.140Z`
+- duration_ms: `30887`
+- exit_code: `0`
+- stdout_sha256: `2d594ae14611f1d6508a3bd2ef0642f4ef80c0c0563c0b97971e5c19caee76e7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
 {
   "ok": true,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
   "event_mode": "manual",
   "scope_mode": "required",
   "base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
-  "head_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
-  "scope_base_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
-  "scope_head_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+  "head_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c",
+  "scope_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "scope_head_sha": "34a398374f3eecc3276cdd72a72636e4dda26e3c",
   "scope_attestation_triggered": true,
   "changed_paths": [
     "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
@@ -2567,15 +2622,20 @@ Ran all test suites matching build-scripts/sprints/check-y1-golden-rollout-wave-
     "reports/internal-dashboard/index.html",
     "reports/json/y1-golden-rollout-wave-1-proof.json",
     "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+    "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md",
     "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-corrections.md",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round1.md",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-lead-review-round2.md",
-    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
     "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
@@ -2599,407 +2659,72 @@ Ran all test suites matching build-scripts/sprints/check-y1-golden-rollout-wave-
 ```text
 
 ```
-## npm.cmd run check:platform
+## node build-scripts/sprints/check-y1-golden-rollout-wave-1.js --event-mode manual --scope-mode required --base 9c9d3cc7fa8e72d536e03af192f53f7079823dbe --head b5a4bb38dfe3cc405a2ee1af6c633783f86d234a --lesson-base 071a465a03e287bc5768d88aabbec3e63b15ee09 --lesson-head f09fd6e88edc5049b026b16b0158e7e188091d2d
 
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:40:10.201Z`
-- finished_at: `2026-08-25T15:43:40.421Z`
-- duration_ms: `210220`
+- cwd: `C:\Projects\4veco-worktrees\y1-evidence-prerequisite-20260827\4veco-platform`
+- started_at: `2026-08-28T14:11:59.019Z`
+- finished_at: `2026-08-28T14:12:38.727Z`
+- duration_ms: `39708`
 - exit_code: `0`
-- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
-- stderr_sha256: `8ce8cad906efd8fa987aa933297ec936987b49954797772b238287f767cd8a1e`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:platform
-> jest --runInBand
-
-
-```
-
-### stderr excerpt
-
-```text
-Cannot parse chapter folder name: bad-name
-Expected format: "X.Y Hoofdstuk Name"
-  ⚠ Orphaned asset: 9.9.1_fig_1.svg
-  ✗ MISSING review report (X.Y.Z-review.md)
-  ⚠ No _chapter-plan.md
-  ⚠ Orphaned asset: 9.9.1_fig_1.svg
-  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
-  ⚠ No _chapter-plan.md
-  ⚠ Orphaned asset: 9.9.1_fig_1.svg
-  ✗ Part A review verdict is FAIL: 9.9.1-review.md
-  ⚠ No _chapter-plan.md
-  ⚠ Orphaned asset: 9.9.1_fig_1.svg
-  ⚠ No _chapter-plan.md
-  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
-  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
-  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
-  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
-  ⚠ No _chapter-plan.md
-  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
-  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
-  ⚠ No _chapter-plan.md
-  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
-  ⚠ Orphaned asset: 9.5.1_fig_1.svg
-  ⚠ Orphaned asset: 9.5.1_mc_1.svg
-  ⚠ No _chapter-plan.md
-  ⚠ Orphaned asset: 9.5.4_fig_1.svg
-  ⚠ No _chapter-plan.md
-  ✗ MISSING toetsmatrijs.md
-  ✗ Expected 3 PDFs, found 2
-  ⚠ Orphaned asset: 9.5.4_fig_1.svg
-  ⚠ No _chapter-plan.md
-  ✗ MISSING samenvatting.md
-  ✗ Expected 2 PDFs, found 1
-  ⚠ Orphaned asset: 9.5.1_fig_1.svg
-  ⚠ No _chapter-plan.md
-  ⚠ Orphaned asset: 9.5.1_mc_1.svg
-  ⚠ No _chapter-plan.md
-  ⚠ Orphaned asset: 9.9.4_ex_1.svg
-  ⚠ No _chapter-plan.md
-
-Test Suites: 6 skipped, 105 passed, 105 of 111 total
-Tests:       8 skipped, 1477 passed, 1485 total
-Snapshots:   0 total
-Time:        209.296 s, estimated 210 s
-Ran all test suites.
-
-```
-## git diff --exit-code e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8..4b49d82d4a35915ef586f0de01554068fa7b5803 -- references/data/exercise-authority-hygiene-manifest.json build-scripts/sprints/fixtures/golden-ticket-reference.html reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:17.464Z`
-- finished_at: `2026-08-25T15:44:17.519Z`
-- duration_ms: `55`
-- exit_code: `0`
-- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stdout_sha256: `61c65714acdfaff9d120e6b12b0fc32a788ed065486c4f863d841e0b7f6d9029`
 - stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
 
 ### stdout excerpt
 
 ```text
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/emit-gate-bundle-urls.js GATE-Y1-GOLDEN-ROLLOUT-WAVE-1
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:17.767Z`
-- finished_at: `2026-08-25T15:44:17.826Z`
-- duration_ms: `59`
-- exit_code: `0`
-- stdout_sha256: `c115a488de2a0bd29f9099effa4bc6510886ce50be25d5233cc324c77429bfc0`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-wrote reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md (2 artifacts)
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/emit-url-index.js
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:18.084Z`
-- finished_at: `2026-08-25T15:44:18.145Z`
-- duration_ms: `61`
-- exit_code: `0`
-- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-wrote reports/url-index.md
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run dashboard:internal
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:18.386Z`
-- finished_at: `2026-08-25T15:44:18.700Z`
-- duration_ms: `314`
-- exit_code: `0`
-- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 dashboard:internal
-> node build-scripts/reports/internal-dashboard.js
-
-Internal dashboard written to reports\internal-dashboard\index.html
-Dashboard data written to reports\internal-dashboard\dashboard-data.json
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run agent:index
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:18.942Z`
-- finished_at: `2026-08-25T15:44:19.442Z`
-- duration_ms: `500`
-- exit_code: `0`
-- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 agent:index
-> node build-scripts/reports/github-agent-index.js
-
-Wrote reports\github-agent-index-platform.md
-Wrote reports\github-agent-index-platform.json
-Wrote reports\github-agent-index-lessen.md
-Wrote reports\github-agent-index-lessen.json
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:review-throughput -- reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:19.705Z`
-- finished_at: `2026-08-25T15:44:19.995Z`
-- duration_ms: `290`
-- exit_code: `0`
-- stdout_sha256: `f4b5868f42465f4ae4c8d878580f34ab6be7ee0e491e86f78981926ec30beab4`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:review-throughput
-> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
-
-OK review throughput packet: Y1-GOLDEN-ROLLOUT-WAVE-1
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/reports/validate-report-json.js
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:20.259Z`
-- finished_at: `2026-08-25T15:44:20.331Z`
-- duration_ms: `72`
-- exit_code: `0`
-- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK report JSON contract: 14 report(s)
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:agent-index-freshness
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:20.574Z`
-- finished_at: `2026-08-25T15:44:20.972Z`
-- duration_ms: `398`
-- exit_code: `0`
-- stdout_sha256: `b50d1efdd94f5eda7b35f40bb8f2ae303e5f6041323af81aecae04eea731ee7a`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:agent-index-freshness
-> node build-scripts/reports/check-agent-index-freshness.js
-
 {
   "ok": true,
-  "checks": [
-    {
-      "label": "4veco-platform",
-      "ok": true,
-      "skipped": false,
-      "failures": [],
-      "warnings": [],
-      "source_commit": "4b49d82d4a35915ef586f0de01554068fa7b5803",
-      "head": "4b49d82d4a35915ef586f0de01554068fa7b5803",
-      "source_ref": "HEAD",
-      "target_commit": "4b49d82d4a35915ef586f0de01554068fa7b5803",
-      "accepted_parent_generated_tail": false,
-      "accepted_generated_index_tail_ref": null
-    },
-    {
-      "label": "4veco-lessen",
-      "ok": true,
-      "skipped": false,
-      "failures": [],
-      "warnings": [],
-      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-      "head": "f6ad546420b447d26baa11804a2939f9cc3b9f59",
-      "source_ref": "origin/main",
-      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-      "accepted_parent_generated_tail": false,
-      "accepted_generated_index_tail_ref": null
-    }
+  "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
+  "event_mode": "manual",
+  "scope_mode": "required",
+  "base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "head_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+  "scope_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+  "scope_head_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+  "scope_attestation_triggered": true,
+  "changed_paths": [
+    "build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js",
+    "build-scripts/sprints/check-y1-golden-rollout-wave-1.js",
+    "build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+    "references/data/exercises/y1-golden-rollout-wave-1.json",
+    "references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/y1-golden-rollout-wave-1-proof.json",
+    "reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json",
+    "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md",
+    "reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
+    "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md"
   ],
-  "failures": [],
-  "warnings": []
+  "screenshots_reusable": true,
+  "verified_rendered_renewal_count": 1,
+  "unresolved_changed_or_missing_input_count": 0,
+  "rendered_inputs_unchanged_through_exact_head": true,
+  "evidence_tail_paths": []
 }
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## npm.cmd run check:scope-language
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:21.208Z`
-- finished_at: `2026-08-25T15:44:21.522Z`
-- duration_ms: `314`
-- exit_code: `0`
-- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-> 4veco-platform@1.0.0 check:scope-language
-> node build-scripts/sprints/check-scope-language.js --active
-
-OK scope-language check: active surfaces
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## git -C C:/Projects/4veco-worktrees/y1-evidence-lesson-f09fd6 diff --check
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:21.758Z`
-- finished_at: `2026-08-25T15:44:21.810Z`
-- duration_ms: `52`
-- exit_code: `0`
-- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## git diff --check HEAD
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:22.076Z`
-- finished_at: `2026-08-25T15:44:22.184Z`
-- duration_ms: `108`
-- exit_code: `0`
-- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-result.js reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:22.429Z`
-- finished_at: `2026-08-25T15:44:22.484Z`
-- duration_ms: `55`
-- exit_code: `0`
-- stdout_sha256: `c3d89ad7151b7942a9a884a08212416db08cd690a45c7abf8588a73efcebc574`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK sprint result: reports\sprints\Y1-GOLDEN-ROLLOUT-WAVE-1-result.md
-
-```
-
-### stderr excerpt
-
-```text
-
-```
-## node build-scripts/sprints/check-sprint-bundle.js Y1-GOLDEN-ROLLOUT-WAVE-1 --complete
-
-- cwd: `C:\Projects\4veco-worktrees\book-heading-anchors-20260702\4veco-platform`
-- started_at: `2026-08-25T15:44:22.724Z`
-- finished_at: `2026-08-25T15:44:23.146Z`
-- duration_ms: `422`
-- exit_code: `0`
-- stdout_sha256: `992c103e14d9a3f9be97efae3f6ec83c2f7cd3c8138d34dc121487f6adcd93cc`
-- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
-
-### stdout excerpt
-
-```text
-OK sprint bundle: Y1-GOLDEN-ROLLOUT-WAVE-1 complete
 
 ```
 

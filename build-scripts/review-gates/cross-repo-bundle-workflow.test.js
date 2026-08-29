@@ -58,6 +58,12 @@ describe('cross-repo bundle workflow safety', () => {
     expect(authorizedBundleWorkflow).toContain('compatibility_workflow_run_id');
     expect(authorizedBundleWorkflow).toContain('bundle-summary.json');
     expect(authorizedBundleWorkflow).toContain('--allow-partial-resume');
+    expect(authorizedBundleWorkflow).toContain('payload_lead_review_json');
+    expect(authorizedBundleWorkflow).toContain('prepare_only');
+    expect(authorizedBundleWorkflow).toContain("$scriptArgs += '--prepare-only'");
+    expect(authorizedBundleWorkflow).toContain('prepare_only and dry_run are mutually exclusive');
+    expect(authorizedBundleWorkflow).toContain('bundle-payload-lead-review.json');
+    expect(authorizedBundleWorkflow).toContain("@('--payload-lead-review', $leadReviewPath)");
     expect(authorizedBundleWorkflow).toContain('timeout-minutes: 120');
   });
 
@@ -77,5 +83,15 @@ describe('cross-repo bundle workflow safety', () => {
     expect(integrationPolicy).toContain('workflow dispatch is not an evidence waiver');
     expect(integrationPolicy).toContain('must return an explicit');
     expect(agents).toContain('A delta-required dry-run also fails');
+  });
+
+  test('residual payload lead evidence is explicit and cannot be inferred from authorization', () => {
+    expect(authorizedBundleLane).toContain("optionValue(argv, '--payload-lead-review')");
+    expect(integrationPolicy).toContain('The payload lead-review record is review evidence, not authorization.');
+    expect(integrationPolicy).toContain('must not derive it from `APPROVE_BUNDLE_AND_MERGE`');
+    expect(integrationPolicy).toContain('would_create_exact_head_readiness');
+    expect(integrationPolicy).toContain('canonical decision digest');
+    expect(integrationPolicy).toContain('The required operational order is preparation');
+    expect(integrationPolicy).toContain('must not construct or publish');
   });
 });

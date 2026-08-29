@@ -1,13 +1,26 @@
 {
   "schema_version": 2,
   "sprint_id": "Y1-GOLDEN-ROLLOUT-WAVE-1",
-  "generated": "2026-08-25T15:35:20.659Z",
+  "generated": "2026-08-28T14:09:19.880Z",
   "purpose": "commit-bound rendered proof reuse attestation",
+  "source_provenance": {
+    "renewal_start_platform_sha": "e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8",
+    "selector_platform_sha": "8f612ac6755a299fe7457910001e58fac8cd7b83",
+    "reviewed_payload_sha": "4b49d82d4a35915ef586f0de01554068fa7b5803",
+    "sealed_evidence_sha": "aa06ada217b4ec8ac9f042f08100513381b30366"
+  },
+  "current_evidence": {
+    "platform_base_sha": "9c9d3cc7fa8e72d536e03af192f53f7079823dbe",
+    "reviewed_payload_sha": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "source_manifest": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json",
+    "binding_model": "historical_provenance_separate_from_current_lineage"
+  },
   "commit_chain": {
     "platform": {
       "capture_payload": "5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7",
       "old_pr_ci": "571d435a172240524ed96394a41682ef003bfcad",
-      "renewal_payload": "4b49d82d4a35915ef586f0de01554068fa7b5803"
+      "renewal_payload": "b5a4bb38dfe3cc405a2ee1af6c633783f86d234a"
     },
     "lesson": {
       "capture_payload": "071a465a03e287bc5768d88aabbec3e63b15ee09",
@@ -2400,7 +2413,7 @@
   "rendered_renewals": [
     {
       "evidence_path": "reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json",
-      "evidence_sha256": "0ae03b415ec1df81fd486c71e2a6566d6f3b230e51e34bf2041e660a78c76208",
+      "evidence_sha256": "152f5d507bc8049e42b40a0337eb2aeeb4f3dfff6324f86809030fe640cd452f",
       "capture_id": "112-normal-practice-desktop-light-opgaven",
       "lesson_path": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html",
       "historical_lesson_sha": "071a465a03e287bc5768d88aabbec3e63b15ee09",
@@ -2433,6 +2446,8 @@
     "recapture_required": false,
     "replacement_capture_count": 1,
     "exact_rendered_equivalence_count": 1,
+    "first_viewport_only": true,
+    "below_fold_exercises_attested": false,
     "historical_artifact_count": 50,
     "historical_artifacts_blob_equal": true,
     "screenshot_manifest_integrity_passed": true

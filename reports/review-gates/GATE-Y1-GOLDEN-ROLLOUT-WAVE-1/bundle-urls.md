@@ -4,3 +4,9 @@ This file lists every artifact in this gate's bundle as a full raw-GitHub URL so
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json
+
+External evidence referenced by the review packet and reachable through the
+repository URL index:
+
+- `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json`
+- `reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md`

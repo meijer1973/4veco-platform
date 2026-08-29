@@ -21,7 +21,10 @@ const PATHS = {
   scaleRouteInventory: 'reports/sprints/SCALE-PROOF-3P-READINESS-PRODUCT-PATH-PROOF-1-route-inventory.md',
   proof: 'reports/json/y1-golden-rollout-wave-1-proof.json',
   deltaProof: 'reports/json/y1-golden-rollout-wave-1-rendered-delta-proof.json',
+  result: 'references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json',
   renderedRenewal: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json',
+  sourceManifest: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-source-manifest.json',
+  prerequisiteVisualReview: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-visual-review.md',
   packet: 'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/review-packet.json',
   bundleUrls: 'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md',
   goldenRoadmap: 'docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md',
@@ -32,8 +35,17 @@ const CAPTURE_PLATFORM_SHA = '5e3fa0d972992cf11568c4f86bf4f5f09c0f11c7';
 const CAPTURE_LESSON_SHA = '071a465a03e287bc5768d88aabbec3e63b15ee09';
 const OLD_CI_PLATFORM_SHA = '571d435a172240524ed96394a41682ef003bfcad';
 const OLD_CI_LESSON_SHA = 'ba08b9c2e033a877c0d1b57952055ce697912a22';
-const AUTHORIZED_CONTINUATION_PLATFORM_SHA = 'e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8';
+const PREREQUISITE_BASE_PLATFORM_SHA = '9c9d3cc7fa8e72d536e03af192f53f7079823dbe';
+const SOURCE_RENEWAL_START_PLATFORM_SHA = 'e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8';
 const SELECTOR_PLATFORM_SHA = '8f612ac6755a299fe7457910001e58fac8cd7b83';
+const SOURCE_REVIEWED_PAYLOAD_SHA = '4b49d82d4a35915ef586f0de01554068fa7b5803';
+const SOURCE_SEALED_EVIDENCE_SHA = 'aa06ada217b4ec8ac9f042f08100513381b30366';
+const SOURCE_PROVENANCE_SHAS = [
+  SOURCE_RENEWAL_START_PLATFORM_SHA,
+  SELECTOR_PLATFORM_SHA,
+  SOURCE_REVIEWED_PAYLOAD_SHA,
+  SOURCE_SEALED_EVIDENCE_SHA,
+];
 
 const PARAGRAPHS = ['1.1.1', '1.1.2', '1.1.3'];
 const EXPECTED_SURFACES = [
@@ -63,7 +75,7 @@ const REQUIRED_SCALE_FLAGS = [
   'same_copy_hygiene_114_neutral_not_gate_claim',
 ];
 
-const HELD_AUTHORITY_KEYS = [
+const WAVE_AUTHORITY_KEYS = [
   'actual_rollout_or_adoption_authorized',
   'automatic_repository_wide_migration_authorized',
   'product_route_adoption_authorized',
@@ -76,6 +88,10 @@ const HELD_AUTHORITY_KEYS = [
   'adaptive_routing_authorized',
   'summative_use_authorized',
   'pv_authorized',
+  'generated_lesson_output_changed',
+  'source_data_changed',
+  'engine_behavior_changed',
+  'protected_reference_data_changed',
 ];
 
 const RENDERED_RENEWAL_HELD_AUTHORITY_KEYS = [
@@ -95,6 +111,69 @@ const RENDERED_RENEWAL_HELD_AUTHORITY_KEYS = [
   'pv_authorized',
 ];
 
+const SOURCE_MANIFEST_ARTIFACTS = [
+  {
+    id: 'capture_selector',
+    mode: 'exact_bytes',
+    source_commit_sha: SELECTOR_PLATFORM_SHA,
+    path: 'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js',
+  },
+  {
+    id: 'y1_checker',
+    mode: 'adapted',
+    source_commit_sha: SOURCE_REVIEWED_PAYLOAD_SHA,
+    path: 'build-scripts/sprints/check-y1-golden-rollout-wave-1.js',
+  },
+  {
+    id: 'y1_checker_tests',
+    mode: 'adapted',
+    source_commit_sha: SOURCE_REVIEWED_PAYLOAD_SHA,
+    path: 'build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js',
+  },
+  {
+    id: 'y1_changed_path_policy',
+    mode: 'adapted',
+    source_commit_sha: SOURCE_REVIEWED_PAYLOAD_SHA,
+    path: 'references/data/exercises/y1-golden-rollout-wave-1.json',
+  },
+  {
+    id: 'replacement_capture',
+    mode: 'exact_bytes',
+    source_commit_sha: SOURCE_SEALED_EVIDENCE_SHA,
+    path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png',
+  },
+  {
+    id: 'zero_delta_image',
+    mode: 'exact_bytes',
+    source_commit_sha: SOURCE_SEALED_EVIDENCE_SHA,
+    path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png',
+  },
+  {
+    id: 'comparison',
+    mode: 'exact_bytes',
+    source_commit_sha: SOURCE_SEALED_EVIDENCE_SHA,
+    path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json',
+  },
+  {
+    id: 'capture_manifest',
+    mode: 'exact_bytes',
+    source_commit_sha: SOURCE_SEALED_EVIDENCE_SHA,
+    path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json',
+  },
+  {
+    id: 'source_visual_review',
+    mode: 'exact_bytes',
+    source_commit_sha: SOURCE_SEALED_EVIDENCE_SHA,
+    path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md',
+  },
+  {
+    id: 'rendered_renewal_record',
+    mode: 'adapted',
+    source_commit_sha: SOURCE_REVIEWED_PAYLOAD_SHA,
+    path: 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json',
+  },
+];
+
 const PLATFORM_RENDER_INPUTS = [
   ...EXPECTED_SURFACES.map((id) => `source-data/book-1/exit-ticket/${id}.json`),
   'engines/golden-ticket-layout.css',
@@ -111,13 +190,38 @@ const PLATFORM_RENDER_INPUTS = [
   'build-scripts/sprints/check-scale-proof-3p-readiness-product-path-proof-1.js',
 ];
 
-const EVIDENCE_TAIL_EXACT = [
-  'AGENT_GITHUB_ENTRY.md',
-  'RESEARCH_AGENT_MAP.md',
-  'RESEARCH_AGENT_MAP_REFERENCES.md',
+const PREREQUISITE_MUTATION_PATHS = [
+  'build-scripts/sprints/capture-y1-golden-rollout-wave-1-rendered-renewal.js',
+  'build-scripts/sprints/check-y1-golden-rollout-wave-1.js',
+  'build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js',
+  'references/data/exercises/y1-golden-rollout-wave-1.json',
   'references/data/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1.result.json',
   PATHS.proof,
   PATHS.deltaProof,
+  PATHS.sourceManifest,
+  PATHS.prerequisiteVisualReview,
+  PATHS.renderedRenewal,
+  PATHS.packet,
+  PATHS.bundleUrls,
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-evidence.json',
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-decision.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-plan-review.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-assignment.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round1.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-corrections.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven.png',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/112-normal-practice-desktop-light-opgaven-pixel-diff.png',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/comparison.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-screenshots/manifest.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-renewal-visual-review.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md',
   'reports/url-index.md',
   'reports/github-agent-index-platform.json',
   'reports/github-agent-index-platform.md',
@@ -127,9 +231,42 @@ const EVIDENCE_TAIL_EXACT = [
   'reports/internal-dashboard/index.html',
 ];
 
-const EVIDENCE_TAIL_PREFIXES = [
-  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/',
-  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-',
+const SHARED_GENERATED_CLOSURE_PATHS = [
+  'reports/url-index.md',
+  'reports/github-agent-index-platform.json',
+  'reports/github-agent-index-platform.md',
+  'reports/github-agent-index-lessen.json',
+  'reports/github-agent-index-lessen.md',
+  'reports/internal-dashboard/dashboard-data.json',
+  'reports/internal-dashboard/index.html',
+];
+
+const PREREQUISITE_TRIGGER_PATHS = PREREQUISITE_MUTATION_PATHS.filter(
+  (relativePath) => !SHARED_GENERATED_CLOSURE_PATHS.includes(relativePath)
+);
+
+const EVIDENCE_TAIL_EXACT = [
+  PATHS.result,
+  PATHS.proof,
+  PATHS.deltaProof,
+  PATHS.packet,
+  PATHS.bundleUrls,
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-evidence.json',
+  'reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/pr-readiness-decision.json',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.jsonl',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-command-log.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-diff-summary.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-map.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-evidence-prerequisite-lead-review-round2.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-result.md',
+  'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-quality-log.md',
+  'reports/url-index.md',
+  'reports/github-agent-index-platform.json',
+  'reports/github-agent-index-platform.md',
+  'reports/github-agent-index-lessen.json',
+  'reports/github-agent-index-lessen.md',
+  'reports/internal-dashboard/dashboard-data.json',
+  'reports/internal-dashboard/index.html',
 ];
 
 class CheckError extends Error {}
@@ -331,13 +468,85 @@ function validateSelectorProvenance(process, repoRoot = ROOT, expectedRef = SELE
   return { selector_platform_sha: selectorPlatform, selector_blob: process.selector_blob };
 }
 
+function validateSourceCommitChain(source = {}, repoRoot = ROOT, expectedSource = null) {
+  const expected = expectedSource || {
+    renewal_start_platform_sha: SOURCE_RENEWAL_START_PLATFORM_SHA,
+    selector_platform_sha: SELECTOR_PLATFORM_SHA,
+    reviewed_payload_sha: SOURCE_REVIEWED_PAYLOAD_SHA,
+    sealed_evidence_sha: SOURCE_SEALED_EVIDENCE_SHA,
+  };
+  check(JSON.stringify(source) === JSON.stringify(expected), 'source provenance commit chain mismatch');
+  const resolved = Object.fromEntries(
+    Object.entries(expected).map(([key, value]) => [key, resolveRef(value, repoRoot)])
+  );
+  check(gitIsAncestor(resolved.renewal_start_platform_sha, resolved.selector_platform_sha, repoRoot), 'source renewal start must be an ancestor of selector commit');
+  check(gitIsAncestor(resolved.selector_platform_sha, resolved.reviewed_payload_sha, repoRoot), 'source selector must be an ancestor of reviewed payload');
+  check(gitIsAncestor(resolved.reviewed_payload_sha, resolved.sealed_evidence_sha, repoRoot), 'source reviewed payload must be an ancestor of sealed evidence');
+  return resolved;
+}
+
+function validateSourceManifest(
+  manifest = readJson(PATHS.sourceManifest),
+  options = {}
+) {
+  const repoRoot = options.repoRoot || ROOT;
+  const currentRef = resolveRef(options.currentPlatformRef || 'HEAD', repoRoot);
+  check(manifest.schema_version === 1 && manifest.sprint_id === WAVE_ID, 'source manifest identity mismatch');
+  validateSourceCommitChain(manifest.source_provenance, repoRoot);
+  check(manifest.current_evidence?.platform_base_sha === PREREQUISITE_BASE_PLATFORM_SHA, 'source manifest current platform base mismatch');
+  check(manifest.current_evidence?.lesson_snapshot_sha === 'f09fd6e88edc5049b026b16b0158e7e188091d2d', 'source manifest current lesson snapshot mismatch');
+  check(manifest.current_evidence?.binding_model === 'historical_provenance_separate_from_current_lineage', 'source manifest binding model mismatch');
+  check(!SOURCE_PROVENANCE_SHAS.includes(manifest.current_evidence.platform_base_sha), 'source provenance SHA cannot be the current platform base');
+  check(Array.isArray(manifest.artifacts), 'source manifest artifacts must be an array');
+  const artifactIds = manifest.artifacts.map((item) => item.id);
+  check(manifest.artifacts.length === SOURCE_MANIFEST_ARTIFACTS.length, 'source manifest artifact count mismatch');
+  check(new Set(artifactIds).size === artifactIds.length, 'source manifest artifact ids must be unique');
+  sameSet(artifactIds, SOURCE_MANIFEST_ARTIFACTS.map((item) => item.id), 'source manifest artifact ids');
+
+  for (const expected of SOURCE_MANIFEST_ARTIFACTS) {
+    const item = manifest.artifacts.find((candidate) => candidate.id === expected.id);
+    check(item.reuse_mode === expected.mode, `source manifest reuse mode mismatch: ${expected.id}`);
+    check(item.source_commit_sha === expected.source_commit_sha, `source manifest source commit mismatch: ${expected.id}`);
+    check(item.source_path === expected.path && item.destination_path === expected.path, `source manifest path mismatch: ${expected.id}`);
+    const sourceBlob = readGitBlob(item.source_commit_sha, item.source_path, repoRoot);
+    check(sourceBlob, `source manifest source blob missing: ${expected.id}`);
+    check(item.source_blob_oid === sourceBlob.oid, `source manifest source blob mismatch: ${expected.id}`);
+    check(item.source_sha256 === sha256Buffer(sourceBlob.content), `source manifest source SHA-256 mismatch: ${expected.id}`);
+    const destinationBlob = readGitBlob(currentRef, item.destination_path, repoRoot);
+    check(destinationBlob, `source manifest destination blob missing: ${expected.id}`);
+    check(item.destination_blob_oid === destinationBlob.oid, `source manifest destination blob mismatch: ${expected.id}`);
+    check(item.destination_sha256 === sha256Buffer(destinationBlob.content), `source manifest destination SHA-256 mismatch: ${expected.id}`);
+    if (expected.mode === 'exact_bytes') {
+      check(sourceBlob.oid === destinationBlob.oid && sourceBlob.content.equals(destinationBlob.content), `source manifest exact-byte artifact drift: ${expected.id}`);
+    } else {
+      check(sourceBlob.oid !== destinationBlob.oid, `source manifest adapted artifact was not adapted: ${expected.id}`);
+    }
+  }
+  return { current_platform_sha: currentRef, artifact_count: manifest.artifacts.length };
+}
+
+function validateCurrentLineage(current = {}, exactHeadRef, repoRoot = ROOT, options = {}) {
+  const expectedBase = resolveRef(options.expectedBase || PREREQUISITE_BASE_PLATFORM_SHA, repoRoot);
+  const forbiddenShas = options.forbiddenShas || SOURCE_PROVENANCE_SHAS;
+  const base = resolveRef(current.platform_base_sha, repoRoot);
+  const payload = resolveRef(current.reviewed_payload_sha, repoRoot);
+  const head = resolveRef(exactHeadRef, repoRoot);
+  check(base === expectedBase, 'current evidence platform base mismatch');
+  check(!forbiddenShas.includes(base), 'source provenance SHA cannot be used as current platform base');
+  check(!forbiddenShas.includes(payload), 'source provenance SHA cannot be used as current reviewed payload');
+  check(!forbiddenShas.includes(head), 'source provenance SHA cannot be used as current exact head');
+  check(gitIsAncestor(base, payload, repoRoot), 'current reviewed payload must descend from prerequisite base');
+  check(gitIsAncestor(payload, head, repoRoot), 'current exact head must descend from reviewed payload');
+  return { platform_base_sha: base, reviewed_payload_sha: payload, exact_head_sha: head };
+}
+
 function selectScopeDelta(eventDelta, policy, repoRoot = ROOT) {
-  const continuationRef = policy?.authorized_continuation_base;
+  const continuationRef = policy?.prerequisite_base;
   if (!continuationRef) return eventDelta;
   const continuation = resolveRef(continuationRef, repoRoot);
   if (gitIsAncestor(continuation, eventDelta.base_sha, repoRoot)) return eventDelta;
-  check(gitIsAncestor(eventDelta.base_sha, continuation, repoRoot), 'authorized continuation base is not descended from exact event base');
-  check(gitIsAncestor(continuation, eventDelta.head_sha, repoRoot), 'exact event head does not descend from authorized continuation base');
+  check(gitIsAncestor(eventDelta.base_sha, continuation, repoRoot), 'prerequisite base is not descended from exact event base');
+  check(gitIsAncestor(continuation, eventDelta.head_sha, repoRoot), 'exact event head does not descend from prerequisite base');
   return changedEntries(continuation, eventDelta.head_sha, repoRoot);
 }
 
@@ -406,10 +615,22 @@ function expectedPagePath(source, surfaceId, lessonRoot = LESSON_ROOT) {
   return path.join(paragraphDirectory(source, lessonRoot), `${source.parNr} ${source.parName} \u2013 ${suffix}.html`);
 }
 
-function assertHeldAuthorities(authority, label) {
-  for (const key of HELD_AUTHORITY_KEYS) {
+function assertExactFalseAuthorities(authority, expectedKeys, label) {
+  check(authority && typeof authority === 'object' && !Array.isArray(authority), `${label} must be an object`);
+  sameSet(Object.keys(authority), expectedKeys, `${label} keys`);
+  for (const key of expectedKeys) {
     check(authority && authority[key] === false, `${label}.${key} must be false`);
   }
+}
+
+function validateChangedPathPolicy(policy) {
+  check(policy?.mode === 'renewal_payload_only', 'wave changed-path policy mode mismatch');
+  check(policy?.prerequisite_base === PREREQUISITE_BASE_PLATFORM_SHA, 'wave prerequisite base mismatch');
+  sameSet(policy.trigger_exact || [], PREREQUISITE_TRIGGER_PATHS, 'wave trigger exact paths');
+  sameSet(policy.allowed_exact || [], PREREQUISITE_MUTATION_PATHS, 'wave allowed exact paths');
+  sameSet(policy.trigger_prefixes || [], [], 'wave trigger prefixes');
+  sameSet(policy.allowed_prefixes || [], [], 'wave allowed prefixes');
+  return policy;
 }
 
 function validateSurfaceContract(surface, source, generated) {
@@ -473,12 +694,9 @@ function validateWaveAndSurfaces(options = {}) {
   check(wave.scale_gate_1?.decision === 'PASS_CONTROLLED_ROLLOUT', 'wave must record PASS_CONTROLLED_ROLLOUT');
   check(wave.scale_gate_1?.controlled_wave_eligibility_authorized === true, 'controlled wave eligibility must be true');
   check(wave.scale_gate_1?.automatic_repository_wide_migration_authorized === false, 'automatic repository-wide migration must remain held');
-  assertHeldAuthorities(wave.authority, 'wave.authority');
-  check(wave.authority?.generated_lesson_output_changed === false, 'wave must record no lesson output changes');
-  check(wave.authority?.source_data_changed === false, 'wave must record no source-data changes');
-  check(wave.authority?.engine_behavior_changed === false, 'wave must record no engine changes');
+  assertExactFalseAuthorities(wave.authority, WAVE_AUTHORITY_KEYS, 'wave.authority');
   check(wave.owner_decision?.platform_pr === 148 && wave.owner_decision?.comment_id === 4807419611, 'wave owner decision binding mismatch');
-  check(wave.changed_path_policy?.authorized_continuation_base === AUTHORIZED_CONTINUATION_PLATFORM_SHA, 'wave authorized continuation base mismatch');
+  validateChangedPathPolicy(wave.changed_path_policy);
 
   const firstThree = (manifest.surfaces || []).filter((item) => item.scope === 'first_three_product_proof');
   sameSet(firstThree.map((item) => item.id), EXPECTED_SURFACES, 'manifest first-three surfaces');
@@ -561,9 +779,18 @@ function validateRenderedRenewal(
   scaleProof = validateScaleProof(),
   options = {}
 ) {
-  check(renewal.schema_version === 1 && renewal.sprint_id === WAVE_ID, 'rendered renewal identity mismatch');
+  check(renewal.schema_version === 2 && renewal.sprint_id === WAVE_ID, 'rendered renewal identity mismatch');
   check(renewal.capture_id === '112-normal-practice-desktop-light-opgaven', 'rendered renewal capture id mismatch');
   check(renewal.status === 'exact_rendered_equivalence', 'rendered renewal must record exact rendered equivalence');
+  validateSourceCommitChain(renewal.source_provenance);
+  check(renewal.current_evidence?.platform_base_sha === PREREQUISITE_BASE_PLATFORM_SHA, 'rendered renewal current platform base mismatch');
+  check(renewal.current_evidence?.lesson_snapshot_sha === 'f09fd6e88edc5049b026b16b0158e7e188091d2d', 'rendered renewal current lesson snapshot mismatch');
+  check(renewal.current_evidence?.source_manifest === PATHS.sourceManifest, 'rendered renewal source manifest mismatch');
+  check(renewal.current_evidence?.binding_model === 'historical_provenance_separate_from_current_lineage', 'rendered renewal binding model mismatch');
+  check(renewal.scope_qualification?.first_viewport_only === true, 'rendered renewal must retain first-viewport-only qualification');
+  check(renewal.scope_qualification?.viewport?.width === 1280 && renewal.scope_qualification?.viewport?.height === 900, 'rendered renewal qualified viewport mismatch');
+  check(renewal.scope_qualification?.theme === 'light' && renewal.scope_qualification?.device_scale_factor === 1, 'rendered renewal qualified theme/device scale mismatch');
+  check(renewal.scope_qualification?.below_fold_exercises_attested === false, 'rendered renewal must not attest below-fold exercises');
 
   const scaleCapture = lessonCaptures(scaleProof).find((item) => item.id === renewal.capture_id);
   check(scaleCapture, `historical Scale Proof capture missing: ${renewal.capture_id}`);
@@ -591,7 +818,7 @@ function validateRenderedRenewal(
   const process = renewal.canonical_process || {};
   const startingPlatform = resolveRef(renewal.starting_platform_sha, ROOT);
   const runnerPlatform = resolveRef(process.runner_platform_sha, ROOT);
-  check(startingPlatform === 'e2deb65fd9dd2e6f2f2c3b89e6572dc6a0fbe5e8', 'rendered renewal starting platform SHA mismatch');
+  check(startingPlatform === SOURCE_RENEWAL_START_PLATFORM_SHA, 'rendered renewal starting platform SHA mismatch');
   check(runnerPlatform === startingPlatform, 'rendered renewal runner platform SHA mismatch');
   check(process.runner_path === 'build-scripts/sprints/capture-scale-proof-3p-readiness-product-path-proof-1.js', 'rendered renewal runner path mismatch');
   check(process.runner_blob === gitBlob(runnerPlatform, process.runner_path, ROOT), 'rendered renewal runner blob mismatch');
@@ -676,10 +903,20 @@ function validateRenderedRenewal(
   check(human.review_sha256 === sha256File(human.review_path), 'rendered renewal visual review hash mismatch');
   check(typeof human.verdict === 'string' && human.verdict.trim(), 'rendered renewal human verdict is missing');
   check(Array.isArray(human.flags) && human.flags.length === 0, 'rendered renewal human visual review has unresolved flags');
+  const currentVisual = renewal.current_visual_review || {};
+  check(currentVisual.status === 'PASS' && currentVisual.visible_regression === false, 'rendered renewal current visual review must pass');
+  check(currentVisual.reviewer === '/root/y1_prerequisite_visual_review', 'rendered renewal current visual reviewer mismatch');
+  check(currentVisual.review_path === PATHS.prerequisiteVisualReview, 'rendered renewal current visual review path mismatch');
+  check(currentVisual.review_sha256 === sha256File(currentVisual.review_path), 'rendered renewal current visual review hash mismatch');
+  const currentVisualText = readText(currentVisual.review_path);
+  check(/first[- ]viewport[- ]only/i.test(currentVisualText), 'rendered renewal current visual review missing first-viewport-only wording');
+  check(/does not visually\s+attest[\s\S]*below[- ]the[- ]fold/i.test(currentVisualText), 'rendered renewal current visual review missing below-fold limitation');
   sameSet(Object.keys(renewal.authority || {}), RENDERED_RENEWAL_HELD_AUTHORITY_KEYS, 'rendered renewal authority keys');
   for (const key of RENDERED_RENEWAL_HELD_AUTHORITY_KEYS) {
     check(renewal.authority[key] === false, `rendered renewal authority.${key} must be false`);
   }
+
+  if (options.currentPlatformRef) validateSourceManifest(readJson(PATHS.sourceManifest), { currentPlatformRef: options.currentPlatformRef });
 
   return {
     evidence_path: PATHS.renderedRenewal,
@@ -850,6 +1087,7 @@ function buildDeltaProof(options = {}) {
   const lessonExistence = attestExistencePaths(lessonDependencies.existence_only_paths, lessonRefs, LESSON_ROOT, 'lesson route target');
   const renderedRenewal = validateRenderedRenewal(readJson(PATHS.renderedRenewal), scaleProof, {
     renewedLessonRef: lessonCurrent,
+    currentPlatformRef: platformCurrent,
   });
   const changedOrMissing = [
     ...platform.filter((item) => item.status !== 'equal'),
@@ -882,6 +1120,19 @@ function buildDeltaProof(options = {}) {
     sprint_id: WAVE_ID,
     generated: new Date().toISOString(),
     purpose: 'commit-bound rendered proof reuse attestation',
+    source_provenance: {
+      renewal_start_platform_sha: SOURCE_RENEWAL_START_PLATFORM_SHA,
+      selector_platform_sha: SELECTOR_PLATFORM_SHA,
+      reviewed_payload_sha: SOURCE_REVIEWED_PAYLOAD_SHA,
+      sealed_evidence_sha: SOURCE_SEALED_EVIDENCE_SHA,
+    },
+    current_evidence: {
+      platform_base_sha: resolveRef(PREREQUISITE_BASE_PLATFORM_SHA, ROOT),
+      reviewed_payload_sha: platformCurrent,
+      lesson_snapshot_sha: lessonCurrent,
+      source_manifest: PATHS.sourceManifest,
+      binding_model: 'historical_provenance_separate_from_current_lineage',
+    },
     commit_chain: {
       platform: platformRefs,
       lesson: lessonRefs,
@@ -916,6 +1167,8 @@ function buildDeltaProof(options = {}) {
       recapture_required: unresolvedChangedOrMissing.length > 0,
       replacement_capture_count: 1,
       exact_rendered_equivalence_count: 1,
+      first_viewport_only: true,
+      below_fold_exercises_attested: false,
       historical_artifact_count: historicalArtifacts.length,
       historical_artifacts_blob_equal: historicalArtifacts.every((item) => item.status === 'equal'),
       screenshot_manifest_integrity_passed: true,
@@ -925,6 +1178,13 @@ function buildDeltaProof(options = {}) {
 
 function validateDeltaProof(recorded, recomputed) {
   check(recorded.schema_version === 2 && recorded.sprint_id === WAVE_ID, 'delta proof identity mismatch');
+  validateSourceCommitChain(recorded.source_provenance);
+  check(JSON.stringify(recorded.source_provenance) === JSON.stringify(recomputed.source_provenance), 'delta proof source provenance is stale');
+  check(JSON.stringify(recorded.current_evidence) === JSON.stringify(recomputed.current_evidence), 'delta proof current evidence binding is stale');
+  check(recorded.current_evidence?.platform_base_sha === PREREQUISITE_BASE_PLATFORM_SHA, 'delta proof current platform base mismatch');
+  check(recorded.current_evidence?.reviewed_payload_sha === recorded.commit_chain?.platform?.renewal_payload, 'delta proof current payload mismatch');
+  check(recorded.current_evidence?.lesson_snapshot_sha === recorded.commit_chain?.lesson?.renewal_snapshot, 'delta proof current lesson snapshot mismatch');
+  validateCurrentLineage(recorded.current_evidence, recorded.current_evidence.reviewed_payload_sha);
   check(JSON.stringify(recorded.commit_chain) === JSON.stringify(recomputed.commit_chain), 'delta proof commit chain is stale');
   check(JSON.stringify(recorded.dependency_discovery) === JSON.stringify(recomputed.dependency_discovery), 'delta proof dependency classification is stale');
   check(recorded.summary?.screenshots_reusable === recomputed.summary.screenshots_reusable, 'delta proof reuse decision is stale');
@@ -932,6 +1192,10 @@ function validateDeltaProof(recorded, recomputed) {
   check(recorded.summary?.historical_artifact_count === recomputed.summary.historical_artifact_count, 'delta proof historical artifact count is stale');
   check(recorded.summary?.historical_artifacts_blob_equal === true && recomputed.summary.historical_artifacts_blob_equal === true, 'historical Scale Proof artifacts must remain blob-equal');
   check(recorded.summary?.screenshot_manifest_integrity_passed === true, 'delta proof screenshot/manifest integrity is missing');
+  check(recorded.summary?.first_viewport_only === true && recorded.summary?.below_fold_exercises_attested === false, 'delta proof first-viewport qualification mismatch');
+  check(recorded.summary?.changed_or_missing_input_count === 1, 'delta proof must record exactly one changed dependency');
+  check(Array.isArray(recorded.rendered_renewals) && recorded.rendered_renewals.length === 1, 'delta proof must record exactly one rendered renewal');
+  sameSet(recorded.summary?.changed_or_missing_paths || [], [recorded.rendered_renewals[0].lesson_path], 'delta proof exact changed dependency');
   sameSet(recorded.summary?.changed_or_missing_paths || [], recomputed.summary.changed_or_missing_paths || [], 'delta proof changed/missing paths');
   check(JSON.stringify(recorded.summary) === JSON.stringify(recomputed.summary), 'delta proof complete summary is stale');
   check(JSON.stringify(recorded.rendered_renewals) === JSON.stringify(recomputed.rendered_renewals), 'delta proof rendered renewal evidence is stale');
@@ -944,8 +1208,7 @@ function validateDeltaProof(recorded, recomputed) {
 
 function evidenceTailPathAllowed(relativePath) {
   const normalized = normalizePath(relativePath);
-  return EVIDENCE_TAIL_EXACT.includes(normalized)
-    || EVIDENCE_TAIL_PREFIXES.some((prefix) => normalized.startsWith(prefix));
+  return EVIDENCE_TAIL_EXACT.includes(normalized);
 }
 
 function validateEvidenceTail(payloadRef, exactHeadRef, repoRoot = ROOT) {
@@ -961,17 +1224,22 @@ function validateEvidenceTail(payloadRef, exactHeadRef, repoRoot = ROOT) {
 
 function validateExactHeadDelta(recorded, exactPlatformHead, exactLessonHead) {
   const payloadPlatform = resolveRef(recorded.commit_chain?.platform?.renewal_payload, ROOT);
+  const prerequisiteBase = resolveRef(recorded.current_evidence?.platform_base_sha, ROOT);
   const snapshotLesson = resolveRef(recorded.commit_chain?.lesson?.renewal_snapshot, LESSON_ROOT);
   const currentPlatform = resolveRef(exactPlatformHead, ROOT);
   const currentLesson = resolveRef(exactLessonHead, LESSON_ROOT);
-  const ancestor = spawnSync('git', ['merge-base', '--is-ancestor', payloadPlatform, currentPlatform], { cwd: ROOT });
-  check(ancestor.status === 0, 'recorded rendered payload must be an ancestor of exact platform head');
+  check(prerequisiteBase === PREREQUISITE_BASE_PLATFORM_SHA, 'exact-head prerequisite base mismatch');
+  check(recorded.current_evidence?.reviewed_payload_sha === payloadPlatform, 'exact-head reviewed payload binding mismatch');
+  check(recorded.current_evidence?.lesson_snapshot_sha === snapshotLesson, 'exact-head lesson binding mismatch');
+  validateCurrentLineage(recorded.current_evidence, currentPlatform);
 
   const proof = validateScaleProof();
   const renewalRecord = readJson(PATHS.renderedRenewal);
   const renderedRenewal = validateRenderedRenewal(renewalRecord, proof, {
     renewedLessonRef: currentLesson,
+    currentPlatformRef: payloadPlatform,
   });
+  validateSourceManifest(readJson(PATHS.sourceManifest), { currentPlatformRef: currentPlatform });
   const platform = attestEqualPaths(platformEvidencePaths(proof), {
     renewal_payload: payloadPlatform,
     exact_head: currentPlatform,
@@ -996,6 +1264,8 @@ function validateExactHeadDelta(recorded, exactPlatformHead, exactLessonHead) {
     renewalRecord.renewed_capture.path,
     renewalRecord.pixel_comparison.diff_path,
     renewalRecord.human_visual_review.review_path,
+    renewalRecord.current_visual_review.review_path,
+    PATHS.sourceManifest,
   ]), {
     renewal_payload: payloadPlatform,
     exact_head: currentPlatform,
@@ -1054,6 +1324,8 @@ function validateNavigationTexts(texts) {
   check(texts.urlIndex?.includes(PATHS.proof), 'URL index missing Y1 proof');
   check(texts.urlIndex?.includes(PATHS.deltaProof), 'URL index missing Y1 delta proof');
   check(texts.bundleUrls?.includes(PATHS.packet), 'Y1 review bundle missing packet');
+  check(texts.bundleUrls?.includes(PATHS.sourceManifest), 'Y1 review bundle missing source manifest');
+  check(texts.bundleUrls?.includes(PATHS.prerequisiteVisualReview), 'Y1 review bundle missing prerequisite visual review');
   check(texts.platformAgentIndex?.includes(PATHS.packet), 'platform agent index missing Y1 packet');
   check(texts.dashboard?.includes(WAVE_ID), 'internal dashboard missing current Y1 wave');
   check(texts.dashboard?.includes('PASS_CONTROLLED_ROLLOUT'), 'internal dashboard missing controlled-rollout state');
@@ -1080,19 +1352,25 @@ function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
   check(packet.human_decision_required === true, 'review packet must require human decision');
   check(packet.auto_merge_allowed_after_ci === false, 'review packet must prohibit auto merge');
   check(packet.route === 'READY_FOR_HUMAN_REVIEW', 'review packet route must be READY_FOR_HUMAN_REVIEW');
-  assertHeldAuthorities(packet.authority_claims, 'packet.authority_claims');
+  assertExactFalseAuthorities(packet.authority_claims, WAVE_AUTHORITY_KEYS, 'packet.authority_claims');
   if (!allowUnbound) {
     check(Number.isInteger(packet.pr_number) && packet.pr_number > 0, 'review packet pr_number must be bound');
     check(packet.pr_url === `https://github.com/meijer1973/4veco-platform/pull/${packet.pr_number}`, 'review packet pr_url must match pr_number');
   }
   check(/^[0-9a-f]{40}$/.test(packet.reviewed_payload_head_sha || ''), 'review packet reviewed payload SHA must be bound');
   check(deltaProof?.commit_chain?.platform?.renewal_payload === packet.reviewed_payload_head_sha, 'review packet payload SHA must match delta-proof renewal payload');
+  validateSourceCommitChain(packet.source_provenance);
+  check(JSON.stringify(packet.source_provenance) === JSON.stringify(deltaProof.source_provenance), 'review packet source provenance mismatch');
+  check(JSON.stringify(packet.current_evidence) === JSON.stringify(deltaProof.current_evidence), 'review packet current evidence mismatch');
+  check(packet.evidence_scope?.first_viewport_only === true && packet.evidence_scope?.below_fold_exercises_attested === false, 'review packet first-viewport qualification mismatch');
 
   check(proof.schema_version === 2 && proof.sprint_id === WAVE_ID, 'wave proof identity mismatch');
   check(proof.scale_gate_1?.decision === 'PASS_CONTROLLED_ROLLOUT', 'wave proof controlled-rollout decision mismatch');
   check(proof.scale_gate_1?.controlled_wave_eligibility_authorized === true, 'wave proof must record controlled eligibility');
   check(proof.scale_gate_1?.automatic_repository_wide_migration_authorized === false, 'wave proof must hold automatic repository-wide migration');
   check(proof.rendered_evidence?.reviewed_platform_payload_sha === packet.reviewed_payload_head_sha, 'wave proof rendered payload must match review packet payload');
+  check(JSON.stringify(proof.source_provenance) === JSON.stringify(deltaProof.source_provenance), 'wave proof source provenance mismatch');
+  check(JSON.stringify(proof.current_evidence) === JSON.stringify(deltaProof.current_evidence), 'wave proof current evidence mismatch');
   check(proof.rendered_evidence?.lesson_snapshot_sha === deltaProof.commit_chain?.lesson?.renewal_snapshot, 'wave proof lesson snapshot must match delta proof');
   check(proof.rendered_evidence?.rendered_renewal === PATHS.renderedRenewal, 'wave proof rendered renewal path mismatch');
   check(proof.rendered_evidence?.reuse_status === 'verified_exact_rendered_equivalence', 'wave proof rendered equivalence status mismatch');
@@ -1100,6 +1378,7 @@ function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
   check(proof.rendered_evidence?.verified_rendered_renewal_count === 1, 'wave proof verified renewal count mismatch');
   check(proof.rendered_evidence?.changed_or_missing_input_count === 1, 'wave proof raw changed input count mismatch');
   check(proof.rendered_evidence?.unresolved_changed_or_missing_input_count === 0, 'wave proof must have zero unresolved rendered inputs');
+  check(proof.rendered_evidence?.first_viewport_only === true && proof.rendered_evidence?.below_fold_exercises_attested === false, 'wave proof first-viewport qualification mismatch');
   check(packet.proof?.rendered_renewal === PATHS.renderedRenewal, 'review packet rendered renewal path mismatch');
   check(deltaProof.summary?.changed_or_missing_input_count === 1, 'delta proof must record exactly one raw changed rendered input');
   check(deltaProof.summary?.verified_rendered_renewal_count === 1, 'delta proof must verify exactly one rendered renewal');
@@ -1111,11 +1390,39 @@ function validatePacketObjects(packet, proof, allowUnbound, deltaProof) {
   check(proof.rendered_evidence?.changed_or_missing_input_count === deltaProof.summary.changed_or_missing_input_count, 'wave proof raw changed count must match delta proof');
   check(proof.rendered_evidence?.verified_rendered_renewal_count === deltaProof.summary.verified_rendered_renewal_count, 'wave proof renewal count must match delta proof');
   check(proof.rendered_evidence?.unresolved_changed_or_missing_input_count === deltaProof.summary.unresolved_changed_or_missing_input_count, 'wave proof unresolved count must match delta proof');
-  assertHeldAuthorities(proof.authority, 'proof.authority');
+  assertExactFalseAuthorities(proof.authority, WAVE_AUTHORITY_KEYS, 'proof.authority');
+}
+
+function validateResultObject(result, packet, proof, deltaProof) {
+  check(result.schema_version === 1 && result.sprint_id === WAVE_ID, 'result identity mismatch');
+  validateSourceCommitChain(result.source_provenance);
+  check(JSON.stringify(result.source_provenance) === JSON.stringify(deltaProof.source_provenance), 'result source provenance mismatch');
+  check(JSON.stringify(result.current_evidence) === JSON.stringify(deltaProof.current_evidence), 'result current evidence mismatch');
+  check(JSON.stringify(result.current_evidence) === JSON.stringify(packet.current_evidence), 'result/packet current evidence mismatch');
+  check(JSON.stringify(result.current_evidence) === JSON.stringify(proof.current_evidence), 'result/proof current evidence mismatch');
+  check(result.bindings?.delta_proof === PATHS.deltaProof, 'result delta-proof binding mismatch');
+  check(result.bindings?.wave_proof === PATHS.proof, 'result wave-proof binding mismatch');
+  check(result.bindings?.review_packet === PATHS.packet, 'result review-packet binding mismatch');
+  check(result.rendered_evidence?.changed_or_missing_input_count === 1, 'result changed dependency count mismatch');
+  sameSet(result.rendered_evidence?.changed_or_missing_paths || [], deltaProof.summary?.changed_or_missing_paths || [], 'result changed dependency paths');
+  check(result.rendered_evidence?.verified_rendered_renewal_count === 1, 'result verified renewal count mismatch');
+  check(result.rendered_evidence?.unresolved_changed_or_missing_input_count === 0, 'result unresolved rendered input count mismatch');
+  check(Array.isArray(result.rendered_evidence?.unresolved_changed_or_missing_paths) && result.rendered_evidence.unresolved_changed_or_missing_paths.length === 0, 'result unresolved rendered paths must be empty');
+  check(result.rendered_evidence?.first_viewport_only === true && result.rendered_evidence?.below_fold_exercises_attested === false, 'result first-viewport qualification mismatch');
+  check(result.rendered_evidence.changed_or_missing_input_count === proof.rendered_evidence?.changed_or_missing_input_count, 'result/proof changed count mismatch');
+  check(result.rendered_evidence.verified_rendered_renewal_count === proof.rendered_evidence?.verified_rendered_renewal_count, 'result/proof renewal count mismatch');
+  check(result.rendered_evidence.unresolved_changed_or_missing_input_count === proof.rendered_evidence?.unresolved_changed_or_missing_input_count, 'result/proof unresolved count mismatch');
+  check(result.rendered_evidence.first_viewport_only === packet.evidence_scope?.first_viewport_only, 'result/packet viewport scope mismatch');
+  check(result.rendered_evidence.below_fold_exercises_attested === packet.evidence_scope?.below_fold_exercises_attested, 'result/packet below-fold scope mismatch');
+  assertExactFalseAuthorities(result.authority, WAVE_AUTHORITY_KEYS, 'result.authority');
+  return true;
 }
 
 function validatePacketAndProof(allowUnbound, deltaProof) {
-  validatePacketObjects(readJson(PATHS.packet), readJson(PATHS.proof), allowUnbound, deltaProof);
+  const packet = readJson(PATHS.packet);
+  const proof = readJson(PATHS.proof);
+  validatePacketObjects(packet, proof, allowUnbound, deltaProof);
+  validateResultObject(readJson(PATHS.result), packet, proof, deltaProof);
 }
 
 function parseArgs(argv) {
@@ -1245,7 +1552,6 @@ function cli(argv) {
 if (require.main === module) cli(process.argv.slice(2));
 
 module.exports = {
-  AUTHORIZED_CONTINUATION_PLATFORM_SHA,
   CAPTURE_LESSON_SHA,
   CAPTURE_PLATFORM_SHA,
   CheckError,
@@ -1254,8 +1560,17 @@ module.exports = {
   OLD_CI_PLATFORM_SHA,
   PARAGRAPHS,
   PATHS,
+  PREREQUISITE_BASE_PLATFORM_SHA,
+  PREREQUISITE_MUTATION_PATHS,
+  PREREQUISITE_TRIGGER_PATHS,
   SELECTOR_PLATFORM_SHA,
+  SHARED_GENERATED_CLOSURE_PATHS,
+  SOURCE_MANIFEST_ARTIFACTS,
+  SOURCE_RENEWAL_START_PLATFORM_SHA,
+  SOURCE_REVIEWED_PAYLOAD_SHA,
+  SOURCE_SEALED_EVIDENCE_SHA,
   WAVE_ID,
+  WAVE_AUTHORITY_KEYS,
   attestEqualPaths,
   buildDeltaProof,
   containsLegacyAsset,
@@ -1277,20 +1592,25 @@ module.exports = {
   selectScopeDelta,
   scopeTriggered,
   validateChangedEntries,
+  validateCurrentLineage,
   validateDeltaProof,
   validateEvidenceTail,
   validateEventRefs,
   validateExactHeadDelta,
   validateNavigationTexts,
   validatePacketObjects,
+  validateResultObject,
   validateRenderedRenewal,
   validateRoadmapTexts,
   validateSelectorProvenance,
+  validateSourceCommitChain,
+  validateSourceManifest,
   validateScaleProof,
   validateScreenshotIntegrity,
   validateSurfaceContract,
   validateSurfaceState,
   validateWiringTexts,
   validateWaveAndSurfaces,
+  validateChangedPathPolicy,
   routeTarget,
 };
