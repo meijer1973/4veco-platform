@@ -19,7 +19,7 @@ reports post-merge verification failure explicitly.
 - `references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.*.json`
 - `reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/`
 - `references/reference-team-roadmap.md` (one authority-negative ledger row)
-- the canonical URL, GitHub-agent, and internal-dashboard generated indexes
+- the canonical URL and GitHub-agent generated indexes
 
 ## Protected surfaces
 
