@@ -1623,3 +1623,164 @@ Time:        1.414 s, estimated 2 s
 Ran all test suites matching build-scripts/workflows/check-paragraph-lane-scope.test.js|build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js.
 
 ```
+## npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-29T16:34:22.377Z`
+- finished_at: `2026-08-29T16:34:22.754Z`
+- duration_ms: `377`
+- exit_code: `0`
+- stdout_sha256: `6db7b64d38a6d1e5065a2887cbe3c5411e2a2e0724c94cfd4f614fec6c7a6311`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:paragraph-lane-scope
+> node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD
+
+Paragraph lane scope: PASS (shared)
+- shared platform: 19
+  - .github/workflows/platform-ci.yml
+  - BUILD-PARAGRAPH.md
+  - agents/teacher-learning-quality-review-agent.md
+  - build-scripts/sprints/emit-url-index.js
+  - build-scripts/workflows/check-paragraph-lane-scope.js
+  - build-scripts/workflows/check-paragraph-lane-scope.test.js
+  - build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+  - build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
+  - docs/workflows/textbook-paragraph-lane.md
+  - package.json
+  - references/authored/didactiek-principes.md
+  - references/authored/vraagtypen-en-opgaveontwerp.md
+  - references/data/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1.plan.json
+  - references/reference-team-roadmap.md
+  - skills/econ-didactiek.md
+  - skills/econ-exercise-builder.md
+  - skills/econ-paragraph-review.md
+  - skills/econ-pdf-builder.md
+  - skills/econ-textbook-paragraph.md
+- generated index/report: 9
+  - AGENT_GITHUB_ENTRY.md
+  - RESEARCH_AGENT_MAP.md
+  - reports/github-agent-index-lessen.json
+  - reports/github-agent-index-lessen.md
+  - reports/github-agent-index-platform.json
+  - reports/github-agent-index-platform.md
+  - reports/internal-dashboard/dashboard-data.json
+  - reports/internal-dashboard/index.html
+  - reports/url-index.md
+- review evidence: 13
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-baseline.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.jsonl
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-assignment.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-corrections.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round1.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-recheck.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-resolution.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-recheck.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-resolution.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-29T16:34:28.692Z`
+- finished_at: `2026-08-29T16:38:50.718Z`
+- duration_ms: `262026`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `89c31d788a272e3e0c00efa9a4a19e165e94744883d5bcd5e7a577e105c3c770`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 106 passed, 106 of 112 total
+Tests:       8 skipped, 1563 passed, 1571 total
+Snapshots:   0 total
+Time:        261.176 s, estimated 265 s
+Ran all test suites.
+
+```
+## node -e "const{execFileSync}=require('child_process');x=execFileSync('git',['-C','../4veco-lessen','status','--porcelain'],{encoding:'utf8'});if(x.trim()){console.error(x);process.exit(1)}"
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-29T16:38:58.315Z`
+- finished_at: `2026-08-29T16:38:58.613Z`
+- duration_ms: `298`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
