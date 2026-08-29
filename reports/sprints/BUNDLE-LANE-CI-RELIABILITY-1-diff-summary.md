@@ -31,4 +31,3 @@ reports post-merge verification failure explicitly.
   administrative bypass changed.
 - No rollout, completion, diagnostics, adaptive routing, mastery, sequencing,
   PV, summative, student-use, or student/product-use authority is granted.
-

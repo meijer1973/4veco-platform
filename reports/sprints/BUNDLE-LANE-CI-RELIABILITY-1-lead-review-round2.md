@@ -118,4 +118,3 @@ requires renewed substantive review.
 Complete the declared mechanical evidence/index tail, pass the complete sprint
 validator and exact-head hosted CI, obtain a bounded tail audit and exact-head
 PR readiness, then return the open and unmerged PR for explicit owner review.
-

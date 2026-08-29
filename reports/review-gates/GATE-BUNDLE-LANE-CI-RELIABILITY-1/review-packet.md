@@ -53,4 +53,3 @@ Before any integration authorization, require exact-head green Platform CI,
 exact Platform/Lesson checkout evidence, a bounded mechanical-tail audit,
 exact-head PR readiness, zero unresolved review threads, and unchanged base/head
 identity.
-
