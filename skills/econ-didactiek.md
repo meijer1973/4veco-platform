@@ -10,6 +10,30 @@ General didactic principles for economics education. This skill is format-indepe
 
 **Authoritative reference:** `references/authored/didactiek-principes.md` is the single source of truth for all didactical principles in this repository. This skill provides operational decision rules; the reference document contains the complete theoretical foundation, research evidence, and detailed specifications. When this skill and the reference document conflict, the reference document takes precedence.
 
+**Book 2+ Part A inheritance:** for newly authored Book 2 and later theory
+paragraphs, use the complete operational sequence and backward-design table in
+`skills/econ-exercise-builder.md`. Book 1 is frozen and must not be retrofitted.
+The printed headings are, contiguously: `Uitgewerkt voorbeeld`, `Startopgaven`,
+`Begeleide inoefening`, `Zelfstandige oefening`, `Doeloefening`, `Denkertje /
+Bonusopgave`, `Herhaling / Herhaling en interleaving`. The core route is
+`Startopgaven -> Zelfstandige oefening -> Doeloefening`; it must fit the work
+time of a 55-minute lesson. This is separate from the Part B product route
+`Start -> Leer -> Check -> Oefen -> Exit ticket`.
+
+Apply these didactic checks within that structure:
+
+- the worked example models the same target-operation chain with lower
+  complexity and no operation absent from the goals/target;
+- Startopgaven retrieves already-taught prerequisites and briefly checks
+  current-content comprehension under one heading, without claiming mastery,
+  diagnosis, or automatic routing;
+- Begeleide inoefening remains a printed heading but is an optional student
+  route; it keeps the same goal, uses stronger explicit support, deliberately
+  fades it, and offers a neutrally worded skip;
+- bonus builds cognitive flexibility rather than adding more arithmetic;
+- closing review contains 1–2 accessible cumulative/homework tasks and no new
+  theory.
+
 ---
 
 ## PART 1: CORE DESIGN PHILOSOPHY

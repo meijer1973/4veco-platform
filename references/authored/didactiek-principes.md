@@ -1,7 +1,7 @@
 # Didactische Principes — Reference for Economics Materials
 
 ```
-last_verified: 2026-04-14
+last_verified: 2026-08-29
 source: consolidated from econ-didactiek, econ-textbook-paragraph, econ-exercise-builder,
         econ-paragraph-review, econ-consolidation-builder, econ-quality-control,
         AGENTS.md, BUILD-PARAGRAPH.md, BUILD-CHAPTER.md,
@@ -95,6 +95,11 @@ The worked example effect is "the best known and most widely studied of the cogn
 **Evidence:** Meta-analysis effect size: **0.52** (Crissman, 2006).
 
 **Expertise reversal:** As learners gain competence, worked examples and scaffolding become *counterproductive*. This is the theoretical foundation for differentiation: early material heavily scaffolded, scaffolding deliberately reduced as chapters progress.
+
+For Book 2+ Part A paragraphs, the worked example is designed backward from
+the doeloefening. It uses the same operation chain in a simpler context and
+with simpler values. It may not introduce an operation that is absent from the
+lesson goals or target decomposition.
 
 ### 2.6 Practical rules for material design
 
@@ -210,13 +215,17 @@ Oefening 7-8:  Geen scaffolding (zelfstandig)
 
 ### 4.4 4-stage dual coding fading for exercises
 
-Across startoefeningen + independent practice, visuals fade in four stages:
+When graph scaffolding is useful, it belongs in optional `Begeleide
+inoefening` and fades toward `Zelfstandige oefening`. `Startopgaven` are a
+short activation/check block, not the home of an extended fading sequence.
+
+Across guided + independent practice, visuals can fade in four stages:
 
 | Stage | Exercise | What the student is given | What the student does |
 |-------|----------|--------------------------|----------------------|
-| 1 | Startoefening 1 | Graph **with** the change drawn AND labeled | Reads, identifies, classifies, explains |
-| 2 | Startoefening 2 | Graph base (axes + initial line) only | Draws the change themselves |
-| 3 | Startoefening 3 | No graph | Reasons in text/words only |
+| 1 | Begeleide oefening 1 | Graph **with** the change drawn AND labeled | Reads, identifies, classifies, explains |
+| 2 | Begeleide oefening 2 | Graph base (axes + initial line) only | Draws the change themselves |
+| 3 | Begeleide oefening 3 | No graph | Reasons in text/words only |
 | 4 | Independent practice | No graph | Draws their own graph from scratch |
 
 **Why stage 1 is non-negotiable:** Without it, the first exercise asks students to *produce* before they have *recognized*. Stage 1 lets them verify their reading of visual conventions before applying them. It is the lowest-friction entry point into the visual representation.
@@ -384,6 +393,11 @@ Exercise problems should be mixed over question types instead of blocked by topi
 
 Every 3–4 chapters, a cumulative review section should pull together threads from across the book.
 
+This is a broad curriculum-allocation heuristic, not a quota for every
+paragraph. The closing `Herhaling / Herhaling en interleaving` section of one
+Book 2+ Part A paragraph contains only 1–2 short, accessible cumulative tasks;
+it may be assigned as homework and never introduces new theory.
+
 ### 6.3 Skill selection priority order
 
 **Priority 1 — Direct prerequisites:** Skills that the current paragraph builds on (e.g., if the current paragraph is consumer surplus, interleave with equilibrium solving).
@@ -406,9 +420,10 @@ Every 3–4 chapters, a cumulative review section should pull together threads f
 
 ### 6.5 Adjustment for paragraph difficulty
 
-- **LIGHT paragraph:** More time for interleaving (3–4 exercises from earlier chapters)
-- **MEDIUM paragraph:** Balanced distribution
-- **HEAVY paragraph:** Interleaving reduced to 1–2 quick exercises; guided practice takes most of the budget
+- Every paragraph-level closing review remains 1–2 quick accessible tasks.
+- **LIGHT paragraph:** tasks may make a somewhat wider connection to earlier material.
+- **MEDIUM paragraph:** prefer a direct prerequisite plus one recent skill.
+- **HEAVY paragraph:** use one especially accessible retrieval task; the optional guided route may use the available support time.
 
 ### 6.6 Retrieval practice (Roediger & Karpicke)
 
@@ -485,7 +500,8 @@ d) Een leerling zegt: "[plausible wrong reading]". Waarom niet?
 
 **Why:** Students who correctly classify single changes often collapse under simultaneous changes. The combined-change exercise forces them to keep both lenses active. Always include sub-question (d) confronting a tempting wrong reading.
 
-**Placement:** LAST starter exercise (highest scaffolded difficulty) OR FIRST independent exercise.
+**Placement:** last exercise in optional `Begeleide inoefening` (highest
+scaffolded difficulty) or first `Zelfstandige oefening`.
 
 ### 7.6 Misconception warning box format
 
@@ -547,45 +563,68 @@ Exercise progression within a chapter: define → calculate → explain → anal
 
 ### 9.1 Exercise progression sequence
 
+For newly authored Book 2 and later Part A theory paragraphs, design backward:
+`lesson goals -> doeloefening -> target operations -> worked example and
+practice`. Record the alignment before drafting:
+
+| Lesson goal | Target subquestion/operation | Worked example | Start check | Guided practice | Independent practice | Covered/gap |
+|---|---|---|---|---|---|---|
+| [goal] | [observable operation] | [where modelled] | [where checked] | [where scaffolded or n/a] | [where practised] | [covered or named gap] |
+
+The student-facing headings then form one contiguous block in exactly this
+order:
+
 ```
-1. WORKED EXAMPLE
-   Not an exercise — fully solved. Same procedure as target exercise, simpler context.
-   Students read/study this.
-
-2. STARTOEFENINGEN (4-stage dual coding fading — see §4.4)
-   Stage 1: READ a labeled graph
-   Stage 2: DRAW on a provided graph base
-   Stage 3: DESCRIBE without a graph
-
-3. INDEPENDENT PRACTICE
-   1–3 exercises at target difficulty, no scaffolding, no visuals provided.
-   Stage 4: students draw their own graph from scratch when needed.
-
-4. INTERLEAVING EXERCISES
-   1–4 exercises from previous paragraphs. Keep quick (2–4 min each).
-
-5. TARGET EXERCISE (doeloefening)
-   From blueprint, verbatim or lightly adapted. The capstone.
-
-6. VERDIEPINGSOPDRACHT (outside time budget)
-   Open question at Bloom analyseren/evalueren/creëren. Different context.
-   No scaffolding. Labeled "Denkertje" or "Bonusopgave".
+1. Uitgewerkt voorbeeld
+2. Startopgaven
+3. Begeleide inoefening
+4. Zelfstandige oefening
+5. Doeloefening
+6. Denkertje / Bonusopgave
+7. Herhaling / Herhaling en interleaving
 ```
+
+- `Uitgewerkt voorbeeld` follows theory directly, models the same operation
+  chain as the target with lower complexity, and adds no untargeted operation.
+- `Startopgaven` takes 5–8 minutes and combines two roles under that one visible
+  heading: retrieval of prerequisites that have already been taught, plus a
+  compact current-content comprehension check. It is brief and low-stakes; it
+  is not a mastery test, diagnosis, or automatic routing mechanism.
+- `Begeleide inoefening` is a printed section and an optional student route. It
+  takes 8–15 minutes for students who use it, keeps the same lesson goal and
+  target, uses stronger explicit scaffolding, deliberately fades that help,
+  and uses neutral skip wording such as: "Heb je deze hulp niet nodig? Ga dan
+  verder met Zelfstandige oefening."
+- `Zelfstandige oefening` takes 10–18 minutes and rehearses the target operations
+  without the guided support.
+- `Doeloefening` takes 8–12 minutes and is the capstone proof of the lesson goal.
+- `Denkertje / Bonusopgave` takes 8–15 minutes outside the core route and builds
+  cognitive flexibility through a new representation, assumption, strategy,
+  comparison, critique, or transfer—not by adding more arithmetic of the same kind.
+- `Herhaling / Herhaling en interleaving` takes 4–8 minutes and contains 1–2
+  accessible cumulative/homework tasks. It revisits taught content and contains
+  no new theory.
+
+Print a compact route note: `Korte route: Startopgaven -> Zelfstandige oefening
+-> Doeloefening.` The core route is feasible within the work time of a
+55-minute lesson. Guided practice is an optional support detour; bonus and
+closing review are outside that route. The Part B companion route `Start ->
+Leer -> Check -> Oefen -> Exit ticket` is a different product contract and is
+never substituted for these printed Part A headings.
+
+Prove feasibility with a paragraph-specific whole-lesson equation:
+`motivation + instruction + worked example + transitions/recap + actual core
+questions <= 55 minutes`. Adding the recommended core ranges or stating
+`23–38 < 55` is not proof because instruction also consumes lesson time.
 
 ### 9.2 Time budget and allocation
 
-Total exercise set: **40–60 minutes** of student work (excluding worked example).
-
-| Component | Time share |
-|-----------|------------|
-| Guided practice (with fading) | ~50% |
-| Zelfstandige oefening (independent practice) | ~20% |
-| Interleaving exercises | ~15% |
-| Target exercise | ~15% |
-
-Optional stretch material is **outside** the 40–60 min budget and is labelled
-`Denkertje` or `Bonusopgave`. The standard student-facing exercise block after
-start exercises is `Zelfstandige oefening`, not `Verdieping`.
+Budget each section with the ranges in §9.1 and show that the core route
+`Startopgaven -> Zelfstandige oefening -> Doeloefening` fits the remaining
+work time in a 55-minute lesson through the whole-lesson equation in §9.1.
+Estimate the actual questions and justify range deviations. The optional guided
+route may take 8–15 minutes more. Bonus is outside the core route; closing
+review may be homework.
 
 ### 9.3 Answer model rules
 
@@ -657,17 +696,29 @@ No step-by-step procedure. Instead: a **model answer** showing one strong respon
 
 ### 10.1 Canonical section sequence (NEVER reorder)
 
+This authoring contract applies to newly authored Book 2 and later theory
+paragraphs. Book 1 output is frozen: do not retrofit it and do not run this
+contract as a retroactive Book 1 content check.
+
 ```
 1. HEADER — paragraph number + title (no difficulty rating)
 2. MOTIVATING PROBLEM — recognisable situation creating cognitive conflict
 3. THEORY — concept explanation with dual coding, definition/formula/warning/recall boxes
-4. WORKED EXAMPLE — fully solved, same procedure as target exercise, simpler context
-5. SUMMARY BOX — 3–5 bullet points + forward pointer (AFTER worked example, BEFORE exercises)
-6. WEBSITE-HELP NOTE — "Vastgelopen op een opgave?" callout
-7. EXERCISES — embedded inline
+4. UITGEWERKT VOORBEELD — section 1 of the contiguous exercise block
+5. STARTOPGAVEN — section 2, immediately after the worked example
+6. BEGELEIDE INOEFENING — section 3, optional support route
+7. ZELFSTANDIGE OEFENING — section 4
+8. DOELOEFENING — section 5
+9. DENKERTJE / BONUSOPGAVE — section 6, optional flexibility task
+10. HERHALING / HERHALING EN INTERLEAVING — section 7, then compact summary
 ```
 
-**Critical:** Worked example always BEFORE summary; summary always BEFORE exercises. Reading order: theory → worked example → recap → practice.
+**Critical:** the seven named headings are contiguous. Reading order is
+`theory -> Uitgewerkt voorbeeld -> Startopgaven`; no summary, website-help
+stage, generic `Opgaven`, or other top-level exercise heading may intervene.
+Keep the compact summary after section 7 as a non-exercise recap. If website
+help is available, place a subordinate non-heading pointer inside
+`Startopgaven` beside the route note and identify it as optional Part B help.
 
 **Time shares:**
 
@@ -676,8 +727,10 @@ No step-by-step procedure. Instead: a **model answer** showing one strong respon
 | Motivating problem | ~5 min | Class discussion |
 | Theory | ~15 min | Instruction |
 | Worked example | ~5 min | Reading/studying |
-| Exercises | ~40–60 min | Practice + homework |
-| Summary | ~2 min | Reference |
+| Core exercise route | 23–38 min | Startopgaven + Zelfstandige oefening + Doeloefening |
+| Optional guided route | 8–15 min | Stronger support with deliberate fading |
+| Bonus / review | 8–15 min / 4–8 min | Outside core / often homework |
+| Summary | ~2 min | Reference after section 7 |
 
 ### 10.2 Writing rules
 
@@ -729,6 +782,8 @@ Brief (1–3 lines), only if skill was taught more than one chapter ago.
 - End with forward pointer: "In de volgende paragraaf…"
 - Must capture ALL key conceptual insights including nuances (piecewise functions, domain restrictions, special cases)
 - Omitting a concept taught in body is a FLAG
+- Place it after `Herhaling / Herhaling en interleaving`, outside the contiguous
+  seven-heading exercise block; it is not an eighth exercise section.
 
 ### 10.5 Domain restrictions and ceteris paribus (MANDATORY)
 
@@ -893,7 +948,7 @@ Three sequential passes over every paragraph:
 - Full dual coding in theory (every key concept: text + visual)
 - Colour consistency (same colours for same concepts throughout)
 - Exercise fading sequence (full support → target + support → target + no support)
-- Neutral fading labels (startoefeningen / zelfstandige / doeloefening)
+- Neutral support wording in optional Begeleide inoefening; no ability labels
 
 **1.4 Misconception handling:**
 - Explicit misconception box (wrong AND correct side by side)
@@ -901,18 +956,21 @@ Three sequential passes over every paragraph:
 - Correct framing (explains WHY the error is tempting)
 
 **1.5 Exercise design:**
-- Target exercise alignment with blueprint
+- Backward-design alignment table covers every goal and target operation
+- Exact contiguous seven-heading order for Book 2+; Book 1 remains frozen
+- Both Startopgaven roles: taught-prerequisite retrieval + brief current-content check
+- Target exercise alignment with blueprint and a whole-lesson timing equation ≤55 minutes
 - Bloom progression (remember → calculate → explain → analyze → evaluate)
-- Interleaving (≥2 exercises revisiting prior skills)
-- Denkertje/bonus present
-- Hints in early exercises
-- Worked example before exercises
+- Optional guided practice has stronger support, deliberate fading, neutral skip wording, and the same goal
+- Denkertje/bonus builds cognitive flexibility, not more of the same arithmetic
+- Closing review has 1–2 accessible cumulative/homework tasks and no new theory
+- Worked example directly after theory; Startopgaven directly after the example
 
 **1.6 Summary and navigation:**
 - Summary present and complete (captures ALL key insights including nuances)
 - Forward reference
-- Worked example placement (before summary)
-- Begeleide inoefening reference
+- Summary appears after section 7, not between theory/example/practice
+- Optional Part B website-help pointer is subordinate inside Startopgaven
 
 ### 12.3 Mathematical/conceptual precision checks (Pass 2)
 
@@ -976,7 +1034,7 @@ Must be run by an INDEPENDENT sub-agent (not the builder):
 6. Misconception stated but not confronted in exercises
 7. Inconsistent variable naming
 8. Summary omits key insight (especially piecewise functions, domain restrictions)
-9. Interleaving exercises missing
+9. Closing cumulative review missing
 10. Worked example after summary
 
 **Lower frequency but high impact:**

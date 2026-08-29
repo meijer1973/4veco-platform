@@ -51,6 +51,8 @@ const GENERATED_INDEX_FILES = new Set([
   'agent_github_entry.md',
   'research_agent_map.md',
   'research_agent_map_references.md',
+  'reports/internal-dashboard/dashboard-data.json',
+  'reports/internal-dashboard/index.html',
   'reports/url-index.md',
 ]);
 

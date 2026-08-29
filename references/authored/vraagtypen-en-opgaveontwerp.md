@@ -1,7 +1,7 @@
 # Vraagtypen & Opgaveontwerp — Reference for Economics Materials
 
 ```
-last_verified: 2026-04-16
+last_verified: 2026-08-29
 source: consolidated from econ-exercise-builder, econ-consolidation-builder,
         econ-testprep-builder, econ-didactiek, econ-textbook-paragraph,
         econ-paragraph-review, econ-quality-control, didactiek-principes.md
@@ -9,7 +9,12 @@ research_base: VWO economics exam analysis, cognitive load theory, dual coding t
                Bloom's taxonomy, backward fading (Renkl & Atkinson 2003)
 ```
 
-This document is the **single source of truth** for all question types, exercise formats, answer model conventions, and opgave design rules used in the 4veco platform. It extracts and consolidates knowledge that is otherwise scattered across multiple skills and reference files. Skills reference this document for the underlying knowledge about questions; they handle the procedural "how to build" instructions themselves.
+This document is the **single source of truth for question types, response
+formats, scoring, and answer-model conventions** used in the 4veco platform.
+It is not a competing source for paragraph exercise sequence. For newly
+authored Book 2+ Part A theory paragraphs, `skills/econ-exercise-builder.md`
+owns the operational seven-section sequence, route, timing, and backward-design
+contract. Book 1 output remains frozen and is not retrofitted.
 
 ---
 
@@ -81,23 +86,14 @@ Questions appear in four distinct contexts within the platform, each with differ
 
 **Purpose:** Practice the skill introduced in one specific paragraph.
 **Scope:** Single skill, single paragraph.
-**Total time budget:** 40–60 minutes.
 
-The exercise set follows a mandatory progression:
-
-| Stage | Component | Time share | Scaffolding | Details |
-|-------|-----------|------------|-------------|---------|
-| 1 | Worked example | — | Full (Niveau 5) | Fully solved; same procedure as target, simpler context. Students read and study, not solve. |
-| 2 | Startoefeningen (guided practice) | ~50% | Fading (5→0) | 4-stage dual coding fading sequence (see Part 3) |
-| 3 | Zelfstandige oefening (independent practice) | ~20% | None (Niveau 0) | 1–3 exercises at target difficulty, different contexts; this is the student-facing label after start exercises |
-| 4 | Interleaving exercises | ~15% | None (Niveau 0) | 1–4 quick exercises (2–4 min each) from previous paragraphs |
-| 5 | Target exercise (doeloefening) | ~15% | None (Niveau 0) | From blueprint, verbatim or lightly adapted; capstone |
-| 6 | Optional stretch task | Outside budget | None | Open question at Bloom analyseren/evalueren/creeren; labeled "Denkertje" or "Bonusopgave", not as the normal post-start exercise block |
-
-**Time adjustment by paragraph difficulty:**
-- Light paragraph: shorter guided practice, more interleaving (3–4 exercises)
-- Medium paragraph: balanced distribution
-- Heavy paragraph: guided practice takes most of budget, interleaving reduced to 1–2
+The operational contract is defined once in `skills/econ-exercise-builder.md`:
+backward design from goals and target operations; the exact contiguous headings
+`Uitgewerkt voorbeeld`, `Startopgaven`, `Begeleide inoefening`, `Zelfstandige
+oefening`, `Doeloefening`, `Denkertje / Bonusopgave`, and `Herhaling /
+Herhaling en interleaving`; and the core route `Startopgaven -> Zelfstandige
+oefening -> Doeloefening`. Use the question taxonomy in this reference to
+choose sound prompts and answer forms inside those sections.
 
 ### 2.2 Consolidation exercises (econ-consolidation-builder)
 
@@ -217,13 +213,14 @@ Question type = calculation?
 
 ### 3.4 Four-stage dual coding fading (mandatory for graph exercises)
 
-This is the **mandatory visual progression** for all graph-based exercises in theory paragraphs:
+When graph-based guided practice is needed, use this visual progression inside
+optional `Begeleide inoefening` and fade into independent practice:
 
 | Stage | Exercise | What student gets | What student does |
 |-------|----------|------------------|-------------------|
-| 1 | Startoefening 1 | Graph WITH change drawn AND labeled | Reads, identifies, classifies, explains |
-| 2 | Startoefening 2 | Graph base only (axes + initial line) | Draws the change themselves |
-| 3 | Startoefening 3 | No graph | Reasons in text/words only |
+| 1 | Begeleide oefening 1 | Graph WITH change drawn AND labeled | Reads, identifies, classifies, explains |
+| 2 | Begeleide oefening 2 | Graph base only (axes + initial line) | Draws the change themselves |
+| 3 | Begeleide oefening 3 | No graph | Reasons in text/words only |
 | 4 | Independent practice | No graph | Draws own graph from scratch as solution |
 
 **Why Stage 1 is non-negotiable:** Without it, the first exercise asks students to *produce* before they have *recognized*. Stage 1 lets them verify their reading of visual conventions before applying them.
@@ -353,7 +350,7 @@ Daardoor [schakel 2 → further effect].
 Zo [concludes to given conclusion] (conclusie = gegeven).
 ```
 
-### 6.4 Verdieping answer model
+### 6.4 Denkertje / Bonusopgave answer model
 
 No step-by-step procedure. Instead:
 - **Model answer** — one strong example response
@@ -414,6 +411,11 @@ Extra ondersteuning  <----------  Standaard  ---------->  Extra uitdaging
 | Problems from 2–3 previous chapters | ~25% |
 | Earlier material | ~15% |
 
+This is a curriculum-level allocation heuristic, not a per-paragraph quota.
+The Book 2+ closing review has only 1–2 short accessible cumulative/homework
+tasks and must not introduce new theory. Its placement and time range are owned
+by `skills/econ-exercise-builder.md`.
+
 ### 8.2 Skill selection priority
 
 **Priority 1 — Direct prerequisites:** Skills the current paragraph builds on (e.g., if current is consumer surplus, interleave with equilibrium solving).
@@ -462,7 +464,8 @@ c) Beide tegelijkertijd. Beschrijf netto-effect. Versterken of tegen elkaar in?
 d) Een leerling zegt: "[plausible wrong reading]". Waarom niet?
 ```
 
-Sub-question (d) is the misconception-confrontation lever. Placement: last starter exercise or first independent exercise.
+Sub-question (d) is the misconception-confrontation lever. Placement: last
+exercise in optional `Begeleide inoefening` or first `Zelfstandige oefening`.
 
 ### 9.3 Misconception warning box format
 
@@ -525,8 +528,8 @@ Required for all practice tests and timed tests (5.4); optional for consolidatio
 1. All exercises at the same Bloom level (no progression)
 2. Graph numbers don't match text numbers
 3. Scaffolding doesn't fade — same level throughout
-4. Interleaving exercises missing entirely
-5. Worked example placed after summary instead of before exercises
+4. Closing review missing, inaccessible, or introducing new theory
+5. Worked example not directly after theory, or a stage inserted before Startopgaven
 
 **Medium frequency:**
 6. Misconception stated in theory but not confronted in exercises
@@ -534,6 +537,8 @@ Required for all practice tests and timed tests (5.4); optional for consolidatio
 8. Answer model uses different steps than worked example
 9. No "waarom" explanation in answer model
 10. Classification exercises missing column headers
+11. Bonus adds more arithmetic instead of cognitive flexibility
+12. Startopgaven omits prerequisite retrieval or the compact current-content check
 
 ### 11.2 Review protocol: three passes
 

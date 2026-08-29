@@ -108,6 +108,13 @@ For paragraph work, `check-part-a-pdf-readiness.js` and
 `check-paragraph-workflow-wording.js` is the shared two-lane guardrail. These
 names do not create additional operational lanes.
 
+For newly authored Book 2+ Part A exercise structure, start with
+`skills/econ-exercise-builder.md`; validate the aligned platform-only contract
+with `build-scripts/workflows/check-part-a-exercise-authoring-contract.js` and
+its mutation suite
+`build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js`.
+This guardrail is non-retroactive: Book 1 output stays frozen.
+
 - `RESEARCH_AGENT_PROMPT.md`
 - `RESEARCH_AGENT_MAP.md`
 - `RESEARCH_AGENT_PROMPT_REFERENCES.md`
@@ -124,6 +131,8 @@ names do not create additional operational lanes.
 - `build-scripts/templates/textbook-to-companion-handoff.md`
 - `build-scripts/workflows/check-part-a-pdf-readiness.js`
 - `build-scripts/workflows/check-paragraph-workflow-wording.js`
+- `build-scripts/workflows/check-part-a-exercise-authoring-contract.js`
+- `build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js`
 - `build-scripts/workflows/check-paragraph-lane-scope.js`
 - `scripts/lib/paragraph-types.js`
 - `build-scripts/README.md`
@@ -200,6 +209,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/templates/textbook-to-companion-handoff.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-pdf-readiness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-workflow-wording.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-lane-scope.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/lib/paragraph-types.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
@@ -278,6 +289,8 @@ Use these anchors before free-form browsing.
   "textbook_to_companion_handoff_template": "build-scripts/templates/textbook-to-companion-handoff.md",
   "part_a_pdf_readiness_checker": "build-scripts/workflows/check-part-a-pdf-readiness.js",
   "paragraph_workflow_wording_checker": "build-scripts/workflows/check-paragraph-workflow-wording.js",
+  "part_a_exercise_authoring_contract_checker": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
+  "part_a_exercise_authoring_contract_tests": "build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js",
   "paragraph_lane_scope_checker": "build-scripts/workflows/check-paragraph-lane-scope.js",
   "paragraph_type_contract": "scripts/lib/paragraph-types.js",
   "chapter_build_guide": "BUILD-CHAPTER.md",

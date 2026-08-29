@@ -66,7 +66,14 @@ def embed_images(md, asset_dir):
 
 ### 2.4 Exercise markdown formatting rules
 
-**Horizontal rules between exercises:** In exercise sections, `---` separators between individual `**Opgave N**` blocks must be removed. Keep `---` only before major section headers (`### Startoefeningen`, `### Zelfstandige oefening`, `### Herhaling`, `### Doeloefening`, `### Denkertje`).
+**Horizontal rules between exercises:** In exercise sections, `---` separators
+between individual `**Opgave N**` blocks must be removed. For newly authored
+Book 2+ Part A paragraphs, major section boundaries follow the exact contiguous
+headings `### Uitgewerkt voorbeeld`, `### Startopgaven`, `### Begeleide
+inoefening`, `### Zelfstandige oefening`, `### Doeloefening`, `### Denkertje /
+Bonusopgave`, and `### Herhaling / Herhaling en interleaving`. Do not render a
+summary, website-help stage, generic `Opgaven`, or Part B route step as an
+intervening Part A heading. Book 1 output remains frozen.
 
 **Sub-question blank lines:** Keep blank lines between `a)`, `b)`, `c)` sub-questions in markdown source (pandoc needs them for paragraph separation). The compact visual look is achieved via CSS (`.exercise p { margin: 0 0 1pt 0; }`), not by removing blank lines.
 

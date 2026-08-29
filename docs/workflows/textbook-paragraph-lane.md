@@ -11,6 +11,19 @@ Publisher-print chapter/book handoff also belongs to this lane.
 Use `BUILD-PARAGRAPH.md` as the full reference, but use this runbook as the
 assignment surface for ordinary textbook paragraph production.
 
+For newly authored Book 2 and later theory paragraphs, use
+`skills/econ-exercise-builder.md` as the operational Part A exercise contract:
+backward-design alignment, exact contiguous headings `Uitgewerkt voorbeeld ->
+Startopgaven -> Begeleide inoefening -> Zelfstandige oefening -> Doeloefening
+-> Denkertje / Bonusopgave -> Herhaling / Herhaling en interleaving`, and the
+short/core route `Startopgaven -> Zelfstandige oefening -> Doeloefening`. Keep
+the recap after section 7; keep any website-help pointer subordinate inside
+Startopgaven. Book 1 output is frozen and must not be retrofitted.
+
+The companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` belongs
+to Part B. It is not a printed Part A heading sequence and does not create an
+additional lane.
+
 ## Allowed Outputs
 
 - `X.Y.Z [Name] <en dash> paragraaf.md`
@@ -99,6 +112,9 @@ The lane is closed only when:
 - `X.Y.Z-textbook-handoff.md` is filled.
 - No companion completion claim is made.
 - The lane-scope checker has no companion leak.
+- Every Book 2+ target operation is covered in the required alignment table,
+  the seven headings/order and core-route timing have been reviewed, and the
+  optional guided/bonus/review semantics pass `econ-paragraph-review`.
 
 `complete` validation is not a normal textbook assignment. It is an integration
 verification state after Part B exists or a deliberately authorized complete

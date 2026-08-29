@@ -8,6 +8,10 @@ pipeline: "Part A producer"
 
 Builds one complete textbook paragraph: theory + worked example + exercises + graphs → markdown + assets + PDF. This skill handles the textbook-specific format and writing rules.
 
+**Book scope:** the Part A exercise-authoring structure below applies to newly
+authored Book 2 and later theory paragraphs. Book 1 output is frozen: do not
+retrofit it and do not use this contract as a retroactive Book 1 content check.
+
 **Lane boundary:** this is the Part A textbook lane. It may not create or edit
 companion route files (`index.html`, companion HTML/PPTX, shared game data,
 `_paragraph-plan.md`, or `X.Y.Z-companion-visual-review.md`). Close the lane by
@@ -93,7 +97,8 @@ _assets/1.2.2_ex_1.svg                — exercise 1 graph
 
 ### 2.1 Section sequence (CANONICAL — never reorder)
 
-Every theory paragraph follows this structure, in **exactly this order**:
+Every newly authored Book 2+ theory paragraph follows this structure, in
+**exactly this order**:
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -112,23 +117,33 @@ Every theory paragraph follows this structure, in **exactly this order**:
 │    misconception warnings, recall boxes      │
 ├─────────────────────────────────────────────┤
 │ 4. WORKED EXAMPLE                           │
-│    Fully solved, same procedure as target    │
-│    exercise, simpler context                 │
+│    First of seven contiguous headings; same  │
+│    target-operation chain, simpler context   │
 ├─────────────────────────────────────────────┤
-│ 5. SUMMARY BOX                              │
-│    3–5 bullet points + forward pointer       │
-│    Place IMMEDIATELY after the worked        │
-│    example, BEFORE the exercises             │
+│ 5. STARTOPGAVEN                             │
+│    Taught-prerequisite retrieval + compact   │
+│    current-content comprehension check       │
 ├─────────────────────────────────────────────┤
-│ 6. WEBSITE-HELP NOTE                        │
-│    "Vastgelopen op een opgave?" callout      │
+│ 6. BEGELEIDE INOEFENING                     │
+│    Printed, optionally followed; same goal   │
 ├─────────────────────────────────────────────┤
-│ 7. EXERCISES                                │
-│    Embedded inline (not just referenced)     │
+│ 7. ZELFSTANDIGE OEFENING                    │
+│ 8. DOELOEFENING                             │
+│ 9. DENKERTJE / BONUSOPGAVE                  │
+│10. HERHALING / HERHALING EN INTERLEAVING    │
+│    End of the contiguous seven-heading block │
+├─────────────────────────────────────────────┤
+│11. SUMMARY BOX                              │
+│    Compact non-exercise recap after section 7│
 └─────────────────────────────────────────────┘
 ```
 
-**Critical**: the worked example always comes BEFORE the summary, and the summary always comes BEFORE the exercises. A student reading linearly should see: theory → worked example → recap → practice. Putting the summary before the worked example interrupts the flow and is wrong.
+**Critical:** the student reads `theory -> Uitgewerkt voorbeeld ->
+Startopgaven`. Those seven named headings are contiguous. No top-level summary,
+website-help stage, generic `Opgaven`, or other exercise heading may intervene.
+If website help exists, put a subordinate non-heading optional Part B pointer
+inside `Startopgaven` beside the short-route note. The Part B route `Start ->
+Leer -> Check -> Oefen -> Exit ticket` is not the printed Part A sequence.
 
 ### 2.2 What goes where
 
@@ -137,8 +152,14 @@ Every theory paragraph follows this structure, in **exactly this order**:
 | Motivating problem | Context, question, maybe a provocative claim | ~5 min (class discussion) |
 | Theory | Concept, definitions, formulas, graphs | ~15 min (instruction) |
 | Worked example | Step-by-step solution, studied by students | ~5 min (reading) |
-| Exercises | Guided → independent → interleaving → target | ~40–60 min (practice + homework) |
-| Summary | Recap, key formulas | ~2 min (reference) |
+| Core exercise route | Startopgaven → Zelfstandige oefening → Doeloefening | Recommended ranges total 23–38 min; actual questions must fit remaining lesson time |
+| Optional guided route | Same goal, stronger support with deliberate fading | 8–15 min |
+| Bonus / closing review | Cognitive flexibility / 1–2 accessible cumulative tasks | 8–15 min outside core / 4–8 min often homework |
+| Summary | Recap, key formulas, after section 7 | ~2 min (reference) |
+
+Use the full backward-design and per-section authoring contract in
+`econ-exercise-builder`, including the required alignment table. The worked
+example may not introduce an operation absent from the goals or doeloefening.
 
 ---
 
@@ -268,6 +289,8 @@ Rules:
 - Maximum 5 bullet points
 - Include the key formula(s) from this paragraph
 - End with a forward pointer: "In de volgende paragraaf…"
+- Place the box after `Herhaling / Herhaling en interleaving`, outside the
+  contiguous seven exercise headings; it is not an eighth exercise section
 
 ---
 
@@ -434,10 +457,18 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 2. □ One concept only — no scope creep
 3. □ Every lesson goal from the blueprint is addressed in theory AND practised in exercises
 4. □ Worked example uses the same procedure as the target exercise
-5. □ Dual coding fading applied (visual → visual → no visual in guided practice)
-6. □ At least one misconception warning if applicable (check `econ-didactiek` §7.4)
-7. □ Definitions use exact syllabus terminology (verify against `references/authored/economie-terminologie.md`)
-8. □ Answer model follows unified procedures — same steps as worked example
+5. □ Worked example follows theory directly, adds no untargeted operation, and Startopgaven follows directly
+6. □ Exact contiguous Book 2+ heading order: Uitgewerkt voorbeeld → Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave → Herhaling / Herhaling en interleaving
+7. □ Required alignment table covers every lesson goal and target operation
+8. □ Startopgaven has taught-prerequisite retrieval and a compact current-content check under one heading; it is not mastery/diagnosis/automatic routing
+9. □ Core route note is present and a whole-lesson equation totals motivation + instruction + worked example + transitions/recap + actual core-route questions at ≤55 minutes
+10. □ Optional Begeleide inoefening keeps the same goal, gives stronger support, fades it deliberately, and uses neutral skip wording
+11. □ Denkertje/bonus builds cognitive flexibility; closing review has 1–2 accessible cumulative/homework tasks and no new theory
+12. □ Summary follows section 7 and any website-help pointer is subordinate inside Startopgaven
+13. □ Dual coding fading applied inside optional guided practice (visual → visual → no visual)
+14. □ At least one misconception warning if applicable (check `econ-didactiek` §7.4)
+15. □ Definitions use exact syllabus terminology (verify against `references/authored/economie-terminologie.md`)
+16. □ Answer model follows unified procedures — same steps as worked example
 
 **Graph checks:**
 9. □ Theory graphs built step by step (not dropped in complete)
@@ -453,12 +484,12 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 14. □ All image references verified to resolve (covered by 12a/12b — do not skip)
 15. □ No difficulty ratings or time estimates in student-facing markdown
 16. □ Definition boxes, formula boxes, warning boxes visually distinct
-17. □ Summary box present with ≤5 points and forward pointer
+17. □ Summary box present after section 7 with ≤5 points and forward pointer
 18. □ File naming follows convention: `X.Y.Z_type_number`
 19. □ PDF exported via `econ-pdf-builder` without errors
 
 **Time check:**
-20. □ Exercise set fits 40–60 min student work time (cross-check with exercise builder)
+20. □ Whole-lesson equation totals actual planned minutes at ≤55; recommended range addition alone is not accepted as proof, and optional guided/bonus/review time is accounted for separately (cross-check with exercise builder)
 
 **Didactic and precision review (before quality_ref):**
 21. □ Run `econ-paragraph-review` Pass 1 (didactic architecture): opening, scaffolding, dual coding, fading, misconceptions, exercises, summary
