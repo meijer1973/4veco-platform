@@ -235,3 +235,25 @@ Time:        318.313 s, estimated 323 s
 Ran all test suites.
 
 ```
+## node build-scripts/sprints/check-lead-review-substance.js BUNDLE-LANE-CI-RELIABILITY-1
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T12:42:39.455Z`
+- finished_at: `2026-08-29T12:42:39.560Z`
+- duration_ms: `105`
+- exit_code: `0`
+- stdout_sha256: `bcea857c78defd190c61eb64c15b19e412a7ee728d6eb7277d560af3bddfd54a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: BUNDLE-LANE-CI-RELIABILITY-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
