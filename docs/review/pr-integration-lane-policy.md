@@ -409,8 +409,11 @@ fails closed and is not masked by a fallback.
 
 Only when no qualifying automatic push run appears may the lane dispatch a
 manual fallback. It records a new immediate pre-dispatch run-id floor, passes
-full `y1_base_sha` and `y1_head_sha` workflow inputs, and accepts only a newer
-`workflow_dispatch` run. The Y1 range is the Platform transition: old Platform
+then performs one final exact-event recheck against the original transition
+floor. If that recheck finds a queued, running, or completed automatic push run,
+the lane awaits and verifies it and must not dispatch. Only a proven absent
+recheck may proceed with full `y1_base_sha` and `y1_head_sha` workflow inputs;
+the lane accepts only a newer `workflow_dispatch` run. The Y1 range is the Platform transition: old Platform
 main to new Platform main for a Platform merge, or `base == head ==` current
 Platform main when only Lesson changed. The range must be identical or prove
 the base is an ancestor of the exact head. Both automatic and fallback paths

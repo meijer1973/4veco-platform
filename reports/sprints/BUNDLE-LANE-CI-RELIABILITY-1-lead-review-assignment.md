@@ -1,7 +1,7 @@
 # Bundle Lane CI Reliability — Lead Review Assignment
 
 Date: 2026-08-29
-Reviewer: `/root/residual_bridge_lead_review`
+Lead reviewer: `/root/residual_bridge_lead_review`
 Mode: independent read-only structural lead review
 Repository: `meijer1973/4veco-platform`
 Pull request: `#217`

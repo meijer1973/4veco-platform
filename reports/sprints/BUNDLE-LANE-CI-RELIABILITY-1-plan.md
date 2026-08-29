@@ -56,8 +56,11 @@ is either a named follow-up or rejected scope creep.
 - `build-scripts/review-gates/integrate-authorized-bundle.js`
 - `build-scripts/review-gates/integrate-authorized-bundle.test.js`
 - `docs/review/pr-integration-lane-policy.md`
-- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-*`
+- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-*`, including canonical
+  `lead-review-round1`, `lead-review-corrections`, and `lead-review-round2`
 - `references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1*`
+- `references/reference-team-roadmap.md` only for the canonical sprint-ledger
+  registration required by `check-sprint-bundle`
 - the canonical generated repository URL/index/dashboard closure only when
   required by freshness checkers
 - the four canonical `reports/github-agent-index-*` files only when their
@@ -92,7 +95,7 @@ is either a named follow-up or rejected scope creep.
 - Focused negative and positive regressions
 - Narrow policy clarification
 - Sprint result, command log, planning review, lead-review assignment, review
-  rounds, correction log, exact-head readiness, and deterministic indexes
+  rounds, lead-review corrections, exact-head readiness, and deterministic indexes
 - One open, unmerged PR for owner human review
 
 ## Operationalized sprint procedure
@@ -114,7 +117,10 @@ is either a named follow-up or rejected scope creep.
    observed push run with wrong Lesson evidence is not absence and must fail;
    an older same-Platform run below the floor is ignored. Full SHAs, exact-head
    equality, and base ancestry (or exact identity) are mandatory.
-5. Manual fallback must capture a second pre-dispatch floor, call exactly
+5. Manual fallback must capture a second pre-dispatch floor, recheck exact
+   automatic `push` state against the original transition floor, and suppress
+   dispatch if that recheck finds a queued, running, or completed run. Only a
+   proven absent recheck may call exactly
    `gh workflow run platform-ci.yml --repo meijer1973/4veco-platform --ref main
    -f y1_base_sha=<full SHA> -f y1_head_sha=<full SHA>`, and accept only a newer
    `workflow_dispatch` run with exact Platform/Lesson evidence.
@@ -138,7 +144,7 @@ is either a named follow-up or rejected scope creep.
 
 The focused matrix must cover automatic success; queued/running automatic
 completion without dispatch; absent automatic plus successful fallback; exact
-`gh` arguments; missing, malformed, reversed, non-ancestor, and mismatched-head
+`gh` arguments; the observation-to-dispatch race; missing, malformed, reversed, non-ancestor, and mismatched-head
 inputs; stale old run exclusion; newly observed wrong Platform/Lesson evidence;
 red automatic CI; automatic and fallback timeout; intermediate and final
 post-merge failure classification; representative dispatch/orchestration

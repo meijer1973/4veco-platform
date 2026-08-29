@@ -812,16 +812,25 @@ function acquirePlatformMainCi(deps, coordinates = {}, options = {}) {
     expectedPlatformSha,
     expectedLessonSha,
   };
-  let automatic = deps.waitForPlatformMainCi(expectedPlatformSha, automaticOptions);
+  let automatic;
+  try {
+    automatic = deps.waitForPlatformMainCi(expectedPlatformSha, automaticOptions);
+  } catch (error) {
+    return { ok: false, failure: 'automatic_platform_main_ci_observation_failed', error: error.message, range };
+  }
   const automaticRunObserved = Boolean(automatic && automatic.run);
   if (automatic.ok) {
     return { ...automatic, source: 'automatic_main_push', dispatch: null, range };
   }
   if (automatic.failure === 'platform_main_ci_timeout' && automatic.run) {
-    automatic = deps.waitForPlatformMainCi(expectedPlatformSha, {
-      ...automaticOptions,
-      timeoutSeconds: Number(options.timeoutSeconds || 1800),
-    });
+    try {
+      automatic = deps.waitForPlatformMainCi(expectedPlatformSha, {
+        ...automaticOptions,
+        timeoutSeconds: Number(options.timeoutSeconds || 1800),
+      });
+    } catch (error) {
+      return { ok: false, failure: 'automatic_platform_main_ci_wait_failed', error: error.message, range };
+    }
     if (automatic.ok) {
       return { ...automatic, source: 'automatic_main_push', dispatch: null, range };
     }
@@ -836,7 +845,70 @@ function acquirePlatformMainCi(deps, coordinates = {}, options = {}) {
     };
   }
 
-  const minDatabaseId = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, expectedPlatformSha);
+  let minDatabaseId;
+  try {
+    minDatabaseId = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, expectedPlatformSha);
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_ci_fallback_floor_failed',
+      error: error.message,
+      automatic_ci: automatic,
+      dispatch: null,
+      range,
+    };
+  }
+  let recheckedAutomaticRun;
+  try {
+    recheckedAutomaticRun = deps.findMainWorkflowRun(PLATFORM_REPO, expectedPlatformSha, {
+      ...options,
+      minDatabaseId: Number(coordinates.automaticMinDatabaseId || 0),
+      workflowEvent: 'push',
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_ci_automatic_recheck_failed',
+      error: error.message,
+      automatic_ci: automatic,
+      dispatch: null,
+      range,
+    };
+  }
+  if (recheckedAutomaticRun) {
+    let recheckedAutomatic;
+    try {
+      recheckedAutomatic = deps.waitForPlatformMainCi(expectedPlatformSha, {
+        ...automaticOptions,
+        timeoutSeconds: Number(options.timeoutSeconds || 1800),
+      });
+    } catch (error) {
+      return {
+        ok: false,
+        failure: 'automatic_platform_main_ci_wait_failed',
+        error: error.message,
+        rechecked_run: recheckedAutomaticRun,
+        dispatch: null,
+        range,
+      };
+    }
+    return recheckedAutomatic.ok
+      ? {
+          ...recheckedAutomatic,
+          source: 'automatic_main_push_rechecked',
+          dispatch: null,
+          rechecked_run: recheckedAutomaticRun,
+          range,
+        }
+      : {
+          ok: false,
+          failure: 'automatic_platform_main_ci_failed',
+          automatic_ci: recheckedAutomatic,
+          rechecked_run: recheckedAutomaticRun,
+          dispatch: null,
+          range,
+        };
+  }
   let dispatch;
   try {
     dispatch = deps.triggerPlatformCi({
@@ -854,13 +926,25 @@ function acquirePlatformMainCi(deps, coordinates = {}, options = {}) {
       range,
     };
   }
-  const fallback = deps.waitForPlatformMainCi(expectedPlatformSha, {
-    ...options,
-    minDatabaseId,
-    workflowEvent: 'workflow_dispatch',
-    expectedPlatformSha,
-    expectedLessonSha,
-  });
+  let fallback;
+  try {
+    fallback = deps.waitForPlatformMainCi(expectedPlatformSha, {
+      ...options,
+      minDatabaseId,
+      workflowEvent: 'workflow_dispatch',
+      expectedPlatformSha,
+      expectedLessonSha,
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_ci_fallback_wait_failed',
+      error: error.message,
+      automatic_ci: automatic,
+      dispatch,
+      range,
+    };
+  }
   return fallback.ok
     ? { ...fallback, source: 'manual_dispatch_fallback', dispatch, automatic_ci: automatic, range }
     : {
@@ -1405,6 +1489,7 @@ function defaultDeps(options = {}) {
     fetchAuthorization: (repo, commentId, fetchOptions) => fetchBundleAuthorizationComment(repo, commentId, fetchOptions),
     fetchComparePaths,
     fetchCompareStatus,
+    findMainWorkflowRun,
     fetchInterveningCommits,
     fetchMainSha,
     fetchPr,

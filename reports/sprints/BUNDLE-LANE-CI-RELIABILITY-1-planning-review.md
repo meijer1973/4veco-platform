@@ -42,10 +42,14 @@ requirements.
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-planning-review.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md`
-- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round-1.md`
-- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-correction-log.md`
-- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round-2.md`
+- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md`
+- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md`
+- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-result.md`
+- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-baseline.md`
+- `references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json`
+- `references/reference-team-roadmap.md` only for the sprint-ledger row required
+  by the canonical sprint-bundle validator
 
 Only canonical command-log or generated report-index files required by existing
 validators may join this frozen list. They must be identified by the validator,

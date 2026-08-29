@@ -532,6 +532,7 @@ function harness(overrides = {}) {
     fetchComparePaths: jest.fn(() => []),
     fetchCompareStatus: jest.fn(() => ({ status: 'identical', ahead_by: 0, behind_by: 0 })),
     fetchInterveningCommits: jest.fn(() => []),
+    findMainWorkflowRun: jest.fn(() => null),
     fetchReviewThreadState: jest.fn(() => ({
       available: true,
       unresolved_count: 0,
@@ -1473,6 +1474,7 @@ describe('authorized cross-repo bundle integration', () => {
     const deps = {
       waitForPlatformMainCi,
       latestWorkflowRunDatabaseId: jest.fn(() => 503),
+      findMainWorkflowRun: jest.fn(() => null),
       triggerPlatformCi: trigger,
       validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
     };
@@ -1500,6 +1502,84 @@ describe('authorized cross-repo bundle integration', () => {
     });
   });
 
+  test('automatic push appearing at the pre-dispatch boundary suppresses fallback', () => {
+    const racedPush = {
+      databaseId: 502,
+      headSha: platformMerge,
+      event: 'push',
+      status: 'queued',
+      conclusion: null,
+    };
+    const waitForPlatformMainCi = jest
+      .fn()
+      .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
+      .mockReturnValueOnce({
+        ok: true,
+        run: { ...racedPush, status: 'completed', conclusion: 'success' },
+      });
+    const deps = {
+      waitForPlatformMainCi,
+      latestWorkflowRunDatabaseId: jest.fn(() => 502),
+      findMainWorkflowRun: jest.fn(() => racedPush),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+      automaticMinDatabaseId: 500,
+    });
+
+    expect(result).toMatchObject({
+      ok: true,
+      source: 'automatic_main_push_rechecked',
+      dispatch: null,
+      rechecked_run: racedPush,
+    });
+    expect(deps.findMainWorkflowRun).toHaveBeenCalledWith(PLATFORM_REPO, platformMerge, expect.objectContaining({
+      minDatabaseId: 500,
+      workflowEvent: 'push',
+    }));
+    expect(waitForPlatformMainCi.mock.calls[1][1]).toMatchObject({
+      minDatabaseId: 500,
+      workflowEvent: 'push',
+    });
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
+  test('automatic pre-dispatch recheck failure stops without fallback', () => {
+    const deps = {
+      waitForPlatformMainCi: jest.fn(() => ({
+        ok: false,
+        failure: 'platform_main_ci_timeout',
+        run: null,
+      })),
+      latestWorkflowRunDatabaseId: jest.fn(() => 502),
+      findMainWorkflowRun: jest.fn(() => {
+        throw new Error('run listing unavailable');
+      }),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+      automaticMinDatabaseId: 500,
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      failure: 'platform_ci_automatic_recheck_failed',
+      error: 'run listing unavailable',
+      dispatch: null,
+    });
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
   test('unchanged Platform range permits base equal to head after a Lesson-only transition', () => {
     const deps = {
       waitForPlatformMainCi: jest
@@ -1507,6 +1587,7 @@ describe('authorized cross-repo bundle integration', () => {
         .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
         .mockReturnValueOnce({ ok: true, run: { databaseId: 602, event: 'workflow_dispatch' } }),
       latestWorkflowRunDatabaseId: jest.fn(() => 601),
+      findMainWorkflowRun: jest.fn(() => null),
       triggerPlatformCi: jest.fn(() => ({ triggered: true })),
       validatePlatformCiRange: jest.fn((baseSha, headSha) => ({
         ok: baseSha === headSha,
@@ -1623,6 +1704,7 @@ describe('authorized cross-repo bundle integration', () => {
         .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
         .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null }),
       latestWorkflowRunDatabaseId: jest.fn(() => 700),
+      findMainWorkflowRun: jest.fn(() => null),
       triggerPlatformCi: jest.fn(() => ({ triggered: true })),
       validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
     };
