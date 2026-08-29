@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BUNDLE-LANE-CI-RELIABILITY-1",
+  "name": "Bundle Lane CI Reliability",
+  "created": "2026-08-29",
+  "plan": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md",
+  "baseline": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-baseline.md",
+  "human_review_required": true,
+  "gate_id": "GATE-BUNDLE-LANE-CI-RELIABILITY-1",
+  "review_packet": "reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.json",
+  "valid_gate_statuses": [
+    "READY_FOR_HUMAN_REVIEW",
+    "REVISE",
+    "REJECT"
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Reuse exact automatic Platform main push CI for intermediate and final coordinated-bundle states.",
+    "Dispatch one manual fallback only when no qualifying automatic run appeared, with exact required Y1 base and head inputs.",
+    "Use one shared acquisition helper for intermediate and final bundle CI.",
+    "Return structured merged_but_postmerge_verification_failed results after any completed bundle-member merge.",
+    "Clarify the existing fail-closed integration-delta dry-run exception without weakening it."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md",
+    "npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-bundle.test.js",
+    "npm.cmd run check:integration-lane",
+    "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
+    "npm.cmd run check:platform",
+    "node build-scripts/sprints/check-lead-review-substance.js BUNDLE-LANE-CI-RELIABILITY-1",
+    "node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No workflow-definition change.",
+    "No Lesson repository or generated lesson-output change.",
+    "No product, engine, source-data, rendered-output, or Y1 evidence change.",
+    "No protected machine or external reference change.",
+    "No change to PR #208 history, authorization, or completed integration.",
+    "No merge or administrative bypass without renewed owner authorization."
+  ]
+}
