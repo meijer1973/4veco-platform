@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-25T12:18:09.000Z
+Generated: 2026-08-29T12:44:59.978Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book-heading-anchors-20260702`
-Source commit: `1bc95346bf2b3ba6c41b7204a7e16d64d53cb425`
-Files indexed: 7436
+Source branch: `codex/bundle-lane-ci-reliability-20260829`
+Source commit: `ebf618d3bbb5982a5de453e666ab138b00bdd358`
+Files indexed: 7452
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1577,7 +1577,7 @@ Count: 686
 
 ## references
 
-Count: 1006
+Count: 1008
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1957,6 +1957,8 @@ Count: 1006
 - references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
+- references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
+- references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
@@ -2588,7 +2590,7 @@ Count: 1006
 
 ## reports
 
-Count: 4756
+Count: 4770
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4017,6 +4019,9 @@ Count: 4756
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
+- reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
+- reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.json
+- reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -5174,6 +5179,17 @@ Count: 4756
 - reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-plan.md
 - reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-planning-review.md
 - reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-result.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-baseline.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.jsonl
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-planning-review.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-result.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
