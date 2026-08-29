@@ -11,6 +11,14 @@
   "diff_summary": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-diff-summary.md",
   "reviewed_implementation_sha": "79edd64a106dda0658f0e46fc9cdf64c9f7a254c",
   "reviewed_index_tail_sha": "ae5a72edbc57933bc3100c4b1a3bd1d7cfcb29a7",
+  "ci_portability_repair": {
+    "initial_failed_run_id": 33264096124,
+    "initial_failed_head_sha": "c1b5c3bb8a295b7207082aa927e630c0dadbea44",
+    "failure_stage": "Validate platform Jest suite",
+    "cause": "CRLF checkout made LF-only mutation search setup fail before the checker assertion",
+    "repair": "Normalize CRLF and lone-CR source text to LF before structural analysis and test the normalization directly",
+    "replacement_exact_head_ci_required": true
+  },
   "protected_reference_data_changed": false,
   "generated_lesson_output_changed": false,
   "lesson_repository_changed": false,

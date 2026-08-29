@@ -17,8 +17,10 @@ Generated: 2026-08-29
 
 - Adds a non-retroactive checker for real template structure, ordered
   inheritance, required roles, route/timing safeguards, and forbidden drift.
-- Adds 19 focused tests, including structural mutations supplied by independent
+- Adds 21 focused tests, including structural mutations supplied by independent
   review, and wires the checker into `platform-ci`.
+- Normalizes CRLF and lone-CR source text before mutation analysis so the same
+  structural probes run on local and GitHub Windows checkouts.
 - Treats internal-dashboard output as generated platform evidence in the
   shared-lane scope checker and covers that classification with tests.
 - Refreshes root maps, generated agent indexes, URL index, dashboard, roadmap,

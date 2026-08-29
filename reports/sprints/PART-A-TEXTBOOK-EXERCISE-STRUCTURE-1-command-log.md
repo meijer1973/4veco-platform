@@ -1784,3 +1784,104 @@ Ran all test suites.
 ```text
 
 ```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-29T17:02:46.089Z`
+- finished_at: `2026-08-29T17:02:48.673Z`
+- duration_ms: `2584`
+- exit_code: `0`
+- stdout_sha256: `7dddbde4e1afe2256f76467aff664bfd295aae95c8bf1c8d4149cebb2df3f53b`
+- stderr_sha256: `2baa25bdc49ec87ee2394d6ba50db272e058ae2a15ba8be6d4ea94111a7608bf`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       43 passed, 43 total
+Snapshots:   0 total
+Time:        1.379 s, estimated 2 s
+Ran all test suites matching build-scripts/workflows/check-paragraph-lane-scope.test.js|build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-29T17:02:52.767Z`
+- finished_at: `2026-08-29T17:07:14.321Z`
+- duration_ms: `261554`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `9b9b884b45ac876e20809cc90a6ab8eb2088e1f9281c05c2bd007718be5dd32c`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 106 passed, 106 of 112 total
+Tests:       8 skipped, 1565 passed, 1573 total
+Snapshots:   0 total
+Time:        260.862 s, estimated 261 s
+Ran all test suites.
+
+```

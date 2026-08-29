@@ -28,7 +28,7 @@ lesson calculation.
 
 A source checker validates 10 active platform guidance surfaces, the real
 exercise template, repeated ordered sequences, Part A/Part B boundaries,
-timing and differentiation safeguards, and non-retroactivity. Its 19 focused
+timing and differentiation safeguards, and non-retroactivity. Its 21 focused
 tests include negative mutations for extra/intervening headings and sequence
 reordering. No Book 2 paragraph or lesson output was produced.
 
@@ -40,15 +40,17 @@ reordering. No Book 2 paragraph or lesson output was produced.
   resolved.
 - Lead review: round 1 REVISE, preserved commit-bound REVISE, then final PASS
   after structural checker repair and a deterministic fresh-index tail.
-- Focused lane/contract suites: 41/41 passed.
+- Focused lane/contract suites: 43/43 passed after the CI portability repair.
 - Contract checker: PASS across 10 active platform source surfaces.
 - Shared-lane scope: PASS against the committed implementation.
-- Full platform suite: 106 suites and 1,563 tests passed; 6 suites and 8 tests
+- Full platform suite: 106 suites and 1,565 tests passed; 6 suites and 8 tests
   skipped.
 - Agent-index freshness: PASS at generated-index tail `ae5a72ed...`.
 - Detached lesson checkout: clean at `f09fd6e...`.
-- Remote exact-head `platform-ci / validate-platform`: required after the
-  draft PR is published.
+- Initial remote exact-head run `33264096124` exposed CRLF-sensitive mutation
+  setup after the contract and authority checks had passed. Source text is now
+  normalized before structural analysis, with explicit CRLF/lone-CR coverage;
+  replacement exact-head CI is required.
 
 ## Changed files
 
@@ -56,7 +58,8 @@ The implementation aligns the didactic authority, operational exercise
 builder, paragraph/PDF builders, reviewers, teacher-quality agent, build guide,
 and paragraph-lane workflow. It adds the focused source checker and tests,
 wires the checker into npm and platform CI, classifies deterministic dashboard
-outputs correctly for shared-lane validation, and refreshes navigation,
+outputs correctly for shared-lane validation, normalizes source line endings
+before structural mutation analysis, and refreshes navigation,
 indexes, dashboard data, and sprint evidence.
 
 ## Data integrity notes

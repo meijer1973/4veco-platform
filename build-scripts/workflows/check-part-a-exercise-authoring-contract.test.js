@@ -4,6 +4,7 @@ const path = require('path');
 
 const {
   ACTIVE_SURFACES,
+  normalizeSourceText,
   readFiles,
   findContractFailures,
 } = require('./check-part-a-exercise-authoring-contract');
@@ -34,6 +35,14 @@ function expectFailure(files, fragment, options) {
 }
 
 describe('Part A exercise authoring source contract', () => {
+  test('normalizes CRLF and lone CR source text', () => {
+    expect(normalizeSourceText('alpha\r\nbeta\rgamma')).toBe('alpha\nbeta\ngamma');
+  });
+
+  test('normalizes source line endings before structural mutation probes', () => {
+    expect(Object.values(cloneFiles()).every((text) => !text.includes('\r'))).toBe(true);
+  });
+
   test('current platform guidance passes without inspecting lesson output', () => {
     expect(findContractFailures(cloneFiles())).toEqual([]);
     expect(ACTIVE_SURFACES.every((file) => !file.includes('4veco-lessen'))).toBe(true);

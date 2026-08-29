@@ -41,11 +41,15 @@ const CANONICAL_HEADINGS = Object.freeze([
 const CHECKER_PATH = 'build-scripts/workflows/check-part-a-exercise-authoring-contract.js';
 const TEST_PATH = 'build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js';
 
+function normalizeSourceText(value) {
+  return String(value).replace(/\r\n?/g, '\n');
+}
+
 function readFiles(root = ROOT) {
   return Object.fromEntries(
     [...ACTIVE_SURFACES, ...SUPPORTING_SURFACES].map((file) => [
       file,
-      fs.readFileSync(path.join(root, file), 'utf8'),
+      normalizeSourceText(fs.readFileSync(path.join(root, file), 'utf8')),
     ])
   );
 }
@@ -320,6 +324,7 @@ module.exports = {
   ACTIVE_SURFACES,
   SUPPORTING_SURFACES,
   CANONICAL_HEADINGS,
+  normalizeSourceText,
   readFiles,
   firstCodeBlockAfter,
   numberedHeadings,
