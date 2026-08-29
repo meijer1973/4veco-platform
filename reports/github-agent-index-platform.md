@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-29T16:43:51.896Z
+Generated: 2026-08-29T16:50:35.203Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/part-a-textbook-exercise-structure-1-20260829`
-Source commit: `7221b3eb20fad2bd23b5ce7db11f8bb6f22c12f9`
-Files indexed: 7453
+Source commit: `38a4cf5f0524fe5734112c2920783c5050a23235`
+Files indexed: 7457
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1581,7 +1581,7 @@ Count: 688
 
 ## references
 
-Count: 1007
+Count: 1008
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -2133,6 +2133,7 @@ Count: 1007
 - references/data/sprints/MTU-H4C.plan.json
 - references/data/sprints/MTU-H4C.result.json
 - references/data/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1.plan.json
+- references/data/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -2593,7 +2594,7 @@ Count: 1007
 
 ## reports
 
-Count: 4770
+Count: 4773
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6308,14 +6309,17 @@ Count: 4770
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-baseline.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.jsonl
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-diff-summary.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-assignment.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-corrections.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round1.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2-recheck1.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-recheck.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-resolution.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-recheck.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-resolution.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review.md
