@@ -2,6 +2,8 @@
 
 Sprint: `PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1`
 
+Round: lead review round 1
+
 ## Scope
 
 - Artifact/task: platform-only Book 2+ Part A exercise-authoring contract and its regression guardrail.
@@ -31,7 +33,7 @@ Sprint: `PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1`
 
 ## Consolidated Verdict
 
-- Verdict: **REVISE**
+Verdict: REVISE
 - Reason: the current contract prose meets the instructional specification, but the new regression checker does not prevent the active guidance from silently diverging. Independent mutations added forbidden top-level headings and reordered repeated active sequences while `findContractFailures()` still returned no failures. This is a core failure of requirement 9, not a test-reporting flag.
 
 ## Finding Classification
@@ -43,6 +45,8 @@ Sprint: `PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1`
 | No implementation commit, PR, shared-lane HEAD diff, or exact-head CI exists yet | `core_requirement_met` for the assigned pre-PR round-1 phase | Final closure until those later lifecycle proofs exist | Round-1 source review and bounded repair | After corrections, create a reviewable local commit, run shared-lane validation, obtain round 2, then publish the draft PR and verify exact-head CI |
 
 ## Blocking Findings
+
+Blocking findings exist:
 
 - **LR-1 — guardrail does not guard the real structural surfaces.** The focused suite proves that selected phrases and the two canonical numbered code blocks are present, but it does not parse the actual `exercises.md` template or validate every active surface that repeats the full order. Four independent in-memory mutations all returned an empty failure list:
   - adding `## Voorkennis ophalen` below `## Startopgaven` in the operational template;

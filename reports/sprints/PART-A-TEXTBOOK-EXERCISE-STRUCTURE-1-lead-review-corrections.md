@@ -44,3 +44,14 @@ After staging/index refresh, rerun focused and compatibility checks, create a
 local implementation commit, and run shared-lane scope validation against
 that commit. Round 2 must review the commit SHA and may not rely on this
 owner-authored correction record alone.
+
+## LR-2 Final Disposition
+
+The substantive implementation was committed as `79edd64a...`. Post-commit
+validation and the first commit-bound REVISE review were recorded in evidence
+commit `7221b3eb...`. Agent indexes were then regenerated from that exact
+parent and committed as the four-file deterministic index tail `ae5a72ed...`.
+`npm.cmd run check:agent-index-freshness` accepted that topology, including the
+unchanged lesson index at `f09fd6e...`. The prior REVISE is preserved in
+`reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2-recheck1.md`;
+the final narrow round-2 report closes LR-2 with `PASS`.
