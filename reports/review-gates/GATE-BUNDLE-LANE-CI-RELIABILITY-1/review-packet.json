@@ -38,7 +38,8 @@
   ],
   "review_autonomy": {
     "level": "L4",
-    "lead_review_result": "PASS",
+    "lead_review_result": "PASS WITH FLAGS",
+    "lead_review_renewal_result": "PASS",
     "rationale": "Trusted merge governance requires exact-head human review and explicit owner authorization after independent lead review and hosted proof."
   },
   "human_decision_required": true,

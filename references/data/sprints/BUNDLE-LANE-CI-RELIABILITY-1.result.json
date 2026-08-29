@@ -57,8 +57,22 @@
     "corrections": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md",
     "round2": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md",
     "renewal": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md",
-    "final_verdict": "PASS",
-    "flags": [],
+    "renewal_verdict": "PASS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "exact-head-owner-lifecycle-proof",
+        "description": "Exact-head hosted CI, PR readiness, and owner merge authorization are remote lifecycle proof supplied only after the terminal head is immutable.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "platform_repository_owner",
+        "next_action": "Bind green hosted CI and readiness to the terminal head, then obtain explicit owner integration authorization.",
+        "blocking": false,
+        "blocks": "Integration of PR #217 before exact-head proof and owner authorization.",
+        "does_not_block": "Local sprint closure or acceptance of the reviewed substantive payload and its renewed PASS.",
+        "proof_required_to_close": "Green exact-head platform-ci, exact-head PR readiness, and a later explicit owner authorization record."
+      }
+    ],
     "findings": [
       {
         "id": "automatic-ci-race-closed",

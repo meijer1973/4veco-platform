@@ -596,3 +596,167 @@ OK lead-review substance: BUNDLE-LANE-CI-RELIABILITY-1
 ```text
 
 ```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T15:06:31.354Z`
+- finished_at: `2026-08-29T15:06:31.525Z`
+- duration_ms: `171`
+- exit_code: `0`
+- stdout_sha256: `e1a01fe25daf04c8496d68906760f3c706b616bf04fc29fb5118faf4ef6149f6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\BUNDLE-LANE-CI-RELIABILITY-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T15:06:32.003Z`
+- finished_at: `2026-08-29T15:06:32.647Z`
+- duration_ms: `644`
+- exit_code: `0`
+- stdout_sha256: `70173f3067581a6b4f38e2d49b72c5916c28b98589a99597995e03c2c082e656`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:paragraph-lane-scope
+> node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD
+
+Paragraph lane scope: PASS (shared)
+- shared platform: 6
+  - build-scripts/review-gates/integrate-authorized-bundle.js
+  - build-scripts/review-gates/integrate-authorized-bundle.test.js
+  - docs/review/pr-integration-lane-policy.md
+  - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
+  - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.result.json
+  - references/reference-team-roadmap.md
+- generated index/report: 5
+  - reports/github-agent-index-lessen.json
+  - reports/github-agent-index-lessen.md
+  - reports/github-agent-index-platform.json
+  - reports/github-agent-index-platform.md
+  - reports/url-index.md
+- review evidence: 15
+  - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
+  - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.json
+  - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-baseline.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.jsonl
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-planning-review.md
+  - reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js BUNDLE-LANE-CI-RELIABILITY-1
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T15:06:33.145Z`
+- finished_at: `2026-08-29T15:06:33.250Z`
+- duration_ms: `105`
+- exit_code: `0`
+- stdout_sha256: `bcea857c78defd190c61eb64c15b19e412a7ee728d6eb7277d560af3bddfd54a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: BUNDLE-LANE-CI-RELIABILITY-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T15:06:33.731Z`
+- finished_at: `2026-08-29T15:06:34.076Z`
+- duration_ms: `345`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `4a0d4d3361e8fcaaf95d2e5327f2d9bdbd82ed074e37283367eb5178e181755f`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: reports\sprints\BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md verdict PASS WITH FLAGS must match result metadata final verdict PASS
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T15:06:58.623Z`
+- finished_at: `2026-08-29T15:06:59.407Z`
+- duration_ms: `784`
+- exit_code: `0`
+- stdout_sha256: `15dca37bdb15c30ff98895ce763d352bb72c8dffc33546e60383f8fca45655b7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BUNDLE-LANE-CI-RELIABILITY-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco-worktrees\BUNDLE-LANE-CI-RELIABILITY-1-20260829\4veco-platform`
+- started_at: `2026-08-29T15:06:59.910Z`
+- finished_at: `2026-08-29T15:07:00.056Z`
+- duration_ms: `146`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
