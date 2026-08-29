@@ -28,6 +28,7 @@
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md",
+    "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md",
@@ -37,7 +38,7 @@
   ],
   "review_autonomy": {
     "level": "L4",
-    "lead_review_result": "PASS WITH FLAGS",
+    "lead_review_result": "PASS",
     "rationale": "Trusted merge governance requires exact-head human review and explicit owner authorization after independent lead review and hosted proof."
   },
   "human_decision_required": true,
@@ -58,6 +59,7 @@
     "build-scripts/review-gates/integrate-authorized-bundle.test.js",
     "docs/review/pr-integration-lane-policy.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md",
+    "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-result.md",
     "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.jsonl",
@@ -65,7 +67,7 @@
   ],
   "reviewed_lineage": {
     "platform_base": "11c7a0286776064a694efa4e3cc9e91b4e62fa5c",
-    "reviewed_substantive_head": "835e0164ad615b30b63318546fd4e8fecdb0016c",
+    "reviewed_substantive_head": "8e41a6af515e0a911372572ac465a9299826180a",
     "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "terminal_head_requires_exact_remote_binding": true,
     "tail_must_retain_reviewed_substantive_ancestry": true
@@ -78,6 +80,7 @@
     "exact_y1_transition_range_validation": true,
     "exact_platform_lesson_evidence_validation": true,
     "postmerge_failure_state_explicit": true,
+    "postmerge_exception_journal": true,
     "delta_required_dry_run_fail_closed": true,
     "independent_lead_review_complete": true,
     "downstream_authority_false": true

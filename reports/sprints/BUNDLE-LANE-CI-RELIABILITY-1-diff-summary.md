@@ -11,7 +11,8 @@ Generated: 2026-08-29
 The implementation reuses exact automatic Platform `main` push CI, dispatches
 an exact-input fallback only after proven absence and an immediate exact-event
 recheck, shares the acquisition helper across intermediate/final states, and
-reports post-merge verification failure explicitly.
+uses a wrapper-owned execution journal to report returned or thrown post-merge
+verification failures without losing completed or unknown merge outcomes.
 
 ## Changed evidence and index surfaces
 

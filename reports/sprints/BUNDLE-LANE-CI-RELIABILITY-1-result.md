@@ -14,25 +14,28 @@ after absence is observed twice, including an exact `push` recheck immediately
 before dispatch. Every fallback carries validated full `y1_base_sha` and
 `y1_head_sha` inputs and is bound to exact Platform/Lesson evidence.
 
-Intermediate and final states use the same acquisition helper. Any returned
-failure after a completed member merge is classified as
-`merged_but_postmerge_verification_failed` while preserving the original
-verification subphase, diagnostics, and completed merge records. The existing
-delta-required dry-run stop remains fail-closed and is now explicit in policy.
+Intermediate and final states use the same acquisition helper. A wrapper-owned
+execution journal records a successful direct merge invocation before merge
+observation and records every observed completion before later fallible work.
+Returned failures and unexpected exceptions after that boundary are classified
+as `merged_but_postmerge_verification_failed` while preserving the original
+verification subphase, error, completed merges, invocation records, and any
+explicitly unknown merge outcome. CLI JSON retains the same diagnostics. The
+existing delta-required dry-run stop remains fail-closed and explicit in policy.
 
 Reviewed substantive payload:
-`835e0164ad615b30b63318546fd4e8fecdb0016c`.
+`8e41a6af515e0a911372572ac465a9299826180a`.
 
 ## Acceptance test results
 
 | Check | Result |
 | --- | --- |
 | Canonical sprint plan and active bundle | PASS |
-| Focused bundle integrator | PASS: 1 suite, 106 tests |
-| Integration lane | PASS: 10 suites, 227 tests |
+| Focused bundle integrator | PASS: 1 suite, 110 tests |
+| Integration lane | PASS: 10 suites, 231 tests |
 | Shared paragraph scope | PASS |
-| Full Platform suite against Lesson `f09fd6e8...` | PASS: 105 suites, 1,566 tests; 6 suites and 8 tests skipped |
-| Independent lead review round 2 | PASS WITH FLAGS; no substantive blocker |
+| Full Platform suite against Lesson `f09fd6e8...` | PASS: 105 suites, 1,570 tests; 6 suites and 8 tests skipped |
+| Independent lead review renewal | PASS; no code or scope finding remains |
 | JavaScript syntax and diff hygiene | PASS |
 | Complete sprint, report, URL, and index freshness | PASS before terminal publication |
 

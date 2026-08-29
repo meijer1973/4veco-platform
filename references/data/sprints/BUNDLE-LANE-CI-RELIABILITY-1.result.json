@@ -15,7 +15,7 @@
   "lead_review_required": true,
   "lead_review_schema_version": 3,
   "review_standard": "REV-STD-1",
-  "reviewed_substantive_head": "835e0164ad615b30b63318546fd4e8fecdb0016c",
+  "reviewed_substantive_head": "8e41a6af515e0a911372572ac465a9299826180a",
   "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
   "acceptance_tests": [
     {
@@ -56,21 +56,9 @@
     "round1": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md",
     "corrections": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md",
     "round2": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md",
-    "final_verdict": "PASS WITH FLAGS",
-    "flags": [
-      {
-        "id": "exact-head-owner-lifecycle-proof",
-        "description": "Exact-head hosted CI, PR readiness, and owner merge authorization are remote lifecycle proof supplied only after the terminal head is immutable.",
-        "classification": "minor_carry_flag",
-        "disposition": "carry_forward",
-        "owner": "platform_repository_owner",
-        "next_action": "Bind green hosted CI and readiness to the terminal head, then obtain explicit owner integration authorization.",
-        "blocking": false,
-        "blocks": "Integration of PR #217 before exact-head proof and owner authorization.",
-        "does_not_block": "Local sprint closure or acceptance of the reviewed substantive payload.",
-        "proof_required_to_close": "Green exact-head platform-ci, exact-head PR readiness, and a later explicit owner authorization record."
-      }
-    ],
+    "renewal": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md",
+    "final_verdict": "PASS",
+    "flags": [],
     "findings": [
       {
         "id": "automatic-ci-race-closed",
@@ -100,16 +88,16 @@
       },
       {
         "id": "postmerge-failure-state",
-        "description": "Failures returned after a completed member merge are explicitly classified while retaining verification subphase, diagnostics, and merge records.",
+        "description": "A wrapper-owned execution journal preserves acknowledged unknown merge outcomes and observed completed merges across returned failures and unexpected exceptions, including CLI output.",
         "classification": "core_requirement_met",
         "evidence": [
           "build-scripts/review-gates/integrate-authorized-bundle.js",
           "docs/review/pr-integration-lane-policy.md",
-          "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md"
+          "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md"
         ],
         "blocks": "Nothing.",
         "does_not_block": "Existing pre-merge phase behavior.",
-        "proof_required_to_close": "Preserve intermediate and final failure regressions."
+        "proof_required_to_close": "Preserve the merge-observation, one-merge, two-merge, and CLI adversarial regressions."
       },
       {
         "id": "authority-boundary",
@@ -148,5 +136,5 @@
     "student_use_authorized": false,
     "student_product_use_authorized": false
   },
-  "next_authorized_work": "Obtain exact-head hosted CI, a bounded mechanical-tail audit, PR readiness, and explicit owner review. Do not merge or run another coordinated bundle under this result."
+  "next_authorized_work": "Obtain exact-head hosted CI, a bounded mechanical-tail audit, renewed PR readiness, and explicit owner review. Do not merge or run another coordinated bundle under this result."
 }

@@ -9,7 +9,7 @@ single-PR integration lane. This packet does not authorize merge by itself.
 ## Reviewed payload
 
 - Platform base: `11c7a0286776064a694efa4e3cc9e91b4e62fa5c`
-- Reviewed substantive head: `835e0164ad615b30b63318546fd4e8fecdb0016c`
+- Reviewed substantive head: `8e41a6af515e0a911372572ac465a9299826180a`
 - Lesson companion: `f09fd6e88edc5049b026b16b0158e7e188091d2d`
 - Pull request: `https://github.com/meijer1973/4veco-platform/pull/217`
 
@@ -26,8 +26,10 @@ and deterministic index tail on top of the reviewed substantive head.
    floor and dispatch only after proven absence.
 4. Pass full exact Y1 base/head SHAs to every manual fallback.
 5. Use the same helper for intermediate and final bundle CI.
-6. Report a failure after any completed merge as
-   `merged_but_postmerge_verification_failed` with retained diagnostics.
+6. Record acknowledged merge invocations and observed completed merges in an
+   outer execution journal, then report returned or thrown post-merge failures
+   as `merged_but_postmerge_verification_failed` with retained diagnostics and
+   explicit unknown outcomes.
 7. Preserve the fail-closed delta-required dry-run exception.
 
 ## Review evidence
@@ -38,6 +40,7 @@ and deterministic index tail on top of the reviewed substantive head.
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md`
+- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.jsonl`
 
 ## Authority boundary

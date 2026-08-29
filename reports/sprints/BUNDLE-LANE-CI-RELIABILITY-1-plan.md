@@ -37,7 +37,7 @@ is either a named follow-up or rejected scope creep.
 | Avoid duplicate dispatch | Queued/running automatic runs are awaited; completed automatic failures fail closed; fallback occurs only when no qualifying run appeared | Absence, running, red, and wrong-evidence tests | planned |
 | Dispatch exact Y1 inputs | Real trigger builds `gh workflow run ... -f y1_base_sha=... -f y1_head_sha=...` with full SHAs, exact head, and validated range | Concrete argument-vector and negative-input tests | planned |
 | Correct every bundle CI state | Intermediate and final paths call the same helper with transition-specific coordinates | Platform-first, lesson-first, and residual tests | planned |
-| Report irreversible-state failures | Every failure after at least one completed merge uses `merged_but_postmerge_verification_failed`, preserves subphase, diagnostics, and merge records | Intermediate/final red, mismatch, timeout, dispatch-error tests | planned |
+| Report irreversible-state failures | A wrapper-owned journal records acknowledged merge invocations and observed completions; every later returned failure or exception uses `merged_but_postmerge_verification_failed` and preserves subphase, error, merge records, and unknown outcomes | Merge-observation throw, one/two-completion state throw, CLI, intermediate/final red, mismatch, timeout, and dispatch-error tests | planned |
 | Preserve dry-run safety | Policy and regression retain fail-closed delta-review dry-run exception | Existing and focused regression plus policy review | planned |
 
 ## Quality Improvement Candidates
@@ -57,7 +57,8 @@ is either a named follow-up or rejected scope creep.
 - `build-scripts/review-gates/integrate-authorized-bundle.test.js`
 - `docs/review/pr-integration-lane-policy.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-*`, including canonical
-  `lead-review-round1`, `lead-review-corrections`, and `lead-review-round2`
+  `lead-review-round1`, `lead-review-corrections`, `lead-review-round2`, and the
+  owner-requested `lead-review-renewal`
 - `references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1*`
 - `references/reference-team-roadmap.md` only for the canonical sprint-ledger
   registration required by `check-sprint-bundle`
@@ -124,12 +125,15 @@ is either a named follow-up or rejected scope creep.
    `gh workflow run platform-ci.yml --repo meijer1973/4veco-platform --ref main
    -f y1_base_sha=<full SHA> -f y1_head_sha=<full SHA>`, and accept only a newer
    `workflow_dispatch` run with exact Platform/Lesson evidence.
-6. Route intermediate and final CI through that helper. If `merges.length > 0`,
-   every later red CI, evidence mismatch, timeout, invalid input, dispatch
-   error, or representative orchestration failure returns top-level phase
-   `merged_but_postmerge_verification_failed`, retains the original
-   `verification_subphase`, diagnostics, and completed merge records. Prove
-   pre-merge failures keep their established phases.
+6. Route intermediate and final CI through that helper. Create an execution
+   journal outside the fallible core, record a successful direct merge
+   invocation before observing its merge commit, and record every validated
+   completion before later work. Every later red CI, evidence mismatch, timeout,
+   invalid input, dispatch error, API exception, or representative orchestration
+   failure returns top-level phase `merged_but_postmerge_verification_failed`
+   with the original `verification_subphase`, error, invocation records,
+   completed merges, and explicit unknown outcomes. Prove dry-run and pre-merge
+   failures keep their established classifications.
 7. Run focused validators and the full suite. Stop on any unrelated diff,
    student-facing or rendered change, weakened guard, or failed acceptance test.
 8. Run the structural review cycle: publish an assignment, obtain independent
@@ -149,7 +153,9 @@ inputs; stale old run exclusion; newly observed wrong Platform/Lesson evidence;
 red automatic CI; automatic and fallback timeout; intermediate and final
 post-merge failure classification; representative dispatch/orchestration
 failure; unchanged-Platform `base == head`; and preservation of pre-merge
-phases.
+phases. Adversarial exception coverage must include `fetchMergedPr` after merge
+invocation, state retrieval after one and two completed merges, and CLI JSON
+retention of the irreversible-state diagnostics.
 
 ```bash
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md
@@ -171,8 +177,8 @@ focused and full test suites passed, concrete dispatch arguments were tested,
 no forbidden path changed, exact-head hosted CI passed every later gate, and
 the structural independent review cycle concluded PASS or PASS WITH FLAGS at
 the terminal head. The result must link the planning review, lead-review
-assignment, round 1, correction log, round-2 recheck, readiness record, exact
-head, CI run, and open PR.
+assignment, round 1, correction log, round-2 recheck, owner-requested renewal,
+readiness record, exact head, CI run, and open PR.
 
 ## Rollback plan
 

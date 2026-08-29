@@ -45,6 +45,8 @@ requirements.
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md`
+- `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md` only for
+  the bounded owner-requested correction and renewed independent review
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-result.md`
 - `reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-baseline.md`
 - `references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json`

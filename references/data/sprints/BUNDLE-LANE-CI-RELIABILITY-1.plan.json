@@ -22,7 +22,7 @@
     "Reuse exact automatic Platform main push CI for intermediate and final coordinated-bundle states.",
     "Dispatch one manual fallback only when no qualifying automatic run appeared, with exact required Y1 base and head inputs.",
     "Use one shared acquisition helper for intermediate and final bundle CI.",
-    "Return structured merged_but_postmerge_verification_failed results after any completed bundle-member merge.",
+    "Maintain a wrapper-owned execution journal and return structured merged_but_postmerge_verification_failed results after any acknowledged or completed bundle-member merge.",
     "Clarify the existing fail-closed integration-delta dry-run exception without weakening it."
   ],
   "acceptance_tests": [

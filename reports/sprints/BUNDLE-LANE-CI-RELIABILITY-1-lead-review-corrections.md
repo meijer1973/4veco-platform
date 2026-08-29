@@ -27,3 +27,18 @@ Round 1 verdict: `REVISE`.
 Round-2 exact-head recheck is authorized only after focused, integration-lane,
 full-suite, scope, and sprint-bundle validation pass on the corrected substantive
 head. Human merge authorization remains required after a passing recheck.
+
+## Owner review correction after exact-head readiness
+
+Owner review at terminal head `a28304bcc061edbac47828da0c33b5952fc0de7e`
+returned `REQUEST CHANGES`: unexpected GitHub-read exceptions after a successful
+merge invocation could escape the integration core before the local merge array
+was returned, losing irreversible-state diagnostics.
+
+| Owner finding | Classification | Correction applied | Renewed proof |
+| --- | --- | --- | --- |
+| Post-merge exceptions could bypass structured terminal reporting | `core_spec_failure` | Created the execution journal in the outer wrapper and passed it into the fallible core; successful direct merge invocation is recorded before `fetchMergedPr`; observed completions are retained before every later operation; exceptions return `merged_but_postmerge_verification_failed` with subphase, error, invocations, completed merges, and unknown outcomes | Four adversarial focused regressions cover merge observation throw, state throw after one merge, state throw after two merges, and CLI JSON retention |
+| Dry-run and pre-merge work must not be mislabeled irreversible | `regression_risk` | Irreversible detection excludes dry-run records and requires a real invocation or observed merge commit; pre-merge exceptions still escape unchanged | Existing dry-run, partial-resume, auto-merge, pre-merge, retry, no-merge, and preparation tests remain green |
+
+Corrected substantive commit:
+`8e41a6af515e0a911372572ac465a9299826180a`.
