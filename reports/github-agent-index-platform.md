@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-28T14:17:52.310Z
+Generated: 2026-08-28T18:24:11.837Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/y1-evidence-prerequisite-20260827`
-Source commit: `239de377e578dad9eafb59855e61520123859948`
-Files indexed: 7236
+Source branch: `codex/residual-bundle-readiness-20260827`
+Source commit: `91ccaf99c866d3c4ff6df0664bdce6e0f850fff9`
+Files indexed: 7242
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2584,7 +2584,7 @@ Count: 1006
 
 ## reports
 
-Count: 4560
+Count: 4566
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6457,6 +6457,12 @@ Count: 4560
 - reports/sprints/REF-CT2-lead-review-round2.md
 - reports/sprints/REF-CT2-plan.md
 - reports/sprints/REF-CT2-result.md
+- reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-lead-review-assignment.md
+- reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-lead-review-round-1.md
+- reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-lead-review-round-2.md
+- reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-plan.md
+- reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-planning-review.md
+- reports/sprints/RESIDUAL-BUNDLE-READINESS-BRIDGE-1-result.md
 - reports/sprints/REV-STD-1-flag-disposition.json
 - reports/sprints/REV-STD-1-flag-disposition.md
 - reports/sprints/REVIEW-THROUGHPUT-1-baseline.md
