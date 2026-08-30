@@ -28,3 +28,20 @@ is unchanged, the recorded round-1 verdict is faithful, and the proposed tail
 contains no code, test, policy, workflow, product, Lesson, Y1,
 protected-reference, authorization-model or authority mutation. Hosted
 exact-head CI, readiness and explicit human merge authorization remain required.
+
+## Post-round-2 generated-closure correction
+
+The required `AGENTS.md` roadmap refresh deterministically changed
+`reports/internal-dashboard/index.html` and
+`reports/internal-dashboard/dashboard-data.json`. The original plan named the
+URL and agent-index generators but omitted these two canonical dashboard
+outputs. The plan and plan JSON now list the exact paths and command. No
+implementation, test, policy, workflow or authority scope changed. A bounded
+renewed review must accept this plan-only correction and generated closure
+before terminal publication.
+
+The complete sprint validator also exposed that the baseline described the
+protected surfaces under `Preserved state` but lacked the canonical `Data
+integrity notes` heading. The baseline now repeats the same authority-negative
+facts under the required heading; no baseline fact or implementation scope
+changed.

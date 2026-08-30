@@ -79,6 +79,9 @@ head records `refreshed_head_checks: not_applicable`.
 - `reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/*`
 - canonical URL and four GitHub-agent indexes only when required by their
   deterministic generators
+- `reports/internal-dashboard/index.html` and
+  `reports/internal-dashboard/dashboard-data.json` only as the deterministic
+  roadmap-state refresh required by `AGENTS.md`
 
 ## Forbidden paths
 
@@ -160,6 +163,7 @@ npm.cmd run check:integration-lane
 npm.cmd run check:branch-protection
 npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
 npm.cmd run check:platform
+npm.cmd run dashboard:internal
 node build-scripts/sprints/check-lead-review-substance.js SINGLE-PR-DRY-RUN-REPAIR-1
 node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete
 npm.cmd run finalization:freshness

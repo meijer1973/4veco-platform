@@ -211,3 +211,235 @@ Time:        329.04 s
 Ran all test suites.
 
 ```
+## npm.cmd run check:branch-protection
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:25:43.596Z`
+- finished_at: `2026-08-30T10:25:44.747Z`
+- duration_ms: `1151`
+- exit_code: `0`
+- stdout_sha256: `184fc4e6415cae8926086609114134aba5462d1f352c24642dd3447d59bb6094`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:branch-protection
+> node build-scripts/ci/check-branch-protection.js
+
+{
+  "repository": "meijer1973/4veco-platform",
+  "branch": "main",
+  "ok": true,
+  "expected": {
+    "required_status_checks": {
+      "strict": true,
+      "contexts": [
+        "validate-platform"
+      ]
+    },
+    "required_pull_request_reviews": {
+      "required_approving_review_count": 0,
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false
+    },
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "required_conversation_resolution": true
+  },
+  "observed": {
+    "required_status_checks": {
+      "strict": true,
+      "contexts": [
+        "validate-platform"
+      ]
+    },
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "required_conversation_resolution": true,
+    "required_pull_request_reviews": {
+      "available": true,
+      "required": true,
+      "required_approving_review_count": 0,
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "bypass_allowances_observable": false,
+      "bypass_disabled": null,
+      "limitation": "bypass allowances not exposed in inspected response"
+    }
+  },
+  "failures": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:30:44.901Z`
+- finished_at: `2026-08-30T10:30:45.382Z`
+- duration_ms: `481`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:30:45.783Z`
+- finished_at: `2026-08-30T10:30:45.918Z`
+- duration_ms: `135`
+- exit_code: `0`
+- stdout_sha256: `a6d1e5643d968497e11e41df807d7f237533b8cf1bd52649a9def49b0abca7c6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js SINGLE-PR-DRY-RUN-REPAIR-1
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:31:23.825Z`
+- finished_at: `2026-08-30T10:31:23.909Z`
+- duration_ms: `84`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `ef0c4cfeaad74655bcda83cce036042a7191015843a3661977d002d356421e7c`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Lead-review substance check failed: reports\sprints\SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md cites missing output artifact: build-scripts/review-gates/integrate-authorized-pr.js:1049
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js SINGLE-PR-DRY-RUN-REPAIR-1
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:31:48.119Z`
+- finished_at: `2026-08-30T10:31:48.215Z`
+- duration_ms: `96`
+- exit_code: `0`
+- stdout_sha256: `b9b061f9814d6c1df3d5f99dcb2bacbf2ece8cf6d21fbfcc1e74416681771937`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: SINGLE-PR-DRY-RUN-REPAIR-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:31:53.000Z`
+- finished_at: `2026-08-30T10:31:53.269Z`
+- duration_ms: `269`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `57f11c8b5467a71fd63957207e5b80cbec7d986fcc24627aa63c5e03cfdf3d70`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: reports\sprints\SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md must include Data integrity notes
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:32:24.260Z`
+- finished_at: `2026-08-30T10:32:24.542Z`
+- duration_ms: `282`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `4f294f5f366b82f080d09edc55b1b91c8a21f42f82f3c157a62a325bbafab70c`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint result check failed: passed command lacks command-log exit_code 0 evidence: node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete
+Sprint bundle check failed: validator failed: node build-scripts\sprints\check-sprint-result.js reports\sprints\SINGLE-PR-DRY-RUN-REPAIR-1-result.md
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:32:40.370Z`
+- finished_at: `2026-08-30T10:32:41.134Z`
+- duration_ms: `764`
+- exit_code: `0`
+- stdout_sha256: `f7ad1a93a5b443aa977efbc276352450076bd348fad0f7a5d908cd94779cc973`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: SINGLE-PR-DRY-RUN-REPAIR-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```

@@ -34,6 +34,13 @@ canonical contract and lacks end-to-end equivalence coverage.
   protected-reference, branch-protection, authorization, or downstream
   authority change is needed.
 
+## Data integrity notes
+
+No protected reference data changes are authorized or required. In particular,
+`references/machine/`, `references/external/`, Lesson source, generated lesson
+output, product data, engine data, rendered evidence and Y1 evidence remain
+unchanged.
+
 ## Required outcome
 
 One separately reviewed governance PR must make plain `--dry-run` stop before

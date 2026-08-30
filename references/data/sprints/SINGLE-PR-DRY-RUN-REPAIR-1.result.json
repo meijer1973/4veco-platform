@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SINGLE-PR-DRY-RUN-REPAIR-1",
+  "completed_on": "2026-08-30",
+  "status": "completed",
+  "plan": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md",
+  "baseline": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md",
+  "result": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md",
+  "diff_summary": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "implementation_changed": true,
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "review_standard": "REV-STD-1",
+  "reviewed_substantive_head": "870aa3f228eb7289f9ef63dcd3394b5d309c5413",
+  "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:integration-lane",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:branch-protection",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js SINGLE-PR-DRY-RUN-REPAIR-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md",
+    "round1": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md",
+    "corrections": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md",
+    "round2": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": [],
+    "findings": [
+      {
+        "id": "canonical-dry-run-contract",
+        "description": "Plain single-PR dry-run stops after exact pre-merge validation and reports every mutation, merge and post-merge operation as not executed.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/integrate-authorized-pr.js",
+          "build-scripts/review-gates/integrate-authorized-pr.test.js",
+          "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Mechanical evidence closure and exact-head human review.",
+        "proof_required_to_close": "Preserve the reviewed implementation and focused non-mutation regressions."
+      },
+      {
+        "id": "behind-and-movement-contract",
+        "description": "Behind, moving and missing-CI states remain one-attempt, non-mutating and fail-closed with exact coordinates and no refreshed-head claims.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/integrate-authorized-pr.js",
+          "build-scripts/review-gates/integrate-authorized-pr.test.js",
+          "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Exact-head CI and readiness.",
+        "proof_required_to_close": "Keep movement, behind and missing-CI regressions green."
+      },
+      {
+        "id": "authority-boundary",
+        "description": "No bundle runner, workflow, Lesson, product, Y1, protected-reference, authorization-model or downstream authority surface changed.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md",
+          "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md",
+          "references/reference-team-roadmap.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Owner review of the bounded governance repair.",
+        "proof_required_to_close": "Keep the terminal tail inside the declared mechanical closure inventory."
+      }
+    ]
+  },
+  "authority_claims": {
+    "single_pr_dry_run_repair_complete": true,
+    "lesson_mutation_authorized": false,
+    "product_mutation_authorized": false,
+    "y1_evidence_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "workflow_definition_mutation_authorized": false,
+    "bundle_runner_mutation_authorized": false,
+    "authorization_model_mutation_authorized": false,
+    "autonomous_merge_authorized": false,
+    "admin_bypass_authorized": false,
+    "rollout_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "next_authorized_work": "Obtain exact-head hosted CI, exact-head readiness and explicit owner review. Do not merge PR #220 under this result."
+}

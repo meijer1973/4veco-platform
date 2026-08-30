@@ -31,6 +31,7 @@
     "npm.cmd run check:branch-protection",
     "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
     "npm.cmd run check:platform",
+    "npm.cmd run dashboard:internal",
     "node build-scripts/sprints/check-lead-review-substance.js SINGLE-PR-DRY-RUN-REPAIR-1",
     "node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete",
     "npm.cmd run finalization:freshness",

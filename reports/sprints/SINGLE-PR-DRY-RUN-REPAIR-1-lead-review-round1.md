@@ -9,7 +9,7 @@ Reviewed substantive commit: `870aa3f228eb7289f9ef63dcd3394b5d309c5413`
 
 ## Scope
 
-The reviewer independently inspected all eight substantive changed paths, the
+Evidence inspected: all eight substantive changed paths, the
 sprint plan, baseline and planning review, the implementation, every focused
 test addition, policy, roadmap registration, exact diff and shared-lane scope.
 The later `8149d814...` commit contains only the review assignment; all reviewed
@@ -21,15 +21,15 @@ review/result/index tail may receive a bounded tail audit.
 
 ## Review Plan
 
-| Review/Test | Required evidence | Status |
-| --- | --- | --- |
-| Canonical clean dry run | Implementation and focused regression | PASS |
-| Behind, movement and missing-CI paths | Fail-closed adversarial regressions | PASS |
-| Mutation reachability | Static call-site inspection and zero-call assertions | PASS |
-| Plain/combined equivalence | Control-flow inspection and equivalence regression | PASS |
-| Existing live behavior | Focused live tests and complete integration lane | PASS |
-| Scope, policy and plan | Exact diff, scope checker and plan checker | PASS |
-| Syntax and diff hygiene | `node --check` and `git diff --check` | PASS |
+| Review/Test | Agent or tool | Required evidence | Status |
+| --- | --- | --- | --- |
+| Canonical clean dry run | Independent source/test inspection | Implementation and focused regression | PASS |
+| Behind, movement and missing-CI paths | Independent source/test inspection | Fail-closed adversarial regressions | PASS |
+| Mutation reachability | Static inspection | Call-site inspection and zero-call assertions | PASS |
+| Plain/combined equivalence | Focused Jest | Control-flow and equivalence regression | PASS |
+| Existing live behavior | Integration Jest | Focused live tests and complete integration lane | PASS |
+| Scope, policy and plan | Repository validators | Exact diff, scope checker and plan checker | PASS |
+| Syntax and diff hygiene | Node and Git | `node --check` and `git diff --check` | PASS |
 
 ## Consolidated Verdict
 
@@ -42,6 +42,12 @@ retains the live integration paths, and changes no forbidden surface.
 ## Blocking Findings
 
 None.
+
+## Specialist Findings
+
+Structural governance review: PASS. Visual, learning-quality, accessibility,
+student-experience and textbook specialist review do not apply because no
+student-facing or rendered artifact changed.
 
 ## Finding Classification
 
@@ -56,21 +62,24 @@ None.
 
 - The operation schema marks publication, update, polling, dispatch, merge,
   observation, containment and post-merge CI `not_executed` at
-  `build-scripts/review-gates/integrate-authorized-pr.js:1049`.
+  `build-scripts/review-gates/integrate-authorized-pr.js` around line 1049.
 - Status publication is suppressed for dry runs at line 1111; readiness remains
   in memory at line 970.
 - Stable behind and coordinate-movement handling is fail-closed at line 1205;
   missing exact-head CI is one-attempt fail-closed at line 1279.
 - The canonical `validated_dry_run` return precedes every live merge operation
   at line 1449. Unexpected dry-run retry polling is suppressed at line 1677.
-- Focused regressions cover clean, compatibility flags, behind, movement,
-  missing CI and zero side effects. Existing live update and merge assertions
-  remain green.
-- Policy declares plain `--dry-run` canonical and records the exact
-  non-mutation contract.
+- Focused regressions in
+  `build-scripts/review-gates/integrate-authorized-pr.test.js` cover clean,
+  compatibility flags, behind, movement, missing CI and zero side effects.
+  Existing live update and merge assertions remain green.
+- `docs/review/pr-integration-lane-policy.md` declares plain `--dry-run`
+  canonical and records the exact non-mutation contract.
 
 ## Test Evidence
 
+- The immutable command evidence is recorded in
+  `reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl`.
 - Focused single-PR integrator: 1 suite, 44 tests passed.
 - Complete integration lane: 10 suites, 239 tests passed.
 - JavaScript syntax, sprint plan, shared-lane scope and diff hygiene: PASS.
@@ -78,10 +87,21 @@ None.
   output, Y1, protected-reference, authorization-model or authority path
   changed.
 
-## Learning Quality and Student Experience
+## Learning Quality Evidence
 
-Not applicable. No student-facing source, lesson content or rendered artifact
+Not applicable. No lesson content, exercise, textbook or instructional output
 changed.
+
+## Student Experience Evidence
+
+Not applicable. No student-facing route, UI, copy, screenshot or rendered
+artifact changed.
+
+## Ownership and Handoff
+
+Platform owns the integrator, tests, policy and closure evidence. Lesson,
+product, Y1 and protected surfaces remain unchanged. This structural review
+grants no merge authority.
 
 ## Required Next Action
 
