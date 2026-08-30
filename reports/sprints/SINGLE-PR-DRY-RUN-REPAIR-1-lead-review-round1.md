@@ -88,4 +88,3 @@ changed.
 Record the no-correction disposition, perform the required exact-substance
 second pass, complete only the bounded evidence/index tail, obtain exact-head
 CI and readiness, then stop for explicit human payload authorization.
-
