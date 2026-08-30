@@ -4,6 +4,7 @@ Status: owned curriculum-design clarification
 Applies to: `course-blueprint-v5.md` and the Year 1 detail embedded by `course-blueprint-v6-three-year.md`
 Human decision date: 2026-08-30
 Change type: interpretive clarification; no change to book counts, book roles, assessment calendar, or target-exercise registry
+Book 1 second-edition backlog: https://github.com/meijer1973/4veco-platform/issues/221
 
 ## Purpose
 
@@ -99,7 +100,7 @@ Findings fall into two categories:
 - **clarification, not defect**: useful anticipatory material that can remain when its status is understood correctly;
 - **second-edition backlog**: genuine errors, target-operation omissions, unnecessary over-formalisation, stale references, or repository hygiene problems to address when preparing Book 1 second edition.
 
-The durable second-edition backlog is tracked separately. Do not block Book 2 first-edition production on Book 1 print changes that cannot be made this year.
+The durable second-edition backlog is tracked in issue #221. Do not block Book 2 first-edition production on Book 1 print changes that cannot be made this year.
 
 ## Consequences for Book 2 first edition
 
