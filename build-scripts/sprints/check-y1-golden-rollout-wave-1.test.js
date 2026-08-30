@@ -450,6 +450,20 @@ describe('Y1 Golden rollout wave state contracts', () => {
 });
 
 describe('Y1 Golden rollout wave evidence and governance contracts', () => {
+  test('pins every byte-hashed rendered-renewal text artifact to LF', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.renderedRenewal), 'utf8'));
+    const byteHashedTextPaths = [
+      checker.PATHS.renderedRenewal,
+      renewal.canonical_process.raw_manifest_path,
+      renewal.canonical_process.comparison_path,
+      renewal.human_visual_review.review_path,
+      renewal.current_visual_review.review_path,
+    ];
+    const attributes = git(root, ['check-attr', 'eol', '--', ...byteHashedTextPaths]).split(/\r?\n/);
+    expect(attributes).toEqual(byteHashedTextPaths.map((item) => `${item}: eol: lf`));
+  });
+
   test('accepts the exact one-capture rendered-equivalence renewal', () => {
     const root = path.resolve(__dirname, '..', '..');
     const scaleProof = JSON.parse(fs.readFileSync(path.join(root, checker.PATHS.scaleProof), 'utf8'));
