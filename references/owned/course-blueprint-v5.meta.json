@@ -12,6 +12,7 @@
   "normative_clarifications": [
     "references/owned/course-blueprint-pedagogical-boundaries.md"
   ],
+  "book_1_second_edition_backlog": "https://github.com/meijer1973/4veco-platform/issues/221",
   "paragraph_counts": {
     "1": 12,
     "2": 12,
@@ -58,6 +59,6 @@
     "The pedagogical-boundaries clarification is part of the v5 interpretation contract and distinguishes terminal targets, anticipatory scaffolding, and prerequisite mastery.",
     "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
     "Placeholder records are explicit and must not be treated as reviewed final target exercises.",
-    "Book 1 first edition is printed and frozen; genuine repair items are deferred to its second-edition backlog while Book 2 first-edition textbook production remains the active priority."
+    "Book 1 first edition is printed and frozen; genuine repair items are deferred to issue #221 for the second-edition cycle while Book 2 first-edition textbook production remains the active priority."
   ]
 }
