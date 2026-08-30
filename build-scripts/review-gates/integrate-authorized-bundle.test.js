@@ -2,14 +2,19 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const {
+  acquirePlatformMainCi,
   generateBundleIntegrationReadiness,
   integrateBundle,
   INTEGRATION_CONTEXT,
   PLATFORM_REPO,
   refreshPlatformPrCi,
   LESSON_REPO,
+  platformCiDispatchArgs,
+  runCli,
   selectLatestRunForHead,
   setPlatformIntegrationStatus,
+  triggerPlatformCi,
+  triggerPlatformCiForRef,
   validateBundlePayloadLeadReview,
   validateCompatibilityWorkflowProvenance,
   validateLessonLeadReadiness,
@@ -465,6 +470,7 @@ function harness(overrides = {}) {
     ciWaits: [],
     refreshes: [],
     indexRefreshes: [],
+    rangeChecks: [],
     readinessRefreshes: [],
     updates: [],
   };
@@ -527,6 +533,7 @@ function harness(overrides = {}) {
     fetchComparePaths: jest.fn(() => []),
     fetchCompareStatus: jest.fn(() => ({ status: 'identical', ahead_by: 0, behind_by: 0 })),
     fetchInterveningCommits: jest.fn(() => []),
+    findMainWorkflowRun: jest.fn(() => null),
     fetchReviewThreadState: jest.fn(() => ({
       available: true,
       unresolved_count: 0,
@@ -587,9 +594,9 @@ function harness(overrides = {}) {
       state: 'MERGED',
       mergeCommit: { oid: repo === PLATFORM_REPO ? platformMerge : lessonMerge },
     })),
-    triggerPlatformCi: jest.fn(() => {
-      calls.events.push({ type: 'trigger_ci' });
-      calls.ciTriggers.push(true);
+    triggerPlatformCi: jest.fn((triggerOptions = {}) => {
+      calls.events.push({ type: 'trigger_ci', ...triggerOptions });
+      calls.ciTriggers.push(triggerOptions);
       return { triggered: true };
     }),
     waitForPlatformMainCi: jest.fn((headSha, waitOptions = {}) => {
@@ -602,10 +609,20 @@ function harness(overrides = {}) {
       calls.ciWaits.push({
         headSha,
         minDatabaseId: waitOptions.minDatabaseId,
+        workflowEvent: waitOptions.workflowEvent,
         expectedPlatformSha: waitOptions.expectedPlatformSha,
         expectedLessonSha: waitOptions.expectedLessonSha,
       });
       return { ok: true, run: { conclusion: 'success' } };
+    }),
+    validatePlatformCiRange: jest.fn((baseSha, headSha) => {
+      calls.rangeChecks.push({ baseSha, headSha });
+      return {
+        ok: true,
+        status: baseSha === headSha ? 'identical' : 'ahead',
+        base_sha: baseSha,
+        head_sha: headSha,
+      };
     }),
     refreshPlatformPrCi: jest.fn((platformPr, refreshOptions = {}) => {
       calls.events.push({
@@ -1328,6 +1345,385 @@ describe('authorized cross-repo bundle integration', () => {
     expect(runReview).not.toHaveBeenCalled();
   });
 
+  test('platform CI trigger passes the required exact Y1 inputs to gh', () => {
+    const runGhCommand = jest.fn(() => 'queued');
+    const result = triggerPlatformCi({
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      runGhCommand,
+    });
+
+    expect(result).toMatchObject({
+      triggered: true,
+      ref: 'main',
+      y1_base_sha: platformBase,
+      y1_head_sha: platformMerge,
+    });
+    expect(runGhCommand).toHaveBeenCalledWith([
+      'workflow', 'run', 'platform-ci.yml',
+      '--repo', PLATFORM_REPO,
+      '--ref', 'main',
+      '-f', `y1_base_sha=${platformBase}`,
+      '-f', `y1_head_sha=${platformMerge}`,
+    ]);
+    expect(result.args).toEqual(platformCiDispatchArgs('main', {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+    }));
+  });
+
+  test.each([
+    ['missing base', { y1HeadSha: platformMerge }],
+    ['malformed base', { y1BaseSha: 'not-a-sha', y1HeadSha: platformMerge }],
+    ['missing head', { y1BaseSha: platformBase }],
+    ['malformed head', { y1BaseSha: platformBase, y1HeadSha: 'short' }],
+  ])('platform CI trigger rejects %s before invoking gh', (_label, dispatchOptions) => {
+    const runGhCommand = jest.fn();
+
+    expect(() => triggerPlatformCiForRef('main', { ...dispatchOptions, runGhCommand })).toThrow(
+      /full 40-character commit SHA/
+    );
+    expect(runGhCommand).not.toHaveBeenCalled();
+  });
+
+  test('automatic push CI is reused without manual dispatch', () => {
+    const waitForPlatformMainCi = jest.fn(() => ({
+      ok: true,
+      run: { databaseId: 501, event: 'push', conclusion: 'success' },
+    }));
+    const deps = {
+      waitForPlatformMainCi,
+      latestWorkflowRunDatabaseId: jest.fn(),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+
+    expect(result).toMatchObject({ ok: true, source: 'automatic_main_push', dispatch: null });
+    expect(waitForPlatformMainCi).toHaveBeenCalledWith(platformMerge, expect.objectContaining({
+      workflowEvent: 'push',
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    }));
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
+  test('queued automatic push CI is awaited and never triggers a fallback', () => {
+    const queuedRun = { databaseId: 502, event: 'push', status: 'in_progress' };
+    const waitForPlatformMainCi = jest
+      .fn()
+      .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: queuedRun })
+      .mockReturnValueOnce({ ok: true, run: { ...queuedRun, status: 'completed', conclusion: 'success' } });
+    const deps = {
+      waitForPlatformMainCi,
+      latestWorkflowRunDatabaseId: jest.fn(),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    }, { automaticRunTimeoutSeconds: 1, timeoutSeconds: 2 });
+
+    expect(result).toMatchObject({ ok: true, source: 'automatic_main_push', dispatch: null });
+    expect(waitForPlatformMainCi).toHaveBeenCalledTimes(2);
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+    expect(deps.latestWorkflowRunDatabaseId).not.toHaveBeenCalled();
+  });
+
+  test('queued automatic push timeout still never triggers a fallback', () => {
+    const queuedRun = { databaseId: 502, event: 'push', status: 'in_progress' };
+    const deps = {
+      waitForPlatformMainCi: jest
+        .fn()
+        .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: queuedRun })
+        .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: queuedRun }),
+      latestWorkflowRunDatabaseId: jest.fn(),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    }, { automaticRunTimeoutSeconds: 1, timeoutSeconds: 2 });
+
+    expect(result).toMatchObject({
+      ok: false,
+      failure: 'automatic_platform_main_ci_failed',
+      automatic_ci: { failure: 'platform_main_ci_timeout', run: queuedRun },
+    });
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+    expect(deps.latestWorkflowRunDatabaseId).not.toHaveBeenCalled();
+  });
+
+  test('absent automatic push CI dispatches one exact-input fallback', () => {
+    const runGhCommand = jest.fn(() => 'queued');
+    const waitForPlatformMainCi = jest
+      .fn()
+      .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
+      .mockReturnValueOnce({ ok: true, run: { databaseId: 504, event: 'workflow_dispatch' } });
+    const trigger = jest.fn((triggerOptions) => triggerPlatformCi({ ...triggerOptions, runGhCommand }));
+    const deps = {
+      waitForPlatformMainCi,
+      latestWorkflowRunDatabaseId: jest.fn(() => 503),
+      findMainWorkflowRun: jest.fn(() => null),
+      triggerPlatformCi: trigger,
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+
+    expect(result).toMatchObject({ ok: true, source: 'manual_dispatch_fallback' });
+    expect(trigger).toHaveBeenCalledTimes(1);
+    expect(runGhCommand).toHaveBeenCalledWith([
+      'workflow', 'run', 'platform-ci.yml',
+      '--repo', PLATFORM_REPO,
+      '--ref', 'main',
+      '-f', `y1_base_sha=${platformBase}`,
+      '-f', `y1_head_sha=${platformMerge}`,
+    ]);
+    expect(waitForPlatformMainCi.mock.calls[1][1]).toMatchObject({
+      minDatabaseId: 503,
+      workflowEvent: 'workflow_dispatch',
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+  });
+
+  test('automatic push appearing at the pre-dispatch boundary suppresses fallback', () => {
+    const racedPush = {
+      databaseId: 502,
+      headSha: platformMerge,
+      event: 'push',
+      status: 'queued',
+      conclusion: null,
+    };
+    const waitForPlatformMainCi = jest
+      .fn()
+      .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
+      .mockReturnValueOnce({
+        ok: true,
+        run: { ...racedPush, status: 'completed', conclusion: 'success' },
+      });
+    const deps = {
+      waitForPlatformMainCi,
+      latestWorkflowRunDatabaseId: jest.fn(() => 502),
+      findMainWorkflowRun: jest.fn(() => racedPush),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+      automaticMinDatabaseId: 500,
+    });
+
+    expect(result).toMatchObject({
+      ok: true,
+      source: 'automatic_main_push_rechecked',
+      dispatch: null,
+      rechecked_run: racedPush,
+    });
+    expect(deps.findMainWorkflowRun).toHaveBeenCalledWith(PLATFORM_REPO, platformMerge, expect.objectContaining({
+      minDatabaseId: 500,
+      workflowEvent: 'push',
+    }));
+    expect(waitForPlatformMainCi.mock.calls[1][1]).toMatchObject({
+      minDatabaseId: 500,
+      workflowEvent: 'push',
+    });
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
+  test('automatic pre-dispatch recheck failure stops without fallback', () => {
+    const deps = {
+      waitForPlatformMainCi: jest.fn(() => ({
+        ok: false,
+        failure: 'platform_main_ci_timeout',
+        run: null,
+      })),
+      latestWorkflowRunDatabaseId: jest.fn(() => 502),
+      findMainWorkflowRun: jest.fn(() => {
+        throw new Error('run listing unavailable');
+      }),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+      automaticMinDatabaseId: 500,
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      failure: 'platform_ci_automatic_recheck_failed',
+      error: 'run listing unavailable',
+      dispatch: null,
+    });
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
+  test('unchanged Platform range permits base equal to head after a Lesson-only transition', () => {
+    const deps = {
+      waitForPlatformMainCi: jest
+        .fn()
+        .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
+        .mockReturnValueOnce({ ok: true, run: { databaseId: 602, event: 'workflow_dispatch' } }),
+      latestWorkflowRunDatabaseId: jest.fn(() => 601),
+      findMainWorkflowRun: jest.fn(() => null),
+      triggerPlatformCi: jest.fn(() => ({ triggered: true })),
+      validatePlatformCiRange: jest.fn((baseSha, headSha) => ({
+        ok: baseSha === headSha,
+        status: 'identical',
+      })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformMerge,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+      automaticMinDatabaseId: 600,
+    });
+
+    expect(result).toMatchObject({ ok: true, source: 'manual_dispatch_fallback' });
+    expect(deps.waitForPlatformMainCi.mock.calls[0][1]).toMatchObject({
+      minDatabaseId: 600,
+      workflowEvent: 'push',
+    });
+    expect(deps.triggerPlatformCi).toHaveBeenCalledWith(expect.objectContaining({
+      y1BaseSha: platformMerge,
+      y1HeadSha: platformMerge,
+    }));
+  });
+
+  test.each([
+    ['wrong expected head', {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformHead,
+      expectedLessonSha: lessonMerge,
+    }, 'platform_ci_y1_head_mismatch'],
+    ['reversed or non-ancestor range', {
+      y1BaseSha: platformMerge,
+      y1HeadSha: platformBase,
+      expectedPlatformSha: platformBase,
+      expectedLessonSha: lessonMerge,
+    }, 'platform_ci_y1_range_invalid'],
+  ])('CI acquisition rejects %s before observation or dispatch', (_label, coordinates, failure) => {
+    const deps = {
+      waitForPlatformMainCi: jest.fn(),
+      latestWorkflowRunDatabaseId: jest.fn(),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: false, status: 'behind' })),
+    };
+    const result = acquirePlatformMainCi(deps, coordinates);
+
+    expect(result).toMatchObject({ ok: false, failure });
+    expect(deps.waitForPlatformMainCi).not.toHaveBeenCalled();
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
+  test('new automatic push run with wrong exact-pair evidence fails without fallback', () => {
+    const mismatch = {
+      ok: false,
+      failure: 'platform_ci_evidence_mismatch',
+      evidence: validatePlatformCiEvidence(
+        platformCiEvidence(platformMerge, lessonBase),
+        { platformSha: platformMerge, lessonSha: lessonMerge }
+      ),
+    };
+    const deps = {
+      waitForPlatformMainCi: jest.fn(() => mismatch),
+      latestWorkflowRunDatabaseId: jest.fn(),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      failure: 'automatic_platform_main_ci_failed',
+      automatic_ci: mismatch,
+      dispatch: null,
+    });
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
+  test('red automatic push CI fails without fallback', () => {
+    const deps = {
+      waitForPlatformMainCi: jest.fn(() => ({
+        ok: false,
+        failure: 'platform_ci_run_not_successful',
+        run: { databaseId: 650, event: 'push', status: 'completed', conclusion: 'failure' },
+      })),
+      latestWorkflowRunDatabaseId: jest.fn(),
+      triggerPlatformCi: jest.fn(),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      failure: 'automatic_platform_main_ci_failed',
+      automatic_ci: { failure: 'platform_ci_run_not_successful' },
+    });
+    expect(deps.triggerPlatformCi).not.toHaveBeenCalled();
+  });
+
+  test('manual fallback timeout remains fail-closed', () => {
+    const deps = {
+      waitForPlatformMainCi: jest
+        .fn()
+        .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
+        .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null }),
+      latestWorkflowRunDatabaseId: jest.fn(() => 700),
+      findMainWorkflowRun: jest.fn(() => null),
+      triggerPlatformCi: jest.fn(() => ({ triggered: true })),
+      validatePlatformCiRange: jest.fn(() => ({ ok: true, status: 'ahead' })),
+    };
+    const result = acquirePlatformMainCi(deps, {
+      y1BaseSha: platformBase,
+      y1HeadSha: platformMerge,
+      expectedPlatformSha: platformMerge,
+      expectedLessonSha: lessonMerge,
+    });
+
+    expect(result).toMatchObject({
+      ok: false,
+      failure: 'platform_main_ci_timeout',
+      fallback_ci: { failure: 'platform_main_ci_timeout' },
+    });
+    expect(deps.triggerPlatformCi).toHaveBeenCalledTimes(1);
+  });
+
   test('reuses a completed exact-coordinate platform CI run without dispatching another run', () => {
     const refreshedHead = '8'.repeat(40);
     const existingRun = {
@@ -1348,6 +1744,7 @@ describe('authorized cross-repo bundle integration', () => {
     }));
     const result = refreshPlatformPrCi(pr(PLATFORM_REPO, 140, refreshedHead), {
       expectedLessonSha: lessonMerge,
+      y1BaseSha: platformBase,
       findWorkflowRunForHead: jest.fn(() => existingRun),
       verifyPlatformCiRun: verify,
       triggerPlatformCiForRef: trigger,
@@ -1432,6 +1829,7 @@ describe('authorized cross-repo bundle integration', () => {
     const wait = jest.fn(() => ({ ok: false, failure: 'replacement_run_failed' }));
     const result = refreshPlatformPrCi(pr(PLATFORM_REPO, 140, refreshedHead), {
       expectedLessonSha: lessonMerge,
+      y1BaseSha: platformBase,
       findWorkflowRunForHead: jest.fn(() => existingRun),
       verifyPlatformCiRun: jest.fn(() => ({
         ok: false,
@@ -1467,7 +1865,7 @@ describe('authorized cross-repo bundle integration', () => {
       controller_state: 'MERGED',
     });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
-    expect(calls.ciTriggers).toHaveLength(1);
+    expect(calls.ciTriggers).toHaveLength(0);
     expect(calls.indexRefreshes).toEqual([{ platformHeadSha: platformHead, lessonMergeSha: lessonMerge }]);
     expect(calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
     expect(calls.ciWaits[0]).toMatchObject({
@@ -1475,6 +1873,7 @@ describe('authorized cross-repo bundle integration', () => {
       expectedPlatformSha: platformMerge,
       expectedLessonSha: lessonMerge,
     });
+    expect(calls.rangeChecks).toEqual([{ baseSha: platformBase, headSha: platformMerge }]);
     expect(calls.statuses.map((status) => status.state)).toEqual(['pending', 'pending', 'success']);
     expect(calls.statuses[calls.statuses.length - 1]).toMatchObject({
       repo: PLATFORM_REPO,
@@ -1595,7 +1994,11 @@ describe('authorized cross-repo bundle integration', () => {
     const { calls, options, deps } = harness({ deps: dependencyOverride });
     const result = integrateBundle({ ...options, deps });
 
-    expect(result).toMatchObject({ ok: false, phase });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: phase,
+    });
     expect(calls.merges.some((item) => item.repo === PLATFORM_REPO)).toBe(false);
     expect(calls.statuses.some((item) => item.state === 'success')).toBe(false);
   });
@@ -1618,7 +2021,11 @@ describe('authorized cross-repo bundle integration', () => {
     });
     const result = integrateBundle({ ...options, deps });
 
-    expect(result).toMatchObject({ ok: false, phase: 'platform_pr_ci_refresh' });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'platform_pr_ci_refresh',
+    });
     expect(result.refreshed.failure).toBe('platform_ci_evidence_mismatch');
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
     expect(calls.statuses.some((item) => item.state === 'success')).toBe(false);
@@ -1657,7 +2064,11 @@ describe('authorized cross-repo bundle integration', () => {
     });
     const result = integrateBundle({ ...options, deps });
 
-    expect(result).toMatchObject({ ok: false, phase: 'platform_index_refresh_lineage' });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'platform_index_refresh_lineage',
+    });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
     expect(calls.statuses.some((item) => item.state === 'success')).toBe(false);
   });
@@ -1677,7 +2088,11 @@ describe('authorized cross-repo bundle integration', () => {
     callsRef = setup.calls;
     const result = integrateBundle({ ...setup.options, deps: setup.deps });
 
-    expect(result).toMatchObject({ ok: false, phase: 'pre_merge' });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'pre_merge',
+    });
     expect(result.failures).toContain('pr_head_mismatch');
     expect(setup.calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
     expect(setup.calls.statuses.some((item) => item.state === 'success')).toBe(false);
@@ -1703,7 +2118,11 @@ describe('authorized cross-repo bundle integration', () => {
     callsRef = setup.calls;
     const result = integrateBundle({ ...setup.options, deps: setup.deps });
 
-    expect(result).toMatchObject({ ok: false, phase: 'base_changed_before_final_merge' });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'base_changed_before_final_merge',
+    });
     expect(result.failures).toContain('compatibility_recompute_required');
     expect(setup.calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
     expect(setup.calls.statuses.some((item) => item.state === 'success')).toBe(false);
@@ -1742,7 +2161,7 @@ describe('authorized cross-repo bundle integration', () => {
     });
     expect(setup.calls.merges.map((item) => item.repo)).toEqual([PLATFORM_REPO]);
     expect(setup.calls.refreshes).toEqual([{ headSha: platformHead, expectedLessonSha: lessonMerge }]);
-    expect(setup.calls.ciTriggers).toHaveLength(1);
+    expect(setup.calls.ciTriggers).toHaveLength(0);
     expect(setup.calls.ciWaits[0]).toMatchObject({
       headSha: platformMerge,
       expectedPlatformSha: platformMerge,
@@ -2063,7 +2482,11 @@ describe('authorized cross-repo bundle integration', () => {
     const setup = residualPartialResumeHarness({ dryRun: true, moveHeadOnDryRefetch: true });
     const result = integrateBundle({ ...setup.options, deps: setup.deps });
 
-    expect(result).toMatchObject({ ok: false, phase: 'pre_merge' });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'pre_merge',
+    });
     expect(result.failures).toContain('pr_head_mismatch');
     expect(setup.calls.statuses).toEqual([]);
     expect(setup.calls.merges).toEqual([]);
@@ -2187,7 +2610,11 @@ describe('authorized cross-repo bundle integration', () => {
     const setup = residualPartialResumeHarness({ prepareOnly: true, ...overrides });
     const result = integrateBundle({ ...setup.options, deps: setup.deps });
 
-    expect(result).toMatchObject({ ok: false, phase: expectedPhase });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: expectedPhase,
+    });
     expect(setup.applyLiveDecision).not.toHaveBeenCalled();
     expect(setup.calls.statuses.some((status) => status.state === 'success')).toBe(false);
     expect(setup.calls.merges).toEqual([]);
@@ -2246,7 +2673,8 @@ describe('authorized cross-repo bundle integration', () => {
 
     expect(result).toMatchObject({
       ok: false,
-      phase: 'integration_head_readiness',
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'integration_head_readiness',
       readiness: { phase: 'payload_lead_review' },
     });
     expect(result.readiness.failures).toEqual(expect.arrayContaining([
@@ -2262,7 +2690,8 @@ describe('authorized cross-repo bundle integration', () => {
 
     expect(result).toMatchObject({
       ok: false,
-      phase: 'platform_pr_ci_refresh',
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'platform_pr_ci_refresh',
       refreshed: { failure: 'exact_pair_platform_ci_missing_or_invalid' },
     });
     expect(setup.applyLiveDecision).not.toHaveBeenCalled();
@@ -2278,7 +2707,11 @@ describe('authorized cross-repo bundle integration', () => {
     const setup = residualPartialResumeHarness(overrides);
     const result = integrateBundle({ ...setup.options, deps: setup.deps });
 
-    expect(result).toMatchObject({ ok: false, phase: expectedPhase });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: expectedPhase,
+    });
     expect(setup.calls.merges).toEqual([]);
     expect(setup.calls.statuses.some((status) => status.state === 'success')).toBe(false);
   });
@@ -2432,7 +2865,11 @@ describe('authorized cross-repo bundle integration', () => {
     });
     const result = integrateBundle({ ...options, deps });
 
-    expect(result).toMatchObject({ ok: false, phase: 'platform_pr_ci_refresh' });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'platform_pr_ci_refresh',
+    });
     expect(result.refreshed).toMatchObject({ failure: 'platform_ci_run_not_successful' });
     expect(result.merges).toHaveLength(1);
     expect(result.merges[0]).toMatchObject({ repo: LESSON_REPO, resumed: true });
@@ -2456,6 +2893,10 @@ describe('authorized cross-repo bundle integration', () => {
       expectedPlatformSha: platformMerge,
       expectedLessonSha: lessonBase,
     });
+    expect(calls.rangeChecks).toEqual([
+      { baseSha: platformBase, headSha: platformMerge },
+      { baseSha: platformMerge, headSha: platformMerge },
+    ]);
     expect(calls.events.findIndex((event) => event.type === 'status' && event.state === 'success')).toBeLessThan(
       calls.events.findIndex((event) => event.type === 'merge' && event.repo === PLATFORM_REPO)
     );
@@ -2756,8 +3197,207 @@ describe('authorized cross-repo bundle integration', () => {
     });
     const result = integrateBundle({ ...options, deps });
 
-    expect(result).toMatchObject({ ok: false, phase: 'final_ci' });
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'final_ci',
+    });
     expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
+    expect(result.completed_merges).toHaveLength(2);
+  });
+
+  test('intermediate CI failure after the first merge retains the completed merge record', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        recomputeCompatibility: jest.fn(() => compatibility('platform-first')),
+        waitForPlatformMainCi: jest.fn(() => ({
+          ok: false,
+          failure: 'platform_ci_evidence_mismatch',
+        })),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'intermediate_ci',
+      intermediate_ci: {
+        failure: 'automatic_platform_main_ci_failed',
+        automatic_ci: { failure: 'platform_ci_evidence_mismatch' },
+      },
+    });
+    expect(calls.merges.map((item) => item.repo)).toEqual([PLATFORM_REPO]);
+    expect(result.completed_merges).toHaveLength(1);
+  });
+
+  test('final fallback timeout reports merged-but-unverified with both merge records', () => {
+    const waitForPlatformMainCi = jest
+      .fn()
+      .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null })
+      .mockReturnValueOnce({ ok: false, failure: 'platform_main_ci_timeout', run: null });
+    const { calls, options, deps } = harness({ deps: { waitForPlatformMainCi } });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'final_ci',
+      final_ci: {
+        failure: 'platform_main_ci_timeout',
+        fallback_ci: { failure: 'platform_main_ci_timeout' },
+      },
+    });
+    expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
+    expect(result.completed_merges).toHaveLength(2);
+    expect(calls.ciTriggers).toHaveLength(1);
+  });
+
+  test('final fallback dispatch error is returned as a structured post-merge orchestration failure', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        waitForPlatformMainCi: jest.fn(() => ({
+          ok: false,
+          failure: 'platform_main_ci_timeout',
+          run: null,
+        })),
+        triggerPlatformCi: jest.fn(() => {
+          throw new Error('workflow dispatch rejected');
+        }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'final_ci',
+      final_ci: {
+        failure: 'platform_ci_fallback_dispatch_failed',
+        error: 'workflow dispatch rejected',
+      },
+    });
+    expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
+    expect(result.completed_merges).toHaveLength(2);
+  });
+
+  test('fetchMergedPr throwing after a successful merge invocation preserves an unknown merge outcome', () => {
+    const { calls, options, deps } = harness({
+      deps: {
+        fetchMergedPr: jest.fn(() => {
+          throw new Error('transient merged PR lookup failure');
+        }),
+      },
+    });
+    const result = integrateBundle({ ...options, deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'merge_observation',
+      error: 'transient merged PR lookup failure',
+      merge_outcome_unknown: true,
+      completed_merges: [],
+      unknown_merge_outcomes: [{
+        repo: LESSON_REPO,
+        pr_number: 34,
+        head_sha: lessonHead,
+        method: 'merge_pr',
+        outcome: 'unknown',
+      }],
+    });
+    expect(calls.merges.map((item) => item.repo)).toEqual([LESSON_REPO]);
+  });
+
+  test('fetchMainSha throwing after the first merge retains the observed completed merge', () => {
+    const setup = harness();
+    const fetchMainSha = setup.deps.fetchMainSha;
+    let failed = false;
+    setup.deps.fetchMainSha = jest.fn((repo) => {
+      if (!failed && setup.calls.merges.length === 1) {
+        failed = true;
+        throw new Error('transient main lookup after first merge');
+      }
+      return fetchMainSha(repo);
+    });
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'post_merge_main_state',
+      error: 'transient main lookup after first merge',
+      merge_outcome_unknown: false,
+    });
+    expect(result.completed_merges).toHaveLength(1);
+    expect(result.completed_merges[0]).toMatchObject({ repo: LESSON_REPO, merge_commit: lessonMerge });
+  });
+
+  test('state retrieval throwing after both merges retains both observed completed merges', () => {
+    const setup = harness();
+    const fetchMainSha = setup.deps.fetchMainSha;
+    let failed = false;
+    setup.deps.fetchMainSha = jest.fn((repo) => {
+      if (
+        !failed &&
+        setup.calls.merges.length === 2
+      ) {
+        failed = true;
+        throw new Error('transient state lookup after both merges');
+      }
+      return fetchMainSha(repo);
+    });
+    const result = integrateBundle({ ...setup.options, deps: setup.deps });
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'post_merge_main_state',
+      error: 'transient state lookup after both merges',
+      merge_outcome_unknown: false,
+    });
+    expect(result.completed_merges.map((item) => item.repo)).toEqual([LESSON_REPO, PLATFORM_REPO]);
+  });
+
+  test('CLI output retains irreversible-state diagnostics for a post-merge exception', () => {
+    const setup = harness();
+    const fetchMainSha = setup.deps.fetchMainSha;
+    let failed = false;
+    setup.deps.fetchMainSha = jest.fn((repo) => {
+      if (!failed && setup.calls.merges.length === 1) {
+        failed = true;
+        throw new Error('CLI post-merge state lookup failed');
+      }
+      return fetchMainSha(repo);
+    });
+    const stdout = jest.fn();
+    const exit = jest.fn();
+
+    runCli([
+      '--repo', PLATFORM_REPO,
+      '--pr', '140',
+      '--authorization-comment-id', '123',
+    ], {
+      integrateBundle: (cliOptions) => integrateBundle({
+        ...setup.options,
+        ...cliOptions,
+        deps: setup.deps,
+      }),
+      stdout,
+      exit,
+    });
+
+    expect(exit).toHaveBeenCalledWith(1);
+    expect(stdout).toHaveBeenCalledTimes(1);
+    const output = JSON.parse(stdout.mock.calls[0][0]);
+    expect(output).toMatchObject({
+      phase: 'merged_but_postmerge_verification_failed',
+      verification_subphase: 'post_merge_main_state',
+      error: 'CLI post-merge state lookup failed',
+      merge_outcome_unknown: false,
+    });
+    expect(output.completed_merges).toHaveLength(1);
+    expect(output.merge_invocations).toHaveLength(1);
   });
 
   test('old green platform-ci run with same platform SHA is ignored by minimum run id', () => {
@@ -2772,6 +3412,27 @@ describe('authorized cross-repo bundle integration', () => {
     ], platformBase, { minDatabaseId: 100 })).toBeNull();
   });
 
+  test('workflow event and run-id floor exclude stale runs for an unchanged Platform head', () => {
+    const runs = [
+      { databaseId: 100, headSha: platformMerge, event: 'push', status: 'completed', conclusion: 'success' },
+      { databaseId: 101, headSha: platformMerge, event: 'workflow_dispatch', status: 'completed', conclusion: 'success' },
+      { databaseId: 102, headSha: platformMerge, event: 'push', status: 'completed', conclusion: 'failure' },
+    ];
+
+    expect(selectLatestRunForHead(runs, platformMerge, {
+      minDatabaseId: 100,
+      workflowEvent: 'push',
+    })).toMatchObject({ databaseId: 102, event: 'push' });
+    expect(selectLatestRunForHead(runs, platformMerge, {
+      minDatabaseId: 102,
+      workflowEvent: 'push',
+    })).toBeNull();
+    expect(selectLatestRunForHead(runs, platformMerge, {
+      minDatabaseId: 100,
+      workflowEvent: 'workflow_dispatch',
+    })).toMatchObject({ databaseId: 101, event: 'workflow_dispatch' });
+  });
+
   test('platform-ci evidence rejects old lesson SHA for same platform SHA', () => {
     const result = validatePlatformCiEvidence(platformCiEvidence(platformBase, lessonBase), {
       platformSha: platformBase,
@@ -2780,6 +3441,16 @@ describe('authorized cross-repo bundle integration', () => {
 
     expect(result.ok).toBe(false);
     expect(result.failures).toContain(`lesson_head_mismatch: expected ${lessonMerge}`);
+  });
+
+  test('platform-ci evidence rejects the wrong Platform SHA even when Lesson matches', () => {
+    const result = validatePlatformCiEvidence(platformCiEvidence(platformBase, lessonMerge), {
+      platformSha: platformMerge,
+      lessonSha: lessonMerge,
+    });
+
+    expect(result.ok).toBe(false);
+    expect(result.failures).toContain(`platform_head_mismatch: expected ${platformMerge}`);
   });
 
   test('trusted compatibility workflow provenance is accepted when fully bound', () => {

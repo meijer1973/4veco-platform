@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BUNDLE-LANE-CI-RELIABILITY-1",
+  "completed_on": "2026-08-29",
+  "status": "completed",
+  "plan": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md",
+  "baseline": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-baseline.md",
+  "result": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-result.md",
+  "diff_summary": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "implementation_changed": true,
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "review_standard": "REV-STD-1",
+  "reviewed_substantive_head": "8e41a6af515e0a911372572ac465a9299826180a",
+  "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-bundle.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:integration-lane",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js BUNDLE-LANE-CI-RELIABILITY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js BUNDLE-LANE-CI-RELIABILITY-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md",
+    "round1": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md",
+    "corrections": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md",
+    "round2": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md",
+    "renewal": "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md",
+    "renewal_verdict": "PASS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "exact-head-owner-lifecycle-proof",
+        "description": "Exact-head hosted CI, PR readiness, and owner merge authorization are remote lifecycle proof supplied only after the terminal head is immutable.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "platform_repository_owner",
+        "next_action": "Bind green hosted CI and readiness to the terminal head, then obtain explicit owner integration authorization.",
+        "blocking": false,
+        "blocks": "Integration of PR #217 before exact-head proof and owner authorization.",
+        "does_not_block": "Local sprint closure or acceptance of the reviewed substantive payload and its renewed PASS.",
+        "proof_required_to_close": "Green exact-head platform-ci, exact-head PR readiness, and a later explicit owner authorization record."
+      }
+    ],
+    "findings": [
+      {
+        "id": "automatic-ci-race-closed",
+        "description": "The automatic observation-to-fallback race is closed with an exact pre-dispatch push recheck and zero-dispatch failure behavior.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/integrate-authorized-bundle.js",
+          "build-scripts/review-gates/integrate-authorized-bundle.test.js",
+          "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Mechanical evidence finalization and human review.",
+        "proof_required_to_close": "Preserve the exact helper and positive/negative zero-dispatch regressions."
+      },
+      {
+        "id": "exact-transition-ci-contract",
+        "description": "Automatic and fallback paths validate exact Platform/Lesson evidence and exact transition-specific Y1 ranges.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/integrate-authorized-bundle.js",
+          "build-scripts/review-gates/integrate-authorized-bundle.test.js",
+          "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.jsonl"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Owner review after remote lifecycle proof.",
+        "proof_required_to_close": "Keep focused and integration-lane suites green."
+      },
+      {
+        "id": "postmerge-failure-state",
+        "description": "A wrapper-owned execution journal preserves acknowledged unknown merge outcomes and observed completed merges across returned failures and unexpected exceptions, including CLI output.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/integrate-authorized-bundle.js",
+          "docs/review/pr-integration-lane-policy.md",
+          "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Existing pre-merge phase behavior.",
+        "proof_required_to_close": "Preserve the merge-observation, one-merge, two-merge, and CLI adversarial regressions."
+      },
+      {
+        "id": "authority-boundary",
+        "description": "No Lesson, product, Y1, protected-reference, workflow, PR #208, authorization, or downstream authority surface changed.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md",
+          "reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md",
+          "references/reference-team-roadmap.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Human review of the bounded governance repair.",
+        "proof_required_to_close": "Keep the terminal tail inside the reviewer-approved evidence/index inventory."
+      }
+    ]
+  },
+  "authority_claims": {
+    "bundle_lane_ci_reliability_repair_complete": true,
+    "pr_208_reopened_or_modified": false,
+    "lesson_mutation_authorized": false,
+    "product_mutation_authorized": false,
+    "y1_evidence_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "workflow_definition_mutation_authorized": false,
+    "bundle_integration_authorized": false,
+    "autonomous_merge_authorized": false,
+    "admin_bypass_authorized": false,
+    "rollout_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "next_authorized_work": "Obtain exact-head hosted CI, a bounded mechanical-tail audit, renewed PR readiness, and explicit owner review. Do not merge or run another coordinated bundle under this result."
+}

@@ -317,6 +317,16 @@ CI. The hosted workflow exposes the preparation phase through `prepare_only`;
 it does not confer merge authority because trusted integrator code stops before
 the readiness and merge stages.
 
+There is one explicit fail-closed exception to the phrase "completely green dry
+run." When current lineage requires an integration-delta lead review, dry-run
+cannot publish and re-fetch the exact integration-head readiness record that
+binds that review. Its required terminal result is therefore
+`integration_delta_lead_review_required` with
+`dry_run_cannot_validate_integration_delta_review`, not `validated_dry_run`.
+That result is an intentional stop, never a merge authorization or a simulated
+success. The owner-authenticated live lane may proceed only after the exact-head
+delta review and renewed human authorization independently satisfy their gates.
+
 If a lesson-first partial resume has no exact readiness comment for the
 controller's reviewed payload, the lane may use the residual-bundle readiness
 bridge. This bridge does not create or backdate a payload-head comment. It
@@ -390,11 +400,33 @@ platform-local artifact reads. The bundle integrator fails closed unless the
 cross-repository token can access both repositories with merge-capable
 permissions.
 
-After every platform CI dispatch in the bundle lane, the integrator records the
-latest prior workflow-run id and accepts only a newer `platform-ci` run. It then
-downloads `platform-ci-evidence.json` and verifies the exact platform and
-lesson `main` SHAs for the intermediate and final states. A green run for the
-same platform SHA but an older lesson SHA is not valid evidence.
+For every intermediate and final bundle state, the integrator first observes
+the exact automatic `platform-ci` `push` run newer than the state-transition
+run-id floor. A queued or running automatic run counts as present and is awaited;
+the lane must not dispatch a duplicate. A completed red run or a run whose
+downloaded `platform-ci-evidence.json` names the wrong Platform or Lesson SHA
+fails closed and is not masked by a fallback.
+
+Only when no qualifying automatic push run appears may the lane dispatch a
+manual fallback. It records a new immediate pre-dispatch run-id floor, passes
+then performs one final exact-event recheck against the original transition
+floor. If that recheck finds a queued, running, or completed automatic push run,
+the lane awaits and verifies it and must not dispatch. Only a proven absent
+recheck may proceed with full `y1_base_sha` and `y1_head_sha` workflow inputs;
+the lane accepts only a newer `workflow_dispatch` run. The Y1 range is the Platform transition: old Platform
+main to new Platform main for a Platform merge, or `base == head ==` current
+Platform main when only Lesson changed. The range must be identical or prove
+the base is an ancestor of the exact head. Both automatic and fallback paths
+download the evidence artifact and verify the exact Platform/Lesson state. A
+stale green run for the same Platform SHA but an older Lesson SHA is excluded by
+the transition floor and is not valid evidence.
+
+If any bundle member has already merged and a later CI or orchestration check
+fails, the terminal result is
+`merged_but_postmerge_verification_failed`. It retains the original
+`verification_subphase`, all diagnostics, and every completed merge record so
+operators cannot mistake a post-irreversible verification failure for a
+pre-merge rejection.
 
 The integration command also verifies the compatibility workflow provenance:
 workflow id, workflow path, workflow ref, workflow-dispatch event, trusted
