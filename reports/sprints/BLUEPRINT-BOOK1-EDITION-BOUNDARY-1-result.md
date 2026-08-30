@@ -46,6 +46,7 @@ Issue #221 records:
 
 ## Files changed
 
+- `references/owned/README.md`
 - `references/owned/course-blueprint-pedagogical-boundaries.md`
 - `references/owned/course-blueprint-v5.meta.json`
 - `references/owned/course-blueprint-v6-three-year.meta.json`
