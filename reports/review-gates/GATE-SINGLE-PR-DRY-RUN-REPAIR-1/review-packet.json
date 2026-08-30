@@ -11,6 +11,8 @@
   "changed_paths": [
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/integrate-authorized-pr.test.js",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "build-scripts/workflows/check-paragraph-lane-scope.test.js",
     "docs/review/pr-integration-lane-policy.md",
     "references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.plan.json",
     "references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.result.json",
@@ -58,6 +60,8 @@
   "review_evidence": [
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/integrate-authorized-pr.test.js",
+    "build-scripts/workflows/check-paragraph-lane-scope.js",
+    "build-scripts/workflows/check-paragraph-lane-scope.test.js",
     "docs/review/pr-integration-lane-policy.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md",
@@ -81,6 +85,7 @@
     "retry_polling_absent": true,
     "compatibility_flags_equivalent": true,
     "live_lane_behavior_preserved": true,
+    "canonical_dashboard_paths_shared_only": true,
     "independent_lead_review_complete": true,
     "downstream_authority_false": true
   },

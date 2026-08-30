@@ -72,6 +72,8 @@ head records `refreshed_head_checks: not_applicable`.
 
 - `build-scripts/review-gates/integrate-authorized-pr.js`
 - `build-scripts/review-gates/integrate-authorized-pr.test.js`
+- `build-scripts/workflows/check-paragraph-lane-scope.js`
+- `build-scripts/workflows/check-paragraph-lane-scope.test.js`
 - `docs/review/pr-integration-lane-policy.md`
 - `reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-*`
 - `references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1*`
@@ -108,6 +110,8 @@ head records `refreshed_head_checks: not_applicable`.
 - Behind-head `would_update_branch` report without mutation or retry
 - Full-lane positive, negative, equivalence, movement, and live regressions
 - Narrow policy and CLI guidance
+- Exact shared-lane classification for only the two canonical internal-dashboard
+  outputs required by roadmap-state closure
 - Sprint evidence, structural lead review, exact-head CI, readiness, and one
   open, unmerged PR for owner review
 
@@ -160,6 +164,7 @@ head records `refreshed_head_checks: not_applicable`.
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
 npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js
 npm.cmd run check:integration-lane
+npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js
 npm.cmd run check:branch-protection
 npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
 npm.cmd run check:platform

@@ -45,3 +45,17 @@ protected surfaces under `Preserved state` but lacked the canonical `Data
 integrity notes` heading. The baseline now repeats the same authority-negative
 facts under the required heading; no baseline fact or implementation scope
 changed.
+
+## Renewal blocker and correction
+
+Renewed review at `2b4d437f07ca5729272b0d0cb4b8d1586d5036ab`
+returned `REVISE`: the exact shared-lane command failed because the generic
+`index.html` rule classified the canonical dashboard HTML as companion and the
+dashboard JSON was unknown. The result's earlier scope PASS therefore did not
+cover the completed closure.
+
+The correction adds only the two exact canonical internal-dashboard paths to
+the shared-platform classifier and adds positive and close-path negative
+regressions. No prefix or broad report exception is introduced. Because this
+is a new substantive code/test change, the corrected head requires complete
+focused/integration/full validation and renewed structural review.

@@ -31,6 +31,10 @@
       "status": "passed"
     },
     {
+      "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js",
+      "status": "passed"
+    },
+    {
       "command": "npm.cmd run check:branch-protection",
       "status": "passed"
     },
@@ -105,6 +109,19 @@
         "blocks": "Nothing.",
         "does_not_block": "Owner review of the bounded governance repair.",
         "proof_required_to_close": "Keep the terminal tail inside the declared mechanical closure inventory."
+      },
+      {
+        "id": "dashboard-scope-classification",
+        "description": "Only the two canonical internal-dashboard generator outputs are classified as shared platform paths; close paths remain fail-closed.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/workflows/check-paragraph-lane-scope.js",
+          "build-scripts/workflows/check-paragraph-lane-scope.test.js",
+          "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl"
+        ],
+        "blocks": "Nothing after exact-scope validation passes.",
+        "does_not_block": "The canonical dry-run contract.",
+        "proof_required_to_close": "Keep exact-path positive and close-path negative regressions green."
       }
     ]
   },

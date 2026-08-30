@@ -20,6 +20,10 @@ missing exact-head CI fail closed in one attempt with retry advice only. The
 temporary `--dry-run --no-merge` form remains result-equivalent. All existing
 live-lane tests remain green.
 
+The shared-lane classifier also recognizes exactly the two canonical internal
+dashboard closure outputs required by `AGENTS.md`; close-path HTML and JSON
+files remain companion or unknown and fail closed.
+
 Reviewed substantive payload:
 `870aa3f228eb7289f9ef63dcd3394b5d309c5413`.
 
@@ -30,9 +34,10 @@ Reviewed substantive payload:
 | Canonical sprint plan | PASS |
 | Focused single-PR integrator | PASS: 1 suite, 44 tests |
 | Complete integration lane | PASS: 10 suites, 239 tests |
+| Focused shared-lane classifier | PASS: 1 suite, 23 tests |
 | Live branch-protection contract | PASS |
 | Shared paragraph-lane scope | PASS |
-| Full Platform suite against Lesson `f09fd6e8...` | PASS: 105 suites and 1,578 tests; 6 suites and 8 tests skipped |
+| Full Platform suite against Lesson `f09fd6e8...` | PASS: 105 suites and 1,579 tests; 6 suites and 8 tests skipped |
 | Deterministic roadmap dashboard refresh | PASS |
 | Independent structural lead review | PASS in both rounds |
 | JavaScript syntax and diff hygiene | PASS |

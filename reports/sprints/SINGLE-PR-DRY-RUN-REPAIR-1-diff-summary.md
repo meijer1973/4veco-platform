@@ -10,6 +10,9 @@
   regressions while retaining existing live-lane coverage.
 - `docs/review/pr-integration-lane-policy.md` documents plain dry-run as the
   canonical read-only mode and preserves the coordinated-bundle policy.
+- `build-scripts/workflows/check-paragraph-lane-scope.js` and its focused tests
+  classify only the two canonical internal-dashboard closure outputs as shared
+  platform paths; neighboring paths remain fail-closed.
 
 ## Governance and evidence closure
 

@@ -26,6 +26,8 @@ URL/map and deterministic index tail on top of the reviewed substantive head.
 4. Movement and missing exact-head CI fail closed in one attempt.
 5. Plain and compatibility-form dry runs are result-equivalent.
 6. Existing live-lane behavior remains unchanged.
+7. Only the two canonical internal-dashboard closure outputs receive shared
+   classification; neighboring report paths remain fail-closed.
 
 ## Review evidence
 

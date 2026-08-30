@@ -443,3 +443,238 @@ OK sprint bundle: SINGLE-PR-DRY-RUN-REPAIR-1 complete
 ```text
 
 ```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:40:07.594Z`
+- finished_at: `2026-08-30T10:40:10.158Z`
+- duration_ms: `2564`
+- exit_code: `0`
+- stdout_sha256: `110687befc6d975459b7a7e8d2525300a2b45e42e767fa5330bd5ca537cf540f`
+- stderr_sha256: `6672a0ca363dae3799978acea011302406a1816d1a489e3866c8f7d63c82de38`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       23 passed, 23 total
+Snapshots:   0 total
+Time:        1.413 s, estimated 2 s
+Ran all test suites matching build-scripts/workflows/check-paragraph-lane-scope.test.js.
+
+```
+## npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:40:14.775Z`
+- finished_at: `2026-08-30T10:40:15.181Z`
+- duration_ms: `406`
+- exit_code: `0`
+- stdout_sha256: `947689a6ce0095c9036e9ec9e5658b5d1b967762626215d1bafa2ffa1828c889`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:paragraph-lane-scope
+> node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD
+
+Paragraph lane scope: PASS (shared)
+- shared platform: 8
+  - build-scripts/review-gates/integrate-authorized-pr.js
+  - build-scripts/review-gates/integrate-authorized-pr.test.js
+  - docs/review/pr-integration-lane-policy.md
+  - references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.plan.json
+  - references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.result.json
+  - references/reference-team-roadmap.md
+  - reports/internal-dashboard/dashboard-data.json
+  - reports/internal-dashboard/index.html
+- generated index/report: 1
+  - reports/url-index.md
+- review evidence: 14
+  - reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/bundle-urls.md
+  - reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.json
+  - reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-planning-review.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:40:29.966Z`
+- finished_at: `2026-08-30T10:41:01.259Z`
+- duration_ms: `31293`
+- exit_code: `0`
+- stdout_sha256: `f938fa2a9371564f7aac19088774bb85b3a45311a17c30e6e1b7e72b6e247f7c`
+- stderr_sha256: `438bd8a86f5073543544562e0503961b0f888c7a7c53a6b7add614042873754c`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       44 passed, 44 total
+Snapshots:   0 total
+Time:        30.297 s, estimated 31 s
+Ran all test suites matching build-scripts/review-gates/integrate-authorized-pr.test.js.
+
+```
+## npm.cmd run check:integration-lane
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:41:07.136Z`
+- finished_at: `2026-08-30T10:41:49.150Z`
+- duration_ms: `42014`
+- exit_code: `0`
+- stdout_sha256: `6e178c2e38186fd6ab8b54b4f97793a761682f48af136f7badc7215f23e752c7`
+- stderr_sha256: `bb9602686642964ed9f743af187f42b57e21edcaf97a5aa6fd0bf34aa100b895`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:integration-lane
+> jest build-scripts/review-gates/check-human-payload-authorization.test.js build-scripts/review-gates/check-human-bundle-authorization.test.js build-scripts/review-gates/check-integration-lineage.test.js build-scripts/review-gates/check-integration-lane-capability.test.js build-scripts/review-gates/cross-repo-bundle-compatibility.test.js build-scripts/review-gates/apply-bundle-readiness-decision.test.js build-scripts/review-gates/integrate-authorized-pr.test.js build-scripts/review-gates/integrate-authorized-bundle.test.js build-scripts/review-gates/authorized-pr-integration-workflow.test.js build-scripts/review-gates/cross-repo-bundle-workflow.test.js --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 10 passed, 10 total
+Tests:       239 passed, 239 total
+Snapshots:   0 total
+Time:        41.015 s
+Ran all test suites matching build-scripts/review-gates/check-human-payload-authorization.test.js|build-scripts/review-gates/check-human-bundle-authorization.test.js|build-scripts/review-gates/check-integration-lineage.test.js|build-scripts/review-gates/check-integration-lane-capability.test.js|build-scripts/review-gates/cross-repo-bundle-compatibility.test.js|build-scripts/review-gates/apply-bundle-readiness-decision.test.js|build-scripts/review-gates/integrate-authorized-pr.test.js|build-scripts/review-gates/integrate-authorized-bundle.test.js|build-scripts/review-gates/authorized-pr-integration-workflow.test.js|build-scripts/review-gates/cross-repo-bundle-workflow.test.js.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:41:54.509Z`
+- finished_at: `2026-08-30T10:47:24.113Z`
+- duration_ms: `329604`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `bebde0e572e29ea1cf68abd11269d14674a22f10f03cb09810eaa10c19ebe3e7`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 105 passed, 105 of 111 total
+Tests:       8 skipped, 1579 passed, 1587 total
+Snapshots:   0 total
+Time:        328.838 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:47:46.206Z`
+- finished_at: `2026-08-30T10:47:46.331Z`
+- duration_ms: `125`
+- exit_code: `0`
+- stdout_sha256: `a6d1e5643d968497e11e41df807d7f237533b8cf1bd52649a9def49b0abca7c6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
