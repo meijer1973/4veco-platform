@@ -19,5 +19,6 @@ Current owned sources:
 - `course-blueprint-v6-three-year.meta.json` - metadata and authority constraints for the promoted v6 three-year umbrella blueprint.
 - `course-blueprint-v5.md` - active v5 curriculum-source scaffold for the 12/12/14/16 four-test-week model.
 - `course-blueprint-v5.meta.json` - metadata and authority constraints for the active v5 blueprint.
+- `course-blueprint-pedagogical-boundaries.md` - normative interpretation shared by v5 and the Year 1 detail embedded in v6. It distinguishes terminal targets, anticipatory scaffolding/previews, and prerequisite mastery; records the Book 1 first-edition freeze and Book 2 first-edition handoff; and makes no change to counts, book roles, target records, or assessment structure.
 - `course-blueprint-v4.md` - superseded v4 blueprint retained for historical comparison and migration traceability.
 - `course-blueprint-v4.meta.json` - superseded v4 metadata retained for historical comparison and migration traceability.
