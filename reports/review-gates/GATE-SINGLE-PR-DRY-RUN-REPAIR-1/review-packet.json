@@ -43,6 +43,7 @@
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS",
+    "lead_review_renewal_result": "PASS",
     "rationale": "Trusted merge governance requires exact-head human review and explicit owner authorization after independent lead review and hosted proof."
   },
   "human_decision_required": true,
@@ -64,6 +65,7 @@
     "build-scripts/workflows/check-paragraph-lane-scope.test.js",
     "docs/review/pr-integration-lane-policy.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md",
+    "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl",
@@ -71,7 +73,7 @@
   ],
   "reviewed_lineage": {
     "platform_base": "e6103d3127780d59b36410c2dbccf86314b10dd1",
-    "reviewed_substantive_head": "870aa3f228eb7289f9ef63dcd3394b5d309c5413",
+    "reviewed_substantive_head": "7cf18780dcbeaa66c3b63febe1ee7265cfbc7cb2",
     "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "terminal_head_requires_exact_remote_binding": true,
     "tail_must_retain_reviewed_substantive_ancestry": true

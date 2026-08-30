@@ -24,8 +24,8 @@ The shared-lane classifier also recognizes exactly the two canonical internal
 dashboard closure outputs required by `AGENTS.md`; close-path HTML and JSON
 files remain companion or unknown and fail closed.
 
-Reviewed substantive payload:
-`870aa3f228eb7289f9ef63dcd3394b5d309c5413`.
+Corrected substantive payload:
+`7cf18780dcbeaa66c3b63febe1ee7265cfbc7cb2`.
 
 ## Acceptance test results
 
@@ -39,7 +39,7 @@ Reviewed substantive payload:
 | Shared paragraph-lane scope | PASS |
 | Full Platform suite against Lesson `f09fd6e8...` | PASS: 105 suites and 1,579 tests; 6 suites and 8 tests skipped |
 | Deterministic roadmap dashboard refresh | PASS |
-| Independent structural lead review | PASS in both rounds |
+| Independent structural lead review | PASS in both rounds; renewed PASS after exact-path correction |
 | JavaScript syntax and diff hygiene | PASS |
 | Complete sprint, packet, URL and index freshness | PASS before terminal publication |
 

@@ -678,3 +678,57 @@ OK sprint plan: reports\sprints\SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
 ```text
 
 ```
+## npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
+
+- cwd: `C:\Projects\4veco-worktrees\SINGLE-PR-DRY-RUN-REPAIR-1-20260830\4veco-platform`
+- started_at: `2026-08-30T10:49:57.036Z`
+- finished_at: `2026-08-30T10:49:57.607Z`
+- duration_ms: `571`
+- exit_code: `0`
+- stdout_sha256: `f10aa163437c06d801ebc3fe99d779f5804045aa2c1a33e8a4923871fce677ed`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:paragraph-lane-scope
+> node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD
+
+Paragraph lane scope: PASS (shared)
+- shared platform: 10
+  - build-scripts/review-gates/integrate-authorized-pr.js
+  - build-scripts/review-gates/integrate-authorized-pr.test.js
+  - build-scripts/workflows/check-paragraph-lane-scope.js
+  - build-scripts/workflows/check-paragraph-lane-scope.test.js
+  - docs/review/pr-integration-lane-policy.md
+  - references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.plan.json
+  - references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.result.json
+  - references/reference-team-roadmap.md
+  - reports/internal-dashboard/dashboard-data.json
+  - reports/internal-dashboard/index.html
+- generated index/report: 1
+  - reports/url-index.md
+- review evidence: 14
+  - reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/bundle-urls.md
+  - reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.json
+  - reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-planning-review.md
+  - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```

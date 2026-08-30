@@ -31,9 +31,10 @@ authorization-model, bundle-runner or downstream authority path changed.
 ## Lineage
 
 - Platform base: `e6103d3127780d59b36410c2dbccf86314b10dd1`
-- Reviewed substantive head: `870aa3f228eb7289f9ef63dcd3394b5d309c5413`
+- Corrected substantive head: `7cf18780dcbeaa66c3b63febe1ee7265cfbc7cb2`
 - Lesson companion: `f09fd6e88edc5049b026b16b0158e7e188091d2d`
 - Review tail audited through: `910ce902f517d397f165bb616ecd3b295e250611`
+- Corrected substantive renewal: PASS at `7cf18780dcbeaa66c3b63febe1ee7265cfbc7cb2`
 
-Only mechanical review/result/URL/index closure may follow the reviewed
+Only mechanical review/result/URL/index closure may follow the corrected
 substantive head. Any substantive or authority change invalidates the review.
