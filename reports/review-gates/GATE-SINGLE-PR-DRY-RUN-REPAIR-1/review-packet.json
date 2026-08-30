@@ -9,6 +9,9 @@
   "bundle_id": null,
   "authority_class": "high_authority",
   "changed_paths": [
+    ".gitattributes",
+    "build-scripts/ci/check-evidence-line-endings.js",
+    "build-scripts/ci/check-evidence-line-endings.test.js",
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/integrate-authorized-pr.test.js",
     "build-scripts/workflows/check-paragraph-lane-scope.js",
@@ -32,6 +35,7 @@
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md",
+    "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-ci-portability-renewal.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md",
@@ -59,6 +63,9 @@
   "route": "READY_FOR_HUMAN_REVIEW",
   "review_packet_markdown": "reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.md",
   "review_evidence": [
+    ".gitattributes",
+    "build-scripts/ci/check-evidence-line-endings.js",
+    "build-scripts/ci/check-evidence-line-endings.test.js",
     "build-scripts/review-gates/integrate-authorized-pr.js",
     "build-scripts/review-gates/integrate-authorized-pr.test.js",
     "build-scripts/workflows/check-paragraph-lane-scope.js",
@@ -66,6 +73,7 @@
     "docs/review/pr-integration-lane-policy.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md",
+    "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-ci-portability-renewal.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md",
     "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl",
@@ -73,7 +81,8 @@
   ],
   "reviewed_lineage": {
     "platform_base": "e6103d3127780d59b36410c2dbccf86314b10dd1",
-    "reviewed_substantive_head": "7cf18780dcbeaa66c3b63febe1ee7265cfbc7cb2",
+    "reviewed_substantive_head": "57757b15c5c1b4c849894ad2ec303acb809d7017",
+    "rejected_intermediate_head": "8211c4838c52ede6a4d39842928abb7007d673c3",
     "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "terminal_head_requires_exact_remote_binding": true,
     "tail_must_retain_reviewed_substantive_ancestry": true
@@ -88,6 +97,8 @@
     "compatibility_flags_equivalent": true,
     "live_lane_behavior_preserved": true,
     "canonical_dashboard_paths_shared_only": true,
+    "five_byte_hashed_y1_text_paths_lf_pinned_and_scanned": true,
+    "sealed_y1_payload_preserved": true,
     "independent_lead_review_complete": true,
     "downstream_authority_false": true
   },

@@ -20,6 +20,11 @@ simulation and made no external mutation.
 This repair belongs only to the single-PR integration runner. It does not
 change the coordinated-bundle runner or reopen any completed PR.
 
+Exact-head hosted run `33307624508` later exposed a Windows checkout-byte
+portability defect in five text artifacts whose raw bytes the existing Y1
+guard hashes. The bounded closure pins and scans those five exact paths as LF;
+it does not alter any Y1 checker, test, evidence, authority, or product blob.
+
 ## Quality Standard
 
 The specification quality floor is a fail-closed, auditable dry run that executes every check
@@ -44,6 +49,7 @@ contract is a named follow-up rather than hidden scope expansion.
 | Movement fails safely | Main/head movement retains the existing retry classifications without mutation | Main/head movement regressions | planned |
 | Temporary flags are equivalent | `--dry-run` and `--dry-run --no-merge` return the same canonical phase and operation report | Equivalence regression | planned |
 | Live lane is unchanged | Live current and live behind/update flows still merge and verify post-merge CI exactly as before | Existing and strengthened live regressions | planned |
+| Raw-byte evidence is checkout-stable | Five exact Y1 renewal text paths are pinned and scanned as LF by the general CI evidence-line-ending gate | Windows hash reproduction, focused CI/Y1 regression, and hosted CI | planned |
 
 The successful result contract is machine-checkable. It has top-level
 `phase: validated_dry_run`, `retry_required: false`, and a `dry_run` object
@@ -72,6 +78,9 @@ head records `refreshed_head_checks: not_applicable`.
 
 - `build-scripts/review-gates/integrate-authorized-pr.js`
 - `build-scripts/review-gates/integrate-authorized-pr.test.js`
+- `.gitattributes`, limited to five exact raw-byte-hashed Y1 renewal text paths
+- `build-scripts/ci/check-evidence-line-endings.js`
+- `build-scripts/ci/check-evidence-line-endings.test.js`
 - `build-scripts/workflows/check-paragraph-lane-scope.js`
 - `build-scripts/workflows/check-paragraph-lane-scope.test.js`
 - `docs/review/pr-integration-lane-policy.md`
@@ -112,6 +121,8 @@ head records `refreshed_head_checks: not_applicable`.
 - Narrow policy and CLI guidance
 - Exact shared-lane classification for only the two canonical internal-dashboard
   outputs required by roadmap-state closure
+- Exact LF checkout and scan coverage for the five byte-hashed Y1 renewal text
+  artifacts, with the sealed Y1 checker/test/evidence payload unchanged
 - Sprint evidence, structural lead review, exact-head CI, readiness, and one
   open, unmerged PR for owner review
 
@@ -150,8 +161,9 @@ head records `refreshed_head_checks: not_applicable`.
    equivalence, and live current/update paths. Directly assert zero status and
    readiness-comment publication, branch update, retry polling, CI dispatch,
    merge invocation, merge observation, containment, and post-merge CI calls.
-9. Run focused tests, the complete integration lane, the full platform suite,
-   shared-lane scope, diff hygiene, sprint validators, and freshness checks.
+9. Run focused dry-run, CI line-ending/Y1 and scope tests, the complete
+   integration lane, the full platform suite, shared-lane scope, diff hygiene,
+   sprint validators, and freshness checks.
 10. Complete independent structural lead-review round 1, correction logging,
    and round-2 exact-substantive-head recheck. Freeze the substantive head
    before generated evidence/index closure.
@@ -163,6 +175,7 @@ head records `refreshed_head_checks: not_applicable`.
 ```bash
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
 npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js
+npm.cmd test -- --runInBand build-scripts/ci/check-evidence-line-endings.test.js build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 npm.cmd run check:integration-lane
 npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js
 npm.cmd run check:branch-protection

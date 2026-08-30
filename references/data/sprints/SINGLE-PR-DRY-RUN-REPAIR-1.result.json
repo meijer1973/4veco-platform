@@ -15,7 +15,8 @@
   "lead_review_required": true,
   "lead_review_schema_version": 3,
   "review_standard": "REV-STD-1",
-  "reviewed_substantive_head": "7cf18780dcbeaa66c3b63febe1ee7265cfbc7cb2",
+  "reviewed_substantive_head": "57757b15c5c1b4c849894ad2ec303acb809d7017",
+  "rejected_intermediate_head": "8211c4838c52ede6a4d39842928abb7007d673c3",
   "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
   "acceptance_tests": [
     {
@@ -24,6 +25,10 @@
     },
     {
       "command": "npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand build-scripts/ci/check-evidence-line-endings.test.js build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
       "status": "passed"
     },
     {
@@ -69,6 +74,8 @@
     "corrections": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md",
     "round2": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md",
     "renewal": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md",
+    "ci_portability_renewal": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-ci-portability-renewal.md",
+    "ci_portability_renewal_verdict": "PASS",
     "renewal_verdict": "PASS",
     "final_verdict": "PASS",
     "flags": [],
@@ -101,7 +108,7 @@
       },
       {
         "id": "authority-boundary",
-        "description": "No bundle runner, workflow, Lesson, product, Y1, protected-reference, authorization-model or downstream authority surface changed.",
+        "description": "No bundle runner, workflow, Lesson, product, Y1 checker/test/evidence payload, protected-reference, authorization-model or downstream authority surface changed.",
         "classification": "core_requirement_met",
         "evidence": [
           "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md",
@@ -124,6 +131,21 @@
         "blocks": "Nothing after exact-scope validation passes.",
         "does_not_block": "The canonical dry-run contract.",
         "proof_required_to_close": "Keep exact-path positive and close-path negative regressions green."
+      },
+      {
+        "id": "windows-checkout-byte-portability",
+        "description": "Exactly five raw-byte-hashed Y1 renewal text artifacts are pinned and scanned as LF by the general CI evidence-line-ending gate; the sealed Y1 payload is unchanged.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          ".gitattributes",
+          "build-scripts/ci/check-evidence-line-endings.js",
+          "build-scripts/ci/check-evidence-line-endings.test.js",
+          "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-ci-portability-renewal.md",
+          "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl"
+        ],
+        "blocks": "Nothing after focused Y1 provenance validation passes.",
+        "does_not_block": "Exact-head hosted CI and human review.",
+        "proof_required_to_close": "Preserve the five exact LF rules, scan inventory and sealed Y1 blobs."
       }
     ]
   },

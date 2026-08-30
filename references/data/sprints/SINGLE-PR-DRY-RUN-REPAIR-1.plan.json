@@ -23,11 +23,13 @@
     "Return validated_dry_run with explicit not-executed merge and post-merge phases.",
     "Report behind heads as would-update without mutating or retrying.",
     "Prove mutation absence, flag equivalence, movement safety, and unchanged live behavior.",
-    "Classify only the two canonical internal-dashboard closure outputs as shared platform paths."
+    "Classify only the two canonical internal-dashboard closure outputs as shared platform paths.",
+    "Pin and scan only the five raw-byte-hashed Y1 renewal text artifacts as LF without changing the sealed Y1 payload."
   ],
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md",
     "npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js",
+    "npm.cmd test -- --runInBand build-scripts/ci/check-evidence-line-endings.test.js build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
     "npm.cmd run check:integration-lane",
     "npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js",
     "npm.cmd run check:branch-protection",
