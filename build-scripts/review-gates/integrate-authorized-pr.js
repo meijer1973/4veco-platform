@@ -158,7 +158,7 @@ function isBranchProtectionReadForbiddenSummary(summary) {
 
 function branchProtectionReadForbiddenResult(repo, prNumber, authorizationCommentId, pr, branchProtection, deps, options, checkpoint) {
   const description = 'Branch protection read forbidden; use owner local lane';
-  if (pr && pr.headRefOid) {
+  if (pr && pr.headRefOid && options.dryRun !== true) {
     deps.setCommitStatus(repo, pr.headRefOid, 'failure', description, pr.url, options);
   }
   return {
@@ -1022,11 +1022,98 @@ function sleep(ms) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 }
 
+const DRY_RUN_INITIAL_CHECKS = Object.freeze([
+  'authorization',
+  'initial_pr_state',
+  'initial_branch_protection',
+  'initial_review_threads',
+  'initial_lineage',
+  'current_head_with_main',
+]);
+
+const DRY_RUN_FINAL_CHECKS = Object.freeze([
+  ...DRY_RUN_INITIAL_CHECKS,
+  'validate_platform',
+  'main_stability',
+  'head_stability',
+  'final_pr_state',
+  'final_review_threads',
+  'final_branch_protection',
+  'final_lineage',
+  'readiness_in_memory',
+  'premerge_main_stability',
+  'premerge_head_stability',
+  'premerge_main_ancestry',
+]);
+
+function dryRunOperationReport({
+  outcome,
+  checksEvaluated,
+  wouldUpdateBranch = false,
+  refreshedHeadChecks = 'not_applicable',
+  reasons = [],
+}) {
+  return {
+    mode: 'pre_merge_validation',
+    outcome,
+    checks_evaluated: [...checksEvaluated],
+    would_update_branch: wouldUpdateBranch === true,
+    status_publication: 'not_executed',
+    comment_publication: 'not_executed',
+    readiness_publication: 'not_executed',
+    branch_update: 'not_executed',
+    retry_polling: 'not_executed',
+    ci_dispatch: 'not_executed',
+    merge_invocation: 'not_executed',
+    merge_observation: 'not_executed',
+    containment: 'not_executed',
+    post_merge_ci: 'not_executed',
+    refreshed_head_checks: refreshedHeadChecks,
+    reasons: [...reasons],
+  };
+}
+
+function dryRunMovementResult(phase, details, checksEvaluated) {
+  return {
+    ok: false,
+    phase,
+    retry_required: false,
+    retry_recommended: true,
+    ...details,
+    dry_run: dryRunOperationReport({
+      outcome: 'coordinates_moved',
+      checksEvaluated,
+      reasons: ['observed_head_or_main_changed_during_dry_run'],
+    }),
+  };
+}
+
+function dryRunGateResult(phase, details, checksEvaluated, reason) {
+  return {
+    ok: false,
+    phase,
+    retry_required: false,
+    retry_recommended: true,
+    ...details,
+    dry_run: dryRunOperationReport({
+      outcome: 'gate_not_ready',
+      checksEvaluated,
+      reasons: [reason],
+    }),
+  };
+}
+
 function integrate(options) {
   const repo = options.repo || DEFAULT_REPO;
   const prNumber = Number(options.prNumber);
   if (!Number.isInteger(prNumber) || prNumber < 1) throw new Error('--pr must be a positive integer');
   const deps = integrationDeps(options);
+  const setIntegrationStatus = (...args) => {
+    if (options.dryRun === true) {
+      return { dry_run: true, status_publication: 'not_executed' };
+    }
+    return deps.setCommitStatus(...args);
+  };
   const deltaReview = options.deltaReview || readJsonIfPresent(options.deltaReviewPath);
   const integrationLeadReview =
     options.integrationLeadReview || readIntegrationLeadReviewIfPresent(options.integrationLeadReviewPath);
@@ -1043,7 +1130,7 @@ function integrate(options) {
 
   let pr = deps.fetchPr(repo, prNumber);
   if (pr.headRefOid) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'pending', 'Authorized integration lane running', pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'pending', 'Authorized integration lane running', pr.url, options);
   }
   const mainSha = deps.fetchMainSha(repo);
   const branchProtection = deps.fetchBranchProtectionSummary(repo, {
@@ -1062,12 +1149,12 @@ function integrate(options) {
     );
   }
   if (!branchProtection.ok) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${branchProtection.failures.join(', ')}`, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${branchProtection.failures.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'branch_protection', branch_protection: branchProtection };
   }
   const retiredActivationFailure = retiredActivatedModeFailure(branchProtection);
   if (retiredActivationFailure) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', retiredActivationFailure, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', retiredActivationFailure, pr.url, options);
     return {
       ok: false,
       phase: 'retired_activated_mode',
@@ -1082,7 +1169,7 @@ function integrate(options) {
     preflightFailures.push('review_threads_or_requested_changes_not_clean');
   }
   if (preflightFailures.length > 0) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Preflight failed: ${preflightFailures.join(', ')}`, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', `Preflight failed: ${preflightFailures.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'preflight', failures: preflightFailures, pr };
   }
 
@@ -1092,14 +1179,14 @@ function integrate(options) {
     deterministicRefreshVerified: options.deterministicRefreshVerified,
   });
   if (!initialPolicy.ok) {
-    deps.setCommitStatus(repo, pr.headRefOid, initialPolicy.status_state, initialPolicy.status_description, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, initialPolicy.status_state, initialPolicy.status_description, pr.url, options);
     return { ok: false, phase: initialPolicy.phase, lineage: initialLineage, policy: initialPolicy };
   }
   const initialIntegrationLeadReviewPolicy = deps.enforceIntegrationLeadReviewPolicy(integrationLeadReview, initialLineage, {
     deterministicRefreshVerified: options.deterministicRefreshVerified,
   });
   if (!initialIntegrationLeadReviewPolicy.ok) {
-    deps.setCommitStatus(
+    setIntegrationStatus(
       repo,
       pr.headRefOid,
       initialIntegrationLeadReviewPolicy.status_state,
@@ -1117,6 +1204,51 @@ function integrate(options) {
 
   const currentWithMain = deps.isHeadCurrentWithMain(repo, mainSha, pr.headRefOid);
   if (!currentWithMain.ok) {
+    if (options.dryRun === true) {
+      const observedMainSha = deps.fetchMainSha(repo);
+      const observedPr = deps.fetchPr(repo, prNumber);
+      const checksEvaluated = [...DRY_RUN_INITIAL_CHECKS, 'would_update_branch_coordinate_stability'];
+      if (observedMainSha !== mainSha) {
+        return dryRunMovementResult('main_moved_retry', {
+          previous_main_sha: mainSha,
+          current_main_sha: observedMainSha,
+          previous_head_sha: pr.headRefOid,
+          current_head_sha: observedPr.headRefOid,
+        }, checksEvaluated);
+      }
+      if (observedPr.headRefOid !== pr.headRefOid) {
+        return dryRunMovementResult('head_moved_retry', {
+          previous_head_sha: pr.headRefOid,
+          current_head_sha: observedPr.headRefOid,
+          main_sha: observedMainSha,
+        }, checksEvaluated);
+      }
+      return {
+        ok: true,
+        phase: 'validated_dry_run',
+        retry_required: false,
+        pr: observedPr,
+        main_sha: observedMainSha,
+        lineage: initialLineage,
+        main_compare: currentWithMain.compare,
+        would_update: {
+          expected_head_sha: observedPr.headRefOid,
+          main_sha: observedMainSha,
+          compare: currentWithMain.compare,
+        },
+        dry_run: dryRunOperationReport({
+          outcome: 'would_update_branch',
+          checksEvaluated,
+          wouldUpdateBranch: true,
+          refreshedHeadChecks: 'not_executed_requires_branch_update',
+          reasons: [
+            'exact_refreshed_head_ci_requires_trusted_branch_update',
+            'exact_refreshed_head_readiness_requires_trusted_branch_update',
+            'final_premerge_validation_requires_trusted_branch_update',
+          ],
+        }),
+      };
+    }
     const updateResult = deps.updateBranch(repo, prNumber, pr.headRefOid, options) || {};
     const pendingHeadSha =
       updateResult.head_sha ||
@@ -1146,16 +1278,37 @@ function integrate(options) {
 
   const ciFailures = deps.validatePrState(pr).filter((failure) => failure === 'validate_platform_missing_or_not_successful');
   if (ciFailures.length > 0) {
+    if (options.dryRun === true) {
+      return dryRunGateResult(
+        'awaiting_validate_platform',
+        { pr, failures: ciFailures },
+        [...DRY_RUN_INITIAL_CHECKS, 'validate_platform'],
+        'validate_platform_missing_or_not_successful'
+      );
+    }
     return { ok: true, phase: 'awaiting_validate_platform', retry_required: true, pr };
   }
 
   const finalMainSha = deps.fetchMainSha(repo);
   if (finalMainSha !== mainSha) {
+    if (options.dryRun === true) {
+      return dryRunMovementResult('main_moved_retry', {
+        previous_main_sha: mainSha,
+        current_main_sha: finalMainSha,
+      }, [...DRY_RUN_INITIAL_CHECKS, 'validate_platform', 'main_stability']);
+    }
     return { ok: true, phase: 'main_moved_retry', retry_required: true, previous_main_sha: mainSha, current_main_sha: finalMainSha };
   }
 
   pr = deps.fetchPr(repo, prNumber);
   if (pr.headRefOid !== initialLineage.integration_head_sha) {
+    if (options.dryRun === true) {
+      return dryRunMovementResult('head_moved_retry', {
+        previous_head_sha: initialLineage.integration_head_sha,
+        current_head_sha: pr.headRefOid,
+        main_sha: finalMainSha,
+      }, [...DRY_RUN_INITIAL_CHECKS, 'validate_platform', 'main_stability', 'head_stability']);
+    }
     return {
       ok: true,
       phase: 'head_moved_retry',
@@ -1170,7 +1323,7 @@ function integrate(options) {
     finalPreflight.push('review_threads_or_requested_changes_not_clean');
   }
   if (finalPreflight.length > 0) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Final preflight failed: ${finalPreflight.join(', ')}`, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', `Final preflight failed: ${finalPreflight.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'final_preflight', failures: finalPreflight, pr };
   }
   const finalBranchProtection = deps.fetchBranchProtectionSummary(repo, {
@@ -1189,12 +1342,12 @@ function integrate(options) {
     );
   }
   if (!finalBranchProtection.ok) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${finalBranchProtection.failures.join(', ')}`, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', `Branch protection mismatch: ${finalBranchProtection.failures.join(', ')}`, pr.url, options);
     return { ok: false, phase: 'final_branch_protection', branch_protection: finalBranchProtection };
   }
   const finalRetiredActivationFailure = retiredActivatedModeFailure(finalBranchProtection);
   if (finalRetiredActivationFailure) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', finalRetiredActivationFailure, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', finalRetiredActivationFailure, pr.url, options);
     return {
       ok: false,
       phase: 'retired_activated_mode',
@@ -1208,14 +1361,14 @@ function integrate(options) {
     deterministicRefreshVerified: options.deterministicRefreshVerified,
   });
   if (!finalPolicy.ok) {
-    deps.setCommitStatus(repo, pr.headRefOid, finalPolicy.status_state, finalPolicy.status_description, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, finalPolicy.status_state, finalPolicy.status_description, pr.url, options);
     return { ok: false, phase: finalPolicy.phase, lineage: finalLineage, policy: finalPolicy };
   }
   const finalIntegrationLeadReviewPolicy = deps.enforceIntegrationLeadReviewPolicy(integrationLeadReview, finalLineage, {
     deterministicRefreshVerified: options.deterministicRefreshVerified,
   });
   if (!finalIntegrationLeadReviewPolicy.ok) {
-    deps.setCommitStatus(
+    setIntegrationStatus(
       repo,
       pr.headRefOid,
       finalIntegrationLeadReviewPolicy.status_state,
@@ -1239,12 +1392,18 @@ function integrate(options) {
     payloadReadinessDecision: options.payloadReadinessDecision,
   });
   if (!readiness.ok) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Readiness not ready: ${readiness.phase}`, pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', `Readiness not ready: ${readiness.phase}`, pr.url, options);
     return { ok: false, phase: 'readiness', readiness };
   }
 
   const preMergeMainSha = deps.fetchMainSha(repo);
   if (preMergeMainSha !== finalMainSha) {
+    if (options.dryRun === true) {
+      return dryRunMovementResult('main_moved_before_merge_retry', {
+        previous_main_sha: finalMainSha,
+        current_main_sha: preMergeMainSha,
+      }, [...DRY_RUN_FINAL_CHECKS].filter((check) => check !== 'premerge_head_stability' && check !== 'premerge_main_ancestry'));
+    }
     return {
       ok: true,
       phase: 'main_moved_before_merge_retry',
@@ -1255,6 +1414,13 @@ function integrate(options) {
   }
   const preMergePr = deps.fetchPr(repo, prNumber);
   if (preMergePr.headRefOid !== pr.headRefOid) {
+    if (options.dryRun === true) {
+      return dryRunMovementResult('head_moved_before_merge_retry', {
+        previous_head_sha: pr.headRefOid,
+        current_head_sha: preMergePr.headRefOid,
+        main_sha: preMergeMainSha,
+      }, [...DRY_RUN_FINAL_CHECKS].filter((check) => check !== 'premerge_main_ancestry'));
+    }
     return {
       ok: true,
       phase: 'head_moved_before_merge_retry',
@@ -1265,6 +1431,13 @@ function integrate(options) {
   }
   const preMergeCurrent = deps.isHeadCurrentWithMain(repo, preMergeMainSha, preMergePr.headRefOid);
   if (!preMergeCurrent.ok) {
+    if (options.dryRun === true) {
+      return dryRunMovementResult('main_not_ancestor_before_merge_retry', {
+        main_sha: preMergeMainSha,
+        head_sha: preMergePr.headRefOid,
+        main_compare: preMergeCurrent.compare,
+      }, DRY_RUN_FINAL_CHECKS);
+    }
     return {
       ok: true,
       phase: 'main_not_ancestor_before_merge_retry',
@@ -1273,12 +1446,35 @@ function integrate(options) {
     };
   }
 
+  if (options.dryRun === true) {
+    return {
+      ok: true,
+      phase: 'validated_dry_run',
+      retry_required: false,
+      pr: preMergePr,
+      main_sha: preMergeMainSha,
+      lineage: finalLineage,
+      readiness,
+      payload_integration_state: payloadIntegrationStateForResult(
+        repo,
+        prNumber,
+        preMergePr,
+        authorization,
+        finalLineage
+      ),
+      dry_run: dryRunOperationReport({
+        outcome: 'ready_to_merge',
+        checksEvaluated: DRY_RUN_FINAL_CHECKS,
+      }),
+    };
+  }
+
   const activatedMerge = finalBranchProtection.integration_authorized_required === true;
   let repositoryMergeSettings = null;
-  if (activatedMerge && !options.noMerge && !options.dryRun) {
+  if (activatedMerge && !options.noMerge) {
     repositoryMergeSettings = deps.fetchRepositoryMergeSettings(repo);
     if (repositoryMergeSettings.allow_auto_merge !== true) {
-      deps.setCommitStatus(
+      setIntegrationStatus(
         repo,
         pr.headRefOid,
         'failure',
@@ -1296,7 +1492,7 @@ function integrate(options) {
 
   if (options.noMerge) {
     if (!activatedMerge) {
-      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
+      setIntegrationStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
     }
     return {
       ok: true,
@@ -1313,15 +1509,12 @@ function integrate(options) {
   let autoMergeState = null;
   if (activatedMerge) {
     if (options.dryRun) {
-      merge = { dry_run: true, auto_merge: true, head_sha: pr.headRefOid };
-      autoMergeState = verifyAutoMergeEnabled(repo, prNumber, pr.headRefOid, deps, options);
-      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
-      mergedPr = { state: 'MERGED', mergeCommit: { oid: pr.headRefOid }, headRefOid: pr.headRefOid };
+      throw new Error('dry_run_reached_live_merge_stage');
     } else {
       try {
         merge = deps.scheduleAutoMergePr(repo, prNumber, pr.headRefOid, options);
       } catch (error) {
-        deps.setCommitStatus(repo, pr.headRefOid, 'pending', 'Auto-merge scheduling rejected; integration lane will retry if safe', pr.url, options);
+        setIntegrationStatus(repo, pr.headRefOid, 'pending', 'Auto-merge scheduling rejected; integration lane will retry if safe', pr.url, options);
         const nowMainSha = deps.fetchMainSha(repo);
         if (nowMainSha !== preMergeMainSha) {
           return {
@@ -1344,7 +1537,7 @@ function integrate(options) {
             error: error.message,
           };
         }
-        deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Auto-merge scheduling rejected: ${error.message}`, pr.url, options);
+        setIntegrationStatus(repo, pr.headRefOid, 'failure', `Auto-merge scheduling rejected: ${error.message}`, pr.url, options);
         return { ok: false, phase: 'auto_merge_schedule', error: error.message };
       }
       autoMergeState = verifyAutoMergeEnabled(repo, prNumber, pr.headRefOid, deps, options);
@@ -1353,7 +1546,7 @@ function integrate(options) {
         const disableAutoMerge = autoMergeState.failure === 'auto_merge_head_changed'
           ? deps.disableAutoMergePr(repo, prNumber, options)
           : null;
-        deps.setCommitStatus(
+        setIntegrationStatus(
           repo,
           pr.headRefOid,
           'failure',
@@ -1382,12 +1575,12 @@ function integrate(options) {
           auto_merge_diagnostics: diagnostics,
         };
       }
-      deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
+      setIntegrationStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
       const observed = deps.waitForPrMerge(repo, prNumber, pr.headRefOid, options);
       if (!observed.ok) {
         const diagnostics = collectAutoMergeDiagnostics(repo, prNumber, pr.headRefOid, deps, options);
         const disableAutoMerge = deps.disableAutoMergePr(repo, prNumber, options);
-        deps.setCommitStatus(
+        setIntegrationStatus(
           repo,
           pr.headRefOid,
           'failure',
@@ -1422,11 +1615,11 @@ function integrate(options) {
       mergedPr = observed.pr;
     }
   } else {
-    deps.setCommitStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'success', 'Payload authorization inherited; integration head validated', pr.url, options);
     try {
       merge = deps.mergePr(repo, prNumber, pr.headRefOid, options);
     } catch (error) {
-      deps.setCommitStatus(repo, pr.headRefOid, 'pending', 'Merge rejected; integration lane will retry if safe', pr.url, options);
+      setIntegrationStatus(repo, pr.headRefOid, 'pending', 'Merge rejected; integration lane will retry if safe', pr.url, options);
       const nowMainSha = deps.fetchMainSha(repo);
       if (nowMainSha !== preMergeMainSha) {
         return {
@@ -1438,13 +1631,13 @@ function integrate(options) {
           error: error.message,
         };
       }
-      deps.setCommitStatus(repo, pr.headRefOid, 'failure', `Merge rejected: ${error.message}`, pr.url, options);
+      setIntegrationStatus(repo, pr.headRefOid, 'failure', `Merge rejected: ${error.message}`, pr.url, options);
       return { ok: false, phase: 'merge', error: error.message };
     }
-    mergedPr = options.dryRun ? { state: 'MERGED', mergeCommit: { oid: pr.headRefOid } } : deps.fetchMergedPr(repo, prNumber);
+    mergedPr = deps.fetchMergedPr(repo, prNumber);
   }
   if (mergedPr.state !== 'MERGED' || !mergedPr.mergeCommit || !mergedPr.mergeCommit.oid) {
-    deps.setCommitStatus(repo, pr.headRefOid, 'failure', 'Merge commit was not observable after merge', pr.url, options);
+    setIntegrationStatus(repo, pr.headRefOid, 'failure', 'Merge commit was not observable after merge', pr.url, options);
     return { ok: false, phase: 'merge_verification', merge, merged_pr: mergedPr };
   }
   const mergeSha = mergedPr.mergeCommit.oid;
@@ -1488,6 +1681,17 @@ function runIntegrationAttempts(options) {
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     result = integrate(options);
     result.attempt = attempt;
+    if (options.dryRun === true && result.retry_required) {
+      result.ok = false;
+      result.retry_required = false;
+      result.retry_recommended = true;
+      result.failures = [...(result.failures || []), 'dry_run_retry_polling_prohibited'];
+      result.dry_run = result.dry_run || dryRunOperationReport({
+        outcome: 'retry_suppressed',
+        checksEvaluated: [],
+        reasons: ['dry_run_retry_polling_prohibited'],
+      });
+    }
     if (!result.ok || !result.retry_required) break;
     if (attempt < maxAttempts) sleep(pollSeconds * 1000);
   }
