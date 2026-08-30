@@ -57,6 +57,36 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('reports/review-gates/PR200/packet.pdf').category).toBe('unknown');
   });
 
+  test('classifies only the canonical internal-dashboard outputs as shared platform', () => {
+    const canonicalPaths = [
+      'reports/internal-dashboard/index.html',
+      'reports/internal-dashboard/dashboard-data.json',
+    ];
+
+    expect(canonicalPaths.map((filePath) => classifyPath(filePath).category)).toEqual([
+      'shared_platform',
+      'shared_platform',
+    ]);
+    expect(checkLaneScope({
+      lane: 'shared',
+      changedPaths: [
+        'build-scripts/workflows/check-paragraph-lane-scope.js',
+        ...canonicalPaths,
+      ],
+    })).toMatchObject({ ok: true, failures: [] });
+
+    expect(classifyPath('reports/other-dashboard/index.html').category).toBe('partB_companion');
+    expect(classifyPath('reports/internal-dashboard/other.json').category).toBe('unknown');
+    expect(checkLaneScope({
+      lane: 'shared',
+      changedPaths: [
+        'build-scripts/workflows/check-paragraph-lane-scope.js',
+        'reports/other-dashboard/index.html',
+        'reports/internal-dashboard/other.json',
+      ],
+    }).ok).toBe(false);
+  });
+
   test('accepts wider-route short-check and exit-ticket outputs in the companion lane', () => {
     const changedPaths = [
       'Boek 1/1.1/1.1.1 Test/1.1.1 Test \u2013 korte-check.html',

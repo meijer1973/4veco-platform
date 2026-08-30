@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SINGLE-PR-DRY-RUN-REPAIR-1",
+  "name": "Canonical Single-PR Dry Run",
+  "created": "2026-08-30",
+  "plan": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md",
+  "baseline": "reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md",
+  "human_review_required": true,
+  "gate_id": "GATE-SINGLE-PR-DRY-RUN-REPAIR-1",
+  "review_packet": "reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.json",
+  "valid_gate_statuses": [
+    "READY_FOR_HUMAN_REVIEW",
+    "REVISE",
+    "REJECT"
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Make plain single-PR --dry-run the canonical non-mutating pre-merge validation path.",
+    "Return validated_dry_run with explicit not-executed merge and post-merge phases.",
+    "Report behind heads as would-update without mutating or retrying.",
+    "Prove mutation absence, flag equivalence, movement safety, and unchanged live behavior.",
+    "Classify only the two canonical internal-dashboard closure outputs as shared platform paths.",
+    "Pin and scan only the five raw-byte-hashed Y1 renewal text artifacts as LF without changing the sealed Y1 payload."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md",
+    "npm.cmd test -- --runInBand build-scripts/review-gates/integrate-authorized-pr.test.js",
+    "npm.cmd test -- --runInBand build-scripts/ci/check-evidence-line-endings.test.js build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js",
+    "npm.cmd run check:integration-lane",
+    "npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js",
+    "npm.cmd run check:branch-protection",
+    "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
+    "npm.cmd run check:platform",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js SINGLE-PR-DRY-RUN-REPAIR-1",
+    "node build-scripts/sprints/check-sprint-bundle.js SINGLE-PR-DRY-RUN-REPAIR-1 --complete",
+    "npm.cmd run finalization:freshness",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No workflow-definition or coordinated-bundle-runner change.",
+    "No Lesson repository or generated lesson-output change.",
+    "No product, engine, source-data, rendered-output, or Y1 evidence change.",
+    "No protected machine or external reference change.",
+    "No branch-protection, authorization-model, authority, merge, or administrative-bypass change."
+  ]
+}
