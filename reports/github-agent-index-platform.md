@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-29T15:07:19.278Z
+Generated: 2026-08-30T10:54:43.625Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/bundle-lane-ci-reliability-20260829`
-Source commit: `0357701620f35fa4c956f1aea42a7d0f1af17188`
-Files indexed: 7453
+Source branch: `codex/single-pr-dry-run-repair-20260830`
+Source commit: `f1d4c55302b268815bf84dd40ea891e16324cc5a`
+Files indexed: 7470
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1577,7 +1577,7 @@ Count: 686
 
 ## references
 
-Count: 1008
+Count: 1010
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -2289,6 +2289,8 @@ Count: 1008
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2.plan.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3.plan.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4.plan.json
+- references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.plan.json
+- references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.result.json
 - references/data/sprints/SKILLMAP-OP-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.plan.json
@@ -2590,7 +2592,7 @@ Count: 1008
 
 ## reports
 
-Count: 4771
+Count: 4786
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4652,6 +4654,9 @@ Count: 4771
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-direct-review-comments.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/bundle-urls.md
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.json
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/closure-proposal.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.json
@@ -6889,6 +6894,18 @@ Count: 4771
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - reports/sprints/SINGLE-ACCOUNT-REVIEW-GOVERNANCE-1-lead-review-round1.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-planning-review.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
