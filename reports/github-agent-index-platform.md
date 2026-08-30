@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-30T10:54:43.625Z
+Generated: 2026-08-30T11:41:01.538Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/single-pr-dry-run-repair-20260830`
-Source commit: `f1d4c55302b268815bf84dd40ea891e16324cc5a`
-Files indexed: 7470
+Source commit: `7eb906e37422215a298a4f6f9ba263f32865de5b`
+Files indexed: 7471
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2592,7 +2592,7 @@ Count: 1010
 
 ## reports
 
-Count: 4786
+Count: 4787
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6899,6 +6899,7 @@ Count: 4786
 - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.md
 - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md
 - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-ci-portability-renewal.md
 - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md
 - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md
 - reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md
