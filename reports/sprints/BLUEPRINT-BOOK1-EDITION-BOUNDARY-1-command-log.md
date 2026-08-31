@@ -517,3 +517,105 @@ OK evidence line endings: scanned 95 text file(s), skipped 0, CRLF 0
 ```text
 
 ```
+## npm.cmd run check:agent-index-freshness
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:01:38.568Z`
+- finished_at: `2026-08-31T13:01:39.232Z`
+- duration_ms: `664`
+- exit_code: `0`
+- stdout_sha256: `c4da1de9ff5f1fec9a1b7fcded7cdad9c6ee4c8750fe103ec38dc7598a072cf0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-index-freshness
+> node build-scripts/reports/check-agent-index-freshness.js
+
+{
+  "ok": true,
+  "checks": [
+    {
+      "label": "4veco-platform",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "f1cf0aad07a122b9316f800c31443aacf999609d",
+      "head": "f1cf0aad07a122b9316f800c31443aacf999609d",
+      "source_ref": "HEAD",
+      "target_commit": "f1cf0aad07a122b9316f800c31443aacf999609d",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    },
+    {
+      "label": "4veco-lessen",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "source_ref": "origin/main",
+      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    }
+  ],
+  "failures": [],
+  "warnings": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:01:39.319Z`
+- finished_at: `2026-08-31T13:01:39.417Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `6b4ec0d49187c4f9f6203a9f90c2d597424dc662a6789443ed738fbf2d76ca2e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 (18 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:01:39.473Z`
+- finished_at: `2026-08-31T13:01:39.572Z`
+- duration_ms: `99`
+- exit_code: `0`
+- stdout_sha256: `d237786dd8121d08fe499befdfeb2fd764dc1778a52e7ea1b3e34c77e974742d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
