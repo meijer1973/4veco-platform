@@ -1,23 +1,43 @@
 {
   "schema_version": 1,
   "sprint_id": "PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1",
-  "name": "Book 2 Part A Exercise Authoring Contract",
+  "name": "Book 2+ Part A Paper-Only Exercise Authoring Contract",
   "status": "completed",
-  "completed_on": "2026-08-29",
-  "verdict": "IMPLEMENTATION_COMPLETE_PENDING_EXACT_HEAD_CI_AND_HUMAN_REVIEW",
+  "completed_on": "2026-08-31",
+  "verdict": "IMPLEMENTATION_COMPLETE_EVIDENCE_CORRECTED_FOR_BOUNDED_LEAD_RECHECK",
   "plan": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md",
   "baseline": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-baseline.md",
   "result": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md",
   "diff_summary": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-diff-summary.md",
-  "reviewed_implementation_sha": "79edd64a106dda0658f0e46fc9cdf64c9f7a254c",
-  "reviewed_index_tail_sha": "ae5a72edbc57933bc3100c4b1a3bd1d7cfcb29a7",
-  "ci_portability_repair": {
-    "initial_failed_run_id": 33264096124,
-    "initial_failed_head_sha": "c1b5c3bb8a295b7207082aa927e630c0dadbea44",
-    "failure_stage": "Validate platform Jest suite",
-    "cause": "CRLF checkout made LF-only mutation search setup fail before the checker assertion",
-    "repair": "Normalize CRLF and lone-CR source text to LF before structural analysis and test the normalization directly",
-    "replacement_exact_head_ci_required": true
+  "current_main_sha": "bb212502d2074c9936da30b8d6e6914ba6319dfe",
+  "current_main_integration_merge_sha": "84bfd7eb1f572fb8028bde73aa08f34904c597c1",
+  "revised_substantive_payload_sha": "f7e171b81560b35f1f2cf03728da20c616d77d46",
+  "teacher_fix_payload_sha": "fc98ffe20354fb285eba636709ea2529e2e4c076",
+  "reviewed_published_head_sha": "198189b77fb254024950e5825c9fea705069f901",
+  "exact_head_ci": {
+    "run_id": 33369460856,
+    "url": "https://github.com/meijer1973/4veco-platform/actions/runs/33369460856",
+    "head_sha": "198189b77fb254024950e5825c9fea705069f901",
+    "conclusion": "SUCCESS"
+  },
+  "contract": {
+    "paper_only": true,
+    "device_dependency_allowed": false,
+    "student_facing_internal_architecture_terms_allowed": false,
+    "canonical_top_level_heading_count": 7,
+    "summary_is_heading": false,
+    "summary_max_points": 5,
+    "summary_position": "after_worked_example_before_startopgaven",
+    "active_platform_surfaces_checked": 10,
+    "owner_required_negative_mutations": "13/13",
+    "positive_plus_contradiction_probes": "2/2"
+  },
+  "validation": {
+    "focused_tests": "49/49 passed",
+    "full_local_platform": "106 suites and 1606 tests passed; 6 suites and 8 tests skipped",
+    "teacher_review": "12/12 PASS",
+    "lesson_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "lesson_worktree_clean": true
   },
   "protected_reference_data_changed": false,
   "generated_lesson_output_changed": false,
@@ -41,93 +61,61 @@
     "round1_verdict": "REVISE",
     "round2_recheck1_verdict": "REVISE",
     "final_verdict": "PASS",
+    "renewed_review": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-revision.md",
+    "renewed_review_verdict": "REVISE",
+    "renewed_review_scope": "final_evidence_and_readiness_metadata_only",
+    "renewed_reviewed_head_sha": "198189b77fb254024950e5825c9fea705069f901",
+    "resolution": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-revision-resolution.md",
+    "implementation_source_accepted": true,
+    "open_findings_for_recheck": [
+      "LREV-R4",
+      "LREV-R5"
+    ],
+    "historical_reviews_preserved": true,
     "findings": [
       {
         "id": "LR-1",
-        "description": "The source checker now rejects structural drift in the real operational template and every active surface that repeats the sequence.",
+        "description": "The source checker rejects structural drift in the real operational template and every active surface that repeats the sequence.",
         "classification": "core_requirement_met",
-        "evidence": "Structural parsing, 19 focused contract tests, 41 combined focused tests, and independent negative probes.",
-        "blocks": "Nothing; the original core-spec failure is closed.",
-        "does_not_block": "Draft-PR publication and human-review routing.",
-        "proof_required_to_close": "Closed by commit 79edd64a and final lead reinspection."
+        "evidence": "Structural parsing, focused contract tests, and independent negative probes.",
+        "blocks": "Nothing; the original structural-contract failure is closed.",
+        "does_not_block": "Human-review routing after renewed evidence closure.",
+        "proof_required_to_close": "Closed by the corrected checker and preserved final historical lead PASS."
       },
       {
         "id": "LR-2",
-        "description": "The generated indexes include the checker and test and are current through an accepted deterministic index-only tail.",
+        "description": "Generated indexes include the checker and tests through an accepted deterministic evidence tail.",
         "classification": "core_requirement_met",
-        "evidence": "Freshness PASS at ae5a72ed with source parent 7221b3eb and unchanged lesson source f09fd6e.",
-        "blocks": "Nothing; the publication/index blocker is closed.",
-        "does_not_block": "Draft-PR publication and exact-head CI.",
-        "proof_required_to_close": "Closed by the four-file tail topology and final lead reinspection."
+        "evidence": "Agent-index freshness and exact-head CI pass.",
+        "blocks": "Nothing; the index publication blocker is closed.",
+        "does_not_block": "Human-review routing after renewed evidence closure.",
+        "proof_required_to_close": "Closed by deterministic index-tail topology and historical lead reinspection."
       },
       {
         "id": "TLQ-1-5",
         "description": "Whole-lesson timing, review severity, target-conditional representation, operational detail, and lesson cleanliness are resolved.",
         "classification": "core_requirement_met",
-        "evidence": "Independent teacher-learning-quality recheck PASS at 14/14.",
-        "blocks": "Nothing; all teacher hard findings are closed.",
-        "does_not_block": "Contract integration after the separate human gate.",
+        "evidence": "Renewed teacher-learning-quality recheck PASS at 12/12 and 49/49 focused tests.",
+        "blocks": "Nothing; all teacher findings are closed.",
+        "does_not_block": "Human-review routing after renewed evidence closure.",
         "proof_required_to_close": "Closed by the teacher recheck and focused/full validation."
       }
     ],
     "flags": []
   },
   "acceptance_tests": [
-    {
-      "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-paragraph-lane-scope.test.js build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js",
-      "status": "passed"
-    },
-    {
-      "command": "npm.cmd run check:part-a-exercise-authoring-contract",
-      "status": "passed"
-    },
-    {
-      "command": "npm.cmd run check:paragraph-workflow-wording",
-      "status": "passed"
-    },
-    {
-      "command": "npm.cmd run check:exercise-workflow-currentness",
-      "status": "passed"
-    },
-    {
-      "command": "npm.cmd run check:scope-language",
-      "status": "passed"
-    },
-    {
-      "command": "npm.cmd run check:active-governance-wording",
-      "status": "passed"
-    },
-    {
-      "command": "npm.cmd run check:platform",
-      "status": "passed"
-    },
-    {
-      "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
-      "status": "passed"
-    },
-    {
-      "command": "node -e \"const{execFileSync}=require('child_process');x=execFileSync('git',['-C','../4veco-lessen','status','--porcelain'],{encoding:'utf8'});if(x.trim()){console.error(x);process.exit(1)}\"",
-      "status": "passed"
-    },
-    {
-      "command": "node build-scripts/reports/validate-report-json.js",
-      "status": "passed"
-    },
-    {
-      "command": "node build-scripts/references/check-roadmap-version-index.js",
-      "status": "passed"
-    },
-    {
-      "command": "node build-scripts/sprints/emit-url-index.js --check",
-      "status": "passed"
-    },
-    {
-      "command": "node build-scripts/ci/check-evidence-line-endings.js",
-      "status": "passed"
-    },
-    {
-      "command": "git diff --check",
-      "status": "passed"
-    }
+    { "command": "npm.cmd run check:part-a-exercise-authoring-contract", "status": "passed" },
+    { "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js", "status": "passed" },
+    { "command": "npm.cmd run check:platform", "status": "passed" },
+    { "command": "npm.cmd run check:paragraph-workflow-wording", "status": "passed" },
+    { "command": "npm.cmd run check:exercise-workflow-currentness", "status": "passed" },
+    { "command": "npm.cmd run check:scope-language", "status": "passed" },
+    { "command": "npm.cmd run check:active-governance-wording", "status": "passed" },
+    { "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD", "status": "passed" },
+    { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" },
+    { "command": "node build-scripts/references/check-roadmap-version-index.js", "status": "passed" },
+    { "command": "node build-scripts/sprints/emit-url-index.js --check", "status": "passed" },
+    { "command": "node build-scripts/ci/check-evidence-line-endings.js", "status": "passed" },
+    { "command": "git diff --check", "status": "passed" }
   ]
 }

@@ -1,10 +1,11 @@
 # Sprint PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1: Result
 
-Generated: 2026-08-29
+Generated: 2026-08-31
 
-Status: implementation complete and independently reviewed; draft-PR
-publication, exact-head CI, and readiness routing remain before the human
-review handoff.
+Status: implementation and correction evidence complete; the renewed lead
+review accepted the implementation and limited its `REVISE` finding to stale
+final evidence. That evidence has now been synchronized for the bounded lead
+recheck and exact-head human-review handoff.
 
 ## Plan reference
 
@@ -12,74 +13,88 @@ Plan: `reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md`
 
 ## Summary
 
-The platform now defines one non-retroactive Book 2+ authoring contract for
-Part A textbook exercises. It fixes the printed top-level sequence at seven
-contiguous sections, preserves theory → worked example → Startopgaven
-adjacency, keeps website help subordinate to Startopgaven, and places the
-compact summary after section 7.
+The platform now defines one non-retroactive Book 2+ authoring contract for a
+fully printed, paper-only Part A exercise route. Every necessary explanation,
+retrieval task, scaffold, independent task, and target preparation must be in
+the printed paragraph; no website, device, companion page, Part B route, or
+other digital support may be required or advertised in student copy.
 
-The operational guidance now starts from lesson goals and target operations,
-uses the exact seven-column alignment table, requires a same-operation simpler
-worked example, combines prerequisite retrieval and a compact comprehension
-check under Startopgaven, and distinguishes optional faded support, independent
-practice, doeloefening, cognitive-flexibility bonus, and accessible cumulative
-review. The short route 2 → 4 → 5 must fit inside an actual whole 55-minute
-lesson calculation.
+The printed exercise block has exactly seven canonical `##` headings. Its
+compact summary is a non-heading block of at most five points, placed after the
+worked example and before Startopgaven. Student copy uses exactly the short
+route `Startopgaven → Zelfstandige oefening → Doeloefening` and the one-line
+printed-support direction to make Begeleide inoefening first when extra help is
+needed. Internal Part A/Part B terminology remains confined to internal
+guidance.
 
-A source checker validates 10 active platform guidance surfaces, the real
-exercise template, repeated ordered sequences, Part A/Part B boundaries,
-timing and differentiation safeguards, and non-retroactivity. Its 21 focused
-tests include negative mutations for extra/intervening headings and sequence
-reordering. No Book 2 paragraph or lesson output was produced.
+The operational contract starts from approved lesson goals and target
+operations, requires a same-operation simpler worked example, always authors
+and prints guided practice while making only student use optional, and fades
+representations without adding graph/table production absent from the target.
+The core route must fit an actual whole-lesson calculation of at most 55
+minutes. Bonus work requires cognitive flexibility, and closing review remains
+short, accessible, cumulative, and free of new theory.
+
+A CI-wired source checker validates all 10 active platform guidance surfaces,
+the exact heading hierarchy and order, route and summary placement, paper-only
+support, Part A/Part B boundaries, backward alignment, differentiation,
+timing, bonus/review roles, and Book 1 non-retroactivity. The focused suite
+contains all 13 owner-required negative scenarios plus two
+positive-plus-contradiction probes. No Book 2 paragraph or lesson output was
+produced.
 
 ## Acceptance test results
 
-- Planning review: PASS after the adjacency and executable lesson-clean proof
-  corrections.
-- Teacher-learning-quality review: PASS, 14/14, after all five findings were
-  resolved.
-- Lead review: round 1 REVISE, preserved commit-bound REVISE, then final PASS
-  after structural checker repair and a deterministic fresh-index tail.
-- Focused lane/contract suites: 43/43 passed after the CI portability repair.
-- Contract checker: PASS across 10 active platform source surfaces.
-- Shared-lane scope: PASS against the committed implementation.
-- Full platform suite: 106 suites and 1,565 tests passed; 6 suites and 8 tests
-  skipped.
-- Agent-index freshness: PASS at generated-index tail `ae5a72ed...`.
-- Detached lesson checkout: clean at `f09fd6e...`.
-- Initial remote exact-head run `33264096124` exposed CRLF-sensitive mutation
-  setup after the contract and authority checks had passed. Source text is now
-  normalized before structural analysis, with explicit CRLF/lone-CR coverage;
-  replacement exact-head CI is required.
+- Revision planning audit: `PASS` after its preserved `REVISE` and resolution.
+- Renewed teacher-learning-quality review: `PASS`, 12/12, after preserving and
+  closing TLQ-R1 and TLQ-R2; criteria 3, 5, and 7 now pass explicitly.
+- Renewed lead review: implementation accepted; its preserved `REVISE` is
+  limited to LREV-R4/LREV-R5 final-evidence and readiness metadata, with the
+  repository evidence correction recorded separately for bounded recheck.
+- Contract checker: `PASS` across 10 active platform source surfaces.
+- Focused contract/lane suites: 49/49 tests passed.
+- Full local platform suite after the teacher fixes: 106 suites and 1,606
+  tests passed; 6 suites and 8 tests skipped; exit code 0.
+- Exact-head GitHub CI run `33369460856`: `SUCCESS` at reviewed head
+  `198189b77fb254024950e5825c9fea705069f901`.
+- Current main `bb212502d2074c9936da30b8d6e6914ba6319dfe` is an ancestor of the
+  branch through integration merge `84bfd7eb1f572fb8028bde73aa08f34904c597c1`.
+- Detached lesson checkout: clean and unchanged at
+  `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 
 ## Changed files
 
-The implementation aligns the didactic authority, operational exercise
-builder, paragraph/PDF builders, reviewers, teacher-quality agent, build guide,
-and paragraph-lane workflow. It adds the focused source checker and tests,
-wires the checker into npm and platform CI, classifies deterministic dashboard
-outputs correctly for shared-lane validation, normalizes source line endings
-before structural mutation analysis, and refreshes navigation,
-indexes, dashboard data, and sprint evidence.
+The implementation aligns the didactic rationale, exercise authoring,
+paragraph/PDF builders, review guidance, teacher-quality agent, build guide,
+and paragraph-lane workflow. It adds the fail-closed Part A contract checker
+and focused mutation tests, wires the checker into platform CI, and keeps
+generated dashboard/index outputs correctly classified for shared-lane
+validation.
+
+The owner-correction closure additionally preserves the renewed planning,
+teacher, and lead review history; records each resolution/recheck separately;
+and refreshes the canonical result, diff summary, roadmap state, command log,
+navigation, dashboard, and generated indexes.
 
 ## Data integrity notes
 
 No protected reference data changed. Nothing under `references/machine/`,
-`references/external/`, lesson source/output, Book 1, source data, target
-registries, candidate storage, or PV was changed. The detached
-`4veco-lessen` checkout remained read-only and clean.
+`references/external/`, lesson source/output, Book 1, Book 2 paragraph output,
+source data, target registries, candidate storage, or PV was changed. Part B
+implementation was not redesigned. The detached `4veco-lessen` checkout
+remained read-only and clean.
 
 ## Open follow-ups
 
-1. Publish the draft PR and require exact-head `platform-ci / validate-platform`.
-2. Apply the PR Readiness Reviewer route and stop at
-   `READY_FOR_HUMAN_REVIEW` for owner review.
-3. Do not merge, alter Book 1, or begin Book 2 paragraph production without
-   later explicit authorization.
+1. Human owner review and approval remain required before any merge or adoption.
+2. A later explicitly authorized sprint must author and render any Book 2
+   paragraph; this contract does not certify an unwritten paragraph.
+3. Do not merge, alter Book 1, redesign Part B, or begin Book 2 production from
+   this task.
 
 ## Rollback instructions
 
-Before merge, close the PR and delete only this branch/worktree. After an
+Before merge, close PR #219 and delete only this branch/worktree. After an
 authorized merge, revert the commits introduced by the PR. No lesson rebuild,
 Book 1 restoration, protected-reference rollback, or source-data repair is
 required because those surfaces were not changed.
