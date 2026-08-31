@@ -1,7 +1,7 @@
 # Sprint BLUEPRINT-BOOK1-EDITION-BOUNDARY-1: Result
 
-Status: implementation and local evidence complete; exact-head remote gates pending
-Completed locally: 2026-08-31
+Status: substantive implementation complete; evidence correction in progress
+Evidence correction: 2026-08-31
 PR: https://github.com/meijer1973/4veco-platform/pull/222
 Substantive source head: `bb21d53e5abb96693e3106924d408c4596c8b15c`
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`
@@ -45,6 +45,8 @@ pass. No lesson or student-facing file changed.
 | Lesson checkout no-change proof | PASS — porcelain output empty at `f09fd6e...` |
 | Independent teacher-learning-quality review | PASS — 14/14 |
 | Lead review round 1 | PASS — no substantive blocker |
+| Lead review round 2 revision | REVISE — evidence ordering/index topology only; substantive source remains accepted |
+| Final command/result/index closure | PENDING |
 
 The command log preserves two failed first attempts: an inline Windows
 `node -e` clean-check whose argument was truncated and a full-suite start before
@@ -109,8 +111,8 @@ MTU, PV, companion, or student-facing output was written.
 
 ## Open follow-ups
 
-- Refresh and commit generated indexes/reports, then obtain final lead round-2
-  evidence on the evidence-only tail.
+- Log the missing closure validators, refresh indexes from the corrected
+  evidence head, and obtain a new canonical lead round-2 verdict.
 - Push the repaired head to PR #222, remove draft status, and obtain green CI
   for the exact final head.
 - Route the exact payload to `READY_FOR_HUMAN_REVIEW` and record owner

@@ -24,3 +24,18 @@ Round 2 must recheck that the evidence-only tail did not modify substantive
 source, that command/result/index evidence is internally consistent, that all
 round-1 scale gates remain explicit, and that the final verdict remains PASS
 before exact-head remote CI and human readiness routing.
+
+## Round-2 revision findings
+
+The first round-2 attempt returned REVISE and is preserved in
+`reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round2-revision.md`.
+It found no substantive source defect. Its evidence findings are resolved by:
+
+1. changing the result/roadmap back to in-progress while closure proof is built;
+2. logging successful command-log and result validators before claiming them;
+3. regenerating indexes from the then-current evidence head and proving
+   freshness before the final recheck;
+4. obtaining a new canonical round-2 PASS before logging lead-substance and
+   complete-bundle closure; and
+5. finishing with a generated-only index/dashboard tail after the final
+   evidence commit.
