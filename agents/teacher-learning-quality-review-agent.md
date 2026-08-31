@@ -59,6 +59,16 @@ operational source and `references/authored/didactiek-principes.md` as the
 rationale source. Book 1 output is frozen: do not retrofit it or use this mode
 as a retroactive Book 1 content check.
 
+**Pedagogical-boundary inheritance:** inspect
+`references/owned/course-blueprint-pedagogical-boundaries.md` whenever the
+paragraph relies on earlier-book exposure or previews later content. Distinguish
+`seen`, `supported`, `independently required`, and `mastered`. Hard fail any
+claim that preview alone fills a `Covered` cell, proves mastery, authorises an
+untargeted independent operation in a Part A target stage, displaces target
+practice, weakens the 55-minute route, or shortens the later formal teaching.
+The operational sequence and target-coverage rules remain in
+`skills/econ-exercise-builder.md`.
+
 Verify all of the following:
 
 - backward design is explicit through `lesson goals -> doeloefening -> target

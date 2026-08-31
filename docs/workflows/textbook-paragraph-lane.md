@@ -20,6 +20,14 @@ must be present in print; printed student copy must not advertise or depend on
 a website, device, online explanation, or companion surface and must not expose
 internal lane terminology. Book 1 output is frozen and must not be retrofitted.
 
+**Pedagogical-boundary inheritance:** use
+`references/owned/course-blueprint-pedagogical-boundaries.md` to classify
+earlier exposure as `seen`, `supported`, `independently required`, or
+`mastered`. A preview never closes a target-coverage gap, authorises an
+untargeted independent operation, displaces the approved target route, or
+relaxes the whole-lesson 55-minute proof. The exercise builder remains the
+operational sequence/coverage authority.
+
 The companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` belongs
 to Part B. It is not a printed Part A heading sequence and does not create an
 additional lane.

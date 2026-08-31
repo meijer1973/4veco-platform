@@ -9,6 +9,10 @@
   "supersedes": "owned:course-blueprint-v4",
   "origin_path": "course_blueprint_v4.md",
   "active_target_exercise_registry": "references/authored/course-target-exercises.json",
+  "normative_clarifications": [
+    "references/owned/course-blueprint-pedagogical-boundaries.md"
+  ],
+  "book_1_second_edition_backlog": "https://github.com/meijer1973/4veco-platform/issues/221",
   "paragraph_counts": {
     "1": 12,
     "2": 12,
@@ -20,6 +24,23 @@
     "status": "web_only",
     "count_bearing": false,
     "printed_chapter": false
+  },
+  "pedagogical_scope_policy": {
+    "terminal_targets_source": "reviewed target exercises and stronger authority",
+    "part_a_exercise_authoring_contract": "skills/econ-exercise-builder.md",
+    "anticipatory_scaffolding_allowed": true,
+    "preview_is_mastery": false,
+    "later_formal_treatment_still_required": true,
+    "preview_cannot_fill_target_coverage": true,
+    "preview_cannot_add_untargeted_independent_operation": true,
+    "preview_cannot_displace_target_route_or_timing": true,
+    "no_pedagogical_concession_rule": "Do not remove useful bounded explanations merely because they exceed the literal wording of the terminal target; distinguish preview, support, and independently required performance."
+  },
+  "edition_policy": {
+    "book_1_first_edition": "printed_frozen",
+    "book_1_second_edition": "backlog_allowed_for_next_year",
+    "book_2_first_edition": "active_textbook_priority",
+    "website_companion": "deferred_for_now"
   },
   "allowed_use": [
     "rag_retrieval",
@@ -33,12 +54,15 @@
     "automatic_unit_minting_from_prose",
     "overriding_reviewed_machine_references",
     "overriding_external_exam_or_syllabus_authority",
-    "treating_placeholders_as_reviewed_final"
+    "treating_placeholders_as_reviewed_final",
+    "treating_anticipatory_scaffolding_as_prerequisite_mastery"
   ],
   "authority_notes": [
-    "v5 is the active curriculum source after L1.5Q.",
-    "Target exercises are the active exercise-first source of truth.",
+    "v5 is the active detailed Year 1 curriculum source after L1.5Q.",
+    "Target exercises are the active exercise-first source of truth for independently required paragraph performance.",
+    "The pedagogical-boundaries clarification is part of the v5 interpretation contract and distinguishes terminal targets, anticipatory scaffolding, and prerequisite mastery.",
     "Blueprint prose is contextual and design-oriented; it is not sufficient by itself to mint or mutate machine units.",
-    "Placeholder records are explicit and must not be treated as reviewed final target exercises."
+    "Placeholder records are explicit and must not be treated as reviewed final target exercises.",
+    "Book 1 first edition is printed and frozen; genuine repair items are deferred to issue #221 for the second-edition cycle while Book 2 first-edition textbook production remains the active priority."
   ]
 }

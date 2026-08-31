@@ -188,6 +188,14 @@ Retrieval in Startopgaven may use only prerequisites already taught. Book 1
 output is frozen: do not retrofit it and do not use this contract as a
 retroactive Book 1 content check.
 
+**Pedagogical-boundary inheritance:** also apply
+`references/owned/course-blueprint-pedagogical-boundaries.md`. Earlier exposure
+may provide bounded explanation/context, already-taught prerequisite retrieval,
+or optional perspective, but it cannot fill a `Covered` cell, imply mastery,
+add an untargeted independent operation to a Part A target stage, displace the
+target route, or defeat the whole-lesson 55-minute equation. The operational
+sequence and target-coverage rules in this Part A contract continue to govern.
+
 ## Exam-target paragraph input contract
 
 When the target exercise is an official exam question, the paragraph plan must
