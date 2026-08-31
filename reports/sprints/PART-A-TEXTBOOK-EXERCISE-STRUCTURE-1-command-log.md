@@ -3184,3 +3184,178 @@ Time:        1.442 s, estimated 2 s
 Ran all test suites matching build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js|build-scripts/workflows/check-paragraph-lane-scope.test.js.
 
 ```
+## node build-scripts/sprints/check-lead-review-substance.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 --review-file reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round4.md
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:57:49.471Z`
+- finished_at: `2026-08-31T09:57:49.564Z`
+- duration_ms: `93`
+- exit_code: `0`
+- stdout_sha256: `292d45b3855c7a870c978cb551170f5dbc3c4b1a7241258d02a75db521c1d1ad`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:59:29.693Z`
+- finished_at: `2026-08-31T09:59:29.784Z`
+- duration_ms: `91`
+- exit_code: `0`
+- stdout_sha256: `5805121c118785ee09cf2d26576d26f40c5b9b45ddd46305cec9beaad3a7acf4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:59:29.844Z`
+- finished_at: `2026-08-31T09:59:29.922Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:59:29.977Z`
+- finished_at: `2026-08-31T09:59:30.062Z`
+- duration_ms: `85`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/ci/check-evidence-line-endings.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:59:30.124Z`
+- finished_at: `2026-08-31T09:59:30.286Z`
+- duration_ms: `162`
+- exit_code: `0`
+- stdout_sha256: `89c1b9a7be41b21444991ab40590881ee0448a2ead683a23841c7c459ce56783`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK evidence line endings: scanned 95 text file(s), skipped 0, CRLF 0
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:59:30.340Z`
+- finished_at: `2026-08-31T09:59:30.437Z`
+- duration_ms: `97`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:59:30.489Z`
+- finished_at: `2026-08-31T09:59:30.589Z`
+- duration_ms: `100`
+- exit_code: `0`
+- stdout_sha256: `3fadd89f9cd1e360e86e996ee854c80bb2ac925e02d327e33c2238892d4528e4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 (102 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 --complete
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:59:30.661Z`
+- finished_at: `2026-08-31T09:59:31.130Z`
+- duration_ms: `469`
+- exit_code: `0`
+- stdout_sha256: `1553d5e6da8c67137a8ed20e42c00868cf7755bb36e674925e9ab81982ba375c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
