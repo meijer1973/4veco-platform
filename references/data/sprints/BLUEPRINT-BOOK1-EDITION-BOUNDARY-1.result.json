@@ -2,7 +2,7 @@
   "schema_version": 1,
   "sprint_id": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
   "completed_on": "2026-08-31",
-  "status": "active",
+  "status": "completed",
   "plan": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md",
   "baseline": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-baseline.md",
   "result": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md",
@@ -56,7 +56,7 @@
     },
     {
       "command": "npm.cmd run check:agent-index-freshness",
-      "status": "skipped_with_reason"
+      "status": "passed"
     },
     {
       "command": "node build-scripts/reports/validate-report-json.js",
@@ -76,19 +76,19 @@
     },
     {
       "command": "node build-scripts/sprints/check-sprint-command-log.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
-      "status": "skipped_with_reason"
+      "status": "passed"
     },
     {
       "command": "node build-scripts/sprints/check-lead-review-substance.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
-      "status": "skipped_with_reason"
+      "status": "passed"
     },
     {
       "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md",
-      "status": "skipped_with_reason"
+      "status": "passed"
     },
     {
       "command": "node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete",
-      "status": "skipped_with_reason"
+      "status": "passed"
     }
   ],
   "lead_review": {
@@ -96,7 +96,7 @@
     "round1": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round1.md",
     "corrections": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-corrections.md",
     "round2": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round2.md",
-    "final_verdict": "REVISE",
+    "final_verdict": "PASS",
     "flags": [],
     "findings": [
       {

@@ -619,3 +619,288 @@ OK sprint result: reports\sprints\BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
 ```text
 
 ```
+## node build-scripts/sprints/check-lead-review-substance.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:11:45.728Z`
+- finished_at: `2026-08-31T13:11:45.817Z`
+- duration_ms: `89`
+- exit_code: `0`
+- stdout_sha256: `688e029f3e582b471d56e711b6d73d85db6194af6e177a3ba2379023685b6ed8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:11:45.881Z`
+- finished_at: `2026-08-31T13:11:46.169Z`
+- duration_ms: `288`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `5b5970b81de05c38b09c020305f57afde161d5df15531d1133be02c0eb2c6f43`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: reports\sprints\BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round1.md Blocking Findings must explicitly state whether blockers exist
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:12:30.745Z`
+- finished_at: `2026-08-31T13:12:30.857Z`
+- duration_ms: `112`
+- exit_code: `0`
+- stdout_sha256: `688e029f3e582b471d56e711b6d73d85db6194af6e177a3ba2379023685b6ed8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:12:30.915Z`
+- finished_at: `2026-08-31T13:12:31.190Z`
+- duration_ms: `275`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `bc3fba455e0f849eec31452fc9cea14184e236943b92ed14e4355de73138645b`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: reports\sprints\BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round2.md Consolidated Verdict must include a verdict
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:01.445Z`
+- finished_at: `2026-08-31T13:13:01.536Z`
+- duration_ms: `91`
+- exit_code: `0`
+- stdout_sha256: `688e029f3e582b471d56e711b6d73d85db6194af6e177a3ba2379023685b6ed8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:01.590Z`
+- finished_at: `2026-08-31T13:13:02.134Z`
+- duration_ms: `544`
+- exit_code: `0`
+- stdout_sha256: `ac371dd88fd23b0a8f53aca6defbcb297fd12af2ac52f796d0122ac81110322b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:34.983Z`
+- finished_at: `2026-08-31T13:13:35.071Z`
+- duration_ms: `88`
+- exit_code: `0`
+- stdout_sha256: `f3099c01afd340defe8ab1c531d38f2772af41f50148c908c8c35121c8daee25`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 (26 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:35.125Z`
+- finished_at: `2026-08-31T13:13:35.208Z`
+- duration_ms: `83`
+- exit_code: `0`
+- stdout_sha256: `d237786dd8121d08fe499befdfeb2fd764dc1778a52e7ea1b3e34c77e974742d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:35.260Z`
+- finished_at: `2026-08-31T13:13:35.827Z`
+- duration_ms: `567`
+- exit_code: `0`
+- stdout_sha256: `ac371dd88fd23b0a8f53aca6defbcb297fd12af2ac52f796d0122ac81110322b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:35.886Z`
+- finished_at: `2026-08-31T13:13:35.980Z`
+- duration_ms: `94`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:36.032Z`
+- finished_at: `2026-08-31T13:13:36.129Z`
+- duration_ms: `97`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/ci/check-evidence-line-endings.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:36.183Z`
+- finished_at: `2026-08-31T13:13:36.328Z`
+- duration_ms: `145`
+- exit_code: `0`
+- stdout_sha256: `89c1b9a7be41b21444991ab40590881ee0448a2ead683a23841c7c459ce56783`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK evidence line endings: scanned 95 text file(s), skipped 0, CRLF 0
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T13:13:36.381Z`
+- finished_at: `2026-08-31T13:13:36.499Z`
+- duration_ms: `118`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```

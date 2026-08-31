@@ -77,7 +77,7 @@ Reviewer: independent lead reviewer
 
 ## Consolidated Verdict
 
-- Verdict: **PASS**
+- Verdict: PASS
 - Reason: the repaired policy is substantively compatible with the merged Part
   A contract and closes the owner's source-level findings. Preview material is
   limited to bounded explanation/context, already-taught retrieval, or optional
@@ -112,6 +112,7 @@ Reviewer: independent lead reviewer
 
 ## Blocking Findings
 
+- No blocking source finding remains.
 - No `core_spec_failure` or source-level blocker remains.
 - The three evidence/publication findings above are explicit scale blockers.
   They must close before PR readiness or merge, but they do not require a
