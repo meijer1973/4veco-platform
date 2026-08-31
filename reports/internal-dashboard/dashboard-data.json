@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T12:51:17.733Z",
+  "generatedAt": "2026-08-31T13:14:17.321Z",
   "internalOnly": true,
   "teams": [
     {
@@ -166,7 +166,7 @@
               "sprint": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
               "name": "Book 1 Edition Boundary and Part A Compatibility Repair",
               "completed": "yes",
-              "currentState": "Local implementation/evidence complete on PR #222 at substantive head `bb21d53e...`: the owned preview policy now inherits the Book 2+ Part A target-operation, seven-section, paper-route, and 55-minute contract; it cannot manufacture `Covered` status, mastery, or an untargeted independent operation. The focused checker passes 32 mutations, the full suite passes 107 suites/1,653 tests, teacher review passes 14/14, and lead round 1 passes. Exact-head hosted CI, readiness, owner authorization, governed integration, and post-merge CI remain required. Book 1 and all lesson output stay unchanged; Issue #223 remains planning-only until this prerequisite is integrated.",
+              "currentState": "Local implementation/evidence complete on PR #222 at substantive head `bb21d53e...`: the owned preview policy inherits the Book 2+ Part A target-operation, seven-section, paper-route, and 55-minute contract and cannot manufacture `Covered` status, mastery, or an untargeted independent operation. Focused tests pass 32/32, the full suite passes 107 suites/1,653 tests, teacher review passes 14/14, and canonical lead round 2 passes after closing the preserved evidence-ordering revision. Exact-head hosted CI, readiness, owner authorization, governed integration, and post-merge CI remain required. Book 1 and all lesson output stay unchanged; Issue #223 remains planning-only until this prerequisite is integrated.",
               "exitGate": ""
             },
             {
@@ -1564,7 +1564,7 @@
           "sprint": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
           "name": "Book 1 Edition Boundary and Part A Compatibility Repair",
           "completed": "yes",
-          "currentState": "Local implementation/evidence complete on PR #222 at substantive head `bb21d53e...`: the owned preview policy now inherits the Book 2+ Part A target-operation, seven-section, paper-route, and 55-minute contract; it cannot manufacture `Covered` status, mastery, or an untargeted independent operation. The focused checker passes 32 mutations, the full suite passes 107 suites/1,653 tests, teacher review passes 14/14, and lead round 1 passes. Exact-head hosted CI, readiness, owner authorization, governed integration, and post-merge CI remain required. Book 1 and all lesson output stay unchanged; Issue #223 remains planning-only until this prerequisite is integrated.",
+          "currentState": "Local implementation/evidence complete on PR #222 at substantive head `bb21d53e...`: the owned preview policy inherits the Book 2+ Part A target-operation, seven-section, paper-route, and 55-minute contract and cannot manufacture `Covered` status, mastery, or an untargeted independent operation. Focused tests pass 32/32, the full suite passes 107 suites/1,653 tests, teacher review passes 14/14, and canonical lead round 2 passes after closing the preserved evidence-ordering revision. Exact-head hosted CI, readiness, owner authorization, governed integration, and post-merge CI remain required. Book 1 and all lesson output stay unchanged; Issue #223 remains planning-only until this prerequisite is integrated.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },

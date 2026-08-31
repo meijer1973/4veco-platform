@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-31T12:51:16.859Z
+Generated: 2026-08-31T13:14:16.627Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book1-edition-boundary-20260830`
-Source commit: `35e38c7c1737d6cf26dd23143764e5c0ceac131b`
-Files indexed: 7517
+Source commit: `985bd3dbd74eedaafda6b6a71ae6d2f2ab62a3b1`
+Files indexed: 7523
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1585,7 +1585,7 @@ Count: 690
 
 ## references
 
-Count: 1014
+Count: 1015
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1964,6 +1964,7 @@ Count: 1014
 - references/data/sprints/B2-READY-1.plan.json
 - references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.plan.json
+- references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
@@ -2604,7 +2605,7 @@ Count: 1014
 
 ## reports
 
-Count: 4825
+Count: 4830
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5168,7 +5169,12 @@ Count: 4825
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-baseline.md
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-command-log.jsonl
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-command-log.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-diff-summary.md
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-assignment.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-corrections.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round1.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round2-revision.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round2.md
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-planning-review.md
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
