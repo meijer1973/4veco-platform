@@ -233,12 +233,25 @@ Informatie wordt beter onthouden als het via twee kanalen binnenkomt: verbaal (t
 
 ### 5.3 Exercise scaffolding met visuals
 
-Binnen een paragraaf/les progressie van oefeningen:
-1. **Simpel + volledige dual coding** (tekst + visueel)
-2. **Doelniveau + dual coding** (tekst + visueel)
-3. **Doelniveau zonder dual coding** (alleen tekst)
+Kies de progressie vanuit de representatie en antwoordvorm van de
+`Doeloefening`; gebruik geen vaste route van beeld naar alleen tekst.
 
-Zo worden leerlingen opgebouwd en wordt de visuele ondersteuning gefaded vóór het doorgaan.
+**Target-aligned invariant:** Fade scaffolding toward the representation and
+answer form of the doeloefening. Remove a visual only when students must
+eventually work without it. Retain any graph, table, or source supplied by the
+target. Do not introduce graph or table production unless production is a
+target operation.
+
+- Als grafiek- of tabelproductie een doelhandeling is, bouw de
+  productieondersteuning af: eerst een uitgewerkt en gelabeld beeld, daarna een
+  basis om aan te vullen, en uiteindelijk zelfstandige productie in de vorm die
+  de doeloefening vraagt.
+- Als de doeloefening een grafiek, tabel of bron **aanbiedt** en lezen,
+  interpreteren, aanpassen of brongebruik vraagt, blijft die representatie
+  staan. Fade dan alleen doelrelevante labels, hints, uitgewerkte markeringen of
+  tussenprompts.
+- Voeg nooit grafiek- of tabelproductie toe om het faden zichtbaar te maken als
+  productie geen goedgekeurde doelhandeling is.
 
 ### 5.4 Unified experience
 

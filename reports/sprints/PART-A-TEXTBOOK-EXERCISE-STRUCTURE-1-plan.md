@@ -4,6 +4,10 @@ Generated: 2026-08-29
 
 Revised: 2026-08-31 after owner review of PR #219
 
+Revised again: 2026-08-31 after exact-head review at `15106b64...` found
+two inherited visual-fading contradictions and incomplete Dutch no-device
+regression coverage
+
 ## Goal
 
 Establish one unambiguous, platform-only Part A textbook exercise-authoring
@@ -87,8 +91,16 @@ The sprint passes only when:
   realistic within normal exercise time in a 55-minute lesson;
 - backward design runs from lesson goals through target decomposition to the
   worked example and practice sequence, with the required alignment table;
-- `Begeleide inoefening` is optional, neutrally framed, more explicitly
-  scaffolded than the old default, and deliberately faded;
+- `Begeleide inoefening` is always authored and printed, neutrally framed, more
+  explicitly scaffolded than the old default, and deliberately faded; only the
+  student's use of that support route is optional;
+- all five active fading authorities/inheritors keep scaffolding aligned to the
+  representation and answer form of the doeloefening: supplied graphs, tables,
+  and sources remain when the target supplies them, and production is never
+  introduced unless it is a target operation;
+- printed-template regression checks reject Dutch as well as English device and
+  digital-support wording, including telefoon/smartphone/computer/internet/app,
+  `QR-code`, digitale uitleg, digitaal hulpmiddel, and `scan de code`;
 - bonus develops cognitive flexibility, while final review/interleaving is one
   or two accessible cumulative homework-suitable tasks;
 - Part A and Part B routes are explicitly separated;
@@ -114,6 +126,8 @@ The sprint passes only when:
 | Canonical printed flow | Summary remains before exercises without becoming a heading; no additional top-level Start/help/summary section appears | Mutations moving the summary after section 7, promoting it to `##`, or adding `Website-help`/`Voorkennis ophalen` must fail | revision planned |
 | Paper-only classroom completeness | All normal-route support is printed; the paper route note points to `Begeleide inoefening`, never online | Mutations mentioning website, Part B, laptop, or online explanation in printed copy must fail | revision planned |
 | Optional scaffolded support route | `Begeleide inoefening` requires task-appropriate explicit scaffolds, deliberate fading, neutral skip wording, and the same target | Teacher-learning-quality review and contract checker | planned |
+| Target-aligned fading across all active guidance | The builder, didactic reference, question-design reference, didactic skill, and paragraph checklist retain target-supplied representations and introduce production only for a production target | Positive-plus-contradiction mutations on all five fading sections plus substantive teacher/lead review | revision planned |
+| Dutch no-device enforcement | Printed copy rejects Dutch and English website/device/digital-support language while internal architecture discussion remains allowed | Template-only mutations for `Gebruik je telefoon`, `Scan de QR-code`, `Open de app`, `Bekijk de digitale uitleg`, and `Gebruik internet` | revision planned |
 | Core route and lesson realism | Short route is `2 -> 4 -> 5`; route-aware minute ranges replace rigid percentage allocation and fit normal 55-minute work time | Plan/diff review plus checker | planned |
 | Backward target alignment | Guidance requires goals -> target -> target-operation decomposition -> example/practice and the seven-column alignment table | Reviewer verifies every required column and drift prohibition | planned |
 | Independent core practice and target | `Zelfstandige oefening` is unscaffolded same-chain practice; `Doeloefening` is the target capstone before optional material | Contract checker and lead review | planned |
@@ -237,9 +251,11 @@ Required outputs are:
    Startopgaven roles, paper-only core/support/challenge/review routes,
    backward-design table, time realism, internal Part A/Part B boundary, and
    Book 1 non-retroactivity. Add mutation tests and normal CI wiring. Printed
-   template checks must reject internal lane language and website/device
-   dependencies without globally banning those terms in internal architecture
-   documentation. It must also reject target-absent worked-example
+   template checks must reject internal lane language and English/Dutch
+   website/device dependencies—including telefoon, smartphone, computer,
+   internet, app, hyphenated `QR-code`, digitale uitleg, digitaal hulpmiddel,
+   and `scan de code`—without globally banning those terms in internal
+   architecture documentation. It must also reject target-absent worked-example
    operations, untaught prerequisite retrieval, mastery/diagnosis/automatic
    routing claims for the brief Start check, new theory in closing review, and
    intervening top-level summary/help stages. Stop rather than weakening checks
@@ -263,11 +279,18 @@ Required outputs are:
 
    The first twelve are the owner-specified content mutation matrix; the
    thirteenth is the separately required non-retroactivity scope mutation.
+   Additional direct mutations must keep the correct positive wording present
+   while reintroducing the old unconditional visual-removal rule in both
+   `skills/econ-didactiek.md` and `skills/econ-textbook-paragraph.md`. Separate
+   template mutations must reject at least `Gebruik je telefoon`, `Scan de
+   QR-code`, `Open de app`, `Bekijk de digitale uitleg`, and `Gebruik internet`.
 5. Refresh maps/indexes/dashboard when required, run focused and full
    validators through the sprint command logger, and inspect the final diff for
    scope and wording. Any change under `4veco-lessen`, Book 1 output,
    protected references, or student-facing generated output is a hard stop.
-6. Preserve all earlier review records. Obtain a renewed teacher-learning-
+6. Preserve all earlier review records. Because the exact-head review found
+   new active-guidance/checker defects after the earlier teacher PASS, obtain a
+   new substantive renewed teacher-learning-
    quality review with a separate evidence-backed judgment for each exact
    owner-required criterion:
 
@@ -284,9 +307,11 @@ Required outputs are:
    11. summary placement; and
    12. absence of student-facing internal architecture terminology.
 
-   After focused/full validation, obtain a renewed
-   independent lead review covering headings, summary, student-facing copy,
-   checker scope/mutations, current-main integration, CI, and lesson cleanliness.
+   After focused/full validation, obtain a new substantive renewed independent
+   lead review covering headings, summary, student-facing copy, all five
+   target-aligned fading surfaces, Dutch no-device checker scope/mutations,
+   current-main integration, CI, and lesson cleanliness. A bounded evidence
+   recheck is insufficient for this correction.
    A core-spec failure or final verdict other than PASS/PASS WITH FLAGS blocks
    closure.
 7. Current `main` integration is mandatory before final review: fetch/prune,

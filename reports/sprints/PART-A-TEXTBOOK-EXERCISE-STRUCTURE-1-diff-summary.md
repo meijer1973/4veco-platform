@@ -26,8 +26,13 @@ Generated: 2026-08-31
   authoring contradictions, timing and differentiation safeguards, Part A/Part
   B boundaries, and Book 1 scope.
 - Adds focused coverage for all 13 owner-required negative scenarios and two
-  positive-plus-contradiction probes closing TLQ-R1 and TLQ-R2. The combined
-  contract/lane suites pass 49/49 tests.
+  original positive-plus-contradiction probes closing TLQ-R1 and TLQ-R2.
+- Extends contradiction enforcement to all five active visual-fading sections,
+  rejects unconditional visual removal as well as target-absent production,
+  and adds positive-plus-contradiction mutations for every bounded section.
+- Rejects nine likely Dutch printed device/digital-support phrasings while
+  proving that internal documentation may still discuss those terms. The
+  combined contract/lane suites pass 64/64 tests.
 - Normalizes CRLF and lone-CR text before structural analysis so the same
   mutation probes work on local and GitHub Windows checkouts.
 - Treats internal-dashboard output as generated platform evidence in the
@@ -35,6 +40,7 @@ Generated: 2026-08-31
 - Preserves planning, teacher, and lead `REVISE` history with separate
   resolutions/rechecks and refreshes navigation, indexes, dashboard, roadmap,
   and final sprint evidence.
+- Renumbers the paragraph production checklist continuously from 1 through 36.
 
 ## Lesson changes
 

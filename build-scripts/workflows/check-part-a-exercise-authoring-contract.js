@@ -181,7 +181,9 @@ function findPrintedTemplateFailures(files) {
   if (/\b(?:Part A|Part B|lane|companion route|repository)\b/i.test(template)) {
     failures.push(`${file}: printed template exposes internal architecture terminology`);
   }
-  if (/\b(?:website|online|laptop|phone|tablet|QR code|companion page|digital support)\b/i.test(template)) {
+  const forbiddenPrintedDigitalSupport =
+    /\b(?:website|online|laptop|phone|tablet|telefoon|smartphone|computer|internet|app|companion page|digital support|digitale uitleg|digitaal hulpmiddel)\b|\bQR[-\s]?code\b|\bscan\s+de\s+(?:QR[-\s]?code|code)\b/i;
+  if (forbiddenPrintedDigitalSupport.test(template)) {
     failures.push(`${file}: printed template depends on or advertises digital support`);
   }
 
@@ -211,11 +213,19 @@ function findContradictoryAuthoringFailures(files) {
     ['skills/econ-exercise-builder.md', '### 3.2 Dual coding fading', '### 3.2.bis'],
     ['references/authored/didactiek-principes.md', '### 4.4 Target-aligned dual coding fading', '### 4.5 Scaffold decision tree'],
     ['references/authored/vraagtypen-en-opgaveontwerp.md', '### 3.4 Target-aligned dual coding fading', '### 3.5 Classification table headers'],
+    ['skills/econ-didactiek.md', '### 5.3 Exercise scaffolding met visuals', '### 5.4 Unified experience'],
+    ['skills/econ-textbook-paragraph.md', '**Content checks:**', '**Graph checks:**'],
   ];
   const unconditionalProduction = [
     /\b(?:must|always)\b[^\n]{0,140}\b(?:draw|produce|construct)\b[^\n]{0,80}\b(?:graph|table)\b/i,
     /\bdraws?\s+(?:their\s+)?own\s+(?:graph|table)\b/i,
     /\b(?:graph|table) production\b[^\n]{0,140}\b(?:regardless of|even (?:if|when)|whether or not)\b[^\n]{0,100}\btarget/i,
+  ];
+  const unconditionalVisualRemoval = [
+    /\bdoelniveau\b[^\n]{0,80}\bzonder dual coding\b[^\n]{0,40}\balleen tekst\b/i,
+    /\btarget-level\b[^\n]{0,80}\bwithout dual coding\b[^\n]{0,40}\btext only\b/i,
+    /\b(?:visual|visueel)\s*(?:→|->)\s*(?:visual|visueel)\s*(?:→|->)\s*(?:no visual|geen beeld|zonder visueel)\b/i,
+    /\b(?:must|always)\b[^\n]{0,100}\bremove\b[^\n]{0,60}\b(?:visual|graph|table|representation)\b/i,
   ];
   for (const [file, startMarker, endMarker] of fadingSections) {
     const text = files[file] || '';
@@ -224,6 +234,9 @@ function findContradictoryAuthoringFailures(files) {
     const section = start === -1 || end === -1 ? '' : text.slice(start, end);
     if (!section || unconditionalProduction.some((pattern) => pattern.test(section))) {
       failures.push(`${file}: target-absent graph/table production permission remains active`);
+    }
+    if (section && unconditionalVisualRemoval.some((pattern) => pattern.test(section))) {
+      failures.push(`${file}: target-misaligned unconditional visual-removal instruction remains active`);
     }
   }
   return failures;
@@ -353,8 +366,10 @@ function findContractFailures(files, options = {}) {
     ['skills/econ-textbook-paragraph.md', /theory\s*->\s*Uitgewerkt voorbeeld\s*->\s*compact\s+non-heading summary\s*->\s*Startopgaven/i, 'theory/example/summary/Start adjacency missing'],
     ['skills/econ-textbook-paragraph.md', /summary[\s\S]{0,180}after worked example, before exercises/i, 'summary placement missing'],
     ['skills/econ-textbook-paragraph.md', /complete on paper[\s\S]{0,180}does not[\s\S]{0,100}website, device, online explanation, or Part B/i, 'paper-only paragraph boundary missing'],
+    ['skills/econ-textbook-paragraph.md', /Fade scaffolding toward the representation and answer form of the doeloefening[\s\S]{0,180}Remove a visual only when[\s\S]{0,180}Retain any graph, table, or source supplied by the target[\s\S]{0,180}Do not introduce graph or table production unless production is a target operation/i, 'paragraph target-aligned visual-fading boundary missing'],
     ['skills/econ-didactiek.md', /Book 2\+ Part A inheritance/i, 'didactic inheritance missing'],
     ['skills/econ-didactiek.md', /same goal[\s\S]{0,160}deliberately\s+fades/i, 'guided same-goal/fading invariant missing'],
+    ['skills/econ-didactiek.md', /Fade scaffolding toward the representation and\s+answer form of the doeloefening[\s\S]{0,180}Remove a visual only when[\s\S]{0,180}Retain any graph, table, or source supplied by the\s+target[\s\S]{0,180}Do not introduce graph or table production unless production is a\s+target operation/i, 'didactic-skill target-aligned visual-fading boundary missing'],
     ['references/authored/didactiek-principes.md', /graph or table production is part of the approved target operation and\s+answer form[\s\S]{0,2500}do not add a production demand/i, 'didactic target-aligned visual-fading boundary missing'],
     ['references/authored/vraagtypen-en-opgaveontwerp.md', /graph or table production is part of the approved target operation and\s+answer form[\s\S]{0,2500}do not add graph\/table production/i, 'question-design target-aligned visual-fading boundary missing'],
     ['skills/econ-paragraph-review.md', /Exact structure and adjacency/i, 'review structure check missing'],

@@ -2,10 +2,10 @@
 
 Generated: 2026-08-31
 
-Status: implementation and correction evidence complete; the renewed lead
-review accepted the implementation and limited its `REVISE` finding to stale
-final evidence. That evidence has now been synchronized for the bounded lead
-recheck and exact-head human-review handoff.
+Status: reopened after an exact-head `CHANGES REQUIRED` review. The two active
+visual-fading contradictions and Dutch no-device regression gap are repaired
+and pass local validation. New substantive teacher and lead reviews, updated
+final evidence, exact-final-head CI, and human-review routing are still required.
 
 ## Plan reference
 
@@ -46,17 +46,19 @@ produced.
 ## Acceptance test results
 
 - Revision planning audit: `PASS` after its preserved `REVISE` and resolution.
-- Renewed teacher-learning-quality review: `PASS`, 12/12, after preserving and
-  closing TLQ-R1 and TLQ-R2; criteria 3, 5, and 7 now pass explicitly.
-- Renewed lead review: implementation accepted; its preserved `REVISE` is
-  limited to LREV-R4/LREV-R5 final-evidence and readiness metadata, with the
-  repository evidence correction recorded separately for bounded recheck.
+- Earlier renewed teacher-learning-quality review: preserved `PASS`, 12/12,
+  but superseded for closure because later active-guidance changes require a
+  new substantive teacher review.
+- Earlier renewed lead review: preserved `REVISE`; its evidence-only recheck
+  path is superseded because the exact-head review required substantive source
+  and checker changes.
 - Contract checker: `PASS` across 10 active platform source surfaces.
-- Focused contract/lane suites: 49/49 tests passed.
-- Full local platform suite after the teacher fixes: 106 suites and 1,606
+- Focused contract/lane suites after the exact-head fixes: 64/64 tests passed.
+- Full local platform suite after the exact-head fixes: 106 suites and 1,621
   tests passed; 6 suites and 8 tests skipped; exit code 0.
-- Exact-head GitHub CI run `33369460856`: `SUCCESS` at reviewed head
-  `198189b77fb254024950e5825c9fea705069f901`.
+- Historical exact-head GitHub CI run `33371854917`: `SUCCESS` at reviewed head
+  `15106b64b7b80d1e9c048870da0de9943d6460fd`; the substantive repair requires
+  a new exact-final-head run after review evidence is published.
 - Current main `bb212502d2074c9936da30b8d6e6914ba6319dfe` is an ancestor of the
   branch through integration merge `84bfd7eb1f572fb8028bde73aa08f34904c597c1`.
 - Detached lesson checkout: clean and unchanged at
@@ -76,6 +78,11 @@ teacher, and lead review history; records each resolution/recheck separately;
 and refreshes the canonical result, diff summary, roadmap state, command log,
 navigation, dashboard, and generated indexes.
 
+The exact-head correction removes unconditional visual-to-text-only guidance
+from `econ-didactiek` and the paragraph checklist, checks all five fading
+surfaces, adds Dutch printed-device/digital mutations, and continuously
+renumbers the paragraph checklist.
+
 ## Data integrity notes
 
 No protected reference data changed. Nothing under `references/machine/`,
@@ -86,10 +93,12 @@ remained read-only and clean.
 
 ## Open follow-ups
 
-1. Human owner review and approval remain required before any merge or adoption.
-2. A later explicitly authorized sprint must author and render any Book 2
+1. Obtain new substantive teacher and lead review PASS verdicts and publish
+   synchronized final evidence with green exact-final-head CI.
+2. Human owner review and approval remain required before any merge or adoption.
+3. A later explicitly authorized sprint must author and render any Book 2
    paragraph; this contract does not certify an unwritten paragraph.
-3. Do not merge, alter Book 1, redesign Part B, or begin Book 2 production from
+4. Do not merge, alter Book 1, redesign Part B, or begin Book 2 production from
    this task.
 
 ## Rollback instructions

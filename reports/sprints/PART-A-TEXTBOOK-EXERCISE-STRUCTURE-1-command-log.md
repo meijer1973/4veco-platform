@@ -3013,3 +3013,174 @@ Time:        1.318 s, estimated 2 s
 Ran all test suites matching build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js|build-scripts/workflows/check-paragraph-lane-scope.test.js.
 
 ```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:23:18.898Z`
+- finished_at: `2026-08-31T09:27:40.122Z`
+- duration_ms: `261224`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `61d7b8902ff955394b25b4e804da5efd8d69806978b2704006c8186cd5dadd8f`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 106 passed, 106 of 112 total
+Tests:       8 skipped, 1621 passed, 1629 total
+Snapshots:   0 total
+Time:        260.39 s, estimated 274 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:28:00.105Z`
+- finished_at: `2026-08-31T09:28:00.241Z`
+- duration_ms: `136`
+- exit_code: `0`
+- stdout_sha256: `4846a76c4978c14033cdf0f58e86bb4a1a83d878f74ab5f0a0ec5b363094dd3f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 --phase planned
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:28:00.299Z`
+- finished_at: `2026-08-31T09:28:00.529Z`
+- duration_ms: `230`
+- exit_code: `0`
+- stdout_sha256: `a8535cf8f8d9b6c159b0e702279bf4c323df3dffc0f060b61dc7cfeede5bbc32`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:part-a-exercise-authoring-contract
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:28:00.585Z`
+- finished_at: `2026-08-31T09:28:00.988Z`
+- duration_ms: `403`
+- exit_code: `0`
+- stdout_sha256: `7471733f8c02a0d0b178bc864cec5e3370c14d6aad3dd20a1c8c07413078b17a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:part-a-exercise-authoring-contract
+> node build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+
+OK Part A exercise authoring contract: 10 platform source surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T09:28:01.029Z`
+- finished_at: `2026-08-31T09:28:03.213Z`
+- duration_ms: `2184`
+- exit_code: `0`
+- stdout_sha256: `b5a57c6d056d5b9f1cd994a9a5e566a2f6a479f5dfbbc3a195da6ca6d07c5be8`
+- stderr_sha256: `73e6ee82f3e0ac30732fbd2f0574d32652e172f30dfe0f3188165f5a480ddae9`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       64 passed, 64 total
+Snapshots:   0 total
+Time:        1.442 s, estimated 2 s
+Ran all test suites matching build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js|build-scripts/workflows/check-paragraph-lane-scope.test.js.
+
+```

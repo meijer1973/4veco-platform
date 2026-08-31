@@ -129,6 +129,34 @@ describe('Part A exercise authoring source contract', () => {
     );
   });
 
+  test.each([
+    'Gebruik je telefoon voor de extra uitleg.',
+    'Gebruik je smartphone voor de extra uitleg.',
+    'Gebruik je computer voor de extra uitleg.',
+    'Scan de QR-code om de stappen te bekijken.',
+    'Scan de code om de stappen te bekijken.',
+    'Open de app voor hulp.',
+    'Bekijk de digitale uitleg.',
+    'Gebruik een digitaal hulpmiddel.',
+    'Gebruik internet voor de stappen.',
+  ])('rejects Dutch printed digital dependency: %s', (replacement) => {
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        '**Extra hulp nodig?** Maak eerst Begeleide inoefening.',
+        `**Extra hulp nodig?** ${replacement}`
+      ),
+      'printed template depends on or advertises digital support'
+    );
+  });
+
+  test('allows digital and architecture terms outside the printed template', () => {
+    const files = cloneFiles();
+    files['skills/econ-didactiek.md'] +=
+      '\nInternal review note: discuss website, telefoon, QR-code, app, Part A, and Part B boundaries here.\n';
+    expect(findContractFailures(files)).toEqual([]);
+  });
+
   test('rejects summary placement after section seven and summary-as-heading', () => {
     const summary = [
       '> **Samenvatting §X.Y.Z**',
@@ -206,6 +234,41 @@ describe('Part A exercise authoring source contract', () => {
         `Independent practice must always require students to produce a graph, even when graph production is absent from the target.\n\n${nextSection}`
       ),
       'target-absent graph/table production permission'
+    );
+
+    expectFailure(
+      mutate(
+        'skills/econ-didactiek.md',
+        '### 5.4 Unified experience',
+        'Doelniveau zonder dual coding (alleen tekst).\n\n### 5.4 Unified experience'
+      ),
+      'skills/econ-didactiek.md: target-misaligned unconditional visual-removal instruction'
+    );
+
+    expectFailure(
+      mutate(
+        'skills/econ-textbook-paragraph.md',
+        '**Graph checks:**',
+        'Dual coding fading applied inside optional guided practice (visual → visual → no visual).\n\n**Graph checks:**'
+      ),
+      'skills/econ-textbook-paragraph.md: target-misaligned unconditional visual-removal instruction'
+    );
+  });
+
+  test.each([
+    ['skills/econ-exercise-builder.md', '### 3.2.bis Combined-change misconception exercise'],
+    ['references/authored/didactiek-principes.md', '### 4.5 Scaffold decision tree'],
+    ['references/authored/vraagtypen-en-opgaveontwerp.md', '### 3.5 Classification table headers'],
+    ['skills/econ-didactiek.md', '### 5.4 Unified experience'],
+    ['skills/econ-textbook-paragraph.md', '**Graph checks:**'],
+  ])('rejects unconditional visual removal in %s', (file, endMarker) => {
+    expectFailure(
+      mutate(
+        file,
+        endMarker,
+        `Always fade visual → visual → no visual, regardless of the target representation.\n\n${endMarker}`
+      ),
+      `${file}: target-misaligned unconditional visual-removal instruction`
     );
   });
 

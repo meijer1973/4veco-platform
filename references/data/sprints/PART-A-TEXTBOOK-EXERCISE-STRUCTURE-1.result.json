@@ -2,9 +2,9 @@
   "schema_version": 1,
   "sprint_id": "PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1",
   "name": "Book 2+ Part A Paper-Only Exercise Authoring Contract",
-  "status": "completed",
+  "status": "in_progress",
   "completed_on": "2026-08-31",
-  "verdict": "IMPLEMENTATION_COMPLETE_EVIDENCE_CORRECTED_FOR_BOUNDED_LEAD_RECHECK",
+  "verdict": "CHANGES_REQUIRED_SOURCE_FIX_VALIDATED_LOCALLY_AWAITING_SUBSTANTIVE_REVIEWS",
   "plan": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md",
   "baseline": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-baseline.md",
   "result": "reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md",
@@ -13,12 +13,13 @@
   "current_main_integration_merge_sha": "84bfd7eb1f572fb8028bde73aa08f34904c597c1",
   "revised_substantive_payload_sha": "f7e171b81560b35f1f2cf03728da20c616d77d46",
   "teacher_fix_payload_sha": "fc98ffe20354fb285eba636709ea2529e2e4c076",
-  "reviewed_published_head_sha": "198189b77fb254024950e5825c9fea705069f901",
+  "reviewed_published_head_sha": "15106b64b7b80d1e9c048870da0de9943d6460fd",
   "exact_head_ci": {
-    "run_id": 33369460856,
-    "url": "https://github.com/meijer1973/4veco-platform/actions/runs/33369460856",
-    "head_sha": "198189b77fb254024950e5825c9fea705069f901",
-    "conclusion": "SUCCESS"
+    "run_id": 33371854917,
+    "url": "https://github.com/meijer1973/4veco-platform/actions/runs/33371854917",
+    "head_sha": "15106b64b7b80d1e9c048870da0de9943d6460fd",
+    "conclusion": "SUCCESS",
+    "superseded_for_final_closure_by_substantive_source_changes": true
   },
   "contract": {
     "paper_only": true,
@@ -30,12 +31,14 @@
     "summary_position": "after_worked_example_before_startopgaven",
     "active_platform_surfaces_checked": 10,
     "owner_required_negative_mutations": "13/13",
-    "positive_plus_contradiction_probes": "2/2"
+    "positive_plus_contradiction_probes": "all 5 fading surfaces",
+    "dutch_printed_digital_dependency_mutations": 9,
+    "internal_digital_architecture_terms_remain_allowed": true
   },
   "validation": {
-    "focused_tests": "49/49 passed",
-    "full_local_platform": "106 suites and 1606 tests passed; 6 suites and 8 tests skipped",
-    "teacher_review": "12/12 PASS",
+    "focused_tests": "64/64 passed",
+    "full_local_platform": "106 suites and 1621 tests passed; 6 suites and 8 tests skipped",
+    "teacher_review": "prior 12/12 PASS preserved but superseded for closure; new substantive review required",
     "lesson_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "lesson_worktree_clean": true
   },
@@ -72,6 +75,9 @@
       "LREV-R5"
     ],
     "historical_reviews_preserved": true,
+    "exact_head_changes_required_review": "15106b64b7b80d1e9c048870da0de9943d6460fd",
+    "new_substantive_teacher_review_required": true,
+    "new_substantive_lead_review_required": true,
     "findings": [
       {
         "id": "LR-1",

@@ -462,46 +462,46 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 7. □ Required alignment table covers every lesson goal and target operation
 8. □ Startopgaven has taught-prerequisite retrieval and a compact current-content check under one heading; it is not mastery/diagnosis/automatic routing
 9. □ Core route note is present and a whole-lesson equation totals motivation + instruction + worked example + transitions/recap + actual core-route questions at ≤55 minutes
-10. □ Optional Begeleide inoefening keeps the same goal, gives stronger support, fades it deliberately, and uses neutral skip wording
+10. □ Always-authored and printed Begeleide inoefening keeps the same goal, gives stronger support, fades it deliberately, and uses neutral skip wording; only student use is optional
 11. □ Denkertje/bonus builds cognitive flexibility; closing review has 1–2 accessible cumulative/homework tasks and no new theory
 12. □ Summary is a non-heading paper box after the worked example and before Startopgaven; printed copy contains no website/device or internal lane pointer
-13. □ Dual coding fading applied inside optional guided practice (visual → visual → no visual)
+13. □ Fade scaffolding toward the representation and answer form of the doeloefening. Remove a visual only when students must eventually work without it. Retain any graph, table, or source supplied by the target. Do not introduce graph or table production unless production is a target operation
 14. □ At least one misconception warning if applicable (check `econ-didactiek` §7.4)
 15. □ Definitions use exact syllabus terminology (verify against `references/authored/economie-terminologie.md`)
 16. □ Answer model follows unified procedures — same steps as worked example
 
 **Graph checks:**
-9. □ Theory graphs built step by step (not dropped in complete)
-10. □ All graphs generated via `economic-graph` skill with coordinate verification
-11. □ Supply lines extend to P-axis, never cross Q-axis
-12. □ **Asset completeness (BLOCKING):**
-  - 12a. □ Extract all `![...](...)` references from paragraaf.md, opgaven.md, antwoorden.md — list every referenced file
-  - 12b. □ Verify each referenced file exists in `_assets/` (both `.svg` and `.png`). List any missing. **If ANY are missing → the paragraph is NOT complete. Generate missing assets before delivering.**
-  - 12c. □ Verify no orphaned assets in `_assets/` (files not referenced in any .md)
-13. □ Axes, scale, positioning identical across incremental theory figures
+17. □ Theory graphs built step by step (not dropped in complete)
+18. □ All graphs generated via `economic-graph` skill with coordinate verification
+19. □ Supply lines extend to P-axis, never cross Q-axis
+20. □ **Asset completeness (BLOCKING):**
+  - 20a. □ Extract all `![...](...)` references from paragraaf.md, opgaven.md, antwoorden.md — list every referenced file
+  - 20b. □ Verify each referenced file exists in `_assets/` (both `.svg` and `.png`). List any missing. **If ANY are missing → the paragraph is NOT complete. Generate missing assets before delivering.**
+  - 20c. □ Verify no orphaned assets in `_assets/` (files not referenced in any .md)
+21. □ Axes, scale, positioning identical across incremental theory figures
 
 **Format checks:**
-14. □ All image references verified to resolve (covered by 12a/12b — do not skip)
-15. □ No difficulty ratings or time estimates in student-facing markdown
-16. □ Definition boxes, formula boxes, warning boxes visually distinct
-17. □ Summary box present before Startopgaven with ≤5 points and forward pointer
-18. □ File naming follows convention: `X.Y.Z_type_number`
-19. □ PDF exported via `econ-pdf-builder` without errors
+22. □ All image references verified to resolve (covered by 20a/20b — do not skip)
+23. □ No difficulty ratings or time estimates in student-facing markdown
+24. □ Definition boxes, formula boxes, warning boxes visually distinct
+25. □ Summary box present before Startopgaven with ≤5 points and forward pointer
+26. □ File naming follows convention: `X.Y.Z_type_number`
+27. □ PDF exported via `econ-pdf-builder` without errors
 
 **Time check:**
-20. □ Whole-lesson equation totals actual planned minutes at ≤55; recommended range addition alone is not accepted as proof, and optional guided/bonus/review time is accounted for separately (cross-check with exercise builder)
+28. □ Whole-lesson equation totals actual planned minutes at ≤55; recommended range addition alone is not accepted as proof, and optional guided/bonus/review time is accounted for separately (cross-check with exercise builder)
 
 **Didactic and precision review (before quality_ref):**
-21. □ Run `econ-paragraph-review` Pass 1 (didactic architecture): opening, scaffolding, dual coding, fading, misconceptions, exercises, summary
-22. □ Run `econ-paragraph-review` Pass 2 (mathematical precision): graph accuracy, algebra, terminology, answer verification, cross-paragraph consistency — verify against `references/authored/economic_mathematical_precision_reference.md`
-23. □ All FAIL items resolved; FLAG items addressed or documented
+29. □ Run `econ-paragraph-review` Pass 1 (didactic architecture): opening, scaffolding, dual coding, fading, misconceptions, exercises, summary
+30. □ Run `econ-paragraph-review` Pass 2 (mathematical precision): graph accuracy, algebra, terminology, answer verification, cross-paragraph consistency — verify against `references/authored/economic_mathematical_precision_reference.md`
+31. □ All FAIL items resolved; FLAG items addressed or documented
 
 **Quality control (after review passes):**
-24. □ Generate `quality_ref` using `econ-quality-control` skill (Part 2)
-25. □ Store as `[paragraph-code]-quality-ref.yaml` in the paragraph folder
-26. □ All leerdoelen mapped to eindtermen with Bloom levels
-27. □ All present components documented with inspectie standards and didactiek principles
-28. □ Verantwoording section filled in honestly (flag weak points)
+32. □ Generate `quality_ref` using `econ-quality-control` skill (Part 2)
+33. □ Store as `[paragraph-code]-quality-ref.yaml` in the paragraph folder
+34. □ All leerdoelen mapped to eindtermen with Bloom levels
+35. □ All present components documented with inspectie standards and didactiek principles
+36. □ Verantwoording section filled in honestly (flag weak points)
 
 ---
 
