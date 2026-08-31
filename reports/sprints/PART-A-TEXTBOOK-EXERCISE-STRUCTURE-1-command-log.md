@@ -3359,3 +3359,25 @@ OK sprint bundle: PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 complete
 ```text
 
 ```
+## node build-scripts/sprints/check-lead-review-substance.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 --review-file reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round5.md
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T10:21:38.573Z`
+- finished_at: `2026-08-31T10:21:38.652Z`
+- duration_ms: `79`
+- exit_code: `0`
+- stdout_sha256: `292d45b3855c7a870c978cb551170f5dbc3c4b1a7241258d02a75db521c1d1ad`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
