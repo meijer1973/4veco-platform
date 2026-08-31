@@ -64,13 +64,12 @@ Verify all of the following:
 - backward design is explicit through `lesson goals -> doeloefening -> target
   operations -> worked example and practice`, with the required alignment
   table and no silent gap;
-- these seven student-facing headings are contiguous and exactly ordered:
-  `Uitgewerkt voorbeeld`, `Startopgaven`, `Begeleide inoefening`,
-  `Zelfstandige oefening`, `Doeloefening`, `Denkertje / Bonusopgave`,
-  `Herhaling / Herhaling en interleaving`;
-- theory is followed directly by the worked example, and the worked example by
-  Startopgaven; recap follows section 7 and website help is only a subordinate
-  optional Part B pointer inside Startopgaven;
+- these seven student-facing exercise headings are exactly levelled and ordered:
+  `## Uitgewerkt voorbeeld`, `## Startopgaven`, `## Begeleide inoefening`,
+  `## Zelfstandige oefening`, `## Doeloefening`, `## Denkertje / Bonusopgave`,
+  `## Herhaling / Herhaling en interleaving`;
+- theory is followed directly by the worked example, then a compact non-heading
+  summary of no more than five points, then Startopgaven;
 - Startopgaven includes already-taught prerequisite retrieval and a compact
   current-content comprehension check under one heading, without claiming
   mastery, diagnosis, or automatic routing;
@@ -84,14 +83,36 @@ Verify all of the following:
 - the bonus creates cognitive flexibility rather than more arithmetic, while
   closing review has 1–2 accessible cumulative/homework tasks and no new
   theory; and
-- the Part B route `Start -> Leer -> Check -> Oefen -> Exit ticket` is not
-  presented as the printed Part A exercise structure.
+- internal Part A/Part B architecture remains distinct, but the printed route
+  is complete on paper and neither depends on nor advertises a website, online
+  explanation, companion page, laptop, phone, tablet, QR code, or other device;
+  student-facing copy does not expose Part A, Part B, lane, companion route, or
+  repository terminology.
 
-Hard fail any missing/reordered/interrupted heading sequence, uncovered target
+For a Book 2+ Part A contract review, give a separate evidence-backed judgment
+for each of these twelve criteria:
+
+1. paper-only usability;
+2. no-device compatibility;
+3. all required support present in print;
+4. simple printed route;
+5. backward alignment;
+6. 55-minute feasibility;
+7. same-goal differentiation;
+8. bonus cognitive flexibility;
+9. accessible closing review;
+10. Book 1 continuity;
+11. summary placement; and
+12. absence of student-facing internal architecture terminology.
+
+Hard fail any missing/reordered/wrong-level/additional heading sequence,
+misplaced or top-level summary, uncovered target
 operation, untaught prerequisite disguised as retrieval, worked-example
 operation absent from goals/target, mandatory or non-fading guided route,
 same-kind arithmetic bonus, new theory in closing review, or Part A/Part B
-route conflation.
+route conflation. Also hard fail any printed dependency on a website, device,
+online explanation, or companion surface, and any student-facing internal
+architecture term.
 
 ## Primary review focus
 

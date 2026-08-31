@@ -59,15 +59,15 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('reports/review-gates/PR200/packet.pdf').category).toBe('unknown');
   });
 
-  test('classifies only the canonical internal-dashboard outputs as shared platform', () => {
+  test('classifies only the canonical internal-dashboard outputs as generated indexes', () => {
     const canonicalPaths = [
       'reports/internal-dashboard/index.html',
       'reports/internal-dashboard/dashboard-data.json',
     ];
 
     expect(canonicalPaths.map((filePath) => classifyPath(filePath).category)).toEqual([
-      'shared_platform',
-      'shared_platform',
+      'generated_indexes',
+      'generated_indexes',
     ]);
     expect(checkLaneScope({
       lane: 'shared',

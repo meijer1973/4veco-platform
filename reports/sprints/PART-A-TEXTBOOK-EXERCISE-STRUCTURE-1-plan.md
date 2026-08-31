@@ -2,6 +2,8 @@
 
 Generated: 2026-08-29
 
+Revised: 2026-08-31 after owner review of PR #219
+
 ## Goal
 
 Establish one unambiguous, platform-only Part A textbook exercise-authoring
@@ -32,17 +34,27 @@ target exercise before optional bonus and closing cumulative review, and makes
 the short route `2 -> 4 -> 5`.
 
 The companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` remains
-the Part B companion/product route. It is not the printed Part A sequence.
+an internal Part B companion/product concept. It is not the printed Part A
+sequence, a printed route dependency, or student-facing template language.
 This sprint does not redesign Part B, build a Book 2 paragraph, audit or repair
 paragraph 1.2.1, regenerate Book 1, or change `4veco-lessen`.
 
-The seven exercise headings form one contiguous block. The compact theory
-summary is retained after section 7, outside that block and without becoming
-an eighth exercise heading. The existing website-help copy is retained only as
-a subordinate, non-heading Part B help pointer inside `Startopgaven`, adjacent
-to the compact route note. It may not interrupt
-`theory -> Uitgewerkt voorbeeld -> Startopgaven` or become a printed Part A
-route step.
+Book 2 Part A is paper-first and fully usable in a no-device classroom. Every
+explanation, retrieval task, scaffold, practice task, and target preparation
+required by the classroom route must be present in print. Printed template
+copy must not direct students to a website, online explanation, companion
+surface, laptop, phone, tablet, or QR code, and must not expose internal terms
+such as Part A, Part B, lane, or companion route.
+
+The canonical exercise headings all use Markdown level `##` and retain their
+order. Book 1 continuity deliberately preserves a compact, non-heading summary
+after `Uitgewerkt voorbeeld` and before `Startopgaven`; the summary is not an
+eighth exercise section and may contain at most five concise points. The
+checker must permit that block while rejecting any intervening top-level
+heading. The visible paper route note is only:
+
+> **Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
+> **Extra hulp nodig?** Maak eerst Begeleide inoefening.
 
 Baseline inspection found contradictory active wording in the required eight
 surfaces plus `references/authored/vraagtypen-en-opgaveontwerp.md` and
@@ -63,11 +75,14 @@ The sprint passes only when:
 - the didactic reference remains the rationale source of truth;
 - `econ-exercise-builder` contains the full operational contract and other
   surfaces inherit or summarize it without creating competing variants;
-- the exact seven-section order and `Startopgaven` two-role rule are explicit;
-- the seven headings are contiguous: no summary, website-help stage, generic
-  `Opgaven` wrapper, or other top-level section interrupts them;
-- the compact summary follows section 7 outside the exercise block and the
-  optional website-help pointer is subordinate inside `Startopgaven`;
+- the exact seven-section order, exact `##` level, and `Startopgaven` two-role
+  rule are explicit;
+- no additional top-level exercise heading, generic `Opgaven` wrapper, or
+  website-help stage interrupts the canonical order;
+- a compact non-heading summary remains after the worked example and before
+  `Startopgaven`, with no more than five concise points;
+- printed template copy is paper-only, contains the canonical short/support
+  route note, and contains no website/device dependency or internal lane term;
 - the short route `Startopgaven -> Zelfstandige oefening -> Doeloefening` is
   realistic within normal exercise time in a 55-minute lesson;
 - backward design runs from lesson goals through target decomposition to the
@@ -92,11 +107,12 @@ The sprint passes only when:
 
 | Specification requirement | Implementation evidence required | Review/proof required | Status |
 |---|---|---|---|
-| Part A/Part B boundary | Required active surfaces identify the seven-section printed Part A contract and keep `Start -> Leer -> Check -> Oefen -> Exit ticket` in Part B only | Contract checker mutation tests plus lead review | planned |
-| Canonical seven-section order | Didactic rationale and full operational builder use the exact order; concise inheriting surfaces point to it | Focused checker parses and verifies order | planned |
-| Worked example adjacent to theory | Paragraph/workflow guidance states theory -> worked example before `Startopgaven`; teacher may assign prerequisite retrieval earlier | Reviewer and checker evidence | planned |
+| Part A/Part B boundary | Internal guidance distinguishes lanes while printed templates neither depend on nor advertise Part B or any website/device route | Contract checker mutation tests plus lead review | revision planned |
+| Canonical seven-section order and level | Didactic rationale and full operational builder use the exact order at `##`; every restating surface agrees | Focused checker parses names, order, and heading level | revision planned |
+| Worked example, summary, and Start adjacency | Paragraph/workflow guidance states theory -> worked example -> compact non-heading summary -> `Startopgaven`; teacher may assign prerequisite retrieval earlier | Reviewer and checker evidence | revision planned |
 | Two roles under one `Startopgaven` heading | Prerequisite retrieval and brief comprehension check are both required without extra visible top-level headings | Focused negative tests remove each role or add conflicting heading language | planned |
-| Contiguous printed sequence | `Uitgewerkt voorbeeld` immediately follows theory and `Startopgaven` immediately follows it; summary moves after section 7 and website help is a subordinate pointer inside `Startopgaven` | Mutations reintroducing intervening top-level summary/help stages must fail | planned |
+| Canonical printed flow | Summary remains before exercises without becoming a heading; no additional top-level Start/help/summary section appears | Mutations moving the summary after section 7, promoting it to `##`, or adding `Website-help`/`Voorkennis ophalen` must fail | revision planned |
+| Paper-only classroom completeness | All normal-route support is printed; the paper route note points to `Begeleide inoefening`, never online | Mutations mentioning website, Part B, laptop, or online explanation in printed copy must fail | revision planned |
 | Optional scaffolded support route | `Begeleide inoefening` requires task-appropriate explicit scaffolds, deliberate fading, neutral skip wording, and the same target | Teacher-learning-quality review and contract checker | planned |
 | Core route and lesson realism | Short route is `2 -> 4 -> 5`; route-aware minute ranges replace rigid percentage allocation and fit normal 55-minute work time | Plan/diff review plus checker | planned |
 | Backward target alignment | Guidance requires goals -> target -> target-operation decomposition -> example/practice and the seven-column alignment table | Reviewer verifies every required column and drift prohibition | planned |
@@ -114,7 +130,7 @@ The sprint passes only when:
 |---|---|---|
 | Update the active question-design reference and PDF heading guidance in addition to the eight minimum surfaces. | `include_now` | Both currently encode the obsolete visible sequence and would otherwise remain competing active guidance. |
 | Add a dedicated Part A contract checker instead of overloading the existing two-lane wording checker. | `include_now` | It keeps sequence semantics, non-retroactivity, and mutation tests focused and discoverable. |
-| Preserve the compact summary and website-help pointer without inserting extra exercise stages. | `include_now` | Summary belongs after section 7; website help remains subordinate inside `Startopgaven`, so useful content survives without breaking the required printed flow. |
+| Preserve the compact summary before exercises and remove every printed website/device pointer. | `include_now` | This retains Book 1 reading continuity and makes the classroom route fully usable on paper. |
 | Rename internal exercise-schema enum values such as `startoefening` and migrate existing records. | `defer_named_follow_up` | Those compatibility values are not the printed authoring contract; migration risk exceeds this bounded guidance task. |
 | Apply the contract to the first Book 2 paragraph. | `defer_named_follow_up` | Explicitly reserved by issue 218 until the contract is reviewed and approved. |
 | Audit or repair Book 1 paragraph 1.2.1. | `reject_scope_creep` | Book 1 is frozen and may be used only as historical continuity evidence. |
@@ -160,7 +176,8 @@ The sprint passes only when:
 
 ## Inputs
 
-- GitHub issue 218 and the user's attached assignment summary
+- GitHub issue 218, the original assignment, the owner review on PR #219, and
+  the 2026-08-31 correction requiring a paper-only/no-device printed route
 - `AGENTS.md`
 - `../4veco-lessen/specifications/product-vision.md`
 - `../4veco-lessen/specifications/product-end-state.md`
@@ -186,8 +203,9 @@ Required outputs are:
 - sprint plan, baseline, planning review, teacher-learning-quality review,
   planning-review resolution/recheck, command log, lead-review
   assignment/rounds/corrections, diff summary, result, and plan/result JSON;
-- a pushed task branch, draft PR, exact-head CI evidence, and human-review
-  routing without merge.
+- a pushed task branch, refreshed PR #219 description, exact-head CI evidence,
+  clean mergeability proof, and governed non-draft human-review routing without
+  merge.
 
 ## Operationalized sprint procedure
 
@@ -198,9 +216,10 @@ Required outputs are:
    worktree at its freshly fetched `origin/main`, record its SHA, and require
    whole-repository clean status before and after validation. Stop on branch
    collision, unexpected dirt, or protected/lesson surface changes.
-2. Write this plan, plan JSON, baseline, and active roadmap row. Explicitly
-   disposition summary after section 7 and website help as a subordinate
-   `Startopgaven` pointer. Run the plan
+2. Write and revise this plan, plan JSON, baseline, and active roadmap row.
+   Explicitly preserve the compact non-heading summary after the worked example
+   and before `Startopgaven`; remove printed website/device help and expose only
+   the paper short/support route. Run the plan
    validator and planned-bundle checker, then obtain an independent planning
    review. Correct the plan before any contract implementation if the reviewer
    finds a core omission or weak proof design; record a resolution and obtain a
@@ -214,27 +233,76 @@ Required outputs are:
    reference owns rationale/invariants, `econ-exercise-builder` owns the full
    operational contract, the question-design reference owns question/answer
    forms only, and every other surface inherits concisely. The checker must
-   verify the canonical contiguous order, Startopgaven roles,
-   core/support/challenge/review routes, backward-design table, time realism,
-   Part A/Part B boundary, and Book 1 non-retroactivity. Add mutation tests and
-   normal CI wiring. It must also reject target-absent worked-example
+   verify the canonical order at exact `##` level, summary placement,
+   Startopgaven roles, paper-only core/support/challenge/review routes,
+   backward-design table, time realism, internal Part A/Part B boundary, and
+   Book 1 non-retroactivity. Add mutation tests and normal CI wiring. Printed
+   template checks must reject internal lane language and website/device
+   dependencies without globally banning those terms in internal architecture
+   documentation. It must also reject target-absent worked-example
    operations, untaught prerequisite retrieval, mastery/diagnosis/automatic
    routing claims for the brief Start check, new theory in closing review, and
    intervening top-level summary/help stages. Stop rather than weakening checks
    if the aligned contract cannot be expressed deterministically.
+
+   Direct mutation evidence must prove failure when:
+
+   1. one canonical section changes from `##` to `###`;
+   2. `## Website-help` is inserted;
+   3. printed route copy says to use the website;
+   4. printed route copy says to use Part B;
+   5. printed route copy requires a laptop or online explanation;
+   6. the paper support note is removed;
+   7. the summary is moved after section 7;
+   8. the summary becomes an eighth top-level heading;
+   9. `Voorkennis ophalen` becomes a separate top-level heading;
+   10. `Begeleide inoefening` loses optionality or deliberate fading;
+   11. the bonus becomes repetitive arithmetic;
+   12. closing review introduces new theory; or
+   13. Book 1 output is added to checker scope.
+
+   The first twelve are the owner-specified content mutation matrix; the
+   thirteenth is the separately required non-retroactivity scope mutation.
 5. Refresh maps/indexes/dashboard when required, run focused and full
    validators through the sprint command logger, and inspect the final diff for
    scope and wording. Any change under `4veco-lessen`, Book 1 output,
    protected references, or student-facing generated output is a hard stop.
-6. Obtain teacher-learning-quality review and lead-review round 1. Record every
-   correction, implement required fixes, rerun relevant tests, then obtain
-   lead-review round 2 on the corrected exact head. A core-spec failure or
-   final verdict other than PASS/PASS WITH FLAGS blocks closure.
-7. Fetch/prune, resolve base freshness without scope expansion, commit, push,
-   open a draft PR, and verify exact-head `platform-ci / validate-platform`.
-   Run PR-readiness evidence/routing as required by current governance, but do
-   not merge. Human review/approval remains the decision gate before adopting
-   the contract for Book 2 production.
+6. Preserve all earlier review records. Obtain a renewed teacher-learning-
+   quality review with a separate evidence-backed judgment for each exact
+   owner-required criterion:
+
+   1. paper-only usability;
+   2. no-device compatibility;
+   3. all required support present in print;
+   4. a simple printed route;
+   5. backward alignment;
+   6. 55-minute feasibility;
+   7. same-goal differentiation;
+   8. bonus cognitive flexibility;
+   9. accessible closing review;
+   10. Book 1 continuity;
+   11. summary placement; and
+   12. absence of student-facing internal architecture terminology.
+
+   After focused/full validation, obtain a renewed
+   independent lead review covering headings, summary, student-facing copy,
+   checker scope/mutations, current-main integration, CI, and lesson cleanliness.
+   A core-spec failure or final verdict other than PASS/PASS WITH FLAGS blocks
+   closure.
+7. Current `main` integration is mandatory before final review: fetch/prune,
+   merge current `origin/main`, resolve conflicts without losing current-main
+   improvements or weakening this contract, and record both base and integration
+   SHAs. Commit, push the revised PR branch, and verify exact-integration-head
+   `platform-ci / validate-platform`.
+8. Synchronize the result Markdown/JSON and PR description with the real final
+   state. Record current base SHA, final PR head SHA, clean mergeability,
+   focused/full test counts, exact CI run, contract-check result, renewed
+   teacher/lead verdicts, lesson SHA and clean state, zero Book 1/Book 2 output
+   changes, removed printed website/device/internal terminology, deliberate
+   pre-exercise summary placement, and the remaining human-authority boundary.
+   Remove every stale claim that publication, readiness routing, or exact-head
+   CI is pending. Run PR-readiness routing, apply only `MARK_READY`, verify PR
+   head equals the reviewed/CI head and `isDraft: false`, and do not merge.
 
 ## Acceptance tests
 
@@ -242,6 +310,7 @@ Required outputs are:
 node build-scripts/sprints/run-sprint-command.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 -- node build-scripts/sprints/check-sprint-plan.js reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
 node build-scripts/sprints/run-sprint-command.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 -- node build-scripts/sprints/check-sprint-bundle.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1
 node build-scripts/sprints/run-sprint-command.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 -- npx.cmd jest build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js --runInBand
+node build-scripts/sprints/run-sprint-command.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 -- npm.cmd test -- --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js
 node build-scripts/sprints/run-sprint-command.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 -- npm.cmd run check:part-a-exercise-authoring-contract
 node build-scripts/sprints/run-sprint-command.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 -- npm.cmd run check:paragraph-workflow-wording
 node build-scripts/sprints/run-sprint-command.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 -- npm.cmd run check:exercise-workflow-currentness
@@ -279,23 +348,26 @@ Closure proof requires:
 - focused mutation tests and checker CLI exit-code evidence;
 - passing existing workflow wording/currentness/governance checks and full
   platform Jest/CI validation;
-- a teacher-learning-quality PASS showing the contract would produce aligned,
-  differentiated, realistically timed learning rather than merely valid text;
-- lead-review round 1 findings, a correction log, and round 2 PASS or PASS WITH
-  FLAGS with no core-spec failure;
+- a renewed teacher-learning-quality PASS with an explicit judgment for all
+  twelve listed review questions, showing a complete paper-only/no-device route;
+- the preserved earlier lead audit plus a renewed lead-review PASS or PASS WITH
+  FLAGS on the integrated revision, with no core-spec failure;
 - a clean no-lesson-output/no-protected-data diff and shared lane-scope proof;
 - whole-repository clean proof for the detached sibling lesson checkout at the
   recorded `f09fd6e88edc5049b026b16b0158e7e188091d2d` baseline;
 - current maps/indexes/dashboard and complete sprint-bundle evidence;
-- local commit SHA, pushed state, draft PR URL, and exact-head
-  `platform-ci / validate-platform` result.
+- current base SHA, final integration SHA, pushed state, PR URL, clean
+  mergeability, non-draft readiness, refreshed description/evidence with every
+  required handoff field, and exact-head `platform-ci / validate-platform`
+  result.
 
 Proof closes only this authoring-contract sprint. It does not approve a Book 2
 paragraph, Book 1 revision, Part B redesign, or merge.
 
 The task may close operationally only at `READY_FOR_HUMAN_REVIEW` after the
-validated draft PR and exact-head evidence exist. That state is not human
-approval. Later owner review governs merge and Book 2 adoption separately.
+cleanly mergeable non-draft PR, synchronized final evidence, and exact-head CI
+exist. That state is not human approval. Later owner review governs merge and
+Book 2 adoption separately.
 
 ## Rollback plan
 
@@ -306,9 +378,10 @@ Book 1 cleanup is needed because those files are forbidden from changing.
 ## Human review required
 
 Yes. This is governance and instructional-authoring-contract work. The agent
-may implement, validate, push, and open the required draft PR, but the contract
-must remain unmerged and must not be used to produce the first Book 2 paragraph
-until the repository owner reviews and approves the draft payload.
+must implement, validate, push, refresh PR #219, and use governed readiness
+routing to return a cleanly mergeable non-draft PR for human review. The
+contract must remain unmerged and must not be used to produce the first Book 2
+paragraph until the repository owner reviews and approves the final payload.
 
 ## Lead Review Required
 
@@ -331,11 +404,11 @@ Stop and report if:
 - required validators, teacher review, or lead-review round 2 fail after
   reasonable in-scope corrections;
 - remote publication or exact-head CI cannot be established;
-- the requested draft PR would require merge or broader product authority.
+- the requested readiness state would require merge or broader product authority.
 
 ## Next Authorized Work After Closure
 
-After human approval and merge of this contract, create a separate governed
+After later human approval and merge of this contract, create a separate governed
 task to build the first Book 2 paragraph under the approved rules. Keep broader
 paragraph-process redesign, cross-surface Part A/Part B comparison, internal
 schema-role migration, and every Book 1 revision as separately authorized

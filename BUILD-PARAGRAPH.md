@@ -202,8 +202,10 @@ Every official answer-model step must be traceable to one of:
 - deliberately out of scope, with reason.
 
 A paragraph cannot receive an exam-target PASS if students are asked to perform
-an answer-model operation that is not taught, practised, scaffolded, or
-justified as prior knowledge.
+an answer-model operation that is not taught, practised before the target,
+scaffolded in printed Part A, or justified as prior knowledge. A companion or
+game repetition may reinforce the operation later, but cannot close a gap in
+the paper lesson route.
 
 The trace must follow the student-facing route, not only the source files. For
 each official prompt/source/correction-model requirement, name where the
@@ -254,28 +256,35 @@ Dutch.
 
 Follow `econ-textbook-paragraph` skill exactly:
 
-1. Write `X.Y.Z [Name] – paragraaf.md` — theory followed directly by the contiguous exercise block and then the compact summary
-2. Extract exercises into `X.Y.Z [Name] – opgaven.md` — the seven headings from "## Uitgewerkt voorbeeld" through "## Herhaling / Herhaling en interleaving"; keep the compact summary after section 7 when the standalone opgaven artifact needs that recap
+1. Write `X.Y.Z [Name] – paragraaf.md` — motivating problem, theory, `## Uitgewerkt voorbeeld`, compact non-heading summary, then the remaining exercise route
+2. Extract exercises into `X.Y.Z [Name] – opgaven.md` — the seven canonical `##` headings; keep the compact non-heading summary between `## Uitgewerkt voorbeeld` and `## Startopgaven`
 3. Write `X.Y.Z [Name] – antwoorden.md` — complete answer model with step-by-step solutions
 
 For newly authored Book 2+ theory paragraphs the seven printed headings are,
 in exact order:
 
-```
-1. Uitgewerkt voorbeeld
-2. Startopgaven
-3. Begeleide inoefening
-4. Zelfstandige oefening
-5. Doeloefening
-6. Denkertje / Bonusopgave
-7. Herhaling / Herhaling en interleaving
+```markdown
+## Uitgewerkt voorbeeld
+## Startopgaven
+## Begeleide inoefening
+## Zelfstandige oefening
+## Doeloefening
+## Denkertje / Bonusopgave
+## Herhaling / Herhaling en interleaving
 ```
 
-Keep them contiguous: no summary, website-help stage, generic `Opgaven`, or
-other top-level exercise heading may intervene. Place the compact summary after
-section 7 as a non-exercise recap. If website help exists, place it as a
-subordinate non-heading optional Part B pointer inside `Startopgaven`, beside:
-`Korte route: Startopgaven -> Zelfstandige oefening -> Doeloefening.`
+Keep the summary as a compact non-heading box after the worked example and
+before Startopgaven. No `## Samenvatting`, `## Website-help`, generic `##
+Opgaven`, `## Voorkennis ophalen`, or other top-level heading may appear among
+the seven canonical headings. Printed student copy uses only this paper route:
+
+> **Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
+> **Extra hulp nodig?** Maak eerst Begeleide inoefening.
+
+All normal-route explanation and scaffolding must be present in print. Do not
+direct students to a website, online explanation, companion page, laptop,
+phone, tablet, QR code, or other device. Keep Part A, Part B, lane, companion
+route, and repository terminology in internal guidance and handoffs only.
 
 Author to these ranges: Startopgaven 5–8 minutes; optional Begeleide inoefening
 8–15; Zelfstandige oefening 10–18; Doeloefening 8–12; optional
@@ -289,9 +298,9 @@ builds cognitive flexibility rather than more arithmetic. Closing review has
 1–2 accessible cumulative tasks and no new theory.
 
 For each paragraph, record and verify:
-`motivation + instruction + worked example + transitions/recap + actual
-Startopgaven questions + actual Zelfstandige oefening questions + actual
-Doeloefening questions = planned lesson minutes <= 55`. The recommended
+`motivation + instruction + worked example + compact summary and transitions +
+actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening =
+planned lesson minutes <= 55`. The recommended
 23–38-minute core-range sum is not sufficient proof because the other lesson
 phases also consume time. Justify any range deviation and never remove a target
 operation to force the arithmetic to fit.
@@ -365,11 +374,11 @@ between the textbook lane and the companion lane.
 - [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
 - [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 - [ ] Book 2+ backward-design alignment table covers every goal and target operation
-- [ ] Seven Part A headings are present, contiguous, and exactly ordered; theory → Uitgewerkt voorbeeld → Startopgaven has no intervening stage
+- [ ] Seven Part A headings use exact `##` level and order; theory → Uitgewerkt voorbeeld → compact non-heading summary → Startopgaven is preserved
 - [ ] Both Startopgaven roles and route note are present; a whole-lesson equation using actual question estimates totals ≤55 minutes
 - [ ] Optional guided route keeps the same goal, adds/fades support, and uses neutral skip wording
 - [ ] Bonus builds cognitive flexibility; closing review has 1–2 accessible taught-content tasks and no new theory
-- [ ] Summary is after section 7; any website-help pointer is subordinate inside Startopgaven
+- [ ] Summary is before Startopgaven with ≤5 points; printed copy has the paper support note and no website/device/internal-lane direction
 
 **Consolidation paragraphs:**
 - [ ] opgaven.md, antwoorden.md exist (no paragraaf.md)

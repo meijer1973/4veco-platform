@@ -102,7 +102,7 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 | Check | What to look for |
 |-------|-----------------|
 | 1.5.1 Backward-design alignment | Does the required `Lesson goal \| Target subquestion/operation \| Worked example \| Start check \| Guided practice \| Independent practice \| Covered/gap` table cover every goal and target operation without a silent gap? |
-| 1.5.2 Exact structure and adjacency | Are the seven headings contiguous and exactly ordered: `Uitgewerkt voorbeeld`, `Startopgaven`, `Begeleide inoefening`, `Zelfstandige oefening`, `Doeloefening`, `Denkertje / Bonusopgave`, `Herhaling / Herhaling en interleaving`? Does the example directly follow theory and Startopgaven directly follow it? Any missing, reordered, or intervening top-level stage is a FAIL. |
+| 1.5.2 Exact structure and adjacency | Are the seven exercise headings exactly ordered and exactly levelled as `## Uitgewerkt voorbeeld`, `## Startopgaven`, `## Begeleide inoefening`, `## Zelfstandige oefening`, `## Doeloefening`, `## Denkertje / Bonusopgave`, `## Herhaling / Herhaling en interleaving`? Does theory flow to the example, compact non-heading summary, then Startopgaven? Any missing, reordered, wrong-level, or additional top-level stage is a FAIL. |
 | 1.5.3 Worked-example alignment | Does the worked example use the same operation chain as the doeloefening, with simpler context/values and no operation absent from the target or lesson goals? |
 | 1.5.4 Startopgaven roles | Under one visible heading, is there both retrieval of prerequisites already taught and a compact current-content comprehension check? The check must remain brief and low-stakes, not mastery, diagnosis, or automatic routing. |
 | 1.5.5 Optional guided route | Is Begeleide inoefening retained as a printed heading but optional for students, aimed at the same goal/target, more explicitly scaffolded, deliberately faded, and accompanied by neutral skip wording? Missing/ineffective fading, a changed/lowered goal, or non-neutral routing is a FAIL. |
@@ -110,16 +110,17 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 | 1.5.7 Route realism | Is the route note `Startopgaven -> Zelfstandige oefening -> Doeloefening` visible, and does an explicit equation total motivation + instruction + worked example + transitions/recap + the actual estimated core-route questions at ≤55 minutes? Range addition or `23–38 < 55` alone is not proof. |
 | 1.5.8 Denkertje/bonus | Does the optional task build cognitive flexibility via transfer, representation, assumption, strategy, comparison, or critique rather than more arithmetic of the same kind? |
 | 1.5.9 Closing review | Does the final exercise section contain only 1–2 short accessible cumulative/homework tasks using taught content, with no new theory? |
+| 1.5.10 Paper-only completeness | Are all explanation, retrieval, scaffolding, independent practice, and target preparation needed in class present in print? Any printed website/device/online dependency or student-facing Part A, Part B, lane, or companion-route term is a FAIL. |
 
 ### 1.6 Summary and navigation
 
 | Check | What to look for |
 |-------|-----------------|
-| 1.6.1 Summary present and placed | Does a compact summary box follow section 7, outside the contiguous exercise block, listing the key concepts and rules? |
+| 1.6.1 Summary present and placed | Does a compact non-heading summary box follow the worked example and precede Startopgaven, listing no more than five concise key points? |
 | 1.6.2 Summary completeness | Does the summary capture ALL key conceptual insights from the paragraph, including nuances like piecewise functions, domain restrictions, or special cases? If a concept is taught in the body but absent from the summary, FLAG it. |
 | 1.6.3 Forward reference | Does the summary or final sentence indicate what comes next (e.g., "In §1.2.4 oefenen we...")? This helps students orient within the book structure. |
-| 1.6.4 No intervening stage | Is there no summary, website-help stage, generic `Opgaven`, or other top-level heading between theory, Uitgewerkt voorbeeld, and Startopgaven—or inside the seven-heading block? |
-| 1.6.5 Part B help boundary | If website help is referenced, is it only a subordinate non-heading optional Part B pointer inside Startopgaven, not a printed Part A route step? Is `Start -> Leer -> Check -> Oefen -> Exit ticket` kept out of the Part A heading sequence? |
+| 1.6.4 No additional heading | Is the summary a non-heading box, with no `## Samenvatting`, `## Website-help`, generic `## Opgaven`, `## Voorkennis ophalen`, or other additional top-level heading among the seven exercise headings? |
+| 1.6.5 Internal architecture boundary | Do internal documents keep Part A and Part B distinct while all student-facing printed template copy omits internal architecture terms and online/device directions? |
 
 ### 1.7 School-fit quality (from school standards overlay)
 
@@ -350,7 +351,8 @@ These are the errors most frequently found in economics textbook paragraphs, ord
 - Let a formula pass without checking its domain restriction
 - Review exercises without attempting to solve them yourself
 - Approve a paragraph where the worked example contains a calculation error
-- Approve a Book 2+ paragraph with reordered/missing Part A headings or an intervening summary/help stage
+- Approve a Book 2+ paragraph with reordered, missing, or wrong-level `##` exercise headings, or with the compact summary outside its worked-example-to-Start position
+- Accept a printed route that depends on or advertises a website, device, online explanation, Part B, lane, or companion route
 - Treat the brief Startopgaven check as mastery, diagnosis, or automatic routing
 - Accept guided practice that changes the goal, never fades, or uses ability labels
 - Accept a bonus that is merely more arithmetic or a closing review that adds theory

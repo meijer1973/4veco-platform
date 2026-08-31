@@ -13,12 +13,12 @@ assignment surface for ordinary textbook paragraph production.
 
 For newly authored Book 2 and later theory paragraphs, use
 `skills/econ-exercise-builder.md` as the operational Part A exercise contract:
-backward-design alignment, exact contiguous headings `Uitgewerkt voorbeeld ->
-Startopgaven -> Begeleide inoefening -> Zelfstandige oefening -> Doeloefening
--> Denkertje / Bonusopgave -> Herhaling / Herhaling en interleaving`, and the
-short/core route `Startopgaven -> Zelfstandige oefening -> Doeloefening`. Keep
-the recap after section 7; keep any website-help pointer subordinate inside
-Startopgaven. Book 1 output is frozen and must not be retrofitted.
+backward-design alignment, the exact canonical seven `##` headings, the compact
+non-heading summary after the worked example and before Startopgaven, and the
+paper short/support route. All explanation and support required in the lesson
+must be present in print; printed student copy must not advertise or depend on
+a website, device, online explanation, or companion surface and must not expose
+internal lane terminology. Book 1 output is frozen and must not be retrofitted.
 
 The companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` belongs
 to Part B. It is not a printed Part A heading sequence and does not create an

@@ -51,17 +51,26 @@ describe('Part A exercise authoring source contract', () => {
   test('rejects reordered or interrupted canonical headings', () => {
     const files = mutate(
       'skills/econ-exercise-builder.md',
-      '2. Startopgaven\n3. Begeleide inoefening',
-      '2. Begeleide inoefening\n3. Startopgaven'
+      '## Startopgaven\n## Begeleide inoefening',
+      '## Begeleide inoefening\n## Startopgaven'
     );
-    expectFailure(files, 'canonical seven-heading block');
+    expectFailure(files, 'canonical block after');
 
     const interrupted = mutate(
       'skills/econ-exercise-builder.md',
-      '2. Startopgaven\n3. Begeleide inoefening',
-      '2. Startopgaven\n3. Samenvatting\n4. Begeleide inoefening'
+      '## Startopgaven\n## Begeleide inoefening',
+      '## Startopgaven\n## Samenvatting\n## Begeleide inoefening'
     );
-    expectFailure(interrupted, 'canonical seven-heading block');
+    expectFailure(interrupted, 'canonical block after');
+  });
+
+  test('rejects a wrong heading level in a canonical source block', () => {
+    const files = mutate(
+      'skills/econ-pdf-builder.md',
+      '## Uitgewerkt voorbeeld\n## Startopgaven',
+      '### Uitgewerkt voorbeeld\n## Startopgaven'
+    );
+    expectFailure(files, 'must contain exactly seven ## headings');
   });
 
   test('rejects extra or intervening headings in the operational template', () => {
@@ -74,8 +83,8 @@ describe('Part A exercise authoring source contract', () => {
 
     const websiteStage = mutate(
       'skills/econ-exercise-builder.md',
-      '[Fully solved example — students read, not solve]\n\n## Startopgaven',
-      '[Fully solved example — students read, not solve]\n\n## Website-help\n\n## Startopgaven'
+      '> - [Brief forward reference]\n\n## Startopgaven',
+      '> - [Brief forward reference]\n\n## Website-help\n\n## Startopgaven'
     );
     expectFailure(websiteStage, 'operational template must contain exactly');
   });
@@ -84,19 +93,69 @@ describe('Part A exercise authoring source contract', () => {
     expectFailure(
       mutate(
         'skills/econ-textbook-paragraph.md',
-        '│ 7. ZELFSTANDIGE OEFENING                    │\n│ 8. DOELOEFENING',
-        '│ 7. DOELOEFENING                             │\n│ 8. ZELFSTANDIGE OEFENING'
+        '│ 8. ## ZELFSTANDIGE OEFENING                 │\n│ 9. ## DOELOEFENING',
+        '│ 8. ## DOELOEFENING                          │\n│ 9. ## ZELFSTANDIGE OEFENING'
       ),
       'canonical paragraph structure diagram'
     );
     expectFailure(
       mutate(
         'BUILD-PARAGRAPH.md',
-        '3. Begeleide inoefening\n4. Zelfstandige oefening',
-        '3. Zelfstandige oefening\n4. Begeleide inoefening'
+        '## Begeleide inoefening\n## Zelfstandige oefening',
+        '## Zelfstandige oefening\n## Begeleide inoefening'
       ),
-      'canonical seven-heading block'
+      'canonical block after'
     );
+  });
+
+  test('rejects every forbidden printed help dependency and missing paper support', () => {
+    const supportLine = '**Extra hulp nodig?** Maak eerst Begeleide inoefening.';
+
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Gebruik de website.'),
+      'printed template depends on or advertises digital support'
+    );
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Ga naar Part B.'),
+      'printed template exposes internal architecture terminology'
+    );
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Bekijk de online uitleg op je laptop.'),
+      'printed template depends on or advertises digital support'
+    );
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine),
+      'paper support note missing from printed template'
+    );
+  });
+
+  test('rejects summary placement after section seven and summary-as-heading', () => {
+    const summary = [
+      '> **Samenvatting §X.Y.Z**',
+      '> - [Key insight 1]',
+      '> - [Key insight 2]',
+      '> - [Central formula or procedure]',
+      '> - [Brief forward reference]',
+    ].join('\n');
+    const files = cloneFiles();
+    expect(files['skills/econ-exercise-builder.md']).toContain(`${summary}\n\n## Startopgaven`);
+    expect(files['skills/econ-exercise-builder.md']).toContain(
+      '[One of 1–2 short cumulative tasks; no new theory]\n```'
+    );
+    files['skills/econ-exercise-builder.md'] = files['skills/econ-exercise-builder.md']
+      .replace(`${summary}\n\n## Startopgaven`, '## Startopgaven')
+      .replace(
+        '[One of 1–2 short cumulative tasks; no new theory]\n```',
+        `[One of 1–2 short cumulative tasks; no new theory]\n\n${summary}\n\`\`\``
+      );
+    expectFailure(files, 'compact non-heading summary must follow the worked example and precede Startopgaven');
+
+    const summaryHeading = mutate(
+      'skills/econ-exercise-builder.md',
+      '> **Samenvatting §X.Y.Z**',
+      '## Samenvatting §X.Y.Z'
+    );
+    expectFailure(summaryHeading, 'summary must not become an eighth top-level heading');
   });
 
   test.each([
@@ -109,10 +168,32 @@ describe('Part A exercise authoring source contract', () => {
     expectFailure(mutate('skills/econ-exercise-builder.md', needle), failure);
   });
 
+  test('rejects making guided practice mandatory and adding new closing theory', () => {
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        'required printed heading but an optional\n   student route',
+        'required printed heading and a mandatory\n   student route'
+      ),
+      'optional guided/fading rule missing'
+    );
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        'It may be homework and introduces no\n   new theory.',
+        'It may be homework and introduces\n   new theory.'
+      ),
+      'closing-review rule missing'
+    );
+  });
+
   test('rejects removal of route, neutral skip wording, and flexibility semantics', () => {
     expectFailure(
-      mutateAll('skills/econ-exercise-builder.md', 'Korte route:'),
-      'core route note missing'
+      mutate(
+        'skills/econ-exercise-builder.md',
+        '**Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.'
+      ),
+      'paper short-route note missing from printed template'
     );
     expectFailure(
       mutateAll('skills/econ-exercise-builder.md', 'Heb je deze hulp niet nodig?'),
@@ -140,10 +221,10 @@ describe('Part A exercise authoring source contract', () => {
     expectFailure(
       mutate(
         'skills/econ-paragraph-review.md',
-        'Any missing, reordered, or intervening top-level stage is a FAIL.',
-        'Any missing, reordered, or intervening top-level stage is a FLAG.'
+        'Any missing, reordered, wrong-level, or additional top-level stage is a FAIL.',
+        'Any missing, reordered, wrong-level, or additional top-level stage is a FLAG.'
       ),
-      'review adjacency hard-fail severity missing'
+      'review heading/adjacency hard-fail severity missing'
     );
     expectFailure(
       mutate(

@@ -116,34 +116,34 @@ Every newly authored Book 2+ theory paragraph follows this structure, in
 │    Definition boxes, formula boxes,          │
 │    misconception warnings, recall boxes      │
 ├─────────────────────────────────────────────┤
-│ 4. WORKED EXAMPLE                           │
-│    First of seven contiguous headings; same  │
+│ 4. ## UITGEWERKT VOORBEELD                  │
+│    First of seven canonical headings; same   │
 │    target-operation chain, simpler context   │
 ├─────────────────────────────────────────────┤
-│ 5. STARTOPGAVEN                             │
+│ 5. SUMMARY BOX                              │
+│    Compact non-heading paper reference       │
+├─────────────────────────────────────────────┤
+│ 6. ## STARTOPGAVEN                          │
 │    Taught-prerequisite retrieval + compact   │
 │    current-content comprehension check       │
 ├─────────────────────────────────────────────┤
-│ 6. BEGELEIDE INOEFENING                     │
+│ 7. ## BEGELEIDE INOEFENING                  │
 │    Printed, optionally followed; same goal   │
 ├─────────────────────────────────────────────┤
-│ 7. ZELFSTANDIGE OEFENING                    │
-│ 8. DOELOEFENING                             │
-│ 9. DENKERTJE / BONUSOPGAVE                  │
-│10. HERHALING / HERHALING EN INTERLEAVING    │
-│    End of the contiguous seven-heading block │
-├─────────────────────────────────────────────┤
-│11. SUMMARY BOX                              │
-│    Compact non-exercise recap after section 7│
+│ 8. ## ZELFSTANDIGE OEFENING                 │
+│ 9. ## DOELOEFENING                          │
+│10. ## DENKERTJE / BONUSOPGAVE               │
+│11. ## HERHALING / HERHALING EN INTERLEAVING │
+│    End of the canonical seven-heading route  │
 └─────────────────────────────────────────────┘
 ```
 
-**Critical:** the student reads `theory -> Uitgewerkt voorbeeld ->
-Startopgaven`. Those seven named headings are contiguous. No top-level summary,
-website-help stage, generic `Opgaven`, or other exercise heading may intervene.
-If website help exists, put a subordinate non-heading optional Part B pointer
-inside `Startopgaven` beside the short-route note. The Part B route `Start ->
-Leer -> Check -> Oefen -> Exit ticket` is not the printed Part A sequence.
+**Critical:** the student reads `theory -> Uitgewerkt voorbeeld -> compact
+non-heading summary -> Startopgaven`. The seven exercise headings use exact
+Markdown level `##`; the summary is not an eighth heading. No additional
+top-level summary, website-help, generic `Opgaven`, or prerequisite heading may
+appear among them. The printed paragraph is complete on paper and does not
+advertise or depend on a website, device, online explanation, or Part B.
 
 ### 2.2 What goes where
 
@@ -155,7 +155,7 @@ Leer -> Check -> Oefen -> Exit ticket` is not the printed Part A sequence.
 | Core exercise route | Startopgaven → Zelfstandige oefening → Doeloefening | Recommended ranges total 23–38 min; actual questions must fit remaining lesson time |
 | Optional guided route | Same goal, stronger support with deliberate fading | 8–15 min |
 | Bonus / closing review | Cognitive flexibility / 1–2 accessible cumulative tasks | 8–15 min outside core / 4–8 min often homework |
-| Summary | Recap, key formulas, after section 7 | ~2 min (reference) |
+| Summary | Compact paper recap after worked example, before exercises | ~2 min (reference) |
 
 Use the full backward-design and per-section authoring contract in
 `econ-exercise-builder`, including the required alignment table. The worked
@@ -275,7 +275,7 @@ Rules:
 
 ### 3.7 Summary box
 
-At the end of every paragraph:
+Immediately after `Uitgewerkt voorbeeld` and before `Startopgaven`:
 
 ```markdown
 > **Samenvatting §X.Y.Z**
@@ -289,8 +289,8 @@ Rules:
 - Maximum 5 bullet points
 - Include the key formula(s) from this paragraph
 - End with a forward pointer: "In de volgende paragraaf…"
-- Place the box after `Herhaling / Herhaling en interleaving`, outside the
-  contiguous seven exercise headings; it is not an eighth exercise section
+- Keep the box non-heading and place it between the first and second canonical
+  exercise headings; it is not an eighth exercise section
 
 ---
 
@@ -457,14 +457,14 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 2. □ One concept only — no scope creep
 3. □ Every lesson goal from the blueprint is addressed in theory AND practised in exercises
 4. □ Worked example uses the same procedure as the target exercise
-5. □ Worked example follows theory directly, adds no untargeted operation, and Startopgaven follows directly
-6. □ Exact contiguous Book 2+ heading order: Uitgewerkt voorbeeld → Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave → Herhaling / Herhaling en interleaving
+5. □ Worked example follows theory directly, adds no untargeted operation, the compact summary follows it, and Startopgaven follows the summary
+6. □ Exact Book 2+ `##` heading order: Uitgewerkt voorbeeld → Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave → Herhaling / Herhaling en interleaving
 7. □ Required alignment table covers every lesson goal and target operation
 8. □ Startopgaven has taught-prerequisite retrieval and a compact current-content check under one heading; it is not mastery/diagnosis/automatic routing
 9. □ Core route note is present and a whole-lesson equation totals motivation + instruction + worked example + transitions/recap + actual core-route questions at ≤55 minutes
 10. □ Optional Begeleide inoefening keeps the same goal, gives stronger support, fades it deliberately, and uses neutral skip wording
 11. □ Denkertje/bonus builds cognitive flexibility; closing review has 1–2 accessible cumulative/homework tasks and no new theory
-12. □ Summary follows section 7 and any website-help pointer is subordinate inside Startopgaven
+12. □ Summary is a non-heading paper box after the worked example and before Startopgaven; printed copy contains no website/device or internal lane pointer
 13. □ Dual coding fading applied inside optional guided practice (visual → visual → no visual)
 14. □ At least one misconception warning if applicable (check `econ-didactiek` §7.4)
 15. □ Definitions use exact syllabus terminology (verify against `references/authored/economie-terminologie.md`)
@@ -484,7 +484,7 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 14. □ All image references verified to resolve (covered by 12a/12b — do not skip)
 15. □ No difficulty ratings or time estimates in student-facing markdown
 16. □ Definition boxes, formula boxes, warning boxes visually distinct
-17. □ Summary box present after section 7 with ≤5 points and forward pointer
+17. □ Summary box present before Startopgaven with ≤5 points and forward pointer
 18. □ File naming follows convention: `X.Y.Z_type_number`
 19. □ PDF exported via `econ-pdf-builder` without errors
 

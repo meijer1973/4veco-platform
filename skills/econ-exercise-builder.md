@@ -64,9 +64,9 @@ support detour. Bonus is outside the core; closing review may be homework.
 
 For each paragraph, record an actual whole-lesson equation before authoring:
 
-`motivation + instruction + worked example + transitions/recap + actual
-Startopgaven questions + actual Zelfstandige oefening questions + actual
-Doeloefening questions = planned lesson minutes <= 55`
+`motivation + instruction + worked example + compact summary and transitions +
+actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening =
+planned lesson minutes <= 55`
 
 The section ranges below are recommendations, not proof by themselves. Select
 and total the actual questions within the remaining work time. If a justified
@@ -118,17 +118,17 @@ oefening`.
 ### 3.1 The sequence
 
 Design in this order: `lesson goals -> doeloefening -> target-operation
-decomposition -> worked example and practice`. Print the following seven
-headings contiguously and never reorder them:
+decomposition -> worked example and practice`. Use this exact Markdown
+hierarchy and never reorder the seven exercise headings:
 
-```
-1. Uitgewerkt voorbeeld
-2. Startopgaven
-3. Begeleide inoefening
-4. Zelfstandige oefening
-5. Doeloefening
-6. Denkertje / Bonusopgave
-7. Herhaling / Herhaling en interleaving
+```markdown
+## Uitgewerkt voorbeeld
+## Startopgaven
+## Begeleide inoefening
+## Zelfstandige oefening
+## Doeloefening
+## Denkertje / Bonusopgave
+## Herhaling / Herhaling en interleaving
 ```
 
 1. **Uitgewerkt voorbeeld** follows theory directly. It is fully solved,
@@ -137,10 +137,9 @@ headings contiguously and never reorder them:
 2. **Startopgaven** combines two roles under this single visible heading:
    (a) retrieval of prerequisites already taught and (b) a compact check of
    current-content comprehension. The check is low-stakes and brief; do not
-   call it mastery, diagnosis, or use it for automatic routing. Include the
-   route note: `Korte route: Startopgaven -> Zelfstandige oefening ->
-   Doeloefening.` An optional website-help pointer may appear here only as a
-   subordinate non-heading Part B pointer.
+   call it mastery, diagnosis, or use it for automatic routing. Include only
+   this compact paper route note: `Korte route: Startopgaven → Zelfstandige
+   oefening → Doeloefening. Extra hulp nodig? Maak eerst Begeleide inoefening.`
 
    Within the 5–8-minute Startopgaven total, the prerequisite-retrieval task is
    normally 3–5 minutes. A teacher may assign that printed retrieval task at
@@ -163,6 +162,14 @@ headings contiguously and never reorder them:
 7. **Herhaling / Herhaling en interleaving** contains 1–2 short, accessible
    cumulative tasks using taught content. It may be homework and introduces no
    new theory.
+
+**Paper-first/no-device rule:** the printed paragraph must contain all
+explanation, prerequisite retrieval, guided scaffolding, independent practice,
+and target preparation needed for the classroom lesson. Student-facing
+template copy must not direct students to a website, online explanation,
+companion page, laptop, phone, tablet, QR code, or other digital support. It
+must not expose internal terms such as Part A, Part B, lane, or companion route.
+Those terms remain valid only in internal repository guidance and handoffs.
 
 ### 3.2 Dual coding fading — the 4-stage rule
 
@@ -366,6 +373,12 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 
 [Fully solved example — students read, not solve]
 
+> **Samenvatting §X.Y.Z**
+> - [Key insight 1]
+> - [Key insight 2]
+> - [Central formula or procedure]
+> - [Brief forward reference]
+
 ## Startopgaven
 
 **Opgave 1 — Ophalen**
@@ -374,9 +387,8 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 **Opgave 2 — Begripscheck**
 [Compact, low-stakes check of current-content comprehension]
 
-*Korte route: Startopgaven -> Zelfstandige oefening -> Doeloefening.*
-
-> Vastgelopen? Gebruik desgewenst de aanvullende hulp in Part B.
+**Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
+**Extra hulp nodig?** Maak eerst Begeleide inoefening.
 
 ## Begeleide inoefening
 
@@ -402,14 +414,14 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 
 **Opgave [N+2]** *(herhaling §X.Y.Z: [skill name])*
 [One of 1–2 short cumulative tasks; no new theory]
-
-> **Samenvatting §X.Y.Z**
-> - [Compact recap after section 7; not an eighth exercise heading]
 ```
 
-Do not insert a top-level summary, website-help stage, generic `Opgaven`, or
-other exercise heading between `Uitgewerkt voorbeeld` and `Startopgaven`, or
-anywhere inside the contiguous seven-heading block.
+The compact summary is deliberately placed after `Uitgewerkt voorbeeld` and
+before `Startopgaven` so it remains available as a paper reference. It has at
+most five concise points and is never a top-level heading or eighth exercise
+section. Do not insert `## Samenvatting`, `## Website-help`, `## Voorkennis
+ophalen`, a generic `## Opgaven`, or any other top-level heading among the
+seven canonical `##` headings.
 
 ### 7.2 answers.md structure
 
@@ -450,11 +462,11 @@ Antwoord: ...
 2. □ Complete the required alignment table; name every uncovered gap
 3. □ Design the worked example from the target chain — same operations, simpler values/context, no extra operation
 4. □ Design both Startopgaven roles under one heading: taught-prerequisite retrieval + compact current-content check
-5. □ Record the whole-lesson equation (motivation + instruction + example + transitions/recap + actual core-route questions ≤55); range addition alone is not proof
+5. □ Record the whole-lesson equation (motivation + instruction + worked example + compact summary/transitions + actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening ≤55); range addition alone is not proof
 6. □ If guided practice is useful, keep the same goal, add stronger explicit scaffolding, plan deliberate fading, and add neutral skip wording
 7. □ Select 1–2 accessible closing-review skills from already taught content; introduce no theory there
 8. □ Design bonus for cognitive flexibility, not more arithmetic of the same kind
-9. □ Keep the exact seven headings contiguous and keep Part B route/help subordinate
+9. □ Keep the exact seven exercise headings in order at `##`; place the non-heading summary after the example and before Startopgaven; keep every required support route on paper and internal architecture terms out of student copy
 10. □ Specify all graphs and write the unified-procedure answer model with substitution, units, and "waarom"
 
 ---

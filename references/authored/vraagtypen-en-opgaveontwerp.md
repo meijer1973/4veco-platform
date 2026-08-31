@@ -88,12 +88,11 @@ Questions appear in four distinct contexts within the platform, each with differ
 **Scope:** Single skill, single paragraph.
 
 The operational contract is defined once in `skills/econ-exercise-builder.md`:
-backward design from goals and target operations; the exact contiguous headings
-`Uitgewerkt voorbeeld`, `Startopgaven`, `Begeleide inoefening`, `Zelfstandige
-oefening`, `Doeloefening`, `Denkertje / Bonusopgave`, and `Herhaling /
-Herhaling en interleaving`; and the core route `Startopgaven -> Zelfstandige
-oefening -> Doeloefening`. Use the question taxonomy in this reference to
-choose sound prompts and answer forms inside those sections.
+backward design from goals and target operations, the exact canonical seven
+`##` exercise headings, the pre-exercise non-heading summary, and the paper-only
+short/support route. Use the question taxonomy in this reference to choose
+sound prompts and answer forms inside those sections; this reference does not
+authorize a website or device dependency in printed Part A.
 
 ### 2.2 Consolidation exercises (econ-consolidation-builder)
 

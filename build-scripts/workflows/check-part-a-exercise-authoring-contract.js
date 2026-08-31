@@ -74,36 +74,35 @@ function firstCodeBlockAfter(text, marker) {
   return text.slice(contentStart + 1, blockEnd);
 }
 
-function numberedHeadings(block) {
+function markdownHeadings(block) {
   return block
     .split(/\r?\n/)
-    .map((line) => line.match(/^\s*\d+\.\s+(.+?)\s*$/))
+    .map((line) => line.match(/^(#{1,6})\s+(.+?)\s*$/))
     .filter(Boolean)
-    .map((match) => match[1].replace(/`/g, '').trim());
+    .map((match) => ({ level: match[1].length, title: match[2].trim() }));
 }
 
 function markdownLevelTwoHeadings(block) {
-  return block
-    .split(/\r?\n/)
-    .map((line) => line.match(/^##\s+(.+?)\s*$/))
-    .filter(Boolean)
-    .map((match) => match[1].trim());
+  return markdownHeadings(block)
+    .filter((heading) => heading.level === 2)
+    .map((heading) => heading.title);
 }
 
 function diagramNumberedHeadings(block) {
   return block
     .split(/\r?\n/)
-    .map((line) => line.match(/│\s*(\d+)\.\s*([A-Z][A-Z /]+?)\s*│/))
+    .map((line) => line.match(/│\s*(\d+)\.\s*((?:##\s+)?[A-Z][A-Z /]+?)\s*│/))
     .filter(Boolean)
     .map((match) => match[2].trim());
 }
 
 function requireExactCanonicalBlock(failures, files, file, marker) {
   const text = files[file] || '';
-  const actual = numberedHeadings(firstCodeBlockAfter(text, marker));
-  if (JSON.stringify(actual) !== JSON.stringify(CANONICAL_HEADINGS)) {
+  const actual = markdownHeadings(firstCodeBlockAfter(text, marker));
+  const expected = CANONICAL_HEADINGS.map((title) => ({ level: 2, title }));
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     failures.push(
-      `${file}: canonical seven-heading block after "${marker}" must contain exactly ${CANONICAL_HEADINGS.join(' -> ')}`
+      `${file}: canonical block after "${marker}" must contain exactly seven ## headings in canonical order`
     );
   }
 }
@@ -127,18 +126,72 @@ function requireExactParagraphDiagram(failures, files) {
     'HEADER',
     'MOTIVATING PROBLEM',
     'THEORY',
-    'WORKED EXAMPLE',
-    'STARTOPGAVEN',
-    'BEGELEIDE INOEFENING',
-    'ZELFSTANDIGE OEFENING',
-    'DOELOEFENING',
-    'DENKERTJE / BONUSOPGAVE',
-    'HERHALING / HERHALING EN INTERLEAVING',
+    '## UITGEWERKT VOORBEELD',
     'SUMMARY BOX',
+    '## STARTOPGAVEN',
+    '## BEGELEIDE INOEFENING',
+    '## ZELFSTANDIGE OEFENING',
+    '## DOELOEFENING',
+    '## DENKERTJE / BONUSOPGAVE',
+    '## HERHALING / HERHALING EN INTERLEAVING',
   ];
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     failures.push(`${file}: canonical paragraph structure diagram is missing, reordered, or has an extra stage`);
   }
+}
+
+function requireExactInlineHeadingSequence(failures, files, file, startMarker, endMarker) {
+  const text = files[file] || '';
+  const start = text.indexOf(startMarker);
+  const end = endMarker ? text.indexOf(endMarker, start + startMarker.length) : text.length;
+  if (start === -1 || (endMarker && end === -1)) {
+    failures.push(`${file}: sequence section markers missing`);
+    return;
+  }
+  const matches = [...text.slice(start, end).matchAll(/`(#{1,6})\s+([^`]+)`/g)]
+    .map((match) => ({ level: match[1].length, title: match[2].trim() }))
+    .filter((heading) => CANONICAL_HEADINGS.includes(heading.title));
+  const expected = CANONICAL_HEADINGS.map((title) => ({ level: 2, title }));
+  if (JSON.stringify(matches) !== JSON.stringify(expected)) {
+    failures.push(`${file}: inherited heading sequence must use exact canonical names, order, and ## level`);
+  }
+}
+
+function findPrintedTemplateFailures(files) {
+  const failures = [];
+  const file = 'skills/econ-exercise-builder.md';
+  const text = files[file] || '';
+  const template = firstCodeBlockAfter(text, '### 7.1 exercises.md structure');
+  const workedIndex = template.indexOf('## Uitgewerkt voorbeeld');
+  const summaryIndex = template.indexOf('> **Samenvatting §X.Y.Z**');
+  const startIndex = template.indexOf('## Startopgaven');
+
+  if (!(workedIndex !== -1 && summaryIndex > workedIndex && startIndex > summaryIndex)) {
+    failures.push(`${file}: compact non-heading summary must follow the worked example and precede Startopgaven`);
+  }
+  if (/^##\s+Samenvatting\b/im.test(template)) {
+    failures.push(`${file}: summary must not become an eighth top-level heading`);
+  }
+  if (!/\*\*Korte route:\*\* Startopgaven → Zelfstandige oefening → Doeloefening\./.test(template)) {
+    failures.push(`${file}: paper short-route note missing from printed template`);
+  }
+  if (!/\*\*Extra hulp nodig\?\*\* Maak eerst Begeleide inoefening\./.test(template)) {
+    failures.push(`${file}: paper support note missing from printed template`);
+  }
+  if (/\b(?:Part A|Part B|lane|companion route|repository)\b/i.test(template)) {
+    failures.push(`${file}: printed template exposes internal architecture terminology`);
+  }
+  if (/\b(?:website|online|laptop|phone|tablet|QR code|companion page|digital support)\b/i.test(template)) {
+    failures.push(`${file}: printed template depends on or advertises digital support`);
+  }
+
+  const obsoletePermission = /Vastgelopen\?|website-help pointer|website help (?:exists|is available)|Part B pointer inside Startopgaven|subordinate[^\n]{0,80}Part B pointer/i;
+  for (const activeFile of ACTIVE_SURFACES) {
+    if (obsoletePermission.test(files[activeFile] || '')) {
+      failures.push(`${activeFile}: obsolete printed website/Part B help permission remains active`);
+    }
+  }
+  return failures;
 }
 
 function requireOrderedSequenceInSection(failures, files, file, startMarker, endMarker) {
@@ -202,13 +255,13 @@ function findContractFailures(files, options = {}) {
     failures,
     files,
     'references/authored/didactiek-principes.md',
-    'The student-facing headings then form one contiguous block'
+    'The student-facing exercise headings use this exact Markdown hierarchy'
   );
   requireExactCanonicalBlock(
     failures,
     files,
     'skills/econ-exercise-builder.md',
-    'headings contiguously and never reorder them:'
+    'hierarchy and never reorder the seven exercise headings:'
   );
   requireExactTemplateHeadings(
     failures,
@@ -222,12 +275,15 @@ function findContractFailures(files, options = {}) {
     'BUILD-PARAGRAPH.md',
     'For newly authored Book 2+ theory paragraphs the seven printed headings are'
   );
+  requireExactCanonicalBlock(
+    failures,
+    files,
+    'skills/econ-pdf-builder.md',
+    'Book 2+ Part A paragraphs use this exact Markdown hierarchy and order:'
+  );
   requireExactParagraphDiagram(failures, files);
-  requireOrderedSequenceInSection(failures, files, 'skills/econ-didactiek.md', '**Book 2+ Part A inheritance:**', 'Apply these didactic checks');
-  requireOrderedSequenceInSection(failures, files, 'skills/econ-paragraph-review.md', '### 1.5 Exercise design', '### 1.6 Summary and navigation');
-  requireOrderedSequenceInSection(failures, files, 'skills/econ-pdf-builder.md', '**Horizontal rules between exercises:**', '**Sub-question blank lines:**');
-  requireOrderedSequenceInSection(failures, files, 'agents/teacher-learning-quality-review-agent.md', '### Book 2+ Part A contract-review mode', '## Primary review focus');
-  requireOrderedSequenceInSection(failures, files, 'docs/workflows/textbook-paragraph-lane.md', 'For newly authored Book 2 and later theory paragraphs', '## Allowed Outputs');
+  requireExactInlineHeadingSequence(failures, files, 'skills/econ-paragraph-review.md', '### 1.5 Exercise design', '### 1.6 Summary and navigation');
+  requireExactInlineHeadingSequence(failures, files, 'agents/teacher-learning-quality-review-agent.md', '### Book 2+ Part A contract-review mode', '## Primary review focus');
 
   const rules = [
     ['references/authored/didactiek-principes.md', /lesson goals\s*->\s*doeloefening\s*->\s*target operations/i, 'backward-design chain missing'],
@@ -245,8 +301,9 @@ function findContractFailures(files, options = {}) {
     ['skills/econ-exercise-builder.md', /do not[\s\S]{0,80}mastery, diagnosis,[\s\S]{0,80}automatic routing/i, 'Start check overclaim prohibition missing'],
     ['skills/econ-exercise-builder.md', /Begeleide inoefening[\s\S]{0,80}optional[\s\S]{0,160}deliberately fades/i, 'optional guided/fading rule missing'],
     ['skills/econ-exercise-builder.md', /Heb je deze hulp niet nodig\? Ga dan verder met\s+Zelfstandige oefening\./i, 'neutral guided skip wording missing'],
-    ['skills/econ-exercise-builder.md', /Korte route: Startopgaven\s*->\s*Zelfstandige oefening\s*->\s*Doeloefening/i, 'core route note missing'],
-    ['skills/econ-exercise-builder.md', /motivation \+ instruction \+ worked example \+ transitions\/recap \+ actual[\s\S]{0,180}planned lesson minutes <= 55/i, 'whole-lesson timing equation missing'],
+    ['skills/econ-exercise-builder.md', /Korte route:\*\*?\s*Startopgaven\s*→\s*Zelfstandige oefening\s*→\s*Doeloefening/i, 'core route note missing'],
+    ['skills/econ-exercise-builder.md', /Extra hulp nodig\?\*\*?\s*Maak eerst Begeleide inoefening/i, 'paper support note missing'],
+    ['skills/econ-exercise-builder.md', /motivation \+ instruction \+ worked example \+ compact summary and transitions \+[\s\S]{0,180}planned lesson minutes <= 55/i, 'whole-lesson timing equation missing'],
     ['skills/econ-exercise-builder.md', /ranges below are recommendations, not proof by themselves/i, 'range-sum-is-not-proof safeguard missing'],
     ['skills/econ-exercise-builder.md', /prerequisite-retrieval task is\s+normally 3[–-]5 minutes/i, 'Start retrieval 3–5-minute norm missing'],
     ['skills/econ-exercise-builder.md', /teacher may assign that printed retrieval task at\s+the beginning of the lesson[\s\S]{0,160}does not change the\s+printed/i, 'classroom-order/printed-order clarification missing'],
@@ -254,23 +311,25 @@ function findContractFailures(files, options = {}) {
     ['skills/econ-exercise-builder.md', /Light\s+adaptation is allowed only where the blueprint or responsible owner\s+authorizes it[\s\S]{0,160}preserve every target operation/i, 'authorized target-adaptation rule missing'],
     ['skills/econ-exercise-builder.md', /cognitive flexibility[\s\S]{0,180}not more or longer arithmetic/i, 'bonus cognitive-flexibility rule missing'],
     ['skills/econ-exercise-builder.md', /1[–-]2 short, accessible[\s\S]{0,120}introduces no\s+new theory/i, 'closing-review rule missing'],
-    ['skills/econ-exercise-builder.md', /Do not insert a top-level summary, website-help stage, generic `Opgaven`/i, 'contiguity/intervening-stage prohibition missing'],
+    ['skills/econ-exercise-builder.md', /Do not insert `## Samenvatting`, `## Website-help`, `## Voorkennis[\s\S]{0,100}generic `## Opgaven`/i, 'additional-heading prohibition missing'],
+    ['skills/econ-exercise-builder.md', /Paper-first\/no-device rule:[\s\S]{0,500}must not direct students to a website[\s\S]{0,250}must not expose internal terms/i, 'paper-only/student-terminology rule missing'],
     ['skills/econ-exercise-builder.md', /Book 1 output is frozen/i, 'Book 1 freeze missing'],
-    ['skills/econ-textbook-paragraph.md', /theory\s*->\s*Uitgewerkt voorbeeld\s*->\s*Startopgaven/i, 'theory/example/Start adjacency missing'],
-    ['skills/econ-textbook-paragraph.md', /summary (?:follows|after) section 7/i, 'summary placement missing'],
-    ['skills/econ-textbook-paragraph.md', /subordinate non-heading optional Part B pointer/i, 'website-help placement/boundary missing'],
+    ['skills/econ-textbook-paragraph.md', /theory\s*->\s*Uitgewerkt voorbeeld\s*->\s*compact\s+non-heading summary\s*->\s*Startopgaven/i, 'theory/example/summary/Start adjacency missing'],
+    ['skills/econ-textbook-paragraph.md', /summary[\s\S]{0,180}after worked example, before exercises/i, 'summary placement missing'],
+    ['skills/econ-textbook-paragraph.md', /complete on paper[\s\S]{0,180}does not[\s\S]{0,100}website, device, online explanation, or Part B/i, 'paper-only paragraph boundary missing'],
     ['skills/econ-didactiek.md', /Book 2\+ Part A inheritance/i, 'didactic inheritance missing'],
     ['skills/econ-didactiek.md', /same goal[\s\S]{0,160}deliberately\s+fades/i, 'guided same-goal/fading invariant missing'],
     ['skills/econ-paragraph-review.md', /Exact structure and adjacency/i, 'review structure check missing'],
-    ['skills/econ-paragraph-review.md', /Any missing, reordered, or intervening top-level stage is a FAIL/i, 'review adjacency hard-fail severity missing'],
+    ['skills/econ-paragraph-review.md', /Any missing, reordered, wrong-level, or additional top-level stage is a FAIL/i, 'review heading/adjacency hard-fail severity missing'],
     ['skills/econ-paragraph-review.md', /Startopgaven roles/i, 'review Start roles check missing'],
     ['skills/econ-paragraph-review.md', /Missing\/ineffective fading[\s\S]{0,100}is a FAIL/i, 'review guided-fading hard-fail severity missing'],
     ['skills/econ-paragraph-review.md', /produce their own graph\/table only when graph\/table production is a target operation/i, 'target-conditional representation rule missing'],
     ['skills/econ-paragraph-review.md', /Demanding a representation absent from the target is a FAIL/i, 'target-absent representation hard fail missing'],
     ['skills/econ-paragraph-review.md', /Route realism[\s\S]{0,400}actual estimated core-route questions at ≤55 minutes[\s\S]{0,120}Range addition/i, 'whole-lesson route-feasibility review missing'],
-    ['skills/econ-pdf-builder.md', /exact contiguous[\s\S]{0,220}Uitgewerkt voorbeeld[\s\S]{0,220}Herhaling \/ Herhaling en interleaving/i, 'PDF heading contract missing'],
+    ['skills/econ-pdf-builder.md', /exact Markdown hierarchy and order/i, 'PDF heading contract missing'],
     ['agents/teacher-learning-quality-review-agent.md', /Book 2\+ Part A contract-review mode/i, 'teacher contract-review mode missing'],
-    ['agents/teacher-learning-quality-review-agent.md', /Hard fail any missing\/reordered\/interrupted heading sequence/i, 'teacher hard-fail rule missing'],
+    ['agents/teacher-learning-quality-review-agent.md', /Hard fail any missing\/reordered\/wrong-level\/additional heading sequence/i, 'teacher hard-fail rule missing'],
+    ['agents/teacher-learning-quality-review-agent.md', /1\. paper-only usability;[\s\S]{0,900}12\. absence of student-facing internal architecture terminology/i, 'teacher twelve-criterion contract review missing'],
     ['BUILD-PARAGRAPH.md', /Book 2\+ Part A exercise-authoring input contract/i, 'all-target Part A input contract missing'],
     ['BUILD-PARAGRAPH.md', /Lesson goal\s*\|\s*Target subquestion\/operation[\s\S]{0,160}Covered\/gap/i, 'BUILD alignment table missing'],
     ['BUILD-PARAGRAPH.md', /This Part B route is not the printed Part A exercise sequence/i, 'Part A/Part B boundary missing'],
@@ -283,6 +342,7 @@ function findContractFailures(files, options = {}) {
   }
 
   failures.push(...findRouteBoundaryFailures(files));
+  failures.push(...findPrintedTemplateFailures(files));
 
   requirePattern(failures, files, 'package.json', /"check:part-a-exercise-authoring-contract"\s*:\s*"node build-scripts\/workflows\/check-part-a-exercise-authoring-contract\.js"/, 'npm checker script missing');
   requirePattern(failures, files, '.github/workflows/platform-ci.yml', /npm run check:part-a-exercise-authoring-contract/, 'explicit CI checker step missing');
@@ -327,9 +387,10 @@ module.exports = {
   normalizeSourceText,
   readFiles,
   firstCodeBlockAfter,
-  numberedHeadings,
+  markdownHeadings,
   markdownLevelTwoHeadings,
   diagramNumberedHeadings,
+  findPrintedTemplateFailures,
   findRouteBoundaryFailures,
   findContractFailures,
   checkPartAExerciseAuthoringContract,

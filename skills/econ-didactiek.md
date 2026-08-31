@@ -13,12 +13,12 @@ General didactic principles for economics education. This skill is format-indepe
 **Book 2+ Part A inheritance:** for newly authored Book 2 and later theory
 paragraphs, use the complete operational sequence and backward-design table in
 `skills/econ-exercise-builder.md`. Book 1 is frozen and must not be retrofitted.
-The printed headings are, contiguously: `Uitgewerkt voorbeeld`, `Startopgaven`,
-`Begeleide inoefening`, `Zelfstandige oefening`, `Doeloefening`, `Denkertje /
-Bonusopgave`, `Herhaling / Herhaling en interleaving`. The core route is
-`Startopgaven -> Zelfstandige oefening -> Doeloefening`; it must fit the work
-time of a 55-minute lesson. This is separate from the Part B product route
-`Start -> Leer -> Check -> Oefen -> Exit ticket`.
+Inherit its exact seven `##` headings, compact non-heading summary between the
+worked example and Startopgaven, and paper-only short/support route. The core
+route `Startopgaven -> Zelfstandige oefening -> Doeloefening` must fit the work
+time of a 55-minute lesson. Internal Part A/Part B architecture remains
+separate, but printed student copy neither uses those terms nor depends on a
+companion or device.
 
 Apply these didactic checks within that structure:
 

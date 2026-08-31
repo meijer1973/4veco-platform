@@ -571,17 +571,18 @@ practice`. Record the alignment before drafting:
 |---|---|---|---|---|---|---|
 | [goal] | [observable operation] | [where modelled] | [where checked] | [where scaffolded or n/a] | [where practised] | [covered or named gap] |
 
-The student-facing headings then form one contiguous block in exactly this
-order:
+The student-facing exercise headings use this exact Markdown hierarchy and
+order. A non-heading summary box may appear between the first and second
+heading; no additional `##` exercise heading may appear:
 
-```
-1. Uitgewerkt voorbeeld
-2. Startopgaven
-3. Begeleide inoefening
-4. Zelfstandige oefening
-5. Doeloefening
-6. Denkertje / Bonusopgave
-7. Herhaling / Herhaling en interleaving
+```markdown
+## Uitgewerkt voorbeeld
+## Startopgaven
+## Begeleide inoefening
+## Zelfstandige oefening
+## Doeloefening
+## Denkertje / Bonusopgave
+## Herhaling / Herhaling en interleaving
 ```
 
 - `Uitgewerkt voorbeeld` follows theory directly, models the same operation
@@ -605,16 +606,25 @@ order:
   accessible cumulative/homework tasks. It revisits taught content and contains
   no new theory.
 
-Print a compact route note: `Korte route: Startopgaven -> Zelfstandige oefening
--> Doeloefening.` The core route is feasible within the work time of a
-55-minute lesson. Guided practice is an optional support detour; bonus and
-closing review are outside that route. The Part B companion route `Start ->
-Leer -> Check -> Oefen -> Exit ticket` is a different product contract and is
-never substituted for these printed Part A headings.
+Print one compact paper route note:
+
+> **Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
+> **Extra hulp nodig?** Maak eerst Begeleide inoefening.
+
+The core route is feasible within the work time of a 55-minute lesson. Guided
+practice is an optional printed support detour; bonus and closing review are
+outside that route. All explanation, retrieval, scaffolding, practice, and
+target preparation needed in the normal lesson must be present on paper.
+
+Internally, the Part B companion route `Start -> Leer -> Check -> Oefen -> Exit
+ticket` remains a different product contract. It is never substituted for,
+required by, or advertised in printed Part A student copy. Terms such as Part
+A, Part B, lane, and companion route remain internal authoring vocabulary.
 
 Prove feasibility with a paragraph-specific whole-lesson equation:
-`motivation + instruction + worked example + transitions/recap + actual core
-questions <= 55 minutes`. Adding the recommended core ranges or stating
+`motivation + instruction + worked example + compact summary and transitions +
+actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening <= 55
+minutes`. Adding the recommended core ranges or stating
 `23–38 < 55` is not proof because instruction also consumes lesson time.
 
 ### 9.2 Time budget and allocation
@@ -704,21 +714,22 @@ contract as a retroactive Book 1 content check.
 1. HEADER — paragraph number + title (no difficulty rating)
 2. MOTIVATING PROBLEM — recognisable situation creating cognitive conflict
 3. THEORY — concept explanation with dual coding, definition/formula/warning/recall boxes
-4. UITGEWERKT VOORBEELD — section 1 of the contiguous exercise block
-5. STARTOPGAVEN — section 2, immediately after the worked example
-6. BEGELEIDE INOEFENING — section 3, optional support route
-7. ZELFSTANDIGE OEFENING — section 4
-8. DOELOEFENING — section 5
-9. DENKERTJE / BONUSOPGAVE — section 6, optional flexibility task
-10. HERHALING / HERHALING EN INTERLEAVING — section 7, then compact summary
+4. UITGEWERKT VOORBEELD — section 1, directly after theory
+5. COMPACT SUMMARY BOX — non-heading paper reference, maximum five points
+6. STARTOPGAVEN — section 2, directly after the summary box
+7. BEGELEIDE INOEFENING — section 3, optional printed support route
+8. ZELFSTANDIGE OEFENING — section 4
+9. DOELOEFENING — section 5
+10. DENKERTJE / BONUSOPGAVE — section 6, optional flexibility task
+11. HERHALING / HERHALING EN INTERLEAVING — section 7
 ```
 
-**Critical:** the seven named headings are contiguous. Reading order is
-`theory -> Uitgewerkt voorbeeld -> Startopgaven`; no summary, website-help
-stage, generic `Opgaven`, or other top-level exercise heading may intervene.
-Keep the compact summary after section 7 as a non-exercise recap. If website
-help is available, place a subordinate non-heading pointer inside
-`Startopgaven` beside the route note and identify it as optional Part B help.
+**Critical:** reading order is `theory -> Uitgewerkt voorbeeld -> compact
+non-heading summary -> Startopgaven`. The summary is deliberately available as
+a paper reference before students begin the exercises. It is not an eighth
+exercise section. No `## Samenvatting`, `## Website-help`, generic `## Opgaven`,
+or other additional top-level exercise heading may appear among the seven
+canonical headings.
 
 **Time shares:**
 
@@ -730,7 +741,7 @@ help is available, place a subordinate non-heading pointer inside
 | Core exercise route | 23–38 min | Startopgaven + Zelfstandige oefening + Doeloefening |
 | Optional guided route | 8–15 min | Stronger support with deliberate fading |
 | Bonus / review | 8–15 min / 4–8 min | Outside core / often homework |
-| Summary | ~2 min | Reference after section 7 |
+| Summary | ~2 min | Compact paper reference after worked example, before exercises |
 
 ### 10.2 Writing rules
 
@@ -782,8 +793,9 @@ Brief (1–3 lines), only if skill was taught more than one chapter ago.
 - End with forward pointer: "In de volgende paragraaf…"
 - Must capture ALL key conceptual insights including nuances (piecewise functions, domain restrictions, special cases)
 - Omitting a concept taught in body is a FLAG
-- Place it after `Herhaling / Herhaling en interleaving`, outside the contiguous
-  seven-heading exercise block; it is not an eighth exercise section.
+- Place it immediately after `Uitgewerkt voorbeeld` and before `Startopgaven`.
+- Keep it as a compact blockquote or styled box without a top-level heading; it
+  is not an eighth exercise section.
 
 ### 10.5 Domain restrictions and ceteris paribus (MANDATORY)
 
@@ -957,20 +969,26 @@ Three sequential passes over every paragraph:
 
 **1.5 Exercise design:**
 - Backward-design alignment table covers every goal and target operation
-- Exact contiguous seven-heading order for Book 2+; Book 1 remains frozen
+- Exact seven-heading order and exact `##` level for Book 2+; Book 1 remains frozen
 - Both Startopgaven roles: taught-prerequisite retrieval + brief current-content check
 - Target exercise alignment with blueprint and a whole-lesson timing equation ≤55 minutes
 - Bloom progression (remember → calculate → explain → analyze → evaluate)
 - Optional guided practice has stronger support, deliberate fading, neutral skip wording, and the same goal
 - Denkertje/bonus builds cognitive flexibility, not more of the same arithmetic
 - Closing review has 1–2 accessible cumulative/homework tasks and no new theory
-- Worked example directly after theory; Startopgaven directly after the example
+- Worked example directly after theory; compact non-heading summary directly
+  after the example; Startopgaven directly after the summary
+- Paper-only lesson route contains every required scaffold and never directs a
+  student to a website, device, online explanation, Part B, lane, or companion
+  route
 
 **1.6 Summary and navigation:**
 - Summary present and complete (captures ALL key insights including nuances)
 - Forward reference
-- Summary appears after section 7, not between theory/example/practice
-- Optional Part B website-help pointer is subordinate inside Startopgaven
+- Summary appears after the worked example and before Startopgaven, remains
+  non-heading, and contains no more than five concise points
+- Printed route note points only to Startopgaven, Zelfstandige oefening,
+  Doeloefening, and optional Begeleide inoefening
 
 ### 12.3 Mathematical/conceptual precision checks (Pass 2)
 
