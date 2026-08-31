@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-31T10:22:06.790Z
+Generated: 2026-08-31T12:51:16.859Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/part-a-textbook-exercise-structure-1-20260829`
-Source commit: `cfd193a6ba24ca8bd144a4b720362c9a8ec67c1d`
-Files indexed: 7505
+Source branch: `codex/book1-edition-boundary-20260830`
+Source commit: `35e38c7c1737d6cf26dd23143764e5c0ceac131b`
+Files indexed: 7517
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 715
+Count: 717
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -811,6 +811,8 @@ Count: 715
 - build-scripts/templates/template-paragraph-plan.md
 - build-scripts/templates/textbook-to-companion-handoff.md
 - build-scripts/tools/build-skill-tree-viewer.js
+- build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
+- build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
@@ -888,7 +890,7 @@ Count: 25
 
 ## validators
 
-Count: 688
+Count: 690
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1275,6 +1277,8 @@ Count: 688
 - build-scripts/sprints/check-y1-golden-rollout-wave-1.js
 - build-scripts/sprints/check-y1-golden-rollout-wave-1.test.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
+- build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
+- build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
@@ -1581,7 +1585,7 @@ Count: 688
 
 ## references
 
-Count: 1012
+Count: 1014
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1959,6 +1963,7 @@ Count: 1012
 - references/data/sprints/B2-2.2.4-HARDEN-MIXED-1.result.json
 - references/data/sprints/B2-READY-1.plan.json
 - references/data/sprints/B2-READY-1.result.json
+- references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
@@ -2510,6 +2515,7 @@ Count: 1012
 - references/machine/micro-teaching-units.json
 - references/machine/micro-teaching-units.md
 - references/machine/README.md
+- references/owned/course-blueprint-pedagogical-boundaries.md
 - references/owned/course-blueprint-v4.md
 - references/owned/course-blueprint-v4.meta.json
 - references/owned/course-blueprint-v5.md
@@ -2598,7 +2604,7 @@ Count: 1012
 
 ## reports
 
-Count: 4817
+Count: 4825
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5159,6 +5165,14 @@ Count: 4817
 - reports/sprints/B2-READY-1-result.md
 - reports/sprints/BLUEPRINT-3Y-RECONCILE-1-plan.md
 - reports/sprints/BLUEPRINT-3Y-RECONCILE-1-result.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-baseline.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-command-log.jsonl
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-command-log.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-assignment.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-planning-review.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
+- reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-teacher-learning-quality-review.md
 - reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-plan.md
 - reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-result.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md

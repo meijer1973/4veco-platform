@@ -372,3 +372,148 @@ Time:        412.453 s
 Ran all test suites.
 
 ```
+## npm.cmd run check:agent-index-freshness
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T12:51:38.574Z`
+- finished_at: `2026-08-31T12:51:39.358Z`
+- duration_ms: `784`
+- exit_code: `0`
+- stdout_sha256: `a271265b10a1fc19e78859ea81cff2d378cdee1c4e371ee6ae86d09f2aa7e01b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-index-freshness
+> node build-scripts/reports/check-agent-index-freshness.js
+
+{
+  "ok": true,
+  "checks": [
+    {
+      "label": "4veco-platform",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "35e38c7c1737d6cf26dd23143764e5c0ceac131b",
+      "head": "35e38c7c1737d6cf26dd23143764e5c0ceac131b",
+      "source_ref": "HEAD",
+      "target_commit": "35e38c7c1737d6cf26dd23143764e5c0ceac131b",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    },
+    {
+      "label": "4veco-lessen",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "source_ref": "origin/main",
+      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    }
+  ],
+  "failures": [],
+  "warnings": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T12:51:39.432Z`
+- finished_at: `2026-08-31T12:51:39.522Z`
+- duration_ms: `90`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T12:51:39.585Z`
+- finished_at: `2026-08-31T12:51:39.687Z`
+- duration_ms: `102`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/ci/check-evidence-line-endings.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T12:51:39.753Z`
+- finished_at: `2026-08-31T12:51:39.929Z`
+- duration_ms: `176`
+- exit_code: `0`
+- stdout_sha256: `89c1b9a7be41b21444991ab40590881ee0448a2ead683a23841c7c459ce56783`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK evidence line endings: scanned 95 text file(s), skipped 0, CRLF 0
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\pr222-platform`
+- started_at: `2026-08-31T12:51:39.987Z`
+- finished_at: `2026-08-31T12:51:40.139Z`
+- duration_ms: `152`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```

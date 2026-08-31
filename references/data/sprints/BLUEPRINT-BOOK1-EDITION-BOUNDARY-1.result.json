@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+  "completed_on": "2026-08-31",
+  "status": "completed",
+  "plan": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md",
+  "baseline": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-baseline.md",
+  "result": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md",
+  "diff_summary": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "implementation_changed": true,
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "review_standard": "REV-STD-1",
+  "reviewed_substantive_head": "bb21d53e5abb96693e3106924d408c4596c8b15c",
+  "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:blueprint-pedagogical-boundaries",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:part-a-exercise-authoring-contract",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:active-governance-wording",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen status --porcelain",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:agent-index-freshness",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-evidence-line-endings.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-assignment.md",
+    "round1": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round1.md",
+    "corrections": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-corrections.md",
+    "round2": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": [],
+    "findings": [
+      {
+        "id": "part-a-compatibility",
+        "description": "The owned preview clarification explicitly inherits and preserves the merged Book 2+ Part A sequence, target-operation, paper-route, fading, and timing contract.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/owned/course-blueprint-pedagogical-boundaries.md",
+          "skills/econ-exercise-builder.md",
+          "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round1.md"
+        ],
+        "blocks": "Nothing in the local implementation payload.",
+        "does_not_block": "Exact-head CI and human readiness routing.",
+        "proof_required_to_close": "Keep the focused checker, Part A checker, and teacher/lead reviews green."
+      },
+      {
+        "id": "fail-closed-policy-guardrail",
+        "description": "The new platform-only checker enforces exact policy clauses, metadata paths and flags, structural invariants, operational pointers, and CI wiring with focused mutations.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/workflows/check-blueprint-pedagogical-boundaries.js",
+          "build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js",
+          "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-command-log.jsonl"
+        ],
+        "blocks": "Nothing after 32 focused tests and the full suite pass.",
+        "does_not_block": "Remote exact-head validation.",
+        "proof_required_to_close": "Preserve all exact-value and pointer-loss mutations in hosted CI."
+      },
+      {
+        "id": "authority-and-scope-boundary",
+        "description": "Book 1, lesson output, target/protected registries, counts, roles, v6 route, companions, and Issue 223 implementation remain outside the PR payload.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-diff-summary.md",
+          "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-teacher-learning-quality-review.md",
+          "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-lead-review-round1.md"
+        ],
+        "blocks": "Nothing while the recorded boundaries remain unchanged.",
+        "does_not_block": "The separate Issue 223 Gate 0 after PR 222 integration.",
+        "proof_required_to_close": "Keep shared-lane scope green and lesson porcelain output empty."
+      }
+    ]
+  },
+  "authority_claims": {
+    "policy_repair_complete": true,
+    "book_1_mutation_authorized": false,
+    "lesson_mutation_authorized": false,
+    "issue_223_implementation_authorized": false,
+    "target_registry_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "companion_or_web_mutation_authorized": false,
+    "autonomous_merge_authorized": false,
+    "admin_bypass_authorized": false,
+    "student_use_authorized": false
+  },
+  "next_authorized_work": "Refresh the evidence-only tail, obtain final lead recheck, push PR 222, require exact-head CI/readiness and exact-payload owner authorization, integrate through the authorized single-PR lane, and verify post-merge main CI. Keep Issue 223 implementation blocked until then."
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T10:21:58.758Z",
+  "generatedAt": "2026-08-31T12:51:17.733Z",
   "internalOnly": true,
   "teams": [
     {
@@ -162,6 +162,13 @@
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
           "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-08-23 Roadmap ID: references-team-roadmap Roadmap version: v3.57-y1-golden-controlled-wave-renewal Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE ec...",
           "sprints": [
+            {
+              "sprint": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+              "name": "Book 1 Edition Boundary and Part A Compatibility Repair",
+              "completed": "yes",
+              "currentState": "Local implementation/evidence complete on PR #222 at substantive head `bb21d53e...`: the owned preview policy now inherits the Book 2+ Part A target-operation, seven-section, paper-route, and 55-minute contract; it cannot manufacture `Covered` status, mastery, or an untargeted independent operation. The focused checker passes 32 mutations, the full suite passes 107 suites/1,653 tests, teacher review passes 14/14, and lead round 1 passes. Exact-head hosted CI, readiness, owner authorization, governed integration, and post-merge CI remain required. Book 1 and all lesson output stay unchanged; Issue #223 remains planning-only until this prerequisite is integrated.",
+              "exitGate": ""
+            },
             {
               "sprint": "PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1",
               "name": "Book 2+ Part A Paper-Only Exercise Authoring Contract",
@@ -1554,6 +1561,14 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+          "name": "Book 1 Edition Boundary and Part A Compatibility Repair",
+          "completed": "yes",
+          "currentState": "Local implementation/evidence complete on PR #222 at substantive head `bb21d53e...`: the owned preview policy now inherits the Book 2+ Part A target-operation, seven-section, paper-route, and 55-minute contract; it cannot manufacture `Covered` status, mastery, or an untargeted independent operation. The focused checker passes 32 mutations, the full suite passes 107 suites/1,653 tests, teacher review passes 14/14, and lead round 1 passes. Exact-head hosted CI, readiness, owner authorization, governed integration, and post-merge CI remain required. Book 1 and all lesson output stay unchanged; Issue #223 remains planning-only until this prerequisite is integrated.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1",
           "name": "Book 2+ Part A Paper-Only Exercise Authoring Contract",
           "completed": "yes",
@@ -2930,7 +2945,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 172,
+      "completedCount": 173,
       "openCount": 10
     },
     {
