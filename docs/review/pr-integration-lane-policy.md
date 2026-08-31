@@ -118,6 +118,13 @@ lane:
 npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <pr> --authorization-comment-id <comment-id>
 ```
 
+The canonical read-only preflight uses the same trusted command with
+`--dry-run`:
+
+```powershell
+npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <pr> --authorization-comment-id <comment-id> --dry-run
+```
+
 The local lane must be run from current `main`/current policy code. It is not a
 raw merge path: it must run the same payload-lineage, base-drift, CI,
 readiness, review, branch-protection, expected-head, and post-merge CI checks
@@ -175,12 +182,35 @@ The lane must:
 15. verify the merge commit is observable on `main` and post-merge `main` CI
     succeeds.
 
-A dry-run validates the same read-only compatibility provenance, existing
-deterministic refresh, exact-pair CI, live PR/base/thread state, and readiness
-decision inputs as the live lane. It must not dispatch CI, update a branch,
-create or update comments, set a reusable successful `integration-authorized`
-status, or merge. A successful residual dry-run reports
-`would_create_exact_head_readiness` and stops at `validated_dry_run`.
+A single-PR dry-run validates authorization, branch protection, review state,
+payload lineage, base drift, current-head CI, live PR/base/thread state, and
+readiness decision inputs entirely in memory. For a current head it also
+performs the immediate pre-merge head, `main`, and ancestry rechecks. It then
+returns `phase: validated_dry_run` with `retry_required: false`; it never
+fabricates a merged PR or merge commit.
+
+The machine result includes `dry_run.checks_evaluated`,
+`dry_run.would_update_branch`, and exact `not_executed` states for status,
+comment, and readiness publication; branch update; retry polling; CI dispatch;
+merge invocation; merge observation; containment; and post-merge CI. A current
+head reports `refreshed_head_checks: not_applicable`. A behind head re-fetches
+both `main` and the PR head, reports `would_update_branch: true`, and records
+`refreshed_head_checks: not_executed_requires_branch_update`; exact refreshed-
+head CI, readiness, and final pre-merge validation remain for the trusted live
+lane after synchronization. A movement observed on either path retains the
+existing movement phase, fails that dry run without retry polling, and asks for
+a fresh invocation.
+
+`--dry-run --no-merge` remains implementation-supported as a temporary
+compatibility spelling and must return the same complete dry-run contract.
+Plain `--dry-run` is the documented contract. Live `--no-merge` remains a
+separate integration-validation mode and is not a substitute for dry-run.
+
+No dry-run may dispatch CI, update a branch, create or update comments, publish
+readiness, set any `integration-authorized` status, invoke or observe a merge,
+verify containment, or wait for post-merge CI. A failed non-movement gate keeps
+its normal fail-closed classification; a dry-run containment failure is no
+longer possible because containment is a live post-merge operation.
 
 ## Cross-Repo Bundle Integration
 
@@ -361,7 +391,9 @@ authorization comment, compatibility proof, review paths, and CI run
 coordinates.
 
 In dry-run mode that decision remains in memory and is passed to final preflight
-without publication. In live mode the lane publishes the current
+without publication. A successful residual bundle dry-run reports
+`would_create_exact_head_readiness` and stops at `validated_dry_run`. In live
+mode the lane publishes the current
 integration-head decision, re-fetches its exact marker and full machine record,
 and requires the canonical decision digest, route, repository, PR, and head to
 match the just-recomputed decision before final head/base/thread checks and

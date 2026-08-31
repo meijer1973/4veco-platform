@@ -87,6 +87,9 @@ jobs:
       - name: Validate exercise workflow currentness
         run: npm run check:exercise-workflow-currentness
 
+      - name: Validate Book 2+ Part A exercise authoring contract
+        run: npm run check:part-a-exercise-authoring-contract
+
       - name: Validate exercise authority hygiene
         run: npm run check:exercise-authority-hygiene
 

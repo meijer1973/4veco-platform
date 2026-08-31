@@ -1,12 +1,18 @@
 ---
 name: econ-exercise-builder
-description: "Generates a complete exercise set with answer models for a single textbook paragraph, based on the course blueprint. Produces exercises.md and answers.md with worked examples, guided practice (dual coding fading), independent practice labelled Zelfstandige oefening in student-facing output, interleaving exercises, the target exercise, and optional stretch material labelled Denkertje or Bonusopgave. Total exercise time budget: 40-60 minutes of student work. Use this skill when the user provides a paragraph spec from the blueprint and wants exercises generated. Trigger when the user mentions oefeningen maken, opgavenset, antwoordmodel, doeloefening uitwerken, or exercise generation for a specific paragraph. Always use in combination with econ-didactiek (pedagogical principles) and economic-graph (for graph specifications within exercises)."
+description: "Generates a complete Book 2+ Part A exercise set with answer models for a single textbook paragraph, based on the course blueprint. Uses backward design and the canonical seven-section sequence: Uitgewerkt voorbeeld, Startopgaven, Begeleide inoefening, Zelfstandige oefening, Doeloefening, Denkertje/Bonusopgave, and Herhaling/Herhaling en interleaving. Use this skill when the user provides a paragraph spec from the blueprint and wants exercises generated. Trigger when the user mentions oefeningen maken, opgavenset, antwoordmodel, doeloefening uitwerken, or exercise generation for a specific paragraph. Always use in combination with econ-didactiek (pedagogical principles) and economic-graph (for graph specifications within exercises)."
 pipeline: "Part A producer"
 ---
 
 # Economics Exercise Builder
 
 Generates a complete exercise set + answer models for one textbook paragraph, given a blueprint paragraph spec. This skill handles exercise design and sequencing. For pedagogical principles, see `econ-didactiek` (backed by `references/authored/didactiek-principes.md`). For graph generation, see `economic-graph`. For school-fit quality (differentiation, context quality, self-monitoring), see `references/external/amstelveencollege_quality_standards.md`.
+
+**Scope boundary:** this is the operational source of truth for newly authored
+Book 2 and later Part A theory paragraphs. Book 1 output is frozen: do not
+retrofit it and do not treat this contract as a retroactive Book 1 check. The
+Part B companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` is a
+different product contract and must not replace the printed Part A headings.
 
 ---
 
@@ -18,12 +24,20 @@ The blueprint paragraph spec, containing:
 - Paragraph reference (e.g., B2C1§2)
 - Target exercise (the doeloefening)
 - Lesson goals
+- A decomposition of each target subquestion into observable operations
 - Difficulty notes
 - Difficulty rating (⬜ LIGHT / 🟨 MEDIUM / 🟥 HEAVY)
 
 Additionally, the builder needs:
 - The list of all preceding paragraphs and their core skills (for interleaving selection)
 - The chapter context (which other paragraphs are in this chapter, to avoid context reuse)
+
+Before drafting, complete this alignment table. Do not hide uncovered
+operations by writing exercises first:
+
+| Lesson goal | Target subquestion/operation | Worked example | Start check | Guided practice | Independent practice | Covered/gap |
+|---|---|---|---|---|---|---|
+| [goal] | [observable operation] | [where modelled] | [where checked] | [where scaffolded or n/a] | [where practised] | [covered or named gap] |
 
 ### 1.2 Output files
 
@@ -43,7 +57,22 @@ File naming: use en-dash (–), not hyphen (-). See `econ-textbook-paragraph` §
 
 ### 2.1 The constraint
 
-The total exercise set (excluding the worked example, which is read/studied) must account for **40–60 minutes of student work**. This covers classroom independent practice + homework.
+The core route is `Startopgaven -> Zelfstandige oefening -> Doeloefening`.
+It must be feasible within the student work time of a 55-minute lesson after
+instruction and the worked example. `Begeleide inoefening` is an optional
+support detour. Bonus is outside the core; closing review may be homework.
+
+For each paragraph, record an actual whole-lesson equation before authoring:
+
+`motivation + instruction + worked example + compact summary and transitions +
+actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening =
+planned lesson minutes <= 55`
+
+The section ranges below are recommendations, not proof by themselves. Select
+and total the actual questions within the remaining work time. If a justified
+paragraph-specific estimate falls outside a range, record why. If the equation
+exceeds 55, reduce or redesign practice without hiding a target operation; do
+not merely assert that the 23–38-minute range is less than 55.
 
 ### 2.2 Time estimation per exercise type
 
@@ -62,22 +91,25 @@ There is no fixed time per exercise. Estimate case by case:
 
 ### 2.3 Budget allocation
 
-| Component | Time share | Notes |
-|-----------|------------|-------|
-| Guided practice (with fading) | ~50% | Core skill acquisition |
-| Zelfstandige oefening | ~20% | Same skill, no scaffolding |
-| Interleaving exercises | ~15% | Earlier skills, quick |
-| Target exercise | ~15% | The doeloefening from the blueprint |
+| Section | Time | Route role |
+|---|---:|---|
+| Startopgaven | 5–8 min | Core: prerequisite retrieval + compact current-content check |
+| Begeleide inoefening | 8–15 min | Printed section, optional student detour; same goal, stronger fading scaffold |
+| Zelfstandige oefening | 10–18 min | Core: target operations without guided support |
+| Doeloefening | 8–12 min | Core: capstone evidence |
+| Denkertje / Bonusopgave | 8–15 min | Outside core: cognitive flexibility |
+| Herhaling / Herhaling en interleaving | 4–8 min | 1–2 accessible cumulative tasks; often homework |
 
-Optional stretch material is **outside** the 40–60 min budget. Do not label
-the normal post-start exercise block as `Verdieping`; the student-facing label
-for that block is `Zelfstandige oefening`.
+The core ranges total 23–38 minutes, but that sum is not a whole-lesson
+feasibility proof. Use the equation in §2.1. Do not label the normal post-start
+exercise block as `Verdieping`; its student-facing label is `Zelfstandige
+oefening`.
 
 ### 2.4 Adjusting for difficulty
 
-- **⬜ LIGHT paragraph:** guided practice is shorter (concepts are intuitive), more time for interleaving (3–4 exercises from earlier chapters)
-- **🟨 MEDIUM paragraph:** balanced distribution as above
-- **🟥 HEAVY paragraph:** guided practice takes most of the budget, interleaving reduced to 1–2 quick exercises
+- **⬜ LIGHT paragraph:** keep guided practice at the short end and explicitly skippable; retain its heading
+- **🟨 MEDIUM paragraph:** offer the guided route with deliberate fading
+- **🟥 HEAVY paragraph:** use the full guided range, but keep the same lesson goal and doeloefening; do not lower the destination
 
 ---
 
@@ -85,75 +117,98 @@ for that block is `Zelfstandige oefening`.
 
 ### 3.1 The sequence
 
-```
-1. WORKED EXAMPLE
-   Not an exercise — a fully solved example that demonstrates the procedure.
-   Same procedure as the target exercise, simpler numbers and context.
-   Students read/study this, not solve it.
+Design in this order: `lesson goals -> doeloefening -> target-operation
+decomposition -> worked example and practice`. Use this exact Markdown
+hierarchy and never reorder the seven exercise headings:
 
-2. STARTOEFENINGEN (4-stage dual coding fading)
-   Exercise 1: READ a labeled graph
-       Graph already shows the change/concept drawn AND labeled.
-       Question asks student to identify, classify, or interpret what they see.
-       (e.g., "Which situation is a movement and which is a shift?
-              What might have caused each one?")
-   Exercise 2: DRAW on a provided graph
-       Graph base provided (axes + initial line/curve).
-       Student adds the movement/shift/area themselves.
-   Exercise 3: DESCRIBE without a graph
-       Text-only question. Student reasons about what would happen.
-       (No visual provided; visual not required in answer.)
-
-3. ZELFSTANDIGE OEFENING
-   1–3 exercises at target difficulty, no scaffolding, no visuals provided.
-   Different contexts from guided practice.
-   Stage 4 of the fading: students draw their own graph from scratch
-   when the question requires it.
-
-4. INTERLEAVING EXERCISES
-   1–4 exercises practising skills from previous paragraphs.
-   Keep these quick (2–4 min each).
-   Select skills that:
-   (a) are prerequisites for the current paragraph, or
-   (b) are fundamental skills that benefit from regular repetition
-       (percentage calculations, graph reading, surplus calculation)
-
-5. TARGET EXERCISE
-   The doeloefening from the blueprint, verbatim or lightly adapted.
-   This is the capstone — if a student completes this independently, 
-   the paragraph has succeeded.
-
-6. VERDIEPINGSOPDRACHT (outside time budget)
-   One open question at Bloom level analyseren/evalueren/creëren.
-   Different context from the main exercises.
-   No scaffolding, no hints, no formulekaart.
-   Framed as "Denkertje" or "Bonusopgave".
+```markdown
+## Uitgewerkt voorbeeld
+## Startopgaven
+## Begeleide inoefening
+## Zelfstandige oefening
+## Doeloefening
+## Denkertje / Bonusopgave
+## Herhaling / Herhaling en interleaving
 ```
 
-### 3.2 Dual coding fading — the 4-stage rule
+1. **Uitgewerkt voorbeeld** follows theory directly. It is fully solved,
+   follows the exact target operation chain with simpler values/context, and
+   introduces no operation absent from the target or lesson goals.
+2. **Startopgaven** combines two roles under this single visible heading:
+   (a) retrieval of prerequisites already taught and (b) a compact check of
+   current-content comprehension. The check is low-stakes and brief; do not
+   call it mastery, diagnosis, or use it for automatic routing. Include only
+   this compact paper route note: `Korte route: Startopgaven → Zelfstandige
+   oefening → Doeloefening. Extra hulp nodig? Maak eerst Begeleide inoefening.`
 
-Across the startoefeningen + independent practice, visuals fade in four stages:
+   Within the 5–8-minute Startopgaven total, the prerequisite-retrieval task is
+   normally 3–5 minutes. A teacher may assign that printed retrieval task at
+   the beginning of the lesson; this classroom choice does not change the
+   printed `theory -> Uitgewerkt voorbeeld -> Startopgaven` order.
+3. **Begeleide inoefening** is a required printed heading but an optional
+   student route. It targets the same goal and doeloefening with stronger
+   explicit support that deliberately fades. Use neutral skip wording: `Heb je
+   deze hulp niet nodig? Ga dan verder met Zelfstandige oefening.`
+4. **Zelfstandige oefening** rehearses the decomposed target operations without
+   the guided support and uses varied contexts. It may not expand into adjacent
+   content or hide enrichment inside the core route.
+5. **Doeloefening** is the blueprint target, verbatim by default. Light
+   adaptation is allowed only where the blueprint or responsible owner
+   authorizes it, and it must preserve every target operation, answer form, and
+   intended difficulty. It is the capstone evidence for the lesson goal.
+6. **Denkertje / Bonusopgave** builds cognitive flexibility with a new
+   representation, assumption, strategy, comparison, critique, or transfer.
+   It is not more or longer arithmetic of the same type.
+7. **Herhaling / Herhaling en interleaving** contains 1–2 short, accessible
+   cumulative tasks using taught content. It may be homework and introduces no
+   new theory.
+
+**Paper-first/no-device rule:** the printed paragraph must contain all
+explanation, prerequisite retrieval, guided scaffolding, independent practice,
+and target preparation needed for the classroom lesson. Student-facing
+template copy must not direct students to a website, online explanation,
+companion page, laptop, phone, tablet, QR code, or other digital support. It
+must not expose internal terms such as Part A, Part B, lane, or companion route.
+Those terms remain valid only in internal repository guidance and handoffs.
+
+### 3.2 Dual coding fading — target-aligned rule
+
+Choose the fading sequence from the approved target operation and answer form.
+When graph or table production is itself a target operation, fade visual
+production support within `Begeleide inoefening` and into independent
+practice—not across `Startopgaven`, whose two short roles must stay compact:
 
 | Stage | Exercise | What the student is given | What the student does |
 |-------|----------|--------------------------|----------------------|
-| 1 | Startoefening 1 | Graph **with** the change drawn AND labeled | Reads, identifies, classifies, explains |
-| 2 | Startoefening 2 | Graph base (axes + initial line) only | Draws the change themselves |
-| 3 | Startoefening 3 | No graph | Reasons in text/words only |
-| 4 | Independent practice | No graph | Draws their own graph from scratch as part of the solution |
+| 1 | Begeleide oefening 1 | Graph **with** the change drawn AND labeled | Reads, identifies, classifies, explains |
+| 2 | Begeleide oefening 2 | Graph base (axes + initial line) only | Draws the change themselves |
+| 3 | Begeleide oefening 3 | No graph | Reasons in text/words only |
+| 4 | Independent practice | No graph | Performs the target graph-production operation independently |
 
 **Why stage 1 is non-negotiable:** Without it, the very first exercise asks students to *produce* before they have *recognized*. Stage 1 lets them verify their reading of the visual conventions before they apply them. It's the lowest-friction entry point into the visual representation of the concept.
+
+If the target requires graph/table reading, interpreting, modifying a supplied
+representation, or source use rather than production, do not add graph/table
+production. Fade only target-relevant support: labels, hints, worked markings,
+or intermediate prompts, while retaining any representation the target gives
+the student.
 
 **Stage 1 question patterns** (read a labeled graph):
 - "What does this graph represent? What might have caused it?"
 - "Two situations are shown. Which is X and which is Y? Why?"
 - "Identify the type of change in this graph and explain in your own words."
 
-**Stage 2 question patterns** (draw on provided graph):
+**Stage 2 question patterns** (draw on a provided graph only when that
+production action belongs to the target):
 - "Show in the graph what happens when..."
 - "Draw the new equilibrium on the graph below."
 - "Add the [shift / movement / surplus area] to the figure."
 
-**"Visual support" means:** a graph, flow diagram, table, or schematic is provided as part of the exercise (not just in the answer). At stage 1 the visual carries the answer; at stage 2 the visual is a base to draw on; at stages 3–4 there is no visual at all.
+**"Visual support" means:** a graph, flow diagram, table, or schematic is
+provided as part of the exercise (not just in the answer). In the production
+sequence above, stage 1 carries the answer, stage 2 supplies a base, and stages
+3–4 remove that production support. Other target operations use their own
+target-aligned fading sequence.
 
 ### 3.2.bis Combined-change misconception exercise (MANDATORY for distinction paragraphs)
 
@@ -176,7 +231,10 @@ d) Een leerling zegt: "[plausible wrong reading]". Leg uit waarom dit niet klopt
 
 **Why:** Students who can correctly classify single-change cases often collapse under simultaneous changes — they pick one category and apply it to both. The combined-change exercise forces them to keep both lenses active. It is the strongest test of whether the distinction has actually landed.
 
-**Placement:** as the LAST starter exercise (highest scaffolded difficulty) OR the FIRST independent exercise. Always include sub-question (d) confronting a tempting wrong reading — this is the misconception-confrontation lever.
+**Placement:** as the last exercise in optional `Begeleide inoefening` (highest
+scaffolded difficulty) or the first `Zelfstandige oefening`. Always include
+sub-question (d) confronting a tempting wrong reading—this is the
+misconception-confrontation lever.
 
 ### 3.3 Distinction-drilling tables need column headers (MANDATORY)
 
@@ -248,18 +306,18 @@ Antwoord: [final answer with units]
   - When there's a tempting wrong attribution, add a one-line `⚠️ Let op de juiste vraagfactor` reminder in the answer model.
   - Why: beginners are still building the categorisation reflex. Loose attribution teaches them to fall back on "preferences" whenever they're unsure, collapsing the very distinction the lesson is trying to teach.
 
-### 4.4 Verdieping answer model
+### 4.4 Denkertje / Bonusopgave answer model
 
-The verdiepingsopdracht answer model is different:
+The Denkertje/Bonusopgave answer model is different:
 - No step-by-step procedure (the point is that the student structures their own reasoning)
 - Instead: a **model answer** showing one strong response
 - Followed by: **beoordelingscriteria** (2–4 bullet points stating what a good answer includes)
 
 ---
 
-## PART 5: INTERLEAVING SELECTION
+## PART 5: CLOSING REVIEW SELECTION
 
-### 5.1 Which skills to interleave
+### 5.1 Which taught skills to revisit
 
 **Priority 1 — Direct prerequisites:**
 Skills that the current paragraph builds on. Example: if the current paragraph is B2C2§1 (consumer surplus), interleave with B1C4§1 (equilibrium solving) because surplus calculation requires finding equilibrium first.
@@ -274,11 +332,14 @@ Skills that the current paragraph builds on. Example: if the current paragraph i
 **Priority 3 — Recent skills at risk of decay:**
 Skills from the previous chapter that haven't been practised since.
 
-### 5.2 Interleaving exercise design
+### 5.2 Closing-review exercise design
 
+- Use only **1–2 accessible tasks** in the final `Herhaling / Herhaling en
+  interleaving` section
 - Keep interleaving exercises **short** (2–4 minutes each)
 - Use a **different context** from the original paragraph where the skill was taught
 - Do **not** add scaffolding — these are revision, not new learning
+- Do **not** add theory, definitions, or untaught operations
 - If a student cannot do an interleaving exercise, this signals a gap — note in the answer model: "Kun je deze opgave niet maken? Herhaal dan §X.Y.Z."
 
 ---
@@ -324,51 +385,55 @@ Supply lines always extend to the P-axis (y-axis), even when the y-intercept is 
 
 [Fully solved example — students read, not solve]
 
----
+> **Samenvatting §X.Y.Z**
+> - [Key insight 1]
+> - [Key insight 2]
+> - [Central formula or procedure]
+> - [Brief forward reference]
 
-## Opgaven
+## Startopgaven
 
-**Opgave 1** *(met grafiek — zie figuur 1)*
-[Exercise text]
+**Opgave 1 — Ophalen**
+[Short retrieval of a prerequisite that was already taught]
 
-![Figuur 1: beschrijving](_assets/1.2.1_ex_1.svg)
+**Opgave 2 — Begripscheck**
+[Compact, low-stakes check of current-content comprehension]
 
-**Opgave 2** *(met grafiek — zie figuur 2)*
-[Exercise text at target difficulty]
+**Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
+**Extra hulp nodig?** Maak eerst Begeleide inoefening.
 
-**Opgave 3**
-[Exercise text at target difficulty, no visual provided]
+## Begeleide inoefening
 
-**Opgave 4**
-[Independent practice]
+*Heb je deze hulp niet nodig? Ga dan verder met Zelfstandige oefening.*
 
-**Opgave 5**
-[Independent practice]
+[Optional same-goal exercises with stronger support and deliberate fading]
 
----
+## Zelfstandige oefening
 
-## Interleaving
-
-**Opgave 6** *(herhaling §X.Y.Z: [skill name])*
-[Quick revision exercise]
-
-**Opgave 7** *(herhaling §X.Y.Z: [skill name])*
-[Quick revision exercise]
-
----
+[Independent exercises covering the decomposed target operations]
 
 ## Doeloefening
 
-**Opgave 8**
+**Opgave [N]**
 [The target exercise from the blueprint]
 
----
+## Denkertje / Bonusopgave
 
-## Denkertje *(bonusopgave)*
+**Opgave [N+1]**
+[Optional cognitive-flexibility task, not more of the same arithmetic]
 
-**Opgave 9**
-[Open evaluative question, higher Bloom level]
+## Herhaling / Herhaling en interleaving
+
+**Opgave [N+2]** *(herhaling §X.Y.Z: [skill name])*
+[One of 1–2 short cumulative tasks; no new theory]
 ```
+
+The compact summary is deliberately placed after `Uitgewerkt voorbeeld` and
+before `Startopgaven` so it remains available as a paper reference. It has at
+most five concise points and is never a top-level heading or eighth exercise
+section. Do not insert `## Samenvatting`, `## Website-help`, `## Voorkennis
+ophalen`, a generic `## Opgaven`, or any other top-level heading among the
+seven canonical `##` headings.
 
 ### 7.2 answers.md structure
 
@@ -405,16 +470,16 @@ Antwoord: ...
 
 ## DECISION CHECKLIST — BEFORE GENERATING EXERCISES
 
-1. □ Read the target exercise from the blueprint — this sets the ceiling
-2. □ List the lesson goals — every goal must be practised in at least one exercise
-3. □ Estimate total time — does the set fit in 40–60 minutes?
-4. □ Design the worked example — same procedure, simpler numbers/context
-5. □ Plan dual coding fading — which exercises get graphs, which don't?
-6. □ Select interleaving skills — check prerequisite chains + fundamental skills
-7. □ Choose contexts — all different, none reused within the chapter
-8. □ Write the verdiepingsopdracht — higher Bloom, different context, no scaffolding
-9. □ Specify all graphs — full specs for `economic-graph` skill
-10. □ Write the answer model — unified procedures, substitution shown, units, "waarom"
+1. □ List the lesson goals and decompose every doeloefening subquestion into observable operations
+2. □ Complete the required alignment table; name every uncovered gap
+3. □ Design the worked example from the target chain — same operations, simpler values/context, no extra operation
+4. □ Design both Startopgaven roles under one heading: taught-prerequisite retrieval + compact current-content check
+5. □ Record the whole-lesson equation (motivation + instruction + worked example + compact summary/transitions + actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening ≤55); range addition alone is not proof
+6. □ Always author and print Begeleide inoefening with same-goal, stronger explicit scaffolding and deliberate fading; make only the student's use optional and add neutral skip wording
+7. □ Select 1–2 accessible closing-review skills from already taught content; introduce no theory there
+8. □ Design bonus for cognitive flexibility, not more arithmetic of the same kind
+9. □ Keep the exact seven exercise headings in order at `##`; place the non-heading summary after the example and before Startopgaven; keep every required support route on paper and internal architecture terms out of student copy
+10. □ Specify all graphs and write the unified-procedure answer model with substitution, units, and "waarom"
 
 ---
 
@@ -426,6 +491,10 @@ After generating opgaven.md and antwoorden.md, run these checks before deliverin
 2. □ Verify each referenced asset exists in `_assets/` (both `.svg` and `.png`)
 3. □ If ANY are missing → the exercise set is **NOT complete**. Generate the missing graphs before delivering.
 4. □ Verify asset naming follows convention: `X.Y.Z_{type}_{number}.{ext}`
+5. □ Verify the seven Book 2+ headings and exact order, with no intervening top-level stage
+6. □ Verify both Startopgaven roles, the route note, section time estimates, optional guided fading/skip wording, flexibility bonus, and no-new-theory closing review
+7. □ Verify the alignment table has no silent target-operation gap
+8. □ Verify the whole-lesson equation totals actual planned minutes ≤55 and preserves all target operations
 
 **A delivered exercise set with missing graph files is a broken deliverable, not a complete one.**
 

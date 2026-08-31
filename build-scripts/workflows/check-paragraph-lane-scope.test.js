@@ -52,9 +52,41 @@ describe('check-paragraph-lane-scope', () => {
     expect(classifyPath('Boek 1/shared/reasoning/1.1.1.js').category).toBe('partB_companion');
     expect(classifyPath('build-scripts/workflows/check-paragraph-lane-scope.js').category).toBe('shared_platform');
     expect(classifyPath('RESEARCH_AGENT_MAP.md').category).toBe('generated_indexes');
+    expect(classifyPath('reports/internal-dashboard/dashboard-data.json').category).toBe('generated_indexes');
+    expect(classifyPath('reports/internal-dashboard/index.html').category).toBe('generated_indexes');
     expect(classifyPath('reports/review-gates/PR200/plan.md').category).toBe('review_evidence');
     expect(classifyPath('reports/review-gates/PR200/run.js').category).toBe('unknown');
     expect(classifyPath('reports/review-gates/PR200/packet.pdf').category).toBe('unknown');
+  });
+
+  test('classifies only the canonical internal-dashboard outputs as generated indexes', () => {
+    const canonicalPaths = [
+      'reports/internal-dashboard/index.html',
+      'reports/internal-dashboard/dashboard-data.json',
+    ];
+
+    expect(canonicalPaths.map((filePath) => classifyPath(filePath).category)).toEqual([
+      'generated_indexes',
+      'generated_indexes',
+    ]);
+    expect(checkLaneScope({
+      lane: 'shared',
+      changedPaths: [
+        'build-scripts/workflows/check-paragraph-lane-scope.js',
+        ...canonicalPaths,
+      ],
+    })).toMatchObject({ ok: true, failures: [] });
+
+    expect(classifyPath('reports/other-dashboard/index.html').category).toBe('partB_companion');
+    expect(classifyPath('reports/internal-dashboard/other.json').category).toBe('unknown');
+    expect(checkLaneScope({
+      lane: 'shared',
+      changedPaths: [
+        'build-scripts/workflows/check-paragraph-lane-scope.js',
+        'reports/other-dashboard/index.html',
+        'reports/internal-dashboard/other.json',
+      ],
+    }).ok).toBe(false);
   });
 
   test('accepts wider-route short-check and exit-ticket outputs in the companion lane', () => {

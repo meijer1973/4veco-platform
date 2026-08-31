@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-29T15:07:19.278Z
+Generated: 2026-08-31T10:22:06.790Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/bundle-lane-ci-reliability-20260829`
-Source commit: `0357701620f35fa4c956f1aea42a7d0f1af17188`
-Files indexed: 7453
+Source branch: `codex/part-a-textbook-exercise-structure-1-20260829`
+Source commit: `cfd193a6ba24ca8bd144a4b720362c9a8ec67c1d`
+Files indexed: 7505
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 713
+Count: 715
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -815,6 +815,8 @@ Count: 713
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
 - build-scripts/workflows/check-paragraph-workflow-wording.test.js
+- build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+- build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
 - build-scripts/workflows/check-part-a-pdf-readiness.js
 - build-scripts/workflows/check-part-a-pdf-readiness.test.js
 - build-scripts/workflows/fixtures/paragraph-lane-scope/companion-only.json
@@ -886,7 +888,7 @@ Count: 25
 
 ## validators
 
-Count: 686
+Count: 688
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1277,6 +1279,8 @@ Count: 686
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
 - build-scripts/workflows/check-paragraph-workflow-wording.test.js
+- build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+- build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
 - build-scripts/workflows/check-part-a-pdf-readiness.js
 - build-scripts/workflows/check-part-a-pdf-readiness.test.js
 - docs/inspection-standards/evidence-pack-validation-and-dispatch.md
@@ -1577,7 +1581,7 @@ Count: 686
 
 ## references
 
-Count: 1008
+Count: 1012
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -2130,6 +2134,8 @@ Count: 1008
 - references/data/sprints/MTU-H4B.result.json
 - references/data/sprints/MTU-H4C.plan.json
 - references/data/sprints/MTU-H4C.result.json
+- references/data/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1.plan.json
+- references/data/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -2289,6 +2295,8 @@ Count: 1008
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2.plan.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3.plan.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4.plan.json
+- references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.plan.json
+- references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.result.json
 - references/data/sprints/SKILLMAP-OP-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.plan.json
@@ -2590,7 +2598,7 @@ Count: 1008
 
 ## reports
 
-Count: 4771
+Count: 4817
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4652,6 +4660,9 @@ Count: 4771
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-direct-review-comments.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/bundle-urls.md
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.json
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/closure-proposal.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.json
@@ -6317,6 +6328,36 @@ Count: 4771
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-1-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/round-4-desktop-light.png
 - reports/sprints/NEWS-DETECTIVE-V2-PROTOTYPE-REPLACEMENT-1-screenshots/start-desktop-light.png
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-baseline.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.jsonl
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-diff-summary.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-exact-head-review-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-assignment.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-corrections.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-revision-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-revision.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round1.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2-recheck1.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round3.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round4.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round5.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-recheck.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision-recheck.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-exact-head-repair.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-recheck.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-revision-recheck.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-revision-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-revision.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review.md
 - reports/sprints/PAYLOAD-AUTHORIZATION-WORDING-1-lead-review-round2.md
 - reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round2.md
 - reports/sprints/PAYLOAD-INTEGRATION-STATE-EXPLAINABILITY-1-lead-review-round3.md
@@ -6889,6 +6930,19 @@ Count: 4771
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - reports/sprints/SINGLE-ACCOUNT-REVIEW-GOVERNANCE-1-lead-review-round1.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-ci-portability-renewal.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-planning-review.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md

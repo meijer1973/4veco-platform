@@ -24,6 +24,8 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/paragraph-quality-ref-schema-v2.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-pdf-readiness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-workflow-wording.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/lib/paragraph-types.js
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/AGENTS.md
 
@@ -220,6 +222,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX5-representation-operation-reports/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX6-skilltree-generator-integration/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md
 

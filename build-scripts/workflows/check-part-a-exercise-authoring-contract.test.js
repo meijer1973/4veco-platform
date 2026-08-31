@@ -1,0 +1,361 @@
+'use strict';
+
+const path = require('path');
+
+const {
+  ACTIVE_SURFACES,
+  normalizeSourceText,
+  readFiles,
+  findContractFailures,
+} = require('./check-part-a-exercise-authoring-contract');
+
+const root = path.resolve(__dirname, '..', '..');
+
+function cloneFiles() {
+  return { ...readFiles(root) };
+}
+
+function mutate(file, search, replacement = '') {
+  const files = cloneFiles();
+  expect(files[file]).toContain(search);
+  files[file] = files[file].replace(search, replacement);
+  return files;
+}
+
+function mutateAll(file, search, replacement = '') {
+  const files = cloneFiles();
+  expect(files[file]).toContain(search);
+  files[file] = files[file].split(search).join(replacement);
+  return files;
+}
+
+function expectFailure(files, fragment, options) {
+  const failures = findContractFailures(files, options);
+  expect(failures.some((failure) => failure.includes(fragment))).toBe(true);
+}
+
+describe('Part A exercise authoring source contract', () => {
+  test('normalizes CRLF and lone CR source text', () => {
+    expect(normalizeSourceText('alpha\r\nbeta\rgamma')).toBe('alpha\nbeta\ngamma');
+  });
+
+  test('normalizes source line endings before structural mutation probes', () => {
+    expect(Object.values(cloneFiles()).every((text) => !text.includes('\r'))).toBe(true);
+  });
+
+  test('current platform guidance passes without inspecting lesson output', () => {
+    expect(findContractFailures(cloneFiles())).toEqual([]);
+    expect(ACTIVE_SURFACES.every((file) => !file.includes('4veco-lessen'))).toBe(true);
+  });
+
+  test('rejects reordered or interrupted canonical headings', () => {
+    const files = mutate(
+      'skills/econ-exercise-builder.md',
+      '## Startopgaven\n## Begeleide inoefening',
+      '## Begeleide inoefening\n## Startopgaven'
+    );
+    expectFailure(files, 'canonical block after');
+
+    const interrupted = mutate(
+      'skills/econ-exercise-builder.md',
+      '## Startopgaven\n## Begeleide inoefening',
+      '## Startopgaven\n## Samenvatting\n## Begeleide inoefening'
+    );
+    expectFailure(interrupted, 'canonical block after');
+  });
+
+  test('rejects a wrong heading level in a canonical source block', () => {
+    const files = mutate(
+      'skills/econ-pdf-builder.md',
+      '## Uitgewerkt voorbeeld\n## Startopgaven',
+      '### Uitgewerkt voorbeeld\n## Startopgaven'
+    );
+    expectFailure(files, 'must contain exactly seven ## headings');
+  });
+
+  test('rejects extra or intervening headings in the operational template', () => {
+    const extraStartHeading = mutate(
+      'skills/econ-exercise-builder.md',
+      '## Startopgaven\n\n**Opgave 1 — Ophalen**',
+      '## Startopgaven\n\n## Voorkennis ophalen\n\n**Opgave 1 — Ophalen**'
+    );
+    expectFailure(extraStartHeading, 'operational template must contain exactly');
+
+    const websiteStage = mutate(
+      'skills/econ-exercise-builder.md',
+      '> - [Brief forward reference]\n\n## Startopgaven',
+      '> - [Brief forward reference]\n\n## Website-help\n\n## Startopgaven'
+    );
+    expectFailure(websiteStage, 'operational template must contain exactly');
+  });
+
+  test('rejects reordered paragraph diagram and build-guide sequence', () => {
+    expectFailure(
+      mutate(
+        'skills/econ-textbook-paragraph.md',
+        '│ 8. ## ZELFSTANDIGE OEFENING                 │\n│ 9. ## DOELOEFENING',
+        '│ 8. ## DOELOEFENING                          │\n│ 9. ## ZELFSTANDIGE OEFENING'
+      ),
+      'canonical paragraph structure diagram'
+    );
+    expectFailure(
+      mutate(
+        'BUILD-PARAGRAPH.md',
+        '## Begeleide inoefening\n## Zelfstandige oefening',
+        '## Zelfstandige oefening\n## Begeleide inoefening'
+      ),
+      'canonical block after'
+    );
+  });
+
+  test('rejects every forbidden printed help dependency and missing paper support', () => {
+    const supportLine = '**Extra hulp nodig?** Maak eerst Begeleide inoefening.';
+
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Gebruik de website.'),
+      'printed template depends on or advertises digital support'
+    );
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Ga naar Part B.'),
+      'printed template exposes internal architecture terminology'
+    );
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine, '**Extra hulp nodig?** Bekijk de online uitleg op je laptop.'),
+      'printed template depends on or advertises digital support'
+    );
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', supportLine),
+      'paper support note missing from printed template'
+    );
+  });
+
+  test.each([
+    'Gebruik je telefoon voor de extra uitleg.',
+    'Gebruik je smartphone voor de extra uitleg.',
+    'Gebruik je computer voor de extra uitleg.',
+    'Scan de QR-code om de stappen te bekijken.',
+    'Scan de code om de stappen te bekijken.',
+    'Open de app voor hulp.',
+    'Bekijk de digitale uitleg.',
+    'Gebruik een digitaal hulpmiddel.',
+    'Gebruik internet voor de stappen.',
+  ])('rejects Dutch printed digital dependency: %s', (replacement) => {
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        '**Extra hulp nodig?** Maak eerst Begeleide inoefening.',
+        `**Extra hulp nodig?** ${replacement}`
+      ),
+      'printed template depends on or advertises digital support'
+    );
+  });
+
+  test('allows digital and architecture terms outside the printed template', () => {
+    const files = cloneFiles();
+    files['skills/econ-didactiek.md'] +=
+      '\nInternal review note: discuss website, telefoon, QR-code, app, Part A, and Part B boundaries here.\n';
+    expect(findContractFailures(files)).toEqual([]);
+  });
+
+  test('rejects summary placement after section seven and summary-as-heading', () => {
+    const summary = [
+      '> **Samenvatting §X.Y.Z**',
+      '> - [Key insight 1]',
+      '> - [Key insight 2]',
+      '> - [Central formula or procedure]',
+      '> - [Brief forward reference]',
+    ].join('\n');
+    const files = cloneFiles();
+    expect(files['skills/econ-exercise-builder.md']).toContain(`${summary}\n\n## Startopgaven`);
+    expect(files['skills/econ-exercise-builder.md']).toContain(
+      '[One of 1–2 short cumulative tasks; no new theory]\n```'
+    );
+    files['skills/econ-exercise-builder.md'] = files['skills/econ-exercise-builder.md']
+      .replace(`${summary}\n\n## Startopgaven`, '## Startopgaven')
+      .replace(
+        '[One of 1–2 short cumulative tasks; no new theory]\n```',
+        `[One of 1–2 short cumulative tasks; no new theory]\n\n${summary}\n\`\`\``
+      );
+    expectFailure(files, 'compact non-heading summary must follow the worked example and precede Startopgaven');
+
+    const summaryHeading = mutate(
+      'skills/econ-exercise-builder.md',
+      '> **Samenvatting §X.Y.Z**',
+      '## Samenvatting §X.Y.Z'
+    );
+    expectFailure(summaryHeading, 'summary must not become an eighth top-level heading');
+  });
+
+  test.each([
+    ['retrieval of prerequisites already taught', 'Startopgaven retrieval role missing'],
+    ['compact check of\n   current-content comprehension', 'Startopgaven comprehension role missing'],
+    ['deliberately fades', 'optional guided/fading rule missing'],
+    ['introduces no\n   new theory', 'closing-review rule missing'],
+    ['Book 1 output is frozen', 'Book 1 freeze missing'],
+  ])('rejects removal of %s', (needle, failure) => {
+    expectFailure(mutate('skills/econ-exercise-builder.md', needle), failure);
+  });
+
+  test('rejects making guided practice mandatory and adding new closing theory', () => {
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        'required printed heading but an optional\n   student route',
+        'required printed heading and a mandatory\n   student route'
+      ),
+      'optional guided/fading rule missing'
+    );
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        'It may be homework and introduces no\n   new theory.',
+        'It may be homework and introduces\n   new theory.'
+      ),
+      'closing-review rule missing'
+    );
+  });
+
+  test('rejects contradictory omission and target-absent production permissions', () => {
+    const checklistRule = '6. □ Always author and print Begeleide inoefening with same-goal, stronger explicit scaffolding and deliberate fading; make only the student\'s use optional and add neutral skip wording';
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        checklistRule,
+        `${checklistRule}\n\nIf guided practice is useful, author it; otherwise omit Begeleide inoefening.`
+      ),
+      'author-side guided-practice omission permission'
+    );
+
+    const nextSection = '### 3.2.bis Combined-change misconception exercise';
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        nextSection,
+        `Independent practice must always require students to produce a graph, even when graph production is absent from the target.\n\n${nextSection}`
+      ),
+      'target-absent graph/table production permission'
+    );
+
+    expectFailure(
+      mutate(
+        'skills/econ-didactiek.md',
+        '### 5.4 Unified experience',
+        'Doelniveau zonder dual coding (alleen tekst).\n\n### 5.4 Unified experience'
+      ),
+      'skills/econ-didactiek.md: target-misaligned unconditional visual-removal instruction'
+    );
+
+    expectFailure(
+      mutate(
+        'skills/econ-textbook-paragraph.md',
+        '**Graph checks:**',
+        'Dual coding fading applied inside optional guided practice (visual → visual → no visual).\n\n**Graph checks:**'
+      ),
+      'skills/econ-textbook-paragraph.md: target-misaligned unconditional visual-removal instruction'
+    );
+  });
+
+  test.each([
+    ['skills/econ-exercise-builder.md', '### 3.2.bis Combined-change misconception exercise'],
+    ['references/authored/didactiek-principes.md', '### 4.5 Scaffold decision tree'],
+    ['references/authored/vraagtypen-en-opgaveontwerp.md', '### 3.5 Classification table headers'],
+    ['skills/econ-didactiek.md', '### 5.4 Unified experience'],
+    ['skills/econ-textbook-paragraph.md', '**Graph checks:**'],
+  ])('rejects unconditional visual removal in %s', (file, endMarker) => {
+    expectFailure(
+      mutate(
+        file,
+        endMarker,
+        `Always fade visual → visual → no visual, regardless of the target representation.\n\n${endMarker}`
+      ),
+      `${file}: target-misaligned unconditional visual-removal instruction`
+    );
+  });
+
+  test('rejects removal of route, neutral skip wording, and flexibility semantics', () => {
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        '**Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.'
+      ),
+      'paper short-route note missing from printed template'
+    );
+    expectFailure(
+      mutateAll('skills/econ-exercise-builder.md', 'Heb je deze hulp niet nodig?'),
+      'neutral guided skip wording missing'
+    );
+    const files = mutate(
+      'skills/econ-exercise-builder.md',
+      '**Denkertje / Bonusopgave** builds cognitive flexibility with a new',
+      '**Denkertje / Bonusopgave** adds routine calculation with a new'
+    );
+    expectFailure(files, 'bonus cognitive-flexibility rule missing');
+  });
+
+  test('rejects fake or stale lesson-time proof', () => {
+    expectFailure(
+      mutate('skills/econ-exercise-builder.md', 'ranges below are recommendations, not proof by themselves'),
+      'range-sum-is-not-proof safeguard missing'
+    );
+    const files = cloneFiles();
+    files['skills/econ-textbook-paragraph.md'] += '\nExercise set fits 40–60 min of student work.\n';
+    expectFailure(files, 'stale 40–60-minute exercise-set timing rule');
+  });
+
+  test('rejects review severity downgrade and target-absent graph demand', () => {
+    expectFailure(
+      mutate(
+        'skills/econ-paragraph-review.md',
+        'Any missing, reordered, wrong-level, or additional top-level stage is a FAIL.',
+        'Any missing, reordered, wrong-level, or additional top-level stage is a FLAG.'
+      ),
+      'review heading/adjacency hard-fail severity missing'
+    );
+    expectFailure(
+      mutate(
+        'skills/econ-paragraph-review.md',
+        'produce their own graph/table only when graph/table production is a target operation',
+        'produce their own graphs/tables in every doeloefening'
+      ),
+      'target-conditional representation rule missing'
+    );
+  });
+
+  test.each([
+    ['prerequisite-retrieval task is\n   normally 3–5 minutes', 'Start retrieval 3–5-minute norm missing'],
+    ['teacher may assign that printed retrieval task at\n   the beginning of the lesson', 'classroom-order/printed-order clarification missing'],
+    ['may not expand into adjacent\n   content or hide enrichment inside the core route', 'independent-practice scope boundary missing'],
+    ['Light\n   adaptation is allowed only where the blueprint or responsible owner\n   authorizes it', 'authorized target-adaptation rule missing'],
+  ])('rejects removal of bounded clarification %s', (needle, failure) => {
+    expectFailure(mutate('skills/econ-exercise-builder.md', needle), failure);
+  });
+
+  test('rejects legacy terminology and lesson-output scope expansion', () => {
+    const files = cloneFiles();
+    files['skills/econ-didactiek.md'] += '\nStartoefeningen are mandatory.\n';
+    expectFailure(files, 'legacy Startoefening/Startoefeningen');
+
+    expectFailure(
+      cloneFiles(),
+      'platform-source-only and non-retroactive',
+      { activeSurfaces: [...ACTIVE_SURFACES, '../4veco-lessen/book-1/paragraph.md'] }
+    );
+  });
+
+  test('rejects Part B route wording without an explicit boundary', () => {
+    const files = cloneFiles();
+    files['skills/econ-didactiek.md'] += '\nUse Start -> Leer -> Check -> Oefen -> Exit ticket.\n';
+    expectFailure(files, 'companion route is not explicitly bounded to Part B');
+  });
+
+  test('rejects missing CI and navigation wiring', () => {
+    expectFailure(
+      mutate('.github/workflows/platform-ci.yml', 'npm run check:part-a-exercise-authoring-contract'),
+      'explicit CI checker step missing'
+    );
+    expectFailure(
+      mutateAll('AGENT_GITHUB_ENTRY.md', 'build-scripts/workflows/check-part-a-exercise-authoring-contract.js'),
+      'navigation entry missing'
+    );
+  });
+});

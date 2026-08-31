@@ -51,6 +51,69 @@ Inspect as many of these as apply:
 - Formative checks, feedback, answer models, score/routing logic, and differentiation paths.
 - Existing review reports, quality-ref YAML, and validator/test reports.
 
+### Book 2+ Part A contract-review mode
+
+When reviewing a newly authored Book 2 or later Part A theory paragraph—or a
+change to its authoring contract—treat `skills/econ-exercise-builder.md` as the
+operational source and `references/authored/didactiek-principes.md` as the
+rationale source. Book 1 output is frozen: do not retrofit it or use this mode
+as a retroactive Book 1 content check.
+
+Verify all of the following:
+
+- backward design is explicit through `lesson goals -> doeloefening -> target
+  operations -> worked example and practice`, with the required alignment
+  table and no silent gap;
+- these seven student-facing exercise headings are exactly levelled and ordered:
+  `## Uitgewerkt voorbeeld`, `## Startopgaven`, `## Begeleide inoefening`,
+  `## Zelfstandige oefening`, `## Doeloefening`, `## Denkertje / Bonusopgave`,
+  `## Herhaling / Herhaling en interleaving`;
+- theory is followed directly by the worked example, then a compact non-heading
+  summary of no more than five points, then Startopgaven;
+- Startopgaven includes already-taught prerequisite retrieval and a compact
+  current-content comprehension check under one heading, without claiming
+  mastery, diagnosis, or automatic routing;
+- Begeleide inoefening remains a printed heading but an optional student route,
+  keeps the same goal/target, supplies stronger explicit scaffolding,
+  deliberately fades it, and uses neutral skip wording;
+- the core route `Startopgaven -> Zelfstandige oefening -> Doeloefening` is
+  feasible within a 55-minute lesson through an explicit equation that totals
+  motivation, instruction, worked example, transitions/recap, and the actual
+  planned core-route questions; range addition alone is not proof;
+- the bonus creates cognitive flexibility rather than more arithmetic, while
+  closing review has 1–2 accessible cumulative/homework tasks and no new
+  theory; and
+- internal Part A/Part B architecture remains distinct, but the printed route
+  is complete on paper and neither depends on nor advertises a website, online
+  explanation, companion page, laptop, phone, tablet, QR code, or other device;
+  student-facing copy does not expose Part A, Part B, lane, companion route, or
+  repository terminology.
+
+For a Book 2+ Part A contract review, give a separate evidence-backed judgment
+for each of these twelve criteria:
+
+1. paper-only usability;
+2. no-device compatibility;
+3. all required support present in print;
+4. simple printed route;
+5. backward alignment;
+6. 55-minute feasibility;
+7. same-goal differentiation;
+8. bonus cognitive flexibility;
+9. accessible closing review;
+10. Book 1 continuity;
+11. summary placement; and
+12. absence of student-facing internal architecture terminology.
+
+Hard fail any missing/reordered/wrong-level/additional heading sequence,
+misplaced or top-level summary, uncovered target
+operation, untaught prerequisite disguised as retrieval, worked-example
+operation absent from goals/target, mandatory or non-fading guided route,
+same-kind arithmetic bonus, new theory in closing review, or Part A/Part B
+route conflation. Also hard fail any printed dependency on a website, device,
+online explanation, or companion surface, and any student-facing internal
+architecture term.
+
 ## Primary review focus
 
 This agent focuses on:

@@ -10,6 +10,30 @@ General didactic principles for economics education. This skill is format-indepe
 
 **Authoritative reference:** `references/authored/didactiek-principes.md` is the single source of truth for all didactical principles in this repository. This skill provides operational decision rules; the reference document contains the complete theoretical foundation, research evidence, and detailed specifications. When this skill and the reference document conflict, the reference document takes precedence.
 
+**Book 2+ Part A inheritance:** for newly authored Book 2 and later theory
+paragraphs, use the complete operational sequence and backward-design table in
+`skills/econ-exercise-builder.md`. Book 1 is frozen and must not be retrofitted.
+Inherit its exact seven `##` headings, compact non-heading summary between the
+worked example and Startopgaven, and paper-only short/support route. The core
+route `Startopgaven -> Zelfstandige oefening -> Doeloefening` must fit the work
+time of a 55-minute lesson. Internal Part A/Part B architecture remains
+separate, but printed student copy neither uses those terms nor depends on a
+companion or device.
+
+Apply these didactic checks within that structure:
+
+- the worked example models the same target-operation chain with lower
+  complexity and no operation absent from the goals/target;
+- Startopgaven retrieves already-taught prerequisites and briefly checks
+  current-content comprehension under one heading, without claiming mastery,
+  diagnosis, or automatic routing;
+- Begeleide inoefening remains a printed heading but is an optional student
+  route; it keeps the same goal, uses stronger explicit support, deliberately
+  fades it, and offers a neutrally worded skip;
+- bonus builds cognitive flexibility rather than adding more arithmetic;
+- closing review contains 1–2 accessible cumulative/homework tasks and no new
+  theory.
+
 ---
 
 ## PART 1: CORE DESIGN PHILOSOPHY
@@ -209,12 +233,25 @@ Informatie wordt beter onthouden als het via twee kanalen binnenkomt: verbaal (t
 
 ### 5.3 Exercise scaffolding met visuals
 
-Binnen een paragraaf/les progressie van oefeningen:
-1. **Simpel + volledige dual coding** (tekst + visueel)
-2. **Doelniveau + dual coding** (tekst + visueel)
-3. **Doelniveau zonder dual coding** (alleen tekst)
+Kies de progressie vanuit de representatie en antwoordvorm van de
+`Doeloefening`; gebruik geen vaste route van beeld naar alleen tekst.
 
-Zo worden leerlingen opgebouwd en wordt de visuele ondersteuning gefaded vóór het doorgaan.
+**Target-aligned invariant:** Fade scaffolding toward the representation and
+answer form of the doeloefening. Remove a visual only when students must
+eventually work without it. Retain any graph, table, or source supplied by the
+target. Do not introduce graph or table production unless production is a
+target operation.
+
+- Als grafiek- of tabelproductie een doelhandeling is, bouw de
+  productieondersteuning af: eerst een uitgewerkt en gelabeld beeld, daarna een
+  basis om aan te vullen, en uiteindelijk zelfstandige productie in de vorm die
+  de doeloefening vraagt.
+- Als de doeloefening een grafiek, tabel of bron **aanbiedt** en lezen,
+  interpreteren, aanpassen of brongebruik vraagt, blijft die representatie
+  staan. Fade dan alleen doelrelevante labels, hints, uitgewerkte markeringen of
+  tussenprompts.
+- Voeg nooit grafiek- of tabelproductie toe om het faden zichtbaar te maken als
+  productie geen goedgekeurde doelhandeling is.
 
 ### 5.4 Unified experience
 
