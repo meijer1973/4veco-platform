@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-31T06:42:12.430Z
+Generated: 2026-08-31T07:14:23.275Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/part-a-textbook-exercise-structure-1-20260829`
-Source commit: `1ed301f931b0e87621facaebc5205265d5be30a5`
-Files indexed: 7505
+Source commit: `f7e171b81560b35f1f2cf03728da20c616d77d46`
+Files indexed: 7496
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2598,7 +2598,7 @@ Count: 1012
 
 ## reports
 
-Count: 4817
+Count: 4808
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2659,16 +2659,8 @@ Count: 4817
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -2852,10 +2844,6 @@ Count: 4817
 - reports/inspection-standards/source-refresh-execution-pilot-decision.json
 - reports/inspection-standards/source-refresh-execution-pilot-decision.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/a96-calculation-answer-form-hardening-and-scale-gate-1-rereview-1-proof.json
 - reports/json/a96-calculation-answer-form-refinement-1-proof.json
@@ -6353,6 +6341,9 @@ Count: 4817
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-recheck.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision-recheck.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-recheck.md
