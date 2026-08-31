@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-31T07:40:59.595Z
+Generated: 2026-08-31T08:12:19.611Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/part-a-textbook-exercise-structure-1-20260829`
-Source commit: `3e7359f776e7650a56c8374f64d832999e992350`
-Files indexed: 7499
+Source commit: `f15bf38d06a8166fd8ad39cbcde1ee6e1565d9e9`
+Files indexed: 7501
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2598,7 +2598,7 @@ Count: 1012
 
 ## reports
 
-Count: 4811
+Count: 4813
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6334,6 +6334,8 @@ Count: 4811
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-diff-summary.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-assignment.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-corrections.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-revision-resolution.md
+- reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-revision.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round1.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2-recheck1.md
 - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2.md

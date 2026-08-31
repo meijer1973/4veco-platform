@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T07:40:48.063Z",
+  "generatedAt": "2026-08-31T08:12:20.195Z",
   "internalOnly": true,
   "teams": [
     {
@@ -164,9 +164,9 @@
           "sprints": [
             {
               "sprint": "PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1",
-              "name": "Book 2 Part A Exercise Authoring Contract",
+              "name": "Book 2+ Part A Paper-Only Exercise Authoring Contract",
               "completed": "yes",
-              "currentState": "Implementation complete with teacher-learning-quality `PASS` (14/14) and final lead-review `PASS`. The platform-only contract aligns the seven-section printed Part A sequence, backward target-operation design, optional faded support, the 2→4→5 route within a real 55-minute lesson, and the bonus/review distinction; a CI-wired mutation checker protects 10 active surfaces. Draft-PR publication, exact-head CI, and readiness routing remain before `READY_FOR_HUMAN_REVIEW`. No `4veco-lessen`, Book 1, Book 2 paragraph output, Part B redesign, protected reference mutation, schema-role migration, merge, or production authority.",
+              "currentState": "Implementation complete with renewed teacher-learning-quality `PASS` (12/12) after TLQ-R1/R2 closure. The platform-only contract requires the exact seven printed `##` headings, a maximum-five-point non-heading summary before Startopgaven, the short paper route plus always-printed guided support, target-aligned fading, an actual 55-minute whole-lesson proof, and no website/device/internal-term dependency. All 13 required mutations plus two contradiction probes pass; focused tests pass 49/49, local platform tests pass 106 suites/1,606 tests, exact-head CI run `33369460856` passed, and the lesson checkout remains clean at `f09fd6e...`. Renewed lead `REVISE` accepted the implementation and limited LREV-R4/LREV-R5 to stale closure evidence/readiness metadata; the evidence correction is recorded for bounded recheck. No `4veco-lessen`, Book 1, Book 2 paragraph output, Part B redesign, protected reference mutation, schema-role migration, merge, or production authority.",
               "exitGate": ""
             },
             {
@@ -1555,9 +1555,9 @@
         },
         {
           "sprint": "PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1",
-          "name": "Book 2 Part A Exercise Authoring Contract",
+          "name": "Book 2+ Part A Paper-Only Exercise Authoring Contract",
           "completed": "yes",
-          "currentState": "Implementation complete with teacher-learning-quality `PASS` (14/14) and final lead-review `PASS`. The platform-only contract aligns the seven-section printed Part A sequence, backward target-operation design, optional faded support, the 2→4→5 route within a real 55-minute lesson, and the bonus/review distinction; a CI-wired mutation checker protects 10 active surfaces. Draft-PR publication, exact-head CI, and readiness routing remain before `READY_FOR_HUMAN_REVIEW`. No `4veco-lessen`, Book 1, Book 2 paragraph output, Part B redesign, protected reference mutation, schema-role migration, merge, or production authority.",
+          "currentState": "Implementation complete with renewed teacher-learning-quality `PASS` (12/12) after TLQ-R1/R2 closure. The platform-only contract requires the exact seven printed `##` headings, a maximum-five-point non-heading summary before Startopgaven, the short paper route plus always-printed guided support, target-aligned fading, an actual 55-minute whole-lesson proof, and no website/device/internal-term dependency. All 13 required mutations plus two contradiction probes pass; focused tests pass 49/49, local platform tests pass 106 suites/1,606 tests, exact-head CI run `33369460856` passed, and the lesson checkout remains clean at `f09fd6e...`. Renewed lead `REVISE` accepted the implementation and limited LREV-R4/LREV-R5 to stale closure evidence/readiness metadata; the evidence correction is recorded for bounded recheck. No `4veco-lessen`, Book 1, Book 2 paragraph output, Part B redesign, protected reference mutation, schema-role migration, merge, or production authority.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
