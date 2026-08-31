@@ -47,6 +47,11 @@ const SHARED_PLATFORM_ROOT_FILES = new Set([
   'research_agent_prompt_references.md',
 ]);
 
+const SHARED_PLATFORM_EXACT_FILES = new Set([
+  'reports/internal-dashboard/dashboard-data.json',
+  'reports/internal-dashboard/index.html',
+]);
+
 const GENERATED_INDEX_FILES = new Set([
   'agent_github_entry.md',
   'research_agent_map.md',
@@ -128,6 +133,7 @@ function isReviewEvidencePath(filePath) {
 
 function isSharedPlatformPath(filePath) {
   const p = normalizedLower(filePath);
+  if (SHARED_PLATFORM_EXACT_FILES.has(p)) return true;
   if (SHARED_PLATFORM_ROOT_FILES.has(p)) return true;
   return SHARED_PLATFORM_PREFIXES.some((prefix) => p.startsWith(prefix));
 }

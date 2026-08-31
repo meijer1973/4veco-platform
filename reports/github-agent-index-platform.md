@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-29T17:11:14.898Z
+Generated: 2026-08-31T06:42:12.430Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/part-a-textbook-exercise-structure-1-20260829`
-Source commit: `4ac869209f7c8da8c41cac8f1552b34dd67a6655`
-Files indexed: 7458
+Source commit: `1ed301f931b0e87621facaebc5205265d5be30a5`
+Files indexed: 7505
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1581,7 +1581,7 @@ Count: 688
 
 ## references
 
-Count: 1008
+Count: 1012
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1961,6 +1961,8 @@ Count: 1008
 - references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
+- references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
+- references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
@@ -2293,6 +2295,8 @@ Count: 1008
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2.plan.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3.plan.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4.plan.json
+- references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.plan.json
+- references/data/sprints/SINGLE-PR-DRY-RUN-REPAIR-1.result.json
 - references/data/sprints/SKILLMAP-OP-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.plan.json
@@ -2594,7 +2598,7 @@ Count: 1008
 
 ## reports
 
-Count: 4774
+Count: 4817
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2655,8 +2659,16 @@ Count: 4774
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/book1-1.2-1.3-overlay-crosswalk.json
@@ -2840,6 +2852,10 @@ Count: 4774
 - reports/inspection-standards/source-refresh-execution-pilot-decision.json
 - reports/inspection-standards/source-refresh-execution-pilot-decision.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/a96-calculation-answer-form-hardening-and-scale-gate-1-rereview-1-proof.json
 - reports/json/a96-calculation-answer-form-refinement-1-proof.json
@@ -4023,6 +4039,9 @@ Count: 4774
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
+- reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
+- reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.json
+- reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -4653,6 +4672,9 @@ Count: 4774
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-direct-review-comments.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/bundle-urls.md
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.json
+- reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/review-packet.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/closure-proposal.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.json
@@ -5180,6 +5202,18 @@ Count: 4774
 - reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-plan.md
 - reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-planning-review.md
 - reports/sprints/BUNDLE-INTEGRATION-DELTA-REVIEW-BRIDGE-1-result.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-baseline.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.jsonl
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-command-log.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-diff-summary.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-assignment.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-corrections.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-renewal.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round1.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-lead-review-round2.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-plan.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-planning-review.md
+- reports/sprints/BUNDLE-LANE-CI-RELIABILITY-1-result.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-lead-review.md
 - reports/sprints/BUNDLE-READINESS-ENVELOPE-BRIDGE-1-result.md
 - reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
@@ -6896,6 +6930,19 @@ Count: 4774
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - reports/sprints/SINGLE-ACCOUNT-REVIEW-GOVERNANCE-1-lead-review-round1.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-baseline.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.jsonl
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-command-log.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-diff-summary.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-assignment.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-ci-portability-renewal.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-corrections.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-renewal.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round1.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-lead-review-round2.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-plan.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-planning-review.md
+- reports/sprints/SINGLE-PR-DRY-RUN-REPAIR-1-result.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md

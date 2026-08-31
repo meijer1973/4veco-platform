@@ -348,8 +348,13 @@ function fetchMergedPr(repo, prNumber) {
 
 function selectLatestRunForHead(runs, headSha, options = {}) {
   const minDatabaseId = Number(options.minDatabaseId || 0);
+  const workflowEvent = options.workflowEvent || null;
   return (runs || [])
-    .filter((run) => run.headSha === headSha && Number(run.databaseId || 0) > minDatabaseId)
+    .filter((run) =>
+      run.headSha === headSha &&
+      Number(run.databaseId || 0) > minDatabaseId &&
+      (!workflowEvent || run.event === workflowEvent)
+    )
     .sort((a, b) => Number(b.databaseId || 0) - Number(a.databaseId || 0))[0] || null;
 }
 
@@ -366,7 +371,7 @@ function findMainWorkflowRun(repo, headSha, options = {}) {
     '--limit',
     '20',
     '--json',
-    'databaseId,status,conclusion,headSha,url',
+    'databaseId,status,conclusion,headSha,url,event',
   ]);
   return selectLatestRunForHead(JSON.parse(raw) || [], headSha, options);
 }
@@ -382,7 +387,7 @@ function findWorkflowRunForHead(repo, headSha, options = {}) {
     '--limit',
     '50',
     '--json',
-    'databaseId,status,conclusion,headSha,url',
+    'databaseId,status,conclusion,headSha,url,event',
   ]);
   return selectLatestRunForHead(JSON.parse(raw) || [], headSha, options);
 }
@@ -408,16 +413,49 @@ function latestWorkflowRunDatabaseId(repo, headSha) {
   );
 }
 
-function triggerPlatformCi(options = {}) {
-  if (options.dryRun) return { dry_run: true };
-  const raw = runGh(['workflow', 'run', 'platform-ci.yml', '--repo', PLATFORM_REPO, '--ref', 'main']);
-  return { triggered: true, output: raw };
+function requireFullSha(value, label) {
+  const sha = String(value || '').trim().toLowerCase();
+  if (!/^[a-f0-9]{40}$/.test(sha)) throw new Error(`${label} must be a full 40-character commit SHA`);
+  return sha;
+}
+
+function platformCiDispatchArgs(ref, options = {}) {
+  const workflowRef = String(ref || '').trim();
+  if (!workflowRef) throw new Error('platform-ci dispatch ref is required');
+  const y1BaseSha = requireFullSha(options.y1BaseSha, 'y1_base_sha');
+  const y1HeadSha = requireFullSha(options.y1HeadSha, 'y1_head_sha');
+  return [
+    'workflow',
+    'run',
+    'platform-ci.yml',
+    '--repo',
+    PLATFORM_REPO,
+    '--ref',
+    workflowRef,
+    '-f',
+    `y1_base_sha=${y1BaseSha}`,
+    '-f',
+    `y1_head_sha=${y1HeadSha}`,
+  ];
 }
 
 function triggerPlatformCiForRef(ref, options = {}) {
-  if (options.dryRun) return { dry_run: true, ref };
-  const raw = runGh(['workflow', 'run', 'platform-ci.yml', '--repo', PLATFORM_REPO, '--ref', ref]);
-  return { triggered: true, ref, output: raw };
+  const args = platformCiDispatchArgs(ref, options);
+  if (options.dryRun) return { dry_run: true, ref, args };
+  const runner = options.runGhCommand || runGh;
+  const raw = runner(args);
+  return {
+    triggered: true,
+    ref,
+    y1_base_sha: options.y1BaseSha,
+    y1_head_sha: options.y1HeadSha,
+    args,
+    output: raw,
+  };
+}
+
+function triggerPlatformCi(options = {}) {
+  return triggerPlatformCiForRef('main', options);
 }
 
 function sleep(ms) {
@@ -716,6 +754,209 @@ function waitForPlatformHeadCi(headSha, options = {}) {
   return { ok: false, head_sha: headSha, run: lastRun, failure: 'platform_head_ci_timeout' };
 }
 
+function validatePlatformCiRange(baseSha, headSha) {
+  if (baseSha === headSha) {
+    return { ok: true, status: 'identical', base_sha: baseSha, head_sha: headSha };
+  }
+  const comparison = fetchCompareStatus(PLATFORM_REPO, baseSha, headSha);
+  return {
+    ok: comparison.status === 'ahead' && Number(comparison.behind_by || 0) === 0,
+    base_sha: baseSha,
+    head_sha: headSha,
+    comparison,
+  };
+}
+
+function acquirePlatformMainCi(deps, coordinates = {}, options = {}) {
+  let y1BaseSha;
+  let y1HeadSha;
+  let expectedPlatformSha;
+  let expectedLessonSha;
+  try {
+    y1BaseSha = requireFullSha(coordinates.y1BaseSha, 'y1_base_sha');
+    y1HeadSha = requireFullSha(coordinates.y1HeadSha, 'y1_head_sha');
+    expectedPlatformSha = requireFullSha(coordinates.expectedPlatformSha, 'expected_platform_sha');
+    expectedLessonSha = requireFullSha(coordinates.expectedLessonSha, 'expected_lesson_sha');
+  } catch (error) {
+    return { ok: false, failure: 'platform_ci_coordinates_invalid', error: error.message };
+  }
+  if (y1HeadSha !== expectedPlatformSha) {
+    return {
+      ok: false,
+      failure: 'platform_ci_y1_head_mismatch',
+      expected_platform_sha: expectedPlatformSha,
+      y1_head_sha: y1HeadSha,
+    };
+  }
+  let range;
+  try {
+    range = deps.validatePlatformCiRange(y1BaseSha, y1HeadSha);
+  } catch (error) {
+    return { ok: false, failure: 'platform_ci_y1_range_check_failed', error: error.message };
+  }
+  if (!range || range.ok !== true) {
+    return {
+      ok: false,
+      failure: 'platform_ci_y1_range_invalid',
+      y1_base_sha: y1BaseSha,
+      y1_head_sha: y1HeadSha,
+      range,
+    };
+  }
+
+  const automaticOptions = {
+    ...options,
+    minDatabaseId: Number(coordinates.automaticMinDatabaseId || 0),
+    workflowEvent: 'push',
+    timeoutSeconds: Number(options.automaticRunTimeoutSeconds || 120),
+    expectedPlatformSha,
+    expectedLessonSha,
+  };
+  let automatic;
+  try {
+    automatic = deps.waitForPlatformMainCi(expectedPlatformSha, automaticOptions);
+  } catch (error) {
+    return { ok: false, failure: 'automatic_platform_main_ci_observation_failed', error: error.message, range };
+  }
+  const automaticRunObserved = Boolean(automatic && automatic.run);
+  if (automatic.ok) {
+    return { ...automatic, source: 'automatic_main_push', dispatch: null, range };
+  }
+  if (automatic.failure === 'platform_main_ci_timeout' && automatic.run) {
+    try {
+      automatic = deps.waitForPlatformMainCi(expectedPlatformSha, {
+        ...automaticOptions,
+        timeoutSeconds: Number(options.timeoutSeconds || 1800),
+      });
+    } catch (error) {
+      return { ok: false, failure: 'automatic_platform_main_ci_wait_failed', error: error.message, range };
+    }
+    if (automatic.ok) {
+      return { ...automatic, source: 'automatic_main_push', dispatch: null, range };
+    }
+  }
+  if (automatic.failure !== 'platform_main_ci_timeout' || automatic.run || automaticRunObserved) {
+    return {
+      ok: false,
+      failure: 'automatic_platform_main_ci_failed',
+      automatic_ci: automatic,
+      dispatch: null,
+      range,
+    };
+  }
+
+  let minDatabaseId;
+  try {
+    minDatabaseId = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, expectedPlatformSha);
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_ci_fallback_floor_failed',
+      error: error.message,
+      automatic_ci: automatic,
+      dispatch: null,
+      range,
+    };
+  }
+  let recheckedAutomaticRun;
+  try {
+    recheckedAutomaticRun = deps.findMainWorkflowRun(PLATFORM_REPO, expectedPlatformSha, {
+      ...options,
+      minDatabaseId: Number(coordinates.automaticMinDatabaseId || 0),
+      workflowEvent: 'push',
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_ci_automatic_recheck_failed',
+      error: error.message,
+      automatic_ci: automatic,
+      dispatch: null,
+      range,
+    };
+  }
+  if (recheckedAutomaticRun) {
+    let recheckedAutomatic;
+    try {
+      recheckedAutomatic = deps.waitForPlatformMainCi(expectedPlatformSha, {
+        ...automaticOptions,
+        timeoutSeconds: Number(options.timeoutSeconds || 1800),
+      });
+    } catch (error) {
+      return {
+        ok: false,
+        failure: 'automatic_platform_main_ci_wait_failed',
+        error: error.message,
+        rechecked_run: recheckedAutomaticRun,
+        dispatch: null,
+        range,
+      };
+    }
+    return recheckedAutomatic.ok
+      ? {
+          ...recheckedAutomatic,
+          source: 'automatic_main_push_rechecked',
+          dispatch: null,
+          rechecked_run: recheckedAutomaticRun,
+          range,
+        }
+      : {
+          ok: false,
+          failure: 'automatic_platform_main_ci_failed',
+          automatic_ci: recheckedAutomatic,
+          rechecked_run: recheckedAutomaticRun,
+          dispatch: null,
+          range,
+        };
+  }
+  let dispatch;
+  try {
+    dispatch = deps.triggerPlatformCi({
+      ...options,
+      y1BaseSha,
+      y1HeadSha,
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_ci_fallback_dispatch_failed',
+      error: error.message,
+      automatic_ci: automatic,
+      dispatch: null,
+      range,
+    };
+  }
+  let fallback;
+  try {
+    fallback = deps.waitForPlatformMainCi(expectedPlatformSha, {
+      ...options,
+      minDatabaseId,
+      workflowEvent: 'workflow_dispatch',
+      expectedPlatformSha,
+      expectedLessonSha,
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      failure: 'platform_ci_fallback_wait_failed',
+      error: error.message,
+      automatic_ci: automatic,
+      dispatch,
+      range,
+    };
+  }
+  return fallback.ok
+    ? { ...fallback, source: 'manual_dispatch_fallback', dispatch, automatic_ci: automatic, range }
+    : {
+        ok: false,
+        failure: fallback.failure || 'platform_ci_fallback_failed',
+        fallback_ci: fallback,
+        automatic_ci: automatic,
+        dispatch,
+        range,
+      };
+}
+
 function refreshPlatformPrCi(pr, options = {}) {
   if (!pr || !pr.headRefOid) return { ok: false, failure: 'platform_pr_head_missing' };
   const ref = pr.headRefName || pr.headRefOid;
@@ -743,11 +984,26 @@ function refreshPlatformPrCi(pr, options = {}) {
   const trigger = options.triggerPlatformCiForRef || triggerPlatformCiForRef;
   const wait = options.waitForPlatformHeadCi || waitForPlatformHeadCi;
   const minDatabaseId = latestRunId(PLATFORM_REPO, pr.headRefOid);
-  trigger(ref, options);
+  let dispatch;
+  try {
+    dispatch = trigger(ref, {
+      ...options,
+      y1HeadSha: pr.headRefOid,
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      head_sha: pr.headRefOid,
+      failure: 'platform_ci_fallback_dispatch_failed',
+      error: error.message,
+    };
+  }
   return wait(pr.headRefOid, {
     ...options,
     minDatabaseId,
+    workflowEvent: 'workflow_dispatch',
     expectedPlatformSha: pr.headRefOid,
+    dispatch,
   });
 }
 
@@ -1219,17 +1475,8 @@ function validatePartialResumeCompatibility(compatibility, platformMainSha, plat
   };
 }
 
-function waitForIntermediatePlatformCi(deps, options = {}) {
-  const expectedPlatformSha = deps.fetchMainSha(PLATFORM_REPO);
-  const expectedLessonSha = deps.fetchMainSha(LESSON_REPO);
-  const minDatabaseId = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, expectedPlatformSha);
-  deps.triggerPlatformCi(options);
-  return deps.waitForPlatformMainCi(expectedPlatformSha, {
-    ...options,
-    minDatabaseId,
-    expectedPlatformSha,
-    expectedLessonSha,
-  });
+function waitForIntermediatePlatformCi(deps, coordinates, options = {}) {
+  return acquirePlatformMainCi(deps, coordinates, options);
 }
 
 function memberByRepo(record, repo) {
@@ -1242,6 +1489,7 @@ function defaultDeps(options = {}) {
     fetchAuthorization: (repo, commentId, fetchOptions) => fetchBundleAuthorizationComment(repo, commentId, fetchOptions),
     fetchComparePaths,
     fetchCompareStatus,
+    findMainWorkflowRun,
     fetchInterveningCommits,
     fetchMainSha,
     fetchPr,
@@ -1284,6 +1532,7 @@ function defaultDeps(options = {}) {
     summarizeLineage,
     triggerPlatformCi,
     updateBranch,
+    validatePlatformCiRange,
     waitForPlatformMainCi,
     waitForPrMerge,
     refreshPlatformPrCi,
@@ -1301,6 +1550,72 @@ function validateMergedPr(repo, prNumber, mergedPr) {
     return { ok: false, repo, prNumber, failure: 'merge_commit_not_observable', merged_pr: mergedPr };
   }
   return { ok: true, repo, prNumber, merge_commit: mergedPr.mergeCommit.oid, merged_pr: mergedPr };
+}
+
+function createIntegrationExecutionJournal() {
+  return {
+    verification_subphase: null,
+    merge_invocations: [],
+    completed_merges: [],
+  };
+}
+
+function setJournalSubphase(journal, subphase) {
+  if (journal) journal.verification_subphase = subphase;
+}
+
+function recordMergeInvocation(journal, details) {
+  if (!journal) return null;
+  const invocation = {
+    repo: details.repo,
+    pr_number: details.pr_number,
+    head_sha: details.head_sha,
+    method: details.method,
+    outcome: 'unknown',
+    merge_commit: null,
+  };
+  journal.merge_invocations.push(invocation);
+  return invocation;
+}
+
+function recordCompletedMerge(journal, invocation, completedMerge) {
+  if (invocation) {
+    invocation.outcome = 'observed_merged';
+    invocation.merge_commit = completedMerge.merge_commit;
+  }
+  journal.completed_merges.push(completedMerge);
+}
+
+function hasIrreversibleMergeState(journal) {
+  return journal.merge_invocations.length > 0 || journal.completed_merges.some(
+    (item) => item && item.dry_run !== true && item.merge_commit
+  );
+}
+
+function postMergeFailureResult(result, journal, error = null) {
+  const completedMerges = journal.completed_merges.filter(
+    (item) => item && item.dry_run !== true && item.merge_commit
+  );
+  const unknownMergeOutcomes = journal.merge_invocations.filter(
+    (item) => item && item.outcome !== 'observed_merged'
+  );
+  const verificationSubphase =
+    (result && result.verification_subphase) ||
+    (result && result.phase) ||
+    journal.verification_subphase ||
+    'unknown';
+  return {
+    ...(result || {}),
+    ok: false,
+    phase: 'merged_but_postmerge_verification_failed',
+    verification_subphase: verificationSubphase,
+    ...(error ? { error: error.message || String(error) } : {}),
+    merges: [...journal.completed_merges],
+    completed_merges: completedMerges,
+    merge_outcome_unknown: unknownMergeOutcomes.length > 0,
+    unknown_merge_outcomes: unknownMergeOutcomes,
+    merge_invocations: [...journal.merge_invocations],
+  };
 }
 
 function mergeStepForOrder(order, record) {
@@ -1370,7 +1685,7 @@ function bundleStateForResult(record, compatibility, order, platformPr, lessonPr
   };
 }
 
-function integrateBundle(options = {}) {
+function integrateBundleCore(options = {}) {
   const modeFailures = [];
   if (options.prepareOnly === true && options.dryRun === true) {
     modeFailures.push('prepare_only_and_dry_run_are_mutually_exclusive');
@@ -1382,6 +1697,7 @@ function integrateBundle(options = {}) {
     return { ok: false, phase: 'integration_mode', failures: modeFailures };
   }
   const deps = { ...defaultDeps(options), ...(options.deps || {}) };
+  const executionJournal = options.executionJournal || createIntegrationExecutionJournal();
   const deltaReview = options.deltaReview || readReviewJson(options.deltaReviewPath);
   const payloadLeadReview = options.payloadLeadReview || readReviewJson(options.payloadLeadReviewPath);
   const controllerRepo = options.repo || PLATFORM_REPO;
@@ -1630,16 +1946,18 @@ function integrateBundle(options = {}) {
       'Bundle partial resume requires the first merge member to be the lesson PR'
     );
   }
-  const merges = [];
+  const merges = executionJournal.completed_merges;
   let platformIntegrationReadiness = null;
   let platformIntegrationRefresh = null;
   let platformIntegrationCi = null;
+  let finalCiCoordinates = null;
   const expectedMain = {
     [PLATFORM_REPO]: platformMainSha,
     [LESSON_REPO]: lessonMainSha,
   };
   for (const [index, member] of steps.entries()) {
     const repo = member.repository;
+    setJournalSubphase(executionJournal, index === 0 ? 'first_member_state' : 'next_member_state');
     const currentPlatformMain = deps.fetchMainSha(PLATFORM_REPO);
     const currentLessonMain = deps.fetchMainSha(LESSON_REPO);
     if (currentPlatformMain !== expectedMain[PLATFORM_REPO] || currentLessonMain !== expectedMain[LESSON_REPO]) {
@@ -1777,6 +2095,7 @@ function integrateBundle(options = {}) {
       const refreshedCi = deps.refreshPlatformPrCi(pr, {
         ...options,
         expectedLessonSha: currentLessonMain,
+        y1BaseSha: currentPlatformMain,
       });
       if (!refreshedCi.ok) {
         return withTerminalFailureStatus(
@@ -1944,7 +2263,7 @@ function integrateBundle(options = {}) {
     });
     if (!preMerge.ok) {
       return withTerminalFailureStatus(
-        { ok: false, phase: 'pre_merge', repo, failures: preMerge.failures, pr, pre_merge: preMerge },
+        { ok: false, phase: 'pre_merge', repo, failures: preMerge.failures, pr, pre_merge: preMerge, merges },
         deps,
         platformStatus,
         options,
@@ -1987,13 +2306,26 @@ function integrateBundle(options = {}) {
         };
       }
     }
+    const transitionPlatformBaseSha = deps.fetchMainSha(PLATFORM_REPO);
+    const transitionAutomaticMinDatabaseId = repo === LESSON_REPO
+      ? deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, transitionPlatformBaseSha)
+      : 0;
     let merge;
+    let mergeInvocation = null;
     try {
       merge = usePlatformAutoMerge && options.dryRun
         ? { dry_run: true, auto_merge: true, repo, prNumber: member.pr_number, head_sha: member.integration_head_sha }
         : usePlatformAutoMerge
         ? deps.scheduleAutoMergePr(repo, member.pr_number, member.integration_head_sha, options)
         : deps.mergePr(repo, member.pr_number, member.integration_head_sha, options);
+      if (!options.dryRun && !usePlatformAutoMerge) {
+        mergeInvocation = recordMergeInvocation(executionJournal, {
+          repo,
+          pr_number: member.pr_number,
+          head_sha: member.integration_head_sha,
+          method: 'merge_pr',
+        });
+      }
     } catch (error) {
       return withTerminalFailureStatus(
         { ok: false, phase: usePlatformAutoMerge ? 'auto_merge_schedule' : 'merge', repo, pr_number: member.pr_number, error: error.message, merges },
@@ -2132,9 +2464,17 @@ function integrateBundle(options = {}) {
         };
       }
       mergedPr = observed.pr;
+      mergeInvocation = recordMergeInvocation(executionJournal, {
+        repo,
+        pr_number: member.pr_number,
+        head_sha: member.integration_head_sha,
+        method: 'auto_merge_observed',
+      });
     } else {
+      setJournalSubphase(executionJournal, 'merge_observation');
       mergedPr = deps.fetchMergedPr(repo, member.pr_number);
     }
+    setJournalSubphase(executionJournal, 'merge_verification');
     const merged = validateMergedPr(repo, member.pr_number, mergedPr);
     if (!merged.ok) {
       return withTerminalFailureStatus(
@@ -2145,10 +2485,25 @@ function integrateBundle(options = {}) {
         `Bundle merge verification failed for ${repo}`
       );
     }
-    merges.push({ repo, pr_number: member.pr_number, merge, ...merged });
+    recordCompletedMerge(
+      executionJournal,
+      mergeInvocation,
+      { repo, pr_number: member.pr_number, merge, ...merged }
+    );
+    setJournalSubphase(executionJournal, 'post_merge_main_state');
     expectedMain[repo] = deps.fetchMainSha(repo);
+    const transitionPlatformHeadSha = deps.fetchMainSha(PLATFORM_REPO);
+    const transitionLessonHeadSha = deps.fetchMainSha(LESSON_REPO);
+    finalCiCoordinates = {
+      y1BaseSha: repo === PLATFORM_REPO ? transitionPlatformBaseSha : transitionPlatformHeadSha,
+      y1HeadSha: transitionPlatformHeadSha,
+      expectedPlatformSha: transitionPlatformHeadSha,
+      expectedLessonSha: transitionLessonHeadSha,
+      automaticMinDatabaseId: transitionAutomaticMinDatabaseId,
+    };
     if (index === 0 && !(order === 'lesson-first' && repo === LESSON_REPO)) {
-      const intermediateCi = waitForIntermediatePlatformCi(deps, options);
+      setJournalSubphase(executionJournal, 'intermediate_ci');
+      const intermediateCi = waitForIntermediatePlatformCi(deps, finalCiCoordinates, options);
       if (!intermediateCi.ok) {
         return withTerminalFailureStatus(
           { ok: false, phase: 'intermediate_ci', order, intermediate_ci: intermediateCi, merges },
@@ -2160,16 +2515,16 @@ function integrateBundle(options = {}) {
       }
     }
   }
+  setJournalSubphase(executionJournal, 'final_state');
   const expectedFinalPlatformSha = deps.fetchMainSha(PLATFORM_REPO);
   const expectedFinalLessonSha = deps.fetchMainSha(LESSON_REPO);
-  const minDatabaseId = deps.latestWorkflowRunDatabaseId(PLATFORM_REPO, expectedFinalPlatformSha);
-  deps.triggerPlatformCi(options);
-  const finalCi = deps.waitForPlatformMainCi(expectedFinalPlatformSha, {
-    ...options,
-    minDatabaseId,
+  setJournalSubphase(executionJournal, 'final_ci');
+  const finalCi = acquirePlatformMainCi(deps, {
+    ...(finalCiCoordinates || {}),
     expectedPlatformSha: expectedFinalPlatformSha,
     expectedLessonSha: expectedFinalLessonSha,
-  });
+    y1HeadSha: expectedFinalPlatformSha,
+  }, options);
   if (!finalCi.ok) {
     return withTerminalFailureStatus(
       { ok: false, phase: 'final_ci', order, final_ci: finalCi, merges },
@@ -2190,14 +2545,29 @@ function integrateBundle(options = {}) {
   };
 }
 
-function runCli(argv) {
+function integrateBundle(options = {}) {
+  const executionJournal = createIntegrationExecutionJournal();
+  let result;
+  try {
+    result = integrateBundleCore({ ...options, executionJournal });
+  } catch (error) {
+    if (!hasIrreversibleMergeState(executionJournal)) throw error;
+    return postMergeFailureResult(null, executionJournal, error);
+  }
+  const irreversibleStateRecorded = hasIrreversibleMergeState(executionJournal);
+  if (!result || result.ok !== false || !irreversibleStateRecorded) return result;
+  if (result.phase === 'merged_but_postmerge_verification_failed') return result;
+  return postMergeFailureResult(result, executionJournal);
+}
+
+function runCli(argv, cli = {}) {
   const prNumber = optionValue(argv, '--pr');
   const authorizationCommentId = optionValue(argv, '--authorization-comment-id');
   if (!prNumber) fail('--pr is required');
   if (!authorizationCommentId) fail('--authorization-comment-id is required');
   let result;
   try {
-    result = integrateBundle({
+    result = (cli.integrateBundle || integrateBundle)({
       repo: optionValue(argv, '--repo') || PLATFORM_REPO,
       prNumber,
       authorizationCommentId,
@@ -2217,8 +2587,9 @@ function runCli(argv) {
   } catch (error) {
     fail(error.message);
   }
-  console.log(JSON.stringify(result, null, 2));
-  if (!result.ok) process.exit(1);
+  (cli.stdout || console.log)(JSON.stringify(result, null, 2));
+  if (!result.ok) (cli.exit || process.exit)(1);
+  return result;
 }
 
 if (require.main === module) {
@@ -2229,12 +2600,17 @@ module.exports = {
   LESSON_REPO,
   PLATFORM_REPO,
   INTEGRATION_CONTEXT,
+  acquirePlatformMainCi,
   generateBundleIntegrationReadiness,
   integrateBundle,
+  runCli,
+  platformCiDispatchArgs,
   preflightCrossRepoPermissions,
   refreshPlatformPrCi,
   selectLatestRunForHead,
   setPlatformIntegrationStatus,
+  triggerPlatformCi,
+  triggerPlatformCiForRef,
   validateCompatibilityWorkflowProvenance,
   validateBundlePayloadLeadReview,
   validateLessonLeadReadiness,

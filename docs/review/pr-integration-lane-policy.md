@@ -118,6 +118,13 @@ lane:
 npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <pr> --authorization-comment-id <comment-id>
 ```
 
+The canonical read-only preflight uses the same trusted command with
+`--dry-run`:
+
+```powershell
+npm.cmd run integrate:authorized-pr -- --repo meijer1973/4veco-platform --pr <pr> --authorization-comment-id <comment-id> --dry-run
+```
+
 The local lane must be run from current `main`/current policy code. It is not a
 raw merge path: it must run the same payload-lineage, base-drift, CI,
 readiness, review, branch-protection, expected-head, and post-merge CI checks
@@ -175,12 +182,35 @@ The lane must:
 15. verify the merge commit is observable on `main` and post-merge `main` CI
     succeeds.
 
-A dry-run validates the same read-only compatibility provenance, existing
-deterministic refresh, exact-pair CI, live PR/base/thread state, and readiness
-decision inputs as the live lane. It must not dispatch CI, update a branch,
-create or update comments, set a reusable successful `integration-authorized`
-status, or merge. A successful residual dry-run reports
-`would_create_exact_head_readiness` and stops at `validated_dry_run`.
+A single-PR dry-run validates authorization, branch protection, review state,
+payload lineage, base drift, current-head CI, live PR/base/thread state, and
+readiness decision inputs entirely in memory. For a current head it also
+performs the immediate pre-merge head, `main`, and ancestry rechecks. It then
+returns `phase: validated_dry_run` with `retry_required: false`; it never
+fabricates a merged PR or merge commit.
+
+The machine result includes `dry_run.checks_evaluated`,
+`dry_run.would_update_branch`, and exact `not_executed` states for status,
+comment, and readiness publication; branch update; retry polling; CI dispatch;
+merge invocation; merge observation; containment; and post-merge CI. A current
+head reports `refreshed_head_checks: not_applicable`. A behind head re-fetches
+both `main` and the PR head, reports `would_update_branch: true`, and records
+`refreshed_head_checks: not_executed_requires_branch_update`; exact refreshed-
+head CI, readiness, and final pre-merge validation remain for the trusted live
+lane after synchronization. A movement observed on either path retains the
+existing movement phase, fails that dry run without retry polling, and asks for
+a fresh invocation.
+
+`--dry-run --no-merge` remains implementation-supported as a temporary
+compatibility spelling and must return the same complete dry-run contract.
+Plain `--dry-run` is the documented contract. Live `--no-merge` remains a
+separate integration-validation mode and is not a substitute for dry-run.
+
+No dry-run may dispatch CI, update a branch, create or update comments, publish
+readiness, set any `integration-authorized` status, invoke or observe a merge,
+verify containment, or wait for post-merge CI. A failed non-movement gate keeps
+its normal fail-closed classification; a dry-run containment failure is no
+longer possible because containment is a live post-merge operation.
 
 ## Cross-Repo Bundle Integration
 
@@ -317,6 +347,16 @@ CI. The hosted workflow exposes the preparation phase through `prepare_only`;
 it does not confer merge authority because trusted integrator code stops before
 the readiness and merge stages.
 
+There is one explicit fail-closed exception to the phrase "completely green dry
+run." When current lineage requires an integration-delta lead review, dry-run
+cannot publish and re-fetch the exact integration-head readiness record that
+binds that review. Its required terminal result is therefore
+`integration_delta_lead_review_required` with
+`dry_run_cannot_validate_integration_delta_review`, not `validated_dry_run`.
+That result is an intentional stop, never a merge authorization or a simulated
+success. The owner-authenticated live lane may proceed only after the exact-head
+delta review and renewed human authorization independently satisfy their gates.
+
 If a lesson-first partial resume has no exact readiness comment for the
 controller's reviewed payload, the lane may use the residual-bundle readiness
 bridge. This bridge does not create or backdate a payload-head comment. It
@@ -351,7 +391,9 @@ authorization comment, compatibility proof, review paths, and CI run
 coordinates.
 
 In dry-run mode that decision remains in memory and is passed to final preflight
-without publication. In live mode the lane publishes the current
+without publication. A successful residual bundle dry-run reports
+`would_create_exact_head_readiness` and stops at `validated_dry_run`. In live
+mode the lane publishes the current
 integration-head decision, re-fetches its exact marker and full machine record,
 and requires the canonical decision digest, route, repository, PR, and head to
 match the just-recomputed decision before final head/base/thread checks and
@@ -390,11 +432,33 @@ platform-local artifact reads. The bundle integrator fails closed unless the
 cross-repository token can access both repositories with merge-capable
 permissions.
 
-After every platform CI dispatch in the bundle lane, the integrator records the
-latest prior workflow-run id and accepts only a newer `platform-ci` run. It then
-downloads `platform-ci-evidence.json` and verifies the exact platform and
-lesson `main` SHAs for the intermediate and final states. A green run for the
-same platform SHA but an older lesson SHA is not valid evidence.
+For every intermediate and final bundle state, the integrator first observes
+the exact automatic `platform-ci` `push` run newer than the state-transition
+run-id floor. A queued or running automatic run counts as present and is awaited;
+the lane must not dispatch a duplicate. A completed red run or a run whose
+downloaded `platform-ci-evidence.json` names the wrong Platform or Lesson SHA
+fails closed and is not masked by a fallback.
+
+Only when no qualifying automatic push run appears may the lane dispatch a
+manual fallback. It records a new immediate pre-dispatch run-id floor, passes
+then performs one final exact-event recheck against the original transition
+floor. If that recheck finds a queued, running, or completed automatic push run,
+the lane awaits and verifies it and must not dispatch. Only a proven absent
+recheck may proceed with full `y1_base_sha` and `y1_head_sha` workflow inputs;
+the lane accepts only a newer `workflow_dispatch` run. The Y1 range is the Platform transition: old Platform
+main to new Platform main for a Platform merge, or `base == head ==` current
+Platform main when only Lesson changed. The range must be identical or prove
+the base is an ancestor of the exact head. Both automatic and fallback paths
+download the evidence artifact and verify the exact Platform/Lesson state. A
+stale green run for the same Platform SHA but an older Lesson SHA is excluded by
+the transition floor and is not valid evidence.
+
+If any bundle member has already merged and a later CI or orchestration check
+fails, the terminal result is
+`merged_but_postmerge_verification_failed`. It retains the original
+`verification_subphase`, all diagnostics, and every completed merge record so
+operators cannot mistake a post-irreversible verification failure for a
+pre-merge rejection.
 
 The integration command also verifies the compatibility workflow provenance:
 workflow id, workflow path, workflow ref, workflow-dispatch event, trusted

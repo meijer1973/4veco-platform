@@ -282,6 +282,35 @@ function integrationHarness(overrides = {}) {
   };
 }
 
+function expectNoDryRunSideEffects(calls, deps) {
+  expect(calls.statuses).toEqual([]);
+  expect(calls.updates).toEqual([]);
+  expect(calls.merges).toEqual([]);
+  expect(calls.autoMerges).toEqual([]);
+  expect(calls.disableAutoMerges).toEqual([]);
+  expect(calls.waitForPrMerge).toEqual([]);
+  expect(calls.postMergeCi).toEqual([]);
+  expect(deps.updateBranch).not.toHaveBeenCalled();
+  expect(deps.mergePr).not.toHaveBeenCalled();
+  expect(deps.scheduleAutoMergePr).not.toHaveBeenCalled();
+  expect(deps.fetchMergedPr).not.toHaveBeenCalled();
+  expect(deps.fetchCompareStatus).not.toHaveBeenCalled();
+  expect(deps.waitForMainCi).not.toHaveBeenCalled();
+}
+
+const dryRunNonExecutionContract = {
+  status_publication: 'not_executed',
+  comment_publication: 'not_executed',
+  readiness_publication: 'not_executed',
+  branch_update: 'not_executed',
+  retry_polling: 'not_executed',
+  ci_dispatch: 'not_executed',
+  merge_invocation: 'not_executed',
+  merge_observation: 'not_executed',
+  containment: 'not_executed',
+  post_merge_ci: 'not_executed',
+};
+
 describe('authorized PR integration runner', () => {
   test('refuses a stale or missing validate-platform check before merge', () => {
     const failures = validatePrState({
@@ -638,6 +667,276 @@ describe('authorized PR integration runner', () => {
       sha: headSha,
       context: 'integration-authorized',
     });
+  });
+
+  test('plain dry-run validates a clean ahead PR and reports every live-only operation as not executed', () => {
+    const { calls, deps, options } = integrationHarness({ options: { dryRun: true } });
+
+    const result = runIntegrationAttempts(options);
+
+    expect(result).toMatchObject({
+      ok: true,
+      phase: 'validated_dry_run',
+      retry_required: false,
+      attempt: 1,
+      main_sha: mainSha,
+      dry_run: {
+        mode: 'pre_merge_validation',
+        outcome: 'ready_to_merge',
+        would_update_branch: false,
+        refreshed_head_checks: 'not_applicable',
+        reasons: [],
+        ...dryRunNonExecutionContract,
+      },
+    });
+    expect(result.dry_run.checks_evaluated).toEqual([
+      'authorization',
+      'initial_pr_state',
+      'initial_branch_protection',
+      'initial_review_threads',
+      'initial_lineage',
+      'current_head_with_main',
+      'validate_platform',
+      'main_stability',
+      'head_stability',
+      'final_pr_state',
+      'final_review_threads',
+      'final_branch_protection',
+      'final_lineage',
+      'readiness_in_memory',
+      'premerge_main_stability',
+      'premerge_head_stability',
+      'premerge_main_ancestry',
+    ]);
+    expect(calls.readiness).toHaveLength(1);
+    expect(calls.readiness[0].options.dryRun).toBe(true);
+    expectNoDryRunSideEffects(calls, deps);
+  });
+
+  test('plain and combined dry-run flags return the same complete canonical contract', () => {
+    const plain = integrationHarness({ options: { dryRun: true } });
+    const combined = integrationHarness({ options: { dryRun: true, noMerge: true } });
+
+    const plainResult = runIntegrationAttempts(plain.options);
+    const combinedResult = runIntegrationAttempts(combined.options);
+
+    expect({
+      phase: plainResult.phase,
+      retry_required: plainResult.retry_required,
+      dry_run: plainResult.dry_run,
+    }).toEqual({
+      phase: combinedResult.phase,
+      retry_required: combinedResult.retry_required,
+      dry_run: combinedResult.dry_run,
+    });
+    expect(plainResult.phase).toBe('validated_dry_run');
+    expectNoDryRunSideEffects(plain.calls, plain.deps);
+    expectNoDryRunSideEffects(combined.calls, combined.deps);
+  });
+
+  test('behind dry-run reports would-update without branch mutation, retry polling, or refreshed-head claims', () => {
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        isHeadCurrentWithMain: jest.fn(() => ({ ok: false, compare: { status: 'behind' } })),
+        fetchPr: sequence([cleanPr(integrationSha), cleanPr(integrationSha)]),
+      },
+      options: { dryRun: true },
+    });
+
+    const result = runIntegrationAttempts(options);
+
+    expect(result).toMatchObject({
+      ok: true,
+      phase: 'validated_dry_run',
+      retry_required: false,
+      attempt: 1,
+      would_update: {
+        expected_head_sha: integrationSha,
+        main_sha: mainSha,
+        compare: { status: 'behind' },
+      },
+      dry_run: {
+        mode: 'pre_merge_validation',
+        outcome: 'would_update_branch',
+        would_update_branch: true,
+        refreshed_head_checks: 'not_executed_requires_branch_update',
+        reasons: [
+          'exact_refreshed_head_ci_requires_trusted_branch_update',
+          'exact_refreshed_head_readiness_requires_trusted_branch_update',
+          'final_premerge_validation_requires_trusted_branch_update',
+        ],
+        ...dryRunNonExecutionContract,
+      },
+    });
+    expect(result.dry_run.checks_evaluated).toEqual([
+      'authorization',
+      'initial_pr_state',
+      'initial_branch_protection',
+      'initial_review_threads',
+      'initial_lineage',
+      'current_head_with_main',
+      'would_update_branch_coordinate_stability',
+    ]);
+    expect(deps.fetchMainSha).toHaveBeenCalledTimes(2);
+    expect(deps.fetchPr).toHaveBeenCalledTimes(2);
+    expect(deps.generateAndApplyReadiness).not.toHaveBeenCalled();
+    expectNoDryRunSideEffects(calls, deps);
+  });
+
+  test('behind dry-run fails on main movement after refetch without polling or mutation', () => {
+    const movedMainSha = '9'.repeat(40);
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        isHeadCurrentWithMain: jest.fn(() => ({ ok: false, compare: { status: 'behind' } })),
+        fetchMainSha: sequence([mainSha, movedMainSha]),
+        fetchPr: sequence([cleanPr(integrationSha), cleanPr(integrationSha)]),
+      },
+      options: { dryRun: true },
+    });
+
+    const result = runIntegrationAttempts(options);
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'main_moved_retry',
+      retry_required: false,
+      retry_recommended: true,
+      attempt: 1,
+      previous_main_sha: mainSha,
+      current_main_sha: movedMainSha,
+      dry_run: {
+        outcome: 'coordinates_moved',
+        retry_polling: 'not_executed',
+        ...dryRunNonExecutionContract,
+      },
+    });
+    expect(deps.fetchMainSha).toHaveBeenCalledTimes(2);
+    expect(deps.fetchPr).toHaveBeenCalledTimes(2);
+    expectNoDryRunSideEffects(calls, deps);
+  });
+
+  test('behind dry-run fails on head movement after refetch without polling or mutation', () => {
+    const movedHeadSha = '8'.repeat(40);
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        isHeadCurrentWithMain: jest.fn(() => ({ ok: false, compare: { status: 'behind' } })),
+        fetchPr: sequence([cleanPr(integrationSha), cleanPr(movedHeadSha)]),
+      },
+      options: { dryRun: true },
+    });
+
+    const result = runIntegrationAttempts(options);
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'head_moved_retry',
+      retry_required: false,
+      retry_recommended: true,
+      attempt: 1,
+      previous_head_sha: integrationSha,
+      current_head_sha: movedHeadSha,
+      dry_run: {
+        outcome: 'coordinates_moved',
+        retry_polling: 'not_executed',
+        ...dryRunNonExecutionContract,
+      },
+    });
+    expect(deps.fetchMainSha).toHaveBeenCalledTimes(2);
+    expect(deps.fetchPr).toHaveBeenCalledTimes(2);
+    expectNoDryRunSideEffects(calls, deps);
+  });
+
+  test('current-head dry-run fails on final main movement without polling or mutation', () => {
+    const movedMainSha = '7'.repeat(40);
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        fetchMainSha: sequence([mainSha, mainSha, movedMainSha]),
+      },
+      options: { dryRun: true },
+    });
+
+    const result = runIntegrationAttempts(options);
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'main_moved_before_merge_retry',
+      retry_required: false,
+      retry_recommended: true,
+      attempt: 1,
+      previous_main_sha: mainSha,
+      current_main_sha: movedMainSha,
+      dry_run: {
+        outcome: 'coordinates_moved',
+        retry_polling: 'not_executed',
+        ...dryRunNonExecutionContract,
+      },
+    });
+    expect(deps.generateAndApplyReadiness).toHaveBeenCalledTimes(1);
+    expectNoDryRunSideEffects(calls, deps);
+  });
+
+  test('current-head dry-run fails on final head movement without polling or mutation', () => {
+    const movedHeadSha = '6'.repeat(40);
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        fetchPr: sequence([
+          cleanPr(integrationSha),
+          cleanPr(integrationSha),
+          cleanPr(movedHeadSha),
+        ]),
+      },
+      options: { dryRun: true },
+    });
+
+    const result = runIntegrationAttempts(options);
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'head_moved_before_merge_retry',
+      retry_required: false,
+      retry_recommended: true,
+      attempt: 1,
+      previous_head_sha: integrationSha,
+      current_head_sha: movedHeadSha,
+      dry_run: {
+        outcome: 'coordinates_moved',
+        retry_polling: 'not_executed',
+        ...dryRunNonExecutionContract,
+      },
+    });
+    expect(deps.generateAndApplyReadiness).toHaveBeenCalledTimes(1);
+    expectNoDryRunSideEffects(calls, deps);
+  });
+
+  test('dry-run reports missing exact-head CI without retry polling or mutation', () => {
+    const prWithoutCi = cleanPr(integrationSha, { statusCheckRollup: [] });
+    const { calls, deps, options } = integrationHarness({
+      deps: {
+        fetchPr: sequence([prWithoutCi]),
+      },
+      options: { dryRun: true },
+    });
+
+    const result = runIntegrationAttempts(options);
+
+    expect(result).toMatchObject({
+      ok: false,
+      phase: 'awaiting_validate_platform',
+      retry_required: false,
+      retry_recommended: true,
+      attempt: 1,
+      failures: ['validate_platform_missing_or_not_successful'],
+      dry_run: {
+        mode: 'pre_merge_validation',
+        outcome: 'gate_not_ready',
+        retry_polling: 'not_executed',
+        reasons: ['validate_platform_missing_or_not_successful'],
+        ...dryRunNonExecutionContract,
+      },
+    });
+    expect(deps.fetchPr).toHaveBeenCalledTimes(1);
+    expect(deps.generateAndApplyReadiness).not.toHaveBeenCalled();
+    expectNoDryRunSideEffects(calls, deps);
   });
 
   test('does not auto-detect integration-authorized as activation authority', () => {

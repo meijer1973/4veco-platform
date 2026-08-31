@@ -147,6 +147,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 
 ## Review-Gate Bundles
 
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
@@ -221,6 +222,7 @@ Single-fetch entry point for external research agents whose fetch tools can only
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX5-representation-operation-reports/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-RX6-skilltree-generator-integration/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-SINGLE-PR-DRY-RUN-REPAIR-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-Y1-GOLDEN-ROLLOUT-WAVE-1/bundle-urls.md
 

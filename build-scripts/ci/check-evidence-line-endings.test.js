@@ -1,8 +1,10 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const {
+  TRACKED_PATTERNS,
   containsCrLf,
   isBinaryBuffer,
   checkFiles,
@@ -20,6 +22,27 @@ function writeFile(root, relativePath, content, encoding) {
 }
 
 describe('check-evidence-line-endings', () => {
+  test('pins and scans every byte-hashed Y1 rendered-renewal text artifact as LF', () => {
+    const root = path.resolve(__dirname, '..', '..');
+    const renewalPath = 'reports/sprints/Y1-GOLDEN-ROLLOUT-WAVE-1-rendered-renewal.json';
+    const renewal = JSON.parse(fs.readFileSync(path.join(root, renewalPath), 'utf8'));
+    const byteHashedTextPaths = [
+      renewalPath,
+      renewal.canonical_process.raw_manifest_path,
+      renewal.canonical_process.comparison_path,
+      renewal.human_visual_review.review_path,
+      renewal.current_visual_review.review_path,
+    ];
+    const result = spawnSync('git', ['check-attr', 'eol', '--', ...byteHashedTextPaths], {
+      cwd: root,
+      encoding: 'utf8',
+    });
+    expect(result.status).toBe(0);
+    expect(String(result.stdout || '').trim().split(/\r?\n/))
+      .toEqual(byteHashedTextPaths.map((item) => `${item}: eol: lf`));
+    for (const item of byteHashedTextPaths) expect(TRACKED_PATTERNS).toContain(item);
+  });
+
   test('detects CRLF in buffers', () => {
     expect(containsCrLf(Buffer.from('a\r\nb\n'))).toBe(true);
     expect(containsCrLf(Buffer.from('a\nb\n'))).toBe(false);
