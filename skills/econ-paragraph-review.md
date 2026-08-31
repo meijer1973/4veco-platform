@@ -14,6 +14,11 @@ A systematic review protocol for economics textbook paragraphs at bovenbouw vwo/
 
 Both passes matter equally. A beautifully scaffolded paragraph with a slope error teaches the wrong thing effectively. A mathematically flawless paragraph with poor scaffolding teaches the right thing ineffectively.
 
+**Contract scope:** apply the canonical Part A exercise-structure checks below
+to newly authored Book 2 and later theory paragraphs. Book 1 output is frozen;
+do not create retrofit findings by running this contract retroactively. The
+full operational source is `skills/econ-exercise-builder.md`.
+
 **When to use this skill:**
 - Reviewing any draft paragraph before delivery
 - Comparing a paragraph against the course blueprint
@@ -81,8 +86,8 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 |-------|-----------------|
 | 1.3.1 Full dual coding in theory | During the theory/explanation phase, is every key concept supported by both text AND a visual (graph, diagram, table, schematic)? Pure text explanations of graphical concepts are a FLAG. |
 | 1.3.2 Color consistency | Are the same colors used for the same concepts throughout the paragraph? (e.g., demand always blue, supply always green, collective always purple). Color inconsistency across figures is a FLAG. |
-| 1.3.3 Exercise fading sequence | Do exercises progress through the three fading stages: (a) simple + full visual support → (b) target difficulty + visual support → (c) target difficulty + no visual support? Check that the final exercises (doeloefening) require students to produce their own graphs/tables rather than reading provided ones. |
-| 1.3.4 Fading labels | Are exercise tiers labeled neutrally (e.g., startoefeningen / zelfstandige oefening / doeloefening) rather than by difficulty (makkelijk / moeilijk) or ability (basis / verdieping)? Labels that could stigmatize are a FLAG. |
+| 1.3.3 Exercise fading sequence | For each operation and representation actually present in the target chain, does guided support move from explicit to reduced and then to the unsupported target answer form? Require students to produce their own graph/table only when graph/table production is a target operation. Demanding a representation absent from the target is a FAIL. |
+| 1.3.4 Fading labels | Does optional Begeleide inoefening use neutral support/skip wording rather than difficulty (makkelijk / moeilijk) or ability (basis / verdieping) labels? Labels that could stigmatize are a FLAG. |
 
 ### 1.4 Misconception handling
 
@@ -96,22 +101,26 @@ This is a 1-minute pre-flight check. If Pass 0 has any FAIL items, **STOP** — 
 
 | Check | What to look for |
 |-------|-----------------|
-| 1.5.1 Target exercise alignment | Does the doeloefening (final exercise) match the target exercise from the course blueprint for this paragraph? It should require the same skills at the same level. |
-| 1.5.2 Bloom progression | Do exercises escalate through Bloom levels: remember/identify → calculate/apply → explain → analyze → evaluate? Flag if all exercises are at the same cognitive level. |
-| 1.5.3 Interleaving | Are there at least 2 exercises that revisit skills from previous paragraphs (herhaling/interleaving)? These should be clearly labeled and come after the current-paragraph exercises. |
-| 1.5.4 Denkertje/bonus | Is there an open-ended extension question (denkertje) that invites evaluation or creative application? This should be explicitly optional. |
-| 1.5.5 Hints in early exercises | Do startoefeningen include hints that scaffold without giving away the answer? Hints should reference the worked example or a specific step, not state the answer method directly. |
-| 1.5.6 Worked example before exercises | Is there at least one fully worked example between the theory section and the exercise section? The worked example should demonstrate the complete procedure the student will use in exercises. |
+| 1.5.1 Backward-design alignment | Does the required `Lesson goal \| Target subquestion/operation \| Worked example \| Start check \| Guided practice \| Independent practice \| Covered/gap` table cover every goal and target operation without a silent gap? |
+| 1.5.2 Exact structure and adjacency | Are the seven exercise headings exactly ordered and exactly levelled as `## Uitgewerkt voorbeeld`, `## Startopgaven`, `## Begeleide inoefening`, `## Zelfstandige oefening`, `## Doeloefening`, `## Denkertje / Bonusopgave`, `## Herhaling / Herhaling en interleaving`? Does theory flow to the example, compact non-heading summary, then Startopgaven? Any missing, reordered, wrong-level, or additional top-level stage is a FAIL. |
+| 1.5.3 Worked-example alignment | Does the worked example use the same operation chain as the doeloefening, with simpler context/values and no operation absent from the target or lesson goals? |
+| 1.5.4 Startopgaven roles | Under one visible heading, is there both retrieval of prerequisites already taught and a compact current-content comprehension check? The check must remain brief and low-stakes, not mastery, diagnosis, or automatic routing. |
+| 1.5.5 Optional guided route | Is Begeleide inoefening retained as a printed heading but optional for students, aimed at the same goal/target, more explicitly scaffolded, deliberately faded, and accompanied by neutral skip wording? Missing/ineffective fading, a changed/lowered goal, or non-neutral routing is a FAIL. |
+| 1.5.6 Independent and target alignment | Does Zelfstandige oefening rehearse the decomposed target operations without guided support, and does the doeloefening match the blueprint target at the intended level? |
+| 1.5.7 Route realism | Is the route note `Startopgaven -> Zelfstandige oefening -> Doeloefening` visible, and does an explicit equation total motivation + instruction + worked example + transitions/recap + the actual estimated core-route questions at ≤55 minutes? Range addition or `23–38 < 55` alone is not proof. |
+| 1.5.8 Denkertje/bonus | Does the optional task build cognitive flexibility via transfer, representation, assumption, strategy, comparison, or critique rather than more arithmetic of the same kind? |
+| 1.5.9 Closing review | Does the final exercise section contain only 1–2 short accessible cumulative/homework tasks using taught content, with no new theory? |
+| 1.5.10 Paper-only completeness | Are all explanation, retrieval, scaffolding, independent practice, and target preparation needed in class present in print? Any printed website/device/online dependency or student-facing Part A, Part B, lane, or companion-route term is a FAIL. |
 
 ### 1.6 Summary and navigation
 
 | Check | What to look for |
 |-------|-----------------|
-| 1.6.1 Summary present | Does the paragraph end with a summary box listing the key concepts and rules? |
+| 1.6.1 Summary present and placed | Does a compact non-heading summary box follow the worked example and precede Startopgaven, listing no more than five concise key points? |
 | 1.6.2 Summary completeness | Does the summary capture ALL key conceptual insights from the paragraph, including nuances like piecewise functions, domain restrictions, or special cases? If a concept is taught in the body but absent from the summary, FLAG it. |
 | 1.6.3 Forward reference | Does the summary or final sentence indicate what comes next (e.g., "In §1.2.4 oefenen we...")? This helps students orient within the book structure. |
-| 1.6.4 Worked example placement | Does the worked example appear BEFORE the summary? If the summary appears before the worked example, the reading flow is broken — FLAG. |
-| 1.6.5 Begeleide inoefening reference | Is there a reference to additional scaffolded practice (e.g., website, begeleide inoefening document) for students who need more support? |
+| 1.6.4 No additional heading | Is the summary a non-heading box, with no `## Samenvatting`, `## Website-help`, generic `## Opgaven`, `## Voorkennis ophalen`, or other additional top-level heading among the seven exercise headings? |
+| 1.6.5 Internal architecture boundary | Do internal documents keep Part A and Part B distinct while all student-facing printed template copy omits internal architecture terms and online/device directions? |
 
 ### 1.7 School-fit quality (from school standards overlay)
 
@@ -290,13 +299,14 @@ These examples show what each severity level means:
 - A formula presented without domain restriction when the domain matters (2.2.1)
 - An exercise that is unsolvable with the given information (2.4.2)
 - A misconception box that itself contains an error
+- A missing/reordered/interrupted seven-heading block, including a summary or help stage between theory, the worked example, and Startopgaven (1.5.2)
+- Missing/ineffective fading, a changed goal, or non-neutral skip wording in Begeleide inoefening (1.5.5)
+- A demanded graph/table or other operation that is absent from the target chain (1.3.3)
 
 **FLAG — should fix, not blocking:**
 - Summary missing a key concept taught in the body (1.6.2)
-- Worked example appearing after the summary (1.6.4)
 - Unexplained visual element in a graph (2.1.7)
 - Color inconsistency between figures (1.3.2)
-- Missing hint on a startoefening (1.5.5)
 
 **PASS — no action needed:**
 - Correctly implemented progressive graph construction
@@ -321,7 +331,7 @@ These are the errors most frequently found in economics textbook paragraphs, ord
 6. **Misconception stated but not confronted in exercises** — warning box present but no exercise tests the distinction
 7. **Inconsistent variable naming** — Q_v in one place, Q_d in another, Qv in a third
 8. **Summary omits key insight** — especially piecewise functions, special cases, or domain restrictions
-9. **Interleaving exercises missing** — all exercises from the current paragraph only
+9. **Closing cumulative review missing** — no short retrieval of earlier taught content
 10. **Worked example after summary** — breaks reading flow
 
 ### Lower frequency but high impact
@@ -341,5 +351,10 @@ These are the errors most frequently found in economics textbook paragraphs, ord
 - Let a formula pass without checking its domain restriction
 - Review exercises without attempting to solve them yourself
 - Approve a paragraph where the worked example contains a calculation error
+- Approve a Book 2+ paragraph with reordered, missing, or wrong-level `##` exercise headings, or with the compact summary outside its worked-example-to-Start position
+- Accept a printed route that depends on or advertises a website, device, online explanation, Part B, lane, or companion route
+- Treat the brief Startopgaven check as mastery, diagnosis, or automatic routing
+- Accept guided practice that changes the goal, never fades, or uses ability labels
+- Accept a bonus that is merely more arithmetic or a closing review that adds theory
 - Ignore unexplained visual elements in graphs — if you can't explain what it teaches, it's clutter
 - Treat FLAG items as unimportant — they accumulate and degrade quality over time

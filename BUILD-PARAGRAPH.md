@@ -168,6 +168,26 @@ paragraph PDF gate.
 - **Shared conventions** — from `_chapter-plan.md` if building as part of a chapter (notation, colours, shared contexts, interleaving targets)
 - **Prior paragraph context** — if this paragraph depends on an earlier one (key formulas, terminology)
 
+## Book 2+ Part A exercise-authoring input contract
+
+For every newly authored Book 2 and later theory paragraph—not only official
+exam targets—design backward in this order:
+
+`lesson goals -> doeloefening -> target subquestions/operations -> worked
+example and practice`
+
+Record this table in the paragraph plan before authoring:
+
+| Lesson goal | Target subquestion/operation | Worked example | Start check | Guided practice | Independent practice | Covered/gap |
+|---|---|---|---|---|---|---|
+| [goal] | [observable operation] | [where modelled] | [where checked] | [where scaffolded or n/a] | [where practised] | [covered or named gap] |
+
+The worked example uses the same operation chain as the doeloefening at lower
+complexity and introduces no operation absent from the target or lesson goals.
+Retrieval in Startopgaven may use only prerequisites already taught. Book 1
+output is frozen: do not retrofit it and do not use this contract as a
+retroactive Book 1 content check.
+
 ## Exam-target paragraph input contract
 
 When the target exercise is an official exam question, the paragraph plan must
@@ -182,8 +202,10 @@ Every official answer-model step must be traceable to one of:
 - deliberately out of scope, with reason.
 
 A paragraph cannot receive an exam-target PASS if students are asked to perform
-an answer-model operation that is not taught, practised, scaffolded, or
-justified as prior knowledge.
+an answer-model operation that is not taught, practised before the target,
+scaffolded in printed Part A, or justified as prior knowledge. A companion or
+game repetition may reinforce the operation later, but cannot close a gap in
+the paper lesson route.
 
 The trace must follow the student-facing route, not only the source files. For
 each official prompt/source/correction-model requirement, name where the
@@ -234,9 +256,54 @@ Dutch.
 
 Follow `econ-textbook-paragraph` skill exactly:
 
-1. Write `X.Y.Z [Name] – paragraaf.md` — theory + worked example + summary + exercises (all in one file)
-2. Extract exercises into `X.Y.Z [Name] – opgaven.md` — from "## Uitgewerkt voorbeeld" through end
+1. Write `X.Y.Z [Name] – paragraaf.md` — motivating problem, theory, `## Uitgewerkt voorbeeld`, compact non-heading summary, then the remaining exercise route
+2. Extract exercises into `X.Y.Z [Name] – opgaven.md` — the seven canonical `##` headings; keep the compact non-heading summary between `## Uitgewerkt voorbeeld` and `## Startopgaven`
 3. Write `X.Y.Z [Name] – antwoorden.md` — complete answer model with step-by-step solutions
+
+For newly authored Book 2+ theory paragraphs the seven printed headings are,
+in exact order:
+
+```markdown
+## Uitgewerkt voorbeeld
+## Startopgaven
+## Begeleide inoefening
+## Zelfstandige oefening
+## Doeloefening
+## Denkertje / Bonusopgave
+## Herhaling / Herhaling en interleaving
+```
+
+Keep the summary as a compact non-heading box after the worked example and
+before Startopgaven. No `## Samenvatting`, `## Website-help`, generic `##
+Opgaven`, `## Voorkennis ophalen`, or other top-level heading may appear among
+the seven canonical headings. Printed student copy uses only this paper route:
+
+> **Korte route:** Startopgaven → Zelfstandige oefening → Doeloefening.
+> **Extra hulp nodig?** Maak eerst Begeleide inoefening.
+
+All normal-route explanation and scaffolding must be present in print. Do not
+direct students to a website, online explanation, companion page, laptop,
+phone, tablet, QR code, or other device. Keep Part A, Part B, lane, companion
+route, and repository terminology in internal guidance and handoffs only.
+
+Author to these ranges: Startopgaven 5–8 minutes; optional Begeleide inoefening
+8–15; Zelfstandige oefening 10–18; Doeloefening 8–12; optional
+Denkertje/Bonusopgave 8–15 outside core; closing review 4–8, often homework.
+Startopgaven combines already-taught prerequisite retrieval and a compact,
+low-stakes current-content comprehension check—not mastery, diagnosis, or
+automatic routing. The guided heading stays printed while its student route is
+optional; it keeps the same goal/target, uses stronger explicit support with
+deliberate fading, and has neutral skip wording. Bonus
+builds cognitive flexibility rather than more arithmetic. Closing review has
+1–2 accessible cumulative tasks and no new theory.
+
+For each paragraph, record and verify:
+`motivation + instruction + worked example + compact summary and transitions +
+actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening =
+planned lesson minutes <= 55`. The recommended
+23–38-minute core-range sum is not sufficient proof because the other lesson
+phases also consume time. Justify any range deviation and never remove a target
+operation to force the arithmetic to fit.
 
 For consolidation paragraphs (last § in chapter), follow `econ-consolidation-builder` instead:
 1. Write `X.Y.Z Gemengde opgaven – opgaven.md` — source material + exercises
@@ -306,6 +373,12 @@ between the textbook lane and the companion lane.
 - [ ] `X.Y.Z-review.md` exists (from independent sub-agent)
 - [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
 - [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
+- [ ] Book 2+ backward-design alignment table covers every goal and target operation
+- [ ] Seven Part A headings use exact `##` level and order; theory → Uitgewerkt voorbeeld → compact non-heading summary → Startopgaven is preserved
+- [ ] Both Startopgaven roles and route note are present; a whole-lesson equation using actual question estimates totals ≤55 minutes
+- [ ] Optional guided route keeps the same goal, adds/fades support, and uses neutral skip wording
+- [ ] Bonus builds cognitive flexibility; closing review has 1–2 accessible taught-content tasks and no new theory
+- [ ] Summary is before Startopgaven with ≤5 points; printed copy has the paper support note and no website/device/internal-lane direction
 
 **Consolidation paragraphs:**
 - [ ] opgaven.md, antwoorden.md exist (no paragraaf.md)
@@ -412,6 +485,9 @@ within or alongside the baseline files, but file existence alone does not
 establish their completeness. Plans, rendered reviews, and quality records
 must inspect the actual route and name any missing short-check or exit-ticket
 surface as a blocker, follow-up, or explicit human waiver.
+
+This Part B route is not the printed Part A exercise sequence and must never be
+used as a replacement for the seven Book 2+ Part A headings defined in A2.
 
 Student-web is not a minimal shell contract. For a new scaling paragraph, the
 rich HTML companions (`uitleg voorkennis`, `uitleg vaardigheden`,
@@ -558,7 +634,7 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 #### Opgavensets — zelfstandige oefening and optional stretch files
 | | |
 |---|---|
-| **Raw input** | Textbook exercises after start exercises are student-facing `Zelfstandige oefening`. Optional stretch tasks may use `Denkertje` or `Bonusopgave`; do not label the normal post-start exercise block as `Verdieping`. |
+| **Raw input** | Textbook exercises after `Startopgaven` are student-facing `Begeleide inoefening` (optional) and `Zelfstandige oefening`. Optional stretch tasks may use `Denkertje` or `Bonusopgave`; do not label the normal post-start exercise block as `Verdieping`. |
 | **Agent process** | Write coherent independent exercises plus any explicitly authorized optional stretch tasks, with full answer models for each. |
 | **Reference script** | `opgaven-351-afsluiting.js` — copy, replace exercise content. Generates all 6 files. |
 | **Reusable** | Document scaffold (headers, numbering, answer formatting). |
