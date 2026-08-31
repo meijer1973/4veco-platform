@@ -171,32 +171,44 @@ companion page, laptop, phone, tablet, QR code, or other digital support. It
 must not expose internal terms such as Part A, Part B, lane, or companion route.
 Those terms remain valid only in internal repository guidance and handoffs.
 
-### 3.2 Dual coding fading — the 4-stage rule
+### 3.2 Dual coding fading — target-aligned rule
 
-When visual support is useful, fade it within `Begeleide inoefening` and into
-independent practice—not across `Startopgaven`, whose two short roles must stay
-compact:
+Choose the fading sequence from the approved target operation and answer form.
+When graph or table production is itself a target operation, fade visual
+production support within `Begeleide inoefening` and into independent
+practice—not across `Startopgaven`, whose two short roles must stay compact:
 
 | Stage | Exercise | What the student is given | What the student does |
 |-------|----------|--------------------------|----------------------|
 | 1 | Begeleide oefening 1 | Graph **with** the change drawn AND labeled | Reads, identifies, classifies, explains |
 | 2 | Begeleide oefening 2 | Graph base (axes + initial line) only | Draws the change themselves |
 | 3 | Begeleide oefening 3 | No graph | Reasons in text/words only |
-| 4 | Independent practice | No graph | Draws their own graph from scratch as part of the solution |
+| 4 | Independent practice | No graph | Performs the target graph-production operation independently |
 
 **Why stage 1 is non-negotiable:** Without it, the very first exercise asks students to *produce* before they have *recognized*. Stage 1 lets them verify their reading of the visual conventions before they apply them. It's the lowest-friction entry point into the visual representation of the concept.
+
+If the target requires graph/table reading, interpreting, modifying a supplied
+representation, or source use rather than production, do not add graph/table
+production. Fade only target-relevant support: labels, hints, worked markings,
+or intermediate prompts, while retaining any representation the target gives
+the student.
 
 **Stage 1 question patterns** (read a labeled graph):
 - "What does this graph represent? What might have caused it?"
 - "Two situations are shown. Which is X and which is Y? Why?"
 - "Identify the type of change in this graph and explain in your own words."
 
-**Stage 2 question patterns** (draw on provided graph):
+**Stage 2 question patterns** (draw on a provided graph only when that
+production action belongs to the target):
 - "Show in the graph what happens when..."
 - "Draw the new equilibrium on the graph below."
 - "Add the [shift / movement / surplus area] to the figure."
 
-**"Visual support" means:** a graph, flow diagram, table, or schematic is provided as part of the exercise (not just in the answer). At stage 1 the visual carries the answer; at stage 2 the visual is a base to draw on; at stages 3–4 there is no visual at all.
+**"Visual support" means:** a graph, flow diagram, table, or schematic is
+provided as part of the exercise (not just in the answer). In the production
+sequence above, stage 1 carries the answer, stage 2 supplies a base, and stages
+3–4 remove that production support. Other target operations use their own
+target-aligned fading sequence.
 
 ### 3.2.bis Combined-change misconception exercise (MANDATORY for distinction paragraphs)
 
@@ -463,7 +475,7 @@ Antwoord: ...
 3. □ Design the worked example from the target chain — same operations, simpler values/context, no extra operation
 4. □ Design both Startopgaven roles under one heading: taught-prerequisite retrieval + compact current-content check
 5. □ Record the whole-lesson equation (motivation + instruction + worked example + compact summary/transitions + actual Startopgaven + actual Zelfstandige oefening + actual Doeloefening ≤55); range addition alone is not proof
-6. □ If guided practice is useful, keep the same goal, add stronger explicit scaffolding, plan deliberate fading, and add neutral skip wording
+6. □ Always author and print Begeleide inoefening with same-goal, stronger explicit scaffolding and deliberate fading; make only the student's use optional and add neutral skip wording
 7. □ Select 1–2 accessible closing-review skills from already taught content; introduce no theory there
 8. □ Design bonus for cognitive flexibility, not more arithmetic of the same kind
 9. □ Keep the exact seven exercise headings in order at `##`; place the non-heading summary after the example and before Startopgaven; keep every required support route on paper and internal architecture terms out of student copy

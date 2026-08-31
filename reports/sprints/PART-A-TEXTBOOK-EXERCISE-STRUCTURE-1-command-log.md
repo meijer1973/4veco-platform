@@ -1885,3 +1885,877 @@ Time:        260.862 s, estimated 261 s
 Ran all test suites.
 
 ```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:15:39.651Z`
+- finished_at: `2026-08-31T07:15:42.209Z`
+- duration_ms: `2558`
+- exit_code: `0`
+- stdout_sha256: `b5a57c6d056d5b9f1cd994a9a5e566a2f6a479f5dfbbc3a195da6ca6d07c5be8`
+- stderr_sha256: `d1eb21631a131aeac6d1f93652acdba1447ab0a5602c9e001bc550905d86c85b`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       48 passed, 48 total
+Snapshots:   0 total
+Time:        1.753 s, estimated 2 s
+Ran all test suites matching build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js|build-scripts/workflows/check-paragraph-lane-scope.test.js.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:15:50.801Z`
+- finished_at: `2026-08-31T07:20:35.269Z`
+- duration_ms: `284468`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `cf9b5874eb4e24d5f022af2f87a176a7653939fd4d11f6eb6cb987c2099b99de`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 106 passed, 106 of 112 total
+Tests:       8 skipped, 1605 passed, 1613 total
+Snapshots:   0 total
+Time:        283.635 s, estimated 292 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:05.149Z`
+- finished_at: `2026-08-31T07:21:05.251Z`
+- duration_ms: `102`
+- exit_code: `0`
+- stdout_sha256: `4846a76c4978c14033cdf0f58e86bb4a1a83d878f74ab5f0a0ec5b363094dd3f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:05.616Z`
+- finished_at: `2026-08-31T07:21:05.817Z`
+- duration_ms: `201`
+- exit_code: `0`
+- stdout_sha256: `a8535cf8f8d9b6c159b0e702279bf4c323df3dffc0f060b61dc7cfeede5bbc32`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:part-a-exercise-authoring-contract
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:06.207Z`
+- finished_at: `2026-08-31T07:21:06.603Z`
+- duration_ms: `396`
+- exit_code: `0`
+- stdout_sha256: `7471733f8c02a0d0b178bc864cec5e3370c14d6aad3dd20a1c8c07413078b17a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:part-a-exercise-authoring-contract
+> node build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+
+OK Part A exercise authoring contract: 10 platform source surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:paragraph-workflow-wording
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:06.962Z`
+- finished_at: `2026-08-31T07:21:07.346Z`
+- duration_ms: `384`
+- exit_code: `0`
+- stdout_sha256: `7d233f9b32ff81ae1f03701e237713a1b5af963c52d49baa0c530cc83eabc953`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:paragraph-workflow-wording
+> node build-scripts/workflows/check-paragraph-workflow-wording.js
+
+{
+  "ok": true,
+  "files_checked": 12,
+  "failures": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:exercise-workflow-currentness
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:07.662Z`
+- finished_at: `2026-08-31T07:21:08.378Z`
+- duration_ms: `716`
+- exit_code: `0`
+- stdout_sha256: `b005a2910b0a61d9062746983535bb4fae0ce424adfc1d74efdf20c7fa3b67f1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:exercise-workflow-currentness
+> node build-scripts/sprints/check-exercise-workflow-checker-cleanup.js
+
+OK EXERCISE-WORKFLOW-CURRENTNESS stale-path/currentness sweep
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:08.745Z`
+- finished_at: `2026-08-31T07:21:09.206Z`
+- duration_ms: `461`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:active-governance-wording
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:09.546Z`
+- finished_at: `2026-08-31T07:21:11.030Z`
+- duration_ms: `1484`
+- exit_code: `0`
+- stdout_sha256: `63874b2b86343e55076f7c0a1cb34075e48192a36c4e387b446f08466103e8b2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:active-governance-wording
+> node build-scripts/review-gates/check-active-governance-wording.js
+
+Active governance wording check passed.
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:21:11.400Z`
+- finished_at: `2026-08-31T07:21:11.819Z`
+- duration_ms: `419`
+- exit_code: `0`
+- stdout_sha256: `4da9a54f667b7cb4e5bb253004b7f426e93b5d8e0e4de3940cf8ef4fde1827ea`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:paragraph-lane-scope
+> node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD
+
+Paragraph lane scope: PASS (shared)
+- shared platform: 20
+  - .github/workflows/platform-ci.yml
+  - BUILD-PARAGRAPH.md
+  - agents/teacher-learning-quality-review-agent.md
+  - build-scripts/sprints/emit-url-index.js
+  - build-scripts/workflows/check-paragraph-lane-scope.js
+  - build-scripts/workflows/check-paragraph-lane-scope.test.js
+  - build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+  - build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js
+  - docs/workflows/textbook-paragraph-lane.md
+  - package.json
+  - references/authored/didactiek-principes.md
+  - references/authored/vraagtypen-en-opgaveontwerp.md
+  - references/data/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1.plan.json
+  - references/data/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1.result.json
+  - references/reference-team-roadmap.md
+  - skills/econ-didactiek.md
+  - skills/econ-exercise-builder.md
+  - skills/econ-paragraph-review.md
+  - skills/econ-pdf-builder.md
+  - skills/econ-textbook-paragraph.md
+- generated index/report: 9
+  - AGENT_GITHUB_ENTRY.md
+  - RESEARCH_AGENT_MAP.md
+  - reports/github-agent-index-lessen.json
+  - reports/github-agent-index-lessen.md
+  - reports/github-agent-index-platform.json
+  - reports/github-agent-index-platform.md
+  - reports/internal-dashboard/dashboard-data.json
+  - reports/internal-dashboard/index.html
+  - reports/url-index.md
+- review evidence: 21
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-baseline.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.jsonl
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-diff-summary.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-assignment.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-corrections.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round1.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2-recheck1.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round2.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-lead-review-round3.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-plan.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-recheck.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-resolution.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision-recheck.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision-resolution.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review-revision.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-planning-review.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-result.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-recheck.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review-resolution.md
+  - reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-teacher-learning-quality-review.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node -e "const {execFileSync}=require('child_process'); const out=execFileSync('git',['-C','../4veco-lessen','status','--porcelain'],{encoding:'utf8'}); if(out.trim()){console.error(out);process.exit(1)}"
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:22:05.192Z`
+- finished_at: `2026-08-31T07:22:05.301Z`
+- duration_ms: `109`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `a39bc801b5bd8cbc1dc5a3caf71dae4cabec0a92d59e02903e788624b69403c0`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+[eval]:1
+const
+
+Unexpected token `<eof>`. Expected yield, an identifier, [ or {
+
+SyntaxError: Unexpected end of input
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.13.1
+
+```
+## node -e "process.exit(require(\"child_process\").execFileSync(\"git\",[\"-C\",\"../4veco-lessen\",\"status\",\"--porcelain\"],{encoding:\"utf8\"}).trim()?1:0)"
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:22:28.330Z`
+- finished_at: `2026-08-31T07:22:28.430Z`
+- duration_ms: `100`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `d00ef34df487e7c97486b558b375719184b9e525a17c4d7dfb8b3f53366f47e0`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+[eval]:1
+process.exit(require(child_process).execFileSync(git,[-C,../4veco-lessen,status,--porcelain],{encoding:utf8}).trim()?1:0)
+                                                         ^
+Expression expected
+
+SyntaxError: Unexpected token '.'
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.13.1
+
+```
+## node -e "\"const{execFileSync}=require('child_process');x=execFileSync('git',['-C','../4veco-lessen','status','--porcelain'],{encoding:'utf8'});if(x.trim()){console.error(x);process.exit(1)}\""
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:23:16.439Z`
+- finished_at: `2026-08-31T07:23:17.273Z`
+- duration_ms: `834`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:agent-index-freshness
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:24:57.484Z`
+- finished_at: `2026-08-31T07:24:58.138Z`
+- duration_ms: `654`
+- exit_code: `1`
+- stdout_sha256: `c824c67b2a49cc1bfbab01222b8c090302d0d660b6560f7b586b183f9da7320e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-index-freshness
+> node build-scripts/reports/check-agent-index-freshness.js
+
+{
+  "ok": false,
+  "checks": [
+    {
+      "label": "4veco-platform",
+      "ok": false,
+      "skipped": false,
+      "failures": [
+        "4veco-platform index source_commit f7e171b81560b35f1f2cf03728da20c616d77d46 does not match HEAD 4a7fa594e0bdfaaf833f1e8046693362089575ef"
+      ],
+      "warnings": [],
+      "source_commit": "f7e171b81560b35f1f2cf03728da20c616d77d46",
+      "head": "4a7fa594e0bdfaaf833f1e8046693362089575ef",
+      "source_ref": "HEAD",
+      "target_commit": "4a7fa594e0bdfaaf833f1e8046693362089575ef",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    },
+    {
+      "label": "4veco-lessen",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "source_ref": "origin/main",
+      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    }
+  ],
+  "failures": [
+    "4veco-platform index source_commit f7e171b81560b35f1f2cf03728da20c616d77d46 does not match HEAD 4a7fa594e0bdfaaf833f1e8046693362089575ef"
+  ],
+  "warnings": []
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:agent-index-freshness
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:25:50.182Z`
+- finished_at: `2026-08-31T07:25:50.863Z`
+- duration_ms: `681`
+- exit_code: `0`
+- stdout_sha256: `6bc572319f3717177abad43982d1fd2d06cb9eae9ef6e25089607a9f203e8865`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:agent-index-freshness
+> node build-scripts/reports/check-agent-index-freshness.js
+
+{
+  "ok": true,
+  "checks": [
+    {
+      "label": "4veco-platform",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [
+        "4veco-platform index source_commit precedes generated-index-only ref a121d535821cff46199e4785a4d5e44a2a650780"
+      ],
+      "source_commit": "4a7fa594e0bdfaaf833f1e8046693362089575ef",
+      "head": "a121d535821cff46199e4785a4d5e44a2a650780",
+      "source_ref": "HEAD",
+      "target_commit": "a121d535821cff46199e4785a4d5e44a2a650780",
+      "accepted_parent_generated_tail": true,
+      "accepted_generated_index_tail_ref": "a121d535821cff46199e4785a4d5e44a2a650780"
+    },
+    {
+      "label": "4veco-lessen",
+      "ok": true,
+      "skipped": false,
+      "failures": [],
+      "warnings": [],
+      "source_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "head": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "source_ref": "origin/main",
+      "target_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+      "accepted_parent_generated_tail": false,
+      "accepted_generated_index_tail_ref": null
+    }
+  ],
+  "failures": [],
+  "warnings": [
+    "4veco-platform index source_commit precedes generated-index-only ref a121d535821cff46199e4785a4d5e44a2a650780"
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:25:51.247Z`
+- finished_at: `2026-08-31T07:25:51.330Z`
+- duration_ms: `83`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:25:51.678Z`
+- finished_at: `2026-08-31T07:25:51.766Z`
+- duration_ms: `88`
+- exit_code: `0`
+- stdout_sha256: `47ca50e8947f80026ba53efcebae98284df48a498a6f5e3501de52bb53df1380`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 152 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:25:52.122Z`
+- finished_at: `2026-08-31T07:25:52.200Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/ci/check-evidence-line-endings.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:25:52.530Z`
+- finished_at: `2026-08-31T07:25:52.704Z`
+- duration_ms: `174`
+- exit_code: `0`
+- stdout_sha256: `89c1b9a7be41b21444991ab40590881ee0448a2ead683a23841c7c459ce56783`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK evidence line endings: scanned 95 text file(s), skipped 0, CRLF 0
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:25:53.051Z`
+- finished_at: `2026-08-31T07:25:53.130Z`
+- duration_ms: `79`
+- exit_code: `2`
+- stdout_sha256: `7e0576bfae8337c0b072333c880c786749c18b54352de110041ea265ad516a1b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2265: trailing whitespace.
++[eval]:1
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2266: trailing whitespace.
++const
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2267: trailing whitespace.
++
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2268: trailing whitespace.
++Unexpected token `<eof>`. Expected yield, an identifier, [ or {
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2269: trailing whitespace.
++
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2270: trailing whitespace.
++SyntaxError: Unexpected end of input
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2271: trailing whitespace.
++    at makeContextifyScript (node:internal/vm:194:14)
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2272: trailing whitespace.
++    at compileScript (node:internal/process/execution:388:10)
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2273: trailing whitespace.
++    at evalTypeScript (node:internal/process/execution:260:22)
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2274: trailing whitespace.
++    at node:internal/main/eval_string:71:3
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2275: trailing whitespace.
++
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2276: trailing whitespace.
++Node.js v24.13.1
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2298: trailing whitespace.
++[eval]:1
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2299: trailing whitespace.
++process.exit(require(child_process).execFileSync(git,[-C,../4veco-lessen,status,--porcelain],{encoding:utf8}).trim()?1:0)
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2300: trailing whitespace.
++                                                         ^
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2301: trailing whitespace.
++Expression expected
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2302: trailing whitespace.
++
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2303: trailing whitespace.
++SyntaxError: Unexpected token '.'
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2304: trailing whitespace.
++    at makeContextifyScript (node:internal/vm:194:14)
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2305: trailing whitespace.
++    at compileScript (node:internal/process/execution:388:10)
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2306: trailing whitespace.
++    at evalTypeScript (node:internal/process/execution:260:22)
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2307: trailing whitespace.
++    at node:internal/main/eval_string:71:3
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2308: trailing whitespace.
++
+reports/sprints/PART-A-TEXTBOOK-EXERCISE-STRUCTURE-1-command-log.md:2309: trailing whitespace.
++Node.js v24.13.1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:26:39.419Z`
+- finished_at: `2026-08-31T07:26:39.526Z`
+- duration_ms: `107`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:part-a-exercise-authoring-contract
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:30:21.855Z`
+- finished_at: `2026-08-31T07:30:22.254Z`
+- duration_ms: `399`
+- exit_code: `0`
+- stdout_sha256: `7471733f8c02a0d0b178bc864cec5e3370c14d6aad3dd20a1c8c07413078b17a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:part-a-exercise-authoring-contract
+> node build-scripts/workflows/check-part-a-exercise-authoring-contract.js
+
+OK Part A exercise authoring contract: 10 platform source surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:30:22.599Z`
+- finished_at: `2026-08-31T07:30:25.195Z`
+- duration_ms: `2596`
+- exit_code: `0`
+- stdout_sha256: `b5a57c6d056d5b9f1cd994a9a5e566a2f6a479f5dfbbc3a195da6ca6d07c5be8`
+- stderr_sha256: `9ccc0ef348ec32fe2f4574c523bd717d1b483f3fdcd187908778c601e14ade4e`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-paragraph-lane-scope.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       49 passed, 49 total
+Snapshots:   0 total
+Time:        1.723 s, estimated 2 s
+Ran all test suites matching build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js|build-scripts/workflows/check-paragraph-lane-scope.test.js.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\Issue 218, textbook excercises\4veco-platform`
+- started_at: `2026-08-31T07:30:33.932Z`
+- finished_at: `2026-08-31T07:35:09.340Z`
+- duration_ms: `275408`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `31667eac742ee2e3bc85de997d7470713551b767366d9cf6fe476ab23c5500cc`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 106 passed, 106 of 112 total
+Tests:       8 skipped, 1606 passed, 1614 total
+Snapshots:   0 total
+Time:        274.524 s, estimated 284 s
+Ran all test suites.
+
+```

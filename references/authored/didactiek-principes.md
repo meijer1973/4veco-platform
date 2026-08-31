@@ -213,22 +213,29 @@ Oefening 7-8:  Geen scaffolding (zelfstandig)
 
 **Signal for fading:** If exercise 3 requests the same skill as exercise 2 (in a different context), it's time to remove the denkstappen.
 
-### 4.4 4-stage dual coding fading for exercises
+### 4.4 Target-aligned dual coding fading for exercises
 
-When graph scaffolding is useful, it belongs in optional `Begeleide
-inoefening` and fades toward `Zelfstandige oefening`. `Startopgaven` are a
-short activation/check block, not the home of an extended fading sequence.
+When graph or table production is part of the approved target operation and
+answer form, its scaffolding belongs in the printed `Begeleide inoefening` and
+fades toward `Zelfstandige oefening`; only student use of the guided route is
+optional. `Startopgaven` are a short activation/check block, not the home of an
+extended fading sequence.
 
-Across guided + independent practice, visuals can fade in four stages:
+For a graph-production target, visuals can fade in four stages:
 
 | Stage | Exercise | What the student is given | What the student does |
 |-------|----------|--------------------------|----------------------|
 | 1 | Begeleide oefening 1 | Graph **with** the change drawn AND labeled | Reads, identifies, classifies, explains |
 | 2 | Begeleide oefening 2 | Graph base (axes + initial line) only | Draws the change themselves |
 | 3 | Begeleide oefening 3 | No graph | Reasons in text/words only |
-| 4 | Independent practice | No graph | Draws their own graph from scratch |
+| 4 | Independent practice | No graph | Performs the target graph-production operation independently |
 
 **Why stage 1 is non-negotiable:** Without it, the first exercise asks students to *produce* before they have *recognized*. Stage 1 lets them verify their reading of visual conventions before applying them. It is the lowest-friction entry point into the visual representation.
+
+When the target instead requires graph/table reading, interpreting, modifying a
+supplied representation, or source use, do not add a production demand. Fade
+only target-relevant labels, hints, worked markings, and intermediate prompts,
+and retain any representation supplied by the target.
 
 ### 4.5 Scaffold decision tree
 

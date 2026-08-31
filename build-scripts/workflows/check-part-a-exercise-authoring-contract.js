@@ -194,6 +194,41 @@ function findPrintedTemplateFailures(files) {
   return failures;
 }
 
+function findContradictoryAuthoringFailures(files) {
+  const failures = [];
+  const builder = files['skills/econ-exercise-builder.md'] || '';
+  if (
+    /if guided practice is (?:useful|needed|appropriate)/i.test(builder) ||
+    /authors? may (?:omit|skip)[^\n]{0,100}Begeleide inoefening/i.test(builder) ||
+    /Begeleide inoefening[^\n]{0,100}optional for (?:the )?author/i.test(builder)
+  ) {
+    failures.push(
+      'skills/econ-exercise-builder.md: author-side guided-practice omission permission contradicts required printed support'
+    );
+  }
+
+  const fadingSections = [
+    ['skills/econ-exercise-builder.md', '### 3.2 Dual coding fading', '### 3.2.bis'],
+    ['references/authored/didactiek-principes.md', '### 4.4 Target-aligned dual coding fading', '### 4.5 Scaffold decision tree'],
+    ['references/authored/vraagtypen-en-opgaveontwerp.md', '### 3.4 Target-aligned dual coding fading', '### 3.5 Classification table headers'],
+  ];
+  const unconditionalProduction = [
+    /\b(?:must|always)\b[^\n]{0,140}\b(?:draw|produce|construct)\b[^\n]{0,80}\b(?:graph|table)\b/i,
+    /\bdraws?\s+(?:their\s+)?own\s+(?:graph|table)\b/i,
+    /\b(?:graph|table) production\b[^\n]{0,140}\b(?:regardless of|even (?:if|when)|whether or not)\b[^\n]{0,100}\btarget/i,
+  ];
+  for (const [file, startMarker, endMarker] of fadingSections) {
+    const text = files[file] || '';
+    const start = text.indexOf(startMarker);
+    const end = text.indexOf(endMarker, start + startMarker.length);
+    const section = start === -1 || end === -1 ? '' : text.slice(start, end);
+    if (!section || unconditionalProduction.some((pattern) => pattern.test(section))) {
+      failures.push(`${file}: target-absent graph/table production permission remains active`);
+    }
+  }
+  return failures;
+}
+
 function requireOrderedSequenceInSection(failures, files, file, startMarker, endMarker) {
   const text = files[file] || '';
   const start = text.indexOf(startMarker);
@@ -313,12 +348,15 @@ function findContractFailures(files, options = {}) {
     ['skills/econ-exercise-builder.md', /1[–-]2 short, accessible[\s\S]{0,120}introduces no\s+new theory/i, 'closing-review rule missing'],
     ['skills/econ-exercise-builder.md', /Do not insert `## Samenvatting`, `## Website-help`, `## Voorkennis[\s\S]{0,100}generic `## Opgaven`/i, 'additional-heading prohibition missing'],
     ['skills/econ-exercise-builder.md', /Paper-first\/no-device rule:[\s\S]{0,500}must not direct students to a website[\s\S]{0,250}must not expose internal terms/i, 'paper-only/student-terminology rule missing'],
+    ['skills/econ-exercise-builder.md', /graph or table production is itself a target operation[\s\S]{0,2500}do not add graph\/table\s+production/i, 'target-aligned visual-fading boundary missing'],
     ['skills/econ-exercise-builder.md', /Book 1 output is frozen/i, 'Book 1 freeze missing'],
     ['skills/econ-textbook-paragraph.md', /theory\s*->\s*Uitgewerkt voorbeeld\s*->\s*compact\s+non-heading summary\s*->\s*Startopgaven/i, 'theory/example/summary/Start adjacency missing'],
     ['skills/econ-textbook-paragraph.md', /summary[\s\S]{0,180}after worked example, before exercises/i, 'summary placement missing'],
     ['skills/econ-textbook-paragraph.md', /complete on paper[\s\S]{0,180}does not[\s\S]{0,100}website, device, online explanation, or Part B/i, 'paper-only paragraph boundary missing'],
     ['skills/econ-didactiek.md', /Book 2\+ Part A inheritance/i, 'didactic inheritance missing'],
     ['skills/econ-didactiek.md', /same goal[\s\S]{0,160}deliberately\s+fades/i, 'guided same-goal/fading invariant missing'],
+    ['references/authored/didactiek-principes.md', /graph or table production is part of the approved target operation and\s+answer form[\s\S]{0,2500}do not add a production demand/i, 'didactic target-aligned visual-fading boundary missing'],
+    ['references/authored/vraagtypen-en-opgaveontwerp.md', /graph or table production is part of the approved target operation and\s+answer form[\s\S]{0,2500}do not add graph\/table production/i, 'question-design target-aligned visual-fading boundary missing'],
     ['skills/econ-paragraph-review.md', /Exact structure and adjacency/i, 'review structure check missing'],
     ['skills/econ-paragraph-review.md', /Any missing, reordered, wrong-level, or additional top-level stage is a FAIL/i, 'review heading/adjacency hard-fail severity missing'],
     ['skills/econ-paragraph-review.md', /Startopgaven roles/i, 'review Start roles check missing'],
@@ -343,6 +381,7 @@ function findContractFailures(files, options = {}) {
 
   failures.push(...findRouteBoundaryFailures(files));
   failures.push(...findPrintedTemplateFailures(files));
+  failures.push(...findContradictoryAuthoringFailures(files));
 
   requirePattern(failures, files, 'package.json', /"check:part-a-exercise-authoring-contract"\s*:\s*"node build-scripts\/workflows\/check-part-a-exercise-authoring-contract\.js"/, 'npm checker script missing');
   requirePattern(failures, files, '.github/workflows/platform-ci.yml', /npm run check:part-a-exercise-authoring-contract/, 'explicit CI checker step missing');
@@ -391,6 +430,7 @@ module.exports = {
   markdownLevelTwoHeadings,
   diagramNumberedHeadings,
   findPrintedTemplateFailures,
+  findContradictoryAuthoringFailures,
   findRouteBoundaryFailures,
   findContractFailures,
   checkPartAExerciseAuthoringContract,

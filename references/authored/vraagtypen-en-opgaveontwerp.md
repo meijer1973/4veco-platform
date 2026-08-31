@@ -210,19 +210,26 @@ Question type = calculation?
                     +-- No --> no scaffold needed
 ```
 
-### 3.4 Four-stage dual coding fading (mandatory for graph exercises)
+### 3.4 Target-aligned dual coding fading
 
-When graph-based guided practice is needed, use this visual progression inside
-optional `Begeleide inoefening` and fade into independent practice:
+When graph or table production is part of the approved target operation and
+answer form, use this visual progression inside printed `Begeleide inoefening`
+and fade into independent practice. Only student use of the guided route is
+optional:
 
 | Stage | Exercise | What student gets | What student does |
 |-------|----------|------------------|-------------------|
 | 1 | Begeleide oefening 1 | Graph WITH change drawn AND labeled | Reads, identifies, classifies, explains |
 | 2 | Begeleide oefening 2 | Graph base only (axes + initial line) | Draws the change themselves |
 | 3 | Begeleide oefening 3 | No graph | Reasons in text/words only |
-| 4 | Independent practice | No graph | Draws own graph from scratch as solution |
+| 4 | Independent practice | No graph | Performs the target graph-production operation independently |
 
 **Why Stage 1 is non-negotiable:** Without it, the first exercise asks students to *produce* before they have *recognized*. Stage 1 lets them verify their reading of visual conventions before applying them.
+
+For graph/table reading, interpretation, modification of a supplied
+representation, or source-use targets, do not add graph/table production. Fade
+only the target-relevant labels, hints, worked markings, or intermediate
+prompts while retaining the representation supplied by the target.
 
 ### 3.5 Classification table headers (mandatory)
 

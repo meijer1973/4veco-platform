@@ -187,6 +187,28 @@ describe('Part A exercise authoring source contract', () => {
     );
   });
 
+  test('rejects contradictory omission and target-absent production permissions', () => {
+    const checklistRule = '6. □ Always author and print Begeleide inoefening with same-goal, stronger explicit scaffolding and deliberate fading; make only the student\'s use optional and add neutral skip wording';
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        checklistRule,
+        `${checklistRule}\n\nIf guided practice is useful, author it; otherwise omit Begeleide inoefening.`
+      ),
+      'author-side guided-practice omission permission'
+    );
+
+    const nextSection = '### 3.2.bis Combined-change misconception exercise';
+    expectFailure(
+      mutate(
+        'skills/econ-exercise-builder.md',
+        nextSection,
+        `Independent practice must always require students to produce a graph, even when graph production is absent from the target.\n\n${nextSection}`
+      ),
+      'target-absent graph/table production permission'
+    );
+  });
+
   test('rejects removal of route, neutral skip wording, and flexibility semantics', () => {
     expectFailure(
       mutate(
