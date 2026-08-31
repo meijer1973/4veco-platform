@@ -90,6 +90,9 @@ jobs:
       - name: Validate Book 2+ Part A exercise authoring contract
         run: npm run check:part-a-exercise-authoring-contract
 
+      - name: Validate blueprint pedagogical boundaries
+        run: npm run check:blueprint-pedagogical-boundaries
+
       - name: Validate exercise authority hygiene
         run: npm run check:exercise-authority-hygiene
 

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+  "name": "Book 1 Edition Boundary and Part A Compatibility Repair",
+  "created": "2026-08-30",
+  "plan": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md",
+  "baseline": "reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-baseline.md",
+  "human_review_required": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Clarify how bounded anticipatory scaffolding coexists with the merged Book 2+ Part A exercise-authoring contract.",
+    "Forbid preview material from earning target-operation coverage or implying mastery.",
+    "Forbid preview material from adding an independent operation to the worked example, current-content Start check, guided practice, independent practice, or doeloefening without reviewed goal or target authority.",
+    "Protect target practice, the whole-lesson 55-minute equation, and full later formal instruction, including Book 2 section 2.1.1.",
+    "Add concise policy pointers to active Book 2 authoring, workflow, and teacher-review surfaces.",
+    "Add a focused platform-only checker, structural mutation tests, npm command, and CI wiring.",
+    "Preserve Book 1, lesson output, target registries, counts, book roles, assessment structure, and the v6 route.",
+    "Keep Issue 223 implementation separate and blocked until this policy is integrated with green post-merge CI."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+    "npx.cmd jest build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js --runInBand",
+    "npm.cmd run check:blueprint-pedagogical-boundaries",
+    "npm.cmd run check:part-a-exercise-authoring-contract",
+    "npm.cmd run check:active-governance-wording",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD",
+    "node -e \"const {execFileSync}=require('child_process'); const out=execFileSync('git',['-C','../4veco-lessen','status','--porcelain'],{encoding:'utf8'}); if(out.trim()){console.error(out);process.exit(1)}\"",
+    "npm.cmd run check:agent-index-freshness",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/ci/check-evidence-line-endings.js",
+    "git diff --check",
+    "node build-scripts/sprints/check-sprint-command-log.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+    "node build-scripts/sprints/check-lead-review-substance.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete"
+  ],
+  "forbidden": [
+    "No edits to 4veco-lessen, Book 1 output, Book 2 lesson source, or generated student-facing artifacts.",
+    "No edits under references/machine or references/external.",
+    "No target registry, candidate, MTU, PV, count, book-role, assessment, or v6 route mutation.",
+    "No companion or web implementation.",
+    "No Issue 223 implementation in PR 222.",
+    "No direct merge; integration must use the authorized single-PR lane after exact-head owner authorization."
+  ]
+}

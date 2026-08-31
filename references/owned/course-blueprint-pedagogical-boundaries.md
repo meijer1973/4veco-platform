@@ -91,6 +91,42 @@ Anticipatory material is acceptable only when all of the following hold:
 6. Consolidation paragraphs remain consolidation-first; previews inside them must be especially constrained because `gemengde_opgaven` introduce no new terminal theory.
 7. Reviews distinguish `seen`, `supported`, and `independently required` operations instead of treating every noun or formula in student material as a target.
 
+## Compatibility with the Book 2+ Part A authoring contract
+
+For newly authored Book 2 and later theory paragraphs,
+`skills/econ-exercise-builder.md` remains the operational authority for
+backward design, the seven-section sequence, target-operation coverage, the
+paper route, scaffolding/fading, and the whole-lesson time equation. This owned
+clarification interprets the status of earlier exposure; it does not relax or
+replace that Part A contract.
+
+Inside a Part A paragraph, anticipatory material may support only:
+
+- explanation or context for an approved lesson goal or target operation;
+- retrieval of a prerequisite that was already taught and may therefore be
+  retrieved under the existing Startopgaven rule; or
+- an explicitly optional perspective that does not become part of the core
+  route or its assessment claim.
+
+A preview by itself may not fill a `Covered` cell in the required
+lesson-goal/target-operation alignment table. It is not evidence of mastery,
+and it may not introduce a new independently required operation in the worked
+example, the current-content Startopgaven check, Begeleide inoefening,
+Zelfstandige oefening, or Doeloefening unless that operation is authorised by
+the reviewed target exercise or an approved lesson goal.
+
+Preview material must not displace practice of an approved target operation or
+defeat the paragraph's explicit whole-lesson equation of at most 55 minutes.
+If a useful preview does not fit after the full target route is protected,
+compress or defer the preview; do not remove a target operation to make room.
+
+The same boundary applies when later teaching follows an earlier supplied
+formula. Book 1 familiarity with a supplied cost or profit relation must not
+shorten the formal Book 2 teaching. In particular, Book 2 §2.1.1 must still
+teach its reviewed cost relations and procedures in full, and later Book 2
+revenue, profit, and break-even teaching must still provide its own formal
+instruction and target-level practice.
+
 ## Edition policy for Book 1
 
 The first edition of Book 1 is already printed and is frozen for the current school year. Blueprint clarification on 2026-08-30 does not authorise retroactive edits to that printed edition.
@@ -106,7 +142,7 @@ The durable second-edition backlog is tracked in issue #221. Do not block Book 2
 
 Book 2 authors must use Book 1 preview material as a continuity advantage, not as a licence to skip teaching.
 
-- **Costs/revenue/profit:** Book 1 supplied-formula encounters are familiarity only. Book 2 Chapter 2.1 teaches the formal relations and procedures.
+- **Costs/revenue/profit:** Book 1 supplied-formula encounters are familiarity only. Book 2 §2.1.1 teaches its reviewed cost relations and procedures in full; later Chapter 2.1 revenue, profit, and break-even teaching is likewise not shortened by that exposure.
 - **Normal/inferior goods:** Book 1 terminology is familiarity only. Book 2 §2.2.3 formalises classification through income elasticity.
 - **Consumer surplus:** Book 1 may have introduced the intuition. Book 2 §2.3.1 must reactivate and then deepen the concept, including the graphical and target-level operations needed for the later surplus/welfare sequence.
 - **Step functions:** do not assume step-function construction as prerequisite mastery unless a Book 2 reviewed target explicitly requires it.

@@ -110,9 +110,13 @@
   },
   "pedagogical_scope_policy": {
     "terminal_targets_source": "reviewed target exercises and stronger authority",
+    "part_a_exercise_authoring_contract": "skills/econ-exercise-builder.md",
     "anticipatory_scaffolding_allowed": true,
     "preview_is_mastery": false,
     "later_formal_treatment_still_required": true,
+    "preview_cannot_fill_target_coverage": true,
+    "preview_cannot_add_untargeted_independent_operation": true,
+    "preview_cannot_displace_target_route_or_timing": true,
     "spiral_exposure_rule": "Earlier bounded exposure may support understanding, but later books may not silently assume mastery unless the earlier operation was itself an explicit reviewed target or prerequisite."
   },
   "allowed_use": [

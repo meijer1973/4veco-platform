@@ -14,6 +14,15 @@ retrofit it and do not treat this contract as a retroactive Book 1 check. The
 Part B companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` is a
 different product contract and must not replace the printed Part A headings.
 
+**Pedagogical-boundary inheritance:** apply
+`references/owned/course-blueprint-pedagogical-boundaries.md` when earlier-book
+material or a later-topic preview appears. A preview may support bounded
+explanation/context, already-taught prerequisite retrieval, or optional
+perspective; it cannot fill a `Covered` cell, imply mastery, add an untargeted
+independent operation to a Part A target stage, displace target practice, or
+defeat the whole-lesson 55-minute equation. This builder remains authoritative
+for the operational Book 2+ sequence and target coverage.
+
 ---
 
 ## PART 1: INPUT AND OUTPUT

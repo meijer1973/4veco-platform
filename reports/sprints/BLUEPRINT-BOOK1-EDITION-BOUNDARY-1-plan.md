@@ -1,88 +1,205 @@
-# BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 — Sprint Plan
+# Sprint BLUEPRINT-BOOK1-EDITION-BOUNDARY-1: Book 1 Edition Boundary and Part A Compatibility Repair
 
-Status: active
-Date: 2026-08-30
-Scope: owned blueprint clarification, Book 1 second-edition backlog, and Book 2 first-edition handoff
-Owner instruction: Book 1 first edition is already printed and frozen; current production focus is Book 2 first edition; website/companion work is intentionally deferred.
+Status: repair planning
+Created: 2026-08-30
+Repaired: 2026-08-31
+Branch: `codex/book1-edition-boundary-20260830`
+PR: https://github.com/meijer1973/4veco-platform/pull/222
+Current-main prerequisite: `636991ce7aa400494bccf78f22bba92fa5110ae7` (PR #219 integrated)
 
 ## Goal
 
-Clarify the Year 1 blueprint so it distinguishes terminal learning targets from deliberate pedagogical scaffolding without weakening target-exercise discipline. Record genuine Book 1 issues for the second edition instead of attempting to retrofit the printed first edition. Make the consequences for Book 2 production explicit.
+Repair PR #222 so the owned blueprint clarification permits useful anticipatory
+scaffolding without weakening the merged Book 2+ Part A authoring contract.
+Make the rule operationally discoverable, enforce the policy and metadata with
+a focused source-contract checker and mutation tests, preserve the printed Book
+1 freeze, and produce fresh review and exact-head CI evidence before governed
+integration.
 
-## Quality floor
+## Context
 
-- Preserve exercise-first and exam-grounded planning.
-- Do not reinterpret every explanatory concept, representation, or supplied formula as a terminal learning goal.
-- Do not make pedagogical concessions merely to force literal target-only coverage.
-- Do not treat an anticipatory encounter as mastered prerequisite knowledge in a later book.
-- Keep Book 1 first-edition printed content frozen.
-- Keep website/companion work out of scope.
+The original draft correctly distinguished terminal targets, previews, and
+prerequisite mastery, but it was based on pre-PR-#219 main and did not state how
+that distinction interacts with the now-merged Part A exercise sequence. Its
+CI also failed on stale generated indexes and its result incorrectly said that
+local validation was unavailable. The branch has now merged current main and
+passes governance freshness. The detailed repair baseline is recorded in
+`reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-baseline.md`.
 
-## Blueprint clarification to encode
+This sprint is an owned platform-policy repair. It does not implement Issue
+#223, edit a Book 2 paragraph, or publish student-facing output. Issue #223 may
+receive read-only baseline and planning analysis only while PR #222 is open.
 
-The detailed Year 1 blueprint may permit bounded anticipatory scaffolding when it improves understanding of the active paragraph target. Such scaffolding is not itself a terminal target unless the target registry says so.
+## Quality Standard
 
-Examples to resolve explicitly:
+The specification is satisfied only when the policy is compatible with the
+Part A quality floor in every active author and reviewer surface. A passing
+checker alone is not sufficient: the wording must preserve target-operation
+alignment, a feasible 55-minute paper route, later formal instruction, and the
+distinction between exposure, support, independent performance, and mastery.
 
-1. A short consumer-surplus introduction in Book 1 may connect willingness to pay and price before the full Book 2 surplus/welfare treatment.
-2. A step-function representation may be used didactically to build intuition for a continuous/linear demand model even when step functions are not an exam end goal.
-3. A later-book formula may appear in an earlier exercise when the formula is supplied and the student task is source reading, substitution, arithmetic, or interpretation rather than recall, derivation, formula selection, or full conceptual mastery.
-4. Normal/inferior-good terminology may appear as light anticipatory language before income elasticity, provided later Book 2 treatment does not assume mastery.
+There is no rendered output or student-facing artifact in this platform-only
+sprint. Review proof must therefore cover the authored policy, metadata,
+operational pointers, negative mutations, unchanged lesson repository, and
+exact-head CI. Any useful idea outside this scope is a named follow-up rather
+than an implicit expansion.
 
-## Boundaries
+## Specification Fulfilment Matrix
 
-Anticipatory scaffolding is acceptable only when:
+| Specification requirement | Implementation evidence required | Review/proof required | Status |
+|---|---|---|---|
+| Part A compatibility boundary is explicit | Owned policy states that the merged Book 2+ sequence/target contract wins operationally | Checker clause assertions, teacher review, lead review | pending |
+| Preview remains bounded support | Policy restricts previews to explanation/context, taught-prerequisite retrieval, or optional perspective | Negative mutation tests remove or weaken each bound | pending |
+| Preview cannot manufacture coverage or mastery | Policy forbids a `Covered` cell and all mastery inference from exposure alone | Checker plus metadata flag tests | pending |
+| No untargeted independent operation | Policy forbids a preview from adding an independent operation to worked example, current-content Start check, guided practice, independent practice, or doeloefening unless approved by the target/goal | Teacher review and structural mutation tests | pending |
+| Target route and 55-minute feasibility remain intact | Policy forbids displacement of target practice or defeat of the whole-lesson equation | Checker and lead review | pending |
+| Book 2 §2.1.1 is not shortened by Book 1 formula exposure | Explicit costs/revenue/profit compatibility example | Teacher review | pending |
+| Policy is discoverable during normal work | Concise pointers in the Part A build guide, exercise builder, textbook lane, and teacher-review guidance | Pointer-loss mutations | pending |
+| Metadata and structural invariants remain stable | Both meta files reference the clarification, keep preview flags false/true as appropriate, preserve counts/roles/registry | Checker and JSON parse validation | pending |
+| Book 1 and lesson output remain untouched | Platform diff inventory plus clean lesson repository proof | Lane-scope/no-change checks | pending |
+| Evidence is integration-ready | Complete sprint bundle, current indexes, fresh teacher and lead PASS, exact-head CI | Readiness routing and governed integration lane | pending |
 
-- it serves the active target rather than displacing it;
-- it is clearly bounded in depth;
-- the later formal treatment still teaches the concept from an appropriate starting point;
-- earlier exposure is not silently promoted to prerequisite mastery;
-- mixed-opgaven paragraphs remain consolidation-first and do not become hidden theory chapters;
-- target-equivalent claims remain governed by reviewed target exercises, not by incidental explanatory material.
+## Quality Improvement Candidates
 
-## Book 1 second-edition backlog to record
+| Candidate | Classification | Decision |
+|---|---|---|
+| Add concise operational pointers instead of duplicating the full policy | `include_now` | Prevents a policy that exists only in owned-reference metadata. |
+| Reconcile §2.1.1 target authority and lesson timing | `defer_named_follow_up` | Issue #223; read-only planning may proceed, implementation waits for this PR. |
+| Retrofit or regenerate printed Book 1 | `reject_scope_creep` | Book 1 first edition remains frozen; issue #221 owns second-edition work. |
 
-Record, without editing the printed first edition:
+## Allowed paths
 
-- §1.1.4: current first-edition mixed exercise set differs from the reviewed integration target and omits the target's explicit graph-drawing operation; supplied profit-formula use may remain as a bounded preview, but target coverage should be reconciled in the second edition.
-- §1.2.2: fix the stale forward reference that says §1.2.3 moves to supply; review whether normal/inferior terminology remains clearly preview-level rather than a mastery requirement.
-- §1.2.3: preserve the intuitive buyer-dropout idea but review whether formal kink/piecewise/domain treatment is too deep for the Year 1 target and should be compressed in the second edition.
-- Book 1 repository hygiene: remove/archive stale legacy 1.4 and 1.5 active-tree artifacts through the platform workflow; do not hand-delete generated lesson output.
-- Consumer surplus and step-function material are not automatic defects; review presentation only for clarity about preview/scaffold status.
+- `references/owned/README.md`
+- `references/owned/course-blueprint-pedagogical-boundaries.md`
+- `references/owned/course-blueprint-v5.meta.json`
+- `references/owned/course-blueprint-v6-three-year.meta.json`
+- `BUILD-PARAGRAPH.md`
+- `skills/econ-exercise-builder.md`
+- `agents/teacher-learning-quality-review-agent.md`
+- `docs/workflows/textbook-paragraph-lane.md`
+- `AGENT_GITHUB_ENTRY.md`
+- `references/reference-team-roadmap.md`
+- `build-scripts/workflows/check-blueprint-pedagogical-boundaries.js`
+- `build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js`
+- `package.json`
+- `.github/workflows/platform-ci.yml`
+- `references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.plan.json`
+- `references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.result.json`
+- `reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-*`
+- Generated reporting/index files refreshed by repository tools.
 
-## Book 2 handoff requirements
+## Forbidden paths
 
-- Chapter 2.1 must teach costs/revenue/profit as formal Book 2 content; Book 1 supplied-formula exposure counts as familiarity only.
-- §2.2.3 must teach normal/inferior classification through income elasticity; Book 1 terminology is not assumed mastery.
-- §2.3.1 must teach consumer surplus formally and may reactivate Book 1 familiarity, but must not skip the concept, graphical area treatment, or required target operations because students have seen a simple discrete example before.
-- Step-function construction is not a prerequisite target for Book 2 unless a Book 2 target explicitly needs it.
+- All files in the sibling `4veco-lessen` repository, including Book 1 and Book
+  2 source, generated output, PDFs, HTML, plans, and reviews.
+- `references/machine/` and `references/external/` protected reference data.
+- `references/authored/course-target-exercises.json` and other target,
+  candidate, MTU, or PV registries.
+- Book-count, book-role, assessment-calendar, or v6 route mutations.
+- Companion/web implementation or generated student-facing output.
+- Issue #223 implementation in this PR.
 
-## Planned repository changes
+## Inputs
 
-1. Add a human-readable owned blueprint addendum for pedagogical-boundary interpretation.
-2. Link that addendum from the v5 and v6 blueprint metadata without changing book counts, book roles, or assessment structure.
-3. Open a durable Book 1 second-edition backlog issue containing the genuine repair items and Book 2 handoff.
-4. Record a sprint result and open a draft PR so platform CI can judge repository integrity.
+- Owner review on PR #222 and the 2026-08-31 correction/review attachments.
+- Current main at `636991ce7aa400494bccf78f22bba92fa5110ae7`.
+- The six-file original PR #222 payload at
+  `b11c9f603599e95e2ff7abae3eb8e01398538d69`.
+- `skills/econ-exercise-builder.md` as the operational Book 2+ Part A source.
+- `references/authored/didactiek-principes.md` as its rationale source.
+- `BUILD-PARAGRAPH.md`, `docs/workflows/textbook-paragraph-lane.md`, and
+  `agents/teacher-learning-quality-review-agent.md` as active inheritance and
+  review surfaces.
+- Issue #221 as the Book 1 second-edition backlog.
+- Issue #223 as a separate, dependent Book 2 lesson task.
 
-## Out of scope
+## Outputs
 
-- Editing Book 1 first-edition textbook files or PDFs.
-- Companion/web remediation.
-- Rewriting Book 2 paragraphs in this sprint.
-- Target-registry mutation.
-- Machine/external reference mutation.
-- Changing Book 1/Book 2 paragraph counts or book placement.
-- Deleting generated lesson folders directly from `4veco-lessen`.
+- Repaired owned pedagogical-boundary policy and stable metadata pointers.
+- Concise operational inheritance in the active Part A build/review surfaces.
+- Focused checker, mutation tests, npm command, and platform-CI wiring.
+- Machine-readable sprint plan/result and complete command/review evidence.
+- Fresh PR description, exact-head CI, readiness decision, authorization, and
+  governed integration evidence.
+
+## Operationalized sprint procedure
+
+1. Merge current main into the PR branch and run governance freshness before
+   authored repair work. Stop on any conflict affecting the Part A contract.
+2. Record this repaired plan and baseline, run the sprint plan/bootstrap
+   validators, and obtain an independent planning review. Resolve every
+   blocking finding before policy or checker implementation.
+3. Add a compatibility section to the owned policy. State that a preview may
+   support explanation/context, retrieval of already-taught prerequisites, or
+   optional perspective, but it earns no `Covered` cell, implies no mastery,
+   and cannot add an independently required operation to any Part A target
+   stage without reviewed goal/target authority.
+4. State that preview material cannot displace target practice, break the
+   55-minute route, or shorten later formal teaching; explicitly apply that
+   rule to costs/revenue/profit in Book 2 §2.1.1.
+5. Add concise pointers from the build guide, operational exercise builder,
+   textbook workflow, and teacher-review mode. Keep the full rule in one owned
+   policy rather than copying it across every surface.
+6. Implement a deterministic platform-only checker for the policy clauses,
+   metadata flags/pointers, count/role/registry invariants, and active pointers.
+   Add mutations that remove each critical clause, flip metadata flags, remove
+   either meta reference, change counts/roles/registry, or remove each pointer.
+7. Run focused and broad platform validation, prove the lesson repository is
+   clean and unchanged, refresh generated indexes, and update result/evidence.
+8. Request a fresh teacher-learning-quality review and a substantive lead
+   review of the repaired exact payload. Resolve blockers and rerun affected
+   tests. Stop if either final verdict is not PASS.
+9. Push the exact reviewed head, update PR #222, wait for exact-head CI, then
+   route readiness. Only after the owner-authorized payload is recorded may the
+   current-main trusted integration lane merge the PR. Verify post-merge main
+   CI before declaring completion.
+10. Keep Issue #223 limited to baseline/target/timing planning until PR #222 is
+    merged and post-merge CI is green; never mix its lesson files into PR #222.
 
 ## Acceptance tests
 
-- v5 and v6 metadata point to the clarification addendum.
-- The addendum explicitly distinguishes terminal targets, anticipatory scaffolding, and prerequisite mastery.
-- Book 1 first-edition freeze is explicit.
-- Book 2 handoff prevents preview material from being treated as mastered prior knowledge.
-- A second-edition backlog issue exists with concrete proof-to-close criteria.
-- Platform PR is opened from the dedicated branch and CI status is checked.
+```bash
+node build-scripts/sprints/check-sprint-plan.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-plan.md
+node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+npx.cmd jest build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js --runInBand
+npm.cmd run check:blueprint-pedagogical-boundaries
+npm.cmd run check:part-a-exercise-authoring-contract
+npm.cmd run check:active-governance-wording
+npm.cmd run check:platform
+npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
+node -e "const {execFileSync}=require('child_process'); const out=execFileSync('git',['-C','../4veco-lessen','status','--porcelain'],{encoding:'utf8'}); if(out.trim()){console.error(out);process.exit(1)}"
+npm.cmd run check:agent-index-freshness
+node build-scripts/reports/validate-report-json.js
+node build-scripts/sprints/emit-url-index.js --check
+node build-scripts/ci/check-evidence-line-endings.js
+git diff --check
+node build-scripts/sprints/check-sprint-command-log.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+node build-scripts/sprints/check-lead-review-substance.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1
+node build-scripts/sprints/check-sprint-result.js reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-result.md
+node build-scripts/sprints/check-sprint-bundle.js BLUEPRINT-BOOK1-EDITION-BOUNDARY-1 --complete
+```
 
-## Stop conditions
+## Proof Required to Close
 
-Stop if the change would alter Year 1 counts, book roles, target-registry records, or the printed first edition. Stop if legacy cleanup would require hand-editing generated lesson output instead of a platform workflow.
+Closure proof requires all acceptance validators/tests to pass, a focused
+mutation suite proving the compatibility rules fail closed, an unchanged
+lesson-repository check, a fresh teacher-learning-quality PASS, a substantive
+lead-review PASS with classified findings, current generated indexes, and green
+CI for the exact PR head. Integration additionally requires a recorded owner
+authorization for that exact payload, a successful governed-lane dry run and
+live run, and green post-merge main CI.
+
+## Rollback plan
+
+Before merge, revert only PR #222 commits on its dedicated branch. After merge,
+use a normal revert PR for the merge commit; do not rewrite main. The rollback
+must remove the policy, pointers, checker/CI wiring, and sprint evidence as one
+coherent unit while leaving PR #219, Issue #223 planning, target registries,
+Book 1, and lesson output untouched.
+
+## Human review required
+
+Yes. This is an L4 owned curriculum-policy change. The sprint may reach
+`READY_FOR_HUMAN_REVIEW` only after fresh specialist/lead review and exact-head
+CI. Merge requires owner authorization for the exact payload and must use
+`npm.cmd run integrate:authorized-pr`; direct merge is forbidden.
