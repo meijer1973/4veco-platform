@@ -167,7 +167,7 @@ npm.cmd run check:part-a-exercise-authoring-contract
 npm.cmd run check:active-governance-wording
 npm.cmd run check:platform
 npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD
-node -e "const {execFileSync}=require('child_process'); const out=execFileSync('git',['-C','../4veco-lessen','status','--porcelain'],{encoding:'utf8'}); if(out.trim()){console.error(out);process.exit(1)}"
+git -C ../4veco-lessen status --porcelain
 npm.cmd run check:agent-index-freshness
 node build-scripts/reports/validate-report-json.js
 node build-scripts/sprints/emit-url-index.js --check
