@@ -1,15 +1,15 @@
-# Sprint ISSUE-223-GATE-0-1: Book 2 Paragraph 2.1.1 Audit And Curriculum Design
+# Sprint ISSUE-223-GATE-0-1: Book 2 Paragraph 2.1.1 Audit And Design Hold
 
 ## Goal
 
-Preserve the completed technical baseline audit for §2.1.1 Kostenstructuren,
-then conduct a new human-reviewed learning-goal and target-exercise design gate
-before any student-facing paragraph, generated lesson output, target-authority
-change, or paragraph-specific guardrail is implemented.
+Preserve the completed technical baseline audit and accepted process correction
+for §2.1.1 Kostenstructuren, insert a Book 2 foundation-and-outline gate, and
+block final paragraph-goal and target approval until that separate platform-only
+outline has been reviewed, approved, and integrated.
 
 Current operative status:
 
-`Baseline audit PASS; curriculum-design gate REVISE — HOLD_FOR_GOAL_AND_TARGET_DESIGN.`
+`Baseline audit PASS; Book 2 foundation Gate 0B-0 REQUIRED NEXT; §2.1.1 design Gate 0B-1 BLOCKED.`
 
 ## Context
 
@@ -18,6 +18,14 @@ lesson and guardrail work. Owner review on 2026-09-01 at PR head
 `998de1c698e2b225ed38985582d9c38ec68353ce` rejects that conclusion. The
 technical audit remains valid, but the earlier design PASS and implementation
 authorization are superseded.
+
+The correction published at PR head
+`e8c0acca5400209decd262e84267b3b8e6be4e44` was accepted by owner review on
+2026-09-01. That acceptance does not approve the provisional §2.1.1 design.
+The same owner decision identifies a missing meso-level production authority
+between the course blueprint and chapter plans. A separate Book 2 foundation
+and outline task must now run before the paragraph design can receive final
+specialist or owner approval.
 
 The exact baselines remain:
 
@@ -40,7 +48,8 @@ economic-content, lead, exact-head CI, and governed integration review.
 | Gate | Status | Meaning |
 |---|---|---|
 | Gate 0A — baseline audit | PASS | Exact heads, target/artifact hashes, current quality-ref, stale zip, missing handoff, rendered PDFs, and layout defects are valid audit evidence. |
-| Gate 0B — goals and target design | REVISE / REQUIRED NEXT | Internal goals, student-visible goals, contextual target, balance, misconceptions, answer forms, target timing, specialist review, and explicit human owner decision are required. |
+| Gate 0B-0 — Book 2 foundation and outline | REQUIRED NEXT | A separate platform-only task must validate the Book 2 blueprint/registry foundation and create, review, approve, and integrate the canonical Book 2 production outline. PR #224 records this dependency but does not implement it. |
+| Gate 0B-1 — §2.1.1 goals and target design | BLOCKED | The four-goal/target candidate remains a review seed. Final teacher, economist, lead, and owner approval begins only after Gate 0B-0 is integrated and its §2.1.1 role is pinned. |
 | Gate 0C — target authority | BLOCKED | Starts only if the approved design changes the current registry target; use a separate focused platform PR. |
 | Gate 1 — blank-slate paragraph architecture | BLOCKED | Starts only after the approved target is authoritative. No old paragraph or named exercise receives a presumption of reuse. |
 | Gate 2 — exercise and answer design | BLOCKED | Starts only from the approved goals, target, and Gate 1 architecture. |
@@ -61,20 +70,42 @@ represents. Its unqualified energy wording can teach that expense names determin
 classification. The redesign must instead classify a cost from how its total
 amount behaves when `Q` changes within a stated period and capacity range.
 
-### Provisional Gate 0B lesson goals
+### Gate 0B-0 Book 2 foundation prerequisite
+
+The separate task `BOOK-2-FOUNDATION-OUTLINE-1` must start from current
+platform `main`, use its own issue, branch, worktree, and PR, and make no lesson
+repository change. It must:
+
+- audit v5/v6 Book 2 authority, the target registry, pedagogical boundaries,
+  the Part A contract, lesson-root/chapter-plan maturity, and owner decisions;
+- record one of `VALID`, `VALID_WITH_DERIVED_OUTLINE_REQUIRED`, or
+  `BLOCKED_BLUEPRINT_REPAIR_REQUIRED`;
+- create the canonical outline and lean metadata under
+  `references/authored/book-outlines/` only if the audit permits it;
+- add the reusable book-outline freshness guardrail and paragraph-workflow
+  foundation check;
+- obtain teacher-learning-quality, economic-content, curriculum-sequencing,
+  structural-lead, and explicit human owner review before integration;
+- pass exact-head and post-merge CI through the governed integration route.
+
+The outline defines book-wide progression, prerequisites, paragraph roles,
+dependencies, retrieval, conventions, and holds. It references target records
+  but does not duplicate or compete with target authority. Book 2 is the first application;
+this task does not create outlines for other books.
+
+### Provisional Gate 0B-1 lesson goals
 
 These are review candidates, not authority and not yet student-facing output:
 
-1. Explain from a cost item's behaviour whether it is constant or variable when
-   production changes.
+1. Classify cost components as constant or variable from how their total amount
+   changes when `Q` changes within the stated period and production range,
+   including cases where one expense category has both components.
 2. Construct `TCK`, `TVK`, and `TK` from a context and calculate with them.
-3. Calculate `GCK`, `GVK`, and `GTK` and use the correct units.
+3. Calculate and interpret `GCK`, `GVK`, and `GTK`, using correct units.
 4. Explain how total and average costs change as `Q` rises when variable cost per
    product remains constant.
-5. Explain why one expense type, such as energy, can contain both a constant and
-   a variable component.
 
-Gate 0B must separately approve concise Dutch student-visible wording in a
+Gate 0B-1 must separately approve concise Dutch student-visible wording in a
 non-heading box near the paragraph start:
 
 `**Na deze paragraaf kun je**`
@@ -96,11 +127,11 @@ variable components without pre-answering their classification, and elicit:
 - explanation of the condition under which `GVK` remains constant;
 - evaluation of the energy-component misconception.
 
-The owner-provided bakery candidate in
+The owner-provided revised bakery candidate in
 `reports/sprints/ISSUE-223-GATE-0-1-curriculum-design-brief.md` is a review seed,
-not an approved registry replacement. Its question-level estimate is itself a
-design finding: in full it is likely too long for the final target allocation
-and must be simplified without losing balanced evidence.
+not an approved registry replacement. It provisionally aims for approximately
+12–14 minutes, subject to specialist testing after the Book 2 outline is
+integrated.
 
 ### Blank-slate and salvage rule
 
@@ -114,7 +145,7 @@ target have no presumption of retention.
 ### Timing boundary
 
 The former exact 52-minute equation is withdrawn because it timed inherited and
-not-yet-authored questions. Gate 0B freezes only these constraints:
+not-yet-authored questions. Gate 0B-1 freezes only these constraints:
 
 - final whole-lesson equation must be `<= 55` minutes;
 - design toward approximately 48–52 minutes to preserve ordinary contingency;
@@ -139,8 +170,9 @@ elicit understanding remains review evidence, not a regex substitute.
 
 ## Quality Standard
 
-This specification requires Gate 0B to establish educationally sound internal
-and student-visible goals,
+This specification requires Gate 0B-0 to establish an approved Book 2
+foundation and Gate 0B-1 to establish educationally sound internal and
+student-visible goals,
 a balanced contextual target, and explicit human owner approval. The target
 must sample every approved goal through requested student operations rather than
 answer-model inference. Proof must address classification, explanation,
@@ -158,8 +190,9 @@ follow-up rather than an implicit implementation assumption.
 |---|---|---|---|
 | Preserve the technical baseline audit. | Existing baseline hashes, PDF inventory, stale-zip and handoff findings, clean lesson branch. | Exact-head/diff verification. | include_now |
 | Supersede the rejected design PASS. | Owner-review record, revised plan/JSON, corrected roadmap/Issue/PR language. | Owner review mapped to every changed assertion. | include_now |
-| Approve internal and student-visible goals before the target. | Gate 0B goal set plus concise `Na deze paragraaf kun je` wording. | Teacher/economic-content/lead review and explicit human owner decision. | include_now |
-| Design a balanced contextual target. | New target candidate and goal-to-target matrix covering every requested operation. | Balance, misconception, answer-form, difficulty, context, and target-timing review. | include_now |
+| Insert the Book 2 foundation layer. | Gate 0B-0 dependency, separate task/issue/PR route, and explicit no-implementation boundary for PR #224. | Owner acceptance plus later integrated outline path/version/hash. | include_now; implementation in separate task |
+| Approve internal and student-visible goals before the target. | Gate 0B-1 four-goal set plus concise `Na deze paragraaf kun je` wording. | After outline integration: teacher/economic-content/lead review and explicit human owner decision. | blocked_by_gate_0b_0 |
+| Design a balanced contextual target. | Revised review seed and goal-to-target matrix covering every requested operation. | After outline integration: balance, misconception, answer-form, difficulty, context, and target-timing review. | blocked_by_gate_0b_0 |
 | Change target authority if approved design differs. | Separate platform target-authority PR preserving history. | Teacher, economist, lead, exact-head CI, human authorization, governed integration. | defer_named_follow_up |
 | Build the paragraph from a blank slate. | New lesson architecture after target integration; explicit salvage decisions only. | Gate 1 human-reviewed architecture. | defer_named_follow_up |
 | Author seven-section exercises and answers. | New ladder with healthier classification/explanation/comparison/calculation balance. | Gate 2 specialist review against the approved target. | defer_named_follow_up |
@@ -170,12 +203,13 @@ follow-up rather than an implicit implementation assumption.
 | Candidate | Classification | Rationale |
 |---|---|---|
 | Reopen lesson-goal and target quality under owner authority. | include_now | Current authority is incomplete evidence for classification and constant-`GVK` explanation. |
+| Add a canonical Book 2 production outline between blueprint and chapter plan. | separate_required_task | The missing meso-level layer must be approved and integrated before §2.1.1 design approval. |
 | Split energy into constant contract and variable usage components. | include_now | Teaches classification from behaviour and directly addresses the misconception. |
 | Replace duplicate arithmetic with conceptual evidence. | include_now | Improves balance without lengthening the route. |
 | Add student-visible goals near the paragraph start. | include_now | Required by the active review standard and improves student orientation. |
 | Preserve named old exercises or the foodtruck example now. | reject_scope_creep | It anchors the new design before goals and target approval. |
 | Implement a paragraph-specific checker now. | defer_named_follow_up | Objective properties can be automated only after the design and target hash are stable. |
-| Write or regenerate lesson output before target approval. | reject_scope_creep | Gate 0B is planning/design only. |
+| Write or regenerate lesson output before target approval. | reject_scope_creep | Gates 0B-0 and 0B-1 are platform planning/authority work only. |
 
 ## Allowed paths
 
@@ -197,6 +231,9 @@ PR #224 planning/evidence correction only:
 - No target registry, blueprint authority, MTU, candidate, PV, protected
   reference, `references/machine/`, or `references/external/` change in PR #224.
 - No paragraph-specific or generic checker implementation in PR #224.
+- No Book 2 outline, outline metadata, book-outline checker, mutation test, or
+  paragraph-workflow implementation in PR #224; those belong only to the
+  separate `BOOK-2-FOUNDATION-OUTLINE-1` PR.
 - No Book 1, Part B, another Book 2 paragraph, Chapter 2.1 assembly, or other
   book change.
 - No claim that independent planning review, green CI, or `reviewed_final`
@@ -208,6 +245,9 @@ PR #224 planning/evidence correction only:
 
 - GitHub Issue #223.
 - Owner PR #224 review at head `998de1c698e2b225ed38985582d9c38ec68353ce`.
+- Accepted process-correction review at head
+  `e8c0acca5400209decd262e84267b3b8e6be4e44` and the owner decision inserting
+  Gate 0B-0.
 - `reports/sprints/ISSUE-223-GATE-0-1-baseline.md`.
 - `references/authored/course-target-exercises.json` current §2.1.1 record.
 - `references/owned/course-blueprint-v5.md` §2.1.1.
@@ -221,13 +261,17 @@ PR #224 planning/evidence correction only:
 
 ## Outputs
 
-- Revised Gate 0 plan and machine plan with implementation blocked.
+- Revised Gate 0 plan and machine plan with Gate 0B-0 required and all
+  §2.1.1 implementation blocked.
 - `reports/sprints/ISSUE-223-GATE-0-1-owner-review-supersession.md`.
 - `reports/sprints/ISSUE-223-GATE-0-1-curriculum-design-brief.md`.
 - Updated historical planning-review record that no longer authorizes work.
 - Corrected textbook roadmap/ledger and superseding PR/Issue records.
-- Future Gate 0B teacher, economic-content, lead, and explicit human owner
-  decision evidence; these are required before Gate 0C or lesson work.
+- A separate Book 2 outline issue/branch/PR; its implementation is not part of
+  PR #224.
+- Future Gate 0B-1 teacher, economic-content, lead, and explicit human owner
+  decision evidence after the outline is integrated; these are required before
+  Gate 0C or lesson work.
 
 ## Operationalized sprint procedure
 
@@ -236,22 +280,28 @@ PR #224 planning/evidence correction only:
 2. Record the owner review as the operative authority and supersede the earlier
    planning PASS, machine authorization, roadmap authorization, PR description,
    and Issue comments.
-3. Develop Gate 0B candidates for internal goals, student-visible goals, a
-   contextual target, goal-to-target alignment, conceptual/procedural balance,
-   misconceptions, answer forms, difficulty, and question-level target timing.
-4. Obtain independent teacher-learning-quality, economic-content, and structural
+3. Record Gate 0B-0 as the immediate blocker and open
+   `BOOK-2-FOUNDATION-OUTLINE-1` as a separate platform-only issue, branch, and
+   PR from current platform `main`. Do not implement that task in PR #224.
+4. After the Book 2 outline is reviewed, owner-approved, integrated, and green
+   on post-merge CI, refresh PR #224 against current platform `main` and pin the
+   approved outline path, version, commit, hash, status, and §2.1.1 role.
+5. Reopen Gate 0B-1 and review the four-goal, student-visible-goal, contextual
+   target, alignment, balance, misconception, answer-form, difficulty, and
+   12–14-minute timing seed against the outline.
+6. Obtain independent teacher-learning-quality, economic-content, and structural
    lead reviews of those planning artifacts. Resolve blocking findings without
    editing lesson or target authority.
-5. Present the reviewed Gate 0B design for explicit human owner decision. Valid
+7. Present the reviewed Gate 0B-1 design for explicit human owner decision. Valid
    outcomes are `APPROVE_FOR_TARGET_AUTHORITY`, `REVISE`, or `REJECT`. Do not
    infer approval from silence, CI, or file existence.
-6. If the owner-approved target differs from the registry, open Gate 0C as a
+8. If the owner-approved target differs from the registry, open Gate 0C as a
    separate focused target-authority PR. Preserve old authority as history and
    integrate through governed teacher/economist/lead/exact-head/human gates.
-7. Only after the approved target is authoritative, open Gate 1 and author the
+9. Only after the approved target is authoritative, open Gate 1 and author the
    paragraph architecture from a blank slate. Make individual salvage decisions
    explicitly; do not copy the old paragraph as the starting document.
-8. Gate 2 authors the canonical seven-section exercises/answers from the approved
+10. Gate 2 authors the canonical seven-section exercises/answers from the approved
    target. Gate 3 then freezes actual timing, regenerates/render-inspects every
    page, obtains all specialist/lead reviews, and decides final guardrails.
 
@@ -273,12 +323,14 @@ git -C "../issue223-lesson" diff --check
 
 The paragraph validator is baseline-integrity evidence only. It is not a
 curriculum-design acceptance test. No lesson-lane or future target/checker test
-is runnable in Gate 0B because those surfaces must remain unchanged.
+is runnable in Gate 0B-1 because those surfaces must remain unchanged.
 
 ## Proof Required to Close
 
-Closure proof to close Gate 0B must include the planned validator/test evidence
-and cannot exist until the approved internal goals, student-visible goals,
+Closure proof to close Gate 0B-1 cannot exist until the canonical Book 2 outline
+is approved, integrated, green on post-merge CI, and pinned in this plan. Gate
+0B-1 proof must then include the planned validator/test evidence, approved
+internal goals, student-visible goals,
 balanced contextual target, goal-to-target matrix, misconception/balance/
 answer-form/difficulty reviews, realistic question-level target timing,
 teacher-learning-quality review, economic-content review, structural lead
@@ -294,8 +346,11 @@ delete baseline evidence, or mutate protected authority as rollback.
 
 ## Human review required
 
-Yes. Gate 0B requires explicit human owner approval after teacher-learning-
-quality, economic-content, and structural lead reviews. Set
+Yes. Gate 0B-0 requires teacher-learning-quality, economic-content,
+curriculum-sequencing, structural-lead, and explicit human owner approval in
+the separate outline task. Gate 0B-1 later requires explicit human owner
+approval after teacher-learning-quality, economic-content, and structural lead
+reviews. Set
 `lead_review_phase` to `before_human_gate`. Until that decision is recorded,
 generated lesson output, student-facing editing, target-authority mutation, and
 guardrail implementation remain blocked.

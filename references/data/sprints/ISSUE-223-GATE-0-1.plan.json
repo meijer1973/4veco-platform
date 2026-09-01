@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "ISSUE-223-GATE-0-1",
-  "name": "Book 2 Paragraph 2.1.1 Audit And Curriculum Design",
+  "name": "Book 2 Paragraph 2.1.1 Audit And Design Hold",
   "created": "2026-09-01",
   "plan": "reports/sprints/ISSUE-223-GATE-0-1-plan.md",
   "baseline": "reports/sprints/ISSUE-223-GATE-0-1-baseline.md",
@@ -15,14 +15,35 @@
   "generated_lesson_output_allowed": false,
   "student_facing_changes_blocked_until_human_design_approval": true,
   "target_specific_guardrail_allowed": false,
-  "status": "HOLD_FOR_GOAL_AND_TARGET_DESIGN",
+  "status": "HOLD_FOR_BOOK2_FOUNDATION_OUTLINE",
   "gate_status": {
     "gate_0a_baseline_audit": "PASS",
-    "gate_0b_goal_and_target_design": "REVISE",
+    "gate_0b_0_book2_foundation_outline": "REQUIRED_NEXT",
+    "gate_0b_1_goal_and_target_design": "BLOCKED",
     "gate_0c_target_authority": "BLOCKED",
     "gate_1_blank_slate_architecture": "BLOCKED",
     "gate_2_exercises_and_answers": "BLOCKED",
     "gate_3_timing_rendering_review_guardrail": "BLOCKED"
+  },
+  "book_foundation_gate": {
+    "task_id": "BOOK-2-FOUNDATION-OUTLINE-1",
+    "separate_issue_branch_pr_required": true,
+    "implementation_allowed_in_pr_224": false,
+    "platform_only": true,
+    "lesson_repository_changes_allowed": false,
+    "canonical_outline": "references/authored/book-outlines/book-2-outline.md",
+    "canonical_metadata": "references/authored/book-outlines/book-2-outline.meta.json",
+    "required_audit_outcomes": [
+      "VALID",
+      "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
+      "BLOCKED_BLUEPRINT_REPAIR_REQUIRED"
+    ],
+    "required_before_gate_0b_1": [
+      "approved_and_integrated_outline",
+      "green_post_merge_ci",
+      "pinned_outline_path_version_commit_hash_status",
+      "confirmed_2_1_1_role_and_non_goals"
+    ]
   },
   "platform_baseline": "15bb80496916e3c07f5c957226b857cc689d9f43",
   "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
@@ -48,12 +69,23 @@
     "status": "deferred_until_approved_final_design",
     "separate_branch_and_pr_required_if_later_justified": true
   },
+  "curriculum_design_seed": {
+    "status": "provisional_blocked_by_gate_0b_0",
+    "internal_goal_count": 4,
+    "student_visible_goal_count": 4,
+    "target_context": "Bakkerij De Korenaar",
+    "target_design_minutes_min": 12,
+    "target_design_minutes_max": 14,
+    "energy_is_application_within_classification_goal": true,
+    "final_specialist_or_owner_approval_allowed_now": false
+  },
   "scope": [
     "Retain the exact technical baseline audit without treating it as curriculum approval.",
-    "Design and review internal and student-visible lesson goals before finalizing a target exercise.",
-    "Design a contextual target that directly samples every approved goal with balanced conceptual and procedural evidence.",
-    "Review classification, explanation, comparison, formulas, calculations, units, misconceptions, context, answer forms, difficulty, and target timing.",
-    "Require explicit human owner approval after teacher-learning-quality, economic-content, and structural lead review.",
+    "Record the separate Book 2 foundation-and-outline task as the immediate Gate 0B-0 prerequisite.",
+    "Retain the four-goal and contextual-target candidate only as a Gate 0B-1 review seed.",
+    "Block final lesson-goal and target review until the approved Book 2 outline is integrated and pinned.",
+    "After Gate 0B-0, review classification, explanation, comparison, formulas, calculations, units, misconceptions, context, answer forms, difficulty, and target timing.",
+    "Require explicit human owner approval after the applicable specialist and structural lead reviews at both gates.",
     "Keep lesson output, target authority, and guardrail implementation unchanged until their later gates authorize separate work."
   ],
   "acceptance_tests": [
@@ -73,6 +105,7 @@
     "No lesson repository or generated lesson output changes before human design approval and later gate authorization.",
     "No target-registry, blueprint-authority, MTU, candidate, PV, machine, external, or protected-reference changes in PR 224.",
     "No paragraph-specific or generic checker implementation before the approved final design is stable.",
+    "No Book 2 outline, outline metadata, outline-currentness checker, mutation tests, or paragraph-workflow implementation in PR 224.",
     "No precommitment to preserve the foodtruck example, current target, graph task, tables, or named old exercises.",
     "No Book 1, Part B, unrelated Book 2 paragraph, chapter-assembly, or other-book changes.",
     "No curriculum-approval claim from independent planning review, reviewed_final status, green CI, or file existence."

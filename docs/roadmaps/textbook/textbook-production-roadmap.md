@@ -8,15 +8,15 @@ Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. Book 2 Chapter 2.1 is closed for now after platform PR #48 and lesson PR #13. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` and `TEXTBOOK-FIGURE-STANDARD-1` govern rendered-page proof and figure/graph source preflight. `GOAL-B2-2.2-CHAPTER-COMPLETE-1` completes Book 2 Chapter 2.2 locally through `B2-2.2.3-HARDEN`, `B2-2.2.4-HARDEN-MIXED-1`, `B2-2.2-TARGET-V5-PROMOTE`, and `B2-2.2-CHAPTER-QA-1`, subject to coordinated PR review and remote CI. Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. Earlier Chapter 2.1 closure evidence remains historical, while Issue #223 reopens §2.1.1 through the new Book 2 foundation → paragraph-design route; no student-facing rewrite is yet authorized. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` and `TEXTBOOK-FIGURE-STANDARD-1` govern rendered-page proof and figure/graph source preflight. `GOAL-B2-2.2-CHAPTER-COMPLETE-1` completes Book 2 Chapter 2.2 locally through `B2-2.2.3-HARDEN`, `B2-2.2.4-HARDEN-MIXED-1`, `B2-2.2-TARGET-V5-PROMOTE`, and `B2-2.2-CHAPTER-QA-1`, subject to coordinated PR review and remote CI. Chapter 2.3 student output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
 
 ## Operating Goal
 
-Improve and write the textbook one controlled chapter sequence at a time. Chapter 2.1 now has current target evidence, rendered proof, validation evidence, and lead-review evidence, so it should not be polished further unless a concrete rendered-output defect appears. Chapter 2.2 is locally complete in this branch: 2.2.1 through 2.2.4 have final student-facing output, target records are promoted to reviewed-final, and the assembled chapter plus answer model have rendered proof. The next operating action is coordinated platform/lesson PR review, not a new content sprint.
+Establish a reviewed Book 2 production outline before resuming §2.1.1 design. Gate 0A of Issue #223 remains accepted, but Gate 0B-1 paragraph-goal and target approval is blocked by the new Gate 0B-0 `BOOK-2-FOUNDATION-OUTLINE-1`. That task must run in a separate platform-only issue, branch, worktree, and PR from current platform `main`; PR #224 records the dependency only. No lesson, target-registry, or paragraph-specific checker work may begin.
 
 ## Book 2 Print Series
 
-The current print-production series proceeds through Book 2 one controlled chapter sequence at a time. Book 2 starts with costs, revenue, break-even, and marginal concepts because those foundations support elasticity and surplus. Chapter 2.1 is closed for now; Chapter 2.2 should begin with readiness before any paragraph writing.
+The current print-production series proceeds through Book 2 one controlled chapter sequence at a time. Book 2 starts with costs, revenue, break-even, and marginal concepts because those foundations support elasticity and surplus. Historical Chapter 2.1 and 2.2 production evidence remains useful, but the new outline gate must reconcile that evidence with the current blueprint before §2.1.1 design approval resumes.
 
 1. `B2-READY-1` - short readiness gate for Book 2 section 2.1.
 2. `B2-2.1-A` - first Chapter 2.1 vertical slice, now treated as draft production evidence rather than the final quality bar.
@@ -34,6 +34,7 @@ The current print-production series proceeds through Book 2 one controlled chapt
 14. `B2-2.2.4-HARDEN-MIXED-1` - harden 2.2.4 as a mixed-opgaven section using the new standard.
 15. `B2-2.2-TARGET-V5-PROMOTE` - promote Chapter 2.2 target records only after governed evidence supports them.
 16. `B2-2.2-CHAPTER-QA-1` - inspect assembled Chapter 2.2 output after the paragraph sequence.
+17. `BOOK-2-FOUNDATION-OUTLINE-1` - validate Book 2 blueprint/registry coherence, create the canonical Book 2 production outline, and add the reusable paragraph-foundation currentness route before §2.1.1 design approval resumes.
 
 `B2-2.2-READY-1` is closed as readiness only. It did not write paragraphs or regenerate lesson output. Human instruction opened `B2-2.2.1-HARDEN` on 2026-06-17 and `B2-2.2.2-HARDEN` on 2026-06-18. Human instruction on 2026-06-19 opened `GOAL-B2-2.2-CHAPTER-COMPLETE-1`, authorizing completion of 2.2.3, 2.2.4, Chapter 2.2 target promotion, and Chapter 2.2 QA in one governed batch before returning for human review. Do not start Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, or student/product-use work from this roadmap state.
 
@@ -53,7 +54,8 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| ISSUE-223-GATE-0-1 | Book 2 Paragraph 2.1.1 Audit And Curriculum Design | no | Gate 0A baseline audit PASS; curriculum-design Gate 0B REVISE / `HOLD_FOR_GOAL_AND_TARGET_DESIGN`. Owner review supersedes the earlier implementation authorization. Goals and a balanced contextual target require specialist and explicit human approval; the old 52-minute mapping and target-specific guardrail are withdrawn. The lesson branch remains unchanged. |
+| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | no | Gate 0B-0 required next in a separate platform-only issue/branch/PR from current `main`. Audit v5/v6/registry coherence, create the canonical outline only if authority is valid, update paragraph workflows, add a freshness checker with mutations, and obtain teacher/economist/sequencing/lead/owner review. No lesson change. |
+| ISSUE-223-GATE-0-1 | Book 2 Paragraph 2.1.1 Audit And Design Hold | no | Gate 0A baseline audit PASS. Gate 0B-0 Book 2 foundation and outline is required next; Gate 0B-1 goals/target design is blocked pending its approved integration. The revised four-goal/target candidate remains a review seed only. Lesson, registry, and paragraph-specific checker work remain blocked. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building consolidation-only mixed elasticity practice with source-heavy transfer, answer guidance, rendered proof, validators, and explicit mixed-target acceptance. |
