@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-01T06:16:42.721Z
+Generated: 2026-09-01T07:35:14.820Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/issue223-gate0-planning-20260901`
-Source commit: `419ba205b78c904707f194281c4f1dd3d0bc24e9`
-Files indexed: 7529
+Source commit: `fb1a1011d4e798b3e282ca294326d4d6fae8b5ad`
+Files indexed: 7531
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2606,7 +2606,7 @@ Count: 1016
 
 ## reports
 
-Count: 4835
+Count: 4837
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6065,6 +6065,8 @@ Count: 4835
 - reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round3.md
 - reports/sprints/ISSUE-223-GATE-0-1-baseline.md
 - reports/sprints/ISSUE-223-GATE-0-1-command-log.jsonl
+- reports/sprints/ISSUE-223-GATE-0-1-curriculum-design-brief.md
+- reports/sprints/ISSUE-223-GATE-0-1-owner-review-supersession.md
 - reports/sprints/ISSUE-223-GATE-0-1-plan.md
 - reports/sprints/ISSUE-223-GATE-0-1-planning-review-assignment.md
 - reports/sprints/ISSUE-223-GATE-0-1-planning-review.md
