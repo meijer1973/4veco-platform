@@ -175,6 +175,7 @@ the outline can become approved input to Gate 0B-1.
 ```bash
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md
 node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1
+node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1 --complete
 npm.cmd run check:book-outline-currentness
 npm.cmd run test:book-outline-currentness
 npm.cmd run check:blueprint-pedagogical-boundaries
@@ -196,6 +197,7 @@ node build-scripts/ci/check-evidence-line-endings.js
 node build-scripts/sprints/check-sprint-result.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md
 node build-scripts/sprints/check-sprint-command-log.js BOOK-2-FOUNDATION-OUTLINE-1
 node build-scripts/sprints/check-lead-review-substance.js BOOK-2-FOUNDATION-OUTLINE-1
+npm.cmd run check:review-throughput -- reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.json
 git diff --check
 git -C ../4veco-lessen status --short
 git -C ../4veco-lessen diff --check

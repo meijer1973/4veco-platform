@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-31T13:15:55.173Z
+Generated: 2026-09-01T09:42:58.103Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book1-edition-boundary-20260830`
-Source commit: `6840a7f8ca30eca3901e97cb65e8489fe4b1d80d`
-Files indexed: 7523
+Source branch: `codex/book2-foundation-outline-20260901`
+Source commit: `1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a`
+Files indexed: 7539
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 717
+Count: 719
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -813,6 +813,8 @@ Count: 717
 - build-scripts/tools/build-skill-tree-viewer.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
+- build-scripts/workflows/check-book-outline-currentness.js
+- build-scripts/workflows/check-book-outline-currentness.test.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
@@ -890,7 +892,7 @@ Count: 25
 
 ## validators
 
-Count: 690
+Count: 692
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1279,6 +1281,8 @@ Count: 690
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
+- build-scripts/workflows/check-book-outline-currentness.js
+- build-scripts/workflows/check-book-outline-currentness.test.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
@@ -1585,9 +1589,11 @@ Count: 690
 
 ## references
 
-Count: 1015
+Count: 1018
 
 - references/authored/archive/course-target-exercises-v4.json
+- references/authored/book-outlines/book-2-outline.md
+- references/authored/book-outlines/book-2-outline.meta.json
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
 - references/authored/economic_mathematical_precision_reference.md
@@ -1965,6 +1971,7 @@ Count: 1015
 - references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.plan.json
 - references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.result.json
+- references/data/sprints/BOOK-2-FOUNDATION-OUTLINE-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
@@ -2605,7 +2612,7 @@ Count: 1015
 
 ## reports
 
-Count: 4830
+Count: 4841
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5181,6 +5188,17 @@ Count: 4830
 - reports/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1-teacher-learning-quality-review.md
 - reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-plan.md
 - reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-result.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-baseline.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-blueprint-validity-audit.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-assignment.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-corrections.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round1.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round2.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-planning-review.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-result.md

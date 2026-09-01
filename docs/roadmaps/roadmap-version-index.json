@@ -83,7 +83,7 @@
       "owner": "textbook_team",
       "updated_on": "2026-09-01",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is the platform-only Gate 0B-0 task deriving and guarding the canonical 12-paragraph Book 2 outline before Issue 223 paragraph design resumes. Human owner approval is pending; lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 has completed local Gate 0B-0 implementation and role-based review for the canonical 12-paragraph Book 2 outline. Human owner approval and merge are pending; lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

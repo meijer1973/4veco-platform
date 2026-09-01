@@ -15,21 +15,25 @@ Round: lead review round 1
   `8a1599d70ea9495f9c2ef031476a3aa656ea2bfdf12e05a744c1e1e4fb55d627`.
 - Human-authority trigger: required before outline approval and merge.
 - Subsequent changes require re-review: yes.
+- Evidence inspected: `references/authored/book-outlines/book-2-outline.md`,
+  `references/authored/book-outlines/book-2-outline.meta.json`,
+  `build-scripts/workflows/check-book-outline-currentness.js`, and
+  `reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-command-log.jsonl`.
 
-## Review plan
+## Review Plan
 
-| Review/test | Evidence | Status |
-|---|---|---|
-| Specification fulfilment | Issue #225 requirements against plan/audit/outline/workflows | revise |
-| Teacher learning quality | Prior knowledge, progression, retrieval, misconception, holds | pass with correction |
-| Economics precision | Formula/classification/welfare/target-boundary audit | revise |
-| Curriculum sequencing | Book 1 → Book 2 → Book 3 dependencies | pass |
-| Guardrail proof | Currentness checker and mutation suite | revise |
-| Scope integrity | Git diff and lesson read-only boundary | pass at review point |
+| Review/Test | Agent or tool | Required evidence | Status |
+|---|---|---|---|
+| Specification fulfilment | Role-based lead review | Issue #225 requirements against plan/audit/outline/workflows | revise |
+| Teacher learning quality | Teacher review role | Prior knowledge, progression, retrieval, misconception, holds | pass with correction |
+| Economics precision | Economics review role | Formula/classification/welfare/target-boundary audit | revise |
+| Curriculum sequencing | Sequencing review role | Book 1 → Book 2 → Book 3 dependencies | pass |
+| Guardrail proof | Jest/currentness tools | Currentness checker and mutation suite | revise |
+| Scope integrity | Git | Git diff and lesson read-only boundary | pass at review point |
 
-## Consolidated verdict
+## Consolidated Verdict
 
-Verdict: `REVISE`
+Verdict: REVISE
 
 The architecture and 12-paragraph sequence are sound, but two core proof issues
 blocked routing to human review in round 1.
@@ -48,7 +52,16 @@ blocked routing to human review in round 1.
 | Platform-only boundary | met | No lesson/target/protected-reference write. |
 | Human decision still pending | met | Metadata status and owner hold are pending. |
 
-## Blocking findings
+## Finding Classification
+
+| Finding | Classification | Blocks | Does not block | Proof required to close |
+|---|---|---|---|---|
+| Missing elastic numerical contrast | core_spec_failure | Human-review routing | Audit disposition and other sequencing | Add the contrast requirement and hold, then obtain teacher/economics re-review. |
+| Initial checker/test defects | core_spec_failure | Reusable currentness proof | Outline content review | Repair syntax and fixtures and pass the complete focused mutation suite. |
+
+## Blocking Findings
+
+Blocking findings existed in round 1 and required correction before routing.
 
 1. `core_spec_failure` — operation balance across §§2.2.1–2.2.2 was incomplete.
    Both cinema and petrol contexts yield `|Ev|<1`; without an explicit
@@ -64,7 +77,7 @@ blocked routing to human review in round 1.
    - Proof to close: repair checker syntax and test semantics; all required
      positive and negative mutations must pass.
 
-## Specialist findings
+## Specialist Findings
 
 - Teacher: progression and prior-knowledge boundaries are sound; add the
   missing elastic contrast before approval.
@@ -72,7 +85,7 @@ blocked routing to human review in round 1.
   elasticity contrast is the only new outline-level correction.
 - Sequencing: v5 order and Book 1/Book 3 dependencies pass.
 
-## Test evidence
+## Test Evidence
 
 - Structural currentness passed after syntax repair.
 - Initial mutation run: 26 passed, 6 failed because pointer mutations replaced
@@ -80,11 +93,23 @@ blocked routing to human review in round 1.
   where the checker still required non-empty arrays.
 - No final PASS may be recorded until the corrected suite is green.
 
-## Student/rendered evidence
+## Learning Quality Evidence
+
+The prerequisite, progression, retrieval, and misconception model was coherent,
+but teacher acceptance required an elastic numerical contrast so learners see
+both sides of the elasticity/revenue relationship.
+
+## Student Experience Evidence
 
 Not applicable. No student-facing or rendered artifact changed.
 
-## Required next action
+## Ownership and Handoff
+
+The platform branch owns the derived outline and guardrail correction. Target
+repairs, lesson planning, owner approval, and merge remain with their separately
+governed owners; this role-based review is not independent human approval.
+
+## Required Next Action
 
 Apply both corrections, rerun specialist checks and all mutation tests, then
 perform lead review round 2 against the corrected outline hash.

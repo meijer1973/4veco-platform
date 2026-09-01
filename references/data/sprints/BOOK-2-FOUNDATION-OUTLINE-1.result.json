@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "sprint_id": "BOOK-2-FOUNDATION-OUTLINE-1",
+  "name": "Book 2 Foundation And Outline",
+  "status": "completed",
+  "completed": "2026-09-01",
+  "completed_on": "2026-09-01",
+  "verdict": "PASS_WITH_FLAGS_TO_HUMAN_OWNER_GATE",
+  "result_status": "local_payload_complete_exact_head_ci_and_owner_decision_pending",
+  "plan": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md",
+  "baseline": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-baseline.md",
+  "result": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md",
+  "diff_summary": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-diff-summary.md",
+  "issue": 225,
+  "pr": 226,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/226",
+  "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
+  "source_provenance": {
+    "platform_base_sha": "15bb80496916e3c07f5c957226b857cc689d9f43",
+    "reviewed_substantive_head_sha": "1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a",
+    "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "outline_sha256": "66129a3f6480079e61a773bcf52de3aabd3c29975a9622af4609599e6e85fafe",
+    "hash_contract": "canonical UTF-8 text with CRLF and CR normalized to LF"
+  },
+  "protected_reference_data_changed": false,
+  "authored_derived_outline_created": true,
+  "generated_lesson_output_changed": false,
+  "implementation_changed": true,
+  "source_data_changed": false,
+  "engine_behavior_changed": false,
+  "lesson_repository_changed": false,
+  "human_review_required": true,
+  "owner_approval_status": "pending",
+  "merge_authorized": false,
+  "gate_0b1_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "final_verdict": "PASS WITH FLAGS",
+    "review_independence": "role-based review within one Codex execution; not independent human review",
+    "findings": [
+      {
+        "id": "B2-LEAD-R1-ELASTIC-CONTRAST",
+        "description": "The initial outline omitted an explicit elastic numerical contrast across the two inelastic target contexts; the corrected outline adds the contrast and hold.",
+        "classification": "core_requirement_met",
+        "evidence": "Corrected prose/meta outline and teacher/economics reviews.",
+        "blocks": "Nothing after correction.",
+        "does_not_block": "Human review routing.",
+        "proof_required_to_close": "Closed by H-22-ELASTIC-CONTRAST, corrected outline hash, and focused checker pass."
+      },
+      {
+        "id": "B2-LEAD-R1-GUARDRAIL",
+        "description": "Initial checker syntax and test-fixture defects were repaired and all required mutations now pass.",
+        "classification": "core_requirement_met",
+        "evidence": "npm.cmd run test:book-outline-currentness reports 34/34 passing tests.",
+        "blocks": "Nothing after correction.",
+        "does_not_block": "Human review routing.",
+        "proof_required_to_close": "Closed by the focused mutation suite and full platform suite."
+      },
+      {
+        "id": "B2-CI-CANONICAL-TEXT-HASH",
+        "description": "The first remote run exposed a Windows checkout LF/CRLF hash mismatch; file hashing is now canonical-text based and explicitly mutation-tested.",
+        "classification": "core_requirement_met",
+        "evidence": "Commit 1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a and the LF/CRLF checkout-equivalence test.",
+        "blocks": "Nothing after correction, subject to exact-head remote verification.",
+        "does_not_block": "Owner packet preparation.",
+        "proof_required_to_close": "Successful validate-platform on the exact terminal PR head."
+      },
+      {
+        "id": "B2-OWNER-APPROVAL",
+        "description": "The derived outline is review-ready but has not been approved by the human owner.",
+        "classification": "scale_blocker",
+        "evidence": "H-OUTLINE-OWNER and owner_approval.status=pending in the machine outline.",
+        "blocks": "Approved-use mode, merge, and Gate 0B-1 reopening.",
+        "does_not_block": "Draft PR review of the completed local payload.",
+        "proof_required_to_close": "Owner approval of the exact PR head and governed version/hash/PR/commit pin."
+      },
+      {
+        "id": "B2-CONTENT-AND-LESSON-HOLDS",
+        "description": "Named target-quality, paragraph-readiness, Book-root, and Chapter 2.3 lesson holds remain explicit.",
+        "classification": "minor_carry_flag",
+        "evidence": "Book 2 outline hold register and per-paragraph hold arrays.",
+        "blocks": "Only the affected paragraph/target/lesson work.",
+        "does_not_block": "Human acceptance of the Book-level sequence as a held planning foundation.",
+        "proof_required_to_close": "Separate governed target, paragraph, and lesson evidence for each named hold."
+      }
+    ],
+    "flags": [
+      {
+        "id": "B2-FLAG-OWNER",
+        "description": "Human owner approval is mandatory before approved use, merge, or Gate 0B-1.",
+        "classification": "scale_blocker",
+        "disposition": "product_scale_blocker",
+        "owner": "repository owner",
+        "next_action": "Review exact-head PR #226 and choose approve, revise, or reject.",
+        "blocks": "Approved outline use, merge, and paragraph-level Gate 0B-1.",
+        "does_not_block": "Draft PR publication and human review.",
+        "proof_required_to_close": "Exact owner decision bound to the PR head plus governed approval pin.",
+        "blocking": false
+      },
+      {
+        "id": "B2-FLAG-NAMED-HOLDS",
+        "description": "Target-quality and lesson-structure holds are intentionally carried without silent repair.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "future target, paragraph, and lesson task owners",
+        "next_action": "Close each hold only through its separately authorized evidence task.",
+        "blocks": "Affected target, paragraph, and lesson readiness only.",
+        "does_not_block": "Book-level outline review with holds visible.",
+        "proof_required_to_close": "Named governed follow-up evidence for each hold.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
+    { "command": "npm.cmd run test:book-outline-currentness", "status": "passed" },
+    { "command": "npm.cmd run check:blueprint-pedagogical-boundaries", "status": "passed" },
+    { "command": "npm.cmd run check:part-a-exercise-authoring-contract", "status": "passed" },
+    { "command": "npx.cmd jest build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js build-scripts/workflows/check-paragraph-workflow-wording.test.js --runInBand", "status": "passed" },
+    { "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD", "status": "passed" },
+    { "command": "npm.cmd run check:paragraph-workflow-wording", "status": "passed" },
+    { "command": "npm.cmd run check:scope-language", "status": "passed" },
+    { "command": "npm.cmd run check:platform", "status": "passed" },
+    { "command": "node build-scripts/references/check-roadmap-version-index.js", "status": "passed" },
+    { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" },
+    { "command": "npm.cmd run agent:index", "status": "passed" },
+    { "command": "npm.cmd run check:agent-index-freshness", "status": "passed" },
+    { "command": "node build-scripts/sprints/emit-url-index.js", "status": "passed" },
+    { "command": "node build-scripts/sprints/emit-url-index.js --check", "status": "passed" },
+    { "command": "npm.cmd run dashboard:internal", "status": "passed" },
+    { "command": "npm.cmd run finalization:freshness", "status": "passed" },
+    { "command": "node build-scripts/ci/check-evidence-line-endings.js", "status": "passed" },
+    { "command": "git diff --check", "status": "passed" },
+    { "command": "git -C ../4veco-lessen status --short", "status": "passed" },
+    { "command": "git -C ../4veco-lessen diff --check", "status": "passed" }
+  ],
+  "remote_ci": {
+    "required_context": "validate-platform",
+    "status": "pending_exact_terminal_head",
+    "first_run_id": 33491960708,
+    "first_run_conclusion": "failure_corrected_by_1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a"
+  },
+  "authorized_next": [
+    "Push the evidence-only terminal head and obtain successful exact-head validate-platform CI.",
+    "Return draft PR #226 to the human owner for approve, revise, or reject; do not merge."
+  ]
+}

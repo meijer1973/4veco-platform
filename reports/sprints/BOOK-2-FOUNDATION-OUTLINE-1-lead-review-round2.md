@@ -18,23 +18,28 @@ Round: lead review round 2
   added to the human packet before the owner decision.
 - Human-authority trigger: required.
 - Subsequent payload changes require re-review: yes.
+- Evidence inspected: `references/authored/book-outlines/book-2-outline.md`,
+  `references/authored/book-outlines/book-2-outline.meta.json`,
+  `build-scripts/workflows/check-book-outline-currentness.js`,
+  `build-scripts/workflows/check-book-outline-currentness.test.js`, and
+  `reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-command-log.jsonl`.
 
-## Review plan
+## Review Plan
 
-| Review/test | Evidence | Status |
-|---|---|---|
-| Original specification trace | Plan, audit, prose/meta outline, six workflow surfaces | pass |
-| Teacher learning quality | `...-teacher-learning-quality-review.md` | pass with explicit future holds |
-| Economics precision | `...-economic-content-review.md` | pass with governed target holds |
-| Curriculum sequencing | `...-curriculum-sequencing-review.md` | pass with explicit dependency holds |
-| Guardrail currentness | Focused checker | pass |
-| Guardrail mutation coverage | 33 focused tests | pass |
-| Existing workflow compatibility | Part A, boundary, and workflow wording checks | pass |
-| Human/merge boundary | Metadata status, owner hold, plan, and result state | pass |
+| Review/Test | Agent or tool | Required evidence | Status |
+|---|---|---|---|
+| Original specification trace | Role-based lead review | Plan, audit, prose/meta outline, six workflow surfaces | pass |
+| Teacher learning quality | Teacher review role | `reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review.md` | pass with explicit future holds |
+| Economics precision | Economics review role | `reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review.md` | pass with governed target holds |
+| Curriculum sequencing | Sequencing review role | `reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review.md` | pass with explicit dependency holds |
+| Guardrail currentness | Currentness checker | Current source and workflow binding | pass |
+| Guardrail mutation coverage | Jest | 34 focused tests including LF/CRLF checkout equivalence | pass |
+| Existing workflow compatibility | Platform validators | Part A, boundary, workflow wording, and full suite | pass |
+| Human/merge boundary | Metadata and review packet | Pending owner hold and no integration authority | pass |
 
-## Consolidated verdict
+## Consolidated Verdict
 
-Verdict: `PASS WITH FLAGS` to the human owner gate.
+Verdict: PASS WITH FLAGS to the human owner gate.
 
 No core specification requirement is missing. The flags are deliberate
 downstream paragraph/target/lesson holds and the mandatory owner decision; they
@@ -56,51 +61,62 @@ outline, close the sprint, authorize merge, or reopen Gate 0B-1.
 | Platform-only scope | met at review | No lesson, target registry, blueprint, protected reference, or student-facing write. |
 | Human owner and merge hold | met | `H-OUTLINE-OWNER`, pending metadata, draft-PR plan, and no integration authority. |
 
-## Finding classification
+## Finding Classification
 
 | Finding | Classification | Blocks | Does not block | Proof required to close |
 |---|---|---|---|---|
 | Round-1 elastic-contrast omission | core_requirement_met | Nothing after correction | Human review routing | Preserve `H-22-ELASTIC-CONTRAST` and corrected hash. |
 | Round-1 checker/test defects | core_requirement_met | Nothing after 33-test pass | Human review routing | Preserve green focused suite and exact-head CI. |
-| Owner approval pending | human_gate | Approved outline use, merge, Gate 0B-1 | Draft PR publication and review | Owner approves exact PR head; metadata/integration handled through governed follow-up. |
-| Paragraph/target holds | core_requirement_met_as_explicit_holds | Affected paragraph approval/production | Acceptance of the Book-level outline | Close each through named governed target/paragraph evidence. |
+| CI checkout line-ending mismatch | core_requirement_met | Nothing after canonical-text hash repair and LF/CRLF mutation pass | Human review routing | Preserve 34-test pass and obtain exact-head CI. |
+| Owner approval pending | scale_blocker | Approved outline use, merge, Gate 0B-1 | Draft PR publication and review | Owner approves the exact PR head; metadata/integration are handled through governed follow-up. |
+| Paragraph/target holds | minor_carry_flag | Affected paragraph approval/production | Acceptance of the Book-level outline | Close each through named governed target/paragraph evidence. |
 | Lesson root/Chapter 2.3 planning gap | minor_carry_flag | Lesson structure readiness | Platform outline review | Separate lesson task after platform authority approval. |
 
-## Blocking findings
+## Blocking Findings
 
 None for routing the corrected payload to the human owner gate.
 
 Human approval, exact-head CI, and final PR identity are still mandatory before
 any approval/integration decision.
 
-## Test evidence
+## Specialist Findings
+
+- Teacher learning quality: pass with downstream classroom-readiness and
+  paragraph-evidence holds retained.
+- Economics precision: pass with the marginal-interval, opportunity-cost,
+  elasticity-contrast, welfare, and target-quality holds visible.
+- Curriculum sequencing: pass for the Book 1 → Book 2 → Book 3 progression,
+  with lesson-root and Chapter 2.3 planning left to separate scope.
+
+## Test Evidence
 
 Passing evidence available at round 2:
 
 - `npm.cmd run check:book-outline-currentness`
-- `npm.cmd run test:book-outline-currentness` — 33/33 tests
+- `npm.cmd run test:book-outline-currentness` — 34/34 tests, including LF and
+  CRLF checkout equivalence
 - `npm.cmd run check:part-a-exercise-authoring-contract`
 - `npm.cmd run check:blueprint-pedagogical-boundaries`
 - `npm.cmd run check:paragraph-workflow-wording`
 - planned/active sprint bundle check
 
-The final command log, full scoped validators, roadmap/index checks,
-finalization freshness, exact-head CI, and clean lesson proof must be attached
-before the human decision.
+The logged full platform run passed 108 suites and 1,687 tests, with 6 suites
+and 8 tests skipped. Finalization freshness, exact-head CI, and clean lesson
+proof remain required before the human decision.
 
-## Learning quality evidence
+## Learning Quality Evidence
 
 The teacher review passes the prerequisite, progression, retrieval,
 interleaving, misconception, and hold model. It correctly withholds lesson-time,
 classroom-readiness, differentiation, and mastery claims until paragraph-level
 evidence exists.
 
-## Student experience and rendered evidence
+## Student Experience Evidence
 
 Not applicable. No student-facing output, interaction, figure, page, or
 rendered artifact changed.
 
-## Ownership and handoff
+## Ownership and Handoff
 
 - Platform PR owns the outline, guardrail, workflow pointers, and review packet.
 - Target repairs stay in governed target-authority follow-ups.
@@ -109,7 +125,7 @@ rendered artifact changed.
   integration of this outline.
 - Human owner owns the approve/revise/reject decision on the exact PR head.
 
-## Required next action
+## Required Next Action
 
 Finish the command/result/human-review packet, commit and push the exact payload,
 open a draft PR, obtain exact-head CI, and stop for the owner decision. Do not
