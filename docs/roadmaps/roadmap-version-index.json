@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.13-book2-foundation-outline-owner-revision",
+      "version": "v1.14-book2-foundation-outline-corrected-review",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
       "updated_on": "2026-09-01",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is in owner-requested revision on draft PR #226; Gate 0B-0 is not accepted until hold lifecycle/scope, semantic authority, Part A ownership, foundation completeness, prerequisite language, and terminal evidence are repaired and re-reviewed. Lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 has completed the owner-requested local correction on draft PR #226; all six findings are corrected, renewed specialists PASS, and lead review is PASS WITH FLAGS for the human/CI/hold/disclosure gates only. Exact terminal-head CI and a new owner decision remain pending. §2.1.1 design/specialist review are permitted, while approval/production, lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

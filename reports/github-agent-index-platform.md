@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-01T09:43:45.255Z
+Generated: 2026-09-01T11:10:12.863Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-foundation-outline-20260901`
-Source commit: `047d838dc88f4aa9fdeb2c09957b95e5ddba3804`
-Files indexed: 7547
+Source commit: `c38040d34bae12f6c61c1d26a43c5bdf354927b8`
+Files indexed: 7549
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 719
+Count: 720
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -809,6 +809,7 @@ Count: 719
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
 - build-scripts/templates/template-paragraph-plan.md
+- build-scripts/templates/template-textbook-paragraph-plan.md
 - build-scripts/templates/textbook-to-companion-handoff.md
 - build-scripts/tools/build-skill-tree-viewer.js
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.js
@@ -2613,7 +2614,7 @@ Count: 1019
 
 ## reports
 
-Count: 4848
+Count: 4849
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5203,6 +5204,7 @@ Count: 4848
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-corrections.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round1.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round2.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-owner-review-resolution.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-planning-review.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md

@@ -10,8 +10,9 @@ Plan JSON: `references/data/sprints/BOOK-2-FOUNDATION-OUTLINE-1.plan.json`
 
 ## Summary
 
-Completed the local, platform-only Gate 0B-0 payload and stopped before owner
-approval or integration. The source audit concluded
+Corrected the local, platform-only Gate 0B-0 payload after the owner returned
+PR #226 with `REVISE` against head
+`56b98478d43437895664a70efe6f57d8f82a453d`. The source audit remains
 `VALID_WITH_DERIVED_OUTLINE_REQUIRED`. The resulting Book 2 outline binds the
 current v6/v5 blueprint route, all 12 target-registry paragraph records, the
 pedagogical-boundary contract, and the Part A exercise contract without
@@ -19,15 +20,17 @@ editing those inputs or the lesson repository.
 
 The payload adds:
 
-- a canonical prose outline and machine companion for all 12 Book 2
-  paragraphs;
-- explicit prerequisite, dependency, retrieval, interleaving, operation,
-  misconception, readiness, and hold decisions;
-- a mandatory Book foundation check across six paragraph/chapter planning and
-  review surfaces;
-- a reusable structural-currentness checker, a fail-closed approved-use mode,
-  CI wiring, and 34 mutation/contract tests;
-- teacher, economics, curriculum-sequencing, and two-round lead review evidence;
+- a canonical prose semantic outline plus a compact identity/freshness/target/
+  review/hold machine companion for all 12 Book 2 paragraphs;
+- action-scoped, evidence-releasable holds that permit §2.1.1 design while
+  continuing to block approval and production;
+- a Part A-owned `X.Y.Z-textbook-plan.md` and dedicated complete foundation
+  template, while Part B retains its consumer-only `_paragraph-plan.md`;
+- explicit five-way prerequisite classifications, non-goals, prepares-for,
+  model conditions/relevant range, and target-dependent retrieval;
+- a reusable structural/action/approved-use checker, CI wiring, and 44 focused
+  mutation/contract tests;
+- renewed teacher, economics, curriculum-sequencing, and round-3 lead review evidence;
 - a Level-4 human-review packet for draft PR #226.
 
 The first remote PR run exposed that Windows Actions initially checked some
@@ -35,9 +38,12 @@ files out with CRLF before the workflow's reset. The checker now hashes
 canonical UTF-8 text after line-ending normalization, and a dedicated mutation
 proves LF and CRLF checkouts produce the same currentness verdict.
 
-Local implementation status is complete with `PASS WITH FLAGS` to the human
-gate. The outline itself remains `review_ready_with_holds`; owner approval,
-merge, Gate 0B-1 reopening, target repair, and lesson work remain blocked.
+Local substantive implementation has `PASS` from the three renewed specialist
+lenses and `PASS WITH FLAGS` from renewed lead review. The flags are the human
+gate, exact-head CI, named holds, and non-independent review disclosure—not a
+blocking substantive finding. The outline remains `review_ready_with_holds`; §2.1.1 design and
+specialist review are permitted, while owner approval, goal/target approval,
+production, lesson authoring, and merge remain blocked.
 
 ## Acceptance test results
 
@@ -46,14 +52,16 @@ Passing command-log evidence includes:
 - `node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md`
 - `node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1`
 - `npm.cmd run check:book-outline-currentness`
-- `npm.cmd run test:book-outline-currentness` — 34/34 tests
+- `npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1` — PASS
+- `npm.cmd run check:book-outline-currentness -- --action paragraph_production --paragraph 2.1.1` — expected FAIL on the two matching open holds
+- `npm.cmd run test:book-outline-currentness` — 44/44 tests
 - `npm.cmd run check:blueprint-pedagogical-boundaries`
 - `npm.cmd run check:part-a-exercise-authoring-contract`
 - `npx.cmd jest build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js build-scripts/workflows/check-paragraph-workflow-wording.test.js --runInBand`
 - `npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD`
 - `npm.cmd run check:paragraph-workflow-wording`
 - `npm.cmd run check:scope-language`
-- `npm.cmd run check:platform` — 108 suites and 1,687 tests passed; 6 suites
+- `npm.cmd run check:platform` — 108 suites and 1,697 tests passed; 6 suites
   and 8 tests skipped
 - roadmap, report-JSON, agent-index, URL-index, dashboard, finalization,
   evidence-line-ending, sprint-result, command-log, lead-review, review-packet,
@@ -85,6 +93,7 @@ Planning and review surfaces:
 - `docs/workflows/textbook-paragraph-lane.md`
 - `agents/teacher-learning-quality-review-agent.md`
 - `build-scripts/templates/template-paragraph-plan.md`
+- `build-scripts/templates/template-textbook-paragraph-plan.md`
 
 Roadmap, sprint, gate, and generated navigation evidence:
 
@@ -120,8 +129,9 @@ substitute for the named owner gate.
   then ask the owner to approve, revise, or reject that exact payload.
 - If approved and later merged, record the owner version/hash/PR/commit pin in a
   governed follow-up before approved-use mode may pass.
-- Only after approved integration: refresh PR #224/Issue #223 against the
-  canonical outline and reopen §2.1.1 Gate 0B-1.
+- §2.1.1 goal/target design and specialist review may proceed provisionally,
+  but approval/authority/production remain held until the exact release
+  conditions are evidenced.
 - Resolve the named target-quality holds separately, including stale
   cross-references, marginal-interval normalization, opportunity-cost scope,
   elastic contrast, v5 target limitations, and the §2.3.4 placeholder.
@@ -130,7 +140,7 @@ substitute for the named owner gate.
 
 ## Rollback instructions
 
-Revert commits `1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a` and
-`54d4b7fca6a32dd277075a6878f13ba164b53e75` together with the final evidence
-tail on the dedicated branch. Do not change the lesson repository during
+Revert the PR #226 commits after reviewed substantive head
+`c38040d34bae12f6c61c1d26a43c5bdf354927b8`, together with the earlier PR
+commits, on the dedicated branch. Do not change the lesson repository during
 rollback because this sprint made no lesson write.

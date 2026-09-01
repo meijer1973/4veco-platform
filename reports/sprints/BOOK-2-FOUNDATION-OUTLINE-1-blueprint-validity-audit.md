@@ -115,7 +115,7 @@ canonical derived outline belongs in the platform repository.
 
 | Hold | Evidence and consequence |
 |---|---|
-| `H-211-GATE0B1` | §2.1.1 goals/target design remains blocked behind the owner-reviewed Gate 0B-1 process in Issue #223. The outline states the role but does not approve a paragraph target. |
+| `H-211-GATE0B1` | §2.1.1 goal design, target design, and specialist review are permitted, but goal approval, target authority, paragraph/lesson production, and merge remain blocked until the outline and exact Gate 0B-1 package satisfy their release conditions. The outline states the role but does not approve a paragraph target. |
 | `H-212-STALE-REF` | The §2.1.2 target says "bakery from §1.3.2" although the current Book 2 sequence points to §2.1.1. Repair requires a separate target-authority change. |
 | `H-213-DELTAQ` | The §2.1.3 target samples Q in intervals larger than one while discussing MK/MO per extra unit. Paragraph approval must explicitly preserve `ΔTK/ΔQ` and `ΔTO/ΔQ`, not raw row differences. |
 | `H-213-OPC2` | V6's `OP-C2` output-choice label is broader than the current v5/target operation chain. Do not add formal output choice without an authority decision. |

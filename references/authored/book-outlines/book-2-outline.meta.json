@@ -21,8 +21,9 @@
   "review_state": {
     "owner_decision": "revise",
     "owner_reviewed_head": "56b98478d43437895664a70efe6f57d8f82a453d",
-    "specialist_reviews": "renewal_required",
-    "lead_review": "renewal_required"
+    "reviewed_substantive_head": "c38040d34bae12f6c61c1d26a43c5bdf354927b8",
+    "specialist_reviews": "pass_role_based_not_independent",
+    "lead_review": "pass_with_flags_role_based_not_independent"
   },
   "hash_contract": {
     "file_hash": "sha256(UTF-8 text after CRLF and CR are normalized to LF)",

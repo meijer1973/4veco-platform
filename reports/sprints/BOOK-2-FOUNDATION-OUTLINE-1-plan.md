@@ -98,7 +98,7 @@ This revision therefore adds these required outcomes before another owner gate:
 | Add an approved-outline mode for paragraph planning. | include_now | Structural currentness and owner approval are different gates; future paragraph work must require both. |
 | Repair stale cross-references in the §2.1.2 and §2.3.3 target records. | defer_named_follow_up | The defects must be visible holds, but Issue #225 does not authorize target-registry mutation. |
 | Rewrite lesson chapter plans or create the missing lesson Chapter 2.3 directory. | reject_scope_creep | This sprint is platform-only and the lesson repository is read-only evidence. |
-| Approve the provisional §2.1.1 goals and target. | reject_scope_creep | Gate 0B-1 reopens only after this outline is merged and pinned. |
+| Approve the provisional §2.1.1 goals and target. | reject_scope_creep | Design and specialist review may proceed, but approval/authority/production wait for the named hold release evidence. |
 
 ## Allowed paths
 
@@ -257,5 +257,5 @@ no rollback step because it must remain unchanged.
 Yes. The owner must explicitly choose approve, revise, or reject for the Book 2
 outline after reviewing the audit, role-based reviews, guardrail evidence,
 holds, and exact-head CI. Until approval is recorded, metadata stays
-`review_ready_with_holds`, approved-outline mode must fail, Gate 0B-1 remains
-blocked, and this PR must not merge.
+`review_ready_with_holds`, approved-outline mode must fail, Gate 0B-1
+approval/authority/production remain blocked, and this PR must not merge.

@@ -16,8 +16,9 @@ Review the exact terminal PR #226 head and choose one outcome:
 3. **Reject** the proposed Book 2 foundation layer.
 
 Approval here would accept the Book-level sequence only. It would not approve
-paragraph goals/targets, merge the PR, reopen Gate 0B-1 by itself, repair target
-records, authorize lesson writes, or create product/student authority.
+paragraph goals/targets, merge the PR, authorize Gate 0B-1 approval or
+production by itself, repair target records, authorize lesson writes, or create
+product/student authority.
 
 ## What is being reviewed
 
@@ -27,21 +28,22 @@ records, authorize lesson writes, or create product/student authority.
 - Machine companion:
   `references/authored/book-outlines/book-2-outline.meta.json`.
 - Outline SHA-256:
-  `66129a3f6480079e61a773bcf52de3aabd3c29975a9622af4609599e6e85fafe`.
+  `8a51238ca085f71865786dcb8daa3932b7b7122ac4f30e6db4eb08c37f4cd9db`.
 - Reviewed substantive head:
-  `1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a`.
-- Scope: 12 Book 2 paragraphs in exact order, with kinds, target statuses,
-  per-record hashes, dependencies, retrieval/interleaving, operations,
-  misconceptions, readiness, and holds.
+  `c38040d34bae12f6c61c1d26a43c5bdf354927b8`.
+- Scope: 12 Book 2 paragraphs in exact order; Markdown is the sole human
+  semantic authority, while compact metadata pins target identity/status/hash,
+  source freshness, review state, workflow surfaces, and hold lifecycle.
 
 ## Evidence summary
 
-- Focused currentness/mutation suite: 34/34 passed, including LF/CRLF checkout
-  equivalence.
-- Full platform suite: 108 suites and 1,687 tests passed; 6 suites and 8 tests
+- Focused currentness/mutation suite: 44/44 passed, including action scope,
+  release evidence/effect, semantic authority, Part A ownership, and LF/CRLF.
+- Full platform suite: 108 suites and 1,697 tests passed; 6 suites and 8 tests
   skipped.
-- Teacher, economics, curriculum-sequencing, and final lead verdict:
-  `PASS WITH FLAGS` to this human gate.
+- Renewed teacher, economics, and curriculum-sequencing verdicts: `PASS`.
+  Renewed lead verdict: `PASS WITH FLAGS` only for exact-head CI, the human
+  owner gate, named action-scoped holds, and the non-independent review disclosure.
 - Lesson repository: clean and unchanged at
   `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 - Exact-head remote CI: must be attached to PR #226 after the terminal evidence
@@ -59,14 +61,16 @@ owner decision.
   `H-232-V5`, `H-233-V5-REF`, `H-234-PLACEHOLDER`.
 - Lesson structure: `H-LESSON-ROOT`.
 
-These holds block only their named downstream approval/production work. They
-are visible precisely so accepting the Book-level sequence cannot silently
-approve unresolved paragraph, target, or lesson claims.
+These holds block only a named action in matching scope while `open`. A
+`released` hold requires evidence and no longer blocks. §2.1.1 goal design,
+target design, and specialist review are permitted now; approval, production,
+lesson authoring, and merge remain blocked.
 
 ## Owner checklist
 
-- Does the Book 1 → Book 2 entry boundary distinguish mastery from mere
-  preview/familiarity?
+- Does the five-way prerequisite classification appropriately separate likely
+  security, required retrieval, insufficient security, preview/familiarity,
+  and new formal learning?
 - Is the costs → revenue/marginal reasoning → elasticity → surplus sequence
   acceptable for the intended course?
 - Are all 12 paragraph roles and consolidation boundaries appropriate?
@@ -77,5 +81,7 @@ approve unresolved paragraph, target, or lesson claims.
 
 ## Stop rule
 
-Do not merge, record outline approval, or reopen §2.1.1 Gate 0B-1 unless the
-owner explicitly approves the exact PR head after remote CI passes.
+Do not merge, record outline approval, approve goals/targets, or start
+paragraph/lesson production unless the owner explicitly approves the exact PR
+head after remote CI passes. Provisional §2.1.1 design/specialist review is
+permitted by the action-scoped hold model.

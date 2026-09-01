@@ -6,14 +6,15 @@
   "date": "2026-09-01",
   "pr_number": 226,
   "pr_url": "https://github.com/meijer1973/4veco-platform/pull/226",
-  "reviewed_payload_head_sha": "1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a",
+  "reviewed_payload_head_sha": "c38040d34bae12f6c61c1d26a43c5bdf354927b8",
+  "live_terminal_binding": "The PR description is refreshed after the evidence commit and exact-head CI because an in-commit packet cannot contain its own commit SHA.",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "high_authority",
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "A new derived Book-level planning authority changes every future paragraph plan. Role-based teacher, economics, sequencing, and lead review pass with explicit holds, but exact-head CI and a human owner decision remain mandatory."
+    "rationale": "The corrected derived Book-level authority now has action-scoped releasable holds, one semantic source of truth, explicit Part A ownership, a complete foundation check, and renewed role-based reviews. Exact-head CI and a human owner decision remain mandatory."
   },
   "human_decision_required": true,
   "paired_prs": [],
@@ -24,7 +25,7 @@
     "owner_approval_required",
     "future_gate_0b1_dependency"
   ],
-  "status": "payload_complete_exact_head_ci_pending",
+  "status": "owner_revision_corrected_exact_head_ci_pending",
   "route": "READY_FOR_HUMAN_REVIEW",
   "requested_decision": "After exact-head validate-platform succeeds, approve, revise, or reject the Book 2 foundation outline on that exact PR head.",
   "changed_paths": [
@@ -34,6 +35,7 @@
     "BUILD-PARAGRAPH.md",
     "agents/teacher-learning-quality-review-agent.md",
     "build-scripts/templates/template-paragraph-plan.md",
+    "build-scripts/templates/template-textbook-paragraph-plan.md",
     "build-scripts/workflows/check-book-outline-currentness.js",
     "build-scripts/workflows/check-book-outline-currentness.test.js",
     "docs/roadmaps/roadmap-version-index.json",
@@ -58,17 +60,18 @@
     "report": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-blueprint-validity-audit.md",
     "outline": "references/authored/book-outlines/book-2-outline.md",
     "metadata": "references/authored/book-outlines/book-2-outline.meta.json",
-    "outline_sha256": "66129a3f6480079e61a773bcf52de3aabd3c29975a9622af4609599e6e85fafe",
+    "outline_sha256": "8a51238ca085f71865786dcb8daa3932b7b7122ac4f30e6db4eb08c37f4cd9db",
     "paragraph_count": 12,
     "paragraph_order_preserved": true,
     "target_kinds_statuses_and_record_hashes_preserved": true
   },
   "core_requirement_checklist": [
     { "requirement": "Evidence-backed allowed audit disposition", "status": "met" },
-    { "requirement": "Complete prose and machine Book 2 outline", "status": "met" },
+    { "requirement": "Markdown-only semantic authority plus compact machine identity/freshness/target/review/hold companion", "status": "met" },
     { "requirement": "All 12 IDs/order/kinds/statuses/record hashes preserved", "status": "met" },
-    { "requirement": "Preview/familiarity never promoted to mastery", "status": "met" },
-    { "requirement": "Six planning/review workflow surfaces require the Book foundation check", "status": "met" },
+    { "requirement": "Five-way paragraph prerequisite classification without curricular mastery overstatement", "status": "met" },
+    { "requirement": "Part A-owned X.Y.Z-textbook-plan.md contains the complete action-specific Book foundation check", "status": "met" },
+    { "requirement": "Open/released holds are action-scoped and evidence-releasable", "status": "met" },
     { "requirement": "Currentness, approved-use, mutation, npm, CI, and navigation guardrails", "status": "met" },
     { "requirement": "Teacher, economics, sequencing, and lead review", "status": "met_role_based_non_independent" },
     { "requirement": "Lesson, target registry, blueprints, and protected sources unchanged", "status": "met" },
@@ -96,6 +99,8 @@
     "merge_authorized": false,
     "auto_merge_authorized": false,
     "gate_0b1_authorized": false,
+    "gate_0b1_design_authorized": true,
+    "gate_0b1_approval_or_production_authorized": false,
     "paragraph_goals_or_targets_approved": false,
     "target_registry_mutation_authorized": false,
     "lesson_repository_mutation_authorized": false,
@@ -111,19 +116,20 @@
   },
   "proof": {
     "lead_review": {
-      "path": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round2.md",
+      "path": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round3.md",
       "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a"
+      "reviewed_commit_sha": "c38040d34bae12f6c61c1d26a43c5bdf354927b8"
     },
     "specialist_reviews": [
-      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review.md",
-      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review.md",
-      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review.md"
+      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review-owner-revision.md",
+      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review-owner-revision.md",
+      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review-owner-revision.md"
     ],
     "checkers": [
       { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
-      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 34 },
-      { "command": "npm.cmd run check:platform", "status": "passed", "suites_passed": 108, "tests_passed": 1687 }
+      { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
+      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 44 },
+      { "command": "npm.cmd run check:platform", "status": "passed", "suites_passed": 108, "tests_passed": 1697 }
     ],
     "ci": {
       "required_contexts": ["validate-platform"],

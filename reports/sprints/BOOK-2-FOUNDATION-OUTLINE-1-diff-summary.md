@@ -32,5 +32,6 @@ Generated: 2026-09-01
 
 The new outline is derived planning authority in
 `review_ready_with_holds` state. It does not approve paragraph goals or
-targets, claim preview as mastery, authorize Gate 0B-1, or authorize merge.
+targets, promote preview to an assumable prerequisite, authorize Gate 0B-1
+approval/production, or authorize merge.
 Owner approval is still required on the exact draft PR head.

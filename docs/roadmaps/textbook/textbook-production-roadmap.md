@@ -2,13 +2,13 @@
 
 Generated: 2026-09-01
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.13-book2-foundation-outline-owner-revision`
+Roadmap version: `v1.14-book2-foundation-outline-corrected-review`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. `BOOK-2-FOUNDATION-OUTLINE-1` is in owner-requested revision on draft PR #226 after review of head `56b98478d43437895664a70efe6f57d8f82a453d`. Gate 0B-0 is not accepted yet; the revision must repair hold lifecycle/scope, semantic authority, Part A ownership, foundation completeness, prerequisite language, and terminal evidence before another owner gate. Historical Chapter 2.1/2.2 evidence remains read-only input; no lesson or target-registry mutation is authorized here. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. `BOOK-2-FOUNDATION-OUTLINE-1` has completed the owner-requested local correction on draft PR #226 after review of head `56b98478d43437895664a70efe6f57d8f82a453d`. Substantive head `c38040d34bae12f6c61c1d26a43c5bdf354927b8` repairs hold lifecycle/scope, semantic authority, Part A ownership, foundation completeness, prerequisite language, and tests; renewed specialists PASS and renewed lead review is PASS WITH FLAGS for the human/CI/hold/disclosure gates only. Exact terminal-head CI and a new human owner decision remain pending. Historical Chapter 2.1/2.2 evidence remains read-only input; no lesson or target-registry mutation is authorized here. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
 
 ## Operating Goal
 
@@ -54,7 +54,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | no | Owner-requested revision is active on draft PR #226. Gate 0B-0 is not accepted; all six blocking review findings must be corrected and re-reviewed. Gate 0B-1 approval/production, merge, lessons, and target-registry changes remain blocked. |
+| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Owner-requested local correction is complete; renewed specialists PASS and lead review is PASS WITH FLAGS for the human/CI/hold/disclosure gates only. Exact terminal-head CI and a new owner decision remain pending. §2.1.1 design/specialist review are permitted; Gate 0B-1 approval/production, merge, lessons, and target-registry changes remain blocked. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building consolidation-only mixed elasticity practice with source-heavy transfer, answer guidance, rendered proof, validators, and explicit mixed-target acceptance. |

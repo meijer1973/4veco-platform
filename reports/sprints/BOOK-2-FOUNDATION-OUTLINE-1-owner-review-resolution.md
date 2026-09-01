@@ -15,11 +15,11 @@ blocked while the platform-only correction proceeds on the same PR.
 
 | Finding | Required correction | State |
 |---|---|---|
-| Hold deadlock | Add action-scoped `open`/`released` lifecycle, explicit permitted actions, evidence-bearing release, and current-action evaluation. | corrected; renewal review pending |
-| Duplicate semantic authority | Make Markdown canonical; reduce metadata to identity, freshness, compact target pins, reviews, workflow identity, and holds; reject semantic fields. | corrected; renewal review pending |
-| Part A ownership contradiction | Create a dedicated Part A `template-textbook-paragraph-plan.md`; Part A owns `X.Y.Z-textbook-plan.md`, Part B only consumes it. | corrected; renewal review pending |
-| Incomplete foundation check | Add all authority/chapter/target pins, five-way prerequisite classification, non-goals, prepares-for, model conditions, action-scoped holds, and a distinct verdict. | corrected; renewal review pending |
-| Mastery overstatement | Replace mastery claims with curricular prior-teaching classifications. | corrected; renewal review pending |
+| Hold deadlock | Add action-scoped `open`/`released` lifecycle, explicit permitted actions, evidence-bearing release, and current-action evaluation. | corrected; specialists PASS; lead PASS WITH FLAGS |
+| Duplicate semantic authority | Make Markdown canonical; reduce metadata to identity, freshness, compact target pins, reviews, workflow identity, and holds; reject semantic fields. | corrected; specialists PASS; lead PASS WITH FLAGS |
+| Part A ownership contradiction | Create a dedicated Part A `template-textbook-paragraph-plan.md`; Part A owns `X.Y.Z-textbook-plan.md`, Part B only consumes it. | corrected; specialists PASS; lead PASS WITH FLAGS |
+| Incomplete foundation check | Add all authority/chapter/target pins, five-way prerequisite classification, non-goals, prepares-for, model conditions, action-scoped holds, and a distinct verdict. | corrected; specialists PASS; lead PASS WITH FLAGS |
+| Mastery overstatement | Replace mastery claims with curricular prior-teaching classifications. | corrected; specialists PASS; lead PASS WITH FLAGS |
 | Stale owner packet | Refresh the live PR packet only after the final substantive head, exact CI, test totals, status, lesson baseline, and renewed verdicts are known. | in progress |
 
 ## Required proof before renewed owner review
