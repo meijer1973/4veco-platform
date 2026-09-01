@@ -54,6 +54,23 @@ describe('Book 2 outline currentness contract', () => {
     expect(findBookOutlineFailures(cloneFiles())).toEqual([]);
   });
 
+  test('file hashes are invariant across LF and CRLF checkouts', () => {
+    const lfFiles = Object.fromEntries(
+      Object.entries(cloneFiles()).map(([file, value]) => [
+        file,
+        value === null ? null : asText(value).replace(/\r\n?/g, '\n'),
+      ])
+    );
+    const crlfFiles = Object.fromEntries(
+      Object.entries(lfFiles).map(([file, value]) => [
+        file,
+        value === null ? null : value.replace(/\n/g, '\r\n'),
+      ])
+    );
+    expect(findBookOutlineFailures(lfFiles)).toEqual([]);
+    expect(findBookOutlineFailures(crlfFiles)).toEqual([]);
+  });
+
   test.each(AUTHORITY_PATHS)('rejects a stale authority source hash: %s', (file) => {
     expectFailure(mutate(file, asText(cloneFiles()[file]).slice(0, 20), 'mutated source bytes'), `authority hash is stale for ${file}`);
   });

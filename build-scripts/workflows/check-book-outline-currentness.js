@@ -89,6 +89,11 @@ function asText(value) {
   return Buffer.isBuffer(value) ? value.toString('utf8') : String(value);
 }
 
+function sha256CanonicalText(value) {
+  const text = asText(value);
+  return sha256(Buffer.from(text.replace(/\r\n?/g, '\n'), 'utf8'));
+}
+
 function readFiles(root = ROOT) {
   return Object.fromEntries(
     SOURCE_PATHS.map((file) => {
@@ -141,7 +146,7 @@ function checkMetadata(failures, files, meta) {
 
   const outline = files[OUTLINE_PATH];
   if (outline === null) failures.push(`${OUTLINE_PATH}: required source file is missing`);
-  else if (sha256(outline) !== meta.outline_sha256) failures.push(`${META_PATH}: outline_sha256 is stale`);
+  else if (sha256CanonicalText(outline) !== meta.outline_sha256) failures.push(`${META_PATH}: outline_sha256 is stale`);
 
   if (!equal(meta.paragraph_order, EXPECTED_ORDER)) failures.push(`${META_PATH}: paragraph_order must contain the exact 12 Book 2 IDs in order`);
   if (!equal(meta.required_paragraph_fields, REQUIRED_FIELDS)) failures.push(`${META_PATH}: required_paragraph_fields changed`);
@@ -165,7 +170,7 @@ function checkMetadata(failures, files, meta) {
     if (!AUTHORITY_PATHS.includes(item.path)) continue;
     const value = files[item.path];
     if (value === null) failures.push(`${item.path}: required authority source is missing`);
-    else if (sha256(value) !== item.sha256) failures.push(`${META_PATH}: authority hash is stale for ${item.path}`);
+    else if (sha256CanonicalText(value) !== item.sha256) failures.push(`${META_PATH}: authority hash is stale for ${item.path}`);
   }
 }
 
@@ -381,4 +386,5 @@ module.exports = {
   findBookOutlineFailures,
   readFiles,
   sha256,
+  sha256CanonicalText,
 };

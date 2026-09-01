@@ -16,7 +16,7 @@
     "approved_commit": null
   },
   "hash_contract": {
-    "file_hash": "sha256(raw_file_bytes)",
+    "file_hash": "sha256(UTF-8 text after CRLF and CR are normalized to LF)",
     "target_record_hash": "sha256(JSON.stringify(record)) using repository property order"
   },
   "authority_sources": [
