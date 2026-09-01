@@ -18,6 +18,15 @@ current v6/v5 blueprint route, all 12 target-registry paragraph records, the
 pedagogical-boundary contract, and the Part A exercise contract without
 editing those inputs or the lesson repository.
 
+After a second owner `REVISE` decision against head
+`32f861b0734566c548c0f4cb0bb9c6deeba4fd01`, substantive head
+`46e2f83c894d4dec8a850bc90ca8326a7cea7c0a` closes the remaining authority
+transition and enforcement defects. Resolution decisions/repairs are now
+distinct from approved use/integration; scopes are typed and schema-validated;
+the Book 2 root and Chapter 2.3 lesson holds are separate; every human hold
+projection field is compared with machine enforcement; and the active GitHub
+entrypoint routes Part A and Part B to their correct templates.
+
 The payload adds:
 
 - a canonical prose semantic outline plus a compact identity/freshness/target/
@@ -28,7 +37,7 @@ The payload adds:
   template, while Part B retains its consumer-only `_paragraph-plan.md`;
 - explicit five-way prerequisite classifications, non-goals, prepares-for,
   model conditions/relevant range, and target-dependent retrieval;
-- a reusable structural/action/approved-use checker, CI wiring, and 44 focused
+- a reusable structural/action/approved-use checker, CI wiring, and 58 focused
   mutation/contract tests;
 - renewed teacher, economics, curriculum-sequencing, and round-3 lead review evidence;
 - a Level-4 human-review packet for draft PR #226.
@@ -52,16 +61,18 @@ Passing command-log evidence includes:
 - `node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md`
 - `node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1`
 - `npm.cmd run check:book-outline-currentness`
+- `npm.cmd run check:book-outline-currentness -- --action outline_owner_decision` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action paragraph_production --paragraph 2.1.1` — expected FAIL on the two matching open holds
-- `npm.cmd run test:book-outline-currentness` — 44/44 tests
+- `npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3` — expected FAIL on the matching outline and Chapter 2.3 holds
+- `npm.cmd run test:book-outline-currentness` — 58/58 tests
 - `npm.cmd run check:blueprint-pedagogical-boundaries`
 - `npm.cmd run check:part-a-exercise-authoring-contract`
 - `npx.cmd jest build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js build-scripts/workflows/check-paragraph-workflow-wording.test.js --runInBand`
 - `npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD`
 - `npm.cmd run check:paragraph-workflow-wording`
 - `npm.cmd run check:scope-language`
-- `npm.cmd run check:platform` — 108 suites and 1,697 tests passed; 6 suites
+- `npm.cmd run check:platform` — 108 suites and 1,711 tests passed; 6 suites
   and 8 tests skipped
 - roadmap, report-JSON, agent-index, URL-index, dashboard, finalization,
   evidence-line-ending, sprint-result, command-log, lead-review, review-packet,
@@ -141,6 +152,6 @@ substitute for the named owner gate.
 ## Rollback instructions
 
 Revert the PR #226 commits after reviewed substantive head
-`c38040d34bae12f6c61c1d26a43c5bdf354927b8`, together with the earlier PR
+`46e2f83c894d4dec8a850bc90ca8326a7cea7c0a`, together with the earlier PR
 commits, on the dedicated branch. Do not change the lesson repository during
 rollback because this sprint made no lesson write.

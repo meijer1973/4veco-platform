@@ -6,11 +6,14 @@ Generated: 2026-09-01
 
 - Added the prose and machine Book 2 outline under
   `references/authored/book-outlines/`.
-- Added the outline-currentness checker, approved-use mode, and 34-test suite.
+- Added the outline-currentness checker, approved-use mode, typed scopes,
+  resolution/use transitions, full lifecycle-projection parity, and 58-test suite.
 - Wired the checker into package commands and `platform-ci`.
 - Added the Book foundation check to both build entrypoints, the paragraph
-  skill and lane, teacher reviewer, and paragraph-plan template.
-- Added the GitHub entry-map pointer.
+  skill and lane, teacher reviewer, and dedicated Part A textbook-plan template.
+- Corrected the GitHub entrypoint to route Part A and Part B to their respective
+  plan templates and to distinguish structural, action-specific, and
+  approved-use checks.
 
 ## Changed planning and evidence surfaces
 

@@ -27,7 +27,8 @@ paragraph design.
 - Book foundation check in all six required workflow surfaces.
 - Reusable currentness and approved-use checker with mutation proof for stale
   hashes, target drift, missing fields, erased holds, unsafe mastery promotion,
-  and missing pointers.
+  decision/release/use transitions, typed scope isolation, full human/machine
+  hold parity, and active-entrypoint routing.
 - Teacher, economics, and curriculum-sequencing review.
 - Platform-only scope and clean lesson repository.
 - Human owner approval and merge remain pending.

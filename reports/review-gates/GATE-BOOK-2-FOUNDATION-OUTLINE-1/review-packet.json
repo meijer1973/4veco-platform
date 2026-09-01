@@ -6,7 +6,7 @@
   "date": "2026-09-01",
   "pr_number": 226,
   "pr_url": "https://github.com/meijer1973/4veco-platform/pull/226",
-  "reviewed_payload_head_sha": "c38040d34bae12f6c61c1d26a43c5bdf354927b8",
+  "reviewed_payload_head_sha": "46e2f83c894d4dec8a850bc90ca8326a7cea7c0a",
   "live_terminal_binding": "The PR description is refreshed after the evidence commit and exact-head CI because an in-commit packet cannot contain its own commit SHA.",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
@@ -14,7 +14,7 @@
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "The corrected derived Book-level authority now has action-scoped releasable holds, one semantic source of truth, explicit Part A ownership, a complete foundation check, and renewed role-based reviews. Exact-head CI and a human owner decision remain mandatory."
+    "rationale": "The second corrected derived Book-level authority now has executable decision/release/use transitions, schema-validated typed scopes, exact human/machine lifecycle parity, correct Part A entrypoint routing, one semantic source of truth, and renewed role-based reviews. Exact-head CI and a human owner decision remain mandatory."
   },
   "human_decision_required": true,
   "paired_prs": [],
@@ -25,7 +25,7 @@
     "owner_approval_required",
     "future_gate_0b1_dependency"
   ],
-  "status": "owner_revision_corrected_exact_head_ci_pending",
+  "status": "second_owner_revision_corrected_exact_head_ci_pending",
   "route": "READY_FOR_HUMAN_REVIEW",
   "requested_decision": "After exact-head validate-platform succeeds, approve, revise, or reject the Book 2 foundation outline on that exact PR head.",
   "changed_paths": [
@@ -60,7 +60,7 @@
     "report": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-blueprint-validity-audit.md",
     "outline": "references/authored/book-outlines/book-2-outline.md",
     "metadata": "references/authored/book-outlines/book-2-outline.meta.json",
-    "outline_sha256": "8a51238ca085f71865786dcb8daa3932b7b7122ac4f30e6db4eb08c37f4cd9db",
+    "outline_sha256": "0b4ff155c81d01a07941b12f26ec1c9126b83aa27d6d1616619f11c617670c14",
     "paragraph_count": 12,
     "paragraph_order_preserved": true,
     "target_kinds_statuses_and_record_hashes_preserved": true
@@ -72,6 +72,10 @@
     { "requirement": "Five-way paragraph prerequisite classification without curricular mastery overstatement", "status": "met" },
     { "requirement": "Part A-owned X.Y.Z-textbook-plan.md contains the complete action-specific Book foundation check", "status": "met" },
     { "requirement": "Open/released holds are action-scoped and evidence-releasable", "status": "met" },
+    { "requirement": "Owner, Gate 0B-1, and target repair transitions reach later use without self-blocking", "status": "met" },
+    { "requirement": "Typed book/chapter/paragraph scopes isolate Chapter 2.3 from unrelated work", "status": "met" },
+    { "requirement": "Every projected Markdown lifecycle field equals machine enforcement", "status": "met" },
+    { "requirement": "GitHub entrypoint routes Part A and Part B to their respective templates", "status": "met" },
     { "requirement": "Currentness, approved-use, mutation, npm, CI, and navigation guardrails", "status": "met" },
     { "requirement": "Teacher, economics, sequencing, and lead review", "status": "met_role_based_non_independent" },
     { "requirement": "Lesson, target registry, blueprints, and protected sources unchanged", "status": "met" },
@@ -90,7 +94,9 @@
     "H-232-V5",
     "H-233-V5-REF",
     "H-234-PLACEHOLDER",
-    "H-LESSON-ROOT"
+    "H-BOOK2-ROOT-PLAN",
+    "H-CHAPTER-23-PLAN",
+    "H-MERGE-GOVERNANCE"
   ],
   "review_disclosure": "Teacher, economics, sequencing, and lead reviews were role-based checks in one Codex execution. They are not independent reviewers and do not replace human owner approval.",
   "authority_claims": {
@@ -118,25 +124,29 @@
     "lead_review": {
       "path": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round3.md",
       "result": "PASS WITH FLAGS",
-      "reviewed_commit_sha": "c38040d34bae12f6c61c1d26a43c5bdf354927b8"
+      "reviewed_commit_sha": "46e2f83c894d4dec8a850bc90ca8326a7cea7c0a"
     },
     "specialist_reviews": [
-      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review-owner-revision.md",
-      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review-owner-revision.md",
-      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review-owner-revision.md"
+      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review-authority-transition.md",
+      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review-authority-transition.md",
+      "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review-authority-transition.md"
     ],
     "checkers": [
       { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
-      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 44 },
-      { "command": "npm.cmd run check:platform", "status": "passed", "suites_passed": 108, "tests_passed": 1697 }
+      { "command": "npm.cmd run check:book-outline-currentness -- --action outline_owner_decision", "status": "passed" },
+      { "command": "npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3", "status": "expected_failed_on_H-OUTLINE-OWNER_and_H-CHAPTER-23-PLAN" },
+      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 58 },
+      { "command": "npm.cmd run check:platform", "status": "passed", "suites_passed": 108, "tests_passed": 1711 }
     ],
     "ci": {
       "required_contexts": ["validate-platform"],
       "status": "pending",
       "reviewed_commit_sha": null,
       "first_failed_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33491960708",
-      "first_failure_disposition": "LF/CRLF hash portability corrected in reviewed payload head"
+      "first_failure_disposition": "LF/CRLF hash portability corrected in the earlier reviewed payload",
+      "previous_successful_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33502250217",
+      "previous_successful_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01"
     },
     "lesson_clean_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
   },

@@ -125,7 +125,8 @@ canonical derived outline belongs in the platform repository.
 | `H-232-V5` | §2.3.2 is migrated and still needs v5 target review, including the supply-as-MC bridge and bounded welfare claim. |
 | `H-233-V5-REF` | §2.3.3 is migrated, cites "§2.2.2" where the current welfare sequence indicates §2.3.2, and uses an unqualified any-price deadweight-loss claim. Review must pin binding/transaction assumptions and the intended source paragraph. |
 | `H-234-PLACEHOLDER` | §2.3.4 is a one-question placeholder and is not production-ready. |
-| `H-LESSON-ROOT` | No Book 2 root outline and no Chapter 2.3 lesson plan exist. This platform sprint must not write them. |
+| `H-BOOK2-ROOT-PLAN` | No Book 2 root outline exists. It blocks Book 2 readiness and whole-book assembly, not unrelated paragraph work. |
+| `H-CHAPTER-23-PLAN` | No Chapter 2.3 lesson plan exists. It blocks Chapter 2.3 production and lesson work, not Chapter 2.1 or §2.1.1. |
 
 ## Derived outline rules
 

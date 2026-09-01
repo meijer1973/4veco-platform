@@ -33,3 +33,30 @@ blocked while the platform-only correction proceeds on the same PR.
   exact-head remote CI passes.
 - The live PR description records the exact current PR head and the exact
   reviewed substantive head without a self-referential in-repository SHA claim.
+
+## Second owner revision — authority transition and scope enforcement
+
+Recorded: 2026-09-01
+Reviewed head: `32f861b0734566c548c0f4cb0bb9c6deeba4fd01`
+Decision: `REVISE`
+
+The owner accepted the Book 2 sequence, canonical Markdown authority, compact
+metadata, Part A/Part B ownership, complete foundation fields, economic model
+conditions, prior-learning classifications, and the self-reference-safe live
+terminal packet. The owner found four remaining workflow blockers.
+
+| Finding | Required correction | State at substantive head `46e2f83c894d4dec8a850bc90ca8326a7cea7c0a` |
+|---|---|---|
+| Holds block their own decisions | Separate resolution decisions/repairs from later approved use/integration and prove complete transitions. | corrected; three transition proofs pass; merge remains separately held |
+| Lesson root scope is asymmetric | Use typed scopes and split Book 2 root from Chapter 2.3 planning. | corrected; schema and Chapter 2.1/2.3/§2.1.1 scope matrix pass |
+| Human hold table can diverge | Parse and compare every projected lifecycle field. | corrected; seven independent field mutations pass |
+| GitHub entrypoint routes to Part B | Route Part A and Part B to their own templates and explain checker order. | corrected; navigation mutations pass |
+
+Non-blocking cleanup is also corrected: lead review round 3 now exists and is
+named consistently, and chapter completion requires that no open hold block
+the current completion action.
+
+PR #226 remains draft and unmerged. No outline approval, goal/target approval,
+target mutation, paragraph production, lesson authoring, or merge is recorded
+by this correction. Exact-head CI and the renewed owner decision remain
+pending after the evidence tail is pushed.

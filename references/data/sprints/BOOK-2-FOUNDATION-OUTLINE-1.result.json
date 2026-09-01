@@ -6,7 +6,7 @@
   "completed": "2026-09-01",
   "completed_on": "2026-09-01",
   "verdict": "PASS_CORRECTED_PAYLOAD_TO_HUMAN_OWNER_GATE",
-  "result_status": "owner_revision_corrected_terminal_exact_head_ci_pending",
+  "result_status": "second_owner_revision_corrected_terminal_exact_head_ci_pending",
   "plan": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md",
   "baseline": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-baseline.md",
   "result": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md",
@@ -17,10 +17,10 @@
   "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
   "source_provenance": {
     "platform_base_sha": "15bb80496916e3c07f5c957226b857cc689d9f43",
-    "reviewed_substantive_head_sha": "c38040d34bae12f6c61c1d26a43c5bdf354927b8",
+    "reviewed_substantive_head_sha": "46e2f83c894d4dec8a850bc90ca8326a7cea7c0a",
     "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-    "outline_sha256": "8a51238ca085f71865786dcb8daa3932b7b7122ac4f30e6db4eb08c37f4cd9db",
-    "hash_contract": "canonical UTF-8 text with CRLF and CR normalized to LF"
+    "outline_sha256": "0b4ff155c81d01a07941b12f26ec1c9126b83aa27d6d1616619f11c617670c14",
+    "hash_contract": "canonical UTF-8 LF semantic text with the fully validated lifecycle projection replaced by a stable marker"
   },
   "protected_reference_data_changed": false,
   "authored_derived_outline_created": true,
@@ -42,6 +42,7 @@
     "round1": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round1.md",
     "corrections": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-corrections.md",
     "round2": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round2.md",
+    "round3": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round3.md",
     "round1_verdict": "REVISE",
     "final_verdict": "PASS WITH FLAGS",
     "review_independence": "role-based review within one Codex execution; not independent human review",
@@ -59,7 +60,7 @@
         "id": "B2-LEAD-R1-GUARDRAIL",
         "description": "Initial checker syntax and test-fixture defects were repaired and all required mutations now pass.",
         "classification": "core_requirement_met",
-        "evidence": "npm.cmd run test:book-outline-currentness reports 44/44 passing tests.",
+        "evidence": "npm.cmd run test:book-outline-currentness reports 58/58 passing tests, including complete transition, typed-scope, lifecycle-projection, and entrypoint mutations.",
         "blocks": "Nothing after correction.",
         "does_not_block": "Human review routing.",
         "proof_required_to_close": "Closed by the focused mutation suite and full platform suite."
@@ -122,8 +123,11 @@
   "acceptance_tests": [
     { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md", "status": "passed" },
     { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1 --complete", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness -- --action outline_owner_decision", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3", "status": "failed" },
     { "command": "npm.cmd run test:book-outline-currentness", "status": "passed" },
     { "command": "npm.cmd run check:blueprint-pedagogical-boundaries", "status": "passed" },
     { "command": "npm.cmd run check:part-a-exercise-authoring-contract", "status": "passed" },
@@ -147,7 +151,9 @@
   ],
   "remote_ci": {
     "required_context": "validate-platform",
-    "status": "pending_exact_corrected_terminal_head",
+    "status": "pending_exact_second_correction_terminal_head",
+    "previous_successful_run_id": 33502250217,
+    "previous_successful_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01",
     "first_run_id": 33491960708,
     "first_run_conclusion": "failure_corrected_by_1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a"
   },

@@ -21,10 +21,10 @@
   },
   "review_state": {
     "owner_decision": "revise",
-    "owner_reviewed_head": "56b98478d43437895664a70efe6f57d8f82a453d",
-    "reviewed_substantive_head": "c38040d34bae12f6c61c1d26a43c5bdf354927b8",
+    "owner_reviewed_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01",
+    "reviewed_substantive_head": "46e2f83c894d4dec8a850bc90ca8326a7cea7c0a",
     "specialist_reviews": "pass_role_based_not_independent",
-    "lead_review": "pass_with_flags_role_based_not_independent"
+    "lead_review": "round3_pass_with_flags_role_based_not_independent"
   },
   "hash_contract": {
     "semantic_authority_hash": "sha256(canonical UTF-8 LF text with the fully validated lifecycle hold projection replaced by a stable marker)",
