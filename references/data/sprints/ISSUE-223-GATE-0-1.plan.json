@@ -1,18 +1,29 @@
 {
   "schema_version": 1,
   "sprint_id": "ISSUE-223-GATE-0-1",
-  "name": "Book 2 Paragraph 2.1.1 Part A Contract Application",
+  "name": "Book 2 Paragraph 2.1.1 Audit And Curriculum Design",
   "created": "2026-09-01",
   "plan": "reports/sprints/ISSUE-223-GATE-0-1-plan.md",
   "baseline": "reports/sprints/ISSUE-223-GATE-0-1-baseline.md",
-  "planning_review": "reports/sprints/ISSUE-223-GATE-0-1-planning-review.md",
-  "human_review_required": false,
+  "owner_review_supersession": "reports/sprints/ISSUE-223-GATE-0-1-owner-review-supersession.md",
+  "curriculum_design_brief": "reports/sprints/ISSUE-223-GATE-0-1-curriculum-design-brief.md",
+  "human_review_required": true,
   "lead_review_required": true,
   "lead_review_schema_version": 3,
-  "lead_review_phase": "before_sprint_closure",
+  "lead_review_phase": "before_human_gate",
   "protected_reference_data_changes_allowed": false,
-  "generated_lesson_output_allowed": true,
-  "student_facing_changes_blocked_until_planning_pass": true,
+  "generated_lesson_output_allowed": false,
+  "student_facing_changes_blocked_until_human_design_approval": true,
+  "target_specific_guardrail_allowed": false,
+  "status": "HOLD_FOR_GOAL_AND_TARGET_DESIGN",
+  "gate_status": {
+    "gate_0a_baseline_audit": "PASS",
+    "gate_0b_goal_and_target_design": "REVISE",
+    "gate_0c_target_authority": "BLOCKED",
+    "gate_1_blank_slate_architecture": "BLOCKED",
+    "gate_2_exercises_and_answers": "BLOCKED",
+    "gate_3_timing_rendering_review_guardrail": "BLOCKED"
+  },
   "platform_baseline": "15bb80496916e3c07f5c957226b857cc689d9f43",
   "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
   "target_authority": {
@@ -21,46 +32,49 @@
     "record_id": "2.1.1",
     "record_sha256_json_stringify": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8",
     "record_status": "reviewed_final",
-    "changes_allowed": false
+    "status_interpretation": "current authority reopened for owner-authorized curriculum-design review",
+    "changes_allowed_in_this_pr": false,
+    "replacement_requires_separate_governed_pr": true
   },
-  "core_route_minutes": 52,
-  "optional_guided_detour_minutes": 9,
+  "timing": {
+    "old_fixed_core_minutes": null,
+    "whole_lesson_max_minutes": 55,
+    "design_target_min_minutes": 48,
+    "design_target_max_minutes": 52,
+    "question_level_route_deferred_until_actual_questions": true
+  },
   "platform_guardrail": {
-    "required": true,
-    "reason": "Existing validators protect the contract/template and package mechanics but do not validate the concrete section 2.1.1 route, target, timing, and source/answer properties.",
-    "separate_branch_and_pr_required": true,
-    "must_integrate_before_final_lesson_integration": true
+    "required_now": false,
+    "status": "deferred_until_approved_final_design",
+    "separate_branch_and_pr_required_if_later_justified": true
   },
   "scope": [
-    "Freeze and preserve the reviewed-final 2.1.1 target authority.",
-    "Apply the exact seven-section Part A route to only Book 2 paragraph 2.1.1 after independent planning PASS.",
-    "Preserve every target operation and target answer form while removing duplicated non-target workload first.",
-    "Prove a 50-52 minute core route with question-level timing and contingency.",
-    "Create a separately reviewed opt-in platform guardrail before final lesson integration.",
-    "Regenerate and visually inspect every page of paragraph, exercise, and answer PDFs.",
-    "Remove the tracked stale opgaven zip and fill the required Part A textbook handoff without creating Part B output.",
-    "Keep Book 1, Part B, other Book 2 content, Chapter 2.1 assembly, and protected reference authority unchanged."
+    "Retain the exact technical baseline audit without treating it as curriculum approval.",
+    "Design and review internal and student-visible lesson goals before finalizing a target exercise.",
+    "Design a contextual target that directly samples every approved goal with balanced conceptual and procedural evidence.",
+    "Review classification, explanation, comparison, formulas, calculations, units, misconceptions, context, answer forms, difficulty, and target timing.",
+    "Require explicit human owner approval after teacher-learning-quality, economic-content, and structural lead review.",
+    "Keep lesson output, target authority, and guardrail implementation unchanged until their later gates authorize separate work."
   ],
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js reports/sprints/ISSUE-223-GATE-0-1-plan.md",
     "node build-scripts/sprints/check-sprint-bundle.js ISSUE-223-GATE-0-1",
     "node build-scripts/sprints/check-scope-language.js --active",
     "node build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
+    "node build-scripts/workflows/check-blueprint-pedagogical-boundaries.js",
     "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../issue223-lesson/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\"",
-    "node build-scripts/workflows/check-issue-223-211-contract.js \"../issue223-lesson/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\"",
-    "node build-scripts/workflows/check-issue-223-211-contract.test.js",
-    "node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../issue223-lesson --lane textbook --base origin/main --head HEAD",
-    "node build-scripts/sprints/check-sprint-result.js reports/sprints/ISSUE-223-GATE-0-1-result.md",
-    "node build-scripts/sprints/check-sprint-bundle.js ISSUE-223-GATE-0-1 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run check:agent-index-freshness",
     "git diff --check",
     "git -C \"../issue223-lesson\" diff --check"
   ],
   "forbidden": [
-    "No edits under references/machine or references/external.",
-    "No target-registry, blueprint-authority, MTU, candidate, PV, or protected-reference mutation.",
-    "No Book 1, Part B, _paragraph-plan.md, unrelated Book 2 paragraph, chapter-assembly, or other-book changes.",
-    "No graph or table construction demand absent from the target.",
-    "No break-even, revenue, profit, formal cost-shape classification, device, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative, product-wide, or broad companion scope.",
-    "No substantive platform implementation on the Gate 0 evidence branch."
+    "No lesson repository or generated lesson output changes before human design approval and later gate authorization.",
+    "No target-registry, blueprint-authority, MTU, candidate, PV, machine, external, or protected-reference changes in PR 224.",
+    "No paragraph-specific or generic checker implementation before the approved final design is stable.",
+    "No precommitment to preserve the foodtruck example, current target, graph task, tables, or named old exercises.",
+    "No Book 1, Part B, unrelated Book 2 paragraph, chapter-assembly, or other-book changes.",
+    "No curriculum-approval claim from independent planning review, reviewed_final status, green CI, or file existence."
   ]
 }

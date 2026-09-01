@@ -1,10 +1,16 @@
 # ISSUE-223-GATE-0-1 Independent Planning Review Assignment
 
+> **Historical assignment — superseded by owner review.** Its review remains
+> evidence of plan consistency, not curriculum-design approval or implementation
+> authorization. The current next step is Gate 0B goal/target design and human
+> owner decision.
+
 ## Reviewer task
 
-Independently decide whether Gate 0 is sufficiently complete and internally
-coherent to authorize §2.1.1 student-facing implementation. This is a planning
-review, not a content edit or final lesson review.
+This historical assignment asked whether Gate 0 was internally coherent enough
+to authorize §2.1.1 student-facing implementation. Owner review has since
+established that internal coherence is not curriculum-design proof. The task is
+retained only as review-history evidence.
 
 ## Evidence to inspect
 
@@ -26,8 +32,8 @@ review, not a content edit or final lesson review.
 3. One-to-one alignment with no target operation supplied only by optional work.
 4. Exact seven-section disposition, compact-summary placement, paper-only route,
    both Startopgaven roles, guided optionality, and deliberate fading.
-5. Question-level core route at 50–52 minutes including writing, table work,
-   route reading, transitions, and contingency, without dropping target work.
+5. Historical question-level core route at 50–52 minutes; this estimate is now
+   withdrawn because the underlying target and questions are being redesigned.
 6. Exact allowed/forbidden paths and stop conditions.
 7. Evidence-based validator-gap decision and separation of the planning branch,
    platform guardrail branch, and lesson branch.
@@ -39,7 +45,7 @@ review, not a content edit or final lesson review.
 
 ## Verdict format
 
-Return `PASS` only if student-facing work may safely begin under this plan.
-Otherwise return `REVISE` with numbered blocking findings, precise evidence,
-and the correction required. Non-blocking improvements must be clearly
-separated from blockers. Do not edit either repository.
+The historical reviewer returned `PASS`; owner review superseded the resulting
+implementation authorization. Future Gate 0B review uses the revised plan's
+teacher/economic-content/lead/human sequence. Do not edit either repository from
+this historical assignment.

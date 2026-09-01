@@ -1,10 +1,17 @@
 # ISSUE-223-GATE-0-1 Independent Planning Review
 
+> **Historical review — superseded.** Owner review of PR #224 at
+> `998de1c698e2b225ed38985582d9c38ec68353ce` accepts the technical audit but
+> rejects this review's curriculum-design and implementation authorization.
+> The operative status is Gate 0A PASS; Gate 0B REVISE /
+> `HOLD_FOR_GOAL_AND_TARGET_DESIGN`. See
+> `reports/sprints/ISSUE-223-GATE-0-1-owner-review-supersession.md`.
+
 Reviewer: `planning_review` independent agent
 
 Review date: 2026-09-01
 
-Final verdict: **PASS**
+Historical independent verdict: **PASS — superseded by owner review**
 
 ## Scope and evidence inspected
 
@@ -40,9 +47,10 @@ final review/integration gates.
   `references/owned/course-blueprint-pedagogical-boundaries.md`.
 - Added exact `_assets/2.1.1_fig_1.png` and `.svg` sizes/hashes to the baseline
   and corrected the implementation allowlist.
-- Froze representative archive/live size evidence and authorized deletion-only
-  of the stale tracked zip after planning PASS. Regeneration/replacement remains
-  forbidden because zip output is not part of the governed Part A lane.
+- Froze representative archive/live size evidence and, at the time, proposed
+  deletion-only of the stale tracked zip. Owner review withdraws that
+  implementation authorization; the archive remains unchanged pending a later
+  approved lesson/output gate.
 - Added `2.1.1-textbook-handoff.md` to allowed output and the closure procedure,
   using the governed template without Part B output or completion claims.
 - Also froze the exact neutral guided-skip sentence and selected the literal
@@ -51,9 +59,9 @@ final review/integration gates.
 All changes were planning/evidence changes in the platform worktree. The lesson
 worktree remained clean.
 
-## Recheck verdict
+## Historical recheck verdict
 
-Verdict: **PASS**
+Verdict: **PASS — superseded by owner review**
 
 The reviewer confirmed:
 
@@ -62,11 +70,12 @@ The reviewer confirmed:
 3. Target decomposition and mandatory-operation alignment are complete.
 4. Exact seven headings, two-line paper route, both Start roles, and neutral
    guided-skip wording are frozen.
-5. The core route is 52 minutes, including transitions and contingency.
+5. The historical core route was 52 minutes, including transitions and
+   contingency. Owner review withdraws that pseudo-precision.
 6. Allowed paths and stop conditions are exact, including asset, zip, and
    handoff dispositions.
-7. The focused guardrail remains justified, separately branched/reviewed, and
-   required before final lesson integration.
+7. The historical review considered a focused guardrail justified. Owner review
+   defers any such decision until the final design is stable.
 8. Baseline artifact/PDF evidence is complete.
 9. Teacher-quality, student-experience, structural lead, exact-head CI,
    readiness, and governed integration remain required.
@@ -77,9 +86,8 @@ lesson diff.
 
 ## Authorization boundary
 
-This PASS satisfies Issue #223's independent planning-review gate. It authorizes
-student-facing implementation only within the plan's exact lesson allowlist and
-authorizes creation of a separate focused platform guardrail branch/PR. It does
-not authorize target mutation, Book 1, Part B, another Book 2 paragraph,
-Chapter 2.1 assembly, a direct merge, or bypass of later specialist, lead,
-exact-head CI, readiness, and integration gates.
+This independent review formerly treated planning consistency as sufficient to
+begin implementation. Owner review has superseded that interpretation. It no
+longer authorizes student-facing implementation, generated lesson output,
+target-authority work, or a focused guardrail. Those actions remain blocked
+until the revised human-reviewed gate sequence is satisfied.

@@ -1,5 +1,11 @@
 # Sprint ISSUE-223-GATE-0-1: Baseline
 
+> **Operative status after owner review:** Gate 0A baseline audit PASS;
+> curriculum-design Gate 0B REVISE / `HOLD_FOR_GOAL_AND_TARGET_DESIGN`.
+> The hashes and rendered observations below remain valid audit evidence, but
+> they do not approve the current goals, target, old exercise mapping, a lesson
+> rewrite, generated output, or a paragraph-specific guardrail.
+
 ## Plan reference
 
 Plan: `reports/sprints/ISSUE-223-GATE-0-1-plan.md`
@@ -16,10 +22,11 @@ Plan: `reports/sprints/ISSUE-223-GATE-0-1-plan.md`
   claimed as task `ISSUE-223-GATE-0-1` by `codex-root` before planning work.
 
 PR #222 merged as the exact platform baseline. Post-merge CI run `33399439318`
-passed that commit. Issue #218 remains closed; Issue #223 is open and authorizes
-Gate 0 only until independent planning review passes.
+passed that commit. Issue #218 remains closed. Issue #223 is open, but owner
+review now blocks lesson, target-authority, and guardrail implementation until
+the revised human-reviewed gate sequence is satisfied.
 
-## Frozen target authority
+## Current target authority audit
 
 - File: `references/authored/course-target-exercises.json`
 - File SHA-256:
@@ -32,16 +39,18 @@ Gate 0 only until independent planning review passes.
 - v4 source id: `1.3.2`
 - `review_required_before_final: false`
 
-The complete target decomposition, including goals, subquestions, operation
+The current target decomposition, including goals, subquestions, operation
 chain, representations, answer forms, prior-knowledge boundary, and explicit
-non-target operations, is frozen in the sprint plan. No target or protected
-reference mutation is authorized.
+non-target operations, remains baseline evidence. Owner review reopens its
+educational quality and rejects treating it as immutable. No target or protected
+reference mutation is authorized in PR #224.
 
 ## Current lesson source state
 
-The current lesson has accurate reusable theory, a bakery graph/table, a
-foodtruck worked example, practice calculations, a target-equivalent Opgave 7,
-and complete numerical answers. It predates the newly approved contract:
+The current lesson contains a bakery graph/table, a foodtruck example, repeated
+practice calculations, an Opgave 7 matching the current registry chain, and
+complete numerical answers. None has a presumption of reuse; the package is
+read-only audit/salvage evidence and predates the newly approved contract:
 
 - the paragraph uses `## Samenvatting`, `## Vastgelopen op een opgave?`, and
   `## Opgaven` rather than the exact seven-section route;
@@ -57,6 +66,15 @@ and complete numerical answers. It predates the newly approved contract:
   and quality-ref record `reviewed_final`;
 - `build_pdf.py` produces the current PDFs but the final exercise page has large
   avoidable blank space and target questions cross a page boundary.
+- the paragraph has no student-visible `Na deze paragraaf kun je` goal box;
+- the worked example, guided table, independent work, target, and bonus repeat
+  substantial arithmetic, while classification, units, total-versus-average
+  interpretation, and ambiguous statements receive much thinner evidence;
+- the current target supplies the constant/variable labels and never asks why
+  `GVK` remains constant, so it does not fully elicit its stated goals;
+- the printed target omits the rent/insurance meaning of the fixed amount and
+  treats energy as an unqualified per-product variable cost rather than teaching
+  that a bill can contain constant and variable components.
 
 ## Baseline artifact inventory
 
@@ -91,14 +109,14 @@ live baseline: for example, archived/live `opgaven.html` are 38,146/460,578
 bytes, archived/live `opgaven.pdf` are 55,091/333,746 bytes, archived/live
 `paragraaf.pdf` are 67,050/345,508 bytes, and the archived PNG is 17,026 bytes
 versus the live 333,852-byte PNG. Keeping or regenerating it would preserve a
-second, stale distribution surface. After planning PASS, the implementation
-must delete this zip and prove the governed markdown/HTML/PDF/assets remain;
-it must not replace the archive or add a new packaging workflow.
+second, stale distribution surface. The stale-zip finding remains valid, but
+the earlier deletion authorization is withdrawn. A later approved lesson/output
+gate must explicitly decide whether to remove it and prove that only governed
+current outputs remain. Gate 0B does not change, replace, or delete the archive.
 
 `2.1.1-textbook-handoff.md` is absent at baseline. The merged textbook lane
-requires it for closure, so implementation must create and fill it from
-`build-scripts/templates/textbook-to-companion-handoff.md` while making no
-Part B completion claim.
+requires it for eventual closure. Its later creation remains a Part A lane
+obligation, not an authorized Gate 0B output or a Part B completion claim.
 
 ### Frozen quality-ref state
 
@@ -136,6 +154,11 @@ No clipping, table overflow, missing figure, broken glyph, or fully blank PDF
 page was observed. These are baseline observations only; all final pages must be
 rendered and inspected again after source regeneration.
 
+This layout inspection is not pedagogical approval. Later content review must
+publish reviewable page images or contact sheets and require teacher-learning-
+quality and student-experience inspection of every page, including calculation
+load, visible goals, context, explanation opportunities, and misconceptions.
+
 ## Validator baseline and gap
 
 - The merged Part A authoring checker validates contract, policy, and template
@@ -144,9 +167,10 @@ rendered and inspected again after source regeneration.
   and review/quality-ref metadata, not the seven headings, summary placement,
   route wording, Start roles, device/internal language, timing, target coverage,
   or exercise/answer parity.
-- A separate opt-in §2.1.1 guardrail is therefore justified. It is not
-  authorized on this Gate 0 evidence branch and must be independently planned,
-  reviewed, and integrated before final lesson integration.
+- The concrete-validation gap is recorded, but owner review withdraws the claim
+  that a paragraph-specific guardrail is already required. Gate 3 may decide
+  objective generic or §2.1.1 automation only after goals, target, paragraph,
+  and exercises are approved and stable.
 
 ## Historical evidence caveat
 
