@@ -1,6 +1,9 @@
 'use strict';
 
+const fs = require('fs');
+const os = require('os');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const {
   APPROVAL_PR_NUMBER,
@@ -20,6 +23,32 @@ const {
 } = require('./check-book-outline-currentness');
 
 const root = path.resolve(__dirname, '..', '..');
+let integrationGitRoot;
+
+function git(args) {
+  return execFileSync('git', args, { cwd: integrationGitRoot, encoding: 'utf8' }).trim();
+}
+
+function commitRegistrySnapshot(registryText, message = 'integrate target registry fixture') {
+  const targetPath = path.join(integrationGitRoot, TARGET_REGISTRY_PATH);
+  fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+  fs.writeFileSync(targetPath, registryText);
+  git(['add', TARGET_REGISTRY_PATH]);
+  git(['commit', '--allow-empty', '-m', message]);
+  return git(['rev-parse', 'HEAD']);
+}
+
+beforeAll(() => {
+  integrationGitRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'book-outline-integration-'));
+  git(['init']);
+  git(['config', 'user.email', 'checker@example.test']);
+  git(['config', 'user.name', 'Book outline checker']);
+  commitRegistrySnapshot(readFiles(root)[TARGET_REGISTRY_PATH], 'baseline target registry fixture');
+});
+
+afterAll(() => {
+  fs.rmSync(integrationGitRoot, { recursive: true, force: true });
+});
 
 function cloneFiles() {
   return Object.fromEntries(Object.entries(readFiles(root)).map(([file, value]) => [file, value === null ? null : Buffer.from(value)]));
@@ -84,18 +113,55 @@ function releaseHoldInFiles(files, holdId) {
   const hold = meta.holds.find((item) => item.id === holdId);
   expect(hold).toBeDefined();
   expect(hold.resolution_actions).not.toContain('target_authority_integration');
-  release(hold);
+  if (holdId === 'H-211-GATE0B1') {
+    const goalPackageHash = sha256(JSON.stringify({ paragraph: '2.1.1', goals: ['approved test goal package'] }));
+    hold.goal_binding = {
+      approved_goal_package_sha256: goalPackageHash,
+      approval_ref: 'https://github.com/meijer1973/4veco-platform/issues/218#issuecomment-goal-approval',
+      approved_by: 'owner@example.test',
+      approved_on: '2026-09-01',
+    };
+    release(hold, {
+      evidence_ref: hold.goal_binding.approval_ref,
+      subject_id: '2.1.1-goal-package',
+      subject_sha256: goalPackageHash,
+    });
+  } else release(hold);
+  replaceProjectionRow(files, hold);
+  writeMeta(files, meta);
+  return files;
+}
+
+function approveTargetReplacementInFiles(files, holdId, paragraph, mutateRecord = () => {}) {
+  const registry = JSON.parse(asText(files[TARGET_REGISTRY_PATH]));
+  const record = structuredClone(registry.exercises.find((item) => item.id === paragraph));
+  expect(record).toBeDefined();
+  record.record_status = 'reviewed_final';
+  record.integration_test_marker = `integrated-${paragraph}`;
+  mutateRecord(record);
+
+  const meta = JSON.parse(asText(files[META_PATH]));
+  const hold = meta.holds.find((item) => item.id === holdId);
+  expect(hold).toBeDefined();
+  expect(hold.resolution_actions).toEqual(['target_authority_integration']);
+  hold.target_binding.approved_replacement_sha256 = sha256(JSON.stringify(record));
+  hold.target_binding.approval_ref = 'https://github.com/meijer1973/4veco-platform/issues/218#issuecomment-target-approval';
+  hold.target_binding.approved_by = 'specialist@example.test';
+  hold.target_binding.approved_on = '2026-09-01';
+  files.__approvedTargetRecords = files.__approvedTargetRecords || {};
+  files.__approvedTargetRecords[holdId] = record;
   replaceProjectionRow(files, hold);
   writeMeta(files, meta);
   return files;
 }
 
 function integrateTargetHoldInFiles(files, holdId, paragraph) {
-  const registry = JSON.parse(asText(files[TARGET_REGISTRY_PATH]));
-  const record = registry.exercises.find((item) => item.id === paragraph);
+  const record = files.__approvedTargetRecords && files.__approvedTargetRecords[holdId];
   expect(record).toBeDefined();
-  record.record_status = 'reviewed_final';
-  record.integration_test_marker = `integrated-${paragraph}`;
+  const registry = JSON.parse(asText(files[TARGET_REGISTRY_PATH]));
+  const recordIndex = registry.exercises.findIndex((item) => item.id === paragraph);
+  expect(recordIndex).toBeGreaterThanOrEqual(0);
+  registry.exercises[recordIndex] = structuredClone(record);
   files[TARGET_REGISTRY_PATH] = `${JSON.stringify(registry, null, 2)}\n`;
 
   const meta = JSON.parse(asText(files[META_PATH]));
@@ -104,15 +170,14 @@ function integrateTargetHoldInFiles(files, holdId, paragraph) {
   const pin = meta.target_registry_pins.find((item) => item.id === paragraph);
   pin.target_status = record.record_status;
   pin.target_record_sha256 = sha256(JSON.stringify(record));
-
   const hold = meta.holds.find((item) => item.id === holdId);
-  expect(hold).toBeDefined();
-  expect(hold.resolution_actions).toEqual(['target_authority_integration']);
+  const integratedCommit = commitRegistrySnapshot(files[TARGET_REGISTRY_PATH], `integrate ${paragraph} fixture`);
   release(hold, {
     subject_id: paragraph,
     subject_sha256: pin.target_record_sha256,
-    integrated_commit: 'c'.repeat(40),
+    integrated_commit: integratedCommit,
   });
+  files.__integrationGitRoot = integrationGitRoot;
   replaceProjectionRow(files, hold);
   writeMeta(files, meta);
   return files;
@@ -160,7 +225,7 @@ function mutateProjectionCell(files, holdId, cellIndex, replacement) {
   const index = lines.findIndex((line) => line.startsWith(prefix));
   expect(index).toBeGreaterThanOrEqual(0);
   const cells = lines[index].split('|');
-  expect(cells).toHaveLength(10);
+  expect(cells).toHaveLength(11);
   cells[cellIndex + 1] = ` ${replacement} `;
   lines[index] = cells.join('|');
   files[OUTLINE_PATH] = `${lines.join('\n').replace(/\n+$/, '')}\n`;
@@ -170,6 +235,10 @@ function mutateProjectionCell(files, holdId, cellIndex, replacement) {
 describe('Book 2 outline currentness contract', () => {
   test('current prose authority, compact metadata, holds, targets, and workflows pass structural mode', () => {
     expect(findBookOutlineFailures(cloneFiles())).toEqual([]);
+  });
+
+  test('bounded governance repair preserves the previously reviewed semantic outline hash', () => {
+    expect(sha256SemanticAuthority(cloneFiles()[OUTLINE_PATH])).toBe('69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde');
   });
 
   test('file hashes are invariant across LF and CRLF checkouts', () => {
@@ -296,12 +365,15 @@ describe('Book 2 outline currentness contract', () => {
   test('§2.1.1 goal approval and target integration are separate production milestones', () => {
     const files = approveOutlineInFiles(cloneFiles());
     expect(findBookOutlineFailures(files, { action: 'goal_owner_decision', paragraph: '2.1.1' })).toEqual([]);
-    releaseHoldInFiles(files, 'H-211-GATE0B1');
-    expect(findBookOutlineFailures(files, { action: 'approved_goal_use', paragraph: '2.1.1' })).toEqual([]);
-    expectFailure(files, 'action paragraph_production is blocked by open hold H-211-TARGET-INTEGRATION', { action: 'paragraph_production', paragraph: '2.1.1' });
     expect(findBookOutlineFailures(files, { action: 'target_authority_repair', paragraph: '2.1.1' })).toEqual([]);
+    expectFailure(files, 'action target_authority_integration requires an exact approved replacement binding for H-211-TARGET-INTEGRATION', { action: 'target_authority_integration', paragraph: '2.1.1' });
+    approveTargetReplacementInFiles(files, 'H-211-TARGET-INTEGRATION', '2.1.1');
     expect(findBookOutlineFailures(files, { action: 'target_authority_integration', paragraph: '2.1.1' })).toEqual([]);
     integrateTargetHoldInFiles(files, 'H-211-TARGET-INTEGRATION', '2.1.1');
+    expectFailure(files, 'action paragraph_production is blocked by open hold H-211-GATE0B1', { action: 'paragraph_production', paragraph: '2.1.1' });
+    expectFailure(files, 'action lesson_authoring is blocked by open hold H-211-GATE0B1', { action: 'lesson_authoring', paragraph: '2.1.1' });
+    releaseHoldInFiles(files, 'H-211-GATE0B1');
+    expect(findBookOutlineFailures(files, { action: 'approved_goal_use', paragraph: '2.1.1' })).toEqual([]);
     expect(findBookOutlineFailures(files, { action: 'paragraph_production', paragraph: '2.1.1' })).toEqual([]);
   });
 
@@ -312,6 +384,8 @@ describe('Book 2 outline currentness contract', () => {
     const files = approveOutlineInFiles(cloneFiles());
     expect(findBookOutlineFailures(files, { action: 'target_authority_repair', paragraph })).toEqual([]);
     expectFailure(files, `action paragraph_production is blocked by open hold ${holdId}`, { action: 'paragraph_production', paragraph });
+    expectFailure(files, `action target_authority_integration requires an exact approved replacement binding for ${holdId}`, { action: 'target_authority_integration', paragraph });
+    approveTargetReplacementInFiles(files, holdId, paragraph);
     expect(findBookOutlineFailures(files, { action: 'target_authority_integration', paragraph })).toEqual([]);
     integrateTargetHoldInFiles(files, holdId, paragraph);
     expect(findBookOutlineFailures(files, { action: 'paragraph_production', paragraph })).toEqual([]);
@@ -326,6 +400,7 @@ describe('Book 2 outline currentness contract', () => {
     const files = approveOutlineInFiles(cloneFiles());
     expect(findBookOutlineFailures(files, { action: 'target_authority_repair', paragraph })).toEqual([]);
     expect(blockingHoldsForAction(JSON.parse(asText(files[META_PATH])), { action: 'paragraph_production', paragraph }).map((hold) => hold.id)).toContain(holdId);
+    approveTargetReplacementInFiles(files, holdId, paragraph);
     expect(findBookOutlineFailures(files, { action: 'target_authority_integration', paragraph })).toEqual([]);
     integrateTargetHoldInFiles(files, holdId, paragraph);
     const blockers = blockingHoldsForAction(JSON.parse(asText(files[META_PATH])), { action: 'paragraph_production', paragraph }).map((hold) => hold.id);
@@ -351,18 +426,41 @@ describe('Book 2 outline currentness contract', () => {
     expect(findBookOutlineFailures(cloneFiles(), { action: 'chapter_planning', chapter: '2.1' })).toEqual([]);
   });
 
-  test('typed lesson-plan scopes block Chapter 2.3 without leaking into Chapter 2.1 or §2.1.1', () => {
+  test('lesson and chapter production inherit every matching paragraph-production blocker', () => {
     const files = approveOutlineInFiles(cloneFiles());
-    releaseHoldInFiles(files, 'H-211-GATE0B1');
-    integrateTargetHoldInFiles(files, 'H-211-TARGET-INTEGRATION', '2.1.1');
+    expectFailure(files, 'action lesson_authoring is blocked by open hold H-212-STALE-REF', { action: 'lesson_authoring', paragraph: '2.1.2' });
+    expectFailure(files, 'action lesson_authoring is blocked by open hold H-212-STALE-REF', { action: 'lesson_authoring', chapter: '2.1' });
+    const initialChapterFailures = findBookOutlineFailures(files, { action: 'chapter_production', chapter: '2.1' });
+    for (const holdId of ['H-211-GATE0B1', 'H-211-TARGET-INTEGRATION', 'H-212-STALE-REF', 'H-213-DELTAQ']) {
+      expect(initialChapterFailures).toEqual(expect.arrayContaining([expect.stringContaining(holdId)]));
+    }
 
-    expect(findBookOutlineFailures(files, { action: 'goal_design', paragraph: '2.1.1' })).toEqual([]);
-    expect(findBookOutlineFailures(files, { action: 'lesson_authoring', paragraph: '2.1.1' })).toEqual([]);
+    releaseHoldInFiles(files, 'H-211-GATE0B1');
+    for (const [holdId, paragraph] of [
+      ['H-211-TARGET-INTEGRATION', '2.1.1'],
+      ['H-212-STALE-REF', '2.1.2'],
+      ['H-213-DELTAQ', '2.1.3'],
+    ]) {
+      approveTargetReplacementInFiles(files, holdId, paragraph);
+      integrateTargetHoldInFiles(files, holdId, paragraph);
+    }
+
     expect(findBookOutlineFailures(files, { action: 'chapter_production', chapter: '2.1' })).toEqual([]);
+    expect(findBookOutlineFailures(files, { action: 'lesson_authoring', paragraph: '2.1.2' })).toEqual([]);
+    expect(findBookOutlineFailures(files, { action: 'lesson_authoring', chapter: '2.1' })).toEqual([]);
     expect(findBookOutlineFailures(files, { action: 'lesson_authoring', paragraph: '2.2.3' })).toEqual([]);
 
     const chapter23Failures = findBookOutlineFailures(files, { action: 'chapter_production', chapter: '2.3' });
     expect(chapter23Failures).toEqual(expect.arrayContaining([
+      expect.stringContaining('H-CHAPTER-23-PLAN'),
+    ]));
+  });
+
+  test.each(['book_readiness', 'whole_book_assembly'])('%s inherits open paragraph and chapter production blockers across Book 2', (action) => {
+    const files = approveOutlineInFiles(cloneFiles());
+    const failures = findBookOutlineFailures(files, { action });
+    expect(failures).toEqual(expect.arrayContaining([
+      expect.stringContaining('H-212-STALE-REF'),
       expect.stringContaining('H-CHAPTER-23-PLAN'),
     ]));
   });
@@ -426,6 +524,7 @@ describe('Book 2 outline currentness contract', () => {
     ['integrated_commit', 'a'.repeat(39), 'requires a full integrated_commit SHA'],
   ])('rejects target release evidence with a non-matching %s', (field, value, failure) => {
     const files = approveOutlineInFiles(cloneFiles());
+    approveTargetReplacementInFiles(files, 'H-212-STALE-REF', '2.1.2');
     integrateTargetHoldInFiles(files, 'H-212-STALE-REF', '2.1.2');
     const meta = JSON.parse(asText(files[META_PATH]));
     const hold = meta.holds.find((item) => item.id === 'H-212-STALE-REF');
@@ -435,14 +534,118 @@ describe('Book 2 outline currentness contract', () => {
     expectFailure(files, failure);
   });
 
+  test('rejects release of an unchanged blocked target even with shape-valid approval evidence', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    const meta = JSON.parse(asText(files[META_PATH]));
+    const hold = meta.holds.find((item) => item.id === 'H-212-STALE-REF');
+    const pin = meta.target_registry_pins.find((item) => item.id === '2.1.2');
+    hold.target_binding.approved_replacement_sha256 = hold.target_binding.blocked_baseline_sha256;
+    hold.target_binding.approval_ref = 'https://github.com/meijer1973/4veco-platform/issues/218#issuecomment-unchanged';
+    hold.target_binding.approved_by = 'specialist@example.test';
+    hold.target_binding.approved_on = '2026-09-01';
+    release(hold, {
+      subject_id: '2.1.2',
+      subject_sha256: pin.target_record_sha256,
+      integrated_commit: commitRegistrySnapshot(files[TARGET_REGISTRY_PATH], 'unchanged target fixture'),
+    });
+    files.__integrationGitRoot = integrationGitRoot;
+    replaceProjectionRow(files, hold);
+    writeMeta(files, meta);
+    expectFailure(files, 'approved replacement hash must be full and differ from the blocked baseline');
+  });
+
+  test('rejects mutation of the original reviewed target baseline binding', () => {
+    expectFailure(mutateJson(META_PATH, (meta) => {
+      meta.holds.find((item) => item.id === 'H-212-STALE-REF').target_binding.blocked_baseline_sha256 = 'a'.repeat(64);
+    }), 'blocked_baseline_sha256 must match the original reviewed baseline');
+  });
+
+  test('rejects a different current target whose replacement was never approved', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    approveTargetReplacementInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    integrateTargetHoldInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    const meta = JSON.parse(asText(files[META_PATH]));
+    const hold = meta.holds.find((item) => item.id === 'H-212-STALE-REF');
+    hold.target_binding.approved_replacement_sha256 = null;
+    hold.target_binding.approval_ref = null;
+    hold.target_binding.approved_by = null;
+    hold.target_binding.approved_on = null;
+    replaceProjectionRow(files, hold);
+    writeMeta(files, meta);
+    expectFailure(files, 'released target hold H-212-STALE-REF requires an approved replacement binding');
+  });
+
+  test('rejects a stale target pin after an otherwise valid integration', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    approveTargetReplacementInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    integrateTargetHoldInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    const meta = JSON.parse(asText(files[META_PATH]));
+    const hold = meta.holds.find((item) => item.id === 'H-212-STALE-REF');
+    meta.target_registry_pins.find((item) => item.id === '2.1.2').target_record_sha256 = hold.target_binding.blocked_baseline_sha256;
+    writeMeta(files, meta);
+    expectFailure(files, '2.1.2 target record hash is stale');
+  });
+
+  test('rejects a fictitious shape-valid integration commit', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    approveTargetReplacementInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    integrateTargetHoldInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    const meta = JSON.parse(asText(files[META_PATH]));
+    const hold = meta.holds.find((item) => item.id === 'H-212-STALE-REF');
+    hold.release_evidence.integrated_commit = 'f'.repeat(40);
+    replaceProjectionRow(files, hold);
+    writeMeta(files, meta);
+    expectFailure(files, 'does not resolve to a real commit');
+  });
+
+  test('rejects a real integration commit outside the current ancestry', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    approveTargetReplacementInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    integrateTargetHoldInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    const detachedCommit = git(['commit-tree', git(['write-tree']), '-m', 'detached exact target fixture']);
+    const meta = JSON.parse(asText(files[META_PATH]));
+    const hold = meta.holds.find((item) => item.id === 'H-212-STALE-REF');
+    hold.release_evidence.integrated_commit = detachedCommit;
+    replaceProjectionRow(files, hold);
+    writeMeta(files, meta);
+    expectFailure(files, 'is not an ancestor of the current repository state');
+  });
+
+  test('rejects a real integration commit that contains a different target record', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    approveTargetReplacementInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    integrateTargetHoldInFiles(files, 'H-212-STALE-REF', '2.1.2');
+    const differentRegistry = JSON.parse(asText(files[TARGET_REGISTRY_PATH]));
+    differentRegistry.exercises.find((item) => item.id === '2.1.2').integration_test_marker = 'different-real-commit';
+    const differentCommit = commitRegistrySnapshot(`${JSON.stringify(differentRegistry, null, 2)}\n`, 'different target fixture');
+    const meta = JSON.parse(asText(files[META_PATH]));
+    const hold = meta.holds.find((item) => item.id === 'H-212-STALE-REF');
+    hold.release_evidence.integrated_commit = differentCommit;
+    replaceProjectionRow(files, hold);
+    writeMeta(files, meta);
+    expectFailure(files, `integrated_commit ${differentCommit} contains a different target hash for 2.1.2`);
+  });
+
+  test('rejects goal release evidence that is not bound to the exact approved goal package', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    releaseHoldInFiles(files, 'H-211-GATE0B1');
+    const meta = JSON.parse(asText(files[META_PATH]));
+    const hold = meta.holds.find((item) => item.id === 'H-211-GATE0B1');
+    hold.release_evidence.subject_sha256 = 'd'.repeat(64);
+    replaceProjectionRow(files, hold);
+    writeMeta(files, meta);
+    expectFailure(files, 'goal release subject_sha256 must match the approved goal-package hash');
+  });
+
   test.each([
     ['status', 1, 'released'],
     ['scope', 2, '`paragraph:2.1.2`'],
     ['blocks', 3, '`approved_goal_use`, `paragraph_production`'],
     ['permits', 4, '`goal_design`, `target_design`, `specialist_review`'],
     ['resolution_actions', 5, '`target_authority_repair`'],
-    ['release_condition', 6, 'A different release condition.'],
-    ['release_evidence', 7, 'resolved_via=goal_owner_decision; released_by=owner; released_on=2026-09-01; evidence_ref=wrong reference'],
+    ['transition_binding', 6, 'approved_goal_package_sha256=wrong'],
+    ['release_condition', 7, 'A different release condition.'],
+    ['release_evidence', 8, 'resolved_via=goal_owner_decision; released_by=owner; released_on=2026-09-01; evidence_ref=wrong reference'],
   ])('rejects Markdown/metadata hold projection drift for %s', (field, cellIndex, replacement) => {
     const files = mutateProjectionCell(cloneFiles(), 'H-211-GATE0B1', cellIndex, replacement);
     expectFailure(files, `hold H-211-GATE0B1 projection mismatch for ${field}`);

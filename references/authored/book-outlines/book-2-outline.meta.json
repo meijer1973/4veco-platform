@@ -1,5 +1,5 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "outline_id": "book-2",
   "title": "Book 2 Outline: Costs, Revenue, Elasticity, And Surplus",
   "version": "book-2-outline-v3-review-ready",
@@ -81,14 +81,16 @@
     {
       "id": "H-211-GATE0B1", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
       "summary": "Gate 0B-1 goal design may proceed, but approved goal use waits for the paragraph goal-owner decision.",
-      "blocks": ["approved_goal_use"],
+      "goal_binding": { "approved_goal_package_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production", "lesson_authoring"],
       "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision"],
       "resolution_actions": ["goal_owner_decision"],
-      "release_condition": "The goal owner approves the exact paragraph goal package.", "release_evidence": null
+      "release_condition": "The goal owner approves the exact hashed paragraph goal package with identity, date, and decision reference.", "release_evidence": null
     },
     {
       "id": "H-211-TARGET-INTEGRATION", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
       "summary": "Paragraph and lesson production wait for the exact approved target record to be integrated and pinned.",
+      "target_binding": { "blocked_baseline_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
       "blocks": ["paragraph_production", "lesson_authoring"],
       "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
@@ -97,6 +99,7 @@
     {
       "id": "H-212-STALE-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.2"],
       "summary": "Target context contains a stale bakery cross-reference instead of the current Book 2 dependency.",
+      "target_binding": { "blocked_baseline_sha256": "51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
       "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
       "release_condition": "The repaired dependency is current in the exact reviewed target record, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
@@ -104,6 +107,7 @@
     {
       "id": "H-213-DELTAQ", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.3"],
       "summary": "Target interval wording must preserve MK and MO as delta total divided by delta quantity.",
+      "target_binding": { "blocked_baseline_sha256": "e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
       "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
       "release_condition": "The approved interval-normalized wording is current in the target registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
@@ -132,6 +136,7 @@
     {
       "id": "H-231-V5", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.1"],
       "summary": "Migrated target requires v5 review.",
+      "target_binding": { "blocked_baseline_sha256": "078536130e88c1bc9c6a58fc492dc47ccf7a411bafc8b49b9571e1de238f0388", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
       "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
       "release_condition": "The exact v5-reviewed target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
@@ -139,6 +144,7 @@
     {
       "id": "H-232-V5", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.2"],
       "summary": "Migrated target and supply-as-MC boundary require v5 review.",
+      "target_binding": { "blocked_baseline_sha256": "d1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
       "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
       "release_condition": "The exact v5-reviewed target and supply-as-MC boundary are current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
@@ -146,6 +152,7 @@
     {
       "id": "H-233-V5-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.3"],
       "summary": "Migrated target requires v5 review, source-reference repair, and qualified binding/transaction assumptions.",
+      "target_binding": { "blocked_baseline_sha256": "7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
       "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
       "release_condition": "The exact reviewed source repair and binding/transaction assumptions are current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
@@ -153,6 +160,7 @@
     {
       "id": "H-234-PLACEHOLDER", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.4"],
       "summary": "Placeholder consolidation target must be replaced and reviewed without new theory.",
+      "target_binding": { "blocked_baseline_sha256": "601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
       "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
       "release_condition": "The exact reviewed consolidation target is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null

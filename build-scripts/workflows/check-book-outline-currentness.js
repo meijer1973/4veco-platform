@@ -4,12 +4,13 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const OUTLINE_PATH = 'references/authored/book-outlines/book-2-outline.md';
 const META_PATH = 'references/authored/book-outlines/book-2-outline.meta.json';
 const TARGET_REGISTRY_PATH = 'references/authored/course-target-exercises.json';
-const HOLD_PROJECTION_HEADER = '| Hold ID | Status | Scope | Blocks | Explicitly permits | Resolution actions | Release condition | Release evidence |';
+const HOLD_PROJECTION_HEADER = '| Hold ID | Status | Scope | Blocks | Explicitly permits | Resolution actions | Transition binding | Release condition | Release evidence |';
 const APPROVAL_PR_NUMBER = 226;
 const LIFECYCLE_STATUS_PATTERN = /^Status: `[^`]+`$/;
 const LIFECYCLE_OWNER_APPROVAL_PATTERN = /^Owner approval: `[^`]+`$/;
@@ -24,6 +25,28 @@ const RELEASE_EVIDENCE_FIELDS = Object.freeze([
   'reviewed_pr',
   'reviewed_head',
 ]);
+const TARGET_BINDING_FIELDS = Object.freeze([
+  'blocked_baseline_sha256',
+  'approved_replacement_sha256',
+  'approval_ref',
+  'approved_by',
+  'approved_on',
+]);
+const GOAL_BINDING_FIELDS = Object.freeze([
+  'approved_goal_package_sha256',
+  'approval_ref',
+  'approved_by',
+  'approved_on',
+]);
+const TARGET_BASELINE_BY_HOLD = Object.freeze({
+  'H-211-TARGET-INTEGRATION': 'f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8',
+  'H-212-STALE-REF': '51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5',
+  'H-213-DELTAQ': 'e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd',
+  'H-231-V5': '078536130e88c1bc9c6a58fc492dc47ccf7a411bafc8b49b9571e1de238f0388',
+  'H-232-V5': 'd1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8',
+  'H-233-V5-REF': '7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833',
+  'H-234-PLACEHOLDER': '601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f',
+});
 
 const AUTHORITY_PATHS = Object.freeze([
   'references/owned/course-blueprint-v6-three-year.md',
@@ -225,7 +248,7 @@ function findForbiddenSemanticKeys(value, location = '$', found = []) {
 
 function checkMetadata(failures, files, meta) {
   if (!meta) return;
-  if (meta.schema_version !== 4) failures.push(`${META_PATH}: schema_version must equal 4`);
+  if (meta.schema_version !== 5) failures.push(`${META_PATH}: schema_version must equal 5`);
   if (meta.outline_id !== 'book-2') failures.push(`${META_PATH}: outline_id must equal book-2`);
   if (meta.audit_outcome !== 'VALID_WITH_DERIVED_OUTLINE_REQUIRED') {
     failures.push(`${META_PATH}: audit_outcome must remain VALID_WITH_DERIVED_OUTLINE_REQUIRED`);
@@ -330,13 +353,25 @@ function holdScopeMatches(hold, options = {}) {
   });
 }
 
+function inheritedBlockedActions(options = {}) {
+  if (options.action === 'lesson_authoring') {
+    return options.paragraph
+      ? ['lesson_authoring', 'paragraph_production']
+      : ['lesson_authoring', 'chapter_production', 'paragraph_production'];
+  }
+  if (options.action === 'chapter_production') return ['chapter_production', 'paragraph_production'];
+  if (BOOK_AGGREGATE_ACTIONS.has(options.action)) return [options.action, 'chapter_production', 'paragraph_production'];
+  return options.action ? [options.action] : [];
+}
+
 function blockingHoldsForAction(meta, options = {}) {
   if (!meta || !options.action) return [];
+  const blockedActions = inheritedBlockedActions(options);
   return (meta.holds || []).filter((hold) => (
     hold.status === 'open'
     && holdScopeMatches(hold, options)
     && Array.isArray(hold.blocks)
-    && hold.blocks.includes(options.action)
+    && hold.blocks.some((action) => blockedActions.includes(action))
   ));
 }
 
@@ -364,8 +399,19 @@ function formatReleaseEvidence(evidence) {
     .join('; ');
 }
 
+function formatBinding(binding, fields) {
+  if (!binding) return '—';
+  return fields.map((field) => `${field}=${binding[field] === null ? 'pending' : binding[field]}`).join('; ');
+}
+
+function formatTransitionBinding(hold) {
+  if (hold.target_binding) return formatBinding(hold.target_binding, TARGET_BINDING_FIELDS);
+  if (hold.goal_binding) return formatBinding(hold.goal_binding, GOAL_BINDING_FIELDS);
+  return '—';
+}
+
 function formatHoldProjectionRow(hold) {
-  return `| \`${hold.id}\` | ${hold.status} | ${formatProjectionList(hold.scope)} | ${formatProjectionList(hold.blocks)} | ${formatProjectionList(hold.permits)} | ${formatProjectionList(hold.resolution_actions)} | ${hold.release_condition} | ${formatReleaseEvidence(hold.release_evidence)} |`;
+  return `| \`${hold.id}\` | ${hold.status} | ${formatProjectionList(hold.scope)} | ${formatProjectionList(hold.blocks)} | ${formatProjectionList(hold.permits)} | ${formatProjectionList(hold.resolution_actions)} | ${formatTransitionBinding(hold)} | ${hold.release_condition} | ${formatReleaseEvidence(hold.release_evidence)} |`;
 }
 
 function parseHoldProjectionTable(failures, files) {
@@ -382,8 +428,8 @@ function parseHoldProjectionTable(failures, files) {
     const line = lines[index].trim();
     if (!line.startsWith('|')) break;
     const cells = line.split('|').slice(1, -1).map((cell) => cell.trim());
-    if (cells.length !== 8) {
-      failures.push(`${OUTLINE_PATH}: lifecycle hold projection row must contain exactly 8 fields: ${line}`);
+    if (cells.length !== 9) {
+      failures.push(`${OUTLINE_PATH}: lifecycle hold projection row must contain exactly 9 fields: ${line}`);
       continue;
     }
     projections.push({
@@ -393,11 +439,103 @@ function parseHoldProjectionTable(failures, files) {
       blocks: parseProjectionList(cells[3]),
       permits: parseProjectionList(cells[4]),
       resolution_actions: parseProjectionList(cells[5]),
-      release_condition: normalizeProjectionText(cells[6]),
-      release_evidence: normalizeProjectionText(cells[7]) === '—' ? null : normalizeProjectionText(cells[7]),
+      transition_binding: normalizeProjectionText(cells[6]),
+      release_condition: normalizeProjectionText(cells[7]),
+      release_evidence: normalizeProjectionText(cells[8]) === '—' ? null : normalizeProjectionText(cells[8]),
     });
   }
   return projections;
+}
+
+function bindingFieldsAreNull(binding, fields) {
+  return fields.every((field) => binding[field] === null);
+}
+
+function gitRun(root, args) {
+  return spawnSync('git', args, { cwd: root, encoding: 'utf8' });
+}
+
+function targetRecordAtIntegratedCommit(failures, gitRoot, commit, subjectId) {
+  if (!/^[0-9a-f]{40}$/i.test(String(commit || ''))) return null;
+  const exists = gitRun(gitRoot, ['cat-file', '-e', `${commit}^{commit}`]);
+  if (exists.status !== 0) {
+    failures.push(`${META_PATH}: integrated_commit ${commit} does not resolve to a real commit`);
+    return null;
+  }
+  const ancestor = gitRun(gitRoot, ['merge-base', '--is-ancestor', commit, 'HEAD']);
+  if (ancestor.status !== 0) {
+    failures.push(`${META_PATH}: integrated_commit ${commit} is not an ancestor of the current repository state`);
+    return null;
+  }
+  const shown = gitRun(gitRoot, ['show', `${commit}:${TARGET_REGISTRY_PATH}`]);
+  if (shown.status !== 0) {
+    failures.push(`${META_PATH}: integrated_commit ${commit} does not contain ${TARGET_REGISTRY_PATH}`);
+    return null;
+  }
+  let registry;
+  try {
+    registry = JSON.parse(shown.stdout);
+  } catch (error) {
+    failures.push(`${META_PATH}: integrated_commit ${commit} contains an invalid target registry: ${error.message}`);
+    return null;
+  }
+  const record = Array.isArray(registry.exercises)
+    ? registry.exercises.find((item) => item.id === subjectId)
+    : null;
+  if (!record) failures.push(`${META_PATH}: integrated_commit ${commit} does not contain target record ${subjectId}`);
+  return record || null;
+}
+
+function checkTargetBinding(failures, hold, pin) {
+  const binding = hold.target_binding;
+  if (!binding || !equal(Object.keys(binding), TARGET_BINDING_FIELDS)) {
+    failures.push(`${META_PATH}: ${hold.id} must contain the exact target transition binding fields`);
+    return;
+  }
+  if (!/^[0-9a-f]{64}$/i.test(String(binding.blocked_baseline_sha256 || ''))) {
+    failures.push(`${META_PATH}: ${hold.id} requires a full blocked_baseline_sha256`);
+  }
+  if (binding.blocked_baseline_sha256 !== TARGET_BASELINE_BY_HOLD[hold.id]) {
+    failures.push(`${META_PATH}: ${hold.id} blocked_baseline_sha256 must match the original reviewed baseline`);
+  }
+  const replacementFields = TARGET_BINDING_FIELDS.slice(1);
+  const replacementIsPending = binding.approved_replacement_sha256 === null;
+  if (replacementIsPending) {
+    if (!bindingFieldsAreNull(binding, replacementFields)) failures.push(`${META_PATH}: ${hold.id} pending replacement binding must keep all approval values null`);
+    if (pin && pin.target_record_sha256 !== binding.blocked_baseline_sha256) failures.push(`${META_PATH}: ${hold.id} changed from its blocked baseline without an approved replacement`);
+    if (hold.status === 'released') failures.push(`${META_PATH}: released target hold ${hold.id} requires an approved replacement binding`);
+    return;
+  }
+  if (!/^[0-9a-f]{64}$/i.test(String(binding.approved_replacement_sha256 || ''))
+      || binding.approved_replacement_sha256 === binding.blocked_baseline_sha256) {
+    failures.push(`${META_PATH}: ${hold.id} approved replacement hash must be full and differ from the blocked baseline`);
+  }
+  if (typeof binding.approval_ref !== 'string' || binding.approval_ref.trim() === ''
+      || typeof binding.approved_by !== 'string' || binding.approved_by.trim() === ''
+      || !/^\d{4}-\d{2}-\d{2}$/.test(String(binding.approved_on || ''))) {
+    failures.push(`${META_PATH}: ${hold.id} approved replacement requires approval_ref, approved_by, and approved_on`);
+  }
+  if (pin && ![binding.blocked_baseline_sha256, binding.approved_replacement_sha256].includes(pin.target_record_sha256)) {
+    failures.push(`${META_PATH}: ${hold.id} current target is neither the blocked baseline nor the approved replacement`);
+  }
+}
+
+function checkGoalBinding(failures, hold) {
+  const binding = hold.goal_binding;
+  if (!binding || !equal(Object.keys(binding), GOAL_BINDING_FIELDS)) {
+    failures.push(`${META_PATH}: ${hold.id} must contain the exact goal-package binding fields`);
+    return;
+  }
+  if (hold.status === 'open') {
+    if (!bindingFieldsAreNull(binding, GOAL_BINDING_FIELDS)) failures.push(`${META_PATH}: open goal hold ${hold.id} must keep goal-package approval values null`);
+    return;
+  }
+  if (!/^[0-9a-f]{64}$/i.test(String(binding.approved_goal_package_sha256 || ''))
+      || typeof binding.approval_ref !== 'string' || binding.approval_ref.trim() === ''
+      || typeof binding.approved_by !== 'string' || binding.approved_by.trim() === ''
+      || !/^\d{4}-\d{2}-\d{2}$/.test(String(binding.approved_on || ''))) {
+    failures.push(`${META_PATH}: released goal hold ${hold.id} requires an exact approved goal-package hash and approval identity/date/reference`);
+  }
 }
 
 function checkHolds(failures, files, meta, options) {
@@ -437,6 +575,19 @@ function checkHolds(failures, files, meta, options) {
       if ((hold.blocks || []).includes(action)) failures.push(`${META_PATH}: ${hold.id} resolution action ${action} cannot be blocked by the same hold`);
     }
     if (typeof hold.release_condition !== 'string' || hold.release_condition.trim() === '') failures.push(`${META_PATH}: ${hold.id} release_condition must be non-empty`);
+    const isTargetIntegrationHold = (hold.resolution_actions || []).includes('target_authority_integration');
+    const paragraphScopes = (hold.scope || []).filter((scope) => scope.startsWith('paragraph:'));
+    const subjectId = paragraphScopes.length === 1 ? paragraphScopes[0].slice('paragraph:'.length) : null;
+    const pin = (meta.target_registry_pins || []).find((item) => item.id === subjectId);
+    if (isTargetIntegrationHold) {
+      checkTargetBinding(failures, hold, pin);
+      if (options.action === 'target_authority_integration' && hold.status === 'open' && holdScopeMatches(hold, options)
+          && (!hold.target_binding || hold.target_binding.approved_replacement_sha256 === null)) {
+        failures.push(`${META_PATH}: action target_authority_integration requires an exact approved replacement binding for ${hold.id}`);
+      }
+    } else if ('target_binding' in hold) failures.push(`${META_PATH}: non-target hold ${hold.id} must not contain target_binding`);
+    if (hold.id === 'H-211-GATE0B1') checkGoalBinding(failures, hold);
+    else if ('goal_binding' in hold) failures.push(`${META_PATH}: only H-211-GATE0B1 may contain goal_binding`);
     if (hold.status === 'open' && hold.release_evidence !== null) failures.push(`${META_PATH}: open hold ${hold.id} must have null release_evidence`);
     if (hold.status === 'released') {
       const evidence = hold.release_evidence;
@@ -450,16 +601,25 @@ function checkHolds(failures, files, meta, options) {
 
       if (evidence && evidence.resolved_via === 'target_authority_integration') {
         const evidenceFields = RELEASE_EVIDENCE_FIELDS.slice(0, 7);
-        const paragraphScopes = (hold.scope || []).filter((scope) => scope.startsWith('paragraph:'));
-        const subjectId = paragraphScopes.length === 1 ? paragraphScopes[0].slice('paragraph:'.length) : null;
-        const pin = (meta.target_registry_pins || []).find((item) => item.id === subjectId);
+        const binding = hold.target_binding || {};
         if (!equal(Object.keys(evidence), evidenceFields)) {
           failures.push(`${META_PATH}: target integration release ${hold.id} must contain the exact integration evidence fields`);
         }
         if (!subjectId || evidence.subject_id !== subjectId) failures.push(`${META_PATH}: target integration release ${hold.id} subject_id must match its single paragraph scope`);
         if (!pin || evidence.subject_sha256 !== pin.target_record_sha256) failures.push(`${META_PATH}: target integration release ${hold.id} subject_sha256 must match the current target registry pin`);
+        if (evidence.subject_sha256 !== binding.approved_replacement_sha256) failures.push(`${META_PATH}: target integration release ${hold.id} must match the exact approved replacement hash`);
+        if (evidence.subject_sha256 === binding.blocked_baseline_sha256) failures.push(`${META_PATH}: target integration release ${hold.id} cannot reuse the blocked baseline hash`);
         if (!pin || pin.target_status !== 'reviewed_final') failures.push(`${META_PATH}: target integration release ${hold.id} requires a reviewed_final target record`);
         if (!/^[0-9a-f]{40}$/i.test(String(evidence.integrated_commit || ''))) failures.push(`${META_PATH}: target integration release ${hold.id} requires a full integrated_commit SHA`);
+        const integratedRecord = targetRecordAtIntegratedCommit(
+          failures,
+          options.gitRoot || files.__integrationGitRoot || options.root || ROOT,
+          evidence.integrated_commit,
+          subjectId,
+        );
+        if (integratedRecord && sha256(JSON.stringify(integratedRecord)) !== evidence.subject_sha256) {
+          failures.push(`${META_PATH}: integrated_commit ${evidence.integrated_commit} contains a different target hash for ${subjectId}`);
+        }
       } else if (evidence && hold.id === 'H-OUTLINE-OWNER') {
         const evidenceFields = [...RELEASE_EVIDENCE_FIELDS.slice(0, 6), 'reviewed_pr', 'reviewed_head'];
         if (!equal(Object.keys(evidence), evidenceFields)) {
@@ -470,6 +630,18 @@ function checkHolds(failures, files, meta, options) {
         if (evidence.subject_sha256 !== (meta.semantic_authority || {}).sha256) failures.push(`${META_PATH}: owner release subject_sha256 must match the semantic outline hash`);
         if (evidence.reviewed_pr !== (meta.approval_context || {}).pr_number) failures.push(`${META_PATH}: owner release reviewed_pr must match approval_context.pr_number`);
         if (!/^[0-9a-f]{40}$/i.test(String(evidence.reviewed_head || ''))) failures.push(`${META_PATH}: owner release requires a full reviewed_head SHA`);
+      } else if (evidence && hold.id === 'H-211-GATE0B1') {
+        const evidenceFields = RELEASE_EVIDENCE_FIELDS.slice(0, 6);
+        const binding = hold.goal_binding || {};
+        if (!equal(Object.keys(evidence), evidenceFields)) failures.push(`${META_PATH}: goal release must contain the exact goal-package evidence fields`);
+        if (evidence.resolved_via !== 'goal_owner_decision') failures.push(`${META_PATH}: goal release must resolve via goal_owner_decision`);
+        if (evidence.subject_id !== '2.1.1-goal-package') failures.push(`${META_PATH}: goal release subject_id must identify the §2.1.1 goal package`);
+        if (evidence.subject_sha256 !== binding.approved_goal_package_sha256) failures.push(`${META_PATH}: goal release subject_sha256 must match the approved goal-package hash`);
+        if (evidence.evidence_ref !== binding.approval_ref
+            || evidence.released_by !== binding.approved_by
+            || evidence.released_on !== binding.approved_on) {
+          failures.push(`${META_PATH}: goal release evidence must match the exact goal-package approval reference, identity, and date`);
+        }
       } else if (evidence && !equal(Object.keys(evidence), RELEASE_EVIDENCE_FIELDS.slice(0, 4))) {
         failures.push(`${META_PATH}: released hold ${hold.id} must contain only the exact basic release evidence fields`);
       }
@@ -499,6 +671,7 @@ function checkHolds(failures, files, meta, options) {
       ['blocks', projection.blocks, hold.blocks],
       ['permits', projection.permits, hold.permits],
       ['resolution_actions', projection.resolution_actions, hold.resolution_actions],
+      ['transition_binding', projection.transition_binding, normalizeProjectionText(formatTransitionBinding(hold))],
       ['release_condition', projection.release_condition, normalizeProjectionText(hold.release_condition)],
       ['release_evidence', projection.release_evidence, hold.release_evidence === null ? null : normalizeProjectionText(formatReleaseEvidence(hold.release_evidence))],
     ];
