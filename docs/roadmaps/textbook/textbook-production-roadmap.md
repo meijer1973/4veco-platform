@@ -1,8 +1,8 @@
 # Textbook Production Roadmap
 
-Generated: 2026-06-19
+Generated: 2026-09-01
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.11-b2-2.2-chapter-complete-ready-review`
+Roadmap version: `v1.12-issue-223-gate-0-active`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
@@ -53,6 +53,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
+| ISSUE-223-GATE-0-1 | Book 2 Paragraph 2.1.1 Part A Contract Application | no | Issue #223 Gate 0 passed independent planning review at exact platform `15bb8049...` and lesson `f09fd6e...` baselines. The reviewed target, seven-section route, 52-minute equation, path boundaries, stale-zip removal, Part A handoff, and separate focused-guardrail need are frozen. Student-facing implementation may now begin only within the plan; final integration remains gated. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building consolidation-only mixed elasticity practice with source-heavy transfer, answer guidance, rendered proof, validators, and explicit mixed-target acceptance. |

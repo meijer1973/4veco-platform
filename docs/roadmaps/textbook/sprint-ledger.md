@@ -1,6 +1,6 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-06-19
+Updated: 2026-09-01
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Current Rule
@@ -26,6 +26,7 @@ Every agent working from this ledger must use the repository sprint protocol bef
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
+| ISSUE-223-GATE-0-1 | Book 2 Paragraph 2.1.1 Part A Contract Application | no | Gate 0 PASS at platform `15bb8049...` and lesson `f09fd6e...`. Independent planning review confirms the frozen target, artifact baseline, exact route, 52-minute question-level equation, path boundaries, stale-zip disposition, Part A handoff, and separate-guardrail decision. No student-facing file changed during Gate 0. | Begin only the allowed §2.1.1 lesson revision and the separately branched opt-in guardrail. Keep final lesson integration serialized behind guardrail integration and all specialist, exact-head, readiness, and governed-integration gates. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally inside `GOAL-B2-2.2-CHAPTER-COMPLETE-1` after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. | Open the coordinated platform/lesson PR pair for human review; do not start Chapter 2.3, Book 3, or downstream product gates from this closure. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. | Carry no missing core requirement. Future mixed sections still require their own explicit governed promotion before `reviewed_final`. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building the consolidation-only mixed elasticity section with no new theory, full answer guidance, rendered proof, validators, and explicit mixed-target acceptance. | Use the generated 2.2.4 output only as Chapter 2.2 mixed practice; do not treat it as a new theory paragraph. |
