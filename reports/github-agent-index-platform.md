@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-01T09:42:58.103Z
+Generated: 2026-09-01T09:43:45.255Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-foundation-outline-20260901`
-Source commit: `1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a`
-Files indexed: 7539
+Source commit: `047d838dc88f4aa9fdeb2c09957b95e5ddba3804`
+Files indexed: 7547
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1589,7 +1589,7 @@ Count: 692
 
 ## references
 
-Count: 1018
+Count: 1019
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1972,6 +1972,7 @@ Count: 1018
 - references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.plan.json
 - references/data/sprints/BLUEPRINT-BOOK1-EDITION-BOUNDARY-1.result.json
 - references/data/sprints/BOOK-2-FOUNDATION-OUTLINE-1.plan.json
+- references/data/sprints/BOOK-2-FOUNDATION-OUTLINE-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
@@ -2612,7 +2613,7 @@ Count: 1018
 
 ## reports
 
-Count: 4841
+Count: 4848
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4041,6 +4042,9 @@ Count: 4841
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
+- reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/bundle-urls.md
+- reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.json
+- reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.md
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.json
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.md
@@ -5190,7 +5194,10 @@ Count: 4841
 - reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-result.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-baseline.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-blueprint-validity-audit.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-command-log.jsonl
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-command-log.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-diff-summary.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-assignment.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-corrections.md
@@ -5198,6 +5205,7 @@ Count: 4841
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round2.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-planning-review.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
