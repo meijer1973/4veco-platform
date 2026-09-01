@@ -10,6 +10,20 @@ const OUTLINE_PATH = 'references/authored/book-outlines/book-2-outline.md';
 const META_PATH = 'references/authored/book-outlines/book-2-outline.meta.json';
 const TARGET_REGISTRY_PATH = 'references/authored/course-target-exercises.json';
 const HOLD_PROJECTION_HEADER = '| Hold ID | Status | Scope | Blocks | Explicitly permits | Resolution actions | Release condition | Release evidence |';
+const APPROVAL_PR_NUMBER = 226;
+const LIFECYCLE_STATUS_PATTERN = /^Status: `[^`]+`$/;
+const LIFECYCLE_OWNER_APPROVAL_PATTERN = /^Owner approval: `[^`]+`$/;
+const RELEASE_EVIDENCE_FIELDS = Object.freeze([
+  'resolved_via',
+  'released_by',
+  'released_on',
+  'evidence_ref',
+  'subject_id',
+  'subject_sha256',
+  'integrated_commit',
+  'reviewed_pr',
+  'reviewed_head',
+]);
 
 const AUTHORITY_PATHS = Object.freeze([
   'references/owned/course-blueprint-v6-three-year.md',
@@ -141,7 +155,11 @@ function sha256CanonicalText(value) {
 
 function semanticAuthorityText(value) {
   const text = asText(value).replace(/\r\n?/g, '\n');
-  const lines = text.split('\n');
+  const lines = text.split('\n').map((line) => {
+    if (LIFECYCLE_STATUS_PATTERN.test(line)) return '<!-- lifecycle status is validated against metadata and excluded from the semantic hash -->';
+    if (LIFECYCLE_OWNER_APPROVAL_PATTERN.test(line)) return '<!-- lifecycle owner approval is validated against metadata and excluded from the semantic hash -->';
+    return line;
+  });
   const headerIndex = lines.findIndex((line) => line.trim() === HOLD_PROJECTION_HEADER);
   if (headerIndex < 0) return text;
   let endIndex = headerIndex + 2;
@@ -207,7 +225,7 @@ function findForbiddenSemanticKeys(value, location = '$', found = []) {
 
 function checkMetadata(failures, files, meta) {
   if (!meta) return;
-  if (meta.schema_version !== 3) failures.push(`${META_PATH}: schema_version must equal 3`);
+  if (meta.schema_version !== 4) failures.push(`${META_PATH}: schema_version must equal 4`);
   if (meta.outline_id !== 'book-2') failures.push(`${META_PATH}: outline_id must equal book-2`);
   if (meta.audit_outcome !== 'VALID_WITH_DERIVED_OUTLINE_REQUIRED') {
     failures.push(`${META_PATH}: audit_outcome must remain VALID_WITH_DERIVED_OUTLINE_REQUIRED`);
@@ -220,7 +238,7 @@ function checkMetadata(failures, files, meta) {
   if (semantic.rule !== 'canonical_human_semantics_live_only_in_markdown') {
     failures.push(`${META_PATH}: semantic authority rule is missing or changed`);
   }
-  if (semantic.hash_scope !== 'canonical_utf8_lf_excluding_validated_lifecycle_projection') {
+  if (semantic.hash_scope !== 'canonical_utf8_lf_excluding_validated_lifecycle_fields') {
     failures.push(`${META_PATH}: semantic authority hash_scope is missing or changed`);
   }
   const outline = files[OUTLINE_PATH];
@@ -229,6 +247,27 @@ function checkMetadata(failures, files, meta) {
 
   for (const location of findForbiddenSemanticKeys(meta)) {
     failures.push(`${META_PATH}: semantic field is prohibited in machine metadata: ${location}`);
+  }
+
+  if (!meta.approval_context || !equal(Object.keys(meta.approval_context), ['pr_number'])
+      || meta.approval_context.pr_number !== APPROVAL_PR_NUMBER) {
+    failures.push(`${META_PATH}: approval_context must bind this package to PR #${APPROVAL_PR_NUMBER}`);
+  }
+  const approval = meta.owner_approval || {};
+  const approvalFields = [
+    'status',
+    'approved_version',
+    'approved_outline_sha256',
+    'approved_pr',
+    'approved_commit',
+    'decision_ref',
+    'decided_on',
+    'decided_by',
+  ];
+  if (!equal(Object.keys(approval), approvalFields)) failures.push(`${META_PATH}: owner_approval must contain the exact immutable binding fields`);
+  if (!['pending', 'approved'].includes(approval.status)) failures.push(`${META_PATH}: owner_approval.status must be pending or approved`);
+  if (approval.status === 'pending' && approvalFields.slice(1).some((field) => approval[field] !== null)) {
+    failures.push(`${META_PATH}: pending owner approval must not contain decision binding values`);
   }
 
   const authority = Array.isArray(meta.authority_sources) ? meta.authority_sources : [];
@@ -319,7 +358,10 @@ function formatProjectionList(values) {
 
 function formatReleaseEvidence(evidence) {
   if (evidence === null || evidence === undefined) return '—';
-  return `released_by=${evidence.released_by}; released_on=${evidence.released_on}; evidence_ref=${evidence.evidence_ref}`;
+  return RELEASE_EVIDENCE_FIELDS
+    .filter((field) => Object.prototype.hasOwnProperty.call(evidence, field))
+    .map((field) => `${field}=${evidence[field]}`)
+    .join('; ');
 }
 
 function formatHoldProjectionRow(hold) {
@@ -384,7 +426,9 @@ function checkHolds(failures, files, meta, options) {
     }
     const overlap = (hold.blocks || []).filter((action) => (hold.permits || []).includes(action));
     if (overlap.length > 0) failures.push(`${META_PATH}: ${hold.id} cannot both block and permit ${overlap.join(', ')}`);
-    if (!Array.isArray(hold.resolution_actions) || hold.resolution_actions.length === 0) failures.push(`${META_PATH}: ${hold.id} requires at least one resolution action`);
+    if (!Array.isArray(hold.resolution_actions) || hold.resolution_actions.length !== 1) {
+      failures.push(`${META_PATH}: ${hold.id} requires exactly one resolution action; split independent lifecycle milestones into separate holds`);
+    }
     for (const action of [...(hold.blocks || []), ...(hold.permits || []), ...(hold.resolution_actions || [])]) {
       if (!REGISTERED_ACTIONS.includes(action)) failures.push(`${META_PATH}: ${hold.id} uses unregistered action ${action}`);
     }
@@ -397,10 +441,37 @@ function checkHolds(failures, files, meta, options) {
     if (hold.status === 'released') {
       const evidence = hold.release_evidence;
       if (!evidence || typeof evidence !== 'object'
+          || typeof evidence.resolved_via !== 'string' || !(hold.resolution_actions || []).includes(evidence.resolved_via)
           || typeof evidence.released_by !== 'string' || evidence.released_by.trim() === ''
           || !/^\d{4}-\d{2}-\d{2}$/.test(String(evidence.released_on || ''))
           || typeof evidence.evidence_ref !== 'string' || evidence.evidence_ref.trim() === '') {
-        failures.push(`${META_PATH}: released hold ${hold.id} requires released_by, released_on, and evidence_ref`);
+        failures.push(`${META_PATH}: released hold ${hold.id} requires resolved_via, released_by, released_on, and evidence_ref bound to its resolution action`);
+      }
+
+      if (evidence && evidence.resolved_via === 'target_authority_integration') {
+        const evidenceFields = RELEASE_EVIDENCE_FIELDS.slice(0, 7);
+        const paragraphScopes = (hold.scope || []).filter((scope) => scope.startsWith('paragraph:'));
+        const subjectId = paragraphScopes.length === 1 ? paragraphScopes[0].slice('paragraph:'.length) : null;
+        const pin = (meta.target_registry_pins || []).find((item) => item.id === subjectId);
+        if (!equal(Object.keys(evidence), evidenceFields)) {
+          failures.push(`${META_PATH}: target integration release ${hold.id} must contain the exact integration evidence fields`);
+        }
+        if (!subjectId || evidence.subject_id !== subjectId) failures.push(`${META_PATH}: target integration release ${hold.id} subject_id must match its single paragraph scope`);
+        if (!pin || evidence.subject_sha256 !== pin.target_record_sha256) failures.push(`${META_PATH}: target integration release ${hold.id} subject_sha256 must match the current target registry pin`);
+        if (!pin || pin.target_status !== 'reviewed_final') failures.push(`${META_PATH}: target integration release ${hold.id} requires a reviewed_final target record`);
+        if (!/^[0-9a-f]{40}$/i.test(String(evidence.integrated_commit || ''))) failures.push(`${META_PATH}: target integration release ${hold.id} requires a full integrated_commit SHA`);
+      } else if (evidence && hold.id === 'H-OUTLINE-OWNER') {
+        const evidenceFields = [...RELEASE_EVIDENCE_FIELDS.slice(0, 6), 'reviewed_pr', 'reviewed_head'];
+        if (!equal(Object.keys(evidence), evidenceFields)) {
+          failures.push(`${META_PATH}: owner release must contain the exact reviewed-head evidence fields`);
+        }
+        if (evidence.resolved_via !== 'outline_owner_decision') failures.push(`${META_PATH}: owner release must resolve via outline_owner_decision`);
+        if (evidence.subject_id !== meta.version) failures.push(`${META_PATH}: owner release subject_id must match the approved outline version`);
+        if (evidence.subject_sha256 !== (meta.semantic_authority || {}).sha256) failures.push(`${META_PATH}: owner release subject_sha256 must match the semantic outline hash`);
+        if (evidence.reviewed_pr !== (meta.approval_context || {}).pr_number) failures.push(`${META_PATH}: owner release reviewed_pr must match approval_context.pr_number`);
+        if (!/^[0-9a-f]{40}$/i.test(String(evidence.reviewed_head || ''))) failures.push(`${META_PATH}: owner release requires a full reviewed_head SHA`);
+      } else if (evidence && !equal(Object.keys(evidence), RELEASE_EVIDENCE_FIELDS.slice(0, 4))) {
+        failures.push(`${META_PATH}: released hold ${hold.id} must contain only the exact basic release evidence fields`);
       }
     }
   }
@@ -458,9 +529,9 @@ function checkProse(failures, files, meta) {
   ];
   for (const heading of headings) requireText(failures, files, OUTLINE_PATH, new RegExp(`^${escapeRegExp(heading)}$`, 'm'), `missing required heading ${heading}`);
   if (!meta) return;
-  requireText(failures, files, OUTLINE_PATH, new RegExp(`Version: \`${escapeRegExp(meta.version)}\``), 'version does not match metadata');
-  requireText(failures, files, OUTLINE_PATH, new RegExp(`Status: \`${escapeRegExp(meta.status)}\``), 'status does not match metadata');
-  requireText(failures, files, OUTLINE_PATH, new RegExp(`Owner approval: \`${escapeRegExp((meta.owner_approval || {}).status)}\``), 'owner approval status does not match metadata');
+  requireText(failures, files, OUTLINE_PATH, new RegExp(`^Version: \`${escapeRegExp(meta.version)}\`\\r?$`, 'm'), 'version does not match metadata');
+  requireText(failures, files, OUTLINE_PATH, new RegExp(`^Status: \`${escapeRegExp(meta.status)}\`\\r?$`, 'm'), 'status does not match metadata');
+  requireText(failures, files, OUTLINE_PATH, new RegExp(`^Owner approval: \`${escapeRegExp((meta.owner_approval || {}).status)}\`\\r?$`, 'm'), 'owner approval status does not match metadata');
   requireText(failures, files, OUTLINE_PATH, /canonical human semantic\s+authority/i, 'canonical semantic authority statement is missing');
   requireText(failures, files, OUTLINE_PATH, /Consolidation paragraphs introduce no new terminal theory\./, 'consolidation boundary is missing');
   for (const id of EXPECTED_ORDER) requireText(failures, files, OUTLINE_PATH, new RegExp(`^\\| ${escapeRegExp(id)} \\|`, 'm'), `canonical foundation dimensions row ${id} is missing`);
@@ -513,15 +584,26 @@ function checkWorkflowSurfaces(failures, files, meta) {
 }
 
 function checkApprovedMode(failures, meta, requireApproved) {
-  if (!requireApproved || !meta) return;
+  if (!meta) return;
   const approval = meta.owner_approval || {};
   const outlineHash = meta.semantic_authority && meta.semantic_authority.sha256;
+  const ownerHold = (meta.holds || []).find((hold) => hold.id === 'H-OUTLINE-OWNER');
+  const evidence = ownerHold && ownerHold.release_evidence;
+  const approvalIsRequired = requireApproved || ['approved', 'approved_with_holds'].includes(meta.status) || approval.status === 'approved';
+  if (!approvalIsRequired) return;
   if (!['approved', 'approved_with_holds'].includes(meta.status)) failures.push(`${META_PATH}: approved mode requires approved or approved_with_holds status`);
   if (approval.status !== 'approved') failures.push(`${META_PATH}: approved mode requires owner_approval.status=approved`);
   if (approval.approved_version !== meta.version) failures.push(`${META_PATH}: approved_version must match version`);
   if (approval.approved_outline_sha256 !== outlineHash) failures.push(`${META_PATH}: approved_outline_sha256 must match semantic_authority.sha256`);
-  if (!Number.isInteger(approval.approved_pr) || approval.approved_pr <= 0) failures.push(`${META_PATH}: approved_pr must be a positive PR number`);
-  if (!/^[0-9a-f]{40}$/i.test(String(approval.approved_commit || ''))) failures.push(`${META_PATH}: approved_commit must be a full commit SHA`);
+  if (!evidence || approval.approved_pr !== evidence.reviewed_pr || approval.approved_pr !== (meta.approval_context || {}).pr_number) {
+    failures.push(`${META_PATH}: approved_pr must match the exact owner-reviewed PR binding`);
+  }
+  if (!evidence || approval.approved_commit !== evidence.reviewed_head) failures.push(`${META_PATH}: approved_commit must match the exact owner-reviewed head`);
+  if (!evidence || approval.approved_outline_sha256 !== evidence.subject_sha256) failures.push(`${META_PATH}: approved_outline_sha256 must match the owner release subject hash`);
+  if (!evidence || approval.approved_version !== evidence.subject_id) failures.push(`${META_PATH}: approved_version must match the owner release subject version`);
+  if (!evidence || approval.decision_ref !== evidence.evidence_ref) failures.push(`${META_PATH}: decision_ref must match the exact owner decision/comment reference`);
+  if (!evidence || approval.decided_on !== evidence.released_on) failures.push(`${META_PATH}: decided_on must match the owner release date`);
+  if (!evidence || approval.decided_by !== evidence.released_by) failures.push(`${META_PATH}: decided_by must match the owner release identity`);
 }
 
 function findBookOutlineFailures(files = readFiles(), options = {}) {
@@ -585,6 +667,7 @@ function main() {
 if (require.main === module) main();
 
 module.exports = {
+  APPROVAL_PR_NUMBER,
   AUTHORITY_PATHS,
   EXPECTED_ORDER,
   FORBIDDEN_SEMANTIC_KEYS,
