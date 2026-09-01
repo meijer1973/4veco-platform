@@ -5,6 +5,41 @@
 
 ---
 
+## Book foundation check
+
+> Required for Book 2 and later when a canonical book outline exists. For Book
+> 2, use `references/authored/book-outlines/book-2-outline.md` and its
+> `.meta.json` companion. Run `npm run check:book-outline-currentness` and
+> `npm run check:book-outline-currentness -- --require-approved` before filling
+> the verdict. Do not convert preview/familiarity into mastered prior teaching.
+
+| Outline pin | Value |
+|---|---|
+| Outline reference | `references/authored/book-outlines/book-2-outline.md` |
+| Outline version | [exact metadata version] |
+| Outline SHA-256 | [exact metadata `outline_sha256`] |
+| Metadata status | [approved / approved_with_holds / pending-stops-work] |
+| Structural currentness command/result | [exact command + PASS/FAIL + evidence] |
+| Approved-use command/result | [exact command + PASS/FAIL + evidence] |
+
+| Required foundation field | Paragraph-specific decision/evidence |
+|---|---|
+| Paragraph role | [copy/adapt only the canonical role for X.Y.Z] |
+| Prerequisite state | [which prerequisites are mastered, supported, seen, or not yet secure] |
+| Chapter dependency | [required preceding paragraph/chapter state] |
+| Prior teaching | [exact earlier paragraph/operation evidence] |
+| Retrieval | [compact already-taught retrieval planned here] |
+| Interleaving | [earlier operation deliberately mixed here and why] |
+| Operation emphasis | [calculation / representation / interpretation / selection-classification / answer form] |
+| Misconception boundary | [canonical misconception(s) this paragraph must guard] |
+| Readiness verdict | [READY / READY_WITH_HOLDS / BLOCKED] |
+| Holds | [all canonical hold IDs plus paragraph-specific release evidence; use `none` only when the outline has none] |
+
+Stop condition: [state why work can proceed, or name the unresolved hold that
+blocks goals/target/content work].
+
+---
+
 ## Key concepts
 
 List the 5-8 key concepts that this paragraph teaches. Every builder draws from this list.

@@ -116,6 +116,35 @@ current specification.
 
 ---
 
+# Book foundation check (Book 2+)
+
+Before goals, a target route, paragraph content, exercises, or a companion plan
+are authored for Book 2, read the canonical
+`references/authored/book-outlines/book-2-outline.md` and its `.meta.json`
+companion. Run:
+
+```bash
+npm run check:book-outline-currentness
+npm run check:book-outline-currentness -- --require-approved
+```
+
+The first command proves structural/source currentness. The second proves that
+the exact version/hash has human owner approval. A pending approval, stale hash,
+missing paragraph row, or blocking paragraph hold means stop; do not derive
+goals or treat the outline as approved input.
+
+Every Book 2 paragraph plan must contain a **Book foundation check** copied from
+`build-scripts/templates/template-paragraph-plan.md`. It pins the outline
+reference, version, SHA-256, paragraph role, prerequisites, chapter dependency,
+prior teaching, retrieval/interleaving, operation emphasis, misconception
+boundary, readiness verdict, and holds. A target's `reviewed_final` status does
+not release an outline or paragraph hold by itself. Preview/familiarity remains
+distinct from mastered prior teaching.
+
+For a later book, use its approved canonical book outline when one exists. If
+the required book-level layer is absent, stop at foundation planning rather
+than starting from the paragraph in isolation.
+
 # COMMON pre-conditions (read first, applies to BOTH pipelines)
 
 These four references frame every paragraph build, regardless of mode. Read them before touching either Part A or Part B.
@@ -164,6 +193,9 @@ paragraph PDF gate.
 
 ## A1: Input
 
+- **Approved Book foundation check** — exact outline reference/version/hash,
+  paragraph role, dependency decision, readiness verdict, and holds from the
+  canonical Book 2 outline
 - **Blueprint paragraph spec** — target exercise, lesson goals, difficulty notes
 - **Shared conventions** — from `_chapter-plan.md` if building as part of a chapter (notation, colours, shared contexts, interleaving targets)
 - **Prior paragraph context** — if this paragraph depends on an earlier one (key formulas, terminology)
@@ -382,6 +414,7 @@ between the textbook lane and the companion lane.
 - [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
 - [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 - [ ] Book 2+ backward-design alignment table covers every goal and target operation
+- [ ] Book foundation check pins a current owner-approved outline and every paragraph-specific hold is released or explicitly blocks this build
 - [ ] Seven Part A headings use exact `##` level and order; theory → Uitgewerkt voorbeeld → compact non-heading summary → Startopgaven is preserved
 - [ ] Both Startopgaven roles and route note are present; a whole-lesson equation using actual question estimates totals ≤55 minutes
 - [ ] Optional guided route keeps the same goal, adds/fades support, and uses neutral skip wording

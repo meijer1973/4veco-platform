@@ -12,6 +12,16 @@ Builds one complete textbook paragraph: theory + worked example + exercises + gr
 authored Book 2 and later theory paragraphs. Book 1 output is frozen: do not
 retrofit it and do not use this contract as a retroactive Book 1 content check.
 
+**Book foundation check:** before a Book 2 paragraph is planned or built, read
+`references/authored/book-outlines/book-2-outline.md` and its `.meta.json`
+companion. Run `npm run check:book-outline-currentness` and
+`npm run check:book-outline-currentness -- --require-approved`. Stop on stale
+authority, pending owner approval, a missing paragraph role, or any blocking
+hold. The paragraph plan must pin the exact outline version/SHA-256 and record
+the role, prerequisites, chapter dependency, prior teaching,
+retrieval/interleaving, operation emphasis, misconception boundary, readiness
+verdict, and holds. Preview/familiarity is not mastered prior teaching.
+
 **Lane boundary:** this is the Part A textbook lane. It may not create or edit
 companion route files (`index.html`, companion HTML/PPTX, shared game data,
 `_paragraph-plan.md`, or `X.Y.Z-companion-visual-review.md`). Close the lane by
@@ -38,9 +48,12 @@ A human-review outputs.
 
 ### 1.1 Required input
 
-1. **Blueprint paragraph spec** — target exercise, lesson goals, difficulty notes, difficulty rating
-2. **Exercise set** — `exercises.md` and `answers.md` from `econ-exercise-builder`
-3. **Preceding paragraphs** — to know what has been taught (for recall boxes, cross-references)
+1. **Approved Book foundation check** — exact canonical outline reference,
+   version, SHA-256, paragraph role, chapter dependency, readiness verdict, and
+   holds; use `references/authored/book-outlines/book-2-outline.md` for Book 2
+2. **Blueprint paragraph spec** — target exercise, lesson goals, difficulty notes, difficulty rating
+3. **Exercise set** — `exercises.md` and `answers.md` from `econ-exercise-builder`
+4. **Preceding paragraphs** — to know what has been taught (for recall boxes, cross-references)
 
 For an official CvTE or CvTE-derived target exercise, also require the
 paragraph plan's `Exam-target route trace`. The textbook paragraph and answer
@@ -451,6 +464,9 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 ## PART 6: QUALITY CHECKLIST
 
 ### Before delivering a paragraph:
+
+**Foundation gate:** □ The Book foundation check pins a current owner-approved
+outline and no blocking paragraph hold is ignored.
 
 **Content checks:**
 1. □ Motivating problem comes before theory (problem-first)

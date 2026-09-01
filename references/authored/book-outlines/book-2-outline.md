@@ -1,0 +1,263 @@
+# Book 2 Outline: Costs, Revenue, Elasticity, And Surplus
+
+Outline ID: `book-2`
+
+Version: `book-2-outline-v1-review-ready`
+
+Status: `review_ready_with_holds`
+
+Audit outcome: `VALID_WITH_DERIVED_OUTLINE_REQUIRED`
+
+Owner approval: `pending`
+
+## Authority and freshness
+
+This is a derived planning authority between the owned course blueprint and
+chapter/paragraph planning. It does not supersede the blueprint, target
+registry, pedagogical boundaries, or Part A exercise contract.
+
+| Priority | Source | Pinned SHA-256 | Controls |
+|---:|---|---|---|
+| 1 | `references/owned/course-blueprint-v6-three-year.md` | `72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e` | Three-year purpose, Book 2 role, later-book dependency, operation-family trajectory. |
+| 2 | `references/owned/course-blueprint-v5.md` | `61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7` | Active Year 1 Book 2 IDs, order, kinds, topics, and source statuses. |
+| 3 | `references/authored/course-target-exercises.json` | `33928e7929fa1c9af86159b07769e2f01d28963873ef34c40e55c2001feb87ac` | Current paragraph goals, target operations, contexts, records, and review evidence. |
+| 4 | `references/owned/course-blueprint-pedagogical-boundaries.md` | `47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7` | Preview/familiarity versus mastered prerequisites and later formal teaching. |
+| 5 | `skills/econ-exercise-builder.md` | `27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a` | Target-first Part A exercise sequence, support rules, and 55-minute route. |
+
+Run `npm run check:book-outline-currentness` before using this outline. A
+source-hash, target-record, row-order, status, workflow-pointer, or semantic
+failure makes it stale. Paragraph planning additionally requires approved mode;
+while owner approval is pending, that mode must block.
+
+## Purpose and position in the course
+
+Book 2 turns the market foundations from Book 1 into three connected economic
+calculation-and-interpretation systems:
+
+1. how a firm's costs, revenue, profit, break-even point, and marginal changes
+   can be calculated and explained;
+2. how demand responsiveness can be calculated, classified, and connected to
+   revenue and multi-variable demand; and
+3. how willingness to pay, supply/marginal cost, and equilibrium become
+   consumer surplus, producer surplus, total surplus, and welfare loss.
+
+The route deliberately precedes Book 3. Students need Book 2's calculation,
+elasticity, and surplus foundations before government intervention and market
+structure can be taught at full procedural and welfare depth.
+
+The book is exercise-first: paragraph goals and instruction must be designed
+backward from the current reviewed target operations. This outline constrains
+that work but does not itself prove paragraph mastery or approve a target.
+
+## Entry prerequisites from Book 1
+
+### Mastered operations available for bounded retrieval
+
+| Book 1 source | Book 2 use | Retrieval boundary |
+|---|---|---|
+| §1.1.2 percentages and index numbers | Percentage change in elasticity and comparisons across values. | Reactivate the percentage base/sign convention; do not reteach it as new Book 2 theory unless evidence shows a learner need. |
+| §1.1.3 graphs and tables | Read/calculate from cost, revenue, elasticity, demand/supply, and surplus representations. | Retrieval may test reading and plotting already-taught forms; a new Book 2 economic meaning still needs explicit teaching. |
+| §1.2.1 willingness to pay and individual demand | Demand interpretation and the entry to consumer surplus. | Reactivate willingness to pay; formal surplus area and welfare meaning remain new in §2.3.1. |
+| §1.2.2 demand factors, substitutes, and complements | Explain elasticity determinants and later cross-elasticity signs. | Familiar contextual labels may be retrieved; formal elasticity classification is taught in Book 2. |
+| §1.2.3 collective demand and linear demand functions | Multi-variable demand work and quantity calculation. | Keep ceteris-paribus changes explicit; do not assume a new multivariable procedure has already been mastered. |
+| §1.3.1 supply | Producer-surplus and supply-as-marginal-cost bridge. | Supply interpretation may be retrieved; the marginal-cost/welfare meaning is formal Book 2 teaching. |
+| §1.3.2 equilibrium and surplus/shortage | Welfare diagrams, transaction quantity, and comparison with forced prices. | Algebraic/graphical equilibrium may be retrieved; deadweight loss and Pareto claims are not prior mastery. |
+| §1.3.3 new equilibrium after shifts | Later transfer and Book 3 preparation. | Use only when it supports a Book 2 target without displacing its operation chain. |
+| §1.1.4, §1.2.4, §1.3.4 mixed work | Source selection, calculation with units, graph/table evidence, and short economic conclusions. | Consolidation evidence supports retrieval design; it does not authorize unlisted new economic operations. |
+
+Every paragraph plan must recheck that the selected prerequisite was actually
+taught and is applicable to the current representation. The label "Book 1"
+alone is not evidence.
+
+### Familiarity or preview that is not prerequisite mastery
+
+- Book 1 supplied-formula encounters with costs, revenue, or profit do not
+  shorten formal teaching in Chapter 2.1.
+- Book 1 consumer-surplus intuition does not replace the graphical and
+  calculation route in §2.3.1.
+- Book 1 use of normal/inferior terminology does not replace `Ei` sign-first
+  classification in §2.2.3.
+- Seeing a step-function demand representation does not make step-function
+  construction or analysis a Book 2 prerequisite unless a reviewed target
+  explicitly requires it.
+
+## Book exit expectations
+
+After approved teaching and target-equivalent evidence across Book 2, students
+should be able to:
+
+- select, calculate, label, and interpret total/average cost and revenue
+  relations, profit, break-even, and marginal changes;
+- calculate and interpret price, income, and cross elasticities, including
+  correct sign/magnitude classifications and bounded revenue advice;
+- use tables, functions, and graphs with ceteris-paribus reasoning;
+- calculate and interpret consumer, producer, total surplus, and deadweight
+  loss under explicit transaction assumptions; and
+- write short economic conclusions that connect calculation, unit,
+  classification, representation, and source evidence.
+
+These are course-route expectations, not a mastery claim from this document.
+Book completion evidence must come from the approved targets and reviewed
+student work. The resulting foundation supports Book 3 work on intervention,
+price controls, taxes/subsidies, competition, and monopoly.
+
+## Chapter spine
+
+| Chapter | Purpose | Progression | Exit dependency |
+|---|---|---|---|
+| 2.1 Costs and revenue | Build the firm's calculation language and connect levels, averages, graphs, break-even, and marginal change. | classify/formulate → calculate/interpret → compare increments → integrate and select operations | Supplies revenue and marginal-cost language to elasticity/welfare work and later firm/market-structure analysis. |
+| 2.2 Elasticity | Turn Book 1 percentage/demand foundations into responsiveness measures, revenue consequences, and multi-variable demand reasoning. | calculate/classify `Ev` → connect `Ev` to revenue → extend to `Ei`, `Ek`, and functions → integrate and advise cautiously | Supplies responsiveness reasoning to later intervention, incidence, pricing, and market analysis. |
+| 2.3 Surplus and welfare | Formalise buyer/seller welfare and use equilibrium plus marginal-cost meaning to reason about total surplus and welfare loss. | formal CS → add PS/TS and supply-as-MC → compare constrained transactions/Pareto/DWL → integrate | Supplies the welfare baseline required before Book 3 intervention and market-structure evaluation. |
+
+## Dependency route
+
+```text
+Book 1 percentages + demand ----------------------> 2.2.1 -> 2.2.2 -> 2.2.3 -> 2.2.4
+Book 1 graphs/tables -------> 2.1.1 -> 2.1.2 -> 2.1.3 -> 2.1.4
+                                      |                |
+                                      |                +---- marginal-cost bridge ----+
+Book 1 WTP + demand + supply + equilibrium ----------> 2.3.1 -> 2.3.2 -> 2.3.3 -> 2.3.4
+```
+
+The arrows are prerequisite/teaching dependencies, not permission to skip
+retrieval or review. Consolidation paragraphs introduce no new terminal theory.
+
+## Paragraph role matrix
+
+### 2.1 Costs and revenue
+
+| Paragraph | Role and new formal teaching | Prior teaching, retrieval, and interleaving | Operation emphasis | Misconception boundary | Readiness and holds |
+|---|---|---|---|---|---|
+| **2.1.1 Kostenstructuren** | Establish fixed/constant versus variable costs; formulate `TCK`, `TVK`, `TK`; calculate `GCK`, `GVK`, `GTK`; explain spreading fixed costs and constant `GVK` only under a constant per-unit assumption. | Retrieve graph/table reading and labelled arithmetic only where needed. Book 1 cost/profit exposure is familiarity, not mastery. | Balanced formula construction/selection, two-quantity calculation with units, average-versus-total interpretation, trend explanation, and claim evaluation. | A cost category depends on how it changes with output, not on whether an invoice looks regular; `GVK` is not universally constant; `GCK` is not a fixed amount per product. | `BLOCKED_GATE_0B_1`: Issue #223 must redesign/review goals and target after this outline is approved and merged. |
+| **2.1.2 Opbrengsten, winst en break-even** | Add `TO=P×Q`, `GO=TO/Q`, `winst=TO-TK`, algebraic break-even, and `TK`/`TO` graph zones. | Require completed §2.1.1 cost relations; retrieve Book 1 graph/function skills. Interleave units and total-versus-average language. | Formula choice, substitution, comparison, equation solving, graph construction/reading, break-even interpretation, and bounded profit conclusion. | Revenue/omzet is not profit; `GO=P` only under the stated price structure; break-even is zero profit, not zero costs/revenue. | `BLOCKED_TARGET_REPAIR`: target context has stale `§1.3.2` cross-reference; pin/repair the intended §2.1.1 dependency before paragraph approval. |
+| **2.1.3 Marginale kosten en marginale opbrengsten** | Define and calculate `MK=ΔTK/ΔQ` and `MO=ΔTO/ΔQ`; interpret increments for linear and nonlinear totals; build marginal intuition. | Require §2.1.1–§2.1.2 totals and formulas; retrieve table differences and units. Interleave profit columns only as context, not a new decision rule. | Table completion, interval-normalised difference calculation, pattern comparison, unit interpretation, and explanation in words. | A row difference is not a per-unit marginal value when `ΔQ≠1`; constant `MO` follows only from constant price; marginal is not average; `MO=MK` output choice is not yet an approved target. | `BLOCKED_TARGET_PRECISION_REVIEW`: resolve interval wording; `H-213-OPC2` holds formal output choice outside this target. |
+| **2.1.4 Gemengde opgaven** | Consolidate cost, revenue, average, profit, break-even, and marginal operation families without new theory. | Retrieve all approved Chapter 2.1 teaching; interleave source selection, units, graph meaning, and structured conclusions. | Decide which family applies, calculate accurately, compare sources/representations, and justify conclusions. | Do not turn consolidation into a fourth theory paragraph or equate post-break-even sales with equal marginal profitability. | `BLOCKED_UPSTREAM_CHAPTER`: production waits for §§2.1.1–2.1.3 holds and reviewed teaching. |
+
+### 2.2 Elasticity
+
+| Paragraph | Role and new formal teaching | Prior teaching, retrieval, and interleaving | Operation emphasis | Misconception boundary | Readiness and holds |
+|---|---|---|---|---|---|
+| **2.2.1 Prijselasticiteit** | Define `Ev=%ΔQv/%ΔP`; calculate with signs; classify by `|Ev|`; interpret magnitude and contextual determinants. | Explicitly retrieve §1.1.2 percentage change and §1.2 demand/substitute reasoning even though the target registry prior list is empty. | Percentage calculation, elasticity ratio, sign/magnitude classification, plain-language interpretation, and contextual comparison. Because both target contexts yield `|Ev|<1`, instruction/practice must also include one explicit `|Ev|>1` contrast. | Elasticity is a ratio, not the absolute change; negative `Ev` does not mean "inelastic"; classification uses magnitude while direction retains sign; necessity/luxury here is a determinant discussion, not `Ei` classification. | `READY_AFTER_OUTLINE_APPROVAL_WITH_FLAGS`: resolve `H-221-PRIOR` and `H-22-ELASTIC-CONTRAST` in the paragraph plan; neither authorizes target mutation. |
+| **2.2.2 Elasticiteit en omzet** | Connect `Ev` to `TO=P×Q` before/after a price change and give bounded revenue advice. | Require §2.2.1 and retrieve §2.1.2 revenue. Reuse the cinema/petrol contexts deliberately, then interleave one explicit elastic contrast because both reused cases are inelastic. | Before/after revenue calculation, proportional comparison, causal explanation, rule completion, and cautious advice across both elastic and inelastic cases. | Omzet is not winst; an elasticity estimate does not prove unlimited future response, long-run retention, or optimal price; direction rules depend on the stated price movement. | `READY_AFTER_OUTLINE_APPROVAL_WITH_FLAG`: `H-22-ELASTIC-CONTRAST` must be closed in instruction/practice and the revenue-only boundary must pass review. |
+| **2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit** | Extend to `Ei` and `Ek`, sign-first classifications, multi-variable demand functions, and ceteris-paribus predictions. | Require §2.2.1 percentage/elasticity procedure; retrieve §1.2.2 substitutes/complements and §1.2.3 demand functions. Interleave named numerator/denominator goods and units. | Calculate, sign/classify, substitute into a function, isolate one change, compare scenarios, and write bounded predictions. | For `Ei`, normal/inferior comes before necessity/luxury and the latter applies only to normal goods; for `Ek`, name whose demand and whose price; do not change multiple variables under a ceteris-paribus claim. | `READY_AFTER_OUTLINE_APPROVAL_WITH_LOAD_FLAG`: paragraph plan must stage the high operation load and preserve sign-first classification. |
+| **2.2.4 Gemengde opgaven** | Consolidate `Ev`, revenue, `Ei`, `Ek`, demand functions, source selection, and bounded advice without new theory. | Retrieve all approved Chapter 2.2 teaching and §2.1.2 revenue; interleave irrelevant-data rejection and conclusion limits. | Select sources and operation families, execute calculations/classifications, compare representations, and synthesize cautious advice. | Multiple calculations do not by themselves prove profit or customer retention; consolidation must not introduce a new elasticity formula. | `BLOCKED_UPSTREAM_CHAPTER` until §§2.2.1–2.2.3 teaching and review pass. |
+
+### 2.3 Surplus and welfare
+
+| Paragraph | Role and new formal teaching | Prior teaching, retrieval, and interleaving | Operation emphasis | Misconception boundary | Readiness and holds |
+|---|---|---|---|---|---|
+| **2.3.1 Consumentensurplus** | Formalise individual differences between willingness to pay and price, aggregate CS, identify the graph area, calculate triangle area, and interpret buyer welfare. | Reactivate §1.2.1 willingness to pay, §1.1.3 graph reading, and §1.3.2 price/quantity relations. Book 1 CS exposure is familiarity only. | Solve quantity at price, draw/label, select the correct area, calculate with units, and explain welfare meaning. | CS is not revenue, profit, or the whole area under demand; continuous triangle calculation differs from simply counting buyers; a Book 1 intuition does not prove formal mastery. | `BLOCKED_V5_TARGET_REVIEW`: migrated target must pass v5 review before paragraph production. |
+| **2.3.2 Producentensurplus en totaal surplus** | Add PS, `TS=CS+PS`, supply-as-marginal-cost meaning, and a bounded equilibrium-welfare comparison. | Require §2.3.1; retrieve §1.3 supply/equilibrium and interleave §2.1.3 marginal-cost meaning. | Solve equilibrium, draw/label two areas, calculate CS/PS/TS, connect supply to marginal cost, and justify a bounded welfare conclusion. | PS is not profit; supply-as-MC requires the stated competitive/marginal interpretation; maximum TS is not the same as equal distribution or a complete social-welfare judgment. | `BLOCKED_V5_TARGET_REVIEW`: migrated target and the supply-as-MC bridge require economics/teacher review. |
+| **2.3.3 Pareto-efficiëntie en welvaartsverlies** | Compare equilibrium with an explicitly constrained transaction outcome; define Pareto efficiency; identify/calculate DWL. | Require §2.3.2; retrieve shortage/surplus and transaction-quantity logic from §1.3.2. Interleave CS/PS/TS area accounting. | Calculate `Qd`, `Qs`, actual transactions under an explicit rule, recompute areas/TS, calculate loss, shade the lost triangle, and explain conditions. | A quoted price alone does not determine traded quantity; an unbound/non-binding price need not create DWL; Pareto efficiency is not fairness; policy mechanics belong to later Book 3 unless target authority expands. | `BLOCKED_V5_TARGET_AND_REFERENCE_REVIEW`: repair stale `§2.2.2` reference and qualify the any-price claim/transaction assumptions. |
+| **2.3.4 Gemengde opgaven** | Intended consolidation across CS, PS, TS, equilibrium, constrained transactions, Pareto efficiency, and DWL, with no new theory. | Retrieve all approved Chapter 2.3 teaching and the relevant Book 1 graph/equilibrium route; interleave marginal-cost and source-evidence language. | Select areas and quantities, calculate with units, compare scenarios, and write a qualified welfare conclusion. | A single generic combined question is not a reviewed consolidation target; no new government-intervention theory may be smuggled into the mixed paragraph. | `BLOCKED_PLACEHOLDER_REPAIR`: current target is a placeholder and Chapter 2.3 has no lesson plan. |
+
+## Retrieval and interleaving schedule
+
+| Point in route | Required retrieval/interleaving intent |
+|---|---|
+| Start of 2.1.1 | Compact graph/table/units check only; teach cost relations in full. |
+| 2.1.2 | Retrieve 2.1.1 totals/averages and Book 1 graphs; contrast revenue with cost and profit. |
+| 2.1.3 | Retrieve total cost/revenue formulas; calculate marginal values across explicit intervals. |
+| 2.1.4 | Cumulative Chapter 2.1 source selection and operation-family choice. |
+| Start of 2.2.1 | Retrieve Book 1 percentage change and demand-factor reasoning. |
+| 2.2.2 | Reuse `TO=P×Q` from 2.1.2 and elasticity from 2.2.1; keep advice revenue-bounded. |
+| 2.2.3 | Retrieve percentage procedure and Book 1 substitutes/complements/functions; isolate variables. |
+| 2.2.4 | Cumulative Chapter 2.2 multi-source selection, calculation, classification, and advice. |
+| Start of 2.3.1 | Reactivate willingness to pay and graph/triangle reading; formalise surplus anew. |
+| 2.3.2 | Retrieve equilibrium/supply and interleave marginal-cost meaning from 2.1.3. |
+| 2.3.3 | Retrieve CS/PS/TS plus surplus/shortage transaction logic; state binding assumptions. |
+| 2.3.4 | Cumulative Book 2 welfare route, with selected earlier calculation and elasticity links only where relevant. |
+
+Retrieval must be compact and evidence-backed. If a prerequisite is not secure,
+the paragraph plan must add support or hold the build; it may not relabel preview
+as mastery.
+
+## Operation balance
+
+| Chapter | Calculation | Representation | Interpretation/reasoning | Selection/classification | Answer form |
+|---|---|---|---|---|---|
+| 2.1 | totals, averages, profit, break-even, marginal ratios | functions, tables, `TK`/`TO` graphs | total vs average vs marginal meaning; trends | choose cost/revenue/marginal family | formula → substitution → value/unit → conclusion |
+| 2.2 | percentage changes, `Ev`, revenue, `Ei`, `Ek`, function values | tables, structured sources, multivariable functions | proportional response and bounded prediction | magnitude/sign classification and source relevance | named numerator/denominator → result → classification → economic meaning |
+| 2.3 | equilibrium, triangle areas, CS/PS/TS/DWL | demand/supply and shaded welfare areas | buyer/seller welfare, transaction assumptions, Pareto limits | select quantity/area/scenario | quantity/area calculation → labelled unit → qualified welfare conclusion |
+
+No chapter may collapse into arithmetic-only practice. Each target route needs
+calculation or selection where required, representation use, interpretation,
+units/labels, and a conclusion at the target's actual depth.
+
+## Shared conventions
+
+- Use canonical Dutch terminology from
+  `references/authored/economie-terminologie.md`; translate source English into
+  stable student-facing Dutch during paragraph production.
+- State quantities and periods (`per stuk`, `per maand`, tickets, litres) and
+  carry currency/percentage/surplus units through answers.
+- Use `TCK`, `TVK`, `TK`, `GCK`, `GVK`, `GTK`, `TO`, `GO`, `MK`, `MO`, and
+  `winst` consistently. Define every abbreviation at first use.
+- Use `Q_v`/demand and `Q_a`/supply consistently with existing course notation;
+  label both axes and equilibrium values on graphs.
+- Marginal values across intervals use `Δtotal/ΔQ`; raw row differences are
+  permitted only when `ΔQ=1` or are explicitly divided by the interval.
+- Elasticity calculations name the original base, preserve the sign, and use
+  absolute magnitude only for elastic/inelastic classification.
+- `Ei` classification is sign-first. `Ek` answers name the demand good and the
+  other good whose price changes.
+- Multi-variable function comparisons change one stated variable at a time
+  unless the task explicitly asks for a multi-change comparison.
+- Welfare graphs label demand, supply/MC, price, quantity, CS, PS, and DWL as
+  applicable. Area calculations identify base and height before substitution.
+- A constrained-price welfare calculation states whether the constraint binds,
+  how actual transactions are determined, and what allocation/rationing
+  assumption is being used.
+- Advice distinguishes revenue from profit and efficiency from fairness.
+
+## Common misconception map
+
+| Misconception | Required boundary response |
+|---|---|
+| Fixed cost means a fixed cost per unit. | Separate total fixed cost from falling average fixed cost. |
+| Variable costs or `GVK` are always constant. | Tie constancy to the stated per-unit/function assumption. |
+| Revenue equals profit. | Reconnect profit to both revenue and total cost. |
+| Break-even means the firm has no costs. | Define it as `TO=TK` and profit zero. |
+| Marginal means average or raw row difference. | Use extra total divided by extra quantity and label per-unit meaning. |
+| A negative elasticity is automatically inelastic. | Preserve sign for direction; classify `Ev` by magnitude. |
+| Normal/inferior and necessity/luxury are one classification step. | Apply sign first; necessity/luxury only within positive `Ei`. |
+| Any positive `Ek`/negative `Ek` can be named without specifying goods. | Name demand good and price-changing good before classification. |
+| Consumer surplus is firm revenue; producer surplus is profit. | Define each area/economic meaning and state the limits of the comparison. |
+| Maximum total surplus proves fairness. | Distinguish efficiency from distribution and broader welfare judgments. |
+| Any stated price away from equilibrium necessarily creates DWL. | Check binding status, transaction quantity, and allocation assumptions. |
+| A preview in Book 1 means the Book 2 operation can be skipped. | Reactivate familiarity, then teach the formal Book 2 target in full. |
+
+## Readiness and hold register
+
+| Hold ID | Scope | Blocks | Release condition |
+|---|---|---|---|
+| `H-OUTLINE-OWNER` | Whole outline | Approved use in any paragraph plan | Human owner approves an exact PR head and metadata is updated to an approved status. |
+| `H-211-GATE0B1` | 2.1.1 | Goal/target approval and production | After outline merge/pin, rerun Gate 0B-1 with the revised four-goal seed as a proposal, not authority. |
+| `H-212-STALE-REF` | 2.1.2 | Paragraph approval | Review and repair the target's stale bakery cross-reference through the governed target lane. |
+| `H-213-DELTAQ` | 2.1.3 | Paragraph approval | Confirm interval-normalised `MK`/`MO` wording and examples. |
+| `H-213-OPC2` | 2.1.3 / long route | Formal output-choice teaching | Resolve whether/where v6 `OP-C2` output choice becomes an approved target. |
+| `H-221-PRIOR` | 2.2.1 | Unqualified paragraph-plan PASS | Pin Book 1 percentage/demand retrieval and decide whether registry prior fields need a later normalization. |
+| `H-22-ELASTIC-CONTRAST` | 2.2.1–2.2.2 | Unqualified paragraph-plan PASS | Include and review at least one explicit `|Ev|>1` numerical/interpretive contrast alongside the two inelastic target contexts. |
+| `H-231-V5` | 2.3.1 | Paragraph production | Complete v5 target review. |
+| `H-232-V5` | 2.3.2 | Paragraph production | Complete v5 target/economics review, including supply-as-MC boundary. |
+| `H-233-V5-REF` | 2.3.3 | Paragraph production | Complete v5 review, repair source reference, and qualify binding/transaction assumptions. |
+| `H-234-PLACEHOLDER` | 2.3.4 | Paragraph production | Replace placeholder with reviewed consolidation goals/target without new theory. |
+| `H-LESSON-ROOT` | Lesson planning | Lesson claim/readiness | Separate lesson-repo task creates/updates root and Chapter 2.3 plans after platform authority is approved. |
+
+## Gate 0B-0 readiness decision
+
+The outline package is `review_ready_with_holds`, not approved. Its derived
+sequence is suitable for teacher, economics, curriculum-sequencing, structural,
+and owner review. No paragraph build may use it in approved mode yet.
+
+After human approval and governed integration:
+
+1. update metadata to the approved exact outline version/hash;
+2. refresh PR #224 from current main;
+3. pin this outline in the Issue #223 paragraph plan;
+4. reopen Gate 0B-1 for §2.1.1 goals/target design; and
+5. keep every paragraph-specific and target-quality hold above in force until
+   its own release condition is satisfied.
+
+This outline does not authorize a merge, a lesson edit, target mutation,
+student-facing output, or a mastery claim.

@@ -93,6 +93,9 @@ jobs:
       - name: Validate blueprint pedagogical boundaries
         run: npm run check:blueprint-pedagogical-boundaries
 
+      - name: Validate Book 2 outline currentness
+        run: npm run check:book-outline-currentness
+
       - name: Validate exercise authority hygiene
         run: npm run check:exercise-authority-hygiene
 

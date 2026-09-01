@@ -41,6 +41,9 @@ Inspect as many of these as apply:
 - User request, learning claim, and acceptance criteria.
 - `AGENTS.md`, `BUILD-PARAGRAPH.md`, `BUILD-CHAPTER.md`, and any relevant sprint/gate plan.
 - Paragraph plan, learning goals, procedure-stappen-plan, terminology table, and visual assignment table.
+- For Book 2, the paragraph plan's Book foundation check plus
+  `references/authored/book-outlines/book-2-outline.md` and its `.meta.json`
+  companion.
 - Course blueprint and target exercise.
 - For official CvTE or CvTE-derived targets: the paragraph plan's
   `Exam-target route trace`, official prompt/source annexes/figures/tables,
@@ -50,6 +53,32 @@ Inspect as many of these as apply:
 - Rendered output when the learning design depends on layout, graph reading, visual sequence, or interaction flow.
 - Formative checks, feedback, answer models, score/routing logic, and differentiation paths.
 - Existing review reports, quality-ref YAML, and validator/test reports.
+
+### Book foundation review mode
+
+When a Book 2 outline, chapter plan, paragraph plan, or workflow is reviewed,
+inspect the canonical
+`references/authored/book-outlines/book-2-outline.md`, its machine companion,
+and the paragraph plan's **Book foundation check**. Confirm:
+
+- the exact outline version/SHA-256 is current and owner-approved before the
+  paragraph receives an approval verdict;
+- the paragraph role and chapter dependency preserve a coherent learning
+  progression rather than treating the paragraph as a blank-slate unit;
+- every claimed prerequisite is traced to prior teaching, while
+  preview/familiarity remains distinct from mastery;
+- retrieval and interleaving are proportionate and do not displace the current
+  target route;
+- operation emphasis includes the target's calculation, representation,
+  interpretation, classification/selection, and answer-form needs as
+  applicable;
+- misconception boundaries are explicitly taught or guarded; and
+- every readiness hold in the outline is either still blocking or released by
+  named evidence. A target's source status alone cannot erase a hold.
+
+Hard fail a stale/unapproved outline pin, a missing paragraph row, hidden
+prerequisite, preview-to-mastery promotion, ignored blocking hold, or a
+paragraph/chapter sequence that contradicts the approved book role.
 
 ### Book 2+ Part A contract-review mode
 

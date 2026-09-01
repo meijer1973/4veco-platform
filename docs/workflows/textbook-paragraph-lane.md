@@ -28,6 +28,21 @@ untargeted independent operation, displaces the approved target route, or
 relaxes the whole-lesson 55-minute proof. The exercise builder remains the
 operational sequence/coverage authority.
 
+**Book foundation check:** before any Book 2 goals, target route, or Part A
+content work, read `references/authored/book-outlines/book-2-outline.md` and its
+machine companion. Run:
+
+```bash
+npm run check:book-outline-currentness
+npm run check:book-outline-currentness -- --require-approved
+```
+
+The paragraph plan must pin the exact outline version/SHA-256 and record its
+paragraph role, prerequisites, chapter dependency, prior teaching,
+retrieval/interleaving, operation emphasis, misconception boundary, readiness
+verdict, and holds. Structural currentness is insufficient when owner approval
+is pending. Any stale source, missing role, or blocking hold stops the lane.
+
 The companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` belongs
 to Part B. It is not a printed Part A heading sequence and does not create an
 additional lane.
@@ -53,6 +68,8 @@ additional lane.
 - `X.Y.Z-review.md`
 - `X.Y.Z-quality-ref.yaml` `partA:` block (see `docs/workflows/paragraph-quality-ref-schema-v2.md`)
 - `X.Y.Z-textbook-handoff.md`
+- Paragraph planning artifact containing the required Book foundation check
+  (the plan itself remains a planning/control input, not student-facing copy)
 - For consolidation paragraphs, omit `paragraaf.*` and produce the required
   `opgaven` and `antwoorden` markdown, HTML, and PDF files. PDF output is not
   owned by the Part B companion lane.
@@ -123,6 +140,9 @@ The lane is closed only when:
 - Every Book 2+ target operation is covered in the required alignment table,
   the seven headings/order and core-route timing have been reviewed, and the
   optional guided/bonus/review semantics pass `econ-paragraph-review`.
+- The Book foundation check points to the current owner-approved
+  `references/authored/book-outlines/book-2-outline.md` version/hash and no
+  paragraph hold is ignored.
 
 `complete` validation is not a normal textbook assignment. It is an integration
 verification state after Part B exists or a deliberately authorized complete

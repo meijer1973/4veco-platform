@@ -17,11 +17,32 @@ web companion paragraph lane. Website companion work uses
 
 ---
 
+## Book foundation check
+
+Before creating or revising a Book 2 `_chapter-plan.md`, read
+`references/authored/book-outlines/book-2-outline.md` and its `.meta.json`
+companion, then run:
+
+```bash
+npm run check:book-outline-currentness
+npm run check:book-outline-currentness -- --require-approved
+```
+
+Stop when the outline is stale, owner approval is pending, the chapter spine is
+absent, or an in-scope paragraph has a blocking hold. The chapter plan must pin
+the approved outline reference/version/SHA-256 and map each paragraph to its
+role, prerequisites, chapter dependency, retrieval/interleaving, operation
+emphasis, misconception boundary, readiness verdict, and holds. This is the
+chapter-level **Book foundation check**; it precedes blueprint-to-paragraph
+delegation and is not replaced by a source status or an existing lesson folder.
+
+---
+
 ## Stage 1: Paragraph Production
 
 Follow the `econ-chapter-builder` skill for the full orchestration process:
 
-1. **Plan** — read blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save as `_chapter-plan.md`.
+1. **Plan** — pass the Book foundation check, read the blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save the outline pin and decisions in `_chapter-plan.md`.
 2. **Build** — delegate each paragraph to a sub-agent that follows `econ-textbook-paragraph` exactly. Each sub-agent must produce ALL deliverables: 3 .md files, 3 .pdf files, build_pdf.py, _assets/ with SVG+PNG pairs.
 3. **Verify** — after each sub-agent returns, run completeness check. If anything missing, send back.
 4. **QC** — independent sub-agent review per paragraph (Pass 0 + Pass 1 + Pass 2 from `econ-paragraph-review`).
@@ -45,11 +66,12 @@ For each paragraph in the chapter, verify:
 2. □ 2 `.pdf` files exist, each >10KB
 
 **All paragraphs (theory + consolidation):**
-3. □ `build_pdf.py` exists
-4. □ `_assets/` folder exists with SVG + PNG pairs
-5. □ Asset completeness: every image ref in `.md` → file exists in `_assets/`
-6. □ `X.Y.Z-review.md` exists (from independent QC review)
-7. □ `X.Y.Z-quality-ref.yaml` exists and the Part A `partA:` block is valid (assets.missing is empty, svgpng_paired is true)
+3. □ The paragraph plan's Book foundation check matches the chapter plan's approved outline version/hash and has no ignored blocking hold
+4. □ `build_pdf.py` exists
+5. □ `_assets/` folder exists with SVG + PNG pairs
+6. □ Asset completeness: every image ref in `.md` → file exists in `_assets/`
+7. □ `X.Y.Z-review.md` exists (from independent QC review)
+8. □ `X.Y.Z-quality-ref.yaml` exists and the Part A `partA:` block is valid (assets.missing is empty, svgpng_paired is true)
 
 **If any paragraph fails this gate → go back and complete that paragraph first.**
 
@@ -152,12 +174,13 @@ For a command-by-command validation report, use `agents/testing-agent.md`. For c
 | # | Check | Status |
 |---|-------|--------|
 | 1 | `validate-chapter.js` passes with 0 errors | □ |
-| 2 | Cross-paragraph consistency review completed (sub-agent) | □ |
-| 3 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
-| 4 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
-| 5 | Chapter PDF: images render, pages break correctly (visual check) | □ |
-| 6 | Chapter PDF: figure captions/descriptions match the rendered figures, not only the file numbers | □ |
-| 7 | Answer booklet PDF: images render, pages break correctly | □ |
+| 2 | Book foundation check pins the current owner-approved outline and all paragraph holds are resolved or blocking | □ |
+| 3 | Cross-paragraph consistency review completed (sub-agent) | □ |
+| 4 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
+| 5 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
+| 6 | Chapter PDF: images render, pages break correctly (visual check) | □ |
+| 7 | Chapter PDF: figure captions/descriptions match the rendered figures, not only the file numbers | □ |
+| 8 | Answer booklet PDF: images render, pages break correctly | □ |
 
 **A chapter is complete when ALL items are checked. Not before.**
 
