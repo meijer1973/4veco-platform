@@ -11,7 +11,9 @@ const {
   asText,
   blockingHoldsForAction,
   findBookOutlineFailures,
+  formatHoldProjectionRow,
   readFiles,
+  sha256SemanticAuthority,
 } = require('./check-book-outline-currentness');
 
 const root = path.resolve(__dirname, '..', '..');
@@ -56,6 +58,65 @@ function release(hold) {
     released_on: '2026-09-01',
     evidence_ref: 'PR #999 exact-head approval',
   };
+}
+
+function replaceProjectionRow(files, hold) {
+  const lines = asText(files[OUTLINE_PATH]).split(/\r?\n/);
+  const prefix = `| \`${hold.id}\` |`;
+  const index = lines.findIndex((line) => line.startsWith(prefix));
+  expect(index).toBeGreaterThanOrEqual(0);
+  lines[index] = formatHoldProjectionRow(hold);
+  files[OUTLINE_PATH] = `${lines.join('\n').replace(/\n+$/, '')}\n`;
+}
+
+function writeMeta(files, meta) {
+  meta.semantic_authority.sha256 = sha256SemanticAuthority(files[OUTLINE_PATH]);
+  files[META_PATH] = `${JSON.stringify(meta, null, 2)}\n`;
+}
+
+function releaseHoldInFiles(files, holdId) {
+  const meta = JSON.parse(asText(files[META_PATH]));
+  const hold = meta.holds.find((item) => item.id === holdId);
+  expect(hold).toBeDefined();
+  release(hold);
+  replaceProjectionRow(files, hold);
+  writeMeta(files, meta);
+  return files;
+}
+
+function approveOutlineInFiles(files) {
+  const meta = JSON.parse(asText(files[META_PATH]));
+  const hold = meta.holds.find((item) => item.id === 'H-OUTLINE-OWNER');
+  release(hold);
+  meta.status = 'approved_with_holds';
+  let outline = asText(files[OUTLINE_PATH])
+    .replace('Status: `review_ready_with_holds`', 'Status: `approved_with_holds`')
+    .replace('Owner approval: `pending`', 'Owner approval: `approved`');
+  files[OUTLINE_PATH] = outline;
+  replaceProjectionRow(files, hold);
+  meta.semantic_authority.sha256 = sha256SemanticAuthority(files[OUTLINE_PATH]);
+  meta.owner_approval = {
+    status: 'approved',
+    approved_version: meta.version,
+    approved_outline_sha256: meta.semantic_authority.sha256,
+    approved_pr: 999,
+    approved_commit: 'a'.repeat(40),
+  };
+  files[META_PATH] = `${JSON.stringify(meta, null, 2)}\n`;
+  return files;
+}
+
+function mutateProjectionCell(files, holdId, cellIndex, replacement) {
+  const lines = asText(files[OUTLINE_PATH]).split(/\r?\n/);
+  const prefix = `| \`${holdId}\` |`;
+  const index = lines.findIndex((line) => line.startsWith(prefix));
+  expect(index).toBeGreaterThanOrEqual(0);
+  const cells = lines[index].split('|');
+  expect(cells).toHaveLength(10);
+  cells[cellIndex + 1] = ` ${replacement} `;
+  lines[index] = cells.join('|');
+  files[OUTLINE_PATH] = `${lines.join('\n').replace(/\n+$/, '')}\n`;
+  return files;
 }
 
 describe('Book 2 outline currentness contract', () => {
@@ -125,6 +186,31 @@ describe('Book 2 outline currentness contract', () => {
     expect(findBookOutlineFailures(cloneFiles(), { action: 'goal_design', paragraph: '2.1.1' })).toEqual([]);
   });
 
+  test('outline owner decision is allowed, owner evidence releases approved use, and merge remains separately governed', () => {
+    expect(findBookOutlineFailures(cloneFiles(), { action: 'outline_owner_decision' })).toEqual([]);
+
+    const approvedFiles = approveOutlineInFiles(cloneFiles());
+    expect(findBookOutlineFailures(approvedFiles, { requireApproved: true })).toEqual([]);
+    expect(findBookOutlineFailures(approvedFiles, { action: 'approved_outline_use' })).toEqual([]);
+
+    const meta = JSON.parse(asText(approvedFiles[META_PATH]));
+    expect(blockingHoldsForAction(meta, { action: 'merge' }).map((hold) => hold.id)).toContain('H-MERGE-GOVERNANCE');
+  });
+
+  test('Gate 0B-1 decision and release transition reaches approved goal use', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    expect(findBookOutlineFailures(files, { action: 'goal_owner_decision', paragraph: '2.1.1' })).toEqual([]);
+    releaseHoldInFiles(files, 'H-211-GATE0B1');
+    expect(findBookOutlineFailures(files, { action: 'approved_goal_use', paragraph: '2.1.1' })).toEqual([]);
+  });
+
+  test('target-authority repair and release transition reaches target integration', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    expect(findBookOutlineFailures(files, { action: 'target_authority_repair', paragraph: '2.1.2' })).toEqual([]);
+    releaseHoldInFiles(files, 'H-212-STALE-REF');
+    expect(findBookOutlineFailures(files, { action: 'target_authority_integration', paragraph: '2.1.2' })).toEqual([]);
+  });
+
   test('blocks paragraph production for 2.1.1 with both matching open holds', () => {
     const failures = findBookOutlineFailures(cloneFiles(), { action: 'paragraph_production', paragraph: '2.1.1' });
     expect(failures).toEqual(expect.arrayContaining([
@@ -141,6 +227,27 @@ describe('Book 2 outline currentness contract', () => {
 
   test('an out-of-scope lesson hold does not block chapter planning', () => {
     expect(findBookOutlineFailures(cloneFiles(), { action: 'chapter_planning', chapter: '2.1' })).toEqual([]);
+  });
+
+  test('typed lesson-plan scopes block Chapter 2.3 without leaking into Chapter 2.1 or §2.1.1', () => {
+    const files = approveOutlineInFiles(cloneFiles());
+    releaseHoldInFiles(files, 'H-211-GATE0B1');
+
+    expect(findBookOutlineFailures(files, { action: 'goal_design', paragraph: '2.1.1' })).toEqual([]);
+    expect(findBookOutlineFailures(files, { action: 'lesson_authoring', paragraph: '2.1.1' })).toEqual([]);
+    expect(findBookOutlineFailures(files, { action: 'chapter_production', chapter: '2.1' })).toEqual([]);
+    expect(findBookOutlineFailures(files, { action: 'lesson_authoring', paragraph: '2.2.3' })).toEqual([]);
+
+    const chapter23Failures = findBookOutlineFailures(files, { action: 'chapter_production', chapter: '2.3' });
+    expect(chapter23Failures).toEqual(expect.arrayContaining([
+      expect.stringContaining('H-CHAPTER-23-PLAN'),
+    ]));
+  });
+
+  test('rejects a typo or unregistered typed hold scope', () => {
+    expectFailure(mutateJson(META_PATH, (meta) => {
+      meta.holds.find((hold) => hold.id === 'H-CHAPTER-23-PLAN').scope = ['chapter:2.33'];
+    }), 'uses unregistered typed scope chapter:2.33');
   });
 
   test('a hold can transition from open to released with evidence', () => {
@@ -176,6 +283,25 @@ describe('Book 2 outline currentness contract', () => {
     expectFailure(mutateJson(META_PATH, (meta) => meta.holds[1].permits.push('paragraph_production')), 'cannot both block and permit paragraph_production');
   });
 
+  test('rejects a resolution action that is not explicitly permitted', () => {
+    expectFailure(mutateJson(META_PATH, (meta) => {
+      meta.holds.find((hold) => hold.id === 'H-212-STALE-REF').permits = ['goal_design'];
+    }), 'resolution action target_authority_repair must be explicitly permitted');
+  });
+
+  test.each([
+    ['status', 1, 'released'],
+    ['scope', 2, '`paragraph:2.1.2`'],
+    ['blocks', 3, '`approved_goal_use`, `paragraph_production`'],
+    ['permits', 4, '`goal_design`, `target_design`, `specialist_review`'],
+    ['resolution_actions', 5, '`goal_owner_decision`'],
+    ['release_condition', 6, 'A different release condition.'],
+    ['release_evidence', 7, 'released_by=owner; released_on=2026-09-01; evidence_ref=wrong reference'],
+  ])('rejects Markdown/metadata hold projection drift for %s', (field, cellIndex, replacement) => {
+    const files = mutateProjectionCell(cloneFiles(), 'H-211-GATE0B1', cellIndex, replacement);
+    expectFailure(files, `hold H-211-GATE0B1 projection mismatch for ${field}`);
+  });
+
   test('rejects a prose hold erased from lifecycle metadata without hardcoding its ID', () => {
     expectFailure(mutateJson(META_PATH, (meta) => { meta.holds = meta.holds.filter((hold) => hold.id !== 'H-212-STALE-REF'); }), 'prose hold H-212-STALE-REF is missing from lifecycle metadata');
   });
@@ -192,6 +318,11 @@ describe('Book 2 outline currentness contract', () => {
     expectFailure(mutate('build-scripts/templates/template-paragraph-plan.md', 'Part B companion implementation plan', 'shared implementation plan'), 'Part B plan ownership is missing');
   });
 
+  test('rejects stale GitHub entrypoint Part A template routing or approved-use wording', () => {
+    expectFailure(mutate('AGENT_GITHUB_ENTRY.md', 'Part A uses `build-scripts/templates/template-textbook-paragraph-plan.md`', 'Part A uses `build-scripts/templates/template-paragraph-plan.md`'), 'GitHub entry map must route Part A to the textbook-plan template');
+    expectFailure(mutate('AGENT_GITHUB_ENTRY.md', 'only for approved authority, production, or integration actions', 'before any paragraph use'), 'GitHub entry map must scope approved-use mode');
+  });
+
   test('rejects missing npm and CI wiring', () => {
     expectFailure(mutateJson('package.json', (pkg) => { delete pkg.scripts['check:book-outline-currentness']; }), 'check:book-outline-currentness script');
     expectFailure(mutate('.github/workflows/platform-ci.yml', '      - name: Validate Book 2 outline currentness\n        run: npm run check:book-outline-currentness\n'), 'platform CI wiring');
@@ -202,17 +333,7 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('approved-use mode requires exact approval pins and released owner hold evidence', () => {
-    const files = mutateJson(META_PATH, (meta) => {
-      meta.status = 'approved_with_holds';
-      meta.owner_approval = {
-        status: 'approved',
-        approved_version: meta.version,
-        approved_outline_sha256: meta.semantic_authority.sha256,
-        approved_pr: 999,
-        approved_commit: 'a'.repeat(40),
-      };
-      release(meta.holds.find((hold) => hold.id === 'H-OUTLINE-OWNER'));
-    });
+    const files = approveOutlineInFiles(cloneFiles());
     expect(findBookOutlineFailures(files, { requireApproved: true })).toEqual([]);
   });
 });

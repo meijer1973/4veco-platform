@@ -37,7 +37,7 @@ machine companion. Run:
 ```bash
 npm run check:book-outline-currentness
 npm run check:book-outline-currentness -- --action <action> --paragraph X.Y.Z
-npm run check:book-outline-currentness -- --require-approved  # for approval/production actions
+npm run check:book-outline-currentness -- --require-approved  # before approved authority, production, or integration
 ```
 
 Part A owns `<paragraph-folder>/X.Y.Z-textbook-plan.md`, created from
@@ -46,7 +46,9 @@ foundation check pins v6/v5/outline/chapter-plan/target identity and freshness,
 copies canonical Markdown semantics, uses the five prerequisite
 classifications, and evaluates each hold against the exact current action. A
 stale source or matching open hold that blocks the current action stops that
-action. Released, unrelated, out-of-scope, and explicitly permitted holds do
+action. Explicit resolution actions may satisfy release conditions without
+granting later approved use or integration. Released, unrelated, out-of-scope,
+and explicitly permitted holds do
 not. Part B may consume this plan but owns its separate `_paragraph-plan.md`.
 
 The companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` belongs

@@ -18,7 +18,9 @@ the canonical semantic authority
 companion. Part A creates `X.Y.Z-textbook-plan.md` from
 `build-scripts/templates/template-textbook-paragraph-plan.md`. Run structural
 currentness and `--action <action> --paragraph X.Y.Z`; run
-`--require-approved` only for an action that requires approval. Stop only when
+`--require-approved` only for approved authority, production, or integration.
+Treat a hold's explicit resolution action as distinct from the later use or
+integration action it guards. Stop only when
 the outline is stale or a matching open hold blocks the current action.
 Released holds require evidence and no longer block; unrelated, out-of-scope,
 or explicitly permitted holds do not block. Record every required authority,

@@ -9,6 +9,7 @@ const ROOT = path.resolve(__dirname, '..', '..');
 const OUTLINE_PATH = 'references/authored/book-outlines/book-2-outline.md';
 const META_PATH = 'references/authored/book-outlines/book-2-outline.meta.json';
 const TARGET_REGISTRY_PATH = 'references/authored/course-target-exercises.json';
+const HOLD_PROJECTION_HEADER = '| Hold ID | Status | Scope | Blocks | Explicitly permits | Resolution actions | Release condition | Release evidence |';
 
 const AUTHORITY_PATHS = Object.freeze([
   'references/owned/course-blueprint-v6-three-year.md',
@@ -41,19 +42,56 @@ const EXPECTED_KINDS = Object.freeze([
 ]);
 
 const REGISTERED_ACTIONS = Object.freeze([
-  'outline_approval',
+  'outline_owner_decision',
+  'approved_outline_use',
   'goal_design',
   'target_design',
   'specialist_review',
-  'goal_approval',
-  'target_authority',
+  'goal_owner_decision',
+  'approved_goal_use',
+  'target_authority_repair',
+  'target_authority_integration',
   'paragraph_production',
   'chapter_planning',
+  'chapter_plan_repair',
   'chapter_production',
+  'book_plan_repair',
+  'book_readiness',
+  'whole_book_assembly',
   'lesson_authoring',
+  'merge_owner_decision',
   'merge',
   'formal_output_choice_teaching',
 ]);
+
+const REGISTERED_SCOPES = Object.freeze(new Set([
+  'book:2',
+  'chapter:2.1', 'chapter:2.2', 'chapter:2.3',
+  ...EXPECTED_ORDER.map((id) => `paragraph:${id}`),
+  'route:long',
+]));
+
+const PARAGRAPH_SCOPED_ACTIONS = Object.freeze(new Set([
+  'goal_design',
+  'target_design',
+  'goal_owner_decision',
+  'approved_goal_use',
+  'target_authority_repair',
+  'target_authority_integration',
+  'paragraph_production',
+  'formal_output_choice_teaching',
+]));
+
+const CHAPTER_SCOPED_ACTIONS = Object.freeze(new Set([
+  'chapter_planning',
+  'chapter_plan_repair',
+  'chapter_production',
+]));
+
+const BOOK_AGGREGATE_ACTIONS = Object.freeze(new Set([
+  'book_readiness',
+  'whole_book_assembly',
+]));
 
 const FORBIDDEN_SEMANTIC_KEYS = Object.freeze(new Set([
   'semantic_invariants',
@@ -99,6 +137,24 @@ function asText(value) {
 function sha256CanonicalText(value) {
   const text = asText(value);
   return sha256(Buffer.from(text.replace(/\r\n?/g, '\n'), 'utf8'));
+}
+
+function semanticAuthorityText(value) {
+  const text = asText(value).replace(/\r\n?/g, '\n');
+  const lines = text.split('\n');
+  const headerIndex = lines.findIndex((line) => line.trim() === HOLD_PROJECTION_HEADER);
+  if (headerIndex < 0) return text;
+  let endIndex = headerIndex + 2;
+  while (endIndex < lines.length && lines[endIndex].trim().startsWith('|')) endIndex += 1;
+  return [
+    ...lines.slice(0, headerIndex),
+    '<!-- lifecycle hold projection is validated against metadata and excluded from the semantic hash -->',
+    ...lines.slice(endIndex),
+  ].join('\n');
+}
+
+function sha256SemanticAuthority(value) {
+  return sha256(Buffer.from(semanticAuthorityText(value), 'utf8'));
 }
 
 function readFiles(root = ROOT) {
@@ -151,7 +207,7 @@ function findForbiddenSemanticKeys(value, location = '$', found = []) {
 
 function checkMetadata(failures, files, meta) {
   if (!meta) return;
-  if (meta.schema_version !== 2) failures.push(`${META_PATH}: schema_version must equal 2`);
+  if (meta.schema_version !== 3) failures.push(`${META_PATH}: schema_version must equal 3`);
   if (meta.outline_id !== 'book-2') failures.push(`${META_PATH}: outline_id must equal book-2`);
   if (meta.audit_outcome !== 'VALID_WITH_DERIVED_OUTLINE_REQUIRED') {
     failures.push(`${META_PATH}: audit_outcome must remain VALID_WITH_DERIVED_OUTLINE_REQUIRED`);
@@ -164,9 +220,12 @@ function checkMetadata(failures, files, meta) {
   if (semantic.rule !== 'canonical_human_semantics_live_only_in_markdown') {
     failures.push(`${META_PATH}: semantic authority rule is missing or changed`);
   }
+  if (semantic.hash_scope !== 'canonical_utf8_lf_excluding_validated_lifecycle_projection') {
+    failures.push(`${META_PATH}: semantic authority hash_scope is missing or changed`);
+  }
   const outline = files[OUTLINE_PATH];
   if (outline === null) failures.push(`${OUTLINE_PATH}: required source file is missing`);
-  else if (sha256CanonicalText(outline) !== semantic.sha256) failures.push(`${META_PATH}: semantic_authority.sha256 is stale`);
+  else if (sha256SemanticAuthority(outline) !== semantic.sha256) failures.push(`${META_PATH}: semantic_authority.sha256 is stale`);
 
   for (const location of findForbiddenSemanticKeys(meta)) {
     failures.push(`${META_PATH}: semantic field is prohibited in machine metadata: ${location}`);
@@ -210,19 +269,26 @@ function checkTargetRegistry(failures, files, meta, registry) {
 }
 
 function holdScopeMatches(hold, options = {}) {
-  const scope = Array.isArray(hold.scope) ? hold.scope : [];
-  if (scope.includes('book-2')) return true;
-  if (options.paragraph) {
-    if (scope.includes(options.paragraph)) return true;
-    const chapter = options.paragraph.split('.').slice(0, 2).join('.');
-    if (scope.includes(chapter)) return true;
-  }
-  if (options.chapter) {
-    if (scope.includes(options.chapter)) return true;
-    if (scope.some((item) => /^2\.[123]\.[1234]$/.test(item) && item.startsWith(`${options.chapter}.`))) return true;
-  }
-  if (options.action === 'lesson_authoring' && scope.some((item) => item.startsWith('lesson_'))) return true;
-  return false;
+  const scopes = Array.isArray(hold.scope) ? hold.scope : [];
+  const paragraph = options.paragraph || null;
+  const chapter = options.chapter || (paragraph ? paragraph.split('.').slice(0, 2).join('.') : null);
+
+  return scopes.some((scope) => {
+    if (scope === 'book:2') return true;
+    if (scope.startsWith('chapter:')) {
+      const scopedChapter = scope.slice('chapter:'.length);
+      if (chapter === scopedChapter) return true;
+      return BOOK_AGGREGATE_ACTIONS.has(options.action);
+    }
+    if (scope.startsWith('paragraph:')) {
+      const scopedParagraph = scope.slice('paragraph:'.length);
+      if (paragraph === scopedParagraph) return true;
+      if (options.chapter && scopedParagraph.startsWith(`${options.chapter}.`)) return true;
+      return BOOK_AGGREGATE_ACTIONS.has(options.action);
+    }
+    if (scope.startsWith('route:')) return scope === `route:${options.route || ''}`;
+    return false;
+  });
 }
 
 function blockingHoldsForAction(meta, options = {}) {
@@ -235,6 +301,63 @@ function blockingHoldsForAction(meta, options = {}) {
   ));
 }
 
+function normalizeProjectionText(value) {
+  return String(value || '').replace(/`/g, '').replace(/\s+/g, ' ').trim();
+}
+
+function parseProjectionList(value) {
+  const normalized = normalizeProjectionText(value);
+  if (normalized === '' || normalized === '—') return [];
+  return normalized.split(',').map((item) => item.trim()).filter(Boolean);
+}
+
+function formatProjectionList(values) {
+  return Array.isArray(values) && values.length > 0
+    ? values.map((value) => `\`${value}\``).join(', ')
+    : '—';
+}
+
+function formatReleaseEvidence(evidence) {
+  if (evidence === null || evidence === undefined) return '—';
+  return `released_by=${evidence.released_by}; released_on=${evidence.released_on}; evidence_ref=${evidence.evidence_ref}`;
+}
+
+function formatHoldProjectionRow(hold) {
+  return `| \`${hold.id}\` | ${hold.status} | ${formatProjectionList(hold.scope)} | ${formatProjectionList(hold.blocks)} | ${formatProjectionList(hold.permits)} | ${formatProjectionList(hold.resolution_actions)} | ${hold.release_condition} | ${formatReleaseEvidence(hold.release_evidence)} |`;
+}
+
+function parseHoldProjectionTable(failures, files) {
+  const prose = asText(files[OUTLINE_PATH]) || '';
+  const lines = prose.split(/\r?\n/);
+  const headerIndex = lines.findIndex((line) => line.trim() === HOLD_PROJECTION_HEADER);
+  if (headerIndex < 0) {
+    failures.push(`${OUTLINE_PATH}: lifecycle hold projection header is missing or changed`);
+    return [];
+  }
+
+  const projections = [];
+  for (let index = headerIndex + 2; index < lines.length; index += 1) {
+    const line = lines[index].trim();
+    if (!line.startsWith('|')) break;
+    const cells = line.split('|').slice(1, -1).map((cell) => cell.trim());
+    if (cells.length !== 8) {
+      failures.push(`${OUTLINE_PATH}: lifecycle hold projection row must contain exactly 8 fields: ${line}`);
+      continue;
+    }
+    projections.push({
+      id: normalizeProjectionText(cells[0]),
+      status: normalizeProjectionText(cells[1]),
+      scope: parseProjectionList(cells[2]),
+      blocks: parseProjectionList(cells[3]),
+      permits: parseProjectionList(cells[4]),
+      resolution_actions: parseProjectionList(cells[5]),
+      release_condition: normalizeProjectionText(cells[6]),
+      release_evidence: normalizeProjectionText(cells[7]) === '—' ? null : normalizeProjectionText(cells[7]),
+    });
+  }
+  return projections;
+}
+
 function checkHolds(failures, files, meta, options) {
   if (!meta) return;
   const holds = Array.isArray(meta.holds) ? meta.holds : [];
@@ -245,18 +368,29 @@ function checkHolds(failures, files, meta, options) {
       failures.push(`${META_PATH}: every hold must be an object`);
       continue;
     }
-    for (const field of ['id', 'status', 'severity', 'scope', 'summary', 'blocks', 'permits', 'release_condition', 'release_evidence']) {
+    for (const field of ['id', 'status', 'severity', 'scope', 'summary', 'blocks', 'permits', 'resolution_actions', 'release_condition', 'release_evidence']) {
       if (!(field in hold)) failures.push(`${META_PATH}: ${hold.id || 'unknown hold'} is missing lifecycle field ${field}`);
     }
     if (!['open', 'released'].includes(hold.status)) failures.push(`${META_PATH}: ${hold.id} status must be open or released`);
     if (!Array.isArray(hold.scope) || hold.scope.length === 0 || hold.scope.some((item) => typeof item !== 'string' || item.trim() === '')) {
       failures.push(`${META_PATH}: ${hold.id} scope must be a non-empty string array`);
     }
-    if (!Array.isArray(hold.blocks) || !Array.isArray(hold.permits)) failures.push(`${META_PATH}: ${hold.id} blocks and permits must be arrays`);
+    for (const scope of hold.scope || []) {
+      if (!REGISTERED_SCOPES.has(scope)) failures.push(`${META_PATH}: ${hold.id} uses unregistered typed scope ${scope}`);
+    }
+    if (new Set(hold.scope || []).size !== (hold.scope || []).length) failures.push(`${META_PATH}: ${hold.id} scope values must be unique`);
+    if (!Array.isArray(hold.blocks) || !Array.isArray(hold.permits) || !Array.isArray(hold.resolution_actions)) {
+      failures.push(`${META_PATH}: ${hold.id} blocks, permits, and resolution_actions must be arrays`);
+    }
     const overlap = (hold.blocks || []).filter((action) => (hold.permits || []).includes(action));
     if (overlap.length > 0) failures.push(`${META_PATH}: ${hold.id} cannot both block and permit ${overlap.join(', ')}`);
-    for (const action of [...(hold.blocks || []), ...(hold.permits || [])]) {
+    if (!Array.isArray(hold.resolution_actions) || hold.resolution_actions.length === 0) failures.push(`${META_PATH}: ${hold.id} requires at least one resolution action`);
+    for (const action of [...(hold.blocks || []), ...(hold.permits || []), ...(hold.resolution_actions || [])]) {
       if (!REGISTERED_ACTIONS.includes(action)) failures.push(`${META_PATH}: ${hold.id} uses unregistered action ${action}`);
+    }
+    for (const action of hold.resolution_actions || []) {
+      if (!(hold.permits || []).includes(action)) failures.push(`${META_PATH}: ${hold.id} resolution action ${action} must be explicitly permitted`);
+      if ((hold.blocks || []).includes(action)) failures.push(`${META_PATH}: ${hold.id} resolution action ${action} cannot be blocked by the same hold`);
     }
     if (typeof hold.release_condition !== 'string' || hold.release_condition.trim() === '') failures.push(`${META_PATH}: ${hold.id} release_condition must be non-empty`);
     if (hold.status === 'open' && hold.release_evidence !== null) failures.push(`${META_PATH}: open hold ${hold.id} must have null release_evidence`);
@@ -279,10 +413,28 @@ function checkHolds(failures, files, meta, options) {
     failures.push(`${META_PATH}: approved status requires released H-OUTLINE-OWNER with evidence`);
   }
 
-  const prose = asText(files[OUTLINE_PATH]) || '';
-  const proseIds = [...prose.matchAll(/^\| `?(H-[A-Z0-9-]+)`? \|/gm)].map((match) => match[1]);
-  for (const id of ids) if (!proseIds.includes(id)) failures.push(`${OUTLINE_PATH}: hold ${id} is missing from the human-readable register`);
-  for (const id of proseIds) if (!ids.includes(id)) failures.push(`${META_PATH}: prose hold ${id} is missing from lifecycle metadata`);
+  const projections = parseHoldProjectionTable(failures, files);
+  const projectedIds = projections.map((projection) => projection.id);
+  if (new Set(projectedIds).size !== projectedIds.length) failures.push(`${OUTLINE_PATH}: projected hold IDs must be unique`);
+  for (const id of ids) if (!projectedIds.includes(id)) failures.push(`${OUTLINE_PATH}: hold ${id} is missing from the human-readable register`);
+  for (const id of projectedIds) if (!ids.includes(id)) failures.push(`${META_PATH}: prose hold ${id} is missing from lifecycle metadata`);
+  const projectionById = new Map(projections.map((projection) => [projection.id, projection]));
+  for (const hold of holds) {
+    if (!hold || !projectionById.has(hold.id)) continue;
+    const projection = projectionById.get(hold.id);
+    const comparisons = [
+      ['status', projection.status, hold.status],
+      ['scope', projection.scope, hold.scope],
+      ['blocks', projection.blocks, hold.blocks],
+      ['permits', projection.permits, hold.permits],
+      ['resolution_actions', projection.resolution_actions, hold.resolution_actions],
+      ['release_condition', projection.release_condition, normalizeProjectionText(hold.release_condition)],
+      ['release_evidence', projection.release_evidence, hold.release_evidence === null ? null : normalizeProjectionText(formatReleaseEvidence(hold.release_evidence))],
+    ];
+    for (const [field, actual, expected] of comparisons) {
+      if (!equal(actual, expected)) failures.push(`${OUTLINE_PATH}: hold ${hold.id} projection mismatch for ${field}`);
+    }
+  }
 
   for (const hold of blockingHoldsForAction(meta, options)) {
     failures.push(`${META_PATH}: action ${options.action} is blocked by open hold ${hold.id} in matching scope`);
@@ -307,6 +459,8 @@ function checkProse(failures, files, meta) {
   for (const heading of headings) requireText(failures, files, OUTLINE_PATH, new RegExp(`^${escapeRegExp(heading)}$`, 'm'), `missing required heading ${heading}`);
   if (!meta) return;
   requireText(failures, files, OUTLINE_PATH, new RegExp(`Version: \`${escapeRegExp(meta.version)}\``), 'version does not match metadata');
+  requireText(failures, files, OUTLINE_PATH, new RegExp(`Status: \`${escapeRegExp(meta.status)}\``), 'status does not match metadata');
+  requireText(failures, files, OUTLINE_PATH, new RegExp(`Owner approval: \`${escapeRegExp((meta.owner_approval || {}).status)}\``), 'owner approval status does not match metadata');
   requireText(failures, files, OUTLINE_PATH, /canonical human semantic\s+authority/i, 'canonical semantic authority statement is missing');
   requireText(failures, files, OUTLINE_PATH, /Consolidation paragraphs introduce no new terminal theory\./, 'consolidation boundary is missing');
   for (const id of EXPECTED_ORDER) requireText(failures, files, OUTLINE_PATH, new RegExp(`^\\| ${escapeRegExp(id)} \\|`, 'm'), `canonical foundation dimensions row ${id} is missing`);
@@ -342,6 +496,11 @@ function checkWorkflowSurfaces(failures, files, meta) {
   requireText(failures, files, 'build-scripts/templates/template-paragraph-plan.md', /consumes the approved/i, 'Part B consumption boundary is missing');
   requireText(failures, files, 'build-scripts/templates/template-paragraph-plan.md', /Part A `X\.Y\.Z-textbook-plan\.md`/i, 'Part B Part A-plan reference is missing');
   requireText(failures, files, 'build-scripts/templates/template-textbook-paragraph-plan.md', /Foundation verdict: `\[PASS_FOR_<ACTION> \| BLOCKED_FOR_<ACTION>\]`/, 'distinct action-specific foundation verdict is missing');
+
+  requireText(failures, files, 'AGENT_GITHUB_ENTRY.md', /Part A.*template-textbook-paragraph-plan\.md/i, 'GitHub entry map must route Part A to the textbook-plan template');
+  requireText(failures, files, 'AGENT_GITHUB_ENTRY.md', /template-paragraph-plan\.md.*only for Part B/i, 'GitHub entry map must reserve the companion-plan template for Part B');
+  requireText(failures, files, 'AGENT_GITHUB_ENTRY.md', /structural currentness.*action-specific check.*--require-approved/is, 'GitHub entry map must state structural, action-specific, then approved-use routing');
+  requireText(failures, files, 'AGENT_GITHUB_ENTRY.md', /--require-approved.*approved authority, production, or integration/i, 'GitHub entry map must scope approved-use mode to approved authority, production, or integration');
 
   const pkg = parseJson(failures, files, 'package.json');
   if (pkg) {
@@ -393,6 +552,11 @@ function parseCli(argv) {
   if (options.action && !REGISTERED_ACTIONS.includes(options.action)) throw new Error(`Unknown action: ${options.action}`);
   if ((options.paragraph || options.chapter) && !options.action) throw new Error('--paragraph/--chapter requires --action');
   if (options.paragraph && options.chapter) throw new Error('Use either --paragraph or --chapter, not both');
+  if (options.paragraph && !EXPECTED_ORDER.includes(options.paragraph)) throw new Error(`Unknown Book 2 paragraph: ${options.paragraph}`);
+  if (options.chapter && !['2.1', '2.2', '2.3'].includes(options.chapter)) throw new Error(`Unknown Book 2 chapter: ${options.chapter}`);
+  if (options.action && PARAGRAPH_SCOPED_ACTIONS.has(options.action) && !options.paragraph) throw new Error(`Action ${options.action} requires --paragraph`);
+  if (options.action && CHAPTER_SCOPED_ACTIONS.has(options.action) && !options.chapter) throw new Error(`Action ${options.action} requires --chapter`);
+  if (options.action === 'lesson_authoring' && !options.paragraph && !options.chapter) throw new Error('Action lesson_authoring requires --paragraph or --chapter');
   return options;
 }
 
@@ -427,13 +591,17 @@ module.exports = {
   META_PATH,
   OUTLINE_PATH,
   REGISTERED_ACTIONS,
+  REGISTERED_SCOPES,
   TARGET_REGISTRY_PATH,
   WORKFLOW_SURFACES,
   asText,
   blockingHoldsForAction,
   findBookOutlineFailures,
+  formatHoldProjectionRow,
+  formatReleaseEvidence,
   holdScopeMatches,
   readFiles,
   sha256,
   sha256CanonicalText,
+  sha256SemanticAuthority,
 };

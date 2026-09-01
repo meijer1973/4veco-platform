@@ -126,14 +126,16 @@ companion. Run:
 ```bash
 npm run check:book-outline-currentness
 npm run check:book-outline-currentness -- --action <action> --paragraph X.Y.Z
-npm run check:book-outline-currentness -- --require-approved  # when the action requires approval
+npm run check:book-outline-currentness -- --require-approved  # before approved authority, production, or integration
 ```
 
 The first command proves structural/source currentness. The action command asks
 whether any `open` hold in matching scope blocks the current action. The
 approved-use command proves owner approval only when that action needs approved
 input. An open hold does not stop unrelated, out-of-scope, or explicitly
-permitted work. A `released` hold requires evidence and no longer blocks.
+permitted work. A hold's explicit `resolution_actions` are decision or repair
+actions that may satisfy its release condition; approved use/integration is a
+separate action. A `released` hold requires evidence and no longer blocks.
 
 Part A owns `X.Y.Z-textbook-plan.md`, copied from
 `build-scripts/templates/template-textbook-paragraph-plan.md`. Its **Book

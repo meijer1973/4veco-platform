@@ -40,9 +40,10 @@ preview/familiarity separate from mastered prerequisites; expose unresolved
 target-quality and lesson-structure holds; and make every future paragraph plan
 show its Book foundation decision.
 
-The accepted review instructions, Issue #225, and the owner `REVISE` decision
-on PR #226 at reviewed head
-`56b98478d43437895664a70efe6f57d8f82a453d` are the controlling task
+The accepted review instructions, Issue #225, the first owner `REVISE`
+decision at head `56b98478d43437895664a70efe6f57d8f82a453d`, and the second
+owner `REVISE` decision on PR #226 at reviewed head
+`32f861b0734566c548c0f4cb0bb9c6deeba4fd01` are the controlling task
 specification for this derived authority layer. Rendered output is explicitly
 out of scope; proof consists of source traceability, workflow enforcement,
 machine validation, and review artifacts rather than lesson rendering. No
@@ -89,6 +90,47 @@ This revision therefore adds these required outcomes before another owner gate:
 6. mutations for hold scope/release, semantic source-of-truth, and Part A
    ownership, followed by renewed specialist and lead review and a live
    exact-head owner packet in the PR description.
+
+## Owner authority-transition revision round (2026-09-01)
+
+The second owner review accepts the outline sequence, canonical-source model,
+Part A/Part B ownership, foundation dimensions, economic boundaries, and
+prior-learning terminology. It rejects the remaining enforcement layer at
+head `32f861b0734566c548c0f4cb0bb9c6deeba4fd01` because decision actions can
+still be blocked by the holds they must release, lesson scopes are untyped and
+misapplied, the prose hold table is not field-by-field checked against machine
+enforcement, and the active GitHub entrypoint still routes Part A agents to the
+Part B template.
+
+This revision must therefore prove all of the following before renewed owner
+review:
+
+1. distinct resolution actions and subsequent use/integration actions for the
+   outline owner gate, Gate 0B-1, and target-authority repair;
+2. successful simulated transitions from open hold, through allowed decision
+   or repair, to evidence-bearing release and allowed post-release use, while
+   merge remains governed by a separate hold;
+3. typed, schema-validated `book:`, `chapter:`, `paragraph:`, and `route:`
+   scopes, with separate Book 2 root-plan and Chapter 2.3 plan holds;
+4. scope proofs after simulated owner release showing §2.1.1 lesson authoring
+   is unaffected by the Chapter 2.3 gap, Chapter 2.1 production receives the
+   intended result, Chapter 2.3 production is blocked, and unrelated scopes
+   remain unaffected;
+5. field-by-field Markdown/metadata hold projection equality for status,
+   scope, blocked actions, permitted actions, release condition, and release
+   evidence, with an independent mutation for every field;
+6. correct Part A and Part B template routing plus structural, action-specific,
+   and approved-use wording in `AGENT_GITHUB_ENTRY.md`;
+7. completion wording that requires no open hold to block the current action;
+8. renewed role-based teacher, economics, sequencing, and lead review,
+   refreshed sprint/gate evidence, focused/related/full validation, exact-head
+   CI, and a new live owner packet.
+
+Quality floor: no release-condition action may be blocked by its own open hold;
+no invalid or mistyped scope may silently disable enforcement; and no human
+hold projection may disagree with machine behavior while structural CI passes.
+The proof is code-level and mutation-based. No lesson or student-facing output
+is authorized or changed. PR #226 remains draft and unmerged throughout.
 
 ## Quality Improvement Candidates
 
@@ -206,6 +248,8 @@ node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1
 node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1 --complete
 npm.cmd run check:book-outline-currentness
 npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1
+npm.cmd run check:book-outline-currentness -- --action outline_owner_decision
+npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3
 npm.cmd run test:book-outline-currentness
 npm.cmd run check:blueprint-pedagogical-boundaries
 npm.cmd run check:part-a-exercise-authoring-contract

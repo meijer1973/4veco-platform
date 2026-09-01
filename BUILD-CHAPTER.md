@@ -26,14 +26,15 @@ companion, then run:
 ```bash
 npm run check:book-outline-currentness
 npm run check:book-outline-currentness -- --action chapter_planning --chapter X.Y
-npm run check:book-outline-currentness -- --require-approved  # before approval/production
+npm run check:book-outline-currentness -- --require-approved  # before approved authority, production, or integration
 ```
 
 Stop only when the outline is stale or an `open` hold in matching chapter scope
 lists the current action in `blocks`. A released hold requires evidence and no
 longer blocks; an unrelated, out-of-scope, or explicitly permitted hold does
-not block chapter planning. Approval and production still require approved-use
-currentness and their own action checks.
+not block chapter planning. An explicit resolution action may repair or decide
+the hold without granting later approved use or integration. Approval and
+production still require approved-use currentness and their own action checks.
 
 The chapter plan must pin the active v6/detailed v5 and approved outline
 path/version/hash, its own path/version/hash/currentness, every paragraph's
@@ -181,7 +182,7 @@ For a command-by-command validation report, use `agents/testing-agent.md`. For c
 | # | Check | Status |
 |---|-------|--------|
 | 1 | `validate-chapter.js` passes with 0 errors | □ |
-| 2 | Book foundation check pins the current owner-approved outline and all paragraph holds are resolved or blocking | □ |
+| 2 | Book foundation check pins the current owner-approved outline and no open hold blocks the current completion action | □ |
 | 3 | Cross-paragraph consistency review completed (sub-agent) | □ |
 | 4 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
 | 5 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |

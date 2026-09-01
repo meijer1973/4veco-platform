@@ -2,7 +2,7 @@
 
 Outline ID: `book-2`
 
-Version: `book-2-outline-v2-review-ready`
+Version: `book-2-outline-v3-review-ready`
 
 Status: `review_ready_with_holds`
 
@@ -30,6 +30,12 @@ failure makes it stale. This Markdown file is the canonical human semantic
 authority. The machine companion may pin identity, hashes, target records,
 workflow surfaces, reviews, and hold state; it must not restate paragraph roles,
 prerequisites, retrieval, misconceptions, or other outline semantics.
+
+The canonical semantic hash covers this Markdown after LF normalization with
+the validated lifecycle-projection table replaced by a stable marker. Hold
+status/evidence changes therefore do not silently revoke an approved semantic
+outline; every projected lifecycle field is instead checked exactly against
+metadata on every run.
 
 Planning additionally evaluates the intended action and paragraph/chapter
 scope. An open hold blocks only a matching action in matching scope. A released
@@ -274,34 +280,42 @@ units/labels, and a conclusion at the target's actual depth.
 
 ## Readiness and hold register
 
-| Hold ID | Status | Scope | Blocks | Explicitly permits | Release condition/evidence |
-|---|---|---|---|---|---|
-| `H-OUTLINE-OWNER` | open | `book-2` | `outline_approval`, `goal_approval`, `target_authority`, `paragraph_production`, `chapter_production`, `lesson_authoring`, `merge` | `goal_design`, `target_design`, `specialist_review` | Owner approves an exact PR head; released metadata records approver, date, and exact approval evidence. |
-| `H-211-GATE0B1` | open | `2.1.1` | `goal_approval`, `target_authority`, `paragraph_production`, `lesson_authoring` | `goal_design`, `target_design`, `specialist_review` | After outline approval/integration, Gate 0B-1 approves a reviewed goal/target package; released metadata records that decision. |
-| `H-212-STALE-REF` | open | `2.1.2` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Governed target-lane review repairs and approves the intended dependency, with record/PR evidence. |
-| `H-213-DELTAQ` | open | `2.1.3` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Specialist review approves interval-normalised `MK`/`MO` wording and examples, with evidence. |
-| `H-213-OPC2` | open | `2.1.3`, `long_route` | `formal_output_choice_teaching` | `goal_design`, `specialist_review` | Governed authority decides whether/where `OP-C2` is taught and records the decision. |
-| `H-221-PRIOR` | open | `2.2.1` | `goal_approval`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Approved plan pins Book 1 retrieval and records any registry-normalization decision. |
-| `H-22-ELASTIC-CONTRAST` | open | `2.2.1`, `2.2.2` | `goal_approval`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Approved instruction/practice includes reviewed `|Ev|>1` contrast evidence. |
-| `H-231-V5` | open | `2.3.1` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | V5 target review approves an exact record and stores its evidence. |
-| `H-232-V5` | open | `2.3.2` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | V5 target/economics review approves the target and supply-as-MC boundary. |
-| `H-233-V5-REF` | open | `2.3.3` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | V5 review and source repair approve binding/transaction assumptions with exact evidence. |
-| `H-234-PLACEHOLDER` | open | `2.3.4` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Reviewed consolidation goals/target replace the placeholder without new theory. |
-| `H-LESSON-ROOT` | open | `lesson_book_2_root`, `lesson_chapter_2_3` | `chapter_production`, `lesson_authoring` | `chapter_planning`, `specialist_review` | Separate lesson-repository task creates/reviews the required plans and records exact evidence. |
+| Hold ID | Status | Scope | Blocks | Explicitly permits | Resolution actions | Release condition | Release evidence |
+|---|---|---|---|---|---|---|---|
+| `H-OUTLINE-OWNER` | open | `book:2` | `approved_outline_use`, `goal_owner_decision`, `approved_goal_use`, `target_authority_repair`, `target_authority_integration`, `paragraph_production`, `chapter_production`, `lesson_authoring`, `merge` | `outline_owner_decision`, `goal_design`, `target_design`, `specialist_review`, `chapter_planning` | `outline_owner_decision` | The owner approves an exact PR head and the approval pins are recorded. | — |
+| `H-211-GATE0B1` | open | `paragraph:2.1.1` | `approved_goal_use`, `target_authority_integration`, `paragraph_production`, `lesson_authoring` | `goal_design`, `target_design`, `specialist_review`, `goal_owner_decision`, `target_authority_repair` | `goal_owner_decision`, `target_authority_repair` | Gate 0B-1 approves the exact goal/target package after outline approval and integration. | — |
+| `H-212-STALE-REF` | open | `paragraph:2.1.2` | `approved_goal_use`, `target_authority_integration`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair` | `target_authority_repair` | A governed target-lane decision repairs and approves the intended dependency. | — |
+| `H-213-DELTAQ` | open | `paragraph:2.1.3` | `approved_goal_use`, `target_authority_integration`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair` | `target_authority_repair` | Specialist review approves interval-normalized wording and examples. | — |
+| `H-213-OPC2` | open | `paragraph:2.1.3`, `route:long` | `formal_output_choice_teaching` | `goal_design`, `specialist_review`, `target_authority_repair` | `target_authority_repair` | Governed authority decides whether and where OP-C2 is taught. | — |
+| `H-221-PRIOR` | open | `paragraph:2.2.1` | `approved_goal_use`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `goal_owner_decision` | `goal_owner_decision` | An approved Part A plan pins retrieval and records any registry-normalization decision. | — |
+| `H-22-ELASTIC-CONTRAST` | open | `paragraph:2.2.1`, `paragraph:2.2.2` | `approved_goal_use`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `goal_owner_decision` | `goal_owner_decision` | Approved instruction and practice include reviewed elastic-contrast evidence. | — |
+| `H-231-V5` | open | `paragraph:2.3.1` | `approved_goal_use`, `target_authority_integration`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair` | `target_authority_repair` | V5 target review approves an exact target record. | — |
+| `H-232-V5` | open | `paragraph:2.3.2` | `approved_goal_use`, `target_authority_integration`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair` | `target_authority_repair` | V5 target and economics review approve the target and supply-as-MC boundary. | — |
+| `H-233-V5-REF` | open | `paragraph:2.3.3` | `approved_goal_use`, `target_authority_integration`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair` | `target_authority_repair` | V5 review and source repair approve exact binding and transaction assumptions. | — |
+| `H-234-PLACEHOLDER` | open | `paragraph:2.3.4` | `approved_goal_use`, `target_authority_integration`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair` | `target_authority_repair` | Reviewed consolidation goals and target replace the placeholder without new theory. | — |
+| `H-BOOK2-ROOT-PLAN` | open | `book:2` | `book_readiness`, `whole_book_assembly` | `book_plan_repair`, `chapter_planning`, `specialist_review` | `book_plan_repair` | A lesson-authorized task creates and reviews the Book 2 root plan and records exact evidence. | — |
+| `H-CHAPTER-23-PLAN` | open | `chapter:2.3` | `book_readiness`, `whole_book_assembly`, `chapter_production`, `paragraph_production`, `lesson_authoring` | `chapter_plan_repair`, `chapter_planning`, `goal_design`, `target_design`, `specialist_review` | `chapter_plan_repair` | A lesson-authorized task creates and reviews the Chapter 2.3 plan and records exact evidence. | — |
+| `H-MERGE-GOVERNANCE` | open | `book:2` | `merge` | `merge_owner_decision` | `merge_owner_decision` | After applicable holds are released and exact-head CI passes, owner payload authorization and serialized integration evidence are recorded. | — |
 
-The machine companion is the lifecycle authority for `status`, action lists,
-and `release_evidence`; this table is the human-readable projection. A released
-row is retained and must show its evidence. An open hold that is out of scope,
-does not list the current action in `blocks`, or explicitly permits that action
-does not block the foundation verdict.
+The machine companion is the lifecycle authority for `status`, typed scope,
+blocked actions, permitted actions, resolution actions, release condition, and
+`release_evidence`; this table is its fully checked human-readable projection.
+A released row is retained and must show
+`released_by=<actor>; released_on=<YYYY-MM-DD>; evidence_ref=<exact reference>`.
+An open hold never blocks its own resolution actions. An open hold that is out
+of scope, does not list the current action in `blocks`, or explicitly permits
+that action does not block the foundation verdict.
 
 ## Gate 0B-0 readiness decision
 
 The outline package is `review_ready_with_holds`, not approved. Its derived
 sequence is suitable for teacher, economics, curriculum-sequencing, structural,
 and owner review. §2.1.1 goal design, target design, and specialist review may
-proceed as provisional Gate 0B-1 design, but no goal approval, target-authority
-change, paragraph/lesson production, merge, or approved-use claim is permitted.
+proceed as provisional Gate 0B-1 design. `outline_owner_decision` is the
+resolution action for the owner hold; it is distinct from
+`approved_outline_use`. No goal-owner decision, target-authority repair or
+integration, paragraph/lesson production, merge, or approved-use claim is
+permitted before the matching upstream holds release.
 
 After human approval and governed integration:
 

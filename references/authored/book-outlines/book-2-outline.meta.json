@@ -1,14 +1,15 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "outline_id": "book-2",
   "title": "Book 2 Outline: Costs, Revenue, Elasticity, And Surplus",
-  "version": "book-2-outline-v2-review-ready",
+  "version": "book-2-outline-v3-review-ready",
   "status": "review_ready_with_holds",
   "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
   "semantic_authority": {
     "path": "references/authored/book-outlines/book-2-outline.md",
-    "sha256": "8a51238ca085f71865786dcb8daa3932b7b7122ac4f30e6db4eb08c37f4cd9db",
-    "rule": "canonical_human_semantics_live_only_in_markdown"
+    "sha256": "0b4ff155c81d01a07941b12f26ec1c9126b83aa27d6d1616619f11c617670c14",
+    "rule": "canonical_human_semantics_live_only_in_markdown",
+    "hash_scope": "canonical_utf8_lf_excluding_validated_lifecycle_projection"
   },
   "generated_on": "2026-09-01",
   "owner_approval": {
@@ -26,7 +27,8 @@
     "lead_review": "pass_with_flags_role_based_not_independent"
   },
   "hash_contract": {
-    "file_hash": "sha256(UTF-8 text after CRLF and CR are normalized to LF)",
+    "semantic_authority_hash": "sha256(canonical UTF-8 LF text with the fully validated lifecycle hold projection replaced by a stable marker)",
+    "authority_source_hash": "sha256(UTF-8 text after CRLF and CR are normalized to LF)",
     "target_record_hash": "sha256(JSON.stringify(record)) using repository property order"
   },
   "authority_sources": [
@@ -63,78 +65,105 @@
   ],
   "holds": [
     {
-      "id": "H-OUTLINE-OWNER", "status": "open", "severity": "blocking", "scope": ["book-2"],
+      "id": "H-OUTLINE-OWNER", "status": "open", "severity": "blocking", "scope": ["book:2"],
       "summary": "Owner approval is pending for the exact outline payload.",
-      "blocks": ["outline_approval", "goal_approval", "target_authority", "paragraph_production", "chapter_production", "lesson_authoring", "merge"],
-      "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_outline_use", "goal_owner_decision", "approved_goal_use", "target_authority_repair", "target_authority_integration", "paragraph_production", "chapter_production", "lesson_authoring", "merge"],
+      "permits": ["outline_owner_decision", "goal_design", "target_design", "specialist_review", "chapter_planning"],
+      "resolution_actions": ["outline_owner_decision"],
       "release_condition": "The owner approves an exact PR head and the approval pins are recorded.", "release_evidence": null
     },
     {
-      "id": "H-211-GATE0B1", "status": "open", "severity": "blocking", "scope": ["2.1.1"],
-      "summary": "Gate 0B-1 design may proceed, but goal approval, target authority, and production wait for outline approval/integration and a reviewed paragraph package.",
-      "blocks": ["goal_approval", "target_authority", "paragraph_production", "lesson_authoring"],
-      "permits": ["goal_design", "target_design", "specialist_review"],
+      "id": "H-211-GATE0B1", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
+      "summary": "Gate 0B-1 design may proceed, but approved goal/target use and production wait for outline approval/integration and a reviewed paragraph package.",
+      "blocks": ["approved_goal_use", "target_authority_integration", "paragraph_production", "lesson_authoring"],
+      "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision", "target_authority_repair"],
+      "resolution_actions": ["goal_owner_decision", "target_authority_repair"],
       "release_condition": "Gate 0B-1 approves the exact goal/target package after outline approval and integration.", "release_evidence": null
     },
     {
-      "id": "H-212-STALE-REF", "status": "open", "severity": "blocking", "scope": ["2.1.2"],
+      "id": "H-212-STALE-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.2"],
       "summary": "Target context contains a stale bakery cross-reference instead of the current Book 2 dependency.",
-      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "target_authority_integration", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
       "release_condition": "A governed target-lane decision repairs and approves the intended dependency.", "release_evidence": null
     },
     {
-      "id": "H-213-DELTAQ", "status": "open", "severity": "blocking", "scope": ["2.1.3"],
+      "id": "H-213-DELTAQ", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.3"],
       "summary": "Target interval wording must preserve MK and MO as delta total divided by delta quantity.",
-      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "target_authority_integration", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
       "release_condition": "Specialist review approves interval-normalized wording and examples.", "release_evidence": null
     },
     {
-      "id": "H-213-OPC2", "status": "open", "severity": "advisory", "scope": ["2.1.3", "long_route"],
+      "id": "H-213-OPC2", "status": "open", "severity": "advisory", "scope": ["paragraph:2.1.3", "route:long"],
       "summary": "V6 OP-C2 output choice is broader than the current v5 target and must not be silently added.",
-      "blocks": ["formal_output_choice_teaching"], "permits": ["goal_design", "specialist_review"],
+      "blocks": ["formal_output_choice_teaching"], "permits": ["goal_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
       "release_condition": "Governed authority decides whether and where OP-C2 is taught.", "release_evidence": null
     },
     {
-      "id": "H-221-PRIOR", "status": "open", "severity": "blocking", "scope": ["2.2.1"],
+      "id": "H-221-PRIOR", "status": "open", "severity": "blocking", "scope": ["paragraph:2.2.1"],
       "summary": "Book 1 percentage and demand retrieval must be explicit because the target registry prior list is empty.",
-      "blocks": ["goal_approval", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision"],
+      "resolution_actions": ["goal_owner_decision"],
       "release_condition": "An approved Part A plan pins retrieval and records any registry-normalization decision.", "release_evidence": null
     },
     {
-      "id": "H-22-ELASTIC-CONTRAST", "status": "open", "severity": "blocking", "scope": ["2.2.1", "2.2.2"],
+      "id": "H-22-ELASTIC-CONTRAST", "status": "open", "severity": "blocking", "scope": ["paragraph:2.2.1", "paragraph:2.2.2"],
       "summary": "The two numerical target contexts are both inelastic, so teaching and practice need an explicit elastic contrast.",
-      "blocks": ["goal_approval", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision"],
+      "resolution_actions": ["goal_owner_decision"],
       "release_condition": "Approved instruction and practice include reviewed elastic-contrast evidence.", "release_evidence": null
     },
     {
-      "id": "H-231-V5", "status": "open", "severity": "blocking", "scope": ["2.3.1"],
+      "id": "H-231-V5", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.1"],
       "summary": "Migrated target requires v5 review.",
-      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "target_authority_integration", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
       "release_condition": "V5 target review approves an exact target record.", "release_evidence": null
     },
     {
-      "id": "H-232-V5", "status": "open", "severity": "blocking", "scope": ["2.3.2"],
+      "id": "H-232-V5", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.2"],
       "summary": "Migrated target and supply-as-MC boundary require v5 review.",
-      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "target_authority_integration", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
       "release_condition": "V5 target and economics review approve the target and supply-as-MC boundary.", "release_evidence": null
     },
     {
-      "id": "H-233-V5-REF", "status": "open", "severity": "blocking", "scope": ["2.3.3"],
+      "id": "H-233-V5-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.3"],
       "summary": "Migrated target requires v5 review, source-reference repair, and qualified binding/transaction assumptions.",
-      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "target_authority_integration", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
       "release_condition": "V5 review and source repair approve exact binding and transaction assumptions.", "release_evidence": null
     },
     {
-      "id": "H-234-PLACEHOLDER", "status": "open", "severity": "blocking", "scope": ["2.3.4"],
+      "id": "H-234-PLACEHOLDER", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.4"],
       "summary": "Placeholder consolidation target must be replaced and reviewed without new theory.",
-      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "blocks": ["approved_goal_use", "target_authority_integration", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
       "release_condition": "Reviewed consolidation goals and target replace the placeholder without new theory.", "release_evidence": null
     },
     {
-      "id": "H-LESSON-ROOT", "status": "open", "severity": "blocking", "scope": ["lesson_book_2_root", "lesson_chapter_2_3"],
-      "summary": "Lesson Book 2 root outline and Chapter 2.3 plan are absent and require a separate lesson task.",
-      "blocks": ["chapter_production", "lesson_authoring"], "permits": ["chapter_planning", "specialist_review"],
-      "release_condition": "A separate lesson task creates and reviews the missing lesson plans.", "release_evidence": null
+      "id": "H-BOOK2-ROOT-PLAN", "status": "open", "severity": "blocking", "scope": ["book:2"],
+      "summary": "The lesson Book 2 root outline is absent and requires a separate lesson-authorized task.",
+      "blocks": ["book_readiness", "whole_book_assembly"], "permits": ["book_plan_repair", "chapter_planning", "specialist_review"],
+      "resolution_actions": ["book_plan_repair"],
+      "release_condition": "A lesson-authorized task creates and reviews the Book 2 root plan and records exact evidence.", "release_evidence": null
+    },
+    {
+      "id": "H-CHAPTER-23-PLAN", "status": "open", "severity": "blocking", "scope": ["chapter:2.3"],
+      "summary": "The lesson Chapter 2.3 plan is absent and requires a separate lesson-authorized task.",
+      "blocks": ["book_readiness", "whole_book_assembly", "chapter_production", "paragraph_production", "lesson_authoring"],
+      "permits": ["chapter_plan_repair", "chapter_planning", "goal_design", "target_design", "specialist_review"],
+      "resolution_actions": ["chapter_plan_repair"],
+      "release_condition": "A lesson-authorized task creates and reviews the Chapter 2.3 plan and records exact evidence.", "release_evidence": null
+    },
+    {
+      "id": "H-MERGE-GOVERNANCE", "status": "open", "severity": "blocking", "scope": ["book:2"],
+      "summary": "Outline approval does not itself authorize merge.",
+      "blocks": ["merge"], "permits": ["merge_owner_decision"],
+      "resolution_actions": ["merge_owner_decision"],
+      "release_condition": "After applicable holds are released and exact-head CI passes, owner payload authorization and serialized integration evidence are recorded.", "release_evidence": null
     }
   ],
   "workflow_surfaces": [
@@ -151,6 +180,7 @@
     "default_command": "npm run check:book-outline-currentness",
     "approved_command": "npm run check:book-outline-currentness -- --require-approved",
     "action_command": "npm run check:book-outline-currentness -- --action <action> --paragraph <X.Y.Z>",
+    "chapter_action_command": "npm run check:book-outline-currentness -- --action <action> --chapter <X.Y>",
     "mutation_test_command": "npm run test:book-outline-currentness"
   }
 }

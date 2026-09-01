@@ -77,20 +77,26 @@ or graph operation directly needed by the approved target and worked example.
 
 ### Open holds and current-action effect
 
-| Hold ID | Status | Scope match? | Current action | Listed in blocks? | Listed in permits? | Effect (`BLOCKS` / `PERMITS` / `NOT_APPLICABLE` / `RELEASED`) | Release evidence when released |
-|---|---|---|---|---|---|---|---|
-| [exact metadata hold] | [open/released] | [yes/no + reason] | [exact action] | [yes/no] | [yes/no] | [effect] | [null for open; exact evidence for released] |
+| Hold ID | Status | Scope match? | Current action | Listed in blocks? | Listed in permits? | Listed as resolution action? | Effect (`BLOCKS` / `PERMITS` / `NOT_APPLICABLE` / `RELEASED`) | Release evidence when released |
+|---|---|---|---|---|---|---|---|---|
+| [exact metadata hold] | [open/released] | [yes/no + reason] | [exact action] | [yes/no] | [yes/no] | [yes/no] | [effect] | [null for open; exact evidence for released] |
 
 An open hold blocks only when its scope matches and `blocks` contains the
 current action. A matching explicit `permits` entry is recorded as permission,
-not a blocker. A released hold requires evidence and has effect `RELEASED`.
+not a blocker. Every `resolution_actions` entry is explicitly permitted and
+names a decision or repair action that may satisfy the release condition; it
+is distinct from later approved use or integration. A released hold requires
+evidence and has effect `RELEASED`.
 
 ### Foundation verdict
 
-Current action: `[goal_design | target_design | specialist_review |
-outline_approval | goal_approval | target_authority | paragraph_production |
-chapter_planning | chapter_production | lesson_authoring | merge | other
-registered action]`
+Current action: `[outline_owner_decision | approved_outline_use | goal_design |
+target_design | specialist_review | goal_owner_decision | approved_goal_use |
+target_authority_repair | target_authority_integration |
+paragraph_production | chapter_planning | chapter_plan_repair |
+chapter_production | book_plan_repair | book_readiness |
+whole_book_assembly | lesson_authoring | merge_owner_decision | merge |
+formal_output_choice_teaching]`
 
 Foundation verdict: `[PASS_FOR_<ACTION> | BLOCKED_FOR_<ACTION>]`
 
