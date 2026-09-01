@@ -1,12 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "outline_id": "book-2",
   "title": "Book 2 Outline: Costs, Revenue, Elasticity, And Surplus",
-  "version": "book-2-outline-v1-review-ready",
+  "version": "book-2-outline-v2-review-ready",
   "status": "review_ready_with_holds",
   "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
-  "outline_path": "references/authored/book-outlines/book-2-outline.md",
-  "outline_sha256": "66129a3f6480079e61a773bcf52de3aabd3c29975a9622af4609599e6e85fafe",
+  "semantic_authority": {
+    "path": "references/authored/book-outlines/book-2-outline.md",
+    "sha256": "8a51238ca085f71865786dcb8daa3932b7b7122ac4f30e6db4eb08c37f4cd9db",
+    "rule": "canonical_human_semantics_live_only_in_markdown"
+  },
   "generated_on": "2026-09-01",
   "owner_approval": {
     "status": "pending",
@@ -15,435 +18,138 @@
     "approved_pr": null,
     "approved_commit": null
   },
+  "review_state": {
+    "owner_decision": "revise",
+    "owner_reviewed_head": "56b98478d43437895664a70efe6f57d8f82a453d",
+    "specialist_reviews": "renewal_required",
+    "lead_review": "renewal_required"
+  },
   "hash_contract": {
     "file_hash": "sha256(UTF-8 text after CRLF and CR are normalized to LF)",
     "target_record_hash": "sha256(JSON.stringify(record)) using repository property order"
   },
   "authority_sources": [
-    {
-      "path": "references/owned/course-blueprint-v6-three-year.md",
-      "sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e",
-      "role": "three_year_umbrella"
-    },
-    {
-      "path": "references/owned/course-blueprint-v5.md",
-      "sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7",
-      "role": "active_year_1_detail"
-    },
-    {
-      "path": "references/authored/course-target-exercises.json",
-      "sha256": "33928e7929fa1c9af86159b07769e2f01d28963873ef34c40e55c2001feb87ac",
-      "role": "active_paragraph_target_registry"
-    },
-    {
-      "path": "references/owned/course-blueprint-pedagogical-boundaries.md",
-      "sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7",
-      "role": "preview_support_mastery_boundary"
-    },
-    {
-      "path": "skills/econ-exercise-builder.md",
-      "sha256": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a",
-      "role": "part_a_exercise_contract"
-    }
+    { "path": "references/owned/course-blueprint-v6-three-year.md", "sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e", "source_kind": "active_three_year_umbrella" },
+    { "path": "references/owned/course-blueprint-v5.md", "sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7", "source_kind": "active_year_1_detail" },
+    { "path": "references/authored/course-target-exercises.json", "sha256": "33928e7929fa1c9af86159b07769e2f01d28963873ef34c40e55c2001feb87ac", "source_kind": "active_paragraph_target_registry" },
+    { "path": "references/owned/course-blueprint-pedagogical-boundaries.md", "sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7", "source_kind": "prior_teaching_boundary" },
+    { "path": "skills/econ-exercise-builder.md", "sha256": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a", "source_kind": "part_a_exercise_contract" }
   ],
   "read_only_lesson_evidence": {
     "repository_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-    "product_end_state": {
-      "path": "specifications/product-end-state.md",
-      "sha256": "78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab"
-    },
+    "product_end_state": { "path": "specifications/product-end-state.md", "sha256": "78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab" },
     "chapter_plans": [
-      {
-        "chapter": "2.1",
-        "sha256": "cbf01cedb2250cdc4aff53e596b9a5c7bbb20e2d9fe829b0c7fc703ee4e28c58"
-      },
-      {
-        "chapter": "2.2",
-        "sha256": "3ee3156020bf61626e94963508a960a651e08028f0dc4b4ebf1aebdadd633167"
-      }
+      { "chapter": "2.1", "sha256": "cbf01cedb2250cdc4aff53e596b9a5c7bbb20e2d9fe829b0c7fc703ee4e28c58" },
+      { "chapter": "2.2", "sha256": "3ee3156020bf61626e94963508a960a651e08028f0dc4b4ebf1aebdadd633167" }
     ],
     "book_root_outline_present": false,
     "chapter_2_3_plan_present": false,
     "verification_scope": "audit provenance only; platform CI does not mutate or approve lesson evidence"
   },
-  "semantic_invariants": [
-    "preview_or_familiarity_must_not_be_treated_as_mastery",
-    "consolidation_paragraphs_introduce_no_new_terminal_theory",
-    "outline_does_not_approve_paragraph_goals_or_targets",
-    "revenue_advice_must_not_be_promoted_to_profit_advice",
-    "efficiency_must_not_be_promoted_to_fairness",
-    "paragraph_planning_requires_current_and_owner_approved_outline",
-    "target_quality_holds_must_remain_visible_until_separately_released"
-  ],
-  "chapter_spine": [
-    {
-      "chapter": "2.1",
-      "role": "firm_cost_revenue_profit_break_even_and_marginal_foundation",
-      "paragraphs": ["2.1.1", "2.1.2", "2.1.3", "2.1.4"]
-    },
-    {
-      "chapter": "2.2",
-      "role": "elasticity_revenue_and_multivariable_demand_foundation",
-      "paragraphs": ["2.2.1", "2.2.2", "2.2.3", "2.2.4"]
-    },
-    {
-      "chapter": "2.3",
-      "role": "surplus_efficiency_and_deadweight_loss_foundation",
-      "paragraphs": ["2.3.1", "2.3.2", "2.3.3", "2.3.4"]
-    }
-  ],
-  "paragraph_order": [
-    "2.1.1",
-    "2.1.2",
-    "2.1.3",
-    "2.1.4",
-    "2.2.1",
-    "2.2.2",
-    "2.2.3",
-    "2.2.4",
-    "2.3.1",
-    "2.3.2",
-    "2.3.3",
-    "2.3.4"
-  ],
-  "required_paragraph_fields": [
-    "id",
-    "title",
-    "kind",
-    "target_status",
-    "target_record_sha256",
-    "role",
-    "chapter_dependency",
-    "prior_teaching",
-    "retrieval",
-    "interleave",
-    "operation_emphasis",
-    "misconception_boundary",
-    "readiness_verdict",
-    "holds"
-  ],
-  "paragraphs": [
-    {
-      "id": "2.1.1",
-      "title": "Kostenstructuren",
-      "kind": "theory",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8",
-      "role": "formally establish total and average cost relations and their interpretation",
-      "chapter_dependency": "entry paragraph for Chapter 2.1",
-      "prior_teaching": ["Book 1 graph/table reading", "labelled arithmetic and units"],
-      "retrieval": ["read a table or graph", "calculate and label a value"],
-      "interleave": ["total-versus-average language", "claim evaluation"],
-      "operation_emphasis": ["formula construction", "calculation", "units", "trend interpretation", "claim evaluation"],
-      "misconception_boundary": ["fixed total cost is not fixed cost per unit", "GVK is constant only under a stated constant per-unit assumption", "Book 1 cost exposure is familiarity only"],
-      "readiness_verdict": "BLOCKED_GATE_0B_1",
-      "holds": ["H-OUTLINE-OWNER", "H-211-GATE0B1"]
-    },
-    {
-      "id": "2.1.2",
-      "title": "Opbrengsten, winst en break-even",
-      "kind": "theory",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5",
-      "role": "connect revenue and cost to profit, break-even, and TK/TO graph zones",
-      "chapter_dependency": "requires approved teaching of 2.1.1",
-      "prior_teaching": ["2.1.1 total and average costs", "Book 1 graphs and equations"],
-      "retrieval": ["TCK TVK TK", "function substitution", "graph axes"],
-      "interleave": ["total-versus-average distinction", "cost/revenue unit labels"],
-      "operation_emphasis": ["formula choice", "calculation", "equation solving", "graph construction", "break-even interpretation"],
-      "misconception_boundary": ["revenue is not profit", "break-even means zero profit rather than zero cost", "GO equals price only under the stated price structure"],
-      "readiness_verdict": "BLOCKED_TARGET_REPAIR",
-      "holds": ["H-OUTLINE-OWNER", "H-212-STALE-REF"]
-    },
-    {
-      "id": "2.1.3",
-      "title": "Marginale kosten en marginale opbrengsten",
-      "kind": "theory",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd",
-      "role": "calculate and interpret marginal cost and marginal revenue across explicit intervals",
-      "chapter_dependency": "requires approved teaching of 2.1.1 and 2.1.2",
-      "prior_teaching": ["2.1.1 total cost", "2.1.2 total revenue and profit", "table differences"],
-      "retrieval": ["TK and TO formulas", "table completion", "change notation"],
-      "interleave": ["profit column as context only", "linear versus nonlinear totals"],
-      "operation_emphasis": ["delta calculation", "interval normalization", "pattern comparison", "unit interpretation", "verbal explanation"],
-      "misconception_boundary": ["marginal is not average", "raw row difference is not per-unit marginal value when delta Q is not one", "MO equals price only under constant price", "formal output choice is not an approved target here"],
-      "readiness_verdict": "BLOCKED_TARGET_PRECISION_REVIEW",
-      "holds": ["H-OUTLINE-OWNER", "H-213-DELTAQ", "H-213-OPC2"]
-    },
-    {
-      "id": "2.1.4",
-      "title": "Gemengde opgaven: kosten en opbrengsten",
-      "kind": "gemengde_opgaven",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "7a4a01e133dcdf828f4f9d7b06209d1c51ca29ff98d83876dc026f8ba973ac24",
-      "role": "consolidate and transfer all Chapter 2.1 operation families without new theory",
-      "chapter_dependency": "requires approved teaching of 2.1.1 through 2.1.3",
-      "prior_teaching": ["all approved Chapter 2.1 operations"],
-      "retrieval": ["cost revenue profit break-even averages and marginal values"],
-      "interleave": ["source selection", "graph meaning", "calculation-unit-conclusion answer form"],
-      "operation_emphasis": ["operation-family selection", "multi-source calculation", "representation comparison", "structured conclusion"],
-      "misconception_boundary": ["consolidation introduces no new terminal theory", "sales after break-even are not automatically equally profitable"],
-      "readiness_verdict": "BLOCKED_UPSTREAM_CHAPTER",
-      "holds": ["H-OUTLINE-OWNER", "H-211-GATE0B1", "H-212-STALE-REF", "H-213-DELTAQ"]
-    },
-    {
-      "id": "2.2.1",
-      "title": "Prijselasticiteit",
-      "kind": "theory",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "4283adf5c6de9015c2daccc80b794183138ff4b7b9b5f4309bd7da80ef0304ed",
-      "role": "establish price-elasticity calculation, magnitude classification, and interpretation",
-      "chapter_dependency": "entry paragraph for Chapter 2.2 with explicit Book 1 retrieval",
-      "prior_teaching": ["Book 1 percentage change", "Book 1 demand and demand factors", "substitutes and complements"],
-      "retrieval": ["percentage base and sign", "price and quantity demanded", "demand-factor reasoning"],
-      "interleave": ["plain-language proportional comparison", "contextual determinants"],
-      "operation_emphasis": ["percentage calculation", "ratio calculation", "sign and magnitude classification", "interpretation", "explicit elastic and inelastic contrast"],
-      "misconception_boundary": ["negative elasticity does not mean inelastic", "classification uses absolute magnitude while interpretation retains sign", "necessity/luxury as an Ev determinant is not Ei classification"],
-      "readiness_verdict": "READY_AFTER_OUTLINE_APPROVAL_WITH_FLAGS",
-      "holds": ["H-OUTLINE-OWNER", "H-221-PRIOR", "H-22-ELASTIC-CONTRAST"]
-    },
-    {
-      "id": "2.2.2",
-      "title": "Elasticiteit en omzet",
-      "kind": "theory",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "b939b9f4538d9e16f5eed3c8a1f9bca03b8a2380610776105a5c8d235795ffb1",
-      "role": "connect price elasticity to before-and-after revenue and bounded pricing advice",
-      "chapter_dependency": "requires 2.2.1 and retrieves revenue from 2.1.2",
-      "prior_teaching": ["2.2.1 Ev", "2.1.2 TO equals P times Q"],
-      "retrieval": ["elastic versus inelastic classification", "TO calculation"],
-      "interleave": ["cinema and petrol contexts from 2.2.1", "one explicit elastic contrast", "revenue versus profit distinction"],
-      "operation_emphasis": ["before-after calculation", "elastic and inelastic proportional comparison", "causal explanation", "bounded advice"],
-      "misconception_boundary": ["revenue is not profit", "one elasticity estimate does not prove an optimal price or long-run response"],
-      "readiness_verdict": "READY_AFTER_OUTLINE_APPROVAL_WITH_FLAG",
-      "holds": ["H-OUTLINE-OWNER", "H-22-ELASTIC-CONTRAST"]
-    },
-    {
-      "id": "2.2.3",
-      "title": "Inkomenselasticiteit en kruiselingse elasticiteit",
-      "kind": "theory",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "5455130e28d15c2b70a77d55df346ca04c5a19d6c25da158c615fddd68ba3a17",
-      "role": "extend elasticity to income and cross effects plus ceteris-paribus demand functions",
-      "chapter_dependency": "requires 2.2.1 and Book 1 demand-factor/function teaching",
-      "prior_teaching": ["2.2.1 percentage and elasticity procedure", "Book 1 substitutes complements and collective demand functions"],
-      "retrieval": ["percentage ratios", "substitute/complement direction", "function substitution"],
-      "interleave": ["named numerator and denominator goods", "one-variable-at-a-time comparisons"],
-      "operation_emphasis": ["calculation", "sign-first classification", "function substitution", "ceteris-paribus comparison", "bounded prediction"],
-      "misconception_boundary": ["normal/inferior classification precedes necessity/luxury", "necessity/luxury applies only to positive Ei", "Ek must name both goods", "ceteris paribus does not permit silent multiple changes"],
-      "readiness_verdict": "READY_AFTER_OUTLINE_APPROVAL_WITH_LOAD_FLAG",
-      "holds": ["H-OUTLINE-OWNER"]
-    },
-    {
-      "id": "2.2.4",
-      "title": "Gemengde opgaven: elasticiteit",
-      "kind": "gemengde_opgaven",
-      "target_status": "reviewed_final",
-      "target_record_sha256": "5edc21a8f3977215674013fca251719d8000c34ab9736246f119a4ef21a1476b",
-      "role": "consolidate Ev revenue Ei Ek and demand-function reasoning in a multi-source case",
-      "chapter_dependency": "requires approved teaching of 2.2.1 through 2.2.3",
-      "prior_teaching": ["all approved Chapter 2.2 operations", "2.1.2 revenue"],
-      "retrieval": ["Ev Ei Ek TO and demand-function operation families"],
-      "interleave": ["irrelevant-data rejection", "calculation classification conclusion", "profit-evidence boundary"],
-      "operation_emphasis": ["source selection", "operation-family selection", "calculation", "classification", "cautious synthesis"],
-      "misconception_boundary": ["consolidation introduces no new terminal theory", "multiple revenue sources do not prove profit or retention"],
-      "readiness_verdict": "BLOCKED_UPSTREAM_CHAPTER",
-      "holds": ["H-OUTLINE-OWNER", "H-221-PRIOR"]
-    },
-    {
-      "id": "2.3.1",
-      "title": "Consumentensurplus",
-      "kind": "theory",
-      "target_status": "migrated_from_v4_needs_v5_review",
-      "target_record_sha256": "078536130e88c1bc9c6a58fc492dc47ccf7a411bafc8b49b9571e1de238f0388",
-      "role": "formally establish consumer surplus as a willingness-to-pay difference and graph area",
-      "chapter_dependency": "entry paragraph for Chapter 2.3 with Book 1 reactivation",
-      "prior_teaching": ["Book 1 willingness to pay and demand", "Book 1 graphs", "Book 1 price-quantity calculation"],
-      "retrieval": ["willingness to pay", "solve quantity at a price", "triangle area support"],
-      "interleave": ["individual difference versus aggregate area", "units and graph labels"],
-      "operation_emphasis": ["quantity calculation", "area identification", "triangle calculation", "graph labelling", "welfare interpretation"],
-      "misconception_boundary": ["consumer surplus is not revenue or profit", "Book 1 consumer-surplus exposure is familiarity only", "area under demand is bounded by the actual price and quantity"],
-      "readiness_verdict": "BLOCKED_V5_TARGET_REVIEW",
-      "holds": ["H-OUTLINE-OWNER", "H-231-V5"]
-    },
-    {
-      "id": "2.3.2",
-      "title": "Producentensurplus en totaal surplus",
-      "kind": "theory",
-      "target_status": "migrated_from_v4_needs_v5_review",
-      "target_record_sha256": "d1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8",
-      "role": "add producer and total surplus and connect supply to marginal cost under explicit conditions",
-      "chapter_dependency": "requires 2.3.1 and retrieves supply equilibrium and marginal cost",
-      "prior_teaching": ["2.3.1 consumer surplus", "Book 1 supply and equilibrium", "2.1.3 marginal-cost meaning"],
-      "retrieval": ["solve equilibrium", "draw demand and supply", "triangle area"],
-      "interleave": ["CS plus PS equals TS", "supply and marginal-cost language"],
-      "operation_emphasis": ["equilibrium calculation", "area selection", "CS PS TS calculation", "marginal-cost interpretation", "bounded welfare conclusion"],
-      "misconception_boundary": ["producer surplus is not profit", "supply-as-MC needs the stated model conditions", "maximum total surplus is not fairness"],
-      "readiness_verdict": "BLOCKED_V5_TARGET_REVIEW",
-      "holds": ["H-OUTLINE-OWNER", "H-232-V5"]
-    },
-    {
-      "id": "2.3.3",
-      "title": "Pareto-efficientie en welvaartsverlies",
-      "kind": "theory",
-      "target_status": "migrated_from_v4_needs_v5_review",
-      "target_record_sha256": "7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833",
-      "role": "compare equilibrium with an explicitly constrained transaction outcome and calculate deadweight loss",
-      "chapter_dependency": "requires approved teaching of 2.3.1 and 2.3.2",
-      "prior_teaching": ["2.3.2 CS PS TS", "Book 1 surplus and shortage at a price"],
-      "retrieval": ["Qd and Qs at a price", "actual transaction quantity", "welfare areas"],
-      "interleave": ["CS PS TS accounting", "binding-condition reasoning", "qualified efficiency language"],
-      "operation_emphasis": ["quantity calculation", "transaction selection", "area recalculation", "DWL calculation", "graph shading", "conditional explanation"],
-      "misconception_boundary": ["a quoted price alone does not determine trades", "a non-binding price need not create deadweight loss", "Pareto efficiency is not fairness", "Book 3 owns full policy mechanics unless authority changes"],
-      "readiness_verdict": "BLOCKED_V5_TARGET_AND_REFERENCE_REVIEW",
-      "holds": ["H-OUTLINE-OWNER", "H-233-V5-REF"]
-    },
-    {
-      "id": "2.3.4",
-      "title": "Gemengde opgaven: surplus en welvaart",
-      "kind": "gemengde_opgaven",
-      "target_status": "placeholder_needs_review",
-      "target_record_sha256": "601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f",
-      "role": "intended consolidation of Chapter 2.3 operations without new theory",
-      "chapter_dependency": "requires approved teaching of 2.3.1 through 2.3.3 and a repaired consolidation target",
-      "prior_teaching": ["all approved Chapter 2.3 operations"],
-      "retrieval": ["CS PS TS equilibrium constrained transactions Pareto efficiency and DWL"],
-      "interleave": ["marginal-cost meaning", "source evidence", "qualified welfare conclusion"],
-      "operation_emphasis": ["operation selection", "area and quantity calculation", "scenario comparison", "qualified conclusion"],
-      "misconception_boundary": ["consolidation introduces no new terminal theory", "a generic one-question placeholder is not a reviewed target", "government-intervention theory is not silently added"],
-      "readiness_verdict": "BLOCKED_PLACEHOLDER_REPAIR",
-      "holds": ["H-OUTLINE-OWNER", "H-231-V5", "H-232-V5", "H-233-V5-REF", "H-234-PLACEHOLDER", "H-LESSON-ROOT"]
-    }
+  "target_registry_pins": [
+    { "id": "2.1.1", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8" },
+    { "id": "2.1.2", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5" },
+    { "id": "2.1.3", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd" },
+    { "id": "2.1.4", "kind": "gemengde_opgaven", "target_status": "reviewed_final", "target_record_sha256": "7a4a01e133dcdf828f4f9d7b06209d1c51ca29ff98d83876dc026f8ba973ac24" },
+    { "id": "2.2.1", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "4283adf5c6de9015c2daccc80b794183138ff4b7b9b5f4309bd7da80ef0304ed" },
+    { "id": "2.2.2", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "b939b9f4538d9e16f5eed3c8a1f9bca03b8a2380610776105a5c8d235795ffb1" },
+    { "id": "2.2.3", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "5455130e28d15c2b70a77d55df346ca04c5a19d6c25da158c615fddd68ba3a17" },
+    { "id": "2.2.4", "kind": "gemengde_opgaven", "target_status": "reviewed_final", "target_record_sha256": "5edc21a8f3977215674013fca251719d8000c34ab9736246f119a4ef21a1476b" },
+    { "id": "2.3.1", "kind": "theory", "target_status": "migrated_from_v4_needs_v5_review", "target_record_sha256": "078536130e88c1bc9c6a58fc492dc47ccf7a411bafc8b49b9571e1de238f0388" },
+    { "id": "2.3.2", "kind": "theory", "target_status": "migrated_from_v4_needs_v5_review", "target_record_sha256": "d1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8" },
+    { "id": "2.3.3", "kind": "theory", "target_status": "migrated_from_v4_needs_v5_review", "target_record_sha256": "7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833" },
+    { "id": "2.3.4", "kind": "gemengde_opgaven", "target_status": "placeholder_needs_review", "target_record_sha256": "601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f" }
   ],
   "holds": [
     {
-      "id": "H-OUTLINE-OWNER",
-      "severity": "blocking",
-      "scope": ["book-2"],
+      "id": "H-OUTLINE-OWNER", "status": "open", "severity": "blocking", "scope": ["book-2"],
       "summary": "Owner approval is pending for the exact outline payload.",
-      "blocks": ["approved_outline_use", "merge", "gate_0B_1"]
+      "blocks": ["outline_approval", "goal_approval", "target_authority", "paragraph_production", "chapter_production", "lesson_authoring", "merge"],
+      "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "The owner approves an exact PR head and the approval pins are recorded.", "release_evidence": null
     },
     {
-      "id": "H-211-GATE0B1",
-      "severity": "blocking",
-      "scope": ["2.1.1"],
-      "summary": "Issue #223 goal and target design must reopen only after outline approval and integration.",
-      "blocks": ["paragraph_goal_approval", "target_approval", "paragraph_production"]
+      "id": "H-211-GATE0B1", "status": "open", "severity": "blocking", "scope": ["2.1.1"],
+      "summary": "Gate 0B-1 design may proceed, but goal approval, target authority, and production wait for outline approval/integration and a reviewed paragraph package.",
+      "blocks": ["goal_approval", "target_authority", "paragraph_production", "lesson_authoring"],
+      "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "Gate 0B-1 approves the exact goal/target package after outline approval and integration.", "release_evidence": null
     },
     {
-      "id": "H-212-STALE-REF",
-      "severity": "blocking",
-      "scope": ["2.1.2"],
-      "summary": "Target context contains a stale bakery cross-reference to §1.3.2 instead of the current Book 2 dependency.",
-      "blocks": ["paragraph_approval"]
+      "id": "H-212-STALE-REF", "status": "open", "severity": "blocking", "scope": ["2.1.2"],
+      "summary": "Target context contains a stale bakery cross-reference instead of the current Book 2 dependency.",
+      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "A governed target-lane decision repairs and approves the intended dependency.", "release_evidence": null
     },
     {
-      "id": "H-213-DELTAQ",
-      "severity": "blocking",
-      "scope": ["2.1.3"],
+      "id": "H-213-DELTAQ", "status": "open", "severity": "blocking", "scope": ["2.1.3"],
       "summary": "Target interval wording must preserve MK and MO as delta total divided by delta quantity.",
-      "blocks": ["paragraph_approval"]
+      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "Specialist review approves interval-normalized wording and examples.", "release_evidence": null
     },
     {
-      "id": "H-213-OPC2",
-      "severity": "advisory",
-      "scope": ["2.1.3", "long_route"],
+      "id": "H-213-OPC2", "status": "open", "severity": "advisory", "scope": ["2.1.3", "long_route"],
       "summary": "V6 OP-C2 output choice is broader than the current v5 target and must not be silently added.",
-      "blocks": ["formal_output_choice_claim"]
+      "blocks": ["formal_output_choice_teaching"], "permits": ["goal_design", "specialist_review"],
+      "release_condition": "Governed authority decides whether and where OP-C2 is taught.", "release_evidence": null
     },
     {
-      "id": "H-221-PRIOR",
-      "severity": "blocking",
-      "scope": ["2.2.1"],
+      "id": "H-221-PRIOR", "status": "open", "severity": "blocking", "scope": ["2.2.1"],
       "summary": "Book 1 percentage and demand retrieval must be explicit because the target registry prior list is empty.",
-      "blocks": ["unqualified_paragraph_plan_pass"]
+      "blocks": ["goal_approval", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "An approved Part A plan pins retrieval and records any registry-normalization decision.", "release_evidence": null
     },
     {
-      "id": "H-22-ELASTIC-CONTRAST",
-      "severity": "blocking",
-      "scope": ["2.2.1", "2.2.2"],
-      "summary": "The two numerical target contexts are both inelastic, so approved teaching and practice must include an explicit elastic contrast.",
-      "blocks": ["unqualified_paragraph_plan_pass"]
+      "id": "H-22-ELASTIC-CONTRAST", "status": "open", "severity": "blocking", "scope": ["2.2.1", "2.2.2"],
+      "summary": "The two numerical target contexts are both inelastic, so teaching and practice need an explicit elastic contrast.",
+      "blocks": ["goal_approval", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "Approved instruction and practice include reviewed elastic-contrast evidence.", "release_evidence": null
     },
     {
-      "id": "H-231-V5",
-      "severity": "blocking",
-      "scope": ["2.3.1"],
+      "id": "H-231-V5", "status": "open", "severity": "blocking", "scope": ["2.3.1"],
       "summary": "Migrated target requires v5 review.",
-      "blocks": ["paragraph_production"]
+      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "V5 target review approves an exact target record.", "release_evidence": null
     },
     {
-      "id": "H-232-V5",
-      "severity": "blocking",
-      "scope": ["2.3.2"],
+      "id": "H-232-V5", "status": "open", "severity": "blocking", "scope": ["2.3.2"],
       "summary": "Migrated target and supply-as-MC boundary require v5 review.",
-      "blocks": ["paragraph_production"]
+      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "V5 target and economics review approve the target and supply-as-MC boundary.", "release_evidence": null
     },
     {
-      "id": "H-233-V5-REF",
-      "severity": "blocking",
-      "scope": ["2.3.3"],
+      "id": "H-233-V5-REF", "status": "open", "severity": "blocking", "scope": ["2.3.3"],
       "summary": "Migrated target requires v5 review, source-reference repair, and qualified binding/transaction assumptions.",
-      "blocks": ["paragraph_production"]
+      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "V5 review and source repair approve exact binding and transaction assumptions.", "release_evidence": null
     },
     {
-      "id": "H-234-PLACEHOLDER",
-      "severity": "blocking",
-      "scope": ["2.3.4"],
+      "id": "H-234-PLACEHOLDER", "status": "open", "severity": "blocking", "scope": ["2.3.4"],
       "summary": "Placeholder consolidation target must be replaced and reviewed without new theory.",
-      "blocks": ["paragraph_production"]
+      "blocks": ["goal_approval", "target_authority", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review"],
+      "release_condition": "Reviewed consolidation goals and target replace the placeholder without new theory.", "release_evidence": null
     },
     {
-      "id": "H-LESSON-ROOT",
-      "severity": "blocking",
-      "scope": ["lesson_book_2_root", "lesson_chapter_2_3"],
-      "summary": "Lesson Book 2 root outline and Chapter 2.3 plan are absent and require a separate lesson task after platform approval.",
-      "blocks": ["lesson_structure_readiness_claim"]
+      "id": "H-LESSON-ROOT", "status": "open", "severity": "blocking", "scope": ["lesson_book_2_root", "lesson_chapter_2_3"],
+      "summary": "Lesson Book 2 root outline and Chapter 2.3 plan are absent and require a separate lesson task.",
+      "blocks": ["chapter_production", "lesson_authoring"], "permits": ["chapter_planning", "specialist_review"],
+      "release_condition": "A separate lesson task creates and reviews the missing lesson plans.", "release_evidence": null
     }
   ],
-  "workflow_pointers": [
-    {
-      "path": "BUILD-PARAGRAPH.md",
-      "requirement": "Book foundation check before Book 2+ paragraph planning or production"
-    },
-    {
-      "path": "BUILD-CHAPTER.md",
-      "requirement": "approved current book outline before chapter planning and cross-paragraph review"
-    },
-    {
-      "path": "skills/econ-textbook-paragraph.md",
-      "requirement": "outline-pinned paragraph input and readiness hold enforcement"
-    },
-    {
-      "path": "docs/workflows/textbook-paragraph-lane.md",
-      "requirement": "Part A lane foundation gate and currentness command"
-    },
-    {
-      "path": "agents/teacher-learning-quality-review-agent.md",
-      "requirement": "teacher review of book-role alignment and preview-versus-mastery boundaries"
-    },
-    {
-      "path": "build-scripts/templates/template-paragraph-plan.md",
-      "requirement": "required Book foundation check table"
-    }
+  "workflow_surfaces": [
+    "BUILD-PARAGRAPH.md",
+    "BUILD-CHAPTER.md",
+    "skills/econ-textbook-paragraph.md",
+    "docs/workflows/textbook-paragraph-lane.md",
+    "agents/teacher-learning-quality-review-agent.md",
+    "build-scripts/templates/template-textbook-paragraph-plan.md",
+    "build-scripts/templates/template-paragraph-plan.md"
   ],
   "freshness_checker": {
     "path": "build-scripts/workflows/check-book-outline-currentness.js",
     "default_command": "npm run check:book-outline-currentness",
     "approved_command": "npm run check:book-outline-currentness -- --require-approved",
-    "mutation_test_command": "npm run test:book-outline-currentness",
-    "must_reject": [
-      "stale authority source hashes",
-      "changed outline hash",
-      "missing or reordered Book 2 IDs",
-      "changed paragraph kinds or target statuses",
-      "stale target record hashes",
-      "missing required paragraph planning fields",
-      "missing declared holds or paragraph hold references",
-      "preview-to-mastery promotion",
-      "missing workflow pointers",
-      "approved mode without exact owner approval pins"
-    ]
+    "action_command": "npm run check:book-outline-currentness -- --action <action> --paragraph <X.Y.Z>",
+    "mutation_test_command": "npm run test:book-outline-currentness"
   }
 }

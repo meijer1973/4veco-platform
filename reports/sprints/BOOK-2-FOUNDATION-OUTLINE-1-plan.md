@@ -40,7 +40,9 @@ preview/familiarity separate from mastered prerequisites; expose unresolved
 target-quality and lesson-structure holds; and make every future paragraph plan
 show its Book foundation decision.
 
-The accepted review instructions and Issue #225 are the controlling task
+The accepted review instructions, Issue #225, and the owner `REVISE` decision
+on PR #226 at reviewed head
+`56b98478d43437895664a70efe6f57d8f82a453d` are the controlling task
 specification for this derived authority layer. Rendered output is explicitly
 out of scope; proof consists of source traceability, workflow enforcement,
 machine validation, and review artifacts rather than lesson rendering. No
@@ -65,6 +67,29 @@ the outline can become approved input to Gate 0B-1.
 | Keep the task platform-only. | Lesson repository remains byte-for-byte untouched and clean. | Scope checker, Git diff, and recorded lesson baseline hashes. | planned |
 | Stop before integration. | Draft PR and exact-head CI evidence, with explicit owner decision still pending. | Human-review packet names approval choices and remaining holds. | planned |
 
+## Owner revision round (2026-09-01)
+
+PR #226 remains draft and unmerged. The owner rejected the first review-ready
+implementation because its hold model deadlocked design, its machine companion
+duplicated the prose semantics, its Part A plan ownership was contradictory,
+its foundation check was incomplete, its prerequisite wording overstated
+mastery, and its final owner packet was stale.
+
+This revision therefore adds these required outcomes before another owner gate:
+
+1. action-scoped, releasable holds with evidence-bearing lifecycle state;
+2. prose as the sole human semantic authority, with machine metadata limited to
+   identity, hashes, compact target pins, workflow identity, reviews, and holds;
+3. a Part A-owned `X.Y.Z-textbook-plan.md` and a dedicated Part A template,
+   while `_paragraph-plan.md` remains a Part B consumer artifact;
+4. a complete action-specific foundation verdict including all authority pins,
+   chapter-plan currentness, five-way prerequisite classification, non-goals,
+   downstream preparation, model conditions, target pin, and hold effects;
+5. prior-teaching language that never promotes curriculum exposure to mastery;
+6. mutations for hold scope/release, semantic source-of-truth, and Part A
+   ownership, followed by renewed specialist and lead review and a live
+   exact-head owner packet in the PR description.
+
 ## Quality Improvement Candidates
 
 | Candidate | Classification | Disposition |
@@ -82,6 +107,7 @@ the outline can become approved input to Gate 0B-1.
 - `build-scripts/workflows/check-book-outline-currentness.js`
 - `build-scripts/workflows/check-book-outline-currentness.test.js`
 - `build-scripts/templates/template-paragraph-plan.md`
+- `build-scripts/templates/template-textbook-paragraph-plan.md`
 - `BUILD-PARAGRAPH.md`
 - `BUILD-CHAPTER.md`
 - `skills/econ-textbook-paragraph.md`
@@ -97,6 +123,8 @@ the outline can become approved input to Gate 0B-1.
 - generated internal dashboard artifacts required after the roadmap-state change
 - sprint plan, baseline, audit, review, result, diff, command-log, and
   human-review artifacts for `BOOK-2-FOUNDATION-OUTLINE-1`
+- owner-review resolution and renewed specialist/lead-review artifacts for
+  `BOOK-2-FOUNDATION-OUTLINE-1`
 - machine sprint metadata for `BOOK-2-FOUNDATION-OUTLINE-1`
 - generated agent index and URL-index artifacts required by repository checks
 
@@ -158,10 +186,10 @@ the outline can become approved input to Gate 0B-1.
    `BLOCKED_BLUEPRINT_REPAIR_REQUIRED`.
 7. If the audit permits derivation, write the canonical prose outline and
    machine companion, preserving source authority and all holds.
-8. Update paragraph/chapter workflows and the plan template with a mandatory
-   Book foundation check containing outline reference/version/hash, paragraph
-   role, prerequisites, chapter dependency, prior teaching/retrieval/interleave,
-   operation emphasis, misconception boundary, readiness verdict, and holds.
+8. Update paragraph/chapter workflows and the dedicated Part A textbook-plan
+   template with the complete action-specific Book foundation check. Keep the
+   Part B `_paragraph-plan.md` template as a consumer of the approved Part A
+   plan rather than an owner of the foundation decision.
 9. Add the currentness checker, approved-outline mode, mutation tests, package
    commands, CI step, and navigation pointer.
 10. Run teacher, economics, curriculum-sequencing, and structural review;
@@ -177,6 +205,7 @@ node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATIO
 node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1
 node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1 --complete
 npm.cmd run check:book-outline-currentness
+npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1
 npm.cmd run test:book-outline-currentness
 npm.cmd run check:blueprint-pedagogical-boundaries
 npm.cmd run check:part-a-exercise-authoring-contract

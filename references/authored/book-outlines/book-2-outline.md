@@ -2,7 +2,7 @@
 
 Outline ID: `book-2`
 
-Version: `book-2-outline-v1-review-ready`
+Version: `book-2-outline-v2-review-ready`
 
 Status: `review_ready_with_holds`
 
@@ -21,13 +21,20 @@ registry, pedagogical boundaries, or Part A exercise contract.
 | 1 | `references/owned/course-blueprint-v6-three-year.md` | `72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e` | Three-year purpose, Book 2 role, later-book dependency, operation-family trajectory. |
 | 2 | `references/owned/course-blueprint-v5.md` | `61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7` | Active Year 1 Book 2 IDs, order, kinds, topics, and source statuses. |
 | 3 | `references/authored/course-target-exercises.json` | `33928e7929fa1c9af86159b07769e2f01d28963873ef34c40e55c2001feb87ac` | Current paragraph goals, target operations, contexts, records, and review evidence. |
-| 4 | `references/owned/course-blueprint-pedagogical-boundaries.md` | `47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7` | Preview/familiarity versus mastered prerequisites and later formal teaching. |
+| 4 | `references/owned/course-blueprint-pedagogical-boundaries.md` | `47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7` | Prior-teaching classifications, preview/familiarity boundaries, and later formal teaching. |
 | 5 | `skills/econ-exercise-builder.md` | `27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a` | Target-first Part A exercise sequence, support rules, and 55-minute route. |
 
 Run `npm run check:book-outline-currentness` before using this outline. A
 source-hash, target-record, row-order, status, workflow-pointer, or semantic
-failure makes it stale. Paragraph planning additionally requires approved mode;
-while owner approval is pending, that mode must block.
+failure makes it stale. This Markdown file is the canonical human semantic
+authority. The machine companion may pin identity, hashes, target records,
+workflow surfaces, reviews, and hold state; it must not restate paragraph roles,
+prerequisites, retrieval, misconceptions, or other outline semantics.
+
+Planning additionally evaluates the intended action and paragraph/chapter
+scope. An open hold blocks only a matching action in matching scope. A released
+hold remains visible with release evidence and no longer blocks. Approval mode
+still fails while owner approval is pending.
 
 ## Purpose and position in the course
 
@@ -47,11 +54,24 @@ structure can be taught at full procedural and welfare depth.
 
 The book is exercise-first: paragraph goals and instruction must be designed
 backward from the current reviewed target operations. This outline constrains
-that work but does not itself prove paragraph mastery or approve a target.
+that work but does not itself prove student attainment or approve a target.
 
 ## Entry prerequisites from Book 1
 
-### Mastered operations available for bounded retrieval
+### Curricularly prior operations eligible for bounded retrieval
+
+Every Part A paragraph foundation check classifies each incoming prerequisite
+at paragraph level as exactly one of:
+
+1. `previously_taught_probably_secure`;
+2. `previously_taught_retrieval_required`;
+3. `previously_taught_not_secure_enough_to_assume`;
+4. `preview_or_familiarity_only`; or
+5. `new_formal_learning`.
+
+Curricular placement proves only that an operation was taught or previewed. It
+does not prove learner security. The plan must name the evidence or support
+decision behind its classification.
 
 | Book 1 source | Book 2 use | Retrieval boundary |
 |---|---|---|
@@ -59,9 +79,9 @@ that work but does not itself prove paragraph mastery or approve a target.
 | §1.1.3 graphs and tables | Read/calculate from cost, revenue, elasticity, demand/supply, and surplus representations. | Retrieval may test reading and plotting already-taught forms; a new Book 2 economic meaning still needs explicit teaching. |
 | §1.2.1 willingness to pay and individual demand | Demand interpretation and the entry to consumer surplus. | Reactivate willingness to pay; formal surplus area and welfare meaning remain new in §2.3.1. |
 | §1.2.2 demand factors, substitutes, and complements | Explain elasticity determinants and later cross-elasticity signs. | Familiar contextual labels may be retrieved; formal elasticity classification is taught in Book 2. |
-| §1.2.3 collective demand and linear demand functions | Multi-variable demand work and quantity calculation. | Keep ceteris-paribus changes explicit; do not assume a new multivariable procedure has already been mastered. |
+| §1.2.3 collective demand and linear demand functions | Multi-variable demand work and quantity calculation. | Keep ceteris-paribus changes explicit; do not assume a new multivariable procedure is secure. |
 | §1.3.1 supply | Producer-surplus and supply-as-marginal-cost bridge. | Supply interpretation may be retrieved; the marginal-cost/welfare meaning is formal Book 2 teaching. |
-| §1.3.2 equilibrium and surplus/shortage | Welfare diagrams, transaction quantity, and comparison with forced prices. | Algebraic/graphical equilibrium may be retrieved; deadweight loss and Pareto claims are not prior mastery. |
+| §1.3.2 equilibrium and surplus/shortage | Welfare diagrams, transaction quantity, and comparison with forced prices. | Algebraic/graphical equilibrium may be retrieved; deadweight loss and Pareto claims are new formal learning. |
 | §1.3.3 new equilibrium after shifts | Later transfer and Book 3 preparation. | Use only when it supports a Book 2 target without displacing its operation chain. |
 | §1.1.4, §1.2.4, §1.3.4 mixed work | Source selection, calculation with units, graph/table evidence, and short economic conclusions. | Consolidation evidence supports retrieval design; it does not authorize unlisted new economic operations. |
 
@@ -69,7 +89,7 @@ Every paragraph plan must recheck that the selected prerequisite was actually
 taught and is applicable to the current representation. The label "Book 1"
 alone is not evidence.
 
-### Familiarity or preview that is not prerequisite mastery
+### Familiarity or preview that is not an assumable prerequisite
 
 - Book 1 supplied-formula encounters with costs, revenue, or profit do not
   shorten formal teaching in Chapter 2.1.
@@ -96,7 +116,7 @@ should be able to:
 - write short economic conclusions that connect calculation, unit,
   classification, representation, and source evidence.
 
-These are course-route expectations, not a mastery claim from this document.
+These are course-route expectations, not an attainment claim from this document.
 Book completion evidence must come from the approved targets and reviewed
 student work. The resulting foundation supports Book 3 work on intervention,
 price controls, taxes/subsidies, competition, and monopoly.
@@ -128,7 +148,7 @@ retrieval or review. Consolidation paragraphs introduce no new terminal theory.
 
 | Paragraph | Role and new formal teaching | Prior teaching, retrieval, and interleaving | Operation emphasis | Misconception boundary | Readiness and holds |
 |---|---|---|---|---|---|
-| **2.1.1 Kostenstructuren** | Establish fixed/constant versus variable costs; formulate `TCK`, `TVK`, `TK`; calculate `GCK`, `GVK`, `GTK`; explain spreading fixed costs and constant `GVK` only under a constant per-unit assumption. | Retrieve graph/table reading and labelled arithmetic only where needed. Book 1 cost/profit exposure is familiarity, not mastery. | Balanced formula construction/selection, two-quantity calculation with units, average-versus-total interpretation, trend explanation, and claim evaluation. | A cost category depends on how it changes with output, not on whether an invoice looks regular; `GVK` is not universally constant; `GCK` is not a fixed amount per product. | `BLOCKED_GATE_0B_1`: Issue #223 must redesign/review goals and target after this outline is approved and merged. |
+| **2.1.1 Kostenstructuren** | Establish fixed/constant versus variable costs; formulate `TCK`, `TVK`, `TK`; calculate `GCK`, `GVK`, `GTK`; explain spreading fixed costs and constant `GVK` only under a constant per-unit assumption. | Retrieve only a previously taught arithmetic, unit, table, or graph operation directly needed by the approved target and worked example. Book 1 cost/profit exposure is `preview_or_familiarity_only`. | Balanced formula construction/selection, two-quantity calculation with units, average-versus-total interpretation, trend explanation, and claim evaluation. | A cost category depends on how it changes with output, not on whether an invoice looks regular; `GVK` is not universally constant; `GCK` is not a fixed amount per product. | `DESIGN_PERMITTED_PRODUCTION_BLOCKED`: Issue #223 may redesign goals/target and obtain specialist review; approval/authority/production wait for outline approval and the `H-211-GATE0B1` release condition. |
 | **2.1.2 Opbrengsten, winst en break-even** | Add `TO=P×Q`, `GO=TO/Q`, `winst=TO-TK`, algebraic break-even, and `TK`/`TO` graph zones. | Require completed §2.1.1 cost relations; retrieve Book 1 graph/function skills. Interleave units and total-versus-average language. | Formula choice, substitution, comparison, equation solving, graph construction/reading, break-even interpretation, and bounded profit conclusion. | Revenue/omzet is not profit; `GO=P` only under the stated price structure; break-even is zero profit, not zero costs/revenue. | `BLOCKED_TARGET_REPAIR`: target context has stale `§1.3.2` cross-reference; pin/repair the intended §2.1.1 dependency before paragraph approval. |
 | **2.1.3 Marginale kosten en marginale opbrengsten** | Define and calculate `MK=ΔTK/ΔQ` and `MO=ΔTO/ΔQ`; interpret increments for linear and nonlinear totals; build marginal intuition. | Require §2.1.1–§2.1.2 totals and formulas; retrieve table differences and units. Interleave profit columns only as context, not a new decision rule. | Table completion, interval-normalised difference calculation, pattern comparison, unit interpretation, and explanation in words. | A row difference is not a per-unit marginal value when `ΔQ≠1`; constant `MO` follows only from constant price; marginal is not average; `MO=MK` output choice is not yet an approved target. | `BLOCKED_TARGET_PRECISION_REVIEW`: resolve interval wording; `H-213-OPC2` holds formal output choice outside this target. |
 | **2.1.4 Gemengde opgaven** | Consolidate cost, revenue, average, profit, break-even, and marginal operation families without new theory. | Retrieve all approved Chapter 2.1 teaching; interleave source selection, units, graph meaning, and structured conclusions. | Decide which family applies, calculate accurately, compare sources/representations, and justify conclusions. | Do not turn consolidation into a fourth theory paragraph or equate post-break-even sales with equal marginal profitability. | `BLOCKED_UPSTREAM_CHAPTER`: production waits for §§2.1.1–2.1.3 holds and reviewed teaching. |
@@ -146,16 +166,37 @@ retrieval or review. Consolidation paragraphs introduce no new terminal theory.
 
 | Paragraph | Role and new formal teaching | Prior teaching, retrieval, and interleaving | Operation emphasis | Misconception boundary | Readiness and holds |
 |---|---|---|---|---|---|
-| **2.3.1 Consumentensurplus** | Formalise individual differences between willingness to pay and price, aggregate CS, identify the graph area, calculate triangle area, and interpret buyer welfare. | Reactivate §1.2.1 willingness to pay, §1.1.3 graph reading, and §1.3.2 price/quantity relations. Book 1 CS exposure is familiarity only. | Solve quantity at price, draw/label, select the correct area, calculate with units, and explain welfare meaning. | CS is not revenue, profit, or the whole area under demand; continuous triangle calculation differs from simply counting buyers; a Book 1 intuition does not prove formal mastery. | `BLOCKED_V5_TARGET_REVIEW`: migrated target must pass v5 review before paragraph production. |
+| **2.3.1 Consumentensurplus** | Formalise individual differences between willingness to pay and price, aggregate CS, identify the graph area, calculate triangle area, and interpret buyer welfare. | Reactivate §1.2.1 willingness to pay, §1.1.3 graph reading, and §1.3.2 price/quantity relations. Book 1 CS exposure is `preview_or_familiarity_only`. | Solve quantity at price, draw/label, select the correct area, calculate with units, and explain welfare meaning. | CS is not revenue, profit, or the whole area under demand; continuous triangle calculation differs from simply counting buyers; a Book 1 intuition does not prove formal competence. | `BLOCKED_V5_TARGET_REVIEW`: migrated target must pass v5 review before paragraph production. |
 | **2.3.2 Producentensurplus en totaal surplus** | Add PS, `TS=CS+PS`, supply-as-marginal-cost meaning, and a bounded equilibrium-welfare comparison. | Require §2.3.1; retrieve §1.3 supply/equilibrium and interleave §2.1.3 marginal-cost meaning. | Solve equilibrium, draw/label two areas, calculate CS/PS/TS, connect supply to marginal cost, and justify a bounded welfare conclusion. | PS is not profit; supply-as-MC requires the stated competitive/marginal interpretation; maximum TS is not the same as equal distribution or a complete social-welfare judgment. | `BLOCKED_V5_TARGET_REVIEW`: migrated target and the supply-as-MC bridge require economics/teacher review. |
 | **2.3.3 Pareto-efficiëntie en welvaartsverlies** | Compare equilibrium with an explicitly constrained transaction outcome; define Pareto efficiency; identify/calculate DWL. | Require §2.3.2; retrieve shortage/surplus and transaction-quantity logic from §1.3.2. Interleave CS/PS/TS area accounting. | Calculate `Qd`, `Qs`, actual transactions under an explicit rule, recompute areas/TS, calculate loss, shade the lost triangle, and explain conditions. | A quoted price alone does not determine traded quantity; an unbound/non-binding price need not create DWL; Pareto efficiency is not fairness; policy mechanics belong to later Book 3 unless target authority expands. | `BLOCKED_V5_TARGET_AND_REFERENCE_REVIEW`: repair stale `§2.2.2` reference and qualify the any-price claim/transaction assumptions. |
 | **2.3.4 Gemengde opgaven** | Intended consolidation across CS, PS, TS, equilibrium, constrained transactions, Pareto efficiency, and DWL, with no new theory. | Retrieve all approved Chapter 2.3 teaching and the relevant Book 1 graph/equilibrium route; interleave marginal-cost and source-evidence language. | Select areas and quantities, calculate with units, compare scenarios, and write a qualified welfare conclusion. | A single generic combined question is not a reviewed consolidation target; no new government-intervention theory may be smuggled into the mixed paragraph. | `BLOCKED_PLACEHOLDER_REPAIR`: current target is a placeholder and Chapter 2.3 has no lesson plan. |
+
+### Canonical paragraph foundation dimensions
+
+This table is semantic authority for the dimensions that every Part A
+`X.Y.Z-textbook-plan.md` must copy by reference and apply. It must not be
+duplicated into machine metadata.
+
+| Paragraph | Incoming prerequisite classification | Explicit non-goals/deferred scope | Prepares for | Model conditions and relevant range |
+|---|---|---|---|---|
+| 2.1.1 | Arithmetic/units/table/graph operation: classify only if directly required by the approved target and worked example; Book 1 cost/profit exposure: `preview_or_familiarity_only`; cost structures/averages: `new_formal_learning`. | Revenue; profit; break-even; marginal costs; `MO=MK`; formal proportional/degressive/progressive cost classification. | §2.1.2; §2.1.3; §2.1.4; supply-as-MC bridge in §2.3.2. | Fixed/variable is relative to the stated time period and production/capacity range; total fixed cost may change when capacity changes; linear `TVK` and constant `GVK` are bounded assumptions, not universal laws. |
+| 2.1.2 | §2.1.1 cost relations: `previously_taught_retrieval_required`; Book 1 graph/function operations: classify from evidence; revenue/profit/break-even: `new_formal_learning`. | Marginal costs/revenue; `MO=MK`; output optimization; formal cost-curve classification. | §2.1.3; §2.1.4; revenue retrieval in §2.2.2. | `GO=P` only under constant unit price; break-even conclusions apply to stated cost/revenue functions and range. |
+| 2.1.3 | §2.1.1–§2.1.2 totals: `previously_taught_retrieval_required`; marginal ratios: `new_formal_learning`. | Formal profit-maximizing output choice; market-structure rules; calculus. | §2.1.4; supply-as-MC bridge in §2.3.2; later firm analysis. | `MK`/`MO` are interval-normalized `Δtotal/ΔQ`; constant `MO` needs constant price; conclusions stay within observed/stated intervals. |
+| 2.1.4 | Approved §2.1.1–§2.1.3 operations: classify individually as secure, retrieval-required, or not secure enough to assume. | Any new terminal theory or unapproved optimization rule. | Chapter 2.2 revenue links; Chapter 2.3 marginal-cost links. | Each operation retains the conditions established in its theory paragraph. |
+| 2.2.1 | Percentage change and demand reasoning: `previously_taught_retrieval_required`; elasticity ratio/classification: `new_formal_learning`. | Income/cross elasticity; profit optimization; universal causal claims. | §2.2.2; §2.2.3; §2.2.4. | Use stated original bases; sign represents direction and magnitude represents classification; estimates are local/context-bound. |
+| 2.2.2 | §2.2.1 `Ev` and §2.1.2 revenue: `previously_taught_retrieval_required`. | Profit, optimal pricing, retention, or unlimited long-run response. | §2.2.4; later pricing/incidence reasoning. | Advice is revenue-only, conditional on the stated change and elasticity estimate. |
+| 2.2.3 | §2.2.1 percentage/elasticity procedure and Book 1 demand factors/functions: `previously_taught_retrieval_required`; `Ei`/`Ek`: `new_formal_learning`. | Simultaneous causal inference; welfare effects; unrestricted forecasting. | §2.2.4; later multivariable demand work. | Ceteris paribus unless explicitly varied; `Ei` classification is sign-first; `Ek` names both goods. |
+| 2.2.4 | Approved §2.2.1–§2.2.3 operations: classify individually from current evidence. | New formulas, profit claims, or causal generalizations. | Later integrated demand/pricing analysis. | Preserve every component operation's stated context and bounds. |
+| 2.3.1 | Willingness to pay/graph/quantity operations: retrieval classification from evidence; Book 1 surplus intuition: `preview_or_familiarity_only`; formal CS: `new_formal_learning`. | Producer surplus; total surplus; Pareto efficiency; DWL. | §2.3.2; §2.3.3; §2.3.4. | Continuous-area calculation needs a stated linear demand segment and relevant traded quantity; discrete buyer sums remain distinct. |
+| 2.3.2 | §2.3.1 and equilibrium/triangle operations: `previously_taught_retrieval_required`; supply-as-MC bridge: `new_formal_learning`. | Fairness conclusions; externalities; full policy mechanics. | §2.3.3; §2.3.4; Book 3 welfare analysis. | Supply-as-MC requires the stated competitive/marginal interpretation; maximum `TS` is a bounded efficiency claim. |
+| 2.3.3 | §2.3.2 CS/PS/TS: `previously_taught_retrieval_required`; Pareto/DWL route: `new_formal_learning`. | Fairness proof; general government-intervention mechanics; claims without transaction/allocation assumptions. | §2.3.4; Book 3 price-control/tax/subsidy work. | State binding status, actual transaction quantity, and allocation/rationing assumption; a quoted price alone is insufficient. |
+| 2.3.4 | Approved §2.3.1–§2.3.3 operations: classify individually from current evidence. | Any new intervention theory or unrepaired placeholder goal. | Later integrated welfare and policy analysis. | Preserve the transaction, area, and supply-as-MC conditions of the selected operations. |
 
 ## Retrieval and interleaving schedule
 
 | Point in route | Required retrieval/interleaving intent |
 |---|---|
-| Start of 2.1.1 | Compact graph/table/units check only; teach cost relations in full. |
+| Start of 2.1.1 | Retrieve only a previously taught arithmetic, unit, table, or graph operation directly needed by the approved target and worked example; otherwise add no generic graph prerequisite. Teach cost relations in full. |
 | 2.1.2 | Retrieve 2.1.1 totals/averages and Book 1 graphs; contrast revenue with cost and profit. |
 | 2.1.3 | Retrieve total cost/revenue formulas; calculate marginal values across explicit intervals. |
 | 2.1.4 | Cumulative Chapter 2.1 source selection and operation-family choice. |
@@ -169,8 +210,8 @@ retrieval or review. Consolidation paragraphs introduce no new terminal theory.
 | 2.3.4 | Cumulative Book 2 welfare route, with selected earlier calculation and elasticity links only where relevant. |
 
 Retrieval must be compact and evidence-backed. If a prerequisite is not secure,
-the paragraph plan must add support or hold the build; it may not relabel preview
-as mastery.
+the paragraph plan must classify it as `previously_taught_not_secure_enough_to_assume`
+and add support or hold the affected action; it may not relabel preview as secure.
 
 ## Operation balance
 
@@ -209,6 +250,10 @@ units/labels, and a conclusion at the target's actual depth.
   how actual transactions are determined, and what allocation/rationing
   assumption is being used.
 - Advice distinguishes revenue from profit and efficiency from fairness.
+- Fixed and variable costs are classified relative to a stated time period and
+  production/capacity range. Total fixed cost may change after a capacity
+  change. Linear `TVK` or constant `GVK` is a bounded model assumption, not a
+  universal cost law.
 
 ## Common misconception map
 
@@ -229,35 +274,43 @@ units/labels, and a conclusion at the target's actual depth.
 
 ## Readiness and hold register
 
-| Hold ID | Scope | Blocks | Release condition |
-|---|---|---|---|
-| `H-OUTLINE-OWNER` | Whole outline | Approved use in any paragraph plan | Human owner approves an exact PR head and metadata is updated to an approved status. |
-| `H-211-GATE0B1` | 2.1.1 | Goal/target approval and production | After outline merge/pin, rerun Gate 0B-1 with the revised four-goal seed as a proposal, not authority. |
-| `H-212-STALE-REF` | 2.1.2 | Paragraph approval | Review and repair the target's stale bakery cross-reference through the governed target lane. |
-| `H-213-DELTAQ` | 2.1.3 | Paragraph approval | Confirm interval-normalised `MK`/`MO` wording and examples. |
-| `H-213-OPC2` | 2.1.3 / long route | Formal output-choice teaching | Resolve whether/where v6 `OP-C2` output choice becomes an approved target. |
-| `H-221-PRIOR` | 2.2.1 | Unqualified paragraph-plan PASS | Pin Book 1 percentage/demand retrieval and decide whether registry prior fields need a later normalization. |
-| `H-22-ELASTIC-CONTRAST` | 2.2.1–2.2.2 | Unqualified paragraph-plan PASS | Include and review at least one explicit `|Ev|>1` numerical/interpretive contrast alongside the two inelastic target contexts. |
-| `H-231-V5` | 2.3.1 | Paragraph production | Complete v5 target review. |
-| `H-232-V5` | 2.3.2 | Paragraph production | Complete v5 target/economics review, including supply-as-MC boundary. |
-| `H-233-V5-REF` | 2.3.3 | Paragraph production | Complete v5 review, repair source reference, and qualify binding/transaction assumptions. |
-| `H-234-PLACEHOLDER` | 2.3.4 | Paragraph production | Replace placeholder with reviewed consolidation goals/target without new theory. |
-| `H-LESSON-ROOT` | Lesson planning | Lesson claim/readiness | Separate lesson-repo task creates/updates root and Chapter 2.3 plans after platform authority is approved. |
+| Hold ID | Status | Scope | Blocks | Explicitly permits | Release condition/evidence |
+|---|---|---|---|---|---|
+| `H-OUTLINE-OWNER` | open | `book-2` | `outline_approval`, `goal_approval`, `target_authority`, `paragraph_production`, `chapter_production`, `lesson_authoring`, `merge` | `goal_design`, `target_design`, `specialist_review` | Owner approves an exact PR head; released metadata records approver, date, and exact approval evidence. |
+| `H-211-GATE0B1` | open | `2.1.1` | `goal_approval`, `target_authority`, `paragraph_production`, `lesson_authoring` | `goal_design`, `target_design`, `specialist_review` | After outline approval/integration, Gate 0B-1 approves a reviewed goal/target package; released metadata records that decision. |
+| `H-212-STALE-REF` | open | `2.1.2` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Governed target-lane review repairs and approves the intended dependency, with record/PR evidence. |
+| `H-213-DELTAQ` | open | `2.1.3` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Specialist review approves interval-normalised `MK`/`MO` wording and examples, with evidence. |
+| `H-213-OPC2` | open | `2.1.3`, `long_route` | `formal_output_choice_teaching` | `goal_design`, `specialist_review` | Governed authority decides whether/where `OP-C2` is taught and records the decision. |
+| `H-221-PRIOR` | open | `2.2.1` | `goal_approval`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Approved plan pins Book 1 retrieval and records any registry-normalization decision. |
+| `H-22-ELASTIC-CONTRAST` | open | `2.2.1`, `2.2.2` | `goal_approval`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Approved instruction/practice includes reviewed `|Ev|>1` contrast evidence. |
+| `H-231-V5` | open | `2.3.1` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | V5 target review approves an exact record and stores its evidence. |
+| `H-232-V5` | open | `2.3.2` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | V5 target/economics review approves the target and supply-as-MC boundary. |
+| `H-233-V5-REF` | open | `2.3.3` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | V5 review and source repair approve binding/transaction assumptions with exact evidence. |
+| `H-234-PLACEHOLDER` | open | `2.3.4` | `goal_approval`, `target_authority`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review` | Reviewed consolidation goals/target replace the placeholder without new theory. |
+| `H-LESSON-ROOT` | open | `lesson_book_2_root`, `lesson_chapter_2_3` | `chapter_production`, `lesson_authoring` | `chapter_planning`, `specialist_review` | Separate lesson-repository task creates/reviews the required plans and records exact evidence. |
+
+The machine companion is the lifecycle authority for `status`, action lists,
+and `release_evidence`; this table is the human-readable projection. A released
+row is retained and must show its evidence. An open hold that is out of scope,
+does not list the current action in `blocks`, or explicitly permits that action
+does not block the foundation verdict.
 
 ## Gate 0B-0 readiness decision
 
 The outline package is `review_ready_with_holds`, not approved. Its derived
 sequence is suitable for teacher, economics, curriculum-sequencing, structural,
-and owner review. No paragraph build may use it in approved mode yet.
+and owner review. §2.1.1 goal design, target design, and specialist review may
+proceed as provisional Gate 0B-1 design, but no goal approval, target-authority
+change, paragraph/lesson production, merge, or approved-use claim is permitted.
 
 After human approval and governed integration:
 
 1. update metadata to the approved exact outline version/hash;
 2. refresh PR #224 from current main;
 3. pin this outline in the Issue #223 paragraph plan;
-4. reopen Gate 0B-1 for §2.1.1 goals/target design; and
+4. evaluate the provisional §2.1.1 design for goal approval and target authority; and
 5. keep every paragraph-specific and target-quality hold above in force until
    its own release condition is satisfied.
 
 This outline does not authorize a merge, a lesson edit, target mutation,
-student-facing output, or a mastery claim.
+student-facing output, or a student-attainment claim.

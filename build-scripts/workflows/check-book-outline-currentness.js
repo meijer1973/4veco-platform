@@ -18,12 +18,13 @@ const AUTHORITY_PATHS = Object.freeze([
   'skills/econ-exercise-builder.md',
 ]);
 
-const WORKFLOW_POINTERS = Object.freeze([
+const WORKFLOW_SURFACES = Object.freeze([
   'BUILD-PARAGRAPH.md',
   'BUILD-CHAPTER.md',
   'skills/econ-textbook-paragraph.md',
   'docs/workflows/textbook-paragraph-lane.md',
   'agents/teacher-learning-quality-review-agent.md',
+  'build-scripts/templates/template-textbook-paragraph-plan.md',
   'build-scripts/templates/template-paragraph-plan.md',
 ]);
 
@@ -39,42 +40,48 @@ const EXPECTED_KINDS = Object.freeze([
   'theory', 'theory', 'theory', 'gemengde_opgaven',
 ]);
 
-const REQUIRED_FIELDS = Object.freeze([
-  'id',
-  'title',
-  'kind',
-  'target_status',
-  'target_record_sha256',
+const REGISTERED_ACTIONS = Object.freeze([
+  'outline_approval',
+  'goal_design',
+  'target_design',
+  'specialist_review',
+  'goal_approval',
+  'target_authority',
+  'paragraph_production',
+  'chapter_planning',
+  'chapter_production',
+  'lesson_authoring',
+  'merge',
+  'formal_output_choice_teaching',
+]);
+
+const FORBIDDEN_SEMANTIC_KEYS = Object.freeze(new Set([
+  'semantic_invariants',
+  'chapter_spine',
+  'paragraph_order',
+  'required_paragraph_fields',
+  'paragraphs',
+  'paragraph_title',
   'role',
   'chapter_dependency',
   'prior_teaching',
+  'prerequisite_state',
+  'prerequisites',
   'retrieval',
   'interleave',
   'operation_emphasis',
   'misconception_boundary',
   'readiness_verdict',
-  'holds',
-]);
-
-const CONTENT_HOLDS = Object.freeze([
-  'H-211-GATE0B1',
-  'H-212-STALE-REF',
-  'H-213-DELTAQ',
-  'H-213-OPC2',
-  'H-221-PRIOR',
-  'H-22-ELASTIC-CONTRAST',
-  'H-231-V5',
-  'H-232-V5',
-  'H-233-V5-REF',
-  'H-234-PLACEHOLDER',
-  'H-LESSON-ROOT',
-]);
+  'non_goals',
+  'prepares_for',
+  'model_conditions',
+]));
 
 const SOURCE_PATHS = Object.freeze([
   OUTLINE_PATH,
   META_PATH,
   ...AUTHORITY_PATHS,
-  ...WORKFLOW_POINTERS,
+  ...WORKFLOW_SURFACES,
   'AGENT_GITHUB_ENTRY.md',
   'package.json',
   '.github/workflows/platform-ci.yml',
@@ -95,12 +102,10 @@ function sha256CanonicalText(value) {
 }
 
 function readFiles(root = ROOT) {
-  return Object.fromEntries(
-    SOURCE_PATHS.map((file) => {
-      const absolute = path.join(root, file);
-      return [file, fs.existsSync(absolute) ? fs.readFileSync(absolute) : null];
-    })
-  );
+  return Object.fromEntries(SOURCE_PATHS.map((file) => {
+    const absolute = path.join(root, file);
+    return [file, fs.existsSync(absolute) ? fs.readFileSync(absolute) : null];
+  }));
 }
 
 function parseJson(failures, files, file) {
@@ -131,35 +136,40 @@ function requireText(failures, files, file, pattern, message) {
   else if (!pattern.test(text)) failures.push(`${file}: ${message}`);
 }
 
+function findForbiddenSemanticKeys(value, location = '$', found = []) {
+  if (!value || typeof value !== 'object') return found;
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => findForbiddenSemanticKeys(item, `${location}[${index}]`, found));
+    return found;
+  }
+  for (const [key, child] of Object.entries(value)) {
+    if (FORBIDDEN_SEMANTIC_KEYS.has(key)) found.push(`${location}.${key}`);
+    findForbiddenSemanticKeys(child, `${location}.${key}`, found);
+  }
+  return found;
+}
+
 function checkMetadata(failures, files, meta) {
   if (!meta) return;
-  if (meta.schema_version !== 1) failures.push(`${META_PATH}: schema_version must equal 1`);
+  if (meta.schema_version !== 2) failures.push(`${META_PATH}: schema_version must equal 2`);
   if (meta.outline_id !== 'book-2') failures.push(`${META_PATH}: outline_id must equal book-2`);
   if (meta.audit_outcome !== 'VALID_WITH_DERIVED_OUTLINE_REQUIRED') {
     failures.push(`${META_PATH}: audit_outcome must remain VALID_WITH_DERIVED_OUTLINE_REQUIRED`);
   }
-  if (meta.outline_path !== OUTLINE_PATH) failures.push(`${META_PATH}: outline_path must equal ${OUTLINE_PATH}`);
   if (!/^book-2-outline-v\d+/.test(String(meta.version || ''))) failures.push(`${META_PATH}: version is missing or invalid`);
-  if (!['review_ready_with_holds', 'approved', 'approved_with_holds'].includes(meta.status)) {
-    failures.push(`${META_PATH}: status is invalid`);
-  }
+  if (!['review_ready_with_holds', 'approved', 'approved_with_holds'].includes(meta.status)) failures.push(`${META_PATH}: status is invalid`);
 
+  const semantic = meta.semantic_authority || {};
+  if (semantic.path !== OUTLINE_PATH) failures.push(`${META_PATH}: semantic_authority.path must equal ${OUTLINE_PATH}`);
+  if (semantic.rule !== 'canonical_human_semantics_live_only_in_markdown') {
+    failures.push(`${META_PATH}: semantic authority rule is missing or changed`);
+  }
   const outline = files[OUTLINE_PATH];
   if (outline === null) failures.push(`${OUTLINE_PATH}: required source file is missing`);
-  else if (sha256CanonicalText(outline) !== meta.outline_sha256) failures.push(`${META_PATH}: outline_sha256 is stale`);
+  else if (sha256CanonicalText(outline) !== semantic.sha256) failures.push(`${META_PATH}: semantic_authority.sha256 is stale`);
 
-  if (!equal(meta.paragraph_order, EXPECTED_ORDER)) failures.push(`${META_PATH}: paragraph_order must contain the exact 12 Book 2 IDs in order`);
-  if (!equal(meta.required_paragraph_fields, REQUIRED_FIELDS)) failures.push(`${META_PATH}: required_paragraph_fields changed`);
-
-  const invariants = new Set(meta.semantic_invariants || []);
-  const requiredInvariants = [
-    'preview_or_familiarity_must_not_be_treated_as_mastery',
-    'consolidation_paragraphs_introduce_no_new_terminal_theory',
-    'outline_does_not_approve_paragraph_goals_or_targets',
-    'target_quality_holds_must_remain_visible_until_separately_released',
-  ];
-  for (const invariant of requiredInvariants) {
-    if (!invariants.has(invariant)) failures.push(`${META_PATH}: semantic invariant missing: ${invariant}`);
+  for (const location of findForbiddenSemanticKeys(meta)) {
+    failures.push(`${META_PATH}: semantic field is prohibited in machine metadata: ${location}`);
   }
 
   const authority = Array.isArray(meta.authority_sources) ? meta.authority_sources : [];
@@ -177,151 +187,180 @@ function checkMetadata(failures, files, meta) {
 function checkTargetRegistry(failures, files, meta, registry) {
   if (!meta || !registry) return;
   const book2 = Array.isArray(registry.exercises)
-    ? registry.exercises.filter((record) => /^2\.[123]\.[1234]$/.test(String(record.id || '')))
+    ? registry.exercises.filter((record) => EXPECTED_ORDER.includes(String(record.id || '')))
     : [];
-  const paragraphs = Array.isArray(meta.paragraphs) ? meta.paragraphs : [];
+  const pins = Array.isArray(meta.target_registry_pins) ? meta.target_registry_pins : [];
   if (book2.length !== 12) failures.push(`${TARGET_REGISTRY_PATH}: expected exactly 12 Book 2 target records`);
-  if (paragraphs.length !== 12) failures.push(`${META_PATH}: expected exactly 12 paragraph records`);
+  if (pins.length !== 12) failures.push(`${META_PATH}: expected exactly 12 compact target registry pins`);
+  if (!equal(book2.map((record) => record.id), EXPECTED_ORDER)) failures.push(`${TARGET_REGISTRY_PATH}: Book 2 IDs are missing or reordered`);
+  if (!equal(pins.map((pin) => pin.id), EXPECTED_ORDER)) failures.push(`${META_PATH}: target registry pin IDs are missing or reordered`);
 
-  const registryOrder = book2.map((record) => record.id);
-  const metaOrder = paragraphs.map((paragraph) => paragraph.id);
-  if (!equal(registryOrder, EXPECTED_ORDER)) failures.push(`${TARGET_REGISTRY_PATH}: Book 2 IDs are missing or reordered`);
-  if (!equal(metaOrder, EXPECTED_ORDER)) failures.push(`${META_PATH}: paragraph IDs are missing or reordered`);
-
+  const allowedPinKeys = ['id', 'kind', 'target_status', 'target_record_sha256'];
   for (let index = 0; index < EXPECTED_ORDER.length; index += 1) {
     const id = EXPECTED_ORDER[index];
     const record = book2[index];
-    const paragraph = paragraphs[index];
-    if (!record || !paragraph) continue;
+    const pin = pins[index];
+    if (!record || !pin) continue;
+    if (!equal(Object.keys(pin), allowedPinKeys)) failures.push(`${META_PATH}: ${id} target pin must stay compact and contain only identity/status/hash fields`);
     if (record.paragraph_kind !== EXPECTED_KINDS[index]) failures.push(`${TARGET_REGISTRY_PATH}: ${id} paragraph kind changed`);
-    if (paragraph.kind !== record.paragraph_kind) failures.push(`${META_PATH}: ${id} paragraph kind does not match target registry`);
-    if (paragraph.title !== record.paragraph_title) failures.push(`${META_PATH}: ${id} title does not match target registry`);
-    if (paragraph.target_status !== record.record_status) failures.push(`${META_PATH}: ${id} target status does not match target registry`);
-    if (paragraph.target_record_sha256 !== sha256(JSON.stringify(record))) {
-      failures.push(`${META_PATH}: ${id} target record hash is stale`);
-    }
-    for (const field of REQUIRED_FIELDS) {
-      if (!(field in paragraph)) failures.push(`${META_PATH}: ${id} required paragraph field is missing: ${field}`);
-    }
-    for (const field of ['prior_teaching', 'retrieval', 'interleave', 'operation_emphasis', 'misconception_boundary']) {
-      if (!Array.isArray(paragraph[field]) || paragraph[field].length === 0) {
-        failures.push(`${META_PATH}: ${id} ${field} must be a non-empty array`);
-      }
-    }
-    if (!Array.isArray(paragraph.holds)) failures.push(`${META_PATH}: ${id} holds must be an array`);
-    for (const field of ['role', 'chapter_dependency', 'readiness_verdict']) {
-      if (typeof paragraph[field] !== 'string' || paragraph[field].trim() === '') {
-        failures.push(`${META_PATH}: ${id} ${field} must be non-empty`);
-      }
-    }
-    if (record.paragraph_kind === 'gemengde_opgaven') {
-      const boundary = paragraph.misconception_boundary.join(' ').toLowerCase();
-      if (!boundary.includes('no new terminal theory')) {
-        failures.push(`${META_PATH}: ${id} consolidation boundary must prohibit new terminal theory`);
-      }
-    }
+    if (pin.kind !== record.paragraph_kind) failures.push(`${META_PATH}: ${id} paragraph kind does not match target registry`);
+    if (pin.target_status !== record.record_status) failures.push(`${META_PATH}: ${id} target status does not match target registry`);
+    if (pin.target_record_sha256 !== sha256(JSON.stringify(record))) failures.push(`${META_PATH}: ${id} target record hash is stale`);
   }
 }
 
-function checkHolds(failures, meta) {
+function holdScopeMatches(hold, options = {}) {
+  const scope = Array.isArray(hold.scope) ? hold.scope : [];
+  if (scope.includes('book-2')) return true;
+  if (options.paragraph) {
+    if (scope.includes(options.paragraph)) return true;
+    const chapter = options.paragraph.split('.').slice(0, 2).join('.');
+    if (scope.includes(chapter)) return true;
+  }
+  if (options.chapter) {
+    if (scope.includes(options.chapter)) return true;
+    if (scope.some((item) => /^2\.[123]\.[1234]$/.test(item) && item.startsWith(`${options.chapter}.`))) return true;
+  }
+  if (options.action === 'lesson_authoring' && scope.some((item) => item.startsWith('lesson_'))) return true;
+  return false;
+}
+
+function blockingHoldsForAction(meta, options = {}) {
+  if (!meta || !options.action) return [];
+  return (meta.holds || []).filter((hold) => (
+    hold.status === 'open'
+    && holdScopeMatches(hold, options)
+    && Array.isArray(hold.blocks)
+    && hold.blocks.includes(options.action)
+  ));
+}
+
+function checkHolds(failures, files, meta, options) {
   if (!meta) return;
   const holds = Array.isArray(meta.holds) ? meta.holds : [];
-  const ids = holds.map((hold) => hold.id);
-  for (const id of CONTENT_HOLDS) {
-    if (!ids.includes(id)) failures.push(`${META_PATH}: required hold is missing: ${id}`);
-  }
-  const reviewReady = meta.status === 'review_ready_with_holds';
-  if (reviewReady && !ids.includes('H-OUTLINE-OWNER')) failures.push(`${META_PATH}: review-ready status requires H-OUTLINE-OWNER`);
-  if (!reviewReady && ids.includes('H-OUTLINE-OWNER')) failures.push(`${META_PATH}: approved status must release H-OUTLINE-OWNER`);
-
-  const holdSet = new Set(ids);
+  const ids = holds.map((hold) => hold && hold.id);
+  if (new Set(ids).size !== ids.length) failures.push(`${META_PATH}: hold IDs must be unique`);
   for (const hold of holds) {
-    if (!hold || typeof hold !== 'object' || !hold.id || !hold.severity || !Array.isArray(hold.scope) || !hold.summary || !Array.isArray(hold.blocks)) {
-      failures.push(`${META_PATH}: every hold requires id, severity, scope, summary, and blocks`);
+    if (!hold || typeof hold !== 'object') {
+      failures.push(`${META_PATH}: every hold must be an object`);
+      continue;
+    }
+    for (const field of ['id', 'status', 'severity', 'scope', 'summary', 'blocks', 'permits', 'release_condition', 'release_evidence']) {
+      if (!(field in hold)) failures.push(`${META_PATH}: ${hold.id || 'unknown hold'} is missing lifecycle field ${field}`);
+    }
+    if (!['open', 'released'].includes(hold.status)) failures.push(`${META_PATH}: ${hold.id} status must be open or released`);
+    if (!Array.isArray(hold.scope) || hold.scope.length === 0 || hold.scope.some((item) => typeof item !== 'string' || item.trim() === '')) {
+      failures.push(`${META_PATH}: ${hold.id} scope must be a non-empty string array`);
+    }
+    if (!Array.isArray(hold.blocks) || !Array.isArray(hold.permits)) failures.push(`${META_PATH}: ${hold.id} blocks and permits must be arrays`);
+    const overlap = (hold.blocks || []).filter((action) => (hold.permits || []).includes(action));
+    if (overlap.length > 0) failures.push(`${META_PATH}: ${hold.id} cannot both block and permit ${overlap.join(', ')}`);
+    for (const action of [...(hold.blocks || []), ...(hold.permits || [])]) {
+      if (!REGISTERED_ACTIONS.includes(action)) failures.push(`${META_PATH}: ${hold.id} uses unregistered action ${action}`);
+    }
+    if (typeof hold.release_condition !== 'string' || hold.release_condition.trim() === '') failures.push(`${META_PATH}: ${hold.id} release_condition must be non-empty`);
+    if (hold.status === 'open' && hold.release_evidence !== null) failures.push(`${META_PATH}: open hold ${hold.id} must have null release_evidence`);
+    if (hold.status === 'released') {
+      const evidence = hold.release_evidence;
+      if (!evidence || typeof evidence !== 'object'
+          || typeof evidence.released_by !== 'string' || evidence.released_by.trim() === ''
+          || !/^\d{4}-\d{2}-\d{2}$/.test(String(evidence.released_on || ''))
+          || typeof evidence.evidence_ref !== 'string' || evidence.evidence_ref.trim() === '') {
+        failures.push(`${META_PATH}: released hold ${hold.id} requires released_by, released_on, and evidence_ref`);
+      }
     }
   }
-  for (const paragraph of meta.paragraphs || []) {
-    for (const id of paragraph.holds || []) {
-      if (!holdSet.has(id)) failures.push(`${META_PATH}: ${paragraph.id} references unknown hold ${id}`);
-    }
-    if (reviewReady && !(paragraph.holds || []).includes('H-OUTLINE-OWNER')) {
-      failures.push(`${META_PATH}: ${paragraph.id} must retain H-OUTLINE-OWNER while approval is pending`);
-    }
+
+  const ownerHold = holds.find((hold) => hold.id === 'H-OUTLINE-OWNER');
+  if (meta.status === 'review_ready_with_holds' && (!ownerHold || ownerHold.status !== 'open')) {
+    failures.push(`${META_PATH}: review-ready status requires open H-OUTLINE-OWNER`);
+  }
+  if (['approved', 'approved_with_holds'].includes(meta.status) && (!ownerHold || ownerHold.status !== 'released')) {
+    failures.push(`${META_PATH}: approved status requires released H-OUTLINE-OWNER with evidence`);
+  }
+
+  const prose = asText(files[OUTLINE_PATH]) || '';
+  const proseIds = [...prose.matchAll(/^\| `?(H-[A-Z0-9-]+)`? \|/gm)].map((match) => match[1]);
+  for (const id of ids) if (!proseIds.includes(id)) failures.push(`${OUTLINE_PATH}: hold ${id} is missing from the human-readable register`);
+  for (const id of proseIds) if (!ids.includes(id)) failures.push(`${META_PATH}: prose hold ${id} is missing from lifecycle metadata`);
+
+  for (const hold of blockingHoldsForAction(meta, options)) {
+    failures.push(`${META_PATH}: action ${options.action} is blocked by open hold ${hold.id} in matching scope`);
   }
 }
 
 function checkProse(failures, files, meta) {
-  const requiredHeadings = [
+  const headings = [
     '## Authority and freshness',
     '## Purpose and position in the course',
     '## Entry prerequisites from Book 1',
     '## Book exit expectations',
     '## Chapter spine',
     '## Paragraph role matrix',
+    '### Canonical paragraph foundation dimensions',
     '## Retrieval and interleaving schedule',
     '## Operation balance',
     '## Shared conventions',
     '## Common misconception map',
     '## Readiness and hold register',
   ];
-  for (const heading of requiredHeadings) {
-    requireText(failures, files, OUTLINE_PATH, new RegExp(`^${heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'm'), `missing required heading ${heading}`);
-  }
+  for (const heading of headings) requireText(failures, files, OUTLINE_PATH, new RegExp(`^${escapeRegExp(heading)}$`, 'm'), `missing required heading ${heading}`);
   if (!meta) return;
   requireText(failures, files, OUTLINE_PATH, new RegExp(`Version: \`${escapeRegExp(meta.version)}\``), 'version does not match metadata');
-  requireText(failures, files, OUTLINE_PATH, /Familiarity or preview that is not prerequisite mastery/, 'preview-versus-mastery boundary is missing');
+  requireText(failures, files, OUTLINE_PATH, /canonical human semantic\s+authority/i, 'canonical semantic authority statement is missing');
   requireText(failures, files, OUTLINE_PATH, /Consolidation paragraphs introduce no new terminal theory\./, 'consolidation boundary is missing');
-  for (const id of EXPECTED_ORDER) requireText(failures, files, OUTLINE_PATH, new RegExp(`\\b${id.replace(/\./g, '\\.')}\\b`), `paragraph ${id} is missing`);
-  for (const id of CONTENT_HOLDS) requireText(failures, files, OUTLINE_PATH, new RegExp(id), `hold ${id} is missing`);
-
+  for (const id of EXPECTED_ORDER) requireText(failures, files, OUTLINE_PATH, new RegExp(`^\\| ${escapeRegExp(id)} \\|`, 'm'), `canonical foundation dimensions row ${id} is missing`);
+  for (const classification of [
+    'previously_taught_probably_secure',
+    'previously_taught_retrieval_required',
+    'previously_taught_not_secure_enough_to_assume',
+    'preview_or_familiarity_only',
+    'new_formal_learning',
+  ]) requireText(failures, files, OUTLINE_PATH, new RegExp(classification), `prerequisite classification is missing: ${classification}`);
+  for (const phrase of [
+    'Revenue; profit; break-even; marginal costs; `MO=MK`',
+    'supply-as-MC bridge in §2.3.2',
+    'production/capacity range',
+    'linear `TVK` and constant `GVK` are bounded assumptions',
+    'directly needed by the approved target and worked example',
+  ]) requireText(failures, files, OUTLINE_PATH, new RegExp(escapeRegExp(phrase), 'i'), `required §2.1.1 foundation boundary is missing: ${phrase}`);
   const text = asText(files[OUTLINE_PATH]) || '';
-  const unsafe = [
-    /preview\s+(?:is|proves|counts as)\s+mastery/i,
-    /familiarity\s+(?:is|proves|counts as)\s+mastery/i,
-  ];
-  for (const pattern of unsafe) {
-    if (pattern.test(text)) failures.push(`${OUTLINE_PATH}: preview-to-mastery promotion detected`);
-  }
+  if (/mastered operations available|mastered Book 1/i.test(text)) failures.push(`${OUTLINE_PATH}: curricular prior teaching is overstated as mastery`);
 }
 
-function checkWorkflowPointers(failures, files, meta) {
+function checkWorkflowSurfaces(failures, files, meta) {
   if (!meta) return;
-  const pointers = Array.isArray(meta.workflow_pointers) ? meta.workflow_pointers : [];
-  if (!equal(pointers.map((pointer) => pointer.path), WORKFLOW_POINTERS)) {
-    failures.push(`${META_PATH}: workflow_pointers must contain the exact required surfaces`);
+  if (!equal(meta.workflow_surfaces, WORKFLOW_SURFACES)) failures.push(`${META_PATH}: workflow_surfaces must contain the exact required surfaces`);
+  for (const file of WORKFLOW_SURFACES) requireText(failures, files, file, /references\/authored\/book-outlines\/book-2-outline\.md/, `must point to ${OUTLINE_PATH}`);
+  for (const file of WORKFLOW_SURFACES.slice(0, 6)) requireText(failures, files, file, /Book foundation check/i, 'Book foundation check is missing');
+
+  for (const file of ['BUILD-PARAGRAPH.md', 'skills/econ-textbook-paragraph.md', 'docs/workflows/textbook-paragraph-lane.md', 'build-scripts/templates/template-textbook-paragraph-plan.md']) {
+    requireText(failures, files, file, /X\.Y\.Z-textbook-plan\.md/, 'Part A textbook-plan ownership is missing');
+    requireText(failures, files, file, /Part A (?:owns|owned)/i, 'Part A ownership statement is missing');
   }
-  for (const file of WORKFLOW_POINTERS) {
-    requireText(failures, files, file, /Book foundation check/i, 'Book foundation check is missing');
-    requireText(failures, files, file, /references\/authored\/book-outlines\/book-2-outline\.md/, `must point to ${OUTLINE_PATH}`);
-  }
+  requireText(failures, files, 'build-scripts/templates/template-paragraph-plan.md', /Part B companion implementation plan/, 'Part B plan ownership is missing');
+  requireText(failures, files, 'build-scripts/templates/template-paragraph-plan.md', /consumes the approved/i, 'Part B consumption boundary is missing');
+  requireText(failures, files, 'build-scripts/templates/template-paragraph-plan.md', /Part A `X\.Y\.Z-textbook-plan\.md`/i, 'Part B Part A-plan reference is missing');
+  requireText(failures, files, 'build-scripts/templates/template-textbook-paragraph-plan.md', /Foundation verdict: `\[PASS_FOR_<ACTION> \| BLOCKED_FOR_<ACTION>\]`/, 'distinct action-specific foundation verdict is missing');
 
   const pkg = parseJson(failures, files, 'package.json');
   if (pkg) {
     const scripts = pkg.scripts || {};
-    if (scripts['check:book-outline-currentness'] !== 'node build-scripts/workflows/check-book-outline-currentness.js') {
-      failures.push('package.json: check:book-outline-currentness script is missing or changed');
-    }
-    if (scripts['test:book-outline-currentness'] !== 'jest build-scripts/workflows/check-book-outline-currentness.test.js --runInBand') {
-      failures.push('package.json: test:book-outline-currentness script is missing or changed');
-    }
+    if (scripts['check:book-outline-currentness'] !== 'node build-scripts/workflows/check-book-outline-currentness.js') failures.push('package.json: check:book-outline-currentness script is missing or changed');
+    if (scripts['test:book-outline-currentness'] !== 'jest build-scripts/workflows/check-book-outline-currentness.test.js --runInBand') failures.push('package.json: test:book-outline-currentness script is missing or changed');
   }
-  requireText(
-    failures,
-    files,
-    '.github/workflows/platform-ci.yml',
-    /- name: Validate Book 2 outline currentness\r?\n\s+run: npm run check:book-outline-currentness/,
-    'platform CI wiring is missing'
-  );
+  requireText(failures, files, '.github/workflows/platform-ci.yml', /- name: Validate Book 2 outline currentness\r?\n\s+run: npm run check:book-outline-currentness/, 'platform CI wiring is missing');
   requireText(failures, files, 'AGENT_GITHUB_ENTRY.md', /`build-scripts\/workflows\/check-book-outline-currentness\.js`/, 'GitHub entry map does not expose the checker');
 }
 
 function checkApprovedMode(failures, meta, requireApproved) {
   if (!requireApproved || !meta) return;
   const approval = meta.owner_approval || {};
+  const outlineHash = meta.semantic_authority && meta.semantic_authority.sha256;
   if (!['approved', 'approved_with_holds'].includes(meta.status)) failures.push(`${META_PATH}: approved mode requires approved or approved_with_holds status`);
   if (approval.status !== 'approved') failures.push(`${META_PATH}: approved mode requires owner_approval.status=approved`);
   if (approval.approved_version !== meta.version) failures.push(`${META_PATH}: approved_version must match version`);
-  if (approval.approved_outline_sha256 !== meta.outline_sha256) failures.push(`${META_PATH}: approved_outline_sha256 must match outline_sha256`);
+  if (approval.approved_outline_sha256 !== outlineHash) failures.push(`${META_PATH}: approved_outline_sha256 must match semantic_authority.sha256`);
   if (!Number.isInteger(approval.approved_pr) || approval.approved_pr <= 0) failures.push(`${META_PATH}: approved_pr must be a positive PR number`);
   if (!/^[0-9a-f]{40}$/i.test(String(approval.approved_commit || ''))) failures.push(`${META_PATH}: approved_commit must be a full commit SHA`);
 }
@@ -332,22 +371,28 @@ function findBookOutlineFailures(files = readFiles(), options = {}) {
   const registry = parseJson(failures, files, TARGET_REGISTRY_PATH);
   checkMetadata(failures, files, meta);
   checkTargetRegistry(failures, files, meta, registry);
-  checkHolds(failures, meta);
+  checkHolds(failures, files, meta, options);
   checkProse(failures, files, meta);
-  checkWorkflowPointers(failures, files, meta);
+  checkWorkflowSurfaces(failures, files, meta);
   checkApprovedMode(failures, meta, options.requireApproved === true);
   return failures;
 }
 
 function parseCli(argv) {
-  const options = { requireApproved: false, root: ROOT };
+  const options = { requireApproved: false, root: ROOT, action: null, paragraph: null, chapter: null };
   for (let index = 0; index < argv.length; index += 1) {
-    if (argv[index] === '--require-approved') options.requireApproved = true;
-    else if (argv[index] === '--root') {
-      options.root = path.resolve(argv[index + 1]);
+    const arg = argv[index];
+    if (arg === '--require-approved') options.requireApproved = true;
+    else if (['--root', '--action', '--paragraph', '--chapter'].includes(arg)) {
+      if (!argv[index + 1]) throw new Error(`${arg} requires a value`);
+      const key = arg.slice(2);
+      options[key] = key === 'root' ? path.resolve(argv[index + 1]) : argv[index + 1];
       index += 1;
-    } else throw new Error(`Unknown argument: ${argv[index]}`);
+    } else throw new Error(`Unknown argument: ${arg}`);
   }
+  if (options.action && !REGISTERED_ACTIONS.includes(options.action)) throw new Error(`Unknown action: ${options.action}`);
+  if ((options.paragraph || options.chapter) && !options.action) throw new Error('--paragraph/--chapter requires --action');
+  if (options.paragraph && options.chapter) throw new Error('Use either --paragraph or --chapter, not both');
   return options;
 }
 
@@ -367,23 +412,27 @@ function main() {
   }
   console.log('Book 2 outline currentness: PASS');
   console.log(`- outline: ${OUTLINE_PATH}`);
-  console.log(`- paragraphs: ${EXPECTED_ORDER.length}`);
-  console.log(`- mode: ${options.requireApproved ? 'approved-use' : 'structural-currentness'}`);
+  console.log(`- target pins: ${EXPECTED_ORDER.length}`);
+  console.log(`- mode: ${options.requireApproved ? 'approved-use' : options.action ? `action:${options.action}` : 'structural-currentness'}`);
+  if (options.paragraph) console.log(`- paragraph scope: ${options.paragraph}`);
+  if (options.chapter) console.log(`- chapter scope: ${options.chapter}`);
 }
 
 if (require.main === module) main();
 
 module.exports = {
   AUTHORITY_PATHS,
-  CONTENT_HOLDS,
   EXPECTED_ORDER,
+  FORBIDDEN_SEMANTIC_KEYS,
   META_PATH,
   OUTLINE_PATH,
-  REQUIRED_FIELDS,
+  REGISTERED_ACTIONS,
   TARGET_REGISTRY_PATH,
-  WORKFLOW_POINTERS,
+  WORKFLOW_SURFACES,
   asText,
+  blockingHoldsForAction,
   findBookOutlineFailures,
+  holdScopeMatches,
   readFiles,
   sha256,
   sha256CanonicalText,

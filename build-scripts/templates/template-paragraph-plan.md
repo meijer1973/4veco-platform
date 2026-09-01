@@ -1,42 +1,23 @@
 # Paragraph Plan: X.Y.Z [Naam]
 
 > Copy this template into `<paragraph-folder>/_paragraph-plan.md` and fill in every section during **Phase 4a**.
-> This plan is the single source of truth for all builders working on this paragraph.
+> This is the Part B companion implementation plan. It consumes the approved
+> Part A `X.Y.Z-textbook-plan.md` and `X.Y.Z-textbook-handoff.md`; it does not
+> own or duplicate the Part A Book foundation decision.
 
 ---
 
-## Book foundation check
+## Part A foundation and handoff inputs
 
-> Required for Book 2 and later when a canonical book outline exists. For Book
-> 2, use `references/authored/book-outlines/book-2-outline.md` and its
-> `.meta.json` companion. Run `npm run check:book-outline-currentness` and
-> `npm run check:book-outline-currentness -- --require-approved` before filling
-> the verdict. Do not convert preview/familiarity into mastered prior teaching.
-
-| Outline pin | Value |
+| Required Part A input | Exact reference |
 |---|---|
-| Outline reference | `references/authored/book-outlines/book-2-outline.md` |
-| Outline version | [exact metadata version] |
-| Outline SHA-256 | [exact metadata `outline_sha256`] |
-| Metadata status | [approved / approved_with_holds / pending-stops-work] |
-| Structural currentness command/result | [exact command + PASS/FAIL + evidence] |
-| Approved-use command/result | [exact command + PASS/FAIL + evidence] |
+| Approved Part A textbook plan | `<paragraph-folder>/X.Y.Z-textbook-plan.md` |
+| Part A Book foundation verdict | [exact verdict and current action from the Part A plan] |
+| Textbook handoff | `<paragraph-folder>/X.Y.Z-textbook-handoff.md` |
+| Canonical outline reference | `references/authored/book-outlines/book-2-outline.md` |
 
-| Required foundation field | Paragraph-specific decision/evidence |
-|---|---|
-| Paragraph role | [copy/adapt only the canonical role for X.Y.Z] |
-| Prerequisite state | [which prerequisites are mastered, supported, seen, or not yet secure] |
-| Chapter dependency | [required preceding paragraph/chapter state] |
-| Prior teaching | [exact earlier paragraph/operation evidence] |
-| Retrieval | [compact already-taught retrieval planned here] |
-| Interleaving | [earlier operation deliberately mixed here and why] |
-| Operation emphasis | [calculation / representation / interpretation / selection-classification / answer form] |
-| Misconception boundary | [canonical misconception(s) this paragraph must guard] |
-| Readiness verdict | [READY / READY_WITH_HOLDS / BLOCKED] |
-| Holds | [all canonical hold IDs plus paragraph-specific release evidence; use `none` only when the outline has none] |
-
-Stop condition: [state why work can proceed, or name the unresolved hold that
-blocks goals/target/content work].
+If Part B needs a changed foundation decision, return the issue to Part A. Do
+not edit the Part A plan or create a second semantic outline here.
 
 ---
 

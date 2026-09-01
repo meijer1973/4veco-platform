@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.12-book2-foundation-outline-review",
+      "version": "v1.13-book2-foundation-outline-owner-revision",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
       "updated_on": "2026-09-01",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 has completed local Gate 0B-0 implementation and role-based review for the canonical 12-paragraph Book 2 outline. Human owner approval and merge are pending; lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is in owner-requested revision on draft PR #226; Gate 0B-0 is not accepted until hold lifecycle/scope, semantic authority, Part A ownership, foundation completeness, prerequisite language, and terminal evidence are repaired and re-reviewed. Lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

@@ -25,16 +25,23 @@ companion, then run:
 
 ```bash
 npm run check:book-outline-currentness
-npm run check:book-outline-currentness -- --require-approved
+npm run check:book-outline-currentness -- --action chapter_planning --chapter X.Y
+npm run check:book-outline-currentness -- --require-approved  # before approval/production
 ```
 
-Stop when the outline is stale, owner approval is pending, the chapter spine is
-absent, or an in-scope paragraph has a blocking hold. The chapter plan must pin
-the approved outline reference/version/SHA-256 and map each paragraph to its
-role, prerequisites, chapter dependency, retrieval/interleaving, operation
-emphasis, misconception boundary, readiness verdict, and holds. This is the
-chapter-level **Book foundation check**; it precedes blueprint-to-paragraph
-delegation and is not replaced by a source status or an existing lesson folder.
+Stop only when the outline is stale or an `open` hold in matching chapter scope
+lists the current action in `blocks`. A released hold requires evidence and no
+longer blocks; an unrelated, out-of-scope, or explicitly permitted hold does
+not block chapter planning. Approval and production still require approved-use
+currentness and their own action checks.
+
+The chapter plan must pin the active v6/detailed v5 and approved outline
+path/version/hash, its own path/version/hash/currentness, every paragraph's
+target registry ID/status/hash, and references to each Part A-owned
+`X.Y.Z-textbook-plan.md`. It consumes the Markdown outline's canonical roles,
+prerequisites, non-goals, prepares-for, model conditions, and action-specific
+hold effects without recreating a second outline. This is the chapter-level
+**Book foundation check**; it precedes blueprint-to-paragraph delegation.
 
 ---
 
@@ -42,7 +49,7 @@ delegation and is not replaced by a source status or an existing lesson folder.
 
 Follow the `econ-chapter-builder` skill for the full orchestration process:
 
-1. **Plan** — pass the Book foundation check, read the blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save the outline pin and decisions in `_chapter-plan.md`.
+1. **Plan** — pass the action-specific Book foundation check for `chapter_planning`, read the blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save the authority pins and decisions in `_chapter-plan.md`.
 2. **Build** — delegate each paragraph to a sub-agent that follows `econ-textbook-paragraph` exactly. Each sub-agent must produce ALL deliverables: 3 .md files, 3 .pdf files, build_pdf.py, _assets/ with SVG+PNG pairs.
 3. **Verify** — after each sub-agent returns, run completeness check. If anything missing, send back.
 4. **QC** — independent sub-agent review per paragraph (Pass 0 + Pass 1 + Pass 2 from `econ-paragraph-review`).
@@ -66,7 +73,7 @@ For each paragraph in the chapter, verify:
 2. □ 2 `.pdf` files exist, each >10KB
 
 **All paragraphs (theory + consolidation):**
-3. □ The paragraph plan's Book foundation check matches the chapter plan's approved outline version/hash and has no ignored blocking hold
+3. □ Each Part A `X.Y.Z-textbook-plan.md` foundation check matches the chapter plan's approved outline version/hash; production-action hold effects are explicit and no matching open production hold is ignored
 4. □ `build_pdf.py` exists
 5. □ `_assets/` folder exists with SVG + PNG pairs
 6. □ Asset completeness: every image ref in `.md` → file exists in `_assets/`

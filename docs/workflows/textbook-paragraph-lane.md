@@ -21,9 +21,11 @@ a website, device, online explanation, or companion surface and must not expose
 internal lane terminology. Book 1 output is frozen and must not be retrofitted.
 
 **Pedagogical-boundary inheritance:** use
-`references/owned/course-blueprint-pedagogical-boundaries.md` to classify
-earlier exposure as `seen`, `supported`, `independently required`, or
-`mastered`. A preview never closes a target-coverage gap, authorises an
+`references/owned/course-blueprint-pedagogical-boundaries.md` to inform the
+paragraph-level classification: `previously_taught_probably_secure`,
+`previously_taught_retrieval_required`,
+`previously_taught_not_secure_enough_to_assume`,
+`preview_or_familiarity_only`, or `new_formal_learning`. A preview never closes a target-coverage gap, authorises an
 untargeted independent operation, displaces the approved target route, or
 relaxes the whole-lesson 55-minute proof. The exercise builder remains the
 operational sequence/coverage authority.
@@ -34,14 +36,18 @@ machine companion. Run:
 
 ```bash
 npm run check:book-outline-currentness
-npm run check:book-outline-currentness -- --require-approved
+npm run check:book-outline-currentness -- --action <action> --paragraph X.Y.Z
+npm run check:book-outline-currentness -- --require-approved  # for approval/production actions
 ```
 
-The paragraph plan must pin the exact outline version/SHA-256 and record its
-paragraph role, prerequisites, chapter dependency, prior teaching,
-retrieval/interleaving, operation emphasis, misconception boundary, readiness
-verdict, and holds. Structural currentness is insufficient when owner approval
-is pending. Any stale source, missing role, or blocking hold stops the lane.
+Part A owns `<paragraph-folder>/X.Y.Z-textbook-plan.md`, created from
+`build-scripts/templates/template-textbook-paragraph-plan.md`. Its complete
+foundation check pins v6/v5/outline/chapter-plan/target identity and freshness,
+copies canonical Markdown semantics, uses the five prerequisite
+classifications, and evaluates each hold against the exact current action. A
+stale source or matching open hold that blocks the current action stops that
+action. Released, unrelated, out-of-scope, and explicitly permitted holds do
+not. Part B may consume this plan but owns its separate `_paragraph-plan.md`.
 
 The companion route `Start -> Leer -> Check -> Oefen -> Exit ticket` belongs
 to Part B. It is not a printed Part A heading sequence and does not create an
@@ -68,7 +74,7 @@ additional lane.
 - `X.Y.Z-review.md`
 - `X.Y.Z-quality-ref.yaml` `partA:` block (see `docs/workflows/paragraph-quality-ref-schema-v2.md`)
 - `X.Y.Z-textbook-handoff.md`
-- Paragraph planning artifact containing the required Book foundation check
+- `X.Y.Z-textbook-plan.md` containing the required Book foundation check
   (the plan itself remains a planning/control input, not student-facing copy)
 - For consolidation paragraphs, omit `paragraaf.*` and produce the required
   `opgaven` and `antwoorden` markdown, HTML, and PDF files. PDF output is not
@@ -140,9 +146,9 @@ The lane is closed only when:
 - Every Book 2+ target operation is covered in the required alignment table,
   the seven headings/order and core-route timing have been reviewed, and the
   optional guided/bonus/review semantics pass `econ-paragraph-review`.
-- The Book foundation check points to the current owner-approved
-  `references/authored/book-outlines/book-2-outline.md` version/hash and no
-  paragraph hold is ignored.
+- The Part A-owned Book foundation check points to the current
+  `references/authored/book-outlines/book-2-outline.md` version/hash, records a
+  verdict for the production action, and ignores no matching open blocker.
 
 `complete` validation is not a normal textbook assignment. It is an integration
 verification state after Part B exists or a deliberately authorized complete
