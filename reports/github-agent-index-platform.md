@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-01T11:10:12.863Z
+Generated: 2026-09-01T11:22:49.477Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-foundation-outline-20260901`
-Source commit: `c38040d34bae12f6c61c1d26a43c5bdf354927b8`
-Files indexed: 7549
+Source commit: `2138a729c1e0265f18775a30f57d6e6fb2f9fc67`
+Files indexed: 7552
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2614,7 +2614,7 @@ Count: 1019
 
 ## reports
 
-Count: 4849
+Count: 4852
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5197,8 +5197,10 @@ Count: 4849
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-blueprint-validity-audit.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-command-log.jsonl
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-command-log.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review-owner-revision.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-curriculum-sequencing-review.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-diff-summary.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review-owner-revision.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-economic-content-review.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-assignment.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-corrections.md
@@ -5208,6 +5210,7 @@ Count: 4849
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-planning-review.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md
+- reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review-owner-revision.md
 - reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-teacher-learning-quality-review.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
 - reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
