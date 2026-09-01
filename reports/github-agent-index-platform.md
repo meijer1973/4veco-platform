@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-08-31T13:15:55.173Z
+Generated: 2026-09-01T06:16:42.721Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book1-edition-boundary-20260830`
-Source commit: `6840a7f8ca30eca3901e97cb65e8489fe4b1d80d`
-Files indexed: 7523
+Source branch: `codex/issue223-gate0-planning-20260901`
+Source commit: `419ba205b78c904707f194281c4f1dd3d0bc24e9`
+Files indexed: 7529
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1585,7 +1585,7 @@ Count: 690
 
 ## references
 
-Count: 1015
+Count: 1016
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -2075,6 +2075,7 @@ Count: 1015
 - references/data/sprints/GRAPH-REFINE-1.result.json
 - references/data/sprints/GRAPH-UX-2.plan.json
 - references/data/sprints/GRAPH-UX-2.result.json
+- references/data/sprints/ISSUE-223-GATE-0-1.plan.json
 - references/data/sprints/L1.7B-Q2-COPY.plan.json
 - references/data/sprints/L1.7B-Q2-COPY.result.json
 - references/data/sprints/L1.7B-Q2-D31-STRUCT.plan.json
@@ -2605,7 +2606,7 @@ Count: 1015
 
 ## reports
 
-Count: 4830
+Count: 4835
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6062,6 +6063,11 @@ Count: 4830
 - reports/sprints/INTEGRATION-LANE-PERMISSION-SMOOTHING-1-lead-review-round2.md
 - reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round2.md
 - reports/sprints/INTEGRATION-PILOT-CLOSURE-CLEANUP-1-lead-review-round3.md
+- reports/sprints/ISSUE-223-GATE-0-1-baseline.md
+- reports/sprints/ISSUE-223-GATE-0-1-command-log.jsonl
+- reports/sprints/ISSUE-223-GATE-0-1-plan.md
+- reports/sprints/ISSUE-223-GATE-0-1-planning-review-assignment.md
+- reports/sprints/ISSUE-223-GATE-0-1-planning-review.md
 - reports/sprints/L1.7B-Q2-answer-model.md
 - reports/sprints/L1.7B-Q2-baseline.md
 - reports/sprints/L1.7B-Q2-COPY-baseline.md
