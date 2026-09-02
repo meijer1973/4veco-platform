@@ -1,14 +1,14 @@
 # Textbook Production Roadmap
 
-Generated: 2026-09-01
+Generated: 2026-09-02
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.14-book2-foundation-outline-corrected-review`
+Roadmap version: `v1.15-book2-foundation-evidence-closure`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. `BOOK-2-FOUNDATION-OUTLINE-1` has completed the second owner-requested local correction on draft PR #226 after review of head `32f861b0734566c548c0f4cb0bb9c6deeba4fd01`. Substantive head `46e2f83c894d4dec8a850bc90ca8326a7cea7c0a` adds complete decision/release/use transitions, schema-validated typed scopes, split Book-root/Chapter-2.3 holds, exact human/machine lifecycle parity, and corrected Part A/Part B entrypoint routing while preserving the accepted outline. Renewed specialists PASS and lead round 3 is PASS WITH FLAGS for the human/CI/hold/disclosure gates only. Exact terminal-head CI and a new human owner decision remain pending. Historical Chapter 2.1/2.2 evidence remains read-only input; no lesson or target-registry mutation is authorized here. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. Structural/governance rereview of `BOOK-2-FOUNDATION-OUTLINE-1` on draft PR #226 is `PASS WITH FLAGS`: accepted substantive head `72b87403ea7866aaee877e9945a2021cc2559552` closes all three bypasses, pre-refresh terminal head `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed` passed CI run `33554042557`, the focused suite is 88/88, the platform suite is 1,741 tests, and the semantic outline hash remains `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. Only evidence refresh, exact-head CI for the resulting terminal head, bounded evidence closure, and a new human owner decision remain. Historical Chapter 2.1/2.2 evidence remains read-only input; no approval, target-registry mutation, lesson write, production, or merge is authorized here. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
 
 ## Operating Goal
 
@@ -54,7 +54,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Second owner correction is complete at substantive head `46e2f83c894d4dec8a850bc90ca8326a7cea7c0a`; 58 focused and 1,711 platform tests pass, renewed specialists PASS, and lead round 3 is PASS WITH FLAGS. Exact terminal-head CI and a new owner decision remain pending. §2.1.1 design/specialist review are permitted; approved use, Gate 0B-1 approval/production, target repair/integration, lessons, and merge remain governed by their typed holds. |
+| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Structural/governance rereview is PASS WITH FLAGS: substantive head `72b87403ea7866aaee877e9945a2021cc2559552` closes all three bypasses; pre-refresh terminal head `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed` has accepted CI run `33554042557`; 88 focused and 1,741 platform tests pass; semantic hash is unchanged. Evidence refresh, new exact-head CI, bounded closure, and owner approval remain pending. §2.1.1 design/specialist review are permitted; approved use, Gate 0B-1 approval/production, target repair/integration, lessons, and merge remain governed by their typed holds. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building consolidation-only mixed elasticity practice with source-heavy transfer, answer guidance, rendered proof, validators, and explicit mixed-target acceptance. |

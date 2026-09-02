@@ -11,7 +11,7 @@
     "rule": "canonical_human_semantics_live_only_in_markdown",
     "hash_scope": "canonical_utf8_lf_excluding_validated_lifecycle_fields"
   },
-  "generated_on": "2026-09-01",
+  "generated_on": "2026-09-02",
   "approval_context": {
     "pr_number": 226
   },
@@ -26,11 +26,15 @@
     "decided_by": null
   },
   "review_state": {
-    "owner_decision": "revise",
+    "owner_decision": "pending_after_evidence_closure",
     "owner_reviewed_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01",
-    "reviewed_substantive_head": "46e2f83c894d4dec8a850bc90ca8326a7cea7c0a",
+    "reviewed_substantive_head": "72b87403ea7866aaee877e9945a2021cc2559552",
+    "pre_refresh_terminal_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
     "specialist_reviews": "pass_role_based_not_independent",
-    "lead_review": "round3_pass_with_flags_role_based_not_independent"
+    "lead_review": "round3_pass_with_flags_role_based_not_independent",
+    "structural_governance_review": "pass_with_flags_all_substantive_bypasses_closed_evidence_only_closure_required",
+    "structural_governance_reviewed_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+    "accepted_ci_run": 33554042557
   },
   "hash_contract": {
     "semantic_authority_hash": "sha256(canonical UTF-8 LF text with the separately validated lifecycle status line, owner-approval line, and hold projection replaced by stable markers)",

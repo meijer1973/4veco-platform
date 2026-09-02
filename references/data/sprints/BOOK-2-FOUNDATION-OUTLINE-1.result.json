@@ -5,8 +5,9 @@
   "status": "completed",
   "completed": "2026-09-01",
   "completed_on": "2026-09-01",
-  "verdict": "PASS_CORRECTED_PAYLOAD_TO_HUMAN_OWNER_GATE",
-  "result_status": "second_owner_revision_corrected_terminal_exact_head_ci_pending",
+  "verdict": "PASS_WITH_FLAGS_SUBSTANTIVE_REPAIR_ACCEPTED_EVIDENCE_CLOSURE_REQUIRED",
+  "result_status": "structural_governance_pass_evidence_refresh_in_progress_owner_approval_pending",
+  "evidence_refreshed_on": "2026-09-02",
   "plan": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md",
   "baseline": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-baseline.md",
   "result": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md",
@@ -17,9 +18,10 @@
   "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
   "source_provenance": {
     "platform_base_sha": "15bb80496916e3c07f5c957226b857cc689d9f43",
-    "reviewed_substantive_head_sha": "46e2f83c894d4dec8a850bc90ca8326a7cea7c0a",
+    "reviewed_substantive_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
+    "pre_refresh_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
     "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
-    "outline_sha256": "0b4ff155c81d01a07941b12f26ec1c9126b83aa27d6d1616619f11c617670c14",
+    "outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
     "hash_contract": "canonical UTF-8 LF semantic text with the fully validated lifecycle projection replaced by a stable marker"
   },
   "protected_reference_data_changed": false,
@@ -60,7 +62,7 @@
         "id": "B2-LEAD-R1-GUARDRAIL",
         "description": "Initial checker syntax and test-fixture defects were repaired and all required mutations now pass.",
         "classification": "core_requirement_met",
-        "evidence": "npm.cmd run test:book-outline-currentness reports 58/58 passing tests, including complete transition, typed-scope, lifecycle-projection, and entrypoint mutations.",
+        "evidence": "npm.cmd run test:book-outline-currentness reports 88/88 passing tests, including complete transition, typed-scope, lifecycle-projection, and entrypoint mutations.",
         "blocks": "Nothing after correction.",
         "does_not_block": "Human review routing.",
         "proof_required_to_close": "Closed by the focused mutation suite and full platform suite."
@@ -120,6 +122,14 @@
       }
     ]
   },
+  "structural_governance_review": {
+    "verdict": "PASS WITH FLAGS",
+    "reviewed_substantive_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
+    "reviewed_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+    "semantic_outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "disposition": "All three substantive bypasses are closed. Only canonical evidence refresh, exact-head CI, bounded evidence closure, and explicit owner approval remain.",
+    "substantive_re_review_required": false
+  },
   "acceptance_tests": [
     { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md", "status": "passed" },
     { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1", "status": "passed" },
@@ -151,14 +161,16 @@
   ],
   "remote_ci": {
     "required_context": "validate-platform",
-    "status": "pending_exact_second_correction_terminal_head",
+    "status": "success_on_accepted_pre_refresh_terminal_head_new_terminal_required_after_evidence_refresh",
+    "accepted_run_id": 33554042557,
+    "accepted_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
     "previous_successful_run_id": 33502250217,
     "previous_successful_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01",
     "first_run_id": 33491960708,
     "first_run_conclusion": "failure_corrected_by_1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a"
   },
   "authorized_next": [
-    "Push the evidence-only terminal head and obtain successful exact-head validate-platform CI.",
-    "Return draft PR #226 to the human owner for approve, revise, or reject; do not merge."
+    "Commit and push the evidence-only refresh, regenerate the usual index-only tail, and obtain successful exact-head validate-platform CI.",
+    "Complete a bounded evidence-closure check, then return draft PR #226 for explicit human owner approval; do not merge."
   ]
 }

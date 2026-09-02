@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-28",
+  "updated_on": "2026-09-02",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.14-book2-foundation-outline-corrected-review",
+      "version": "v1.15-book2-foundation-evidence-closure",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
-      "updated_on": "2026-09-01",
+      "updated_on": "2026-09-02",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 has completed the owner-requested local correction on draft PR #226; all six findings are corrected, renewed specialists PASS, and lead review is PASS WITH FLAGS for the human/CI/hold/disclosure gates only. Exact terminal-head CI and a new owner decision remain pending. §2.1.1 design/specialist review are permitted, while approval/production, lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 structural/governance rereview is PASS WITH FLAGS: accepted substantive head 72b87403ea7866aaee877e9945a2021cc2559552 closes all three bypasses, pre-refresh terminal head 25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed passed CI run 33554042557, 88 focused and 1,741 platform tests pass, and the semantic outline hash is unchanged. Evidence refresh, new exact-head CI, bounded closure, and explicit owner approval remain pending. §2.1.1 design/specialist review are permitted, while approval/production, lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

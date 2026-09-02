@@ -3,10 +3,11 @@
   "packet_id": "GATE-BOOK-2-FOUNDATION-OUTLINE-1",
   "gate_id": "GATE-BOOK-2-FOUNDATION-OUTLINE-1",
   "sprint_id": "BOOK-2-FOUNDATION-OUTLINE-1",
-  "date": "2026-09-01",
+  "date": "2026-09-02",
   "pr_number": 226,
   "pr_url": "https://github.com/meijer1973/4veco-platform/pull/226",
-  "reviewed_payload_head_sha": "46e2f83c894d4dec8a850bc90ca8326a7cea7c0a",
+  "reviewed_payload_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
+  "pre_refresh_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
   "live_terminal_binding": "The PR description is refreshed after the evidence commit and exact-head CI because an in-commit packet cannot contain its own commit SHA.",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
@@ -14,7 +15,7 @@
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "The second corrected derived Book-level authority now has executable decision/release/use transitions, schema-validated typed scopes, exact human/machine lifecycle parity, correct Part A entrypoint routing, one semantic source of truth, and renewed role-based reviews. Exact-head CI and a human owner decision remain mandatory."
+    "rationale": "Structural/governance rereview accepted the substantive repair with PASS WITH FLAGS and confirmed that all three bypasses are closed. The semantic outline is unchanged. Only evidence closure, exact-head CI for the refreshed terminal head, and a human owner decision remain mandatory."
   },
   "human_decision_required": true,
   "paired_prs": [],
@@ -25,9 +26,9 @@
     "owner_approval_required",
     "future_gate_0b1_dependency"
   ],
-  "status": "second_owner_revision_corrected_exact_head_ci_pending",
-  "route": "READY_FOR_HUMAN_REVIEW",
-  "requested_decision": "After exact-head validate-platform succeeds, approve, revise, or reject the Book 2 foundation outline on that exact PR head.",
+  "status": "structural_review_pass_with_flags_evidence_closure_required",
+  "route": "READY_FOR_EVIDENCE_CLOSURE",
+  "requested_decision": "After the evidence-only terminal head has exact-head validate-platform success and a bounded evidence-closure check, approve, revise, or reject the Book 2 foundation outline on that exact PR head.",
   "changed_paths": [
     ".github/workflows/platform-ci.yml",
     "AGENT_GITHUB_ENTRY.md",
@@ -60,7 +61,7 @@
     "report": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-blueprint-validity-audit.md",
     "outline": "references/authored/book-outlines/book-2-outline.md",
     "metadata": "references/authored/book-outlines/book-2-outline.meta.json",
-    "outline_sha256": "0b4ff155c81d01a07941b12f26ec1c9126b83aa27d6d1616619f11c617670c14",
+    "outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
     "paragraph_count": 12,
     "paragraph_order_preserved": true,
     "target_kinds_statuses_and_record_hashes_preserved": true
@@ -79,7 +80,8 @@
     { "requirement": "Currentness, approved-use, mutation, npm, CI, and navigation guardrails", "status": "met" },
     { "requirement": "Teacher, economics, sequencing, and lead review", "status": "met_role_based_non_independent" },
     { "requirement": "Lesson, target registry, blueprints, and protected sources unchanged", "status": "met" },
-    { "requirement": "Exact-head validate-platform CI", "status": "pending_terminal_evidence_tail" },
+    { "requirement": "Accepted validate-platform CI on pre-refresh terminal head 25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed", "status": "met_run_33554042557" },
+    { "requirement": "Exact-head validate-platform CI on the evidence-refreshed terminal head", "status": "pending_terminal_evidence_tail" },
     { "requirement": "Human owner approval", "status": "pending" }
   ],
   "carried_holds": [
@@ -121,6 +123,12 @@
     "student_product_use_authorized": false
   },
   "proof": {
+    "structural_governance_review": {
+      "result": "PASS WITH FLAGS",
+      "reviewed_substantive_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
+      "reviewed_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+      "disposition": "all_three_substantive_bypasses_closed_evidence_only_closure_required"
+    },
     "lead_review": {
       "path": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round3.md",
       "result": "PASS WITH FLAGS",
@@ -136,13 +144,15 @@
       { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --action outline_owner_decision", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3", "status": "expected_failed_on_H-OUTLINE-OWNER_and_H-CHAPTER-23-PLAN" },
-      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 58 },
-      { "command": "npm.cmd run check:platform", "status": "passed", "suites_passed": 108, "tests_passed": 1711 }
+      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 88 },
+      { "command": "npm.cmd run check:platform", "status": "passed", "tests_passed": 1741 }
     ],
     "ci": {
       "required_contexts": ["validate-platform"],
-      "status": "pending",
-      "reviewed_commit_sha": null,
+      "status": "success_on_accepted_pre_refresh_terminal_head_new_terminal_required_after_evidence_refresh",
+      "reviewed_commit_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+      "accepted_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33554042557",
+      "accepted_run_id": 33554042557,
       "first_failed_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33491960708",
       "first_failure_disposition": "LF/CRLF hash portability corrected in the earlier reviewed payload",
       "previous_successful_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33502250217",
@@ -150,5 +160,5 @@
     },
     "lesson_clean_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
   },
-  "recommended_next_action": "Push the evidence-only terminal head, obtain exact-head validate-platform success, attach that remote proof to PR #226, and stop for the owner's approve/revise/reject decision. Do not merge."
+  "recommended_next_action": "Commit and push the evidence-only refresh, regenerate the usual index-only tail, obtain exact-head validate-platform success, complete the bounded evidence-closure check, attach the live proof to PR #226, and stop for explicit owner approval. Do not merge."
 }

@@ -1,10 +1,11 @@
 # Gate GATE-BOOK-2-FOUNDATION-OUTLINE-1: Human Review Packet
 
-Generated: 2026-09-01
+Generated: 2026-09-02
 
 PR: https://github.com/meijer1973/4veco-platform/pull/226
 
-Route: `READY_FOR_HUMAN_REVIEW` after exact-head `validate-platform` succeeds.
+Route: `READY_FOR_EVIDENCE_CLOSURE`. Human owner review follows exact-head
+`validate-platform` success and a bounded evidence-closure check.
 
 ## Decision requested
 
@@ -28,28 +29,35 @@ product/student authority.
 - Machine companion:
   `references/authored/book-outlines/book-2-outline.meta.json`.
 - Outline SHA-256:
-  `0b4ff155c81d01a07941b12f26ec1c9126b83aa27d6d1616619f11c617670c14`.
+  `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`.
 - Reviewed substantive head:
-  `46e2f83c894d4dec8a850bc90ca8326a7cea7c0a`.
+  `72b87403ea7866aaee877e9945a2021cc2559552`.
+- Pre-refresh terminal head:
+  `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed`.
 - Scope: 12 Book 2 paragraphs in exact order; Markdown is the sole human
   semantic authority, while compact metadata pins target identity/status/hash,
   source freshness, review state, workflow surfaces, and hold lifecycle.
 
 ## Evidence summary
 
-- Focused currentness/mutation suite: 58/58 passed, including three complete
+- Focused currentness/mutation suite: 88/88 passed, including three complete
   decision/release/use transitions, typed scope isolation, seven
   human/machine projection fields, Part A routing, and LF/CRLF.
-- Related workflow/boundary suites: 112/112 passed.
-- Full platform suite: 108 suites and 1,711 tests passed; 6 suites and 8 tests
-  skipped.
+- Full platform suite: 1,741 tests passed.
 - Renewed teacher, economics, and curriculum-sequencing verdicts: `PASS`.
   Renewed lead verdict: `PASS WITH FLAGS` only for exact-head CI, the human
   owner gate, named action-scoped holds, and the non-independent review disclosure.
+- The later structural/governance rereview is `PASS WITH FLAGS`: all three
+  substantive bypasses are closed, and no curriculum or implementation
+  correction remains. No renewed specialist or lead review is required while
+  the semantic hash above stays exact.
 - Lesson repository: clean and unchanged at
   `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
-- Exact-head remote CI: must be attached to PR #226 after the terminal evidence
-  commit is pushed.
+- Accepted remote CI: run `33554042557` passed on pre-refresh terminal head
+  `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed`.
+- The evidence refresh creates a new terminal head. Its exact-head remote CI
+  and terminal SHA are bound in the live PR description because an in-commit
+  packet cannot name its own commit.
 
 The specialist and lead reviews are role-based checks performed in one Codex
 execution. They are not independent human reviews and do not replace this
@@ -90,7 +98,8 @@ blocked while Chapter 2.1 and §2.1.1 are not blocked by the Chapter 2.3 gap.
 
 ## Stop rule
 
-Do not merge, record outline approval, approve goals/targets, or start
-paragraph/lesson production unless the owner explicitly approves the exact PR
+Do not merge, record outline approval, approve goals/targets, repair or
+integrate targets, or start paragraph/lesson production unless the bounded
+evidence closure is complete and the owner explicitly approves the exact PR
 head after remote CI passes. Provisional §2.1.1 design/specialist review is
 permitted by the action-scoped hold model.

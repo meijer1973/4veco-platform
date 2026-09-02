@@ -60,3 +60,30 @@ PR #226 remains draft and unmerged. No outline approval, goal/target approval,
 target mutation, paragraph production, lesson authoring, or merge is recorded
 by this correction. Exact-head CI and the renewed owner decision remain
 pending after the evidence tail is pushed.
+
+## Structural/governance rereview — evidence closure only
+
+Recorded: 2026-09-02
+Reviewed substantive head: `72b87403ea7866aaee877e9945a2021cc2559552`
+Reviewed terminal head: `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed`
+Verdict: `PASS WITH FLAGS`
+
+The rereview accepts the substantive structural/governance repair and confirms
+that all three bypasses are closed. The semantic outline hash remains
+`69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`.
+Focused validation is 88/88, full platform validation is 1,741 tests, and
+accepted CI run `33554042557` passed on the reviewed terminal head. The lesson
+repository remains unchanged at
+`f09fd6e88edc5049b026b16b0158e7e188091d2d`.
+
+The flags are evidence-only: refresh the canonical packet and result, machine
+review state, this resolution history, and stale roadmap/ledger wording;
+regenerate the usual indexes; then obtain exact-head CI for the new terminal
+head and complete a bounded evidence-closure check. No new teacher, economics,
+sequencing, or lead review is required while the semantic outline hash remains
+exact.
+
+This verdict is not owner approval. PR #226 remains draft and unmerged. All
+approval, holds, production, lesson writing, target repair/integration, payload
+authorization, and merge remain unauthorized until their separate governed
+transitions are explicitly completed.

@@ -1,6 +1,6 @@
 # Sprint BOOK-2-FOUNDATION-OUTLINE-1: Result
 
-Generated: 2026-09-01
+Generated: 2026-09-02
 
 ## Plan reference
 
@@ -27,6 +27,15 @@ the Book 2 root and Chapter 2.3 lesson holds are separate; every human hold
 projection field is compared with machine enforcement; and the active GitHub
 entrypoint routes Part A and Part B to their correct templates.
 
+The later structural/governance rereview accepted substantive head
+`72b87403ea7866aaee877e9945a2021cc2559552` with `PASS WITH FLAGS` and
+confirmed that all three bypasses are closed. Pre-refresh terminal head
+`25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed` passed `validate-platform` in
+run `33554042557`. The semantic outline hash remains exactly
+`69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`.
+This refresh changes evidence and machine review state only; it does not change
+curriculum, implementation behavior, or lesson output.
+
 The payload adds:
 
 - a canonical prose semantic outline plus a compact identity/freshness/target/
@@ -37,7 +46,7 @@ The payload adds:
   template, while Part B retains its consumer-only `_paragraph-plan.md`;
 - explicit five-way prerequisite classifications, non-goals, prepares-for,
   model conditions/relevant range, and target-dependent retrieval;
-- a reusable structural/action/approved-use checker, CI wiring, and 58 focused
+- a reusable structural/action/approved-use checker, CI wiring, and 88 focused
   mutation/contract tests;
 - renewed teacher, economics, curriculum-sequencing, and round-3 lead review evidence;
 - a Level-4 human-review packet for draft PR #226.
@@ -48,11 +57,14 @@ canonical UTF-8 text after line-ending normalization, and a dedicated mutation
 proves LF and CRLF checkouts produce the same currentness verdict.
 
 Local substantive implementation has `PASS` from the three renewed specialist
-lenses and `PASS WITH FLAGS` from renewed lead review. The flags are the human
-gate, exact-head CI, named holds, and non-independent review disclosure—not a
-blocking substantive finding. The outline remains `review_ready_with_holds`; §2.1.1 design and
-specialist review are permitted, while owner approval, goal/target approval,
-production, lesson authoring, and merge remain blocked.
+lenses and `PASS WITH FLAGS` from renewed lead review. The later
+structural/governance rereview is also `PASS WITH FLAGS` and closes the
+substantive bypass findings. The remaining flags are evidence closure,
+exact-head CI for the refreshed terminal head, the human gate, named holds,
+and non-independent review disclosure—not a blocking substantive finding. The
+outline remains `review_ready_with_holds`; §2.1.1 design and specialist review
+are permitted, while owner approval, goal/target approval, target repair and
+integration, production, lesson authoring, and merge remain blocked.
 
 ## Acceptance test results
 
@@ -65,15 +77,16 @@ Passing command-log evidence includes:
 - `npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action paragraph_production --paragraph 2.1.1` — expected FAIL on the two matching open holds
 - `npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3` — expected FAIL on the matching outline and Chapter 2.3 holds
-- `npm.cmd run test:book-outline-currentness` — 58/58 tests
+- `npm.cmd run test:book-outline-currentness` — 88/88 tests
 - `npm.cmd run check:blueprint-pedagogical-boundaries`
 - `npm.cmd run check:part-a-exercise-authoring-contract`
 - `npx.cmd jest build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js build-scripts/workflows/check-paragraph-workflow-wording.test.js --runInBand`
 - `npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD`
 - `npm.cmd run check:paragraph-workflow-wording`
 - `npm.cmd run check:scope-language`
-- `npm.cmd run check:platform` — 108 suites and 1,711 tests passed; 6 suites
-  and 8 tests skipped
+- `npm.cmd run check:platform` — 1,741 tests passed
+- accepted `validate-platform` run `33554042557` on pre-refresh terminal head
+  `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed`
 - roadmap, report-JSON, agent-index, URL-index, dashboard, finalization,
   evidence-line-ending, sprint-result, command-log, lead-review, review-packet,
   and complete-bundle checks
@@ -136,8 +149,10 @@ substitute for the named owner gate.
 
 ## Open follow-ups
 
-- Obtain successful `validate-platform` CI on the exact terminal PR #226 head,
-  then ask the owner to approve, revise, or reject that exact payload.
+- Commit the evidence-only refresh, regenerate the usual index-only tail,
+  obtain successful `validate-platform` CI on the exact terminal PR #226 head,
+  and complete the bounded evidence-closure check.
+- Then ask the owner to approve, revise, or reject that exact payload.
 - If approved and later merged, record the owner version/hash/PR/commit pin in a
   governed follow-up before approved-use mode may pass.
 - §2.1.1 goal/target design and specialist review may proceed provisionally,
@@ -151,7 +166,7 @@ substitute for the named owner gate.
 
 ## Rollback instructions
 
-Revert the PR #226 commits after reviewed substantive head
-`46e2f83c894d4dec8a850bc90ca8326a7cea7c0a`, together with the earlier PR
+Revert the PR #226 commits after accepted substantive head
+`72b87403ea7866aaee877e9945a2021cc2559552`, together with the earlier PR
 commits, on the dedicated branch. Do not change the lesson repository during
 rollback because this sprint made no lesson write.
