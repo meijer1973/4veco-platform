@@ -89,6 +89,7 @@
   ],
   "carried_holds": [
     "H-211-GATE0B1",
+    "H-211-TARGET-INTEGRATION",
     "H-212-STALE-REF",
     "H-213-DELTAQ",
     "H-213-OPC2",

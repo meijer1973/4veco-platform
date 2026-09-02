@@ -46,8 +46,10 @@ product/student authority.
   human/machine projection fields, Part A routing, and LF/CRLF.
 - Full platform suite: 1,741 tests passed.
 - Renewed teacher, economics, and curriculum-sequencing verdicts: `PASS`.
-  Renewed lead verdict: `PASS WITH FLAGS` only for exact-head CI, the human
-  owner gate, named action-scoped holds, and the non-independent review disclosure.
+  Renewed lead verdict: `PASS WITH FLAGS`; its human-owner flag is now closed.
+  Exact-head CI for this lifecycle transition, named action-scoped downstream
+  holds, separate merge authorization, and the non-independent review disclosure
+  remain.
 - The later structural/governance rereview is `PASS WITH FLAGS`: all three
   substantive bypasses are closed, and no curriculum or implementation
   correction remains. No renewed specialist or lead review is required while
@@ -70,9 +72,10 @@ recorded separately against the exact evidence-closure head and semantic hash.
 ## Holds that remain active
 
 - Sequence: `H-211-GATE0B1`.
-- Target/reference/operation: `H-212-STALE-REF`, `H-213-DELTAQ`,
-  `H-213-OPC2`, `H-221-PRIOR`, `H-22-ELASTIC-CONTRAST`, `H-231-V5`,
-  `H-232-V5`, `H-233-V5-REF`, `H-234-PLACEHOLDER`.
+- Target/reference/operation: `H-211-TARGET-INTEGRATION`,
+  `H-212-STALE-REF`, `H-213-DELTAQ`, `H-213-OPC2`, `H-221-PRIOR`,
+  `H-22-ELASTIC-CONTRAST`, `H-231-V5`, `H-232-V5`, `H-233-V5-REF`,
+  `H-234-PLACEHOLDER`.
 - Lesson structure: `H-BOOK2-ROOT-PLAN`, `H-CHAPTER-23-PLAN`.
 - Integration: `H-MERGE-GOVERNANCE` remains independent of outline approval.
 
