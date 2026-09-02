@@ -4,21 +4,17 @@ Generated: 2026-09-02
 
 PR: https://github.com/meijer1973/4veco-platform/pull/226
 
-Route: `READY_FOR_EVIDENCE_CLOSURE`. Human owner review follows exact-head
-`validate-platform` success and a bounded evidence-closure check.
+Route: `READY_FOR_EXACT_HEAD_CI`. The owner-approved lifecycle transition now
+requires exact-head `validate-platform` success and a bounded transition-closure
+check before a separate governed payload/merge decision.
 
 ## Decision requested
 
-Review the exact terminal PR #226 head and choose one outcome:
-
-1. **Approve** the Book 2 outline as derived planning authority with its named
-   downstream holds still active.
-2. **Revise** with specific required corrections.
-3. **Reject** the proposed Book 2 foundation layer.
-
-Approval here would accept the Book-level sequence only. It would not approve
-paragraph goals/targets, merge the PR, authorize Gate 0B-1 approval or
-production by itself, repair target records, authorize lesson writes, or create
+After exact-head CI passes, separately authorize the governed PR payload for
+merge or request a revision. The owner decision `APPROVE BOOK 2 OUTLINE WITH
+HOLDS` already accepts the Book-level sequence only. It does not approve
+paragraph goals/targets, authorize Gate 0B-1 approval or production, repair or
+integrate target records, authorize lesson writes, authorize merge, or create
 product/student authority.
 
 ## What is being reviewed
@@ -34,6 +30,11 @@ product/student authority.
   `72b87403ea7866aaee877e9945a2021cc2559552`.
 - Pre-refresh terminal head:
   `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed`.
+- Owner-approved evidence-closure head:
+  `2166cd074e1cb8d24f7908e9f792a996dbfd48e7`.
+- Owner decision:
+  `APPROVE BOOK 2 OUTLINE WITH HOLDS`, recorded at
+  `https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629`.
 - Scope: 12 Book 2 paragraphs in exact order; Markdown is the sole human
   semantic authority, while compact metadata pins target identity/status/hash,
   source freshness, review state, workflow surfaces, and hold lifecycle.
@@ -53,19 +54,22 @@ product/student authority.
   the semantic hash above stays exact.
 - Lesson repository: clean and unchanged at
   `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
-- Accepted remote CI: run `33554042557` passed on pre-refresh terminal head
-  `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed`.
-- The evidence refresh creates a new terminal head. Its exact-head remote CI
+- Accepted remote CI: run `33657251475` passed on the owner-approved
+  evidence-closure head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7`.
+- The governed lifecycle record now has `owner_approval.status=approved`, the
+  exact version/hash/PR/commit/decision pin, and `H-OUTLINE-OWNER=released`.
+  Both `--require-approved` and `--action approved_outline_use` pass locally.
+- The approval transition creates a new terminal head. Its exact-head remote CI
   and terminal SHA are bound in the live PR description because an in-commit
   packet cannot name its own commit.
 
 The specialist and lead reviews are role-based checks performed in one Codex
-execution. They are not independent human reviews and do not replace this
-owner decision.
+execution and are not independent human reviews. The human owner decision is
+recorded separately against the exact evidence-closure head and semantic hash.
 
 ## Holds that remain active
 
-- Owner/sequence: `H-OUTLINE-OWNER`, `H-211-GATE0B1`.
+- Sequence: `H-211-GATE0B1`.
 - Target/reference/operation: `H-212-STALE-REF`, `H-213-DELTAQ`,
   `H-213-OPC2`, `H-221-PRIOR`, `H-22-ELASTIC-CONTRAST`, `H-231-V5`,
   `H-232-V5`, `H-233-V5-REF`, `H-234-PLACEHOLDER`.
@@ -75,31 +79,28 @@ owner decision.
 These holds block only a named action in matching typed scope while `open`.
 Each hold explicitly permits its resolution decision or repair, which is
 distinct from later approved use/integration. A `released` hold requires exact
-evidence and no longer blocks. §2.1.1 goal design, target design, and specialist
-review are permitted now; approval, target repair/integration, production,
-lesson authoring, and merge remain blocked by their applicable upstream holds.
+evidence and no longer blocks. `H-OUTLINE-OWNER` is the only released hold.
+Approved outline use, §2.1.1 goal design, target design, and specialist review
+are permitted now; goal/target approval, target repair/integration, production,
+lesson authoring, and merge remain blocked by their applicable downstream holds.
 
 The mutations prove the full owner, Gate 0B-1, and target-repair transitions.
 They also prove that, after simulated upstream release, Chapter 2.3 remains
 blocked while Chapter 2.1 and §2.1.1 are not blocked by the Chapter 2.3 gap.
 
-## Owner checklist
+## Approval-transition checklist
 
-- Does the five-way prerequisite classification appropriately separate likely
-  security, required retrieval, insufficient security, preview/familiarity,
-  and new formal learning?
-- Is the costs → revenue/marginal reasoning → elasticity → surplus sequence
-  acceptable for the intended course?
-- Are all 12 paragraph roles and consolidation boundaries appropriate?
-- Are retrieval/interleaving and operation balance sufficient at Book level?
-- Are the misconception boundaries and named holds explicit enough to prevent
-  unsafe paragraph planning?
+- Is the exact approved semantic hash unchanged after the lifecycle-only edit?
+- Does approved-use mode pass with the exact owner decision pin?
+- Is `H-OUTLINE-OWNER` the only released hold?
+- Do goal/target approval, repair/integration, production, lesson authoring, and
+  merge remain blocked by their applicable downstream holds?
 - Is exact-head `validate-platform` green on the terminal PR head?
 
 ## Stop rule
 
-Do not merge, record outline approval, approve goals/targets, repair or
-integrate targets, or start paragraph/lesson production unless the bounded
-evidence closure is complete and the owner explicitly approves the exact PR
-head after remote CI passes. Provisional §2.1.1 design/specialist review is
-permitted by the action-scoped hold model.
+Do not merge, approve goals/targets, repair or integrate targets, or start
+paragraph/lesson production from this owner decision. Exact-head CI and bounded
+transition closure must complete first; merge then requires separate governed
+payload/merge authorization. Approved outline use and §2.1.1 design/specialist
+review are permitted by the action-scoped hold model.

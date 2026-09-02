@@ -183,7 +183,33 @@ function integrateTargetHoldInFiles(files, holdId, paragraph) {
   return files;
 }
 
+function pendingOutlineInFiles(files) {
+  const meta = JSON.parse(asText(files[META_PATH]));
+  const hold = meta.holds.find((item) => item.id === 'H-OUTLINE-OWNER');
+  hold.status = 'open';
+  hold.summary = 'Owner approval is pending for the exact outline payload.';
+  hold.release_evidence = null;
+  meta.status = 'review_ready_with_holds';
+  meta.owner_approval = {
+    status: 'pending',
+    approved_version: null,
+    approved_outline_sha256: null,
+    approved_pr: null,
+    approved_commit: null,
+    decision_ref: null,
+    decided_on: null,
+    decided_by: null,
+  };
+  files[OUTLINE_PATH] = asText(files[OUTLINE_PATH])
+    .replace('Status: `approved_with_holds`', 'Status: `review_ready_with_holds`')
+    .replace('Owner approval: `approved`', 'Owner approval: `pending`');
+  replaceProjectionRow(files, hold);
+  writeMeta(files, meta);
+  return files;
+}
+
 function approveOutlineInFiles(files) {
+  pendingOutlineInFiles(files);
   const meta = JSON.parse(asText(files[META_PATH]));
   const approvedOutlineHash = sha256SemanticAuthority(files[OUTLINE_PATH]);
   const reviewedHead = 'b'.repeat(40);
@@ -265,8 +291,8 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test.each([
-    ['Status: `review_ready_with_holds`', 'Status: `approved_with_holds`', 'status does not match metadata'],
-    ['Owner approval: `pending`', 'Owner approval: `approved`', 'owner approval status does not match metadata'],
+    ['Status: `approved_with_holds`', 'Status: `review_ready_with_holds`', 'status does not match metadata'],
+    ['Owner approval: `approved`', 'Owner approval: `pending`', 'owner approval status does not match metadata'],
   ])('validates excluded lifecycle header separately: %s', (current, replacement, failure) => {
     const files = mutate(OUTLINE_PATH, current, replacement);
     expect(sha256SemanticAuthority(files[OUTLINE_PATH])).toBe(sha256SemanticAuthority(cloneFiles()[OUTLINE_PATH]));
@@ -408,10 +434,10 @@ describe('Book 2 outline currentness contract', () => {
     expect(blockers).toContain('H-CHAPTER-23-PLAN');
   });
 
-  test('blocks paragraph production for 2.1.1 with both matching open holds', () => {
+  test('blocks paragraph production for 2.1.1 with both remaining matching open holds', () => {
     const failures = findBookOutlineFailures(cloneFiles(), { action: 'paragraph_production', paragraph: '2.1.1' });
     expect(failures).toEqual(expect.arrayContaining([
-      expect.stringContaining('H-OUTLINE-OWNER'),
+      expect.stringContaining('H-211-GATE0B1'),
       expect.stringContaining('H-211-TARGET-INTEGRATION'),
     ]));
   });
@@ -678,7 +704,7 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('approved-use mode fails closed while owner approval is pending', () => {
-    expectFailure(cloneFiles(), 'approved mode requires approved or approved_with_holds status', { requireApproved: true });
+    expectFailure(pendingOutlineInFiles(cloneFiles()), 'approved mode requires approved or approved_with_holds status', { requireApproved: true });
   });
 
   test('approved-use mode requires exact approval pins and released owner hold evidence', () => {

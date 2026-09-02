@@ -3,7 +3,7 @@
   "outline_id": "book-2",
   "title": "Book 2 Outline: Costs, Revenue, Elasticity, And Surplus",
   "version": "book-2-outline-v3-review-ready",
-  "status": "review_ready_with_holds",
+  "status": "approved_with_holds",
   "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
   "semantic_authority": {
     "path": "references/authored/book-outlines/book-2-outline.md",
@@ -16,18 +16,18 @@
     "pr_number": 226
   },
   "owner_approval": {
-    "status": "pending",
-    "approved_version": null,
-    "approved_outline_sha256": null,
-    "approved_pr": null,
-    "approved_commit": null,
-    "decision_ref": null,
-    "decided_on": null,
-    "decided_by": null
+    "status": "approved",
+    "approved_version": "book-2-outline-v3-review-ready",
+    "approved_outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "approved_pr": 226,
+    "approved_commit": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
+    "decision_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629",
+    "decided_on": "2026-09-02",
+    "decided_by": "meijer1973"
   },
   "review_state": {
-    "owner_decision": "pending_after_evidence_closure",
-    "owner_reviewed_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01",
+    "owner_decision": "approve_book_2_outline_with_holds",
+    "owner_reviewed_head": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
     "reviewed_substantive_head": "72b87403ea7866aaee877e9945a2021cc2559552",
     "pre_refresh_terminal_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
     "specialist_reviews": "pass_role_based_not_independent",
@@ -75,12 +75,22 @@
   ],
   "holds": [
     {
-      "id": "H-OUTLINE-OWNER", "status": "open", "severity": "blocking", "scope": ["book:2"],
-      "summary": "Owner approval is pending for the exact outline payload.",
+      "id": "H-OUTLINE-OWNER", "status": "released", "severity": "blocking", "scope": ["book:2"],
+      "summary": "The owner approved the exact Book 2 outline payload with all other named holds retained.",
       "blocks": ["approved_outline_use", "goal_owner_decision", "approved_goal_use", "target_authority_repair", "target_authority_integration", "paragraph_production", "chapter_production", "lesson_authoring", "merge"],
       "permits": ["outline_owner_decision", "goal_design", "target_design", "specialist_review", "chapter_planning"],
       "resolution_actions": ["outline_owner_decision"],
-      "release_condition": "The owner approves an exact PR head and the approval pins are recorded.", "release_evidence": null
+      "release_condition": "The owner approves an exact PR head and the approval pins are recorded.",
+      "release_evidence": {
+        "resolved_via": "outline_owner_decision",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-02",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629",
+        "subject_id": "book-2-outline-v3-review-ready",
+        "subject_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+        "reviewed_pr": 226,
+        "reviewed_head": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7"
+      }
     },
     {
       "id": "H-211-GATE0B1", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],

@@ -87,3 +87,29 @@ This verdict is not owner approval. PR #226 remains draft and unmerged. All
 approval, holds, production, lesson writing, target repair/integration, payload
 authorization, and merge remain unauthorized until their separate governed
 transitions are explicitly completed.
+
+## Binding owner approval with holds
+
+Recorded: 2026-09-02
+PR: #226
+Approved evidence-closure head: `2166cd074e1cb8d24f7908e9f792a996dbfd48e7`
+Approved semantic hash: `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`
+Decision: `APPROVE BOOK 2 OUTLINE WITH HOLDS`
+Decision reference: https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629
+Decided by: `meijer1973`
+
+The owner accepts the exact Book 2 outline as derived planning authority with
+its named downstream holds active. The lifecycle-only transition records the
+exact version/hash/PR/commit/decision pin, changes the outline state to
+`approved_with_holds`, and releases only `H-OUTLINE-OWNER`. The semantic hash
+is unchanged. Approved outline use is now permitted.
+
+PR #226 remains draft and unmerged. `H-211-GATE0B1`, the target/reference/
+operation holds, the Book-root and Chapter 2.3 lesson holds, and
+`H-MERGE-GOVERNANCE` remain open. This decision does not approve paragraph
+goals or targets, authorize target repair/integration, authorize paragraph or
+lesson production, authorize product/student use, or authorize merge.
+
+The transition must receive exact-head `validate-platform` success and a
+bounded closure check. A separate governed payload/merge authorization is then
+required before integration.

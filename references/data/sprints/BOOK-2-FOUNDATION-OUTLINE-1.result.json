@@ -5,8 +5,8 @@
   "status": "completed",
   "completed": "2026-09-01",
   "completed_on": "2026-09-01",
-  "verdict": "PASS_WITH_FLAGS_SUBSTANTIVE_REPAIR_ACCEPTED_EVIDENCE_CLOSURE_REQUIRED",
-  "result_status": "structural_governance_pass_evidence_refresh_in_progress_owner_approval_pending",
+  "verdict": "PASS_OWNER_APPROVED_WITH_HOLDS_LIFECYCLE_TRANSITION",
+  "result_status": "owner_approved_with_holds_lifecycle_transition_exact_head_ci_pending",
   "evidence_refreshed_on": "2026-09-02",
   "plan": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md",
   "baseline": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-baseline.md",
@@ -20,6 +20,7 @@
     "platform_base_sha": "15bb80496916e3c07f5c957226b857cc689d9f43",
     "reviewed_substantive_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
     "pre_refresh_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+    "owner_approved_head_sha": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
     "lesson_snapshot_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
     "outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
     "hash_contract": "canonical UTF-8 LF semantic text with the fully validated lifecycle projection replaced by a stable marker"
@@ -32,7 +33,18 @@
   "engine_behavior_changed": false,
   "lesson_repository_changed": false,
   "human_review_required": true,
-  "owner_approval_status": "pending",
+  "owner_approval_status": "approved_with_holds",
+  "owner_approval": {
+    "decision": "APPROVE BOOK 2 OUTLINE WITH HOLDS",
+    "version": "book-2-outline-v3-review-ready",
+    "semantic_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "reviewed_pr": 226,
+    "approved_commit": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
+    "decision_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629",
+    "approved_on": "2026-09-02",
+    "decided_by": "meijer1973",
+    "released_hold": "H-OUTLINE-OWNER"
+  },
   "merge_authorized": false,
   "gate_0b1_authorized": false,
   "gate_0b1_design_authorized": true,
@@ -78,12 +90,12 @@
       },
       {
         "id": "B2-OWNER-APPROVAL",
-        "description": "The derived outline is review-ready but has not been approved by the human owner.",
-        "classification": "scale_blocker",
-        "evidence": "H-OUTLINE-OWNER and owner_approval.status=pending in the machine outline.",
-        "blocks": "Approved-use mode, goal/target approval, production, lesson authoring, and merge.",
-        "does_not_block": "Draft PR review or provisional §2.1.1 goal/target design and specialist review.",
-        "proof_required_to_close": "Owner approval of the exact PR head and governed version/hash/PR/commit pin."
+        "description": "The human owner approved the derived Book 2 outline with its named downstream holds active.",
+        "classification": "core_requirement_met",
+        "evidence": "Decision APPROVE BOOK 2 OUTLINE WITH HOLDS binds PR #226 head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7 and semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde at issuecomment-5515033629; H-OUTLINE-OWNER is released.",
+        "blocks": "Nothing after the lifecycle transition.",
+        "does_not_block": "Approved outline use as derived Book-level planning authority.",
+        "proof_required_to_close": "Closed by the exact owner decision, governed approval pin, released hold evidence, and approved-use validator pass."
       },
       {
         "id": "B2-CONTENT-AND-LESSON-HOLDS",
@@ -96,18 +108,6 @@
       }
     ],
     "flags": [
-      {
-        "id": "B2-FLAG-OWNER",
-        "description": "Human owner approval is mandatory before approved use, goal/target approval, production, lesson authoring, or merge; provisional design and specialist review are permitted.",
-        "classification": "scale_blocker",
-        "disposition": "product_scale_blocker",
-        "owner": "repository owner",
-        "next_action": "Review exact-head PR #226 and choose approve, revise, or reject.",
-        "blocks": "Approved outline use, goal/target approval, production, lesson authoring, and merge.",
-        "does_not_block": "Draft PR publication, human review, and provisional §2.1.1 design/specialist review.",
-        "proof_required_to_close": "Exact owner decision bound to the PR head plus governed approval pin.",
-        "blocking": false
-      },
       {
         "id": "B2-FLAG-NAMED-HOLDS",
         "description": "Target-quality and lesson-structure holds are intentionally carried without silent repair.",
@@ -127,7 +127,7 @@
     "reviewed_substantive_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
     "reviewed_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
     "semantic_outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
-    "disposition": "All three substantive bypasses are closed. Only canonical evidence refresh, exact-head CI, bounded evidence closure, and explicit owner approval remain.",
+    "disposition": "All three substantive bypasses are closed. Evidence-only closure and explicit owner approval are complete. Exact-head CI and bounded closure for the lifecycle transition remain before separate payload/merge authorization.",
     "substantive_re_review_required": false
   },
   "acceptance_tests": [
@@ -135,6 +135,8 @@
     { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1", "status": "passed" },
     { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1 --complete", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness -- --require-approved", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness -- --action approved_outline_use", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action outline_owner_decision", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3", "status": "failed" },
@@ -161,16 +163,16 @@
   ],
   "remote_ci": {
     "required_context": "validate-platform",
-    "status": "success_on_accepted_pre_refresh_terminal_head_new_terminal_required_after_evidence_refresh",
-    "accepted_run_id": 33554042557,
-    "accepted_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+    "status": "success_on_owner_approved_evidence_closure_head_new_terminal_required_after_lifecycle_transition",
+    "accepted_run_id": 33657251475,
+    "accepted_head": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
     "previous_successful_run_id": 33502250217,
     "previous_successful_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01",
     "first_run_id": 33491960708,
     "first_run_conclusion": "failure_corrected_by_1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a"
   },
   "authorized_next": [
-    "Commit and push the evidence-only refresh, regenerate the usual index-only tail, and obtain successful exact-head validate-platform CI.",
-    "Complete a bounded evidence-closure check, then return draft PR #226 for explicit human owner approval; do not merge."
+    "Commit and push the owner-approval lifecycle transition, regenerate the usual generated and index-only tails, and obtain successful exact-head validate-platform CI.",
+    "Complete a bounded transition-closure check, then request separate governed payload/merge authorization for draft PR #226; do not merge without it."
   ]
 }

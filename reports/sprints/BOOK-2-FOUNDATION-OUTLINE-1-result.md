@@ -36,6 +36,14 @@ run `33554042557`. The semantic outline hash remains exactly
 This refresh changes evidence and machine review state only; it does not change
 curriculum, implementation behavior, or lesson output.
 
+The human owner subsequently recorded `APPROVE BOOK 2 OUTLINE WITH HOLDS`
+against evidence-closure head
+`2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and the exact semantic hash above.
+The binding decision is published at
+https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629.
+This lifecycle-only transition records the governed approval pin and releases
+only `H-OUTLINE-OWNER`; all named downstream holds remain active.
+
 The payload adds:
 
 - a canonical prose semantic outline plus a compact identity/freshness/target/
@@ -59,12 +67,14 @@ proves LF and CRLF checkouts produce the same currentness verdict.
 Local substantive implementation has `PASS` from the three renewed specialist
 lenses and `PASS WITH FLAGS` from renewed lead review. The later
 structural/governance rereview is also `PASS WITH FLAGS` and closes the
-substantive bypass findings. The remaining flags are evidence closure,
-exact-head CI for the refreshed terminal head, the human gate, named holds,
-and non-independent review disclosure—not a blocking substantive finding. The
-outline remains `review_ready_with_holds`; §2.1.1 design and specialist review
-are permitted, while owner approval, goal/target approval, target repair and
-integration, production, lesson authoring, and merge remain blocked.
+substantive bypass findings. Evidence closure and the human owner gate are now
+complete. The remaining flags are exact-head CI and bounded closure for this
+approval-transition head, named downstream holds, separate payload/merge
+authorization, and the non-independent review disclosure—not a blocking
+substantive finding. The outline is `approved_with_holds`; approved outline use
+and §2.1.1 design and specialist review are permitted, while goal/target
+approval, target repair and integration, production, lesson authoring, and
+merge remain blocked by their applicable holds.
 
 ## Acceptance test results
 
@@ -73,10 +83,12 @@ Passing command-log evidence includes:
 - `node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md`
 - `node build-scripts/sprints/check-sprint-bundle.js BOOK-2-FOUNDATION-OUTLINE-1`
 - `npm.cmd run check:book-outline-currentness`
+- `npm.cmd run check:book-outline-currentness -- --require-approved` — PASS
+- `npm.cmd run check:book-outline-currentness -- --action approved_outline_use` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action outline_owner_decision` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action paragraph_production --paragraph 2.1.1` — expected FAIL on the two matching open holds
-- `npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3` — expected FAIL on the matching outline and Chapter 2.3 holds
+- `npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3` — expected FAIL on the matching downstream Chapter 2.3 holds
 - `npm.cmd run test:book-outline-currentness` — 88/88 tests
 - `npm.cmd run check:blueprint-pedagogical-boundaries`
 - `npm.cmd run check:part-a-exercise-authoring-contract`
@@ -85,17 +97,18 @@ Passing command-log evidence includes:
 - `npm.cmd run check:paragraph-workflow-wording`
 - `npm.cmd run check:scope-language`
 - `npm.cmd run check:platform` — 1,741 tests passed
-- accepted `validate-platform` run `33554042557` on pre-refresh terminal head
-  `25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed`
+- accepted `validate-platform` run `33657251475` on owner-approved
+  evidence-closure head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7`
 - roadmap, report-JSON, agent-index, URL-index, dashboard, finalization,
   evidence-line-ending, sprint-result, command-log, lead-review, review-packet,
   and complete-bundle checks
 - platform and lesson `git diff --check`; lesson `git status --short` remained
   empty
 
-Approved-use mode is intentionally not a passing acceptance test while
-`H-OUTLINE-OWNER` remains active. It fails closed until a governed follow-up
-records the owner's exact version/hash/PR/commit approval.
+Approved-use mode now passes because the governed owner approval binds the
+exact version/hash/PR/commit/decision and `H-OUTLINE-OWNER` is released. The
+mutation suite still proves that pending, mismatched, or incomplete approval
+records fail closed.
 
 ## Changed files
 
@@ -144,17 +157,18 @@ The lesson repository remained clean at
 answer, asset, chapter plan, or generated student-facing output changed.
 
 The reviews are role-based checks performed within one Codex execution. They
-are useful specialist lenses, but are not independent human reviews and do not
-substitute for the named owner gate.
+are useful specialist lenses, but are not independent human reviews. The named
+human owner approval is recorded separately against the exact evidence-closure
+head and semantic hash.
 
 ## Open follow-ups
 
-- Commit the evidence-only refresh, regenerate the usual index-only tail,
-  obtain successful `validate-platform` CI on the exact terminal PR #226 head,
-  and complete the bounded evidence-closure check.
-- Then ask the owner to approve, revise, or reject that exact payload.
-- If approved and later merged, record the owner version/hash/PR/commit pin in a
-  governed follow-up before approved-use mode may pass.
+- Commit the owner-approval lifecycle transition, regenerate the usual
+  generated and index-only tails, obtain successful `validate-platform` CI on
+  the exact terminal PR #226 head, and complete the bounded transition-closure
+  check.
+- Then request separate governed payload/merge authorization; do not merge
+  from outline approval alone.
 - §2.1.1 goal/target design and specialist review may proceed provisionally,
   but approval/authority/production remain held until the exact release
   conditions are evidenced.
@@ -166,7 +180,10 @@ substitute for the named owner gate.
 
 ## Rollback instructions
 
-Revert the PR #226 commits after accepted substantive head
+Revert the approval-transition commits after owner-approved evidence-closure
+head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` to restore the pre-approval
+lifecycle state without changing the approved semantic payload. For full
+payload rollback, revert the PR #226 commits after accepted substantive head
 `72b87403ea7866aaee877e9945a2021cc2559552`, together with the earlier PR
-commits, on the dedicated branch. Do not change the lesson repository during
-rollback because this sprint made no lesson write.
+commits, on the dedicated branch. Do not change the lesson repository because
+this sprint made no lesson write.

@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.15-book2-foundation-evidence-closure",
+      "version": "v1.16-book2-outline-approved-with-holds",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
       "updated_on": "2026-09-02",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 structural/governance rereview is PASS WITH FLAGS: accepted substantive head 72b87403ea7866aaee877e9945a2021cc2559552 closes all three bypasses, pre-refresh terminal head 25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed passed CI run 33554042557, 88 focused and 1,741 platform tests pass, and the semantic outline hash is unchanged. Evidence refresh, new exact-head CI, bounded closure, and explicit owner approval remain pending. §2.1.1 design/specialist review are permitted, while approval/production, lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 owner decision APPROVE BOOK 2 OUTLINE WITH HOLDS binds PR #226 head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7 and semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde; accepted CI run 33657251475 covers that head. The lifecycle transition releases only H-OUTLINE-OWNER and approved outline use passes locally. Exact-head CI and bounded closure for the transition head remain before separate payload/merge authorization. §2.1.1 design/specialist review are permitted, while goal/target approval and production, lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

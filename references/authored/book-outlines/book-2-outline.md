@@ -4,11 +4,11 @@ Outline ID: `book-2`
 
 Version: `book-2-outline-v3-review-ready`
 
-Status: `review_ready_with_holds`
+Status: `approved_with_holds`
 
 Audit outcome: `VALID_WITH_DERIVED_OUTLINE_REQUIRED`
 
-Owner approval: `pending`
+Owner approval: `approved`
 
 ## Authority and freshness
 
@@ -283,7 +283,7 @@ units/labels, and a conclusion at the target's actual depth.
 
 | Hold ID | Status | Scope | Blocks | Explicitly permits | Resolution actions | Transition binding | Release condition | Release evidence |
 |---|---|---|---|---|---|---|---|---|
-| `H-OUTLINE-OWNER` | open | `book:2` | `approved_outline_use`, `goal_owner_decision`, `approved_goal_use`, `target_authority_repair`, `target_authority_integration`, `paragraph_production`, `chapter_production`, `lesson_authoring`, `merge` | `outline_owner_decision`, `goal_design`, `target_design`, `specialist_review`, `chapter_planning` | `outline_owner_decision` | — | The owner approves an exact PR head and the approval pins are recorded. | — |
+| `H-OUTLINE-OWNER` | released | `book:2` | `approved_outline_use`, `goal_owner_decision`, `approved_goal_use`, `target_authority_repair`, `target_authority_integration`, `paragraph_production`, `chapter_production`, `lesson_authoring`, `merge` | `outline_owner_decision`, `goal_design`, `target_design`, `specialist_review`, `chapter_planning` | `outline_owner_decision` | — | The owner approves an exact PR head and the approval pins are recorded. | resolved_via=outline_owner_decision; released_by=meijer1973; released_on=2026-09-02; evidence_ref=https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629; subject_id=book-2-outline-v3-review-ready; subject_sha256=69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde; reviewed_pr=226; reviewed_head=2166cd074e1cb8d24f7908e9f792a996dbfd48e7 |
 | `H-211-GATE0B1` | open | `paragraph:2.1.1` | `approved_goal_use`, `paragraph_production`, `lesson_authoring` | `goal_design`, `target_design`, `specialist_review`, `goal_owner_decision` | `goal_owner_decision` | approved_goal_package_sha256=pending; approval_ref=pending; approved_by=pending; approved_on=pending | The goal owner approves the exact hashed paragraph goal package with identity, date, and decision reference. | — |
 | `H-211-TARGET-INTEGRATION` | open | `paragraph:2.1.1` | `paragraph_production`, `lesson_authoring` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair`, `target_authority_integration` | `target_authority_integration` | blocked_baseline_sha256=f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8; approved_replacement_sha256=pending; approval_ref=pending; approved_by=pending; approved_on=pending | The exact approved target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded. | — |
 | `H-212-STALE-REF` | open | `paragraph:2.1.2` | `approved_goal_use`, `paragraph_production` | `goal_design`, `target_design`, `specialist_review`, `target_authority_repair`, `target_authority_integration` | `target_authority_integration` | blocked_baseline_sha256=51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5; approved_replacement_sha256=pending; approval_ref=pending; approved_by=pending; approved_on=pending | The repaired dependency is current in the exact reviewed target record, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded. | — |

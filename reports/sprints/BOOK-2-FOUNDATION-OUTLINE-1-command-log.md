@@ -3522,3 +3522,161 @@ OK review throughput packet: GATE-BOOK-2-FOUNDATION-OUTLINE-1
 ```text
 
 ```
+## npm.cmd run check:book-outline-currentness -- --require-approved
+
+- cwd: `C:\wt\Issue 218, textbook excercises\book2-foundation-outline-platform`
+- started_at: `2026-09-02T19:29:56.373Z`
+- finished_at: `2026-09-02T19:29:56.761Z`
+- duration_ms: `388`
+- exit_code: `0`
+- stdout_sha256: `21dd1994ef7a81604dd9cfa96c440071de816f864405daa1b7645ca8b3feabb2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book-outline-currentness
+> node build-scripts/workflows/check-book-outline-currentness.js --require-approved
+
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:book-outline-currentness -- --action approved_outline_use
+
+- cwd: `C:\wt\Issue 218, textbook excercises\book2-foundation-outline-platform`
+- started_at: `2026-09-02T19:29:56.803Z`
+- finished_at: `2026-09-02T19:29:57.145Z`
+- duration_ms: `342`
+- exit_code: `0`
+- stdout_sha256: `36391f9f315878f81e361ec2a6867676c0a817386228c7ed768e27b709801b27`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book-outline-currentness
+> node build-scripts/workflows/check-book-outline-currentness.js --action approved_outline_use
+
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: action:approved_outline_use
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run test:book-outline-currentness
+
+- cwd: `C:\wt\Issue 218, textbook excercises\book2-foundation-outline-platform`
+- started_at: `2026-09-02T19:29:57.192Z`
+- finished_at: `2026-09-02T19:30:03.628Z`
+- duration_ms: `6436`
+- exit_code: `0`
+- stdout_sha256: `edc96ac4043e953b066fc359dd071ff31a5530683e54be1e1cd20da7244c2ae2`
+- stderr_sha256: `a8af0a1d13c0f76a353a7c1751cd5e20265907edb7fbcef499c438ec0fb8aea6`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test:book-outline-currentness
+> jest build-scripts/workflows/check-book-outline-currentness.test.js --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       88 passed, 88 total
+Snapshots:   0 total
+Time:        5.668 s, estimated 9 s
+Ran all test suites matching build-scripts/workflows/check-book-outline-currentness.test.js.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\Issue 218, textbook excercises\book2-foundation-outline-platform`
+- started_at: `2026-09-02T19:31:01.436Z`
+- finished_at: `2026-09-02T19:35:49.748Z`
+- duration_ms: `288312`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `5bdb3101afa9cade6147f93bf08de494027acff3061458869fab82b1495de03d`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 108 passed, 108 of 114 total
+Tests:       8 skipped, 1741 passed, 1749 total
+Snapshots:   0 total
+Time:        287.395 s, estimated 392 s
+Ran all test suites.
+
+```
