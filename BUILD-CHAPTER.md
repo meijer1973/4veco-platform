@@ -17,11 +17,40 @@ web companion paragraph lane. Website companion work uses
 
 ---
 
+## Book foundation check
+
+Before creating or revising a Book 2 `_chapter-plan.md`, read
+`references/authored/book-outlines/book-2-outline.md` and its `.meta.json`
+companion, then run:
+
+```bash
+npm run check:book-outline-currentness
+npm run check:book-outline-currentness -- --action chapter_planning --chapter X.Y
+npm run check:book-outline-currentness -- --require-approved  # before approved authority, production, or integration
+```
+
+Stop only when the outline is stale or an `open` hold in matching chapter scope
+lists the current action in `blocks`. A released hold requires evidence and no
+longer blocks; an unrelated, out-of-scope, or explicitly permitted hold does
+not block chapter planning. An explicit resolution action may repair or decide
+the hold without granting later approved use or integration. Approval and
+production still require approved-use currentness and their own action checks.
+
+The chapter plan must pin the active v6/detailed v5 and approved outline
+path/version/hash, its own path/version/hash/currentness, every paragraph's
+target registry ID/status/hash, and references to each Part A-owned
+`X.Y.Z-textbook-plan.md`. It consumes the Markdown outline's canonical roles,
+prerequisites, non-goals, prepares-for, model conditions, and action-specific
+hold effects without recreating a second outline. This is the chapter-level
+**Book foundation check**; it precedes blueprint-to-paragraph delegation.
+
+---
+
 ## Stage 1: Paragraph Production
 
 Follow the `econ-chapter-builder` skill for the full orchestration process:
 
-1. **Plan** — read blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save as `_chapter-plan.md`.
+1. **Plan** — pass the action-specific Book foundation check for `chapter_planning`, read the blueprint, analyse dependencies, determine build order (parallel vs sequential), set cross-paragraph conventions (shared contexts, notation, colours, interleaving targets). Save the authority pins and decisions in `_chapter-plan.md`.
 2. **Build** — delegate each paragraph to a sub-agent that follows `econ-textbook-paragraph` exactly. Each sub-agent must produce ALL deliverables: 3 .md files, 3 .pdf files, build_pdf.py, _assets/ with SVG+PNG pairs.
 3. **Verify** — after each sub-agent returns, run completeness check. If anything missing, send back.
 4. **QC** — independent sub-agent review per paragraph (Pass 0 + Pass 1 + Pass 2 from `econ-paragraph-review`).
@@ -45,11 +74,12 @@ For each paragraph in the chapter, verify:
 2. □ 2 `.pdf` files exist, each >10KB
 
 **All paragraphs (theory + consolidation):**
-3. □ `build_pdf.py` exists
-4. □ `_assets/` folder exists with SVG + PNG pairs
-5. □ Asset completeness: every image ref in `.md` → file exists in `_assets/`
-6. □ `X.Y.Z-review.md` exists (from independent QC review)
-7. □ `X.Y.Z-quality-ref.yaml` exists and the Part A `partA:` block is valid (assets.missing is empty, svgpng_paired is true)
+3. □ Each Part A `X.Y.Z-textbook-plan.md` foundation check matches the chapter plan's approved outline version/hash; production-action hold effects are explicit and no matching open production hold is ignored
+4. □ `build_pdf.py` exists
+5. □ `_assets/` folder exists with SVG + PNG pairs
+6. □ Asset completeness: every image ref in `.md` → file exists in `_assets/`
+7. □ `X.Y.Z-review.md` exists (from independent QC review)
+8. □ `X.Y.Z-quality-ref.yaml` exists and the Part A `partA:` block is valid (assets.missing is empty, svgpng_paired is true)
 
 **If any paragraph fails this gate → go back and complete that paragraph first.**
 
@@ -152,12 +182,13 @@ For a command-by-command validation report, use `agents/testing-agent.md`. For c
 | # | Check | Status |
 |---|-------|--------|
 | 1 | `validate-chapter.js` passes with 0 errors | □ |
-| 2 | Cross-paragraph consistency review completed (sub-agent) | □ |
-| 3 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
-| 4 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
-| 5 | Chapter PDF: images render, pages break correctly (visual check) | □ |
-| 6 | Chapter PDF: figure captions/descriptions match the rendered figures, not only the file numbers | □ |
-| 7 | Answer booklet PDF: images render, pages break correctly | □ |
+| 2 | Book foundation check pins the current owner-approved outline and no open hold blocks the current completion action | □ |
+| 3 | Cross-paragraph consistency review completed (sub-agent) | □ |
+| 4 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
+| 5 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
+| 6 | Chapter PDF: images render, pages break correctly (visual check) | □ |
+| 7 | Chapter PDF: figure captions/descriptions match the rendered figures, not only the file numbers | □ |
+| 8 | Answer booklet PDF: images render, pages break correctly | □ |
 
 **A chapter is complete when ALL items are checked. Not before.**
 

@@ -11,8 +11,8 @@ There are exactly two operational lanes:
 
 - **Part A / textbook lane** owns textbook source, textbook HTML renders, core
   textbook visuals, `build_pdf.py`, paragraph PDFs for human review, textbook
-  review, `partA:` quality-ref values, and handoff. Publisher-print chapter/book
-  handoff also stays in this lane.
+  review, `X.Y.Z-textbook-plan.md`, `partA:` quality-ref values, and handoff.
+  Publisher-print chapter/book handoff also stays in this lane.
 - **Part B / companion lane / student-web companion lane** owns companion route
   files, companion HTML/games, PPTX, web visual variants, shared companion data,
   `_paragraph-plan.md`, companion review, and `companion:` quality-ref values.
@@ -116,6 +116,42 @@ current specification.
 
 ---
 
+# Book foundation check (Book 2+)
+
+Before goals, a target route, paragraph content, exercises, or a companion plan
+are authored for Book 2, read the canonical
+`references/authored/book-outlines/book-2-outline.md` and its `.meta.json`
+companion. Run:
+
+```bash
+npm run check:book-outline-currentness
+npm run check:book-outline-currentness -- --action <action> --paragraph X.Y.Z
+npm run check:book-outline-currentness -- --require-approved  # before approved authority, production, or integration
+```
+
+The first command proves structural/source currentness. The action command asks
+whether any `open` hold in matching scope blocks the current action. The
+approved-use command proves owner approval only when that action needs approved
+input. An open hold does not stop unrelated, out-of-scope, or explicitly
+permitted work. A hold's explicit `resolution_actions` are decision or repair
+actions that may satisfy its release condition; approved use/integration is a
+separate action. A `released` hold requires evidence and no longer blocks.
+
+Part A owns `X.Y.Z-textbook-plan.md`, copied from
+`build-scripts/templates/template-textbook-paragraph-plan.md`. Its **Book
+foundation check** pins active v6 and detailed v5 path/version/hash, approved
+outline path/version/hash, chapter-plan path/version/hash/currentness, target
+record ID/status/hash, role, five-way prerequisite classifications, non-goals,
+prepares-for, retrieval/interleaving, operation emphasis, misconception
+boundary, model conditions/relevant range, action-scoped hold effects, and a
+distinct foundation verdict. A target's `reviewed_final` status does not
+release a hold. Part B may consume the approved Part A plan/handoff but owns a
+separate `_paragraph-plan.md` and must not duplicate the foundation semantics.
+
+For a later book, use its approved canonical book outline when one exists. If
+the required book-level layer is absent, stop at foundation planning rather
+than starting from the paragraph in isolation.
+
 # COMMON pre-conditions (read first, applies to BOTH pipelines)
 
 These four references frame every paragraph build, regardless of mode. Read them before touching either Part A or Part B.
@@ -164,6 +200,8 @@ paragraph PDF gate.
 
 ## A1: Input
 
+- **Part A textbook plan** — `X.Y.Z-textbook-plan.md` with the complete
+  action-specific Book foundation check from the canonical Book 2 outline
 - **Blueprint paragraph spec** — target exercise, lesson goals, difficulty notes
 - **Shared conventions** — from `_chapter-plan.md` if building as part of a chapter (notation, colours, shared contexts, interleaving targets)
 - **Prior paragraph context** — if this paragraph depends on an earlier one (key formulas, terminology)
@@ -176,7 +214,7 @@ exam targets—design backward in this order:
 `lesson goals -> doeloefening -> target subquestions/operations -> worked
 example and practice`
 
-Record this table in the paragraph plan before authoring:
+Record this table in `X.Y.Z-textbook-plan.md` before authoring:
 
 | Lesson goal | Target subquestion/operation | Worked example | Start check | Guided practice | Independent practice | Covered/gap |
 |---|---|---|---|---|---|---|
@@ -191,14 +229,14 @@ retroactive Book 1 content check.
 **Pedagogical-boundary inheritance:** also apply
 `references/owned/course-blueprint-pedagogical-boundaries.md`. Earlier exposure
 may provide bounded explanation/context, already-taught prerequisite retrieval,
-or optional perspective, but it cannot fill a `Covered` cell, imply mastery,
+or optional perspective, but it cannot fill a `Covered` cell, imply security,
 add an untargeted independent operation to a Part A target stage, displace the
 target route, or defeat the whole-lesson 55-minute equation. The operational
 sequence and target-coverage rules in this Part A contract continue to govern.
 
 ## Exam-target paragraph input contract
 
-When the target exercise is an official exam question, the paragraph plan must
+When the target exercise is an official exam question, the Part A textbook plan must
 include an exam-target decomposition table and an exam-target route trace.
 Every official answer-model step must be traceable to one of:
 
@@ -222,7 +260,7 @@ practice route, skill-map route, shared task shell, target-equivalent exit
 ticket, and answer model. If a later surface does not exist yet, mark it
 `blocked: [named sprint/gate]`; do not silently treat absence as coverage.
 
-Required `_paragraph-plan.md` section for exam-target paragraphs:
+Required `X.Y.Z-textbook-plan.md` section for exam-target paragraphs:
 
 ```md
 ## Exam-target exercise decomposition
@@ -259,6 +297,17 @@ placement, or graph-construction substitute. It must not expose internal MTU or
 operation codes to students. The `Answer-form chain` may cite internal MTU IDs
 as builder evidence, but generated student-facing labels must remain plain
 Dutch.
+
+## A1b: Create and approve the Part A textbook plan
+
+1. Copy `build-scripts/templates/template-textbook-paragraph-plan.md` to
+   `<paragraph-folder>/X.Y.Z-textbook-plan.md`.
+2. Complete every authority, chapter, target, semantic, prerequisite, model,
+   and hold-effect field for the exact current action.
+3. Record the separate `PASS_FOR_<ACTION>` or `BLOCKED_FOR_<ACTION>` foundation
+   verdict. Do not use a production PASS for design permission.
+4. Keep this artifact Part A-owned. Part B reads it and the textbook handoff;
+   Part B does not edit it or rename it to `_paragraph-plan.md`.
 
 ## A2: Build content
 
@@ -298,7 +347,7 @@ Author to these ranges: Startopgaven 5–8 minutes; optional Begeleide inoefenin
 8–15; Zelfstandige oefening 10–18; Doeloefening 8–12; optional
 Denkertje/Bonusopgave 8–15 outside core; closing review 4–8, often homework.
 Startopgaven combines already-taught prerequisite retrieval and a compact,
-low-stakes current-content comprehension check—not mastery, diagnosis, or
+low-stakes current-content comprehension check—not an attainment claim, diagnosis, or
 automatic routing. The guided heading stays printed while its student route is
 optional; it keeps the same goal/target, uses stronger explicit support with
 deliberate fading, and has neutral skip wording. Bonus
@@ -373,6 +422,7 @@ between the textbook lane and the companion lane.
 ## A-verify: Part A checklist
 
 **Theory paragraphs:**
+- [ ] `X.Y.Z-textbook-plan.md` exists, is Part A-owned, and uses the dedicated template
 - [ ] paragraaf.md, opgaven.md, antwoorden.md exist
 - [ ] paragraaf.pdf, opgaven.pdf, antwoorden.pdf exist (>10KB each)
 - [ ] build_pdf.py exists
@@ -382,6 +432,7 @@ between the textbook lane and the companion lane.
 - [ ] `X.Y.Z-quality-ref.yaml` exists (from independent sub-agent)
 - [ ] `X.Y.Z-textbook-handoff.md` exists and names what Part B may reuse/adapt
 - [ ] Book 2+ backward-design alignment table covers every goal and target operation
+- [ ] Book foundation check evaluates the exact current action; every matching open hold blocks or permits it explicitly, and every released hold has evidence
 - [ ] Seven Part A headings use exact `##` level and order; theory → Uitgewerkt voorbeeld → compact non-heading summary → Startopgaven is preserved
 - [ ] Both Startopgaven roles and route note are present; a whole-lesson equation using actual question estimates totals ≤55 minutes
 - [ ] Optional guided route keeps the same goal, adds/fades support, and uses neutral skip wording
@@ -389,6 +440,7 @@ between the textbook lane and the companion lane.
 - [ ] Summary is before Startopgaven with ≤5 points; printed copy has the paper support note and no website/device/internal-lane direction
 
 **Consolidation paragraphs:**
+- [ ] `X.Y.Z-textbook-plan.md` exists, is Part A-owned, and uses the dedicated template
 - [ ] opgaven.md, antwoorden.md exist (no paragraaf.md)
 - [ ] opgaven.pdf, antwoorden.pdf exist (>10KB each)
 - [ ] build_pdf.py exists

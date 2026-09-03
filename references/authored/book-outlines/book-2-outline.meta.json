@@ -1,0 +1,228 @@
+{
+  "schema_version": 5,
+  "outline_id": "book-2",
+  "title": "Book 2 Outline: Costs, Revenue, Elasticity, And Surplus",
+  "version": "book-2-outline-v3-review-ready",
+  "status": "approved_with_holds",
+  "audit_outcome": "VALID_WITH_DERIVED_OUTLINE_REQUIRED",
+  "semantic_authority": {
+    "path": "references/authored/book-outlines/book-2-outline.md",
+    "sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "rule": "canonical_human_semantics_live_only_in_markdown",
+    "hash_scope": "canonical_utf8_lf_excluding_validated_lifecycle_fields"
+  },
+  "generated_on": "2026-09-03",
+  "approval_context": {
+    "pr_number": 226
+  },
+  "owner_approval": {
+    "status": "approved",
+    "approved_version": "book-2-outline-v3-review-ready",
+    "approved_outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "approved_pr": 226,
+    "approved_commit": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
+    "decision_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629",
+    "decided_on": "2026-09-02",
+    "decided_by": "meijer1973"
+  },
+  "review_state": {
+    "owner_decision": "approve_book_2_outline_with_holds",
+    "owner_reviewed_head": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
+    "reviewed_substantive_head": "72b87403ea7866aaee877e9945a2021cc2559552",
+    "pre_refresh_terminal_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+    "specialist_reviews": "pass_role_based_not_independent",
+    "lead_review": "round3_pass_with_flags_role_based_not_independent",
+    "structural_governance_review": "pass_with_flags_all_substantive_bypasses_closed_evidence_only_closure_required",
+    "structural_governance_reviewed_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
+    "accepted_ci_run": 33674533779
+  },
+  "hash_contract": {
+    "semantic_authority_hash": "sha256(canonical UTF-8 LF text with the separately validated lifecycle status line, owner-approval line, and hold projection replaced by stable markers)",
+    "authority_source_hash": "sha256(UTF-8 text after CRLF and CR are normalized to LF)",
+    "target_record_hash": "sha256(JSON.stringify(record)) using repository property order"
+  },
+  "authority_sources": [
+    { "path": "references/owned/course-blueprint-v6-three-year.md", "sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e", "source_kind": "active_three_year_umbrella" },
+    { "path": "references/owned/course-blueprint-v5.md", "sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7", "source_kind": "active_year_1_detail" },
+    { "path": "references/authored/course-target-exercises.json", "sha256": "33928e7929fa1c9af86159b07769e2f01d28963873ef34c40e55c2001feb87ac", "source_kind": "active_paragraph_target_registry" },
+    { "path": "references/owned/course-blueprint-pedagogical-boundaries.md", "sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7", "source_kind": "prior_teaching_boundary" },
+    { "path": "skills/econ-exercise-builder.md", "sha256": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a", "source_kind": "part_a_exercise_contract" }
+  ],
+  "read_only_lesson_evidence": {
+    "repository_commit": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
+    "product_end_state": { "path": "specifications/product-end-state.md", "sha256": "78c739220f359a5d5301d7d854dd42a2f45181bb54b4772d66509377f4bbe6ab" },
+    "chapter_plans": [
+      { "chapter": "2.1", "sha256": "cbf01cedb2250cdc4aff53e596b9a5c7bbb20e2d9fe829b0c7fc703ee4e28c58" },
+      { "chapter": "2.2", "sha256": "3ee3156020bf61626e94963508a960a651e08028f0dc4b4ebf1aebdadd633167" }
+    ],
+    "book_root_outline_present": false,
+    "chapter_2_3_plan_present": false,
+    "verification_scope": "audit provenance only; platform CI does not mutate or approve lesson evidence"
+  },
+  "target_registry_pins": [
+    { "id": "2.1.1", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8" },
+    { "id": "2.1.2", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5" },
+    { "id": "2.1.3", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd" },
+    { "id": "2.1.4", "kind": "gemengde_opgaven", "target_status": "reviewed_final", "target_record_sha256": "7a4a01e133dcdf828f4f9d7b06209d1c51ca29ff98d83876dc026f8ba973ac24" },
+    { "id": "2.2.1", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "4283adf5c6de9015c2daccc80b794183138ff4b7b9b5f4309bd7da80ef0304ed" },
+    { "id": "2.2.2", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "b939b9f4538d9e16f5eed3c8a1f9bca03b8a2380610776105a5c8d235795ffb1" },
+    { "id": "2.2.3", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "5455130e28d15c2b70a77d55df346ca04c5a19d6c25da158c615fddd68ba3a17" },
+    { "id": "2.2.4", "kind": "gemengde_opgaven", "target_status": "reviewed_final", "target_record_sha256": "5edc21a8f3977215674013fca251719d8000c34ab9736246f119a4ef21a1476b" },
+    { "id": "2.3.1", "kind": "theory", "target_status": "migrated_from_v4_needs_v5_review", "target_record_sha256": "078536130e88c1bc9c6a58fc492dc47ccf7a411bafc8b49b9571e1de238f0388" },
+    { "id": "2.3.2", "kind": "theory", "target_status": "migrated_from_v4_needs_v5_review", "target_record_sha256": "d1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8" },
+    { "id": "2.3.3", "kind": "theory", "target_status": "migrated_from_v4_needs_v5_review", "target_record_sha256": "7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833" },
+    { "id": "2.3.4", "kind": "gemengde_opgaven", "target_status": "placeholder_needs_review", "target_record_sha256": "601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f" }
+  ],
+  "holds": [
+    {
+      "id": "H-OUTLINE-OWNER", "status": "released", "severity": "blocking", "scope": ["book:2"],
+      "summary": "The owner approved the exact Book 2 outline payload with all other named holds retained.",
+      "blocks": ["approved_outline_use", "goal_owner_decision", "approved_goal_use", "target_authority_repair", "target_authority_integration", "paragraph_production", "chapter_production", "lesson_authoring", "merge"],
+      "permits": ["outline_owner_decision", "goal_design", "target_design", "specialist_review", "chapter_planning"],
+      "resolution_actions": ["outline_owner_decision"],
+      "release_condition": "The owner approves an exact PR head and the approval pins are recorded.",
+      "release_evidence": {
+        "resolved_via": "outline_owner_decision",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-02",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629",
+        "subject_id": "book-2-outline-v3-review-ready",
+        "subject_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+        "reviewed_pr": 226,
+        "reviewed_head": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7"
+      }
+    },
+    {
+      "id": "H-211-GATE0B1", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
+      "summary": "Gate 0B-1 goal design may proceed, but approved goal use waits for the paragraph goal-owner decision.",
+      "goal_binding": { "approved_goal_package_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production", "lesson_authoring"],
+      "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision"],
+      "resolution_actions": ["goal_owner_decision"],
+      "release_condition": "The goal owner approves the exact hashed paragraph goal package with identity, date, and decision reference.", "release_evidence": null
+    },
+    {
+      "id": "H-211-TARGET-INTEGRATION", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
+      "summary": "Paragraph and lesson production wait for the exact approved target record to be integrated and pinned.",
+      "target_binding": { "blocked_baseline_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["paragraph_production", "lesson_authoring"],
+      "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
+      "resolution_actions": ["target_authority_integration"],
+      "release_condition": "The exact approved target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+    },
+    {
+      "id": "H-212-STALE-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.2"],
+      "summary": "Target context contains a stale bakery cross-reference instead of the current Book 2 dependency.",
+      "target_binding": { "blocked_baseline_sha256": "51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
+      "resolution_actions": ["target_authority_integration"],
+      "release_condition": "The repaired dependency is current in the exact reviewed target record, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+    },
+    {
+      "id": "H-213-DELTAQ", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.3"],
+      "summary": "Target interval wording must preserve MK and MO as delta total divided by delta quantity.",
+      "target_binding": { "blocked_baseline_sha256": "e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
+      "resolution_actions": ["target_authority_integration"],
+      "release_condition": "The approved interval-normalized wording is current in the target registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+    },
+    {
+      "id": "H-213-OPC2", "status": "open", "severity": "advisory", "scope": ["paragraph:2.1.3", "route:long"],
+      "summary": "V6 OP-C2 output choice is broader than the current v5 target and must not be silently added.",
+      "blocks": ["formal_output_choice_teaching"], "permits": ["goal_design", "specialist_review", "target_authority_repair"],
+      "resolution_actions": ["target_authority_repair"],
+      "release_condition": "Governed authority decides whether and where OP-C2 is taught.", "release_evidence": null
+    },
+    {
+      "id": "H-221-PRIOR", "status": "open", "severity": "blocking", "scope": ["paragraph:2.2.1"],
+      "summary": "Book 1 percentage and demand retrieval must be explicit because the target registry prior list is empty.",
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision"],
+      "resolution_actions": ["goal_owner_decision"],
+      "release_condition": "An approved Part A plan pins retrieval and records any registry-normalization decision.", "release_evidence": null
+    },
+    {
+      "id": "H-22-ELASTIC-CONTRAST", "status": "open", "severity": "blocking", "scope": ["paragraph:2.2.1", "paragraph:2.2.2"],
+      "summary": "The two numerical target contexts are both inelastic, so teaching and practice need an explicit elastic contrast.",
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision"],
+      "resolution_actions": ["goal_owner_decision"],
+      "release_condition": "Approved instruction and practice include reviewed elastic-contrast evidence.", "release_evidence": null
+    },
+    {
+      "id": "H-231-V5", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.1"],
+      "summary": "Migrated target requires v5 review.",
+      "target_binding": { "blocked_baseline_sha256": "078536130e88c1bc9c6a58fc492dc47ccf7a411bafc8b49b9571e1de238f0388", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
+      "resolution_actions": ["target_authority_integration"],
+      "release_condition": "The exact v5-reviewed target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+    },
+    {
+      "id": "H-232-V5", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.2"],
+      "summary": "Migrated target and supply-as-MC boundary require v5 review.",
+      "target_binding": { "blocked_baseline_sha256": "d1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
+      "resolution_actions": ["target_authority_integration"],
+      "release_condition": "The exact v5-reviewed target and supply-as-MC boundary are current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+    },
+    {
+      "id": "H-233-V5-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.3"],
+      "summary": "Migrated target requires v5 review, source-reference repair, and qualified binding/transaction assumptions.",
+      "target_binding": { "blocked_baseline_sha256": "7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
+      "resolution_actions": ["target_authority_integration"],
+      "release_condition": "The exact reviewed source repair and binding/transaction assumptions are current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+    },
+    {
+      "id": "H-234-PLACEHOLDER", "status": "open", "severity": "blocking", "scope": ["paragraph:2.3.4"],
+      "summary": "Placeholder consolidation target must be replaced and reviewed without new theory.",
+      "target_binding": { "blocked_baseline_sha256": "601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "blocks": ["approved_goal_use", "paragraph_production"], "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
+      "resolution_actions": ["target_authority_integration"],
+      "release_condition": "The exact reviewed consolidation target is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+    },
+    {
+      "id": "H-BOOK2-ROOT-PLAN", "status": "open", "severity": "blocking", "scope": ["book:2"],
+      "summary": "The lesson Book 2 root outline is absent and requires a separate lesson-authorized task.",
+      "blocks": ["book_readiness", "whole_book_assembly"], "permits": ["book_plan_repair", "chapter_planning", "specialist_review"],
+      "resolution_actions": ["book_plan_repair"],
+      "release_condition": "A lesson-authorized task creates and reviews the Book 2 root plan and records exact evidence.", "release_evidence": null
+    },
+    {
+      "id": "H-CHAPTER-23-PLAN", "status": "open", "severity": "blocking", "scope": ["chapter:2.3"],
+      "summary": "The lesson Chapter 2.3 plan is absent and requires a separate lesson-authorized task.",
+      "blocks": ["book_readiness", "whole_book_assembly", "chapter_production", "paragraph_production", "lesson_authoring"],
+      "permits": ["chapter_plan_repair", "chapter_planning", "goal_design", "target_design", "specialist_review"],
+      "resolution_actions": ["chapter_plan_repair"],
+      "release_condition": "A lesson-authorized task creates and reviews the Chapter 2.3 plan and records exact evidence.", "release_evidence": null
+    },
+    {
+      "id": "H-MERGE-GOVERNANCE", "status": "released", "severity": "blocking", "scope": ["book:2"],
+      "summary": "The owner authorized the exact PR payload and its bounded governed merge transition.",
+      "blocks": ["merge"], "permits": ["merge_owner_decision"],
+      "resolution_actions": ["merge_owner_decision"],
+      "release_condition": "After applicable holds are released and exact-head CI passes, owner payload authorization and serialized integration evidence are recorded.",
+      "release_evidence": {
+        "resolved_via": "merge_owner_decision",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-03",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557"
+      }
+    }
+  ],
+  "workflow_surfaces": [
+    "BUILD-PARAGRAPH.md",
+    "BUILD-CHAPTER.md",
+    "skills/econ-textbook-paragraph.md",
+    "docs/workflows/textbook-paragraph-lane.md",
+    "agents/teacher-learning-quality-review-agent.md",
+    "build-scripts/templates/template-textbook-paragraph-plan.md",
+    "build-scripts/templates/template-paragraph-plan.md"
+  ],
+  "freshness_checker": {
+    "path": "build-scripts/workflows/check-book-outline-currentness.js",
+    "default_command": "npm run check:book-outline-currentness",
+    "approved_command": "npm run check:book-outline-currentness -- --require-approved",
+    "action_command": "npm run check:book-outline-currentness -- --action <action> --paragraph <X.Y.Z>",
+    "chapter_action_command": "npm run check:book-outline-currentness -- --action <action> --chapter <X.Y>",
+    "mutation_test_command": "npm run test:book-outline-currentness"
+  }
+}

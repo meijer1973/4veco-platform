@@ -40,7 +40,11 @@ Inspect as many of these as apply:
 
 - User request, learning claim, and acceptance criteria.
 - `AGENTS.md`, `BUILD-PARAGRAPH.md`, `BUILD-CHAPTER.md`, and any relevant sprint/gate plan.
-- Paragraph plan, learning goals, procedure-stappen-plan, terminology table, and visual assignment table.
+- Part A `X.Y.Z-textbook-plan.md`, Part B `_paragraph-plan.md` when in scope,
+  learning goals, procedure-stappen-plan, terminology table, and visual assignment table.
+- For Book 2, the paragraph plan's Book foundation check plus
+  `references/authored/book-outlines/book-2-outline.md` and its `.meta.json`
+  companion.
 - Course blueprint and target exercise.
 - For official CvTE or CvTE-derived targets: the paragraph plan's
   `Exam-target route trace`, official prompt/source annexes/figures/tables,
@@ -50,6 +54,36 @@ Inspect as many of these as apply:
 - Rendered output when the learning design depends on layout, graph reading, visual sequence, or interaction flow.
 - Formative checks, feedback, answer models, score/routing logic, and differentiation paths.
 - Existing review reports, quality-ref YAML, and validator/test reports.
+
+### Book foundation review mode
+
+When a Book 2 outline, chapter plan, paragraph plan, or workflow is reviewed,
+inspect the canonical
+`references/authored/book-outlines/book-2-outline.md`, its machine companion,
+and the paragraph plan's **Book foundation check**. Confirm:
+
+- the exact outline version/SHA-256 is current and owner-approved before an
+  approval or production verdict, while design-only permission is evaluated
+  against the exact action;
+- the paragraph role and chapter dependency preserve a coherent learning
+  progression rather than treating the paragraph as a blank-slate unit;
+- every claimed prerequisite is traced to prior teaching and assigned one of
+  the five required paragraph-level classifications, while
+  preview/familiarity remains non-assumable;
+- retrieval and interleaving are proportionate and do not displace the current
+  target route;
+- operation emphasis includes the target's calculation, representation,
+  interpretation, classification/selection, and answer-form needs as
+  applicable;
+- misconception boundaries are explicitly taught or guarded; and
+- every hold is evaluated for status, paragraph/chapter scope, and current
+  action; released holds have named evidence and do not block, and unrelated or
+  explicitly permitted holds do not become blanket blockers. A target's source
+  status alone cannot release a hold.
+
+Hard fail a stale/unapproved outline pin, a missing paragraph row, hidden
+prerequisite, preview-to-security promotion, ignored matching blocking hold, or a
+paragraph/chapter sequence that contradicts the approved book role.
 
 ### Book 2+ Part A contract-review mode
 
@@ -61,9 +95,12 @@ as a retroactive Book 1 content check.
 
 **Pedagogical-boundary inheritance:** inspect
 `references/owned/course-blueprint-pedagogical-boundaries.md` whenever the
-paragraph relies on earlier-book exposure or previews later content. Distinguish
-`seen`, `supported`, `independently required`, and `mastered`. Hard fail any
-claim that preview alone fills a `Covered` cell, proves mastery, authorises an
+paragraph relies on earlier-book exposure or previews later content. Classify
+each prerequisite as `previously_taught_probably_secure`,
+`previously_taught_retrieval_required`,
+`previously_taught_not_secure_enough_to_assume`,
+`preview_or_familiarity_only`, or `new_formal_learning`. Hard fail any
+claim that preview alone fills a `Covered` cell, proves security, authorises an
 untargeted independent operation in a Part A target stage, displaces target
 practice, weakens the 55-minute route, or shortens the later formal teaching.
 The operational sequence and target-coverage rules remain in
@@ -82,7 +119,7 @@ Verify all of the following:
   summary of no more than five points, then Startopgaven;
 - Startopgaven includes already-taught prerequisite retrieval and a compact
   current-content comprehension check under one heading, without claiming
-  mastery, diagnosis, or automatic routing;
+  attainment, diagnosis, or automatic routing;
 - Begeleide inoefening remains a printed heading but an optional student route,
   keeps the same goal/target, supplies stronger explicit scaffolding,
   deliberately fades it, and uses neutral skip wording;

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-28",
+  "updated_on": "2026-09-02",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.11-b2-2.2-chapter-complete-ready-review",
+      "version": "v1.17-book2-outline-payload-authorized",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
-      "updated_on": "2026-06-19",
+      "updated_on": "2026-09-03",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing, housed in docs/roadmaps/textbook/. Chapter 2.2 is complete locally in GOAL-B2-2.2-CHAPTER-COMPLETE-1: 2.2.3 and 2.2.4 output exists, 2.2.1 through 2.2.4 targets are promoted to reviewed-final, assembled chapter proof and answer proof exist, validators and lead-review evidence are being prepared for a coordinated platform/lesson PR pair. Chapter 2.3, Book 3, companion/product proof, check-surface closure, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain separate and blocked until their own gates close."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 owner outline approval binds PR #226 head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7 and semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde. Separate payload/governed-merge authorization binds head b7f74aeded196669a215b920c16d671b6b919164 at comment 5521351557; CI run 33674533779 covers that head. H-OUTLINE-OWNER and H-MERGE-GOVERNANCE are released, while 13 content and lesson holds remain open. Exact-head CI and governed integration validation remain for the bounded transition. §2.1.1 design/specialist review are permitted, while goal/target approval and production, lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

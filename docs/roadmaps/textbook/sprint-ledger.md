@@ -1,6 +1,6 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-06-19
+Updated: 2026-09-03
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Current Rule
@@ -26,6 +26,7 @@ Every agent working from this ledger must use the repository sprint protocol bef
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
+| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Owner outline approval binds PR #226 head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. Separate payload/governed-merge authorization binds exact head `b7f74aeded196669a215b920c16d671b6b919164` at comment `5521351557`; accepted CI run `33674533779` covers that head. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; 13 content and lesson holds remain open. | Commit/push the bounded merge-governance transition, regenerate dashboard/index tails, obtain exact-head CI, then mark ready and use the governed dry-run and merge-commit lane. Do not edit lessons/targets, approve or produce §2.1.1, start Issue #223, or modify PR #224. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally inside `GOAL-B2-2.2-CHAPTER-COMPLETE-1` after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. | Open the coordinated platform/lesson PR pair for human review; do not start Chapter 2.3, Book 3, or downstream product gates from this closure. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. | Carry no missing core requirement. Future mixed sections still require their own explicit governed promotion before `reviewed_final`. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building the consolidation-only mixed elasticity section with no new theory, full answer guidance, rendered proof, validators, and explicit mixed-target acceptance. | Use the generated 2.2.4 output only as Chapter 2.2 mixed practice; do not treat it as a new theory paragraph. |

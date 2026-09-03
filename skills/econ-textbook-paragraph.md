@@ -12,9 +12,26 @@ Builds one complete textbook paragraph: theory + worked example + exercises + gr
 authored Book 2 and later theory paragraphs. Book 1 output is frozen: do not
 retrofit it and do not use this contract as a retroactive Book 1 content check.
 
+**Book foundation check:** before a Book 2 paragraph is planned or built, read
+the canonical semantic authority
+`references/authored/book-outlines/book-2-outline.md` and its compact machine
+companion. Part A creates `X.Y.Z-textbook-plan.md` from
+`build-scripts/templates/template-textbook-paragraph-plan.md`. Run structural
+currentness and `--action <action> --paragraph X.Y.Z`; run
+`--require-approved` only for approved authority, production, or integration.
+Treat a hold's explicit resolution action as distinct from the later use or
+integration action it guards. Stop only when
+the outline is stale or a matching open hold blocks the current action.
+Released holds require evidence and no longer block; unrelated, out-of-scope,
+or explicitly permitted holds do not block. Record every required authority,
+chapter, target, semantic, five-way prerequisite, non-goal, prepares-for,
+model-condition, hold-effect, and distinct foundation-verdict field in the
+Part A plan. Preview/familiarity is never an assumable prerequisite.
+
 **Lane boundary:** this is the Part A textbook lane. It may not create or edit
 companion route files (`index.html`, companion HTML/PPTX, shared game data,
-`_paragraph-plan.md`, or `X.Y.Z-companion-visual-review.md`). Close the lane by
+`_paragraph-plan.md`, or `X.Y.Z-companion-visual-review.md`). Part A owns
+`X.Y.Z-textbook-plan.md`; Part B consumes but must not edit it. Close the lane by
 producing `X.Y.Z-textbook-handoff.md` for the companion team. Publisher-print
 chapter/book handoff also remains in Part A, but paragraph PDFs are normal Part
 A human-review outputs.
@@ -38,9 +55,12 @@ A human-review outputs.
 
 ### 1.1 Required input
 
-1. **Blueprint paragraph spec** — target exercise, lesson goals, difficulty notes, difficulty rating
-2. **Exercise set** — `exercises.md` and `answers.md` from `econ-exercise-builder`
-3. **Preceding paragraphs** — to know what has been taught (for recall boxes, cross-references)
+1. **Part A textbook plan and Book foundation check** — exact current-action
+   verdict in `X.Y.Z-textbook-plan.md`; use the canonical Markdown outline for
+   semantics and its machine companion for hashes, target pins, and hold state
+2. **Blueprint paragraph spec** — target exercise, lesson goals, difficulty notes, difficulty rating
+3. **Exercise set** — `exercises.md` and `answers.md` from `econ-exercise-builder`
+4. **Preceding paragraphs** — to know what has been taught (for recall boxes, cross-references)
 
 For an official CvTE or CvTE-derived target exercise, also require the
 paragraph plan's `Exam-target route trace`. The textbook paragraph and answer
@@ -61,6 +81,7 @@ Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfacto
 | `X.Y.Z [Name] – antwoorden.md` | Answer model with step-by-step solutions |
 | `X.Y.Z [Name] – paragraaf.pdf` | PDF export of paragraaf.md with embedded images |
 | `X.Y.Z [Name] – opgaven.pdf` | PDF export of opgaven.md |
+| `X.Y.Z-textbook-plan.md` | Part A-owned backward-design plan and complete Book foundation check |
 | `X.Y.Z [Name] – antwoorden.pdf` | PDF export of antwoorden.md |
 | `_assets/*.svg` | All graphs and diagrams as SVG |
 | `_assets/*.png` | All graphs and diagrams as PNG (rasterised from SVG) |
@@ -452,6 +473,10 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 
 ### Before delivering a paragraph:
 
+**Foundation gate:** □ The Part A-owned Book foundation check evaluates the
+exact current action, pins every required authority/chapter/target input, and
+does not ignore a matching open blocking hold or a released hold without evidence.
+
 **Content checks:**
 1. □ Motivating problem comes before theory (problem-first)
 2. □ One concept only — no scope creep
@@ -460,7 +485,7 @@ For PDF export (image embedding, CSS styling, page breaks, weasyprint pipeline),
 5. □ Worked example follows theory directly, adds no untargeted operation, the compact summary follows it, and Startopgaven follows the summary
 6. □ Exact Book 2+ `##` heading order: Uitgewerkt voorbeeld → Startopgaven → Begeleide inoefening → Zelfstandige oefening → Doeloefening → Denkertje / Bonusopgave → Herhaling / Herhaling en interleaving
 7. □ Required alignment table covers every lesson goal and target operation
-8. □ Startopgaven has taught-prerequisite retrieval and a compact current-content check under one heading; it is not mastery/diagnosis/automatic routing
+8. □ Startopgaven has taught-prerequisite retrieval and a compact current-content check under one heading; it is not attainment/diagnosis/automatic routing
 9. □ Core route note is present and a whole-lesson equation totals motivation + instruction + worked example + transitions/recap + actual core-route questions at ≤55 minutes
 10. □ Always-authored and printed Begeleide inoefening keeps the same goal, gives stronger support, fades it deliberately, and uses neutral skip wording; only student use is optional
 11. □ Denkertje/bonus builds cognitive flexibility; closing review has 1–2 accessible cumulative/homework tasks and no new theory

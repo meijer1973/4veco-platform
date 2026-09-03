@@ -1,7 +1,23 @@
 # Paragraph Plan: X.Y.Z [Naam]
 
 > Copy this template into `<paragraph-folder>/_paragraph-plan.md` and fill in every section during **Phase 4a**.
-> This plan is the single source of truth for all builders working on this paragraph.
+> This is the Part B companion implementation plan. It consumes the approved
+> Part A `X.Y.Z-textbook-plan.md` and `X.Y.Z-textbook-handoff.md`; it does not
+> own or duplicate the Part A Book foundation decision.
+
+---
+
+## Part A foundation and handoff inputs
+
+| Required Part A input | Exact reference |
+|---|---|
+| Approved Part A textbook plan | `<paragraph-folder>/X.Y.Z-textbook-plan.md` |
+| Part A Book foundation verdict | [exact verdict and current action from the Part A plan] |
+| Textbook handoff | `<paragraph-folder>/X.Y.Z-textbook-handoff.md` |
+| Canonical outline reference | `references/authored/book-outlines/book-2-outline.md` |
+
+If Part B needs a changed foundation decision, return the issue to Part A. Do
+not edit the Part A plan or create a second semantic outline here.
 
 ---
 
