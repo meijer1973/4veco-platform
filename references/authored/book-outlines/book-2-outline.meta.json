@@ -110,13 +110,22 @@
       }
     },
     {
-      "id": "H-211-TARGET-INTEGRATION", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
+      "id": "H-211-TARGET-INTEGRATION", "status": "released", "severity": "blocking", "scope": ["paragraph:2.1.1"],
       "summary": "Paragraph and lesson production wait for the exact approved target record to be integrated and pinned.",
       "target_binding": { "blocked_baseline_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8", "approved_replacement_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34", "approval_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692", "approved_by": "meijer1973", "approved_on": "2026-09-03" },
       "blocks": ["paragraph_production", "lesson_authoring"],
       "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
-      "release_condition": "The exact approved target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+      "release_condition": "The exact approved target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-03",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692",
+        "subject_id": "2.1.1",
+        "subject_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
+        "integrated_commit": "30e0d5c2f71c64ee31ecadb614559d9431d392a5"
+      }
     },
     {
       "id": "H-212-STALE-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.2"],
