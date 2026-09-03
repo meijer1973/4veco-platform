@@ -1,13 +1,13 @@
 # Sprint BOOK-2-FOUNDATION-OUTLINE-1: Diff Summary
 
-Generated: 2026-09-02
+Generated: 2026-09-03
 
 ## Changed implementation surfaces
 
 - Added the prose and machine Book 2 outline under
   `references/authored/book-outlines/`.
 - Added the outline-currentness checker, approved-use mode, typed scopes,
-  resolution/use transitions, full lifecycle-projection parity, and 88-test suite.
+  resolution/use transitions, full lifecycle-projection parity, and 89-test suite.
 - Wired the checker into package commands and `platform-ci`.
 - Added the Book foundation check to both build entrypoints, the paragraph
   skill and lane, teacher reviewer, and dedicated Part A textbook-plan template.
@@ -23,6 +23,9 @@ Generated: 2026-09-02
 - Refreshed generated agent indexes, URL index, and internal dashboard.
 - Recorded the exact owner approval pin and released only `H-OUTLINE-OWNER`;
   the approved-use validator now passes while downstream holds remain active.
+- Recorded the separate exact-payload/governed-merge authorization and released
+  only `H-MERGE-GOVERNANCE`; the merge action validator now passes while the
+  other 13 content and lesson holds remain active.
 
 ## Protected surfaces
 
@@ -38,8 +41,9 @@ Generated: 2026-09-02
 The outline is owner-approved derived planning authority in
 `approved_with_holds` state at semantic hash
 `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`.
-Only `H-OUTLINE-OWNER` is released. This lifecycle transition does not approve
+Only `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released. This lifecycle
+transition does not approve
 paragraph goals or targets, promote preview to an assumable prerequisite,
 authorize Gate 0B-1 approval/production, repair or integrate target records,
-authorize lesson writes, or authorize merge. Separate exact-head CI and
-governed payload/merge authorization remain required.
+or authorize lesson writes. Merge authority is limited to exact-head validation
+and the governed merge-commit lane with no admin bypass.

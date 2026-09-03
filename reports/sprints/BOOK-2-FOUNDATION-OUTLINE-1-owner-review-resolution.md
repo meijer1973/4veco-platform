@@ -113,3 +113,29 @@ lesson production, authorize product/student use, or authorize merge.
 The transition must receive exact-head `validate-platform` success and a
 bounded closure check. A separate governed payload/merge authorization is then
 required before integration.
+
+## Binding payload and governed-merge authorization
+
+Recorded: 2026-09-03
+PR: #226
+Reviewed payload head: `b7f74aeded196669a215b920c16d671b6b919164`
+Reviewed base: `15bb80496916e3c07f5c957226b857cc689d9f43`
+Decision: `APPROVE_FOR_INTEGRATION`
+Authorization reference: https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557
+Authorization comment ID: `5521351557`
+Decided by: `meijer1973`
+
+The owner authorizes the exact reviewed PR payload and one bounded descendant
+limited to release of `H-MERGE-GOVERNANCE` plus the required authorization,
+integration-readiness, roadmap, ledger, dashboard, and generated-index
+evidence. The transition preserves semantic outline SHA-256
+`69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`,
+the target registry, and lesson repository snapshot
+`f09fd6e88edc5049b026b16b0158e7e188091d2d`.
+
+`H-MERGE-GOVERNANCE` is released through `merge_owner_decision`. The other 13
+content and lesson holds remain open. Goal approval, target approval or
+integration, paragraph production, lesson authoring, Issue #223 work, and PR
+#224 work are not authorized. The resulting exact transition head may be
+integrated only after exact-head `validate-platform` and the governed dry run
+pass, using a merge commit with no admin bypass and green post-merge CI.

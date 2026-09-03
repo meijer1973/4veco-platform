@@ -1,18 +1,18 @@
 # Textbook Production Roadmap
 
-Generated: 2026-09-02
+Generated: 2026-09-03
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.16-book2-outline-approved-with-holds`
+Roadmap version: `v1.17-book2-outline-payload-authorized`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. The human owner approved the exact `BOOK-2-FOUNDATION-OUTLINE-1` evidence-closure head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde` with named downstream holds active. Accepted CI run `33657251475` covers that approved head; the focused suite is 88/88 and the accepted local platform suite is 1,741 tests. The lifecycle transition releases only `H-OUTLINE-OWNER` and still requires exact-head CI, bounded closure, and separate governed payload/merge authorization. Historical Chapter 2.1/2.2 evidence remains read-only input; no goal/target approval, target-registry mutation, lesson write, production, or merge is authorized here. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. The human owner approved the exact `BOOK-2-FOUNDATION-OUTLINE-1` evidence-closure head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`, then separately authorized PR #226 payload head `b7f74aeded196669a215b920c16d671b6b919164` and one bounded governed-merge transition at comment `5521351557`. Accepted CI run `33674533779` covers that payload head; the focused suite is 89/89 and the current local platform suite is 1,742 tests. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; exact-head CI and governed integration validation remain before a merge commit. Historical Chapter 2.1/2.2 evidence remains read-only input; no goal/target approval, target-registry mutation, lesson write, or production is authorized here. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
 
 ## Operating Goal
 
-Establish an owner-approved Book 2 planning foundation before resuming governed paragraph work. The task audited v6/v5/registry/boundary coherence, created the 12-paragraph derived outline and currentness guardrail, and passed the human owner gate with downstream holds. Approved outline use is permitted; §2.1.1 Gate 0B-1 approval/production, lesson work, target repairs/integration, generated output, and merge remain blocked by separate holds.
+Establish an owner-approved Book 2 planning foundation before resuming governed paragraph work. The task audited v6/v5/registry/boundary coherence, created the 12-paragraph derived outline and currentness guardrail, and passed the human owner and payload-authorization gates with downstream holds. Approved outline use and governed merge are permitted; §2.1.1 Gate 0B-1 approval/production, lesson work, target repairs/integration, and generated output remain blocked by separate holds.
 
 ## Book 2 Print Series
 
@@ -54,7 +54,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Owner decision `APPROVE BOOK 2 OUTLINE WITH HOLDS` binds PR #226 head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`; accepted CI run `33657251475` covers that head. The lifecycle transition releases only `H-OUTLINE-OWNER`, and approved outline use passes locally. Exact-head CI and bounded closure for the new transition head remain before separate payload/merge authorization. All downstream holds remain active. |
+| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Owner outline approval binds head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. Separate payload/governed-merge authorization binds head `b7f74aeded196669a215b920c16d671b6b919164` at comment `5521351557`; CI run `33674533779` covers that head. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released, while 13 content and lesson holds remain active. Exact-head CI and governed integration validation remain for the bounded transition head. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building consolidation-only mixed elasticity practice with source-heavy transfer, answer guidance, rendered proof, validators, and explicit mixed-target acceptance. |

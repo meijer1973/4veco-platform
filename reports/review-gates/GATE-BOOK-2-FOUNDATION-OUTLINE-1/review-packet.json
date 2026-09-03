@@ -3,21 +3,21 @@
   "packet_id": "GATE-BOOK-2-FOUNDATION-OUTLINE-1",
   "gate_id": "GATE-BOOK-2-FOUNDATION-OUTLINE-1",
   "sprint_id": "BOOK-2-FOUNDATION-OUTLINE-1",
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "pr_number": 226,
   "pr_url": "https://github.com/meijer1973/4veco-platform/pull/226",
   "reviewed_payload_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
   "pre_refresh_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
   "owner_approved_head_sha": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
   "owner_approval_decision_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629",
-  "live_terminal_binding": "The PR description is refreshed after the approval-transition commit and exact-head CI because an in-commit packet cannot contain its own commit SHA.",
+  "live_terminal_binding": "The PR description and exact-head payload-authorization continuation are refreshed after the merge-governance transition and exact-head CI because an in-commit packet cannot contain its own commit SHA.",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "high_authority",
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "Structural/governance rereview accepted the substantive repair with PASS WITH FLAGS and confirmed that all three bypasses are closed. Evidence-only closure then passed at exact head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7. The human owner approved that exact head and semantic hash as Book-level derived planning authority with all named downstream holds active. Only exact-head CI for this lifecycle transition and a separate governed payload/merge authorization remain mandatory."
+    "rationale": "Structural/governance rereview accepted the substantive repair and evidence closure. The human owner approved the Book-level outline at exact head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7, then separately authorized PR #226 payload at exact head b7f74aeded196669a215b920c16d671b6b919164 and one bounded merge-governance transition. H-MERGE-GOVERNANCE is now released; exact-head CI and governed integration validation remain mandatory."
   },
   "human_decision_required": true,
   "paired_prs": [],
@@ -28,9 +28,9 @@
     "owner_approval_required",
     "future_gate_0b1_dependency"
   ],
-  "status": "owner_approved_with_holds_lifecycle_transition_exact_head_ci_pending",
-  "route": "READY_FOR_EXACT_HEAD_CI",
-  "requested_decision": "After the approval-transition terminal head has exact-head validate-platform success and a bounded transition-closure check, provide a separate governed payload/merge authorization or request a revision. Do not infer merge authorization from outline approval.",
+  "status": "payload_authorized_merge_governance_released_exact_head_ci_pending",
+  "route": "READY_FOR_EXACT_HEAD_CI_AND_GOVERNED_INTEGRATION",
+  "requested_decision": "The owner payload-and-merge decision is recorded. Obtain exact-head validate-platform success for the bounded merge-governance transition, then use the governed integration lane with a merge commit and no admin bypass.",
   "changed_paths": [
     ".github/workflows/platform-ci.yml",
     "AGENT_GITHUB_ENTRY.md",
@@ -84,8 +84,10 @@
     { "requirement": "Lesson, target registry, blueprints, and protected sources unchanged", "status": "met" },
     { "requirement": "Accepted validate-platform CI on evidence-closure head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7", "status": "met_run_33657251475" },
     { "requirement": "Human owner approval bound to head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7 and semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde", "status": "met_decision_ref_issuecomment-5515033629" },
-    { "requirement": "Approved-use lifecycle transition with only H-OUTLINE-OWNER released", "status": "met_local" },
-    { "requirement": "Exact-head validate-platform CI on the approval-transition terminal head", "status": "pending_terminal_transition_tail" }
+    { "requirement": "Approved-use lifecycle transition with H-OUTLINE-OWNER released", "status": "met_run_33674533779" },
+    { "requirement": "Separate owner payload authorization bound to exact head b7f74aeded196669a215b920c16d671b6b919164", "status": "met_issuecomment-5521351557" },
+    { "requirement": "H-MERGE-GOVERNANCE release with 13 other content and lesson holds retained", "status": "met_local" },
+    { "requirement": "Exact-head validate-platform CI on the merge-governance transition terminal head", "status": "pending_terminal_transition_tail" }
   ],
   "carried_holds": [
     "H-211-GATE0B1",
@@ -100,14 +102,13 @@
     "H-233-V5-REF",
     "H-234-PLACEHOLDER",
     "H-BOOK2-ROOT-PLAN",
-    "H-CHAPTER-23-PLAN",
-    "H-MERGE-GOVERNANCE"
+    "H-CHAPTER-23-PLAN"
   ],
   "review_disclosure": "Teacher, economics, sequencing, and lead reviews were role-based checks in one Codex execution and were not independent reviewers. Independent human owner approval is recorded separately against the exact evidence-closure head and semantic hash.",
   "authority_claims": {
     "outline_review_ready_with_holds": false,
     "outline_approved": true,
-    "merge_authorized": false,
+    "merge_authorized": true,
     "auto_merge_authorized": false,
     "gate_0b1_authorized": false,
     "gate_0b1_design_authorized": true,
@@ -144,6 +145,18 @@
       "decided_by": "meijer1973",
       "released_hold": "H-OUTLINE-OWNER"
     },
+    "payload_merge_authorization": {
+      "decision": "APPROVE_FOR_INTEGRATION",
+      "reviewed_payload_head_sha": "b7f74aeded196669a215b920c16d671b6b919164",
+      "base_sha_at_review": "15bb80496916e3c07f5c957226b857cc689d9f43",
+      "authorization_comment_id": 5521351557,
+      "authorization_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557",
+      "authorized_by": "meijer1973",
+      "authorized_on": "2026-09-03",
+      "released_hold": "H-MERGE-GOVERNANCE",
+      "merge_method": "merge_commit",
+      "admin_bypass": false
+    },
     "lead_review": {
       "path": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-lead-review-round3.md",
       "result": "PASS WITH FLAGS",
@@ -158,18 +171,19 @@
       { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --require-approved", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --action approved_outline_use", "status": "passed" },
+      { "command": "npm.cmd run check:book-outline-currentness -- --action merge", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --action outline_owner_decision", "status": "passed" },
       { "command": "npm.cmd run check:book-outline-currentness -- --action paragraph_production --paragraph 2.1.1", "status": "expected_failed_on_H-211-GATE0B1_and_H-211-TARGET-INTEGRATION" },
-      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 88 },
-      { "command": "npm.cmd run check:platform", "status": "passed", "tests_passed": 1741 }
+      { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 89 },
+      { "command": "npm.cmd run check:platform", "status": "passed", "tests_passed": 1742 }
     ],
     "ci": {
       "required_contexts": ["validate-platform"],
-      "status": "success_on_owner_approved_evidence_closure_head_new_terminal_required_after_lifecycle_transition",
-      "reviewed_commit_sha": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
-      "accepted_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33657251475",
-      "accepted_run_id": 33657251475,
+      "status": "success_on_payload_authorized_source_head_new_terminal_required_after_merge_governance_transition",
+      "reviewed_commit_sha": "b7f74aeded196669a215b920c16d671b6b919164",
+      "accepted_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33674533779",
+      "accepted_run_id": 33674533779,
       "first_failed_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33491960708",
       "first_failure_disposition": "LF/CRLF hash portability corrected in the earlier reviewed payload",
       "previous_successful_run": "https://github.com/meijer1973/4veco-platform/actions/runs/33502250217",

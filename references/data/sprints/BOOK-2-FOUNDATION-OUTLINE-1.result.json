@@ -5,9 +5,9 @@
   "status": "completed",
   "completed": "2026-09-01",
   "completed_on": "2026-09-01",
-  "verdict": "PASS_OWNER_APPROVED_WITH_HOLDS_LIFECYCLE_TRANSITION",
-  "result_status": "owner_approved_with_holds_lifecycle_transition_exact_head_ci_pending",
-  "evidence_refreshed_on": "2026-09-02",
+  "verdict": "PASS_PAYLOAD_AUTHORIZED_GOVERNED_MERGE_TRANSITION",
+  "result_status": "payload_authorized_merge_governance_released_exact_head_ci_pending",
+  "evidence_refreshed_on": "2026-09-03",
   "plan": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-plan.md",
   "baseline": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-baseline.md",
   "result": "reports/sprints/BOOK-2-FOUNDATION-OUTLINE-1-result.md",
@@ -45,7 +45,20 @@
     "decided_by": "meijer1973",
     "released_hold": "H-OUTLINE-OWNER"
   },
-  "merge_authorized": false,
+  "payload_merge_authorization": {
+    "decision": "APPROVE_FOR_INTEGRATION",
+    "reviewed_payload_head_sha": "b7f74aeded196669a215b920c16d671b6b919164",
+    "base_sha_at_review": "15bb80496916e3c07f5c957226b857cc689d9f43",
+    "authorization_comment_id": 5521351557,
+    "authorization_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557",
+    "authorized_on": "2026-09-03",
+    "authorized_by": "meijer1973",
+    "released_hold": "H-MERGE-GOVERNANCE",
+    "merge_method": "merge_commit",
+    "admin_bypass": false,
+    "bounded_transition_terminal_head": "bound_in_live_pr_after_push_and_exact_head_ci"
+  },
+  "merge_authorized": true,
   "gate_0b1_authorized": false,
   "gate_0b1_design_authorized": true,
   "gate_0b1_approval_or_production_authorized": false,
@@ -74,7 +87,7 @@
         "id": "B2-LEAD-R1-GUARDRAIL",
         "description": "Initial checker syntax and test-fixture defects were repaired and all required mutations now pass.",
         "classification": "core_requirement_met",
-        "evidence": "npm.cmd run test:book-outline-currentness reports 88/88 passing tests, including complete transition, typed-scope, lifecycle-projection, and entrypoint mutations.",
+        "evidence": "npm.cmd run test:book-outline-currentness reports 89/89 passing tests, including owner, merge, target, typed-scope, lifecycle-projection, and entrypoint transitions and mutations.",
         "blocks": "Nothing after correction.",
         "does_not_block": "Human review routing.",
         "proof_required_to_close": "Closed by the focused mutation suite and full platform suite."
@@ -127,7 +140,7 @@
     "reviewed_substantive_head_sha": "72b87403ea7866aaee877e9945a2021cc2559552",
     "reviewed_terminal_head_sha": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
     "semantic_outline_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
-    "disposition": "All three substantive bypasses are closed. Evidence-only closure and explicit owner approval are complete. Exact-head CI and bounded closure for the lifecycle transition remain before separate payload/merge authorization.",
+    "disposition": "All substantive bypasses and evidence-only closure are complete. Owner outline approval and the separate exact-payload/governed-merge authorization are recorded. Exact-head CI and governed integration validation remain for the bounded merge transition.",
     "substantive_re_review_required": false
   },
   "acceptance_tests": [
@@ -137,17 +150,18 @@
     { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --require-approved", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action approved_outline_use", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness -- --action merge", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action outline_owner_decision", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3", "status": "failed" },
-    { "command": "npm.cmd run test:book-outline-currentness", "status": "passed" },
+    { "command": "npm.cmd run test:book-outline-currentness", "status": "passed", "tests": 89 },
     { "command": "npm.cmd run check:blueprint-pedagogical-boundaries", "status": "passed" },
     { "command": "npm.cmd run check:part-a-exercise-authoring-contract", "status": "passed" },
     { "command": "npx.cmd jest build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js build-scripts/workflows/check-paragraph-workflow-wording.test.js --runInBand", "status": "passed" },
     { "command": "npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD", "status": "passed" },
     { "command": "npm.cmd run check:paragraph-workflow-wording", "status": "passed" },
     { "command": "npm.cmd run check:scope-language", "status": "passed" },
-    { "command": "npm.cmd run check:platform", "status": "passed" },
+    { "command": "npm.cmd run check:platform", "status": "passed", "tests_passed": 1742 },
     { "command": "node build-scripts/references/check-roadmap-version-index.js", "status": "passed" },
     { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" },
     { "command": "npm.cmd run agent:index", "status": "passed" },
@@ -163,16 +177,16 @@
   ],
   "remote_ci": {
     "required_context": "validate-platform",
-    "status": "success_on_owner_approved_evidence_closure_head_new_terminal_required_after_lifecycle_transition",
-    "accepted_run_id": 33657251475,
-    "accepted_head": "2166cd074e1cb8d24f7908e9f792a996dbfd48e7",
+    "status": "success_on_payload_authorized_source_head_new_terminal_required_after_merge_governance_transition",
+    "accepted_run_id": 33674533779,
+    "accepted_head": "b7f74aeded196669a215b920c16d671b6b919164",
     "previous_successful_run_id": 33502250217,
     "previous_successful_head": "32f861b0734566c548c0f4cb0bb9c6deeba4fd01",
     "first_run_id": 33491960708,
     "first_run_conclusion": "failure_corrected_by_1ab4f1f20a86ae2ecc2423ad4c3c6d49044c382a"
   },
   "authorized_next": [
-    "Commit and push the owner-approval lifecycle transition, regenerate the usual generated and index-only tails, and obtain successful exact-head validate-platform CI.",
-    "Complete a bounded transition-closure check, then request separate governed payload/merge authorization for draft PR #226; do not merge without it."
+    "Commit and push the bounded H-MERGE-GOVERNANCE release, regenerate the required dashboard and index tails, and obtain successful exact-head validate-platform CI.",
+    "Bind the resulting exact transition head to the existing bounded owner authorization, mark PR #226 ready, run the governed dry run, then integrate with a merge commit and require green post-merge CI."
   ]
 }

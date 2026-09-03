@@ -347,16 +347,41 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('outline owner decision is allowed, owner evidence releases approved use, and merge remains separately governed', () => {
-    expect(findBookOutlineFailures(cloneFiles(), { action: 'outline_owner_decision' })).toEqual([]);
+    const preMergeAuthorizationFiles = cloneFiles();
+    const preMergeAuthorizationMeta = JSON.parse(asText(preMergeAuthorizationFiles[META_PATH]));
+    const mergeHold = preMergeAuthorizationMeta.holds.find((item) => item.id === 'H-MERGE-GOVERNANCE');
+    mergeHold.status = 'open';
+    mergeHold.summary = 'Outline approval does not itself authorize merge.';
+    mergeHold.release_evidence = null;
+    replaceProjectionRow(preMergeAuthorizationFiles, mergeHold);
+    writeMeta(preMergeAuthorizationFiles, preMergeAuthorizationMeta);
 
-    const preApprovalHash = sha256SemanticAuthority(cloneFiles()[OUTLINE_PATH]);
-    const approvedFiles = approveOutlineInFiles(cloneFiles());
+    expect(findBookOutlineFailures(preMergeAuthorizationFiles, { action: 'outline_owner_decision' })).toEqual([]);
+
+    const preApprovalHash = sha256SemanticAuthority(preMergeAuthorizationFiles[OUTLINE_PATH]);
+    const approvedFiles = approveOutlineInFiles(preMergeAuthorizationFiles);
     expect(sha256SemanticAuthority(approvedFiles[OUTLINE_PATH])).toBe(preApprovalHash);
     expect(findBookOutlineFailures(approvedFiles, { requireApproved: true })).toEqual([]);
     expect(findBookOutlineFailures(approvedFiles, { action: 'approved_outline_use' })).toEqual([]);
 
     const meta = JSON.parse(asText(approvedFiles[META_PATH]));
     expect(blockingHoldsForAction(meta, { action: 'merge' }).map((hold) => hold.id)).toContain('H-MERGE-GOVERNANCE');
+  });
+
+  test('the exact payload authorization releases only merge governance and permits governed merge', () => {
+    const meta = JSON.parse(asText(cloneFiles()[META_PATH]));
+    const mergeHold = meta.holds.find((item) => item.id === 'H-MERGE-GOVERNANCE');
+    const otherOpenHolds = meta.holds.filter((item) => item.id !== 'H-MERGE-GOVERNANCE' && item.status === 'open');
+
+    expect(mergeHold.status).toBe('released');
+    expect(mergeHold.release_evidence).toEqual({
+      resolved_via: 'merge_owner_decision',
+      released_by: 'meijer1973',
+      released_on: '2026-09-03',
+      evidence_ref: 'https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557',
+    });
+    expect(otherOpenHolds).toHaveLength(13);
+    expect(findBookOutlineFailures(cloneFiles(), { requireApproved: true, action: 'merge' })).toEqual([]);
   });
 
   test.each([

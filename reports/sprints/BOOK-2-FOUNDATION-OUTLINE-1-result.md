@@ -1,6 +1,6 @@
 # Sprint BOOK-2-FOUNDATION-OUTLINE-1: Result
 
-Generated: 2026-09-02
+Generated: 2026-09-03
 
 ## Plan reference
 
@@ -44,6 +44,14 @@ https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5515033629.
 This lifecycle-only transition records the governed approval pin and releases
 only `H-OUTLINE-OWNER`; all named downstream holds remain active.
 
+The owner then separately authorized PR #226 payload head
+`b7f74aeded196669a215b920c16d671b6b919164` and one bounded
+merge-governance transition at
+https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557.
+That decision releases only `H-MERGE-GOVERNANCE` in addition to the already
+released outline-owner hold. The other 13 content and lesson holds remain open;
+the semantic outline hash, target registry, and lesson snapshot stay unchanged.
+
 The payload adds:
 
 - a canonical prose semantic outline plus a compact identity/freshness/target/
@@ -55,7 +63,7 @@ The payload adds:
 - explicit five-way prerequisite classifications, non-goals, prepares-for,
   model conditions/relevant range, and target-dependent retrieval;
 - a reusable structural/action/approved-use checker, CI wiring, and 88 focused
-  mutation/contract tests;
+  mutation/contract tests, now 89/89 after the merge-transition fixture;
 - renewed teacher, economics, curriculum-sequencing, and round-3 lead review evidence;
 - a Level-4 human-review packet for draft PR #226.
 
@@ -68,13 +76,13 @@ Local substantive implementation has `PASS` from the three renewed specialist
 lenses and `PASS WITH FLAGS` from renewed lead review. The later
 structural/governance rereview is also `PASS WITH FLAGS` and closes the
 substantive bypass findings. Evidence closure and the human owner gate are now
-complete. The remaining flags are exact-head CI and bounded closure for this
-approval-transition head, named downstream holds, separate payload/merge
-authorization, and the non-independent review disclosure—not a blocking
-substantive finding. The outline is `approved_with_holds`; approved outline use
-and §2.1.1 design and specialist review are permitted, while goal/target
-approval, target repair and integration, production, lesson authoring, and
-merge remain blocked by their applicable holds.
+complete. Separate payload/merge authorization is also complete. The remaining
+flags are exact-head CI and governed integration validation for the bounded
+merge-transition head, named downstream holds, and the non-independent review
+disclosure—not a blocking substantive finding. The outline is
+`approved_with_holds`; approved outline use and governed merge are permitted,
+while goal/target approval, target repair and integration, production, and
+lesson authoring remain blocked by their applicable holds.
 
 ## Acceptance test results
 
@@ -85,20 +93,22 @@ Passing command-log evidence includes:
 - `npm.cmd run check:book-outline-currentness`
 - `npm.cmd run check:book-outline-currentness -- --require-approved` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action approved_outline_use` — PASS
+- `npm.cmd run check:book-outline-currentness -- --action merge` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action outline_owner_decision` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1` — PASS
 - `npm.cmd run check:book-outline-currentness -- --action paragraph_production --paragraph 2.1.1` — expected FAIL on the two matching open holds
 - `npm.cmd run check:book-outline-currentness -- --action chapter_production --chapter 2.3` — expected FAIL on the matching downstream Chapter 2.3 holds
-- `npm.cmd run test:book-outline-currentness` — 88/88 tests
+- `npm.cmd run test:book-outline-currentness` — 89/89 tests
 - `npm.cmd run check:blueprint-pedagogical-boundaries`
 - `npm.cmd run check:part-a-exercise-authoring-contract`
 - `npx.cmd jest build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js build-scripts/workflows/check-paragraph-workflow-wording.test.js --runInBand`
 - `npm.cmd run check:paragraph-lane-scope -- --lane shared --base origin/main --head HEAD`
 - `npm.cmd run check:paragraph-workflow-wording`
 - `npm.cmd run check:scope-language`
-- `npm.cmd run check:platform` — 1,741 tests passed
-- accepted `validate-platform` run `33657251475` on owner-approved
-  evidence-closure head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7`
+- `npm.cmd run check:platform` — 1,742 tests passed
+- accepted `validate-platform` run `33674533779` on payload-authorized source
+  head `b7f74aeded196669a215b920c16d671b6b919164`; the bounded transition
+  requires a new exact-head run
 - roadmap, report-JSON, agent-index, URL-index, dashboard, finalization,
   evidence-line-ending, sprint-result, command-log, lead-review, review-packet,
   and complete-bundle checks
@@ -163,12 +173,12 @@ head and semantic hash.
 
 ## Open follow-ups
 
-- Commit the owner-approval lifecycle transition, regenerate the usual
-  generated and index-only tails, obtain successful `validate-platform` CI on
-  the exact terminal PR #226 head, and complete the bounded transition-closure
-  check.
-- Then request separate governed payload/merge authorization; do not merge
-  from outline approval alone.
+- Commit the bounded merge-governance transition, regenerate the required
+  dashboard and index-only tails, and obtain successful `validate-platform` CI
+  on the exact terminal PR #226 head.
+- Bind that exact transition head to the existing bounded authorization, mark
+  PR #226 ready, complete the governed dry run, then merge through the governed
+  lane using a merge commit and require green post-merge CI.
 - §2.1.1 goal/target design and specialist review may proceed provisionally,
   but approval/authority/production remain held until the exact release
   conditions are evidenced.

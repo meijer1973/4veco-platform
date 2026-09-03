@@ -11,7 +11,7 @@
     "rule": "canonical_human_semantics_live_only_in_markdown",
     "hash_scope": "canonical_utf8_lf_excluding_validated_lifecycle_fields"
   },
-  "generated_on": "2026-09-02",
+  "generated_on": "2026-09-03",
   "approval_context": {
     "pr_number": 226
   },
@@ -34,7 +34,7 @@
     "lead_review": "round3_pass_with_flags_role_based_not_independent",
     "structural_governance_review": "pass_with_flags_all_substantive_bypasses_closed_evidence_only_closure_required",
     "structural_governance_reviewed_head": "25312dfccee01b5c9bdd764a8a3c9e35ea6a11ed",
-    "accepted_ci_run": 33554042557
+    "accepted_ci_run": 33674533779
   },
   "hash_contract": {
     "semantic_authority_hash": "sha256(canonical UTF-8 LF text with the separately validated lifecycle status line, owner-approval line, and hold projection replaced by stable markers)",
@@ -195,11 +195,17 @@
       "release_condition": "A lesson-authorized task creates and reviews the Chapter 2.3 plan and records exact evidence.", "release_evidence": null
     },
     {
-      "id": "H-MERGE-GOVERNANCE", "status": "open", "severity": "blocking", "scope": ["book:2"],
-      "summary": "Outline approval does not itself authorize merge.",
+      "id": "H-MERGE-GOVERNANCE", "status": "released", "severity": "blocking", "scope": ["book:2"],
+      "summary": "The owner authorized the exact PR payload and its bounded governed merge transition.",
       "blocks": ["merge"], "permits": ["merge_owner_decision"],
       "resolution_actions": ["merge_owner_decision"],
-      "release_condition": "After applicable holds are released and exact-head CI passes, owner payload authorization and serialized integration evidence are recorded.", "release_evidence": null
+      "release_condition": "After applicable holds are released and exact-head CI passes, owner payload authorization and serialized integration evidence are recorded.",
+      "release_evidence": {
+        "resolved_via": "merge_owner_decision",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-03",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557"
+      }
     }
   ],
   "workflow_surfaces": [
