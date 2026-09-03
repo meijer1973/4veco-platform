@@ -92,6 +92,8 @@ decision. Actual rollout/adoption and student/product authority remain held.
 - `docs/inspection-standards/nl-vo-evidence-model.md`
 - `docs/roadmaps/roadmap-version-index.json`
 - `references/authored/README.md`
+- `references/authored/book-outlines/book-2-outline.md`
+- `references/authored/book-outlines/book-2-outline.meta.json`
 - `references/owned/README.md`
 - `references/external/README.md`
 - `references/external/exams/README.md`
@@ -173,6 +175,9 @@ URL index (single fetch unlocks the rest of the surface):
   "owned_course_blueprint_meta": "references/owned/course-blueprint-v5.meta.json",
   "draft_three_year_course_blueprint": "references/owned/course-blueprint-v6-three-year.md",
   "draft_three_year_course_blueprint_meta": "references/owned/course-blueprint-v6-three-year.meta.json",
+  "book_2_outline": "references/authored/book-outlines/book-2-outline.md",
+  "book_2_outline_metadata": "references/authored/book-outlines/book-2-outline.meta.json",
+  "book_outline_currentness_checker": "build-scripts/workflows/check-book-outline-currentness.js",
   "target_exercise_index": "references/authored/course-target-exercises.json",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
@@ -197,6 +202,9 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.meta.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v6-three-year.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v6-three-year.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/book-outlines/book-2-outline.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/book-outlines/book-2-outline.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-book-outline-currentness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
