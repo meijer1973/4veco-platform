@@ -44,7 +44,7 @@
   "authority_sources": [
     { "path": "references/owned/course-blueprint-v6-three-year.md", "sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e", "source_kind": "active_three_year_umbrella" },
     { "path": "references/owned/course-blueprint-v5.md", "sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7", "source_kind": "active_year_1_detail" },
-    { "path": "references/authored/course-target-exercises.json", "sha256": "33928e7929fa1c9af86159b07769e2f01d28963873ef34c40e55c2001feb87ac", "source_kind": "active_paragraph_target_registry" },
+    { "path": "references/authored/course-target-exercises.json", "sha256": "31391cb0fae8d7ec50a54171a678a9e59f0211e35d6f84c76cde517c8e6792b8", "source_kind": "active_paragraph_target_registry" },
     { "path": "references/owned/course-blueprint-pedagogical-boundaries.md", "sha256": "47a9d1ee203efe4b94eb360e696f071ae66bfda1192b389b59e22b9d64e8f5a7", "source_kind": "prior_teaching_boundary" },
     { "path": "skills/econ-exercise-builder.md", "sha256": "27b8a1a09f3b87b57ce9608ccadfb0a5f32c47e62ae3436970aee58fc0464d5a", "source_kind": "part_a_exercise_contract" }
   ],
@@ -60,7 +60,7 @@
     "verification_scope": "audit provenance only; platform CI does not mutate or approve lesson evidence"
   },
   "target_registry_pins": [
-    { "id": "2.1.1", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8" },
+    { "id": "2.1.1", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34" },
     { "id": "2.1.2", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "51de36d4b150bcabb51b8391aff15bf5b68610f140b80d12ca3f021e663ae4b5" },
     { "id": "2.1.3", "kind": "theory", "target_status": "reviewed_final", "target_record_sha256": "e06c097e50cb44ea41357125f224a60124c5a4d17f7eaeafae769f15bfe683fd" },
     { "id": "2.1.4", "kind": "gemengde_opgaven", "target_status": "reviewed_final", "target_record_sha256": "7a4a01e133dcdf828f4f9d7b06209d1c51ca29ff98d83876dc026f8ba973ac24" },
@@ -110,13 +110,22 @@
       }
     },
     {
-      "id": "H-211-TARGET-INTEGRATION", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
+      "id": "H-211-TARGET-INTEGRATION", "status": "released", "severity": "blocking", "scope": ["paragraph:2.1.1"],
       "summary": "Paragraph and lesson production wait for the exact approved target record to be integrated and pinned.",
       "target_binding": { "blocked_baseline_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8", "approved_replacement_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34", "approval_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692", "approved_by": "meijer1973", "approved_on": "2026-09-03" },
       "blocks": ["paragraph_production", "lesson_authoring"],
       "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
-      "release_condition": "The exact approved target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.", "release_evidence": null
+      "release_condition": "The exact approved target record is current in the registry, its compact pin is refreshed, post-integration checks pass, and the integration commit is recorded.",
+      "release_evidence": {
+        "resolved_via": "target_authority_integration",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-03",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692",
+        "subject_id": "2.1.1",
+        "subject_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
+        "integrated_commit": "30e0d5c2f71c64ee31ecadb614559d9431d392a5"
+      }
     },
     {
       "id": "H-212-STALE-REF", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.2"],

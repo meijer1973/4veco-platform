@@ -24,6 +24,7 @@ const {
 
 const root = path.resolve(__dirname, '..', '..');
 let integrationGitRoot;
+let integrationBaselineCommit;
 
 function git(args) {
   return execFileSync('git', args, { cwd: integrationGitRoot, encoding: 'utf8' }).trim();
@@ -43,7 +44,10 @@ beforeAll(() => {
   git(['init']);
   git(['config', 'user.email', 'checker@example.test']);
   git(['config', 'user.name', 'Book outline checker']);
-  commitRegistrySnapshot(readFiles(root)[TARGET_REGISTRY_PATH], 'baseline target registry fixture');
+  integrationBaselineCommit = commitRegistrySnapshot(
+    readFiles(root)[TARGET_REGISTRY_PATH],
+    'baseline target registry fixture',
+  );
 });
 
 afterAll(() => {
@@ -135,7 +139,6 @@ function releaseHoldInFiles(files, holdId) {
 function pendingGate0B1InFiles(files) {
   const meta = JSON.parse(asText(files[META_PATH]));
   const goalHold = meta.holds.find((item) => item.id === 'H-211-GATE0B1');
-  const targetHold = meta.holds.find((item) => item.id === 'H-211-TARGET-INTEGRATION');
 
   goalHold.status = 'open';
   goalHold.summary = 'Gate 0B-1 goal design may proceed, but approved goal use waits for the paragraph goal-owner decision.';
@@ -147,13 +150,7 @@ function pendingGate0B1InFiles(files) {
   };
   goalHold.release_evidence = null;
 
-  targetHold.target_binding.approved_replacement_sha256 = null;
-  targetHold.target_binding.approval_ref = null;
-  targetHold.target_binding.approved_by = null;
-  targetHold.target_binding.approved_on = null;
-
   replaceProjectionRow(files, goalHold);
-  replaceProjectionRow(files, targetHold);
   writeMeta(files, meta);
   return files;
 }
@@ -191,6 +188,16 @@ function integrateTargetHoldInFiles(files, holdId, paragraph) {
   files[TARGET_REGISTRY_PATH] = `${JSON.stringify(registry, null, 2)}\n`;
 
   const meta = JSON.parse(asText(files[META_PATH]));
+  const integrated211 = meta.holds.find((item) => item.id === 'H-211-TARGET-INTEGRATION');
+  if (
+    holdId !== 'H-211-TARGET-INTEGRATION' &&
+    integrated211.status === 'released' &&
+    integrated211.release_evidence &&
+    integrated211.release_evidence.resolved_via === 'target_authority_integration'
+  ) {
+    integrated211.release_evidence.integrated_commit = integrationBaselineCommit;
+    replaceProjectionRow(files, integrated211);
+  }
   const authority = meta.authority_sources.find((item) => item.path === TARGET_REGISTRY_PATH);
   authority.sha256 = sha256CanonicalText(files[TARGET_REGISTRY_PATH]);
   const pin = meta.target_registry_pins.find((item) => item.id === paragraph);
@@ -368,7 +375,7 @@ describe('Book 2 outline currentness contract', () => {
     expectFailure(mutate(OUTLINE_PATH, '| 2.1.1 |', '| 2.1.X |'), 'canonical foundation dimensions row 2.1.1 is missing');
   });
 
-  test('permits Gate 0B-1 goal design while approval and production holds remain open', () => {
+  test('permits historical Gate 0B-1 goal design while the goal hold remains open', () => {
     const files = pendingGate0B1InFiles(cloneFiles());
     expect(findBookOutlineFailures(files, { action: 'goal_design', paragraph: '2.1.1' })).toEqual([]);
   });
@@ -407,8 +414,9 @@ describe('Book 2 outline currentness contract', () => {
       released_on: '2026-09-03',
       evidence_ref: 'https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557',
     });
-    expect(otherOpenHolds).toHaveLength(12);
+    expect(otherOpenHolds).toHaveLength(11);
     expect(meta.holds.find((item) => item.id === 'H-211-GATE0B1').status).toBe('released');
+    expect(meta.holds.find((item) => item.id === 'H-211-TARGET-INTEGRATION').status).toBe('released');
     expect(findBookOutlineFailures(cloneFiles(), { requireApproved: true, action: 'merge' })).toEqual([]);
   });
 
@@ -441,14 +449,12 @@ describe('Book 2 outline currentness contract', () => {
     expectFailure(files, 'approved_outline_sha256 must match semantic_authority.sha256', { requireApproved: true });
   });
 
-  test('§2.1.1 goal approval and target integration are separate production milestones', () => {
+  test('§2.1.1 goal approval remains a separate production milestone from completed target integration', () => {
     const files = pendingGate0B1InFiles(approveOutlineInFiles(cloneFiles()));
     expect(findBookOutlineFailures(files, { action: 'goal_owner_decision', paragraph: '2.1.1' })).toEqual([]);
     expect(findBookOutlineFailures(files, { action: 'target_authority_repair', paragraph: '2.1.1' })).toEqual([]);
-    expectFailure(files, 'action target_authority_integration requires an exact approved replacement binding for H-211-TARGET-INTEGRATION', { action: 'target_authority_integration', paragraph: '2.1.1' });
-    approveTargetReplacementInFiles(files, 'H-211-TARGET-INTEGRATION', '2.1.1');
     expect(findBookOutlineFailures(files, { action: 'target_authority_integration', paragraph: '2.1.1' })).toEqual([]);
-    integrateTargetHoldInFiles(files, 'H-211-TARGET-INTEGRATION', '2.1.1');
+    expect(JSON.parse(asText(files[META_PATH])).holds.find((item) => item.id === 'H-211-TARGET-INTEGRATION').status).toBe('released');
     expectFailure(files, 'action paragraph_production is blocked by open hold H-211-GATE0B1', { action: 'paragraph_production', paragraph: '2.1.1' });
     expectFailure(files, 'action lesson_authoring is blocked by open hold H-211-GATE0B1', { action: 'lesson_authoring', paragraph: '2.1.1' });
     releaseHoldInFiles(files, 'H-211-GATE0B1');
@@ -487,13 +493,11 @@ describe('Book 2 outline currentness contract', () => {
     expect(blockers).toContain('H-CHAPTER-23-PLAN');
   });
 
-  test('blocks paragraph production for 2.1.1 with both matching holds in a pre-approval fixture', () => {
+  test('blocks paragraph production for 2.1.1 only on the goal hold in a historical goal-pending fixture', () => {
     const files = pendingGate0B1InFiles(cloneFiles());
     const failures = findBookOutlineFailures(files, { action: 'paragraph_production', paragraph: '2.1.1' });
-    expect(failures).toEqual(expect.arrayContaining([
-      expect.stringContaining('H-211-GATE0B1'),
-      expect.stringContaining('H-211-TARGET-INTEGRATION'),
-    ]));
+    expect(failures).toEqual(expect.arrayContaining([expect.stringContaining('H-211-GATE0B1')]));
+    expect(failures.some((failure) => failure.includes('H-211-TARGET-INTEGRATION'))).toBe(false);
   });
 
   test('an unrelated paragraph hold does not block the current paragraph action', () => {
@@ -511,13 +515,12 @@ describe('Book 2 outline currentness contract', () => {
     expectFailure(files, 'action lesson_authoring is blocked by open hold H-212-STALE-REF', { action: 'lesson_authoring', paragraph: '2.1.2' });
     expectFailure(files, 'action lesson_authoring is blocked by open hold H-212-STALE-REF', { action: 'lesson_authoring', chapter: '2.1' });
     const initialChapterFailures = findBookOutlineFailures(files, { action: 'chapter_production', chapter: '2.1' });
-    for (const holdId of ['H-211-GATE0B1', 'H-211-TARGET-INTEGRATION', 'H-212-STALE-REF', 'H-213-DELTAQ']) {
+    for (const holdId of ['H-211-GATE0B1', 'H-212-STALE-REF', 'H-213-DELTAQ']) {
       expect(initialChapterFailures).toEqual(expect.arrayContaining([expect.stringContaining(holdId)]));
     }
 
     releaseHoldInFiles(files, 'H-211-GATE0B1');
     for (const [holdId, paragraph] of [
-      ['H-211-TARGET-INTEGRATION', '2.1.1'],
       ['H-212-STALE-REF', '2.1.2'],
       ['H-213-DELTAQ', '2.1.3'],
     ]) {
