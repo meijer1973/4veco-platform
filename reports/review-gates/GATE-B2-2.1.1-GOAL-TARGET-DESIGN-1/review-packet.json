@@ -15,7 +15,7 @@
   "review_autonomy": {
     "level": "L4",
     "lead_review_result": "PASS WITH FLAGS",
-    "rationale": "Exact goal and target design passed teacher, economics, blind timing, and separate structural lead review. Two separate human owner decisions remain mandatory before either package gains authority or any later gate begins."
+    "rationale": "Exact goal and target design passed teacher, economics, blind timing, and separate structural lead review. The human owner approved both exact package hashes; a separate L4 payload authorization remains mandatory before PR #227 integration."
   },
   "human_decision_required": true,
   "paired_prs": [],
@@ -26,9 +26,17 @@
     "target_registry_follow_up",
     "paragraph_production_dependency"
   ],
-  "status": "design_review_complete_pending_two_owner_decisions",
-  "route": "STOP_FOR_OWNER_GOAL_AND_TARGET_DECISIONS",
-  "requested_decision": "Separately approve, revise, or reject the exact §2.1.1 goal-package hash and exact proposed-target-record hash. Approval does not authorize Gate 0C integration, lesson work, paragraph production, ready transition, or merge.",
+  "status": "owner_approved_transition_pending_exact_head_ci_and_payload_authorization",
+  "route": "STOP_AFTER_TRANSITION_CI_FOR_PAYLOAD_AUTHORIZATION",
+  "requested_decision": "The two exact package decisions are complete. After this lifecycle-only transition passes exact-head CI, a separate owner payload authorization is required before governed PR #227 integration. Gate 0C, lesson work, paragraph production, and direct merge remain unauthorized.",
+  "owner_decisions": {
+    "decision_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692",
+    "decided_by": "meijer1973",
+    "decided_on": "2026-09-03",
+    "reviewed_head": "9074805c8466c823b1ba70aae0af737b1e701095",
+    "goal_package": "approved",
+    "replacement_target": "approved"
+  },
   "exact_identities": {
     "goal_package_sha256": "afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560",
     "proposed_target_record_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
@@ -46,8 +54,8 @@
     { "requirement": "Current MTU, exam, missing-unit, and provenance mapping", "status": "met_with_D38_dependency_carry_flag" },
     { "requirement": "Honest approximately 12–14-minute central timing", "status": "met_specialist_calibrated" },
     { "requirement": "Platform-only scope and immutable target/lesson state", "status": "met" },
-    { "requirement": "Later gates and both holds preserved", "status": "met" },
-    { "requirement": "Explicit separate owner decisions", "status": "pending_human_owner" }
+    { "requirement": "Later gates and target-integration hold preserved", "status": "met" },
+    { "requirement": "Explicit separate owner decisions", "status": "met_exact_owner_approvals_recorded" }
   ],
   "specialist_reviews": [
     { "role": "teacher_learning_quality", "result": "PASS", "evidence": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-teacher-learning-quality-review.md" },
@@ -56,12 +64,12 @@
     { "role": "structural_lead", "result": "PASS WITH FLAGS", "evidence": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-round2.md" }
   ],
   "holds": {
-    "H-211-GATE0B1": "open_pending_exact_goal_and_target_owner_decisions",
-    "H-211-TARGET-INTEGRATION": "open_until_separate_gate_0c_integration"
+    "H-211-GATE0B1": "released_by_exact_goal_owner_decision",
+    "H-211-TARGET-INTEGRATION": "open_with_approved_replacement_until_separate_gate_0c_integration"
   },
   "authority_claims": {
-    "goal_package_approved": false,
-    "replacement_target_approved": false,
+    "goal_package_approved": true,
+    "replacement_target_approved": true,
     "target_registry_mutation_authorized": false,
     "lesson_repository_mutation_authorized": false,
     "paragraph_production_authorized": false,
@@ -85,8 +93,9 @@
     ],
     "ci": {
       "required_contexts": ["validate-platform"],
-      "status": "pending_terminal_head_live_binding",
-      "reviewed_commit_sha": "0c18aba3fb8382bec60fdd673555c72facf8ef02"
+      "status": "success_on_owner_reviewed_head_transition_terminal_live_binding_required",
+      "reviewed_commit_sha": "9074805c8466c823b1ba70aae0af737b1e701095",
+      "accepted_run_id": 33737014432
     },
     "target_registry_blob": "897ed884d9cca38ded03bc4b5b2c771ccecaf72e",
     "lesson_clean_sha": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
@@ -108,5 +117,5 @@
     "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-*",
     "generated agent indexes, URL index, and internal dashboard"
   ],
-  "recommended_next_action": "Record the two human owner decisions against the exact hashes. Do not start Gate 0C, mutate the registry or lesson repository, start paragraph production, mark the draft ready, or merge."
+  "recommended_next_action": "Publish the owner-approval transition, obtain exact-head validate-platform success, and return for separate owner payload authorization. Do not start Gate 0C, mutate the registry or lesson repository, start paragraph production, or merge."
 }

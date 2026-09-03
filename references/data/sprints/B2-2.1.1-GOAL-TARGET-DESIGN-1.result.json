@@ -3,12 +3,13 @@
   "sprint_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1",
   "name": "Book 2 Paragraph 2.1.1 Goal And Target Design",
   "status": "completed",
-  "result_status": "design_complete_pending_two_owner_decisions",
+  "result_status": "owner_approved_transition_pending_exact_head_ci_and_payload_authorization",
   "completed_on": "2026-09-03",
   "plan": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-plan.md",
   "baseline": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-baseline.md",
   "result": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-result.md",
   "diff_summary": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-diff-summary.md",
+  "owner_review_resolution": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-owner-review-resolution.md",
   "issue": 223,
   "superseded_pr": 224,
   "pr": 227,
@@ -24,8 +25,18 @@
   "lesson_repository_changed": false,
   "target_registry_changed": false,
   "human_review_required": true,
-  "owner_approval_status": "pending",
-  "gate_0b1_approved": false,
+  "owner_approval_status": "approved_both_exact_hashes",
+  "owner_approval": {
+    "decision_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692",
+    "decided_by": "meijer1973",
+    "decided_on": "2026-09-03",
+    "reviewed_head": "9074805c8466c823b1ba70aae0af737b1e701095",
+    "goal_decision": "APPROVE §2.1.1 GOAL PACKAGE afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560",
+    "target_decision": "APPROVE §2.1.1 REPLACEMENT TARGET 709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
+    "released_hold": "H-211-GATE0B1",
+    "retained_hold": "H-211-TARGET-INTEGRATION"
+  },
+  "gate_0b1_approved": true,
   "gate_0c_authorized": false,
   "merge_authorized": false,
   "lead_review_required": true,
@@ -39,6 +50,8 @@
     { "command": "npm.cmd run check:book-outline-currentness -- --action goal_design --paragraph 2.1.1", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action target_design --paragraph 2.1.1", "status": "passed" },
     { "command": "npm.cmd run check:book-outline-currentness -- --action specialist_review --paragraph 2.1.1", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness -- --action approved_goal_use --paragraph 2.1.1", "status": "passed" },
+    { "command": "npm.cmd run check:book-outline-currentness -- --action target_authority_integration --paragraph 2.1.1", "status": "passed" },
     { "command": "npm.cmd run check:part-a-exercise-authoring-contract", "status": "passed" },
     { "command": "npm.cmd run check:blueprint-pedagogical-boundaries", "status": "passed" },
     { "command": "npm.cmd run check:scope-language", "status": "passed" },
@@ -96,25 +109,25 @@
       },
       {
         "id": "OWNER-DECISION",
-        "description": "The human owner has not yet decided on either exact package hash.",
-        "classification": "scale_blocker",
-        "evidence": "L4 packet requests two separate exact-hash decisions.",
-        "blocks": "Gate 0B-1 approval, Gate 0C initiation, and all paragraph or lesson production.",
-        "does_not_block": "Completion of the design-review sprint and draft PR evidence.",
-        "proof_required_to_close": "Explicit owner decisions bound separately to both exact hashes."
+        "description": "The human owner approved both exact package hashes separately.",
+        "classification": "core_requirement_met",
+        "evidence": "PR #227 comment 5524345692 binds both exact decisions to reviewed head 9074805c8466c823b1ba70aae0af737b1e701095.",
+        "blocks": "Nothing after the lifecycle transition.",
+        "does_not_block": "Approved goal use and a later separately governed Gate 0C task.",
+        "proof_required_to_close": "Closed by exact owner decisions and the recorded hold/binding transition."
       }
     ],
     "flags": [
       {
-        "id": "OWNER-DECISION",
-        "description": "Two exact-hash owner decisions remain mandatory.",
+        "id": "PAYLOAD-AUTHORIZATION",
+        "description": "A separate owner payload authorization remains mandatory before PR #227 integration.",
         "disposition": "product_scale_blocker",
         "classification": "scale_blocker",
         "owner": "repository_owner",
-        "next_action": "Approve, revise, or reject each exact hash in draft PR #227 or this governed thread.",
-        "blocks": "Goal/target authority and every later gate.",
-        "does_not_block": "Design sprint closure and draft review.",
-        "proof_required_to_close": "Two explicit exact-hash owner decisions.",
+        "next_action": "After the lifecycle transition passes exact-head CI, authorize or reject the exact final PR #227 payload for governed integration.",
+        "blocks": "PR #227 integration.",
+        "does_not_block": "The recorded goal/target authority transition or exact-head validation.",
+        "proof_required_to_close": "Owner payload authorization naming PR, reviewed payload head, decision scope, merge method, and admin-bypass prohibition.",
         "blocking": false
       },
       {
@@ -144,8 +157,8 @@
     ]
   },
   "authority_claims": {
-    "goal_package_approved": false,
-    "replacement_target_approved": false,
+    "goal_package_approved": true,
+    "replacement_target_approved": true,
     "target_registry_mutation_authorized": false,
     "lesson_repository_mutation_authorized": false,
     "paragraph_production_authorized": false,
@@ -156,5 +169,5 @@
     "student_use_authorized": false,
     "merge_authorized": false
   },
-  "recommended_next_action": "Stop for explicit owner decisions on both exact package hashes. Do not begin Gate 0C, mutate the registry or lesson repository, start paragraph production, mark the draft ready, or merge."
+  "recommended_next_action": "Publish and validate the approval lifecycle transition on draft PR #227, then stop for separate owner payload authorization. Do not begin Gate 0C, mutate the registry or lesson repository, start paragraph production, or merge."
 }

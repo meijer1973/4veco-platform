@@ -3,7 +3,7 @@
   "sprint_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1",
   "name": "Book 2 Paragraph 2.1.1 Goal And Target Design",
   "created": "2026-09-03",
-  "status": "completed_pending_human_gate",
+  "status": "completed_owner_approved_transition_pending_payload_authorization",
   "issue": 223,
   "superseded_pr": 224,
   "draft_pr": 227,
@@ -14,6 +14,7 @@
   "carried_evidence": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-carried-evidence.md",
   "goal_package": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-goal-package.md",
   "target_package": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-target-package.md",
+  "owner_review_resolution": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-owner-review-resolution.md",
   "goal_candidate": "references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.goal-candidate.json",
   "target_candidate": "references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.target-candidate.json",
   "timing_evidence": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-timing-evidence.md",
@@ -44,20 +45,29 @@
   "gate_status": {
     "gate_0a_baseline_audit": "PASS_CARRIED_WITH_PROVENANCE",
     "gate_0b_0_book2_foundation_outline": "COMPLETE",
-    "gate_0b_1_goal_and_target_design": "ACTIVE",
-    "gate_0c_target_authority": "BLOCKED",
+    "gate_0b_1_goal_and_target_design": "OWNER_APPROVED_TRANSITION_PENDING_EXACT_HEAD_CI",
+    "gate_0c_target_authority": "AUTHORIZED_NEXT_ONLY_AFTER_PR227_INTEGRATION",
     "gate_1_blank_slate_architecture": "BLOCKED",
     "gate_2_exercises_and_answers": "BLOCKED",
     "gate_3_timing_rendering_review_guardrail": "BLOCKED"
   },
   "holds": {
-    "H-211-GATE0B1": "open",
-    "H-211-TARGET-INTEGRATION": "open"
+    "H-211-GATE0B1": "released_by_exact_goal_owner_decision",
+    "H-211-TARGET-INTEGRATION": "open_with_approved_replacement_binding"
   },
   "review_identities": {
     "goal_package_sha256": "afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560",
     "proposed_target_record_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
     "substantive_reviewed_commit": "0c18aba3fb8382bec60fdd673555c72facf8ef02"
+  },
+  "owner_decisions": {
+    "decision_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692",
+    "decided_by": "meijer1973",
+    "decided_on": "2026-09-03",
+    "reviewed_head": "9074805c8466c823b1ba70aae0af737b1e701095",
+    "goal_package": "APPROVE §2.1.1 GOAL PACKAGE afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560",
+    "replacement_target": "APPROVE §2.1.1 REPLACEMENT TARGET 709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
+    "payload_authorization": "not_granted"
   },
   "core_requirements": [
     "Pin the approved Book 2 outline and exact Gate 0B-1 action permissions.",
@@ -66,7 +76,7 @@
     "Require direct goal-to-target operation and answer-form coverage.",
     "Record specialist solve-and-timing, teacher-learning-quality, economic-content, and structural lead review.",
     "Keep the target registry, lesson repository, outline authority, blueprints, and protected references unchanged.",
-    "Stop for explicit owner decisions before Gate 0C, production, or merge."
+    "Record the exact owner decisions, release only H-211-GATE0B1, keep H-211-TARGET-INTEGRATION open, and stop before Gate 0C, production, or merge."
   ],
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-plan.md",

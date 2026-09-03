@@ -132,6 +132,32 @@ function releaseHoldInFiles(files, holdId) {
   return files;
 }
 
+function pendingGate0B1InFiles(files) {
+  const meta = JSON.parse(asText(files[META_PATH]));
+  const goalHold = meta.holds.find((item) => item.id === 'H-211-GATE0B1');
+  const targetHold = meta.holds.find((item) => item.id === 'H-211-TARGET-INTEGRATION');
+
+  goalHold.status = 'open';
+  goalHold.summary = 'Gate 0B-1 goal design may proceed, but approved goal use waits for the paragraph goal-owner decision.';
+  goalHold.goal_binding = {
+    approved_goal_package_sha256: null,
+    approval_ref: null,
+    approved_by: null,
+    approved_on: null,
+  };
+  goalHold.release_evidence = null;
+
+  targetHold.target_binding.approved_replacement_sha256 = null;
+  targetHold.target_binding.approval_ref = null;
+  targetHold.target_binding.approved_by = null;
+  targetHold.target_binding.approved_on = null;
+
+  replaceProjectionRow(files, goalHold);
+  replaceProjectionRow(files, targetHold);
+  writeMeta(files, meta);
+  return files;
+}
+
 function approveTargetReplacementInFiles(files, holdId, paragraph, mutateRecord = () => {}) {
   const registry = JSON.parse(asText(files[TARGET_REGISTRY_PATH]));
   const record = structuredClone(registry.exercises.find((item) => item.id === paragraph));
@@ -343,7 +369,8 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('permits Gate 0B-1 goal design while approval and production holds remain open', () => {
-    expect(findBookOutlineFailures(cloneFiles(), { action: 'goal_design', paragraph: '2.1.1' })).toEqual([]);
+    const files = pendingGate0B1InFiles(cloneFiles());
+    expect(findBookOutlineFailures(files, { action: 'goal_design', paragraph: '2.1.1' })).toEqual([]);
   });
 
   test('outline owner decision is allowed, owner evidence releases approved use, and merge remains separately governed', () => {
@@ -380,7 +407,8 @@ describe('Book 2 outline currentness contract', () => {
       released_on: '2026-09-03',
       evidence_ref: 'https://github.com/meijer1973/4veco-platform/pull/226#issuecomment-5521351557',
     });
-    expect(otherOpenHolds).toHaveLength(13);
+    expect(otherOpenHolds).toHaveLength(12);
+    expect(meta.holds.find((item) => item.id === 'H-211-GATE0B1').status).toBe('released');
     expect(findBookOutlineFailures(cloneFiles(), { requireApproved: true, action: 'merge' })).toEqual([]);
   });
 
@@ -414,7 +442,7 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('§2.1.1 goal approval and target integration are separate production milestones', () => {
-    const files = approveOutlineInFiles(cloneFiles());
+    const files = pendingGate0B1InFiles(approveOutlineInFiles(cloneFiles()));
     expect(findBookOutlineFailures(files, { action: 'goal_owner_decision', paragraph: '2.1.1' })).toEqual([]);
     expect(findBookOutlineFailures(files, { action: 'target_authority_repair', paragraph: '2.1.1' })).toEqual([]);
     expectFailure(files, 'action target_authority_integration requires an exact approved replacement binding for H-211-TARGET-INTEGRATION', { action: 'target_authority_integration', paragraph: '2.1.1' });
@@ -459,8 +487,9 @@ describe('Book 2 outline currentness contract', () => {
     expect(blockers).toContain('H-CHAPTER-23-PLAN');
   });
 
-  test('blocks paragraph production for 2.1.1 with both remaining matching open holds', () => {
-    const failures = findBookOutlineFailures(cloneFiles(), { action: 'paragraph_production', paragraph: '2.1.1' });
+  test('blocks paragraph production for 2.1.1 with both matching holds in a pre-approval fixture', () => {
+    const files = pendingGate0B1InFiles(cloneFiles());
+    const failures = findBookOutlineFailures(files, { action: 'paragraph_production', paragraph: '2.1.1' });
     expect(failures).toEqual(expect.arrayContaining([
       expect.stringContaining('H-211-GATE0B1'),
       expect.stringContaining('H-211-TARGET-INTEGRATION'),
@@ -478,7 +507,7 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('lesson and chapter production inherit every matching paragraph-production blocker', () => {
-    const files = approveOutlineInFiles(cloneFiles());
+    const files = pendingGate0B1InFiles(approveOutlineInFiles(cloneFiles()));
     expectFailure(files, 'action lesson_authoring is blocked by open hold H-212-STALE-REF', { action: 'lesson_authoring', paragraph: '2.1.2' });
     expectFailure(files, 'action lesson_authoring is blocked by open hold H-212-STALE-REF', { action: 'lesson_authoring', chapter: '2.1' });
     const initialChapterFailures = findBookOutlineFailures(files, { action: 'chapter_production', chapter: '2.1' });
@@ -523,7 +552,8 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('a single-milestone goal hold can transition from open to released with evidence', () => {
-    const meta = JSON.parse(asText(cloneFiles()[META_PATH]));
+    const files = pendingGate0B1InFiles(cloneFiles());
+    const meta = JSON.parse(asText(files[META_PATH]));
     const hold = meta.holds.find((item) => item.id === 'H-211-GATE0B1');
     expect(hold.status).toBe('open');
     release(hold);
@@ -546,9 +576,15 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test('rejects release evidence on an open hold', () => {
-    expectFailure(mutateJson(META_PATH, (meta) => {
-      meta.holds[1].release_evidence = { released_by: 'owner', released_on: '2026-09-01', evidence_ref: 'invalid while open' };
-    }), 'open hold H-211-GATE0B1 must have null release_evidence');
+    const files = pendingGate0B1InFiles(cloneFiles());
+    const meta = JSON.parse(asText(files[META_PATH]));
+    meta.holds.find((item) => item.id === 'H-211-GATE0B1').release_evidence = {
+      released_by: 'owner',
+      released_on: '2026-09-01',
+      evidence_ref: 'invalid while open',
+    };
+    writeMeta(files, meta);
+    expectFailure(files, 'open hold H-211-GATE0B1 must have null release_evidence');
   });
 
   test('rejects an action listed in both blocks and permits', () => {
@@ -689,7 +725,7 @@ describe('Book 2 outline currentness contract', () => {
   });
 
   test.each([
-    ['status', 1, 'released'],
+    ['status', 1, 'open'],
     ['scope', 2, '`paragraph:2.1.2`'],
     ['blocks', 3, '`approved_goal_use`, `paragraph_production`'],
     ['permits', 4, '`goal_design`, `target_design`, `specialist_review`'],

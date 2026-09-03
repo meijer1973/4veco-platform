@@ -4,27 +4,31 @@ Generated: 2026-09-03
 
 Draft PR: https://github.com/meijer1973/4veco-platform/pull/227
 
-Route: `STOP_FOR_OWNER_GOAL_AND_TARGET_DECISIONS`
+Route: `STOP_AFTER_TRANSITION_CI_FOR_PAYLOAD_AUTHORIZATION`
 
-## Decision requested
+## Owner decisions recorded
 
-Please decide separately on these immutable identities:
+The owner approved these immutable identities separately on 2026-09-03:
 
 1. Goal package
    `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560`.
 2. Proposed target record
    `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`.
 
-The accepted forms are:
+The exact decisions are:
 
 - `APPROVE §2.1.1 GOAL PACKAGE afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560`
 - `APPROVE §2.1.1 REPLACEMENT TARGET 709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`
 
-For either package, `REVISE` with a requested correction or `REJECT` is also
-valid. Approval of both packages closes only the human decision portion of
-Gate 0B-1. It does not mutate the target registry, release the target-
-integration hold, authorize lessons or paragraph production, mark this draft
-ready, or authorize merge.
+Decision reference:
+https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692
+
+Reviewed head: `9074805c8466c823b1ba70aae0af737b1e701095`.
+
+Approval of both packages closes only the human decision portion of Gate 0B-1.
+It does not mutate the target registry, release the target-integration hold,
+authorize lessons or paragraph production, authorize the PR payload, or
+authorize merge.
 
 ## What is being reviewed
 
@@ -54,8 +58,9 @@ ready, or authorize merge.
 - Exact-head remote CI is bound in the live draft PR description after the
   terminal evidence commit.
 
-The specialist and lead reports are separate Codex role checks, not human
-owner approval. They do not release either hold.
+The specialist and lead reports are separate Codex role checks. The owner
+decisions now release only `H-211-GATE0B1`; the target-integration hold remains
+open.
 
 ## Calibration questions
 
@@ -98,23 +103,25 @@ not a reason to add break-even or `MO=MK` here.
 - If a mapping seems wrong, name the exact MTU/exam code and the non-goal or
   required operation it conflicts with.
 
-## Closure proposal
+## Approved closure transition
 
-If both hashes are approved unchanged, record two exact owner decisions and
-release `H-211-GATE0B1` through its governed evidence transition. Keep
-`H-211-TARGET-INTEGRATION` open. Then open a separate Gate 0C PR whose only
-semantic authority change is the exact approved target record, with proof of
-the registry delta and a fresh governed review/authorization cycle.
+Record both exact owner decisions and release `H-211-GATE0B1` through its
+governed evidence transition. Populate the exact approved replacement binding
+inside `H-211-TARGET-INTEGRATION`, but keep that hold open. Preserve both
+candidate files, the current target registry, and the lesson repository.
 
-If either package is revised, change only that package and its dependent
-evidence, recompute the relevant hash, renew affected specialist/lead review,
-and return both current exact identities for owner decision.
+After the transition passes exact-head CI, stop for a separate owner payload
+authorization for the final PR #227 head and scope. Only after governed PR #227
+integration and green post-merge CI may a separate Gate 0C PR place the exact
+approved replacement in the live target registry.
 
 ## Holds and stop rule
 
-- `H-211-GATE0B1`: open pending the exact owner decisions.
-- `H-211-TARGET-INTEGRATION`: open until a later Gate 0C integration succeeds.
+- `H-211-GATE0B1`: released by the exact goal-package decision.
+- `H-211-TARGET-INTEGRATION`: open with the exact approved replacement binding
+  until a later Gate 0C integration succeeds.
 
-Stop after requesting the decisions. Do not edit the target registry or lesson
+Stop after exact-head validation of the lifecycle transition and request the
+separate L4 payload authorization. Do not edit the target registry or lesson
 repository, begin Gate 0C or paragraph production, create a target-specific
-guardrail, mark draft PR #227 ready, or merge.
+guardrail, or merge.

@@ -93,18 +93,26 @@
       }
     },
     {
-      "id": "H-211-GATE0B1", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
-      "summary": "Gate 0B-1 goal design may proceed, but approved goal use waits for the paragraph goal-owner decision.",
-      "goal_binding": { "approved_goal_package_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "id": "H-211-GATE0B1", "status": "released", "severity": "blocking", "scope": ["paragraph:2.1.1"],
+      "summary": "The owner approved the exact paragraph goal package; target integration and production remain governed by H-211-TARGET-INTEGRATION.",
+      "goal_binding": { "approved_goal_package_sha256": "afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560", "approval_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692", "approved_by": "meijer1973", "approved_on": "2026-09-03" },
       "blocks": ["approved_goal_use", "paragraph_production", "lesson_authoring"],
       "permits": ["goal_design", "target_design", "specialist_review", "goal_owner_decision"],
       "resolution_actions": ["goal_owner_decision"],
-      "release_condition": "The goal owner approves the exact hashed paragraph goal package with identity, date, and decision reference.", "release_evidence": null
+      "release_condition": "The goal owner approves the exact hashed paragraph goal package with identity, date, and decision reference.",
+      "release_evidence": {
+        "resolved_via": "goal_owner_decision",
+        "released_by": "meijer1973",
+        "released_on": "2026-09-03",
+        "evidence_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692",
+        "subject_id": "2.1.1-goal-package",
+        "subject_sha256": "afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560"
+      }
     },
     {
       "id": "H-211-TARGET-INTEGRATION", "status": "open", "severity": "blocking", "scope": ["paragraph:2.1.1"],
       "summary": "Paragraph and lesson production wait for the exact approved target record to be integrated and pinned.",
-      "target_binding": { "blocked_baseline_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8", "approved_replacement_sha256": null, "approval_ref": null, "approved_by": null, "approved_on": null },
+      "target_binding": { "blocked_baseline_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8", "approved_replacement_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34", "approval_ref": "https://github.com/meijer1973/4veco-platform/pull/227#issuecomment-5524345692", "approved_by": "meijer1973", "approved_on": "2026-09-03" },
       "blocks": ["paragraph_production", "lesson_authoring"],
       "permits": ["goal_design", "target_design", "specialist_review", "target_authority_repair", "target_authority_integration"],
       "resolution_actions": ["target_authority_integration"],
