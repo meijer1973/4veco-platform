@@ -2,17 +2,17 @@
 
 Generated: 2026-09-03
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.17-book2-outline-payload-authorized`
+Roadmap version: `v1.20-gate0b1-owner-approved-transition`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. The human owner approved the exact `BOOK-2-FOUNDATION-OUTLINE-1` evidence-closure head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`, then separately authorized PR #226 payload head `b7f74aeded196669a215b920c16d671b6b919164` and one bounded governed-merge transition at comment `5521351557`. Accepted CI run `33674533779` covers that payload head; the focused suite is 89/89 and the current local platform suite is 1,742 tests. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; exact-head CI and governed integration validation remain before a merge commit. Historical Chapter 2.1/2.2 evidence remains read-only input; no goal/target approval, target-registry mutation, lesson write, or production is authorized here. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. `BOOK-2-FOUNDATION-OUTLINE-1` is integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The approved outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. On 2026-09-03 the owner approved the exact §2.1.1 goal hash `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560` and target hash `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34` in PR #227 comment `5524345692`. The transition releases only `H-211-GATE0B1`; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. The target registry and lesson remain unchanged. Exact-head transition CI and separate payload authorization remain before PR #227 integration. No paragraph production, target-specific checker, Gate 0C, or merge is authorized. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
 
 ## Operating Goal
 
-Establish an owner-approved Book 2 planning foundation before resuming governed paragraph work. The task audited v6/v5/registry/boundary coherence, created the 12-paragraph derived outline and currentness guardrail, and passed the human owner and payload-authorization gates with downstream holds. Approved outline use and governed merge are permitted; §2.1.1 Gate 0B-1 approval/production, lesson work, target repairs/integration, and generated output remain blocked by separate holds.
+Publish and validate the Issue #223 Gate 0B-1 owner-approval transition, then stop for separate L4 payload authorization for PR #227. Gate 0C remains a separate target-registry integration PR after PR #227 is governed onto `main`; lesson production remains blocked until `H-211-TARGET-INTEGRATION` is released.
 
 ## Book 2 Print Series
 
@@ -35,6 +35,7 @@ The current print-production series proceeds through Book 2 one controlled chapt
 15. `B2-2.2-TARGET-V5-PROMOTE` - promote Chapter 2.2 target records only after governed evidence supports them.
 16. `B2-2.2-CHAPTER-QA-1` - inspect assembled Chapter 2.2 output after the paragraph sequence.
 17. `BOOK-2-FOUNDATION-OUTLINE-1` - derive and review the canonical Book 2 outline, workflow foundation check, and freshness guardrail before paragraph-level design resumes.
+18. `B2-2.1.1-GOAL-TARGET-DESIGN-1` - finalize the exact §2.1.1 goal and replacement-target packages against the integrated Book 2 outline, obtain specialist/lead/owner review, and stop before Gate 0C or lesson production.
 
 `B2-2.2-READY-1` is closed as readiness only. It did not write paragraphs or regenerate lesson output. Human instruction opened `B2-2.2.1-HARDEN` on 2026-06-17 and `B2-2.2.2-HARDEN` on 2026-06-18. Human instruction on 2026-06-19 opened `GOAL-B2-2.2-CHAPTER-COMPLETE-1`, authorizing completion of 2.2.3, 2.2.4, Chapter 2.2 target promotion, and Chapter 2.2 QA in one governed batch before returning for human review. Do not start Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, or student/product-use work from this roadmap state.
 
@@ -54,7 +55,8 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Owner outline approval binds head `2166cd074e1cb8d24f7908e9f792a996dbfd48e7` and semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. Separate payload/governed-merge authorization binds head `b7f74aeded196669a215b920c16d671b6b919164` at comment `5521351557`; CI run `33674533779` covers that head. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released, while 13 content and lesson holds remain active. Exact-head CI and governed integration validation remain for the bounded transition head. |
+| B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Both exact package hashes are owner-approved in PR #227 comment `5524345692`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. The target registry and lesson are unchanged. Exact-head transition CI and separate payload authorization remain before governed PR #227 integration. |
+| BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; all 13 other holds remain open. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. |
 | B2-2.2.4-HARDEN-MIXED-1 | Book 2 Paragraph 2.2.4 Mixed Elasticity Practice | yes | Closed locally after building consolidation-only mixed elasticity practice with source-heavy transfer, answer guidance, rendered proof, validators, and explicit mixed-target acceptance. |
@@ -95,4 +97,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Finish coordinated platform/lesson PR preparation for `GOAL-B2-2.2-CHAPTER-COMPLETE-1`: keep local validators green, open the platform PR and lesson PR as a dependent pair, verify remote CI/mergeability, and then request human review. Do not start Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, or student/product-use work from this roadmap state.
+Review draft PR #227 and decide separately on goal hash `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560` and target hash `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`. Do not mutate the target registry, edit lessons, begin paragraph production, mark the draft ready, merge, or start Gate 0C, Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, or student/product-use work.

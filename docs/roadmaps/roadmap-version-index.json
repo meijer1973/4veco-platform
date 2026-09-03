@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.17-book2-outline-payload-authorized",
+      "version": "v1.20-gate0b1-owner-approved-transition",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
       "updated_on": "2026-09-03",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 owner outline approval binds PR #226 head 2166cd074e1cb8d24f7908e9f792a996dbfd48e7 and semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde. Separate payload/governed-merge authorization binds head b7f74aeded196669a215b920c16d671b6b919164 at comment 5521351557; CI run 33674533779 covers that head. H-OUTLINE-OWNER and H-MERGE-GOVERNANCE are released, while 13 content and lesson holds remain open. Exact-head CI and governed integration validation remain for the bounded transition. §2.1.1 design/specialist review are permitted, while goal/target approval and production, lesson output, target registry changes, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is integrated through PR #226 merge b6e75a558e7ddb34a3e36094a2ab8367249fa357 and post-merge CI run 33724859532 passed. The outline remains approved_with_holds at semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde. On 2026-09-03 the owner approved exact §2.1.1 goal hash afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560 and target hash 709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34 in PR #227 comment 5524345692. H-211-GATE0B1 is released; H-211-TARGET-INTEGRATION remains open with the approved replacement binding. The target registry and lesson remain unchanged. Exact-head transition CI and separate payload authorization remain before PR #227 integration. Paragraph production, target-specific guardrails, Gate 0C, merge, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",

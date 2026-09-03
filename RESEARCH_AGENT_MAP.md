@@ -115,6 +115,14 @@ its mutation suite
 `build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js`.
 This guardrail is non-retroactive: Book 1 output stays frozen.
 
+For Book 2 chapter, paragraph-goal, target-design, or production planning,
+first load the approved foundation at
+`references/authored/book-outlines/book-2-outline.md` and
+`references/authored/book-outlines/book-2-outline.meta.json`, then run
+`build-scripts/workflows/check-book-outline-currentness.js` with the exact
+action and paragraph/chapter scope. The outline is derived planning authority;
+it does not replace the target registry or authorize lesson production.
+
 - `RESEARCH_AGENT_PROMPT.md`
 - `RESEARCH_AGENT_MAP.md`
 - `RESEARCH_AGENT_PROMPT_REFERENCES.md`
@@ -291,6 +299,9 @@ Use these anchors before free-form browsing.
   "paragraph_workflow_wording_checker": "build-scripts/workflows/check-paragraph-workflow-wording.js",
   "part_a_exercise_authoring_contract_checker": "build-scripts/workflows/check-part-a-exercise-authoring-contract.js",
   "part_a_exercise_authoring_contract_tests": "build-scripts/workflows/check-part-a-exercise-authoring-contract.test.js",
+  "book_2_outline": "references/authored/book-outlines/book-2-outline.md",
+  "book_2_outline_metadata": "references/authored/book-outlines/book-2-outline.meta.json",
+  "book_outline_currentness_checker": "build-scripts/workflows/check-book-outline-currentness.js",
   "paragraph_lane_scope_checker": "build-scripts/workflows/check-paragraph-lane-scope.js",
   "paragraph_type_contract": "scripts/lib/paragraph-types.js",
   "chapter_build_guide": "BUILD-CHAPTER.md",
@@ -342,6 +353,9 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/workflows/legacy-full-companion-profile.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-part-a-pdf-readiness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-paragraph-workflow-wording.js
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/book-outlines/book-2-outline.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/book-outlines/book-2-outline.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/workflows/check-book-outline-currentness.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/scripts/lib/paragraph-types.js
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/package.json
