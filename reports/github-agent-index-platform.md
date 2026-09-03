@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-03T08:32:18.912Z
+Generated: 2026-09-03T09:05:22.065Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/b2-2.1.1-goal-target-design-20260903`
-Source commit: `3898aab34e1dbe6693bb96b0321c8b392ffd1104`
-Files indexed: 7571
+Source commit: `15780346bbd88f3291503a8e3207798e81679431`
+Files indexed: 7580
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1590,7 +1590,7 @@ Count: 692
 
 ## references
 
-Count: 1022
+Count: 1023
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1948,6 +1948,7 @@ Count: 1022
 - references/data/sprints/B2-2.1-TARGET-V5-PROMOTE.result.json
 - references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.goal-candidate.json
 - references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.plan.json
+- references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.result.json
 - references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.target-candidate.json
 - references/data/sprints/B2-2.1.1-HARDEN.plan.json
 - references/data/sprints/B2-2.1.1-HARDEN.result.json
@@ -2617,7 +2618,7 @@ Count: 1022
 
 ## reports
 
-Count: 4868
+Count: 4876
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4046,6 +4047,9 @@ Count: 4868
 - reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
+- reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/bundle-urls.md
+- reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/review-packet.json
+- reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/review-packet.md
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/bundle-urls.md
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.json
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.md
@@ -5034,10 +5038,15 @@ Count: 4868
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-carried-evidence.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-command-log.jsonl
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-command-log.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-diff-summary.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-economic-content-review.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-goal-package.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-assignment.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-corrections.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-round1.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-round2.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-plan.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-result.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-specialist-corrections.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-target-package.md
 - reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-teacher-learning-quality-review.md
