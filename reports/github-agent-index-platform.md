@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-03T07:56:18.471Z
+Generated: 2026-09-03T08:32:18.912Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/b2-2.1.1-goal-target-design-20260903`
-Source commit: `b6e75a558e7ddb34a3e36094a2ab8367249fa357`
-Files indexed: 7556
+Source commit: `3898aab34e1dbe6693bb96b0321c8b392ffd1104`
+Files indexed: 7571
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1590,7 +1590,7 @@ Count: 692
 
 ## references
 
-Count: 1019
+Count: 1022
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1946,6 +1946,9 @@ Count: 1019
 - references/data/sprints/B2-2.1-RETRO.result.json
 - references/data/sprints/B2-2.1-TARGET-V5-PROMOTE.plan.json
 - references/data/sprints/B2-2.1-TARGET-V5-PROMOTE.result.json
+- references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.goal-candidate.json
+- references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.plan.json
+- references/data/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1.target-candidate.json
 - references/data/sprints/B2-2.1.1-HARDEN.plan.json
 - references/data/sprints/B2-2.1.1-HARDEN.result.json
 - references/data/sprints/B2-2.1.2-HARDEN.plan.json
@@ -2614,7 +2617,7 @@ Count: 1019
 
 ## reports
 
-Count: 4856
+Count: 4868
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5027,6 +5030,18 @@ Count: 4856
 - reports/sprints/B2-2.1-TARGET-V5-PROMOTE-plan.md
 - reports/sprints/B2-2.1-TARGET-V5-PROMOTE-result.md
 - reports/sprints/B2-2.1-TARGET-V5-PROMOTE-review-evidence.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-baseline.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-carried-evidence.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-command-log.jsonl
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-command-log.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-economic-content-review.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-goal-package.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-assignment.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-plan.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-specialist-corrections.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-target-package.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-teacher-learning-quality-review.md
+- reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-timing-evidence.md
 - reports/sprints/B2-2.1.1-HARDEN-baseline.md
 - reports/sprints/B2-2.1.1-HARDEN-command-log.jsonl
 - reports/sprints/B2-2.1.1-HARDEN-diff-summary.md

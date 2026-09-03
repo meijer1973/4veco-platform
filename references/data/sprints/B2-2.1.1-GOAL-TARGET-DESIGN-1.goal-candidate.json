@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "package_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1-goals-v1",
+  "paragraph_id": "2.1.1",
+  "paragraph_title": "Kostenstructuren",
+  "status": "specialist_pass_owner_pending",
+  "hash_contract": "sha256(JSON.stringify(goal_package)) using UTF-8",
+  "goal_package_sha256": "afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560",
+  "authority": {
+    "platform_baseline": "b6e75a558e7ddb34a3e36094a2ab8367249fa357",
+    "outline_path": "references/authored/book-outlines/book-2-outline.md",
+    "outline_version": "book-2-outline-v3-review-ready",
+    "outline_status": "approved_with_holds",
+    "outline_semantic_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "current_target_record_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8",
+    "goal_hold": "H-211-GATE0B1",
+    "target_integration_hold": "H-211-TARGET-INTEGRATION"
+  },
+  "goal_package": {
+    "language": "nl-NL",
+    "internal_goals": [
+      {
+        "id": "G1",
+        "statement": "De leerling classificeert kostencomponenten als constant of variabel op basis van hoe het totale bedrag verandert wanneer Q verandert binnen de genoemde periode en het relevante productiegebied, en herkent dat één kostensoort zowel een constant als een variabel deel kan hebben.",
+        "required_operations": [
+          "classify_from_cost_behaviour",
+          "justify_classification_from_change_in_Q",
+          "distinguish_components_within_one_expense_category"
+        ],
+        "answer_forms": [
+          "classification_with_short_written_justification"
+        ]
+      },
+      {
+        "id": "G2",
+        "statement": "De leerling stelt uit een context de functies voor TCK, TVK en TK op en gebruikt die functies bij een gegeven productieomvang.",
+        "required_operations": [
+          "aggregate_constant_and_per_unit_components",
+          "construct_TCK_TVK_TK_functions",
+          "substitute_Q_in_cost_functions"
+        ],
+        "answer_forms": [
+          "symbolic_formula",
+          "calculated_total_with_dimension"
+        ]
+      },
+      {
+        "id": "G3",
+        "statement": "De leerling berekent en interpreteert GCK, GVK en GTK en noteert totale kosten en gemiddelde kosten met de juiste eenheden.",
+        "required_operations": [
+          "calculate_average_costs",
+          "distinguish_total_and_average_dimensions",
+          "interpret_average_cost_values"
+        ],
+        "answer_forms": [
+          "calculated_values_with_correct_dimensions",
+          "representative_formula_and_substitution_evidence",
+          "euro_per_month_or_euro_per_product_unit",
+          "short_contextual_interpretation"
+        ]
+      },
+      {
+        "id": "G4",
+        "statement": "De leerling vergelijkt en verklaart hoe totale en gemiddelde kosten veranderen wanneer Q verandert, waaronder spreiding van constante kosten en een constante GVK uitsluitend onder de aanname van constante variabele kosten per product.",
+        "required_operations": [
+          "compare_two_quantities",
+          "explain_constant_cost_spreading",
+          "explain_conditional_constant_GVK",
+          "evaluate_integrated_cost_claim"
+        ],
+        "answer_forms": [
+          "multi-part_written_economic_explanation_supported_by_values"
+        ]
+      }
+    ],
+    "student_visible": {
+      "presentation": "non_heading_box",
+      "lead": "Na deze paragraaf kun je:",
+      "bullets": [
+        "kostenposten op basis van hun gedrag indelen als constant of variabel, ook als één kostensoort een constant én een variabel deel heeft;",
+        "uit een context de formules voor TCK, TVK en TK opstellen en gebruiken;",
+        "GCK, GVK en GTK berekenen en interpreteren en de juiste eenheid noteren;",
+        "uitleggen waarom totale kosten kunnen stijgen terwijl kosten per product dalen, en wanneer GVK gelijk blijft."
+      ]
+    },
+    "prerequisite_boundary": [
+      {
+        "item": "substitueren_en_basisrekenen_met_geldbedragen",
+        "classification": "previously_taught_retrieval_required",
+        "use": "Retrieve only substitution and the multiplication, division, addition, and calculation order needed for the target.",
+        "evidence": {
+          "source": "references/machine/micro-teaching-units.json",
+          "unit_id": "A04",
+          "source_fields": [
+            "prior_learning=previously_taught",
+            "assumed_prior_knowledge",
+            "zero_needs_review",
+            "procedure[1]",
+            "procedure[2]",
+            "procedure[3]"
+          ]
+        }
+      },
+      {
+        "item": "algemene_eenheidscontrole_bij_een_berekening",
+        "classification": "previously_taught_retrieval_required",
+        "use": "Retrieve the habit of checking the endpoint unit; the economic distinction between euro per month and euro per loaf remains new formal learning.",
+        "evidence": {
+          "source": "references/machine/micro-teaching-units.json",
+          "unit_id": "A04",
+          "source_fields": [
+            "prior_learning=previously_taught",
+            "procedure[4]"
+          ]
+        }
+      },
+      {
+        "item": "Book_1_cost_and_profit_exposure",
+        "classification": "preview_or_familiarity_only",
+        "use": "May support recognition but cannot replace formal Book 2 teaching."
+      },
+      {
+        "item": "cost_structures_and_average_costs",
+        "classification": "new_formal_learning",
+        "use": "Teach in full in paragraph 2.1.1, including the economic dimensions euro per month and euro per loaf."
+      }
+    ],
+    "non_goals": [
+      "revenue",
+      "profit",
+      "break_even",
+      "marginal_cost",
+      "marginal_revenue",
+      "MO_equals_MK_output_choice",
+      "formal_proportional_degressive_progressive_cost_classification"
+    ],
+    "downstream_preparation": [
+      "paragraph_2.1.2",
+      "paragraph_2.1.3",
+      "paragraph_2.1.4",
+      "supply_as_marginal_cost_bridge_in_2.3.2"
+    ],
+    "model_conditions": [
+      "Constant versus variable is relative to the stated period and relevant production/capacity range.",
+      "Total constant costs may change outside that range when capacity changes.",
+      "Linear TVK and constant GVK follow only from the explicit constant-variable-cost-per-product assumption."
+    ]
+  }
+}

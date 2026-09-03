@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "package_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1-target-v1",
+  "paragraph_id": "2.1.1",
+  "paragraph_title": "Kostenstructuren",
+  "status": "specialist_pass_owner_pending",
+  "hash_contract": "sha256(JSON.stringify(proposed_target_record)) using UTF-8 and repository property order",
+  "proposed_target_record_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
+  "authority": {
+    "platform_baseline": "b6e75a558e7ddb34a3e36094a2ab8367249fa357",
+    "outline_version": "book-2-outline-v3-review-ready",
+    "outline_semantic_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "current_target_record_sha256": "f01cd43c65e639e396a14b3dcfe5ed546ed7baa5cf8d2aa20a8bbe0c2c310de8",
+    "current_registry_blob": "897ed884d9cca38ded03bc4b5b2c771ccecaf72e",
+    "target_integration_hold": "H-211-TARGET-INTEGRATION"
+  },
+  "intended_record_status_after_approval_and_gate_0c": "reviewed_final",
+  "proposed_target_record": {
+    "id": "2.1.1",
+    "module": 2,
+    "chapter": 1,
+    "paragraph": 1,
+    "paragraph_title": "Kostenstructuren",
+    "difficulty": "MEDIUM",
+    "target_exercise": {
+      "context": "Bakkerij De Korenaar produceert tussen 500 en 1.000 broden per maand en gebruikt binnen dit productiegebied dezelfde ruimte en ovens. Voor huur en verzekering betaalt de bakkerij samen €440 per maand; dit bedrag verandert niet wanneer de productie verandert. Voor de netaansluiting en het energieabonnement betaalt zij €60 per maand; ook dit bedrag verandert niet met het aantal broden. Meel en verpakking kosten samen €0,70 per brood. Het elektriciteitsverbruik van de ovens kost binnen dit productiegebied €0,10 per geproduceerd brood; bij elk extra brood nemen de totale elektriciteitskosten van het ovengebruik dus met €0,10 toe. Q is het aantal broden per maand.",
+      "subquestions": [
+        {
+          "label": "a",
+          "prompt": "Deel de vier kostencomponenten in bij de constante of variabele kosten. Leg per component kort uit welk gedrag bij een verandering van Q de indeling bepaalt. Leg in ieder geval uit waarom de twee energiecomponenten niet in dezelfde categorie vallen."
+        },
+        {
+          "label": "b",
+          "prompt": "Stel de formules voor TCK, TVK en TK op als functie van Q."
+        },
+        {
+          "label": "c",
+          "prompt": "Bereken bij Q = 500 de TCK, TVK, TK, GCK, GVK en GTK. Gebruik een tabel met per kostengrootheid de uitkomst en de volledige eenheid. Laat bij TVK, TK, GCK, GVK en GTK de formule en de invulling zien; TCK mag je rechtstreeks uit vraag b overnemen. Vat daarna in één korte zin samen wat de drie gemiddelde bedragen per brood voor de bakkerij betekenen."
+        },
+        {
+          "label": "d",
+          "prompt": "Bereken bij Q = 1.000 de TK, GCK, GVK en GTK en noteer bij ieder antwoord de volledige eenheid. Gebruik de formules uit vraag b; laat alleen bij GTK de formule en de invulling opnieuw zien."
+        },
+        {
+          "label": "e",
+          "prompt": "Een leerling zegt: ‘Als de productie verdubbelt, verdubbelen alle totale kosten en halveren alle gemiddelde kosten.’ Gebruik bij Q = 1.000 voor TCK €500 per maand en voor TVK €800 per maand; je hoeft die twee bedragen niet opnieuw te berekenen. Geef vervolgens voor TCK, TVK, TK, GCK, GVK en GTK afzonderlijk een compacte regel in de vorm ‘juist/onjuist — werkelijke verandering — korte economische oorzaak’. Verklaar daarbij afzonderlijk waardoor GCK verandert en onder welke aanname en binnen welk productiegebied GVK gelijk blijft. Gebruik je uitkomsten bij Q = 500 en Q = 1.000."
+        }
+      ]
+    },
+    "lesson_goals": [
+      "De leerling classificeert kostencomponenten als constant of variabel op basis van hoe het totale bedrag verandert wanneer Q verandert binnen de genoemde periode en het relevante productiegebied, en herkent dat één kostensoort zowel een constant als een variabel deel kan hebben.",
+      "De leerling stelt uit een context de functies voor TCK, TVK en TK op en gebruikt die functies bij een gegeven productieomvang.",
+      "De leerling berekent en interpreteert GCK, GVK en GTK en noteert totale kosten en gemiddelde kosten met de juiste eenheden.",
+      "De leerling vergelijkt en verklaart hoe totale en gemiddelde kosten veranderen wanneer Q verandert, waaronder spreiding van constante kosten en een constante GVK uitsluitend onder de aanname van constante variabele kosten per product."
+    ],
+    "required_skills": [
+      "A08",
+      "A14",
+      "A50",
+      "A86",
+      "D38"
+    ],
+    "prior_knowledge_assumed": [
+      "Substitution and basic arithmetic are retrieved from references/machine/micro-teaching-units.json#A04, whose prior_learning is previously_taught and whose reviewed lower-secondary assumption and procedure cover substitution, calculation order, intermediate steps, and endpoint-unit checking.",
+      "Only the generic habit of checking an endpoint unit is retrieved from A04; euro per month versus euro per loaf is taught as new formal economic learning in paragraph 2.1.1.",
+      "No prior formal cost-structure or average-cost mastery is assumed; Book 1 cost/profit exposure is preview_or_familiarity_only."
+    ],
+    "new_skills_introduced": [
+      "A08",
+      "A14",
+      "A50",
+      "A86",
+      "D38"
+    ],
+    "missing_units_flagged": [
+      "Classify cost components as constant or variable from how the total amount changes with Q within an explicit period and relevant production range, including a mixed expense category (concept-level candidate; D26 is not a semantic match).",
+      "Explain why GVK remains constant only when variable cost per product is constant (concept-level candidate; A50 and A86 cover the calculations but not the conditional economic explanation)."
+    ],
+    "exam_codes": [
+      "D1.16",
+      "D1.17",
+      "A2.10"
+    ],
+    "difficulty_notes": "The target balances behaviour-based classification, function construction, one complete calculation set, one reduced comparison set, dimensions, spreading constant costs, conditional constant GVK, and integrated claim evaluation. The context bounds all conclusions to one month and 500–1,000 loaves with unchanged capacity. Design aim: 12–14 minutes, subject to recorded specialist timing evidence.",
+    "source_ref": "references/owned/course-blueprint-v5.md §2.1.1",
+    "paragraph_kind": "theory",
+    "introduces_new_theory": true,
+    "record_status": "reviewed_final",
+    "v5_migration": {
+      "source_status": "reviewed_final",
+      "from_v4_id": "1.3.2",
+      "related_v4_ids": [],
+      "review_required_before_final": false
+    },
+    "review_evidence": {
+      "sprint_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1",
+      "review_date": "2026-09-03",
+      "review_packet": "reports/review-gates/GATE-B2-2.1.1-GOAL-TARGET-DESIGN-1/review-packet.md",
+      "teacher_review": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-teacher-learning-quality-review.md",
+      "economic_review": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-economic-content-review.md",
+      "timing_evidence": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-timing-evidence.md",
+      "lead_review": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-lead-review-round2.md",
+      "decision_summary": "Clean-sheet replacement target aligns classification, functions, total and average cost calculations, dimensions, spreading constant costs, conditional constant GVK, and six-measure claim evaluation to the approved paragraph 2.1.1 outline.",
+      "authority_boundary": "Gate 0B-1 design and review evidence only. Exact owner approval is recorded outside this record; the target registry remains unchanged until a separate Gate 0C integration PR, and no lesson or paragraph production is authorized."
+    },
+    "target_quality_review": {
+      "sprint_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1",
+      "review_date": "2026-09-03",
+      "disposition": "reviewed_final",
+      "operation_chain": [
+        "Classify four cost components from behaviour within the stated month and production range, including two different behaviours in the energy expense category.",
+        "Construct TCK, TVK, and TK functions from the bakery context.",
+        "Calculate and interpret total and average costs at Q = 500 with full dimensions.",
+        "Calculate a reduced comparison set at Q = 1,000 and use the supplied remaining totals for the claim evaluation.",
+        "Evaluate a six-measure claim and explain spreading constant costs and conditional constant GVK."
+      ],
+      "answer_form": [
+        "Four classifications with a behaviour-based justification per component.",
+        "Three symbolic functions of Q.",
+        "One complete formula-and-substitution set at Q = 500, representative renewed substitution at Q = 1,000, and every answer with euro per month or euro per loaf dimensions.",
+        "One contextual interpretation sentence for GCK, GVK, and GTK.",
+        "Six explicit judgments with values and causal economic explanation."
+      ],
+      "mtu_mapping_decision": "A08, A14, A50, A86, and D38 cover the live calculation and constant-cost-spreading chain. Behaviour-based mixed-category classification and the conditional GVK explanation remain explicit missing-unit candidates. D02 and D26 are excluded because their break-even/MO=MK and formal variable-cost-shape content conflicts with this paragraph's non-goals.",
+      "blocks": [],
+      "does_not_block": [
+        "Separate Gate 0C target-authority integration",
+        "Separate paragraph-production and lesson-authoring gates"
+      ],
+      "proof_required_to_close": "Owner approval must bind this exact proposed-record hash; Gate 0C must then integrate only that exact record, refresh the compact target pin, pass target-authority and post-integration checks, and record the integration commit."
+    }
+  }
+}
