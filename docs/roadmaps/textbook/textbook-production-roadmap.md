@@ -2,17 +2,17 @@
 
 Generated: 2026-09-03
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.18-book2-foundation-integrated-gate0b1-active`
+Roadmap version: `v1.19-gate0b1-design-owner-review`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. `BOOK-2-FOUNDATION-OUTLINE-1` is integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The approved outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. Issue #223 Gate 0B-1 is now the active next task: exact §2.1.1 lesson-goal and replacement-target design, specialist review, and explicit owner decisions. `H-211-GATE0B1` and `H-211-TARGET-INTEGRATION` remain open. No target-registry mutation, lesson write, paragraph production, or target-specific checker is authorized in Gate 0B-1. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. `BOOK-2-FOUNDATION-OUTLINE-1` is integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The approved outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. Issue #223 Gate 0B-1 design is complete in draft PR #227 at exact goal hash `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560` and exact target hash `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`; both now await separate owner decisions. `H-211-GATE0B1` and `H-211-TARGET-INTEGRATION` remain open. No target-registry mutation, lesson write, paragraph production, target-specific checker, Gate 0C, or merge is authorized. Chapter 2.3 output, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, and student/product-use work remain outside scope.
 
 ## Operating Goal
 
-Use the integrated, owner-approved Book 2 foundation to complete Issue #223 Gate 0B-1 without crossing into target authority or lesson production. The active sprint must finalize and hash the §2.1.1 internal/student-visible goals and clean-sheet replacement-target design, prove direct operation and answer-form coverage, obtain specialist and structural review, and stop for explicit owner decisions. Gate 0C remains a separate target-registry integration PR; lesson production remains blocked until both §2.1.1 holds are released.
+Stop at the Issue #223 Gate 0B-1 owner gate. The exact §2.1.1 goal and replacement-target packages have specialist and structural PASS evidence in draft PR #227. The owner must separately approve, revise, or reject both hashes. Gate 0C remains a separate target-registry integration PR; lesson production remains blocked until both §2.1.1 holds are released.
 
 ## Book 2 Print Series
 
@@ -55,7 +55,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | no | Active platform-only Gate 0B-1 from exact integrated baseline `b6e75a558e7ddb34a3e36094a2ab8367249fa357`. Produce hashable goal/target packages, specialist timing, teacher/economic review, structural lead review, and explicit owner decisions. Keep the target registry and lesson unchanged; `H-211-GATE0B1` and `H-211-TARGET-INTEGRATION` remain open. |
+| B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Design/review bundle complete in draft PR #227 and stopped for two exact-hash owner decisions. Teacher, economics, timing, and structural lead reviews pass with bounded flags. The target registry and lesson are unchanged; `H-211-GATE0B1` and `H-211-TARGET-INTEGRATION` remain open. |
 | BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; all 13 other holds remain open. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
 | B2-2.2-TARGET-V5-PROMOTE | Book 2 Chapter 2.2 Target V5 Promotion | yes | Closed locally after promoting 2.2.1 through 2.2.4 target records to `reviewed_final`, replacing the 2.2.4 placeholder with a governed mixed-opgaven target, and rerunning the v5 target validator. |
@@ -97,4 +97,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Execute `B2-2.1.1-GOAL-TARGET-DESIGN-1` as the active Issue #223 Gate 0B-1 sprint: preserve PR #224's accepted Gate 0A evidence with exact provenance, close PR #224 as superseded, finalize and review exact goal/target packages, and stop for owner decisions. Do not mutate the target registry, edit lessons, begin paragraph production, or start Gate 0C, Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, or student/product-use work.
+Review draft PR #227 and decide separately on goal hash `afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560` and target hash `709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`. Do not mutate the target registry, edit lessons, begin paragraph production, mark the draft ready, merge, or start Gate 0C, Chapter 2.3, Book 3, product-route adoption, diagnostics/mastery/PV, Scale Gate 1, check-surface closure, or student/product-use work.

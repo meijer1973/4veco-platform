@@ -3,9 +3,10 @@
   "sprint_id": "B2-2.1.1-GOAL-TARGET-DESIGN-1",
   "name": "Book 2 Paragraph 2.1.1 Goal And Target Design",
   "created": "2026-09-03",
-  "status": "active",
+  "status": "completed_pending_human_gate",
   "issue": 223,
   "superseded_pr": 224,
+  "draft_pr": 227,
   "platform_baseline": "b6e75a558e7ddb34a3e36094a2ab8367249fa357",
   "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
   "plan": "reports/sprints/B2-2.1.1-GOAL-TARGET-DESIGN-1-plan.md",
@@ -52,6 +53,11 @@
   "holds": {
     "H-211-GATE0B1": "open",
     "H-211-TARGET-INTEGRATION": "open"
+  },
+  "review_identities": {
+    "goal_package_sha256": "afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560",
+    "proposed_target_record_sha256": "709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34",
+    "substantive_reviewed_commit": "0c18aba3fb8382bec60fdd673555c72facf8ef02"
   },
   "core_requirements": [
     "Pin the approved Book 2 outline and exact Gate 0B-1 action permissions.",

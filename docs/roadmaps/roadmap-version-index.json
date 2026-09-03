@@ -76,14 +76,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.18-book2-foundation-integrated-gate0b1-active",
+      "version": "v1.19-gate0b1-design-owner-review",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
       "updated_on": "2026-09-03",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is integrated through PR #226 merge b6e75a558e7ddb34a3e36094a2ab8367249fa357 and post-merge CI run 33724859532 passed. The outline remains approved_with_holds at semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde. Issue #223 Gate 0B-1 is active for exact §2.1.1 goal and replacement-target design, specialist review, and owner decisions. H-211-GATE0B1 and H-211-TARGET-INTEGRATION remain open. Target-registry mutation, lesson output, paragraph production, target-specific guardrails, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
+      "notes": "Active roadmap for textbook improvement and writing. BOOK-2-FOUNDATION-OUTLINE-1 is integrated through PR #226 merge b6e75a558e7ddb34a3e36094a2ab8367249fa357 and post-merge CI run 33724859532 passed. The outline remains approved_with_holds at semantic hash 69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde. Issue #223 Gate 0B-1 design is complete in draft PR #227 at exact goal hash afda7a196ae5ea9e1d23207158c33c1b32c5f5ebc928752c3fe4b54d5172a560 and target hash 709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34; both await separate owner decisions. H-211-GATE0B1 and H-211-TARGET-INTEGRATION remain open. Target-registry mutation, lesson output, paragraph production, target-specific guardrails, Gate 0C, merge, Chapter 2.3 output, Book 3, companion/product proof, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain blocked."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
