@@ -4,8 +4,8 @@
   "bundle_id": "mtu-h7-protected-canonical-adjudication-bundle-4",
   "review_standard": "REV-STD-1",
   "status": "PROTECTED_CANONICAL_ADJUDICATION_PREP_READY_FOR_HUMAN_REVIEW_NOT_EXECUTED",
-  "generated_at": "2026-08-11T14:26:36.701Z",
-  "base_main_sha": "eb8647c7310ab16d5871f2a399636f770dc63bf8",
+  "generated_at": "2026-09-04T20:28:00.406Z",
+  "base_main_sha": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
   "authority_flags": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,
@@ -100,7 +100,7 @@
     {
       "path": "references/machine/micro-teaching-units.json",
       "hash_kind": "canonical_parsed_json_sha256",
-      "sha256": "77dc835330e2dd99a53670c6a3865e47cece18e9976492c78fed50d38f87369d"
+      "sha256": "6588a10086ecd1a0f08ac4ff3870469ad011c13970737b27d66f21f59e2dc1cd"
     }
   ],
   "prior_checker_boundary": {
@@ -142,9 +142,9 @@
     "student_product_use_authorized": false
   },
   "hashes": {
-    "adjudication_matrix": "43c2ac11c82d2531c54f7dc0f3f0a2860a2d5c5d78722ec643d740946037d44e",
-    "negative_regression_fixtures": "7d05a45b36b392b61726d7f6a70b30610f117ac52c5c08b9610f5948b1dea918",
-    "pr_readiness_evidence": "d797d3b653a93dedea35b98bb778cee3d529ccb9bf4fef9f0902c5e65aeb5e59"
+    "adjudication_matrix": "9b83299a58e76e080f5573aa1b1486726f113ef6a47b1749e650a5937c63b73e",
+    "negative_regression_fixtures": "4abcc5383a1b4c6f4b44468d0e5e586f02f6ea5720dc0581e138cfbad5dfc6a2",
+    "pr_readiness_evidence": "c26297ccd3dcf9eb88a76fdda3de3c12fb43b6815d6839e263b435518cb0b991"
   },
   "prohibited_claims": [
     "No H7 full closure",

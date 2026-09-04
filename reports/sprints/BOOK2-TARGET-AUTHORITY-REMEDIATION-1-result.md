@@ -28,16 +28,20 @@ Passed locally and recorded in
   approval-block contracts;
 - 116/116 focused/currentness tests;
 - Part A, blueprint, scope, shared-lane, protected-reference CLI, roadmap,
-  report, agent-index, URL-index, evidence-line-ending, and review-throughput
-  checks;
+  current MTU-H7 Bundle 4 derivative, report, agent-index, URL-index,
+  evidence-line-ending, and review-throughput checks;
 - full platform validation: 109 suites and 1,769 tests passed, with 6 suites
   and 8 tests skipped;
 - clean unchanged lesson repository at
   `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 
 The first hosted run on `eade17cb…` failed three tests and is preserved as
-honest correction history. Final successful exact-head hosted CI is recorded in
-the review packet and PR after the evidence tail is pushed.
+honest correction history. A later run on `808eb5eb…` passed the Book 2, full
+Jest, and presentation checks but exposed that the existing MTU-H7 Bundle 4
+packet still pinned the pre-A17 registry hash. That derivative packet was
+regenerated from the governed live registry and revalidated. Final successful
+exact-head hosted CI is recorded externally on the PR after the correction tail
+is pushed.
 
 ## Changed files
 
@@ -46,7 +50,8 @@ The exact inventory is in
 review packet. It covers the twelve-record registry/package, Book 2 outline
 candidate lifecycle, the A17 terminology projection, focused checkers/tests,
 CI wiring, sprint/review evidence, roadmap bookkeeping, and deterministic
-indexes/dashboard.
+indexes/dashboard. It also includes the mechanically regenerated MTU-H7 Bundle
+4 derivative packet required by the authorized A17 change.
 
 ## Data integrity notes
 

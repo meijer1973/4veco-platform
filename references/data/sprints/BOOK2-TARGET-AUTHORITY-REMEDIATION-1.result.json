@@ -46,6 +46,7 @@
     { "command": "node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD", "status": "passed" },
     { "command": "node build-scripts/references/check-reference-cli-coverage.js", "status": "passed" },
     { "command": "node build-scripts/references/check-roadmap-version-index.js", "status": "passed" },
+    { "command": "npm.cmd run check:mtu-h7-bundle4", "status": "passed" },
     { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" },
     { "command": "npm.cmd run check:agent-index-freshness", "status": "passed" },
     { "command": "node build-scripts/sprints/emit-url-index.js --check", "status": "passed" },
@@ -130,6 +131,16 @@
       }
     ]
   },
+  "hosted_ci_corrections": [
+    {
+      "run_id": 33915059374,
+      "head_sha": "808eb5ebb5fb62fd7a44b9975b1a6c71e14ad355",
+      "status": "superseded_failure",
+      "failed_step": "Validate MTU-H7 Bundle 4 protected adjudication packet",
+      "cause": "The governed A17 update changed the live MTU registry semantic hash, but its existing Bundle 4 derivative evidence had not been regenerated.",
+      "correction": "Regenerate the Bundle 4 packet from the current live registry, rerun the protected checker, and require a new successful exact-head hosted run."
+    }
+  ],
   "authority_claims": {
     "candidate_structural_readiness": true,
     "goal_package_approved": false,

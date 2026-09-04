@@ -52,6 +52,9 @@ Exact candidate package:
   two-round structural lead trail, command log, result, and L4 review packet.
 - Refreshed the textbook roadmap/ledger, repository agent indexes, URL index,
   and internal dashboard.
+- Regenerated the existing MTU-H7 Bundle 4 derivative packet so its canonical
+  source hash and historical base metadata match the governed A17 update and
+  current Issue #229 baseline; no H7 authority state or operation changed.
 - Published substantive correction commit
   `6cd02e8d14aec293fc7cd5a662ed972d175e1a4e` and bound all renewed reviews to
   that exact commit.

@@ -1676,3 +1676,225 @@ OK sprint bundle: BOOK2-TARGET-AUTHORITY-REMEDIATION-1 complete
 ```text
 
 ```
+## npm.cmd run check:mtu-h7-bundle4
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-04T20:30:46.287Z`
+- finished_at: `2026-09-04T20:30:47.267Z`
+- duration_ms: `980`
+- exit_code: `0`
+- stdout_sha256: `cde8aeeeb751c211e0a5255f0849e85a8c15c757ddcaf26abc7fc5d7b8712473`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:mtu-h7-bundle4
+> node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js && node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json
+
+OK MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4: Bundle 4 checked (7 operations semantically bound, 7/7 negative mutations detected, route READY_FOR_HUMAN_REVIEW)
+OK review throughput packet: GATE-MTU-H7-protected-canonical-adjudication-bundle-4
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:book2-target-authority-remediation
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-04T20:30:53.165Z`
+- finished_at: `2026-09-04T20:31:01.518Z`
+- duration_ms: `8353`
+- exit_code: `0`
+- stdout_sha256: `a7b4938fe25d5292c4015fc968e1336490a24b4bb9765ff302a0ff948948c507`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book2-target-authority-remediation
+> node build-scripts/workflows/check-book2-target-authority-remediation.js --durable && node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+Book 2 target authority remediation: PASS
+- mode: durable pending-candidate invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- non-Book-2 records and machine units outside A17: unchanged
+Book 2 candidate approval block: PASS
+- structural and target-authority repair routes pass
+- approved use, integration, production, lesson authoring, and merge remain blocked
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-04T20:31:05.194Z`
+- finished_at: `2026-09-04T20:31:05.259Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-04T20:31:11.916Z`
+- finished_at: `2026-09-04T20:31:12.002Z`
+- duration_ms: `86`
+- exit_code: `0`
+- stdout_sha256: `f1afa95f2fe8b85f18fc032aebb0a6c61ec0e0d1ac87d5a6547b71a47fd671d7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:review-throughput -- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-04T20:31:17.987Z`
+- finished_at: `2026-09-04T20:31:18.408Z`
+- duration_ms: `421`
+- exit_code: `0`
+- stdout_sha256: `1c1983225fe2ff4209a4724c47c07f6f9e3de013787d4023a8ab79c201eecd3c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
+
+OK review throughput packet: GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1 --complete
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-04T20:31:25.250Z`
+- finished_at: `2026-09-04T20:31:25.867Z`
+- duration_ms: `617`
+- exit_code: `0`
+- stdout_sha256: `6aa37ebd864345cf26e39beebbf78dd4d555628432e6d05c43c7722b28fa590d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TARGET-AUTHORITY-REMEDIATION-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-04T20:31:34.486Z`
+- finished_at: `2026-09-04T20:36:32.450Z`
+- duration_ms: `297964`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `06f5492b9268d8fa07d3c6cc64fe01eb8a779c65fd91f433fb0dd847d825fb93`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 109 passed, 109 of 115 total
+Tests:       8 skipped, 1769 passed, 1777 total
+Snapshots:   0 total
+Time:        297.043 s
+Ran all test suites.
+
+```
