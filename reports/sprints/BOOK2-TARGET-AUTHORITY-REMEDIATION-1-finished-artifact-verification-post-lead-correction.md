@@ -48,6 +48,15 @@ Exact reviewed candidate package:
 - Outline semantic hash:
   `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`.
 
+## Published identity confirmation
+
+An independent read-only recheck confirmed that
+`origin/codex/book2-target-exercise-audit-20260904` resolves to exact commit
+`6cd02e8d14aec293fc7cd5a662ed972d175e1a4e`. The candidate, registry,
+alignment, checker, and focused-test identities at that commit match the
+reviewed artifact; 116/116 focused tests and the durable approval-block chain
+pass there. Result: `PASS` with no substantive drift.
+
 ## Boundary
 
 The lesson repository is clean at

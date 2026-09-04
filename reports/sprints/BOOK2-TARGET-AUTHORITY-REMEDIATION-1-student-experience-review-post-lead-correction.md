@@ -38,6 +38,14 @@ Mode: independent read-only Codex reviewer; no files edited
 - Sprint and durable checker modes, the 26-test remediation suite, and the v5
   registry checker pass.
 
+## Published identity confirmation
+
+An independent read-only recheck confirmed that
+`origin/codex/book2-target-exercise-audit-20260904` resolves to exact commit
+`6cd02e8d14aec293fc7cd5a662ed972d175e1a4e`. The published candidate is
+textually and semantically identical to the reviewed twelve-record package;
+no reviewed substantive surface differs. Result: `PASS`.
+
 ## Advisory
 
 Classroom timing remains Phase B evidence, especially for the expanded

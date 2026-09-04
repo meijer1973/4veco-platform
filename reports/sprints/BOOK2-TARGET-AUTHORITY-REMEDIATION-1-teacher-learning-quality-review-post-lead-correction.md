@@ -59,6 +59,14 @@ Sprint-scope and durable remediation checks, approval blocking, outline
 currentness, the 26-test remediation suite, and the 116-test combined focused
 suite pass.
 
+## Published identity confirmation
+
+A separate read-only evidence-binding check confirmed that
+`origin/codex/book2-target-exercise-audit-20260904` resolves to exact commit
+`6cd02e8d14aec293fc7cd5a662ed972d175e1a4e`. Every identity cited above
+recomputes from that commit and no reviewed substantive target surface differs.
+Result: `PASS`. This confirmation does not replace the teacher review.
+
 ## Advisory
 
 Empirically time §2.1.1e, §2.2.3d, and upper-edge §2.3.3 during Phase B.

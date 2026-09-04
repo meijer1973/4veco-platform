@@ -43,6 +43,14 @@ Focused/currentness Jest passed 116/116. Sprint-scope and durable remediation,
 approval blocking, v5 registry, outline currentness, and `git diff --check`
 passed.
 
+## Published identity confirmation
+
+An independent read-only recheck confirmed that
+`origin/codex/book2-target-exercise-audit-20260904` resolves to exact commit
+`6cd02e8d14aec293fc7cd5a662ed972d175e1a4e`. Direct recomputation from that
+commit produced the same package and supporting hashes above, and no reviewed
+substantive surface differs. Result: `PASS`.
+
 ## Advisory
 
 Empirically validate dense timing budgets for §2.1.1e, §2.2.3d, and §2.3.3
