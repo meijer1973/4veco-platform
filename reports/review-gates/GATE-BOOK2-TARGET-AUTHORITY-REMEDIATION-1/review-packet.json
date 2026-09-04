@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "packet_id": "GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "gate_id": "GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+  "date": "2026-09-04",
+  "issue": 229,
+  "pr_number": null,
+  "pr_url": null,
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PENDING_REMOTE_STRUCTURAL_LEAD_REVIEW",
+    "rationale": "The exact twelve-record target-authority candidate and protected A17 correction require structural lead review, successful exact-head CI, and an explicit human owner decision before any governed integration."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "book2_target_authority",
+    "protected_A17_reference_change",
+    "outline_candidate_lifecycle",
+    "lesson_and_merge_boundary"
+  ],
+  "status": "specialist_and_finished_artifact_review_passed_pending_remote_lead_review",
+  "route": "DRAFT_PR_THEN_LEAD_REVIEW_AND_OWNER_EXACT_PACKAGE_DECISION",
+  "requested_decision": "After structural lead review and exact-head CI, approve, revise, or reject candidate package 32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441. Do not authorize lessons or merge through this decision.",
+  "exact_identities": {
+    "candidate_package_sha256": "32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441",
+    "candidate_file_sha256": "62b4305df2f6d55367055fcc547c305e9a432ee7bfdedf61049f18e56837a202",
+    "registry_sha256": "e8b8aac3954b517bd54f4fb3c9a52547305d9a43287faf363c2d29f9f80944af",
+    "alignment_json_sha256": "e04f7b9c41533bd4aac75b5d05aabbe4f6685e4e76d756c6e6b477320d3dcc1a",
+    "alignment_markdown_sha256": "3d5ab1950bb4cddaaf164d59fa5f6f6e7db20a71c70cfc7efb0e21adf5a605cf",
+    "outline_semantic_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+    "platform_baseline": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
+    "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
+  },
+  "core_requirement_checklist": [
+    { "requirement": "All twelve Book 2 records repaired as one exact package", "status": "met" },
+    { "requirement": "Ei terminology resolves to inferieur, normaal, luxe with explicit boundary values", "status": "met" },
+    { "requirement": "Every required operation is visible, answerable, and mapped bidirectionally", "status": "met" },
+    { "requirement": "All answers, graphs, tables, units, and points are recalculated and checked", "status": "met" },
+    { "requirement": "Mixed targets are coherent, complete, bounded, and introduce no new theory", "status": "met" },
+    { "requirement": "Teacher, economics, student-language, and independent finished-artifact review pass", "status": "met_after_corrections" },
+    { "requirement": "Candidate state cannot imply owner approval or permit premature integration", "status": "met" },
+    { "requirement": "Lesson repository and generated student output remain unchanged", "status": "met" },
+    { "requirement": "Remote structural lead review and exact-head CI", "status": "pending" },
+    { "requirement": "Human owner exact-package decision", "status": "pending_human" }
+  ],
+  "specialist_reviews": [
+    { "role": "economics_mathematical_precision", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-final.md" },
+    { "role": "teacher_learning_quality", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-final.md" },
+    { "role": "student_language_experience", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-final.md" },
+    { "role": "finished_artifact_test_plan", "result": "PASS_AFTER_CORRECTIONS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-final.md" },
+    { "role": "structural_lead", "result": "PENDING", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md" }
+  ],
+  "holds": {
+    "issue_229_candidate_holds": "open_for_all_twelve_paragraphs",
+    "H-229-EI-SUPERSESSION": "open",
+    "approved_target_use": "blocked",
+    "target_authority_integration": "blocked",
+    "paragraph_and_lesson_production": "blocked",
+    "merge": "blocked"
+  },
+  "authority_claims": {
+    "candidate_structural_readiness": true,
+    "goal_package_approved": false,
+    "replacement_targets_approved": false,
+    "target_registry_integration_authorized": false,
+    "lesson_repository_mutation_authorized": false,
+    "paragraph_production_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "product_authority": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "student_use_authorized": false,
+    "merge_authorized": false
+  },
+  "proof": {
+    "lead_review": {
+      "path": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
+      "result": "PENDING",
+      "reviewed_commit_sha": null
+    },
+    "checkers": [
+      { "command": "node scripts/check-course-target-exercises-v5.js", "status": "passed" },
+      { "command": "node build-scripts/workflows/check-book2-target-authority-remediation.js", "status": "passed" },
+      { "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js", "status": "passed" },
+      { "command": "node build-scripts/workflows/check-book2-candidate-approval-block.js", "status": "passed" }
+    ],
+    "ci": {
+      "required_contexts": ["validate-platform"],
+      "status": "pending",
+      "reviewed_commit_sha": null
+    }
+  },
+  "changed_paths": [
+    ".github/workflows/platform-ci.yml",
+    "build-scripts/workflows/check-book-outline-currentness.js",
+    "build-scripts/workflows/check-book-outline-currentness.test.js",
+    "build-scripts/workflows/check-book2-candidate-approval-block.js",
+    "build-scripts/workflows/check-book2-target-authority-remediation.js",
+    "build-scripts/workflows/check-book2-target-authority-remediation.test.js",
+    "docs/roadmaps/textbook/sprint-ledger.md",
+    "docs/roadmaps/textbook/textbook-production-roadmap.md",
+    "package.json",
+    "references/authored/book-outlines/book-2-outline.md",
+    "references/authored/book-outlines/book-2-outline.meta.json",
+    "references/authored/course-target-exercises.json",
+    "references/authored/economie-terminologie.md",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.alignment.json",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json",
+    "references/machine/micro-teaching-units.json",
+    "references/machine/micro-teaching-units.md",
+    "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
+    "reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.md",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-*",
+    "scripts/check-course-target-exercises-v5.js"
+  ],
+  "recommended_next_action": "Publish the coherent candidate in one draft PR, obtain separate structural lead round 1 and round 2 on the exact remote head, run exact-head CI, then stop for the owner's decision on the exact package hash."
+}

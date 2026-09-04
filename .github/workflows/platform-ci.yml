@@ -96,6 +96,9 @@ jobs:
       - name: Validate Book 2 outline currentness
         run: npm run check:book-outline-currentness
 
+      - name: Validate Book 2 target authority remediation candidate
+        run: npm run check:book2-target-authority-remediation
+
       - name: Validate exercise authority hygiene
         run: npm run check:exercise-authority-hygiene
 

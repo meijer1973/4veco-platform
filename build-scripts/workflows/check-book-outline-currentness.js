@@ -32,6 +32,23 @@ const TARGET_BINDING_FIELDS = Object.freeze([
   'approved_by',
   'approved_on',
 ]);
+const CANDIDATE_BINDING_FIELDS = Object.freeze([
+  'blocked_baseline_sha256',
+  'candidate_replacement_sha256',
+  'candidate_package_sha256',
+  'candidate_evidence_ref',
+  'candidate_status',
+  'approved_replacement_sha256',
+  'approval_ref',
+  'approved_by',
+  'approved_on',
+]);
+const CANDIDATE_STATUSES = Object.freeze([
+  'implementation_candidate',
+  'specialist_reviewed_candidate',
+  'lead_reviewed_candidate',
+]);
+const ISSUE_229_REVIEW_PACKET = 'reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json';
 const GOAL_BINDING_FIELDS = Object.freeze([
   'approved_goal_package_sha256',
   'approval_ref',
@@ -46,6 +63,26 @@ const TARGET_BASELINE_BY_HOLD = Object.freeze({
   'H-232-V5': 'd1dba16d567f77717277206c1e01de3d69de5f3e5c2c68783835a81c1f7b9ab8',
   'H-233-V5-REF': '7ae371e71b3f805daa084c4a0ddf32498f8ded36acfc2f7e97a0d5f443a2d833',
   'H-234-PLACEHOLDER': '601f73e3ed958b4b6257e3ccad0a08c44138b2a2fa310bbcee8beedc120e856f',
+  'H-229-211-CANDIDATE': '709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34',
+  'H-229-214-CANDIDATE': '7a4a01e133dcdf828f4f9d7b06209d1c51ca29ff98d83876dc026f8ba973ac24',
+  'H-229-221-CANDIDATE': '4283adf5c6de9015c2daccc80b794183138ff4b7b9b5f4309bd7da80ef0304ed',
+  'H-229-222-CANDIDATE': 'b939b9f4538d9e16f5eed3c8a1f9bca03b8a2380610776105a5c8d235795ffb1',
+  'H-229-223-CANDIDATE': '5455130e28d15c2b70a77d55df346ca04c5a19d6c25da158c615fddd68ba3a17',
+  'H-229-224-CANDIDATE': '5edc21a8f3977215674013fca251719d8000c34ab9736246f119a4ef21a1476b',
+});
+const CANDIDATE_HOLD_BY_PARAGRAPH = Object.freeze({
+  '2.1.1': 'H-229-211-CANDIDATE',
+  '2.1.2': 'H-212-STALE-REF',
+  '2.1.3': 'H-213-DELTAQ',
+  '2.1.4': 'H-229-214-CANDIDATE',
+  '2.2.1': 'H-229-221-CANDIDATE',
+  '2.2.2': 'H-229-222-CANDIDATE',
+  '2.2.3': 'H-229-223-CANDIDATE',
+  '2.2.4': 'H-229-224-CANDIDATE',
+  '2.3.1': 'H-231-V5',
+  '2.3.2': 'H-232-V5',
+  '2.3.3': 'H-233-V5-REF',
+  '2.3.4': 'H-234-PLACEHOLDER',
 });
 
 const AUTHORITY_PATHS = Object.freeze([
@@ -128,6 +165,7 @@ const CHAPTER_SCOPED_ACTIONS = Object.freeze(new Set([
 const BOOK_AGGREGATE_ACTIONS = Object.freeze(new Set([
   'book_readiness',
   'whole_book_assembly',
+  'merge',
 ]));
 
 const FORBIDDEN_SEMANTIC_KEYS = Object.freeze(new Set([
@@ -406,6 +444,7 @@ function formatBinding(binding, fields) {
 
 function formatTransitionBinding(hold) {
   if (hold.target_binding) return formatBinding(hold.target_binding, TARGET_BINDING_FIELDS);
+  if (hold.candidate_binding) return formatBinding(hold.candidate_binding, CANDIDATE_BINDING_FIELDS);
   if (hold.goal_binding) return formatBinding(hold.goal_binding, GOAL_BINDING_FIELDS);
   return '—';
 }
@@ -515,8 +554,50 @@ function checkTargetBinding(failures, hold, pin) {
       || !/^\d{4}-\d{2}-\d{2}$/.test(String(binding.approved_on || ''))) {
     failures.push(`${META_PATH}: ${hold.id} approved replacement requires approval_ref, approved_by, and approved_on`);
   }
-  if (pin && ![binding.blocked_baseline_sha256, binding.approved_replacement_sha256].includes(pin.target_record_sha256)) {
+  if (hold.status === 'open' && pin && ![binding.blocked_baseline_sha256, binding.approved_replacement_sha256].includes(pin.target_record_sha256)) {
     failures.push(`${META_PATH}: ${hold.id} current target is neither the blocked baseline nor the approved replacement`);
+  }
+}
+
+function checkCandidateBinding(failures, hold, pin) {
+  const binding = hold.candidate_binding;
+  if (!binding || !equal(Object.keys(binding), CANDIDATE_BINDING_FIELDS)) {
+    failures.push(`${META_PATH}: ${hold.id} must contain the exact candidate transition binding fields`);
+    return;
+  }
+  if (!/^[0-9a-f]{64}$/i.test(String(binding.blocked_baseline_sha256 || ''))
+      || binding.blocked_baseline_sha256 !== TARGET_BASELINE_BY_HOLD[hold.id]) {
+    failures.push(`${META_PATH}: ${hold.id} blocked_baseline_sha256 must match the original reviewed baseline`);
+  }
+  if (!/^[0-9a-f]{64}$/i.test(String(binding.candidate_replacement_sha256 || ''))
+      || binding.candidate_replacement_sha256 === binding.blocked_baseline_sha256) {
+    failures.push(`${META_PATH}: ${hold.id} candidate replacement hash must be full and differ from the blocked baseline`);
+  }
+  if (!/^[0-9a-f]{64}$/i.test(String(binding.candidate_package_sha256 || ''))) {
+    failures.push(`${META_PATH}: ${hold.id} requires a full candidate_package_sha256`);
+  }
+  if (typeof binding.candidate_evidence_ref !== 'string' || binding.candidate_evidence_ref.trim() === '') {
+    failures.push(`${META_PATH}: ${hold.id} requires candidate_evidence_ref`);
+  }
+  if (!CANDIDATE_STATUSES.includes(binding.candidate_status)) {
+    failures.push(`${META_PATH}: ${hold.id} candidate_status is invalid`);
+  }
+  if (!bindingFieldsAreNull(binding, CANDIDATE_BINDING_FIELDS.slice(5))) {
+    const approvalComplete = /^[0-9a-f]{64}$/i.test(String(binding.approved_replacement_sha256 || ''))
+      && binding.approved_replacement_sha256 === binding.candidate_replacement_sha256
+      && typeof binding.approval_ref === 'string' && binding.approval_ref.trim() !== ''
+      && typeof binding.approved_by === 'string' && binding.approved_by.trim() !== ''
+      && /^\d{4}-\d{2}-\d{2}$/.test(String(binding.approved_on || ''));
+    if (!approvalComplete) failures.push(`${META_PATH}: ${hold.id} candidate approval must be complete and bind the exact candidate hash`);
+    if (binding.candidate_status !== 'lead_reviewed_candidate') {
+      failures.push(`${META_PATH}: ${hold.id} candidate approval requires candidate_status lead_reviewed_candidate`);
+    }
+  }
+  if (binding.candidate_status === 'lead_reviewed_candidate' && binding.candidate_evidence_ref !== ISSUE_229_REVIEW_PACKET) {
+    failures.push(`${META_PATH}: ${hold.id} lead-reviewed candidate evidence must point to the exact Issue #229 review packet`);
+  }
+  if (pin && ![binding.blocked_baseline_sha256, binding.candidate_replacement_sha256].includes(pin.target_record_sha256)) {
+    failures.push(`${META_PATH}: ${hold.id} current target is neither its baseline nor candidate replacement`);
   }
 }
 
@@ -580,12 +661,18 @@ function checkHolds(failures, files, meta, options) {
     const subjectId = paragraphScopes.length === 1 ? paragraphScopes[0].slice('paragraph:'.length) : null;
     const pin = (meta.target_registry_pins || []).find((item) => item.id === subjectId);
     if (isTargetIntegrationHold) {
-      checkTargetBinding(failures, hold, pin);
-      if (options.action === 'target_authority_integration' && hold.status === 'open' && holdScopeMatches(hold, options)
-          && (!hold.target_binding || hold.target_binding.approved_replacement_sha256 === null)) {
-        failures.push(`${META_PATH}: action target_authority_integration requires an exact approved replacement binding for ${hold.id}`);
+      if (hold.status === 'open' && hold.candidate_binding) checkCandidateBinding(failures, hold, pin);
+      else checkTargetBinding(failures, hold, pin);
+      const transitionBinding = hold.candidate_binding || hold.target_binding;
+      if (options.action === 'target_authority_integration' && hold.status === 'open' && holdScopeMatches(hold, options)) {
+        if (hold.candidate_binding && hold.candidate_binding.candidate_status !== 'lead_reviewed_candidate') {
+          failures.push(`${META_PATH}: action target_authority_integration requires lead_reviewed_candidate status for ${hold.id}`);
+        }
+        if (!transitionBinding || transitionBinding.approved_replacement_sha256 === null) {
+          failures.push(`${META_PATH}: action target_authority_integration requires an exact approved replacement binding for ${hold.id}`);
+        }
       }
-    } else if ('target_binding' in hold) failures.push(`${META_PATH}: non-target hold ${hold.id} must not contain target_binding`);
+    } else if ('target_binding' in hold || 'candidate_binding' in hold) failures.push(`${META_PATH}: non-target hold ${hold.id} must not contain a target transition binding`);
     if (hold.id === 'H-211-GATE0B1') checkGoalBinding(failures, hold);
     else if ('goal_binding' in hold) failures.push(`${META_PATH}: only H-211-GATE0B1 may contain goal_binding`);
     if (hold.status === 'open' && hold.release_evidence !== null) failures.push(`${META_PATH}: open hold ${hold.id} must have null release_evidence`);
@@ -606,10 +693,8 @@ function checkHolds(failures, files, meta, options) {
           failures.push(`${META_PATH}: target integration release ${hold.id} must contain the exact integration evidence fields`);
         }
         if (!subjectId || evidence.subject_id !== subjectId) failures.push(`${META_PATH}: target integration release ${hold.id} subject_id must match its single paragraph scope`);
-        if (!pin || evidence.subject_sha256 !== pin.target_record_sha256) failures.push(`${META_PATH}: target integration release ${hold.id} subject_sha256 must match the current target registry pin`);
         if (evidence.subject_sha256 !== binding.approved_replacement_sha256) failures.push(`${META_PATH}: target integration release ${hold.id} must match the exact approved replacement hash`);
         if (evidence.subject_sha256 === binding.blocked_baseline_sha256) failures.push(`${META_PATH}: target integration release ${hold.id} cannot reuse the blocked baseline hash`);
-        if (!pin || pin.target_status !== 'reviewed_final') failures.push(`${META_PATH}: target integration release ${hold.id} requires a reviewed_final target record`);
         if (!/^[0-9a-f]{40}$/i.test(String(evidence.integrated_commit || ''))) failures.push(`${META_PATH}: target integration release ${hold.id} requires a full integrated_commit SHA`);
         const integratedRecord = targetRecordAtIntegratedCommit(
           failures,
@@ -619,6 +704,9 @@ function checkHolds(failures, files, meta, options) {
         );
         if (integratedRecord && sha256(JSON.stringify(integratedRecord)) !== evidence.subject_sha256) {
           failures.push(`${META_PATH}: integrated_commit ${evidence.integrated_commit} contains a different target hash for ${subjectId}`);
+        }
+        if (integratedRecord && !['candidate_review_ready', 'reviewed_final'].includes(integratedRecord.record_status)) {
+          failures.push(`${META_PATH}: target integration release ${hold.id} requires a review-ready record at integrated_commit`);
         }
       } else if (evidence && hold.id === 'H-OUTLINE-OWNER') {
         const evidenceFields = [...RELEASE_EVIDENCE_FIELDS.slice(0, 6), 'reviewed_pr', 'reviewed_head'];
@@ -645,6 +733,32 @@ function checkHolds(failures, files, meta, options) {
       } else if (evidence && !equal(Object.keys(evidence), RELEASE_EVIDENCE_FIELDS.slice(0, 4))) {
         failures.push(`${META_PATH}: released hold ${hold.id} must contain only the exact basic release evidence fields`);
       }
+    }
+  }
+
+  const candidateHolds = holds.filter((hold) => hold && hold.status === 'open' && hold.candidate_binding);
+  if (candidateHolds.length > 0) {
+    const expectedCandidateIds = EXPECTED_ORDER.map((paragraph) => CANDIDATE_HOLD_BY_PARAGRAPH[paragraph]);
+    const actualCandidateIds = candidateHolds.map((hold) => hold.id);
+    if ((meta.issue_229_candidate || {}).approval_status === 'pending' && !equal(actualCandidateIds, expectedCandidateIds)) {
+      failures.push(`${META_PATH}: Issue #229 candidate holds must cover all twelve paragraphs in canonical order`);
+    }
+    let registry = null;
+    try { registry = JSON.parse(asText(files[TARGET_REGISTRY_PATH])); } catch (_) { /* registry parse failure is reported elsewhere */ }
+    const records = registry && Array.isArray(registry.exercises)
+      ? EXPECTED_ORDER.map((id) => registry.exercises.find((record) => record.id === id)).filter(Boolean)
+      : [];
+    const packageHash = records.length === EXPECTED_ORDER.length ? sha256(JSON.stringify(records)) : null;
+    for (const hold of candidateHolds) {
+      const paragraph = Object.keys(CANDIDATE_HOLD_BY_PARAGRAPH).find((id) => CANDIDATE_HOLD_BY_PARAGRAPH[id] === hold.id);
+      const binding = hold.candidate_binding;
+      if (!binding) continue;
+      if (binding.candidate_package_sha256 !== packageHash) failures.push(`${META_PATH}: ${hold.id} candidate package hash is stale`);
+      if (!binding.candidate_evidence_ref.includes('BOOK2-TARGET-AUTHORITY-REMEDIATION-1')) {
+        failures.push(`${META_PATH}: ${hold.id} candidate evidence must identify the Issue #229 sprint`);
+      }
+      const paragraphScopesForHold = (hold.scope || []).filter((scope) => scope.startsWith('paragraph:'));
+      if (!equal(paragraphScopesForHold, [`paragraph:${paragraph}`])) failures.push(`${META_PATH}: ${hold.id} candidate scope must match ${paragraph}`);
     }
   }
 
@@ -764,6 +878,12 @@ function checkApprovedMode(failures, meta, requireApproved) {
   const evidence = ownerHold && ownerHold.release_evidence;
   const approvalIsRequired = requireApproved || ['approved', 'approved_with_holds'].includes(meta.status) || approval.status === 'approved';
   if (!approvalIsRequired) return;
+  if (requireApproved) {
+    for (const hold of meta.holds || []) {
+      if (hold.status === 'open' && hold.candidate_binding) failures.push(`${META_PATH}: approved-use mode is blocked by open candidate hold ${hold.id}`);
+      if (hold.status === 'open' && hold.id === 'H-229-EI-SUPERSESSION') failures.push(`${META_PATH}: approved-use mode is blocked by open Ei supersession hold ${hold.id}`);
+    }
+  }
   if (!['approved', 'approved_with_holds'].includes(meta.status)) failures.push(`${META_PATH}: approved mode requires approved or approved_with_holds status`);
   if (approval.status !== 'approved') failures.push(`${META_PATH}: approved mode requires owner_approval.status=approved`);
   if (approval.approved_version !== meta.version) failures.push(`${META_PATH}: approved_version must match version`);
