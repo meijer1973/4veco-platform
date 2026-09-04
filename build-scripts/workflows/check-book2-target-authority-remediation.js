@@ -121,6 +121,18 @@ function durableLifecycleState(meta) {
       failures.push(`${id}: durable terminal state requires exact target-integration evidence`);
     }
   }
+
+  const eiHold = byId.get('H-229-EI-SUPERSESSION');
+  const eiEvidence = eiHold && eiHold.release_evidence;
+  if (!eiHold || eiHold.status !== 'released') {
+    failures.push('H-229-EI-SUPERSESSION: durable terminal state requires a released Ei supersession hold');
+  } else if (!eiEvidence
+      || eiEvidence.resolved_via !== 'outline_owner_decision'
+      || typeof eiEvidence.released_by !== 'string' || eiEvidence.released_by.trim() === ''
+      || !/^\d{4}-\d{2}-\d{2}$/.test(String(eiEvidence.released_on || ''))
+      || typeof eiEvidence.evidence_ref !== 'string' || eiEvidence.evidence_ref.trim() === '') {
+    failures.push('H-229-EI-SUPERSESSION: durable terminal state requires valid outline-owner-decision evidence');
+  }
   return { mode: failures.length === 0 ? 'retired' : 'invalid', failures };
 }
 

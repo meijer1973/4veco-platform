@@ -138,11 +138,11 @@
     {
       "id": "LR-229-05",
       "classification": "scale_blocker",
-      "finding": "The sprint checker needed a durable CI mode that does not freeze unrelated future authority data.",
-      "status": "corrected_independent_verification_pass_pending_lead_round2",
+      "finding": "The sprint checker needed a durable CI mode that neither freezes unrelated future authority data nor retires before both the twelve target holds and the separate Ei semantic supersession hold are validly released.",
+      "status": "corrected_after_round2_open_Ei_mutation_pending_lead_recheck",
       "blocks": ["permanent CI integration in the original form"],
       "does_not_block": ["bounded sprint-scope proof"],
-      "proof_required_to_close": "Durable-mode unrelated-data and post-transition tests plus lead round 2."
+      "proof_required_to_close": "Durable-mode unrelated-data, exact-package transition, open-Ei, invalid Ei evidence, and post-transition tests plus lead round 2."
     }
   ],
   "carried_flags": [

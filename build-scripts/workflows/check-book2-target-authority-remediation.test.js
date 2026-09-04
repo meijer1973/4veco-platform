@@ -99,10 +99,34 @@ describe('Book 2 target authority remediation contract', () => {
         integrated_commit: 'a'.repeat(40),
       };
     }
+    const transitionedEiHold = transitioned.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION');
+    transitionedEiHold.status = 'released';
+    transitionedEiHold.release_evidence = {
+      resolved_via: 'outline_owner_decision',
+      released_by: 'owner@example.test',
+      released_on: '2026-09-05',
+      evidence_ref: 'https://github.com/meijer1973/4veco-platform/issues/229#issuecomment-outline-owner-decision',
+    };
     transitioned.registry.exercises.find((item) => item.id === '2.1.1').lesson_goals[0] += ' Later governed revision.';
     expect(findFailures(transitioned, { durable: true })).toEqual([]);
     expect(durableLifecycleState(transitioned.meta)).toEqual({ mode: 'retired', failures: [] });
     expect(approvalBlockLifecycleMode(transitioned.meta)).toBe('retired');
+
+    const openEiSupersession = structuredClone(transitioned);
+    const openEiHold = openEiSupersession.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION');
+    openEiHold.status = 'open';
+    openEiHold.release_evidence = null;
+    expect(findFailures(openEiSupersession, { durable: true })).toEqual(expect.arrayContaining([
+      expect.stringContaining('requires a released Ei supersession hold'),
+    ]));
+    expect(() => approvalBlockLifecycleMode(openEiSupersession.meta)).toThrow('requires a released Ei supersession hold');
+
+    const invalidEiEvidence = structuredClone(transitioned);
+    invalidEiEvidence.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION').release_evidence.resolved_via = 'target_authority_integration';
+    expect(findFailures(invalidEiEvidence, { durable: true })).toEqual(expect.arrayContaining([
+      expect.stringContaining('requires valid outline-owner-decision evidence'),
+    ]));
+    expect(() => approvalBlockLifecycleMode(invalidEiEvidence.meta)).toThrow('requires valid outline-owner-decision evidence');
 
     const wrongPackage = structuredClone(transitioned);
     wrongPackage.meta.issue_229_candidate.package_sha256 = 'b'.repeat(64);
