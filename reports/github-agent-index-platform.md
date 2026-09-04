@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-03T12:25:20.331Z
+Generated: 2026-09-04T20:12:15.968Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/b2-2.1.1-target-integration-20260903`
-Source commit: `2fe750369618016e05773a0bb7ed60ad834af0f7`
-Files indexed: 7581
+Source branch: `codex/book2-target-exercise-audit-20260904`
+Source commit: `06ae201f4d3c88f851ea12a81411ee113859d522`
+Files indexed: 7627
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 720
+Count: 723
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -816,6 +816,9 @@ Count: 720
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
 - build-scripts/workflows/check-book-outline-currentness.js
 - build-scripts/workflows/check-book-outline-currentness.test.js
+- build-scripts/workflows/check-book2-candidate-approval-block.js
+- build-scripts/workflows/check-book2-target-authority-remediation.js
+- build-scripts/workflows/check-book2-target-authority-remediation.test.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
@@ -893,7 +896,7 @@ Count: 25
 
 ## validators
 
-Count: 692
+Count: 695
 
 - archive/sprints/COMPANION-WORKFLOW-GUARDRAILS-1/COMPANION-WORKFLOW-GUARDRAILS-1-validation-log.md
 - archive/sprints/GOAL-DQS-CLOSURE-1/GOAL-DQS-CLOSURE-1-validation-log.md
@@ -1284,6 +1287,9 @@ Count: 692
 - build-scripts/workflows/check-blueprint-pedagogical-boundaries.test.js
 - build-scripts/workflows/check-book-outline-currentness.js
 - build-scripts/workflows/check-book-outline-currentness.test.js
+- build-scripts/workflows/check-book2-candidate-approval-block.js
+- build-scripts/workflows/check-book2-target-authority-remediation.js
+- build-scripts/workflows/check-book2-target-authority-remediation.test.js
 - build-scripts/workflows/check-paragraph-lane-scope.js
 - build-scripts/workflows/check-paragraph-lane-scope.test.js
 - build-scripts/workflows/check-paragraph-workflow-wording.js
@@ -1590,7 +1596,7 @@ Count: 692
 
 ## references
 
-Count: 1023
+Count: 1027
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1980,6 +1986,10 @@ Count: 1023
 - references/data/sprints/BOOK-2-FOUNDATION-OUTLINE-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
+- references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.alignment.json
+- references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json
+- references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json
+- references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.result.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -2618,7 +2628,7 @@ Count: 1023
 
 ## reports
 
-Count: 4877
+Count: 4916
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4053,6 +4063,9 @@ Count: 4877
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/bundle-urls.md
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.json
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.md
+- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/bundle-urls.md
+- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
+- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.md
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.json
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/review-packet.md
@@ -5258,6 +5271,42 @@ Count: 4877
 - reports/sprints/BOOK1-FIX-1-lead-review-round2.md
 - reports/sprints/BOOK1-FIX-1-plan.md
 - reports/sprints/BOOK1-FIX-1-result.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-alignment-matrix.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-baseline.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-command-log.jsonl
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-command-log.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-diff-summary.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-final.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-post-lead-correction.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-1.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-2.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-3.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-round-4.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-corrections.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-final.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-post-lead-correction.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-round-1.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-assignment.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-corrections.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-planning-review.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-specialist-corrections.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-final.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-post-lead-correction.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-1.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-2.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-3.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-round-4.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-final.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-post-lead-correction.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-1.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-2.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-3.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-round-4.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-terminology-decision.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
