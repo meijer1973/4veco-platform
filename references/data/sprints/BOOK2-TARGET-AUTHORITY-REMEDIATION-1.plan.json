@@ -3,7 +3,8 @@
   "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
   "name": "Book 2 Target Authority Remediation",
   "created": "2026-09-04",
-  "status": "active_corrected_package_ready_for_publish_and_lead_round2",
+  "status": "completed_phase_a_waiting_owner_decision",
+  "completed_on": "2026-09-04",
   "issue": 229,
   "platform_baseline": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
   "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
@@ -89,6 +90,14 @@
     "status": "passed",
     "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
     "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-post-lead-correction.md"
+  },
+  "lead_review_round_2": {
+    "verdict": "PASS WITH FLAGS",
+    "reviewed_substantive_commit_sha": "6cd02e8d14aec293fc7cd5a662ed972d175e1a4e",
+    "reviewed_effective_commit_sha": "c324fc7fb1bd9e7f82ce3b0b2bb1aa0a4feea995",
+    "reviewed_candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
+    "carried_flag": "Empirical classroom timing remains Phase B evidence."
   },
   "core_requirements": [
     "Repair all twelve Book 2 records as one exact package.",

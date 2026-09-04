@@ -17,8 +17,8 @@ Review mode: separate read-only structural lead; not human owner review
 
 ## Scope
 
-The review covered draft PR #230 and the exact remote head above. Evidence
-inspected: Issue #229, the source audit PDF, Issues #218 and #221, product end
+The review covered draft PR #230 and the exact remote head above.
+Evidence inspected: Issue #229, the source audit PDF, Issues #218 and #221, product end
 state, `reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md`,
 `references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json`,
 `references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.alignment.json`,
@@ -65,7 +65,7 @@ hosted CI, and the sprint checker would freeze unrelated future authority data.
 
 ## Blocking Findings
 
-LR-229-01 through LR-229-05 block final routing. Missing core requirements
+Blocking findings exist: LR-229-01 through LR-229-05 block final routing. Missing core requirements
 cannot be carried under PASS WITH FLAGS.
 
 ## Specialist Findings

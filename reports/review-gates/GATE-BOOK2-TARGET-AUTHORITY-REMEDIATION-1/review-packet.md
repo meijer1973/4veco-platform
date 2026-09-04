@@ -49,9 +49,12 @@ approval is not proposed by this packet.
 - Finished artifact/test plan: PASS after a round-1 blocker correction and
   independent recheck.
 - Structural lead round 1: REVISE on `eade17c…`; its two content blockers and
-  commit-relative fixture blocker are corrected in the new package, while
-  renewed specialist and finished-artifact review pass; round 2 remains pending.
-- Local full validation and hosted exact-head CI: pending closure tail.
+  commit-relative fixture blocker are corrected in the new package.
+- Structural lead round 2: PASS WITH FLAGS at effective head `c324fc7f…` on
+  substantive package commit `6cd02e8d…`; the only carried flag is empirical
+  classroom timing for Phase B.
+- Final local validation: PASS with 109 suites and 1,769 tests; hosted
+  exact-head CI remains the final publication tail.
 
 The specialist and verifier reports are independent Codex role reviews, not
 human owner approval.
@@ -85,9 +88,8 @@ student-output generation, Phase B, or merge.
 
 All twelve Issue #229 candidate holds and `H-229-EI-SUPERSESSION` remain open.
 Approved use, target integration, paragraph/chapter/book production, lesson
-authoring, and merge remain blocked. The PR must stay draft. After structural
-lead review and successful exact-head CI, stop for the owner's exact-package
-decision.
+authoring, and merge remain blocked. The PR must stay draft. After successful
+final exact-head CI, stop for the owner's exact-package decision.
 
 Stop immediately if a core requirement or specialist disagreement remains, an
 exact hash drifts, any required validator/CI job fails, or closure would require

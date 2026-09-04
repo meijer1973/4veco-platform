@@ -56,7 +56,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | no | Active Issue #229 Phase A. Structural lead round 1 requested corrections; package `914d1a39…71310` now passes renewed specialist and finished-artifact review. Round 2, exact-head CI, and owner decision remain pending. Lesson writes, target integration, owner approval, and merge remain blocked. |
+| BOOK2-TARGET-AUTHORITY-REMEDIATION-1 | Book 2 Target Authority Remediation | yes | Issue #229 Phase A complete with structural lead `PASS WITH FLAGS` on exact package `914d1a39…71310`; only empirical classroom timing is carried to Phase B. The package is `lead_reviewed_candidate`, not owner-approved. Exact owner decision, target/Ei integration, lesson work, Phase B, and merge remain blocked. |
 | B2-2.1.1-GOAL-TARGET-DESIGN-1 | Book 2 Paragraph 2.1.1 Goal And Target Design | yes | Both exact package hashes are owner-approved in PR #227 comment `5524345692`. `H-211-GATE0B1` is released; `H-211-TARGET-INTEGRATION` remains open with the approved replacement binding. The target registry and lesson are unchanged. Exact-head transition CI and separate payload authorization remain before governed PR #227 integration. |
 | BOOK-2-FOUNDATION-OUTLINE-1 | Book 2 Foundation And Outline | yes | Integrated through PR #226 merge `b6e75a558e7ddb34a3e36094a2ab8367249fa357`; post-merge CI run `33724859532` passed. The outline remains `approved_with_holds` at semantic hash `69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde`. `H-OUTLINE-OWNER` and `H-MERGE-GOVERNANCE` are released; all 13 other holds remain open. |
 | B2-2.2-CHAPTER-QA-1 | Book 2 Chapter 2.2 Chapter QA | yes | Closed locally after final assembled Chapter 2.2 output, answer-model output, rendered proof, validators, and lead review. Chapter 2.2 contains exactly 2.2.1, 2.2.2, 2.2.3, and 2.2.4. |
@@ -99,4 +99,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Publish the corrected Issue #229 package to the draft PR, obtain structural lead round 2 and exact-head CI, then stop for the owner's decision on the exact twelve-record package hash. Do not edit lessons, generate output, integrate targets, or merge.
+Stop for the owner's explicit approve/revise/reject decision on exact package `914d1a39…71310` and the Ei semantic supersession. Do not edit lessons, generate output, integrate targets, begin Phase B, or merge.
