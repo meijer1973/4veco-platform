@@ -48,3 +48,20 @@ blocker was found.
 This PASS establishes independent finished-artifact/test-plan readiness only.
 It is not structural lead review, owner approval, target integration, lesson
 authorization, PR readiness, or merge authority.
+
+## Published-head fixture recheck
+
+After the first substantive commit made the candidate registry the repository
+`HEAD`, the full suite exposed a test-fixture defect: the integration fixture
+had initialized historical §2.1.1 proof from mutable `HEAD`. The fixture now
+reads the immutable integrated commit recorded by
+`H-211-TARGET-INTEGRATION.release_evidence.integrated_commit`.
+
+A renewed independent read-only recheck passed. The recorded integrated commit
+`30e0d5c2f71c64ee31ecadb614559d9431d392a5` contains §2.1.1 hash
+`709535d15ab3c89b7cfe3bac27ae9a152044cbd7611057b3bdf0defec1cc3f34`,
+while the current candidate record has the distinct hash
+`02c11af1545497be20cda3144997edc77253a1a51c58d027dc6ea45e4f4fc6d2`.
+The package hash remains exact. Focused/currentness Jest again passed 114/114,
+the remediation and approval-block checks passed, `git diff --check` passed,
+and the lesson repository remained clean at its pinned head.

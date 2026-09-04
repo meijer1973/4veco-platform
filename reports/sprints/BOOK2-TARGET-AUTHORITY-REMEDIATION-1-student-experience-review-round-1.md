@@ -30,4 +30,3 @@
 8. Replace abstract or inaccurate wording, including “60 kopers,” ambiguous interval placement, and unexplained Qd/Qs abbreviations.
 
 Rendered contrast, OCR, font-size, alt-text, and final graph readability remain explicit Phase B review work and were not claimed in this Phase A source review.
-

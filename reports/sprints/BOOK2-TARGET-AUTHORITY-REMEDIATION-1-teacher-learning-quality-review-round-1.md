@@ -32,4 +32,3 @@
 9. Correct graph prerequisites and record missing operation units instead of using semantic mismatches.
 
 The review preserved the sound arithmetic, explicit contexts, demand-only boundary, interval-normalised MK/MO, and supplied-base-graph approach.
-

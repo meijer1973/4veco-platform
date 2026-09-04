@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
-  "candidate_package_sha256": "32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441",
+  "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
   "records": [
     {
       "id": "2.1.1",
@@ -51,8 +51,9 @@
         {
           "label": "e",
           "minutes": 3,
-          "points": 3,
+          "points": 4,
           "observable_actions": [
+            "vergelijkt TCK, TVK en TK in twee Q-staten",
             "verklaart GCK, GVK en GTK",
             "noemt de modelgrenzen"
           ]
@@ -113,9 +114,9 @@
           "authority": [
             "book-2-outline model conditions"
           ],
-          "answer_form": "drie oorzakelijke oordelen met modelgrenzen",
+          "answer_form": "totale-kostenvergelijking en drie oorzakelijke gemiddelde-kostenoordelen met modelgrenzen",
           "source_sufficiency": "beide Q-staten en proportionaliteitsaanname staan in context",
-          "calculation_evidence": "GCK halveert; GVK blijft gelijk; GTK halveert niet"
+          "calculation_evidence": "TCK 500→500; TVK 400→800; TK 900→1.300; GCK halveert; GVK blijft gelijk; GTK halveert niet"
         }
       ]
     },
@@ -713,13 +714,13 @@
     },
     {
       "id": "2.2.3",
-      "estimated_minutes": 10,
+      "estimated_minutes": 11,
       "budget_class": "theory_8_12",
       "question_time_minutes": {
         "a": 2,
         "b": 1,
         "c": 3,
-        "d": 2,
+        "d": 3,
         "e": 2
       },
       "question_budgets": [
@@ -750,11 +751,12 @@
         },
         {
           "label": "d",
-          "minutes": 2,
-          "points": 3,
+          "minutes": 3,
+          "points": 4,
           "observable_actions": [
             "berekent twee functiewaarden",
-            "benoemt richting en constanten"
+            "berekent Ei met oude waarden als noemer",
+            "classificeert normaal en benoemt richting en constanten"
           ]
         },
         {
@@ -772,7 +774,8 @@
           "goal": 1,
           "questions": [
             "a",
-            "b"
+            "b",
+            "d"
           ],
           "classification": "new_formal_learning",
           "authority": [
@@ -780,9 +783,9 @@
             "D11",
             "D1.7"
           ],
-          "answer_form": "twee Ei-berekeningen en classificaties",
-          "source_sufficiency": "inkomens- en hoeveelheidspercentages en classificatiegrenzen zijn gegeven",
-          "calculation_evidence": "Ei 1,6 luxe; Ei −0,6 inferieur"
+          "answer_form": "drie Ei-berekeningen en classificaties",
+          "source_sufficiency": "bronpercentages, classificatiegrenzen en de inkomensfunctie met twee toestanden zijn gegeven",
+          "calculation_evidence": "Ei 1,6 luxe; Ei −0,6 inferieur; functie-Ei 0,769 normaal"
         },
         {
           "goal": 2,

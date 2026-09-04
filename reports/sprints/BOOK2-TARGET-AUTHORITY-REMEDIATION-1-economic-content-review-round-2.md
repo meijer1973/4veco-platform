@@ -24,4 +24,3 @@ All surplus anchors were independently recalculated and confirmed:
 
 - §2.3.3: at P=25 and Q=40, CS=€600, PS=€600, TS=€1.200, DWL=€150; at Q=41, betalingsbereidheid=€29,50 and MK=€15,25.
 - §2.3.4: at P=45 and Q=30, CS=€600, PS=€525, TS=€1.125, DWL=€75; at Q=31, betalingsbereidheid=€49 and MK=€35,50.
-

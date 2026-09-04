@@ -44,8 +44,13 @@ beforeAll(() => {
   git(['init']);
   git(['config', 'user.email', 'checker@example.test']);
   git(['config', 'user.name', 'Book outline checker']);
+  const currentMeta = JSON.parse(fs.readFileSync(path.join(root, META_PATH), 'utf8'));
+  const historicalIntegration = currentMeta.holds.find((hold) => hold.id === 'H-211-TARGET-INTEGRATION');
+  const historicalCommit = historicalIntegration && historicalIntegration.release_evidence
+    ? historicalIntegration.release_evidence.integrated_commit
+    : 'HEAD';
   integrationBaselineCommit = commitRegistrySnapshot(
-    execFileSync('git', ['show', `HEAD:${TARGET_REGISTRY_PATH}`], { cwd: root }),
+    execFileSync('git', ['show', `${historicalCommit}:${TARGET_REGISTRY_PATH}`], { cwd: root }),
     'baseline target registry fixture',
   );
 });

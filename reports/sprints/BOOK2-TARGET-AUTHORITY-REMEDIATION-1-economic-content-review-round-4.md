@@ -7,4 +7,3 @@
 - Reviewed candidate file SHA-256: `83a00f12b50fe5adedfd50114f18b931a45632af08af0f31dc8c07a5b61b0d4b`
 
 All round-3 economics findings were confirmed resolved. Every numerical anchor, sign, denominator, unit, interval width, surplus area, binding constraint, transaction count, allocation assumption, break-even nuance, exam code, and skill route passed independent recalculation. Nonblocking flags were limited to stale review-status prose and the need to validate design-time estimates with learners in Phase B.
-

@@ -1,6 +1,7 @@
 'use strict';
 
-const { findFailures, readInputs } = require('./check-book2-target-authority-remediation');
+const { durableLifecycleState, findFailures, readInputs } = require('./check-book2-target-authority-remediation');
+const { approvalBlockLifecycleMode } = require('./check-book2-candidate-approval-block');
 
 let baseline;
 
@@ -60,6 +61,74 @@ describe('Book 2 target authority remediation contract', () => {
     const units = unitInput.units.units || unitInput.units;
     units.find((unit) => unit.id !== 'A17').name += ' mutated';
     expectFailure(unitInput, 'changed outside A17 scope');
+  });
+
+  test('durable CI mode does not freeze unrelated data and retires after the candidate transition', () => {
+    const futureUnrelated = clone();
+    futureUnrelated.registry.exercises.find((item) => item.module !== 2).difficulty = 'FUTURE_REVIEWED_VALUE';
+    const futureUnits = futureUnrelated.units.units || futureUnrelated.units;
+    futureUnits.find((unit) => unit.id !== 'A17').name += ' future reviewed update';
+    expect(findFailures(futureUnrelated, { durable: true })).toEqual([]);
+
+    const transitioned = clone();
+    transitioned.meta.issue_229_candidate = {
+      ...transitioned.meta.issue_229_candidate,
+      status: 'integrated',
+      approval_status: 'integrated',
+      integrated_commit: 'a'.repeat(40),
+      integration_evidence_ref: 'https://github.com/meijer1973/4veco-platform/pull/230',
+    };
+    for (const hold of transitioned.meta.holds.filter((item) => item.candidate_binding)) {
+      const binding = hold.candidate_binding;
+      hold.status = 'released';
+      hold.target_binding = {
+        blocked_baseline_sha256: binding.blocked_baseline_sha256,
+        approved_replacement_sha256: binding.candidate_replacement_sha256,
+        approval_ref: 'https://github.com/meijer1973/4veco-platform/issues/229#issuecomment-owner-approval',
+        approved_by: 'owner@example.test',
+        approved_on: '2026-09-05',
+      };
+      delete hold.candidate_binding;
+      hold.release_evidence = {
+        resolved_via: 'target_authority_integration',
+        released_by: 'owner@example.test',
+        released_on: '2026-09-05',
+        evidence_ref: 'https://github.com/meijer1973/4veco-platform/pull/230',
+        subject_id: hold.scope.find((scope) => scope.startsWith('paragraph:')).slice('paragraph:'.length),
+        subject_sha256: hold.target_binding.approved_replacement_sha256,
+        integrated_commit: 'a'.repeat(40),
+      };
+    }
+    transitioned.registry.exercises.find((item) => item.id === '2.1.1').lesson_goals[0] += ' Later governed revision.';
+    expect(findFailures(transitioned, { durable: true })).toEqual([]);
+    expect(durableLifecycleState(transitioned.meta)).toEqual({ mode: 'retired', failures: [] });
+    expect(approvalBlockLifecycleMode(transitioned.meta)).toBe('retired');
+
+    const wrongPackage = structuredClone(transitioned);
+    wrongPackage.meta.issue_229_candidate.package_sha256 = 'b'.repeat(64);
+    expect(findFailures(wrongPackage, { durable: true })).toEqual(expect.arrayContaining([
+      expect.stringContaining('requires the exact reviewed package hash'),
+    ]));
+    expect(() => approvalBlockLifecycleMode(wrongPackage.meta)).toThrow('requires the exact reviewed package hash');
+
+    for (const invalidStatus of ['typo', null, undefined]) {
+      const invalid = clone();
+      if (invalidStatus === undefined) delete invalid.meta.issue_229_candidate.approval_status;
+      else invalid.meta.issue_229_candidate.approval_status = invalidStatus;
+      expect(findFailures(invalid, { durable: true })).toEqual(expect.arrayContaining([
+        expect.stringContaining('approval_status must be pending or integrated'),
+      ]));
+      expect(() => approvalBlockLifecycleMode(invalid.meta)).toThrow('approval_status must be pending or integrated');
+    }
+
+    const incompleteTerminal = clone();
+    incompleteTerminal.meta.issue_229_candidate.approval_status = 'integrated';
+    expect(findFailures(incompleteTerminal, { durable: true })).toEqual(expect.arrayContaining([
+      expect.stringContaining('durable terminal state requires status integrated'),
+      expect.stringContaining('durable terminal state requires a full integrated_commit'),
+      expect.stringContaining('durable terminal state requires a released target binding'),
+    ]));
+    expect(() => approvalBlockLifecycleMode(incompleteTerminal.meta)).toThrow('durable terminal state');
   });
 
   test('rejects the stale Ei category and invented boundary classifications', () => {
@@ -239,6 +308,16 @@ describe('Book 2 target authority remediation contract', () => {
     const percentagePoints = clone();
     candidate(percentagePoints, '2.2.3').exam_codes.push('A2.5');
     expectFailure(percentagePoints, 'A2.5 may not be claimed');
+  });
+
+  test('rejects missing total-cost and normal-good operations in point-bearing prompts', () => {
+    const totalCost = clone();
+    candidate(totalCost, '2.1.1').target_exercise.subquestions.find((question) => question.label === 'e').prompt = 'Leg de gemiddelde kosten uit.';
+    expectFailure(totalCost, 'visible total-cost comparison');
+
+    const normalGood = clone();
+    candidate(normalGood, '2.2.3').target_exercise.subquestions.find((question) => question.label === 'd').prompt = 'Bereken beide functiewaarden en noem de richting.';
+    expectFailure(normalGood, 'visible normal-good Ei operation');
   });
 
   test('rejects demand-only equilibrium wording', () => {

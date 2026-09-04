@@ -4,17 +4,25 @@ Generated: 2026-09-04
 
 Issue: #229
 
+Draft PR: https://github.com/meijer1973/4veco-platform/pull/230
+
 Route: `DRAFT_PR_THEN_LEAD_REVIEW_AND_OWNER_EXACT_PACKAGE_DECISION`
+
+Product end state: `../4veco-lessen/specifications/product-end-state.md`
+
+Original specification: Issue #229,
+`reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md`, the approved
+Book 2 outline/meta, and `../Boek_2_doelopgaven_en_lesdoelen_audit.pdf`.
 
 ## Exact package
 
 The requested human decision will bind the complete twelve-record Book 2
 candidate package:
 
-`32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441`
+`914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`
 
 Candidate-file SHA-256:
-`62b4305df2f6d55367055fcc547c305e9a432ee7bfdedf61049f18e56837a202`.
+`aba9f8f0408905820cc94ed49eb5f8deef4a5ed4aca66e42d1fb171c935d3675`.
 
 The package covers §2.1.1 through §2.3.4. It is one authority decision: partial
 approval is not proposed by this packet.
@@ -40,8 +48,9 @@ approval is not proposed by this packet.
 - Student language/experience: PASS.
 - Finished artifact/test plan: PASS after a round-1 blocker correction and
   independent recheck.
-- Structural lead: pending until the coherent package is pushed to the draft
-  PR and can be reviewed against an exact remote commit.
+- Structural lead round 1: REVISE on `eade17c…`; its two content blockers and
+  commit-relative fixture blocker are corrected in the new package, while
+  renewed specialist and finished-artifact review pass; round 2 remains pending.
 - Local full validation and hosted exact-head CI: pending closure tail.
 
 The specialist and verifier reports are independent Codex role reviews, not
@@ -64,9 +73,9 @@ human owner approval.
 
 Choose exactly one:
 
-- `APPROVE EXACT BOOK 2 TARGET PACKAGE 32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441`
-- `REVISE EXACT BOOK 2 TARGET PACKAGE 32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441` with named corrections
-- `REJECT EXACT BOOK 2 TARGET PACKAGE 32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441`
+- `APPROVE EXACT BOOK 2 TARGET PACKAGE 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`
+- `REVISE EXACT BOOK 2 TARGET PACKAGE 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310` with named corrections
+- `REJECT EXACT BOOK 2 TARGET PACKAGE 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`
 
 Approval would authorize only a separately governed target-authority
 integration transition. It would not itself authorize lesson writes,
@@ -79,3 +88,8 @@ Approved use, target integration, paragraph/chapter/book production, lesson
 authoring, and merge remain blocked. The PR must stay draft. After structural
 lead review and successful exact-head CI, stop for the owner's exact-package
 decision.
+
+Stop immediately if a core requirement or specialist disagreement remains, an
+exact hash drifts, any required validator/CI job fails, or closure would require
+a lesson write, generated student output, premature authority transition, or
+merge. A missing core requirement cannot be carried under PASS WITH FLAGS.

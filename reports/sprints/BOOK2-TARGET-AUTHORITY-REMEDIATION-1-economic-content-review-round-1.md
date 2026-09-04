@@ -27,4 +27,3 @@ All numerical anchors in the reviewed package were independently recalculated. T
 ## Disposition
 
 `2.1.3`, `2.1.4`, `2.2.1`, and `2.2.4` passed only with required corrections. Every other record required revision before economics approval.
-

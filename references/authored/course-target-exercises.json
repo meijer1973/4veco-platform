@@ -1363,8 +1363,8 @@
           },
           {
             "label": "e",
-            "points": 3,
-            "prompt": "Leg met de uitkomsten uit waarom GCK halveert, GVK gelijk blijft en GTK niet halveert als Q verdubbelt. Begrens je uitleg tot één maand, Q = 500–1.000 en gelijkblijvende productiecapaciteit."
+            "points": 4,
+            "prompt": "Vergelijk eerst TCK, TVK en TK bij Q = 500 en Q = 1.000. Leg daarna met de uitkomsten uit waarom GCK halveert, GVK gelijk blijft en GTK niet halveert als Q verdubbelt. Begrens je uitleg tot één maand, Q = 500–1.000 en gelijkblijvende productiecapaciteit."
           }
         ]
       },
@@ -1401,19 +1401,19 @@
         "D1.17",
         "A2.10"
       ],
-      "difficulty_notes": "Kandidaat voor circa 11 minuten: één classificatietabel, drie functies, twee compacte gemiddelde-kostenrijen en één begrensde vergelijking.",
+      "difficulty_notes": "Kandidaat voor circa 11 minuten: één classificatietabel, drie functies, twee compacte gemiddelde-kostenrijen en één begrensde vergelijking van totale en gemiddelde kosten.",
       "answer_form_expectations": [
         "classificatietabel met reden",
         "drie functies",
         "twee gemiddelde-kostenrijen met eenheid",
-        "drie begrensde verklaringen"
+        "totale-kostenvergelijking en drie begrensde gemiddelde-kostenverklaringen"
       ],
       "short_answer_model": {
         "a": "Huur/verzekering en aansluiting/abonnement zijn constant: hun totale maandbedrag verandert niet met Q. Meel/verpakking en ovenverbruik zijn variabel: hun totale bedrag neemt per brood toe.",
         "b": "TCK = 500; TVK = 0,80Q; TK = 500 + 0,80Q (bedragen in euro per maand).",
         "c": "Bij Q=500: GCK=500/500=€1,00 per brood; GVK=0,80×500/500=€0,80 per brood; GTK=500/500+0,80=€1,80 per brood.",
         "d": "Bij Q=1.000: GCK=€0,50 per brood; GVK=€0,80 per brood; GTK=€1,30 per brood.",
-        "e": "GCK halveert van €1,00 naar €0,50 per brood doordat dezelfde TCK over tweemaal zoveel broden worden verdeeld. GVK blijft €0,80 doordat de variabele kosten per brood gelijk blijven. GTK daalt van €1,80 naar €1,30 en halveert niet, omdat alleen GCK halveert. Dit geldt binnen de genoemde maand, Q-grenzen en gelijkblijvende productiecapaciteit."
+        "e": "Bij Q=500 zijn TCK=€500, TVK=€400 en TK=€900 per maand; bij Q=1.000 zijn TCK=€500, TVK=€800 en TK=€1.300 per maand. TCK blijft gelijk, TVK verdubbelt en TK stijgt maar verdubbelt niet. GCK halveert van €1,00 naar €0,50 per brood doordat dezelfde TCK over tweemaal zoveel broden worden verdeeld. GVK blijft €0,80 doordat de variabele kosten per brood gelijk blijven. GTK daalt van €1,80 naar €1,30 en halveert niet, omdat alleen GCK halveert. Dit geldt binnen de genoemde maand, Q-grenzen en gelijkblijvende productiecapaciteit."
       },
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.1",
       "paragraph_kind": "theory",
@@ -2069,8 +2069,8 @@
           },
           {
             "label": "d",
-            "points": 3,
-            "prompt": "Bereken Qx in de beginsituatie en nadat alleen Y stijgt naar 33.000. Leg uit wat met Qx gebeurt en welke variabelen gelijk blijven."
+            "points": 4,
+            "prompt": "Bereken Qx in de beginsituatie en nadat alleen Y stijgt naar 33.000. Bereken daarna %ΔQx, Ei en classificeer fitnessdienst X. Leg uit wat met Qx gebeurt en welke variabelen gelijk blijven."
           },
           {
             "label": "e",
@@ -2114,18 +2114,18 @@
         "D1.8",
         "D1.9"
       ],
-      "difficulty_notes": "Kandidaat voor circa 10 minuten. De elasticiteiten worden eenmaal uit bronpercentages berekend; de twee functievragen vragen alleen niveau, richting en gelijkblijvende variabelen.",
+      "difficulty_notes": "Kandidaat voor circa 11 minuten. De bronpercentages leveren luxe en inferieur; de inkomensmutatie in de functie levert aanvullend de categorie normaal. De laatste functie-invulling vraagt richting en gelijkblijvende variabelen.",
       "answer_form_expectations": [
         "Ei inclusief teken",
         "driewegclassificatie",
         "Ek met benoemde goederen",
-        "twee functie-invullingen met richting"
+        "functie-invulling met Ei-normaalclassificatie en een functie-invulling met richting"
       ],
       "short_answer_model": {
         "a": "Maaltijdpakketten: Ei=+8%/+5%=+1,6. Budgetnoedels: Ei=−3%/+5%=−0,6.",
         "b": "Maaltijdpakketten: luxegoed (Ei>1). Budgetnoedels: inferieur goed (Ei<0).",
         "c": "Theevraag ten opzichte van koffieprijs: Ek=+4%/+10%=+0,4, dus thee en koffie zijn substituten. Vraag naar koffiefilters ten opzichte van koffieprijs: Ek=−6%/+10%=−0,6, dus koffiefilters en koffie zijn complementen.",
-        "d": "Qx oud=100−20+10+300=390 abonnementen per maand. Bij Y=33.000: Qx=420. Qx stijgt met 30; Px en Pz blijven gelijk.",
+        "d": "Qx oud=100−20+10+300=390 abonnementen per maand. Bij Y=33.000: Qx=420. %ΔQx=(420−390)/390×100%=7,69% en %ΔY=(33.000−30.000)/30.000×100%=10%. Ei=7,69%/10%=0,769, dus fitnessdienst X is hier een normaal goed. Qx stijgt met 30; Px en Pz blijven gelijk.",
         "e": "Na reset geldt Qx=390. Bij Pz=24: Qx=100−20+12+300=392 abonnementen per maand. Een hogere prijs van sportdienst Z hangt in deze functie samen met een hogere vraag naar fitnessdienst X; Px en Y blijven gelijk."
       },
       "source_ref": "references/owned/course-blueprint-v5.md §2.2.3",

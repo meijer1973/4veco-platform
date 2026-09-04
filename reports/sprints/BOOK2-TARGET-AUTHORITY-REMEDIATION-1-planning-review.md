@@ -1,7 +1,7 @@
 # BOOK2-TARGET-AUTHORITY-REMEDIATION-1 Planning Review
 
-Date: 2026-09-04  
-Reviewer: independent planning-review agent (`planning_review`)  
+Date: 2026-09-04
+Reviewer: independent planning-review agent (`planning_review`)
 Verdict: `PASS_WITH_CORRECTIONS`
 
 Implementation remained paused until all blocking findings below were reflected

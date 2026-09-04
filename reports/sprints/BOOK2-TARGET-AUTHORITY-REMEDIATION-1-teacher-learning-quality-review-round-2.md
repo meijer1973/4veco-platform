@@ -18,4 +18,3 @@
 ## Disposition
 
 The package required another substantive redesign before teacher approval. Passing arithmetic alone was not sufficient; the visible learner workload and prerequisite chain had to become independently auditable.
-

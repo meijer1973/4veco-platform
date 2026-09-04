@@ -15,4 +15,3 @@
 5. Reconcile the compound graph/scoring demands in §2.3.3d and §2.3.4 question 4.
 
 Rendered accessibility remains a Phase B concern because this Phase A package contains source specifications rather than final rendered exercises.
-

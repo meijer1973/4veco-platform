@@ -7,4 +7,3 @@
 - Reviewed candidate file SHA-256: `62b4305df2f6d55367055fcc547c305e9a432ee7bfdedf61049f18e56837a202`
 
 The final §2.2.4 goal states precisely that Ev is selected/classified/explained while Ei and Ek are calculated/classified. Registry, alignment, answer labels, remediation checks, and focused tests pass. No student-language blocker remains; rendered accessibility remains explicitly deferred to Phase B.
-

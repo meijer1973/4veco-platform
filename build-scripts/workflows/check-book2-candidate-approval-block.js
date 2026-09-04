@@ -2,7 +2,9 @@
 'use strict';
 
 const path = require('path');
+const fs = require('fs');
 const { spawnSync } = require('child_process');
+const { durableLifecycleState } = require('./check-book2-target-authority-remediation');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const CHECKER = path.join(ROOT, 'build-scripts', 'workflows', 'check-book-outline-currentness.js');
@@ -45,7 +47,20 @@ function expectBlocked(args, needle, label) {
   }
 }
 
+function approvalBlockLifecycleMode(meta) {
+  const lifecycle = durableLifecycleState(meta);
+  if (lifecycle.failures.length > 0) throw new Error(lifecycle.failures.join('\n- '));
+  return lifecycle.mode;
+}
+
 function main() {
+  const meta = JSON.parse(fs.readFileSync(path.join(ROOT, 'references/authored/book-outlines/book-2-outline.meta.json'), 'utf8'));
+  const lifecycleMode = approvalBlockLifecycleMode(meta);
+  if (lifecycleMode === 'retired') {
+    console.log('Book 2 candidate approval block: PASS');
+    console.log('- retired after fully evidenced Issue #229 target integration');
+    return;
+  }
   expectPass([], 'structural currentness');
   for (const [paragraph, hold] of PARAGRAPHS) {
     expectPass(['--action', 'target_authority_repair', '--paragraph', paragraph], `${paragraph} repair`);
@@ -65,4 +80,4 @@ if (require.main === module) {
   try { main(); } catch (error) { console.error(`Book 2 candidate approval block: FAIL\n- ${error.message}`); process.exit(1); }
 }
 
-module.exports = { PARAGRAPHS, main };
+module.exports = { PARAGRAPHS, approvalBlockLifecycleMode, main };

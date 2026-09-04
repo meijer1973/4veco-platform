@@ -39,6 +39,9 @@ const ALIGNMENT_FIELDS = Object.freeze([
   'source_sufficiency', 'calculation_evidence',
 ]);
 const QUESTION_BUDGET_FIELDS = Object.freeze(['label', 'minutes', 'points', 'observable_actions']);
+const DURABLE_PENDING_STATUS = 'pending';
+const DURABLE_TERMINAL_STATUS = 'integrated';
+const REVIEWED_PACKAGE_SHA256 = '914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310';
 
 function sha256(value) {
   return crypto.createHash('sha256').update(Buffer.isBuffer(value) ? value : Buffer.from(String(value))).digest('hex');
@@ -83,6 +86,42 @@ function textOf(value) {
 
 function requireMatch(errors, id, text, pattern, purpose) {
   if (!pattern.test(text)) errors.push(`${id}: missing ${purpose}`);
+}
+
+function durableLifecycleState(meta) {
+  const candidate = meta && meta.issue_229_candidate;
+  const approvalStatus = candidate && candidate.approval_status;
+  if (approvalStatus === DURABLE_PENDING_STATUS) return { mode: 'pending', failures: [] };
+  if (approvalStatus !== DURABLE_TERMINAL_STATUS) {
+    return {
+      mode: 'invalid',
+      failures: [`Issue #229 durable lifecycle approval_status must be ${DURABLE_PENDING_STATUS} or ${DURABLE_TERMINAL_STATUS}`],
+    };
+  }
+
+  const failures = [];
+  if (candidate.status !== DURABLE_TERMINAL_STATUS) failures.push('Issue #229 durable terminal state requires status integrated');
+  if (!/^[0-9a-f]{40}$/i.test(String(candidate.integrated_commit || ''))) failures.push('Issue #229 durable terminal state requires a full integrated_commit');
+  if (typeof candidate.integration_evidence_ref !== 'string' || candidate.integration_evidence_ref.trim() === '') failures.push('Issue #229 durable terminal state requires integration_evidence_ref');
+  if (candidate.package_sha256 !== REVIEWED_PACKAGE_SHA256) failures.push('Issue #229 durable terminal state requires the exact reviewed package hash');
+
+  const byId = new Map((meta.holds || []).map((hold) => [hold.id, hold]));
+  for (const id of HOLD_IDS) {
+    const hold = byId.get(id);
+    if (!hold || hold.status !== 'released' || hold.candidate_binding || !hold.target_binding) {
+      failures.push(`${id}: durable terminal state requires a released target binding without candidate binding`);
+      continue;
+    }
+    const approved = hold.target_binding.approved_replacement_sha256;
+    const evidence = hold.release_evidence;
+    if (!/^[0-9a-f]{64}$/i.test(String(approved || ''))
+        || !evidence || evidence.resolved_via !== 'target_authority_integration'
+        || evidence.subject_sha256 !== approved
+        || !/^[0-9a-f]{40}$/i.test(String(evidence.integrated_commit || ''))) {
+      failures.push(`${id}: durable terminal state requires exact target-integration evidence`);
+    }
+  }
+  return { mode: failures.length === 0 ? 'retired' : 'invalid', failures };
 }
 
 function validateConcreteSources(errors, id, sources) {
@@ -211,13 +250,13 @@ function validateAlignmentMarkdown(errors, alignment, markdown, packageHash) {
 
 function validateRecordSpecific(errors, byId) {
   const checks = {
-    '2.1.1': [[/TCK = 500/, 'TCK function'], [/GVK blijft €0,80/, 'bounded GVK answer'], [/500–1\.000/, 'production range'], [/hun totale maandbedrag verandert niet met Q/, 'cause for constant-cost judgment'], [/doordat dezelfde TCK over tweemaal zoveel broden worden verdeeld/, 'cause for GCK judgment'], [/omdat alleen GCK halveert/, 'cause for GTK judgment'], [/table.*kostencomponent.*soort kosten.*reden/s, 'structured classification table']],
+    '2.1.1': [[/TCK = 500/, 'TCK function'], [/Bij Q=500 zijn TCK=€500, TVK=€400 en TK=€900.*bij Q=1\.000 zijn TCK=€500, TVK=€800 en TK=€1\.300/s, 'two-state total-cost comparison'], [/TCK blijft gelijk, TVK verdubbelt en TK stijgt maar verdubbelt niet/, 'total-cost change explanation'], [/GVK blijft €0,80/, 'bounded GVK answer'], [/500–1\.000/, 'production range'], [/hun totale maandbedrag verandert niet met Q/, 'cause for constant-cost judgment'], [/doordat dezelfde TCK over tweemaal zoveel broden worden verdeeld/, 'cause for GCK judgment'], [/omdat alleen GCK halveert/, 'cause for GTK judgment'], [/table.*kostencomponent.*soort kosten.*reden/s, 'structured classification table']],
     '2.1.2': [[/Q=714,2857/, 'continuous break-even'], [/eerste gehele aantal broden zonder verlies is 715/, 'whole-unit break-even'], [/Horizontale as: hoeveelheid Q \(broden per maand\).*Verticale as: TK en TO \(€ per maand\)/s, 'graph axes and units'], [/verticale afstand €1\.500−€1\.300=€200/, 'profit as vertical distance'], [/voor Q>0.*GO=.*=P/s, 'GO=P domain condition']],
     '2.1.3': [[/MK=.*€5 bij Q=5.*MK=€15 bij Q=10.*MK=€25 bij Q=15/s, 'normalized Curva MK at right endpoints'], [/\(230−200\)\/\(10−0\)=€3/, 'explicit Delta Q denominator'], [/Gebruik geen afgeleiden/, 'pre-calculus boundary'], [/Trek geen conclusie over de winstmaximaliserende afzet/, 'output-choice boundary'], [/table.*Q.*TK.*TO.*winst.*MK.*MO/s, 'true table representation']],
     '2.1.4': [[/Q=400 lunchboxen/, 'break-even'], [/MK=€3,00\/€3,50\/€4,00 per lunchbox/, 'rush MK'], [/basisgrafiek/, 'supplied representation'], [/snelst van Q=400 tot Q=700/, 'largest profit-growth range'], [/MO−MK=€5−€2=€3.*€2,00, €1,50 en €1,00/s, 'complete marginal comparison'], [/table.*Q.*TK.*TO/s, 'true table source']],
     '2.2.1': [[/Ev=−16%\/\+20%=−0,8/, 'inelastic calculation'], [/A38/, 'percentage-change prerequisite'], [/D1\.5/, 'correct exam code D1.5'], [/D1\.6/, 'correct exam code D1.6']],
     '2.2.2': [[/€5\.000 per week.*€5\.040 per week/s, 'cinema revenue'], [/€20\.000 per maand.*€17\.600 per maand/s, 'stream revenue'], [/TO stijgt met €40\/€5\.000×100%=0,8%/, 'finite cinema revenue change'], [/%ΔTO=\(17\.600−20\.000\)\/20\.000×100%=−12%/, 'signed finite stream revenue change'], [/Lokale regel: bij een kleine prijsstijging/, 'local revenue rule boundary'], [/kostengegevens ontbreken.*geen hogere winst/s, 'profit limit'], [/D25 concerns a different mathematical skill/, 'D25 noncoverage gap']],
-    '2.2.3': [[/Ei<0 inferieur goed, 0<Ei<1 normaal goed en Ei>1 luxegoed/, 'three-way Ei rule'], [/kruislingse elasticiteit geldt Ek=/, 'authored Ek definition'], [/Qx oud=.*390 abonnementen per maand.*Qx=420/s, 'income function outputs'], [/Bij Pz=24: Qx=.*392 abonnementen per maand/s, 'cross-price function outputs'], [/thee en koffie zijn substituten.*koffiefilters en koffie zijn complementen/s, 'named Ek goods'], [/A15 from §2\.2\.1/, 'percentage-change prerequisite']],
+    '2.2.3': [[/Ei<0 inferieur goed, 0<Ei<1 normaal goed en Ei>1 luxegoed/, 'three-way Ei rule'], [/kruislingse elasticiteit geldt Ek=/, 'authored Ek definition'], [/Qx oud=.*390 abonnementen per maand.*Qx=420/s, 'income function outputs'], [/Ei=7,69%\/10%=0,769, dus fitnessdienst X is hier een normaal goed/, 'observable normal-good calculation and classification'], [/Bij Pz=24: Qx=.*392 abonnementen per maand/s, 'cross-price function outputs'], [/thee en koffie zijn substituten.*koffiefilters en koffie zijn complementen/s, 'named Ek goods'], [/A15 from §2\.2\.1/, 'percentage-change prerequisite']],
     '2.2.4': [[/Ev=−0,7/, 'mixed Ev'], [/Ei=15%\/8%=1,875/, 'mixed Ei'], [/Ek=5%\/12,5%=0,4/, 'mixed Ek'], [/Q oud=.*14\.200 abonnementen per maand.*Q=14\.400 abonnementen per maand/s, 'demand-function consolidation'], [/D1\.5/, 'exam-code coverage D1.5'], [/D1\.6/, 'exam-code coverage D1.6'], [/table.*gegeven.*oud.*nieuw.*prijs Standaard/s, 'table source representation']],
     '2.3.1': [[/Noem dit niet de evenwichtshoeveelheid/, 'demand-only wording'], [/alle bij deze prijs gevraagde kaartjes worden verkocht/, 'realized-sales assumption without leaked quantity'], [/hoogste betalingsbereidheid/, 'allocation assumption'], [/Qd.*60 kaartjes/, 'demand quantity'], [/Horizontale as: Q \(kaartjes\).*Verticale as: P \(€ per kaartje\)/s, 'graph axes and units'], [/½×60×\(50−20\)=€900/, 'CS area'], [/60 verkochte kaartjes/, 'sold-ticket interpretation']],
     '2.3.2': [[/inverse aanbodlijn voor 0≤Q≤100 de marginale kosten/, 'bounded supply-as-MC'], [/CS=½×60×\(50−20\)=€900.*PS=½×60×\(20−5\)=€450/s, 'CS/PS anchors'], [/Q=50: betalingsbereidheid=€25 en MK=€17,50/, 'below-equilibrium comparison'], [/Q=70: betalingsbereidheid=€15 en MK=€22,50/, 'above-equilibrium comparison'], [/geen volledig maatschappelijk oordeel/, 'social-welfare boundary']],
@@ -232,6 +271,10 @@ function validateRecordSpecific(errors, byId) {
   const marginalPrompts = new Map((byId.get('2.1.3').target_exercise.subquestions || []).map((question) => [String(question.label), question.prompt || '']));
   requireMatch(errors, '2.1.3', marginalPrompts.get('a') || '', /vul\b.*\btabel\b.*\bwinstkolom/i, 'visible Linea table-completion action');
   requireMatch(errors, '2.1.3', marginalPrompts.get('d') || '', /bereken\b.*\bMK\b.*\bMO\b.*\bvul\b.*\brechter eindpunten/i, 'visible Curva interval-table action');
+  const costPrompt = (byId.get('2.1.1').target_exercise.subquestions || []).find((question) => question.label === 'e');
+  requireMatch(errors, '2.1.1', (costPrompt || {}).prompt || '', /vergelijk\b.*\bTCK\b.*\bTVK\b.*\bTK\b/i, 'visible total-cost comparison');
+  const incomePrompt = (byId.get('2.2.3').target_exercise.subquestions || []).find((question) => question.label === 'd');
+  requireMatch(errors, '2.2.3', (incomePrompt || {}).prompt || '', /%ΔQx.*\bEi\b.*classificeer/i, 'visible normal-good Ei operation');
   if (textOf(byId.get('2.1.2')).includes('§1.3.2')) errors.push('2.1.2: stale Book 1 bakery dependency');
   if (/MK=€5, €15 en €25/.test((byId.get('2.1.3').target_exercise.subquestions || []).map((question) => question.prompt).join('\n'))) errors.push('2.1.3: expected Curva MK answers leak into a student prompt');
   if ((byId.get('2.2.1').exam_codes || []).includes('D1.3')) errors.push('2.2.1: stale exam code D1.3');
@@ -261,8 +304,14 @@ function validateRecordSpecific(errors, byId) {
   if (!(byId.get('2.2.2').exam_codes || []).includes('A2.4')) errors.push('2.2.2: A2.4 is required for the visible percentage calculation');
 }
 
-function findFailures(input) {
+function findFailures(input, options = {}) {
   const errors = [];
+  const durable = options.durable === true;
+  if (durable) {
+    const lifecycle = durableLifecycleState(input.meta);
+    errors.push(...lifecycle.failures);
+    if (lifecycle.mode !== 'pending') return errors;
+  }
   const candidates = input.candidates || [];
   const ids = candidates.map((item) => item.id);
   if (canonical(ids) !== canonical(IDS)) errors.push('candidate package must contain the canonical twelve Book 2 records in order');
@@ -292,14 +341,17 @@ function findFailures(input) {
   const baselineHistorical = (input.baselineMeta.holds || []).find((hold) => hold.id === historicalId);
   if (canonical(historical) !== canonical(baselineHistorical)) errors.push('historical released 2.1.1 target binding/evidence changed');
 
-  const baselineNonBook2 = (input.baselineRegistry.exercises || []).filter((item) => item.module !== 2);
-  const currentNonBook2 = (input.registry.exercises || []).filter((item) => item.module !== 2);
-  if (canonical(currentNonBook2) !== canonical(baselineNonBook2)) errors.push('a non-Book-2 target record changed');
-  const baselineUnits = new Map((input.baselineUnits.units || input.baselineUnits || []).map((unit) => [unit.id, unit]));
-  const currentUnits = new Map((input.units.units || input.units || []).map((unit) => [unit.id, unit]));
-  for (const [id, unit] of baselineUnits) {
-    if (id !== 'A17' && canonical(currentUnits.get(id)) !== canonical(unit)) errors.push(`machine unit ${id} changed outside A17 scope`);
+  if (!durable) {
+    const baselineNonBook2 = (input.baselineRegistry.exercises || []).filter((item) => item.module !== 2);
+    const currentNonBook2 = (input.registry.exercises || []).filter((item) => item.module !== 2);
+    if (canonical(currentNonBook2) !== canonical(baselineNonBook2)) errors.push('a non-Book-2 target record changed');
+    const baselineUnits = new Map((input.baselineUnits.units || input.baselineUnits || []).map((unit) => [unit.id, unit]));
+    const currentUnits = new Map((input.units.units || input.units || []).map((unit) => [unit.id, unit]));
+    for (const [id, unit] of baselineUnits) {
+      if (id !== 'A17' && canonical(currentUnits.get(id)) !== canonical(unit)) errors.push(`machine unit ${id} changed outside A17 scope`);
+    }
   }
+  const currentUnits = new Map((input.units.units || input.units || []).map((unit) => [unit.id, unit]));
   const a17 = currentUnits.get('A17');
   const a17Text = textOf(a17);
   if (!/Ei < 0 = inferieur goed, 0 < Ei < 1 = normaal goed, Ei > 1 = luxegoed/.test(a17Text) || /noodzakelijk/i.test(a17Text)) errors.push('A17 does not implement the canonical three-way Ei route');
@@ -313,13 +365,15 @@ function findFailures(input) {
 }
 
 function main() {
-  const failures = findFailures(readInputs());
+  const durable = process.argv.slice(2).includes('--durable');
+  const failures = findFailures(readInputs(), { durable });
   if (failures.length > 0) {
     console.error('Book 2 target authority remediation: FAIL');
     for (const failure of failures) console.error(`- ${failure}`);
     process.exit(1);
   }
   console.log('Book 2 target authority remediation: PASS');
+  console.log(`- mode: ${durable ? 'durable pending-candidate invariant' : 'Issue #229 sprint-scope proof'}`);
   console.log('- exact candidate records: 12');
   console.log('- goal/question alignment and workload budgets: complete');
   console.log('- non-Book-2 records and machine units outside A17: unchanged');
@@ -327,4 +381,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { IDS, PATHS, findFailures, readInputs, sha256 };
+module.exports = { IDS, PATHS, REVIEWED_PACKAGE_SHA256, durableLifecycleState, findFailures, readInputs, sha256 };

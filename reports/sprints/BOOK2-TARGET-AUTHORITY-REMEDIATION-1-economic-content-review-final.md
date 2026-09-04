@@ -7,4 +7,3 @@
 - Reviewed candidate file SHA-256: `62b4305df2f6d55367055fcc547c305e9a432ee7bfdedf61049f18e56837a202`
 
 The final §2.2.4 goal now matches questions 1, 2, and 4 exactly. The candidate and active registry match 12/12; package hashes, focused checker, approval blocker, and tests pass. No economics blocker remains. This verdict does not release approval, integration, production, lesson-authoring, or merge holds.
-

@@ -1,6 +1,6 @@
 # Book 2 `Ei` Terminology Decision
 
-Date: 2026-09-04  
+Date: 2026-09-04
 Decision status: Issue #229 candidate rule; owner approval pending
 
 ## Decision

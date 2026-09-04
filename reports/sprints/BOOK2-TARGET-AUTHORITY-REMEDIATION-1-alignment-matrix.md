@@ -1,7 +1,7 @@
 # BOOK2-TARGET-AUTHORITY-REMEDIATION-1 Alignment Matrix
 
 Status: specialist-reviewed candidate; all three final exact rechecks passed.
-Candidate package SHA-256: `32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441`.
+Candidate package SHA-256: `914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`.
 
 This human-readable matrix is paired with the machine-readable alignment file.
 The focused checker compares every goal-to-question map on both surfaces.
@@ -15,7 +15,7 @@ Machine map: goal 1 → a; goal 2 → b; goal 3 → c,d; goal 4 → e
 | 1 | Classify four cost components by behaviour within one month and unchanged capacity. | a | Completed four-row classification table with a reason per component. |
 | 2 | Construct `TCK`, `TVK`, and `TK`. | b | `TCK=500`; `TVK=0,80Q`; `TK=500+0,80Q`. |
 | 3 | Calculate average costs with dimensions in two states. | c,d | At Q500: GCK 1,00, GVK 0,80, GTK 1,80; at Q1000: 0,50/0,80/1,30. |
-| 4 | Explain changes when Q doubles. | e | Three judgments with economic causes and a capacity-bounded GVK explanation. |
+| 4 | Explain how total and average costs change when Q doubles. | e | TCK 500→500, TVK 400→800, TK 900→1.300, plus three average-cost judgments with economic causes and a capacity-bounded GVK explanation. |
 
 ## 2.1.2 Opbrengsten, winst en break-even
 
@@ -74,11 +74,11 @@ Machine map: goal 1 → a,c; goal 2 → e; goal 3 → b,d; goal 4 → f
 
 ## 2.2.3 Inkomenselasticiteit en kruislingse elasticiteit
 
-Machine map: goal 1 → a,b; goal 2 → c; goal 3 → d,e; goal 4 → d,e
+Machine map: goal 1 → a,b,d; goal 2 → c; goal 3 → d,e; goal 4 → d,e
 
 | Goal | Visible operation | Questions | Answer evidence |
 |---|---|---|---|
-| 1 | Calculate and classify Ei with canonical open intervals. | a,b | +1,6 luxe and −0,6 inferieur; Ei=0/1 remain boundary values. |
+| 1 | Calculate and classify Ei with canonical open intervals. | a,b,d | +1,6 luxe, −0,6 inferieur, and function-derived 0,769 normal; Ei=0/1 remain boundary values. |
 | 2 | Calculate Ek and name both goods. | c | Tea/coffee +0,4 substitutes; filters/coffee −0,6 complements. |
 | 3 | Substitute in a fully defined multivariable demand function. | d,e | Qx 390→420 after income change; reset then 390→392 after Pz change. |
 | 4 | State how one changed variable relates to Q while other variables remain equal. | d,e | Positive Y–Qx and Pz–Qx directions, with unchanged variables named. |
@@ -162,7 +162,7 @@ to be a positive integer and to sum exactly to the stated total.
 | 2.1.4 | 1:2, 2:3, 3:3, 4:4, 5:5, 6:3 | 20 | mixed consolidation |
 | 2.2.1 | a3, b2, c2, d2 | 9 | theory |
 | 2.2.2 | a2, b2, c2, d2, e2, f1 | 11 | theory |
-| 2.2.3 | a2, b1, c3, d2, e2 | 10 | theory |
+| 2.2.3 | a2, b1, c3, d3, e2 | 11 | theory |
 | 2.2.4 | 1:2, 2:3, 3:3, 4:5, 5:3, 6:4 | 20 | mixed consolidation |
 | 2.3.1 | a2, b3, c1, d2, e2 | 10 | theory |
 | 2.3.2 | a2, b2, c3, d2, e2 | 11 | theory |

@@ -5,8 +5,8 @@
   "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
   "date": "2026-09-04",
   "issue": 229,
-  "pr_number": null,
-  "pr_url": null,
+  "pr_number": 230,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/230",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "high_authority",
@@ -24,15 +24,42 @@
     "outline_candidate_lifecycle",
     "lesson_and_merge_boundary"
   ],
-  "status": "specialist_and_finished_artifact_review_passed_pending_remote_lead_review",
+  "status": "corrected_package_specialist_and_finished_artifact_pass_pending_publish_lead_round2_and_ci",
   "route": "DRAFT_PR_THEN_LEAD_REVIEW_AND_OWNER_EXACT_PACKAGE_DECISION",
-  "requested_decision": "After structural lead review and exact-head CI, approve, revise, or reject candidate package 32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441. Do not authorize lessons or merge through this decision.",
+  "requested_decision": "After renewed specialist and structural lead review plus exact-head CI, approve, revise, or reject candidate package 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310. Do not authorize lessons or merge through this decision.",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "https://github.com/meijer1973/4veco-platform/issues/229",
+    "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md",
+    "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.plan.json",
+    "references/authored/book-outlines/book-2-outline.md",
+    "references/authored/book-outlines/book-2-outline.meta.json",
+    "../Boek_2_doelopgaven_en_lesdoelen_audit.pdf"
+  ],
+  "non_negotiable_requirements": [
+    "Repair all twelve Book 2 records as one exact package.",
+    "Expose every promised learner operation in point-bearing prompts and short answers.",
+    "Use the canonical three-way Ei classification with explicit boundary values.",
+    "Preserve accurate economics, mathematics, units, graphs, tables, sources, and scoring.",
+    "Require specialist, finished-artifact, structural lead, full local, and exact-head CI proof.",
+    "Keep approval fields null and all candidate, Ei, lesson, integration, and merge gates blocked.",
+    "Do not modify the lesson repository or generate student-facing output."
+  ],
+  "stop_conditions": [
+    "Any unresolved core requirement or specialist disagreement.",
+    "Any candidate, registry, alignment, or evidence hash mismatch.",
+    "Any need to write lesson files or generate student output.",
+    "Any failure of focused, full local, or hosted exact-head validation.",
+    "Any attempted owner-approval, integration, merge, or Phase B claim without a separate explicit decision."
+  ],
   "exact_identities": {
-    "candidate_package_sha256": "32f5325a542445eb093b0e645304afae7542b2c92e491c8bd09ace9fefa71441",
-    "candidate_file_sha256": "62b4305df2f6d55367055fcc547c305e9a432ee7bfdedf61049f18e56837a202",
-    "registry_sha256": "e8b8aac3954b517bd54f4fb3c9a52547305d9a43287faf363c2d29f9f80944af",
-    "alignment_json_sha256": "e04f7b9c41533bd4aac75b5d05aabbe4f6685e4e76d756c6e6b477320d3dcc1a",
-    "alignment_markdown_sha256": "3d5ab1950bb4cddaaf164d59fa5f6f6e7db20a71c70cfc7efb0e21adf5a605cf",
+    "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+    "candidate_file_sha256": "aba9f8f0408905820cc94ed49eb5f8deef4a5ed4aca66e42d1fb171c935d3675",
+    "registry_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+    "alignment_json_sha256": "fc7f59c74bd695e7009785a0ca2762666547c8a4d5577fb25d215d5ec421ccaa",
+    "alignment_markdown_sha256": "a56f626d5f911594704a2a1c229e327d188829923987a503579b4cf85e2f5937",
     "outline_semantic_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
     "platform_baseline": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
     "lesson_head": "f09fd6e88edc5049b026b16b0158e7e188091d2d"
@@ -43,18 +70,19 @@
     { "requirement": "Every required operation is visible, answerable, and mapped bidirectionally", "status": "met" },
     { "requirement": "All answers, graphs, tables, units, and points are recalculated and checked", "status": "met" },
     { "requirement": "Mixed targets are coherent, complete, bounded, and introduce no new theory", "status": "met" },
-    { "requirement": "Teacher, economics, student-language, and independent finished-artifact review pass", "status": "met_after_corrections" },
+    { "requirement": "Teacher, economics, student-language, and independent finished-artifact review pass", "status": "met_on_corrected_exact_package" },
     { "requirement": "Candidate state cannot imply owner approval or permit premature integration", "status": "met" },
     { "requirement": "Lesson repository and generated student output remain unchanged", "status": "met" },
     { "requirement": "Remote structural lead review and exact-head CI", "status": "pending" },
     { "requirement": "Human owner exact-package decision", "status": "pending_human" }
   ],
   "specialist_reviews": [
-    { "role": "economics_mathematical_precision", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-final.md" },
-    { "role": "teacher_learning_quality", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-final.md" },
-    { "role": "student_language_experience", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-final.md" },
-    { "role": "finished_artifact_test_plan", "result": "PASS_AFTER_CORRECTIONS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-final.md" },
-    { "role": "structural_lead", "result": "PENDING", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md" }
+    { "role": "economics_mathematical_precision", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-economic-content-review-post-lead-correction.md" },
+    { "role": "teacher_learning_quality", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-teacher-learning-quality-review-post-lead-correction.md" },
+    { "role": "student_language_experience", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-student-experience-review-post-lead-correction.md" },
+    { "role": "finished_artifact_test_plan", "result": "PASS", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-finished-artifact-verification-post-lead-correction.md" },
+    { "role": "structural_lead_round_1", "result": "REVISE", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md" },
+    { "role": "structural_lead_round_2", "result": "PENDING", "evidence": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md" }
   ],
   "holds": {
     "issue_229_candidate_holds": "open_for_all_twelve_paragraphs",
@@ -79,6 +107,54 @@
     "student_use_authorized": false,
     "merge_authorized": false
   },
+  "findings": [
+    {
+      "id": "LR-229-01",
+      "classification": "core_spec_failure",
+      "finding": "The first published head failed the commit-relative historical integration fixture.",
+      "status": "corrected_local_pass_pending_publish_round2_and_exact_head_ci",
+      "blocks": ["final routing until revalidated"],
+      "does_not_block": ["publishing the corrected commit"],
+      "proof_required_to_close": "Focused/full local PASS and validate-platform success on the corrected exact head."
+    },
+    {
+      "id": "LR-229-02",
+      "classification": "core_spec_failure",
+      "finding": "§2.1.1 omitted a visible total-cost change operation.",
+      "status": "corrected_specialist_pass_pending_lead_round2",
+      "blocks": ["package approval until rereviewed"],
+      "does_not_block": ["correction work"],
+      "proof_required_to_close": "Renewed specialist PASS and lead round 2 on package 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310."
+    },
+    {
+      "id": "LR-229-03",
+      "classification": "core_spec_failure",
+      "finding": "§2.2.3 omitted an observable normal-good Ei classification.",
+      "status": "corrected_specialist_pass_pending_lead_round2",
+      "blocks": ["package approval until rereviewed"],
+      "does_not_block": ["the canonical terminology decision"],
+      "proof_required_to_close": "Renewed specialist PASS and lead round 2 on the corrected function-derived Ei operation."
+    },
+    {
+      "id": "LR-229-05",
+      "classification": "scale_blocker",
+      "finding": "The sprint checker needed a durable CI mode that does not freeze unrelated future authority data.",
+      "status": "corrected_independent_verification_pass_pending_lead_round2",
+      "blocks": ["permanent CI integration in the original form"],
+      "does_not_block": ["bounded sprint-scope proof"],
+      "proof_required_to_close": "Durable-mode unrelated-data and post-transition tests plus lead round 2."
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "LR-229-06",
+      "classification": "minor_carry_flag",
+      "flag": "Classroom timing, especially §2.3.3, remains specialist-calibrated rather than observed.",
+      "blocks": ["classroom-proven timing claims"],
+      "does_not_block": ["Phase A structural candidate review"],
+      "proof_required_to_close": "Representative Phase B learner/teacher timing and any resulting calibration."
+    }
+  ],
   "proof": {
     "lead_review": {
       "path": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md",
@@ -121,5 +197,5 @@
     "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-*",
     "scripts/check-course-target-exercises-v5.js"
   ],
-  "recommended_next_action": "Publish the coherent candidate in one draft PR, obtain separate structural lead round 1 and round 2 on the exact remote head, run exact-head CI, then stop for the owner's decision on the exact package hash."
+  "recommended_next_action": "Commit and push corrected package 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310 to draft PR #230, obtain structural lead round 2 and successful exact-head hosted CI, then stop for the owner's exact-package decision."
 }
