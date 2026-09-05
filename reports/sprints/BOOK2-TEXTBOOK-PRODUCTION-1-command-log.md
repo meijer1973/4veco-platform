@@ -9044,3 +9044,467 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-root-r7-check.py
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:34:13.441Z`
+- finished_at: `2026-09-05T21:34:18.502Z`
+- duration_ms: `5061`
+- exit_code: `0`
+- stdout_sha256: `933fa5a90f43820a399f930f3f579e4feaec6ee0643347a2b577d55e91dd1f3b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "checks": 129,
+  "artifacts": 24,
+  "changed_artifacts": [
+    "2.1.3 Marginale kosten en marginale opbrengsten \u2013 antwoorden.md",
+    "2.1.3 Marginale kosten en marginale opbrengsten \u2013 antwoorden.html",
+    "2.1.3 Marginale kosten en marginale opbrengsten \u2013 antwoorden.pdf",
+    "2.1.3 Marginale kosten en marginale opbrengsten \u2013 antwoorden.zip"
+  ],
+  "unchanged_artifacts": 20,
+  "exact_source_insertion": true,
+  "complete_answer_DOM_reversal": true,
+  "old13tests_byte_identical": true,
+  "actual_pages": 30,
+  "root_personally_viewed_answer_pages": 7,
+  "unchanged_pupil_pages_from_root_prior_exact_transfer": 23,
+  "current_root_print_only": "PASS: 24 exact artifacts",
+  "current_root_full_generator": "NOT RUN: unchanged guard requires accepted212 source successor",
+  "expected_historical212_md": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+  "actual_current212_md": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+  "original_pair_full_and_print_proof": "Published builder evidence bound exactly; independent R7 paragraph/QC still pending",
+  "canonical_review_QC": "R6/legacy unchanged; no acceptance/handoff"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/213/test_source.py -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:34:18.550Z`
+- finished_at: `2026-09-05T21:34:19.817Z`
+- duration_ms: `1267`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `94e38b66d56452de1221eb4b7b7598233892e3e77fe44b193d735a8d3839e00d`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_altered_target_fails_closed (__main__.SourceTests.test_altered_target_fails_closed) ... ok
+test_bad_prerequisite_stops_before_process_or_output_write (__main__.SourceTests.test_bad_prerequisite_stops_before_process_or_output_write) ... ok
+test_common_exercise_source_and_no_live_or_timing_copy (__main__.SourceTests.test_common_exercise_source_and_no_live_or_timing_copy) ... ok
+test_discrete_arithmetic_all_cases (__main__.SourceTests.test_discrete_arithmetic_all_cases) ... ok
+test_exact_seven_exercise_headings (__main__.SourceTests.test_exact_seven_exercise_headings) ... ok
+test_formula_totals_independently (__main__.SourceTests.test_formula_totals_independently) ... ok
+test_frozen_target_and_native_cells (__main__.SourceTests.test_frozen_target_and_native_cells) ... ok
+test_initial_and_completed_tables_match_case_values (__main__.SourceTests.test_initial_and_completed_tables_match_case_values) ... ok
+test_native_pandoc_short_alts_keep_full_captions (__main__.SourceTests.test_native_pandoc_short_alts_keep_full_captions) ... ok
+test_original_long_alts_and_caption_loss_are_rejected (__main__.SourceTests.test_original_long_alts_and_caption_loss_are_rejected) ... ok
+test_retrieval_combination_and_unequal_intervals (__main__.SourceTests.test_retrieval_combination_and_unequal_intervals) ... ok
+test_six_assets_safe_geometry_large_type (__main__.SourceTests.test_six_assets_safe_geometry_large_type) ... ok
+test_six_exact_noun_first_accessible_titles (__main__.SourceTests.test_six_exact_noun_first_accessible_titles) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.792s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/213/test_bonus_contract.py -v
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:34:19.857Z`
+- finished_at: `2026-09-05T21:34:20.280Z`
+- duration_ms: `423`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `378357b36a13640d21cd6eff458282e4edea37d3992822fd4b72da908e4c684a`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+test_bad_position_count_and_coverage_are_rejected (__main__.BonusCriteriaTests.test_bad_position_count_and_coverage_are_rejected) ... ok
+test_current_source_contains_bounded_criteria (__main__.BonusCriteriaTests.test_current_source_contains_bounded_criteria) ... ok
+test_native_answer_html_preserves_three_criteria (__main__.BonusCriteriaTests.test_native_answer_html_preserves_three_criteria) ... ok
+test_old_missing_block_negative_fixture_is_rejected (__main__.BonusCriteriaTests.test_old_missing_block_negative_fixture_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.112s
+
+OK
+
+```
+## C:/Python314/python.exe build-scripts/content/book-2/213/check_render.py reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-root-native-r7.json
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:34:20.326Z`
+- finished_at: `2026-09-05T21:34:29.469Z`
+- duration_ms: `9143`
+- exit_code: `0`
+- stdout_sha256: `751e7a6bfea46577d1438a1238fd6100dea87e740f80ac51d0d1d3aeb8cba5a0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "paragraph": "2.1.3",
+  "automated_result": "PASS",
+  "inspection_status": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pages": 14,
+      "minimum_text_pt_including_footer": 12.0,
+      "minimum_placed_figure_font_pt": 15.685038248697916,
+      "images": 6,
+      "pdf_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "html_sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+      "zip_sha256": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+      "page_geometry_checks": [
+        {
+          "page": 1,
+          "text_characters": 1437,
+          "images": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 990,
+          "images": 2
+        },
+        {
+          "page": 3,
+          "text_characters": 1535,
+          "images": 1
+        },
+        {
+          "page": 4,
+          "text_characters": 1604,
+          "images": 0
+        },
+        {
+          "page": 5,
+          "text_characters": 988,
+          "images": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 1357,
+          "images": 0
+        },
+        {
+          "page": 7,
+          "text_characters": 828,
+          "images": 1
+        },
+        {
+          "page": 8,
+          "text_characters": 1434,
+          "images": 0
+        },
+        {
+          "page": 9,
+          "text_characters": 757,
+          "images": 0
+        },
+        {
+          "page": 10,
+          "text_characters": 969,
+          "images": 1
+        },
+        {
+          "page": 11,
+          "text_characters": 1384,
+          "images": 0
+        },
+        {
+          "page": 12,
+          "text_characters": 1058,
+          "images": 0
+        },
+        {
+          "page": 13,
+          "text_characters": 1066,
+          "images": 0
+        },
+        {
+          "page": 14,
+          "text_characters": 1496,
+          "images": 0
+        }
+      ],
+      "actual_html_alternatives": [
+        {
+          "asset": "2.1.3_fig_1",
+          "alt": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+          "length": 101,
+          "caption": "Dezelfde dag: de tabelstappen van 0 naar 10 en van 10 naar 20 fotohouders, met TK 20, 50 en 100 euro.",
+          "caption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.3_fig_2",
+          "alt": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+          "length": 113,
+          "caption": "Dezelfde kostentabel met delta TK 30 en 50 euro, telkens delta Q 10, en MK 3 en 5 euro bij de rechter eindpunten.",
+          "caption_attributes": {
+            "aria-hidden": "true"
+          }
+        },
+        {
+          "asset": "2.1.3_fig_3",
+          "alt": "MO bij vaste prijs: 80 euro extra opbrengst voor 10 extra fotohouders in beide intervallen, dus 8 euro per houder.",
+          "length": 114,
+          "caption": "Bij dezelfde hoeveelheden 0, 10 en 20 zijn de opbrengsten 0, 80 en 160 euro. Beide intervallen leveren 80 euro extra voor 10 extra producten: MO is telkens 8.",
+          "caption_attributes": {}
+        },
+        {
+          "asset": "2.1.3_fig_4",
+          "alt": "Winsttoename per extra fotohouder: 5 euro in interval 0�10 en 3 euro in interval 10�20, telkens MO min MK.",
+          "length": 106,
+          "caption": "Twee intervalkaarten: winst van min 20 naar 30 geeft 50 gedeeld door 10 is 5; winst van 30 naar 60 geeft 30 gedeeld door 10 is 3. Dit is telkens MO min MK.",
+          "caption_attributes": {}
+        },
+        {
+          "asset": "2.1.3_we_1",
+          "alt": "Eindpuntrijen van Lus en Bout: MK 2/2/2 tegenover 2/6/10; MO steeds 6 en 12 euro per extra
+...[truncated 7952 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:37:00.151Z`
+- finished_at: `2026-09-05T21:37:00.224Z`
+- duration_ms: `73`
+- exit_code: `0`
+- stdout_sha256: `98bd0a69fe0a84b61cd2ed9635d378e905bb82e75b4279ce2e15b0986040379e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.3 "Marginale kosten en marginale opbrengsten"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.3 Marginale kosten en marginale opbrengsten
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md
+  OK opgaven.md: 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md
+  OK antwoorden.md: 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html (1263.7 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html (578.9 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html (20.4 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf (948 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf (442 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf (34 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.3 "Marginale kosten en marginale opbrengsten" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:37:00.269Z`
+- finished_at: `2026-09-05T21:37:00.341Z`
+- duration_ms: `72`
+- exit_code: `0`
+- stdout_sha256: `dc454777bafb685d317d638022b0c33c1356f990582381e94a5320e8e78539ff`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.3 "Marginale kosten en marginale opbrengsten"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.3 Marginale kosten en marginale opbrengsten
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md
+  OK opgaven.md: 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md
+  OK antwoorden.md: 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf (948 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf (442 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf (34 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.3 "Marginale kosten en marginale opbrengsten" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.1.3
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:37:00.384Z`
+- finished_at: `2026-09-05T21:37:02.486Z`
+- duration_ms: `2102`
+- exit_code: `0`
+- stdout_sha256: `48277b0f2fe486714ff2c591064559f0bbbbe9bb1bcfa1353c2feef3efe14b35`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:37:02.528Z`
+- finished_at: `2026-09-05T21:37:03.101Z`
+- duration_ms: `573`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:37:03.166Z`
+- finished_at: `2026-09-05T21:37:03.493Z`
+- duration_ms: `327`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-213-r7-inventory-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:38:12.553Z`
+- finished_at: `2026-09-05T21:38:12.660Z`
+- duration_ms: `107`
+- exit_code: `0`
+- stdout_sha256: `b92b8d2d205a4eef89b747fc3f10005f54fd4621a2d3616725d7838863d27e2c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "counts": {
+    "A": 6,
+    "C": 12,
+    "L": 8,
+    "P": 15
+  },
+  "present": 26,
+  "current_pdf_hashes": 18,
+  "paragraph213": "R7 candidate; old canonical review/QC preserved, no handoff",
+  "book_complete": false
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```

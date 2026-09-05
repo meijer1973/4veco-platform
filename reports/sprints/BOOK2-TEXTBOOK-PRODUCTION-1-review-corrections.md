@@ -253,6 +253,14 @@ bytes stay unchanged. See222-root-acceptance-r13.md. Earlier pending-QC entries
 are historical. Timing51.5/66.5/79.5 and attainment remain unobserved; final212
 package-successor linkage and full book/CI remain, not a new owner hold.
 
+**§213 R7 bounded bonus correction adopted; independent closure still pending.**
+Root adopted b5a663f0 /6a6c8183, only6line criteria insertion and four answer
+artifacts. Seven current answer pages personally read;23 pupil pages and all
+assets exact. Root129bindings/17tests/nativechecker/24file print-only PASS;
+current full-root generator still awaits accepted212 successor raw MD. Original
+valid builder pair has full+print proof. No guard relaxed or old canonical/QC
+promoted. See213-root-verification-r7.md; separate R7 paragraph/QC gates follow.
+
 ## Existing accepted flags, not concealed corrections
 
 - Classroom timing/attainment remains unobserved throughout.

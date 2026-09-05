@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "checks": 129,
+  "artifacts": 24,
+  "changed_artifacts": [
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+    "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip"
+  ],
+  "unchanged_artifacts": 20,
+  "exact_source_insertion": true,
+  "complete_answer_DOM_reversal": true,
+  "old13tests_byte_identical": true,
+  "actual_pages": 30,
+  "root_personally_viewed_answer_pages": 7,
+  "unchanged_pupil_pages_from_root_prior_exact_transfer": 23,
+  "current_root_print_only": "PASS: 24 exact artifacts",
+  "current_root_full_generator": "NOT RUN: unchanged guard requires accepted212 source successor",
+  "expected_historical212_md": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+  "actual_current212_md": "9350d60fadee3494124f7b0593bc1efcf00db5ea292d0a19fc3f10518e11d1f8",
+  "original_pair_full_and_print_proof": "Published builder evidence bound exactly; independent R7 paragraph/QC still pending",
+  "canonical_review_QC": "R6/legacy unchanged; no acceptance/handoff"
+}

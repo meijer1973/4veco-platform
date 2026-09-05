@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform specialist evidence `27b9aee4a3dc61f3e0d53ab68c73bb564805deba`,
-lessons specialist `7f65869b17a1b24fc47a68064fc60fcd72050422`, followed by
+Snapshot: platform adopted213 R7 `b5a663f039757396796a783773471be2372c83b0`,
+lessons `6a6c8183bd2e9b52d2898e587543f735e6e87299`, including the published
 root-only §222 acceptance/handoff recorded in222-root-acceptance-r13.md.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
@@ -26,8 +26,9 @@ identical to the baseline. Separate in-progress worktrees do not count here.
 §221 R8 and §213 R6 correct their short-alt/title metadata, retaining all49
 printed page bytes from R7/R5. §221 R8 now has current independent paragraph and
 specialist PASS WITH FLAGS and root acceptance/handoff; its three editions are A.
-§213 R6 has current paragraph PASS, but specialist QC requires the missing bonus
-assessment-criteria block. Its three editions remain C; no handoff exists.
+§213 R7 now adds the required bonus assessment-criteria block, with30 total pages.
+Root source/native/print-only proof passes; distinct R7 paragraph/QC and final
+accepted212 successor/full-root rebuild remain. Its editions stay C; no handoff.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
 remain identical. Its current independent paragraph and distinct specialist
 reviews pass with flags; root acceptance/handoff are complete. Its editions are A.
@@ -114,9 +115,9 @@ hashes alone are not student-quality acceptance.
 | 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 internal acceptance with flags; current review/QC/handoff complete |
-| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
-| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
-| 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R6 paragraph PASS; required bonus criteria and QC/handoff pending |
+| 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R7 bonus corrected; independent review/QC/handoff/successor pending |
+| 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R7 bonus corrected; independent review/QC/handoff/successor pending |
+| 2.1.3 / antwoorden | `d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787` | R7 bonus corrected; independent review/QC/handoff/successor pending |
 | 2.2.2 / paragraaf | `36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / opgaven | `0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555` | R13 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 / antwoorden | `61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2` | R13 internal acceptance with flags; current review/QC/handoff complete |
@@ -128,7 +129,7 @@ Each accepted paragraph has `<id>-textbook-handoff.md` in its canonical folder,
 including exact source/review/quality bindings, concepts, exercises, visuals and
 carry-forward limits. The 58 historically accepted pages (31 + 27) have actual root and independent
 inspection evidence; new short-alt findings do not erase those observations,
-but require corrected MD/HTML/asset lineage and renewed package gates. The separate 102 candidate pages (29 + 20 + 21 + 32) have
+but require corrected MD/HTML/asset lineage and renewed package gates. The separate103 produced pages (30 + 20 + 21 + 32) have
 root observation/rebuild reports; §221/§222 exact transfers from root's own
 prior views are distinguished from fresh independent full-page inspection.
 §221 R8 has its own current handoff; the earlier R6 handoff remains in Git history.
@@ -139,7 +140,9 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 Wave-two §213 and §223 outputs remain adopted candidates C; their gate
 closure remains pending. §211 R4 and §212 R6 need their missing bonus-criteria
 blocks and current rereview/QC; both metadata corrections are root-adopted/rebuilt.
-§213 R6 requires a bonus-criteria correction followed by independent gates.
+§213 R7 has the bonus-criteria correction; independent gates and exact accepted
+prerequisite succession remain. Current root print-only/source/render proof is
+not mislabeled a full generator rebuild while the old212 MD guard still differs.
 §221 R8's internal review/QC/handoff gates are complete, with timing flags.
 Independent §223 R3 paragraph PASS WITH FLAGS is adopted; specialist and handoff
 gates remain. §222's former canonical FAIL is superseded by actual current R13
