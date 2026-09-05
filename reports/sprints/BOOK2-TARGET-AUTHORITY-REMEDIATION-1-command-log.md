@@ -2515,3 +2515,171 @@ Book 2 candidate approval block: PASS
 ```text
 
 ```
+## npm.cmd run finalization:freshness
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:21:29.112Z`
+- finished_at: `2026-09-05T08:21:30.134Z`
+- duration_ms: `1022`
+- exit_code: `0`
+- stdout_sha256: `346824c991a944f877923079f220d09fb8fc82d8e8b0da5d7912e4a97fce3677`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 finalization:freshness
+> node build-scripts/review-gates/finalization-freshness-proof.js
+
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-09-05T08:21:30.020Z",
+  "repository": "meijer1973/4veco-platform",
+  "head_sha": "59ac575a485906860dba0eec0406d149cb46a0f7",
+  "remote": "origin",
+  "remote_main_sha": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
+  "origin_main_sha": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",
+  "remote_main_matches_origin_main": true,
+  "remote_main_is_ancestor_of_head": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "working_tree_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b",
+      "remote_main_sha256": "665490473545d8b8469e675165cce2a6614d19d357e7b9b974f65f2f0b3db81b"
+    },
+    {
+      "path": "docs/review/pr-readiness-routing-policy.md",
+      "working_tree_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0",
+      "remote_main_sha256": "0adc719b5e273c273a1f95a89a1837adfd5e79fb8ba10aace0f42c874b27f1a0"
+    },
+    {
+      "path": "docs/review/pr-integration-lane-policy.md",
+      "working_tree_sha256": "6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9",
+      "remote_main_sha256": "6553c5eda6fb8fe12755f97feeca4d43bbd274d76ea74332c8a73d6513b128f9"
+    }
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1 --complete
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:21:30.175Z`
+- finished_at: `2026-09-05T08:21:30.584Z`
+- duration_ms: `409`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `6394a0f663b08cf12f391decaa8e5b999049d533077a606480d9007f3f2babe0`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+check-bundle-urls: bundle-urls.md is stale; missing entries: pr-readiness-initial.json, pr-readiness-initial.md. Regenerate: node build-scripts/sprints/emit-gate-bundle-urls.js GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1
+Sprint bundle check failed: validator failed: node build-scripts\sprints\check-bundle-urls.js GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:21:30.627Z`
+- finished_at: `2026-09-05T08:21:30.736Z`
+- duration_ms: `109`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:review-throughput -- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:21:30.788Z`
+- finished_at: `2026-09-05T08:21:31.126Z`
+- duration_ms: `338`
+- exit_code: `0`
+- stdout_sha256: `1c1983225fe2ff4209a4724c47c07f6f9e3de013787d4023a8ab79c201eecd3c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
+
+OK review throughput packet: GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-gate-bundle-urls.js GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:21:46.963Z`
+- finished_at: `2026-09-05T08:21:47.027Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `57891f7f62da37044abe4580b4fbca0d0ee0a7ce178f5cfab6a1a29bc3abb15a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/bundle-urls.md (5 artifacts)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1 --complete
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:21:47.070Z`
+- finished_at: `2026-09-05T08:21:47.581Z`
+- duration_ms: `511`
+- exit_code: `0`
+- stdout_sha256: `6aa37ebd864345cf26e39beebbf78dd4d555628432e6d05c43c7722b28fa590d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TARGET-AUTHORITY-REMEDIATION-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
