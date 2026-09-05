@@ -1,0 +1,12 @@
+{
+  "command": "node",
+  "args": [
+    "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-close.cjs",
+    "scope"
+  ],
+  "started": "2026-09-05T23:42:08.781Z",
+  "finished": "2026-09-05T23:42:09.406Z",
+  "status": 0,
+  "stdout": "{\n  \"status\": \"STRICT_OWNED_PATHS_PASS_NATIVE_PLATFORM_FAIL_PRESERVED\",\n  \"platform_head\": \"8811f91dde280c6922947a4582aabd0dfc032e20\",\n  \"lesson_head\": \"4cac756277f39ff789c77b4c7e9c5b29abe3ecf3\",\n  \"canonical_review_raw_sha256\": \"8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943\",\n  \"canonical_review_lf_sha256\": \"8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943\",\n  \"checks\": [\n    {\n      \"name\": \"owned_platform\",\n      \"status\": 1,\n      \"unknown\": 0,\n      \"failures\": 2\n    },\n    {\n      \"name\": \"owned_lessons\",\n      \"status\": 0,\n      \"unknown\": 0,\n      \"failures\": 0\n    },\n    {\n      \"name\": \"complete_platform\",\n      \"status\": 1,\n      \"unknown\": 66,\n      \"failures\": 1\n    },\n    {\n      \"name\": \"complete_lessons\",\n      \"status\": 0,\n      \"unknown\": 0,\n      \"failures\": 0\n    }\n  ]\n}\n",
+  "stderr": ""
+}

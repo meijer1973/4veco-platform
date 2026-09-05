@@ -949,3 +949,57 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-runner.cjs scope-command node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-review-close.cjs scope
+
+- cwd: `C:\wt\book2-231-review-20260906\4veco-platform`
+- started_at: `2026-09-05T23:42:08.729Z`
+- finished_at: `2026-09-05T23:42:09.414Z`
+- duration_ms: `685`
+- exit_code: `0`
+- stdout_sha256: `6638378719aebbf4e7906c9c067a896ad620bebc8ff0996aa0df6ed54a9254b0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "STRICT_OWNED_PATHS_PASS_NATIVE_PLATFORM_FAIL_PRESERVED",
+  "platform_head": "8811f91dde280c6922947a4582aabd0dfc032e20",
+  "lesson_head": "4cac756277f39ff789c77b4c7e9c5b29abe3ecf3",
+  "canonical_review_raw_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943",
+  "canonical_review_lf_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943",
+  "checks": [
+    {
+      "name": "owned_platform",
+      "status": 1,
+      "unknown": 0,
+      "failures": 2
+    },
+    {
+      "name": "owned_lessons",
+      "status": 0,
+      "unknown": 0,
+      "failures": 0
+    },
+    {
+      "name": "complete_platform",
+      "status": 1,
+      "unknown": 66,
+      "failures": 1
+    },
+    {
+      "name": "complete_lessons",
+      "status": 0,
+      "unknown": 0,
+      "failures": 0
+    }
+  ]
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
