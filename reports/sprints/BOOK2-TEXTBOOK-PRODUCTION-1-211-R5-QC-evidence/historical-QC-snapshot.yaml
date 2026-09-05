@@ -1,0 +1,96 @@
+schema_version: 2
+partA:
+  paragraph: "2.1.1"
+  title: "Kostenstructuren"
+  generated: "2026-09-05"
+  reviewed_on: "2026-09-05"
+  review_file: "2.1.1-review.md"
+  review_verdict: "PASS WITH FLAGS"
+  review_sha256: "92b4a9462caf8316274fb58f8beef5c850147c44e6bf80b9a28fad442d9dbe96"
+  paragraph_reviewer: "correction_plan_review"
+  paragraph_review_record_commit: "938426e9857eff6a7ef54f47c784fd5d70bd44dc"
+  specialist_reviewer: "elasticity_planning"
+  specialist_verdict: "PASS WITH FLAGS"
+  specialist_report_repository: "4veco-platform"
+  specialist_report: "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-specialist-review.md"
+  hard_fails_open: 0
+  reviewed_payload:
+    platform_commit: "16c3b1c53b73a563084297190ba58d7bf1bed679"
+    lesson_commit: "c37dfba8c68cbe86b3b12534e020fda6e2481ac5"
+    paragraph_plan_canonical_lf_sha256: "f46c7aa444ba6fef1f6f885b34bd52963fccac3cdc7b13b898eb6665219c4cd0"
+    chapter_plan_canonical_lf_sha256: "ef3f872f5caa2de1359639983d8e4907a34cfcbc80a0309826cff07201e49116"
+    frozen_target_record_sha256: "143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710"
+    target_goals: 4
+    target_subquestions: 5
+    target_points: 17
+  assets:
+    total_referenced: 6
+    svg_count: 6
+    png_count: 6
+    bases: ["2.1.1_fig_1", "2.1.1_fig_2", "2.1.1_fig_3", "2.1.1_fig_4", "2.1.1_we_1", "2.1.1_ex_1"]
+    missing: []
+    svgpng_paired: true
+    naming_compliant: true
+  rendered_evidence:
+    repository: "4veco-platform"
+    proof_root: "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1"
+    all_pages_individually_inspected: true
+    normal_reading_scale: true
+    pages_inspected: 31
+    minimum_pdf_text_pt: 12
+    embedded_diagram_text_pt_lower_bound: 13.07
+    documents:
+      - artifact: "paragraaf"
+        md_sha256: "51394535fcf09aadfa13d9d9a61c0578ae94413b91e7c1cf293e44588e2c510f"
+        html_sha256: "ec141d8afaa532f36499f0e71a65aa2cb5753a6e89bd289fe9e9d7a94d776061"
+        pdf_sha256: "9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0"
+        proof_directory: "211-paragraaf-9837e3a85f31-r3"
+        manifest_sha256: "fd64c510e1b13f377e8c99d3429832cf8f360c4419294a7f25ab7b293d92c921"
+        inspection_file: "211-paragraaf-9837e3a85f31-r3/inspection.json"
+        page_count: 15
+      - artifact: "opgaven"
+        md_sha256: "4e6bf501e8ce7374d704999ba090ccbfd17c49c75bd9a3bb03be11d29675a5df"
+        html_sha256: "4ae0b5824604aad3b3129f13c3e092651315164c0fa9f3f5dd4d2fb8eab40a87"
+        pdf_sha256: "97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953"
+        proof_directory: "211-opgaven-97329415bacc-r3"
+        manifest_sha256: "8e5b0590eb82502c5486e4ec1a81c8bce8310d51f2fdd12a51d9f47fef5e0823"
+        inspection_file: "211-opgaven-97329415bacc-r3/inspection.json"
+        page_count: 9
+      - artifact: "antwoorden"
+        md_sha256: "57cc1ef3b5c5ae6d912291f9746a7f535906bb85207678bab8fc63dadf82ebfb"
+        html_sha256: "d4d3db3265820003a45e71955b9f3f2188a6036860fdcdc8fbbc49b944bfd0ca"
+        pdf_sha256: "ffdf0905a980b6c89b64207e90873d79edbf192c86c2280f3394caa25693998a"
+        proof_directory: "211-antwoorden-ffdf0905a980-r3"
+        manifest_sha256: "a5ca4ef02f99129fb10b4c6dcbb3ee5242b76b658a3b69d62a38d4bfb32f3afb"
+        inspection_file: "211-antwoorden-ffdf0905a980-r3/inspection.json"
+        page_count: 7
+  specialist_rubrics:
+    teacher_learning_quality: "PASS, 14/14; design judgment, not observed attainment"
+    student_experience: "PASS, 12/12; paper route only"
+    economics_and_mathematics: "PASS; every numerical chain and target answer independently recalculated"
+    dutch: "PASS; corrected badge wording verified in final answer PDF"
+    visual_qa: "PASS, 9/10; non-blocking contrast enhancement retained"
+  timing:
+    core_minutes_estimated: 54
+    lesson_limit_minutes: 55
+    supported_route_minutes_estimated: 66
+    classroom_observed: false
+    equation: "2 motivation + 12 instruction + 8 worked example + 2 recap/transitions + 6 Start + 12 independent + 12 target = 54"
+    outside_core: "Optional guided practice adds 12 minutes; bonus and closing review require later/continuation or homework time."
+  flags:
+    - id: "TIMING-OBSERVATION"
+      blocking: false
+      detail: "The 54-minute core is a plausible, tight design estimate, not a classroom measurement or an all-students completion guarantee."
+      follow_up: "Observe the first classroom use and preserve additional time for learners using guided practice."
+    - id: "ORANGE-STROKE-CONTRAST"
+      blocking: false
+      detail: "Orange #E67E22 on #F7FAFC measures 2.717664:1; all current instructional relations also have equivalent visible dark text, formulas, values and tables."
+      follow_up: "Consider a contrast-safe dark outline; reassess before any later target depends on essential curve reading. No blanket accessibility claim."
+  freshness:
+    inspectie_checked_on: "2026-09-05"
+    optional_inspectie_mapping: "omitted"
+    reason: "The protected reference was verified 2026-04-12 against the 2025 framework; official 2026 changes now exist. No stale mapping or protected-reference edit was made."
+  scope_limits:
+    - "Fresh Part A record only; no inherited June acceptance or fabricated companion block."
+    - "No measured student attainment, whole-book acceptance, responsive HTML UI or blanket WCAG claim."
+    - "Publisher-print paragraph validation does not accept a chapter or book assembly."
