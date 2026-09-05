@@ -197,6 +197,29 @@ The old quality-ref is intentionally not edited to disguise this FAIL.
 Scope/index checks and exact paired publication follow this substantive record
 and are reported by commit/tail evidence, not an assumed remote CI PASS.
 
+### Post-review scope evidence
+
+Substantive platform review commit:
+`04e4277f27df4abb2b48e47ffb1002c644a6634e`.
+Canonical lesson review commit:
+`be754856f6b6c2cb1cbe1d6abedbe93c2637b8b1`.
+The exact lesson reviewer delta passes textbook-lane scope. The exact platform
+reviewer delta contains only seven review-evidence paths (all classified as
+such), with no source/output/plan/target/QC/handoff mutation. The generic
+shared-lane checker rejects that evidence-only delta because its contract
+requires at least one shared-platform implementation change. This is retained
+as a scope-tool result, not hidden by an artificial implementation change,
+exception or waiver. Root was informed.
+
+The actual builder-plus-review lineage from the stage-2 platform base
+`5a5887224e5c0d80f77a795935e44528e48b2cee` to the review commit passes shared
+lane scope: seven real builder implementation files, four generated indexes
+and365 evidence paths. That broader PASS is not relabelled as a standalone
+review-delta PASS. The command log records all three comparisons. The following
+evidence-only commit persists these outcomes; the subsequent deterministic
+map/index-only tail is separate from substantive review and keeps the
+original R12 pupil payload unchanged.
+
 ## Continuation
 
 Return only the two bounded corrections to the builder, keep their regression
