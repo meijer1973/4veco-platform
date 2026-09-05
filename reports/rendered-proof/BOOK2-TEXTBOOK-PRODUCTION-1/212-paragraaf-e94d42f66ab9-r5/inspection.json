@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "role": "independent_visual_inspection",
+  "inspector": "paragraph_212_qc",
+  "inspection_date": "2026-09-05",
+  "reviewed_platform_commit": "16eca0301ae66071830606b95ae0b7866395068f",
+  "reviewed_lesson_commit": "afc2ed53e6ae5f85bbeaa3c61172fc419b59e08f",
+  "qc_platform_base": "3bf29a96cbdbcb1f51570b3ec39ff61d115c680c",
+  "qc_lesson_base": "7867b72a7829ef96cbd1aa451e89aebcec79da0b",
+  "manifest": "manifest.json",
+  "manifest_sha256": "db1a80500e15785ca605ff672704d3c66a22a0d15a256fff95a8582afd0f0ac5",
+  "source_sha256": "f53521ed8812a4c8b8c33c1d66b34e0afe8425c1dffb1723f37771372b2baa09",
+  "html_sha256": "be9a3618444b65cc3aa5c2a33b94a81c5cbe864da7e7ea8fea63d746a60ef006",
+  "pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+  "render_dpi": 150,
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png",
+    "pages/page-007.png",
+    "pages/page-008.png",
+    "pages/page-009.png",
+    "pages/page-010.png",
+    "pages/page-011.png",
+    "pages/page-012.png",
+    "pages/page-013.png",
+    "pages/page-014.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "47168dbd5ca0016a0635373adb8be69ede89ea778e59b8c147d62aefcc6bb2c1",
+    "page-002.png": "b629d00b8b52658c913740eb81462ef28b06ccaddb5b192ed143110455a3d329",
+    "page-003.png": "36b6829e688546453ec0b72421f72d80da104da8e43f04ede3e005ce2255d23d",
+    "page-004.png": "2f9be7f9b8495d3afd68a8747bc0cb1fe40c610f02879a62af510cdcd44eee38",
+    "page-005.png": "4ef1d19eeba6391e7f377b9dd2e8c25208bd9d893eb964a699d2f2332b599e55",
+    "page-006.png": "3c7f62cc93a3bca67080abbabd8e8b5bdc376200caee1955f92486845ae14cae",
+    "page-007.png": "9b3cbe995a2342289c236c666775dbc2f3b78af76eded10fde035dcea3c1bf72",
+    "page-008.png": "9ebf8852794849dbb550b14963815bce5c7092a874122832b14a5dcd12567340",
+    "page-009.png": "8b923ef7aebe46ea4530648eb4f5b59f28305fe6ac6caa84208794e6e50017dc",
+    "page-010.png": "ed6793a9d0aafd7853695f59a2aa9300a6165c7a3511761e8c05ea97e8726fbf",
+    "page-011.png": "cef70e948f27ede602534fdeb341ad441520cf9d8a78a0624fb79d363cf359e7",
+    "page-012.png": "0b7881225134b8e8e11c760a1c82e8d5475d1dff61b79b66dfdeae7867e2ffb3",
+    "page-013.png": "8463dd4a0def55c5649c7427e2cf108dbb2f5aab682fca94226c1ec0d536a1fd",
+    "page-014.png": "afb36bf841fe41845df97c7817e4feeb233dbd9abffab3ca1b10802cc8f8f914"
+  },
+  "inspection_status": "INSPECTED",
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "minimum_pdf_text_pt": 12,
+  "embedded_diagram_text_pt_lower_bound": 12.548,
+  "page_observations": [
+    {
+      "page": 1,
+      "result": "PASS",
+      "note": "Opening, four goals, printed retrieval and TO definition readable; lower definition intact."
+    },
+    {
+      "page": 2,
+      "result": "PASS",
+      "note": "TO table and fig1 agree; GO heading/definition remain together."
+    },
+    {
+      "page": 3,
+      "result": "PASS",
+      "note": "GO table and fixed-price/Q>0 restriction clear; total/profit table fits."
+    },
+    {
+      "page": 4,
+      "result": "PASS",
+      "note": "Fig2 and misconception box readable; complete break-even algebra/control remain together."
+    },
+    {
+      "page": 5,
+      "result": "PASS",
+      "note": "Fig3 crossing and zones clear; same scales; vertical-gap explanation with its heading."
+    },
+    {
+      "page": 6,
+      "result": "PASS",
+      "note": "Fig4 gap30 correct; distance-not-area warning and bounded model text readable."
+    },
+    {
+      "page": 7,
+      "result": "PASS",
+      "note": "Integer contrast and kayak steps1–4 including whole-number check intact."
+    },
+    {
+      "page": 8,
+      "result": "PASS",
+      "note": "Kayak steps5–6 and full graph complete; step6 not isolated."
+    },
+    {
+      "page": 9,
+      "result": "PASS",
+      "note": "Recap unbroken before Start; recap scope reminder omission is nonblocking content flag."
+    },
+    {
+      "page": 10,
+      "result": "PASS",
+      "note": "Optional soap scaffolding, graph and partc together; no crowding."
+    },
+    {
+      "page": 11,
+      "result": "PASS",
+      "note": "Pots supplies TK only; explicit task asks pupil to add TO; dance introduction readable."
+    },
+    {
+      "page": 12,
+      "result": "PASS",
+      "note": "Dance table complete; independent minigolf parts a–d kept together, no answer graph."
+    },
+    {
+      "page": 13,
+      "result": "PASS",
+      "note": "Frozen bakery target a–d and2/2/3/4points kept together; intentional whitespace not blank page."
+    },
+    {
+      "page": 14,
+      "result": "PASS",
+      "note": "Both bonus scales legible; equal monetary30 gaps distinct in paper size; closing task complete."
+    }
+  ],
+  "method": "Every final R5 full-page PNG personally viewed at original detail, then independently fresh-rendered using Poppler150DPI and matched to its raw hash and immutable manifest. All11 direct PNGs and extracted SVG labels/geometry inspected separately; all11 SVG-to-PNG raw byte parity checks passed. Both150DPI grayscale probes personally inspected and freshly reproduced. PENDING manifests and builder inspection unchanged. This record is visual inspection, not observed student attainment, whole-book acceptance, responsive UI review or merge permission."
+}

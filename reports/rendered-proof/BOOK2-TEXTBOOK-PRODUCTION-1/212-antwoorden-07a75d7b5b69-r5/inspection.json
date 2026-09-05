@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "role": "independent_visual_inspection",
+  "inspector": "paragraph_212_qc",
+  "inspection_date": "2026-09-05",
+  "reviewed_platform_commit": "16eca0301ae66071830606b95ae0b7866395068f",
+  "reviewed_lesson_commit": "afc2ed53e6ae5f85bbeaa3c61172fc419b59e08f",
+  "qc_platform_base": "3bf29a96cbdbcb1f51570b3ec39ff61d115c680c",
+  "qc_lesson_base": "7867b72a7829ef96cbd1aa451e89aebcec79da0b",
+  "manifest": "manifest.json",
+  "manifest_sha256": "a6c832c6ad3416fa6bd84599ed402c3efbd806556af543fe50163bd12d1b75c2",
+  "source_sha256": "d7dbebf97de900b7ecc4520e63c822201d39ce796c5c7e3aab83b4dcc9e900ee",
+  "html_sha256": "767bf8ee21be2b67676e0a80558d7bbe373cc7cab8c8ac0c96a0056f7228f221",
+  "pdf_sha256": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192",
+  "render_dpi": 150,
+  "pages_inspected": [
+    "pages/page-001.png",
+    "pages/page-002.png",
+    "pages/page-003.png",
+    "pages/page-004.png",
+    "pages/page-005.png",
+    "pages/page-006.png"
+  ],
+  "page_sha256": {
+    "page-001.png": "2d7b3296a0af9733a250fa914572937eb9067182ead99b5e9936a0a97e30c957",
+    "page-002.png": "d72e3d8e1eef7754e0cc1ad238faa4cedcc066a99e92f9be0dc7a3def0905554",
+    "page-003.png": "f64b8014d035a2bac03f0cdfe6d5ab990e0bf739093da4f3d125048bc6ea18b6",
+    "page-004.png": "01a07881161320048b6d643b67f530df4b04c556ad32f155508839d895b80ce5",
+    "page-005.png": "62169ef2289f26eef6db842e082a9770963698abb10cd1c622545a6665bee3a2",
+    "page-006.png": "d381ea9948644e3fb98fbbb12436ba3d7d1b0df17d48ddb0df4e89b1455eeb73"
+  },
+  "inspection_status": "INSPECTED",
+  "inspected_at_normal_reading_scale": true,
+  "visible_student_defects": [],
+  "minimum_pdf_text_pt": 12,
+  "embedded_diagram_text_pt_lower_bound": 18.822,
+  "page_observations": [
+    {
+      "page": 1,
+      "result": "PASS",
+      "note": "Answers1–3 complete with calculations, units and meaningful explanations."
+    },
+    {
+      "page": 2,
+      "result": "PASS",
+      "note": "Pots zero-profit whole-number case and full answer graph agree."
+    },
+    {
+      "page": 3,
+      "result": "PASS",
+      "note": "Dance four-case table and minigolf answer a–d readable."
+    },
+    {
+      "page": 4,
+      "result": "PASS",
+      "note": "Minigolf graph and bakery solutions a–d agree; target answer c uses unrounded result."
+    },
+    {
+      "page": 5,
+      "result": "PASS",
+      "note": "Bakery graph,11-point rubric and model-intercept limitation readable; no clipping."
+    },
+    {
+      "page": 6,
+      "result": "PASS",
+      "note": "Bonus scale explanation and cumulative costs/units answers complete."
+    }
+  ],
+  "method": "Every final R5 full-page PNG personally viewed at original detail, then independently fresh-rendered using Poppler150DPI and matched to its raw hash and immutable manifest. All11 direct PNGs and extracted SVG labels/geometry inspected separately; all11 SVG-to-PNG raw byte parity checks passed. Both150DPI grayscale probes personally inspected and freshly reproduced. PENDING manifests and builder inspection unchanged. This record is visual inspection, not observed student attainment, whole-book acceptance, responsive UI review or merge permission."
+}
