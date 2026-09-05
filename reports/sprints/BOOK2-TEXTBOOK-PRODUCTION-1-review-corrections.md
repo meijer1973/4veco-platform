@@ -64,6 +64,35 @@ numeric pupil timing labels in the full source read. Every later final edition
 must still receive this contract check. No source/output correction has yet
 been made to §221 by this record; no false closure is asserted.
 
+## Current-candidate and prerequisite lineage follow-ups
+
+**B2-222-TOKEN-01 — builder correction complete; independent acceptance pending.**
+Root's full R8 page inspection found three split absolute-Ev tokens across
+answer pages 1 and 4. Supported MathML experiments R9/R10 still split; no
+sanitizer/CSS monkeypatch was accepted. The builder's final R12 uses exactly
+three supported structural line breaks in owned explanatory output. All
+student PDF/page bytes and answer pages 2, 3, 5 remain exact R8 bytes. Root must
+view the two changed final pages and verify the exact transition before
+acceptance; a distinct paragraph reviewer and specialist QC remain required.
+Historical failed experiments remain evidence, not claimed accepted revisions.
+
+**B2-223-PREREQ-SUCCESSOR-01 — required before final combined reproducibility.**
+The §223 R3 generator intentionally checks exact current §221 R6 paragraph,
+review, quality and handoff hashes. R7's presentation correction and subsequent
+review/QC/handoff will change those current files while leaving the accepted
+prerequisite economics unchanged. R3 remains an honest historically bound
+candidate; it must not be silently represented as reproducible against R7.
+
+After R7 independently passes and root issues its exact successor handoff,
+assign a bounded §223 prerequisite-binding update: pin those exact accepted
+files, record new input/build lineage, prove all §223 pupil outputs/assets
+remain byte-identical, and independently review the integration-only delta.
+Preserve R3's historical manifests/pins and do not loosen verification, allow
+arbitrary hashes, modify target authority or reopen the released teaching holds.
+The same current-file pin check must be applied to other dependent generators
+before final assembly. This is not an owner decision or a reason to suspend
+the independently reviewable §223 economics/layout work now.
+
 ## Existing accepted flags, not concealed corrections
 
 - Classroom timing/attainment remains unobserved throughout.
