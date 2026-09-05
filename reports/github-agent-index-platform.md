@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T14:15:18.924Z
+Generated: 2026-09-05T14:42:02.419Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `45f8bc6e691297a9eeca83dbb1705292ee327a77`
-Files indexed: 7785
+Source commit: `90cc8d06a0e85f49b0044d0a373ec5c549eaf663`
+Files indexed: 7787
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2648,7 +2648,7 @@ Count: 1030
 
 ## reports
 
-Count: 5054
+Count: 5056
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5450,6 +5450,8 @@ Count: 5054
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-stage-2-self-qa.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-timing-walkthrough.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-decision-package.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-plan-review.md
