@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T19:19:55.822Z
+Generated: 2026-09-05T19:47:59.618Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-short-alt-correction-20260905`
-Source commit: `5f48d40f49aabc9423a84f2d402a32a816075d13`
-Files indexed: 8599
+Source branch: `agent/book2-221-r8-review-20260905`
+Source commit: `d4362705ce0c7f5e90d1e8a18e403f9e7e67a361`
+Files indexed: 8641
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2707,7 +2707,7 @@ Count: 1030
 
 ## reports
 
-Count: 5829
+Count: 5871
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6209,6 +6209,48 @@ Count: 5829
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-QC-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R7-REVIEW-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-diagnostic-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-grayscale-page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-grayscale-page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-grayscale-page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/antwoorden/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/antwoorden/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/antwoorden/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/antwoorden/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/antwoorden/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/antwoorden/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/opgaven/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/contact-sheet.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-001.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-002.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-003.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-004.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-005.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-006.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-007.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-008.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-009.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-proof/paragraaf/pages/page-010.png
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-render-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-REVIEW-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-REVIEW-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-gates.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-gates.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-inspection.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-inspection.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-probes.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-R8-review-report.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r6.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check-r7.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-render-check.json
