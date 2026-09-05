@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T21:02:41.554Z
+Generated: 2026-09-05T21:23:21.868Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-231-production-20260905`
-Source commit: `352fddad670b3ae1657e4cd750ad3ea341de2e95`
-Files indexed: 8932
+Source branch: `agent/book2-231-plan-review-20260905`
+Source commit: `d353dbe8eb663650869d4be48cabcc7f1a8bef50`
+Files indexed: 8939
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2714,7 +2714,7 @@ Count: 1030
 
 ## reports
 
-Count: 6160
+Count: 6167
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -6598,6 +6598,12 @@ Count: 6160
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-root-verification.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-review-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-checks.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-plan.md
@@ -6633,6 +6639,7 @@ Count: 6160
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-SHORT-ALT-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-SHORT-ALT-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-short-alt-preflight.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-independent-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-target-trace.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-timing-walkthrough.md
