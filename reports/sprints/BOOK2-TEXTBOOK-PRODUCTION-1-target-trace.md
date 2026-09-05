@@ -24,7 +24,7 @@ The durable invariant and approved-use gates passed before wave-two release.
 | 2.2.2 | `8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e` | 4 | 2/2/2/2/2/1 | 11 | R13 independent paragraph PASS adopted; both R12 findings closed; QC/handoff pending |
 | 2.2.3 | `9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5` | 4 | 3/2/4/4/3 | 16 | R3 adopted and independent paragraph PASS; QC/handoff/successor pins pending |
 | 2.2.4 | `4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519` | 4 | 2/2/2/4/2/2 | 14 | Paragraph plan/output gate pending |
-| 2.3.1 | `a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571` | 4 | 2/3/2/3/2 | 12 | Paragraph plan/output gate pending |
+| 2.3.1 | `a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571` | 4 | 2/3/2/3/2 | 12 | Plan adopted917115c; independent plan review pending; no student production |
 | 2.3.2 | `54ce45a0cb044532717fe0cbbb6cfeae75e76b2656861bfea0d3821afc1843ce` | 4 | 2/2/3/2/2 | 11 | Paragraph plan/output gate pending |
 | 2.3.3 | `eae9bcd6af7483a7ac9ccb2c57d5332b8cb96cd058853ac7ed9e25a3bdb5b0b2` | 4 | 2/3/4/4/2/2 | 17 | Paragraph plan/output gate pending |
 | 2.3.4 | `2ac151882b64b0d990ce5627ae35388d72eefde74c4e24562ef9a49a9355672c` | 4 | 2/2/4/2/2/2 | 14 | Paragraph plan/output gate pending |

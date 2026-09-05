@@ -8228,3 +8228,141 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T21:05:22.593Z`
+- finished_at: `2026-09-05T21:05:32.126Z`
+- duration_ms: `9533`
+- exit_code: `0`
+- stdout_sha256: `7745ccaa0cdbaa31a2c034517460333f1dd6c0064af6bdc0165143b3e6fc4865`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "kind": "planning_checks_only",
+  "date": "2026-09-05",
+  "builder": "paragraph_231_builder",
+  "plan_path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+  "plan_sha256_canonical_lf": "8d92ed823e96a773a378c74d707c2afa4cd8cb3ee3b8bcba08b217ee5883cac1",
+  "source_pins": [
+    {
+      "repository": "lessons",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "sha256_canonical_lf": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repository": "lessons",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "sha256_canonical_lf": "e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7"
+    },
+    {
+      "repository": "platform",
+      "file": "references/owned/course-blueprint-v6-three-year.md",
+      "sha256_canonical_lf": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repository": "platform",
+      "file": "references/owned/course-blueprint-v5.md",
+      "sha256_canonical_lf": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repository": "platform",
+      "file": "references/authored/course-target-exercises.json",
+      "sha256_canonical_lf": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "repository": "platform",
+      "file": "references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.candidates.json",
+      "sha256_json_stringify_ordered_array": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+      "sha256_canonical_lf": "aba9f8f0408905820cc94ed49eb5f8deef4a5ed4aca66e42d1fb171c935d3675"
+    }
+  ],
+  "target_record_sha256": "a385e00b2fffea168089c32f796668e51ae45cb325504644392f79b20bde8571",
+  "exact_goals": 4,
+  "target_points": [
+    2,
+    3,
+    2,
+    3,
+    2
+  ],
+  "planned_image_alts": [
+    {
+      "stem": "`2.3.1_fig_1`",
+      "alt": "Betalingsbereidheid en prijs van vier workshopdeelnemers.",
+      "characters": 57
+    },
+    {
+      "stem": "`2.3.1_fig_2`",
+      "alt": "Assen en snijpunten van de vraag naar toegang tot de boekenbeurs.",
+      "characters": 65
+    },
+    {
+      "stem": "`2.3.1_fig_3`",
+      "alt": "Vraaglijn en gegeven prijs van toegang tot de boekenbeurs.",
+      "characters": 58
+    },
+    {
+      "stem": "`2.3.1_fig_4`",
+      "alt": "Consumentensurplus boven de prijslijn van de boekenbeurs.",
+      "characters": 57
+    },
+    {
+      "stem": "`2.3.1_we_1`",
+      "alt": "Vraaglijn en consumentensurplus van museumbezoekers.",
+      "characters": 52
+    },
+    {
+      "stem": "`2.3.1_start_2`",
+      "alt": "Vraaglijn en gegeven prijs van aquariumkaartjes.",
+      "characters": 48
+    },
+    {
+      "stem": "`2.3.1_guided_3`",
+      "alt": "Vraaglijn met prijs, hoeveelheid, basis en hoogte van de tuintour.",
+      "characters": 66
+    },
+    {
+      "stem": "`2.3.1_guided_4`",
+      "alt": "Assen en vraaglijn van een klimkennismaking zonder prijslijn.",
+      "characters": 61
+    },
+    {
+      "stem": "`2.3.1_answer_2`",
+      "alt": "Consumentensurplus van aquariumbezoekers bij acht euro.",
+      "characters": 55
+    },
+    {
+      "stem": "`2.3.1_answer_3`",
+      "alt": "Consumentensurplus van deelnemers aan de tuintour.",
+      "characters": 50
+    },
+    {
+      "stem": "`2.3.1_answer_4`",
+      "alt": "Consumentensurplus van deelnemers aan de klimkennismaking.",
+      "characters": 58
+    },
+    {
+      "stem": "`2.3.1_answer_5`",
+      "alt": "Vraaglijn en consumentensurplus van het bordspelmiddagbezoek.",
+      "characters": 61
+    },
+    {
+      "stem": "`2.3.1_answer_6`",
+      "alt": "Vraaglijn en consumentensurplus van deelnemers aan de skateclinic.",
+      "characters": 66
+    },
+    {
+      "stem": "`2.3.1_answer_7`",
+      "alt": "Vraaglijn en consumentensurplus van bezoekers aan het ta
+...[truncated 8657 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
