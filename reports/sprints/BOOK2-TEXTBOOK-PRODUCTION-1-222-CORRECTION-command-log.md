@@ -635,3 +635,152 @@ Ran all test suites matching build-scripts/workflows/check-paragraph-lane-scope.
 ```text
 
 ```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base ca05ec784838617f7a11c0b33d0b53e1a2fb7f29 --head HEAD
+
+- cwd: `C:\wt\book2-222-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T19:34:15.199Z`
+- finished_at: `2026-09-05T19:34:15.282Z`
+- duration_ms: `83`
+- exit_code: `0`
+- stdout_sha256: `6f56336873135cd361c432dbb5d807686311bb96f8326f4304e36f2a4afbec18`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 3
+  - build-scripts/content/book-2/222/answers.md
+  - build-scripts/content/book-2/222/exercises.md
+  - build-scripts/content/book-2/222/test_source.py
+- review evidence: 43
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-61cbde67e815-r13/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-61cbde67e815-r13/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-61cbde67e815-r13/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-61cbde67e815-r13/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-61cbde67e815-r13/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-61cbde67e815-r13/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-61cbde67e815-r13/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-opgaven-0a251a4973b1-r13/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-006.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-007.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-008.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-009.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-paragraaf-36feb7873637-r13/pages/page-010.png
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-CORRECTION-command-log.jsonl
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-CORRECTION-command-log.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-build-r13.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-builder-inspection-r13.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-correction-after-r13.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-correction-before-r13.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-correction-builder-packet-r13.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-correction-evidence-r13.py
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-correction-plan-r13.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r13/capture.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r13/capture.py
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-grayscale-r13/paragraaf-page-002.png
+  - reports/spri
+...[truncated 325 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base 6362d2596b20c3e28184d8b6a1a74cb6c901d7f0 --head HEAD
+
+- cwd: `C:\wt\book2-222-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T19:34:15.322Z`
+- finished_at: `2026-09-05T19:34:15.404Z`
+- duration_ms: `82`
+- exit_code: `0`
+- stdout_sha256: `d8e60869f4f72961cddbbcac3fdf996b0b82cf6c4cfd76dcbbc7e1e53ebfe619`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 7
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.md
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.html
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.2.2
+
+- cwd: `C:\wt\book2-222-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T19:34:15.442Z`
+- finished_at: `2026-09-05T19:34:17.145Z`
+- duration_ms: `1703`
+- exit_code: `0`
+- stdout_sha256: `aa60a4cb23d1b92440304dd144a996965125533013bb34e25474645411d6cfe3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.2
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-222-correction-20260905\4veco-platform`
+- started_at: `2026-09-05T19:34:17.187Z`
+- finished_at: `2026-09-05T19:34:17.741Z`
+- duration_ms: `554`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
