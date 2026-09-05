@@ -47,7 +47,7 @@ De afzet daalt van **100 naar 60 tickets per week**. De interval-Ev is
 - TO nieuw = 15 × 60 = **€ 900 per week**.
 - %ΔTO = (900 − 1.000) / 1.000 × 100% = **−10%**.
 
-![Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs.](_assets/2.2.2_we_1.svg)
+![Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs.](_assets/2.2.2_we_1.svg){alt="Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8."}
 
 De prijsfactor is 1,5 en de afzetfactor 0,6: **1,5 × 0,6 = 0,9**.
 De nieuwe omzet is 90% van de oude; tel +50% en −40% dus niet op.

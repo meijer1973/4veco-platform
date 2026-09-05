@@ -85,11 +85,11 @@ TO nieuw = 9 × 120 = **€ 1.080 per week**: stijging.
 Bij beide vergelijk je het eigen oude en nieuwe product; gelijke oude
 omzetten betekenen niet dat de twee producten of klanten identiek zijn.
 
-b) Schaatsbaan: %ΔP = (11 − 10) / 10 × 100% = +10%;
-%ΔQ = (95 − 100) / 100 × 100% = −5%.
+b) Schaatsbaan: %ΔQ = (95 − 100) / 100 × 100% = −5%;
+%ΔP = (11 − 10) / 10 × 100% = +10%.
 Ev = −5% / +10% = **−0,5**: |Ev| = 0,5 < 1, prijsinelastisch over deze stap.
-Badmintonhal: %ΔP = (9 − 10) / 10 × 100% = −10%;
-%ΔQ = (120 − 100) / 100 × 100% = +20%.
+Badmintonhal: %ΔQ = (120 − 100) / 100 × 100% = +20%;
+%ΔP = (9 − 10) / 10 × 100% = −10%.
 Ev = +20% / −10% = **−2**: |Ev| = 2 > 1, prijselastisch over deze stap.
 In beide gevallen blijft Ev negatief, omdat P en Q tegengesteld bewegen.
 
