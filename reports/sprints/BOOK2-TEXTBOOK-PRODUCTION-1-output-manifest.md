@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform `f44004683a20d12d25ee7b8008971416358d637a`, lessons
-`800c3540b15787aecec2e782e6da9b960664cadb`.
+Snapshot: platform `8fdebb0d258cdaa1fd11f392265dd1038681a98c`, lessons
+`6ccc48911a6239dee25cffb8f29e9f42db442f9e`.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -14,17 +14,19 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **0 fully gate-closed current paragraph packages**, 18 adopted
-candidate PDFs, 8 legacy unaccepted and 15 absent. The six §211/§212 PDFs retain
+At this checkpoint: **1 internally gate-closed current paragraph package**:
+3 accepted-with-flags PDFs,15 adopted candidate PDFs,8 legacy unaccepted and15
+absent. The six §211/§212 PDFs retain
 historical independent print/content acceptance, but their package accessibility
 gate is reopened for short-alt defects; they are conservatively C here. Physical
 root presence is 26, not 26 accepted. All eight legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
-§221 R8 and §213 R6 now correct their short-alt/title metadata, retaining all
-49 printed page bytes from R7/R5. Both are root-rebuilt candidates with current
-independent rereviews adopted as PASS WITH FLAGS; their prior specialist REVISE findings remain
-open until exact-candidate gates close. All three editions of each stay C.
+§221 R8 and §213 R6 correct their short-alt/title metadata, retaining all49
+printed page bytes from R7/R5. §221 R8 now has current independent paragraph and
+specialist PASS WITH FLAGS and root acceptance/handoff; its three editions are A.
+§213 R6 has current paragraph PASS, but specialist QC requires the missing bonus
+assessment-criteria block. Its three editions remain C; no handoff exists.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
 remain identical. Its canonical paragraph FAIL remains pending current rereview.
 §223 R3 remains an adopted paragraph-PASS candidate.
@@ -63,9 +65,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 | 11 | 2.1.4 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.pdf` |
 | 12 | 2.1 | hoofdstuk | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – hoofdstuk.pdf` |
 | 13 | 2.1 | antwoorden | L | `2.1 Hoofdstuk Kosten en opbrengsten/2.1 Kosten en opbrengsten – antwoorden.pdf` |
-| 14 | 2.2.1 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf` |
-| 15 | 2.2.1 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf` |
-| 16 | 2.2.1 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf` |
+| 14 | 2.2.1 | paragraaf | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf` |
+| 15 | 2.2.1 | opgaven | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf` |
+| 16 | 2.2.1 | antwoorden | A | `2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf` |
 | 17 | 2.2.2 | paragraaf | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf` |
 | 18 | 2.2.2 | opgaven | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf` |
 | 19 | 2.2.2 | antwoorden | C | `2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf` |
@@ -106,9 +108,9 @@ hashes alone are not student-quality acceptance.
 | 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R5 historical print acceptance; short-alt correction/review pending |
 | 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R5 historical print acceptance; short-alt correction/review pending |
 | 2.1.2 / antwoorden | `07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192` | R5 historical print acceptance; short-alt correction/review pending |
-| 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 corrected candidate; rereview/QC/handoff pending |
-| 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 corrected candidate; rereview/QC/handoff pending |
-| 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 corrected candidate; rereview/QC/handoff pending |
+| 2.2.1 / paragraaf | `98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6` | R8 internal acceptance with flags; current review/QC/handoff complete |
+| 2.2.1 / opgaven | `a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af` | R8 internal acceptance with flags; current review/QC/handoff complete |
+| 2.2.1 / antwoorden | `d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d` | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.3 / paragraaf | `534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024` | R6 corrected candidate; rereview/QC/handoff pending |
 | 2.1.3 / opgaven | `d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05` | R6 corrected candidate; rereview/QC/handoff pending |
 | 2.1.3 / antwoorden | `aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a` | R6 corrected candidate; rereview/QC/handoff pending |
@@ -126,13 +128,16 @@ inspection evidence; new short-alt findings do not erase those observations,
 but require corrected MD/HTML/asset lineage and renewed package gates. The separate 102 candidate pages (29 + 20 + 21 + 32) have
 root observation/rebuild reports; §221/§222 exact transfers from root's own
 prior views are distinguished from fresh independent full-page inspection.
-Historical §221 R6 handoff is not a current R8 handoff.
+§221 R8 has its own current handoff; the earlier R6 handoff remains in Git history.
+See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 
 ## Remaining production and acceptance
 
 Wave-two §213, §222 and §223 outputs are now adopted candidates C; their gate
-closure remains pending. §211/§212 need bounded short-alt/title corrections;
-§213 R6/§221 R8 are corrected/root-verified but need new review/QC/handoff gates.
+closure remains pending. §211 R4 needs current rereview/QC; §212's bounded
+short-alt/title correction is published separately but not yet root-adopted.
+§213 R6 requires a bonus-criteria correction followed by independent gates.
+§221 R8's internal review/QC/handoff gates are complete, with timing flags.
 Independent §223 R3 paragraph PASS WITH FLAGS is adopted; specialist and handoff
 gates remain. §222's canonical FAIL covers answer4b order and Concert short alt;
 the distinct R13 candidate is now root-adopted/verified, awaiting renewed review/QC.

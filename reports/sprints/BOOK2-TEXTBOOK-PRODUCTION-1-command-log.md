@@ -7054,3 +7054,378 @@ Book 2 outline currentness: PASS
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-qc-adoption-r8.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:30:08.065Z`
+- finished_at: `2026-09-05T20:30:08.261Z`
+- duration_ms: `196`
+- exit_code: `0`
+- stdout_sha256: `2954b2170c955a06b2c1d74e24bbd0ad6e4ea7dcfdf91edc9b5343a1f732d5ec`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "checks": 93,
+  "pages": 20,
+  "grays": 3,
+  "pdfs": 3,
+  "exact_raster_pairs": 3,
+  "reviewer": "paragraph_213_r6_independent_review",
+  "current_specialist": "PASS WITH FLAGS",
+  "root_handoff": "NOT_YET_UPDATED",
+  "visual_acceptance": "No fresh root page-view claim; this binds the specialist personally attributed report."
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:30:08.324Z`
+- finished_at: `2026-09-05T20:30:08.490Z`
+- duration_ms: `166`
+- exit_code: `0`
+- stdout_sha256: `274e68f12f250b71740b750bf5676685a72b7c4ddba79ffe21d7e90608d01632`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.html (302.2 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.html (120.1 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.html (12.8 KB)
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:30:08.547Z`
+- finished_at: `2026-09-05T20:30:08.617Z`
+- duration_ms: `70`
+- exit_code: `0`
+- stdout_sha256: `484f1ff8a20ff23bace5e86b50d1d3625a12cff87ab7b87b3d13c13200f76daf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK 2 companion asset(s) declared in _paragraph-plan.md
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:33:45.565Z`
+- finished_at: `2026-09-05T20:33:45.664Z`
+- duration_ms: `99`
+- exit_code: `0`
+- stdout_sha256: `274e68f12f250b71740b750bf5676685a72b7c4ddba79ffe21d7e90608d01632`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.html (302.2 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.html (120.1 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.html (12.8 KB)
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:33:45.715Z`
+- finished_at: `2026-09-05T20:33:45.795Z`
+- duration_ms: `80`
+- exit_code: `0`
+- stdout_sha256: `484f1ff8a20ff23bace5e86b50d1d3625a12cff87ab7b87b3d13c13200f76daf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK 2 companion asset(s) declared in _paragraph-plan.md
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.2.1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:33:45.844Z`
+- finished_at: `2026-09-05T20:33:47.595Z`
+- duration_ms: `1751`
+- exit_code: `0`
+- stdout_sha256: `22e6d7011adc86ff0a4c90a5788d18f685df79c7a434e74f5bebe4f4bac25692`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.2.1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:33:47.636Z`
+- finished_at: `2026-09-05T20:33:48.217Z`
+- duration_ms: `581`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane textbook --cwd ../4veco-lessen --base 800c3540b15787aecec2e782e6da9b960664cadb --head HEAD
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:33:48.448Z`
+- finished_at: `2026-09-05T20:33:48.593Z`
+- duration_ms: `145`
+- exit_code: `0`
+- stdout_sha256: `0f809891ef1c65b8213704ac2d3f2711175ceed003f57f5eb78b7d8dbe3ef6b8`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 1
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md
+- review evidence: 1
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-acceptance-inventory-check.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:48:25.153Z`
+- finished_at: `2026-09-05T20:48:25.556Z`
+- duration_ms: `403`
+- exit_code: `0`
+- stdout_sha256: `12c9e14bb25118f38e106c956ce891fb88b141080db9ccb494aa6794cd4b508b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "scope": "Exact §221 R8 root acceptance and41-PDF inventory checkpoint",
+  "canonical_records": 3,
+  "root_quality_fields_only": true,
+  "lesson_changed_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md"
+  ],
+  "counts": {
+    "A": 3,
+    "C": 15,
+    "L": 8,
+    "P": 15
+  },
+  "present": 26,
+  "legacy_baseline_identical": 8,
+  "current_pdf_hashes": 18,
+  "handoff_current_md_pdf_bindings": 6,
+  "book_final": false
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:48:25.597Z`
+- finished_at: `2026-09-05T20:48:25.922Z`
+- duration_ms: `325`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```

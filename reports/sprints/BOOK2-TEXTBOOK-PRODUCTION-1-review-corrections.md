@@ -189,6 +189,34 @@ exact root-prior bytes. Both canonical FAIL findings are corrected candidates,
 not closed acceptance: both normal profiles still fail only on that unchanged
 review until distinct rereview. See222-root-verification-r13.md.
 
+## Later exact-candidate gate closures and required correction
+
+**§221 R8 internal acceptance — B2-TIME-PRINT-01 and B2-221-R7-ALT-01 CLOSED.**
+The earlier progress entries are historical. Current independent paragraph and
+distinct specialist PASS WITH FLAGS, complete native rebuilds, all20 fresh
+specialist page views/3 figures/3 grays, root93-check adoption and current
+root handoff close both findings for this paragraph. Root lesson acceptance is
+6ccc48911a6239dee25cffb8f29e9f42db442f9e; details and exact canonical hashes are
+in221-root-acceptance-r8.md. The full workload and unobserved timing estimates
+remain. No final book/CI or §223 successor-pin acceptance is implied.
+
+**B2-213-BONUS-CRITERIA-01 — REQUIRED correction; not a waived flag.**
+Current R6 answers8a–c are economically correct but have no subsequent2–4-bullet
+assessment-criteria block required by skills/econ-exercise-builder.md §4.4.
+Root re-read the actual rule and source; the specialist's initial permissive
+classification was explicitly superseded by REVISE. Published specialist pair
+984547a17c966d3749d08ef34b92747de21eacbf /5d67998d1e1d1aa5497d59850b53aebc780eaa96
+preserves that history and restores the exact old canonical QC. Root has not yet
+adopted its supplemental report. Current disposition report SHA-256 is
+0ea14f249e35f3f56781c57ca2ad82abae2aacecf628063c5d2b03dd9c38663e.
+A distinct builder is assigned only the missing criteria block, regression,
+regeneration and rendered verification, then separate re-review/QC. Model
+answers, Draad table, targets and prerequisite pins remain unchanged. A suspected
+Draad column-collapse visual defect was disproved by identical actual page
+pixels and direct PDF word geometry; the specialist explicitly withdrew it.
+No §213 handoff or acceptance is claimed. The positive marginal bridge evidence
+still supports unaffected planning; owner holds are not reopened.
+
 ## Existing accepted flags, not concealed corrections
 
 - Classroom timing/attainment remains unobserved throughout.
@@ -200,7 +228,7 @@ review until distinct rereview. See222-root-verification-r13.md.
 - Optional current Inspectie mapping stays omitted pending separate protected
   reference refresh. No stale compliance claim is accepted.
 
-Root must close the numeric pupil-time finding and reconcile all later review
-cycles, exact artifact pins, full output/target/timing inventories and final
+Root must reconcile all later review cycles, exact artifact pins, full
+output/target/timing inventories and final
 lead round 1 / corrections / round 2 before package readiness. No future PR
 merge is authorized, and no final CI or owner-ready claim is made here.

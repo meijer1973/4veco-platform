@@ -1,8 +1,8 @@
 # Sprint BOOK2-TEXTBOOK-PRODUCTION-1: Target trace
 
 Date: 2026-09-05. Accountable root: codex-root.
-Status: **ACTIVE CHECKPOINT — SIX ADOPTED CANDIDATES; ACCESSIBILITY CORRECTIONS OPEN**.
-Platform snapshot after root R7 and R3 review adoption; exact candidate PDF
+Status: **ACTIVE CHECKPOINT — §221 INTERNALLY ACCEPTED; FIVE CANDIDATES**.
+Platform snapshot after root R8 review/QC and handoff adoption; exact PDF
 pins and gate states are in output-manifest.md. Full book remains incomplete.
 
 ## Frozen registry bindings
@@ -18,9 +18,9 @@ The durable invariant and approved-use gates passed before wave-two release.
 |---|---|---:|---|---:|---|
 | 2.1.1 | `143f1053c98766b77d9d9ce573a5c8e976980f900387159312c3238288d71710` | 4 | 4/3/3/3/4 | 17 | Historical internal Part A acceptance; short-alt package gate reopened |
 | 2.1.2 | `19b466dd6f7b541a3bb701d4de80ce13fe9ea58356313e24b23b21698093e1f9` | 4 | 2/2/3/4 | 11 | Historical internal Part A acceptance; short-alt package gate reopened |
-| 2.1.3 | `df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef` | 4 | 4/3/2/4/2 | 15 | R5 adopted and independent paragraph PASS; QC/handoff pending |
+| 2.1.3 | `df4b7d7b0326445b386ae570b43eb50fc9fc431707e3992e44394323f959c3ef` | 4 | 4/3/2/4/2 | 15 | R6 paragraph PASS; required bonus-criteria correction, QC/handoff pending |
 | 2.1.4 | `fda623dc9a3620724bf9df22a3ef937fd26779fa49d4d2b0b7c6baa862753691` | 4 | 2/2/2/4/2/2 | 14 | Paragraph plan/output gate pending |
-| 2.2.1 | `61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288` | 4 | 3/2/2/2 | 9 | R7 adopted and independent paragraph PASS; fresh QC/handoff pending |
+| 2.2.1 | `61b54bde03d60be241092479cfcea8820e8187220f8f454dc9fef5045c8ea288` | 4 | 3/2/2/2 | 9 | R8 internal acceptance with flags; current review/QC/handoff complete |
 | 2.2.2 | `8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e` | 4 | 2/2/2/2/2/1 | 11 | R12 independent FAIL adopted: answer-order and short-alt corrections, rereview/QC/handoff pending |
 | 2.2.3 | `9a3a29bcedc16739b74b66b2bb8e136b37e86c7f5cfee3ee35ea37c4bdeed1c5` | 4 | 3/2/4/4/3 | 16 | R3 adopted and independent paragraph PASS; QC/handoff/successor pins pending |
 | 2.2.4 | `4e0840ddf202ce4906ee05cd4dde97c0f3577885c34f0b9613ea18760aad7519` | 4 | 2/2/2/4/2/2 | 14 | Paragraph plan/output gate pending |
@@ -67,15 +67,15 @@ and distinct reviews. Answer-only ex_3/4/5 assets are excluded from student ZIP
 inventories. Nonblocking recap qualification omission does not remove correct
 model boundaries in body/answers. 27 pages and two grayscale probes reviewed.
 
-## §221 unchanged teaching trace — current R8 metadata candidate
+## §221 unchanged teaching trace — current R8 internal acceptance
 
-The historical R6 source/output/review/quality pins remain in
-`2.2.1-textbook-handoff.md`. R7 changes only six timing/route phrases and has
+The historical R6 source/output/review/quality pins remain in Git history.
+The current `2.2.1-textbook-handoff.md` now binds accepted R8. R7 changes only six timing/route phrases and has
 fresh independent paragraph PASS WITH FLAGS in `221-paragraph-review-r7.md`.
 Its R7 specialist then required a short-alt/title correction. R8 is now
 root-adopted/rebuilt with identical printed pages and full visible captions;
-current rereview/QC/handoff remain pending. The historical handoff does not
-approve current R8 source/HTML hashes.
+current independent rereview, specialist QC and root handoff are complete.
+See221-root-acceptance-r8.md; no historical handoff is used to approve new hashes.
 
 | Frozen operation | Explicit teaching / modelling | Practice before target | Target / answer evidence |
 |---|---|---|---|
@@ -97,9 +97,10 @@ MO−MK profit-change bridge, guided patches/coasters retain denominator support
 Draad/Kaft independently matches Linea/Curva's five operations and15points.
 The R5 distinct paragraph PASS and specialist REVISE remain historical. R6
 corrects only metadata, retaining all29 PDF-page bytes and full captions;
-current independent R6 rereview now passes with flags; specialist QC and
-handoff are still required. The221 R8 current paragraph review likewise passes
-with flags, while its specialist/handoff gates remain distinct.
+current independent R6 rereview passes with flags, but specialist QC requires
+the missing bonus-criteria block. Correction and renewed gates remain before
+handoff. §221 R8 now has distinct current paragraph and specialist passes and
+root internal acceptance/handoff; whole-book acceptance remains separate.
 
 §222 R13 root verification covers exact P×Q totals and factors, own-price
 direction, local versus finite-change distinction, units/period and cost limits.
