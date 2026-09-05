@@ -14502,3 +14502,78 @@ Ran 15 tests in 0.870s
 OK
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-import-scope.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:34:31.851Z`
+- finished_at: `2026-09-05T23:34:32.459Z`
+- duration_ms: `608`
+- exit_code: `0`
+- stdout_sha256: `2a236388b20378b1f1b255e8012704ba0a2d6ffdaac203ac37c8f740ad49b6cf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "root_import_platform",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 9,
+        "generated_indexes": 0,
+        "review_evidence": 453,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "root_import_lessons",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 43,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "complete_platform",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 78,
+        "generated_indexes": 6,
+        "review_evidence": 2538,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "complete_lessons",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 201,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 4,
+        "unknown": 0
+      }
+    }
+  ],
+  "output": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-import-scope.json"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```

@@ -80,3 +80,18 @@ No source, proof or lesson file was changed by that diagnostic. Native recorder
 JSONL retains all actual command outcomes. No current full-suite CI, canonical
 review, specialist acceptance, handoff, pupil mastery or classroom timing is
 claimed. Continue to independent review adoption and fresh root reproduction.
+
+## Committed import-scope result
+
+The actual relocation/mapping commit is
+`2a3dc4075a31d39da3f5ef0cf794846c3b842595`. At that immutable head,
+`231-root-import-scope.js` runs the unchanged native checker, preserving full
+stdout in `231-root-import-scope.json`: root import platform PASS (9 source,
+453 evidence,0 unknown); exact root lesson import PASS (43 Part A); genuine
+complete platform PASS (78 source,6 indexes,2538 evidence,0 unknown); genuine
+complete lessons PASS (201 Part A,4 evidence,0 unknown). No exception is present.
+These actual native results close the adopted path-shape issue only. The
+original builder's FAIL remains unchanged. Root's15 source tests also pass.
+
+A no-op report patch used a non-matching fragment and was rejected atomically;
+the correct append followed. It changed no evidence or lesson bytes.
