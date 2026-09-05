@@ -14577,3 +14577,176 @@ OK
 ```text
 
 ```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:36:28.318Z`
+- finished_at: `2026-09-05T23:36:28.427Z`
+- duration_ms: `109`
+- exit_code: `1`
+- stdout_sha256: `06a2bcb223facd75235657e5d2c1e7e254d6e17a42cba1a1ba72947eebf4c8b5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.3.1 "Consumentensurplus"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.3 Hoofdstuk Surplus en welvaart\2.3.1 Consumentensurplus
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md
+  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md
+  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md
+  OK 2.3.1 Consumentensurplus – paragraaf.html (1895.9 KB)
+  OK 2.3.1 Consumentensurplus – opgaven.html (988.6 KB)
+  OK 2.3.1 Consumentensurplus – antwoorden.html (1765.1 KB)
+  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)
+  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)
+  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 15 image refs all resolve
+  OK _assets/: 15 SVGs, 15 PNGs
+
+-- Part A QC artifacts --
+  X MISSING Part A review report (2.3.1-review.md)
+  X MISSING quality_ref (2.3.1-quality-ref.yaml)
+
+==========================================
+FAIL Paragraph 2.3.1 "Consumentensurplus" failed: 2 error(s), 0 warning(s).
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:36:28.484Z`
+- finished_at: `2026-09-05T23:36:28.581Z`
+- duration_ms: `97`
+- exit_code: `1`
+- stdout_sha256: `e000ec88c0fe14808c81bdf6c0145263776b724a667596a85f9346fba26cce1b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.3.1 "Consumentensurplus"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.3 Hoofdstuk Surplus en welvaart\2.3.1 Consumentensurplus
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md
+  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md
+  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md
+  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)
+  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)
+  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 15 image refs all resolve
+  OK _assets/: 15 SVGs, 15 PNGs
+
+-- Part A QC artifacts --
+  X MISSING Part A review report (2.3.1-review.md)
+  X MISSING quality_ref (2.3.1-quality-ref.yaml)
+
+==========================================
+FAIL Paragraph 2.3.1 "Consumentensurplus" failed: 2 error(s), 0 warning(s).
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.3.1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:36:28.637Z`
+- finished_at: `2026-09-05T23:36:30.318Z`
+- duration_ms: `1681`
+- exit_code: `0`
+- stdout_sha256: `17c621a2434015110c4cb7717f5a302b74ab68762f2574dbcdd25e8895ecce87`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.3.1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:36:30.361Z`
+- finished_at: `2026-09-05T23:36:30.914Z`
+- duration_ms: `553`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:36:30.956Z`
+- finished_at: `2026-09-05T23:36:31.136Z`
+- duration_ms: `180`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```

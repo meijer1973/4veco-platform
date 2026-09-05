@@ -92,6 +92,11 @@ complete platform PASS (78 source,6 indexes,2538 evidence,0 unknown); genuine
 complete lessons PASS (201 Part A,4 evidence,0 unknown). No exception is present.
 These actual native results close the adopted path-shape issue only. The
 original builder's FAIL remains unchanged. Root's15 source tests also pass.
+At this pre-review import checkpoint, both actual Part A profiles FAIL only
+for missing2.3.1-review.md and2.3.1-quality-ref.yaml (2errors,0warnings each).
+Native file/asset checks pass. Approved §231 action-scoped currentness, durable
+twelve-record authority and the active umbrella sprint bundle pass. These
+profile failures are not waived; their required review/QC artifacts follow.
 
 A no-op report patch used a non-matching fragment and was rejected atomically;
 the correct append followed. It changed no evidence or lesson bytes.
