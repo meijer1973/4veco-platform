@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "complete_pdf_text_nodes": 187,
+      "missing_nodes": 0,
+      "old_pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "new_pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "changed_pages": []
+    },
+    {
+      "kind": "opgaven",
+      "complete_pdf_text_nodes": 127,
+      "missing_nodes": 0,
+      "old_pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+      "new_pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+      "changed_pages": []
+    },
+    {
+      "kind": "antwoorden",
+      "complete_pdf_text_nodes": 139,
+      "missing_nodes": 0,
+      "old_pdf_sha256": "b68d0429a9d739d0587f7a1c95ca922e188061b4821920b1d0f6459766adc6ab",
+      "new_pdf_sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2",
+      "changed_pages": [
+        {
+          "page": "page-002.png",
+          "old": "7bf2147b456b14e9af54a8e6c0ec4bb417828c0e7ddc97d22abb526024527f40",
+          "new": "65ab004822fdc1eca242363f3b18c340e0cbace06ce03afbaf6545c4b6721043"
+        }
+      ]
+    }
+  ],
+  "contrast": [
+    {
+      "foreground": "#555555",
+      "background": "#ffffff",
+      "ratio": 7.455
+    },
+    {
+      "foreground": "#304958",
+      "background": "#ffffff",
+      "ratio": 9.461
+    },
+    {
+      "foreground": "#182b3a",
+      "background": "#eef4f7",
+      "ratio": 13.088
+    },
+    {
+      "foreground": "#182b3a",
+      "background": "#eaf1f5",
+      "ratio": 12.729
+    }
+  ],
+  "source_test_preservation": {
+    "original": 11,
+    "current": 14,
+    "original_AST_unchanged": true,
+    "new": [
+      "test_all_svg_accessible_titles_are_short_noun_phrases",
+      "test_native_pandoc_short_alts_preserve_full_caption",
+      "test_opgave4b_signed_quantity_then_price_then_ratio"
+    ]
+  },
+  "pass0_bindings_still_exact_before_QC": 52,
+  "handoff_exists": false
+}

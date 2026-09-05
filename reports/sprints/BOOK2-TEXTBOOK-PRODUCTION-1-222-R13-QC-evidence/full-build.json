@@ -1,0 +1,104 @@
+{
+  "paragraph": "2.2.2",
+  "target_record_sha256": "8ce56143aef61b0e67aae5b179f6e5f3fe547192bc776a42c43101cb5a70fa2e",
+  "plan_sha256": "6418491d45c43afdbd272c581bab12f8436ca1a84241663ba300e31b790825a8",
+  "chapter_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+  "input_sources": [
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_222.py",
+      "sha256": "42012511d3c77569f4aa6c30df6465eb77c8d204d8596a14a16ef453446bcafe"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\theory.md",
+      "sha256": "0c68b499e315644e3518df743d793917882b45fdef9c83b2949d6939a0d8bbee"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\exercises.md",
+      "sha256": "81d1f326b0095eda29b1f939288e722f213a1fae03a5eb151af03881c3e88cde"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\answers.md",
+      "sha256": "a66e33507be37f166416ec9c16088964902dcb7529d5d7c7d2c47989f15bd9c6"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\build-scripts\\content\\book-2\\222\\target-answers.md",
+      "sha256": "40ae9de6c220e0d2bde4b6771ea0807b5544be2506f724a0c2a566562be386fe"
+    }
+  ],
+  "inspection_status": "PENDING",
+  "documents": [
+    {
+      "source_md": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – paragraaf.md",
+      "source_sha256": "573ba54a818018ccd565142efd81a79db2558d901e809ab1c35bc1676d238fc0",
+      "source_html": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – paragraaf.html",
+      "html_sha256": "e3da1a7be53db7677dba2f3379b4f665247cb6fc5e6a4c2676d00ba0fcf280c4",
+      "source_pdf": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_1.svg",
+          "sha256": "a0aa6c793a59a731377d8b035b5a96fc8c064c61745843326947c6f4b95440c0"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_1.png",
+          "sha256": "bd9668804b5d22b9fe6d6fe8832376b4f8ba978c8042fb38d6e18fb1d88cd07e"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_2.svg",
+          "sha256": "3f924bf77deaaa60b5b8fa03a5ffae5cc7ce959eed1e10f1ac364d2f5cb129a4"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_2.png",
+          "sha256": "a61138390a9f17dd6e4989c03dc5d147682cb820afebeffd178b199f7a68a91b"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_3.svg",
+          "sha256": "9c4b5044f1d6acd5d335011d1566c8e5eed1758094a4cf7d84e12d31e9fad1e6"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_3.png",
+          "sha256": "97511db0c5bc3d1d533b287b671961fdf91b6360fad4ad3afc1967547296b255"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_we_1.svg",
+          "sha256": "0969714dff8223c3f114496c748a584eccb3feed22e9c2e700c49d6c10def521"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_we_1.png",
+          "sha256": "c2b7ae2cacb1ffe93d942e93117b71222e6ef535bddb1a2b0af634130226dfce"
+        }
+      ]
+    },
+    {
+      "source_md": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – opgaven.md",
+      "source_sha256": "3d671a4f420cb21fa3ef3e42aaf9f797771758a41c3c658af3291af44cd6c318",
+      "source_html": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – opgaven.html",
+      "html_sha256": "c95c1925c1b7f9a593e6d71499e74088124ff3968f5a8990fe7b3230b5641b04",
+      "source_pdf": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – opgaven.pdf",
+      "pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+      "assets": [
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_we_1.svg",
+          "sha256": "0969714dff8223c3f114496c748a584eccb3feed22e9c2e700c49d6c10def521"
+        },
+        {
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_we_1.png",
+          "sha256": "c2b7ae2cacb1ffe93d942e93117b71222e6ef535bddb1a2b0af634130226dfce"
+        }
+      ]
+    },
+    {
+      "source_md": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – antwoorden.md",
+      "source_sha256": "3c5db69f876940eff76af3027577e368548145dbc0b3b9bdddb62b0542041276",
+      "source_html": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – antwoorden.html",
+      "html_sha256": "d92d39934e9ee15443e909aa376cf6e5f328f8c23a1d255ba316e1e65d34af31",
+      "source_pdf": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "pdf_sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2",
+      "assets": []
+    }
+  ]
+}

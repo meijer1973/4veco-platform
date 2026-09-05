@@ -1,0 +1,619 @@
+{
+  "actor": "paragraph_221_r8_independent_review",
+  "role": "independent specialist QC",
+  "status": "PASS",
+  "source_delta": [
+    {
+      "path": "build-scripts\\content\\book-2\\222\\theory.md",
+      "old_lf_sha256": "0c68b499e315644e3518df743d793917882b45fdef9c83b2949d6939a0d8bbee",
+      "current_lf_sha256": "0c68b499e315644e3518df743d793917882b45fdef9c83b2949d6939a0d8bbee",
+      "exact_bounded_reversal": true
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\222\\exercises.md",
+      "old_lf_sha256": "961e0bbd1607920a085bddf82b556cd1083fc4bb6f7241324ad2d20ae5f7cc26",
+      "current_lf_sha256": "81d1f326b0095eda29b1f939288e722f213a1fae03a5eb151af03881c3e88cde",
+      "exact_bounded_reversal": true
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\222\\answers.md",
+      "old_lf_sha256": "ab186995c8e92772751f66fae30d9db2202d23d5bb06181b70bb073ce2c0cadb",
+      "current_lf_sha256": "a66e33507be37f166416ec9c16088964902dcb7529d5d7c7d2c47989f15bd9c6",
+      "exact_bounded_reversal": true
+    },
+    {
+      "path": "build-scripts\\content\\book-2\\222\\target-answers.md",
+      "old_lf_sha256": "40ae9de6c220e0d2bde4b6771ea0807b5544be2506f724a0c2a566562be386fe",
+      "current_lf_sha256": "40ae9de6c220e0d2bde4b6771ea0807b5544be2506f724a0c2a566562be386fe",
+      "exact_bounded_reversal": true
+    },
+    {
+      "path": "build-scripts/content/book-2/b2_222.py",
+      "raw_sha256": "42012511d3c77569f4aa6c30df6465eb77c8d204d8596a14a16ef453446bcafe",
+      "unchanged": true
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "raw_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "unchanged": true
+    },
+    {
+      "path": "build-scripts/content/book-2/222/check_render.py",
+      "raw_sha256": "759bbbb9e2a0d6f307566953ed85cf89da5001d8df21f8d212ee5bc8a9ee59a4",
+      "unchanged": true
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "raw_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "unchanged": true
+    }
+  ],
+  "native_DOM": [
+    {
+      "kind": "paragraaf",
+      "complete_normalized_dom_after_exact_reversal": "9adaf406993a08e8abd365aca813a91bffbd105cd48cd385cf30c58a91a0bfbc",
+      "old_normalized_dom": "9adaf406993a08e8abd365aca813a91bffbd105cd48cd385cf30c58a91a0bfbc",
+      "actual_alternatives": [
+        {
+          "name": "2.2.2_fig_1",
+          "alt": "Oude omzet van de speelgoedwinkel: breedte 100 spellen per week maal hoogte 5 euro per spel.",
+          "length": 92,
+          "visible_caption": "Oude omzet van de speelgoedwinkel: breedte 100 spellen per week maal hoogte 5 euro per spel.",
+          "native_asset_match": true
+        },
+        {
+          "name": "2.2.2_fig_2",
+          "alt": "Exacte oude en nieuwe omzetrechthoeken op dezelfde schalen, voor twee afzonderlijke zaken.",
+          "length": 90,
+          "visible_caption": "Exacte oude en nieuwe omzetrechthoeken op dezelfde schalen, voor twee afzonderlijke zaken.",
+          "native_asset_match": true
+        },
+        {
+          "name": "2.2.2_fig_3",
+          "alt": "Schematisch overzicht van de lokale omzetregel met beide prijsrichtingen en de voorwaarden.",
+          "length": 91,
+          "visible_caption": "Schematisch overzicht van de lokale omzetregel met beide prijsrichtingen en de voorwaarden.",
+          "native_asset_match": true
+        },
+        {
+          "name": "2.2.2_we_1",
+          "alt": "Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8.",
+          "length": 100,
+          "visible_caption": "Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs.",
+          "native_asset_match": true
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "complete_normalized_dom_after_exact_reversal": "c745c08fadef1e94720820b09d9e9777a960d343af7112cc98b0299ecc03cc8e",
+      "old_normalized_dom": "c745c08fadef1e94720820b09d9e9777a960d343af7112cc98b0299ecc03cc8e",
+      "actual_alternatives": [
+        {
+          "name": "2.2.2_we_1",
+          "alt": "Omzetrechthoeken van het concert: na de prijsstijging is de omzet lager, ondanks interval-Ev = −0,8.",
+          "length": 100,
+          "visible_caption": "Concert: de nieuwe rechthoek is hoger maar kleiner van oppervlak. De gemeten interval-Ev is geen bewijs van de lokale classificatie bij elke prijs.",
+          "native_asset_match": true
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "complete_normalized_dom_after_exact_reversal": "38f2b60ef66da0463af597737a8b0088c7c738d23cf1e5bd54a5ccfa77b34070",
+      "old_normalized_dom": "38f2b60ef66da0463af597737a8b0088c7c738d23cf1e5bd54a5ccfa77b34070",
+      "actual_alternatives": []
+    }
+  ],
+  "figures": [
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_1.png",
+      "sha256": "bd9668804b5d22b9fe6d6fe8832376b4f8ba978c8042fb38d6e18fb1d88cd07e",
+      "title": "Oude omzet als exacte rechthoek met prijs5 en afzet100",
+      "title_length": 54,
+      "raw_native_equal": true,
+      "pixel_delta": 0,
+      "geometry": [
+        {
+          "price": "5",
+          "quantity": "100",
+          "revenue": "500",
+          "x_scale": "47/10",
+          "y_scale": "33"
+        }
+      ]
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_2.png",
+      "sha256": "a61138390a9f17dd6e4989c03dc5d147682cb820afebeffd178b199f7a68a91b",
+      "title": "Twee aparte zaken met gelijke schalen; oude rand en nieuwe omzetrechthoek",
+      "title_length": 73,
+      "raw_native_equal": true,
+      "pixel_delta": 0,
+      "geometry": [
+        {
+          "price": "11/2",
+          "quantity": "95",
+          "revenue": "1045/2",
+          "x_scale": "11/5",
+          "y_scale": "25"
+        },
+        {
+          "price": "5",
+          "quantity": "100",
+          "revenue": "500",
+          "x_scale": "11/5",
+          "y_scale": "25"
+        },
+        {
+          "price": "11/2",
+          "quantity": "80",
+          "revenue": "440",
+          "x_scale": "11/5",
+          "y_scale": "25"
+        },
+        {
+          "price": "5",
+          "quantity": "100",
+          "revenue": "500",
+          "x_scale": "11/5",
+          "y_scale": "25"
+        }
+      ]
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_fig_3.png",
+      "sha256": "97511db0c5bc3d1d533b287b671961fdf91b6360fad4ad3afc1967547296b255",
+      "title": "Schematische lokale omzetregel; beide prijsrichtingen en voorwaardelijke grens",
+      "title_length": 78,
+      "raw_native_equal": true,
+      "pixel_delta": 0,
+      "geometry": []
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.2 Elasticiteit en omzet\\_assets\\2.2.2_we_1.png",
+      "sha256": "c2b7ae2cacb1ffe93d942e93117b71222e6ef535bddb1a2b0af634130226dfce",
+      "title": "Concert: voor en na op dezelfde schalen; interval-Ev vervangt de productcontrole niet",
+      "title_length": 85,
+      "raw_native_equal": true,
+      "pixel_delta": 0,
+      "geometry": [
+        {
+          "price": "10",
+          "quantity": "100",
+          "revenue": "1000",
+          "x_scale": "11/5",
+          "y_scale": "11"
+        },
+        {
+          "price": "10",
+          "quantity": "100",
+          "revenue": "1000",
+          "x_scale": "11/5",
+          "y_scale": "11"
+        },
+        {
+          "price": "15",
+          "quantity": "60",
+          "revenue": "900",
+          "x_scale": "11/5",
+          "y_scale": "11"
+        },
+        {
+          "price": "10",
+          "quantity": "100",
+          "revenue": "1000",
+          "x_scale": "11/5",
+          "y_scale": "11"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "36feb7873637d0e71af50d4930a789e3a8ada6ec77cc377b09e2af179c3ae98c",
+      "minimum_text_pt": 12.0,
+      "page_bindings": [
+        {
+          "page": 1,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-01.png",
+          "sha256": "4925b73bf780d7f69d8562dca5cae8b1713a4bbe91c712563fe7dab1828a70ed"
+        },
+        {
+          "page": 2,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-02.png",
+          "sha256": "c7d9797869961a3b8eda9c2dd37f2e64132cb0024ce42b207cab39e8400b1636"
+        },
+        {
+          "page": 3,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-03.png",
+          "sha256": "0912960ef2866f25324280e30bf29f0825ab3b976a817286f13bf828971a5483"
+        },
+        {
+          "page": 4,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-04.png",
+          "sha256": "5556d250dc79d0d05db736f9835205946e71ef8b7e1d825e06072f00340c180f"
+        },
+        {
+          "page": 5,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-05.png",
+          "sha256": "2f48f10ff4ba79b997064ad987496760fb993167ec2a57f013eebcfa6917fa94"
+        },
+        {
+          "page": 6,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-06.png",
+          "sha256": "cd30d3cafe1722a972023a11e4bfdc06d3402c538ad667f701e938fa1b1efbaa"
+        },
+        {
+          "page": 7,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-07.png",
+          "sha256": "1f758852e6e33041bcc917a8f3ecc77c1296806c088aabc56bb8add4579b0dd8"
+        },
+        {
+          "page": 8,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-08.png",
+          "sha256": "5348a507dd7036ad0a324e0c346276189132c27ea165c03bab2343bddd67d64e"
+        },
+        {
+          "page": 9,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-09.png",
+          "sha256": "5fbc1ba4d22f92df6ba7dd09605398291b5bff998886db624236a45cd1f84582"
+        },
+        {
+          "page": 10,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\paragraaf\\page-10.png",
+          "sha256": "f7a5b93ecb7151a926351a0836485c875d5606ad35fde02edd88e73e6d54693c"
+        }
+      ],
+      "extracted_text_sha256": "a57145bda32d0b7a232bfb786ef0f3d1de91fe7ce9ddc6f3b759742416a4c542"
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "0a251a4973b1b9b0c4abca30310a3e0bda888558e079fd4895319fc496614555",
+      "minimum_text_pt": 12.0,
+      "page_bindings": [
+        {
+          "page": 1,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\opgaven\\page-1.png",
+          "sha256": "2f6bfd85d06607172b1d257c4a3c9de1878ca11c9b4208b14873bbdc11fc6ba0"
+        },
+        {
+          "page": 2,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\opgaven\\page-2.png",
+          "sha256": "0ef45114138d6d56d80b1cac1ee578f91c0e741fa99e3ad490a0d649645dc842"
+        },
+        {
+          "page": 3,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\opgaven\\page-3.png",
+          "sha256": "6a4a1bb3dc653b2772edb63817d172bce4be5801af703ee8ccba1ec54894145d"
+        },
+        {
+          "page": 4,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\opgaven\\page-4.png",
+          "sha256": "c2592d9065876765b6c8beb12608334f722ac48c3dcd06eaa3855725096400bd"
+        },
+        {
+          "page": 5,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\opgaven\\page-5.png",
+          "sha256": "71a5482aef92ee87afcffecb059d7feec1a01c8ad5597cb35f7039343d0c4c86"
+        },
+        {
+          "page": 6,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\opgaven\\page-6.png",
+          "sha256": "d4e82d03960929d6ee49c4acc404302739a9d358f951e5c8dd174169bcd3d818"
+        }
+      ],
+      "extracted_text_sha256": "31160df7e485080d76c518f2a012a98a5cbc89f271e2cc85c319fe982ddafc76"
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "61cbde67e81565150128187573a766fffc9bc1d01f3bd24cbe3dacb9ddeb52b2",
+      "minimum_text_pt": 12.0,
+      "page_bindings": [
+        {
+          "page": 1,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\antwoorden\\page-1.png",
+          "sha256": "42d2e22c04f6864fad0cf26c72afa70b4b175adfd4828a80882c475d31497131"
+        },
+        {
+          "page": 2,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\antwoorden\\page-2.png",
+          "sha256": "65ab004822fdc1eca242363f3b18c340e0cbace06ce03afbaf6545c4b6721043"
+        },
+        {
+          "page": 3,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\antwoorden\\page-3.png",
+          "sha256": "3ec2d99cfe331239e13f5f786cf341d255c3fa603e585c865872f381bb319ebe"
+        },
+        {
+          "page": 4,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\antwoorden\\page-4.png",
+          "sha256": "3969896065943f5d6ff82d4b05fd81ea0acb87fb747a0ce602c907d558034bf8"
+        },
+        {
+          "page": 5,
+          "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\antwoorden\\page-5.png",
+          "sha256": "21147d027cb3472e3cb2e549833a9f24a8d2a302e6cfad75e6652ca48bc42859"
+        }
+      ],
+      "extracted_text_sha256": "485f41cc8281e8386a7bc6801978156771750b34157c8f3dedc737c3d7e96c59"
+    }
+  ],
+  "bonus_model_followed_by_criteria": {
+    "count": 4,
+    "criteria": [
+      "onderscheid tussen een gemeten interval en een lokale, voorwaardelijke regel;",
+      "een concrete reden waarom de reactie later anders kan zijn, zonder die als bewezen te presenteren;",
+      "een bruikbaar alternatief: gegevens verzamelen en passende oude/nieuwe producten vergelijken;",
+      "een expliciete grens: omzetgegevens alleen bewijzen geen winst of optimale prijs."
+    ]
+  },
+  "independent_math": [
+    {
+      "context": "speelgoed",
+      "p_old": "5",
+      "p_new": "11/2",
+      "q_old": "100",
+      "q_new": "95",
+      "signed_q_pct": "-5",
+      "signed_p_pct": "10",
+      "ev": "-1/2",
+      "to_old": "500",
+      "to_new": "1045/2",
+      "to_pct": "9/2",
+      "period": "week"
+    },
+    {
+      "context": "koffie",
+      "p_old": "5",
+      "p_new": "11/2",
+      "q_old": "100",
+      "q_new": "80",
+      "signed_q_pct": "-20",
+      "signed_p_pct": "10",
+      "ev": "-2",
+      "to_old": "500",
+      "to_new": "440",
+      "to_pct": "-12",
+      "period": "week"
+    },
+    {
+      "context": "atelier",
+      "p_old": "10",
+      "p_new": "11",
+      "q_old": "100",
+      "q_new": "95",
+      "signed_q_pct": "-5",
+      "signed_p_pct": "10",
+      "ev": "-1/2",
+      "to_old": "1000",
+      "to_new": "1045",
+      "to_pct": "9/2",
+      "period": "week"
+    },
+    {
+      "context": "stripbeurs",
+      "p_old": "10",
+      "p_new": "11",
+      "q_old": "100",
+      "q_new": "80",
+      "signed_q_pct": "-20",
+      "signed_p_pct": "10",
+      "ev": "-2",
+      "to_old": "1000",
+      "to_new": "880",
+      "to_pct": "-12",
+      "period": "week"
+    },
+    {
+      "context": "concert",
+      "p_old": "10",
+      "p_new": "15",
+      "q_old": "100",
+      "q_new": "60",
+      "signed_q_pct": "-40",
+      "signed_p_pct": "50",
+      "ev": "-4/5",
+      "to_old": "1000",
+      "to_new": "900",
+      "to_pct": "-10",
+      "period": "week"
+    },
+    {
+      "context": "museum",
+      "p_old": "4",
+      "p_new": "22/5",
+      "q_old": "100",
+      "q_new": "95",
+      "signed_q_pct": "-5",
+      "signed_p_pct": "10",
+      "ev": "-1/2",
+      "to_old": "400",
+      "to_new": "418",
+      "to_pct": "9/2",
+      "period": "week"
+    },
+    {
+      "context": "lasergame",
+      "p_old": "4",
+      "p_new": "22/5",
+      "q_old": "100",
+      "q_new": "80",
+      "signed_q_pct": "-20",
+      "signed_p_pct": "10",
+      "ev": "-2",
+      "to_old": "400",
+      "to_new": "352",
+      "to_pct": "-12",
+      "period": "week"
+    },
+    {
+      "context": "schaatsbaan",
+      "p_old": "10",
+      "p_new": "11",
+      "q_old": "100",
+      "q_new": "95",
+      "signed_q_pct": "-5",
+      "signed_p_pct": "10",
+      "ev": "-1/2",
+      "to_old": "1000",
+      "to_new": "1045",
+      "to_pct": "9/2",
+      "period": "week"
+    },
+    {
+      "context": "badminton",
+      "p_old": "10",
+      "p_new": "9",
+      "q_old": "100",
+      "q_new": "120",
+      "signed_q_pct": "20",
+      "signed_p_pct": "-10",
+      "ev": "-2",
+      "to_old": "1000",
+      "to_new": "1080",
+      "to_pct": "8",
+      "period": "week"
+    },
+    {
+      "context": "fotoclub",
+      "p_old": "2",
+      "p_new": "3",
+      "q_old": "10",
+      "q_new": "6",
+      "signed_q_pct": "-40",
+      "signed_p_pct": "50",
+      "ev": "-4/5",
+      "to_old": "20",
+      "to_new": "18",
+      "to_pct": "-10",
+      "period": "week"
+    },
+    {
+      "context": "dans",
+      "p_old": "10",
+      "p_new": "12",
+      "q_old": "200",
+      "q_new": "180",
+      "signed_q_pct": "-10",
+      "signed_p_pct": "20",
+      "ev": "-1/2",
+      "to_old": "2000",
+      "to_new": "2160",
+      "to_pct": "8",
+      "period": "week"
+    },
+    {
+      "context": "puzzel",
+      "p_old": "10",
+      "p_new": "12",
+      "q_old": "200",
+      "q_new": "120",
+      "signed_q_pct": "-40",
+      "signed_p_pct": "20",
+      "ev": "-2",
+      "to_old": "2000",
+      "to_new": "1440",
+      "to_pct": "-28",
+      "period": "week"
+    },
+    {
+      "context": "benefiet",
+      "p_old": "20",
+      "p_new": "30",
+      "q_old": "100",
+      "q_new": "60",
+      "signed_q_pct": "-40",
+      "signed_p_pct": "50",
+      "ev": "-4/5",
+      "to_old": "2000",
+      "to_new": "1800",
+      "to_pct": "-10",
+      "period": "week"
+    },
+    {
+      "context": "Nova",
+      "p_old": "10",
+      "p_new": "12",
+      "q_old": "500",
+      "q_new": "420",
+      "signed_q_pct": "-16",
+      "signed_p_pct": "20",
+      "ev": "-4/5",
+      "to_old": "5000",
+      "to_new": "5040",
+      "to_pct": "4/5",
+      "period": "week"
+    },
+    {
+      "context": "StreamNow",
+      "p_old": "20",
+      "p_new": "22",
+      "q_old": "1000",
+      "q_new": "800",
+      "signed_q_pct": "-20",
+      "signed_p_pct": "10",
+      "ev": "-2",
+      "to_old": "20000",
+      "to_new": "17600",
+      "to_pct": "-12",
+      "period": "month"
+    }
+  ],
+  "retrieval": {
+    "bicycle_to": 2400,
+    "bicycle_to_change_percent": 5,
+    "closing_price_change_percent": 25
+  },
+  "unobserved_timing": {
+    "core_components": [
+      2,
+      9,
+      9,
+      3,
+      3.5,
+      2,
+      12,
+      11
+    ],
+    "core": 51.5,
+    "support": 66.5,
+    "all": 79.5
+  },
+  "grayscale": [
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\gray-p2.png",
+      "sha256": "3bd3c6801ed79b6f2eb393ec1a2adab8bb94dac1ec9305afbc5a55fcd4b69698"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\gray-p3.png",
+      "sha256": "6b6036c03b586210c9df7cd517d05db4bf513fcc0acf51438fcc5c206a63ac6d"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\gray-p4.png",
+      "sha256": "4ff0a7053816e6e405901e12e9fb7e51945f7e5c41475a45f4c312116b68bb56"
+    },
+    {
+      "path": "C:\\wt\\book2-222-r13-qc-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-222-R13-QC-evidence\\gray-p6.png",
+      "sha256": "4bfb284dfd0bae936370dcf71ca9fde199876b56cbf56d07aacdb4247d0fd4be"
+    }
+  ],
+  "contrast": [
+    {
+      "foreground": "#182b3a",
+      "background": "#ffffff",
+      "ratio": 14.528
+    },
+    {
+      "foreground": "#182b3a",
+      "background": "#dce8ef",
+      "ratio": 11.645
+    },
+    {
+      "foreground": "#1A5276",
+      "background": "#ffffff",
+      "ratio": 8.358
+    }
+  ]
+}

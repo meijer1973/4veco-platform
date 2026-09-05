@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "legacy_byte_prefix_preserved": true,
+  "legacy_fields_preserved": [
+    "assets",
+    "chapter",
+    "content",
+    "paragraph",
+    "production_ready_with_flags",
+    "review",
+    "review_mode",
+    "reviewed_on",
+    "target_exercise_status",
+    "target_status_promotion_sprint",
+    "title"
+  ],
+  "schema_version": 2,
+  "only_new_blocks": [
+    "schema_version",
+    "partA"
+  ],
+  "quality_sha256": "c7c42721dc7c352b65aaaa43be08641edc6723e63cc511820cf880403a558e5e",
+  "old_quality_sha256": "c918189ca274e3315f09c0c09431d00855d62b28b47777cf2f9797f912cf631e",
+  "review_sha256": "9122a962d5108565a631d6cd51b1945ab0ddb1ef78c2b979cca15ac59010f01a",
+  "changed_lesson_paths": [
+    "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-quality-ref.yaml"
+  ],
+  "other_pass0_bindings_exact": 51,
+  "handoff_absent": true,
+  "production_ready_with_flags": false
+}
