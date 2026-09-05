@@ -78,3 +78,24 @@ additional aria-describedby probe passed. An unresolved final matter link was
 rejected by build_book before build_document; before/after inventory showed no
 book output mutation. Independently rerun suites: 11 book + 20 print + 6 chapter
 + 7 legacy = 44 PASS. No actual book/chapter output is accepted by this review.
+
+## Additional technical lifecycle coverage
+
+Root added two test-only cases after Round 2; assembly implementation is
+unchanged. The real-render fixture executes Pandoc, WeasyPrint and Poppler for
+both editions, with a paired chapter asset, linked front matter and twelve
+unique paragraph markers. It checks student/answer separation in extracted PDF
+text, actual PDF link annotations, exact asset collection, all fourteen assembly
+input hashes, output hashes, every captured page hash, LF manifest bytes and
+honestly pending inspection fields. Only the two authority Node subprocesses
+are stubbed in this disposable fixture; their exact arguments and working
+directory are asserted. It supplies no actual educational or integration grant.
+
+A separate negative test rejects the first authority check and verifies that
+no renderer is called, no proof directory exists, and the complete temporary
+file inventory and hashes remain unchanged. These fixtures are automatically
+removed by the test harness and are not student deliverables or visual review.
+
+Author-observed result: 13 book tests PASS, 13.880 seconds. Independent review
+of these additional tests is pending; the earlier Round 2 implementation PASS
+is not misrepresented as covering a later test delta.

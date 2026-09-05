@@ -1,6 +1,7 @@
 """Book 2 profile regressions; no fixture grants educational acceptance."""
 import copy
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -9,7 +10,7 @@ from unittest.mock import patch
 
 from PIL import Image
 
-from book_pipeline import CHAPTERS, PROFILE, TITLE, prepare_book, _namespace_chapter, _resolved_html
+from book_pipeline import CHAPTERS, PROFILE, TITLE, build_book, prepare_book, _namespace_chapter, _resolved_html
 from chapter_pipeline import verify_chapter_inputs
 from print_pipeline import digest, prepare_html
 from bs4 import BeautifulSoup
@@ -228,6 +229,105 @@ Ordinary text: id="not-a-structural-id".
             region = soup.find(class_=cls)
             self.assertIsNotNone(region)
             self.assertIsNone(region.find(class_="exercise"))
+
+    def test_denied_assembly_authority_prevents_output_and_proof_writes(self):
+        real_run = subprocess.run
+        before = {p.relative_to(self.temp.name): digest(p)
+                  for p in Path(self.temp.name).rglob("*") if p.is_file()}
+
+        def deny_node(args, **kwargs):
+            if args[0] == "node":
+                raise subprocess.CalledProcessError(1, args)
+            return real_run(args, **kwargs)
+
+        with patch("book_pipeline.subprocess.run", side_effect=deny_node), \
+             patch("book_pipeline.build_document") as render:
+            with self.assertRaises(subprocess.CalledProcessError):
+                build_book(self.manifest, self.lessons, self.platform)
+            render.assert_not_called()
+        after = {p.relative_to(self.temp.name): digest(p)
+                 for p in Path(self.temp.name).rglob("*") if p.is_file()}
+        self.assertEqual(before, after)
+        self.assertFalse((self.platform / "reports").exists())
+
+    def test_real_render_and_page_capture_bind_all_inputs_without_acceptance(self):
+        """Only authority subprocesses are stubbed; this grants no real approval."""
+        from pypdf import PdfReader
+
+        folder = self.book / "2.1 Hoofdstuk Kosten en opbrengsten"
+        assets = folder / "_assets"
+        assets.mkdir()
+        svg = assets / "2.1.1_fig_1.svg"
+        svg.write_text('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">'
+                       '<rect width="40" height="40" fill="#17365d"/></svg>', encoding="utf-8")
+        Image.new("RGB", (40, 40), "#17365d").save(svg.with_suffix(".png"))
+        source = folder / "2.1 Kosten en opbrengsten – hoofdstuk.md"
+        source.write_text(source.read_text(encoding="utf-8") +
+                          "\n![Technical fixture](_assets/2.1.1_fig_1.svg)\n", encoding="utf-8")
+        self.spec["chapters"][0]["hoofdstuk_sha256"] = digest(source)
+        self.spec["chapters"][0]["asset_sha256"]["hoofdstuk"] = {
+            p.name: digest(p) for p in assets.iterdir()}
+        for kind in ("boek", "antwoorden"):
+            item = self.spec["matter"][kind]["front"]
+            path = self.platform / item["path"]
+            path.write_text(f"# Technical fixture {kind}\n\n"
+                            f"[First paragraph](#book-{kind}-paragraph-2-1-1)\n",
+                            encoding="utf-8")
+            item["sha256"] = digest(path)
+        self.save()
+        real_run = subprocess.run
+        gate_calls = []
+
+        def fixture_authority_only(args, **kwargs):
+            if args[0] == "node":
+                gate_calls.append((args, kwargs))
+                return subprocess.CompletedProcess(args, 0)
+            return real_run(args, **kwargs)
+
+        with patch("book_pipeline.subprocess.run", side_effect=fixture_authority_only):
+            records = build_book(self.manifest, self.lessons, self.platform)
+        self.assertEqual([call[0] for call in gate_calls], [
+            ["node", "build-scripts/workflows/check-book-outline-currentness.js",
+             "--require-approved", "--action", "whole_book_assembly"],
+            ["node", "build-scripts/workflows/check-book2-target-authority-remediation.js", "--durable"],
+        ])
+        self.assertTrue(all(call[1] == {"cwd": self.platform, "check": True} for call in gate_calls))
+        self.assertEqual(len(records), 2)
+        for kind, record in zip(("boek", "antwoorden"), records):
+            with self.subTest(kind=kind):
+                self.assertEqual(len(record["assembly_inputs"]), 14)
+                verify_chapter_inputs({"inputs": record["assembly_inputs"], "assets": record["assets"]})
+                for path_field, hash_field in (("source_md", "source_sha256"),
+                                                ("source_html", "html_sha256"),
+                                                ("source_pdf", "pdf_sha256")):
+                    self.assertEqual(digest(Path(record[path_field])), record[hash_field])
+                reader = PdfReader(record["source_pdf"])
+                text = "\n".join(page.extract_text() for page in reader.pages)
+                expected_kind = "hoofdstuk" if kind == "boek" else "antwoorden"
+                excluded_kind = "antwoorden" if kind == "boek" else "hoofdstuk"
+                for nr, _ in CHAPTERS:
+                    for i in range(1, 5):
+                        self.assertEqual(text.count(f"UNIQUE-{expected_kind}-{nr}.{i}."), 1)
+                self.assertNotIn(f"UNIQUE-{excluded_kind}", text)
+                self.assertTrue(any(page.get("/Annots") for page in reader.pages))
+                proof = self.platform / "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1" / record["artifact_id"]
+                self.assertEqual(record["artifact_id"], f"book-2-{kind}-{record['pdf_sha256'][:12]}")
+                self.assertEqual(record["render_dpi"], 150)
+                self.assertEqual(len(record["rendered_pages"]), len(reader.pages))
+                self.assertEqual(record["inspection_status"], "PENDING")
+                self.assertEqual(record["pages_inspected"], [])
+                self.assertIsNone(record["visible_student_defects"])
+                self.assertFalse(record["inspected_at_normal_reading_scale"])
+                self.assertTrue((proof / "contact-sheet.png").is_file())
+                raw_manifest = (proof / "manifest.json").read_bytes()
+                self.assertNotIn(b"\r", raw_manifest)
+                self.assertEqual(json.loads(raw_manifest), record)
+                for page in record["rendered_pages"]:
+                    self.assertEqual(digest(proof / page), record["page_sha256"][Path(page).name])
+        for path in assets.iterdir():
+            self.assertEqual(digest(self.book / "_assets" / path.name), digest(path))
+        self.assertEqual(len(records[0]["assets"]), 2)
+        self.assertEqual(records[1]["assets"], [])
 
 
 if __name__ == "__main__":

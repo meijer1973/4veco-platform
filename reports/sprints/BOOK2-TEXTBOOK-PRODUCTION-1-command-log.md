@@ -204,3 +204,35 @@ anchor correction; the book-pipeline-review report records actual findings and
 44 independently passing focused tests. No chapter/book output exists yet.
 The full combined package, exact-head CI, paired PRs and final owner gate are
 still pending; §211 is not being handed off as project completion.
+
+## Parallel §221 assignment and integrated regression
+
+Root assigned §221 to distinct paragraph_221_builder in the paired worktrees
+`C:/wt/book2-221-production-20260905/`, branch
+`agent/book2-221-production-20260905`, claimed as
+`BOOK2-TEXTBOOK-PRODUCTION-1-221`. The assignment starts from platform
+0e940acb7d1f1811da3d5627d0466affb7767c0e and lessons
+7d46d26e54e96e05aa295e6dcfab22f57a2f270e. The already independently reviewed,
+owner-approved §221 plan is unchanged; the external two-hold release governs
+its historical pending wording. The builder confirmed approved paragraph
+currentness and durable twelve-record authority before authoring.
+
+Independent reviewer correction_plan_review passed the §211 handoff at exact
+lesson head 7d46d26e: all nine output hashes, three proof-manifest hashes and
+review/quality binding match the accepted R3 payload. Timing and contrast flags,
+bounded registry mappings, duplicate-route avoidance and the distinction between
+technical companion eligibility and authorization remain explicit.
+
+The same reviewer independently confirmed the parallelism: §221's actual
+prerequisites are printed Book 1 old-base percentages, demand-factor distinctions
+and substitutes, not unfinished §212. §211 was accepted first. §222 still waits
+for independently reviewed §221 and §212 teaching/handoffs; parallel §221 does
+not release that content dependency. Each paragraph retains a distinct builder
+and independent plan/content/visual review gates.
+
+At integrated platform head 0e940acb, `npm.cmd run check:platform` completed
+successfully (exit 0): 110 passed / 6 skipped suites, 1,870 passed / 8 skipped
+tests, 1,878 total, 437.344 seconds. Expected negative-fixture diagnostics are
+not failures. The 44 focused Python print/chapter/book/legacy checks are separate
+local checks, not represented as part of this Jest suite or remote CI. Exact
+final-head branch CI remains pending.
