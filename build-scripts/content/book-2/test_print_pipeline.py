@@ -132,6 +132,7 @@ class PrintPipelineTests(unittest.TestCase):
         self.assertIn("font-size: 12pt", CSS)
         self.assertNotIn("11pt", CSS)
         self.assertNotIn("10pt", CSS)
+        self.assertNotIn("9pt", CSS)
 
     def test_real_pdf_and_proof_never_auto_approve(self):
         self.pair()

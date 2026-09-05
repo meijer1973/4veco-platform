@@ -23,8 +23,8 @@ import tinycss2
 CSS = """
 @page {
   size: A4; margin: 20mm 20mm 21mm 24mm;
-  @bottom-left { content: string(document-title); font: 9pt Arial, sans-serif; color: #555; }
-  @bottom-right { content: counter(page) " / " counter(pages); font: 9pt Arial, sans-serif; color: #555; }
+  @bottom-left { content: string(document-title); font: 12pt Arial, sans-serif; color: #555; }
+  @bottom-right { content: counter(page) " / " counter(pages); font: 12pt Arial, sans-serif; color: #555; }
 }
 * { box-sizing: border-box; }
 html { color: #182b3a; background: white; }
