@@ -45,7 +45,7 @@ Beide prijsveranderingen zijn (11 − 10) / 10 × 100% = +10%.
 De figuur zet deze percentages op **dezelfde schaal**: rechts van nul is een
 toename, links een afname. De hoeveelheidsreactie is niet even groot.
 
-![Vergelijk de procentuele reacties op dezelfde schaal.](_assets/2.2.1_fig_1.svg)
+![Vergelijk de procentuele reacties op dezelfde schaal.](_assets/2.2.1_fig_1.svg){alt="Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal."}
 
 ### Van twee percentages naar één verhouding
 

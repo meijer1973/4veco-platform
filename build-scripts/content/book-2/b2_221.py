@@ -155,7 +155,7 @@ def asset_sources() -> dict[str, str]:
         label = f'{"+" if value > 0 else "−" if value < 0 else ""}{abs(value)}'
         parts += [line(x, 332, x, 342), text(x, 368, label, size=22, anchor="middle")]
     parts += [text(580, 368, "%", size=24), text(24, 406, "Links: afname. Rechts: toename. Eén procentenschaal.", size=22)]
-    assets["2.2.1_fig_1"] = svg(parts, 430, "Vergelijk de procentuele prijs- en hoeveelheidsveranderingen met teken")
+    assets["2.2.1_fig_1"] = svg(parts, 430, "Procentuele prijs- en hoeveelheidsveranderingen met teken op één schaal")
     parts = [text(24, 32, "Het teken geeft richting; |Ev| geeft de grootte", size=26, bold=True), line(360, 58, 360, 391)]
     for left, label, signed, magnitude, condition, classification, meaning in [
         (24, "Fruitbox", "−0,5", .5, "0,5 < 1", "prijsinelastisch", "minder sterk dan P."),

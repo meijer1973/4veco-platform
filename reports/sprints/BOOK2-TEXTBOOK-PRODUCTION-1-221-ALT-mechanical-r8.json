@@ -1,0 +1,653 @@
+{
+  "status": "PASS",
+  "visual_acceptance": "NOT_SUPPLIED",
+  "inventory": [
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.html",
+      "sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "after_sha256": "a5f3de1ccefcc2eb543a970de8bafa9125e0c0131a8599623986ad1cec24137a",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.md",
+      "sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "after_sha256": "f0a78820b4035347d49facac2febb8580c642f7f4bd2d59fcfb47d3233192f11",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "after_sha256": "d4a7c139d49276e80c23f4eda1cfab7841d063b204d7a9bb70cd225a796e5b5d",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.html",
+      "sha256": "cfd3a40c19a2fc88cc9fbd127399581ca70215d8edb1350ef873eefba2e91ef0",
+      "after_sha256": "cfd3a40c19a2fc88cc9fbd127399581ca70215d8edb1350ef873eefba2e91ef0",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.md",
+      "sha256": "02eee54304567304e8ecb777762833165103e117ea1721a8a383ca0e470f4bb4",
+      "after_sha256": "02eee54304567304e8ecb777762833165103e117ea1721a8a383ca0e470f4bb4",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+      "sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "after_sha256": "a8119cc769c8f4d91a0d45c9ab2f25abc3875e57835d13c056adf6d35c6297af",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.html",
+      "sha256": "9e47df0cf7f34317434ea53d8317ae14919e2eadc7da9da87aedc69598bdfbc1",
+      "after_sha256": "ac568897e03adcc88aab6a8710771d189d1a6e4bb18b85e63fdc4b3d32a7140b",
+      "changed": true
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md",
+      "sha256": "54e3be72a523ba19f5ed9affdd96004bdda73ce11d49b292bfbe0fd4b9ac2430",
+      "after_sha256": "ae61910c6306ff6af9d52a57db060083ca64facadc4424f1d4a96708d71974db",
+      "changed": true
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "after_sha256": "98bf4923b4e3b8e49fa3b9d1b7daf71392c6c76ef8cea63aab12c44749cda1a6",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-quality-ref.yaml",
+      "sha256": "b6f1b389d11c20665577414c17e5ae49962083812d9d1bf474d16231db749508",
+      "after_sha256": "b6f1b389d11c20665577414c17e5ae49962083812d9d1bf474d16231db749508",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-review.md",
+      "sha256": "36db8a721edf9bfbbc976a66411b611a723588e54ac211f67097a8a01221ee13",
+      "after_sha256": "36db8a721edf9bfbbc976a66411b611a723588e54ac211f67097a8a01221ee13",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-handoff.md",
+      "sha256": "216e139a6297b59cfb8e62f43eb3a79eb16efc1861e5fc989ad15562a4deb24c",
+      "after_sha256": "216e139a6297b59cfb8e62f43eb3a79eb16efc1861e5fc989ad15562a4deb24c",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1-textbook-plan.md",
+      "sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "after_sha256": "29096bdedced016376a5ddf8a22c973ec5d61e8ce4822f390c2b746becca3345",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.png",
+      "sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704",
+      "after_sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.svg",
+      "sha256": "609c6ffad43818ad4c887d882bbd2bc4e1c23dc1dd0c41e50559e4fbc24ad8cb",
+      "after_sha256": "1abc7cc2a150318a84341bf89886543cd94e5fc63dd120cf18244e62032536b2",
+      "changed": true
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.png",
+      "sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0",
+      "after_sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_2.svg",
+      "sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc",
+      "after_sha256": "872bbd68352e746cb6637aa4dc5c806475fd7430a5957ee4bf9f08d6b1b5afbc",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.png",
+      "sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95",
+      "after_sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_we_1.svg",
+      "sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5",
+      "after_sha256": "f7de73e34576ab1bd571e778ff90ad7f45c305bbde6ff7489a1720228d2499a5",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_paragraph-plan.md",
+      "sha256": "e93616f6c8770e00312ec22d366b189a09a9d90d91b6e88612811ab22fcb6a2b",
+      "after_sha256": "e93616f6c8770e00312ec22d366b189a09a9d90d91b6e88612811ab22fcb6a2b",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/build_pdf.py",
+      "sha256": "8455f6701fa609a305dba7b2c008250a919a225525d9f93b6fabc5853c55cc49",
+      "after_sha256": "8455f6701fa609a305dba7b2c008250a919a225525d9f93b6fabc5853c55cc49",
+      "changed": false
+    },
+    {
+      "repo": "lessons",
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/_chapter-plan.md",
+      "sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "after_sha256": "3a9db97518b1948eb0967d94653a10c693a0ca001e20b41503b864fd4cc7c2f7",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/221/answers.md",
+      "sha256": "583e083e66cfdbd14aee442da7fab1c19aa3fc999dcfe53f63d965e291198c1a",
+      "after_sha256": "583e083e66cfdbd14aee442da7fab1c19aa3fc999dcfe53f63d965e291198c1a",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/221/check_render.py",
+      "sha256": "d4faeba711a4bb0cb3afed8053d1c247418a44f971a6bd484945bff5aebc08b6",
+      "after_sha256": "d4faeba711a4bb0cb3afed8053d1c247418a44f971a6bd484945bff5aebc08b6",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/221/exercises.md",
+      "sha256": "d94e8f00ca51e6c33792216f6f59d60e95e4cdbf5d4ef10f918d030ef719fa8b",
+      "after_sha256": "d94e8f00ca51e6c33792216f6f59d60e95e4cdbf5d4ef10f918d030ef719fa8b",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/221/target-answers.md",
+      "sha256": "59a17da108763172e5f590fca927a448fe12b07d5b5ff113b9ec7a82c80954b5",
+      "after_sha256": "59a17da108763172e5f590fca927a448fe12b07d5b5ff113b9ec7a82c80954b5",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/221/test_source.py",
+      "sha256": "5ae7684867f4d2fb49d67fa020c3a4dd68e14ac51132989e0a6df64a53222582",
+      "after_sha256": "b47cf798ea892998b29381d68337cfd3596bb84343985b2f24b0cdab4b334e74",
+      "changed": true
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/221/theory.md",
+      "sha256": "d5ee20513a9e2222f3003b3659c9d395a49a706a3fb4191eef501afa33eae5d5",
+      "after_sha256": "2e5af204f2bb38226f793626d061b175527fe283808bcfa932a6883d19950ca4",
+      "changed": true
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/b2_221.py",
+      "sha256": "5102e16b5b86b0b6ec56a7b8ebfd4fcfbc36add33d11c90176ed8b4f39fcc56f",
+      "after_sha256": "da9dee7e7392c1ee880e9ea582ec94ecc5ff8a2a4b38694ecf7ee0eaa6ec70b2",
+      "changed": true
+    },
+    {
+      "repo": "platform",
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "after_sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "after_sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "after_sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "references/authored/course-target-exercises.json",
+      "sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "after_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/contact-sheet.png",
+      "sha256": "29a37bd67581663ef55df51b4b6f7a46469abb28a9d2f95effde4d2c3372c18c",
+      "after_sha256": "29a37bd67581663ef55df51b4b6f7a46469abb28a9d2f95effde4d2c3372c18c",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/manifest.json",
+      "sha256": "30d8c172d544e01b6efc050e309a0a6f762455cd01ff0210cf6dcef6035a2d72",
+      "after_sha256": "30d8c172d544e01b6efc050e309a0a6f762455cd01ff0210cf6dcef6035a2d72",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-001.png",
+      "sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+      "after_sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-002.png",
+      "sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+      "after_sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-003.png",
+      "sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+      "after_sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-antwoorden-d4a7c139d492-r7/pages/page-004.png",
+      "sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+      "after_sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/contact-sheet.png",
+      "sha256": "fcc566ac4cabe7553bce2390d1b54e9c88db2a75f18658f9dfad51dc84d836fd",
+      "after_sha256": "fcc566ac4cabe7553bce2390d1b54e9c88db2a75f18658f9dfad51dc84d836fd",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/manifest.json",
+      "sha256": "5bff06be24569d8a7f4813a7dae6936008e805793832a95546bde2d36e9cef5b",
+      "after_sha256": "5bff06be24569d8a7f4813a7dae6936008e805793832a95546bde2d36e9cef5b",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-001.png",
+      "sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+      "after_sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-002.png",
+      "sha256": "e3a804ee69a272e0ba12a289243ad43a2cd3580fa04b984d96ec41cb1b36d7b3",
+      "after_sha256": "e3a804ee69a272e0ba12a289243ad43a2cd3580fa04b984d96ec41cb1b36d7b3",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-003.png",
+      "sha256": "7e73dae95da20aecced92ccc22d66990b19866eac426b5002778a12250e186e4",
+      "after_sha256": "7e73dae95da20aecced92ccc22d66990b19866eac426b5002778a12250e186e4",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-004.png",
+      "sha256": "8fdbb9b6cc8d3507d71a4d8cd73cd75cd9dd5ea6cb3721d225d7e1ac0f347089",
+      "after_sha256": "8fdbb9b6cc8d3507d71a4d8cd73cd75cd9dd5ea6cb3721d225d7e1ac0f347089",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-005.png",
+      "sha256": "fa70fe045f16a558b85611caca8e71ce02b8151656b3fc7ddd394a8b27c5342a",
+      "after_sha256": "fa70fe045f16a558b85611caca8e71ce02b8151656b3fc7ddd394a8b27c5342a",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-opgaven-a8119cc769c8-r7/pages/page-006.png",
+      "sha256": "14d6ac179fb3aee0f456c7988ad3c1390f29338ac2b0d30b1f1b842bedd7990c",
+      "after_sha256": "14d6ac179fb3aee0f456c7988ad3c1390f29338ac2b0d30b1f1b842bedd7990c",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/contact-sheet.png",
+      "sha256": "aca8961808713da1a636dcbdf1cf624279c733aeea2284010f205ab5e4ed2cb8",
+      "after_sha256": "aca8961808713da1a636dcbdf1cf624279c733aeea2284010f205ab5e4ed2cb8",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/manifest.json",
+      "sha256": "9ede157354a387923cdfed51f0c28f8fd33641c2c00e3bd854a4339bf0dabfdc",
+      "after_sha256": "9ede157354a387923cdfed51f0c28f8fd33641c2c00e3bd854a4339bf0dabfdc",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-001.png",
+      "sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+      "after_sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-002.png",
+      "sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+      "after_sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-003.png",
+      "sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+      "after_sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-004.png",
+      "sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+      "after_sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-005.png",
+      "sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+      "after_sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-006.png",
+      "sha256": "eed82b34a9c59a04b62f594a8a0b65fab415fec0e469eb6147694e6fed7adb18",
+      "after_sha256": "eed82b34a9c59a04b62f594a8a0b65fab415fec0e469eb6147694e6fed7adb18",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-007.png",
+      "sha256": "434966aec4ac1ad105c2f91537fc817d92b087e5fb79b8633137b03e90cc57d3",
+      "after_sha256": "434966aec4ac1ad105c2f91537fc817d92b087e5fb79b8633137b03e90cc57d3",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-008.png",
+      "sha256": "4a4ee716c41edca10642be8518e7e964708f6cc06f56b7e5e29558e95578504b",
+      "after_sha256": "4a4ee716c41edca10642be8518e7e964708f6cc06f56b7e5e29558e95578504b",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-009.png",
+      "sha256": "7536c680768107894c0fab18fc951aac467149431d94de6c7f5bd77657e6e6ff",
+      "after_sha256": "7536c680768107894c0fab18fc951aac467149431d94de6c7f5bd77657e6e6ff",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/221-paragraaf-98bf4923b4e3-r7/pages/page-010.png",
+      "sha256": "95bfb6915156744f3fe53b1436fb4875a27dc95e7e8e6da8137fb7fcf6e0a8c3",
+      "after_sha256": "95bfb6915156744f3fe53b1436fb4875a27dc95e7e8e6da8137fb7fcf6e0a8c3",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/sprints/BOOK2-TARGET-INTEGRATION-1-owner-authorization.md",
+      "sha256": "6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87",
+      "after_sha256": "6bfdbe09538c7cdd35acbed22e8cf1b8af60c0fcafa89bec33fdb55c0b84ba87",
+      "changed": false
+    },
+    {
+      "repo": "platform",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-22-owner-authorization.md",
+      "sha256": "14fbb4367e0a6567621efa225f3f8f71ef448949b25593d71a277d3a34c0d29b",
+      "after_sha256": "14fbb4367e0a6567621efa225f3f8f71ef448949b25593d71a277d3a34c0d29b",
+      "changed": false
+    }
+  ],
+  "exact_changes": [
+    [
+      "lessons",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.html"
+    ],
+    [
+      "lessons",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.md"
+    ],
+    [
+      "lessons",
+      "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/_assets/2.2.1_fig_1.svg"
+    ],
+    [
+      "platform",
+      "build-scripts/content/book-2/221/test_source.py"
+    ],
+    [
+      "platform",
+      "build-scripts/content/book-2/221/theory.md"
+    ],
+    [
+      "platform",
+      "build-scripts/content/book-2/b2_221.py"
+    ]
+  ],
+  "all_html_alternatives": [
+    {
+      "edition": "paragraaf",
+      "alt": "Procentuele prijs- en hoeveelheidsreacties op dezelfde schaal.",
+      "characters": 62,
+      "full_caption": "Vergelijk de procentuele reacties op dezelfde schaal."
+    },
+    {
+      "edition": "paragraaf",
+      "alt": "Dezelfde absolute-waardeschaal; twee verschillende classificaties.",
+      "characters": 66,
+      "full_caption": "Dezelfde absolute-waardeschaal; twee verschillende classificaties."
+    },
+    {
+      "edition": "paragraaf",
+      "alt": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.",
+      "characters": 64,
+      "full_caption": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev."
+    },
+    {
+      "edition": "opgaven",
+      "alt": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev.",
+      "characters": 64,
+      "full_caption": "Bowlplein: berekende percentages; klimhal: alleen de gemeten Ev."
+    }
+  ],
+  "all_svg_titles": [
+    {
+      "asset": "2.2.1_fig_1",
+      "title": "Procentuele prijs- en hoeveelheidsveranderingen met teken op één schaal",
+      "characters": 71
+    },
+    {
+      "asset": "2.2.1_fig_2",
+      "title": "Twee vergelijkbare absolute-waardeschalen met grens één",
+      "characters": 55
+    },
+    {
+      "asset": "2.2.1_we_1",
+      "title": "De berekende Bowlpleinreactie en de gegeven klimhalratio, zonder verzonnen percentages",
+      "characters": 86
+    }
+  ],
+  "asset_rerasterization": [
+    {
+      "asset": "2.2.1_fig_1",
+      "png_sha256": "6f4009fe29fb88f442257e658fe6433809020ba824d17ee275a08701f37d0704",
+      "max_channel_delta": 0,
+      "byte_equal": true
+    },
+    {
+      "asset": "2.2.1_fig_2",
+      "png_sha256": "589af699b6e024488be654185cfbf39b4a0d957cb59c11ecb452968a252164c0",
+      "max_channel_delta": 0,
+      "byte_equal": true
+    },
+    {
+      "asset": "2.2.1_we_1",
+      "png_sha256": "396f5236c9c3cda581dece54f45d01004494e173c00532fc73a4b54c07a9df95",
+      "max_channel_delta": 0,
+      "byte_equal": true
+    }
+  ],
+  "all_twenty_pages": [
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-001.png",
+      "sha256": "e423b8b6bcf3d4779bb9f74efd9e25d4707925bfbd063693c771c9e81d4bf1ef",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-002.png",
+      "sha256": "9d9adc88dd79f8008822e5e1052e114cf2ed42d62ab299bf955fdea5e54feb13",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-003.png",
+      "sha256": "68100f2ca721b35c921d91d56e04ca05738e7eba4a92c1b6d05a4923996bb764",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-004.png",
+      "sha256": "0467d1ffe60b8751fb1d55c7ccf7707d3b8f0ec6bf773525839b164acc4f1537",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-005.png",
+      "sha256": "53fc0274df21a7f931e81238a67d18159aa3719091c236ec8a81b1ed10210bba",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-006.png",
+      "sha256": "eed82b34a9c59a04b62f594a8a0b65fab415fec0e469eb6147694e6fed7adb18",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-007.png",
+      "sha256": "434966aec4ac1ad105c2f91537fc817d92b087e5fb79b8633137b03e90cc57d3",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-008.png",
+      "sha256": "4a4ee716c41edca10642be8518e7e964708f6cc06f56b7e5e29558e95578504b",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-009.png",
+      "sha256": "7536c680768107894c0fab18fc951aac467149431d94de6c7f5bd77657e6e6ff",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "paragraaf",
+      "page": "pages/page-010.png",
+      "sha256": "95bfb6915156744f3fe53b1436fb4875a27dc95e7e8e6da8137fb7fcf6e0a8c3",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-001.png",
+      "sha256": "4630c0bb8c90fbd067136a434f71a97f403bdd8d2cf3a5089b3473bc40b5cd64",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-002.png",
+      "sha256": "e3a804ee69a272e0ba12a289243ad43a2cd3580fa04b984d96ec41cb1b36d7b3",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-003.png",
+      "sha256": "7e73dae95da20aecced92ccc22d66990b19866eac426b5002778a12250e186e4",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-004.png",
+      "sha256": "8fdbb9b6cc8d3507d71a4d8cd73cd75cd9dd5ea6cb3721d225d7e1ac0f347089",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-005.png",
+      "sha256": "fa70fe045f16a558b85611caca8e71ce02b8151656b3fc7ddd394a8b27c5342a",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "opgaven",
+      "page": "pages/page-006.png",
+      "sha256": "14d6ac179fb3aee0f456c7988ad3c1390f29338ac2b0d30b1f1b842bedd7990c",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-001.png",
+      "sha256": "760814941a5d1726dce72d62093fd964f056786310ea832942b7a2a7e7827551",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-002.png",
+      "sha256": "6b39705a836c8cc3bdbe4fc8f9d302cbe5b0b41758d2106f8975ceabed2cb0eb",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-003.png",
+      "sha256": "e2ad4fbccb2354c2c75d3194bfd8288a4fb620b8422a48b16770fcc2e0910651",
+      "unchanged_bytes": true
+    },
+    {
+      "edition": "antwoorden",
+      "page": "pages/page-004.png",
+      "sha256": "97400edfb89401cf71c15f8ce8b83636cf00e11080eefd6987fc761d07d3cbf5",
+      "unchanged_bytes": true
+    }
+  ],
+  "all_three_pdfs_byte_unchanged": true,
+  "all_full_figcaption_words_and_punctuation_preserved": true,
+  "exact_html_changes": [
+    "first img alt",
+    "native removal of first figcaption aria-hidden=true",
+    "first figcaption source soft-wrap moved; every word and punctuation unchanged"
+  ],
+  "zip_applicability": "No ZIP files in §221 baseline or final; not applicable",
+  "independent_review_and_specialist_QC": "PENDING"
+}
