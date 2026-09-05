@@ -1,13 +1,14 @@
 # Sprint BOOK2-TEXTBOOK-PRODUCTION-1: Output manifest
 
-Date: 2026-09-05. Accountable integrator: codex-root.
+Date: 2026-09-06. Accountable integrator: codex-root.
 Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform adopted212 R7 `88956b8693f4de0197a0b019bba5a18ee80b3cd2`,
-lessons `9da7c47b07144815f730ebbb9fd117805194ac6b`, including the published
-root-only §222 acceptance/handoff recorded in222-root-acceptance-r13.md.
+Snapshot: platform adopted211 R5 QC `a288bed1008880c7601a431ad15a5f976d652256`,
+lessons specialist adoption `1fb8ce8555983dcb24a6192cc0a6a85ecc8c1c14`, followed
+by the exact root-only current211 acceptance/handoff in211-root-acceptance-r5.md.
+Current221 R8 and222 R13 acceptances remain unchanged.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -15,11 +16,11 @@ All paths below are relative to the lesson book root
 ## Counts and evidence rules
 
 Expected: 27 theory + 6 consolidation + 6 chapter + 2 book = **41 PDFs**.
-At this checkpoint: **2 internally gate-closed current paragraph packages**:
-6 accepted-with-flags PDFs,12 adopted candidate PDFs,8 legacy unaccepted and15
-absent. The six §211/§212 PDFs retain
-historical independent print/content acceptance, but their package accessibility
-gate is reopened for short-alt defects; they are conservatively C here. Physical
+At this checkpoint: **3 internally gate-closed current paragraph packages**:
+9 accepted-with-flags PDFs,9 adopted candidate PDFs,8 legacy unaccepted and15
+absent. §211 now has current R5 independent paragraph review, distinct specialist
+QC and root acceptance/handoff. §212 retains historical print/content acceptance
+but its current independent and successor gates remain; its three PDFs stay C. Physical
 root presence is 26, not 26 accepted. All eight legacy PDFs remain Git-blob-
 identical to the baseline. Separate in-progress worktrees do not count here.
 
@@ -27,15 +28,15 @@ identical to the baseline. Separate in-progress worktrees do not count here.
 printed page bytes from R7/R5. §221 R8 now has current independent paragraph and
 specialist PASS WITH FLAGS and root acceptance/handoff; its three editions are A.
 §213 R7 now adds the required bonus assessment-criteria block, with30 total pages.
-Root source/native/print-only proof passes; distinct R7 paragraph/QC and final
+Root source/native/print-only proof and current independent R7 paragraph review pass; QC and final
 accepted212 successor/full-root rebuild remain. Its editions stay C; no handoff.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
 remain identical. Its current independent paragraph and distinct specialist
 reviews pass with flags; root acceptance/handoff are complete. Its editions are A.
 §223 R3 remains an adopted paragraph-PASS candidate.
 §211 R5 adds the required bonus criteria and is adopted/root-rebuilt: only answer
-page7 changes; the other30 pages remain exact. Current paragraph rereview/QC
-remain pending. Its inherited stale opgaven.zip is explicitly excluded;
+page7 changes; the other30 pages remain exact. Current paragraph review and
+distinct specialist QC pass; root acceptance/handoff are complete. Its inherited stale opgaven.zip is explicitly excluded;
 the native211 builder has no ZIP output contract. It is not a current student
 deliverable. §212 R7 adds its three bonus criteria and is adopted/root-rebuilt:
 only answer page6 changes, the other26 pages are exact, and34artifact full/print
@@ -58,9 +59,9 @@ No output is silently accepted through an older PASS or reviewed_final label.
 
 | # | ID | Edition | Status | Exact relative PDF path |
 |---:|---|---|:---:|---|
-| 1 | 2.1.1 | paragraaf | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf` |
-| 2 | 2.1.1 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf` |
-| 3 | 2.1.1 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf` |
+| 1 | 2.1.1 | paragraaf | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – paragraaf.pdf` |
+| 2 | 2.1.1 | opgaven | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – opgaven.pdf` |
+| 3 | 2.1.1 | antwoorden | A | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren/2.1.1 Kostenstructuren – antwoorden.pdf` |
 | 4 | 2.1.2 | paragraaf | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – paragraaf.pdf` |
 | 5 | 2.1.2 | opgaven | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – opgaven.pdf` |
 | 6 | 2.1.2 | antwoorden | C | `2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even/2.1.2 Opbrengsten, winst en break-even – antwoorden.pdf` |
@@ -108,9 +109,9 @@ hashes alone are not student-quality acceptance.
 
 | ID / edition | Raw PDF SHA-256 | Current revision / gate |
 |---|---|---|
-| 2.1.1 / paragraaf | `9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0` | R3 historical print acceptance; short-alt correction/review pending |
-| 2.1.1 / opgaven | `97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953` | R3 historical print acceptance; short-alt correction/review pending |
-| 2.1.1 / antwoorden | `498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce` | R5 criteria corrected; current paragraph/QC gates pending |
+| 2.1.1 / paragraaf | `9837e3a85f3129a5309a36b17fd1030702ba92fc7ef464af609cb878e4d2f8b0` | R5 internal acceptance with flags; current review/QC/handoff complete |
+| 2.1.1 / opgaven | `97329415bacc150675a327ad31455b25b8e9e1b03012ef6b65dab10ab1f02953` | R5 internal acceptance with flags; current review/QC/handoff complete |
+| 2.1.1 / antwoorden | `498b9a863eef9c0feefd50e8a50e72aa41c626caaca79f0b98261b8b3104e5ce` | R5 internal acceptance with flags; current review/QC/handoff complete |
 | 2.1.2 / paragraaf | `e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2` | R5 historical print acceptance; short-alt correction/review pending |
 | 2.1.2 / opgaven | `94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a` | R5 historical print acceptance; short-alt correction/review pending |
 | 2.1.2 / antwoorden | `d55f1da66723cd6f932cbf0793ce79d8d4188d2d907244fd40cc6f6fbad5ac90` | R7 criteria corrected; current paragraph/QC/successor gates pending |
@@ -140,10 +141,12 @@ See221-root-acceptance-r8.md for exact current canonical and adoption bindings.
 ## Remaining production and acceptance
 
 Wave-two §213 and §223 outputs remain adopted candidates C; their gate
-closure remains pending. §211 R5 has its missing bonus criteria and needs current
-rereview/QC. §212 R7 has its bonus block and needs current independent gates and
+closure remains pending. §211 R5 has complete current paragraph review, distinct
+specialist QC and root acceptance/handoff with flags; see211-root-acceptance-r5.md.
+§212 R7 has its bonus block and needs current independent gates and
 accepted-prerequisite succession; both metadata corrections are root-adopted/rebuilt.
-§213 R7 has the bonus-criteria correction; independent gates and exact accepted
+§213 R7 has the bonus-criteria correction and current independent paragraph PASS;
+distinct QC/root acceptance and exact accepted
 prerequisite succession remain. Current root print-only/source/render proof is
 not mislabeled a full generator rebuild while the old212 MD guard still differs.
 §221 R8's internal review/QC/handoff gates are complete, with timing flags.
