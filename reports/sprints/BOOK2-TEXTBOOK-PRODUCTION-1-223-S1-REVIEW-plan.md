@@ -34,7 +34,7 @@ not a new pedagogical design or expansion of the static Part A product.
 | Requirement | Independent evidence | Stop condition |
 |---|---|---|
 | Exactly four accepted prior hashes | Entire immutable generator plus four unique full-literal substitutions; accepted lesson Git/disk LF and raw hashes | Any fifth byte change or wrong accepted input |
-| Existing sources/tests/outputs preserved | Four complete pupil sources, original seven-test file, helper/checker, all 26 paragraph files, 20 native bytes and absent handoff | Unexpected change or missing file |
+| Existing sources/tests/outputs preserved | Four complete pupil sources, original seven-test file, helper/checker, all 25 paragraph files, 20 native bytes and absent handoff | Unexpected change or missing file |
 | Hash guard fails closed | Run all 14 tests, independently test real lf_hash via isolated read fixtures for every wrong/missing input before process/mkdir/write | Any effect reached or invalid input accepted |
 | Three actual native build routes | Full generator, ordinary-path thin wrapper with explicit extended lesson path, direct print; MSYS-first PATH and Python314 | Nonzero exit, changed bytes, missing capture |
 | Render parity | All 32 page raw and decoded pixel hashes against exact R3 evidence, all four figure bytes/pixels; ZIP safe unique names/CRC/current member bytes | Drift or invalid archive |
@@ -72,6 +72,14 @@ not a new pedagogical design or expansion of the static Part A product.
    root integrates this report into the larger governed package.
 
 ## Boundaries and continuation
+
+Pre-build inventory correction: the first reviewer baseline assertion copied
+the builder prose count 26 and failed. Actual immutable Git and the builder's
+own machine inventory contain exactly 25 files: 20 native outputs plus review,
+QC, textbook plan, legacy companion plan and wrapper. No file is missing. The
+initial diagnostic remains in the command log; this plan/checker now use the
+actual enumerated 25-file inventory before any rebuild. Historical builder
+prose and evidence remain unchanged.
 
 Include stronger independent guard and page/ZIP parity probes now. Defer
 specialist QC, handoff and root acceptance to distinct later owners. Full
