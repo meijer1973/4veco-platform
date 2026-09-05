@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T08:20:54.215Z
+Generated: 2026-09-05T08:20:55.587Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-target-exercise-audit-20260904`
-Source commit: `0b6befd9808e35a3442129e7fc278390ce568649`
-Files indexed: 7631
+Source commit: `ae8c6e850be7909f0dfa621cbded43c4c5ff57d4`
+Files indexed: 7635
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2629,7 +2629,7 @@ Count: 1027
 
 ## reports
 
-Count: 4919
+Count: 4923
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4065,6 +4065,8 @@ Count: 4919
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.json
 - reports/review-gates/GATE-BOOK-2-FOUNDATION-OUTLINE-1/review-packet.md
 - reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/bundle-urls.md
+- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.json
+- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/pr-readiness-initial.md
 - reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
 - reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.md
 - reports/review-gates/GATE-BUNDLE-LANE-CI-RELIABILITY-1/bundle-urls.md
@@ -5291,9 +5293,11 @@ Count: 4919
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-corrections.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round3.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-correction-resolution.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-verification.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-planning-review.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md
