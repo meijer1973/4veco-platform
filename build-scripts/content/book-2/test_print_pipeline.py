@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 from PIL import Image
 from pypdf import PdfReader
 
-from print_pipeline import CSS, _embed_images, _wrap_exercises, build_document, prepare_html, render_proof, validate_source_html
+from print_pipeline import CSS, _embed_images, _protect_short_callouts, _wrap_exercises, build_document, prepare_html, render_proof, validate_source_html
 
 
 class PrintPipelineTests(unittest.TestCase):
@@ -63,6 +63,30 @@ class PrintPipelineTests(unittest.TestCase):
         soup = BeautifulSoup('<body><p><strong>Opgave 1</strong></p><p>' + "reading " * 120 + '</p></body>', "html.parser")
         _wrap_exercises(soup)
         self.assertNotIn("exercise-short", soup.select(".exercise")[0]["class"])
+
+    def test_only_short_text_callouts_are_kept_together(self):
+        soup = BeautifulSoup('<blockquote class="warning"><p><strong>Let op</strong></p><p>Een korte voorwaarde.</p></blockquote>'
+                             + '<blockquote><p>' + 'reading ' * 120 + '</p></blockquote>'
+                             + '<blockquote><table><tr><td>Table</td></tr></table></blockquote>', "html.parser")
+        _protect_short_callouts(soup)
+        _protect_short_callouts(soup)
+        blocks = soup.find_all("blockquote")
+        self.assertEqual(blocks[0]["class"], ["warning", "callout-short"])
+        self.assertNotIn("callout-short", blocks[1].get("class", []))
+        self.assertNotIn("callout-short", blocks[2].get("class", []))
+
+    def test_real_pdf_keeps_short_warning_label_with_body_at_page_boundary(self):
+        self.source.write_text('<div style="height: 232mm;"></div>\n\n'
+                               '> **Waarschuwingslabel**\n>\n'
+                               '> Deze voorwaarde hoort bij het label en mag er niet van worden gescheiden. '
+                               'Controleer de productieperiode en het productiegebied voordat je de kosten vergelijkt.\n', encoding="utf-8")
+        record = build_document(self.source)
+        pages = [page.extract_text() for page in PdfReader(record["source_pdf"]).pages]
+        self.assertEqual(len(pages), 2)
+        self.assertNotIn("Waarschuwingslabel", pages[0])
+        self.assertIn("Waarschuwingslabel", pages[1])
+        self.assertIn("Deze voorwaarde", pages[1])
+        self.assertIn("kosten vergelijkt", " ".join(pages[1].split()))
 
     def test_pandoc_title_styles_math_and_dutch(self):
         html, assets = prepare_html("# Kosten\n\n$TK=500+0.8Q$\n", self.source)
