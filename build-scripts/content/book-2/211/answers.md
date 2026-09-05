@@ -217,6 +217,12 @@ Je kunt dus niet bepalen wat bijvoorbeeld Q = 150 precies kost.
 Voor een sterk antwoord zijn een mogelijke verklaring **en** deze beperking
 nodig. Je hoeft geen nieuwe naam voor een kostencurve te kennen.
 
+**Beoordelingscriteria:**
+
+- Je vergelijkt GVK = TVK/Q bij beide aantallen voor A en B, met euro per product als eenheid.
+- Je weerlegt ‘altijd constant’ met B en koppelt A's gelijke GVK aan de gegeven € 1 aan variabele kosten per product.
+- Je geeft een mogelijke verklaring voor B zonder vaste kosten toe te voegen en benoemt dat twee waarnemingen geen unieke kostenfunctie bepalen.
+
 ## Herhaling / Herhaling en interleaving
 
 **Opgave 9**
