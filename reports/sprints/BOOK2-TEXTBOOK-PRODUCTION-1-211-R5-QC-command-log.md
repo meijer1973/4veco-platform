@@ -234,3 +234,55 @@ SyntaxError: unterminated string literal (detected at line 122)
 ```text
 
 ```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-run.py scope
+
+- cwd: `C:\wt\book2-211-r5-qc-20260906\4veco-platform`
+- started_at: `2026-09-05T22:43:14.527Z`
+- finished_at: `2026-09-05T22:43:15.365Z`
+- duration_ms: `838`
+- exit_code: `0`
+- stdout_sha256: `56d3241464994f1017335efde0680a09eae1c67d67aaece30c0d9ad24a82ae02`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"argv": ["git", "rev-parse", "HEAD"], "exit_code": 0}
+{"argv": ["git", "rev-parse", "HEAD"], "exit_code": 0}
+{"argv": ["node", "build-scripts/workflows/check-paragraph-lane-scope.js", "--lane", "shared", "--base", "2bf6260c5d4d799c5408f898d0dab126eff9e5ac", "--head", "b745985a352e67632c62dc148dd413a3b856d3f7", "--json"], "exit_code": 0}
+{"argv": ["node", "build-scripts/workflows/check-paragraph-lane-scope.js", "--lane", "textbook", "--base", "917115c8da631d65eefbdb1f15c13b2291cd9e1d", "--head", "9a9d576dbe3e58e4cf3db6ffebfb2785e582c1e3", "--json", "--cwd", "C:\\wt\\book2-211-r5-qc-20260906\\4veco-lessen"], "exit_code": 0}
+{"argv": ["node", "build-scripts/workflows/check-paragraph-lane-scope.js", "--lane", "shared", "--base", "c84b5ccb03f6bc73e34d8c376368954cf363ca81", "--head", "b745985a352e67632c62dc148dd413a3b856d3f7", "--json"], "exit_code": 1}
+{"argv": ["git", "-c", "core.quotepath=false", "diff", "--name-only", "c84b5ccb03f6bc73e34d8c376368954cf363ca81", "HEAD"], "exit_code": 0}
+{"argv": ["git", "-c", "core.quotepath=false", "diff", "--name-only", "3ccd6f68c848d1ab33e5c33fcac754ffbd7c0d99", "HEAD"], "exit_code": 0}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## C:/Python314/python.exe reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-211-R5-QC-run.py publication_checks
+
+- cwd: `C:\wt\book2-211-r5-qc-20260906\4veco-platform`
+- started_at: `2026-09-05T22:43:55.262Z`
+- finished_at: `2026-09-05T22:43:55.856Z`
+- duration_ms: `594`
+- exit_code: `0`
+- stdout_sha256: `f692dd0277e6771ebca5d60ce28392b5064c0f019d018e2effe7a2fdc476d6e4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"argv": ["git", "diff", "--check", "c84b5ccb03f6bc73e34d8c376368954cf363ca81", "HEAD"], "exit_code": 2}
+{"argv": ["git", "-c", "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol", "diff", "--check", "c84b5ccb03f6bc73e34d8c376368954cf363ca81", "HEAD"], "exit_code": 0}
+{"argv": ["git", "-c", "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol", "diff", "--check", "3ccd6f68c848d1ab33e5c33fcac754ffbd7c0d99", "HEAD"], "exit_code": 0}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
