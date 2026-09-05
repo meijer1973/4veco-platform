@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T22:04:23.443Z
+Generated: 2026-09-05T22:08:40.371Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `7a54b068ecb812e106293f794d58b68ff54f652d`
-Files indexed: 9419
+Source commit: `7b987fdbf6408c54512a86664c6ba31513bdd83b`
+Files indexed: 9431
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2720,7 +2720,7 @@ Count: 1030
 
 ## reports
 
-Count: 6643
+Count: 6655
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -7081,10 +7081,19 @@ Count: 6643
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-scope.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-independent-scope.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-operational-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-probes.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-scope.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-plan-r2-independent-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-check.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-checks.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-publication.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-r2-checks.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-r2-response.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-r2-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-planning-scope.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-plan-adoption.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
@@ -7106,6 +7115,8 @@ Count: 6643
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-paragraph-archive-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-paragraph-archive-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-adoption-check.js
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-r2-root-continuation.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan-review-adoption-231-successor.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-planning-review.md
@@ -7123,6 +7134,7 @@ Count: 6643
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-short-alt-preflight.js
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-independent-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-r2-independent-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-target-trace.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-timing-walkthrough.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-wave-2-production-release.md
