@@ -191,7 +191,9 @@ def build_document(source: Path, *, pandoc: str = "pandoc") -> dict:
     source = source.resolve(strict=True)
     if source.suffix != ".md":
         raise ValueError("Expected an exact authored Markdown file")
-    html, assets = prepare_html(source.read_text(encoding="utf-8-sig"), source, pandoc=pandoc)
+    source_bytes = source.read_bytes()
+    source_hash = hashlib.sha256(source_bytes).hexdigest()
+    html, assets = prepare_html(source_bytes.decode("utf-8-sig"), source, pandoc=pandoc)
 
     def local_fetcher(url, *args, **kwargs):
         if not url.startswith("data:image/png;base64,"):
@@ -201,9 +203,11 @@ def build_document(source: Path, *, pandoc: str = "pandoc") -> dict:
     html_path, pdf_path = source.with_suffix(".html"), source.with_suffix(".pdf")
     html_path.write_text(html, encoding="utf-8", newline="\n")
     HTML(string=html, url_fetcher=local_fetcher).write_pdf(pdf_path)
-    return {"source_md": str(source), "source_sha256": digest(source),
-            "source_html": str(html_path), "html_sha256": digest(html_path),
-            "source_pdf": str(pdf_path), "pdf_sha256": digest(pdf_path), "assets": assets}
+    record = {"source_md": str(source), "source_sha256": source_hash,
+              "source_html": str(html_path), "html_sha256": digest(html_path),
+              "source_pdf": str(pdf_path), "pdf_sha256": digest(pdf_path), "assets": assets}
+    verify_record_freshness(record)
+    return record
 
 
 def verify_record_freshness(record: dict) -> None:

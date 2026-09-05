@@ -146,6 +146,17 @@ class PrintPipelineTests(unittest.TestCase):
             finally:
                 changed.write_bytes(original)
 
+    def test_build_records_consumed_source_snapshot_not_later_bytes(self):
+        self.source.write_text('# Original source\n', encoding="utf-8")
+        real_prepare = prepare_html
+        def mutate_after_read(*args, **kwargs):
+            result = real_prepare(*args, **kwargs)
+            self.source.write_text('# Changed source\n', encoding="utf-8")
+            return result
+        with patch("print_pipeline.prepare_html", side_effect=mutate_after_read):
+            with self.assertRaisesRegex(ValueError, "Stale proof input: source_md"):
+                build_document(self.source)
+
 
 if __name__ == "__main__":
     unittest.main()
