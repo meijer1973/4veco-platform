@@ -1,0 +1,81 @@
+{
+  "reviewer": "paragraph_223_independent_review",
+  "candidate_platform": "8dc54d78a222cff2225d88aae8c7d23141953cc1",
+  "candidate_lessons": "b23e0056511fc5b9b10f0b8e6bbe130d2599c36b",
+  "pass_0": "PASS",
+  "documents": [
+    {
+      "kind": "paragraaf",
+      "pdf_sha256": "ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb",
+      "pages": 15,
+      "manifest_sha256": "54a684ab32f7ac453f270867d18f70ccb097cecaa7e57f337fcc199772cab25d"
+    },
+    {
+      "kind": "opgaven",
+      "pdf_sha256": "50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80",
+      "pages": 10,
+      "manifest_sha256": "43f41e2c6377e13a629ad7f8b95aa38765906ae42d871bc763ffaadca9111128"
+    },
+    {
+      "kind": "antwoorden",
+      "pdf_sha256": "30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10",
+      "pages": 7,
+      "manifest_sha256": "b4b068c88c34fd00704f0a6ab3b8a9122f24c27a5b7ff2c582167968c6d75691"
+    }
+  ],
+  "asset_inventory": [
+    "2.2.3_fig_1.png",
+    "2.2.3_fig_1.svg",
+    "2.2.3_fig_2.png",
+    "2.2.3_fig_2.svg",
+    "2.2.3_fig_3.png",
+    "2.2.3_fig_3.svg",
+    "2.2.3_fig_4.png",
+    "2.2.3_fig_4.svg"
+  ],
+  "independent_rational_cases": {
+    "worked": {
+      "Q_old": "200",
+      "Q_income": "230",
+      "Q_reset_price": "204",
+      "percent_Q": "15",
+      "percent_Y": "20",
+      "Ei_exact": "3/4"
+    },
+    "guided_4": {
+      "Q_old": "160",
+      "Q_income": "180",
+      "Q_reset_price": "162",
+      "percent_Q": "25/2",
+      "percent_Y": "20",
+      "Ei_exact": "5/8"
+    },
+    "guided_5": {
+      "Q_old": "200",
+      "Q_income": "220",
+      "Q_reset_price": "205",
+      "percent_Q": "10",
+      "percent_Y": "20",
+      "Ei_exact": "1/2"
+    },
+    "independent_8": {
+      "Q_old": "180",
+      "Q_income": "200",
+      "Q_reset_price": "184",
+      "percent_Q": "100/9",
+      "percent_Y": "20",
+      "Ei_exact": "5/9"
+    },
+    "target_9": {
+      "Q_old": "390",
+      "Q_income": "420",
+      "Q_reset_price": "392",
+      "percent_Q": "100/13",
+      "percent_Y": "10",
+      "Ei_exact": "10/13"
+    }
+  },
+  "direct_ratio_checks": 17,
+  "visual_acceptance": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "immutable_build_manifest_sha256": "f88345226b61e9e2dd9d0ace8067caf2847280c324ab313c9b26ca8d184aa565"
+}
