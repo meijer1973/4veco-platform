@@ -4099,3 +4099,254 @@ Paragraph lane scope: PASS (textbook)
 ```text
 
 ```
+## npm.cmd test -- --runInBand
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T18:56:06.948Z`
+- finished_at: `2026-09-05T19:03:50.386Z`
+- duration_ms: `463438`
+- exit_code: `0`
+- stdout_sha256: `18fa34aca6face4ceb5d841bce119e012c5c97c0248a3fc22be306e01bfa6d3b`
+- stderr_sha256: `ef24089261d7e370c4f44953144b7bb0a82949a65e635b1a37d6155df187be50`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 110 passed, 110 of 116 total
+Tests:       8 skipped, 1872 passed, 1880 total
+Snapshots:   0 total
+Time:        462.528 s
+Ran all test suites.
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-corrective-review-bindings.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:06:18.791Z`
+- finished_at: `2026-09-05T19:06:18.911Z`
+- duration_ms: `120`
+- exit_code: `0`
+- stdout_sha256: `e12880d2bd5cd3571ccfd813a1c86ab37321b324bbadf45b476d23db5a6c89be`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS_FOR_ADOPTION_PROVENANCE_ONLY",
+  "quality_acceptance": "WITHHELD",
+  "current_221_qc": "REVISE",
+  "current_222_paragraph": "FAIL",
+  "required_findings": 3,
+  "fresh_page_hashes": 41,
+  "exact_pdf_and_generation_manifest_bindings": 6,
+  "grayscale_bindings": 5,
+  "canonical_222_raw_sha256": "d8c01a53362386143557666e1b6a9d3157a166d69330fba56a0ac48e7a88a9e1",
+  "canonical_222_exact_original_commit": "be754856f6b6c2cb1cbe1d6abedbe93c2637b8b1",
+  "no_source_output_qc_handoff_mutation": true
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:06:51.060Z`
+- finished_at: `2026-09-05T19:06:51.143Z`
+- duration_ms: `83`
+- exit_code: `1`
+- stdout_sha256: `a3e2109d7595466b191cd645463d544a144b4b571bd1e3887d598570bc9bd813`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.html (400.9 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.html (140.1 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.html (16.6 KB)
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  X Part A review verdict is FAIL: 2.2.2-review.md
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+FAIL Paragraph 2.2.2 "Elasticiteit en omzet" failed: 1 error(s), 0 warning(s).
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:06:51.190Z`
+- finished_at: `2026-09-05T19:06:51.268Z`
+- duration_ms: `78`
+- exit_code: `1`
+- stdout_sha256: `2b9994f5a959310bf2b2614a5b30700e4da024cd611b35c641b5d679f4bcede7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.2 "Elasticiteit en omzet"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.2 Elasticiteit en omzet
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.2 Elasticiteit en omzet – paragraaf.md
+  OK opgaven.md: 2.2.2 Elasticiteit en omzet – opgaven.md
+  OK antwoorden.md: 2.2.2 Elasticiteit en omzet – antwoorden.md
+  OK 2.2.2 Elasticiteit en omzet – paragraaf.pdf (313 KB)
+  OK 2.2.2 Elasticiteit en omzet – opgaven.pdf (119 KB)
+  OK 2.2.2 Elasticiteit en omzet – antwoorden.pdf (26 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 4 image refs all resolve
+  OK _assets/: 4 SVGs, 4 PNGs
+
+-- Part A QC artifacts --
+  X Part A review verdict is FAIL: 2.2.2-review.md
+  OK Quality ref: 2.2.2-quality-ref.yaml (valid)
+
+==========================================
+FAIL Paragraph 2.2.2 "Elasticiteit en omzet" failed: 1 error(s), 0 warning(s).
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:06:51.319Z`
+- finished_at: `2026-09-05T19:06:51.931Z`
+- duration_ms: `612`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TEXTBOOK-PRODUCTION-1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T19:08:16.681Z`
+- finished_at: `2026-09-05T19:08:16.856Z`
+- duration_ms: `175`
+- exit_code: `0`
+- stdout_sha256: `699bba7f2550eced00884bc621132de46fe5608c6b1baf7757bd06afbdbe896d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```

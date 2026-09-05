@@ -100,7 +100,10 @@ exception does not apply here. Numerical ratios/results are correct. The
 reviewer is completing a precise FAIL report. A distinct builder must reorder
 only these calculations, add a regression probe, regenerate and return for
 independent rereview; no target or approved plan change is authorized or needed.
-This newly reported finding is open, not claimed fixed by the earlier root
+The exact independent FAIL is now adopted at root platform2ccfc79a / lessons
+6362d259, with its second required short-alt correction. Both normal root
+profiles correctly reject the current FAIL. See corrective-review-adoption.md.
+This independently confirmed finding is open, not claimed fixed by the earlier root
 render/source pass. Retain all historical R12 evidence and passing checks.
 
 **B2-223-PREREQ-SUCCESSOR-01 — required before final combined reproducibility.**
