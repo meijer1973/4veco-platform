@@ -150,6 +150,28 @@ describe('check-paragraph-lane-scope', () => {
     expect(companion).toBe(1);
   });
 
+  test('recognizes only the bounded Book2 PDF-proof data and keeps builders shared', () => {
+    const prefix = 'reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/';
+    const artifact = prefix + '211-paragraaf-e136b26a4fcb/';
+    const evidence = ['manifest.json', 'builder-inspection.json', 'inspection.json',
+      'contact-sheet.png', 'pages/page-001.png'].map(file => artifact + file);
+    expect(evidence.map(file => classifyPath(file).category)).toEqual(Array(5).fill('review_evidence'));
+    expect(classifyPath(prefix + '211-antwoorden-979cba5ed213-r2/manifest.json').category).toBe('review_evidence');
+    expect(classifyPath(prefix + '2.1-hoofdstuk-123456789abc/manifest.json').category).toBe('review_evidence');
+    expect(classifyPath(prefix + 'book-2-boek-123456789abc/pages/page-1000.png').category).toBe('review_evidence');
+    for (const rejected of [artifact + 'run.js', artifact + 'packet.pdf', artifact + 'source.zip',
+      artifact + 'pages/page-001.svg', prefix + 'arbitrary/manifest.json',
+      prefix + '211-paragraaf-not-a-hash/manifest.json',
+      'reports/rendered-proof/OTHER/211-paragraaf-e136b26a4fcb/manifest.json']) {
+      expect(classifyPath(rejected).category).toBe('unknown');
+    }
+    const builder = 'build-scripts/content/book-2/b2_211.py';
+    expect(classifyPath(builder).category).toBe('shared_platform');
+    expect(checkLaneScope({ lane: 'shared', changedPaths: [builder, ...evidence] }).ok).toBe(true);
+    expect(checkLaneScope({ lane: 'textbook', changedPaths: [builder, ...evidence] }).ok).toBe(false);
+    expect(checkLaneScope({ lane: 'shared', changedPaths: evidence }).ok).toBe(false);
+  });
+
   test('companion-only fixture passes companion and fails textbook', () => {
     const companion = runCliQuiet(['--lane', 'companion', '--fixture', fixture('companion-only.json'), '--json']);
     const textbook = runCliQuiet(['--lane', 'textbook', '--fixture', fixture('companion-only.json'), '--json']);

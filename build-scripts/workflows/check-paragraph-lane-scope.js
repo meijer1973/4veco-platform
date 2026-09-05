@@ -121,6 +121,10 @@ function isGeneratedIndexPath(filePath) {
 
 function isReviewEvidencePath(filePath) {
   const p = normalizedLower(filePath);
+  // Book2's reviewed PDF capture contract: data/PNG proof only, never runnable
+  // files, arbitrary reports, or a new lesson/platform lane exception.
+  const book2Proof = /^reports\/rendered-proof\/book2-textbook-production-1\/(?:2[123][1234]-(?:paragraaf|opgaven|antwoorden)|2\.[123]-(?:hoofdstuk|antwoorden)|book-2-(?:boek|antwoorden))-[a-f0-9]{12}(?:-r[1-9]\d*)?\/(?:manifest\.json|builder-inspection\.json|inspection\.json|contact-sheet\.png|pages\/page-\d{3,4}\.png)$/;
+  if (book2Proof.test(p)) return true;
   if (
     (p.startsWith('reports/review-gates/') && /\.(md|json|txt)$/.test(p))
     || p.startsWith('reports/sprints/')
