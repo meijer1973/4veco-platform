@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-04T20:38:36.258Z
+Generated: 2026-09-05T08:13:07.417Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-target-exercise-audit-20260904`
-Source commit: `2324eb277b06c4c7e244e0bfff4e7e93ba2cc432`
-Files indexed: 7627
+Source commit: `6d6f42226987f9ef9977f46dbb869455a88c25e2`
+Files indexed: 7629
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2628,7 +2628,7 @@ Count: 1027
 
 ## reports
 
-Count: 4916
+Count: 4918
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5290,6 +5290,8 @@ Count: 4916
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-corrections.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round1.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-round2.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md
+- reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-planning-review.md
 - reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md

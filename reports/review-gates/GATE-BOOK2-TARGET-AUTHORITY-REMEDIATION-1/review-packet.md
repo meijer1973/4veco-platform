@@ -1,97 +1,73 @@
-# Gate GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1: Human Review Packet
+# Gate GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1: Owner correction review packet
 
-Generated: 2026-09-04
+Updated: 2026-09-05. [PR #230](https://github.com/meijer1973/4veco-platform/pull/230).
+Route: owner corrections, independent verification/lead, fresh CI, then PR Readiness Reviewer.
 
-Issue: #229
+## Owner decision and exact package
 
-Draft PR: https://github.com/meijer1973/4veco-platform/pull/230
-
-Route: `DRAFT_PR_THEN_LEAD_REVIEW_AND_OWNER_EXACT_PACKAGE_DECISION`
-
-Product end state: `../4veco-lessen/specifications/product-end-state.md`
-
-Original specification: Issue #229,
-`reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md`, the approved
-Book 2 outline/meta, and `../Boek_2_doelopgaven_en_lesdoelen_audit.pdf`.
-
-## Exact package
-
-The requested human decision will bind the complete twelve-record Book 2
-candidate package:
-
+The owner approved target content package
 `914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`
+and the three-way student Ei rule, with unlabeled Ei=0 and Ei=1, while requesting
+changes to PR #230's lifecycle and evidence. Integration, lessons, Phase B and
+merge are explicitly NOT authorized.
 
-Candidate-file SHA-256:
+[Immutable owner review](https://github.com/meijer1973/4veco-platform/blob/6d6f42226987f9ef9977f46dbb869455a88c25e2/reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md).
+
+Candidate-file SHA-256 remains
 `aba9f8f0408905820cc94ed49eb5f8deef4a5ed4aca66e42d1fb171c935d3675`.
+All twelve records, including their `candidate_review_ready` statuses, remain
+byte-identical to reviewed head `b614577f19c6e8a95c9981256aa125e56d26cd79`.
+Final content authority requires explicit verified immutable package approval;
+the candidate status itself is not final authority. Target integration further
+requires a separately governed transition and real ancestor commit evidence.
 
-The package covers §2.1.1 through §2.3.4. It is one authority decision: partial
-approval is not proposed by this packet.
+Product end state: `../4veco-lessen/specifications/product-end-state.md`.
+Original specification: Issue #229, the audit PDF, the original sprint plan,
+and the owner's correction review. Correction procedure and stop conditions:
+`reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md`.
 
-## What is being reviewed
+## Findings to verify
 
-- Twelve independently executable Dutch 4-vwo target exercises and short
-  answer models.
-- Direct lesson-goal → visible operation → answer-form mappings, including
-  explicit time/action/point budgets.
-- Corrected Ei language: `inferieur`, `normaal`, and `luxe`, with Ei=0 and Ei=1
-  treated as boundary values.
-- Recalculated costs, revenues, elasticities, surplus, Pareto, tables, graph
-  regions, units, and point allocations.
-- An explicit non-approval candidate lifecycle that keeps all downstream
-  authority gates closed.
+1. Every terminal binding, release subject, pin, live registry and integration
+   commit matches the immutable approved record and ordered package hashes.
+   Terminal mode continues through registry, candidate and alignment checks.
+2. Released pins cannot drift except through an exact active successor for
+   the same paragraph. Unbound candidate status never grants final authority.
+3. Ei release binds decision enum, old/new semantic hashes, PR/head,
+   owner identity/date, immutable evidence reference and evidence checksum.
+   Both canonical outline statements use the approved three-way rule.
+4. CI runs durable checks and the PR-230-only sprint-scope guard. Historical
+   and fresh head evidence are distinguished; run actual PR Readiness Reviewer.
 
-## Review evidence
+Non-negotiable: preserve the frozen content, source models, goal/question
+mappings, scoring, alignment and timings. No student artifacts are generated.
 
-- Economics/mathematical precision: PASS.
-- Teacher-learning quality: PASS, 13/14; classroom validation of the
-  §2.3.3 twelve-minute load is an advisory Phase B follow-up.
-- Student language/experience: PASS.
-- Finished artifact/test plan: PASS after a round-1 blocker correction and
-  independent recheck.
-- Structural lead round 1: REVISE on `eade17c…`; its two content blockers and
-  commit-relative fixture blocker are corrected in the new package.
-- Structural lead round 2: PASS WITH FLAGS at effective head `c324fc7f…` on
-  substantive package commit `6cd02e8d…`; the only carried flag is empirical
-  classroom timing for Phase B.
-- Final local validation: PASS with 109 suites and 1,769 tests; hosted
-  exact-head CI remains the final publication tail.
+## Evidence
 
-The specialist and verifier reports are independent Codex role reviews, not
-human owner approval.
+The original economics, teacher, student-language and finished-artifact reviews
+remain applicable to the unchanged content. Lead round 2 was historical
+`PASS WITH FLAGS`; the owner's later enforcement findings supersede its
+lifecycle conclusion and require renewed review.
 
-## Calibration questions
+Historical owner-reviewed head `b614577f19c6e8a95c9981256aa125e56d26cd79`
+passed [validate-platform run 33917295567](https://github.com/meijer1973/4veco-platform/actions/runs/33917295567).
+This is not evidence for the correction head. Fresh local commands are logged
+in `reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-command-log.jsonl`.
+The correction-resolution report and machine packet track fresh verification,
+lead, exact-head CI and readiness evidence without relabeling historical results.
 
-1. Does each goal map to at least one point-bearing learner action, and does
-   every point-bearing question map back to a goal?
-2. Are the theory targets concise enough for 8–12 minutes and the mixed
-   targets coherent enough for 18–25 minutes without introducing new theory?
-3. Are the interval MK/MO, elasticity, revenue, surplus, Pareto-efficiency,
-   and fairness boundaries economically precise?
-4. Is the three-way Ei terminology decision appropriate for all student-facing
-   Book 2 exercises?
-5. Are the candidate lifecycle and open holds sufficiently explicit to prevent
-   accidental approval, integration, lesson work, or merge?
+## Holds and review prompts
 
-## Decision requested after lead review and CI
+Twelve target integration holds stay open; approved use, integration,
+production, lesson authoring and merge stay blocked. Only the approved Ei
+semantic supersession is released. Preserve the historical outline approval
+and H-211 integration evidence unchanged.
 
-Choose exactly one:
+Please check the four findings above against their executable mutations and
+comment directly with any remaining failure. The dense-item classroom timing
+flag, especially §2.3.3, remains a Phase B follow-up; it is not classroom-proven.
 
-- `APPROVE EXACT BOOK 2 TARGET PACKAGE 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`
-- `REVISE EXACT BOOK 2 TARGET PACKAGE 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310` with named corrections
-- `REJECT EXACT BOOK 2 TARGET PACKAGE 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`
-
-Approval would authorize only a separately governed target-authority
-integration transition. It would not itself authorize lesson writes,
-student-output generation, Phase B, or merge.
-
-## Holds and stop rule
-
-All twelve Issue #229 candidate holds and `H-229-EI-SUPERSESSION` remain open.
-Approved use, target integration, paragraph/chapter/book production, lesson
-authoring, and merge remain blocked. The PR must stay draft. After successful
-final exact-head CI, stop for the owner's exact-package decision.
-
-Stop immediately if a core requirement or specialist disagreement remains, an
-exact hash drifts, any required validator/CI job fails, or closure would require
-a lesson write, generated student output, premature authority transition, or
-merge. A missing core requirement cannot be carried under PASS WITH FLAGS.
+Stop on any P1 regression, hash mismatch, missing review/CI evidence or need
+for new authority. Keep the PR draft until P1 tests pass; use the actual PR
+Readiness Reviewer for any later draft-to-ready decision. Do not merge,
+integrate target authority, write lessons, or begin Phase B.

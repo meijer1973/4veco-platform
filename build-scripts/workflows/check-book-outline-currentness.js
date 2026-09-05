@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const ownerDecision229 = require('./book2-owner-decision');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const OUTLINE_PATH = 'references/authored/book-outlines/book-2-outline.md';
@@ -525,7 +526,30 @@ function targetRecordAtIntegratedCommit(failures, gitRoot, commit, subjectId) {
   return record || null;
 }
 
-function checkTargetBinding(failures, hold, pin) {
+function releasedPinHasExactSuccessor(hold, pin, holds, seen = new Set()) {
+  if (!pin || seen.has(hold.id)) return false;
+  const approved = hold.target_binding?.approved_replacement_sha256;
+  if (pin.target_record_sha256 === approved) return true;
+  seen.add(hold.id);
+  const scope = `paragraph:${pin.id}`;
+  const successors = holds.filter((next) => next.id !== hold.id
+    && equal(next.scope, [scope])
+    && equal(next.resolution_actions, ['target_authority_integration'])
+    && (next.candidate_binding || next.target_binding)?.blocked_baseline_sha256 === approved);
+  if (successors.length !== 1) return false;
+  const next = successors[0];
+  if (next.status === 'released' && next.target_binding && !next.candidate_binding) {
+    return releasedPinHasExactSuccessor(next, pin, holds, seen);
+  }
+  const binding = next.candidate_binding || next.target_binding;
+  const replacement = next.candidate_binding ? binding.candidate_replacement_sha256 : binding.approved_replacement_sha256;
+  return next.status === 'open' && next.release_evidence === null
+    && next.blocks?.includes('paragraph_production')
+    && /^[0-9a-f]{64}$/i.test(String(replacement || ''))
+    && replacement !== approved && pin.target_record_sha256 === replacement;
+}
+
+function checkTargetBinding(failures, hold, pin, holds) {
   const binding = hold.target_binding;
   if (!binding || !equal(Object.keys(binding), TARGET_BINDING_FIELDS)) {
     failures.push(`${META_PATH}: ${hold.id} must contain the exact target transition binding fields`);
@@ -556,6 +580,9 @@ function checkTargetBinding(failures, hold, pin) {
   }
   if (hold.status === 'open' && pin && ![binding.blocked_baseline_sha256, binding.approved_replacement_sha256].includes(pin.target_record_sha256)) {
     failures.push(`${META_PATH}: ${hold.id} current target is neither the blocked baseline nor the approved replacement`);
+  }
+  if (hold.status === 'released' && !releasedPinHasExactSuccessor(hold, pin, holds)) {
+    failures.push(`${META_PATH}: released target ${hold.id} current pin must match approved replacement or an exact active successor`);
   }
 }
 
@@ -662,9 +689,12 @@ function checkHolds(failures, files, meta, options) {
     const pin = (meta.target_registry_pins || []).find((item) => item.id === subjectId);
     if (isTargetIntegrationHold) {
       if (hold.status === 'open' && hold.candidate_binding) checkCandidateBinding(failures, hold, pin);
-      else checkTargetBinding(failures, hold, pin);
+      else checkTargetBinding(failures, hold, pin, holds);
       const transitionBinding = hold.candidate_binding || hold.target_binding;
       if (options.action === 'target_authority_integration' && hold.status === 'open' && holdScopeMatches(hold, options)) {
+        if (meta.issue_229_owner_decision?.integration_authorized === false) {
+          failures.push(`${META_PATH}: ${hold.id} content approval does not authorize target integration`);
+        }
         if (hold.candidate_binding && hold.candidate_binding.candidate_status !== 'lead_reviewed_candidate') {
           failures.push(`${META_PATH}: action target_authority_integration requires lead_reviewed_candidate status for ${hold.id}`);
         }
@@ -705,8 +735,11 @@ function checkHolds(failures, files, meta, options) {
         if (integratedRecord && sha256(JSON.stringify(integratedRecord)) !== evidence.subject_sha256) {
           failures.push(`${META_PATH}: integrated_commit ${evidence.integrated_commit} contains a different target hash for ${subjectId}`);
         }
-        if (integratedRecord && !['candidate_review_ready', 'reviewed_final'].includes(integratedRecord.record_status)) {
-          failures.push(`${META_PATH}: target integration release ${hold.id} requires a review-ready record at integrated_commit`);
+        if (integratedRecord && integratedRecord.record_status !== 'reviewed_final'
+            && !(integratedRecord.record_status === 'candidate_review_ready'
+              && hold.id === CANDIDATE_HOLD_BY_PARAGRAPH[subjectId]
+              && ownerDecision229.hasApprovedFrozenRecord(meta, integratedRecord, binding))) {
+          failures.push(`${META_PATH}: target integration release ${hold.id} requires reviewed_final or explicit immutable frozen-package owner approval`);
         }
       } else if (evidence && hold.id === 'H-OUTLINE-OWNER') {
         const evidenceFields = [...RELEASE_EVIDENCE_FIELDS.slice(0, 6), 'reviewed_pr', 'reviewed_head'];
@@ -715,9 +748,13 @@ function checkHolds(failures, files, meta, options) {
         }
         if (evidence.resolved_via !== 'outline_owner_decision') failures.push(`${META_PATH}: owner release must resolve via outline_owner_decision`);
         if (evidence.subject_id !== meta.version) failures.push(`${META_PATH}: owner release subject_id must match the approved outline version`);
-        if (evidence.subject_sha256 !== (meta.semantic_authority || {}).sha256) failures.push(`${META_PATH}: owner release subject_sha256 must match the semantic outline hash`);
+        const supersededHash = meta.issue_229_owner_decision && ownerDecision229.validateEiDecision(meta).length === 0
+          ? ownerDecision229.OLD_OUTLINE_HASH : (meta.semantic_authority || {}).sha256;
+        if (evidence.subject_sha256 !== supersededHash) failures.push(`${META_PATH}: owner release subject_sha256 must match the semantic outline hash`);
         if (evidence.reviewed_pr !== (meta.approval_context || {}).pr_number) failures.push(`${META_PATH}: owner release reviewed_pr must match approval_context.pr_number`);
         if (!/^[0-9a-f]{40}$/i.test(String(evidence.reviewed_head || ''))) failures.push(`${META_PATH}: owner release requires a full reviewed_head SHA`);
+      } else if (evidence && hold.id === 'H-229-EI-SUPERSESSION') {
+        failures.push(...ownerDecision229.validateEiDecision(meta));
       } else if (evidence && hold.id === 'H-211-GATE0B1') {
         const evidenceFields = RELEASE_EVIDENCE_FIELDS.slice(0, 6);
         const binding = hold.goal_binding || {};
@@ -887,7 +924,8 @@ function checkApprovedMode(failures, meta, requireApproved) {
   if (!['approved', 'approved_with_holds'].includes(meta.status)) failures.push(`${META_PATH}: approved mode requires approved or approved_with_holds status`);
   if (approval.status !== 'approved') failures.push(`${META_PATH}: approved mode requires owner_approval.status=approved`);
   if (approval.approved_version !== meta.version) failures.push(`${META_PATH}: approved_version must match version`);
-  if (approval.approved_outline_sha256 !== outlineHash) failures.push(`${META_PATH}: approved_outline_sha256 must match semantic_authority.sha256`);
+  const hasSupersession = meta.issue_229_owner_decision && ownerDecision229.validateEiDecision(meta).length === 0;
+  if (approval.approved_outline_sha256 !== (hasSupersession ? ownerDecision229.OLD_OUTLINE_HASH : outlineHash)) failures.push(`${META_PATH}: approved_outline_sha256 must match semantic_authority.sha256 or the validated superseded outline`);
   if (!evidence || approval.approved_pr !== evidence.reviewed_pr || approval.approved_pr !== (meta.approval_context || {}).pr_number) {
     failures.push(`${META_PATH}: approved_pr must match the exact owner-reviewed PR binding`);
   }
@@ -909,6 +947,7 @@ function findBookOutlineFailures(files = readFiles(), options = {}) {
   checkProse(failures, files, meta);
   checkWorkflowSurfaces(failures, files, meta);
   checkApprovedMode(failures, meta, options.requireApproved === true);
+  if (meta?.issue_229_owner_decision) failures.push(...ownerDecision229.validateEiDecision(meta));
   return failures;
 }
 
@@ -977,6 +1016,7 @@ module.exports = {
   formatReleaseEvidence,
   holdScopeMatches,
   readFiles,
+  releasedPinHasExactSuccessor,
   sha256,
   sha256CanonicalText,
   sha256SemanticAuthority,

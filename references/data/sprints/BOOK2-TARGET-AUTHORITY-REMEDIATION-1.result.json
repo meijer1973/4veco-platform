@@ -3,7 +3,7 @@
   "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
   "name": "Book 2 Target Authority Remediation",
   "status": "completed",
-  "result_status": "phase_a_lead_reviewed_candidate_waiting_owner_decision",
+  "result_status": "phase_a_content_approved_owner_corrections_in_progress",
   "completed_on": "2026-09-04",
   "plan": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md",
   "baseline": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-baseline.md",
@@ -17,49 +17,147 @@
   "lead_reviewed_effective_head": "c324fc7fb1bd9e7f82ce3b0b2bb1aa0a4feea995",
   "lesson_baseline": "f09fd6e88edc5049b026b16b0158e7e188091d2d",
   "candidate_package_sha256": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
-  "outline_semantic_sha256": "69d803d2786e97bbd7519d2feed3ee29b79751b00a3c8a440432621927a13cde",
+  "outline_semantic_sha256": "919c39f64dd212dba37b62902a5bb2e2ce6388c6020a0491e1621017ae2192a1",
   "protected_reference_data_changed": true,
-  "protected_reference_change_scope": ["A17 Ei terminology correction"],
+  "protected_reference_change_scope": [
+    "A17 Ei terminology correction"
+  ],
   "generated_lesson_output_changed": false,
   "lesson_repository_changed": false,
   "target_registry_changed": true,
   "human_review_required": true,
-  "owner_approval_status": "pending_exact_package_and_Ei_semantic_decision",
+  "owner_approval_status": "approved_exact_frozen_content_and_ei_only",
   "lead_review_required": true,
   "lead_review_schema_version": 3,
   "acceptance_tests": [
-    { "command": "npm.cmd run agent:index", "status": "passed" },
-    { "command": "node build-scripts/sprints/emit-url-index.js", "status": "passed" },
-    { "command": "npm.cmd run dashboard:internal", "status": "passed" },
-    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md", "status": "passed" },
-    { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1", "status": "passed" },
-    { "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1 --complete", "status": "passed" },
-    { "command": "node scripts/check-course-target-exercises-v5.js", "status": "passed" },
-    { "command": "node build-scripts/workflows/check-book2-target-authority-remediation.js", "status": "passed" },
-    { "command": "npm.cmd run check:book2-target-authority-remediation", "status": "passed" },
-    { "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js", "status": "passed" },
-    { "command": "npm.cmd run check:book-outline-currentness", "status": "passed" },
-    { "command": "node build-scripts/workflows/check-book2-candidate-approval-block.js", "status": "passed" },
-    { "command": "npm.cmd run check:part-a-exercise-authoring-contract", "status": "passed" },
-    { "command": "npm.cmd run check:blueprint-pedagogical-boundaries", "status": "passed" },
-    { "command": "npm.cmd run check:scope-language", "status": "passed" },
-    { "command": "node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD", "status": "passed" },
-    { "command": "node build-scripts/references/check-reference-cli-coverage.js", "status": "passed" },
-    { "command": "node build-scripts/references/check-roadmap-version-index.js", "status": "passed" },
-    { "command": "npm.cmd run check:mtu-h7-bundle4", "status": "passed" },
-    { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" },
-    { "command": "npm.cmd run check:agent-index-freshness", "status": "passed" },
-    { "command": "node build-scripts/sprints/emit-url-index.js --check", "status": "passed" },
-    { "command": "node build-scripts/ci/check-evidence-line-endings.js", "status": "passed" },
-    { "command": "npm.cmd run check:review-throughput -- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json", "status": "passed" },
-    { "command": "npm.cmd run check:platform", "status": "passed" },
-    { "command": "npm.cmd run finalization:freshness", "status": "passed" },
-    { "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md", "status": "passed" },
-    { "command": "node build-scripts/sprints/check-sprint-command-log.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1", "status": "passed" },
-    { "command": "node build-scripts/sprints/check-lead-review-substance.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1", "status": "passed" },
-    { "command": "git diff --check", "status": "passed" },
-    { "command": "git -C ../4veco-lessen status --short", "status": "passed" },
-    { "command": "git -C ../4veco-lessen diff --check", "status": "passed" }
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/check-course-target-exercises-v5.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/workflows/check-book2-target-authority-remediation.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book2-target-authority-remediation",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book-outline-currentness",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/workflows/check-book2-candidate-approval-block.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:part-a-exercise-authoring-contract",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:blueprint-pedagogical-boundaries",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base origin/main --head HEAD",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-reference-cli-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:mtu-h7-bundle4",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:agent-index-freshness",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-evidence-line-endings.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:review-throughput -- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run finalization:freshness",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen status --short",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
   ],
   "lead_review": {
     "assignment": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-lead-review-assignment.md",
@@ -144,7 +242,7 @@
   "authority_claims": {
     "candidate_structural_readiness": true,
     "goal_package_approved": false,
-    "replacement_targets_approved": false,
+    "replacement_targets_approved": true,
     "target_registry_integration_authorized": false,
     "lesson_repository_mutation_authorized": false,
     "paragraph_production_authorized": false,
@@ -153,5 +251,16 @@
     "student_use_authorized": false,
     "merge_authorized": false
   },
-  "recommended_next_action": "Keep PR #230 draft and stop for the owner's approve/revise/reject decision on exact package 914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310 and the Ei semantic supersession. Do not integrate, write lessons, begin Phase B, or merge."
+  "recommended_next_action": "Complete owner-requested lifecycle/evidence corrections, independent review, fresh exact-head CI and PR readiness. Do not integrate, write lessons, begin Phase B, or merge.",
+  "historical_ci": {
+    "head_sha": "b614577f19c6e8a95c9981256aa125e56d26cd79",
+    "run_id": 33917295567,
+    "status": "success",
+    "url": "https://github.com/meijer1973/4veco-platform/actions/runs/33917295567"
+  },
+  "owner_corrections": {
+    "review": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-review-20260905.md",
+    "plan": "reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md",
+    "status": "verification_in_progress"
+  }
 }

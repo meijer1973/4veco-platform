@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const ownerDecision = require('./book2-owner-decision');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const SPRINT = 'BOOK2-TARGET-AUTHORITY-REMEDIATION-1';
@@ -55,8 +56,11 @@ function gitJson(commit, relativePath) {
   return JSON.parse(execFileSync('git', ['show', `${commit}:${relativePath}`], { cwd: ROOT, encoding: 'utf8' }));
 }
 
-function readInputs() {
+function readInputs(options = {}) {
   const plan = readJson(PATHS.plan);
+  const scopeBase = options.scopeBase || plan.platform_baseline;
+  if (!/^[0-9a-f]{40}$/i.test(String(scopeBase || ''))) throw new Error('sprint scope base requires a full commit SHA');
+  execFileSync('git', ['merge-base', '--is-ancestor', scopeBase, 'HEAD'], { cwd: ROOT, stdio: 'pipe' });
   return {
     registry: readJson(PATHS.registry),
     candidates: readJson(PATHS.candidates),
@@ -67,9 +71,9 @@ function readInputs() {
     terminology: fs.readFileSync(path.join(ROOT, PATHS.terminology), 'utf8'),
     units: readJson(PATHS.units),
     unitsMarkdown: fs.readFileSync(path.join(ROOT, PATHS.unitsMarkdown), 'utf8'),
-    baselineRegistry: gitJson(plan.platform_baseline, PATHS.registry),
+    baselineRegistry: gitJson(scopeBase, PATHS.registry),
     baselineMeta: gitJson(plan.platform_baseline, PATHS.meta),
-    baselineUnits: gitJson(plan.platform_baseline, PATHS.units),
+    baselineUnits: gitJson(scopeBase, PATHS.units),
   };
 }
 
@@ -88,7 +92,7 @@ function requireMatch(errors, id, text, pattern, purpose) {
   if (!pattern.test(text)) errors.push(`${id}: missing ${purpose}`);
 }
 
-function durableLifecycleState(meta) {
+function durableLifecycleState(meta, input = readInputs(), options = {}) {
   const candidate = meta && meta.issue_229_candidate;
   const approvalStatus = candidate && candidate.approval_status;
   if (approvalStatus === DURABLE_PENDING_STATUS) return { mode: 'pending', failures: [] };
@@ -100,13 +104,42 @@ function durableLifecycleState(meta) {
   }
 
   const failures = [];
+  failures.push(...ownerDecision.validateOwnerDecision(meta.issue_229_owner_decision));
+  let expectedRecords;
+  try { expectedRecords = ownerDecision.approvedRecords(); }
+  catch (error) { return { mode: 'invalid', failures: [error.message] }; }
+  const expectedById = new Map(expectedRecords.map((record) => [record.id, sha256(canonical(record))]));
+  const registryRecords = (input.registry?.exercises || []).filter((record) => record.module === 2);
+  if (sha256(canonical(registryRecords)) !== REVIEWED_PACKAGE_SHA256) failures.push('terminal registry must match the exact approved ordered package');
   if (candidate.status !== DURABLE_TERMINAL_STATUS) failures.push('Issue #229 durable terminal state requires status integrated');
   if (!/^[0-9a-f]{40}$/i.test(String(candidate.integrated_commit || ''))) failures.push('Issue #229 durable terminal state requires a full integrated_commit');
   if (typeof candidate.integration_evidence_ref !== 'string' || candidate.integration_evidence_ref.trim() === '') failures.push('Issue #229 durable terminal state requires integration_evidence_ref');
   if (candidate.package_sha256 !== REVIEWED_PACKAGE_SHA256) failures.push('Issue #229 durable terminal state requires the exact reviewed package hash');
 
   const byId = new Map((meta.holds || []).map((hold) => [hold.id, hold]));
-  for (const id of HOLD_IDS) {
+  if (byId.size !== (meta.holds || []).length) failures.push('terminal hold IDs must be unique');
+  const reviewedMeta = JSON.parse(ownerDecision.gitText(ownerDecision.REVIEWED_HEAD, PATHS.meta));
+  const reviewedHolds = new Map(reviewedMeta.holds.map((hold) => [hold.id, hold]));
+  const checkedCommits = new Map();
+  function integratedRecords(commit) {
+    if (checkedCommits.has(commit)) return checkedCommits.get(commit);
+    try {
+      if (!/^[0-9a-f]{40}$/i.test(String(commit || ''))) throw new Error('full commit SHA required');
+      const root = options.gitRoot || ROOT;
+      execFileSync('git', ['merge-base', '--is-ancestor', commit, 'HEAD'], { cwd: root, stdio: 'pipe' });
+      const registry = JSON.parse(ownerDecision.gitText(commit, PATHS.registry, root));
+      const records = registry.exercises.filter((record) => record.module === 2);
+      if (sha256(canonical(records)) !== REVIEWED_PACKAGE_SHA256) throw new Error('integrated registry package mismatch');
+      checkedCommits.set(commit, records);
+      return records;
+    } catch (error) {
+      failures.push(`terminal integrated_commit ${commit}: ${error.message}`);
+      checkedCommits.set(commit, null);
+      return null;
+    }
+  }
+  integratedRecords(candidate.integrated_commit);
+  for (const [index, id] of HOLD_IDS.entries()) {
     const hold = byId.get(id);
     if (!hold || hold.status !== 'released' || hold.candidate_binding || !hold.target_binding) {
       failures.push(`${id}: durable terminal state requires a released target binding without candidate binding`);
@@ -114,25 +147,44 @@ function durableLifecycleState(meta) {
     }
     const approved = hold.target_binding.approved_replacement_sha256;
     const evidence = hold.release_evidence;
+    const bindingFields = ['blocked_baseline_sha256', 'approved_replacement_sha256', 'approval_ref', 'approved_by', 'approved_on'];
+    const evidenceFields = ['resolved_via', 'released_by', 'released_on', 'evidence_ref', 'subject_id', 'subject_sha256', 'integrated_commit'];
+    if (canonical(Object.keys(hold.target_binding).sort()) !== canonical(bindingFields.sort())
+        || hold.target_binding.blocked_baseline_sha256 !== reviewedHolds.get(id).candidate_binding.blocked_baseline_sha256) {
+      failures.push(`${id}: terminal binding must preserve exact fields and original reviewed baseline`);
+    }
+    if (!evidence || canonical(Object.keys(evidence).sort()) !== canonical(evidenceFields.sort())
+        || typeof evidence.released_by !== 'string' || !evidence.released_by.trim()
+        || !/^\d{4}-\d{2}-\d{2}$/.test(String(evidence.released_on || ''))
+        || typeof evidence.evidence_ref !== 'string' || !evidence.evidence_ref.trim()) {
+      failures.push(`${id}: terminal release requires complete evidence fields, identity, date, and reference`);
+    }
+    const subjectId = IDS[index];
+    const expectedHash = expectedById.get(subjectId);
+    if (canonical(hold.scope) !== canonical([`paragraph:${subjectId}`])
+        || approved !== expectedHash || evidence?.subject_sha256 !== expectedHash
+        || evidence?.subject_id !== subjectId
+        || (meta.target_registry_pins || []).find((pin) => pin.id === subjectId)?.target_record_sha256 !== expectedHash) {
+      failures.push(`${id}: terminal target binding, release subject, and current pin must match the approved record hash`);
+    }
+    if (!ownerDecision.hasApprovedFrozenRecord(meta, expectedRecords[index], hold.target_binding)) {
+      failures.push(`${id}: terminal binding requires the exact owner content approval`);
+    }
     if (!/^[0-9a-f]{64}$/i.test(String(approved || ''))
         || !evidence || evidence.resolved_via !== 'target_authority_integration'
         || evidence.subject_sha256 !== approved
         || !/^[0-9a-f]{40}$/i.test(String(evidence.integrated_commit || ''))) {
       failures.push(`${id}: durable terminal state requires exact target-integration evidence`);
     }
+    const integrated = integratedRecords(evidence?.integrated_commit);
+    if (integrated && sha256(canonical(integrated[index])) !== expectedHash) failures.push(`${id}: integrated record differs from approved content`);
   }
 
   const eiHold = byId.get('H-229-EI-SUPERSESSION');
   const eiEvidence = eiHold && eiHold.release_evidence;
   if (!eiHold || eiHold.status !== 'released') {
     failures.push('H-229-EI-SUPERSESSION: durable terminal state requires a released Ei supersession hold');
-  } else if (!eiEvidence
-      || eiEvidence.resolved_via !== 'outline_owner_decision'
-      || typeof eiEvidence.released_by !== 'string' || eiEvidence.released_by.trim() === ''
-      || !/^\d{4}-\d{2}-\d{2}$/.test(String(eiEvidence.released_on || ''))
-      || typeof eiEvidence.evidence_ref !== 'string' || eiEvidence.evidence_ref.trim() === '') {
-    failures.push('H-229-EI-SUPERSESSION: durable terminal state requires valid outline-owner-decision evidence');
-  }
+  } else failures.push(...ownerDecision.validateEiDecision(meta));
   return { mode: failures.length === 0 ? 'retired' : 'invalid', failures };
 }
 
@@ -319,15 +371,19 @@ function validateRecordSpecific(errors, byId) {
 function findFailures(input, options = {}) {
   const errors = [];
   const durable = options.durable === true;
+  let terminal = false;
   if (durable) {
-    const lifecycle = durableLifecycleState(input.meta);
+    const lifecycle = durableLifecycleState(input.meta, input, options);
     errors.push(...lifecycle.failures);
-    if (lifecycle.mode !== 'pending') return errors;
+    terminal = input.meta.issue_229_candidate?.approval_status === 'integrated';
   }
   const candidates = input.candidates || [];
   const ids = candidates.map((item) => item.id);
   if (canonical(ids) !== canonical(IDS)) errors.push('candidate package must contain the canonical twelve Book 2 records in order');
   const packageHash = sha256(canonical(candidates));
+  if (packageHash !== REVIEWED_PACKAGE_SHA256) errors.push('candidate package must remain the immutable owner-approved package');
+  errors.push(...ownerDecision.validateOwnerDecision(input.meta.issue_229_owner_decision));
+  errors.push(...ownerDecision.validateEiDecision(input.meta));
   const registryBook2 = (input.registry.exercises || []).filter((item) => item.module === 2);
   if (canonical(registryBook2) !== canonical(candidates)) errors.push('active registry Book 2 records must exactly equal the candidate package');
   if (input.alignment.candidate_package_sha256 !== packageHash) errors.push('alignment candidate package hash is stale');
@@ -336,17 +392,17 @@ function findFailures(input, options = {}) {
   if (canonical((input.alignment.records || []).map((item) => item.id)) !== canonical(IDS)) errors.push('alignment must cover all twelve records in order');
 
   const candidateHolds = (input.meta.holds || []).filter((hold) => hold.candidate_binding);
-  if (canonical(candidateHolds.map((hold) => hold.id)) !== canonical(HOLD_IDS)) errors.push('candidate holds must cover all twelve paragraphs in order');
+  if (!terminal && canonical(candidateHolds.map((hold) => hold.id)) !== canonical(HOLD_IDS)) errors.push('candidate holds must cover all twelve paragraphs in order');
   for (const [index, hold] of candidateHolds.entries()) {
     const binding = hold.candidate_binding;
     if (canonical(Object.keys(binding || {})) !== canonical(CANDIDATE_FIELDS)) errors.push(`${hold.id}: candidate binding fields changed`);
-    if (binding && binding.candidate_replacement_sha256 !== sha256(canonical(candidates[index]))) errors.push(`${hold.id}: candidate record hash is stale`);
+    if (binding && (!candidates[index] || binding.candidate_replacement_sha256 !== sha256(canonical(candidates[index])))) errors.push(`${hold.id}: candidate record hash is stale`);
     if (binding && binding.candidate_package_sha256 !== packageHash) errors.push(`${hold.id}: candidate package hash is stale`);
-    if (binding && CANDIDATE_FIELDS.slice(5).some((field) => binding[field] !== null)) errors.push(`${hold.id}: candidate approval fields must stay null`);
+    if (binding && !ownerDecision.hasApprovedFrozenRecord(input.meta, candidates[index], binding)) errors.push(`${hold.id}: candidate approval must match the immutable owner decision`);
     if (hold.status !== 'open') errors.push(`${hold.id}: candidate hold must remain open before owner approval`);
   }
   const eiHold = (input.meta.holds || []).find((hold) => hold.id === 'H-229-EI-SUPERSESSION');
-  if (!eiHold || eiHold.status !== 'open' || !eiHold.blocks.includes('target_authority_integration')) errors.push('open Ei supersession hold is missing or incomplete');
+  if (!eiHold || !eiHold.blocks.includes('target_authority_integration')) errors.push('Ei supersession hold is missing or incomplete');
 
   const historicalId = 'H-211-TARGET-INTEGRATION';
   const historical = (input.meta.holds || []).find((hold) => hold.id === historicalId);
@@ -361,6 +417,9 @@ function findFailures(input, options = {}) {
     const currentUnits = new Map((input.units.units || input.units || []).map((unit) => [unit.id, unit]));
     for (const [id, unit] of baselineUnits) {
       if (id !== 'A17' && canonical(currentUnits.get(id)) !== canonical(unit)) errors.push(`machine unit ${id} changed outside A17 scope`);
+    }
+    for (const id of currentUnits.keys()) {
+      if (!baselineUnits.has(id)) errors.push(`machine unit ${id} added outside A17 scope`);
     }
   }
   const currentUnits = new Map((input.units.units || input.units || []).map((unit) => [unit.id, unit]));
@@ -377,8 +436,11 @@ function findFailures(input, options = {}) {
 }
 
 function main() {
-  const durable = process.argv.slice(2).includes('--durable');
-  const failures = findFailures(readInputs(), { durable });
+  const args = process.argv.slice(2);
+  const durable = args.includes('--durable');
+  const scopeIndex = args.indexOf('--scope-base');
+  if (scopeIndex >= 0 && !args[scopeIndex + 1]) throw new Error('--scope-base requires a commit SHA');
+  const failures = findFailures(readInputs({ scopeBase: scopeIndex < 0 ? null : args[scopeIndex + 1] }), { durable });
   if (failures.length > 0) {
     console.error('Book 2 target authority remediation: FAIL');
     for (const failure of failures) console.error(`- ${failure}`);
@@ -388,7 +450,9 @@ function main() {
   console.log(`- mode: ${durable ? 'durable pending-candidate invariant' : 'Issue #229 sprint-scope proof'}`);
   console.log('- exact candidate records: 12');
   console.log('- goal/question alignment and workload budgets: complete');
-  console.log('- non-Book-2 records and machine units outside A17: unchanged');
+  console.log(durable
+    ? '- unrelated-record scope checks: delegated to the PR-scoped sprint guard'
+    : '- non-Book-2 records and machine units outside A17: unchanged');
 }
 
 if (require.main === module) main();

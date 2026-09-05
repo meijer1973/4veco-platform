@@ -99,6 +99,10 @@ jobs:
       - name: Validate Book 2 target authority remediation candidate
         run: npm run check:book2-target-authority-remediation
 
+      - name: Validate Issue 229 sprint scope
+        if: github.event_name == 'pull_request' && github.event.pull_request.number == 230
+        run: node build-scripts/workflows/check-book2-target-authority-remediation.js --scope-base "${{ github.event.pull_request.base.sha }}"
+
       - name: Validate exercise authority hygiene
         run: npm run check:exercise-authority-hygiene
 

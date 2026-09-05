@@ -4,7 +4,7 @@
 const path = require('path');
 const fs = require('fs');
 const { spawnSync } = require('child_process');
-const { durableLifecycleState } = require('./check-book2-target-authority-remediation');
+const { durableLifecycleState, findFailures, readInputs } = require('./check-book2-target-authority-remediation');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const CHECKER = path.join(ROOT, 'build-scripts', 'workflows', 'check-book-outline-currentness.js');
@@ -47,9 +47,13 @@ function expectBlocked(args, needle, label) {
   }
 }
 
-function approvalBlockLifecycleMode(meta) {
-  const lifecycle = durableLifecycleState(meta);
+function approvalBlockLifecycleMode(meta, input = readInputs(), options = {}) {
+  const lifecycle = durableLifecycleState(meta, input, options);
   if (lifecycle.failures.length > 0) throw new Error(lifecycle.failures.join('\n- '));
+  if (lifecycle.mode === 'retired') {
+    const failures = findFailures({ ...input, meta }, { ...options, durable: true });
+    if (failures.length) throw new Error(failures.join('\n- '));
+  }
   return lifecycle.mode;
 }
 
@@ -69,7 +73,6 @@ function main() {
     }
   }
   expectBlocked(['--require-approved'], 'H-229-211-CANDIDATE', 'approved-use mode');
-  expectBlocked(['--require-approved'], 'H-229-EI-SUPERSESSION', 'Ei approved-use mode');
   expectBlocked(['--action', 'merge'], 'H-229-211-CANDIDATE', 'merge');
   console.log('Book 2 candidate approval block: PASS');
   console.log('- structural and target-authority repair routes pass');

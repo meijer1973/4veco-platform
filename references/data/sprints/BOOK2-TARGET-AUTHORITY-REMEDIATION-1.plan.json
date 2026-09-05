@@ -3,7 +3,7 @@
   "sprint_id": "BOOK2-TARGET-AUTHORITY-REMEDIATION-1",
   "name": "Book 2 Target Authority Remediation",
   "created": "2026-09-04",
-  "status": "completed_phase_a_waiting_owner_decision",
+  "status": "phase_a_content_approved_owner_corrections",
   "completed_on": "2026-09-04",
   "issue": 229,
   "platform_baseline": "e5f89e730d65c4131d7dd09f805f0db94690e8e6",

@@ -14,10 +14,16 @@ The package has renewed teacher, economics, student-language, finished-artifact,
 and structural lead review. Lead round 2 returned `PASS WITH FLAGS`; the only
 carried quality flag is unobserved classroom timing for the densest items.
 
-The lifecycle state is `lead_reviewed_candidate`. That is not owner approval:
-all twelve target holds and `H-229-EI-SUPERSESSION` remain open, all approval
-fields remain null, and integration, lesson authoring, Phase B, and merge remain
-blocked.
+The owner approved the frozen content and three-way Ei semantics on 2026-09-05,
+and requested lifecycle/evidence corrections to PR #230. The record bytes and
+`candidate_review_ready` statuses remain frozen; explicit package-bound owner
+evidence, not that status alone, establishes content approval. The twelve target
+holds remain open. Only `H-229-EI-SUPERSESSION` is released. Integration,
+lesson authoring, Phase B, and merge remain unauthorized.
+
+Correction plan: `reports/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1-owner-corrections-plan.md`.
+The test counts below describe the original Phase A; renewed correction proof
+is recorded in the correction-resolution report and command log.
 
 ## Acceptance test results
 
@@ -39,9 +45,10 @@ The first hosted run on `eade17cb…` failed three tests and is preserved as
 honest correction history. A later run on `808eb5eb…` passed the Book 2, full
 Jest, and presentation checks but exposed that the existing MTU-H7 Bundle 4
 packet still pinned the pre-A17 registry hash. That derivative packet was
-regenerated from the governed live registry and revalidated. Final successful
-exact-head hosted CI is recorded externally on the PR after the correction tail
-is pushed.
+regenerated from the governed live registry and revalidated. Historical exact-head CI passed on `b614577f19c6e8a95c9981256aa125e56d26cd79`:
+[run 33917295567](https://github.com/meijer1973/4veco-platform/actions/runs/33917295567).
+Fresh correction-head CI and PR readiness remain required; that historical run
+does not prove the new lifecycle code.
 
 ## Changed files
 
@@ -65,9 +72,8 @@ image, chapter, book, or other generated lesson output was produced.
 
 ## Open follow-ups
 
-- The repository owner must approve, revise, or reject exact package
-  `914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310`
-  and decide the exact Ei semantic supersession.
+- Complete the owner's four lifecycle/evidence findings and renewed independent
+  review, fresh CI, and PR Readiness Reviewer evidence.
 - A later governed integration must record approval and release evidence before
   Phase B may begin.
 - Phase B must empirically time §2.1.1e, §2.2.3d, and §2.3.3 and perform lesson,

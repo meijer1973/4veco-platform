@@ -1898,3 +1898,453 @@ Time:        297.043 s
 Ran all test suites.
 
 ```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:06:01.877Z`
+- finished_at: `2026-09-05T08:06:22.034Z`
+- duration_ms: `20157`
+- exit_code: `0`
+- stdout_sha256: `9b8bca8e9cebeed9f6268a117ac9e16af30d5e5fd6d8267687e539eab2cec148`
+- stderr_sha256: `ae3743ff7bb09a40dcd4df14182cf851df353758e6bdb6be70f3aa48bbe0e1c4`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       141 passed, 141 total
+Snapshots:   0 total
+Time:        19.211 s
+Ran all test suites matching build-scripts/workflows/check-book2-target-authority-remediation.test.js|build-scripts/workflows/check-book-outline-currentness.test.js.
+
+```
+## node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:07:54.054Z`
+- finished_at: `2026-09-05T08:08:06.260Z`
+- duration_ms: `12206`
+- exit_code: `0`
+- stdout_sha256: `c3928b1229341bddddbf0f0cd9b3075dc8a633f1a84f9adea18cc86a5e1f3f67`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 candidate approval block: PASS
+- structural and target-authority repair routes pass
+- approved use, integration, production, lesson authoring, and merge remain blocked
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:11:05.896Z`
+- finished_at: `2026-09-05T08:11:37.000Z`
+- duration_ms: `31104`
+- exit_code: `0`
+- stdout_sha256: `9b8bca8e9cebeed9f6268a117ac9e16af30d5e5fd6d8267687e539eab2cec148`
+- stderr_sha256: `60efd8ace155f10230ff35727afa599ac65f5eca42d78390815e3f7ec0696d68`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       145 passed, 145 total
+Snapshots:   0 total
+Time:        30.087 s
+Ran all test suites matching build-scripts/workflows/check-book2-target-authority-remediation.test.js|build-scripts/workflows/check-book-outline-currentness.test.js.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:06:49.073Z`
+- finished_at: `2026-09-05T08:11:53.420Z`
+- duration_ms: `304347`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `245c56afe83d5860bdc4a20f3465ae431b42ec1fe413097d19c12f2d06f7d046`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 109 passed, 109 of 115 total
+Tests:       8 skipped, 1798 passed, 1806 total
+Snapshots:   0 total
+Time:        303.614 s
+Ran all test suites.
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --scope-base e5f89e730d65c4131d7dd09f805f0db94690e8e6
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:11:56.041Z`
+- finished_at: `2026-09-05T08:11:56.293Z`
+- duration_ms: `252`
+- exit_code: `0`
+- stdout_sha256: `d7e75ef7a07446787bf2fe5cab9b5ea712a9e0ea34dc44740ae4a29df6074cbb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: Issue #229 sprint-scope proof
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- non-Book-2 records and machine units outside A17: unchanged
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:mtu-h7-bundle4
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:11:57.182Z`
+- finished_at: `2026-09-05T08:11:58.396Z`
+- duration_ms: `1214`
+- exit_code: `0`
+- stdout_sha256: `cde8aeeeb751c211e0a5255f0849e85a8c15c757ddcaf26abc7fc5d7b8712473`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:mtu-h7-bundle4
+> node build-scripts/references/check-mtu-h7-protected-canonical-adjudication-bundle-4.js && node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H7-protected-canonical-adjudication-bundle-4/pr-readiness-evidence.json
+
+OK MTU-H7-PROTECTED-CANONICAL-ADJUDICATION-BUNDLE-4: Bundle 4 checked (7 operations semantically bound, 7/7 negative mutations detected, route READY_FOR_HUMAN_REVIEW)
+OK review throughput packet: GATE-MTU-H7-protected-canonical-adjudication-bundle-4
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:book2-target-authority-remediation
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:12:28.300Z`
+- finished_at: `2026-09-05T08:12:39.601Z`
+- duration_ms: `11301`
+- exit_code: `0`
+- stdout_sha256: `a7b4938fe25d5292c4015fc968e1336490a24b4bb9765ff302a0ff948948c507`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book2-target-authority-remediation
+> node build-scripts/workflows/check-book2-target-authority-remediation.js --durable && node build-scripts/workflows/check-book2-candidate-approval-block.js
+
+Book 2 target authority remediation: PASS
+- mode: durable pending-candidate invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- non-Book-2 records and machine units outside A17: unchanged
+Book 2 candidate approval block: PASS
+- structural and target-authority repair routes pass
+- approved use, integration, production, lesson authoring, and merge remain blocked
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:book-outline-currentness
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:12:39.651Z`
+- finished_at: `2026-09-05T08:12:40.179Z`
+- duration_ms: `528`
+- exit_code: `0`
+- stdout_sha256: `03da118be3a7785751deb07bfec94cb3535926deb758badcd6df8df9de79d25d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:book-outline-currentness
+> node build-scripts/workflows/check-book-outline-currentness.js
+
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: structural-currentness
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:review-throughput -- reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:12:40.218Z`
+- finished_at: `2026-09-05T08:12:40.547Z`
+- duration_ms: `329`
+- exit_code: `0`
+- stdout_sha256: `1c1983225fe2ff4209a4724c47c07f6f9e3de013787d4023a8ab79c201eecd3c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1/review-packet.json
+
+OK review throughput packet: GATE-BOOK2-TARGET-AUTHORITY-REMEDIATION-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:13:07.041Z`
+- finished_at: `2026-09-05T08:13:07.647Z`
+- duration_ms: `606`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:13:07.702Z`
+- finished_at: `2026-09-05T08:13:07.767Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:13:07.819Z`
+- finished_at: `2026-09-05T08:13:08.189Z`
+- duration_ms: `370`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd test -- --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:13:32.452Z`
+- finished_at: `2026-09-05T08:13:54.588Z`
+- duration_ms: `22136`
+- exit_code: `0`
+- stdout_sha256: `9b8bca8e9cebeed9f6268a117ac9e16af30d5e5fd6d8267687e539eab2cec148`
+- stderr_sha256: `8c3d40b3ffda2fcd62740f92a82baad784a23bdae0cc2b6dff959d0fe83e4148`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 test
+> jest --runInBand build-scripts/workflows/check-book2-target-authority-remediation.test.js build-scripts/workflows/check-book-outline-currentness.test.js
+
+
+```
+
+### stderr excerpt
+
+```text
+
+Test Suites: 2 passed, 2 total
+Tests:       145 passed, 145 total
+Snapshots:   0 total
+Time:        21.244 s
+Ran all test suites matching build-scripts/workflows/check-book2-target-authority-remediation.test.js|build-scripts/workflows/check-book-outline-currentness.test.js.
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js BOOK2-TARGET-AUTHORITY-REMEDIATION-1 --complete
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:13:54.639Z`
+- finished_at: `2026-09-05T08:13:55.219Z`
+- duration_ms: `580`
+- exit_code: `0`
+- stdout_sha256: `6aa37ebd864345cf26e39beebbf78dd4d555628432e6d05c43c7722b28fa590d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: BOOK2-TARGET-AUTHORITY-REMEDIATION-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\audit target excercise\4veco-platform`
+- started_at: `2026-09-05T08:13:55.277Z`
+- finished_at: `2026-09-05T08:13:55.400Z`
+- duration_ms: `123`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```

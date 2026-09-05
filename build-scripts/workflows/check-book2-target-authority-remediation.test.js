@@ -30,10 +30,10 @@ describe('Book 2 target authority remediation contract', () => {
     expectFailure(input, 'active registry Book 2 records must exactly equal');
   });
 
-  test('rejects candidate approval data before an owner decision', () => {
+  test('rejects candidate approval identity different from the owner decision', () => {
     const input = clone();
     input.meta.holds.find((hold) => hold.id === 'H-229-211-CANDIDATE').candidate_binding.approved_by = 'invented-owner';
-    expectFailure(input, 'candidate approval fields must stay null');
+    expectFailure(input, 'candidate approval must match the immutable owner decision');
   });
 
   test('rejects incomplete candidate hold coverage and stale package hashes', () => {
@@ -63,96 +63,146 @@ describe('Book 2 target authority remediation contract', () => {
     expectFailure(unitInput, 'changed outside A17 scope');
   });
 
-  test('durable CI mode does not freeze unrelated data and retires after the candidate transition', () => {
-    const futureUnrelated = clone();
-    futureUnrelated.registry.exercises.find((item) => item.module !== 2).difficulty = 'FUTURE_REVIEWED_VALUE';
-    const futureUnits = futureUnrelated.units.units || futureUnrelated.units;
-    futureUnits.find((unit) => unit.id !== 'A17').name += ' future reviewed update';
-    expect(findFailures(futureUnrelated, { durable: true })).toEqual([]);
+  test('durable CI permits unrelated work, while the sprint guard rejects it', () => {
+    const future = clone();
+    future.registry.exercises.find((item) => item.module !== 2).difficulty = 'FUTURE_REVIEWED_VALUE';
+    (future.units.units || future.units).find((unit) => unit.id !== 'A17').name += ' future update';
+    expect(findFailures(future, { durable: true })).toEqual([]);
+    expectFailure(future, 'a non-Book-2 target record changed');
+    expectFailure(future, 'changed outside A17 scope');
+    const added = clone();
+    (added.units.units || added.units).push({ id: 'FUTURE', name: 'New unit' });
+    expectFailure(added, 'added outside A17 scope');
+  });
 
-    const transitioned = clone();
-    transitioned.meta.issue_229_candidate = {
-      ...transitioned.meta.issue_229_candidate,
-      status: 'integrated',
-      approval_status: 'integrated',
-      integrated_commit: 'a'.repeat(40),
+  function terminalFixture() {
+    const input = clone();
+    const owner = require('./book2-owner-decision');
+    input.meta.issue_229_candidate = {
+      ...input.meta.issue_229_candidate, status: 'integrated', approval_status: 'integrated',
+      integrated_commit: owner.REVIEWED_HEAD,
       integration_evidence_ref: 'https://github.com/meijer1973/4veco-platform/pull/230',
     };
-    for (const hold of transitioned.meta.holds.filter((item) => item.candidate_binding)) {
+    for (const hold of input.meta.holds.filter((item) => item.candidate_binding)) {
       const binding = hold.candidate_binding;
       hold.status = 'released';
-      hold.target_binding = {
-        blocked_baseline_sha256: binding.blocked_baseline_sha256,
-        approved_replacement_sha256: binding.candidate_replacement_sha256,
-        approval_ref: 'https://github.com/meijer1973/4veco-platform/issues/229#issuecomment-owner-approval',
-        approved_by: 'owner@example.test',
-        approved_on: '2026-09-05',
-      };
+      hold.target_binding = Object.fromEntries(['blocked_baseline_sha256', 'approved_replacement_sha256',
+        'approval_ref', 'approved_by', 'approved_on'].map((key) => [key, binding[key]]));
       delete hold.candidate_binding;
       hold.release_evidence = {
-        resolved_via: 'target_authority_integration',
-        released_by: 'owner@example.test',
-        released_on: '2026-09-05',
-        evidence_ref: 'https://github.com/meijer1973/4veco-platform/pull/230',
-        subject_id: hold.scope.find((scope) => scope.startsWith('paragraph:')).slice('paragraph:'.length),
-        subject_sha256: hold.target_binding.approved_replacement_sha256,
-        integrated_commit: 'a'.repeat(40),
+        resolved_via: 'target_authority_integration', released_by: 'meijer1973',
+        released_on: '2026-09-05', evidence_ref: input.meta.issue_229_candidate.integration_evidence_ref,
+        subject_id: hold.scope[0].slice('paragraph:'.length),
+        subject_sha256: binding.approved_replacement_sha256, integrated_commit: owner.REVIEWED_HEAD,
       };
     }
-    const transitionedEiHold = transitioned.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION');
-    transitionedEiHold.status = 'released';
-    transitionedEiHold.release_evidence = {
-      resolved_via: 'outline_owner_decision',
-      released_by: 'owner@example.test',
-      released_on: '2026-09-05',
-      evidence_ref: 'https://github.com/meijer1973/4veco-platform/issues/229#issuecomment-outline-owner-decision',
-    };
-    transitioned.registry.exercises.find((item) => item.id === '2.1.1').lesson_goals[0] += ' Later governed revision.';
-    expect(findFailures(transitioned, { durable: true })).toEqual([]);
-    expect(durableLifecycleState(transitioned.meta)).toEqual({ mode: 'retired', failures: [] });
-    expect(approvalBlockLifecycleMode(transitioned.meta)).toBe('retired');
+    return input;
+  }
 
-    const openEiSupersession = structuredClone(transitioned);
-    const openEiHold = openEiSupersession.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION');
-    openEiHold.status = 'open';
-    openEiHold.release_evidence = null;
-    expect(findFailures(openEiSupersession, { durable: true })).toEqual(expect.arrayContaining([
-      expect.stringContaining('requires a released Ei supersession hold'),
-    ]));
-    expect(() => approvalBlockLifecycleMode(openEiSupersession.meta)).toThrow('requires a released Ei supersession hold');
+  function expectInvalidTerminal(input, fragment) {
+    expect(findFailures(input, { durable: true })).toEqual(expect.arrayContaining([expect.stringContaining(fragment)]));
+    expect(() => approvalBlockLifecycleMode(input.meta, input)).toThrow(fragment);
+  }
 
-    const invalidEiEvidence = structuredClone(transitioned);
-    invalidEiEvidence.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION').release_evidence.resolved_via = 'target_authority_integration';
-    expect(findFailures(invalidEiEvidence, { durable: true })).toEqual(expect.arrayContaining([
-      expect.stringContaining('requires valid outline-owner-decision evidence'),
-    ]));
-    expect(() => approvalBlockLifecycleMode(invalidEiEvidence.meta)).toThrow('requires valid outline-owner-decision evidence');
+  test('terminal contract validates actual ancestral registry content without changing frozen record statuses', () => {
+    const input = terminalFixture();
+    expect(findFailures(input, { durable: true })).toEqual([]);
+    expect(durableLifecycleState(input.meta, input)).toEqual({ mode: 'retired', failures: [] });
+    expect(approvalBlockLifecycleMode(input.meta, input)).toBe('retired');
+    expect(input.candidates.every((record) => record.record_status === 'candidate_review_ready')).toBe(true);
+  });
 
-    const wrongPackage = structuredClone(transitioned);
+  test('rejects a mutually consistent forged binding and release hash', () => {
+    const input = terminalFixture();
+    const hold = input.meta.holds.find((item) => item.id === 'H-229-211-CANDIDATE');
+    hold.target_binding.approved_replacement_sha256 = 'f'.repeat(64);
+    hold.release_evidence.subject_sha256 = 'f'.repeat(64);
+    expectInvalidTerminal(input, 'must match the approved record hash');
+  });
+
+  test('terminal state still checks registry, frozen package and alignment', () => {
+    const drift = terminalFixture();
+    const record = drift.registry.exercises.find((item) => item.id === '2.1.1');
+    record.lesson_goals[0] += ' Unapproved drift.';
+    drift.meta.target_registry_pins.find((pin) => pin.id === record.id).target_record_sha256 =
+      require('./book2-owner-decision').hash(JSON.stringify(record));
+    expectInvalidTerminal(drift, 'terminal registry must match the exact approved ordered package');
+
+    const candidateDrift = terminalFixture();
+    candidateDrift.candidates[0].lesson_goals[0] += ' Unapproved drift.';
+    expectInvalidTerminal(candidateDrift, 'immutable owner-approved package');
+
+    const alignment = terminalFixture();
+    alignment.alignment.records[0].operations[0].questions = [];
+    expectInvalidTerminal(alignment, 'operation has no visible question');
+
+    const wrongPackage = terminalFixture();
     wrongPackage.meta.issue_229_candidate.package_sha256 = 'b'.repeat(64);
-    expect(findFailures(wrongPackage, { durable: true })).toEqual(expect.arrayContaining([
-      expect.stringContaining('requires the exact reviewed package hash'),
-    ]));
-    expect(() => approvalBlockLifecycleMode(wrongPackage.meta)).toThrow('requires the exact reviewed package hash');
+    expectInvalidTerminal(wrongPackage, 'requires the exact reviewed package hash');
+  });
 
-    for (const invalidStatus of ['typo', null, undefined]) {
-      const invalid = clone();
-      if (invalidStatus === undefined) delete invalid.meta.issue_229_candidate.approval_status;
-      else invalid.meta.issue_229_candidate.approval_status = invalidStatus;
-      expect(findFailures(invalid, { durable: true })).toEqual(expect.arrayContaining([
-        expect.stringContaining('approval_status must be pending or integrated'),
-      ]));
-      expect(() => approvalBlockLifecycleMode(invalid.meta)).toThrow('approval_status must be pending or integrated');
+  test('rejects missing and real-but-wrong integration commits', () => {
+    for (const commit of ['a'.repeat(40), clone().plan?.platform_baseline].filter(Boolean)) {
+      const input = terminalFixture();
+      input.meta.issue_229_candidate.integrated_commit = commit;
+      expectInvalidTerminal(input, 'terminal integrated_commit');
     }
+    const input = terminalFixture();
+    input.meta.holds.find((hold) => hold.id === 'H-229-211-CANDIDATE').release_evidence.integrated_commit = 'a'.repeat(40);
+    expectInvalidTerminal(input, 'terminal integrated_commit');
+  });
 
-    const incompleteTerminal = clone();
-    incompleteTerminal.meta.issue_229_candidate.approval_status = 'integrated';
-    expect(findFailures(incompleteTerminal, { durable: true })).toEqual(expect.arrayContaining([
-      expect.stringContaining('durable terminal state requires status integrated'),
-      expect.stringContaining('durable terminal state requires a full integrated_commit'),
-      expect.stringContaining('durable terminal state requires a released target binding'),
-    ]));
-    expect(() => approvalBlockLifecycleMode(incompleteTerminal.meta)).toThrow('durable terminal state');
+  test.each(['decision', 'subject_sha256', 'supersedes_sha256', 'reviewed_pr', 'reviewed_head',
+    'evidence_ref', 'evidence_sha256', 'resolved_via'])('rejects wrong Ei semantic evidence %s', (field) => {
+    const input = terminalFixture();
+    input.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION').release_evidence[field] = 'forged';
+    expectInvalidTerminal(input, 'semantic decision mismatch: ' + field);
+  });
+
+  test.each(['reviewed_head', 'reviewed_pr', 'package_sha256', 'evidence_ref', 'evidence_sha256',
+    'decision', 'integration_authorized'])('rejects mismatched immutable owner decision %s', (field) => {
+    const input = terminalFixture();
+    input.meta.issue_229_owner_decision[field] = 'forged';
+    expectInvalidTerminal(input, 'owner decision mismatch: ' + field);
+  });
+
+  test.each(['released_by', 'released_on', 'evidence_ref'])('terminal retirement rejects missing release evidence %s', (field) => {
+    const input = terminalFixture();
+    delete input.meta.holds.find((hold) => hold.id === 'H-229-211-CANDIDATE').release_evidence[field];
+    expectInvalidTerminal(input, 'terminal release requires complete evidence');
+  });
+
+  test('terminal retirement preserves binding shape, original baseline, and unique holds', () => {
+    const input = terminalFixture();
+    input.meta.holds.find((hold) => hold.id === 'H-229-211-CANDIDATE').target_binding.blocked_baseline_sha256 = 'f'.repeat(64);
+    expectInvalidTerminal(input, 'terminal binding must preserve exact fields and original reviewed baseline');
+    const duplicate = terminalFixture();
+    duplicate.meta.holds.push(structuredClone(duplicate.meta.holds[0]));
+    expectInvalidTerminal(duplicate, 'terminal hold IDs must be unique');
+  });
+
+  test('rejects incomplete terminal lifecycle and invalid status', () => {
+    const open = terminalFixture();
+    const ei = open.meta.holds.find((hold) => hold.id === 'H-229-EI-SUPERSESSION');
+    ei.status = 'open'; ei.release_evidence = null;
+    expectInvalidTerminal(open, 'requires a released Ei supersession hold');
+    for (const status of ['typo', null, undefined]) {
+      const input = clone();
+      input.meta.issue_229_candidate.approval_status = status;
+      expectInvalidTerminal(input, 'approval_status must be pending or integrated');
+    }
+    const incomplete = clone();
+    incomplete.meta.issue_229_candidate.approval_status = 'integrated';
+    expectInvalidTerminal(incomplete, 'durable terminal state');
+  });
+
+  test('CI runs both durable and PR-230-only sprint scope guards', () => {
+    const fs = require('fs');
+    const path = require('path');
+    const ci = fs.readFileSync(path.resolve(__dirname, '../../.github/workflows/platform-ci.yml'), 'utf8');
+    expect(ci).toContain('npm run check:book2-target-authority-remediation');
+    expect(ci).toContain('--scope-base "${{ github.event.pull_request.base.sha }}"');
+    expect(ci).toMatch(/if: github.event_name == 'pull_request' && github.event.pull_request.number == 230\s+run: node build-scripts\/workflows\/check-book2-target-authority-remediation.js/);
   });
 
   test('rejects the stale Ei category and invented boundary classifications', () => {
