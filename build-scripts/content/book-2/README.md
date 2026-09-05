@@ -34,6 +34,9 @@ needs its own regression check, not a silent upgrade here.
 `chapter_pipeline.py` prepares exact-source Book2 chapters after the independent
 paragraph and chapter gates. Its spec lists all four paragraph folders in order
 and exact raw-byte hashes of reviewed student/answer Markdown. It preflights all
+referenced SVG/PNG pair hashes against each paragraph's explicit reviewed
+`asset_sha256` filename/hash map (an empty map is required for text-only inputs).
+Changed, extra or missing expected asset pins fail before writes. It preflights all
 eight inputs and paired namespaced assets, includes each theory paragraaf once
 (not its duplicate opgaven), includes the mixed opgaven once, and keeps answers
 separate. Reviewed text-only chapter-front HTML is supplied by the caller.

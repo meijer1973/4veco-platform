@@ -28,7 +28,8 @@ def prepare_chapter(chapter_dir: Path, spec: dict, *, pandoc: str = "pandoc") ->
     """Preflight all eight exact sources/assets before any output write.
 
     spec: nr, title, front_html, paragraphs (nr, folder, student_sha256,
-    answers_sha256). Book 2 has three theory paragraphs followed by one mixed
+    answers_sha256, asset_sha256 mapping each referenced paired filename to
+    its reviewed byte hash). Book 2 has three theory paragraphs followed by one mixed
     paragraph. No discovery by broad filename substring or companion fallback.
     Hashes are raw source-byte hashes recorded by the reviewed handoffs.
     """
@@ -53,6 +54,10 @@ def prepare_chapter(chapter_dir: Path, spec: dict, *, pandoc: str = "pandoc") ->
     answer_parts = [f"# Antwoorden Hoofdstuk {nr} — {title}"]
     inputs, assets = [], {}
     for index, paragraph in enumerate(paragraphs, 1):
+        expected_assets = paragraph.get("asset_sha256")
+        if not isinstance(expected_assets, dict):
+            raise ValueError("Each paragraph needs an explicit reviewed asset hash map")
+        observed_assets = {}
         folder_name = paragraph["folder"]
         if not folder_name.startswith(paragraph["nr"] + " ") or Path(folder_name).name != folder_name:
             raise ValueError("Paragraph folder must be one exact chapter-local name")
@@ -81,9 +86,12 @@ def prepare_chapter(chapter_dir: Path, spec: dict, *, pandoc: str = "pandoc") ->
                 if previous and previous["sha256"] != asset["sha256"]:
                     raise ValueError(f"Conflicting aggregate asset: {path.name}")
                 assets[path.name] = asset
+                observed_assets[path.name] = asset["sha256"]
             inputs.append(record)
             # Retain the complete reviewed source; do not append theory opgaven.
             destination.append('<div class="page-break"></div>\n\n' + markdown.strip())
+        if observed_assets != expected_assets:
+            raise ValueError(f"Reviewed asset pins differ from referenced pairs: {paragraph['nr']}")
     result = {"student_md": "\n\n".join(student_parts) + "\n",
               "answers_md": "\n\n".join(answer_parts) + "\n",
               "inputs": inputs, "assets": list(assets.values())}

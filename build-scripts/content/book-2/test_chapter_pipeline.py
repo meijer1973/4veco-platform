@@ -23,7 +23,7 @@ class ChapterPipelineTests(unittest.TestCase):
             folder_name = f"{nr} Test {index}"
             folder = self.chapter / folder_name
             folder.mkdir()
-            paragraph = {"nr": nr, "folder": folder_name}
+            paragraph = {"nr": nr, "folder": folder_name, "asset_sha256": {}}
             kind = "opgaven" if index == 4 else "paragraaf"
             for output_kind, hash_key, label in ((kind, "student_sha256", "Student"),
                                                 ("antwoorden", "answers_sha256", "Answer")):
@@ -81,12 +81,22 @@ class ChapterPipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(FileNotFoundError, "Missing paired"):
             prepare_chapter(self.chapter, self.spec)
         Image.new("RGB", (10, 10), "white").save(svg.with_suffix(".png"))
+        with self.assertRaisesRegex(ValueError, "Reviewed asset pins differ"):
+            prepare_chapter(self.chapter, self.spec)
+        paragraph["asset_sha256"] = {path.name: digest(path) for path in assets.iterdir()}
         result = prepare_chapter(self.chapter, self.spec)
         self.assertEqual(len(result["assets"]), 2)
         self.assertEqual(result["assets"][0]["sha256"], digest(svg))
         svg.write_text("Changed", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "changed after preflight"):
             verify_chapter_inputs(result)
+        with self.assertRaisesRegex(ValueError, "Reviewed asset pins differ"):
+            prepare_chapter(self.chapter, self.spec)
+
+    def test_missing_reviewed_asset_map_is_rejected_even_for_text_only_input(self):
+        del self.spec["paragraphs"][0]["asset_sha256"]
+        with self.assertRaisesRegex(ValueError, "explicit reviewed asset hash map"):
+            prepare_chapter(self.chapter, self.spec)
 
 
 if __name__ == "__main__":
