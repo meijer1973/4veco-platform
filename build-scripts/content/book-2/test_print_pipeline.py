@@ -179,6 +179,23 @@ class PrintPipelineTests(unittest.TestCase):
             finally:
                 changed.write_bytes(original)
 
+    def test_assembly_source_change_during_capture_does_not_publish_manifest(self):
+        from print_pipeline import digest
+        self.source.write_text('# Chapter\n', encoding="utf-8")
+        record = build_document(self.source)
+        paragraph = self.root / "reviewed-paragraph.md"
+        paragraph.write_text("Reviewed paragraph source", encoding="utf-8")
+        record["assembly_inputs"] = [{"path": str(paragraph), "sha256": digest(paragraph)}]
+        real_run = subprocess.run
+        def change_during_capture(*args, **kwargs):
+            result = real_run(*args, **kwargs)
+            paragraph.write_text("Changed paragraph", encoding="utf-8")
+            return result
+        with patch("print_pipeline.subprocess.run", side_effect=change_during_capture):
+            with self.assertRaisesRegex(ValueError, "Stale proof"):
+                render_proof(record, self.root / "chapter-proof")
+        self.assertFalse((self.root / "chapter-proof" / "manifest.json").exists())
+
     def test_build_records_consumed_source_snapshot_not_later_bytes(self):
         self.source.write_text('# Original source\n', encoding="utf-8")
         real_prepare = prepare_html

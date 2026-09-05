@@ -53,3 +53,17 @@ Body/table/box typography and figures still require actual rendered inspection.
 Proof manifests remain PENDING with no inspected pages or fabricated zero-defect
 claim. No technical test grants student readiness or proves observed timing.
 Future helper changes need proportionate regression/review before reliance.
+
+## Short-callout follow-up: PASS
+
+Independent reviewer correction_plan_review reviewed exact patch
+5a830c82aadbd7dd901e0d17ade8f05c88d5de67 at root head
+bc6feb23059c1f4338c2f26db97965f106c00c54 (identical helper/test files).
+All19 focused tests independently passed, including the real-PDF page-boundary
+case. Short text blockquotes are marked idempotently; long blocks and blocks
+with images, tables or nested blockquotes are excluded. Existing long-exercise
+splitting, security/provenance guards and authority are unchanged.
+No blocking findings. This is not student-page acceptance.
+
+The subsequent chapter-assembly helper/provenance extension is a new change
+and is not covered by that pagination verdict; its independent review is pending.

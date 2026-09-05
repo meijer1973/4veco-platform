@@ -246,7 +246,7 @@ def verify_record_freshness(record: dict) -> None:
     for path_field, hash_field in (("source_md", "source_sha256"), ("source_html", "html_sha256"), ("source_pdf", "pdf_sha256")):
         if digest(Path(record[path_field])) != record[hash_field]:
             raise ValueError(f"Stale proof input: {path_field}")
-    for asset in record["assets"]:
+    for asset in record["assets"] + record.get("assembly_inputs", []):
         if digest(Path(asset["path"])) != asset["sha256"]:
             raise ValueError(f"Stale proof asset: {asset['path']}")
 

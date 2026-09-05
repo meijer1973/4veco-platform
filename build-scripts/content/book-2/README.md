@@ -30,3 +30,17 @@ upgrade is part of this task. The WeasyPrint68.1 default_url_fetcher emits a
 known API-deprecation warning for future69.0; the supported pinned68.1 render
 works and all remote resource loads are rejected. A future toolchain migration
 needs its own regression check, not a silent upgrade here.
+
+`chapter_pipeline.py` prepares exact-source Book2 chapters after the independent
+paragraph and chapter gates. Its spec lists all four paragraph folders in order
+and exact raw-byte hashes of reviewed student/answer Markdown. It preflights all
+eight inputs and paired namespaced assets, includes each theory paragraaf once
+(not its duplicate opgaven), includes the mixed opgaven once, and keeps answers
+separate. Reviewed text-only chapter-front HTML is supplied by the caller.
+Input/asset hashes remain bound through proof capture. This technical preflight
+does not release holds, establish review acceptance, or certify the front fits.
+No actual chapter assembly is authorized by these fixture tests alone.
+
+```powershell
+python -m unittest discover -s build-scripts/content/book-2 -p 'test_chapter_pipeline.py' -v
+```
