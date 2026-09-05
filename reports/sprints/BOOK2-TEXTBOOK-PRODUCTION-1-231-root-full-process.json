@@ -1,0 +1,562 @@
+{
+  "mode": "full",
+  "python": "C:/Python314/python.exe",
+  "args": [
+    "build-scripts/content/book-2/b2_231.py",
+    "--lesson-root",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+    "--proof-root",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1",
+    "--proof-suffix",
+    "r14",
+    "--manifest",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r14.json"
+  ],
+  "started_at": "2026-09-05T23:48:45.237Z",
+  "finished_at": "2026-09-05T23:49:01.673Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\nBook 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n{\"assets\":[\"2.3.1_fig_1\",\"2.3.1_fig_2\",\"2.3.1_fig_3\",\"2.3.1_fig_4\",\"2.3.1_we_1\",\"2.3.1_ex_1\",\"2.3.1_ex_2\",\"2.3.1_ex_3\",\"2.3.1_ex_4\",\"2.3.1_ex_5\",\"2.3.1_ex_6\",\"2.3.1_ex_7\",\"2.3.1_ex_8\",\"2.3.1_ex_9\",\"2.3.1_ex_10\"],\"pairs\":15,\"canvas\":[1200,900],\"png\":[2400,1800],\"font\":\"Arial regular 30pt\",\"visual_acceptance\":\"NOT_ASSERTED\"}\n{\r\n  \"paragraph\": \"2.3.1\",\r\n  \"revision\": \"r14\",\r\n  \"manifest\": \"C:\\\\wt\\\\book2-part-a-production-20260905\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r14.json\",\r\n  \"packet_files\": 42,\r\n  \"inspection_status\": \"PENDING\"\r\n}\r\n",
+  "stderr": "",
+  "status": "PASS",
+  "snapshot_before": {
+    "2.3.1 Consumentensurplus – paragraaf.md": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544",
+    "2.3.1 Consumentensurplus – paragraaf.html": "86077ee832f3ce9043ccf0077feb037e34974fbb248f465455f465e77cf4db68",
+    "2.3.1 Consumentensurplus – paragraaf.pdf": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+    "2.3.1 Consumentensurplus – paragraaf.zip": "cadb533baaed316964f354c3fcab330f572b33cb570d3facc137378f1d0936ac",
+    "2.3.1 Consumentensurplus – opgaven.md": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e",
+    "2.3.1 Consumentensurplus – opgaven.html": "cd689d24c0f1b74af9085ce7de2cefac1139603dd21c7085a54b45c435c64055",
+    "2.3.1 Consumentensurplus – opgaven.pdf": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+    "2.3.1 Consumentensurplus – opgaven.zip": "fff819d917a73c8d6ba2314a49e971e9f1939f0b4478daa5b76e462e5fedb46d",
+    "2.3.1 Consumentensurplus – antwoorden.md": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+    "2.3.1 Consumentensurplus – antwoorden.html": "ed5a2f28756625f5a8d3e81724291d8f11a784f9a9689d1b50d86837f732132c",
+    "2.3.1 Consumentensurplus – antwoorden.pdf": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+    "2.3.1 Consumentensurplus – antwoorden.zip": "ca051aa7055bde0ea31a49840bb74238cc13e75879c7b2ca3056c161b20107ca",
+    "_assets/2.3.1_fig_1.svg": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9",
+    "_assets/2.3.1_fig_1.png": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+    "_assets/2.3.1_fig_2.svg": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1",
+    "_assets/2.3.1_fig_2.png": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+    "_assets/2.3.1_fig_3.svg": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d",
+    "_assets/2.3.1_fig_3.png": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+    "_assets/2.3.1_fig_4.svg": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef",
+    "_assets/2.3.1_fig_4.png": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+    "_assets/2.3.1_we_1.svg": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+    "_assets/2.3.1_we_1.png": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+    "_assets/2.3.1_ex_1.svg": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+    "_assets/2.3.1_ex_1.png": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+    "_assets/2.3.1_ex_2.svg": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+    "_assets/2.3.1_ex_2.png": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+    "_assets/2.3.1_ex_3.svg": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+    "_assets/2.3.1_ex_3.png": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+    "_assets/2.3.1_ex_4.svg": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81",
+    "_assets/2.3.1_ex_4.png": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+    "_assets/2.3.1_ex_5.svg": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9",
+    "_assets/2.3.1_ex_5.png": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+    "_assets/2.3.1_ex_6.svg": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75",
+    "_assets/2.3.1_ex_6.png": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+    "_assets/2.3.1_ex_7.svg": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea",
+    "_assets/2.3.1_ex_7.png": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+    "_assets/2.3.1_ex_8.svg": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8",
+    "_assets/2.3.1_ex_8.png": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+    "_assets/2.3.1_ex_9.svg": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3",
+    "_assets/2.3.1_ex_9.png": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+    "_assets/2.3.1_ex_10.svg": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e",
+    "_assets/2.3.1_ex_10.png": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63"
+  },
+  "registered_worktree_revisions": [
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r1.json",
+      "revision": 1
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r2.json",
+      "revision": 2
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r3.json",
+      "revision": 3
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r4.json",
+      "revision": 4
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r5.json",
+      "revision": 5
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r6.json",
+      "revision": 6
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r8.json",
+      "revision": 8
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r9.json",
+      "revision": 9
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r10.json",
+      "revision": 10
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r2.json",
+      "revision": 2
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r3.json",
+      "revision": 3
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r4.json",
+      "revision": 4
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r5.json",
+      "revision": 5
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r6.json",
+      "revision": 6
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r7.json",
+      "revision": 7
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r8.json",
+      "revision": 8
+    },
+    {
+      "tree": "C:/wt/book2-231-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r9.json",
+      "revision": 9
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r1.json",
+      "revision": 1
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r13.json",
+      "revision": 13
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r2.json",
+      "revision": 2
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r3.json",
+      "revision": 3
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r4.json",
+      "revision": 4
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r5.json",
+      "revision": 5
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r6.json",
+      "revision": 6
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r8.json",
+      "revision": 8
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r9.json",
+      "revision": 9
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r10.json",
+      "revision": 10
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r11.json",
+      "revision": 11
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r12.json",
+      "revision": 12
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r13.json",
+      "revision": 13
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r2.json",
+      "revision": 2
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r3.json",
+      "revision": 3
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r4.json",
+      "revision": 4
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r5.json",
+      "revision": 5
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r6.json",
+      "revision": 6
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r7.json",
+      "revision": 7
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r8.json",
+      "revision": 8
+    },
+    {
+      "tree": "C:/wt/book2-231-review-20260906/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r9.json",
+      "revision": 9
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r1.json",
+      "revision": 1
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r10.json",
+      "revision": 10
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r11.json",
+      "revision": 11
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r12.json",
+      "revision": 12
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r13.json",
+      "revision": 13
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r2.json",
+      "revision": 2
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r3.json",
+      "revision": 3
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r4.json",
+      "revision": 4
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r5.json",
+      "revision": 5
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r6.json",
+      "revision": 6
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r7.json",
+      "revision": 7
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r8.json",
+      "revision": 8
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-attempt-r9.json",
+      "revision": 9
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r10.json",
+      "revision": 10
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r11.json",
+      "revision": 11
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r12.json",
+      "revision": 12
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r13.json",
+      "revision": 13
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r2.json",
+      "revision": 2
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r3.json",
+      "revision": 3
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r4.json",
+      "revision": 4
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r5.json",
+      "revision": 5
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r6.json",
+      "revision": 6
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r7.json",
+      "revision": 7
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r8.json",
+      "revision": 8
+    },
+    {
+      "tree": "C:/wt/book2-part-a-production-20260905/4veco-platform",
+      "name": "BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r9.json",
+      "revision": 9
+    }
+  ],
+  "native_files_identical": 42,
+  "color_pages_identical": 33,
+  "historical_pending_manifests_unchanged": [
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r10\\manifest.json",
+      "sha256": "0f65bf7b973a392aad15ca3bed322505543a9b75f502864d589f60838976e718"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r11\\manifest.json",
+      "sha256": "6aee996f6653b6a3fc9a66799456ab15735a9a9d256026a30b2ea83ce1e7f779"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r12\\manifest.json",
+      "sha256": "4c22d2739e46bd5077d6d489f1c374c4cc1502b43e47cc83cd28796732868a97"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r13\\manifest.json",
+      "sha256": "f08dbfb478e772838b452dfbe30140039094b11fb5490ccb34337ed9c3d93e1d"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r3\\manifest.json",
+      "sha256": "71a986fbb03ae3b055a3ae350e02601e2da58af4fb601dd7271db00e85f9dbb0"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r4\\manifest.json",
+      "sha256": "6c04083c23eb506dd541d533190a865b8d98bca34d5844d9a3cb72cef4f9613b"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r5\\manifest.json",
+      "sha256": "b8610d47338b94a84f732df2f767a3e32507a8fb82103f9f627f251dac4e432e"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r6\\manifest.json",
+      "sha256": "a680e63fc510d0a8b5bfa5654d4897a9c27a5eb13b496f6da82933c3ab55866e"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r7\\manifest.json",
+      "sha256": "3cb54ca30f9a9f320b5a9b9814da8da3dbf518b0b2bdba57a23e7e80ca700e6d"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r8\\manifest.json",
+      "sha256": "07504ca624c5671a485b6f2504be7858bae902f2354756af509042c5160fe735"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r9\\manifest.json",
+      "sha256": "3f471c99a13e9fb9733af2f1c62d13cf8bf88118caa4d98e78e0009bf7c83ea7"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-e82275346369-r2\\manifest.json",
+      "sha256": "c53ee7bfe784b0513ddd892140248cd65aeb3701b7205110a76456435f6ff714"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r10\\manifest.json",
+      "sha256": "10fdb5e664649d5b6f5f82c8c449fc87140a1b22ba8efe3a74a1f9f3fd374dcc"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r11\\manifest.json",
+      "sha256": "d94eccbf2b60654c7c371e68ba6387bed788e229c801924fead4e1650ab5e02f"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r12\\manifest.json",
+      "sha256": "2c959b9b8df98f13320db4df4dabd2c798402a90b00700d596615e2816db1275"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r13\\manifest.json",
+      "sha256": "93553328e33e50eaa3563d4f78b1f0e925c5b913b3a16ee2f6ca934cc2bb8881"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r8\\manifest.json",
+      "sha256": "067b452b490205243e7f4400913256dc2f2e66a84c9fb6916c138d4993671ad9"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r9\\manifest.json",
+      "sha256": "7995c4c03f625f3159eb0749a97b1838466326abc576f01e6fb0f822562a99c6"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-88ac44bb55b2-r3\\manifest.json",
+      "sha256": "cde9f68271fde085fcd75920e4b225a818715fc26987b580bfd390b0d0bad6e7"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-88ac44bb55b2-r4\\manifest.json",
+      "sha256": "7f9c6652a9dad2c3707b441a35541d0e04685af2738fa047d604f87abea932d0"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-88ac44bb55b2-r5\\manifest.json",
+      "sha256": "d1a598042eb1d44a25eadcbe5b37013f711860c0b3b3bfc95db53759300ea88d"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-88ac44bb55b2-r6\\manifest.json",
+      "sha256": "89466219c1ca76372a0937bbfee601a3b0cbd979ab57cca10b9bc57b73637520"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-9c8036028a28-r7\\manifest.json",
+      "sha256": "e1adcab246473df469b0d9be6be69e7b5a73525ad12fcfb9cdd51c65e7c608da"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-ed1062fd0fb4-r2\\manifest.json",
+      "sha256": "a1fc678ecce9f1e5bde77f14101071020898c9ece4a8fbe9769e32a49166e46d"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r10\\manifest.json",
+      "sha256": "c06580750ac92c4080fd14a4dff20170fd9215e34591a18240f69d4f071f5c76"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r11\\manifest.json",
+      "sha256": "10b75cb09973061598fb4596fea64543f7417229e1d7fd5e6f5db2f5f0ad753e"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r12\\manifest.json",
+      "sha256": "e986100322160f614c27103d8e6db1c74cdf477f9aabc1e9ef1e2b08e18d4520"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r13\\manifest.json",
+      "sha256": "fd6d45ec38f7adc753f06b85b1ce05ace09f8602bfa009ddbbea4b4a46ff071b"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r8\\manifest.json",
+      "sha256": "a639a27f7c7673e711935241556468a0a3bfeb038ac0a6f44822d46fe619e1a3"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r9\\manifest.json",
+      "sha256": "0ad645e88b4c9c86693f61d6f480e269b6ffd50002b066a81a5ebfecbd7820fc"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-13a1291b1bd0-r3\\manifest.json",
+      "sha256": "fea87dcd382f3e5ce6b2d1789ab89d8b5bc4cc8b2cceb4e8fd8ef99c52e0a636"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-13a1291b1bd0-r4\\manifest.json",
+      "sha256": "c307a6b73b08ffbfc73c5a447a4bf9787b8c9884138395389427a709b5c16b08"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-13a1291b1bd0-r5\\manifest.json",
+      "sha256": "769d6d338a26b0d460cf7d84067080ced08f3dc258830eaceb9fe920d1dc9924"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-13a1291b1bd0-r6\\manifest.json",
+      "sha256": "b9f26a087052f9ad2ce8af178b7a737913e3c184b3a5b7c014b4a4b7356b009a"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-1e2ba9560e25-r2\\manifest.json",
+      "sha256": "4d2ad8cd803b8e8e5b554f5d7e0688ae656f8e3c9e8e639692896e8e8a975682"
+    },
+    {
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-9a19c80b67ea-r7\\manifest.json",
+      "sha256": "3899a523371b72349ed0905ed90af02121eb0c7aa1fe098d2f9347be0793eee7"
+    }
+  ]
+}

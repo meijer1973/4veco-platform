@@ -1,0 +1,697 @@
+{
+  "paragraph": "2.3.1",
+  "source_manifest": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r14.json",
+  "source_manifest_sha256": "290cfbe085c80007becd08d704ef9b3e73cfa7b427aaca16f137a077c500d9af",
+  "artifacts": {
+    "2.3.1 Consumentensurplus – paragraaf.md": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544",
+    "2.3.1 Consumentensurplus – paragraaf.html": "86077ee832f3ce9043ccf0077feb037e34974fbb248f465455f465e77cf4db68",
+    "2.3.1 Consumentensurplus – paragraaf.pdf": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+    "2.3.1 Consumentensurplus – paragraaf.zip": "cadb533baaed316964f354c3fcab330f572b33cb570d3facc137378f1d0936ac",
+    "2.3.1 Consumentensurplus – opgaven.md": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e",
+    "2.3.1 Consumentensurplus – opgaven.html": "cd689d24c0f1b74af9085ce7de2cefac1139603dd21c7085a54b45c435c64055",
+    "2.3.1 Consumentensurplus – opgaven.pdf": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+    "2.3.1 Consumentensurplus – opgaven.zip": "fff819d917a73c8d6ba2314a49e971e9f1939f0b4478daa5b76e462e5fedb46d",
+    "2.3.1 Consumentensurplus – antwoorden.md": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+    "2.3.1 Consumentensurplus – antwoorden.html": "ed5a2f28756625f5a8d3e81724291d8f11a784f9a9689d1b50d86837f732132c",
+    "2.3.1 Consumentensurplus – antwoorden.pdf": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+    "2.3.1 Consumentensurplus – antwoorden.zip": "ca051aa7055bde0ea31a49840bb74238cc13e75879c7b2ca3056c161b20107ca",
+    "_assets/2.3.1_fig_1.svg": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9",
+    "_assets/2.3.1_fig_1.png": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+    "_assets/2.3.1_fig_2.svg": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1",
+    "_assets/2.3.1_fig_2.png": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+    "_assets/2.3.1_fig_3.svg": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d",
+    "_assets/2.3.1_fig_3.png": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+    "_assets/2.3.1_fig_4.svg": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef",
+    "_assets/2.3.1_fig_4.png": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+    "_assets/2.3.1_we_1.svg": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+    "_assets/2.3.1_we_1.png": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+    "_assets/2.3.1_ex_1.svg": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+    "_assets/2.3.1_ex_1.png": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+    "_assets/2.3.1_ex_2.svg": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+    "_assets/2.3.1_ex_2.png": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+    "_assets/2.3.1_ex_3.svg": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+    "_assets/2.3.1_ex_3.png": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+    "_assets/2.3.1_ex_4.svg": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81",
+    "_assets/2.3.1_ex_4.png": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+    "_assets/2.3.1_ex_5.svg": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9",
+    "_assets/2.3.1_ex_5.png": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+    "_assets/2.3.1_ex_6.svg": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75",
+    "_assets/2.3.1_ex_6.png": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+    "_assets/2.3.1_ex_7.svg": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea",
+    "_assets/2.3.1_ex_7.png": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+    "_assets/2.3.1_ex_8.svg": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8",
+    "_assets/2.3.1_ex_8.png": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+    "_assets/2.3.1_ex_9.svg": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3",
+    "_assets/2.3.1_ex_9.png": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+    "_assets/2.3.1_ex_10.svg": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e",
+    "_assets/2.3.1_ex_10.png": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63"
+  },
+  "zip_archives": [
+    {
+      "kind": "paragraaf",
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – paragraaf.zip",
+      "sha256": "cadb533baaed316964f354c3fcab330f572b33cb570d3facc137378f1d0936ac",
+      "crc_test": "PASS",
+      "exact_safe_unique_membership": true,
+      "members": [
+        {
+          "name": "2.3.1 Consumentensurplus – paragraaf.html",
+          "size": 1941452,
+          "crc32": "bb1320e9",
+          "sha256": "86077ee832f3ce9043ccf0077feb037e34974fbb248f465455f465e77cf4db68",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus – paragraaf.md",
+          "size": 17232,
+          "crc32": "56c6bca9",
+          "sha256": "eb5c7c163099bd0ae7f6be44edf53e885de6ce78e4f37e647408e2c06aba5544",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus – paragraaf.pdf",
+          "size": 1142661,
+          "crc32": "bc67f89d",
+          "sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.png",
+          "size": 180461,
+          "crc32": "bbc16c28",
+          "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.svg",
+          "size": 5839,
+          "crc32": "2a4f15ef",
+          "sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.png",
+          "size": 197326,
+          "crc32": "fe0ba664",
+          "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.svg",
+          "size": 6296,
+          "crc32": "301d1bab",
+          "sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.png",
+          "size": 176945,
+          "crc32": "ff7b7d0c",
+          "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.svg",
+          "size": 5370,
+          "crc32": "1672a545",
+          "sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_1.png",
+          "size": 170633,
+          "crc32": "3bb602e9",
+          "sha256": "08f5a184ae07b31b0e383ae9be7efd621cabc252c5aaf6753307ef981abf7d60",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_1.svg",
+          "size": 5393,
+          "crc32": "aeabf2e5",
+          "sha256": "a6ac9ac39a7e60600c87b5851f3a42018e05e61eea28bb1cf5ba221cb7f91cc9",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_2.png",
+          "size": 144493,
+          "crc32": "3362c25e",
+          "sha256": "cc5447843fcf0c6334bcc4b6733942b6299424572b4bb0a4343462c7bed257f7",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_2.svg",
+          "size": 3984,
+          "crc32": "b50e3ccf",
+          "sha256": "5eec646f0a442692a769dcffacaf9f1275539ab90aa5146b52c5c18f447246a1",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_3.png",
+          "size": 179227,
+          "crc32": "ef1988f7",
+          "sha256": "94dc9f593e7533189d3f0b4afae992079eaa349f4c29fd4d7f0f1ba60e41f3a9",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_3.svg",
+          "size": 4696,
+          "crc32": "16124b0d",
+          "sha256": "d44e452653c0c6e5817b8b7cca913dc3e0d61de2426244c90357064366bcf76d",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_4.png",
+          "size": 196409,
+          "crc32": "7b3aa159",
+          "sha256": "e0b85f0c26d7434d9e1b3da8a60ffce94e22665dccf4b304192a2d2d12a83065",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_fig_4.svg",
+          "size": 5355,
+          "crc32": "4c0aabe3",
+          "sha256": "f04a1051b0ebdcf4e49aeefa3d11889e2d019bc1a0bca3c9439a8c10f8eb5aef",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.png",
+          "size": 193731,
+          "crc32": "81d9e262",
+          "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.svg",
+          "size": 6252,
+          "crc32": "56eb6bf3",
+          "sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+          "bytes_match_file": true
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – opgaven.zip",
+      "sha256": "fff819d917a73c8d6ba2314a49e971e9f1939f0b4478daa5b76e462e5fedb46d",
+      "crc_test": "PASS",
+      "exact_safe_unique_membership": true,
+      "members": [
+        {
+          "name": "2.3.1 Consumentensurplus – opgaven.html",
+          "size": 1012329,
+          "crc32": "c08a801c",
+          "sha256": "cd689d24c0f1b74af9085ce7de2cefac1139603dd21c7085a54b45c435c64055",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus – opgaven.md",
+          "size": 10277,
+          "crc32": "13e83548",
+          "sha256": "70669f6ed10a7465aea37f5f2298dd17708f6430a975fe32187135701122529e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus – opgaven.pdf",
+          "size": 632256,
+          "crc32": "6f840d2e",
+          "sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.png",
+          "size": 180461,
+          "crc32": "bbc16c28",
+          "sha256": "23d31f28e469b1a0f4b0432ba013dc724102a8062654d72d8e00d26bbb99e1d2",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_1.svg",
+          "size": 5839,
+          "crc32": "2a4f15ef",
+          "sha256": "60f91cf5fd9da887c840f9b02dbd99c6e9541800354643a7756370b2e258b660",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.png",
+          "size": 197326,
+          "crc32": "fe0ba664",
+          "sha256": "dcc9c5f89d17f3b53019f4215e643039471db1df0fa6197ba468d5c17c8e05e4",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_2.svg",
+          "size": 6296,
+          "crc32": "301d1bab",
+          "sha256": "2562f1ce54bb06b08ed1dbb5750ab7642e08b3f47155e0c6df556b362fc4ef50",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.png",
+          "size": 176945,
+          "crc32": "ff7b7d0c",
+          "sha256": "0e68e9d0014f3d5ea7f572f4712f81bda466fd64373b1fd5bfb3625b54e49216",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_3.svg",
+          "size": 5370,
+          "crc32": "1672a545",
+          "sha256": "7d2fcef8db60098d53ee1434d09ba57bdff6125e0f560a1050d6459eaf86c23f",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.png",
+          "size": 193731,
+          "crc32": "81d9e262",
+          "sha256": "8bf4724ae62323bb209059f52b28ac733d9b9274f7347f6f7a35ea076d89ef4e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_we_1.svg",
+          "size": 6252,
+          "crc32": "56eb6bf3",
+          "sha256": "587fddfd013c9c29d943ed528b9a697e3f0043fa73c57944bfc2a428500bd38f",
+          "bytes_match_file": true
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\2.3.1 Consumentensurplus – antwoorden.zip",
+      "sha256": "ca051aa7055bde0ea31a49840bb74238cc13e75879c7b2ca3056c161b20107ca",
+      "crc_test": "PASS",
+      "exact_safe_unique_membership": true,
+      "members": [
+        {
+          "name": "2.3.1 Consumentensurplus – antwoorden.html",
+          "size": 1807480,
+          "crc32": "7f153f1f",
+          "sha256": "ed5a2f28756625f5a8d3e81724291d8f11a784f9a9689d1b50d86837f732132c",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus – antwoorden.md",
+          "size": 13132,
+          "crc32": "4d148aa5",
+          "sha256": "0a1d4b31690f1a053b7180136d387df524ff9ae0df355db273ca32443811d083",
+          "bytes_match_file": true
+        },
+        {
+          "name": "2.3.1 Consumentensurplus – antwoorden.pdf",
+          "size": 1128772,
+          "crc32": "1fe36b2f",
+          "sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_10.png",
+          "size": 195781,
+          "crc32": "49128e37",
+          "sha256": "ffbae805cee07ef35aa27eda49e381d0cddf610b8c8bdc2ade663d48a90cea63",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_10.svg",
+          "size": 5632,
+          "crc32": "4523afe7",
+          "sha256": "5e69ddb9e6d78ec600f2b1c4c707816573ca2e7e920d794a2ed78517c49d730e",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_4.png",
+          "size": 190622,
+          "crc32": "f7d08a5a",
+          "sha256": "915d4932e017a9450eb4fa107555ff5118d9fc0a1fd7f6e18047aa044720901d",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_4.svg",
+          "size": 6254,
+          "crc32": "e5ed6a6a",
+          "sha256": "6aebb9c03b9c09f2525e3173ca94f1630b4adfdec766ee9920da48a6ee1bfe81",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_5.png",
+          "size": 191910,
+          "crc32": "4904a621",
+          "sha256": "348ddd3794915072aebb07e9377352b0b4c6f9c41805c6c8b36f86f989e42fd5",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_5.svg",
+          "size": 6262,
+          "crc32": "18ced720",
+          "sha256": "cf72ed36989023a14db7ba43ca863e72bbd931d2949f2bdeadc6b1d24a8178b9",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_6.png",
+          "size": 190890,
+          "crc32": "7bd20d5d",
+          "sha256": "f13c25813b98e6db030f148e8235e138c1cea23e60a7b32f467724be8e8697ec",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_6.svg",
+          "size": 6250,
+          "crc32": "199da63f",
+          "sha256": "5f82afe966599380d37a2a1e3b5df2c00b5bf44efcd68649112f22faf6a8bd75",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_7.png",
+          "size": 189195,
+          "crc32": "0ff16436",
+          "sha256": "211111d91570da80f535c3374abc2a0ce1b9dde02ffb5415ed4568cf8e3fce4a",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_7.svg",
+          "size": 5114,
+          "crc32": "65743287",
+          "sha256": "76a740caeb741b93ea8fd2e3c9373c3addd0a153c8f416b796865675d6a21aea",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_8.png",
+          "size": 195346,
+          "crc32": "9e4bdc0b",
+          "sha256": "b7388f6d6e8d2136789ed64409bcc1681697e1df4cb4bef39106792658dfbe29",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_8.svg",
+          "size": 6271,
+          "crc32": "ce4d30d6",
+          "sha256": "b10efc6da3a045d7b8265bb5a1cd7f52f84ad7f66a91d91002d40ec2eb2684b8",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_9.png",
+          "size": 188384,
+          "crc32": "d0dc4041",
+          "sha256": "e5b1e54f4edfd441642f7898df8336211ab160b80c9ae913eb1a66a59be6bb2d",
+          "bytes_match_file": true
+        },
+        {
+          "name": "_assets/2.3.1_ex_9.svg",
+          "size": 5321,
+          "crc32": "0b814b5e",
+          "sha256": "450e9ac8df21d693a25516b585b6b4f100f91465c1c0ae7419a0460c78397bd3",
+          "bytes_match_file": true
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "method": "full_builder",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\build-scripts\\content\\book-2\\b2_231.py",
+        "--lesson-root",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen",
+        "--proof-root",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1",
+        "--proof-suffix",
+        "r15",
+        "--manifest",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r15.json"
+      ],
+      "exit_code": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\nBook 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n{\"assets\":[\"2.3.1_fig_1\",\"2.3.1_fig_2\",\"2.3.1_fig_3\",\"2.3.1_fig_4\",\"2.3.1_we_1\",\"2.3.1_ex_1\",\"2.3.1_ex_2\",\"2.3.1_ex_3\",\"2.3.1_ex_4\",\"2.3.1_ex_5\",\"2.3.1_ex_6\",\"2.3.1_ex_7\",\"2.3.1_ex_8\",\"2.3.1_ex_9\",\"2.3.1_ex_10\"],\"pairs\":15,\"canvas\":[1200,900],\"png\":[2400,1800],\"font\":\"Arial regular 30pt\",\"visual_acceptance\":\"NOT_ASSERTED\"}\n{\n  \"paragraph\": \"2.3.1\",\n  \"revision\": \"r15\",\n  \"manifest\": \"C:\\\\wt\\\\book2-part-a-production-20260905\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r15.json\",\n  \"packet_files\": 42,\n  \"inspection_status\": \"PENDING\"\n}\n",
+      "stderr": "",
+      "manifest": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r15.json",
+      "all42_raw_bytes": "IDENTICAL",
+      "all_page_png_bytes": "IDENTICAL",
+      "manifest_sha256": "30df4b9252fc9559ce0b2b2c0a0dbac7f6a0a1e6843c4bfc6b679d987d4c28ca"
+    },
+    {
+      "method": "thin_wrapper",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\build_pdf.py",
+        "--proof-root",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1",
+        "--proof-suffix",
+        "r16",
+        "--manifest",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r16.json"
+      ],
+      "exit_code": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\nBook 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n{\"assets\":[\"2.3.1_fig_1\",\"2.3.1_fig_2\",\"2.3.1_fig_3\",\"2.3.1_fig_4\",\"2.3.1_we_1\",\"2.3.1_ex_1\",\"2.3.1_ex_2\",\"2.3.1_ex_3\",\"2.3.1_ex_4\",\"2.3.1_ex_5\",\"2.3.1_ex_6\",\"2.3.1_ex_7\",\"2.3.1_ex_8\",\"2.3.1_ex_9\",\"2.3.1_ex_10\"],\"pairs\":15,\"canvas\":[1200,900],\"png\":[2400,1800],\"font\":\"Arial regular 30pt\",\"visual_acceptance\":\"NOT_ASSERTED\"}\n{\n  \"paragraph\": \"2.3.1\",\n  \"revision\": \"r16\",\n  \"manifest\": \"C:\\\\wt\\\\book2-part-a-production-20260905\\\\4veco-platform\\\\reports\\\\sprints\\\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r16.json\",\n  \"packet_files\": 42,\n  \"inspection_status\": \"PENDING\"\n}\n",
+      "stderr": "",
+      "manifest": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-build-manifest-r16.json",
+      "all42_raw_bytes": "IDENTICAL",
+      "all_page_png_bytes": "IDENTICAL",
+      "manifest_sha256": "21c5a3b3b8f831e311693b472f8445e4ee5aab0a9aa98e36ec59a8a736a30005"
+    },
+    {
+      "method": "native_print_only",
+      "all42_raw_bytes": "IDENTICAL",
+      "api": "print_pipeline.build_document + b2_231.zip_document"
+    }
+  ],
+  "visual_inspection": "NOT_SUPPLIED_BY_THIS_SCRIPT",
+  "status": "PASS",
+  "all42_raw_rebuilds": "IDENTICAL",
+  "all_page_grayscale": [
+    {
+      "kind": "paragraaf",
+      "page": 1,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-001.png",
+      "sha256": "8ea526985038c46011d637959693491d7a8b409c91f80e96d1552d297c770e4d",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 2,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-002.png",
+      "sha256": "d2285cea0dc17043138e22b25688b6bdcaf2adb22da9cf45b96e736a6f93a0d2",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 3,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-003.png",
+      "sha256": "33c3f3ca32e59e04e17864aaf30cee72a7c01c8fb5cfed9de112e153ca9da3cc",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 4,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-004.png",
+      "sha256": "2e4115588d4c743f4f9837d2991147159550e01baa56a9a8a4f60b93d0f5e51e",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 5,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-005.png",
+      "sha256": "13aa264fad6353b89ab6ab3032ee3b301c2e44e7cc1344cf2c251a4115016dfd",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 6,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-006.png",
+      "sha256": "3b9cea8080a28746444181e3841180d71b52a1271e14f36f7e7b2ba62cb7ee87",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 7,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-007.png",
+      "sha256": "d6e4b6eaa7a0b4521604359aefa3fd27f84a0ccc836a9dbfeff46ac553c713fd",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 8,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-008.png",
+      "sha256": "51824357046f2ae936e87db15bc197d04dfe851bf1263ff248c334837f11bbfe",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 9,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-009.png",
+      "sha256": "0813d242ec72fae797928e314509741d123c58634e9c97c8434f982bcf2068ff",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 10,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-010.png",
+      "sha256": "0691df6f57c7cd4d917e9e520851639c608ec4dfaa081fa74e43c8fc1fd0c939",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 11,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-011.png",
+      "sha256": "b69dfd2c93f9c9fa0bf6303d5d484cab43220c9ca32e2400a11bfbef7399183a",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 12,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-012.png",
+      "sha256": "7638f335af4249ce03951ba1ea2236a2f74255a6eb3145db7403353f150704bb",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 13,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-013.png",
+      "sha256": "bb2330cecd92761d6cb1f52b88d0614372d86fbed5161fba611f692b48babe22",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "paragraaf",
+      "page": 14,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\paragraaf\\page-014.png",
+      "sha256": "9411ec6d5b0f6fb68577ab0ce3bdfb1e981163749281204edbae264f8200e353",
+      "source_pdf_sha256": "088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e"
+    },
+    {
+      "kind": "opgaven",
+      "page": 1,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-001.png",
+      "sha256": "fb74e7672f7e3811a65f8818a21d7456cfc1f69b9c0e53fedcd623d3119f0005",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 2,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-002.png",
+      "sha256": "89345a2d4da77eef1fd0425ba2ade7c209b32117ccb3a2310a35525d9c313fd2",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 3,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-003.png",
+      "sha256": "b540e6d7dfdb9970a866a1370e5b69cf69b32ca06a1fa3b6db1f2a2a157da40a",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 4,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-004.png",
+      "sha256": "b4b402d368a27c8bc9e7f27be9fcbc48caffa35caccda59abdaee8b6e1103bb1",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 5,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-005.png",
+      "sha256": "f78bce7cdf9e42a444cffd1085979512ac83849a104e6f6333edca25e5892949",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 6,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-006.png",
+      "sha256": "058dfabde08686854edab46544c95dd936e003b7756acbfcadb4257ee53c2c60",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 7,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-007.png",
+      "sha256": "97b487eb7b4df60d58be9fe14c53818b1163857d2225f1c69fcdc404327f8fd8",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 8,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-008.png",
+      "sha256": "ad459341dc37de81ab479ce419df817f96f332a1c57655f2dfacd3c636a56510",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "opgaven",
+      "page": 9,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\opgaven\\page-009.png",
+      "sha256": "9e97fe95ec7d34b2e3985b05ef1694badb69d88fa04fc17b08f50b4d9471e03b",
+      "source_pdf_sha256": "4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 1,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-001.png",
+      "sha256": "4230ae514056dba39a1b9535d75ea1d7d76336bf357d6b722b7163172cbb4902",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 2,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-002.png",
+      "sha256": "977d79a9ad6934f36f763e37a388c05a349d6be9400e26f672da845bbafcc314",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 3,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-003.png",
+      "sha256": "de564918d942f6f446ad72b19dfbd2b03f60ec4e421e99b6ecfc54a9b88f8df9",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 4,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-004.png",
+      "sha256": "d49397a7329c639db56ef7625f29d16a44d406f1b45859a78c0e330a5c4f7e99",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 5,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-005.png",
+      "sha256": "693622454498abd0c7564869f1c010a21533ad04aacdd884283d523c9a40637c",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 6,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-006.png",
+      "sha256": "b1465ad070b58822bd221a348a7f5e433e6ab5fdbe951abaaf4acb1db0d09927",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 7,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-007.png",
+      "sha256": "65c6e26575e86251ec9a9a408a5cc3ae8340698499a4cb03f9b196e031f0b622",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 8,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-008.png",
+      "sha256": "c92795b8c22f918b34fe845761fa23d14298c88655437884c36c7ca318a3047c",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 9,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-009.png",
+      "sha256": "446655731838bfca0d86fe6ef33227bf1e17192b653d8499ac02492266f14cec",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    },
+    {
+      "kind": "antwoorden",
+      "page": 10,
+      "path": "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-231-root-reproduction-evidence\\grayscale-r14\\antwoorden\\page-010.png",
+      "sha256": "e586b8e326aa24a4cb66d71359cbe6fbc48b8614d38a606f377a6f8b572c89bc",
+      "source_pdf_sha256": "d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b"
+    }
+  ],
+  "original_pending_manifest_hashes": {
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r14\\manifest.json": "fce9ffc1de6df0f41332ae0fd1f11499c7f825d7a772631ac53fdaea86b44683",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r14\\manifest.json": "84d2cca7686371e2f1a701507b647aeb883aa3522afc182ab54f9a5bf7a3b96a",
+    "C:\\wt\\book2-part-a-production-20260905\\4veco-platform\\reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r14\\manifest.json": "bb652dc595e17c6186a8a6fa80dea89e61c765107a86c023abe99368d57ce118"
+  }
+}

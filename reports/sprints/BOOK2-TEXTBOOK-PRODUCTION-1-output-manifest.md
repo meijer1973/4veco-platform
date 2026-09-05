@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform §231 import/scope `11a352b9f91f6ddba97fa371b9568f9ffb95f771`,
-lessons `cf8a5fa5c3dcdb672d4231e0d97df535f1000abe`, including the exact
+Snapshot: platform §231 review adoption `7c58c2b68330e0ec5e4f3246a0035beebf4251ce`,
+lessons `219a977e495abe43c17949e7d8996aab4176faa0`, including the exact
 root-only current211 acceptance/handoff at5e14325 in211-root-acceptance-r5.md.
 Current221 R8 and222 R13 acceptances remain unchanged.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
@@ -51,11 +51,13 @@ bindings and15 source tests pass. The66 supplemental grayscale pages were
 relocated byte-identically under supported sprint-evidence paths with an exact
 original-commit/path/SHA-to-new-path mapping; all27 historical PENDING manifests
 and original failed/superseded records remain unchanged. Both actual new native
-platform/lesson scope checks pass. Root's fresh full reproduction, published
-canonical independent review adoption, distinct QC and handoff remain pending
-at this snapshot. Both actual structural profiles currently fail only for the
-missing canonical review and QC. Separate in-progress reviewer work is not
-silently accepted by this manifest. See231-root-import-result.md.
+platform/lesson scope checks pass. Canonical independent paragraph PASS WITH
+FLAGS is adopted, with66 personal colour/grayscale pages and15 native figures.
+Root fresh r14 full, r15 full, r16 thin and direct-print parity preserve all42
+native files and all33 colour pages; the actual native checker passes. Distinct
+specialist QC and root acceptance/handoff remain pending. Both actual profiles
+recognize the review and fail only for the missing quality-ref. See
+231-root-candidate-result.md and the separately preserved import result.
 
 Each PDF also requires matching generated `.md` and self-contained `.html`;
 paragraphs require their planned SVG/PNG pairs, thin builder, accepted plan,
@@ -140,9 +142,9 @@ hashes alone are not student-quality acceptance.
 | 2.2.3 / paragraaf | `ca27f8bd6cbb3b596e5621280d76631c5561134e9e53c3556725c313fdf8aecb` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / opgaven | `50cf2bbeaa198c45d1832cf6112b0f50ccb0dfc3d171f110b2a09f2bb1f62f80` | R3 candidate; paragraph pass, QC/handoff/successor pending |
 | 2.2.3 / antwoorden | `30cd682358c5eeb8cb6af53cf72e3ebcfc8feaf14856e3f671a850fe45de2e10` | R3 candidate; paragraph pass, QC/handoff/successor pending |
-| 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Final r8 candidate; root fresh rebuild/review adoption/QC/handoff pending |
-| 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Final r8 candidate; root fresh rebuild/review adoption/QC/handoff pending |
-| 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Final r8 candidate; root fresh rebuild/review adoption/QC/handoff pending |
+| 2.3.1 / paragraaf | `088102a97130cc69907b7142c81056b6f9672cbfd09a828c4ceba5ea4d82cd5e` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
+| 2.3.1 / opgaven | `4a7e87e641d558117d158f573aaf3bcd78395b2249ac73bfcb8a7491b6be3341` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
+| 2.3.1 / antwoorden | `d1297dee5b1834e99d66919c29477a19f5169fa62c302354db433ae44d8d5f7b` | Root-rebuilt candidate; current paragraph PASS; QC/handoff pending |
 
 Each accepted paragraph has `<id>-textbook-handoff.md` in its canonical folder,
 including exact source/review/quality bindings, concepts, exercises, visuals and

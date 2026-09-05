@@ -1,0 +1,127 @@
+{
+  "status": "PASS_CANDIDATE_NOT_QC",
+  "bindings": 919,
+  "all_original499_and_review186_bindings_preserved": true,
+  "canonical_review_sha256": "8f86129b14ef508e16f41d918299da7af2422655ff14fc9ba91b68a9b66e8943",
+  "root_processes": [
+    {
+      "kind": "full",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-full-process.json",
+      "sha256": "c8b96bfae8be52bd95195e86d503c9f133dd9e4690aaf337cc1e53581abe5882",
+      "started_at": "2026-09-05T23:48:45.237Z",
+      "finished_at": "2026-09-05T23:49:01.673Z"
+    },
+    {
+      "kind": "native",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-native-process.json",
+      "sha256": "5261d076ad4eb6e86a263c0a2eb4646535e5338aea21f4920a4a3d0fbcf4fb2d",
+      "started_at": "2026-09-05T23:50:23.874Z",
+      "finished_at": "2026-09-05T23:50:27.961Z"
+    },
+    {
+      "kind": "parity",
+      "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-root-parity-process.json",
+      "sha256": "fcc3f240bbfb53b5c3090c3dd09e916f0b0bf09b2e65cc1bd445860151df7285",
+      "started_at": "2026-09-05T23:50:28.452Z",
+      "finished_at": "2026-09-05T23:51:24.956Z"
+    }
+  ],
+  "root_pending_manifests": [
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r14\\manifest.json",
+      "sha256": "fce9ffc1de6df0f41332ae0fd1f11499c7f825d7a772631ac53fdaea86b44683",
+      "pages": 14
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r14\\manifest.json",
+      "sha256": "84d2cca7686371e2f1a701507b647aeb883aa3522afc182ab54f9a5bf7a3b96a",
+      "pages": 9
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r14\\manifest.json",
+      "sha256": "bb652dc595e17c6186a8a6fa80dea89e61c765107a86c023abe99368d57ce118",
+      "pages": 10
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r15\\manifest.json",
+      "sha256": "6a95183d8f5ff8c813d5915e91d7f342eb8dbb2256ee145936a6827b5e9b0e4e",
+      "pages": 14
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r15\\manifest.json",
+      "sha256": "3d42ed5109ee0171a44a23c3d01565ac51ad8ad4690d48d9e33626488cdacab9",
+      "pages": 9
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r15\\manifest.json",
+      "sha256": "d6eb3ad16d985585448be460b614e8c5838d4052b0b3b8ca79b59a0acbd1a279",
+      "pages": 10
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-paragraaf-088102a97130-r16\\manifest.json",
+      "sha256": "d25d75376c534f17ea180efc7aeb62c30d9ee141a4cbfc94fb18a852a5e28028",
+      "pages": 14
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-opgaven-4a7e87e641d5-r16\\manifest.json",
+      "sha256": "0f4c655ff76d372f67f8704af54833ed52f31e304723f4291b08435df2b4843a",
+      "pages": 9
+    },
+    {
+      "path": "reports\\rendered-proof\\BOOK2-TEXTBOOK-PRODUCTION-1\\231-antwoorden-d1297dee5b18-r16\\manifest.json",
+      "sha256": "1150289a0c5d05fca683271a962b346760b7cdc987a0a5daebf9c0a082df10fe",
+      "pages": 10
+    }
+  ],
+  "root_grayscale_pages": 33,
+  "all42_native_bytes_unchanged": true,
+  "profiles": [
+    {
+      "profile": "student-web",
+      "args": [
+        "scripts/validate-paragraph.js",
+        "--mode",
+        "part-a",
+        "--profile",
+        "student-web",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\"
+      ],
+      "exit_code": 1,
+      "stdout": "\nValidating paragraph 2.3.1 \"Consumentensurplus\"\nPath: C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\nMode: part-a\nProfile: student-web\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md\n  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md\n  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md\n  OK 2.3.1 Consumentensurplus – paragraaf.html (1895.9 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.html (988.6 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.html (1765.1 KB)\n  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 15 image refs all resolve\n  OK _assets/: 15 SVGs, 15 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.3.1-review.md (verdict PASS WITH FLAGS)\n  X MISSING quality_ref (2.3.1-quality-ref.yaml)\n\n==========================================\nFAIL Paragraph 2.3.1 \"Consumentensurplus\" failed: 1 error(s), 0 warning(s).\n\n",
+      "stderr": "",
+      "interpretation": "Only missing independent specialist QC; not waived"
+    },
+    {
+      "profile": "publisher-print",
+      "args": [
+        "scripts/validate-paragraph.js",
+        "--mode",
+        "part-a",
+        "--profile",
+        "publisher-print",
+        "C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\\"
+      ],
+      "exit_code": 1,
+      "stdout": "\nValidating paragraph 2.3.1 \"Consumentensurplus\"\nPath: C:\\wt\\book2-part-a-production-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.3 Hoofdstuk Surplus en welvaart\\2.3.1 Consumentensurplus\nMode: part-a\nProfile: publisher-print\n\n-- Part A textbook files --\n  OK Paragraph type: theory\n  OK paragraaf.md: 2.3.1 Consumentensurplus – paragraaf.md\n  OK opgaven.md: 2.3.1 Consumentensurplus – opgaven.md\n  OK antwoorden.md: 2.3.1 Consumentensurplus – antwoorden.md\n  OK 2.3.1 Consumentensurplus – paragraaf.pdf (1116 KB)\n  OK 2.3.1 Consumentensurplus – opgaven.pdf (617 KB)\n  OK 2.3.1 Consumentensurplus – antwoorden.pdf (1102 KB)\n  OK build_pdf.py\n\n-- Asset integrity --\n  OK 15 image refs all resolve\n  OK _assets/: 15 SVGs, 15 PNGs\n\n-- Part A QC artifacts --\n  OK Part A review: 2.3.1-review.md (verdict PASS WITH FLAGS)\n  X MISSING quality_ref (2.3.1-quality-ref.yaml)\n\n==========================================\nFAIL Paragraph 2.3.1 \"Consumentensurplus\" failed: 1 error(s), 0 warning(s).\n\n",
+      "stderr": "",
+      "interpretation": "Only missing independent specialist QC; not waived"
+    }
+  ],
+  "inventory": {
+    "counts": {
+      "A": 9,
+      "C": 12,
+      "L": 8,
+      "P": 12
+    },
+    "present": 29,
+    "absent": 12,
+    "original_checkpoint_sha256": "73501c61d7e2f592dbaff77c87bcf7137040f9cb124f34a6061f6667894e1b34",
+    "current_manifest_sha256": "6a6191f0ed24e3e9363b30a44590acb9365e0b0c8d1d3bb97e20f49f3026c4e2"
+  },
+  "limits": [
+    "Original author scope FAIL preserved; adopted actual native scope separate",
+    "Paragraph review PASS WITH FLAGS; specialist QC and root acceptance/handoff pending",
+    "Timing52/64/76–80 UNOBSERVED; no classroom, full CI or merge claim"
+  ]
+}
