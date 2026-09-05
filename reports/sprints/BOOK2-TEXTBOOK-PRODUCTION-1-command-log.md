@@ -7002,3 +7002,55 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.3.1
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:21:44.778Z`
+- finished_at: `2026-09-05T20:21:46.654Z`
+- duration_ms: `1876`
+- exit_code: `0`
+- stdout_sha256: `17c621a2434015110c4cb7717f5a302b74ab68762f2574dbcdd25e8895ecce87`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.3.1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book-outline-currentness.js --require-approved --action paragraph_production --paragraph 2.1.4
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:21:46.689Z`
+- finished_at: `2026-09-05T20:21:48.611Z`
+- duration_ms: `1922`
+- exit_code: `0`
+- stdout_sha256: `57311de082a3b7434c35c5dea51c7b8d062cac4cb4dfba01f762320479914dba`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 outline currentness: PASS
+- outline: references/authored/book-outlines/book-2-outline.md
+- target pins: 12
+- mode: approved-use
+- paragraph scope: 2.1.4
+
+```
+
+### stderr excerpt
+
+```text
+
+```
