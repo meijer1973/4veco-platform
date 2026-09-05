@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T16:58:38.889Z
+Generated: 2026-09-05T17:12:20.957Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `2e8cb04508bf5d8e062037ef8e0618597f572d65`
-Files indexed: 7951
+Source commit: `43612a2e95d5d26fcae18782b42e8080964e162c`
+Files indexed: 7956
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2669,7 +2669,7 @@ Count: 1030
 
 ## reports
 
-Count: 5203
+Count: 5208
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5627,13 +5627,18 @@ Count: 5203
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.jsonl
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-output-manifest.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-paragraph-archive-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-paragraph-archive-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-planning-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-prerequisite-decisions.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-print-pipeline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-roadmap-baseline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-root-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-salvage-inventory.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-target-trace.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-timing-walkthrough.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-wave-2-production-release.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
