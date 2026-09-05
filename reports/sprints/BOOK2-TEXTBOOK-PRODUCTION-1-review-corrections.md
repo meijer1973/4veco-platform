@@ -64,6 +64,18 @@ numeric pupil timing labels in the full source read. Every later final edition
 must still receive this contract check. No source/output correction has yet
 been made to §221 by this record; no false closure is asserted.
 
+### R7 correction progress (later exact-payload checkpoint)
+
+The original detection narrative above records the R6 state at discovery.
+Builder source/evidence `de57944f` and lesson `a1996c0` now implement exactly
+the six approved replacements. Root adopted them as `4390c32f` / `d764870`,
+verified exact transformation, all artifact bindings and full rebuild, and
+personally inspected all ten changed pages. The other ten pages match root's
+own prior R6 views byte-for-byte. See `221-root-verification-r7.md`.
+Distinct R7 paragraph re-review is publishing; separate R7 specialist QC and
+successor handoff remain pending. The finding is **corrected and root-verified,
+not yet fully closed**. Historical R6 reports are not retroactively changed.
+
 ## Current-candidate and prerequisite lineage follow-ups
 
 **B2-222-TOKEN-01 — builder correction complete; independent acceptance pending.**
