@@ -126,7 +126,7 @@ met dezelfde stappen. Waarom is GO gelijk aan € 4 per stuk?
 b) Vul de continue break-even-afzet in. Controleer de winst bij Q = 3 en
 Q = 4. Wat is het eerste gehele aantal zonder verlies?
 
-![Volledige steun bij zeep: het snijpunt ligt bij (3⅓; 13⅓). Bij Q = 6 staan de hoogten 24 en 16; het verticale verschil is 8 euro per dag.](_assets/2.1.2_ex_1.svg)
+![Volledige steun bij zeep: het snijpunt ligt bij (3⅓; 13⅓). Bij Q = 6 staan de hoogten 24 en 16; het verticale verschil is 8 euro per dag.](_assets/2.1.2_ex_1.svg){alt="Zeep: TK en TO, break-even bij 3⅓ stukken en 8 euro verticale winstafstand bij 6 stukken per dag."}
 
 c) Leg uit waarom het getekende verticale haakje bij Q = 6 winst voorstelt.
 Waarom is een ingekleurde oppervlakte niet het gevraagde antwoord?
@@ -147,7 +147,7 @@ zonder verlies. Moet dat laatste aantal altijd groter zijn dan de continue uitko
 d) Neem de onderstaande assen en TK-lijn over. Voeg zelf TO, het break-evenpunt,
 de winst- en verlieszone en de verticale winstafstand bij Q = 8 toe.
 
-![Minder steun: bij de bloempotten staan alleen de assen en TK = 15 + Q klaar. De opbrengstlijn en de interpretatie voeg je zelf toe.](_assets/2.1.2_ex_2.svg)
+![Minder steun: bij de bloempotten staan alleen de assen en TK = 15 + Q klaar. De opbrengstlijn en de interpretatie voeg je zelf toe.](_assets/2.1.2_ex_2.svg){alt="Bloempotten: assen en TK-lijn als steun voor het toevoegen van TO, break-even en winstafstand."}
 
 **Opgave 5**
 
@@ -210,7 +210,7 @@ theatermodel: Q = 0–30 betalende bezoekers per avond, P = € 5 per bezoeker e
 TK = 60 + 2Q euro per avond. Alleen de verticale schaal verschilt.
 Bij Q = 30 is TO = € 150 en TK = € 120 per avond.
 
-![Twee even hoge tekenvakken met hetzelfde theatermodel. Boven loopt de verticale schaal tot 150, onder tot 300. Vergelijk de bedragen, niet de lengte op papier.](_assets/2.1.2_ex_6.svg)
+![Twee even hoge tekenvakken met hetzelfde theatermodel. Boven loopt de verticale schaal tot 150, onder tot 300. Vergelijk de bedragen, niet de lengte op papier.](_assets/2.1.2_ex_6.svg){alt="Theatermodel: dezelfde winst van 30 euro per avond op verticale schalen tot 150 en 300 euro."}
 
 a) De onderste tekening toont een kleiner verticaal haakje. Bewijst dit dat de
 winst in die situatie kleiner is? Verdedig je antwoord met assen en eenheden.

@@ -1,0 +1,26 @@
+{
+  "captures": [
+    {
+      "edition": "paragraaf",
+      "page": 5,
+      "source_pdf_sha256": "e94d42f66ab9966a3a024cfef061c2084fcc1e2a6ef9e61e50c699c9155ce7a2",
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-ALT-grayscale-paragraaf-p005-r6-05.png",
+      "sha256": "9f7eb8a9cbf29607b411e81a6c73d5fc74163dde3e5df710d9a2001093c6458e"
+    },
+    {
+      "edition": "opgaven",
+      "page": 7,
+      "source_pdf_sha256": "94ebe5d35207f6c605ca294a9e5bdccfa8c1a10e6717955e21abb3606a60406a",
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-ALT-grayscale-opgaven-p007-r6-7.png",
+      "sha256": "7087ddffc8020bf49cd01bb2bc666507b90ac4125b858a08231040826d6f2876"
+    },
+    {
+      "edition": "antwoorden",
+      "page": 5,
+      "source_pdf_sha256": "07a75d7b5b69344d38d5da9e5f2e0a3b964d86cc64c383b37809f8263fb33192",
+      "path": "C:\\wt\\book2-212-alt-correction-20260905\\4veco-platform\\reports\\sprints\\BOOK2-TEXTBOOK-PRODUCTION-1-212-ALT-grayscale-antwoorden-p005-r6-5.png",
+      "sha256": "e21d06c7581840851c339a7408ac8b027cb53f26e74ff78c47bde24c7ffad73a"
+    }
+  ],
+  "inspection": "PENDING"
+}

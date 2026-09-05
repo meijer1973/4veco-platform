@@ -170,10 +170,17 @@ def asset_sources():
         ("2.1.2_ex_4", 40, 1, 4, 20, 80, (0,5,10,15,20), (0,20,40,60,80), "bezoekers", "dag", True),
         ("2.1.2_ex_5", 500, .8, 1.5, 1000, 1600, (0,250,500,750,1000), (0,400,800,1200,1600), "broden", "maand", True),
     ]
+    titles = {
+        "2.1.2_we_1": "Kajakverhuur: TK, TO, break-even en verticale winstafstand per dag",
+        "2.1.2_ex_1": "Zeep: TK, TO, break-even en verticale winstafstand per dag",
+        "2.1.2_ex_3": "Bloempotten: TK, TO, break-even en verticale winstafstand per dag",
+        "2.1.2_ex_4": "Minigolf: TK, TO, break-even en verticale winstafstand per dag",
+        "2.1.2_ex_5": "Bakkerij: TK, TO, break-even en verticale winstafstand per maand",
+    }
     for name, fixed, variable, price, qmax, ymax, qticks, yticks, qunit, period, complete in cases:
         sources[name] = frame(graph(fixed=fixed, variable=variable, price=price, qmax=qmax, ymax=ymax,
             qticks=qticks, yticks=yticks, qunit=qunit, period=period,
-            show_to=complete, crossing=complete, gap=complete), 630, name + ": TK en TO" if complete else "Bloempotten: alleen TK")
+            show_to=complete, crossing=complete, gap=complete), 630, titles[name] if complete else "Bloempotten: alleen TK")
     lower = {**theatre, "ymax": 300, "yticks": (0,100,200,300)}
     sources["2.1.2_ex_6"] = frame(graph(**theatre, gap=True, panel_label="A. Verticale schaal tot 150", compact=True) +
         line(26, 410, 1474, 410, color="#94A5AD") + graph(**lower, gap=True, y0=420, panel_label="B. Verticale schaal tot 300", compact=True),
