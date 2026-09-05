@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T10:26:13.001Z
+Generated: 2026-09-05T12:08:28.049Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `codex/book2-textbook-production-20260905`
-Source commit: `aebd1cd0001324915832c63f4a75e46dee382e14`
-Files indexed: 7659
+Source branch: `codex/book2-part-a-production-20260905`
+Source commit: `4b78edfaca8554937ef4abf3296ef2e4cd366be1`
+Files indexed: 7664
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1599,7 +1599,7 @@ Count: 695
 
 ## references
 
-Count: 1029
+Count: 1030
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/book-outlines/book-2-outline.md
@@ -1995,6 +1995,7 @@ Count: 1029
 - references/data/sprints/BOOK2-TARGET-AUTHORITY-REMEDIATION-1.result.json
 - references/data/sprints/BOOK2-TARGET-INTEGRATION-1.plan.json
 - references/data/sprints/BOOK2-TARGET-INTEGRATION-1.result.json
+- references/data/sprints/BOOK2-TEXTBOOK-PRODUCTION-1.plan.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.plan.json
 - references/data/sprints/BUNDLE-LANE-CI-RELIABILITY-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -2633,7 +2634,7 @@ Count: 1029
 
 ## reports
 
-Count: 4943
+Count: 4947
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5338,7 +5339,11 @@ Count: 4943
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-planning-review.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-prerequisite-inventory.md
 - reports/sprints/BOOK2-TARGET-INTEGRATION-1-result.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-command-log.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-continuation-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-planning-review.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round11.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round12.md
 - reports/sprints/BUNDLE-INDEX-REFRESH-1-lead-review-round8.md
