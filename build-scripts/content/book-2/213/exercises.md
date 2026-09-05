@@ -64,7 +64,7 @@ Dit zijn de twee invultabellen waarmee we beginnen. Lus mist winst, MK en MO; bi
 
 :::
 
-![Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.](./_assets/2.1.3_we_1.svg)
+![Lus heeft over drie stappen MK 2 en MO 6; Bout heeft MK 2, 6 en 10 en MO 12. De eerste teller en noemer zijn uitgewerkt; waarden horen bij het rechter eindpunt.](./_assets/2.1.3_we_1.svg){alt="Eindpuntrijen van Lus en Bout: MK 2/2/2 tegenover 2/6/10; MO steeds 6 en 12 euro per extra sleutelhanger."}
 
 **5. Vergelijk en interpreteer.** Lus heeft constante MK; Bout heeft stijgende MK over de gegeven intervallen. MK betekent de gemiddelde extra totale kosten per extra product binnen het interval; MO betekent de gemiddelde extra totale opbrengsten per extra product binnen datzelfde interval. Bij Bout zegt MK = 10 op Q = 6 dus iets over **4–6**, niet over alleen het zesde product. De streepjes bij Q = 0 betekenen dat er geen voorafgaand interval is. Deze tabel bepaalt geen gewenste afzet.
 

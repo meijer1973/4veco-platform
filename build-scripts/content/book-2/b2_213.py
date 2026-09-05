@@ -144,7 +144,7 @@ def asset_sources():
         body += label(40,y+259,f'Eerste MO = ({to[1]} − 0)/(2 − 0) = {mo}',color=BLUE)
         body += label(40,y+313,'Bij Q = 2 / 4 / 6: MK '+' / '.join(map(str,mk))+f'; MO steeds {mo}')
     body += line(40,348,1160,348)+label(40,735,'MK en MO: € per extra sleutelhanger in het interval')
-    sources['2.1.3_we_1']=frame(body,765,'Vergelijk de drie eindpuntrijen van Lus en Bout; constante en stijgende MK')
+    sources['2.1.3_we_1']=frame(body,765,'Drie eindpuntrijen van Lus en Bout; constante en stijgende MK')
     body = label(40,45,'Patches: van 0 naar 3, dan van 3 naar 6',bold=True)+label(40,95,'Eerste MK = (15 − 9)/(3 − 0) = 2')
     body += label(40,145,'Eerste MO = (15 − 0)/(3 − 0) = 5',color=BLUE)+line(100,163,100,212,arrow=True)+label(140,210,'Rij Q = 3: MK 2; MO 5; winst 15 − 15 = 0')
     body += line(40,240,1160,240)+label(40,290,'Nu interval 3–6: vul zelf in',bold=True)+label(40,345,'MK = (… − …)/(… − …) = …')
