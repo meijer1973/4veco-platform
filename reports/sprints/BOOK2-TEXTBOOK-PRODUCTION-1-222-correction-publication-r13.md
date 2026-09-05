@@ -46,3 +46,23 @@ generated index tail; then assign distinct paragraph rereview and specialist QC.
 Root owns accepted §221 successor linkage, current handoff and later integration.
 No future PR merge, CI waiver, human-review readiness, observed timing or
 whole-book completion is claimed by this publication.
+
+## Publication diagnostic retained
+
+The first index tail was `e85c7e1a139985c5f986619b90e556d1cdf5a290` and both
+branches were pushed successfully. A post-tail freshness diagnostic was invoked
+in a new shell without the paired lesson environment; it correctly failed by
+comparing the candidate lesson commit against the default origin/main
+`f09fd6e88edc5049b026b16b0158e7e188091d2d` and branch `origin/main`. This was a
+caller configuration error, not an index-content or target defect. No index
+checker or repository configuration was patched to conceal it.
+
+The retry explicitly supplied FOURVECO_LESSEN_ROOT to this claimed pair,
+FOURVECO_LESSEN_SOURCE_REF=HEAD and
+FOURVECO_LESSEN_SOURCE_BRANCH=agent/book2-222-correction-20260905; it passed for
+both exact candidate commits. The platform checker normally recognized its
+generated-only parent tail. The retry is retained in the append-only command
+log, and both remote refs matched the pushed heads. This added diagnostic record
+is followed by a new deterministic index-only tail so final index source pins
+cover the complete publication evidence. Root should skip both index-only tails
+when adopting the bounded correction evidence into its own pair.
