@@ -43,7 +43,26 @@ Root was notified of both bounded classifier gaps and asked to own the normal
 shared-tooling correction or independently reviewed explicit scope treatment.
 The builder did not change the checker, add a self-approved exception, camouflage
 grayscale probes as numbered normal pages, or omit the planned ZIP outputs to
-force a green result. These failures remain visible pending root resolution.
+force a green result. The original failures remain recorded; the supplementary
+capture path correction authorized by root is documented immediately below.
+
+Root confirmed that the approved plan requires the ZIPs and will own a narrow,
+tested canonical Book 2 paragraph-archive classification with independent review.
+For grayscale, root explicitly directed relocation of only the two owned PNGs
+into the already-classified sprint evidence directory, keeping the canonical
+proof contract unchanged. Exact resolved source and destination paths were
+checked to remain inside this isolated platform workspace; existing destinations
+would fail closed. Native PowerShell Move-Item relocated, without deleting data:
+
+- `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-grayscale-target.png`, unchanged
+  SHA-256 `e21d06c7581840851c339a7408ac8b027cb53f26e74ff78c47bde24c7ffad73a`.
+- `reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-212-grayscale-bonus.png`, unchanged
+  SHA-256 `7087ddffc8020bf49cd01bb2bc666507b90ac4125b858a08231040826d6f2876`.
+
+Only the corresponding paths in builder-inspection records were updated; actual
+inspection provenance and capture hashes are unchanged. No generated final proof
+manifest or student source/output byte changed. The corrected shared-lane probe
+result is reported with the final pushed correction head in the delivery message.
 
 Ten source tests, final render checks and both normal Part A validator profiles
 passed as documented in stage-2. The latter still accept an untouched legacy
