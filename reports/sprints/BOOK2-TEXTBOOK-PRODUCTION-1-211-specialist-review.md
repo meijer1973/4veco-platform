@@ -199,12 +199,17 @@ The following independent checks supplemented the human source, economics and pa
 | Part A publisher-print profile | PASS, explicit PASS WITH FLAGS review parsed; all three PDFs present |
 | Evidence JSON/YAML and diff whitespace | PASS; schema v2, only partA, actual review hash, 31 inspection-page bindings and 56 current artifact hashes checked |
 | Textbook lane scope for the new quality-ref commit | PASS, exactly one Part A review-evidence file |
+| Platform evidence-only lane scope on this isolated baseline | NOT PASSING: all three independent inspection.json paths are unknown; the isolated evidence-only diff also lacks a production/shared implementation change |
 
 The currentness CLI requires the dotted paragraph ID 2.1.1; an initial compact 211 invocation was rejected and corrected. The governance-freshness script is platform-specific: invoking it against lesson cwd reports absent platform-only paths, not changed lesson policy. The applicable platform check and paired worktree checks pass; no policy-edit bypass was used.
 
 The fresh schema-v2 2.1.1-quality-ref.yaml owns only partA. It replaces stale flat June data and the obsolete one-asset claim; it does not fabricate a companion block or promote target-registry status. It binds this new independent review evidence to the final R3 bytes. Its raw SHA-256 is 0dddb6e9d8f3a8da0e0f31e67dafabf53b99feb6ad86ce72039480dd7e12ea18, recorded in my lesson quality-only commit 8191e77c7cbb4f2c4eece6c8438b285786798320. Root must not cherry-pick the earlier adopted paragraph-review commits a second time.
 
 Both profile checks used scripts/validate-paragraph.js with --mode part-a, --profile student-web or --profile publisher-print, and the absolute QC lesson paragraph path. Structured record checking parsed YAML with the existing platform anchor's js-yaml dependency (not a new install), parsed all three inspection JSON files, checked the review verdict/hash, rehashed the 56 manifest items and verified all six builder input hashes.
+
+After the evidence commit, check-paragraph-lane-scope.js was run against platform base 16c3b1c53b73a563084297190ba58d7bf1bed679, head b5ce54a14aba41dbff7a6bb31af19420570a4bba. Both shared and textbook selections rejected the three reports/rendered-proof/.../inspection.json paths as unknown, and respectively required a shared or textbook production change absent from this intentionally evidence-only diff. This is not represented as a pass or silently bypassed. Root must apply its current reviewed classification/scope handling and rerun the integrated check before package closure; no checker or exception file was changed by this subagent.
+
+Both normal branches were pushed and matched their upstreams after publication. No PR was opened because root owns the combined production PRs and integration. A live branch-specific platform workflow query returned no runs, so no exact-head platform CI result is claimed for this bounded QC branch. Combined maps/index refresh and exact-head integration CI remain root's required next gates.
 
 This review did not rebuild production output or independently claim the root's byte-identical rebuild. HTML sources/structure and their actual PDF render were checked; responsive browser UI and Part B were not. No actual class timing, learner attainment, blanket accessibility compliance, chapter/book acceptance or integrated PR CI is claimed. Root owns combined maps/indexes, exact-head integration CI and the final package gate.
 
