@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T16:08:27.071Z
+Generated: 2026-09-05T16:20:55.654Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `codex/book2-part-a-production-20260905`
-Source commit: `406e0b0af719d4b1720f19e0fb63c2516881955f`
-Files indexed: 7927
+Source commit: `b9f5955d68331bee48a6897b758a038a46344309`
+Files indexed: 7931
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -138,7 +138,7 @@ Count: 89
 
 ## build scripts
 
-Count: 754
+Count: 756
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -150,6 +150,8 @@ Count: 754
 - build-scripts/books/book-manifests/book-1-print-1.3.4-gemengde-opgaven.md
 - build-scripts/books/book-manifests/book-1-voorwoord.md
 - build-scripts/books/book-manifests/book-1.json
+- build-scripts/books/book-manifests/book-2-antwoorden-voorwoord.md
+- build-scripts/books/book-manifests/book-2-voorwoord.md
 - build-scripts/books/book-toolchain.json
 - build-scripts/books/build-book.py
 - build-scripts/books/lib_book.py
@@ -2667,7 +2669,7 @@ Count: 1030
 
 ## reports
 
-Count: 5181
+Count: 5183
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5598,6 +5600,8 @@ Count: 5181
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-root-verification.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-221-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-front-draft.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-matter-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-book-pipeline-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-21-plan-review.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-chapter-23-plan-review.md
