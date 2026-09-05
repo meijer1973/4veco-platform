@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-09-05T17:43:15.526Z
+Generated: 2026-09-05T18:30:01.251Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Source branch: `agent/book2-223-production-20260905`
-Source commit: `10f9425ee06fe372927f0d2980833110ca4edf99`
-Files indexed: 7999
+Source branch: `agent/book2-223-independent-review-20260905`
+Source commit: `bad827e2f01bd69147c9d54b9b5520b2ace058a4`
+Files indexed: 8011
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2677,7 +2677,7 @@ Count: 1030
 
 ## reports
 
-Count: 5244
+Count: 5256
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -5664,7 +5664,19 @@ Count: 5244
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-builder-inspection.json
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-builder-self-qa.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-check-r3.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-independent-paragraph-review-r3.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-plan-review.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-check.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-command-log.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-command-log.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-initial-runner-misaddressed.jsonl
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-initial-runner-misaddressed.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-inspection.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-local-manifest.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-plan.md
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-probes.json
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-probes.py
+- reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-REVIEW-publication.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-1.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-223-stage-2-plan.md
 - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-baseline.md
