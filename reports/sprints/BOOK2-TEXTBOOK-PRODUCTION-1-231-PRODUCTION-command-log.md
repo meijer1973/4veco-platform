@@ -1717,3 +1717,32 @@ wrote reports/url-index.md
 ```text
 
 ```
+## npm.cmd run agent:index
+
+- cwd: `C:\wt\book2-231-production-20260905\4veco-platform`
+- started_at: `2026-09-05T23:00:14.467Z`
+- finished_at: `2026-09-05T23:00:15.038Z`
+- duration_ms: `571`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
