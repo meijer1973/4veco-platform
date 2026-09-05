@@ -58,19 +58,35 @@ const configs=[
  ['actual_complete_platform_candidate',['--lane','shared','--base',completePlatformBase,'--head',head,'--json']],
  ['actual_complete_lesson_candidate',['--cwd',lessons,'--lane','textbook','--base',completeLessonBase,'--head',lessonPayload,'--json']],
 ];
-const native=configs.map(([label,args])=>{const r=run('node',['build-scripts/workflows/check-paragraph-lane-scope.js',...args]);assert.equal(r.exit_code,0,r.stdout+r.stderr);return {label,...r,result:JSON.parse(r.stdout)};});
+const actualGrayPaths=own.filter(p=>/^reports\/rendered-proof\/BOOK2-TEXTBOOK-PRODUCTION-1\/231-grayscale-r(?:4|8)\/(?:paragraaf|opgaven|antwoorden)\/page-\d{3}\.png$/.test(p)).sort();
+assert.equal(actualGrayPaths.length,66);
+const native=configs.map(([label,args])=>{
+ const r=run('node',['build-scripts/workflows/check-paragraph-lane-scope.js',...args]),result=JSON.parse(r.stdout);
+ const platformSubject=label.includes('platform')||label==='owned_production_candidate';
+ assert.equal(r.exit_code,platformSubject?1:0,r.stdout+r.stderr);
+ assert.deepEqual(result.categories.unknown.slice().sort(),platformSubject?actualGrayPaths:[]);
+ if(platformSubject){assert.equal(result.failures.length,1);assert(result.failures[0].startsWith('unknown paths require explicit classification: '));}
+ assert.equal(result.exception.present,false);
+ return {label,...r,result};
+});
 const defaultWhitespace=run('git',['diff','--check',base,head]);
 assert.equal(defaultWhitespace.exit_code,0,defaultWhitespace.stdout);
 // JSONL preserves raw Windows stdout; its derived Markdown presentation is normalized before each publication.
 git(['-c','core.whitespace=cr-at-eol','diff','--check',base,head]);git(['diff','--check',lessonBase,lessonPayload],lessons);
-console.log(JSON.stringify({
+const result={
  kind:'ACTUAL_COMMITTED_PRODUCTION_SCOPE_AND_RAW_IDENTITY',date:'2026-09-06',builder:'paragraph_231_builder',
  source_payload:sourcePayload,lesson_payload:lessonPayload,platform_subject:head,
  owned_platform_base:base,owned_lesson_base:lessonBase,complete_platform_base:completePlatformBase,complete_lesson_base:completeLessonBase,
- status:'PASS',owned_source_paths:sourcePaths,owned_platform_paths:own,owned_lesson_paths:lessonPaths,
+ status:'OWNED_RAW_PASS_NATIVE_PLATFORM_SCOPE_FAIL',owned_source_paths:sourcePaths,owned_platform_paths:own,owned_lesson_paths:lessonPaths,
  raw_sources:rawSources,raw_lesson_packet_and_wrapper:rawPacket,all66_personally_viewed_pages:rawViewed,
  immutable_native_pending_manifests:pending,immutable_build_manifest:buildManifest,
  canonical_plan_unchanged:true,whitespace:defaultWhitespace,independent_QC:'PENDING_NOT_SELF_APPROVED',native,
- interpretation:'All actual owned production paths are bounded to paragraph231, unique evidence/proof and the explicitly authorized exact root grant. Native narrow shared lane now has real approved source and passes; historical plan-only evidence-lane FAIL is not relabelled. Both complete native baselines are the fetched actual origin/main and include inherited work fully in the native results. No fake source, exception or waiver.',
+ interpretation:'Strict owned-path and all raw-blob identity checks PASS. Native platform narrow and complete scopes honestly FAIL solely because their unchanged recognizer classifies the 66 genuine preserved r4/r8 grayscale PNG proof paths as UNKNOWN; their edition/page nesting differs from the recognized color pages path shape. All nine paragraph source files classify correctly as shared. Both lesson scopes PASS. These exact native outcomes remain separate, not waived or relabelled. Complete baselines are fetched actual origin/main and include inherited work fully. No fake source, proof move/deletion, exception or classifier edit.',
  current_head_CI:'NOT_RUN_BY_BUILDER_ROOT_INTEGRATION_PENDING'
-},null,2));
+};
+if(process.argv[3]){
+ const out=path.resolve(root,process.argv[3]);
+ assert.equal(path.dirname(out),__dirname);assert(path.basename(out).startsWith('BOOK2-TEXTBOOK-PRODUCTION-1-231-production-scope-')&&out.endsWith('.json'));
+ fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+ console.log(JSON.stringify({status:result.status,platform_subject:head,lesson_payload:lessonPayload,owned_paths:own.length,raw_sources:rawSources.length,raw_packet_and_wrapper:rawPacket.length,viewed_pages:rawViewed.length,native:native.map(n=>({label:n.label,exit_code:n.exit_code,categories:Object.fromEntries(Object.entries(n.result.categories).map(([k,v])=>[k,v.length]))})),output:relative(out)},null,2));
+} else console.log(JSON.stringify(result,null,2));

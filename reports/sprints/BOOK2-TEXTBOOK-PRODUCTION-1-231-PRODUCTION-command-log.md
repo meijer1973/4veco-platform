@@ -1512,3 +1512,157 @@ OK
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-audit.js 43ac2d9edbfff3622f36b8e1705679fbe968e99d reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-scope-r1.json
+
+- cwd: `C:\wt\book2-231-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:55:50.449Z`
+- finished_at: `2026-09-05T22:55:54.361Z`
+- duration_ms: `3912`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `b1e7dc1984f984e9d8591910676b386d0cb343c5ab3436d7a6df6bdb1cd95d85`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: {
+  "ok": false,
+  "lane": "shared",
+  "categories": {
+    "partA_textbook": [],
+    "partB_companion": [],
+    "shared_platform": [
+      "build-scripts/content/book-2/231/answers.md",
+      "build-scripts/content/book-2/231/assets.js",
+      "build-scripts/content/book-2/231/check_render.py",
+      "build-scripts/content/book-2/231/exercises.md",
+      "build-scripts/content/book-2/231/target-answers.md",
+      "build-scripts/content/book-2/231/test_source.py",
+      "build-scripts/content/book-2/231/theory.md",
+      "build-scripts/content/book-2/231/verify_rebuild.py",
+      "build-scripts/content/book-2/b2_231.py"
+    ],
+    "generated_indexes": [],
+    "review_evidence": [
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/contact-sheet.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/manifest.json",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-001.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-002.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-003.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-004.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-005.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-006.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-007.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-008.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-009.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r10/pages/page-010.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/contact-sheet.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/manifest.json",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-001.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-002.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-003.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-004.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-005.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-006.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-007.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-008.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-009.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r3/pages/page-010.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r4/contact-sheet.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r4/manifest.json",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r4/pages/page-001.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r4/pages/page-002.png",
+      "reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/231-antwoorden-d1297dee5b18-r4/pages/page-0
+...[truncated 51330 chars]
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-audit.js 43ac2d9edbfff3622f36b8e1705679fbe968e99d reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-scope-r1.json
+
+- cwd: `C:\wt\book2-231-production-20260905\4veco-platform`
+- started_at: `2026-09-05T22:56:48.114Z`
+- finished_at: `2026-09-05T22:56:54.213Z`
+- duration_ms: `6099`
+- exit_code: `0`
+- stdout_sha256: `45c347b2fd1694963cc514e05925c1a3d16f8379c75039d1f238f04cc13b77f0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "status": "OWNED_RAW_PASS_NATIVE_PLATFORM_SCOPE_FAIL",
+  "platform_subject": "43ac2d9edbfff3622f36b8e1705679fbe968e99d",
+  "lesson_payload": "384d9967a124fcc917a2eea3fe549829919cbeb7",
+  "owned_paths": 454,
+  "raw_sources": 10,
+  "raw_packet_and_wrapper": 43,
+  "viewed_pages": 66,
+  "native": [
+    {
+      "label": "owned_production_candidate",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 9,
+        "generated_indexes": 0,
+        "review_evidence": 379,
+        "unknown": 66
+      }
+    },
+    {
+      "label": "owned_lesson_packet",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 43,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "label": "actual_complete_platform_candidate",
+      "exit_code": 1,
+      "categories": {
+        "partA_textbook": 0,
+        "partB_companion": 0,
+        "shared_platform": 74,
+        "generated_indexes": 6,
+        "review_evidence": 1613,
+        "unknown": 66
+      }
+    },
+    {
+      "label": "actual_complete_lesson_candidate",
+      "exit_code": 0,
+      "categories": {
+        "partA_textbook": 200,
+        "partB_companion": 0,
+        "shared_platform": 0,
+        "generated_indexes": 0,
+        "review_evidence": 3,
+        "unknown": 0
+      }
+    }
+  ],
+  "output": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-231-production-scope-r1.json"
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
