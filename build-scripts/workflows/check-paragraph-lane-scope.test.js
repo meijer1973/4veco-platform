@@ -125,6 +125,23 @@ describe('check-paragraph-lane-scope', () => {
     expect(companionPdf.failures.join('\n')).toMatch(/unknown paths require explicit classification/);
   });
 
+  test('recognizes bounded Book 2 textbook planning paths without companion or archive exceptions', () => {
+    const root = 'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/';
+    const chapter = root + '2.1 Hoofdstuk Kosten en opbrengsten/';
+    const paragraph = chapter + '2.1.1 Kostenstructuren/';
+    const accepted = [root + '_book-plan.md', chapter + '_chapter-plan.md', paragraph + '2.1.1-textbook-plan.md'];
+    expect(accepted.map(p => classifyPath(p).category)).toEqual(Array(3).fill('partA_textbook'));
+    expect(checkLaneScope({ lane: 'textbook', changedPaths: accepted }).ok).toBe(true);
+    expect(checkLaneScope({ lane: 'companion', changedPaths: accepted }).ok).toBe(false);
+    for (const rejected of [
+      '_book-plan.md', 'Boek 1 - Test/_book-plan.md', root + 'unrelated.md',
+      paragraph + '2.1.2-textbook-plan.md', paragraph + '2.1.1-textbook-plan.zip',
+      root + '2.1 Hoofdstuk Kosten/2.2.1 Test/2.2.1-textbook-plan.md',
+      paragraph + '2.1.1 Kostenstructuren - oefeningen.zip',
+    ]) expect(classifyPath(rejected).category).toBe('unknown');
+    expect(classifyPath(paragraph + '_paragraph-plan.md').category).toBe('partB_companion');
+  });
+
   test('textbook-only fixture passes textbook and fails companion', () => {
     const textbook = runCliQuiet(['--lane', 'textbook', '--fixture', fixture('textbook-only.json'), '--json']);
     const companion = runCliQuiet(['--lane', 'companion', '--fixture', fixture('textbook-only.json'), '--json']);
