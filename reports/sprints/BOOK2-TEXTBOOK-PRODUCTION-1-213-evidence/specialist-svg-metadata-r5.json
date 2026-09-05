@@ -1,0 +1,74 @@
+{
+  "reviewer": "paragraph_213_r5_specialist_qc",
+  "scope": "All six actual paragraph-local SVG role=img accessible titles, supplementary to complete HTML alt inventory",
+  "finding": "REVISE: we1 imperative-first accessible title; no additional SVG title violation identified",
+  "long_description_note": "Substantive native captions/tables/prose were personally reviewed separately and must remain. No claim of SVG standalone exhaustive long description or screen-reader user test.",
+  "assets": [
+    {
+      "asset": "2.1.3_ex_1.svg",
+      "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+      "role": "img",
+      "aria_labelledby": "title",
+      "title_id": "title",
+      "title": "Eerste interval volledig gesteund; tweede interval met lege breuken en cellen",
+      "characters": 77,
+      "over_120": false,
+      "manual_noun_first_verdict": "PASS: noun phrase"
+    },
+    {
+      "asset": "2.1.3_fig_1.svg",
+      "sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+      "role": "img",
+      "aria_labelledby": "title",
+      "title_id": "title",
+      "title": "Twee intervallen in de kostentabel; Q in fotohouders per dag, TK in euro per dag",
+      "characters": 80,
+      "over_120": false,
+      "manual_noun_first_verdict": "PASS: noun phrase"
+    },
+    {
+      "asset": "2.1.3_fig_2.svg",
+      "sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+      "role": "img",
+      "aria_labelledby": "title",
+      "title_id": "title",
+      "title": "MK berekend en geplaatst bij het rechter eindpunt; eerste en tweede interval",
+      "characters": 76,
+      "over_120": false,
+      "manual_noun_first_verdict": "PASS: noun phrase"
+    },
+    {
+      "asset": "2.1.3_fig_3.svg",
+      "sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+      "role": "img",
+      "aria_labelledby": "title",
+      "title_id": "title",
+      "title": "MO in dezelfde hoeveelheidstabel; vaste prijs per fotohouder",
+      "characters": 60,
+      "over_120": false,
+      "manual_noun_first_verdict": "PASS: noun phrase"
+    },
+    {
+      "asset": "2.1.3_fig_4.svg",
+      "sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+      "role": "img",
+      "aria_labelledby": "title",
+      "title_id": "title",
+      "title": "Totale winst en gemiddelde winsttoename zijn verschillende grootheden",
+      "characters": 69,
+      "over_120": false,
+      "manual_noun_first_verdict": "PASS: noun phrase"
+    },
+    {
+      "asset": "2.1.3_we_1.svg",
+      "sha256": "700dc46322fb0fc527f1c2b84efdf018edd15f479f2e3bc25bdd496251d65461",
+      "role": "img",
+      "aria_labelledby": "title",
+      "title_id": "title",
+      "title": "Vergelijk de drie eindpuntrijen van Lus en Bout; constante en stijgende MK",
+      "characters": 74,
+      "over_120": false,
+      "manual_noun_first_verdict": "REVISE: imperative Vergelijk"
+    }
+  ]
+}
