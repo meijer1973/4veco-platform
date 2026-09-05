@@ -12,6 +12,8 @@ import re
 import subprocess
 from pathlib import Path
 
+from bs4 import BeautifulSoup
+
 from chapter_pipeline import _read_pinned, verify_chapter_inputs
 from print_pipeline import build_document, digest, prepare_html, render_proof
 
@@ -30,26 +32,62 @@ def _local_file(root: Path, relative: str) -> Path:
 
 
 def _namespace_chapter(markdown: str, chapter: str, kind: str) -> str:
-    """Prefix authored anchors without modifying the reviewed teaching text.
+    """Resolve Markdown first, then transform only structural IDs/references.
 
-    Paragraph headings repeat e.g. 'Startopgaven'; Pandoc otherwise creates
-    implicit suffixed IDs, which is acceptable, but authored links/IDs must
-    remain unique and retain their relationship within each chapter.
+    This includes implicit heading IDs, quote variants and reference-style
+    links without touching code literals or visible teaching text. Chapter
+    sources remain byte-pinned; only their aggregate HTML representation changes.
     """
     prefix = f"book-{kind}-{chapter.replace('.', '-')}-"
-    markdown = re.sub(r'\bid="([^"]+)"', lambda m: f'id="{prefix}{m[1]}"', markdown)
-    markdown = re.sub(r'\bhref="#([^"]+)"', lambda m: f'href="#{prefix}{m[1]}"', markdown)
-    markdown = re.sub(r'\{#([^}\s]+)\}', lambda m: f'{{#{prefix}{m[1]}}}', markdown)
-    markdown = re.sub(r'\]\(#([^\s)]+)\)', lambda m: f'](#{prefix}{m[1]})', markdown)
+    soup = _resolved_html(markdown)
+    _validate_ids_and_references(soup)
+    for tag in soup.find_all(id=True):
+        tag["id"] = prefix + tag["id"]
+    for tag in soup.find_all(True):
+        if tag.has_attr("href"):
+            tag["href"] = "#" + prefix + tag["href"][1:]
+        for attribute in ("aria-describedby", "aria-labelledby", "headers"):
+            if tag.has_attr(attribute):
+                raw = tag[attribute]
+                tokens = raw if isinstance(raw, list) else raw.split()
+                tag[attribute] = " ".join(prefix + token for token in tokens)
     # Explicit stable TOC targets supplement Pandoc's generated heading IDs.
     for index in range(1, 5):
         nr = f"{chapter}.{index}"
-        pattern = r"(?m)^(# " + re.escape(nr) + r" [^\n]+)$"
-        if len(re.findall(pattern, markdown)) != 1:
+        headings = [h for h in soup.find_all("h1") if h.get_text(" ", strip=True).startswith(nr + " ")]
+        if len(headings) != 1:
             raise ValueError(f"Chapter must contain exactly one complete paragraph heading: {nr}/{kind}")
-        anchor = f'<div id="book-{kind}-paragraph-{nr.replace(".", "-")}"></div>'
-        markdown = re.sub(pattern, lambda m: anchor + "\n\n" + m[1], markdown)
-    return markdown
+        anchor = soup.new_tag("div", id=f"book-{kind}-paragraph-{nr.replace('.', '-')}")
+        headings[0].insert_before(anchor)
+    _validate_ids_and_references(soup)
+    return str(soup)
+
+
+def _resolved_html(markdown: str) -> BeautifulSoup:
+    result = subprocess.run(["pandoc", "--from=markdown", "--to=html5", "--mathml"],
+                            input=markdown, text=True, encoding="utf-8", capture_output=True, check=True)
+    return BeautifulSoup(result.stdout, "html.parser")
+
+
+def _validate_ids_and_references(soup: BeautifulSoup) -> None:
+    ids = [tag["id"] for tag in soup.find_all(id=True)]
+    if len(ids) != len(set(ids)) or any(not identifier for identifier in ids):
+        raise ValueError("Book contains duplicate or empty structural IDs")
+    available = set(ids)
+    for tag in soup.find_all(True):
+        references = []
+        if tag.has_attr("href"):
+            href = tag["href"]
+            if not href.startswith("#"):
+                raise ValueError("Book navigation must use internal references")
+            references.append(href[1:])
+        for attribute in ("aria-describedby", "aria-labelledby", "headers"):
+            if tag.has_attr(attribute):
+                raw = tag[attribute]
+                references.extend(raw if isinstance(raw, list) else raw.split())
+        for reference in references:
+            if reference not in available:
+                raise ValueError(f"Unresolved internal book reference: {reference}")
 
 
 def prepare_book(manifest_path: Path, lesson_root: Path, platform_root: Path) -> dict:
@@ -117,6 +155,9 @@ def prepare_book(manifest_path: Path, lesson_root: Path, platform_root: Path) ->
             anchor = f'<div id="book-{kind}-chapter-{nr.replace(".", "-")}"></div>'
             body.append(anchor + "\n\n" + _namespace_chapter(markdown.strip(), nr, kind))
         documents[kind] = (f"\n\n{BREAK}\n\n".join([front_back[0], *body, front_back[1]]) + "\n")
+        # Final navigation is checked with front/back matter and all chapters
+        # together, before collecting assets or writing any aggregate output.
+        _validate_ids_and_references(_resolved_html(documents[kind]))
     prepared = {"documents": documents, "inputs": inputs, "assets": list(all_assets.values()),
                 "book_dir": str(book_dir), "spec": spec}
     verify_chapter_inputs(prepared)

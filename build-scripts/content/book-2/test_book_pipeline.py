@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 from PIL import Image
 
-from book_pipeline import CHAPTERS, PROFILE, TITLE, prepare_book, _namespace_chapter
+from book_pipeline import CHAPTERS, PROFILE, TITLE, prepare_book, _namespace_chapter, _resolved_html
 from chapter_pipeline import verify_chapter_inputs
 from print_pipeline import digest, prepare_html
 from bs4 import BeautifulSoup
@@ -154,9 +154,59 @@ class BookPipelineTests(unittest.TestCase):
         result = _namespace_chapter(raw, "2.1", "boek")
         self.assertIn('id="book-boek-2-1-local"', result)
         self.assertIn('href="#book-boek-2-1-local"', result)
-        self.assertIn('[More](#book-boek-2-1-local)', result)
+        self.assertIn('href="#book-boek-2-1-local">More</a>', result)
         with self.assertRaisesRegex(ValueError, "exactly one complete paragraph"):
             _namespace_chapter(raw + '\n# 2.1.1 Duplicate\n', "2.1", "boek")
+
+    def test_structural_namespace_resolves_all_markdown_forms_and_preserves_code(self):
+        raw = '\n\n'.join(f'# 2.1.{i} Test' for i in range(1, 5))
+        raw += '''
+
+## Recall
+
+[Implicit](#recall)
+
+<div id='local'></div>
+
+[Single quote](#local)
+
+[Reference][ref]
+
+[ref]: #recall
+
+    <div id="example"></div>
+
+Ordinary text: id="not-a-structural-id".
+'''
+        soup = BeautifulSoup(_namespace_chapter(raw, "2.1", "boek"), "html.parser")
+        for link in soup.find_all("a"):
+            self.assertEqual(len(soup.find_all(id=link["href"][1:])), 1)
+        self.assertEqual(soup.code.get_text(), '<div id="example"></div>')
+        self.assertEqual(soup.get_text(), _resolved_html(raw).get_text())
+        self.assertIsNotNone(soup.find(id="book-boek-2-1-recall"))
+        self.assertIsNotNone(soup.find(id="book-boek-2-1-local"))
+
+    def test_duplicate_unresolved_and_cross_matter_book_references_are_validated(self):
+        raw = '\n\n'.join(f'# 2.1.{i} Test' for i in range(1, 5))
+        for bad in (raw + '\n\n[Missing](#missing)', raw + '\n\n<div id="x"></div><p id="x">Duplicate</p>'):
+            with self.assertRaisesRegex(ValueError, "Unresolved|duplicate"):
+                _namespace_chapter(bad, "2.1", "boek")
+        item = self.spec["matter"]["boek"]["front"]
+        path = self.platform / item["path"]
+        path.write_text('# Contents\n\n[First](#book-boek-paragraph-2-1-1)\n', encoding="utf-8")
+        item["sha256"] = digest(path)
+        self.save()
+        self.prepare()
+        path.write_text('# Contents\n\n[Missing](#missing)\n', encoding="utf-8")
+        item["sha256"] = digest(path)
+        self.save()
+        with self.assertRaisesRegex(ValueError, "Unresolved"):
+            self.prepare()
+        path.write_text('<div id="book-boek-paragraph-2-1-1">Duplicate</div>', encoding="utf-8")
+        item["sha256"] = digest(path)
+        self.save()
+        with self.assertRaisesRegex(ValueError, "duplicate"):
+            self.prepare()
 
     def test_legacy_book_entry_dispatches_only_explicit_book2_profile(self):
         sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "books"))
