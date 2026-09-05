@@ -1,0 +1,838 @@
+{
+  "date": "2026-09-05",
+  "reviewer": "paragraph_213_r6_independent_review",
+  "kind": "two_plan_reviews_no_student_output",
+  "sourcePins": [
+    {
+      "repository": "lessons",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/2.3.1 Consumentensurplus/2.3.1-textbook-plan.md",
+      "canonical_lf_sha256": "8d92ed823e96a773a378c74d707c2afa4cd8cb3ee3b8bcba08b217ee5883cac1"
+    },
+    {
+      "repository": "lessons",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/_book-plan.md",
+      "canonical_lf_sha256": "b6ae8e07e05337838dc38b2838a6e5db43b2e153569fa5bc490cf4bfeb8d7a76"
+    },
+    {
+      "repository": "lessons",
+      "file": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.3 Hoofdstuk Surplus en welvaart/_chapter-plan.md",
+      "canonical_lf_sha256": "e8a07bfe212a6ae817db99fecb93e86812e1d9e9af533b7ef21591bbb9025dc7"
+    },
+    {
+      "repository": "platform",
+      "file": "references/owned/course-blueprint-v6-three-year.md",
+      "canonical_lf_sha256": "72fb1bc8c7b4843ac5cf4c29acfb9d117b6118eeaa1cd5fe5229604dfe412e6e"
+    },
+    {
+      "repository": "platform",
+      "file": "references/owned/course-blueprint-v5.md",
+      "canonical_lf_sha256": "61130f10e7b8b6417641436f0995be090db04b11075d02878ae0a51c12b497c7"
+    },
+    {
+      "repository": "platform",
+      "file": "references/authored/course-target-exercises.json",
+      "canonical_lf_sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    }
+  ],
+  "target": {
+    "id": "2.3.1",
+    "module": 2,
+    "chapter": 3,
+    "paragraph": 1,
+    "paragraph_title": "Consumentensurplus",
+    "difficulty": "MEDIUM",
+    "target_exercise": {
+      "context": "Voor concertkaartjes geldt de vraagfunctie P=50−0,5Q. P is de prijs in euro per kaartje en Q het aantal gevraagde kaartjes. De gegeven marktprijs is €20. Er zijn voldoende kaartjes beschikbaar; alle bij deze prijs gevraagde kaartjes worden verkocht aan de vragers met de hoogste betalingsbereidheid. Er is in deze opgave geen aanbodfunctie.",
+      "subquestions": [
+        {
+          "label": "a",
+          "points": 2,
+          "prompt": "Bereken de gevraagde hoeveelheid bij P=€20. Noem dit niet de evenwichtshoeveelheid."
+        },
+        {
+          "label": "b",
+          "points": 3,
+          "prompt": "Teken de vraaglijn en de horizontale prijslijn in één assenstelsel. Benoem de horizontale as als Q (kaartjes) en de verticale as als P (€ per kaartje). Noteer de snijpunten van de vraaglijn en het snijpunt met de prijslijn."
+        },
+        {
+          "label": "c",
+          "points": 2,
+          "prompt": "Arceer en benoem in je grafiek het consumentensurplus."
+        },
+        {
+          "label": "d",
+          "points": 3,
+          "prompt": "Bereken het consumentensurplus als oppervlakte van een driehoek en noteer de eenheid."
+        },
+        {
+          "label": "e",
+          "points": 2,
+          "prompt": "Leg uit wat het berekende consumentensurplus voor de kopers als groep betekent."
+        }
+      ]
+    },
+    "lesson_goals": [
+      "Je kunt de gevraagde hoeveelheid bij een gegeven prijs uit een vraagfunctie berekenen.",
+      "Je kunt consumentensurplus in een vraag-prijsgrafiek herkennen en arceren.",
+      "Je kunt consumentensurplus als driehoeksoppervlakte berekenen.",
+      "Je kunt consumentensurplus als het gezamenlijke voordeel van alle kopers van de verkochte kaartjes interpreteren."
+    ],
+    "required_skills": [
+      "A03",
+      "A05",
+      "A10",
+      "A40"
+    ],
+    "prior_knowledge_assumed": [
+      "A03, A05 and A10 are explicit retrieval; A40 and the demand-only surplus operation are new formal learning."
+    ],
+    "new_skills_introduced": [
+      "A40",
+      "Demand-only consumer-surplus calculation at an exogenous price"
+    ],
+    "missing_units_flagged": [
+      "A dedicated unit for demand-only consumer surplus at an exogenous price without a market-equilibrium prerequisite.",
+      "Interpret aggregate willingness-to-pay minus paid price over realized transactions."
+    ],
+    "exam_codes": [
+      "A2.16",
+      "A2.17",
+      "D3.1"
+    ],
+    "difficulty_notes": "Kandidaat voor circa 10 minuten. Zonder aanbodfunctie wordt Q=60 niet als evenwicht benoemd; de context legt verkoop en toewijzing van alle 60 gevraagde kaartjes expliciet vast.",
+    "answer_form_expectations": [
+      "functie-oplossing",
+      "gelabelde grafiek",
+      "correct gebied",
+      "driehoeksberekening",
+      "koperinterpretatie"
+    ],
+    "short_answer_model": {
+      "a": "20=50−0,5Q, dus de gevraagde hoeveelheid (Qd) is 60 kaartjes; dit is geen berekend marktevenwicht.",
+      "b": "Horizontale as: Q (kaartjes). Verticale as: P (€ per kaartje). Vraaglijn door (Q=0,P=50) en (Q=100,P=0); prijslijn P=20; snijpunt bij Q=60.",
+      "c": "Driehoek boven P=20 en onder de vraaglijn, van Q=0 tot Q=60, gelabeld CS.",
+      "d": "CS=½×60×(50−20)=€900.",
+      "e": "€900 is de som van het verschil tussen betalingsbereidheid en werkelijk betaalde prijs over de 60 verkochte kaartjes."
+    },
+    "source_ref": "references/owned/course-blueprint-v5.md §2.3.1",
+    "paragraph_kind": "theory",
+    "introduces_new_theory": true,
+    "record_status": "candidate_review_ready",
+    "v5_migration": {
+      "source_status": "candidate_review_ready",
+      "from_v4_id": "2.2.1",
+      "related_v4_ids": [],
+      "review_required_before_final": true
+    }
+  },
+  "frozen12_json_hash": "914d1a39f18f8f9b7cf7fad938d2c42f9c2bc19671d94c24be151b1da0371310",
+  "assets": [
+    {
+      "stem": "2.3.1_fig_1",
+      "alt": "Betalingsbereidheid en prijs van vier workshopdeelnemers.",
+      "alt_length": 57,
+      "native_name_ok": true
+    },
+    {
+      "stem": "2.3.1_fig_2",
+      "alt": "Assen en snijpunten van de vraag naar toegang tot de boekenbeurs.",
+      "alt_length": 65,
+      "native_name_ok": true
+    },
+    {
+      "stem": "2.3.1_fig_3",
+      "alt": "Vraaglijn en gegeven prijs van toegang tot de boekenbeurs.",
+      "alt_length": 58,
+      "native_name_ok": true
+    },
+    {
+      "stem": "2.3.1_fig_4",
+      "alt": "Consumentensurplus boven de prijslijn van de boekenbeurs.",
+      "alt_length": 57,
+      "native_name_ok": true
+    },
+    {
+      "stem": "2.3.1_we_1",
+      "alt": "Vraaglijn en consumentensurplus van museumbezoekers.",
+      "alt_length": 52,
+      "native_name_ok": true
+    },
+    {
+      "stem": "2.3.1_start_2",
+      "alt": "Vraaglijn en gegeven prijs van aquariumkaartjes.",
+      "alt_length": 48,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_guided_3",
+      "alt": "Vraaglijn met prijs, hoeveelheid, basis en hoogte van de tuintour.",
+      "alt_length": 66,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_guided_4",
+      "alt": "Assen en vraaglijn van een klimkennismaking zonder prijslijn.",
+      "alt_length": 61,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_answer_2",
+      "alt": "Consumentensurplus van aquariumbezoekers bij acht euro.",
+      "alt_length": 55,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_answer_3",
+      "alt": "Consumentensurplus van deelnemers aan de tuintour.",
+      "alt_length": 50,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_answer_4",
+      "alt": "Consumentensurplus van deelnemers aan de klimkennismaking.",
+      "alt_length": 58,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_answer_5",
+      "alt": "Vraaglijn en consumentensurplus van het bordspelmiddagbezoek.",
+      "alt_length": 61,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_answer_6",
+      "alt": "Vraaglijn en consumentensurplus van deelnemers aan de skateclinic.",
+      "alt_length": 66,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_answer_7",
+      "alt": "Vraaglijn en consumentensurplus van bezoekers aan het taalcafé.",
+      "alt_length": 63,
+      "native_name_ok": false
+    },
+    {
+      "stem": "2.3.1_target_answer",
+      "alt": "Vraaglijn en consumentensurplus van kopers van concertkaartjes.",
+      "alt_length": 63,
+      "native_name_ok": false
+    }
+  ],
+  "models": [
+    {
+      "name": "bookfair",
+      "a": 40,
+      "b": 0.5,
+      "p": 10,
+      "q": 60,
+      "qmax": 80,
+      "cs": 900,
+      "payment": 600,
+      "modelWTP": 1500,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          243.75
+        ],
+        [
+          530,
+          243.75
+        ]
+      ]
+    },
+    {
+      "name": "museum",
+      "a": 30,
+      "b": 1,
+      "p": 10,
+      "q": 20,
+      "qmax": 30,
+      "cs": 200,
+      "payment": 200,
+      "modelWTP": 400,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          221.66666666666669
+        ],
+        [
+          480,
+          221.66666666666669
+        ]
+      ]
+    },
+    {
+      "name": "retrieval",
+      "a": 24,
+      "b": 1,
+      "p": 8,
+      "q": 16,
+      "qmax": 24,
+      "cs": 128,
+      "payment": 128,
+      "modelWTP": 256,
+      "cs_requested": false,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          221.66666666666669
+        ],
+        [
+          480,
+          221.66666666666669
+        ]
+      ]
+    },
+    {
+      "name": "aquarium",
+      "a": 24,
+      "b": 0.5,
+      "p": 8,
+      "q": 32,
+      "qmax": 48,
+      "cs": 256,
+      "payment": 256,
+      "modelWTP": 512,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          221.66666666666669
+        ],
+        [
+          480,
+          221.66666666666669
+        ]
+      ]
+    },
+    {
+      "name": "garden",
+      "a": 30,
+      "b": 0.5,
+      "p": 10,
+      "q": 40,
+      "qmax": 60,
+      "cs": 400,
+      "payment": 400,
+      "modelWTP": 800,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          221.66666666666669
+        ],
+        [
+          480,
+          221.66666666666669
+        ]
+      ]
+    },
+    {
+      "name": "climbing",
+      "a": 24,
+      "b": 0.5,
+      "p": 12,
+      "q": 24,
+      "qmax": 48,
+      "cs": 144,
+      "payment": 288,
+      "modelWTP": 432,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          177.5
+        ],
+        [
+          380,
+          177.5
+        ]
+      ]
+    },
+    {
+      "name": "boardgames",
+      "a": 20,
+      "b": 0.5,
+      "p": 5,
+      "q": 30,
+      "qmax": 40,
+      "cs": 225,
+      "payment": 150,
+      "modelWTP": 375,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          243.75
+        ],
+        [
+          530,
+          243.75
+        ]
+      ]
+    },
+    {
+      "name": "skate",
+      "a": 36,
+      "b": 0.5,
+      "p": 12,
+      "q": 48,
+      "qmax": 72,
+      "cs": 576,
+      "payment": 576,
+      "modelWTP": 1152,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          221.66666666666669
+        ],
+        [
+          480,
+          221.66666666666669
+        ]
+      ]
+    },
+    {
+      "name": "cafe",
+      "a": 28,
+      "b": 0.5,
+      "p": 14,
+      "q": 28,
+      "qmax": 56,
+      "cs": 196,
+      "payment": 392,
+      "modelWTP": 588,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          177.5
+        ],
+        [
+          380,
+          177.5
+        ]
+      ]
+    },
+    {
+      "name": "concert",
+      "a": 50,
+      "b": 0.5,
+      "p": 20,
+      "q": 60,
+      "qmax": 100,
+      "cs": 900,
+      "payment": 1200,
+      "modelWTP": 2100,
+      "cs_requested": true,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          204
+        ],
+        [
+          440,
+          204
+        ]
+      ]
+    },
+    {
+      "name": "closing",
+      "a": 18,
+      "b": 0.5,
+      "p": 6,
+      "q": 24,
+      "qmax": 36,
+      "cs": 144,
+      "payment": 144,
+      "modelWTP": 288,
+      "cs_requested": false,
+      "pixels": [
+        [
+          80,
+          45
+        ],
+        [
+          80,
+          221.66666666666669
+        ],
+        [
+          480,
+          221.66666666666669
+        ]
+      ]
+    }
+  ],
+  "discrete": {
+    "opening_p10": {
+      "purchased": 3,
+      "gaps": [
+        8,
+        4,
+        0
+      ],
+      "cs": 12,
+      "payment": 30,
+      "wtp": 42
+    },
+    "bonus_p6_actual": {
+      "wtp": [
+        14,
+        10,
+        6
+      ],
+      "gaps": [
+        8,
+        4,
+        0
+      ],
+      "cs": 12
+    },
+    "bonus_p6_highest_three": {
+      "wtp": [
+        18,
+        14,
+        10
+      ],
+      "gaps": [
+        12,
+        8,
+        4
+      ],
+      "cs": 24
+    },
+    "closing": {
+      "purchased": 2,
+      "gaps": [
+        3,
+        0
+      ],
+      "cs": 3
+    },
+    "triangle_retrieval_area": 24
+  },
+  "timing": {
+    "core_parts": [
+      2,
+      9,
+      7,
+      2,
+      4,
+      3,
+      8,
+      7,
+      10
+    ],
+    "core": 52,
+    "support": 64,
+    "all": [
+      76,
+      80
+    ],
+    "observed": false
+  },
+  "typography": {
+    "page_content_width_pt": 470.55118110236225,
+    "source_width_px": 720,
+    "final_12pt_requires_source_px": 18.361445783132528,
+    "source_30pt_is_css_px": 40,
+    "final_30pt_if_full_width": 26.14173228346457,
+    "bottom_zone_px": 45,
+    "figure_acceptance": "NOT PERFORMED; planning metric diagnostic only"
+  },
+  "successor_subject": {
+    "path": "reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-successor-binding-plan.md",
+    "canonical_lf_sha256": "a1817d2396ca255a0fd42fa05b42a49b1117cc9333791d9b14ba1fcdc1fd9133"
+  },
+  "assertionInteraction": {
+    "root_ref": "13b7ac8e1a000878f50a3d70ce1017327820d8e2",
+    "original_r6_ref": "89a8fc34",
+    "test_path": "build-scripts/content/book-2/212/test_metadata.py",
+    "test_sha256": "418b4df0e0c5ee5e0a058acb091f5c3f99a2a28dcb146b27dcdc3aa599183432",
+    "root_and_original_test_identical": true,
+    "current_generator_equals_existing_exact_test_expectation": true,
+    "in_memory_single_pin_transition_fails_existing_exact_expectation": true,
+    "source_guard": "Four complete sources equal the historical source plus exact native alt insertions; a newly authorized bonus addition requires a separately specified exact expected successor. No lesson bytes or tests were mutated."
+  },
+  "diagnostics": {
+    "negative_guard_probes": [
+      {
+        "generator": "b2_212",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-plan.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-plan.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_212",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_212",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-review.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-review.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_212",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-quality-ref.yaml",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-quality-ref.yaml",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_213",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-plan.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.3 Marginale kosten en marginale opbrengsten\\2.1.3-textbook-plan.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_213",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\_chapter-plan.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_213",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.1 Kostenstructuren\\2.1.1-textbook-handoff.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_213",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-handoff.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-textbook-handoff.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_213",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-review.md",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-review.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_213",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-quality-ref.yaml",
+        "rejection": "Required accepted source differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.1 Hoofdstuk Kosten en opbrengsten\\2.1.2 Opbrengsten, winst en break-even\\2.1.2-quality-ref.yaml",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_213",
+        "tampered_in_memory": "separate raw 212 paragraph MD",
+        "rejection": "Accepted §212 paragraph source changed",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_223",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3-textbook-plan.md",
+        "rejection": "Reviewed input pin differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit\\2.2.3-textbook-plan.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_223",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\_chapter-plan.md",
+        "rejection": "Reviewed input pin differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\_chapter-plan.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_223",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1-textbook-handoff.md",
+        "rejection": "Reviewed input pin differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1-textbook-handoff.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_223",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1-review.md",
+        "rejection": "Reviewed input pin differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1-review.md",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_223",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1-quality-ref.yaml",
+        "rejection": "Reviewed input pin differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1-quality-ref.yaml",
+        "subprocesses_and_output_writes": 0
+      },
+      {
+        "generator": "b2_223",
+        "tampered_in_memory": "C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.md",
+        "rejection": "Reviewed input pin differs: C:\\wt\\book2-231-plan-review-20260905\\4veco-lessen\\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\\2.2 Hoofdstuk Elasticiteit\\2.2.1 Prijselasticiteit\\2.2.1 Prijselasticiteit – paragraaf.md",
+        "subprocesses_and_output_writes": 0
+      }
+    ],
+    "arial_30pt_40px_baseline_boxes": {
+      "20": [
+        0,
+        -29,
+        44,
+        0
+      ],
+      "100": [
+        0,
+        -29,
+        66,
+        0
+      ],
+      "Consumentensurplus": [
+        0,
+        -29,
+        375,
+        8
+      ],
+      "Q (kaartjes)": [
+        0,
+        -29,
+        207,
+        8
+      ],
+      "P (€ per kaartje)": [
+        0,
+        -29,
+        284,
+        8
+      ]
+    }
+  },
+  "commands": [
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/workflows/check-book-outline-currentness.js"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: structural-currentness\n",
+      "stderr": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--require-approved",
+        "--action",
+        "specialist_review",
+        "--paragraph",
+        "2.3.1"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\n",
+      "stderr": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/workflows/check-book-outline-currentness.js",
+        "--require-approved",
+        "--action",
+        "paragraph_production",
+        "--paragraph",
+        "2.3.1"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "Book 2 outline currentness: PASS\n- outline: references/authored/book-outlines/book-2-outline.md\n- target pins: 12\n- mode: approved-use\n- paragraph scope: 2.3.1\n",
+      "stderr": ""
+    },
+    {
+      "exe": "node",
+      "args": [
+        "build-scripts/workflows/check-book2-target-authority-remediation.js",
+        "--durable"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "Book 2 target authority remediation: PASS\n- mode: durable frozen-package and lifecycle invariant\n- exact candidate records: 12\n- goal/question alignment and workload budgets: complete\n- unrelated-record scope checks: delegated to the PR-scoped sprint guard\n",
+      "stderr": ""
+    },
+    {
+      "exe": "C:/Python314/python.exe",
+      "args": [
+        "build-scripts/content/book-2/b2_212.py",
+        "--help"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "usage: b2_212.py [-h] [--lesson-root LESSON_ROOT] [--proof-root PROOF_ROOT]\r\n                 [--proof-suffix PROOF_SUFFIX] [--sources-only]\r\n                 [--manifest MANIFEST]\r\n\r\nReproduce the independently planned §212 paper package, never acceptance.\r\nParagraph-owned content/geometry only; reviewed shared print_pipeline owns\r\nformatting and immutable PENDING page capture. No legacy review is rewritten.\r\n\r\noptions:\r\n  -h, --help            show this help message and exit\r\n  --lesson-root LESSON_ROOT\r\n  --proof-root PROOF_ROOT\r\n  --proof-suffix PROOF_SUFFIX\r\n  --sources-only\r\n  --manifest MANIFEST\r\n",
+      "stderr": ""
+    },
+    {
+      "exe": "C:/Python314/python.exe",
+      "args": [
+        "build-scripts/content/book-2/b2_213.py",
+        "--help"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "usage: b2_213.py [-h] [--lesson-root LESSON_ROOT] [--proof-root PROOF_ROOT]\r\n                 [--proof-suffix PROOF_SUFFIX] [--sources-only]\r\n                 [--manifest MANIFEST]\r\n\r\nReproduce the independently planned §213 Part A package, never acceptance.\r\n\r\noptions:\r\n  -h, --help            show this help message and exit\r\n  --lesson-root LESSON_ROOT\r\n  --proof-root PROOF_ROOT\r\n  --proof-suffix PROOF_SUFFIX\r\n  --sources-only\r\n  --manifest MANIFEST\r\n",
+      "stderr": ""
+    },
+    {
+      "exe": "C:/Python314/python.exe",
+      "args": [
+        "build-scripts/content/book-2/b2_223.py",
+        "--help"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "usage: b2_223.py [-h] [--lesson-root LESSON_ROOT] [--proof-root PROOF_ROOT]\r\n                 [--proof-suffix PROOF_SUFFIX] [--sources-only]\r\n                 [--manifest MANIFEST]\r\n\r\nReproduce the released §2.2.3 Part A payload; never imply independent\r\nacceptance.\r\n\r\noptions:\r\n  -h, --help            show this help message and exit\r\n  --lesson-root LESSON_ROOT\r\n  --proof-root PROOF_ROOT\r\n  --proof-suffix PROOF_SUFFIX\r\n  --sources-only\r\n  --manifest MANIFEST\r\n",
+      "stderr": ""
+    },
+    {
+      "exe": "git",
+      "args": [
+        "diff",
+        "--check"
+      ],
+      "cwd": "C:\\wt\\book2-231-plan-review-20260905\\4veco-platform",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "paragraph_profile_validation": "NOT RUN: no newly authored student packet; direct existing naming contract checked",
+  "rendered_proof": "NOT APPLICABLE: no student-facing output changed",
+  "plan_review_decisions": "See separate human-readable reviewer reports; successful diagnostic execution is not plan PASS"
+}
