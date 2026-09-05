@@ -1,0 +1,581 @@
+{
+  "platform_before": "984547a17c966d3749d08ef34b92747de21eacbf",
+  "lessons_before": "5d67998d1e1d1aa5497d59850b53aebc780eaa96",
+  "source_insertion_bytes": 601,
+  "source_insertion_sha256": "06d9fee507a8e93668d96b204484d55c9696593e5a8f314d3c8bad3897faa4a9",
+  "three_criteria_only": true,
+  "complete_DOM_reverse_delta": true,
+  "first_five_answer_page_bodies_pixel_equal": true,
+  "protected": [
+    {
+      "path": "build-scripts/content/book-2/b2_213.py",
+      "sha256": "6a45771783de221c3d65b32d423c1f7e90c90e84a79d30c4e175bba8836b056a"
+    },
+    {
+      "path": "build-scripts/content/book-2/print_pipeline.py",
+      "sha256": "51680fdffab6a62265857e19bce16a8c29010b7e1787a9c73c32ed7dcc5306e5"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/theory.md",
+      "sha256": "df6e40009454bc43f4915fa3edbf8c613a888ebbd2d0b7b59414bd3f70b4d5e7"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/exercises.md",
+      "sha256": "bd16efcc6ac0ef9c2713b61587c8613fa353e98cc696e8a172ea931e11c35b32"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/target-answers.md",
+      "sha256": "aa59a0ab3d69a1177ea90b521d510f34576480838b21e13f4f169c7812639f09"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/test_source.py",
+      "sha256": "f141eaebf5cba863632ed8dcb140bacb62f4f617ef0354a9074a9ae10b88bb69"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/check_render.py",
+      "sha256": "34ecb93568112b54d9e1f1d4ffe9799e8375f131205a12861c738a5f3b18ab60"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/verify_rebuild.py",
+      "sha256": "5f171c9554ce0f9ab026e294c16f9924d4fe659f76bb045682e715ae936f45d5"
+    },
+    {
+      "path": "build-scripts/content/book-2/213/alt_contract.py",
+      "sha256": "8eb42ace09eb20c6f2b2b1d769bc3ba38f213cb1c05075305f0a615b278e077c"
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "sha256": "d3d7163ad82e0ddcf2f9ae1cbfa653335c96cb46762e8125bd594583f5d5885e"
+    },
+    {
+      "path": "references/authored/book-outlines/book-2-outline.md",
+      "sha256": "8a2732a1ee0e64c750c2cd76691158438208a1905d966c9c257eddcd2e7d1bcf"
+    },
+    {
+      "path": "references/authored/book-outlines/book-2-outline.meta.json",
+      "sha256": "6359debd1f6913c5eb357d0c46547bfd481c0f7b717ee1fb4158df4906804789"
+    }
+  ],
+  "artifact_deltas": [
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+      "before_sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+      "sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+      "before_sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+      "sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+      "before_sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.zip",
+      "before_sha256": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+      "sha256": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+      "before_sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+      "sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+      "before_sha256": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+      "sha256": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+      "before_sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+      "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – opgaven.zip",
+      "before_sha256": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+      "sha256": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+      "before_sha256": "0df905cb3582b00e3cb47f477d156707891140d7b637b2fab20a158acee37e25",
+      "sha256": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+      "before_sha256": "63f33b13456bd1cc044760f67ff3d7267d337df05adc863a07b7b2373041e1f7",
+      "sha256": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+      "before_sha256": "aa3b6ccc9dbb0114854e835bc3a4ec01428f219eef82aba09ba9fd0949ce976a",
+      "sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.zip",
+      "before_sha256": "0cfc714beb45b3ec087d0c891c28223e8431ba3e549abe9ec81dafba41494010",
+      "sha256": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1",
+      "equal": false
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_1.svg",
+      "before_sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+      "sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_1.png",
+      "before_sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+      "sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_2.svg",
+      "before_sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+      "sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_2.png",
+      "before_sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+      "sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_3.svg",
+      "before_sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+      "sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_3.png",
+      "before_sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+      "sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_4.svg",
+      "before_sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+      "sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_fig_4.png",
+      "before_sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+      "sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_we_1.svg",
+      "before_sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+      "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_we_1.png",
+      "before_sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+      "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_ex_1.svg",
+      "before_sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+      "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+      "equal": true
+    },
+    {
+      "path": "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/_assets/2.1.3_ex_1.png",
+      "before_sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+      "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+      "equal": true
+    }
+  ],
+  "zip_parity": [
+    {
+      "kind": "paragraaf",
+      "sha256": "15ffc25da00d0f3bfc84f93224191a08c9ab31387f7dc873a8df85dc7b76b499",
+      "members": [
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html",
+          "sha256": "2f8d85e29fa7e734269f92b68510a9e21f196807c5c105fe7157e70d17f09f5b",
+          "crc32": 2769216254
+        },
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md",
+          "sha256": "358090428ee7b69a4a3eea61a672b390d7d185522541783f32981f435b85d94d",
+          "crc32": 1452698486
+        },
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf",
+          "sha256": "534177c8280eddd4785dce1491856c33c96cd698ae558b5136bdb206a79c7024",
+          "crc32": 1778251976
+        },
+        {
+          "name": "_assets/2.1.3_ex_1.png",
+          "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+          "crc32": 4149041079
+        },
+        {
+          "name": "_assets/2.1.3_ex_1.svg",
+          "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+          "crc32": 2356447191
+        },
+        {
+          "name": "_assets/2.1.3_fig_1.png",
+          "sha256": "4de0658c263428845a7459a644f7d7b03d569cf797941f06a4726e95f2edf756",
+          "crc32": 385215492
+        },
+        {
+          "name": "_assets/2.1.3_fig_1.svg",
+          "sha256": "48b311d79284576cb0527a86809bf43847f479f827409e906bafeaef2372b819",
+          "crc32": 4048298595
+        },
+        {
+          "name": "_assets/2.1.3_fig_2.png",
+          "sha256": "b32b707ef2c45998dd1040dac1c4d5a97eb03616ea60c14b91505a77e73e7457",
+          "crc32": 1942027649
+        },
+        {
+          "name": "_assets/2.1.3_fig_2.svg",
+          "sha256": "010663b26733587156470723aaac3d6a806289c904dc32bbaa05684267b77c53",
+          "crc32": 2138963679
+        },
+        {
+          "name": "_assets/2.1.3_fig_3.png",
+          "sha256": "41e844709e41f3d9e2313c83de4ed5f5680899437d9f02a30d1c436b61dedd06",
+          "crc32": 880866491
+        },
+        {
+          "name": "_assets/2.1.3_fig_3.svg",
+          "sha256": "311bca49d1c84d08cf5196c284b6722ca82ebddd6435220e7a6b1bef28d242cc",
+          "crc32": 2719378145
+        },
+        {
+          "name": "_assets/2.1.3_fig_4.png",
+          "sha256": "aed5bf8589b50508cff6848d459fe63d4ecb1e4a3c544ca5d60da00bf88fd609",
+          "crc32": 1811904173
+        },
+        {
+          "name": "_assets/2.1.3_fig_4.svg",
+          "sha256": "cc6096fcc3e2ad2965e977231f7c22eff3eaaa8118cc18f28f95fbaa906a0773",
+          "crc32": 774840679
+        },
+        {
+          "name": "_assets/2.1.3_we_1.png",
+          "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+          "crc32": 667008458
+        },
+        {
+          "name": "_assets/2.1.3_we_1.svg",
+          "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+          "crc32": 2695493570
+        }
+      ]
+    },
+    {
+      "kind": "opgaven",
+      "sha256": "1a841ffb08f77e0a50559791707023c85d803f6aea263095449fd74fcf451dae",
+      "members": [
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html",
+          "sha256": "b78090ef65fb0544e46b59353660980a79e2bd2b5774ef64955154abe23a3c98",
+          "crc32": 1334197422
+        },
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md",
+          "sha256": "7424e3d177381326f6d65fc11669d6b4b648699d4e723c2dca82fb63d3a28d20",
+          "crc32": 1353927555
+        },
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf",
+          "sha256": "d12487671bd2f2cfe329f59bc9c48cfec5f03b871626c5c4016e88c2646d5f05",
+          "crc32": 2028448267
+        },
+        {
+          "name": "_assets/2.1.3_ex_1.png",
+          "sha256": "b992b774ac7a14899a056df715a2083891067b28612b660972fc335d4a2f3b3e",
+          "crc32": 4149041079
+        },
+        {
+          "name": "_assets/2.1.3_ex_1.svg",
+          "sha256": "53aa84a8538b3eab2e04eea7fa33448ecbf50eacf95d9807e8f080fea5bb819b",
+          "crc32": 2356447191
+        },
+        {
+          "name": "_assets/2.1.3_we_1.png",
+          "sha256": "978d1efb9c4e9992761ccf3b5d55e809d45bc9e928fb529fb646be16fe22c96a",
+          "crc32": 667008458
+        },
+        {
+          "name": "_assets/2.1.3_we_1.svg",
+          "sha256": "66fe52b99ff706c9a81d5ba699d5575d04f18f974205902bf45a8ad8cd2c148d",
+          "crc32": 2695493570
+        }
+      ]
+    },
+    {
+      "kind": "antwoorden",
+      "sha256": "9d1a0197cd02451e2168a31472ce5351aef9bd9169e8af535b261ba2353930a1",
+      "members": [
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html",
+          "sha256": "3c536f28de7f95a133cf80b5f3e4a351912af5103cf5ed48772fdf9d550a11cb",
+          "crc32": 1983455756
+        },
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md",
+          "sha256": "2059f580ad2fd3fe723b60b8ec0175940fbafa5f93afd94ed0bc29952f55940f",
+          "crc32": 4091986174
+        },
+        {
+          "name": "2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf",
+          "sha256": "d96f21c3abed471f3a12dd318cb1485043fe557e4a4d4b54034407763ae87787",
+          "crc32": 976108921
+        }
+      ]
+    }
+  ],
+  "Draad": [
+    {
+      "page": 3,
+      "columns": 6,
+      "actual_table_rows": [
+        [
+          "Q",
+          "TK",
+          "TO",
+          "winst",
+          "MK",
+          "MO"
+        ],
+        [
+          "0",
+          "20",
+          "0",
+          "−20",
+          "—",
+          "—"
+        ],
+        [
+          "4",
+          "24",
+          "20",
+          "−4",
+          "1",
+          "5"
+        ],
+        [
+          "8",
+          "28",
+          "40",
+          "12",
+          "1",
+          "5"
+        ],
+        [
+          "12",
+          "32",
+          "60",
+          "28",
+          "1",
+          "5"
+        ]
+      ],
+      "cells": [
+        [
+          68.181494140625,
+          395.9090576171875,
+          146.62350463867188,
+          424.3076477050781
+        ],
+        [
+          146.62350463867188,
+          395.9090576171875,
+          224.9655303955078,
+          424.3076477050781
+        ],
+        [
+          224.9655303955078,
+          395.9090576171875,
+          303.30755615234375,
+          424.3076477050781
+        ],
+        [
+          303.30755615234375,
+          395.9090576171875,
+          381.6495666503906,
+          424.3076477050781
+        ],
+        [
+          381.6495666503906,
+          395.9090576171875,
+          459.9916076660156,
+          424.3076477050781
+        ],
+        [
+          459.9916076660156,
+          395.9090576171875,
+          538.4326782226562,
+          424.3076477050781
+        ],
+        [
+          68.181494140625,
+          424.3076477050781,
+          146.62350463867188,
+          452.7062072753906
+        ],
+        [
+          146.62350463867188,
+          424.3076477050781,
+          224.9655303955078,
+          452.7062072753906
+        ],
+        [
+          224.9655303955078,
+          424.3076477050781,
+          303.30755615234375,
+          452.7062072753906
+        ],
+        [
+          303.30755615234375,
+          424.3076477050781,
+          381.6495666503906,
+          452.7062072753906
+        ],
+        [
+          381.6495666503906,
+          424.3076477050781,
+          459.9916076660156,
+          452.7062072753906
+        ],
+        [
+          459.9916076660156,
+          424.3076477050781,
+          538.4326782226562,
+          452.7062072753906
+        ],
+        [
+          68.181494140625,
+          452.7062072753906,
+          146.62350463867188,
+          481.10479736328125
+        ],
+        [
+          146.62350463867188,
+          452.7062072753906,
+          224.9655303955078,
+          481.10479736328125
+        ],
+        [
+          224.9655303955078,
+          452.7062072753906,
+          303.30755615234375,
+          481.10479736328125
+        ],
+        [
+          303.30755615234375,
+          452.7062072753906,
+          381.6495666503906,
+          481.10479736328125
+        ],
+        [
+          381.6495666503906,
+          452.7062072753906,
+          459.9916076660156,
+          481.10479736328125
+        ],
+        [
+          459.9916076660156,
+          452.7062072753906,
+          538.4326782226562,
+          481.10479736328125
+        ],
+        [
+          68.181494140625,
+          481.10479736328125,
+          146.62350463867188,
+          509.50335693359375
+        ],
+        [
+          146.62350463867188,
+          481.10479736328125,
+          224.9655303955078,
+          509.50335693359375
+        ],
+        [
+          224.9655303955078,
+          481.10479736328125,
+          303.30755615234375,
+          509.50335693359375
+        ],
+        [
+          303.30755615234375,
+          481.10479736328125,
+          381.6495666503906,
+          509.50335693359375
+        ],
+        [
+          381.6495666503906,
+          481.10479736328125,
+          459.9916076660156,
+          509.50335693359375
+        ],
+        [
+          459.9916076660156,
+          481.10479736328125,
+          538.4326782226562,
+          509.50335693359375
+        ],
+        [
+          68.181494140625,
+          509.50335693359375,
+          146.62350463867188,
+          537.9019775390625
+        ],
+        [
+          146.62350463867188,
+          509.50335693359375,
+          224.9655303955078,
+          537.9019775390625
+        ],
+        [
+          224.9655303955078,
+          509.50335693359375,
+          303.30755615234375,
+          537.9019775390625
+        ],
+        [
+          303.30755615234375,
+          509.50335693359375,
+          381.6495666503906,
+          537.9019775390625
+        ],
+        [
+          381.6495666503906,
+          509.50335693359375,
+          459.9916076660156,
+          537.9019775390625
+        ],
+        [
+          459.9916076660156,
+          509.50335693359375,
+          538.4326782226562,
+          537.9019775390625
+        ]
+      ],
+      "extractor_wrapper_row_count": 9
+    }
+  ]
+}
