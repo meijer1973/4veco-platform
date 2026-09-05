@@ -139,3 +139,52 @@ The one-shot relocation script and command log contain all37 before/after hashes
 The root provenance checker now resolves that explicit mapping and again passes
 29page pairs/5grays/3PDFs. No policy, exception, quality verdict or historical
 review is altered. Later scopes must run after the actual payload commit.
+
+## Current independent paragraph-review succession: 213 R6 and221 R8
+
+Root read both complete canonical reviews, platform reports/plans, personal
+inspection records and publication/scope caveats. The following published
+review payloads were adopted without conflict, excluding generated index tails:
+
+| Review | Original platform payload/tails | Root adopted commits | Original lessons / root lessons |
+|---|---|---|---|
+|221 R8|081a950aa8e3e5ea54414d61f49d10f21cbbe677; d4362705ce0c7f5e90d1e8a18e403f9e7e67a361; 5a33b3e0bf46df10f31836aafeae3712c39bb6ab|73f6682b;91965cb6;010a2931|144938f325d875b5ca055f5bb0951c450af59842 /90bf2d0|
+|213 R6|5765265dfa52e2bc4f938c835608095272bad463; f401deb202585481ce1627e9b8fff5432168b7a3|55781a37;ad1425b37d4a02ec187088e2fa885fd5226ad9d6|576c5f4bb919611466e4511d2b4938a8195f6972 /3745ef9757e6f10e5edd746dc4508ee73c596d6d|
+
+Both exact current paragraph verdicts are PASS WITH FLAGS. Canonical213 review
+raw/LF SHA256 is a70fd9571cea3afc5861d1b91dc99c102757767e0fb9d66da211602a90c82d66;
+canonical221 is19bfa448b3c0f80732f2fa77617eb2772880747082fb683c8cd3852c74a96c63.
+These replace only the prior canonical paragraph reviews. Both quality refs,
+the221 R6 handoff and the absence of a213 handoff remain exactly unchanged.
+
+New read-only `current-review-succession.js` passed through the normal root
+recorder at ad1425b3/3745ef97:188 file/hash checks,49 personally attributed
+reviewer page bindings,6 current PDF/source/asset sets,8 grayscale bindings and
+two exact historical-to-current canonical transitions. Both paragraphs pass
+both actual Part A profiles; durable frozen twelve-record authority passes.
+These are fresh root provenance/structural checks, not a new root page-view
+claim or specialist acceptance. Original pending proof manifests stay pending.
+
+Two initial root helper errors are retained in the command log: it initially
+treated all221 bindings as path/hash objects although three are document
+objects, then assumed213 already had a handoff. Corrected code handles the
+actual two declared binding types and explicitly proves213 handoff absent in
+both baseline Git tree and current disk. No input/hash/validator was changed
+to pass. Historical checkpoint helpers retain their old review pins and are
+not claimed to validate this successor pair.
+
+The213 reviewer honestly retains the evidence-only shared-lane source-presence
+failure:19 classified review paths and zero unknown paths. Its actual complete
+R6-candidate committed scope passes, as does its strict own-path audit. The221
+reviewer retains its default-main index diagnostic and explicit paired-branch
+correction. Neither diagnostic is hidden or converted into a content PASS.
+
+Distinct221 paragraph reviewer now performs213 R6 specialist QC in a newly
+claimed pair; distinct213 paragraph reviewer performs221 R8 specialist QC in
+another new pair. Neither reviewed the same paragraph in both roles, and neither
+authored these candidates. Their exact published review baselines are
+552fa94d6c42298c4856ecbf5abd6b586c876a94 /576c5f4bb919611466e4511d2b4938a8195f6972
+for213 and3ddef86ba5549c62b5bb3ec70ea9c820bec1bb4b /144938f325d875b5ca055f5bb0951c450af59842
+for221. Root remains the integrator. No source, target, plan, released hold,
+prerequisite pin or merge authority changes. Unobserved classroom timing flags
+remain54/66/78 for213 and48.5/58.5/71.5 for221. All18 PDFs remain candidates.

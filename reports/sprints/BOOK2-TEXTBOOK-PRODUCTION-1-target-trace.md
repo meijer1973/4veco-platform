@@ -97,7 +97,9 @@ MO−MK profit-change bridge, guided patches/coasters retain denominator support
 Draad/Kaft independently matches Linea/Curva's five operations and15points.
 The R5 distinct paragraph PASS and specialist REVISE remain historical. R6
 corrects only metadata, retaining all29 PDF-page bytes and full captions;
-current independent rereview, specialist QC and handoff are still required.
+current independent R6 rereview now passes with flags; specialist QC and
+handoff are still required. The221 R8 current paragraph review likewise passes
+with flags, while its specialist/handoff gates remain distinct.
 
 §222 R13 root verification covers exact P×Q totals and factors, own-price
 direction, local versus finite-change distinction, units/period and cost limits.

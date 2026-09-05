@@ -5,8 +5,8 @@ Status: **ACTIVE CHECKPOINT — NOT COMPLETE**. This manifest records the exact
 41-PDF output contract from the approved operational/root plan and separates
 fresh internal acceptance from old file presence.
 
-Snapshot: platform `fe609fabd8663f36778c5948209d3140df942adc`, lessons
-`a2bb4bcf199b8871eef21426f329efb6795e7dd8`.
+Snapshot: platform `ad1425b37d4a02ec187088e2fa885fd5226ad9d6`, lessons
+`3745ef9757e6f10e5edd746dc4508ee73c596d6d`.
 Lesson baseline: `f09fd6e88edc5049b026b16b0158e7e188091d2d`.
 All paths below are relative to the lesson book root
 `Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/`.
@@ -23,7 +23,7 @@ identical to the baseline. Separate in-progress worktrees do not count here.
 
 §221 R8 and §213 R6 now correct their short-alt/title metadata, retaining all
 49 printed page bytes from R7/R5. Both are root-rebuilt candidates with current
-independent rereviews running; their prior specialist REVISE findings remain
+independent rereviews adopted as PASS WITH FLAGS; their prior specialist REVISE findings remain
 open until exact-candidate gates close. All three editions of each stay C.
 §222 R13 is adopted/root-rebuilt: exactly one answer page changes; the other20
 remain identical. Its canonical paragraph FAIL remains pending current rereview.

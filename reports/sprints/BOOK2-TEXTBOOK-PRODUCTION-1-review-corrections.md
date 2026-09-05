@@ -172,7 +172,8 @@ to explicit directories with -g before the full source inspection.
 §221 R8 and §213 R6 metadata corrections are now adopted/root-rebuilt candidates
 (root verification-r8 and verification-r6 reports). All49 prior root page views
 transfer by actual byte-identical page pairs. Their independent rereviews are
-running; specialist and successor handoff gates still remain. The old REVISE
+now adopted as PASS WITH FLAGS (213 R6 /221 R8); distinct current specialist
+checks are running and successor handoff gates still remain. The old REVISE
 records are preserved rather than relabelled after a builder's implementation.
 
 §222 R13 is now root-adopted/rebuilt and source/page-verified. Answer4b follows

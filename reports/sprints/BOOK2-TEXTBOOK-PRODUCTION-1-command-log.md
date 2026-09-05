@@ -6116,3 +6116,374 @@ OK sprint bundle: BOOK2-TEXTBOOK-PRODUCTION-1 planned/active
 ```text
 
 ```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:07:50.146Z`
+- finished_at: `2026-09-05T20:07:50.265Z`
+- duration_ms: `119`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `bb710b302a35130ba25d14d18c2b99226ad6538d784f293dcf67d359bffcac22`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js:17
+  const normalized = p.replaceAll('\\', '/').replace(/^\/\/\?\//, '');
+                       ^
+
+TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at relocate (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js:17:24)
+    at verifyExternal (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js:27:48)
+    at Object.<anonymous> (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js:55:69)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+
+Node.js v24.13.1
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:07.900Z`
+- finished_at: `2026-09-05T20:08:08.107Z`
+- duration_ms: `207`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `7bec30e190fb3e541c5ec48b5bba36ae17653a4c72ba3f984a5cab53ce80bd6e`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+fatal: path 'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md' does not exist in 'a2bb4bcf199b8871eef21426f329efb6795e7dd8'
+node:child_process:964
+    throw err;
+    ^
+
+Error: Command failed: git show a2bb4bcf199b8871eef21426f329efb6795e7dd8:Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md
+fatal: path 'Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten/2.1.3-textbook-handoff.md' does not exist in 'a2bb4bcf199b8871eef21426f329efb6795e7dd8'
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execFileSync (node:child_process:961:15)
+    at Object.<anonymous> (C:\wt\book2-part-a-production-20260905\4veco-platform\reports\sprints\BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js:96:15)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    Buffer(0) [Uint8Array] [],
+    Buffer(239) [Uint8Array] [
+      102,  97, 116,  97, 108,  58,  32, 112,  97, 116, 104,  32,
+       39,  66, 111, 101, 107,  32,  50,  32,  45,  32,  75, 111,
+      115, 116, 101, 110,  44,  32, 111, 112,  98, 114, 101, 110,
+      103, 115, 116, 101, 110,  44,  32, 101, 108,  97, 115, 116,
+      105,  99, 105, 116, 101, 105, 116,  32, 101, 110,  32, 115,
+      117, 114, 112, 108, 117, 115,  47,  50,  46,  49,  32,  72,
+      111, 111, 102, 100, 115, 116, 117, 107,  32,  75, 111, 115,
+      116, 101, 110,  32, 101, 110,  32, 111, 112,  98, 114, 101,
+      110, 103, 115, 116,
+      ... 139 more items
+    ]
+  ],
+  pid: 11268,
+  stdout: Buffer(0) [Uint8Array] [],
+  stderr: Buffer(239) [Uint8Array] [
+    102,  97, 116,  97, 108,  58,  32, 112,  97, 116, 104,  32,
+     39,  66, 111, 101, 107,  32,  50,  32,  45,  32,  75, 111,
+    115, 116, 101, 110,  44,  32, 111, 112,  98, 114, 101, 110,
+    103, 115, 116, 101, 110,  44,  32, 101, 108,  97, 115, 116,
+    105,  99, 105, 116, 101, 105, 116,  32, 101, 110,  32, 115,
+    117, 114, 112, 108, 117, 115,  47,  50,  46,  49,  32,  72,
+    111, 111, 102, 100, 115, 116, 117, 107,  32,  75, 111, 115,
+    116, 101, 110,  32, 101, 110,  32, 111, 112,  98, 114, 101,
+    110, 103, 115, 116,
+    ... 139 more items
+  ]
+}
+
+Node.js v24.13.1
+
+```
+## node reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-current-review-succession.js
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:26.484Z`
+- finished_at: `2026-09-05T20:08:26.849Z`
+- duration_ms: `365`
+- exit_code: `0`
+- stdout_sha256: `1e920b1b9b40a7f175e6661ea52b879ea73092d5de6c5f2bc551cee612d66216`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{
+  "result": "PASS",
+  "platform_head": "ad1425b37d4a02ec187088e2fa885fd5226ad9d6",
+  "lessons_head": "3745ef9757e6f10e5edd746dc4508ee73c596d6d",
+  "fileChecks": 188,
+  "reviewed_pages": 49,
+  "grayscale_bindings": 8,
+  "pdfs": 6,
+  "canonical_review_transitions": 2,
+  "quality_and_handoffs": "UNCHANGED",
+  "visual_acceptance": "No new root page-view claim; observations remain attributed to the two distinct reviewers.",
+  "next_gate": "Distinct current specialist QC, root handoff and final combined acceptance remain pending."
+}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-book2-target-authority-remediation.js --durable
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:26.901Z`
+- finished_at: `2026-09-05T20:08:27.580Z`
+- duration_ms: `679`
+- exit_code: `0`
+- stdout_sha256: `ca7764da243c9b491670418ecc8585edfb9d1edc93a3f5078e1bf8cade732ebc`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Book 2 target authority remediation: PASS
+- mode: durable frozen-package and lifecycle invariant
+- exact candidate records: 12
+- goal/question alignment and workload budgets: complete
+- unrelated-record scope checks: delegated to the PR-scoped sprint guard
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:42.994Z`
+- finished_at: `2026-09-05T20:08:43.072Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `051b6dae7e939f0fc6a10af954c78e7d8b389c5f856fdd11d8839a2f6c8a4417`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.3 "Marginale kosten en marginale opbrengsten"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.3 Marginale kosten en marginale opbrengsten
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md
+  OK opgaven.md: 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md
+  OK antwoorden.md: 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.html (1263.7 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.html (578.9 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.html (19.7 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf (948 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf (442 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf (32 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.3 "Marginale kosten en marginale opbrengsten" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:43.125Z`
+- finished_at: `2026-09-05T20:08:43.192Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `73b8964a614af70c644b2c7a7af7a4ff68863297c6c5168a42a18bc520babe9d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.1.3 "Marginale kosten en marginale opbrengsten"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.1 Hoofdstuk Kosten en opbrengsten\2.1.3 Marginale kosten en marginale opbrengsten
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.md
+  OK opgaven.md: 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.md
+  OK antwoorden.md: 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.md
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – paragraaf.pdf (948 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – opgaven.pdf (442 KB)
+  OK 2.1.3 Marginale kosten en marginale opbrengsten – antwoorden.pdf (32 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 6 image refs all resolve
+  OK _assets/: 6 SVGs, 6 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.1.3-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.1.3-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.1.3 "Marginale kosten en marginale opbrengsten" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile student-web "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:43.240Z`
+- finished_at: `2026-09-05T20:08:43.312Z`
+- duration_ms: `72`
+- exit_code: `0`
+- stdout_sha256: `274e68f12f250b71740b750bf5676685a72b7c4ddba79ffe21d7e90608d01632`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: student-web
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.html (302.2 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.html (120.1 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.html (12.8 KB)
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node scripts/validate-paragraph.js --mode part-a --profile publisher-print "\"C:/wt/book2-part-a-production-20260905/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\""
+
+- cwd: `C:\wt\book2-part-a-production-20260905\4veco-platform`
+- started_at: `2026-09-05T20:08:43.359Z`
+- finished_at: `2026-09-05T20:08:43.423Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `484f1ff8a20ff23bace5e86b50d1d3625a12cff87ab7b87b3d13c13200f76daf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+Validating paragraph 2.2.1 "Prijselasticiteit"
+Path: C:\wt\book2-part-a-production-20260905\4veco-lessen\Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\2.2 Hoofdstuk Elasticiteit\2.2.1 Prijselasticiteit
+Mode: part-a
+Profile: publisher-print
+
+-- Part A textbook files --
+  OK Paragraph type: theory
+  OK paragraaf.md: 2.2.1 Prijselasticiteit – paragraaf.md
+  OK opgaven.md: 2.2.1 Prijselasticiteit – opgaven.md
+  OK antwoorden.md: 2.2.1 Prijselasticiteit – antwoorden.md
+  OK 2.2.1 Prijselasticiteit – paragraaf.pdf (241 KB)
+  OK 2.2.1 Prijselasticiteit – opgaven.pdf (104 KB)
+  OK 2.2.1 Prijselasticiteit – antwoorden.pdf (23 KB)
+  OK build_pdf.py
+
+-- Asset integrity --
+  OK 3 image refs all resolve
+  OK 2 companion asset(s) declared in _paragraph-plan.md
+  OK _assets/: 3 SVGs, 3 PNGs
+
+-- Part A QC artifacts --
+  OK Part A review: 2.2.1-review.md (verdict PASS WITH FLAGS)
+  OK Quality ref: 2.2.1-quality-ref.yaml (valid)
+
+==========================================
+OK Paragraph 2.2.1 "Prijselasticiteit" PASSED all checks.
+
+
+```
+
+### stderr excerpt
+
+```text
+
+```
