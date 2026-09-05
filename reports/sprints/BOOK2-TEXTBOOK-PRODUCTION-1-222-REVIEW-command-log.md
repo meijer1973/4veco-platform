@@ -612,3 +612,128 @@ FAIL Paragraph 2.2.2 "Elasticiteit en omzet" failed: 1 error(s), 0 warning(s).
 ```text
 
 ```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base 960c9c8973061cae5ef1403e41f3f75c319ad816 --head HEAD
+
+- cwd: `C:\wt\book2-222-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:56:18.130Z`
+- finished_at: `2026-09-05T18:56:18.240Z`
+- duration_ms: `110`
+- exit_code: `1`
+- stdout_sha256: `59a81bbe8b78013641ca072745268b99b60eaada95c26733968d8d386c9c8017`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: FAIL (shared)
+- review evidence: 7
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-REVIEW-command-log.jsonl
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-REVIEW-command-log.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-evidence-r12.cjs
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-inspection-r12.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-render-check-r12.json
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-review-plan.md
+  - reports/sprints/BOOK2-TEXTBOOK-PRODUCTION-1-222-independent-review-r12.md
+FAIL: shared lane needs at least one shared platform change
+FAIL: generated index/report or review-evidence changes are allowed only with lane-owned changes
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --cwd ../4veco-lessen --lane textbook --base 4b2be1d4a3443705cbaa53600b16ae95316e0c18 --head HEAD
+
+- cwd: `C:\wt\book2-222-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:56:18.291Z`
+- finished_at: `2026-09-05T18:56:18.395Z`
+- duration_ms: `104`
+- exit_code: `0`
+- stdout_sha256: `d3068b947981244c7385929d3e686676d3707ab0fe7e23f06810ee84c866c98b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (textbook)
+- Part A textbook: 1
+  - Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2-review.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/workflows/check-paragraph-lane-scope.js --lane shared --base 5a5887224e5c0d80f77a795935e44528e48b2cee --head HEAD
+
+- cwd: `C:\wt\book2-222-review-20260905\4veco-platform`
+- started_at: `2026-09-05T18:56:54.788Z`
+- finished_at: `2026-09-05T18:56:54.904Z`
+- duration_ms: `116`
+- exit_code: `0`
+- stdout_sha256: `577707b1c3cfb95e1528144ebeb11b62a2ef6789be365546ffc22846eee6394e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+Paragraph lane scope: PASS (shared)
+- shared platform: 7
+  - build-scripts/content/book-2/222/answers.md
+  - build-scripts/content/book-2/222/check_render.py
+  - build-scripts/content/book-2/222/exercises.md
+  - build-scripts/content/book-2/222/target-answers.md
+  - build-scripts/content/book-2/222/test_source.py
+  - build-scripts/content/book-2/222/theory.md
+  - build-scripts/content/book-2/b2_222.py
+- generated index/report: 4
+  - reports/github-agent-index-lessen.json
+  - reports/github-agent-index-lessen.md
+  - reports/github-agent-index-platform.json
+  - reports/github-agent-index-platform.md
+- review evidence: 365
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r3/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r4/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r5/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-003.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-004.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r6/pages/page-005.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/contact-sheet.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/manifest.json
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/pages/page-001.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-PRODUCTION-1/222-antwoorden-37a4f5017eab-r7/pages/page-002.png
+  - reports/rendered-proof/BOOK2-TEXTBOOK-
+...[truncated 33419 chars]
+```
+
+### stderr excerpt
+
+```text
+
+```
